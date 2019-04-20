@@ -1,0 +1,1652 @@
+1:0:0:0:27:307:511:664:3425:g_d0_f1:3425:g_d0_f1:C:MPRA
+1:1:4:27:123:278:504:637:17:g_d0_f2:17:g_d0_f2:C:Munich Personal RePEc Archive
+1:2:33:123:45:81:431:514:21:g_d0_f3:21:g_d0_f3:C:Multidimensional welfare rankings
+1:3:66:45:37:81:240:469:17:g_d0_f2:17:g_d0_f2:C:Stergios Athanassoglou
+1:4:88:37:273:81:194:432:14:g_d0_f4:14:g_d0_f4:C:21 November 2013
+1:5:104:273:18:81:425:159:14:g_d0_f4:14:g_d0_f5:C:Online athttps://mpra.ub.uni-muenchen.de/51642/
+1:6:151:18:0:81:471:141:14:g_d0_f4:14:g_d0_f4:C:MPRA Paper No. 51642, posted 22 November 2013 05:54 UTC
+2:7:206:0:38:168:411:702:17:g_d0_f6:12:g_d0_f7:C:Multidimensional welfare rankings∗
+2:8:240:38:32:227:350:664:12:g_d0_f8:8:g_d0_f9:A:Stergios Athanassoglou†
+2:9:263:32:60:247:326:632:12:g_d0_f8:12:g_d0_f8:A:November 2013
+2:10:276:60:24:264:308:572:10:g_d0_f10:10:g_d0_f10:F:Abstract
+2:11:284:24:18:103:485:548:10:g_d0_f11:10:g_d0_f11:F:Social well-being is intrinsically multidimensional.  Welfare indices attempting to reduce
+2:12:374:18:18:88:485:530:10:g_d0_f11:10:g_d0_f11:F:this complexity to a unique measure abound in many areas of economics and public pol-
+2:13:459:18:18:88:485:512:10:g_d0_f11:10:g_d0_f11:F:icy.   Ranking  alternatives  based  on  such  measures  depends,  sometimes  critically,  on  how
+2:14:557:18:18:88:485:494:10:g_d0_f11:10:g_d0_f11:F:the different dimensions of welfare are weighted.  In this paper, a theoretical framework is
+2:15:649:18:18:88:485:476:10:g_d0_f11:10:g_d0_f11:F:presented that yields a set of consensus rankings in the presence of such weight imprecision.
+2:16:742:18:18:88:485:458:10:g_d0_f11:10:g_d0_f11:F:The main idea is to consider a vector of weights as an imaginary voter submitting prefer-
+2:17:831:18:17:88:485:440:10:g_d0_f11:10:g_d0_f11:F:ences over alternatives in the form of an ordered list.  With this voting construct in mind, a
+2:18:925:17:18:88:485:423:10:g_d0_f11:10:g_d0_f11:F:rule for aggregating the preferences of many plausible choices of weights, suitably weighted
+2:19:1017:18:18:88:485:405:10:g_d0_f11:10:g_d0_f11:F:by the importance attached to them, is proposed.  An axiomatic characterization of the rule
+2:20:1108:18:18:88:485:387:10:g_d0_f11:10:g_d0_f11:F:is  provided,  and  its  computational  implementation  is  developed.   An  analytic  solution  is
+2:21:1207:18:18:88:485:369:10:g_d0_f11:10:g_d0_f11:F:derived for an interesting special case of the model corresponding to generalized weighted
+2:22:1297:18:18:88:485:351:10:g_d0_f11:10:g_d0_f11:F:means and the--contamination framework of Bayesian statistics.  The model is applied to
+2:23:1384:18:18:88:485:333:10:g_d0_f11:10:g_d0_f11:F:the Academic Ranking of World Universities index of Shanghai University, a popular com-
+2:24:1471:18:36:88:280:315:10:g_d0_f11:10:g_d0_f11:F:posite index measuring academic excellence.
+2:25:1514:36:18:88:485:279:10:g_d0_f10:10:g_d0_f11:F:Keywords:multidimensional welfare, social choice, voting, Kemeny’s rule, graph theory,
+2:26:1600:18:18:88:158:261:10:g_d0_f12:10:g_d0_f11:F:--contamination
+2:27:1615:18:89:88:271:243:10:g_d0_f10:10:g_d0_f11:F:JEL classifications:D71, D72, I31, C61
+2:28:1653:89:20:73:512:154:6:g_d0_f13:9:g_d0_f14:F:∗I am grateful to Jim Lawrence for helpful and clarifying remarks and to Michaela Saisana for introducing
+2:29:1758:20:17:61:512:134:9:g_d0_f14:9:g_d0_f14:F:me to this interesting area of research.  I also would like to thank Andrea Saltelli for his useful comments.  The
+2:30:1872:17:16:61:512:117:9:g_d0_f14:9:g_d0_f14:F:views expressed herein are purely those of the author and may not in any circumstances be regarded as stating
+2:31:1981:16:9:61:258:101:9:g_d0_f14:9:g_d0_f14:F:an official position of the European Commission.
+2:32:2029:9:20:73:512:92:6:g_d0_f13:9:g_d0_f14:F:†European   Commission   Joint   Research   Center,   Econometrics   and   Applied   Statistics   Unit,   athanas-
+2:33:2143:20:0:61:137:72:9:g_d0_f14:9:g_d0_f14:F:soglou@gmail.com.
+3:34:2161:0:32:61:174:758:14:g_d0_f15:14:g_d0_f15:C:1    Introduction
+3:35:2178:32:20:61:518:726:12:g_d0_f8:12:g_d0_f8:B:Many aspects of social well-being are intrinsically multidimensional. Development, poverty,
+3:36:2269:20:20:61:512:706:12:g_d0_f8:12:g_d0_f8:B:inequality, education:  these are all concepts that depend on a number of different criteria
+3:37:2361:20:21:61:512:686:12:g_d0_f8:12:g_d0_f8:B:and cannot be captured by simple quantitative measures ( [35, 36, 38, 3, 5, 10, 2], among
+3:38:2450:21:20:61:512:665:12:g_d0_f8:12:g_d0_f8:B:many others).  Despite the inherent complexity of these settings, there is still a need to
+3:39:2540:20:20:61:512:645:12:g_d0_f8:12:g_d0_f8:B:compare and eventually order possible alternatives on the basis of the multidimensional
+3:40:2627:20:21:61:512:625:12:g_d0_f8:12:g_d0_f8:B:information they involve.  Welfare indices attempt to accomplish this task by integrat-
+3:41:2714:21:20:61:512:604:12:g_d0_f8:12:g_d0_f8:B:ing the various dimensions of well-being into a single, one-dimensional measure.  This is
+3:42:2803:20:20:61:512:584:12:g_d0_f8:12:g_d0_f8:B:generally achieved by assigning weights to the different dimensions and, in some fashion,
+3:43:2892:20:21:61:178:564:12:g_d0_f8:12:g_d0_f8:B:aggregating over them.
+3:44:2914:21:20:81:512:543:12:g_d0_f8:12:g_d0_f8:A:It  should  be  intuitively  clear  that  the  chosen  weights  can  have  a  major  effect  on
+3:45:3009:20:20:61:512:523:12:g_d0_f8:12:g_d0_f8:B:composite welfare scores and therefore on the final ranking of the various alternatives.
+3:46:3097:20:21:61:512:503:12:g_d0_f8:12:g_d0_f8:B:Their choice is laden with complex philosophical and operational dilemmas (see section
+3:47:3183:21:20:61:512:482:12:g_d0_f8:12:g_d0_f8:B:A.7 in Foster and Sen [17], Ravallion [31, 32], and Decanq and Lugo [12]), which means
+3:48:3269:20:20:61:512:462:12:g_d0_f8:12:g_d0_f8:B:that they need to be assigned in a systematic, transparent, and judicious fashion.  From a
+3:49:3359:20:21:61:512:442:12:g_d0_f8:12:g_d0_f8:B:practical standpoint, many different methods for doing so have been proposed, including
+3:50:3446:21:20:61:512:421:12:g_d0_f8:12:g_d0_f8:B:principal component and factor analyses, data envelopment, public opinion polls, budget
+3:51:3533:20:20:61:512:401:12:g_d0_f8:12:g_d0_f8:B:allocation,  analytic  hierarchy  processes,  and  expert  consultation,  among  others.   The
+3:52:3627:20:21:61:402:381:12:g_d0_f8:12:g_d0_f8:B:interested reader is referred to [12, 29] for a comprehensive survey.
+3:53:3696:21:20:81:512:360:12:g_d0_f8:12:g_d0_f8:A:Despite the wealth of available techniques to determine welfare index weights, their
+3:54:3780:20:20:61:512:340:12:g_d0_f8:12:g_d0_f8:B:determination remains controversial.  Deep disagreements regarding the United Nations’
+3:55:3866:20:21:61:512:320:12:g_d0_f8:12:g_d0_f8:B:Human  Development  Index  (HDI),  a  very  popular  measure  of  national  wellbeing,  are
+3:56:3957:21:20:61:512:299:12:g_d0_f8:12:g_d0_f8:B:emblematic of this point [31, 30].  Indeed, there is frequently no one “right” way to set
+3:57:4046:20:20:61:512:279:12:g_d0_f8:12:g_d0_f8:B:them and we are often justified, if not compelled to, consider the effect of many different
+3:58:4137:20:21:61:512:259:12:g_d0_f8:12:g_d0_f8:B:weights at once.  Such an analysis would serve two goals:  (a) to examine how robust a
+3:59:4223:21:20:61:512:238:12:g_d0_f8:12:g_d0_f8:B:given ranking of alternatives is to changes in weights, and (b) to determine a compromise
+3:60:4312:20:20:61:461:218:12:g_d0_f8:12:g_d0_f8:B:ranking that is in some sense “optimal” in the presence of weight imprecision.
+3:61:4390:20:20:81:512:198:12:g_d0_f8:12:g_d0_f8:A:Computational work in gauging the robustness of composite measures of welfare with
+3:62:4472:20:21:61:512:178:12:g_d0_f8:12:g_d0_f8:B:respect to the choice of weights primarily focused on Monte Carlo simulation (Saisana et
+3:63:4560:21:20:61:512:157:12:g_d0_f8:12:g_d0_f8:B:al. [33], OECD and JRC [29]).  These approaches assessed the importance of weights in
+3:64:4645:20:20:61:512:137:12:g_d0_f8:12:g_d0_f8:B:the context of a broader uncertainty and sensitivity analysis of given indices.  Of more rel-
+3:65:4738:20:21:61:512:117:12:g_d0_f8:12:g_d0_f8:B:evance to the present work, Duclos et al. [13] studied the robustness of multidimensional
+3:66:4827:21:20:61:512:96:12:g_d0_f8:12:g_d0_f8:B:poverty comparisons in a nonparametric setting.  They established an analytic criterion
+3:67:4914:20:0:61:512:76:12:g_d0_f8:12:g_d0_f8:B:for determining whether a (pairwise) poverty comparison is robust to the choice of ag-
+4:68:5001:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:gregation procedure and poverty line within a wide class of poverty indices.  Moreover,
+4:69:5088:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:they provided statistical tests that apply their insights to empirical settings.  In follow-up
+4:70:5182:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:work,  Duclos et al. [14] developed a similar framework for multidimensional inequality
+4:71:5269:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:comparisons.  Pinar et al. [30] focused on the HDI index and used ideas from stochastic
+4:72:5356:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:dominance  to  determine  the  set  of  weights  that  results  in  best-case  performance  for  a
+4:73:5454:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:particular  country.   They  used  these  weights  to  test  the  robustness  of  the  HDI  index
+4:74:5551:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:over time.  Anderson et al. [4] adopted a nonparametric approach,  by imposing mono-
+4:75:5635:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:tonicity and quasiconcavity on the welfare function and deriving upper and lower bounds
+4:76:5722:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:on welfare levels for the various alternatives/agents.  They, too, applied their framework
+4:77:5812:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:to the HDI. Alternatively,  Foster et al. [16] studied linear composite indices of welfare
+4:78:5902:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:and adopted a parametric structure for weight imprecision based on the--contamination
+4:79:5987:20:20:61:512:535:12:g_d0_f8:12:g_d0_f8:B:model of Bayesian analysis (Berger and Berliner [8]).  In their setting, a pairwise com-
+4:80:6075:20:21:61:512:515:12:g_d0_f8:12:g_d0_f8:B:parison  between  alternatives  was  defined  to  be  robust  with  respect  to  a  given  level  of
+4:81:6175:21:20:61:512:494:12:g_d0_f8:12:g_d0_f8:B:weight imprecision ifallof the weight vectors corresponding to it (i.e., this level of weight
+4:82:6268:20:20:61:512:474:12:g_d0_f8:12:g_d0_f8:B:imprecision) produce composite scores that maintain the same relative ranking.  In their
+4:83:6356:20:21:61:512:454:12:g_d0_f8:12:g_d0_f8:B:analysis, the key quantity of interest became the maximum level of imprecision at which
+4:84:6443:21:37:61:268:433:12:g_d0_f8:12:g_d0_f8:B:the pairwise comparison remains robust.
+4:85:6482:37:20:61:512:396:11:g_d0_f10:12:g_d0_f8:B:Contribution.I take a fundamentally different approach.  An important feature of the
+4:86:6566:20:20:61:512:376:12:g_d0_f8:12:g_d0_f8:B:analytical framework I propose is that, unlike that of previous contributions [13, 14, 4,
+4:87:6655:20:21:61:512:356:12:g_d0_f8:12:g_d0_f8:B:16, 30], it can efficiently produce complete rankings in high-dimensional settings of mul-
+4:88:6745:21:20:61:512:335:12:g_d0_f8:12:g_d0_f8:B:tiple alternatives and indicators (e.g., see Section 6).  In my model, which I describe in
+4:89:6835:20:20:61:512:315:12:g_d0_f8:12:g_d0_f8:B:Section 2, welfare is modeled via a general functionu, whose arguments are normalized
+4:90:6920:20:21:61:512:295:12:g_d0_f8:12:g_d0_f8:B:achievement  vectors  (corresponding  to  performance  across  the  different  dimensions  of
+4:91:7013:21:20:61:512:274:12:g_d0_f8:12:g_d0_f8:B:welfare) and weight vectors, reflecting the weight attached to each dimension of welfare.
+4:92:7102:20:20:61:512:254:12:g_d0_f8:12:g_d0_f17:B:Each vector of weights is itself weighted via a nontrivial and Lebesgue integrableimpor-
+4:93:7190:20:21:61:512:234:12:g_d0_f17:12:g_d0_f8:B:tancefunctionf.  This function captures beliefs and/or tastes regarding the correct set
+4:94:7277:21:20:61:512:213:12:g_d0_f8:12:g_d0_f8:B:of weights to use.1Subsequently, in Section 3, I use the theory of social choice to propose
+4:95:7368:20:20:61:512:193:12:g_d0_f8:12:g_d0_f8:B:a consensus ranking of the alternatives given this weight imprecision.  Viewing a vector
+4:96:7456:20:21:61:512:173:12:g_d0_f8:12:g_d0_f8:B:of weights as an abstract voter who expresses his/her preferences over alternatives via
+4:97:7543:21:16:61:512:152:12:g_d0_f8:12:g_d0_f19:B:the welfare functionu, an electorate is constructed by considering each weight vectorw
+4:98:7629:16:20:73:512:136:6:g_d0_f20:9:g_d0_f14:F:1That bothuandfare model primitives is reminiscent of certain settings of decision-making under ambiguity,
+4:99:7735:20:17:61:512:116:9:g_d0_f14:9:g_d0_f14:F:where the existence of a utility function and a second-order probability distribution over a set of Bayesian priors
+4:100:7850:17:16:61:512:99:9:g_d0_f14:9:g_d0_f14:F:are assumed (Klibanoff et al. [21]).  Still, it should be mentioned that these assumptions are not crucial and that
+4:101:7965:16:0:61:482:83:9:g_d0_f14:9:g_d0_f14:F:the model is general enough to accommodate fully nonparametric analytical frameworks (see Section 2).
+5:102:8067:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:in the simplex and introducingf(w) (possibly irrational) copies of itself having identi-
+5:103:8155:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:cal preferences.  This operation results in a continuum of votersE(f) of finite Lebesgue
+5:104:8243:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:measure.  Next, I propose Kemeny’s rule (Kemeny [20]) as a way of resolving voter dis-
+5:105:8329:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:agreement and computing a consensus ranking, given the preferences of this electorate of
+5:106:8417:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:weight vectorsE(f).  Well-established in the social choice and voting literatures [25, 42],
+5:107:8508:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:Kemeny’s rule produces a ranking (referred to as “Kemeny-optimal”) that minimizes the
+5:108:8593:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:sum of pairwise rank disagreements with respect to stated voter preferences.  Drawing
+5:109:8678:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:from the results of Young [40] and Young and Levenglick [43], an axiomatic characteri-
+5:110:8764:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:zation of the rule is provided, on the basis of five intuitive properties.  Yet, it should be
+5:111:8857:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:noted that the appeal of the proposed rule may extend beyond axiomatic considerations
+5:112:8942:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:since, under certain statistical frameworks, Kemeny’s rule can be interpreted as providing
+5:113:9032:20:20:61:462:535:12:g_d0_f8:12:g_d0_f8:B:the maximum likelihood estimate of the objectively “correct” ranking [41, 11].
+5:114:9110:20:21:81:512:515:12:g_d0_f8:12:g_d0_f8:A:In  Section  4,  I  explore  the  computational  implementation  of  Kemeny’s  rule  to  the
+5:115:9202:21:20:61:512:494:12:g_d0_f8:12:g_d0_f8:B:present context.  This is because,  despite its many virtues,  Kemeny’s rule suffers from
+5:116:9291:20:20:61:512:474:12:g_d0_f8:12:g_d0_f8:B:one very serious drawback: the computation of a Kemeny-optimal ranking is NP-hard [7],
+5:117:9377:20:21:61:512:454:12:g_d0_f8:12:g_d0_f8:B:even  when  the  number  of  criteria  is  just  four  [15].   The  main  problem  arises  from  the
+5:118:9477:21:20:61:512:433:12:g_d0_f8:12:g_d0_f8:B:potential presence of so-calledCondorcet cycles, implying intransitive majority (pairwise)
+5:119:9567:20:20:61:512:413:12:g_d0_f8:12:g_d0_f8:B:preferences.  Yet, viewing the problem under a graph theoretic lens, it may be possible
+5:120:9654:20:21:61:512:393:12:g_d0_f8:12:g_d0_f8:B:to reduce it to a series of smaller and more tractable problems.  The main insight is to
+5:121:9742:21:20:61:512:372:12:g_d0_f8:12:g_d0_f8:B:use a seminal algorithm of Tarjan [37] to identify the strongly connected components of a
+5:122:9831:20:20:61:512:352:12:g_d0_f8:12:g_d0_f8:B:suitably-defined directed graph, which in turn contain maximal-size Condorcet cycles of
+5:123:9918:20:21:61:512:332:12:g_d0_f8:12:g_d0_f8:B:the underlying social choice problem.  If the length of these cycles is small enough, brute-
+5:124:10010:21:20:61:512:311:12:g_d0_f8:12:g_d0_f8:B:force enumeration can resolve them efficiently.  If not, it is necessary to use approximation
+5:125:10103:20:20:61:512:291:12:g_d0_f8:12:g_d0_f8:B:algorithms  and  I  implement  the  ones  that  provide  the  best  approximation  guarantees
+5:126:10196:20:21:61:317:271:12:g_d0_f8:12:g_d0_f8:B:available, due to Van Zuylen and Williamson [44].
+5:127:10245:21:20:81:512:250:12:g_d0_f8:12:g_d0_f8:A:In  Section  5,  I  analytically  work  out  an  interesting  special  case  of  the  model  cor-
+5:128:10342:20:20:61:512:230:12:g_d0_f8:12:g_d0_f8:B:responding  to  generalized  weighted  means,  a  family  of  welfare  functions  that  are  very
+5:129:10439:20:21:61:512:210:12:g_d0_f8:12:g_d0_f8:B:popular  in  practice  [29,  16,  39],  and  the--contamination  setting  of  Foster  et  al.  [16].
+5:130:10539:21:20:61:512:189:12:g_d0_f8:12:g_d0_f8:B:Using results from polyhedral geometry (Lawrence [24]) it is possible to present a closed-
+5:131:10629:20:20:61:512:169:12:g_d0_f8:12:g_d0_f8:B:form formula for the proportion of weights ranking one alternative over another.  This
+5:132:10715:20:21:61:512:149:12:g_d0_f8:12:g_d0_f8:B:formula facilitates computations significantly, as Kemeny’s rule can be applied without
+5:133:10802:21:20:61:512:128:12:g_d0_f8:12:g_d0_f8:B:the need to compute these proportions numerically.  Moreover, it is possible to prove that
+5:134:10892:20:20:61:446:108:12:g_d0_f8:12:g_d0_f8:B:these proportions are monotonic in-, the magnitude of weight imprecision.
+5:135:10965:20:0:81:512:88:12:g_d0_f8:12:g_d0_f8:A:In Section 6, I apply the special case of the model presented in Section 5 to Shanghai
+6:136:11052:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:Jiao Tong University’s Academic Ranking of World Universities (ARWU).2The ARWU
+6:137:11130:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:index is a widely-used composite index measuring academic excellence.  It linearly ag-
+6:138:11216:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:gregates (normalized) academic performance across 6 dimensions to produce university
+6:139:11300:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:rankings.  These rankings receive a lot of media attention; in some cases they may even
+6:140:11387:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:drive  political  discourse  on  national  university  systems  [34].   Nonetheless,  it  has  been
+6:141:11486:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:shown  that  they  can  be  very  sensitive  to  seemingly  ad-hoc  conventions,  including  the
+6:142:11582:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:choice of weights [34].  The controversial nature of this index, in combination with its rel-
+6:143:11675:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:atively high dimensionality (100 countries, 6 indicators), render it a good application area
+6:144:11767:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:for the model.  The analysis does indeed show how introducing even moderate amounts
+6:145:11850:20:38:61:503:576:12:g_d0_f8:12:g_d0_f8:B:of weight imprecision may have a very significant effect on a university’s ARWU rank.
+6:146:11935:38:20:61:512:538:11:g_d0_f10:12:g_d0_f8:B:Connections to Knightian uncertainty.On a final note,  it is worth mentioning the
+6:147:12016:20:20:61:512:518:12:g_d0_f8:12:g_d0_f8:B:possible connections of this work to the decision-theoretic literature on Knightian uncer-
+6:148:12106:20:21:61:512:498:12:g_d0_f8:12:g_d0_f8:B:tainty.  The examination of welfare indices under weight imprecision is, mathematically if
+6:149:12196:21:20:61:512:477:12:g_d0_f8:12:g_d0_f8:B:not conceptually, analogous to certain settings of decision-making under ambiguity (see
+6:150:12283:20:20:61:512:457:12:g_d0_f8:12:g_d0_f8:B:Gilboa and Marinacci [18]).  Uncertain weight vectors over dimensions of well-being can
+6:151:12370:20:20:61:512:437:12:g_d0_f8:12:g_d0_f8:B:be recast as uncertain Bayesian priors over (a finite collection of) states of nature.  Cor-
+6:152:12462:20:21:61:512:417:12:g_d0_f8:12:g_d0_f8:B:respondingly, the analogy of Bayesian priors as voters, expressing their preferences over
+6:153:12551:21:20:61:512:396:12:g_d0_f8:12:g_d0_f8:B:a finite set of actions can once again be evoked and ideas from voting theory can be used
+6:154:12640:20:20:61:512:376:12:g_d0_f8:12:g_d0_f8:B:in this context,  too.  As a result,  the work presented here may be of relevance to this
+6:155:12729:20:38:61:227:356:12:g_d0_f8:12:g_d0_f8:B:vibrant field of economic theory.
+6:156:12762:38:20:61:512:318:11:g_d0_f10:12:g_d0_f8:B:Paper outline.The structure of the paper is as follows.  Section 2 introduces the formal
+6:157:12850:20:20:61:512:298:12:g_d0_f8:12:g_d0_f8:B:model.   Section  3  applies  Kemeny’s  rule  to  our  context  and  discusses  the  normative
+6:158:12944:20:20:61:512:278:12:g_d0_f8:12:g_d0_f8:B:implications of this choice.  Section 4 focuses on computational issues and shows how the
+6:159:13033:20:21:61:512:258:12:g_d0_f8:12:g_d0_f8:B:determination of Kemeny-optimal rankings can be efficiently tackled. Section 5 derives an
+6:160:13122:21:20:61:512:237:12:g_d0_f8:12:g_d0_f8:B:analytic solution for a compelling special case of the model corresponding to generalized
+6:161:13211:20:20:61:512:217:12:g_d0_f8:12:g_d0_f8:B:weighted means and--contamination.  Section 6 implements the proposed procedure to
+6:162:13293:20:21:61:512:197:12:g_d0_f8:12:g_d0_f8:B:the  2013  ARWU  Index,  while  Section  7  provides  conclusions  and  directions  for  future
+6:163:13388:21:16:61:453:176:12:g_d0_f8:12:g_d0_f8:B:research.  All mathematical proofs and figures are collected in the Appendix.
+6:164:13465:16:0:73:184:160:6:g_d0_f20:9:g_d0_f14:F:2www.shanghairanking.com
+7:165:13490:0:32:61:216:758:14:g_d0_f15:14:g_d0_f15:C:2    Model Description
+7:166:13512:32:20:61:512:726:12:g_d0_f8:12:g_d0_f8:B:Consider a set ofalternativesAindexed bya= 1,2,...,Aand a set ofindicatorsIindexed
+7:167:13594:20:20:61:512:706:12:g_d0_f8:12:g_d0_f8:B:byi= 1,2,...,I.  Letxai∈[0,1] denote alternativea’s normalized value of indicatori,
+7:168:13677:20:21:61:512:686:12:g_d0_f8:12:g_d0_f8:B:andxa∈[0,1]Iitsachievementvector collecting all such information3(all vectors are
+7:169:13758:21:20:61:512:665:12:g_d0_f8:12:g_d0_f8:B:taken to be column vectors).XA⊂[0,1]I×Adenotes an achievement matrix collecting
+7:170:13837:20:20:61:501:645:12:g_d0_f8:12:g_d0_f8:B:the achievement vectors of alternatives inA.  That is, the (i,j)’th entry ofXAisxaji.
+7:171:13922:20:21:81:512:625:12:g_d0_f8:12:g_d0_f8:A:Assume that performance across indicators is weighted by a vectorwbelonging in
+7:172:14000:21:0:61:215:604:12:g_d0_f8:12:g_d0_f16:B:∆I−1={w∈ <I:w≥0,
+7:173:14016:0:12:227:244:613:12:g_d0_f25:8:g_d0_f22:C:∑I
+7:174:14018:12:17:240:512:601:8:g_d0_f22:12:g_d0_f8:A:i=1wi=  1},  the  (I−1)-dimensional  simplex.   Here,
+7:175:14071:17:20:61:512:584:12:g_d0_f16:12:g_d0_f8:B:wirepresents the weight given to indicatori.  Thewelfarecorresponding to achievement
+7:176:14155:20:32:61:296:564:12:g_d0_f8:12:g_d0_f8:B:vectorxandwis given by a general function
+7:177:14196:32:31:220:512:532:12:g_d0_f16:12:g_d0_f8:A:u(x,w) :<I×∆I−17→<.(1)
+7:178:14218:31:20:61:512:501:12:g_d0_f8:12:g_d0_f8:B:The welfare function is purposefully left general in order to accommodate many different
+7:179:14306:20:21:61:512:481:12:g_d0_f8:12:g_d0_f8:B:multidimensional  phenomena  from  poverty  [13,  2],  to  inequality  [17,  38],  to  develop-
+7:180:14401:21:20:61:106:460:12:g_d0_f8:12:g_d0_f8:B:ment [3].
+7:181:14410:20:20:81:512:440:12:g_d0_f8:12:g_d0_f8:A:Now, define animportance functionfon the simplex ∆I−1, satisfyingf(w)≥0 for
+7:182:14485:20:0:61:179:420:12:g_d0_f8:12:g_d0_f16:B:allw∈∆I−1and 0<
+7:183:14500:0:13:184:190:429:12:g_d0_f25:12:g_d0_f25:C:∫
+7:184:14501:13:17:190:512:416:8:g_d0_f18:12:g_d0_f8:A:∆I−1f(w)dw<+∞.For instance,  iff(w) = 1 if and only if
+7:185:14555:17:20:61:512:399:12:g_d0_f19:12:g_d0_f8:B:w∈Wfor someW⊂∆I−1having non-negligible Lebesgue measure in<I−1and is zero
+7:186:14628:20:20:61:512:379:12:g_d0_f8:12:g_d0_f8:B:everywhere else, then this implies that allw∈Ware assigned equal importance, while
+7:187:14710:20:20:61:512:359:12:g_d0_f8:12:g_d0_f8:B:allw6∈Ware not considered at all.  Similarly tou, the importance functionfis a model
+7:188:14794:20:21:61:313:339:12:g_d0_f8:8:g_d0_f18:B:input and its determination will be case-specific.4
+7:189:14845:21:20:81:512:318:12:g_d0_f8:12:g_d0_f7:A:Given a welfare functionuand achievement matrixXA, define for all (ai,aj)∈A×A
+7:190:14922:20:31:61:208:298:12:g_d0_f8:12:g_d0_f8:B:the following subset of ∆I−1:
+7:191:14951:31:0:163:210:267:12:g_d0_f16:12:g_d0_f8:A:WXA,uaiaj=
+7:192:14961:0:9:213:220:276:12:g_d0_f25:12:g_d0_f25:C:{
+7:193:14962:9:0:220:398:267:12:g_d0_f19:12:g_d0_f8:A:w∈∆I−1:u(xai,w)≥u(xaj,w)
+7:194:14986:0:9:398:405:276:12:g_d0_f25:12:g_d0_f25:C:}
+7:195:14987:9:32:407:512:267:12:g_d0_f16:12:g_d0_f8:A:.(2)
+7:196:14991:32:20:61:512:235:12:g_d0_f8:12:g_d0_f8:B:Now define aprofileLto be a tripletL= (XA,f,u), and letLdenote the space of all
+7:197:15070:20:31:61:354:215:12:g_d0_f8:12:g_d0_f8:B:profiles.  Given a profileL, define theelection matrixYL:
+7:198:15127:31:0:127:155:184:12:g_d0_f16:12:g_d0_f8:A:YLij=
+7:199:15132:0:27:158:165:200:12:g_d0_f25:12:g_d0_f25:C:∫
+7:200:15133:27:0:165:187:173:8:g_d0_f22:6:g_d0_f24:F:WXA,uaiaj
+7:201:15142:0:0:197:252:184:12:g_d0_f16:12:g_d0_f7:C:f(w)dw−
+7:202:15149:0:27:255:262:200:12:g_d0_f25:12:g_d0_f25:C:∫
+7:203:15150:27:0:261:284:173:8:g_d0_f22:6:g_d0_f24:F:WXA,uajai
+7:204:15159:0:29:293:512:184:12:g_d0_f16:12:g_d0_f8:A:f(w)dw,∀i,j∈{1,2,...,A}.(3)
+7:205:15186:29:20:73:512:155:6:g_d0_f20:9:g_d0_f14:F:3For simplicity, I choose the normalized values to lie in [0,1], though any other interval [xmin,xmax] would also
+7:206:15299:20:9:61:83:135:9:g_d0_f14:9:g_d0_f14:F:work.
+7:207:15304:9:21:73:512:126:6:g_d0_f20:9:g_d0_f14:F:4For example, in the case of the HDI,uis a weighted geometric mean, whilefcould be set in the following
+7:208:15407:21:0:61:426:105:9:g_d0_f14:9:g_d0_f14:F:manner:  ask each countrycto provide its importance functionfcon ∆2and then setf=
+7:209:15488:0:9:429:444:112:9:g_d0_f28:6:g_d0_f24:F:∑C
+7:210:15490:9:14:439:512:103:6:g_d0_f24:9:g_d0_f14:F:c=1fc(whereCis
+7:211:15504:14:0:61:185:89:9:g_d0_f14:9:g_d0_f14:F:the total number of countries).
+8:212:15536:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:The entryYLijmeasures the net majority of weights resulting in higher welfare for alter-
+8:213:15624:20:20:61:511:738:12:g_d0_f8:6:g_d0_f27:B:nativeaithanaj, as measured by welfare functionuapplied to achievement vectorsxai
+8:214:15705:20:21:61:384:718:12:g_d0_f8:12:g_d0_f8:B:andxaj, appropriately weighted by the importance functionf.
+8:215:15764:21:37:81:353:697:12:g_d0_f8:12:g_d0_f8:A:Similarly, we define theproportionmatrixVL, where
+8:216:15813:37:0:172:200:660:12:g_d0_f16:12:g_d0_f8:A:VLij=
+8:217:15818:0:14:204:210:683:12:g_d0_f25:12:g_d0_f25:C:∫
+8:218:15819:14:8:210:285:669:8:g_d0_f22:12:g_d0_f19:C:WXA,uaiajf(w)dw
+8:219:15834:8:14:209:215:661:12:g_d0_f25:12:g_d0_f25:C:∫
+8:220:15835:14:0:215:281:647:8:g_d0_f18:12:g_d0_f19:C:∆I−1f(w)dw
+8:221:15845:0:34:286:512:660:12:g_d0_f16:12:g_d0_f8:A:,∀i,j∈{1,2,...,A},.(4)
+8:222:15867:34:21:61:512:626:12:g_d0_f8:12:g_d0_f8:B:representing  the  proportion  of  weights  in  ∆I−1resulting  in  weakly  higher  welfare  for
+8:223:15962:21:20:61:512:605:12:g_d0_f8:12:g_d0_f8:B:alternativeaithanaj, as measured by welfare functionuapplied to achievement vectors
+8:224:16045:20:20:61:405:585:12:g_d0_f19:12:g_d0_f8:B:xaiandxaj, appropriately weighted by the importance functionf.
+8:225:16107:20:21:81:512:565:12:g_d0_f8:12:g_d0_f8:A:In general, the integrals in Eqs. (3)-(4) will need to be tackled numerically.  Never-
+8:226:16193:21:20:61:512:544:12:g_d0_f8:12:g_d0_f8:B:theless, we will see that analytic solutions are also possible for some compelling special
+8:227:16283:20:37:61:226:524:12:g_d0_f8:12:g_d0_f8:B:cases ofuandf(see Section 5).
+8:228:16312:37:20:61:512:487:11:g_d0_f10:12:g_d0_f8:B:Discrete importance functions.Before proceeding, I wish to note that the model can
+8:229:16394:20:21:61:512:467:12:g_d0_f8:12:g_d0_f8:B:be straightforwardly extended to account for discrete importance functionsfon a finite
+8:230:16480:21:20:61:512:446:12:g_d0_f8:12:g_d0_f8:B:(or countable) subset of weights belonging in ∆I−1.  In this case, the integrals in Eqs. (3)-
+8:231:16573:20:20:61:512:426:12:g_d0_f8:12:g_d0_f8:B:(4) would become summations over the relevant subset of ∆I−1and all of the results in
+8:232:16658:20:37:61:271:406:12:g_d0_f8:12:g_d0_f8:B:Sections 3 and 4 would naturally extend.
+8:233:16698:37:21:61:512:369:11:g_d0_f10:12:g_d0_f8:B:Embedding a  completely nonparametric framework.On  a  final  note,  the  model  I
+8:234:16780:21:20:61:512:348:12:g_d0_f8:12:g_d0_f8:B:have introduced can accommodate a completely nonparametric framework of analysis, in
+8:235:16864:20:20:61:512:328:12:g_d0_f8:12:g_d0_f8:B:which there is no need to choose a functional form for the welfare functionu.  I briefly
+8:236:16952:20:36:61:398:308:12:g_d0_f8:12:g_d0_f8:B:explain how.  Consider the following discrete model instance with:
+8:237:17018:36:0:237:288:272:12:g_d0_f16:12:g_d0_f8:A:u(x,w) =
+8:238:17026:0:29:298:309:287:8:g_d0_f22:12:g_d0_f25:C:I∑
+8:239:17028:29:0:293:307:258:8:g_d0_f22:8:g_d0_f18:F:i=1
+8:240:17031:0:36:311:336:272:12:g_d0_f16:12:g_d0_f16:C:wixi,
+8:241:17036:36:40:61:403:236:12:g_d0_f8:12:g_d0_f8:B:and (here,eidenotes theI-dimensionali’th standard basis vector)
+8:242:17099:40:0:159:205:196:12:g_d0_f16:12:g_d0_f8:A:f(w)   =
+8:243:17107:0:11:215:226:221:12:g_d0_f25:12:g_d0_f25:C:
+8:244:17108:11:21:215:226:210:12:g_d0_f25:12:g_d0_f25:C:
+8:245:17109:21:0:215:226:189:12:g_d0_f25:12:g_d0_f25:C:
+8:246:17110:0:20:231:407:205:12:g_d0_f16:12:g_d0_f16:C:fi≥0   ifw=ei∈{e1,e2,...,eI},
+8:247:17139:20:0:231:323:185:12:g_d0_f8:12:g_d0_f16:A:0,otherwise,
+8:248:17151:0:41:497:512:196:12:g_d0_f8:12:g_d0_f8:A:(5)
+8:249:17154:41:0:61:91:155:12:g_d0_f8:12:g_d0_f8:B:where
+8:250:17159:0:13:95:112:164:12:g_d0_f25:8:g_d0_f22:C:∑I
+8:251:17161:13:17:108:512:151:8:g_d0_f22:12:g_d0_f8:A:i=1fi>0.  In this setting, the importance functionfcan be re-interpreted as
+8:252:17236:17:20:61:512:134:12:g_d0_f8:12:g_d0_f8:B:the importance placed on eachindicatori, as opposed to each vector ofweightsw.  Cor-
+8:253:17320:20:20:61:512:114:12:g_d0_f8:12:g_d0_f8:B:respondingly,  profiles  featuring  suchu-fcombinations  lead  to  election  matrices  whose
+8:254:17412:20:21:61:512:94:12:g_d0_f8:12:g_d0_f8:B:entries reflect the net majority ofindicatorsfavoring one alternative over another, appro-
+8:255:17502:21:0:61:414:73:12:g_d0_f8:12:g_d0_f8:B:priately weighted by their (i.e., the indicators’) assumed importance.
+9:256:17573:0:32:61:396:758:14:g_d0_f15:14:g_d0_f15:C:3    Weight imprecision and social choice theory
+9:257:17621:32:28:61:296:726:12:g_d0_f15:12:g_d0_f15:C:3.1    Weight Vectors as Abstract Voters
+9:258:17661:28:21:61:512:698:12:g_d0_f8:12:g_d0_f8:B:Given a profileL= (XA,f,u), suppose we think of a vector of weightsw∈∆I−1as an
+9:259:17739:21:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:imaginary voter who expresses their preferences over the alternatives inAvia the appli-
+9:260:17826:20:20:61:512:657:12:g_d0_f8:12:g_d0_f8:B:cation of welfare functionuon the achievement vectors inXA.  That is, voterw(weakly)
+9:261:17910:20:21:61:512:637:12:g_d0_f8:12:g_d0_f7:B:prefers  an  alternativeaioverajif  and  only  ifu(xai,w)> u(xaj,w)  (u(xai,w)≥
+9:262:17989:21:20:61:512:616:12:g_d0_f16:12:g_d0_f8:B:u(xaj,w)).   Thus,  voterw’s  preferences  will  be  expressed  as  a  possibly  partial  order-
+9:263:18085:20:20:61:177:596:12:g_d0_f8:12:g_d0_f8:B:ing of the alternatives.
+9:264:18109:20:21:81:511:576:12:g_d0_f8:8:g_d0_f18:A:Subsequently, construct an abstract electorate of voters by considering eachw∈∆I−1
+9:265:18191:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:and introducingf(w) (possibly irrational) copies of itself.  Thus, the greaterf(w) is, the
+9:266:18281:20:20:61:512:535:12:g_d0_f8:12:g_d0_f8:B:more voters holdingw’s preferences are introduced. This operation results in a continuum
+9:267:18369:20:32:61:253:515:12:g_d0_f8:12:g_d0_f8:B:of votersE(f) of finite measure, since
+9:268:18407:32:0:193:211:483:12:g_d0_f8:12:g_d0_f16:A:0<
+9:269:18409:0:27:214:221:500:12:g_d0_f25:12:g_d0_f25:C:∫
+9:270:18410:27:0:221:237:473:8:g_d0_f9:8:g_d0_f18:F:E(f)
+9:271:18414:0:0:240:265:483:12:g_d0_f8:12:g_d0_f8:A:dv=
+9:272:18417:0:27:268:275:500:12:g_d0_f25:12:g_d0_f25:C:∫
+9:273:18418:27:0:275:296:473:8:g_d0_f18:6:g_d0_f20:F:∆I−1
+9:274:18422:0:34:298:380:483:12:g_d0_f16:12:g_d0_f16:C:f(w)dw <+∞.
+9:275:18433:34:20:61:512:449:12:g_d0_f8:12:g_d0_f17:B:With the electorateE(f) in mind, the quantityYLaiajof Eq. (4) defines thenet majority
+9:276:18518:20:21:61:512:429:12:g_d0_f8:12:g_d0_f8:B:of voters withinE(f) preferring alternativeaitoaj, under welfare functionuapplied to
+9:277:18602:21:20:61:512:408:12:g_d0_f19:12:g_d0_f8:B:xaiandxaj.   Thus,  all  information  on  the  pairwise  preferences  of  the  electorateE(f)
+9:278:18695:20:20:61:440:388:12:g_d0_f8:12:g_d0_f8:B:over the set of alternativesAis succinctly summarized by the matrixYL.
+9:279:18765:20:21:81:512:368:12:g_d0_f8:12:g_d0_f8:A:Given that it is unlikely that all weight vectors will yield the same ordered lists of
+9:280:18851:21:20:61:512:347:12:g_d0_f8:12:g_d0_f8:B:alternatives, there will not be a ranking ofAthat is consistent with the preferences of all
+9:281:18942:20:20:61:512:327:12:g_d0_f8:12:g_d0_f8:B:weights belonging to ∆I−1.  Thus, the question arises:  In view of this inconclusiveness,
+9:282:19031:20:21:61:512:307:12:g_d0_f8:12:g_d0_f8:B:what would constitute a “good” way of aggregating the preferences of all weight vectors,
+9:283:19119:21:37:61:424:286:12:g_d0_f8:12:g_d0_f8:B:suitably weighted by the importance a decision maker places on them?
+9:284:19187:37:28:61:181:249:12:g_d0_f15:12:g_d0_f15:C:3.2    Kemeny’s Rule
+9:285:19207:28:21:61:512:221:12:g_d0_f8:12:g_d0_f8:B:Variations of the above question have concerned philosophers and social scientists since
+9:286:19295:21:20:61:512:200:12:g_d0_f8:12:g_d0_f8:B:the work of Condorcet and Borda in the 18th century.  To state the problem formally,
+9:287:19379:20:20:61:512:180:12:g_d0_f8:12:g_d0_f8:B:assume a finite set of votersN={1,2,...,N}and alternativesA={a1,a2,...,aA}.  A
+9:288:19457:20:21:61:512:160:12:g_d0_f17:12:g_d0_f8:B:rankingRis a bijective map fromAto{1,2,...,A}, whereR(a) is interpreted as the rank
+9:289:19540:21:20:61:512:139:12:g_d0_f8:12:g_d0_f8:B:of alternativea.  LetRAdenote the set of all rankings ofA.  A (voting)rulemaps a set of
+9:290:19627:20:20:61:512:119:12:g_d0_f16:12:g_d0_f8:B:Ninput rankings, representing voters’ ordinal preferences, to a set of nonempty subsets
+9:291:19714:20:21:61:512:99:12:g_d0_f8:12:g_d0_f8:B:ofRA,  representing the socially optimal consensus ranking(s).  The objective becomes
+9:292:19799:21:0:61:387:78:12:g_d0_f8:12:g_d0_f8:B:that of selecting a voting rule that is, in some sense, “optimal”.
+10:293:19866:0:20:81:512:758:12:g_d0_f8:12:g_d0_f17:A:In an important paper,  Kemeny [20] introduced a rule which I will refer to asKe-
+10:294:19947:20:20:61:512:738:12:g_d0_f17:12:g_d0_f8:B:meny’s  rule.5Given  a  set  of  individual  rankings,  Kemeny’s  rule  produces  a  ranking
+10:295:20039:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:(referred  to  as  “Kemeny-optimal”)  that  minimizes  the  sum  of  pairwise  disagreements
+10:296:20131:21:20:61:511:697:12:g_d0_f8:12:g_d0_f8:B:with  respect  to  voter  preferences.   More  formally,  theKendall-τdistancebetween  two
+10:297:20221:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:rankingsR1andR2,  denoted  byτ(R1,R2),  is  defined  as  the  number  of  pairs  (ai,aj)
+10:298:20309:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:such thatR1(ai)> R1(aj) andR2(ai)< R2(aj).  Hence,τ(R1,R2) counts the number
+10:299:20385:21:20:61:511:636:12:g_d0_f8:12:g_d0_f7:B:of (pairwise) relative rank disagreements betweenR1andR2.  Given a set of rankingsS
+10:300:20468:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:(corresponding to the ranked preferences of the set of voters), aKemeny-optimalranking
+10:301:20554:20:0:61:277:596:12:g_d0_f8:12:g_d0_f8:B:is a rankingKthat minimizes the function
+10:302:20594:0:13:281:294:605:12:g_d0_f25:12:g_d0_f25:C:∑
+10:303:20595:13:16:294:512:592:8:g_d0_f22:12:g_d0_f8:A:S∈Sτ(·,S) over the set of rankingsRA, i.e.,
+10:304:20638:16:10:61:125:576:12:g_d0_f16:12:g_d0_f8:B:K= arg min
+10:305:20648:10:0:93:119:566:8:g_d0_f22:6:g_d0_f13:F:R∈RA
+10:306:20652:0:25:127:144:587:12:g_d0_f25:12:g_d0_f25:C:∑
+10:307:20653:25:0:127:144:562:8:g_d0_f22:8:g_d0_f9:F:S∈S
+10:308:20656:0:26:146:512:576:12:g_d0_f16:12:g_d0_f8:A:τ(R,S).In the realm of social choice, Kemeny’s rule is widely recognized
+10:309:20728:26:20:61:443:550:12:g_d0_f8:12:g_d0_f8:B:as a very appealing method for aggregating individual preferences [25, 42].
+10:310:20803:20:21:81:512:530:12:g_d0_f8:12:g_d0_f8:A:Beyond its intuitiveness, Kemeny’s rule rests on strong axiomatic foundations, which
+10:311:20887:21:20:61:512:509:12:g_d0_f8:12:g_d0_f17:B:I briefly discuss.  A voting rule isanonymousif it treats all voters alike, while it isneutral
+10:312:20981:20:20:61:512:489:12:g_d0_f8:12:g_d0_f8:B:if it treats all alternatives alike.  That is, the identity of a voter or alternative do not play
+10:313:21078:20:21:61:512:469:12:g_d0_f8:12:g_d0_f8:B:a role in the consensus ranking.  A rule satisfiesreinforcementif, whenever two distinct
+10:314:21166:21:20:61:512:448:12:g_d0_f8:12:g_d0_f8:B:groups of voters separately reach a common set of consensus rankings, then this set is also
+10:315:21257:20:20:61:512:428:12:g_d0_f8:12:g_d0_f8:B:agreed upon when the two groups are merged.  A rule satisfies theCondorcet criterionif,
+10:316:21344:20:21:61:512:408:12:g_d0_f8:12:g_d0_f8:B:whenever there is an alternative that, when compared with every other, is preferred by a
+10:317:21432:21:20:61:512:387:12:g_d0_f8:12:g_d0_f8:B:majority of voters, then this alternative is ranked first.  A rule isCondorcetif it satisfies
+10:318:21525:20:20:61:512:367:12:g_d0_f8:12:g_d0_f8:B:a variation of the Condorcet criterion, suitably interpreted for preference functions (see
+10:319:21615:20:21:61:512:347:12:g_d0_f8:12:g_d0_f8:B:Young and Levenglick [43]).  A voting rule isunanimousif, whenever all voters rank one
+10:320:21701:21:20:61:512:326:12:g_d0_f8:12:g_d0_f17:B:alternative over another, then so does the consensus ranking.  Finally, define aninterval
+10:321:21790:20:20:61:512:306:12:g_d0_f8:12:g_d0_f8:B:of a ranking to be a subset of alternatives that are ranked in succession, i.e., that appear
+10:322:21882:20:21:61:512:286:12:g_d0_f8:12:g_d0_f17:B:“together” in the ranking without gaps.  A rule satisfieslocal independence of irrelevant
+10:323:21971:21:20:61:512:265:12:g_d0_f17:12:g_d0_f8:B:alternatives  (LIIA)if  the  ranking  of  alternatives  within  each  interval  remains  fixed  if
+10:324:22069:20:20:61:512:245:12:g_d0_f8:12:g_d0_f8:B:we ignore alternatives outside of it (see Young [41, 42]).  For instance, this means that
+10:325:22158:20:21:61:512:225:12:g_d0_f8:12:g_d0_f8:B:the  ranking  of  the  alternatives  at  the  top  of  the  consensus  ranking  is  unaffected  if  we
+10:326:22260:21:20:61:512:204:12:g_d0_f8:12:g_d0_f8:B:remove those in the bottom and re-apply the rule to the restricted problem.  As a result,
+10:327:22349:20:20:61:512:184:12:g_d0_f8:12:g_d0_f8:B:LIIA implies that the voting rule cannot be manipulated by adding unrealistically bad or
+10:328:22437:20:21:61:512:164:12:g_d0_f8:12:g_d0_f8:B:good alternatives to the mix.  In an important paper, Young and Levenglick [43] proved
+10:329:22523:21:16:61:512:143:12:g_d0_f8:12:g_d0_f8:B:that Kemeny’s rule is the only voting rule that isCondorcetand satisfiesneutralityand
+10:330:22608:16:20:73:512:127:6:g_d0_f20:9:g_d0_f14:F:5In the literature it is also sometimes referred to as the “maximum likelihood” or the “Condorcet” rule.  As
+10:331:22716:20:16:61:512:107:9:g_d0_f14:9:g_d0_f14:F:Young noted in [41], the Marquis de Condorcet was the first to propose this way of deciding an election, even if
+10:332:22828:16:0:61:218:91:9:g_d0_f14:9:g_d0_f14:F:he did not work out the formal details.
+11:333:22868:0:20:61:512:758:12:g_d0_f17:12:g_d0_f8:B:reinforcement. What is more, this characterization can be used to establish that Kemeny’s
+11:334:22957:20:20:61:512:738:12:g_d0_f8:12:g_d0_f17:B:rule is the unique voting rule satisfyinganonymity, neutrality, unanimity, reinforcement,
+11:335:23046:20:21:61:217:718:12:g_d0_f17:12:g_d0_f8:B:and LIIA(see Young [41, 42]).
+11:336:23075:21:20:81:512:697:12:g_d0_f8:12:g_d0_f8:A:Yet,  the  appeal  of  the  Kemeny  rule  extends  beyond  purely  normative  considera-
+11:337:23163:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:tions.   This  is  because  Young  [41]  showed  that,  under  a  particular  kind  of  statistical
+11:338:23262:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:framework,  Kemeny’s  rule  can  be  characterized  using  maximum  likelihood  estimation.
+11:339:23353:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:That is, assuming the existence of an objectively “correct” ranking of which voter prefer-
+11:340:23443:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:ences provide a particular kind of noisy signal, Kemeny’s rule provides the ranking which
+11:341:23532:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:maximizes the associated likelihood function.6This finding has proven to be robust to
+11:342:23617:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:generalizations  of  Young’s  basic  model  (Conitzer  [11]),  suggesting  the  existence  of  an
+11:343:23714:21:37:61:338:555:12:g_d0_f8:12:g_d0_f8:B:epistemic basis behind the adoption of Kemeny’s rule.
+11:344:23767:37:20:61:512:518:11:g_d0_f10:12:g_d0_f8:B:Application to multidimensional welfare indices.I now proceed to apply the concep-
+11:345:23849:20:20:61:512:498:12:g_d0_f8:12:g_d0_f8:B:tual apparatus of Kemeny’s rule to rankings based on multidimensional welfare indices.
+11:346:23935:20:21:61:512:478:12:g_d0_f8:12:g_d0_f8:B:Fix  the  set  of  alternativesAand  set  of  indicatorsI.   Given  a  profileL=  (XA,f,u)
+11:347:24025:21:20:61:512:457:12:g_d0_f8:12:g_d0_f8:B:and  a  weight  vectorw∈∆I−1,  letRXA,uwdenote  thepartialranking  of  alternatives
+11:348:24108:20:20:61:512:437:12:g_d0_f8:12:g_d0_f16:B:inAthat  this  vector  of  weights  implies,  via  the  application  of  the  welfare  functionu
+11:349:24204:20:21:61:512:417:12:g_d0_f8:12:g_d0_f8:B:towand  the  achievement  matrixXA.   That  is,  for  all  pairs  of  alternatives  (ai,aj),
+11:350:24296:21:20:61:512:396:12:g_d0_f16:12:g_d0_f8:B:RXA,uw(ai)≤RXA,uw(aj)⇔u(xai,w)≥u(xaj,w).  Note that this allows for ties between
+11:351:24376:20:20:61:363:376:12:g_d0_f8:12:g_d0_f8:B:alternatives, hence the fact thatRXA,uwis apartialranking.
+11:352:24434:20:12:81:512:356:12:g_d0_f8:12:g_d0_f8:A:In  the  usual  formulation  of  Kemeny’s  rule,  the  set  of  voters  is  finite  so  the  sum
+11:353:24530:12:12:61:74:344:12:g_d0_f25:12:g_d0_f25:C:∑
+11:354:24531:12:17:73:512:332:8:g_d0_f22:12:g_d0_f8:A:S∈Sτ(·,S)  is  well-defined.   In  our  context,  recall  how  we  constructed  the  electorate
+11:355:24626:17:20:61:512:315:12:g_d0_f7:12:g_d0_f8:B:E(f):  eachwin ∆I−1corresponds tof(w) voters, each having the partial input ranking
+11:356:24709:20:20:61:512:295:12:g_d0_f16:12:g_d0_f8:B:RXA,uw.  Thus, given a profileL= (XA,f,u), the Kemeny-optimal set of rankingsKLis
+11:357:24790:20:21:61:107:275:12:g_d0_f8:12:g_d0_f8:B:given by:
+11:358:24799:21:10:169:239:254:12:g_d0_f16:12:g_d0_f8:A:KL= arg min
+11:359:24810:10:0:208:233:244:8:g_d0_f22:6:g_d0_f13:F:R∈RA
+11:360:24814:0:28:241:257:271:12:g_d0_f25:12:g_d0_f25:C:{∫
+11:361:24816:28:0:257:278:243:8:g_d0_f18:6:g_d0_f20:F:∆I−1
+11:362:24820:0:0:280:285:254:12:g_d0_f16:12:g_d0_f16:C:τ
+11:363:24821:0:10:289:294:264:12:g_d0_f25:12:g_d0_f25:C:(
+11:364:24822:10:0:294:324:254:12:g_d0_f16:8:g_d0_f23:C:R,RXA,uw
+11:365:24830:0:10:340:345:264:12:g_d0_f25:12:g_d0_f25:C:)
+11:366:24831:10:0:347:389:254:12:g_d0_f16:12:g_d0_f19:C:f(w)dw
+11:367:24837:0:17:390:399:271:12:g_d0_f25:12:g_d0_f25:C:}
+11:368:24838:17:29:401:512:254:12:g_d0_f16:12:g_d0_f8:A:.(6)
+11:369:24842:29:20:61:512:225:12:g_d0_f8:12:g_d0_f8:B:Note that while input rankingsRXA,uware allowed to be partial,KLstill has to be a set of
+11:370:24930:20:20:61:512:205:12:g_d0_f8:12:g_d0_f8:B:full rankings.  This generalization of Kemeny’s rule to allow for partial input rankings is
+11:371:25021:20:21:61:512:185:12:g_d0_f8:12:g_d0_f8:B:consistent with other contributions, such as Ailon [1] and Van Zuylen and Williamson [44].
+11:372:25111:21:20:81:512:164:12:g_d0_f8:12:g_d0_f8:A:To apply formula (6) to our context, it is necessary to identify the partial rankings
+11:373:25196:20:20:61:512:144:12:g_d0_f16:12:g_d0_f8:B:RXA,uwfor at least allw∈∆I−1satisfyingf(w)6= 0.  However, this challenging task can
+11:374:25279:20:16:61:512:124:12:g_d0_f8:12:g_d0_f8:B:be  sidestepped,  since  to  calculate  a  Kemeny-optimal  ranking  we  only  need  the  results
+11:375:25375:16:20:73:512:108:6:g_d0_f20:9:g_d0_f14:F:6Interestingly, under the same statistical framework, when the objective is to determine just the first-place
+11:376:25484:20:16:61:512:88:9:g_d0_f14:9:g_d0_f14:F:alternative  and  not  the  entire  ranking,  it  is  Borda’s  rule  [40]  that  provides  the  maximum  likelihood  estimate
+11:377:25609:16:0:61:114:72:9:g_d0_f14:9:g_d0_f14:F:(Young [41]).
+12:378:25624:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:of allpairwisecomparisons between elements inA, given by matrixYL.  Thus, letting
+12:379:25705:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:(ai,aj)∈A×Adenote ordered pairs of alternatives inAand1{·}the indicator function,
+12:380:25786:20:28:61:249:718:12:g_d0_f8:12:g_d0_f16:B:we may write, for allL= (XA,f,u),
+12:381:25819:28:10:147:261:690:12:g_d0_f16:12:g_d0_f8:A:K(L)≡KL= arg min
+12:382:25835:10:0:230:255:680:8:g_d0_f22:6:g_d0_f13:F:R∈RA
+12:383:25839:0:26:280:297:701:12:g_d0_f25:12:g_d0_f25:C:∑
+12:384:25840:26:0:263:314:675:8:g_d0_f18:8:g_d0_f9:F:(ai,aj)∈A×A
+12:385:25851:0:37:316:512:690:12:g_d0_f15:12:g_d0_f8:A:1{R(ai)< R(aj)}YLji.(7)
+12:386:25874:37:20:61:512:653:12:g_d0_f8:12:g_d0_f8:B:Assuming that a set ofM≥1 rankings{RL1,RL2,...,RLM}attains the minimum in Eq (7),
+12:387:25955:20:21:61:448:633:12:g_d0_f16:12:g_d0_f8:B:KLwill be expressed as anA×Mmatrix, where entryKLimequalsRLm(ai).
+12:388:26020:21:20:81:512:612:12:g_d0_f8:12:g_d0_f8:A:As a final note, I briefly comment on the applicability of partial input rankings within
+12:389:26108:20:25:61:454:592:12:g_d0_f8:12:g_d0_f8:B:the context of the model.  Consider the restricted domain of profiles ̃Lwhere
+12:390:26185:25:31:135:512:567:12:g_d0_f8:12:g_d0_f8:A: ̃L={L∈L:VLij+VLji= 1,∀(ai,aj)∈A×As.t.i6=j}.(8)
+12:391:26232:31:21:61:512:536:12:g_d0_f8:12:g_d0_f8:B:The domain restriction ̃Lis equivalent to imposing that the set of weights resulting in
+12:392:26319:21:20:61:512:515:12:g_d0_f8:12:g_d0_f8:B:equal  welfare  for  any  pair  of  alternatives  will,  upon  being  appropriately  weighted  by
+12:393:26416:20:20:61:512:495:12:g_d0_f8:12:g_d0_f8:B:the importance function, have negligible Lebesgue measure in<I−1.  As a result, weight
+12:394:26502:20:21:61:512:475:12:g_d0_f8:12:g_d0_f8:B:vectors resulting in ties between alternatives can be ignored, as those vectors are, in a
+12:395:26591:21:20:61:512:454:12:g_d0_f8:12:g_d0_f8:B:relative  sense,  too  “few”  to  have  an  effect  on  the  selection  of  the  consensus  rankings.
+12:396:26692:20:20:61:511:434:12:g_d0_f8:8:g_d0_f22:B:Indeed,VLijcan be interpreted as the proportion of weights strictly favoringaioveraj
+12:397:26776:20:21:61:138:414:12:g_d0_f8:12:g_d0_f8:B:given profileL.
+12:398:26791:21:20:81:512:393:12:g_d0_f8:12:g_d0_f8:A:The above restriction will be applicable for widely-used profile classes (see [12] and
+12:399:26877:20:29:61:321:373:12:g_d0_f8:12:g_d0_f8:B:Section 5.1), as the following Proposition suggests.
+12:400:26929:29:21:61:512:344:12:g_d0_f15:12:g_d0_f17:C:Proposition 1Consider  the  class  of  welfare  functionsU∗,  whereu∈ U∗if  and  only
+12:401:27014:21:0:61:322:323:12:g_d0_f17:12:g_d0_f16:C:if  it  can  be  expressed  as  either  (a)u(x,w)  =g
+12:402:27067:0:8:324:345:337:12:g_d0_f25:12:g_d0_f25:C:(∑
+12:403:27069:8:9:344:348:329:8:g_d0_f22:8:g_d0_f22:F:I
+12:404:27070:9:0:344:402:320:8:g_d0_f22:12:g_d0_f8:A:i=1wiui(xi)
+12:405:27081:0:14:401:408:337:12:g_d0_f25:12:g_d0_f25:C:)
+12:406:27082:14:22:408:512:323:12:g_d0_f17:12:g_d0_f8:A:,  or  (b)u(x,w)  =
+12:407:27101:22:0:61:67:301:12:g_d0_f16:12:g_d0_f16:C:g
+12:408:27102:0:7:69:87:314:12:g_d0_f25:12:g_d0_f25:C:(∏
+12:409:27104:7:10:87:91:307:8:g_d0_f22:8:g_d0_f22:F:I
+12:410:27105:10:0:87:133:297:8:g_d0_f22:12:g_d0_f8:A:i=1ui(xi)
+12:411:27114:0:0:133:142:305:8:g_d0_f22:6:g_d0_f24:F:wi
+12:412:27116:0:13:142:149:314:12:g_d0_f25:12:g_d0_f25:C:)
+12:413:27117:13:20:149:512:301:12:g_d0_f17:12:g_d0_f17:C:, whereuiare positive functions that are strictly monotone on[0,1], and
+12:414:27188:20:21:61:512:281:12:g_d0_f16:12:g_d0_f8:B:gis an invertible real-valued function.  Then, for any profileLsatisfyingL= (XA,f,u)
+12:415:27272:21:29:61:350:260:12:g_d0_f17:12:g_d0_f17:C:withu∈U∗andxai6=xajfor alli6=j, we haveL∈ ̃L.
+12:416:27317:29:37:61:176:231:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+12:417:27336:37:28:61:277:194:12:g_d0_f15:12:g_d0_f15:C:3.3    An Axiomatic Characterization
+12:418:27372:28:20:61:512:166:12:g_d0_f8:12:g_d0_f8:B:In this section, we explore the normative implications of adopting ruleK.  This requires
+12:419:27460:20:21:61:382:146:12:g_d0_f8:12:g_d0_f8:B:adapting to our setting the properties discussed in Section 3.2.
+12:420:27524:21:20:81:512:125:12:g_d0_f8:12:g_d0_f8:A:Define aruleφto be a function fromLto the set of nonempty subsets ofRA.  For a
+12:421:27602:20:28:61:279:105:12:g_d0_f8:12:g_d0_f8:B:profileL= (XA,f,u) and a rankingR, let
+12:422:27640:28:0:195:221:77:12:g_d0_f16:12:g_d0_f8:A:nLR=
+12:423:27644:0:27:224:231:93:12:g_d0_f25:12:g_d0_f25:C:∫
+12:424:27645:27:0:231:252:66:8:g_d0_f18:6:g_d0_f20:F:∆I−1
+12:425:27649:0:0:254:261:77:12:g_d0_f15:12:g_d0_f15:C:1
+12:426:27650:0:9:263:270:86:12:g_d0_f25:12:g_d0_f25:C:{
+12:427:27651:9:0:270:326:77:12:g_d0_f16:12:g_d0_f16:C:RXA,uw=R
+12:428:27659:0:9:326:333:86:12:g_d0_f25:12:g_d0_f25:C:}
+12:429:27660:9:0:335:512:77:12:g_d0_f16:12:g_d0_f8:A:f(w)dw(9)
+13:430:27671:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:denote thef-weighted Lebesgue measure of the set of weights in ∆I−1having rankingR,
+13:431:27754:20:30:61:336:738:12:g_d0_f8:12:g_d0_f8:B:given welfare functionuand achievement matrixXA.
+13:432:27802:30:21:61:512:708:12:g_d0_f15:12:g_d0_f17:C:Definition 1A ruleφsatisfiesanonymityif for all profilesL,φdepends only on the
+13:433:27880:21:30:61:215:687:12:g_d0_f17:12:g_d0_f17:C:numbersnLRfor eachR∈RA.
+13:434:27903:30:21:81:512:657:12:g_d0_f8:12:g_d0_f8:A:Anonymity  ensures  that  no  weight  vector  is  given  special  treatment  in  the  under-
+13:435:27995:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:lying  social  choice  problem.   Instead,  the  ordinal  preferences  of  all  weightswreceive
+13:436:28090:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:consideration according to their importancef(w).  As a result, cardinal information on
+13:437:28176:20:21:61:512:596:12:g_d0_f8:12:g_d0_f8:B:theintensity,  or magnitude,  of an alternative’s dominance over another is not allowed
+13:438:28263:21:20:61:512:575:12:g_d0_f8:12:g_d0_f8:B:to directly affect the consensus ranking.  To illustrate this point more fully, consider the
+13:439:28355:20:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:following example.  Suppose we have two sets of weightsW1andW2and a set of two
+13:440:28433:20:13:61:243:535:12:g_d0_f8:12:g_d0_f8:B:alternativesA={a1,a2}such that:
+13:441:28464:13:28:169:176:522:12:g_d0_f25:12:g_d0_f25:C:∫
+13:442:28465:28:0:176:188:494:8:g_d0_f22:6:g_d0_f20:F:W1
+13:443:28467:0:0:190:246:505:12:g_d0_f16:12:g_d0_f8:A:f(w)dw=
+13:444:28474:0:28:249:256:522:12:g_d0_f25:12:g_d0_f25:C:∫
+13:445:28475:28:0:256:268:494:8:g_d0_f22:6:g_d0_f20:F:W2
+13:446:28477:0:26:271:317:505:12:g_d0_f16:12:g_d0_f16:C:f(w)dw,
+13:447:28484:26:23:169:421:479:12:g_d0_f16:12:g_d0_f16:C:u(xa1,w1) = 1000> u(xa2,w1) = 1,∀w1∈W1,
+13:448:28523:23:30:169:404:456:12:g_d0_f16:12:g_d0_f16:C:u(xa1,w2) = 2> u(xa2,w2) = 1,∀w2∈W2.
+13:449:28559:30:20:61:512:426:12:g_d0_f8:12:g_d0_f17:B:What anonymity implies is that the sets of weightsW1andW2will play theexact same
+13:450:28639:20:20:61:512:406:12:g_d0_f8:12:g_d0_f8:B:role  in  the  determination  of  the  consensus  rankings.   Furthermore,  it  ensures  that,  all
+13:451:28738:20:21:61:512:386:12:g_d0_f8:12:g_d0_f8:B:else being equal, we could changeu(xa1,w1) from 1000 to 1.1 for allw1∈W1, and the
+13:452:28819:21:30:61:291:365:12:g_d0_f8:12:g_d0_f8:B:consensus rankings would remain unaffected.
+13:453:28862:30:20:61:512:335:12:g_d0_f15:12:g_d0_f16:C:Definition 2A ruleφisneutralif for all profilesL= (XA,f,u)and permutationsσ
+13:454:28937:20:31:61:333:315:12:g_d0_f17:12:g_d0_f17:C:of alternatives inA,φ(Xσ◦A,f,u) =σ◦φ(XA,f,u).
+13:455:28982:31:20:81:512:284:12:g_d0_f8:12:g_d0_f8:A:Neutrality  imposes  that  the  identity  of  alternatives  not  matter  to  the  rank  they
+13:456:29074:20:21:61:512:264:12:g_d0_f8:12:g_d0_f8:B:receive.  Instead, the rule is symmetric in its treatment of alternatives:  if their identities
+13:457:29169:21:30:61:441:243:12:g_d0_f8:12:g_d0_f8:B:were permuted, then the consensus rankings would be similarly permuted.
+13:458:29240:30:20:61:512:213:12:g_d0_f15:12:g_d0_f17:C:Definition 3A ruleφsatisfiesreinforcementif, for all profilesL1= (XA,f1,u)and
+13:459:29317:20:30:61:454:193:12:g_d0_f16:12:g_d0_f17:C:L2= (XA,f2,u)such thatf1andf2have non-overlapping supports in∆I−1,
+13:460:29383:30:31:142:430:163:12:g_d0_f16:12:g_d0_f16:C:φ(L1)∩φ(L2)6=∅⇒φ(XA,f1+f2,u) =φ(L1)∩φ(L2).
+13:461:29425:31:20:81:512:132:12:g_d0_f8:12:g_d0_f8:A:Reinforcement  sets  the  following  requirement:   if,ceteris  paribus,  two  importance
+13:462:29514:20:20:61:512:112:12:g_d0_f8:12:g_d0_f8:B:functions having non-overlapping support separately lead to two sets of consensus rank-
+13:463:29601:20:20:61:512:92:12:g_d0_f8:12:g_d0_f8:B:ings whose intersection is nonempty, then applying the rule to the profile having the sum
+13:464:29690:20:0:61:460:72:12:g_d0_f8:12:g_d0_f8:B:of the importance functions should acknowledge and reinforce this agreement.
+14:465:29768:0:20:81:512:758:12:g_d0_f8:12:g_d0_f8:A:Reinforcement imposes a degree of consistency to the way a rule aggregates individual
+14:466:29853:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:preferences.   Take  for  instance  the  case  of  the  HDI  whose  indicator  set  involves  three
+14:467:29952:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:criteria:  (1) health (2) education, and (3) income.  Suppose two groups of countries, say
+14:468:30042:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:Africa  and  Europe,  have  completely  differing  opinions  regarding  the  correct  weighting
+14:469:30137:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:scheme of the three dimensions of the HDI. In particular, African countries claim that
+14:470:30223:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:the only viable weight vectors are those that assign the greatest weight to health,  the
+14:471:30311:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:second greatest to income,  and the third greatest to education,  while no indicator can
+14:472:30399:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:receive  a  weight  that  exceeds  0.5.   All  weight  vectors  satisfying  the  above  restriction
+14:473:30498:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:are equally valid,  while all others should not be considered at all.  European countries
+14:474:30587:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:have similarly structured preferences, except that they claim that highest weight must
+14:475:30673:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:always be given to education, second-highest to health, and third-highest to income.  The
+14:476:30762:20:20:61:512:535:12:g_d0_f8:12:g_d0_f8:B:above value judgments can be encoded in importance functions that are equal to 1 in the
+14:477:30849:20:21:61:512:515:12:g_d0_f8:12:g_d0_f8:B:relevant subsets of ∆2and zero everywhere else.  Suppose now that the United Nations
+14:478:30933:21:20:61:512:494:12:g_d0_f8:12:g_d0_f8:B:chooses a method of ranking countries that, when considering the opinions of Africa and
+14:479:31020:20:20:61:512:474:12:g_d0_f8:12:g_d0_f8:B:Europeseparatelyleads  to  the  same  consensus  ranking.   In  that  case,  it  is  eminently
+14:480:31114:20:21:61:512:454:12:g_d0_f8:12:g_d0_f8:B:desirable to additionally require that the UN’s method, when considering the preferences
+14:481:31202:21:32:61:418:433:12:g_d0_f8:12:g_d0_f8:B:of Africa and Europejointly, not disturb their pre-existing consensus.
+14:482:31272:32:20:61:512:401:12:g_d0_f15:12:g_d0_f17:C:Definition 4A  ruleφisextended-Condorcetif,  for  all  profilesL,  if  there  exists
+14:483:31356:20:21:61:512:381:12:g_d0_f17:12:g_d0_f17:C:a  partition(A1,A2)ofAsuch  that  for  all(ai,aj)∈ A1×A2we  haveYLij>0,  then
+14:484:31433:21:32:61:359:360:12:g_d0_f16:12:g_d0_f17:C:R(ai)< R(aj)for all(ai,aj)∈A1×A2, for allR∈φ(L).
+14:485:31481:32:20:81:512:328:12:g_d0_f8:12:g_d0_f8:A:Thus, a rule is extended-Condorcet if it obeys the majority wishes of the electorate
+14:486:31565:20:21:61:512:308:12:g_d0_f7:12:g_d0_f8:B:E(f),  whenever  these  do  not  imply  circular  ambiguities  majority  pairwise  preferences.
+14:487:31660:21:20:61:512:287:12:g_d0_f8:12:g_d0_f8:B:This property generalizes the concept of the Condorcet criterion to settings in which the
+14:488:31749:20:32:61:492:267:12:g_d0_f8:8:g_d0_f18:B:objective is to choose an entire consensus ranking, not just the winning alternative.7
+14:489:31835:32:21:61:512:235:12:g_d0_f15:12:g_d0_f16:C:Definition 5A  ruleφisunanimousif,  for  all  profilesL,  if  there  exists  a  rankingR
+14:490:31923:21:20:61:512:214:12:g_d0_f17:12:g_d0_f17:C:such  that  for  all  pairs(ai,aj)∈ A×A,R(ai)< R(aj)⇒ {VLij= 1andVLji= 0},  then
+14:491:32003:20:32:61:113:194:12:g_d0_f16:12:g_d0_f17:C:φ(L) =R.
+14:492:32011:32:20:81:512:162:12:g_d0_f8:12:g_d0_f8:A:Unanimity requires that, if all but a negligible set of weights submit the same ranking
+14:493:32098:20:21:61:512:142:12:g_d0_f8:12:g_d0_f8:B:of the alternatives, then the rule should respect this complete consensus.  It is a standard
+14:494:32190:21:16:61:285:121:12:g_d0_f8:12:g_d0_f8:B:property in many problems in social choice.
+14:495:32233:16:20:73:512:105:6:g_d0_f20:9:g_d0_f14:F:7It should be noted that this property is not the same as the Condorcet property of Young and Levenglick’s [43]
+14:496:32344:20:0:61:274:85:9:g_d0_f14:9:g_d0_f14:F:characterization.  The latter is a little more intricate.
+15:497:32403:0:20:61:519:758:12:g_d0_f15:12:g_d0_f15:C:Definition 6A ruleφsatisfieslocal independence of irrelevant alternatives (LIIA)
+15:498:32483:20:20:61:512:738:12:g_d0_f17:12:g_d0_f7:C:if,  for  all  profiles(XA,f,u),  for  allR∈φ(XA,f,u),  for  every  intervalBofR,RB∈
+15:499:32567:20:21:61:512:718:12:g_d0_f16:12:g_d0_f17:C:φ(XAB,f,u)whereXABrepresentsXArestricted  to  alternatives  inB,  andRBrepre-
+15:500:32644:21:20:61:512:697:12:g_d0_f17:12:g_d0_f8:B:sentsR’s  relative  ordering  of  alternatives  inB;  moreover,  all  rankings  inφ(XAB,f,u)
+15:501:32736:20:27:61:208:677:12:g_d0_f17:12:g_d0_f17:C:can be generated in this way.
+15:502:32765:27:20:81:512:650:12:g_d0_f8:12:g_d0_f8:A:LIIA is a little more subtle than the previous properties.  But, some reflection also
+15:503:32850:20:21:61:512:630:12:g_d0_f8:12:g_d0_f8:B:suggests that it is a desirable stabilizing property for a rule to satisfy.  It implies that the
+15:504:32946:21:20:61:512:609:12:g_d0_f8:12:g_d0_f8:B:ordering  of  alternatives  that  are  ranked  “together”  (i.e.,  consecutively)  in  a  consensus
+15:505:33045:20:20:61:512:589:12:g_d0_f8:12:g_d0_f8:B:ranking  should  not  change  if  we  apply  the  rule  to  the  restricted  problem  that  focuses
+15:506:33144:20:21:61:512:569:12:g_d0_f8:12:g_d0_f8:B:just  on  these  alternatives  and  ignores  all  others.   Usually  such  intervals  correspond  to
+15:507:33244:21:20:61:512:548:12:g_d0_f8:12:g_d0_f8:B:meaningful categories of alternatives. To take an example from the empirical application I
+15:508:33334:20:20:61:512:528:12:g_d0_f8:12:g_d0_f8:B:will pursue in Section 6, suppose that a composite index is measuring academic excellence
+15:509:33423:20:20:61:512:508:12:g_d0_f8:12:g_d0_f8:B:and  has  ranked  the  100  best  universities  in  the  world.   We  would  prefer  the  relative
+15:510:33521:20:21:61:512:488:12:g_d0_f8:12:g_d0_f8:B:ordering of the top 20 (representing, say, Tier 1 institutions or something to that effect),
+15:511:33613:21:20:61:512:467:12:g_d0_f8:12:g_d0_f8:B:to remain unchanged if we, for instance, re-apply the rule by ignoring those universities
+15:512:33702:20:20:61:512:447:12:g_d0_f8:12:g_d0_f8:B:ranked 91-100,  51-100,  or even the entire 21-100 for that matter.  The same argument
+15:513:33788:20:21:61:512:427:12:g_d0_f8:12:g_d0_f8:B:would apply for the relative ordering of Tier 2 institutions, or indeed any other meaningful
+15:514:33880:21:20:61:512:406:12:g_d0_f8:12:g_d0_f8:B:interval within the consensus ranking. For more information on LIIA the interested reader
+15:515:33969:20:20:61:182:386:12:g_d0_f8:12:g_d0_f8:B:can refer to Young [42].
+15:516:33993:20:21:81:512:366:12:g_d0_f8:12:g_d0_f8:A:Part (ii) of the following theorem is a consequence of the results of Young and Lev-
+15:517:34077:21:27:61:340:345:12:g_d0_f8:12:g_d0_f8:B:englick [43] and Young [40, 41] adapted to our setting.
+15:518:34132:27:25:61:292:318:12:g_d0_f15:12:g_d0_f17:C:Theorem 1Consider the ruleKof Eq. (7).
+15:519:34170:25:20:69:531:293:12:g_d0_f17:12:g_d0_f17:C:(i)  On the domainL,Ksatisfies anonymity, neutrality, reinforcement, extended-Condorcet,
+15:520:34258:20:28:88:199:273:12:g_d0_f17:12:g_d0_f17:C:unanimity, and LIIA.
+15:521:34278:28:20:66:512:245:12:g_d0_f17:12:g_d0_f17:C:(ii)  LetYQdenote the set of rational skew-symmetric matrices whose rows and columns
+15:522:34362:20:0:88:412:225:12:g_d0_f17:12:g_d0_f8:A:are indexed by the elements ofA.  On the restricted domainLQ=
+15:523:34423:0:10:416:423:235:12:g_d0_f25:12:g_d0_f25:C:{
+15:524:34424:10:0:423:518:225:12:g_d0_f16:8:g_d0_f22:C:L∈L:YL∈YQ
+15:525:34433:0:10:518:525:235:12:g_d0_f25:12:g_d0_f25:C:}
+15:526:34434:10:20:525:529:225:12:g_d0_f17:12:g_d0_f17:C:,
+15:527:34435:20:32:88:499:205:12:g_d0_f16:12:g_d0_f17:C:Kuniquely satisfies anonymity, neutrality, reinforcement, unanimity, and LIIA.
+15:528:34513:32:20:61:176:173:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+15:529:34532:20:21:81:512:153:12:g_d0_f8:12:g_d0_f8:A:Theorem 1 makes clear a set of five reasonable properties that characterize the ruleK.
+15:530:34618:21:20:61:512:132:12:g_d0_f8:12:g_d0_f8:B:In addition,Ksatisfies the extended-Condorcet criterion.  Ultimately, if one finds these
+15:531:34706:20:20:61:512:112:12:g_d0_f8:12:g_d0_f8:B:properties  compelling,  then  they  may  also  look  favorably  uponKas  a  way  of  dealing
+15:532:34799:20:21:61:512:92:12:g_d0_f8:12:g_d0_f8:B:with weight imprecision in multidimensional welfare indices.  In any case, the normative
+15:533:34887:21:0:61:200:71:12:g_d0_f8:12:g_d0_f8:B:basis ofKis made evident.
+16:534:34914:0:32:61:236:758:14:g_d0_f15:14:g_d0_f15:C:4    Computational issues
+16:535:34939:32:20:61:512:726:12:g_d0_f8:12:g_d0_f8:B:Eq. (7) summarizes the Kemeny-optimal ranking we wish to find.  We would at this point
+16:536:35025:20:20:61:512:706:12:g_d0_f8:12:g_d0_f8:B:be done, if not for the fact that the associated optimization problem is NP-hard [7], even
+16:537:35115:20:21:61:302:686:12:g_d0_f8:12:g_d0_f8:B:when the number of indicators is just four [15].
+16:538:35163:21:20:81:512:665:12:g_d0_f8:12:g_d0_f8:A:The main difficulty arises from the potential presence of Condorcet cycles, which im-
+16:539:35248:20:20:61:527:645:12:g_d0_f8:12:g_d0_f7:B:ply intransitive majority pairwise preferences. Formally, a set of alternatives{ai1,ai2,...,aiM}
+16:540:35344:20:21:61:512:625:12:g_d0_f8:12:g_d0_f8:B:forms aCondorcet  cycleif min{YL12,YL23,...,YLM−1M,YLM1} ≥0.  If no such cycles existed,
+16:541:35432:21:20:61:512:604:12:g_d0_f8:12:g_d0_f8:B:finding  a  unique  Kemeny-optimal  ranking  would  be  a  straightforward  affair  (see  The-
+16:542:35526:20:20:61:512:584:12:g_d0_f8:12:g_d0_f8:B:orem  2  below).   Thus,  it  is  important  to  identify  and,  in  some  fashion,  resolve  these
+16:543:35625:20:37:61:94:564:12:g_d0_f8:12:g_d0_f8:B:cycles.
+16:544:35632:37:20:61:512:527:11:g_d0_f10:12:g_d0_f8:B:Graph-theoretic preliminaries.In this section, I briefly introduce some relevant graph-
+16:545:35719:20:20:61:512:507:12:g_d0_f8:12:g_d0_f8:B:theoretic concepts that will be useful later.  Adirected graphGis a pairG= (V,E), where
+16:546:35806:20:21:61:477:487:12:g_d0_f7:12:g_d0_f8:B:Vis a set ofverticesandEa set of ordered pairs of vertices, referred to asedges.
+16:547:35886:21:26:81:369:466:12:g_d0_f8:12:g_d0_f8:A:Given two subsetsV1,V2ofVsuch thatV1∩V2=∅, let
+16:548:35932:26:27:155:512:440:12:g_d0_f16:12:g_d0_f8:A:in(V1,V2) =|{e∈E:e= (u,v), u∈V2, v∈V1}|.(10)
+16:549:35976:27:21:61:512:413:12:g_d0_f8:12:g_d0_f8:B:Thus Eq. (10) denotes the number of edges leading to vertices inV1,  originating from
+16:550:36061:21:20:61:132:392:12:g_d0_f8:12:g_d0_f8:B:vertices inV2.
+16:551:36075:20:20:81:511:372:12:g_d0_f8:12:g_d0_f7:A:AsubgraphG′= (V′,E′) of a directed graphG= (V,E) is a graph such thatV′⊂V
+16:552:36148:20:21:61:512:352:12:g_d0_f8:12:g_d0_f8:B:andE′={(v,u)∈E:v,u∈V′}. A directed graph is calledstrongly connectedif there is
+16:553:36227:21:20:61:512:331:12:g_d0_f8:12:g_d0_f17:B:a path from each vertex to every other vertex (in both directions).  Thestrongly connected
+16:554:36317:20:36:61:498:311:12:g_d0_f17:12:g_d0_f8:B:componentsof a directed graph G are its maximal-size strongly connected subgraphs.
+16:555:36399:36:21:61:512:275:11:g_d0_f12:12:g_d0_f8:B:L-Dominance graphs and Kemeny rankings.Given a profileL,  define the directed
+16:556:36476:21:0:61:124:254:12:g_d0_f8:12:g_d0_f8:B:graphGL=
+16:557:36484:0:10:129:134:264:12:g_d0_f25:12:g_d0_f25:C:(
+16:558:36485:10:0:134:165:254:12:g_d0_f7:8:g_d0_f22:C:A,EL
+16:559:36489:0:10:165:170:264:12:g_d0_f25:12:g_d0_f25:C:)
+16:560:36490:10:20:170:512:254:12:g_d0_f8:12:g_d0_f8:A:,  whose vertices correspond to alternatives inAand whose edges
+16:561:36553:20:0:61:124:234:12:g_d0_f8:12:g_d0_f8:B:satisfyEL=
+16:562:36563:0:13:128:136:247:12:g_d0_f25:12:g_d0_f25:C:{
+16:563:36564:13:0:136:317:234:12:g_d0_f8:12:g_d0_f16:A:(ai,aj)∈A×A:YLaiaj≥0, i6=j
+16:564:36590:0:13:317:325:247:12:g_d0_f25:12:g_d0_f25:C:}
+16:565:36591:13:20:325:512:234:12:g_d0_f8:12:g_d0_f8:A:. Thus, a pair (ai,aj) belongs toGL’s
+16:566:36628:20:21:61:512:214:12:g_d0_f8:12:g_d0_f8:B:edge set if and only if a weak net majority of the voters in the electorateE(f) assign toaia
+16:567:36720:21:20:61:512:193:12:g_d0_f8:12:g_d0_f8:B:higher welfare thanaj, as measured byuapplied toxaiandxaj– with no self-edges (ai,ai)
+16:568:36805:20:20:61:512:173:12:g_d0_f8:12:g_d0_f8:B:allowed.  We refer toGLas anL-dominancegraph, as it captures the above dominance
+16:569:36885:20:21:61:512:153:12:g_d0_f8:12:g_d0_f8:B:relationship  between  all  pairs  of  alternatives.   Clearly,  a  cycle  inGLcorresponds  to  a
+16:570:36982:21:20:61:512:132:12:g_d0_f8:12:g_d0_f8:B:Condorcet cycle in the underlying social choice problem.  Moreover, alternatives forming
+16:571:37070:20:20:61:512:112:12:g_d0_f8:12:g_d0_f8:B:such a cycle must,  by definition,  belong to the same strongly connected component of
+16:572:37156:20:20:61:512:92:12:g_d0_f16:12:g_d0_f8:B:GL.  As a result, if no Condorcet cycles existed, then all strongly connected components
+16:573:37244:20:0:61:197:72:12:g_d0_f8:12:g_d0_f8:B:ofGLwould be singletons.
+17:574:37270:0:20:81:512:758:12:g_d0_f8:12:g_d0_f8:A:The  following  Theorem  exploits  the  special  structure  ofGLto  connect  it  to  the
+17:575:37358:20:32:61:266:738:12:g_d0_f8:12:g_d0_f8:B:Kemeny-optimal rankingKLof Eq. (7).
+17:576:37393:32:11:61:512:706:12:g_d0_f15:12:g_d0_f8:B:Theorem 2Consider  a  profileL=  (XA,f,u)∈ Land  itsL-dominance  graphGL=
+17:577:37466:11:9:61:66:695:12:g_d0_f25:12:g_d0_f25:C:(
+17:578:37467:9:0:66:96:686:12:g_d0_f7:8:g_d0_f22:C:A,EL
+17:579:37471:0:9:97:102:695:12:g_d0_f25:12:g_d0_f25:C:)
+17:580:37472:9:21:102:512:686:12:g_d0_f17:12:g_d0_f17:C:.  LetG′= (A′,E′)denote a strongly connected component ofGLand define the
+17:581:37545:21:20:61:512:665:12:g_d0_f17:12:g_d0_f17:C:profileLA′= (XA′,f,u),  whereXA′is  the  restriction  ofXAto  alternatives  inA′.  We
+17:582:37630:20:31:61:487:645:12:g_d0_f17:12:g_d0_f17:C:have the following holding (hereKLA′is the restriction ofKLto alternatives inA′):
+17:583:37711:31:0:214:246:614:12:g_d0_f16:12:g_d0_f8:A:KLA′=
+17:584:37716:0:17:251:319:622:12:g_d0_f16:12:g_d0_f8:A:in(A′,A\A′)
+17:585:37727:17:0:275:294:605:12:g_d0_f7:12:g_d0_f7:C:|A′|
+17:586:37731:0:32:322:512:614:12:g_d0_f7:12:g_d0_f8:A:·e+KLA′,(11)
+17:587:37743:32:32:61:337:582:12:g_d0_f17:12:g_d0_f17:C:whereeis a matrix of ones of appropriate dimension.
+17:588:37794:32:43:61:176:550:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+17:589:37813:43:20:61:512:507:11:g_d0_f10:12:g_d0_f8:B:Example 1.Theorem 2 is best illustrated with an example.  Consider a profileLwith
+17:590:37894:20:76:61:347:487:12:g_d0_f8:12:g_d0_f8:B:six alternatives leading to the following election matrix:
+17:591:37952:76:0:191:217:411:10:g_d0_f19:10:g_d0_f11:F:YL=
+17:592:37955:0:17:219:226:467:10:g_d0_f25:10:g_d0_f25:F:
+17:593:37956:17:12:219:226:450:10:g_d0_f25:10:g_d0_f25:F:
+17:594:37958:12:12:219:226:438:10:g_d0_f25:10:g_d0_f25:F:
+17:595:37960:12:12:219:226:426:10:g_d0_f25:10:g_d0_f25:F:
+17:596:37962:12:12:219:226:414:10:g_d0_f25:10:g_d0_f25:F:
+17:597:37964:12:12:219:226:402:10:g_d0_f25:10:g_d0_f25:F:
+17:598:37966:12:12:219:226:390:10:g_d0_f25:10:g_d0_f25:F:
+17:599:37968:12:0:219:226:378:10:g_d0_f25:10:g_d0_f25:F:
+17:600:37969:0:18:236:368:455:10:g_d0_f11:10:g_d0_f11:F:0−2−3.5.31.7
+17:601:37981:18:18:236:368:437:10:g_d0_f11:10:g_d0_f11:F:20−11−1.2.6
+17:602:37992:18:18:232:370:419:10:g_d0_f11:10:g_d0_f11:F:3.510231.5
+17:603:38002:18:18:231:366:401:10:g_d0_f7:10:g_d0_f11:F:−.3−1−20−40
+17:604:38013:18:17:232:370:383:10:g_d0_f7:10:g_d0_f11:F:−11.2−3401.5
+17:605:38025:17:0:231:366:366:10:g_d0_f7:10:g_d0_f11:F:−.7−1−1.50−1.50
+17:606:38040:0:17:375:382:467:10:g_d0_f25:10:g_d0_f25:F:
+17:607:38041:17:12:375:382:450:10:g_d0_f25:10:g_d0_f25:F:
+17:608:38043:12:12:375:382:438:10:g_d0_f25:10:g_d0_f25:F:
+17:609:38045:12:12:375:382:426:10:g_d0_f25:10:g_d0_f25:F:
+17:610:38047:12:12:375:382:414:10:g_d0_f25:10:g_d0_f25:F:
+17:611:38049:12:12:375:382:402:10:g_d0_f25:10:g_d0_f25:F:
+17:612:38051:12:12:375:382:390:10:g_d0_f25:10:g_d0_f25:F:
+17:613:38053:12:45:375:382:378:10:g_d0_f25:10:g_d0_f25:F:
+17:614:38054:45:20:81:512:333:12:g_d0_f8:12:g_d0_f8:A:TheL-dominance graph corresponding to election matrixYLis seen in Figure 1.  It
+17:615:38133:20:32:61:345:313:12:g_d0_f8:12:g_d0_f8:B:has the following three strongly connected components:
+17:616:38187:32:31:61:538:281:11:g_d0_f12:11:g_d0_f12:F:G1= ({a3},∅), G2= ({a1,a2,a5},{(a1,a5),(a5,a2),(a2,a1)}),G3= ({a4,a6},{(a4,a6),(a6,a4)}),
+17:617:38276:31:20:61:512:250:12:g_d0_f8:12:g_d0_f8:B:implying the respective (sub)profilesLA1,LA2,LA3.  It is immediate to see that, among
+17:618:38361:20:21:61:512:230:12:g_d0_f8:12:g_d0_f8:B:voters inE(f), alternativea3enjoys a net majority over all other alternatives.  Further-
+17:619:38449:21:20:61:512:209:12:g_d0_f8:12:g_d0_f8:B:more, alternatives inA2form a Condorcet cycle, since a net majority of voters inE(f)
+17:620:38533:20:20:61:512:189:12:g_d0_f8:12:g_d0_f8:B:prefera1toa5,a5toa2,  anda2toa1.   Moreover,  these  alternatives  are  all  preferred
+17:621:38619:20:21:61:512:169:12:g_d0_f8:12:g_d0_f8:B:by a majority of voters inE(f) to those inA3.  Conversely,  alternatives inA3receive
+17:622:38703:21:20:61:512:148:12:g_d0_f8:12:g_d0_f8:B:exactly equal support from voters inE(f), and lose all pairwise contests against all other
+17:623:38793:20:18:61:124:128:12:g_d0_f8:12:g_d0_f8:B:alternatives.
+17:624:38806:18:18:81:512:110:12:g_d0_f8:12:g_d0_f8:A:Applying Theorem 2 we see that, in any Kemeny-optimal ranking,a3will be first,
+17:625:38884:18:18:61:512:92:12:g_d0_f8:12:g_d0_f8:B:while the ranks of (a1,a2,a5) will range between 2 and 4, and those of (a4,a6) between 5
+17:626:38972:18:0:61:512:74:12:g_d0_f8:12:g_d0_f8:B:and 6.  By inspection, it is easy to optimally resolve the Condorcet cycle of graphG2and
+18:627:39062:0:33:64:509:579:11:g_d0_f11:11:g_d0_f11:F:Figure 1:L-dominance graph of Example 1.  Strongly connected components in dashed ovals.
+18:628:39150:33:18:61:512:546:12:g_d0_f8:12:g_d0_f8:B:determine the precise Kemeny-optimal ranks ofa1,a2anda5:KLA2(a5) = 1, KLA2(a2) =
+18:629:39230:18:28:61:247:528:12:g_d0_f8:12:g_d0_f8:B:2, KLA2(a1) = 3.  Indeed, we obtain:
+18:630:39266:28:58:241:332:500:10:g_d0_f12:10:g_d0_f12:F:KLa3= [0] + [1] = [1],
+18:631:39288:58:0:203:252:442:10:g_d0_f12:10:g_d0_f11:F:KLa1,a2,a5=
+18:632:39299:0:17:255:262:471:10:g_d0_f25:10:g_d0_f25:F:
+18:633:39300:17:12:255:262:454:10:g_d0_f25:10:g_d0_f25:F:
+18:634:39302:12:0:255:262:442:10:g_d0_f25:10:g_d0_f25:F:
+18:635:39304:0:18:266:271:459:10:g_d0_f11:10:g_d0_f11:F:1
+18:636:39305:18:18:266:271:441:10:g_d0_f11:10:g_d0_f11:F:1
+18:637:39306:18:0:266:271:423:10:g_d0_f11:10:g_d0_f11:F:1
+18:638:39307:0:17:276:283:471:10:g_d0_f25:10:g_d0_f25:F:
+18:639:39308:17:12:276:283:454:10:g_d0_f25:10:g_d0_f25:F:
+18:640:39310:12:0:276:293:442:10:g_d0_f25:10:g_d0_f11:F:+
+18:641:39313:0:17:295:302:471:10:g_d0_f25:10:g_d0_f25:F:
+18:642:39314:17:12:295:302:454:10:g_d0_f25:10:g_d0_f25:F:
+18:643:39316:12:0:295:302:442:10:g_d0_f25:10:g_d0_f25:F:
+18:644:39318:0:18:307:312:459:10:g_d0_f11:10:g_d0_f11:F:3
+18:645:39319:18:18:307:312:441:10:g_d0_f11:10:g_d0_f11:F:2
+18:646:39320:18:0:307:312:423:10:g_d0_f11:10:g_d0_f11:F:1
+18:647:39321:0:17:317:324:471:10:g_d0_f25:10:g_d0_f25:F:
+18:648:39322:17:12:317:324:454:10:g_d0_f25:10:g_d0_f25:F:
+18:649:39324:12:0:317:334:442:10:g_d0_f25:10:g_d0_f11:F:=
+18:650:39327:0:17:337:344:471:10:g_d0_f25:10:g_d0_f25:F:
+18:651:39328:17:12:337:344:454:10:g_d0_f25:10:g_d0_f25:F:
+18:652:39330:12:0:337:344:442:10:g_d0_f25:10:g_d0_f25:F:
+18:653:39332:0:18:348:353:459:10:g_d0_f11:10:g_d0_f11:F:4
+18:654:39333:18:18:348:353:441:10:g_d0_f11:10:g_d0_f11:F:3
+18:655:39334:18:0:348:353:423:10:g_d0_f11:10:g_d0_f11:F:2
+18:656:39335:0:17:358:365:471:10:g_d0_f25:10:g_d0_f25:F:
+18:657:39336:17:12:358:365:454:10:g_d0_f25:10:g_d0_f25:F:
+18:658:39338:12:52:358:370:442:10:g_d0_f25:10:g_d0_f12:F:,
+18:659:39341:52:0:186:225:390:10:g_d0_f12:10:g_d0_f11:F:KLa4,a6=
+18:660:39349:0:18:227:234:410:10:g_d0_f25:10:g_d0_f25:F:
+18:661:39350:18:12:227:259:392:10:g_d0_f25:10:g_d0_f11:F:4    4
+18:662:39357:12:0:239:259:380:10:g_d0_f11:10:g_d0_f11:F:4    4
+18:663:39363:0:18:264:271:410:10:g_d0_f25:10:g_d0_f25:F:
+18:664:39364:18:0:264:281:392:10:g_d0_f25:10:g_d0_f11:F:+
+18:665:39366:0:18:282:289:410:10:g_d0_f25:10:g_d0_f25:F:
+18:666:39367:18:12:282:314:392:10:g_d0_f25:10:g_d0_f11:F:1    2
+18:667:39374:12:0:294:314:380:10:g_d0_f11:10:g_d0_f11:F:2    1
+18:668:39380:0:18:319:326:410:10:g_d0_f25:10:g_d0_f25:F:
+18:669:39381:18:0:319:336:392:10:g_d0_f25:10:g_d0_f11:F:=
+18:670:39383:0:18:339:346:410:10:g_d0_f25:10:g_d0_f25:F:
+18:671:39384:18:12:339:371:392:10:g_d0_f25:10:g_d0_f11:F:5    6
+18:672:39391:12:0:351:371:380:10:g_d0_f11:10:g_d0_f11:F:6    5
+18:673:39397:0:18:375:382:410:10:g_d0_f25:10:g_d0_f25:F:
+18:674:39398:18:46:375:387:392:10:g_d0_f25:10:g_d0_f12:F:.
+18:675:39400:46:18:81:512:346:12:g_d0_f8:12:g_d0_f8:A:PuttingKLa3,KLa1,a2,a5andKLa4,a6together we obtain the two Kemeny-optimal rankings
+18:676:39482:18:60:61:121:328:12:g_d0_f8:12:g_d0_f8:B:of profileL:
+18:677:39494:60:0:248:274:268:10:g_d0_f12:10:g_d0_f11:F:KL=
+18:678:39497:0:17:277:284:324:10:g_d0_f25:10:g_d0_f25:F:
+18:679:39498:17:12:277:284:307:10:g_d0_f25:10:g_d0_f25:F:
+18:680:39500:12:12:277:284:295:10:g_d0_f25:10:g_d0_f25:F:
+18:681:39502:12:12:277:284:283:10:g_d0_f25:10:g_d0_f25:F:
+18:682:39504:12:12:277:284:271:10:g_d0_f25:10:g_d0_f25:F:
+18:683:39506:12:12:277:284:259:10:g_d0_f25:10:g_d0_f25:F:
+18:684:39508:12:13:277:284:247:10:g_d0_f25:10:g_d0_f25:F:
+18:685:39510:13:0:277:284:234:10:g_d0_f25:10:g_d0_f25:F:
+18:686:39511:0:18:288:308:312:10:g_d0_f11:10:g_d0_f11:F:4    4
+18:687:39517:18:18:288:308:294:10:g_d0_f11:10:g_d0_f11:F:3    3
+18:688:39523:18:18:288:308:276:10:g_d0_f11:10:g_d0_f11:F:1    1
+18:689:39529:18:18:288:308:258:10:g_d0_f11:10:g_d0_f11:F:5    6
+18:690:39535:18:18:288:308:240:10:g_d0_f11:10:g_d0_f11:F:2    2
+18:691:39541:18:0:288:308:222:10:g_d0_f11:10:g_d0_f11:F:6    5
+18:692:39547:0:17:313:320:324:10:g_d0_f25:10:g_d0_f25:F:
+18:693:39548:17:12:313:320:307:10:g_d0_f25:10:g_d0_f25:F:
+18:694:39550:12:12:313:320:295:10:g_d0_f25:10:g_d0_f25:F:
+18:695:39552:12:12:313:320:283:10:g_d0_f25:10:g_d0_f25:F:
+18:696:39554:12:12:313:320:271:10:g_d0_f25:10:g_d0_f25:F:
+18:697:39556:12:12:313:320:259:10:g_d0_f25:10:g_d0_f25:F:
+18:698:39558:12:13:313:320:247:10:g_d0_f25:10:g_d0_f25:F:
+18:699:39560:13:0:313:320:234:10:g_d0_f25:10:g_d0_f25:F:
+18:700:39561:0:95:322:325:268:10:g_d0_f12:10:g_d0_f12:F:.
+18:701:39562:95:20:61:512:173:11:g_d0_f10:8:g_d0_f22:F:Computational implementation.The strongly connected components of the graphGL
+18:702:39639:20:21:61:512:153:12:g_d0_f8:12:g_d0_f8:B:can be efficiently identified with Tarjan’s algorithm [37].  Thus, Theorem 2 suggests that
+18:703:39729:21:20:61:512:132:12:g_d0_f8:12:g_d0_f8:B:problem (7) may be efficiently reduced to a series of smaller sub-problems, corresponding
+18:704:39818:20:20:61:324:112:12:g_d0_f8:12:g_d0_f8:B:to the strongly connected components of graphGL.
+18:705:39866:20:21:81:512:92:12:g_d0_f8:12:g_d0_f8:A:The question now becomes:  how do we deal with an individual strongly connected
+18:706:39945:21:0:61:512:71:12:g_d0_f8:12:g_d0_f8:B:componentG′= (A′,E′)?  If|A′|is small enough (for a regular PC running Matlab this
+19:707:40029:0:0:61:268:758:12:g_d0_f8:8:g_d0_f22:B:means less than or equal to 10), thenKL
+19:708:40068:0:8:267:269:766:6:g_d0_f13:6:g_d0_f13:F:′
+19:709:40069:8:20:274:512:758:12:g_d0_f8:12:g_d0_f8:A:can be determined via brute-force enumeration
+19:710:40114:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:within a few minutes.  Otherwise, for practicality, it is preferable to resort to polynomial-
+19:711:40207:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:time approximation algorithms.8Here, we distinguish between two cases.  If the profile
+19:712:40293:21:20:61:512:697:12:g_d0_f16:12:g_d0_f8:B:L′satisfies restriction (8), then, the problem is one offull rank aggregation, and we may
+19:713:40382:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:employ a 4/3-approximation algorithm due to Van Zuylen and Williamson (VZW) [44]
+19:714:40462:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:(see Corollary 5.3 and DerandFASLP-Pivot in Figure 1 of [44]).  This provides the best
+19:715:40548:21:20:61:511:636:12:g_d0_f8:12:g_d0_f8:B:approximation guarantee (of 4/3) currently available.  Conversely, if the profileL′does
+19:716:40635:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:not satisfy restriction (8),  then the problem is one ofpartial  rank  aggregation,  and we
+19:717:40726:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:employ the combinatorial algorithm of VZW outlined in Theorem 2.3 of [44], which in
+19:718:40809:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:turn builds on a randomized algorithm of Ailon [1].  This has an approximation guarantee
+19:719:40897:21:20:61:95:555:12:g_d0_f8:12:g_d0_f8:B:of 8/5.
+19:720:40904:20:42:81:426:535:12:g_d0_f8:12:g_d0_f8:A:The above observations are summarized in the following algorithm:
+19:721:40969:42:24:64:282:493:11:g_d0_f10:11:g_d0_f12:F:Algorithm 1.Input:L= (XA,f,u),M
+19:722:41000:24:30:77:262:469:12:g_d0_f8:12:g_d0_f8:A:1.  Compute the election matrixYL.
+19:723:41034:30:29:77:198:439:12:g_d0_f8:12:g_d0_f8:A:2.  Construct graphGL.
+19:724:41056:29:29:77:251:410:12:g_d0_f8:12:g_d0_f8:A:3.  Run Tarjan’s algorithm onGL.
+19:725:41088:29:30:77:405:381:12:g_d0_f8:12:g_d0_f8:A:4.  For every strongly connected componentG′= (A′,E′) ofGL:
+19:726:41147:30:24:95:352:351:12:g_d0_f8:12:g_d0_f8:A:4a.  If|A′|≤M, determineKLA′via enumeration.
+19:727:41191:24:24:94:494:327:12:g_d0_f8:12:g_d0_f8:A:4b.  If|A′|> MandL′∈ ̃L, approximateKLA′by Corollary 5.3 in VZW [44].
+19:728:41260:24:29:96:492:303:12:g_d0_f8:12:g_d0_f8:A:4c.  If|A′|> MandL′6∈ ̃L, approximateKLA′by Theorem 2.3 in VZW [44].
+19:729:41328:29:21:77:515:274:12:g_d0_f8:12:g_d0_f8:A:5.  Apply  Eq.  (11)  to  all  strongly  connected  components  ofGL.   Where  applicable,
+19:730:41418:21:23:91:359:253:12:g_d0_f8:12:g_d0_f8:A:approximateKLA′with the VZW algorithm output.
+19:731:41463:23:21:81:512:230:12:g_d0_f8:12:g_d0_f8:A:Step 1 will usually need to be tackled numerically, via Monte Carlo methods, though
+19:732:41546:21:20:61:512:209:12:g_d0_f8:12:g_d0_f8:B:some profile spaces may admit analytic solutions (see Section 5).  When a strongly con-
+19:733:41633:20:20:61:512:189:12:g_d0_f8:12:g_d0_f8:B:nected  component  ofGLis  large  (e.g.,  having  more  than  20-25  vertices)  and  step  4b
+19:734:41726:20:21:61:512:169:12:g_d0_f8:12:g_d0_f8:B:is  applicable,  then,  to  speed  up  the  running  time  of  the  relevant  VZW  approximation
+19:735:41822:21:20:61:512:148:12:g_d0_f8:12:g_d0_f8:B:algorithm, it is advisable to use a specialized LP-solver to quickly solve the linear pro-
+19:736:41912:20:20:61:512:128:12:g_d0_f8:12:g_d0_f8:B:gramming relaxation of the problem, as the latter is a subroutine of the main algorithm.
+19:737:42000:20:16:61:512:108:12:g_d0_f8:12:g_d0_f8:B:Conversely, the VZW algorithm for step 4c is a combinatorial algorithm that does not
+19:738:42084:16:20:73:512:92:6:g_d0_f20:9:g_d0_f14:F:8Clearly, the determination of what are considered “big” and “small” values for|A′|will depend on computing
+19:739:42191:20:0:61:140:72:9:g_d0_f14:9:g_d0_f14:F:power and memory.
+20:740:42210:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:require linear programming.  Finally, in cases where approximation algorithms are em-
+20:741:42295:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:ployed, the output ranking(s) of Algorithm 1 can be potentially improved by applying to
+20:742:42382:20:45:61:474:718:12:g_d0_f8:12:g_d0_f8:B:them a local search heuristic known as “local Kemenization” (Dwork et al. [15]).
+20:743:42462:45:33:61:288:673:14:g_d0_f15:14:g_d0_f15:C:5    A Special Case of the Model
+20:744:42494:33:28:61:259:640:12:g_d0_f15:12:g_d0_f15:C:5.1    Generalized weighted means
+20:745:42527:28:20:61:512:612:12:g_d0_f8:12:g_d0_f8:B:A  family  of  welfare  functions  that  is  particularly  popular  in  many  policy  contexts  are
+20:746:42626:20:21:61:512:592:12:g_d0_f8:12:g_d0_f8:B:known as generalized weighted means [3, 29, 12, 16].  Parameterized byγ∈ <, they are
+20:747:42710:21:40:61:192:571:12:g_d0_f8:12:g_d0_f8:B:denoted byuγand satisfy
+20:748:42733:40:0:181:245:531:12:g_d0_f16:12:g_d0_f8:A:uγ(x,w)   =
+20:749:42744:0:11:254:265:556:12:g_d0_f25:12:g_d0_f25:C:
+20:750:42745:11:21:254:265:545:12:g_d0_f25:12:g_d0_f25:C:
+20:751:42746:21:0:254:265:524:12:g_d0_f25:12:g_d0_f25:C:
+20:752:42747:0:8:270:290:553:12:g_d0_f25:12:g_d0_f25:C:(∑
+20:753:42749:8:9:290:294:545:8:g_d0_f22:8:g_d0_f22:F:I
+20:754:42750:9:0:290:325:536:8:g_d0_f22:12:g_d0_f16:C:i=1wix
+20:755:42756:0:8:324:328:545:8:g_d0_f22:8:g_d0_f22:F:γ
+20:756:42757:8:0:324:327:537:8:g_d0_f22:8:g_d0_f22:F:i
+20:757:42758:0:13:330:342:553:12:g_d0_f25:6:g_d0_f24:C:)1γ
+20:758:42761:13:13:354:385:540:12:g_d0_f16:12:g_d0_f16:C:γ6= 0,
+20:759:42767:13:13:270:285:527:12:g_d0_f25:8:g_d0_f22:C:∏I
+20:760:42769:13:0:281:305:514:8:g_d0_f22:12:g_d0_f16:C:i=1x
+20:761:42773:0:8:304:313:523:8:g_d0_f22:6:g_d0_f24:F:wi
+20:762:42775:8:0:304:385:515:8:g_d0_f22:12:g_d0_f16:C:iγ= 0.
+20:763:42781:0:40:491:512:531:12:g_d0_f8:12:g_d0_f8:A:(12)
+20:764:42785:40:20:61:512:491:12:g_d0_f8:12:g_d0_f8:B:Whenγ= 1 we recover the weighted arithmetic mean, whereasγ= 0 orγ=−1 imply
+20:765:42859:20:20:61:512:471:12:g_d0_f8:12:g_d0_f8:B:a  weighted  geometric  and  harmonic  mean,  respectively.   Asγ→+∞(−∞),uγ(x,w)
+20:766:42939:20:21:61:345:451:12:g_d0_f8:12:g_d0_f8:B:converges to the maximum (minimum) coordinate ofx.
+20:767:42989:21:29:81:381:430:12:g_d0_f8:12:g_d0_f8:A:I note a simple corollary of the definition of Proposition 1.
+20:768:43050:29:20:61:512:401:12:g_d0_f15:12:g_d0_f17:C:Corollary 1The family of generalized weighted means (12) belongs to the classU∗dis-
+20:769:43133:20:29:61:183:381:12:g_d0_f17:12:g_d0_f17:C:cussed in Proposition 1.
+20:770:43157:29:38:61:396:352:12:g_d0_f8:12:g_d0_f8:B:As a result, we do not need to account for partial input rankings.
+20:771:43223:38:28:61:324:314:12:g_d0_f15:12:g_d0_f15:C:5.2    Weight imprecision via--contamination
+20:772:43267:28:20:61:512:286:12:g_d0_f8:12:g_d0_f8:B:Assume we are given an initial vector of weights ̄w∈∆I−1, representing a preliminary
+20:773:43351:20:21:61:512:266:12:g_d0_f8:12:g_d0_f8:B:and  tentative  choice  of  weighting  scheme.   Now,  suppose  that  we  are  willing  to  grant
+20:774:43448:21:36:61:477:245:12:g_d0_f8:8:g_d0_f18:B:equal consideration to weights deviating from ̄wbelonging in the setW- ̄w, where9
+20:775:43529:36:0:83:251:209:12:g_d0_f16:12:g_d0_f8:A:W- ̄w≡W-= (1−-) ̄w+-∆I−1=
+20:776:43554:0:21:255:265:230:12:g_d0_f25:12:g_d0_f25:C:{
+20:777:43555:21:0:264:393:209:12:g_d0_f19:12:g_d0_f16:C:w∈<I:w≥(1−-) ̄w,
+20:778:43571:0:29:408:419:224:8:g_d0_f22:12:g_d0_f25:C:I∑
+20:779:43573:29:0:404:417:195:8:g_d0_f22:8:g_d0_f18:F:i=1
+20:780:43576:0:0:421:454:209:12:g_d0_f16:12:g_d0_f8:A:wi= 1
+20:781:43581:0:21:454:464:230:12:g_d0_f25:12:g_d0_f25:C:}
+20:782:43582:21:36:466:512:209:12:g_d0_f16:12:g_d0_f8:A:.(13)
+20:783:43587:36:20:81:512:173:12:g_d0_f8:12:g_d0_f8:A:Here,  the parameter-∈[0,1] measures the imprecision associated with the initial
+20:784:43667:20:20:61:512:153:12:g_d0_f8:12:g_d0_f8:B:vector of weights ̄w.  If-= 0, then we are completely confident in our choice of ̄w, while
+20:785:43757:20:21:61:512:133:12:g_d0_f8:12:g_d0_f8:B:if-= 1 we assign no special status to ̄wand consider all possible weight vectors equally
+20:786:43845:21:20:61:512:112:12:g_d0_f8:12:g_d0_f8:B:valid.  Originally developed in Bayesian analysis, this way of parameterizing probabilistic
+20:787:43936:20:17:61:512:92:12:g_d0_f8:12:g_d0_f8:B:imprecision is known as--contamination (the interested reader may consult Berger and
+20:788:44020:17:0:73:477:75:6:g_d0_f20:9:g_d0_f14:F:9In what follows I will suppress dependence of the results on ̄wto avoid very cumbersome notation.
+21:789:44120:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:Berliner [8] for additional information).  The--contamination parametric structure has
+21:790:44206:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:been studied in the decision-theoretic literature on Knightian uncertainty ([27, 22], among
+21:791:44297:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:many others),  which however places more emphasis on the normative foundations and
+21:792:44379:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:behavioral implications of such belief imprecision.  Application areas have included job
+21:793:44467:20:20:61:265:677:12:g_d0_f8:12:g_d0_f8:B:search [26] and optimal investment [28].
+21:794:44507:20:21:81:512:657:12:g_d0_f8:12:g_d0_f8:A:First introduced by Foster et al. [16] in the context of composite indices of welfare,
+21:795:44593:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:this way of parameterizing imprecision overwis equivalent to the following importance
+21:796:44678:20:35:61:121:616:12:g_d0_f8:12:g_d0_f8:B:functionf-:
+21:797:44689:35:0:196:246:581:12:g_d0_f16:12:g_d0_f8:A:f-(w)   =
+21:798:44698:0:11:255:266:606:12:g_d0_f25:12:g_d0_f25:C:
+21:799:44699:11:21:255:266:595:12:g_d0_f25:12:g_d0_f25:C:
+21:800:44700:21:0:255:266:574:12:g_d0_f25:12:g_d0_f25:C:
+21:801:44701:0:9:286:290:595:8:g_d0_f18:8:g_d0_f18:F:1
+21:802:44702:9:0:272:352:586:8:g_d0_f22:12:g_d0_f16:C:V ol(W-)w∈W
+21:803:44713:0:25:354:361:595:8:g_d0_f22:12:g_d0_f16:C:-,
+21:804:44715:25:0:271:370:570:12:g_d0_f8:12:g_d0_f16:A:0otherwise,
+21:805:44726:0:36:491:512:581:12:g_d0_f8:12:g_d0_f8:A:(14)
+21:806:44730:36:20:61:241:545:12:g_d0_f8:12:g_d0_f8:B:whereV oldenotes volume in<I−1.
+21:807:44761:20:0:81:355:525:12:g_d0_f8:8:g_d0_f22:A:For a pair of alternatives (ai,aj)∈A×Athe setWu
+21:808:44808:0:10:355:359:532:6:g_d0_f24:6:g_d0_f24:F:γ
+21:809:44809:10:25:348:421:522:8:g_d0_f22:12:g_d0_f8:A:aiajis equal to
+21:810:44824:25:0:159:177:497:12:g_d0_f16:8:g_d0_f22:C:Wu
+21:811:44826:0:11:177:181:505:6:g_d0_f24:6:g_d0_f24:F:γ
+21:812:44827:11:0:170:199:494:8:g_d0_f22:12:g_d0_f8:A:aiaj=
+21:813:44832:0:10:203:210:507:12:g_d0_f25:12:g_d0_f25:C:{
+21:814:44833:10:0:210:402:497:12:g_d0_f19:12:g_d0_f8:A:w∈∆I−1:uγ(xai,w)≥uγ(xaj,w)
+21:815:44859:0:10:401:408:507:12:g_d0_f25:12:g_d0_f25:C:}
+21:816:44860:10:27:410:413:497:12:g_d0_f16:12:g_d0_f16:C:.
+21:817:44861:27:20:61:512:470:12:g_d0_f8:12:g_d0_f8:B:Now, we introduce the difference vectordγaiaj, abbreviated for simplicity bydγ, where,
+21:818:44947:20:44:61:163:450:12:g_d0_f8:12:g_d0_f8:B:for allk= 1,2,...,I:
+21:819:44967:44:0:173:203:406:12:g_d0_f16:12:g_d0_f8:A:dγk=
+21:820:44971:0:10:213:224:437:12:g_d0_f25:12:g_d0_f25:C:
+21:821:44972:10:8:213:224:427:12:g_d0_f25:12:g_d0_f25:C:
+21:822:44974:8:21:213:224:419:12:g_d0_f25:12:g_d0_f25:C:
+21:823:44975:21:7:213:224:398:12:g_d0_f25:12:g_d0_f25:C:
+21:824:44977:7:0:213:224:391:12:g_d0_f25:12:g_d0_f25:C:
+21:825:44978:0:20:229:393:425:12:g_d0_f16:12:g_d0_f16:C:xγaik−xγajk,ifγ >0,
+21:826:44997:20:21:229:393:405:12:g_d0_f16:12:g_d0_f16:C:xγajk−xγaik,ifγ <0,
+21:827:45016:21:0:229:304:384:12:g_d0_f8:12:g_d0_f8:A:log (xaik)−log
+21:828:45030:0:10:306:311:394:12:g_d0_f25:12:g_d0_f25:C:(
+21:829:45031:10:0:311:330:384:12:g_d0_f16:6:g_d0_f24:C:xajk
+21:830:45035:0:10:331:336:394:12:g_d0_f25:12:g_d0_f25:C:)
+21:831:45036:10:0:339:393:384:12:g_d0_f16:12:g_d0_f16:C:,ifγ= 0.
+21:832:45044:0:46:491:512:406:12:g_d0_f8:12:g_d0_f8:A:(15)
+21:833:45048:46:0:61:272:360:12:g_d0_f8:8:g_d0_f22:B:It is straightforward to see that the setWu
+21:834:45091:0:11:272:276:368:6:g_d0_f24:6:g_d0_f24:F:γ
+21:835:45092:11:0:266:503:357:8:g_d0_f22:12:g_d0_f8:A:aiajcan be simplified into the following polytope
+21:836:45141:0:32:503:511:365:8:g_d0_f18:8:g_d0_f18:F:10
+21:837:45143:32:0:192:210:333:12:g_d0_f16:8:g_d0_f22:C:Wu
+21:838:45145:0:11:210:214:341:6:g_d0_f24:6:g_d0_f24:F:γ
+21:839:45146:11:0:203:232:330:8:g_d0_f22:12:g_d0_f8:A:aiaj=
+21:840:45151:0:10:235:242:343:12:g_d0_f25:12:g_d0_f25:C:{
+21:841:45152:10:0:242:369:333:12:g_d0_f19:12:g_d0_f8:A:w∈∆I−1:   (dγ)′w≥0
+21:842:45170:0:10:368:375:343:12:g_d0_f25:12:g_d0_f25:C:}
+21:843:45171:10:27:377:512:333:12:g_d0_f16:12:g_d0_f8:A:.(16)
+21:844:45176:27:0:61:410:306:12:g_d0_f8:8:g_d0_f22:B:Subsequently, define the setW-,γaiajas the intersection ofW-andWu
+21:845:45241:0:10:410:414:313:6:g_d0_f24:6:g_d0_f24:F:γ
+21:846:45242:10:32:403:463:303:8:g_d0_f22:12:g_d0_f8:A:aiaj, so that
+21:847:45255:32:0:122:162:271:12:g_d0_f16:12:g_d0_f8:A:W-,γaiaj=
+21:848:45264:0:20:165:175:291:12:g_d0_f25:12:g_d0_f25:C:{
+21:849:45265:20:0:175:303:271:12:g_d0_f19:12:g_d0_f16:C:w∈<I:w≥(1−-) ̄w,
+21:850:45281:0:29:319:329:286:8:g_d0_f22:12:g_d0_f25:C:I∑
+21:851:45283:29:0:314:328:257:8:g_d0_f22:8:g_d0_f18:F:i=1
+21:852:45286:0:0:332:436:271:12:g_d0_f16:12:g_d0_f8:A:wi= 1,(dγ)′w≥0
+21:853:45300:0:20:436:446:291:12:g_d0_f25:12:g_d0_f25:C:}
+21:854:45301:20:32:448:512:271:12:g_d0_f16:12:g_d0_f8:A:.(17)
+21:855:45306:32:21:61:512:239:12:g_d0_f8:12:g_d0_f8:B:Then, applying Eqs. (3)-(4) to profiles satisfyingL= (XA,uγ,f-) for a choice of-∈(0,1]
+21:856:45392:21:36:61:192:218:12:g_d0_f8:12:g_d0_f8:B:andγ∈<, we may write:
+21:857:45413:36:0:227:292:182:12:g_d0_f16:12:g_d0_f8:A:VLij≡V-,γij=
+21:858:45425:0:0:296:315:194:12:g_d0_f16:12:g_d0_f16:C:V ol
+21:859:45429:0:13:317:324:207:12:g_d0_f25:12:g_d0_f25:C:(
+21:860:45430:13:0:324:350:194:12:g_d0_f16:6:g_d0_f24:C:W-,γaiaj
+21:861:45438:0:33:352:359:207:12:g_d0_f25:12:g_d0_f25:C:)
+21:862:45439:33:0:305:350:174:12:g_d0_f16:12:g_d0_f8:A:V ol(W-)
+21:863:45447:0:26:360:512:182:12:g_d0_f16:12:g_d0_f8:A:,(18)
+21:864:45452:26:17:227:512:156:12:g_d0_f16:12:g_d0_f8:A:YLij≡Y-,γij=V-,γij−V-,γji.(19)
+21:865:45482:17:39:69:241:139:6:g_d0_f20:9:g_d0_f14:F:10This follows by the following equivalence
+21:866:45525:39:0:110:230:100:9:g_d0_f21:9:g_d0_f32:F:uγ(xai,w)≥uγ(xaj,w)⇔
+21:867:45545:0:8:240:248:127:9:g_d0_f28:9:g_d0_f28:F:
+21:868:45546:8:8:240:248:119:9:g_d0_f28:9:g_d0_f28:F:
+21:869:45549:8:17:240:248:111:9:g_d0_f28:9:g_d0_f28:F:
+21:870:45550:17:8:240:248:94:9:g_d0_f28:9:g_d0_f28:F:
+21:871:45553:8:0:240:248:86:9:g_d0_f28:9:g_d0_f28:F:
+21:872:45554:0:9:253:266:122:9:g_d0_f28:6:g_d0_f24:F:∑I
+21:873:45556:9:0:263:291:113:6:g_d0_f24:9:g_d0_f21:F:i=1wix
+21:874:45562:0:7:292:296:120:6:g_d0_f24:6:g_d0_f24:F:γ
+21:875:45563:7:0:292:312:113:6:g_d0_f24:9:g_d0_f32:F:aii≥
+21:876:45567:0:9:314:327:122:9:g_d0_f28:6:g_d0_f24:F:∑I
+21:877:45569:9:0:324:353:113:6:g_d0_f24:9:g_d0_f21:F:i=1wix
+21:878:45575:0:7:353:357:120:6:g_d0_f24:6:g_d0_f24:F:γ
+21:879:45576:7:7:353:457:113:6:g_d0_f24:9:g_d0_f21:F:aji,ifγ >0,
+21:880:45587:7:10:253:266:106:9:g_d0_f28:6:g_d0_f24:F:∑I
+21:881:45589:10:0:263:291:96:6:g_d0_f24:9:g_d0_f21:F:i=1wix
+21:882:45595:0:7:292:296:103:6:g_d0_f24:6:g_d0_f24:F:γa
+21:883:45597:7:0:296:312:96:5:g_d0_f37:9:g_d0_f32:F:ii≤
+21:884:45600:0:10:314:327:106:9:g_d0_f28:6:g_d0_f24:F:∑I
+21:885:45602:10:0:324:353:96:6:g_d0_f24:9:g_d0_f21:F:i=1wix
+21:886:45608:0:7:353:357:103:6:g_d0_f24:6:g_d0_f24:F:γa
+21:887:45610:7:9:357:263:96:5:g_d0_f37:9:g_d0_f28:F:jiifγ <0,∑
+21:888:45620:9:7:263:266:87:6:g_d0_f24:6:g_d0_f24:F:I
+21:889:45621:7:0:263:300:80:6:g_d0_f24:9:g_d0_f14:F:i=1wilog
+21:890:45629:0:7:301:305:90:9:g_d0_f28:9:g_d0_f28:F:(
+21:891:45630:7:0:306:322:83:9:g_d0_f21:6:g_d0_f24:F:xaji
+21:892:45634:0:7:322:326:90:9:g_d0_f28:9:g_d0_f28:F:)
+21:893:45635:7:0:329:336:83:9:g_d0_f32:9:g_d0_f32:F:≥
+21:894:45636:0:10:338:351:90:9:g_d0_f28:6:g_d0_f24:F:∑I
+21:895:45638:10:0:348:385:80:6:g_d0_f24:9:g_d0_f14:F:i=1wilog
+21:896:45646:0:7:387:391:90:9:g_d0_f28:9:g_d0_f28:F:(
+21:897:45647:7:0:391:407:83:9:g_d0_f21:6:g_d0_f24:F:xaji
+21:898:45651:0:7:407:411:90:9:g_d0_f28:9:g_d0_f28:F:)
+21:899:45652:7:0:421:457:83:9:g_d0_f14:9:g_d0_f21:F:ifγ= 0.
+22:900:45661:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:We focus on the more intuitive quantity ofV-,γij.  By Corollary 1 we know that, unless
+22:901:45747:20:20:61:511:738:12:g_d0_f19:12:g_d0_f8:B:xai=xaj,V-,γij+V-,γji= 1.  Now,  basic geometric reasoning allows us to establish an
+22:902:45831:20:32:61:499:718:12:g_d0_f8:12:g_d0_f8:B:unambiguous monotonicity property ofV-,γijwith respect to the level of imprecision-.
+22:903:45915:32:21:61:512:686:12:g_d0_f15:12:g_d0_f17:C:Theorem 3Consider  a  pair  of  alternatives(ai,aj)and  their  difference  vectordγof
+22:904:46000:21:29:61:107:665:12:g_d0_f17:12:g_d0_f17:C:Eq. (15).
+22:905:46009:29:20:69:512:636:12:g_d0_f17:12:g_d0_f17:C:(i)  Suppose(dγ)′ ̄w6= 0.  Then,V-,γijis monotonic in-∈(0,1].  It is weakly increasing
+22:906:46095:20:21:88:184:616:12:g_d0_f17:12:g_d0_f17:C:(decreasing) in-if
+22:907:46113:21:31:261:339:595:12:g_d0_f8:12:g_d0_f16:A:(dγ)′ ̄w<(>)0.
+22:908:46127:31:32:66:380:564:12:g_d0_f17:12:g_d0_f17:C:(ii)  Suppose(dγ)′ ̄w= 0.  Then,V-,γijis constant in-∈(0,1].
+22:909:46187:32:21:61:176:532:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+22:910:46206:21:20:81:512:511:12:g_d0_f8:12:g_d0_f8:A:Thus, when (dγ)′ ̄w6= 0, andaiandajdo not yield identical welfare under the initial
+22:911:46289:20:20:61:512:491:12:g_d0_f8:12:g_d0_f8:B:vector of weights ̄w, Theorem 3 establishes that the proportion of weights favoring one
+22:912:46376:20:21:61:512:471:12:g_d0_f8:12:g_d0_f8:B:alternative over another varies monotonically in the imprecision-attached to ̄w.  The
+22:913:46461:21:20:61:512:450:12:g_d0_f8:12:g_d0_f8:B:direction of the relationship depends on the comparison of alternativesaiandajunder
+22:914:46544:20:20:61:512:430:12:g_d0_f8:12:g_d0_f8:B:initial weights ̄w.  It is decreasing ifaiinitially dominatesajand increasing otherwise.
+22:915:46632:20:21:61:512:410:12:g_d0_f8:12:g_d0_f8:B:Conversely, when the initial weights yield identical composite scores foraiandaj, then
+22:916:46718:21:20:61:241:389:12:g_d0_f16:12:g_d0_f8:B:V-,γijremains constant as we vary-.
+22:917:46753:20:20:81:512:369:12:g_d0_f8:12:g_d0_f8:A:The next step is to find a simple way to calculate the ratiosV-,γij.  To this end, I need
+22:918:46842:20:33:61:493:349:12:g_d0_f8:12:g_d0_f8:B:to first express polytopeW-,γaiajas a system of linear inequalities.  Define the function
+22:919:46931:33:0:228:274:316:12:g_d0_f16:12:g_d0_f7:C:D-,γ=−
+22:920:46937:0:17:276:301:324:12:g_d0_f8:12:g_d0_f16:A:1−-
+22:921:46940:17:0:286:291:307:12:g_d0_f16:12:g_d0_f16:C:-
+22:922:46941:0:32:304:512:316:12:g_d0_f8:12:g_d0_f8:A:(dγ)′ ̄w,(20)
+22:923:46954:32:20:61:511:284:12:g_d0_f8:12:g_d0_f8:B:and  suppose  that  there  exists  at  least  one  indicatori∗∈ Isuch  thatdγi∗≥D-,γ.   If
+22:924:47044:20:20:61:512:264:12:g_d0_f8:12:g_d0_f8:B:such ani∗does not exist, then we may immediately conclude thatV-,γij= 0 (see proof of
+22:925:47129:20:21:61:511:244:12:g_d0_f8:8:g_d0_f22:B:Theorem 3).  Definew∗∈ <I−1anddγ∗∈ <I−1as the restriction of vectorswanddγ
+22:926:47203:21:20:61:512:223:12:g_d0_f8:12:g_d0_f8:B:to indicators inI\{i∗} ≡ I∗.  Consider the following polytopeW-,γ∗aiaj(hereedenotes a
+22:927:47288:20:53:61:251:203:12:g_d0_f8:12:g_d0_f8:B:vector of all ones of dimensionI−1)
+22:928:47323:53:0:75:115:150:12:g_d0_f16:12:g_d0_f8:A:W-,γ∗aiaj=
+22:929:47333:0:20:118:128:170:12:g_d0_f25:12:g_d0_f25:C:{
+22:930:47334:20:0:128:239:150:12:g_d0_f19:12:g_d0_f16:C:w∗∈<I−1:w∗≥0,
+22:931:47347:0:25:249:266:161:12:g_d0_f25:12:g_d0_f25:C:∑
+22:932:47348:25:0:248:266:136:8:g_d0_f22:6:g_d0_f13:F:i∈I∗
+22:933:47352:0:0:268:461:150:12:g_d0_f16:8:g_d0_f22:C:w∗i≤1,(dγ,∗−dγi∗e)′w∗+dγi∗≥D-,γ
+22:934:47383:0:20:462:472:170:12:g_d0_f25:12:g_d0_f25:C:}
+22:935:47384:20:36:474:512:150:12:g_d0_f16:12:g_d0_f8:A:.(21)
+22:936:47389:36:20:81:512:114:12:g_d0_f8:12:g_d0_f8:A:PolytopeW-,γ∗aiajis obtained upon performing a sequence of simple affine transforma-
+22:937:47473:20:21:61:512:94:12:g_d0_f8:12:g_d0_f8:B:tions to polytopeW-,γaiaj(see the proof of Theorems 3 and 4).  Using basic results from
+22:938:47560:21:0:61:369:73:12:g_d0_f8:12:g_d0_f8:B:linear algebra (Lang [23]) I arrive at the following Theorem.
+23:939:47623:0:20:61:512:758:12:g_d0_f15:12:g_d0_f17:C:Theorem 4Leti∗∈Isuch thatdγi∗≥D-,γ, and consider polytopeW-,γ,∗aiajgiven by (21).
+23:940:47704:20:26:61:225:738:12:g_d0_f16:12:g_d0_f17:C:V-,γijdefined in Eq. (18) satisfies
+23:941:47739:26:0:225:323:712:12:g_d0_f16:12:g_d0_f16:C:V-,γij= (I−1)!V ol
+23:942:47757:0:14:325:332:726:12:g_d0_f25:12:g_d0_f25:C:(
+23:943:47758:14:0:332:358:712:12:g_d0_f16:6:g_d0_f24:C:W-,γ∗aiaj
+23:944:47767:0:40:360:367:726:12:g_d0_f25:12:g_d0_f25:C:)
+23:945:47768:40:21:61:176:686:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+23:946:47787:21:20:81:512:665:12:g_d0_f8:12:g_d0_f8:A:In  light  of  Theorem  4,  the  main  challenge  now  lies  in  calculating  the  volume  of
+23:947:47880:20:24:61:380:645:12:g_d0_f8:12:g_d0_f8:B:polytopeW-,γ∗aiaj.  To this end, I make the following assumption.
+23:948:47945:24:25:61:398:621:12:g_d0_f15:12:g_d0_f17:C:Assumption 1There does not existi∈I∗such thatdγ∗i=D-,γ.
+23:949:48000:25:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:Assumption  1  ensures  that  polytopeW-,γ∗aiajis  simple,  i.e.,  that  all  of  its  vertices  are
+23:950:48100:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:nondegenerate.  Primal nondegeneracy is a desirable property in linear programming as
+23:951:48185:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:it  facilitates  the  application  of  the  simplex  method  (see  Chapter  2  in  Bertsimas  and
+23:952:48282:20:20:61:512:535:12:g_d0_f8:12:g_d0_f8:B:Tsitsiklis [6]).  This enables the direct use of Lawrence’s [24] formula for computing the
+23:953:48372:20:36:61:172:515:12:g_d0_f8:12:g_d0_f8:B:volume of a polytope.
+23:954:48393:36:21:61:512:479:11:g_d0_f10:12:g_d0_f8:B:Remark 1.Assumption 1 is not strictly necessary for the implications of the analysis
+23:955:48477:21:20:61:512:458:12:g_d0_f8:12:g_d0_f8:B:(i.e.,  the  following  Proposition  2)  to  hold.   As  Lawrence  himself  notes  in  his  paper’s
+23:956:48576:20:20:61:512:438:12:g_d0_f8:12:g_d0_f8:B:conclusion [24], his method can be extended to non-simple polytopes using standard linear
+23:957:48665:20:21:61:512:418:12:g_d0_f8:12:g_d0_f8:B:programming techniques (see Bueler et al. [9] for further discussions and applications).
+23:958:48753:21:20:61:512:397:12:g_d0_f8:12:g_d0_f8:B:I  choose  to  impose  Assumption  1  because  it  can  be  always  easily  satisfied  by  a  slight
+23:959:48853:20:27:61:346:377:12:g_d0_f8:12:g_d0_f8:B:perturbation of ̄wor-, while simplifying computations.
+23:960:48907:27:20:61:512:350:12:g_d0_f15:12:g_d0_f17:C:Proposition 2Suppose  Assumption  1  holds.  Then  polytopeW-,γ∗aiajis  simple.  Moreover
+23:961:48996:20:20:61:512:330:12:g_d0_f17:12:g_d0_f17:C:it hasO(I2)vertices andO(I3)edges that can be readily identified (Eqs.  (V1)-(V4) and
+23:962:49081:20:21:61:511:310:12:g_d0_f17:8:g_d0_f18:C:(E1)-(E8)  in  Appendix).   Using  this  information  we  can  construct  a  vectorc∈ <I−1
+23:963:49171:21:20:61:512:289:12:g_d0_f17:12:g_d0_f17:C:such that the functionh(w∗) =c′w∗is non-constant on each edge ofW-,γ∗aiaj(Eq. (33) in
+23:964:49256:20:20:61:512:269:12:g_d0_f17:12:g_d0_f17:C:Appendix).  As  a  result,  the  volume  of  polytopeW-,γ∗aiajcan  be  computed  efficiently  using
+23:965:49355:20:27:61:406:249:12:g_d0_f17:12:g_d0_f17:C:the formula in Theorem 1 of Lawrence [24] (Eq. (34) in Appendix).
+23:966:49420:27:20:61:176:222:12:g_d0_f15:12:g_d0_f8:B:Proof.See Appendix.
+23:967:49439:20:21:81:512:202:12:g_d0_f8:12:g_d0_f8:A:Thus, by Proposition 2 we have an efficient method of computingV-,γijfor any two
+23:968:49519:21:20:61:512:181:12:g_d0_f8:12:g_d0_f8:B:alternativesaiandaj, and choice-∈(0,1] andγ∈ <.  Examples 2 and 3 illustrate the
+23:969:49599:20:36:61:231:161:12:g_d0_f8:12:g_d0_f8:B:two different cases of Theorem 3.
+23:970:49632:36:20:61:512:125:11:g_d0_f10:12:g_d0_f8:B:Example 2.One of the strengths of the proposed framework is that it sheds light on
+23:971:49714:20:28:61:483:105:12:g_d0_f8:12:g_d0_f8:B:subtle differences among alternatives.  This is illustrated by the following example:
+23:972:49799:28:0:80:374:77:12:g_d0_f19:12:g_d0_f8:A:xai= (0.1,0.2,0.3,0.4)′,xaj= (0.4,0.3,0.2,0.15)′, ̄w=
+23:973:49852:0:9:378:387:94:12:g_d0_f25:12:g_d0_f25:C:(
+23:974:49853:9:16:388:394:85:12:g_d0_f8:12:g_d0_f8:A:1
+23:975:49854:16:0:388:394:69:12:g_d0_f8:12:g_d0_f8:A:4
+23:976:49855:0:0:395:398:77:12:g_d0_f16:12:g_d0_f16:C:,
+23:977:49856:0:16:401:407:85:12:g_d0_f8:12:g_d0_f8:A:1
+23:978:49857:16:0:401:407:69:12:g_d0_f8:12:g_d0_f8:A:4
+23:979:49858:0:0:408:411:77:12:g_d0_f16:12:g_d0_f16:C:,
+23:980:49859:0:16:415:421:85:12:g_d0_f8:12:g_d0_f8:A:1
+23:981:49860:16:0:415:421:69:12:g_d0_f8:12:g_d0_f8:A:4
+23:982:49861:0:0:422:425:77:12:g_d0_f16:12:g_d0_f16:C:,
+23:983:49862:0:16:428:434:85:12:g_d0_f8:12:g_d0_f8:A:1
+23:984:49863:16:0:428:434:69:12:g_d0_f8:12:g_d0_f8:A:4
+23:985:49864:0:17:435:446:94:12:g_d0_f25:8:g_d0_f9:C:)′
+23:986:49866:17:0:449:492:77:12:g_d0_f16:12:g_d0_f16:C:, γ= 1.
+24:987:49875:0:20:61:511:758:12:g_d0_f8:8:g_d0_f22:B:Looking at just the ordinal dimension of the indicator data, we see that bothaiandaj
+24:988:49959:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:dominate  in  exactly  two  dimensions.   Moreover,  the  difference  in  the  composite  scores
+24:989:50055:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:under zero imprecision is relatively small:  0.2500 foraiand 0.2625 foraj.  This may lead
+24:990:50144:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:us to think that the two alternatives are roughly equal, and remain all the more so when
+24:991:50232:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:we take weight imprecision into account.  However, this is not the case.  Indeed, we see
+24:992:50320:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:that in realityajfares significantly better thanaiif we allow for weight imprecision (and
+24:993:50409:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:our model makes quantitatively precise to what degree this is so), especially if we only
+24:994:50497:20:27:61:230:616:12:g_d0_f8:12:g_d0_f8:B:wish to consider small levels of-:
+24:995:50531:27:37:129:444:589:12:g_d0_f16:12:g_d0_f16:C:V0.1,1ij= 0.090, V0.25,1ij= 0.312, V0.5,1ij= 0.408, V1,1ij= 0.458.
+24:996:50597:37:20:61:512:552:11:g_d0_f10:12:g_d0_f8:B:Example 3.I provide an example of the situation discussed in part (ii) of Theorem 3.
+24:997:50681:20:27:61:109:532:12:g_d0_f8:12:g_d0_f8:B:Consider:
+24:998:50690:27:0:61:401:505:12:g_d0_f19:12:g_d0_f8:B:xai= (0.1,0.2,0.35,0.4,0.5)′,xaj= (0.35,0.4,0.5,0.1,0.2)′, ̄w=
+24:999:50752:0:8:404:413:521:12:g_d0_f25:12:g_d0_f25:C:(
+24:1000:50753:8:17:414:420:513:12:g_d0_f8:12:g_d0_f8:A:1
+24:1001:50754:17:0:414:420:496:12:g_d0_f8:12:g_d0_f8:A:5
+24:1002:50755:0:0:421:424:505:12:g_d0_f16:12:g_d0_f16:C:,
+24:1003:50756:0:17:428:434:513:12:g_d0_f8:12:g_d0_f8:A:1
+24:1004:50757:17:0:428:434:496:12:g_d0_f8:12:g_d0_f8:A:5
+24:1005:50758:0:0:435:438:505:12:g_d0_f16:12:g_d0_f16:C:,
+24:1006:50759:0:17:441:447:513:12:g_d0_f8:12:g_d0_f8:A:1
+24:1007:50760:17:0:441:447:496:12:g_d0_f8:12:g_d0_f8:A:5
+24:1008:50761:0:0:448:451:505:12:g_d0_f16:12:g_d0_f16:C:,
+24:1009:50762:0:17:455:461:513:12:g_d0_f8:12:g_d0_f8:A:1
+24:1010:50763:17:0:455:461:496:12:g_d0_f8:12:g_d0_f8:A:5
+24:1011:50764:0:0:462:465:505:12:g_d0_f16:12:g_d0_f16:C:,
+24:1012:50765:0:17:468:474:513:12:g_d0_f8:12:g_d0_f8:A:1
+24:1013:50766:17:0:468:474:496:12:g_d0_f8:12:g_d0_f8:A:5
+24:1014:50767:0:16:475:486:521:12:g_d0_f25:8:g_d0_f9:C:)′
+24:1015:50769:16:28:489:532:505:12:g_d0_f16:12:g_d0_f16:C:, γ= 1.
+24:1016:50776:28:27:61:503:477:12:g_d0_f8:12:g_d0_f8:B:Indeed,xajis obtained by simply permuting the elements ofxai.  This instance yields
+24:1017:50859:27:28:181:395:450:12:g_d0_f15:12:g_d0_f16:C: ̄w′xai= ̄w′xaj, V-,1ij= 0.478,∀-∈(0,1].
+24:1018:50899:28:20:61:512:422:12:g_d0_f8:12:g_d0_f8:B:This example further suggests how thedistributionof the achievement scores across indi-
+24:1019:50986:20:36:61:512:402:12:g_d0_f8:12:g_d0_f8:B:cators can be very important in determining the dominance relation between alternatives.
+24:1020:51074:36:21:61:512:366:11:g_d0_f10:12:g_d0_f8:B:How could-be set?I close Section 5 by offering a few thoughts on the calibration
+24:1021:51154:21:20:61:512:345:12:g_d0_f8:12:g_d0_f8:B:of the parameter-.  From a general statistical standpoint,-may be interpreted as the
+24:1022:51238:20:20:61:512:325:12:g_d0_f8:12:g_d0_f8:B:amount  of  error  attached  to  the  prior ̄w(Berger  and  Berliner  [8]).   In  the  context  of
+24:1023:51336:20:21:61:512:305:12:g_d0_f8:12:g_d0_f8:B:composite indices of welfare, the choice of-is largely subjective and should, in theory,
+24:1024:51424:21:20:61:512:284:12:g_d0_f8:12:g_d0_f8:B:be  set  by  the  policy  makers  who  will  actually  use  the  composite  index.   Nevertheless,
+24:1025:51522:20:20:61:512:264:12:g_d0_f8:12:g_d0_f8:B:the simple structure of--contamination may inform this process by shedding light on the
+24:1026:51609:20:21:61:511:244:12:g_d0_f8:8:g_d0_f22:B:implications of different choices.  First,  it is clear that restricting weights to lie inW-
+24:1027:51701:21:20:61:512:223:12:g_d0_f8:12:g_d0_f8:B:places a lower bound of (1−-) on all ratioswi ̄wi, implying the following upper and lower
+24:1028:51790:20:19:61:132:203:12:g_d0_f8:12:g_d0_f8:B:bounds onwi:
+24:1029:51802:19:17:201:213:184:12:g_d0_f16:8:g_d0_f22:C:wi
+24:1030:51804:17:0:204:213:167:12:g_d0_f8:8:g_d0_f22:A: ̄wi
+24:1031:51808:0:24:218:303:176:12:g_d0_f7:12:g_d0_f16:C:≥1−-,∀i∈I,
+24:1032:51818:24:0:178:223:152:12:g_d0_f7:12:g_d0_f7:C:⇔wi∈
+24:1033:51822:0:10:226:231:162:12:g_d0_f25:12:g_d0_f25:C:[
+24:1034:51823:10:0:234:352:152:12:g_d0_f8:12:g_d0_f8:A: ̄wi−- ̄wi, ̄wi+-(1− ̄wi)
+24:1035:51848:0:10:352:357:162:12:g_d0_f25:12:g_d0_f25:C:]
+24:1036:51849:10:27:357:512:152:12:g_d0_f16:12:g_d0_f8:A:,∀i∈I.(22)
+24:1037:51859:27:20:61:512:125:12:g_d0_f8:12:g_d0_f8:B:Less obviously, a choice of-implies the following relationship between the volumes (in
+24:1038:51945:20:20:61:437:105:12:g_d0_f8:12:g_d0_f8:B:(I−1)-dimensional space) ofW-and the standard (I−1)-simplex ∆I−1:
+24:1039:52010:20:16:243:290:85:12:g_d0_f16:12:g_d0_f8:A:V ol(W-)
+24:1040:52018:16:0:239:295:69:12:g_d0_f16:12:g_d0_f8:A:V ol(∆I−1)
+24:1041:52028:0:0:299:512:77:12:g_d0_f8:12:g_d0_f8:A:=-I−1.(23)
+25:1042:52040:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:Eq. (23) can be easily established and the relation it implies is independent of the vector
+25:1043:52131:20:20:64:512:738:12:g_d0_f15:12:g_d0_f8:B: ̄w(see Eqs. (26)-(27) in the proof of Theorem 4).  It could possibly serve as a guide for
+25:1044:52221:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:policy makers who wish to “cover” a target percentage of all possible vectors of weights,
+25:1045:52310:21:44:61:267:697:12:g_d0_f8:12:g_d0_f8:B:while respecting the bounds of Eq. (22).
+25:1046:52350:44:33:61:245:653:14:g_d0_f15:14:g_d0_f15:C:6    Numerical Application
+25:1047:52376:33:20:61:512:620:12:g_d0_f8:12:g_d0_f8:B:In this section, I apply Algorithm 1 to Shanghai University’s Academic Ranking of World
+25:1048:52463:20:20:61:512:600:12:g_d0_f8:12:g_d0_f8:B:Universities (ARWU), a popular composite index measuring research excellence in aca-
+25:1049:52547:20:21:61:512:580:12:g_d0_f8:12:g_d0_f8:B:demic institutions.11The ARWU Index measures academic excellence through the fol-
+25:1050:52628:21:20:61:512:559:12:g_d0_f8:12:g_d0_f8:B:lowing  six  criteria:  (1)  number  of  alumni  winning  Nobel  prizes  or  Fields  medals,  (2)
+25:1051:52725:20:20:61:512:539:12:g_d0_f8:12:g_d0_f8:B:number of faculty winning Nobel prizes or Fields medals; (3) highly-cited researchers in
+25:1052:52813:20:21:61:512:519:12:g_d0_f8:12:g_d0_f8:B:21  broad  categories;  (4)  papers  published  in  Nature  or  Science;  (5)  papers  indexed  in
+25:1053:52911:21:20:61:512:498:12:g_d0_f8:12:g_d0_f8:B:Science Citation Index-expanded and Social Science Citation Index; (6) per capita aca-
+25:1054:52997:20:20:61:512:478:12:g_d0_f8:12:g_d0_f8:B:demic performance of an institution.  Indicator 1 is meant to capture quality of education,
+25:1055:53088:20:21:61:512:458:12:g_d0_f8:12:g_d0_f8:B:indicators 2 and 3 the quality of the faculty, 4 and 5 research output, and 6 academic
+25:1056:53174:21:20:61:512:437:12:g_d0_f8:12:g_d0_f8:B:performance.   For  each  indicator,  the  highest  scoring  institution  is  assigned  a  score  of
+25:1057:53274:20:20:61:441:417:12:g_d0_f8:12:g_d0_f8:B:100, and other institutions are calculated as a percentage of the top score.
+25:1058:53350:20:0:81:462:397:12:g_d0_f8:12:g_d0_f8:A:University scores are computed via a simple linear average, that isu(x,w) =
+25:1059:53425:0:13:466:482:406:12:g_d0_f25:8:g_d0_f18:C:∑6
+25:1060:53427:13:17:478:519:393:8:g_d0_f22:12:g_d0_f8:A:i=1wixi.
+25:1061:53435:17:20:61:512:376:12:g_d0_f8:12:g_d0_f8:B:Hence, the relevant welfare function is given by Eq. (12) withγ= 1, i.e.,u1. The following
+25:1062:53525:20:20:61:512:356:12:g_d0_f8:12:g_d0_f8:B:vector of weights is employed:w′= (.1,.2,.2,.2,.2,.1), and university rankings are based
+25:1063:53613:20:20:61:512:336:12:g_d0_f8:12:g_d0_f8:B:on these composite scores.  Despite its increasing influence and popularity,  the ARWU
+25:1064:53699:20:21:61:512:316:12:g_d0_f8:12:g_d0_f8:B:index has been criticized on many grounds,  including its non-robustness to changes in
+25:1065:53785:21:20:61:206:295:12:g_d0_f8:12:g_d0_f8:B:weights (Saisana et al. [34]).
+25:1066:53815:20:20:81:512:275:12:g_d0_f8:12:g_d0_f8:A:I proceed to apply the analysis of Section 5 and consider imprecision over the ARWU
+25:1067:53898:20:21:61:512:255:12:g_d0_f8:12:g_d0_f8:B:index weights via the-−contamination framework of Eq. (13) with ̄wequal to the vector
+25:1068:53983:21:20:61:512:234:12:g_d0_f8:12:g_d0_f8:B:of weights used by the developers of the ARWU index.  Focusing on the top-100 univer-
+25:1069:54068:20:20:61:512:214:12:g_d0_f8:12:g_d0_f8:B:sities reported in the 2013 ARWU rankings, denoted byA100, I consider three values for
+25:1070:54154:20:21:61:512:194:12:g_d0_f16:12:g_d0_f8:B:-that reflect plausible departures from the initial weights ̄w, namely-∈{1/6,1/3,1/2}.
+25:1071:54240:21:20:61:512:173:12:g_d0_f8:12:g_d0_f8:B:When-= 0 and there is no imprecision over weights,  the (partial) ranking of the 100
+25:1072:54324:20:20:61:512:153:12:g_d0_f8:12:g_d0_f8:B:first universities is denoted byK0.  Unlike the designers of the ARWU index, I do not
+25:1073:54409:20:21:61:512:133:12:g_d0_f8:12:g_d0_f8:B:round university scores to 1 decimal point.  This means thatK0has fewer ties than the
+25:1074:54494:21:20:61:306:112:12:g_d0_f8:12:g_d0_f8:B:partial ranking reported on the ARWU website.
+25:1075:54539:20:16:81:512:92:12:g_d0_f8:12:g_d0_f8:A:I implement Algorithm 1 in Matlab with a choice ofM= 10.  Step 1 is performed
+25:1076:54616:16:0:69:201:76:6:g_d0_f20:9:g_d0_f14:F:11See www.shanghairanking.com
+26:1077:54647:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:using  the  insights  of  Lawrence’s  formula  via  Proposition  2.12In  the  case  of  Step  3,  I
+26:1078:54746:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:use a Matlab implementation of Tarjan’s algorithm due to David F. Gleich of Stanford
+26:1079:54830:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:University (Copyright).13For Step 4b, I coded the Van Zuylen and Williamson algorithm
+26:1080:54915:21:20:61:347:697:12:g_d0_f8:12:g_d0_f8:B:myself (Step 4c was not applicable, due to Corollary 1).
+26:1081:54971:20:20:81:512:677:12:g_d0_f8:12:g_d0_f8:A:The second column of Table 1 shows the number of non-singleton strongly connected
+26:1082:55052:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:components for the correspondingL-dominance graphs, while the third a vector indicating
+26:1083:55139:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:the number of universities that each such strongly connected component includes.  We see
+26:1084:55227:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:that as-grows and we enlarge the set of weightsW-under consideration, the Condorcet
+26:1085:55310:20:20:61:512:596:12:g_d0_f8:12:g_d0_f8:B:paradox  becomes  more  and  more  pronounced.   As  the  size  of  the  strongly  connected
+26:1086:55402:20:21:61:512:576:12:g_d0_f8:12:g_d0_f8:B:components is never greater thanM= 10, Step 4a of Algorithm 1 was always applicable.
+26:1087:55486:21:20:61:512:555:12:g_d0_f8:12:g_d0_f8:B:Thus,  we  can  definitely  conclude  that  Algorithm  1’s  output  are  the  Kemeny-optimal
+26:1088:55578:20:29:61:267:535:12:g_d0_f8:12:g_d0_f8:B:rankings of the three problem instances.
+26:1089:55618:29:21:213:349:506:11:g_d0_f12:11:g_d0_f11:F:-NumberSizes
+26:1090:55630:21:20:207:340:485:11:g_d0_f11:11:g_d0_f11:F:1/615
+26:1091:55635:20:20:207:353:465:11:g_d0_f11:11:g_d0_f11:F:1/33(4,8,3)
+26:1092:55646:20:25:207:366:445:11:g_d0_f11:11:g_d0_f11:F:1/26(4,9,3,6,5,3)
+26:1093:55663:25:21:61:512:420:11:g_d0_f11:11:g_d0_f11:F:Table 1:  2013 ARWU rankings:  Number and sizes of non-singleton strongly connected compo-
+26:1094:55753:21:33:61:354:399:11:g_d0_f11:11:g_d0_f11:F:nents forL-dominance graphsGL, whereL= (XA100,f-,u1).
+26:1095:55806:33:20:81:512:366:12:g_d0_f8:8:g_d0_f18:A:For convenience,  denote byK-the Kemeny-optimal ranking of universities inU100
+26:1096:55884:20:20:61:512:346:12:g_d0_f8:12:g_d0_f8:B:when applying the method for different values of-.  Figure 2 shows the initial ARWU
+26:1097:55967:20:20:61:512:326:12:g_d0_f8:12:g_d0_f8:B:scores for the top-100 universities, as well as their rankings underK0and the Kemeny-
+26:1098:56052:20:21:61:512:306:12:g_d0_f8:12:g_d0_f8:B:optimal  rankingsK-for-∈ {1/6,1/3,1/2}.   Figure  3  depictsK0(a)−K-(a)  for  all
+26:1099:56133:21:20:61:512:285:12:g_d0_f16:12:g_d0_f8:B:a∈ A100and-∈ {1/6,1/3,1/2}.  We see that these differences grow as we increase-,
+26:1100:56213:20:20:61:512:265:12:g_d0_f8:12:g_d0_f8:B:and are much more pronounced for universities in the 51-100 range.  There are moreover
+26:1101:56299:20:21:61:512:245:12:g_d0_f8:12:g_d0_f8:B:a  handful  of  really  substantial  swings  in  rankings.   For  instance,  the  Ecole  Normale
+26:1102:56395:21:20:61:512:224:12:g_d0_f8:12:g_d0_f8:B:Superieure-Paris was ranked 71st in the official 2013 ARWU ranking, whereas its Kemeny-
+26:1103:56482:20:20:61:512:204:12:g_d0_f8:12:g_d0_f8:B:optimal ranks for-= 1/6,1/3,1/2 are are 62, 54, and 49, respectively.  This discrepancy
+26:1104:56569:20:21:61:400:184:12:g_d0_f8:12:g_d0_f8:B:seems to be due to its extremely good performance in Indicator 6.
+26:1105:56634:21:20:81:512:163:12:g_d0_f8:12:g_d0_f8:A:On a final note,  to test the efficacy of the VZW approximation algorithm,  I reran
+26:1106:56717:20:20:61:512:143:12:g_d0_f8:12:g_d0_f8:B:Algorithm  1  usingM=  3  and  compared  the  output  rankings  to  the  known  Kemeny-
+26:1107:56804:20:17:61:512:123:12:g_d0_f8:12:g_d0_f8:B:optimal ones.  The VZW rankings for-= 1/6 and 1/3 are completely unchanged.  When
+26:1108:56885:17:13:69:422:106:6:g_d0_f20:9:g_d0_f14:F:12For stability, where necessary I truncate the constantCin Eq. (33) to not exceed 10.
+26:1109:56971:13:20:69:512:93:6:g_d0_f20:9:g_d0_f14:F:13This   code   can   be   found   at   http://www.mathworks.it/matlabcentral/fileexchange/24134-gaimc-graph-
+26:1110:57080:20:0:61:295:73:9:g_d0_f14:9:g_d0_f14:F:algorithms-in-matlab-code/content/gaimc/scomponents.m
+27:1111:57135:0:20:61:512:758:12:g_d0_f16:12:g_d0_f8:B:-= 1/2, the only difference between the VZW andK1/2rankings is that the University of
+27:1112:57220:20:20:61:512:738:12:g_d0_f8:12:g_d0_f8:B:Western Australia (alternativea91) and Case Western University (alternativea99) switch
+27:1113:57306:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:their  Kemeny-optimal  ranks  of  91  and  92  respectively.   Thus  the  VZW  ranking  is  not
+27:1114:57401:21:0:61:189:697:12:g_d0_f8:12:g_d0_f16:B:Kemeny-optimal, sinceV
+27:1115:57423:0:13:192:204:708:6:g_d0_f20:8:g_d0_f18:F:12,1
+27:1116:57427:13:18:189:512:695:8:g_d0_f18:12:g_d0_f8:A:91,99=.5087 and flipping the two ranks results in an improved
+27:1117:57488:18:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:objective function value.  (Note, however, that this error could have been corrected by
+27:1118:57575:20:45:61:368:657:12:g_d0_f8:12:g_d0_f8:B:using the local Kemenization heuristic of Dwork et al. [15]).
+27:1119:57636:45:32:61:303:612:14:g_d0_f15:14:g_d0_f15:C:7    Directions for Future Research
+27:1120:57671:32:21:61:512:580:12:g_d0_f8:12:g_d0_f8:B:Judgments based on composite indices of welfare depend, sometimes critically, on how
+27:1121:57755:21:20:61:512:559:12:g_d0_f8:12:g_d0_f8:B:different dimensions of performance are weighted.  As there is frequently no single “right”
+27:1122:57846:20:20:61:512:539:12:g_d0_f8:12:g_d0_f8:B:way  to  assign  such  weights,  it  is  important  to  take  this  imprecision  into  account  in  a
+27:1123:57947:20:21:61:512:519:12:g_d0_f8:12:g_d0_f8:B:systematic and transparent manner.  In this paper I have drawn from the theory of social
+27:1124:58035:21:20:61:512:498:12:g_d0_f8:12:g_d0_f8:B:choice to present a procedure for determining a ranking of the relevant alternatives that
+27:1125:58124:20:20:61:512:478:12:g_d0_f8:12:g_d0_f8:B:is normatively compelling and statistically interpretable.  Special attention to issues of
+27:1126:58214:20:21:61:512:458:12:g_d0_f8:12:g_d0_f8:B:practicality and computational tractability has also been given.  The applicability of the
+27:1127:58304:21:20:61:512:437:12:g_d0_f8:12:g_d0_f8:B:proposed  framework  was  illustrated  through  a  numerical  example  based  on  Shanghai
+27:1128:58394:20:20:61:197:417:12:g_d0_f8:12:g_d0_f8:B:University’s ARWU index.
+27:1129:58418:20:21:81:512:397:12:g_d0_f8:12:g_d0_f8:A:This work suggests fruitful avenues for future research.  An immediate one involves
+27:1130:58501:21:20:61:512:376:12:g_d0_f8:12:g_d0_f8:B:investigating  whether  the  characterization  of  Theorem  1  can  be  extended  to  the  full
+27:1131:58596:20:20:61:512:356:12:g_d0_f8:12:g_d0_f8:B:profile  domainL.   In  particular,  this  would  entail  extending  the  results  of  Young  and
+27:1132:58693:20:20:61:512:336:12:g_d0_f8:12:g_d0_f8:B:Levenglick [43] to real-valued election matrices.  Alternatively, one could introduce ran-
+27:1133:58783:20:21:61:512:316:12:g_d0_f8:12:g_d0_f8:B:dom  noise  to  achievement  vectors  and  attempt  to  use  the  statistical  interpretation  of
+27:1134:58880:21:20:61:512:295:12:g_d0_f8:12:g_d0_f8:B:Kemeny’s rule as a maximum likelihood estimate [41] to derive significance tests along
+27:1135:58966:20:20:61:512:275:12:g_d0_f8:12:g_d0_f8:B:the lines of Duclos et al. [13].  Finally, one could also undertake more complex empirical
+27:1136:59056:20:21:61:512:255:12:g_d0_f8:12:g_d0_f8:B:applications of the model, like for instance those corresponding to discontinuous welfare
+27:1137:59145:21:20:61:378:234:12:g_d0_f8:12:g_d0_f8:B:functions that are often found in poverty indices (e.g. [13, 2]).
+27:1138:59210:20:20:81:512:214:12:g_d0_f8:12:g_d0_f8:A:Broader connections with decision-theoretic models of Knightian uncertainty could
+27:1139:59291:20:21:61:512:194:12:g_d0_f8:12:g_d0_f8:B:also be explored.  This is because, as mentioned in the introduction, the examination of
+27:1140:59379:21:20:61:512:173:12:g_d0_f8:12:g_d0_f8:B:welfare indices under weight imprecision is, mathematically if not conceptually, analogous
+27:1141:59469:20:20:61:511:153:12:g_d0_f8:8:g_d0_f18:B:to certain settings of decision-making under ambiguity (see Gilboa and Marinacci [18]).14
+27:1142:59558:20:21:61:512:133:12:g_d0_f8:12:g_d0_f8:B:Perhaps the work presented here, with its connections to classical voting theory, could
+27:1143:59645:21:16:61:343:112:12:g_d0_f8:12:g_d0_f8:B:be of relevance to this vibrant field of economic theory.
+27:1144:59702:16:20:69:512:96:6:g_d0_f20:9:g_d0_f14:F:14The conceptual difference is that in the former we have uncertain weight vectors over dimensions of well-being,
+27:1145:59815:20:0:61:328:76:9:g_d0_f14:9:g_d0_f14:F:while in the latter uncertain Bayesian priors over states of nature.
+28:1146:59885:0:32:61:130:758:14:g_d0_f15:14:g_d0_f15:C:Appendix
+28:1147:59893:32:28:61:126:726:12:g_d0_f15:12:g_d0_f15:C:A1:  Proofs
+28:1148:59904:28:33:61:374:698:12:g_d0_f15:12:g_d0_f8:B:Proposition 1.Consider case (a) first.  Sincegis invertible,
+28:1149:59964:33:0:115:210:665:12:g_d0_f16:12:g_d0_f8:A:WXA,uaiaj∩WXA,uajai=
+28:1150:59984:0:20:214:224:685:12:g_d0_f25:12:g_d0_f25:C:{
+28:1151:59985:20:0:224:280:665:12:g_d0_f19:12:g_d0_f8:A:w∈∆I−1:
+28:1152:59992:0:29:297:307:680:8:g_d0_f22:12:g_d0_f25:C:I∑
+28:1153:59994:29:0:292:306:651:8:g_d0_f22:8:g_d0_f18:F:i=1
+28:1154:59997:0:0:310:371:665:12:g_d0_f16:12:g_d0_f8:A:wiui(xaii) =
+28:1155:60009:0:29:380:391:680:8:g_d0_f22:12:g_d0_f25:C:I∑
+28:1156:60011:29:0:376:390:651:8:g_d0_f22:8:g_d0_f18:F:i=1
+28:1157:60014:0:0:393:443:665:12:g_d0_f16:12:g_d0_f8:A:wiui(xaji)
+28:1158:60024:0:20:443:453:685:12:g_d0_f25:12:g_d0_f25:C:}
+28:1159:60025:20:31:454:457:665:12:g_d0_f16:12:g_d0_f16:C:.
+28:1160:60026:31:21:81:512:634:12:g_d0_f8:12:g_d0_f8:A:As the functionsuiare strictly monotone, unlessxai=xajthe above set will be a
+28:1161:60103:21:20:61:512:613:12:g_d0_f8:12:g_d0_f8:B:polytope of dimensionI−2.  Thus,WXA,uaiaj∩WXA,uajaiwill have zero Lebesgue measure in
+28:1162:60188:20:20:61:189:593:12:g_d0_f8:12:g_d0_f8:B:∆I−1.  The result follows.
+28:1163:60214:20:21:81:503:573:12:g_d0_f8:6:g_d0_f24:A:Case (b) is exactly similar, with the only difference that the intersection ofWXA,uaiaj
+28:1164:60301:21:35:61:177:552:12:g_d0_f8:12:g_d0_f8:B:andWXA,uajaireduces to:
+28:1165:60324:35:0:86:181:517:12:g_d0_f16:12:g_d0_f8:A:WXA,uaiaj∩WXA,uajai=
+28:1166:60344:0:21:185:195:538:12:g_d0_f25:12:g_d0_f25:C:{
+28:1167:60345:21:0:194:251:517:12:g_d0_f19:12:g_d0_f8:A:w∈∆I−1:
+28:1168:60352:0:28:268:278:532:8:g_d0_f22:12:g_d0_f25:C:I∑
+28:1169:60354:28:0:263:277:504:8:g_d0_f22:8:g_d0_f18:F:i=1
+28:1170:60357:0:0:280:370:517:12:g_d0_f16:12:g_d0_f8:A:wilog (ui(xaii)) =
+28:1171:60375:0:28:379:390:532:8:g_d0_f22:12:g_d0_f25:C:I∑
+28:1172:60377:28:0:375:389:504:8:g_d0_f22:8:g_d0_f18:F:i=1
+28:1173:60380:0:0:392:421:517:12:g_d0_f16:12:g_d0_f8:A:wilog
+28:1174:60385:0:10:423:428:527:12:g_d0_f25:12:g_d0_f25:C:(
+28:1175:60386:10:0:429:467:517:12:g_d0_f16:12:g_d0_f8:A:ui(xaji)
+28:1176:60394:0:0:466:471:527:12:g_d0_f25:12:g_d0_f25:C:)
+28:1177:60395:0:21:472:482:538:12:g_d0_f25:12:g_d0_f25:C:}
+28:1178:60396:21:50:483:486:517:12:g_d0_f16:12:g_d0_f16:C:.
+28:1179:60397:50:20:61:481:467:12:g_d0_f15:12:g_d0_f8:B:Theorem 1.(i) By Eqs. (4) and (7), it is clear thatKsatisfies all six properties.
+28:1180:60478:20:29:61:414:447:12:g_d0_f8:12:g_d0_f8:B:(ii) First, we prove the following lemma that will be needed later on.
+28:1181:60548:29:0:61:334:418:12:g_d0_f15:8:g_d0_f9:C:Lemma 1For  all  subsetsL′of ̃L,  define  the  setYL
+28:1182:60600:0:7:333:335:425:6:g_d0_f13:6:g_d0_f13:F:′
+28:1183:60601:7:20:341:512:418:12:g_d0_f8:12:g_d0_f17:A:={YL:L∈ L′}.Recall  restric-
+28:1184:60629:20:0:61:353:398:12:g_d0_f17:8:g_d0_f9:C:tion (8) and let ̃LQ={L∈ ̃L:YL∈YQ}.  We haveY ̃L
+28:1185:60677:0:7:353:359:405:6:g_d0_f24:6:g_d0_f24:F:Q
+28:1186:60678:7:0:363:422:398:12:g_d0_f8:8:g_d0_f9:A:=YQ=YL
+28:1187:60684:0:7:422:428:405:6:g_d0_f24:6:g_d0_f24:F:Q
+28:1188:60685:7:28:429:432:398:12:g_d0_f16:12:g_d0_f16:C:.
+28:1189:60686:28:28:61:378:370:12:g_d0_f15:12:g_d0_f8:B:Proof.First of all, it is clear by the definition of Eq. (3) that
+28:1190:60751:28:0:258:266:342:12:g_d0_f7:12:g_d0_f7:C:Y
+28:1191:60752:0:7:269:279:349:8:g_d0_f18:6:g_d0_f24:F: ̃LQ
+28:1192:60756:7:27:283:315:342:12:g_d0_f7:12:g_d0_f16:C:⊂YQ.
+28:1193:60760:27:0:61:292:315:12:g_d0_f8:12:g_d0_f8:B:Now, consider the welfare functionu∗(x,w) =
+28:1194:60803:0:13:296:312:324:12:g_d0_f25:8:g_d0_f22:C:∑I
+28:1195:60805:13:17:308:512:311:8:g_d0_f22:12:g_d0_f8:A:i=1wixi. Moreover, consider the achieve-
+28:1196:60845:17:20:61:379:294:12:g_d0_f8:12:g_d0_f8:B:ment matrixX∗A=IAwhereIAis theA×Aidentity matrix.
+28:1197:60894:20:0:81:366:274:12:g_d0_f8:12:g_d0_f16:A:For eachR∈ RA, define the setW∗R={w∈∆I−1:R
+28:1198:60936:0:8:366:392:281:8:g_d0_f23:6:g_d0_f13:F:X∗A,u∗
+28:1199:60942:8:19:366:512:273:8:g_d0_f23:12:g_d0_f8:A:w=R}.  Letting ˆaR(i)=
+28:1200:60964:19:20:61:512:254:12:g_d0_f7:12:g_d0_f16:C:{a∈ A:R(a) =i},  it is easy to see thatW∗R={w∈∆I−1:wˆaR(1)> wˆaR(2)> ... >
+28:1201:61038:20:21:61:100:234:12:g_d0_f16:12:g_d0_f8:B:wˆaR(A)}.
+28:1202:61047:21:20:61:512:213:12:g_d0_f8:12:g_d0_f8:B:The setsW∗Rare symmetric in ∆I−1and mutually exclusive.  Moreover,u∗satisfies the
+28:1203:61128:20:11:61:295:193:12:g_d0_f8:12:g_d0_f8:B:assumption of Proposition 1.  Indeed, we have
+28:1204:61173:11:27:146:153:182:12:g_d0_f25:12:g_d0_f25:C:∫
+28:1205:61174:27:0:152:166:155:8:g_d0_f22:6:g_d0_f24:F:W∗R
+28:1206:61177:0:0:169:198:165:12:g_d0_f8:12:g_d0_f8:A:dw=
+28:1207:61180:0:27:201:208:182:12:g_d0_f25:12:g_d0_f25:C:∫
+28:1208:61181:27:0:208:229:155:8:g_d0_f18:6:g_d0_f20:F:∆I−1
+28:1209:61185:0:0:231:237:165:12:g_d0_f8:12:g_d0_f8:A:1
+28:1210:61186:0:14:239:247:179:12:g_d0_f25:12:g_d0_f25:C:{
+28:1211:61187:14:0:247:256:165:12:g_d0_f16:12:g_d0_f16:C:R
+28:1212:61188:0:8:256:282:172:8:g_d0_f23:6:g_d0_f13:F:X∗A,u∗
+28:1213:61194:8:0:256:307:164:8:g_d0_f23:12:g_d0_f16:C:w=R
+28:1214:61197:0:14:307:315:179:12:g_d0_f25:12:g_d0_f25:C:}
+28:1215:61198:14:0:317:346:165:12:g_d0_f8:12:g_d0_f8:A:dw=
+28:1216:61201:0:17:354:360:174:12:g_d0_f8:12:g_d0_f8:A:1
+28:1217:61202:17:0:351:363:157:12:g_d0_f16:12:g_d0_f8:A:A!
+28:1218:61204:0:30:364:512:165:12:g_d0_f16:12:g_d0_f8:A:,∀R∈RA.(24)
+28:1219:61215:30:20:61:512:135:12:g_d0_f8:12:g_d0_f8:B:Now,  writingRA={R1,R2,...,RA!},  consider  the  family  of  importance  functionsF∗,
+28:1220:61300:20:34:61:410:115:12:g_d0_f8:12:g_d0_f8:B:where (QI+is the set of non-negative rationalI-dimensional vectors)
+28:1221:61367:34:0:62:89:81:12:g_d0_f7:12:g_d0_f8:B:F∗=
+28:1222:61370:0:20:92:102:101:12:g_d0_f25:12:g_d0_f25:C:{
+28:1223:61371:20:0:102:441:81:12:g_d0_f16:12:g_d0_f16:C:f: ∆I−17→<+:f(w) =zi,∀w∈W∗Ri,∀i= 1,2,...,A!,z∈QI+,
+28:1224:61421:0:29:451:463:96:8:g_d0_f22:12:g_d0_f25:C:A!∑
+28:1225:61424:29:0:448:462:67:8:g_d0_f22:8:g_d0_f18:F:i=1
+28:1226:61427:0:0:466:496:81:12:g_d0_f16:12:g_d0_f8:A:zi>0
+28:1227:61431:0:20:496:506:101:12:g_d0_f25:12:g_d0_f25:C:}
+28:1228:61432:20:0:508:511:81:12:g_d0_f16:12:g_d0_f16:C:.
+29:1229:61435:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:Define the set of profilesL∗={L∈ L:XA=X∗A, f∈ F∗, u=u∗}.By Eq. (24) and
+29:1230:61506:20:31:61:399:738:12:g_d0_f8:12:g_d0_f8:B:the structure of the importance functions inF∗, we may conclude
+29:1231:61569:31:0:259:274:707:12:g_d0_f7:8:g_d0_f9:C:YL
+29:1232:61571:0:8:274:278:715:6:g_d0_f13:6:g_d0_f13:F:∗
+29:1233:61572:8:31:282:313:707:12:g_d0_f8:12:g_d0_f16:A:=YQ.
+29:1234:61576:31:0:61:268:676:12:g_d0_f8:8:g_d0_f9:B:Thus, sinceL∗⊂ ̃LQ, we haveYQ⊂ Y ̃L
+29:1235:61611:0:7:268:274:683:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1236:61612:7:0:279:375:676:12:g_d0_f8:8:g_d0_f9:A:implyingYQ=Y ̃L
+29:1237:61627:0:7:375:381:683:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1238:61628:7:0:382:467:676:12:g_d0_f16:8:g_d0_f9:C:.ThatYQ=YL
+29:1239:61638:0:7:467:473:683:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1240:61639:7:21:477:512:676:12:g_d0_f8:12:g_d0_f8:A:follows
+29:1241:61646:21:0:61:172:655:12:g_d0_f8:8:g_d0_f9:B:from the fact thatYL
+29:1242:61666:0:7:172:178:662:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1243:61667:7:0:182:277:655:12:g_d0_f7:12:g_d0_f7:C:⊂YQandYQ=Y
+29:1244:61677:0:7:280:290:662:8:g_d0_f18:6:g_d0_f24:F: ̃LQ
+29:1245:61681:7:0:294:322:655:12:g_d0_f7:8:g_d0_f9:C:⊂YL
+29:1246:61684:0:7:321:327:662:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1247:61685:7:20:328:331:655:12:g_d0_f8:12:g_d0_f8:A:.
+29:1248:61686:20:20:81:512:635:12:g_d0_f8:12:g_d0_f8:A:Let us now consider a ruleφsatisfying the stated properties and recall the constructed
+29:1249:61772:20:21:61:512:615:12:g_d0_f8:12:g_d0_f8:B:electorateE(f) with its associated partial input rankings and election matrices.  If there
+29:1250:61862:21:20:61:511:594:12:g_d0_f8:12:g_d0_f16:B:are  just  two  alternatives,  thenφmust  be  simple  majority  rule  and  hence  equal  toK
+29:1251:61954:20:20:61:512:574:12:g_d0_f8:12:g_d0_f8:B:(Young [40], footnote 18 in Young [41]).  Note that partial input rankings do not create
+29:1252:62042:20:21:61:512:554:12:g_d0_f8:12:g_d0_f8:B:any problems for this result to go through (see page 51 in Young [40]).  When there are
+29:1253:62129:21:20:61:512:533:12:g_d0_f8:12:g_d0_f8:B:more than two alternatives, LIIA together with the previous majority rule for all profiles
+29:1254:62219:20:20:61:512:513:12:g_d0_f8:12:g_d0_f8:B:of  two  alternatives  imply  that  the  rule  must  satisfy  the  Condorcet  property  of  Young
+29:1255:62316:20:21:61:512:493:12:g_d0_f8:12:g_d0_f8:B:and Levenglick [43] (see footnote 18 in Young [41]).  As a result, Lemma 1 in Young and
+29:1256:62403:21:20:61:512:472:12:g_d0_f8:12:g_d0_f8:B:Levenglick [43] implies that for everyL∈ L,φ(L) depends only on the election matrix
+29:1257:62486:20:20:61:512:452:12:g_d0_f16:12:g_d0_f8:B:YL.   Again,  partial  input  rankings  do  not  affect  the  proof  of  this  result.   Hence,  the
+29:1258:62586:20:0:61:368:432:12:g_d0_f8:8:g_d0_f9:B:characterization ofKmay be established on the domainYL
+29:1259:62640:0:7:367:373:439:6:g_d0_f24:6:g_d0_f24:F:Q
+29:1260:62641:7:21:378:512:432:12:g_d0_f8:12:g_d0_f8:A:(instead ofLQ), which, by
+29:1261:62666:21:20:61:512:411:12:g_d0_f8:12:g_d0_f8:B:Lemma  1  above,  is  equal  toYQ.   The  latter  is  the  same  domain  on  which  Young  and
+29:1262:62760:20:20:61:512:391:12:g_d0_f8:12:g_d0_f8:B:Levenglick [43] prove their characterization of Kemeny’s rule (see their Lemma 1 on page
+29:1263:62848:20:21:61:512:371:12:g_d0_f8:12:g_d0_f8:B:292 and the discussion immediately preceding and following it).  Hence,φ=Kfollows
+29:1264:62929:21:46:61:512:350:12:g_d0_f8:12:g_d0_f8:B:from Young and Levenglick [43] and the argument delineated in footnote 18 of Young [41].
+29:1265:63017:46:21:61:512:304:12:g_d0_f15:12:g_d0_f8:B:Theorem 2.Recall thatL= (XA,f,u).  Suppose graphGLhasMstrongly connected
+29:1266:63089:21:20:61:449:283:12:g_d0_f8:12:g_d0_f8:B:components denoted byG1= (A1,E1),G2= (Aj,E2),,...,GM= (AM,EM).
+29:1267:63151:20:20:81:512:263:12:g_d0_f8:12:g_d0_f8:A:For eachm= 1,2,...,Mdefinegm≡in(Am,A\Am)|Am|.  Now for all pairs (Gi,Gj) either all
+29:1268:63234:20:21:61:512:243:12:g_d0_f8:12:g_d0_f8:B:vertices inGiare pointing to all vertices inGj, or vice versa.  For, if this were not true, it
+29:1269:63328:21:20:61:512:222:12:g_d0_f8:12:g_d0_f8:B:would be possible to form a cycle that included vertices in bothGiandGjcontradicting
+29:1270:63412:20:20:61:512:202:12:g_d0_f8:12:g_d0_f8:B:the fact that they are separate strongly connected components.  If all vertices inGiare
+29:1271:63499:20:21:61:512:182:12:g_d0_f8:12:g_d0_f8:B:pointing  to  all  vertices  inGj,  then  they  are  also  pointing  to  all  of  the  verticesGjis
+29:1272:63598:21:20:61:512:161:12:g_d0_f8:12:g_d0_f8:B:pointing to (if not there would exist a cycle), implyinggi< gj.  Conversely, if all vertices
+29:1273:63690:20:20:61:511:141:12:g_d0_f8:8:g_d0_f22:B:inGjare pointing to all vertices inGithengi> gj.  Thus, we may deduce thatgi< gj
+29:1274:63770:20:21:61:388:121:12:g_d0_f8:12:g_d0_f8:B:if and only if all vertices inGiare pointing to all vertices inGj.
+29:1275:63836:21:20:81:512:100:12:g_d0_f8:12:g_d0_f8:A:The above implies that it is possible to order thegi’s in strictly ascending order and
+29:1276:63922:20:0:61:512:80:12:g_d0_f8:12:g_d0_f8:B:we may assume, without loss of generality, thatg1< g2< .... < gM.  With this ordering
+30:1277:64009:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:in mind, define the setsA−m=A1∪A2∪...∪AmandA+m=Am∪Am+1∪...∪AM, for
+30:1278:64075:20:20:61:156:738:12:g_d0_f8:12:g_d0_f8:B:allm= 1,2,...,M.
+30:1279:64091:20:21:81:512:718:12:g_d0_f8:12:g_d0_f8:A:We  proceed  by  proving  thatKLmust  be  such  that,  for  allm=  1,2,...M−1,  all
+30:1280:64174:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:alternatives  inA−mare  ranked  before  all  alternatives  inA+m+1.   To  wit,  consider  the
+30:1281:64267:20:20:61:512:677:12:g_d0_f8:12:g_d0_f8:B:alternatives inA−m.  Sincegi< gjfor all (i,j) such thati≤mandj > m, we know that
+30:1282:64347:20:21:61:512:657:12:g_d0_f8:12:g_d0_f8:B:all alternatives inA−mare pointing to all alternatives inA+m+1.  HenceYLij>0 for all pairs
+30:1283:64437:21:20:61:512:636:12:g_d0_f8:12:g_d0_f8:B:(ai,aj)∈ A−m×A+m+1.   Thus,  sinceKsatisfies  the  extended-Condorcet  property,  any
+30:1284:64522:20:20:61:512:616:12:g_d0_f8:12:g_d0_f8:B:Kemeny-optimal ranking will have to rank all alternatives inA−mbefore all alternatives
+30:1285:64608:20:18:61:106:596:12:g_d0_f8:12:g_d0_f8:B:inA+m+1.
+30:1286:64616:18:18:81:512:578:12:g_d0_f8:12:g_d0_f8:A:Now, note that by the definition ofGLwe have|A−m|=in(Am+1,A\Am+1)|Am+1|.  Thus, we
+30:1287:64698:18:26:61:287:560:12:g_d0_f8:12:g_d0_f8:B:obtain the following relation for allR∈KL:
+30:1288:64740:26:0:111:141:534:10:g_d0_f12:10:g_d0_f7:F:R(a)∈
+30:1289:64745:0:8:144:151:548:10:g_d0_f25:10:g_d0_f25:F:{
+30:1290:64746:8:13:152:218:540:10:g_d0_f12:10:g_d0_f11:F:in(Am,A\Am)
+30:1291:64757:13:0:175:196:527:10:g_d0_f7:10:g_d0_f7:F:|Am|
+30:1292:64761:0:7:221:313:534:10:g_d0_f11:10:g_d0_f11:F:+ 1,in(Am,A\Am)
+30:1293:64776:7:0:270:291:527:10:g_d0_f7:10:g_d0_f7:F:|Am|
+30:1294:64780:0:0:317:348:534:10:g_d0_f11:10:g_d0_f7:F:+|Am|
+30:1295:64785:0:14:348:355:548:10:g_d0_f25:10:g_d0_f25:F:}
+30:1296:64786:14:29:357:512:534:10:g_d0_f12:10:g_d0_f11:F:,∀a∈Am, m= 1,2,...,M.(25)
+30:1297:64811:29:21:64:512:505:12:g_d0_f8:12:g_d0_f8:B:To determine the precise rank of the alternatives in eachAmwithin the ranges given by
+30:1298:64896:21:25:61:452:484:12:g_d0_f8:12:g_d0_f8:B:Eq.(25), it is sufficient, by LIIA, to solve forKLAm, and update accordingly.
+30:1299:64973:25:21:61:512:459:12:g_d0_f15:12:g_d0_f8:B:Theorem  3.Let  us  first  concentrate  on  the  denominator  of  (18).   We  perform  the
+30:1300:65063:21:20:61:512:438:12:g_d0_f8:12:g_d0_f8:B:following two operations on the elements ofW-:  (a) we translate them by−(1−-) ̄w,
+30:1301:65145:20:20:61:512:418:12:g_d0_f8:12:g_d0_f8:B:and then (b) multiply them by 1/-.  The resulting polytope is ∆I−1, the standard (I−1)-
+30:1302:65232:20:0:61:475:398:12:g_d0_f8:12:g_d0_f8:B:simplex.  The volume of the standard simplex ∆I−1(which has a side length of
+30:1303:65308:0:10:479:489:408:12:g_d0_f7:12:g_d0_f7:C:√
+30:1304:65309:10:21:489:512:398:12:g_d0_f8:12:g_d0_f8:A:2) is
+30:1305:65314:21:24:61:104:377:12:g_d0_f8:12:g_d0_f8:B:given by
+30:1306:65322:24:0:185:204:353:12:g_d0_f16:12:g_d0_f16:C:V ol
+30:1307:65326:0:10:206:211:363:12:g_d0_f25:12:g_d0_f25:C:(
+30:1308:65327:10:0:211:236:353:12:g_d0_f8:8:g_d0_f18:A:∆I−1
+30:1309:65331:0:10:237:242:363:12:g_d0_f25:12:g_d0_f25:C:)
+30:1310:65332:10:0:245:254:353:12:g_d0_f8:12:g_d0_f8:A:=
+30:1311:65333:0:10:270:280:371:12:g_d0_f7:12:g_d0_f7:C:√
+30:1312:65334:10:0:280:286:361:12:g_d0_f8:12:g_d0_f8:A:2
+30:1313:65335:0:8:286:312:369:8:g_d0_f22:12:g_d0_f7:C:I−1√
+30:1314:65339:8:18:312:317:361:12:g_d0_f16:12:g_d0_f16:C:I
+30:1315:65340:18:0:259:298:343:12:g_d0_f8:12:g_d0_f8:A:(I−1)!
+30:1316:65346:0:10:298:308:353:12:g_d0_f7:12:g_d0_f7:C:√
+30:1317:65347:10:0:308:329:343:12:g_d0_f8:8:g_d0_f18:A:2I−1
+30:1318:65351:0:0:334:343:353:12:g_d0_f8:12:g_d0_f8:A:=
+30:1319:65352:0:10:359:369:371:12:g_d0_f7:12:g_d0_f7:C:√
+30:1320:65353:10:16:369:374:361:12:g_d0_f16:12:g_d0_f16:C:I
+30:1321:65354:16:0:348:387:345:12:g_d0_f8:12:g_d0_f8:A:(I−1)!
+30:1322:65360:0:29:491:512:353:12:g_d0_f8:12:g_d0_f8:A:(26)
+30:1323:65364:29:32:61:306:324:12:g_d0_f8:12:g_d0_f8:B:Basic linear algebra (see Lang [23]) implies that
+30:1324:65413:32:0:167:224:292:12:g_d0_f16:12:g_d0_f8:A:V ol(W-) =
+30:1325:65423:0:11:227:237:303:12:g_d0_f7:12:g_d0_f7:C:√
+30:1326:65424:11:0:237:287:292:12:g_d0_f16:12:g_d0_f16:C:-2(I−1)V ol
+30:1327:65435:0:10:289:294:302:12:g_d0_f25:12:g_d0_f25:C:(
+30:1328:65436:10:0:294:319:292:12:g_d0_f8:8:g_d0_f18:A:∆I−1
+30:1329:65440:0:10:320:325:302:12:g_d0_f25:12:g_d0_f25:C:)
+30:1330:65441:10:0:329:361:292:12:g_d0_f8:8:g_d0_f18:A:=-I−1
+30:1331:65446:0:10:374:384:310:12:g_d0_f7:12:g_d0_f7:C:√
+30:1332:65447:10:16:384:389:300:12:g_d0_f16:12:g_d0_f16:C:I
+30:1333:65448:16:0:363:402:284:12:g_d0_f8:12:g_d0_f8:A:(I−1)!
+30:1334:65454:0:30:403:512:292:12:g_d0_f16:12:g_d0_f8:A:.(27)
+30:1335:65459:30:20:61:512:262:12:g_d0_f8:12:g_d0_f8:B:Now  let  us  focus  on  the  numerator.   Recall  the  difference  vectordγand  the  constant
+30:1336:65553:20:20:61:512:242:12:g_d0_f16:12:g_d0_f8:B:D-,γ=−1−--(dγ)′ ̄w, defined in Eq. (20).  Performing the same affine transformation as
+30:1337:65639:20:27:61:417:222:12:g_d0_f8:12:g_d0_f8:B:before, namelyw←w−(1−-) ̄w-, the polytopeW-,γaiajis transformed into
+30:1338:65707:27:7:186:201:195:12:g_d0_f25:8:g_d0_f22:C:̂W-,γa
+30:1339:65713:7:0:201:226:188:6:g_d0_f24:12:g_d0_f8:A:iaj=
+30:1340:65717:0:10:229:236:202:12:g_d0_f25:12:g_d0_f25:C:{
+30:1341:65718:10:0:239:374:192:12:g_d0_f25:8:g_d0_f22:C:̂w∈∆I−1:   (dγ)′̂w≥D-,γ
+30:1342:65741:0:10:375:382:202:12:g_d0_f25:12:g_d0_f25:C:}
+30:1343:65742:10:29:384:512:192:12:g_d0_f16:12:g_d0_f8:A:,(28)
+30:1344:65747:29:21:61:170:163:12:g_d0_f8:12:g_d0_f8:B:which in turn implies
+30:1345:65768:21:0:203:222:142:12:g_d0_f16:12:g_d0_f16:C:V ol
+30:1346:65772:0:14:224:231:156:12:g_d0_f25:12:g_d0_f25:C:(
+30:1347:65773:14:0:231:257:142:12:g_d0_f16:6:g_d0_f24:C:W-,γaiaj
+30:1348:65781:0:14:259:266:156:12:g_d0_f25:12:g_d0_f25:C:)
+30:1349:65782:14:0:269:321:142:12:g_d0_f8:12:g_d0_f16:A:=-I−1V ol
+30:1350:65791:0:11:323:330:156:12:g_d0_f25:12:g_d0_f25:C:(
+30:1351:65792:11:7:330:345:145:12:g_d0_f25:8:g_d0_f22:C:̂W-,γa
+30:1352:65798:7:0:345:356:138:6:g_d0_f24:6:g_d0_f24:F:iaj
+30:1353:65801:0:14:357:364:156:12:g_d0_f25:12:g_d0_f25:C:)
+30:1354:65802:14:25:366:512:142:12:g_d0_f16:12:g_d0_f8:A:.(29)
+30:1355:65807:25:40:61:301:117:12:g_d0_f8:12:g_d0_f8:B:Putting Eqs. (27) and (29) together, we obtain
+30:1356:65853:40:0:173:206:77:12:g_d0_f16:12:g_d0_f8:A:V-,γij=
+30:1357:65860:0:0:211:230:90:12:g_d0_f16:12:g_d0_f16:C:V ol
+30:1358:65864:0:13:231:238:103:12:g_d0_f25:12:g_d0_f25:C:(
+30:1359:65865:13:0:239:265:90:12:g_d0_f16:6:g_d0_f24:C:W-,γaiaj
+30:1360:65873:0:34:266:273:103:12:g_d0_f25:12:g_d0_f25:C:)
+30:1361:65874:34:0:219:266:69:12:g_d0_f16:12:g_d0_f8:A:V ol(W-)
+30:1362:65882:0:0:278:287:77:12:g_d0_f8:12:g_d0_f8:A:=
+30:1363:65883:0:7:291:331:85:12:g_d0_f8:12:g_d0_f8:A:(I−1)!
+30:1364:65889:7:11:303:313:78:12:g_d0_f7:12:g_d0_f7:C:√
+30:1365:65890:11:0:313:318:67:12:g_d0_f16:12:g_d0_f16:C:I
+30:1366:65891:0:0:332:351:77:12:g_d0_f16:12:g_d0_f16:C:V ol
+30:1367:65895:0:10:352:359:90:12:g_d0_f25:12:g_d0_f25:C:(
+30:1368:65896:10:7:360:375:80:12:g_d0_f25:8:g_d0_f22:C:̂W-,γa
+30:1369:65902:7:0:375:386:73:6:g_d0_f24:6:g_d0_f24:F:iaj
+30:1370:65905:0:13:387:394:90:12:g_d0_f25:12:g_d0_f25:C:)
+30:1371:65906:13:0:396:512:77:12:g_d0_f16:12:g_d0_f8:A:.(30)
+31:1372:65913:0:20:61:512:757:12:g_d0_f8:12:g_d0_f8:B:Eqs  (20)  and  (28)  imply  that  the  volume  of̂W-,γaiajis  increasing  in-if  (dγ)′ ̄w<0,
+31:1373:66006:20:20:61:512:737:12:g_d0_f8:12:g_d0_f8:B:decreasing  if  (dγ)′ ̄w=  0,  and  constant  if  (dγ)′ ̄w=  0.   The  result  now  follows  from
+31:1374:66103:20:26:61:106:717:12:g_d0_f8:12:g_d0_f8:B:Eq. (30).
+31:1375:66112:26:20:61:512:691:12:g_d0_f15:12:g_d0_f8:B:Theorem  4.Assume  without  loss  of  generality  thati∗=I.   Consider  the  polytope
+31:1376:66197:20:0:61:375:671:12:g_d0_f16:12:g_d0_f8:B:W-,γ,∗aiajof Eq. (21), obtained by using the equality constraint
+31:1377:66261:0:12:380:396:680:12:g_d0_f25:8:g_d0_f22:C:∑I
+31:1378:66263:12:17:392:512:668:8:g_d0_f22:12:g_d0_f8:A:i=1w1= 1 to eliminate
+31:1379:66284:17:32:61:217:651:12:g_d0_f8:12:g_d0_f8:B:variableIfrom polytopêW-,γ:
+31:1380:66312:32:0:87:130:619:12:g_d0_f16:12:g_d0_f8:A:W-,γ,∗aiaj=
+31:1381:66323:0:20:133:143:639:12:g_d0_f25:12:g_d0_f25:C:{
+31:1382:66324:20:0:143:254:619:12:g_d0_f19:12:g_d0_f16:C:w∗∈<I−1:w∗≥0,
+31:1383:66337:0:25:264:281:630:12:g_d0_f25:12:g_d0_f25:C:∑
+31:1384:66338:25:0:263:281:605:8:g_d0_f22:6:g_d0_f13:F:i∈I∗
+31:1385:66342:0:0:283:470:619:12:g_d0_f16:8:g_d0_f22:C:w∗i≤1,(d∗−dγi∗e)′w∗+dγi∗≥D-,γ
+31:1386:66371:0:20:471:481:639:12:g_d0_f25:12:g_d0_f25:C:}
+31:1387:66372:20:37:482:485:619:12:g_d0_f16:12:g_d0_f16:C:.
+31:1388:66373:37:20:61:512:582:12:g_d0_f8:12:g_d0_f7:B:The affine transformationhwhich maps polytopeW-,γ,∗aiajtôW-,γaiajis given byh:<I−1→
+31:1389:66457:20:76:61:511:562:12:g_d0_f7:12:g_d0_f8:B:<I, satisfyingh(w∗) =T·w∗+ [0,0,...,0,1]′, whereTis anI×(I−1) matrix equal to:
+31:1390:66535:76:0:114:135:486:12:g_d0_f16:12:g_d0_f8:A:T=
+31:1391:66537:0:21:138:146:539:12:g_d0_f25:12:g_d0_f25:C:
+31:1392:66538:21:7:138:146:518:12:g_d0_f25:12:g_d0_f25:C:
+31:1393:66539:7:7:138:146:511:12:g_d0_f25:12:g_d0_f25:C:
+31:1394:66540:7:7:138:146:504:12:g_d0_f25:12:g_d0_f25:C:
+31:1395:66541:7:8:138:146:497:12:g_d0_f25:12:g_d0_f25:C:
+31:1396:66542:8:7:138:146:489:12:g_d0_f25:12:g_d0_f25:C:
+31:1397:66543:7:7:138:146:482:12:g_d0_f25:12:g_d0_f25:C:
+31:1398:66544:7:7:138:146:475:12:g_d0_f25:12:g_d0_f25:C:
+31:1399:66545:7:8:138:146:468:12:g_d0_f25:12:g_d0_f25:C:
+31:1400:66546:8:0:138:146:460:12:g_d0_f25:12:g_d0_f25:C:
+31:1401:66547:0:20:156:264:526:12:g_d0_f8:12:g_d0_f8:A:100···0
+31:1402:66554:20:13:156:264:506:12:g_d0_f8:12:g_d0_f8:A:010···0
+31:1403:66561:13:8:157:160:493:12:g_d0_f8:12:g_d0_f8:A:..
+31:1404:66563:8:0:157:160:485:12:g_d0_f8:12:g_d0_f8:A:.
+31:1405:66564:0:27:203:215:492:12:g_d0_f8:12:g_d0_f8:A:...
+31:1406:66567:27:21:156:264:465:12:g_d0_f8:12:g_d0_f8:A:00···1
+31:1407:66573:21:0:151:268:444:12:g_d0_f7:12:g_d0_f8:A:−1−1−1··· −1
+31:1408:66585:0:21:273:281:539:12:g_d0_f25:12:g_d0_f25:C:
+31:1409:66586:21:7:273:281:518:12:g_d0_f25:12:g_d0_f25:C:
+31:1410:66587:7:7:273:281:511:12:g_d0_f25:12:g_d0_f25:C:
+31:1411:66588:7:7:273:281:504:12:g_d0_f25:12:g_d0_f25:C:
+31:1412:66589:7:8:273:281:497:12:g_d0_f25:12:g_d0_f25:C:
+31:1413:66590:8:7:273:281:489:12:g_d0_f25:12:g_d0_f25:C:
+31:1414:66591:7:7:273:281:482:12:g_d0_f25:12:g_d0_f25:C:
+31:1415:66592:7:7:273:281:475:12:g_d0_f25:12:g_d0_f25:C:
+31:1416:66593:7:8:273:281:468:12:g_d0_f25:12:g_d0_f25:C:
+31:1417:66594:8:0:273:281:460:12:g_d0_f25:12:g_d0_f25:C:
+31:1418:66595:0:0:284:340:486:12:g_d0_f7:12:g_d0_f8:A:⇒T′·T=
+31:1419:66601:0:21:344:352:539:12:g_d0_f25:12:g_d0_f25:C:
+31:1420:66602:21:7:344:352:518:12:g_d0_f25:12:g_d0_f25:C:
+31:1421:66603:7:7:344:352:511:12:g_d0_f25:12:g_d0_f25:C:
+31:1422:66604:7:7:344:352:504:12:g_d0_f25:12:g_d0_f25:C:
+31:1423:66605:7:8:344:352:497:12:g_d0_f25:12:g_d0_f25:C:
+31:1424:66606:8:7:344:352:489:12:g_d0_f25:12:g_d0_f25:C:
+31:1425:66607:7:7:344:352:482:12:g_d0_f25:12:g_d0_f25:C:
+31:1426:66608:7:7:344:352:475:12:g_d0_f25:12:g_d0_f25:C:
+31:1427:66609:7:8:344:352:468:12:g_d0_f25:12:g_d0_f25:C:
+31:1428:66610:8:0:344:352:460:12:g_d0_f25:12:g_d0_f25:C:
+31:1429:66611:0:20:357:446:526:12:g_d0_f8:12:g_d0_f8:A:2   11···1
+31:1430:66621:20:13:357:446:506:12:g_d0_f8:12:g_d0_f8:A:1   21···1
+31:1431:66631:13:8:358:361:493:12:g_d0_f8:12:g_d0_f8:A:..
+31:1432:66633:8:0:358:361:485:12:g_d0_f8:12:g_d0_f8:A:.
+31:1433:66634:0:27:390:402:492:12:g_d0_f8:12:g_d0_f8:A:...
+31:1434:66637:27:21:357:446:465:12:g_d0_f8:12:g_d0_f8:A:1   1···21
+31:1435:66647:21:0:357:446:444:12:g_d0_f8:12:g_d0_f8:A:1   11···2
+31:1436:66657:0:21:451:459:539:12:g_d0_f25:12:g_d0_f25:C:
+31:1437:66658:21:7:451:459:518:12:g_d0_f25:12:g_d0_f25:C:
+31:1438:66659:7:7:451:459:511:12:g_d0_f25:12:g_d0_f25:C:
+31:1439:66660:7:7:451:459:504:12:g_d0_f25:12:g_d0_f25:C:
+31:1440:66661:7:8:451:459:497:12:g_d0_f25:12:g_d0_f25:C:
+31:1441:66662:8:7:451:459:489:12:g_d0_f25:12:g_d0_f25:C:
+31:1442:66663:7:7:451:459:482:12:g_d0_f25:12:g_d0_f25:C:
+31:1443:66664:7:7:451:459:475:12:g_d0_f25:12:g_d0_f25:C:
+31:1444:66665:7:8:451:459:468:12:g_d0_f25:12:g_d0_f25:C:
+31:1445:66666:8:37:451:459:460:12:g_d0_f25:12:g_d0_f25:C:
+31:1446:66667:37:28:61:469:423:12:g_d0_f8:12:g_d0_f8:B:Thus we have det [T′·T] =I.  Once again, basic linear algebra [23] implies that
+31:1447:66746:28:0:122:141:395:12:g_d0_f16:12:g_d0_f16:C:V ol
+31:1448:66750:0:10:143:150:408:12:g_d0_f25:12:g_d0_f25:C:(
+31:1449:66751:10:7:150:165:398:12:g_d0_f25:8:g_d0_f22:C:̂W-,γa
+31:1450:66757:7:0:165:176:391:6:g_d0_f24:6:g_d0_f24:F:iaj
+31:1451:66760:0:13:178:185:408:12:g_d0_f25:12:g_d0_f25:C:)
+31:1452:66761:13:0:188:197:395:12:g_d0_f8:12:g_d0_f8:A:=
+31:1453:66762:0:11:200:212:406:12:g_d0_f25:12:g_d0_f25:C:√
+31:1454:66763:11:0:212:293:395:12:g_d0_f8:12:g_d0_f16:A:det [T′·T]·V ol
+31:1455:66778:0:13:295:302:408:12:g_d0_f25:12:g_d0_f25:C:(
+31:1456:66779:13:0:302:328:395:12:g_d0_f16:6:g_d0_f24:C:W-,γ,∗aiaj
+31:1457:66789:0:13:332:339:408:12:g_d0_f25:12:g_d0_f25:C:)
+31:1458:66790:13:0:343:352:395:12:g_d0_f8:12:g_d0_f8:A:=
+31:1459:66791:0:11:355:365:406:12:g_d0_f7:12:g_d0_f7:C:√
+31:1460:66792:11:0:365:399:395:12:g_d0_f16:12:g_d0_f16:C:I·V ol
+31:1461:66798:0:13:401:408:408:12:g_d0_f25:12:g_d0_f25:C:(
+31:1462:66799:13:0:408:434:395:12:g_d0_f16:6:g_d0_f24:C:W-,γ,∗aiaj
+31:1463:66809:0:13:438:445:408:12:g_d0_f25:12:g_d0_f25:C:)
+31:1464:66810:13:28:447:512:395:12:g_d0_f16:12:g_d0_f8:A:.(31)
+31:1465:66815:28:28:61:211:367:12:g_d0_f8:12:g_d0_f8:B:Eqs. (30)-(31) together imply
+31:1466:66844:28:0:210:311:339:12:g_d0_f16:12:g_d0_f16:C:V-,γaiaj= (I−1)!V ol
+31:1467:66864:0:13:312:319:352:12:g_d0_f25:12:g_d0_f25:C:(
+31:1468:66865:13:0:320:346:339:12:g_d0_f16:6:g_d0_f24:C:W-,γ,∗aiaj
+31:1469:66875:0:13:350:357:352:12:g_d0_f25:12:g_d0_f25:C:)
+31:1470:66876:13:54:359:362:339:12:g_d0_f16:12:g_d0_f16:C:.
+31:1471:66877:54:20:61:512:285:12:g_d0_f15:12:g_d0_f8:B:Proposition 2.We first identify the vertices of polytopeW-,γ∗aiaj.  In doing so, we divide
+31:1472:66967:20:28:61:404:265:12:g_d0_f8:12:g_d0_f8:B:the set of indicatorsI∗={1,2,...,I−1}intoI∗1andI∗2, such that
+31:1473:67028:28:28:136:436:237:12:g_d0_f7:12:g_d0_f16:C:I∗1={i∈I∗:dγ∗i> D-,γ},I∗2={i∈I∗:dγ∗i< D-,γ}.
+31:1474:67072:28:21:61:512:209:12:g_d0_f8:12:g_d0_f7:B:Assumption 1 ensures that{I∗1,I∗2}is a partition ofI∗, and we letI∗1=|I∗1|andI∗2=|I∗2|
+31:1475:67158:21:28:61:395:188:12:g_d0_f8:12:g_d0_f8:B:.  It will be useful to express polytopeW-,γ∗aiajin the following way:
+31:1476:67228:28:28:196:512:160:12:g_d0_f16:12:g_d0_f8:A:W-,γ,∗aiaj={w∗∈<I−1:y′kw∗≤b},(32)
+31:1477:67261:28:20:61:511:132:12:g_d0_f8:8:g_d0_f18:B:where the (I−1)-dimensional vectorsyk,k= 1,2,...,I+ 1, andbsatisfy (a)yk=−ek15
+31:1478:67339:20:21:61:512:112:12:g_d0_f8:12:g_d0_f8:B:andbk=  0  fork=  1,...,I−1,  (b)yI=  [1,1,1,...,1]′andbI=  1,  and  (c)yI+1=
+31:1479:67416:21:16:61:248:91:12:g_d0_f7:12:g_d0_f8:B:−dγ∗+dγi∗eandbI+1=−D-,γ+dγi∗.
+31:1480:67445:16:0:69:343:75:6:g_d0_f20:9:g_d0_f14:F:15Hereekdenotes the corresponding standard basis vector in<I−1.
+32:1481:67510:0:20:81:512:758:12:g_d0_f8:12:g_d0_f8:A:With representation (32) in mind, a vectorvis a vertex ofW-,γ∗aiajif it satisfiesI−1
+32:1482:67594:20:20:61:511:738:12:g_d0_f8:8:g_d0_f23:B:linearly independent inequality constraints with equality [6].  The structure of vectorsyk
+32:1483:67684:20:21:61:512:718:12:g_d0_f8:12:g_d0_f8:B:fork=  1,2,...,I+ 1  andbimply  that  a  vertex  ofW-,γ∗aiajcan  have  at  most  2  nonzero
+32:1484:67775:21:20:61:512:697:12:g_d0_f8:12:g_d0_f8:B:entries.  Furthermore, Assumption 1 ensures primal nondegeneracy so that every vertex
+32:1485:67860:20:20:61:512:677:12:g_d0_f19:12:g_d0_f8:B:vwill correspond to a unique basis matrixBv, i.e., a unique set of linearly independent
+32:1486:67947:20:21:61:235:657:12:g_d0_f8:12:g_d0_f8:B:constraints satisfied with equality.
+32:1487:67983:21:29:81:498:636:12:g_d0_f8:12:g_d0_f8:A:We may distinguish between four kinds of vertices and their corresponding bases:
+32:1488:68063:29:29:59:278:607:12:g_d0_f8:12:g_d0_f7:B:(V1)v0=0.B0={y′k:k= 1,2,..,I−1}
+32:1489:68094:29:20:59:512:578:12:g_d0_f8:12:g_d0_f8:B:(V2)vi=eifor alli∈ I∗1.  HereBi={y′k:k= 1,...,i−1,i+ 1,..,I−1,I},  for all
+32:1490:68168:20:30:88:122:558:12:g_d0_f16:12:g_d0_f8:A:i∈I∗1.
+32:1491:68174:30:0:59:203:528:12:g_d0_f8:12:g_d0_f8:B:(V3)vj=πjej, whereπj=
+32:1492:68195:0:11:208:242:535:8:g_d0_f22:6:g_d0_f24:F:dγi∗−D-,γ
+32:1493:68204:11:0:209:313:524:8:g_d0_f22:12:g_d0_f7:C:dγi∗−dγ∗j, for allj∈I
+32:1494:68225:0:8:314:318:533:8:g_d0_f9:8:g_d0_f9:F:∗
+32:1495:68226:8:0:313:398:525:8:g_d0_f18:12:g_d0_f19:C:2.  HereBj={y
+32:1496:68239:0:8:399:401:533:8:g_d0_f9:8:g_d0_f9:F:′
+32:1497:68240:8:17:398:512:525:8:g_d0_f23:12:g_d0_f8:A:k:k= 1,...,j−1,j+
+32:1498:68257:17:29:88:252:508:12:g_d0_f8:12:g_d0_f8:A:1,..,I−1,I+ 1}, for allj∈I∗2.
+32:1499:68286:29:0:59:289:479:12:g_d0_f8:12:g_d0_f8:B:(V4)vij=πijei+ (1−πij)ej,  whereπij=
+32:1500:68322:0:12:295:327:486:8:g_d0_f22:6:g_d0_f24:F:D-,γ−dγ∗j
+32:1501:68331:12:0:297:406:474:8:g_d0_f23:12:g_d0_f7:C:dγ∗i−dγ∗j,  for  alli∈ I
+32:1502:68355:0:7:408:412:483:8:g_d0_f9:8:g_d0_f9:F:∗
+32:1503:68356:7:0:407:471:476:8:g_d0_f18:12:g_d0_f7:C:1andj∈ I
+32:1504:68364:0:7:472:476:483:8:g_d0_f9:8:g_d0_f9:F:∗
+32:1505:68365:7:18:471:512:476:8:g_d0_f18:12:g_d0_f8:A:2.   Here
+32:1506:68374:18:29:88:512:458:12:g_d0_f16:12:g_d0_f8:A:Bij={y′k:k= 1,...,i−1,i+ 1,..,j−1,j+ 1,...,I,I+ 1}, for alli∈I∗1andj∈I∗2.
+32:1507:68447:29:20:61:512:429:12:g_d0_f8:12:g_d0_f8:B:Two vertices are connected by an edge if they shareI−2 common linearly independent
+32:1508:68529:20:21:61:512:409:12:g_d0_f8:12:g_d0_f8:B:active  constraints  [6].   An  examination  of  the  preceding  expressions  for  the  vertices  of
+32:1509:68629:21:20:61:512:388:12:g_d0_f16:12:g_d0_f8:B:W-,γ,∗aiajand their bases, implies that we may identify the following eight kinds of undirected
+32:1510:68724:20:32:61:92:368:12:g_d0_f8:12:g_d0_f8:B:edges:
+32:1511:68730:32:29:60:200:336:12:g_d0_f8:12:g_d0_f8:B:(E1)  (v0,vi), for alli∈I∗1.
+32:1512:68758:29:30:60:203:307:12:g_d0_f8:12:g_d0_f8:B:(E2)  (v0,vj), for allj∈I∗2.
+32:1513:68786:30:29:60:300:277:12:g_d0_f8:12:g_d0_f8:B:(E3)  (vi,vk) for all pairs (i,k) wherei,k∈I∗1.
+32:1514:68833:29:29:60:303:248:12:g_d0_f8:12:g_d0_f8:B:(E4)  (vj,vk) for all pairs (j,k) wherej,k∈I∗2.
+32:1515:68880:29:30:60:349:219:12:g_d0_f8:12:g_d0_f8:B:(E5)  (vi,vij) for all pairs (i,j) wherei∈I∗1andj∈I∗2.
+32:1516:68934:30:29:60:350:189:12:g_d0_f8:12:g_d0_f8:B:(E6)  (vj,vij) for all pairs (i,j) wherei∈I∗1andj∈I∗2.
+32:1517:68988:29:29:60:388:160:12:g_d0_f8:12:g_d0_f8:B:(E7)  (vij,vik) for all triplets (i,j,k) wherei∈I∗1andj,k∈I∗2.
+32:1518:69050:29:32:60:390:131:12:g_d0_f8:12:g_d0_f8:B:(E8)  (vij,vkj) for all triplets (i,j,k) wherei,k∈I∗1andj∈I∗2.
+32:1519:69112:32:21:61:512:99:12:g_d0_f8:12:g_d0_f8:B:Recall that we wish to exhibit a vectorc∈<I−1such that the functionh(w∗) =c′w∗is
+32:1520:69192:21:0:61:512:78:12:g_d0_f8:12:g_d0_f8:B:non-constant on each edge ofW-,γ∗aiaj.  To this end, recall the vertices ofW-,γ∗aiajenumerated
+33:1521:69288:0:20:61:512:758:12:g_d0_f8:12:g_d0_f8:B:above as (V1)-(V4) and the values ofπjforj∈ I∗2andπijfor alli∈ I∗1andj∈ I∗2.
+33:1522:69364:20:29:61:239:738:12:g_d0_f8:12:g_d0_f8:B:Define the following two quantities
+33:1523:69399:29:8:88:148:709:12:g_d0_f16:12:g_d0_f8:A:δi=min
+33:1524:69405:8:0:112:162:701:8:g_d0_f22:6:g_d0_f20:F:i∈I∗1, j,k∈I∗2
+33:1525:69419:0:29:163:408:709:12:g_d0_f7:12:g_d0_f8:A:{|πij−πik|:πij6=πik}.  If undefined, setδi= 1.
+33:1526:69465:29:8:88:149:680:12:g_d0_f16:12:g_d0_f8:A:δj=min
+33:1527:69471:8:0:113:164:672:8:g_d0_f22:6:g_d0_f20:F:i,k∈I∗1, j∈I∗2
+33:1528:69485:0:32:164:412:680:12:g_d0_f7:12:g_d0_f8:A:{|πij−πkj|:πij6=πkj}.  If undefined, setδj= 1.
+33:1529:69531:32:20:61:321:648:12:g_d0_f8:12:g_d0_f8:B:Consequently letδ= min{δi,δj}and defineC=2δ.
+33:1530:69575:20:7:81:507:628:12:g_d0_f8:6:g_d0_f13:A:Finally, relabel the elements of setI∗2={j1,j2,...,jI∗2}so thatπj1≤πj2≤...≤πjI∗
+33:1531:69654:7:0:503:507:621:6:g_d0_f20:6:g_d0_f20:F:2
+33:1532:69655:0:20:509:512:628:12:g_d0_f8:12:g_d0_f8:A:.
+33:1533:69656:20:39:61:238:608:12:g_d0_f8:12:g_d0_f8:B:Now, define the vectorcsatisfying
+33:1534:69689:39:0:188:215:569:12:g_d0_f16:12:g_d0_f8:A:cl=
+33:1535:69692:0:11:225:236:594:12:g_d0_f25:12:g_d0_f25:C:
+33:1536:69693:11:22:225:236:583:12:g_d0_f25:12:g_d0_f25:C:
+33:1537:69694:22:0:225:236:561:12:g_d0_f25:12:g_d0_f25:C:
+33:1538:69695:0:7:241:277:579:12:g_d0_f16:6:g_d0_f13:C:C+k(I∗
+33:1539:69701:7:0:272:291:572:6:g_d0_f20:8:g_d0_f18:F:1+1)
+33:1540:69705:0:17:293:378:579:12:g_d0_f16:12:g_d0_f16:C:,ifl=ik∈I∗1,
+33:1541:69717:17:8:257:261:562:8:g_d0_f22:8:g_d0_f22:F:k
+33:1542:69718:8:0:242:370:554:8:g_d0_f22:12:g_d0_f7:C:I∗2(I∗1+1),ifl=jk∈I
+33:1543:69737:0:7:371:375:562:8:g_d0_f9:8:g_d0_f9:F:∗
+33:1544:69738:7:0:370:378:555:8:g_d0_f18:12:g_d0_f16:C:2.
+33:1545:69740:0:39:491:512:569:12:g_d0_f8:12:g_d0_f8:A:(33)
+33:1546:69744:39:21:61:512:530:12:g_d0_f8:12:g_d0_f8:B:With  this  choice  ofcwe  can  check  all  eight  kinds  of  edges  (E1)-(E8)  and  verify  that
+33:1547:69841:21:20:61:512:509:12:g_d0_f19:12:g_d0_f8:B:c′v6=c′ufor all pairs of adjacent vertices (v,u).  Thus the functionf(w∗) =c′w∗is
+33:1548:69922:20:20:61:512:489:12:g_d0_f8:12:g_d0_f8:B:non-constant on each edge ofW-,γ∗aiaj.  Hence, in conjunction with Assumption 1, we may
+33:1549:70009:20:35:61:299:469:12:g_d0_f8:12:g_d0_f8:B:apply Theorem 1 in Lawrence [24] to conclude
+33:1550:70053:35:0:141:160:434:12:g_d0_f16:12:g_d0_f16:C:V ol
+33:1551:70057:0:14:162:169:448:12:g_d0_f25:12:g_d0_f25:C:(
+33:1552:70058:14:0:169:195:434:12:g_d0_f16:6:g_d0_f24:C:W-,γ,∗aiaj
+33:1553:70068:0:14:199:206:448:12:g_d0_f25:12:g_d0_f25:C:)
+33:1554:70069:14:0:210:219:434:12:g_d0_f8:12:g_d0_f8:A:=
+33:1555:70070:0:26:231:248:446:12:g_d0_f25:12:g_d0_f25:C:∑
+33:1556:70071:26:7:222:258:420:8:g_d0_f18:8:g_d0_f23:F:verticesv
+33:1557:70080:7:0:223:255:413:8:g_d0_f18:6:g_d0_f24:F:ofW-,γ∗aiaj
+33:1558:70091:0:28:324:364:442:12:g_d0_f8:8:g_d0_f18:A:(c′v)I−1
+33:1559:70099:28:0:261:350:414:12:g_d0_f8:12:g_d0_f7:A:(I−1)!|det (Bv)|
+33:1560:70115:0:29:352:367:429:8:g_d0_f22:12:g_d0_f25:C:I−1∏
+33:1561:70119:29:0:353:367:400:8:g_d0_f22:8:g_d0_f18:F:i=1
+33:1562:70122:0:13:370:376:427:12:g_d0_f25:12:g_d0_f25:C:[
+33:1563:70123:13:0:375:418:414:12:g_d0_f8:12:g_d0_f19:A:(B′v)−1c
+33:1564:70131:0:21:418:424:427:12:g_d0_f25:12:g_d0_f25:C:]
+33:1565:70132:21:0:424:427:406:8:g_d0_f22:8:g_d0_f22:F:i
+33:1566:70133:0:365:429:512:434:12:g_d0_f16:12:g_d0_f8:A:.(34)
+34:1567:70140:365:20:61:512:69:11:g_d0_f11:11:g_d0_f11:F:Figure 2:  2013 ARWU Top-100:  Initial scores and rankingK0, and Kemeny-optimal rankings
+34:1568:70228:20:0:61:185:49:11:g_d0_f12:11:g_d0_f11:F:K-for-∈{1/6,1/3,1/2}.
+35:1569:70251:0:0:185:388:92:11:g_d0_f11:11:g_d0_f11:F:Figure 3:  2013 ARWU Top-100:K0−K-.
+36:1570:70288:0:25:61:137:758:14:g_d0_f15:14:g_d0_f15:C:References
+36:1571:70298:25:16:65:512:733:9:g_d0_f14:9:g_d0_f40:F:[1]  N. Ailon (2007), “Aggregation of Partial Rankings,p-Ratings and Top-mLists,”Proc 18th Annual Sympos.
+36:1572:70403:16:20:80:251:717:9:g_d0_f40:9:g_d0_f14:F:Discrete Algorithms (SODA ’07), 415-424.
+36:1573:70443:20:16:65:512:697:9:g_d0_f14:9:g_d0_f40:F:[2]  S. Alkire and J.E. Foster (2011), “Counting and Multidimensional Poverty Measurement,”Journal of Public
+36:1574:70551:16:20:80:178:681:9:g_d0_f40:9:g_d0_f14:F:Economics, 95, 476–487.
+36:1575:70574:20:16:65:512:661:9:g_d0_f14:9:g_d0_f14:F:[3]  S. Anand and A.K. Sen (1997). “Concepts of Human Development and Poverty:  a Multidimensional Per-
+36:1576:70677:16:20:80:197:645:9:g_d0_f14:9:g_d0_f14:F:spective,” UNDP. New York.
+36:1577:70703:20:16:65:512:625:9:g_d0_f14:9:g_d0_f14:F:[4]  G. Anderson, I. Crawford, and A. Leicester (2011), “Welfare Rankings from Multivariate Data, a Nonpara-
+36:1578:70811:16:20:80:329:609:9:g_d0_f14:9:g_d0_f14:F:metric Approach,”Journal of Public Economics, 95, 247–252.
+36:1579:70869:20:16:65:512:589:9:g_d0_f14:9:g_d0_f14:F:[5]  A. Atkinson (2003), “Multidimensional Deprivation: Contrasting Social Welfare and Counting Approaches,”
+36:1580:70977:16:20:80:247:573:9:g_d0_f40:9:g_d0_f14:F:Journal of Economic Inequality, 1, 51-65.
+36:1581:71018:20:16:65:512:553:9:g_d0_f14:9:g_d0_f14:F:[6]  D. Bertsimas and J. Tsitsiklis,Introduction to Linear Optimization, Athena Scientific, Belmont, MA, USA,
+36:1582:71127:16:20:80:101:537:9:g_d0_f14:9:g_d0_f14:F:1997.
+36:1583:71132:20:16:65:512:517:9:g_d0_f14:9:g_d0_f14:F:[7]  J. Bartholdi III, C. A. Tovey, and M. A. Trick (1989), “Voting schemes for which it can be difficult to tell
+36:1584:71245:16:20:80:328:501:9:g_d0_f14:9:g_d0_f14:F:who won the election”,Social Choice and Welfare, 6, 157165.
+36:1585:71304:20:16:65:512:481:9:g_d0_f14:9:g_d0_f14:F:[8]  J. Berger and L. Berliner (1986), “Robust Bayes and empirical Bayes analysis with--contaminated priors,”
+36:1586:71413:16:20:80:214:465:9:g_d0_f40:9:g_d0_f14:F:Annals of Statistics, 14, 461–486.
+36:1587:71447:20:16:65:512:445:9:g_d0_f14:9:g_d0_f14:F:[9]  B. Bueler, A. Enge, and K. Fukuda (2000), “Exact volume computation for convex polytopes:  A practical
+36:1588:71554:16:17:80:512:429:9:g_d0_f14:9:g_d0_f14:F:study,” In G. Kalai and G. M. Ziegler, editors,Polytopes - Combinatorics and Computation, DMV Seminar
+36:1589:71655:17:19:80:161:412:9:g_d0_f14:9:g_d0_f14:F:Volume 29, 131-154.
+36:1590:71674:19:17:61:512:393:9:g_d0_f14:9:g_d0_f40:F:[10]  F. Bourguignon and S.R. Chakravarty (2003), “The Measurement of Multidimensional Poverty,”Journal of
+36:1591:71780:17:19:80:202:376:9:g_d0_f40:9:g_d0_f14:F:Economic Inequality, 1, 25-49.
+36:1592:71810:19:17:61:512:357:9:g_d0_f14:9:g_d0_f40:F:[11]  V. Conitzer (2012), “Should Social Network Structure be Taken Into Account in Elections?”Mathematical
+36:1593:71917:17:20:80:195:340:9:g_d0_f40:9:g_d0_f14:F:Social Sciences, 64, 100-102.
+36:1594:71946:20:16:61:512:320:9:g_d0_f14:9:g_d0_f14:F:[12]  K.  Decancq  and  M.A.  Lugo  (2013),  “Weights  in  Multidimensional  Indices  of  wellbeing:   An  Overview,”
+36:1595:72063:16:20:80:207:304:9:g_d0_f40:9:g_d0_f14:F:Econometric Reviews, 32, 7–34.
+36:1596:72093:20:16:61:512:284:9:g_d0_f14:9:g_d0_f14:F:[13]  J.-Y.  Duclos,  D.  E.  Sahn,  and  S.D.  Younger  (2006),  “Robust  Multidimensional  Poverty  Comparisons,”
+36:1597:72208:16:20:80:212:268:9:g_d0_f40:9:g_d0_f14:F:Economic Journal, 116, 943-968.
+36:1598:72239:20:16:61:512:248:9:g_d0_f14:9:g_d0_f40:F:[14]  J.-Y. Duclos, D. E. Sahn, and S.D. Younger (2011), “Partial Multidimensional Inequality Orderings,”Journal
+36:1599:72351:16:20:80:216:232:9:g_d0_f40:9:g_d0_f14:F:of Public Economics, 95, 225-238.
+36:1600:72384:20:16:61:512:212:9:g_d0_f14:9:g_d0_f14:F:[15]  C.  Dwork,  R.  Kumar,  M.  Naor,  and  D.  Sivakumar  (2001),  “Rank  Aggregation  Methods  for  the  Web,”
+36:1601:72498:16:20:80:374:196:9:g_d0_f40:9:g_d0_f14:F:Proceedings of 10th International World Wide Web Conference, 613-622.
+36:1602:72567:20:16:61:512:176:9:g_d0_f14:9:g_d0_f14:F:[16]  J.E. Foster, M. McGillivray, and S. Seth (2013), “Composite Indices:  Rank Robustness, Statistical Associ-
+36:1603:72679:16:20:80:314:160:9:g_d0_f14:9:g_d0_f14:F:ation, and Redundancy,”Econometric Reviews, 32, 35-56.
+36:1604:72733:20:16:61:512:140:9:g_d0_f14:9:g_d0_f14:F:[17]  J.E.  Foster  and  A.K.  Sen.On Economic Inequality. After a Quarter Century.  Annexe  to  the  Expanded
+36:1605:72843:16:20:80:408:124:9:g_d0_f14:9:g_d0_f14:F:Edition ofOn Economic Inequalityby A.K. Sen., Clarendon Press, Oxford, 1997.
+36:1606:72919:20:16:61:512:104:9:g_d0_f14:9:g_d0_f40:F:[18]  Gilboa, I. and M. Marinacci (2013), “Ambiguity and the Bayesian Paradigm,” inAdvances in Economics
+36:1607:73023:16:16:80:512:88:9:g_d0_f40:9:g_d0_f14:F:and Econometrics, Tenth World Congress of the Econometric Society: Economic Theory, Volume I, Eds. D.
+36:1608:73124:16:0:80:334:72:9:g_d0_f14:9:g_d0_f14:F:Acemoglu, M. Arellano, E. Dekel, Cambridge University Press.
+37:1609:73186:0:16:61:512:758:9:g_d0_f14:9:g_d0_f14:F:[19]  DavidF.Gleich(2009).http://www.mathworks.it/matlabcentral/fileexchange/24134-gaimc-graph-
+37:1610:73281:16:20:80:495:742:9:g_d0_f14:9:g_d0_f14:F:algorithms-in-matlab-code/content/gaimc/scomponents.m . Copyright, Stanford University, 2008-2009.
+37:1611:73379:20:20:61:399:722:9:g_d0_f14:9:g_d0_f14:F:[20]  J.G. Kemeny (1959), “Mathematics without Numbers,”Daedalus, 88, 575–591.
+37:1612:73457:20:16:61:512:702:9:g_d0_f14:9:g_d0_f14:F:[21]  P. Klibanoff, M. Marinacci, and S. Mukerji (2005), “A Smooth Model of Decision Making Under Ambiguity,”
+37:1613:73566:16:20:80:200:686:9:g_d0_f40:9:g_d0_f14:F:Econometrica, 73, 1849–1892.
+37:1614:73594:20:21:61:471:666:9:g_d0_f14:9:g_d0_f14:F:[22]  I. Kopylov (2009), “Choice deferral and ambiguity aversion,”Theoretical Economics, 4, 199–225.
+37:1615:73694:21:20:61:386:645:9:g_d0_f14:9:g_d0_f14:F:[23]  S. Lang,Linear Algebra, Springer 3rd Edition, New Haven, CT, USA, 1987.
+37:1616:73771:20:20:61:475:625:9:g_d0_f14:9:g_d0_f14:F:[24]  J. Lawrence (1991), “Polytope Volume Computation,”Mathematics of Computation, 57, 259–271.
+37:1617:73867:20:16:61:512:605:9:g_d0_f14:9:g_d0_f14:F:[25]  H. Moulin,Axioms of Cooperative Decision Making, Econometric Society Monographs, Cambridge University
+37:1618:73974:16:20:80:177:589:9:g_d0_f14:9:g_d0_f14:F:Press, Cambridge, 1988.
+37:1619:73997:20:16:61:512:569:9:g_d0_f14:9:g_d0_f14:F:[26]  K.G. Nishimura and H. Ozaki (2004), “Search and Knightian uncertainty,”Journal of Economic Theory,
+37:1620:74101:16:20:80:134:553:9:g_d0_f14:9:g_d0_f14:F:119, 299–333.
+37:1621:74114:20:17:61:512:533:9:g_d0_f14:9:g_d0_f14:F:[27]  K.G. Nishimura and H. Ozaki (2006) “An axiomatic approach to--contamination,”Economic Theory, 27,
+37:1622:74217:17:20:80:115:516:9:g_d0_f14:9:g_d0_f14:F:333–340.
+37:1623:74225:20:16:61:512:496:9:g_d0_f14:9:g_d0_f40:F:[28]  K.G. Nishimura and H. Ozaki (2007), “Irreversible investment and Knightian uncertainty,”Journal of Eco-
+37:1624:74334:16:20:80:196:480:9:g_d0_f40:9:g_d0_f14:F:nomic Theory, 136, 668–694.
+37:1625:74361:20:17:61:512:460:9:g_d0_f14:9:g_d0_f14:F:[29]  OECD and European Commission JRC,Handbook on Constructing Composite Indicators, OECD Publica-
+37:1626:74460:17:20:80:185:443:9:g_d0_f14:9:g_d0_f14:F:tions, Paris, France, 2008.
+37:1627:74487:20:16:61:512:423:9:g_d0_f14:9:g_d0_f14:F:[30]  M. Pinar, T. Stengos, and N. Topaloglou (2013), “Measuring Human Development: A Stochastic Dominance
+37:1628:74593:16:20:80:297:407:9:g_d0_f14:9:g_d0_f14:F:Approach,”Journal of Economic Growth, 18, 69–108.
+37:1629:74642:20:17:61:512:387:9:g_d0_f14:9:g_d0_f40:F:[31]  M.  Ravallion  (2012),  “Troubling  Tradeoffs  in  the  Human  Development  Index,”Journal of Development
+37:1630:74753:17:20:80:177:370:9:g_d0_f40:9:g_d0_f14:F:Economics, 99, 201-209.
+37:1631:74776:20:20:61:476:350:9:g_d0_f14:9:g_d0_f14:F:[32]  M. Ravallion (2012), “Mashup Indices of Development,”World Bank Research Observer,27, 1-32.
+37:1632:74873:20:16:61:512:330:9:g_d0_f14:9:g_d0_f14:F:[33]  M.  Saisana,  A.  Saltelli,  and  S.  Tarantola  (2005),  “Uncertainty  and  Sensitivity  Analysis  as  Tools  for  the
+37:1633:74998:16:20:80:433:314:9:g_d0_f14:9:g_d0_f14:F:Quality of Composite Indicators,”Journal of the Royal Statistical Society A, 168, 1–17.
+37:1634:75085:20:17:61:512:294:9:g_d0_f14:9:g_d0_f14:F:[34]  M. Saisana, B. D’Hombres, and A. Saltelli (2011), “Rickety Numbers:  Volatility of University Rankings and
+37:1635:75197:17:20:80:286:277:9:g_d0_f14:9:g_d0_f14:F:Policy Implications,”Research Policy, 40, 165–177.
+37:1636:75247:20:20:61:491:257:9:g_d0_f14:9:g_d0_f14:F:[35]  A.K. Sen,Commodities and Capabilities. Elsevier, Amsterdam; New York. North-Holland press, 1985.
+37:1637:75349:20:16:61:512:237:9:g_d0_f14:9:g_d0_f14:F:[36]  A.K. Sen (1993), “Capability and Well-Being,” in:  Nussbaum, M., Sen, A.K. (Eds). Quality of Life, Claren-
+37:1638:75461:16:20:80:183:221:9:g_d0_f14:9:g_d0_f14:F:don Press, Oxford, 30-53.
+37:1639:75486:20:17:61:512:201:9:g_d0_f14:9:g_d0_f14:F:[37]  R.  Tarjan  (1972),  “Depth-first  Search  and  Linear  Graph  Algorithms,”SIAM Journal on Computing,  1,
+37:1640:75597:17:20:80:115:184:9:g_d0_f14:9:g_d0_f14:F:146–160.
+37:1641:75605:20:16:61:512:164:9:g_d0_f14:9:g_d0_f14:F:[38]  K.  Tsui  (1995),  “Multidimensional  Generalizations  of  the  Relative  and  Absolute  Inequality  Indices:  The
+37:1642:75725:16:20:80:381:148:9:g_d0_f14:9:g_d0_f14:F:Atkinson-Kolm-Sen Approach,”Journal of Economic Theory, 67, 251-266.
+37:1643:75793:20:16:61:512:128:9:g_d0_f14:9:g_d0_f40:F:[39]  United Nations Development Programme,2013 Human Development Report. The Rise of the South: Human
+37:1644:75895:16:20:80:287:112:9:g_d0_f40:9:g_d0_f14:F:Progress in a Diverse World, New York, NY, 2013.
+37:1645:75943:20:20:61:477:92:9:g_d0_f14:9:g_d0_f14:F:[40]  H. P. Young (1974), “An Axiomatization of Borda’s Rule,”Journal of Economic Theory, 9, 43-52.
+37:1646:76042:20:0:61:500:72:9:g_d0_f14:9:g_d0_f14:F:[41]  H. P. Young (1988), “Condorcet’s Theory of Voting,”American Political Science Review, 82, 1231–1244
+38:1647:76149:0:20:61:443:758:9:g_d0_f14:9:g_d0_f14:F:[42]  H. P. Young (1995), “Optimal Voting Rules,”Journal of Economic Perspectives, 9, 51-64.
+38:1648:76241:20:16:61:512:738:9:g_d0_f14:9:g_d0_f40:F:[43]  H. P. Young and A. Levenglick (1978), “A Consistent Extension of Condorcet’s election principle,”SIAM
+38:1649:76348:16:21:80:267:722:9:g_d0_f40:9:g_d0_f14:F:Journal on Applied Mathematics, 35, 285–300.
+38:1650:76392:21:16:61:512:701:9:g_d0_f14:9:g_d0_f14:F:[44]  A. van Zuylen and D. Williamson (2009), “Deterministic Pivoting Algorithms for Constrained Ranking and
+38:1651:76500:16:0:80:375:685:9:g_d0_f14:9:g_d0_f14:F:Clustering Problems,”Mathematics of Operations Research, 34, 594–620.

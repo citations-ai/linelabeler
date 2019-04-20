@@ -1,0 +1,1406 @@
+1:0:0:0:100:219:395:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:127:489:610:12:Times:12:Times:C:MEASURING THE IMPACT OF HOUSEHOLD INNOVATION USING 
+1:2:76:14:28:238:376:596:12:Times:12:Times:C:ADMINISTRATIVE DATA
+1:3:94:28:14:271:343:568:12:Times:12:Times:C:Javier Miranda
+1:4:108:14:28:273:340:554:12:Times:12:Times:C:Nikolas Zolas
+1:5:121:28:14:254:360:526:12:Times:12:Times:C:Working Paper 25259
+1:6:140:14:42:220:395:512:12:Times:12:Times:C:http://www.nber.org/papers/w25259
+1:7:173:42:14:174:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:209:14:14:239:376:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:234:14:14:251:363:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:253:14:228:268:346:428:12:Times:12:Times:C:November 2018
+1:11:266:228:14:71:545:200:12:Times:12:Times:C:I  Javier  Miranda  attest  that  I  have  not  received  any  funding  for  this  work  outside  of  my  regular 
+1:12:380:14:14:71:545:186:12:Times:12:Times:C:salary at the U.S. Census Bureau. The views expressed herein are those of the authors and do not 
+1:13:476:14:28:71:435:172:12:Times:12:Times:C:necessarily reflect the views of the National Bureau of Economic Research.
+1:14:549:28:14:72:546:144:12:Times:12:Times:C:NBER working papers are circulated for discussion and comment purposes. They have not been 
+1:15:640:14:14:72:546:130:12:Times:12:Times:C:peer-reviewed  or  been  subject  to  the  review  by  the  NBER  Board  of  Directors  that  accompanies 
+1:16:746:14:28:72:206:116:12:Times:12:Times:C:official NBER publications.
+1:17:772:28:14:72:546:88:12:Times:12:Times:C:©  2018  by  Javier  Miranda  and  Nikolas  Zolas.  All  rights  reserved.  Short  sections  of  text,  not  to 
+1:18:884:14:14:72:545:74:12:Times:12:Times:C:exceed two  paragraphs,  may  be  quoted  without  explicit  permission  provided  that  full  credit, 
+1:19:986:14:0:72:272:60:12:Times:12:Times:C:including © notice, is given to the source.
+2:20:1028:0:14:72:430:700:12:Times:12:Times:C:Measuring the Impact of Household Innovation using Administrative Data
+2:21:1098:14:14:72:235:686:12:Times:12:Times:C:Javier Miranda and Nikolas Zolas
+2:22:1130:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 25259
+2:23:1158:14:14:72:150:658:12:Times:12:Times:C:November 2018
+2:24:1171:14:28:72:177:644:12:Times:12:Times:C:JEL No. O3,O31,O35
+2:25:1189:28:28:273:338:616:12:Times:12:Times:C:ABSTRACT
+2:26:1197:28:14:72:546:588:12:Times:12:Times:C:We  link  USPTO  patent  data  to  U.S.  Census  Bureau  administrative  records  on  individuals  and 
+2:27:1300:14:14:72:546:574:12:Times:12:Times:C:firms. The combined dataset provides us with a directory of patenting household inventors as well 
+2:28:1397:14:14:72:545:560:12:Times:12:Times:C:as a time-series directory of self-employed businesses tied to household innovations. We describe 
+2:29:1494:14:14:72:545:546:12:Times:12:Times:C:the  characteristics of  household  inventors  by  race,  age,  gender  and  U.S.  origin,  as  well  as  the 
+2:30:1603:14:14:72:546:532:12:Times:12:Times:C:types  of  patented  innovations pursued  by  these  inventors.  Business  data  allows  us  to  highlight 
+2:31:1709:14:14:72:546:518:12:Times:12:Times:C:how  patents shape the early life-cycle dynamics of nonemployer businesses.  We find household 
+2:32:1803:14:14:72:546:504:12:Times:12:Times:C:innovators  are  disproportionately  U.S.  born, white  and  their  age  distribution  has  thicker  tails 
+2:33:1909:14:14:72:546:490:12:Times:12:Times:C:relative  to  business  innovators.  Data  shows  there  is a  deficit  of  female  and  black  inventors. 
+2:34:2015:14:14:72:546:476:12:Times:12:Times:C:Household  inventors  tend  to  work  in  consumer  product  areas compared  to  traditional  business 
+2:35:2117:14:14:72:546:462:12:Times:12:Times:C:patents.  While  patented  household  innovations  do  not  have  the  same impact  of  business 
+2:36:2213:14:14:72:545:448:12:Times:12:Times:C:innovations  their  uniqueness  and  impact  remains  surprisingly  high.  Back  of  the envelope 
+2:37:2310:14:14:72:545:434:12:Times:12:g_d0_f1:C:calculations  suggest  patented  household  innovations  granted  between  2000  and  2011  might 
+2:38:2407:14:42:72:275:420:12:Times:12:Times:C:generate  $5.0B in revenue (2000 dollars).
+2:39:2449:42:14:72:144:378:12:Times:12:Times:C:Javier Miranda
+2:40:2463:14:14:72:199:364:12:Times:12:Times:C:U.S. Bureau of the Census
+2:41:2488:14:14:72:285:350:12:Times:12:Times:C:Center for Administrative Records Research
+2:42:2530:14:14:72:178:336:12:Times:12:Times:C:4600 Silver Hill Road
+2:43:2551:14:14:72:186:322:12:Times:12:Times:C:Washington, DC 20233
+2:44:2571:14:28:72:206:308:12:Times:12:Times:C:javier.miranda@census.gov
+2:45:2596:28:14:72:139:280:12:Times:12:Times:C:Nikolas Zolas
+2:46:2609:14:14:72:211:266:12:Times:12:Times:C:Center for Economic Studies
+2:47:2636:14:14:72:169:252:12:Times:12:Times:C:U.S. Census Bureau
+2:48:2654:14:14:72:178:238:12:Times:12:Times:C:4600 Silver Hill Road
+2:49:2675:14:14:72:192:224:12:Times:12:Times:C:Washington, DC  20233 
+2:50:2697:14:0:72:205:210:12:Times:12:Times:C:nikolas.j.zolas@census.gov
+3:51:2723:0:36:72:208:708:17:g_d0_f2:17:g_d0_f2:C:1  Introduction
+3:52:2738:36:24:72:540:672:12:g_d0_f3:12:g_d0_f3:B:The study of innovation has traditionally centered on the institutions where it is believed
+3:53:2829:24:24:72:540:648:12:g_d0_f3:12:g_d0_f3:B:to be conducted, which has primarily consisted of the firm.  The underlying assumption is
+3:54:2918:24:24:72:540:624:12:g_d0_f3:12:g_d0_f3:B:that innovation is the output from an R&D production function that has the inventor at
+3:55:3004:24:24:72:540:600:12:g_d0_f3:12:g_d0_f3:B:its core and where the inputs (materials and human capital) are fully accounted for.  Some
+3:56:3094:24:24:72:540:576:12:g_d0_f3:12:g_d0_f3:B:of the inputs may take the form of knowledge originating outside the firm like universities,
+3:57:3186:24:24:72:540:552:12:g_d0_f3:12:g_d0_f3:B:government labs and other firms.  In this regard government and universities labs have long
+3:58:3277:24:24:72:540:528:12:g_d0_f3:12:g_d0_f3:B:been recognized as sources of knowledge and invention.  Other firms may contribute to the
+3:59:3366:24:23:72:540:504:12:g_d0_f3:12:g_d0_f3:B:R&D process through research joint ventures or may license their technologies.  Increasingly
+3:60:3458:23:24:72:540:481:12:g_d0_f3:12:g_d0_f3:B:however, researchers are highlighting the importance private households play as sources of
+3:61:3548:24:24:72:540:457:12:g_d0_f3:12:g_d0_f3:B:invention and innovation in this process (e.g.  von Hippel, de Jong, and Flowers (2012) and
+3:62:3639:24:24:72:540:433:12:g_d0_f3:12:g_d0_f3:B:Arora, Cohen, and Walsh (2016)).  In this paper we aim to contribute to this strand of the
+3:63:3729:24:24:72:540:409:12:g_d0_f3:12:g_d0_f3:B:literature by using U.S. Census Bureau administrative data combined with USPTO patents
+3:64:3815:24:24:72:540:385:12:g_d0_f3:12:g_d0_f3:B:data to document household innovations.  The use of administrative data gets around some
+3:65:3903:24:24:72:540:361:12:g_d0_f3:12:g_d0_f3:B:of the problems with current studies in this area, specifically small sample sizes in household
+3:66:3998:24:24:72:540:337:12:g_d0_f3:12:g_d0_f3:B:surveys, low power estimates, and low response rates which may raise questions about non-
+3:67:4087:24:24:72:226:313:12:g_d0_f3:12:g_d0_f3:B:response bias (Deming, 1990).
+3:68:4116:24:24:93:539:289:12:g_d0_f3:12:g_d0_f3:A:Use of administrative data provides a rich picture of the types of innovations undertaken
+3:69:4205:24:24:72:540:265:12:g_d0_f3:12:g_d0_f3:B:by households and their characteristics but it has its own limitations.  We focus on the set
+3:70:4297:24:23:72:540:241:12:g_d0_f3:12:g_d0_f3:B:of  household  innovations  we  can  identify  in  administrative  data;  that  is,  those  that  are
+3:71:4398:23:24:72:540:218:12:g_d0_f3:12:g_d0_f3:B:granted  a  patent  by  the  USPTO.  Admittedly  this  excludes  perhaps  what  might  be  the
+3:72:4492:24:24:72:540:194:12:g_d0_f3:12:g_d0_f3:B:lion  share  of  household  innovation;  that  which  is  not  patented.   By  contrast  we  focus  on
+3:73:4594:24:24:72:540:170:12:g_d0_f3:12:g_d0_f3:B:what  might  be  the  most  valuable  innovations  (Arora,  Cohen,  and  Walsh,  2016)  and  we
+3:74:4689:24:24:72:540:146:12:g_d0_f3:12:g_d0_f3:B:do so in a systematic manner.  We match these patents to Census Bureau administrative
+3:75:4774:24:24:72:540:122:12:g_d0_f3:12:g_d0_f3:B:files  to  understand  the  demographic  characteristics  of  household  inventors  as  well  as  the
+3:76:4875:24:0:72:540:98:12:g_d0_f3:12:g_d0_f3:B:characteristics of the unincorporated businesses they start to get a sense for their impact and
+4:77:4970:0:24:72:539:708:12:g_d0_f3:12:g_d0_f3:B:value.1Use of administrative records comes with other important limitations.  Specifically,
+4:78:5061:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:there is no way for us to determine whether these patents where developed during leisure
+4:79:5149:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:time or as a remunerated activity.  Here we make the strong assumption that if they have
+4:80:5237:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:not  been  assigned  to  a  firm  there  was  no  direct  remuneration  for  the  development  of  the
+4:81:5339:24:24:72:129:612:12:g_d0_f3:12:g_d0_f3:B:innovation.
+4:82:5350:24:24:93:539:588:12:g_d0_f3:12:g_d0_f3:A:When documenting the characteristics of household innovations we describe the technol-
+4:83:5436:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:ogy classes they fall under, their impact and novelty as captured by the analysis of backward
+4:84:5529:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:and forward looking citations, and the breadth of their application as captured by a gener-
+4:85:5620:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:ality index.  In addition we document the characteristics of inventors, their age, gender, race
+4:86:5715:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:and origin.  When looking at business formation we examine the dynamics of unincorporated
+4:87:5804:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:businesses  that  are  tied  to  inventors  and  their  performance  relative  to  similar  businesses
+4:88:5906:23:24:72:424:445:12:g_d0_f3:12:g_d0_f3:B:without inventors specifically their revenue and growth performance.
+4:89:5974:24:24:93:539:421:12:g_d0_f3:12:g_d0_f3:A:We find household inventors are disproportionately U.S. born relative to salaried inven-
+4:90:6062:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:tors.  They are relatively white.  Household inventors are disproportionately under 25 and
+4:91:6152:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:over  55.   Across  the  board  we  find  a  deficit  in  female  and  black  inventors  relative  to  the
+4:92:6258:24:24:72:233:349:12:g_d0_f3:12:g_d0_f3:B:overall working age population.
+4:93:6289:24:24:93:539:325:12:g_d0_f3:12:g_d0_f3:A:Household  inventors  work  on  technology  classes  disproportionately  tied  to  consumer
+4:94:6380:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:products such as Design, Mechanical and Other.  Patents associated with household inno-
+4:95:6467:24:24:72:539:277:12:g_d0_f3:12:g_d0_f3:B:vation  are  about  1/2  as  likely  to  be  considered  “radical”.2In  terms  of  value,  household
+4:96:6567:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:innovations accumulate approximately 27-33% fewer citations on average.  While their cita-
+4:97:6657:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:tion impact is smaller it remains remarkably high.  Finally, we find few household inventors
+4:98:6749:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:attempt to create a business around their invention.  When they do these businesses have
+4:99:6837:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:higher revenues on average and are more than twice as likely to transition to hire their first
+4:100:6931:24:36:72:540:158:12:g_d0_f3:12:g_d0_f3:B:employee than nonemployers who do not patent.  Back of the envelope calculations suggest
+4:101:7019:36:16:85:539:122:7:g_d0_f5:10:g_d0_f6:F:1Patents by independent inventors have been found to display the largest rates of transfer (Serrano, 2010)
+4:102:7125:16:8:72:492:106:10:g_d0_f6:10:g_d0_f6:F:so in future drafts we will explore the characteristics of patents that transition to existing firms.
+4:103:7226:8:16:85:539:98:7:g_d0_f5:10:g_d0_f6:F:2We follow the definition in (Dahlin and Behrens, 2005), a radical innovation is one that is considered
+4:104:7329:16:46:72:196:82:10:g_d0_f6:10:g_d0_f6:F:novel, unique and impactful.
+4:105:7357:46:0:303:309:36:12:g_d0_f3:12:g_d0_f3:A:2
+5:106:7358:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:patented  household  innovations  granted  in  a  given  year  might  generate  revenue  $5.0B  in
+5:107:7456:24:24:72:193:684:12:g_d0_f3:12:g_d0_f3:B:revenue in 2000 dollars.
+5:108:7480:24:24:93:539:660:12:g_d0_f3:12:g_d0_f3:A:The remainder of the paper is structured as follows.  Section 2 provides background.  We
+5:109:7568:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:follow with a description of the data in section 3.  We describe basic features of patented
+5:110:7659:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:household inventions in section 4.  Our analysis of business formation and outcomes follows
+5:111:7750:24:54:72:269:588:12:g_d0_f3:12:g_d0_f3:B:in section 5.  We conclude in section 6.
+5:112:7790:54:36:72:202:534:17:g_d0_f2:17:g_d0_f2:C:2  Background
+5:113:7803:36:24:72:540:498:12:g_d0_f3:12:g_d0_f3:B:Innovation is traditionally thought of as a process that takes place inside of a firm.  In this
+5:114:7898:24:24:72:540:474:12:g_d0_f3:12:g_d0_f3:B:context, outside sources of knowledge and invention including universities, government labs
+5:115:7989:24:24:72:540:450:12:g_d0_f3:12:g_d0_f3:B:and other firms have long been recognized as important inputs to the firm’s R&D function.
+5:116:8078:24:24:72:540:426:12:g_d0_f3:12:g_d0_f3:B:Increasingly however innovation researchers are focusing on households as important sources
+5:117:8169:24:24:72:540:402:12:g_d0_f3:12:g_d0_f3:B:of knowledge and innovation. The study of household innovation however has been hampered
+5:118:8257:24:23:72:173:378:12:g_d0_f3:12:g_d0_f3:B:by data availability.
+5:119:8278:23:24:93:539:355:12:g_d0_f3:12:g_d0_f3:A:The first set of household innovation studies looked at user innovations in specific prod-
+5:120:8368:24:24:72:540:331:12:g_d0_f3:12:g_d0_f3:B:uct  markets.   Early  examples  include  von  Hippel  (1976)  and  Shah  (2000)  looking  at  user
+5:121:8467:24:24:72:540:307:12:g_d0_f3:12:g_d0_f3:B:innovation in scientific instruments and new sporting goods respectively.  Their methodology
+5:122:8559:24:24:72:540:283:12:g_d0_f3:12:g_d0_f3:B:involves a retrospective study of a selected sample of commercially successful innovations as
+5:123:8652:24:24:72:540:259:12:g_d0_f3:12:g_d0_f3:B:identified by either experts in the field or by direct analysis of new product features.  This
+5:124:8746:24:24:72:540:235:12:g_d0_f3:12:g_d0_f3:B:was  followed  by  interviews  of  relevant  product  and  industry  experts.   Both  these  authors
+5:125:8846:24:24:72:540:211:12:g_d0_f3:12:g_d0_f3:B:find a large percentage of the innovations were in fact invented, prototyped and tested by
+5:126:8936:24:24:72:540:187:12:g_d0_f3:12:g_d0_f3:B:users of the equipment rather  than the equipment manufacturer.  In the case of scientific
+5:127:9026:24:24:72:540:163:12:g_d0_f3:12:g_d0_f3:B:instruments, von Hippel (1976) finds existing instrument manufacturers would incorporate
+5:128:9114:24:24:72:540:139:12:g_d0_f3:12:g_d0_f3:B:user innovations into their products with a focus on improved engineering.  In the case of
+5:129:9204:24:0:72:540:115:12:g_d0_f3:12:g_d0_f3:B:sporting goods Shah (2000) finds users built innovative equipment for their own use.  The
+6:130:9294:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:inventors  tended  to  be  young  and  they  often  built  businesses  in  order  to  appropriate  the
+6:131:9396:24:24:72:232:684:12:g_d0_f3:12:g_d0_f3:B:benefits from their innovations.
+6:132:9428:24:24:93:539:660:12:g_d0_f3:12:g_d0_f3:A:Follow-up studies have tried to more broadly describe the characteristics of the innova-
+6:133:9516:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:tors and rate of user innovation.  L ̈uthje (2004) conducts a survey of users of outdoor sporting
+6:134:9613:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:equipment identified from the direct mail order listing of two sporting goods manufacturing
+6:135:9704:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:firms.   While  response  rates  are  relatively  low  at  26%,  the  author  finds  a  large  share  of
+6:136:9808:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:respondents,  37%,  claimed at least one idea.  Of these 30% claimed their idea provided a
+6:137:9898:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:solution to a problem that was not offered by the manufacturer.  Reportedly, only 4 in 10
+6:138:9987:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:took  their  ideas  beyond  concept  by  developing  prototypes.   Franke  and  Shah  (2003)  look
+6:139:10085:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:at innovation within four distinct communities of extreme sports enthusiasts.  Communities
+6:140:10175:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:of consumer users were identified through websites or competition rosters.  With a survey
+6:141:10264:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:response rate of 38% the authors find 32% of community members claimed an innovation
+6:142:10348:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:and of these 14.5% considered the innovation to be a completely new product.  In their sam-
+6:143:10439:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:ple, 23% of innovators believed their innovations had been or would be commercialized by
+6:144:10527:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:a third party.  These innovators did not appear to benefit financially from their innovations.
+6:145:10621:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:Whether results from these and other surveys of lead users and enthusiasts are representative
+6:146:10714:24:24:72:359:325:12:g_d0_f3:8:g_d0_f4:B:of broader user communities remains an open question.3
+6:147:10768:24:24:93:539:301:12:g_d0_f3:12:g_d0_f3:A:von Hippel, de Jong, and Flowers (2012) take a broader approach to this question by
+6:148:10851:24:24:71:539:277:12:g_d0_f3:12:g_d0_f3:B:conducting a household survey to look at inventions by a representative sample of consumers
+6:149:10942:24:24:71:539:253:12:g_d0_f3:12:g_d0_f3:B:in the U.K. These are innovations tied to households and their unincorporated businesses.
+6:150:11031:24:24:71:539:229:12:g_d0_f3:12:g_d0_f3:B:Specifically they look at the development and modification of consumer products by product
+6:151:11121:24:23:71:539:205:12:g_d0_f3:12:g_d0_f3:B:users.   The  types  of  household  innovations  they  focus  on  exclude  on-the-job  innovations
+6:152:11219:23:24:71:539:182:12:g_d0_f3:12:g_d0_f3:B:which are already accounted for in official statistics.  Instead they focus on innovations that
+6:153:11314:24:24:71:539:158:12:g_d0_f3:12:g_d0_f3:B:were  developed  during  uncompensated  leisure  time.   With  a  survey  response  rate  of  15%
+6:154:11411:24:36:71:539:134:12:g_d0_f3:12:g_d0_f3:B:they find 6.2% of U.K. consumers engaged in consumer product innovation in the previous 3
+6:155:11500:36:0:85:409:98:7:g_d0_f5:10:g_d0_f6:F:3A good survey of consumer user studies can be found in de Jong (2016).
+7:156:11572:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:years.  When comparing against the amount of R&D investment by U.K. firms they estimate
+7:157:11659:24:24:72:539:684:12:g_d0_f3:8:g_d0_f4:B:the volume of household based expenditure exceeded that of firms by a factor of 2.3 times.4
+7:158:11750:24:24:72:412:660:12:g_d0_f3:12:g_d0_f3:B:They conclude private households are a major source of invention.
+7:159:11815:24:24:93:539:636:12:g_d0_f3:12:g_d0_f3:A:In a survey centered on consumer product innovations von Hippel, de Jong, and Flowers
+7:160:11900:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:(2012) find 98% of innovations are product modifications rather than new product creations.
+7:161:11991:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:Most of the innovations, 80%, are in a few product classes that are related with how people
+7:162:12082:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:spend their time:  craft and tools, sports and hobbies, gardening as well as child, dwelling
+7:163:12174:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:or pet related.  Only 17% of the innovations are believed to be adopted by others to some
+7:164:12263:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:degree and only 2% of the innovations are protected by intellectual property rights.  There
+7:165:12354:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:are relatively few software innovations.  von Hippel, de Jong, and Flowers (2012) are the only
+7:166:12448:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:study collecting demographic information from a representative consumer sample rather than
+7:167:12538:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:a community of interest.  They find inventors tend to be male, educated, and either a student
+7:168:12631:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:or age over 55.  Issues with this and other representative consumer surveys that have followed
+7:169:12725:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:include high non-response rates, small sample sizes, and confusion regarding the definition
+7:170:12816:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:of innovation by consumers.  With these limitations a general conclusion is the apparent low
+7:171:12908:24:24:72:299:349:12:g_d0_f3:12:g_d0_f3:B:adoption rates of innovations by enterprises.
+7:172:12953:24:24:93:539:325:12:g_d0_f3:12:g_d0_f3:A:Following  a  different  approach  Arora,  Cohen,  and  Walsh  (2016)  conduct  a  survey  of
+7:173:13046:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:manufacturing firms to examine the extent to which firms in the U.S. use external sources
+7:174:13135:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:of  invention  for  their  innovations.   Arora,  Cohen,  and  Walsh  (2016)  focus  on  the  whole
+7:175:13234:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:manufacturing sector regardless of industry or whether firms own patents or conduct R&D.
+7:176:13322:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:Their sample is drawn from the Dun & Bradstreet business frame but adjusted with U.S.
+7:177:13407:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:Census Bureau based weights to match the population of manufacturing firms by industry,
+7:178:13494:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:size  and  age.   For  the  analysis  they  focus  on  product  innovations  (and  exclude  process
+7:179:13593:24:24:72:540:158:12:g_d0_f3:12:g_d0_f3:B:innovations) at firms with more than 10 employees.  With response rates of 30.3% they find
+7:180:13683:24:37:72:540:134:12:g_d0_f3:12:g_d0_f3:B:that of the 16% of firms that innovated (introduced a product that is new to the market),
+7:181:13772:37:15:85:539:97:7:g_d0_f5:10:g_d0_f6:F:4von Hippel, de Jong, and Flowers (2012) find the average customer invention requires an expenditure of
+7:182:13875:15:46:72:154:82:10:g_d0_f7:10:g_d0_f6:F:£101 and 4.8 days.
+7:183:13893:46:0:303:309:36:12:g_d0_f3:12:g_d0_f3:A:5
+8:184:13894:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:49% report their most important new product originated from outside.  They find customers
+8:185:13983:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:are  the  most  pervasive  source  of  invention  although  not  the  source  of  the  most  valuable
+8:186:14084:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:ones.  The more valuable inventions are sourced from technology specialists which include
+8:187:14173:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:independent inventors.  These inventors patent their own inventions at relatively high rates,
+8:188:14266:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:56%, higher than university, supplier and customer sourced inventions at 36%, 34% and 16%
+8:189:14355:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:respectively.  They find independent inventors are also a more common source of inventions
+8:190:14445:24:54:72:149:564:12:g_d0_f3:12:g_d0_f3:B:for small firms.
+8:191:14461:54:36:72:142:510:17:g_d0_f2:17:g_d0_f2:C:3  Data
+8:192:14468:36:24:72:540:474:12:g_d0_f3:12:g_d0_f3:B:We focus our analysis on patented household innovations.  Our primary source of patent data
+8:193:14559:24:24:72:540:450:12:g_d0_f3:12:g_d0_f3:B:is the U.S. Patent and Trademark Office PTMT Custom Patent Data Extract.  These data
+8:194:14643:24:24:72:540:426:12:g_d0_f3:12:g_d0_f3:B:are produced annually from the bibliographic text (i.e., front page) of the patent documents.
+8:195:14736:24:24:72:540:402:12:g_d0_f3:12:g_d0_f3:B:It covers all granted patents by the USPTO and detailed information including the patent
+8:196:14824:24:23:72:540:378:12:g_d0_f3:12:g_d0_f3:B:number, type of patent, filing date, issue date, inventor information, assignee name at time
+8:197:14916:23:24:72:315:355:12:g_d0_f3:12:g_d0_f3:B:of issue, and classification information for each.
+8:198:14966:24:24:93:539:331:12:g_d0_f3:12:g_d0_f3:A:We use the patent class information to impose some initial restrictions on the patents we
+8:199:15055:24:24:72:540:307:12:g_d0_f3:12:g_d0_f3:B:analyze.  Depending on the patent documents, patents can be assigned to firms, individuals
+8:200:15145:24:24:72:540:283:12:g_d0_f3:12:g_d0_f3:B:or governments.  These can each be either domestic or foreign.  In addition the patents can
+8:201:15236:24:24:72:540:259:12:g_d0_f3:12:g_d0_f3:B:be unassigned.  This happens when the inventors have not granted the rights to the invention
+8:202:15328:24:24:72:540:235:12:g_d0_f3:12:g_d0_f3:B:to a corporation, university or government agency, or to other individuals.  In these cases the
+8:203:15423:24:24:72:540:211:12:g_d0_f3:12:g_d0_f3:B:patents are assumed to remain with the inventor, but in some cases can later be reassigned to
+8:204:15516:24:24:72:540:187:12:g_d0_f3:12:g_d0_f3:B:firms.  We exclude from the set of patents we analyze those that belong to governments and
+8:205:15606:24:24:72:540:163:12:g_d0_f3:12:g_d0_f3:B:all foreign patents.  We assume these are not tied to independent U.S. based inventors.  Table
+8:206:15700:24:24:72:540:139:12:g_d0_f3:12:g_d0_f3:B:1 looks at the number of patents by assignee type in our sample.  We center our analysis on
+8:207:15791:24:23:72:540:115:12:g_d0_f3:12:g_d0_f3:B:patents granted between 2000 and 2011.  Our sample includes a total of 1.29 million patents
+8:208:15882:23:0:72:540:92:12:g_d0_f3:12:g_d0_f3:B:granted between 2000 and 2011.  The bulk of these, 80%, are assigned to businesses.  Most
+9:209:15972:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:of the remaining patents, 19.2%, are unassigned.  There are very few patents, 0.8%, assigned
+9:210:16064:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:to individuals.  While unassigned patents are assumed to belong to the inventor it will be
+9:211:16154:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:the  case  that  some  of  these  belong  to  firms  but  were  not  assigned  at  time  of  grant.   We
+9:212:16258:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:explore the extent of this problem by reviewing patents with large team sizes of inventors
+9:213:16348:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:to get a sense for the amount of noise in the data.  Our assumption is that the average firm
+9:214:16440:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:patent will be developed by larger teams of inventors.  The results can be seen in Figure 1.
+9:215:16532:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:The team size distributions for unassigned and individual assigned patents are fairly similar
+9:216:16625:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:and well to the left of firm assigned patents.  Unassigned patents have the larger share of
+9:217:16716:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:single inventor patents (nearly 80% of unassigned patents have a single inventor).  Looking
+9:218:16807:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:at the right tale of the distribution, we find that fewer than 1% of unassigned and individual
+9:219:16901:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:assigned patents have inventor team sizes of 5 or more, compared to the nearly 7% of firm
+9:220:16990:23:24:72:159:445:12:g_d0_f3:12:g_d0_f3:B:assigned patents.
+9:221:17007:24:24:93:539:421:12:g_d0_f3:12:g_d0_f3:A:Firm  assigned  patents  present  a  challenge  to  us.   The  patent  data  does  not  include
+9:222:17102:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:firm identifiers or flags that might help us distinguish patents assigned to employers from
+9:223:17193:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:those  assigned  to  nonemployer  businesses.   It  is  not  unreasonable  to  think  however  that
+9:224:17292:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:independent inventors might assign their patents to their own unincorporated nonemployer
+9:225:17380:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:business.  However, we do not want to exclude these inventors from our analysis since their
+9:226:17471:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:patents  might  be  particularly  valuable.   We  rely  on  the  U.S.  Census  Bureau  longitudinal
+9:227:17570:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:patent-business database (BDS-IF) to identify and exclude from our analysis patents assigned
+9:228:17662:24:24:72:539:253:12:g_d0_f3:12:g_d0_f3:B:to employer businesses while keeping those assigned to nonemployer businesses.5We identify
+9:229:17752:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:patents assigned to nonemployer firms by matching all patents to the U.S. Census Bureau’s
+9:230:17841:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:Business Register of nonemployer firms.6A large percentage of patents, nearly 80%, match
+9:231:17929:23:36:72:540:182:12:g_d0_f3:12:g_d0_f3:B:to  the  employer  universe  files.   The  employer  matches  tend  to  be  based  on  the  assignee
+9:232:18029:36:16:85:539:146:7:g_d0_f5:10:g_d0_f6:F:5The BDS-IF identifies patents assigned to employer businesses while keeping those assigned to nonem-
+9:233:18130:16:12:72:540:130:10:g_d0_f6:10:g_d0_f6:F:ployer businesses.  See Graham, Grim, Islam, Marco, and Miranda (2018) for details of the matching method-
+9:234:18236:12:12:72:540:118:10:g_d0_f6:10:g_d0_f6:F:ology. Briefly, it uses both the assignee and inventor information to form a match. The use of two independent
+9:235:18346:12:8:72:498:106:10:g_d0_f6:10:g_d0_f6:F:pieces of information to identify the assignee firm provides a high level of reliability in the match.
+9:236:18448:8:16:85:539:98:7:g_d0_f5:10:g_d0_f6:F:6All businesses that file an income tax form to the IRS authorities and have no associated payroll tax form
+9:237:18555:16:0:72:540:82:10:g_d0_f6:10:g_d0_f6:F:are included in the nonemployer Business Register.  See Appendix A for details of the matching methodology.
+10:238:18663:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:name and address, while the nonemployer matches mostly occur through the inventor.  We
+10:239:18749:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:remove the known employer matches from Graham, Grim, Islam, Marco, and Miranda (2018)
+10:240:18834:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:from our universe of matches, leaving us with approximately 200,000 raw nonemployer firm
+10:241:18922:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:matches.  Our set of initial matches require further refining.  A high quality firm-inventor
+10:242:19014:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:match does not guarantee the inventor is matched to its firm.  Think of an inventor named
+10:243:19103:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:David Smith in D.C. and a company named David Smith located also in D.C. First, there
+10:244:19188:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:are possibly many unincorporated entities named David Smith so the match might not be
+10:245:19273:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:unique.  Even if the match is unique we do not know whether the owner is the inventor (i.e.
+10:246:19364:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:there are many David Smiths).  We retain only cases where the social security number of the
+10:247:19455:24:24:72:539:492:12:g_d0_f3:12:g_d0_f3:B:inventor and the social security number in the nonemployer firm record line up.7This filtering
+10:248:19549:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:process leaves us with a total set of approximately 125,000 patents.  We remove an additional
+10:249:19642:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:55,000 patents by only keeping the unduplicated matches.8Finally,  we drop patents that
+10:250:19729:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:are associated with nonemployers that have an unusually large number of patents assigned
+10:251:19817:24:24:72:539:397:12:g_d0_f3:12:g_d0_f3:B:to them.9This leaves us with a total of 68,000 patents associated to nonemployer businesses
+10:252:19908:24:24:72:406:373:12:g_d0_f3:12:g_d0_f3:B:that we are confident belong to the inventors behind the patents.
+10:253:19973:24:24:93:539:349:12:g_d0_f3:12:g_d0_f3:A:Table 2 shows the percentage of patents matched to employer businesses (E) and nonem-
+10:254:20058:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:ployer business (NE) by assignee type and year.  Patents that remain unmatched (U) are
+10:255:20144:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:not associated with business activity as captured by the Business Register.  To be clear,the
+10:256:20236:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:set of unmatched patents might include some that were matched to a Census dataset but
+10:257:20321:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:where  the  match  either  could  not  be  uniquely  resolved  to  an  inventor  or  assignee  or  was
+10:258:20423:24:35:72:539:229:12:g_d0_f3:12:g_d0_f3:B:not linked through the PVS process.10Table 2 highlights a clear separation in the match
+10:259:20510:35:16:85:539:194:7:g_d0_f5:10:g_d0_f6:F:7This comparison is done indirectly.  The Census Bureau strips personally identifiable information from
+10:260:20613:16:12:72:540:178:10:g_d0_f6:10:g_d0_f6:F:all of its internal files to protect the confidentiality of records.  Specifically the Census Bureau replaces and
+10:261:20726:12:12:72:540:166:10:g_d0_f6:10:g_d0_f6:F:individual’s name, address (and SSN if present) with a Protected Identification Key (PIK) using the PVS
+10:262:20829:12:12:72:540:154:10:g_d0_f6:10:g_d0_f6:F:system (Wagner and Layne, 2014).  Each name-address pairing has a unique PIK in the system.  The Census
+10:263:20932:12:8:72:440:142:10:g_d0_f6:10:g_d0_f6:F:Bureau assigned a PIK to the patent data using the name and location information.
+10:264:21013:8:16:85:539:134:7:g_d0_f5:10:g_d0_f6:F:8The PVS system does not guarantee an inventor in the USPTO database will receive a unique person
+10:265:21110:16:8:72:519:118:10:g_d0_f6:10:g_d0_f6:F:identifier.  In cases where the identifying information is not unique enough multiple PIKs are assigned.
+10:266:21214:8:12:85:360:110:7:g_d0_f5:10:g_d0_f6:F:9These might be holding entities with no associated employers.
+10:267:21276:12:0:81:500:98:7:g_d0_f5:10:g_d0_f6:F:10See Appendix A for details of the match and Table A8 for a breakdown of unmatched patents
+11:268:21368:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:rates by assignee type, with the vast majority of firm-assigned patents linked to employer
+11:269:21458:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:firms.  By contrast individual-assigned patents have much lower match rates.  Only about
+11:270:21546:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:50% of patents are associated with some form of business activity with most of it tied to
+11:271:21635:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:nonemployer  firms.   Only  30.4%  of  unassigned  patents  are  tied  to  some  form  of  business
+11:272:21734:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:activity.  We have no links to employer businesses since there is no available firm assignee
+11:273:21826:24:54:72:375:588:12:g_d0_f3:12:g_d0_f3:B:information in the patent document for these patent types.
+11:274:21884:54:36:72:531:534:17:g_d0_f2:17:g_d0_f2:C:4  Characteristics of Patented Household Innovations
+11:275:21936:36:24:72:540:498:12:g_d0_f3:12:g_d0_f3:B:In this section, we describe the characteristics of patents and inventors associated with what
+11:276:22030:24:24:72:540:474:12:g_d0_f3:12:g_d0_f3:B:we call patented household innovations which include patents that are either unassigned or
+11:277:22120:24:24:72:540:450:12:g_d0_f3:12:g_d0_f3:B:are assigned to individuals.  We contrast those with patents assigned to firms.  We start by
+11:278:22212:24:24:72:540:426:12:g_d0_f3:12:g_d0_f3:B:describing differences in the demographic composition of the inventors associated with the
+11:279:22302:24:46:72:422:402:12:g_d0_f3:12:g_d0_f3:B:patents, before delving into the characteristics of the actual patents.
+11:280:22373:46:32:72:273:356:14:g_d0_f2:14:g_d0_f2:C:4.1  Inventor Demographics
+11:281:22399:32:24:72:540:324:12:g_d0_f3:12:g_d0_f3:B:To highlight potential differences in demographic characteristics of inventors associated with
+11:282:22493:24:24:72:540:300:12:g_d0_f3:12:g_d0_f3:B:household  innovations  we  link  demographic  information  from  administrative  U.S.  Census
+11:283:22587:24:23:72:540:276:12:g_d0_f3:12:g_d0_f3:B:Bureau files to the inventors in the patent records.  They provide basic demographic infor-
+11:284:22678:23:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:mation including gender,  race,  country of origin and birth date for all people in the U.S.
+11:285:22770:24:24:72:226:229:12:g_d0_f3:12:g_d0_f3:B:with a social security number.
+11:286:22800:24:24:93:539:205:12:g_d0_f3:12:g_d0_f3:A:Information from the demographic files is linked by use of a Protected Identification Key
+11:287:22889:24:24:72:540:181:12:g_d0_f3:12:g_d0_f3:B:(PIK) available on both sets.  We are not able to uniquely identify all inventors in the patent
+11:288:22984:24:24:72:539:157:12:g_d0_f3:12:g_d0_f3:B:documents in our files due to limitations of the data.11There are 1.48M inventors associated
+11:289:23076:24:36:72:540:133:12:g_d0_f3:12:g_d0_f3:B:with  the  1.29M  patents  that  form  our  analysis.   We  are  able  to  obtain  demographics  for
+11:290:23176:36:15:81:539:97:7:g_d0_f5:10:g_d0_f6:F:11The identification would be greatly facilitated if the USPTO were able to collect either a birth date or
+11:291:23282:15:46:72:125:82:10:g_d0_f6:10:g_d0_f6:F:a SSN/TIN.
+11:292:23292:46:0:303:309:36:12:g_d0_f3:12:g_d0_f3:A:9
+12:293:23293:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:inventors on 856,000 of the 1.29M patents.12Overall we find inventors tied to firm assignees
+12:294:23385:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:are  more  likely  to  be  uniquely  identified  than  individual  assignees  or  unassigned  patents.
+12:295:23487:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:We also find that patents unmatched to demographic data are mostly concentrated in the
+12:296:23573:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:sectors  of  ”Design”  and  ”Plants”.   Details  of  the  matching  procedures  are  results  can  be
+12:297:23674:24:24:72:184:612:12:g_d0_f3:12:g_d0_f3:B:found in Appendix B.
+12:298:23694:24:24:93:539:588:12:g_d0_f3:12:g_d0_f3:A:Table 3 shows demographic information for the set of inventors we were able to identify
+12:299:23781:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:by assignee type and type of economic activity.  There are some notable differences in the
+12:300:23871:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:demographic composition of the patent types but also some similarities.  The first thing to
+12:301:23962:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:notice is that the vast majority of patents are filed by males.  This is true across all assignee
+12:302:24059:24:24:72:539:492:12:g_d0_f3:12:g_d0_f3:B:types  and  is  consistent  over  time.13Innovation  activity  whether  household  or  firm  based
+12:303:24157:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:is  a  male  dominated  activity.   This  is  consistent  with  Bell,  Chetty,  Jaravel,  Petkova,  and
+12:304:24260:23:24:72:415:445:12:g_d0_f3:12:g_d0_f3:B:Van Reenen (2016), who find a similar deficit in female innovators.
+12:305:24327:24:24:93:540:421:12:g_d0_f3:12:g_d0_f3:A:Firm-based patents disproportionately favor foreign-born inventors relative to individual-
+12:306:24417:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:assigned patents and unassigned patents, with approximately 1/3 of inventors affiliated with
+12:307:24509:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:firm-assigned patents being foreign born, compared to 20% for other assignee types.  Given
+12:308:24599:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:this it is perhaps not too surprising that firm-assigned patents are less likely to be associated
+12:309:24696:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:with black or white inventors and nearly twice as likely to be associated with “other” races
+12:310:24788:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:relative to individual-assigned and unassigned patents.  The share of foreign born inventors
+12:311:24880:24:24:72:539:277:12:g_d0_f3:12:g_d0_f3:B:outweighs their relative share in the labor force at 16.7% of the total in 2015.14We find there
+12:312:24975:24:24:71:520:253:12:g_d0_f3:8:g_d0_f4:B:is a deficit of black inventors across the board again consistent with Bell et al. (2016).15
+12:313:25067:24:24:93:539:229:12:g_d0_f3:12:g_d0_f3:A:Finally, individual-assigned and unassigned patents disproportionately favor both older
+12:314:25154:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:(over 55) and younger inventors (less than 25).  Nearly 1/3 of the household inventors are
+12:315:25244:23:36:72:540:182:12:g_d0_f3:12:g_d0_f3:B:55 years and older, compared to the 20% found in firm-assigned patents.  This is consistent
+12:316:25335:36:16:81:539:146:7:g_d0_f5:10:g_d0_f6:F:12We are able to identify demographics from 884,000 patents, but 28,000 of the patents are later classified
+12:317:25442:16:8:72:294:130:10:g_d0_f6:10:g_d0_f6:F:as reassigned, which are dropped from our analysis
+12:318:25492:8:12:81:221:122:7:g_d0_f5:10:g_d0_f6:F:13Time series results not shown.
+12:319:25524:12:12:81:485:110:7:g_d0_f5:10:g_d0_f6:F:14Shares of foreign born in the labor force are reported in Bureau of Labor Statistics (2016).
+12:320:25618:12:16:81:539:98:7:g_d0_f5:10:g_d0_f6:F:15Blacks and whites made a 12% and 79% respectively of the labor force population in 2015 (Bureau of
+12:321:25718:16:0:72:174:82:10:g_d0_f6:10:g_d0_f6:F:Labor Statistics, 2016).
+13:322:25744:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:with von Hippel, de Jong, and Flowers (2012) who find household innovations are dispro-
+13:323:25831:24:24:72:311:684:12:g_d0_f3:12:g_d0_f3:B:portionately tied to students and men over 55.
+13:324:25877:24:24:93:539:660:12:g_d0_f3:12:g_d0_f3:A:To summarize our findings,  household innovators (associated with individual assigned
+13:325:25962:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:and  unassigned  patents)  are  more  likely  to  be  US  born,  white,  less  than  25  and  over  55
+13:326:26064:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:than firm based innovators.  In the case of the latter, the proportion of household innovators
+13:327:26158:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:above the age of 55 is more than 12 percentage points higher (31.6 versus 18.8).  Across the
+13:328:26250:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:board we find a deficit of female and black inventors relative to the population of employed
+13:329:26342:24:46:72:368:540:12:g_d0_f3:12:g_d0_f3:B:workers and over representation of foreign born inventors.
+13:330:26400:46:32:72:230:494:14:g_d0_f2:14:g_d0_f2:C:4.2  Technology Class
+13:331:26421:32:24:72:540:462:12:g_d0_f3:12:g_d0_f3:B:We next focus on the types of technology classes associated with household innovations.  Pre-
+13:332:26514:24:24:72:540:438:12:g_d0_f3:12:g_d0_f3:B:vious research has focused on consumer product innovations and found innovations tended
+13:333:26601:24:24:72:540:414:12:g_d0_f3:12:g_d0_f3:B:to be focused in a few product classes.  Here we focus on the broader set of patented in-
+13:334:26690:24:23:72:540:390:12:g_d0_f3:12:g_d0_f3:B:novations.  We look at the technology composition by assignee-type.  We also look at those
+13:335:26780:23:24:72:540:367:12:g_d0_f3:12:g_d0_f3:B:that lead to direct business activity and those that do not.  For our classification, we use the
+13:336:26876:24:24:72:540:343:12:g_d0_f3:12:g_d0_f3:B:primary USPC code assigned to each patent and group them into eight broad classes con-
+13:337:26962:24:24:72:540:319:12:g_d0_f3:12:g_d0_f3:B:sisting of:  Chemicals, Computers and Communication (C&C), Design, Drugs and Medicine
+13:338:27047:24:24:72:540:295:12:g_d0_f3:12:g_d0_f3:B:(D&M), Electrical and Electronics (E&E), Mechanical, Plant Patents and Other. The group-
+13:339:27135:24:24:72:540:271:12:g_d0_f3:12:g_d0_f3:B:ing by USPC class is based on Hall, Jaffe, and Trajtenberg (2001) and expanded to include
+13:340:27224:24:24:72:540:247:12:g_d0_f3:12:g_d0_f3:B:new patent classes as detailed in Dreisigmeyer, Graham, Grim, Islam, Marco, and Miranda
+13:341:27311:24:24:72:540:223:12:g_d0_f3:12:g_d0_f3:B:(2014).  Table 4 shows the breakdown by assignee type.  We find firm assigned patents are
+13:342:27400:24:24:72:540:199:12:g_d0_f3:12:g_d0_f3:B:disproportionately  in  Chemical,  C&C  and  E&E  relative  to  individual  assignee  and  unas-
+13:343:27496:24:24:72:540:175:12:g_d0_f3:12:g_d0_f3:B:signed  patents.   By  contrast  they  are  underrepresented  in  Design,  Mechanical  and  Other.
+13:344:27594:24:24:72:540:151:12:g_d0_f3:12:g_d0_f3:B:Table A12 in Appendix C provides a listing of technology subcategories associated with each
+13:345:27685:24:23:72:540:127:12:g_d0_f3:12:g_d0_f3:B:broad class.  Amongst the technologies included in Mechanical and Others are Motors, En-
+13:346:27773:23:24:72:540:104:12:g_d0_f3:12:g_d0_f3:B:gines & Parts, Transportation and Miscellaneous such as hardware and tools.  Others include
+13:347:27864:24:0:72:540:80:12:g_d0_f3:12:g_d0_f3:B:Amusement Devices, Apparel & Textile, and Furniture & House Fixtures and miscellaneous
+14:348:27952:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:such as Robots and Aquatic Devices.  All fairly typical consumer products.  Design patents
+14:349:28042:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:provide protection to ornamental designs embodied in or applied to an article of manufac-
+14:350:28131:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:ture.  Analysis of the top 50 companies having been granted design patents shows that these
+14:351:28222:24:24:72:473:636:12:g_d0_f3:8:g_d0_f4:B:are dominated by technology, automotive, and consumer product companies.16
+14:352:28296:24:24:93:539:612:12:g_d0_f3:12:g_d0_f3:A:Table 5 breaks down the previous table by business activity.  The patterns here repli-
+14:353:28382:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:cate the findings discussed regardless of business type.  A few things stand out.  First, the
+14:354:28475:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:majority of Design patents are not associated with business activity and remain unmatched.
+14:355:28565:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:This is true for both individual assigned and unassigned patents and suggests fundamental
+14:356:28654:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:differences  perhaps  in  the  value  of  design  patents  vis-a-vis  utility  patents  and  maybe  the
+14:357:28757:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:requirements for grant.  Second, patents with a firm assignee in the Drugs & Medical class
+14:358:28847:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:are harder to match to business databases perhaps due to the complex structure of firms
+14:359:28934:23:24:72:159:445:12:g_d0_f3:12:g_d0_f3:B:developing them.
+14:360:28950:24:24:93:539:421:12:g_d0_f3:12:g_d0_f3:A:We combine our technology classes with the individual demographics to identify compo-
+14:361:29035:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:sitional differences between employer patents and household innovations.  Table 6 takes the
+14:362:29126:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:difference in the proportion of patents by technology class and demographic characteristic
+14:363:29216:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:between nonemployer patents and employer patents.  The table highlights several key differ-
+14:364:29307:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:ences, most of which are significant.  Design patents clearly differentiate themselves in terms
+14:365:29402:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:of demographics.  The previous sections have alluded to the fact that nonemployer patents
+14:366:29491:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:are disproportionately male, U.S. born, white and older than employer patents.  However,
+14:367:29579:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:this does not seem to be the case for Design patents, where the opposite holds.  It appears
+14:368:29670:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:design patents in employer businesses are disproportionally associated with white, male, U.S.
+14:369:29763:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:born  inventors  where they  might hold  a  relative  advantage  signaling to  the  very  different
+14:370:29862:23:36:72:237:182:12:g_d0_f3:12:g_d0_f3:B:nature of these types of patents.
+14:371:29895:36:0:81:422:146:7:g_d0_f5:10:g_d0_f6:F:16For details see report from Intellectual Property Owners Association (2015).
+15:372:29975:0:32:72:181:708:14:g_d0_f2:14:g_d0_f2:C:4.3  Team Size
+15:373:29989:32:24:72:540:676:12:g_d0_f3:12:g_d0_f3:B:Evidence from surveys and product studies suggest the complexity and knowledge embodied
+15:374:30076:24:24:72:540:652:12:g_d0_f3:12:g_d0_f3:B:in  household  innovations  might  not  run  very  deep.   A  typical  story  might  be  that  of  a
+15:375:30176:24:24:72:540:628:12:g_d0_f3:12:g_d0_f3:B:consumer that modifies the face of a clock to teach their kids how to tell time.17Consistent
+15:376:30268:24:24:72:540:604:12:g_d0_f3:12:g_d0_f3:B:with  this  survey  data  also  shows  that  the  average  expenditure  in  developing  a  household
+15:377:30368:24:24:72:540:580:12:g_d0_f3:12:g_d0_f3:B:innovation is not very high.  In this section we explore whether this is also true of patented
+15:378:30462:24:24:72:540:556:12:g_d0_f3:12:g_d0_f3:B:household  innovations.   We  follow  Jones  (2009)  and  use  team  size  as  a  measure  of  the
+15:379:30560:24:23:72:540:532:12:g_d0_f3:12:g_d0_f3:B:complexity and depth of knowledge associated with a particular innovation.  The burden of
+15:380:30649:23:24:72:516:509:12:g_d0_f3:12:g_d0_f3:B:knowledge hypothesis would indicate household innovations require smaller team sizes.
+15:381:30734:24:24:93:539:485:12:g_d0_f3:12:g_d0_f3:A:Figure  1  plots  the  distribution  of  team  sizes  by  assignee  types  and  shows  that  firm-
+15:382:30832:24:24:72:540:461:12:g_d0_f3:12:g_d0_f3:B:assigned patents tend to be significantly larger on average.  The size distribution for individ-
+15:383:30928:24:24:72:540:437:12:g_d0_f3:12:g_d0_f3:B:ual assignee and unassigned patents is fairly similar and rests well to the left of firm assigned
+15:384:31025:24:24:72:540:413:12:g_d0_f3:12:g_d0_f3:B:patents.   A  large  share  of  individual-assigned  and  unassigned  patents  are  developed  by  a
+15:385:31125:24:24:72:540:389:12:g_d0_f3:12:g_d0_f3:B:single inventor relative to patents assigned to firms.  There are single inventors on 60.7% of
+15:386:31219:24:24:72:540:365:12:g_d0_f3:12:g_d0_f3:B:individual-assigned patents and 83.5% of unassigned patents versus 30.8% on firm-assigned
+15:387:31308:24:24:72:540:341:12:g_d0_f3:12:g_d0_f3:B:patents.  Table 7 tabulates the mean team size by assignee type, technology class and type
+15:388:31398:24:24:72:540:317:12:g_d0_f3:12:g_d0_f3:B:of business and finds similar results across them.  Team sizes for patents matched to nonem-
+15:389:31490:24:24:72:540:293:12:g_d0_f3:12:g_d0_f3:B:ployer business tend to be significantly smaller on average than patents matched to employer
+15:390:31582:24:23:72:540:269:12:g_d0_f3:12:g_d0_f3:B:firms, having on average nearly one less team member.  Patents with no associated business
+15:391:31672:23:24:72:540:246:12:g_d0_f3:12:g_d0_f3:B:activity have the smallest team size on average.  Consistent with Jones (2009) and Kim and
+15:392:31762:24:24:72:540:222:12:g_d0_f3:12:g_d0_f3:B:Marschke (2015) Drugs and Medicines and Chemicals tend to be composed of the largest
+15:393:31846:24:36:72:415:198:12:g_d0_f3:12:g_d0_f3:B:inventor teams, while Design patents consist of the smallest teams.
+15:394:31913:36:126:81:375:162:7:g_d0_f5:10:g_d0_f6:F:17This story is taken from von Hippel, de Jong, and Flowers (2012)
+15:395:31979:126:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:13
+16:396:31981:0:32:72:158:708:14:g_d0_f2:14:g_d0_f2:C:4.4  Impact
+16:397:31992:32:24:72:540:676:12:g_d0_f3:12:g_d0_f3:B:Household survey data indicates the impact and quality of household innovations might not
+16:398:32081:24:24:72:540:652:12:g_d0_f3:12:g_d0_f3:B:be very high.  Survey respondents often indicate they do not expect their inventions to be
+16:399:32171:24:24:72:540:628:12:g_d0_f3:12:g_d0_f3:B:adopted.  In this section we explore whether this extends to patented household innovations.
+16:400:32263:24:24:72:540:604:12:g_d0_f3:12:g_d0_f3:B:In  this  section  we  follow  the  literature  and  use  citation  counts  as  a  noisy  measure  of  the
+16:401:32369:24:24:72:540:580:12:g_d0_f3:12:g_d0_f3:B:quality of a patent and their technological impact.  We then use a new measure of impact
+16:402:32457:24:24:72:540:556:12:g_d0_f3:12:g_d0_f3:B:that  takes  account  of  the  structure  of  forward  and  backward  looking  citations  to  identify
+16:403:32559:24:23:72:540:532:12:g_d0_f3:12:g_d0_f3:B:radical patents.  Finally we examine whether these innovations are general purpose or instead
+16:404:32652:23:24:72:540:509:12:g_d0_f3:12:g_d0_f3:B:narrow in application.  We ignore truncation issues in the analysis assuming similar impacts
+16:405:32744:24:41:72:192:485:12:g_d0_f3:12:g_d0_f3:B:across types of patents.
+16:406:32768:41:32:72:167:444:12:g_d0_f2:12:g_d0_f2:C:4.4.1  Citations
+16:407:32784:32:24:72:540:412:12:g_d0_f3:12:g_d0_f3:B:For our citation measures we use the latest citation count (as of December 2015) collected
+16:408:32874:24:23:72:540:388:12:g_d0_f3:12:g_d0_f3:B:from PatentsView and link them to our dataset.  Figure 2 shows the distribution of citation
+16:409:32965:23:24:72:540:365:12:g_d0_f3:12:g_d0_f3:B:counts by assignee type. Table 8 reports the means by assignee type, business type and broad
+16:410:33057:24:24:72:540:341:12:g_d0_f3:12:g_d0_f3:B:technology class.  On average, individual-assigned patents have a lower mean citation count
+16:411:33148:24:24:72:540:317:12:g_d0_f3:12:g_d0_f3:B:than firm-assigned patents.  The mean citation for firm-assigned patents is 16.4, while the
+16:412:33239:24:24:72:539:293:12:g_d0_f3:8:g_d0_f4:B:mean citation count for individual-assigned patents is 11.3 and 10.2 for unassigned patents.18
+16:413:33333:24:24:72:540:269:12:g_d0_f3:12:g_d0_f3:B:The  difference  in  average  citation  counts  is  driven  in  part  by  an  across  the  board  lower
+16:414:33436:24:24:72:540:245:12:g_d0_f3:12:g_d0_f3:B:citation count across technology classes.  However, some of the largest differences in mean
+16:415:33527:24:24:72:540:221:12:g_d0_f3:12:g_d0_f3:B:citation counts can be found in the Design, Mechanical and Others categories precisely the
+16:416:33617:24:24:72:540:197:12:g_d0_f3:12:g_d0_f3:B:areas  where  household  innovations  are  concentrated  so  composition  effects  contributes  to
+16:417:33715:24:24:72:540:173:12:g_d0_f3:12:g_d0_f3:B:the overall difference.  More interestingly perhaps is the finding that household innovations
+16:418:33808:24:35:72:540:149:12:g_d0_f3:12:g_d0_f3:B:are quite heavily cited on average and in some areas such as Computers & Communications
+16:419:33895:35:16:81:539:114:7:g_d0_f5:10:g_d0_f6:F:18Approximately 160,000 patents out of the 1.29M have zero citations.  The proportion of patents with
+16:420:33996:16:12:72:540:98:10:g_d0_f6:10:g_d0_f6:F:zero  citations  by  matched  data  and  assignee  type  is  approximately  equivalent  to  the  proportion  of  total
+16:421:34114:12:50:72:263:86:10:g_d0_f6:10:g_d0_f6:F:patents by matched data and assignee type.
+16:422:34156:50:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:14
+17:423:34158:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:and Electrical & Electronic the difference is not very large.  Looking at the citations across
+17:424:34252:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:type of business activity we find patents have a mean citation count of 16.4, 13.4, and 11.4
+17:425:34344:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:respectively for patents associated with employer businesses, nonemployer businesses and no
+17:426:34435:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:business activity.  Again, these differences appear to be driven by composition effects as well
+17:427:34530:24:24:72:432:612:12:g_d0_f3:12:g_d0_f3:B:as generally lower citation counts within particular technology classes.
+17:428:34602:24:24:93:539:588:12:g_d0_f3:12:g_d0_f3:A:To examine differences in citation counts after controlling for technology composition we
+17:429:34691:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:run a Poisson regression on citations looking at the impact of business type after controlling
+17:430:34785:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:for patent class (main USPC code) and grant year.  The results are found in Table 9.  Column
+17:431:34877:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:(1) looks at citation impact by business type and Column (2) by assignee type.  Focusing on
+17:432:34968:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:Column (1) we see the difference in the logs of expected citations is 0.288 units higher for
+17:433:35060:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:patents matched to employer firms and 0.06 units higher for patents matched to nonemployer
+17:434:35150:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:firms relative to unmatched patents, holding everything else constant.  This is equivalent to
+17:435:35243:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:a  citation  count  that  is  33.4%  higher  for  employer-matched  patents  and  6.2%  higher  for
+17:436:35342:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:nonemployer-matched  patents,  for  a  difference  of  27%  in  citations  between  employer  and
+17:437:35439:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:nonemployer patents.  Looking at the differences in citations by assignee type, Column (2)
+17:438:35529:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:we find a similar difference between firm assigned patents and individual assigned patents.
+17:439:35620:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:The coefficient values give a difference in the logs of expected citations to be 0.096 units higher
+17:440:35719:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:for firm assigned patents and -0.247 units lower for individual assigned patents relative to
+17:441:35811:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:reassigned patents.  This is equivalent to a citation count that is 10% higher for firm assigned
+17:442:35907:24:40:72:474:253:12:g_d0_f3:12:g_d0_f3:B:patents and 22% lower for individual assigned patents, for a difference of 32%.
+17:443:35986:40:32:72:206:213:12:g_d0_f2:12:g_d0_f2:C:4.4.2  Radical Patents
+17:444:36008:32:24:72:540:181:12:g_d0_f3:12:g_d0_f3:B:Households  innovators  will  be  relatively  resource  constrained  compared  to  firms.   These
+17:445:36105:24:24:72:540:157:12:g_d0_f3:12:g_d0_f3:B:innovators might choose to focus on technologies that require smaller investments and prior
+17:446:36196:24:24:72:540:133:12:g_d0_f3:12:g_d0_f3:B:knowledge  –they  are  not  complex.   Consistent  with  this  idea  section  4.2  documented  the
+17:447:36294:24:24:72:540:109:12:g_d0_f3:12:g_d0_f3:B:disproportionate weight design patents have amongst household innovators.  In this section
+17:448:36384:24:0:72:540:85:12:g_d0_f3:12:g_d0_f3:B:we explore whether this might lead them also to work on innovations that represent breaks
+18:449:36475:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:with past knowledge within specific technology fields. In this section we assess the proportion
+18:450:36570:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:of breakthrough patents amongst patented household innovations as defined by whether they
+18:451:36659:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:represent a “radical” break from existing knowledge in that field.  Since it is the focal point
+18:452:36754:24:24:72:402:636:12:g_d0_f3:12:g_d0_f3:B:of a new technological trajectory the patent itself must be cited.
+18:453:36820:24:24:93:539:612:12:g_d0_f3:12:g_d0_f3:A:Our measure builds on the concepts of Dahlin and Behrens (2005) but is extended to
+18:454:36902:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:the universe of patents in the USPTO patent database (Dreisigmeyer et al., 2014).  Dahlin
+18:455:36991:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:and Behrens (2005) define the term radical invention as one that meets three properties:  1)
+18:456:37083:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:it is novel - it has distinctive features that are missing in previously observed inventions; 2)
+18:457:37179:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:it is unique - it is the focal point of a new technological trajectory; 3) it must be adopted - it
+18:458:37277:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:should influence future inventions.  The authors operationalize this idea by examining both
+18:459:37368:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:forward and backward citation patterns for any given patent.  Forward citations are citations
+18:460:37461:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:to a patent made by other later patents.  It is a measure of the patents impact on future
+18:461:37550:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:inventions and its value in the market.  Backward citations are defined by the prior art cited
+18:462:37644:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:by the patent itself.  Backward citations contain information about the radicalness of the
+18:463:37734:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:innovation.  The more radical a technology the more likely it is to cite prior art outside its
+18:464:37828:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:own patent class since this will necessarily involve combining different elements rather than
+18:465:37921:24:24:72:220:325:12:g_d0_f3:12:g_d0_f3:B:inventions from its own field.
+18:466:37951:24:24:93:539:301:12:g_d0_f3:12:g_d0_f3:A:Table  10  reports  the  number  of  patents  (per  thousand)  that  qualify  as  being  radical
+18:467:38047:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:by assignee type, business type and technology class.  In general, patents matched to em-
+18:468:38136:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:ployer firms are more than twice as likely to be considered radical versus patents matched to
+18:469:38229:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:nonemployer firms and unmatched patents.  This does not appear to be driven by composi-
+18:470:38316:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:tional differences in the patent types, as employer-match patents and firm-assigned patents
+18:471:38407:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:consistently have higher rates of radical patents across all technology classes.  Design patents
+18:472:38503:24:24:72:540:158:12:g_d0_f3:12:g_d0_f3:B:appear to have high rates of radical innovations.  Many of these appear to be self referencing
+18:473:38597:24:24:72:540:134:12:g_d0_f3:12:g_d0_f3:B:and not have much of an impact outside the patenting firm suggesting these might be dis-
+18:474:38685:24:24:72:540:110:12:g_d0_f3:12:g_d0_f3:B:proportionately defensive patents.  While there are relatively fewer radical patents amongst
+18:475:38777:24:0:72:540:86:12:g_d0_f3:12:g_d0_f3:B:household innovators there is still a non trivial number of them.  We examine some of the
+19:476:38868:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:radical patents identified.  The bulk of them are found in Computers & Communications,
+19:477:38954:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:Design, and Drugs & Medical.  They include a system for providing traffic information to
+19:478:39042:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:a plurality of mobile users connected to a network, a system for dynamically pushing infor-
+19:479:39133:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:mation to a user utilizing global positioning system, a method and apparatus for securing
+19:480:39222:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:a suture and a flash memory drive with quick connector.  All these technologies had broad
+19:481:39311:24:41:72:187:588:12:g_d0_f3:12:g_d0_f3:B:impacts in their fields.
+19:482:39335:41:31:72:213:547:12:g_d0_f2:12:g_d0_f2:C:4.4.3  Generality Index
+19:483:39358:31:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:Finally we describe the breath of impact patented household innovations have outside of their
+19:484:39451:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:own field.  Some technologies are more specific with a limited application across industries
+19:485:39543:24:24:72:540:468:12:g_d0_f3:12:g_d0_f3:B:while  others  have  a  wider  field  of  application.   We  use  the  patent  classification  codes  to
+19:486:39647:24:24:72:540:444:12:g_d0_f3:12:g_d0_f3:B:generate  a  measure  of  generality,Gi,  that  is  close  to  that  used  by  Hall  and  Trajtenberg
+19:487:39748:24:49:71:160:420:12:g_d0_f3:12:g_d0_f3:B:(2004) as follows:
+19:488:39766:49:0:269:294:371:12:g_d0_f8:12:g_d0_f3:A:Gi=
+19:489:39769:0:14:297:310:394:12:g_d0_f10:12:g_d0_f10:C:√√
+19:490:39771:14:7:297:310:380:12:g_d0_f10:12:g_d0_f10:C:√
+19:491:39772:7:0:297:310:373:12:g_d0_f10:12:g_d0_f10:C:√
+19:492:39773:0:29:316:327:386:8:g_d0_f9:12:g_d0_f10:C:n∑
+19:493:39775:29:0:317:320:357:8:g_d0_f9:8:g_d0_f9:F:j
+19:494:39776:0:39:329:341:371:12:g_d0_f8:8:g_d0_f9:C:s2ij
+19:495:39780:39:24:72:539:332:12:g_d0_f3:12:g_d0_f3:B:wheresijdenotes the percentage of citations received by patentithat belong to patent class
+19:496:39870:24:24:72:540:308:12:g_d0_f8:12:g_d0_f3:B:j,  out ofnpatent classes.  This is simply the square root of the Herfindahl concentration
+19:497:39960:24:24:72:540:284:12:g_d0_f3:12:g_d0_f3:B:index and therefore if a patent is cited by subsequent patents that belong to a wide range of
+19:498:40053:24:24:72:540:260:12:g_d0_f3:12:g_d0_f3:B:fields the measure will be low and close to zero.  By contrast if the citations are concentrated
+19:499:40149:24:24:72:540:236:12:g_d0_f3:12:g_d0_f3:B:in a few fields the measure will be close to 1.  Further, if a patent has a single citation in
+19:500:40243:24:24:72:540:212:12:g_d0_f3:12:g_d0_f3:B:the same technological field this measure will be equal to 1 and it won’t be defined when it
+19:501:40335:24:24:72:186:188:12:g_d0_f3:8:g_d0_f4:B:receives no citations.19
+19:502:40359:24:24:93:539:164:12:g_d0_f3:12:g_d0_f3:A:We compute a Generality Index for patents in our sample that were granted up through
+19:503:40443:24:35:72:540:140:12:g_d0_f3:12:g_d0_f3:B:2008  to limit  the  impact of  right  censoring.   Table  11  looks at  the  mean generality  index
+19:504:40543:35:16:81:539:105:7:g_d0_f5:10:g_d0_f6:F:19This modified measure of generality retains important properties of metric spaces (or distance functions)
+19:505:40650:16:53:72:454:89:10:g_d0_f6:10:g_d0_f6:F:that allow us to measure the distance, instead of just a similarity, between two patents.
+19:506:40739:53:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:17
+20:507:40741:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:by assignee type,  type of business activity and technology class.  In general firm assigned
+20:508:40833:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:patents find application across a broader set of technological fields.  This is particularly true
+20:509:40930:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:for  Chemical,  Drugs  &  Medical  and  Mechanical.   Independent  inventors  appear  to  focus
+20:510:41025:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:on technologies that have narrower impacts.  Across the board and as expected patents in
+20:511:41113:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:Computers & Communications and Chemical have broader applicability receiving the highest
+20:512:41201:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:number of citations outside their field.  By contrast Design patents have the most limited
+20:513:41291:24:54:72:132:564:12:g_d0_f3:12:g_d0_f3:B:application.
+20:514:41303:54:36:72:395:510:17:g_d0_f2:17:g_d0_f2:C:5  Business Formation and Outcomes
+20:515:41337:36:24:72:540:474:12:g_d0_f3:12:g_d0_f3:B:Having established how patents associated with household innovations differ from traditional
+20:516:41429:24:24:72:540:450:12:g_d0_f3:12:g_d0_f3:B:patents, this section looks at the types of business associated with household innovations;
+20:517:41520:24:24:72:540:426:12:g_d0_f3:12:g_d0_f3:B:their  characteristics,  innovation  dynamics  and  outcomes.   The  goal  is  to  assess  whether
+20:518:41618:24:24:72:540:402:12:g_d0_f3:12:g_d0_f3:B:the innovator is able to monetize their innovation, either through increased business income
+20:519:41710:24:23:72:540:378:12:g_d0_f3:12:g_d0_f3:B:possibly from licensing or use of the patent. There are other ways the inventor might monetize
+20:520:41804:23:24:72:539:355:12:g_d0_f3:12:g_d0_f3:B:their innovation that we do not observe here such as through direct payments.20It should be
+20:521:41895:24:24:72:540:331:12:g_d0_f3:12:g_d0_f3:B:noted that the majority of patented household innovations are not directly tied to a business
+20:522:41988:24:24:72:540:307:12:g_d0_f3:12:g_d0_f3:B:that the inventor owns.  Table 5 shows that only 19% of patented household innovations;
+20:523:42075:24:24:72:540:283:12:g_d0_f3:12:g_d0_f3:B:those  accounted  for  by  individual  assignee  and  unassigned  patents,  are  associated  with  a
+20:524:42175:24:47:72:495:259:12:g_d0_f3:12:g_d0_f3:B:business.  The equivalent rate for patents with a declared business assignee is 93%.
+20:525:42259:47:31:72:526:212:14:g_d0_f2:14:g_d0_f2:C:5.1  Characteristics of Patenting Firms: Industry, Age and Size
+20:526:42322:31:24:72:540:181:12:g_d0_f3:12:g_d0_f3:B:We  start  by  looking  at  the  industry  composition  of  the  nonemployer  firms  that  obtain  a
+20:527:42422:24:24:72:540:157:12:g_d0_f3:12:g_d0_f3:B:patent. Patenting nonemployer firms are extremely rare. Out of more than 20M nonemployer
+20:528:42510:24:37:72:540:133:12:g_d0_f3:12:g_d0_f3:B:firms  in  a  typical  year,  only  around  5,000  firms  will  seek  out  a  patent  (less  than  0.03%).
+20:529:42616:37:60:81:403:96:7:g_d0_f5:10:g_d0_f6:F:20This form of income might be observed through their income tax forms.
+20:530:42687:60:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:18
+21:531:42689:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:We limit our analysis to nonemployer firms that are born after 2000.  We exclude existing
+21:532:42778:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:nonemployers born prior to avoid left censoring in the patents we can match.21Figure 3 shows
+21:533:42870:24:24:71:539:660:12:g_d0_f3:12:g_d0_f3:B:the industry composition of patenting nonemployer firms weighted by number of patents they
+21:534:42960:24:24:71:539:636:12:g_d0_f3:12:g_d0_f3:B:own,  top,  and that of all nonemployer firms,  bottom.  Figure 3 shows,  a disproportionate
+21:535:43052:24:24:71:539:612:12:g_d0_f3:12:g_d0_f3:B:share of patents originate at nonemployer firms that engage in Professional Services followed
+21:536:43145:24:24:71:539:588:12:g_d0_f3:12:g_d0_f3:B:by Finance & Real State and Retail.  This is very different from the industry composition of
+21:537:43237:24:24:71:453:564:12:g_d0_f3:12:g_d0_f3:B:nonemployer firms, which is dispersed much more evenly across industries.
+21:538:43310:24:24:93:539:540:12:g_d0_f3:12:g_d0_f3:A:Businesses associated with household innovations differ from the overall population of
+21:539:43396:24:24:71:539:516:12:g_d0_f3:12:g_d0_f3:B:nonemployer businesses.  We are interested in understanding whether the trigger for creating
+21:540:43488:24:24:71:539:492:12:g_d0_f3:12:g_d0_f3:B:these businesses is the expectation of a patent grant and thus a means to try to capitalize on
+21:541:43582:24:23:71:539:468:12:g_d0_f3:12:g_d0_f3:B:an innovation or instead the business activity predates the patent application.  We explore
+21:542:43673:23:24:71:539:445:12:g_d0_f3:12:g_d0_f3:B:similar patterns for firms with employees.  Figure 4 graphs the distribution of firm age when
+21:543:43766:24:24:71:539:421:12:g_d0_f3:8:g_d0_f4:B:the firm/inventor applies for their first patent for both employer and nonemployer firms.22
+21:544:43857:24:24:71:450:397:12:g_d0_f3:12:g_d0_f3:B:We define firm age based on the year the business first filed income taxes.
+21:545:43932:24:24:93:539:373:12:g_d0_f3:12:g_d0_f3:A:We  look  at  applications  by  patenting  firms  in  2010.   We  limit  our  analysis  to  firms
+21:546:44029:24:24:71:539:349:12:g_d0_f3:12:g_d0_f3:B:up  to  age  10.   If  a  firm  first  files  income  taxes  after  the  application  is  filed  we  assign  a
+21:547:44139:24:24:71:539:325:12:g_d0_f3:12:g_d0_f3:B:negative age equal to the difference between application year and birth year.  Figure 4 shows
+21:548:44232:24:24:71:539:301:12:g_d0_f3:12:g_d0_f3:B:a significant share of businesses apply for their patent before they generate revenue.  The
+21:549:44323:24:24:71:539:277:12:g_d0_f3:12:g_d0_f3:B:mass of distribution is to the left of their second year of business activity.  Approximately
+21:550:44416:24:24:71:539:253:12:g_d0_f3:12:g_d0_f3:B:43.6% of nonemployer firms that are granted a patent apply for the patent prior to starting
+21:551:44507:24:24:71:539:229:12:g_d0_f3:12:g_d0_f3:B:their  nonemployer  business  activity.   For  many  other  businesses  the  birth  of  the  business
+21:552:44608:24:23:71:289:205:12:g_d0_f3:12:g_d0_f3:B:coincides with the patent application year.
+21:553:44651:23:24:93:539:182:12:g_d0_f3:12:g_d0_f3:A:A  non  trivial  number  of  patent  applications,  18%,  are  filed  three  or  more  years  after
+21:554:44750:24:36:71:279:158:12:g_d0_f3:12:g_d0_f3:B:starting the business activity suggesting.
+21:555:44792:36:16:81:539:122:7:g_d0_f5:10:g_d0_f6:F:21Currently we can only work with patent data starting in 2000.  If we were to include incumbent nonem-
+21:556:44895:16:8:72:517:106:10:g_d0_f6:10:g_d0_f6:F:ployers in 2000 there would be no way for us to determine which ones received a patent prior to 2000.
+21:557:44996:8:62:81:234:98:7:g_d0_f5:10:g_d0_f6:F:22We only observe granted patents.
+21:558:45030:62:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:19
+22:559:45032:0:24:93:539:708:12:g_d0_f3:12:g_d0_f3:A:Compared  to  employer  businesses  household  innovators  are  more  likely  to  start  their
+22:560:45126:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:business at time of application, although the two distributions are centered around age zero.
+22:561:45219:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:The  tighter  distribution  for  nonemployers  can  be  attributed  to  the  shortened  lifecycle  of
+22:562:45320:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:nonemployer firms, most of whom are very short-lived with more than 50% of nonemployer
+22:563:45406:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:firms  exiting  before  year  2  and  70%  of  nonemployer  firms  exiting  by  year  3  (Fairlie  and
+22:564:45508:24:24:72:150:588:12:g_d0_f3:12:g_d0_f3:B:Miranda, 2017)
+22:565:45522:24:24:93:539:564:12:g_d0_f3:12:g_d0_f3:A:We are interested in understanding the revenue generated by household innovations vis-
+22:566:45608:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:a-vis  innovations  tied  to  established  employer  businesses.   Figure  5  looks  at  the  revenue
+22:567:45709:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:distribution  for  firms  that  own  patents  as  a  function  of  their  employer  status.   As  before
+22:568:45813:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:we focus on the cross section of firms age 10 or less in 2010.  Revenue follows a log-normal
+22:569:45905:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:pattern with the distribution centered at $10,000 for household innovations.23Revenue for
+22:570:45994:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:innovative employer businesses is similarly shaped but centered around much larger revenues
+22:571:46085:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:of $1.2 million.  Businesses associated with household innovations do not appear to generate
+22:572:46177:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:much income on average at time of application.  There is however a fairly wide distribution
+22:573:46268:24:24:72:263:373:12:g_d0_f3:12:g_d0_f3:B:with a standard deviation of $97,500.
+22:574:46305:24:24:93:539:349:12:g_d0_f3:12:g_d0_f3:A:Figure 6 looks at income growth before and after patent grant.  To avoid composition
+22:575:46389:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:effects  as  a  result  of  firm  exit  we  show  results  for  a  balanced  panel  of  firms  that  survive
+22:576:46497:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:for a minimum of 5 years.  For comparison we show revenue for employer businesses.  We
+22:577:46583:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:normalize  revenue  to  equal  100  at  grant  time,t,  to  facilitate  comparison  with  employer
+22:578:46681:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:businesses.   Figure  6  shows  income  growth  prior  to  patent  grant  is  considerable  and  very
+22:579:46782:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:similar for both employer and nonemployer business.  In the two years prior to patent grant
+22:580:46873:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:revenue grows by 25% relative to the base.  Income plateaus for nonemployer business shortly
+22:581:46965:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:after grant and starts declining one year after.  Very few firms transition to employer status
+22:582:47059:24:24:72:471:158:12:g_d0_f3:12:g_d0_f3:B:so this pattern is not due to excluding successful exits out of nonemployment.
+22:583:47137:24:36:93:539:134:12:g_d0_f3:12:g_d0_f3:A:Revenue growth by employer businesses seems to be very different after grant.  These
+22:584:47221:36:16:81:539:98:7:g_d0_f5:10:g_d0_f6:F:23It should be noted that firms who patent prior to starting their business (negative age firms) are not
+22:585:47325:16:46:72:192:82:10:g_d0_f6:10:g_d0_f6:F:included in the distribution
+22:586:47353:46:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:20
+23:587:47355:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:firms display an acceleration of revenue that seems to exhaust itself two years after grant.
+23:588:47447:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:Overall these results suggest that on average household innovators are not as successful in
+23:589:47538:24:47:72:282:660:12:g_d0_f3:12:g_d0_f3:B:capitalizing their innovations after grant.
+23:590:47581:47:31:72:429:613:14:g_d0_f2:14:g_d0_f2:C:5.2  Dynamics and Transition to Employer Status
+23:591:47628:31:24:72:540:582:12:g_d0_f3:12:g_d0_f3:B:Finally, we look at the probability that a nonemployer business hires employees in particular
+23:592:47721:24:24:72:540:558:12:g_d0_f3:12:g_d0_f3:B:whether patenting activity is associated with the successful growth expansion to a business
+23:593:47812:24:24:72:540:534:12:g_d0_f3:12:g_d0_f3:B:that generates paid jobs for other individuals.  For this exercise we focus on the cohort of new
+23:594:47908:24:24:72:540:510:12:g_d0_f3:12:g_d0_f3:B:nonemployer startups in 2000 and ask ourselves how many transition into employer status
+23:595:47995:24:24:72:151:486:12:g_d0_f3:12:g_d0_f3:B:each year after.
+23:596:48011:24:24:93:539:462:12:g_d0_f3:12:g_d0_f3:A:We  find  that  of  the  approximately  5.24M  new  nonemployer  entrants  in  2000,  around
+23:597:48103:24:24:72:540:438:12:g_d0_f3:12:g_d0_f3:B:100,000 eventually transition to employer firms over their life,  for a cumulative transition
+23:598:48196:24:24:72:540:414:12:g_d0_f3:12:g_d0_f3:B:rate of approximately 2%.  Of this cohort, 3,700 nonemployer firms hold a patent.  Of these,
+23:599:48288:24:23:72:540:390:12:g_d0_f3:12:g_d0_f3:B:less than 130 will transition to employer firms over their life cycle, for a cumulative transition
+23:600:48386:23:24:72:540:367:12:g_d0_f3:12:g_d0_f3:B:rate of around 3.4%, or 70% higher than non patenting firms.  Annual transitions are graphed
+23:601:48478:24:24:72:540:343:12:g_d0_f3:12:g_d0_f3:B:in Figure 7.  As we can see, patenting firms are more than twice as likely to transition to
+23:602:48569:24:47:72:447:319:12:g_d0_f3:12:g_d0_f3:B:employer firms within the first two years, relative to non patenting firms.
+23:603:48644:47:31:72:362:272:14:g_d0_f2:14:g_d0_f2:C:5.3  The value of Household Innovations
+23:604:48683:31:24:72:540:241:12:g_d0_f3:12:g_d0_f3:B:Relatively few household innovations become the foundation of a business.  However, those
+23:605:48772:24:24:72:540:217:12:g_d0_f3:12:g_d0_f3:B:that do give us an indication of the value of these innovations if only from the revenue they
+23:606:48865:24:24:72:540:193:12:g_d0_f3:12:g_d0_f3:B:generate.   Household  innovations  that  do  not  directly  translate  into  a  business  owned  by
+23:607:48965:24:24:72:540:169:12:g_d0_f3:12:g_d0_f3:B:the inventor might be expected to generate income in other ways that we do not observe
+23:608:49051:24:24:72:540:145:12:g_d0_f3:12:g_d0_f3:B:in  the  data  such  as  contracts  or  direct  payments.   Many  other  might  be  monetized  by
+23:609:49148:24:24:72:540:121:12:g_d0_f3:12:g_d0_f3:B:incumbent  companies  with  specific  market  knowledge  and  resources  to  market  and  profit
+23:610:49244:24:24:72:540:97:12:g_d0_f3:12:g_d0_f3:B:from the innovation.  Many other may simply never be pursued directly but contribute to
+23:611:49331:24:0:72:540:73:12:g_d0_f3:12:g_d0_f3:B:the knowledge base that generate other innovations.  Other innovations might go unnoticed
+24:612:49422:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:and yet other may simply have no value at all. Assigning value to these innovations is difficult
+24:613:49518:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:if not impossible.  However, a simple back of the envelope calculation might give us a sense
+24:614:49610:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:of the magnitude of their overall value.  To this end we calculate a range of potential values
+24:615:49704:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:based on both the marginal and average direct income generated by businesses owned by
+24:616:49789:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:household inventors.  We focus first on innovations that are tied to nonemployer businesses.
+24:617:49881:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:We calculate the average income generated by those business while they remain in operation.
+24:618:49972:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:For  simplicity  we  ignore  income  generated  by  these  businesses  after  they  hire  their  first
+24:619:50074:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:employee since there are relatively few transitions.  We base our calculation on the cohort of
+24:620:50168:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:firms born in 2000 that own a patent.  We track these firms through 2011 or until they exit.
+24:621:50260:24:24:93:539:492:12:g_d0_f3:12:g_d0_f3:A:Our starting point for identifying the economic value of these patents is to first come
+24:622:50347:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:up  with  a  revenue  elasticity  for  each  patent  grant.   In  Table  12  we  run  several  revenue
+24:623:50449:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:specifications based on known factors that are seemingly unrelated to the innovation itself,
+24:624:50541:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:but can potentially impact the revenue stream of these businesses.  These include technology
+24:625:50633:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:sector  and  zip  code-year  controls,  as  well  as  demographic  controls  (male,  U.S.  born,  race
+24:626:50735:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:and age) across the full nonemployer sample and patenters-only.  In column (5), we control
+24:627:50825:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:for selection using a Heckman selection model.  The results from our specifications reveal
+24:628:50915:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:that patents have a positive and significant impact on revenue.  Across all nonemployer and
+24:629:51006:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:patenting firms, the specifications suggest that a 10% increase in granted patents is associated
+24:630:51102:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:with a 0.3-0.4% increase in revenue (combining the elasticities of the patent application and
+24:631:51195:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:grant), while a 10% increase in citations is associated with a 0.03-0.06% increase in revenue.
+24:632:51289:24:24:72:368:229:12:g_d0_f3:12:g_d0_f3:B:These results are consistent after controlling for selection.
+24:633:51350:24:23:93:539:205:12:g_d0_f3:12:g_d0_f3:A:In attempting to compute the economic value of these patents, we first need to tabulate
+24:634:51437:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:the total number of household innovations as measured by patents and number of businesses
+24:635:51526:24:24:72:540:158:12:g_d0_f3:12:g_d0_f3:B:associated  with  these  patents.   Table  1  and  Table  2  tell  us  that  we  have  approximately
+24:636:51626:24:24:72:540:134:12:g_d0_f3:12:g_d0_f3:B:93,000 matched patents to nonemployer businesses.  These 93,000 patents match to 42,000
+24:637:51713:24:24:72:540:110:12:g_d0_f3:12:g_d0_f3:B:unique nonemployer businesses (2.2 patents per business).  Assuming the same employer-to-
+24:638:51802:24:0:72:540:86:12:g_d0_f3:12:g_d0_f3:B:nonemployer match ratios in Table 2 and applying them to the set of unmatched patents gives
+25:639:51895:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:us 184,000 unmatched nonemployer patents, which would convert to approximately 83,000
+25:640:51980:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:nonemployer  businesses  (assuming  the  same  ratio  of  patents  per  business).   We  therefore
+25:641:52078:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:need to approximate the revenue streams for the 83,000 ”missing” nonemployer businesses
+25:642:52165:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:to tabulate the full economic impact of household innovations.  Nonemployer businesses with
+25:643:52256:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:patents generate approximately $10,200 in annual revenue on average (versus $9,700 gener-
+25:644:52345:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:ated on average for nonemployer businesses who hold no patents).  Nonemployer businesses
+25:645:52433:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:with patents also have an average survival rate of 3.95 years (versus 2.72 years for nonem-
+25:646:52524:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:ployer  businesses  without  patents).   Therefore,  if  we  take  the  aggregate  lifetime  revenue
+25:647:52624:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:of  the  42,000  nonemployer  businesses  with  patents,  we  get  an  economic  value  of  approxi-
+25:648:52724:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:mately $1.7B (or $18,500 per patent).  Applying the same values to the 83,000 ”missing”
+25:649:52811:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:nonemployer businesses with patents gives us a cumulative economic value of $5.0B for all
+25:650:52900:23:24:72:412:445:12:g_d0_f3:12:g_d0_f3:B:household innovations between 2000 and 2011 in real 2000 dollars.
+25:651:52965:24:24:93:539:421:12:g_d0_f3:12:g_d0_f3:A:It is important to note that this calculation requires a number of strong assumptions
+25:652:53050:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:which may differ greatly from reality.  First, the revenue generated by business started by
+25:653:53141:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:household inventors themselves is the same as the revenue generated by household innova-
+25:654:53229:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:tions whose outcomes we are not able to observe including those sold to or appropriated by
+25:655:53319:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:existing businesses.  Second, businesses started by household inventors would not generate
+25:656:53409:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:revenue  where  it  not  for  the  innovation.   Third,  the  cost  of  developing  the  innovation  is
+25:657:53512:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:negligible.  Finally, we have limited our analysis to patented household innovations.  While
+25:658:53604:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:arguably the most valuable innovations likely they represent but a small portion of all house-
+25:659:53698:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:hold innovations.  We have made no effort at placing an economic value to innovations that
+25:660:53788:24:54:72:259:205:12:g_d0_f3:12:g_d0_f3:B:are not known to the patent system.
+25:661:53823:54:36:72:194:151:17:g_d0_f2:17:g_d0_f2:C:6  Conclusion
+25:662:53836:36:23:72:540:115:12:g_d0_f3:12:g_d0_f3:B:Households are increasingly recognized as an important source of invention and innovation.
+25:663:53926:23:0:72:540:92:12:g_d0_f3:12:g_d0_f3:B:Survey data shows independent inventors contribute substantially to consumer product in-
+26:664:54016:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:novations that are later incorporated into the products of incumbent firms.  A challenge with
+26:665:54109:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:survey data are the small sample sizes which either limits what we can learn about the most
+26:666:54200:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:valuable innovations (the right tail of the distribution) or limits the scope of the innovations
+26:667:54296:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:we can study.  In this paper we use administrative data from the U.S. Patent and Trademark
+26:668:54386:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:Office and the U.S. Census Bureau to describe patented household innovations in a system-
+26:669:54475:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:atic way.  While patented innovations arguably represent but a very small slice of household
+26:670:54567:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:innovations it is perhaps the most valuable one.  We match these patents and their inventors
+26:671:54659:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:to U.S. Census Bureau demographic and business data.  We explore the demographic char-
+26:672:54745:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:acteristics of housed inventors vis-a-vis salaried inventors, the characteristics and impact of
+26:673:54840:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:their innovations, and their value when these inventors monetize their innovations through
+26:674:54930:24:23:72:169:468:12:g_d0_f3:12:g_d0_f3:B:their own business.
+26:675:54949:23:24:93:539:445:12:g_d0_f3:12:g_d0_f3:A:We  find  household  inventors  are  disproportionately  born  in  the  U.S.  when  compared
+26:676:55041:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:with  salaried  inventors  and  consequently  they  are  also  relatively  white.   Businesses  that
+26:677:55141:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:hire  inventors  disproportionately  hire  foreign  born  inventors  relative  to  their  size  in  the
+26:678:55244:24:24:72:540:373:12:g_d0_f3:12:g_d0_f3:B:population an indication these corporations might engage in brain gain by tapping foreign
+26:679:55333:24:24:72:540:349:12:g_d0_f3:12:g_d0_f3:B:markets. Household inventors are disproportionately under 25 and over 55 consistent with the
+26:680:55425:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:idea that household innovation is a leisure activity.  Across the board, whether household or
+26:681:55518:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:corporate inventors, we find a deficit in female and black inventors relative to the population
+26:682:55613:24:24:72:120:277:12:g_d0_f3:12:g_d0_f3:B:as a hole.
+26:683:55623:24:24:93:539:253:12:g_d0_f3:12:g_d0_f3:A:Looking  at  the  types  of  innovations  we  find  household  inventors  work  in  technology
+26:684:55717:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:classes disproportionately tied to consumer products such as Design, Mechanical and Other.
+26:685:55807:24:23:72:540:205:12:g_d0_f3:12:g_d0_f3:B:These patents are about 1/2 as likely to be considered “radical” when compared with cor-
+26:686:55895:23:24:72:540:182:12:g_d0_f3:12:g_d0_f3:B:porate patents.  In terms of value, household innovations accumulate approximately 27-32%
+26:687:55984:24:24:72:540:158:12:g_d0_f3:12:g_d0_f3:B:fewer  citations  on  average.   While  their  citation  impact  is  smaller  it  remains  remarkably
+26:688:56085:24:24:72:540:134:12:g_d0_f3:12:g_d0_f3:B:high with an average of 13.6 citations per patent (through December 2016).  Finally, we find
+26:689:56177:24:24:72:540:110:12:g_d0_f3:12:g_d0_f3:B:relatively  few  household  inventors  start  a  business  around  their  innovation.   Only  19%  of
+26:690:56278:24:0:72:540:86:12:g_d0_f3:12:g_d0_f3:B:household innovations are tied to a business.  These businesses average $10,000 in revenue at
+27:691:56373:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:time of patent application and are more than twice as likely to transition to hire their first
+27:692:56467:24:24:72:321:684:12:g_d0_f3:12:g_d0_f3:B:employee than nonemployers who do not patent.
+27:693:56512:24:24:93:539:660:12:g_d0_f3:12:g_d0_f3:A:Finally,  our  back-of-the-envelope  calculations  suggest  patented  household  innovations
+27:694:56604:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:granted between 2000 and 2011 may generate approximately $5.0B in 2000 dollar revenue.
+27:695:56690:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:While this might not be extraordinary when compared to the value of corporate patents, it
+27:696:56779:24:24:72:490:588:12:g_d0_f3:12:g_d0_f3:B:is non-trivial, which raises important questions about R$D and innovation policy.
+27:697:56860:24:24:93:539:564:12:g_d0_f3:12:g_d0_f3:A:To conclude, patented household innovations have impact and value.  Many of them are
+27:698:56944:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:radical and represent breakthroughs in their fields.  Despite efforts to understand their role
+27:699:57038:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:in the economy our knowledge of innovations and their inventors remains limited.  Adminis-
+27:700:57128:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:trative data helps shed light on this population and their impact.  Combined with a targeted
+27:701:57220:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:survey of household inventors and their patented inventions could go a long way to expand
+27:702:57309:23:0:72:211:445:12:g_d0_f3:12:g_d0_f3:B:our knowledge in this area.
+28:703:57338:0:27:72:163:708:17:g_d0_f2:17:g_d0_f2:C:References
+28:704:57348:27:14:72:539:681:12:g_d0_f3:12:g_d0_f3:B:Arora,  A.,  W. M. Cohen,andJ. P. Walsh (2016) “The acquisition and commercialization
+28:705:57433:14:15:83:539:667:12:g_d0_f3:12:g_d0_f3:A:of invention in American manufacturing:  Incidence and impact,”Research Policy, 45(6),
+28:706:57519:15:24:83:139:652:12:g_d0_f3:12:g_d0_f3:A:1113–1128.
+28:707:57529:24:14:72:540:628:12:g_d0_f3:12:g_d0_f3:B:Bell,  A.,  R.  Chetty,  X.  Jaravel,  N.  Petkova,andJ.  Van  Reenen  (2016)  “The  lifecycle  of
+28:708:57627:14:25:83:146:614:12:g_d0_f3:12:g_d0_f3:A:inventors,” .
+28:709:57640:25:24:71:334:589:12:g_d0_f3:12:g_d0_f3:B:Bell, A., et al. (2016) “The lifecycle of inventors,” .
+28:710:57695:24:15:71:539:565:12:g_d0_f3:12:g_d0_f3:B:Bureau  of  Labor  Statistics  (2016)  “Foreign  Born  Workers:   Labor  Force  Characteristics
+28:711:57790:15:14:83:539:550:12:g_d0_f3:12:g_d0_f3:A:2015,” Press Release, https://www.bls.gov/news.release/pdf/forbrn.pdf. Published 2016-
+28:712:57876:14:25:83:225:536:12:g_d0_f3:12:g_d0_f3:A:05-19. Accessed 2017-02-18.
+28:713:57903:25:14:71:539:511:12:g_d0_f3:12:g_d0_f3:B:Dahlin,  K. B.,andD. M. Behrens (2005) “When is an invention really radical?:  Defining
+28:714:57990:14:24:83:466:497:12:g_d0_f3:12:g_d0_f3:A:and measuring technological radicalness,”Research Policy, 34(5), 717–737.
+28:715:58063:24:15:71:540:473:12:g_d0_f3:12:g_d0_f11:B:de Jong, J. P. (2016) “Surveying innovation in samples of individual end consumers,”Euro-
+28:716:58152:15:24:83:376:458:12:g_d0_f11:12:g_d0_f3:A:pean Journal of Innovation Management, 19(3), 406–423.
+28:717:58206:24:15:71:539:434:12:g_d0_f3:12:g_d0_f3:B:Deming,  W.  E.  (1990)Sample design in business research,  vol.  23.  John  Wiley  &  Sons,
+28:718:58298:15:24:83:245:419:12:g_d0_f3:12:g_d0_f3:A:illustrated, reprint, revised edn.
+28:719:58332:24:15:72:539:395:12:g_d0_f3:12:g_d0_f3:B:Dreisigmeyer, D., S. Graham, C. Grim, T. Islam, A. Marco,andJ. Miranda (2014) “A Patent
+28:720:58419:15:24:83:526:380:12:g_d0_f3:12:g_d0_f3:A:Classification System for the Business Dynamics Statistics,” Discussion paper, mimeo.
+28:721:58504:24:14:71:540:356:12:g_d0_f3:12:g_d0_f3:B:Fairlie, R. W.,andJ. Miranda (2017) “Taking the Leap: The Determinants of Entrepreneurs
+28:722:58591:14:15:83:539:342:12:g_d0_f3:12:g_d0_f3:A:Hiring Their First Employee,”Journal of Economics and Management Strategy, 26(1), 3–
+28:723:58675:15:24:83:98:327:12:g_d0_f3:12:g_d0_f3:A:34.
+28:724:58678:24:15:71:539:303:12:g_d0_f3:12:g_d0_f3:B:Franke, N.,andS. Shah (2003) “How communities support innovative activities:  an explo-
+28:725:58765:15:24:83:510:288:12:g_d0_f3:12:g_d0_f3:A:ration of assistance and sharing among end-users,”Research policy, 32(1), 157–178.
+28:726:58847:24:15:71:540:264:12:g_d0_f3:12:g_d0_f3:B:Graham, S. J., C. Grim, T. Islam, A. C. Marco,andJ. Miranda (2018) “Business dynamics
+28:727:58932:15:14:83:539:249:12:g_d0_f3:12:g_d0_f3:A:of innovating firms:  Linking US patents with administrative data on workers and firms,”
+28:728:59020:14:24:83:407:235:12:g_d0_f11:12:g_d0_f3:A:Journal of Economics & Management Strategy, 27(3), 372–402.
+28:729:59079:24:15:71:539:211:12:g_d0_f3:12:g_d0_f3:B:Hall, B. H., A. B. Jaffe,andM. Trajtenberg (2001) “The NBER patent citation data file:
+28:730:59165:15:14:83:539:196:12:g_d0_f3:12:g_d0_f3:A:Lessons, insights and methodological tools,” Discussion paper, National Bureau of Eco-
+28:731:59251:14:25:83:166:182:12:g_d0_f3:12:g_d0_f3:A:nomic Research.
+28:732:59266:25:14:71:540:157:12:g_d0_f3:12:g_d0_f3:B:Hall,  B. H.,andM. Trajtenberg (2004) “Uncovering GPTs with patent data,”  Discussion
+28:733:59351:14:25:83:323:143:12:g_d0_f3:12:g_d0_f3:A:paper, National Bureau of Economic Research.
+28:734:59395:25:14:71:539:118:12:g_d0_f3:12:g_d0_f3:B:Intellectual  Property  Owners  Association  (2015)  “IP  Spotlight2015,”   Web  Report,
+28:735:59483:14:15:83:539:104:12:g_d0_f3:12:g_d0_f3:A:https://www.bls.gov/news.release/pdf/forbrn.pdf. Published 2015-07-31. Accessed 2017-
+28:736:59568:15:0:83:114:89:12:g_d0_f3:12:g_d0_f3:A:02-18.
+29:737:59576:0:15:72:540:708:12:g_d0_f3:12:g_d0_f3:B:Jones,  B.  F.  (2009)  “The  burden  of  knowledge  and  the  death  of  the  renaissance  man:  Is
+29:738:59676:15:24:83:485:693:12:g_d0_f3:12:g_d0_f3:A:innovation getting harder?,”The Review of Economic Studies, 76(1), 283–317.
+29:739:59751:24:25:72:519:669:12:g_d0_f3:12:g_d0_f3:B:Kim, J.,andG. Marschke (2015) “Teams in R&D: Evidence from US Inventor Data,” .
+29:740:59830:25:14:72:540:644:12:g_d0_f3:12:g_d0_f3:B:L ̈uthje, C. (2004) “Characteristics of innovating users in a consumer goods field: An empirical
+29:741:59926:14:25:83:460:630:12:g_d0_f3:12:g_d0_f3:A:study of sport-related product consumers,”Technovation, 24(9), 683–695.
+29:742:59997:25:14:72:539:605:12:g_d0_f3:12:g_d0_f11:B:Serrano, C. J. (2010) “The dynamics of the transfer and renewal of patents,”RAND Journal
+29:743:60085:14:24:83:237:591:12:g_d0_f11:12:g_d0_f3:A:of Economics, 41(4), 686–708.
+29:744:60114:24:15:72:540:567:12:g_d0_f3:12:g_d0_f3:B:Shah,  S.  (2000)  “Sources  and  patterns  of  innovation  in  a  consumer  products  field:  Inno-
+29:745:60214:15:14:83:539:552:12:g_d0_f3:12:g_d0_f11:A:vations in sporting equipment,”Sloan School of Management, Massachusetts Institute of
+29:746:60299:14:25:83:287:538:12:g_d0_f11:12:g_d0_f3:A:Technology, Cambridge, MA, WP-4105.
+29:747:60334:25:14:72:540:513:12:g_d0_f3:12:g_d0_f3:B:von Hippel,  E. (1976) “The dominant role of users in the scientific instrument innovation
+29:748:60424:14:25:83:290:499:12:g_d0_f3:12:g_d0_f3:A:process,”Research policy, 5(3), 212–239.
+29:749:60464:25:14:72:540:474:12:g_d0_f3:12:g_d0_f3:B:von Hippel, E., J. P. J. de Jong,andS. Flowers (2012) “Comparing Business and Household
+29:750:60551:14:14:83:539:460:12:g_d0_f3:12:g_d0_f3:A:Sector Innovation in Consumer Products:  Findings from a Representative Study in the
+29:751:60635:14:25:83:386:446:12:g_d0_f3:12:g_d0_f3:A:United Kingdom,”Management Science, 58(9), 1669–1681.
+29:752:60688:25:14:72:539:421:12:g_d0_f3:12:g_d0_f3:B:Wagner,  D.,andM.  Layne  (2014)  “The  Person  Identification  Validation  System  (PVS):
+29:753:60778:14:15:83:539:407:12:g_d0_f3:12:g_d0_f3:A:Applying  the  Center  for  Administrative  Records  Research  and  Applications  (CARRA)
+29:754:60867:15:0:83:313:392:12:g_d0_f3:12:g_d0_f3:A:Record Linkage Software,” Discussion paper.
+30:755:60912:0:25:178:433:688:12:g_d0_f3:12:g_d0_f3:A:Table 1.  U.S. Patents by Assignee Type and Year
+30:756:60960:25:15:205:445:663:12:g_d0_f3:12:g_d0_f3:A:IndividualBusiness    UnassignedTotal
+30:757:60997:15:14:166:445:648:12:g_d0_f3:12:g_d0_f3:A:200097079,50021,500107,000
+30:758:61023:14:14:166:445:634:12:g_d0_f3:12:g_d0_f3:A:200198082,90020,100109,000
+30:759:61049:14:15:166:445:620:12:g_d0_f3:12:g_d0_f3:A:200293081,20019,000106,000
+30:760:61075:15:14:166:445:605:12:g_d0_f3:12:g_d0_f3:A:200389082,90018,300107,000
+30:761:61101:14:15:166:445:591:12:g_d0_f3:12:g_d0_f3:A:200486080,10016,300101,000
+30:762:61127:15:14:166:446:576:12:g_d0_f3:12:g_d0_f3:A:200579071,40013,50089,000
+30:763:61152:14:15:166:445:562:12:g_d0_f3:12:g_d0_f3:A:200698088,70016,200110,000
+30:764:61178:15:14:166:445:547:12:g_d0_f3:12:g_d0_f3:A:200787081,60014,900101,000
+30:765:61204:14:15:166:446:533:12:g_d0_f3:12:g_d0_f3:A:200876081,40014,30099,400
+30:766:61229:15:14:166:445:518:12:g_d0_f3:12:g_d0_f3:A:200985084,70013,400102,000
+30:767:61255:14:14:166:445:504:12:g_d0_f3:12:g_d0_f3:A:2010960108,00016,500130,000
+30:768:61282:14:15:166:445:490:12:g_d0_f3:12:g_d0_f3:A:2011950110,00015,900130,000
+30:769:61309:15:14:166:445:475:12:g_d0_f3:12:g_d0_f3:A:Total10,800    1,032,000200,000    1,290,000
+30:770:61353:14:12:82:528:461:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents by US entities between
+30:771:61451:12:76:133:479:449:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Counts are rounded to comply with disclosure requirements.
+30:772:61529:76:25:110:501:373:12:g_d0_f3:12:g_d0_f3:A:Table 2.  Percentage of Patents:  by Assignee Type, Type of Business & Year
+30:773:61604:25:15:212:446:348:12:g_d0_f3:12:g_d0_f3:A:IndividualBusinessUnassigned
+30:774:61632:15:15:206:454:333:12:g_d0_f3:12:g_d0_f3:A:ENEUE    NEUENEU
+30:775:61648:15:14:157:453:318:12:g_d0_f3:12:g_d0_f3:A:20002.1    57.94091.51.8    6.70    28.8    71.2
+30:776:61696:14:15:157:453:304:12:g_d0_f3:12:g_d0_f3:A:20011.4    63.8    34.791.61.9    6.50    29.2    70.8
+30:777:61750:15:14:157:453:289:12:g_d0_f3:12:g_d0_f3:A:2002(D)    55.5    44.5921.7    6.30    23.5    76.5
+30:778:61802:14:15:157:453:275:12:g_d0_f3:12:g_d0_f3:A:2003(D)    56.9    43.192.41.7    5.90    23.7    76.3
+30:779:61856:15:14:157:453:260:12:g_d0_f3:12:g_d0_f3:A:2004(D)    53.8    46.292.21.7    6.10    23.9    76.1
+30:780:61910:14:15:157:453:246:12:g_d0_f3:12:g_d0_f3:A:20051.6    55.6    42.791.81.8    6.40    25.3    74.7
+30:781:61964:15:14:157:453:231:12:g_d0_f3:12:g_d0_f3:A:20062    51.4    46.691.81.8    6.30    23.7    76.3
+30:782:62016:14:15:157:453:217:12:g_d0_f3:12:g_d0_f3:A:20071.8    52.3    45.992.21.7    6.10    21.5    78.5
+30:783:62070:15:14:157:453:202:12:g_d0_f3:12:g_d0_f3:A:20082.6    48.1    49.392.21.7    6.10    21.4    78.6
+30:784:62124:14:14:157:453:188:12:g_d0_f3:12:g_d0_f3:A:20091.4    50.5    48.192.31.7    6.10    21.4    78.6
+30:785:62178:14:15:157:453:174:12:g_d0_f3:12:g_d0_f3:A:20101.3    55.5    43.3921.7    6.20    23.5    76.5
+30:786:62230:15:15:157:453:159:12:g_d0_f3:12:g_d0_f3:A:20111.7    56.34290.91.9    7.20    23.9    76.1
+30:787:62278:15:14:157:453:144:12:g_d0_f3:12:g_d0_f3:A:Total1.355    43.791.91.8    6.30    24.4    75.6
+30:788:62327:14:12:88:522:130:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors’ calculations based on public USPTO data on granted patents applied for between
+30:789:62423:12:12:88:524:118:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Type of business:  E=Employer, NE=Non-Employer, U=Unknown.  (D) identifies
+30:790:62517:12:0:266:345:106:10:g_d0_f6:10:g_d0_f6:F:suppressed values.
+31:791:62537:0:25:117:495:669:12:g_d0_f3:12:g_d0_f3:A:Table 3.  Inventor Demographics:  by Assignee Type and Type of Business
+31:792:62608:25:15:195:512:644:12:g_d0_f3:12:g_d0_f3:A:IndividualBusinessUnassigned
+31:793:62636:15:15:185:535:629:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUENEU
+31:794:62648:15:14:77:535:614:12:g_d0_f3:12:g_d0_f3:A:Male86.591.490.692.191.890.7(0)89.387.7
+31:795:62687:14:14:77:535:600:12:g_d0_f3:12:g_d0_f3:A:U.S. Born72.182.180.366.167.463.2(0)82.881.3
+31:796:62731:14:15:77:535:586:12:g_d0_f3:12:g_d0_f3:A:Black1.82.13.50.90.91(0)3.14.2
+31:797:62761:15:14:77:535:571:12:g_d0_f3:12:g_d0_f3:A:White78.484.883.173.975.872.9(0)84.283.1
+31:798:62801:14:15:77:535:557:12:g_d0_f3:12:g_d0_f3:A:Other19.813.113.425.223.326.1(0)12.612.8
+31:799:62841:15:14:77:535:542:12:g_d0_f3:12:g_d0_f3:A:Age<251.81.63.90.51.20.9(0)22.3
+31:800:62872:14:15:77:535:528:12:g_d0_f3:12:g_d0_f3:A:25<Age<5573.967.1588175.377.1(0)6563.1
+31:801:62910:15:15:77:535:513:12:g_d0_f3:12:g_d0_f3:A:Age>5524.331.438.118.523.522(0)3334.5
+31:802:62947:15:14:77:535:498:12:g_d0_f3:12:g_d0_f3:A:Total Inventors∗110    6,600    1,2001,320,000    19,200    77,100(0)    37,300    38,400
+31:803:63036:14:14:77:535:484:12:g_d0_f3:12:g_d0_f3:A:Total Patents∗60    4,700    1,100666,000    10,800    40,400(0)    31,100    35,100
+31:804:63120:14:12:90:522:470:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+31:805:63215:12:12:89:522:458:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Type of business:  E=Employer, NE=Non-Employer, U=Unknown.∗Counts are
+31:806:63304:12:115:127:484:446:10:g_d0_f6:10:g_d0_f6:F:rounded to comply with disclosure requirements.  (D) identifies suppressed values.
+31:807:63386:115:25:118:494:331:12:g_d0_f3:12:g_d0_f3:A:Table 4.  Percent of U.S. Patents by Assignee Type and Technology Class
+31:808:63457:25:15:250:430:306:12:g_d0_f3:12:g_d0_f3:A:IndividualBusiness    Unassigned
+31:809:63489:15:14:180:431:291:12:g_d0_f3:12:g_d0_f3:A:Chemical6.910.75
+31:810:63505:14:14:180:431:277:12:g_d0_f3:12:g_d0_f3:A:C&C11.329.45.8
+31:811:63519:14:15:180:431:263:12:g_d0_f3:12:g_d0_f3:A:Design19.89.227.1
+31:812:63536:15:14:180:431:248:12:g_d0_f3:12:g_d0_f3:A:D&M1011.46.4
+31:813:63548:14:15:180:431:234:12:g_d0_f3:12:g_d0_f3:A:E&E8.618.28.1
+31:814:63561:15:14:180:431:219:12:g_d0_f3:12:g_d0_f3:A:Mechanical1610.617.5
+31:815:63581:14:15:180:431:205:12:g_d0_f3:12:g_d0_f3:A:Others26.710.129
+31:816:63597:15:15:180:431:190:12:g_d0_f3:12:g_d0_f3:A:Plant0.60.41.1
+31:817:63611:15:14:180:430:175:12:g_d0_f3:12:g_d0_f3:A:Total∗10,800    1,030,000200,000
+31:818:63643:14:12:90:522:161:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+31:819:63738:12:12:83:528:149:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Technology Class:  C&C=Computers & Communications, D&M=Drugs & Medical,
+31:820:63829:12:11:81:530:137:10:g_d0_f6:10:g_d0_f6:F:E&E=Electrical & Electronic.∗Total patent counts in this row are rounded to comply with disclosure
+31:821:63927:11:90:276:335:126:10:g_d0_f6:10:g_d0_f6:F:requirements.
+31:822:63940:90:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:29
+32:823:63942:0:25:92:520:674:12:g_d0_f3:12:g_d0_f3:A:Table 5.  Patent Technology Class:  Percent by Assignee Type and Type of Business
+32:824:64023:25:14:163:495:649:12:g_d0_f3:12:g_d0_f3:A:Individual AssigneeBusiness AssigneeUnassigned
+32:825:64069:14:15:176:517:635:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUENEU
+32:826:64081:15:15:94:517:620:12:g_d0_f3:12:g_d0_f3:A:Chemical78.64.810.71010.806.14.6
+32:827:64113:15:14:94:517:605:12:g_d0_f3:12:g_d0_f3:A:C&C16.815.16.329.529.428.109.34.6
+32:828:64146:14:15:94:517:591:12:g_d0_f3:12:g_d0_f3:A:Design14341.19.36.99.404.834.3
+32:829:64176:15:14:94:517:576:12:g_d0_f3:12:g_d0_f3:A:D&M25.911.67.61113.516.607.86
+32:830:64205:14:15:94:517:562:12:g_d0_f3:12:g_d0_f3:A:E&E15.410.46.218.51315.2097.8
+32:831:64234:15:14:94:517:547:12:g_d0_f3:12:g_d0_f3:A:Mechanical    11.218.912.610.89.88.7022.515.8
+32:832:64279:14:14:94:517:533:12:g_d0_f3:12:g_d0_f3:A:Others7.732.320.31013.99.9040.425.3
+32:833:64314:14:15:94:517:519:12:g_d0_f3:12:g_d0_f3:A:Plant2.101.20.30.90.900.11.4
+32:834:64342:15:14:94:517:504:12:g_d0_f3:12:g_d0_f3:A:Total∗140    5,9004,700949,000    18,000    65,5000    49,000    151,000
+32:835:64414:14:12:90:522:490:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+32:836:64509:12:12:74:538:478:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Each column adds up to one.  Technology Class:  C&C=Computers & Communications,
+32:837:64608:12:12:112:499:466:10:g_d0_f6:10:g_d0_f6:F:D&M=Drugs & Medical, E&E=Electrical & Electronic.  Type of business:  E=Employer,
+32:838:64689:12:12:72:540:454:10:g_d0_f6:10:g_d0_f6:F:NE=Non-Employer, U=Unknown.∗Total patent counts in this row are rounded to comply with disclosure
+32:839:64786:12:104:204:407:442:10:g_d0_f6:10:g_d0_f6:F:requirements.  (D) identifies suppressed values.
+32:840:64834:104:25:80:532:338:12:g_d0_f3:12:g_d0_f3:A:Table 6.  Demographic Differences by Technology Class:  Non-Employer versus Employer
+32:841:64918:25:15:158:561:313:12:g_d0_f3:12:g_d0_f3:A:MaleUS BornBlackWhiteOtherAge<25    25<Age<55    Age>55
+32:842:64973:15:14:77:561:298:12:g_d0_f3:12:g_d0_f3:A:Chemical0.8*7.1***0.6***5.3***-5.9***1.2***-11.3***10.2***
+32:843:65031:14:15:77:562:284:12:g_d0_f3:12:g_d0_f3:A:C&C0.36.6***0.6***4.5***-5***0.5***-9.9***9.3***
+32:844:65079:15:14:77:561:269:12:g_d0_f3:12:g_d0_f3:A:Design-6.1***-0.94.3***    -5.8***1.5*1.7***-8.7***7***
+32:845:65134:14:15:77:561:255:12:g_d0_f3:12:g_d0_f3:A:D&M2.1***5***0.7***3.9***-4.6***0.7***-11***10.3***
+32:846:65185:15:14:77:561:240:12:g_d0_f3:12:g_d0_f3:A:E&E0.18.2***0.7***7.4***-8.2***1.4***-13.2***11.8***
+32:847:65237:14:15:77:561:226:12:g_d0_f3:12:g_d0_f3:A:Mechanical    -0.9***7***0.9***4.8***-5.8***1.2***-11.6***10.4***
+32:848:65302:15:14:77:562:211:12:g_d0_f3:12:g_d0_f3:A:Others-5.4***6.4***2***2.8***-4.7***1.1***-8.9***7.8***
+32:849:65357:14:15:77:561:197:12:g_d0_f3:12:g_d0_f3:A:Plant128.8***-0.7    -12.5**    13.2***1.9-12.210.3
+32:850:65408:15:14:77:561:182:12:g_d0_f3:12:g_d0_f3:A:Total-1***10.4***1.1***7.1***-8.3***1.1***-11.8***10.8***
+32:851:65465:14:12:90:522:168:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+32:852:65560:12:12:72:539:156:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Numbers represent the difference in the proportion of patents between nonemployer and
+32:853:65665:12:12:83:527:144:10:g_d0_f6:10:g_d0_f6:F:employer patents.  Technology Class:  C&C=Computers & Communications, D&M=Drugs & Medical,
+32:854:65755:12:12:87:524:132:10:g_d0_f6:10:g_d0_f6:F:E&E=Electrical & Electronic.  Type of business:  E=Employer, NE=Non-Employer, U=Unknown.  *
+32:855:65846:12:0:235:377:120:10:g_d0_f6:10:g_d0_f6:F:p<0.05, ** p<0.01, *** p<0.001
+33:856:65878:0:25:86:525:672:12:g_d0_f3:12:g_d0_f3:A:Table 7.  Mean Team Size:  by Technology Class, Assignee Type and Type of Business
+33:857:65960:25:15:196:477:647:12:g_d0_f3:12:g_d0_f3:A:Individual AssigneeBusiness AssigneeUnassigned
+33:858:66006:15:15:209:485:632:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUENEU
+33:859:66018:15:14:126:484:617:12:g_d0_f3:12:g_d0_f3:A:Chemical3.1    1.931.383.06    2.472.860    1.48    1.32
+33:860:66074:14:14:126:484:603:12:g_d0_f3:12:g_d0_f3:A:C&C2.67    1.881.312.65    2.322.530    1.47    1.27
+33:861:66126:14:15:126:484:589:12:g_d0_f3:12:g_d0_f3:A:Design1.9    1.681.422.211.72.110    1.28    1.19
+33:862:66175:15:14:126:484:574:12:g_d0_f3:12:g_d0_f3:A:D&M2.921.91.463.1    2.452.910    1.53    1.39
+33:863:66221:14:15:126:484:560:12:g_d0_f3:12:g_d0_f3:A:E&E2.18    1.761.312.56    2.132.40    1.38    1.22
+33:864:66272:15:14:126:484:545:12:g_d0_f3:12:g_d0_f3:A:Mechanical    1.63    1.681.242.49    1.982.30    1.29    1.15
+33:865:66334:14:15:126:484:531:12:g_d0_f3:12:g_d0_f3:A:Others1.73    1.671.272.44    1.982.280    1.29    1.15
+33:866:66389:15:15:126:484:516:12:g_d0_f3:12:g_d0_f3:A:Plant211.041.25    1.151.30    1.68    1.31
+33:867:66432:15:14:126:484:501:12:g_d0_f3:12:g_d0_f3:A:All Patents    2.381.81.362.65    2.242.490    1.37    1.21
+33:868:66491:14:12:90:522:487:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+33:869:66586:12:12:83:528:475:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Technology Class:  C&C=Computers & Communications, D&M=Drugs & Medical,
+33:870:66677:12:12:82:529:463:10:g_d0_f6:10:g_d0_f6:F:E&E=Electrical & Electronic.  Type of business:  E=Employer, NE=Non-Employer, U=Unknown.  (D)
+33:871:66770:12:108:246:364:451:10:g_d0_f6:10:g_d0_f6:F:identifies suppressed values
+33:872:66798:108:25:73:538:343:12:g_d0_f3:12:g_d0_f3:B:Table 8.  Mean Citation Count:  by Technology Class, Assignee Type and Type of Business
+33:873:66885:25:15:184:485:318:12:g_d0_f3:12:g_d0_f3:A:Individual AssigneeBusiness AssigneeUnassigned
+33:874:66931:15:15:201:499:303:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUENEU
+33:875:66943:15:14:112:499:288:12:g_d0_f3:12:g_d0_f3:A:Chemical8.97.527.2510.428.78    11.7707.086.22
+33:876:66989:14:14:112:499:274:12:g_d0_f3:12:g_d0_f3:A:C&C17.04    23.21    19.8920.34    23.92    21.930    16.41    14.41
+33:877:67057:14:15:112:499:260:12:g_d0_f3:12:g_d0_f3:A:Design6.658.586.1812.32    11.3810.708.557.07
+33:878:67102:15:14:112:499:245:12:g_d0_f3:12:g_d0_f3:A:D&M18.86    23.73    17.6525.73    22.81    21.750    18.66    15.32
+33:879:67170:14:15:112:499:231:12:g_d0_f3:12:g_d0_f3:A:E&E12.0913.19.6113.84    16.26    15.14010.68.88
+33:880:67218:15:14:112:499:216:12:g_d0_f3:12:g_d0_f3:A:Mechanical    10.887.817.7811.79    14.88    12.6408.136.56
+33:881:67277:14:15:112:499:202:12:g_d0_f3:12:g_d0_f3:A:Others99.988.9814.45    12.3912.308.037.72
+33:882:67319:15:15:112:499:187:12:g_d0_f3:12:g_d0_f3:A:Plant1.670.50.360.310.350.3200.760.29
+33:883:67356:15:14:112:499:172:12:g_d0_f3:12:g_d0_f3:A:All Patents13.1    13.289.3416.36    16.49    16.810    10.138.09
+33:884:67421:14:12:90:522:158:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+33:885:67516:12:12:91:520:146:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  We exclude patents with zero citations.  Technology Class:  C&C=Computers &
+33:886:67611:12:11:73:539:134:10:g_d0_f6:10:g_d0_f6:F:Communications, D&M=Drugs & Medical, E&E=Electrical & Electronic.  Type of business:  E=Employer,
+33:887:67708:11:0:160:451:123:10:g_d0_f6:10:g_d0_f6:F:NE=Non-Employer, U=Unknown.  (D) identifies suppressed values
+34:888:67771:0:25:114:496:703:12:g_d0_f3:12:g_d0_f3:A:Table 9.  Pseudo-Maximum Log Likelihood Regression on Patent Citations
+34:889:67841:25:14:342:425:678:12:g_d0_f3:12:g_d0_f3:A:(1)(2)
+34:890:67847:14:15:166:441:664:12:g_d0_f3:12:g_d0_f3:A:Dependent VariableCitationsCitations
+34:891:67883:15:14:166:444:649:12:g_d0_f3:12:g_d0_f3:A:Grant Year-0.1616***-0.1622***
+34:892:67913:14:15:326:441:635:12:g_d0_f3:12:g_d0_f3:A:(0.00760)(0.00757)
+34:893:67931:15:14:166:445:620:12:g_d0_f3:12:g_d0_f3:A:Team Size0.07265***    0.06831***
+34:894:67964:14:15:326:441:606:12:g_d0_f3:12:g_d0_f3:A:(0.00426)(0.00403)
+34:895:67982:15:14:166:377:591:12:g_d0_f3:12:g_d0_f3:A:Employer Patents0.23618***
+34:896:68008:14:15:326:373:577:12:g_d0_f3:12:g_d0_f3:A:(0.02269)
+34:897:68017:15:14:166:377:562:12:g_d0_f3:12:g_d0_f3:A:Non-Employer Patents0.07342***
+34:898:68047:14:15:326:373:548:12:g_d0_f3:12:g_d0_f3:A:(0.01385)
+34:899:68056:15:28:166:439:533:12:g_d0_f3:12:g_d0_f3:A:Unmatched PatentsDroppedDropped
+34:900:68087:28:15:166:436:505:12:g_d0_f3:12:g_d0_f3:A:Firm Assigned Patents0.04132
+34:901:68115:15:14:394:441:490:12:g_d0_f3:12:g_d0_f3:A:(0.02733)
+34:902:68124:14:15:166:444:476:12:g_d0_f3:12:g_d0_f3:A:Individual Assigned Patents-0.2460***
+34:903:68161:15:14:394:441:461:12:g_d0_f3:12:g_d0_f3:A:(0.02746)
+34:904:68170:14:29:166:439:447:12:g_d0_f3:12:g_d0_f3:A:Unassigned PatentsDroppedDropped
+34:905:68202:29:15:166:426:418:12:g_d0_f3:12:g_d0_f3:A:USPC Fixed EffectsYesYes
+34:906:68226:15:14:166:445:403:12:g_d0_f3:12:g_d0_f3:A:Constant326.192***    327.522***
+34:907:68258:14:14:326:441:389:12:g_d0_f3:12:g_d0_f3:A:(14.7814)(14.7207)
+34:908:68276:14:15:166:441:375:12:g_d0_f3:12:g_d0_f3:A:Observations1,290,0001,290,000
+34:909:68306:15:46:82:529:360:10:g_d0_f6:10:g_d0_f6:F:Standard Errors are clustered at the USPC Technology Class level.  * p<0.05, ** p<0.01, *** p<0.001
+34:910:68405:46:14:80:531:314:12:g_d0_f3:12:g_d0_f3:A:Table 10.  Proportion of Radical Patents (per thousand):  by Technology Class, Assignee
+34:911:68492:14:25:235:375:300:12:g_d0_f3:12:g_d0_f3:A:Type and Type of Business
+34:912:68517:25:15:198:477:275:12:g_d0_f3:12:g_d0_f3:A:Individual AssigneeBusiness AssigneeUnassigned
+34:913:68563:15:15:211:483:260:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUE    NEU
+34:914:68579:15:14:129:483:245:12:g_d0_f3:12:g_d0_f3:A:Chemical03.94.518.1    17.517.601.72
+34:915:68615:14:15:129:483:231:12:g_d0_f3:12:g_d0_f3:A:C&C41.7    14.56.714.1    18.715.505.73.7
+34:916:68656:15:14:129:483:216:12:g_d0_f3:12:g_d0_f3:A:Design0    11.29.828.4    19.821.909.4    12.3
+34:917:68702:14:14:129:483:202:12:g_d0_f3:12:g_d0_f3:A:D&M0    13.18.425.6    22.822.303.43.2
+34:918:68740:14:15:129:483:188:12:g_d0_f3:12:g_d0_f3:A:E&E06.5013.2    15.214.802.33.1
+34:919:68771:15:14:129:483:173:12:g_d0_f3:12:g_d0_f3:A:Mechanical04.53.412    17.816.502.82.3
+34:920:68809:14:15:129:483:159:12:g_d0_f3:12:g_d0_f3:A:Others05.73.115.21316.501.81.4
+34:921:68839:15:15:129:483:144:12:g_d0_f3:12:g_d0_f3:A:Plant0001.605.2000.5
+34:922:68859:15:14:129:483:129:12:g_d0_f3:12:g_d0_f3:A:Total77.86.416.8    17.217.402.95.7
+34:923:68894:14:12:90:522:115:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+34:924:68989:12:12:84:527:103:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Technology Class:  C&C=Computers & Communications, D&D=Drugs & Medical,
+34:925:69080:12:55:93:518:91:10:g_d0_f6:10:g_d0_f6:F:E&E=Electrical & Electronic.  Type of business:  E=Employer, NE=Non-Employer, U=Unknown
+34:926:69167:55:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:32
+35:927:69169:0:14:83:528:678:12:g_d0_f3:12:g_d0_f3:A:Table 11.  Mean (Modified) Generality Index:  by Technology Class, Assignee Type and
+35:928:69253:14:25:262:349:664:12:g_d0_f3:12:g_d0_f3:A:Type of Business
+35:929:69269:25:15:196:477:639:12:g_d0_f3:12:g_d0_f3:A:Individual AssigneeBusiness AssigneeUnassigned
+35:930:69315:15:15:208:485:624:12:g_d0_f3:12:g_d0_f3:A:ENEUENEUENEU
+35:931:69327:15:14:126:484:609:12:g_d0_f3:12:g_d0_f3:A:Chemical0.6    0.640.620.6    0.610.590    0.63    0.65
+35:932:69382:14:15:126:484:595:12:g_d0_f3:12:g_d0_f3:A:C&C0.58    0.590.60.63    0.620.630    0.62    0.63
+35:933:69433:15:14:126:484:580:12:g_d0_f3:12:g_d0_f3:A:Design0.870.80.860.88    0.840.880    0.79    0.86
+35:934:69483:14:15:126:484:566:12:g_d0_f3:12:g_d0_f3:A:D&M0.63    0.680.710.66    0.660.650    0.68    0.71
+35:935:69535:15:14:126:484:551:12:g_d0_f3:12:g_d0_f3:A:E&E0.62    0.660.690.66    0.640.650    0.66    0.68
+35:936:69587:14:15:126:485:537:12:g_d0_f3:12:g_d0_f3:A:Mechanical    0.61    0.720.710.67    0.660.6600.7    0.72
+35:937:69645:15:14:126:485:522:12:g_d0_f3:12:g_d0_f3:A:Others0.64    0.690.70.67    0.680.670    0.690.7
+35:938:69694:14:14:126:485:508:12:g_d0_f3:12:g_d0_f3:A:Plant1110.9910.99011
+35:939:69714:14:12:90:522:494:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations based on public USPTO data on granted patents applied for between
+35:940:69809:12:12:84:527:482:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Technology Class:  C&C=Computers & Communications, D&D=Drugs & Medical,
+35:941:69900:12:95:93:518:470:10:g_d0_f6:10:g_d0_f6:F:E&E=Electrical & Electronic.  Type of business:  E=Employer, NE=Non-Employer, U=Unknown
+35:942:69987:95:21:145:392:375:8:g_d0_f3:8:g_d0_f3:F:Table 12.  Regression Results on Non Employer Revenues
+35:943:70041:21:12:224:515:354:8:g_d0_f3:8:g_d0_f3:F:(1)(2)(3)(4)(5)
+35:944:70056:12:12:488:528:342:8:g_d0_f3:8:g_d0_f3:F:Heckman
+35:945:70063:12:12:77:527:330:8:g_d0_f3:8:g_d0_f3:F:RegressionSelection
+35:946:70082:12:13:221:541:318:8:g_d0_f3:8:g_d0_f3:F:OLSOLSOLSOLS(Second Stage)
+35:947:70108:13:12:77:515:305:8:g_d0_f3:8:g_d0_f3:F:SampleAllPatenters OnlyAllPatenters OnlyAll
+35:948:70151:12:13:77:529:293:8:g_d0_f3:8:g_d0_f3:F:Citations0.0048***0.0060***0.0045***0.0056***0.0039***
+35:949:70205:13:12:213:525:280:8:g_d0_f3:8:g_d0_f3:F:(0.0003)(0.0009)(0.0003)(0.0009)(0.0008)
+35:950:70245:12:12:77:529:268:8:g_d0_f3:8:g_d0_f3:F:Patent Applications0.0305***0.0260***0.0262***0.0175***0.0254***
+35:951:70309:12:12:213:525:256:8:g_d0_f3:8:g_d0_f3:F:(0.0009)(0.0039)(0.009)(0.0039)(0.0011)
+35:952:70348:12:12:77:529:244:8:g_d0_f3:8:g_d0_f3:F:Patent Grants0.0135***0.0078***0.0117***0.0079***0.0139***
+35:953:70406:12:13:213:525:232:8:g_d0_f3:8:g_d0_f3:F:(0.0010)(0.0023)(0.0009)(0.0023)(0.0011)
+35:954:70446:13:12:77:531:219:8:g_d0_f3:8:g_d0_f3:F:Team Size-0.0019***-0.0027***-0.0027***-0.0035***-0.0026***
+35:955:70505:12:12:213:525:207:8:g_d0_f3:8:g_d0_f3:F:(0.0003)(0.0009)(0.0003)(0.0009)(0.0004)
+35:956:70545:12:12:77:516:195:8:g_d0_f3:8:g_d0_f3:F:Demographic ControlsNoNoYesYesYes
+35:957:70578:12:12:77:516:183:8:g_d0_f3:8:g_d0_f3:F:Zip-Year Fixed EffectsYesYesYesYesYes
+35:958:70615:12:12:77:516:171:8:g_d0_f3:8:g_d0_f3:F:Patent-Sector Fixed EffectsYesYesYesYesYes
+35:959:70657:12:13:77:444:159:8:g_d0_f3:8:g_d0_f3:F:R-Squared0.0190.2590.0620.278
+35:960:70686:13:11:77:533:146:8:g_d0_f3:8:g_d0_f3:F:Observations198,110,00041,500198,110,00041,500198,110,000
+35:961:70743:11:11:74:464:135:7:g_d0_f6:7:g_d0_f6:F:Robust Standard Errors are clustered at the patent-sector level.  Selection equation for Column 5 includes
+35:962:70849:11:10:73:465:124:7:g_d0_f6:7:g_d0_f6:F:demographic controls and Zip-Year fixed effects.  The selection coefficient is -6.0557 with s.e.  0.0628 and is
+35:963:70960:10:78:160:377:114:7:g_d0_f6:7:g_d0_f6:F:significant to the 0.1%.  * p<0.05, ** p<0.01, *** p<0.001.
+35:964:71019:78:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:33
+36:965:71021:0:174:119:492:651:12:g_d0_f3:12:g_d0_f3:A:Figure 1.  Kernel Distribution of Team Size by Assignee Type, 2000-2011
+36:966:71092:174:14:78:533:477:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO data on granted patents applied for between
+36:967:71176:14:141:279:333:463:12:g_d0_f3:12:g_d0_f3:A:2000-2011.
+36:968:71186:141:174:104:507:322:12:g_d0_f3:12:g_d0_f3:A:Figure 2.  Kernel Distribution of Citation Counts by Assignee Type, 2000-2011
+36:969:71263:174:14:78:533:148:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO data on granted patents applied for between
+36:970:71347:14:98:279:333:134:12:g_d0_f3:12:g_d0_f3:A:2000-2011.
+36:971:71357:98:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:34
+37:972:71359:0:15:83:527:695:12:g_d0_f3:12:g_d0_f3:A:Figure 3.  Industry Composition of Nonemployer Firms:  Patenting (top)/All (bottom),
+37:973:71443:15:575:280:331:680:12:g_d0_f3:12:g_d0_f3:A:2000-2011
+37:974:71452:575:14:91:521:105:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO and U.S. Census Bureau data.  Granted
+37:975:71530:14:55:206:405:91:12:g_d0_f3:12:g_d0_f3:A:patents applied for between 2000-2011.
+37:976:71568:55:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:35
+38:977:71570:0:196:97:513:657:12:g_d0_f3:12:g_d0_f3:A:Figure 4.  Kernel Distribution of Age of Nonemployer Firm for First Patent, 2010
+38:978:71650:196:14:89:521:461:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO and U.S. Census Bureau data on patent
+38:979:71728:14:130:199:413:447:12:g_d0_f3:12:g_d0_f3:A:holding firms age 10 years or less in 2010.
+38:980:71771:130:174:83:527:317:12:g_d0_f3:12:g_d0_f3:A:Figure 5.  Kernel Distribution of Size of Nonemployer Firm for First Patent, 2000-2011
+38:981:71857:174:15:86:524:143:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO and U.S. Census Bureau data on granted
+38:982:71936:15:0:206:405:128:12:g_d0_f3:12:g_d0_f3:A:patents applied for between 2000-2011.
+39:983:71976:0:174:125:486:665:12:g_d0_f3:12:g_d0_f3:A:Figure 6.  Total Income Before and After First Patent, Balanced Panel
+39:984:72045:174:14:86:524:491:12:g_d0_f3:12:g_d0_f3:A:Source:  Own calculations based on USPTO and U.S. Census Bureau data on granted
+39:985:72124:14:15:84:526:477:12:g_d0_f3:12:g_d0_f3:A:patents applied for between 2000-2011.  Sample includes a balanced panel of patenting
+39:986:72209:15:113:227:384:462:12:g_d0_f3:12:g_d0_f3:A:firms centered at patent grant.
+39:987:72240:113:218:147:465:349:12:g_d0_f3:12:g_d0_f3:A:Figure 7.  Transition to Employer Firms by Year, 2000 Cohort
+39:988:72300:218:12:80:531:131:10:g_d0_f6:10:g_d0_f6:F:Source:  Own calculations based on USPTO and U.S. Census Bureau data.  2000 cohort of nonemployer
+39:989:72397:12:0:286:324:119:10:g_d0_f6:10:g_d0_f6:F:business.
+40:990:72408:0:36:72:540:708:17:g_d0_f2:17:g_d0_f2:C:Appendix A  Matching Process and Data Construction
+40:991:72458:36:24:72:540:672:12:g_d0_f3:12:g_d0_f3:B:In this section, we outline the matching process between USPTO granted patents and the
+40:992:72544:24:24:72:540:648:12:g_d0_f3:12:g_d0_f3:B:full non-employer dataset (iLBD) at Census.  We start by describing the individual datasets
+40:993:72635:24:24:72:540:624:12:g_d0_f3:12:g_d0_f3:B:and features of the datasets that will be matched.  We then outline the matching algorithm
+40:994:72725:24:46:72:484:600:12:g_d0_f3:12:g_d0_f3:B:and post a number of statistics on the match rates across different patent types.
+40:995:72806:46:32:72:261:554:14:g_d0_f2:14:g_d0_f2:C:A.1  USPTO Patent Data
+40:996:72828:32:24:72:540:522:12:g_d0_f3:12:g_d0_f3:B:The USPTO patent database consists of all granted patents applied for between 2000 and
+40:997:72914:24:24:72:539:498:12:g_d0_f3:12:g_d0_f3:B:2011 by US entities and excludes all foreign entities, as well as government patents.24Counts
+40:998:73007:24:24:72:462:474:12:g_d0_f3:12:g_d0_f3:B:of domestic patents with inventor and assignee data are plotted in Figure 1.
+40:999:73083:24:24:93:539:450:12:g_d0_f3:12:g_d0_f3:A:Our matching algorithm attempts to create name and address matches from two distinct
+40:1000:73167:24:24:72:540:426:12:g_d0_f3:12:g_d0_f3:B:sources of information contained in USPTO patent record:  i) The assignee, typically a firm,
+40:1001:73259:24:23:72:540:402:12:g_d0_f3:12:g_d0_f3:B:for whom patent ownership belongs, and ii) the inventor – persons who may or may not be
+40:1002:73346:23:24:72:540:379:12:g_d0_f3:12:g_d0_f3:B:affiliated with a firm.  In cases where no assignee is named, it is assumed that the patent’s
+40:1003:73439:24:24:72:276:355:12:g_d0_f3:12:g_d0_f3:B:ownership remains with the inventor(s).
+40:1004:73478:24:24:93:539:331:12:g_d0_f3:12:g_d0_f3:A:We compile our matching database from two distinct sources of PatentsView data from
+40:1005:73561:24:24:72:410:307:12:g_d0_f3:12:g_d0_f3:B:USPTO, each associated with either the Assignee or the Inventor.
+40:1006:73625:24:24:93:539:283:12:g_d0_f3:12:g_d0_f3:A:Our matching algorithm attempts to create name and address matches from two distinct
+40:1007:73709:24:24:72:540:259:12:g_d0_f3:12:g_d0_f3:B:sources of information contained in USPTO patents:  i) The assignee, typically a firm, for
+40:1008:73799:24:24:72:540:235:12:g_d0_f3:12:g_d0_f3:B:whom  patent  ownership  belongs,  and  ii)  the  inventor   persons  who  may  or  may  not  be
+40:1009:73895:24:24:72:540:211:12:g_d0_f3:12:g_d0_f3:B:affiliated with a firm that came up with the patent.  In cases where no assignee is name,
+40:1010:73984:24:24:72:540:187:12:g_d0_f3:12:g_d0_f3:B:it  is  assumed  that  the  patents  ownership  belongs  to  the  inventor  and/or  inventors.   We
+40:1011:74083:24:35:72:540:163:12:g_d0_f3:12:g_d0_f3:B:are primarily interested in collecting names and any geographical data associated with the
+40:1012:74173:35:16:81:539:128:7:g_d0_f5:10:g_d0_f6:F:24We  only  keep  patents  of  assignee  type  ”02  -  US  Company  and/or  Corporation”  and  type  ”04  -  US
+40:1013:74284:16:12:72:540:112:10:g_d0_f6:10:g_d0_f6:F:Individual”, as well as patents with missing assignee information that originate in the US and contain US
+40:1014:74389:12:64:72:133:100:10:g_d0_f6:10:g_d0_f6:F:inventor data.
+40:1015:74403:64:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:38
+41:1016:74405:0:14:73:539:709:12:g_d0_f3:12:g_d0_f3:B:Figure A1.  Mean (Modified) Annual Patent Application Counts of Granted US Patents by
+41:1017:74490:14:317:233:378:695:12:g_d0_f3:12:g_d0_f3:A:Application Year, 2000-2013
+41:1018:74517:317:24:72:540:378:12:g_d0_f3:12:g_d0_f3:B:patents.  We compile our matching database from two distinct sources of data from USPTO,
+41:1019:74605:24:41:72:362:354:12:g_d0_f3:12:g_d0_f3:B:each associated with either the Assignee or the Inventor.
+41:1020:74662:41:32:72:323:313:12:g_d0_f2:12:g_d0_f2:C:A.1.1  Cleaning of USPTO Assignee Data
+41:1021:74700:32:24:72:540:281:12:g_d0_f3:12:g_d0_f3:B:The matching information for assignees is limited to the firm name, city and state.  We use
+41:1022:74791:24:23:72:540:257:12:g_d0_f3:12:g_d0_f3:B:city and state as our blocking variables and allow for fuzzy matching based on name.  We
+41:1023:74879:23:24:72:540:234:12:g_d0_f3:12:g_d0_f3:B:start with approximately 1.29M patent observations across all years and drop around 260,000
+41:1024:74970:24:24:72:540:210:12:g_d0_f3:12:g_d0_f3:B:patents that do not have an assignee name to match against, leaving us with 1.03M patents
+41:1025:75059:24:24:72:540:186:12:g_d0_f3:12:g_d0_f3:B:to  match  assignee  information  against.   Nearly  all  of  the  1.03M  patents  have  geographic
+41:1026:75158:24:24:72:353:162:12:g_d0_f3:12:g_d0_f3:B:information, including city and state to match against.
+41:1027:75213:24:24:93:539:138:12:g_d0_f3:12:g_d0_f3:A:In each year, there are on average 18,000 unique assignee names to match against and
+41:1028:75297:24:24:72:540:114:12:g_d0_f3:12:g_d0_f3:B:slightly more geographic pairs, indicating that a small subset of assignees apply for patents
+41:1029:75390:24:0:72:540:90:12:g_d0_f3:12:g_d0_f3:B:from  multiple  locations.   The  total  number  of  unique  assignees  between  2000  and  2011  is
+42:1030:75492:0:24:72:540:709:12:g_d0_f3:12:g_d0_f3:B:Table A1.  Assignee Counts from USPTO data on granted patents by US entities, 2000-2011
+42:1031:75579:24:15:214:404:685:12:g_d0_f3:12:g_d0_f3:A:Domestic Patents    Unique Assignee-
+42:1032:75615:15:15:145:505:670:12:g_d0_f3:12:g_d0_f3:A:All Patentswith AssigneesGeographic Pairs    Unique Assignees
+42:1033:75676:15:14:107:478:655:12:g_d0_f3:12:g_d0_f3:A:2000107,00079,50020,80018,800
+42:1034:75705:14:15:107:478:641:12:g_d0_f3:12:g_d0_f3:A:2001109,00082,90021,00018,900
+42:1035:75734:15:14:107:478:626:12:g_d0_f3:12:g_d0_f3:A:2002106,00081,20019,60017,800
+42:1036:75763:14:14:107:478:612:12:g_d0_f3:12:g_d0_f3:A:2003107,00082,90019,20017,700
+42:1037:75792:14:15:107:478:598:12:g_d0_f3:12:g_d0_f3:A:2004101,00080,10018,60017,200
+42:1038:75821:15:14:107:478:583:12:g_d0_f3:12:g_d0_f3:A:200589,00071,40017,10015,900
+42:1039:75849:14:15:107:478:569:12:g_d0_f3:12:g_d0_f3:A:2006110,00088,70019,90018,300
+42:1040:75878:15:14:107:478:554:12:g_d0_f3:12:g_d0_f3:A:2007101,00081,60018,30017,000
+42:1041:75907:14:15:107:478:540:12:g_d0_f3:12:g_d0_f3:A:200899,40081,40017,90016,700
+42:1042:75935:15:14:107:478:525:12:g_d0_f3:12:g_d0_f3:A:2009102,00084,70017,90016,700
+42:1043:75964:14:15:107:478:511:12:g_d0_f3:12:g_d0_f3:A:2010130,000108,00021,20019,800
+42:1044:75994:15:14:107:478:496:12:g_d0_f3:12:g_d0_f3:A:2011130,000110,00021,70020,200
+42:1045:76024:14:15:106:480:482:12:g_d0_f3:12:g_d0_f3:A:Total1,290,0001,030,000123,000102,000
+42:1046:76061:15:12:72:540:467:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations on public USPTO data on granted patents applied for by US entities between
+42:1047:76165:12:45:133:479:455:10:g_d0_f6:10:g_d0_f6:F:2000-2011.  Notes:  Counts are rounded to comply with disclosure requirements.
+42:1048:76243:45:24:72:540:410:12:g_d0_f3:12:g_d0_f3:B:approximately  102,000  and  provide  potential  matches  for  1.03M  patents  (80%  of  possible
+42:1049:76340:24:40:72:121:386:12:g_d0_f3:12:g_d0_f3:B:matches).
+42:1050:76349:40:32:72:321:346:12:g_d0_f2:12:g_d0_f2:C:A.1.2  Cleaning of USPTO Inventor Data
+42:1051:76387:32:24:72:540:314:12:g_d0_f3:12:g_d0_f3:B:Inventors are listed separately from the Assignees and are considered wholly different as they
+42:1052:76481:24:24:72:540:290:12:g_d0_f3:12:g_d0_f3:B:are typically employees of the assignee firms.  Inventor data contains a separate identifier
+42:1053:76573:24:24:72:540:266:12:g_d0_f3:12:g_d0_f3:B:for each inventor and also contains city and state level geographic data.  Multiple inventors
+42:1054:76666:24:24:72:540:242:12:g_d0_f3:12:g_d0_f3:B:can work on each patent.  The number of inventors greatly exceeds the number of assignees.
+42:1055:76756:24:24:72:540:218:12:g_d0_f3:12:g_d0_f3:B:Because the Integrated Longitudinal Business Database (iLBD) mainly consists of person-
+42:1056:76843:24:24:72:417:194:12:g_d0_f3:12:g_d0_f3:B:level identifiers, inventors will serve as a primary matching criteria.
+42:1057:76914:24:23:93:539:170:12:g_d0_f3:12:g_d0_f3:A:In each year, there are around 160,000 unique inventor names on average to match the
+42:1058:76998:23:24:72:540:147:12:g_d0_f3:12:g_d0_f3:B:iLBD  against  and  nearly  1M  unique  individuals  associated  with  patents  granted  between
+42:1059:77094:24:24:72:540:123:12:g_d0_f3:12:g_d0_f3:B:2000-2011.  Nearly all of the data contains geographic information of some form, including
+42:1060:77184:24:24:72:540:99:12:g_d0_f3:12:g_d0_f3:B:city and/or state, with a small proportion of inventors applying for patents across multiple
+42:1061:77276:24:0:72:540:75:12:g_d0_f3:12:g_d0_f3:B:locations.  Combining this data with the Assignee data gives us the full matching criteria
+43:1062:77368:0:24:72:540:709:12:g_d0_f3:12:g_d0_f3:B:Table A2.  Inventor Counts from USPTO data on granted patents by US entities, 2000-2011
+43:1063:77455:24:15:215:404:685:12:g_d0_f3:12:g_d0_f3:A:Domestic Patents    Unique Inventor-
+43:1064:77491:15:15:146:504:670:12:g_d0_f3:12:g_d0_f3:A:All Patentswith InventorsGeographic Pairs    Unique Inventors
+43:1065:77552:15:14:108:479:655:12:g_d0_f3:12:g_d0_f3:A:2000107,000107,000161,000153,000
+43:1066:77584:14:15:108:479:641:12:g_d0_f3:12:g_d0_f3:A:2001109,000109,000166,000158,000
+43:1067:77616:15:14:108:479:626:12:g_d0_f3:12:g_d0_f3:A:2002106,000106,000165,000157,000
+43:1068:77648:14:14:108:479:612:12:g_d0_f3:12:g_d0_f3:A:2003107,000107,000169,000160,000
+43:1069:77680:14:15:108:479:598:12:g_d0_f3:12:g_d0_f3:A:2004101,000101,000164,000156,000
+43:1070:77712:15:14:108:479:583:12:g_d0_f3:12:g_d0_f3:A:200589,00088,900149,000142,000
+43:1071:77742:14:15:108:479:569:12:g_d0_f3:12:g_d0_f3:A:2006110,000110,000177,000167,000
+43:1072:77774:15:14:108:479:554:12:g_d0_f3:12:g_d0_f3:A:2007101,000101,000166,000157,000
+43:1073:77806:14:15:108:479:540:12:g_d0_f3:12:g_d0_f3:A:200899,40099,300166,000157,000
+43:1074:77836:15:14:108:479:525:12:g_d0_f3:12:g_d0_f3:A:2009102,000102,000175,000165,000
+43:1075:77868:14:15:108:479:511:12:g_d0_f3:12:g_d0_f3:A:2010130,000130,000220,000205,000
+43:1076:77900:15:14:108:479:496:12:g_d0_f3:12:g_d0_f3:A:2011130,000130,000222,000207,000
+43:1077:77932:14:15:107:479:482:12:g_d0_f3:12:g_d0_f3:A:Total1,290,0001,290,0001,200,000990,000
+43:1078:77971:15:12:73:538:467:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations on public USPTO data on granted patents by US entities between 2000-2011
+43:1079:78073:12:45:158:453:455:10:g_d0_f6:10:g_d0_f6:F:Notes:  Counts are rounded to comply with disclosure requirements.
+43:1080:78139:45:24:72:540:410:12:g_d0_f3:12:g_d0_f3:B:to  perform  our  name  and  address  match.   To  summarize  our  matching  frame,  we  have
+43:1081:78232:24:24:72:540:386:12:g_d0_f3:12:g_d0_f3:B:approximately 180,000 unique inventors and assignees to match the iLBD against in every
+43:1082:78319:24:24:72:540:362:12:g_d0_f3:12:g_d0_f3:B:year.  These 180,000 inventors and assignees represent around 110,000 patents in each year
+43:1083:78409:24:46:72:194:338:12:g_d0_f3:12:g_d0_f3:B:for 1.29M total patents.
+43:1084:78433:46:32:72:480:292:14:g_d0_f2:14:g_d0_f2:C:A.2  Integrated Longitudinal Business Database Cleanup
+43:1085:78487:32:24:72:540:260:12:g_d0_f3:12:g_d0_f3:B:On  the  non-employer  side  of  the  data,  we  start  by  combining  all  of  the  individual  cross-
+43:1086:78590:24:24:72:540:236:12:g_d0_f3:12:g_d0_f3:B:sections  of  the  Integrated  Longitudinal  Business  Database  (iLBD)  starting  in  2000  until
+43:1087:78688:24:23:72:540:212:12:g_d0_f3:12:g_d0_f3:B:2011.   The  iLBD  consists  of  both  non-employer  businesses  (identified  with  an  Employer
+43:1088:78784:23:24:72:540:189:12:g_d0_f3:12:g_d0_f3:B:Identification Number, EIN) and sole-proprietorships (identified by a Protected Identification
+43:1089:78878:24:24:72:481:165:12:g_d0_f3:12:g_d0_f3:B:Key, PIK). The breakdown and counts of businesses of each type are as follows:
+43:1090:78956:24:24:93:539:141:12:g_d0_f3:12:g_d0_f3:A:The  identifying  information  used  to  link  to  the  patents  consists  of  a  name,  city  and
+43:1091:79054:24:24:72:540:117:12:g_d0_f3:12:g_d0_f3:B:state, along with a unique identifier that is able to link non-employer businesses over time.
+43:1092:79147:24:0:72:540:93:12:g_d0_f3:12:g_d0_f3:B:Names are given by two separate name variables.  We separate the two name variables and
+44:1093:79236:0:24:169:442:709:12:g_d0_f3:12:g_d0_f3:A:Table A3.  Non-Employer Businesses Counts by Type
+44:1094:79285:24:15:203:448:685:12:g_d0_f3:12:g_d0_f3:A:Non-Employer    Non-Employer    Non-Employer
+44:1095:79329:15:15:165:421:670:12:g_d0_f3:12:g_d0_f3:A:YearBusinessesEINPIK
+44:1096:79349:15:14:165:437:655:12:g_d0_f3:12:g_d0_f3:A:200016,530,0002,120,00014,410,000
+44:1097:79382:14:15:165:437:641:12:g_d0_f3:12:g_d0_f3:A:200116,980,0002,230,00014,750,000
+44:1098:79415:15:14:165:437:626:12:g_d0_f3:12:g_d0_f3:A:200217,650,0002,270,00015,380,000
+44:1099:79448:14:14:165:437:612:12:g_d0_f3:12:g_d0_f3:A:200318,650,0002,420,00016,230,000
+44:1100:79481:14:15:165:437:598:12:g_d0_f3:12:g_d0_f3:A:200419,520,0002,530,00016,990,000
+44:1101:79514:15:14:165:437:583:12:g_d0_f3:12:g_d0_f3:A:200520,390,0002,670,00017,720,000
+44:1102:79547:14:15:165:437:569:12:g_d0_f3:12:g_d0_f3:A:200620,770,0002,590,00018,180,000
+44:1103:79580:15:14:165:437:554:12:g_d0_f3:12:g_d0_f3:A:200721,710,0002,620,00019,090,000
+44:1104:79613:14:15:165:437:540:12:g_d0_f3:12:g_d0_f3:A:200821,350,0002,540,00018,810,000
+44:1105:79646:15:14:165:437:525:12:g_d0_f3:12:g_d0_f3:A:200921,700,0003,000,00018,700,000
+44:1106:79679:14:15:165:437:511:12:g_d0_f3:12:g_d0_f3:A:201022,110,0003,000,00019,110,000
+44:1107:79712:15:14:165:437:496:12:g_d0_f3:12:g_d0_f3:A:201122,490,0003,050,00019,440,000
+44:1108:79745:14:14:164:440:482:12:g_d0_f3:12:g_d0_f3:A:Total239,850,00031,040,000208,810,000
+44:1109:79782:14:12:237:373:468:10:g_d0_f6:10:g_d0_f6:F:Source:  Nonemployer Statistics
+44:1110:79813:12:46:158:453:456:10:g_d0_f6:10:g_d0_f6:F:Notes:  Counts are rounded to comply with disclosure requirements.
+44:1111:79879:46:23:72:540:410:12:g_d0_f3:12:g_d0_f3:B:stack them with their unique identifier in order to obtain every name combination in the
+44:1112:79967:23:24:72:540:387:12:g_d0_f3:12:g_d0_f3:B:database.  In addition, approximately 55% of the names consist of two individuals separated
+44:1113:80058:24:24:72:540:363:12:g_d0_f3:12:g_d0_f3:B:by an ampersand, such as ”John & Jane Doe”.  We separate out each of these observations
+44:1114:80145:24:24:72:540:339:12:g_d0_f3:12:g_d0_f3:B:into two observations (e.g.  ”John Doe” and ”Jane Doe”).  All together, these combinations
+44:1115:80235:24:24:72:540:315:12:g_d0_f3:12:g_d0_f3:B:give  us  more  than  297M+  unique  observations  for  the  183M  non-employer  businesses  to
+44:1116:80330:24:46:72:147:291:12:g_d0_f3:12:g_d0_f3:B:match against.
+44:1117:80344:46:32:72:257:245:14:g_d0_f2:14:g_d0_f2:C:A.3  Matching Algorithm
+44:1118:80367:32:24:72:540:213:12:g_d0_f3:12:g_d0_f3:B:Once the two matching datasets have been completed, we run the following name and address
+44:1119:80456:24:24:72:463:189:12:g_d0_f3:12:g_d0_f3:B:matching algorithm in order of best possible match to worst possible match.
+44:1120:80531:24:24:93:539:165:12:g_d0_f3:12:g_d0_f3:A:a.  Name, City and State  Only the inventor dataset of the USPTO contains CITY data
+44:1121:80614:24:24:93:539:141:12:g_d0_f3:12:g_d0_f3:A:b.  Name and State  Includes both Inventor and Assignee data and consists of the largest
+44:1122:80702:24:24:72:148:117:12:g_d0_f3:12:g_d0_f3:B:possible match
+44:1123:80716:24:0:93:475:93:12:g_d0_f3:12:g_d0_f3:A:c.  Name Only  Worst possible match set, but we can keep unique matches
+45:1124:80789:0:22:123:423:711:9:g_d0_f3:9:g_d0_f3:F:Table A4.  Number of Patent Matches by Match Criteria, 2000-2011
+45:1125:80853:22:12:277:461:689:9:g_d0_f3:9:g_d0_f3:F:Number of Matches    % of Total Matches
+45:1126:80892:12:13:86:427:677:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 1 - Name, City and State713,00069%
+45:1127:80941:13:12:86:427:664:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 2 - Name and State207,00020%
+45:1128:80984:12:13:86:427:652:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 3 - Name Only117,00011%
+45:1129:81022:13:13:86:341:639:9:g_d0_f3:9:g_d0_f3:F:Total1,037,000
+45:1130:81036:13:13:72:475:626:9:g_d0_f3:9:g_d0_f3:F:Source:  Authors calculations using iLBD Data.  Notes:  Counts are rounded to comply with
+45:1131:81125:13:33:221:327:613:9:g_d0_f3:9:g_d0_f3:F:disclosure requirements.
+45:1132:81149:33:21:146:401:580:9:g_d0_f3:9:g_d0_f3:F:Table A5.  Breakdown of Matches by Identifier, 2000-2011
+45:1133:81205:21:13:268:526:559:9:g_d0_f3:9:g_d0_f3:F:Matched Patents    Inventor Only    Assignee OnlyBoth
+45:1134:81258:13:12:77:531:546:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 1 - Name, City and State713,000500,000102,000112,000
+45:1135:81325:12:13:77:529:534:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 2 - Name and State207,000130,00053,00024,000
+45:1136:81384:13:13:77:529:521:9:g_d0_f3:9:g_d0_f3:F:Match Criteria 3 - Name Only117,00078,00026,00013,000
+45:1137:81437:13:13:77:531:508:9:g_d0_f3:9:g_d0_f3:F:Total Patents1,037,000708,000181,000149,000
+45:1138:81480:13:13:72:475:495:9:g_d0_f3:9:g_d0_f3:F:Source:  Authors calculations using iLBD Data.  Notes:  Counts are rounded to comply with
+45:1139:81569:13:44:221:327:482:9:g_d0_f3:9:g_d0_f3:F:disclosure requirements.
+45:1140:81593:44:24:93:539:438:12:g_d0_f3:12:g_d0_f3:A:We use SAS PROC DQMATCH algorithm to run the match.  After each step, we only
+45:1141:81670:24:24:72:540:414:12:g_d0_f3:12:g_d0_f3:B:keep the residual non-matched patents so that each patent can only be matched according
+45:1142:81757:24:24:72:540:390:12:g_d0_f3:12:g_d0_f3:B:to one of the criteria sets above.  Table A4 provides summary statistics on the full match
+45:1143:81847:24:24:72:439:366:12:g_d0_f3:12:g_d0_f3:B:rates by step.  These consist of the raw matches (prior to any cleaning).
+45:1144:81920:24:23:93:539:342:12:g_d0_f3:12:g_d0_f3:A:We are able to match approximately 80% of the 1.29M patents that we start out with.
+45:1145:82003:23:24:72:540:319:12:g_d0_f3:12:g_d0_f3:B:More  than  two-thirds  of  the  matches  occur  at  the  highest  quality  where  the  patent’s  as-
+45:1146:82104:24:24:72:540:295:12:g_d0_f3:12:g_d0_f3:B:signee/inventor’s  name,  city  and  state  matched  a  non-employer  business’  name,  city  and
+45:1147:82201:24:24:72:540:271:12:g_d0_f3:12:g_d0_f3:B:state.  Approximately 1/5 of the matches occur at the ”name and state” resolution, with the
+45:1148:82292:24:24:72:540:247:12:g_d0_f3:12:g_d0_f3:B:remaining  matches  occurring  at  the  ”name”  resolution.  Each  of  these  matches  can  occur
+45:1149:82389:24:24:72:540:223:12:g_d0_f3:12:g_d0_f3:B:through an inventor match, assignee match, or for some patents, in both.  The breakdown
+45:1150:82476:24:24:72:197:199:12:g_d0_f3:12:g_d0_f3:B:of match by identifier is:
+45:1151:82502:24:24:93:539:175:12:g_d0_f3:12:g_d0_f3:A:Nearly 70% of the matches occur through the inventor, which is expected since nearly
+45:1152:82586:24:24:72:540:151:12:g_d0_f3:12:g_d0_f3:B:90% of the patent matching criteria are through the inventor.  About 14% of patents are
+45:1153:82673:24:24:72:540:127:12:g_d0_f3:12:g_d0_f3:B:matched through both the inventor and assignee, with the remaining being matched through
+45:1154:82761:24:24:72:540:103:12:g_d0_f3:12:g_d0_f3:B:the assignee.  The next step in the matching process is to filter out the patents that are ac-
+45:1155:82855:24:0:72:540:79:12:g_d0_f3:12:g_d0_f3:B:tually linked with employer firms,  keep patents that have identified inventors in the PVS
+46:1156:82947:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:process, drop duplicate matches (e.g.  more than one identifier for a patent-name combina-
+46:1157:83037:24:47:72:406:684:12:g_d0_f3:12:g_d0_f3:B:tion) and finally augment our data using unique PVS’ed patents.
+46:1158:83100:47:31:72:313:637:14:g_d0_f2:14:g_d0_f2:C:A.4  Cleaning the Set of Matches
+46:1159:83132:31:24:72:540:606:12:g_d0_f3:12:g_d0_f3:B:Starting with our set of 103M matches, the first step in the cleaning process is to remove all
+46:1160:83226:24:24:72:540:582:12:g_d0_f3:12:g_d0_f3:B:of the patents associated with employer firms using an existing Census firm-level crosswalk
+46:1161:83317:24:24:72:540:558:12:g_d0_f3:12:g_d0_f3:B:(see Graham et al.  2015).  These patents may have matched to the non-employer data either
+46:1162:83407:24:24:72:540:534:12:g_d0_f3:12:g_d0_f3:B:through  the  inventor  who  is  employed  by  an  employer  firm  who  is  the  assignee,  or  if  the
+46:1163:83510:24:24:72:540:510:12:g_d0_f3:12:g_d0_f3:B:name of the non-employer business is very similar or identical to the name of an employer
+46:1164:83599:24:24:72:540:486:12:g_d0_f3:12:g_d0_f3:B:businesses.  The existing Census firm-level crosswalk exists from 2000-2011 and covers more
+46:1165:83690:24:24:72:540:462:12:g_d0_f3:12:g_d0_f3:B:than 1.5M patents, of which 958,000 originate in the US, with the remaining belonging to
+46:1166:83778:24:24:72:540:438:12:g_d0_f3:12:g_d0_f3:B:foreign  assignees  with  US  subsidiaries.   This  crosswalk  was  created  using  a  triangulation
+46:1167:83878:24:24:72:540:414:12:g_d0_f3:12:g_d0_f3:B:of name-address matching of assignee data merged with linked employee-employer inventor
+46:1168:83965:24:23:72:540:390:12:g_d0_f3:12:g_d0_f3:B:data.  The crosswalk covers around 90% of all domestic patents with firm assignees.  Filtering
+46:1169:84059:23:24:72:540:367:12:g_d0_f3:12:g_d0_f3:B:out the employer patents will remove approximately 80% of the patents matched to the non-
+46:1170:84148:24:24:72:540:343:12:g_d0_f3:12:g_d0_f3:B:employer data (838,000 patents were removed).  This is suggestive that a large percentage of
+46:1171:84240:24:24:72:540:319:12:g_d0_f3:12:g_d0_f3:B:inventors at employer firms also have non-employer businesses.  Not all of the patents from
+46:1172:84331:24:24:72:540:295:12:g_d0_f3:12:g_d0_f3:B:these inventors are removed from the final dataset, rather only the patents that are identified
+46:1173:84426:24:24:72:269:271:12:g_d0_f3:12:g_d0_f3:B:to being assigned to an employer firm.
+46:1174:84464:24:24:93:539:247:12:g_d0_f3:12:g_d0_f3:A:The next step in the cleaning of the matches involves filtering out the matches that have
+46:1175:84553:24:24:72:540:223:12:g_d0_f3:12:g_d0_f3:B:not been linked to Census data using the Census Bureau’s Person Identification Validation
+46:1176:84642:24:24:72:540:199:12:g_d0_f3:12:g_d0_f3:B:System (PVS). The PVS process assigns an anonymous, unique person identifier (PIK) to
+46:1177:84727:24:24:72:540:175:12:g_d0_f3:12:g_d0_f3:B:individuals using name and address information and matching it against the Social Security
+46:1178:84817:24:24:72:540:151:12:g_d0_f3:12:g_d0_f3:B:Administration’s numerical identification file (”Numident”).  The matching process is prob-
+46:1179:84908:24:23:72:540:127:12:g_d0_f3:12:g_d0_f3:B:abilistic and it is possible for an individual to receive multiple identifiers (PIKs), especially
+46:1180:85005:23:24:72:540:104:12:g_d0_f3:12:g_d0_f3:B:if the provided only partial information.  The USPTO patent data underwent the full PVS
+46:1181:85092:24:0:72:540:80:12:g_d0_f3:12:g_d0_f3:B:process  for  the  original  Census  firm-level  crosswalk,  generating  PIKs  for  all  of  the  inven-
+47:1182:85198:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:tors  identified  in  patents,  based  on  names  and  a  zip  code.   Because  the  information  used
+47:1183:85300:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:to generate these matches is rather coarse (only name and zip), approximately 30% of the
+47:1184:85388:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:patent-inventor combinations have a unique identifier (PIK), while 75% have fewer than 5
+47:1185:85476:24:24:72:540:636:12:g_d0_f3:12:g_d0_f3:B:identifiers.  The zip code is the unique characteristic here that we miss in our non-employer
+47:1186:85569:24:24:72:540:612:12:g_d0_f3:12:g_d0_f3:B:matching process and hence, can be used to validate our existing matches.  Our filter involves
+47:1187:85663:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:directly linking all of the PIKs assigned to each patent from the PVS process and merging
+47:1188:85752:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:them  with  the  PIKs  generated  in  the  non-employer  matches.   We  drop  patents  that  were
+47:1189:85849:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:matched to the non-employer through the inventor name but are not identified in the PVS
+47:1190:85936:24:24:72:371:516:12:g_d0_f3:12:g_d0_f3:B:process.  This removes nearly 40% of the existing matches.
+47:1191:85994:24:24:93:539:492:12:g_d0_f3:12:g_d0_f3:A:The  third  step  in  the  filter  process  drops  duplicate  matches  by  patent  identifier  and
+47:1192:86092:24:23:72:540:468:12:g_d0_f3:12:g_d0_f3:B:name.  These are patents that cannot be assigned to a specific person or business because of
+47:1193:86184:23:24:72:540:445:12:g_d0_f3:12:g_d0_f3:B:multiple matches.  There are several instances where patents match to multiple non-employer
+47:1194:86275:24:24:72:540:421:12:g_d0_f3:12:g_d0_f3:B:identifiers after the name and address match and after the filters have been applied.  Since
+47:1195:86367:24:24:72:540:397:12:g_d0_f3:12:g_d0_f3:B:there is no way to distinguish between these non-employer matches, we elect to drop them.
+47:1196:86456:24:24:72:270:373:12:g_d0_f3:12:g_d0_f3:B:This removes 45% of existing matches.
+47:1197:86493:24:24:93:539:349:12:g_d0_f3:12:g_d0_f3:A:The next step in the filter process involves ”winsorizing” our existing matches by the
+47:1198:86579:24:24:72:540:325:12:g_d0_f3:12:g_d0_f3:B:assignee code.  In this case, we count the number of patents by assignee code-year and drop
+47:1199:86670:24:24:72:540:301:12:g_d0_f3:12:g_d0_f3:B:the patents for the assignee code-year combinations that are in the top 0.5%.  This number
+47:1200:86760:24:24:72:540:277:12:g_d0_f3:12:g_d0_f3:B:ranges between 20-50 patents per year.  Our assumption lies in that due to size constraints,
+47:1201:86852:24:24:72:540:253:12:g_d0_f3:12:g_d0_f3:B:the number of patents a non-employer business can produce in a year are limited and that
+47:1202:86940:24:24:72:540:229:12:g_d0_f3:12:g_d0_f3:B:these observations are likely to have been missed by the existing Census firm-level crosswalk
+47:1203:87033:24:23:72:515:205:12:g_d0_f3:12:g_d0_f3:B:or are ”unique” for entirely different reasons.  This removes a further 7.5% of matches.
+47:1204:87121:23:24:93:539:182:12:g_d0_f3:12:g_d0_f3:A:Finally,  we  augment  our  matches  using  the  unique  inventor  identifiers  from  the  PVS
+47:1205:87215:24:24:72:540:158:12:g_d0_f3:12:g_d0_f3:B:process.  As mentioned earlier, approximately 30% of the patent-inventor combinations have
+47:1206:87305:24:24:72:540:134:12:g_d0_f3:12:g_d0_f3:B:a  unique  identifier  (PIK).  We  keep  the  ones  with  the  unique  identifier  and  merge  them
+47:1207:87404:24:24:72:540:110:12:g_d0_f3:12:g_d0_f3:B:with the full non-employer database to identify non-employer businesses that our matching
+47:1208:87493:24:0:72:540:86:12:g_d0_f3:12:g_d0_f3:B:methodology may have missed.  We then augment our existing matches with this database.
+48:1209:87581:0:19:148:367:711:8:g_d0_f3:8:g_d0_f3:F:Table A6.  Filtering Out Employer Patents, 2000-2011
+48:1210:87633:19:12:216:556:692:8:g_d0_f3:8:g_d0_f3:F:Removal ofWinsorize and
+48:1211:87656:12:11:76:488:680:8:g_d0_f3:8:g_d0_f3:F:Grant Year    Original Match    Employer Patents    Keep PVS    Drop Duplicate    Augment with PVS
+48:1212:87754:11:12:76:461:669:8:g_d0_f3:8:g_d0_f3:F:200083,80019,70014,40010,50010,200
+48:1213:87788:12:11:76:461:657:8:g_d0_f3:8:g_d0_f3:F:200186,00019,00014,10010,50010,100
+48:1214:87822:11:12:76:459:646:8:g_d0_f3:8:g_d0_f3:F:200284,10018,00011,3008,7008,300
+48:1215:87854:12:11:76:459:634:8:g_d0_f3:8:g_d0_f3:F:200385,10017,30010,9008,5008,200
+48:1216:87886:11:12:76:459:623:8:g_d0_f3:8:g_d0_f3:F:200480,90015,9009,9007,6007,400
+48:1217:87917:12:11:76:459:611:8:g_d0_f3:8:g_d0_f3:F:200571,80013,7008,5006,8006,500
+48:1218:87948:11:12:76:459:600:8:g_d0_f3:8:g_d0_f3:F:200688,50016,5009,9008,0007,700
+48:1219:87979:12:11:76:459:588:8:g_d0_f3:8:g_d0_f3:F:200781,30014,7008,5006,8006,500
+48:1220:88010:11:12:76:459:577:8:g_d0_f3:8:g_d0_f3:F:200880,60014,3008,0006,4006,100
+48:1221:88041:12:11:76:459:565:8:g_d0_f3:8:g_d0_f3:F:200983,20014,0008,0006,4006,000
+48:1222:88072:11:12:76:459:554:8:g_d0_f3:8:g_d0_f3:F:2010106,00018,20010,7008,7008,200
+48:1223:88105:12:11:76:459:542:8:g_d0_f3:8:g_d0_f3:F:2011106,00018,30010,4008,3007,900
+48:1224:88138:11:13:76:461:531:8:g_d0_f3:8:g_d0_f3:F:Total1,037,000200,000125,00097,00093,000
+48:1225:88178:13:11:73:441:518:8:g_d0_f3:8:g_d0_f3:F:Source:  Authors calculations using LBD Data.  Notes:  Counts are rounded to comply with
+48:1226:88266:11:44:209:306:507:8:g_d0_f3:8:g_d0_f3:F:disclosure requirements.
+48:1227:88290:44:23:72:540:463:12:g_d0_f3:12:g_d0_f3:B:This increases the number of matches by approximately 5% for a total of 68,400 matched
+48:1228:88376:23:24:72:459:440:12:g_d0_f3:12:g_d0_f3:B:patents.  The table below summarizes the full effect of each matching stage.
+48:1229:88452:24:24:93:539:416:12:g_d0_f3:12:g_d0_f3:A:This completes the matching process for the nonemployer data.  Starting from 1.29M
+48:1230:88534:24:24:72:540:392:12:g_d0_f3:12:g_d0_f3:B:patents, we are able to successfully match 68,400 patents to the nonemployer data.  The full
+48:1231:88626:24:24:72:291:368:12:g_d0_f3:12:g_d0_f3:B:breakdown of matches by dataset is below.
+48:1232:88667:24:24:93:539:344:12:g_d0_f3:12:g_d0_f3:A:We denote the ”unmatched” as unknown since a fairly large proportion of these patents
+48:1233:88752:24:24:72:540:320:12:g_d0_f3:12:g_d0_f3:B:were  initially  matched  to  the  nonemployer  dataset,  but  were  dropped  either  because  the
+48:1234:88850:24:24:72:540:296:12:g_d0_f3:12:g_d0_f3:B:inventor’s personal identifier was not listed in the PVS process,  or because the invention-
+48:1235:88942:24:24:72:540:272:12:g_d0_f3:12:g_d0_f3:B:name combination had more than one individual listed (dropped out during deduplication
+48:1236:89028:24:24:72:443:248:12:g_d0_f3:12:g_d0_f3:B:process).  A breakdown of the ”Unknown” matches is given in Table A8.
+48:1237:89097:24:24:93:539:224:12:g_d0_f3:12:g_d0_f3:A:Table  A8  tells  us  that  approximately  141,000  of  the  273,000  unknown  patents  were
+48:1238:89189:24:23:72:540:200:12:g_d0_f3:12:g_d0_f3:B:unmatched across all Census datasets, which implies that around 132,000 patents were linked
+48:1239:89280:23:24:72:540:177:12:g_d0_f3:12:g_d0_f3:B:to the nonemployer.  Of these, approximately, 67% were dropped as they were not listed in
+48:1240:89369:24:0:72:540:153:12:g_d0_f3:12:g_d0_f3:B:the PVS process, with the remainder dropping due to either being duplicates or ”winsorized”.
+49:1241:89463:0:25:189:422:679:12:g_d0_f3:12:g_d0_f3:A:Table A7.  Total Matches by Type, 2000-2011
+49:1242:89506:25:15:147:464:654:12:g_d0_f3:12:g_d0_f3:A:Grant YearTotalEmployer    Nonemployer    Unknown
+49:1243:89555:15:14:147:456:639:12:g_d0_f3:12:g_d0_f3:A:2000107,00072,70010,20024,400
+49:1244:89584:14:15:147:456:625:12:g_d0_f3:12:g_d0_f3:A:2001109,00075,90010,10023,200
+49:1245:89613:15:14:147:456:610:12:g_d0_f3:12:g_d0_f3:A:2002106,00074,7008,30023,000
+49:1246:89641:14:14:147:456:596:12:g_d0_f3:12:g_d0_f3:A:2003107,00076,6008,20022,100
+49:1247:89669:14:15:147:456:582:12:g_d0_f3:12:g_d0_f3:A:2004101,00073,8007,40020,200
+49:1248:89697:15:14:147:457:567:12:g_d0_f3:12:g_d0_f3:A:200588,90065,5006,50016,900
+49:1249:89724:14:15:147:456:553:12:g_d0_f3:12:g_d0_f3:A:2006110,00081,5007,70020,600
+49:1250:89752:15:14:147:456:538:12:g_d0_f3:12:g_d0_f3:A:2007101,00075,3006,50018,800
+49:1251:89780:14:15:147:457:524:12:g_d0_f3:12:g_d0_f3:A:200899,30075,1006,10018,200
+49:1252:89807:15:14:147:456:509:12:g_d0_f3:12:g_d0_f3:A:2009102,00078,2006,00017,800
+49:1253:89835:14:15:147:456:495:12:g_d0_f3:12:g_d0_f3:A:2010130,00099,5008,20022,000
+49:1254:89863:15:14:147:456:480:12:g_d0_f3:12:g_d0_f3:A:2011130,00099,9007,90022,100
+49:1255:89891:14:15:147:459:466:12:g_d0_f3:12:g_d0_f3:A:Total1,290,000949,00093,000249,000
+49:1256:89925:15:12:85:526:451:10:g_d0_f6:10:g_d0_f6:F:Source:  Authors calculations using LBD Data.  Notes:  Counts are rounded to comply with disclosure
+49:1257:90024:12:94:276:335:439:10:g_d0_f6:10:g_d0_f6:F:requirements.
+49:1258:90037:94:24:161:432:345:11:g_d0_f3:11:g_d0_f3:F:Table A8.  Breakdown of Unknown Matches, 2000-2011
+49:1259:90087:24:14:77:582:321:11:g_d0_f3:11:g_d0_f3:F:Grant Year    Total Unknown    Unmatched    Matched    Drop in PVS Process    Duplicates/Winsorized
+49:1260:90186:14:14:77:539:307:11:g_d0_f3:11:g_d0_f3:F:200024,40014,8009,6006,4003,200
+49:1261:90217:14:14:77:539:293:11:g_d0_f3:11:g_d0_f3:F:200123,20014,2009,0006,0003,000
+49:1262:90248:14:13:77:539:279:11:g_d0_f3:11:g_d0_f3:F:200223,00013,3009,7007,7002,000
+49:1263:90279:13:14:77:539:266:11:g_d0_f3:11:g_d0_f3:F:200322,10013,0009,1007,4001,700
+49:1264:90310:14:14:77:539:252:11:g_d0_f3:11:g_d0_f3:F:200420,20011,6008,6007,0001,500
+49:1265:90341:14:14:77:539:238:11:g_d0_f3:11:g_d0_f3:F:200516,9009,6007,3006,1001,100
+49:1266:90371:14:14:77:539:224:11:g_d0_f3:11:g_d0_f3:F:200620,60011,7009,0007,9001,100
+49:1267:90402:14:14:77:535:210:11:g_d0_f3:11:g_d0_f3:F:200718,80010,5008,3007,400900
+49:1268:90431:14:14:77:535:196:11:g_d0_f3:11:g_d0_f3:F:200818,20010,0008,3007,400800
+49:1269:90460:14:14:77:535:182:11:g_d0_f3:11:g_d0_f3:F:200917,8009,7008,1007,200900
+49:1270:90488:14:14:77:539:168:11:g_d0_f3:11:g_d0_f3:F:201022,00011,90010,2008,9001,200
+49:1271:90520:14:14:77:539:154:11:g_d0_f3:11:g_d0_f3:F:201122,10011,60010,5009,5001,100
+49:1272:90552:14:14:77:542:140:11:g_d0_f3:11:g_d0_f3:F:Total249,000142,000108,00089,00018,600
+49:1273:90590:14:11:85:509:126:9:g_d0_f6:9:g_d0_f6:F:Source:  Authors calculations using LBD Data.  Notes:  Counts are rounded to comply with disclosure
+49:1274:90689:11:79:268:325:115:9:g_d0_f6:9:g_d0_f6:F:requirements.
+49:1275:90702:79:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:47
+50:1276:90704:0:17:122:345:712:6:g_d0_f3:6:g_d0_f3:F:Table A9.  Breakdown of PVS Process for Inventors, 2000-2011
+50:1277:90764:17:10:343:522:695:6:g_d0_f3:6:g_d0_f3:F:Inventor PIKsUniquePatents with
+50:1278:90795:10:10:76:539:685:6:g_d0_f3:6:g_d0_f3:F:Grant YearPatentsPVS Patents    Inventor Names    Inventor PIKs    (Highest PVS)    Inventor PIKs    Unique Inventor PIKs
+50:1279:90916:10:10:76:512:675:6:g_d0_f3:6:g_d0_f3:F:2000107,00082,700165,000748,000418,000128,00071,800
+50:1280:90967:10:10:76:512:665:6:g_d0_f3:6:g_d0_f3:F:2001109,00088,400183,000802,000468,000143,00077,600
+50:1281:91018:10:10:76:512:655:6:g_d0_f3:6:g_d0_f3:F:2002106,00079,100172,000760,000442,000136,00070,100
+50:1282:91069:10:10:76:512:645:6:g_d0_f3:6:g_d0_f3:F:2003107,00080,900180,000787,000470,000143,00072,200
+50:1283:91120:10:10:76:512:635:6:g_d0_f3:6:g_d0_f3:F:2004101,00077,900175,000754,000453,000139,00069,600
+50:1284:91171:10:10:76:512:625:6:g_d0_f3:6:g_d0_f3:F:200589,00069,700159,000693,000422,000126,00062,500
+50:1285:91221:10:10:76:512:615:6:g_d0_f3:6:g_d0_f3:F:2006110,00083,800196,000853,000531,000155,00075,300
+50:1286:91272:10:10:76:512:605:6:g_d0_f3:6:g_d0_f3:F:2007101,00074,300177,000773,000496,000139,00066,900
+50:1287:91323:10:10:76:512:595:6:g_d0_f3:6:g_d0_f3:F:200899,40072,700176,000750,000486,000138,00065,500
+50:1288:91373:10:10:76:512:585:6:g_d0_f3:6:g_d0_f3:F:2009102,00077,000190,000833,000546,000149,00069,500
+50:1289:91424:10:10:76:512:575:6:g_d0_f3:6:g_d0_f3:F:2010130,000101,000252,0001,110,000731,000198,00091,500
+50:1290:91478:10:10:76:512:565:6:g_d0_f3:6:g_d0_f3:F:2011130,000102,000255,0001,130,000755,000199,00091,800
+50:1291:91532:10:11:76:514:555:6:g_d0_f3:6:g_d0_f3:F:Total1,290,000989,0002,280,0009,980,0006,220,0001,790,000884,000
+50:1292:91596:11:10:85:383:544:6:g_d0_f3:6:g_d0_f3:F:Source:  Authors calculations.  Notes:  Counts are rounded to comply with disclosure
+50:1293:91680:10:42:210:258:534:6:g_d0_f3:6:g_d0_f3:F:requirements.
+50:1294:91693:42:36:72:534:492:17:g_d0_f2:17:g_d0_f2:C:Appendix B  Matching Demographics to Patent Data
+50:1295:91741:36:24:72:540:456:12:g_d0_f3:12:g_d0_f3:B:Matching the patent data to the demographic data is a relatively straightforward process
+50:1296:91829:24:24:72:540:432:12:g_d0_f3:12:g_d0_f3:B:of merging multiple files and dropping duplicate matches allocated in the PVS process.  We
+50:1297:91919:24:24:72:540:408:12:g_d0_f3:12:g_d0_f3:B:start with the original patents that have undergone the PVS process.  Of our starting point
+50:1298:92010:24:24:72:540:384:12:g_d0_f3:12:g_d0_f3:B:of 1.29M patents, 989,000 have undergone the PVS process (76.7%).  These 989,000 PVS’ed
+50:1299:92097:24:24:72:540:360:12:g_d0_f3:12:g_d0_f3:B:patents have 2.28M inventor names associated with the patents (average team size of approx-
+50:1300:92188:24:23:72:540:336:12:g_d0_f3:12:g_d0_f3:B:imately 2.3) and 9.98M inventor PIKs associated with them, indicating that each inventor
+50:1301:92276:23:24:72:540:313:12:g_d0_f3:12:g_d0_f3:B:name has on average around 4 PIKs.  We start by keeping the PIK with the highest PVS
+50:1302:92360:24:24:72:540:289:12:g_d0_f3:12:g_d0_f3:B:score by patent-inventor combination.  This removes 3.76M of the 9.98M starting inventor
+50:1303:92448:24:24:72:540:265:12:g_d0_f3:12:g_d0_f3:B:PIKs.   We  want  to  unduplicate  the  remainder  of  these  PIKs  and  only  keep  the  inventors
+50:1304:92547:24:24:72:540:241:12:g_d0_f3:12:g_d0_f3:B:with a unique PIK. Removing all of the duplicate PIKs associated with each inventor name
+50:1305:92635:24:24:72:540:217:12:g_d0_f3:12:g_d0_f3:B:leaves us with 1.79M unique inventor PIKs associated with nearly 884,000 patents from the
+50:1306:92724:24:24:72:540:193:12:g_d0_f3:12:g_d0_f3:B:989,000 patents that underwent the PVS process.  A yearly breakout of the counts is below.
+50:1307:92814:24:24:93:539:169:12:g_d0_f3:12:g_d0_f3:A:If  we  break  out  the  counts  by  assignee  type,  we  find  differences  in  the  ratio  of  the
+50:1308:92914:24:24:72:540:145:12:g_d0_f3:12:g_d0_f3:B:patents that undergo the PVS process by assignee type, along with differences in the ratio
+50:1309:93004:24:24:72:540:121:12:g_d0_f3:12:g_d0_f3:B:of  inventors  that  unique  PIKs  by  assignee  type.   Firm  assignees  are  most  likely  to  have
+50:1310:93105:24:24:72:540:97:12:g_d0_f3:12:g_d0_f3:B:undergone the PVS process (82%), followed by individual assignees (75%), while fewer than
+50:1311:93194:24:0:72:540:73:12:g_d0_f3:12:g_d0_f3:B:50% of unassigned patents undergo the PVS process.  Looking at the proportion of inventors
+51:1312:93286:0:24:72:540:708:12:g_d0_f3:12:g_d0_f3:B:that have unique PIKs by assignee type, we find that nearly 91% of inventors in firm assigned
+51:1313:93379:24:24:72:540:684:12:g_d0_f3:12:g_d0_f3:B:patents have a unique PIK associated with their name.  This is higher than the ratio found
+51:1314:93469:24:24:72:540:660:12:g_d0_f3:12:g_d0_f3:B:in individual assigned patents (83%) and the ratio in unassigned patents (76.7%).  The full
+51:1315:93560:24:24:72:263:636:12:g_d0_f3:12:g_d0_f3:B:breakdown by assignee type is below.
+51:1316:93596:24:24:93:539:612:12:g_d0_f3:12:g_d0_f3:A:Starting from the nearly 884,000 patents with unique inventor PIKs, we then merge it to
+51:1317:93683:24:24:72:540:588:12:g_d0_f3:12:g_d0_f3:B:the Census Numident file which contains the demographic information we are interested in.
+51:1318:93772:24:24:72:540:564:12:g_d0_f3:12:g_d0_f3:B:The Numident match rate is around 100%, thus completing the full demographic matching
+51:1319:93857:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:B:process for each patent.  Turning back to the unmatched patents, we break down the match
+51:1320:93945:24:24:72:540:516:12:g_d0_f3:12:g_d0_f3:B:rate by sector.  We show that the patents without unique PIKs and no demographic data
+51:1321:94030:24:24:72:540:492:12:g_d0_f3:12:g_d0_f3:B:are mainly concentrated in the ”Design” and ”Plant” patent sector as shown in the table
+51:1322:94117:24:54:72:105:468:12:g_d0_f3:12:g_d0_f3:B:below.
+51:1323:94123:54:378:72:356:414:17:g_d0_f2:17:g_d0_f2:C:Appendix C  Technology Classes
+52:1324:95182:378:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:50
+53:1325:95184:0:24:115:478:485:11:g_d0_f3:11:g_d0_f3:F:Table A11.  Breakdown of Demographic Match Rate by Sector, 2000-2011
+53:1326:95252:24:15:127:467:461:11:g_d0_f3:11:g_d0_f3:F:SectorIndividual Assignee    Firm Assignee    Unassigned
+53:1327:95308:15:14:127:449:446:11:g_d0_f3:11:g_d0_f3:F:Chemical75.182.247.1
+53:1328:95328:14:13:127:449:432:11:g_d0_f3:11:g_d0_f3:F:C&C73.98152.1
+53:1329:95341:13:14:127:442:419:11:g_d0_f3:11:g_d0_f3:F:Design1111.49
+53:1330:95354:14:14:127:449:405:11:g_d0_f3:11:g_d0_f3:F:D&M758350.7
+53:1331:95365:14:14:127:449:391:11:g_d0_f3:11:g_d0_f3:F:E&E75.482.243.6
+53:1332:95380:14:14:127:449:377:11:g_d0_f3:11:g_d0_f3:F:Mechanical75.682.147.4
+53:1333:95402:14:14:127:449:363:11:g_d0_f3:11:g_d0_f3:F:Others75.780.951.8
+53:1334:95420:14:14:127:442:349:11:g_d0_f3:11:g_d0_f3:F:Plant11.910.15
+53:1335:95434:14:14:127:444:335:11:g_d0_f3:11:g_d0_f3:F:Total Proportion62.17538
+53:1336:95458:14:11:85:509:321:9:g_d0_f6:9:g_d0_f6:F:Source:  Authors calculations using LBD Data.  Notes:  Counts are rounded to comply with disclosure
+53:1337:95557:11:274:268:325:310:9:g_d0_f6:9:g_d0_f6:F:requirements.
+53:1338:95570:274:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:51
+54:1339:95572:0:15:73:349:679:4:g_d0_f3:4:g_d0_f3:F:Table A12.  Technological Categories as Defined in Hall et al.(2001) Plus additions in Bold
+54:1340:95663:15:9:75:545:664:4:g_d0_f3:4:g_d0_f3:F:Cat.  Code    Category NameSub-Cat.  Code    Sub-Category NamePatent Classes
+54:1341:95739:9:8:75:545:655:4:g_d0_f3:4:g_d0_f3:F:1Chemical11Agriculture, Food, Textiles8, 19, 71, 127, 442, 504
+54:1342:95801:8:9:216:545:647:4:g_d0_f3:4:g_d0_f3:F:12Coating106,118, 401, 427
+54:1343:95827:9:8:216:545:638:4:g_d0_f3:4:g_d0_f3:F:13Gas48, 55, 95, 96
+54:1344:95846:8:9:216:545:630:4:g_d0_f3:4:g_d0_f3:F:14Organic Compounds532, 534, 536, 540, 544, 546, 548, 549, 552,
+54:1345:95909:9:9:417:545:621:4:g_d0_f3:4:g_d0_f3:F:554, 556, 558, 560, 562, 564, 568, 570, 987
+54:1346:95952:9:8:216:545:612:4:g_d0_f3:4:g_d0_f3:F:15Resins520, 521, 522, 523, 524, 525, 526, 527, 528, 530
+54:1347:96008:8:9:216:545:604:4:g_d0_f3:4:g_d0_f3:F:19Miscellaneous-chemical23, 34, 44, 102, 117, 149, 156, 159, 162, 196,
+54:1348:96078:9:8:400:545:595:4:g_d0_f3:4:g_d0_f3:F:201, 202, 203, 204, 205, 208, 210, 216, 222, 252,
+54:1349:96127:8:9:403:545:587:4:g_d0_f3:4:g_d0_f3:F:260, 261,349, 366, 416, 422, 423, 430, 436, 494,
+54:1350:96175:9:9:417:545:578:4:g_d0_f3:4:g_d0_f3:F:501, 502, 506, 510, 512, 516, 518, 585, 588
+54:1351:96218:9:8:75:545:569:4:g_d0_f3:4:g_d0_f3:F:2Computers & Communications    21Communications178, 333, 340, 342, 343, 358, 367,
+54:1352:96299:8:9:446:545:561:4:g_d0_f3:4:g_d0_f3:F:370, 375, 379, 385, 398, 455, 725
+54:1353:96332:9:8:216:545:552:4:g_d0_f3:4:g_d0_f3:F:22Computer Hardware & Software341, 380, 382, 395, 700, 701, 702, 704, 705,
+54:1354:96406:8:9:417:545:544:4:g_d0_f3:4:g_d0_f3:F:706, 707, 708, 709, 710, 712, 713, 714, 902
+54:1355:96449:9:9:216:545:535:4:g_d0_f3:4:g_d0_f3:F:23Computer Peripherals345, 347, 726
+54:1356:96484:9:8:216:545:526:4:g_d0_f3:4:g_d0_f3:F:24Information Storage360, 365, 369, 711, 720, G9B
+54:1357:96533:8:9:216:545:518:4:g_d0_f3:4:g_d0_f3:F:25Data Processing715, 717, 718, 719
+54:1358:96568:9:8:75:545:509:4:g_d0_f3:4:g_d0_f3:F:3Drugs & Medical31Drugs424, 514
+54:1359:96599:8:9:216:545:501:4:g_d0_f3:4:g_d0_f3:F:32Surgery & Medical128, 600, 601, 602, 604, 606, 607
+54:1360:96651:9:9:268:304:492:4:g_d0_f3:4:g_d0_f3:F:Instruments
+54:1361:96662:9:8:216:545:483:4:g_d0_f3:4:g_d0_f3:F:33Biotechnology435, 800, 930
+54:1362:96690:8:9:216:545:475:4:g_d0_f3:4:g_d0_f3:F:39Miscellaneous - Drug & Med.351, 433, 623
+54:1363:96732:9:8:75:545:466:4:g_d0_f3:4:g_d0_f3:F:4Electrical & Electronic41Electrical Devices174, 200, 327, 329, 330, 331, 332,
+54:1364:96810:8:9:446:545:458:4:g_d0_f3:4:g_d0_f3:F:334, 335, 336, 337, 338, 392, 439
+54:1365:96843:9:9:216:545:449:4:g_d0_f3:4:g_d0_f3:F:42Electrical Lighting313, 314, 315, 362, 372, 445
+54:1366:96892:9:8:216:545:440:4:g_d0_f3:4:g_d0_f3:F:43Measuring & Testing73, 324, 356, 374, 850
+54:1367:96935:8:9:216:545:432:4:g_d0_f3:4:g_d0_f3:F:44Nuclear & X-rays250, 376, 378, 976
+54:1368:96971:9:8:216:545:423:4:g_d0_f3:4:g_d0_f3:F:45Power Systems60, 136, 290, 310, 318, 320, 322, 323, 361, 363, 388, 429
+54:1369:97043:8:9:216:545:415:4:g_d0_f3:4:g_d0_f3:F:46Semiconductor Devices257, 326, 438, 505
+54:1370:97084:9:8:216:545:406:4:g_d0_f3:4:g_d0_f3:F:49Miscellaneous - Elec.191, 218, 219, 307, 346, 348, 377, 381, 386, 703, 716
+54:1371:97160:8:9:75:545:398:4:g_d0_f3:4:g_d0_f3:F:5Mechanical51Materials Processing & Handling65, 82, 83, 125, 141, 142, 144,
+54:1372:97235:9:9:459:545:389:4:g_d0_f3:4:g_d0_f3:F:173, 209, 221, 225, 226, 234,
+54:1373:97264:9:8:459:545:380:4:g_d0_f3:4:g_d0_f3:F:241, 242, 264, 271, 407, 408,
+54:1374:97293:8:9:476:545:372:4:g_d0_f3:4:g_d0_f3:F:409, 414, 425, 451, 493
+54:1375:97316:9:8:216:545:363:4:g_d0_f3:4:g_d0_f3:F:52Metal Working29, 72, 75, 76, 140, 147, 148, 163,
+54:1376:97366:8:9:446:545:355:4:g_d0_f3:4:g_d0_f3:F:164, 228, 266, 270, 413, 419, 420
+54:1377:97399:9:9:216:545:346:4:g_d0_f3:4:g_d0_f3:F:53Motors, Engines & Parts91, 92, 123, 185, 188, 192, 251, 303,
+54:1378:97461:9:8:432:545:337:4:g_d0_f3:4:g_d0_f3:F:415, 417, 418, 464, 474, 475, 476, 477
+54:1379:97499:8:9:216:545:329:4:g_d0_f3:4:g_d0_f3:F:54Optics352, 353, 355, 359, 396, 399
+54:1380:97535:9:8:216:545:320:4:g_d0_f3:4:g_d0_f3:F:55Transportation104, 105, 114, 152, 180, 187, 213, 238, 244, 246,
+54:1381:97600:8:9:402:545:312:4:g_d0_f3:4:g_d0_f3:F:258, 280, 293, 295, 296, 298, 301, 305, 410, 440
+54:1382:97648:9:9:216:545:303:4:g_d0_f3:4:g_d0_f3:F:59Miscellaneous - Mechanical7, 16, 42, 49, 51, 74, 81, 86, 89,
+54:1383:97710:9:8:444:545:294:4:g_d0_f3:4:g_d0_f3:F:100, 124, 157, 184, 193, 194, 198,
+54:1384:97744:8:9:444:545:286:4:g_d0_f3:4:g_d0_f3:F:212, 227, 235, 239, 254, 267, 291,
+54:1385:97778:9:8:444:545:277:4:g_d0_f3:4:g_d0_f3:F:294, 384, 400, 402, 406, 411, 453,
+54:1386:97812:8:9:446:545:269:4:g_d0_f3:4:g_d0_f3:F:454, 470, 482, 483, 492, 508, 968
+54:1387:97845:9:9:75:545:260:4:g_d0_f3:4:g_d0_f3:F:6Others61Agriculture, Husbandry,43, 47, 56, 99, 111, 119, 131, 426, 449, 452, 460
+54:1388:97926:9:8:268:283:251:4:g_d0_f3:4:g_d0_f3:F:Food
+54:1389:97930:8:9:216:545:243:4:g_d0_f3:4:g_d0_f3:F:62Amusement Devices273, 446, 463, 472, 473
+54:1390:97972:9:8:216:545:234:4:g_d0_f3:4:g_d0_f3:F:63Apparel & Textile2, 12, 24, 26, 28, 36, 38, 57, 66,
+54:1391:98025:8:9:446:545:226:4:g_d0_f3:4:g_d0_f3:F:68, 69, 79, 87, 112, 139, 223, 450
+54:1392:98059:9:9:216:545:217:4:g_d0_f3:4:g_d0_f3:F:64Earth Working & Wells37, 166, 171, 172, 175, 299, 405, 507
+54:1393:98119:9:8:216:545:208:4:g_d0_f3:4:g_d0_f3:F:65Furniture, House Fixtures4, 5, 30, 70, 132, 182, 211, 256, 297, 312
+54:1394:98188:8:9:216:545:200:4:g_d0_f3:4:g_d0_f3:F:66Heating110, 122, 126, 165, 237, 373, 431, 432
+54:1395:98235:9:8:216:545:191:4:g_d0_f3:4:g_d0_f3:F:67Pipes & Joints138, 277, 285, 403
+54:1396:98269:8:9:216:545:183:4:g_d0_f3:4:g_d0_f3:F:68Receptacles53, 206, 215, 217, 220, 224, 229, 232, 383
+54:1397:98324:9:9:216:545:174:4:g_d0_f3:4:g_d0_f3:F:69Miscellaneous - Others1, 14, 15, 27, 33, 40, 52, 54, 59, 62, 63, 84, 101, 108,
+54:1398:98404:9:8:386:545:165:4:g_d0_f3:4:g_d0_f3:F:109, 116, 134, 135, 137, 150, 160, 168, 169, 177, 181,
+54:1399:98458:8:9:386:545:157:4:g_d0_f3:4:g_d0_f3:F:186, 190, 199, 231, 236, 245, 248, 249, 269, 276, 278,
+54:1400:98512:9:8:386:545:148:4:g_d0_f3:4:g_d0_f3:F:279, 281, 292, 300, 368, 404, 412, 428, 283, 289, 434,
+54:1401:98566:8:9:446:545:140:4:g_d0_f3:4:g_d0_f3:F:441, 462, 503, 901, 903, 977, 984
+54:1402:98599:9:9:75:545:131:4:g_d0_f3:4:g_d0_f3:F:7Design79Design patentsDxx
+54:1403:98625:9:8:75:545:122:4:g_d0_f3:4:g_d0_f3:F:8Plant89Plant patentsPLT
+54:1404:98649:8:78:110:311:114:4:g_d0_f6:4:g_d0_f6:F:Source:  Hall et al.  (2001) plus own additions based on new technology codes.
+54:1405:98727:78:0:300:312:36:12:g_d0_f3:12:g_d0_f3:A:52

@@ -1,0 +1,2187 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:406:610:12:Times:12:Times:LOW-FREQUENCY ECONOMETRICS
+1:2:51:28:14:306:346:582:12:Times:12:Times:Ulrich K. Müller
+1:3:67:14:28:306:347:568:12:Times:12:Times:Mark W. Watson
+1:4:81:28:14:306:359:540:12:Times:12:Times:Working Paper 21564
+1:5:100:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w21564
+1:6:133:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:169:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:194:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:213:14:228:306:345:442:12:Times:12:Times:September 2015
+1:10:227:228:14:72:540:214:12:Times:12:Times:We thank Frank Schorfheide for his thoughtful discussion at the 2015 World Congress in Montreal.
+1:11:323:14:14:72:540:200:12:Times:12:Times:Support was provided by the National Science Foundation through grant SES-1226464. The views
+1:12:415:14:14:72:540:186:12:Times:12:Times:expressed herein are those of the authors and do not necessarily reflect the views of the National Bureau
+1:13:520:14:28:72:184:172:12:Times:12:Times:of Economic Research.
+1:14:541:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:15:637:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:16:732:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:17:750:28:14:72:540:88:12:Times:12:Times:© 2015 by Ulrich K. Müller and Mark W. Watson. All rights reserved. Short sections of text, not to
+1:18:848:14:14:72:540:74:12:Times:12:Times:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:19:949:14:0:72:224:60:12:Times:12:Times:© notice, is given to the source.
+2:20:982:0:14:72:218:700:12:Times:12:Times:Low-Frequency Econometrics
+2:21:1008:14:14:72:259:686:12:Times:12:Times:Ulrich K. Müller and Mark W. Watson
+2:22:1043:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 21564
+2:23:1071:14:14:72:150:658:12:Times:12:Times:September 2015
+2:24:1085:14:28:72:181:644:12:Times:12:Times:JEL No. C12,C22,C32
+2:25:1104:28:28:306:339:616:12:Times:12:Times:ABSTRACT
+2:26:1112:28:14:72:540:588:12:Times:12:Times:Many questions in economics involve long-run or trend variation and covariation in time series. Yet,
+2:27:1212:14:14:72:540:574:12:Times:12:Times:time series of typical lengths contain only limited information about this long-run variation. This paper
+2:28:1317:14:14:72:540:560:12:Times:12:Times:suggests that long-run sample information can be isolated using a small number of low-frequency
+2:29:1412:14:14:72:540:546:12:Times:12:Times:trigonometric weighted averages, which in turn can be used to conduct inference about long-run variability
+2:30:1518:14:14:72:540:532:12:Times:12:Times:and covariability. Because the low-frequency weighted averages have large sample normal distributions,
+2:31:1620:14:14:72:540:518:12:Times:12:Times:large sample valid inference can often be conducted using familiar small sample normal inference
+2:32:1716:14:14:72:540:504:12:Times:12:Times:procedures.  Moreover, the general approach is applicable for a wide range of persistent stochastic
+2:33:1815:14:42:72:354:490:12:Times:12:Times:processes that go beyond the familiar I(0) and I(1) models.
+2:34:1874:42:14:72:153:448:12:Times:12:Times:Ulrich K. Müller
+2:35:1890:14:14:72:198:434:12:Times:12:Times:Department of Economics
+2:36:1913:14:14:72:172:420:12:Times:12:Times:Princeton University
+2:37:1933:14:14:72:198:406:12:Times:12:Times:Princeton, NJ 08544-1013
+2:38:1957:14:28:72:191:392:12:Times:12:Times:umueller@princeton.edu
+2:39:1979:28:14:72:155:364:12:Times:12:Times:Mark W. Watson
+2:40:1993:14:14:72:198:350:12:Times:12:Times:Department of Economics
+2:41:2016:14:14:72:172:336:12:Times:12:Times:Princeton University
+2:42:2036:14:14:72:198:322:12:Times:12:Times:Princeton, NJ 08544-1013
+2:43:2060:14:14:72:124:308:12:Times:12:Times:and NBER
+2:44:2068:14:194:72:192:294:12:Times:12:Times:mwatson@princeton.edu
+2:45:2089:194:14:72:223:100:12:Times:12:Times:A data appendix is available at:
+2:46:2121:14:0:72:283:86:12:Times:12:Times:http://www.nber.org/data-appendix/w21564
+3:47:2161:0:30:72:208:671:301:g_d0_f1:301:g_d0_f1:1  Introduction
+3:48:2176:30:18:72:540:641:145:g_d0_f2:145:g_d0_f2:This paper discusses inference about trendsin economic time series. By “trend” we mean
+3:49:2262:18:18:72:540:623:145:g_d0_f2:145:g_d0_f2:the low-frequency variability evident in a time series after forming moving averages such as
+3:50:2354:18:18:72:540:605:145:g_d0_f2:145:g_d0_f2:low-pass (cf. Baxter and King (1999)) or Hodrick and Prescott (1997)filters. To measure
+3:51:2441:18:18:72:540:587:145:g_d0_f2:145:g_d0_f2:this low-frequency variability we rely on projections of the series onto a small number of
+3:52:2531:18:19:72:540:569:145:g_d0_f2:145:g_d0_f2:trigonometric functions (e.g., discrete Fourier, sine, or cosine transforms). The fact that a
+3:53:2624:19:18:72:539:550:145:g_d0_f2:145:g_d0_f2:small number of projection coefficients capture low-frequency variability reflects the scarcity
+3:54:2719:18:18:72:539:532:145:g_d0_f2:145:g_d0_f2:of low-frequency information in the data, leading to what is effectively a “small-sample”
+3:55:2808:18:18:72:540:514:145:g_d0_f2:145:g_d0_f2:econometric problem. As we show, it is still relatively straightforward to conduct statistical
+3:56:2902:18:18:72:540:496:145:g_d0_f2:145:g_d0_f2:inference using the small sample of low-frequency data summaries. Moreover, these low-
+3:57:2988:18:18:72:540:478:145:g_d0_f2:145:g_d0_f2:frequency methods are appropriate for both weakly and highly persistent processes. Before
+3:58:3077:18:18:72:439:460:145:g_d0_f2:145:g_d0_f2:getting into the details, it is useful tofix ideas by looking at some data.
+3:59:3152:18:18:89:539:442:145:g_d0_f2:145:g_d0_f2:Figure 1 plots the value of per-capita GDP growth rates (panel A) and price inflation
+3:60:3237:18:18:71:539:424:145:g_d0_f2:145:g_d0_f2:(panel B) for the United States using quarterly data from 1947 through 2014, and where both
+3:61:3328:18:18:71:539:406:145:g_d0_f2:145:g_d0_f2:are expressed in percentage points at an annual rate.1The plots show the raw series and two
+3:62:3419:18:18:71:539:388:145:g_d0_f2:145:g_d0_f2:“trends”. Thefirst trend was constructed using a band-pass moving averagefilter designed
+3:63:3507:18:18:71:540:370:145:g_d0_f2:145:g_d0_f2:to pass cyclical components with periods longer than6≈11years, and the second is the
+3:64:3593:18:18:71:539:352:145:g_d0_f2:145:g_d0_f2:full-sample projection of the series onto a constant and twelve cosine functions with periods
+3:65:3686:18:18:71:538:334:145:g_d0_f6:65:g_d0_f2:2for=112, also designed to capture variability for periods longer than 11 years.2
+3:66:3776:18:18:72:539:316:145:g_d0_f2:145:g_d0_f2:Aglanceatthefigure shows that the band-pass and projection trends essentially coincide
+3:67:3862:18:18:72:539:298:145:g_d0_f2:145:g_d0_f2:both for GDP, for which there is only moderate trend variability, and inflation, for which
+3:68:3952:18:18:71:539:280:145:g_d0_f2:145:g_d0_f2:there is substantial trend variability. This paper focuses on trends computed by projection
+3:69:4043:18:19:71:530:262:145:g_d0_f2:145:g_d0_f2:methods because, as we will see, they give rise to simple methods for statistical inference.
+3:70:4135:19:17:89:539:243:145:g_d0_f2:145:g_d0_f2:Figure 1 raises several empirical questions. For example, the trend in GDP growth has
+3:71:4220:17:19:85:539:226:49:g_d0_f2:100:g_d0_f2:1Three data series are used in this paper.   All are quarterly series from 1947:Q1 to 2014:Q4
+3:72:4313:19:15:72:540:207:100:g_d0_f2:100:g_d0_f2:for the United States.   Real per capita gross domestic product is available from FRED as series
+3:73:4409:15:15:72:539:192:100:g_d0_f2:100:g_d0_f2:A939RX0Q048SBEA. Inflationismeasuredusingthepricedeflator for personal consumption expenditures
+3:74:4504:15:15:72:540:177:100:g_d0_f2:100:g_d0_f2:(FRED series DPCERD3Q086SBEA). Total factor productivity is from Fernald (2014) and is available at
+3:75:4603:15:9:72:364:162:100:g_d0_f2:100:g_d0_f2:http://www.frbsf.org/economic-research/economists/john-fernald/.
+3:76:4667:9:18:85:539:153:49:g_d0_f2:100:g_d0_f2:2The low-pass values were computed using an ideal low-passfilter truncated after2terms applied
+3:77:4763:18:15:72:539:135:100:g_d0_f2:100:g_d0_f2:to the padded series using forecasts/backcasts constructed from an(4)model. The cosine projections
+3:78:4863:15:0:72:428:120:100:g_d0_f2:100:g_d0_f2:are thefitted values from the regression of the series onto a constant term and
+3:79:4942:0:8:432:440:128:100:g_d0_f7:100:g_d0_f7:√
+3:80:4943:8:0:441:463:120:100:g_d0_f9:100:g_d0_f9:2cos
+3:81:4947:0:8:462:467:128:100:g_d0_f10:100:g_d0_f10:¡
+3:82:4948:8:0:467:471:120:100:g_d0_f8:100:g_d0_f8:
+3:83:4949:0:8:473:478:128:100:g_d0_f10:100:g_d0_f10:¡
+3:84:4950:8:0:478:499:120:100:g_d0_f8:49:g_d0_f11:−12
+3:85:4954:0:8:500:505:128:100:g_d0_f10:100:g_d0_f10:¢
+3:86:4955:8:0:506:517:120:100:g_d0_f8:100:g_d0_f8:
+3:87:4957:0:8:518:523:128:100:g_d0_f10:100:g_d0_f10:¢
+3:88:4958:8:15:527:539:120:100:g_d0_f2:100:g_d0_f2:for
+3:89:4961:15:0:72:130:105:100:g_d0_f8:100:g_d0_f2:=112.
+4:90:4973:0:18:211:400:606:145:g_d0_f2:145:g_d0_f2:Figure 1: Trends in U.S. Time Series
+4:91:5009:18:224:280:330:588:145:g_d0_f2:145:g_d0_f2:Panel (A)
+4:92:5018:224:0:280:329:364:145:g_d0_f2:145:g_d0_f2:Panel (B)
+5:93:5028:0:252:177:433:664:145:g_d0_f2:145:g_d0_f2:Figure 2: Trends in GDP and TFP Growth Rates
+5:94:5072:252:18:72:539:412:145:g_d0_f2:145:g_d0_f2:been low for the last decade. Does this portend low average growth over the next decade? Or,
+5:95:5164:18:18:72:540:394:145:g_d0_f2:145:g_d0_f2:is there mean reversion in the trend so that the next decade is more likely to exhibit faster
+5:96:5257:18:18:72:539:376:145:g_d0_f2:145:g_d0_f2:than average growth? And, whatisthe value of the population mean growth rate of GDP?
+5:97:5341:18:18:71:539:358:145:g_d0_f2:145:g_d0_f2:The plot for inflation shows large persistent variation in its trends over the past sixty years.
+5:98:5437:18:18:71:539:340:145:g_d0_f2:145:g_d0_f2:Does this suggest that the inflation process is(1)? Or is this behavior consistent with an
+5:99:5528:18:18:71:539:322:145:g_d0_f5:145:g_d0_f2:(0)process? Alternatively, what about something “between” the(0)and(1)processes?
+5:100:5611:18:18:71:539:304:145:g_d0_f2:145:g_d0_f2:More generally, the average value of inflation varies considerably over non-overlapping 10- or
+5:101:5705:18:18:71:539:286:145:g_d0_f2:145:g_d0_f2:25-year time periods; average GDP growth rates show less, but still substantial variability.
+5:102:5797:18:18:71:539:268:145:g_d0_f2:145:g_d0_f2:How much variability should we expect to see in future 10- and 25-year samples? Section
+5:103:5884:18:18:71:539:250:145:g_d0_f2:145:g_d0_f2:3 takes up these questions, along with several other questions that can be answered using
+5:104:5973:18:18:71:230:232:145:g_d0_f2:145:g_d0_f2:univariate time series methods.
+5:105:6004:18:18:89:539:214:145:g_d0_f2:145:g_d0_f2:Figure 2 plots both total factor productivity (TFP) and GDP growth rates. The trend
+5:106:6087:18:18:71:539:196:145:g_d0_f2:145:g_d0_f2:components of the series move together, suggesting (for good reason) that long-run variation
+5:107:6179:18:19:71:539:178:145:g_d0_f2:145:g_d0_f2:in GDP and TFP growth rates are closely related. But, exactly how closely are they related?
+5:108:6270:19:18:71:539:159:145:g_d0_f2:145:g_d0_f2:And, by how much is the trend growth rate in GDP predicted to increase if the trend growth
+5:109:6360:18:18:71:539:141:145:g_d0_f2:145:g_d0_f2:rate of TFP increases by, say, 10 basis points? Section 4 takes up questions like these that
+5:110:6452:18:18:71:270:123:145:g_d0_f2:145:g_d0_f2:involve multiple (here two) time series.
+5:111:6492:18:0:89:539:105:145:g_d0_f2:145:g_d0_f2:The paper begins, in Section 2, with notation and (finite and large-sample) properties of
+6:112:6582:0:18:72:540:671:145:g_d0_f2:145:g_d0_f2:discrete “cosine transforms,” the trigonometric projections used in our analysis.3Sections
+6:113:6672:18:18:72:540:653:145:g_d0_f2:145:g_d0_f2:3 and 4 show how these cosine transforms can be used to answer trend-related inference
+6:114:6758:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:questions.  “Low-frequency” variability conjures up spectral analysis, and Section 5 uses
+6:115:6847:18:19:72:540:617:145:g_d0_f2:145:g_d0_f2:frequency-domain concepts to explain several facets of the analysis. To keep the focus on
+6:116:6936:19:18:72:540:598:145:g_d0_f2:145:g_d0_f2:key ideas and concepts, the analysis in the body of the paper uses relatively simple stochastic
+6:117:7031:18:45:72:445:580:145:g_d0_f2:145:g_d0_f2:processes, and Section 6 briefly discusses some extensions and concludes.
+6:118:7104:45:30:72:540:535:301:g_d0_f1:301:g_d0_f1:2  Some properties of low-frequency weighted averages
+6:119:7157:30:8:72:546:505:145:g_d0_f2:145:g_d0_f6:Letdenote a scalar time series that is observed for=1,andletΨ()=
+6:120:7232:8:10:71:81:497:145:g_d0_f7:145:g_d0_f7:√
+6:121:7233:10:18:81:544:487:145:g_d0_f6:145:g_d0_f2:2cos(),sothatΨ()has period2.LetΨ()=[Ψ1()Ψ2()Ψ()]0,a
+6:122:7305:18:18:72:538:469:145:g_d0_f17:65:g_d0_f16:Rvalued function, and letΨ=[Ψ((1−12))Ψ((2−12))Ψ((−12))]0
+6:123:7379:18:18:72:549:451:145:g_d0_f2:145:g_d0_f2:be the×matrix obtained by evaluatingΨ(·)at=(−12),=1.The
+6:124:7447:18:18:71:539:433:145:g_d0_f2:145:g_d0_f2:low-frequency projections shown in Figures 1 and 2 are thefitted values from the OLS re-
+6:125:7535:18:18:71:539:415:145:g_d0_f2:145:g_d0_f2:gression of[12]onto a constant andΨ;thatis,b=+Ψ((−12))0,
+6:126:7611:18:0:72:147:397:145:g_d0_f2:65:g_d0_f15:where ̄=−1
+6:127:7623:0:13:149:167:406:145:g_d0_f10:65:g_d0_f13:P
+6:128:7625:13:14:162:539:393:65:g_d0_f13:145:g_d0_f2:=1andare the OLS regression coefficients. Because the columns of
+6:129:7694:14:18:72:539:379:145:g_d0_f14:145:g_d0_f2:Ψare orthogonal, sum to zero, and have length(that is,−1Ψ0Ψ=andΨ0=0,
+6:130:7772:18:38:72:534:361:145:g_d0_f2:145:g_d0_f2:wheredenotes a×1vector of1s), the OLS regression coefficients have a simple form
+6:131:7855:38:0:223:274:323:145:g_d0_f5:65:g_d0_f15:=−1
+6:132:7861:0:29:282:294:338:65:g_d0_f13:145:g_d0_f10:X
+6:133:7863:29:0:279:293:309:65:g_d0_f13:65:g_d0_f15:=1
+6:134:7866:0:38:296:387:323:145:g_d0_f14:145:g_d0_f5:Ψ((−12))
+6:135:7881:38:39:72:517:285:145:g_d0_f2:145:g_d0_f2:Thethregression coefficient,, is called thethcosine transform of[12]0.
+6:136:7966:39:26:72:320:246:209:g_d0_f1:100:g_d0_f8:2.1  Large-sample properties of
+6:137:7999:26:18:72:539:220:145:g_d0_f2:145:g_d0_f2:Suppose thatcan be represented as=+,whereis the mean ofandis a zero
+6:138:8077:18:18:72:539:202:145:g_d0_f2:145:g_d0_f2:mean stochastic process. Because the cosine weights sum to zero, the value ofhas no effect
+6:139:8168:18:0:72:406:184:145:g_d0_f2:65:g_d0_f15:on, so cosine weighted averages ofand ofcoincide (−1
+6:140:8227:0:12:409:426:193:145:g_d0_f10:65:g_d0_f13:P
+6:141:8229:12:15:421:539:181:65:g_d0_f13:145:g_d0_f6:=1Ψ((−12))=
+6:142:8247:15:0:71:91:166:145:g_d0_f5:65:g_d0_f15:−1
+6:143:8250:0:12:93:111:175:145:g_d0_f10:65:g_d0_f13:P
+6:144:8252:12:15:106:540:163:65:g_d0_f13:145:g_d0_f2:=1Ψ((−12))). Scaled versions of these weighted averages are normally distrib-
+6:145:8336:15:18:72:539:148:145:g_d0_f2:145:g_d0_f2:uted in large samples ifsatisfies certain moment and persistence properties. In Section
+6:146:8425:18:18:72:540:130:145:g_d0_f2:145:g_d0_f2:5.3 we present a central limit theorem that relies on assumptions about the spectral density
+6:147:8517:18:18:72:539:112:145:g_d0_f2:145:g_d0_f2:of. Here we use a simpler argument from Müller and Watson (2008) that relies on the
+6:148:8602:18:0:85:540:94:49:g_d0_f2:100:g_d0_f2:3As discussed below, analogous properties hold for other transforms such as discrete Fourier transforms.
+7:149:8707:0:18:72:540:671:145:g_d0_f2:145:g_d0_f2:assumption that suitably scaled partial sums ofbehave like a Gaussian process in large
+7:150:8795:18:18:72:115:653:145:g_d0_f2:145:g_d0_f2:samples.
+7:151:8803:18:18:89:539:635:145:g_d0_f2:145:g_d0_f2:Specifically, suppose that for some number, the linearly interpolated partial sum
+7:152:8885:18:0:72:283:617:145:g_d0_f2:65:g_d0_f13:process ofscaled by−,()=−
+7:153:8919:0:12:286:316:625:145:g_d0_f10:65:g_d0_f16:Pbc
+7:154:8924:12:0:298:349:613:65:g_d0_f13:145:g_d0_f5:=1+
+7:155:8931:0:23:351:543:621:65:g_d0_f19:145:g_d0_f2:−(−bc)bc+1,convergestoa
+7:156:8962:23:0:71:448:598:145:g_d0_f2:145:g_d0_f2:Gaussian process,(·)⇒(·)Using an identity for the cosine weights (
+7:157:9032:0:14:448:468:608:145:g_d0_f10:65:g_d0_f13:R
+7:158:9036:14:14:454:539:594:65:g_d0_f15:145:g_d0_f6:(−1)Ψ()=
+7:159:9051:14:18:72:539:580:145:g_d0_f5:145:g_d0_f2:−1−1Ψ((−12))with=sin((2))(2)), the following representation for
+7:160:9135:18:35:71:275:562:145:g_d0_f2:145:g_d0_f2:thethcosine transform follows directly
+7:161:9174:35:0:90:187:527:145:g_d0_f5:65:g_d0_f13:1−=−
+7:162:9185:0:28:195:206:542:65:g_d0_f13:145:g_d0_f10:X
+7:163:9187:28:0:191:205:514:65:g_d0_f13:65:g_d0_f15:=1
+7:164:9190:0:40:209:301:527:145:g_d0_f14:65:g_d0_f13:Ψ((−12))
+7:165:9205:40:0:147:205:487:145:g_d0_f6:65:g_d0_f13:=1−
+7:166:9213:0:29:213:225:502:65:g_d0_f13:145:g_d0_f10:X
+7:167:9215:29:0:209:223:473:65:g_d0_f13:65:g_d0_f15:=1
+7:168:9218:0:27:227:251:503:145:g_d0_f10:65:g_d0_f13:Z
+7:169:9222:27:0:234:263:476:65:g_d0_f15:65:g_d0_f13:(−1)
+7:170:9229:0:41:267:539:487:145:g_d0_f14:145:g_d0_f2:Ψ()bc+1(1)
+7:171:9246:41:0:147:180:446:145:g_d0_f6:65:g_d0_f13:=
+7:172:9250:0:28:189:200:461:65:g_d0_f13:145:g_d0_f10:X
+7:173:9252:28:0:185:199:433:65:g_d0_f13:65:g_d0_f15:=1
+7:174:9255:0:21:202:209:467:145:g_d0_f10:145:g_d0_f10:"
+7:175:9256:21:0:209:224:446:145:g_d0_f5:65:g_d0_f13:
+7:176:9258:0:14:227:238:456:145:g_d0_f10:65:g_d0_f13:¡
+7:177:9260:14:0:234:239:442:65:g_d0_f13:65:g_d0_f13:
+7:178:9261:0:10:241:247:456:145:g_d0_f10:145:g_d0_f10:¢
+7:179:9262:10:0:249:261:446:145:g_d0_f14:65:g_d0_f13:Ψ
+7:180:9264:0:14:264:275:456:145:g_d0_f10:65:g_d0_f13:¡
+7:181:9266:14:0:271:276:442:65:g_d0_f13:65:g_d0_f13:
+7:182:9267:0:10:278:284:456:145:g_d0_f10:145:g_d0_f10:¢
+7:183:9268:10:0:286:312:446:145:g_d0_f7:65:g_d0_f13:−
+7:184:9271:0:14:316:336:456:145:g_d0_f10:65:g_d0_f15:¡−1
+7:185:9275:14:0:326:331:442:65:g_d0_f13:65:g_d0_f13:
+7:186:9276:0:10:338:344:456:145:g_d0_f10:145:g_d0_f10:¢
+7:187:9277:10:0:345:357:446:145:g_d0_f14:65:g_d0_f13:Ψ
+7:188:9279:0:14:361:381:456:145:g_d0_f10:65:g_d0_f15:¡−1
+7:189:9283:14:0:371:376:442:65:g_d0_f13:65:g_d0_f13:
+7:190:9284:0:10:382:388:456:145:g_d0_f10:145:g_d0_f10:¢
+7:191:9285:10:0:390:399:446:145:g_d0_f7:145:g_d0_f7:−
+7:192:9286:0:27:402:428:463:145:g_d0_f10:65:g_d0_f13:Z1
+7:193:9290:27:0:409:439:436:65:g_d0_f15:65:g_d0_f13:(−1)
+7:194:9297:0:0:442:512:446:145:g_d0_f5:145:g_d0_f5:()()
+7:195:9309:0:58:511:518:467:145:g_d0_f10:145:g_d0_f10:#
+7:196:9310:58:0:147:255:409:145:g_d0_f6:145:g_d0_f7:=[Ψ(1)(1)−
+7:197:9326:0:27:258:274:425:145:g_d0_f10:65:g_d0_f15:Z1
+7:198:9328:27:0:265:269:398:65:g_d0_f15:65:g_d0_f15:0
+7:199:9329:0:33:277:349:409:145:g_d0_f5:145:g_d0_f6:()()]
+7:200:9342:33:0:145:231:376:145:g_d0_f7:145:g_d0_f7:⇒Ψ(1)(1)−
+7:201:9353:0:27:234:250:392:145:g_d0_f10:65:g_d0_f15:Z1
+7:202:9355:27:0:241:245:365:65:g_d0_f15:65:g_d0_f15:0
+7:203:9356:0:33:253:316:376:145:g_d0_f5:145:g_d0_f5:()()
+7:204:9367:33:0:147:156:343:145:g_d0_f6:145:g_d0_f6:=
+7:205:9368:0:27:167:183:359:145:g_d0_f10:65:g_d0_f15:Z1
+7:206:9370:27:0:174:178:332:65:g_d0_f15:65:g_d0_f15:0
+7:207:9371:0:32:186:244:343:145:g_d0_f14:145:g_d0_f6:Ψ()()
+7:208:9381:32:0:72:475:311:145:g_d0_f2:65:g_d0_f13:where thefirst two lines use the properties ofΨ,thethirduses()=1−
+7:209:9452:0:14:477:489:321:145:g_d0_f10:65:g_d0_f13:R
+7:210:9454:14:14:483:539:307:65:g_d0_f15:145:g_d0_f5:0bc+1
+7:211:9464:14:18:71:539:293:145:g_d0_f2:145:g_d0_f2:and integration by parts with()=Ψ(),thefifth uses the continuous mapping
+7:212:9545:18:18:72:539:275:145:g_d0_f2:145:g_d0_f2:theorem and→1,andthefinal line uses the stochastic calculus version of integration by
+7:213:9633:18:31:72:414:257:145:g_d0_f2:145:g_d0_f2:parts. This representation holds jointly for the elements of,so
+7:214:9698:31:0:196:279:226:145:g_d0_f5:145:g_d0_f6:1−⇒=
+7:215:9707:0:27:282:298:242:145:g_d0_f10:65:g_d0_f15:Z1
+7:216:9709:27:0:289:293:215:65:g_d0_f15:65:g_d0_f15:0
+7:217:9710:0:30:301:539:226:145:g_d0_f14:145:g_d0_f2:Ψ()()∼N(0Σ)(2)
+7:218:9730:30:18:72:539:196:145:g_d0_f2:145:g_d0_f5:The elements of the covariance matrixΣfollow directly from the covariance kernel of
+7:219:9814:18:18:72:540:178:145:g_d0_f2:145:g_d0_f2:and the cosine weights (see Müller and Watson (2008)). The key idea of our approach to
+7:220:9900:18:19:72:540:160:145:g_d0_f2:145:g_d0_f2:low-frequency econometrics is to conduct inference based on the large sample approximation
+7:221:9990:19:0:72:133:141:145:g_d0_f2:65:g_d0_f13:(2),1−
+7:222:10000:0:25:140:194:148:65:g_d0_f13:145:g_d0_f5:∼N(0Σ)
+7:223:10009:25:18:89:539:123:145:g_d0_f2:145:g_d0_f2:Figure 3 plots thefirst 12 cosine transforms for GDP growth rates and inflation. Roughly
+7:224:10097:18:18:71:539:105:145:g_d0_f2:145:g_d0_f2:speaking, the cosine transforms for GDP growth rates look like a sample ofi.i.d.random
+7:225:10183:18:0:71:539:87:145:g_d0_f2:145:g_d0_f2:variables, while the cosine transforms for inflation appear to be heteroskedastic, with larger
+8:226:10278:0:18:154:456:573:145:g_d0_f2:145:g_d0_f2:Figure 3: Cosine Transforms of GDP Growth and Inflation
+8:227:10333:18:191:242:368:555:145:g_d0_f2:145:g_d0_f2:Panel (A): GDP Growth
+8:228:10354:191:0:255:355:364:145:g_d0_f2:145:g_d0_f2:Panel(B):Inflation
+9:229:10373:0:18:72:539:671:145:g_d0_f2:145:g_d0_f2:variance for thefirst few cosine transforms. The value of the covariance matrixΣin the
+9:230:10459:18:0:71:478:653:145:g_d0_f5:65:g_d0_f15:(0)and(1)models help explain these differences. In the(0)model−12
+9:231:10529:0:13:481:510:662:145:g_d0_f10:65:g_d0_f16:Pb·c
+9:232:10534:13:14:493:539:649:65:g_d0_f13:145:g_d0_f7:=1⇒
+9:233:10540:14:18:72:539:635:145:g_d0_f5:145:g_d0_f2:(·)witha standard Wiener process and20the long-run variance,Σ=2,
+9:234:10612:18:0:72:319:617:145:g_d0_f2:65:g_d0_f15:soisi.i.d.N(02).Inthe(1)model−32
+9:235:10651:0:12:322:351:625:145:g_d0_f10:65:g_d0_f16:Pb·c
+9:236:10656:12:0:335:391:613:65:g_d0_f13:145:g_d0_f5:=1⇒
+9:237:10663:0:14:394:404:626:145:g_d0_f10:65:g_d0_f16:R·
+9:238:10665:14:0:399:486:612:65:g_d0_f15:145:g_d0_f5:0(),Σ=
+9:239:10676:0:23:487:544:621:65:g_d0_f15:145:g_d0_f2:2,where
+9:240:10684:23:18:71:539:598:145:g_d0_f5:145:g_d0_f2:is a diagonal matrix with elements=1()2,sothe’s are independent but
+9:241:10760:18:18:72:539:580:145:g_d0_f2:145:g_d0_f2:heteroskedastic.4In the following section we present tests for both the(0)and(1)null
+9:242:10846:18:18:71:539:562:145:g_d0_f2:145:g_d0_f2:hypotheses.  Given these scatter plots, it is not too surprising that the(0)null is not
+9:243:10934:18:18:71:539:544:145:g_d0_f2:145:g_d0_f2:rejected for GDP growth, but the(1)null is rejected, and just the opposite result obtains
+9:244:11024:18:18:71:135:526:145:g_d0_f2:145:g_d0_f2:for inflation.
+9:245:11038:18:18:89:539:508:145:g_d0_f2:145:g_d0_f2:WhileΣhas a simple form for the(0)and(1)models, it can be more complicated for
+9:246:11118:18:18:71:539:490:145:g_d0_f2:145:g_d0_f2:other stochastic processes, so it is useful to have a simple numerical method for obtaining
+9:247:11209:18:18:71:543:472:145:g_d0_f2:145:g_d0_f2:accurate approximations forΣ. As representation (2) suggests,Σcanbeapproximatedby
+9:248:11290:18:18:71:539:454:145:g_d0_f2:145:g_d0_f2:the large-finite sample covariance matrixVar[1−]=2−2Ψ0ΞΨwhereΞis the
+9:249:11369:18:18:71:539:436:145:g_d0_f5:145:g_d0_f2:×covariance matrix of[12]0under any (not too heavy-tailed) process for
+9:250:11451:18:18:72:539:418:145:g_d0_f5:145:g_d0_f2:that induces the same Gaussian process limit of its partial sums. For example, ifis
+9:251:11538:18:18:72:539:400:145:g_d0_f5:145:g_d0_f2:(0),thenΣcan be approximated using the large-finite-sample covariance matrix of the
+9:252:11623:18:18:72:539:382:145:g_d0_f2:145:g_d0_f2:cosine transform of ani.i.d.process with variance2,Σ≈2Ψ0Ψ=2.  Indeed,
+9:253:11700:18:18:71:539:364:145:g_d0_f2:145:g_d0_f2:becauseΣ=2for the(0)model, this approximation is exact. Whenis(1)Σcan be
+9:254:11779:18:18:71:539:346:145:g_d0_f2:145:g_d0_f2:approximated using the large-finite sample covariance matrix of the cosine transforms of
+9:255:11868:18:18:71:540:328:145:g_d0_f2:145:g_d0_f2:a random walk process,Σ≈2Ψ0ΞΨ,whereΞhas( )th elementmin( ). In Section
+9:256:11949:18:19:71:539:310:145:g_d0_f2:145:g_d0_f2:3, we consider the local-to-unity AR model and fractional()model, and the covariance
+9:257:12035:19:18:71:435:291:145:g_d0_f2:145:g_d0_f2:matrices for these processes can be approximated in analogous fashion.
+9:258:12105:18:18:89:539:273:145:g_d0_f2:145:g_d0_f2:While this discussion has focused on discrete cosine transforms, the representation in (1)
+9:259:12195:18:18:71:539:255:145:g_d0_f2:145:g_d0_f2:is seen to hold foranyset of smooth set of weights,Ψ(). Because our interest is focused on
+9:260:12286:18:18:71:539:237:145:g_d0_f2:145:g_d0_f2:trends, it is important that the weighted averages extract low-frequency variability from the
+9:261:12379:18:18:71:539:219:145:g_d0_f2:145:g_d0_f2:data, and Figure 1 shows that the cosine transforms do just that (also see Section 5.1 below).
+9:262:12473:18:18:71:539:201:145:g_d0_f2:145:g_d0_f2:But, low-frequency Fourier or sine transforms are equally well-suited and can be used instead
+9:263:12566:18:18:71:500:183:145:g_d0_f2:65:g_d0_f2:of the cosine transforms after appropriate modification of the covariance matrixΣ.5
+9:264:12649:18:18:85:539:165:49:g_d0_f2:100:g_d0_f2:4TheasymptoticcovariancematrixΣis diagonal in both the(0)and(1)models because the cosine
+9:265:12739:18:9:72:539:147:100:g_d0_f2:100:g_d0_f2:functions are the eigenfunctions of the covariance kernel of a demeaned Wiener process; cf. Phillips (1998).
+9:266:12847:9:19:85:540:138:49:g_d0_f2:100:g_d0_f2:5For example, while the cosine transforms of an(1)process have the diagonal covariance matrix discussed
+9:267:12951:19:15:72:540:119:100:g_d0_f2:100:g_d0_f2:in the last paragraph, the covariance matrix of Fourier transforms is somewhat more complicated (cf. Akdi
+9:268:13056:15:0:72:158:104:100:g_d0_f2:100:g_d0_f2:and Dickey (1998)).
+10:269:13076:0:18:89:540:671:145:g_d0_f2:145:g_d0_f2:Andfinally, it is worth stressing that in the asymptotic analysis presented in this section
+10:270:13167:18:18:72:539:653:145:g_d0_f2:145:g_d0_f2:the dimension of, which we have denoted by,isheldfixed asgrows large. Such
+10:271:13245:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:asymptotics reflect the notion that there is only a relatively modest amount of information
+10:272:13336:18:19:72:540:617:145:g_d0_f2:145:g_d0_f2:about low-frequency phenomena in, say, 65-year realizations of macro time series. In practice,
+10:273:13430:19:18:72:540:598:145:g_d0_f2:145:g_d0_f2:this translates into using a relatively small number of low-frequency averages from a long time
+10:274:13525:18:18:72:539:580:145:g_d0_f2:145:g_d0_f2:series. Our empirical analysis uses=12from=272quarterly observations because, from
+10:275:13609:18:18:71:539:562:145:g_d0_f2:145:g_d0_f2:Figures 1 and 2, this produces a sensible notion of the “trend” in inflation and growth rates
+10:276:13702:18:18:71:539:544:145:g_d0_f2:145:g_d0_f2:in GDP and TFP, corresponding the periodicities longer than 11 years. The econometric
+10:277:13787:18:18:71:539:526:145:g_d0_f2:145:g_d0_f2:challenge then is to draw valid conclusions from theseobservations. Further discussion of
+10:278:13877:18:45:71:287:508:145:g_d0_f2:145:g_d0_f2:thechoiceofmay be found in Section 5.
+10:279:13915:45:30:72:464:463:301:g_d0_f1:301:g_d0_f1:3   Inference examples: univariate time series
+10:280:13961:30:18:72:539:433:145:g_d0_f2:145:g_d0_f2:This section takes upfive examples of statistical inference involving the low-frequency prop-
+10:281:14054:18:18:72:539:415:145:g_d0_f2:145:g_d0_f2:erties of a univariate stochastic process. In each case, the normal limit fordiscussed in
+10:282:14145:18:18:72:540:397:145:g_d0_f2:145:g_d0_f2:the last section yields a simple, and standard, small-sample inference problem involving a
+10:283:14235:18:39:72:189:379:145:g_d0_f2:145:g_d0_f2:normal random vector.
+10:284:14256:39:26:72:204:340:209:g_d0_f1:209:g_d0_f1:3.1  I(0) inference
+10:285:14275:26:18:72:539:314:145:g_d0_f2:145:g_d0_f2:Thefirst two examples assume the(0)model and concern inference about the long-run
+10:286:14357:18:18:72:540:296:145:g_d0_f2:145:g_d0_f2:variance (2)andmean()of. These problems are related as both involve2,inthefirst
+10:287:14440:18:18:71:539:278:145:g_d0_f2:145:g_d0_f2:instance because it is the parameter of interest, and in the second because it characterizes
+10:288:14532:18:18:71:539:260:145:g_d0_f2:145:g_d0_f2:the variability of the sample mean.  There is a large literature on consistent estimation
+10:289:14621:18:19:71:539:242:145:g_d0_f2:145:g_d0_f2:of2, including the important contributions of Newey and West (1987) and others, and
+10:290:14705:19:18:71:539:223:145:g_d0_f2:145:g_d0_f2:earlier work on spectral estimation (see Priestley (1981) for a classic textbook treatment).
+10:291:14797:18:18:71:539:205:145:g_d0_f2:145:g_d0_f2:As is now widely understood, consistent long-run variance estimators can perform poorly
+10:292:14884:18:18:71:539:187:145:g_d0_f2:145:g_d0_f2:infinite samples even for only moderately persistent series. Motivated by these poorfinite-
+10:293:14975:18:18:71:539:169:145:g_d0_f2:145:g_d0_f2:sample properties, a burgeoning literature studies inconsistent long-run variance estimators
+10:294:15067:18:18:71:539:151:145:g_d0_f2:145:g_d0_f2:(see Kiefer, Vogelsang, and Bunzel (2000) and Kiefer and Vogelsang (2002, 2005), Jansson
+10:295:15155:18:18:71:539:133:145:g_d0_f2:145:g_d0_f2:(2004), Phillips (2005), Sun, Phillips, and Jin (2008), Phillips, Sun and Jin (2006, 2007)
+10:296:15245:18:18:71:539:115:145:g_d0_f2:145:g_d0_f2:and Gonçalves and Vogelsang (2011), and Müller (2014) for a recent survey), and estimators
+10:297:15335:18:0:71:539:97:145:g_d0_f2:145:g_d0_f2:constructed from the cosine transforms as suggested by Müller (2004, 2007) provide a leading
+11:298:15428:0:18:72:539:664:145:g_d0_f2:145:g_d0_f2:Figure 4: Low-Frequency Log-Likelihood for the Long-Run Standard Deviation of GDP
+11:299:15509:18:246:72:111:646:145:g_d0_f2:145:g_d0_f2:Growth
+11:300:15515:246:18:85:526:400:145:g_d0_f2:145:g_d0_f2:Table 1: Descriptive statistics for GDP growth rates and Inflation: 1947:Q2 - 2014:Q4
+11:301:15600:18:18:341:436:382:145:g_d0_f2:145:g_d0_f2:GDPInflation
+11:302:15612:18:19:78:437:364:145:g_d0_f2:145:g_d0_f2:Sample Mean ̄1.943.12
+11:303:15634:19:18:78:437:345:145:g_d0_f2:145:g_d0_f2:Sample long-run standard deviationˆ4.769.25
+11:304:15679:18:18:78:436:327:145:g_d0_f2:145:g_d0_f2:90% Confidence interval forin(0)model  [3.60;7.21]  [6.99;14.02]
+11:305:15745:18:37:77:436:309:145:g_d0_f2:145:g_d0_f2:90% Confidence interval forin(0)model  [1.43;2.45]   [2.12;4.12]
+11:306:15811:37:18:71:116:272:145:g_d0_f2:145:g_d0_f2:example.
+11:307:15819:18:0:89:447:254:145:g_d0_f2:145:g_d0_f2:Thus, consider usingto learn about the value of2.  Because
+11:308:15880:0:10:453:463:264:145:g_d0_f7:145:g_d0_f7:√
+11:309:15881:10:18:463:539:254:145:g_d0_f5:145:g_d0_f7:⇒∼
+11:310:15887:18:18:71:539:236:145:g_d0_f18:145:g_d0_f12:N(02), asymptotically justified inference proceeds as in the familiar small samplei.i.d.
+11:311:15979:18:18:71:539:218:145:g_d0_f2:145:g_d0_f2:normal model. LettingSSX=0⇒SSX =0denote the (scaled) sum of squares,
+11:312:16055:18:18:72:539:200:145:g_d0_f2:145:g_d0_f2:the large-sample log-likelihood is proportional to−12[ln (2)+SSX2]and the corresponding
+11:313:16145:18:18:71:539:182:145:g_d0_f2:145:g_d0_f2:maximum likelihood estimator (MLE) for2isˆ2=SSX.Becauseˆ2is computed
+11:314:16221:18:18:72:539:164:145:g_d0_f2:145:g_d0_f2:using onlyobservations (and in the asymptoticsis heldfixed as→∞),ˆ2is not
+11:315:16299:18:18:72:545:146:145:g_d0_f2:145:g_d0_f2:consistent. Indeed, using=12,contains limited information about2,sothereis
+11:316:16377:18:18:72:539:128:145:g_d0_f2:145:g_d0_f2:considerable uncertainty about its value. Figure 4 shows the log-likelihood forconstructed
+11:317:16468:18:19:71:545:110:145:g_d0_f2:145:g_d0_f2:usingfor real GDP growth rates.  The MLE isˆ=48,buttheplotshowsthat
+11:318:16540:19:0:72:539:91:145:g_d0_f2:145:g_d0_f2:values ofas small as 3.5 and as large as 6.5 have likelihood values within one log-point
+12:319:16630:0:18:72:539:671:145:g_d0_f2:145:g_d0_f2:of the maximum. Because02∼2confidence intervals forare readily constructed
+12:320:16711:18:18:71:539:653:145:g_d0_f2:145:g_d0_f2:((SSX21−2≤2≤SSX22)→1−,with2theth quantile of the Chi-
+12:321:16786:18:18:72:539:635:145:g_d0_f2:145:g_d0_f2:squared distribution withdegrees of freedom), and the resulting confidence intervals for
+12:322:16875:18:19:72:533:617:145:g_d0_f2:145:g_d0_f2:the long-run standard deviation of GDP growth rates and inflationareshowninTable1.
+12:323:16957:19:18:89:540:598:145:g_d0_f2:145:g_d0_f2:Next, consider inference about, the mean of. The same arguments used in Section
+12:324:17039:18:0:72:144:580:145:g_d0_f2:145:g_d0_f2:2showsthat
+12:325:17049:0:10:144:154:590:145:g_d0_f7:145:g_d0_f7:√
+12:326:17050:10:18:154:540:580:145:g_d0_f5:145:g_d0_f2:[(−)0]0⇒(00)0∼N(02+1), so inference aboutcan be
+12:327:17111:18:0:72:437:562:145:g_d0_f2:145:g_d0_f2:obtained as in the standard small-sample normal problem. In particular,
+12:328:17182:0:10:440:450:572:145:g_d0_f7:145:g_d0_f7:√
+12:329:17183:10:18:450:539:562:145:g_d0_f5:65:g_d0_f13:(−)ˆ⇒
+12:330:17196:18:18:72:539:544:145:g_d0_f2:145:g_d0_f2:(the Student-distribution withdegrees of freedom), so inference aboutfollows directly.
+12:331:17285:18:18:72:539:526:145:g_d0_f2:145:g_d0_f2:Table 1 shows 90% confidence intervals for the mean GDP growth rate and the mean inflation
+12:332:17375:18:0:72:234:508:145:g_d0_f2:145:g_d0_f5:rate constructed as±178ˆ
+12:333:17404:0:10:234:244:518:145:g_d0_f7:145:g_d0_f7:√
+12:334:17405:10:18:244:539:508:145:g_d0_f5:145:g_d0_f2:,where1.78isthe95percentile of the12distribution.
+12:335:17458:18:18:89:539:490:145:g_d0_f2:145:g_d0_f6:These confidence intervals for2andare predicated on the assumption that∼(0)
+12:336:17538:18:18:72:539:472:145:g_d0_f2:145:g_d0_f2:and, particularly for inflation, this assumption is suspect.  The next inference examples
+12:337:17627:18:39:71:282:454:145:g_d0_f2:145:g_d0_f2:concern the persistence of theprocess.
+12:338:17667:39:26:72:386:415:209:g_d0_f1:209:g_d0_f1:3.2  Inference about persistence parameters
+12:339:17710:26:18:72:539:389:145:g_d0_f2:145:g_d0_f2:As discussed in Section 2, the normal limit forholds under conditions more general
+12:340:17794:18:18:72:540:371:145:g_d0_f2:145:g_d0_f2:than the(0)model, and the parameters characterizing the persistence ofdetermine
+12:341:17876:18:18:72:539:353:145:g_d0_f2:145:g_d0_f2:the covariance matrixΣ. Thus, inference about these parameters can be conducted using
+12:342:17961:18:18:72:540:335:145:g_d0_f2:145:g_d0_f2:methods for inference about the covariance matrix of a multivariate normal random variable.
+12:343:18052:18:18:72:450:317:145:g_d0_f2:145:g_d0_f2:This section discusses three classes ofexamples. First a few preliminaries.
+12:344:18127:18:18:89:540:299:145:g_d0_f12:145:g_d0_f14:Some parametric models of persistence.Section 2 discussed the covariance matrixΣ
+12:345:18207:18:18:71:540:281:145:g_d0_f2:145:g_d0_f2:for(0)and(1)processes. Here we describe three other widely used parametric models
+12:346:18290:18:18:71:539:263:145:g_d0_f2:145:g_d0_f2:for persistence in economic time series. Thefirst is a sum of(0)and(1)processes: with
+12:347:18377:18:19:71:539:245:145:g_d0_f2:145:g_d0_f2:appropriate scaling for the components this is a version of Harvey’s (1989) ’local-level-model’
+12:348:18472:19:0:71:195:226:145:g_d0_f2:145:g_d0_f6:(LLM)=1+()
+12:349:18489:0:13:197:213:236:145:g_d0_f10:65:g_d0_f13:P
+12:350:18491:13:15:210:539:223:65:g_d0_f13:145:g_d0_f2:=12where(12)is bivariate(0)with long-run covariance
+12:351:18551:15:18:71:539:208:145:g_d0_f2:145:g_d0_f2:matrix22. Another is the ’local-to-unity AR’ model (LTUM) in which=−1+,
+12:352:18632:18:18:72:539:190:145:g_d0_f2:145:g_d0_f2:with AR coefficient=1−andan(0)process, as introduced by Cavanagh
+12:353:18704:18:18:72:540:172:145:g_d0_f2:145:g_d0_f2:(1985), Chan and Wei (1987) and Phillips (1987). A third is the ’fractional’ model (FRM)
+12:354:18792:18:18:72:539:154:145:g_d0_f6:145:g_d0_f2:(1−)=whereis(0)with−1232(cf. Baillie (1996) and Robinson (2003)
+12:355:18867:18:18:71:539:136:145:g_d0_f2:145:g_d0_f2:for surveys). Each of these processes exhibits different degrees of persistence that depend on
+12:356:18961:18:18:71:539:118:145:g_d0_f2:145:g_d0_f2:the value of the model’s parameter value. For example,(0)behavior follows when=0in
+12:357:19045:18:0:71:540:100:145:g_d0_f2:145:g_d0_f2:LLM,=0in FRM, andvery large in LTUM. The processes exhibit(1)persistence when
+13:358:19127:0:18:72:539:671:145:g_d0_f5:145:g_d0_f2:=0(LTUM),=1(FRM), andvery large (LLM). Alternative parameter values yield
+13:359:19203:18:18:71:540:653:145:g_d0_f2:145:g_d0_f2:persistence between(0)and(1),andtheFRMwith0or1allows for persistence
+13:360:19277:18:18:71:540:635:145:g_d0_f2:145:g_d0_f2:beyond these extremes. Excluding their(0)and(1)parameterizations, the models yield
+13:361:19361:18:19:71:539:617:145:g_d0_f2:145:g_d0_f2:subtly different low-frequency behavior as evidenced by their (pseudo-) spectra discussed in
+13:362:19453:19:18:71:540:598:145:g_d0_f2:145:g_d0_f2:Section 5.2. For now we simply note that this behavior results in different values of the
+13:363:19542:18:18:71:182:580:145:g_d0_f2:65:g_d0_f2:covariance matrixΣ.6
+13:364:19562:18:18:89:539:562:145:g_d0_f12:145:g_d0_f2:Scale invariance/equivariance.In many inference problems, interest is focused on the
+13:365:19646:18:18:71:540:544:145:g_d0_f2:145:g_d0_f2:persistence of the process (say,,or) and not on the scale of the process (). This
+13:366:19731:18:18:71:539:526:145:g_d0_f2:145:g_d0_f2:motivates basing inference on statistics that are invariant to scale transformations, which
+13:367:19822:18:0:71:397:508:145:g_d0_f2:145:g_d0_f5:in our setting corresponds to basing inference on=
+13:368:19878:0:10:397:409:518:145:g_d0_f10:145:g_d0_f10:p
+13:369:19879:10:18:408:539:508:145:g_d0_f5:145:g_d0_f2:0.7The continuous
+13:370:19900:18:0:72:318:490:145:g_d0_f2:145:g_d0_f5:mapping theorem implies that⇒=
+13:371:19937:0:10:317:327:500:145:g_d0_f7:145:g_d0_f7:√
+13:372:19938:10:18:327:539:490:145:g_d0_f5:145:g_d0_f2:0,andthedensity(|Σ)ofis
+13:373:19970:18:18:72:536:472:145:g_d0_f2:145:g_d0_f2:explicitly computed in King (1980) and proportional to(|Σ)∝|Σ|−12(0Σ−1)−2.
+13:374:20056:18:18:89:539:454:145:g_d0_f2:145:g_d0_f2:Armed with these preliminaries we are now ready to tackle inference about persistence
+13:375:20141:18:18:71:539:436:145:g_d0_f2:145:g_d0_f2:parameters.  We will construct hypothesis tests, and in some cases invert these tests to
+13:376:20229:18:18:71:539:418:145:g_d0_f2:145:g_d0_f2:construct confidence sets. We focus on three classes of efficient tests: (i) point-optimal, (ii)
+13:377:20325:18:18:71:539:400:145:g_d0_f2:145:g_d0_f2:weighted average power (WAP) optimal and (iii) approximately optimal tests constructed
+13:378:20411:18:18:71:539:382:145:g_d0_f2:145:g_d0_f2:using numerical approximations to least favorable distributions. Each is discussed in the
+13:379:20500:18:18:71:260:364:145:g_d0_f2:145:g_d0_f2:context of a specific testing problem.
+13:380:20538:18:18:89:539:346:145:g_d0_f12:145:g_d0_f2:Point-optimal tests.Letdenote the value of a persistence parameter (say,,orin
+13:381:20619:18:19:72:539:328:145:g_d0_f2:145:g_d0_f2:the models described above), so thatΣ=Σ(), and the scale ofΣdoes not matter because
+13:382:20703:19:18:72:539:309:145:g_d0_f2:145:g_d0_f2:of the form of the density for. Several problems of interest follow the classic Neyman-
+13:383:20792:18:18:71:539:291:145:g_d0_f2:145:g_d0_f2:Pearson setup with a simple null and simple alternative,0:=0versus:=,
+13:384:20869:18:18:72:540:273:145:g_d0_f2:145:g_d0_f2:so the likelihood ratio statistic yields the most powerful test. Given the form of the density
+13:385:20963:18:18:85:539:255:49:g_d0_f2:100:g_d0_f2:6The scaling factor foris12for LLM,−12for LTUM, and is12−for FRM. The covariance
+13:386:21052:18:15:71:539:237:100:g_d0_f2:100:g_d0_f2:matrixΣfor each of these models is given in Müller and Watson (2008), and can be approximated using the
+13:387:21155:15:15:71:539:222:100:g_d0_f2:100:g_d0_f2:appropriate choice ofΞfor thefinite-sample methods in Section 2: the covariance matrix for the LTUM
+13:388:21255:15:15:71:539:207:100:g_d0_f2:100:g_d0_f2:can be approximated using the autocovariances of a stationary AR(1) process with coefficient(1−);
+13:389:21355:15:15:71:539:192:100:g_d0_f2:100:g_d0_f9:and the covariance matrix for the LLM is the sum of the(0)covariance matrix and2times the(1)
+13:390:21450:15:15:72:542:177:100:g_d0_f2:100:g_d0_f2:covariance matrix. The covariance matrix for FRM with−1212canbeapproximatedusingthe
+13:391:21538:15:15:71:539:162:100:g_d0_f2:49:g_d0_f22:autocovariances for(1−)=whereis white noise with variance2and the autocovariances for
+13:392:21634:15:15:72:540:147:100:g_d0_f2:100:g_d0_f2:are given, for example, in Baillie (1996); for1232,Σcan be approximated using the autocovariances
+13:393:21736:15:0:71:79:132:100:g_d0_f2:100:g_d0_f2:of
+13:394:21738:0:10:83:96:139:100:g_d0_f10:49:g_d0_f22:P
+13:395:21740:10:0:93:185:129:49:g_d0_f22:100:g_d0_f9:=0,where(1−)
+13:396:21756:0:19:184:539:136:49:g_d0_f22:100:g_d0_f2:−1=. Müller and Watson (2008) show that the resulting limiting covariance
+13:397:21834:19:9:71:277:117:100:g_d0_f2:100:g_d0_f2:matrixΣis continuous at=12in the FRM.
+13:398:21873:9:7:85:289:108:49:g_d0_f2:49:g_d0_f22:7Note that the1−scale factor cancels in
+13:399:21916:7:0:284:522:101:49:g_d0_f22:100:g_d0_f2:,sothevalueofno longer matters for the analysis.
+14:400:21968:0:18:148:463:664:145:g_d0_f2:145:g_d0_f2:Table 2: Persistence tests for GDP growth rates and inflation
+14:401:22029:18:18:253:352:646:145:g_d0_f2:145:g_d0_f2:GDPInflation
+14:402:22041:18:19:267:308:628:145:g_d0_f5:145:g_d0_f2:-values
+14:403:22049:19:18:78:352:609:145:g_d0_f2:145:g_d0_f2:LFST0.530.03
+14:404:22061:18:18:78:352:591:145:g_d0_f2:145:g_d0_f2:LFUR0.000.18
+14:405:22073:18:19:113:317:573:145:g_d0_f2:145:g_d0_f2:Confidence intervals forin()model
+14:406:22109:19:18:78:351:554:145:g_d0_f2:145:g_d0_f2:67% level[-0.24;0.27]    [0.48;1.01]
+14:407:22145:18:14:78:351:536:145:g_d0_f2:145:g_d0_f2:90% level[-0.49;0.44]    [0.32;1.21]
+14:408:22181:14:19:72:540:522:121:g_d0_f2:121:g_d0_f2:Notes: LFST and LFUR are point-optimal tests for the I(0) and I(1) models, respectively. Confi-
+14:409:22276:19:18:72:544:503:121:g_d0_f2:121:g_d0_f2:dence intervals forin the I() model were constructed by inverting WAP-optimal tests for.See
+14:410:22370:18:31:71:163:485:121:g_d0_f2:121:g_d0_f2:the text for details.
+14:411:22391:31:18:72:539:454:145:g_d0_f5:145:g_d0_f2:, this means rejecting the null for large values of the ratio of generalized sums of squares:
+14:412:22487:18:19:71:539:436:145:g_d0_f6:145:g_d0_f2:(0Σ(0)−1)(0Σ()−1). Such tests are “point-optimal” in the sense of having best
+14:413:22576:19:18:72:539:417:145:g_d0_f2:145:g_d0_f2:power against the=alternative.8Two examples are low-frequency ’unit-root’ (LFUR)
+14:414:22659:18:18:72:540:399:145:g_d0_f2:145:g_d0_f2:and ’stationarity’ (LFST) tests, which respectively test the(1)and(0)null hypotheses,
+14:415:22746:18:18:71:468:381:145:g_d0_f2:145:g_d0_f2:as previously derived in Müller and Watson (2008). We discuss them in turn.
+14:416:22821:18:18:89:539:363:145:g_d0_f2:145:g_d0_f2:Dufour and King (1991), Elliott, Rothenberg, and Stock (1996) and Elliott (1999) derive
+14:417:22908:18:18:71:539:345:145:g_d0_f2:145:g_d0_f2:efficient Neyman-Pearson tests in the AR(1) Gaussian model with AR coefficient=1and
+14:418:22992:18:18:71:540:327:145:g_d0_f5:145:g_d0_f2:=under the alternative, and the latter two references extend these tests to more general
+14:419:23083:18:18:72:540:309:145:g_d0_f2:145:g_d0_f2:settings using asymptotic approximations for LTUM where the unit root null corresponds
+14:420:23169:18:18:72:539:291:145:g_d0_f2:145:g_d0_f2:to0=0and the alternative to=. While a uniformly most powerful test does not
+14:421:23248:18:18:72:540:273:145:g_d0_f2:145:g_d0_f2:exist, Elliott, Rothenberg, and Stock (1996) show that the point optimal test associated
+14:422:23336:18:18:72:539:255:145:g_d0_f2:145:g_d0_f2:with a particular value ofexhibits near optimality for a wide range of values ofunder
+14:423:23424:18:18:71:539:237:145:g_d0_f2:145:g_d0_f2:the alternative. The low frequency version of the point-optimal unit root test rejects for
+14:424:23514:18:21:71:148:219:145:g_d0_f2:145:g_d0_f2:largevaluesof
+14:425:23527:21:0:244:289:198:145:g_d0_f6:145:g_d0_f6:LFUR =
+14:426:23533:0:16:294:363:206:145:g_d0_f5:65:g_d0_f13:0Σ(0)−1
+14:427:23545:16:0:294:364:190:145:g_d0_f5:65:g_d0_f13:0Σ()−1
+14:428:23557:0:28:524:539:198:145:g_d0_f2:145:g_d0_f2:(3)
+14:429:23560:28:18:72:540:170:145:g_d0_f2:145:g_d0_f6:whereΣ(0)is the covariance matrix under the null (the(1)model with0=0)andΣ()
+14:430:23641:18:18:71:539:152:145:g_d0_f2:145:g_d0_f2:is the covariance matrix using.Table2showsthe-value of this LFUR test for GDP
+14:431:23721:18:19:72:539:134:145:g_d0_f2:145:g_d0_f2:growth rates and inflation using Elliott’s (1999) choice of=10.The(1)model is not
+14:432:23805:19:18:85:539:115:49:g_d0_f2:100:g_d0_f2:8Müller (2011) shows that these point optimal tests, viewed as a function of, are asymptotically point
+14:433:23909:18:0:71:480:97:100:g_d0_f2:100:g_d0_f2:optimal in the class of all scale invariant tests that control size for all processes satisfying (2).
+15:434:24012:0:18:72:539:671:145:g_d0_f2:145:g_d0_f2:rejected for inflation (-value = 0.18), but is rejected for GDP growth rates (-value = 0.00).
+15:435:24107:18:18:89:539:653:145:g_d0_f2:145:g_d0_f2:Nyblom (1989) and Kwiatkowski, Phillips, Schmidt, and Shin (1992) develop tests for
+15:436:24190:18:18:72:539:635:145:g_d0_f2:145:g_d0_f2:the null of an(0)model versus an alternative in which the process exhibits(1)behavior
+15:437:24277:18:19:72:539:617:145:g_d0_f2:145:g_d0_f2:by nesting the processes in the LLM.9Under the null=0, and under the alternative0.
+15:438:24362:19:18:71:539:598:145:g_d0_f2:145:g_d0_f2:As in the unit root problem, a uniformly most powerful test does not exist, but a Neyman-
+15:439:24451:18:18:71:539:580:145:g_d0_f2:145:g_d0_f2:Pearson point-optimal test using=follows directly. Given the special structure of the
+15:440:24539:18:32:71:481:562:145:g_d0_f5:145:g_d0_f2:(0)and(1)Σmatrices, the point-optimal test has a particularly simple form:
+15:441:24615:32:0:217:259:530:145:g_d0_f6:145:g_d0_f6:LFST =
+15:442:24621:0:12:304:321:547:145:g_d0_f10:65:g_d0_f13:P
+15:443:24623:12:0:317:343:535:65:g_d0_f13:145:g_d0_f5:=1
+15:444:24627:0:8:344:348:543:65:g_d0_f15:65:g_d0_f15:2
+15:445:24628:8:7:343:276:535:65:g_d0_f13:145:g_d0_f10:P
+15:446:24631:7:10:276:280:528:65:g_d0_f13:65:g_d0_f13:
+15:447:24632:10:0:276:302:518:65:g_d0_f13:145:g_d0_f5:=1
+15:448:24636:0:7:303:307:526:65:g_d0_f15:65:g_d0_f15:2
+15:449:24637:7:0:302:392:519:65:g_d0_f13:65:g_d0_f15:(1 +()2)−1
+15:450:24654:0:32:524:539:530:145:g_d0_f2:145:g_d0_f2:(4)
+15:451:24657:32:18:72:540:498:145:g_d0_f2:145:g_d0_f2:Müller and Watson (2013) tabulate critical value for this test using=10, and show that
+15:452:24745:18:18:72:539:480:145:g_d0_f2:145:g_d0_f2:the test has power close to optimal power for a wide range of values ofTable 2 shows
+15:453:24831:18:18:72:539:462:145:g_d0_f2:145:g_d0_f2:the-valuesofthistestforGDPgrowthrates(-value = 0.53) and for inflation (-value =
+15:454:24914:18:18:72:101:444:145:g_d0_f2:145:g_d0_f2:0.03).
+15:455:24920:18:18:89:543:426:145:g_d0_f12:145:g_d0_f6:Weighted average power (WAP) tests.LFST and LFUR test the()model for=0
+15:456:24993:18:18:72:540:408:145:g_d0_f2:145:g_d0_f2:and=1, but what about other values of? And, how can the tests be inverted to form
+15:457:25076:18:18:72:539:390:145:g_d0_f2:145:g_d0_f2:aconfidence set for the true value of? One approach is to use point-optimal tests for the
+15:458:25166:18:18:71:539:372:145:g_d0_f2:145:g_d0_f2:null and alternative0:=0versus:=for various value of0; the collection of
+15:459:25247:18:19:72:539:354:145:g_d0_f2:145:g_d0_f2:values of0that are not rejected form a confidence set. But an immediate problem arises:
+15:460:25335:19:18:71:539:335:145:g_d0_f2:145:g_d0_f2:what value ofshould be used? A desirable test should have good power for a wide range
+15:461:25422:18:18:71:540:317:145:g_d0_f2:145:g_d0_f2:of values of, both larger and smaller than0, so that point-optimal tests (which specify a
+15:462:25514:18:18:71:539:299:145:g_d0_f2:145:g_d0_f2:single value of) are not appealing. A useful framework in these situations is to consider
+15:463:25605:18:18:72:540:281:145:g_d0_f2:145:g_d0_f2:tests with best “weighted average power” (WAP), where the weights put mass on different
+15:464:25692:18:18:72:540:263:145:g_d0_f2:145:g_d0_f2:values of. As explained in Andrews and Ploberger (1994), for example, optimal WAP
+15:465:25775:18:18:71:539:245:145:g_d0_f2:145:g_d0_f5:tests are easy to construct.  The logic is as follows: Consider an alternative in which
+15:466:25863:18:18:71:539:227:145:g_d0_f2:65:g_d0_f13:is a random variable with distribution function. Thisisasimplealternative:
+15:467:25946:18:0:72:175:209:145:g_d0_f2:145:g_d0_f2:has mixture density
+15:468:25965:0:10:179:185:219:145:g_d0_f10:145:g_d0_f10:R
+15:469:25966:10:18:189:540:209:145:g_d0_f5:145:g_d0_f2:(Σ())(), and the optimal test of0versusis the
+15:470:26028:18:18:71:539:191:145:g_d0_f2:145:g_d0_f2:Neyman-Pearson likelihood ratio test. Rearranging the power expression for this test shows
+15:471:26118:18:18:71:456:173:145:g_d0_f2:65:g_d0_f2:that it has greatest WAP for:=usingas the weight function.10
+15:472:26185:18:18:89:539:155:145:g_d0_f2:145:g_d0_f2:Figure 5 shows the large-sample log likelihood forusingfor real GDP growth rates
+15:473:26269:18:18:71:540:137:145:g_d0_f2:145:g_d0_f2:and inflation. The MLE ofis near zero (ˆ=−006)forGDP,butmuchlarger(ˆ=080)
+15:474:26347:18:13:85:332:119:49:g_d0_f2:100:g_d0_f2:9See Stock (1994) for a survey and additional references.
+15:475:26404:13:19:81:539:106:49:g_d0_f2:100:g_d0_f2:10As pointed out by Pratt (1961), the resulting confidence setCS()⊂Rforhas minimal expected
+15:476:26497:19:0:72:190:87:100:g_d0_f2:100:g_d0_f9:weighted average length[
+15:477:26522:0:8:190:195:95:100:g_d0_f10:100:g_d0_f10:R
+15:478:26523:8:0:198:510:87:100:g_d0_f24:100:g_d0_f2:1[∈CS()]()]among all confidence sets of the prespecified level.
+16:479:26594:0:18:149:463:606:145:g_d0_f2:145:g_d0_f2:Figure 5: Low-Frequency Log-Likelihood in Fractional Model
+16:480:26652:18:224:242:368:588:145:g_d0_f2:145:g_d0_f2:Panel (A): GDP Growth
+16:481:26673:224:0:255:355:364:145:g_d0_f2:145:g_d0_f2:Panel(B):Inflation
+17:482:26693:0:18:72:547:671:145:g_d0_f2:145:g_d0_f2:for inflation. But the plots indicate substantial uncertainty about the value of.Usinga
+17:483:26781:18:18:71:540:653:145:g_d0_f2:145:g_d0_f2:weighting functionthat is uniform on−0515, we constructed WAP tests forfine
+17:484:26863:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:grid of values of0. Inverting these tests yields a confidence set for, and these are shown in
+17:485:26958:18:19:71:539:617:145:g_d0_f2:145:g_d0_f2:Table2.ForGDP,the67%confidence sets forranges from -0.24 to 0.27, and for inflation
+17:486:27042:19:18:71:427:598:145:g_d0_f2:145:g_d0_f2:it ranges from 0.48 to 1.01. 90% confidence sets are, of course, wider.
+17:487:27113:18:18:89:540:580:145:g_d0_f12:145:g_d0_f2:Least Favorable Distributions.Ourfinal example considers the following question: How
+17:488:27197:18:18:71:539:562:145:g_d0_f2:145:g_d0_f2:much should we expect the sample average value of(GDP growth rates or inflation) to
+17:489:27282:18:18:72:539:544:145:g_d0_f2:145:g_d0_f2:vary over long periods of time, say a decade or a quarter of century? To be specific, let
+17:490:27371:18:18:72:540:526:145:g_d0_f5:145:g_d0_f2:1:denote the sample mean constructed using observations1throughand consider the
+17:491:27453:18:18:71:540:508:145:g_d0_f2:145:g_d0_f2:variance2∆()=Var[+1:2−1:],forlargevaluesof.Theparameter∆()is the
+17:492:27529:18:18:71:539:490:145:g_d0_f2:145:g_d0_f2:standard deviation of the change in the sample mean over adjacent non-overlapping sample
+17:493:27617:18:18:71:539:472:145:g_d0_f2:145:g_d0_f2:periods of length.11In the large sample framework, let=and consider asymptotic
+17:494:27700:18:18:72:540:454:145:g_d0_f2:145:g_d0_f2:approximations constructed withheldfixed as→∞.  To conduct inference about
+17:495:27776:18:18:72:544:436:145:g_d0_f5:145:g_d0_f2:2∆()using,wemustdeterminehow2∆()relates to the value ofΣ,thelimiting
+17:496:27854:18:18:71:539:418:145:g_d0_f2:145:g_d0_f2:covariance matrix for(appropriately scaled). This is straightforward:first an extension
+17:497:27943:18:36:71:348:400:145:g_d0_f2:145:g_d0_f2:of the central limit result discussed in Section 2 yields
+17:498:28000:36:0:131:156:364:145:g_d0_f5:65:g_d0_f13:1−
+17:499:28004:0:12:158:168:384:145:g_d0_f10:145:g_d0_f10:Ã
+17:500:28005:12:18:173:254:372:145:g_d0_f6:65:g_d0_f13: ̄+1:2− ̄1:
+17:501:28024:18:0:206:221:354:145:g_d0_f5:65:g_d0_f13:
+17:502:28026:0:20:261:271:384:145:g_d0_f10:145:g_d0_f10:!
+17:503:28027:20:0:274:286:364:145:g_d0_f7:145:g_d0_f7:⇒
+17:504:28028:0:12:289:299:384:145:g_d0_f10:145:g_d0_f10:Ã
+17:505:28029:12:18:304:311:372:145:g_d0_f5:145:g_d0_f5:
+17:506:28030:18:0:303:313:354:145:g_d0_f5:145:g_d0_f5:
+17:507:28031:0:20:319:329:384:145:g_d0_f10:145:g_d0_f10:!
+17:508:28032:20:0:332:354:364:145:g_d0_f7:145:g_d0_f18:∼N
+17:509:28034:0:20:358:368:384:145:g_d0_f10:145:g_d0_f10:Ã
+17:510:28035:20:0:367:376:364:145:g_d0_f6:145:g_d0_f5:0
+17:511:28037:0:12:378:388:384:145:g_d0_f10:145:g_d0_f10:Ã
+17:512:28038:12:18:393:451:372:145:g_d0_f14:65:g_d0_f13:ΣΣ
+17:513:28044:18:0:393:450:354:145:g_d0_f14:65:g_d0_f13:ΣΣ
+17:514:28050:0:20:455:474:384:145:g_d0_f10:145:g_d0_f10:!!
+17:515:28052:20:37:476:479:364:145:g_d0_f5:145:g_d0_f5:
+17:516:28053:37:19:71:539:327:145:g_d0_f2:145:g_d0_f6:Second, becauseVar[(+1:2−1:)∆()] = 1,∆()⇒N(0Γ)whereΓ=
+17:517:28124:19:18:71:539:308:145:g_d0_f14:145:g_d0_f2:ΣΣ.Atestof0:∆()=∆0()against:∆()6=∆0()may thus
+17:518:28195:18:18:71:539:290:145:g_d0_f2:145:g_d0_f2:be based on the statistic=∆0(). Under0,⇒N(0Γ), and under1,
+17:519:28268:18:18:72:539:272:145:g_d0_f5:145:g_d0_f2:⇒N(0(∆()∆0())2Γ), so the problem again reduces to an inference problem about the
+17:520:28360:18:18:71:293:254:145:g_d0_f2:145:g_d0_f2:covariance matrix of a multivariate normal.
+17:521:28403:18:18:89:539:236:145:g_d0_f2:145:g_d0_f2:The alternative can be reduced to a single alternativeby maximizing a weighted
+17:522:28486:18:18:72:540:218:145:g_d0_f2:145:g_d0_f2:average power criterion, as above. The problem is still more challenging than the previous
+17:523:28576:18:18:72:539:200:145:g_d0_f2:145:g_d0_f2:example, however, because the (large sample)nulldistribution of⇒N(0Γ)depends
+17:524:28655:18:18:71:539:182:145:g_d0_f2:145:g_d0_f2:on nuisance parameters that describe the persistence of theprocess. In the FRM, for
+17:525:28740:18:18:71:539:164:145:g_d0_f2:145:g_d0_f2:example,Γ=Γ()with∈for some range of values. In the jargon of hypothesis
+17:526:28815:18:18:71:539:146:145:g_d0_f2:145:g_d0_f2:testing, the null hypothesis is composite because it contains a set of probability distributions
+17:527:28911:18:18:71:539:128:145:g_d0_f2:145:g_d0_f2:forindexed by the value of. The challenge is tofind a powerful test of0that controls
+17:528:28999:18:19:81:539:110:49:g_d0_f2:100:g_d0_f8:11Note that∆ ̄is well definedevenforsomeinfinite variance processes, such as the FRM with12
+17:529:29094:19:0:72:108:91:100:g_d0_f8:100:g_d0_f2:32.
+18:530:29102:0:18:72:226:671:145:g_d0_f2:145:g_d0_f2:size underallvalues of∈.
+18:531:29128:18:18:89:539:653:145:g_d0_f2:145:g_d0_f2:One general solution to this type of problem uses the same simplification that was used
+18:532:29215:18:18:72:539:635:145:g_d0_f2:145:g_d0_f2:to solve the weighted average power problem: introduce a weighting function, sayΛ()for
+18:533:29302:18:0:71:389:617:145:g_d0_f2:145:g_d0_f7:the values of∈and use the mixture density0Λ:∼
+18:534:29353:0:9:393:399:626:145:g_d0_f10:145:g_d0_f10:R
+18:535:29354:9:19:403:539:617:145:g_d0_f5:145:g_d0_f2:(Γ())Λ()as the
+18:536:29377:19:18:71:539:598:145:g_d0_f2:145:g_d0_f2:density under the null. This yields a simple null hypothesis (that is, a single probability
+18:537:29468:18:18:71:539:580:145:g_d0_f2:145:g_d0_f2:density for the data), so the best test is again given by the likelihood ratio. However, while
+18:538:29562:18:18:71:539:562:145:g_d0_f2:145:g_d0_f2:the resulting test will control the probability of a false null rejectionon averageover the
+18:539:29653:18:18:71:539:544:145:g_d0_f2:145:g_d0_f12:values ofwithdrawn fromΛ, it won’t necessarily control the rejection probability forall
+18:540:29742:18:18:71:539:526:145:g_d0_f2:145:g_d0_f2:values ofallowed under0; that is, the test may not have the correct size. But, because
+18:541:29830:18:18:72:539:508:145:g_d0_f2:145:g_d0_f2:any test that controls the null rejection probability forallvalues ofautomatically controls
+18:542:29922:18:18:72:539:490:145:g_d0_f2:145:g_d0_f2:the rejection frequencyon averageover, any test with sizeunder0is also a feasible
+18:543:30006:18:18:71:539:472:145:g_d0_f2:145:g_d0_f2:sizeunder under0Λ, so it must have power less than or equal to power-maximizing test
+18:544:30093:18:18:72:539:454:145:g_d0_f2:145:g_d0_f2:for0Λ. Thus, if a distributionΛcan be found that does control size for all, the resulting
+18:545:30185:18:18:71:540:436:145:g_d0_f2:145:g_d0_f2:likelihood ratio test for0Λis guaranteed to be the optimal test for0.SuchaΛis called a
+18:546:30274:18:18:71:539:418:145:g_d0_f2:145:g_d0_f2:“least favorable distribution” (LFD). In some problems, least favorable distributions can be
+18:547:30366:18:18:71:539:400:145:g_d0_f2:145:g_d0_f2:found by clever reasoning (see Lehmann and Romano (2005) for examples), but this is the
+18:548:30453:18:18:71:539:382:145:g_d0_f2:145:g_d0_f2:exception rather than the rule. Numerical methods can alternatively be used to approximate
+18:549:30543:18:18:71:539:364:145:g_d0_f2:145:g_d0_f2:the LFD (see Elliott, Müller, and Watson (2015) for discussion and examples), and we will
+18:550:30632:18:18:71:206:346:145:g_d0_f2:145:g_d0_f2:utilize that approach here.
+18:551:30659:18:19:89:539:328:145:g_d0_f2:145:g_d0_f2:With this background out of the way, we can now return to the problem of determining
+18:552:30743:19:18:71:539:309:145:g_d0_f2:145:g_d0_f2:the value of2∆().  We do this allowing for()persistence, and allowto take on
+18:553:30825:18:18:71:544:291:145:g_d0_f2:145:g_d0_f2:any value between -0.4 to 1.4. The weighting in the WAP criterion is uniform on,and,
+18:554:30910:18:18:71:538:273:145:g_d0_f2:145:g_d0_f5:conditional on, sets the alternative covariance matrix equal toΓ=Γ()where
+18:555:30989:18:18:71:540:255:145:g_d0_f2:145:g_d0_f2:is uniformly distributed on(−55).12Figure 6 summarizes the resulting (pointwise in)
+18:556:31074:18:18:71:544:237:145:g_d0_f2:145:g_d0_f2:90% confidence sets for∆()forrangingfrom15to70years. ForaveragesofGDP
+18:557:31147:18:18:71:540:219:145:g_d0_f2:145:g_d0_f2:growth rates computed over 20-years, the 90% confidence confidence interval for∆ranges
+18:558:31235:18:18:71:539:201:145:g_d0_f2:145:g_d0_f2:from approximately 0.5 to 1.3 percentage points, and the range shifts down somewhat (to
+18:559:31322:18:18:71:539:183:145:g_d0_f2:145:g_d0_f2:0.25 to 1.2 percentage points) for averages computed over 60 years.  The lower range of
+18:560:31409:18:18:71:539:165:145:g_d0_f2:145:g_d0_f2:the confidence set essentially coincides with the corresponding(0)confidence set (which
+18:561:31497:18:18:71:540:147:145:g_d0_f2:145:g_d0_f2:only reflects uncertainty about the value of the long-run variance of GDP growth), but the
+18:562:31587:18:18:71:539:129:145:g_d0_f2:145:g_d0_f2:upper range is substantially larger than its(0)counterpart, reflecting the allowance for
+18:563:31676:18:19:71:539:111:145:g_d0_f2:145:g_d0_f2:more persistence than(0)model. The confidence intervals for inflation indicate both large
+18:564:31766:19:0:81:445:92:49:g_d0_f2:100:g_d0_f2:12The numerical work usesfine discrete grids for theand the approximate LFD.
+19:565:31846:0:18:76:535:597:145:g_d0_f2:145:g_d0_f5:Figure 6: 90% Confidence Sets for Standard Deviation of+1:2−1:as a function of
+19:566:31930:18:206:242:368:579:145:g_d0_f2:145:g_d0_f2:Panel (A): GDP Growth
+19:567:31951:206:0:255:355:373:145:g_d0_f2:145:g_d0_f2:Panel(B):Inflation
+20:568:31971:0:18:72:539:671:145:g_d0_f2:145:g_d0_f2:and uncertain values for∆,reflecting the larger persistence in the series. The uncertainty
+20:569:32063:18:18:71:539:653:145:g_d0_f2:145:g_d0_f2:about persistence in inflation leads to very wide confidence intervals for averages computed
+20:570:32155:18:46:71:164:635:145:g_d0_f2:145:g_d0_f2:over long samples.
+20:571:32173:46:30:72:443:589:301:g_d0_f1:301:g_d0_f1:4  Inference examples: multiple time series
+20:572:32216:30:18:72:540:559:145:g_d0_f2:145:g_d0_f2:In this section we use the same structure and tools discussed in the last section to study
+20:573:32306:18:18:72:539:541:145:g_d0_f2:145:g_d0_f6:some inference problems involving multiple time series. Thus, now letdenote an×1
+20:574:32389:18:18:72:540:523:145:g_d0_f2:145:g_d0_f2:vector of time series anddenote the×1vector composed of thethcosine transform
+20:575:32471:18:18:72:546:505:145:g_d0_f2:145:g_d0_f2:for each of thevariables. Letdenote a×matrix withthrow given by0.In
+20:576:32547:18:18:71:539:487:145:g_d0_f2:145:g_d0_f2:the multivariate model, the assumption of Section 2 about the large sample behavior of
+20:577:32633:18:0:71:260:469:145:g_d0_f2:65:g_d0_f13:the partial sum process becomesΥ
+20:578:32666:0:12:263:292:478:145:g_d0_f10:65:g_d0_f16:Pb·c
+20:579:32671:12:15:276:539:466:65:g_d0_f13:145:g_d0_f2:=1⇒(·),whereis now an×1Gaussian
+20:580:32708:15:18:72:539:451:145:g_d0_f2:145:g_d0_f2:process andΥis an×scaling matrix.13Using the argument from Section 2, this
+20:581:32785:18:18:71:539:433:145:g_d0_f2:145:g_d0_f2:impliesΥ⇒withvec()∼N(0Σ). In this section we discuss inference problems
+20:582:32863:18:18:71:539:415:145:g_d0_f2:145:g_d0_f2:in the context of this limiting distribution. Wefirst consider the multivariate(0)model
+20:583:32951:18:18:71:539:397:145:g_d0_f2:145:g_d0_f2:and inference about its key parameters.  We then relate these parameters to population
+20:584:33037:18:18:71:539:379:145:g_d0_f2:145:g_d0_f2:properties of the trend projections, and return to the empirical question of the relationship
+20:585:33130:18:18:71:539:361:145:g_d0_f2:145:g_d0_f2:between the trend in GDP and TFP growth rates discussed in the introduction. We end
+20:586:33213:18:19:71:539:343:145:g_d0_f2:145:g_d0_f2:this section with a discussion of inference in cointegrated models; these are characterized by
+20:587:33307:19:39:71:531:324:145:g_d0_f2:145:g_d0_f2:linear combinations of the data that are(0)and other linear combinations that are(1).
+20:588:33394:39:25:72:300:285:209:g_d0_f1:209:g_d0_f1:4.1  Inference in the(0)Model
+20:589:33424:25:0:72:480:260:145:g_d0_f2:65:g_d0_f15:In the multivariate(0)model=+,wesetΥ=−12and assume−12
+20:590:33490:0:13:483:511:269:145:g_d0_f10:65:g_d0_f16:Pb·c
+20:591:33495:13:14:495:539:256:65:g_d0_f13:145:g_d0_f7:=1⇒
+20:592:33501:14:19:72:539:242:145:g_d0_f14:145:g_d0_f2:Ω12(·),whereΩis the×long-run covariance matrix ofandis a×1multivariate
+20:593:33579:19:18:72:544:223:145:g_d0_f2:145:g_d0_f2:standard Wiener process. The covariance matrix ofvec ()then becomesΣ=Ω⊗,so
+20:594:33656:18:18:71:339:205:145:g_d0_f2:145:g_d0_f2:that∼N(0Ω),where0is thethrow of.
+20:595:33698:18:0:89:214:187:145:g_d0_f12:145:g_d0_f2:Inference aboutΩWith
+20:596:33719:0:10:219:229:197:145:g_d0_f7:145:g_d0_f7:√
+20:597:33720:10:18:229:539:187:145:g_d0_f5:145:g_d0_f12:approximatelyN(0Ω), standard methods fori.i.d.
+20:598:33774:18:18:71:539:169:145:g_d0_f2:145:g_d0_f2:multivariate normal samples (see, for instance, Anderson (1984)) can be used to obtain infer-
+20:599:33867:18:18:71:539:151:145:g_d0_f2:145:g_d0_f2:ence. In particular, the limiting distribution of the multivariate sum of squares is Wishart:
+20:600:33960:18:18:81:539:133:49:g_d0_f2:100:g_d0_f2:13The scaling matrixΥreplaces the scale factor1−of Section 2 to allow the partial sum of lin-
+20:601:34056:18:15:71:539:115:100:g_d0_f2:100:g_d0_f2:ear combination ofto converge at different rates, which occurs, for example, if the elements ofare
+20:602:34158:15:0:72:128:100:100:g_d0_f2:100:g_d0_f2:cointegrated.
+21:603:34173:0:18:72:539:671:145:g_d0_f6:145:g_d0_f2:SSX=0⇒SSX =0∼(Ω),andˆΩ=SSXis the (low-frequency) MLE
+21:604:34240:18:18:71:539:653:145:g_d0_f2:145:g_d0_f2:ofΩThis can be used directly for inference about the×parameterΩOften it will be more
+21:605:34328:18:0:71:493:635:145:g_d0_f2:145:g_d0_f5:interesting to conduct inference about the scalar correlation parameters=Ω
+21:606:34408:0:9:493:505:644:145:g_d0_f10:145:g_d0_f10:p
+21:607:34409:9:22:505:539:635:145:g_d0_f14:145:g_d0_f2:ΩΩ.
+21:608:34416:22:0:72:328:613:145:g_d0_f2:145:g_d0_f5:By the continuous mapping theorem,ˆ=ˆΩ
+21:609:34460:0:12:328:340:628:145:g_d0_f10:145:g_d0_f10:q
+21:610:34461:12:0:341:432:616:145:g_d0_f6:145:g_d0_f5:ˆΩˆΩ⇒SSX
+21:611:34476:0:10:432:444:623:145:g_d0_f10:145:g_d0_f10:p
+21:612:34477:10:18:444:549:613:145:g_d0_f6:145:g_d0_f2:SSXSSX.This
+21:613:34492:18:18:71:539:595:145:g_d0_f2:145:g_d0_f2:limiting distribution is known and is a function only ofand(see Anderson’s (1984)
+21:614:34577:18:18:72:539:577:145:g_d0_f2:145:g_d0_f2:Theorem 4.2.2), allowing the ready construction of confidence intervals forbased onˆ.
+21:615:34668:18:18:72:540:559:145:g_d0_f2:145:g_d0_f2:For example, for the GDP and TFP growth rates, we obtain an equal-tailed 90% confidence
+21:616:34755:18:18:72:354:541:145:g_d0_f2:145:g_d0_f5:interval for the low-frequency correlation of[028; 086]
+21:617:34813:18:18:89:539:523:145:g_d0_f2:145:g_d0_f2:Now partitioninto a scalarand a×1vector,=(0)0(so that=−1),
+21:618:34887:18:25:72:378:505:145:g_d0_f2:145:g_d0_f2:with corresponding cosine transforms=(0)0and
+21:619:34941:25:11:172:182:480:145:g_d0_f7:145:g_d0_f7:√
+21:620:34942:11:0:182:189:469:145:g_d0_f5:145:g_d0_f5:
+21:621:34943:0:12:192:202:490:145:g_d0_f10:145:g_d0_f10:Ã
+21:622:34944:12:18:207:225:478:145:g_d0_f5:65:g_d0_f13:
+21:623:34947:18:0:207:226:460:145:g_d0_f5:65:g_d0_f13:
+21:624:34950:0:21:230:240:490:145:g_d0_f10:145:g_d0_f10:!
+21:625:34951:21:0:243:255:469:145:g_d0_f7:145:g_d0_f7:⇒
+21:626:34952:0:12:258:268:490:145:g_d0_f10:145:g_d0_f10:Ã
+21:627:34953:12:18:273:283:478:145:g_d0_f5:65:g_d0_f13:
+21:628:34955:18:0:273:284:460:145:g_d0_f5:65:g_d0_f13:
+21:629:34957:0:21:290:300:490:145:g_d0_f10:145:g_d0_f10:!
+21:630:34958:21:0:303:326:469:145:g_d0_f7:145:g_d0_f18:∼N
+21:631:34960:0:21:329:339:490:145:g_d0_f10:145:g_d0_f10:Ã
+21:632:34961:21:0:339:347:469:145:g_d0_f6:145:g_d0_f5:0
+21:633:34963:0:12:350:360:490:145:g_d0_f10:145:g_d0_f10:Ã
+21:634:34964:12:18:364:409:478:145:g_d0_f14:65:g_d0_f13:ΩΩ
+21:635:34970:18:0:364:410:460:145:g_d0_f14:65:g_d0_f13:ΩΩ
+21:636:34976:0:21:415:434:490:145:g_d0_f10:145:g_d0_f10:!!
+21:637:34978:21:35:436:439:469:145:g_d0_f2:145:g_d0_f2:.
+21:638:34979:35:18:71:539:434:145:g_d0_f2:145:g_d0_f2:A function ofΩof potential interest is the×1vector=Ω−1Ω. Since conditional
+21:639:35059:18:18:71:539:416:145:g_d0_f2:145:g_d0_f2:on=(1),=−0isN(02)with2=Ω−ΩΩ−1Ω,is the
+21:640:35127:18:18:71:539:398:145:g_d0_f2:145:g_d0_f5:population regression coefficient in a regression ofon,=1.Substantively,0
+21:641:35214:18:18:72:539:380:145:g_d0_f2:65:g_d0_f13:provides the best predictor ofgiven, so it gauges how low-frequency variability in
+21:642:35301:18:18:72:539:362:145:g_d0_f2:145:g_d0_f2:predicts corresponding low-frequency variability of. The population2of this regression
+21:643:35390:18:18:71:540:344:145:g_d0_f2:145:g_d0_f2:(that is, the square of the multiple correlation coefficient) is2=1−2Ωand it measures
+21:644:35480:18:18:72:540:326:145:g_d0_f2:145:g_d0_f2:the fraction of the low-frequency variability inthat can be explained by the low-frequency
+21:645:35572:18:18:71:162:308:145:g_d0_f2:65:g_d0_f2:variability in.14
+21:646:35591:18:18:89:539:290:145:g_d0_f2:145:g_d0_f2:As long as, inference about these regression parameters follow immediately from
+21:647:35673:18:32:72:469:272:145:g_d0_f2:145:g_d0_f2:standard small sample results for a linear regression withi.i.d.normal errors:
+21:648:35751:32:0:120:152:240:145:g_d0_f6:145:g_d0_f6:ˆ=
+21:649:35755:0:9:162:182:257:145:g_d0_f10:65:g_d0_f13:Ã
+21:650:35757:9:25:171:188:248:145:g_d0_f10:145:g_d0_f10:X
+21:651:35758:25:0:173:188:223:65:g_d0_f13:65:g_d0_f15:=1
+21:652:35761:0:0:191:228:236:145:g_d0_f5:65:g_d0_f13:0
+21:653:35768:0:9:228:271:257:145:g_d0_f10:65:g_d0_f13:!−1Ã
+21:654:35773:9:25:260:277:248:145:g_d0_f10:145:g_d0_f10:X
+21:655:35774:25:0:261:276:223:65:g_d0_f13:65:g_d0_f15:=1
+21:656:35777:0:0:279:313:236:145:g_d0_f5:65:g_d0_f13:
+21:657:35783:0:21:315:325:257:145:g_d0_f10:145:g_d0_f10:!
+21:658:35784:21:0:328:363:236:145:g_d0_f7:145:g_d0_f6:⇒ˆ=
+21:659:35788:0:9:366:386:257:145:g_d0_f10:65:g_d0_f13:Ã
+21:660:35790:9:25:375:392:248:145:g_d0_f10:145:g_d0_f10:X
+21:661:35791:25:0:377:392:223:65:g_d0_f13:65:g_d0_f15:=1
+21:662:35794:0:0:395:418:236:145:g_d0_f5:65:g_d0_f13:0
+21:663:35799:0:9:420:462:257:145:g_d0_f10:65:g_d0_f13:!−1Ã
+21:664:35804:9:25:452:469:248:145:g_d0_f10:145:g_d0_f10:X
+21:665:35805:25:0:453:468:223:65:g_d0_f13:65:g_d0_f15:=1
+21:666:35808:0:0:471:493:236:145:g_d0_f5:65:g_d0_f13:
+21:667:35812:0:61:495:505:257:145:g_d0_f10:145:g_d0_f10:!
+21:668:35813:61:0:105:169:196:145:g_d0_f6:145:g_d0_f5:RSS=
+21:669:35819:0:29:179:189:211:65:g_d0_f13:145:g_d0_f10:X
+21:670:35821:29:0:174:189:182:65:g_d0_f13:65:g_d0_f15:=1
+21:671:35824:0:0:190:320:196:145:g_d0_f6:145:g_d0_f6:(−0ˆ)2⇒RSS =
+21:672:35844:0:29:330:341:211:65:g_d0_f13:145:g_d0_f10:X
+21:673:35846:29:0:325:340:182:65:g_d0_f13:65:g_d0_f15:=1
+21:674:35849:0:37:341:400:196:145:g_d0_f6:65:g_d0_f15:(−0ˆ)2
+21:675:35860:37:18:72:539:159:145:g_d0_f2:145:g_d0_f6:withRSS2∼2−, the standard error of the regression isˆ2=RSS(−)⇒ˆ2=
+21:676:35937:18:0:71:354:141:145:g_d0_f6:145:g_d0_f5:RSS(−), the total sum of squares isTSS=
+21:677:35981:0:13:357:374:150:145:g_d0_f10:65:g_d0_f13:P
+21:678:35983:13:0:370:394:137:65:g_d0_f13:145:g_d0_f5:=1
+21:679:35987:0:7:396:400:145:65:g_d0_f15:65:g_d0_f15:2
+21:680:35988:7:0:394:465:138:65:g_d0_f13:145:g_d0_f6:⇒TSS =
+21:681:35996:0:13:471:488:150:145:g_d0_f10:65:g_d0_f13:P
+21:682:35998:13:0:484:508:137:65:g_d0_f13:145:g_d0_f5:=1
+21:683:36002:0:7:510:514:145:65:g_d0_f15:65:g_d0_f15:2
+21:684:36003:7:17:508:539:138:65:g_d0_f13:145:g_d0_f2:and
+21:685:36007:17:19:81:539:121:49:g_d0_f2:100:g_d0_f2:14Regressions like these using discrete Fourier transforms are familiar the literature on band-spectral
+21:686:36110:19:15:72:540:102:100:g_d0_f2:100:g_d0_f2:regression (e.g., Engle (1974)).  Much of the analysis presented here can be viewed as version of these
+21:687:36213:15:0:72:382:87:100:g_d0_f2:100:g_d0_f2:methods for a narrow frequency band in the1neighborhood of zero.
+22:688:36281:0:232:139:471:664:145:g_d0_f2:145:g_d0_f2:Figure 7: Joint confidence Sets for Mean GDP and TFP Growth
+22:689:36340:232:18:72:549:432:145:g_d0_f2:145:g_d0_f2:the regression2is2=1−RSSTSS⇒2=1−RSSTSS.Bystandardar-
+22:690:36400:18:18:72:538:414:145:g_d0_f2:65:g_d0_f15:guments (e.g. Anderson (1984) section 4.4.3), the distribution of2depends only on2
+22:691:36484:18:15:72:549:396:145:g_d0_f2:145:g_d0_f2:and,sothataconfidence set for2is readily computed from2.Furthermore,with
+22:692:36559:15:7:73:169:381:145:g_d0_f6:65:g_d0_f13:ˆ=ˆ2(−1P
+22:693:36574:7:0:165:209:374:65:g_d0_f13:145:g_d0_f5:=1
+22:694:36581:0:8:210:212:382:65:g_d0_f16:65:g_d0_f16:0
+22:695:36582:8:0:209:225:374:65:g_d0_f13:145:g_d0_f6:)
+22:696:36585:0:8:224:342:382:65:g_d0_f19:65:g_d0_f13:−1⇒ˆ=ˆ2(−1P
+22:697:36600:8:0:338:375:374:65:g_d0_f13:145:g_d0_f5:=1
+22:698:36606:0:7:376:378:382:65:g_d0_f16:65:g_d0_f16:0
+22:699:36607:7:0:375:385:375:65:g_d0_f13:145:g_d0_f6:)
+22:700:36609:0:23:384:539:382:65:g_d0_f19:145:g_d0_f2:−1, inference aboutcan be
+22:701:36635:23:18:71:539:359:145:g_d0_f2:65:g_d0_f13:performed by the usual-statistic=(ˆ−)0ˆ−1(ˆ−)ˆ2⇒−(with
+22:702:36712:18:18:72:539:341:145:g_d0_f2:145:g_d0_f2:the central-distribution withanddegrees of freedom in the numerator and denom-
+22:703:36793:18:10:71:539:323:145:g_d0_f2:145:g_d0_f2:inator, respectively). For scalar elements of,, usual t-statistic inference is applicable:
+22:704:36886:10:8:72:82:313:145:g_d0_f7:145:g_d0_f7:√
+22:705:36887:8:0:81:141:305:145:g_d0_f5:145:g_d0_f5:(ˆ−)
+22:706:36897:0:9:141:153:317:145:g_d0_f10:145:g_d0_f10:p
+22:707:36898:9:0:155:254:308:145:g_d0_f6:145:g_d0_f5:ˆ⇒√(ˆ−)
+22:708:36914:0:9:254:266:317:145:g_d0_f10:145:g_d0_f10:p
+22:709:36915:9:21:268:359:308:145:g_d0_f6:145:g_d0_f2:ˆ∼Student-−.
+22:710:36933:21:18:89:539:287:145:g_d0_f12:145:g_d0_f2:Inference aboutLet ̄=( ̄1 ̄)0be the×1vector of sample means. In exact
+22:711:37014:18:24:72:350:269:145:g_d0_f2:145:g_d0_f2:analogy to the derivations of Section 3.1, we now have
+22:712:37068:24:11:204:214:245:145:g_d0_f7:145:g_d0_f7:√
+22:713:37069:11:0:214:241:234:145:g_d0_f5:145:g_d0_f6:vec
+22:714:37073:0:12:243:253:254:145:g_d0_f10:145:g_d0_f10:Ã
+22:715:37074:12:18:258:297:242:145:g_d0_f6:65:g_d0_f16:(−)0
+22:716:37080:18:0:270:284:224:145:g_d0_f5:65:g_d0_f13:
+22:717:37082:0:20:303:313:254:145:g_d0_f10:145:g_d0_f10:!
+22:718:37083:20:38:316:407:234:145:g_d0_f7:145:g_d0_f6:⇒N(0Ω⊗+1)
+22:719:37095:38:0:72:201:196:145:g_d0_f2:145:g_d0_f2:so that in large samples,
+22:720:37120:0:10:206:216:206:145:g_d0_f7:145:g_d0_f7:√
+22:721:37121:10:18:216:539:196:145:g_d0_f5:145:g_d0_f2:(( ̄−)12)0∼N(0Ω). Thus, as previ-
+22:722:37175:18:13:71:539:178:145:g_d0_f2:145:g_d0_f7:ously suggested by Müller (2004), Hotelling’s (1931)-2statistic(−)0ˆΩ−1(−)⇒
+22:723:37257:13:10:81:90:165:65:g_d0_f13:65:g_d0_f13:
+22:724:37259:10:13:73:539:155:65:g_d0_f13:145:g_d0_f2:+1−+1−provides a basis for inference about. Figure7shows67%and90%confi-
+22:725:37338:13:19:71:516:142:145:g_d0_f2:145:g_d0_f2:dence ellipses for the average growth rates of TFP and GDP based on the2-statistic.
+22:726:37422:19:18:89:539:123:145:g_d0_f12:145:g_d0_f2:Interpreting elements ofΩin terms of time-domain projections:Figure 2 plotted low-
+22:727:37504:18:18:71:539:105:145:g_d0_f2:145:g_d0_f2:frequency trends for GDP and TFP growth rates, and the two series appear to be highly
+22:728:37589:18:0:71:539:87:145:g_d0_f2:145:g_d0_f2:correlated.  Figure 8 plots the cosine transforms of the two series which are also highly
+23:729:37680:0:233:171:441:664:145:g_d0_f2:145:g_d0_f2:Figure 8: GDP and TFP Growth Cosine Transforms
+23:730:37726:233:18:72:539:431:145:g_d0_f2:145:g_d0_f2:correlated. These are closely related. Denoting the two series by(GDP) and(TFP), the
+23:731:37814:18:0:72:453:413:145:g_d0_f2:65:g_d0_f15:projections areˆ= ̄+0Ψ((−12)andˆ= ̄+0Ψ((−12)so−1
+23:732:37881:0:12:455:473:422:145:g_d0_f10:65:g_d0_f13:P
+23:733:37883:12:15:468:539:410:65:g_d0_f13:145:g_d0_f7:=1(ˆ− ̄)(ˆ−
+23:734:37900:15:18:72:539:395:145:g_d0_f6:145:g_d0_f2: ̄)=0. Thus, the variability and covariability of the projection sample paths,(bb),
+23:735:37993:18:18:72:544:377:145:g_d0_f2:145:g_d0_f2:are determined by the cosine transforms()and the sample means( ̄ ̄).Considerthe
+23:736:38080:18:18:71:539:359:145:g_d0_f2:145:g_d0_f7:projection sample path of,centeredatand expressed as a fractionof the sample,ˆbc−
+23:737:38169:18:18:71:544:341:145:g_d0_f5:145:g_d0_f2:. Then, from Section 2,12(ˆb·c−)⇒(·)=0+0Ψ(·),andsimilarlyfor.Thus,
+23:738:38249:18:18:71:539:323:145:g_d0_f2:145:g_d0_f2:the large-sample variability and covariability of the projections correspond to the variability
+23:739:38344:18:0:71:462:305:145:g_d0_f2:145:g_d0_f6:and covariability of ̃=(00)0and ̃=(00)0.  For example,[
+23:740:38408:0:13:462:474:314:145:g_d0_f10:65:g_d0_f15:R1
+23:741:38410:13:0:467:504:301:65:g_d0_f15:145:g_d0_f6:0()
+23:742:38416:0:22:504:546:309:65:g_d0_f15:145:g_d0_f6:2]=
+23:743:38421:22:0:71:212:287:145:g_d0_f5:145:g_d0_f6:[tr( ̃ ̃0)] = (+1)Ω[
+23:744:38449:0:13:213:225:296:145:g_d0_f10:65:g_d0_f15:R1
+23:745:38451:13:0:218:255:283:65:g_d0_f15:145:g_d0_f6:0()
+23:746:38457:0:8:255:394:291:65:g_d0_f15:65:g_d0_f15:2]=(+1)Ω,and[R1
+23:747:38478:8:14:387:539:283:65:g_d0_f15:145:g_d0_f2:0()()]=(+1)Ω.
+23:748:38502:14:0:89:178:269:145:g_d0_f2:145:g_d0_f5:Thus,=Ω
+23:749:38515:0:9:178:190:278:145:g_d0_f10:145:g_d0_f10:p
+23:750:38516:9:18:190:539:269:145:g_d0_f14:145:g_d0_f2:ΩΩis alternatively interpreted as the population correlation be-
+23:751:38584:18:19:71:539:251:145:g_d0_f2:145:g_d0_f2:tween the low-frequency trends()and(), averaged over the sample fraction. Corre-
+23:752:38671:19:18:72:539:232:145:g_d0_f2:145:g_d0_f2:spondingly, the regression coefficient=Ω−1Ωis the population regression coefficient of a
+23:753:38764:18:18:72:539:214:145:g_d0_f2:145:g_d0_f2:continuous time regression of(·)on(·). The conditionally mean zero error function in
+23:754:38852:18:20:72:539:196:145:g_d0_f2:145:g_d0_f2:this regression,(·)=(·)−(·), is the part of the variation of(·)that is independent
+23:755:38943:20:0:72:385:176:145:g_d0_f2:145:g_d0_f5:of(·). Also, the sample correlation coefficientˆ=ˆΩ
+23:756:39002:0:12:385:397:191:145:g_d0_f10:145:g_d0_f10:q
+23:757:39003:12:21:398:539:179:145:g_d0_f6:145:g_d0_f2:ˆΩˆΩis recognized as the
+23:758:39031:21:18:72:542:158:145:g_d0_f2:145:g_d0_f2:sample correlation between the projectionsˆandˆ,=1,andthesampleregression
+23:759:39115:18:18:71:539:140:145:g_d0_f2:145:g_d0_f2:coefficientˆcan alternatively be computed by a linear regression ofˆonˆand a constant
+23:760:39206:18:18:72:82:122:145:g_d0_f5:145:g_d0_f2:.
+23:761:39208:18:0:89:539:104:145:g_d0_f2:145:g_d0_f2:Table 3 shows the results from the OLS regression of the cosine transforms of the growth
+24:762:39298:0:18:81:529:636:145:g_d0_f2:145:g_d0_f2:Table 3: OLS regression of cosine transform of GDP growth rates on TFP growth rates
+24:763:39381:18:19:78:120:618:145:g_d0_f2:145:g_d0_f2:Statistic
+24:764:39390:19:15:78:365:599:145:g_d0_f2:145:g_d0_f2:Sample size ()12
+24:765:39407:15:21:78:275:584:145:g_d0_f6:145:g_d0_f2:ˆ0.88
+24:766:39413:21:18:78:275:563:145:g_d0_f5:145:g_d0_f2:(ˆ)0.28
+24:767:39423:18:18:77:275:545:145:g_d0_f5:145:g_d0_f2:-statistic3.16
+24:768:39438:18:18:77:305:527:145:g_d0_f2:145:g_d0_f2:90% confidence interval for[0.38;1.39]
+24:769:39477:18:18:77:356:509:145:g_d0_f2:145:g_d0_f2:Standard error (ˆ)0.22
+24:770:39500:18:18:77:275:491:145:g_d0_f5:145:g_d0_f2:20.48
+24:771:39506:18:15:77:305:473:145:g_d0_f2:145:g_d0_f2:90% confidence interval for2[0.09;0.75]
+24:772:39546:15:18:72:539:458:121:g_d0_f2:121:g_d0_f2:Notes: The 90% confidence interval foris computed using the Student-distribution with 11
+24:773:39636:18:18:72:539:440:121:g_d0_f2:121:g_d0_f2:degrees of freedom. The 90% confidence interval for2isbasedonthe90%confidence interval for
+24:774:39727:18:18:71:539:422:121:g_d0_f8:121:g_d0_f2:, which in turn is computed from the exact distribution of the sample correlation coefficientˆas
+24:775:39825:18:88:71:173:404:121:g_d0_f2:121:g_d0_f2:explained in the text.
+24:776:39847:88:0:87:523:316:145:g_d0_f2:145:g_d0_f2:Figure 9: GDP Growth Trend and Predicted Trend from Regression on TFP Growth
+25:777:39925:0:18:72:540:671:145:g_d0_f2:145:g_d0_f2:rate of GDP onto the growth rate of TFP. The OLS estimate ofis088, suggesting that a
+25:778:40011:18:18:72:540:653:145:g_d0_f2:145:g_d0_f2:trend increase in the TFP growth rate of 1% leads to a 0.88% increase in the trend growth
+25:779:40100:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:rate of GDP. However, this estimate is based on only 12 observations, and the 90% confidence
+25:780:40192:18:19:72:539:617:145:g_d0_f2:145:g_d0_f2:interval forranges from 0.38 to 1.39.15The regression2is roughly 50%, and the 90%
+25:781:40275:19:18:71:539:598:145:g_d0_f2:145:g_d0_f2:confidence interval for the correlation of the GDP and TFP trends ranges from 0.31 to 0.86,
+25:782:40366:18:18:71:539:580:145:g_d0_f2:145:g_d0_f2:suggesting that variations in TFP are important, but not the sole factor, behind variation
+25:783:40456:18:18:71:539:562:145:g_d0_f2:145:g_d0_f2:in trend per-capita GDP growth rates. Figure 9 plots the historical trend growth of GDP,
+25:784:40544:18:18:72:540:544:145:g_d0_f6:145:g_d0_f2:ˆ, along with the predicted valuesˆ+ˆˆfrom the low-frequency linear regression. TFP
+25:785:40633:18:18:71:539:526:145:g_d0_f2:145:g_d0_f2:explained slightly more than half of the above average trend GDP growth in the 1960s and
+25:786:40721:18:18:71:539:508:145:g_d0_f2:145:g_d0_f2:nearly all of the below and then above average growth in 1990s, but explains little of low
+25:787:40811:18:18:71:539:490:145:g_d0_f2:145:g_d0_f2:growth in the late 1950s. More recently, the plot indicates that TFP growth played only a
+25:788:40900:18:38:71:454:472:145:g_d0_f2:145:g_d0_f2:small role in the slower than average growth in GDP over the past decade.
+25:789:40973:38:26:72:205:434:209:g_d0_f1:209:g_d0_f1:4.2  Cointegration
+25:790:40991:26:18:72:539:408:145:g_d0_f2:145:g_d0_f2:In the general cointegration model there arevariables with different linear combinations of
+25:791:41083:18:18:71:539:390:145:g_d0_f2:145:g_d0_f2:the variables being integrated of different orders. The notation for the general model can be
+25:792:41176:18:18:71:539:372:145:g_d0_f2:65:g_d0_f13:taxing, but many insights can be gleaned from a bivariate model with=[]0,where
+25:793:41263:18:18:72:539:354:145:g_d0_f2:145:g_d0_f2:andare scalar,∼(1)and=−∼(0). Denoting the corresponding elements
+25:794:41340:18:12:71:385:336:145:g_d0_f2:145:g_d0_f2:ofas=[]0, the partial sum process ofsatisfies
+25:795:41400:12:12:102:112:324:145:g_d0_f10:145:g_d0_f10:Ã
+25:796:41401:12:0:117:144:312:145:g_d0_f5:65:g_d0_f15:−12
+25:797:41406:0:12:147:176:321:145:g_d0_f10:65:g_d0_f16:Pb·c
+25:798:41411:12:15:160:241:309:65:g_d0_f13:145:g_d0_f6:=1(−)
+25:799:41426:15:0:140:167:294:145:g_d0_f5:65:g_d0_f15:−32
+25:800:41431:0:12:170:199:303:145:g_d0_f10:65:g_d0_f16:Pb·c
+25:801:41436:12:0:183:218:291:65:g_d0_f13:65:g_d0_f13:=1
+25:802:41443:0:20:246:256:324:145:g_d0_f10:145:g_d0_f10:!
+25:803:41444:20:0:259:271:304:145:g_d0_f7:145:g_d0_f7:⇒
+25:804:41445:0:12:274:284:324:145:g_d0_f10:145:g_d0_f10:Ã
+25:805:41446:12:18:371:412:312:145:g_d0_f5:145:g_d0_f6:11(·)
+25:806:41453:18:0:288:300:294:145:g_d0_f5:65:g_d0_f15:2
+25:807:41455:0:14:303:321:304:145:g_d0_f10:65:g_d0_f16:Rb·c
+25:808:41459:14:0:309:332:290:65:g_d0_f15:145:g_d0_f5:0(
+25:809:41462:0:7:332:356:299:65:g_d0_f15:145:g_d0_f5:12
+25:810:41466:7:0:356:423:292:65:g_d0_f15:145:g_d0_f5:1()+(1−
+25:811:41475:0:7:423:456:299:65:g_d0_f15:145:g_d0_f5:2)12
+25:812:41481:7:0:456:494:292:65:g_d0_f15:145:g_d0_f5:2())
+25:813:41488:0:51:499:509:324:145:g_d0_f10:145:g_d0_f10:!
+25:814:41489:51:18:71:539:273:145:g_d0_f2:145:g_d0_f2:where1and2are independent Wiener processes and the parameterdenotes the long-
+25:815:41569:18:18:72:539:255:145:g_d0_f2:145:g_d0_f2:run correlation between the(0)and(1)components.  Thus, letting=−,
+25:816:41643:18:18:72:539:237:145:g_d0_f6:145:g_d0_f2:[12−12]⇒[]with[00]0∼N(0Σ).  Because∼(0)and∼(1),
+25:817:41712:18:18:72:539:219:145:g_d0_f2:145:g_d0_f6:the covariance matrixΣhas the partitioned form:Σ=21,Σ=22,andΣ=
+25:818:41784:18:18:71:436:201:145:g_d0_f5:145:g_d0_f2:1212,whereis the(1)covariance matrix defined in Section 2.
+25:819:41849:18:18:89:539:183:145:g_d0_f2:145:g_d0_f2:There are a variety of inference questions that arise in the cointegration model, and several
+25:820:41942:18:16:71:538:165:145:g_d0_f2:145:g_d0_f2:of these are straightforward to address using the low-frequency transforms of the data.16For
+25:821:42034:16:19:81:539:149:49:g_d0_f2:100:g_d0_f2:15To put these values in perspective, recall that the standard neoclassical model, which exhibits balanced
+25:822:42140:19:15:72:539:130:100:g_d0_f2:100:g_d0_f2:growth, implies that a permanent one percentage point increase in TFP leads to a=(1−)−1percentage
+25:823:42239:15:15:71:540:115:100:g_d0_f2:100:g_d0_f2:point long-run increase in GDP, wheredenotes the elasticity of output with respect to capital.  Thus
+25:824:42340:15:9:71:152:100:100:g_d0_f8:100:g_d0_f2:=15if=23.
+25:825:42353:9:0:81:293:91:49:g_d0_f2:100:g_d0_f2:16Also see Bierens (1997) for a related approach.
+26:826:42404:0:18:72:544:671:145:g_d0_f2:145:g_d0_f2:example, one question asks whether the cointegrating coefficient takes on a specificvalue,
+26:827:42494:18:18:72:539:653:145:g_d0_f2:145:g_d0_f2:that is whether=0. Müller and Watson (2013) take up this question using the low-
+26:828:42576:18:18:71:539:635:145:g_d0_f2:145:g_d0_f2:frequency framework. The idea is straightforward. Write−0=−(−0).
+26:829:42651:18:19:72:539:617:145:g_d0_f2:145:g_d0_f2:If=0, then the term involvingis absent, but otherwise this component is present.
+26:830:42735:19:18:71:547:598:145:g_d0_f2:145:g_d0_f2:Thus,[12(−0)−12]⇒[+0 ]where0=(0−).Thecovariance
+26:831:42803:18:18:71:539:580:145:g_d0_f2:145:g_d0_f2:matrix of[(+0)00]0is readily computed and depends on0.  Thus, a hypothesis
+26:832:42883:18:18:71:545:562:145:g_d0_f2:145:g_d0_f2:about the value of the cointegrating coefficient, say=0or equivalently=0,can
+26:833:42963:18:18:72:540:544:145:g_d0_f2:145:g_d0_f2:be tested as a restriction on the covariance matrix. After imposing invariance restrictions,
+26:834:43055:18:18:72:539:526:145:g_d0_f2:145:g_d0_f2:Müller and Watson (2013) show that the scales1and2can be set to unity, so thatis
+26:835:43138:18:18:72:539:508:145:g_d0_f2:145:g_d0_f2:the only remaining parameter, and develop an optimal test for=0using a numerical
+26:836:43220:18:18:72:540:490:145:g_d0_f2:145:g_d0_f2:approximation to the LFD as discussed in the last section. Thus, as in the other inference
+26:837:43310:18:18:72:539:472:145:g_d0_f2:145:g_d0_f2:examples in the low frequency setting, optimal inference about cointegrating coefficients
+26:838:43399:18:18:72:518:454:145:g_d0_f2:145:g_d0_f2:becomes a standard problem involving the covariance matrix of normal random vector.
+26:839:43482:18:18:89:539:436:145:g_d0_f2:145:g_d0_f2:Perhaps a more interesting question involves the cointegration model’s assumption that
+26:840:43568:18:18:72:539:418:145:g_d0_f5:145:g_d0_f2:follows an(1)process. What iffollowed another persistent process, perhaps one of the
+26:841:43657:18:18:71:539:400:145:g_d0_f2:145:g_d0_f2:parametric processes described in the last section? In the context of “efficient” regression
+26:842:43749:18:18:71:539:382:145:g_d0_f2:145:g_d0_f2:inferences about,Elliott(1998)showedthatthe(1)assumption was crucial in the sense
+26:843:43832:18:18:71:539:364:145:g_d0_f2:145:g_d0_f2:that large size distortions could arise iffollowed a LTUM instead of an exact(1)process.
+26:844:43923:18:18:71:539:346:145:g_d0_f2:145:g_d0_f2:The low-frequency analysis outlined in the last paragraph is not immune from Elliott’s
+26:845:44009:18:18:71:539:328:145:g_d0_f2:145:g_d0_f2:critique: it uses the full covariance matrix for[(+0)00]0, and therefore utilizes the
+26:846:44099:18:19:71:539:310:145:g_d0_f5:145:g_d0_f2:(1)property of(through the(1)covariance matrixthat appears inΣandΣ).
+26:847:44176:19:18:72:539:291:145:g_d0_f2:145:g_d0_f2:Müller and Watson (2013) study optimal tests for=0under alternative assumptions
+26:848:44257:18:18:71:539:273:145:g_d0_f2:145:g_d0_f2:about the trend process. In particular, they show that if theprocess is unrestricted, then
+26:849:44349:18:18:72:539:255:145:g_d0_f2:145:g_d0_f2:the (essentially) most powerful testsimply involves testing whether−0is(0)using
+26:850:44434:18:18:71:539:237:145:g_d0_f2:145:g_d0_f2:the LFST test in (4), a solution to the Elliott critique originally proposed by Wright (2000),
+26:851:44528:18:18:71:295:219:145:g_d0_f2:65:g_d0_f2:although not in the low-frequency setting.17
+26:852:44572:18:18:81:539:201:49:g_d0_f2:100:g_d0_f2:17The Müller and Watson (2013) result on the near-optimality of the LFST test holds in the cointegration
+26:853:44676:18:15:71:539:183:100:g_d0_f2:100:g_d0_f2:model with a single cointegrating vector. If there aremultiple cointegrating vectors then it is possible to
+26:854:44783:15:0:71:516:168:100:g_d0_f2:100:g_d0_f2:obtain more powerful tests even absent assumptionson the process for the common stochastic trends.
+27:855:44883:0:228:185:426:664:145:g_d0_f2:145:g_d0_f2:Figure 10: Periodogram of GDP Growth Rates
+27:856:44925:228:30:72:384:436:301:g_d0_f1:301:g_d0_f1:5  Relationship to Spectral Analysis
+27:857:44961:30:18:72:539:406:145:g_d0_f2:145:g_d0_f2:This section relates our method to spectral analysis. Afirst subsection discusses why one
+27:858:45050:18:18:72:540:388:145:g_d0_f2:145:g_d0_f2:cannot simply use traditional spectral analysis inference tools to answer questions about
+27:859:45139:18:18:72:540:370:145:g_d0_f2:145:g_d0_f2:low-frequency variability. A second subsection derives the limiting covariance matrix of the
+27:860:45231:18:18:72:540:352:145:g_d0_f2:145:g_d0_f2:cosine transforms in terms of the spectral density of the underlying time series. A calculation
+27:861:45326:18:18:72:540:334:145:g_d0_f2:145:g_d0_f2:shows that the covariance matrix is fully determined by the shape of the spectral density
+27:862:45415:18:18:72:539:316:145:g_d0_f2:145:g_d0_f2:close to the origin, a function we call the “local-to-zero spectrum.”18In the third subsection,
+27:863:45510:18:18:71:539:298:145:g_d0_f2:145:g_d0_f2:we present a central limit theorem for low frequency transforms under general forms of the
+27:864:45600:18:39:71:188:280:145:g_d0_f2:145:g_d0_f2:local-to-zero spectrum.
+27:865:45623:39:23:72:540:241:209:g_d0_f1:209:g_d0_f1:5.1  Scarcity of low-frequency information and its extraction using
+27:866:45690:23:26:108:231:218:209:g_d0_f1:209:g_d0_f1:cosine transforms
+27:867:45707:26:18:72:539:192:145:g_d0_f12:145:g_d0_f2:Scarcity of low-frequency information.In traditional spectral analysis (see, for instance,
+27:868:45797:18:18:72:540:174:145:g_d0_f2:145:g_d0_f2:Priestley (1981) or Brockwell and Davis (1991)), the periodogram is the starting point to
+27:869:45886:18:18:72:539:156:145:g_d0_f2:145:g_d0_f2:learn about the spectral properties of a timeseries. Figure 10 plots the periodogram for
+27:870:45974:18:18:72:539:138:145:g_d0_f2:145:g_d0_f2:quarterly GDP growth rates. The shaded portion of thefigure shows the frequencies corre-
+27:871:46062:18:18:72:540:120:145:g_d0_f2:145:g_d0_f2:sponding to periods of 11 years or longer. A mere six periodogram ordinates fall into this
+27:872:46152:18:0:81:429:102:49:g_d0_f2:100:g_d0_f2:18This subsection largely follows the development in Müller and Watson (2015).
+28:873:46232:0:30:117:494:663:145:g_d0_f2:145:g_d0_f2:Figure 11:2Plot of Generic Trigonometric Series on Cosine Transforms
+28:874:46301:30:112:91:531:633:121:g_d0_f2:121:g_d0_f2:average over phase shiftmaximum over phase shiftminimum over phase shift
+28:875:46373:112:46:130:488:521:36:g_d0_f2:36:g_d0_f21:multiples ofmultiples ofmultiples of
+28:876:46412:46:18:72:539:475:145:g_d0_f2:145:g_d0_f2:low-frequency region, and this count would remain unaltered if GDP growth was instead
+28:877:46497:18:18:72:540:457:145:g_d0_f2:145:g_d0_f2:sampled at the monthly or even weekly frequency. Intuitively, 67 years of data contain only
+28:878:46588:18:18:72:448:439:145:g_d0_f2:145:g_d0_f2:limited information about components with periods of 11 years or longer.
+28:879:46660:18:18:89:539:421:145:g_d0_f2:145:g_d0_f2:Traditional inference about the shape and value of the spectral density is based on averag-
+28:880:46751:18:18:72:540:403:145:g_d0_f2:145:g_d0_f2:ing periodogram ordinates. The asymptotics are driven by an assumption that the spectrum
+28:881:46839:18:19:72:540:385:145:g_d0_f2:145:g_d0_f2:is locallyflat (that is, the spectrum isfixed and continuous), so that as the sample size grows,
+28:882:46935:19:18:72:540:366:145:g_d0_f2:145:g_d0_f2:eventually there will be more and more relevant periodogram ordinates to estimate the value
+28:883:47026:18:18:72:540:348:145:g_d0_f2:145:g_d0_f2:of the spectral density at any given point. Under such asymptotics, Laws of Large Numbers
+28:884:47115:18:18:72:523:330:145:g_d0_f2:145:g_d0_f2:and Central Limit Theorems are applicable and enable asymptotically normal inference.
+28:885:47200:18:18:89:539:312:145:g_d0_f2:145:g_d0_f2:But with the relevant number of periodogram ordinates as small as six, such asymptotics
+28:886:47287:18:18:72:540:294:145:g_d0_f2:145:g_d0_f2:do not provide good approximations. What is more, in any non-(0)model, the spectrum
+28:887:47371:18:18:72:540:276:145:g_d0_f2:145:g_d0_f2:has non-negligible curvature even within a(−1)band around zero, and this band contains
+28:888:47459:18:18:72:539:258:145:g_d0_f2:145:g_d0_f2:afixed number of periodogram ordinates. For these reasons, the traditional inference tools
+28:889:47549:18:18:72:311:240:145:g_d0_f2:145:g_d0_f2:of spectral analysis are not directly applicable.
+28:890:47598:18:18:89:539:222:145:g_d0_f12:145:g_d0_f2:Extracting low-frequency information using cosine transforms.Do a small number of
+28:891:47679:18:18:72:539:204:145:g_d0_f2:145:g_d0_f2:cosine transforms do a good job at extracting the low-frequency information thatiscontained
+28:892:47770:18:18:72:540:186:145:g_d0_f2:145:g_d0_f2:in the sample data? One useful way to answer this question is to consider the a perfectly
+28:893:47859:18:18:72:545:168:145:g_d0_f2:145:g_d0_f2:periodic time series of frequency,=sin(+)with phase shift∈[0].Ideally,the
+28:894:47941:18:18:71:539:150:145:g_d0_f2:145:g_d0_f5:low-frequency cosine transformswould capture the entire variation offor0≤≤ ̄
+28:895:48023:18:18:71:539:132:145:g_d0_f2:145:g_d0_f2:for small values of ̄and none of the variation if ̄. In large samples, with ̄= ̄for
+28:896:48114:18:18:71:539:114:145:g_d0_f3:145:g_d0_f2:fixed ̄, the corresponding2of a regression ofonΨis well approximated by the2of
+28:897:48199:18:0:71:539:96:145:g_d0_f2:145:g_d0_f2:a continuous time regression ofsin(+)on the×1cosine functionsΨ()and a constant
+29:898:48284:0:18:72:545:671:145:g_d0_f2:145:g_d0_f2:for∈[01]. Figure 11 plots this continuous time2as a function offor ̄=12.While
+29:899:48367:18:18:72:539:653:145:g_d0_f2:145:g_d0_f2:the2plot does not follow the ideal step function form, it still provides evidence that the
+29:900:48458:18:18:72:539:635:145:g_d0_f2:145:g_d0_f2:low-frequency cosine transforms do a reasonably good job at extracting the low-frequency
+29:901:48546:18:39:72:198:617:145:g_d0_f2:65:g_d0_f2:information of interest.19
+29:902:48572:39:26:72:262:578:209:g_d0_f1:209:g_d0_f1:5.2  Local-to-Zero Spectra
+29:903:48598:26:18:72:540:552:145:g_d0_f2:145:g_d0_f2:BecauseΣis the limiting covariance matrix of the cosine transforms, which in turn are
+29:904:48683:18:18:72:539:534:145:g_d0_f2:145:g_d0_f2:weighted averages of the underlying series, the elements ofΣdepend on the autocovari-
+29:905:48770:18:18:72:540:516:145:g_d0_f2:145:g_d0_f2:ances of the-process. These, in turn, are linked to spectrum of the process, and this makes
+29:906:48862:18:18:72:539:498:145:g_d0_f2:145:g_d0_f2:it possible to expressΣas a function of the spectrum. Because the cosine transforms extract
+29:907:48953:18:18:72:539:480:145:g_d0_f2:145:g_d0_f2:low-frequency information in, it should not be surprising that it is the spectrum close to
+29:908:49044:18:18:72:539:462:145:g_d0_f2:145:g_d0_f2:zero that determinesΣ. The remainder of this subsection makes this explicit by showing
+29:909:49130:18:18:72:540:444:145:g_d0_f2:145:g_d0_f6:thatΣcan expressed as a function of the spectrum evaluated at frequencies in a(−1)
+29:910:49214:18:18:71:470:426:145:g_d0_f2:145:g_d0_f2:neighborhood of frequency zero, a function we call the local-to-zero spectrum.
+29:911:49292:18:18:89:539:408:145:g_d0_f12:145:g_d0_f2:Local-to-zero spectrum for a stationary process.Suppose thatis a stationary process
+29:912:49377:18:18:71:539:390:145:g_d0_f2:145:g_d0_f2:with spectral density().20Suppose that in the(−1)neighborhood of the origin, the
+29:913:49462:18:25:71:369:372:145:g_d0_f2:145:g_d0_f2:suitably scaled spectral density converges (in an1sense)
+29:914:49519:25:25:247:539:347:145:g_d0_f5:145:g_d0_f2:1−2()→()(5)
+29:915:49540:25:18:72:539:322:145:g_d0_f2:145:g_d0_f2:For example, the FRM is traditionally defined by the assumption that()is proportional
+29:916:49628:18:18:72:539:304:145:g_d0_f2:145:g_d0_f2:to||−2for small,sothat(5)holdswith=12−. More generally, the function()is
+29:917:49707:18:18:71:539:286:145:g_d0_f2:145:g_d0_f2:the large sample limit of the shape of the original spectrumclose to the origin, and we
+29:918:49796:18:18:71:372:268:145:g_d0_f2:145:g_d0_f2:correspondingly refer to it as the “local-to-zero” spectrum.
+29:919:49856:18:31:89:288:250:145:g_d0_f2:145:g_d0_f2:Now consider a weighted average of,
+29:920:49893:31:0:206:231:219:145:g_d0_f5:145:g_d0_f6:=
+29:921:49896:0:27:234:250:235:145:g_d0_f10:65:g_d0_f15:Z1
+29:922:49898:27:0:241:245:208:65:g_d0_f15:65:g_d0_f15:0
+29:923:49899:0:0:253:356:219:145:g_d0_f5:65:g_d0_f15:()bc+1=−1
+29:924:49916:0:29:364:375:234:65:g_d0_f13:145:g_d0_f10:X
+29:925:49918:29:0:360:374:205:65:g_d0_f13:65:g_d0_f15:=1
+29:926:49921:0:35:378:404:219:145:g_d0_f6:65:g_d0_f13: ̃
+29:927:49929:35:0:72:354:184:145:g_d0_f2:145:g_d0_f5:for some Riemann integrable functionand ̃=
+29:928:49977:0:14:357:377:193:145:g_d0_f10:65:g_d0_f13:R
+29:929:49981:14:14:363:549:179:65:g_d0_f15:145:g_d0_f2:(−1)().Inlightof(1),the
+29:930:50011:14:16:72:539:165:145:g_d0_f2:145:g_d0_f2:cosine transforms are an example of. Recalling that thethautocovariance ofis given
+29:931:50098:16:19:81:539:149:49:g_d0_f2:100:g_d0_f2:19Low-frequency Fourier transforms perform similarly well for extracting low-frequency variations. See
+29:932:50200:19:9:72:322:130:100:g_d0_f2:100:g_d0_f2:Müller and Watson (2008) for the corresponding2plot.
+29:933:50253:9:19:81:539:121:49:g_d0_f2:100:g_d0_f2:20Thesubscript onaccomodates “double-array” processes such as the LTUM in which the AR(1)
+29:934:50345:19:15:71:540:102:100:g_d0_f2:100:g_d0_f2:coefficient depends on. To ease notation, we omit the correspondingsubscript on=in this
+29:935:50440:15:0:72:120:87:100:g_d0_f2:100:g_d0_f2:subsection.
+30:936:50453:0:0:72:84:671:145:g_d0_f2:145:g_d0_f2:by
+30:937:50455:0:13:87:100:680:145:g_d0_f10:65:g_d0_f13:R
+30:938:50457:13:0:92:140:667:65:g_d0_f19:145:g_d0_f5:−()
+30:939:50465:0:22:140:539:675:65:g_d0_f19:145:g_d0_f2:−i,wherei=√−1, we obtain for the covariance between two such weighted
+30:940:50538:22:38:72:177:653:145:g_d0_f2:145:g_d0_f2:averages,1and2:
+30:941:50557:38:0:91:218:615:145:g_d0_f5:145:g_d0_f5:2(1−)[12]=−2
+30:942:50579:0:9:220:247:635:145:g_d0_f10:65:g_d0_f13:"Ã
+30:943:50582:9:25:237:254:626:145:g_d0_f10:145:g_d0_f10:X
+30:944:50583:25:0:238:253:601:65:g_d0_f13:65:g_d0_f15:=1
+30:945:50586:0:0:256:285:615:145:g_d0_f6:65:g_d0_f13: ̃1
+30:946:50595:0:10:285:317:636:145:g_d0_f10:65:g_d0_f13:!Ã
+30:947:50598:10:25:306:323:626:145:g_d0_f10:145:g_d0_f10:X
+30:948:50599:25:0:308:322:601:65:g_d0_f13:65:g_d0_f15:=1
+30:949:50602:0:0:326:352:615:145:g_d0_f6:65:g_d0_f13: ̃2
+30:950:50611:0:61:353:369:636:145:g_d0_f10:145:g_d0_f10:!#
+30:951:50613:61:0:172:208:575:145:g_d0_f6:65:g_d0_f13:=−2
+30:952:50618:0:28:216:228:589:65:g_d0_f13:145:g_d0_f10:X
+30:953:50620:28:0:212:227:561:65:g_d0_f13:65:g_d0_f15:=1
+30:954:50623:0:28:236:247:589:65:g_d0_f13:145:g_d0_f10:X
+30:955:50625:28:0:232:246:561:65:g_d0_f13:65:g_d0_f15:=1
+30:956:50628:0:41:250:321:575:145:g_d0_f6:145:g_d0_f6: ̃1 ̃2[]
+30:957:50649:41:0:172:208:534:145:g_d0_f6:65:g_d0_f13:=−2
+30:958:50654:0:29:216:228:549:65:g_d0_f13:145:g_d0_f10:X
+30:959:50656:29:0:212:227:520:65:g_d0_f13:65:g_d0_f15:=1
+30:960:50659:0:29:236:247:549:65:g_d0_f13:145:g_d0_f10:X
+30:961:50661:29:0:232:246:520:65:g_d0_f13:65:g_d0_f15:=1
+30:962:50664:0:0:250:285:534:145:g_d0_f6:65:g_d0_f13: ̃1 ̃2
+30:963:50678:0:27:286:303:550:145:g_d0_f10:65:g_d0_f13:Z
+30:964:50680:27:0:293:305:523:65:g_d0_f19:65:g_d0_f13:−
+30:965:50682:0:40:307:389:534:145:g_d0_f5:145:g_d0_f5:()−i(−)
+30:966:50698:40:0:172:208:494:145:g_d0_f6:65:g_d0_f13:=−2
+30:967:50703:0:27:211:228:510:145:g_d0_f10:65:g_d0_f13:Z
+30:968:50705:27:0:217:229:483:65:g_d0_f19:65:g_d0_f13:−
+30:969:50707:0:0:232:261:494:145:g_d0_f5:145:g_d0_f6:()
+30:970:50712:0:9:262:282:514:145:g_d0_f10:65:g_d0_f13:Ã
+30:971:50714:9:25:272:289:505:145:g_d0_f10:145:g_d0_f10:X
+30:972:50715:25:0:273:288:480:65:g_d0_f13:65:g_d0_f15:=1
+30:973:50718:0:0:291:326:494:145:g_d0_f6:65:g_d0_f13: ̃1i
+30:974:50729:0:9:326:358:514:145:g_d0_f10:65:g_d0_f13:!Ã
+30:975:50732:9:25:347:364:505:145:g_d0_f10:145:g_d0_f10:X
+30:976:50733:25:0:349:363:480:65:g_d0_f13:65:g_d0_f15:=1
+30:977:50736:0:0:367:406:494:145:g_d0_f6:65:g_d0_f13: ̃2−i
+30:978:50748:0:20:406:416:514:145:g_d0_f10:145:g_d0_f10:!
+30:979:50749:20:41:418:431:494:145:g_d0_f5:145:g_d0_f5:
+30:980:50751:41:0:172:213:453:145:g_d0_f6:65:g_d0_f13:=1−2
+30:981:50757:0:27:215:237:469:145:g_d0_f10:65:g_d0_f13:Z
+30:982:50760:27:0:222:238:442:65:g_d0_f19:65:g_d0_f13:−
+30:983:50763:0:0:242:285:453:145:g_d0_f5:145:g_d0_f6:()
+30:984:50770:0:20:287:297:473:145:g_d0_f10:145:g_d0_f10:Ã
+30:985:50771:20:0:296:315:453:145:g_d0_f5:65:g_d0_f15:−1
+30:986:50774:0:29:323:335:468:65:g_d0_f13:145:g_d0_f10:X
+30:987:50776:29:0:319:334:439:65:g_d0_f13:65:g_d0_f15:=1
+30:988:50779:0:0:338:381:453:145:g_d0_f6:65:g_d0_f13: ̃1i
+30:989:50792:0:20:383:406:473:145:g_d0_f10:145:g_d0_f10:!Ã
+30:990:50794:20:0:404:423:453:145:g_d0_f5:65:g_d0_f15:−1
+30:991:50797:0:29:431:442:468:65:g_d0_f13:145:g_d0_f10:X
+30:992:50799:29:0:427:441:439:65:g_d0_f13:65:g_d0_f15:=1
+30:993:50802:0:0:445:493:453:145:g_d0_f6:65:g_d0_f13: ̃2−i
+30:994:50816:0:20:495:505:473:145:g_d0_f10:145:g_d0_f10:!
+30:995:50817:20:37:506:519:453:145:g_d0_f5:145:g_d0_f5:
+30:996:50819:37:0:172:184:416:145:g_d0_f7:145:g_d0_f7:→
+30:997:50820:0:27:187:208:432:145:g_d0_f10:65:g_d0_f19:Z∞
+30:998:50822:27:0:194:209:405:65:g_d0_f19:65:g_d0_f19:−∞
+30:999:50824:0:0:211:236:416:145:g_d0_f5:145:g_d0_f6:()
+30:1000:50828:0:28:237:262:433:145:g_d0_f10:65:g_d0_f15:μZ1
+30:1001:50831:28:0:252:256:405:65:g_d0_f15:65:g_d0_f15:0
+30:1002:50832:0:0:265:319:416:145:g_d0_f5:145:g_d0_f5:1()i
+30:1003:50843:0:28:319:354:433:145:g_d0_f10:65:g_d0_f15:¶μZ1
+30:1004:50847:28:0:345:349:405:65:g_d0_f15:65:g_d0_f15:0
+30:1005:50848:0:0:357:418:416:145:g_d0_f5:145:g_d0_f5:2()−i
+30:1006:50860:0:17:418:427:433:145:g_d0_f10:145:g_d0_f10:¶
+30:1007:50861:17:34:428:539:416:145:g_d0_f5:145:g_d0_f2:(6)
+30:1008:50866:34:18:71:543:382:145:g_d0_f2:145:g_d0_f5:Thus the limiting covariance matrixΣdepends ononly through(albeit for−∞
+30:1009:50943:18:18:71:235:364:145:g_d0_f7:145:g_d0_f2:∞, a point we return to below).
+30:1010:50974:18:18:89:539:346:145:g_d0_f12:145:g_d0_f2:Local-to-zero pseudo-spectrum.This calculation requires the spectral density ofto
+30:1011:51057:18:18:72:540:328:145:g_d0_f2:145:g_d0_f2:exist. For some models, such as the(1)model, only the spectral density of∆is well
+30:1012:51141:18:18:71:539:310:145:g_d0_f2:145:g_d0_f2:defined, so a generalization of (6) to this more general case is required. This is possible when
+30:1013:51237:18:0:71:274:292:145:g_d0_f2:145:g_d0_f2:the-weights add to zero, that is when
+30:1014:51275:0:14:279:291:302:145:g_d0_f10:65:g_d0_f15:R1
+30:1015:51277:14:14:284:540:288:65:g_d0_f15:145:g_d0_f2:0()=0(otherwise, if ̄doesn’t have afinite
+30:1016:51323:14:18:72:271:274:145:g_d0_f2:145:g_d0_f2:second moment, then neither does).
+30:1017:51359:18:18:89:540:256:145:g_d0_f2:145:g_d0_f2:Let∆()denote the spectral density of∆, and assume it has a local-to-zero spectrum
+30:1018:51446:18:18:72:123:238:145:g_d0_f2:145:g_d0_f2:defined as
+30:1019:51456:18:25:239:539:220:145:g_d0_f5:145:g_d0_f2:3−2∆()→∆()(7)
+30:1020:51480:25:0:72:157:195:145:g_d0_f2:145:g_d0_f5:With ̃=
+30:1021:51492:0:14:160:180:205:145:g_d0_f10:65:g_d0_f13:R
+30:1022:51496:14:0:166:258:191:65:g_d0_f15:145:g_d0_f2:(−1)()and
+30:1023:51512:0:21:268:539:198:145:g_d0_f6:145:g_d0_f2: ̃=−1P−1=1 ̃, summation by parts yields
+30:1024:51562:21:0:72:91:177:145:g_d0_f5:65:g_d0_f15:−1
+30:1025:51565:0:12:93:111:186:145:g_d0_f10:65:g_d0_f13:P
+30:1026:51567:12:0:106:182:174:65:g_d0_f13:145:g_d0_f7:=1 ̃=−
+30:1027:51582:0:12:185:202:186:145:g_d0_f10:65:g_d0_f13:P
+30:1028:51584:12:35:197:393:174:65:g_d0_f13:145:g_d0_f2:=1 ̃∆,since ̃+1=0.Thus
+30:1029:51619:35:0:75:228:139:145:g_d0_f5:145:g_d0_f5:2(1−)[12]=2(1−)
+30:1030:51644:0:9:231:258:160:145:g_d0_f10:65:g_d0_f13:"Ã
+30:1031:51647:9:26:247:264:151:145:g_d0_f10:145:g_d0_f10:X
+30:1032:51648:26:0:248:263:125:65:g_d0_f13:65:g_d0_f15:=1
+30:1033:51651:0:0:269:308:142:145:g_d0_f6:65:g_d0_f13: ̃1∆
+30:1034:51661:0:9:309:340:160:145:g_d0_f10:65:g_d0_f13:!Ã
+30:1035:51664:9:26:330:347:151:145:g_d0_f10:145:g_d0_f10:X
+30:1036:51665:26:0:332:346:125:65:g_d0_f13:65:g_d0_f15:=1
+30:1037:51668:0:0:352:389:142:145:g_d0_f6:65:g_d0_f13: ̃2∆
+30:1038:51678:0:61:390:406:160:145:g_d0_f10:145:g_d0_f10:!#
+30:1039:51680:61:0:163:212:99:145:g_d0_f6:65:g_d0_f13:=3−2
+30:1040:51686:0:27:215:237:115:145:g_d0_f10:65:g_d0_f13:Z
+30:1041:51689:27:0:221:238:88:65:g_d0_f19:65:g_d0_f13:−
+30:1042:51692:0:0:242:294:99:145:g_d0_f5:145:g_d0_f6:∆()
+30:1043:51701:0:20:296:306:119:145:g_d0_f10:145:g_d0_f10:Ã
+30:1044:51702:20:0:305:324:99:145:g_d0_f5:65:g_d0_f15:−1
+30:1045:51705:0:29:333:344:114:65:g_d0_f13:145:g_d0_f10:X
+30:1046:51707:29:0:328:343:85:65:g_d0_f13:65:g_d0_f15:=1
+30:1047:51710:0:0:349:394:102:145:g_d0_f6:65:g_d0_f13: ̃1i
+30:1048:51723:0:20:395:418:119:145:g_d0_f10:145:g_d0_f10:!Ã
+30:1049:51725:20:0:416:435:99:145:g_d0_f5:65:g_d0_f15:−1
+30:1050:51728:0:29:444:455:114:65:g_d0_f13:145:g_d0_f10:X
+30:1051:51730:29:0:440:454:85:65:g_d0_f13:65:g_d0_f15:=1
+30:1052:51733:0:0:460:510:102:145:g_d0_f6:65:g_d0_f13: ̃2−i
+30:1053:51747:0:20:511:521:119:145:g_d0_f10:145:g_d0_f10:!
+30:1054:51748:20:0:523:536:99:145:g_d0_f5:145:g_d0_f5:
+31:1055:51752:0:0:162:174:664:145:g_d0_f7:145:g_d0_f7:→
+31:1056:51753:0:27:184:205:681:145:g_d0_f10:65:g_d0_f19:Z∞
+31:1057:51755:27:0:191:206:654:65:g_d0_f19:65:g_d0_f19:−∞
+31:1058:51757:0:0:208:239:664:145:g_d0_f5:145:g_d0_f6:∆()
+31:1059:51762:0:27:241:266:681:145:g_d0_f10:65:g_d0_f15:μZ1
+31:1060:51765:27:0:256:260:654:65:g_d0_f15:65:g_d0_f15:0
+31:1061:51766:0:0:268:326:664:145:g_d0_f5:145:g_d0_f5:1()i
+31:1062:51777:0:27:325:361:681:145:g_d0_f10:65:g_d0_f15:¶μZ1
+31:1063:51781:27:0:352:356:654:65:g_d0_f15:65:g_d0_f15:0
+31:1064:51782:0:0:364:428:664:145:g_d0_f5:145:g_d0_f5:2()−i
+31:1065:51794:0:17:428:437:681:145:g_d0_f10:145:g_d0_f10:¶
+31:1066:51795:17:36:438:483:664:145:g_d0_f5:65:g_d0_f15:=12
+31:1067:51801:36:0:72:143:628:145:g_d0_f2:145:g_d0_f6:where()=
+31:1068:51811:0:14:144:156:638:145:g_d0_f10:65:g_d0_f13:R
+31:1069:51813:14:0:149:456:624:65:g_d0_f15:145:g_d0_f2:0(). Furthermore, by integration by parts and(1) = 0,
+31:1070:51871:0:14:460:472:638:145:g_d0_f10:65:g_d0_f15:R1
+31:1071:51873:14:0:465:503:624:65:g_d0_f15:145:g_d0_f5:0()
+31:1072:51879:0:23:504:539:633:65:g_d0_f29:145:g_d0_f6:i=
+31:1073:51885:23:0:72:81:610:145:g_d0_f7:145:g_d0_f7:−
+31:1074:51886:0:14:83:95:620:145:g_d0_f10:65:g_d0_f15:R1
+31:1075:51888:14:0:88:119:606:65:g_d0_f15:145:g_d0_f6:0()
+31:1076:51893:0:9:119:134:615:65:g_d0_f13:36:g_d0_f21:i
+31:1077:51897:9:31:123:194:606:65:g_d0_f29:145:g_d0_f2:i,sothat
+31:1078:51908:31:0:156:184:575:145:g_d0_f5:145:g_d0_f6:12=
+31:1079:51912:0:27:188:209:591:145:g_d0_f10:65:g_d0_f19:Z∞
+31:1080:51914:27:0:194:209:564:65:g_d0_f19:65:g_d0_f19:−∞
+31:1081:51916:0:17:213:244:583:145:g_d0_f5:145:g_d0_f6:∆()
+31:1082:51921:17:0:223:233:566:145:g_d0_f5:65:g_d0_f15:2
+31:1083:51923:0:28:247:272:592:145:g_d0_f10:65:g_d0_f15:μZ1
+31:1084:51926:28:0:262:266:564:65:g_d0_f15:65:g_d0_f15:0
+31:1085:51927:0:0:274:329:575:145:g_d0_f5:145:g_d0_f5:1()i
+31:1086:51938:0:28:329:364:592:145:g_d0_f10:65:g_d0_f15:¶μZ1
+31:1087:51942:28:0:355:359:564:65:g_d0_f15:65:g_d0_f15:0
+31:1088:51943:0:0:367:428:575:145:g_d0_f5:145:g_d0_f5:2()−i
+31:1089:51955:0:17:427:436:592:145:g_d0_f10:145:g_d0_f10:¶
+31:1090:51956:17:36:438:609:575:145:g_d0_f5:145:g_d0_f2:.(8)
+31:1091:51962:36:0:71:130:539:145:g_d0_f2:145:g_d0_f2:Thus, when
+31:1092:51972:0:13:134:146:548:145:g_d0_f10:65:g_d0_f15:R1
+31:1093:51974:13:0:140:155:535:65:g_d0_f15:145:g_d0_f5:0
+31:1094:51976:0:8:155:213:543:65:g_d0_f15:65:g_d0_f15:1()=R1
+31:1095:51985:8:0:207:222:535:65:g_d0_f15:145:g_d0_f5:0
+31:1096:51987:0:22:222:539:543:65:g_d0_f15:145:g_d0_f2:2()=0, equation (8) generalizes (6): If the spectral density
+31:1097:52050:22:18:71:540:521:145:g_d0_f2:145:g_d0_f2:ofis well defined, then()|1−−i|2=∆(), and (5) and (7) are equivalent, since
+31:1098:52136:18:18:71:540:503:145:g_d0_f5:145:g_d0_f2:2|1−−i|2→2,sothat∆()=()2. On the other hand, if the spectral density of
+31:1099:52218:18:18:72:539:485:145:g_d0_f5:145:g_d0_f2:does not exist, then()=∆()|1−−i|2suitably defines a “pseudo spectrum” of
+31:1100:52302:18:19:71:397:467:145:g_d0_f5:145:g_d0_f2:with local-to-zero limit()=∆()2, so (8) still applies.
+31:1101:52364:19:18:89:539:448:145:g_d0_f14:145:g_d0_f2:Σas a weighted average of().Several features ofΣfollow from the representation
+31:1102:52444:18:18:71:539:430:145:g_d0_f2:145:g_d0_f2:(8).  Sinceis an even function and1and2are real valued,12can be rewritten as
+31:1103:52524:18:0:71:113:412:145:g_d0_f5:145:g_d0_f6:12=2
+31:1104:52529:0:14:111:128:422:145:g_d0_f10:65:g_d0_f19:R∞
+31:1105:52531:14:0:116:162:408:65:g_d0_f15:145:g_d0_f5:0()
+31:1106:52537:0:0:162:310:417:65:g_d0_f15:145:g_d0_f6:12(),where12()=Re[
+31:1107:52560:0:7:306:319:426:145:g_d0_f10:145:g_d0_f10:³R
+31:1108:52562:7:11:321:325:419:65:g_d0_f15:65:g_d0_f15:1
+31:1109:52563:11:0:319:334:408:65:g_d0_f15:145:g_d0_f5:0
+31:1110:52565:0:0:334:383:417:65:g_d0_f15:145:g_d0_f5:1()i
+31:1111:52575:0:7:382:404:426:145:g_d0_f10:145:g_d0_f10: ́³R
+31:1112:52579:7:11:406:410:419:65:g_d0_f15:65:g_d0_f15:1
+31:1113:52580:11:0:404:419:408:65:g_d0_f15:145:g_d0_f5:0
+31:1114:52582:0:0:419:474:417:65:g_d0_f15:145:g_d0_f5:2()−i
+31:1115:52593:0:14:474:481:426:145:g_d0_f10:145:g_d0_f10: ́
+31:1116:52595:14:18:481:544:412:145:g_d0_f6:145:g_d0_f2:].Elements
+31:1117:52605:18:8:71:544:394:145:g_d0_f2:145:g_d0_f6:ofΣare thus equal to a weighted average of the local-to-zero spectrum.With1()=
+31:1118:52686:8:10:71:81:386:145:g_d0_f7:145:g_d0_f7:√
+31:1119:52687:10:0:81:206:376:145:g_d0_f6:145:g_d0_f6:2cos()and2()=
+31:1120:52705:0:10:205:215:386:145:g_d0_f7:145:g_d0_f7:√
+31:1121:52706:10:18:215:539:376:145:g_d0_f6:145:g_d0_f2:2cos(), a calculation shows that12()=()=0for
+31:1122:52760:18:18:71:539:358:145:g_d0_f6:145:g_d0_f2:1≤ ≤and+odd, so that[]=0for all odd+, independent of the
+31:1123:52829:18:18:71:540:340:145:g_d0_f2:145:g_d0_f2:local-to-zero spectrum.With0the suitably scaled limit of the sample mean ̄(so that
+31:1124:52914:18:18:71:292:322:145:g_d0_f5:145:g_d0_f2:()=1), this holds for all =012.
+31:1125:52955:18:18:89:539:304:145:g_d0_f2:145:g_d0_f2:Figure 12 plots(·)for selected values ofandThefigure displays the weights
+31:1126:53035:18:18:72:539:286:145:g_d0_f5:145:g_d0_f2:corresponding to the covariance matrix of the vector(0123101112)0,
+31:1127:53118:18:18:72:539:268:145:g_d0_f2:145:g_d0_f2:organized into a symmetric matrix of9panels corresponding to0,(123)0and
+31:1128:53195:18:18:71:539:250:145:g_d0_f6:145:g_d0_f2:(101112)0. The weights for the variancesare shown in bold and the weights for
+31:1129:53281:18:18:72:539:232:145:g_d0_f2:145:g_d0_f2:the covariances,6=are shown as thin curves. A calculation shows that covariance
+31:1130:53366:18:18:71:539:214:145:g_d0_f2:145:g_d0_f2:weights,6=, integrate to zero, which implies that for aflat local-to-zero spectrum,
+31:1131:53456:18:18:71:539:196:145:g_d0_f14:145:g_d0_f2:Σis diagonal. As can be seen from the panelsonthediagonal,thevarianceofis mostly
+31:1132:53538:18:18:72:539:178:145:g_d0_f2:145:g_d0_f2:determined by the values ofin the interval±2.Further,aslongasis somewhat
+31:1133:53615:18:18:72:539:160:145:g_d0_f2:145:g_d0_f2:smooth, the correlation betweenandis very close to zero for|−|large. For,
+31:1134:53696:18:19:72:544:142:145:g_d0_f5:145:g_d0_f2:0,theweightsput zero mass on=0;itisthisfeaturethatmakesitpossiblefor
+31:1135:53771:19:18:72:539:123:145:g_d0_f14:145:g_d0_f2:Σto be well defined even if()is not integrable, as is the case ifis only a “pseudo-
+31:1136:53858:18:0:72:241:105:145:g_d0_f2:145:g_d0_f2:spectrum”. In contrast, because
+31:1137:53889:0:14:245:257:115:145:g_d0_f10:65:g_d0_f15:R1
+31:1138:53891:14:14:251:539:101:65:g_d0_f15:145:g_d0_f2:0()6=0for0, there is positive weight placed on
+31:1139:53942:14:0:72:478:87:145:g_d0_f5:145:g_d0_f2:=0, so the variance of0will not exist for processes such as the(1)model.
+32:1140:54019:0:18:72:539:571:145:g_d0_f2:145:g_d0_f2:Figure  12:Weights  on  Local-to-Zero  Spectrum  for  Covariance  Matrix  of
+32:1141:54095:18:13:72:228:553:145:g_d0_f6:65:g_d0_f16:(0123101112)0
+33:1142:54123:13:18:72:540:540:145:g_d0_f2:145:g_d0_f2:Figure 13: Local-to-Zero Log-Spectra of some Benchmark Models of Low-Frequency Vari-
+33:1143:54207:18:0:72:105:522:145:g_d0_f2:145:g_d0_f2:ability
+34:1144:54216:0:18:89:540:671:145:g_d0_f2:145:g_d0_f2:Since the local-to-zero spectrum determinesΣ,is the key property of the underlying
+34:1145:54299:18:18:72:539:653:145:g_d0_f2:145:g_d0_f2:processfor the purposes of “low frequency econometrics.” It is instructive to revisit the
+34:1146:54390:18:18:71:539:635:145:g_d0_f2:145:g_d0_f2:three benchmark models LTUM, LLM and FRM introduced in Section 3.2 from this per-
+34:1147:54471:18:19:71:539:617:145:g_d0_f2:145:g_d0_f2:spective. As already noted above, the FRM model has a (pseudo-) spectrum proportional
+34:1148:54556:19:18:71:539:598:145:g_d0_f2:145:g_d0_f2:to||−2forclose to zero, so that()∝||−2,−1232.Inparticularis
+34:1149:54628:18:18:72:540:580:145:g_d0_f2:145:g_d0_f2:constant for the(0)model and it is proportional to−2for the(1)model. This implies
+34:1150:54712:18:18:71:544:562:145:g_d0_f2:145:g_d0_f2:that the local-to-zero spectrum of the LLM satisfies()∝2+−2.Finally,intheLTUM,
+34:1151:54794:18:18:72:539:544:145:g_d0_f2:145:g_d0_f2:a straightforward calculation shows that()∝1(2+2).(Notethat( )→(∞∞)and
+34:1152:54873:18:18:71:539:526:145:g_d0_f6:145:g_d0_f2:( )→(00)recover the(0)and(1)model, respectively). Figure 13 plots the logarithm
+34:1153:54958:18:18:71:538:508:145:g_d0_f2:145:g_d0_f5:of the local-to-zero spectra of the three benchmark models for selected values of,and
+34:1154:55047:18:18:89:539:490:145:g_d0_f12:145:g_d0_f2:Choice of.The-axes in Figures 11-13 are usefully thought of zooming in on the shaded
+34:1155:55133:18:18:71:539:472:145:g_d0_f2:145:g_d0_f2:area in the periodogram plot of Figure 10: In terms of the original time series, local-to-zero
+34:1156:55227:18:18:71:539:454:145:g_d0_f2:145:g_d0_f2:frequencies of, say,||12correspond to cycles of periodicity6.Thus,with66years
+34:1157:55309:18:18:71:539:436:145:g_d0_f2:145:g_d0_f2:worth of data (of any sampling frequency), the shape of the spectrum for frequencies below
+34:1158:55399:18:18:71:544:418:145:g_d0_f6:145:g_d0_f2:11year cycles more or less determines the properties of the cosine transforms for=12.In
+34:1159:55487:18:18:71:539:400:145:g_d0_f2:145:g_d0_f2:the context of a specific model of low-frequency variability, such as the(0)or(1)model,
+34:1160:55576:18:18:71:539:382:145:g_d0_f2:145:g_d0_f2:or parametric families such as the FRM, LLM or LTUM, the choice ofthen governs the
+34:1161:55659:18:18:71:539:364:145:g_d0_f2:145:g_d0_f2:frequencies for which the model’s implications are exploited for inference.  The choice of
+34:1162:55749:18:18:71:539:346:145:g_d0_f5:145:g_d0_f2:is thus a trade-offbetween robustness and efficiency: a largeenables more powerful
+34:1163:55833:18:19:71:539:328:145:g_d0_f2:145:g_d0_f2:inference, as more cosine transforms are used to learn about model parameters of interest,
+34:1164:55923:19:18:71:539:309:145:g_d0_f2:145:g_d0_f2:but a largealso increases the danger of relying on a misspecified model for this inference,
+34:1165:56015:18:18:71:539:291:145:g_d0_f2:145:g_d0_f2:as the low frequency model must accurately describe the spectrum over a wider frequency
+34:1166:56102:18:18:71:544:273:145:g_d0_f2:145:g_d0_f2:band. Roughly speaking, the low-frequency model isfittotheobservations,which
+34:1167:56181:18:18:71:539:255:145:g_d0_f2:145:g_d0_f2:suggests that in general, the degree of misspecification is a function of, without any obvious
+34:1168:56276:18:18:71:539:237:145:g_d0_f2:145:g_d0_f2:relationship to the underlying sample size or time span. The choice ofthen amounts to a
+34:1169:56364:18:18:71:539:219:145:g_d0_f2:145:g_d0_f2:regularity assumption about the properties of the underlying data (relative to the model of
+34:1170:56455:18:18:71:539:201:145:g_d0_f2:145:g_d0_f2:low-frequency variability) that makes inference possible.21For instance, conducting inference
+34:1171:56548:18:18:72:539:183:145:g_d0_f2:145:g_d0_f2:aboutin the context of the(0)model with=12and 66 years of data implicitly assumes
+34:1172:56632:18:18:71:539:165:145:g_d0_f2:145:g_d0_f2:that the spectrum is approximatelyflat over all frequencies corresponding to cycles of 11
+34:1173:56721:18:18:81:539:147:49:g_d0_f2:100:g_d0_f2:21Without additional strong cross-frequencies restrictions, it is not possible to systematically select the
+34:1174:56828:18:15:72:539:129:100:g_d0_f2:100:g_d0_f2:appropriatefrom data: If one insists on correct inference whenever the crucial central limit theorem (2)
+34:1175:56933:15:15:71:539:114:100:g_d0_f2:100:g_d0_f2:holds for some conservatively small0, then no data dependent rule for selecting0can improve on
+34:1176:57031:15:0:72:496:99:100:g_d0_f2:100:g_d0_f2:inference that simply uses=0. See Müller (2011), especially page 414, for a formal discussion.
+35:1177:57129:0:18:72:145:671:145:g_d0_f2:145:g_d0_f2:years or more.
+35:1178:57143:18:18:89:539:653:145:g_d0_f12:145:g_d0_f2:Multivariate local-to-zero spectra.As afinal generalization of the connection between the
+35:1179:57232:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:second moments of weighted averages and the spectrum of the underlying series, consider
+35:1180:57319:18:19:72:539:617:145:g_d0_f2:145:g_d0_f2:now the case whereis a×1vector. Its spectral density then is a×Hermitian matrix
+35:1181:57403:19:18:71:539:598:145:g_d0_f2:145:g_d0_f2:valued function(). Assume that for some×matrixΥ,Υ()Υ0→().
+35:1182:57476:18:0:72:147:580:145:g_d0_f2:65:g_d0_f13:Let=0Υ
+35:1183:57488:0:12:150:168:589:145:g_d0_f10:65:g_d0_f13:P
+35:1184:57490:12:0:163:185:577:65:g_d0_f13:145:g_d0_f5:=1 ̃
+35:1185:57496:0:8:186:189:585:65:g_d0_f13:65:g_d0_f13:
+35:1186:57497:8:31:185:443:577:65:g_d0_f13:145:g_d0_f2:for=12. Then proceeding as for (6) yields
+35:1187:57545:31:0:135:191:546:145:g_d0_f5:145:g_d0_f7:[12]→
+35:1188:57555:0:27:195:216:562:145:g_d0_f10:65:g_d0_f19:Z∞
+35:1189:57557:27:0:201:216:535:65:g_d0_f19:65:g_d0_f19:−∞
+35:1190:57559:0:0:219:266:546:145:g_d0_f5:65:g_d0_f15:10()2
+35:1191:57568:0:28:269:293:563:145:g_d0_f10:65:g_d0_f15:μZ1
+35:1192:57571:28:0:284:288:535:65:g_d0_f15:65:g_d0_f15:0
+35:1193:57572:0:0:296:351:546:145:g_d0_f5:145:g_d0_f5:1()i
+35:1194:57583:0:28:350:386:563:145:g_d0_f10:65:g_d0_f15:¶μZ1
+35:1195:57587:28:0:376:380:535:65:g_d0_f15:65:g_d0_f15:0
+35:1196:57588:0:0:388:450:546:145:g_d0_f5:145:g_d0_f5:2()−i
+35:1197:57600:0:17:449:458:563:145:g_d0_f10:145:g_d0_f10:¶
+35:1198:57601:17:35:460:476:546:145:g_d0_f5:145:g_d0_f2:,
+35:1199:57604:35:0:71:274:511:145:g_d0_f2:145:g_d0_f2:and if3Υ∆()Υ0→∆()and
+35:1200:57635:0:13:278:290:520:145:g_d0_f10:65:g_d0_f15:R1
+35:1201:57637:13:0:283:298:507:65:g_d0_f15:145:g_d0_f5:0
+35:1202:57639:0:8:298:357:515:65:g_d0_f15:65:g_d0_f15:1()=R1
+35:1203:57648:8:0:351:366:507:65:g_d0_f15:145:g_d0_f5:0
+35:1204:57650:0:38:366:475:515:65:g_d0_f15:145:g_d0_f2:2()=0,thenalso
+35:1205:57667:38:0:130:187:477:145:g_d0_f5:145:g_d0_f7:[12]→
+35:1206:57677:0:27:190:211:493:145:g_d0_f10:65:g_d0_f19:Z∞
+35:1207:57679:27:0:197:212:466:65:g_d0_f19:65:g_d0_f19:−∞
+35:1208:57681:0:17:215:269:485:145:g_d0_f5:65:g_d0_f15:10∆()2
+35:1209:57691:17:0:237:248:468:145:g_d0_f5:65:g_d0_f15:2
+35:1210:57693:0:27:273:298:493:145:g_d0_f10:65:g_d0_f15:μZ1
+35:1211:57696:27:0:289:293:466:65:g_d0_f15:65:g_d0_f15:0
+35:1212:57697:0:0:301:355:477:145:g_d0_f5:145:g_d0_f5:1()i
+35:1213:57708:0:27:355:390:493:145:g_d0_f10:65:g_d0_f15:¶μZ1
+35:1214:57712:27:0:381:385:466:65:g_d0_f15:65:g_d0_f15:0
+35:1215:57713:0:0:393:454:477:145:g_d0_f5:145:g_d0_f5:2()−i
+35:1216:57725:0:16:454:463:493:145:g_d0_f10:145:g_d0_f10:¶
+35:1217:57726:16:39:465:481:477:145:g_d0_f5:145:g_d0_f5:
+35:1218:57729:39:26:72:291:438:209:g_d0_f1:209:g_d0_f1:5.3  A Central Limit Theorem
+35:1219:57757:26:18:72:540:412:145:g_d0_f2:145:g_d0_f2:The inference results presented in Sections 3 and 4 all depend crucially on the large sample
+35:1220:57849:18:18:72:539:394:145:g_d0_f12:145:g_d0_f2:Gaussianityof the suitably scaled cosine transform, and not just on the value of the
+35:1221:57935:18:18:72:540:376:145:g_d0_f2:145:g_d0_f2:limiting covariance matrixΣIn Section 2, we provided an argument for this asymptotic
+35:1222:58020:18:18:71:539:358:145:g_d0_f2:145:g_d0_f2:normality based on existing results about the large sample behavior of the partial sum
+35:1223:58106:18:18:71:539:340:145:g_d0_f2:145:g_d0_f2:process for some benchmark models. The last subsection identified the local-to-zero spectrum
+35:1224:58198:18:18:71:539:322:145:g_d0_f5:145:g_d0_f2:asthekeyfeatureofthat determines the asymptotic covariance matrix.  We now
+35:1225:58275:18:18:72:540:304:145:g_d0_f2:145:g_d0_f2:present a corresponding central limit theorem that takes the local-to-zero behavior of the
+35:1226:58365:18:19:72:539:286:145:g_d0_f2:145:g_d0_f2:spectral density function as its starting point and is applicable to general weighted averages
+35:1227:58459:19:0:72:92:267:145:g_d0_f5:65:g_d0_f15:12
+35:1228:58463:0:14:95:107:277:145:g_d0_f10:65:g_d0_f15:R1
+35:1229:58465:14:14:101:540:263:65:g_d0_f15:145:g_d0_f2:0()bc+1. Müller and Watson (2015) derive a corresponding CLT for weighted
+35:1230:58547:14:0:71:280:249:145:g_d0_f2:145:g_d0_f2:averages with weights that add to zero,
+35:1231:58586:0:14:287:299:259:145:g_d0_f10:65:g_d0_f15:R1
+35:1232:58588:14:14:292:539:245:65:g_d0_f15:145:g_d0_f2:0()=0, which allows for more persistent
+35:1233:58631:14:29:71:322:231:145:g_d0_f2:145:g_d0_f2:processes(as discussed in the last subsection).
+35:1234:58680:29:0:72:192:202:145:g_d0_f1:145:g_d0_f6:Theorem 1Let=
+35:1235:58697:0:13:195:217:211:145:g_d0_f10:65:g_d0_f19:P∞
+35:1236:58699:13:14:208:352:198:65:g_d0_f13:145:g_d0_f12:=−∞−.Supposethat
+35:1237:58723:14:18:89:540:184:145:g_d0_f12:145:g_d0_f12:(i){F}is a martingale difference sequence with(2)=1,sup(||2+)∞for
+35:1238:58801:18:18:71:160:166:145:g_d0_f12:145:g_d0_f12:some0,and
+35:1239:58812:18:25:251:539:148:145:g_d0_f5:145:g_d0_f2:(2−1|F−)≤(9)
+35:1240:58831:25:18:72:210:123:145:g_d0_f12:145:g_d0_f12:for some sequence→0.
+35:1241:58853:18:18:89:539:105:145:g_d0_f12:145:g_d0_f12:(ii)  For  every0the  exists  an  integer0such  that
+35:1242:58910:18:0:71:152:87:145:g_d0_f6:65:g_d0_f15:lim sup→∞−1
+35:1243:58923:0:12:155:176:96:145:g_d0_f10:65:g_d0_f19:P∞
+35:1244:58925:12:0:167:203:84:65:g_d0_f13:65:g_d0_f15:=+1
+35:1245:58932:0:10:205:211:97:145:g_d0_f10:145:g_d0_f10:¡
+35:1246:58933:10:0:211:283:87:145:g_d0_f5:145:g_d0_f18:sup||≥||
+35:1247:58948:0:10:283:293:97:145:g_d0_f10:65:g_d0_f15:¢2
+35:1248:58950:10:0:297:318:87:145:g_d0_f5:145:g_d0_f12:.
+36:1249:58955:0:0:89:109:671:145:g_d0_f12:145:g_d0_f12:(iii)
+36:1250:58960:0:13:114:135:680:145:g_d0_f10:65:g_d0_f19:P∞
+36:1251:58962:13:0:126:159:667:65:g_d0_f13:145:g_d0_f5:=−∞
+36:1252:58967:0:7:160:164:675:65:g_d0_f15:65:g_d0_f15:2
+36:1253:58968:7:15:160:540:668:65:g_d0_f13:65:g_d0_f13:∞(but not necessarily uniformly in). The spectral density of
+36:1254:59037:15:18:72:285:653:145:g_d0_f12:145:g_d0_f12:thus exists; denote it by:[−]7→R.
+36:1255:59075:18:18:89:540:635:145:g_d0_f12:145:g_d0_f12:(iii.a) Assume that there exists a function:R7→Rsuch that7→()is integrable,
+36:1256:59154:18:9:72:242:617:145:g_d0_f12:145:g_d0_f10:and for allfixed,Z
+36:1257:59173:9:24:247:254:608:65:g_d0_f13:65:g_d0_f13:
+36:1258:59174:24:0:242:246:584:65:g_d0_f15:65:g_d0_f15:0
+36:1259:59175:0:0:257:278:595:145:g_d0_f18:145:g_d0_f6:|(
+36:1260:59179:0:17:280:287:603:145:g_d0_f5:145:g_d0_f5:
+36:1261:59180:17:0:279:286:586:145:g_d0_f5:145:g_d0_f5:
+36:1262:59181:0:27:288:539:595:145:g_d0_f6:145:g_d0_f2:)−()|→0.(10)
+36:1263:59197:27:34:72:306:568:145:g_d0_f12:145:g_d0_f7:(iii.b) For every diverging sequence→∞
+36:1264:59237:34:0:177:196:534:145:g_d0_f5:65:g_d0_f15:−1
+36:1265:59240:0:27:199:216:551:145:g_d0_f10:65:g_d0_f13:Z
+36:1266:59242:27:0:205:227:524:65:g_d0_f13:65:g_d0_f13:
+36:1267:59246:0:0:231:303:534:145:g_d0_f5:145:g_d0_f6:()−2=
+36:1268:59257:0:27:307:329:551:145:g_d0_f10:65:g_d0_f13:Z
+36:1269:59260:27:0:313:324:524:65:g_d0_f13:36:g_d0_f21:
+36:1270:59262:0:33:332:539:534:145:g_d0_f5:145:g_d0_f2:()−2→0(11)
+36:1271:59281:33:23:71:100:501:145:g_d0_f12:145:g_d0_f12:(iii.c)
+36:1272:59288:23:0:149:176:478:145:g_d0_f5:65:g_d0_f15:−12
+36:1273:59293:0:27:179:196:494:145:g_d0_f10:65:g_d0_f13:Z
+36:1274:59295:27:0:186:199:467:65:g_d0_f15:65:g_d0_f13:1
+36:1275:59298:0:0:203:319:478:145:g_d0_f5:65:g_d0_f15:()12−1=−12
+36:1276:59317:0:27:322:344:494:145:g_d0_f10:65:g_d0_f13:Z
+36:1277:59320:27:0:328:332:467:65:g_d0_f15:65:g_d0_f15:1
+36:1278:59321:0:29:347:539:478:145:g_d0_f5:145:g_d0_f2:()12−1→0(12)
+36:1279:59343:29:18:89:372:449:145:g_d0_f12:145:g_d0_f12:(iv) The function:[01]7→Ris of bounded variation.
+36:1280:59394:18:21:89:115:431:145:g_d0_f12:145:g_d0_f12:Then
+36:1281:59398:21:0:143:164:410:145:g_d0_f5:65:g_d0_f15:12
+36:1282:59402:0:27:167:183:426:145:g_d0_f10:65:g_d0_f15:Z1
+36:1283:59404:27:0:174:178:399:65:g_d0_f15:65:g_d0_f15:0
+36:1284:59405:0:0:186:305:410:145:g_d0_f5:145:g_d0_f5:()bc+1⇒N(0
+36:1285:59425:0:27:307:328:426:145:g_d0_f10:65:g_d0_f19:Z∞
+36:1286:59427:27:0:314:329:399:65:g_d0_f19:65:g_d0_f19:−∞
+36:1287:59429:0:0:331:356:410:145:g_d0_f5:145:g_d0_f6:()
+36:1288:59433:0:7:357:361:427:145:g_d0_f10:145:g_d0_f10: ̄
+36:1289:59435:7:7:357:361:420:145:g_d0_f10:145:g_d0_f10: ̄
+36:1290:59437:7:7:357:361:413:145:g_d0_f10:145:g_d0_f10: ̄
+36:1291:59439:7:0:357:361:406:145:g_d0_f10:145:g_d0_f10: ̄
+36:1292:59441:0:27:361:377:426:145:g_d0_f10:65:g_d0_f15:Z1
+36:1293:59443:27:0:368:372:399:65:g_d0_f15:65:g_d0_f15:0
+36:1294:59444:0:0:380:436:410:145:g_d0_f5:145:g_d0_f5:−i()
+36:1295:59455:0:7:436:440:427:145:g_d0_f10:145:g_d0_f10: ̄
+36:1296:59457:7:7:436:440:420:145:g_d0_f10:145:g_d0_f10: ̄
+36:1297:59459:7:7:436:440:413:145:g_d0_f10:145:g_d0_f10: ̄
+36:1298:59461:7:0:436:440:406:145:g_d0_f10:145:g_d0_f10: ̄
+36:1299:59463:0:15:440:444:425:65:g_d0_f15:65:g_d0_f15:2
+36:1300:59464:15:33:447:539:410:145:g_d0_f5:145:g_d0_f2:)(13)
+36:1301:59472:33:18:89:307:377:145:g_d0_f2:145:g_d0_f2:The proof of Theorem 1 is in Appendix A.
+36:1302:59512:18:18:89:539:359:145:g_d0_f2:145:g_d0_f2:The scaling ofin the theorem is such that()converges to the local-to-zero
+36:1303:59594:18:18:71:540:341:145:g_d0_f2:145:g_d0_f2:without any additional scaling by a power of(so relative to the discussion in Section 5.2,
+36:1304:59685:18:18:71:291:323:145:g_d0_f5:145:g_d0_f2:in Theorem 1 is multiplied by12−).
+36:1305:59726:18:18:89:539:305:145:g_d0_f2:145:g_d0_f2:To better understand the role of assumptions (ii) and (iii), consider some leading ex-
+36:1306:59812:18:18:72:539:287:145:g_d0_f2:145:g_d0_f2:amples. Supposefirst thatis causal and weakly dependent with exponentially decay-
+36:1307:59897:18:18:72:540:269:145:g_d0_f2:145:g_d0_f2:ing,||≤0−1for some010, as would arise in causal and invertible
+36:1308:59975:18:0:72:371:251:145:g_d0_f2:65:g_d0_f15:ARMA models of anyfixed andfinite order.  Then−1
+36:1309:60024:0:12:374:396:260:145:g_d0_f10:65:g_d0_f19:P∞
+36:1310:60026:12:0:387:419:248:65:g_d0_f13:65:g_d0_f15:=+1
+36:1311:60032:0:10:421:427:261:145:g_d0_f10:145:g_d0_f10:¡
+36:1312:60033:10:0:426:499:251:145:g_d0_f5:145:g_d0_f18:sup||≥||
+36:1313:60048:0:10:499:508:261:145:g_d0_f10:65:g_d0_f15:¢2
+36:1314:60050:10:18:515:539:251:145:g_d0_f7:145:g_d0_f6:→0
+36:1315:60052:18:18:72:540:233:145:g_d0_f2:145:g_d0_f2:for any0,()is constant and equal to the long-run variance ofdivided by
+36:1316:60130:18:0:72:331:215:145:g_d0_f6:145:g_d0_f2:2, and (11) and (12) hold, sinceis bounded,
+36:1317:60176:0:14:336:353:225:145:g_d0_f10:65:g_d0_f19:R∞
+36:1318:60178:14:0:342:364:211:65:g_d0_f13:145:g_d0_f5:
+36:1319:60181:0:7:364:474:220:65:g_d0_f19:145:g_d0_f5:−2→0for any
+36:1320:60195:7:16:474:539:213:65:g_d0_f13:145:g_d0_f2:→∞and
+36:1321:60201:16:0:72:99:197:145:g_d0_f5:65:g_d0_f15:−12
+36:1322:60206:0:14:102:120:207:145:g_d0_f10:65:g_d0_f13:R
+36:1323:60209:14:0:107:130:193:65:g_d0_f15:145:g_d0_f5:1
+36:1324:60211:0:23:130:262:202:65:g_d0_f19:145:g_d0_f2:−1=−12ln()→0.
+36:1325:60230:23:18:89:547:179:145:g_d0_f2:145:g_d0_f2:Second, supposeis fractionally integrated with parameter∈(−1212).With
+36:1326:60307:18:0:72:323:161:145:g_d0_f5:65:g_d0_f15:scaled by−,≈0−−1,sothat−1
+36:1327:60348:0:13:326:348:170:145:g_d0_f10:65:g_d0_f19:P∞
+36:1328:60350:13:0:339:371:157:65:g_d0_f13:65:g_d0_f15:=+1
+36:1329:60356:0:9:373:379:170:145:g_d0_f10:145:g_d0_f10:¡
+36:1330:60357:9:0:379:451:161:145:g_d0_f5:145:g_d0_f18:sup||≥||
+36:1331:60372:0:9:451:461:170:145:g_d0_f10:65:g_d0_f15:¢2
+36:1332:60374:9:0:465:477:161:145:g_d0_f7:145:g_d0_f7:→
+36:1333:60375:0:13:480:497:170:145:g_d0_f10:65:g_d0_f19:R∞
+36:1334:60377:13:0:486:505:157:65:g_d0_f13:145:g_d0_f5:
+36:1335:60379:0:22:504:539:165:65:g_d0_f15:145:g_d0_f2:2−2,
+36:1336:60386:22:18:72:539:143:145:g_d0_f2:145:g_d0_f2:which can be made arbitrarily small by choosinglarge.  Further, forclose to zero,
+36:1337:60469:18:18:72:539:125:145:g_d0_f5:145:g_d0_f2:()≈20()−2,sothat()=(2)−120−2. Under suitable assumptions about about
+36:1338:60550:18:0:72:420:107:145:g_d0_f2:65:g_d0_f15:higher frequency properties of, (11) and (12) hold, since−1
+36:1339:60614:0:14:423:436:116:145:g_d0_f10:65:g_d0_f13:R
+36:1340:60616:14:0:429:477:102:65:g_d0_f13:145:g_d0_f6:()
+36:1341:60624:0:14:477:539:111:65:g_d0_f19:145:g_d0_f6:−2−2=
+36:1342:60633:14:14:71:89:97:145:g_d0_f10:65:g_d0_f13:R
+36:1343:60636:14:0:77:100:83:65:g_d0_f13:145:g_d0_f5:
+36:1344:60639:0:10:100:249:93:65:g_d0_f19:65:g_d0_f13:−2−2→0and−12R
+36:1345:60658:10:0:242:282:83:65:g_d0_f15:145:g_d0_f6:1()
+36:1346:60665:0:9:282:398:92:65:g_d0_f19:65:g_d0_f13:−−1=−12R
+36:1347:60681:9:0:386:409:83:65:g_d0_f15:145:g_d0_f5:1
+36:1348:60683:0:0:409:539:93:65:g_d0_f19:145:g_d0_f7:−−1=−12−1(1−
+37:1349:60703:0:18:72:539:671:145:g_d0_f6:145:g_d0_f2:()−)→0.  For instance, even integrable poles inat frequencies other than zero
+37:1350:60785:18:18:72:189:653:145:g_d0_f2:145:g_d0_f2:can be accommodated.
+37:1351:60805:18:18:89:539:635:145:g_d0_f2:145:g_d0_f7:Third, supposeis an AR(1) process with local-to-unity coefficient=1−
+37:1352:60879:18:19:71:556:617:145:g_d0_f5:145:g_d0_f2:and innovation variance equal to−1.Then=−1,≥0.Thus
+37:1353:60942:19:0:72:91:598:145:g_d0_f5:65:g_d0_f15:−1
+37:1354:60945:0:12:93:115:607:145:g_d0_f10:65:g_d0_f19:P∞
+37:1355:60947:12:0:106:138:595:65:g_d0_f13:65:g_d0_f15:=+1
+37:1356:60953:0:10:140:146:608:145:g_d0_f10:145:g_d0_f10:¡
+37:1357:60954:10:0:146:218:598:145:g_d0_f5:145:g_d0_f18:sup||≥||
+37:1358:60969:0:10:218:228:608:145:g_d0_f10:65:g_d0_f15:¢2
+37:1359:60971:10:0:232:244:598:145:g_d0_f7:145:g_d0_f7:→
+37:1360:60972:0:14:247:264:608:145:g_d0_f10:65:g_d0_f19:R∞
+37:1361:60974:14:0:253:271:594:65:g_d0_f13:145:g_d0_f5:
+37:1362:60976:0:23:271:542:603:65:g_d0_f19:145:g_d0_f2:−2,whichcanbemadearbitrarilysmallbychoos-
+37:1363:61021:23:18:72:540:580:145:g_d0_f2:145:g_d0_f2:inglarge. Further,()=(2)−1−2|1−−i|2, which is seen to satisfy (10) with
+37:1364:61103:18:18:72:539:562:145:g_d0_f5:145:g_d0_f2:()=(2)−1(2+2)−1.  Conditions (11) and (12) also hold in this example, since
+37:1365:61183:18:18:71:152:544:145:g_d0_f5:145:g_d0_f2:()≤(2)−1.
+37:1366:61196:18:18:89:539:526:145:g_d0_f2:145:g_d0_f2:Corresponding central limit theorems for a vector of weighted averages of one or multiple
+37:1367:61285:18:45:71:479:508:145:g_d0_f2:145:g_d0_f2:time series follow readily from Theorem 1 by invoking the Cramer-Wold device.
+37:1368:61362:45:30:72:271:463:301:g_d0_f1:301:g_d0_f1:6  Concluding remarks
+37:1369:61383:30:18:72:540:433:145:g_d0_f2:145:g_d0_f2:Inference about low-frequency phenomena is challenging because of the scarcity of corre-
+37:1370:61471:18:18:72:539:415:145:g_d0_f2:145:g_d0_f5:sponding sampling information.  We suggest extracting this information by computing
+37:1371:61555:18:18:72:540:397:145:g_d0_f2:145:g_d0_f2:trigonometrically weighted averages of the time series of interest.  We then apply an as-
+37:1372:61644:18:18:72:539:379:145:g_d0_f2:145:g_d0_f2:ymptotic framework that explicitly accounts for the scarcity by keeping the numberfixed,
+37:1373:61733:18:18:71:539:361:145:g_d0_f2:145:g_d0_f5:so that in the limit, the inference problem becomes a small sample problem involving
+37:1374:61818:18:19:71:539:343:145:g_d0_f2:145:g_d0_f2:Gaussian variables. In many instances, this small sample problem is readily solved by classic
+37:1375:61911:19:18:71:539:324:145:g_d0_f2:145:g_d0_f2:results about inference in small Gaussian samples. In other cases, one can apply analytical
+37:1376:62002:18:18:71:449:306:145:g_d0_f2:145:g_d0_f2:or numerical approaches to derive powerful inference fromfirst principles.
+37:1377:62076:18:18:89:539:288:145:g_d0_f2:145:g_d0_f2:The results presented here did not allow for a deterministic time trend in theprocess.
+37:1378:62164:18:18:71:539:270:145:g_d0_f2:145:g_d0_f2:One approach to dealing with deterministic trends is to use inference methods that are
+37:1379:62250:18:18:71:539:252:145:g_d0_f2:145:g_d0_f2:unaffected by their presence. Alternatively, for example in the context of measuring the
+37:1380:62338:18:18:71:539:234:145:g_d0_f2:145:g_d0_f2:covariability of multiple time series, one might model the presence of common time trends.
+37:1381:62428:18:18:71:539:216:145:g_d0_f2:145:g_d0_f2:In either case, it is straightforward to isolate the deterministic trend component by using a
+37:1382:62521:18:18:71:539:198:145:g_d0_f2:145:g_d0_f2:suitable set ofweight functions, where one is equal to the (demeaned) trend (and whose
+37:1383:62608:18:18:71:539:180:145:g_d0_f2:145:g_d0_f2:value is potentially ignored in the subsequent analysis), and the other−1trigonometric
+37:1384:62695:18:18:71:539:162:145:g_d0_f2:145:g_d0_f2:weights are orthogonal to both a constant and a time trend. One such set of weights is
+37:1385:62781:18:18:71:264:144:145:g_d0_f2:145:g_d0_f2:derived in Müller and Watson (2008).
+37:1386:62817:18:18:89:539:126:145:g_d0_f2:145:g_d0_f5:The results presented here were also based on the large sample Gaussianity of the
+37:1387:62899:18:18:72:540:108:145:g_d0_f2:145:g_d0_f2:weighted averages due to a central limit theorem. The key mechanisms of the approach,
+37:1388:62984:18:0:72:540:90:145:g_d0_f2:145:g_d0_f2:however, can be used to deduce a non-Gaussian limit distribution after suitably adjusting
+38:1389:63075:0:18:72:540:671:145:g_d0_f2:145:g_d0_f2:the solution of the now non-Gaussian limit problem.  For example, consider a stochastic
+38:1390:63162:18:18:72:539:653:145:g_d0_f2:145:g_d0_f2:volatility model for the scalar series, where the volatility process is, say, local-to-unity.
+38:1391:63257:18:18:72:540:635:145:g_d0_f2:145:g_d0_f2:Conditional on the volatility path, the cosine transforms have a Gaussian limit, with a
+38:1392:63344:18:19:72:540:617:145:g_d0_f2:145:g_d0_f2:covariance matrix that depends on the realization of the volatility path. The unconditional
+38:1393:63435:19:18:72:540:598:145:g_d0_f2:145:g_d0_f2:distribution thus becomes a mixture of normals, and the corresponding small sample problem
+38:1394:63525:18:18:72:401:580:145:g_d0_f2:145:g_d0_f2:becomes inference about the parameters of this normal mixture.
+38:1395:63587:18:18:89:539:562:145:g_d0_f2:145:g_d0_f2:More generally, we believe our general approach to low-frequency econometrics to be
+38:1396:63670:18:18:72:540:544:145:g_d0_f2:145:g_d0_f2:useful for issues beyond those discussed here. For instance, in Müller and Watson (2015),
+38:1397:63759:18:18:72:540:526:145:g_d0_f2:145:g_d0_f2:we use this framework to derive predictive setsfor very long-run predictions that are valid
+38:1398:63850:18:18:72:540:508:145:g_d0_f2:145:g_d0_f2:for a wide range of persistent processes. We are currently working on inference about the
+38:1399:63939:18:18:72:539:490:145:g_d0_f2:145:g_d0_f2:degree of covariability of potentially non-(0)series. And it would also be of great interest
+38:1400:64032:18:18:71:539:472:145:g_d0_f2:145:g_d0_f2:to connect the low-frequency econometrics approach more directly with structural economic
+38:1401:64121:18:38:71:426:454:145:g_d0_f2:145:g_d0_f2:models, such as asset pricing models that stress long-run uncertainty.
+38:1402:64191:38:25:72:273:416:301:g_d0_f1:301:g_d0_f1:A  Proof of Theorem 1
+38:1403:64212:25:26:72:354:391:121:g_d0_f2:121:g_d0_f2:The proof of Theorem 1 is based on the following Lemmas.
+38:1404:64268:26:14:72:540:365:121:g_d0_f1:121:g_d0_f12:Lemma 1Under  assumption  (iv)  of  Theorem  1,  there  exists∞such  that
+38:1405:64343:14:0:72:129:351:121:g_d0_f9:121:g_d0_f18:sup0≤≤|
+38:1406:64354:0:11:131:148:359:121:g_d0_f10:65:g_d0_f13:P
+38:1407:64356:11:0:143:164:348:65:g_d0_f13:121:g_d0_f8:=1
+38:1408:64360:0:32:164:245:355:65:g_d0_f19:121:g_d0_f12:−i ̃|≤−1.
+38:1409:64377:32:0:89:168:323:121:g_d0_f1:121:g_d0_f9:Proof.Let=
+38:1410:64389:0:11:170:185:331:121:g_d0_f10:65:g_d0_f13:P
+38:1411:64391:11:0:182:204:320:65:g_d0_f13:121:g_d0_f8:=1
+38:1412:64395:0:26:204:462:327:65:g_d0_f29:121:g_d0_f2:i=i(1−i)−1(i−1). By summation by parts,
+38:1413:64443:26:26:130:141:301:65:g_d0_f13:121:g_d0_f10:X
+38:1414:64445:26:0:126:140:275:65:g_d0_f13:65:g_d0_f15:=1
+38:1415:64448:0:0:143:253:288:121:g_d0_f8:121:g_d0_f7:−i ̃= ̃−
+38:1416:64469:0:26:260:271:301:65:g_d0_f13:121:g_d0_f10:X
+38:1417:64471:26:0:256:270:275:65:g_d0_f13:65:g_d0_f15:=1
+38:1418:64474:0:38:273:358:288:121:g_d0_f8:121:g_d0_f9:−1( ̃− ̃−1)
+38:1419:64495:38:0:192:201:250:121:g_d0_f9:121:g_d0_f9:=
+38:1420:64496:0:15:221:234:257:121:g_d0_f8:65:g_d0_f13:i
+38:1421:64499:15:0:212:243:242:121:g_d0_f9:65:g_d0_f13:1−i
+38:1422:64504:0:18:246:255:268:121:g_d0_f10:121:g_d0_f10:Ã
+38:1423:64505:18:0:255:332:250:121:g_d0_f9:121:g_d0_f7:(i−1) ̃−
+38:1424:64520:0:26:339:350:263:65:g_d0_f13:121:g_d0_f10:X
+38:1425:64522:26:0:335:349:237:65:g_d0_f13:65:g_d0_f15:=1
+38:1426:64525:0:0:350:477:250:121:g_d0_f9:121:g_d0_f9:(i(−1)−1)( ̃− ̃−1)
+38:1427:64554:0:54:477:486:268:121:g_d0_f10:121:g_d0_f10:!
+38:1428:64555:54:15:72:549:214:121:g_d0_f2:121:g_d0_f2:with0= ̃0=0.For0≤≤,|i(1−i)−1|=(2sin(2))−1≤2.Furthermore,
+38:1429:64624:15:0:71:128:199:121:g_d0_f9:65:g_d0_f19:lim sup→∞
+38:1430:64634:0:12:130:147:208:121:g_d0_f10:65:g_d0_f13:P
+38:1431:64636:12:28:142:403:196:65:g_d0_f13:121:g_d0_f2:=1| ̃− ̃−1|∞,sinceis of bounded variation.
+38:1432:64689:28:0:72:203:168:121:g_d0_f1:65:g_d0_f15:Lemma 22=Var[−12
+38:1433:64709:0:12:205:222:176:121:g_d0_f10:65:g_d0_f13:P
+38:1434:64711:12:0:217:294:164:65:g_d0_f13:121:g_d0_f8:=1 ̃]→
+38:1435:64727:0:8:294:330:172:65:g_d0_f15:65:g_d0_f19:2=R∞
+38:1436:64731:8:0:319:359:164:65:g_d0_f19:121:g_d0_f9:−∞()
+38:1437:64737:0:13:361:365:180:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+38:1438:64741:13:0:361:365:167:121:g_d0_f10:121:g_d0_f10: ̄
+38:1439:64743:0:12:364:376:176:121:g_d0_f10:65:g_d0_f15:R1
+38:1440:64745:12:0:370:383:164:65:g_d0_f15:121:g_d0_f8:0
+38:1441:64747:0:0:383:432:172:65:g_d0_f19:121:g_d0_f8:−i()
+38:1442:64757:0:13:432:436:180:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+38:1443:64761:13:0:432:436:167:121:g_d0_f10:121:g_d0_f10: ̄
+38:1444:64763:0:9:436:440:177:65:g_d0_f15:65:g_d0_f15:2
+38:1445:64764:9:29:442:458:168:121:g_d0_f8:121:g_d0_f12:.
+38:1446:64767:29:35:89:351:139:121:g_d0_f1:121:g_d0_f2:Proof.Letbe the autocovariances of.Wefind
+38:1447:64814:35:0:142:189:104:121:g_d0_f9:65:g_d0_f15:Var[−12
+38:1448:64823:0:26:197:208:117:65:g_d0_f13:121:g_d0_f10:X
+38:1449:64825:26:0:193:207:91:65:g_d0_f13:65:g_d0_f15:=1
+38:1450:64828:0:0:210:294:104:121:g_d0_f9:65:g_d0_f15: ̃]=−1
+38:1451:64843:0:27:304:315:117:65:g_d0_f13:121:g_d0_f10:X
+38:1452:64845:27:0:296:318:90:65:g_d0_f13:65:g_d0_f15:=1
+38:1453:64850:0:0:319:401:104:121:g_d0_f8:65:g_d0_f13:(−) ̃ ̃
+39:1454:64871:0:0:257:294:662:121:g_d0_f9:65:g_d0_f15:=−1
+39:1455:64875:0:27:304:315:676:65:g_d0_f13:121:g_d0_f10:X
+39:1456:64877:27:0:296:318:649:65:g_d0_f13:65:g_d0_f15:=1
+39:1457:64882:0:25:319:343:678:121:g_d0_f10:65:g_d0_f13:μZ
+39:1458:64885:25:0:334:345:653:65:g_d0_f19:65:g_d0_f13:−
+39:1459:64887:0:0:348:423:662:121:g_d0_f8:121:g_d0_f8:i(−)()
+39:1460:64902:0:16:423:431:678:121:g_d0_f10:121:g_d0_f10:¶
+39:1461:64903:16:42:433:468:662:121:g_d0_f9:65:g_d0_f13: ̃ ̃
+39:1462:64915:42:0:257:294:620:121:g_d0_f9:65:g_d0_f15:=−1
+39:1463:64919:0:25:296:312:635:121:g_d0_f10:65:g_d0_f13:Z
+39:1464:64921:25:0:303:314:610:65:g_d0_f19:65:g_d0_f13:−
+39:1465:64923:0:0:317:345:620:121:g_d0_f8:121:g_d0_f9:()
+39:1466:64928:0:13:347:351:639:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1467:64932:13:13:347:351:626:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1468:64936:13:0:347:351:613:121:g_d0_f10:121:g_d0_f10: ̄
+39:1469:64938:0:27:355:367:634:65:g_d0_f13:121:g_d0_f10:X
+39:1470:64940:27:0:351:365:607:65:g_d0_f13:65:g_d0_f15:=1
+39:1471:64943:0:0:368:401:620:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1472:64953:0:13:401:405:639:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1473:64957:13:13:401:405:626:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1474:64961:13:0:401:405:613:121:g_d0_f10:121:g_d0_f10: ̄
+39:1475:64963:0:17:404:408:637:65:g_d0_f15:65:g_d0_f15:2
+39:1476:64964:17:32:411:426:620:121:g_d0_f8:121:g_d0_f8:
+39:1477:64967:32:36:89:258:588:121:g_d0_f2:121:g_d0_f2:Now for anyfixed,wewillshow
+39:1478:64995:36:0:127:146:552:121:g_d0_f8:65:g_d0_f15:−1
+39:1479:64998:0:25:148:175:567:121:g_d0_f10:65:g_d0_f13:Z
+39:1480:65002:25:0:154:177:542:65:g_d0_f19:65:g_d0_f13:−
+39:1481:65006:0:0:181:209:552:121:g_d0_f8:121:g_d0_f9:()
+39:1482:65011:0:13:211:215:571:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1483:65015:13:13:211:215:558:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1484:65019:13:0:211:215:545:121:g_d0_f10:121:g_d0_f10: ̄
+39:1485:65021:0:27:219:231:566:65:g_d0_f13:121:g_d0_f10:X
+39:1486:65023:27:0:216:230:539:65:g_d0_f13:65:g_d0_f15:=1
+39:1487:65026:0:0:232:265:552:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1488:65036:0:13:265:269:571:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1489:65040:13:13:265:269:558:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1490:65044:13:0:265:269:545:121:g_d0_f10:121:g_d0_f10: ̄
+39:1491:65046:0:17:268:272:569:65:g_d0_f15:65:g_d0_f15:2
+39:1492:65047:17:0:275:307:552:121:g_d0_f8:121:g_d0_f9:=
+39:1493:65050:0:25:318:336:567:121:g_d0_f10:65:g_d0_f13:Z
+39:1494:65052:25:0:324:338:542:65:g_d0_f19:65:g_d0_f13:−
+39:1495:65054:0:0:341:358:552:121:g_d0_f8:121:g_d0_f9:(
+39:1496:65057:0:15:360:367:560:121:g_d0_f8:121:g_d0_f8:
+39:1497:65058:15:0:360:366:545:121:g_d0_f8:121:g_d0_f8:
+39:1498:65059:0:0:369:373:552:121:g_d0_f9:121:g_d0_f9:)
+39:1499:65060:0:13:375:379:571:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1500:65064:13:13:375:379:558:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1501:65068:13:0:375:379:545:121:g_d0_f10:121:g_d0_f10: ̄
+39:1502:65070:0:0:378:397:552:121:g_d0_f8:65:g_d0_f15:−1
+39:1503:65073:0:27:404:415:566:65:g_d0_f13:121:g_d0_f10:X
+39:1504:65075:27:0:400:414:539:65:g_d0_f13:65:g_d0_f15:=1
+39:1505:65078:0:0:417:461:552:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1506:65090:0:13:461:465:571:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1507:65094:13:13:461:465:558:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1508:65098:13:0:461:465:545:121:g_d0_f10:121:g_d0_f10: ̄
+39:1509:65100:0:17:464:468:569:65:g_d0_f15:65:g_d0_f15:2
+39:1510:65101:17:37:471:484:552:121:g_d0_f8:121:g_d0_f8:
+39:1511:65103:37:0:297:308:515:121:g_d0_f7:121:g_d0_f7:→
+39:1512:65104:0:24:318:336:530:121:g_d0_f10:65:g_d0_f13:Z
+39:1513:65106:24:0:324:338:506:65:g_d0_f19:65:g_d0_f13:−
+39:1514:65108:0:0:341:375:515:121:g_d0_f8:65:g_d0_f15:()2
+39:1515:65114:0:13:377:381:531:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1516:65118:13:0:377:381:518:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1517:65122:0:24:381:396:530:121:g_d0_f10:65:g_d0_f15:Z1
+39:1518:65124:24:0:387:391:506:65:g_d0_f15:65:g_d0_f15:0
+39:1519:65125:0:0:398:446:515:121:g_d0_f8:121:g_d0_f8:i()
+39:1520:65135:0:13:446:450:531:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1521:65139:13:0:446:450:518:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1522:65143:0:14:449:453:529:65:g_d0_f15:65:g_d0_f15:2
+39:1523:65144:14:31:456:539:515:121:g_d0_f8:121:g_d0_f2:(14)
+39:1524:65151:31:13:71:540:484:121:g_d0_f2:121:g_d0_f9:First note that for any two complex numbers ,|−|≥|||−|||,sothat|||2−||2|=
+39:1525:65233:13:17:71:295:471:121:g_d0_f18:121:g_d0_f2:|(||+||)(||−||)|≤(||+||)|−|.Thus,
+39:1526:65274:17:13:83:87:454:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1527:65278:13:7:83:87:441:121:g_d0_f10:121:g_d0_f10: ̄
+39:1528:65280:7:13:83:87:434:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1529:65284:13:0:83:87:421:121:g_d0_f10:121:g_d0_f10: ̄
+39:1530:65286:0:7:87:91:448:121:g_d0_f10:121:g_d0_f10: ̄
+39:1531:65288:7:7:87:91:441:121:g_d0_f10:121:g_d0_f10: ̄
+39:1532:65290:7:0:87:91:434:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1533:65294:0:25:91:105:447:121:g_d0_f10:65:g_d0_f15:Z1
+39:1534:65296:25:0:97:101:422:65:g_d0_f15:65:g_d0_f15:0
+39:1535:65297:0:0:108:156:432:121:g_d0_f8:121:g_d0_f8:i()
+39:1536:65307:0:7:155:159:448:121:g_d0_f10:121:g_d0_f10: ̄
+39:1537:65309:7:7:155:159:441:121:g_d0_f10:121:g_d0_f10: ̄
+39:1538:65311:7:0:155:159:434:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1539:65315:0:13:159:163:445:65:g_d0_f15:65:g_d0_f15:2
+39:1540:65316:13:0:166:175:432:121:g_d0_f7:121:g_d0_f7:−
+39:1541:65317:0:7:177:181:451:121:g_d0_f10:121:g_d0_f10: ̄
+39:1542:65319:7:13:177:181:444:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1543:65323:13:0:177:199:431:121:g_d0_f10:65:g_d0_f15: ̄ ̄−1
+39:1544:65330:0:26:207:218:445:65:g_d0_f13:121:g_d0_f10:X
+39:1545:65332:26:0:203:217:419:65:g_d0_f13:65:g_d0_f15:=1
+39:1546:65335:0:0:219:263:432:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1547:65347:0:7:263:267:451:121:g_d0_f10:121:g_d0_f10: ̄
+39:1548:65349:7:13:263:267:444:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1549:65353:13:0:263:267:431:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1550:65357:0:8:267:275:449:65:g_d0_f15:121:g_d0_f10:2 ̄ ̄
+39:1551:65362:8:7:271:275:441:121:g_d0_f10:121:g_d0_f10: ̄
+39:1552:65364:7:13:271:275:434:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1553:65368:13:0:271:275:421:121:g_d0_f10:121:g_d0_f10: ̄
+39:1554:65370:0:41:278:287:432:121:g_d0_f7:121:g_d0_f7:≤
+39:1555:65371:41:9:303:329:391:121:g_d0_f9:121:g_d0_f9:2sup
+39:1556:65375:9:0:317:321:382:65:g_d0_f13:65:g_d0_f13:
+39:1557:65376:0:0:329:362:391:121:g_d0_f18:121:g_d0_f18:|()|·
+39:1558:65383:0:7:362:366:410:121:g_d0_f10:121:g_d0_f10: ̄
+39:1559:65385:7:13:362:366:403:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1560:65389:13:0:362:384:390:121:g_d0_f10:65:g_d0_f15: ̄ ̄−1
+39:1561:65396:0:26:391:402:404:65:g_d0_f13:121:g_d0_f10:X
+39:1562:65398:26:0:387:401:378:65:g_d0_f13:65:g_d0_f15:=1
+39:1563:65401:0:0:404:459:391:121:g_d0_f8:121:g_d0_f7:i ̃−
+39:1564:65414:0:25:461:476:406:121:g_d0_f10:65:g_d0_f15:Z1
+39:1565:65416:25:0:467:471:381:65:g_d0_f15:65:g_d0_f15:0
+39:1566:65417:0:0:478:526:391:121:g_d0_f8:121:g_d0_f8:i()
+39:1567:65427:0:7:526:530:410:121:g_d0_f10:121:g_d0_f10: ̄
+39:1568:65429:7:13:526:530:403:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1569:65433:13:32:526:530:390:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1570:65437:32:12:72:90:358:121:g_d0_f2:121:g_d0_f2:and
+39:1571:65440:12:7:235:239:346:121:g_d0_f10:121:g_d0_f10: ̄
+39:1572:65442:7:13:235:239:339:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1573:65446:13:0:235:257:326:121:g_d0_f10:65:g_d0_f15: ̄ ̄−1
+39:1574:65453:0:26:264:276:340:65:g_d0_f13:121:g_d0_f10:X
+39:1575:65455:26:0:260:275:314:65:g_d0_f13:65:g_d0_f15:=1
+39:1576:65458:0:0:277:332:327:121:g_d0_f8:121:g_d0_f7:i ̃−
+39:1577:65471:0:25:334:349:342:121:g_d0_f10:65:g_d0_f15:Z1
+39:1578:65473:25:0:340:344:317:65:g_d0_f15:65:g_d0_f15:0
+39:1579:65474:0:0:351:399:327:121:g_d0_f8:121:g_d0_f8:i()
+39:1580:65484:0:7:399:403:346:121:g_d0_f10:121:g_d0_f10: ̄
+39:1581:65486:7:13:399:403:339:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1582:65490:13:34:399:403:326:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1583:65494:34:0:216:225:292:121:g_d0_f9:121:g_d0_f9:=
+39:1584:65495:0:25:235:250:307:121:g_d0_f10:65:g_d0_f15:Z1
+39:1585:65497:25:0:241:245:282:65:g_d0_f15:65:g_d0_f15:0
+39:1586:65498:0:31:252:380:292:121:g_d0_f18:121:g_d0_f8:|i()−ibc()|
+39:1587:65524:31:8:216:251:261:121:g_d0_f7:121:g_d0_f9:≤sup
+39:1588:65528:8:0:241:245:253:65:g_d0_f13:65:g_d0_f13:
+39:1589:65529:0:0:253:278:261:121:g_d0_f18:121:g_d0_f18:|()|
+39:1590:65535:0:25:280:295:276:121:g_d0_f10:65:g_d0_f15:Z1
+39:1591:65537:25:0:286:290:251:65:g_d0_f15:65:g_d0_f15:0
+39:1592:65538:0:31:298:395:261:121:g_d0_f18:121:g_d0_f8:|1−i(bc−)|
+39:1593:65558:31:13:72:539:230:121:g_d0_f2:121:g_d0_f7:For any real,|1−i|||,sothatsup||≤|1−i(bc−)|≤→0,andsup|()|∞
+39:1594:65637:13:36:72:303:217:121:g_d0_f2:121:g_d0_f2:(bounded variation implies boundedness). Thus,
+39:1595:65683:36:10:189:205:181:121:g_d0_f9:121:g_d0_f9:sup
+39:1596:65686:10:0:185:209:171:65:g_d0_f16:65:g_d0_f13:||≤
+39:1597:65691:0:7:212:216:203:121:g_d0_f10:121:g_d0_f10: ̄
+39:1598:65693:7:13:212:216:196:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1599:65697:13:13:212:216:183:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1600:65701:13:0:212:216:170:121:g_d0_f10:121:g_d0_f10: ̄
+39:1601:65703:0:7:215:219:200:121:g_d0_f10:121:g_d0_f10: ̄
+39:1602:65705:7:7:215:219:193:121:g_d0_f10:121:g_d0_f10: ̄
+39:1603:65707:7:13:215:219:186:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1604:65711:13:0:215:219:173:121:g_d0_f10:121:g_d0_f10: ̄
+39:1605:65713:0:0:219:237:180:121:g_d0_f8:65:g_d0_f15:−1
+39:1606:65716:0:26:245:256:194:65:g_d0_f13:121:g_d0_f10:X
+39:1607:65718:26:0:241:255:168:65:g_d0_f13:65:g_d0_f15:=1
+39:1608:65721:0:0:257:301:181:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1609:65733:0:7:301:305:200:121:g_d0_f10:121:g_d0_f10: ̄
+39:1610:65735:7:13:301:305:193:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1611:65739:13:7:301:305:180:121:g_d0_f10:121:g_d0_f10: ̄
+39:1612:65741:7:0:301:305:173:121:g_d0_f10:121:g_d0_f10: ̄
+39:1613:65743:0:17:305:309:198:65:g_d0_f15:65:g_d0_f15:2
+39:1614:65744:17:0:312:321:181:121:g_d0_f7:121:g_d0_f7:−
+39:1615:65745:0:13:323:327:196:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1616:65749:13:0:323:327:183:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1617:65753:0:24:326:341:195:121:g_d0_f10:65:g_d0_f15:Z1
+39:1618:65755:24:0:332:336:171:65:g_d0_f15:65:g_d0_f15:0
+39:1619:65756:0:0:344:391:181:121:g_d0_f8:121:g_d0_f8:i()
+39:1620:65766:0:13:391:395:196:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1621:65770:13:0:391:395:183:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1622:65774:0:0:395:399:194:65:g_d0_f15:65:g_d0_f15:2
+39:1623:65775:0:7:400:404:203:121:g_d0_f10:121:g_d0_f10: ̄
+39:1624:65777:7:13:400:404:196:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1625:65781:13:13:400:404:183:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1626:65785:13:0:400:404:170:121:g_d0_f10:121:g_d0_f10: ̄
+39:1627:65787:0:37:406:425:181:121:g_d0_f7:121:g_d0_f9:→0
+39:1628:65789:37:13:72:410:144:121:g_d0_f2:121:g_d0_f2:and (14) follows from assumption (iii.a) by straightforward arguments.
+39:1629:65859:13:36:89:196:131:121:g_d0_f2:121:g_d0_f2:Thus, for anyfixed,
+39:1630:65879:36:0:114:177:95:121:g_d0_f8:65:g_d0_f15:()=−1
+39:1631:65888:0:24:180:207:110:121:g_d0_f10:65:g_d0_f13:Z
+39:1632:65892:24:0:186:208:86:65:g_d0_f19:65:g_d0_f13:−
+39:1633:65896:0:0:212:240:95:121:g_d0_f8:121:g_d0_f9:()
+39:1634:65901:0:7:243:247:115:121:g_d0_f10:121:g_d0_f10: ̄
+39:1635:65903:7:7:243:247:108:121:g_d0_f10:121:g_d0_f10: ̄
+39:1636:65905:7:13:243:247:101:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1637:65909:13:0:243:247:88:121:g_d0_f10:121:g_d0_f10: ̄
+39:1638:65911:0:27:251:262:109:65:g_d0_f13:121:g_d0_f10:X
+39:1639:65913:27:0:247:261:82:65:g_d0_f13:65:g_d0_f15:=1
+39:1640:65916:0:0:264:297:95:121:g_d0_f8:65:g_d0_f13:i ̃
+39:1641:65926:0:7:296:300:115:121:g_d0_f10:121:g_d0_f10: ̄
+39:1642:65928:7:7:296:300:108:121:g_d0_f10:121:g_d0_f10: ̄
+39:1643:65930:7:13:296:300:101:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1644:65934:13:0:296:300:88:121:g_d0_f10:121:g_d0_f10: ̄
+39:1645:65936:0:17:300:304:112:65:g_d0_f15:65:g_d0_f15:2
+39:1646:65937:17:0:307:330:95:121:g_d0_f8:121:g_d0_f7:−
+39:1647:65940:0:24:332:350:110:121:g_d0_f10:65:g_d0_f13:Z
+39:1648:65942:24:0:338:352:86:65:g_d0_f19:65:g_d0_f13:−
+39:1649:65944:0:0:355:377:95:121:g_d0_f8:121:g_d0_f9:()
+39:1650:65948:0:13:379:383:111:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1651:65952:13:0:379:383:98:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1652:65956:0:24:383:398:110:121:g_d0_f10:65:g_d0_f15:Z1
+39:1653:65958:24:0:389:393:86:65:g_d0_f15:65:g_d0_f15:0
+39:1654:65959:0:0:401:448:95:121:g_d0_f8:121:g_d0_f8:i()
+39:1655:65969:0:13:448:452:111:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1656:65973:13:0:448:452:98:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+39:1657:65977:0:14:452:456:109:65:g_d0_f15:65:g_d0_f15:2
+39:1658:65978:14:0:458:496:95:121:g_d0_f8:121:g_d0_f8:→0
+40:1659:65985:0:14:72:539:671:121:g_d0_f2:121:g_d0_f2:Now for each,defineas the largest integer≤for whichsup0≥|(0)|≤1(and
+40:1660:66064:14:13:71:544:657:121:g_d0_f2:121:g_d0_f2:zeroifnosuchexists). Note that()→0for allfixedimplies that→∞,andby
+40:1661:66137:13:38:72:357:644:121:g_d0_f2:121:g_d0_f2:construction, also()→0. The result now follows from
+40:1662:66192:38:0:145:164:606:121:g_d0_f8:65:g_d0_f15:−1
+40:1663:66195:0:24:166:182:621:121:g_d0_f10:65:g_d0_f13:Z
+40:1664:66197:24:0:172:194:597:65:g_d0_f13:65:g_d0_f13:
+40:1665:66201:0:0:198:226:606:121:g_d0_f8:121:g_d0_f9:()
+40:1666:66206:0:7:228:232:626:121:g_d0_f10:121:g_d0_f10: ̄
+40:1667:66208:7:7:228:232:619:121:g_d0_f10:121:g_d0_f10: ̄
+40:1668:66210:7:13:228:232:612:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+40:1669:66214:13:0:228:232:599:121:g_d0_f10:121:g_d0_f10: ̄
+40:1670:66216:0:26:237:248:620:65:g_d0_f13:121:g_d0_f10:X
+40:1671:66218:26:0:233:247:594:65:g_d0_f13:65:g_d0_f15:=1
+40:1672:66221:0:0:249:283:606:121:g_d0_f8:65:g_d0_f13:i ̃
+40:1673:66231:0:7:282:286:626:121:g_d0_f10:121:g_d0_f10: ̄
+40:1674:66233:7:7:282:286:619:121:g_d0_f10:121:g_d0_f10: ̄
+40:1675:66235:7:13:282:286:612:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+40:1676:66239:13:0:282:286:599:121:g_d0_f10:121:g_d0_f10: ̄
+40:1677:66241:0:17:286:290:623:65:g_d0_f15:65:g_d0_f15:2
+40:1678:66242:17:0:292:351:606:121:g_d0_f8:65:g_d0_f15:≤2−1
+40:1679:66250:0:24:353:369:621:121:g_d0_f10:65:g_d0_f13:Z
+40:1680:66252:24:0:359:381:597:65:g_d0_f13:65:g_d0_f13:
+40:1681:66256:0:34:385:465:606:121:g_d0_f8:121:g_d0_f9:()−2→0
+40:1682:66268:34:26:72:248:572:121:g_d0_f2:121:g_d0_f2:by assumptions (iii.b) and Lemma 1.
+40:1683:66303:26:0:72:191:546:121:g_d0_f1:121:g_d0_f18:Lemma 3−12sup|
+40:1684:66322:0:11:193:209:554:121:g_d0_f10:65:g_d0_f13:P
+40:1685:66324:11:24:204:294:543:65:g_d0_f13:121:g_d0_f12:=1 ̃−|→0.
+40:1686:66343:24:7:89:539:519:121:g_d0_f1:121:g_d0_f2:Proof.Recall that for any two real, square integrable sequences{}∞=−∞and{}∞=−∞,
+40:1687:66428:7:12:72:92:512:121:g_d0_f10:65:g_d0_f19:P∞
+40:1688:66430:12:0:83:144:500:65:g_d0_f13:121:g_d0_f9:=−∞=
+40:1689:66439:0:8:152:156:508:65:g_d0_f15:65:g_d0_f15:1
+40:1690:66440:8:0:149:158:500:65:g_d0_f15:65:g_d0_f13:2
+40:1691:66442:0:13:161:174:512:121:g_d0_f10:65:g_d0_f13:R
+40:1692:66444:13:0:167:178:499:65:g_d0_f19:65:g_d0_f13:−
+40:1693:66446:0:16:184:539:506:121:g_d0_f9:121:g_d0_f2:ˆ()ˆ∗(),whereˆ()=P∞=−∞−iandˆ∗()=P∞=−∞i.
+40:1694:66507:16:8:72:96:490:121:g_d0_f2:121:g_d0_f2:Thus
+40:1695:66511:8:26:168:179:482:65:g_d0_f13:121:g_d0_f10:X
+40:1696:66513:26:0:163:178:456:65:g_d0_f13:65:g_d0_f15:=1
+40:1697:66516:0:0:181:237:469:121:g_d0_f9:121:g_d0_f9: ̃−=
+40:1698:66529:0:26:244:260:482:65:g_d0_f13:121:g_d0_f10:−X
+40:1699:66533:26:0:239:264:456:65:g_d0_f13:65:g_d0_f13:=1−
+40:1700:66538:0:0:266:322:469:121:g_d0_f9:121:g_d0_f9: ̃+=
+40:1701:66551:0:15:329:334:476:121:g_d0_f9:121:g_d0_f9:1
+40:1702:66552:15:0:325:337:461:121:g_d0_f9:121:g_d0_f8:2
+40:1703:66554:0:24:341:356:483:121:g_d0_f10:65:g_d0_f13:Z
+40:1704:66556:24:0:347:358:459:65:g_d0_f19:65:g_d0_f13:−
+40:1705:66558:0:34:361:448:469:121:g_d0_f8:121:g_d0_f8:iˆ()ˆ∗()
+40:1706:66577:34:0:72:168:435:121:g_d0_f2:121:g_d0_f9:whereˆ()=
+40:1707:66589:0:11:168:189:443:121:g_d0_f10:65:g_d0_f19:P∞
+40:1708:66591:11:0:180:230:432:65:g_d0_f13:121:g_d0_f8:=−∞
+40:1709:66600:0:7:230:361:439:65:g_d0_f19:65:g_d0_f13:−iandˆ()=P
+40:1710:66616:7:0:356:378:432:65:g_d0_f13:121:g_d0_f8:=1
+40:1711:66620:0:12:378:550:439:65:g_d0_f19:121:g_d0_f9:−i ̃,sothatiˆ()=
+40:1712:66648:12:12:72:88:427:121:g_d0_f10:65:g_d0_f13:P
+40:1713:66650:12:0:83:105:415:65:g_d0_f13:121:g_d0_f8:=1
+40:1714:66654:0:8:105:206:423:65:g_d0_f19:65:g_d0_f13:−i(−) ̃=P−
+40:1715:66673:8:0:190:222:415:65:g_d0_f13:121:g_d0_f8:=1−
+40:1716:66679:0:8:222:313:423:65:g_d0_f19:65:g_d0_f19:−i ̃+,andˆ∗
+40:1717:66698:8:12:308:539:415:65:g_d0_f13:121:g_d0_f2:is the complex conjugate ofˆNow since
+40:1718:66739:12:36:72:207:403:121:g_d0_f8:121:g_d0_f2:()=12|ˆ()|2,wefind
+40:1719:66764:36:0:124:139:367:121:g_d0_f9:121:g_d0_f18:2|
+40:1720:66767:0:26:146:157:380:65:g_d0_f13:121:g_d0_f10:X
+40:1721:66769:26:0:142:157:354:65:g_d0_f13:65:g_d0_f15:=1
+40:1722:66772:0:0:159:224:367:121:g_d0_f9:121:g_d0_f18: ̃−|=|
+40:1723:66787:0:25:226:242:382:121:g_d0_f10:65:g_d0_f13:Z
+40:1724:66789:25:0:232:243:357:65:g_d0_f19:65:g_d0_f13:−
+40:1725:66791:0:0:246:348:367:121:g_d0_f8:121:g_d0_f7:iˆ()ˆ∗()|≤
+40:1726:66812:0:9:350:359:376:121:g_d0_f7:121:g_d0_f7:√
+40:1727:66813:9:0:360:371:367:121:g_d0_f9:121:g_d0_f8:2
+40:1728:66815:0:25:373:389:382:121:g_d0_f10:65:g_d0_f13:Z
+40:1729:66817:25:0:379:391:357:65:g_d0_f19:65:g_d0_f13:−
+40:1730:66819:0:38:394:486:367:121:g_d0_f18:121:g_d0_f8:|ˆ()|()12
+40:1731:66838:38:0:71:176:329:121:g_d0_f2:121:g_d0_f7:Also, using|ˆ()|≤
+40:1732:66858:0:12:178:195:337:121:g_d0_f10:65:g_d0_f13:P
+40:1733:66860:12:19:190:279:325:65:g_d0_f13:121:g_d0_f2:=1| ̃|,wehave
+40:1734:66878:19:24:144:168:306:121:g_d0_f10:65:g_d0_f13:Z1
+40:1735:66882:24:0:150:154:282:65:g_d0_f15:65:g_d0_f15:0
+40:1736:66883:0:0:172:311:292:121:g_d0_f18:65:g_d0_f15:|ˆ()|()12≤−1
+40:1737:66905:0:26:318:330:305:65:g_d0_f13:121:g_d0_f10:X
+40:1738:66907:26:0:314:329:279:65:g_d0_f13:65:g_d0_f15:=1
+40:1739:66910:0:0:331:363:292:121:g_d0_f18:121:g_d0_f18:| ̃|·
+40:1740:66919:0:24:363:378:306:121:g_d0_f10:65:g_d0_f15:Z1
+40:1741:66921:24:0:369:373:282:65:g_d0_f15:65:g_d0_f15:0
+40:1742:66922:0:40:380:448:292:121:g_d0_f8:121:g_d0_f8:()12
+40:1743:66934:40:0:273:311:252:121:g_d0_f7:65:g_d0_f15:≤−1
+40:1744:66938:0:26:318:330:265:65:g_d0_f13:121:g_d0_f10:X
+40:1745:66940:26:0:314:329:239:65:g_d0_f13:65:g_d0_f15:=1
+40:1746:66943:0:0:331:363:252:121:g_d0_f18:121:g_d0_f18:| ̃|·
+40:1747:66952:0:25:363:386:267:121:g_d0_f10:65:g_d0_f15:μZ1
+40:1748:66955:25:0:377:381:242:65:g_d0_f15:65:g_d0_f15:0
+40:1749:66956:0:0:388:444:252:121:g_d0_f8:121:g_d0_f8:()
+40:1750:66965:0:55:444:464:267:121:g_d0_f10:65:g_d0_f15:¶12
+40:1751:66969:55:0:272:283:212:121:g_d0_f7:121:g_d0_f7:→
+40:1752:66970:0:25:292:307:227:121:g_d0_f10:65:g_d0_f15:Z1
+40:1753:66972:25:0:299:303:202:65:g_d0_f15:65:g_d0_f15:0
+40:1754:66973:0:0:310:351:212:121:g_d0_f18:121:g_d0_f18:|()|·
+40:1755:66982:0:26:354:377:228:121:g_d0_f10:65:g_d0_f15:μZ1
+40:1756:66985:26:0:368:372:202:65:g_d0_f15:65:g_d0_f15:0
+40:1757:66986:0:0:379:415:212:121:g_d0_f8:121:g_d0_f8:()
+40:1758:66992:0:16:415:436:228:121:g_d0_f10:65:g_d0_f15:¶12
+40:1759:66996:16:30:439:462:212:121:g_d0_f8:121:g_d0_f7:∞
+40:1760:66998:30:14:71:539:182:121:g_d0_f2:121:g_d0_f2:where the convergence follows from assumption (iii.a) and straightforward arguments. Furthermore,
+40:1761:67095:14:28:71:204:168:121:g_d0_f2:65:g_d0_f13:by Lemma 1,Z
+40:1762:67108:28:0:194:207:140:65:g_d0_f15:65:g_d0_f13:1
+40:1763:67111:0:0:211:323:150:121:g_d0_f18:121:g_d0_f8:|ˆ()|()12≤
+40:1764:67131:0:25:326:341:165:121:g_d0_f10:65:g_d0_f13:Z
+40:1765:67133:25:0:332:345:140:65:g_d0_f15:65:g_d0_f13:1
+40:1766:67136:0:27:348:423:150:121:g_d0_f8:121:g_d0_f2:()12−1.
+40:1767:67150:27:0:71:261:123:121:g_d0_f2:121:g_d0_f2:The result follows by assumption (iii.c).
+41:1768:67193:0:34:72:351:671:121:g_d0_f1:121:g_d0_f12:Lemma 4For every0there exists a0such that
+41:1769:67238:34:9:141:174:637:121:g_d0_f9:121:g_d0_f9:lim sup
+41:1770:67245:9:0:146:169:628:65:g_d0_f13:65:g_d0_f19:→∞
+41:1771:67248:0:0:176:223:637:121:g_d0_f9:65:g_d0_f15:Var[−12
+41:1772:67257:0:27:230:241:651:65:g_d0_f13:121:g_d0_f10:X
+41:1773:67259:27:0:226:240:624:65:g_d0_f13:65:g_d0_f15:=1
+41:1774:67262:0:0:243:318:637:121:g_d0_f9:65:g_d0_f15: ̃−−12
+41:1775:67278:0:27:328:344:651:65:g_d0_f13:121:g_d0_f10:X
+41:1776:67281:27:0:320:351:624:65:g_d0_f13:65:g_d0_f13:=−
+41:1777:67286:0:20:353:363:659:121:g_d0_f34:121:g_d0_f34:⎛
+41:1778:67287:20:0:353:363:639:121:g_d0_f34:121:g_d0_f34:⎝
+41:1779:67288:0:27:368:379:651:65:g_d0_f13:121:g_d0_f10:X
+41:1780:67290:27:0:363:378:624:65:g_d0_f13:65:g_d0_f15:=1
+41:1781:67293:0:0:381:424:637:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1782:67305:0:20:425:435:659:121:g_d0_f34:121:g_d0_f34:⎞
+41:1783:67306:20:40:425:470:639:121:g_d0_f34:121:g_d0_f12:⎠].
+41:1784:67313:40:0:72:216:599:121:g_d0_f12:65:g_d0_f15:For this,2=Var[−12
+41:1785:67338:0:11:218:245:607:121:g_d0_f10:65:g_d0_f13:P
+41:1786:67341:11:0:230:261:596:65:g_d0_f13:65:g_d0_f13:=−
+41:1787:67346:0:7:263:282:611:121:g_d0_f10:121:g_d0_f10:³P
+41:1788:67348:7:8:281:286:604:65:g_d0_f13:65:g_d0_f13:
+41:1789:67349:8:0:281:342:596:65:g_d0_f13:65:g_d0_f13:=1 ̃−
+41:1790:67364:0:12:343:350:611:121:g_d0_f10:121:g_d0_f10: ́
+41:1791:67366:12:25:351:539:599:121:g_d0_f8:121:g_d0_f12:]satisfieslim sup→∞|2−2|.
+41:1792:67401:25:23:89:167:574:121:g_d0_f1:121:g_d0_f2:Proof.We have
+41:1793:67414:23:0:198:225:551:121:g_d0_f8:65:g_d0_f15:−12
+41:1794:67419:0:26:233:244:564:65:g_d0_f13:121:g_d0_f10:X
+41:1795:67421:26:0:229:243:538:65:g_d0_f13:65:g_d0_f15:=1
+41:1796:67424:0:0:246:292:551:121:g_d0_f9:121:g_d0_f9: ̃=
+41:1797:67435:0:26:303:315:564:65:g_d0_f19:121:g_d0_f10:∞X
+41:1798:67437:26:0:294:319:538:65:g_d0_f13:65:g_d0_f19:=−∞
+41:1799:67441:0:20:321:331:573:121:g_d0_f34:121:g_d0_f34:⎛
+41:1800:67442:20:0:321:331:553:121:g_d0_f34:121:g_d0_f34:⎝
+41:1801:67443:0:26:335:347:564:65:g_d0_f13:121:g_d0_f10:X
+41:1802:67445:26:0:331:346:538:65:g_d0_f13:65:g_d0_f15:=1
+41:1803:67448:0:0:348:392:551:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1804:67460:0:20:392:402:573:121:g_d0_f34:121:g_d0_f34:⎞
+41:1805:67461:20:33:392:412:553:121:g_d0_f34:65:g_d0_f13:⎠
+41:1806:67464:33:37:72:451:520:121:g_d0_f2:121:g_d0_f2:so that, with ̄=sup0≤1|()|∞(bounded variation implies boundedness),
+41:1807:67537:37:0:169:216:483:121:g_d0_f9:65:g_d0_f15:Var[−12
+41:1808:67546:0:27:224:235:497:65:g_d0_f13:121:g_d0_f10:X
+41:1809:67548:27:0:220:234:470:65:g_d0_f13:65:g_d0_f15:=1
+41:1810:67551:0:0:237:311:483:121:g_d0_f9:65:g_d0_f15: ̃−−12
+41:1811:67567:0:27:322:338:497:65:g_d0_f13:121:g_d0_f10:X
+41:1812:67570:27:0:314:345:470:65:g_d0_f13:65:g_d0_f13:=−
+41:1813:67575:0:20:347:357:505:121:g_d0_f34:121:g_d0_f34:⎛
+41:1814:67576:20:0:347:357:485:121:g_d0_f34:121:g_d0_f34:⎝
+41:1815:67577:0:27:361:373:497:65:g_d0_f13:121:g_d0_f10:X
+41:1816:67579:27:0:357:372:470:65:g_d0_f13:65:g_d0_f15:=1
+41:1817:67582:0:0:375:418:483:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1818:67594:0:20:418:428:505:121:g_d0_f34:121:g_d0_f34:⎞
+41:1819:67595:20:47:418:441:485:121:g_d0_f34:121:g_d0_f9:⎠]
+41:1820:67599:47:0:151:188:438:121:g_d0_f9:65:g_d0_f15:=−1
+41:1821:67603:0:26:190:215:451:65:g_d0_f19:121:g_d0_f10:−−1X
+41:1822:67609:26:0:194:219:425:65:g_d0_f13:65:g_d0_f19:=−∞
+41:1823:67613:0:20:225:235:460:121:g_d0_f34:121:g_d0_f34:⎛
+41:1824:67614:20:0:225:235:440:121:g_d0_f34:121:g_d0_f34:⎝
+41:1825:67615:0:26:239:250:451:65:g_d0_f13:121:g_d0_f10:X
+41:1826:67617:26:0:235:250:425:65:g_d0_f13:65:g_d0_f15:=1
+41:1827:67620:0:0:252:296:438:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1828:67632:0:20:296:306:460:121:g_d0_f34:121:g_d0_f34:⎞
+41:1829:67633:20:0:296:306:440:121:g_d0_f34:121:g_d0_f34:⎠
+41:1830:67634:0:19:306:310:457:65:g_d0_f15:65:g_d0_f15:2
+41:1831:67635:19:0:313:342:438:121:g_d0_f9:65:g_d0_f15:+−1
+41:1832:67639:0:27:358:371:451:65:g_d0_f19:121:g_d0_f10:∞X
+41:1833:67641:27:0:345:381:424:65:g_d0_f13:65:g_d0_f15:=+1
+41:1834:67647:0:20:382:392:460:121:g_d0_f34:121:g_d0_f34:⎛
+41:1835:67648:20:0:382:392:440:121:g_d0_f34:121:g_d0_f34:⎝
+41:1836:67649:0:26:397:408:451:65:g_d0_f13:121:g_d0_f10:X
+41:1837:67651:26:0:392:407:425:65:g_d0_f13:65:g_d0_f15:=1
+41:1838:67654:0:0:410:453:438:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1839:67666:0:20:454:464:460:121:g_d0_f34:121:g_d0_f34:⎞
+41:1840:67667:20:0:454:464:440:121:g_d0_f34:121:g_d0_f34:⎠
+41:1841:67668:0:64:463:467:457:65:g_d0_f15:65:g_d0_f15:2
+41:1842:67669:64:0:151:198:393:121:g_d0_f7:65:g_d0_f15:≤ ̄2−1
+41:1843:67677:0:27:214:227:406:65:g_d0_f19:121:g_d0_f10:∞X
+41:1844:67679:27:0:201:237:379:65:g_d0_f13:65:g_d0_f15:=+1
+41:1845:67685:0:19:238:248:414:121:g_d0_f34:121:g_d0_f34:⎛
+41:1846:67686:19:0:238:248:395:121:g_d0_f34:121:g_d0_f34:⎝
+41:1847:67687:0:27:253:264:406:65:g_d0_f13:121:g_d0_f10:X
+41:1848:67689:27:0:248:263:379:65:g_d0_f13:65:g_d0_f15:=1
+41:1849:67692:0:0:263:351:393:121:g_d0_f9:121:g_d0_f9:(|−|+|+|)
+41:1850:67711:0:19:351:361:414:121:g_d0_f34:121:g_d0_f34:⎞
+41:1851:67712:19:0:351:361:395:121:g_d0_f34:121:g_d0_f34:⎠
+41:1852:67713:0:61:360:364:412:65:g_d0_f15:65:g_d0_f15:2
+41:1853:67714:61:0:151:204:351:121:g_d0_f7:65:g_d0_f15:≤4 ̄2−1
+41:1854:67723:0:27:220:232:364:65:g_d0_f19:121:g_d0_f10:∞X
+41:1855:67725:27:0:206:242:337:65:g_d0_f13:65:g_d0_f15:=+1
+41:1856:67731:0:19:244:253:369:121:g_d0_f10:121:g_d0_f10:Ã
+41:1857:67732:19:9:252:285:350:121:g_d0_f8:121:g_d0_f9:sup
+41:1858:67736:9:0:262:292:341:65:g_d0_f16:65:g_d0_f13:||≥−
+41:1859:67743:0:0:295:318:351:121:g_d0_f18:121:g_d0_f18:||
+41:1860:67749:0:59:318:331:369:121:g_d0_f10:65:g_d0_f15:!2
+41:1861:67751:59:0:151:204:310:121:g_d0_f9:65:g_d0_f15:=4 ̄2−1
+41:1862:67760:0:27:228:241:324:65:g_d0_f19:121:g_d0_f10:∞X
+41:1863:67762:27:0:206:259:297:65:g_d0_f13:65:g_d0_f15:=(−1)+1
+41:1864:67772:0:19:261:270:329:121:g_d0_f10:121:g_d0_f10:Ã
+41:1865:67773:19:10:270:296:310:121:g_d0_f8:121:g_d0_f9:sup
+41:1866:67777:10:0:279:298:300:65:g_d0_f16:65:g_d0_f13:||≥
+41:1867:67782:0:0:299:323:310:121:g_d0_f18:121:g_d0_f18:||
+41:1868:67788:0:53:323:335:329:121:g_d0_f10:65:g_d0_f15:!2
+41:1869:67790:53:13:72:480:276:121:g_d0_f2:121:g_d0_f2:which can be made arbitrarily small by choosinglarge enough via assumption (ii).
+41:1870:67871:13:25:89:324:263:121:g_d0_f2:121:g_d0_f2:The second claim follows directly from Lemma 2.
+41:1871:67918:25:0:72:378:238:121:g_d0_f1:65:g_d0_f15:Lemma 5For any large enough integer0,−1−12
+41:1872:67968:0:11:380:407:246:121:g_d0_f10:65:g_d0_f13:P
+41:1873:67971:11:0:392:423:235:65:g_d0_f13:65:g_d0_f13:=−
+41:1874:67976:0:7:426:444:250:121:g_d0_f10:121:g_d0_f10:³P
+41:1875:67978:7:8:444:449:243:65:g_d0_f13:65:g_d0_f13:
+41:1876:67979:8:0:444:504:235:65:g_d0_f13:65:g_d0_f13:=1 ̃−
+41:1877:67994:0:12:505:512:250:121:g_d0_f10:121:g_d0_f10: ́
+41:1878:67996:12:16:513:539:238:121:g_d0_f8:121:g_d0_f7:⇒
+41:1879:67999:16:23:72:109:222:121:g_d0_f18:121:g_d0_f12:N(01).
+41:1880:68006:23:17:89:546:199:121:g_d0_f1:121:g_d0_f2:Proof.By the second claim in Lemma 4 and Lemma 2,=(1)and−1=(1).By
+41:1881:68081:17:0:72:439:182:121:g_d0_f2:121:g_d0_f18:Theorem 24.3 in Davidson (1994), it thus suffices to show (a)−12sup1≤≤|
+41:1882:68156:0:11:441:457:190:121:g_d0_f10:65:g_d0_f13:P
+41:1883:68158:11:0:452:525:179:65:g_d0_f13:121:g_d0_f18:=1 ̃−|
+41:1884:68176:0:7:532:536:189:65:g_d0_f13:65:g_d0_f13:
+41:1885:68177:7:20:528:539:182:121:g_d0_f7:121:g_d0_f7:→
+41:1886:68178:20:0:72:138:162:121:g_d0_f9:65:g_d0_f15:0and (b)−1
+41:1887:68189:0:12:141:168:170:121:g_d0_f10:65:g_d0_f13:P
+41:1888:68192:12:0:153:184:158:65:g_d0_f13:65:g_d0_f13:=−
+41:1889:68197:0:7:186:205:174:121:g_d0_f10:121:g_d0_f10:³P
+41:1890:68199:7:9:204:209:167:65:g_d0_f13:65:g_d0_f13:
+41:1891:68200:9:0:204:265:158:65:g_d0_f13:65:g_d0_f13:=1 ̃−
+41:1892:68215:0:12:266:276:174:121:g_d0_f10:65:g_d0_f15: ́2
+41:1893:68218:12:17:279:341:162:121:g_d0_f9:121:g_d0_f2:(2−1)→0.
+41:1894:68229:17:13:89:539:145:121:g_d0_f2:121:g_d0_f2:(a) is implied by the Lyapunov condition via Davidson’s (1994) Theorems 23.16 and 23.11.
+41:1895:68317:13:20:71:211:132:121:g_d0_f2:121:g_d0_f2:Thus, it suffices to show that
+41:1896:68347:20:27:206:221:112:65:g_d0_f13:121:g_d0_f10:X
+41:1897:68350:27:0:198:229:85:65:g_d0_f13:65:g_d0_f13:=−
+41:1898:68355:0:0:231:272:98:121:g_d0_f8:65:g_d0_f15:[|−12
+41:1899:68363:0:19:275:285:120:121:g_d0_f34:121:g_d0_f34:⎛
+41:1900:68364:19:0:275:285:101:121:g_d0_f34:121:g_d0_f34:⎝
+41:1901:68365:0:27:289:300:112:65:g_d0_f13:121:g_d0_f10:X
+41:1902:68367:27:0:285:300:85:65:g_d0_f13:65:g_d0_f15:=1
+41:1903:68370:0:0:302:346:98:121:g_d0_f9:65:g_d0_f13: ̃−
+41:1904:68382:0:19:346:356:120:121:g_d0_f34:121:g_d0_f34:⎞
+41:1905:68383:19:0:346:413:101:121:g_d0_f34:121:g_d0_f8:⎠|2+]→0
+42:1906:68396:0:24:72:93:671:121:g_d0_f2:121:g_d0_f2:Now
+42:1907:68399:24:27:157:173:647:65:g_d0_f13:121:g_d0_f10:X
+42:1908:68402:27:0:149:180:620:65:g_d0_f13:65:g_d0_f13:=−
+42:1909:68407:0:0:182:190:633:121:g_d0_f8:121:g_d0_f8:
+42:1910:68408:0:19:193:200:658:121:g_d0_f34:121:g_d0_f34:⎡
+42:1911:68409:19:7:193:200:639:121:g_d0_f34:121:g_d0_f34:⎢
+42:1912:68410:7:0:193:200:632:121:g_d0_f34:121:g_d0_f34:⎣
+42:1913:68411:0:13:200:204:655:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1914:68415:13:13:200:204:642:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1915:68419:13:0:200:210:629:121:g_d0_f10:121:g_d0_f8: ̄ ̄
+42:1916:68424:0:0:212:231:638:65:g_d0_f19:65:g_d0_f15:−12
+42:1917:68428:0:20:233:243:655:121:g_d0_f34:121:g_d0_f34:⎛
+42:1918:68429:20:0:233:243:635:121:g_d0_f34:121:g_d0_f34:⎝
+42:1919:68430:0:27:248:259:647:65:g_d0_f13:121:g_d0_f10:X
+42:1920:68432:27:0:243:258:620:65:g_d0_f13:65:g_d0_f15:=1
+42:1921:68435:0:0:261:304:633:121:g_d0_f9:65:g_d0_f13: ̃−
+42:1922:68447:0:20:305:315:655:121:g_d0_f34:121:g_d0_f34:⎞
+42:1923:68448:20:0:305:324:635:121:g_d0_f34:65:g_d0_f13:⎠
+42:1924:68451:0:13:325:329:655:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1925:68455:13:13:325:329:642:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1926:68459:13:0:325:329:629:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1927:68463:0:13:328:351:652:65:g_d0_f15:121:g_d0_f34:2+⎤
+42:1928:68467:13:7:344:351:639:121:g_d0_f34:121:g_d0_f34:⎥
+42:1929:68468:7:48:344:351:632:121:g_d0_f34:121:g_d0_f34:⎦
+42:1930:68469:48:0:131:187:584:121:g_d0_f7:65:g_d0_f15:≤−1−2
+42:1931:68477:0:27:197:213:598:65:g_d0_f13:121:g_d0_f10:X
+42:1932:68480:27:0:189:220:571:65:g_d0_f13:65:g_d0_f13:=−
+42:1933:68485:0:7:222:226:607:121:g_d0_f10:121:g_d0_f10: ̄
+42:1934:68487:7:7:222:226:600:121:g_d0_f10:121:g_d0_f10: ̄
+42:1935:68489:7:13:222:226:593:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1936:68493:13:0:222:226:580:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1937:68497:0:27:231:242:598:65:g_d0_f13:121:g_d0_f10:X
+42:1938:68499:27:0:227:241:571:65:g_d0_f13:65:g_d0_f15:=1
+42:1939:68502:0:0:244:287:584:121:g_d0_f9:65:g_d0_f13: ̃−
+42:1940:68514:0:7:288:292:607:121:g_d0_f10:121:g_d0_f10: ̄
+42:1941:68516:7:7:288:292:600:121:g_d0_f10:121:g_d0_f10: ̄
+42:1942:68518:7:13:288:292:593:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1943:68522:13:0:288:292:580:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1944:68526:0:19:292:306:603:65:g_d0_f15:65:g_d0_f13:2+
+42:1945:68529:19:45:309:356:584:121:g_d0_f8:121:g_d0_f9:(||2+)
+42:1946:68539:45:9:131:170:539:121:g_d0_f7:121:g_d0_f9:≤(sup
+42:1947:68544:9:0:160:163:530:65:g_d0_f13:65:g_d0_f13:
+42:1948:68545:0:9:172:276:539:121:g_d0_f8:121:g_d0_f9:(||2+))·−2sup
+42:1949:68565:9:0:267:270:530:65:g_d0_f13:65:g_d0_f13:
+42:1950:68566:0:7:279:283:561:121:g_d0_f10:121:g_d0_f10: ̄
+42:1951:68568:7:13:279:283:554:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1952:68572:13:13:279:283:541:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1953:68576:13:0:279:283:528:121:g_d0_f10:121:g_d0_f10: ̄
+42:1954:68578:0:26:287:298:552:65:g_d0_f13:121:g_d0_f10:X
+42:1955:68580:26:0:283:298:526:65:g_d0_f13:65:g_d0_f15:=1
+42:1956:68583:0:0:300:343:539:121:g_d0_f9:65:g_d0_f13: ̃−
+42:1957:68595:0:7:344:348:561:121:g_d0_f10:121:g_d0_f10: ̄
+42:1958:68597:7:13:344:348:554:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1959:68601:13:13:344:348:541:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1960:68605:13:0:344:348:528:121:g_d0_f10:121:g_d0_f10: ̄
+42:1961:68607:0:19:348:352:558:65:g_d0_f13:65:g_d0_f13:
+42:1962:68608:19:0:355:379:539:121:g_d0_f18:65:g_d0_f15:·−1
+42:1963:68612:0:27:389:405:552:65:g_d0_f13:121:g_d0_f10:X
+42:1964:68615:27:0:381:412:525:65:g_d0_f13:65:g_d0_f13:=−
+42:1965:68620:0:7:414:418:561:121:g_d0_f10:121:g_d0_f10: ̄
+42:1966:68622:7:13:414:418:554:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1967:68626:13:13:414:418:541:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1968:68630:13:0:414:418:528:121:g_d0_f10:121:g_d0_f10: ̄
+42:1969:68632:0:26:423:434:552:65:g_d0_f13:121:g_d0_f10:X
+42:1970:68634:26:0:418:433:526:65:g_d0_f13:65:g_d0_f15:=1
+42:1971:68637:0:0:436:479:539:121:g_d0_f9:65:g_d0_f13: ̃−
+42:1972:68649:0:7:480:484:561:121:g_d0_f10:121:g_d0_f10: ̄
+42:1973:68651:7:13:480:484:554:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1974:68655:13:13:480:484:541:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1975:68659:13:0:480:484:528:121:g_d0_f10:121:g_d0_f10: ̄
+42:1976:68661:0:65:483:487:558:65:g_d0_f15:65:g_d0_f15:2
+42:1977:68662:65:9:131:180:493:121:g_d0_f9:121:g_d0_f9:=(sup
+42:1978:68667:9:0:160:163:484:65:g_d0_f13:65:g_d0_f13:
+42:1979:68668:0:0:172:229:493:121:g_d0_f8:121:g_d0_f18:(||2+))·
+42:1980:68680:0:20:231:241:515:121:g_d0_f34:121:g_d0_f34:⎛
+42:1981:68681:20:11:231:286:495:121:g_d0_f34:121:g_d0_f9:⎝−12sup
+42:1982:68690:11:0:277:280:484:65:g_d0_f13:65:g_d0_f13:
+42:1983:68691:0:13:288:292:515:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1984:68695:13:13:288:292:502:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1985:68699:13:0:288:292:489:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1986:68703:0:27:297:308:507:65:g_d0_f13:121:g_d0_f10:X
+42:1987:68705:27:0:292:307:480:65:g_d0_f13:65:g_d0_f15:=1
+42:1988:68708:0:0:310:353:493:121:g_d0_f9:65:g_d0_f13: ̃−
+42:1989:68720:0:13:354:358:515:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1990:68724:13:13:354:358:502:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1991:68728:13:0:354:358:489:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:1992:68732:0:20:357:367:515:121:g_d0_f34:121:g_d0_f34:⎞
+42:1993:68733:20:0:357:367:495:121:g_d0_f34:121:g_d0_f34:⎠
+42:1994:68734:0:19:367:371:512:65:g_d0_f13:65:g_d0_f13:
+42:1995:68735:19:36:374:425:493:121:g_d0_f18:121:g_d0_f9:·2→0
+42:1996:68743:36:14:72:292:457:121:g_d0_f2:121:g_d0_f2:where the convergence follows from Lemma 3.
+42:1997:68786:14:18:89:539:443:121:g_d0_f2:121:g_d0_f2:For (b), we apply Theorem 19.11 of Davidson (1994) with Davidson’sandchosen as
+42:1998:68866:18:0:71:248:425:121:g_d0_f8:65:g_d0_f15:=(2−1)and=−1
+42:1999:68896:0:7:251:269:437:121:g_d0_f10:121:g_d0_f10:³P
+42:2000:68898:7:8:269:274:430:65:g_d0_f13:65:g_d0_f13:
+42:2001:68899:8:0:269:330:422:65:g_d0_f13:65:g_d0_f13:=1 ̃−
+42:2002:68914:0:12:330:341:437:121:g_d0_f10:65:g_d0_f15: ́2
+42:2003:68917:12:18:342:539:425:121:g_d0_f2:121:g_d0_f2:.Then=2−1is uniformly
+42:2004:68951:18:25:71:293:407:121:g_d0_f2:121:g_d0_f2:integrable, sincesup(||2+)∞. Further,
+42:2005:68994:25:27:174:189:382:65:g_d0_f13:121:g_d0_f10:X
+42:2006:68997:27:0:166:197:355:65:g_d0_f13:65:g_d0_f13:=−
+42:2007:69002:0:0:199:248:368:121:g_d0_f8:65:g_d0_f15:=−1
+42:2008:69011:0:27:259:274:382:65:g_d0_f13:121:g_d0_f10:X
+42:2009:69014:27:0:251:282:355:65:g_d0_f13:65:g_d0_f13:=−
+42:2010:69019:0:20:284:294:390:121:g_d0_f34:121:g_d0_f34:⎛
+42:2011:69020:20:0:284:294:370:121:g_d0_f34:121:g_d0_f34:⎝
+42:2012:69021:0:27:298:309:382:65:g_d0_f13:121:g_d0_f10:X
+42:2013:69023:27:0:294:309:355:65:g_d0_f13:65:g_d0_f15:=1
+42:2014:69026:0:0:311:355:368:121:g_d0_f9:65:g_d0_f13: ̃−
+42:2015:69038:0:20:355:365:390:121:g_d0_f34:121:g_d0_f34:⎞
+42:2016:69039:20:0:355:365:370:121:g_d0_f34:121:g_d0_f34:⎠
+42:2017:69040:0:19:365:369:387:65:g_d0_f15:65:g_d0_f15:2
+42:2018:69041:19:36:372:445:368:121:g_d0_f9:121:g_d0_f9:=2=(1)
+42:2019:69052:36:23:71:89:332:121:g_d0_f2:121:g_d0_f2:and
+42:2020:69055:23:27:115:131:309:65:g_d0_f13:121:g_d0_f10:X
+42:2021:69058:27:0:107:138:282:65:g_d0_f13:65:g_d0_f13:=−
+42:2022:69063:0:0:138:215:296:121:g_d0_f9:65:g_d0_f15:()2=−2
+42:2023:69075:0:27:225:241:309:65:g_d0_f13:121:g_d0_f10:X
+42:2024:69078:27:0:217:248:282:65:g_d0_f13:65:g_d0_f13:=−
+42:2025:69083:0:19:250:260:317:121:g_d0_f34:121:g_d0_f34:⎛
+42:2026:69084:19:0:250:260:298:121:g_d0_f34:121:g_d0_f34:⎝
+42:2027:69085:0:27:265:276:309:65:g_d0_f13:121:g_d0_f10:X
+42:2028:69087:27:0:260:275:282:65:g_d0_f13:65:g_d0_f15:=1
+42:2029:69090:0:0:278:321:296:121:g_d0_f9:65:g_d0_f13: ̃−
+42:2030:69102:0:19:322:332:317:121:g_d0_f34:121:g_d0_f34:⎞
+42:2031:69103:19:0:322:332:298:121:g_d0_f34:121:g_d0_f34:⎠
+42:2032:69104:0:65:331:335:315:65:g_d0_f15:65:g_d0_f15:4
+42:2033:69105:65:9:178:230:250:121:g_d0_f7:121:g_d0_f9:≤sup
+42:2034:69109:9:0:196:249:241:65:g_d0_f19:65:g_d0_f13:−≤≤
+42:2035:69117:0:7:251:255:273:121:g_d0_f10:121:g_d0_f10: ̄
+42:2036:69119:7:13:251:255:266:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2037:69123:13:7:251:255:253:121:g_d0_f10:121:g_d0_f10: ̄
+42:2038:69125:7:0:251:261:246:121:g_d0_f10:121:g_d0_f8: ̄ ̄
+42:2039:69130:0:0:262:281:255:65:g_d0_f19:65:g_d0_f15:−12
+42:2040:69134:0:27:289:300:264:65:g_d0_f13:121:g_d0_f10:X
+42:2041:69136:27:0:285:299:237:65:g_d0_f13:65:g_d0_f15:=1
+42:2042:69139:0:0:302:345:250:121:g_d0_f9:65:g_d0_f13: ̃−
+42:2043:69151:0:7:346:350:273:121:g_d0_f10:121:g_d0_f10: ̄
+42:2044:69153:7:13:346:350:266:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2045:69157:13:7:346:350:253:121:g_d0_f10:121:g_d0_f10: ̄
+42:2046:69159:7:0:346:350:246:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2047:69163:0:20:350:354:270:65:g_d0_f15:65:g_d0_f15:2
+42:2048:69164:20:0:357:381:250:121:g_d0_f18:65:g_d0_f15:·−1
+42:2049:69168:0:27:391:407:264:65:g_d0_f13:121:g_d0_f10:X
+42:2050:69171:27:0:383:414:237:65:g_d0_f13:65:g_d0_f13:=−
+42:2051:69176:0:19:416:426:272:121:g_d0_f34:121:g_d0_f34:⎛
+42:2052:69177:19:0:416:426:253:121:g_d0_f34:121:g_d0_f34:⎝
+42:2053:69178:0:27:431:442:264:65:g_d0_f13:121:g_d0_f10:X
+42:2054:69180:27:0:426:441:237:65:g_d0_f13:65:g_d0_f15:=1
+42:2055:69183:0:0:444:487:250:121:g_d0_f9:65:g_d0_f13: ̃−
+42:2056:69195:0:19:488:498:272:121:g_d0_f34:121:g_d0_f34:⎞
+42:2057:69196:19:0:488:498:253:121:g_d0_f34:121:g_d0_f34:⎠
+42:2058:69197:0:65:497:501:270:65:g_d0_f15:65:g_d0_f15:2
+42:2059:69198:65:9:178:259:205:121:g_d0_f9:121:g_d0_f9:=sup
+42:2060:69202:9:0:196:249:196:65:g_d0_f19:65:g_d0_f13:−≤≤
+42:2061:69210:0:13:251:255:227:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2062:69214:13:13:251:255:214:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2063:69218:13:0:251:261:201:121:g_d0_f10:121:g_d0_f8: ̄ ̄
+42:2064:69223:0:0:262:281:210:65:g_d0_f19:65:g_d0_f15:−12
+42:2065:69227:0:27:289:300:219:65:g_d0_f13:121:g_d0_f10:X
+42:2066:69229:27:0:285:299:192:65:g_d0_f13:65:g_d0_f15:=1
+42:2067:69232:0:0:302:345:205:121:g_d0_f9:65:g_d0_f13: ̃−
+42:2068:69244:0:13:346:350:227:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2069:69248:13:13:346:350:214:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2070:69252:13:0:346:350:201:121:g_d0_f10:121:g_d0_f10: ̄ ̄
+42:2071:69256:0:19:350:354:224:65:g_d0_f15:65:g_d0_f15:2
+42:2072:69257:19:36:357:408:205:121:g_d0_f18:121:g_d0_f9:·2→0
+42:2073:69265:36:26:71:291:169:121:g_d0_f2:121:g_d0_f2:where the convergence follows from Lemma 3.
+42:2074:69308:26:13:89:201:143:121:g_d0_f1:121:g_d0_f1:Proof of Theorem 1:
+42:2075:69327:13:35:89:300:130:121:g_d0_f2:121:g_d0_f2:By Lemmas 2, 4 and 5, for large enough,
+42:2076:69367:35:0:200:245:95:121:g_d0_f8:65:g_d0_f15:−1−12
+42:2077:69375:0:27:253:264:109:65:g_d0_f13:121:g_d0_f10:X
+42:2078:69377:27:0:249:263:82:65:g_d0_f13:65:g_d0_f15:=1
+42:2079:69380:0:0:266:312:95:121:g_d0_f9:121:g_d0_f9: ̃=
+42:2080:69391:0:15:316:338:103:121:g_d0_f8:65:g_d0_f13:
+42:2081:69395:15:0:324:330:88:121:g_d0_f8:121:g_d0_f8:
+42:2082:69396:0:0:341:367:95:121:g_d0_f8:121:g_d0_f9:+
+42:2083:69399:0:15:370:393:103:121:g_d0_f8:65:g_d0_f13:
+42:2084:69403:15:0:379:385:88:121:g_d0_f8:121:g_d0_f8:
+42:2085:69404:0:0:395:409:95:121:g_d0_f8:65:g_d0_f13:
+43:2086:69408:0:19:72:539:671:121:g_d0_f2:121:g_d0_f2:where⇒N(01)lim sup→∞(2)andlim sup→∞|2−2|. Thus, by Slutzky’s
+43:2087:69486:19:19:71:539:652:121:g_d0_f2:121:g_d0_f2:Theorem, as→0the desired convergence in distribution follows. Butwas arbitrary, which
+43:2088:69574:19:0:71:169:633:121:g_d0_f2:121:g_d0_f2:proves the Theorem.
+44:2089:69595:0:31:72:162:671:301:g_d0_f1:301:g_d0_f1:References
+44:2090:69605:31:19:72:539:640:145:g_d0_f36:145:g_d0_f2:Akdi, Y.,andD. A. Dickey(1998): “Periodograms of Unit Root Time Series: Distribu-
+44:2091:69686:19:28:84:496:621:145:g_d0_f2:145:g_d0_f2:tions and Tests,”Communications in Statistics: Theory and Methods, 27, 69—87.
+44:2092:69763:28:29:72:537:593:145:g_d0_f36:145:g_d0_f2:Anderson,T.W.(1984): “An introduction to multivariate statistics,”Wiley, New York.
+44:2093:69845:29:19:72:539:564:145:g_d0_f36:145:g_d0_f2:Andrews,  D.  W.  K.,andW.  Ploberger(1994): “Optimal Tests When a Nuisance
+44:2094:69920:19:29:84:500:545:145:g_d0_f2:145:g_d0_f2:Parameter Is Present Only under the Alternative,”Econometrica, 62, 1383—1414.
+44:2095:69997:29:18:72:539:516:145:g_d0_f36:145:g_d0_f2:Baillie, R. T.(1996): “Long Memory Processes and Frational Integration in Economet-
+44:2096:70080:18:29:84:293:498:145:g_d0_f2:145:g_d0_f2:rics,”Journal of Econometrics, 73, 5—59.
+44:2097:70120:29:19:72:539:469:145:g_d0_f36:145:g_d0_f2:Baxter, M.,andR. G. King(1999): “Measuring business cycles: approximate band-pass
+44:2098:70201:19:29:84:513:450:145:g_d0_f3:145:g_d0_f2:filters for economic time series,”Review of economics and statistics, 81(4), 575—593.
+44:2099:70286:29:19:72:539:421:145:g_d0_f36:145:g_d0_f2:Bierens, H. J.(1997): “Nonparametric Cointegration Analysis,”Journal of Econometrics,
+44:2100:70371:19:28:84:147:402:145:g_d0_f2:145:g_d0_f2:77, 379—404.
+44:2101:70383:28:19:71:543:374:145:g_d0_f36:145:g_d0_f2:Brockwell, P. J.,andR. A. Davis(1991):Time Series: Theory and Methods.Springer,
+44:2102:70462:19:29:84:201:355:145:g_d0_f2:145:g_d0_f2:New York, second edn.
+44:2103:70483:29:29:72:527:326:145:g_d0_f36:145:g_d0_f2:Cavanagh,C.L.(1985): “Roots Local To Unity,”Working Paper, Harvard University.
+44:2104:70561:29:18:71:539:297:145:g_d0_f36:145:g_d0_f2:Chan,  N. H.,andC.  Z.  Wei(1987): “Asymptotic Inference for Nearly Nonstationary
+44:2105:70642:18:29:84:387:279:145:g_d0_f2:145:g_d0_f2:AR(1) Processes,”The Annals of Statistics, 15, 1050—1063.
+44:2106:70699:29:29:72:503:250:145:g_d0_f36:145:g_d0_f2:Davidson, J.(1994):Stochastic Limit Theory. Oxford University Press, New York.
+44:2107:70777:29:19:72:539:221:145:g_d0_f36:145:g_d0_f2:Dufour, J.-M.,andM. L. King(1991): “Optimal Invariant Tests for the Autocorrelation
+44:2108:70860:19:18:84:539:202:145:g_d0_f2:145:g_d0_f12:Coefficient in Linear Regressions with Stationary or Nonstationary AR(1) Errors,”Journal
+44:2109:70948:18:29:84:236:184:145:g_d0_f12:145:g_d0_f2:of Econometrics, 47, 115—143.
+44:2110:70977:29:19:72:539:155:145:g_d0_f36:145:g_d0_f2:Elliott, G.(1998): “The Robustness of Cointegration Methods When Regressors Almost
+44:2111:71059:19:29:84:322:136:145:g_d0_f2:145:g_d0_f2:Have Unit Roots,”Econometrica, 66, 149—158.
+44:2112:71102:29:18:120:539:107:145:g_d0_f2:145:g_d0_f2:(1999): “Efficient Tests for a Unit Root When the Initial Observation is Drawn
+44:2113:71180:18:0:84:512:89:145:g_d0_f2:145:g_d0_f2:From its Unconditional Distribution,”International Economic Review, 40, 767—783.
+45:2114:71262:0:19:72:540:671:145:g_d0_f36:145:g_d0_f2:Elliott,G.,U.K.Müller,andM. W. Watson(2015): “Nearly Optimal Tests When
+45:2115:71333:19:28:84:539:652:145:g_d0_f2:145:g_d0_f2:a Nuisance Parameter is Present Under the Null Hypothesis,”Econometrica, 83, 771—811.
+45:2116:71418:28:19:72:539:624:145:g_d0_f36:145:g_d0_f2:Elliott,  G.,  T.  J.  Rothenberg,andJ.  H.  Stock(1996): “Efficient Tests for an
+45:2117:71499:19:28:84:367:605:145:g_d0_f2:145:g_d0_f2:Autoregressive Unit Root,”Econometrica, 64, 813—836.
+45:2118:71551:28:19:71:544:577:145:g_d0_f36:145:g_d0_f2:Engle,  R.  F.(1974): “Band spectrum regression,”International Economic Review,pp.
+45:2119:71633:19:28:84:111:558:145:g_d0_f2:145:g_d0_f2:1—11.
+45:2120:71638:28:19:71:539:530:145:g_d0_f36:145:g_d0_f2:Fernald, J.(2014): “A Quarterly, Utilization-Adjusted Series on Total Factor Productiv-
+45:2121:71725:19:28:84:271:511:145:g_d0_f2:145:g_d0_f2:ity,”FRBSF Working Paper 2012-9.
+45:2122:71757:28:19:71:540:483:145:g_d0_f36:145:g_d0_f2:Gonçalves, S.,andT. Vogelsang(2011): “Block bootstrap and HAC robust tests: the
+45:2123:71836:19:29:84:473:464:145:g_d0_f2:145:g_d0_f2:sophistication of the naive bootstrap,”Econometric Theory, 27(4), 745—791.
+45:2124:71910:29:18:71:539:435:145:g_d0_f36:145:g_d0_f2:Harvey, A. C.(1989):Forecasting, Structural Time Series Models and the Kalman Filter.
+45:2125:71995:18:29:84:230:417:145:g_d0_f2:145:g_d0_f2:Cambridge University Press.
+45:2126:72022:29:18:71:539:388:145:g_d0_f36:145:g_d0_f2:Hodrick, R. J.,andE. C. Prescott(1997): “Postwar US business cycles: an empirical
+45:2127:72103:18:29:84:414:370:145:g_d0_f2:145:g_d0_f2:investigation,”Journal of Money, Credit and Banking, pp. 1—16.
+45:2128:72165:29:18:72:539:341:145:g_d0_f36:145:g_d0_f12:Hotelling,  H.(1931): “The Generalization of Student’s Ratio,”The Annals of Mathe-
+45:2129:72247:18:29:84:235:323:145:g_d0_f12:145:g_d0_f2:matical Statistics, 2, 360—378.
+45:2130:72278:29:18:72:540:294:145:g_d0_f36:145:g_d0_f2:Jansson, M.(2004): “The Error in Rejection Probability of Simple Autocorrelation Robust
+45:2131:72365:18:29:84:263:276:145:g_d0_f2:145:g_d0_f2:Tests,”Econometrica, 72, 937—946.
+45:2132:72398:29:18:72:539:247:145:g_d0_f36:145:g_d0_f2:Kiefer,  N.,andT. J. Vogelsang(2002): “Heteroskedasticity-Autocorrelation Robust
+45:2133:72478:18:29:84:526:229:145:g_d0_f2:145:g_d0_f2:Testing Using Bandwidth Equal to Sample Size,”Econometric Theory, 18, 1350—1366.
+45:2134:72558:29:19:117:539:200:145:g_d0_f2:145:g_d0_f2:(2005): “A New Asymptotic Theory for Heteroskedasticity-Autocorrelation Robust
+45:2135:72636:19:28:84:309:181:145:g_d0_f2:145:g_d0_f2:Tests,”Econometric Theory, 21, 1130—1164.
+45:2136:72677:28:19:72:539:153:145:g_d0_f36:145:g_d0_f2:Kiefer, N. M., T. J. Vogelsang,andH. Bunzel(2000): “Simple Robust Testing of
+45:2137:72753:19:28:84:353:134:145:g_d0_f2:145:g_d0_f2:Regression Hypotheses,”Econometrica, 68, 695—714.
+45:2138:72802:28:19:72:539:106:145:g_d0_f36:145:g_d0_f2:King,M.L.(1980): “Robust Tests for Spherical Symmetry and their Application to Least
+45:2139:72886:19:0:84:394:87:145:g_d0_f2:145:g_d0_f2:Squares Regression,”The Annals of Statistics, 8, 1265—1271.
+46:2140:72947:0:19:72:540:671:145:g_d0_f36:145:g_d0_f2:Kwiatkowski,D.,P.C.B.Phillips,P.Schmidt,andY.  Shin(1992): “Testing
+46:2141:73014:19:19:84:539:652:145:g_d0_f2:145:g_d0_f12:the Null Hypothesis of Stationarity Against the Alternative of a Unit Root,”Journal of
+46:2142:73100:19:29:84:223:633:145:g_d0_f12:145:g_d0_f2:Econometrics, 54, 159—178.
+46:2143:73126:29:18:72:542:604:145:g_d0_f36:145:g_d0_f2:Lehmann, E. L.,andJ. P. Romano(2005):Testing Statistical Hypotheses.Springer,New
+46:2144:73206:18:29:84:110:586:145:g_d0_f2:145:g_d0_f2:York.
+46:2145:73211:29:19:71:539:557:145:g_d0_f36:145:g_d0_f12:Müller,  U. K.(2004): “A Theory of Robust Long-Run Variance Estimation,”Working
+46:2146:73290:19:29:84:228:538:145:g_d0_f12:145:g_d0_f2:paper, Princeton University.
+46:2147:73318:29:18:118:540:509:145:g_d0_f2:145:g_d0_f12:(2007): “A Theory of Robust Long-Run Variance Estimation,”Journal of Econo-
+46:2148:73393:18:29:84:209:491:145:g_d0_f12:145:g_d0_f2:metrics, 141, 1331—1352.
+46:2149:73417:29:19:120:539:462:145:g_d0_f2:145:g_d0_f2:(2011): “Efficient Tests under a Weak Convergence Assumption,”Econometrica,
+46:2150:73492:19:29:84:147:443:145:g_d0_f2:145:g_d0_f2:79, 395—435.
+46:2151:73504:29:18:120:539:414:145:g_d0_f2:145:g_d0_f12:(2014): “HAC Corrections for Strongly Autocorrelated Time Series,”Journal of
+46:2152:73580:18:29:84:325:396:145:g_d0_f12:145:g_d0_f2:Business and Economic Statistics, 32, 311—322.
+46:2153:73626:29:19:71:539:367:145:g_d0_f36:145:g_d0_f2:Müller, U. K.,andM. W. Watson(2008): “Testing Models of Low-Frequency Variabil-
+46:2154:73705:19:29:84:255:348:145:g_d0_f2:145:g_d0_f2:ity,”Econometrica, 76, 979—1016.
+46:2155:73737:29:19:118:539:319:145:g_d0_f2:145:g_d0_f2:(2013): “Low-Frequency Robust Cointegration Testing,”Journal of Econometrics,
+46:2156:73814:19:28:84:141:300:145:g_d0_f2:145:g_d0_f2:174, 66—81.
+46:2157:73825:28:19:121:539:272:145:g_d0_f2:145:g_d0_f12:(2015): “Measuring Uncertaintyabout Long-Run Predictions,”Working Paper,
+46:2158:73897:19:29:84:193:253:145:g_d0_f12:145:g_d0_f2:Princeton University.
+46:2159:73918:29:19:71:539:224:145:g_d0_f36:145:g_d0_f2:Newey, W. K.,andK. West(1987): “A Simple, Positive Semi-Definite, Heteroskedas-
+46:2160:73997:19:28:84:527:205:145:g_d0_f2:145:g_d0_f2:ticity and Autocorrelation Consistent Covariance Matrix,”Econometrica, 55, 703—708.
+46:2161:74080:28:19:71:539:177:145:g_d0_f36:145:g_d0_f12:Nyblom, J.(1989): “Testing for the Constancy of Parameters Over Time,”Journal of the
+46:2162:74164:19:29:84:320:158:145:g_d0_f12:145:g_d0_f2:American Statistical Association, 84, 223—230.
+46:2163:74210:29:19:71:539:129:145:g_d0_f36:145:g_d0_f2:Phillips,P.C.B.(1987): “Towards a Unified Asymptotic Theory for Autoregression,”
+46:2164:74290:19:0:84:210:110:145:g_d0_f12:145:g_d0_f2:Biometrika, 74, 535—547.
+47:2165:74316:0:19:120:545:671:145:g_d0_f2:145:g_d0_f2:(1998): “New Tools for Understanding Spurious Regression,”Econometrica,66,
+47:2166:74390:19:29:84:140:652:145:g_d0_f2:145:g_d0_f2:1299—1325.
+47:2167:74400:29:19:120:545:623:145:g_d0_f2:145:g_d0_f2:(2005): “HAC Estimation by Automated Regression,”Econometric Theory,21,
+47:2168:74471:19:28:84:128:604:145:g_d0_f2:145:g_d0_f2:116—142.
+47:2169:74479:28:19:72:539:576:145:g_d0_f36:145:g_d0_f2:Phillips,P.C.B.,Y.Sun,andS. Jin(2006): “Spectral Density Estimation and Ro-
+47:2170:74554:19:19:84:539:557:145:g_d0_f2:145:g_d0_f12:bust Hypothesis Testing using Steep Origin Kernels without Truncation,”International
+47:2171:74638:19:29:84:243:538:145:g_d0_f12:145:g_d0_f2:Economic Review, 47, 837—894.
+47:2172:74667:29:18:121:539:509:145:g_d0_f2:145:g_d0_f2:(2007): “Long Run Variance Estimation and Robust Regression Testing Using
+47:2173:74740:18:19:84:539:491:145:g_d0_f2:145:g_d0_f2:Sharp Origin Kernels with No Truncation,”Journal of Statistical Planning and Inference,
+47:2174:74827:19:29:84:159:472:145:g_d0_f2:145:g_d0_f2:137, 985—1023.
+47:2175:74841:29:19:72:539:443:145:g_d0_f36:145:g_d0_f12:Pratt, J. W.(1961): “Length of Confidence Intervals,”Journal of the American Statistical
+47:2176:74929:19:28:84:212:424:145:g_d0_f12:145:g_d0_f2:Association, 56, 549—567.
+47:2177:74954:28:29:72:465:396:145:g_d0_f36:145:g_d0_f2:Priestley, M.(1981):Spectral Analysis and Time Series. Academic Press.
+47:2178:75024:29:19:72:539:367:145:g_d0_f36:145:g_d0_f2:Robinson, P. M.(2003): “Long-Memory Time Series,” inTime Series with Long Memory,
+47:2179:75105:19:29:84:430:348:145:g_d0_f2:145:g_d0_f2:ed.byP.M.Robinson,pp.4—32.OxfordUniversityPress,Oxford.
+47:2180:75160:29:19:72:539:319:145:g_d0_f36:145:g_d0_f12:Stock, J. H.(1994): “Unit Roots, Structural Breaks and Trends,” inHandbook of Econo-
+47:2181:75244:19:18:84:539:300:145:g_d0_f12:145:g_d0_f2:metrics,ed.byR.F.Engle,andD. McFadden, vol. 4, pp. 2740—2841. North Holland, New
+47:2182:75324:18:29:84:110:282:145:g_d0_f2:145:g_d0_f2:York.
+47:2183:75329:29:19:71:540:253:145:g_d0_f36:145:g_d0_f2:Sun,Y.,P.C.B.Phillips,andS.  Jin(2008):  “Optimal Bandwidth Selection in
+47:2184:75401:19:29:84:496:234:145:g_d0_f2:145:g_d0_f2:Heteroskedasticity-Autocorrelation Robust Testing,”Econometrica, 76, 175—794.
+47:2185:75478:29:18:72:540:205:145:g_d0_f36:145:g_d0_f2:Wright, J. H.(2000): “Confidence Sets for Cointegrating Coefficients Based on Station-
+47:2186:75564:18:0:84:450:187:145:g_d0_f2:145:g_d0_f2:arity Tests,”Journal of Business and Economic Statistics, 18, 211—222.

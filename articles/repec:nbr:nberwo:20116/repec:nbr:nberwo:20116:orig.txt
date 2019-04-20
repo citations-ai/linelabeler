@@ -1,0 +1,745 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:521:610:12:Times:12:Times:THE ROLE OF PUBLICATION SELECTION BIAS IN ESTIMATES OF THE VALUE
+1:2:89:14:28:306:373:596:12:Times:12:Times:OF A STATISTICAL LIFE
+1:3:110:28:28:306:343:568:12:Times:12:Times:W. Kip Viscusi
+1:4:124:28:14:306:359:540:12:Times:12:Times:Working Paper 20116
+1:5:143:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w20116
+1:6:176:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:212:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:237:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:256:14:242:306:330:442:12:Times:12:Times:May 2014
+1:10:264:242:14:72:540:200:12:Times:12:Times:Special thanks go to Scott DeAngelis and Jake Byl for construction of the data sets and research assistance.
+1:11:372:14:14:72:540:186:12:Times:12:Times:The views expressed herein are those of the author and do not necessarily reflect the views of the National
+1:12:479:14:28:72:221:172:12:Times:12:Times:Bureau of Economic Research.
+1:13:507:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:14:603:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:15:698:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:16:716:28:14:72:540:88:12:Times:12:Times:© 2014 by W. Kip Viscusi. All rights reserved. Short sections of text, not to exceed two paragraphs,
+1:17:816:14:14:72:540:74:12:Times:12:Times:may be quoted without explicit permission provided that full credit, including © notice, is given to
+1:18:916:14:0:72:124:60:12:Times:12:Times:the source.
+2:19:927:0:14:72:478:700:12:Times:12:Times:The Role of Publication Selection Bias in Estimates of the Value of a Statistical Life
+2:20:1013:14:14:72:146:686:12:Times:12:Times:W. Kip Viscusi
+2:21:1027:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 20116
+2:22:1055:14:14:72:121:658:12:Times:12:Times:May 2014
+2:23:1063:14:28:72:194:644:12:Times:12:Times:JEL No. I18,J17,J31,K32
+2:24:1086:28:28:306:339:616:12:Times:12:Times:ABSTRACT
+2:25:1094:28:14:72:540:588:12:Times:12:Times:Meta-regression estimates of the value of a statistical life (VSL) controlling for publication selection
+2:26:1198:14:14:72:540:574:12:Times:12:Times:bias yield bias-corrected estimates of VSL that are higher for labor market studies using the more recent
+2:27:1303:14:14:72:540:560:12:Times:12:Times:Census of Fatal Occupational Injuries (CFOI) data.  These results are borne out by the findings for
+2:28:1402:14:14:72:540:546:12:Times:12:Times:four meta-analysis data sets and different formulations of the variable used to capture publication bias
+2:29:1506:14:14:72:540:532:12:Times:12:Times:effects.  Meta-regression estimates for a large sample of VSL estimates consisting only of results of
+2:30:1607:14:14:72:540:518:12:Times:12:Times:labor market studies using the CFOI fatality data indicate publication selection bias effects that are
+2:31:1709:14:14:72:540:504:12:Times:12:Times:not statistically significant in either fixed effects or random effects models with clustered standard
+2:32:1811:14:14:72:540:490:12:Times:12:Times:errors.  The confidence intervals of the publication bias-corrected estimates of the value of a statistical
+2:33:1918:14:14:72:540:476:12:Times:12:Times:life sometimes include the sample mean estimates and always include the values that are currently
+2:34:2015:14:42:72:217:462:12:Times:12:Times:used by government agencies.
+2:35:2043:42:14:72:146:420:12:Times:12:Times:W. Kip Viscusi
+2:36:2057:14:14:72:184:406:12:Times:12:Times:Vanderbilt Law School
+2:37:2078:14:14:72:184:392:12:Times:12:Times:131 21st Avenue South
+2:38:2099:14:14:72:201:378:12:Times:12:Times:Nashville, TN 37203-1181
+2:39:2123:14:14:72:124:364:12:Times:12:Times:and NBER
+2:40:2131:14:0:72:204:350:12:Times:12:Times:kip.viscusi@vanderbilt.edu
+3:41:2160:0:27:73:184:708:144:Times:144:Times:I. INTRODUCTION 
+3:42:2175:27:28:108:526:681:144:Times:144:Times:The key parameter used in policy contexts to assess the benefits of policies that reduce 
+3:43:2264:28:27:72:531:653:144:Times:144:Times:mortality risks is the value of a statistical life (VSL).1  This measure of the risk-money tradeoff 
+3:44:2364:27:28:72:539:626:144:Times:144:Times:for small risks of death has become the standard approach used by government agencies to value 
+3:45:2459:28:28:71:517:598:144:Times:144:Times:reductions in mortality risks. The emphasis in the United States is on VSL estimates derived 
+3:46:2552:28:27:71:542:570:144:Times:144:Times:from labor market studies of VSL based on the tradeoff between wages and worker fatality rates.  
+3:47:2649:27:28:71:513:543:144:Times:144:Times:Countries such as the U.K. for which the labor market studies are less reliable often rely on 
+3:48:2743:28:27:71:245:515:144:Times:144:Times:stated preference estimates of VSL. 
+3:49:2779:27:28:107:532:488:144:Times:144:Times:Typically, U.S. government agencies draw on the results of different studies in deriving 
+3:50:2868:28:28:71:531:460:144:Times:144:Times:their VSL estimate for policy.  In some cases, this procedure has involved averaging the results 
+3:51:2965:28:27:71:528:432:144:Times:144:Times:across studies based on a survey of the literature or a meta-analysis, while in others the agency 
+3:52:3063:27:28:71:542:405:144:Times:144:Times:has used the results of a meta-regression analysis to control for different variables that may affect 
+3:53:3165:28:27:72:511:377:144:Times:144:Times:the estimated VSL, such as the average income of the sample.  Among the meta-regression 
+3:54:3253:27:28:72:523:350:144:Times:144:Times:analyses that have been relied upon by U.S. government agencies in recent years are those by 
+3:55:3346:28:27:72:531:322:144:Times:144:Times:Mrozek and Taylor (2002), Viscusi and Aldy (2003), and Kochi, Hubbell, and Kramer (2006).  
+3:56:3437:27:28:72:511:295:144:Times:144:Times:Agencies also may refer to more than one meta-regression analysis as the basis for its VSL 
+3:57:3528:28:28:72:495:267:144:Times:144:Times:estimate.  These meta-regression analyses serve to combine the results of different VSL 
+3:58:3616:28:27:72:485:239:144:Times:144:Times:estimates and to facilitate adjustments in the VSL to tailor the results to the particular 
+3:59:3707:27:28:72:521:212:144:Times:144:Times:populations whose preferences are being valued by, for example, controlling for the different 
+3:60:3801:28:64:72:333:184:144:Times:144:Times:countries for which the estimates have been derived.   
+3:61:3856:64:8:72:218:120:121:g_d0_f2:121:g_d0_f2:                                                            
+3:62:3916:8:15:72:517:112:42:Times:100:Times:1 Viscusi (2014) presents an inventory of 98 government regulations and the associated VSL used to assess the 
+3:63:4026:15:12:72:528:97:100:Times:100:Times:policy impacts.  The most frequently represented agencies are the Environmental Protection Agency, the Dept. of 
+3:64:4138:12:11:72:496:85:100:Times:100:Times:Transportation, and the Food and Drug Administration.  Ashenfelter (2006) also stresses the broad policy 
+3:65:4243:11:0:72:214:74:100:Times:100:Times:applicability of the VSL estimates. 
+4:66:4282:0:27:108:528:708:144:Times:144:Times:An additional factor that can be taken into account through meta-regression analyses is 
+4:67:4370:27:28:72:512:681:144:Times:144:Times:controlling for the effect of publication bias (Stanley and Doucouliagos 2012).  Publication 
+4:68:4463:28:27:72:523:653:144:Times:144:Times:selection bias could result from either the selection of estimates that the researcher chooses to 
+4:69:4561:27:28:72:481:626:144:Times:144:Times:report or to the unwillingness of peer reviewed journals to publish results outside the 
+4:70:4649:28:28:72:527:598:144:Times:144:Times:conventional range of VSL estimates or which appear to be implausible.  Guided by economic 
+4:71:4740:28:27:72:540:570:144:Times:144:Times:theory, researchers may be reluctant to report negative estimates for VSL, which are inconsistent 
+4:72:4838:27:28:72:542:543:144:Times:144:Times:with the basic theory of compensating differentials that jobs posing higher levels of risk will only 
+4:73:4939:28:27:72:519:515:144:Times:144:Times:be attractive to workers if these jobs provide additional pay.  There also may be biases in the 
+4:74:5035:27:28:71:513:488:144:Times:144:Times:opposite direction as several early estimates of the VSL were based on labor market studies 
+4:75:5127:28:28:71:529:460:144:Times:144:Times:using the Society of Actuaries mortality data for people in different occupations, as opposed to 
+4:76:5224:28:27:71:523:432:144:Times:144:Times:the occupation-specific risk.  Use of the Society of Actuaries data as a proxy for the worker’s 
+4:77:5320:27:28:71:533:405:144:Times:144:Times:job-related risk overstated the average job-related fatality rate by an order of magnitude and led 
+4:78:5419:28:27:71:536:377:144:Times:144:Times:to very low estimates of VSL, which potentially induced an anchoring bias in terms of estimates 
+4:79:5515:27:28:71:293:350:144:Times:144:Times:that researchers viewed as being reasonable.   
+4:80:5562:28:27:107:528:322:144:Times:144:Times:There have been more meta-analyses of VSL than any other economic subject, and this 
+4:81:5646:27:28:71:524:295:144:Times:144:Times:interest in turn has stimulated two studies of the effects of publication selection bias on VSL.  
+4:82:5744:28:28:71:528:267:144:Times:144:Times:These explorations of the role of publication bias with respect to VSL have indicated that such 
+4:83:5840:28:27:71:524:239:144:Times:144:Times:biases are statistically significant and could have a fundamental effect on the estimated VSL.  
+4:84:5936:27:28:71:538:212:144:Times:144:Times:Doucouliagos, Stanley, and Giles (2012) estimated the effect of publication bias on labor market 
+4:85:6033:28:27:71:498:184:144:Times:144:Times:estimates of the VSL and found that correction for publication selection bias reduces the 
+4:86:6123:27:28:71:512:157:144:Times:144:Times:estimated VSL by 70-80 percent.  Making such an adjustment for policy assessments could 
+4:87:6211:28:28:71:510:129:144:Times:144:Times:dramatically reduce the assessed benefits of reduced mortality risks.  This quite substantial 
+4:88:6305:28:0:71:530:101:144:Times:144:Times:estimated publication selection bias effect will be examined in my analysis below.  The similar 
+5:89:6404:0:27:72:512:708:144:Times:144:Times:meta-regression analysis of the effect of publication selection bias on the estimated income 
+5:90:6497:27:28:72:516:681:144:Times:144:Times:elasticity of VSL by Doucouliagos, Stanley, and Viscusi (2014) likewise found estimates of 
+5:91:6588:28:27:72:515:653:144:Times:144:Times:statistically significant publication bias.  However, while the estimates of the bias-corrected 
+5:92:6684:27:28:72:531:626:144:Times:144:Times:income elasticity of VSL were below the mean income elasticity estimate in the literature, they 
+5:93:6780:28:28:72:542:598:144:Times:144:Times:were similar to the meta-regression analysis range in Viscusi and Aldy (2003) in which there was 
+5:94:6877:28:27:72:296:570:144:Times:144:Times:no correction for publication selection effects. 
+5:95:6926:27:28:108:534:543:144:Times:144:Times:A principal theme of this article is that much of the role of the publication selection bias 
+5:96:7019:28:27:72:480:515:144:Times:144:Times:can be traced to studies based on earlier eras of fatality rate data.  The available U.S. 
+5:97:7109:27:28:72:542:488:144:Times:144:Times:occupational fatality rate measures have evolved from voluntary reporting of fatalities to the U.S. 
+5:98:7209:28:28:72:518:460:144:Times:144:Times:Bureau of Labor Statistics (BSL), to reliance on fatality rates based on partial samples of the 
+5:99:7305:28:27:72:487:432:144:Times:144:Times:working population, and most recently, to the use of a comprehensive Census of Fatal 
+5:100:7390:27:28:72:531:405:144:Times:144:Times:Occupational Injuries (CFOI) undertaken by the BLS.  The CFOI is a comprehensive census of 
+5:101:7481:28:27:72:526:377:144:Times:144:Times:all worker fatalities.  Construction of the CFOI requires that the BLS validate every fatality as 
+5:102:7579:27:28:71:531:350:144:Times:144:Times:being job-related using multiple data sources such as death certificates, workers’ compensation 
+5:103:7675:28:27:72:224:322:144:Times:144:Times:records, and coroners’ reports.  
+5:104:7708:27:28:108:539:295:144:Times:144:Times:Because the CFOI data consist of individual records of fatalities, researchers have used it 
+5:105:7800:28:28:72:540:267:144:Times:144:Times:to construct much more precise measures of the fatality rate that can be matched to the worker in 
+5:106:7898:28:27:72:525:239:144:Times:144:Times:the employment sample.  Whereas previous BLS job fatality data pertained to average fatality 
+5:107:7991:27:28:72:538:212:144:Times:144:Times:rates by industry, it is now possible to construct fatality rates by very refined dimensions such as 
+5:108:8092:28:27:72:530:184:144:Times:144:Times:industry, occupation, age, gender, race, and immigrant status.2 For example, some studies have 
+5:109:8187:27:28:72:533:157:144:Times:144:Times:constructed a fatality rate stratified by 50 industries and by 10 occupations so that both industry 
+5:110:8287:28:32:72:526:129:144:Times:144:Times:and occupational variations in the fatality rate are taken into account.  Using multiple years of 
+5:111:8385:32:8:72:218:97:121:g_d0_f2:121:g_d0_f2:                                                            
+5:112:8445:8:15:72:542:89:42:Times:100:Times:2 Viscusi (2013) reviews these studies using CFOI data and the different dimensions on which the article constructed 
+5:113:8562:15:0:72:255:74:100:Times:100:Times:the fatality rate and matched it to the worker. 
+6:114:8613:0:27:72:515:708:144:Times:144:Times:CFOI data to have an adequate sample size, it is feasible to construct risk estimates for such 
+6:115:8708:27:28:72:543:681:144:Times:144:Times:narrowly defined categories.  Most previous labor market studies of VSL before the advent of the 
+6:116:8805:28:27:72:530:653:144:Times:144:Times:CFOI data relied on industry level data and, in effect, assumed all jobs within an industry were 
+6:117:8902:27:28:71:139:626:144:Times:144:Times:equally risky. 
+6:118:8917:28:28:107:516:598:144:Times:144:Times:In recognition of the superiority of the CFOI fatality rate measure in estimates of the 
+6:119:9005:28:27:71:516:570:144:Times:144:Times:VSL, the U.S. Dept. of Transportation (2013) has adopted for policy evaluation purposes an 
+6:120:9096:27:28:71:519:543:144:Times:144:Times:average of VSL estimates from nine labor market studies based on the CFOI data rather than 
+6:121:9187:28:27:71:534:515:144:Times:144:Times:relying on a meta-regression analysis including studies based on less reliable risk measures.  As 
+6:122:9285:27:28:71:532:488:144:Times:144:Times:this paper will demonstrate, VSL estimates derived using the CFOI data will exhibit a differing 
+6:123:9381:28:28:71:434:460:144:Times:144:Times:performance with respect to estimates of publication selection bias as well. 
+6:124:9458:28:27:107:506:432:144:Times:144:Times:Section II introduces the four data sets used in the aggregate level meta-regression 
+6:125:9543:27:28:71:481:405:144:Times:144:Times:analysis.  To maintain comparability to Doucouliagos, Stanley, and Giles (2012) and 
+6:126:9627:28:27:71:516:377:144:Times:144:Times:Doucouliagos, Stanley, and Viscusi (2014), I use the meta-regression sample of Bellavance, 
+6:127:9718:27:28:71:529:350:144:Times:144:Times:Dionne, and Lebeau (2009) as the starting point in my analysis, but I also augment this sample 
+6:128:9813:28:27:71:503:322:144:Times:144:Times:with different samples of additional studies.  The meta-regression estimates in Section III 
+6:129:9905:27:28:71:526:295:144:Times:144:Times:indicate a statistically significant publication selection bias effect, but the estimated VSL after 
+6:130:10005:28:28:71:536:267:144:Times:144:Times:adjusting for this bias is much greater for studies using the CFOI data.  In Section IV I construct 
+6:131:10105:28:27:71:539:239:144:Times:144:Times:a new data set based on a large sample of individual regression results using the CFOI data.  The 
+6:132:10203:27:28:71:519:212:144:Times:144:Times:magnitude and statistical significance of publication selection bias varies across the different 
+6:133:10300:28:27:71:530:184:144:Times:144:Times:specifications and is not statistically significant based on models with clustered standard errors 
+6:134:10399:27:28:71:530:157:144:Times:144:Times:and including either fixed effects or random effects.  In all specifications, the extent of the bias 
+6:135:10500:28:28:71:531:129:144:Times:144:Times:for the CFOI is well below the 70-80 percent publication bias estimate found by Doucouliagos, 
+6:136:10594:28:0:71:538:101:144:Times:144:Times:Stanley, and Giles (2012) for VSL studies.  The main result is that the publication-bias corrected 
+7:137:10696:0:27:72:511:708:144:Times:144:Times:estimates using the CFOI data are very similar to the estimated values that are relied on for 
+7:138:10790:27:28:72:157:681:144:Times:144:Times:policy purposes.  
+7:139:10808:28:27:72:75:653:144:Times:144:Times: 
+7:140:10808:27:28:70:334:626:144:Times:144:Times:II. AGGREGATE META-ANALYSIS DATA SETS 
+7:141:10845:28:28:108:534:598:144:Times:144:Times:The first set of examination of the role of publication selection bias will utilize four data 
+7:142:10939:28:27:72:528:570:144:Times:144:Times:sets.  Each of these data sets is based on a “best-set” approach in that a best or preferred single 
+7:143:11039:27:28:71:520:543:144:Times:144:Times:estimate from each study is generally used.  Sample 1 is the Bellavance, Dionne, and Lebeau 
+7:144:11131:28:27:71:499:515:144:Times:144:Times:(2009) meta-regression analysis sample used in the publication selection bias analysis of 
+7:145:11221:27:28:71:530:488:144:Times:144:Times:Doucouliagos, Stanley, and Giles (2012) and Doucouliagos, Stanley, and Viscusi (2014).  That 
+7:146:11314:28:28:71:508:460:144:Times:144:Times:sample consists of 39 VSL estimates drawn from 37 different studies.  Sample 2 augments 
+7:147:11402:28:27:71:538:432:144:Times:144:Times:Sample 1 by including estimates from 14 VSL studies using the estimates from studies using the 
+7:148:11497:27:28:71:515:405:144:Times:144:Times:CFOI data that were not included in Sample 1.  The additional estimates incorporated in the 
+7:149:11589:28:27:71:498:377:144:Times:144:Times:sample are all based on the semi-logarithmic wage equation estimates using the author’s 
+7:150:11677:27:28:71:515:350:144:Times:144:Times:preferred specification.  Sample 3 adds to Sample 2 the six studies that were included in the 
+7:151:11771:28:27:71:524:322:144:Times:144:Times:meta-analysis of labor market estimates in Viscusi and Aldy (2003) but which are not already 
+7:152:11864:27:28:71:540:295:144:Times:144:Times:included in Sample 2.  Finally, Sample 4 restricts Sample 3 to only those studies using U.S. data, 
+7:153:11963:28:28:71:220:267:144:Times:144:Times:leading to a sample size of 39. 
+7:154:11995:28:27:107:530:239:144:Times:144:Times:Table 1 summarizes the sample characteristics for the variables that will play some role 
+7:155:12084:27:28:71:532:212:144:Times:144:Times:in the analysis.  The average of the VSL estimates ranges from $10 million for Sample 4 to $12 
+7:156:12179:28:27:71:541:184:144:Times:144:Times:million for Samples 1-3, where all estimates in this article are in $2010 based on the CPI-U.  Due 
+7:157:12278:27:28:71:510:157:144:Times:144:Times:to the skewed nature of the distribution, the sample mean is above the median VSL of $8.9 
+7:158:12368:28:28:71:507:129:144:Times:144:Times:million ($2010) in the meta-analysis in Viscusi and Aldy (2003).  Interestingly, the lowest 
+7:159:12460:28:0:71:512:101:144:Times:144:Times:observed VSL estimates among the four samples considered here are for the U.S. Sample 4 
+8:160:12551:0:27:72:526:708:144:Times:144:Times:notwithstanding the positive income elasticity of VSL.  This result is not too surprising in that 
+8:161:12649:27:28:72:538:681:144:Times:144:Times:the explanatory variables included in the U.S. analyses are often more comprehensive including, 
+8:162:12745:28:27:72:530:653:144:Times:144:Times:for example, a measure of workers’ compensation benefits and the nonfatal injury rate, each of 
+8:163:12840:27:28:72:383:626:144:Times:144:Times:which may affect the estimated compensation for fatality risks.   
+8:164:12906:28:28:108:524:598:144:Times:144:Times:The two variables that will be used to capture publication selection bias effects are the 
+8:165:12996:28:27:72:530:570:144:Times:144:Times:standard error (Std. Error) and the Variance of the VSL estimates.  The average standard errors 
+8:166:13092:27:28:72:531:543:144:Times:144:Times:of the VSL estimates are about one-third of the size of the VSL estimates for all four samples.   
+8:167:13190:28:27:108:494:515:144:Times:144:Times:Three other variables will be included in various regression analyses.  The most 
+8:168:13271:27:28:72:517:488:144:Times:144:Times:important of these is CFOI, which is an indicator variable that takes on a value of 1 for VSL 
+8:169:13365:28:28:72:537:460:144:Times:144:Times:estimates based on CFOI fatality rate data, and 0 otherwise.  The share of studies in the different 
+8:170:13465:28:27:72:507:432:144:Times:144:Times:samples relying on CFOI data ranges from a low of 8 percent for Sample 1 to a high of 44 
+8:171:13554:27:28:72:541:405:144:Times:144:Times:percent for Sample 4, with Samples 2 and 3 being intermediate cases with just under one-third of 
+8:172:13651:28:27:72:508:377:144:Times:144:Times:the studies based on CFOI data.  The Ln Income variable is the natural log of the sample’s 
+8:173:13742:27:28:72:539:350:144:Times:144:Times:average income level.  Workers’ Compensation is an indicator variable that takes on a value of 1 
+8:174:13839:28:27:72:524:322:144:Times:144:Times:if the wage equation included a workers’ compensation variable, and 0 otherwise.  About one-
+8:175:13931:27:28:72:463:295:144:Times:144:Times:fifth of the studies controlled for the effect of Workers’ Compensation on wages. 
+8:176:14013:28:28:108:538:267:144:Times:144:Times:One can obtain a general sense of the possible presence of a publication selection bias by 
+8:177:14104:28:27:72:541:239:144:Times:144:Times:considering a funnel plot of the VSL estimates in which the precision of the estimate (the inverse 
+8:178:14203:27:28:72:497:212:144:Times:144:Times:of the standard error) is on the vertical axis and the VSL (in millions of $2010) is on the 
+8:179:14295:28:27:72:530:184:144:Times:144:Times:horizontal axis.  Meta-regression analyses of VSL generally assume that the estimates reported 
+8:180:14390:27:28:72:508:157:144:Times:144:Times:are an unbiased sample.  If there is no publication bias and the assumptions underlying the 
+8:181:14482:28:28:72:525:129:144:Times:144:Times:regression model are satisfied, the estimates should be independent of their standard error and 
+8:182:14578:28:0:71:515:101:144:Times:144:Times:should be symmetrically distributed around the mean estimated value.  This property is best 
+9:183:14673:0:27:72:525:708:144:Times:144:Times:suited to analyzing situations in which there is a single true population parameter.  The funnel 
+9:184:14770:27:28:72:508:681:144:Times:144:Times:plot approach excludes the influence of other factors in the analysis that may influence the 
+9:185:14863:28:27:72:506:653:144:Times:144:Times:estimates such as the presence of substantial heterogeneity in the levels of VSL across the 
+9:186:14955:27:28:72:537:626:144:Times:144:Times:different samples.  The shape of the distribution should be similar to that of an inverted funnel if 
+9:187:15056:28:28:72:313:598:144:Times:144:Times:there are no selection effects or reporting biases.   
+9:188:15110:28:27:108:511:570:144:Times:144:Times:Figure 1 presents a funnel plot of VSL estimates for Sample 3.  The circles indicate 
+9:189:15195:27:28:72:524:543:144:Times:144:Times:estimates based on the CFOI data, and the triangles indicate estimates using other fatality rate 
+9:190:15292:28:27:72:526:515:144:Times:144:Times:data.  The funnel plot is highly skewed, with the outliers in terms of both precision and size of 
+9:191:15390:27:28:72:519:488:144:Times:144:Times:the VSL estimates being from studies that did not use the CFOI data.  The non-CFOI studies 
+9:192:15481:28:28:72:513:460:144:Times:144:Times:have estimates along the vertical axis with low VSL and high precision as well as estimates 
+9:193:15573:28:27:72:532:432:144:Times:144:Times:along the horizontal axis with low precision and high VSL.  The very low estimates of VSL are 
+9:194:15667:27:28:72:543:405:144:Times:144:Times:the most precisely estimated.  The CFOI estimates are more tightly clustered with more moderate 
+9:195:15763:28:27:72:540:377:144:Times:144:Times:levels of precision and less extreme VSL estimates. Notably, the distribution of VSL estimates is 
+9:196:15861:27:28:72:478:350:144:Times:144:Times:truncated as none of the estimates is negative, which is consistent with the theory of 
+9:197:15948:28:27:72:541:322:144:Times:144:Times:compensation differentials.  However, given the pattern of VSL estimates that are often clustered 
+9:198:16046:27:28:72:499:295:144:Times:144:Times:along the vertical axis, one would have expected similar clustering for negative values if 
+9:199:16137:28:28:72:340:267:144:Times:144:Times:negative values had not been selectively screened out.   
+9:200:16194:28:27:108:537:239:144:Times:144:Times:Best-set sample analyses are not well-suited to analyzing the possibility of negative VSL 
+9:201:16284:27:28:72:482:212:144:Times:144:Times:estimates.  The emphasis of the best-set sample approach is on the author’s preferred 
+9:202:16370:28:27:72:512:184:144:Times:144:Times:specification.  This approach will tend truncate the distribution and omit any negative VSL 
+9:203:16462:27:28:72:507:157:144:Times:144:Times:estimates, as negative VSL results are unlikely to be an economist’s chosen specification.  
+9:204:16554:28:28:72:530:129:144:Times:144:Times:However, the all-set CFOI sample in Section IV that utilizes a comprehensive set of regression 
+9:205:16649:28:0:72:519:101:144:Times:144:Times:results finds that negative VSL estimates sometimes are published despite being inconsistent 
+10:206:16745:0:27:72:540:708:144:Times:144:Times:with theoretical predictions.  Similarly, the underlying studies that comprise the Bellavance et al. 
+10:207:16846:27:28:72:336:681:144:Times:144:Times:(2009) sample likewise include some negative values.  
+10:208:16900:28:27:72:78:653:144:Times:144:Times:  
+10:209:16902:27:28:66:474:626:144:Times:144:Times:III. META-REGRESSION ESTIMATES OF PUBLICATION SELECTION BIAS 
+10:210:16962:28:28:108:520:598:144:Times:144:Times:The tests for publication bias will involve a series of different regressions involving a 
+10:211:17052:28:27:71:512:570:144:Times:144:Times:similar methodology where these models adhere to the accepted norms for meta-regression 
+10:212:17140:27:28:71:540:543:144:Times:144:Times:analyses of publication selection effects (Stanley and Doucouliagos 2012).  In the basic model in 
+10:213:17238:28:27:71:516:515:144:Times:144:Times:which the Std. Error is included in the equation to account for publication selection bias, the 
+10:214:17334:27:28:71:190:488:144:Times:144:Times:equation takes the form: 
+10:215:17359:28:28:71:686:460:144:Times:144:Times:                                                VSLi = α0 + α1 Std. Errori + εi.                                                    (1)                                                    
+10:216:17546:28:27:107:540:432:144:Times:144:Times:A statistically significant estimate of α1 is evidence of publication selection effects in that 
+10:217:17642:27:28:72:528:405:144:Times:144:Times:the reported VSL estimates are correlated with the estimated Std. Error as opposed to having a 
+10:218:17737:28:27:72:530:377:144:Times:144:Times:symmetrically distributed funnel plot.  This coefficient is the regression analysis counterpart of 
+10:219:17836:27:28:72:539:350:144:Times:144:Times:the funnel asymmetry test.  The estimated VSL after adjusting for publication selection effects is 
+10:220:17935:28:27:72:530:322:144:Times:144:Times:given by the constant term α0. Thus, as the Std. Error goes to zero, the constant term equals the 
+10:221:18033:27:28:72:390:295:144:Times:144:Times:expected value of VSL corrected for publication selection effects. 
+10:222:18100:28:28:108:534:267:144:Times:144:Times:One can undertake a similar analysis using the Variance of the VSL estimate rather than 
+10:223:18188:28:27:72:533:239:144:Times:144:Times:the Std. Error.  Simulation studies suggest that the inclusion of the Variance in the equation is a 
+10:224:18288:27:28:72:515:212:144:Times:144:Times:preferable correction for the role of publication selection effects (Stanley and Doucouliagos 
+10:225:18382:28:27:72:374:184:144:Times:144:Times:2012).  The Variance counterpart to equation 1 takes the form: 
+10:226:18445:27:0:72:688:157:144:Times:144:Times:                                                VSLi = β0 + β1 Variancei + ei.                                                     (2)                                                     
+11:227:18635:0:27:108:533:708:144:Times:144:Times:As in the case of equation 1 using the Std. Error, the coefficient β1 reflects the influence 
+11:228:18728:27:28:72:499:681:144:Times:144:Times:of publication selection effects.  The constant term β0 is the estimated VSL corrected for 
+11:229:18819:28:27:72:213:653:144:Times:144:Times:publication selection effects. 
+11:230:18850:27:28:108:526:626:144:Times:144:Times:To capture the potential effect of the CFOI fatality rate data on estimates of the VSL, I 
+11:231:18940:28:28:72:467:598:144:Times:144:Times:explore two additional specifications in which the CFOI variable is also included: 
+11:232:19023:28:27:72:534:570:144:Times:144:Times:                                     VSLi = α0′ + α1′ Std. Errori + α2′ CFOIi + εi′  (3) 
+11:233:19112:27:28:72:92:543:144:Times:144:Times:and 
+11:234:19116:28:27:72:534:515:144:Times:144:Times:                                     VSLi = β0′ + β1′ Variancei + β2′ CFOIi + ei′.  (4) 
+11:235:19203:27:28:108:495:488:144:Times:144:Times:The coefficients α1′ and β1′ reflect the influence of publication selection effects.  
+11:236:19289:28:28:72:488:460:144:Times:144:Times:Similarly, the constant terms α0′ and β0′ will correspond to the estimated average VSL 
+11:237:19376:28:27:71:522:432:144:Times:144:Times:controlling for both publication bias and the use of CFOI data.  One can readily calculate this 
+11:238:19472:27:28:72:525:405:144:Times:144:Times:average VSL estimate and its confidence interval based on the estimated constant term and its 
+11:239:19566:28:27:72:513:377:144:Times:144:Times:standard error.  However, my main interest here is whether the use of CFOI data affects the 
+11:240:19658:27:28:72:499:350:144:Times:144:Times:estimated VSL after accounting for publication bias effects.  In particular, are α2′ and β2′ 
+11:241:19750:28:27:71:529:322:144:Times:144:Times:statistically significant, and how do they influence the average VSL?  Conditional on using the 
+11:242:19846:27:28:71:542:295:144:Times:144:Times:much more reliable CFOI data, what is the estimated VSL?  That mean value is given by α0′ + α2′ 
+11:243:19941:28:28:71:533:267:144:Times:144:Times:for the Std. Error formulation and by β0′ + β2′ for the variance formulation.  When reporting the 
+11:244:20039:28:27:71:523:239:144:Times:144:Times:VSL and its confidence interval for the equations including the CFOI variable I will do so for 
+11:245:20134:27:28:71:526:212:144:Times:144:Times:estimates in which the CFOI variable take on a value of 1 and publication selection effects are 
+11:246:20230:28:27:72:159:184:144:Times:144:Times:set equal to zero.  
+11:247:20250:27:28:108:523:157:144:Times:144:Times:The errors associated with the different VSL estimates are likely to exhibit substantial 
+11:248:20339:28:28:72:532:129:144:Times:144:Times:heterogeneity.  As a result, the estimates of equations 1 – 4 will utilize a weighted least squares 
+11:249:20439:28:0:72:518:101:144:Times:144:Times:(WLS) model using the inverse of the variance of each of the VSL estimates as the weights.  
+12:250:20535:0:27:72:498:708:144:Times:144:Times:This approach is known as the precision-effect estimate with standard error (Stanley and 
+12:251:20624:27:28:72:185:681:144:Times:144:Times:Doucouliagos 2012).    
+12:252:20647:28:27:108:526:653:144:Times:144:Times:Table 2 reports the estimates of the Standard Error versions of the model in equation 1 
+12:253:20735:27:28:72:527:626:144:Times:144:Times:and equation 3 for each of the four samples.  In every instance there is evidence of statistically 
+12:254:20834:28:28:72:537:598:144:Times:144:Times:significant publication bias effects.  These biases are all positive, indicating that the effect of the 
+12:255:20938:28:27:72:525:570:144:Times:144:Times:bias is to boost the estimated VSL.  The magnitudes of the coefficients of the Std. Error terms 
+12:256:21034:27:28:72:536:543:144:Times:144:Times:range from 3.2 to 3.4 in Panel A and from 2.9 to 3.1 in Panel B.  The size of the publication bias 
+12:257:21133:28:27:72:517:515:144:Times:144:Times:effect is noteworthy since a coefficient of 2 or more in the Std. Error version of the model is 
+12:258:21229:27:28:72:521:488:144:Times:144:Times:generally viewed as a sign of substantial publication bias (Doucougliagos, Stanley, and Giles 
+12:259:21323:28:28:72:106:460:144:Times:144:Times:2012). 
+12:260:21330:28:27:108:525:432:144:Times:144:Times: The mean estimates of the VSL implied by the constant terms in the four equations in 
+12:261:21416:27:28:72:524:405:144:Times:144:Times:Panel A of Table 2 all indicate a VSL on the order of $1 million, about an order of magnitude 
+12:262:21510:28:27:72:531:377:144:Times:144:Times:below the mean values for each sample in Table 1. The findings in Panel B of Table 2 likewise 
+12:263:21604:27:28:72:522:350:144:Times:144:Times:indicate publication bias effects that have somewhat smaller point estimates than in Panel A.  
+12:264:21699:28:27:72:537:322:144:Times:144:Times:The constant term estimates remain in a similar range around $1 million except for Sample 4 for 
+12:265:21795:27:28:72:528:295:144:Times:144:Times:which the constant term is small and not statistically significant.  Notably the CFOI variable is 
+12:266:21893:28:28:72:523:267:144:Times:144:Times:strongly significant in all instances, implying a CFOI premium above the average publication 
+12:267:21986:28:27:72:534:239:144:Times:144:Times:bias-adjusted VSL of $2.5 million for Sample 1 to $4.1 million for the U.S. sample of studies in 
+12:268:22083:27:28:72:123:212:144:Times:144:Times:Sample 4. 
+12:269:22093:28:27:108:533:184:144:Times:144:Times:The 95 percent confidence intervals (CI) for VSL at the bottom of each panel in Table 2 
+12:270:22181:27:28:72:542:157:144:Times:144:Times:do not include the average VSL for each of the samples.  However, in the case of estimates based 
+12:271:22278:28:0:72:542:129:144:Times:144:Times:on the CFOI data in Panel B of Table 2 the upper end of the confidence intervals is higher than in 
+13:272:22381:0:27:72:517:708:144:Times:144:Times:Panel A and closer to many estimates of VSL in the literature, as it is in the $5 million to $6 
+13:273:22477:27:28:72:142:681:144:Times:144:Times:million range. 
+13:274:22492:28:27:108:539:653:144:Times:144:Times:The counterpart estimates of equations 2 and 4 based on the Variance rather than the Std. 
+13:275:22582:27:28:72:526:626:144:Times:144:Times:Error appear in Table 3.  These values, which are the empirically preferred estimates based on 
+13:276:22677:28:28:72:489:598:144:Times:144:Times:studies of the relative performance of Std. Error and Variance approaches to capturing 
+13:277:22764:28:27:72:507:570:144:Times:144:Times:publication selection effects, consistently indicate a strong publication bias effect in every 
+13:278:22859:27:28:72:518:543:144:Times:144:Times:equation.  However, the constant terms that reflect the average VSL excluding the role of all 
+13:279:22953:28:27:72:531:515:144:Times:144:Times:other variables in the equation are larger in Table 3 than in Table 2.  For Panel A these average 
+13:280:23051:27:28:72:488:488:144:Times:144:Times:VSL amounts range from $2.1 million in Sample 1 to $3.7 million in Sample 4. These 
+13:281:23134:28:28:72:536:460:144:Times:144:Times:differences in the constant terms in Panel A can be traced to the greater share of CFOI estimates 
+13:282:23232:28:27:72:539:432:144:Times:144:Times:in some of the samples, particularly Sample 4.  The intercepts reported for the Panel B equations 
+13:283:23330:27:28:71:537:405:144:Times:144:Times:that include the CFOI variable are tightly clustered in the $1.8 million - $1.9 million range.  The 
+13:284:23430:28:27:72:512:377:144:Times:144:Times:CFOI variables are positive and all strongly statistically significant, with the average CFOI 
+13:285:23524:27:28:72:318:350:144:Times:144:Times:premium ranging from $3.9 million - $4.7 million. 
+13:286:23574:28:27:108:534:322:144:Times:144:Times:The estimated VSL levels based on the Variance versions of the models are greater than 
+13:287:23661:27:28:72:536:295:144:Times:144:Times:the VSL estimates for the Std. Error models in Table 2.  The Panel A estimates in Table 3 imply 
+13:288:23757:28:28:72:535:267:144:Times:144:Times:average VSL amounts of $2 million to $4 million, with a high of $6 million for the upper end of 
+13:289:23853:28:27:72:511:239:144:Times:144:Times:the confidence interval for Sample 4.  However, after accounting for the influence of CFOI 
+13:290:23944:27:28:72:536:212:144:Times:144:Times:estimates in Panel B of Table 3, the mean of the VSL estimates is in the $6 million to $7 million 
+13:291:24042:28:27:72:521:184:144:Times:144:Times:range, which still reflects substantial publication bias effects, but the extent of the bias is less 
+13:292:24143:27:28:71:524:157:144:Times:144:Times:than in Panel A. The upper ends of the VSL confidence intervals are $8 million to $9 million, 
+13:293:24237:28:28:71:509:129:144:Times:144:Times:which remain below the sample means but are much closer to these values than the overall 
+13:294:24326:28:0:71:177:101:144:Times:144:Times:effects from Panel A. 
+14:295:24352:0:27:108:530:708:144:Times:144:Times:The final set of regression estimates using these four samples includes several different 
+14:296:24442:27:28:71:525:681:144:Times:144:Times:explanatory variables.  In particular, I add the Ln Income of the sample and whether the study 
+14:297:24537:28:27:71:521:653:144:Times:144:Times:included a Workers’ Compensation variable.  The Ln Income variable should have a positive 
+14:298:24627:27:28:71:530:626:144:Times:144:Times:effect due to the positive income elasticity of VSL, and Workers’ Compensation should have a 
+14:299:24720:28:28:71:508:598:144:Times:144:Times:negative effect as this form of insurance coverage reduces wage premiums for risk.  These 
+14:300:24810:28:27:71:523:570:144:Times:144:Times:equations differ from those reported in Table 3 of Doucouliagos, Stanley, and Giles (2012) in 
+14:301:24904:27:28:71:528:543:144:Times:144:Times:that instead of a time trend variable I include the CFOI indicator.  Thus, the effect of the CFOI 
+14:302:25002:28:27:71:532:515:144:Times:144:Times:variable is broken out separately, and the average effects on the intercept of all previous eras of 
+14:303:25102:27:28:71:322:488:144:Times:144:Times:fatality rate data are reflected in the constant term.   
+14:304:25159:28:28:107:530:460:144:Times:144:Times:The rationale for distinguishing CFOI apart from a temporal trend is that the role of the 
+14:305:25249:28:27:71:517:432:144:Times:144:Times:temporal trend is that the studies have become refined over time, particularly in terms of the 
+14:306:25344:27:28:71:524:405:144:Times:144:Times:fatality rate data that they use.  There have been several improvements in the fatality rate data 
+14:307:25442:28:27:71:531:377:144:Times:144:Times:that influence the VSL.  Consider, for example, the effect on the VSL of the transition from the 
+14:308:25539:27:28:71:538:350:144:Times:144:Times:early BLS industry fatality rate data to the National Traumatic Occupational Fatality data, which 
+14:309:25637:28:27:71:539:322:144:Times:144:Times:was a precursor to the CFOI data developed by the National Institute of Occupational Safety and 
+14:310:25733:27:28:71:517:295:144:Times:144:Times:Health.  Use of this newer fatality rate variable alone led to a doubling of the estimated VSL 
+14:311:25828:28:28:71:504:267:144:Times:144:Times:based on estimates of otherwise identical equations, due to the reduction in the amount of 
+14:312:25919:28:27:71:536:239:144:Times:144:Times:measurement error in the fatality rate variable (Moore and Viscusi 1988).  Indeed, the important 
+14:313:26016:27:28:71:541:212:144:Times:144:Times:role of measurement error in the fatality rate measure had been a prominent, long-standing theme 
+14:314:26113:28:27:71:377:184:144:Times:144:Times:in the VSL literature dealing with studies in the pre-CFOI era.3 
+14:315:26177:27:28:107:535:157:144:Times:144:Times:The estimated VSL and the associated confidence intervals shown in the bottom rows of 
+14:316:26263:28:20:71:540:129:144:Times:144:Times:Panel A and Panel B of Table 4 are all constructed after setting the publication bias term equal to 
+14:317:26363:20:9:72:218:109:121:g_d0_f2:121:g_d0_f2:                                                            
+14:318:26423:9:15:72:543:100:42:Times:100:Times:3 See, for example, the discussion in Moore and Viscusi (1988), Black and Kniesner (2003), and Ashenfelter (2006).  
+14:319:26539:15:11:72:519:85:100:Times:100:Times:These critiques either predated the use of CFOI data in labor market estimates of VSL or were not aware of the 
+14:320:26650:11:0:72:353:74:100:Times:100:Times:CFOI data and did not include the CFOI-based studies in the critique. 
+15:321:26724:0:27:72:540:708:144:Times:144:Times:zero, the value of CFOI equal to 1, and with all other variables evaluated at their mean values for 
+15:322:26824:27:28:72:515:681:144:Times:144:Times:the sample.  The mean VSL estimates range from $4 million to $5 million for the Std. Error 
+15:323:26915:28:27:72:535:653:144:Times:144:Times:formulations of the model in Panel A of Table 4 to a range from $7 million to $8 million for the 
+15:324:27012:27:28:72:538:626:144:Times:144:Times:Variance version.  The broadest confidence intervals for the VSL estimates are for Sample 1, for 
+15:325:27109:28:28:71:515:598:144:Times:144:Times:which the range is from $2 million to $8 million for the Std. Error formulation, and from $5 
+15:326:27202:28:27:71:534:570:144:Times:144:Times:million to $12 million for the Variance formulation.  The narrowest confidence interval range is 
+15:327:27299:27:28:71:534:543:144:Times:144:Times:for the U.S. Sample 4, where the range is $3 million to $5 million for the Std. Error formulation 
+15:328:27397:28:27:72:530:515:144:Times:144:Times:and $5 million to $8 million for the model in which the Variance is used to capture publication 
+15:329:27493:27:28:72:504:488:144:Times:144:Times:bias selection effects.  The role of publication selection bias is statistically significant and 
+15:330:27590:28:28:72:520:460:144:Times:144:Times:reduces the VSL, but the VSL estimates based on CFOI data are at levels more similar to the 
+15:331:27682:28:27:72:256:432:144:Times:144:Times:observed distribution in the literature. 
+15:332:27723:27:28:72:78:405:144:Times:144:Times:  
+15:333:27725:28:27:69:537:377:144:Times:144:Times:IV. PUBLICATION SELECTION BIAS ESTIMATES FOR A SAMPLES OF CFOI STUDIES 
+15:334:27795:27:28:107:542:350:144:Times:144:Times:Given the difference in the publication bias-corrected estimates of the VSL for the studies 
+15:335:27887:28:27:71:502:322:144:Times:144:Times:based on the CFOI data, it is useful to explore the role of publication bias using a sample 
+15:336:27979:27:28:72:538:295:144:Times:144:Times:consisting of only studies that utilized the CFOI data.  However, rather than focusing on a single 
+15:337:28078:28:28:72:533:267:144:Times:144:Times:preferred estimate from each study, I include a comprehensive set of  regression estimates, thus 
+15:338:28175:28:27:72:524:239:144:Times:144:Times:avoiding any selection effects in terms of which estimates are included in the meta-regression 
+15:339:28270:27:28:72:515:212:144:Times:144:Times:analysis.  Unlike the best-set approach, this “all-set” sample incorporates the entire range of 
+15:340:28366:28:27:72:530:184:144:Times:144:Times:estimates from a particular study and their heterogeneity.  The resulting sample consists of 487 
+15:341:28463:27:28:72:530:157:144:Times:144:Times:observations drawn from 15 different studies.  The Appendix summarizes the list of the studies 
+15:342:28558:28:0:72:534:129:144:Times:144:Times:used in this analysis and the procedure for constructing this sample.  The estimated VSL for the 
+16:343:28659:0:27:72:534:708:144:Times:144:Times:CFOI sample is fairly similar to that for Samples 1-4, with a mean value of $14.013 million and 
+16:344:28755:27:28:72:240:681:144:Times:144:Times:a standard error of $6.246 million. 
+16:345:28791:28:27:108:522:653:144:Times:144:Times:Figure 2 provides the funnel plot of the VSL estimates for the CFOI sample.  There is 
+16:346:28877:27:28:72:538:626:144:Times:144:Times:some positive skewness in the distribution, as there was in Figure 1, but much of the distribution 
+16:347:28976:28:28:72:526:598:144:Times:144:Times:exhibits more of a reasonable funnel shape than in Figure 1.  The large number of estimates in 
+16:348:29071:28:27:72:536:570:144:Times:144:Times:the $5 million to $15 million VSL range displays a funnel-shaped distribution.  The estimates in 
+16:349:29168:27:28:72:524:543:144:Times:144:Times:this range also exhibit the greatest precision. Unlike Figure 1 in which there were no negative 
+16:350:29264:28:27:72:503:515:144:Times:144:Times:VSL estimates, Figure 2 includes several negative values.  There is also less clustering of 
+16:351:29356:27:28:72:539:488:144:Times:144:Times:estimates along the vertical axis than in Figure 1, as there are fewer outliers observed in Figure 2 
+16:352:29457:28:28:72:524:460:144:Times:144:Times:in terms of estimates with very low VSL and high precision.  Nevertheless, the distribution of 
+16:353:29552:28:27:72:517:432:144:Times:144:Times:VSL estimates is positively skewed as many of the more extreme estimates in Figure 2 stem 
+16:354:29642:27:28:72:545:405:144:Times:144:Times:from unique aspects of the particular studies, which we will account for in the statistical analysis.  
+16:355:29745:28:27:72:542:377:144:Times:144:Times:The principal outliers that induce skewness in the distribution are the large positive estimates that 
+16:356:29847:27:28:72:346:350:144:Times:144:Times:are also coupled with relatively low levels of precision.   
+16:357:29907:28:27:108:542:322:144:Times:144:Times:The CFOI sample analysis includes estimates of several different models for both the Std. 
+16:358:29997:27:28:72:538:295:144:Times:144:Times:Error and the Variance formulations of the model.  The first equation to be estimated is the basic 
+16:359:30096:28:28:72:539:267:144:Times:144:Times:equation 1 for Std. Error and equation 3 for Variance, using a WLS approach.  Because there are 
+16:360:30192:28:27:72:510:239:144:Times:144:Times:multiple observations for any particular study, in brackets we report the pertinent clustered 
+16:361:30286:27:28:72:538:212:144:Times:144:Times:standard errors where the errors are clustered on the particular article. The robust standard errors 
+16:362:30387:28:27:72:541:184:144:Times:144:Times:are reported in parentheses.  All coefficient estimates and the associated confidence intervals that 
+16:363:30488:27:28:72:508:157:144:Times:144:Times:are reported for this sample include both the robust standard errors as well as the clustered 
+16:364:30582:28:0:72:150:129:144:Times:144:Times:standard errors. 
+17:365:30603:0:27:108:529:708:144:Times:144:Times: The second estimation approach is a fixed effects model including fixed effects for the 
+17:366:30692:27:28:72:497:681:144:Times:144:Times:different articles s in the sample.  This approach captures the article-specific factors that 
+17:367:30786:28:27:72:521:653:144:Times:144:Times:influence the average estimated VSL for the sample.  These influences include differences in 
+17:368:30879:27:28:72:528:626:144:Times:144:Times:sample composition as well as differences in econometric specification.  Thus, we report fixed 
+17:369:30974:28:28:72:519:598:144:Times:144:Times:effects estimates for the Std. Error model of the equation for this unbalanced panel, given by 
+17:370:31069:28:27:72:534:570:144:Times:144:Times:                                         VSLis = α0′′ + α1′′ Std. Erroris + as + εis  (5) 
+17:371:31159:27:28:72:266:543:144:Times:144:Times:and for the Variance model we estimate 
+17:372:31198:28:27:72:534:515:144:Times:144:Times:                                         VSLis = β0′′ + β1′′ Varianceis + bs + eis.  (6) 
+17:373:31287:27:28:72:523:488:144:Times:144:Times:We also estimate each of these equations using a random effects framework where the article-
+17:374:31379:28:28:71:481:460:144:Times:144:Times:specific intercepts as and bs are random effects in the model rather than fixed effects. 
+17:375:31468:28:27:72:534:432:144:Times:144:Times: Although both fixed effects and random effects models are reported below, based on the 
+17:376:31555:27:28:72:534:405:144:Times:144:Times:Hausman test one can reject the hypothesis that the article-specific effects are uncorrelated with 
+17:377:31654:28:27:71:531:377:144:Times:144:Times:the other regressors in the equation.  The differences between the coefficients in the models are 
+17:378:31752:27:28:71:534:350:144:Times:144:Times:strongly statistically significant at the 0.000 level for the Std. Error model and at the 0.002 level 
+17:379:31854:28:27:71:528:322:144:Times:144:Times:for the Variance model.  Thus, for this sample the fixed effects model estimates are consistent, 
+17:380:31951:27:28:71:304:295:144:Times:144:Times:but the random effects model estimates are not.  
+17:381:32000:28:28:71:503:267:144:Times:144:Times: Table 5 reports the estimation results for the Std. Error models in Panel A and the 
+17:382:32084:28:27:71:538:239:144:Times:144:Times:Variance models in Panel B.  For both the Std. Error and Variance specifications based on WLS, 
+17:383:32179:27:28:71:524:212:144:Times:144:Times:the publication selection bias terms are statistically significant and positive, as in the previous 
+17:384:32279:28:27:71:523:184:144:Times:144:Times:estimates based on more aggregative data.  The magnitudes of the publication bias effects are 
+17:385:32373:27:28:71:519:157:144:Times:144:Times:considerably diminished.  For the estimates in Panel A the coefficients of the Std. Error term 
+17:386:32468:28:28:71:519:129:144:Times:144:Times:range from 0.3 to 0.7, whereas the earlier results were about one and half time the size of the 
+17:387:32564:28:0:71:518:101:144:Times:144:Times:coefficient level of 2 that is a sign of substantial publication bias.  For the estimates utilizing 
+18:388:32668:0:27:72:498:708:144:Times:144:Times:either a fixed effects or a random effects model, the publication bias terms are no longer 
+18:389:32759:27:28:71:506:681:144:Times:144:Times:statistically significant based on the clustered standard errors that account for the multiple 
+18:390:32854:28:27:71:195:653:144:Times:144:Times:observations per article.   
+18:391:32882:27:28:107:542:626:144:Times:144:Times:The intercept terms, which are the estimates of the VSL after accounting for the influence 
+18:392:32973:28:28:71:532:598:144:Times:144:Times:of publication selection bias, are about an order of magnitude greater than the earlier results for 
+18:393:33073:28:27:71:541:570:144:Times:144:Times:the Std. Error model estimates in Table 2 and at least five times greater than the intercepts for the 
+18:394:33175:27:28:71:533:543:144:Times:144:Times:Variance model estimates in Table 3.  The mean estimated VSL based on the Std. Error models 
+18:395:33267:28:27:71:518:515:144:Times:144:Times:ranges from $9 million to $12 million, and for the Variance model the estimates are from $9 
+18:396:33359:27:28:71:518:488:144:Times:144:Times:million to $14 million.  The upper ends of the confidence intervals reach a high value of $16 
+18:397:33453:28:28:71:513:460:144:Times:144:Times:million for the fixed effects Std. Error model and $15 million for the fixed effects Variance 
+18:398:33547:28:27:71:107:432:144:Times:144:Times:model. 
+18:399:33554:27:28:107:528:405:144:Times:144:Times:The adjustments for article-specific differences using either a fixed effects or a random 
+18:400:33644:28:27:71:536:377:144:Times:144:Times:effects model lead to higher estimates of VSL than the WLS results.  In the case of the Variance 
+18:401:33741:27:28:71:528:350:144:Times:144:Times:specifications, the confidence interval for the VSL based on the WLS estimates lies below and 
+18:402:33835:28:27:71:539:322:144:Times:144:Times:does not overlap with the confidence intervals based on either the fixed effects or random effects 
+18:403:33934:27:28:71:113:295:144:Times:144:Times:model.   
+18:404:33943:28:28:71:516:267:144:Times:144:Times: The reduction in the mean value of VSL from the sample mean of $14 million to the 
+18:405:34025:28:27:71:491:239:144:Times:144:Times:levels shown in Table 5 produces estimated values of the VSL similar to those used by 
+18:406:34111:27:28:71:505:212:144:Times:144:Times:government agencies based on the most reliable estimates.  The publication bias selection 
+18:407:34201:28:27:71:529:184:144:Times:144:Times:adjustment and the accounting for article-specific differences dampen the influence of some of 
+18:408:34296:27:28:71:528:157:144:Times:144:Times:the more extreme outliers.  For example, the VSL estimates exploiting the panel data aspect of 
+18:409:34391:28:28:71:536:129:144:Times:144:Times:the Panel Study of Income Dynamics reported in Kniesner et al. (2012) are considerably smaller 
+18:410:34486:28:0:71:532:101:144:Times:144:Times:than the overall estimates using the Panel Study of Income Dynamics in Kniesner, Viscusi, and 
+19:411:34584:0:27:72:533:708:144:Times:144:Times:Ziliak (2006) in which there is no accounting for worker-specific effects.  Thus, the publication-
+19:412:34682:27:28:71:535:681:144:Times:144:Times:corrected estimates of the VSL lie in a quite reasonable range based on the characteristics of the 
+19:413:34781:28:27:71:119:653:144:Times:144:Times:studies.    
+19:414:34793:27:28:71:83:626:144:Times:144:Times:    
+19:415:34797:28:28:69:169:598:144:Times:144:Times:V. CONCLUSION 
+19:416:34810:28:27:107:523:570:144:Times:144:Times:These findings indicate a potentially statistically significant role of publication bias in 
+19:417:34902:27:28:71:523:543:144:Times:144:Times:estimates of the value of a statistical life.  The bias adjustment may be quite substantial.  This 
+19:418:35001:28:27:72:532:515:144:Times:144:Times:result holds for the best-set samples based on individual estimates from a large series of studies 
+19:419:35100:27:28:71:529:488:144:Times:144:Times:as well as in some specifications for the all-set sample of regression results based solely on the 
+19:420:35199:28:28:71:522:460:144:Times:144:Times:CFOI fatality rate data.  However, the clustered standard error results for the all-set estimates 
+19:421:35297:28:27:71:538:432:144:Times:144:Times:using either fixed effects or random effects models based on studies relying on the CFOI data do 
+19:422:35394:27:28:72:359:405:144:Times:144:Times:not indicate statistically significant publication bias effects. 
+19:423:35459:28:27:108:526:377:144:Times:144:Times:In assessing the implications of the meta-regression analyses for estimates of VSL, the 
+19:424:35547:27:28:72:507:350:144:Times:144:Times:role of different eras of fatality rate data is consequential.  The estimates for four different 
+19:425:35644:28:27:72:530:322:144:Times:144:Times:samples of studies found that there was a CFOI premium of $2 million - $4 million for the Std. 
+19:426:35739:27:28:72:510:295:144:Times:144:Times:Error model estimates and $4 million - $5 million for the Variance model estimates. These 
+19:427:35829:28:28:72:534:267:144:Times:144:Times:higher values are consistent with the reduced measurement error associated with the CFOI data. 
+19:428:35924:28:27:108:505:239:144:Times:144:Times:The estimates based solely on the individual regression results utilizing individual 
+19:429:36009:27:28:72:517:212:144:Times:144:Times:regression estimates and the CFOI data generate larger VSL estimates than the results of the 
+19:430:36102:28:27:72:526:184:144:Times:144:Times:more broadly based best-set samples.  The estimated mean values are $9 million - $12 million 
+19:431:36195:27:28:72:533:157:144:Times:144:Times:for the Std. Error equations and $9 million to $14 million for the Variance equations, which are 
+19:432:36292:28:28:72:532:129:144:Times:144:Times:below the sample mean estimate of the VSL using the CFOI data of $14 million.  However, the 
+19:433:36384:28:0:72:540:101:144:Times:144:Times:estimated publication-bias corrected estimates of VSL are very similar to or somewhat above the 
+20:434:36484:0:27:72:495:708:144:Times:144:Times:$9.1 million level for VSL adopted for policy assessment purposes by the U.S. Dept. of 
+20:435:36571:27:28:72:508:681:144:Times:144:Times:Transportation (2013) based on its review of a series of VSL studies using CFOI data.  An 
+20:436:36661:28:27:72:531:653:144:Times:144:Times:inventory by Viscusi (2014) of the VSL amounts used from 1985 to 2013 in 98 U.S. regulatory 
+20:437:36753:27:28:72:524:626:144:Times:144:Times:impact analyses found that agencies employed levels of VSL that ranged from $1.2 million to 
+20:438:36845:28:28:72:527:598:144:Times:144:Times:$9.6 million in $2010.  Early policy assessments of the VSL were at the low end of this range, 
+20:439:36940:28:27:72:535:570:144:Times:144:Times:and more recent policy values have been at or near the upper end of that range.  Even these high 
+20:440:37037:27:28:72:516:543:144:Times:144:Times:levels that have been used for policy purposes are consistent with the mean publication-bias 
+20:441:37130:28:27:72:325:515:144:Times:144:Times:corrected estimates of VSL based on the CFOI data. 
+20:442:37181:27:28:108:531:488:144:Times:144:Times: The confidence intervals for the estimated VSL based on the CFOI data are reasonably 
+20:443:37267:28:28:72:536:460:144:Times:144:Times:tight, but they sometimes include the average VSL amount for the entire sample.   Nevertheless, 
+20:444:37363:28:27:72:539:432:144:Times:144:Times:the publication-bias corrected estimates of VSL for the CFOI sample produces estimates more in 
+20:445:37458:27:28:72:531:405:144:Times:144:Times:line with the average VSL levels that are generated once high estimate outliers are excluded.     
+20:446:37556:28:27:72:519:377:144:Times:144:Times:Accounting for publication selection effects reduces the VSL to the levels that are consistent 
+20:447:37651:27:28:72:498:350:144:Times:144:Times:with the studies in the literature that are generally viewed as most reliable based on their 
+20:448:37744:28:27:72:187:322:144:Times:144:Times:econometric approach.  
+20:449:37767:27:0:108:396:295:144:Times:144:Times:  
+21:450:37773:0:27:72:289:708:144:Times:144:Times:Appendix. Description of the CFOI Data Set 
+21:451:37816:27:28:108:532:681:144:Times:144:Times:The CFOI sample is based on the individual regression results reported in 15 articles. A 
+21:452:37905:28:27:72:509:653:144:Times:144:Times:detailed review of the characteristics of these CFOI studies appears in Viscusi (2013). The 
+21:453:37997:27:28:72:538:626:144:Times:144:Times:sample included VSL estimates from the following articles: Aldy and Viscusi (2008), Evans and 
+21:454:38091:28:28:72:535:598:144:Times:144:Times:Schaur (2010), Hersch and Viscusi (2010), Kniesner and Viscusi (2005), Kniesner et al. (2012), 
+21:455:38186:28:27:72:523:570:144:Times:144:Times:Kniesner, Viscusi, and Ziliak (2006, 2010, 2014), Scotton (2013), Scotton and Taylor (2011), 
+21:456:38279:27:28:72:535:543:144:Times:144:Times:Viscusi (2003, 2004 2013), Viscusi and Aldy (2007), and Viscusi and Hersch (2008).  Note that 
+21:457:38373:28:27:72:434:515:144:Times:144:Times:the VSL estimates have been transformed to 2010 dollars using the CPI-U. 
+21:458:38446:27:28:108:540:488:144:Times:144:Times:In some cases, the paper did not include information that made it possible to calculate the 
+21:459:38538:28:28:72:520:460:144:Times:144:Times:standard error (SE) of the VSL.  In the case of Kniesner and Viscusi (2005), and estimates in 
+21:460:38632:28:27:72:515:432:144:Times:144:Times:Kniesner et al. (2012), the procedure used followed that of Bellavance, Dionne, and Lebeau 
+21:461:38723:27:28:72:542:405:144:Times:144:Times:(2009).  The first stage involves an OLS regression of SE(VSL) on sample size.  Based on saving 
+21:462:38819:28:27:72:532:377:144:Times:144:Times:the constant term (α) and the coefficient of sample size (β), the SE(VSL) is calculated based on 
+21:463:38916:27:28:72:321:350:144:Times:144:Times:the equation: SE(VSL) = VSLx[α + β sample size]. 
+21:464:38965:28:27:108:542:322:144:Times:144:Times:One estimate of $158 million VSL ($2010) from Scotton and Taylor (2011) was excluded 
+21:465:39050:27:28:72:497:295:144:Times:144:Times:because it pertained only to a specific, narrowly defined class of fatalities--homicides to 
+21:466:39142:28:28:72:539:267:144:Times:144:Times:transportation drivers—rather than typical job accidents affecting a broad class of workers.  Two 
+21:467:39240:28:27:72:529:239:144:Times:144:Times:studies—Leeth and Ruser (2003) and Kochi and Taylor (2011)—were excluded because of the 
+21:468:39328:27:28:72:346:212:144:Times:144:Times:infeasibility of constructing standard errors for the VSL. 
+21:469:39387:28:0:72:360:184:144:Times:144:Times:  
+22:470:39393:0:27:72:128:708:144:Times:144:Times:References 
+22:471:39404:27:28:72:524:681:144:Times:144:Times:Aldy, Joseph E., and W. Kip Viscusi. 2008. “Adjusting the Value of a Statistical Life for Age 
+22:472:39498:28:27:108:459:653:144:Times:144:Times:and Cohort Effects.” Review of Economics and Statistics 90(3):573–581. 
+22:473:39569:27:28:72:530:626:144:Times:144:Times:Ashenfelter, Orley. 2006. “Measuring the Value of a Statistical Life: Problems and Prospects.” 
+22:474:39664:28:28:108:296:598:144:Times:144:Times:The Economic Journal 116: C10–C23. 
+22:475:39699:28:27:72:537:570:144:Times:144:Times:Bellavance, F., Georges Dionne, and M. Lebeau. 2009. “The Value of a Statistical Life: A Meta-
+22:476:39793:27:28:108:538:543:144:Times:144:Times:Analysis with a Mixed Effects Regression Model.” Journal of Health Economics 28:444–
+22:477:39877:28:27:108:132:515:144:Times:144:Times:464. 
+22:478:39882:27:28:72:521:488:144:Times:144:Times:Black, Dan A., and Thomas J. Kniesner. 2003. “On the Measurement of Job Risk in Hedonic 
+22:479:39970:28:28:108:406:460:144:Times:144:Times:Wage Models.” Journal of Risk and Uncertainty 27:205–220. 
+22:480:40028:28:27:72:531:432:144:Times:144:Times:Doucouliagos, Chris, T.D. Stanley, and Margaret Giles. 2012. “Are Estimates of the Value of a 
+22:481:40122:27:28:108:461:405:144:Times:144:Times:Statistical Life Exaggerated?” Journal of Health Economics 31:197–206. 
+22:482:40193:28:27:72:532:377:144:Times:144:Times:Doucouliagos, Hristos, T.D. Stanley, and W. Kip Viscusi. 2014. “Publication Selection and the 
+22:483:40287:27:28:108:537:350:144:Times:144:Times:Income Elasticity of the Value of a Statistical Life.” Journal of Health Economics 33:67–
+22:484:40376:28:27:108:126:322:144:Times:144:Times:75. 
+22:485:40380:27:28:72:534:295:144:Times:144:Times:Evans, Mary F., and Georg Schaur. 2010. “A Quantile Estimation Approach to Identify Income 
+22:486:40471:28:28:108:491:267:144:Times:144:Times:and Age Variation in the Value of a Statistical Life.” Journal of Environmental 
+22:487:40551:28:27:108:327:239:144:Times:144:Times:Economics and Management 59(3):260–270. 
+22:488:40591:27:28:72:524:212:144:Times:144:Times:Hersch, Joni, and W. Kip Viscusi. 2010. “Immigrant Status and the Value of Statistical Life.” 
+22:489:40685:28:27:108:328:184:144:Times:144:Times:Journal of Human Resources 45(3):749–771. 
+22:490:40727:27:28:72:527:157:144:Times:144:Times:Kniesner, Thomas J., and W. Kip Viscusi. 2005. “Value of a Statistical Life: Relative Position 
+22:491:40822:28:0:108:400:129:144:Times:144:Times:vs. Relative Age.” American Economic Review 95:142–146. 
+23:492:40882:0:27:72:514:708:144:Times:144:Times:Kniesner, Thomas J., W. Kip Viscusi, Christopher Woock, and James P. Ziliak. 2012. “The 
+23:493:40970:27:28:108:539:681:144:Times:144:Times:Value of Statistical Life: Evidence from Panel Data.” Review of Economics and Statistics 
+23:494:41058:28:27:108:173:653:144:Times:144:Times:94(1):74–87. 
+23:495:41071:27:28:72:535:626:144:Times:144:Times:Kniesner, Thomas J., W. Kip Viscusi, and James P. Ziliak. 2006. “Life-Cycle Consumption and 
+23:496:41163:28:28:108:529:598:144:Times:144:Times:the Age-Adjusted Value of Life.” Contributions to Economic Analysis & Policy 5(1):1–
+23:497:41247:28:27:108:126:570:144:Times:144:Times:34. 
+23:498:41251:27:28:72:543:543:144:Times:144:Times:Kniesner, Thomas J., W. Kip Viscusi, and James P. Ziliak. 2010. “Policy Relevant Heterogeneity 
+23:499:41346:28:27:108:528:515:144:Times:144:Times:in the Value of Statistical Life: New Evidence from Panel Data Quantile Regressions.” 
+23:500:41432:27:28:108:330:488:144:Times:144:Times:Journal of Risk and Uncertainty 40(1):15–31. 
+23:501:41477:28:28:72:538:460:144:Times:144:Times:Kniesner, Thomas J., W. Kip Viscusi, and James P. Ziliak. 2014. “Willingness to Accept Equals 
+23:502:41571:28:27:108:534:432:144:Times:144:Times:Willingness to Pay for Labor Market Estimates of the Value of Statistical Life.” Journal 
+23:503:41660:27:28:108:321:405:144:Times:144:Times:of Risk and Uncertainty forthcoming, June.  
+23:504:41704:28:27:72:520:377:144:Times:144:Times:Kochi, Ikuho, Bryan Hubbell, and Randall Kramer. 2006. “An Empirical Bayes Approach to 
+23:505:41791:27:28:108:539:350:144:Times:144:Times:Combining and Comparing Estimates of the Value of a Statistical Life for Environmental 
+23:506:41878:28:27:108:456:322:144:Times:144:Times:Policy Analysis.” Environmental and Resource Economics 34:385–406. 
+23:507:41944:27:28:72:535:295:144:Times:144:Times:Kochi, Ikuho, and Laura O. Taylor. 2011. “Risk Heterogeneity and the Value of Reducing Fatal 
+23:508:42037:28:28:108:521:267:144:Times:144:Times:Risks: Further Market-Based Evidence.” Journal of Benefit-Cost Analysis 2(3):1–28.  
+23:509:42121:28:27:72:540:239:144:Times:144:Times:Leeth, John D., and John Ruser. 2003. “Compensating Wage Differentials for Fatal and Nonfatal 
+23:510:42215:27:28:108:509:212:144:Times:144:Times:Injury Risk by Gender and Race.” Journal of Risk and Uncertainty 27(3):257–277. 
+23:511:42295:28:27:72:531:184:144:Times:144:Times:Moore, Michael J., and W. Kip Viscusi. 1988. “Doubling the Estimated Value of Life:  Results 
+23:512:42388:27:28:108:522:157:144:Times:144:Times:Using New Occupational Fatality Data.” Journal of Policy Analysis and Management 
+23:513:42468:28:0:108:165:129:144:Times:144:Times:7:476–490. 
+24:514:42483:0:27:72:525:708:144:Times:144:Times:Mrozek, Janusz R., and Laura O. Taylor. 2002. “What Determines the Value of Life? A Meta-
+24:515:42572:27:28:108:455:681:144:Times:144:Times:Analysis.” Journal of Policy Analysis and Management 21(2):253–270. 
+24:516:42639:28:27:72:541:653:144:Times:144:Times:Scotton, Carol R. 2013. “New Risk Rates, Inter-Industry Differentials and the Magnitude of VSL 
+24:517:42734:27:28:108:384:626:144:Times:144:Times:Estimates.” Journal of Benefit-Cost Analysis 4(1):39–80. 
+24:518:42791:28:28:72:520:598:144:Times:144:Times:Scotton, Carol R., and Laura O. Taylor. 2011. “Valuing Risk Reductions: Incorporating Risk 
+24:519:42882:28:27:107:488:570:144:Times:144:Times:Heterogeneity into a Revealed Preference Framework.” Resources and Energy 
+24:520:42956:27:28:107:243:543:144:Times:144:Times:Economics 33(2):381–397.  
+24:521:42982:28:27:71:520:515:144:Times:144:Times:Stanley, T.D., and Hristos Doucouliagos. 2012. Meta-Regression Analysis in Economics and 
+24:522:43071:27:28:107:255:488:144:Times:144:Times:Business. London: Routledge. 
+24:523:43100:28:28:71:529:460:144:Times:144:Times:U.S. Department of Transportation. 2013. Revised Departmental Guidance 2013: Treatment of 
+24:524:43190:28:27:107:496:432:144:Times:144:Times:the Value of Preventing Fatalities and Injuries in Preparing Economic Analyses. 
+24:525:43270:27:28:107:238:405:144:Times:144:Times:Accessed March 25, 2014. 
+24:526:43295:28:27:107:482:377:144:Times:144:Times:http://www.dot.gov/sites/dot.dev/files/docs/VSL%20Guidance%202013.pdf.  
+24:527:43367:27:28:72:504:350:144:Times:144:Times:Viscusi, W. Kip. 2003. “Racial Differences in Labor Market Values of a Statistical Life.” 
+24:528:43457:28:27:108:342:322:144:Times:144:Times:Journal of Risk and Uncertainty 27(3):239–256. 
+24:529:43504:27:28:72:532:295:144:Times:144:Times:Viscusi, W. Kip. 2004. “The Value of Life:  Estimates with Risk by Occupation and Industry.”  
+24:530:43598:28:28:108:248:267:144:Times:144:Times:Economic Inquiry 42:29–48. 
+24:531:43625:28:27:72:533:239:144:Times:144:Times:Viscusi, W. Kip. 2013. “Using Data from the Census of Fatal Occupational Injuries to Estimate 
+24:532:43719:27:28:108:455:212:144:Times:144:Times:the “Value of a Statistical Life.”” Monthly Labor Review October:1–17. 
+24:533:43790:28:27:72:512:184:144:Times:144:Times:Viscusi, W. Kip. 2014. “The Value of Individual and Societal Risks to Life and Health.” In 
+24:534:43881:27:28:108:525:157:144:Times:144:Times:Handbook of the Economics of Risk and Uncertainty, edited by Mark Machina and W. 
+24:535:43962:28:0:108:379:129:144:Times:144:Times:Kip Viscusi, Volume 1, 385–452. Amsterdam: Elsevier. 
+25:536:44019:0:27:72:531:708:144:Times:144:Times:Viscusi, W. Kip, and Joseph E. Aldy. 2003. “The Value of a Statistical Life: A Critical Review 
+25:537:44114:27:28:108:540:681:144:Times:144:Times:of Market Estimates throughout the World.” Journal of Risk and Uncertainty 27(1):5–76. 
+25:538:44201:28:27:72:537:653:144:Times:144:Times:Viscusi, W. Kip, and Joseph E. Aldy. 2007. “Labor Market Estimates of the Senior Discount for 
+25:539:44295:27:28:107:521:626:144:Times:144:Times:the Value of Statistical Life.” Journal of Environmental Economics and Management 
+25:540:44376:28:28:108:188:598:144:Times:144:Times:53(3):377–392.  
+25:541:44392:28:27:72:522:570:144:Times:144:Times:Viscusi, W. Kip, and Joni Hersch. 2008. “The Mortality Cost to Smokers.” Journal of Health 
+25:542:44483:27:0:108:385:543:144:Times:144:Times:Economics 27(4):943–958.  
+26:543:44512:0:13:72:75:708:144:Times:144:Times: 
+26:544:44512:13:14:285:328:695:144:Times:144:Times:Figure 1 
+26:545:44521:14:13:195:419:681:144:Times:144:Times:Funnel Plot of VSL for the Sample 3 Data Set 
+26:546:44566:13:14:72:74:668:121:g_d0_f2:121:g_d0_f2: 
+26:547:44567:14:282:72:74:654:121:g_d0_f2:121:g_d0_f2: 
+26:548:44568:282:10:537:539:372:121:g_d0_f2:121:g_d0_f2: 
+26:549:44569:10:14:72:74:362:121:g_d0_f2:121:g_d0_f2: 
+26:550:44570:14:13:72:74:348:121:g_d0_f2:121:g_d0_f2: 
+26:551:44571:13:0:72:360:335:121:g_d0_f2:121:g_d0_f2:  
+26:552:44573:0:0:102:107:412:81:g_d0_f7:81:g_d0_f7:0
+26:553:44574:0:0:102:107:442:81:g_d0_f7:81:g_d0_f7:1
+26:554:44575:0:0:102:107:471:81:g_d0_f7:81:g_d0_f7:2
+26:555:44576:0:0:102:107:501:81:g_d0_f7:81:g_d0_f7:3
+26:556:44577:0:0:102:107:530:81:g_d0_f7:81:g_d0_f7:4
+26:557:44578:0:0:102:107:560:81:g_d0_f7:81:g_d0_f7:5
+26:558:44579:0:0:102:107:589:81:g_d0_f7:81:g_d0_f7:6
+26:559:44580:0:219:102:107:619:81:g_d0_f7:81:g_d0_f7:7
+26:560:44581:219:15:108:502:400:81:g_d0_f2:81:g_d0_f7:‐200 20406080100
+26:561:44619:15:0:236:328:385:100:g_d0_f7:100:g_d0_f7:Value of Statistical Life
+26:562:44644:0:17:491:526:518:81:g_d0_f7:81:g_d0_f7:Non‐CFOI
+26:563:44652:17:0:491:508:501:81:g_d0_f7:81:g_d0_f7:CFOI
+27:564:44660:0:13:285:328:708:144:Times:144:Times:Figure 2 
+27:565:44669:13:14:204:410:695:144:Times:144:Times:Funnel Plot of VSL for the CFOI Data Set 
+27:566:44710:14:285:306:309:681:144:Times:144:Times: 
+27:567:44710:285:11:538:541:396:144:Times:144:Times: 
+27:568:44710:11:14:72:75:385:144:Times:144:Times: 
+27:569:44710:14:0:72:360:371:144:Times:144:Times:  
+27:570:44712:0:0:102:107:436:81:g_d0_f7:81:g_d0_f7:0
+27:571:44713:0:0:102:107:466:81:g_d0_f7:81:g_d0_f7:5
+27:572:44714:0:0:97:106:496:81:g_d0_f7:81:g_d0_f7:10
+27:573:44716:0:0:97:106:526:81:g_d0_f7:81:g_d0_f7:15
+27:574:44718:0:0:97:106:556:81:g_d0_f7:81:g_d0_f7:20
+27:575:44720:0:0:97:106:586:81:g_d0_f7:81:g_d0_f7:25
+27:576:44722:0:0:97:106:616:81:g_d0_f7:81:g_d0_f7:30
+27:577:44724:0:221:97:106:646:81:g_d0_f7:81:g_d0_f7:35
+27:578:44726:221:15:109:564:425:81:g_d0_f2:81:g_d0_f7:‐200 20406080
+27:579:44761:15:0:258:350:410:100:g_d0_f7:100:g_d0_f7:Value of Statistical Life
+28:580:44790:0:13:287:326:708:144:Times:144:Times:Table 1 
+28:581:44798:13:14:205:409:695:144:Times:144:Times:Sample Characteristics for Four Samplesa 
+28:582:44838:14:14:306:309:681:144:Times:144:Times: 
+28:583:44838:14:16:77:527:667:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+28:584:44883:16:16:77:518:651:144:Times:144:Times:VSL ($ millions) 12.040 11.653 11.480 9.561 
+28:585:44927:16:16:77:664:635:144:Times:144:Times:                                                (13.098)                                                (11.611)                                                (11.127)                                                (6.085)                                                
+28:586:45198:16:16:77:518:619:144:Times:144:Times:Std. Error 3.839 3.620 3.549 2.826 
+28:587:45233:16:16:77:670:603:144:Times:144:Times:                                                  (4.967)                                                  (4.450)                                                  (4.274)                                                  (2.168)                                                  
+28:588:45511:16:16:77:621:587:144:Times:144:Times:Variance                                   38.778                                   32.531                                   30.548                                   12.570                                   
+28:589:45718:16:16:77:658:571:144:Times:144:Times:                                              (135.925)                                              (117.498)                                              (111.537)                                              (19.881)                                              
+28:590:45983:16:15:77:643:555:144:Times:144:Times:CFOI                                           0.077                                           0.321                                           0.288                                           0.436                                           
+28:591:46222:15:16:77:670:540:144:Times:144:Times:                                                  (0.270)                                                  (0.471)                                                  (0.457)                                                  (0.502)                                                  
+28:592:46500:16:16:77:518:524:144:Times:144:Times:Ln Income 10.441 10.498 10.446 10.616 
+28:593:46538:16:16:77:670:508:144:Times:144:Times:                                                  (0.482)                                                  (0.431)                                                  (0.627)                                                  (0.176)                                                  
+28:594:46816:16:16:77:518:492:144:Times:144:Times:Workers’ Compensation 0.205 0.151 0.186 0.205 
+28:595:46862:16:16:77:670:476:144:Times:144:Times:                                                  (0.409)                                                  (0.361)                                                  (0.393)                                                  (0.409)                                                  
+28:596:47140:16:16:77:634:460:144:Times:144:Times:N                                               39                                               53                                               59                                               39                                               
+28:597:47384:16:9:306:309:444:144:Times:144:Times: 
+28:598:47384:9:19:72:535:435:64:Times:144:Times:a Sample 1 is from Bellavance, Dionne, and Lebeau (2009); Sample 2 augments the Bellavance, 
+28:599:47476:19:13:72:524:416:144:Times:144:Times:Dionne, and Lebeau (2009) sample with additional U.S. studies using CFOI fatality rate data; 
+28:600:47569:13:14:72:533:403:144:Times:144:Times:Sample 3 augments Sample 2 with studies in Viscusi and Aldy (2003) that were not included in 
+28:601:47662:14:14:72:439:389:144:Times:144:Times:Sample 2; and Sample 4 restricts Sample 3 to those studies using U.S. data.  
+28:602:47739:14:14:72:75:375:144:Times:144:Times: 
+28:603:47739:14:0:72:360:361:144:Times:144:Times:  
+29:604:47745:0:13:287:326:708:144:Times:144:Times:Table 2 
+29:605:47753:13:14:138:476:695:144:Times:144:Times:Basic WLS VSL Regressions with Standard Errors for Four Samplesa 
+29:606:47817:14:14:72:75:681:144:Times:144:Times: 
+29:607:47817:14:16:72:309:667:144:Times:144:Times:Panel A: Basic WLS Regressions with Std. Error 
+29:608:47864:16:17:72:522:651:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+29:609:47909:17:16:72:584:634:144:Times:144:Times:Intercept                          1.026                          1.162                          1.087                          1.257                          
+29:610:48068:16:15:72:626:618:144:Times:144:Times:                                       (0.194)***                                       (0.219)***                                       (0.165)***                                       (1.133)                                       
+29:611:48300:15:16:72:509:603:144:Times:144:Times:Std. Error 3.201 3.411 3.441 3.326 
+29:612:48335:16:16:71:644:587:144:Times:144:Times:                                       (0.463)***                                       (0.386)***                                       (0.353)***                                       (0.636)***                                       
+29:613:48570:16:16:71:609:571:144:Times:144:Times:R2                                    0.49                                    0.51                                    0.54                                    0.41                                    
+29:614:48768:16:16:72:509:555:144:Times:144:Times:VSL ($ millions) 1.026 1.162 1.087 1.257 
+29:615:48809:16:16:72:627:539:144:Times:144:Times:                                       (0.194)***                                       (0.219)***                                       (0.165)***                                       (1.133)                                       
+29:616:49041:16:16:72:536:523:144:Times:144:Times:CI VSL (0.633, 1.418) (0.723, 1.600) (0.757, 1.417) (-1.038, 3.552) 
+29:617:49109:16:16:72:607:507:144:Times:144:Times:     
+29:618:49114:16:16:72:360:491:144:Times:144:Times:Panel B: Basic WLS Regressions with Std. Error and CFOI 
+29:619:49170:16:17:72:522:475:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+29:620:49215:17:16:72:584:458:144:Times:144:Times:Intercept                          0.977                          1.042                          1.015                          -0.250                          
+29:621:49375:16:16:72:626:442:144:Times:144:Times:                                       (0.217)***                                       (0.195)***                                       (0.151)***                                       (0.461)                                       
+29:622:49607:16:15:72:509:426:144:Times:144:Times:Std. Error 3.037 2.853 2.924 3.096 
+29:623:49642:15:16:71:644:411:144:Times:144:Times:                                       (0.452)***                                       (0.385)***                                       (0.347)***                                       (0.390)***                                       
+29:624:49877:16:16:71:599:395:144:Times:144:Times:CFOI                               2.539                               3.027                               2.981                               4.069                               
+29:625:50056:16:16:71:644:379:144:Times:144:Times:                                       (1.470)*                                       (0.760)***                                       (0.732)***                                       (0.759)***                                       
+29:626:50289:16:16:71:609:363:144:Times:144:Times:R2                                    0.53                                    0.61                                    0.63                                    0.66                                    
+29:627:50487:16:16:72:509:347:144:Times:144:Times:VSL ($ millions) 3.516 4.069 3.995 3.819 
+29:628:50528:16:16:72:645:331:144:Times:144:Times:                                       (1.449)**                                       (0.739)***                                       (0.721)***                                       (0.689)***                                       
+29:629:50762:16:16:72:534:315:144:Times:144:Times: CI VSL (0.577, 6.455) (2.585, 5.552) (2.550, 5.440) (2.422, 5.216) 
+29:630:50829:16:9:72:75:299:144:Times:144:Times: 
+29:631:50829:9:19:72:516:290:64:Times:144:Times:a Robust standard errors are in parentheses. Statistical significance at the *0.10 level, **0.05 
+29:632:50926:19:13:72:388:271:144:Times:144:Times:level, and ***0.01 level. CI is the 95 percent confidence interval. 
+29:633:50994:13:14:72:75:258:144:Times:144:Times: 
+29:634:50994:14:14:72:75:244:144:Times:144:Times: 
+29:635:50994:14:0:72:360:230:144:Times:144:Times:  
+30:636:51000:0:13:287:326:708:144:Times:144:Times:Table 3 
+30:637:51008:13:14:154:460:695:144:Times:144:Times:Basic WLS VSL Regressions with Variance for Four Samplesa 
+30:638:51065:14:14:306:309:681:144:Times:144:Times: 
+30:639:51065:14:16:72:305:667:144:Times:144:Times:Panel A: Basic WLS Regressions with Variance 
+30:640:51110:16:17:72:522:651:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+30:641:51155:17:16:72:575:634:144:Times:144:Times:Intercept                          2.114                          2.487                          2.301                          3.711                          
+30:642:51314:16:15:72:635:618:144:Times:144:Times:                                       (0.462)***                                       (0.652)***                                       (0.462)***                                       (1.058)***                                       
+30:643:51549:15:16:72:575:603:144:Times:144:Times:Variance                          0.256                          0.282                          0.300                          0.465                          
+30:644:51707:16:16:72:635:587:144:Times:144:Times:                                       (0.109)**                                       (0.110)**                                       (0.113)***                                       (0.105)***                                       
+30:645:51940:16:16:72:600:571:144:Times:144:Times:R2                                    0.18                                    0.17                                    0.18                                    0.22                                    
+30:646:52138:16:16:72:500:555:144:Times:144:Times:VSL ($ millions) 2.114 2.487 2.301 3.711 
+30:647:52179:16:16:72:636:539:144:Times:144:Times:                                       (0.462)***                                       (0.652)***                                       (0.462)***                                       (1.058)***                                       
+30:648:52414:16:16:72:534:523:144:Times:144:Times:CI VSL (1.179, 3.050) (1.177, 3.796) (1.376, 3.225) (1.568, 5.854) 
+30:649:52481:16:16:72:593:507:144:Times:144:Times:     
+30:650:52486:16:16:72:356:491:144:Times:144:Times:Panel B: Basic WLS Regressions with Variance and CFOI 
+30:651:52540:16:17:72:522:475:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+30:652:52585:17:16:72:575:458:144:Times:144:Times:Intercept                          1.944                          1.944                          1.879                          1.827                          
+30:653:52744:16:16:72:629:442:144:Times:144:Times:                                       (0.372)***                                       (0.368)***                                       (0.266)***                                       (0.713)**                                       
+30:654:52978:16:15:72:575:426:144:Times:144:Times:Variance                          0.253                          0.252                          0.270                          0.461                          
+30:655:53136:15:16:72:635:411:144:Times:144:Times:                                       (0.108)***                                       (0.095)**                                       (0.099)***                                       (0.089)***                                       
+30:656:53370:16:16:72:591:395:144:Times:144:Times:CFOI                               3.937                               4.663                               4.702                               4.461                               
+30:657:53549:16:16:72:635:379:144:Times:144:Times:                                       (1.667)**                                       (0.864)***                                       (0.824)***                                       (1.010)***                                       
+30:658:53783:16:16:72:600:363:144:Times:144:Times:R2                                    0.27                                    0.43                                    0.43                                    0.53                                    
+30:659:53981:16:16:72:500:347:144:Times:144:Times:VSL ($ millions) 5.881 6.608 6.581 6.288 
+30:660:54022:16:16:72:636:331:144:Times:144:Times:                                       (1.626)***                                       (0.790)***                                       (0.786)***                                       (0.752)***                                       
+30:661:54257:16:16:72:534:315:144:Times:144:Times:CI VSL (2.583, 9.179) (5.020, 8.195) (5.007, 8.155) (4.763, 7.814) 
+30:662:54324:16:9:72:75:299:144:Times:144:Times: 
+30:663:54324:9:19:72:516:290:64:Times:144:Times:a Robust standard errors are in parentheses. Statistical significance at the *0.10 level, **0.05 
+30:664:54421:19:13:72:388:271:144:Times:144:Times:level, and ***0.01 level. CI is the 95 percent confidence interval. 
+30:665:54489:13:14:72:75:258:144:Times:144:Times: 
+30:666:54489:14:14:72:75:244:144:Times:144:Times: 
+30:667:54489:14:0:72:360:230:144:Times:144:Times:  
+31:668:54495:0:13:287:326:708:144:Times:144:Times:Table 4 
+31:669:54503:13:14:193:421:695:144:Times:144:Times:Full WLS VSL Regressions for Four Samplesa 
+31:670:54545:14:14:72:75:681:144:Times:144:Times: 
+31:671:54545:14:16:72:303:667:144:Times:144:Times:Panel A: Full WLS Regressions with Std. Error 
+31:672:54591:16:17:72:527:651:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+31:673:54636:17:16:72:616:634:144:Times:144:Times:Intercept                                   -1.925                                   -1.590                                   0.193                                   -11.874                                   
+31:674:54844:16:15:72:566:618:144:Times:144:Times:                 (7.869)                 (6.810)                 (0.857)                 (29.707)                 
+31:675:54958:15:16:72:570:603:144:Times:144:Times:Std.                    Error                    3.027                    2.798                    2.948                     2.927                    
+31:676:55108:16:16:72:566:587:144:Times:144:Times:           (0.532)***           (0.446)***           (0.345)***            (0.478)***           
+31:677:55204:16:16:72:570:571:144:Times:144:Times:CFOI                                        3.966                    3.166                    3.153                     4.133                    
+31:678:55349:16:16:72:680:555:144:Times:144:Times:                                                 (1.477)**                                                 (0.800)***                                                 (0.680)***                                                 (1.048)***                                                 
+31:679:55633:16:16:72:570:539:144:Times:144:Times:Ln                    Income                    0.321                    0.291                    0.105                     0.114                    
+31:680:55782:16:16:72:566:523:144:Times:144:Times:                 (0.840)                 (0.727)                 (0.107)                  (0.274)                 
+31:681:55896:16:16:72:566:507:144:Times:144:Times:Workers’                  Compensation                  -1.881                  -1.534                  -1.425                   -0.729                  
+31:682:56049:16:15:72:560:491:144:Times:144:Times:               (0.950)*               (0.816)*               (0.512)***               (0.920)               
+31:683:56157:15:16:72:570:476:144:Times:144:Times:R2                      0.58                      0.63                      0.66                       0.67                      
+31:684:56286:16:16:72:570:460:144:Times:144:Times:VSL                    ($                    millions)                        5.012                    4.400                    4.175                     4.194                    
+31:685:56465:16:16:72:566:444:144:Times:144:Times:           (1.650)***           (0.664)***           (0.630)***            (0.582)***           
+31:686:56561:16:16:72:538:428:144:Times:144:Times:CI VSL (1.659, 8.366) (3.066, 5.734) (2.912, 5.438) (3.010, 5.377) 
+31:687:56628:16:16:72:576:412:144:Times:144:Times:      
+31:688:56633:16:17:72:298:396:144:Times:144:Times:Panel B: Full WLS Regressions with Variance 
+31:689:56677:17:16:72:527:379:144:Times:144:Times:Variable Sample 1 Sample 2 Sample 3 Sample 4 
+31:690:56722:16:16:72:610:363:144:Times:144:Times:Intercept                                 -19.871                                 -17.318                                 -1.707                                 5.764                                 
+31:691:56921:16:16:72:662:347:144:Times:144:Times:                                                 (7.248)**                                                 (6.194)***                                                 (1.789)                                                 (33.096)                                                 
+31:692:57200:16:16:72:570:331:144:Times:144:Times:Variance                    0.217                    0.219                    0.258                     0.416                    
+31:693:57329:16:15:72:684:315:144:Times:144:Times:                                                  0.093**                                                  (0.082)**                                                  (0.096)***                                                  (0.084)***                                                  
+31:694:57615:15:16:72:570:300:144:Times:144:Times:CFOI                    5.005                    3.690                    4.425                     3.982                    
+31:695:57740:16:16:72:566:284:144:Times:144:Times:           (1.723)***           (0.933)***           (0.866)***            (1.223)***           
+31:696:57836:16:16:72:570:268:144:Times:144:Times:Ln                    Income                    2.272                    2.003                    0.409                    -0.261                    
+31:697:57985:16:16:72:548:252:144:Times:144:Times:           (0.769)***           (0.657)***           (0.217)*           (0.305)           
+31:698:58075:16:16:72:566:236:144:Times:144:Times:Workers’                  Compensation                  -3.000                  -2.356                  -1.245                   -1.929                  
+31:699:58228:16:16:72:668:220:144:Times:144:Times:                                                 (1.155)**                                                 (0.657)***                                                 (0.813)                                                 (1.032)*                                                 
+31:700:58507:16:16:72:570:204:144:Times:144:Times:R2                      0.42                      0.52                      0.47                       0.58                      
+31:701:58636:16:15:72:570:188:144:Times:144:Times:VSL                    ($                    millions)                        8.247                    7.043                    6.753                     6.584                    
+31:702:58815:15:16:72:566:173:144:Times:144:Times:           (1.810)***           (0.753)***           (0.731)***            (0.728)***           
+31:703:58911:16:17:72:538:157:144:Times:144:Times:CI VSL (4.568, 11.926) (5.528, 8.557) (5.288, 8.218) (5.105, 8.063) 
+31:704:58979:17:9:72:75:140:144:Times:144:Times: 
+31:705:58979:9:18:72:516:131:64:Times:144:Times:a Robust standard errors are in parentheses. Statistical significance at the *0.10 level, **0.05 
+31:706:59076:18:14:72:388:113:144:Times:144:Times:level, and ***0.01 level. CI is the 95 percent confidence interval. 
+31:707:59144:14:0:72:360:99:144:Times:144:Times:  
+32:708:59150:0:13:287:326:708:144:Times:144:Times:Table 5 
+32:709:59158:13:14:195:419:695:144:Times:144:Times:VSL Regressions for Sample of CFOI Studies 
+32:710:59201:14:14:306:309:681:144:Times:144:Times: 
+32:711:59201:14:16:72:449:667:144:Times:144:Times:Panel A: CFOI VSL Regressions for Sample of CFOI Studies with Std. Errora 
+32:712:59274:16:17:72:527:651:144:Times:144:Times:Variable WLS Fixed Effects Random Effects 
+32:713:59316:17:16:72:608:634:144:Times:144:Times:Intercept                                       8.967                                       12.117                                       10.603                                       
+32:714:59498:16:15:72:667:618:144:Times:144:Times:                                                    (0.427)***                                                    (0.080)***                                                    (0.992)***                                                    
+32:715:59736:15:16:71:668:603:144:Times:144:Times:                                                    [0.116]***                                                    [1.995]***                                                    [1.630]***                                                    
+32:716:59974:16:16:71:492:587:144:Times:144:Times:Std. Error 0.735 0.303 0.399 
+32:717:60003:16:16:71:667:571:144:Times:144:Times:                                                    (0.188)***                                                    (0.080)***                                                    (0.077)***                                                    
+32:718:60241:16:16:71:650:555:144:Times:144:Times:                                                    [0.284]**                                                    [0.319]                                                    [0.324]                                                    
+32:719:60472:16:16:71:632:539:144:Times:144:Times:R2                                                  0.03                                                  0.17                                                  0.17                                                  
+32:720:60686:16:16:72:492:523:144:Times:144:Times:VSL ($ millions) 8.967 12.117 10.603 
+32:721:60723:16:16:72:668:507:144:Times:144:Times:                                                    (0.427)***                                                    (0.611)***                                                    (0.992)***                                                    
+32:722:60961:16:15:72:668:491:144:Times:144:Times:                                                    [0.116]                                                    [1.995]***                                                    [1.630]***                                                    
+32:723:61196:15:16:72:525:476:144:Times:144:Times:CI VSL (8.127, 9.807) (10.916, 13.319) (8.660, 12.547) 
+32:724:61251:16:17:72:525:460:144:Times:144:Times: [8.718, 9.217] [7.838, 16.396] [7.409, 13.798] 
+32:725:61298:17:16:72:551:443:144:Times:144:Times:    
+32:726:61302:16:16:72:444:427:144:Times:144:Times:Panel B: CFOI VSL Regressions for Sample of CFOI Studies with Variancea 
+32:727:61373:16:16:72:527:411:144:Times:144:Times:Variable WLS Fixed Effects Random Effects 
+32:728:61415:16:16:72:608:395:144:Times:144:Times:Intercept                                       9.023                                       13.521                                       12.146                                       
+32:729:61597:16:16:72:667:379:144:Times:144:Times:                                                    (0.420)***                                                    (0.393)***                                                    (1.131)***                                                    
+32:730:61835:16:16:72:668:363:144:Times:144:Times:                                                    [0.134]***                                                    [0.708]***                                                    [1.179]***                                                    
+32:731:62073:16:16:72:607:347:144:Times:144:Times:Variance                                       0.074                                       0.007                                       0.009                                       
+32:732:62252:16:16:72:667:331:144:Times:144:Times:                                                    (0.010)***                                                    (0.003)***                                                    (0.003)***                                                    
+32:733:62490:16:15:72:650:315:144:Times:144:Times:                                                    [0.026]**                                                    [0.011]                                                    [0.011]                                                    
+32:734:62721:15:16:72:632:300:144:Times:144:Times:R2                                                  0.02                                                  0.08                                                  0.08                                                  
+32:735:62935:16:16:72:492:284:144:Times:144:Times:VSL ($ millions) 9.023 13.521 12.146 
+32:736:62972:16:16:72:668:268:144:Times:144:Times:                                                    (0.420)***                                                    (0.393)***                                                    (1.131)***                                                    
+32:737:63210:16:16:72:650:252:144:Times:144:Times:                                                    [0.134]                                                    [0.708]***                                                    [1.179]                                                    
+32:738:63442:16:16:72:525:236:144:Times:144:Times:CI VSL (8.198, 9.847) (12.749, 14.293) (9.929, 14.363) 
+32:739:63497:16:12:72:525:220:144:Times:144:Times: [8.735, 9.311] [12.002, 15.040] [9.835, 14.456] 
+32:740:63545:12:13:72:74:208:64:Times:64:Times: 
+32:741:63545:13:19:72:532:195:64:Times:144:Times:a Robust standard errors are reported in parentheses. All bracketed standard errors are clustered 
+32:742:63643:19:14:72:541:176:144:Times:144:Times:by article.  Statistical significance at the *0.10 level, **0.05 level, and ***0.01 level. CI is the 95 
+32:743:63747:14:13:72:520:162:144:Times:144:Times:percent interval in parentheses for the robust standard errors and in brackets for the clustered 
+32:744:63844:13:0:72:154:149:144:Times:144:Times:standard errors.   

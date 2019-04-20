@@ -1,0 +1,1828 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:525:610:12:Times:12:Times:C:OPTIMAL TAXATION AND SOCIAL INSURANCE WITH ENDOGENOUS PRIVATE
+1:2:86:14:28:306:340:596:12:Times:12:Times:C:INSURANCE
+1:3:95:28:14:306:332:568:12:Times:12:Times:C:Raj Chetty
+1:4:105:14:28:306:345:554:12:Times:12:Times:C:Emmanuel Saez
+1:5:118:28:14:306:359:526:12:Times:12:Times:C:Working Paper 14403
+1:6:137:14:42:306:393:512:12:Times:12:Times:C:http://www.nber.org/papers/w14403
+1:7:170:42:14:306:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:206:14:14:306:374:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:231:14:14:306:362:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:250:14:186:306:339:428:12:Times:12:Times:C:October 2008
+1:11:262:186:14:72:540:242:12:Times:12:Times:C:We thank Andrew Clark, Amy Finkelstein, Roger Gordon, Ken Judd, Narayana Kocherlakota, Pierre
+1:12:355:14:14:72:540:228:12:Times:12:Times:C:Pestieau, and conference participants at the NBER Trans-Atlantic Public Economics Seminar for very
+1:13:453:14:14:72:540:214:12:Times:12:Times:C:helpful comments and discussions.  Financial support from NSF Grant SES-0134946, the Sloan Foundation,
+1:14:555:14:14:72:540:200:12:Times:12:Times:C:and the Hoover Institution is gratefully acknowledged. The views expressed herein are those of the
+1:15:653:14:28:72:535:186:12:Times:12:Times:C:author(s) and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:16:748:28:14:72:540:158:12:Times:12:Times:C:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:17:844:14:14:72:540:144:12:Times:12:Times:C:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:18:939:14:28:72:169:130:12:Times:12:Times:C:NBER publications.
+1:19:957:28:14:72:540:102:12:Times:12:Times:C:© 2008 by Raj Chetty and Emmanuel Saez. All rights reserved. Short sections of text, not to exceed
+1:20:1055:14:14:72:540:88:12:Times:12:Times:C:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:21:1159:14:0:72:177:74:12:Times:12:Times:C:is given to the source.
+2:22:1182:0:14:72:433:700:12:Times:12:Times:C:Optimal Taxation and Social Insurance with Endogenous Private Insurance
+2:23:1253:14:14:72:225:686:12:Times:12:Times:C:Raj Chetty and Emmanuel Saez
+2:24:1281:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 14403
+2:25:1309:14:14:72:138:658:12:Times:12:Times:C:October 2008
+2:26:1321:14:28:72:147:644:12:Times:12:Times:C:JEL No. D6,H0
+2:27:1334:28:28:273:338:616:12:Times:12:Times:C:ABSTRACT
+2:28:1342:28:14:72:540:588:12:Times:12:Times:C:This paper characterizes the welfare gains from redistributive taxation and social insurance in an environment
+2:29:1452:14:14:72:540:574:12:Times:12:Times:C:where the private sector provides partial insurance.  We analyze stylized models in which adverse
+2:30:1549:14:14:72:540:560:12:Times:12:Times:C:selection, pre-existing information, or imperfect optimization in private insurance markets create a
+2:31:1649:14:14:72:540:546:12:Times:12:Times:C:role for government intervention. We derive simple formulas that map reduced-form empirical estimates
+2:32:1750:14:14:72:540:532:12:Times:12:Times:C:into quantitative predictions for optimal tax and social insurance policy. Applications to unemployment
+2:33:1853:14:14:72:540:518:12:Times:12:Times:C:and health insurance show that taking private market insurance into account matters significantly for
+2:34:1954:14:42:72:452:504:12:Times:12:Times:C:optimal benefit levels given existing empirical estimates of the key parameters.
+2:35:2034:42:14:72:124:462:12:Times:12:Times:C:Raj Chetty
+2:36:2044:14:14:72:198:448:12:Times:12:Times:C:Department of Economics
+2:37:2067:14:14:72:236:434:12:Times:12:Times:C:University of California, Berkeley
+2:38:2101:14:14:72:179:420:12:Times:12:Times:C:549 Evans Hall #3880
+2:39:2121:14:16:72:171:406:12:Times:12:Times:C:Berkeley, CA 94720
+2:40:2139:16:14:72:127:390:12:Times:12:Times:C:and NBER 
+2:41:2148:14:28:72:200:376:12:Times:12:Times:C:chetty@econ.berkeley.edu
+2:42:2172:28:14:72:150:348:12:Times:12:Times:C:Emmanuel Saez
+2:43:2185:14:14:72:198:334:12:Times:12:Times:C:Department of Economics
+2:44:2208:14:14:72:236:320:12:Times:12:Times:C:University of California, Berkeley
+2:45:2242:14:14:72:179:306:12:Times:12:Times:C:549 Evans Hall #3880
+2:46:2262:14:14:72:171:292:12:Times:12:Times:C:Berkeley, CA 94720
+2:47:2280:14:14:72:124:278:12:Times:12:Times:C:and NBER
+2:48:2288:14:0:72:191:264:12:Times:12:Times:C:saez@econ.berkeley.edu
+3:49:2310:0:31:74:187:700:14:g_d0_f2:14:g_d0_f2:C:1  Introduction
+3:50:2325:31:20:74:519:669:11:g_d0_f3:11:g_d0_f3:B:A recent literature in public economics has begun to integrate the theory of optimal taxation
+3:51:2418:20:21:74:519:649:11:g_d0_f3:11:g_d0_f3:B:and social insurance with empirical evidence on behavioral responses to these policies. Several
+3:52:2513:21:20:74:519:628:11:g_d0_f3:11:g_d0_f3:B:studies have proposed ìsu¢ cient statisticîformulas to map elasticities estimated in the mod-
+3:53:2606:20:20:74:519:608:11:g_d0_f3:11:g_d0_f3:B:ern program evaluation literature into predictions about the welfare consequences of policies
+3:54:2699:20:21:74:519:588:11:g_d0_f3:11:g_d0_f3:B:(e.g., Diamond 1998, Saez 2001, Shimer and Werning 2008, Chetty 2008a-b). One important
+3:55:2786:21:20:74:519:567:11:g_d0_f3:11:g_d0_f3:B:limitation of existing su¢ cient statistic formulas is that they do not allow for private market
+3:56:2882:20:20:74:519:547:11:g_d0_f3:11:g_d0_f3:B:insurance, implicitly assuming that the government is the sole provider of insurance. Previous
+3:57:2976:20:21:74:519:527:11:g_d0_f3:11:g_d0_f3:B:theoretical and empirical studies have emphasized that the existence of private insurance can
+3:58:3069:21:20:74:519:506:11:g_d0_f3:11:g_d0_f3:B:lower the optimal level of social insurance.1However, there is no method of mapping empir-
+3:59:3159:20:20:74:519:486:11:g_d0_f3:11:g_d0_f3:B:ical evidence such as that of Cutler and Gruber (1996a) into quantitative statements about
+3:60:3249:20:21:74:519:466:11:g_d0_f3:11:g_d0_f3:B:the optimal level of government intervention in models such as that analyzed by Golosov and
+3:61:3340:21:20:74:157:445:11:g_d0_f3:11:g_d0_f3:B:Tsyvinski (2007).
+3:62:3357:20:20:91:519:425:11:g_d0_f3:11:g_d0_f3:A:The paper takes a step toward bridging this gap. We develop formulas for optimal taxation
+3:63:3446:20:21:74:519:405:11:g_d0_f3:11:g_d0_f3:B:and social insurance in stylized models that allow for partial private insurance. The formulas
+3:64:3540:21:20:74:519:384:11:g_d0_f3:11:g_d0_f3:B:are functions of reduced-form parameters that are frequently estimated in empirical studies,
+3:65:3632:20:20:74:519:364:11:g_d0_f3:11:g_d0_f3:B:and can therefore be easily adapted to analyze policies ranging from optimal tax and transfer
+3:66:3725:20:21:74:296:344:11:g_d0_f3:11:g_d0_f3:B:policy to unemployment and health insurance.
+3:67:3769:21:20:91:519:323:11:g_d0_f3:11:g_d0_f3:A:The starting point for our analysis is the speciÖcation of the limits of private market insur-
+3:68:3863:20:20:74:519:303:11:g_d0_f3:11:g_d0_f3:B:ance and the potential role for government intervention.  There are at least Öve reasons that
+3:69:3956:20:21:74:519:283:11:g_d0_f3:11:g_d0_f3:B:government intervention could improve upon private insurance markets. First, private markets
+3:70:4048:21:20:74:520:262:11:g_d0_f3:11:g_d0_f3:B:can only insure against shocks that occurafteragents purchase private insurance. Only the
+3:71:4137:20:20:74:519:242:11:g_d0_f3:11:g_d0_f3:B:government can provide redistribution across types revealed before private insurance contracts
+3:72:4231:20:21:74:519:222:11:g_d0_f3:11:g_d0_f3:B:are signed. Second, informational asymmetries can lead to market unravelling through adverse
+3:73:4323:21:20:74:519:201:11:g_d0_f3:11:g_d0_f3:B:selection (Akerlof 1970). Third, even when private markets function perfectly, individuals may
+3:74:4417:20:20:74:519:181:11:g_d0_f3:11:g_d0_f3:B:su§er from behavioral biases such as myopia or overconÖdence that lead them to underinsure
+3:75:4507:20:21:74:519:161:11:g_d0_f3:11:g_d0_f3:B:relative to the optimum (Kaplow 1991, DellaVigna 2008, Spinnewijn 2008).  Fourth, private
+3:76:4596:21:20:74:519:140:11:g_d0_f3:11:g_d0_f3:B:Örms generally cannot sign exclusive contracts, leading to ine¢ cient outcomes because of mul-
+3:77:4690:20:16:74:519:120:11:g_d0_f3:11:g_d0_f3:B:tiple dealing (Pauly 1974).  Finally, some studies have argued that the administrative and
+3:78:4780:16:15:87:519:104:6:g_d0_f3:9:g_d0_f3:F:1For example, Golosov and Tsyvinski (2007) make this point theoretically.  Cutler and Gruber (1996a-b)
+3:79:4882:15:0:74:400:89:9:g_d0_f3:9:g_d0_f3:F:present evidence that crowdout of private insurance is substantial in health care.
+4:80:4965:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:marketing costs of private insurance exceed those of public insurance (Woolhandler, Campbell,
+4:81:5058:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:and Himmelstein 2003; Reinhardt, Hussey, and Anderson 2004) because of increasing returns
+4:82:5147:21:20:74:245:659:11:g_d0_f3:11:g_d0_f3:B:and zero-sum strategic competition.
+4:83:5182:20:20:91:519:639:11:g_d0_f3:11:g_d0_f3:A:In this paper, we characterize the welfare gains from government intervention under the
+4:84:5269:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:Örst three private market limitations.2We analyze models in which the agentís earnings vary
+4:85:5360:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:across states.  This variation can be interpreted as uncertainty due to shocks, as in a social
+4:86:5454:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:insurance problem, or as variation in earnings ability behind the veil of ignorance, as in an
+4:87:5547:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:optimal taxation problem.  The model permits suboptimal choice of private insurance as well
+4:88:5638:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:as market limitations due to pre-existing information or adverse selection. We derive a formula
+4:89:5733:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:for the welfare gain from increasing the government tax rate (or social insurance beneÖt) that
+4:90:5827:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:depends on Öve parameters: (1) the variation in consumption across states and risk types,
+4:91:5916:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:(2) the curvature of the utility function, (3) the elasticity of e§ort with respect to the tax
+4:92:6010:20:20:74:519:456:11:g_d0_f3:11:g_d0_f3:B:or beneÖt rate, (4) the size of the private insurance market, and (5) the crowdout of private
+4:93:6103:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:insurance by public insurance.  The Örst three parameters are standard elements of su¢ cient
+4:94:6195:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:statistic formulas for optimal taxation and social insurance without private insurance; the last
+4:95:6291:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:two are the new elements. In addition to o§ering a method of making quantitative predictions
+4:96:6383:20:20:74:382:375:11:g_d0_f3:11:g_d0_f3:B:about welfare gains, our analysis yields three qualitative lessons.
+4:97:6450:20:21:91:519:355:11:g_d0_f3:11:g_d0_f3:A:First, and most importantly, standard optimal tax and social insurance formulas overstate
+4:98:6539:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:the optimal degree of redistribution in the presence of private insurance that generates moral
+4:99:6633:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:hazard.  A planner may observe substantial income inequality and conclude based on classic
+4:100:6723:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:optimal tax results that redistributive taxation would improve welfare.  However, if the ob-
+4:101:6815:21:20:74:519:273:11:g_d0_f3:11:g_d0_f3:B:served earnings distribution already reáects implicit insurance provided by the private sector
+4:102:6909:20:20:74:519:253:11:g_d0_f3:11:g_d0_f3:B:ñe.g. through wage compression by Örms ñthen making the redistribution through taxation
+4:103:6996:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:could reduce welfare via its e§ects on the private insurerís budget. In the extreme case where
+4:104:7090:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:private insurance markets function optimally, the planner would end up strictly reducing wel-
+4:105:7183:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:fare by implementing such redistributive taxes (Kaplow 1991).  Intuitively, the government
+4:106:7273:20:21:74:519:172:11:g_d0_f3:11:g_d0_f3:B:exacerbates the moral hazard distortion created by private-sector insurance, and must there-
+4:107:7365:21:20:74:519:151:11:g_d0_f3:11:g_d0_f3:B:fore take into account the amount of private insurance and degree of crowdout to calculate the
+4:108:7459:20:16:74:519:131:11:g_d0_f3:11:g_d0_f3:B:optimal policy. Taking the observed earnings distribution as a reáection of marginal products
+4:109:7552:16:15:87:519:115:6:g_d0_f3:9:g_d0_f3:F:2We do not consider multiple dealing as it is treated in detail by Pauly (1974). We also do not consider
+4:110:7656:15:11:74:519:100:9:g_d0_f3:9:g_d0_f3:F:administrative costs, but conjecture that it would be straightforward to extend the formulas we develop to
+4:111:7762:11:0:74:435:89:9:g_d0_f3:9:g_d0_f3:F:incorporate such costs using estimates of loading factors for public and private insurance.
+5:112:7854:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:ñas is standard practice both in the theory of optimal taxation and in policy debates ñmay
+5:113:7944:20:21:74:388:680:11:g_d0_f3:11:g_d0_f3:B:therefore lead to misleading conclusions about optimal tax policy.
+5:114:8010:21:20:91:519:659:11:g_d0_f3:11:g_d0_f3:A:The second lesson is that it is important to distinguish private insurance mechanisms that
+5:115:8100:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:generate moral hazard from those that do not.  While ìformalî arms-length insurance con-
+5:116:8188:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:tracts are likely to generate as much moral hazard as public insurance, ìinformalîrisk sharing
+5:117:8282:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:arrangements ñsuch as borrowing from close relatives or relying on spousal labor supply to
+5:118:8372:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:bu§er shocks ñmay involve much less moral hazard. When private insurance does not gener-
+5:119:8460:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:ate moral hazard, the formula for optimal government beneÖts coincides exactly with existing
+5:120:8552:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:formulas that ignore private insurance completely.   This is because the e§ect of informal
+5:121:8642:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:private insurance is already captured in the smaller consumption-smoothing e§ect of public
+5:122:8732:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:insurance. This point is of practical importance because existing empirical studies estimate
+5:123:8824:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:the extent of formal and informal insurance without distinguishing their policy implications
+5:124:8916:20:20:74:518:456:11:g_d0_f3:11:g_d0_f3:B:(e.g. Townsend 1994, Cullen and Gruber 2000, Attanasio and Rios-Rull 2000, Schoeni 2002).
+5:125:9005:20:21:91:519:436:11:g_d0_f3:11:g_d0_f3:A:The third lesson is that even when the level of private insurance enters the formula for
+5:126:9093:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:optimal beneÖts, it matters for a very di§erent reason than what is traditionally emphasized
+5:127:9185:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:in the literature (e.g. Cutler and Gruber 1996a). The conventional wisdom is based on Okunís
+5:128:9277:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:proverbial ìleaky bucket:îmore government expenditure is required to achieve a given increase
+5:129:9370:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:in insurance coverage when there is crowdout of private insurance.  Since the marginal cost
+5:130:9461:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:of public funds exceeds one, this leakage lowers the welfare gain from public insurance. In our
+5:131:9556:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:model, this channel does not operate because a formal private insurance contract generates
+5:132:9646:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:exactly the same moral hazard distortion in e§ort as public insurance. The added deadweight
+5:133:9737:21:20:74:519:273:11:g_d0_f3:11:g_d0_f3:B:burden generated by higher taxes to fund public insurance is exactly o§set by the reduction
+5:134:9828:20:20:74:520:253:11:g_d0_f3:11:g_d0_f3:B:in deadweight burden because of lower formal private insurance premiums.3The reason that
+5:135:9916:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:the level of formal private insurance actually matters is that it imposes a Öscal externality on
+5:136:10012:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:the public sector, as in Pauly (1974), where non-exclusive insurance contracts lead to over-
+5:137:10104:20:20:74:181:192:11:g_d0_f3:11:g_d0_f3:B:provision of insurance.
+5:138:10127:20:21:91:519:172:11:g_d0_f3:11:g_d0_f3:A:To illustrate how our formula can be applied to obtain quantitative predictions about
+5:139:10212:21:20:74:519:151:11:g_d0_f3:11:g_d0_f3:B:optimal policy, we present applications to unemployment insurance (UI) and health insurance.
+5:140:10304:20:16:74:519:131:11:g_d0_f3:11:g_d0_f3:B:In the unemployment application, we focus on severance pay provided by private employers
+5:141:10392:16:15:87:519:115:6:g_d0_f3:9:g_d0_f3:F:3In practice, government insurance programs may be funded using more distortionary tools than private
+5:142:10493:15:11:74:519:100:9:g_d0_f3:9:g_d0_f3:F:insurance programs.  In this case, the deadweight burden o§set is less than 100% and the bucket becomes
+5:143:10596:11:0:74:97:89:9:g_d0_f3:9:g_d0_f3:F:leaky.
+6:144:10603:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:as a form of private insurance.  Severance pay generates moral hazard because it can induce
+6:145:10694:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:workers to shirk on the job, since they do not fully internalize the costs of being laid o§.
+6:146:10786:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:Using variation in UI beneÖt laws across states in the U.S., we estimate that a 10% increase in
+6:147:10881:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:UI beneÖt levels reduces private insurance against job loss (severance pay) by approximately
+6:148:10973:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:7%.  Plugging this estimate into our formula along with other parameter estimates from the
+6:149:11063:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:existing literature, we Önd that there is a fairly wide range of parameters for which standard
+6:150:11157:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:formulas that ignore private insurance and crowdout imply that raising the beneÖt level would
+6:151:11250:20:21:74:307:558:11:g_d0_f3:11:g_d0_f3:B:raise welfare when in fact it would lower welfare.
+6:152:11300:21:20:91:519:537:11:g_d0_f3:11:g_d0_f3:A:Our second application explores the welfare gains from expanding public health insurance
+6:153:11388:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:(e.g. Medicare and Medicaid) using existing estimates of behavioral responses to health insur-
+6:154:11482:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:ance. Calibrations of our formula suggest that the aggregate level of public health insurance is
+6:155:11578:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:near the optimum given the amount of private insurance and its response to public insurance.
+6:156:11670:20:20:74:519:456:11:g_d0_f3:11:g_d0_f3:B:Accounting for private insurance is very important: the standard formula that ignores the
+6:157:11759:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:private insurance provision overstates the welfare gain from an aggregate expansion of public
+6:158:11852:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:health insurance by a factor of more than 100 with existing elasticity estimates. Note that
+6:159:11943:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:these calibration results are based on a representative-agent model with elasticity estimates
+6:160:12036:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:for the aggregate population.  There are likely to be subgroups of the population that are
+6:161:12126:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:underinsured, such as low income individuals, and others that are overinsured.  Our analysis
+6:162:12218:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:should therefore be interpreted not as a policy recommendation but rather as a call for further
+6:163:12313:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:work estimating the key elasticities by subgroup to identify how public health insurance should
+6:164:12408:20:21:74:134:294:11:g_d0_f3:11:g_d0_f3:B:be reformed.
+6:165:12420:21:20:91:519:273:11:g_d0_f3:11:g_d0_f3:A:This paper builds on and relates to several strands of the literature on optimal insurance.
+6:166:12511:20:20:74:519:253:11:g_d0_f3:11:g_d0_f3:B:One theoretical literature has considered optimal insurance and government redistribution
+6:167:12600:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:problems jointly (e.g., Blomqvist and Horn, 1984, Rochet, 1991, Cremer and Pestieau, 1996).
+6:168:12691:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:These papers analyze models with heterogeneity in ability to earn (as in Mirrlees 1971) coupled
+6:169:12786:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:with ex-post shocks to income (such as a health shock).  In these models, the government is
+6:170:12877:20:21:74:519:172:11:g_d0_f3:11:g_d0_f3:B:the sole provider of insurance, and chooses both an optimal income tax schedule and a social
+6:171:12969:21:20:74:519:151:11:g_d0_f3:11:g_d0_f3:B:insurance program.4In contrast, our paper considers a simpler model with a single source of
+6:172:13060:20:16:74:519:131:11:g_d0_f3:11:g_d0_f3:B:earnings heterogeneity, which does not distinguish between risk and ability but allows public
+6:173:13153:16:15:87:519:115:6:g_d0_f3:9:g_d0_f3:F:4An exception is Boadway et al. (2006), who allow for private insurance. However, they assume that private
+6:174:13259:15:11:74:519:100:9:g_d0_f3:9:g_d0_f3:F:insurers observe ability while the government does not.  In our model, private and public insurers have the
+6:175:13366:11:0:74:201:89:9:g_d0_f3:9:g_d0_f3:F:same informational constraints.
+7:176:13398:0:20:74:230:700:11:g_d0_f3:11:g_d0_f3:B:and private insurance to coexist.
+7:177:13431:20:21:91:519:680:11:g_d0_f3:11:g_d0_f3:A:Models with private and public insurance have been considered in the literature on optimal
+7:178:13521:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:health insurance (e.g., Besley 1989, Selden 1993, Blomqvist and Johansson 1997, Petretto
+7:179:13609:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:1999, Encinosa 2003, Barrigozzi 2006).  We develop empirically implementable formulas for
+7:180:13698:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:the welfare gains from public insurance in such models.  Our formulas help to connect the
+7:181:13787:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:theoretical work to the corresponding empirical literature on the interaction between private
+7:182:13880:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:and public health insurance (e.g., Ginsburg 1988, Taylor et al. 1988, Wolfe and Godderis 1991,
+7:183:13974:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:Cutler and Gruber 1996a-b, Finkelstein 2004).  The formulas we derive are in the same spirit
+7:184:14066:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:as recent su¢ cient statistic formulas in that they shed light on the essential features of the
+7:185:14161:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:models that matter for welfare analysis.  However, unlike typical su¢ cient statistic results,
+7:186:14255:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:the formulas we derive here are based on stylized models and therefore may not be fully robust
+7:187:14349:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:to modiÖcations of the primitive structure, an issue that we discuss in greater detail in the
+7:188:14442:20:20:74:126:456:11:g_d0_f3:11:g_d0_f3:B:conclusion.
+7:189:14453:20:21:91:519:436:11:g_d0_f3:11:g_d0_f3:A:The most closely related paper to our study is that of Einav, Finkelstein, and Cullen (2008),
+7:190:14546:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:who develop a di§erent method of characterizing welfare in a model with adverse selection in
+7:191:14638:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:the private insurance market.  Einav et al. show that the slopes of the demand and cost
+7:192:14725:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:curves for private insurance are together su¢ cient statistics for welfare. Our formula depends
+7:193:14820:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:instead on ex-post behavioral responses to change in government beneÖt levels.  The two
+7:194:14907:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:formulas are complements.  Einav et al.ís method is easier to implement when exogenous
+7:195:14993:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:price variation in insurance markets and demand and cost data are available; our formulas
+7:196:15082:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:may be easier to implement when there is variation in government beneÖt levels that permits
+7:197:15173:21:20:74:519:273:11:g_d0_f3:11:g_d0_f3:B:estimation of ex-post behavioral responses.  Likewise, Einav et al.ís method will yield reliable
+7:198:15269:20:20:74:519:253:11:g_d0_f3:11:g_d0_f3:B:results in markets where ex-ante insurance purchase decisions reveal true preferences, while
+7:199:15361:20:21:74:472:233:11:g_d0_f3:11:g_d0_f3:B:our formulas rely on optimization of choices such as consumption and labor supply.
+7:200:15443:21:20:91:519:212:11:g_d0_f3:11:g_d0_f3:A:The remainder of the paper is organized as follows.  We begin in section 2 by analyzing
+7:201:15530:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:a model without private insurance as a benchmark.  In Section 3, we introduce endogenous
+7:202:15618:20:21:74:519:172:11:g_d0_f3:11:g_d0_f3:B:private insurance by studying a model in which the government and private sector have the
+7:203:15707:21:20:74:519:151:11:g_d0_f3:11:g_d0_f3:B:same tools, but the level of private insurance is not necessarily set optimally.   Section 4
+7:204:15799:20:20:74:519:131:11:g_d0_f3:11:g_d0_f3:B:considers a model with market limitations due to the inability of the private sector to insure
+7:205:15893:20:21:74:519:111:11:g_d0_f3:11:g_d0_f3:B:pre-existing risks and adverse selection. The applications are presented in section 5.  Section
+7:206:15988:21:0:74:132:90:11:g_d0_f3:11:g_d0_f3:B:6 concludes.
+8:207:16001:0:31:74:342:700:14:g_d0_f2:14:g_d0_f2:C:2  Benchmark: Second-Best Contract
+8:208:16035:31:20:74:519:669:11:g_d0_f3:11:g_d0_f3:B:We analyze models where the government uses tax or social insurance policies to redistribute
+8:209:16127:20:21:74:519:649:11:g_d0_f3:11:g_d0_f3:B:income across individuals with di§erent levels of earnings.   Risk averse individuals would
+8:210:16218:21:20:74:519:628:11:g_d0_f3:11:g_d0_f3:B:like to insure themselves against the risk of having low output realizations.  If e§ort were
+8:211:16310:20:20:74:519:608:11:g_d0_f3:11:g_d0_f3:B:observable, the ìÖrst-bestî contract would provide full insurance and the agents would be
+8:212:16399:20:21:74:519:588:11:g_d0_f3:11:g_d0_f3:B:required to exert the Örst best optimal level of e§ort. If e§ort is unobservable, the Örst-best
+8:213:16494:21:20:74:519:567:11:g_d0_f3:11:g_d0_f3:B:contract is not incentive compatible. The optimal contract when e§ort is unobservable speciÖes
+8:214:16588:20:20:74:519:547:11:g_d0_f3:11:g_d0_f3:B:consumption levels contingent on output realization that reduce the variance of consumption.
+8:215:16680:20:21:74:519:527:11:g_d0_f3:11:g_d0_f3:B:In this section, we characterize this ìsecond-bestîcontract, which reáects the optimal policy
+8:216:16773:21:20:74:519:506:11:g_d0_f3:11:g_d0_f3:B:for a single insurer (government or private). This is the problem considered in previous studies
+8:217:16869:20:20:74:519:486:11:g_d0_f3:11:g_d0_f3:B:that developed su¢ cient statistic formulas for taxation and social insurance (e.g. Saez 2001,
+8:218:16963:20:21:74:145:466:11:g_d0_f3:11:g_d0_f3:B:Chetty 2006a).
+8:219:16977:21:20:91:519:445:11:g_d0_f3:11:g_d0_f3:A:We analyze this problem using two canonical models in the optimal tax and social insurance
+8:220:17067:20:20:74:519:425:11:g_d0_f3:11:g_d0_f3:B:literatures.  The Örst is a ìmoral hazardîmodel, in which the level of output is a stochastic
+8:221:17160:20:21:74:519:405:11:g_d0_f3:11:g_d0_f3:B:function of the individualís e§ort choice.  This model, which is equivalent to Varianís (1980)
+8:222:17254:21:20:74:519:384:11:g_d0_f3:11:g_d0_f3:B:model of taxation, can be interpreted as a model of optimal social insurance against shocks
+8:223:17345:20:20:74:519:364:11:g_d0_f3:11:g_d0_f3:B:such as unemployment or illness.5The second model is a ìhidden skillî model, in which
+8:224:17430:20:21:74:519:344:11:g_d0_f3:11:g_d0_f3:B:the uncertainty about output (skill) levels is resolvedbeforeindividuals choose e§ort.  This
+8:225:17522:21:20:74:519:323:11:g_d0_f3:11:g_d0_f3:B:model is the same as that studied by Mirrlees (1971), and is more naturally suited to studying
+8:226:17616:20:20:74:519:303:11:g_d0_f3:11:g_d0_f3:B:optimal redistribution across individuals with di§erent skills.  To simplify the analysis, we
+8:227:17709:20:21:74:519:283:11:g_d0_f3:11:g_d0_f3:B:restrict attention to optimal linear contracts throughout, and show that the two models yield
+8:228:17802:21:29:74:243:262:11:g_d0_f3:11:g_d0_f3:B:the same results for such contracts.
+8:229:17838:29:27:74:245:233:12:g_d0_f2:12:g_d0_f2:C:2.1  Model 1: Moral Hazard
+8:230:17864:27:20:74:519:206:11:g_d0_f3:11:g_d0_f3:B:Consider a model with a continuum of identical individuals of measure one who exert e§ort
+8:231:17953:20:21:74:519:186:11:g_d0_f5:11:g_d0_f3:B:eto produce outputz. There are two states of output, high and low, withzH> zL. The
+8:232:18035:21:20:74:519:165:11:g_d0_f3:11:g_d0_f3:B:probability of producingzHise.  Let-z=e-zH+ (1-e)-zLdenote the average level of
+8:233:18114:20:17:74:519:145:11:g_d0_f3:11:g_d0_f7:B:output.  The utility of consumptioncisu(c)and the disutility of e§ort is (e).  Utilityu(c)
+8:234:18203:17:14:87:519:128:6:g_d0_f3:9:g_d0_f3:F:5In the empirical applications in section 5, we translate the results from this model into the notation used
+8:235:18311:14:11:74:519:114:9:g_d0_f3:9:g_d0_f3:F:in the social insurance literature.  In the theoretical analysis, we use the tax notation to highlight similarities
+8:236:18426:11:0:74:237:103:9:g_d0_f3:9:g_d0_f3:F:between the formulas in the two models.
+9:237:18466:0:20:74:399:700:11:g_d0_f3:11:g_d0_f3:B:is increasing and strictly concave and (e)is increasing and convex.
+9:238:18532:20:31:91:369:680:11:g_d0_f3:11:g_d0_f3:A:The individual chooseseto maximize his expected utility,
+9:239:18588:31:30:220:374:649:11:g_d0_f5:11:g_d0_f7:C:e-u(cH) + (1-e)-u(cL)- (e)
+9:240:18613:30:20:74:520:619:11:g_d0_f3:11:g_d0_f7:B:taking the consumption levels as given.   This leads to the Örst order condition 0(e) =
+9:241:18699:20:21:74:435:599:11:g_d0_f5:11:g_d0_f3:B:u(cH)-u(cL), which implicitly deÖnes an e§ort supply functione-(cH;cL).
+9:242:18770:21:20:91:519:578:11:g_d0_f3:11:g_d0_f7:A:Any feasible contract(cH;cL)must leave the insurer with zero proÖts:-c-ecH+(1-e)cL=
+9:243:18853:20:20:75:519:558:11:g_d0_f7:11:g_d0_f3:B:-z. Because there are only two states, a contract(cH;cL)that satisÖes the insurerís break-even
+9:244:18947:20:21:74:519:538:11:g_d0_f3:11:g_d0_f3:B:constraint can be characterized by a single tax ratemalong with a lump sum repayment of
+9:245:19034:21:30:74:170:517:11:g_d0_f3:11:g_d0_f3:B:the tax revenuem-z:
+9:246:19053:30:31:191:403:487:11:g_d0_f5:11:g_d0_f3:A:cH= (1-m)zH+t-z,cL= (1-m)zL+m-z.
+9:247:19085:31:20:74:520:456:11:g_d0_f3:11:g_d0_f3:B:The agentís e§orte-depends on the net of tax rate1-m. Thus, average earnings is a function
+9:248:19175:20:20:74:356:436:11:g_d0_f3:11:g_d0_f3:B:of the net-of-tax rate1-m, which we denote by-z(1-m).
+9:249:19228:20:31:91:485:416:11:g_d0_f3:11:g_d0_f3:A:The optimal second-best contract setsmto maximize the agentís expected utility:
+9:250:19307:31:30:81:519:385:11:g_d0_f5:11:g_d0_f3:A:W=e--u((1-m)zH+m--z(1-m)) + (1-e-)-u((1-m)zL+m--z(1-m))- (e-). (1)
+9:251:19372:30:20:74:519:355:11:g_d0_f3:11:g_d0_f3:B:Our objective is to characterize the marginal welfare gain from increasing the tax rate (dWdm)
+9:252:19466:20:21:74:519:335:11:g_d0_f3:11:g_d0_f3:B:in terms of empirically estimable parameters. Sincee-is chosen to maximize expected utility,
+9:253:19558:21:23:74:394:314:11:g_d0_f3:11:g_d0_f3:B:we can use the envelope theorem when di§erentiating (1) to obtain
+9:254:19623:23:15:84:100:291:11:g_d0_f5:11:g_d0_f5:C:dW
+9:255:19625:15:0:85:100:276:11:g_d0_f5:11:g_d0_f5:C:dm
+9:256:19627:0:0:106:166:284:11:g_d0_f7:11:g_d0_f8:C:=e-u0(cH)-
+9:257:19637:0:15:169:177:299:11:g_d0_f10:11:g_d0_f10:C:-
+9:258:19638:15:0:177:241:284:11:g_d0_f8:11:g_d0_f5:C:-zH+ -z-m
+9:259:19647:0:15:257:268:291:11:g_d0_f5:11:g_d0_f5:C:d-z
+9:260:19650:15:0:241:284:276:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+9:261:19656:0:15:285:293:299:11:g_d0_f10:11:g_d0_f10:C:-
+9:262:19657:15:0:296:381:284:11:g_d0_f7:11:g_d0_f8:C:+ (1-e)-u0(cL)-
+9:263:19672:0:15:383:391:299:11:g_d0_f10:11:g_d0_f10:C:-
+9:264:19673:15:0:391:453:284:11:g_d0_f8:11:g_d0_f5:C:-zL+ -z-m
+9:265:19682:0:15:470:480:291:11:g_d0_f5:11:g_d0_f5:C:d-z
+9:266:19685:15:0:454:496:276:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+9:267:19691:0:15:498:506:299:11:g_d0_f10:11:g_d0_f10:C:-
+9:268:19692:15:31:508:511:284:11:g_d0_f5:11:g_d0_f5:C::
+9:269:19693:31:23:74:403:253:11:g_d0_f3:11:g_d0_f3:B:DeÖning-u0=eu0(cH) + (1-e)u0(cL)as the average marginal utility,
+9:270:19757:23:15:135:151:230:11:g_d0_f5:11:g_d0_f5:C:dW
+9:271:19759:15:0:137:152:215:11:g_d0_f5:11:g_d0_f5:C:dm
+9:272:19761:0:0:164:223:223:11:g_d0_f7:11:g_d0_f8:C:=--u0-m-
+9:273:19769:0:15:242:253:230:11:g_d0_f5:11:g_d0_f5:C:d-z
+9:274:19772:15:0:227:269:215:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+9:275:19778:0:29:273:459:223:11:g_d0_f7:11:g_d0_f7:C:+ -u0--z-[ezHu0(cH) + (1-e)zLu0(cL)]
+9:276:19814:29:0:164:223:194:11:g_d0_f7:11:g_d0_f8:C:=--u0-m-
+9:277:19822:0:15:242:253:201:11:g_d0_f5:11:g_d0_f5:C:d-z
+9:278:19825:15:0:227:269:186:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+9:279:19831:0:31:273:327:194:11:g_d0_f8:11:g_d0_f7:C:-cov(z;u0)
+9:280:19841:31:20:74:519:163:11:g_d0_f3:11:g_d0_f3:B:wherecov(z;u0)denotes the covariance between earningszand marginal utilityu0. Let the
+9:281:19926:20:20:74:519:143:11:g_d0_f3:11:g_d0_f8:B:elasticity of earnings with respect to the net-of-tax rate be denoted by"-z;1-m= [(1-m)=-z]-
+9:282:20018:20:23:74:520:123:11:g_d0_f5:11:g_d0_f3:B:d-z=d(1-m). We obtain the following equation for the welfare gain from raising the tax rate:
+9:283:20110:23:15:187:203:100:11:g_d0_f5:11:g_d0_f5:C:dW
+9:284:20112:15:0:188:203:85:11:g_d0_f5:11:g_d0_f5:C:dm
+9:285:20114:0:0:209:250:92:11:g_d0_f7:8:g_d0_f9:C:=--z--u0
+9:286:20122:0:8:253:259:108:11:g_d0_f10:11:g_d0_f10:C:-
+9:287:20123:8:15:269:279:100:11:g_d0_f5:11:g_d0_f5:C:m
+9:288:20124:15:0:260:289:85:11:g_d0_f7:11:g_d0_f5:C:1-m
+9:289:20127:0:0:289:402:92:11:g_d0_f5:11:g_d0_f7:C:"-z;1-m+cov(z=-z;u0=-u0)
+9:290:20151:0:16:402:408:108:11:g_d0_f10:11:g_d0_f10:C:-
+9:291:20152:16:0:505:519:92:11:g_d0_f3:11:g_d0_f3:A:(2)
+10:292:20156:0:20:74:520:700:11:g_d0_f3:11:g_d0_f3:B:It is important to recognize that all of the parameters in (2) are functions ofmñthat is, they
+10:293:20250:20:21:74:520:680:11:g_d0_f3:11:g_d0_f3:B:are not policy invariant.  Therefore, equation (2) can only be used forlocalwelfare analysis:
+10:294:20343:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:the welfare consequences of changes in tax rates around the point at which the elasticities are
+10:295:20438:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:estimated.  These standard properties of su¢ cient statistic formulas are discussed in more
+10:296:20529:20:21:74:193:619:11:g_d0_f3:11:g_d0_f3:B:detail in Chetty (2008b).
+10:297:20554:21:22:91:510:598:11:g_d0_f3:11:g_d0_f3:A:The optimal tax rate satisÖes the Örst order conditiondWdm(m) = 0, yielding the formula
+10:298:20641:22:15:237:247:576:11:g_d0_f5:11:g_d0_f5:C:m
+10:299:20642:15:0:228:257:561:11:g_d0_f7:11:g_d0_f5:C:1-m
+10:300:20645:0:0:260:268:569:11:g_d0_f7:11:g_d0_f7:C:=
+10:301:20646:0:15:286:291:576:11:g_d0_f7:11:g_d0_f7:C:1
+10:302:20647:15:0:273:303:561:11:g_d0_f5:8:g_d0_f6:C:"-z;1-m
+10:303:20654:0:0:307:310:569:11:g_d0_f8:11:g_d0_f8:C:-
+10:304:20655:0:15:314:366:576:11:g_d0_f8:11:g_d0_f7:C:-cov(z;u0)
+10:305:20665:15:0:329:350:561:11:g_d0_f7:8:g_d0_f9:C:-z--u0
+10:306:20671:0:30:505:519:569:11:g_d0_f3:11:g_d0_f3:A:(3)
+10:307:20674:30:20:74:519:539:11:g_d0_f3:11:g_d0_f3:B:The elasticity"-z;1-mmust be positive at the optimum; if"-z;1-m-0, increasing the tax
+10:308:20759:20:20:74:519:519:11:g_d0_f3:11:g_d0_f3:B:rate would both increase redistribution and (weakly) increase tax revenue, strictly improving
+10:309:20852:20:21:74:519:499:11:g_d0_f3:11:g_d0_f3:B:welfare. Again, because all the terms on the right hand side are functions of the the tax rate
+10:310:20946:21:20:74:519:478:11:g_d0_f5:11:g_d0_f3:B:mitself, (3) should not be viewed as an explicit formula for the optimal tax rate.  Rather,
+10:311:21037:20:20:74:519:458:11:g_d0_f3:11:g_d0_f3:B:it provides a simple condition to test whether a given tax rate is optimal and highlights the
+10:312:21130:20:21:74:289:438:11:g_d0_f3:11:g_d0_f3:B:parameters that matter for optimal taxation.
+10:313:21174:21:20:91:520:417:11:g_d0_f3:11:g_d0_f3:A:Three aspects of this formula deserve mention  First, the elasticity"-z;1-mmeasures the
+10:314:21261:20:20:74:519:397:11:g_d0_f4:11:g_d0_f3:B:totale§ect of a change in the tax rate on earnings, including the response to the change in
+10:315:21352:20:21:74:519:377:11:g_d0_f3:11:g_d0_f3:B:the lump sum grant.  Hence, this elasticity reáects a mix of substitution and income e§ects.
+10:316:21444:21:20:74:519:356:11:g_d0_f3:11:g_d0_f3:B:To see this, let-zu(1-m;E)denote the agentís standard Marshallian average earnings supply
+10:317:21533:20:20:74:520:336:11:g_d0_f3:11:g_d0_f3:B:function, which maps the tax ratemand lump sum grantEto a level of average earnings.
+10:318:21617:20:0:74:394:316:11:g_d0_f3:8:g_d0_f6:B:Since-z(1-m) = -zu(1-m;m-z(1-m)), it follows that@-z@(1-m)=@-z
+10:319:21679:0:11:394:398:323:6:g_d0_f12:6:g_d0_f12:F:u
+10:320:21680:11:0:377:417:312:8:g_d0_f6:11:g_d0_f7:C:@(1-m)+
+10:321:21687:0:8:420:433:320:8:g_d0_f6:6:g_d0_f12:F:@-zu
+10:322:21691:8:0:421:482:312:8:g_d0_f6:11:g_d0_f8:C:@E-(--z+m-
+10:323:21701:0:8:494:503:320:8:g_d0_f6:8:g_d0_f6:F:@-z
+10:324:21704:8:17:484:519:312:8:g_d0_f6:11:g_d0_f7:C:@(1-m))
+10:325:21711:17:20:74:122:295:11:g_d0_f3:11:g_d0_f3:B:and hence
+10:326:21720:20:0:231:272:275:11:g_d0_f5:11:g_d0_f7:C:"-z;1-m=
+10:327:21728:0:17:295:343:284:11:g_d0_f5:11:g_d0_f5:C:"u-z;1-m---
+10:328:21739:17:0:277:361:267:11:g_d0_f7:11:g_d0_f7:C:1----m=(1-m)
+10:329:21751:0:26:505:519:275:11:g_d0_f3:11:g_d0_f3:A:(4)
+10:330:21754:26:0:74:200:249:11:g_d0_f3:8:g_d0_f6:B:where"u-z;1-m=1-m-zu-@-z
+10:331:21778:0:11:200:204:256:6:g_d0_f12:6:g_d0_f12:F:u
+10:332:21779:11:16:183:519:245:8:g_d0_f6:11:g_d0_f3:A:@(1-m)is the uncompensated (Marshallian) elasticity of earnings with
+10:333:21847:16:0:74:250:229:11:g_d0_f3:8:g_d0_f6:B:respect to1-mand--= (1-m)@-z
+10:334:21875:0:11:251:255:236:6:g_d0_f12:6:g_d0_f12:F:u
+10:335:21876:11:17:243:520:225:8:g_d0_f6:11:g_d0_f3:A:@Emeasures the unearned income e§ect on labor supply.
+10:336:21929:17:20:74:520:208:11:g_d0_f3:11:g_d0_f3:B:Note that in the conventional case where leisure is a normal good,-- <0.6The elasticity
+10:337:22016:20:20:74:520:188:11:g_d0_f5:11:g_d0_f3:B:"-z;1-mthus di§ers from the standard parameters estimated in the empirical literature, which
+10:338:22108:20:21:74:343:168:11:g_d0_f3:11:g_d0_f3:B:typically estimate"u-z;1-mor the pure substitution e§ect.
+10:339:22165:21:20:91:519:147:11:g_d0_f3:11:g_d0_f3:A:Second, when the agent is risk averse,u0(cH)< u0(cL), and hencecov(z;u0)<0. Combined
+10:340:22249:20:20:74:519:127:11:g_d0_f3:11:g_d0_f3:B:with the fact that"-z;1-m>0, this implies that the optimal tax ratemis strictly positive. If
+10:341:22341:20:16:74:519:107:11:g_d0_f3:11:g_d0_f3:B:utility is linear and the agent is risk neutral, the optimal tax rate is zero. At the other extreme,
+10:342:22441:16:7:87:188:91:6:g_d0_f3:6:g_d0_f12:F:6As-c= (1-m)-z+E,@-c
+10:343:22461:7:0:179:519:84:6:g_d0_f12:9:g_d0_f3:F:@E= 1 + --<1measures the average propensity to consume out of unearned income.
+11:344:22540:0:20:74:520:700:11:g_d0_f3:11:g_d0_f3:B:if risk aversion is inÖnite andzL= 0, then the optimal tax rate is the revenue maximizing tax
+11:345:22633:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:rate:m=(1-m) = 1="-z;1-m= 1="u-z;1-m. More generally, between these extremes, the optimal
+11:346:22722:21:20:74:382:659:11:g_d0_f3:11:g_d0_f3:B:tax ratemincreases with risk aversion, holding"-z;1-mconstant.
+11:347:22784:20:20:91:520:639:11:g_d0_f3:11:g_d0_f3:A:Third, (3) remains a valid formula for the optimallineartax rate in a model with more
+11:348:22869:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:than two states, including the case with a continuous state space typically analyzed in income
+11:349:22963:21:28:74:129:598:11:g_d0_f3:11:g_d0_f3:B:tax models.
+11:350:22974:28:28:74:241:570:12:g_d0_f2:12:g_d0_f2:C:2.2  Model 2: Hidden Skills
+11:351:23001:28:20:74:519:542:11:g_d0_f3:11:g_d0_f3:B:Now consider a ìhidden skillîmodel of optimal taxation where individuals di§er in privately
+11:352:23092:20:20:74:519:522:11:g_d0_f3:11:g_d0_f3:B:observed abilitynand choose e§ort levelsafterability is revealed.  Let the distribution of
+11:353:23182:20:21:74:519:502:11:g_d0_f3:11:g_d0_f3:B:skills be given by a densityf(n)and normalize the size of the population to 1. An individual
+11:354:23274:21:20:74:312:481:11:g_d0_f3:11:g_d0_f3:B:who workslhours and has abilitynearnsz=nl.
+11:355:23316:20:20:91:519:461:11:g_d0_f3:11:g_d0_f3:A:To simplify the analysis, we eliminate income e§ects by considering the following form for
+11:356:23406:20:29:74:222:441:11:g_d0_f3:11:g_d0_f3:B:utility (as in Diamond (1998)):
+11:357:23437:29:0:231:295:412:11:g_d0_f5:11:g_d0_f5:C:U(c;z;n) =u
+11:358:23448:0:12:297:304:424:11:g_d0_f10:11:g_d0_f10:C:-
+11:359:23449:12:0:303:328:412:11:g_d0_f5:11:g_d0_f5:C:c-h
+11:360:23452:0:20:330:343:424:11:g_d0_f10:11:g_d0_f5:C:-z
+11:361:23454:20:0:337:344:404:11:g_d0_f5:11:g_d0_f5:C:n
+11:362:23455:0:12:345:358:424:11:g_d0_f10:11:g_d0_f10:C:--
+11:363:23457:12:29:360:519:412:11:g_d0_f3:11:g_d0_f3:A:,(5)
+11:364:23461:29:20:74:519:383:11:g_d0_f3:11:g_d0_f3:B:whereu(:)is a concave and increasing function reáecting risk aversion, andh(:)is increasing
+11:365:23552:20:20:74:520:363:11:g_d0_f3:11:g_d0_f3:B:and convex and represents disutility of work.  With a linear tax,c= (1-m)z+Rand the
+11:366:23635:20:0:74:486:343:11:g_d0_f3:8:g_d0_f6:B:Örst order condition forzisn(1-m) =h0(z=n).  We denote by"=1-mzdzd(1-m)=h
+11:367:23708:0:12:486:509:351:6:g_d0_f17:8:g_d0_f11:F:0(z=n)
+11:368:23714:12:17:472:519:339:8:g_d0_f6:8:g_d0_f6:F:h00(z=n)-z=n
+11:369:23726:17:0:74:433:322:11:g_d0_f3:11:g_d0_f7:B:the elasticity of earnings with respect to the net-of-tax rate1-m. Let-z=
+11:370:23799:0:9:436:441:331:11:g_d0_f10:11:g_d0_f10:C:R
+11:371:23800:9:20:445:520:322:11:g_d0_f5:11:g_d0_f3:A:zf(n)dndenote
+11:372:23813:20:20:74:519:302:11:g_d0_f3:11:g_d0_f3:B:average earnings in the population and"-z;1-mthe elasticity of average earnings-zwith respect
+11:373:23906:20:21:74:183:282:11:g_d0_f3:8:g_d0_f3:B:to the net-of-tax rate.7
+11:374:23930:21:20:91:520:261:11:g_d0_f3:11:g_d0_f5:A:Suppose there is a single insurer who o§ers a linear insurance contract with tax ratem
+11:375:24016:20:20:74:519:241:11:g_d0_f3:11:g_d0_f3:B:behind the veil of ignorance (i.e., before individuals learn about their abilityn). As above, the
+11:376:24113:20:29:74:478:221:11:g_d0_f3:11:g_d0_f3:B:tax revenue is rebated as a lump sum grantm-z. The insurer choosesmto maximize
+11:377:24191:29:0:188:211:192:11:g_d0_f5:11:g_d0_f7:C:W=
+11:378:24193:0:15:214:220:207:11:g_d0_f10:11:g_d0_f10:C:Z
+11:379:24194:15:0:227:233:192:11:g_d0_f5:11:g_d0_f5:C:u
+11:380:24195:0:12:235:242:204:11:g_d0_f10:11:g_d0_f10:C:-
+11:381:24196:12:0:242:340:192:11:g_d0_f5:11:g_d0_f5:C:z-(1-m) +m-z-h
+11:382:24210:0:19:342:355:204:11:g_d0_f10:11:g_d0_f5:C:-z
+11:383:24212:19:0:349:356:185:11:g_d0_f5:11:g_d0_f5:C:n
+11:384:24213:0:12:357:370:204:11:g_d0_f10:11:g_d0_f10:C:--
+11:385:24215:12:29:372:406:192:11:g_d0_f5:11:g_d0_f5:C:f(n)dn
+11:386:24221:29:20:74:519:163:11:g_d0_f3:11:g_d0_f3:B:Becausezmaximizes individual utility, using the envelope theorem, the Örst order condition
+11:387:24311:20:29:74:173:143:11:g_d0_f3:11:g_d0_f3:B:with respect tomis:
+11:388:24330:29:0:83:100:114:11:g_d0_f7:11:g_d0_f7:C:0 =
+11:389:24333:0:15:104:120:122:11:g_d0_f5:11:g_d0_f5:C:dW
+11:390:24335:15:0:105:120:107:11:g_d0_f5:11:g_d0_f5:C:dm
+11:391:24337:0:0:126:134:114:11:g_d0_f7:11:g_d0_f7:C:=
+11:392:24338:0:15:137:143:129:11:g_d0_f10:11:g_d0_f10:C:Z
+11:393:24339:15:0:150:178:114:11:g_d0_f5:11:g_d0_f8:C:u0(c)-
+11:394:24345:0:16:180:186:130:11:g_d0_f10:11:g_d0_f10:C:-
+11:395:24346:16:0:186:242:114:11:g_d0_f7:11:g_d0_f5:C:(-z-z)-m
+11:396:24354:0:15:259:269:122:11:g_d0_f5:11:g_d0_f5:C:d-z
+11:397:24357:15:0:243:285:107:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+11:398:24363:0:16:287:293:130:11:g_d0_f10:11:g_d0_f10:C:-
+11:399:24364:16:0:294:405:114:11:g_d0_f5:11:g_d0_f8:C:f(n)dn=-cov(z;u0)-
+11:400:24382:0:15:419:429:122:11:g_d0_f5:11:g_d0_f5:C:m
+11:401:24383:15:0:409:438:107:11:g_d0_f7:11:g_d0_f5:C:1-m
+11:402:24386:0:23:441:511:114:11:g_d0_f8:11:g_d0_f5:C:-"-z;1-m--u0--z;
+11:403:24402:23:0:87:420:91:6:g_d0_f3:9:g_d0_f3:F:7Formally,"-z;1-mis the average of the individual elasticities weighted by earnings.
+12:404:24487:0:24:74:253:700:11:g_d0_f3:11:g_d0_f3:B:which yields the optimal tax formula:
+12:405:24524:24:15:237:247:676:11:g_d0_f5:11:g_d0_f5:C:m
+12:406:24525:15:0:228:257:661:11:g_d0_f7:11:g_d0_f5:C:1-m
+12:407:24528:0:0:260:268:669:11:g_d0_f7:11:g_d0_f7:C:=
+12:408:24529:0:15:286:291:676:11:g_d0_f7:11:g_d0_f7:C:1
+12:409:24530:15:0:273:303:661:11:g_d0_f5:8:g_d0_f6:C:"-z;1-m
+12:410:24537:0:0:307:310:669:11:g_d0_f8:11:g_d0_f8:C:-
+12:411:24538:0:15:314:366:676:11:g_d0_f8:11:g_d0_f7:C:-cov(z;u0)
+12:412:24548:15:0:329:350:661:11:g_d0_f7:8:g_d0_f9:C:-z--u0
+12:413:24554:0:32:505:519:669:11:g_d0_f3:11:g_d0_f3:A:(6)
+12:414:24557:32:20:74:519:637:11:g_d0_f3:11:g_d0_f3:B:Formulas (6) in the hidden skill model and formula (3) in the moral hazard model are identical.
+12:415:24652:20:20:74:504:617:11:g_d0_f3:8:g_d0_f3:B:Hence, the optimallineartax rate is driven by the same economic forces in both models.8
+12:416:24739:20:21:91:519:597:11:g_d0_f3:11:g_d0_f3:A:Both optimal tax formulas (3) and (6) can be derived heuristically as follows. Suppose the
+12:417:24829:21:20:74:519:576:11:g_d0_f3:11:g_d0_f3:B:insurer increasesmbydm. The direct utility cost for individual with earningszis-u0(c)-zdm.
+12:418:24919:20:20:74:520:556:11:g_d0_f3:11:g_d0_f3:B:The behavioral response todmdoes not generate a Örst order e§ect on utility because of
+12:419:25005:20:0:74:493:536:11:g_d0_f3:11:g_d0_f5:B:the envelope theorem.  Therefore, in aggregate, the direct welfare cost isdW=-dm
+12:420:25085:0:9:495:500:545:11:g_d0_f10:11:g_d0_f10:C:R
+12:421:25086:9:20:504:519:536:11:g_d0_f5:11:g_d0_f8:C:u0-
+12:422:25089:20:21:74:519:516:11:g_d0_f5:11:g_d0_f5:C:zf(n)dn. The mechanical increase in tax revenue (ignoring behavioral responses) due todm
+12:423:25177:21:20:74:519:495:11:g_d0_f3:11:g_d0_f7:B:isdM= -zdm. The behavioral response in earnings reduces tax revenue bydB=-m-d-z=
+12:424:25257:20:20:74:520:475:11:g_d0_f8:11:g_d0_f3:B:-m1-m"-z;1-m--zdm. Hence, the lump sum grant increases bydM+dB, increasing welfare by
+12:425:25342:20:21:75:519:455:11:g_d0_f7:11:g_d0_f3:B:-u0-(dM+dB) = -u0--z-[1-m1-m"-z;1-m]dm.  At the optimum, these e§ects must all cancel so
+12:426:25430:21:34:74:343:434:11:g_d0_f3:11:g_d0_f3:B:thatdW+ -u0-(dM+dB) = 0, which yields (3) and (6).
+12:427:25480:34:31:74:474:400:14:g_d0_f2:14:g_d0_f2:C:3  Public Insurance with Endogenous Private Insurance
+12:428:25533:31:21:74:519:369:11:g_d0_f3:11:g_d0_f3:B:We now turn to the problem of optimal government insurance with endogenous private insur-
+12:429:25622:21:20:74:519:348:11:g_d0_f3:11:g_d0_f3:B:ance. We Örst analyze the case in which the private insurance level is set arbitrarily, and then
+12:430:25718:20:20:74:519:328:11:g_d0_f3:11:g_d0_f3:B:turn to the special case where it is set optimally.  The level of private insurance level might
+12:431:25813:20:21:74:519:308:11:g_d0_f3:11:g_d0_f3:B:not be optimized because of individual failures ñ left to their own devices, individuals may
+12:432:25905:21:29:74:212:287:11:g_d0_f3:11:g_d0_f3:B:purchase too little insurance.
+12:433:25935:29:27:74:457:258:12:g_d0_f2:12:g_d0_f2:C:3.1  General Case: Private Insurance not Necessarily Optimized
+12:434:25997:27:20:74:519:231:11:g_d0_f4:11:g_d0_f3:B:Moral Hazard Model.We begin by introducing notation to distinguish the private and
+12:435:26079:20:21:74:519:211:11:g_d0_f3:11:g_d0_f3:B:government insurance contracts.  Let-denote the tax rate chosen by the government and
+12:436:26164:21:20:74:519:190:11:g_d0_f5:11:g_d0_f3:B:tthe tax rate in the private insurance contract.  Private insurance applies to raw output
+12:437:26253:20:20:74:519:170:11:g_d0_f7:11:g_d0_f3:B:(zH;zL). We denote bywi= (1-t)zi+t-zthe net-of-private insurance incomes in each state.
+12:438:26340:20:21:74:519:150:11:g_d0_f3:11:g_d0_f5:B:Government taxation applies to the net wage incomeswi, and we denote byci= (1--)wi+--w
+12:439:26426:21:20:74:519:129:11:g_d0_f3:11:g_d0_f3:B:Önal disposable income.  Concretely, the private insurer can be thought of as a Örm that
+12:440:26514:20:17:74:519:109:11:g_d0_f3:11:g_d0_f3:B:compresses its wage structure (wH-wL) relative to true marginal products (zH-zL) to
+12:441:26597:17:0:87:440:92:6:g_d0_f3:9:g_d0_f3:F:8This equivalence would no longer hold in the case of nonlinear taxation (Varian 1980).
+13:442:26686:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:provide insurance.  The government can only observe earnings, not true underlying marginal
+13:443:26776:20:21:74:316:680:11:g_d0_f3:8:g_d0_f3:B:products, and hence sets taxes as a function ofw.9
+13:444:26826:21:20:91:520:659:11:g_d0_f3:11:g_d0_f3:A:Letmdenote the total tax rate on output, deÖned such that1-m= (1-t)(1--)and
+13:445:26901:20:20:74:520:639:11:g_d0_f5:11:g_d0_f3:B:c= (1-m)z+m-z.  If the private insurer and government cooperated to setmto maximize
+13:446:26984:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:social welfare, the resulting contract would be identical to that described in the single insurer
+13:447:27081:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:setting above.  However, in practice private insurers take the government contract-as given
+13:448:27172:20:20:74:520:578:11:g_d0_f3:11:g_d0_f3:B:when they chooset.  As a result, they fail to internalize the e§ects of their choice ofton
+13:449:27262:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:the governmentís budget. Because of this externality e§ect, the government needs to follow a
+13:450:27354:21:20:74:518:537:11:g_d0_f3:11:g_d0_f3:B:di§erent rule in setting the optimal tax rate-that adjusts for the private insurerís response.
+13:451:27448:20:20:91:519:517:11:g_d0_f3:11:g_d0_f3:A:Lett(-)denote the private insurerís choice oftas a function of the government tax.  In
+13:452:27534:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:this subsection, we take the function-!t(-)as given, and do not assume thatt(-)is chosen
+13:453:27622:21:20:74:520:476:11:g_d0_f3:11:g_d0_f3:B:optimally to maximize the agentís expected utility.  Letr=-dlog(1-t)=dlog(1--)denote
+13:454:27706:20:20:74:520:456:11:g_d0_f3:11:g_d0_f3:B:the rate at which public insurance crowds out private insurance. Ifr= 0, there is no crowdout.
+13:455:27800:20:21:74:239:436:11:g_d0_f3:11:g_d0_f3:B:Ifr= 1, there is perfect crowdout.
+13:456:27834:21:20:91:520:415:11:g_d0_f3:11:g_d0_f3:A:The government chooses-to maximize the agentís expected utility, taking into account
+13:457:27918:20:31:74:217:395:11:g_d0_f3:11:g_d0_f3:B:the private insurerís response:
+13:458:27949:31:31:80:519:364:11:g_d0_f7:11:g_d0_f3:A:maxW=e--u((1-m)zH+m--z(1-m)) + (1-e-)-u((1-m)zL+m--z(1-m))- (e-);(7)
+13:459:28016:31:21:74:301:333:11:g_d0_f3:11:g_d0_f3:B:wherem=t(-) +----t(-)is a function of-.
+13:460:28055:21:20:91:519:312:11:g_d0_f3:11:g_d0_f3:A:Let"-w;1--=dlog -wdlog(1-t)denote the elasticity of average (post insurance) earnings-wwith
+13:461:28146:20:20:74:519:292:11:g_d0_f3:11:g_d0_f3:B:respect to1--, taking into account the endogenous response of private insurancetto a change
+13:462:28237:20:21:74:520:272:11:g_d0_f3:11:g_d0_f3:B:in-.  The following proposition characterizes the marginal welfare gain from increasing the
+13:463:28328:21:20:74:519:251:11:g_d0_f3:11:g_d0_f3:B:tax rate (dWd-) in terms of empirically estimable elasticities and provides a condition for the
+13:464:28423:20:32:74:155:231:11:g_d0_f3:11:g_d0_f3:B:optimal tax rate.
+13:465:28440:32:21:74:519:199:11:g_d0_f2:11:g_d0_f4:C:Proposition 1.In the moral hazard model, the welfare gain from raising the government tax
+13:466:28529:21:13:74:82:178:11:g_d0_f4:11:g_d0_f4:C:is
+13:467:28531:13:14:169:185:165:11:g_d0_f5:11:g_d0_f5:C:dW
+13:468:28533:14:0:172:182:151:11:g_d0_f5:11:g_d0_f5:C:d-
+13:469:28535:0:0:191:256:158:11:g_d0_f7:11:g_d0_f5:C:=-(1-r)--z
+13:470:28545:0:8:258:272:173:11:g_d0_f10:11:g_d0_f10:C:--
+13:471:28547:8:14:283:288:165:11:g_d0_f5:11:g_d0_f5:C:-
+13:472:28548:14:0:273:297:151:11:g_d0_f7:11:g_d0_f5:C:1--
+13:473:28551:0:0:302:317:158:11:g_d0_f7:11:g_d0_f5:C:+t
+13:474:28553:0:8:317:325:173:11:g_d0_f10:11:g_d0_f10:C:-
+13:475:28554:8:14:328:356:165:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+13:476:28561:14:0:330:354:151:11:g_d0_f7:11:g_d0_f5:C:1-r
+13:477:28564:0:0:361:369:158:11:g_d0_f7:11:g_d0_f7:C:+
+13:478:28565:0:14:373:419:165:11:g_d0_f5:11:g_d0_f7:C:cov(w;u0)
+13:479:28574:14:0:386:408:151:11:g_d0_f7:8:g_d0_f9:C:-w--u0
+13:480:28580:0:15:420:426:173:11:g_d0_f10:11:g_d0_f10:C:-
+13:481:28581:15:24:505:519:158:11:g_d0_f3:11:g_d0_f3:A:(8)
+13:482:28584:24:15:87:519:134:6:g_d0_f3:9:g_d0_f3:F:9Because the individualsí e§ort decision depends solely on the return net of all taxes(1-t)(1--), the
+13:483:28685:15:11:74:519:119:9:g_d0_f3:9:g_d0_f14:F:analysis below goes through with no changes if government taxes are levied on the true marginal productsz
+13:484:28790:11:0:74:338:108:9:g_d0_f3:9:g_d0_f3:F:and private insurance is based on net-of government tax incomes.
+14:485:28856:0:24:74:230:700:11:g_d0_f4:11:g_d0_f4:C:and the optimal tax rate satisÖes
+14:486:28889:24:15:224:229:676:11:g_d0_f5:11:g_d0_f5:C:-
+14:487:28890:15:0:214:238:661:11:g_d0_f7:11:g_d0_f5:C:1--
+14:488:28893:0:0:243:278:669:11:g_d0_f7:11:g_d0_f7:C:=-t+
+14:489:28897:0:15:285:308:676:11:g_d0_f7:11:g_d0_f5:C:1-r
+14:490:28900:15:0:282:310:661:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+14:491:28907:0:0:315:318:669:11:g_d0_f8:11:g_d0_f8:C:-
+14:492:28908:0:15:322:376:676:11:g_d0_f8:11:g_d0_f7:C:-cov(w;u0)
+14:493:28918:15:0:339:361:661:11:g_d0_f7:8:g_d0_f9:C:-w--u0
+14:494:28924:0:32:378:519:669:11:g_d0_f3:11:g_d0_f3:A:.(9)
+14:495:28928:32:20:74:519:637:11:g_d0_f2:11:g_d0_f3:B:Proof.The problem in (7) is identical to (1). Hence, (2) and (3) remain valid. The government
+14:496:29021:20:20:74:520:617:11:g_d0_f3:11:g_d0_f3:B:sets-so that the total tax ratemsatisÖes the standard formula.  Because the government
+14:497:29107:20:21:74:519:597:11:g_d0_f3:11:g_d0_f3:B:does not observezdirectly, it is useful to rewrite (2) and (3) as a function ofwinstead
+14:498:29194:21:20:74:519:576:11:g_d0_f3:11:g_d0_f7:B:ofz.  To do this, Örst note that-w= -zand hence"-w;1-m="-z;1-m.  Second,cov(w;u0) =
+14:499:29277:20:20:74:520:556:11:g_d0_f5:11:g_d0_f3:B:cov(z(1-t)+t-z;u0) = (1-t)cov(z;u0). Third,"-w;1--="-w;1-m-(1-r)ña one percent increase
+14:500:29364:20:16:74:520:536:11:g_d0_f3:11:g_d0_f3:B:in1--translates into a1-rpercent increase in1-mbecause of crowdout e§ects. Similarly,
+14:501:29449:16:8:76:88:520:8:g_d0_f6:8:g_d0_f6:F:dm
+14:502:29451:8:0:77:212:512:8:g_d0_f6:11:g_d0_f3:B:d-= (1-r)(1-t)and hence,
+14:503:29475:0:8:216:228:520:8:g_d0_f6:8:g_d0_f6:F:dW
+14:504:29477:8:0:218:301:512:8:g_d0_f6:11:g_d0_f7:C:d-= (1-r)(1-t)
+14:505:29491:0:8:302:314:520:8:g_d0_f6:8:g_d0_f6:F:dW
+14:506:29493:8:17:303:519:512:8:g_d0_f6:11:g_d0_f3:A:dm. Finallym=(1-m) = [-=(1--)+t]=(1-t).
+14:507:29532:17:32:74:415:495:11:g_d0_f3:11:g_d0_f3:B:Using these expressions, we can rewrite (2) as (8) and (3) as (9). QED.
+14:508:29603:32:20:91:519:463:11:g_d0_f3:11:g_d0_f3:A:Proposition 1 shows that private insurance a§ects the formula for the optimal tax rate in
+14:509:29692:20:21:74:519:443:11:g_d0_f3:11:g_d0_f3:B:two ways.  First, the added-tterm on the right side of (9) reáects the mechanical reduction
+14:510:29783:21:20:74:519:422:11:g_d0_f3:11:g_d0_f3:B:in the optimal level of government taxation given the presence of private insurance.  Formula
+14:511:29876:20:20:74:520:402:11:g_d0_f3:11:g_d0_f3:B:(9) shows that thesumof private and public insurance should be set according to the standard
+14:512:29968:20:21:74:519:382:11:g_d0_f3:11:g_d0_f3:B:formula, and hence the optimal-is reduced in proportion tot.  The second e§ect is that the
+14:513:30058:21:20:74:519:361:11:g_d0_f3:11:g_d0_f3:B:inverse elasticity term is multiplied by1-r.  Sincer >0, this e§ect also makes the optimal
+14:514:30148:20:20:74:519:341:11:g_d0_f3:11:g_d0_f3:B:government tax rate smaller.  Intuitively, the elasticity relevant for optimal taxation is the
+14:515:30242:20:21:74:519:321:11:g_d0_f3:11:g_d0_f3:B:fundamental elasticity of output with respect to total taxes"-z;1-m="-w;1-m, which measures
+14:516:30333:21:20:74:519:300:11:g_d0_f3:11:g_d0_f3:B:the total moral hazard cost (to both the private and public insurers) of redistributing one dollar
+14:517:30431:20:20:74:519:280:11:g_d0_f3:11:g_d0_f3:B:of tax revenue. To recover the fundamental output elasticity in the presence of crowdout, one
+14:518:30524:20:21:74:520:260:11:g_d0_f3:11:g_d0_f3:B:must rescale the observed elasticity"-w;1--by11-r. Therefore, the crowdout rateronly matters
+14:519:30616:21:20:74:519:239:11:g_d0_f3:11:g_d0_f3:B:for rescaling the observed elasticity, and plays no fundamental economic role in the formula. If
+14:520:30712:20:20:74:519:219:11:g_d0_f3:11:g_d0_f3:B:one could measure the fundamental elasticity"-w;1-mdirectly, an estimate of crowdout would
+14:521:30802:20:21:74:148:199:11:g_d0_f3:11:g_d0_f3:B:be unnecessary.
+14:522:30817:21:20:91:519:178:11:g_d0_f3:11:g_d0_f3:A:This intuition about the relevance of crowdout di§ers from the conventional wisdom (see
+14:523:30904:20:20:74:519:158:11:g_d0_f3:11:g_d0_f3:B:e.g., Cutler and Gruber 1996a-b). The conventional wisdom is that crowdout makes govern-
+14:524:30992:20:21:74:519:138:11:g_d0_f3:11:g_d0_f3:B:ment intervention less desirable because it requires more government expenditure to achieve a
+14:525:31085:21:20:74:519:117:11:g_d0_f3:11:g_d0_f3:B:given insurance level, and raising revenue to Önance government expenditure is costly because
+14:526:31178:20:0:74:519:97:11:g_d0_f3:11:g_d0_f3:B:of the deadweight burden of taxation.  This intuition does not apply in our model because
+15:527:31269:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:the tax levied by the private insurer generates exactly the same deadweight burden as govern-
+15:528:31362:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:ment taxation.  A natural counterargument is that private insurance may not generate moral
+15:529:31452:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:hazard because private insurers can monitor e§ort more closely. However, we show in section
+15:530:31543:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:3.3 that in this case, crowdout is actually irrelevant because the optimal private contract does
+15:531:31639:20:21:74:198:619:11:g_d0_f3:11:g_d0_f3:B:not generate externalities.
+15:532:31666:21:20:91:519:598:11:g_d0_f3:11:g_d0_f3:A:An important implication of (9) is that if the wage structure already reáects implicit
+15:533:31752:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:insurance provided by the private sector, then standard optimal tax formulas that are functions
+15:534:31847:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:of the observed wage distributions and wage earnings elasticities are invalid.  Intuitively, the
+15:535:31943:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:private sector already bears a moral hazard cost for the insurance it provides. The government
+15:536:32037:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:exacerbates this pre-existing distortion by introducing additional insurance. Therefore, one
+15:537:32129:20:21:74:499:497:11:g_d0_f3:8:g_d0_f3:B:must take into account the amount of private insurance to back out the optimal policy.10
+15:538:32217:21:20:91:519:476:11:g_d0_f3:11:g_d0_f3:A:In the simple model considered here, the planner can replicate the second-best optimal
+15:539:32303:20:20:74:520:456:11:g_d0_f3:11:g_d0_f3:B:allocation by choosing the level of-that generates the optimalmgiven the private insurerís
+15:540:32393:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:response. The second best can be achieved because private and public insurance are identical
+15:541:32485:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:tools in this model: the role for government emerges if private insurance is not set optimally.
+15:542:32580:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:When the government and private sector have di§erent tools ñ as in the adverse selection
+15:543:32668:20:20:74:497:375:11:g_d0_f3:11:g_d0_f3:B:model analyzed in section 4 ñthe second best level of welfare can no longer be achieved.
+15:544:32756:20:21:91:519:355:11:g_d0_f4:11:g_d0_f7:C:Hidden Skill Model.In the hidden skill model,-z(1-m) = -z((1-t)(1--)) = -w((1-t)(1--))
+15:545:32842:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:and"-w;1---1---wd-wd(1--)= (1-r)"-z;1-m.  With these deÖnitions, equations (8) and (9) of
+15:546:32931:20:29:74:474:314:11:g_d0_f3:11:g_d0_f3:B:Proposition 1 can be obtained by following a proof that has exactly the same steps.
+15:547:33014:29:28:74:356:285:12:g_d0_f2:12:g_d0_f2:C:3.2  Special Case: Optimized Private Insurance
+15:548:33060:28:20:74:519:257:11:g_d0_f3:11:g_d0_f3:B:To gain further insight into the e§ects of government intervention and connect our results
+15:549:33150:20:20:74:519:237:11:g_d0_f3:11:g_d0_f3:B:to the existing literature, we now consider the special case where private insurance is chosen
+15:550:33244:20:21:74:519:217:11:g_d0_f3:11:g_d0_f3:B:optimally to maximize expected utility.  The following proposition characterizes the e§ects
+15:551:33335:21:20:74:519:196:11:g_d0_f3:11:g_d0_f3:B:of government intervention on social welfare when private insurance is optimized in both the
+15:552:33427:20:32:74:257:176:11:g_d0_f3:11:g_d0_f3:B:moral hazard and hidden skill models.
+15:553:33464:32:16:74:329:144:11:g_d0_f2:11:g_d0_f4:C:Proposition 2.If private insurance is set optimally,
+15:554:33516:16:15:83:520:128:6:g_d0_f3:9:g_d0_f3:F:10In redistributive taxation applications, it is challenging to measure the private insurance ratetbecause the
+15:555:33626:15:11:74:519:113:9:g_d0_f3:9:g_d0_f3:F:di§erence betweenwandzis not directly observed.  Conceptually, one must estimate the di§erence between
+15:556:33728:11:11:74:519:102:9:g_d0_f3:9:g_d0_f3:F:observed wages and marginal products.  In social insurance applications, private insurance typically involves
+15:557:33837:11:0:74:306:91:9:g_d0_f3:9:g_d0_f3:F:explicit transfers, and can therefore be measured directly.
+16:558:33898:0:20:78:463:700:11:g_d0_f4:11:g_d0_f3:B:1) The welfare cost of introducing a small tax-is second-order:dWd-(-= 0) = 0.
+16:559:33976:20:21:78:495:680:11:g_d0_f4:11:g_d0_f3:B:2) Government intervention strictly reduces welfare when-is positive:dWd-(- >0)<0.
+16:560:34058:21:19:78:328:659:11:g_d0_f4:11:g_d0_f4:C:3) The e§ect of a tax increase on welfare is given by
+16:561:34111:19:15:216:232:640:11:g_d0_f5:11:g_d0_f5:C:dW
+16:562:34113:15:0:219:229:625:11:g_d0_f5:11:g_d0_f5:C:d-
+16:563:34115:0:0:237:291:633:11:g_d0_f7:11:g_d0_f8:C:=-"-z;1---
+16:564:34125:0:15:304:309:640:11:g_d0_f5:11:g_d0_f5:C:-
+16:565:34126:15:0:294:318:625:11:g_d0_f7:11:g_d0_f5:C:1--
+16:566:34129:0:0:323:326:633:11:g_d0_f8:11:g_d0_f8:C:-
+16:567:34130:0:15:343:364:640:11:g_d0_f7:11:g_d0_f5:C:-u0--z
+16:568:34136:15:0:329:377:625:11:g_d0_f7:8:g_d0_f6:C:1----t1-t
+16:569:34145:0:30:500:519:633:11:g_d0_f3:11:g_d0_f3:A:(10)
+16:570:34149:30:0:78:174:603:11:g_d0_f4:8:g_d0_f6:C:where--= (1-m)@-z
+16:571:34166:0:11:174:178:610:6:g_d0_f12:6:g_d0_f12:F:u
+16:572:34167:11:17:166:519:599:8:g_d0_f6:11:g_d0_f4:C:@Eis the income e§ect and"-z;1--is the elasticity of average earnings with
+16:573:34241:17:20:74:520:582:11:g_d0_f4:11:g_d0_f4:C:respect to1--, taking into account the endogenous response oftto-.  The same formula
+16:574:34325:20:20:74:284:562:11:g_d0_f4:11:g_d0_f4:C:applies in the hidden skill model with--= 0.
+16:575:34369:20:21:74:519:542:11:g_d0_f2:11:g_d0_f3:B:Proof.In the interest of space, we provide a proof only for the moral hazard model. An
+16:576:34455:21:20:74:500:521:11:g_d0_f3:11:g_d0_f3:B:analogous derivation can be used to establish the same results for the hidden skill model.
+16:577:34545:20:20:91:519:501:11:g_d0_f4:11:g_d0_f3:A:Optimal Private Contract.In a competitive market where insurers are price takers, the
+16:578:34630:20:21:74:519:481:11:g_d0_f3:11:g_d0_f3:B:private insurer takes the government tax rate-and the lump sum grantR=--was given
+16:579:34711:21:27:74:317:460:11:g_d0_f3:11:g_d0_f3:B:when settingt. Therefore,tis chosen to maximize:
+16:580:34759:27:26:80:520:433:11:g_d0_f5:11:g_d0_f3:A:W=e--u((1-t)(1--)zH+t(1--)-z+R)+(1-e-)-u((1-t)(1--)zL+t(1--)-z+R)- (e-). (11)
+16:581:34835:26:27:74:460:407:11:g_d0_f3:11:g_d0_f3:B:Using the envelope condition fore-, the Örst order condition with respect totis:
+16:582:34915:27:0:101:118:380:11:g_d0_f7:11:g_d0_f7:C:0 =
+16:583:34918:0:15:122:138:387:11:g_d0_f5:11:g_d0_f5:C:dW
+16:584:34920:15:0:126:136:372:11:g_d0_f5:11:g_d0_f5:C:dt
+16:585:34922:0:0:141:439:380:11:g_d0_f8:8:g_d0_f9:C:jR;-=-(1--)(zHu0(cH) +zLu0(cL)) + (1--)-z-u0+t(1--)-u0
+16:586:34976:0:15:441:452:387:11:g_d0_f5:11:g_d0_f5:C:d-z
+16:587:34979:15:0:442:452:372:11:g_d0_f5:11:g_d0_f5:C:dt
+16:588:34981:0:27:454:519:380:11:g_d0_f8:11:g_d0_f3:A:jR;-;(12)
+16:589:34990:27:13:74:139:353:11:g_d0_f3:11:g_d0_f3:B:which implies
+16:590:35003:13:15:232:236:340:11:g_d0_f5:11:g_d0_f5:C:t
+16:591:35004:15:0:223:246:325:11:g_d0_f7:11:g_d0_f5:C:1-t
+16:592:35007:0:0:250:258:332:11:g_d0_f7:11:g_d0_f7:C:=
+16:593:35008:0:15:281:286:340:11:g_d0_f7:11:g_d0_f7:C:1
+16:594:35009:15:0:262:305:325:11:g_d0_f5:8:g_d0_f6:C:"-z;1-tjR;-
+16:595:35020:0:0:309:312:332:11:g_d0_f8:11:g_d0_f8:C:-
+16:596:35021:0:15:316:368:340:11:g_d0_f8:11:g_d0_f7:C:-cov(z;u0)
+16:597:35031:15:0:331:352:325:11:g_d0_f7:8:g_d0_f9:C:-z--u0
+16:598:35037:0:24:369:519:332:11:g_d0_f5:11:g_d0_f3:A::(13)
+16:599:35042:24:20:74:519:308:11:g_d0_f3:11:g_d0_f3:B:This expression shows that the private insurer follows a rule analogous to the second-best
+16:600:35132:20:21:74:259:288:11:g_d0_f3:11:g_d0_f3:B:single insurer choice in (3) in settingt.
+16:601:35173:21:20:91:519:267:11:g_d0_f4:11:g_d0_f3:A:E§ect of Government Intervention with Optimized Private Insurance.Noting that the
+16:602:35254:20:27:74:366:247:11:g_d0_f3:11:g_d0_f3:B:government grant isR=--z(1-m), it follows from (11) that
+16:603:35310:27:27:88:506:220:11:g_d0_f5:11:g_d0_f5:C:W=e--u((1-m)zH+m--z(1-m)) + (1-e-)-u((1-m)zL+m--z(1-m))- (e-):
+16:604:35371:27:19:74:494:193:11:g_d0_f3:11:g_d0_f3:B:Using the envelope condition fore-and the equationdm=d-= (1-t)(1-r), we obtain
+16:605:35449:19:15:86:102:174:11:g_d0_f5:11:g_d0_f5:C:dW
+16:606:35451:15:0:89:99:159:11:g_d0_f5:11:g_d0_f5:C:d-
+16:607:35453:0:0:107:188:166:11:g_d0_f7:11:g_d0_f8:C:= (1-t)(1-r)-
+16:608:35466:0:16:190:196:182:11:g_d0_f10:11:g_d0_f10:C:-
+16:609:35467:16:0:197:451:166:11:g_d0_f7:11:g_d0_f8:C:-u0--z-(e-u0(cH)-zH+ (1-e)-u0(cL)-zL)--u0-m-
+16:610:35511:0:15:471:481:174:11:g_d0_f5:11:g_d0_f5:C:d-z
+16:611:35514:15:0:455:497:159:11:g_d0_f5:11:g_d0_f7:C:d(1-m)
+16:612:35520:0:16:499:505:182:11:g_d0_f10:11:g_d0_f10:C:-
+16:613:35521:16:27:506:509:166:11:g_d0_f5:11:g_d0_f5:C::
+16:614:35522:27:20:74:519:139:11:g_d0_f3:11:g_d0_f3:B:The Örst two terms in the square bracket can be rewritten using the Örst-order-condition in
+16:615:35613:20:19:74:141:119:11:g_d0_f3:11:g_d0_f3:B:(12) to obtain
+16:616:35627:19:15:145:161:100:11:g_d0_f5:11:g_d0_f5:C:dW
+16:617:35629:15:0:148:158:85:11:g_d0_f5:11:g_d0_f5:C:d-
+16:618:35631:0:0:167:272:92:11:g_d0_f7:11:g_d0_f5:C:= (1-t)(1-r)--u0--z
+16:619:35650:0:8:275:281:108:11:g_d0_f10:11:g_d0_f10:C:-
+16:620:35651:8:15:291:295:100:11:g_d0_f5:11:g_d0_f5:C:t
+16:621:35652:15:0:281:304:85:11:g_d0_f7:11:g_d0_f5:C:1-t
+16:622:35655:0:0:308:367:92:11:g_d0_f8:11:g_d0_f8:C:-"-z;1-tjR;--
+16:623:35668:0:15:380:390:100:11:g_d0_f5:11:g_d0_f5:C:m
+16:624:35669:15:0:371:400:85:11:g_d0_f7:11:g_d0_f5:C:1-m
+16:625:35672:0:0:403:438:92:11:g_d0_f8:8:g_d0_f6:C:-"-z;1-m
+16:626:35680:0:16:439:445:108:11:g_d0_f10:11:g_d0_f10:C:-
+16:627:35681:16:0:446:449:92:11:g_d0_f5:11:g_d0_f5:C::
+17:628:35684:0:0:74:425:699:11:g_d0_f3:11:g_d0_f7:B:Introducing the Marshallian demand-zu(1-m;E), (4) implies"-z;1-m=
+17:629:35749:0:11:440:477:706:8:g_d0_f6:8:g_d0_f6:F:"u-z;1-m---
+17:630:35760:11:17:432:519:695:8:g_d0_f11:11:g_d0_f3:A:1----m=(1-m)where
+17:631:35777:17:0:75:140:678:11:g_d0_f7:8:g_d0_f6:C:--= (1-m)@-z
+17:632:35789:0:11:141:145:685:6:g_d0_f12:6:g_d0_f12:F:u
+17:633:35790:11:20:133:519:674:8:g_d0_f6:11:g_d0_f3:A:@E. Sincec=z(1-t)(1--) +t(1--)-z+RandE=t(1--)-z+R, we can write
+17:634:35853:20:15:120:131:654:11:g_d0_f5:11:g_d0_f5:C:d-z
+17:635:35856:15:0:107:144:639:11:g_d0_f5:11:g_d0_f7:C:d(1-t)
+17:636:35862:0:0:145:173:647:11:g_d0_f8:11:g_d0_f7:C:jR;-=
+17:637:35867:0:15:191:208:654:11:g_d0_f5:8:g_d0_f6:C:@-zu
+17:638:35871:15:0:178:221:639:11:g_d0_f5:11:g_d0_f7:C:@(1-m)
+17:639:35877:0:0:225:274:647:11:g_d0_f8:11:g_d0_f7:C:-(1--) +
+17:640:35885:0:15:278:295:654:11:g_d0_f5:8:g_d0_f6:C:@-zu
+17:641:35889:15:0:279:293:639:11:g_d0_f5:11:g_d0_f5:C:@E
+17:642:35891:0:0:299:302:647:11:g_d0_f8:11:g_d0_f8:C:-
+17:643:35892:0:15:305:313:662:11:g_d0_f10:11:g_d0_f10:C:-
+17:644:35893:15:0:313:418:647:11:g_d0_f8:11:g_d0_f7:C:-(1--)--z+t(1--)
+17:645:35909:0:15:432:443:654:11:g_d0_f5:11:g_d0_f5:C:d-z
+17:646:35912:15:0:420:456:639:11:g_d0_f5:11:g_d0_f7:C:d(1-t)
+17:647:35918:0:0:458:474:647:11:g_d0_f8:8:g_d0_f6:C:jR;-
+17:648:35922:0:15:475:483:662:11:g_d0_f10:11:g_d0_f10:C:-
+17:649:35923:15:31:485:488:647:11:g_d0_f3:11:g_d0_f3:A:.
+17:650:35924:31:21:74:142:616:11:g_d0_f3:11:g_d0_f3:B:It follows that
+17:651:35939:21:0:229:283:595:11:g_d0_f5:11:g_d0_f7:C:"-z;1-tjR;-=
+17:652:35951:0:16:299:348:604:11:g_d0_f5:11:g_d0_f5:C:"u-z;1-m---
+17:653:35962:16:0:288:360:588:11:g_d0_f7:11:g_d0_f7:C:1----t=(1-t)
+17:654:35974:0:26:362:519:595:11:g_d0_f5:11:g_d0_f3:A::(14)
+17:655:35979:26:24:74:201:569:11:g_d0_f3:11:g_d0_f3:B:Consolidating terms yields
+17:656:36005:24:15:115:131:545:11:g_d0_f5:11:g_d0_f5:C:dW
+17:657:36007:15:0:118:128:530:11:g_d0_f5:11:g_d0_f5:C:d-
+17:658:36009:0:0:137:218:537:11:g_d0_f7:11:g_d0_f8:C:= (1-t)(1-r)-
+17:659:36022:0:15:247:269:545:11:g_d0_f7:11:g_d0_f5:C:-u0--z
+17:660:36028:15:0:221:294:530:11:g_d0_f7:11:g_d0_f7:C:1----t=(1-t)
+17:661:36040:0:16:318:367:546:11:g_d0_f5:11:g_d0_f5:C:"u-z;1-m---
+17:662:36051:16:0:301:385:530:11:g_d0_f7:11:g_d0_f7:C:1----m=(1-m)
+17:663:36063:0:0:388:391:537:11:g_d0_f8:11:g_d0_f8:C:-
+17:664:36064:0:8:394:400:553:11:g_d0_f10:11:g_d0_f10:C:-
+17:665:36065:8:15:410:414:545:11:g_d0_f5:11:g_d0_f5:C:t
+17:666:36066:15:0:401:424:530:11:g_d0_f7:11:g_d0_f5:C:1-t
+17:667:36069:0:0:427:435:537:11:g_d0_f8:11:g_d0_f8:C:-
+17:668:36070:0:15:449:459:545:11:g_d0_f5:11:g_d0_f5:C:m
+17:669:36071:15:0:439:468:530:11:g_d0_f7:11:g_d0_f5:C:1-m
+17:670:36074:0:16:469:475:553:11:g_d0_f10:11:g_d0_f10:C:-
+17:671:36075:16:31:476:479:537:11:g_d0_f3:11:g_d0_f3:A:.
+17:672:36076:31:20:74:519:506:11:g_d0_f3:11:g_d0_f7:B:Finally, observing thatt=(1-t)-m=(1-m) =--=((1--)(1-t))and that"-z;1--=
+17:673:36147:20:0:74:184:486:11:g_d0_f7:11:g_d0_f7:C:(1-r)"-z;1-m= (1-r)
+17:674:36166:0:11:194:231:493:8:g_d0_f6:8:g_d0_f6:F:"u-z;1-m---
+17:675:36177:11:29:186:352:482:8:g_d0_f11:11:g_d0_f3:A:1----m=(1-m), we obtain (10). QED.
+17:676:36211:29:20:91:519:453:11:g_d0_f3:11:g_d0_f3:A:This proposition shows that the standard lessons of the theory of excess burden apply in
+17:677:36299:20:20:74:519:433:11:g_d0_f3:11:g_d0_f3:B:our model: the welfare cost of taxation is proportional to the size of the behavioral response
+17:678:36393:20:21:74:519:413:11:g_d0_f3:11:g_d0_f3:B:to taxation and the marginal cost of taxation increases linearly with the tax rate.  However,
+17:679:36486:21:20:74:519:392:11:g_d0_f3:11:g_d0_f3:B:there is one important di§erence relative to the traditional analysis.  In standard models of
+17:680:36579:20:20:74:519:372:11:g_d0_f3:11:g_d0_f3:B:taxation and social insurance without endogenous private insurance, the deadweight burden
+17:681:36668:20:21:74:519:352:11:g_d0_f3:11:g_d0_f3:B:of taxation is an e¢ ciency cost that the government would be willing to trade-o§ against the
+17:682:36761:21:20:74:519:331:11:g_d0_f3:11:g_d0_f3:B:beneÖts of more insurance. In the present model, the level of redistribution through market
+17:683:36852:20:20:74:519:311:11:g_d0_f3:11:g_d0_f4:B:insurance is already optimal given incentive constraints, and thus the net welfare gainequals
+17:684:36945:20:21:74:519:291:11:g_d0_f3:11:g_d0_f3:B:the deadweight burden of taxation.   Hence, a benevolent government should do precisely
+17:685:37032:21:20:74:113:270:11:g_d0_f3:11:g_d0_f3:B:nothing.
+17:686:37040:20:20:91:519:250:11:g_d0_f3:11:g_d0_f3:A:When private insurance markets function optimally, government insurance via taxation or
+17:687:37127:20:20:74:519:230:11:g_d0_f3:11:g_d0_f3:B:social insurancestrictlyreduces welfare because crowdout of private insurance is imperfect. To
+17:688:37221:20:21:74:519:210:11:g_d0_f3:11:g_d0_f3:B:understand the intuition, it is helpful to consider an example. Suppose the government naively
+17:689:37315:21:20:74:518:189:11:g_d0_f3:8:g_d0_f6:B:thinks it can achieve the second-best optimum by setting-andRsuch that(1--)zH+R=c-H
+17:690:37398:20:20:74:519:169:11:g_d0_f3:11:g_d0_f3:B:and(1--)zL+R=c-Lwhere(c-L;c-H)denotes the optimal second-best insurance contract
+17:691:37478:20:21:74:519:149:11:g_d0_f3:11:g_d0_f3:B:for a single insurer.  This tax system would achieve the optimum described in Section 2 if
+17:692:37568:21:20:74:519:128:11:g_d0_f3:11:g_d0_f3:B:the private insurance market chose not to provide any insurance.  However, zero insurance
+17:693:37657:20:20:74:519:108:11:g_d0_f3:11:g_d0_f3:B:is not the contract that will emerge in an economy with a private insurance market.  Since
+17:694:37747:20:0:74:519:88:11:g_d0_f5:11:g_d0_f3:B:zL(1--)+R < zH(1--)+R, individuals will Önd it worthwhile to purchase further insurance
+18:695:37836:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:from private providers. This additional insurance would increase the expected utility of the
+18:696:37928:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:agent and the insurance companies would break even.  But the individual and private insurer
+18:697:38019:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:do not internalize the e§ect of their choices on the governmentís budget.  The added private
+18:698:38111:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:insurance reduces e§ort below the second-best optimum and hence leads to a lower average
+18:699:38199:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:output than the government was expecting. As a result, the government goes into deÖcit and
+18:700:38289:21:20:74:284:598:11:g_d0_f3:8:g_d0_f3:B:its lumpsum grantRneeds to be reduced.11
+18:701:38329:20:20:91:519:578:11:g_d0_f3:11:g_d0_f3:A:We are not the Örst to make the point that government intervention is undesirable when
+18:702:38415:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:private insurance markets function e¢ ciently.  When private insurance is set optimally, the
+18:703:38507:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:market equilibrium with no government intervention is information-constrained Pareto e¢ -
+18:704:38596:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:cient.  Abstractly, it is well known that when the private market equilibrium is constrained
+18:705:38688:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:e¢ cient, government price distortions lead to ine¢ ciency (Prescott and Townsend 1984a-b).
+18:706:38779:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:Kaplow (1991) makes a similar point about the welfare losses from government intervention in
+18:707:38871:20:20:74:519:456:11:g_d0_f3:11:g_d0_f3:B:a simple social insurance model, and Blomqvist and Johannson (1997) and Barrigozzi (2006)
+18:708:38960:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:obtain similar results in a model with public and private health insurance.  The main con-
+18:709:39050:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:tribution of the present paper is to develop formulas for the welfare gains from government
+18:710:39141:20:20:74:451:395:11:g_d0_f3:11:g_d0_f3:B:intervention when the private market does not reach the second-best optimum.
+18:711:39217:20:20:91:519:375:11:g_d0_f3:11:g_d0_f3:A:Two additional remarks on Proposition 2 deserve mention.  First, we expect that the
+18:712:39300:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:relationship between the degree of crowdoutrand risk aversion will generally have an inverted
+18:713:39393:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:U-shape.  When individuals are risk neutral (u(c) =c), there is no private insurance (t= 0)
+18:714:39484:20:20:74:520:314:11:g_d0_f3:11:g_d0_f3:B:so there is by deÖnition no crowdout (r= 0). At the other extreme, with inÖnite risk aversion
+18:715:39577:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:andzL= 0,cov(z;u0) =--z--u0and (13) combined with (14) implies thatt=(1-t) = 1="u-z;1-m.
+18:716:39665:21:20:74:520:273:11:g_d0_f3:11:g_d0_f3:B:If the uncompensated elasticity does not vary with the net-of-tax rate1-m, the private
+18:717:39751:20:20:74:520:253:11:g_d0_f3:11:g_d0_f3:B:insurance ratetis independent of-.  Therefore, in the case of inÖnite risk aversion, there
+18:718:39841:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:is also no crowdout.  For any interior case with non-zero, Önite risk aversion, crowdout will
+18:719:39934:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:be positive and incomplete.  Hence, government intervention is likely to induce the greatest
+18:720:40026:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:welfare losses when risk aversion is very low or very high, because these are the cases in which
+18:721:40122:20:21:74:436:172:11:g_d0_f3:11:g_d0_f3:B:crowdout will be small and individuals will end up being most over-insured.
+18:722:40197:21:16:91:519:151:11:g_d0_f3:11:g_d0_f3:A:Second, a corollary of Proposition 2 is that in the absence of private market failures, public
+18:723:40291:16:14:83:519:135:6:g_d0_f3:9:g_d0_f3:F:11These results contrast with the analysis of Golosov and Tsyvinski (2007), who argue that government
+18:724:40392:14:11:74:519:121:9:g_d0_f3:9:g_d0_f3:F:insurance has no e§ect on social welfare in static models because of 100% crowdout.   The reason for the
+18:725:40496:11:11:74:519:110:9:g_d0_f3:9:g_d0_f3:F:di§erence is that Golosov and Tsyvinski study government intervention where the government controls directly
+18:726:40604:11:11:74:519:99:9:g_d0_f3:9:g_d0_f3:F:the Önal consumption outcomes whereas we consider the e§ects of distortionary taxation, which is typically the
+18:727:40714:11:0:74:212:88:9:g_d0_f3:9:g_d0_f3:F:nature of policies used in practice.
+19:728:40752:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:goods should be Önanced via a uniform lump-sum tax that generates the desired amount of
+19:729:40839:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:revenue, even if agents have di§erent marginal utilities of income in each state. The private
+19:730:40932:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:insurance market will then set redistribution to the optimal level. A distortionary tax to Önance
+19:731:41029:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:the public good would lead to lower expected utility than a lump-sum tax that generated an
+19:732:41119:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:equivalent amount of revenue.  This point underscores the substantial e§ect that endogenous
+19:733:41210:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:private insurance arrangements can have on standard intuitions in the literatures on optimal
+19:734:41302:20:29:74:217:578:11:g_d0_f3:11:g_d0_f3:B:taxation and social insurance.
+19:735:41332:29:27:74:350:549:12:g_d0_f2:12:g_d0_f2:C:3.3  Private Insurance Without Moral Hazard
+19:736:41375:27:21:74:519:522:11:g_d0_f3:11:g_d0_f3:B:Thus far, we have considered private insurance contracts that generate the same amount of
+19:737:41464:21:20:74:519:501:11:g_d0_f3:11:g_d0_f3:B:moral hazard as public insurance.  However, ìinformalîprivate risk-sharing mechanisms may
+19:738:41553:20:20:74:519:481:11:g_d0_f3:11:g_d0_f3:B:involve less moral hazard.  Examples include self insurance through spousal labor supply or
+19:739:41644:20:21:74:519:461:11:g_d0_f3:11:g_d0_f3:B:insurance through relatives who can monitor e§ort.12In this section, we explore how the
+19:740:41731:21:20:74:382:440:11:g_d0_f3:11:g_d0_f3:B:degree of moral hazard in private insurance a§ects our formulas.
+19:741:41795:20:20:91:519:420:11:g_d0_f4:11:g_d0_f3:A:Moral Hazard Model.Consider a model where government insurance generates moral haz-
+19:742:41878:20:21:74:519:400:11:g_d0_f3:11:g_d0_f3:B:ard but private insurance does not.  When private insurance does not generate moral hazard,
+19:743:41969:21:20:74:519:379:11:g_d0_f3:11:g_d0_f3:B:reaching the Örst-best of full insurance would be feasible in principle, completely eliminating
+19:744:42064:20:20:74:519:359:11:g_d0_f3:11:g_d0_f3:B:the role for government intervention. In practice, there are costs of informal insurance ñsuch
+19:745:42158:20:21:74:522:339:11:g_d0_f3:11:g_d0_f3:B:as limits to liquidity, costs of borrowing from relatives, or relying on spousal labor supply ñ
+19:746:42253:21:20:74:519:318:11:g_d0_f3:11:g_d0_f3:B:that prevent full insurance.  We model such costs by a loading factor on informal insurance
+19:747:42344:20:20:74:519:298:11:g_d0_f3:11:g_d0_f3:B:transfers: transferringTto the low state requires a payment ofT+s(T)in the high state
+19:748:42429:20:21:74:519:278:11:g_d0_f3:11:g_d0_f3:B:wheres(:)is an increasing and convex loading factor cost withs(0) = 0.  The informal insur-
+19:749:42520:21:20:74:519:257:11:g_d0_f3:11:g_d0_f3:B:ance contract involves no moral hazard, in the sense that the agent internalizes the e§ect of
+19:750:42613:20:20:74:518:237:11:g_d0_f3:11:g_d0_f5:B:his e§ort choice on the insurerís budget.  Hence,eandTare chosen simultaneously (taking-
+19:751:42701:20:31:74:210:217:11:g_d0_f3:11:g_d0_f3:B:andRas Öxed) to maximize
+19:752:42725:31:30:98:495:186:11:g_d0_f5:11:g_d0_f5:C:eu[(zH-(T+s(T))(1-e)=e))(1--) +R] + (1-e)u[(zL+T)(1--) +R]- (e):
+19:753:42788:30:23:74:234:156:11:g_d0_f3:11:g_d0_f3:B:The Örst-order-condition forTis:
+19:754:42820:23:15:240:312:133:11:g_d0_f5:11:g_d0_f7:C:u0(cL)-u0(cH)
+19:755:42833:15:0:261:291:118:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+19:756:42839:0:24:316:519:126:11:g_d0_f7:11:g_d0_f3:A:=s0(T):(15)
+19:757:42850:24:15:83:519:102:6:g_d0_f3:9:g_d0_f3:F:12Another important example of informal insurance in developing economies is risksharing in villages
+19:758:42950:15:0:74:145:87:9:g_d0_f3:9:g_d0_f3:F:(Townsend 1994).
+20:759:42968:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:The government chooses-to maximize social welfare, taking into account thatR=--wwhere
+20:760:43053:20:30:77:380:680:11:g_d0_f7:11:g_d0_f3:B:-w=ewH+ (1-e)wLandwiis post-private insurance earnings.
+20:761:43108:30:7:74:94:650:11:g_d0_f7:11:g_d0_f7:C:max
+20:762:43111:7:0:82:86:643:8:g_d0_f6:8:g_d0_f6:F:-
+20:763:43112:0:30:96:530:650:11:g_d0_f5:11:g_d0_f5:C:W(-) =e-u[(zH-(T-+s(T-))(1-e-)=e-))(1--)+--w]+(1-e-)u[(zL+T-)(1--)+--w]- (e-):
+20:764:43189:30:20:74:519:620:11:g_d0_f3:11:g_d0_f3:B:Using the envelope conditions fore-andT-, we immediately obtain the following formula for
+20:765:43278:20:23:74:215:600:11:g_d0_f3:11:g_d0_f3:B:the welfare gain for raising-:
+20:766:43308:23:15:185:201:577:11:g_d0_f5:11:g_d0_f5:C:dW
+20:767:43310:15:0:188:198:562:11:g_d0_f5:11:g_d0_f5:C:d-
+20:768:43312:0:0:207:251:570:11:g_d0_f7:8:g_d0_f9:C:=--w--u0
+20:769:43320:0:8:254:260:585:11:g_d0_f10:11:g_d0_f10:C:-
+20:770:43321:8:15:270:275:577:11:g_d0_f5:11:g_d0_f5:C:-
+20:771:43322:15:0:261:284:562:11:g_d0_f7:11:g_d0_f5:C:1--
+20:772:43325:0:0:287:404:570:11:g_d0_f5:11:g_d0_f7:C:"-w;1--+cov(w=-w;u0=-u0)
+20:773:43349:0:15:404:410:585:11:g_d0_f10:11:g_d0_f10:C:-
+20:774:43350:15:30:500:519:570:11:g_d0_f3:11:g_d0_f3:A:(16)
+20:775:43354:30:21:74:519:540:11:g_d0_f3:11:g_d0_f3:B:This equation is the same as the standard formula (2) in the benchmark single insurer model.
+20:776:43446:21:20:74:519:519:11:g_d0_f3:11:g_d0_f3:B:It shows that private insurance that does not generate moral hazard can be ignored in the cal-
+20:777:43540:20:20:74:519:499:11:g_d0_f3:11:g_d0_f3:B:culation of optimal government redistribution.  This result is consistent with Chetty (2006a),
+20:778:43634:20:21:74:519:479:11:g_d0_f3:11:g_d0_f3:B:who shows that Bailyís (1978) formula is robust to allowing for arbitrary choices in the private
+20:779:43730:21:20:74:519:458:11:g_d0_f3:11:g_d0_f3:B:sector as long as they are constrained e¢ cient. To be clear, this result doesnotimply that the
+20:780:43825:20:20:74:519:438:11:g_d0_f3:11:g_d0_f3:B:optimal government beneÖt level is una§ected by the presence of private insurance.  A higher
+20:781:43917:20:20:74:520:418:11:g_d0_f3:11:g_d0_f3:B:informal private insurance beneÖtTwill reduce the optimal-by reducing the correlation
+20:782:44002:20:21:74:197:398:11:g_d0_f3:11:g_d0_f3:B:betweenu0andwin (16).
+20:783:44023:21:20:91:519:377:11:g_d0_f4:11:g_d0_f3:A:Hidden Skill Model.In the hidden skill model, informal private insurers can make lump
+20:784:44108:20:20:74:519:357:11:g_d0_f3:11:g_d0_f3:B:sum transfersTnto individuals with abilitynby paying a loading costs(Tn).13Note that
+20:785:44192:20:21:74:518:337:11:g_d0_f5:11:g_d0_f5:C:Tn<0corresponds to a lump sum tax on typen.  The private insurer and individuals take-
+20:786:44278:21:15:74:391:316:11:g_d0_f3:11:g_d0_f3:B:andRas given, and simultaneously chooseznandTnto maximize
+20:787:44335:15:15:167:173:301:11:g_d0_f10:11:g_d0_f10:C:Z
+20:788:44336:15:0:180:186:286:11:g_d0_f5:11:g_d0_f5:C:u
+20:789:44337:0:12:188:193:298:11:g_d0_f10:11:g_d0_f10:C:h
+20:790:44338:12:0:193:355:286:11:g_d0_f7:11:g_d0_f5:C:(zn-(Tn+s(Tn))(1--) +R-h
+20:791:44362:0:19:357:375:298:11:g_d0_f10:8:g_d0_f6:C:-zn
+20:792:44365:19:0:367:374:279:11:g_d0_f5:11:g_d0_f5:C:n
+20:793:44366:0:12:377:389:298:11:g_d0_f10:11:g_d0_f10:C:-i
+20:794:44368:12:30:390:427:286:11:g_d0_f5:11:g_d0_f5:C:f(n)dn:
+20:795:44375:30:0:74:231:256:11:g_d0_f3:11:g_d0_f3:B:subject to the budget constraint
+20:796:44407:0:9:236:241:265:11:g_d0_f10:11:g_d0_f10:C:R
+20:797:44408:9:20:245:519:256:11:g_d0_f5:11:g_d0_f3:A:Tnf(n)dn-0(multiplier-).  The Örst order condition
+20:798:44458:20:20:74:519:236:11:g_d0_f3:11:g_d0_f3:B:forznimplies thath0(zn=n) =n(1--), i.e., the government tax reduces incentives to work
+20:799:44544:20:21:74:520:216:11:g_d0_f3:11:g_d0_f3:B:but not the amount of informal insurance.  The Örst order condition forTnimplies that
+20:800:44629:21:20:74:489:195:11:g_d0_f5:11:g_d0_f3:B:u0(cn)-(1 +s0(Tn))-(1--) =-: marginal utility is equalized up to the loading factor.
+20:801:44713:20:20:91:518:175:11:g_d0_f3:11:g_d0_f5:A:Let us denote byw=z-(T+s(T))post-insurance earnings. The government chooses-
+20:802:44789:20:30:74:136:155:11:g_d0_f3:11:g_d0_f3:B:to maximize:
+20:803:44801:30:0:144:182:125:11:g_d0_f5:11:g_d0_f7:C:W(-) =
+20:804:44807:0:15:184:190:140:11:g_d0_f10:11:g_d0_f10:C:Z
+20:805:44808:15:0:197:203:125:11:g_d0_f5:11:g_d0_f5:C:u
+20:806:44809:0:12:205:210:137:11:g_d0_f10:11:g_d0_f10:C:h
+20:807:44810:12:0:210:378:125:11:g_d0_f7:11:g_d0_f5:C:(zn-(Tn+s(Tn))(1--) +--w-h
+20:808:44836:0:20:380:398:137:11:g_d0_f10:8:g_d0_f6:C:-zn
+20:809:44839:20:0:390:397:117:11:g_d0_f5:11:g_d0_f5:C:n
+20:810:44840:0:12:400:412:137:11:g_d0_f10:11:g_d0_f10:C:-i
+20:811:44842:12:23:413:450:125:11:g_d0_f5:11:g_d0_f5:C:f(n)dn:
+20:812:44849:23:15:83:519:102:6:g_d0_f3:9:g_d0_f3:F:13For consistency with the moral hazard model, we can assume thats(T) = 0forT-0ands(T)>0for
+20:813:44940:15:0:74:104:87:9:g_d0_f14:9:g_d0_f3:F:T>0).
+21:814:44947:0:22:74:295:700:11:g_d0_f3:11:g_d0_f3:B:Using the envelope conditions forzn, we have:
+21:815:44992:22:15:125:141:678:11:g_d0_f5:11:g_d0_f5:C:dW
+21:816:44994:15:0:128:138:663:11:g_d0_f5:11:g_d0_f5:C:d-
+21:817:44996:0:0:154:162:670:11:g_d0_f7:11:g_d0_f7:C:=
+21:818:44997:0:15:172:178:685:11:g_d0_f10:11:g_d0_f10:C:Z
+21:819:44998:15:0:185:199:670:11:g_d0_f5:11:g_d0_f8:C:u0-
+21:820:45001:0:16:202:208:686:11:g_d0_f10:11:g_d0_f10:C:-
+21:821:45002:16:0:207:264:670:11:g_d0_f8:11:g_d0_f5:C:-w+ -w--
+21:822:45010:0:15:279:292:678:11:g_d0_f5:11:g_d0_f5:C:d-w
+21:823:45013:15:0:266:305:663:11:g_d0_f5:11:g_d0_f7:C:d(1--)
+21:824:45019:0:0:309:408:670:11:g_d0_f8:11:g_d0_f7:C:-(1 +s0(Tn))(1--)
+21:825:45036:0:15:410:427:678:11:g_d0_f5:8:g_d0_f6:C:dTn
+21:826:45039:15:0:413:423:663:11:g_d0_f5:11:g_d0_f5:C:d-
+21:827:45041:0:16:429:435:686:11:g_d0_f10:11:g_d0_f10:C:-
+21:828:45042:16:30:436:470:670:11:g_d0_f5:11:g_d0_f5:C:f(n)dn
+21:829:45048:30:0:154:205:640:11:g_d0_f7:8:g_d0_f9:C:=--w--u0
+21:830:45056:0:8:207:213:656:11:g_d0_f10:11:g_d0_f10:C:-
+21:831:45057:8:15:224:229:648:11:g_d0_f5:11:g_d0_f5:C:-
+21:832:45058:15:0:214:238:633:11:g_d0_f7:11:g_d0_f5:C:1--
+21:833:45061:0:0:240:357:640:11:g_d0_f5:11:g_d0_f7:C:"-w;1--+cov(w=-w;u0=-u0)
+21:834:45085:0:16:358:364:656:11:g_d0_f10:11:g_d0_f10:C:-
+21:835:45086:16:0:366:383:640:11:g_d0_f8:11:g_d0_f5:C:--
+21:836:45088:0:7:385:391:655:11:g_d0_f10:11:g_d0_f10:C:Z
+21:837:45089:7:15:399:416:648:11:g_d0_f5:8:g_d0_f6:C:dTn
+21:838:45092:15:0:402:412:633:11:g_d0_f5:11:g_d0_f5:C:d-
+21:839:45094:0:29:418:454:640:11:g_d0_f5:11:g_d0_f5:C:f(n)dn;
+21:840:45101:29:21:74:519:611:11:g_d0_f3:11:g_d0_f3:B:where the last term is obtained usingu0(cn)-(1 +s0(Tn))-(1--) =-.  The last term cancels
+21:841:45189:21:0:74:103:590:11:g_d0_f3:11:g_d0_f3:B:out as
+21:842:45195:0:9:107:112:599:11:g_d0_f10:11:g_d0_f10:C:R
+21:843:45196:9:31:116:497:590:11:g_d0_f5:11:g_d0_f3:A:Tnf(n)dn= 0is constant with-. Hence, we obtain again the standard formula.
+21:844:45270:31:20:91:519:559:11:g_d0_f3:11:g_d0_f3:A:Why does only private insurance that generates moral hazard change the formulas for
+21:845:45353:20:21:74:519:539:11:g_d0_f3:11:g_d0_f3:B:optimal taxation?  When private insurance generates moral hazard, the changes ineinduced
+21:846:45441:21:20:74:519:518:11:g_d0_f3:11:g_d0_f3:B:by government intervention have a Örst-order externality on the private-insurerís budget and
+21:847:45533:20:20:74:519:498:11:g_d0_f3:11:g_d0_f3:B:must therefore be taken into account directly in the formula.  If private insurance does not
+21:848:45625:20:21:74:519:478:11:g_d0_f3:11:g_d0_f3:B:generate moral hazard, the Öscal externality term disappears becauseeis chosen jointly with
+21:849:45716:21:20:74:158:457:11:g_d0_f5:11:g_d0_f3:B:Tto optimizeW.
+21:850:45730:20:20:91:519:437:11:g_d0_f3:11:g_d0_f3:A:The irrelevance of informal insurance again challenges the existing literature, which views
+21:851:45821:20:21:74:519:417:11:g_d0_f3:11:g_d0_f3:B:all crowdout of private insurance as reducing the welfare gains from government intervention.
+21:852:45914:21:20:74:519:396:11:g_d0_f3:11:g_d0_f3:B:In the context of informal insurance, the conventional wisdom would posit that if distortionary
+21:853:46009:20:20:74:519:376:11:g_d0_f3:11:g_d0_f3:B:government insurance partly displaces non-distortionary private insurance, then government
+21:854:46099:20:20:74:519:356:11:g_d0_f3:11:g_d0_f3:B:intervention increases moral hazard e¢ ciency costs and is less desirable. This reasoning misses
+21:855:46195:20:21:74:519:336:11:g_d0_f3:11:g_d0_f3:B:the point that informal insurance itself must have costs if individuals are not fully insured in
+21:856:46291:21:20:74:519:315:11:g_d0_f3:11:g_d0_f3:B:equilibrium. If informal private insurance is optimized, the marginal welfare loss from having
+21:857:46385:20:20:74:519:295:11:g_d0_f3:11:g_d0_f3:B:less informal insurance must be exactly o§set by the marginal gain from paying less for that
+21:858:46477:20:21:74:520:275:11:g_d0_f3:11:g_d0_f3:B:insurance (s0(T)), as shown by (15).  Since the costs and beneÖts cancel out at the margin,
+21:859:46568:21:20:74:521:254:11:g_d0_f3:11:g_d0_f3:B:the displacement of informal insurance by public insurance does not lead to a ìleaky bucketî
+21:860:46660:20:20:74:519:234:11:g_d0_f3:11:g_d0_f3:B:despite the fact that the government achieves smaller increases in insurance coverage per dollar
+21:861:46756:20:35:74:103:214:11:g_d0_f3:11:g_d0_f3:B:spent.
+21:862:46762:35:31:74:210:179:14:g_d0_f2:14:g_d0_f2:C:4  Market Failures
+21:863:46780:31:20:74:519:148:11:g_d0_f3:11:g_d0_f3:B:In this section, we extend our formulas to allow for two market failures: pre-existing infor-
+21:864:46873:20:20:74:519:128:11:g_d0_f3:11:g_d0_f3:B:mation and adverse selection.  Pre-existing information refers topublicinformation about
+21:865:46961:20:21:74:520:108:11:g_d0_f3:11:g_d0_f4:B:individualsíability before insurance contracts are signed. Adverse selection refers toprivate
+21:866:47054:21:0:74:519:87:11:g_d0_f3:11:g_d0_f3:B:information about individualsíability before insurance contracts are signed.  Because income
+22:867:47148:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:e§ects in the e§ort decision greatly complicate the analysis, we focus exclusively on the hidden
+22:868:47244:20:30:74:388:680:11:g_d0_f3:8:g_d0_f3:B:skills model without income e§ects in the labor supply decision.14
+22:869:47310:30:27:74:252:650:12:g_d0_f2:12:g_d0_f2:C:4.1  Pre-Existing Information
+22:870:47339:27:20:74:518:623:11:g_d0_f3:11:g_d0_f5:B:We model pre-existing public information as follows. The population is partitioned intoK
+22:871:47427:20:21:74:520:603:11:g_d0_f3:11:g_d0_f3:B:exogenous groupsk= 1;::;K.  For instance, the groups could represent health status or geo-
+22:872:47517:21:20:74:519:582:11:g_d0_f3:11:g_d0_f3:B:graphic region of birth. Groupkcontains a fractionpkof the population and has (conditional)
+22:873:47608:20:0:74:261:562:11:g_d0_f3:11:g_d0_f7:B:density of abilitiesfk(n)so thatf(n) =
+22:874:47646:0:11:264:276:570:11:g_d0_f10:11:g_d0_f10:C:P
+22:875:47647:11:17:275:519:559:8:g_d0_f6:11:g_d0_f3:A:kpkfk(n). Group identity is known by both private
+22:876:47696:17:20:74:520:542:11:g_d0_f3:11:g_d0_f3:B:insurers and individuals before signing insurance contracts, but the realization ofnwithin a
+22:877:47788:20:21:74:519:522:11:g_d0_f3:11:g_d0_f3:B:group is unknown to both insurers and individuals when signing the contract.  As a result,
+22:878:47878:21:20:74:519:501:11:g_d0_f3:11:g_d0_f3:B:private insurance is o§eredwithineach groupk.  The private insurer o§ers an insurance rate
+22:879:47968:20:20:74:519:481:11:g_d0_f5:11:g_d0_f3:B:tkconditional on groupk.  When there is a single group, this corresponds to the model in
+22:880:48056:20:21:74:519:461:11:g_d0_f3:11:g_d0_f3:B:Section 3.  At the other extreme, when the number of groups is as large as the number of
+22:881:48144:21:20:74:519:440:11:g_d0_f3:11:g_d0_f3:B:individuals, all information is revealed before contracts can be signed and there is no scope for
+22:882:48241:20:20:74:519:420:11:g_d0_f3:11:g_d0_f3:B:private insurance contracts. In contrast, the government can impose redistributive taxation
+22:883:48332:20:21:74:193:400:11:g_d0_f3:11:g_d0_f3:B:on the entire population.
+22:884:48357:21:20:91:519:379:11:g_d0_f3:11:g_d0_f3:A:We assume that the government is restricted to using a uniform tax rate-on earnings.
+22:885:48441:20:20:74:519:359:11:g_d0_f3:11:g_d0_f3:B:This is a strong assumption in the present model because the government could potentially
+22:886:48530:20:21:74:519:339:11:g_d0_f3:11:g_d0_f3:B:improve welfare by conditioning tax rates on groups, but it is useful to gain insight into the
+22:887:48624:21:20:74:216:318:11:g_d0_f3:8:g_d0_f3:B:key features of the problem.15
+22:888:48654:20:20:91:519:298:11:g_d0_f3:11:g_d0_f3:A:We now introduce notation for the multiple-group case. Letmkdenote the total tax rate in
+22:889:48742:20:21:74:519:278:11:g_d0_f3:11:g_d0_f3:B:groupksuch that1-mk= (1--)(1-tk). Individualnin groupkoptimally chooses earnings
+22:890:48822:21:0:74:334:257:11:g_d0_f3:11:g_d0_f7:B:such thath0(z=n) = (1-mk)n.  We denote by-zk=
+22:891:48867:0:9:338:343:266:11:g_d0_f10:11:g_d0_f10:C:R
+22:892:48868:9:20:347:519:257:11:g_d0_f5:11:g_d0_f3:A:zfk(n)dnaverage earnings in group
+22:893:48901:20:20:74:519:237:11:g_d0_f5:11:g_d0_f3:B:kand by"k=1-mk-zkd-zkd(1-mk)the elasticity of-zkwith respect to1-mk. As in Section 3, let
+22:894:48990:20:21:74:519:217:11:g_d0_f5:11:g_d0_f3:B:w= (1-tk)z+tk-zkdenote earnings post private insurance (but before government taxation).
+22:895:49078:21:20:74:519:196:11:g_d0_f3:11:g_d0_f5:B:Note that-wk= -zkand-w= -z.  Letc= (1--)w+--w= (1--)(1-tk)z+tk(1--)-zk+--z
+22:896:49152:20:16:74:519:176:11:g_d0_f3:11:g_d0_f7:B:denote disposable income. The crowd-out raterkof private insurance in groupkis1-rk=
+22:897:49235:16:8:79:94:160:8:g_d0_f11:8:g_d0_f6:F:1--
+22:898:49238:8:0:76:98:152:8:g_d0_f11:6:g_d0_f12:F:1-mk
+22:899:49242:0:9:101:134:161:8:g_d0_f6:8:g_d0_f11:F:d(1-mk)
+22:900:49249:9:0:104:269:152:8:g_d0_f6:11:g_d0_f3:A:d(1--). Note that this implies that
+22:901:49284:0:8:273:289:160:8:g_d0_f6:6:g_d0_f12:F:dmk
+22:902:49287:8:0:277:395:152:8:g_d0_f6:11:g_d0_f3:A:d-= (1-tk)(1-rk)and
+22:903:49306:0:8:399:410:160:8:g_d0_f6:6:g_d0_f12:F:dtk
+22:904:49309:8:0:400:444:152:8:g_d0_f6:8:g_d0_f6:F:d-=-rk
+22:905:49315:0:8:446:464:160:8:g_d0_f11:6:g_d0_f12:F:1-tk
+22:906:49319:8:16:448:519:152:8:g_d0_f11:11:g_d0_f3:A:1--. As above,
+22:907:49333:16:15:83:519:136:6:g_d0_f3:9:g_d0_f3:F:14La§ont and Martimort (Section 7.1.3, 1999) analyze a moral hazard model with adverse selection.  Even
+22:908:49436:15:7:74:481:121:9:g_d0_f3:9:g_d0_f3:F:with only two levels of e§ort, the analysis and formulas (written in terms of primitives) are complex.
+22:909:49538:7:15:83:519:114:6:g_d0_f3:9:g_d0_f3:F:15In practice, horizonal equity considerations appear to prevent the government from using pre-existing public
+22:910:49648:15:0:74:476:99:9:g_d0_f3:9:g_d0_f3:F:information such as height, age, family background, or education for tax or redistribution purposes.
+23:911:49750:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:we denote by"-w;1--=1---zd-zd(1--)=1---wd-wd(1--)denote the elasticity of aggregate earnings with
+23:912:49847:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:respect to the net-of-government tax rate1--,taking into account crowdout.  We denote
+23:913:49932:21:0:74:158:659:11:g_d0_f3:11:g_d0_f7:B:bycov(-u0k;-wk) =
+23:914:49949:0:12:164:176:668:11:g_d0_f10:11:g_d0_f10:C:P
+23:915:49950:12:0:176:199:656:8:g_d0_f6:11:g_d0_f5:C:kpk-u
+23:916:49955:0:7:200:202:663:8:g_d0_f9:8:g_d0_f9:F:0
+23:917:49956:7:0:200:510:656:8:g_d0_f6:11:g_d0_f5:C:k[ -wk--w]the covariance between average marginal utilities (-u
+23:918:50019:0:7:510:512:663:8:g_d0_f9:8:g_d0_f9:F:0
+23:919:50020:7:17:510:519:656:8:g_d0_f6:11:g_d0_f3:A:k)
+23:920:50022:17:0:74:349:639:11:g_d0_f3:11:g_d0_f7:B:and wages (-wk) across theKgroups. Letcovk(u0;w) =
+23:921:50072:0:9:354:359:648:11:g_d0_f10:11:g_d0_f10:C:R
+23:922:50073:9:20:363:519:639:11:g_d0_f5:11:g_d0_f3:A:u0-(w--wk)fk(n)dndenote the
+23:923:50100:20:21:74:520:619:11:g_d0_f3:11:g_d0_f3:B:covariance betweenu0andwwithingroupk.  Finally, in the case where private insurance
+23:924:50183:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:does not generate moral hazard, it has the same lump-sum and loading factor design as in
+23:925:50271:20:20:74:229:578:11:g_d0_f3:11:g_d0_f3:B:Section 3.3 within each groupk.
+23:926:50302:20:29:91:485:558:11:g_d0_f3:11:g_d0_f3:A:The government chooses-to maximize social welfare under a utilitarian criterion:
+23:927:50382:29:0:136:159:529:11:g_d0_f5:11:g_d0_f7:C:W=
+23:928:50384:0:24:162:178:539:11:g_d0_f10:11:g_d0_f10:C:X
+23:929:50385:24:0:168:172:515:8:g_d0_f6:8:g_d0_f6:F:k
+23:930:50386:0:0:180:189:529:11:g_d0_f5:8:g_d0_f6:C:pk
+23:931:50388:0:15:192:198:544:11:g_d0_f10:11:g_d0_f10:C:Z
+23:932:50389:15:0:205:211:529:11:g_d0_f5:11:g_d0_f5:C:u
+23:933:50390:0:12:213:220:541:11:g_d0_f10:11:g_d0_f10:C:-
+23:934:50391:12:0:219:385:529:11:g_d0_f5:11:g_d0_f5:C:z-(1-mk) +tk(1--)-zk+--z-h
+23:935:50417:0:20:387:400:541:11:g_d0_f10:11:g_d0_f5:C:-z
+23:936:50419:20:0:395:402:521:11:g_d0_f5:11:g_d0_f5:C:n
+23:937:50420:0:12:402:415:541:11:g_d0_f10:11:g_d0_f10:C:--
+23:938:50422:12:32:417:458:529:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn:
+23:939:50430:32:31:74:401:497:11:g_d0_f3:11:g_d0_f3:B:The following proposition characterizes the solution to this problem.
+23:940:50499:31:20:74:148:466:11:g_d0_f2:11:g_d0_f2:C:Proposition 3
+23:941:50512:20:20:78:519:446:11:g_d0_f4:11:g_d0_f4:C:1) In the general case where private insurance is not necessarily optimized, the optimal gov-
+23:942:50605:20:24:74:205:426:11:g_d0_f4:11:g_d0_f4:C:ernment tax rate-satisÖes
+23:943:50630:24:14:127:132:402:11:g_d0_f5:11:g_d0_f5:C:-
+23:944:50631:14:0:118:142:388:11:g_d0_f7:11:g_d0_f5:C:1--
+23:945:50634:0:0:147:166:395:11:g_d0_f7:11:g_d0_f8:C:=-
+23:946:50636:0:14:180:185:402:11:g_d0_f7:11:g_d0_f7:C:1
+23:947:50637:14:0:168:197:388:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+23:948:50644:0:0:201:204:395:11:g_d0_f8:11:g_d0_f8:C:-
+23:949:50645:0:9:207:213:414:11:g_d0_f10:11:g_d0_f10:C:"
+23:950:50646:9:23:213:229:405:11:g_d0_f10:11:g_d0_f10:C:X
+23:951:50647:23:0:219:223:382:8:g_d0_f6:8:g_d0_f6:F:k
+23:952:50648:0:0:231:278:395:11:g_d0_f5:11:g_d0_f7:C:pk(1-rk)
+23:953:50656:0:15:280:394:403:11:g_d0_f5:8:g_d0_f6:C:covk(u0;w) +"ktk-u0k--wk
+23:954:50680:15:0:326:350:388:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+23:955:50686:0:0:399:407:395:11:g_d0_f7:11:g_d0_f7:C:+
+23:956:50687:0:15:411:464:403:11:g_d0_f5:11:g_d0_f7:C:cov(-u0k;-wk)
+23:957:50700:15:0:426:450:388:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+23:958:50706:0:19:466:472:414:11:g_d0_f10:11:g_d0_f10:C:#
+23:959:50707:19:32:474:519:395:11:g_d0_f5:11:g_d0_f3:A::(17)
+23:960:50712:32:21:79:520:363:11:g_d0_f4:11:g_d0_f4:C:2) When private insurance is optimized within each group,covk(u0;w) +"ktk-u0k--wk= 0for
+23:961:50799:21:21:74:364:342:11:g_d0_f4:11:g_d0_f4:C:eachkand hence the optimal government tax rate-satisÖes
+23:962:50854:21:15:233:238:321:11:g_d0_f5:11:g_d0_f5:C:-
+23:963:50855:15:0:224:247:306:11:g_d0_f7:11:g_d0_f5:C:1--
+23:964:50858:0:0:253:272:313:11:g_d0_f7:11:g_d0_f8:C:=-
+23:965:50860:0:15:286:291:321:11:g_d0_f7:11:g_d0_f7:C:1
+23:966:50861:15:0:274:302:306:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+23:967:50868:0:0:307:310:313:11:g_d0_f8:11:g_d0_f8:C:-
+23:968:50869:0:15:314:367:321:11:g_d0_f5:11:g_d0_f7:C:cov(-u0k;-wk)
+23:969:50882:15:0:329:353:306:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+23:970:50888:0:29:368:519:313:11:g_d0_f5:11:g_d0_f3:A::(18)
+23:971:50893:29:20:78:519:284:11:g_d0_f4:11:g_d0_f4:C:3) When private insurance does not generate moral hazard, the optimal government tax rate
+23:972:50982:20:22:74:223:264:11:g_d0_f5:11:g_d0_f4:C:-follows the standard formula:
+23:973:51012:22:14:237:242:242:11:g_d0_f5:11:g_d0_f5:C:-
+23:974:51013:14:0:227:251:228:11:g_d0_f7:11:g_d0_f5:C:1--
+23:975:51016:0:0:256:276:235:11:g_d0_f7:11:g_d0_f8:C:=-
+23:976:51018:0:14:290:295:242:11:g_d0_f7:11:g_d0_f7:C:1
+23:977:51019:14:0:277:306:228:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+23:978:51026:0:0:311:314:235:11:g_d0_f8:11:g_d0_f8:C:-
+23:979:51027:0:14:317:363:242:11:g_d0_f5:11:g_d0_f7:C:cov(u0;w)
+23:980:51036:14:0:329:353:228:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+23:981:51042:0:29:365:519:235:11:g_d0_f5:11:g_d0_f3:A::(19)
+23:982:51047:29:20:74:519:206:11:g_d0_f2:11:g_d0_f3:B:Proof:We start with the general case. Using the envelope condition for individualz, the Örst
+23:983:51139:20:29:74:246:186:11:g_d0_f3:11:g_d0_f3:B:order condition with respect to-is:
+23:984:51174:29:0:74:91:157:11:g_d0_f7:11:g_d0_f7:C:0 =
+23:985:51177:0:15:96:112:164:11:g_d0_f5:11:g_d0_f5:C:dW
+23:986:51179:15:0:98:108:149:11:g_d0_f5:11:g_d0_f5:C:d-
+23:987:51181:0:0:117:125:157:11:g_d0_f7:11:g_d0_f7:C:=
+23:988:51182:0:23:129:145:167:11:g_d0_f10:11:g_d0_f10:C:X
+23:989:51183:23:0:134:138:144:8:g_d0_f6:8:g_d0_f6:F:k
+23:990:51184:0:0:146:156:157:11:g_d0_f5:8:g_d0_f6:C:pk
+23:991:51186:0:15:159:165:172:11:g_d0_f10:11:g_d0_f10:C:Z
+23:992:51187:15:0:171:197:157:11:g_d0_f5:11:g_d0_f8:C:u0(c)-
+23:993:51193:0:15:197:203:172:11:g_d0_f10:11:g_d0_f10:C:-
+23:994:51194:15:0:203:216:157:11:g_d0_f8:11:g_d0_f5:C:-z
+23:995:51196:0:15:218:237:164:11:g_d0_f5:8:g_d0_f6:C:dmk
+23:996:51199:15:0:222:232:149:11:g_d0_f5:11:g_d0_f5:C:d-
+23:997:51201:0:0:242:318:157:11:g_d0_f8:11:g_d0_f7:C:-tk-zk+ (1--)
+23:998:51214:0:15:320:333:164:11:g_d0_f5:8:g_d0_f6:C:dtk
+23:999:51217:15:0:321:331:149:11:g_d0_f5:11:g_d0_f5:C:d-
+23:1000:51219:0:0:336:401:157:11:g_d0_f7:11:g_d0_f7:C:-zk+tk(1--)
+23:1001:51230:0:15:403:417:164:11:g_d0_f5:8:g_d0_f6:C:d-zk
+23:1002:51234:15:0:405:415:149:11:g_d0_f5:11:g_d0_f5:C:d-
+23:1003:51236:0:0:422:457:157:11:g_d0_f7:11:g_d0_f5:C:+ -z+-
+23:1004:51242:0:15:459:470:164:11:g_d0_f5:11:g_d0_f5:C:d-z
+23:1005:51245:15:0:459:469:149:11:g_d0_f5:11:g_d0_f5:C:d-
+23:1006:51247:0:15:472:478:172:11:g_d0_f10:11:g_d0_f10:C:-
+23:1007:51248:15:32:480:520:157:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn:
+23:1008:51256:32:21:74:191:125:11:g_d0_f3:11:g_d0_f3:B:which we can rewrite as:
+23:1009:51280:21:15:85:90:104:11:g_d0_f5:11:g_d0_f5:C:-
+23:1010:51281:15:0:76:99:89:11:g_d0_f7:11:g_d0_f5:C:1--
+23:1011:51284:0:0:102:196:96:11:g_d0_f8:11:g_d0_f8:C:-"-w;1----u0--z= -u0--z-
+23:1012:51308:0:24:197:213:107:11:g_d0_f10:11:g_d0_f10:C:X
+23:1013:51309:24:0:202:206:83:8:g_d0_f6:8:g_d0_f6:F:k
+23:1014:51310:0:0:214:258:96:11:g_d0_f5:11:g_d0_f8:C:pk-u0k--zk-
+23:1015:51321:0:24:258:274:107:11:g_d0_f10:11:g_d0_f10:C:X
+23:1016:51322:24:0:264:268:83:8:g_d0_f6:8:g_d0_f6:F:k
+23:1017:51323:0:0:276:408:96:11:g_d0_f5:11:g_d0_f8:C:pk(1-tk)(1-rk)covk(z;u0)-
+23:1018:51348:0:24:408:424:107:11:g_d0_f10:11:g_d0_f10:C:X
+23:1019:51349:24:0:414:418:83:8:g_d0_f6:8:g_d0_f6:F:k
+23:1020:51350:0:0:426:519:96:11:g_d0_f5:11:g_d0_f5:C:pk-u0k--zk-tk(1-rk)"k:
+24:1021:51374:0:23:74:415:700:11:g_d0_f3:11:g_d0_f3:B:Note that-z= -w,-zk= -wk, andcovk(w;u0) = (1-tk)covk(z;u0).  Hence
+24:1022:51440:23:15:119:124:677:11:g_d0_f5:11:g_d0_f5:C:-
+24:1023:51441:15:0:109:133:662:11:g_d0_f7:11:g_d0_f5:C:1--
+24:1024:51444:0:0:138:293:669:11:g_d0_f8:11:g_d0_f8:C:-"-w;1----u0--w=--cov(-u0k;-wk)-
+24:1025:51476:0:24:295:311:680:11:g_d0_f10:11:g_d0_f10:C:X
+24:1026:51477:24:0:301:305:656:8:g_d0_f6:8:g_d0_f6:F:k
+24:1027:51478:0:33:313:486:669:11:g_d0_f5:11:g_d0_f5:C:pk(1-rk)[covk(w;u0) +"ktk-u0k--wk];
+24:1028:51513:33:21:74:194:636:11:g_d0_f3:11:g_d0_f3:B:which demonstrates (17).
+24:1029:51537:21:20:91:518:615:11:g_d0_f3:8:g_d0_f6:A:When the private insurer setstkoptimally, it takes-andR=--zas given and choosestk
+24:1030:51618:20:16:74:132:595:11:g_d0_f3:11:g_d0_f3:B:to maximize
+24:1031:51629:16:15:152:158:579:11:g_d0_f10:11:g_d0_f10:C:Z
+24:1032:51630:15:0:164:170:564:11:g_d0_f5:11:g_d0_f5:C:u
+24:1033:51631:0:13:172:179:577:11:g_d0_f10:11:g_d0_f10:C:-
+24:1034:51632:13:0:179:369:564:11:g_d0_f5:11:g_d0_f5:C:z-(1-tk)(1--) +tk(1--)-zk+R-h
+24:1035:51661:0:20:371:384:577:11:g_d0_f10:11:g_d0_f5:C:-z
+24:1036:51663:20:0:379:386:557:11:g_d0_f5:11:g_d0_f5:C:n
+24:1037:51664:0:13:386:399:577:11:g_d0_f10:11:g_d0_f10:C:--
+24:1038:51666:13:30:401:442:564:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn:
+24:1039:51674:30:20:74:519:534:11:g_d0_f3:11:g_d0_f3:B:This is the same problem as in Section 3.2 and the Örst order condition leads to the same
+24:1040:51763:20:13:74:113:514:11:g_d0_f3:11:g_d0_f3:B:formula:
+24:1041:51771:13:15:238:246:501:11:g_d0_f5:8:g_d0_f6:C:tk
+24:1042:51773:15:0:228:255:486:11:g_d0_f7:8:g_d0_f6:C:1-tk
+24:1043:51777:0:0:260:268:493:11:g_d0_f7:11:g_d0_f7:C:=
+24:1044:51778:0:15:273:362:501:11:g_d0_f8:11:g_d0_f7:C:-covk(z=-zk;u0=-u0k)
+24:1045:51798:15:0:313:322:486:11:g_d0_f5:8:g_d0_f6:C:"k
+24:1046:51800:0:26:364:367:493:11:g_d0_f5:11:g_d0_f5:C:;
+24:1047:51801:26:20:74:519:467:11:g_d0_f3:11:g_d0_f3:B:which can be rewritten astk"k=-covk(w=-wk;u0=-u0k). Therefore, the Örst term in the square
+24:1048:51891:20:21:74:407:447:11:g_d0_f3:11:g_d0_f3:B:bracket expression in (17) vanishes, yielding the simpler formula (18).
+24:1049:51962:21:20:91:519:426:11:g_d0_f3:11:g_d0_f3:A:If there is no moral hazard in the private insurer choice, then, as in Section 3.3, lumpsum
+24:1050:52053:20:16:74:357:406:11:g_d0_f3:11:g_d0_f3:B:transfersTknandznare chosen simultaneously to maximize
+24:1051:52107:16:15:161:167:390:11:g_d0_f10:11:g_d0_f10:C:Z
+24:1052:52108:15:0:174:180:375:11:g_d0_f5:11:g_d0_f5:C:u
+24:1053:52109:0:12:182:187:387:11:g_d0_f10:11:g_d0_f10:C:h
+24:1054:52110:12:0:187:356:375:11:g_d0_f7:11:g_d0_f5:C:(zn-(Tkn+sk(Tkn))(1--) +R-h
+24:1055:52137:0:19:359:376:387:11:g_d0_f10:8:g_d0_f6:C:-zn
+24:1056:52140:19:0:368:375:368:11:g_d0_f5:11:g_d0_f5:C:n
+24:1057:52141:0:12:378:390:387:11:g_d0_f10:11:g_d0_f10:C:-i
+24:1058:52143:12:30:392:432:375:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn:
+24:1059:52151:30:0:74:228:345:11:g_d0_f3:11:g_d0_f3:B:subject to the budget constraint
+24:1060:52183:0:9:231:236:354:11:g_d0_f10:11:g_d0_f10:C:R
+24:1061:52184:9:20:241:519:345:11:g_d0_f5:11:g_d0_f3:A:Tknfk(n)dn-0(with multiplier-k). The Örst order condi-
+24:1062:52238:20:31:74:519:325:11:g_d0_f3:11:g_d0_f3:B:tion forTknimplies thatu0kn)-(1 +s0kn))-(1--) =-k. The government chooses-to maximize:
+24:1063:52324:31:0:123:161:294:11:g_d0_f5:11:g_d0_f7:C:W(-) =
+24:1064:52330:0:23:164:180:304:11:g_d0_f10:11:g_d0_f10:C:X
+24:1065:52331:23:0:169:173:281:8:g_d0_f6:8:g_d0_f6:F:k
+24:1066:52332:0:0:181:191:294:11:g_d0_f5:8:g_d0_f6:C:pk
+24:1067:52334:0:15:194:200:309:11:g_d0_f10:11:g_d0_f10:C:Z
+24:1068:52335:15:0:207:213:294:11:g_d0_f5:11:g_d0_f5:C:u
+24:1069:52336:0:12:215:220:306:11:g_d0_f10:11:g_d0_f10:C:h
+24:1070:52337:12:0:220:395:294:11:g_d0_f7:11:g_d0_f5:C:(zn-(Tkn+sk(Tkn))(1--) +--w-h
+24:1071:52366:0:19:397:415:306:11:g_d0_f10:8:g_d0_f6:C:-zn
+24:1072:52369:19:0:407:414:287:11:g_d0_f5:11:g_d0_f5:C:n
+24:1073:52370:0:12:416:428:306:11:g_d0_f10:11:g_d0_f10:C:-i
+24:1074:52372:12:33:430:470:294:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn:
+24:1075:52380:33:23:74:295:261:11:g_d0_f3:11:g_d0_f3:B:Using the envelope conditions forzn, we have:
+24:1076:52425:23:15:113:129:238:11:g_d0_f5:11:g_d0_f5:C:dW
+24:1077:52427:15:0:116:126:223:11:g_d0_f5:11:g_d0_f5:C:d-
+24:1078:52429:0:0:142:150:230:11:g_d0_f7:11:g_d0_f7:C:=
+24:1079:52430:0:24:160:176:241:11:g_d0_f10:11:g_d0_f10:C:X
+24:1080:52431:24:0:166:170:217:8:g_d0_f6:8:g_d0_f6:F:k
+24:1081:52432:0:0:178:187:230:11:g_d0_f5:8:g_d0_f6:C:pk
+24:1082:52434:0:15:190:196:245:11:g_d0_f10:11:g_d0_f10:C:Z
+24:1083:52435:15:0:203:218:230:11:g_d0_f5:11:g_d0_f8:C:u0-
+24:1084:52438:0:16:220:226:246:11:g_d0_f10:11:g_d0_f10:C:-
+24:1085:52439:16:0:226:282:230:11:g_d0_f8:11:g_d0_f5:C:-w+ -w--
+24:1086:52447:0:15:297:311:238:11:g_d0_f5:11:g_d0_f5:C:d-w
+24:1087:52450:15:0:284:323:223:11:g_d0_f5:11:g_d0_f7:C:d(1--)
+24:1088:52456:0:0:327:415:230:11:g_d0_f8:11:g_d0_f7:C:-(1 +s0kn))(1--)
+24:1089:52472:0:15:416:433:238:11:g_d0_f5:8:g_d0_f6:C:dTkn
+24:1090:52476:15:0:420:430:223:11:g_d0_f5:11:g_d0_f5:C:d-
+24:1091:52478:0:16:436:442:246:11:g_d0_f10:11:g_d0_f10:C:-
+24:1092:52479:16:35:444:481:230:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn
+24:1093:52486:35:0:142:193:195:11:g_d0_f7:8:g_d0_f9:C:=--w--u0
+24:1094:52494:0:8:196:202:210:11:g_d0_f10:11:g_d0_f10:C:-
+24:1095:52495:8:15:212:217:202:11:g_d0_f5:11:g_d0_f5:C:-
+24:1096:52496:15:0:203:226:187:11:g_d0_f7:11:g_d0_f5:C:1--
+24:1097:52499:0:0:229:346:195:11:g_d0_f5:11:g_d0_f7:C:"-w;1--+cov(w=-w;u0=-u0)
+24:1098:52523:0:15:346:352:210:11:g_d0_f10:11:g_d0_f10:C:-
+24:1099:52524:15:0:354:362:195:11:g_d0_f8:11:g_d0_f8:C:-
+24:1100:52525:0:23:365:381:205:11:g_d0_f10:11:g_d0_f10:C:X
+24:1101:52526:23:0:371:375:182:8:g_d0_f6:8:g_d0_f6:F:k
+24:1102:52527:0:0:383:404:195:11:g_d0_f5:8:g_d0_f6:C:pk-k
+24:1103:52531:0:8:407:413:210:11:g_d0_f10:11:g_d0_f10:C:Z
+24:1104:52532:8:15:420:438:202:11:g_d0_f5:8:g_d0_f6:C:dTkn
+24:1105:52536:15:0:424:434:187:11:g_d0_f5:11:g_d0_f5:C:d-
+24:1106:52538:0:35:440:478:195:11:g_d0_f5:11:g_d0_f5:C:fk(n)dn
+24:1107:52545:35:0:74:213:160:11:g_d0_f3:11:g_d0_f3:B:The last term cancels out as
+24:1108:52573:0:9:217:222:169:11:g_d0_f10:11:g_d0_f10:C:R
+24:1109:52574:9:21:226:520:160:11:g_d0_f5:11:g_d0_f3:A:Tknfk(n)dn= 0for eachkand any value of-, yielding (19).
+24:1110:52629:21:31:74:101:139:11:g_d0_f3:11:g_d0_f3:B:QED.
+24:1111:52633:31:21:91:519:108:11:g_d0_f3:11:g_d0_f3:A:Equation (17) shows that the welfare gain from government intervention in this more gen-
+24:1112:52721:21:0:74:519:87:11:g_d0_f3:11:g_d0_f3:B:eral model consists of two elements: (1) increased insurance within groups, which is captured
+25:1113:52816:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:by parameters analogous to those analyzed in the baseline case, and (2) increased insurance
+25:1114:52907:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:across groups, which reáects the gains from pooling risk across types.  In the present model,
+25:1115:53000:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:(1) only is operative if private insurance is not optimized; if it was, this term would be zero
+25:1116:53095:20:20:74:257:639:11:g_d0_f3:11:g_d0_f3:B:and only the second term is operative.
+25:1117:53133:20:21:91:519:619:11:g_d0_f3:11:g_d0_f3:A:When private insurance is optimized, the optimal tax rate follows a modiÖed formula where
+25:1118:53222:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:individuals in groupkare treated as asingleindividual with marginal utility and earnings
+25:1119:53310:20:20:74:520:578:11:g_d0_f3:11:g_d0_f3:B:equal to the average in groupk.  Intuitively, private insurance takes care of within group
+25:1120:53400:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:insurance as well as the government could.  Therefore, the government should focus solely on
+25:1121:53492:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:redistributionacrossgroups, which cannot be insured by the private sector because of pre-
+25:1122:53581:20:20:74:521:517:11:g_d0_f3:11:g_d0_f3:B:existing information.   Finally, (19) shows that the government can again ignore ìinformalî
+25:1123:53672:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:private insurance that does not general moral hazard and apply the standard optimal tax
+25:1124:53759:21:20:74:113:476:11:g_d0_f3:11:g_d0_f3:B:formula.
+25:1125:53767:20:20:91:520:456:11:g_d0_f4:11:g_d0_f3:A:An Alternative Representation.It is useful to simplify formula (17) by deÖning measures
+25:1126:53854:20:29:74:487:436:11:g_d0_f3:11:g_d0_f3:B:of the aggregate crowdout parameter^rand aggregate private insurance rate^t.  DeÖne
+25:1127:53937:29:0:166:182:407:11:g_d0_f7:11:g_d0_f7:C:^r=
+25:1128:53940:0:12:186:198:423:11:g_d0_f10:11:g_d0_f10:C:P
+25:1129:53941:12:0:198:256:411:8:g_d0_f6:11:g_d0_f5:C:kpkrkcovk(u
+25:1130:53952:0:18:256:276:418:8:g_d0_f9:11:g_d0_f7:C:0;w)
+25:1131:53956:18:0:208:254:400:11:g_d0_f5:11:g_d0_f7:C:cov(u0;w)
+25:1132:53965:0:0:281:289:407:11:g_d0_f7:11:g_d0_f7:C:=
+25:1133:53966:0:12:293:305:423:11:g_d0_f10:11:g_d0_f10:C:P
+25:1134:53967:12:0:305:363:411:8:g_d0_f6:11:g_d0_f5:C:kpkrkcovk(u
+25:1135:53978:0:10:363:383:418:8:g_d0_f9:11:g_d0_f7:C:0;w)
+25:1136:53982:10:12:298:310:408:11:g_d0_f10:11:g_d0_f10:C:P
+25:1137:53983:12:0:310:358:396:8:g_d0_f6:11:g_d0_f5:C:kpkcovk(u
+25:1138:53992:0:25:358:428:403:8:g_d0_f9:11:g_d0_f5:C:0;w)-(1--);
+25:1139:54003:25:20:74:520:378:11:g_d0_f3:11:g_d0_f3:B:as the (weighted) average of the crowdout ratesrk, multiplied by the fraction of risk that is
+25:1140:54096:20:20:74:519:358:11:g_d0_f3:11:g_d0_f5:B:within-group (and hence can potentially be insured by the private sector).  Conceptually,^r
+25:1141:54187:20:21:74:520:338:11:g_d0_f3:11:g_d0_f3:B:is a measure of thetotalcrowdout of private insurance by government insurance.  Similarly,
+25:1142:54277:21:18:74:102:317:11:g_d0_f3:11:g_d0_f3:B:deÖne
+25:1143:54282:18:0:229:244:299:11:g_d0_f7:11:g_d0_f7:C:^t=
+25:1144:54285:0:23:248:264:307:11:g_d0_f10:11:g_d0_f10:C:X
+25:1145:54286:23:0:253:257:284:8:g_d0_f6:8:g_d0_f6:F:k
+25:1146:54287:0:0:265:284:297:11:g_d0_f5:8:g_d0_f6:C:pktk
+25:1147:54291:0:15:286:359:305:11:g_d0_f5:8:g_d0_f6:C:"-wk;1----wk--u0k
+25:1148:54308:15:0:292:354:290:11:g_d0_f5:8:g_d0_f9:C:"-w;1----w--u0
+25:1149:54322:0:29:361:364:297:11:g_d0_f5:11:g_d0_f5:C:;
+25:1150:54323:29:20:74:520:268:11:g_d0_f3:11:g_d0_f3:B:as the (weighted) average of the private insurance ratestk.  Using the standard covariance
+25:1151:54413:20:29:74:186:248:11:g_d0_f3:11:g_d0_f3:B:decomposition, we have
+25:1152:54435:29:0:102:166:219:11:g_d0_f5:11:g_d0_f7:C:cov(u0;w)  =
+25:1153:54447:0:23:176:192:229:11:g_d0_f10:11:g_d0_f10:C:X
+25:1154:54448:23:0:182:186:206:8:g_d0_f6:8:g_d0_f6:F:k
+25:1155:54449:0:0:194:203:219:11:g_d0_f5:8:g_d0_f6:C:pk
+25:1156:54451:0:15:206:212:234:11:g_d0_f10:11:g_d0_f10:C:Z
+25:1157:54452:15:33:219:275:219:11:g_d0_f5:8:g_d0_f6:C:u0(w--w)fk
+25:1158:54462:33:0:158:166:186:11:g_d0_f7:11:g_d0_f7:C:=
+25:1159:54463:0:24:176:192:196:11:g_d0_f10:11:g_d0_f10:C:X
+25:1160:54464:24:0:182:186:172:8:g_d0_f6:8:g_d0_f6:F:k
+25:1161:54465:0:0:194:203:186:11:g_d0_f5:8:g_d0_f6:C:pk
+25:1162:54467:0:15:206:212:201:11:g_d0_f10:11:g_d0_f10:C:Z
+25:1163:54468:15:0:219:340:186:11:g_d0_f5:11:g_d0_f7:C:u0(w--wk+ -wk--w)fk=
+25:1164:54488:0:24:343:359:196:11:g_d0_f10:11:g_d0_f10:C:X
+25:1165:54489:24:0:349:353:172:8:g_d0_f6:8:g_d0_f6:F:k
+25:1166:54490:0:32:361:492:186:11:g_d0_f5:11:g_d0_f5:C:pkcovk(u0;w) +cov(-u0k;-wk):
+25:1167:54518:32:21:74:520:154:11:g_d0_f3:11:g_d0_f3:B:Denote by-=cov(-u0k;-wk)=cov(u0;w)the fraction of the covariance between earningswand
+25:1168:54603:21:20:74:520:133:11:g_d0_f3:11:g_d0_f3:B:marginal utilityu0that is due to cross-group di§erences.  We can then rewrite equation (17)
+25:1169:54694:20:13:74:123:113:11:g_d0_f3:11:g_d0_f3:B:as follows:
+25:1170:54705:13:15:224:229:100:11:g_d0_f5:11:g_d0_f5:C:-
+25:1171:54706:15:0:214:238:85:11:g_d0_f7:11:g_d0_f5:C:1--
+25:1172:54709:0:0:243:278:93:11:g_d0_f7:11:g_d0_f7:C:=-^t+
+25:1173:54714:0:15:285:308:100:11:g_d0_f7:11:g_d0_f5:C:1-^r
+25:1174:54718:15:0:282:310:85:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+25:1175:54725:0:0:315:318:93:11:g_d0_f8:11:g_d0_f8:C:-
+25:1176:54726:0:15:322:376:100:11:g_d0_f8:11:g_d0_f7:C:-cov(u0;w)
+25:1177:54736:15:0:337:361:85:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+25:1178:54742:0:0:378:519:93:11:g_d0_f3:11:g_d0_f3:A:.(20)
+26:1179:54749:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:This alternative representation of (17) has exactly the same form as equation (9) obtained in
+26:1180:54842:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:Section 2, which allowed for non-optimized private insurance but did not explicitly model mar-
+26:1181:54936:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:ket failures.  This result shows that the baseline formula holds in the model with pre-existing
+26:1182:55031:20:29:74:518:639:11:g_d0_f3:8:g_d0_f3:B:information, provided that the tax rate and crowdout parameter are measured appropriately.16
+26:1183:55123:29:28:74:209:610:12:g_d0_f2:12:g_d0_f2:C:4.2  Adverse Selection
+26:1184:55145:28:20:74:519:582:11:g_d0_f3:11:g_d0_f3:B:Now suppose that each individual knows which group he belongs to before signing insurance
+26:1185:55234:20:20:74:519:562:11:g_d0_f3:11:g_d0_f3:B:contracts, but insurers do not have this information. This model is an extension of the classic
+26:1186:55329:20:20:74:519:542:11:g_d0_f3:11:g_d0_f3:B:adverse selection models proposed by Rothschild and Stiglitz (1976) and Wilson (1977). If
+26:1187:55418:20:21:74:519:522:11:g_d0_f3:11:g_d0_f3:B:private insurers were to o§er a menu of competitive insurance contracts with insurance rates
+26:1188:55510:21:20:74:519:501:11:g_d0_f7:11:g_d0_f3:B:(t1;::;tM), individuals in groupkwould self-select the insurance rate that yields the highest
+26:1189:55603:20:20:74:519:481:11:g_d0_f3:11:g_d0_f3:B:expected utility and private insurers would make negative proÖts. Hence, private insurers are
+26:1190:55696:20:21:74:519:461:11:g_d0_f3:11:g_d0_f3:B:forced to adjust contracts to respect incentive compatibility constraints. A strong equilibrium
+26:1191:55791:21:20:74:519:440:11:g_d0_f3:11:g_d0_f3:B:is deÖned as a set of contracts such that no Örm can make positive proÖts by o§ering a new
+26:1192:55881:20:20:74:519:420:11:g_d0_f3:11:g_d0_f3:B:insurance contract. When such strong equilibria exist, they are always separating in the sense
+26:1193:55975:20:21:74:519:400:11:g_d0_f3:11:g_d0_f3:B:that each groupkselects a single and speciÖc insurance ratetk(Rothschild and Stiglitz 1976).
+26:1194:56067:21:20:74:519:379:11:g_d0_f3:11:g_d0_f3:B:When such strong equilibria do not exist, it is necessary to weaken the concept of equilibrium
+26:1195:56161:20:20:74:323:359:11:g_d0_f3:11:g_d0_f3:B:to obtain existence of an equilibrium (Wilson 1977).
+26:1196:56213:20:21:91:519:339:11:g_d0_f3:11:g_d0_f3:A:Here, we restrict attention to the region of the parameter space where an equilibrium exists.
+26:1197:56306:21:20:74:520:318:11:g_d0_f3:11:g_d0_f3:B:In this equilibrium, each groupkis o§ered private insurance at tax ratetk.  Thetkcan be
+26:1198:56393:20:20:74:519:298:11:g_d0_f3:11:g_d0_f3:B:common across some groups if there is partial pooling. Furthermore thetkdepend on the
+26:1199:56478:20:21:74:519:278:11:g_d0_f3:11:g_d0_f3:B:government tax rate-.  Assume that thetkare smooth functions of-so that crowdout rates
+26:1200:56564:21:20:74:519:257:11:g_d0_f5:11:g_d0_f3:B:rkare well deÖned and welfare gains are smooth.17The revelation principle implies that in
+26:1201:56653:20:20:74:519:237:11:g_d0_f3:11:g_d0_f3:B:equilibrium each individual will truthfully reveal his typek.  Hence, the equilibrium in this
+26:1202:56746:20:21:74:519:217:11:g_d0_f3:11:g_d0_f3:B:model can be viewed as a special case of the pre-existing information model analyzed above,
+26:1203:56837:21:20:74:519:196:11:g_d0_f3:11:g_d0_f3:B:where private insurance contracts were set arbitrarily. It follows that the general formula (17)
+26:1204:56933:20:17:74:485:176:11:g_d0_f3:11:g_d0_f3:B:in Proposition 3.1 and the alternative representation in (20) hold in this environment.
+26:1205:57020:17:14:83:519:159:6:g_d0_f3:9:g_d0_f3:F:16Implementing (20) exactly would require knowledge about the structure of the groups and private insurance
+26:1206:57127:14:11:74:519:145:9:g_d0_f3:9:g_d0_f3:F:contracts to measure^tand^r. The measurement of the amount of private insurance is complicated in tax models
+26:1207:57235:11:11:74:519:134:9:g_d0_f3:9:g_d0_f3:F:because it requires knowledge of marginal products.  In social insurance applications, the amount of private
+26:1208:57343:11:7:74:362:123:9:g_d0_f3:9:g_d0_f3:F:insurance can be measured directly because there are explicit transfers.
+26:1209:57415:7:15:83:519:116:6:g_d0_f3:9:g_d0_f3:F:17In cases with multiple equilibria, this assumption requires that the allocation never jumps across equilibria
+26:1210:57526:15:0:74:193:101:9:g_d0_f3:9:g_d0_f3:F:following a small change in-.
+27:1211:57557:0:20:91:519:700:11:g_d0_f3:11:g_d0_f3:A:Adverse selection does, however, a§ect the formula with optimized private insurance (18)
+27:1212:57645:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:because it distorts the provision of private insurance within groups.  This leads to a violation
+27:1213:57741:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:of the within-group private insurance optimality conditiont-k=-covk(w=-wk;u0=-u0k)="k.  To
+27:1214:57831:20:24:74:265:639:11:g_d0_f3:11:g_d0_f3:B:obtain further intuition, rewrite (17) as:
+27:1215:57873:24:15:114:119:615:11:g_d0_f5:11:g_d0_f5:C:-
+27:1216:57874:15:0:104:128:600:11:g_d0_f7:11:g_d0_f5:C:1--
+27:1217:57877:0:0:133:153:608:11:g_d0_f7:11:g_d0_f8:C:=-
+27:1218:57879:0:15:167:172:615:11:g_d0_f7:11:g_d0_f7:C:1
+27:1219:57880:15:0:154:183:600:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+27:1220:57887:0:0:188:191:608:11:g_d0_f8:11:g_d0_f8:C:-
+27:1221:57888:0:15:200:248:615:11:g_d0_f7:11:g_d0_f7:C:-cov(-u0k;-wk)
+27:1222:57902:15:0:209:234:600:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+27:1223:57908:0:0:251:259:608:11:g_d0_f7:11:g_d0_f7:C:+
+27:1224:57909:0:15:276:281:615:11:g_d0_f7:11:g_d0_f7:C:1
+27:1225:57910:15:0:263:292:600:11:g_d0_f5:8:g_d0_f6:C:"-w;1--
+27:1226:57917:0:0:297:300:608:11:g_d0_f8:11:g_d0_f8:C:-
+27:1227:57918:0:24:302:318:618:11:g_d0_f10:11:g_d0_f10:C:X
+27:1228:57919:24:0:308:312:594:8:g_d0_f6:8:g_d0_f6:F:k
+27:1229:57920:0:0:320:431:608:11:g_d0_f5:11:g_d0_f8:C:pk(1-rk)"k-(t-k-tk)-
+27:1230:57940:0:15:436:466:615:11:g_d0_f7:8:g_d0_f6:C:-u0k--wk
+27:1231:57948:15:0:439:463:600:11:g_d0_f7:11:g_d0_f5:C:-u0--w
+27:1232:57954:0:34:468:519:608:11:g_d0_f3:11:g_d0_f3:A:,(21)
+27:1233:57959:34:21:74:520:574:11:g_d0_f3:11:g_d0_f3:B:wheret-kis the optimal private insurance rate in the absence of adverse selection constraints.
+27:1234:58053:21:20:74:519:553:11:g_d0_f3:11:g_d0_f3:B:There are two components in (21). The Örst term reáects the value of redistribution across
+27:1235:58143:20:20:74:519:533:11:g_d0_f3:11:g_d0_f3:B:the groups, as in (18).  The second term reáects the value of Öxing the distortions created by
+27:1236:58237:20:21:74:519:513:11:g_d0_f3:11:g_d0_f3:B:adverse selectionwithineach group.  Typically, adverse selection leads to under-provision of
+27:1237:58329:21:20:74:520:492:11:g_d0_f3:11:g_d0_f3:B:private insurance:tk< t-k(Rothschild and Stiglitz 1976).  Hence, there is value to increasing
+27:1238:58422:20:20:74:519:472:11:g_d0_f3:11:g_d0_f3:B:within-group redistribution even if private contracts are optimized in the presence of adverse
+27:1239:58516:20:21:74:118:452:11:g_d0_f3:11:g_d0_f3:B:selection.
+27:1240:58526:21:20:91:519:431:11:g_d0_f3:11:g_d0_f3:A:More generally, (21) implies that the government tax rate-should behigherthan in
+27:1241:58606:20:20:74:519:411:11:g_d0_f3:11:g_d0_f3:B:the case with no adverse selection (18) because it Öxes two market failures rather than one.
+27:1242:58698:20:21:74:519:391:11:g_d0_f3:11:g_d0_f3:B:This e§ect is captured in the general formula in (20) with non-optimized private insurance
+27:1243:58788:21:20:74:519:370:11:g_d0_f3:11:g_d0_f3:B:contracts, because one would observe a higher absolute value ofcov(w;u0)if adverse selection
+27:1244:58880:20:20:74:519:350:11:g_d0_f3:11:g_d0_f3:B:were to limit the degree of private insurance.  Intuitively, the reason that private insurance is
+27:1245:58977:20:21:74:519:330:11:g_d0_f3:11:g_d0_f3:B:under-provided in equilibrium ñbe it adverse selection, pre-existing information, or imperfect
+27:1246:59071:21:20:74:519:309:11:g_d0_f3:11:g_d0_f3:B:optimization ñdoes not matter when measuring the welfare gains of private insurance in the
+27:1247:59161:20:20:74:519:289:11:g_d0_f3:11:g_d0_f3:B:class of models we have analyzed.  Since (20) has the same form as (9) up to the weighting of
+27:1248:59254:20:20:74:520:269:11:g_d0_f5:11:g_d0_f3:B:tandr, we conclude that (9) and (8) can be used to obtain simple approximate measures of
+27:1249:59342:20:35:74:471:249:11:g_d0_f3:11:g_d0_f3:B:the welfare gains from government intervention with endogenous private insurance.
+27:1250:59423:35:31:74:260:214:14:g_d0_f2:14:g_d0_f2:C:5  Empirical Applications
+27:1251:59448:31:20:74:519:183:11:g_d0_f3:11:g_d0_f3:B:In this section, we apply the formulas derived above to analyze the welfare gains from social
+27:1252:59541:20:21:74:519:163:11:g_d0_f3:11:g_d0_f3:B:insurance.  To do so, we Örst present an alternative representation of the formula for the
+27:1253:59631:21:20:74:519:142:11:g_d0_f3:11:g_d0_f3:B:marginal welfare gain from government insurance written in terms of the parameters estimated
+27:1254:59723:20:0:74:261:122:11:g_d0_f3:11:g_d0_f3:B:in empirical studies of social insurance.
+28:1255:59766:0:27:74:315:700:12:g_d0_f2:12:g_d0_f2:C:5.1  Welfare Gain from Social Insurance
+28:1256:59805:27:21:74:519:673:11:g_d0_f3:11:g_d0_f3:B:The moral hazard model with two states(zL;zH)is isomorphic to standard social insurance
+28:1257:59892:21:20:74:519:652:11:g_d0_f3:11:g_d0_f3:B:models (e.g. Baily 1978), where the low state is interpreted as a negative shock such as job loss
+28:1258:59989:20:20:74:520:632:11:g_d0_f3:11:g_d0_f3:B:or illness. In the social insurance literature, contracts are characterized by a beneÖtBpaid to
+28:1259:60084:20:21:74:519:612:11:g_d0_f3:11:g_d0_f3:B:the individual in the low state and a premiumTthat the individual pays to the insurer in the
+28:1260:60176:21:20:74:519:591:11:g_d0_f3:11:g_d0_f3:B:high state.  Since the insurerís break-even constraint isT= (1-e)-B=e, the consumption
+28:1261:60262:20:30:74:299:571:11:g_d0_f3:11:g_d0_f3:B:levels are a function of the single parameterB:
+28:1262:60309:30:0:218:269:541:11:g_d0_f5:11:g_d0_f8:C:cH=zH-
+28:1263:60315:0:14:273:297:548:11:g_d0_f7:11:g_d0_f5:C:1-e
+28:1264:60318:14:0:282:287:534:11:g_d0_f5:11:g_d0_f5:C:e
+28:1265:60319:0:30:298:376:541:11:g_d0_f5:11:g_d0_f3:A:B,cL=zL+B.
+28:1266:60329:30:20:74:519:511:11:g_d0_f3:11:g_d0_f3:B:Individual e§orte-is a function of the beneÖt levelB.  The second-best optimal contract
+28:1267:60416:20:30:74:184:491:11:g_d0_f3:11:g_d0_f3:B:choosesBto maximize
+28:1268:60435:30:0:170:240:461:11:g_d0_f5:11:g_d0_f8:C:W=e-u(zH-
+28:1269:60444:0:15:245:268:468:11:g_d0_f7:11:g_d0_f5:C:1-e
+28:1270:60447:15:0:254:259:453:11:g_d0_f5:11:g_d0_f5:C:e
+28:1271:60448:0:30:270:519:461:11:g_d0_f5:11:g_d0_f3:A:B) + (1-e-)u(zL+B)- (e-).(22)
+28:1272:60476:30:21:74:520:431:11:g_d0_f3:11:g_d0_f5:B:This problem is equivalent to the optimal taxation problem in (1) because any tax contractm
+28:1273:60567:21:20:74:520:410:11:g_d0_f3:11:g_d0_f3:B:can be mapped to an equivalent social insurance contractBby settingB= (-z-zL)m.  The
+28:1274:60651:20:20:74:519:390:11:g_d0_f3:11:g_d0_f3:B:only di§erence between the models is that they use di§erent notation to describe the contracts.
+28:1275:60746:20:20:91:520:370:11:g_d0_f3:11:g_d0_f3:A:Let"1-e;Bdenote the elasticity of the probability of the low state (1-e-)with respect to
+28:1276:60834:20:21:74:520:350:11:g_d0_f5:11:g_d0_f5:C:B.  The government sets an insurance beneÖt levelbÖnanced by a premium-=b(1-e)=e
+28:1277:60914:21:20:74:519:329:11:g_d0_f3:11:g_d0_f3:B:and the private insurer sets a beneÖt levelbpÖnanced by a premium-p=bp(1-e)=e.  E§ort
+28:1278:60999:20:20:74:520:309:11:g_d0_f5:11:g_d0_f3:B:edepends on total beneÖtB=b+bp.  The private insurance beneÖt levelbpdepends on
+28:1279:61078:20:21:74:519:289:11:g_d0_f3:11:g_d0_f3:B:the government beneÖtbaccording to a functionbp(b).  Because the beneÖts are additive
+28:1280:61163:21:20:74:519:268:11:g_d0_f3:11:g_d0_f3:B:rather than multiplicative, it is convenient to deÖne the crowdout parameter asr=-dbpdbin
+28:1281:61252:20:20:74:520:248:11:g_d0_f3:11:g_d0_f5:B:the social insurance scenario.  With endogenous private insurance, the government choosesb
+28:1282:61342:20:30:74:132:228:11:g_d0_f3:11:g_d0_f3:B:to maximize
+28:1283:61353:30:0:134:204:198:11:g_d0_f5:11:g_d0_f8:C:W=e-u(zH-
+28:1284:61362:0:15:209:232:205:11:g_d0_f7:11:g_d0_f5:C:1-e
+28:1285:61365:15:0:218:223:190:11:g_d0_f5:11:g_d0_f5:C:e
+28:1286:61366:0:30:234:519:198:11:g_d0_f7:11:g_d0_f3:A:(bp(b) +b)) + (1-e-)u(zL+bp(b) +b)- (e-):(23)
+28:1287:61410:30:23:74:504:168:11:g_d0_f2:11:g_d0_f3:B:Proposition 4.The welfare gain from raising the government social insurance beneÖt is:
+28:1288:61496:23:15:125:141:145:11:g_d0_f5:11:g_d0_f5:C:dW
+28:1289:61498:15:0:129:139:130:11:g_d0_f5:11:g_d0_f5:C:db
+28:1290:61500:0:0:147:267:138:11:g_d0_f7:11:g_d0_f8:C:= (1-e)(1-r)-u0(cH)-
+28:1291:61520:0:8:269:275:153:11:g_d0_f10:11:g_d0_f10:C:-
+28:1292:61521:8:15:276:348:145:11:g_d0_f5:11:g_d0_f7:C:u0(cL)-u0(cH)
+28:1293:61534:15:0:297:327:130:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+28:1294:61540:0:0:352:379:138:11:g_d0_f8:11:g_d0_f8:C:-1-
+28:1295:61543:0:15:383:409:145:11:g_d0_f5:8:g_d0_f6:C:"1-e;b
+28:1296:61549:15:0:394:399:130:11:g_d0_f5:11:g_d0_f5:C:e
+28:1297:61550:0:0:413:416:138:11:g_d0_f8:11:g_d0_f8:C:-
+28:1298:61551:0:15:420:458:145:11:g_d0_f7:11:g_d0_f5:C:1 +bp=b
+28:1299:61558:15:0:427:451:130:11:g_d0_f7:11:g_d0_f5:C:1-r
+28:1300:61561:0:15:459:465:153:11:g_d0_f10:11:g_d0_f10:C:-
+28:1301:61562:15:30:467:519:138:11:g_d0_f3:11:g_d0_f3:A:.(24)
+28:1302:61567:30:21:74:520:108:11:g_d0_f2:11:g_d0_f3:B:Proof.The proof follows Proposition 1: (23) is identical to the problem in (22), with the total
+28:1303:61662:21:0:74:519:87:11:g_d0_f3:11:g_d0_f3:B:beneÖtB=bp(p) +breplacingb. Choosingbis equivalent to choosing the total beneÖtB.
+29:1304:61745:0:0:74:293:698:11:g_d0_f3:11:g_d0_f7:B:Di§erentiating (22) yieldsdWdB= (1-e)u0(cH)
+29:1305:61788:0:7:295:300:711:11:g_d0_f10:11:g_d0_f10:C:h
+29:1306:61789:7:9:301:356:704:8:g_d0_f6:8:g_d0_f11:F:u0(cL)-u0(cH)
+29:1307:61802:9:0:316:368:695:8:g_d0_f6:11:g_d0_f8:C:u0(cH)-
+29:1308:61809:0:9:372:396:704:8:g_d0_f6:6:g_d0_f12:F:"1-e;B
+29:1309:61815:9:0:383:387:695:8:g_d0_f6:8:g_d0_f6:F:e
+29:1310:61816:0:13:399:404:711:11:g_d0_f10:11:g_d0_f10:C:i
+29:1311:61817:13:20:404:519:698:11:g_d0_f3:11:g_d0_f7:A:. Observe thatdW=db=
+29:1312:61837:20:20:74:520:678:11:g_d0_f5:11:g_d0_f7:C:dW=dB-(1-r). Likewise,de=db=de=dB-(1-r)and thus"1-e;B=-(b+bp)(de=dB)=(1-e) =
+29:1313:61913:20:21:74:519:658:11:g_d0_f7:11:g_d0_f3:B:(1 +bp=b)-"1-e;b=(1-r).  Plugging these expressions into the expression fordWdByields (24).
+29:1314:62004:21:32:74:101:637:11:g_d0_f3:11:g_d0_f3:B:QED.
+29:1315:62008:32:20:91:519:605:11:g_d0_f3:11:g_d0_f3:A:The Örst term in 24) measures the gap in marginal utilities across the two states, which
+29:1316:62096:20:20:74:519:585:11:g_d0_f3:11:g_d0_f3:B:captures the marginal value of insurance.  The second term captures the cost of insurance
+29:1317:62185:20:21:74:519:565:11:g_d0_f3:11:g_d0_f3:B:through the behavioral response.  Analogous to the tax scenario, private insurance ampliÖes
+29:1318:62276:21:20:74:519:544:11:g_d0_f3:11:g_d0_f3:B:the second term and makesdWdbsmaller through two channels: the crowdout e§ect1-rin the
+29:1319:62362:20:20:74:520:524:11:g_d0_f3:11:g_d0_f3:B:denominator and the mechanical e§ectbp=bin the numerator.  The crowdout term reáects a
+29:1320:62448:20:21:74:519:504:11:g_d0_f3:11:g_d0_f3:B:rescaling to recover the fundamental elasticity"1-e;Band thebp=bterm reáects the reduction
+29:1321:62538:21:20:74:520:483:11:g_d0_f3:11:g_d0_f3:B:inbrequired to achieve the optimal level ofB.  The same formula holds (with appropriate
+29:1322:62625:20:20:74:519:463:11:g_d0_f3:11:g_d0_f3:B:measures of aggregate crowdout and private insurance) a model that permits pre-existing
+29:1323:62712:20:21:74:312:443:11:g_d0_f3:11:g_d0_f3:B:information and adverse selection, as in section 4.
+29:1324:62763:21:20:91:519:422:11:g_d0_f3:11:g_d0_f3:A:The expressions fordWdbanddWd-derived above all measure the marginal welfare gain of
+29:1325:62847:20:20:74:519:402:11:g_d0_f3:11:g_d0_f3:B:changing taxes and social insurance beneÖts in utils.  To convert these expressions into an
+29:1326:62938:20:21:74:519:382:11:g_d0_f3:11:g_d0_f3:B:interpretable money metric, we normalize the welfare gain from a $1 (balanced budget) increase
+29:1327:63032:21:20:74:519:361:11:g_d0_f3:11:g_d0_f3:B:in the size of the insurance program by the welfare gain from raising the wage bill in the high
+29:1328:63127:20:31:74:233:341:11:g_d0_f3:11:g_d0_f3:B:state by $1.  In particular, deÖne
+29:1329:63161:31:0:193:234:310:11:g_d0_f5:11:g_d0_f7:C:G(b)  =
+29:1330:63168:0:15:244:260:317:11:g_d0_f5:11:g_d0_f5:C:dW
+29:1331:63170:15:0:248:258:302:11:g_d0_f5:11:g_d0_f5:C:db
+29:1332:63172:0:15:274:279:317:11:g_d0_f7:11:g_d0_f7:C:1
+29:1333:63173:15:0:264:288:302:11:g_d0_f7:11:g_d0_f5:C:1-e
+29:1334:63176:0:0:289:294:310:11:g_d0_f5:11:g_d0_f5:C:=
+29:1335:63177:0:15:297:313:317:11:g_d0_f5:11:g_d0_f5:C:dW
+29:1336:63179:15:0:296:314:302:11:g_d0_f5:8:g_d0_f6:C:dzH
+29:1337:63182:0:15:317:322:317:11:g_d0_f7:11:g_d0_f7:C:1
+29:1338:63183:15:0:317:322:302:11:g_d0_f5:11:g_d0_f5:C:e
+29:1339:63184:0:29:500:519:310:11:g_d0_f3:11:g_d0_f3:A:(25)
+29:1340:63188:29:0:225:233:281:11:g_d0_f7:11:g_d0_f7:C:=
+29:1341:63189:0:15:244:316:288:11:g_d0_f5:11:g_d0_f7:C:u0(cL)-u0(cH)
+29:1342:63202:15:0:265:295:273:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+29:1343:63208:0:0:320:328:281:11:g_d0_f8:11:g_d0_f8:C:-
+29:1344:63209:0:15:332:358:288:11:g_d0_f5:8:g_d0_f6:C:"1-e;b
+29:1345:63215:15:0:343:348:273:11:g_d0_f5:11:g_d0_f5:C:e
+29:1346:63216:0:15:361:399:288:11:g_d0_f7:11:g_d0_f5:C:1 +bp=b
+29:1347:63223:15:0:368:392:273:11:g_d0_f7:11:g_d0_f5:C:1-r
+29:1348:63226:0:32:500:519:281:11:g_d0_f3:11:g_d0_f3:A:(26)
+29:1349:63230:32:20:74:519:249:11:g_d0_f3:11:g_d0_f3:B:We now apply (26) to characterize the welfare gains from increasing unemployment and health
+29:1350:63321:20:20:74:519:229:11:g_d0_f3:11:g_d0_f3:B:insurance beneÖts.  These calibrations are intended primarily to illustrate the potential im-
+29:1351:63414:20:20:74:519:209:11:g_d0_f3:11:g_d0_f3:B:pacts of endogenous private insurance on calculations of welfare gains from government in-
+29:1352:63504:20:21:74:519:189:11:g_d0_f3:11:g_d0_f3:B:tervention rather than for policy analysis.  These simple calculations do not account for all
+29:1353:63597:21:29:74:421:168:11:g_d0_f3:11:g_d0_f3:B:margins of behavioral responses and for heterogeneity across individuals.
+29:1354:63670:29:27:74:345:139:12:g_d0_f2:12:g_d0_f2:C:5.2  Application 1: Unemployment Insurance
+29:1355:63712:27:21:74:519:112:11:g_d0_f3:11:g_d0_f3:B:The existing literature on optimal unemployment insurance essentially ignores the existence
+29:1356:63803:21:0:74:519:91:11:g_d0_f3:11:g_d0_f3:B:of private insurance.  Much of private insurance against unemployment is provided through
+30:1357:63894:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:informal risk sharing that is unlikely to generate much moral hazard, and hence can be ignored
+30:1358:63988:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:in the calculation of optimal beneÖts according to the results in section 3.3.  However, many
+30:1359:64081:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:private Örms provide unemployment insurance in the form of severance payments ñ lump
+30:1360:64165:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:sum cash grants made by Örms to workers who are laid o§.  Unlike government-provided
+30:1361:64249:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:unemployment beneÖts, severance pay does not distort job search behavior after job loss
+30:1362:64336:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:because it does not a§ect marginal incentives to search.  Severance pay can, however, distort
+30:1363:64429:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:e§ort choices while working by changing the relative price of being unemployed relative to
+30:1364:64519:20:21:74:136:558:11:g_d0_f3:11:g_d0_f3:B:having a job.
+30:1365:64532:21:20:91:519:537:11:g_d0_f3:11:g_d0_f3:A:In this section, we calibrate the welfare gain from raising the UI beneÖt level when the
+30:1366:64620:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:response of severance pay to UI beneÖts is taken into account.  To adapt the optimal UI
+30:1367:64707:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:problem to our static framework above, we ignore the job search decision, treating search
+30:1368:64796:21:20:74:519:476:11:g_d0_f3:11:g_d0_f3:B:e§ort after job loss as invariant to the UI beneÖt level.  Instead, we focus on the distortion in
+30:1369:64893:20:20:74:519:456:11:g_d0_f3:11:g_d0_f3:B:the probability of job loss (e.g. due to shirking) caused by UI beneÖts and severance pay.  In
+30:1370:64987:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:our static model, both UI beneÖts and severance pay act as transfers to the unemployed state,
+30:1371:65080:21:20:74:314:415:11:g_d0_f3:8:g_d0_f3:B:and are Önanced by taxes in the employed state.18
+30:1372:65129:20:20:91:519:395:11:g_d0_f4:11:g_d0_f3:A:Estimation of Crowdout Elasticity.As an illustration of the data and empirical strategy
+30:1373:65216:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:needed to implement our formula with endogenous private insurance, we begin by estimating
+30:1374:65305:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:the two key parameters ñ the size of the private insurance market (bp=b) and the crowdout
+30:1375:65394:21:20:74:520:334:11:g_d0_f3:11:g_d0_f3:B:e§ect (r).  To do so, we use data on severance pay from a survey conducted by Mathematica
+30:1376:65483:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:on behalf of the Department of Labor.   The dataset (publicly available from the Upjohn
+30:1377:65570:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:Institute) is a sample of unemployment durations in 25 states in 1998 that oversamples UI
+30:1378:65659:21:20:74:519:273:11:g_d0_f3:11:g_d0_f3:B:exhaustees.   We reweight the data using the sampling weights to obtain estimates for a
+30:1379:65746:20:20:74:519:253:11:g_d0_f3:11:g_d0_f3:B:representative sample of job losers.   The dataset contains information on unemployment
+30:1380:65833:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:durations, demographic characteristics, and an indicator for receipt of severance pay.  There
+30:1381:65926:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:are 3,395 individuals in the sample, of whom 508 report receiving a severance payment.  See
+30:1382:66017:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:Chetty (2008a) for further details on the dataset and sample construction.  We obtain data
+30:1383:66107:20:21:74:461:172:11:g_d0_f3:11:g_d0_f3:B:on mean unemployment beneÖts by state in 1998 from the Department of Labor.
+30:1384:66182:21:20:91:520:151:11:g_d0_f3:11:g_d0_f3:A:To calculatebp=b, Örst note that 15% of job losers report receiving severance pay in our
+30:1385:66270:20:17:74:519:131:11:g_d0_f3:11:g_d0_f3:B:data.  According to calculations reported in Chetty (2008a), the mean severance payment
+30:1386:66357:17:14:83:519:114:6:g_d0_f3:9:g_d0_f3:F:18A more precise calibration would take account of the fact that UI beneÖts are conditioned on duration, and
+30:1387:66465:14:11:74:519:100:9:g_d0_f3:9:g_d0_f3:F:thus are larger when a worse ìstateîis realized.  This calibration would require separate estimates of the e§ect
+30:1388:66577:11:0:74:327:89:9:g_d0_f3:9:g_d0_f3:F:of UI beneÖts and severance pay on the probability of job loss.
+31:1389:66642:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:conditional on receipt of severance pay is equal to 10.7 weeks of wages, the mean UI beneÖt
+31:1390:66733:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:level is50%of the wage, and the mean unemployment duration is 15.8 weeks.  Hence, in the
+31:1391:66821:21:21:74:478:659:11:g_d0_f3:11:g_d0_f3:B:aggregate population, the ratio of total private insurance to total public insurance is
+31:1392:66908:21:15:239:248:638:11:g_d0_f5:8:g_d0_f6:C:bp
+31:1393:66910:15:0:242:247:623:11:g_d0_f5:11:g_d0_f5:C:b
+31:1394:66911:0:0:253:261:630:11:g_d0_f7:11:g_d0_f7:C:=
+31:1395:66912:0:15:265:317:638:11:g_d0_f7:11:g_d0_f7:C:0:15-10:7
+31:1396:66921:15:0:268:314:623:11:g_d0_f7:11:g_d0_f7:C:0:5-15:8
+31:1397:66929:0:29:322:356:630:11:g_d0_f7:11:g_d0_f5:C:= 0:20:
+31:1398:66936:29:20:91:519:601:11:g_d0_f3:11:g_d0_f3:A:To estimaterñ the e§ect of an increase in the UI beneÖt level on severance pay ñ we
+31:1399:67019:20:21:74:519:581:11:g_d0_f3:11:g_d0_f3:B:exploit variation in UI beneÖt levels across states.  Most states pay a Öxed wage replacement
+31:1400:67112:21:20:74:519:560:11:g_d0_f3:11:g_d0_f3:B:rate up to a maximum, which varies considerably across states and thereby creates variation in
+31:1401:67206:20:20:74:519:540:11:g_d0_f3:11:g_d0_f3:B:UI beneÖt levels. The maximum beneÖt can be viewed as an instrument for individual beneÖt
+31:1402:67295:20:21:74:519:520:11:g_d0_f3:11:g_d0_f3:B:levels (Meyer 1990). We do not exploit the variation in beneÖt levels across individuals within
+31:1403:67390:21:20:74:519:499:11:g_d0_f3:11:g_d0_f3:B:a state because of endogeneity concerns.  Although state beneÖt maximums are exogenous to
+31:1404:67479:20:20:74:519:479:11:g_d0_f3:11:g_d0_f3:B:individual characteristics, they are not orthogonal to all aspects of the economic environment.
+31:1405:67574:20:21:74:519:459:11:g_d0_f3:11:g_d0_f3:B:In particular, richer states (or those with a higher cost of living) provide both more public and
+31:1406:67671:21:20:74:519:438:11:g_d0_f3:11:g_d0_f3:B:private insurance.  As a result, both state unemployment beneÖt maximums and the fraction
+31:1407:67760:20:20:74:519:418:11:g_d0_f3:11:g_d0_f3:B:of individuals receiving severance pay are positively correlated with mean wage rates in each
+31:1408:67853:20:21:74:519:398:11:g_d0_f3:11:g_d0_f3:B:state.  To account for this confounding factor, we control for wages throughout our analysis
+31:1409:67945:21:20:74:352:377:11:g_d0_f3:11:g_d0_f3:B:using a áexible 10 piece spline for the individual log wage.
+31:1410:68005:20:20:91:519:357:11:g_d0_f3:11:g_d0_f3:A:We begin with a simple graphical analysis to illustrate our estimation of the crowdout e§ect.
+31:1411:68098:20:21:74:519:337:11:g_d0_f3:11:g_d0_f3:B:Figure 1 plots the relationship between average severance pay receipt and the maximum UI
+31:1412:68186:21:20:74:519:316:11:g_d0_f3:11:g_d0_f3:B:beneÖt level, conditioning on wages.  To construct this Ögure, we Örst regress the severance
+31:1413:68278:20:20:74:519:296:11:g_d0_f3:11:g_d0_f3:B:pay dummy on the wage spline and the maximum UI beneÖt level on the wage spline and
+31:1414:68361:20:21:74:519:276:11:g_d0_f3:11:g_d0_f3:B:compute residuals.  We then compute mean residuals of both variables by state.  The Ögure
+31:1415:68450:21:20:74:519:255:11:g_d0_f3:11:g_d0_f3:B:is a scatter plot of the mean residuals. We exclude states that have fewer than 50 individuals
+31:1416:68544:20:20:74:519:235:11:g_d0_f3:11:g_d0_f3:B:from this Ögure to reduce the ináuence of outliers on the graph; all observations are included in
+31:1417:68641:20:21:74:519:215:11:g_d0_f3:11:g_d0_f3:B:the regression analysis below. The Ögure shows that states with higher UI beneÖt levels have
+31:1418:68733:21:20:74:519:194:11:g_d0_f3:11:g_d0_f3:B:fewer severance payments, indicating that private insurance is crowded out to some extent by
+31:1419:68825:20:20:74:155:174:11:g_d0_f3:11:g_d0_f3:B:public insurance.
+31:1420:68842:20:21:91:519:154:11:g_d0_f3:11:g_d0_f3:A:To quantify the amount of crowdout, we estimate a set of regression models of the following
+31:1421:68933:21:20:74:99:133:11:g_d0_f3:11:g_d0_f3:B:form:
+31:1422:68938:20:26:209:519:113:11:g_d0_f5:11:g_d0_f3:A:sevi=-+\flogbi+f(wi) +\rXi+"i(27)
+31:1423:68971:26:0:74:519:87:11:g_d0_f3:11:g_d0_f3:B:whereseviis an indicator for whether individualireceived a severance payment,biis a measure
+32:1424:69064:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:of the UI beneÖt level for individuali,f(wi)denotes the wage spline, andXidenotes a vector
+32:1425:69154:20:21:74:178:680:11:g_d0_f3:11:g_d0_f3:B:of additional controls.
+32:1426:69177:21:20:91:519:659:11:g_d0_f3:8:g_d0_f6:A:SpeciÖcation 1 of Table 1 reports estimates of (27) without any additional (noX), withbi
+32:1427:69265:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:equal to the maximum beneÖt level in the state where individualilives.  Standard errors in
+32:1428:69355:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:this and all subsequent speciÖcations are clustered by state to adjust for arbitrary within-state
+32:1429:69452:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:correlation in errors. The estimated coe¢ cient of\f=-0:075implies that a doubling the
+32:1430:69538:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:UI beneÖt maximum would reduce the fraction of individuals receiving severance pay by 7
+32:1431:69625:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:percent. SpeciÖcation 2 replicates 1 with the following individual-level covariates: job tenure,
+32:1432:69721:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:age, gender, household size, education, dropout, industry, occupation, and race dummies.
+32:1433:69809:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:The point estimate on the UI beneÖt level is not a§ected signiÖcantly by the inclusion of these
+32:1434:69904:20:21:74:114:497:11:g_d0_f3:11:g_d0_f3:B:controls.
+32:1435:69913:21:20:91:519:476:11:g_d0_f3:11:g_d0_f3:A:SpeciÖcations 1 and 2 can be interpreted as ìreduced formî regressions which show the
+32:1436:69998:20:20:74:519:456:11:g_d0_f3:11:g_d0_f3:B:e§ect of the instrument (maximum beneÖt levels) on severance pay.  To obtain an estimate
+32:1437:70086:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:of the e§ect of a $1 increase in the beneÖt level on the probability of severance pay receipt,
+32:1438:70180:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:we estimate a two-stage least squares regression, instrumenting the log individual beneÖt level
+32:1439:70275:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:with the log state maximum.  The estimate on the log individual beneÖt, reported in column
+32:1440:70365:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:3 of Table 2, is\f=-0:105.  Doubling the UI beneÖt level would reduce severance receipt by
+32:1441:70455:20:21:74:520:355:11:g_d0_f3:11:g_d0_f3:B:10.5 percentage points, relative to a mean value of 15%, implying"bp;b=-0:7.  We conclude
+32:1442:70544:21:20:74:287:334:11:g_d0_f3:11:g_d0_f3:B:thatr=-dbpdb=-"bp;bbpb= 0:7-0:2 = 0:14.
+32:1443:70583:20:20:91:519:314:11:g_d0_f3:11:g_d0_f3:A:The identiÖcation assumption underlying these regressions is that the cross-state variation
+32:1444:70674:20:21:74:519:294:11:g_d0_f3:11:g_d0_f3:B:in UI beneÖt maximums is orthogonal to other determinants of severance pay receipt condi-
+32:1445:70763:21:20:74:519:273:11:g_d0_f3:11:g_d0_f3:B:tional on wage levels.  Most plausible endogeneity stories would work toward attenuating our
+32:1446:70855:20:20:74:519:253:11:g_d0_f3:11:g_d0_f3:B:estimate of the crowdout e§ect.  For example, suppose states with higher UI beneÖt maxi-
+32:1447:70943:20:21:74:519:233:11:g_d0_f3:11:g_d0_f3:B:mums are populated by individuals who are more risk averse and therefore place higher value
+32:1448:71034:21:20:74:519:212:11:g_d0_f3:11:g_d0_f3:B:on insurance.  Such states would also have higher private insurance, biasing the correlation
+32:1449:71126:20:20:74:519:192:11:g_d0_f3:11:g_d0_f3:B:between the UI beneÖt level and severance pay receipt upward.  Given these concerns about
+32:1450:71215:20:21:74:519:172:11:g_d0_f3:11:g_d0_f3:B:policy endogeneity, our simple empirical analysis should be viewed as illustrative.  Future
+32:1451:71306:21:20:74:519:151:11:g_d0_f3:11:g_d0_f3:B:work should exploit within-state variation in UI beneÖts (as in Meyer 1990) to obtain a more
+32:1452:71398:20:20:74:322:131:11:g_d0_f3:11:g_d0_f3:B:credible and precise estimate of the crowdout e§ect.
+32:1453:71450:20:21:91:519:111:11:g_d0_f4:11:g_d0_f3:A:Calibration.We now use the estimates above in conjunction with other estimates from
+32:1454:71533:21:0:74:519:90:11:g_d0_f3:11:g_d0_f3:B:the existing literature to calibrate the welfare gain from raising the UI beneÖt level.  Using
+33:1455:71629:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:the normalization in (25) and the formula fordWdbin (24), the welfare gain from increasing
+33:1456:71719:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:total government expenditure on unemployment insurance by $1 (dWdb=(1-e)) relative to the
+33:1457:71808:21:32:74:469:659:11:g_d0_f3:11:g_d0_f3:B:welfare gain of a $1 increasing the wage of the employed agent (dWdzH=e=u0(cH)) is
+33:1458:71890:32:0:135:175:627:11:g_d0_f5:11:g_d0_f7:C:G(b) = (
+33:1459:71898:0:15:177:193:634:11:g_d0_f5:11:g_d0_f5:C:dW
+33:1460:71900:15:0:180:190:619:11:g_d0_f5:11:g_d0_f5:C:db
+33:1461:71902:0:15:206:211:634:11:g_d0_f7:11:g_d0_f7:C:1
+33:1462:71903:15:0:197:220:619:11:g_d0_f7:11:g_d0_f5:C:1-e
+33:1463:71906:0:0:222:235:627:11:g_d0_f7:11:g_d0_f7:C:)=(
+33:1464:71909:0:15:237:253:634:11:g_d0_f5:11:g_d0_f5:C:dW
+33:1465:71911:15:0:237:255:619:11:g_d0_f5:8:g_d0_f6:C:dzH
+33:1466:71914:0:15:258:263:634:11:g_d0_f7:11:g_d0_f7:C:1
+33:1467:71915:15:0:258:263:619:11:g_d0_f5:11:g_d0_f5:C:e
+33:1468:71916:0:0:265:320:627:11:g_d0_f7:11:g_d0_f7:C:) = (1-r)(
+33:1469:71926:0:15:322:351:634:11:g_d0_f5:11:g_d0_f7:C:u0(cL)
+33:1470:71932:15:0:321:351:619:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+33:1471:71938:0:0:355:382:627:11:g_d0_f8:11:g_d0_f8:C:-1-
+33:1472:71941:0:15:386:412:634:11:g_d0_f5:8:g_d0_f6:C:"1-e;b
+33:1473:71947:15:0:397:402:619:11:g_d0_f5:11:g_d0_f5:C:e
+33:1474:71948:0:15:415:453:634:11:g_d0_f7:11:g_d0_f5:C:1 +bp=b
+33:1475:71955:15:0:422:446:619:11:g_d0_f7:11:g_d0_f5:C:1-r
+33:1476:71958:0:32:454:458:627:11:g_d0_f7:11:g_d0_f7:C:)
+33:1477:71959:32:31:74:289:595:11:g_d0_f3:11:g_d0_f3:B:We calibrateG(b)using the following inputs:
+33:1478:72002:31:23:165:436:564:11:g_d0_f5:11:g_d0_f3:A:e=  0:95from CPS statistics (5% unemployment rate)
+33:1479:72052:23:0:164:206:541:11:g_d0_f5:11:g_d0_f8:C:r=-
+33:1480:72055:0:15:208:222:548:11:g_d0_f5:8:g_d0_f6:C:dbp
+33:1481:72058:15:0:210:220:533:11:g_d0_f5:11:g_d0_f5:C:db
+33:1482:72060:0:19:227:374:541:11:g_d0_f7:11:g_d0_f3:A:= 0:14from calculations above
+33:1483:72089:19:15:159:168:522:11:g_d0_f5:8:g_d0_f6:C:bp
+33:1484:72091:15:0:161:166:507:11:g_d0_f5:11:g_d0_f5:C:b
+33:1485:72092:0:18:180:328:514:11:g_d0_f7:11:g_d0_f3:A:=  0:2from calculations above
+33:1486:72121:18:15:159:168:496:11:g_d0_f5:8:g_d0_f6:C:ce
+33:1487:72123:15:0:158:168:481:11:g_d0_f5:8:g_d0_f6:C:cu
+33:1488:72125:0:0:180:188:488:11:g_d0_f7:11:g_d0_f7:C:=
+33:1489:72126:0:15:203:208:496:11:g_d0_f7:11:g_d0_f7:C:1
+33:1490:72127:15:0:199:213:481:11:g_d0_f7:11:g_d0_f7:C:0:9
+33:1491:72130:0:23:218:312:488:11:g_d0_f3:11:g_d0_f3:A:from Gruber (1997)
+33:1492:72148:23:31:163:305:465:11:g_d0_f5:11:g_d0_f3:A:\r=  2from Chetty (2006b)
+33:1493:72173:31:21:74:520:434:11:g_d0_f3:11:g_d0_f3:B:Under the approximation that utility exhibits constant relative risk aversion betweencuand
+33:1494:72263:21:0:74:101:413:11:g_d0_f5:8:g_d0_f6:C:ce,u
+33:1495:72267:0:13:101:119:422:6:g_d0_f17:8:g_d0_f11:F:0(cu)
+33:1496:72272:13:0:97:141:409:8:g_d0_f6:11:g_d0_f7:C:u0(ce)= (
+33:1497:72281:0:8:146:150:418:8:g_d0_f11:8:g_d0_f11:F:1
+33:1498:72282:8:0:143:159:410:8:g_d0_f11:11:g_d0_f7:C:0:9)
+33:1499:72286:0:24:159:519:417:8:g_d0_f6:11:g_d0_f3:A:\rwhere\rdenotes the coe¢ cient of relative risk aversion.  The remaining
+33:1500:72359:24:20:74:519:393:11:g_d0_f3:11:g_d0_f3:B:parameter, for which we have no existing estimate, is"1-e;bñthe elasticity of the probability
+33:1501:72452:20:21:74:520:373:11:g_d0_f3:11:g_d0_f3:B:of job loss with respect to the UI beneÖt levelb.  Leaving this parameter unspeciÖed and
+33:1502:72540:21:40:74:400:352:11:g_d0_f3:11:g_d0_f3:B:plugging in the remaining values into the formula fordWdb, we obtain
+33:1503:72608:40:27:210:383:312:11:g_d0_f5:11:g_d0_f3:A:G(b) = (1-0:14)(0:23-1:47"1-e;b).
+33:1504:72641:27:20:74:520:285:11:g_d0_f3:11:g_d0_f3:B:It follows that if the job loss elasticity"1-e;b>0:15,dWdb<0at present UI beneÖt levels when
+33:1505:72733:20:21:74:519:265:11:g_d0_f3:11:g_d0_f3:B:crowdout is taken into account.  In contrast, if we were to apply a formula that does not take
+33:1506:72827:21:31:74:363:244:11:g_d0_f3:11:g_d0_f3:B:crowdout of private insurance into account, we would obtain
+33:1507:72886:31:31:234:360:213:11:g_d0_f5:11:g_d0_f3:A:G(b) = (0:23-1:05"1-e;b).
+33:1508:72911:31:21:74:519:182:11:g_d0_f3:11:g_d0_f3:B:Hence, an analyst who ignores crowdout would conclude that the welfare gain from raising
+33:1509:72999:21:20:74:519:161:11:g_d0_f3:11:g_d0_f3:B:the UI beneÖt level is negative only if"1-e;b>0:25(ignoring distortions in unemployment
+33:1510:73086:20:20:74:519:141:11:g_d0_f3:11:g_d0_f3:B:durations).  We conclude that in this application, there is a signiÖcant but modest range of
+33:1511:73178:20:21:74:519:121:11:g_d0_f3:11:g_d0_f3:B:parameters for which adjusting the formula for endogenous private insurance leads to di§erent
+33:1512:73271:21:0:74:167:100:11:g_d0_f3:11:g_d0_f3:B:policy implications.
+34:1513:73293:0:27:74:295:700:12:g_d0_f2:12:g_d0_f2:C:5.3  Application 2: Health Insurance
+34:1514:73329:27:21:74:520:673:11:g_d0_f4:11:g_d0_f3:B:A Model of Health Shocks.We adapt our two-state analysis of social insurance to the case
+34:1515:73417:21:20:74:519:652:11:g_d0_f3:11:g_d0_f3:B:of health insurance using an extensive-margin model of health consumption.  Suppose that
+34:1516:73505:20:20:74:520:632:11:g_d0_f3:11:g_d0_f3:B:purchasing health care costs$C.  There is a continuum of agents in the economy who di§er
+34:1517:73593:20:21:74:519:612:11:g_d0_f3:8:g_d0_f6:B:only in their valuation of health care. Agentigets a beneÖt from health care equivalent tovi
+34:1518:73685:21:28:74:276:591:11:g_d0_f3:11:g_d0_f3:B:utils.  Hence an agent buys health care i§
+34:1519:73727:28:29:193:401:563:11:g_d0_f5:11:g_d0_f5:C:vi> u(w----p)-u(w-C+b+bp) =z
+34:1520:73755:29:20:78:520:534:11:g_d0_f3:11:g_d0_f3:B:Valuation of healthcareviis distributed according to a cdfF.  The fraction of agents who
+34:1521:73843:20:21:74:159:514:11:g_d0_f3:11:g_d0_f3:B:buy health care is
+34:1522:73861:21:0:241:314:493:11:g_d0_f5:11:g_d0_f7:C:s= 1-F(z) =
+34:1523:73872:0:25:317:336:508:11:g_d0_f10:8:g_d0_f9:C:Z1
+34:1524:73874:25:0:323:327:483:8:g_d0_f6:8:g_d0_f6:F:z
+34:1525:73875:0:25:338:351:493:11:g_d0_f5:11:g_d0_f5:C:dF
+34:1526:73877:25:21:74:519:468:11:g_d0_f3:11:g_d0_f3:B:LetF-1denote the inverse ofF.  Thenz=F-1(1-s)and the aggregate utility gain from
+34:1527:73957:21:20:74:214:447:11:g_d0_f3:11:g_d0_f3:B:consumption of health care is
+34:1528:73986:20:0:245:276:427:11:g_d0_f5:11:g_d0_f7:C:v(s) =
+34:1529:73992:0:25:279:298:442:11:g_d0_f10:8:g_d0_f9:C:Z1
+34:1530:73994:25:0:285:323:417:8:g_d0_f6:8:g_d0_f11:F:F-1(1-s)
+34:1531:74002:0:27:325:347:427:11:g_d0_f5:11:g_d0_f5:C:vidF
+34:1532:74006:27:20:74:519:400:11:g_d0_f3:11:g_d0_f3:B:Note thatv0-1(1-s) =z=u(w----p)-u(w-C+b+bp).  Thereforev(:)is increasing
+34:1533:74078:20:21:74:520:380:11:g_d0_f3:11:g_d0_f3:B:insandv0(:)is decreasing insso thatv(:)is concave. Aggregating over the agents yields the
+34:1534:74167:21:28:74:229:359:11:g_d0_f3:11:g_d0_f3:B:following social welfare function:
+34:1535:74201:28:29:166:427:331:11:g_d0_f5:11:g_d0_f7:C:W= (1-s)u(w----p) +su(w-C+b+bp) +v(s)
+34:1536:74238:29:21:74:519:302:11:g_d0_f3:11:g_d0_f3:B:The fraction of agents who consume health caresis e§ectively chosen to maximizeW, taking
+34:1537:74326:21:20:74:520:281:11:g_d0_f3:11:g_d0_f3:B:the government and private insurance contracts as given.  Sincevis increasing and concave,
+34:1538:74416:20:20:74:519:261:11:g_d0_f3:11:g_d0_f5:B:this problem has the same structure as that analyzed in section 2, withereplaced by1-s
+34:1539:74502:20:21:74:520:241:11:g_d0_f3:11:g_d0_f3:B:and (e)replaced by-v(s).  Applying (24) immediately yields the following formula for the
+34:1540:74589:21:21:74:472:220:11:g_d0_f3:11:g_d0_f3:B:aggregate utility gain from raising the public health insurance beneÖt levelbby $1:
+34:1541:74672:21:15:177:193:199:11:g_d0_f5:11:g_d0_f5:C:dW
+34:1542:74674:15:0:180:190:184:11:g_d0_f5:11:g_d0_f5:C:db
+34:1543:74676:0:0:198:282:192:11:g_d0_f7:11:g_d0_f7:C:=s(1-r)u0(cH)(
+34:1544:74690:0:15:284:312:199:11:g_d0_f5:11:g_d0_f7:C:u0(cL)
+34:1545:74696:15:0:283:313:184:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+34:1546:74702:0:0:317:344:192:11:g_d0_f8:11:g_d0_f8:C:-1-
+34:1547:74705:0:15:352:367:199:11:g_d0_f5:8:g_d0_f6:C:"s;b
+34:1548:74709:15:0:348:372:184:11:g_d0_f7:11:g_d0_f5:C:1-s
+34:1549:74712:0:15:374:413:199:11:g_d0_f7:11:g_d0_f5:C:1 +bp=b
+34:1550:74719:15:0:382:405:184:11:g_d0_f7:11:g_d0_f5:C:1-r
+34:1551:74722:0:29:414:519:192:11:g_d0_f7:11:g_d0_f3:A:)(28)
+34:1552:74727:29:20:74:519:163:11:g_d0_f3:11:g_d0_f3:B:To convert this expression into a money metric, we follow (25) and compare the welfare gain
+34:1553:74818:20:21:74:520:143:11:g_d0_f3:11:g_d0_f3:B:from increasing total government expenditure on health insurance by $1 (dWdb=s)) to the welfare
+34:1554:74913:21:30:74:486:122:11:g_d0_f3:11:g_d0_f3:B:gain of spending $1 on a wage increase for healthy individuals (dWdzH=(1-s) =u0(cH)):
+34:1555:74998:30:0:136:177:92:11:g_d0_f5:11:g_d0_f7:C:G(b) = (
+34:1556:75006:0:14:178:183:99:11:g_d0_f7:11:g_d0_f7:C:1
+34:1557:75007:14:0:178:183:85:11:g_d0_f5:11:g_d0_f5:C:s
+34:1558:75008:0:14:186:202:99:11:g_d0_f5:11:g_d0_f5:C:dW
+34:1559:75010:14:0:189:199:85:11:g_d0_f5:11:g_d0_f5:C:db
+34:1560:75012:0:0:204:218:92:11:g_d0_f7:11:g_d0_f7:C:)=(
+34:1561:75015:0:14:229:234:99:11:g_d0_f7:11:g_d0_f7:C:1
+34:1562:75016:14:0:220:243:85:11:g_d0_f7:11:g_d0_f5:C:1-s
+34:1563:75019:0:14:247:263:99:11:g_d0_f5:11:g_d0_f5:C:dW
+34:1564:75021:14:0:246:264:85:11:g_d0_f5:8:g_d0_f6:C:dzH
+34:1565:75024:0:0:266:321:92:11:g_d0_f7:11:g_d0_f7:C:) = (1-r)(
+34:1566:75034:0:14:324:352:99:11:g_d0_f5:11:g_d0_f7:C:u0(cL)
+34:1567:75040:14:0:323:353:85:11:g_d0_f5:11:g_d0_f7:C:u0(cH)
+34:1568:75046:0:0:357:383:92:11:g_d0_f8:11:g_d0_f8:C:-1-
+34:1569:75049:0:15:392:407:100:11:g_d0_f5:8:g_d0_f6:C:"s;b
+34:1570:75053:15:0:387:411:85:11:g_d0_f7:11:g_d0_f5:C:1-s
+34:1571:75056:0:15:414:452:100:11:g_d0_f7:11:g_d0_f5:C:1 +bp=b
+34:1572:75063:15:0:421:445:85:11:g_d0_f7:11:g_d0_f5:C:1-r
+34:1573:75066:0:0:453:457:92:11:g_d0_f7:11:g_d0_f7:C:)
+35:1574:75069:0:20:74:520:700:11:g_d0_f4:11:g_d0_f3:B:Calibration.We calibrate the formula using the following inputs drawn from the empirical
+35:1575:75157:20:52:74:121:680:11:g_d0_f3:11:g_d0_f3:B:literature:
+35:1576:75168:52:23:112:316:628:11:g_d0_f5:11:g_d0_f3:A:"s;C=-0:2from Manning et al. (1987)
+35:1577:75203:23:23:125:422:605:11:g_d0_f5:11:g_d0_f3:A:s=  0:1from Manning et al. (1987) for inpatient usage rate
+35:1578:75261:23:0:125:167:582:11:g_d0_f5:11:g_d0_f8:C:r=-
+35:1579:75264:0:15:168:183:589:11:g_d0_f5:8:g_d0_f6:C:dbp
+35:1580:75267:15:0:171:181:574:11:g_d0_f5:11:g_d0_f5:C:db
+35:1581:75269:0:19:188:372:582:11:g_d0_f7:11:g_d0_f3:A:= 0:5from Cutler and Gruber (1996a)
+35:1582:75304:19:15:120:128:563:11:g_d0_f5:8:g_d0_f6:C:bp
+35:1583:75306:15:0:122:127:548:11:g_d0_f5:11:g_d0_f5:C:b
+35:1584:75307:0:0:140:181:555:11:g_d0_f7:11:g_d0_f3:A:=  0:89,
+35:1585:75315:0:15:188:193:563:11:g_d0_f5:11:g_d0_f5:C:b
+35:1586:75316:15:0:186:194:548:11:g_d0_f5:11:g_d0_f5:C:C
+35:1587:75317:0:18:199:482:555:11:g_d0_f7:11:g_d0_f3:A:= 0:45from National Health Care Statistics Table 6 (2006)
+35:1588:75374:18:15:119:128:537:11:g_d0_f5:8:g_d0_f6:C:ce
+35:1589:75376:15:0:119:129:522:11:g_d0_f5:8:g_d0_f6:C:cu
+35:1590:75378:0:0:140:148:529:11:g_d0_f7:11:g_d0_f7:C:=
+35:1591:75379:0:15:167:172:537:11:g_d0_f7:11:g_d0_f7:C:1
+35:1592:75380:15:0:160:179:522:11:g_d0_f7:11:g_d0_f7:C:0:85
+35:1593:75384:0:23:184:289:529:11:g_d0_f3:11:g_d0_f3:A:from Cochrane (1991)
+35:1594:75404:23:31:124:266:506:11:g_d0_f5:11:g_d0_f3:A:\r=  2from Chetty (2006b)
+35:1595:75429:31:0:74:321:475:11:g_d0_f3:8:g_d0_f6:B:Under CRRA utility, these parameters imply thatu
+35:1596:75477:0:12:320:338:483:6:g_d0_f17:8:g_d0_f11:F:0(cu)
+35:1597:75482:12:0:316:359:471:8:g_d0_f6:11:g_d0_f7:C:u0(ce)= (
+35:1598:75491:0:9:360:368:480:8:g_d0_f6:6:g_d0_f12:F:ce
+35:1599:75493:9:0:359:373:471:8:g_d0_f6:11:g_d0_f7:C:cu)
+35:1600:75496:0:8:373:408:479:8:g_d0_f6:8:g_d0_f11:F:\r= (1
+35:1601:75502:8:0:399:419:471:8:g_d0_f11:11:g_d0_f7:C:0:85)
+35:1602:75507:0:24:419:519:479:8:g_d0_f11:11:g_d0_f3:A:2= 1:384. Also note
+35:1603:75526:24:31:74:294:455:11:g_d0_f3:11:g_d0_f3:B:that"s;b=-"s;CbC= 0:2-:45 = 0:09.  Hence
+35:1604:75566:31:0:161:291:424:11:g_d0_f5:11:g_d0_f8:C:G(b) = (1-0:5)-(0:384-
+35:1605:75588:0:14:295:342:431:11:g_d0_f7:11:g_d0_f7:C:0:2-:453
+35:1606:75596:14:0:312:325:417:11:g_d0_f7:11:g_d0_f7:C:0:9
+35:1607:75599:0:14:344:383:431:11:g_d0_f7:11:g_d0_f7:C:1 + 0:89
+35:1608:75607:14:0:356:370:417:11:g_d0_f7:11:g_d0_f7:C:0:5
+35:1609:75610:0:31:384:433:424:11:g_d0_f7:11:g_d0_f7:C:) = 0:0017
+35:1610:75620:31:31:74:326:393:11:g_d0_f3:11:g_d0_f3:B:If we had ignored crowdout, we would have obtained
+35:1611:75670:31:0:214:290:362:11:g_d0_f5:11:g_d0_f8:C:G(b) = (0:384-
+35:1612:75684:0:15:294:340:370:11:g_d0_f7:11:g_d0_f7:C:0:2-:453
+35:1613:75692:15:0:310:324:355:11:g_d0_f7:11:g_d0_f7:C:0:9
+35:1614:75695:0:31:342:380:362:11:g_d0_f7:11:g_d0_f7:C:) = 0:28
+35:1615:75703:31:20:74:519:331:11:g_d0_f3:11:g_d0_f3:B:Taking crowdout into account lowers the estimate ofG(b)by a factor of more than 100.  An
+35:1616:75791:20:20:74:519:311:11:g_d0_f3:11:g_d0_f3:B:analyst who ignored crowdout and applied existing formulas (e.g. Chetty 2006a) would infer
+35:1617:75881:20:21:74:519:291:11:g_d0_f3:11:g_d0_f3:B:that a $100 million expansion in public health insurance programs would, loosely speaking,
+35:1618:75971:21:20:74:519:270:11:g_d0_f3:11:g_d0_f3:B:generate $28 million in surplus net of the requisite tax increases.  This analyst would mistak-
+35:1619:76066:20:20:74:519:250:11:g_d0_f3:11:g_d0_f3:B:enly conclude that substantial expansions in the overall level of public health insurance are
+35:1620:76159:20:21:74:519:230:11:g_d0_f3:11:g_d0_f3:B:desirable.  Taking crowdout into account implies that we are near the optimum in terms of
+35:1621:76248:21:20:74:520:209:11:g_d0_f4:11:g_d0_f3:B:aggregatepublic health insurance levels, as a $100 million across-the-board expansion would
+35:1622:76339:20:20:74:305:189:11:g_d0_f3:11:g_d0_f3:B:generate only $0.17 million in net social surplus.
+35:1623:76389:20:21:91:519:169:11:g_d0_f3:11:g_d0_f3:A:There are several important caveats to this calibration that should be kept in mind when
+35:1624:76477:21:20:74:519:148:11:g_d0_f3:11:g_d0_f3:B:evaluating the policy implications of this simple calibration. First, this calculation does not
+35:1625:76572:20:20:74:519:128:11:g_d0_f3:11:g_d0_f3:B:fully account for adverse selection, as it neglects the beneÖts of redistributing across pre-
+35:1626:76665:20:21:74:519:108:11:g_d0_f3:11:g_d0_f3:B:existing risk types via government insurance reáected in the Örst term of (21).   Second,
+35:1627:76754:21:0:74:519:87:11:g_d0_f3:11:g_d0_f3:B:the calibration ignores the correlation between health shocks and income inequality, which
+36:1628:76846:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:could potentially increase the welfare gains from health insurance (Cremer and Pestieau 1996).
+36:1629:76940:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:Third, private health insurance beneÖts are already tax subsidized in the United States, an
+36:1630:77031:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:issue that we have neglected in the calculation above. Finally, and perhaps most importantly,
+36:1631:77124:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:our aggregate welfare gain calculation ignores substantial heterogeneity across types of people,
+36:1632:77220:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:conditions, Medicare vs. Medicaid, etc.  For some subgroups, such as the uninsured, there
+36:1633:77309:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:could clearly be substantial welfare gains from increasing public insurance beneÖts whereas for
+36:1634:77404:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:others there could be substantial welfare gains from cutting beneÖts. Equation (28) should be
+36:1635:77497:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:applied with group-speciÖc estimates of the inputs to identify how government health insurance
+36:1636:77591:21:34:74:348:537:11:g_d0_f3:11:g_d0_f3:B:expenditures should be restructured to maximize welfare.
+36:1637:77647:34:31:74:176:503:14:g_d0_f2:14:g_d0_f2:C:6  Conclusion
+36:1638:77660:31:20:74:519:472:11:g_d0_f3:11:g_d0_f3:B:This paper has characterized the welfare gain from public insurance in the presence of endoge-
+36:1639:77754:20:21:74:519:452:11:g_d0_f3:11:g_d0_f3:B:nous private insurance. The formulas for optimal tax and social insurance policies derived here
+36:1640:77849:21:20:74:519:431:11:g_d0_f3:11:g_d0_f3:B:highlight two general parameters as the determinants of how private insurance impacts the
+36:1641:77938:20:20:74:519:411:11:g_d0_f3:11:g_d0_f3:B:welfare gains from social insurance: (1) the size of the formal private insurance market and (2)
+36:1642:78034:20:21:74:521:391:11:g_d0_f3:11:g_d0_f3:B:the crowdout of formal private insurance by public insurance. Like recent ìsu¢ cient statisticî
+36:1643:78129:21:20:74:519:370:11:g_d0_f3:11:g_d0_f3:B:formulas for welfare analysis, the formulas we have derived can be implemented using reduced-
+36:1644:78222:20:20:74:519:350:11:g_d0_f3:11:g_d0_f3:B:form empirical evidence without full identiÖcation of the modelís primitives. However, unlike
+36:1645:78315:20:21:74:519:330:11:g_d0_f3:11:g_d0_f3:B:existing su¢ cient statistic formulas, we cannot make strong claims about the robustness of our
+36:1646:78410:21:20:74:519:309:11:g_d0_f3:11:g_d0_f3:B:formulas because they have been derived in stylized models. While experience with earlier suf-
+36:1647:78504:20:20:74:519:289:11:g_d0_f3:11:g_d0_f3:B:Öcient statistic formulas suggests that the results may generalize (Chetty 2008b), an important
+36:1648:78599:20:21:74:519:269:11:g_d0_f3:11:g_d0_f3:B:di§erence in models with endogenous private insurance is that the envelope conditions that
+36:1649:78689:21:20:74:519:248:11:g_d0_f3:11:g_d0_f3:B:underlie the robustness of previous formulas may not hold when the private sector outcome
+36:1650:78778:20:20:74:519:228:11:g_d0_f3:11:g_d0_f3:B:is constrained ine¢ cient.  Thus, the source of the deviation from constrained e¢ ciency ñe.g.
+36:1651:78872:20:21:74:519:208:11:g_d0_f3:11:g_d0_f3:B:asymmetric information, imperfect optimization, or administrative costs ñ could potentially
+36:1652:78963:21:20:74:519:187:11:g_d0_f3:11:g_d0_f3:B:a§ect the formula. We believe that the parameters we have identiÖed are likely to be relevant
+36:1653:79056:20:20:74:406:167:11:g_d0_f3:11:g_d0_f3:B:in more general models, but other factors may also prove be relevant.
+36:1654:79125:20:21:91:519:147:11:g_d0_f3:11:g_d0_f3:A:We see three major directions for generalization of our analysis. First, one should charac-
+36:1655:79216:21:20:74:519:126:11:g_d0_f3:11:g_d0_f3:B:terize the e§ects of government intervention on the equilibria in the adverse selection model,
+36:1656:79310:20:0:74:519:106:11:g_d0_f3:11:g_d0_f3:B:as in Rothschild and Stiglitz (1976) and Wilson (1977).  We have implicitly assumed that
+37:1657:79400:0:20:74:519:700:11:g_d0_f3:11:g_d0_f3:B:contracts and behavior will respond smoothly to changes in government policies, but in a
+37:1658:79488:20:21:74:519:680:11:g_d0_f3:11:g_d0_f3:B:setting with multiple equilibria, there could be jumps between equilibria that would invali-
+37:1659:79580:21:20:74:519:659:11:g_d0_f3:11:g_d0_f3:B:date our formula.  Second, it would be useful to extend the analysis to allow for di§erent
+37:1660:79670:20:20:74:519:639:11:g_d0_f3:11:g_d0_f3:B:loading factors for private and public insurance, microfounded via increasing returns or waste-
+37:1661:79765:20:21:74:519:619:11:g_d0_f3:11:g_d0_f3:B:ful marketing costs.  Conversely, one could allow for di§erent levels of e¢ ciency, reáecting
+37:1662:79858:21:20:74:519:598:11:g_d0_f3:11:g_d0_f3:B:the possibility that private insurers could be more e¢ cient because of competitive pressure.
+37:1663:79951:20:20:74:519:578:11:g_d0_f3:11:g_d0_f3:B:Finally, in the simple model we analyzed here, the best policy is simply to rule out formal
+37:1664:80042:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:private insurance and have the government provide all insurance.  However, there are some
+37:1665:80131:21:20:74:519:537:11:g_d0_f3:11:g_d0_f3:B:areas in which private insurers have an informational advantage relative to the government.
+37:1666:80222:20:20:74:519:517:11:g_d0_f3:11:g_d0_f3:B:For instance, employers have more information on e§ort on the job, making the moral hazard
+37:1667:80312:20:21:74:519:497:11:g_d0_f3:11:g_d0_f3:B:problem smaller for the employer. Characterizing the optimal mix of government and private
+37:1668:80402:21:20:74:247:476:11:g_d0_f3:11:g_d0_f3:B:insurance is an important next step.
+37:1669:80438:20:20:91:519:456:11:g_d0_f3:11:g_d0_f3:A:If government and private insurers optimize along the lines described by our analysis, our
+37:1670:80528:20:21:74:519:436:11:g_d0_f3:11:g_d0_f3:B:model makes testable predictions about the pattern of insurance contracts we should observe.
+37:1671:80620:21:20:74:519:415:11:g_d0_f3:11:g_d0_f3:B:For instance, private insurance should be more prevalent in economies with low job mobility
+37:1672:80711:20:20:74:519:395:11:g_d0_f3:11:g_d0_f3:B:(such as Japan), where Örms have the ability to insure shocks through a compressed wage
+37:1673:80798:20:20:74:519:375:11:g_d0_f3:11:g_d0_f3:B:structure without facing as much adverse selection.  Another prediction is that government
+37:1674:80888:20:21:74:519:355:11:g_d0_f3:11:g_d0_f3:B:insurance should be more prevalent for shocks that occur prior to the point at which insurance
+37:1675:80982:21:20:74:519:334:11:g_d0_f3:11:g_d0_f3:B:contracts can be purchased, such as disability at birth, or for shocks where optimization of
+37:1676:81074:20:20:74:519:314:11:g_d0_f3:11:g_d0_f3:B:insurance purchases is unlikely.  It would be valuable to test empirically whether observed
+37:1677:81165:20:0:74:401:294:11:g_d0_f3:11:g_d0_f3:B:contracts deviate systematically from these theoretical prescriptions.
+38:1678:81237:0:32:74:150:700:14:g_d0_f2:14:g_d0_f2:C:References
+38:1679:81247:32:21:74:519:668:11:g_d0_f2:11:g_d0_f3:B:Akerlof, George A.(1970) ìThe Market for ëLemonsí: Quality Uncertainty and the Market
+38:1680:81332:21:20:74:395:647:11:g_d0_f3:11:g_d0_f3:B:Mechanism,îThe Quarterly Journal of Economics, 84(3): 488-500.
+38:1681:81394:20:20:74:519:627:11:g_d0_f2:11:g_d0_f3:B:Attanasio, Orazio and Jose-Victor Rios-Rull(2000) ìConsumption smoothing in island
+38:1682:81476:20:21:74:520:607:11:g_d0_f3:11:g_d0_f3:B:economies: Can public insurance reduce welfare?îEuropean Economic Review, 44(7): 1225-
+38:1683:81562:21:20:74:99:586:11:g_d0_f3:11:g_d0_f3:B:1258.
+38:1684:81567:20:20:74:519:566:11:g_d0_f2:11:g_d0_f4:C:Baily, Martin(1978) ìSome Aspects of Optimal Unemployment Insurance,îJournal of Public
+38:1685:81653:20:21:74:190:546:11:g_d0_f4:11:g_d0_f3:B:Economics,10: 379-402.
+38:1686:81675:21:20:74:519:525:11:g_d0_f2:11:g_d0_f3:B:Barigozzi, Francesca(2006) ìSupplementary Insurance with Ex-Post Moral Hazard: Ef-
+38:1687:81757:20:20:74:519:505:11:g_d0_f3:11:g_d0_f3:B:Öciency and Redistribution,îAnnales díEconomie et de Statistique, 83-84 (July-December):
+38:1688:81845:20:20:74:113:485:11:g_d0_f3:11:g_d0_f3:B:295-325.
+38:1689:81853:20:21:74:519:465:11:g_d0_f2:11:g_d0_f3:B:Besley, Timothy(1989) ìPublicly provided disaster insurance for health and the control of
+38:1690:81942:21:20:74:354:444:11:g_d0_f3:11:g_d0_f3:B:moral hazard,îJournal of Public Economics,39: 141ñ156.
+38:1691:81996:20:20:74:519:424:11:g_d0_f2:11:g_d0_f3:B:Blomqvist, Ake and Henrik Horn(1984) ìPublic health insurance and optimal income
+38:1692:82076:20:21:74:328:404:11:g_d0_f3:11:g_d0_f3:B:taxation,îJournal of Public Economics, 24: 352-371.
+38:1693:82127:21:20:74:522:383:11:g_d0_f2:11:g_d0_f3:B:Blomqvist, Ake and P.O. Johannson(1997) ìEconomic e¢ ciency and mixed public/private
+38:1694:82211:20:20:74:333:363:11:g_d0_f3:11:g_d0_f3:B:insurance,îJournal of Public Economics66: 505ñ516.
+38:1695:82261:20:21:74:519:343:11:g_d0_f2:11:g_d0_f2:C:Boadway, Robin, Manuel Leite-Monteiro, Maurice Marchand, and Pierre Pestieau
+38:1696:82337:21:20:74:519:322:11:g_d0_f3:11:g_d0_f4:B:(2006) ìSocial Insurance and Redistribution with Moral Hazard and Adverse Selection,îScan-
+38:1697:82427:20:20:74:310:302:11:g_d0_f4:11:g_d0_f3:B:dinavian Journal of Economics,108(2): 279-298.
+38:1698:82473:20:21:74:519:282:11:g_d0_f2:11:g_d0_f4:C:Chetty, Raj(2006a) ìA General Formula for the Optimal Level of Social Insurance,îJournal
+38:1699:82561:21:20:74:247:261:11:g_d0_f4:11:g_d0_f3:B:of Public Economics,90: 1879-1901.
+38:1700:82595:20:20:74:519:241:11:g_d0_f2:11:g_d0_f4:C:Chetty, Raj(2006b) ìA New Method of Estimating Risk Aversion,îAmerican Economic
+38:1701:82674:20:21:74:242:221:11:g_d0_f4:11:g_d0_f3:B:Review,96 (December): 1821-1834.
+38:1702:82706:21:20:74:522:200:11:g_d0_f2:11:g_d0_f3:B:Chetty, Raj(2008a) ìMoral Hazard vs. Liquidity and Optimal Unemployment Insurance,î
+38:1703:82789:20:20:74:298:180:11:g_d0_f4:11:g_d0_f3:B:Journal of Political Economy,116(2): 173-234.
+38:1704:82834:20:21:74:519:160:11:g_d0_f2:11:g_d0_f3:B:Chetty, Raj(2008b) ìSu¢ cient Statistics for Welfare Analysis: A Bridge Between Structural
+38:1705:82924:21:20:74:320:139:11:g_d0_f3:11:g_d0_f3:B:and Reduced-Form Methods,îUC-Berkeley mimeo.
+38:1706:82968:20:20:74:519:119:11:g_d0_f2:11:g_d0_f4:C:Cochrane, John H.(1991) ìA Simple Test of Consumption Insurance,îJournal of Political
+38:1707:83053:20:0:74:177:99:11:g_d0_f4:11:g_d0_f3:B:Economy, 99: 957-76.
+39:1708:83075:0:20:74:519:700:11:g_d0_f2:11:g_d0_f3:B:Cremer, Helmuth and Pierre Pestieau(1996) Redistributive taxation and social insur-
+39:1709:83158:20:21:74:454:680:11:g_d0_f3:11:g_d0_f3:B:ance (with H. Cremer),International Taxation and Public Finance, 3: 259-280.
+39:1710:83234:21:20:74:519:659:11:g_d0_f2:11:g_d0_f3:B:Cullen, Julie Berry and Jonathan Gruber(2000).  ìDoes Unemployment Insurance
+39:1711:83310:20:20:74:485:639:11:g_d0_f3:11:g_d0_f3:B:Crowd Out Spousal Labor Supply?îJournal of Labor Economics, 18(3): 546-72, July.
+39:1712:83390:20:21:74:519:619:11:g_d0_f2:11:g_d0_f3:B:Cutler, David and Jonathan Gruber(1996a) ìDoes public insurance crowd out private
+39:1713:83471:21:20:74:373:598:11:g_d0_f3:11:g_d0_f3:B:insurance?îQuarterly Journal of Economics,111(2): 391ñ430.
+39:1714:83529:20:20:74:520:578:11:g_d0_f2:11:g_d0_f3:B:Cutler, David and Jonathan Gruber(1996b) ìThe e§ect of medicaid expansions on public
+39:1715:83613:20:21:74:519:558:11:g_d0_f3:11:g_d0_f3:B:insurance, private insurance and redistribution,îAmerican Economic Review, 86(2): 378ñ383.
+39:1716:83703:21:20:74:519:537:11:g_d0_f2:11:g_d0_f4:C:DellaVigna, Stefano(2008) ìPsychology and Economics: Evidence from the Field,îJournal
+39:1717:83788:20:20:74:252:517:11:g_d0_f4:11:g_d0_f3:B:of Economic Literature,forthcoming.
+39:1718:83823:20:21:74:519:497:11:g_d0_f2:11:g_d0_f3:B:Diamond, Peter(1998) ìOptimal Income Taxation: An Example with a U-Shaped Pattern
+39:1719:83904:21:20:74:428:476:11:g_d0_f3:11:g_d0_f3:B:of Optimal Marginal Tax Rates,îAmerican Economic Review, 88:  83-95.
+39:1720:83972:20:20:74:520:456:11:g_d0_f2:11:g_d0_f3:B:Encinosa, William(2003) ìThe economics of crowd out under mixed public/private health
+39:1721:84057:20:21:74:324:436:11:g_d0_f3:11:g_d0_f3:B:insurance,îPortuguese Economic Journal, 2: 71ñ86.
+39:1722:84106:21:20:74:519:415:11:g_d0_f2:11:g_d0_f3:B:Finkelstein, Amy(2004) ìThe interaction of partial public insurance programs and resid-
+39:1723:84193:20:20:74:519:395:11:g_d0_f3:11:g_d0_f4:B:ual private insurance markets: evidence from the US Medicare program,îJournal of Health
+39:1724:84280:20:20:74:188:375:11:g_d0_f4:11:g_d0_f3:B:Economics,23(1): 1-24.
+39:1725:84302:20:21:74:519:355:11:g_d0_f2:11:g_d0_f3:B:Ginsburg, P.B.(1988) ìPublic insurance programs: medicare and medicaidîIn Frech, H.E.
+39:1726:84387:21:20:74:519:334:11:g_d0_f3:11:g_d0_f4:B:(Ed.),Health Care in America: The Political Economy of Hospitals and Health Insurance.
+39:1727:84473:20:20:74:310:314:11:g_d0_f3:11:g_d0_f3:B:PaciÖc Institute for Public Policy: San Francisco.
+39:1728:84523:20:21:74:520:294:11:g_d0_f2:11:g_d0_f3:B:Golosov, Michael and Aleh Tsyvinski(2007) ìOptimal Taxation with Endogenous Insur-
+39:1729:84605:21:20:74:374:273:11:g_d0_f3:11:g_d0_f3:B:ance Markets,îQuarterly Journal of Economics,121: 487-534.
+39:1730:84663:20:20:74:520:253:11:g_d0_f2:11:g_d0_f3:B:Gruber, Jonathan(1997) ìThe Consumption Smoothing BeneÖts of Unemployment Insur-
+39:1731:84743:20:21:74:349:233:11:g_d0_f3:11:g_d0_f3:B:ance,îAmerican Economic Review,87 (March): 192-205.
+39:1732:84794:21:20:74:520:212:11:g_d0_f2:11:g_d0_f4:C:Kaplow, Louis(1991) ìIncentives and Government Relief for Risk,îJournal of Risk and
+39:1733:84877:20:20:74:190:192:11:g_d0_f4:11:g_d0_f3:B:Uncertainty,3: 167-175.
+39:1734:84900:20:21:74:519:172:11:g_d0_f2:11:g_d0_f3:B:La§ont, Jean-Jacques and David Martimort(1999)The Theory of Incentives, Princeton
+39:1735:84981:21:20:74:267:151:11:g_d0_f3:11:g_d0_f3:B:University Press: Princeton and Oxford.
+39:1736:85020:20:20:74:520:131:11:g_d0_f2:11:g_d0_f4:C:Manning et al.(1987) ìHealth Insurance and the Demand for Medical Care,îAmerican
+39:1737:85100:20:21:74:223:111:11:g_d0_f4:11:g_d0_f3:B:Economic Review,77: 251-277.
+39:1738:85128:21:0:74:519:90:11:g_d0_f2:11:g_d0_f4:C:Meyer, Bruce(1990) ìUnemployment Insurance and Unemployment Spells,îEconometrica,
+40:1739:85211:0:20:74:165:700:11:g_d0_f3:11:g_d0_f3:B:58 (July): 757-782.
+40:1740:85230:20:21:74:522:680:11:g_d0_f2:11:g_d0_f3:B:Mirrlees, James A.(1971) ìAn exploration in the theory of optimum income taxation,î
+40:1741:85313:21:20:74:273:659:11:g_d0_f4:11:g_d0_f3:B:Review of Economic Studies,38: 175-208.
+40:1742:85352:20:20:74:347:639:11:g_d0_f2:11:g_d0_f3:B:National Health Care Statistics(2006). Available at
+40:1743:85403:20:25:74:437:619:11:g_d0_f3:11:g_d0_f3:B:http://www.cms.hhs.gov/NationalHealthExpendData/downloads/tables.pdf
+40:1744:85471:25:21:74:519:594:11:g_d0_f2:11:g_d0_f3:B:Pauly, Mark(1974) ìOverinsurance and public provision of insurance: the roles of moral
+40:1745:85557:21:20:74:446:573:11:g_d0_f3:11:g_d0_f3:B:hazard and adverse selection,îQuarterly Journal of Economics,88(1): 44ñ62.
+40:1746:85631:20:20:74:520:553:11:g_d0_f2:11:g_d0_f3:B:Petretto, Alessandro(1999) ìOptimal Social Health Insurance with Supplementary Private
+40:1747:85717:20:21:74:344:533:11:g_d0_f3:11:g_d0_f3:B:Insurance,îJournal of Health Economics,18(6): 727-45.
+40:1748:85770:21:20:74:519:512:11:g_d0_f2:11:g_d0_f3:B:Prescott, Edward C. and Robert M. Townsend(1984a) ìPareto Optima and Competi-
+40:1749:85847:20:20:74:488:492:11:g_d0_f3:11:g_d0_f3:B:tive Equilibria with Adverse Selection and Moral Hazard,îEconometrica52(1): 21-45.
+40:1750:85929:20:21:74:519:472:11:g_d0_f2:11:g_d0_f3:B:Prescott, Edward C. and Robert M. Townsend(1984b) ìGeneral Competitive Analysis
+40:1751:86008:21:20:74:491:451:11:g_d0_f3:11:g_d0_f3:B:in an Economy with Private Information,îInternational Economic Review25(1): 1-20.
+40:1752:86089:20:20:74:519:431:11:g_d0_f2:11:g_d0_f3:B:Reinhardt, Uwe E., Peter S. Hussey and Gerard F. Anderson(2004) ìU.S. Health
+40:1753:86165:20:21:74:427:411:11:g_d0_f3:11:g_d0_f3:B:Care Spending In An International Context,îHealth A§airs,23(3): 10-25
+40:1754:86234:21:20:74:519:390:11:g_d0_f2:11:g_d0_f4:C:Rochet, Jean-Charles(1991) ìIncentives, redistribution and social insurance,îThe Geneva
+40:1755:86321:20:20:74:282:370:11:g_d0_f4:11:g_d0_f3:B:Papers on Risk and Insurance,16: 143-165.
+40:1756:86362:20:20:74:520:350:11:g_d0_f2:11:g_d0_f3:B:Rothschild, Michael and Joseph Stiglitz(1976) ìEquilibrium in Competitive Insurance
+40:1757:86445:20:21:74:519:330:11:g_d0_f3:11:g_d0_f4:B:Markets: An Essay on the Economics of Imperfect Information îQuarterly Journal of Eco-
+40:1758:86531:21:20:74:184:309:11:g_d0_f4:11:g_d0_f3:B:nomics90(4): 629-649.
+40:1759:86552:20:20:74:519:289:11:g_d0_f2:11:g_d0_f4:C:Saez, Emmanuel(2001) ìUsing Elasticities to Derive Optimal Income Tax Rates,îReview
+40:1760:86635:20:21:74:239:269:11:g_d0_f4:11:g_d0_f3:B:of Economic Studies, 68:  205-229.
+40:1761:86669:21:20:74:519:248:11:g_d0_f2:11:g_d0_f4:C:Schoeni, Robert(2002) ìDoes unemployment insurance displace familial assistance?îPublic
+40:1762:86756:20:20:74:173:228:11:g_d0_f4:11:g_d0_f3:B:Choice,110: 99ñ119.
+40:1763:86775:20:21:74:519:208:11:g_d0_f2:11:g_d0_f4:C:Selden, Thomas(1993) ìShould the government provide catastrophic insurance?îJournal
+40:1764:86858:21:20:74:236:187:11:g_d0_f4:11:g_d0_f3:B:of Public Economics,51: 241-247.
+40:1765:86890:20:20:74:520:167:11:g_d0_f2:11:g_d0_f3:B:Shimer, Robert and Ivan Werning(2007) ìReservation Wages and Unemployment Insur-
+40:1766:86970:20:21:74:356:147:11:g_d0_f3:11:g_d0_f3:B:ance,îQuarterly Journal of Economics, 122(3): 1145-1185.
+40:1767:87026:21:20:74:519:126:11:g_d0_f2:11:g_d0_f3:B:Spinnewijn, Johannes(2008) ìUnemployed, but Optimistic: Optimal Insurance Design
+40:1768:87106:20:0:74:300:106:11:g_d0_f3:11:g_d0_f3:B:with Biased Beliefs,îUnpublished MIT mimeo.
+41:1769:87151:0:20:74:519:700:11:g_d0_f2:11:g_d0_f4:C:Varian, Hal R.(1980) ìRedistributive Taxation as Social Insurance,îJournal of Public
+41:1770:87235:20:21:74:193:680:11:g_d0_f4:11:g_d0_f3:B:Economics,14(1): 49-68.
+41:1771:87258:21:20:74:520:659:11:g_d0_f2:11:g_d0_f3:B:Taylor, A.K., Farley Short, P., Horgan, C.M.(1988) ìMedigap insurance: friend or foe
+41:1772:87342:20:20:74:519:639:11:g_d0_f3:11:g_d0_f4:B:in reducing medicare deÖcits?î In Frech, H.E. (Ed.),Health Care in America: The Political
+41:1773:87431:20:21:74:519:619:11:g_d0_f4:11:g_d0_f3:B:Economy of Hospitals and Health Insurance.PaciÖc Institute for Public Policy, San Francisco.
+41:1774:87523:21:20:74:519:598:11:g_d0_f2:11:g_d0_f3:B:Townsend, Robert(1994) ìRisk and Insurance in Village India,îEconometrica,62(3): 539-
+41:1775:87608:20:20:74:93:578:11:g_d0_f3:11:g_d0_f3:B:591.
+41:1776:87612:20:21:74:520:558:11:g_d0_f2:11:g_d0_f4:C:Wilson, Charles(1977) ìA model of insurance markets with incomplete information,îJour-
+41:1777:87698:21:20:74:258:537:11:g_d0_f4:11:g_d0_f3:B:nal of Economic Theory,16:  167-207.
+41:1778:87734:20:20:74:520:517:11:g_d0_f2:11:g_d0_f3:B:Wolfe, J.R., Goddeeris, J.H.(1991) ìAdverse selection, moral hazard, and wealth e§ects
+41:1779:87820:20:21:74:446:497:11:g_d0_f3:11:g_d0_f3:B:in the medigap insurance market,îJournal of Health Economics, 10: 433-459.
+41:1780:87894:21:20:74:520:476:11:g_d0_f2:11:g_d0_f3:B:Woolhandler, Ste¢ e, Terry Campbell, and David Himmelstein(2003) ìCosts of
+41:1781:87968:20:20:74:519:456:11:g_d0_f3:11:g_d0_f4:B:Health Care Administration in the United States and Canada,îNew England Journal of Medi-
+41:1782:88056:20:0:74:165:436:11:g_d0_f4:11:g_d0_f3:B:cine,349: 768-775.
+42:1783:88076:0:28:115:286:651:11:g_d0_f18:11:g_d0_f18:C:Dependent Variable: Severance pay
+42:1784:88109:28:14:296:473:623:11:g_d0_f18:11:g_d0_f18:C:Reduced-Form OLS TSLS
+42:1785:88130:14:18:273:484:609:11:g_d0_f18:11:g_d0_f18:C:No ControlsWith CntrlsWith Cntrls
+42:1786:88163:18:22:295:468:591:11:g_d0_f18:11:g_d0_f18:C:(1)(2)(3)
+42:1787:88172:22:14:115:400:569:11:g_d0_f18:11:g_d0_f18:C:log max UI benefit-.074-.065 
+42:1788:88201:14:21:284:403:555:11:g_d0_f18:11:g_d0_f18:C:(0.030)(0.030)
+42:1789:88215:21:14:115:471:534:11:g_d0_f18:11:g_d0_f18:C:log individual UI benefit-.105
+42:1790:88245:14:32:448:479:520:11:g_d0_f18:11:g_d0_f18:C:(0.054)
+42:1791:88252:32:0:115:472:488:11:g_d0_f18:11:g_d0_f18:C:Sample Size2,9962,7332,733
+42:1792:88278:0:15:283:322:708:11:g_d0_f19:11:g_d0_f19:C:TABLE 1
+42:1793:88285:15:245:154:452:693:11:g_d0_f18:11:g_d0_f18:C:Effect of UI Benefits on Severance pay: Regression Estimates
+42:1794:88345:245:13:115:488:448:10:g_d0_f18:10:g_d0_f18:F:NOTE-Specifications 1 and 2 report estimates from an OLS regression; specification 
+42:1795:88428:13:12:115:477:435:10:g_d0_f18:10:g_d0_f18:F:3 reports estimates from a two-stage least squares regression using log state max 
+42:1796:88510:12:12:115:492:423:10:g_d0_f18:10:g_d0_f18:F:benefit as an instrument for actual individual benefit reported in data.  Specifications 2 
+42:1797:88601:12:13:115:453:411:10:g_d0_f18:10:g_d0_f18:F:and 3 include the following controls: job tenure, age, gender, household size, 
+42:1798:88680:13:0:115:379:398:10:g_d0_f18:10:g_d0_f18:F:education, dropout, industry, occupation, and race dummies.
+43:1799:88739:0:0:269:274:533:6:g_d0_f20:6:g_d0_f20:F:CA
+43:1800:88741:0:0:322:326:632:6:g_d0_f20:6:g_d0_f20:F:FL
+43:1801:88743:0:148:258:263:662:6:g_d0_f20:6:g_d0_f20:F:GA
+43:1802:88745:148:0:401:406:514:6:g_d0_f20:6:g_d0_f20:F:HI
+43:1803:88747:0:0:313:315:525:6:g_d0_f20:6:g_d0_f20:F:IL
+43:1804:88749:0:66:300:304:542:6:g_d0_f20:6:g_d0_f20:F:KY
+43:1805:88751:66:0:344:349:476:6:g_d0_f20:6:g_d0_f20:F:MI
+43:1806:88753:0:0:376:381:506:6:g_d0_f20:6:g_d0_f20:F:MN
+43:1807:88755:0:20:190:195:568:6:g_d0_f20:6:g_d0_f20:F:MS
+43:1808:88757:20:19:374:379:548:6:g_d0_f20:6:g_d0_f20:F:NC
+43:1809:88759:19:0:426:431:529:6:g_d0_f20:6:g_d0_f20:F:NJ
+43:1810:88761:0:72:347:352:554:6:g_d0_f20:6:g_d0_f20:F:NY
+43:1811:88763:72:0:310:315:482:6:g_d0_f20:6:g_d0_f20:F:OH
+43:1812:88765:0:61:297:302:580:6:g_d0_f20:6:g_d0_f20:F:OK
+43:1813:88767:61:0:414:418:519:6:g_d0_f20:6:g_d0_f20:F:PA
+43:1814:88769:0:0:398:403:532:6:g_d0_f20:6:g_d0_f20:F:RI
+43:1815:88771:0:0:248:332:545:6:g_d0_f20:6:g_d0_f20:F:TNTX
+43:1816:88775:0:43:261:265:559:6:g_d0_f20:6:g_d0_f20:F:VA
+43:1817:88777:43:57:430:334:516:6:g_d0_f20:6:g_d0_f20:F:WAWI
+43:1818:88846:57:14:170:457:459:10:g_d0_f20:10:g_d0_f20:F:-.4-.20.2.4
+43:1819:88857:14:0:212:424:445:10:g_d0_f20:10:g_d0_f20:F:Log Maximum Weekly UI Benefit (Mean Residual)
+43:1820:88902:0:13:283:316:703:10:g_d0_f21:10:g_d0_f21:F:Figure 1
+43:1821:88910:13:297:218:382:690:10:g_d0_f20:10:g_d0_f20:F:Effect of UI Benefits on Severance Pay
+43:1822:88948:297:15:129:495:393:10:g_d0_f20:10:g_d0_f20:F:NOTE–Figure plots relationship between fraction of individuals receiving severance pay
+43:1823:89034:15:15:129:492:378:10:g_d0_f20:10:g_d0_f20:F:in each state vs. maximum state UI benefit level, conditioning on wages.  Figure shows
+43:1824:89120:15:15:129:495:363:10:g_d0_f20:10:g_d0_f20:F:a scatter plot of the mean residuals by state from a regression of severance pay receipt
+43:1825:89208:15:14:129:490:348:10:g_d0_f20:10:g_d0_f20:F:and log maximum weekly benefit level on a log wage spline (seetext for details).  Data
+43:1826:89294:14:15:129:483:334:10:g_d0_f20:10:g_d0_f20:F:source: Mathmetica survey of UI Exhaustees in 25 States in 1998.  States with fewer
+43:1827:89377:15:0:129:387:319:10:g_d0_f20:10:g_d0_f20:F:than 50 individual observations are excluded from this figure.

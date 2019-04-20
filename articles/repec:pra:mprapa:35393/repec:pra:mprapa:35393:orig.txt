@@ -1,0 +1,684 @@
+1:0:0:0:27:307:511:664:3425:g_d0_f1:3425:g_d0_f1:MPRA
+1:1:4:27:123:278:504:637:17:g_d0_f2:17:g_d0_f2:Munich Personal RePEc Archive
+1:2:33:123:25:81:504:514:21:g_d0_f3:21:g_d0_f3:Optimal trading execution with nonlinear
+1:3:73:25:25:81:475:489:21:g_d0_f3:21:g_d0_f3:market impact:  an alternative solution
+1:4:112:25:44:81:158:464:21:g_d0_f3:21:g_d0_f3:method
+1:5:118:44:37:81:487:420:17:g_d0_f2:17:g_d0_f2:Marzo Massmiliano and Ritelli Daniele and Zagaglia Paolo
+1:6:174:37:74:81:214:383:14:g_d0_f4:14:g_d0_f4:University of Bologna
+1:7:195:74:150:81:199:309:14:g_d0_f4:14:g_d0_f4:29. November 2011
+1:8:212:150:18:81:417:159:14:g_d0_f4:14:g_d0_f5:Online athttp://mpra.ub.uni-muenchen.de/35393/
+1:9:258:18:0:81:475:141:14:g_d0_f4:14:g_d0_f4:MPRA Paper No. 35393, posted 13. December 2011 21:19 UTC
+2:10:314:0:22:86:508:629:17:g_d0_f6:17:g_d0_f6:Optimal Trading Execution with Nonlinear Market Impact:
+2:11:369:22:30:182:412:607:17:g_d0_f6:17:g_d0_f6:An Alternative Solution Method
+2:12:399:30:24:154:444:577:12:g_d0_f7:8:g_d0_f8:Massimiliano Marzo, Daniele Ritelli and Paolo Zagaglia∗
+2:13:454:24:52:225:368:553:10:g_d0_f9:10:g_d0_f9:This version: November 29, 2011
+2:14:485:52:19:275:319:501:10:g_d0_f10:10:g_d0_f10:Abstract
+2:15:493:19:12:127:483:482:10:g_d0_f9:10:g_d0_f9:We consider the optimal trade execution strategies for a large portfolio of single
+2:16:575:12:12:112:483:470:10:g_d0_f9:10:g_d0_f9:stocks proposed by Almgren (2003). This framework accounts for a nonlinear impact
+2:17:656:12:12:112:483:458:10:g_d0_f9:10:g_d0_f9:of trades on average market prices. The results of Almgren (2003) are based on the
+2:18:738:12:11:112:483:446:10:g_d0_f9:10:g_d0_f9:assumption that no shares of assets per unit of time are trade at the beginning of
+2:19:820:11:12:112:483:435:10:g_d0_f9:10:g_d0_f9:the period. We propose a general solution method that accomodates the case of a
+2:20:899:12:12:112:483:423:10:g_d0_f9:10:g_d0_f9:positive stock of assets in the initial period. Our findings are twofold. First of all,
+2:21:986:12:12:112:483:411:10:g_d0_f9:10:g_d0_f9:we show that the problem admits a solution with no trading in the opening period
+2:22:1066:12:12:112:483:399:10:g_d0_f9:10:g_d0_f9:only if additional parametric restrictions are imposed.  Second, with positive asset
+2:23:1150:12:12:112:483:387:10:g_d0_f9:10:g_d0_f9:holdings in the initial period, the optimal execution time depends on trading activity
+2:24:1236:12:24:112:287:375:10:g_d0_f9:10:g_d0_f9:at the beginning of the planning period.
+2:25:1276:24:12:112:450:351:10:g_d0_f9:10:g_d0_f9:Keywords: optimal execution, market impact, ordinary differential equations.
+2:26:1352:12:241:112:240:339:10:g_d0_f9:10:g_d0_f9:JEL classification: G11, G12.
+2:27:1381:241:15:97:510:98:6:g_d0_f11:9:g_d0_f12:∗Marzo:  Department of Economics, Università di Bologna; massimiliano.marzo@unibo.it.  Ritelli:
+2:28:1476:15:11:85:510:83:9:g_d0_f12:9:g_d0_f12:Department of Statistics, Università di Bologna; daniele.ritelli@unibo.it.  Zagaglia:  Department of
+2:29:1576:11:11:85:324:72:9:g_d0_f12:9:g_d0_f12:Economics, Università di Bologna; paolo.zagaglia@unibo.it.
+2:30:1634:11:11:85:509:61:9:g_d0_f13:9:g_d0_f12:Remarks:This is a work in progress. We welcome any comments, suggestions and remarks. The research
+2:31:1732:11:0:85:488:50:9:g_d0_f12:9:g_d0_f12:contained herein has been carried out without financial support of any kind from the private sector.
+3:32:1832:0:27:85:195:673:14:g_d0_f14:14:g_d0_f14:1  Introduction
+3:33:1847:27:17:85:510:646:11:g_d0_f15:11:g_d0_f15:The execution of large trades in financial markets requires the balance between risks and
+3:34:1936:17:16:85:510:629:11:g_d0_f15:11:g_d0_f15:costs. The main risk concerns the lack of availability of a counterparty, which can lead to
+3:35:2027:16:17:85:510:613:11:g_d0_f15:11:g_d0_f15:a delay in the execution of a transaction. In order to guarantee a fast trade execution, a
+3:36:2117:17:16:85:510:596:11:g_d0_f15:11:g_d0_f15:trader may incur additional costs. As clarified by Hasbruock and Schwartz (1988), a trader
+3:37:2207:16:17:85:408:580:11:g_d0_f15:11:g_d0_f15:faces a choice between a ‘passive’ and an ‘actice’ execution strategy.
+3:38:2277:17:16:101:509:563:11:g_d0_f15:11:g_d0_f15:Given this background, the available models of optimal execution assume that the
+3:39:2357:16:16:85:510:547:11:g_d0_f15:11:g_d0_f15:trading activity of individual investors has an impact on the average price prevailing in the
+3:40:2450:16:17:85:510:531:11:g_d0_f15:11:g_d0_f15:market. The transaction costs are characterized by parametric forms that replicate stylized
+3:41:2541:17:16:85:510:514:11:g_d0_f15:11:g_d0_f15:facts documented in the market microstructure literature (e.g. see Kraus and Stoll, 1972).
+3:42:2631:16:17:101:509:498:11:g_d0_f15:11:g_d0_f15:Almgren and Chriss (1999, 2000) and Konishi and Makimoto (2001) provide examples
+3:43:2711:17:16:85:510:481:11:g_d0_f15:11:g_d0_f15:of optimal strategies for the execution problem in the stock market. Their models assume
+3:44:2799:16:17:85:510:465:11:g_d0_f15:11:g_d0_f15:that the transaction cost per share is a linear function of the number of shares of assets
+3:45:2889:17:16:85:475:448:11:g_d0_f15:11:g_d0_f15:traded. The only source of uncertianty consists in the volatility of the stock price.
+3:46:2974:16:17:101:509:432:11:g_d0_f15:11:g_d0_f15:Almgren (2003) suggests that the linearity assumption is largely at odds with reality.
+3:47:3060:17:16:85:510:415:11:g_d0_f15:11:g_d0_f15:First, the average liquidity premium on stocks tends to be either a convex or a concave
+3:48:3147:16:16:85:510:399:11:g_d0_f15:11:g_d0_f15:function of the traded size.  This depends on the counterparty’s perception about the
+3:49:3232:16:17:85:510:383:11:g_d0_f15:11:g_d0_f15:reason for the trade, namely on whether it is driven by liquidity or information needs (see
+3:50:3323:17:16:85:510:366:11:g_d0_f15:11:g_d0_f15:Huang and Stoll, 1997). Moreover, the liquidity premium is related to the risk of finding
+3:51:3412:16:17:85:510:350:11:g_d0_f15:11:g_d0_f15:a counterparty. In other words, the lower the probability of finding a counterparty in the
+3:52:3502:17:16:85:284:333:11:g_d0_f15:11:g_d0_f15:market, the higher the liquidity premium.
+3:53:3543:16:17:101:509:317:11:g_d0_f15:11:g_d0_f15:In this paper, we review the optimal transaction strategy proposed by Almgren (2003).
+3:54:3628:17:16:85:510:300:11:g_d0_f15:11:g_d0_f15:We show that the solution method used by Almgren (2003) is ill-posed. The reason is
+3:55:3711:16:16:85:510:284:11:g_d0_f15:11:g_d0_f15:that it is based on the assumption that no shares per unit of time are exchanged at the
+3:56:3798:16:17:85:510:268:11:g_d0_f15:11:g_d0_f15:beginning of the period. We use an approach based on the Gauss hypergeometric function
+3:57:3884:17:16:85:510:251:11:g_d0_f15:11:g_d0_f15:to solve for the case of positive initial trades. Our results differ strongly from those of
+3:58:3975:16:17:85:510:235:11:g_d0_f15:11:g_d0_f15:Almgren (2003). First of all, the problem admits a solution with no trading in the opening
+3:59:4065:17:16:85:510:218:11:g_d0_f15:11:g_d0_f15:period only if additional parametric restrictions are imposed. Second, with positive initial
+3:60:4157:16:17:85:488:202:11:g_d0_f15:11:g_d0_f15:trading, the optimal execution time depends on trading activity in the initial period.
+3:61:4243:17:16:101:509:185:11:g_d0_f15:11:g_d0_f15:This note is organized as follows.  Section 2 provides a selected discussion of the
+3:62:4326:16:16:85:510:169:11:g_d0_f15:11:g_d0_f15:literature on optimal trade execution.  Section 3 outlines the structure of the problem.
+3:63:4414:16:17:85:510:153:11:g_d0_f15:11:g_d0_f15:Section 4 proposes a general solution method for positive initial values of the velocity.
+3:64:4503:17:16:85:510:136:11:g_d0_f15:11:g_d0_f15:Section 5 concludes. Finally, in Appendix A, we discuss the general method for the solution
+3:65:4594:16:0:85:448:120:11:g_d0_f15:11:g_d0_f15:of second order differential equations with a Gauss hypergeometric function.
+4:66:4671:0:27:85:361:673:14:g_d0_f14:14:g_d0_f14:2  A selected overview of the literature
+4:67:4711:27:17:85:510:646:11:g_d0_f15:11:g_d0_f15:Rebalancing portfolios of assets requires executing trades in the marketplace. With the
+4:68:4798:17:16:85:510:629:11:g_d0_f15:11:g_d0_f15:advent of algorithmic trading and access availability to many alternative trading venues,
+4:69:4887:16:17:85:510:613:11:g_d0_f15:11:g_d0_f15:investors have dedicated increasing resources to the scheduling of trades. The practical
+4:70:4975:17:16:85:510:596:11:g_d0_f15:11:g_d0_f15:setup of the problem is rather intuitive. An investor has a target number of, say shares
+4:71:5063:16:17:85:510:580:11:g_d0_f15:11:g_d0_f15:that it intends to sell or buy within a given time frame. The decision problem requires to
+4:72:5153:17:16:85:510:563:11:g_d0_f15:11:g_d0_f15:compute how many shares to place or demand in the market at each point in time within
+4:73:5238:16:16:85:510:547:11:g_d0_f15:11:g_d0_f15:the trade horizon. The aim of the investor is to minimize the execution costs. These are
+4:74:5326:16:17:85:510:531:11:g_d0_f15:11:g_d0_f15:typically measured as the difference between the price obtained from the market and a
+4:75:5411:17:16:85:259:514:11:g_d0_f15:11:g_d0_f15:benchmark price for the transaction.
+4:76:5447:16:17:101:509:498:11:g_d0_f15:11:g_d0_f15:There are multiple relevant dimensions to the execution problem. Several contributions
+4:77:5533:17:16:85:510:481:11:g_d0_f15:11:g_d0_f15:have showed that the liquidity premium is time-varying. The reason is that it is determined
+4:78:5624:16:17:85:510:465:11:g_d0_f15:11:g_d0_f15:by the availability of traders willing to act as counterparties, namely traders willing to buy
+4:79:5718:17:16:85:510:448:11:g_d0_f15:11:g_d0_f15:or sell a given quantity of an asset at a desired price. However, as the presence of traders
+4:80:5810:16:17:85:510:432:11:g_d0_f15:11:g_d0_f15:willing to ‘take the other side’ of a trade is uncertain, any trading is characterized by
+4:81:5899:17:16:85:154:415:11:g_d0_f15:11:g_d0_f15:execution risk.
+4:82:5914:16:16:101:509:399:11:g_d0_f15:11:g_d0_f15:Another relevant aspect is related to the fact that market illiquidity generates
+4:83:5994:16:17:85:510:383:11:g_d0_f15:11:g_d0_f15:transaction costs. This typically takes the form of a large spread between bid and ask
+4:84:6080:17:16:85:510:366:11:g_d0_f15:11:g_d0_f15:prices (Huang and Stoll, 1997). Therefore, as noticed by Wagner and Banks (1992), the
+4:85:6165:16:17:85:510:350:11:g_d0_f15:11:g_d0_f15:minization of transaction costs is a key aspect of the portfolio optimization problem. As
+4:86:6254:17:16:85:510:333:11:g_d0_f15:11:g_d0_f15:documented in various studies including Chakravarty (2001), Holthausen, Leftwich and
+4:87:6338:16:17:85:510:317:11:g_d0_f15:11:g_d0_f15:Mayers (1990) and Kraus and Stoll (1972), large trades do impact market prices and, thus
+4:88:6426:17:16:85:223:300:11:g_d0_f15:11:g_d0_f15:affecting the bid-ask spreads.
+4:89:6456:16:16:101:509:284:11:g_d0_f15:11:g_d0_f15:Asset price volatility is a source for execution risk. The reason is that it affects the
+4:90:6544:16:17:85:510:268:11:g_d0_f15:11:g_d0_f15:probability of finding a suitable counterparty. Hence, it affects the sucessfulness of a trading
+4:91:6640:17:16:85:510:251:11:g_d0_f15:11:g_d0_f15:strategy execution. The recent literature has focused on the specific aspect of volatility,
+4:92:6731:16:17:85:510:235:11:g_d0_f15:11:g_d0_f15:namely the increased uncertainty in execution price incurred by rapid execution of large
+4:93:6819:17:16:85:510:218:11:g_d0_f15:11:g_d0_f15:share blocks. In fact, Hasbruock and Seppi (2001) show that liquidity fluctuates due to
+4:94:6906:16:17:85:396:202:11:g_d0_f15:11:g_d0_f15:intrinsic variations in market activity independently of trade size.
+4:95:6974:17:16:101:509:185:11:g_d0_f15:11:g_d0_f15:Based on the considerations outlined earlier, what are the properties of an ‘optimal’
+4:96:7059:16:16:85:510:169:11:g_d0_f15:11:g_d0_f15:execution strategy? What defines an ‘optimal execution price’? Bertsimas and Lo (1998)
+4:97:7145:16:17:85:510:153:11:g_d0_f15:11:g_d0_f15:argue that ‘best’ execution can be thought of as a dynamic strategy that minimizes
+4:98:7227:17:16:85:510:136:11:g_d0_f15:11:g_d0_f15:‘liquidation’ costs. They show that dynamic programming techniques can be used fruitfully
+4:99:7316:16:17:85:234:120:11:g_d0_f15:11:g_d0_f15:to characterize these strategies.
+4:100:7349:17:16:101:509:103:11:g_d0_f15:11:g_d0_f15:Almgren and Chriss (2000) compute optimal trajectories for trading prices that are
+4:101:7431:16:17:85:510:87:11:g_d0_f15:11:g_d0_f15:obtained by balancing market impact costs. The optimal profiles provide a motivation for
+4:102:7519:17:16:85:510:70:11:g_d0_f15:11:g_d0_f15:low execution speed.1This results arises from the balance between the need to reduce
+4:103:7603:16:0:97:510:54:6:g_d0_f17:9:g_d0_f12:1The literature has proposed two main alternative bechmarks. These consist of average prices that
+5:104:7701:0:17:85:510:673:11:g_d0_f15:11:g_d0_f15:the expected value of execution, and the need to minimize the adverse effects of market
+5:105:7788:17:16:85:510:656:11:g_d0_f15:11:g_d0_f15:volatility. While the first factor provides a reason for slower execution, the second factor
+5:106:7880:16:16:85:510:640:11:g_d0_f15:11:g_d0_f15:lays the ground for rapid execution.  That would, in fact, reduce execution risk in the
+5:107:7967:16:17:85:510:624:11:g_d0_f15:11:g_d0_f15:form of the variance of execution cost with respect to the benchmark price. In short, early
+5:108:8058:17:16:85:510:607:11:g_d0_f15:11:g_d0_f15:execution reduces execution risk, whereas a delayed execution is more geared towards
+5:109:8142:16:17:85:510:591:11:g_d0_f15:11:g_d0_f15:minimizing execution costs. Evidently the degree of investor risk aversion determines how
+5:110:8231:17:16:85:510:574:11:g_d0_f15:11:g_d0_f15:early within the trading horizon the execution starts. The shape of the schedule instead
+5:111:8319:16:17:85:365:558:11:g_d0_f15:11:g_d0_f15:depends on the form of the assumed market impact model.
+5:112:8374:17:16:101:509:541:11:g_d0_f15:11:g_d0_f15:Konishi and Makimoto (2001) makes the assumption that the market impact of trading
+5:113:8456:16:17:85:510:525:11:g_d0_f15:11:g_d0_f15:is a linear function of trade size.  In this case, the optimality frontier representing
+5:114:8543:17:16:85:510:508:11:g_d0_f15:11:g_d0_f15:the combinations of minimized costs and market volatility has an analytical solution.
+5:115:8628:16:16:85:510:492:11:g_d0_f15:11:g_d0_f15:Value-at-risk utility funcations are then used to select the first-best solution. This choice
+5:116:8721:16:17:85:510:476:11:g_d0_f15:11:g_d0_f15:of utility function provides a natural testing ground for the concept of liquidity-adjusted
+5:117:8812:17:16:85:510:459:11:g_d0_f15:11:g_d0_f15:VaR, which explicity considers the best trade-off between volatility risk and liquidation
+5:118:8901:16:17:85:510:443:11:g_d0_f15:11:g_d0_f15:cost. Almgren (2003) generalizes the results of Konishi and Makimoto (2001) to the case
+5:119:8988:17:16:85:510:426:11:g_d0_f15:11:g_d0_f15:of nonlinear functions for the market impact of trades. In this framework, the assumption
+5:120:9077:16:38:85:510:410:11:g_d0_f15:11:g_d0_f15:is that the market impact cost per share follows a power law function of the trading rate.
+5:121:9167:38:28:85:326:372:14:g_d0_f14:14:g_d0_f14:3  The optimal execution problem
+5:122:9199:28:16:85:510:344:11:g_d0_f15:11:g_d0_f15:We follow the general framework of Almgren and Chriss (2000). At timet= 0, an investor
+5:123:9285:16:16:85:509:328:11:g_d0_f15:11:g_d0_f15:holdsXshares of an asset. The problem is to sell these shares by by timet=T. We
+5:124:9364:16:17:85:509:312:11:g_d0_f15:11:g_d0_f18:should stress that this is the statement of a general framework. In fact, the initial sizeX
+5:125:9455:17:16:85:510:295:11:g_d0_f15:11:g_d0_f15:can either be positive or negative. In the first case, the investor needs to schedule a selling
+5:126:9550:16:17:85:510:279:11:g_d0_f15:11:g_d0_f15:program. In the second case, the investor looks at a buying program. In this paper, for
+5:127:9637:17:16:85:269:262:11:g_d0_f15:11:g_d0_f15:simplicity, we focus on the caseX >0.
+5:128:9674:16:17:101:509:246:11:g_d0_f15:11:g_d0_f15:The execution problem consists in minizing the market impact of trades subject to both
+5:129:9760:17:16:85:510:229:11:g_d0_f15:11:g_d0_f15:initial and terminal conditions. In mathematical terms, the model proposed by Almgren
+5:130:9845:16:18:85:327:213:11:g_d0_f15:11:g_d0_f15:(2003) delivers the following optimization problem:
+5:131:9896:18:10:112:122:195:11:g_d0_f20:11:g_d0_f20:
+5:132:9897:10:23:112:122:185:11:g_d0_f20:11:g_d0_f20:
+5:133:9899:23:0:112:122:162:11:g_d0_f20:11:g_d0_f20:
+5:134:9901:0:8:125:143:179:11:g_d0_f19:11:g_d0_f19:min
+5:135:9904:8:0:127:141:171:8:g_d0_f21:8:g_d0_f22:x(t)
+5:136:9908:0:25:145:161:194:11:g_d0_f20:8:g_d0_f21:∫T
+5:137:9910:25:0:151:155:169:8:g_d0_f22:8:g_d0_f22:0
+5:138:9911:0:27:164:211:179:11:g_d0_f18:11:g_d0_f18:F(x, ̇x) dt
+5:139:9922:27:0:123:225:152:11:g_d0_f18:11:g_d0_f19:x(0) =X,  x(T) = 0
+5:140:9940:0:44:487:509:169:11:g_d0_f15:11:g_d0_f15:(3.1)
+5:141:9945:44:30:85:342:125:11:g_d0_f15:11:g_d0_f15:whereF(x,y)is the market impact function of trades:
+5:142:9996:30:20:112:509:95:11:g_d0_f18:11:g_d0_f15:F(x,y) =−γxy+η(−y)k+1+λσ2x2,  γ, η, λ, k >0.(3.2)
+5:143:10045:20:11:85:510:75:9:g_d0_f12:9:g_d0_f12:materialize within the trading horizon, and are characterized as a time-weighted and volume-weighted
+5:144:10145:11:0:85:140:64:9:g_d0_f12:9:g_d0_f12:average price.
+6:145:10160:0:17:85:510:673:11:g_d0_f15:11:g_d0_f15:The problem is to determine the optimal functionx(e)so as to minimize a chosen cost
+6:146:10243:17:32:85:505:656:11:g_d0_f15:11:g_d0_f15:functional. Using Beltrami identity, (see Kamien and Scwartz, 1991, section 5, page 31):
+6:147:10331:32:0:112:165:624:11:g_d0_f18:11:g_d0_f18:F(x, ̇x)− ̇x
+6:148:10343:0:15:167:180:632:11:g_d0_f18:11:g_d0_f18:∂F
+6:149:10345:15:0:168:180:617:11:g_d0_f18:11:g_d0_f18:∂y
+6:150:10347:0:31:183:509:624:11:g_d0_f19:11:g_d0_f15:(x, ̇x) = constant(3.3)
+6:151:10370:31:16:85:510:593:11:g_d0_f15:11:g_d0_f15:evaluating the constant of integration at the end timeTwe are lead to the differential
+6:152:10456:16:30:85:126:577:11:g_d0_f15:11:g_d0_f15:equation
+6:153:10464:30:30:112:509:547:11:g_d0_f18:11:g_d0_f15:λσ2−kη(− ̇x)k+1=−kη(− ̇x(T))k+1(3.4)
+6:154:10500:30:16:101:510:517:11:g_d0_f15:11:g_d0_f15:Almgren (2003) proposes a solution based only on the “elementary” casev0= 0. In this
+6:155:10584:16:17:85:509:501:11:g_d0_f15:11:g_d0_f15:note, we show how to compute the constantvk+10:= (− ̇x(T))k+1using the initial condition
+6:156:10672:17:32:85:132:484:11:g_d0_f18:11:g_d0_f15:x(0) =X.
+6:157:10680:32:23:85:199:452:12:g_d0_f24:12:g_d0_f26:3.1  The casek= 1
+6:158:10697:23:17:85:510:429:11:g_d0_f15:11:g_d0_f15:The casek= 1is straightforward since it gives rise to a linear ordinary differential equation,
+6:159:10791:17:24:85:478:412:11:g_d0_f15:11:g_d0_f15:whose solution is better found starting from the classical Euler Lagrange equation:
+6:160:10874:24:15:115:121:388:11:g_d0_f19:11:g_d0_f19:d
+6:161:10875:15:0:113:123:373:11:g_d0_f19:11:g_d0_f18:dt
+6:162:10877:0:15:125:139:388:11:g_d0_f18:11:g_d0_f18:∂L
+6:163:10879:15:0:126:138:373:11:g_d0_f18:11:g_d0_f18:∂y
+6:164:10881:0:0:140:178:381:11:g_d0_f19:11:g_d0_f19:(x, ̇x) =
+6:165:10890:0:15:182:196:388:11:g_d0_f18:11:g_d0_f18:∂L
+6:166:10892:15:0:183:196:373:11:g_d0_f18:11:g_d0_f18:∂x
+6:167:10894:0:32:197:509:381:11:g_d0_f19:11:g_d0_f15:(x, ̇x)⇐⇒2λσ2x−2η ̈x= 0(3.5)
+6:168:10922:32:41:85:384:349:11:g_d0_f15:11:g_d0_f15:imposing the boundary conditionsx(0) =X, x(T) = 0we find:
+6:169:10979:41:0:112:154:308:11:g_d0_f18:11:g_d0_f18:x(t) =X
+6:170:10986:0:0:156:175:319:11:g_d0_f19:11:g_d0_f19:sinh
+6:171:10990:0:8:177:192:331:11:g_d0_f20:8:g_d0_f8:(√
+6:172:10992:8:8:192:192:323:8:g_d0_f21:8:g_d0_f8:λ√
+6:173:10994:8:0:192:240:315:8:g_d0_f21:11:g_d0_f19:ησ(T−t)
+6:174:11001:0:35:240:247:331:11:g_d0_f20:11:g_d0_f20:)
+6:175:11002:35:0:169:188:296:11:g_d0_f19:11:g_d0_f19:sinh
+6:176:11006:0:8:190:205:309:11:g_d0_f20:8:g_d0_f8:(√
+6:177:11008:8:8:205:205:301:8:g_d0_f21:8:g_d0_f8:λ√
+6:178:11010:8:0:205:226:293:8:g_d0_f21:11:g_d0_f18:ησT
+6:179:11013:0:42:227:509:309:11:g_d0_f20:11:g_d0_f15:)(3.6)
+6:180:11019:42:17:85:510:267:11:g_d0_f15:11:g_d0_f15:It is worth noting that fork= 1(3.6) gives a minimizer of (3.1) since in this case Legendre
+6:181:11110:17:23:85:160:250:11:g_d0_f15:11:g_d0_f15:condition reads:
+6:182:11126:23:15:113:131:227:11:g_d0_f18:11:g_d0_f18:∂2F
+6:183:11129:15:0:114:131:212:11:g_d0_f18:8:g_d0_f22:∂y2
+6:184:11132:0:32:134:509:220:11:g_d0_f19:11:g_d0_f15:(x, ̇x) = 2η >0(3.7)
+6:185:11152:32:20:85:480:188:11:g_d0_f15:11:g_d0_f19:Turning back to equation (3.4) for generalk, we write it solving with respect to ̇x:
+6:186:11236:20:10:112:122:168:11:g_d0_f20:11:g_d0_f20:
+6:187:11237:10:22:112:122:158:11:g_d0_f20:11:g_d0_f20:
+6:188:11239:22:0:112:122:136:11:g_d0_f20:11:g_d0_f20:
+6:189:11241:0:0:123:150:150:11:g_d0_f19:11:g_d0_f23: ̇x=−
+6:190:11246:0:16:153:161:166:11:g_d0_f20:11:g_d0_f20:(
+6:191:11247:16:0:161:193:150:11:g_d0_f18:11:g_d0_f19:vk+10+
+6:192:11253:0:15:197:214:158:11:g_d0_f18:8:g_d0_f22:λσ2
+6:193:11256:15:0:200:211:143:11:g_d0_f18:11:g_d0_f18:kη
+6:194:11258:0:0:216:226:150:11:g_d0_f18:8:g_d0_f22:x2
+6:195:11260:0:40:227:249:166:11:g_d0_f20:6:g_d0_f27:)1k+1
+6:196:11265:40:0:122:165:126:11:g_d0_f18:11:g_d0_f18:x(0) =X
+6:197:11272:0:45:487:509:143:11:g_d0_f15:11:g_d0_f15:(3.8)
+6:198:11277:45:25:85:271:98:11:g_d0_f15:11:g_d0_f15:In this general case observe that, since:
+6:199:11318:25:15:113:131:73:11:g_d0_f18:11:g_d0_f18:∂2F
+6:200:11321:15:0:114:131:58:11:g_d0_f18:8:g_d0_f22:∂y2
+6:201:11324:0:0:134:509:65:11:g_d0_f19:11:g_d0_f15:(x, ̇x) =ηk(k+ 1)(− ̇x)k−1(3.9)
+7:202:11356:0:17:85:510:673:11:g_d0_f15:11:g_d0_f15:since solution to (3.8) is decreasing we infer, for the Legendre condition, the minimality of
+7:203:11449:17:38:85:168:656:11:g_d0_f15:11:g_d0_f18:the estremalx(t).
+7:204:11466:38:22:85:510:618:14:g_d0_f14:14:g_d0_f14:4  A general solution method for the case of positive initial
+7:205:11527:22:27:108:151:596:14:g_d0_f14:14:g_d0_f14:trades
+7:206:11533:27:16:85:510:569:11:g_d0_f15:11:g_d0_f15:In this section, we propose a solution method that holds when there are positive stock
+7:207:11619:16:17:85:510:553:11:g_d0_f15:11:g_d0_f15:trades in the initial period, namely forv0>0.  This solutionxto (3.8) is implicitely
+7:208:11703:17:22:85:134:536:11:g_d0_f15:11:g_d0_f15:defined by
+7:209:11713:22:24:112:130:514:11:g_d0_f20:8:g_d0_f21:∫X
+7:210:11715:24:0:118:123:490:8:g_d0_f21:8:g_d0_f21:x
+7:211:11716:0:16:133:141:515:11:g_d0_f20:11:g_d0_f20:(
+7:212:11717:16:0:141:173:499:11:g_d0_f18:11:g_d0_f19:vk+10+
+7:213:11723:0:15:177:194:507:11:g_d0_f18:8:g_d0_f22:λσ2
+7:214:11726:15:0:180:191:492:11:g_d0_f18:11:g_d0_f18:kη
+7:215:11728:0:0:196:205:499:11:g_d0_f18:8:g_d0_f22:z2
+7:216:11730:0:16:206:235:515:11:g_d0_f20:6:g_d0_f27:)−1k+1
+7:217:11736:16:32:239:509:499:11:g_d0_f19:11:g_d0_f15:dz=t.(4.1)
+7:218:11746:32:17:85:510:467:11:g_d0_f15:11:g_d0_f15:Integral in the right hand side of (4.1) can be evaluated by means of the Gauss
+7:219:11825:17:16:85:509:450:11:g_d0_f15:11:g_d0_f15:hypergeometric function2F1whose definition and basic properties are given in the
+7:220:11905:16:42:85:441:434:11:g_d0_f15:11:g_d0_f15:appendix. After some changes of variables which allows to rewrite (4.1) as:
+7:221:11980:42:15:118:123:392:11:g_d0_f19:11:g_d0_f19:1
+7:222:11981:15:0:113:128:377:11:g_d0_f19:8:g_d0_f22:2v0
+7:223:11984:0:10:131:141:417:11:g_d0_f20:11:g_d0_f20:
+7:224:11985:10:7:131:141:407:11:g_d0_f20:11:g_d0_f20:
+7:225:11987:7:23:131:141:400:11:g_d0_f20:11:g_d0_f20:
+7:226:11989:23:9:131:141:377:11:g_d0_f20:11:g_d0_f20:
+7:227:11992:9:0:131:141:368:11:g_d0_f20:11:g_d0_f20:
+7:228:11993:0:0:141:150:385:11:g_d0_f18:11:g_d0_f18:X
+7:229:11994:0:24:153:168:399:11:g_d0_f20:8:g_d0_f22:∫1
+7:230:11996:24:0:159:163:375:8:g_d0_f22:8:g_d0_f22:0
+7:231:11997:0:0:208:220:392:11:g_d0_f18:8:g_d0_f8:s−
+7:232:11999:0:7:221:225:400:6:g_d0_f27:6:g_d0_f27:1
+7:233:12000:7:12:221:225:393:6:g_d0_f27:6:g_d0_f27:2
+7:234:12001:12:15:172:180:381:11:g_d0_f20:11:g_d0_f20:(
+7:235:12002:15:0:180:210:366:11:g_d0_f19:8:g_d0_f21:1 +λσ
+7:236:12007:0:13:210:226:373:6:g_d0_f27:6:g_d0_f27:2X2
+7:237:12010:13:0:200:233:360:8:g_d0_f21:11:g_d0_f18:kηvk+10s
+7:238:12018:0:0:233:237:369:8:g_d0_f22:8:g_d0_f22:2
+7:239:12019:0:0:238:296:381:11:g_d0_f20:11:g_d0_f18:)1k+1ds−x
+7:240:12028:0:24:298:313:399:11:g_d0_f20:8:g_d0_f22:∫1
+7:241:12030:24:0:304:308:375:8:g_d0_f22:8:g_d0_f22:0
+7:242:12031:0:0:353:365:392:11:g_d0_f18:8:g_d0_f8:s−
+7:243:12033:0:7:366:370:400:6:g_d0_f27:6:g_d0_f27:1
+7:244:12034:7:12:366:370:393:6:g_d0_f27:6:g_d0_f27:2
+7:245:12035:12:15:316:324:381:11:g_d0_f20:11:g_d0_f20:(
+7:246:12036:15:0:324:357:366:11:g_d0_f19:8:g_d0_f21:1 +λσ
+7:247:12041:0:13:357:370:373:6:g_d0_f27:6:g_d0_f27:2x2
+7:248:12044:13:0:344:378:360:8:g_d0_f21:11:g_d0_f18:kηvk+10s
+7:249:12052:0:0:378:382:369:8:g_d0_f22:8:g_d0_f22:2
+7:250:12053:0:0:383:421:381:11:g_d0_f20:11:g_d0_f18:)1k+1ds
+7:251:12060:0:10:421:431:417:11:g_d0_f20:11:g_d0_f20:
+7:252:12061:10:7:421:431:407:11:g_d0_f20:11:g_d0_f20:
+7:253:12063:7:23:421:431:400:11:g_d0_f20:11:g_d0_f20:
+7:254:12065:23:9:421:431:377:11:g_d0_f20:11:g_d0_f20:
+7:255:12068:9:0:421:431:368:11:g_d0_f20:11:g_d0_f20:
+7:256:12069:0:52:434:509:385:11:g_d0_f19:11:g_d0_f15:=t(4.2)
+7:257:12076:52:16:85:510:333:11:g_d0_f15:11:g_d0_f15:we can finally use the integral representation Theorem, see equation (A.4) in the appendix,
+7:258:12167:16:30:85:282:317:11:g_d0_f15:11:g_d0_f15:for the hypergeometric function to obtain
+7:259:12208:30:15:115:120:287:11:g_d0_f19:11:g_d0_f19:1
+7:260:12209:15:0:113:122:272:11:g_d0_f18:8:g_d0_f22:v0
+7:261:12211:0:18:126:135:298:11:g_d0_f20:11:g_d0_f20:{
+7:262:12212:18:0:135:162:280:11:g_d0_f18:8:g_d0_f22:X2F1
+7:263:12216:0:13:165:185:298:11:g_d0_f20:8:g_d0_f22:(1
+7:264:12218:13:0:181:189:285:8:g_d0_f22:11:g_d0_f18:2,
+7:265:12220:0:8:200:204:293:8:g_d0_f22:8:g_d0_f22:1
+7:266:12221:8:11:194:210:285:8:g_d0_f21:8:g_d0_f22:k+1
+7:267:12224:11:8:193:197:274:8:g_d0_f22:8:g_d0_f22:3
+7:268:12225:8:0:193:197:266:8:g_d0_f22:8:g_d0_f22:2
+7:269:12226:0:7:216:220:299:11:g_d0_f20:11:g_d0_f20:∣
+7:270:12227:7:13:216:220:292:11:g_d0_f20:11:g_d0_f20:∣∣
+7:271:12229:13:0:216:230:279:11:g_d0_f20:11:g_d0_f23:∣∣−
+7:272:12232:0:16:235:266:287:11:g_d0_f18:8:g_d0_f22:λσ2X2
+7:273:12237:16:0:234:255:271:11:g_d0_f18:8:g_d0_f22:kηvk+10
+7:274:12244:0:18:269:278:298:11:g_d0_f20:11:g_d0_f20:)
+7:275:12245:18:0:280:315:280:11:g_d0_f23:8:g_d0_f22:−x2F1
+7:276:12250:0:13:317:337:298:11:g_d0_f20:8:g_d0_f22:(1
+7:277:12252:13:0:333:342:285:8:g_d0_f22:11:g_d0_f18:2,
+7:278:12254:0:8:352:356:293:8:g_d0_f22:8:g_d0_f22:1
+7:279:12255:8:11:346:362:285:8:g_d0_f21:8:g_d0_f22:k+1
+7:280:12258:11:8:345:349:274:8:g_d0_f22:8:g_d0_f22:3
+7:281:12259:8:0:345:349:266:8:g_d0_f22:8:g_d0_f22:2
+7:282:12260:0:7:368:372:299:11:g_d0_f20:11:g_d0_f20:∣
+7:283:12261:7:13:368:372:292:11:g_d0_f20:11:g_d0_f20:∣∣
+7:284:12263:13:0:368:382:279:11:g_d0_f20:11:g_d0_f23:∣∣−
+7:285:12266:0:16:389:417:287:11:g_d0_f18:8:g_d0_f22:λσ2x2
+7:286:12271:16:0:386:407:271:11:g_d0_f18:8:g_d0_f22:kηvk+10
+7:287:12278:0:18:421:438:298:11:g_d0_f20:11:g_d0_f20:)}
+7:288:12280:18:38:441:509:280:11:g_d0_f19:11:g_d0_f15:=t(4.3)
+7:289:12287:38:37:85:373:242:11:g_d0_f15:11:g_d0_f15:To obtainx(t)from equation (4.3) observe that the function
+7:290:12345:37:0:112:159:205:11:g_d0_f18:8:g_d0_f22:x7→x2F1
+7:291:12352:0:13:161:181:223:11:g_d0_f20:8:g_d0_f22:(1
+7:292:12354:13:0:177:186:210:8:g_d0_f22:11:g_d0_f18:2,
+7:293:12356:0:8:196:200:218:8:g_d0_f22:8:g_d0_f22:1
+7:294:12357:8:11:191:206:210:8:g_d0_f21:8:g_d0_f22:k+1
+7:295:12360:11:8:190:194:199:8:g_d0_f22:8:g_d0_f22:3
+7:296:12361:8:0:190:194:191:8:g_d0_f22:8:g_d0_f22:2
+7:297:12362:0:7:212:216:224:11:g_d0_f20:11:g_d0_f20:∣
+7:298:12363:7:13:212:216:217:11:g_d0_f20:11:g_d0_f20:∣∣
+7:299:12365:13:7:212:216:204:11:g_d0_f20:11:g_d0_f20:∣
+7:300:12366:7:0:212:216:197:11:g_d0_f20:11:g_d0_f20:∣
+7:301:12367:0:0:218:226:205:11:g_d0_f23:11:g_d0_f23:−
+7:302:12368:0:16:233:261:212:11:g_d0_f18:8:g_d0_f22:λσ2x2
+7:303:12373:16:0:231:252:196:11:g_d0_f18:8:g_d0_f22:kηvk+10
+7:304:12380:0:18:265:274:223:11:g_d0_f20:11:g_d0_f20:)
+7:305:12381:18:37:487:509:205:11:g_d0_f15:11:g_d0_f15:(4.4)
+7:306:12386:37:17:85:510:168:11:g_d0_f15:11:g_d0_f15:is strictly decreasing function for values of the independent variable>0and so is possible
+7:307:12476:17:16:85:510:151:11:g_d0_f15:11:g_d0_f15:to revert and obtainx(t)from (4.3), if needed, numerically or, better, using the Lagrange
+7:308:12565:16:17:85:219:135:11:g_d0_f15:11:g_d0_f15:power series reversion when:
+7:309:12593:17:13:112:116:118:11:g_d0_f20:11:g_d0_f20:∣∣
+7:310:12595:13:13:112:116:105:11:g_d0_f20:11:g_d0_f20:∣∣
+7:311:12597:13:0:112:116:92:11:g_d0_f20:11:g_d0_f20:∣
+7:312:12598:0:17:119:147:107:11:g_d0_f18:8:g_d0_f22:λσ2x2
+7:313:12603:17:0:117:138:90:11:g_d0_f18:8:g_d0_f22:kηvk+10
+7:314:12610:0:13:151:155:118:11:g_d0_f20:11:g_d0_f20:∣∣
+7:315:12612:13:13:151:155:105:11:g_d0_f20:11:g_d0_f20:∣∣
+7:316:12614:13:0:151:155:92:11:g_d0_f20:11:g_d0_f20:∣
+7:317:12615:0:0:158:509:99:11:g_d0_f18:11:g_d0_f15:<1(4.5)
+8:318:12623:0:17:85:509:673:11:g_d0_f15:11:g_d0_f15:But in (4.3) there is no determination ofv0which is essential for the full solution of the
+8:319:12713:17:16:85:509:656:11:g_d0_f15:11:g_d0_f15:problem. If we limit to assign some specific values forv0as in the “easy case”v0= 0we
+8:320:12798:16:16:85:282:640:11:g_d0_f15:11:g_d0_f18:lose control on the initial valuex(0) =X.
+8:321:12839:16:17:101:509:624:11:g_d0_f15:11:g_d0_f15:The way to obtain the final velocity in order to fit with the initial valuex(0) =Xis
+8:322:12923:17:16:85:510:607:11:g_d0_f15:11:g_d0_f15:explained below. We use the so called “shooting method” as presented for instance in Stoer
+8:323:13013:16:17:85:510:591:11:g_d0_f15:11:g_d0_f15:and Burlish (1993) section 7.3.1 pages 502-507. The starting point is the Euler Lagrange
+8:324:13101:17:17:85:236:574:11:g_d0_f15:11:g_d0_f18:equation with initial values inT
+8:325:13133:17:9:112:122:557:11:g_d0_f20:11:g_d0_f20:
+8:326:13134:9:23:112:122:548:11:g_d0_f20:11:g_d0_f20:
+8:327:13136:23:0:112:122:525:11:g_d0_f20:11:g_d0_f20:
+8:328:13138:0:0:122:139:541:11:g_d0_f19:11:g_d0_f19: ̈x=
+8:329:13142:0:15:154:177:549:11:g_d0_f19:8:g_d0_f22:2λσ2
+8:330:13146:15:0:143:189:534:11:g_d0_f18:11:g_d0_f19:ηk(k+ 1)
+8:331:13154:0:24:192:236:541:11:g_d0_f18:8:g_d0_f21:x(− ̇x)1−k
+8:332:13164:24:0:122:235:517:11:g_d0_f18:8:g_d0_f22:x(T) = 0, ̇x(T) =−v0
+8:333:13184:0:43:487:509:532:11:g_d0_f15:11:g_d0_f15:(4.6)
+8:334:13189:43:17:85:510:489:11:g_d0_f15:11:g_d0_f15:To solve (4.6) we use the change of variablesu:=x, y:=   ̇xfollowing Murphy (1960)
+8:335:13271:17:31:85:255:472:11:g_d0_f15:11:g_d0_f15:section 2.3 pages 160-161 and, since
+8:336:13307:31:0:113:138:441:11:g_d0_f19:11:g_d0_f18: ̈x=y
+8:337:13312:0:14:140:151:448:11:g_d0_f19:11:g_d0_f18:dy
+8:338:13314:14:0:140:152:434:11:g_d0_f19:11:g_d0_f18:du
+8:339:13316:0:30:487:509:441:11:g_d0_f15:11:g_d0_f15:(4.7)
+8:340:13321:30:17:85:236:411:11:g_d0_f15:11:g_d0_f15:equation (4.6) is transformed in
+8:341:13353:17:10:112:122:394:11:g_d0_f20:11:g_d0_f20:
+8:342:13354:10:23:112:122:384:11:g_d0_f20:11:g_d0_f20:
+8:343:13356:23:0:112:122:361:11:g_d0_f20:11:g_d0_f20:
+8:344:13358:0:15:123:134:385:11:g_d0_f19:11:g_d0_f18:dy
+8:345:13360:15:0:123:135:370:11:g_d0_f19:11:g_d0_f18:du
+8:346:13362:0:0:139:159:378:11:g_d0_f19:11:g_d0_f23:=−
+8:347:13364:0:15:171:194:385:11:g_d0_f19:8:g_d0_f22:2λσ2
+8:348:13368:15:0:160:206:370:11:g_d0_f18:11:g_d0_f19:ηk(k+ 1)
+8:349:13376:0:24:209:251:378:11:g_d0_f19:11:g_d0_f18:(−y)−ku
+8:350:13383:24:0:122:174:354:11:g_d0_f18:8:g_d0_f22:y(0) =−v0
+8:351:13392:0:43:487:509:368:11:g_d0_f15:11:g_d0_f15:(4.8)
+8:352:13397:43:16:85:510:325:11:g_d0_f15:11:g_d0_f15:Since (4.8) is separable we can integrate it, so that, returning back to the original variables
+8:353:13492:16:17:85:122:309:11:g_d0_f15:11:g_d0_f15:we find:
+8:354:13500:17:9:112:122:292:11:g_d0_f20:11:g_d0_f20:
+8:355:13501:9:23:112:122:283:11:g_d0_f20:11:g_d0_f20:
+8:356:13503:23:0:112:122:260:11:g_d0_f20:11:g_d0_f20:
+8:357:13505:0:0:123:150:274:11:g_d0_f19:11:g_d0_f23: ̇x=−
+8:358:13510:0:16:153:161:290:11:g_d0_f20:11:g_d0_f20:(
+8:359:13511:16:0:161:193:274:11:g_d0_f18:11:g_d0_f19:vk+10+
+8:360:13517:0:15:197:214:282:11:g_d0_f18:8:g_d0_f22:λσ2
+8:361:13520:15:0:200:211:267:11:g_d0_f18:11:g_d0_f18:ηk
+8:362:13522:0:0:218:228:274:11:g_d0_f18:8:g_d0_f22:x2
+8:363:13524:0:40:228:251:290:11:g_d0_f20:6:g_d0_f27:)1k+1
+8:364:13529:40:0:122:164:250:11:g_d0_f18:11:g_d0_f19:x(T) = 0
+8:365:13537:0:45:487:509:267:11:g_d0_f15:11:g_d0_f15:(4.9)
+8:366:13542:45:17:85:510:222:11:g_d0_f15:11:g_d0_f15:Equation (4.9) is separable and the relevant integration needs again the hypergeometric
+8:367:13629:17:16:85:510:205:11:g_d0_f15:11:g_d0_f15:integral. Discarding some tedious computations we find out that solution to (4.6) is defined
+8:368:13721:16:30:85:153:189:11:g_d0_f15:11:g_d0_f15:implicitely by:
+8:369:13736:30:15:115:121:159:11:g_d0_f18:11:g_d0_f18:x
+8:370:13737:15:0:113:130:144:11:g_d0_f18:8:g_d0_f22:v02
+8:371:13740:0:0:131:142:152:11:g_d0_f19:8:g_d0_f22:F1
+8:372:13742:0:14:144:164:171:11:g_d0_f20:8:g_d0_f22:(1
+8:373:13744:14:0:160:169:157:8:g_d0_f22:11:g_d0_f18:2,
+8:374:13746:0:8:179:183:165:8:g_d0_f22:8:g_d0_f22:1
+8:375:13747:8:11:174:189:157:8:g_d0_f21:8:g_d0_f22:k+1
+8:376:13750:11:8:173:177:146:8:g_d0_f22:8:g_d0_f22:3
+8:377:13751:8:0:173:177:138:8:g_d0_f22:8:g_d0_f22:2
+8:378:13752:0:7:195:199:171:11:g_d0_f20:11:g_d0_f20:∣
+8:379:13753:7:13:195:199:164:11:g_d0_f20:11:g_d0_f20:∣∣
+8:380:13755:13:0:195:209:151:11:g_d0_f20:11:g_d0_f23:∣∣−
+8:381:13758:0:16:216:244:159:11:g_d0_f18:8:g_d0_f22:λσ2x2
+8:382:13763:16:0:214:235:143:11:g_d0_f18:8:g_d0_f22:kηvk+10
+8:383:13770:0:19:248:257:171:11:g_d0_f20:11:g_d0_f20:)
+8:384:13771:19:38:260:510:152:11:g_d0_f19:11:g_d0_f15:=T−t(4.10)
+8:385:13781:38:30:85:478:114:11:g_d0_f15:11:g_d0_f15:In order to meet the second initial conditionx(0) =Xwe see thatv0must satisfy:
+8:386:13859:30:15:113:122:84:11:g_d0_f18:11:g_d0_f18:X
+8:387:13860:15:0:113:130:69:11:g_d0_f18:8:g_d0_f22:v02
+8:388:13863:0:0:131:142:77:11:g_d0_f19:8:g_d0_f22:F1
+8:389:13865:0:13:144:164:95:11:g_d0_f20:8:g_d0_f22:(1
+8:390:13867:13:0:160:169:82:8:g_d0_f22:11:g_d0_f18:2,
+8:391:13869:0:8:179:183:90:8:g_d0_f22:8:g_d0_f22:1
+8:392:13870:8:11:174:189:82:8:g_d0_f21:8:g_d0_f22:k+1
+8:393:13873:11:8:173:177:71:8:g_d0_f22:8:g_d0_f22:3
+8:394:13874:8:0:173:177:63:8:g_d0_f22:8:g_d0_f22:2
+8:395:13875:0:7:195:199:96:11:g_d0_f20:11:g_d0_f20:∣
+8:396:13876:7:13:195:199:89:11:g_d0_f20:11:g_d0_f20:∣∣
+8:397:13878:13:0:195:209:76:11:g_d0_f20:11:g_d0_f23:∣∣−
+8:398:13881:0:16:214:246:84:11:g_d0_f18:8:g_d0_f22:λσ2X2
+8:399:13886:16:0:214:235:68:11:g_d0_f18:8:g_d0_f22:kηvk+10
+8:400:13893:0:18:248:257:95:11:g_d0_f20:11:g_d0_f20:)
+8:401:13894:18:0:260:510:77:11:g_d0_f19:11:g_d0_f15:=T(4.11)
+9:402:13903:0:17:85:510:673:11:g_d0_f15:11:g_d0_f15:Note that, being assigned all parametersλ, σ, X, η, kequation (4.11) is an equation in the
+9:403:13993:17:16:85:510:656:11:g_d0_f15:11:g_d0_f15:sole unknownv0. Of course such equation has to be treated numerically: once the value
+9:404:14078:16:16:85:429:640:11:g_d0_f15:11:g_d0_f15:ofv0is detected it has te be inserted in (4.3) to obtain solution to (3.1).
+9:405:14153:16:17:101:510:624:11:g_d0_f15:11:g_d0_f15:As an (easy) example takeλ=σ=X=η=T= 1andk= 1/2.In the plot below
+9:406:14217:17:16:85:510:607:11:g_d0_f15:11:g_d0_f15:we represent the left hand side of (4.11) and the value ofTat the right hand side. Using
+9:407:14305:16:166:85:324:591:11:g_d0_f15:11:g_d0_f18:MathematicaR©we find numericallyv0= 0.671525.
+9:408:14350:166:0:225:366:425:11:Times:11:Times:12345
+9:409:14355:0:0:408:417:432:11:Times:8:Times:v0
+9:410:14357:0:0:177:191:464:11:Times:11:Times:0.5
+9:411:14360:0:0:177:191:495:11:Times:11:Times:1.0
+9:412:14363:0:0:177:191:526:11:Times:11:Times:1.5
+9:413:14366:0:170:190:196:568:11:Times:11:Times:T
+9:414:14367:170:43:219:374:398:11:g_d0_f15:11:g_d0_f15:Figure 1: Plot of equation (4.11)
+9:415:14400:43:241:101:461:355:11:g_d0_f15:11:g_d0_f19:Afterwards we put this value in (4.3) and we plot the relevant functionx(t)
+9:416:14475:241:0:231:390:114:10:Times:10:Times:0.20.40.60.81.0
+9:417:14490:0:0:408:411:121:10:Times:10:Times:t
+9:418:14491:0:0:186:199:158:10:Times:10:Times:0.2
+9:419:14494:0:0:186:199:194:10:Times:10:Times:0.4
+9:420:14497:0:0:186:199:231:10:Times:10:Times:0.6
+9:421:14500:0:0:186:199:267:10:Times:10:Times:0.8
+9:422:14503:0:0:186:199:304:10:Times:10:Times:1.0
+9:423:14506:0:250:199:204:332:10:Times:10:Times:x
+9:424:14507:250:0:217:377:82:11:g_d0_f15:11:g_d0_f15:Figure 2: Plot of solution to (3.1)
+10:425:14543:0:17:101:509:673:11:g_d0_f15:11:g_d0_f15:We conclude with a graphic representation, with the same parameters for several values
+10:426:14629:17:238:85:106:656:11:g_d0_f15:11:g_d0_f15:ofk.
+10:427:14633:238:0:231:390:418:10:Times:10:Times:0.20.40.60.81.0
+10:428:14648:0:0:408:411:426:10:Times:10:Times:t
+10:429:14649:0:0:186:199:462:10:Times:10:Times:0.2
+10:430:14652:0:0:186:199:498:10:Times:10:Times:0.4
+10:431:14655:0:0:186:199:535:10:Times:10:Times:0.6
+10:432:14658:0:0:186:199:571:10:Times:10:Times:0.8
+10:433:14661:0:0:186:199:608:10:Times:10:Times:1.0
+10:434:14664:0:250:199:204:636:10:Times:10:Times:x
+10:435:14665:250:47:93:502:386:11:g_d0_f15:11:g_d0_f15:Figure 3: Solution to (3.1)k= 1/8(blue),k= 1/2(black),k= 2(red),k= 8(green)
+10:436:14740:47:23:85:289:339:12:g_d0_f24:12:g_d0_f24:4.1  The Almgren zero-speed case
+10:437:14772:23:17:85:510:316:11:g_d0_f15:11:g_d0_f15:When Almgren takesv0= 0the initial value problem (4.6) has to be considered with zero
+10:438:14857:17:16:85:509:299:11:g_d0_f15:11:g_d0_f15:initial conditionsx(T)  =   ̇x(T)  =  0. Observe that the quadrature formula arising from
+10:439:14946:16:17:85:344:283:11:g_d0_f15:11:g_d0_f15:(4.9), which is equivalent to (4.6) reads in this case as:
+10:440:15004:17:25:112:128:266:11:g_d0_f20:8:g_d0_f21:∫x
+10:441:15006:25:0:118:122:241:8:g_d0_f22:8:g_d0_f22:0
+10:442:15007:0:10:171:182:258:11:g_d0_f19:11:g_d0_f18:dz
+10:443:15009:10:13:131:138:248:11:g_d0_f20:11:g_d0_f20:(
+10:444:15010:13:0:138:184:235:11:g_d0_f18:8:g_d0_f21:vk+10+λσ
+10:445:15018:0:10:184:188:242:6:g_d0_f27:6:g_d0_f27:2
+10:446:15019:10:0:176:194:232:8:g_d0_f21:11:g_d0_f18:ηkz
+10:447:15022:0:0:195:199:239:8:g_d0_f22:8:g_d0_f22:2
+10:448:15023:0:0:199:287:248:11:g_d0_f20:11:g_d0_f23:)1k+1=T−t=⇒
+10:449:15034:0:25:293:309:266:11:g_d0_f20:8:g_d0_f21:∫x
+10:450:15036:25:0:299:303:241:8:g_d0_f22:8:g_d0_f22:0
+10:451:15037:0:10:341:352:258:11:g_d0_f19:11:g_d0_f18:dz
+10:452:15039:10:8:312:319:248:11:g_d0_f20:11:g_d0_f20:(
+10:453:15040:8:8:320:334:240:8:g_d0_f21:6:g_d0_f27:λσ2
+10:454:15043:8:0:322:331:232:8:g_d0_f21:8:g_d0_f21:ηk
+10:455:15045:0:13:335:356:248:11:g_d0_f20:6:g_d0_f27:)1k+1
+10:456:15050:13:0:360:365:235:11:g_d0_f18:11:g_d0_f18:z
+10:457:15051:0:7:371:375:244:6:g_d0_f27:6:g_d0_f27:2
+10:458:15052:7:0:366:379:237:6:g_d0_f28:6:g_d0_f27:k+1
+10:459:15055:0:46:386:510:251:11:g_d0_f19:11:g_d0_f15:=T−t(4.12)
+10:460:15065:46:17:85:510:205:11:g_d0_f15:11:g_d0_f15:but this means that the convergence condition2k+1<1has to be imposed. Moreover since
+10:461:15149:17:16:85:510:188:11:g_d0_f15:11:g_d0_f15:we assumekto be positive this means that the zero speed assumption is well posed only if
+10:462:15237:16:17:85:510:172:11:g_d0_f18:11:g_d0_f15:k >1: fork≤1there are not solutions of the optimization problem (3.1) with zero speed.
+10:463:15323:17:30:85:486:155:11:g_d0_f15:11:g_d0_f15:Moreover if we evaluate the integral at the left hand side of (4.12) fork >1we find:
+10:464:15407:30:15:108:132:125:11:g_d0_f18:11:g_d0_f19:k+ 1
+10:465:15411:15:0:108:132:110:11:g_d0_f18:11:g_d0_f19:k−1
+10:466:15414:0:8:135:143:133:11:g_d0_f20:11:g_d0_f20:(
+10:467:15415:8:15:145:162:125:11:g_d0_f18:8:g_d0_f22:λσ2
+10:468:15418:15:0:148:159:110:11:g_d0_f18:11:g_d0_f18:kη
+10:469:15420:0:15:164:192:133:11:g_d0_f20:6:g_d0_f27:)−1k+1
+10:470:15426:15:0:196:202:118:11:g_d0_f18:11:g_d0_f18:x
+10:471:15427:0:8:204:217:126:6:g_d0_f28:6:g_d0_f27:k−1k+1
+10:472:15433:8:0:222:318:118:11:g_d0_f19:11:g_d0_f19:=T−t=⇒x(t) =
+10:473:15445:0:8:320:328:133:11:g_d0_f20:11:g_d0_f20:(
+10:474:15446:8:15:330:396:125:11:g_d0_f19:11:g_d0_f19:(k−1)(T−t)
+10:475:15456:15:0:351:375:110:11:g_d0_f18:11:g_d0_f19:k+ 1
+10:476:15460:0:8:398:432:133:11:g_d0_f20:11:g_d0_f20:)k+1k−1(
+10:477:15468:8:15:433:450:125:11:g_d0_f18:8:g_d0_f22:λσ2
+10:478:15471:15:0:436:447:110:11:g_d0_f18:11:g_d0_f18:kη
+10:479:15473:0:15:452:475:133:11:g_d0_f20:6:g_d0_f27:)1k−1
+10:480:15478:15:0:482:510:118:11:g_d0_f15:11:g_d0_f15:(4.13)
+11:481:15485:0:35:85:202:673:11:g_d0_f15:11:g_d0_f15:so that att= 0we have:
+11:482:15507:35:0:112:143:638:11:g_d0_f18:11:g_d0_f19:x(0) =
+11:483:15513:0:8:147:155:653:11:g_d0_f20:11:g_d0_f20:(
+11:484:15514:8:14:156:195:645:11:g_d0_f19:11:g_d0_f18:(k−1)T
+11:485:15520:14:0:164:188:631:11:g_d0_f18:11:g_d0_f19:k+ 1
+11:486:15524:0:8:198:232:653:11:g_d0_f20:11:g_d0_f20:)k+1k−1(
+11:487:15532:8:14:234:251:645:11:g_d0_f18:8:g_d0_f22:λσ2
+11:488:15535:14:0:237:248:631:11:g_d0_f18:11:g_d0_f18:kη
+11:489:15537:0:15:253:276:653:11:g_d0_f20:6:g_d0_f27:)1k−1
+11:490:15542:15:33:482:510:638:11:g_d0_f15:11:g_d0_f15:(4.14)
+11:491:15548:33:16:85:510:605:11:g_d0_f15:11:g_d0_f15:this means that we are not free to consider an arbitrary value ofx(0)having assigned the
+11:492:15636:16:32:85:156:589:11:g_d0_f15:11:g_d0_f15:speed int=T.
+11:493:15648:32:24:85:199:557:12:g_d0_f24:12:g_d0_f26:4.2  The casek= 1
+11:494:15665:24:16:85:510:533:11:g_d0_f15:11:g_d0_f15:In the casek=  1we have provided two solutions of (3.1): the first follows from the
+11:495:15748:16:17:85:510:517:11:g_d0_f15:11:g_d0_f15:straightforward integration of the linear case, see equation (3.6), while the second stems
+11:496:15838:17:16:85:510:500:11:g_d0_f15:11:g_d0_f15:from the hypergeometric implicit solution expressed by equation (4.3). Of course the two
+11:497:15926:16:17:85:510:484:11:g_d0_f15:11:g_d0_f15:solution to (3.1) are, as matter of fact, the same. This can be understood recalling the
+11:498:16014:17:42:85:488:467:11:g_d0_f15:11:g_d0_f15:following property of2F1,(see Abramowit and Stegun, 1964, entry 15.1.7, page 556):
+11:499:16096:42:0:112:128:425:8:g_d0_f22:8:g_d0_f22:2F1
+11:500:16099:0:14:130:146:445:11:g_d0_f20:8:g_d0_f22:(1
+11:501:16101:14:0:142:151:431:8:g_d0_f22:11:g_d0_f18:2,
+11:502:16103:0:8:154:158:439:8:g_d0_f22:8:g_d0_f22:1
+11:503:16104:8:8:154:158:431:8:g_d0_f22:8:g_d0_f22:2
+11:504:16105:8:8:148:152:423:8:g_d0_f22:8:g_d0_f22:3
+11:505:16106:8:0:148:152:415:8:g_d0_f22:8:g_d0_f22:2
+11:506:16107:0:7:161:165:446:11:g_d0_f20:11:g_d0_f20:∣
+11:507:16108:7:13:161:165:439:11:g_d0_f20:11:g_d0_f20:∣∣
+11:508:16110:13:7:161:165:426:11:g_d0_f20:11:g_d0_f20:∣
+11:509:16111:7:0:161:165:419:11:g_d0_f20:11:g_d0_f20:∣
+11:510:16112:0:0:167:187:427:11:g_d0_f23:8:g_d0_f22:−z2
+11:511:16115:0:18:188:197:445:11:g_d0_f20:11:g_d0_f20:)
+11:512:16116:18:0:199:207:427:11:g_d0_f19:11:g_d0_f19:=
+11:513:16117:0:0:212:221:438:11:g_d0_f19:11:g_d0_f19:ln
+11:514:16119:0:12:223:230:450:11:g_d0_f20:11:g_d0_f20:(
+11:515:16120:12:0:230:246:438:11:g_d0_f18:11:g_d0_f19:z+
+11:516:16122:0:9:248:257:447:11:g_d0_f23:11:g_d0_f23:√
+11:517:16123:9:0:258:286:438:11:g_d0_f19:8:g_d0_f22:1 +z2
+11:518:16128:0:31:287:294:450:11:g_d0_f20:11:g_d0_f20:)
+11:519:16129:31:0:250:255:419:11:g_d0_f18:11:g_d0_f18:z
+11:520:16130:0:0:297:305:427:11:g_d0_f19:11:g_d0_f19:=
+11:521:16131:0:15:310:351:434:11:g_d0_f19:11:g_d0_f18:arcsinhz
+11:522:16139:15:0:328:333:419:11:g_d0_f18:11:g_d0_f18:z
+11:523:16140:0:37:353:510:427:11:g_d0_f18:11:g_d0_f15:.(4.15)
+11:524:16147:37:16:85:510:390:11:g_d0_f15:11:g_d0_f15:In such a way, in this particular case we can use this identity to solve (4.10) with respect
+11:525:16239:16:41:85:153:374:11:g_d0_f15:11:g_d0_f15:totobtaining:
+11:526:16252:41:0:112:142:333:11:g_d0_f18:11:g_d0_f19:x(t) =
+11:527:16258:0:0:146:177:344:11:g_d0_f18:11:g_d0_f19:v0sinh
+11:528:16264:0:12:179:186:356:11:g_d0_f20:11:g_d0_f20:(
+11:529:16265:12:0:186:219:344:11:g_d0_f19:11:g_d0_f19:(T−t)
+11:530:16270:0:8:219:230:357:11:g_d0_f20:11:g_d0_f20:√
+11:531:16271:8:8:232:246:349:8:g_d0_f21:6:g_d0_f27:λσ2
+11:532:16274:8:0:234:243:341:8:g_d0_f21:8:g_d0_f21:ηk
+11:533:16276:0:23:247:254:356:11:g_d0_f20:11:g_d0_f20:)
+11:534:16277:23:8:186:197:333:11:g_d0_f20:11:g_d0_f20:√
+11:535:16278:8:8:198:212:325:8:g_d0_f21:6:g_d0_f27:λσ2
+11:536:16281:8:0:201:210:317:8:g_d0_f21:8:g_d0_f21:ηk
+11:537:16283:0:41:482:510:333:11:g_d0_f15:11:g_d0_f15:(4.16)
+11:538:16289:41:35:85:499:292:11:g_d0_f15:11:g_d0_f15:To compare this hypergeometric solution with (3.6) we have to evaluatev0from (4.11):
+11:539:16373:35:0:112:133:257:11:g_d0_f18:11:g_d0_f19:v0=
+11:540:16376:0:10:167:176:274:11:g_d0_f23:11:g_d0_f23:√
+11:541:16377:10:12:177:199:264:11:g_d0_f18:11:g_d0_f18:λσX
+11:542:16380:12:7:138:220:252:11:g_d0_f23:8:g_d0_f21:√η√ksinh(√λσT
+11:543:16393:7:0:198:221:245:8:g_d0_f8:8:g_d0_f21:√η√k
+11:544:16397:0:43:223:510:258:11:g_d0_f20:11:g_d0_f15:)(4.17)
+11:545:16404:43:42:85:237:215:11:g_d0_f15:11:g_d0_f15:and substitute in (4.16) getting:
+11:546:16437:42:0:112:154:173:11:g_d0_f18:11:g_d0_f18:x(t) =X
+11:547:16444:0:0:156:175:185:11:g_d0_f19:11:g_d0_f19:sinh
+11:548:16448:0:12:177:224:197:11:g_d0_f20:8:g_d0_f22:(√λσ(T−t)
+11:549:16457:12:0:193:216:185:8:g_d0_f8:8:g_d0_f21:√η√k
+11:550:16461:0:35:226:233:197:11:g_d0_f20:11:g_d0_f20:)
+11:551:16462:35:0:164:183:162:11:g_d0_f19:11:g_d0_f19:sinh
+11:552:16466:0:8:185:200:174:11:g_d0_f20:8:g_d0_f8:(√
+11:553:16468:8:10:200:200:166:8:g_d0_f21:8:g_d0_f8:λσT√
+11:554:16472:10:0:200:204:156:8:g_d0_f21:8:g_d0_f21:η
+11:555:16473:0:7:205:212:163:8:g_d0_f8:8:g_d0_f8:√
+11:556:16474:7:0:212:216:156:8:g_d0_f21:8:g_d0_f21:k
+11:557:16475:0:43:218:510:174:11:g_d0_f20:11:g_d0_f15:)(4.18)
+11:558:16482:43:0:85:226:131:11:g_d0_f15:11:g_d0_f15:which is noting else but (3.6).
+12:559:16514:0:27:85:184:673:14:g_d0_f14:14:g_d0_f14:5  Conclusion
+12:560:16527:27:17:85:510:646:11:g_d0_f15:11:g_d0_f15:Rebalancing large portfolios of stocks requires taking into account two peculiar issues. The
+12:561:16619:17:16:85:510:629:11:g_d0_f15:11:g_d0_f15:first one is related to the market impact of trades, which generates transaction costs. The
+12:562:16710:16:17:85:510:613:11:g_d0_f15:11:g_d0_f15:second issue arises from the risk of finding counterparties willing to trade at the desired
+12:563:16801:17:16:85:510:596:11:g_d0_f15:11:g_d0_f15:price. Both empirical and theoretical considerations suggest that the market impact of
+12:564:16887:16:17:85:510:580:11:g_d0_f15:11:g_d0_f15:trades is typically nonlinear.  Almgren (2003) proposes an optimal execution strategy
+12:565:16972:17:16:85:510:563:11:g_d0_f15:11:g_d0_f15:that minimizes the tradeoff between volatility risk and transaction costs while taking into
+12:566:17063:16:16:85:243:547:11:g_d0_f15:11:g_d0_f15:account this form of nonlinearity.
+12:567:17097:16:17:101:509:531:11:g_d0_f15:11:g_d0_f15:In this paper, we review the optimal liquidation strategy of Almgren (2003). We show
+12:568:17181:17:16:85:510:514:11:g_d0_f15:11:g_d0_f15:that the solution method used by Almgren (2003) is ill-posed. The reason is that it is
+12:569:17267:16:17:85:510:498:11:g_d0_f15:11:g_d0_f15:based on the assumption that no shares per unit of time are traded at the beginning of the
+12:570:17357:17:16:85:510:481:11:g_d0_f15:11:g_d0_f15:period. We use an approach based on the Gaussian hypergeometric function to solve for
+12:571:17442:16:17:85:510:465:11:g_d0_f15:11:g_d0_f15:the case of positive initial trades. Our results differ strongly from those of Almgren (2003).
+12:572:17536:17:16:85:510:448:11:g_d0_f15:11:g_d0_f15:First of all, the problem admits a solution with no trading in the opening period only if
+12:573:17625:16:17:85:510:432:11:g_d0_f15:11:g_d0_f15:additional parametric restrictions are imposed. Second, with positive initial trading, the
+12:574:17715:17:0:85:428:415:11:g_d0_f15:11:g_d0_f15:optimal execution time depends on trading activity in the initial period.
+13:575:17790:0:22:85:510:673:14:g_d0_f14:14:g_d0_f14:A  Solution of second order differential equations with a
+13:576:17847:22:27:112:327:651:14:g_d0_f14:14:g_d0_f14:Gauss hypergeometric function
+13:577:17876:27:30:85:416:624:11:g_d0_f15:11:g_d0_f19:The linear second order differential equation in the unknownu=u(t)
+13:578:17942:30:30:112:510:594:11:g_d0_f18:11:g_d0_f15:t(1−t)  ̈u+ [c−(a+b+ 1)t]   ̇u−abu= 0(A.1)
+13:579:17984:30:16:85:510:564:11:g_d0_f15:11:g_d0_f15:is known as Gauss hypergeometric equation. Parametersa, b, care not functions of the
+13:580:18068:16:17:85:509:548:11:g_d0_f15:11:g_d0_f15:independent variabletand can be in general complex number. Searching for a power series
+13:581:18155:17:36:85:257:531:11:g_d0_f15:11:g_d0_f15:solution of (A.1) it can be seen that
+13:582:18192:36:0:112:128:495:8:g_d0_f22:8:g_d0_f22:2F1
+13:583:18195:0:8:130:138:512:11:g_d0_f20:11:g_d0_f20:(
+13:584:18196:8:15:141:156:504:11:g_d0_f18:11:g_d0_f18:a,b
+13:585:18199:15:0:146:151:489:11:g_d0_f18:11:g_d0_f18:c
+13:586:18200:0:13:157:161:512:11:g_d0_f20:11:g_d0_f20:∣∣
+13:587:18202:13:0:157:167:499:11:g_d0_f20:11:g_d0_f18:∣∣t
+13:588:18205:0:16:167:175:512:11:g_d0_f20:11:g_d0_f20:)
+13:589:18206:16:0:178:190:496:11:g_d0_f19:11:g_d0_f19::=
+13:590:18208:0:27:196:208:510:8:g_d0_f8:11:g_d0_f20:∞∑
+13:591:18210:27:0:192:208:483:8:g_d0_f21:8:g_d0_f22:n=0
+13:592:18213:0:15:211:249:504:11:g_d0_f19:8:g_d0_f21:(a)n(b)n
+13:593:18221:15:0:221:239:489:11:g_d0_f19:8:g_d0_f21:(c)n
+13:594:18225:0:15:254:263:504:11:g_d0_f18:8:g_d0_f21:tn
+13:595:18227:15:0:254:264:489:11:g_d0_f18:11:g_d0_f19:n!
+13:596:18229:0:36:485:510:496:11:g_d0_f15:11:g_d0_f15:(A.2)
+13:597:18234:36:17:85:371:460:11:g_d0_f15:11:g_d0_f15:where we use the Pochhamer symbol(x)n, n∈Ndefined as:
+13:598:18287:17:10:112:122:443:11:g_d0_f20:11:g_d0_f20:
+13:599:18288:10:20:112:122:433:11:g_d0_f20:11:g_d0_f20:
+13:600:18289:20:0:112:122:413:11:g_d0_f20:11:g_d0_f20:
+13:601:18290:0:20:122:164:429:11:g_d0_f19:11:g_d0_f19:(x)0:= 1
+13:602:18298:20:0:122:300:409:11:g_d0_f19:11:g_d0_f19:(x)n=x(x+ 1)(x+ 2)···(x+n−1)
+13:603:18326:0:39:485:510:420:11:g_d0_f15:11:g_d0_f15:(A.3)
+13:604:18331:39:17:85:509:381:11:g_d0_f15:8:g_d0_f22:is the solution of (A.1) such thatu(0)  =  1, ̇u(0)  =ab/c.Power series defining2F1
+13:605:18414:17:16:85:510:364:11:g_d0_f15:11:g_d0_f15:converges for|t|<1and to continue the hypegeometric function2F1it is useful the integral
+13:606:18502:16:37:85:489:348:11:g_d0_f15:11:g_d0_f15:representation ascribed to Leonhard Euler but really due to Adrien Marie Legendre2:
+13:607:18585:37:0:112:128:311:8:g_d0_f22:8:g_d0_f22:2F1
+13:608:18588:0:11:130:139:331:11:g_d0_f20:11:g_d0_f20:(
+13:609:18589:11:16:145:162:320:11:g_d0_f18:11:g_d0_f18:a, b
+13:610:18593:16:0:151:156:304:11:g_d0_f18:11:g_d0_f18:c
+13:611:18594:0:7:167:171:332:11:g_d0_f20:11:g_d0_f20:∣
+13:612:18595:7:7:167:171:325:11:g_d0_f20:11:g_d0_f20:∣
+13:613:18596:7:13:167:171:318:11:g_d0_f20:11:g_d0_f20:∣∣
+13:614:18598:13:0:167:171:305:11:g_d0_f20:11:g_d0_f20:∣
+13:615:18599:0:0:173:177:312:11:g_d0_f18:11:g_d0_f18:t
+13:616:18600:0:19:177:186:331:11:g_d0_f20:11:g_d0_f20:)
+13:617:18601:19:0:188:196:312:11:g_d0_f19:11:g_d0_f19:=
+13:618:18602:0:15:221:241:320:11:g_d0_f19:11:g_d0_f19:Γ(c)
+13:619:18606:15:0:201:261:305:11:g_d0_f19:11:g_d0_f19:Γ(c−a)Γ(a)
+13:620:18616:0:24:264:279:327:11:g_d0_f20:8:g_d0_f22:∫1
+13:621:18618:24:0:270:274:303:8:g_d0_f22:8:g_d0_f22:0
+13:622:18619:0:15:283:361:320:11:g_d0_f18:8:g_d0_f22:sa−1(1−s)c−a−1
+13:623:18633:15:0:302:343:305:11:g_d0_f19:8:g_d0_f21:(1−ts)b
+13:624:18640:0:36:363:510:312:11:g_d0_f19:11:g_d0_f15:ds,(A.4)
+13:625:18648:36:16:85:509:276:11:g_d0_f15:11:g_d0_f15:whereRec >Rea >0,|t|<1,and the Euler-Legendre integral (Gamma function) is
+13:626:18722:16:32:85:182:260:11:g_d0_f15:11:g_d0_f15:defined forx >0by:
+13:627:18740:32:0:112:145:228:11:g_d0_f19:11:g_d0_f19:Γ(x) =
+13:628:18746:0:25:148:167:243:11:g_d0_f20:8:g_d0_f8:∫∞
+13:629:18748:25:0:154:158:218:8:g_d0_f22:8:g_d0_f22:0
+13:630:18749:0:31:170:510:228:11:g_d0_f18:11:g_d0_f15:e−uux−1du.(A.5)
+13:631:18764:31:17:85:510:197:11:g_d0_f15:11:g_d0_f15:A proof of the integral representation theorem and a good presentation of the Gauss
+13:632:18847:17:16:85:510:180:11:g_d0_f15:11:g_d0_f15:hypergeometric function can be found at Seaborn (1991), the integral representation
+13:633:18930:16:17:85:510:164:11:g_d0_f15:11:g_d0_f15:theorem is treated at section 10.7, pages 184-185, formula (10.39). Integral representation
+13:634:19021:17:16:85:510:147:11:g_d0_f15:11:g_d0_f15:theorem provides an extension to the region where the complex hypergeometric function
+13:635:19106:16:17:85:510:131:11:g_d0_f15:11:g_d0_f15:is defined, namely for its analytical continuation, to the (almost) whole complex plane
+13:636:19193:17:16:85:509:114:11:g_d0_f15:11:g_d0_f15:excluding the half-straight line(1,∞).This function was first introduced in dynamical
+13:637:19278:16:16:85:510:98:11:g_d0_f15:11:g_d0_f15:economics in a generalization of the Solow Swan model due to Mingari Scarpello and Ritelli
+13:638:19368:16:17:85:488:82:11:g_d0_f15:11:g_d0_f15:(2003), while Boucekkine and Ruiz-Tamarit (2008) use it in the Lucas-Uzawa model.
+13:639:19449:17:0:97:381:65:6:g_d0_f17:9:g_d0_f12:2Exercices de calcul intégral, II, quatriéme part, section 2, Paris, 1811.
+14:640:19525:0:27:85:159:673:14:g_d0_f14:14:g_d0_f14:References
+14:641:19535:27:17:85:509:646:11:g_d0_f15:11:g_d0_f15:Abramowitz, M. and I. Stegun (1964),Handbook of Mathematical Functions, Dover, New
+14:642:19617:17:25:95:121:629:11:g_d0_f15:11:g_d0_f15:York.
+14:643:19622:25:17:85:510:604:11:g_d0_f15:11:g_d0_f15:Almgren,  R. F. (2003),  “Optimal execution with nonlinear impact functions and
+14:644:19701:17:25:95:399:587:11:g_d0_f15:11:g_d0_f15:trading-enhanced risk”,Applied Mathematical Finance, 10, 1-18.
+14:645:19763:25:25:85:470:562:11:g_d0_f15:11:g_d0_f15:Almgren, R. and Chriss, N. (1999), “Value under liquidation”,Risk, 12:(12), 61-3.
+14:646:19844:25:17:85:510:537:11:g_d0_f15:11:g_d0_f31:Almgren, R. and Chriss, N. (2000), “Optimal execution of portfolio transactions”,Journal
+14:647:19932:17:25:95:187:520:11:g_d0_f31:11:g_d0_f15:of Risk, 3:(2), 5-39.
+14:648:19953:25:17:85:510:495:11:g_d0_f15:11:g_d0_f31:Bertsimas, D., and A. W. Lo (1998), “Optimal control of liquidation costs”,Journal of
+14:649:20038:17:25:95:224:478:11:g_d0_f31:11:g_d0_f15:Financial Markets, 1, 1-50.
+14:650:20065:25:17:85:510:453:11:g_d0_f15:11:g_d0_f15:Boucekkine, R. and J.R. Ruiz-Tamarit (2008), “Special functions for the study of economic
+14:651:20154:17:16:95:510:436:11:g_d0_f15:11:g_d0_f15:dynamics: The case of the Lucas-Uzawa model”,Journal of Mathematical Economics,
+14:652:20233:16:25:95:141:420:11:g_d0_f15:11:g_d0_f15:44, 33-54.
+14:653:20243:25:17:85:510:395:11:g_d0_f15:11:g_d0_f31:Chakravarty, S. (2001), “Steath-trading: which traders’ trades move prices?,Journal of
+14:654:20329:17:25:95:257:378:11:g_d0_f31:11:g_d0_f15:Financial Economics, 61, 289-307.
+14:655:20362:25:17:85:510:353:11:g_d0_f15:11:g_d0_f15:Hasbrouck, J. and R. A. Schwartz (1988), “Liquidity and execution costs in equity markets”,
+14:656:20453:17:25:95:349:336:11:g_d0_f31:11:g_d0_f15:Journal of Portfolio Management, 14:(Spring), 10-16.
+14:657:20505:25:17:85:510:311:11:g_d0_f15:11:g_d0_f15:Hasbrouck, J. and Seppi, D. J. (2001). “Common factors in prices, order flows, and
+14:658:20587:17:25:95:360:294:11:g_d0_f15:11:g_d0_f15:liquidity”,Journal of Financial Economics, 59, 383-411.
+14:659:20642:25:16:85:510:269:11:g_d0_f15:11:g_d0_f15:Holthausen, R. W., R. W. Leftwich and D. Mayers, D. (1990), “Large-block transactions,
+14:660:20728:16:17:95:510:253:11:g_d0_f15:11:g_d0_f31:the speed of response, and temporary and permanent stock-price effects”,Journal of
+14:661:20810:17:25:95:246:236:11:g_d0_f31:11:g_d0_f15:Financial Economics, 26, 71-95.
+14:662:20841:25:17:85:510:211:11:g_d0_f15:11:g_d0_f15:Huang, R. D. and H. R. Stoll (1997), “The components of the bid-ask spread: a general
+14:663:20926:17:25:95:366:194:11:g_d0_f15:11:g_d0_f15:approach”,Review of Financial Studies, 10:(4), 995-1034.
+14:664:20982:25:16:85:510:169:11:g_d0_f15:11:g_d0_f15:Jones, C. M. and M. L. Lipson (1999), “Execution costs of institutional equity orders”,
+14:665:21069:16:26:95:318:153:11:g_d0_f31:11:g_d0_f15:Journal of Financial Intermediation, 8, 123-40.
+14:666:21116:26:16:85:510:127:11:g_d0_f15:11:g_d0_f31:M.I. Kamien, N. L Schwartz (1991),Dynamic Optimization. The Calculus of Variations
+14:667:21198:16:17:95:509:111:11:g_d0_f31:11:g_d0_f15:and Optimal Control in Economics and Management, Second edition, North Holland,
+14:668:21277:17:25:95:153:94:11:g_d0_f15:11:g_d0_f15:Amsterdam.
+14:669:21287:25:17:85:510:69:11:g_d0_f15:11:g_d0_f15:Konishi, H. and N. Makimoto (2001), “Optimal slice of a block trade”,Journal of Risk,
+14:670:21372:17:0:95:120:52:11:g_d0_f15:11:g_d0_f15:3:(4).
+15:671:21380:0:17:85:510:673:11:g_d0_f15:11:g_d0_f15:Kraus, A. and H. R. Stoll (1972), “Price impacts of block trading on the New York Stock
+15:672:21467:17:25:95:299:656:11:g_d0_f15:11:g_d0_f15:Exchange”,Journal of Finance, 27, 569-88.
+15:673:21508:25:16:85:510:631:11:g_d0_f15:11:g_d0_f15:Mingari Scarpello, G. and D. Ritelli (2003), “The Solow model improved through the
+15:674:21590:16:17:95:510:615:11:g_d0_f15:11:g_d0_f15:logistic manpower growth law”,Annali Università di Ferrara- Sez VII - Sc. Mat., Vol.
+15:675:21674:17:25:95:141:598:11:g_d0_f15:11:g_d0_f15:IL, 73-83.
+15:676:21684:25:17:85:509:573:11:g_d0_f15:11:g_d0_f15:Murphy, G. M. (1960),Ordinary differential equations and their solutions, Van Nostrand
+15:677:21770:17:25:95:246:556:11:g_d0_f15:11:g_d0_f15:Reinholds Company, New York.
+15:678:21798:25:17:85:510:531:11:g_d0_f15:11:g_d0_f15:Seaborn, J. B. (1991),Hypergeometric functions and their applications, Springer-Verlag,
+15:679:21885:17:25:95:145:514:11:g_d0_f15:11:g_d0_f15:New York.
+15:680:21894:25:16:85:509:489:11:g_d0_f15:11:g_d0_f15:Stoer, J. and R. Burlish (1993),Introduction to numerical analysis, second edition,
+15:681:21977:16:26:95:225:473:11:g_d0_f15:11:g_d0_f15:Springer-Verlag, New York.
+15:682:22003:26:16:85:510:447:11:g_d0_f15:11:g_d0_f15:Wagner, W. H. and Banks, M. (1992) “Increasing portfolio effectiveness via transaction
+15:683:22089:16:0:95:393:431:11:g_d0_f15:11:g_d0_f15:cost management”,Journal of Portfolio Management, 19, 6-11.

@@ -1,0 +1,756 @@
+1:0:0:0:99:218:394:708:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:99:14:203:407:609:12:g_d0_f1:12:g_d0_f1:NOTES FOR A CONTINGENT CLAIMS
+1:2:54:14:28:202:408:595:12:g_d0_f1:12:g_d0_f1:THEORY OF LIMIT ORDER MARKETS
+1:3:83:28:29:260:351:567:12:g_d0_f1:12:g_d0_f1:Bruce N. Lehmann
+1:4:99:29:14:253:358:538:12:g_d0_f1:12:g_d0_f1:Working Paper 11533
+1:5:117:14:43:218:392:524:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w11533
+1:6:150:43:14:173:437:481:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:186:14:14:237:373:467:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:8:211:14:14:250:361:453:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:9:230:14:183:282:329:439:12:g_d0_f1:12:g_d0_f1:July 2005
+1:10:239:183:13:71:539:256:11:g_d0_f1:11:g_d0_f1:This research is part of the NBER’s program on Asset Pricing and was supported in part by a Morgan Stanley
+1:11:345:13:13:71:539:243:11:g_d0_f1:11:g_d0_f1:Equity Microstructure Research Grant for which I am quite grateful.  The views expressed herin are solely
+1:12:450:13:13:71:539:230:11:g_d0_f1:11:g_d0_f1:my own and not those of any other person or entity including Morgan Stanley and the National Bureau of
+1:13:552:13:13:71:540:217:11:g_d0_f1:11:g_d0_f3:Economic Research.  It has also benefitted from the comments of participants at the conferences in Honor
+1:14:656:13:13:71:539:204:11:g_d0_f3:11:g_d0_f1:of  David  K.  Whitcomb  at  Rutgers  University  (where  participants  found  a  dreadful  blunder),  on  the
+1:15:766:13:13:71:539:191:11:g_d0_f3:11:g_d0_f3:Econometrics of the Microstructure of Financial Markets at Tilburg University, on the Analysis of High-
+1:16:869:13:13:71:539:178:11:g_d0_f3:11:g_d0_f3:Frequency  Financial  Data  and  Market  Microstructure  at  Academia  Sinica,  and  on  the Workshop  on
+1:17:974:13:13:71:539:165:11:g_d0_f3:11:g_d0_f1:Microstructure of Financial Markets at the Bolsa Madrid.  All errors that remain are my own responsibility.
+1:18:1081:13:13:71:539:152:11:g_d0_f1:11:g_d0_f1:The views expressed herein are those of the author(s) and do not necessarily reflect the views of the National
+1:19:1191:13:26:71:211:139:11:g_d0_f1:11:g_d0_f1:Bureau of Economic Research. 
+1:20:1220:26:12:71:539:113:11:g_d0_f1:11:g_d0_f1:©2005 by Bruce N. Lehmann.  All rights reserved. Short sections of text, not to exceed two paragraphs, may
+1:21:1326:12:0:71:539:101:11:g_d0_f1:11:g_d0_f1:be quoted without explicit permission provided that full credit, including © notice, is given to the source.
+2:22:1434:0:14:71:370:708:12:g_d0_f1:12:g_d0_f1:Notes for a Contingent Claims Theory of Limit Order Markets
+2:23:1493:14:14:71:162:694:12:g_d0_f1:12:g_d0_f1:Bruce N. Lehmann
+2:24:1509:14:14:71:232:680:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 11533
+2:25:1537:14:14:71:121:666:12:g_d0_f1:12:g_d0_f1:July  2005
+2:26:1547:14:29:71:188:652:12:g_d0_f1:12:g_d0_f1:JEL No. G10, G13, G19
+2:27:1568:29:67:273:338:623:12:g_d0_f2:12:g_d0_f2:ABSTRACT
+2:28:1576:67:24:71:539:556:12:g_d0_f1:12:g_d0_f1:This  paper  provides  a  road  map  for  building  a  contingent  claims  theory  of  limit  order  markets
+2:29:1684:24:24:71:539:532:12:g_d0_f1:12:g_d0_f1:grounded in a simple observation: limit orders are equivalent to a portfolio of cash-or-nothing and
+2:30:1783:24:24:71:539:508:12:g_d0_f1:12:g_d0_f1:asset-or-nothing digital options on market order flow. However, limit orders are not conventional
+2:31:1880:24:24:71:539:484:12:g_d0_f1:12:g_d0_f1:derivative securities: order flow is an endogenous, non-price state variable; the underlying asset
+2:32:1978:24:24:71:539:460:12:g_d0_f1:12:g_d0_f1:value is a construct, the value of the security in different order flow states; and arbitrage trading or
+2:33:2082:24:24:71:539:436:12:g_d0_f1:12:g_d0_f1:hedging of limit orders is not feasible. Fortunately, none of these problems is fatal since options on
+2:34:2184:24:24:71:539:412:12:g_d0_f1:12:g_d0_f1:order flow can be conceptualized as bets implicit in limit orders, arbitrage trading can be replaced
+2:35:2284:24:24:71:539:388:12:g_d0_f1:12:g_d0_f1:by limit order substitution, and plausible assumptions can be made about the endogeneity of order
+2:36:2381:24:24:71:539:364:12:g_d0_f1:12:g_d0_f1:flow states and their associated asset values. The analysis yields two main results: Arrow-Debreu
+2:37:2478:24:24:71:539:340:12:g_d0_f1:12:g_d0_f1:prices for order flow ‘‘states’’ are proportional to the slope of the limit order book and the limit order
+2:38:2584:24:26:71:539:316:12:g_d0_f1:12:g_d0_f1:book at one time proves to be identical to that at an earlier time adjusted for the net order flow since
+2:39:2688:26:57:71:305:290:12:g_d0_f1:12:g_d0_f1:that time when all information arrives via trades.
+2:40:2738:57:14:71:147:233:12:g_d0_f1:12:g_d0_f1:Bruce Lehmann
+2:41:2751:14:14:71:242:219:12:g_d0_f1:12:g_d0_f1:University of California, San Diego
+2:42:2786:14:15:71:100:205:12:g_d0_f1:12:g_d0_f1:IR/PS
+2:43:2791:15:14:71:236:190:12:g_d0_f1:12:g_d0_f1:1415 Robinson Building Complex
+2:44:2821:14:14:71:193:176:12:g_d0_f1:12:g_d0_f1:La Jolla, CA 92093-0519
+2:45:2844:14:14:71:123:162:12:g_d0_f1:12:g_d0_f1:and NBER
+2:46:2852:14:0:71:172:148:12:g_d0_f1:12:g_d0_f1:blehmann@ucsd.edu
+3:47:2869:0:27:72:155:709:144:Times:144:Times:1.  Introduction 
+3:48:2886:27:27:108:543:682:144:g_d0_f5:144:g_d0_f5:A dozen or so years ago, I visited David Whitcomb in his New York apartment to view 
+3:49:2970:27:27:72:543:655:144:g_d0_f5:144:g_d0_f5:his limit order trading system.  He invited me to do so under the misapprehension that I might be 
+3:50:3068:27:27:72:545:628:144:g_d0_f5:144:g_d0_f5:able  to  help  him  find  a  buyer,  a  notion  of  which  he  was  rapidly  disabused.1    I  came  away  
+3:51:3176:27:27:72:545:601:144:g_d0_f5:144:g_d0_f5:remembering  one  detail  of  the  system:    limit  orders  were  always  canceled  if  they  were  not  
+3:52:3282:27:27:72:543:574:144:g_d0_f5:144:g_d0_f5:executed  within  two  minutes  because  the  specialist’s  commission  –  a  number  on  the  order  of  a  
+3:53:3391:27:27:72:544:547:144:g_d0_f5:144:g_d0_f5:mil  at  the  time  as  I  recall  –  was  only  paid  on  orders  that  resided  on  the  book  more  than  two  
+3:54:3505:27:27:72:543:520:144:g_d0_f5:144:g_d0_f5:minutes.  The idea that stuck with me is that one could learn a great deal about optimal trading 
+3:55:3602:27:27:72:543:493:144:g_d0_f5:144:g_d0_f5:strategies  by  paying  close  attention  to  the  minutiae  of  the  microstructure  of  a  market.    Anyone  
+3:56:3714:27:27:72:543:466:144:g_d0_f5:144:g_d0_f5:who feels the need to verify the claim that I see value in paying attention to such minutiae should 
+3:57:3814:27:27:72:493:439:144:g_d0_f5:144:g_d0_f5:examine the description of the Tokyo Stock Exchange in Lehmann and Modest (1995). 
+3:58:3896:27:27:108:543:412:144:g_d0_f5:144:g_d0_f5:The research reported here marries this observation with a simple idea:  the apparatus of 
+3:59:3986:27:27:72:545:385:144:g_d0_f5:144:g_d0_f5:state  pricing  can  be  applied  profitably  in  microstructure.    Just  as  Hicks  (1939)  noted  that  
+3:60:4093:27:27:72:543:358:144:g_d0_f5:144:g_d0_f5:conventional microeconomic theory could be applied to economic dynamics by treating the same 
+3:61:4186:27:27:72:543:331:144:g_d0_f5:144:g_d0_f5:goods on different dates as different commodities and Arrow (1964) and Debreu (1959) showed 
+3:62:4278:27:27:72:546:304:144:g_d0_f5:144:g_d0_f5:that  dynamics  under  uncertainty  could  be  analyzed  similarly  by  treating  the  same  good  on  
+3:63:4381:27:27:72:544:277:144:g_d0_f5:144:g_d0_f5:different  dates  in  different  states  of  nature  as  different  commodities,  it  has  long  seemed  to  me  
+3:64:4494:27:27:72:543:250:144:g_d0_f5:144:g_d0_f5:that one could exploit this strategy in microstructure by defining states in terms of trade prices, 
+3:65:4594:27:27:72:543:223:144:g_d0_f5:144:g_d0_f5:quotes, and quantities.  Limit order markets are a natural environment within which to apply this 
+3:66:4692:27:27:72:544:196:144:g_d0_f5:144:g_d0_f5:idea  precisely  because  the  mechanical  nature  of  the  order  execution  process  makes  for  a  clear  
+3:67:4801:27:27:72:221:169:144:g_d0_f5:144:g_d0_f5:definition of order flow states. 
+3:68:4834:27:27:108:547:142:144:g_d0_f5:144:g_d0_f5:The  idea  of  using  contingent  claims  analysis  in  a  microstructure  setting  is  hardly  new:    
+3:69:4938:27:0:72:543:115:144:g_d0_f5:144:g_d0_f5:since at least Copeland and Galai (1983), it has been commonplace to view quotes or limit orders 
+4:70:5036:0:27:72:544:709:144:g_d0_f5:144:g_d0_f5:as  free  options  given  by  limit  order  traders  or  market  makers  to  market  order  traders  who  may  
+4:71:5147:27:27:72:543:682:144:g_d0_f5:144:g_d0_f5:possess  superior  information  regarding  asset  values.    On  this  view,  a  limit  buy  (sell)  order  is  a  
+4:72:5262:27:27:72:543:655:144:g_d0_f5:144:g_d0_f5:call (put) option with a strike price equal to the limit price with an implicit option premium — 
+4:73:5359:27:27:72:543:628:144:g_d0_f5:144:g_d0_f5:actually a contingent premium since it is not paid unless the option is exercised — given by the 
+4:74:5456:27:27:72:545:601:144:g_d0_f5:144:g_d0_f5:spread  between  the  limit  price  and  the  midpoint  of  the  bid-ask  spread,  albeit  one  with  an  
+4:75:5562:27:27:72:545:574:144:g_d0_f5:144:g_d0_f5:uncertain  expiration  date  since  limit  orders  are  typically  good  until  cancelled.      This  spread  
+4:76:5672:27:27:72:546:547:144:g_d0_f5:144:g_d0_f5:reflects  the  by  now  classic  balance  between  losses  to  informed  investors  and  profits  from  
+4:77:5776:27:27:72:544:520:144:g_d0_f5:144:g_d0_f5:uninformed  liquidity  traders  along  with  traders  who  falsely  believe  they  possess  value-relevant  
+4:78:5884:27:27:72:171:493:144:g_d0_f5:144:g_d0_f5:private information. 
+4:79:5905:27:27:108:544:466:144:g_d0_f5:144:g_d0_f5:Examining  this  implicit  option  from  the  perspective  of  limit  order  traders  sheds  quite  
+4:80:6005:27:27:72:545:439:144:g_d0_f5:144:g_d0_f5:different  light  on  the  sources  of  value  in  limit  orders.    A  limit  buy  (sell)  order  for  Xt  shares  
+4:81:6121:27:27:71:543:412:144:g_d0_f5:144:g_d0_f5:involves the receipt (expenditure) of PtXt dollars in exchange for (delivery of) Xt shares.  In the 
+4:82:6221:27:27:72:545:385:144:g_d0_f5:144:g_d0_f5:language  of  exotic  options  markets,  the  first  payoff  is  that  of  Xt  cash-or-nothing  digital  call  
+4:83:6332:27:27:71:544:358:144:g_d0_f5:144:g_d0_f5:options struck at Pt and the second is the same as that on Xt asset-or-nothing digital call options 
+4:84:6432:27:27:72:542:331:144:g_d0_f5:144:g_d0_f5:struck  at  Pt  as  well.    Since  limit  order  markets  only  result  in  transactions  at  a  given  price  Pt(q) 
+4:85:6550:27:27:72:543:304:144:g_d0_f5:144:g_d0_f5:when  a  market  order  of  size  Qt  is  large  enough  to  hit  the  limit  orders  posted  at  the  price (i.e., 
+4:86:6665:27:27:72:497:277:144:g_d0_f5:144:g_d0_f5:when Qt ≥ q), one can view these implicit derivative securities as options on order flow. 
+4:87:6753:27:27:108:542:250:144:g_d0_f5:144:g_d0_f5:The chapter is laid out as follows.  The next section describes both my assumptions about 
+4:88:6843:27:27:72:543:223:144:g_d0_f5:144:g_d0_f5:limit order markets and the digital options implicit in limit orders.  The third section is devoted 
+4:89:6943:27:27:72:544:196:144:g_d0_f5:144:g_d0_f5:primarily  to  the  identification  of  the  Arrow-Debreu  prices  for  order  flow  ‘states’  based  on  the  
+4:90:7054:27:27:72:544:169:144:g_d0_f5:144:g_d0_f5:implicit  options  embedded  in  the  limit  order  book.    Care  is  needed  since  these  implicit  digital  
+4:91:7166:27:27:72:544:142:144:g_d0_f5:144:g_d0_f5:options  differ  in  important  ways  from  their  analogues  in  conventional  derivative  asset  markets  
+4:92:7274:27:27:72:544:115:144:g_d0_f5:144:g_d0_f5:since  the  nature  of  the  underlying  asset,  the  definition  of  states  of  nature,  and  the  notion  of  
+4:93:7387:27:11:72:542:88:144:g_d0_f5:144:g_d0_f5:                                                                                                                                                             
+4:94:7543:11:0:72:522:77:64:g_d0_f5:144:g_d0_f5:1 As I recall, the asking price was $10 million and the proposed commission was 10 per cent. 
+5:95:7637:0:27:72:543:709:144:g_d0_f5:144:g_d0_f5:arbitrage are not entirely straightforward in this context.  The penultimate section derives some 
+5:96:7735:27:27:71:544:682:144:g_d0_f5:144:g_d0_f5:perhaps  surprising  implications  for  limit  order  book  dynamics  and  the  final  section  provides  
+5:97:7841:27:27:71:198:655:144:g_d0_f5:144:g_d0_f5:brief concluding remarks. 
+5:98:7867:27:27:107:332:628:144:Times:144:Times:2.  Limit Orders as Order Flow Derivatives 
+5:99:7910:27:27:107:543:601:144:g_d0_f5:144:g_d0_f5:Consider  a  limit  order  book  market  for  a  single  security  with  a  marginal  price  schedule  
+5:100:8013:27:29:71:544:574:144:g_d0_f5:144:g_d0_f5:Pt(q)  where  q  is  positive  for  buy  orders  and  negative  for  sell  orders.    Limit  orders  are  placed  
+5:101:8127:29:28:72:546:545:144:g_d0_f5:144:g_d0_f5:prior  to  time  t  and  so  Pt(q)∈Ft–1  where  Ft–1  is  public  information  available  before  time  t  
+5:102:8234:28:27:72:550:517:144:g_d0_f5:144:g_d0_f5:including,  at  minimum,  past  quotes  along  with  transactions  prices,  quantities,  and  times.    
+5:103:8338:27:27:72:545:490:144:g_d0_f5:144:g_d0_f5:Assume  for  now  that  Pt(q)  is  continuous;  that  is,  there  is  no  minimum  price  variation  or  
+5:104:8443:27:27:72:146:463:144:g_d0_f5:144:g_d0_f5:minimum tick. 
+5:105:8457:27:33:108:543:436:144:g_d0_f5:144:g_d0_f5:Since incoming market orders are executed against standing limit orders, the overall cost 
+5:106:8547:33:0:72:244:403:144:g_d0_f5:144:g_d0_f5:of  a  market  order  for  Qt  shares  is  
+5:107:8590:0:10:257:258:410:25:g_d0_f5:25:g_d0_f5:t
+5:108:8591:10:0:267:251:400:48:g_d0_f5:322:g_d0_f8:t0P( )d∫
+5:109:8599:0:9:252:257:412:48:g_d0_f6:48:g_d0_f6:Q
+5:110:8600:9:34:275:544:403:143:g_d0_f6:144:g_d0_f5:qq  where  Qt  and  q  are  positive  for  buy  orders  and  
+5:111:8661:34:27:72:547:369:144:g_d0_f5:144:g_d0_f5:negative  for  sell  orders  –  that  is,  the  market  order  walks  up  or  down  the  book  until  it  is  filled.    
+5:112:8782:27:27:72:544:342:144:g_d0_f5:144:g_d0_f5:Note that all orders at the same limit price are treated symmetrically in this limit order book — 
+5:113:8880:27:27:72:543:315:144:g_d0_f5:144:g_d0_f5:that is, price priority is strictly maintained while both size and time priority are ignored.  Neither 
+5:114:8983:27:27:72:544:288:144:g_d0_f5:144:g_d0_f5:omission  should  be  of  great  importance  in  this  market  since  one  can  always  step  ahead  of  an  
+5:115:9092:27:27:72:381:261:144:g_d0_f5:144:g_d0_f5:existing order by posting one at an infinitesimally better price.   
+5:116:9160:27:27:108:543:234:144:g_d0_f5:144:g_d0_f5:This market should be thought of as one that operates without frictions, save for enough 
+5:117:9249:27:27:72:542:207:144:g_d0_f5:144:g_d0_f5:slippage to permit limit order traders to cancel old orders and/or submit new ones before the next 
+5:118:9348:27:27:72:544:180:144:g_d0_f5:144:g_d0_f5:market  order  arrives.    There  are  no  dealers  like  NYSE  specialist  who  can  see  the  book  before  
+5:119:9458:27:27:72:543:153:144:g_d0_f5:144:g_d0_f5:taking a position or stepping in front of an existing limit order in the book. There are no hidden 
+5:120:9557:27:27:72:543:126:144:g_d0_f5:144:g_d0_f5:limit orders that market order traders might “ping” to discover how much immediacy resides in 
+5:121:9651:27:0:72:543:99:144:g_d0_f5:144:g_d0_f5:the undisclosed portion of the book.  There are no limits on how many tiers of the book a single 
+6:122:9749:0:27:72:544:709:144:g_d0_f5:144:g_d0_f5:market  order  can  clear  out  as  there  are  on  the  Tokyo  Stock  Exchange.    Some  of  these  frictions  
+6:123:9861:27:27:72:543:682:144:g_d0_f5:144:g_d0_f5:can be handled by careful definition of the “state” of the book and some cannot.  I will not deal 
+6:124:9959:27:27:72:204:655:144:g_d0_f5:144:g_d0_f5:with them in what follows. 
+6:125:9986:27:27:72:543:628:144:g_d0_f5:144:g_d0_f5:  No  special  assumptions  are  made  about  order  flows at this point.  There can be limit or 
+6:126:10083:27:27:72:544:601:144:g_d0_f5:144:g_d0_f5:market  orders  that  follow  arbitrary  stochastic  processes  that  depend  in  arbitrary  ways  on  the  
+6:127:10191:27:27:72:543:574:144:g_d0_f5:144:g_d0_f5:slope, depth, and history of the limit order book as well as other public information.  To be sure, 
+6:128:10291:27:27:72:544:547:144:g_d0_f5:144:g_d0_f5:most  of  the  heavy  lifting  in  microstructure  models  involves  the  determination  of  the  optimal  
+6:129:10398:27:27:72:543:520:144:g_d0_f5:144:g_d0_f5:order placements of informed investors and/or optimizing liquidity traders, all of which requires 
+6:130:10496:27:27:72:544:493:144:g_d0_f5:144:g_d0_f5:numerous assumptions about the economic setting.  The present exercise is much easier since it 
+6:131:10591:27:27:72:543:466:144:g_d0_f5:144:g_d0_f5:only  involves  the  mechanics  of  order  execution  in  a  stylized  limit  order  market.    Some  modest  
+6:132:10701:27:27:71:482:439:144:g_d0_f5:144:g_d0_f5:assumptions about order flows and execution will be made in the next two sections.   
+6:133:10786:27:27:107:544:412:144:g_d0_f5:144:g_d0_f5:The  analysis  of  contingent  claims  written  on  order  flows  begins  with  the  three  possible  
+6:134:10888:27:27:72:543:385:144:g_d0_f5:144:g_d0_f5:events that might transpire at time t:  the arrival of a market buy order (i.e., Qt > 0), of a market 
+6:135:10990:27:27:71:543:358:144:g_d0_f5:144:g_d0_f5:sell order (i.e., Qt < 0), or of information without an intervening trade including, perhaps, that the 
+6:136:11093:27:27:72:543:331:144:g_d0_f5:144:g_d0_f5:clock has ticked without the arrival of a trade (i.e., Qt = 0).  This last prospect will often lead to a 
+6:137:11198:27:27:71:552:304:144:g_d0_f5:144:g_d0_f5:revision  of  the  limit  order  book,  an  instance  of  the  good  until  cancelled  feature  of  limit  orders.        
+6:138:11320:27:27:71:544:277:144:g_d0_f5:144:g_d0_f5:In  this  context,  my  assumption  that  there  is  a  tatônnement-like  process  permitting  limit  order  
+6:139:11429:27:27:71:543:250:144:g_d0_f5:144:g_d0_f5:traders to freely cancel and submit orders prior to the next market order arrival means that limit 
+6:140:11528:27:27:71:543:223:144:g_d0_f5:144:g_d0_f5:order traders, by assumption, have placed the limit orders they think appropriate given all of the 
+6:141:11627:27:27:71:268:196:144:g_d0_f5:144:g_d0_f5:information available to them at time t.   
+6:142:11670:27:27:107:544:169:144:g_d0_f5:144:g_d0_f5:Now suppose a market buy order arrives for Qt > q shares at time t and consider a limit 
+6:143:11758:27:27:71:543:142:144:g_d0_f5:144:g_d0_f5:order that offered one share at price Pt(q).  Since this limit order is executed for sure (i.e., Qt > 
+6:144:11860:27:27:71:543:115:144:g_d0_f6:144:g_d0_f5:q), the limit order trader exchanges one share of stock for Pt(q) dollars.  In the language of exotic 
+6:145:11962:27:0:72:540:88:144:g_d0_f5:144:g_d0_f5:options, a contingent claim that pays a fixed cash flow in a given eventuality is called a cash-or-
+7:146:12062:0:27:72:540:709:144:g_d0_f5:144:g_d0_f5:nothing digital call option and so the cash flow from a limit sell order is the payoff on a cash-or-
+7:147:12162:27:27:72:544:682:144:g_d0_f5:144:g_d0_f5:nothing  digital  call  option  struck  at  Pt(q).    Similarly,  a  contingent  claim  that  pays  a  share  in  a  
+7:148:12279:27:27:72:545:655:144:g_d0_f5:144:g_d0_f5:given  state  is  called  an  asset-or-nothing  digital  call  option  and  so  the  share  transfer  in  this  
+7:149:12391:27:27:72:544:628:144:g_d0_f5:144:g_d0_f5:transaction is the payoff of an asset-or-nothing digital call option struck at Pt(q) as well.  I will 
+7:150:12493:27:27:72:545:601:144:g_d0_f5:144:g_d0_f5:follow  Ingersoll’s  (2000)  nomenclature  and  refer  to  cash-or-nothing  digital  calls  and  puts  as  
+7:151:12600:27:27:72:446:574:144:g_d0_f5:144:g_d0_f5:digital options and to asset-or-nothing digital calls and puts as digital shares.  
+7:152:12683:27:27:108:545:547:144:g_d0_f5:144:g_d0_f5:Hence,  limit  orders  implicitly  bundle  digital  option  and  share  positions.    A  limit  buy  
+7:153:12784:27:27:72:543:520:144:g_d0_f5:144:g_d0_f5:order  is  equivalent  to  a  long  position  in  a  digital  option  and  a  short  position  in  a  digital  share,  
+7:154:12903:27:27:72:545:493:144:g_d0_f5:144:g_d0_f5:each  struck  at  Pt(q).    Each  implicit  digital  option  pays  Pt(q)  dollars  if  Qt ≥ q  and  expires  
+7:155:13010:27:27:71:544:466:144:g_d0_f5:144:g_d0_f5:worthless  if  Qt  <  q.    Similarly,  each  implicit  digital  share  converts  into  a  share  if  Qt ≥ q  and  
+7:156:13123:27:27:71:545:439:144:g_d0_f5:144:g_d0_f5:expires  worthless  otherwise.    By  the  same  token,  a  limit  sell  order  is  equivalent  to  a  short  
+7:157:13233:27:27:71:545:412:144:g_d0_f5:144:g_d0_f5:position  in  a  digital  option  and  a  long  position  in  a  digital  share.    The  former  requires  the  
+7:158:13345:27:27:71:545:385:144:g_d0_f5:144:g_d0_f5:payment  of  Pt(q)  dollars  when  Qt ≤ q  and  the  latter  involves  the  receipt  of  a  share  in  these  
+7:159:13453:27:27:72:309:358:144:g_d0_f5:144:g_d0_f5:circumstances.  Both expire worthless if Qt > q.   
+7:160:13504:27:27:107:545:331:144:g_d0_f5:144:g_d0_f5:Since  a  limit  order  involves  no  up  front  cash  flows,  the  value  of  these  two  implicit  
+7:161:13605:27:27:72:545:304:144:g_d0_f5:144:g_d0_f5:options  must  be  the  same.    Accordingly,  any  analysis  that  delivers  the  value  of  one  option  
+7:162:13712:27:27:72:543:277:144:g_d0_f5:144:g_d0_f5:position implicitly determines that of the other position as well.  In addition, any such valuation 
+7:163:13812:27:27:72:540:250:144:g_d0_f5:144:g_d0_f5:must  take  account  of  the  fact  that  these  derivatives  are  implicitly  written  on  order  flow,  a  non-
+7:164:13925:27:27:71:168:223:144:g_d0_f5:144:g_d0_f5:price state variable. 
+7:165:13947:27:27:107:543:196:144:g_d0_f5:144:g_d0_f5:This is a weaker restriction than that derived in Ingersoll (2000) for conventional digital 
+7:166:14039:27:27:71:542:169:144:g_d0_f5:144:g_d0_f5:options or shares.  After all, the underlying asset price, a quantity measured in dollars, is always 
+7:167:14140:27:27:71:548:142:144:g_d0_f5:144:g_d0_f5:available  to  compute  the  relative  value  of  digital  options  and  shares  in  any  state  of  nature.    
+7:168:14252:27:27:71:546:115:144:g_d0_f5:144:g_d0_f5:However,  market  order  size  is  a  non-price  state  variable  and  there  is  no  observable  that  
+7:169:14356:27:0:71:543:88:144:g_d0_f5:144:g_d0_f5:corresponds to the value of a share in different order flow states.  This inability to mechanically 
+8:170:14457:0:27:72:544:709:144:g_d0_f5:144:g_d0_f5:assign  a  value  to  the  digital  share  on  expiration  or  to  a  claim  to  a  dollar  in  the  same  state  of  
+8:171:14575:27:27:72:544:682:144:g_d0_f5:144:g_d0_f5:nature  is  the  main  obstacle  to  the  straightforward  computation  of  the  value  of  the  contingent  
+8:172:14684:27:27:72:248:655:144:g_d0_f5:144:g_d0_f5:claims implicit in limit order books. 
+8:173:14722:27:27:108:544:628:144:g_d0_f5:144:g_d0_f5:A  digital  call  (put)  can  be  replicated  by  a  bull  (bear)  spread  in  conventional  call  (put)  
+8:174:14828:27:27:72:543:601:144:g_d0_f5:144:g_d0_f5:options with an infinitesimal spread between the two strike prices.  This observation is of limited 
+8:175:14928:27:27:72:542:574:144:g_d0_f5:144:g_d0_f5:utility for limit order valuation purposes since it is hard to imagine a market in which it is easy to 
+8:176:15031:27:27:72:544:547:144:g_d0_f5:144:g_d0_f5:form  a  bull  spread  in  conventional  options  at  the  appropriate  strikes  just  before  a  market  order  
+8:177:15144:27:27:72:548:520:144:g_d0_f5:144:g_d0_f5:arrives  that  expires  on  the  arrival  of  the  market  order.    It  may  be  of  some  use  in  reverse:    
+8:178:15257:27:27:72:543:493:144:g_d0_f5:144:g_d0_f5:inferences regarding the prices of order flow states implicit in the limit order book can provide 
+8:179:15355:27:27:72:504:466:144:g_d0_f5:144:g_d0_f5:insight into microstructural effects on the value of very short expected maturity options.   
+8:180:15448:27:27:108:546:439:144:g_d0_f5:144:g_d0_f5:However,  this  fact  does  yield  one  modest  insight  concerning  the  riskiness  of  the  
+8:181:15542:27:27:72:544:412:144:g_d0_f5:144:g_d0_f5:derivatives  implicit  in  limit  orders.    As  is  well-known,  at-the-money  digital  options  with  short  
+8:182:15653:27:27:72:546:385:144:g_d0_f5:144:g_d0_f5:time  to  expiration  are  highly  sensitive  to  changes  in  the  underlying  asset  value  because  the  
+8:183:15761:27:27:72:542:358:144:g_d0_f5:144:g_d0_f5:absolute values of their deltas and gammas – that is, the sensitivity of the bull spread to changes 
+8:184:15861:27:27:72:544:331:144:g_d0_f5:144:g_d0_f5:in  the  underlying  asset  price  and  its  square,  respectively  –  can  both  be  large  in  absolute  value  
+8:185:15975:27:27:72:543:304:144:g_d0_f5:144:g_d0_f5:and fluctuate a great deal.  Moreover, the gamma of such a digital call can change signs and its 
+8:186:16072:27:27:72:543:277:144:g_d0_f5:144:g_d0_f5:delta is unbounded.  Accordingly, the prices of limit orders should be quite sensitive to changes 
+8:187:16170:27:27:72:547:250:144:g_d0_f5:144:g_d0_f5:in  both  order  flow  dynamics  and  the  elasticity  of  limit  order  prices  with  respect  to  order  flow.    
+8:188:16286:27:27:72:543:223:144:g_d0_f5:144:g_d0_f5:Perhaps this sensitivity explains why changes in the market for liquidity in a stock are associated 
+8:189:16386:27:27:72:360:196:144:g_d0_f5:144:g_d0_f5:with volatility in limit order cancellations and submissions. 
+8:190:16448:27:27:108:545:169:144:g_d0_f5:144:g_d0_f5:More  revealing  for  valuation  purposes,  however,  is  a  spread  in  digital  calls  with  an  
+8:191:16547:27:27:72:543:142:144:g_d0_f5:144:g_d0_f5:infinitesimal  spread  between  the  two  strike  prices.    Since  a  digital  call  (put)  is  equivalent  to  a  
+8:192:16663:27:27:72:544:115:144:g_d0_f5:144:g_d0_f5:spread  in  conventional  calls  (puts),  a  spread  in  digital  call  (put)  options  can  be  replicated  by  a  
+8:193:16779:27:0:72:542:88:144:g_d0_f5:144:g_d0_f5:spread in bull (bear) spreads in conventional options or, in more common parlance, by a butterfly 
+9:194:16878:0:27:72:545:709:144:g_d0_f5:144:g_d0_f5:spread  in  three  conventional  calls  (puts).    As  shown  in  Breeden  and  Litzenberger  (1978),  a  
+9:195:16984:27:27:72:545:682:144:g_d0_f5:144:g_d0_f5:butterfly  spread  in  conventional  options  with  infinitesimal  differences  across  the  three  strike  
+9:196:17092:27:27:72:543:655:144:g_d0_f5:144:g_d0_f5:prices  has  a  payoff  proportional  to  that  of  a  pure  Arrow-Debreu  claim  that  pays  off  only  when  
+9:197:17203:27:27:72:543:628:144:g_d0_f5:144:g_d0_f5:the stock price on expiration equals the intermediate strike price.  Similarly, the payoff of a bull 
+9:198:17304:27:27:72:545:601:144:g_d0_f5:144:g_d0_f5:spread  in  digital  calls  (puts)  on  order  flow  pays  off  only  in  the  intermediate  order  flow  state  
+9:199:17417:27:27:72:546:574:144:g_d0_f5:144:g_d0_f5:when  there  is  an  infinitesimal  spread  in  the  order  flow  states.  Hence,  the  analysis  of  the  
+9:200:17524:27:27:72:544:547:144:g_d0_f5:144:g_d0_f5:contingent  claims  implicit  in  limit  orders  yields  a  new  interpretation  of  the  slope  of  the  limit  
+9:201:17637:27:27:71:135:520:144:g_d0_f5:144:g_d0_f5:order book.   
+9:202:17651:27:27:107:359:493:144:Times:144:Times:3. Limit Order Valuation and Order Flow Bets  
+9:203:17696:27:27:107:543:466:144:g_d0_f5:144:g_d0_f5:Hence, the contingent claims implicit in limit orders can be viewed as the payoffs on two 
+9:204:17786:27:27:72:543:439:144:g_d0_f5:144:g_d0_f5:American,  deferred  premium,  one-touch,  binary  or  digital  options.    They  are  American  options  
+9:205:17892:27:27:71:543:412:144:g_d0_f5:144:g_d0_f5:because  limit  orders  are  generally  good  until  cancelled  and  they  are  one-touch  options  because  
+9:206:18001:27:27:71:543:385:144:g_d0_f5:144:g_d0_f5:they pay a fixed quantity of shares or dollars if the market order exceeds the tier of the book on 
+9:207:18100:27:27:71:543:358:144:g_d0_f5:144:g_d0_f5:which the limit order resides.  They are also very short maturity options since they last, at most, 
+9:208:18200:27:27:71:543:331:144:g_d0_f5:144:g_d0_f5:one trading day.  We need only value the digital options or digital shares implicit in limit orders 
+9:209:18300:27:27:71:506:304:144:g_d0_f5:144:g_d0_f5:to provide a contingent claims interpretation of the sources of value in limit order books.   
+9:210:18394:27:27:107:547:277:144:g_d0_f5:144:g_d0_f5:There   are   nontrivial   challenges   associated   with   exploiting   this   observation.      The   
+9:211:18498:27:27:71:543:250:144:g_d0_f5:144:g_d0_f5:“underlying asset” is order flow – a non-price state variable – and there is no observable or risk 
+9:212:18597:27:27:71:544:223:144:g_d0_f5:144:g_d0_f5:premium  for  order  flow  risk.    Moreover,  order  flow  is  not  an  exogenous  set  of  outcomes  but  
+9:213:18705:27:27:71:543:196:144:g_d0_f5:144:g_d0_f5:rather is the endogenous product of the trading decisions of informed and uninformed investors. 
+9:214:18801:27:27:71:543:169:144:g_d0_f5:144:g_d0_f5:In addition, the application of arbitrage reasoning – the natural starting point for the valuation of 
+9:215:18903:27:27:71:543:142:144:g_d0_f5:144:g_d0_f5:contingent  claims  –  is  hampered  by  the  presence  of  short  sales  restrictions  and  the  absence  of  
+9:216:19014:27:27:71:543:115:144:g_d0_f5:144:g_d0_f5:natural hedging instruments.  Finally, any such analysis must account for the American nature of 
+9:217:19111:27:0:71:251:88:144:g_d0_f5:144:g_d0_f5:these implicit order flow derivatives. 
+10:218:19151:0:27:108:545:709:144:g_d0_f5:144:g_d0_f5:There  is  a  simple  but  useful  device  for  thinking  through  these  issues:    imagining  a  
+10:219:19250:27:27:71:543:682:144:g_d0_f5:144:g_d0_f5:parallel but separate market for wagering on order flow in which participants bet by buying and 
+10:220:19346:27:27:71:544:655:144:g_d0_f5:144:g_d0_f5:selling order flow contingent claims.  In such a market, claim q pays $1 if the next order is for 
+10:221:19444:27:27:71:543:628:144:g_d0_f5:144:g_d0_f5:exactly q shares – i.e., when Qt = q – and zero otherwise, making it an Arrow-Debreu claim on 
+10:222:19538:27:27:71:544:601:144:g_d0_f5:144:g_d0_f5:order  flow.    As  is  readily  apparent,  the  cash  flows  associated  with  any  trading  strategy  in  the  
+10:223:19651:27:27:71:543:574:144:g_d0_f5:144:g_d0_f5:actual limit order market can be perfectly replicated in the betting market.  When this fictitious 
+10:224:19750:27:27:71:544:547:144:g_d0_f5:144:g_d0_f5:betting  market  is  isomorphic  to  general  arbitrage-free  financial  markets,  we  can  freely  import  
+10:225:19858:27:27:71:543:520:144:g_d0_f5:144:g_d0_f5:analysis from that setting to this one when it is convenient to do so.  Additional insights into the 
+10:226:19959:27:27:71:544:493:144:g_d0_f5:144:g_d0_f5:contingent claims interpretation can be gleaned by being precise about when the betting market 
+10:227:20054:27:27:71:463:466:144:g_d0_f5:144:g_d0_f5:produces exactly the same state prices as those implicit in the limit order market. 
+10:228:20138:27:27:107:546:439:144:g_d0_f5:144:g_d0_f5:Before  proceeding,  it  is  worthwhile  to  consider  the  role  of  interest  rates  in  the  analysis.    
+10:229:20247:27:27:71:543:412:144:g_d0_f5:144:g_d0_f5:As is commonplace in the analysis of generic derivatives, the time value of money drops out of 
+10:230:20342:27:27:71:544:385:144:g_d0_f5:144:g_d0_f5:the  relevant  pricing  relations  if  the  numeraire  is  a  savings  account  that  accrues  at  the  relevant  
+10:231:20456:27:27:71:542:358:144:g_d0_f5:144:g_d0_f5:risk-free interest rate.  There is an even better reason to do so in the present setting:  interest rates 
+10:232:20562:27:27:71:544:331:144:g_d0_f5:144:g_d0_f5:are  a  second  order  consideration  over  (most)  market  microstructure  time  scales  and  so  most  
+10:233:20667:27:27:71:543:304:144:g_d0_f5:144:g_d0_f5:researchers are content to simply set the riskless rate to zero.  On this hypothesis, state prices are 
+10:234:20770:27:27:71:317:277:144:g_d0_f5:144:g_d0_f5:also risk neutral probabilities for order flow states. 
+10:235:20825:27:27:107:547:250:144:g_d0_f5:144:g_d0_f5:One  nettlesome  problem  associated  with  the  betting  market  analogy  concerns  the  
+10:236:20915:27:27:71:544:223:144:g_d0_f5:144:g_d0_f5:endogeneity  of  order  flow.    Since  order  flow  states  represent  the  transactions  of  market  order  
+10:237:21025:27:27:71:543:196:144:g_d0_f5:144:g_d0_f5:traders, such traders have an incentive to place bets on market orders of given sizes and then to 
+10:238:21123:27:27:71:544:169:144:g_d0_f5:144:g_d0_f5:submit  the  corresponding  market  orders  in  the  limit  order  market.    Accordingly,  there  can,  in  
+10:239:21232:27:27:71:544:142:144:g_d0_f5:144:g_d0_f5:general,  be  no  trade  in  the  betting  market  in  equilibrium  since  trades  in  the  actual  limit  order  
+10:240:21346:27:27:71:545:115:144:g_d0_f5:144:g_d0_f5:market  can  be  used  to  perfectly  manipulate  the  betting  market.    The  simplest  solution  is  to  
+10:241:21454:27:0:71:544:88:144:g_d0_f5:144:g_d0_f5:assume  that  market  order  traders  cannot  wager  in  the  betting  market  prior  to  the  placement  of  
+11:242:21565:0:27:72:543:709:144:g_d0_f5:144:g_d0_f5:market  orders.    That  is,  the  natural  solution  to  the  problem  of  endogeneity  of  order  flow  is  to  
+11:243:21679:27:27:72:296:682:144:g_d0_f5:144:g_d0_f5:assume there is no intermarket front-running.2 
+11:244:21725:27:27:107:545:655:144:g_d0_f5:144:g_d0_f5:The  limit  order  market  analogue  is  Assumption  3  of  Glosten  (1994),  which  requires  
+11:245:21820:27:27:72:545:628:144:g_d0_f5:144:g_d0_f5:traders  to  use  only  public  information  when  submitting  limit  orders.  That  is,  informed  and  
+11:246:21925:27:27:72:544:601:144:g_d0_f5:144:g_d0_f5:uninformed  traders  interpret  the  information  content  of  posted  limit  orders  in  the  same  way  
+11:247:22031:27:27:72:544:574:144:g_d0_f5:144:g_d0_f5:under  this  assumption.    This  circumstance  will  arise  when  informed  investors  cannot  use  limit  
+11:248:22139:27:27:72:546:547:144:g_d0_f5:144:g_d0_f5:orders  by  assumption,  which  is  the  usual  interpretation  of  Glosten  (1994).    However,  this  
+11:249:22243:27:27:72:543:520:144:g_d0_f5:144:g_d0_f5:assumption will also hold when informed traders have no incentive to post limit orders at prices 
+11:250:22340:27:27:72:544:493:144:g_d0_f5:144:g_d0_f5:different  from  those  that  would  be  submitted  by  uninformed  traders.    If  the  supply  schedule  of  
+11:251:22451:27:27:72:545:466:144:g_d0_f5:144:g_d0_f5:limit  orders  that  would  be  submitted  by  uninformed  traders  is  common  knowledge,  informed  
+11:252:22553:27:27:72:544:439:144:g_d0_f5:144:g_d0_f5:traders  would  have  no  incentive  to  post  orders  off  the  supply  schedule.3    They  will  have  the  
+11:253:22663:27:27:72:543:412:144:g_d0_f5:144:g_d0_f5:incentive to post orders on the schedule if it lies above their valuations for limit sell orders and 
+11:254:22764:27:28:72:282:385:144:g_d0_f5:144:g_d0_f5:below their valuations for limit buy orders. 
+11:255:22809:28:32:108:543:357:144:g_d0_f5:144:g_d0_f5:Accordingly, suppose the set of possible market order sizes is given by t⊆\Q and that 
+11:256:22895:32:30:72:544:325:144:g_d0_f5:144:g_d0_f5:market  participants  agree  that  all  order  sizes  in  tQ  are  possible.4    Note  that  tQ  is  likely  to  be  
+11:257:23012:30:27:72:545:295:144:g_d0_f5:144:g_d0_f5:bounded  since  the  market  will  not  provide  bets  for  all  order  sizes  if  the  adverse  selection  
+11:258:23120:27:27:72:544:268:144:g_d0_f5:144:g_d0_f5:problem is severe enough.  In the absence of frictions in the betting market, the usual arbitrage 
+11:259:23218:27:32:72:544:241:144:g_d0_f5:144:g_d0_f5:argument  insures  the  existence  of  a  set  of  (not  necessarily  unique)  strictly  positive  state  prices  
+11:260:23332:32:28:86:543:209:48:g_d0_f5:144:g_d0_f5:tt{(),}ψ∈Qqq, where ttt1()  E[1    |]ψψ=−=QqqF with  E  [  |  ]ψ•• denoting the associated risk neutral 
+11:261:23436:28:10:71:219:181:144:g_d0_f5:144:g_d0_f5:                                                 
+11:262:23484:10:17:72:544:171:64:g_d0_f5:144:g_d0_f5:2  See  the  bluffing  subsection  of  Lehmann  (2005)  for a more detailed analysis.  I don’t mean to 
+11:263:23587:17:13:71:545:154:144:g_d0_f5:144:g_d0_f5:suggest  that  this  issue  is  easy  to  deal  with  in  substance  but  rather  that  it  is  easy  to  find  
+11:264:23699:13:11:71:395:141:144:g_d0_f5:144:g_d0_f5:assumptions under which order flow endogeneity is not a problem. 
+11:265:23764:11:16:72:544:130:64:g_d0_f5:144:g_d0_f5:3  By  informed  trader,  I  mean  those  who  actually  possess  value-relevant  private  information  as  
+11:266:23872:16:0:71:393:114:144:g_d0_f5:144:g_d0_f5:well as noise traders who think they are informed but who are not. 
+12:267:23941:0:27:72:133:709:144:g_d0_f5:144:g_d0_f5:expectation. 
+12:268:23954:27:29:107:544:682:144:g_d0_f5:144:g_d0_f5:While nothing in what follow depends on it, it is natural to ask whether spanning would 
+12:269:24042:29:30:72:545:653:144:g_d0_f5:144:g_d0_f5:naturally arise in the betting market.5  That is, would bettors naturally write claims on all of tQ?  
+12:270:24144:30:27:72:543:623:144:g_d0_f5:144:g_d0_f5:The answer to this question is yes because the size of the subsequent market order is observable 
+12:271:24241:27:27:72:544:596:144:g_d0_f5:144:g_d0_f5:and its endogeneity has been assumed away.  If there were at least two investors with different 
+12:272:24337:27:27:72:544:569:144:g_d0_f5:144:g_d0_f5:shadow  prices  for  some  non-traded  claim  for  q*  shares,  some  investor  could  earn  an  arbitrage  
+12:273:24445:27:27:72:543:542:144:g_d0_f5:144:g_d0_f5:profit by buying a claim that pays $1 when the next market order is for q* shares from the low 
+12:274:24540:27:27:72:543:515:144:g_d0_f5:144:g_d0_f5:valuation investor and selling it to the high valuation investor.  Such riskless profit opportunities 
+12:275:24642:27:28:72:544:488:144:g_d0_f5:144:g_d0_f5:will  not  arise  if  this  betting  market  is  arbitrage-free.    Accordingly,  it  is  natural  to  assume  that  
+12:276:24759:28:32:72:545:460:144:g_d0_f5:144:g_d0_f5:state  prices  tt{(),}ψ∈Qqq  are  unique  because  the  menu  of  claims  that  will  be  offered  in  
+12:277:24862:32:30:71:543:428:144:g_d0_f5:144:g_d0_f5:arbitrage-free betting markets spans tQ.  The analogue in the actual limit order market is that its 
+12:278:24962:30:27:72:543:398:144:g_d0_f5:144:g_d0_f5:book  should  have  orders  posted  at  all  feasible  trade  sizes,  a  prediction  clearly  at  variance  with  
+12:279:25076:27:27:72:291:371:144:g_d0_f5:144:g_d0_f5:the evidence from actual limit order markets. 
+12:280:25122:27:27:108:543:344:144:g_d0_f5:144:g_d0_f5:In any event, the question at hand is whether these state prices can be used to value limit 
+12:281:25214:27:27:72:543:317:144:g_d0_f5:144:g_d0_f5:orders.  What is missing is Vt(q), the value of the asset if a market order of size q arrives at time 
+12:282:25316:27:27:72:543:290:144:g_d0_f5:144:g_d0_f5:t.  If Vt(q)  is  common  knowledge  among  market  participants  and  the  state  prices  in  the  betting  
+12:283:25425:27:27:72:544:263:144:g_d0_f5:144:g_d0_f5:and  limit  order  markets  are  identical,  the  value  of  a  claim  to  a  share  in  order  flow  state  q  is  
+12:284:25541:27:27:72:544:236:144:g_d0_f5:144:g_d0_f5:simply ψt(q)Vt(q).    The  existence  of  such  values  crops  up  in  the  analysis  of  generic  financial  
+12:285:25651:27:27:72:543:209:144:g_d0_f5:144:g_d0_f5:markets in the definition of states of nature: the typical assumption is that there is a deterministic 
+12:286:25754:27:36:72:545:182:144:g_d0_f5:144:g_d0_f5:mapping  between  cash  flows  and  asset  values  on  the  one  hand  and  their  associated  states  of  
+12:287:25861:36:10:72:542:146:144:g_d0_f5:144:g_d0_f5:                                                                                                                                                             
+12:288:26017:10:17:72:543:136:64:g_d0_f5:144:g_d0_f5:4 Agreement on the possible is necessary for equilibrium to exist in frictionless markets because 
+12:289:26115:17:13:71:544:119:144:g_d0_f5:144:g_d0_f5:any market participant who believed a given state is impossible will be happy to sell an infinite 
+12:290:26213:13:12:71:269:106:144:g_d0_f5:144:g_d0_f5:quantity of bets that pay off in that state. 
+12:291:26258:12:20:72:544:94:64:g_d0_f5:144:g_d0_f5:5  Spanning  isn’t  necessary  since  order  flow  is  a  non-price  state  variable  and  tQ  can  simply  be  
+12:292:26370:20:0:72:486:74:144:g_d0_f5:144:g_d0_f5:defined to be the set of trade sizes offered, which is trivially spanned by construction. 
+13:293:26462:0:27:72:543:709:144:g_d0_f5:144:g_d0_f5:nature on the other.  The problem in the present setting, of course, is that there is no observable 
+13:294:26562:27:27:72:543:682:144:g_d0_f5:144:g_d0_f5:mapping between the value of the asset being traded and order flow states.  The absence of such 
+13:295:26658:27:27:72:544:655:144:g_d0_f5:144:g_d0_f5:a mapping motivates Assumption 2 of Glosten (1994):  the existence of a function Vt(q) that is 
+13:296:26753:27:27:72:545:628:144:g_d0_f5:144:g_d0_f5:both  nondecreasing  in  q  and  common  knowledge  among  market  participants,  although  I  will  
+13:297:26854:27:27:72:291:601:144:g_d0_f5:144:g_d0_f5:assume it is strictly increasing for simplicity. 
+13:298:26903:27:27:108:544:574:144:g_d0_f5:144:g_d0_f5:Limit  order  valuation  is  straightforward  when  state  prices  from  the  betting  market  are  
+13:299:27003:27:27:72:545:547:144:g_d0_f5:144:g_d0_f5:identical  to  those  implicit  in  the  book.    Consider  a  market  buy  order  since  the  sell  side  is  
+13:300:27114:27:27:72:543:520:144:g_d0_f5:144:g_d0_f5:symmetric.  The digital option implicit in the corresponding limit sell order pays Pt(q) when Qt > 
+13:301:27213:27:27:72:543:493:144:g_d0_f6:144:g_d0_f5:q.  The implicit digital share value is given by the value of a claim to a share in each order flow 
+13:302:27313:27:27:72:543:466:144:g_d0_f5:144:g_d0_f5:state integrated over order flow states.  Since the values of the implicit digital option and digital 
+13:303:27415:27:34:72:151:439:144:g_d0_f5:144:g_d0_f5:share are equal: 
+13:304:27432:34:0:72:513:405:144:g_d0_f5:152:g_d0_f8: tttt1utt1ttttE[1   P()|]  E[  1    V(u)du|]   P()(u)du(u)V(u)duψψψψ
+13:305:27499:0:13:238:588:415:48:g_d0_f8:48:g_d0_f8:∞∞∞
+13:306:27502:13:32:139:546:402:48:g_d0_f8:144:g_d0_f5:≥−=    −=⇒=∫∫∫QqQqqqqqFF  (1)  
+13:307:27533:32:43:71:204:370:144:g_d0_f5:144:g_d0_f5:the limit price is given by:  
+13:308:27563:43:14:71:429:327:144:g_d0_f5:25:g_d0_f5: t
+13:309:27564:14:0:412:413:313:25:g_d0_f5:25:g_d0_f5:t
+13:310:27565:0:13:173:167:337:48:g_d0_f5:48:g_d0_f5:ttttQqt1uq
+13:311:27575:13:9:115:503:324:48:g_d0_f5:48:g_d0_f5:ttttt1
+13:312:27581:9:0:406:181:315:48:g_d0_f5:48:g_d0_f5:Qqt1tuq
+13:313:27588:0:13:176:474:340:144:g_d0_f5:144:g_d0_f5:(u)V (u)duE[V(  )1|]
+13:314:27608:13:9:109:359:327:144:g_d0_f5:144:g_d0_f5:P(q)E [V(   )|q,]
+13:315:27625:9:0:384:218:318:144:g_d0_f5:144:g_d0_f5:E[1|](u)du
+13:316:27635:0:9:375:380:333:51:g_d0_f8:51:g_d0_f8:ψ
+13:317:27636:9:9:251:256:324:51:g_d0_f8:51:g_d0_f8:ψ
+13:318:27637:9:0:391:396:315:51:g_d0_f8:51:g_d0_f8:ψ
+13:319:27638:0:24:163:171:340:152:g_d0_f8:152:g_d0_f8:ψ
+13:320:27639:24:0:177:185:316:152:g_d0_f8:152:g_d0_f8:ψ
+13:321:27640:0:9:431:160:333:48:g_d0_f8:48:g_d0_f8:≥−≥
+13:322:27643:9:9:343:347:324:48:g_d0_f8:48:g_d0_f8:−
+13:323:27644:9:0:415:173:315:48:g_d0_f8:48:g_d0_f8:≥−≥
+13:324:27647:0:0:136:455:327:144:g_d0_f8:144:g_d0_f8:=≡≥≡
+13:325:27651:0:23:147:152:335:324:g_d0_f8:324:g_d0_f8:∫
+13:326:27652:23:0:160:165:312:324:g_d0_f8:324:g_d0_f8:∫
+13:327:27653:0:10:448:456:337:144:g_d0_f9:144:g_d0_f9:F
+13:328:27654:10:9:335:343:327:144:g_d0_f9:144:g_d0_f9:F
+13:329:27655:9:0:432:440:318:144:g_d0_f9:144:g_d0_f9:F
+13:330:27656:0:10:402:411:337:144:g_d0_f6:144:g_d0_f6:Q
+13:331:27657:10:45:277:595:327:144:g_d0_f6:144:g_d0_f5:QQ                  (2)                  
+13:332:27698:45:27:71:516:282:144:g_d0_f5:144:g_d0_f5:which is the risk neutral analogue of the upper tail expectation formula in Glosten (1994).6   
+13:333:27793:27:27:107:543:255:144:g_d0_f5:144:g_d0_f5:The only remaining question is whether state prices from the betting market are identical 
+13:334:27883:27:11:71:219:228:144:g_d0_f5:144:g_d0_f5:                                                 
+13:335:27931:11:16:72:543:217:64:g_d0_f5:144:g_d0_f5:6  As  Glosten  emphasizes,  the  fact  that  it  is  an  upper  tail  expectation  reflects  the  discriminatory  
+13:336:28046:16:14:71:545:201:144:g_d0_f5:144:g_d0_f5:nature  of  the  limit  order  book.    As  (2)  clearly  shows,  this  observation  is  independent  of  the  
+13:337:28157:14:18:71:555:187:144:g_d0_f5:144:g_d0_f5:probabilities     used     in     the     calculation.          In     contrast,     the     conditional     mean     
+13:338:28275:18:14:79:544:169:49:g_d0_f5:145:g_d0_f5:ttttt1P( )=E [V(   )|,]ψ−=qQQqF  is  the  limit  order  schedule  in  a  nondiscriminatory  book.  Most  
+13:339:28380:14:14:72:543:155:145:g_d0_f5:145:g_d0_f5:limit order markets open with a single price auction in which all market orders are consolidated 
+13:340:28477:14:13:72:543:141:145:g_d0_f5:145:g_d0_f5:into an aggregate net order and executed against the book at the same price.  As noted above, this 
+13:341:28576:13:14:72:544:128:145:g_d0_f5:145:g_d0_f5:price  can  be  treated  as  the  “liquidating”  asset  value  embedded  in  the  expectations  Vt(q).    Note  
+13:342:28688:14:13:72:543:114:145:g_d0_f5:145:g_d0_f5:also  that  these  single  price  auctions  are  isomorphic  to  the  batch  auctions  studied  by  Huberman  
+13:343:28798:13:0:72:543:101:145:g_d0_f5:145:g_d0_f5:and Stanzl (2004).  It may be possible use their results to place restrictions on the “terminal asset 
+14:344:28902:0:27:72:543:709:145:g_d0_f5:145:g_d0_f5:to those implicit in the book.  This brings us to the third basic problem with the betting market 
+14:345:29000:27:27:72:543:682:145:g_d0_f5:145:g_d0_f5:analogy:  the absence of short sales restrictions.  In a betting market, all gambles are in zero net 
+14:346:29101:27:27:71:543:655:145:g_d0_f5:145:g_d0_f5:supply and, thus, there are obviously no short sales restrictions.  However, the limit order market 
+14:347:29201:27:27:72:546:628:145:g_d0_f5:145:g_d0_f5:permits no short selling of limit orders and so the frictionless markets assumption cannot apply.  
+14:348:29300:27:27:71:543:601:145:g_d0_f5:145:g_d0_f5:Since state prices implicit in the book are given by bull spreads in the relevant  limit orders, this 
+14:349:29402:27:27:71:543:574:145:g_d0_f5:145:g_d0_f5:absence  of  short  sales  in  the  limit  order  book  would  appear  to  be  an  insuperable  barrier  to  the  
+14:350:29516:27:27:71:275:547:145:g_d0_f5:145:g_d0_f5:application of the betting market analogy. 
+14:351:29559:27:27:108:542:520:145:g_d0_f5:145:g_d0_f5:The way out of this conundrum is to recall that a zero net investment portfolio always has 
+14:352:29650:27:27:71:543:493:145:g_d0_f5:145:g_d0_f5:two interpretations.  The standard one is as an arbitrage portfolio in which any long positions are 
+14:353:29750:27:27:71:543:466:145:g_d0_f5:145:g_d0_f5:financed by short positions.  However, a zero net investment portfolio also represents a feasible 
+14:354:29848:27:27:71:543:439:145:g_d0_f5:145:g_d0_f5:change in an existing portfolio with no short positions in which security purchases are financed 
+14:355:29945:27:27:71:544:412:145:g_d0_f5:145:g_d0_f5:by  security  sales.    A  feasible  change  is  one  in  which  none  of  the  asset  sales  is  so  large  as  to  
+14:356:30062:27:27:71:544:385:145:g_d0_f5:145:g_d0_f5:create  a  short  position  in  any  asset  and  an  arbitrage  portfolio  can  always  be  scaled  so  that  no  
+14:357:30176:27:27:71:364:358:145:g_d0_f5:145:g_d0_f5:long position is exhausted in the absence of indivisibilities.   
+14:358:30241:27:27:108:543:331:145:g_d0_f5:145:g_d0_f5:It is this second interpretation that is the right one to apply in this context.  A limit order 
+14:359:30337:27:27:72:544:304:145:g_d0_f5:145:g_d0_f5:trader  can  always  contemplate  a  swap  of  all  or  part  of  an  existing  limit  order  for  another  at  a  
+14:360:30452:27:27:72:543:277:145:g_d0_f5:145:g_d0_f5:different price point or, for that matter, for none at all.  If one limit order trader with no private 
+14:361:30555:27:27:72:543:250:145:g_d0_f5:145:g_d0_f5:information  perceives  that  a  limit  order  is  mispriced, all such traders will cancel their orders at 
+14:362:30662:27:27:72:545:223:145:g_d0_f5:145:g_d0_f5:this  price  point  if  it  is  overpriced  and  they  will  submit  new  orders  at  this  price  point  if  it  is  
+14:363:30780:27:27:72:544:196:145:g_d0_f5:145:g_d0_f5:underpriced.    Limit  order  substitution  by  sufficiently  many  patient  or  value  traders  is  a  perfect  
+14:364:30893:27:27:72:353:169:145:g_d0_f5:145:g_d0_f5:substitute for explicit arbitrage in these circumstances.7     
+14:365:30956:27:14:72:542:142:145:g_d0_f5:145:g_d0_f5:                                                                                                                                                             
+14:366:31112:14:13:71:548:128:145:g_d0_f5:145:g_d0_f5:values”   determined   in   opening   call   auctions   which   might,   in   turn,   deliver   additional   
+14:367:31221:13:11:71:449:115:145:g_d0_f5:145:g_d0_f5:intertemporal restrictions on order flow state prices.  See the end of Section 4. 
+14:368:31303:11:16:72:544:104:64:g_d0_f5:145:g_d0_f5:7  This  version  of  the  Fundamental  Theorem  of  Asset  Pricing  corresponds  to  one  in  which  the  
+14:369:31410:16:14:72:539:88:145:g_d0_f5:145:g_d0_f5:portfolio   choice   problem   of   an   investor   with   (possibly   state   dependent)   von   Neumann-
+14:370:31516:14:0:72:546:74:145:g_d0_f5:145:g_d0_f5:Morgenstern  preferences  will  not  have  an  interior  maximum  if  arbitrage  opportunities  are  
+15:371:31619:0:27:107:545:709:145:g_d0_f5:145:g_d0_f5:The  mathematics  of  risk  neutral  upper  tail  expectations  naturally  dovetails  with  the  
+15:372:31716:27:27:72:543:682:145:g_d0_f5:145:g_d0_f5:observation that bull spreads in limit orders reveal the associated implicit state prices.  The slope 
+15:373:31818:27:35:72:478:655:145:g_d0_f5:145:g_d0_f5:of the limit order book at q is proportional to the risk neutral probability ψt(q) since: 
+15:374:31908:35:17:72:292:620:145:g_d0_f5:48:g_d0_f5: tttt tt
+15:375:31915:17:0:308:310:603:48:g_d0_f5:48:g_d0_f5:t
+15:376:31916:0:7:311:333:627:144:g_d0_f5:144:g_d0_f5:()
+15:377:31918:7:14:109:274:620:144:g_d0_f5:144:g_d0_f5:P (  )(  )[P (  )    V (  )];     (  )
+15:378:31956:14:0:312:340:606:144:g_d0_f5:144:g_d0_f5:(u)du
+15:379:31961:0:7:298:306:627:152:g_d0_f8:152:g_d0_f8:ψ
+15:380:31962:7:14:146:352:620:152:g_d0_f8:152:g_d0_f8:λλ
+15:381:31964:14:0:298:306:606:152:g_d0_f8:152:g_d0_f8:ψ
+15:382:31965:0:14:293:341:616:48:g_d0_f8:144:g_d0_f8:∞′=− =
+15:383:31971:14:0:287:295:602:323:g_d0_f8:48:g_d0_f6:∫q
+15:384:31973:0:7:316:322:627:144:g_d0_f6:144:g_d0_f6:q
+15:385:31974:7:49:123:724:620:144:g_d0_f6:145:g_d0_f5:qqqqq                                                             (3)                                                             
+15:386:32104:49:28:71:542:571:145:g_d0_f5:145:g_d0_f5:by Leibniz’s rule where λt(q) is the hazard function familiar from survival analysis. Accordingly, 
+15:387:32203:28:30:71:544:543:145:g_d0_f5:145:g_d0_f5:the  risk  neutral  probabilities  implicit  in  Pt(q)  can  be  extracted  from  tP( )′q  given  Vt(q)  via  the  
+15:388:32318:30:34:71:127:513:145:g_d0_f5:145:g_d0_f5:recursion:8 
+15:389:32329:34:0:72:209:479:145:g_d0_f5:324:g_d0_f8: {}ttt()()exp(u)duψλλ=−∫
+15:390:32352:0:16:211:214:488:48:g_d0_f6:48:g_d0_f6:q
+15:391:32353:16:0:209:212:472:48:g_d0_f6:48:g_d0_f6:0
+15:392:32354:0:38:125:805:479:145:g_d0_f6:145:g_d0_f5:qq                                                                                        (4)                                                                                        
+15:393:32535:38:30:72:467:441:145:g_d0_f5:145:g_d0_f5:Of course, Vt(q) can be uncovered from tP( )′q given λt(q) and, thus, ψt(q) as well. 
+15:394:32620:30:27:108:542:411:145:g_d0_f5:145:g_d0_f5:There is one state that cannot be valued by limit order substitution alone:  the null “trade” 
+15:395:32714:27:27:71:544:384:145:g_d0_f6:145:g_d0_f5:Qt  =  0  that  corresponds  to  changes  in  the  state  of  the  book  that  arise  when  non-trade-related  
+15:396:32825:27:27:72:544:357:145:g_d0_f5:145:g_d0_f5:information  arrives  in  the  market.    Recall  that  limit  orders  were  predetermined  with  respect  to  
+15:397:32936:27:27:72:545:330:145:g_d0_f5:145:g_d0_f5:market  orders  conditional  on  public  information  by  assumption  through  the  tatônnement-like  
+15:398:33038:27:27:72:543:303:145:g_d0_f5:145:g_d0_f5:process by which traders could freely cancel and replace their limit orders before the next market 
+15:399:33137:27:28:72:539:276:145:g_d0_f5:145:g_d0_f5:order arrived.  In this model, limit order traders can revise their limit orders in light of any non-
+15:400:33238:28:31:72:498:248:145:g_d0_f5:145:g_d0_f5:trade-related information as well before exposing them to a market order when t0∈Q.   
+15:401:33324:31:13:72:542:217:145:g_d0_f5:145:g_d0_f5:                                                                                                                                                             
+15:402:33480:13:14:71:543:204:145:g_d0_f5:145:g_d0_f5:present.  Alternatively, optimizing behavior on the part of market order traders along the lines of 
+15:403:33580:14:13:71:545:190:145:g_d0_f5:145:g_d0_f5:Assumption  1  of  Glosten  (1994)  along  with  uninformed  risk  neutral  limit  order  traders  is  
+15:404:33683:13:11:71:159:177:145:g_d0_f5:145:g_d0_f5:sufficient as well. 
+15:405:33703:11:33:72:447:166:64:g_d0_f5:145:g_d0_f5:8 After making the relevant substitutions, the discrete version of this formula: 
+15:406:33784:33:0:71:74:133:145:g_d0_f5:145:g_d0_f5: 
+15:407:33784:0:12:206:205:142:70:g_d0_f5:70:g_d0_f5:tj  tjtkjk1
+15:408:33795:12:8:117:355:130:70:g_d0_f5:70:g_d0_f5:tkt jj1
+15:409:33802:8:0:202:277:122:70:g_d0_f5:70:g_d0_f5:tktk
+15:410:33806:0:11:210:320:144:144:g_d0_f5:144:g_d0_f5:()[V() P( )]
+15:411:33818:11:9:121:413:133:144:g_d0_f5:144:g_d0_f5:();           () 1
+15:412:33836:9:0:196:275:124:144:g_d0_f5:144:g_d0_f5:P(   )   V(   )
+15:413:33851:0:11:215:325:144:144:g_d0_f6:144:g_d0_f6:qq  q
+15:414:33856:11:9:125:607:133:144:g_d0_f6:144:g_d0_f6:qq
+15:415:33858:9:0:210:301:124:144:g_d0_f6:144:g_d0_f6:qq
+15:416:33860:0:11:199:207:144:144:g_d0_f14:144:g_d0_f14:ψ
+15:417:33861:11:0:109:591:133:144:g_d0_f14:144:g_d0_f14:ψψ
+15:418:33863:0:12:173:181:152:70:g_d0_f15:70:g_d0_f15:∞
+15:419:33864:12:13:336:200:140:70:g_d0_f15:70:g_d0_f15:∞=+
+15:420:33867:13:0:339:346:127:70:g_d0_f15:70:g_d0_f15:=
+15:421:33868:0:11:265:274:144:144:g_d0_f15:144:g_d0_f15:−
+15:422:33869:11:9:144:622:133:144:g_d0_f15:144:g_d0_f15:==
+15:423:33871:9:0:228:237:124:144:g_d0_f15:144:g_d0_f15:−
+15:424:33872:0:12:157:172:142:324:g_d0_f15:324:g_d0_f15:∑
+15:425:33873:12:21:320:405:130:324:g_d0_f15:145:g_d0_f5:∑ 
+15:426:33874:21:14:71:543:109:145:g_d0_f5:145:g_d0_f5:is identical to equation 5 of Banz and Miller (1978) with the option price set to zero, Pt(q) equal 
+15:427:33974:14:0:72:543:95:145:g_d0_f5:145:g_d0_f5:to the underlying asset price, and Vt(q) equal to the strike price.  The formal similarity ends there 
+16:428:34078:0:27:107:543:709:145:g_d0_f5:145:g_d0_f5:The analogue in the betting market is a provision for the cancellation of all existing bets 
+16:429:34170:27:27:71:544:682:145:g_d0_f5:145:g_d0_f5:when  the  null  “trade”  arrives.    The  wagers  on  this  revised  claim  are  refunded  to  all  market  
+16:430:34279:27:27:71:544:655:145:g_d0_f5:145:g_d0_f5:participants  and  new  bets  are  placed,  which  results  in  the  discovery  of  new  order  flow  state  
+16:431:34388:27:29:71:545:628:145:g_d0_f5:145:g_d0_f5:prices  during  the  tatônnement-like  process.    That  is,  these  bets  are  not  pure  Arrow-Debreu  
+16:432:34493:29:31:71:544:599:145:g_d0_f5:145:g_d0_f5:securities  because  they  pay  a  dollar  if  state  t∈qQ  occurs,  zero  if  a  market  order  for  any  other  
+16:433:34607:31:30:72:544:568:145:g_d0_f5:145:g_d0_f5:size Qt ≠  0  arrives,  and  t()φ−q  if  Qt  =  0,  where  t1()0φ>>q  is  the  initial  price  paid  for  this  
+16:434:34718:30:27:72:114:538:145:g_d0_f5:145:g_d0_f5:claim.9   
+16:435:34728:27:27:108:543:511:145:g_d0_f5:145:g_d0_f5:It is a straightforward matter to construct pure contingent claims by augmenting the asset 
+16:436:34819:27:27:72:543:484:145:g_d0_f5:145:g_d0_f5:menu – that is, the set of trade size bets – with one additional claim:  a savings account that pays 
+16:437:34920:27:35:72:544:457:145:g_d0_f5:145:g_d0_f5:a  dollar  irrespective  of  order  flow  outcomes  since  the  interest  rate  has  been  normalized  to  be  
+16:438:35031:35:16:72:329:422:145:g_d0_f5:145:g_d0_f5:zero.    For  each  q ≠  0,  a  portfolio  that  is  long  
+16:439:35089:16:0:380:381:406:25:g_d0_f5:25:g_d0_f5:t
+16:440:35090:0:18:379:381:426:48:g_d0_f5:48:g_d0_f5:t
+16:441:35091:18:8:391:393:408:48:g_d0_f5:48:g_d0_f5:t
+16:442:35092:8:0:375:378:400:48:g_d0_f5:48:g_d0_f5:0
+16:443:35093:0:8:382:404:429:144:g_d0_f5:144:g_d0_f5:()
+16:444:35095:8:10:329:335:421:144:g_d0_f5:144:g_d0_f5:1
+16:445:35096:10:0:346:466:411:144:g_d0_f5:144:g_d0_f5:1(u)du
+16:446:35102:0:18:371:378:429:152:g_d0_f8:152:g_d0_f8:φ
+16:447:35103:18:11:383:375:411:152:g_d0_f8:48:g_d0_f8:φ∈
+16:448:35105:11:0:371:375:400:48:g_d0_f8:48:g_d0_f8:≠
+16:449:35106:0:10:337:344:421:144:g_d0_f8:144:g_d0_f8:−
+16:450:35107:10:11:353:370:411:144:g_d0_f8:48:g_d0_f6:+∫u
+16:451:35110:11:0:367:370:400:48:g_d0_f6:48:g_d0_f6:u
+16:452:35111:0:21:387:393:429:144:g_d0_f6:144:g_d0_f6:q
+16:453:35112:21:0:375:380:408:48:g_d0_f12:48:g_d0_f12:Q
+16:454:35113:0:74:426:549:422:145:g_d0_f5:145:g_d0_f5:  units  of  bet  q,  short    
+16:455:35144:74:0:108:109:348:25:g_d0_f5:25:g_d0_f5:t
+16:456:35145:0:19:106:108:369:48:g_d0_f5:48:g_d0_f5:t
+16:457:35146:19:7:119:121:350:48:g_d0_f5:48:g_d0_f5:t
+16:458:35147:7:0:103:106:343:48:g_d0_f5:48:g_d0_f5:0
+16:459:35148:0:19:110:132:372:143:g_d0_f5:143:g_d0_f5:()
+16:460:35150:19:0:73:193:353:143:g_d0_f5:143:g_d0_f5:1(u)du
+16:461:35156:0:19:98:105:372:152:g_d0_f8:152:g_d0_f8:φ
+16:462:35157:19:10:111:103:353:152:g_d0_f8:48:g_d0_f8:φ∈
+16:463:35159:10:0:98:102:343:48:g_d0_f8:48:g_d0_f8:≠
+16:464:35160:0:10:80:97:353:143:g_d0_f8:48:g_d0_f6:+∫u
+16:465:35163:10:0:94:97:343:48:g_d0_f6:48:g_d0_f6:u
+16:466:35164:0:22:115:121:372:143:g_d0_f6:143:g_d0_f6:q
+16:467:35165:22:0:102:107:350:48:g_d0_f12:48:g_d0_f12:Q
+16:468:35166:0:16:154:319:364:145:g_d0_f5:145:g_d0_f5: units of each bet u ≠ q, and long 
+16:469:35199:16:0:356:357:348:25:g_d0_f5:25:g_d0_f5:t
+16:470:35200:0:19:354:356:369:48:g_d0_f5:48:g_d0_f5:t
+16:471:35201:19:7:367:369:350:48:g_d0_f5:48:g_d0_f5:t
+16:472:35202:7:0:351:354:343:48:g_d0_f5:48:g_d0_f5:0
+16:473:35203:0:19:358:380:372:143:g_d0_f5:143:g_d0_f5:()
+16:474:35205:19:0:321:441:353:143:g_d0_f5:143:g_d0_f5:1(u)du
+16:475:35211:0:19:346:353:372:152:g_d0_f8:152:g_d0_f8:φ
+16:476:35212:19:10:359:351:353:152:g_d0_f8:48:g_d0_f8:φ∈
+16:477:35214:10:0:346:350:343:48:g_d0_f8:48:g_d0_f8:≠
+16:478:35215:0:10:328:345:353:143:g_d0_f8:48:g_d0_f6:+∫u
+16:479:35218:10:0:342:345:343:48:g_d0_f6:48:g_d0_f6:u
+16:480:35219:0:22:363:369:372:143:g_d0_f6:143:g_d0_f6:q
+16:481:35220:22:0:350:355:350:48:g_d0_f12:48:g_d0_f12:Q
+16:482:35221:0:49:402:543:364:145:g_d0_f5:145:g_d0_f5: units of the riskless savings 
+16:483:35252:49:60:71:543:315:145:g_d0_f5:145:g_d0_f5:account  pays  one  dollar  in  state  q ≠  0  and  zero  otherwise.10    Similarly,  a  portfolio  that  is  short  
+16:484:35368:60:14:72:542:255:145:g_d0_f5:145:g_d0_f5:                                                                                                                                                             
+16:485:35524:14:13:71:543:241:145:g_d0_f5:145:g_d0_f5:as Banz and Miller are not concerned with bull and bear spreads in digital options as opposed to 
+16:486:35621:13:11:71:522:228:145:g_d0_f5:145:g_d0_f5:Breeden and Litzenberger (1978), who (implicitly) construct state prices from such spreads.   
+16:487:35715:11:18:72:546:217:64:g_d0_f5:145:g_d0_f5:9  Of  course,  the  bets  could  have  been  designed  so  that  there  was  no  need  to  refund  the  wager.    
+16:488:35830:18:16:71:543:199:145:g_d0_f5:145:g_d0_f5:That is, bets that pay t1()ψ−q if state t∈qQ occurs, t()ψ−q if a market order for any other size 
+16:489:35927:16:15:72:543:183:145:g_d0_f6:145:g_d0_f5:Qt ≠ 0 arrives, and nothing if Qt = 0 have no up-front costs and, hence, require no refunds if the 
+16:490:36025:15:17:72:547:168:145:g_d0_f5:145:g_d0_f5:expected  risk  neutral  payoff  is  zero  as  in  tttt()[1()] [1()][    ()] 0ψψψψ−+−    −   =qqqq.    The  
+16:491:36133:17:15:71:543:151:145:g_d0_f5:145:g_d0_f5:formulation in the text has the virtue of showing how the valuation of Arrow-Debreu securities 
+16:492:36228:15:21:71:499:136:145:g_d0_f5:145:g_d0_f5:for all of tQ save for 0 – that is, t\0∈qQ – is affected by the presence of the null trade. 
+16:493:36320:21:16:72:462:115:64:g_d0_f5:145:g_d0_f5:10 This portfolio can be formed by any limit order trader who is long more than 
+16:494:36400:16:0:507:508:99:25:g_d0_f5:25:g_d0_f5:t
+16:495:36401:0:17:494:496:116:48:g_d0_f5:48:g_d0_f5:t
+16:496:36402:17:0:518:504:99:48:g_d0_f5:48:g_d0_f5:t0
+16:497:36404:0:17:498:520:119:143:g_d0_f5:143:g_d0_f5:()
+16:498:36406:17:0:463:588:102:143:g_d0_f5:143:g_d0_f5:1()
+16:499:36409:0:17:486:493:119:152:g_d0_f8:152:g_d0_f8:φ
+16:500:36410:17:9:510:501:102:152:g_d0_f8:48:g_d0_f8:φ∈
+16:501:36412:9:0:497:501:93:48:g_d0_f8:48:g_d0_f8:≠
+16:502:36413:0:9:470:496:102:144:g_d0_f8:48:g_d0_f6:+∑u
+16:503:36416:9:0:493:496:93:48:g_d0_f6:48:g_d0_f6:u
+16:504:36417:0:17:503:509:119:143:g_d0_f6:143:g_d0_f6:q
+16:505:36418:17:0:526:506:102:143:g_d0_f6:48:g_d0_f12:uQ
+16:506:36420:0:34:539:542:112:145:g_d0_f5:145:g_d0_f5: 
+16:507:36420:34:0:71:542:78:145:g_d0_f5:145:g_d0_f5:units of each bet. Since t() 1φ<q, one unit of the qth bet suffices in the absence of indivisibilities. 
+17:508:36526:0:0:117:114:688:25:g_d0_f5:48:g_d0_f5:tt0
+17:509:36529:0:17:107:113:708:143:g_d0_f5:143:g_d0_f5:1
+17:510:36530:17:9:73:111:691:143:g_d0_f5:48:g_d0_f8:1()φ∈
+17:511:36535:9:0:107:111:682:48:g_d0_f8:48:g_d0_f8:≠
+17:512:36536:0:9:80:106:691:144:g_d0_f8:48:g_d0_f6:+∑u
+17:513:36539:9:0:103:106:682:48:g_d0_f6:48:g_d0_f6:u
+17:514:36540:0:0:136:116:691:143:g_d0_f6:48:g_d0_f12:uQ
+17:515:36542:0:13:150:312:701:145:g_d0_f5:145:g_d0_f5:  units  of  each  bet  q  and  long  
+17:516:36580:13:0:357:355:688:25:g_d0_f5:48:g_d0_f5:tt0
+17:517:36583:0:17:347:353:708:143:g_d0_f5:143:g_d0_f5:1
+17:518:36584:17:9:313:352:691:143:g_d0_f5:48:g_d0_f8:1()φ∈
+17:519:36589:9:0:347:351:682:48:g_d0_f8:48:g_d0_f8:≠
+17:520:36590:0:9:321:346:691:144:g_d0_f8:48:g_d0_f6:+∑u
+17:521:36593:9:0:343:346:682:48:g_d0_f6:48:g_d0_f6:u
+17:522:36594:0:0:376:356:691:143:g_d0_f6:48:g_d0_f12:uQ
+17:523:36596:0:47:390:546:701:145:g_d0_f5:145:g_d0_f5:  units  of  the  riskless  savings  
+17:524:36633:47:27:71:543:654:145:g_d0_f5:145:g_d0_f5:account will yield a dollar when q = 0 and zero otherwise.  Hence, state prices are given by the 
+17:525:36730:27:70:71:197:627:145:g_d0_f5:145:g_d0_f5:prices of these portfolios: 
+17:526:36758:70:0:71:74:557:145:g_d0_f5:145:g_d0_f5: 
+17:527:36758:0:30:209:210:576:25:g_d0_f5:25:g_d0_f5:t
+17:528:36759:30:27:182:183:546:25:g_d0_f5:25:g_d0_f5:t
+17:529:36760:27:0:182:183:519:25:g_d0_f5:25:g_d0_f5:t
+17:530:36761:0:11:117:192:589:48:g_d0_f5:48:g_d0_f5:tt
+17:531:36763:11:7:221:223:578:48:g_d0_f5:48:g_d0_f5:t
+17:532:36764:7:23:204:207:571:48:g_d0_f5:48:g_d0_f5:0
+17:533:36765:23:7:193:195:548:48:g_d0_f5:48:g_d0_f5:t
+17:534:36766:7:10:176:179:541:48:g_d0_f5:48:g_d0_f5:0
+17:535:36767:10:11:117:119:531:48:g_d0_f5:48:g_d0_f5:t
+17:536:36768:11:7:193:195:520:48:g_d0_f5:48:g_d0_f5:t
+17:537:36769:7:0:176:179:513:48:g_d0_f5:48:g_d0_f5:0
+17:538:36770:0:7:211:217:599:145:g_d0_f5:145:g_d0_f5:2
+17:539:36771:7:11:121:181:592:145:g_d0_f5:145:g_d0_f5:()()
+17:540:36775:11:30:175:295:581:145:g_d0_f5:145:g_d0_f5:1(u)du
+17:541:36781:30:17:147:267:551:145:g_d0_f5:145:g_d0_f5:1(u)du
+17:542:36787:17:10:121:136:534:145:g_d0_f5:145:g_d0_f5:(0)
+17:543:36790:10:0:147:267:524:145:g_d0_f5:145:g_d0_f5:1(u)du
+17:544:36796:0:11:107:154:592:152:g_d0_f8:152:g_d0_f8:ψφ
+17:545:36798:11:30:212:219:581:152:g_d0_f8:152:g_d0_f8:φ
+17:546:36799:30:17:185:192:551:152:g_d0_f8:152:g_d0_f8:φ
+17:547:36800:17:10:107:115:534:152:g_d0_f8:152:g_d0_f8:ψ
+17:548:36801:10:0:185:192:524:152:g_d0_f8:152:g_d0_f8:φ
+17:549:36802:0:7:199:204:578:48:g_d0_f8:48:g_d0_f8:∈
+17:550:36803:7:23:200:204:571:48:g_d0_f8:48:g_d0_f8:≠
+17:551:36804:23:7:171:176:548:48:g_d0_f8:48:g_d0_f8:∈
+17:552:36805:7:21:172:176:541:48:g_d0_f8:48:g_d0_f8:≠
+17:553:36806:21:7:171:176:520:48:g_d0_f8:48:g_d0_f8:∈
+17:554:36807:7:0:172:176:513:48:g_d0_f8:48:g_d0_f8:≠
+17:555:36808:0:11:138:145:592:145:g_d0_f8:145:g_d0_f8:=
+17:556:36809:11:30:182:189:581:145:g_d0_f8:145:g_d0_f8:+
+17:557:36810:30:17:154:161:551:145:g_d0_f8:145:g_d0_f8:−
+17:558:36811:17:10:138:145:534:145:g_d0_f8:145:g_d0_f8:=
+17:559:36812:10:0:154:161:524:145:g_d0_f8:145:g_d0_f8:+
+17:560:36813:0:30:191:196:577:324:g_d0_f8:324:g_d0_f8:∫
+17:561:36814:30:28:163:168:547:324:g_d0_f8:324:g_d0_f8:∫
+17:562:36815:28:0:164:169:519:324:g_d0_f8:324:g_d0_f8:∫
+17:563:36816:0:7:196:199:578:48:g_d0_f6:48:g_d0_f6:u
+17:564:36817:7:23:196:199:571:48:g_d0_f6:48:g_d0_f6:u
+17:565:36818:23:7:168:171:548:48:g_d0_f6:48:g_d0_f6:u
+17:566:36819:7:21:168:171:541:48:g_d0_f6:48:g_d0_f6:u
+17:567:36820:21:7:168:171:520:48:g_d0_f6:48:g_d0_f6:u
+17:568:36821:7:0:168:171:513:48:g_d0_f6:48:g_d0_f6:u
+17:569:36822:0:14:125:200:592:145:g_d0_f6:145:g_d0_f6:qq
+17:570:36824:14:30:204:209:578:48:g_d0_f12:48:g_d0_f12:Q
+17:571:36825:30:28:176:181:548:48:g_d0_f12:48:g_d0_f12:Q
+17:572:36826:28:0:176:181:520:48:g_d0_f12:48:g_d0_f12:Q
+17:573:36827:0:72:255:811:557:145:g_d0_f5:145:g_d0_f5:                                                                                          (5)                                                                                          
+17:574:37010:72:27:72:544:485:145:g_d0_f5:145:g_d0_f5:which  sum  to  one  because  these  are  risk  neutral  probabilities  due  to  the  normalization  of  the  
+17:575:37120:27:27:72:177:458:145:g_d0_f5:145:g_d0_f5:interest rate to zero.   
+17:576:37145:27:27:72:544:431:145:g_d0_f5:145:g_d0_f5:  Hence,  a  betting  market  coupled  with  access  to  riskless  savings  is  isomorphic  to  the  
+17:577:37246:27:27:72:543:404:145:g_d0_f5:145:g_d0_f5:actual limit order market and so state prices calculated in one setting can be freely transferred to 
+17:578:37347:27:27:72:543:377:145:g_d0_f5:145:g_d0_f5:the  other.    All  that  was  necessary  was  care  in  constructing  the  claims  in  the  betting  market  so  
+17:579:37461:27:27:72:543:350:145:g_d0_f5:145:g_d0_f5:that they possessed the relevant features of the contingent claims implicit in limit orders.  These 
+17:580:37561:27:27:72:542:323:145:g_d0_f5:145:g_d0_f5:characteristics include arbitrage via limit order substitution, the existence of asset values for each 
+17:581:37664:27:27:72:543:296:145:g_d0_f5:145:g_d0_f5:order flow state, and enough time for the limit order book to be refreshed – after either a market 
+17:582:37763:27:27:72:544:269:145:g_d0_f5:145:g_d0_f5:order  has  executed  or  the  arrival  of  information  via  the  “null  trade”  –  before  the  next  market  
+17:583:37875:27:27:72:543:242:145:g_d0_f5:145:g_d0_f5:order  arrives  so  that  market  order  traders  cannot  “front  run”  the  book.    Informed investors will 
+17:584:37985:27:27:72:542:215:145:g_d0_f5:145:g_d0_f5:have no incentive to post limit orders off of the supply schedule because the schedule that would 
+17:585:38083:27:27:72:456:188:145:g_d0_f5:145:g_d0_f5:be posted by uninformed traders is common knowledge in these circumstances. 
+17:586:38159:27:27:108:279:161:144:Times:144:Times:4.  Limit Order Book Dynamics 
+17:587:38188:27:27:108:543:134:145:g_d0_f5:145:g_d0_f5:What  happens  to  state  prices  if  information  arrives  in  the  market  via  a  market  order  at  
+17:588:38292:27:27:72:543:107:145:g_d0_f5:145:g_d0_f5:time t-1?  The answer lies in the change in the information available in the market between time 
+17:589:38389:27:0:72:540:80:145:g_d0_f5:145:g_d0_f5:t-1 and time t.  Since the information state of the market was Ft-2 at time t-1 and no non-trade-
+18:590:38488:0:28:72:542:709:145:g_d0_f5:145:g_d0_f5:related information hit the market, the new information state is Ft-1 = {Qt-1, Ft-2}.  As a result, the 
+18:591:38592:28:29:71:543:681:145:g_d0_f5:145:g_d0_f5:state of the world in which the trades at times t and t-1 are q and Qt-1, respectively, is identical to 
+18:592:38696:29:30:71:544:652:145:g_d0_f5:145:g_d0_f5:that  in  which  the  trade  at  time  t-1  is  t1t1−−=Qq+Q  due  to  the  structure  of  information  flows  
+18:593:38806:30:28:72:415:622:145:g_d0_f5:145:g_d0_f5:when Qt-1 ≠ 0.  Hence, state prices at times t and t-1 must be linked by: 
+18:594:38879:28:33:72:567:594:145:g_d0_f5:145:g_d0_f5: ttt1t1tt1t1t2t2t1t1()  E[1|]  E[1|]  E[1|]()ψψψψψ−−=−= −−−   −−===    =   =QqQqQq+QqQq+QF,FF         (6)         
+18:595:38992:33:27:72:317:561:145:g_d0_f5:145:g_d0_f5:when information arrives only via market orders.   
+18:596:39043:27:27:108:546:534:145:g_d0_f5:145:g_d0_f5:This  restriction  generalizes  in  an  obvious  way  for  longer  intervals  during  which  all  
+18:597:39141:27:27:72:544:507:145:g_d0_f5:145:g_d0_f5:information arrival is trade-related.  If the null trade does not occur between times 1 and T, the 
+18:598:39240:27:48:72:243:480:145:g_d0_f5:145:g_d0_f5:recursion suggested by (6) reveals: 
+18:599:39276:48:0:72:75:432:145:g_d0_f5:145:g_d0_f5: 
+18:600:39276:0:17:177:423:448:25:g_d0_f5:25:g_d0_f5:TT1T1T 2T1T 2
+18:601:39289:17:7:368:253:431:25:g_d0_f5:25:g_d0_f5:T-1T3T1T2T3
+18:602:39300:7:0:343:378:424:25:g_d0_f5:25:g_d0_f5:1tt1
+18:603:39304:0:21:117:530:450:48:g_d0_f5:48:g_d0_f5:TT1T2T3
+18:604:39311:21:18:265:405:429:48:g_d0_f5:48:g_d0_f5:T40
+18:605:39314:18:11:196:296:411:48:g_d0_f5:48:g_d0_f5:T1T1
+18:606:39318:11:0:157:211:400:48:g_d0_f5:48:g_d0_f5:1t11t1
+18:607:39324:0:21:123:460:453:145:g_d0_f5:145:g_d0_f5:()  E[1|]  E[1|]  E[1|]
+18:608:39347:21:29:150:412:432:145:g_d0_f5:145:g_d0_f5:E[1|]E[1|  ]
+18:609:39359:29:0:161:353:403:145:g_d0_f5:145:g_d0_f5:()()
+18:610:39363:0:21:157:428:450:50:g_d0_f8:50:g_d0_f8:ψψψ
+18:611:39366:21:0:157:490:429:50:g_d0_f8:50:g_d0_f8:ψψ
+18:612:39368:0:50:107:115:453:152:g_d0_f8:152:g_d0_f8:ψ
+18:613:39369:50:0:148:323:403:152:g_d0_f8:152:g_d0_f8:ψψ
+18:614:39371:0:20:263:441:447:25:g_d0_f8:25:g_d0_f8:−−−−−
+18:615:39376:20:0:180:373:427:25:g_d0_f8:25:g_d0_f8:−−−−=
+18:616:39381:0:21:181:483:450:48:g_d0_f8:48:g_d0_f8:=−−−==
+18:617:39387:21:18:269:350:429:48:g_d0_f8:48:g_d0_f8:−==
+18:618:39390:18:13:201:288:411:48:g_d0_f8:48:g_d0_f8:−−
+18:619:39392:13:0:199:203:398:48:g_d0_f8:48:g_d0_f8:=
+18:620:39393:0:21:140:411:453:145:g_d0_f8:145:g_d0_f8:==    =
+18:621:39400:21:8:140:451:432:145:g_d0_f8:145:g_d0_f8:===
+18:622:39403:8:21:359:368:424:145:g_d0_f8:145:g_d0_f8:∑
+18:623:39404:21:0:140:196:403:145:g_d0_f8:324:g_d0_f8:=≡∑
+18:624:39407:0:0:293:305:432:144:g_d0_f11:144:g_d0_f11:...
+18:625:39410:0:22:172:411:450:48:g_d0_f6:48:g_d0_f6:QqQq+QQq+Q+Q
+18:626:39422:22:0:172:387:428:48:g_d0_f6:48:g_d0_f6:Qq+Q+Q+QQq+Q
+18:627:39434:0:50:127:133:453:145:g_d0_f6:145:g_d0_f6:q
+18:628:39435:50:0:166:281:403:145:g_d0_f6:145:g_d0_f6:q+Qq+Q
+18:629:39441:0:21:199:536:453:145:g_d0_f9:145:g_d0_f9:FFF
+18:630:39444:21:63:259:610:432:145:g_d0_f9:145:g_d0_f5:FF                        (7)                        
+18:631:39497:63:33:72:544:369:145:g_d0_f5:145:g_d0_f5:where T11−Q  is  cumulative  signed  volume  between  times  1  and  T-1.    It  is  as  though  all  bets  are  
+18:632:39610:33:30:72:544:336:145:g_d0_f5:145:g_d0_f5:placed  at  time  zero  and  the  bet  on  the  value  of  cumulative  net  order  flow  given  by  T11−Q  is  the  
+18:633:39726:30:27:71:156:306:145:g_d0_f5:145:g_d0_f5:one that paid off. 
+18:634:39745:27:27:108:545:279:145:g_d0_f5:145:g_d0_f5:What  is  the  analog  of  these  relations  in  the  actual  limit  order  market?    The  answer  is  
+18:635:39849:27:29:72:543:252:145:g_d0_f5:145:g_d0_f5:concealed in the equivalence between trades of q and Qt-1 at times t and t-1, respectively, and one 
+18:636:39949:29:33:71:543:223:145:g_d0_f5:145:g_d0_f5:of t1t1−−=Qq+Q at time t-1 when t1t1{,}0−−≠q,QQ.  The limit order book is discriminatory and 
+18:637:40042:33:30:71:542:190:145:g_d0_f5:145:g_d0_f5:so limit order traders place orders as though they might confront a single order of t1−Q at time t-1 
+18:638:40143:30:27:72:543:160:145:g_d0_f5:145:g_d0_f5:or an order of size Qt-1 at time t-1 and another of size q at time t before limit order traders have a 
+18:639:40246:27:27:71:543:133:145:g_d0_f5:145:g_d0_f5:chance to cancel and replace their limit orders.  When limit orders do so, they need not fear any 
+18:640:40344:27:0:71:542:106:145:g_d0_f5:145:g_d0_f5:such order splitting on the demand side.  This is the essence of part ii of Proposition 3 of Glosten 
+19:641:40447:0:30:72:543:706:145:g_d0_f5:145:g_d0_f5:(1994).    Continuation  of  the  recursion  in  (6)  yields  the  required  relation  T1T11()()ψψ−=qq+Q 
+19:642:40551:30:27:72:495:676:145:g_d0_f5:145:g_d0_f5:between the time t and time 0 limit order books when all information arrives via trades. 
+19:643:40640:27:27:108:543:649:145:g_d0_f5:145:g_d0_f5:The discriminatory nature of the book coupled with information arrivals that are entirely 
+19:644:40730:27:27:72:544:622:145:g_d0_f5:145:g_d0_f5:driven by order flow has a surprising implication for limit order book dynamics:  moving up or 
+19:645:40825:27:29:72:544:595:145:g_d0_f5:145:g_d0_f5:down  the  limit  order  book  at  a  point  in  time  is  isomorphic  to  moving  across  limit  order  books  
+19:646:40937:29:33:72:543:566:145:g_d0_f5:145:g_d0_f5:over  time  in  these  circumstances.    It  is  as  though  there  is  a  single market of size T1Q arrives at 
+19:647:41049:33:32:71:544:533:145:g_d0_f5:145:g_d0_f5:time  one  and  walks  up  or  down  the  book  to  the  marginal  price  T11P()Q.    Put  differently,  the  
+19:648:41159:32:30:71:543:501:145:g_d0_f5:145:g_d0_f5:marginal price at time T is path independent and Markovian, depending only on T1Q if the “null 
+19:649:41254:30:27:71:522:471:145:g_d0_f5:145:g_d0_f5:trade” representing value-relevant, non-trade-related information arrives at time T+1 or later. 
+19:650:41350:27:30:107:543:444:145:g_d0_f5:145:g_d0_f5:Note that I am not assuming that the actual time zero limit order book has orders posted 
+19:651:41439:30:30:71:545:414:145:g_d0_f5:145:g_d0_f5:at  all  of  the  possible  values  of  cumulative  signed  order  flow  T1Q  that  can  occur  given  the  
+19:652:41547:30:29:71:543:384:145:g_d0_f5:145:g_d0_f5:stochastic  process  generating  market  order  flow.    As  noted  earlier,  we  would  expect  the  actual  
+19:653:41657:29:30:71:544:355:145:g_d0_f5:145:g_d0_f5:book  to  have  finite  depth  at  time  zero  such  that  sufficiently  large  values  of  T1Q  are  not  bid  or  
+19:654:41773:30:27:71:543:325:145:g_d0_f5:145:g_d0_f5:offered.  Put differently, actual markets can force informed market order traders to break up their 
+19:655:41873:27:27:71:544:298:145:g_d0_f5:145:g_d0_f5:orders  over  time  within  the  implicit  constraints  associated  with  free  entry  and  competition  in  
+19:656:41982:27:27:71:180:271:145:g_d0_f5:145:g_d0_f5:limit order placement. 
+19:657:42005:27:27:107:545:244:145:g_d0_f5:145:g_d0_f5:However,  limit  order  markets  that  routinely  remain  in  information  epochs  –  that  is,  
+19:658:42102:27:27:71:546:217:145:g_d0_f5:145:g_d0_f5:periods  in  which  all  information  arrives  via  market  orders  –  are  more  likely  to  satisfy  the  
+19:659:42210:27:27:71:545:190:145:g_d0_f5:145:g_d0_f5:assumption  that  limit  order  traders  can  freely  cancel  and  replace  limit  orders  before  the  next  
+19:660:42320:27:24:71:545:163:145:g_d0_f5:145:g_d0_f5:market  order  arrives.    Limit  order  traders  will  post  orders  at  time  t-1  on  the  price  schedule  
+19:661:42431:24:9:96:112:139:49:g_d0_f5:49:g_d0_f5:T1
+19:662:42433:9:0:78:134:130:49:g_d0_f5:145:g_d0_f5:11P()
+19:663:42438:0:36:101:543:139:49:g_d0_f8:145:g_d0_f5:−+Qq  if  no  value-relevant,  non-trade-related  information  arrives  between  times  one  and  
+19:664:42536:36:0:72:543:103:145:g_d0_f5:145:g_d0_f5:t-1.  If a market order arrives at time t, limit order traders will post limit orders on the marginal 
+20:665:42640:0:30:72:543:706:145:g_d0_f5:145:g_d0_f5:price schedule T11P()+Qq.  If the null trade arrives at time t, limit order traders can cancel all of 
+20:666:42742:30:27:72:544:676:145:g_d0_f5:145:g_d0_f5:their  orders  and  repost  them  when  they  have  assimilated  the  new  information.    In  fact,  this  
+20:667:42850:27:27:72:543:649:145:g_d0_f5:145:g_d0_f5:process can be automated if limit order traders know how the set of feasible trades evolve over 
+20:668:42946:27:27:72:545:622:145:g_d0_f5:145:g_d0_f5:time  as  well  as  the  hypothetical  marginal  price  at  time  zero  for  each  feasible  future  level  of  
+20:669:43058:27:27:72:544:595:145:g_d0_f5:145:g_d0_f5:cumulative  net  order  flow.    It  is  certainly  common  for  microstructure  theorists  to  assume  that  
+20:670:43168:27:27:72:350:568:145:g_d0_f5:145:g_d0_f5:markets experience long information regimes of this sort. 
+20:671:43226:27:27:108:543:541:145:g_d0_f5:145:g_d0_f5:Most markets open (sometimes more than once per day) and some markets close with a 
+20:672:43309:27:31:72:544:514:145:g_d0_f5:145:g_d0_f5:single  price  auction.    While  the  marginal  price  schedule  is  given  by  the  upper  tail  expectation  
+20:673:43421:31:28:79:544:483:49:g_d0_f5:145:g_d0_f5:ttttt1P(q)   E [V(   )|q,]ψ−=≥FQQ due to the discriminatory nature of the book, the uniform nature 
+20:674:43520:28:24:71:559:455:145:g_d0_f5:145:g_d0_f5:of      single      price      auctions      produces      prices      that      are      simple      expectations      
+20:675:43640:24:9:81:189:431:48:g_d0_f5:48:g_d0_f5:AAA
+20:676:43643:9:28:79:545:422:48:g_d0_f5:145:g_d0_f5:TTTT  T1P(   )  E[V(   )|]ψ−=QQF  where  T  is  the  time  of  the  single  price  auction  and  A  denotes  
+20:677:43752:28:29:72:543:394:145:g_d0_f5:145:g_d0_f5:auction.  This completes the picture of dynamics in such markets:  the upper tail expectation is 
+20:678:43849:29:34:72:544:365:145:g_d0_f5:145:g_d0_f5:also  given  by  AAttTtt1P(q)   E [P ()|q,]ψ−=≥QQF  due  to  the  law  of  iterated  expectations  and  the  
+20:679:43958:34:30:71:545:331:145:g_d0_f5:145:g_d0_f5:expected  midquote  of  the  post-auction  limit  order  book  is  given  by  AATTP(   )Q.    It  may  prove  
+20:680:44068:30:27:71:543:301:145:g_d0_f5:145:g_d0_f5:useful  to  connect  this  analysis  with  Huberman and Stanzl’s (2004) study of sequences of batch 
+20:681:44168:27:27:71:369:274:145:g_d0_f5:145:g_d0_f5:auction markets that are isomorphic to single price auctions.   
+20:682:44232:27:27:108:186:247:144:Times:144:Times:5. Conclusion 
+20:683:44245:27:27:108:545:220:145:g_d0_f5:145:g_d0_f5:This  paper  provides  a  road  map  for  building  a  contingent  claims  theory  of  limit  order  
+20:684:44346:27:27:72:544:193:145:g_d0_f5:145:g_d0_f5:markets.    It  is  grounded  in  a  simple  observation:    limit  orders  are  equivalent  to  a  portfolio  of  
+20:685:44461:27:27:72:544:166:145:g_d0_f5:145:g_d0_f5:cash-or-nothing  and  asset-or-nothing  digital  options  on  order  flow.    However,  limit  orders  are  
+20:686:44569:27:27:72:543:139:145:g_d0_f5:145:g_d0_f5:not conventional derivative securities:  order flow is an endogenous, non-price state variable; the 
+20:687:44669:27:27:72:543:112:145:g_d0_f5:145:g_d0_f5:underlying asset value is a construct, the value of the security in different order flow states; and 
+20:688:44770:27:0:72:543:85:145:g_d0_f5:145:g_d0_f5:arbitrage trading or hedging of limit orders is not feasible.  Fortunately, none of these problems 
+21:689:44871:0:27:72:546:709:145:g_d0_f5:145:g_d0_f5:is  fatal  since  options  on  order  flow  can  be  conceptualized  as  bets  implicit  in  limit  orders,  
+21:690:44980:27:27:72:543:682:145:g_d0_f5:145:g_d0_f5:arbitrage  trading  can  be  replaced  by  limit  order  substitution,  and  plausible  assumptions  can  be  
+21:691:45090:27:27:72:467:655:145:g_d0_f5:145:g_d0_f5:made about the endogeneity of order flow states and their associated asset values. 
+21:692:45173:27:27:108:544:628:145:g_d0_f5:145:g_d0_f5:Perhaps  surprisingly,  both  limit  order  books  and  their  associated  implicit  state  prices  
+21:693:45273:27:27:72:543:601:145:g_d0_f5:145:g_d0_f5:have a simple dynamic stochastic structure under plausible conditions.  A special feature of limit 
+21:694:45372:27:27:72:543:574:145:g_d0_f5:145:g_d0_f5:order books is their discriminatory nature and a market order that walks up or down the book as 
+21:695:45468:27:27:72:542:547:145:g_d0_f5:145:g_d0_f5:it executes is identical to an order that executes one share at a time over time when the only new 
+21:696:45567:27:27:72:543:520:145:g_d0_f5:145:g_d0_f5:information is the arrival of yet another market order.  Hence, prices at time t can be read off of 
+21:697:45667:27:27:72:543:493:145:g_d0_f5:145:g_d0_f5:the time one limit order book if the only source of new information arriving between those two 
+21:698:45762:27:27:72:185:466:145:g_d0_f5:145:g_d0_f5:times is trade-related.   
+21:699:45788:27:27:108:545:439:145:g_d0_f5:145:g_d0_f5:While  I  have  said  nothing  about  it  in  this  paper,  the  most  interesting  aspect  of  this  
+21:700:45890:27:27:72:543:412:145:g_d0_f5:145:g_d0_f5:analysis is its implications for the empirical analysis of limit order markets.  Implicit state prices 
+21:701:45993:27:27:72:543:385:145:g_d0_f5:145:g_d0_f5:can shed light on basic microstructure questions such as the role of risk aversion, if any, in the 
+21:702:46092:27:27:72:544:358:145:g_d0_f5:145:g_d0_f5:provision  of  immediacy  in  limit  order  markets.    The  successful  identification  of  episodes  in  
+21:703:46199:27:27:72:544:331:145:g_d0_f5:145:g_d0_f5:which  information  arrives  only  via  trade  can  serve  to  better  measure  information  flows  and  to  
+21:704:46308:27:27:72:544:304:145:g_d0_f5:145:g_d0_f5:provide  new  insight  into  the  process  of  price  formation.    The  expectational  linkages  between  
+21:705:46415:27:27:72:544:277:145:g_d0_f5:145:g_d0_f5:periodic  single  price  auctions  and  continuous  trading  in  limit  order  markets  and  even  between  
+21:706:46523:27:27:72:546:250:145:g_d0_f5:145:g_d0_f5:these  markets  and  options  markets  should  shed  considerable  light  on  the  economics  of  the  
+21:707:46626:27:27:72:350:223:145:g_d0_f5:145:g_d0_f5:associated intertemporal and cross-market comparisons.   
+21:708:46683:27:27:108:543:196:145:g_d0_f5:145:g_d0_f5:I have called the paper “Notes...” because the theory is as yet incomplete.  It seems to me 
+21:709:46775:27:27:72:543:169:145:g_d0_f5:145:g_d0_f5:to be worthwhile to present it in this somewhat embryonic state since both the broad outline of 
+21:710:46871:27:27:72:542:142:145:g_d0_f5:145:g_d0_f5:the theory and the work needed to complete it seem reasonably clear.  And I thought that its link 
+21:711:46969:27:27:72:543:115:145:g_d0_f5:145:g_d0_f5:to my glimpse of David Whitcomb’s limit order trading system, the progenitor of his extremely 
+21:712:47063:27:0:72:413:88:145:g_d0_f5:145:g_d0_f5:successful company Automated Trading Desk, made it fitting as well.  
+23:713:47136:0:14:277:336:709:144:Times:144:Times:References 
+23:714:47147:14:13:108:111:695:145:g_d0_f5:145:g_d0_f5: 
+23:715:47147:13:14:71:542:682:145:g_d0_f5:145:g_d0_f5:Arrow,   K.,   1964, “The  Role  of  Securities  in  the  Optimal  Allocation  of  Risk  Bearing,” 
+23:716:47245:14:13:108:319:668:145:g_d0_f6:145:g_d0_f5:Review of Economic Studies, 31, pp. 91-96. 
+23:717:47288:13:14:72:75:655:145:g_d0_f5:145:g_d0_f5: 
+23:718:47288:14:13:72:545:641:145:g_d0_f5:145:g_d0_f5:Banz,  R.  and  M.  H.  Miller,  1978,  “Prices  for  State-Contingent  Claims:  Some  Estimates  and  
+23:719:47391:13:14:108:360:628:145:g_d0_f5:145:g_d0_f5:Applications,” Journal of Business 51, pp. 653-672. 
+23:720:47443:14:13:72:75:614:145:g_d0_f5:145:g_d0_f5: 
+23:721:47443:13:14:72:542:601:145:g_d0_f5:145:g_d0_f5:Breeden, D. T., and R. H. Litzenberger, 1978, “The Prices of State-Contingent Claims Implicit in 
+23:722:47540:14:13:108:367:587:145:g_d0_f5:145:g_d0_f5:Option Prices,” Journal of Business, 51, pp. 621-651. 
+23:723:47594:13:14:72:75:574:145:g_d0_f5:145:g_d0_f5: 
+23:724:47594:14:13:72:544:560:145:g_d0_f5:145:g_d0_f6:Copeland,  T.,  and  D.  Galai,  1983,  “Information  Effects  on  the  Bid-Ask  Spread,"  Journal  of  
+23:725:47698:13:14:108:247:547:145:g_d0_f6:145:g_d0_f5:Finance, 38, pp. 1457-1469. 
+23:726:47726:14:13:72:75:533:145:g_d0_f5:145:g_d0_f5: 
+23:727:47726:13:14:72:405:520:145:g_d0_f5:100:g_d0_f5:Debreu, G., 1959, Theory of Value (New York: John Wiley & Sons). 
+23:728:47790:14:13:72:75:506:145:g_d0_f5:145:g_d0_f5: 
+23:729:47790:13:14:72:542:493:145:g_d0_f5:145:g_d0_f5:Glosten, Lawrence, 1994, “Is the Electronic Limit Order Book Inevitable?” Journal of Finance 
+23:730:47882:14:13:107:201:479:145:g_d0_f5:145:g_d0_f5:49, pp. 1127-1161. 
+23:731:47901:13:14:71:74:466:145:g_d0_f5:145:g_d0_f5: 
+23:732:47901:14:13:71:432:452:145:g_d0_f5:145:g_d0_f5:Hicks, J. R., 1939, Value and Capital, (London: Oxford University Press). 
+23:733:47975:13:14:71:74:439:145:g_d0_f5:145:g_d0_f5: 
+23:734:47975:14:13:71:542:425:145:g_d0_f5:145:g_d0_f5:Huberman, G. and W. Stanzl, 2004, “Quasi-arbitrage and Price Manipulation,” Econometrica 72, 
+23:735:48068:13:14:107:183:412:145:g_d0_f5:145:g_d0_f5:pp. 1247-1275. 
+23:736:48083:14:13:71:74:398:145:g_d0_f5:145:g_d0_f5: 
+23:737:48083:13:14:71:543:385:145:g_d0_f5:145:g_d0_f5:Ingersoll,  J.  E.,  Jr.,  1987,  “Digital  Contracts:    Simple  Tools  for  Pricing  Complex  Derivatives,”  
+23:738:48194:14:13:107:275:371:145:g_d0_f6:145:g_d0_f5:Journal of Business 73, pp. 67-88. 
+23:739:48229:13:14:71:74:358:145:g_d0_f5:145:g_d0_f5: 
+23:740:48229:14:13:71:543:344:145:g_d0_f5:145:g_d0_f5:Lehmann. B. N., 2005, “Arbitrage-free Limit Order Books and the Pricing of Order Flow Risk,” 
+23:741:48322:13:14:107:437:331:145:g_d0_f5:145:g_d0_f5:University of California at San Diego, Unpublished Working Paper. 
+23:742:48388:14:13:71:74:317:145:g_d0_f5:145:g_d0_f5: 
+23:743:48388:13:14:71:544:304:145:g_d0_f5:145:g_d0_f5:Lehmann,  B.  N.  and  D.  Modest,  1995,  “Market  Structure  and  Liquidity  on  the  Tokyo  Stock  
+23:744:48490:14:13:107:546:290:145:g_d0_f5:145:g_d0_f6:Exchange”  in  Andrew  W.  Lo  (ed.),  The  Industrial  Organization  and  Regulation  of  
+23:745:48581:13:14:107:396:277:145:g_d0_f6:145:g_d0_f5:Securities Markets (Chicago: University of Chicago Press). 
+23:746:48640:14:13:71:74:263:145:g_d0_f5:145:g_d0_f5: 
+23:747:48640:13:14:71:542:250:145:g_d0_f5:145:g_d0_f5:Parlour, C., 1998, “Price Dynamics in Limit Order Markets,” Review of Financial Studies 11, pp. 
+23:748:48736:14:13:107:153:236:145:g_d0_f5:145:g_d0_f5:789-816. 
+23:749:48745:13:14:71:74:223:145:g_d0_f5:145:g_d0_f5: 
+23:750:48745:14:13:71:543:209:145:g_d0_f5:145:g_d0_f5:Sandas, P., 2001, “Adverse Selection and Competitive Market Making: Empirical Evidence from 
+23:751:48837:13:14:107:442:196:145:g_d0_f5:145:g_d0_f5:a Limit Order Market,” Review of Financial Studies 14, pp. 705-734. 
+23:752:48905:14:13:71:74:182:145:g_d0_f5:145:g_d0_f5: 
+23:753:48905:13:14:71:543:169:145:g_d0_f5:145:g_d0_f6:Seppi,  D.,  1997,  “Liquidity  Provision  with  Limit  Orders  and  a  Strategic  Specialist,”  Review  of  
+23:754:49014:14:13:107:277:155:145:g_d0_f6:145:g_d0_f5:Financial Studies 10, pp. 103-150. 
+23:755:49049:13:0:71:74:142:145:g_d0_f5:145:g_d0_f5: 

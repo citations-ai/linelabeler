@@ -1,0 +1,1062 @@
+1:0:0:0:27:307:511:664:3425:g_d0_f1:3425:g_d0_f1:MPRA
+1:1:4:27:123:278:504:637:17:g_d0_f2:17:g_d0_f2:Munich Personal RePEc Archive
+1:2:33:123:25:81:379:514:21:g_d0_f3:21:g_d0_f3:Jumpy or Kinky?  Regression
+1:3:60:25:45:81:486:489:21:g_d0_f3:21:g_d0_f3:Discontinuity without the Discontinuity
+1:4:99:45:36:81:185:444:17:g_d0_f2:17:g_d0_f2:Yingying Dong
+1:5:112:36:75:81:306:408:14:g_d0_f4:14:g_d0_f4:California State University Fullerton
+1:6:149:75:174:81:158:333:14:g_d0_f4:14:g_d0_f4:August 2010
+1:7:160:174:18:81:417:159:14:g_d0_f4:14:g_d0_f5:Online athttp://mpra.ub.uni-muenchen.de/25427/
+1:8:206:18:0:81:480:141:14:g_d0_f4:14:g_d0_f4:MPRA Paper No. 25427, posted 26. September 2010 01:02 UTC
+2:9:263:0:25:77:534:677:21:g_d0_f6:21:g_d0_f6:Jumpy or Kinky? Regression Discontinuity without the
+2:10:315:25:36:249:362:652:21:g_d0_f6:21:g_d0_f6:Discontinuity
+2:11:328:36:18:259:353:616:14:g_d0_f6:10:g_d0_f7:Yingying Dong-
+2:12:342:18:18:248:363:598:11:g_d0_f6:11:g_d0_f6:Department of Economics
+2:13:365:18:26:226:386:580:11:g_d0_f6:11:g_d0_f6:California State University Fullerton
+2:14:402:26:57:277:333:554:11:g_d0_f6:11:g_d0_f6:August 2010
+2:15:413:57:21:285:326:497:11:g_d0_f8:11:g_d0_f8:Abstract
+2:16:421:21:14:99:528:476:11:g_d0_f6:11:g_d0_f6:Regression Discontinuity (RD) models identify local treatment effects by associating a discrete
+2:17:516:14:13:83:528:462:11:g_d0_f6:11:g_d0_f6:change in an outcome with a corresponding discrete change in the probability of treatment at a known
+2:18:616:13:14:83:528:449:11:g_d0_f6:11:g_d0_f6:threshold of a running variable. This paper shows that it is possible to identify RD model treatment ef-
+2:19:720:14:13:83:528:435:11:g_d0_f6:11:g_d0_f6:fects without a discontinuity. The intuition is that identi-cation can come from a slope change (a kink)
+2:20:824:13:14:83:528:422:11:g_d0_f6:11:g_d0_f6:instead of a discrete level change (a jump) in the treatment probability. Formally this can be shown
+2:21:924:14:13:83:528:408:11:g_d0_f6:11:g_d0_f6:using L'hopital's rule. I also interpret the identi-cation results intuitively using instrumental variable
+2:22:1030:13:14:83:528:395:11:g_d0_f6:11:g_d0_f6:models. Estimators are proposed that can be applied in the presence or absence of a discontinuity, by
+2:23:1131:14:27:83:232:381:11:g_d0_f6:11:g_d0_f6:exploiting either a jump or a kink.
+2:24:1166:27:14:83:180:354:11:g_d0_f9:11:g_d0_f6:JELCodes: C21, C25
+2:25:1184:14:13:83:528:340:11:g_d0_f9:11:g_d0_f6:Keywords: Regression Discontinuity, Fuzzy design, Average treatment effect, Identi-cation, Jump,
+2:26:1280:13:54:83:155:327:11:g_d0_f6:11:g_d0_f6:Kink, Threshold
+2:27:1295:54:27:54:173:273:17:g_d0_f8:17:g_d0_f8:1  Introduction
+2:28:1310:27:15:54:557:246:12:g_d0_f6:12:g_d0_f6:LetTbe a binary indicator for some treatment such as participation in a social program or repeating
+2:29:1409:15:14:54:557:231:12:g_d0_f6:12:g_d0_f6:a grade (grade retention) in school, letYbe some associated outcome of interest such as employment
+2:30:1507:14:15:54:557:217:12:g_d0_f6:12:g_d0_f6:or academic performance, and letXbe a so-called running or forcing variable that affects bothTand
+2:31:1604:15:14:54:557:202:12:g_d0_f10:12:g_d0_f6:Y. For example,Xcould be the income level that affects eligibility for a social program, or an exam
+2:32:1703:14:14:53:557:188:12:g_d0_f6:12:g_d0_f6:score affecting a grade retention decision. In the standard Regression Discontinuity (RD) framework, the
+2:33:1807:14:15:53:558:174:12:g_d0_f6:12:g_d0_f6:probability of treatment given byf.x/DE.TjXDx/changes discretely at a threshold pointxDc.
+2:34:1896:15:14:53:557:159:12:g_d0_f6:12:g_d0_f6:Under general conditions, this discontinuity or jump inf.x/, along with any observed corresponding
+2:35:1994:14:15:54:558:145:12:g_d0_f6:12:g_d0_f6:jump ing.x/DE.YjXDx/atxDc, can be used to recover a local average treatment effect. See, e.g.,
+2:36:2088:15:14:54:558:130:12:g_d0_f6:12:g_d0_f6:Hahn, Todd, and van der Klaauw (2001), Imbens and Lemieux (2008), chapter 6 of Angrist and Pischke
+2:37:2186:14:18:54:558:116:12:g_d0_f6:12:g_d0_f6:(2008), Imbens and Wooldridge (2009), and Lee and Lemieux (2010). The intuition is that ifXand other
+2:38:2286:18:16:67:557:98:8:g_d0_f7:10:g_d0_f6:-Correspondence:  Department of Economics,  California State University Fullerton,  CA 92834,  USA. Email:
+2:39:2392:16:12:53:335:82:10:g_d0_f6:10:g_d0_f6:ydong@fullerton.edu. http://business.fullerton.edu/Economics/ydong/.
+2:40:2460:12:0:71:554:70:10:g_d0_f6:10:g_d0_f6:The author would like to thank Arthur Lewbel for many very helpful comments and suggestions. Any errors are my own.
+3:41:2576:0:15:54:557:726:12:g_d0_f6:12:g_d0_f6:covariates determingYandTare continuous at the thresholdc, then untreated individuals havingXjust
+3:42:2673:15:14:54:474:711:12:g_d0_f6:12:g_d0_f6:below the threshold can serve as valid counterfactuals for treated individuals just above.
+3:43:2763:14:15:71:557:697:12:g_d0_f6:12:g_d0_f6:In this paper I show that the RD local average treatment effect that is usually identi-ed by a discon-
+3:44:2865:15:14:54:558:682:12:g_d0_f6:12:g_d0_f6:tinuity can still be identi-ed even if there is no discontinuity or jump in the treatment probabilityf.x/,
+3:45:2971:14:15:54:557:668:12:g_d0_f6:12:g_d0_f6:given that there is a kink, i.e., a discrete change in slope inf.x/atxDc. I also provide estimators for the
+3:46:3078:15:14:54:558:653:12:g_d0_f6:12:g_d0_f6:local average treatment effect that can be used regardless of whether identi-cation comes from a jump, a
+3:47:3182:14:15:54:486:639:12:g_d0_f6:12:g_d0_f6:kink, or both. The identi-cation results are further intuitively interpreted using IV models.
+3:48:3275:15:14:71:557:624:12:g_d0_f6:12:g_d0_f6:This paper's results could be applied in situations where the compliance rate changes less dramatically
+3:49:3378:14:14:54:558:610:12:g_d0_f6:12:g_d0_f6:than required by the standard RD. For example, in applications where there is inertia or delay in taking
+3:50:3482:14:15:54:558:596:12:g_d0_f6:12:g_d0_f6:up treatment, the added probability of treatment associated with crossing a threshold may rise as one
+3:51:3583:15:14:54:558:581:12:g_d0_f6:12:g_d0_f6:gets further away from the threshold rather than jumping the moment the threshold is crossed. In this
+3:52:3684:14:15:54:558:567:12:g_d0_f6:12:g_d0_f6:case, treatment effects based on standard RD estimators would either be weakly identi-ed, if the jump
+3:53:3785:15:14:54:558:552:12:g_d0_f6:12:g_d0_f6:is small, or unidenti-ed if the jump is zero, regardless of how much the slope changes. In contrast, the
+3:54:3889:14:15:54:558:538:12:g_d0_f6:12:g_d0_f6:estimators proposed in this paper make use of any changes in either the intercept or the slope of the
+3:55:3990:15:14:54:245:523:12:g_d0_f6:12:g_d0_f6:treatment probability at the pointxDc.
+3:56:4028:14:15:71:557:509:12:g_d0_f6:12:g_d0_f6:For example, Jacob and Lefgren (2004) examine the treatment effect of remedial eduction programs,
+3:57:4125:15:14:54:558:494:12:g_d0_f6:12:g_d0_f6:including grade retention, on later academic performance, where the retention treatment is incurred by
+3:58:4227:14:14:54:558:480:12:g_d0_f6:12:g_d0_f6:failing summer school tests. They note that "the probability of retention does not drop sharply (discontin-
+3:59:4334:14:15:54:558:466:12:g_d0_f6:12:g_d0_f6:uously) at the exact point of the cutoff , ...it rapidly decreases over a narrow range of values just below the
+3:60:4445:15:14:54:558:451:12:g_d0_f6:12:g_d0_f6:cutoff." Indeed, their Figure 6 (reproduced in Figure 1 here) shows a dramatic slope change instead of a
+3:61:4549:14:15:54:558:437:12:g_d0_f6:12:g_d0_f6:discontinuity in the retention probability at the cutoff (normalized to zero). In this case, the standard RD
+3:62:4657:15:14:54:558:422:12:g_d0_f6:12:g_d0_f6:estimation based on a discrete change in the treatment probability is not suitable, whereas the estimators
+3:63:4763:14:302:54:232:408:12:g_d0_f6:12:g_d0_f6:proposed in this paper can still apply.
+3:64:4802:302:38:133:478:106:12:g_d0_f6:12:g_d0_f6:Figure 1: Retention Rate and Reading Test Scores Relative to the Cutoff
+3:65:4873:38:14:71:557:68:12:g_d0_f6:12:g_d0_f6:In some potential applications of RD models, there is debate about whether the probability of treatment
+3:66:4976:14:0:54:558:54:12:g_d0_f6:12:g_d0_f6:actually jumps at a threshold. When a discrete change is small, it could be indistinguishable from a kink
+4:67:5082:0:15:54:558:726:12:g_d0_f6:12:g_d0_f6:visually. An example is Figure 2, which reproduces Figure 4 from Card, Dobkin, and Maestas (2008),
+4:68:5180:15:14:54:558:711:12:g_d0_f6:12:g_d0_f6:showing the probability of retirement in the US by age. It is dif-cult to determine whether a small jump
+4:69:5284:14:15:54:558:697:12:g_d0_f6:12:g_d0_f6:appears in this probability at age 65, the eligibility age for full social security bene-ts, but there is an
+4:70:5392:15:14:54:558:682:12:g_d0_f6:12:g_d0_f6:obvious difference in slopes above and below this threshold. The estimators proposed in this paper might
+4:71:5496:14:15:54:558:668:12:g_d0_f6:12:g_d0_f6:then be used to identify the impact of retirement on outcomes like consumption or time use, based just on
+4:72:5601:15:277:54:416:653:12:g_d0_f6:12:g_d0_f6:the knowledge that the propensity to retire has either a jump or a kink at 65.
+4:73:5679:277:40:107:501:376:12:g_d0_f6:12:g_d0_f6:Figure 2: Employment Rates by Age and Demographic Group (1992ñ2003 NHIS)
+4:74:5751:40:14:71:557:336:12:g_d0_f6:12:g_d0_f6:For simplicity, this paper will mostly not deal with covariates other than the running variableXin
+4:75:5849:14:15:54:558:322:12:g_d0_f6:12:g_d0_f6:the analysis. The standard RD argument applies that covariates are generally not needed for consistency,
+4:76:5953:15:14:54:558:307:12:g_d0_f6:12:g_d0_f6:though they may be useful for ef-ciency or for testing continuity assumptions. However, if desired, addi-
+4:77:6058:14:15:54:557:293:12:g_d0_f6:12:g_d0_f6:tional covariatesZcould be included in the analysis by letting all the assumptions hold conditional upon
+4:78:6162:15:14:54:558:278:12:g_d0_f6:12:g_d0_f6:the valuesZmay take on. In applications, one could either partial out these covariates prior to analysis,
+4:79:6267:14:14:54:314:264:12:g_d0_f6:12:g_d0_f6:or include them in the models as additional regressors.
+4:80:6322:14:15:71:557:250:12:g_d0_f6:12:g_d0_f6:The rest of the paper is organized as follows. Section 2 provides the main identi-cation results. Section
+4:81:6427:15:14:54:558:235:12:g_d0_f6:12:g_d0_f6:3 gives an instrumental variables interpretation of the identi-cation. Section 4 discusses some extensions,
+4:82:6534:14:15:54:558:221:12:g_d0_f6:12:g_d0_f6:including possible identi-cation based on higher order derivatives. Section 5 provides associated estima-
+4:83:6639:15:40:54:197:206:12:g_d0_f6:12:g_d0_f6:tors, and Section 6 concludes.
+4:84:6669:40:27:54:421:166:17:g_d0_f8:17:g_d0_f8:2  RD Treatment Effects without A Discontinuity
+4:85:6716:27:15:54:557:139:12:g_d0_f6:12:g_d0_f6:I will use Rubin's (1974) potential outcome notation. LetY.1/andY.0/denote an individual's po-
+4:86:6810:15:14:54:558:124:12:g_d0_f6:12:g_d0_f6:tential outcomes from being treated or not, respectively.  The observed outcome can then be written
+4:87:6909:14:15:54:557:110:12:g_d0_f6:12:g_d0_f7:asYDY.1/TCY.0/.1-T/. As in the introduction, de-neg.x/DE.YjXDx/andf.x/D
+4:88:6980:15:14:54:557:95:12:g_d0_f10:12:g_d0_f6:E.TjXDx/, sog.x/andf.x/are the expected outcome and expected probability of treatment when
+4:89:7070:14:15:54:557:81:12:g_d0_f6:12:g_d0_f11:the running or forcing variableXDx. In the standard RD model one would expect bothf.x/andg.x/
+4:90:7163:15:0:54:231:66:12:g_d0_f6:12:g_d0_f6:have a jump (discontinuity) atxDc.
+5:91:7198:0:15:71:557:726:12:g_d0_f6:12:g_d0_f6:LetT-be a dummy for crossing the -xed thresholdc, i.e.,T-DI.X-c/, soT-is one for individuals
+5:92:7290:15:14:54:557:711:12:g_d0_f6:12:g_d0_f6:who haveXabove the threshold and zero otherwise. An individual is de-ned to be a complier if he has
+5:93:7389:14:15:54:557:697:12:g_d0_f10:12:g_d0_f6:TDT-. LetD-DI.TDT-/be a binary indicator for compliers, i.e., those whose treatment is
+5:94:7475:15:14:54:558:682:12:g_d0_f6:12:g_d0_f6:determined or induced just by crossing the -xed threshold.E.D-jXDx/then equals the compliance
+5:95:7568:14:15:54:558:668:12:g_d0_f6:12:g_d0_f6:rate (percentage of compliers) atXDx, i.e., the change in the treatment probability atXDx. We do not
+5:96:7668:15:14:54:300:653:12:g_d0_f6:12:g_d0_f6:observeD-and so do not know who are compliers.
+5:97:7714:14:15:71:557:639:12:g_d0_f6:12:g_d0_f6:The standard RD model requiresE.D-jXDc/6D0, i.e., a discontinuity atc. The sharp design RD
+5:98:7804:15:26:54:432:624:12:g_d0_f6:12:g_d0_f6:model is the special case whereE.D-jXDc/D1 so everyone is a complier.
+5:99:7873:26:14:71:558:598:12:g_d0_f6:12:g_d0_f6:ASSUMPTION A1: Assume that for each unit (individual)iwe observeYi,Ti, andXi. The threshold
+5:100:7964:14:15:54:558:584:12:g_d0_f10:12:g_d0_f6:cis a known constant. The conditional meansE.Y.t/jXDx;D-Dd/fortD0;1, anddD0;1,
+5:101:8042:15:14:54:558:569:12:g_d0_f6:12:g_d0_f6:as well asE.TjXDx;D-D0/andE.D-jXDx/are continuously differentiable for allxin a
+5:102:8121:14:26:54:167:555:12:g_d0_f6:12:g_d0_f6:neighborhood ofxDc.
+5:103:8140:26:15:71:544:529:12:g_d0_f6:12:g_d0_f6:For ease of notation I will drop theisubscript when referring to the random variablesY,T, andX.
+5:104:8235:15:14:71:558:514:12:g_d0_f6:12:g_d0_f6:It follows from Assumption 1 thatE.Y.t/jXDx/fortD0;1 are continuously differentiable in
+5:105:8322:14:15:54:557:500:12:g_d0_f6:12:g_d0_f6:the neighborhood ofxDc. Assumption A1 differs from standard RD assumptions in requiring more
+5:106:8414:15:14:54:558:485:12:g_d0_f6:12:g_d0_f6:smoothness. Speci-cally, standard RD models require only continuity of the conditional mean potential
+5:107:8515:14:15:54:558:471:12:g_d0_f6:12:g_d0_f6:outcomes rather than continuous differentiability for identi-cation. This paper requires this additional
+5:108:8619:15:14:54:558:456:12:g_d0_f6:12:g_d0_f6:smoothness to rule out not only jumps but also kinks (formally de-ned below) caused by factors other
+5:109:8719:14:15:54:557:442:12:g_d0_f6:12:g_d0_f6:than changes in the treatment probability at the thresholdxDc. In practice, estimators of standard
+5:110:8817:15:14:54:558:427:12:g_d0_f6:12:g_d0_f6:RD models generally impose at least as much smoothness as Assumption A1. For example, asymptotic
+5:111:8913:14:14:54:380:413:12:g_d0_f6:12:g_d0_f6:theories of kernel or local linear regressions require differentiability.
+5:112:8986:14:15:71:557:399:12:g_d0_f6:12:g_d0_f6:Assumption A1 also imposes smoothness on the conditional mean potential outcomes separately for
+5:113:9081:15:14:54:558:384:12:g_d0_f6:12:g_d0_f6:compliers (D-D1) and non-compliers (D-D0). One could instead impose smoothness without con-
+5:114:9172:14:15:54:558:370:12:g_d0_f6:12:g_d0_f6:ditioning onD-by having either a constant treatment effect or a conditional independence of treatment
+5:115:9273:15:14:54:557:355:12:g_d0_f6:12:g_d0_f6:assumption (i.e., conditional onX, treatment is independent of potential outcomes) as in Hahn, Todd, and
+5:116:9377:14:15:54:558:341:12:g_d0_f6:12:g_d0_f6:van der Klaauw (2001). Assumption A1 also rules out a positive probability of deniers (individuals who
+5:117:9479:15:14:54:558:326:12:g_d0_f6:12:g_d0_f6:haveTD1-T-) by assuming smoothness ofE.TjXDx;D-D0/. If one is willing to assume
+5:118:9558:14:15:54:558:312:12:g_d0_f6:12:g_d0_f6:constant treatment effects, then Assumption A1 could be extended to allowing for deniers as follows. Let
+5:119:9662:15:14:54:558:297:12:g_d0_f10:12:g_d0_f6:d-be a binary indicator for deniers, sod-DI.TD1-T-/. Then one can replace smoothness of
+5:120:9749:14:14:54:558:283:12:g_d0_f10:12:g_d0_f6:E.Y.t/jXDx;D-Dd/in Assumption A1 with smoothness ofE.Y.t/jXDx/fordD0;1 and
+5:121:9823:14:15:53:557:269:12:g_d0_f10:12:g_d0_f6:tD0;1, replaceE.D-jXDx/withE.D--d-jXDx/, and replaceE.TjXDx;D-D0/with
+5:122:9892:15:14:54:197:254:12:g_d0_f10:12:g_d0_f6:E.TjXDx;D-Dd-D0/.
+5:123:9909:14:15:71:557:240:12:g_d0_f6:12:g_d0_f6:Results in this paper require one-sided limits and one-sided derivatives. For any functionh.x/, de-ne
+5:124:10010:15:14:54:558:225:12:g_d0_f6:12:g_d0_f6:(when they exist)hC.x/andh-.x/as the right-sided and left-sided limits andh0C.x/andh0-.x/as the
+5:125:10105:14:15:53:557:211:12:g_d0_f6:12:g_d0_f6:right-sided and left-sided derivatives, respectively. Also leth0.x/D@h.x/=@x. Ifh.x/is differentiable,
+5:126:10207:15:14:54:558:196:12:g_d0_f6:12:g_d0_f6:thenh0C.x/,h0-.x/, andh0.x/exist andh0C.x/Dh0-.x/Dh0.x/. With these notations, a discontinuity
+5:127:10301:14:15:54:557:182:12:g_d0_f6:12:g_d0_f6:atxDcmeansfC.c/-f-.c/6D0, and the treatment effect that is estimated by standard RD models can
+5:128:10395:15:26:54:290:167:12:g_d0_f6:12:g_d0_f6:be written as.gC.c/-g-.c//=.fC.c/-f-.c//.
+5:129:10436:26:26:71:270:141:12:g_d0_f6:12:g_d0_f6:LEMMA 1: If Assumption A1 holds then
+5:130:10472:26:0:211:331:115:12:g_d0_f10:12:g_d0_f10:gC.c/-g-.c/D-.c/E
+5:131:10489:0:10:334:339:125:12:g_d0_f12:12:g_d0_f12:-
+5:132:10490:10:0:340:395:115:12:g_d0_f10:12:g_d0_f10:D-jXDc
+5:133:10496:0:10:395:400:125:12:g_d0_f12:12:g_d0_f12:-
+5:134:10497:10:26:544:558:115:12:g_d0_f6:12:g_d0_f6:(1)
+5:135:10500:26:15:54:71:89:12:g_d0_f6:12:g_d0_f6:and
+5:136:10503:15:0:223:316:74:12:g_d0_f10:12:g_d0_f10:fC.c/-f-.c/DE
+5:137:10516:0:10:319:324:84:12:g_d0_f12:12:g_d0_f12:-
+5:138:10517:10:0:325:380:74:12:g_d0_f10:12:g_d0_f10:D-jXDc
+5:139:10523:0:10:380:385:84:12:g_d0_f12:12:g_d0_f12:-
+5:140:10524:10:21:387:558:74:12:g_d0_f6:12:g_d0_f6:,(2)
+5:141:10528:21:0:54:83:53:12:g_d0_f6:12:g_d0_f6:where
+6:142:10534:0:0:198:245:711:12:g_d0_f11:12:g_d0_f10:-.c/DE
+6:143:10540:0:10:249:254:721:12:g_d0_f12:12:g_d0_f12:-
+6:144:10541:10:0:254:403:711:12:g_d0_f10:12:g_d0_f6:Y.1/-Y.0/jXDc;D-D1
+6:145:10559:0:10:403:408:721:12:g_d0_f12:12:g_d0_f12:-
+6:146:10560:10:33:410:558:711:12:g_d0_f6:12:g_d0_f6:.(3)
+6:147:10564:33:14:71:557:678:12:g_d0_f6:12:g_d0_f6:Proofs are in the Appendix. Lemma 1 shows that Assumption A1 suf-ces to reproduce the standard re-
+6:148:10662:14:15:53:557:664:12:g_d0_f6:12:g_d0_f6:sult in the RD literature. In particular, it follows immediately from Lemma 1 that if there is a discontinuity,
+6:149:10773:15:32:53:236:649:12:g_d0_f6:12:g_d0_f6:meaning thatfC.c/-f-.c/6D0 then
+6:150:10804:32:0:248:283:617:12:g_d0_f11:12:g_d0_f7:-.c/D
+6:151:10809:0:17:288:359:626:12:g_d0_f10:12:g_d0_f11:gC.c/-g-.c/
+6:152:10820:17:0:290:359:609:12:g_d0_f10:12:g_d0_f11:fC.c/-f-.c/
+6:153:10831:0:32:360:558:617:12:g_d0_f6:12:g_d0_f6:.(4)
+6:154:10835:32:15:54:558:585:12:g_d0_f6:12:g_d0_f6:That is, the standard RD treatment effect estimator estimates-.c/DE.Y.1/-Y.0/jXDc;D-D1/,
+6:155:10923:15:14:54:558:570:12:g_d0_f6:12:g_d0_f6:the average treatment effect for the compliers (those havingD-D1) at the thresholdc, as discussed in,
+6:156:11024:14:15:54:432:556:12:g_d0_f6:12:g_d0_f6:e.g., Hahn, Todd, and van der Klaauw (2001) and Imbens and Lemieux (2008).
+6:157:11098:15:14:71:557:541:12:g_d0_f6:12:g_d0_f6:If one alternatively assumes constant treatment effects and allows for deniers, then equations (1) and
+6:158:11200:14:15:54:558:527:12:g_d0_f6:12:g_d0_f6:(4) would hold by replacing equation (1) withfC.c/-f-.c/DE.D--d-jXDc/and replacing
+6:159:11282:15:14:54:307:512:12:g_d0_f6:12:g_d0_f6:equation (3) with-.c/DE.Y.1/-Y.0/jXDc/.
+6:160:11321:14:14:71:557:498:12:g_d0_f6:12:g_d0_f6:I now consider identifying the RD model treatment effect under alternative assumptions. In particular,
+6:161:11423:14:15:54:558:484:12:g_d0_f6:12:g_d0_f6:I consider: What if there is no jump in the treatment probability? Can we still identify the RD model
+6:162:11524:15:26:54:504:469:12:g_d0_f6:12:g_d0_f6:treatment effect when there is no discontinuity? Formally de-ne a jump and a kink as follows.
+6:163:11617:26:15:71:557:443:12:g_d0_f6:12:g_d0_f7:DEFINITION: At the pointx, a jump in the functionf.x/(or simply a jump) is de-ned asfC.x/-
+6:164:11707:15:26:56:516:428:12:g_d0_f10:12:g_d0_f6:f-.x/6D0 and a kink in the functionf.x/(or simply a kink) is de-ned asf0C.x/-f0-.x/6D0.
+6:165:11794:26:34:71:513:402:12:g_d0_f6:12:g_d0_f6:THEOREM 1: Let Assumption A1 hold. Assume there is a kink but no jump atxDc. Then
+6:166:11875:34:0:246:280:368:12:g_d0_f11:12:g_d0_f7:-.c/D
+6:167:11880:0:17:285:359:377:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+6:168:11893:17:0:287:360:360:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+6:169:11906:0:52:361:558:368:12:g_d0_f11:12:g_d0_f6::(5)
+6:170:11910:52:15:71:558:316:12:g_d0_f6:12:g_d0_f6:First note that Assumption A1 suf-ces to guarantee that the one-sided derivativesg0C.x/,g0-.x/,
+6:171:12005:15:14:56:558:301:12:g_d0_f10:12:g_d0_f6:f0C.x/, andf0-.x/exist atxDc. Theorem 1 says that if there is no jump inf.x/, then the treatment
+6:172:12101:14:15:53:558:287:12:g_d0_f6:12:g_d0_f6:effect will equal the ratio of the kinks ing.x/andf.x/atxDcinstead of the ratio of the jumps. The
+6:173:12198:15:14:53:557:272:12:g_d0_f6:12:g_d0_f6:intuition is that iff.x/does not have a jump, then both the denominator and the numerator (equations 1
+6:174:12300:14:15:53:558:258:12:g_d0_f6:12:g_d0_f6:and 2) of the standard RD estimator given by equation (4) will equal zero asxgoes toc. In that case, by
+6:175:12403:15:14:54:558:243:12:g_d0_f6:12:g_d0_f6:L'hopital's rule, that ratio will equal the ratio of derivatives of the numerator and denominator, given that
+6:176:12512:14:15:54:161:229:12:g_d0_f6:12:g_d0_f6:these derivatives exist.
+6:177:12536:15:14:71:557:214:12:g_d0_f6:12:g_d0_f6:Theorem 1 requires that the slope of the treatment probability changes at the threshold, which provides
+6:178:12639:14:14:54:557:200:12:g_d0_f6:12:g_d0_f6:additional identi-cation. So unlike in the standard RD model where the treatment effect-.c/is identi-ed
+6:179:12742:14:15:54:397:186:12:g_d0_f6:12:g_d0_f6:off a jump in the treatment probability, here-.c/is identi-ed off a kink.
+6:180:12815:15:14:71:557:171:12:g_d0_f6:12:g_d0_f6:In practice, just as a jump in the density ofXor other baseline covariates at the threshold would cast
+6:181:12917:14:15:54:558:157:12:g_d0_f6:12:g_d0_f6:doubt on the validity of the smoothness assumption in standard RD models, a kink in the density ofXor
+6:182:13018:15:14:54:558:142:12:g_d0_f6:12:g_d0_f6:other baseline covariates at the threshold would cast doubt on the validity of the smoothness assumption
+6:183:13122:14:15:54:558:128:12:g_d0_f6:12:g_d0_f6:in A1 and hence the identi-ed-.c/may not be interpreted as a causal effect. To address this concern, one
+6:184:13226:15:14:54:558:113:12:g_d0_f6:12:g_d0_f6:can search for any unusual jumps or kinks in the density ofXor other covariates using methods suggested
+6:185:13329:14:15:54:349:99:12:g_d0_f6:12:g_d0_f6:by Imbens and Lemieux (2008) and Lee and Lemieux (2010).
+6:186:13385:15:14:71:557:84:12:g_d0_f6:12:g_d0_f6:In particular, one could draw a histogram ofXbased on a -xed number of bins at each side of the
+6:187:13480:14:14:54:558:70:12:g_d0_f6:12:g_d0_f6:cutoff. The overall shape of the distribution can provide a sense whether there is an ususal jump or kink
+6:188:13585:14:0:54:558:56:12:g_d0_f6:12:g_d0_f6:at the cutoff. A more formal test of a discontinuity in the density can be found in McCrary (2008). For
+7:189:13689:0:15:54:557:726:12:g_d0_f6:12:g_d0_f6:other covariates, their conditional means conditional onXwill need to be continuously differentiable
+7:190:13789:15:14:54:558:711:12:g_d0_f6:12:g_d0_f6:in the neighborhood ofc, so one can parametrically regress these covariates onT-and.X-c/T-or
+7:191:13881:14:15:54:557:697:12:g_d0_f6:12:g_d0_f6:nonparametrically do local linear regressions of these covariates on.X-c/to examine if there is an
+7:192:13979:15:14:54:558:682:12:g_d0_f6:12:g_d0_f6:intercept or slope change in those variables at the threshold. The latter, when using a uniform kernel,
+7:193:14082:14:15:54:557:668:12:g_d0_f6:12:g_d0_f6:corresponds to using a -xed number of bins at each side ofXDcand graphing the mean value of each
+7:194:14178:15:14:54:324:653:12:g_d0_f6:12:g_d0_f6:covariate in each bin against the mid-point of those bins.
+7:195:14236:14:26:71:398:639:12:g_d0_f6:12:g_d0_f6:Combining Lemma 1 with Theorem 1 gives the following Corollary.
+7:196:14299:26:26:71:451:613:12:g_d0_f6:12:g_d0_f6:ASSUMPTION A2: Assume there is either a jump or a kink (or both) atxDc.
+7:197:14370:26:14:71:557:587:12:g_d0_f6:12:g_d0_f6:COROLLARY 1: Let Assumptions A1 and A2 hold. Assume that the one-sided limits and one-sided
+7:198:14461:14:26:54:483:573:12:g_d0_f6:12:g_d0_f6:derivatives off.x/andg.x/atxDcare identi-ed from the data. Then-.c/is identi-ed.
+7:199:14541:26:15:71:557:547:12:g_d0_f6:12:g_d0_f6:Given identi-cation, in the following I provide results that are more directly useful for estimation. In
+7:200:14645:15:14:54:555:532:12:g_d0_f6:12:g_d0_f10:each of the remaining theorems and corollaries, estimators are obtained by replacing functionsgandf
+7:201:14744:14:26:54:238:518:12:g_d0_f6:12:g_d0_f6:with corresponding estimatesbgandbf.
+7:202:14780:26:34:71:463:492:12:g_d0_f6:12:g_d0_f6:THEOREM 2: Assume A1 and A2. If either there is no jump or if-0.c/D0, then
+7:203:14854:34:0:193:226:458:12:g_d0_f11:12:g_d0_f7:-.c/D
+7:204:14859:0:0:232:330:467:12:g_d0_f10:12:g_d0_f11:gC.c/-g-.c/Cw
+7:205:14872:0:10:332:337:477:12:g_d0_f12:12:g_d0_f12:-
+7:206:14873:10:0:337:411:467:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+7:207:14886:0:28:412:417:477:12:g_d0_f12:12:g_d0_f12:-
+7:208:14887:28:0:234:330:449:12:g_d0_f10:12:g_d0_f11:fC.c/-f-.c/Cw
+7:209:14900:0:9:332:337:458:12:g_d0_f12:12:g_d0_f12:-
+7:210:14901:9:0:340:412:449:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+7:211:14914:0:36:412:558:458:12:g_d0_f12:12:g_d0_f6:-(6)
+7:212:14918:36:0:54:219:422:12:g_d0_f6:12:g_d0_f11:for anyw6D-.fC.c/-f-.c//=
+7:213:14943:0:10:221:226:432:12:g_d0_f12:12:g_d0_f12:-
+7:214:14944:10:0:228:301:422:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+7:215:14957:0:10:301:306:432:12:g_d0_f12:12:g_d0_f12:-
+7:216:14958:10:26:306:309:422:12:g_d0_f6:12:g_d0_f6:.
+7:217:14959:26:14:71:557:396:12:g_d0_f6:12:g_d0_f6:Theorem 2 uses a weightwto combine both the standard RD estimator (4) and the new kink based
+7:218:15051:14:14:54:558:382:12:g_d0_f6:12:g_d0_f6:estimator (5). When there is no jump, i.e.,fC.c/-f-.c/D0, then equation (6) will reduce to equation
+7:219:15150:14:15:54:558:368:12:g_d0_f6:12:g_d0_f6:(5). In practice, if one is sure that there is no jump, then it will generally be preferable to base estimation
+7:220:15261:15:14:54:558:353:12:g_d0_f6:12:g_d0_f6:directly on equation (5) rather than equation (6), because in that case equation (6) will entail estimation of
+7:221:15371:14:15:54:520:339:12:g_d0_f6:12:g_d0_f6:the termsfC.c/-f-.c/andgC.c/-g-.c/, which are known to equal zero if there is no jump.
+7:222:15457:15:14:71:557:324:12:g_d0_f6:12:g_d0_f6:When there may be both a jump and a kink, Theorem 2 shows that information in both the jump and the
+7:223:15556:14:15:54:558:310:12:g_d0_f6:12:g_d0_f6:kink can be used to estimate the treatment effect-.c/, given-0.c/D0, as in the case where the treatment
+7:224:15659:15:14:54:557:295:12:g_d0_f6:12:g_d0_f6:effect is locally constant. However, note that-0.c/D0 is a strictly weaker condition than assuming a
+7:225:15759:14:15:54:557:281:12:g_d0_f6:12:g_d0_f6:locally constant treatment effect, because the latter would imply that all derivatives of-.c/were zero, not
+7:226:15866:15:14:54:557:266:12:g_d0_f6:12:g_d0_f6:just the -rst derivative-0.c/. I will discuss the interpretation of this restriction in more detail in Section 3,
+7:227:15979:14:14:54:557:252:12:g_d0_f6:12:g_d0_f6:and provide an extension to Theorem 2 in Section 4. This extension will permit-0.c/to be non-zero. Note
+7:228:16082:14:15:54:558:238:12:g_d0_f6:12:g_d0_f6:also that when it is not clear whether there is a jump, a kink, or both, the above estimator can be used as
+7:229:16189:15:14:54:355:223:12:g_d0_f6:12:g_d0_f6:long as-0.c/D0 holds, which might be appealing empirically.
+7:230:16248:14:15:71:558:209:12:g_d0_f6:12:g_d0_f6:The weightwcould be chosen to maximize ef-ciency, i.e., choosing the value ofwthat minimizes the
+7:231:16344:15:14:54:558:194:12:g_d0_f6:12:g_d0_f6:estimated standard error of the corresponding estimate of-.c/. Later in Section 3 I provide a two stage
+7:232:16447:14:15:54:558:180:12:g_d0_f6:12:g_d0_f6:least squares estimator that uses weights based on a measure of the relative strength of the two possible
+7:233:16552:15:14:54:265:165:12:g_d0_f6:12:g_d0_f6:sources of identi-cation, the jump and kink.
+7:234:16596:14:15:71:557:151:12:g_d0_f6:12:g_d0_f6:Additionally, if in practice one knows that there is both a jump and a kink, then the results in Theorem
+7:235:16700:15:25:54:521:136:12:g_d0_f6:12:g_d0_f6:2 can be used to construct a simple test for locally constant treatment effects. De-ne-1and-2by
+7:236:16795:25:18:193:412:111:12:g_d0_f11:12:g_d0_f11:-1D.gC.c/-g-.c//=.fC.c/-f-.c//
+7:237:16825:18:0:193:224:93:12:g_d0_f11:12:g_d0_f7:-2D
+7:238:16828:0:10:234:239:103:12:g_d0_f12:12:g_d0_f12:-
+7:239:16829:10:0:239:313:93:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+7:240:16842:0:10:314:319:103:12:g_d0_f12:12:g_d0_f12:-
+7:241:16843:10:0:320:326:93:12:g_d0_f11:12:g_d0_f11:=
+7:242:16844:0:10:328:333:103:12:g_d0_f12:12:g_d0_f12:-
+7:243:16845:10:0:335:408:93:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+7:244:16858:0:10:408:413:103:12:g_d0_f12:12:g_d0_f12:-
+7:245:16859:10:25:415:418:93:12:g_d0_f6:12:g_d0_f6:.
+7:246:16860:25:15:54:557:68:12:g_d0_f6:12:g_d0_f7:If the treatment effect is locally constant, then-0.c/D0, and by Theorem 2 we will have both-1D
+7:247:16955:15:0:54:557:53:12:g_d0_f11:12:g_d0_f6:-2D-.c/, so one could test the local constant treatment effect by testing whether the difference between
+8:248:17060:0:15:54:558:726:12:g_d0_f6:12:g_d0_f6:the two corresponding estimatesb-1andb-2is signi-cant. For parametric RD models, this amounts to a
+8:249:17158:15:14:53:558:711:12:g_d0_f6:12:g_d0_f6:simple t test with the test statistic.b-1-b-2/=-.b-1-b-2/, where the denominator is the standard error of the
+8:250:17267:14:15:53:145:697:12:g_d0_f6:12:g_d0_f6:differenceb-1-b-2.
+8:251:17285:15:14:71:558:682:12:g_d0_f6:12:g_d0_f6:Theorem 2 requires knowing either that there is no jump or that-0.c/D0. The following Corollary
+8:252:17380:14:15:53:557:668:12:g_d0_f6:12:g_d0_f6:provides a weighted estimator that does not require-0.c/D0, nor does it require knowing whether what
+8:253:17480:15:14:53:557:653:12:g_d0_f6:12:g_d0_f6:one has is a jump or a kink, which may be convenient in practice. The disadvantage of this Corollary
+8:254:17580:14:15:53:557:639:12:g_d0_f6:12:g_d0_f6:versus Theorem 2 is that asymptotically Corollary 2 sets-.c/equal to-1when there is a jump, regardless
+8:255:17682:15:14:53:558:624:12:g_d0_f6:12:g_d0_f6:whether there is a kink, whereas when-0.c/D0 Theorem 2 can exploit information from both the jump
+8:256:17779:14:26:53:195:610:12:g_d0_f6:12:g_d0_f6:and the kink to estimate-.c/.
+8:257:17808:26:15:71:558:584:12:g_d0_f6:12:g_d0_f6:COROLLARY 2: Assume A1 and A2 hold. Given any sequence of nonzero weightswnsuch that
+8:258:17892:15:34:53:159:569:12:g_d0_f6:12:g_d0_f6:limn!1wnD0, then
+8:259:17908:34:7:176:233:535:12:g_d0_f11:12:g_d0_f6:-.c/Dlim
+8:260:17916:7:0:213:237:528:9:g_d0_f10:9:g_d0_f7:n!1
+8:261:17919:0:0:241:343:544:12:g_d0_f10:9:g_d0_f10:gC.c/-g-.c/Cwn
+8:262:17933:0:10:346:351:554:12:g_d0_f12:12:g_d0_f12:-
+8:263:17934:10:0:351:425:544:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+8:264:17947:0:28:426:431:554:12:g_d0_f12:12:g_d0_f12:-
+8:265:17948:28:0:243:343:526:12:g_d0_f10:9:g_d0_f10:fC.c/-f-.c/Cwn
+8:266:17962:0:10:346:351:536:12:g_d0_f12:12:g_d0_f12:-
+8:267:17963:10:0:353:426:526:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+8:268:17976:0:54:426:558:536:12:g_d0_f12:12:g_d0_f6:-.(7)
+8:269:17981:54:14:71:557:482:12:g_d0_f6:12:g_d0_f6:The notable feature of Corollary 2 versus Theorem 2 is that it can be applied to construct estimators
+8:270:18082:14:15:53:557:468:12:g_d0_f6:12:g_d0_f6:for-.c/that do not require the user to know whether an observed break atXDcis a jump or a kink, or to
+8:271:18183:15:14:54:558:453:12:g_d0_f6:12:g_d0_f6:know if the treatment effect is locally constant or not. Later I will show that the weights in the local linear
+8:272:18294:14:15:54:489:439:12:g_d0_f6:12:g_d0_f6:2SLS estimator, which is a special case of the proposed estimators here, have this property.
+8:273:18386:15:14:71:557:424:12:g_d0_f6:12:g_d0_f6:I will discuss estimators based on the above theorems and corollary in more detail later, but for now
+8:274:18487:14:14:54:558:410:12:g_d0_f6:12:g_d0_f6:observe that one could directly construct nonparametric estimators ofgC.c/andg0C.c/as the intercept
+8:275:18586:14:15:54:557:396:12:g_d0_f6:12:g_d0_f6:and slope of a local linear regression ofYonX-cjust using data havingX>c. Doing the same with
+8:276:18679:15:14:54:558:381:12:g_d0_f6:12:g_d0_f6:data havingX<cwill give estimators ofg-.c/andg0-.c/, and replacingYwithTwill give estimates
+8:277:18770:14:15:54:557:367:12:g_d0_f6:12:g_d0_f6:offC.c/,f0C.c/,f-.c/andf0-.c/. These could then be substituted into equations (6) or (7) to obtain
+8:278:18868:15:41:54:189:352:12:g_d0_f6:12:g_d0_f6:consistent estimates of-.c/.
+8:279:18896:41:26:54:352:311:17:g_d0_f8:17:g_d0_f8:3  Instrumental Variable Interpretation
+8:280:18935:26:15:54:558:285:12:g_d0_f6:12:g_d0_f6:In this section I provide an instrumental variables interpretation for the identi-cation results of the previous
+8:281:19047:15:14:54:558:270:12:g_d0_f6:12:g_d0_f6:section. I will also show how instrumental variables methods can be used to construct simple estimators
+8:282:19150:14:15:54:161:256:12:g_d0_f6:12:g_d0_f6:based on these results.
+8:283:19173:15:26:71:416:241:12:g_d0_f6:12:g_d0_f6:Suppose that for some constants-,\f, and-one has the outcome model
+8:284:19239:26:27:234:558:215:12:g_d0_f10:12:g_d0_f6:YD-C\f.X-c/C-TCe(8)
+8:285:19258:27:14:54:558:188:12:g_d0_f6:12:g_d0_f6:forc-"-X-cC", where the erroremay be correlated with the treatment indicatorT. In general,
+8:286:19348:14:14:54:557:174:12:g_d0_f10:12:g_d0_f6:emight also be correlated withXand henceT-for strictly positive", instead of being uncorrelated as
+8:287:19446:14:15:54:558:160:12:g_d0_f6:12:g_d0_f6:required in an ordinary IV model. Hahn, Todd, and van der Klaauw (2001) show that the standard fuzzy
+8:288:19546:15:14:54:558:145:12:g_d0_f6:12:g_d0_f6:design RD estimator given by equation (4) is numerically equivalent to the IV estimator of-in equation
+8:289:19648:14:15:54:557:131:12:g_d0_f6:12:g_d0_f6:(8), using.X-c/andT-as instruments for any -xed", even if the IV assumption is violated. Instead,
+8:290:19745:15:14:54:557:116:12:g_d0_f6:12:g_d0_f6:continuity of conditional potential outcomes atXDcand having the bandwidth"!0 as the sample size
+8:291:19841:14:15:54:366:102:12:g_d0_f10:12:g_d0_f6:n!1establishes the consistency of the standard RD estimator.
+8:292:19901:15:14:71:557:87:12:g_d0_f6:12:g_d0_f6:For the above model, one could assume that for a small positive"neighborhood ofxDc,Xand
+8:293:19988:14:0:54:558:73:12:g_d0_f6:12:g_d0_f6:henceT-are independent ofeas"!0. Then for compliers, their treatment is determined only byT-,
+9:294:20082:0:15:54:557:726:12:g_d0_f6:12:g_d0_f6:and hence is independent ofe, i.e.,T?ejD-D1;XDxforc-"-x-cC"as"!0.1This
+9:295:20152:15:14:53:557:711:12:g_d0_f6:12:g_d0_f6:in practice could hold if individuals, in particular compliers, can not precisely manipulate the running
+9:296:20256:14:15:53:557:697:12:g_d0_f6:12:g_d0_f6:variableX, which immediately means that they will be randomly above or below the threshold. Thus,
+9:297:20353:15:14:53:557:682:12:g_d0_f6:12:g_d0_f6:treatment will be randomly assigned among compliers. (See details regarding this assignment mechanism
+9:298:20454:14:15:53:558:668:12:g_d0_f6:12:g_d0_f6:in Lemieux, 2008). For example, letTbe a grade retention treatment andXbe negative test score, socis
+9:299:20554:15:14:53:557:653:12:g_d0_f6:12:g_d0_f6:then the negative threshold score andT-indicates whether one fails the test or not.Ycould then be later
+9:300:20657:14:15:53:557:639:12:g_d0_f6:12:g_d0_f6:academic performance, andecould be ability, which in general is correlated with test scoreXand hence
+9:301:20757:15:14:54:557:624:12:g_d0_f10:12:g_d0_f6:T-. Individuals may try to be just below the threshold score and hence avoid the treatment; however,
+9:302:20857:14:14:53:557:610:12:g_d0_f6:12:g_d0_f6:depending on whether or not they are lucky on the test day, they will be randomly below or above the
+9:303:20957:14:15:53:408:596:12:g_d0_f6:12:g_d0_f6:threshold, which implies a local independence ofX(and henceT-) ande.
+9:304:21025:15:14:71:557:581:12:g_d0_f6:12:g_d0_f6:One can take Equation (8) as a parametric functional form that holds for some small -xed", which
+9:305:21121:14:15:53:557:567:12:g_d0_f6:12:g_d0_f6:then requires independence ofX(and henceT-/fromeforc-"-X-cC". In this case, equation (8)
+9:306:21209:15:14:53:557:552:12:g_d0_f6:12:g_d0_f6:assumes a constant local average treatment effect. One could relax the constant local average treatment
+9:307:21312:14:15:53:557:538:12:g_d0_f6:12:g_d0_f6:effect assumption by adding interaction terms like.X-c/Tand.X-c/2T, etc., to the model; however,
+9:308:21408:15:14:53:558:523:12:g_d0_f6:12:g_d0_f6:in this case one would still be imposing some parametric functional form on-.c/. In the extension section
+9:309:21513:14:15:53:327:509:12:g_d0_f6:12:g_d0_f6:I will consider this type of generalization of equation (8).
+9:310:21573:15:14:71:557:494:12:g_d0_f6:12:g_d0_f6:Instead of assuming a parametric model, one could alternatively take equation (8) as one that only
+9:311:21671:14:14:53:557:480:12:g_d0_f6:12:g_d0_f6:holds in the limit as"!0. In this case the model would not be placing any functional restrictions on
+9:312:21771:14:15:53:556:466:12:g_d0_f6:12:g_d0_f10:the function-.x/, since if the true model contained any interaction terms like.X-c/Tand.X-c/2T
+9:313:21865:15:14:53:558:451:12:g_d0_f6:12:g_d0_f6:that were omitted from equation (8), those terms would converge to zero as"!0. Similarly, in this case
+9:314:21967:14:15:53:558:437:12:g_d0_f6:12:g_d0_f6:even if misspeci-cation of equation (8) causedeto be correlated with any function ofXwhen">0, that
+9:315:22065:15:14:53:558:422:12:g_d0_f6:12:g_d0_f6:correlation would go to zero as"!0, because in the limitXwould no longer be a random variable, but
+9:316:22163:14:15:53:546:408:12:g_d0_f6:12:g_d0_f6:would just converge to the constantc. Note however thatecould still be correlated withTin this limit.
+9:317:22264:15:14:71:558:393:12:g_d0_f6:12:g_d0_f6:Correlation ofewithTmeans that the assignment to treatment could be related to the outcome through
+9:318:22362:14:15:53:557:379:12:g_d0_f6:12:g_d0_f6:factors other thanX. For example, if the treatment is grade retention and the decision of who to retain is
+9:319:22468:15:14:53:558:364:12:g_d0_f6:12:g_d0_f6:based both on whether test scoreXis below a threshold and on teachers' judgments of who would bene-t
+9:320:22568:14:14:53:550:350:12:g_d0_f6:12:g_d0_f6:the most from being retained, then that judgement criterion could induce a correlation betweenTande.
+9:321:22668:14:15:71:557:336:12:g_d0_f6:12:g_d0_f6:Now considerT-DI.X-c/. If the treatment probabilityf.x/has a jump atxDc, which means
+9:322:22752:15:14:53:558:321:12:g_d0_f6:12:g_d0_f6:it will depend onT-, thenT-will be a valid instrument forTin equation (8). One could then estimate
+9:323:22850:14:15:53:411:307:12:g_d0_f6:12:g_d0_f6:equation (8) using two stage least squares, with instrumentsX-candT-.
+9:324:22919:15:14:71:558:292:12:g_d0_f6:12:g_d0_f6:Similar to how a jump inf.x/atxDcimplies thatT-is a valid instrument, a kink inf.x/at the
+9:325:23008:14:15:53:557:278:12:g_d0_f6:12:g_d0_f6:threshold implies that the interaction term.X-c/T-would also be a valid instrument forT. So if there
+9:326:23108:15:14:53:557:263:12:g_d0_f6:12:g_d0_f6:is no jump but a kink in the treatment probability, one would still be able to use this kink, the slope change
+9:327:23218:14:15:53:389:249:12:g_d0_f6:12:g_d0_f6:in the treatment probability, to identify the RD model treatment effect.
+9:328:23290:15:14:71:557:234:12:g_d0_f6:12:g_d0_f6:To include eitherT-or.X-c/T-or both as possible instruments forT, write the -rst stage of a
+9:329:23381:14:26:53:257:220:12:g_d0_f6:12:g_d0_f6:linear two stage least squares regression as
+9:330:23425:26:27:194:558:194:12:g_d0_f10:12:g_d0_f6:TDrCs.X-c/CpT-Cq.X-c/T-CV(9)
+9:331:23453:27:14:53:558:167:12:g_d0_f6:12:g_d0_f6:forc-"-X-cC". Note that this treatment equation (9) is not a structural equation, but is simply
+9:332:23548:14:15:53:557:153:12:g_d0_f6:12:g_d0_f6:de-ned as the linear projection ofTon a constant,.X-c/,T-, and.X-c/T-, wherer,p, andq, are
+9:333:23638:15:14:53:558:138:12:g_d0_f6:12:g_d0_f6:just the coef-cients of that projection and the errorVis by construction uncorrelated with.X-c/,T-,
+9:334:23737:14:27:53:506:124:12:g_d0_f6:12:g_d0_f6:and.X-c/T-. Substituting equation (9) into equation (8) yields the reduced formYequation
+9:335:23825:27:18:183:558:97:12:g_d0_f10:12:g_d0_f6:YDA1CA2.X-c/CB T-CC.X-c/T-CU,(10)
+9:336:23858:18:15:67:557:79:8:g_d0_f6:10:g_d0_f6:1Note that in this case,Tfor all individuals may still depend one, as for noncompliers, including always takers and never
+9:337:23979:15:0:54:289:64:10:g_d0_f6:10:g_d0_f6:takers, their treatment is not a deterministic function ofT-.
+10:338:24041:0:15:54:400:726:12:g_d0_f6:12:g_d0_f6:whereA1D-C-r,A2D\fC-s,BDp-,CDq-, andUD-VCe.
+10:339:24084:15:14:71:558:711:12:g_d0_f6:12:g_d0_f6:As with equation (8), one may interpret equations (9) and (10) in one of two possible ways. If"is a
+10:340:24183:14:15:54:557:697:12:g_d0_f6:12:g_d0_f11:-xed constant then these linear regressions are parametric reduced form equations that imply thatf.x/
+10:341:24284:15:14:54:557:682:12:g_d0_f6:12:g_d0_f7:andg.x/have the functional formsf.x/DrCs.X-c/CpT-Cq.X-c/T-andg.x/DYD
+10:342:24352:14:25:55:402:668:12:g_d0_f10:12:g_d0_f6:A1CA2.X-c/CB T-CC.X-c/T-, which in turn would imply that
+10:343:24408:25:26:203:558:643:12:g_d0_f10:12:g_d0_f6:fC.c/-f-.c/Dp,f0C.c/-f0-.c/Dq,(11)
+10:344:24442:26:20:201:558:617:12:g_d0_f10:12:g_d0_f6:gC.c/-g-.c/DB,g0C.c/-g0-.c/DC.(12)
+10:345:24476:20:14:53:558:597:12:g_d0_f6:12:g_d0_f6:Alternatively, if"!0 then equations (9) and (10) are numerically identical to local linear regressions of
+10:346:24581:14:15:54:557:583:12:g_d0_f10:12:g_d0_f6:TandYrespectively onX, using a uniform kernel, and estimated separately using data whereXis above
+10:347:24678:15:14:53:558:568:12:g_d0_f6:12:g_d0_f6:and below the threshold. In this case it will no longer be true that the functional forms forfandgare
+10:348:24779:14:15:53:557:554:12:g_d0_f6:12:g_d0_f6:linear in.X-c/,T-, and.X-c/T-but equations (11) and (12) will still hold since the coef-cients in
+10:349:24876:15:14:53:557:539:12:g_d0_f6:12:g_d0_f6:local linear regressions equal conditional means and derivatives of conditional means regardless of their
+10:350:24981:14:15:53:351:525:12:g_d0_f6:12:g_d0_f6:true functional forms (as long as they are suf-ciently smooth).
+10:351:25044:15:14:71:558:510:12:g_d0_f6:12:g_d0_f6:Let the residuals from linear regressions ofY,T,T-, and.X-c/T-on a constant and.X-c/bey,
+10:352:25132:14:25:53:515:496:12:g_d0_f10:12:g_d0_f6:t,t-, andz, respectively. Then the -rst and second stage regression equations can be rewritten as
+10:353:25229:25:18:254:357:471:12:g_d0_f10:12:g_d0_f11:tDpt-Cq zCv;
+10:354:25241:18:25:253:323:453:12:g_d0_f10:12:g_d0_f11:yD-tCe;
+10:355:25248:25:14:53:195:428:12:g_d0_f6:12:g_d0_f6:and the reduced form foryas
+10:356:25275:14:21:258:354:414:12:g_d0_f10:12:g_d0_f11:yDBt-CC zCU:
+10:357:25287:21:28:71:187:393:12:g_d0_f6:12:g_d0_f6:The IV estimator is then
+10:358:25311:28:0:139:164:365:12:g_d0_f11:12:g_d0_f7:-D
+10:359:25313:0:17:176:261:373:12:g_d0_f10:12:g_d0_f11:cov.y;pt-Cq z/
+10:360:25327:17:0:177:260:356:12:g_d0_f10:12:g_d0_f11:cov.t;pt-Cq z/
+10:361:25341:0:0:266:275:365:12:g_d0_f7:12:g_d0_f7:D
+10:362:25342:0:17:280:406:373:12:g_d0_f10:12:g_d0_f11:cov.Bt-CC z;pt-Cq z/
+10:363:25362:17:23:302:384:356:12:g_d0_f10:12:g_d0_f11:cov.t;pt-Cq z/
+10:364:25376:23:0:155:164:333:12:g_d0_f7:12:g_d0_f7:D
+10:365:25377:0:17:176:420:341:12:g_d0_f11:12:g_d0_f10:var.t-/B pCcov.t-;z/.BqCC p/Cvar.z/Cq
+10:366:25414:17:25:235:361:324:12:g_d0_f10:12:g_d0_f10:cov.t;t-/pCcov.t;z/q
+10:367:25434:25:0:155:164:299:12:g_d0_f7:12:g_d0_f7:D
+10:368:25435:0:9:176:181:317:12:g_d0_f12:12:g_d0_f12:-
+10:369:25436:9:0:181:302:308:12:g_d0_f11:12:g_d0_f10:var.t-/pCcov.t-;z/q
+10:370:25455:0:9:303:308:317:12:g_d0_f12:12:g_d0_f12:-
+10:371:25456:9:0:310:330:308:12:g_d0_f10:12:g_d0_f7:BC
+10:372:25458:0:9:333:338:317:12:g_d0_f12:12:g_d0_f12:-
+10:373:25459:9:0:338:454:308:12:g_d0_f10:12:g_d0_f10:cov.t-;z/pCvar.z/q
+10:374:25477:0:9:455:460:317:12:g_d0_f12:12:g_d0_f12:-
+10:375:25478:9:18:462:470:308:12:g_d0_f10:12:g_d0_f10:C
+10:376:25479:18:23:260:386:290:12:g_d0_f10:12:g_d0_f10:cov.t;t-/pCcov.t;z/q
+10:377:25499:23:0:155:164:267:12:g_d0_f7:12:g_d0_f7:D
+10:378:25500:0:17:176:305:275:12:g_d0_f10:12:g_d0_f10:cov.t;t-/BCcov.t;z/C
+10:379:25520:17:22:178:303:258:12:g_d0_f10:12:g_d0_f10:cov.t;t-/pCcov.t;z/q
+10:380:25540:22:17:53:151:236:12:g_d0_f6:12:g_d0_f6:which is the same as
+10:381:25560:17:0:263:282:219:12:g_d0_f11:12:g_d0_f7:-D
+10:382:25562:0:17:287:346:227:12:g_d0_f11:12:g_d0_f10:w1BCw2C
+10:383:25569:17:18:288:344:210:12:g_d0_f11:12:g_d0_f10:w1pCw2q
+10:384:25576:18:14:53:557:192:12:g_d0_f6:12:g_d0_f6:where the weights are given byw1Dcov.t;t-/andw2Dcov.t;z/, so the relative weight re-ects the
+10:385:25668:14:34:53:464:178:12:g_d0_f6:12:g_d0_f6:relative strength of the two IVs,T-and.X-c/T-. Plugging inB,C,p, andq, gives
+10:386:25744:34:0:149:167:144:12:g_d0_f11:12:g_d0_f7:-D
+10:387:25746:0:17:172:231:153:12:g_d0_f11:12:g_d0_f10:w1BCw2C
+10:388:25753:17:0:174:230:136:12:g_d0_f11:12:g_d0_f10:w1pCw2q
+10:389:25760:0:0:237:246:144:12:g_d0_f7:12:g_d0_f7:D
+10:390:25761:0:0:251:374:153:12:g_d0_f11:9:g_d0_f6:w1.gC.c/-g-.c//Cw2
+10:391:25779:0:10:377:382:163:12:g_d0_f12:12:g_d0_f12:-
+10:392:25780:10:0:382:453:153:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+10:393:25793:0:28:453:458:163:12:g_d0_f12:12:g_d0_f12:-
+10:394:25794:28:0:251:374:135:12:g_d0_f11:9:g_d0_f6:w1.fC.c/-f-.c//Cw2
+10:395:25812:0:10:377:382:145:12:g_d0_f12:12:g_d0_f12:-
+10:396:25813:10:0:385:453:135:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+10:397:25826:0:34:453:558:145:12:g_d0_f12:12:g_d0_f6:-.(13)
+10:398:25832:34:14:54:558:111:12:g_d0_f6:12:g_d0_f6:This shows that, asymptotically, the IV estimator in equation (13) is equivalent to the special case of the
+10:399:25939:14:15:54:262:97:12:g_d0_f6:12:g_d0_f6:estimator in Theorem 2 wherewDw2=w1.
+10:400:25975:15:14:71:558:82:12:g_d0_f6:12:g_d0_f6:In the above IV estimator, ifqD0 andp6D0, meaning there is a jump, but no kink, thenCD0
+10:401:26062:14:15:54:558:68:12:g_d0_f6:12:g_d0_f6:andw2D0, and hence-equals equation (4), which is the standard fuzzy design RD treatment effect
+10:402:26156:15:0:54:451:53:12:g_d0_f6:12:g_d0_f6:estimator. Identi-cation comes fromT-being a valid instrument forTin this case.
+11:403:26236:0:15:71:558:726:12:g_d0_f6:12:g_d0_f6:IfpD0 andq6D0, meaning there is no jump, but a kink, thenBD0 andw1D0, and hence the
+11:404:26319:15:14:53:558:711:12:g_d0_f6:12:g_d0_f6:IV estimator reduces to (5), which is the estimator proposed in Theorem 1. In this caseT-drops out of
+11:405:26420:14:15:53:558:697:12:g_d0_f6:12:g_d0_f6:both the instrument equation (9) and the reduced formYequation (10) but.X-c/T-appears in both,
+11:406:26514:15:14:53:557:682:12:g_d0_f6:12:g_d0_f6:providing a valid instrument forT. The resulting estimator for-, given by equation (5), equals the ratio of
+11:407:26621:14:15:53:558:668:12:g_d0_f6:12:g_d0_f6:the coef-cient forT-.X-c/in the reduced-formYequation and that in theTequation, which con-rms
+11:408:26714:15:14:53:401:653:12:g_d0_f6:12:g_d0_f6:that the slope change of the treatment probability provides identi-cation.
+11:409:26788:14:15:71:557:639:12:g_d0_f6:12:g_d0_f6:Note that the local linear 2SLS estimator that has a variable bandwidth (i.e.,"!0 as the sample size
+11:410:26888:15:14:53:557:624:12:g_d0_f10:12:g_d0_f6:n! 1) has the property speci-ed in Corollary 2. Asymptotically the local 2SLS puts a zero weight on
+11:411:26987:14:14:53:558:610:12:g_d0_f6:12:g_d0_f6:the slope change if there is a discrete jump. As the sample sizen! 1, the bandwidth used in the local
+11:412:27088:14:15:53:557:596:12:g_d0_f6:12:g_d0_f6:regressions shrinks to zero (using observations closer and closer to the threshold), soX-cand hence
+11:413:27187:15:14:53:557:581:12:g_d0_f11:9:g_d0_f6:.X-c/T-goes to zero, which makeszgo to zero. It follows thatw2Dcov.t;z/, and hencew2=w1
+11:414:27274:14:15:53:557:567:12:g_d0_f6:12:g_d0_f6:goes to zero. So with the local 2SLS if there is a jump, i.e.,pDfC.c/-f-.c/6D0, the 2SLS weight
+11:415:27369:15:14:53:558:552:12:g_d0_f11:12:g_d0_f6:w2=w1Dwn!0 asn! 1. Alternatively, if the treatment probability does not have a jump, i.e.,
+11:416:27459:14:24:55:521:538:12:g_d0_f10:12:g_d0_f6:pDfC.c/-f-.c/D0, then the weights are asymptotically irrelevant, since in that case one has
+11:417:27550:24:17:240:299:514:12:g_d0_f11:12:g_d0_f10:w1BCw2C
+11:418:27557:17:0:241:298:497:12:g_d0_f11:12:g_d0_f10:w1pCw2q
+11:419:27564:0:0:304:313:506:12:g_d0_f7:12:g_d0_f7:D
+11:420:27565:0:17:318:340:514:12:g_d0_f11:12:g_d0_f10:w2C
+11:421:27568:17:0:319:339:497:12:g_d0_f11:12:g_d0_f10:w2q
+11:422:27571:0:0:345:354:506:12:g_d0_f7:12:g_d0_f7:D
+11:423:27572:0:17:359:367:514:12:g_d0_f10:12:g_d0_f10:C
+11:424:27573:17:0:360:366:497:12:g_d0_f10:12:g_d0_f10:q
+11:425:27574:0:43:369:372:506:12:g_d0_f6:12:g_d0_f6:.
+11:426:27575:43:27:53:158:463:17:g_d0_f8:17:g_d0_f8:4  Extensions
+11:427:27588:27:14:53:557:436:12:g_d0_f6:12:g_d0_f6:The previously described estimator in Theorem 2 uses either just a jump, or just a kink, or both, but
+11:428:27689:14:14:53:557:422:12:g_d0_f6:12:g_d0_f7:asymptotically if there is a jump, then the only case in which the kink information is used is when-0.c/D
+11:429:27794:14:15:53:558:408:12:g_d0_f6:12:g_d0_f6:0 in Theorem 2. Having-0.c/D0 means that the treatment effect does not vary linearly withX. For
+11:430:27889:15:14:53:409:393:12:g_d0_f6:12:g_d0_f6:example, in the true parametric form,Ycannot be a function of.X-c/T.
+11:431:27957:14:15:71:558:379:12:g_d0_f6:12:g_d0_f6:This section provides an extension of Theorem 2 to allow-0.c/6D0, so the treatment effect can
+11:432:28050:15:14:53:558:364:12:g_d0_f6:12:g_d0_f6:vary with the running variableX, while exploiting information in both a jump and a kink. For example,
+11:433:28151:14:15:53:557:350:12:g_d0_f6:12:g_d0_f6:if the treatment is grade retention, the running variable is test score, and the outcome is later academic
+11:434:28257:15:14:53:558:335:12:g_d0_f6:12:g_d0_f6:performance. Then-0.c/6D0 would mean the effect of repeating a grade on later performance depends
+11:435:28354:14:15:53:557:321:12:g_d0_f6:12:g_d0_f6:on the pre-treatment test score, and in this case one still could use both jump and kink information to
+11:436:28457:15:14:53:191:306:12:g_d0_f6:12:g_d0_f6:estimate the treatment effect.
+11:437:28487:14:14:71:557:292:12:g_d0_f6:12:g_d0_f7:For convenience of notation, formally de-neB.c/DgC.c/-g-.c/,C.c/Dg0C.c/-g0-.c/,p.c/D
+11:438:28571:14:15:56:557:278:12:g_d0_f10:12:g_d0_f7:fC.c/-f-.c/, andq.c/Df0C.c/-f0-.c/. Further de-neD.c/Dg00C.c/-g00-.c/andr.c/D
+11:439:28648:15:14:56:558:263:12:g_d0_f10:12:g_d0_f6:f00C.c/-f00-.c/. SoB.c/,C.c/,D.c/,p.c/,q.c/, andr.c/are the intercept (level), slope, and second
+11:440:28744:14:15:54:558:249:12:g_d0_f6:12:g_d0_f6:derivative changes in the outcome functions and treatment probability, respectively. The proof of Theorem
+11:441:28849:15:14:54:558:234:12:g_d0_f6:12:g_d0_f6:1 shows thatB0.c/DC.c/andp0.c/Dq.c/. Similarly it follows thatB00.c/DD.c/andp00.c/Dr.c/.
+11:442:28937:14:15:53:557:220:12:g_d0_f6:12:g_d0_f6:Whenever possible, I will drop the argument.c/, and simply useB,C,p,q,D, andr, but note that all
+11:443:29033:15:26:54:274:205:12:g_d0_f6:12:g_d0_f6:these parameters are in general functions ofc.
+11:444:29079:26:15:71:557:179:12:g_d0_f6:12:g_d0_f6:THEOREM 3: Assume A1, A2, and further assume the conditional means speci-ed in A1 are contin-
+11:445:29172:15:32:54:400:164:12:g_d0_f6:12:g_d0_f6:uously twice differentiable. If either there is no jump or-00.c/D0, then
+11:446:29244:32:0:236:272:132:12:g_d0_f11:12:g_d0_f7:-.c/D
+11:447:29249:0:18:278:373:141:12:g_d0_f10:12:g_d0_f11:BCw.2qC-Dp/
+11:448:29260:18:0:282:312:123:12:g_d0_f10:12:g_d0_f11:pCw
+11:449:29263:0:10:315:320:133:12:g_d0_f12:12:g_d0_f12:-
+11:450:29264:10:0:319:364:123:12:g_d0_f6:12:g_d0_f10:2q2-r p
+11:451:29271:0:32:364:558:133:12:g_d0_f12:12:g_d0_f6:-(14)
+11:452:29276:32:0:53:192:101:12:g_d0_f6:12:g_d0_f11:for any weightsw6D -p=
+11:453:29298:0:10:194:199:111:12:g_d0_f12:12:g_d0_f12:-
+11:454:29299:10:0:199:243:101:12:g_d0_f6:12:g_d0_f10:2q2-r p
+11:455:29306:0:10:244:249:111:12:g_d0_f12:12:g_d0_f12:-
+11:456:29307:10:15:248:557:101:12:g_d0_f6:12:g_d0_f6:.  Similar estimators can be constructed if thed-th derivative
+11:457:29369:15:15:53:558:86:12:g_d0_f11:12:g_d0_f6:-.d/.c/D0, as is the case if the treatment effect is up to a polynomial of degreed-1, for any posi-
+11:458:29468:15:0:53:120:71:12:g_d0_f6:12:g_d0_f6:tive integerd.
+12:459:29484:0:15:71:557:726:12:g_d0_f6:12:g_d0_f6:The conditional means in Assumption A1 are twice differentiable, which guarantees that all the in-
+12:460:29582:15:14:54:557:711:12:g_d0_f6:12:g_d0_f6:volved derivatives inB,C,D,p,q, andrexist. They can be estimated by regression coef-cients if one
+12:461:29679:14:15:53:519:697:12:g_d0_f6:12:g_d0_f6:does local quadratic regressions using a uniform kernel at each side neighborhood of the cutoffc.
+12:462:29776:15:14:71:558:682:12:g_d0_f6:12:g_d0_f6:Analogous to Theorem 2, the assumption for Theorem 3 that-00.c/D0 will hold if the treatment
+12:463:29868:14:15:53:557:668:12:g_d0_f6:12:g_d0_f6:effect is locally linear or locally constant. However, while a locally linear or constant treatment effect is
+12:464:29977:15:14:53:557:653:12:g_d0_f6:12:g_d0_f6:suf-cient for-00.c/D0, it is stronger than necessary, because it implies that all derivatives higher than
+12:465:30082:14:15:53:558:639:12:g_d0_f6:12:g_d0_f6:the -rst are zero, instead of just the second derivative being zero. With the assumption-00.c/D0, the
+12:466:30183:15:14:53:558:624:12:g_d0_f6:12:g_d0_f6:estimator does not allow the treatment effect to be quadratic in.X-c/. So for example, in the parametric
+12:467:30287:14:14:54:493:610:12:g_d0_f6:12:g_d0_f6:form,Ycannot be a function ofT.X-c/2, but can be a function ofTorT.X-c/or both.
+12:468:30366:14:15:71:557:596:12:g_d0_f6:12:g_d0_f6:Similar to the estimator in Theorem 2, when there is no jump, i.e.,pD0 andBD0, then the above
+12:469:30459:15:14:53:557:581:12:g_d0_f6:12:g_d0_f6:estimator reduces toC=q, which is the estimator in Theorem 1. So when one is sure there is no jump, it
+12:470:30561:14:15:53:557:567:12:g_d0_f6:12:g_d0_f6:is more ef-cient to use the estimator in Theorem 1. Otherwise if one assumes that the treatment effect is
+12:471:30666:15:14:53:557:552:12:g_d0_f6:12:g_d0_f6:locally linear or locally constant, then this estimator works regardless of whether there is a jump, a kink,
+12:472:30774:14:15:53:442:538:12:g_d0_f6:12:g_d0_f6:or both, and exploits the identi-cation information in both when both are present.
+12:473:30856:15:14:71:557:523:12:g_d0_f6:12:g_d0_f6:Construction of the estimator when-.d/.c/D0 for some -nitedis brie-y discussed in the Appendix.
+12:474:30951:14:15:53:557:509:12:g_d0_f6:12:g_d0_f6:In this case, the treatment effect can be an arbitrarily high-order (e.g., up to thed-th order) polynomial of
+12:475:31060:15:14:53:232:494:12:g_d0_f11:12:g_d0_f6:.X-c/, as long as the order is -nite.
+12:476:31097:14:26:71:309:480:12:g_d0_f6:12:g_d0_f6:From Theorem 3, one has the following corollary.
+12:477:31145:26:15:71:557:454:12:g_d0_f6:12:g_d0_f6:COROLLARY 3: Assume A1 and A2 hold. Given any sequence of nonzero weights!nsuch that
+12:478:31229:15:19:54:158:439:12:g_d0_f6:12:g_d0_f6:limn!1!nD0, then
+12:479:31245:19:0:235:269:420:12:g_d0_f11:12:g_d0_f7:-.c/D
+12:480:31250:0:17:274:374:428:12:g_d0_f10:12:g_d0_f11:BC!n.2qC-Dp/
+12:481:31262:17:0:279:312:411:12:g_d0_f10:9:g_d0_f10:pC!n
+12:482:31266:0:9:316:321:420:12:g_d0_f12:12:g_d0_f12:-
+12:483:31267:9:0:321:365:411:12:g_d0_f6:12:g_d0_f10:2q2-r p
+12:484:31274:0:48:365:558:420:12:g_d0_f12:12:g_d0_f6:-(15)
+12:485:31279:48:14:71:557:372:12:g_d0_f6:12:g_d0_f6:Compared with the estimator in Corollary 2, when the treatment effect is locally linear instead of
+12:486:31377:14:15:53:557:358:12:g_d0_f6:12:g_d0_f6:locally constant, the above estimator takes into account this local linear effect, while the estimator in
+12:487:31482:15:14:53:558:343:12:g_d0_f6:12:g_d0_f6:Corollary 2 does not. In particular, for a local linear treatment effect model, given a kink (q6D0),
+12:488:31582:14:0:54:123:329:12:g_d0_f11:12:g_d0_f11:.2qC-Dp/=
+12:489:31591:0:10:125:130:339:12:g_d0_f12:12:g_d0_f12:-
+12:490:31592:10:0:130:174:329:12:g_d0_f6:12:g_d0_f10:2q2-r p
+12:491:31599:0:10:175:180:339:12:g_d0_f12:12:g_d0_f12:-
+12:492:31600:10:14:184:557:329:12:g_d0_f6:12:g_d0_f6:would be a valid estimator for the treatment effect-.c/regardless whether
+12:493:31673:14:15:54:399:315:12:g_d0_f6:12:g_d0_f6:there is a jump or not, whileC=qis not unless there is no jump (pD0/.
+12:494:31742:15:14:71:557:300:12:g_d0_f6:12:g_d0_f6:Note that the above estimator exploits possible higher order derivative changes for identi-cation. For
+12:495:31844:14:15:54:557:286:12:g_d0_f6:12:g_d0_f10:example, in the absence of both a jump and a kink, the above estimator reduces toD=r. Similar toC=q
+12:496:31943:15:14:54:558:271:12:g_d0_f6:12:g_d0_f6:identifying the RD model treatment effect in the absence of a jump, applying L'hopital's rule toC=qgives
+12:497:32047:14:15:54:557:257:12:g_d0_f10:12:g_d0_f6:D=ras a valid estimator when there is neither a jump nor a kink, but second derivative changes. However,
+12:498:32151:15:14:54:558:242:12:g_d0_f6:12:g_d0_f6:a possible disadvantage of using Corollary 3 for estimation instead of Corollary 2 is that Corollary 3
+12:499:32253:14:15:54:558:228:12:g_d0_f6:12:g_d0_f6:requires estimation of higher order derivatives (second instead of -rst), which in practice might be very
+12:500:32358:15:14:54:162:213:12:g_d0_f6:12:g_d0_f6:imprecisely estimated.
+12:501:32380:14:14:71:557:199:12:g_d0_f6:12:g_d0_f6:So far, all the estimators have been discussed without other covariates except forX. Sometimes it
+12:502:32477:14:15:54:558:185:12:g_d0_f6:12:g_d0_f6:may be desirable to include covariates in the RD model, for example, treatment effects could vary with
+12:503:32579:15:14:54:558:170:12:g_d0_f6:12:g_d0_f6:the other covariates. In that case, additional covariatesZcould be included by letting all the assumptions
+12:504:32685:14:15:54:557:156:12:g_d0_f6:12:g_d0_f6:hold conditional upon the valuesZmay take on. The treatment effect estimators are then all conditional
+12:505:32787:15:14:54:558:141:12:g_d0_f6:12:g_d0_f6:on the speci-c value ofZ. For estimation, one could directly includeZ, possibly interacted withTandX,
+12:506:32888:14:15:54:558:127:12:g_d0_f6:12:g_d0_f6:as additional regressors in the local polynomial or IV regressions. Then by averaging the estimates over
+12:507:32992:15:14:54:557:112:12:g_d0_f6:12:g_d0_f6:all possible values ofZone could get unconditional RD model treatment effects. Alternatively, one could
+12:508:33095:14:15:54:558:98:12:g_d0_f6:12:g_d0_f6:partial covariates out by -rst regressingYandTon covariates both above and below the threshold, and
+12:509:33194:15:0:54:432:83:12:g_d0_f6:12:g_d0_f6:then use the residuals from those regressions in place ofYandTin estimation.
+13:510:33272:0:27:54:160:726:17:g_d0_f8:17:g_d0_f8:5  Estimation
+13:511:33285:27:15:54:558:699:12:g_d0_f6:12:g_d0_f6:In this section I describe how to implement the proposed RD estimators. The estimation methods provided
+13:512:33388:15:14:54:446:684:12:g_d0_f6:12:g_d0_f6:here are not new. All that is new is their application to the Theorems in this paper.
+13:513:33473:14:15:71:557:670:12:g_d0_f6:12:g_d0_f6:One convenient way to implement the proposed RD estimators is to do local linear or polynomial
+13:514:33567:15:14:54:558:655:12:g_d0_f6:12:g_d0_f6:regressions using a uniform kernel. The coef-cients in the local linear or polynomial regressions provide
+13:515:33672:14:15:54:558:641:12:g_d0_f6:12:g_d0_f6:parameters one needs to construct estimates for the proposed estimators. For example, for a constant
+13:516:33772:15:14:54:557:626:12:g_d0_f6:12:g_d0_f6:treatment effect model, one could estimategC.X/DE.YjX;T-D1/DBCC.X-c/CCand
+13:517:33845:14:14:56:558:612:12:g_d0_f10:12:g_d0_f6:fC.X/DE.TjX;T-D1/DpCC.X-c/qCby ordinary least squares using observations right above
+13:518:33929:14:15:54:557:598:12:g_d0_f6:12:g_d0_f7:the thresholdc, and estimateg-.X/DE.YjX;T-D0/DB-C.X-c/C-andf-.X/DE.Tj
+13:519:33998:15:14:54:558:583:12:g_d0_f10:12:g_d0_f6:X;T-D0/Dp-C.X-c/q-using observations right below the threshold. HereB,C,p, andqare
+13:520:34080:14:15:54:558:569:12:g_d0_f6:12:g_d0_f6:constant regression coef-cients, and the subscriptsCand-denote whether they are estimated using data
+13:521:34180:15:14:54:558:554:12:g_d0_f6:12:g_d0_f6:from above or below the threshold. With these estimates the standard RD fuzzy design treatment effect
+13:522:34281:14:35:54:214:540:12:g_d0_f6:12:g_d0_f6:given a jump can be estimated by
+13:523:34313:35:0:259:296:505:12:g_d0_f12:12:g_d0_f7:b-.c/D
+13:524:34319:0:19:301:346:516:12:g_d0_f12:9:g_d0_f7:bBC-bB-
+13:525:34326:19:0:302:345:497:12:g_d0_f12:9:g_d0_f7:bpC-bp-
+13:526:34333:0:25:348:558:505:12:g_d0_f11:12:g_d0_f6::(16)
+13:527:34338:25:14:53:557:480:12:g_d0_f6:12:g_d0_f6:This estimator can also be implemented as the estimated coef-cient ofTusing IV estimation, regressing
+13:528:34439:14:15:54:492:466:12:g_d0_f10:12:g_d0_f6:Yon a constant,X-c, andT, using withT-along with.X-c/as instrumental variables.
+13:529:34518:15:14:71:557:451:12:g_d0_f6:12:g_d0_f6:The RD treatment effect estimator given a kink but no jump at the thresholdc(the estimator in Theorem
+13:530:34619:14:23:54:162:437:12:g_d0_f6:12:g_d0_f6:1) can be estimated by
+13:531:34641:23:0:259:296:414:12:g_d0_f12:12:g_d0_f7:b-.c/D
+13:532:34647:0:19:301:346:425:12:g_d0_f12:9:g_d0_f7:bCC-bC-
+13:533:34654:19:0:302:344:406:12:g_d0_f12:9:g_d0_f7:bqC-bq-
+13:534:34661:0:25:348:558:414:12:g_d0_f6:12:g_d0_f6:.(17)
+13:535:34666:25:15:54:558:389:12:g_d0_f6:12:g_d0_f6:Equivalently, one could takeb-.c/to be the estimated coef-cient ofTin an IV estimation, regressingYon
+13:536:34767:15:14:53:446:374:12:g_d0_f6:12:g_d0_f6:a constant,X-c, andT, using.X-c/and.X-c/T-as instrumental variables.
+13:537:34835:14:35:71:461:360:12:g_d0_f6:12:g_d0_f6:The RD treatment effect estimator proposed in Theorem 2 can be implemented as
+13:538:34912:35:0:219:254:325:12:g_d0_f12:12:g_d0_f7:b-.c/D
+13:539:34918:0:0:260:328:336:12:g_d0_f12:12:g_d0_f11:bBC-bB-Cbw
+13:540:34928:0:7:330:335:343:12:g_d0_f12:12:g_d0_f12:-
+13:541:34929:7:0:336:381:336:12:g_d0_f12:9:g_d0_f7:bCC-bC-
+13:542:34936:0:27:381:386:343:12:g_d0_f12:12:g_d0_f12:-
+13:543:34937:27:0:263:382:316:12:g_d0_f12:12:g_d0_f11:bpC-bp-Cbw.bqC-bq-/
+13:544:34956:0:26:387:558:325:12:g_d0_f6:12:g_d0_f6:.(18)
+13:545:34961:26:14:54:557:299:12:g_d0_f6:12:g_d0_f6:where the weightbwcan be chosen to minimize the bootstrapped standard error forb-.c/. Alternatively,
+13:546:35061:14:15:54:558:285:12:g_d0_f6:12:g_d0_f6:equation (18) could be estimated by a 2SLS regression ofYon a constant,X-c,T, and.X-c/T, using
+13:547:35155:15:14:54:557:270:12:g_d0_f6:12:g_d0_f6:as instruments.X-c/,T-, and.X-c/T-. The resulting estimated weights will then be as described in
+13:548:35251:14:15:54:102:256:12:g_d0_f6:12:g_d0_f6:Section 3.
+13:549:35261:15:14:71:557:241:12:g_d0_f6:12:g_d0_f6:For all the estimators in the above, one could use the Delta method to calculate standard errors. Al-
+13:550:35362:14:15:54:558:227:12:g_d0_f6:12:g_d0_f6:ternatively, parametric IV estimation provides standard errors directly along with the point estimate of the
+13:551:35470:15:14:54:172:212:12:g_d0_f6:12:g_d0_f6:average treatment effect.
+13:552:35495:14:14:71:557:198:12:g_d0_f6:12:g_d0_f6:These estimators can be interpreted as a special case of nonparametric local linear based estimation,
+13:553:35596:14:15:54:558:184:12:g_d0_f6:12:g_d0_f6:using a uniform kernel. The bandwidth might be chosen using cross validation or other methods as de-
+13:554:35696:15:14:54:558:169:12:g_d0_f6:12:g_d0_f6:scribed in, e.g., Imbens and Kalyanaraman (2009) or Lee and Lemieux (2010) and references therein. Just
+13:555:35799:14:15:54:558:155:12:g_d0_f6:12:g_d0_f6:as Porter (2003) recommends using local linear estimation to reduce boundary bias in the constant terms
+13:556:35902:15:14:54:558:140:12:g_d0_f6:12:g_d0_f6:of these regressions, it might be advisable to use local quadratic rather than local linear estimation for
+13:557:36008:14:15:54:296:126:12:g_d0_f6:12:g_d0_f6:reducing boundary bias in the derivative estimates.
+13:558:36059:15:14:71:558:111:12:g_d0_f6:12:g_d0_f6:To apply the estimator proposed in Theorem 3, where the treatment effect is allowed to vary withX,
+13:559:36157:14:15:53:557:97:12:g_d0_f6:12:g_d0_f6:one would need to estimate local quadratic or higher-order polynomial regressions to obtain the second or
+13:560:36262:15:14:53:557:82:12:g_d0_f6:12:g_d0_f6:higher-order derivatives involved in those estimators. Similarly, IV estimation can be implemented using
+13:561:36366:14:14:53:557:68:12:g_d0_f6:12:g_d0_f6:the higher-order interaction terms as additional instruments. Since these extensions are straightforward, I
+13:562:36473:14:0:53:251:54:12:g_d0_f6:12:g_d0_f6:do not explicitly give their formulas here.
+14:563:36518:0:27:54:169:726:17:g_d0_f8:17:g_d0_f8:6  Conclusions
+14:564:36532:27:15:54:558:699:12:g_d0_f6:12:g_d0_f6:Regression discontinuity models identify local treatment effects by associating a discrete change (a jump)
+14:565:36638:15:14:54:558:684:12:g_d0_f6:12:g_d0_f6:in the mean outcome with a corresponding jump in the probability of treatment at a -xed threshold value of
+14:566:36744:14:15:54:558:670:12:g_d0_f6:12:g_d0_f6:the running variable. Lack of discontinuity would make the standard RD estimator inapplicable. However,
+14:567:36847:15:14:54:558:655:12:g_d0_f6:12:g_d0_f6:this paper shows that it is possible to identify the RD model treatment effect from a slope change (a kink)
+14:568:36954:14:15:54:558:641:12:g_d0_f6:12:g_d0_f6:rather than, or in addition to, a jump in the probability of treatment. The intuition for identi-cation off a
+14:569:37063:15:14:54:330:626:12:g_d0_f6:12:g_d0_f6:kink in the absence of a jump is based on L'hopital's rule.
+14:570:37122:14:14:71:557:612:12:g_d0_f6:12:g_d0_f6:I propose extensions of the usual RD estimator that can be used regardless of whether the source of
+14:571:37221:14:15:54:558:598:12:g_d0_f6:12:g_d0_f6:identi-cation is a jump or a kink. This is empirically appealing because in some potential applications
+14:572:37324:15:14:54:558:583:12:g_d0_f6:12:g_d0_f6:of RD models, it is hard to determine whether the probability of treatment actually jumps or just have a
+14:573:37428:14:15:54:558:569:12:g_d0_f6:12:g_d0_f6:kink at the threshold. In these cases, treatment effects based on standard RD estimators would either be
+14:574:37532:15:14:54:558:554:12:g_d0_f6:12:g_d0_f6:weakly identi-ed, if the jump is small, or unidenti-ed if the jump is zero, regardless of how much the
+14:575:37634:14:15:54:558:540:12:g_d0_f6:12:g_d0_f6:slope changes. In contrast, this paper's estimators make use of any changes in either the intercept (a jump)
+14:576:37742:15:14:54:467:525:12:g_d0_f6:12:g_d0_f6:or the slope (a kink) of the treatment probability at a threshold of the running variable.
+14:577:37832:14:15:71:557:511:12:g_d0_f6:12:g_d0_f6:The identi-cation results in this paper can be intuitively interpreted using IV models. I show that a
+14:578:37933:15:14:54:558:496:12:g_d0_f6:12:g_d0_f6:kink in the treatment probability provides an additional valid instrument that one can use to identify the
+14:579:38039:14:14:54:558:482:12:g_d0_f6:12:g_d0_f6:same RD treatment effect as a jump. Speci-cally, similar to a jump in the treatment probability at the
+14:580:38141:14:15:54:558:468:12:g_d0_f6:12:g_d0_f6:threshold implying that the binary indicator for crossing the threshold is a valid instrument, a kink at the
+14:581:38249:15:14:54:558:453:12:g_d0_f6:12:g_d0_f6:threshold implies that the interaction term between this binary indicator and the running variable could
+14:582:38353:14:15:54:558:439:12:g_d0_f6:12:g_d0_f6:also be a valid instrument for the treatment. So if there is no jump but a kink in the treatment probability,
+14:583:38462:15:14:54:558:424:12:g_d0_f6:12:g_d0_f6:one would still be able to use this kink, or the slope change in the treatment probability, to identify the RD
+14:584:38572:14:15:54:558:410:12:g_d0_f6:12:g_d0_f6:model treatment effect. I also show that in some cases (e.g., when the treatment effect is locally constant
+14:585:38679:15:14:54:558:395:12:g_d0_f6:12:g_d0_f6:in the neighborhood of the threshold), one can use the information in both the intercept change and the
+14:586:38782:14:15:54:435:381:12:g_d0_f6:12:g_d0_f6:slope change, i.e., both the jump and a kink to estimate the RD treatment effect.
+14:587:38863:15:14:71:557:366:12:g_d0_f6:12:g_d0_f6:All of the proposed estimators can be computed using just the estimated coef-cients from the same
+14:588:38960:14:14:54:558:352:12:g_d0_f6:12:g_d0_f6:local linear or polynomial regressions that are typically used to estimate standard RD models, so no new
+14:589:39064:14:15:54:558:338:12:g_d0_f6:12:g_d0_f6:estimation methods are required. As usual, one can alternatively do IV or 2SLS estimation using observa-
+14:590:39168:15:14:54:558:323:12:g_d0_f6:12:g_d0_f6:tions in the neighborhood of the threshold to obtain not only point estimates of the average treatment effect
+14:591:39277:14:15:54:558:309:12:g_d0_f6:12:g_d0_f6:but also parametric standard errors, with an added advantage in this paper's context that 2SLS provides
+14:592:39380:15:14:54:364:294:12:g_d0_f6:12:g_d0_f6:the type of weights that some of the proposed estimators require.
+14:593:39445:14:15:71:557:280:12:g_d0_f6:12:g_d0_f6:Given our results, it would be useful to explore identi-cation and estimation of other treatment related
+14:594:39549:15:14:54:558:265:12:g_d0_f6:12:g_d0_f6:parameters in the presence of kinks instead of jumps, such as the marginal policy effects of Carneiro,
+14:595:39651:14:41:54:306:251:12:g_d0_f6:12:g_d0_f6:Heckman, and Vytlacil (2010) and Heckman (2010).
+14:596:39699:41:27:54:210:210:17:g_d0_f8:17:g_d0_f8:7  Appendix: Proofs
+14:597:39718:27:14:54:563:183:12:g_d0_f6:12:g_d0_f6:First note that for anyxsuch thatc-"-x-cC", given Assumption A1, one has thatE.Y.t/D-jXDx/,
+14:598:39809:14:15:54:557:169:12:g_d0_f10:12:g_d0_f11:E.Y.t/.1-D-/jXDx/, fortD0;1, and henceE.Y.1-D-/jXDx/andE.T.1-D-/jXDx/
+14:599:39878:15:14:53:558:154:12:g_d0_f6:12:g_d0_f6:are all continuously differentiable in the neighborhood ofxDc. The last two equations hold because
+14:600:39976:14:14:54:557:140:12:g_d0_f10:12:g_d0_f6:YDY.0/C.Y.1/-Y.0//Tand becauseE.TjXDx;D-D0/andE.D-jXDx/are assumed to
+14:601:40045:14:27:54:406:126:12:g_d0_f6:12:g_d0_f6:be continuously differentiable. The following proof will use these results.
+14:602:40120:27:0:71:182:99:12:g_d0_f6:12:g_d0_f6:PROOF of LEMMA 1:
+15:603:40139:0:26:71:426:726:12:g_d0_f6:12:g_d0_f6:Consider the conditional mean ofYin a RD model for a -xed thresholdc,
+15:604:40208:26:0:92:199:700:12:g_d0_f10:12:g_d0_f10:E.YjXDx/DE
+15:605:40218:0:10:203:208:710:12:g_d0_f12:12:g_d0_f12:-
+15:606:40219:10:0:207:253:700:12:g_d0_f10:12:g_d0_f10:Y D-CY
+15:607:40225:0:10:256:261:710:12:g_d0_f12:12:g_d0_f12:-
+15:608:40226:10:0:261:296:700:12:g_d0_f6:9:g_d0_f7:1-D-
+15:609:40230:0:10:297:302:710:12:g_d0_f12:12:g_d0_f12:-
+15:610:40231:10:0:305:342:700:12:g_d0_f7:12:g_d0_f10:jXDx
+15:611:40235:0:27:344:349:710:12:g_d0_f12:12:g_d0_f12:-
+15:612:40236:27:0:172:199:683:12:g_d0_f7:12:g_d0_f10:DE
+15:613:40238:0:9:203:208:692:12:g_d0_f12:12:g_d0_f12:-
+15:614:40239:9:0:207:272:683:12:g_d0_f10:12:g_d0_f10:Y D-jXDx
+15:615:40247:0:9:273:278:692:12:g_d0_f12:12:g_d0_f12:-
+15:616:40248:9:0:281:300:683:12:g_d0_f7:12:g_d0_f10:CE
+15:617:40250:0:9:304:309:692:12:g_d0_f12:12:g_d0_f12:-
+15:618:40251:9:0:309:316:683:12:g_d0_f10:12:g_d0_f10:Y
+15:619:40252:0:9:319:324:692:12:g_d0_f12:12:g_d0_f12:-
+15:620:40253:9:0:324:359:683:12:g_d0_f6:9:g_d0_f7:1-D-
+15:621:40257:0:9:360:365:692:12:g_d0_f12:12:g_d0_f12:-
+15:622:40258:9:0:368:405:683:12:g_d0_f7:12:g_d0_f10:jXDx
+15:623:40262:0:27:407:412:692:12:g_d0_f12:12:g_d0_f12:-
+15:624:40263:27:0:172:199:665:12:g_d0_f7:12:g_d0_f10:DE
+15:625:40265:0:10:203:208:675:12:g_d0_f12:12:g_d0_f12:-
+15:626:40266:10:0:207:301:665:12:g_d0_f10:12:g_d0_f6:YjXDx;D-D1
+15:627:40276:0:10:301:306:675:12:g_d0_f12:12:g_d0_f12:-
+15:628:40277:10:0:309:316:665:12:g_d0_f10:12:g_d0_f10:E
+15:629:40278:0:10:319:324:675:12:g_d0_f12:12:g_d0_f12:-
+15:630:40279:10:0:325:380:665:12:g_d0_f10:12:g_d0_f10:D-jXDx
+15:631:40285:0:10:381:386:675:12:g_d0_f12:12:g_d0_f12:-
+15:632:40286:10:0:389:409:665:12:g_d0_f7:12:g_d0_f10:CE
+15:633:40288:0:10:412:417:675:12:g_d0_f12:12:g_d0_f12:-
+15:634:40289:10:0:417:424:665:12:g_d0_f10:12:g_d0_f10:Y
+15:635:40290:0:10:427:432:675:12:g_d0_f12:12:g_d0_f12:-
+15:636:40291:10:0:432:467:665:12:g_d0_f6:9:g_d0_f7:1-D-
+15:637:40295:0:10:468:473:675:12:g_d0_f12:12:g_d0_f12:-
+15:638:40296:10:0:476:513:665:12:g_d0_f7:12:g_d0_f10:jXDx
+15:639:40300:0:35:515:520:675:12:g_d0_f12:12:g_d0_f12:-
+15:640:40301:35:26:71:402:640:12:g_d0_f6:12:g_d0_f6:For anyx>c, by de-nition of compliersD-DI.TDT-/, one has
+15:641:40357:26:0:173:180:614:12:g_d0_f10:12:g_d0_f10:E
+15:642:40358:0:10:183:188:624:12:g_d0_f12:12:g_d0_f12:-
+15:643:40359:10:0:188:282:614:12:g_d0_f10:12:g_d0_f6:YjXDx;D-D1
+15:644:40369:0:10:282:287:624:12:g_d0_f12:12:g_d0_f12:-
+15:645:40370:10:0:290:310:614:12:g_d0_f7:12:g_d0_f10:DE
+15:646:40372:0:10:314:319:624:12:g_d0_f12:12:g_d0_f12:-
+15:647:40373:10:0:319:429:614:12:g_d0_f10:12:g_d0_f6:Y.1/jXDx;D-D1
+15:648:40386:0:10:429:434:624:12:g_d0_f12:12:g_d0_f12:-
+15:649:40387:10:26:436:558:614:12:g_d0_f6:12:g_d0_f6:.(19)
+15:650:40392:26:14:54:558:588:12:g_d0_f6:12:g_d0_f6:By continuity ofE.Y.1/jXDx;D-D1/, equation (19) also holds in the limit asx#c. Then by
+15:651:40478:14:26:54:185:574:12:g_d0_f6:12:g_d0_f6:de-nition ofgC.c/, one has
+15:652:40504:26:8:104:177:548:12:g_d0_f10:12:g_d0_f6:gC.c/Dlim
+15:653:40513:8:0:162:176:540:9:g_d0_f10:9:g_d0_f10:x#c
+15:654:40516:0:25:180:249:548:12:g_d0_f10:12:g_d0_f11:E.YjXDx/
+15:655:40524:25:0:142:169:523:12:g_d0_f7:12:g_d0_f10:DE
+15:656:40526:0:10:172:177:533:12:g_d0_f12:12:g_d0_f12:-
+15:657:40527:10:0:177:286:523:12:g_d0_f10:12:g_d0_f6:Y.1/jXDc;D-D1
+15:658:40540:0:10:286:291:533:12:g_d0_f12:12:g_d0_f12:-
+15:659:40541:10:0:294:301:523:12:g_d0_f10:12:g_d0_f10:E
+15:660:40542:0:10:304:309:533:12:g_d0_f12:12:g_d0_f12:-
+15:661:40543:10:0:310:365:523:12:g_d0_f10:12:g_d0_f10:D-jXDc
+15:662:40549:0:10:365:370:533:12:g_d0_f12:12:g_d0_f12:-
+15:663:40550:10:0:373:393:523:12:g_d0_f7:12:g_d0_f10:CE
+15:664:40552:0:10:396:401:533:12:g_d0_f12:12:g_d0_f12:-
+15:665:40553:10:0:401:408:523:12:g_d0_f10:12:g_d0_f10:Y
+15:666:40554:0:10:411:416:533:12:g_d0_f12:12:g_d0_f12:-
+15:667:40555:10:0:416:452:523:12:g_d0_f6:9:g_d0_f7:1-D-
+15:668:40559:0:10:452:457:533:12:g_d0_f12:12:g_d0_f12:-
+15:669:40560:10:0:460:497:523:12:g_d0_f7:12:g_d0_f10:jXDc
+15:670:40564:0:10:498:503:533:12:g_d0_f12:12:g_d0_f12:-
+15:671:40565:10:25:504:507:523:12:g_d0_f6:12:g_d0_f6:.
+15:672:40566:25:26:54:210:498:12:g_d0_f6:12:g_d0_f6:Similarly, for anyx<c, one has
+15:673:40596:26:0:173:180:472:12:g_d0_f10:12:g_d0_f10:E
+15:674:40597:0:10:183:188:482:12:g_d0_f12:12:g_d0_f12:-
+15:675:40598:10:0:188:282:472:12:g_d0_f10:12:g_d0_f6:YjXDx;D-D1
+15:676:40608:0:10:282:287:482:12:g_d0_f12:12:g_d0_f12:-
+15:677:40609:10:0:290:310:472:12:g_d0_f7:12:g_d0_f10:DE
+15:678:40611:0:10:314:319:482:12:g_d0_f12:12:g_d0_f12:-
+15:679:40612:10:0:319:429:472:12:g_d0_f10:12:g_d0_f6:Y.0/jXDx;D-D1
+15:680:40625:0:10:429:434:482:12:g_d0_f12:12:g_d0_f12:-
+15:681:40626:10:25:436:558:472:12:g_d0_f6:12:g_d0_f6:.(20)
+15:682:40631:25:15:54:558:447:12:g_d0_f6:12:g_d0_f6:By continuity ofE.Y.0/jXDx;D-D1/, equation (20) also holds in the limit asx"c. Then by
+15:683:40717:15:25:54:185:432:12:g_d0_f6:12:g_d0_f6:de-nition ofg-.c/, one has
+15:684:40743:25:9:104:177:407:12:g_d0_f10:12:g_d0_f6:g-.c/Dlim
+15:685:40752:9:0:162:176:398:9:g_d0_f10:9:g_d0_f10:x"c
+15:686:40755:0:26:180:249:407:12:g_d0_f10:12:g_d0_f11:E.YjXDx/
+15:687:40763:26:0:142:169:381:12:g_d0_f7:12:g_d0_f10:DE
+15:688:40765:0:10:172:177:391:12:g_d0_f12:12:g_d0_f12:-
+15:689:40766:10:0:177:286:381:12:g_d0_f10:12:g_d0_f6:Y.0/jXDc;D-D1
+15:690:40779:0:10:286:291:391:12:g_d0_f12:12:g_d0_f12:-
+15:691:40780:10:0:294:301:381:12:g_d0_f10:12:g_d0_f10:E
+15:692:40781:0:10:304:309:391:12:g_d0_f12:12:g_d0_f12:-
+15:693:40782:10:0:310:365:381:12:g_d0_f10:12:g_d0_f10:D-jXDc
+15:694:40788:0:10:365:370:391:12:g_d0_f12:12:g_d0_f12:-
+15:695:40789:10:0:373:393:381:12:g_d0_f7:12:g_d0_f10:CE
+15:696:40791:0:10:396:401:391:12:g_d0_f12:12:g_d0_f12:-
+15:697:40792:10:0:401:408:381:12:g_d0_f10:12:g_d0_f10:Y
+15:698:40793:0:10:411:416:391:12:g_d0_f12:12:g_d0_f12:-
+15:699:40794:10:0:416:452:381:12:g_d0_f6:9:g_d0_f7:1-D-
+15:700:40798:0:10:452:457:391:12:g_d0_f12:12:g_d0_f12:-
+15:701:40799:10:0:460:497:381:12:g_d0_f7:12:g_d0_f10:jXDc
+15:702:40803:0:10:498:503:391:12:g_d0_f12:12:g_d0_f12:-
+15:703:40804:10:25:504:507:381:12:g_d0_f6:12:g_d0_f6:.
+15:704:40805:25:29:54:357:356:12:g_d0_f6:12:g_d0_f6:Further continuity ofE.Y.1-D-/jXDx/atxDcimplies,
+15:705:40853:29:0:135:230:327:12:g_d0_f10:12:g_d0_f10:gC.c/-g-.c/DE
+15:706:40866:0:9:233:238:336:12:g_d0_f12:12:g_d0_f12:-
+15:707:40867:9:0:238:387:327:12:g_d0_f10:12:g_d0_f6:Y.1/-Y.0/jXDc;D-D1
+15:708:40885:0:9:387:392:336:12:g_d0_f12:12:g_d0_f12:-
+15:709:40886:9:0:395:402:327:12:g_d0_f10:12:g_d0_f10:E
+15:710:40887:0:9:405:410:336:12:g_d0_f12:12:g_d0_f12:-
+15:711:40888:9:0:411:466:327:12:g_d0_f10:12:g_d0_f10:D-jXDc
+15:712:40894:0:9:466:471:336:12:g_d0_f12:12:g_d0_f12:-
+15:713:40895:9:21:473:476:327:12:g_d0_f11:12:g_d0_f11::
+15:714:40896:21:29:54:418:306:12:g_d0_f6:12:g_d0_f6:RecallE.Y.1/-Y.0/jXDc;D-D1/is denoted as-.c/. It follows that
+15:715:40957:29:0:211:326:277:12:g_d0_f10:12:g_d0_f10:gC.c/-g-.c/D-.c/E
+15:716:40974:0:10:330:335:287:12:g_d0_f12:12:g_d0_f12:-
+15:717:40975:10:0:335:390:277:12:g_d0_f10:12:g_d0_f10:D-jXDc
+15:718:40981:0:10:391:396:287:12:g_d0_f12:12:g_d0_f12:-
+15:719:40982:10:20:398:401:277:12:g_d0_f6:12:g_d0_f6:,
+15:720:40983:20:15:54:158:257:12:g_d0_f6:12:g_d0_f6:which is equation (2).
+15:721:41005:15:25:71:311:242:12:g_d0_f6:12:g_d0_f6:Similarly, givenTDT D-CT.1-D-/, one has
+15:722:41044:25:0:87:194:217:12:g_d0_f10:12:g_d0_f10:E.TjXDx/DE
+15:723:41054:0:9:197:202:226:12:g_d0_f12:12:g_d0_f12:-
+15:724:41055:9:0:202:296:217:12:g_d0_f10:12:g_d0_f6:TjXDx;D-D1
+15:725:41065:0:9:296:301:226:12:g_d0_f12:12:g_d0_f12:-
+15:726:41066:9:0:304:311:217:12:g_d0_f10:12:g_d0_f10:E
+15:727:41067:0:9:314:319:226:12:g_d0_f12:12:g_d0_f12:-
+15:728:41068:9:0:320:375:217:12:g_d0_f10:12:g_d0_f10:D-jXDx
+15:729:41074:0:9:376:381:226:12:g_d0_f12:12:g_d0_f12:-
+15:730:41075:9:0:384:404:217:12:g_d0_f7:12:g_d0_f10:CE
+15:731:41077:0:9:407:412:226:12:g_d0_f12:12:g_d0_f12:-
+15:732:41078:9:0:412:419:217:12:g_d0_f10:12:g_d0_f10:T
+15:733:41079:0:9:423:428:226:12:g_d0_f12:12:g_d0_f12:-
+15:734:41080:9:0:427:463:217:12:g_d0_f6:9:g_d0_f7:1-D-
+15:735:41084:0:9:463:468:226:12:g_d0_f12:12:g_d0_f12:-
+15:736:41085:9:0:471:509:217:12:g_d0_f7:12:g_d0_f10:jXDx
+15:737:41089:0:27:510:515:226:12:g_d0_f12:12:g_d0_f12:-
+15:738:41090:27:0:167:194:199:12:g_d0_f7:12:g_d0_f10:DE
+15:739:41092:0:10:197:202:209:12:g_d0_f12:12:g_d0_f12:-
+15:740:41093:10:0:202:301:199:12:g_d0_f10:12:g_d0_f6:T-jXDx;D-D1
+15:741:41104:0:10:301:306:209:12:g_d0_f12:12:g_d0_f12:-
+15:742:41105:10:0:309:316:199:12:g_d0_f10:12:g_d0_f10:E
+15:743:41106:0:10:319:324:209:12:g_d0_f12:12:g_d0_f12:-
+15:744:41107:10:0:325:380:199:12:g_d0_f10:12:g_d0_f10:D-jXDx
+15:745:41113:0:10:382:387:209:12:g_d0_f12:12:g_d0_f12:-
+15:746:41114:10:0:389:409:199:12:g_d0_f7:12:g_d0_f10:CE
+15:747:41116:0:10:412:417:209:12:g_d0_f12:12:g_d0_f12:-
+15:748:41117:10:0:417:424:199:12:g_d0_f10:12:g_d0_f10:T
+15:749:41118:0:10:428:433:209:12:g_d0_f12:12:g_d0_f12:-
+15:750:41119:10:0:433:468:199:12:g_d0_f6:9:g_d0_f7:1-D-
+15:751:41123:0:10:468:473:209:12:g_d0_f12:12:g_d0_f12:-
+15:752:41124:10:0:476:514:199:12:g_d0_f7:12:g_d0_f10:jXDx
+15:753:41128:0:10:515:520:209:12:g_d0_f12:12:g_d0_f12:-
+15:754:41129:10:25:522:525:199:12:g_d0_f6:12:g_d0_f6:.
+15:755:41130:25:15:54:562:174:12:g_d0_f10:12:g_d0_f7:E.T-jXDx;D-D1/D0 for allx<c, so it must hold in the limit asx"c.E.T-jXDx;D-D1/D
+15:756:41209:15:25:54:471:159:12:g_d0_f6:12:g_d0_f6:1 for allx-c. By continuity ofE.T.1-D-/jXDx/andE.D-jXDx/, one has
+15:757:41274:25:0:223:316:134:12:g_d0_f10:12:g_d0_f10:fC.c/-f-.c/DE
+15:758:41287:0:9:319:324:143:12:g_d0_f12:12:g_d0_f12:-
+15:759:41288:9:0:325:380:134:12:g_d0_f10:12:g_d0_f10:D-jXDc
+15:760:41294:0:9:380:385:143:12:g_d0_f12:12:g_d0_f12:-
+15:761:41295:9:26:387:390:134:12:g_d0_f6:12:g_d0_f6:,
+15:762:41296:26:26:54:158:108:12:g_d0_f6:12:g_d0_f6:which is equation (1).
+15:763:41318:26:14:71:195:82:12:g_d0_f6:12:g_d0_f6:PROOF of THEOREM 1:
+15:764:41337:14:15:71:558:68:12:g_d0_f6:12:g_d0_f6:Since Assumption 1 holds for allxin the the neighborhood ofxDc, similar to the proof of Lemma
+15:765:41430:15:0:54:254:53:12:g_d0_f6:12:g_d0_f6:1, for some small positive"1<", one has
+16:766:41471:0:8:55:162:699:12:g_d0_f10:12:g_d0_f6:gC.cC"1/Dlim
+16:767:41483:8:0:139:168:691:9:g_d0_f10:7:g_d0_f6:x#cC"1
+16:768:41489:0:25:172:239:699:12:g_d0_f10:12:g_d0_f11:E.YjXDx/
+16:769:41497:25:0:120:147:674:12:g_d0_f7:12:g_d0_f10:DE
+16:770:41499:0:10:150:155:684:12:g_d0_f12:12:g_d0_f12:-
+16:771:41500:10:0:155:290:674:12:g_d0_f10:12:g_d0_f6:Y.1/jXDcC"1;D-D1
+16:772:41516:0:10:290:295:684:12:g_d0_f12:12:g_d0_f12:-
+16:773:41517:10:0:297:304:674:12:g_d0_f10:12:g_d0_f10:E
+16:774:41518:0:10:308:313:684:12:g_d0_f12:12:g_d0_f12:-
+16:775:41519:10:0:314:393:674:12:g_d0_f10:9:g_d0_f6:D-jXDcC"1
+16:776:41528:0:10:394:399:684:12:g_d0_f12:12:g_d0_f12:-
+16:777:41529:10:0:402:422:674:12:g_d0_f7:12:g_d0_f10:CE
+16:778:41531:0:10:425:430:684:12:g_d0_f12:12:g_d0_f12:-
+16:779:41532:10:0:430:437:674:12:g_d0_f10:12:g_d0_f10:Y
+16:780:41533:0:10:440:445:684:12:g_d0_f12:12:g_d0_f12:-
+16:781:41534:10:0:445:481:674:12:g_d0_f6:9:g_d0_f7:1-D-
+16:782:41538:0:10:481:486:684:12:g_d0_f12:12:g_d0_f12:-
+16:783:41539:10:0:489:551:674:12:g_d0_f7:9:g_d0_f6:jXDcC"1
+16:784:41546:0:36:552:557:684:12:g_d0_f12:12:g_d0_f12:-
+16:785:41547:36:41:71:88:648:12:g_d0_f6:12:g_d0_f6:and
+16:786:41550:41:8:55:162:607:12:g_d0_f10:12:g_d0_f6:g-.c-"1/Dlim
+16:787:41562:8:0:139:168:599:9:g_d0_f10:7:g_d0_f6:x"c-"1
+16:788:41568:0:25:172:239:607:12:g_d0_f10:12:g_d0_f11:E.YjXDx/
+16:789:41576:25:0:120:147:582:12:g_d0_f7:12:g_d0_f10:DE
+16:790:41578:0:10:150:155:592:12:g_d0_f12:12:g_d0_f12:-
+16:791:41579:10:0:155:290:582:12:g_d0_f10:12:g_d0_f6:Y.0/jXDc-"1;D-D1
+16:792:41595:0:10:290:295:592:12:g_d0_f12:12:g_d0_f12:-
+16:793:41596:10:0:297:304:582:12:g_d0_f10:12:g_d0_f10:E
+16:794:41597:0:10:308:313:592:12:g_d0_f12:12:g_d0_f12:-
+16:795:41598:10:0:314:393:582:12:g_d0_f10:9:g_d0_f6:D-jXDc-"1
+16:796:41607:0:10:394:399:592:12:g_d0_f12:12:g_d0_f12:-
+16:797:41608:10:0:402:422:582:12:g_d0_f7:12:g_d0_f10:CE
+16:798:41610:0:10:425:430:592:12:g_d0_f12:12:g_d0_f12:-
+16:799:41611:10:0:430:437:582:12:g_d0_f10:12:g_d0_f10:Y
+16:800:41612:0:10:440:445:592:12:g_d0_f12:12:g_d0_f12:-
+16:801:41613:10:0:445:481:582:12:g_d0_f6:9:g_d0_f7:1-D-
+16:802:41617:0:10:481:486:592:12:g_d0_f12:12:g_d0_f12:-
+16:803:41618:10:0:489:551:582:12:g_d0_f7:9:g_d0_f6:jXDc-"1
+16:804:41625:0:36:552:557:592:12:g_d0_f12:12:g_d0_f12:-
+16:805:41626:36:15:71:583:556:12:g_d0_f6:12:g_d0_f6:Given continuous differentiability ofE.Y.t/jXDx0;D-D1/fortD0;1 andE.Y.1-D-/jXDx0/,
+16:806:41708:15:47:54:480:541:12:g_d0_f6:12:g_d0_f6:the one sided derivativesg0C.cC"1/andg0-.c-"1/exist and are given by, respectively,
+16:807:41791:47:0:64:131:494:12:g_d0_f10:12:g_d0_f7:g0C.cC"1/D
+16:808:41801:0:17:136:364:503:12:g_d0_f11:12:g_d0_f11:@.E.Y.1/jXDx;D-D1/E.D-jXDx//
+16:809:41829:17:0:243:255:486:12:g_d0_f11:12:g_d0_f10:@x
+16:810:41831:0:29:368:427:494:12:g_d0_f7:9:g_d0_f6:jxDcC"1
+16:811:41838:29:0:346:355:465:12:g_d0_f7:12:g_d0_f7:C
+16:812:41839:0:17:359:482:473:12:g_d0_f11:12:g_d0_f11:@E.Y.1-D-/jXDx/
+16:813:41854:17:0:414:426:456:12:g_d0_f11:12:g_d0_f10:@x
+16:814:41856:0:30:487:547:465:12:g_d0_f7:9:g_d0_f6:jxDcC"1
+16:815:41863:30:47:71:88:435:12:g_d0_f6:12:g_d0_f6:and
+16:816:41866:47:0:64:131:388:12:g_d0_f10:12:g_d0_f7:g0-.c-"1/D
+16:817:41876:0:17:136:338:397:12:g_d0_f11:12:g_d0_f11:@.E.Y.0/jXDx;D-D1/E.D-jx//
+16:818:41902:17:0:231:242:380:12:g_d0_f11:12:g_d0_f10:@x
+16:819:41904:0:29:343:402:388:12:g_d0_f7:9:g_d0_f6:jxDc-"1
+16:820:41911:29:0:321:330:359:12:g_d0_f7:12:g_d0_f7:C
+16:821:41912:0:17:335:482:367:12:g_d0_f11:12:g_d0_f11:@E.Y.1-D-/jXDcC"1/
+16:822:41930:17:0:402:414:350:12:g_d0_f11:12:g_d0_f10:@x
+16:823:41932:0:31:487:547:359:12:g_d0_f7:9:g_d0_f6:jxDc-"1
+16:824:41939:31:14:71:557:328:12:g_d0_f6:12:g_d0_f11:Note that continuous differentiability of the involved conditional means also implies thatg0C.cC"1/
+16:825:42038:14:15:53:574:314:12:g_d0_f6:12:g_d0_f11:andg0-.c-"1/are continuous. It follows that thatg0C.c/andg0-.c/exist and are given by lim"1!0g0C.cC"1/
+16:826:42140:15:44:53:284:299:12:g_d0_f6:12:g_d0_f6:and lim"1!0g0C.c-"1/, respectively. Therefore,
+16:827:42186:44:0:101:192:255:12:g_d0_f10:12:g_d0_f7:g0C.c/-g0-.c/D
+16:828:42200:0:17:204:471:264:12:g_d0_f11:12:g_d0_f11:@.E.Y.1/-Y.0/jXDx;D-D1/E.D-jXDx//
+16:829:42233:17:0:331:343:247:12:g_d0_f11:12:g_d0_f10:@x
+16:830:42235:0:29:476:510:255:12:g_d0_f7:12:g_d0_f10:jxDc
+16:831:42239:29:0:183:238:226:12:g_d0_f7:12:g_d0_f10:D-0.c/E
+16:832:42246:0:9:242:247:235:12:g_d0_f12:12:g_d0_f12:-
+16:833:42247:9:0:248:302:226:12:g_d0_f10:12:g_d0_f10:D-jXDc
+16:834:42253:0:9:303:308:235:12:g_d0_f12:12:g_d0_f12:-
+16:835:42254:9:0:310:345:226:12:g_d0_f7:12:g_d0_f11:C-.c/
+16:836:42259:0:17:349:432:234:12:g_d0_f11:12:g_d0_f11:@E.D-jXDx/
+16:837:42269:17:0:384:396:217:12:g_d0_f11:12:g_d0_f10:@x
+16:838:42271:0:30:437:558:226:12:g_d0_f7:12:g_d0_f6:jxDc.(21)
+16:839:42280:30:15:54:403:196:12:g_d0_f6:12:g_d0_f6:This equality holds as@E.Y.1-D-/jXDx/=@xjxDccancels out.
+16:840:42336:15:40:71:157:181:12:g_d0_f6:12:g_d0_f6:Similarly, one has
+16:841:42354:40:8:135:242:141:12:g_d0_f10:12:g_d0_f6:fC.cC"1/Dlim
+16:842:42366:8:0:218:248:133:9:g_d0_f10:7:g_d0_f6:x#xcC"1
+16:843:42373:0:27:252:320:141:12:g_d0_f10:12:g_d0_f11:E.TjXDx/
+16:844:42381:27:0:198:226:114:12:g_d0_f7:12:g_d0_f10:DE
+16:845:42383:0:9:229:234:123:12:g_d0_f12:12:g_d0_f12:-
+16:846:42384:9:0:235:314:114:12:g_d0_f10:9:g_d0_f6:D-jXDcC"1
+16:847:42393:0:9:315:320:123:12:g_d0_f12:12:g_d0_f12:-
+16:848:42394:9:0:323:343:114:12:g_d0_f7:12:g_d0_f10:CE
+16:849:42396:0:9:346:351:123:12:g_d0_f12:12:g_d0_f12:-
+16:850:42397:9:0:351:358:114:12:g_d0_f10:12:g_d0_f10:T
+16:851:42398:0:9:362:367:123:12:g_d0_f12:12:g_d0_f12:-
+16:852:42399:9:0:366:402:114:12:g_d0_f6:9:g_d0_f7:1-D-
+16:853:42403:0:9:402:407:123:12:g_d0_f12:12:g_d0_f12:-
+16:854:42404:9:0:410:472:114:12:g_d0_f7:9:g_d0_f6:jXDcC"1
+16:855:42411:0:35:473:478:123:12:g_d0_f12:12:g_d0_f12:-
+16:856:42412:35:29:71:88:88:12:g_d0_f6:12:g_d0_f6:and
+16:857:42415:29:8:140:232:59:12:g_d0_f10:12:g_d0_f6:f-.c-"1/Dlim
+16:858:42427:8:0:209:238:51:9:g_d0_f10:7:g_d0_f6:x"c-"1
+16:859:42433:0:0:241:333:59:12:g_d0_f10:12:g_d0_f10:E.TjXDx/DE
+16:860:42443:0:9:337:342:68:12:g_d0_f12:12:g_d0_f12:-
+16:861:42444:9:0:342:349:59:12:g_d0_f10:12:g_d0_f10:T
+16:862:42445:0:9:352:357:68:12:g_d0_f12:12:g_d0_f12:-
+16:863:42446:9:0:357:393:59:12:g_d0_f6:9:g_d0_f7:1-D-
+16:864:42450:0:9:393:398:68:12:g_d0_f12:12:g_d0_f12:-
+16:865:42451:9:0:401:463:59:12:g_d0_f7:9:g_d0_f6:jXDc-"1
+16:866:42458:0:9:464:469:68:12:g_d0_f12:12:g_d0_f12:-
+16:867:42459:9:0:471:474:59:12:g_d0_f6:12:g_d0_f6:.
+17:868:42462:0:15:71:557:726:12:g_d0_f6:12:g_d0_f6:Given the continuous differentiability ofE.T.1-D-/jXDx/andE.D-jXDx/, the one sided
+17:869:42544:15:14:54:558:711:12:g_d0_f6:12:g_d0_f6:derivativesf0C.cC"1/andf0-.c-"1/exist and are continous in the neighborhood ofc. So similar to the
+17:870:42642:14:33:54:124:697:12:g_d0_f6:12:g_d0_f6:above, one has
+17:871:42656:33:0:200:283:664:12:g_d0_f10:12:g_d0_f7:f0C.c/-f0-.c/D
+17:872:42670:0:17:288:371:673:12:g_d0_f11:12:g_d0_f11:@E.D-jXDx/
+17:873:42680:17:0:323:335:656:12:g_d0_f11:12:g_d0_f10:@x
+17:874:42682:0:24:376:558:664:12:g_d0_f7:12:g_d0_f6:jxDc.(22)
+17:875:42691:24:15:54:403:640:12:g_d0_f6:12:g_d0_f6:This equality holds as@E.T.1-D-/jXDx/=@xjxDccancels out.
+17:876:42747:15:33:71:543:625:12:g_d0_f6:12:g_d0_f6:Given equations (21) and (22) and the assumptionE.D-jXDc/DfC.c/-f-.c/D0, one has
+17:877:42827:33:0:246:281:592:12:g_d0_f11:12:g_d0_f7:-.c/D
+17:878:42832:0:18:286:361:601:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+17:879:42845:18:0:289:360:583:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+17:880:42858:0:28:362:365:592:12:g_d0_f6:12:g_d0_f6:.
+17:881:42859:28:15:71:557:564:12:g_d0_f6:12:g_d0_f6:Note that the above essentially applies L'hopital's rule. To see this, letB.x/DgC.x/-g-.x/and
+17:882:42952:15:14:55:557:549:12:g_d0_f10:12:g_d0_f6:p.x/DfC.x/-f-.x/. From the above analysis,B.x/andp.x/are continuously differentiable at
+17:883:43039:14:33:54:431:535:12:g_d0_f10:12:g_d0_f6:xDc. Givenp.c/D0, one hasB.c/D-.c/p.c/D0. L'hopital's rule gives
+17:884:43103:33:0:203:245:502:12:g_d0_f11:12:g_d0_f7:-.c/D
+17:885:43108:0:17:257:321:510:12:g_d0_f6:12:g_d0_f11:limx!cB.x/
+17:886:43118:17:0:258:320:493:12:g_d0_f6:12:g_d0_f11:limx!cp.x/
+17:887:43128:0:0:326:335:502:12:g_d0_f7:12:g_d0_f7:D
+17:888:43129:0:17:339:406:510:12:g_d0_f6:12:g_d0_f11:limx!cB0.x/
+17:889:43140:17:24:340:405:493:12:g_d0_f6:12:g_d0_f11:limx!cp0.x/
+17:890:43151:24:0:236:245:469:12:g_d0_f7:12:g_d0_f7:D
+17:891:43152:0:16:258:283:477:12:g_d0_f10:12:g_d0_f11:B0.c/
+17:892:43157:16:0:259:282:461:12:g_d0_f10:12:g_d0_f11:p0.c/
+17:893:43162:0:0:288:297:469:12:g_d0_f7:12:g_d0_f7:D
+17:894:43163:0:17:302:376:478:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+17:895:43176:17:0:304:377:461:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+17:896:43189:0:45:378:381:469:12:g_d0_f6:12:g_d0_f6:.
+17:897:43190:45:15:71:209:424:12:g_d0_f6:12:g_d0_f6:PROOF of COROLLARY 1:
+17:898:43211:15:14:71:558:409:12:g_d0_f6:12:g_d0_f6:If there is a jump, i.e, the identi-ed differencefC.c/-f-.c/is nonzero, then-.c/is identi-ed by
+17:899:43306:14:15:54:558:395:12:g_d0_f6:12:g_d0_f6:equation (4). Alternatively, if there is no jump (fC.c/-f-.c/D0), then by Assumption A2 there must
+17:900:43404:15:26:54:349:380:12:g_d0_f6:12:g_d0_f6:be a kink. So by Theorem 1-.c/is identi-ed by equation (5).
+17:901:43463:26:14:71:195:354:12:g_d0_f6:12:g_d0_f6:PROOF of THEOREM 2:
+17:902:43482:14:15:71:557:340:12:g_d0_f6:12:g_d0_f6:For convenience I continue to use theB.c/,p.c/,B0.c/, andp0.c/as in the proof of Theorem 1. If
+17:903:43576:15:33:54:415:325:12:g_d0_f6:12:g_d0_f6:there is no jump, by Assumption A2, there is a kink. Then Theorem 1 gives
+17:904:43649:33:0:223:258:292:12:g_d0_f11:12:g_d0_f7:-.c/D
+17:905:43654:0:17:264:291:301:12:g_d0_f10:12:g_d0_f11:B0.c/
+17:906:43659:17:0:265:290:284:12:g_d0_f10:12:g_d0_f11:p0.c/
+17:907:43664:0:0:296:305:292:12:g_d0_f7:12:g_d0_f7:D
+17:908:43665:0:17:311:387:301:12:g_d0_f10:12:g_d0_f11:B.c/CwB0.c/
+17:909:43676:17:18:313:385:284:12:g_d0_f10:12:g_d0_f11:p.c/Cwp0.c/
+17:910:43687:18:15:54:501:266:12:g_d0_f6:12:g_d0_f6:where the second equality follows fromp.c/D0 and henceB.c/D0 when there is no jump.
+17:911:43770:15:14:71:557:251:12:g_d0_f6:12:g_d0_f7:Now consider the case where-0.c/D0. By equations (21) and (22), if-0.c/D0 thenB0.c/D
+17:912:43854:14:15:53:558:237:12:g_d0_f11:12:g_d0_f6:-.c/p0.c/and in addition it is already showed thatB.c/D-.c/p.c/with equations (2) and (1). So
+17:913:43947:15:14:54:558:222:12:g_d0_f6:12:g_d0_f6:regardless of whether there is a jump, a kink or both, if-0.c/D0 then taking a weighted sum of these two
+17:914:44051:14:33:54:366:208:12:g_d0_f6:12:g_d0_f6:equations givesB.c/CwB0.c/D-.c/.p.c/Cwp0.c//and so
+17:915:44101:33:0:245:280:175:12:g_d0_f11:12:g_d0_f7:-.c/D
+17:916:44106:0:17:286:362:183:12:g_d0_f10:12:g_d0_f11:B.c/CwB0.c/
+17:917:44117:17:0:288:360:166:12:g_d0_f10:12:g_d0_f11:p.c/Cwp0.c/
+17:918:44128:0:33:363:366:175:12:g_d0_f6:12:g_d0_f6:.
+17:919:44129:33:27:53:542:142:12:g_d0_f6:12:g_d0_f6:The denominator of this equation is nonzero since by Assumption A2 eitherp.c/orp0.c/is nonzero.
+17:920:44224:27:14:71:209:115:12:g_d0_f6:12:g_d0_f6:PROOF of COROLLARY 2:
+17:921:44245:14:35:71:358:101:12:g_d0_f6:12:g_d0_f6:Suppose -rst that there is a jump,fC.c/-f-.c/6D0, then
+17:922:44299:35:7:133:149:66:12:g_d0_f6:12:g_d0_f6:lim
+17:923:44302:7:0:129:153:59:9:g_d0_f10:9:g_d0_f7:n!1
+17:924:44305:0:0:157:259:75:12:g_d0_f10:9:g_d0_f10:gC.c/-g-.c/Cwn
+17:925:44319:0:10:262:267:85:12:g_d0_f12:12:g_d0_f12:-
+17:926:44320:10:0:267:341:75:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+17:927:44333:0:28:342:347:85:12:g_d0_f12:12:g_d0_f12:-
+17:928:44334:28:0:159:259:57:12:g_d0_f10:9:g_d0_f10:fC.c/-f-.c/Cwn
+17:929:44348:0:10:262:267:67:12:g_d0_f12:12:g_d0_f12:-
+17:930:44349:10:0:270:342:57:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+17:931:44362:0:0:342:361:67:12:g_d0_f12:12:g_d0_f7:-D
+17:932:44364:0:17:366:440:75:12:g_d0_f10:12:g_d0_f11:gC.c/-g-.c/
+17:933:44375:17:0:368:440:58:12:g_d0_f10:12:g_d0_f11:fC.c/-f-.c/
+17:934:44386:0:0:445:482:66:12:g_d0_f7:12:g_d0_f6:D-.c/.
+18:935:44394:0:15:54:568:726:12:g_d0_f6:12:g_d0_f7:Alternatively, suppose there is no jump,fC.c/-f-.c/D0, thengC.c/-g-.c/D-.c/.fC.c/-f-.c//D
+18:936:44483:15:11:54:79:711:12:g_d0_f6:12:g_d0_f6:0. So
+18:937:44488:11:0:131:233:700:12:g_d0_f10:9:g_d0_f10:gC.c/-g-.c/Cwn
+18:938:44502:0:9:236:241:709:12:g_d0_f12:12:g_d0_f12:-
+18:939:44503:9:0:241:316:700:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+18:940:44516:0:27:316:321:709:12:g_d0_f12:12:g_d0_f12:-
+18:941:44517:27:0:133:233:682:12:g_d0_f10:9:g_d0_f10:fC.c/-f-.c/Cwn
+18:942:44531:0:9:236:241:691:12:g_d0_f12:12:g_d0_f12:-
+18:943:44532:9:0:244:316:682:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+18:944:44545:0:0:316:335:691:12:g_d0_f12:12:g_d0_f7:-D
+18:945:44547:0:0:340:353:700:12:g_d0_f11:9:g_d0_f10:wn
+18:946:44549:0:9:356:361:709:12:g_d0_f12:12:g_d0_f12:-
+18:947:44550:9:0:361:435:700:12:g_d0_f10:12:g_d0_f11:g0C.c/-g0-.c/
+18:948:44563:0:27:436:441:709:12:g_d0_f12:12:g_d0_f12:-
+18:949:44564:27:0:340:352:682:12:g_d0_f11:9:g_d0_f10:wn
+18:950:44566:0:9:356:361:691:12:g_d0_f12:12:g_d0_f12:-
+18:951:44567:9:0:363:436:682:12:g_d0_f10:12:g_d0_f11:f0C.c/-f0-.c/
+18:952:44580:0:29:436:482:691:12:g_d0_f12:12:g_d0_f6:-D-.c/,
+18:953:44587:29:15:54:557:662:12:g_d0_f6:12:g_d0_f6:where the last equality follows from Theorem 1. This equality holds for alln, and so it must also hold in
+18:954:44692:15:26:54:151:647:12:g_d0_f6:12:g_d0_f6:the limit asn!1.
+18:955:44708:26:14:71:195:621:12:g_d0_f6:12:g_d0_f6:PROOF of THEOREM 3:
+18:956:44727:14:29:71:410:607:12:g_d0_f6:12:g_d0_f6:Use the notation in the proof of Theorem 1, and rewrite equation (1) as
+18:957:44798:29:21:278:334:578:12:g_d0_f10:12:g_d0_f10:BD-.c/p
+18:958:44805:21:29:71:205:557:12:g_d0_f6:12:g_d0_f6:Twice differentiability gives
+18:959:44834:29:36:249:558:528:12:g_d0_f10:12:g_d0_f6:B0D-0.c/pC-.c/p0(23)
+18:960:44854:36:20:220:558:492:12:g_d0_f10:12:g_d0_f6:B00D-00.c/pC2-.c/0p0C-.c/p00(24)
+18:961:44886:20:15:71:558:472:12:g_d0_f6:12:g_d0_f6:Recall by notationB0DC,p0 Dq,B00DD, andp00Dr. If there is no jump, thenpD0. By A2,
+18:962:44968:15:33:54:326:457:12:g_d0_f6:12:g_d0_f6:there is a kink, sop0Dq6D0. From Theorem 1, one has
+18:963:45019:33:0:208:243:424:12:g_d0_f11:12:g_d0_f7:-.c/D
+18:964:45024:0:17:249:259:433:12:g_d0_f10:9:g_d0_f7:B0
+18:965:45026:17:0:250:258:416:12:g_d0_f10:9:g_d0_f7:p0
+18:966:45028:0:0:264:273:424:12:g_d0_f7:12:g_d0_f7:D
+18:967:45029:0:17:278:286:433:12:g_d0_f10:12:g_d0_f10:C
+18:968:45030:17:0:279:285:416:12:g_d0_f10:12:g_d0_f10:q
+18:969:45031:0:0:292:301:424:12:g_d0_f7:12:g_d0_f7:D
+18:970:45032:0:18:306:402:433:12:g_d0_f10:12:g_d0_f11:BCw.2qC-Dp/
+18:971:45043:18:0:311:341:415:12:g_d0_f10:12:g_d0_f11:pCw
+18:972:45046:0:10:343:348:425:12:g_d0_f12:12:g_d0_f12:-
+18:973:45047:10:0:348:392:415:12:g_d0_f6:12:g_d0_f10:2q2-r p
+18:974:45054:0:32:393:398:425:12:g_d0_f12:12:g_d0_f12:-
+18:975:45055:32:0:53:139:393:12:g_d0_f6:12:g_d0_f11:for anyw6D-p=
+18:976:45068:0:10:140:145:403:12:g_d0_f12:12:g_d0_f12:-
+18:977:45069:10:0:145:189:393:12:g_d0_f6:12:g_d0_f10:2q2-r p
+18:978:45076:0:10:190:195:403:12:g_d0_f12:12:g_d0_f12:-
+18:979:45077:10:14:195:466:393:12:g_d0_f6:12:g_d0_f6:. The last equality follows frompD0 and henceBD0.
+18:980:45126:14:32:71:501:379:12:g_d0_f6:12:g_d0_f6:If-00.c/D0, thenp-00.c/D0. Then regardless if there is a jump, a kink or both, one has
+18:981:45212:32:0:235:270:347:12:g_d0_f11:12:g_d0_f7:-.c/D
+18:982:45217:0:17:276:371:355:12:g_d0_f10:12:g_d0_f11:BCw.2qC-Dp/
+18:983:45228:17:0:281:311:338:12:g_d0_f10:12:g_d0_f11:pCw
+18:984:45231:0:9:313:318:347:12:g_d0_f12:12:g_d0_f12:-
+18:985:45232:9:0:318:362:338:12:g_d0_f6:12:g_d0_f10:2q2-r p
+18:986:45239:0:32:363:376:347:12:g_d0_f12:12:g_d0_f6:-.
+18:987:45241:32:13:77:557:315:12:g_d0_f6:12:g_d0_f7:First, if there is no jump, which, given A2, means there is a kink, then by Theorem 1,-.c/DCqD
+18:988:45335:13:11:55:91:302:9:g_d0_f6:9:g_d0_f10:2qC-Dp
+18:989:45341:11:0:58:107:291:9:g_d0_f6:12:g_d0_f7:2q2-r pD
+18:990:45349:0:11:115:177:302:9:g_d0_f10:9:g_d0_f11:BCw.2qC-Dp/
+18:991:45360:11:15:118:558:291:9:g_d0_f10:12:g_d0_f6:pCw.2q2-r p/, where the last equality follows frompD0 andBD0. Second, if there
+18:992:45438:15:18:54:557:276:12:g_d0_f6:12:g_d0_f6:is a jump, the standard RD estimator applies, so-.c/DBp. Also by assumption,-00.c/D0 in this
+18:993:45530:18:20:54:558:258:12:g_d0_f6:12:g_d0_f6:case, so solving for-.c/from equations (23) and (24) gives-.c/D2qC-Dp2q2-r p. By the rule of fraction,
+18:994:45632:20:18:54:161:238:12:g_d0_f11:12:g_d0_f6:-.c/DBCw.2qC-Dp/pCw.2q2-r p/.
+18:995:45661:18:32:71:303:220:12:g_d0_f6:12:g_d0_f6:So either there is no jump or-00.c/D0, one has
+18:996:45707:32:0:236:272:188:12:g_d0_f11:12:g_d0_f7:-.c/D
+18:997:45712:0:17:278:373:196:12:g_d0_f10:12:g_d0_f11:BCw.2qC-Dp/
+18:998:45723:17:0:282:312:179:12:g_d0_f10:12:g_d0_f11:pCw
+18:999:45726:0:9:315:320:188:12:g_d0_f12:12:g_d0_f12:-
+18:1000:45727:9:0:319:364:179:12:g_d0_f6:12:g_d0_f10:2q2-r p
+18:1001:45734:0:32:364:369:188:12:g_d0_f12:12:g_d0_f12:-
+18:1002:45735:32:0:54:139:156:12:g_d0_f6:12:g_d0_f11:for anyw6D-p=
+18:1003:45748:0:10:140:145:166:12:g_d0_f12:12:g_d0_f12:-
+18:1004:45749:10:0:145:189:156:12:g_d0_f6:12:g_d0_f10:2q2-r p
+18:1005:45756:0:10:190:195:166:12:g_d0_f12:12:g_d0_f12:-
+18:1006:45757:10:15:195:198:156:12:g_d0_f6:12:g_d0_f6:.
+18:1007:45758:15:15:71:557:141:12:g_d0_f6:12:g_d0_f6:The same procedure can be applied to cases where thed-th derivative-.d/.c/D0 for any -nite
+18:1008:45848:15:14:54:557:126:12:g_d0_f6:12:g_d0_f6:positive integerd. Keep doing derivatives on both sides of equation (4), until thed-th derivative. With the
+18:1009:45955:14:15:54:558:112:12:g_d0_f6:12:g_d0_f6:system ofdequations and-.d/.c/D0, one can back out-.c/, as the system of equations are recursive in
+18:1010:46054:15:26:54:87:97:12:g_d0_f6:12:g_d0_f6:nature.
+18:1011:46061:26:14:71:209:71:12:g_d0_f6:12:g_d0_f6:PROOF of COROLLARY 3:
+18:1012:46082:14:0:71:400:57:12:g_d0_f6:12:g_d0_f6:Similar to Corollary 2, suppose -rst that there is a jump,p6D0, then
+19:1013:46152:0:7:211:227:708:12:g_d0_f6:12:g_d0_f6:lim
+19:1014:46155:7:0:207:231:701:9:g_d0_f10:9:g_d0_f7:n!1
+19:1015:46158:0:17:235:335:716:12:g_d0_f10:12:g_d0_f11:BC!n.2qC-Dp/
+19:1016:46170:17:0:240:273:699:12:g_d0_f10:9:g_d0_f10:pC!n
+19:1017:46174:0:10:277:282:709:12:g_d0_f12:12:g_d0_f12:-
+19:1018:46175:10:0:281:325:699:12:g_d0_f6:12:g_d0_f10:2q2-r p
+19:1019:46182:0:0:326:349:709:12:g_d0_f12:12:g_d0_f7:-D
+19:1020:46184:0:16:355:362:716:12:g_d0_f10:12:g_d0_f10:B
+19:1021:46185:16:0:356:362:700:12:g_d0_f10:12:g_d0_f10:p
+19:1022:46186:0:29:367:404:708:12:g_d0_f7:12:g_d0_f6:D-.c/.
+19:1023:46192:29:24:71:443:679:12:g_d0_f6:12:g_d0_f6:Alternatively, suppose there is no jump,pD0, and henceBD-.c/pD0, so
+19:1024:46259:24:17:174:274:655:12:g_d0_f10:12:g_d0_f11:BC!n.2qC-Dp/
+19:1025:46271:17:0:179:212:638:12:g_d0_f10:9:g_d0_f10:pC!n
+19:1026:46275:0:10:216:221:648:12:g_d0_f12:12:g_d0_f12:-
+19:1027:46276:10:0:220:265:638:12:g_d0_f6:12:g_d0_f10:2q2-r p
+19:1028:46283:0:0:265:288:648:12:g_d0_f12:12:g_d0_f7:-D
+19:1029:46285:0:17:293:370:655:12:g_d0_f11:12:g_d0_f11:!n.2qC-Dp/
+19:1030:46295:17:0:297:309:638:12:g_d0_f11:9:g_d0_f10:!n
+19:1031:46297:0:10:312:317:648:12:g_d0_f12:12:g_d0_f12:-
+19:1032:46298:10:0:317:361:638:12:g_d0_f6:12:g_d0_f10:2q2-r p
+19:1033:46305:0:0:362:384:648:12:g_d0_f12:12:g_d0_f7:-D
+19:1034:46307:0:16:389:397:655:12:g_d0_f10:12:g_d0_f10:C
+19:1035:46308:16:0:390:396:639:12:g_d0_f10:12:g_d0_f10:q
+19:1036:46309:0:34:402:439:647:12:g_d0_f7:12:g_d0_f6:D-.c/,
+19:1037:46315:34:53:54:554:613:12:g_d0_f6:12:g_d0_f6:where the last equality follows from Theorem 1. It holds for alln, and so it holds in the limit asn!1.
+19:1038:46417:53:27:54:134:560:17:g_d0_f8:17:g_d0_f8:References
+19:1039:46427:27:14:59:557:533:12:g_d0_f6:12:g_d0_f6:[1] Angrist, J. D. and J.-S. Pischke (2008) Mostly Harmless Econometrics: An Empiricist's Companion,
+19:1040:46527:14:25:79:209:519:12:g_d0_f6:12:g_d0_f6:Princeton University Press.
+19:1041:46554:25:14:59:557:494:12:g_d0_f6:12:g_d0_f6:[2] Hahn, J., P. E. Todd, and W. Van der Klaauw (2001), ìIdenti-cation and Estimation of Treatment
+19:1042:46652:14:25:79:447:480:12:g_d0_f6:12:g_d0_f6:Effects with a Regression-Discontinuity Design,î Econometrica, 69, 201ñ09.
+19:1043:46726:25:14:59:557:455:12:g_d0_f6:12:g_d0_f6:[3] Card, D., C. Dobkin, and N. Maestas, (2008), "The Impact of Nearly Universal Insurance Coverage
+19:1044:46825:14:24:79:557:441:12:g_d0_f6:12:g_d0_f6:on Health Care Utilization: Evidence from Medicare," American Economic Review, 98, 2242ñ2258.
+19:1045:46918:24:15:59:557:417:12:g_d0_f6:12:g_d0_f6:[4] Carneiro, P., J. J. Heckman, and E. Vytlacil, (2010), "Evaluating Marginal Policy Changes and the
+19:1046:47019:15:24:79:502:402:12:g_d0_f6:12:g_d0_f6:Average Effect of Treatment for Individuals at the Margin," Econometrica, 78, 377ñ394.
+19:1047:47105:24:15:59:557:378:12:g_d0_f6:12:g_d0_f6:[5] Heckman, J. J. (2010), "Building Bridges Between Structural and Program Evaluation Approaches
+19:1048:47202:15:24:79:403:363:12:g_d0_f6:12:g_d0_f6:to Evaluating Policy," Journal of Economic Literature, 48, 356-398.
+19:1049:47269:24:15:59:557:339:12:g_d0_f6:12:g_d0_f6:[6] Imbens, G. W. and K. Kalyanaraman (2009), "Optimal Bandwidth Choice for the Regression Dis-
+19:1050:47364:15:24:79:367:324:12:g_d0_f6:12:g_d0_f6:continuity Estimator," NBER working paper number 14726.
+19:1051:47419:24:14:59:557:300:12:g_d0_f6:12:g_d0_f6:[7] Imbens, G. W. and T. Lemieux (2008), ìRegression Discontinuity Designs: A Guide to Practice,î
+19:1052:47516:14:25:79:265:286:12:g_d0_f6:12:g_d0_f6:Journal of Econometrics, 142, 615ñ35.
+19:1053:47553:25:14:59:557:261:12:g_d0_f6:12:g_d0_f6:[8] Imbens, G. W. and J. M. Wooldridge (2009), "Recent Developments in the Econometrics of Program
+19:1054:47651:14:25:79:339:247:12:g_d0_f6:12:g_d0_f6:Evaluation," Journal of Economic Literature 47, 5ñ86.
+19:1055:47704:25:14:59:557:222:12:g_d0_f6:12:g_d0_f6:[9] Jacob, B. A., and L. Lefgren, (2004) ìRemedial Education and Student Achievement: A Regression-
+19:1056:47803:14:25:79:440:208:12:g_d0_f6:12:g_d0_f6:Discontinuity Analysis,î Review of Economics and Statistics, 86, 226ñ244.
+19:1057:47876:25:14:54:558:183:12:g_d0_f6:12:g_d0_f6:[10] Lee, D. S. and T. Lemieux (2010), "Regression Discontinuity Designs in Economics," Journal of
+19:1058:47974:14:24:79:243:169:12:g_d0_f6:12:g_d0_f6:Economic Literature 48, 281ñ355.
+19:1059:48006:24:25:54:551:145:12:g_d0_f6:12:g_d0_f6:[11] Porter, J. R. (2003) ìEstimation in the Regression Discontinuity Model,î Unpublished Manuscript.
+19:1060:48107:25:14:54:558:120:12:g_d0_f6:12:g_d0_f6:[12] Rubin, D. B. (1974) ìEstimating Causal Effects of Treatments in Randomized and Nonrandomized
+19:1061:48204:14:0:79:360:106:12:g_d0_f6:12:g_d0_f6:Studies,î Journal of Educational Psychology, 66, 688ñ701.

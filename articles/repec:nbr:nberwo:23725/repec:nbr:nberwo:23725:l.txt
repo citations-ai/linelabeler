@@ -1,0 +1,1430 @@
+1:0:0:0:100:219:395:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:28:189:425:610:12:Times:12:Times:C:LEARNING TO LIVE IN A LIQUIDITY TRAP
+1:2:61:28:14:266:348:582:12:Times:12:Times:C:Jasmina Arifovic
+1:3:77:14:14:246:368:568:12:Times:12:Times:C:Stephanie Schmitt-Grohé
+1:4:100:14:28:276:339:554:12:Times:12:Times:C:Martín Uribe
+1:5:112:28:14:254:360:526:12:Times:12:Times:C:Working Paper 23725
+1:6:131:14:42:220:395:512:12:Times:12:Times:C:http://www.nber.org/papers/w23725
+1:7:164:42:14:174:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:200:14:14:239:376:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:225:14:14:251:363:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:244:14:228:276:338:428:12:Times:12:Times:C:August 2017
+1:11:255:228:14:72:546:200:12:Times:12:Times:C:We  thank  for  comments  seminar  participants  at  the  July  2017  Stony  Brook  Workshop  on 
+1:12:352:14:14:72:545:186:12:Times:12:Times:C:Theoretical and  Experimental  Macroeconomics.    The  views  expressed  herein  are  those  of  the 
+1:13:452:14:28:72:526:172:12:Times:12:Times:C:authors and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:14:544:28:14:71:545:144:12:Times:12:Times:C:NBER working papers are circulated for discussion and comment purposes. They have not been 
+1:15:635:14:14:71:545:130:12:Times:12:Times:C:peer-reviewed  or  been  subject  to  the  review  by  the  NBER  Board  of  Directors  that  accompanies 
+1:16:741:14:28:71:206:116:12:Times:12:Times:C:official NBER publications.
+1:17:767:28:14:72:546:88:12:Times:12:Times:C:©  2017  by  Jasmina  Arifovic,  Stephanie  Schmitt-Grohé,  and  Martín  Uribe.  All  rights  reserved. 
+1:18:871:14:14:72:545:74:12:Times:12:Times:C:Short sections of text, not to exceed two paragraphs, may be quoted without explicit permission 
+1:19:966:14:0:72:392:60:12:Times:12:Times:C:provided that full credit, including © notice, is given to the source.
+2:20:1035:0:14:72:247:700:12:Times:12:Times:C:Learning to Live in a Liquidity Trap
+2:21:1071:14:14:72:371:686:12:Times:12:Times:C:Jasmina Arifovic, Stephanie Schmitt-Grohé, and Martín Uribe
+2:22:1130:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 23725
+2:23:1158:14:14:72:134:658:12:Times:12:Times:C:August 2017
+2:24:1169:14:28:72:157:644:12:Times:12:Times:C:JEL No. E03,E52
+2:25:1184:28:28:273:338:616:12:Times:12:Times:C:ABSTRACT
+2:26:1192:28:14:72:546:588:12:Times:12:Times:C:The Taylor rule in combination with  the zero lower bound on nominal rates has been shown to 
+2:27:1285:14:14:72:545:574:12:Times:12:Times:C:create an  unintended    liquidity-trap  equilibrium.  The  relevance  of    this  equilibrium    has  been 
+2:28:1392:14:14:72:545:560:12:Times:12:Times:C:challenged on the basis that it is   not   stable under least-square learning. In this paper, we show 
+2:29:1493:14:14:72:545:546:12:Times:12:Times:C:that  the  liquidity-trap equilibrium  is  stable  under  social  learning.  The  learning  mechanism  we 
+2:30:1598:14:14:71:545:532:12:Times:12:Times:C:employ  includes  three  realistic elements:  mutation,  crossover,  and    tournaments.  We  show  that 
+2:31:1702:14:14:71:545:518:12:Times:12:Times:C:agents can learn to have pessimistic sentiments about the central bank's ability to generate price 
+2:32:1800:14:14:71:546:504:12:Times:12:Times:C:growth,    giving  rise  to    a  stochastically stable  environment  characterized  by  deflation  and 
+2:33:1903:14:28:71:123:490:12:Times:12:Times:C:stagnation.
+2:34:1914:28:14:72:154:462:12:Times:12:Times:C:Jasmina Arifovic
+2:35:1930:14:14:72:190:448:12:g_d0_f2:12:g_d0_f2:C:Simon Fraser University
+2:36:1953:14:14:72:165:434:12:Times:12:Times:C:1590 Tunstall Blvd
+2:37:1971:14:14:72:138:420:12:Times:12:Times:C:Bowen Island
+2:38:1983:14:14:72:138:406:12:Times:12:Times:C:BC V0N 1G2
+2:39:1993:14:28:72:149:392:12:Times:12:Times:C:arifovic@sfu.ca
+2:40:2008:28:14:72:196:364:12:Times:12:g_d0_f1:C:Stephanie Schmitt-Grohé 
+2:41:2031:14:14:72:198:350:12:Times:12:Times:C:Department of Economics
+2:42:2054:14:14:72:173:336:12:Times:12:Times:C:Columbia University
+2:43:2073:14:14:72:233:322:12:Times:12:g_d0_f1:C:420 West 118th Street, MC 3308 
+2:44:2103:14:14:72:179:308:12:Times:12:Times:C:New York, NY 10027
+2:45:2121:14:14:72:124:294:12:Times:12:Times:C:and NBER
+2:46:2129:14:0:72:259:280:12:Times:12:Times:C:stephanie.schmittgrohe@columbia.edu
+2:47:2164:0:14:306:369:462:12:Times:12:Times:C:Martín Uribe
+2:48:2176:14:14:306:432:448:12:Times:12:Times:C:Department of Economics
+2:49:2199:14:14:306:407:434:12:Times:12:Times:C:Columbia University
+2:50:2218:14:14:306:449:420:12:Times:12:Times:C:International Affairs Building
+2:51:2248:14:14:306:413:406:12:Times:12:Times:C:New York, NY 10027
+2:52:2266:14:14:306:358:392:12:Times:12:Times:C:and NBER
+2:53:2274:14:0:306:441:378:12:Times:12:Times:C:martin.uribe@columbia.edu
+3:54:2299:0:30:72:207:708:17:g_d0_f3:17:g_d0_f3:C:1  Introduction
+3:55:2314:30:18:72:540:678:12:g_d0_f4:12:g_d0_f4:B:The Taylor rule in combination with the zero lower bound on nominal interest rates has been
+3:56:2405:18:18:72:541:660:12:g_d0_f4:12:g_d0_f4:B:shown to open the door to unintended equilibria in which the economy is stuck in a liquidity
+3:57:2497:18:18:72:540:642:12:g_d0_f4:12:g_d0_f4:B:trap with zero nominal rates and inflation and output below target. In this equilibrium,
+3:58:2585:18:18:72:539:624:12:g_d0_f4:12:g_d0_f4:B:rational agents wake up each period with a pessimistic economic outlook. Guided by this
+3:59:2672:18:18:72:540:606:12:g_d0_f4:12:g_d0_f4:B:sentiment, their demand for goods and services is weak. The central bank tries to counteract
+3:60:2764:18:18:72:539:588:12:g_d0_f4:12:g_d0_f4:B:the weakness in aggregate demand by lowering interest rates. However, the zero lower bound
+3:61:2854:18:18:72:539:570:12:g_d0_f4:12:g_d0_f4:B:prevents the monetary authority from fully offsetting the public’s lack of confidence. As a
+3:62:2945:18:18:72:540:552:12:g_d0_f4:12:g_d0_f4:B:result, the economy ends up with depressed levels of aggregate activity and prices and zero
+3:63:3036:18:18:72:539:534:12:g_d0_f4:12:g_d0_f4:B:nominal rates. The next period, agents continue to hold pessimistic sentiments, which are
+3:64:3125:18:18:72:539:516:12:g_d0_f4:12:g_d0_f4:B:now validated by the past experience. Thus, by the same mechanism at play in the first
+3:65:3211:18:18:72:540:498:12:g_d0_f4:12:g_d0_f4:B:period, the economy ends again in a slump in the second period. Continuing with this logic
+3:66:3301:18:17:72:540:480:12:g_d0_f4:12:g_d0_f4:B:yields a stationary environment with all the characteristics of a liquidity trap. This type of
+3:67:3395:17:18:72:539:463:12:g_d0_f4:12:g_d0_f4:B:dynamics are sometimes invoked to explain aspects of the prolonged periods of below-target
+3:68:3485:18:18:72:540:445:12:g_d0_f4:12:g_d0_f4:B:inflation observed in Japan since the 1990s and in the Eurozone since the onset of the Great
+3:69:3577:18:18:72:136:427:12:g_d0_f4:12:g_d0_f4:B:Contraction.
+3:70:3589:18:18:89:540:409:12:g_d0_f4:12:g_d0_f4:A:The relevance of the Taylor-rule induced self-fulfilling liquidity trap has been challenged
+3:71:3680:18:18:72:539:391:12:g_d0_f4:12:g_d0_f4:B:on the basis that it is not least-square learnable. In this branch of the literature the assump-
+3:72:3776:18:18:72:540:373:12:g_d0_f4:12:g_d0_f4:B:tion of rational expectations is replaced by the assumptionthat agents form expectations by
+3:73:3867:18:18:72:539:355:12:g_d0_f4:12:g_d0_f4:B:running regressions of observations of key macroeconomic indicators, such as inflation and
+3:74:3957:18:18:72:539:337:12:g_d0_f4:12:g_d0_f4:B:output, onto economic fundamentals such as the natural of interest, productivity, or mon-
+3:75:4046:18:18:72:540:319:12:g_d0_f4:12:g_d0_f4:B:etary policy shocks. Agents are assumed to update the regression coefficients recursively
+3:76:4135:18:18:72:539:301:12:g_d0_f4:12:g_d0_f4:B:incorporating the new data generated as time goes on. Thus, the previous-period regression
+3:77:4225:18:18:72:540:283:12:g_d0_f4:12:g_d0_f4:B:coefficient is a relevant endogenous state of the economy. Thecentral result of this litera-
+3:78:4317:18:18:72:540:265:12:g_d0_f4:12:g_d0_f4:B:ture is that under least-square learning the liquidity-trap equilibrium exists, but fails to be
+3:79:4412:18:17:72:540:247:12:g_d0_f4:12:g_d0_f4:B:stable. Specifically, it has been shown, that a small deviation of the regression coefficient
+3:80:4505:17:18:72:540:230:12:g_d0_f4:12:g_d0_f4:B:from the value consistent with rational expectations triggers expectations dynamics (i.e., a
+3:81:4597:18:18:72:540:212:12:g_d0_f4:12:g_d0_f4:B:sequence of regression coefficients) that diverge from the liquidity-trap rational expectations
+3:82:4692:18:18:72:134:194:12:g_d0_f4:12:g_d0_f4:B:equilibrium.
+3:83:4704:18:18:89:539:176:12:g_d0_f4:12:g_d0_f4:A:In this paper we study the stability of the liquidity-trap equilibrium under an alternative
+3:84:4795:18:18:72:540:158:12:g_d0_f4:12:g_d0_f4:B:learning hypothesis. We assume that expectations evolve through social learning. Social
+3:85:4882:18:18:72:540:140:12:g_d0_f4:12:g_d0_f4:B:learning includes three realistic elements: tournaments,mutation, and crossover, which are
+3:86:4972:18:18:72:539:122:12:g_d0_f4:12:g_d0_f4:B:standard features in genetic algorithms. In the context of an economic environment, these
+3:87:5061:18:18:72:540:104:12:g_d0_f4:12:g_d0_f4:B:three elements are meant to describe plausible ways in whichindividuals change their per-
+3:88:5150:18:0:72:539:86:12:g_d0_f4:12:g_d0_f4:B:ceived law of motion of the economy through social interactions. Tournaments reward agents
+4:89:5241:0:18:72:539:708:12:g_d0_f4:12:g_d0_f4:B:with superior forecasting abilities, by allowing them to pass their views to other agents. This
+4:90:5336:18:18:72:540:690:12:g_d0_f4:12:g_d0_f4:B:channel captures, for example, the influence exerted by professional economists and forecast-
+4:91:5429:18:18:72:540:672:12:g_d0_f4:12:g_d0_f4:B:ers with proven economic models. Mutation allows for agentsto have arbitrary revisions of
+4:92:5518:18:18:72:540:654:12:g_d0_f4:12:g_d0_f4:B:expectations or new ideas, guaranteeing a variety of views in the population across time.
+4:93:5607:18:18:72:540:636:12:g_d0_f4:12:g_d0_f4:B:And crossover incorporates the role of imitation, by permitting agents to adopt parts of
+4:94:5695:18:18:72:540:618:12:g_d0_f4:12:g_d0_f4:B:somebody else’s model of the economy. We embed the social learning algorithm in a canoni-
+4:95:5784:18:18:72:539:600:12:g_d0_f4:12:g_d0_f4:B:cal new Keynesian model driven by natural-rate shocks. Monetary policy is described by an
+4:96:5873:18:18:72:540:582:12:g_d0_f4:12:g_d0_f4:B:active Taylor-type interest-rate feedback rule that respects the zero lower bound on nominal
+4:97:5965:18:18:72:100:564:12:g_d0_f4:12:g_d0_f4:B:rates.
+4:98:5971:18:18:89:539:546:12:g_d0_f4:12:g_d0_f4:A:Our main finding is that the liquidity-trap equilibrium is stable under social learning. We
+4:99:6062:18:18:72:540:528:12:g_d0_f4:12:g_d0_f4:B:show that agents can learn to have pessimistic sentiments about the central bank’s ability
+4:100:6152:18:18:72:540:510:12:g_d0_f4:12:g_d0_f4:B:to generate price growth, giving rise to a stochastically stable environment characterized
+4:101:6242:18:18:72:540:492:12:g_d0_f4:12:g_d0_f4:B:by deflation and stagnation. Specifically, we show that, starting in the liquidity-trap equi-
+4:102:6335:18:18:72:540:474:12:g_d0_f4:12:g_d0_f4:B:librium, after a large perturbation of individual perceived laws of motion, through social
+4:103:6425:18:17:72:540:456:12:g_d0_f4:12:g_d0_f4:B:learning the economy returns to a dynamic path that is stablearound the liquidity trap.
+4:104:6512:17:18:72:540:439:12:g_d0_f4:12:g_d0_f4:B:This result obtains for fairly large initial disturbances to the individual perceived laws of
+4:105:6605:18:18:72:539:421:12:g_d0_f4:12:g_d0_f4:B:motion. For example, in one experiment we replace agents’ perceived laws of motion with
+4:106:6692:18:18:72:539:403:12:g_d0_f4:12:g_d0_f4:B:the one associated with the intended rational expectationsequilibrium (an equilibrium in
+4:107:6780:18:18:72:539:385:12:g_d0_f4:12:g_d0_f4:B:which the economy fluctuates around the target levels of output and inflation), and show
+4:108:6868:18:18:72:478:367:12:g_d0_f4:12:g_d0_f4:B:that the social learning algorithm leads the economy back tothe liquidity trap.
+4:109:6947:18:18:89:539:349:12:g_d0_f4:12:g_d0_f4:A:Key in producing stability of the liquidity trap under social learning is the role of tour-
+4:110:7038:18:18:72:540:331:12:g_d0_f4:12:g_d0_f4:B:naments. The fittest individuals in the economy are those whose current perceived laws of
+4:111:7127:18:18:72:540:313:12:g_d0_f4:12:g_d0_f4:B:motion can best explain historical data. As a result, if the historical data contains observa-
+4:112:7221:18:18:72:540:295:12:g_d0_f4:12:g_d0_f4:B:tions generated by the liquidity trap equilibrium, individuals who, for any reason (including
+4:113:7314:18:18:72:540:277:12:g_d0_f4:12:g_d0_f4:B:pure luck), have perceived laws of motion close to the one associate with the liquidity-trap
+4:114:7406:18:18:72:539:259:12:g_d0_f4:12:g_d0_f4:B:equilibrium will prevail in passing their views to others, causing the economy to gravitate
+4:115:7497:18:18:72:207:241:12:g_d0_f4:12:g_d0_f4:B:towards the liquidity trap.
+4:116:7524:18:17:89:539:223:12:g_d0_f4:12:g_d0_f4:A:This paper is related to macroeconomic studies of the liquidity trap under rational and
+4:117:7611:17:18:72:539:206:12:g_d0_f4:12:g_d0_f4:B:boundedly rational expectations. Benhabib, Schmitt-Groh ́e, and Uribe (2001) show that the
+4:118:7701:18:18:72:539:188:12:g_d0_f4:12:g_d0_f4:B:combination of a Taylor-type interest-rate feedback rule and the zero lower bound constraint
+4:119:7793:18:18:72:540:170:12:g_d0_f4:12:g_d0_f4:B:on nominal interest rates gives rise to multiple rational expectations equilibria, including
+4:120:7885:18:18:72:540:152:12:g_d0_f4:12:g_d0_f4:B:one in which the economy is perpetually in a liquidity trap.  The stability of the ratio-
+4:121:7974:18:18:72:539:134:12:g_d0_f4:12:g_d0_f4:B:nal expectations equilibrium in monetary economies with a Taylor rule under least-square
+4:122:8062:18:18:72:540:116:12:g_d0_f4:12:g_d0_f4:B:learning has been studied using the stochastic approximation results introduced to macroeco-
+4:123:8154:18:18:72:539:98:12:g_d0_f4:12:g_d0_f4:B:nomics by Marcet and Sargent (1989) and the E-stability principle introduced by Evans and
+4:124:8243:18:0:72:539:80:12:g_d0_f4:12:g_d0_f4:B:Honkapohja (2001). Bullard and Mitra (2002) and Evans and McGough (2017) show that
+5:125:8326:0:18:72:540:708:12:g_d0_f4:12:g_d0_f4:B:the minimum-state-variable rational expectations equilibrium in a linearized New Keynesian
+5:126:8416:18:18:72:540:690:12:g_d0_f4:12:g_d0_f4:B:model with a passive Taylor rule, including a pure interest rate peg, is not E-stable under
+5:127:8507:18:18:72:540:672:12:g_d0_f4:12:g_d0_f4:B:decreasing-gain least-square learning. Evans, Guse, and Honkapohja (2008) study a discrete
+5:128:8597:18:18:72:539:654:12:g_d0_f4:12:g_d0_f4:B:time version of the liquidity-trap model of Benhabib, Schmitt-Groh ́e, and Uribe (2001) and
+5:129:8688:18:18:72:539:636:12:g_d0_f4:12:g_d0_f4:B:show analytically that the liquidity-trap rational expectations equilibrium is not E-stable un-
+5:130:8783:18:18:72:539:618:12:g_d0_f4:12:g_d0_f4:B:der decreasing gain steady state learning for small enough degrees of price stickiness. This
+5:131:8875:18:18:72:539:600:12:g_d0_f4:12:g_d0_f4:B:paper is most closely related to Arifovic, Bullard, and Kostyshyna (2012) who show that
+5:132:8962:18:18:72:539:582:12:g_d0_f4:12:g_d0_f4:B:in a new-Keynesian model like the one studied here the rational expectations equilibrium is
+5:133:9053:18:18:72:540:564:12:g_d0_f4:12:g_d0_f4:B:stable under social learning when the Taylor rule is globally active or globally passive. The
+5:134:9146:18:18:72:540:546:12:g_d0_f4:12:g_d0_f4:B:present study differs from this paper along three dimensions. First, the monetary policy
+5:135:9234:18:18:72:540:528:12:g_d0_f4:12:g_d0_f4:B:specification in the present model respects the Taylor principle and the zero lower bound on
+5:136:9326:18:18:72:539:510:12:g_d0_f4:12:g_d0_f4:B:nominal rates. This means that monetary policy is neither globally active nor globally pas-
+5:137:9417:18:18:72:539:492:12:g_d0_f4:12:g_d0_f4:B:sive. Second, Arifovic, Bullard, and Kostyshyna (2012) do not study pure interest-rate pegs.
+5:138:9509:18:18:72:540:474:12:g_d0_f4:12:g_d0_f4:B:In the model studied here, by contrast, the interest rate is pegged at zero (forced by the zero
+5:139:9604:18:17:72:540:456:12:g_d0_f4:12:g_d0_f4:B:lower bound) when the economy is in a liquidity trap. And third, as a consequence of the
+5:140:9692:17:18:72:540:439:12:g_d0_f4:12:g_d0_f4:B:zero lower bound, the present economy features multiple minimum-state-variable rational
+5:141:9779:18:18:72:540:421:12:g_d0_f4:12:g_d0_f4:B:expectations equilibria, including the intended equilibrium and the liquidity trap, whereas
+5:142:9870:18:18:72:540:403:12:g_d0_f4:12:g_d0_f4:B:the Arifovic, Bullard, and Kostyshyna (2012) economy features always a unique minimum-
+5:143:9956:18:18:72:540:385:12:g_d0_f4:12:g_d0_f4:B:state-variable rational expectations equilibrium. We view the present study as an extension
+5:144:10047:18:18:72:539:367:12:g_d0_f4:12:g_d0_f4:B:of the stability results under social learning of Arifovic,Bullard, and Kostyshyna (2012) to
+5:145:10139:18:18:72:440:349:12:g_d0_f4:12:g_d0_f4:B:the liquidity-trap model of Benhabib, Schmitt-Groh ́e, andUribe (2001).
+5:146:10210:18:18:89:540:331:12:g_d0_f4:12:g_d0_f4:A:The remainder of the paper is in seven sections. Section 2 presents the model. Section 3
+5:147:10298:18:18:72:540:313:12:g_d0_f4:12:g_d0_f4:B:shows the existence of multiple minimum-state-variable rational expectations equilibria in
+5:148:10388:18:18:72:540:295:12:g_d0_f4:12:g_d0_f4:B:an economy driven by natural-rate shocks. Section 4 describes the social learning algorithm
+5:149:10479:18:18:72:540:277:12:g_d0_f4:12:g_d0_f4:B:and its calibration. Section 5 presents the main result of the paper, namely, the stability
+5:150:10570:18:18:72:540:259:12:g_d0_f4:12:g_d0_f4:B:of the liquidity-trap equilibrium under social learning. Section 6 shows that the intended
+5:151:10660:18:18:72:539:241:12:g_d0_f4:12:g_d0_f4:B:equilibrium is also stable under social learning. Section 7presents a sensitivity analysis, and
+5:152:10755:18:45:72:173:223:12:g_d0_f4:12:g_d0_f4:B:section 8 concludes.
+5:153:10775:45:29:72:194:178:17:g_d0_f3:17:g_d0_f3:C:2  The Model
+5:154:10787:29:18:72:540:149:12:g_d0_f4:12:g_d0_f4:B:The theoretical environment into which we embed social learning is the canonical new-
+5:155:10872:18:18:72:539:131:12:g_d0_f4:12:g_d0_f4:B:Keynesian model whose main components are expectations-augmented versions of the IS
+5:156:10955:18:33:72:485:113:12:g_d0_f4:12:g_d0_f4:B:and Phillips curves. The linearized form of these two equations are, respectively,
+5:157:11037:33:0:218:540:80:12:g_d0_f5:12:g_d0_f4:A:yt=yet+1−σ−1(it−πet+1) +σ−1rnt(1)
+6:158:11071:0:26:262:540:708:12:g_d0_f5:12:g_d0_f4:A:πt=κyt+βπet+1,(2)
+6:159:11088:26:18:72:539:682:12:g_d0_f4:12:g_d0_f4:B:whereytdenotes the output gap,yet+1denotes the period-texpected value ofyt+1,πtdenotes
+6:160:11174:18:18:72:540:664:12:g_d0_f4:12:g_d0_f4:B:the deviation of the inflation rate from target,πet+1denotes the period-texpected value of
+6:161:11264:18:18:72:540:646:12:g_d0_f5:12:g_d0_f4:B:πt+1,itdenotes the deviation of the nominal interest rate from its steady-state value, denoted
+6:162:11358:18:18:72:540:628:12:g_d0_f5:12:g_d0_f4:B:i∗,rntis an exogenous and stochastic shock to the natural rate of interest taking on the values
+6:163:11453:18:19:72:330:610:12:g_d0_f5:12:g_d0_f4:B:rnHandrnL< rnHwith transition probability matrix
+6:164:11501:19:13:252:259:591:12:g_d0_f10:12:g_d0_f10:C:[
+6:165:11502:13:17:274:340:578:12:g_d0_f5:8:g_d0_f6:C:ρH1−ρH
+6:166:11508:17:0:264:330:561:12:g_d0_f4:8:g_d0_f6:A:1−ρLρL
+6:167:11514:0:21:347:354:591:12:g_d0_f10:12:g_d0_f10:C:]
+6:168:11515:21:40:355:358:570:12:g_d0_f5:12:g_d0_f5:C:,
+6:169:11516:40:18:72:539:530:12:g_d0_f4:12:g_d0_f4:B:whereρi≡Prob(rnt+1=rni|rnt=rni)∈(0,1) fori=H, L, andσ >0,κ >0, andβ∈(0,1)
+6:170:11589:18:18:72:151:512:12:g_d0_f4:12:g_d0_f4:B:are parameters.
+6:171:11604:18:24:89:126:494:12:g_d0_f4:12:g_d0_f4:A:Letting
+6:172:11611:24:0:273:295:470:12:g_d0_f5:12:g_d0_f8:C:zt≡
+6:173:11614:0:12:298:305:491:12:g_d0_f10:12:g_d0_f10:C:[
+6:174:11615:12:18:311:320:479:12:g_d0_f5:8:g_d0_f6:C:yt
+6:175:11617:18:0:310:320:461:12:g_d0_f5:8:g_d0_f6:C:πt
+6:176:11619:0:21:325:332:491:12:g_d0_f10:12:g_d0_f10:C:]
+6:177:11620:21:33:334:337:470:12:g_d0_f5:12:g_d0_f5:C:,
+6:178:11621:33:32:72:248:437:12:g_d0_f4:12:g_d0_f4:B:we can write the system (1)-(2) as
+6:179:11655:32:33:240:540:405:12:g_d0_f5:12:g_d0_f4:A:zt=a+bzet+1+cit+drnt,(3)
+6:180:11679:33:37:72:102:372:12:g_d0_f4:12:g_d0_f4:B:where
+6:181:11684:37:0:96:115:335:12:g_d0_f5:12:g_d0_f8:C:a≡
+6:182:11686:0:12:119:126:355:12:g_d0_f10:12:g_d0_f10:C:[
+6:183:11687:12:18:131:137:343:12:g_d0_f4:12:g_d0_f4:A:0
+6:184:11688:18:0:131:137:325:12:g_d0_f4:12:g_d0_f4:A:0
+6:185:11689:0:20:141:148:355:12:g_d0_f10:12:g_d0_f10:C:]
+6:186:11690:20:0:150:198:335:12:g_d0_f5:8:g_d0_f7:C:, b≡G−1
+6:187:11697:0:12:201:208:355:12:g_d0_f10:12:g_d0_f10:C:[
+6:188:11698:12:18:213:246:343:12:g_d0_f4:8:g_d0_f7:A:1σ−1
+6:189:11702:18:0:213:241:325:12:g_d0_f4:12:g_d0_f5:A:0β
+6:190:11704:0:20:252:259:355:12:g_d0_f10:12:g_d0_f10:C:]
+6:191:11705:20:0:261:340:335:12:g_d0_f5:8:g_d0_f7:C:, c=−d≡G−1
+6:192:11715:0:12:343:350:355:12:g_d0_f10:12:g_d0_f10:C:[
+6:193:11716:12:18:355:382:343:12:g_d0_f8:8:g_d0_f7:C:−σ−1
+6:194:11720:18:0:366:372:325:12:g_d0_f4:12:g_d0_f4:A:0
+6:195:11721:0:20:388:395:355:12:g_d0_f10:12:g_d0_f10:C:]
+6:196:11722:20:0:396:450:335:12:g_d0_f5:12:g_d0_f8:C:,andG≡
+6:197:11728:0:12:454:461:355:12:g_d0_f10:12:g_d0_f10:C:[
+6:198:11729:12:18:471:498:343:12:g_d0_f4:12:g_d0_f4:A:1   0
+6:199:11734:18:0:466:498:325:12:g_d0_f8:12:g_d0_f4:A:−κ1
+6:200:11737:0:20:502:509:355:12:g_d0_f10:12:g_d0_f10:C:]
+6:201:11738:20:39:511:514:335:12:g_d0_f5:12:g_d0_f5:C:.
+6:202:11739:39:18:72:540:296:12:g_d0_f4:12:g_d0_f4:B:As we will see shortly, this compact notation facilitates the characterization of model’s
+6:203:11828:18:18:72:123:278:12:g_d0_f4:12:g_d0_f4:B:dynamics.
+6:204:11837:18:18:89:540:260:12:g_d0_f4:12:g_d0_f4:A:The central bank sets the nominal interest rate according toa Taylor rule, and the interest
+6:205:11928:18:32:72:229:242:12:g_d0_f4:12:g_d0_f4:B:rate is bounded below by zero,
+6:206:11958:32:33:234:376:210:12:g_d0_f5:12:g_d0_f5:C:it= max{−i∗, φππt+φyyt},
+6:207:11982:33:18:72:540:177:12:g_d0_f4:12:g_d0_f4:B:whereφπ>1 andφy>0 are policy parameters.  To see that the specified interest-rate
+6:208:12063:18:18:72:539:159:12:g_d0_f4:12:g_d0_f4:B:feedback rule satisfies the zero lower bound on nominal rates, note that becauseitis the
+6:209:12151:18:18:72:539:141:12:g_d0_f4:12:g_d0_f4:B:deviation of the nominal interest rate from its targeti∗, the nominal interest rate itself equals
+6:210:12248:18:18:71:539:123:12:g_d0_f5:12:g_d0_f4:B:it+i∗, and the zero lower bound constraint isit+i∗≥0. Following the compact notation
+6:211:12332:18:33:71:412:105:12:g_d0_f4:12:g_d0_f4:B:introduced above, the interest-rate feedback rule can be written as
+6:212:12399:33:0:234:540:72:12:g_d0_f5:12:g_d0_f4:A:it= max{−i∗,[φyφπ]zt}.(4)
+7:213:12425:0:30:72:435:708:17:g_d0_f3:17:g_d0_f3:C:3  Three Rational Expectations Equilibria
+7:214:12466:30:18:72:539:678:12:g_d0_f4:12:g_d0_f4:B:In this section we characterize three minimum-state-variable rational expectations (MSV-
+7:215:12554:18:18:72:539:660:12:g_d0_f4:12:g_d0_f4:B:RE) equilibria. In the first equilibrium the economy never falls into a liquidity trap (the
+7:216:12645:18:18:72:539:642:12:g_d0_f4:12:g_d0_f4:B:intended rational expectations equilibrium), in the second the economy is always in the liq-
+7:217:12737:18:18:72:540:624:12:g_d0_f4:12:g_d0_f4:B:uidity trap (the unintended rational expectations equilibrium), and in the third the economy
+7:218:12829:18:18:72:540:606:12:g_d0_f4:12:g_d0_f4:B:occasionally falls into a liquidity trap. We derive conditions under which each of these three
+7:219:12923:18:18:72:540:588:12:g_d0_f4:12:g_d0_f4:B:rational expectations equilibria exist. In principle, anycombination of these equilibria can
+7:220:13015:18:18:72:540:570:12:g_d0_f4:12:g_d0_f4:B:coexist, and there may also exist parameter specifications under which none of these equi-
+7:221:13105:18:18:72:539:552:12:g_d0_f4:12:g_d0_f4:B:libria exist. Thus, we will also explore the constellation of equilibria that emerges under
+7:222:13196:18:39:72:305:534:12:g_d0_f4:12:g_d0_f4:B:different parameter configurations of interest.
+7:223:13243:39:25:72:521:495:14:g_d0_f3:14:g_d0_f3:C:3.1  The No-Liquidity-Trap Rational Expectations Equilibrium
+7:224:13303:25:18:72:540:470:12:g_d0_f4:12:g_d0_f4:B:Here we consider the existence of a rational expectations equilibrium in which the zero lower
+7:225:13396:18:18:72:540:452:12:g_d0_f4:12:g_d0_f4:B:bound constraint on the nominal interest rate is never binding. This equilibrium is the one
+7:226:13487:18:18:72:539:434:12:g_d0_f4:12:g_d0_f4:B:intended by the policymaker, because it is the one in which the inflation rate remains close to
+7:227:13582:18:18:72:539:416:12:g_d0_f4:12:g_d0_f4:B:the intended target and the output gap fluctuates around zero. We refer to this equilibrium
+7:228:13673:18:18:72:539:398:12:g_d0_f4:12:g_d0_f4:B:as the RE-NB equilibrium. The fact that we restrict attention to MSV-RE equilibria means
+7:229:13761:18:18:72:540:380:12:g_d0_f4:12:g_d0_f4:B:that equilibrium variables must be functions of the naturalrate of interest only. Sincerntis
+7:230:13853:18:18:71:472:362:12:g_d0_f4:12:g_d0_f4:B:assumed to follow a two-state Markov process,ztcan take on only two values.
+7:231:13928:18:18:89:539:344:12:g_d0_f4:12:g_d0_f4:A:For an RE-NB equilibrium to exist, the nominal interest ratemust be strictly positive at
+7:232:14016:18:18:71:132:326:12:g_d0_f4:12:g_d0_f4:B:all times, or
+7:233:14029:18:26:275:540:308:12:g_d0_f4:12:g_d0_f4:A:Φznb>−i∗,(5)
+7:234:14041:26:18:71:540:282:12:g_d0_f4:12:g_d0_f4:B:whereznbis a 4×1 vector collecting the values of output and inflation in the statesrnHand
+7:235:14130:18:24:71:136:264:12:g_d0_f5:12:g_d0_f4:B:rnLas follows
+7:236:14143:24:0:166:194:240:12:g_d0_f5:12:g_d0_f4:A:znb=
+7:237:14147:0:12:197:204:260:12:g_d0_f10:12:g_d0_f10:C:[
+7:238:14148:12:18:209:222:248:12:g_d0_f5:8:g_d0_f6:C:znbH
+7:239:14152:18:0:209:221:230:12:g_d0_f5:8:g_d0_f6:C:znbL
+7:240:14156:0:20:229:236:260:12:g_d0_f10:12:g_d0_f10:C:]
+7:241:14157:20:0:242:296:240:12:g_d0_f4:12:g_d0_f4:A:withznbH=
+7:242:14166:0:12:300:307:260:12:g_d0_f10:12:g_d0_f10:C:[
+7:243:14167:12:18:312:325:248:12:g_d0_f5:8:g_d0_f6:C:ynbH
+7:244:14171:18:0:311:325:230:12:g_d0_f5:8:g_d0_f6:C:πnbH
+7:245:14175:0:20:333:340:260:12:g_d0_f10:12:g_d0_f10:C:]
+7:246:14176:20:0:346:396:240:12:g_d0_f4:12:g_d0_f4:A:andznbL=
+7:247:14184:0:12:400:407:260:12:g_d0_f10:12:g_d0_f10:C:[
+7:248:14185:12:18:412:424:248:12:g_d0_f5:8:g_d0_f6:C:ynbL
+7:249:14189:18:0:412:424:230:12:g_d0_f5:8:g_d0_f6:C:πnbL
+7:250:14193:0:20:433:440:260:12:g_d0_f10:12:g_d0_f10:C:]
+7:251:14194:20:34:442:445:240:12:g_d0_f5:12:g_d0_f5:C:,
+7:252:14195:34:18:71:540:206:12:g_d0_f4:12:g_d0_f4:B:andynbH, ynbLandπnbH, πnbLdenote the equilibrium values ofytandπtwhenrnttakes the values
+7:253:14283:18:40:71:505:188:12:g_d0_f5:12:g_d0_f4:B:rnHandrnL, respectively. The object Φ is a 2×4 matrix of policy parameters given by
+7:254:14366:40:0:119:139:148:12:g_d0_f4:12:g_d0_f8:A:Φ≡
+7:255:14368:0:12:143:150:168:12:g_d0_f10:12:g_d0_f10:C:[
+7:256:14369:12:18:155:170:156:12:g_d0_f4:8:g_d0_f6:A:ΦH
+7:257:14371:18:0:156:170:138:12:g_d0_f4:8:g_d0_f6:A:ΦL
+7:258:14373:0:20:176:183:168:12:g_d0_f10:12:g_d0_f10:C:]
+7:259:14374:20:0:185:250:148:12:g_d0_f4:12:g_d0_f4:A:; with ΦH=
+7:260:14384:0:13:253:259:161:12:g_d0_f10:12:g_d0_f10:C:[
+7:261:14385:13:0:264:330:148:12:g_d0_f5:12:g_d0_f4:A:φyφπ0  0
+7:262:14393:0:13:335:341:161:12:g_d0_f10:12:g_d0_f10:C:]
+7:263:14394:13:0:347:396:148:12:g_d0_f4:12:g_d0_f4:A:and ΦL=
+7:264:14401:0:13:400:406:161:12:g_d0_f10:12:g_d0_f10:C:[
+7:265:14402:13:0:411:476:148:12:g_d0_f4:8:g_d0_f6:A:0  0φyφπ
+7:266:14410:0:13:482:488:161:12:g_d0_f10:12:g_d0_f10:C:]
+7:267:14411:13:42:489:492:148:12:g_d0_f5:12:g_d0_f5:C:.
+7:268:14412:42:0:71:540:106:12:g_d0_f4:12:g_d0_f4:B:Lettingznb,eHdenote the expected value ofzt+1conditional onzt=znbHand using a similar
+8:269:14498:0:33:72:393:708:12:g_d0_f4:12:g_d0_f4:B:definition forznb,eL, we have that under the RE-NB equilibrium
+8:270:14560:33:33:236:372:675:12:g_d0_f5:8:g_d0_f6:C:znb,eH=ρHznbH+ (1−ρH)znbL
+8:271:14585:33:18:71:90:642:12:g_d0_f4:12:g_d0_f4:B:and
+8:272:14588:18:26:236:375:624:12:g_d0_f5:12:g_d0_f5:C:znb,eL= (1−ρL)znbH+ρLznbL.
+8:273:14614:26:39:71:131:598:12:g_d0_f4:12:g_d0_f4:B:Now letting
+8:274:14625:39:0:111:138:559:12:g_d0_f4:12:g_d0_f8:A:ΓH≡
+8:275:14628:0:13:142:149:580:12:g_d0_f10:12:g_d0_f10:C:[
+8:276:14629:13:17:154:267:567:12:g_d0_f5:12:g_d0_f4:A:ρH0  1−ρH0
+8:277:14639:17:0:158:280:550:12:g_d0_f4:8:g_d0_f6:A:0ρH01−ρH
+8:278:14647:0:21:286:293:580:12:g_d0_f10:12:g_d0_f10:C:]
+8:279:14648:21:0:299:348:559:12:g_d0_f4:12:g_d0_f8:A:and ΓL≡
+8:280:14655:0:13:351:358:580:12:g_d0_f10:12:g_d0_f10:C:[
+8:281:14656:13:17:363:480:567:12:g_d0_f4:12:g_d0_f4:A:1−ρL0ρL0
+8:282:14664:17:0:377:483:550:12:g_d0_f4:8:g_d0_f6:A:0    1−ρL0ρL
+8:283:14676:0:21:488:495:580:12:g_d0_f10:12:g_d0_f10:C:]
+8:284:14677:21:39:497:500:559:12:g_d0_f5:12:g_d0_f5:C:,
+8:285:14678:39:18:71:137:520:12:g_d0_f4:12:g_d0_f4:B:we have that
+8:286:14690:18:26:272:339:502:12:g_d0_f5:8:g_d0_f6:C:znb,eH= ΓHznb
+8:287:14703:26:18:71:90:476:12:g_d0_f4:12:g_d0_f4:B:and
+8:288:14706:18:26:271:340:458:12:g_d0_f5:12:g_d0_f5:C:znb,eL= ΓLznb.
+8:289:14720:26:33:71:385:432:12:g_d0_f4:12:g_d0_f4:B:This allows us to write equation (3) in the statesHandLas
+8:290:14777:33:32:219:390:399:12:g_d0_f5:8:g_d0_f6:C:znbH=a+bΓHznb+cΦHznb+drnH
+8:291:14802:32:18:71:90:367:12:g_d0_f4:12:g_d0_f4:B:and
+8:292:14805:18:26:221:390:349:12:g_d0_f5:12:g_d0_f5:C:znbL=a+bΓLznb+cΦLznb+drnL.
+8:293:14831:26:18:71:199:323:12:g_d0_f4:12:g_d0_f4:B:Collecting terms we have
+8:294:14855:18:26:237:374:305:12:g_d0_f5:12:g_d0_f5:C:znb=Anb+Bnbznb+Drn,
+8:295:14874:26:37:71:101:279:12:g_d0_f4:12:g_d0_f4:B:where
+8:296:14879:37:0:121:151:242:12:g_d0_f5:12:g_d0_f8:C:Anb≡
+8:297:14883:0:12:155:162:263:12:g_d0_f10:12:g_d0_f10:C:[
+8:298:14884:12:18:167:173:251:12:g_d0_f5:12:g_d0_f5:C:a
+8:299:14885:18:0:167:173:233:12:g_d0_f5:12:g_d0_f5:C:a
+8:300:14886:0:21:178:185:263:12:g_d0_f10:12:g_d0_f10:C:]
+8:301:14887:21:0:187:223:242:12:g_d0_f5:12:g_d0_f8:C:, Bnb≡
+8:302:14893:0:12:227:234:263:12:g_d0_f10:12:g_d0_f10:C:[
+8:303:14894:12:18:239:294:251:12:g_d0_f5:8:g_d0_f6:C:bΓH+cΦH
+8:304:14901:18:0:241:293:233:12:g_d0_f5:8:g_d0_f6:C:bΓL+cΦL
+8:305:14908:0:21:300:307:263:12:g_d0_f10:12:g_d0_f10:C:]
+8:306:14909:21:0:309:337:242:12:g_d0_f5:12:g_d0_f8:C:, D≡
+8:307:14913:0:12:340:347:263:12:g_d0_f10:12:g_d0_f10:C:[
+8:308:14914:12:18:352:374:251:12:g_d0_f5:12:g_d0_f8:C:d∅
+8:309:14916:18:0:352:374:233:12:g_d0_f8:12:g_d0_f5:C:∅d
+8:310:14918:0:21:379:386:263:12:g_d0_f10:12:g_d0_f10:C:]
+8:311:14919:21:0:389:444:242:12:g_d0_f5:12:g_d0_f8:C:,andrn≡
+8:312:14926:0:12:448:455:263:12:g_d0_f10:12:g_d0_f10:C:[
+8:313:14927:12:18:460:472:251:12:g_d0_f5:8:g_d0_f6:C:rnH
+8:314:14930:18:0:460:472:233:12:g_d0_f5:8:g_d0_f6:C:rnL
+8:315:14933:0:21:478:485:263:12:g_d0_f10:12:g_d0_f10:C:]
+8:316:14934:21:40:487:490:242:12:g_d0_f5:12:g_d0_f5:C:.
+8:317:14935:40:18:71:179:202:12:g_d0_f4:12:g_d0_f4:B:Solving forznbyields
+8:318:14955:18:26:226:385:184:12:g_d0_f5:12:g_d0_f5:C:znb= (I−Bnb)−1(Anb+D rn).
+8:319:14980:26:18:71:539:158:12:g_d0_f4:12:g_d0_f4:B:The rational expectations equilibrium with a never bindingzero lower bound (RE-NB) exists
+8:320:15069:18:0:71:415:140:12:g_d0_f4:12:g_d0_f4:B:if the value ofznbimplied by this expression satisfies condition (5).
+9:321:15139:0:23:72:540:708:14:g_d0_f3:14:g_d0_f3:C:3.2  A Rational Expectations Equilibrium With A Perpetual Liq-
+9:322:15201:23:25:108:188:685:14:g_d0_f3:14:g_d0_f3:C:uidity Trap
+9:323:15212:25:18:72:540:660:12:g_d0_f4:12:g_d0_f4:B:In this equilibrium, which we denote RE-AB, the zero lower bound on the nominal interest
+9:324:15300:18:18:72:228:642:12:g_d0_f4:12:g_d0_f4:B:rate is always binding, that is,
+9:325:15332:18:26:285:326:624:12:g_d0_f5:8:g_d0_f9:C:it=−i∗
+9:326:15338:26:18:72:540:598:12:g_d0_f4:12:g_d0_f4:B:for allt, which means that the nominal interest rate is always zero, and the economy is stuck
+9:327:15431:18:18:71:540:580:12:g_d0_f4:12:g_d0_f4:B:in a liquidity trap regardless of the realization of the natural rate. This equilibrium can be
+9:328:15525:18:18:71:540:562:12:g_d0_f4:12:g_d0_f4:B:said to be unintended, as inflation is below target and the output gap is negative on average.
+9:329:15619:18:39:89:459:544:12:g_d0_f4:12:g_d0_f4:A:Proceeding in a similar fashion as in solving the RE-NB equilibrium, let
+9:330:15691:39:0:180:207:505:12:g_d0_f5:12:g_d0_f4:A:zab=
+9:331:15695:0:12:211:218:525:12:g_d0_f10:12:g_d0_f10:C:[
+9:332:15696:12:18:223:235:513:12:g_d0_f5:8:g_d0_f6:C:zabH
+9:333:15700:18:0:223:234:495:12:g_d0_f5:8:g_d0_f6:C:zabL
+9:334:15704:0:20:242:249:525:12:g_d0_f10:12:g_d0_f10:C:]
+9:335:15705:20:0:252:284:505:12:g_d0_f5:12:g_d0_f4:A:, zabH=
+9:336:15712:0:12:287:294:525:12:g_d0_f10:12:g_d0_f10:C:[
+9:337:15713:12:18:300:312:513:12:g_d0_f5:8:g_d0_f6:C:yabH
+9:338:15717:18:0:299:313:495:12:g_d0_f5:8:g_d0_f6:C:πabH
+9:339:15721:0:20:320:327:525:12:g_d0_f10:12:g_d0_f10:C:]
+9:340:15722:20:0:329:387:505:12:g_d0_f5:12:g_d0_f4:A:,andzabL=
+9:341:15731:0:12:391:398:525:12:g_d0_f10:12:g_d0_f10:C:[
+9:342:15732:12:18:403:415:513:12:g_d0_f5:8:g_d0_f6:C:yabL
+9:343:15736:18:0:403:415:495:12:g_d0_f5:8:g_d0_f6:C:πabL
+9:344:15740:0:59:423:430:525:12:g_d0_f10:12:g_d0_f10:C:]
+9:345:15741:59:18:71:538:466:12:g_d0_f4:8:g_d0_f6:B:denote the values ofztin the RE-AB equilibrium when the natural rate takes the valuesrnH
+9:346:15829:18:18:71:167:448:12:g_d0_f4:12:g_d0_f4:B:orrnL, respectively.
+9:347:15849:18:18:89:539:430:12:g_d0_f4:12:g_d0_f4:A:Then using equation (3) we can write the dynamics associatedwith the RE-AB equilib-
+9:348:15932:18:18:71:109:412:12:g_d0_f4:12:g_d0_f4:B:rium as
+9:349:15939:18:26:232:378:394:12:g_d0_f5:8:g_d0_f6:C:zabH=a+bΓHzab−ci∗+drnH
+9:350:15961:26:18:71:90:368:12:g_d0_f4:12:g_d0_f4:B:and
+9:351:15964:18:26:232:379:350:12:g_d0_f5:12:g_d0_f5:C:zabL=a+bΓLzab−ci∗+drnL,
+9:352:15987:26:18:71:539:324:12:g_d0_f4:12:g_d0_f4:B:where ΓHzaband ΓLzabdenote the expected value ofzt+1whenrnt=rnHandrnt=rnL,
+9:353:16061:18:32:71:358:306:12:g_d0_f4:12:g_d0_f4:B:respectively. Combining these two laws of motion yields
+9:354:16116:32:33:239:540:274:12:g_d0_f5:12:g_d0_f4:A:zab=Aab+Babzab+Drn,(6)
+9:355:16138:33:22:71:101:241:12:g_d0_f4:12:g_d0_f4:B:where
+9:356:16143:22:0:203:233:219:12:g_d0_f5:12:g_d0_f8:C:Aab≡
+9:357:16147:0:13:237:244:240:12:g_d0_f10:12:g_d0_f10:C:[
+9:358:16148:13:17:249:283:227:12:g_d0_f5:8:g_d0_f9:C:a−ci∗
+9:359:16153:17:0:249:283:210:12:g_d0_f5:8:g_d0_f9:C:a−ci∗
+9:360:16158:0:21:288:295:240:12:g_d0_f10:12:g_d0_f10:C:]
+9:361:16159:21:0:301:354:219:12:g_d0_f4:12:g_d0_f8:A:andBab≡
+9:362:16166:0:13:358:365:240:12:g_d0_f10:12:g_d0_f10:C:[
+9:363:16167:13:17:370:389:227:12:g_d0_f5:8:g_d0_f6:C:bΓH
+9:364:16170:17:0:371:389:210:12:g_d0_f5:8:g_d0_f6:C:bΓL
+9:365:16173:0:21:395:402:240:12:g_d0_f10:12:g_d0_f10:C:]
+9:366:16174:21:34:404:407:219:12:g_d0_f5:12:g_d0_f5:C:.
+9:367:16175:34:18:71:189:185:12:g_d0_f4:12:g_d0_f4:B:Solving forzabwe have
+9:368:16196:18:26:228:383:167:12:g_d0_f5:12:g_d0_f5:C:zab= (I−Bab)−1(Aab+Drn).
+9:369:16220:26:33:71:304:141:12:g_d0_f4:12:g_d0_f4:B:The vectorzabis an equilibrium if it satisfies,
+9:370:16267:33:0:275:335:108:12:g_d0_f4:12:g_d0_f5:A:Φzab≤−i∗.
+10:371:16277:0:23:72:541:708:14:g_d0_f3:14:g_d0_f3:C:3.3  A Rational Expectations Equilibrium With An Occasional
+10:372:16336:23:25:108:211:685:14:g_d0_f3:14:g_d0_f3:C:Liquidity Trap
+10:373:16350:25:18:72:539:660:12:g_d0_f4:12:g_d0_f4:B:We define a rational expectations equilibrium with an occasionally binding (RE-OB) zero
+10:374:16437:18:18:72:539:642:12:g_d0_f4:12:g_d0_f4:B:lower bound as a MSV-RE equilibrium in which the economy enjoys high levels of aggregate
+10:375:16525:18:18:72:539:624:12:g_d0_f4:12:g_d0_f4:B:activity and inflation near its intended target when the natural rate is high, but falls into a
+10:376:16620:18:18:72:540:606:12:g_d0_f4:12:g_d0_f4:B:liquidity trap with zero interest rates, deflation, and depressed levels of aggregate activity
+10:377:16714:18:18:72:220:588:12:g_d0_f4:12:g_d0_f4:B:when the natural rate is low.
+10:378:16743:18:18:89:539:570:12:g_d0_f4:12:g_d0_f4:A:Let the equilibrium value of the endogenous vector be denoted byzobL,ifrnt=rnLand by
+10:379:16827:18:40:71:208:552:12:g_d0_f5:12:g_d0_f4:B:zobHifrnt=rnH. Further, let
+10:380:16854:40:0:179:206:512:12:g_d0_f5:12:g_d0_f4:A:zob=
+10:381:16858:0:12:209:216:533:12:g_d0_f10:12:g_d0_f10:C:[
+10:382:16859:12:18:221:233:521:12:g_d0_f5:8:g_d0_f6:C:zobH
+10:383:16863:18:0:221:232:503:12:g_d0_f5:8:g_d0_f6:C:zobL
+10:384:16867:0:21:240:247:533:12:g_d0_f10:12:g_d0_f10:C:]
+10:385:16868:21:0:249:281:512:12:g_d0_f5:12:g_d0_f8:C:, zobH≡
+10:386:16875:0:12:284:291:533:12:g_d0_f10:12:g_d0_f10:C:[
+10:387:16876:12:18:297:310:521:12:g_d0_f5:8:g_d0_f6:C:yobH
+10:388:16880:18:0:296:310:503:12:g_d0_f5:8:g_d0_f6:C:πobH
+10:389:16884:0:21:317:324:533:12:g_d0_f10:12:g_d0_f10:C:]
+10:390:16885:21:0:326:384:512:12:g_d0_f5:12:g_d0_f8:C:,andzobL≡
+10:391:16894:0:12:388:395:533:12:g_d0_f10:12:g_d0_f10:C:[
+10:392:16895:12:18:400:412:521:12:g_d0_f5:8:g_d0_f6:C:yobL
+10:393:16899:18:0:400:412:503:12:g_d0_f5:8:g_d0_f6:C:πobL
+10:394:16903:0:21:420:427:533:12:g_d0_f10:12:g_d0_f10:C:]
+10:395:16904:21:39:429:432:512:12:g_d0_f5:12:g_d0_f5:C:.
+10:396:16905:39:18:89:539:473:12:g_d0_f4:12:g_d0_f4:A:The requirement that the zero lower bound bind in the low state but not bind in the high
+10:397:16993:18:18:71:161:455:12:g_d0_f4:12:g_d0_f4:B:state implies that
+10:398:17011:18:26:273:337:437:12:g_d0_f4:8:g_d0_f9:A:ΦHzob>−i∗
+10:399:17020:26:17:71:90:411:12:g_d0_f4:12:g_d0_f4:B:and
+10:400:17023:17:27:272:338:394:12:g_d0_f4:12:g_d0_f5:A:ΦLzob≤−i∗.
+10:401:17033:27:32:71:389:367:12:g_d0_f4:12:g_d0_f4:B:The equilibrium conditions (3) and (4) can then be written as
+10:402:17094:32:33:221:389:335:12:g_d0_f5:8:g_d0_f6:C:zobH=a+bΓHzob+cΦHzob+drnH
+10:403:17119:33:18:71:90:302:12:g_d0_f4:12:g_d0_f4:B:and
+10:404:17122:18:26:232:379:284:12:g_d0_f5:12:g_d0_f5:C:zobL=a+bΓLzob−ci∗+drnL.
+10:405:17145:26:33:71:295:258:12:g_d0_f4:12:g_d0_f4:B:In turn we can write these two equations as
+10:406:17188:33:33:239:540:225:12:g_d0_f5:12:g_d0_f4:A:zob=Aob+Bobzob+Drn,(7)
+10:407:17210:33:21:71:101:192:12:g_d0_f4:12:g_d0_f4:B:where
+10:408:17215:21:0:186:215:171:12:g_d0_f5:12:g_d0_f8:C:Aob≡
+10:409:17219:0:12:219:226:191:12:g_d0_f10:12:g_d0_f10:C:[
+10:410:17220:12:18:245:251:179:12:g_d0_f5:12:g_d0_f5:C:a
+10:411:17221:18:0:231:265:161:12:g_d0_f5:8:g_d0_f9:C:a−ci∗
+10:412:17226:0:20:270:277:191:12:g_d0_f10:12:g_d0_f10:C:]
+10:413:17227:20:0:283:336:171:12:g_d0_f4:12:g_d0_f8:A:andBob≡
+10:414:17234:0:12:340:347:191:12:g_d0_f10:12:g_d0_f10:C:[
+10:415:17235:12:18:352:407:179:12:g_d0_f5:8:g_d0_f6:C:bΓH+cΦH
+10:416:17242:18:0:371:389:161:12:g_d0_f5:8:g_d0_f6:C:bΓL
+10:417:17245:0:20:413:420:191:12:g_d0_f10:12:g_d0_f10:C:]
+10:418:17246:20:34:422:425:171:12:g_d0_f5:12:g_d0_f5:C:.
+10:419:17247:34:33:71:202:137:12:g_d0_f4:12:g_d0_f4:B:Solving forzob, we obtain
+10:420:17272:33:0:224:386:104:12:g_d0_f5:12:g_d0_f5:C:zob= (I−Bob)−1(Aob+Dobrn).
+11:421:17299:0:33:72:281:708:12:g_d0_f4:12:g_d0_f4:B:The vectorzobis a RE-OB equilibrium if
+11:422:17337:33:39:227:384:675:12:g_d0_f4:12:g_d0_f5:A:ΦHzob>−i∗and ΦLzob≤−i∗.
+11:423:17360:39:26:72:448:636:14:g_d0_f3:14:g_d0_f3:C:3.4  Multiple MSV Rational Expectations Equilibria
+11:424:17410:26:18:72:540:610:12:g_d0_f4:12:g_d0_f4:B:As mentioned earlier, in principle, any combination of the three MSV-RE equilibria we just
+11:425:17500:18:18:72:540:592:12:g_d0_f4:12:g_d0_f4:B:characterized can coexist. To give an idea of what combinations of equilibria actually arise for
+11:426:17596:18:18:72:539:574:12:g_d0_f4:12:g_d0_f4:B:plausible calibrations, we proceed to parameterizing the model. The analysis here builds on
+11:427:17687:18:17:72:539:556:12:g_d0_f4:12:g_d0_f4:B:Benhabib, Schmitt-Groh ́e, and Uribe (2001) who show that inthe absence of fundamental
+11:428:17773:17:18:72:540:539:12:g_d0_f4:12:g_d0_f4:B:shocks the combination of an active monetary policy stance (φπ>1) and the zero lower
+11:429:17857:18:18:71:539:521:12:g_d0_f4:12:g_d0_f4:B:bound results in two MSV-RE equilibria, namely, the one in which the zero lower bound
+11:430:17942:18:18:71:540:503:12:g_d0_f4:12:g_d0_f4:B:never binds (RE-NB) and the one in which the zero lower bound always binds (RE-AB). A
+11:431:18027:18:18:71:540:485:12:g_d0_f4:12:g_d0_f4:B:question that we wish to answer before tackling the issue of learning is whether this result
+11:432:18119:18:18:71:540:467:12:g_d0_f4:12:g_d0_f4:B:carries over to an economy buffeted by fundamental shocks, inthis case natural rate shocks.
+11:433:18210:18:18:71:537:449:12:g_d0_f4:8:g_d0_f6:B:Of particular interest, therefore, is to explore how the features of the driving processrnt
+11:434:18301:18:18:71:539:431:12:g_d0_f4:12:g_d0_f4:B:(e.g., its volatility and persistence) can alter the type and combinations of equilibria that
+11:435:18394:18:18:71:123:413:12:g_d0_f4:12:g_d0_f4:B:may arise.
+11:436:18404:18:18:89:540:395:12:g_d0_f4:12:g_d0_f4:A:To this end, we resort to a parameterization of the new-Keynesian model that is standard
+11:437:18492:18:18:71:540:377:12:g_d0_f4:12:g_d0_f4:B:in the related literature. Table 1 summarizes it. We assume that the time unit is one quarter.
+11:438:18586:18:18:71:539:359:12:g_d0_f4:12:g_d0_f4:B:We setβ= 0.99,σ= 2,κ= 0.02,φy= 0.125,φπ= 1.5, andi∗=β−1−1. The values ofβ,
+11:439:18660:18:18:71:540:341:12:g_d0_f5:12:g_d0_f4:B:σ, andκare taken from Eggertsson and Woodford (2003), and the parameters of the Taylor
+11:440:18746:18:17:71:539:323:12:g_d0_f4:12:g_d0_f4:B:rule,φyandφπ, are standard in the literature. The calibration ofi∗implies that the inflation
+11:441:18838:17:18:71:539:306:12:g_d0_f4:12:g_d0_f4:B:target is zero, as assumed in much of the new-Keynesian literature (e.g., Woodford, 2003).
+11:442:18928:18:18:71:539:288:12:g_d0_f4:12:g_d0_f4:B:We adopt a symmetric specification of the natural rate process and setrnH=−rnL= 0.0093
+11:443:19014:18:18:71:540:270:12:g_d0_f4:12:g_d0_f4:B:andρH=ρL= 0.675. These parameter values imply thatrnthas a standard deviation of
+11:444:19094:18:18:71:540:252:12:g_d0_f4:12:g_d0_f4:B:3.72 percent at an annual rate and a serial correlation of 0.35, as in Woodford (1999). For
+11:445:19185:18:18:71:539:234:12:g_d0_f4:12:g_d0_f4:B:this calibration of the natural rate process, there exist two minimum state variable rational
+11:446:19278:18:18:71:539:216:12:g_d0_f4:12:g_d0_f4:B:expectations equilibria, one in which the zero lower bound constraint is always binding (RE-
+11:447:19370:18:18:71:539:198:12:g_d0_f4:12:g_d0_f4:B:AB) and one in which it is never binding (RE-NB). The numerical equilibrium values of the
+11:448:19459:18:57:71:286:180:12:g_d0_f4:12:g_d0_f4:B:laws of motion of output and inflation are
+11:449:19501:57:0:132:159:123:12:g_d0_f5:12:g_d0_f4:A:zab=
+11:450:19505:0:21:163:171:161:12:g_d0_f10:12:g_d0_f10:C:
+11:451:19506:21:7:163:171:140:12:g_d0_f10:12:g_d0_f10:C:
+11:452:19507:7:7:163:171:133:12:g_d0_f10:12:g_d0_f10:C:
+11:453:19508:7:7:163:171:126:12:g_d0_f10:12:g_d0_f10:C:
+11:454:19509:7:8:163:171:119:12:g_d0_f10:12:g_d0_f10:C:
+11:455:19510:8:0:163:171:111:12:g_d0_f10:12:g_d0_f10:C:
+11:456:19511:0:18:177:189:149:12:g_d0_f5:8:g_d0_f6:C:yabH
+11:457:19515:18:18:176:190:131:12:g_d0_f5:8:g_d0_f6:C:πabH
+11:458:19519:18:17:177:188:113:12:g_d0_f5:8:g_d0_f6:C:yabL
+11:459:19523:17:0:176:189:96:12:g_d0_f5:8:g_d0_f6:C:πabL
+11:460:19527:0:21:197:205:161:12:g_d0_f10:12:g_d0_f10:C:
+11:461:19528:21:7:197:205:140:12:g_d0_f10:12:g_d0_f10:C:
+11:462:19529:7:7:197:205:133:12:g_d0_f10:12:g_d0_f10:C:
+11:463:19530:7:7:197:205:126:12:g_d0_f10:12:g_d0_f10:C:
+11:464:19531:7:8:197:205:119:12:g_d0_f10:12:g_d0_f10:C:
+11:465:19532:8:0:197:205:111:12:g_d0_f10:12:g_d0_f10:C:
+11:466:19533:0:0:208:217:123:12:g_d0_f4:12:g_d0_f4:A:=
+11:467:19534:0:21:220:228:161:12:g_d0_f10:12:g_d0_f10:C:
+11:468:19535:21:7:220:228:140:12:g_d0_f10:12:g_d0_f10:C:
+11:469:19536:7:7:220:228:133:12:g_d0_f10:12:g_d0_f10:C:
+11:470:19537:7:7:220:228:126:12:g_d0_f10:12:g_d0_f10:C:
+11:471:19538:7:8:220:228:119:12:g_d0_f10:12:g_d0_f10:C:
+11:472:19539:8:0:220:228:111:12:g_d0_f10:12:g_d0_f10:C:
+11:473:19540:0:18:242:274:149:12:g_d0_f4:12:g_d0_f4:A:0.0022
+11:474:19546:18:18:233:275:131:12:g_d0_f8:12:g_d0_f4:A:−0.0099
+11:475:19553:18:17:233:275:113:12:g_d0_f8:12:g_d0_f4:A:−0.0123
+11:476:19560:17:0:233:275:96:12:g_d0_f8:12:g_d0_f4:A:−0.0103
+11:477:19567:0:21:280:288:161:12:g_d0_f10:12:g_d0_f10:C:
+11:478:19568:21:7:280:288:140:12:g_d0_f10:12:g_d0_f10:C:
+11:479:19569:7:7:280:288:133:12:g_d0_f10:12:g_d0_f10:C:
+11:480:19570:7:7:280:288:126:12:g_d0_f10:12:g_d0_f10:C:
+11:481:19571:7:8:280:288:119:12:g_d0_f10:12:g_d0_f10:C:
+11:482:19572:8:0:280:288:111:12:g_d0_f10:12:g_d0_f10:C:
+11:483:19573:0:0:294:344:123:12:g_d0_f4:12:g_d0_f4:A:andznb=
+11:484:19580:0:21:347:355:161:12:g_d0_f10:12:g_d0_f10:C:
+11:485:19581:21:7:347:355:140:12:g_d0_f10:12:g_d0_f10:C:
+11:486:19582:7:7:347:355:133:12:g_d0_f10:12:g_d0_f10:C:
+11:487:19583:7:7:347:355:126:12:g_d0_f10:12:g_d0_f10:C:
+11:488:19584:7:8:347:355:119:12:g_d0_f10:12:g_d0_f10:C:
+11:489:19585:8:0:347:355:111:12:g_d0_f10:12:g_d0_f10:C:
+11:490:19586:0:18:361:374:149:12:g_d0_f5:8:g_d0_f6:C:ynbH
+11:491:19590:18:18:360:374:131:12:g_d0_f5:8:g_d0_f6:C:πnbH
+11:492:19594:18:17:361:373:113:12:g_d0_f5:8:g_d0_f6:C:ynbL
+11:493:19598:17:0:360:373:96:12:g_d0_f5:8:g_d0_f6:C:πnbL
+11:494:19602:0:21:382:390:161:12:g_d0_f10:12:g_d0_f10:C:
+11:495:19603:21:7:382:390:140:12:g_d0_f10:12:g_d0_f10:C:
+11:496:19604:7:7:382:390:133:12:g_d0_f10:12:g_d0_f10:C:
+11:497:19605:7:7:382:390:126:12:g_d0_f10:12:g_d0_f10:C:
+11:498:19606:7:8:382:390:119:12:g_d0_f10:12:g_d0_f10:C:
+11:499:19607:8:0:382:390:111:12:g_d0_f10:12:g_d0_f10:C:
+11:500:19608:0:0:393:402:123:12:g_d0_f4:12:g_d0_f4:A:=
+11:501:19609:0:21:406:414:161:12:g_d0_f10:12:g_d0_f10:C:
+11:502:19610:21:7:406:414:140:12:g_d0_f10:12:g_d0_f10:C:
+11:503:19611:7:7:406:414:133:12:g_d0_f10:12:g_d0_f10:C:
+11:504:19612:7:7:406:414:126:12:g_d0_f10:12:g_d0_f10:C:
+11:505:19613:7:8:406:414:119:12:g_d0_f10:12:g_d0_f10:C:
+11:506:19614:8:0:406:414:111:12:g_d0_f10:12:g_d0_f10:C:
+11:507:19615:0:18:428:460:149:12:g_d0_f4:12:g_d0_f4:A:0.0064
+11:508:19621:18:18:428:460:131:12:g_d0_f4:12:g_d0_f4:A:0.0002
+11:509:19627:18:17:419:460:113:12:g_d0_f8:12:g_d0_f4:A:−0.0064
+11:510:19634:17:0:419:460:96:12:g_d0_f8:12:g_d0_f4:A:−0.0002
+11:511:19641:0:21:465:473:161:12:g_d0_f10:12:g_d0_f10:C:
+11:512:19642:21:7:465:473:140:12:g_d0_f10:12:g_d0_f10:C:
+11:513:19643:7:7:465:473:133:12:g_d0_f10:12:g_d0_f10:C:
+11:514:19644:7:7:465:473:126:12:g_d0_f10:12:g_d0_f10:C:
+11:515:19645:7:8:465:473:119:12:g_d0_f10:12:g_d0_f10:C:
+11:516:19646:8:0:465:473:111:12:g_d0_f10:12:g_d0_f10:C:
+11:517:19647:0:0:475:540:123:12:g_d0_f5:12:g_d0_f4:A:.(8)
+12:518:19652:0:26:251:355:561:12:g_d0_f4:12:g_d0_f4:A:Table 1: Calibration
+12:519:19672:26:15:92:254:535:12:g_d0_f4:12:g_d0_f4:A:Symbol   Value   Description
+12:520:19700:15:15:249:363:520:12:g_d0_f4:12:g_d0_f4:A:Structural Parameters
+12:521:19721:15:14:107:328:505:12:g_d0_f5:12:g_d0_f4:A:β0.99    Subjective discount factor
+12:522:19756:14:15:108:466:491:12:g_d0_f5:12:g_d0_f4:A:σ2Reciprocal of Intertemporal elasticity of substitution
+12:523:19812:15:14:108:395:476:12:g_d0_f5:12:g_d0_f4:A:κ0.02    Output coefficient of the Phillips curve
+12:524:19861:14:14:107:404:462:12:g_d0_f5:12:g_d0_f4:A:i∗0.0101   Nominal interest rate target (=β−1−1)
+12:525:19909:14:15:105:388:448:12:g_d0_f5:12:g_d0_f4:A:φπ1.5Inflation coefficient of the Taylor rule
+12:526:19954:15:15:105:382:433:12:g_d0_f5:12:g_d0_f4:A:φy0.125   Output coefficient of the Taylor rule
+12:527:20001:15:15:279:332:418:12:g_d0_f5:12:g_d0_f4:A:rntProcess
+12:528:20011:15:14:104:473:403:12:g_d0_f5:12:g_d0_f5:C:rnH0.0093   Deviation of natural rate from steady state in stateH
+12:529:20076:14:15:105:520:389:12:g_d0_f5:12:g_d0_f4:A:rnL−0.0093  Deviation of natural rate from steady state in stateL(=−rnH)
+12:530:20148:15:14:104:323:374:12:g_d0_f5:12:g_d0_f4:A:ρH0.675   Prob(rnt+1=rnH|rnt=rnH)
+12:531:20181:14:15:105:359:360:12:g_d0_f5:12:g_d0_f4:A:ρL0.675   Prob(rnt+1=rnL|rnt=rnL) (=ρH)
+12:532:20220:15:15:238:374:345:12:g_d0_f4:12:g_d0_f4:A:Social Learning Algorithm
+12:533:20245:15:14:101:318:330:12:g_d0_f5:12:g_d0_f4:A:TIH100Length of initial history
+12:534:20276:14:15:107:338:316:12:g_d0_f5:12:g_d0_f4:A:T1000    Length of simulation period
+12:535:20312:15:14:106:290:301:12:g_d0_f5:12:g_d0_f4:A:N300Number of Agents
+12:536:20332:14:14:106:317:287:12:g_d0_f5:12:g_d0_f4:A:pc0.1Probability of crossover
+12:537:20361:14:29:103:317:273:12:g_d0_f5:12:g_d0_f4:A:pm0.1Probability of mutation
+12:538:20389:29:14:72:540:244:11:g_d0_f11:11:g_d0_f11:F:Notes. The time unit is one quarter. The matrices Σ and Σm, whose calibration is not included in
+12:539:20485:14:14:72:540:230:11:g_d0_f11:11:g_d0_f11:F:the body of the table, are assumed to be diagonal and equal to each other. Their diagonals are set
+12:540:20583:14:0:72:258:216:11:g_d0_f11:11:g_d0_f11:F:to [ 0.0123  0.0103  0.0123  0.0103 ]′.
+13:541:20624:0:18:72:540:708:12:g_d0_f4:12:g_d0_f4:B:These vectors indicate that in the intended equilibrium (the RE-NB equilibrium) deviations
+13:542:20714:18:18:72:539:690:12:g_d0_f4:12:g_d0_f4:B:of output and inflation from their steady-state values are symmetric and small, 0.64% and
+13:543:20803:18:18:72:540:672:12:g_d0_f4:12:g_d0_f4:B:8(= 0.0002×40000) basis points per year, respectively. However, when the economy falls into
+13:544:20894:18:18:71:540:654:12:g_d0_f4:12:g_d0_f4:B:a liquidity-trap equilibrium, the RE-AB equilibrium, the economy deviates permanently
+13:545:20979:18:18:71:539:636:12:g_d0_f4:12:g_d0_f4:B:and significantly from the intended steady state. The average output gap is -0.5 percent
+13:546:21067:18:18:71:539:618:12:g_d0_f4:12:g_d0_f4:B:compared to 0 percent in the intended equilibrium. Thus, in the liquidity trap the economy
+13:547:21157:18:18:71:539:600:12:g_d0_f4:12:g_d0_f4:B:experiences a permanent output loss.  Similarly, average inflation falls from zero in the
+13:548:21246:18:18:71:469:582:12:g_d0_f4:12:g_d0_f4:B:intended equilibrium to a deflation of 4 percent per year in the liquidity trap.
+13:549:21326:18:18:89:539:564:12:g_d0_f4:12:g_d0_f4:A:How typical is this combination of equilibria around the assumed values for the param-
+13:550:21412:18:18:71:540:546:12:g_d0_f4:12:g_d0_f4:B:eters defining the natural rate process?  Figure 1 displays the combinations of MSV-RE
+13:551:21498:18:18:71:540:528:12:g_d0_f4:12:g_d0_f4:B:equilibria that arise as one varies the parametersrnH(=−rnL) expressed in percent per year,
+13:552:21589:18:18:72:539:510:12:g_d0_f4:12:g_d0_f4:B:governing the standard deviation ofrnt, andρH(=ρL), governing the serial correlation of
+13:553:21676:18:18:72:539:492:12:g_d0_f5:12:g_d0_f4:B:rnt. These two parameters fully define the natural rate process within the two-state sym-
+13:554:21765:18:18:72:540:474:12:g_d0_f4:12:g_d0_f4:B:metric family we are considering. Dots indicate that the never-binding and always-binding
+13:555:21854:18:17:72:540:456:12:g_d0_f4:12:g_d0_f4:B:equilibria (RE-NB and RE-AB) coexist. It is clear from the figure that this case is by far
+13:556:21944:17:18:72:539:439:12:g_d0_f4:12:g_d0_f4:B:the most prevalent one. The baseline calibration for the natural rate process is indicated
+13:557:22034:18:18:72:539:421:12:g_d0_f4:12:g_d0_f4:B:with a solid circle.  We conclude that the main result of Benhabib, Schmitt-Groh ́e, and
+13:558:22122:18:18:72:539:403:12:g_d0_f4:12:g_d0_f4:B:Uribe (2001), namely that in the absence of fundamental uncertainty, the combination of a
+13:559:22211:18:18:72:539:385:12:g_d0_f4:12:g_d0_f4:B:zero-lower-bound and an active interest-rate rule gives rise to two MSV-RE equilibria, the
+13:560:22301:18:18:72:478:367:12:g_d0_f4:12:g_d0_f4:B:RE-NB and the RE-AB, extends to an economy subject to natural-rate shocks.
+13:561:22375:18:18:89:539:349:12:g_d0_f4:12:g_d0_f4:A:Figure 1 further shows that as the serial correlation of the natural rate increases (ρH=
+13:562:22463:18:18:72:540:331:12:g_d0_f5:12:g_d0_f4:B:ρL→1) other combinations of MSV rational expectations equilibria can arise, including
+13:563:22548:18:18:72:540:313:12:g_d0_f4:12:g_d0_f4:B:the never-binding equilibrium together with the occasionally-binding equilibrium and the
+13:564:22636:18:18:72:539:295:12:g_d0_f4:12:g_d0_f4:B:combination of all of the three equilibria characterized inthe previous subsections (i.e.,
+13:565:22726:18:18:72:539:277:12:g_d0_f4:12:g_d0_f4:B:the never-binding, the always-binding, and the occasionally-binding equilibria). There are
+13:566:22816:18:18:72:540:259:12:g_d0_f4:12:g_d0_f4:B:also parameterizations for which no MSV-RE equilibrium exists. These cases take place in a
+13:567:22906:18:18:72:540:241:12:g_d0_f4:12:g_d0_f4:B:relatively small area of the space (rnH, ρH), in which natural-rate shocks are highly persistent.
+13:568:23003:18:17:72:540:223:12:g_d0_f4:12:g_d0_f4:B:It is noteworthy that if the intended equilibrium (i.e., thenever-binding equilibrium) exists
+13:569:23096:17:18:72:540:206:12:g_d0_f4:12:g_d0_f4:B:it never does so in isolation, but is always accompanied by atleast one other equilibrium in
+13:570:23188:18:18:72:540:188:12:g_d0_f4:12:g_d0_f4:B:which the zero lower bound is visited with some probability.This is an indication that the
+13:571:23278:18:18:72:327:170:12:g_d0_f4:12:g_d0_f4:B:liquidity trap is a generic feature of this economy.
+13:572:23330:18:18:89:539:152:12:g_d0_f4:12:g_d0_f4:A:The analysis conducted thus far serves as a platform for delving into the issue of whether
+13:573:23420:18:0:72:359:134:12:g_d0_f4:12:g_d0_f4:B:a liquidity trap is learnable. We take up this issue next.
+14:574:23480:0:378:72:540:607:12:g_d0_f4:12:g_d0_f4:B:Figure 1: Existence of Multiple MSV Rational Expectations Equilibria in the (rnH, ρH) Space
+14:575:23571:378:0:98:537:229:10:g_d0_f13:10:g_d0_f13:F:012345678910
+14:576:23583:0:0:92:97:237:10:g_d0_f13:10:g_d0_f13:F:0
+14:577:23584:0:0:84:97:271:10:g_d0_f13:10:g_d0_f13:F:0.1
+14:578:23587:0:0:84:97:305:10:g_d0_f13:10:g_d0_f13:F:0.2
+14:579:23590:0:0:84:97:339:10:g_d0_f13:10:g_d0_f13:F:0.3
+14:580:23593:0:0:84:97:373:10:g_d0_f13:10:g_d0_f13:F:0.4
+14:581:23596:0:0:84:97:407:10:g_d0_f13:10:g_d0_f13:F:0.5
+14:582:23599:0:0:84:97:441:10:g_d0_f13:10:g_d0_f13:F:0.6
+14:583:23602:0:0:84:97:475:10:g_d0_f13:10:g_d0_f13:F:0.7
+14:584:23605:0:0:84:97:509:10:g_d0_f13:10:g_d0_f13:F:0.8
+14:585:23608:0:0:84:97:543:10:g_d0_f13:10:g_d0_f13:F:0.9
+14:586:23611:0:360:92:97:577:10:g_d0_f13:10:g_d0_f13:F:1
+14:587:23612:360:0:124:498:217:10:g_d0_f14:10:g_d0_f14:F:Standard deviation of the natural rate shock (in percent per year), 400×rnH(=−400×rnL)
+14:588:23703:0:0:99:102:237:10:g_d0_f13:10:g_d0_f13:F: 
+14:589:23703:0:281:530:533:577:10:g_d0_f13:10:g_d0_f13:F: 
+14:590:23703:281:12:253:377:296:10:g_d0_f13:10:g_d0_f13:F:RE−AB and RE−NB co−exist
+14:591:23727:12:11:253:378:284:10:g_d0_f13:10:g_d0_f13:F:RE−OB and RE−NB co−exist
+14:592:23751:11:12:253:418:273:10:g_d0_f13:10:g_d0_f13:F:RE−OB, RE−AB, and RE−NB co−exist
+14:593:23783:12:12:253:311:261:10:g_d0_f13:10:g_d0_f13:F:No RE  exists
+14:594:23796:12:51:253:290:249:10:g_d0_f13:10:g_d0_f13:F:Baseline
+14:595:23804:51:15:72:540:198:11:g_d0_f11:11:g_d0_f11:F:Notes. RE-AB, RE-NB, and RE-OB stand for MSV rational expectations equilibria in which the
+14:596:23894:15:14:72:539:183:11:g_d0_f11:11:g_d0_f11:F:zero lower bound on nominal rates is, respectively, always binding, never binding, and occasionally
+14:597:23993:14:0:72:526:169:11:g_d0_f11:11:g_d0_f11:F:binding. All parameters other thanrnH(=−rnL) andρH(=ρL) take the values shown in table 1.
+15:598:24084:0:30:72:364:708:17:g_d0_f3:17:g_d0_f3:C:4  The Social Learning Algorithm
+15:599:24116:30:18:72:540:678:12:g_d0_f4:12:g_d0_f4:B:The learning algorithm follows Arifovic, Bullard, and Kostyshyna (2012). The economy is
+15:600:24203:18:18:72:539:660:12:g_d0_f4:12:g_d0_f4:B:inhabited by a finite number of agents, each of which has a perceived law of motion (PLM)
+15:601:24292:18:18:72:540:642:12:g_d0_f4:12:g_d0_f4:B:for output and inflation, which they use to form expectationsabout future values of these two
+15:602:24385:18:18:72:539:624:12:g_d0_f4:12:g_d0_f4:B:variables. These laws of motion change over time due to social interaction and purely random
+15:603:24477:18:18:72:539:606:12:g_d0_f4:12:g_d0_f4:B:changes in beliefs (mutations). There are two types of social interactions, one in which agents
+15:604:24572:18:18:72:539:588:12:g_d0_f4:12:g_d0_f4:B:adopt parts of somebody else’s PLM (crossover) and one in which agents adopt the beliefs
+15:605:24660:18:18:72:540:570:12:g_d0_f4:12:g_d0_f4:B:of those who prove to be more successful in explaining observed outcomes (tournaments).
+15:606:24747:18:18:72:540:552:12:g_d0_f4:12:g_d0_f4:B:The latter element of the social learning process, which canbe conceived as the role played
+15:607:24838:18:18:72:539:534:12:g_d0_f4:12:g_d0_f4:B:by professional economists and forecasters in the economy,is the one that contributes the
+15:608:24927:18:18:72:387:516:12:g_d0_f4:12:g_d0_f4:B:most to the stability of the rational expectations equilibrium.
+15:609:24990:18:18:89:539:498:12:g_d0_f4:12:g_d0_f5:A:Suppose that there areNindividuals indexed byi= 1, . . . , N.Assume that individuali
+15:610:25074:18:39:72:274:480:12:g_d0_f4:12:g_d0_f4:B:has the perceived law of motion (PLM)
+15:611:25111:39:0:216:245:441:12:g_d0_f5:12:g_d0_f8:C:ziH≡
+15:612:25115:0:12:249:256:461:12:g_d0_f10:12:g_d0_f10:C:[
+15:613:25116:12:18:261:277:449:12:g_d0_f5:8:g_d0_f6:C:yiH
+15:614:25119:18:0:261:278:431:12:g_d0_f5:8:g_d0_f6:C:πiH
+15:615:25122:0:20:283:290:461:12:g_d0_f10:12:g_d0_f10:C:]
+15:616:25123:20:0:296:346:441:12:g_d0_f4:12:g_d0_f8:A:andziL≡
+15:617:25130:0:12:349:356:461:12:g_d0_f10:12:g_d0_f10:C:[
+15:618:25131:12:18:362:377:449:12:g_d0_f5:8:g_d0_f6:C:yiL
+15:619:25134:18:0:361:377:431:12:g_d0_f5:8:g_d0_f6:C:πiL
+15:620:25137:0:20:382:389:461:12:g_d0_f10:12:g_d0_f10:C:]
+15:621:25138:20:39:391:394:441:12:g_d0_f5:12:g_d0_f5:C:,
+15:622:25139:39:18:72:540:402:12:g_d0_f4:12:g_d0_f4:B:whereyiHdenotes the value of the output gap that agentibelieves obtains when the natural
+15:623:25227:18:18:72:540:384:12:g_d0_f4:12:g_d0_f4:B:rate takes the valuernH. Similar definitions apply toπiH, yiL,andπiL. Individualiis assumed
+15:624:25318:18:18:72:540:366:12:g_d0_f4:12:g_d0_f4:B:to know the current realization of the natural rate shock,rn, and its transition probability
+15:625:25410:18:33:72:359:348:12:g_d0_f4:12:g_d0_f4:B:matrix. Thus, individualiforms expectations as follows
+15:626:25464:33:33:238:373:315:12:g_d0_f5:8:g_d0_f6:C:zeiH=ρHziH+ (1−ρH)ziL
+15:627:25485:33:18:72:91:282:12:g_d0_f4:12:g_d0_f4:B:and
+15:628:25488:18:25:239:372:264:12:g_d0_f5:12:g_d0_f5:C:zeiL= (1−ρL)ziH+ρLziL,
+15:629:25510:25:18:72:540:239:12:g_d0_f4:12:g_d0_f4:B:wherezeiHandzeiLdenote agenti’s expectation of the value ofzin the next period conditional
+15:630:25600:18:18:72:352:221:12:g_d0_f4:12:g_d0_f4:B:on the current value ofrnbeingrnHorrnL, respectively.
+15:631:25653:18:18:89:539:203:12:g_d0_f4:12:g_d0_f4:A:Aggregate conditional expectations, denotedzeHandzeL, are defined as the cross-sectional
+15:632:25741:18:40:72:295:185:12:g_d0_f4:12:g_d0_f4:B:averages of individual expectations, that is,
+15:633:25786:40:0:266:291:145:12:g_d0_f5:12:g_d0_f4:A:zeH=
+15:634:25790:0:16:298:304:153:12:g_d0_f4:12:g_d0_f4:A:1
+15:635:25791:16:0:296:305:137:12:g_d0_f5:12:g_d0_f5:C:N
+15:636:25792:0:29:315:327:160:8:g_d0_f6:12:g_d0_f10:C:N∑
+15:637:25794:29:0:312:325:131:8:g_d0_f6:8:g_d0_f7:F:i=1
+15:638:25797:0:39:329:540:145:12:g_d0_f5:12:g_d0_f4:A:zeiH(9)
+15:639:25804:39:23:72:91:106:12:g_d0_f4:12:g_d0_f4:B:and
+15:640:25807:23:0:266:290:83:12:g_d0_f5:12:g_d0_f4:A:zeL=
+15:641:25811:0:16:297:303:91:12:g_d0_f4:12:g_d0_f4:A:1
+15:642:25812:16:0:294:303:75:12:g_d0_f5:12:g_d0_f5:C:N
+15:643:25813:0:29:313:325:98:8:g_d0_f6:12:g_d0_f10:C:N∑
+15:644:25815:29:0:310:324:69:8:g_d0_f6:8:g_d0_f7:F:i=1
+15:645:25818:0:0:327:540:83:12:g_d0_f5:12:g_d0_f4:A:zeiL.(10)
+16:646:25829:0:18:89:544:708:12:g_d0_f4:12:g_d0_f4:A:To obtain the actual law of motion (ALM), denotedzH≡[yHπH]′andzL≡[yLπL]′,
+16:647:25902:18:33:71:486:690:12:g_d0_f4:12:g_d0_f4:B:use (9) and (10) to eliminatezeHandzeLfrom equations (3) and (4), which yields
+16:648:25980:33:33:239:540:657:12:g_d0_f5:12:g_d0_f4:A:zH=a+bzeH+ciH+drnH(11)
+16:649:26002:33:18:71:90:624:12:g_d0_f4:12:g_d0_f4:B:and
+16:650:26005:18:26:239:540:606:12:g_d0_f5:12:g_d0_f4:A:iH= max{−i∗,[φyφπ]zH}(12)
+16:651:26030:26:18:71:149:580:12:g_d0_f4:12:g_d0_f4:B:ifrn=rnH, and
+16:652:26043:18:26:242:540:562:12:g_d0_f5:12:g_d0_f4:A:zL=a+bzeL+ciL+drnL(13)
+16:653:26065:26:18:71:90:536:12:g_d0_f4:12:g_d0_f4:B:and
+16:654:26068:18:26:241:540:518:12:g_d0_f5:12:g_d0_f4:A:iL= max{−i∗,[φyφπ]zL}(14)
+16:655:26093:26:18:71:124:492:12:g_d0_f4:12:g_d0_f4:B:ifrn=rnL.
+16:656:26102:18:18:89:539:474:12:g_d0_f4:12:g_d0_f4:A:Expressions (11) and (12) constitute a system of three equations in three unknowns,yH,
+16:657:26188:18:17:72:539:456:12:g_d0_f5:12:g_d0_f4:B:πH, andiH, givenzeHandrnH. Similarly, (13) and (14) are a system of three equations and
+16:658:26275:17:18:71:539:439:12:g_d0_f4:12:g_d0_f4:B:three unknowns,yL,πL, andiL, givenzeLandrnL. Each system can be solved separately each
+16:659:26361:18:18:71:539:421:12:g_d0_f4:12:g_d0_f4:B:period. The way to solve each system is to first assume that thezero bound does not bind.
+16:660:26450:18:18:71:540:403:12:g_d0_f4:12:g_d0_f4:B:If the solution satisfies the zero lower bound, then the equilibrium has been found. If the
+16:661:26541:18:18:71:475:385:12:g_d0_f4:12:g_d0_f4:B:solution violates the zero lower bound, then setiequal to−i∗and solve again.
+16:662:26617:18:18:89:539:367:12:g_d0_f4:12:g_d0_f4:A:At this point, the social learning algorithm updates the individual PLMs by applying the
+16:663:26705:18:39:72:479:349:12:g_d0_f4:12:g_d0_f4:B:three social improvements, crossover, mutation, and tournaments, in this order.
+16:664:26784:39:26:72:178:310:14:g_d0_f3:14:g_d0_f3:C:4.1  Crossover
+16:665:26798:26:18:72:540:284:12:g_d0_f4:12:g_d0_f4:B:All agents are randomly matched into pairs without replacement. Matched agents exchange
+16:666:26885:18:17:72:539:266:12:g_d0_f4:12:g_d0_f4:B:each element of their PLMs with probability 0.5. That is, each matched pair flips a coin
+16:667:26973:17:18:72:539:249:12:g_d0_f4:12:g_d0_f4:B:4 times, once for each element of the PLM, exchanging the corresponding element of their
+16:668:27061:18:18:72:540:231:12:g_d0_f4:12:g_d0_f4:B:PLMs if the toss results in, say, tail. More specifically, suppose agenti1is matched with
+16:669:27150:18:18:71:540:213:12:g_d0_f4:12:g_d0_f4:B:agenti2. Let the PLM of agenti1be the quadruple{yi1H, πi1H, yi1L, πi1L}, and the PLM of
+16:670:27237:18:18:72:540:195:12:g_d0_f4:12:g_d0_f4:B:agenti2the quadruple{yi2H, πi2H, yi2L, πi2L}. Then, if, for example, the first and fourth coin
+16:671:27331:18:0:72:539:177:12:g_d0_f4:12:g_d0_f4:B:tosses resulted in tails, elements 1 and 4 of their PLMs crossover, resulting in the following
+17:672:27427:0:33:72:204:708:12:g_d0_f4:12:g_d0_f4:B:transformations of PLMs:
+17:673:27451:33:21:186:414:675:12:g_d0_f4:12:g_d0_f8:A:old PLM of agenti1={yi1H, πi1H, yi1L, πi1L}
+17:674:27494:21:21:181:414:654:12:g_d0_f4:12:g_d0_f8:A:new PLM of agenti1={yi2H, πi1H, yi1L, πi2L}
+17:675:27537:21:21:186:414:633:12:g_d0_f4:12:g_d0_f8:A:old PLM of agenti2={yi2H, πi2H, yi2L, πi2L}
+17:676:27580:21:33:178:413:612:12:g_d0_f4:12:g_d0_f5:A:new PLM of agenti2={yi1H, πi2H, yi2L, πi1L}.
+17:677:27624:33:18:72:539:579:12:g_d0_f4:12:g_d0_f4:B:However, not all matched agents will engage in crossovers.  With exogenous probability
+17:678:27710:18:18:72:540:561:12:g_d0_f4:12:g_d0_f4:B:1−pcmatched agents walk away with their original PLMs. The parameterpcdenotes the
+17:679:27791:18:17:71:539:543:12:g_d0_f4:12:g_d0_f4:B:probability that a matched pair of agents engage in crossover, so that each period about
+17:680:27879:17:18:71:540:526:12:g_d0_f5:12:g_d0_f4:B:pc×100 percent of the matches engage in crossover and the remaining (1−pc)×100 percent
+17:681:27965:18:40:71:209:508:12:g_d0_f4:12:g_d0_f4:B:retain their original PLMs.
+17:682:27992:40:25:72:175:468:14:g_d0_f3:14:g_d0_f3:C:4.2  Mutation
+17:683:28005:25:18:72:539:443:12:g_d0_f4:12:g_d0_f4:B:In the assumed social learning algorithm, mutation followscrossover. A mutation in the
+17:684:28091:18:18:72:539:425:12:g_d0_f4:12:g_d0_f4:B:PLM of individualiis modeled as follows. Letzi≡[yiHπiHyiLπiL]′denote the PLM of
+17:685:28170:18:18:72:540:407:12:g_d0_f4:12:g_d0_f4:B:individualiprior to a mutation and letz′idenote the PLM of individualiafter a mutation.
+17:686:28257:18:33:72:370:389:12:g_d0_f4:12:g_d0_f4:B:The mutation follows a random walk process. Specifically,
+17:687:28314:33:32:268:343:356:12:g_d0_f5:12:g_d0_f5:C:z′i=zi+ Σm-i,
+17:688:28327:32:18:72:540:324:12:g_d0_f4:12:g_d0_f4:B:where-iis a 4×1 random vector with a standard normal distribution and Σmis a 4×4
+17:689:28407:18:18:72:539:306:12:g_d0_f4:12:g_d0_f4:B:diagonal matrix with positive diagonal elements. The matrix Σmis assumed to be the same
+17:690:28494:18:18:72:539:288:12:g_d0_f4:12:g_d0_f4:B:for all agentsi. We assume that not all individuals or all elements of an individual’s PLM
+17:691:28584:18:18:71:540:270:12:g_d0_f4:12:g_d0_f4:B:will be affected by a mutation in a given period. Specifically,we assume that with exogenous
+17:692:28676:18:18:71:540:252:12:g_d0_f4:12:g_d0_f4:B:probabilitypman element of an individual’s PLM experiences a mutation. This probability
+17:693:28763:18:39:71:465:234:12:g_d0_f4:12:g_d0_f4:B:is assumed to be independent across agents and across elements of the PLM.
+17:694:28837:39:26:72:264:195:14:g_d0_f3:14:g_d0_f3:C:4.3  Tournament Selection
+17:695:28862:26:18:72:540:169:12:g_d0_f4:12:g_d0_f4:B:The third mechanism by which the perceived law of motion in periodtis updated is tourna-
+17:696:28950:18:18:71:540:151:12:g_d0_f4:12:g_d0_f4:B:ment selection. The purpose of this element of the social learning algorithm is to promote
+17:697:29040:18:17:71:540:133:12:g_d0_f4:12:g_d0_f4:B:the opinion (PLM) of agents with higher in-sample forecasting accuracy. The tournament se-
+17:698:29130:17:18:71:540:116:12:g_d0_f4:12:g_d0_f4:B:lection process is based on a fitness measure for each individual PLM constructed as follows.
+17:699:29223:18:18:71:540:98:12:g_d0_f4:12:g_d0_f4:B:In periodt, individuals know the current and past realizations of all aggregate endogenous
+17:700:29313:18:0:71:539:80:12:g_d0_f4:12:g_d0_f5:B:and exogenous variables, that is, they knowzkandrnkfork= 1, . . . , t. Suppose in periodt
+18:701:29404:0:18:72:539:708:12:g_d0_f4:12:g_d0_f4:B:individualihas the PLMziHandziL. Based on this (period-t) perceived law of motion, in
+18:702:29489:18:39:71:491:690:12:g_d0_f4:12:g_d0_f4:B:periodkindividualiwould have forecasted output and inflation in periodkto be
+18:703:29565:39:0:190:218:651:12:g_d0_f5:12:g_d0_f4:A:yfi,k=
+18:704:29571:0:12:222:232:671:12:g_d0_f10:12:g_d0_f10:C:{
+18:705:29572:12:18:236:414:659:12:g_d0_f5:8:g_d0_f6:C:ρHyiH+ (1−ρH)yiLifrnk−1=rnH
+18:706:29599:18:29:236:413:641:12:g_d0_f4:8:g_d0_f6:A:(1−ρL)yiH+ρLyiLifrnk−1=rnL
+18:707:29625:29:22:71:90:612:12:g_d0_f4:12:g_d0_f4:B:and
+18:708:29628:22:0:186:215:590:12:g_d0_f5:12:g_d0_f4:A:πfi,k=
+18:709:29634:0:12:219:229:610:12:g_d0_f10:12:g_d0_f10:C:{
+18:710:29635:12:18:233:413:598:12:g_d0_f5:8:g_d0_f6:C:ρHπiH+ (1−ρH)πiLifrnk−1=rnH
+18:711:29662:18:0:233:412:580:12:g_d0_f4:8:g_d0_f6:A:(1−ρL)πiH+ρLπiLifrnk−1=rnL
+18:712:29688:0:33:422:425:590:12:g_d0_f5:12:g_d0_f5:C:.
+18:713:29689:33:39:71:506:557:12:g_d0_f4:12:g_d0_f4:B:Then the fitness of the period-tPLM of agentifor output and inflation is defined as
+18:714:29772:39:0:230:272:518:12:g_d0_f5:12:g_d0_f8:C:Fyi,t=−
+18:715:29779:0:16:282:288:526:12:g_d0_f4:12:g_d0_f4:A:1
+18:716:29780:16:0:273:298:510:12:g_d0_f5:12:g_d0_f4:A:t−1
+18:717:29783:0:29:308:318:533:8:g_d0_f6:12:g_d0_f10:C:t∑
+18:718:29785:29:0:302:317:504:8:g_d0_f6:8:g_d0_f7:F:k=2
+18:719:29788:0:13:320:327:531:12:g_d0_f10:12:g_d0_f10:C:(
+18:720:29789:13:0:327:369:518:12:g_d0_f5:8:g_d0_f6:C:yk−yfi,k
+18:721:29797:0:52:369:380:531:12:g_d0_f10:8:g_d0_f7:C:)2
+18:722:29799:52:22:72:91:479:12:g_d0_f4:12:g_d0_f4:B:and
+18:723:29802:22:0:227:268:457:12:g_d0_f5:12:g_d0_f8:C:Fπi,t=−
+18:724:29809:0:17:279:285:465:12:g_d0_f4:12:g_d0_f4:A:1
+18:725:29810:17:0:270:294:448:12:g_d0_f5:12:g_d0_f4:A:t−1
+18:726:29813:0:29:304:314:472:8:g_d0_f6:12:g_d0_f10:C:t∑
+18:727:29815:29:0:298:314:443:8:g_d0_f6:8:g_d0_f7:F:k=2
+18:728:29818:0:13:317:324:470:12:g_d0_f10:12:g_d0_f10:C:(
+18:729:29819:13:0:324:367:457:12:g_d0_f5:8:g_d0_f6:C:πk−πfi,k
+18:730:29827:0:13:367:378:470:12:g_d0_f10:8:g_d0_f7:C:)2
+18:731:29829:13:33:381:384:457:12:g_d0_f5:12:g_d0_f5:C:,
+18:732:29830:33:18:72:539:424:12:g_d0_f4:12:g_d0_f4:B:respectively. This fitness measure has the interpretation of the squared-sum of one-period-
+18:733:29921:18:18:72:540:406:12:g_d0_f4:12:g_d0_f4:B:ahead forecast errors. In each period,Nmatches of two individuals are formed with replace-
+18:734:30011:18:18:72:539:388:12:g_d0_f4:12:g_d0_f4:B:ment. (Recall thatNis the population size.) For each match the PLM for inflation and
+18:735:30095:18:18:72:539:370:12:g_d0_f4:12:g_d0_f4:B:output, separately, that produced the better fitness measure is adopted. That is, the new
+18:736:30184:18:18:72:539:352:12:g_d0_f4:12:g_d0_f4:B:beliefs that emerge from the social interaction of two individuals may have the PLM for in-
+18:737:30275:18:18:72:539:334:12:g_d0_f4:12:g_d0_f4:B:flation from one of them but the PLM for output from the other. This makes sense, because
+18:738:30364:18:39:72:523:316:12:g_d0_f4:12:g_d0_f4:B:different economic agents might have different abilities at forecasting different variables.
+18:739:30456:39:25:72:427:277:14:g_d0_f3:14:g_d0_f3:C:4.4  Calibration of the Social Learning Algorithm
+18:740:30505:25:18:72:539:252:12:g_d0_f4:12:g_d0_f4:B:The calibration of the hyperparameters governing the social learning algorithm is as shown
+18:741:30595:18:18:72:540:234:12:g_d0_f4:12:g_d0_f4:B:in the bottom panel of table 1.  We setNdenoting the number of individual agents to
+18:742:30678:18:18:72:540:216:12:g_d0_f4:12:g_d0_f4:B:300. This number ensures a significant variety of beliefs when we perturb the individual
+18:743:30766:18:18:72:539:198:12:g_d0_f4:12:g_d0_f4:B:PLMs in the stability tests. To investigate the stability ofthe RE-AB equilibrium under
+18:744:30853:18:18:72:539:180:12:g_d0_f4:12:g_d0_f4:B:social learning we assume that the economy has been operating under rational expectations
+18:745:30942:18:18:72:539:162:12:g_d0_f4:12:g_d0_f4:B:forTIHquarters, the initial history, during which all agents share the same PLM, which
+18:746:31028:18:18:72:540:144:12:g_d0_f4:12:g_d0_f4:B:coincides with the one associated with the RE-AB equilibrium. That is, during the initial
+18:747:31117:18:18:72:539:126:12:g_d0_f4:12:g_d0_f4:B:history,zi=zabfor alli= 1, . . . , N. We setTIH= 100 quarters. Immediately after the
+18:748:31201:18:18:71:539:108:12:g_d0_f4:12:g_d0_f4:B:initial history, in periodTIH+ 1, individual PLMs are perturbed, and the simulation period
+18:749:31291:18:18:72:540:90:12:g_d0_f4:12:g_d0_f4:B:with social learning begins. We set the simulation period, denotedT, equal to 1000 quarters.
+18:750:31383:18:0:72:539:72:12:g_d0_f4:12:g_d0_f4:B:The perturbation of individual PLMs has mean zero and is independently distributed across
+19:751:31474:0:18:72:540:708:12:g_d0_f4:12:g_d0_f4:B:agents. Specifically, in periodTIH+ 1, the perceived law of motion of individualiis given
+19:752:31563:18:42:71:83:690:12:g_d0_f4:12:g_d0_f4:B:by
+19:753:31565:42:0:238:259:648:12:g_d0_f5:12:g_d0_f8:C:zi≡
+19:754:31568:0:21:262:270:686:12:g_d0_f10:12:g_d0_f10:C:
+19:755:31569:21:7:262:270:665:12:g_d0_f10:12:g_d0_f10:C:
+19:756:31570:7:8:262:270:658:12:g_d0_f10:12:g_d0_f10:C:
+19:757:31571:8:7:262:270:650:12:g_d0_f10:12:g_d0_f10:C:
+19:758:31572:7:7:262:270:643:12:g_d0_f10:12:g_d0_f10:C:
+19:759:31573:7:0:262:270:636:12:g_d0_f10:12:g_d0_f10:C:
+19:760:31574:0:18:276:291:674:12:g_d0_f5:8:g_d0_f6:C:yiH
+19:761:31577:18:18:275:292:656:12:g_d0_f5:8:g_d0_f6:C:πiH
+19:762:31580:18:18:277:291:638:12:g_d0_f5:8:g_d0_f6:C:yiL
+19:763:31583:18:0:276:292:620:12:g_d0_f5:8:g_d0_f6:C:πiL
+19:764:31586:0:21:298:306:686:12:g_d0_f10:12:g_d0_f10:C:
+19:765:31587:21:7:298:306:665:12:g_d0_f10:12:g_d0_f10:C:
+19:766:31588:7:8:298:306:658:12:g_d0_f10:12:g_d0_f10:C:
+19:767:31589:8:7:298:306:650:12:g_d0_f10:12:g_d0_f10:C:
+19:768:31590:7:7:298:306:643:12:g_d0_f10:12:g_d0_f10:C:
+19:769:31591:7:0:298:306:636:12:g_d0_f10:12:g_d0_f10:C:
+19:770:31592:0:51:309:540:648:12:g_d0_f4:12:g_d0_f4:A:=zab+ Σνi,(15)
+19:771:31606:51:18:71:540:597:12:g_d0_f4:12:g_d0_f4:B:whereνidenotes a vector of standard normal random variables independently distributed
+19:772:31691:18:18:71:540:579:12:g_d0_f4:12:g_d0_f4:B:across time and agents. The diagonal matrix Σ defines the standard deviation of the initial
+19:773:31782:18:18:71:539:561:12:g_d0_f4:12:g_d0_f4:B:individual PLMs. We base the calibration of the diagonal of Σon the maximum absolute
+19:774:31866:18:17:71:539:543:12:g_d0_f4:12:g_d0_f4:B:values of the output gap and inflation in the RE-AB equilibrium, which are 0.0123 and
+19:775:31951:17:58:71:344:526:12:g_d0_f4:12:g_d0_f4:B:0.0103, respectively (see equation (8)), that is, we set
+19:776:32007:58:0:198:219:468:12:g_d0_f4:12:g_d0_f4:A:Σ =
+19:777:32010:0:21:222:230:506:12:g_d0_f10:12:g_d0_f10:C:
+19:778:32011:21:7:222:230:485:12:g_d0_f10:12:g_d0_f10:C:
+19:779:32012:7:7:222:230:478:12:g_d0_f10:12:g_d0_f10:C:
+19:780:32013:7:7:222:230:471:12:g_d0_f10:12:g_d0_f10:C:
+19:781:32014:7:8:222:230:464:12:g_d0_f10:12:g_d0_f10:C:
+19:782:32015:8:0:222:230:456:12:g_d0_f10:12:g_d0_f10:C:
+19:783:32016:0:18:235:395:494:12:g_d0_f4:12:g_d0_f4:A:0.0123000
+19:784:32025:18:18:262:395:476:12:g_d0_f4:12:g_d0_f4:A:0  0.010300
+19:785:32036:18:18:262:395:458:12:g_d0_f4:12:g_d0_f4:A:00  0.01230
+19:786:32047:18:0:262:394:440:12:g_d0_f4:12:g_d0_f4:A:000  0.0103
+19:787:32058:0:21:400:408:506:12:g_d0_f10:12:g_d0_f10:C:
+19:788:32059:21:7:400:408:485:12:g_d0_f10:12:g_d0_f10:C:
+19:789:32060:7:7:400:408:478:12:g_d0_f10:12:g_d0_f10:C:
+19:790:32061:7:7:400:408:471:12:g_d0_f10:12:g_d0_f10:C:
+19:791:32062:7:8:400:408:464:12:g_d0_f10:12:g_d0_f10:C:
+19:792:32063:8:0:400:408:456:12:g_d0_f10:12:g_d0_f10:C:
+19:793:32064:0:58:410:413:468:12:g_d0_f5:12:g_d0_f5:C:.
+19:794:32065:58:18:89:540:410:12:g_d0_f4:12:g_d0_f4:A:We follow Arifovic, Bullard, and Kostyshyna (2012) and set the probability of crossover
+19:795:32152:18:18:71:539:392:12:g_d0_f4:12:g_d0_f4:B:and mutation to 10 percent,pm=pc= 0.1. Also following these authors, we assume that
+19:796:32235:18:18:72:540:374:12:g_d0_f4:12:g_d0_f4:B:the standard deviations matrix, Σm, which governs the size of mutations, is equal to Σ.
+19:797:32322:18:18:72:539:356:12:g_d0_f4:12:g_d0_f4:B:However, we assume that Σmis constant, whereas Arifovic, Bullard, and Kostyshyna (2012)
+19:798:32409:18:17:72:539:338:12:g_d0_f4:12:g_d0_f4:B:assume that its diagonal elements decrease over time. Our maintained assumption is more
+19:799:32496:17:18:72:539:321:12:g_d0_f4:12:g_d0_f4:B:conservative, because mutation, while ensuring variety ofbeliefs over time, has also been
+19:800:32585:18:45:72:396:303:12:g_d0_f4:12:g_d0_f4:B:found to be a destabilizing force in genetic learning algorithms.
+19:801:32650:45:30:72:540:258:17:g_d0_f3:17:g_d0_f3:C:5  Stability of the Liquidity Trap Under Social Learning
+19:802:32706:30:18:72:541:228:12:g_d0_f4:12:g_d0_f4:B:We are now ready to address the central question of this paper, namely, whether the liquidity
+19:803:32799:18:18:72:539:210:12:g_d0_f4:12:g_d0_f4:B:trap, i.e., the RE-AB equilibrium, is stable under social learning. As explained above, the
+19:804:32890:18:18:72:539:192:12:g_d0_f4:12:g_d0_f4:B:way in which we gauge stability under social learning is to assume that all agents start with
+19:805:32983:18:18:72:540:174:12:g_d0_f4:12:g_d0_f4:B:PLMs that are consistent with the liquidity-trap equilibrium (the RE-AB equilibrium). The
+19:806:33072:18:18:72:539:156:12:g_d0_f4:12:g_d0_f4:B:economy runs under these PLMs forTIHquarters. In periodTIH+ 1 the random pertur-
+19:807:33152:18:18:72:539:138:12:g_d0_f4:12:g_d0_f4:B:bation to the PLMs given in equation (15) takes place and the social learning algorithm
+19:808:33239:18:18:72:539:120:12:g_d0_f4:12:g_d0_f4:B:begins. Convergence is assessed by checking in different ways whether through social learn-
+19:809:33330:18:18:72:540:102:12:g_d0_f4:12:g_d0_f4:B:ing the perceived laws of motion return to a neighborhood of their rational-expectations
+19:810:33418:18:0:72:540:84:12:g_d0_f4:12:g_d0_f4:B:counterparts. Under social learning, by construction, PLMs never converge to a constant
+20:811:33507:0:18:72:539:708:12:g_d0_f4:12:g_d0_f4:B:value, because of the randomness introduced by mutation. Thus, the criterion for stability
+20:812:33597:18:18:72:467:690:12:g_d0_f4:12:g_d0_f4:B:is whether individual PLMs fluctuate around the rational-expectations PLM.
+20:813:33671:18:18:89:540:672:12:g_d0_f4:12:g_d0_f4:A:Figure 2 displays a simulated time path of the cross-sectional distribution of the perceived
+20:814:33763:18:18:72:540:654:12:g_d0_f4:12:g_d0_f4:B:law of motions of output and inflation in statesH(top panels) andL(bottom panels). The
+20:815:33849:18:18:72:540:636:12:g_d0_f4:12:g_d0_f4:B:length of the simulation isTIH+T= 1100 quarters, and we drop the firstTIH= 100 quarters.
+20:816:33937:18:18:72:540:618:12:g_d0_f4:12:g_d0_f4:B:To facilitate the visualization of the transitional dynamics, the left column displays the initial
+20:817:34035:18:18:72:539:600:12:g_d0_f4:12:g_d0_f4:B:15 quarters afterTIH, and the right column displays the entire 1000 quarters afterTIH. Each
+20:818:34126:18:18:72:540:582:12:g_d0_f4:12:g_d0_f4:B:panel shows the cross-sectional mean and a two-standard deviation band centered around
+20:819:34212:18:18:72:540:564:12:g_d0_f4:12:g_d0_f4:B:the mean.  The two-standard-deviation band of the initial cross-sectional distribution of
+20:820:34301:18:18:72:540:546:12:g_d0_f4:12:g_d0_f4:B:PLMs is shown with crosses. As a point of reference, each panel also displays two horizontal
+20:821:34393:18:18:72:539:528:12:g_d0_f4:12:g_d0_f4:B:lines indicating the law of motion associated with the liquidity-trap rational expectations
+20:822:34484:18:18:72:539:510:12:g_d0_f4:12:g_d0_f4:B:equilibrium (the RE-AB equilibrium), the solid horizontalline, and the intended rational
+20:823:34572:18:18:72:472:492:12:g_d0_f4:12:g_d0_f4:B:expectations equilibrium (the RE-NB equilibrium), the broken horizontal line.
+20:824:34649:18:18:89:540:474:12:g_d0_f4:12:g_d0_f4:A:Figure 2 shows that the PLMs fluctuate around the ones associated with the liquidity-
+20:825:34734:18:17:72:539:456:12:g_d0_f4:12:g_d0_f4:B:trap rational-expectations equilibrium. By comparing theinitial distribution of PLMs (the
+20:826:34823:17:18:72:540:439:12:g_d0_f4:12:g_d0_f4:B:crosses) with the rest of the distribution, we see that the dispersion of beliefs shrinks quickly
+20:827:34920:18:18:72:540:421:12:g_d0_f4:12:g_d0_f4:B:to its stationary level. These finding suggests that, at least in the particular simulation
+20:828:35011:18:18:72:456:403:12:g_d0_f4:12:g_d0_f4:B:shown in the figure, the RE-AB equilibrium is stable under social learning.
+20:829:35086:18:18:89:540:385:12:g_d0_f4:12:g_d0_f4:A:Figure 2 provides information about the evolution of the perceived laws of motion for
+20:830:35171:18:18:72:539:367:12:g_d0_f4:12:g_d0_f4:B:one particular simulation. Because both the social learning algorithm and the economy itself
+20:831:35263:18:18:72:539:349:12:g_d0_f4:12:g_d0_f4:B:are subject to random shocks, the results will vary across simulations. To ascertain whether
+20:832:35355:18:18:72:540:331:12:g_d0_f4:12:g_d0_f4:B:the pattern of stability under learning suggested by figure 2holds more broadly, we consider
+20:833:35447:18:18:72:539:313:12:g_d0_f4:12:g_d0_f4:B:next 1000 simulations of the economy under social learning,each of lengthTIH+Tquarters.
+20:834:35534:18:18:72:539:295:12:g_d0_f4:12:g_d0_f4:B:The results are shown in figure 3. Each dot corresponds to one simulation. The horizontal
+20:835:35623:18:18:72:539:277:12:g_d0_f4:12:g_d0_f4:B:axis measures the cross sectional average absolute percentdeviation of the individual PLMs
+20:836:35713:18:18:72:540:259:12:g_d0_f4:12:g_d0_f4:B:from the liquidity-trap rational expectations PLM in periodTIH+ 1.  For example, the
+20:837:35797:18:0:72:312:241:12:g_d0_f4:8:g_d0_f6:B:horizontal axis in the top left panel measures1N
+20:838:35845:0:12:316:335:250:12:g_d0_f10:8:g_d0_f6:C:∑N
+20:839:35847:12:0:328:342:238:8:g_d0_f6:8:g_d0_f7:F:i=1
+20:840:35850:0:12:346:409:249:8:g_d0_f9:8:g_d0_f9:F:|yiH,TIH+1−yabH|
+20:841:35866:12:14:369:539:237:8:g_d0_f9:12:g_d0_f4:A:|yabH|×100 and is denoted ∆1.
+20:842:35895:14:17:72:539:223:12:g_d0_f4:12:g_d0_f4:B:The vertical axis displays the same measure in periodTIH+Tand is denoted ∆T. The other
+20:843:35981:17:18:71:539:206:12:g_d0_f4:12:g_d0_f4:B:three panels are constructed in a similar fashion for the remaining elements of the PLM. As
+20:844:36072:18:18:71:540:188:12:g_d0_f4:12:g_d0_f4:B:a reference, each panel displays the 45-degree line. The first thing to notice is that the initial
+20:845:36170:18:18:71:540:170:12:g_d0_f4:12:g_d0_f4:B:average absolute disturbance of PLMs we impose is large in percentage terms, ranging from
+20:846:36259:18:18:71:539:152:12:g_d0_f4:12:g_d0_f4:B:about 80 percent forπHto about 500 percent foryH. The main result that emerges from
+20:847:36342:18:18:72:540:134:12:g_d0_f4:12:g_d0_f4:B:the figure is that in each panel the cloud of points is well below the 45-degree line, which
+20:848:36434:18:18:72:540:116:12:g_d0_f4:12:g_d0_f4:B:means that over the simulation period the economy returns tothe liquidity-trap rational
+20:849:36521:18:18:72:539:98:12:g_d0_f4:12:g_d0_f4:B:expectations law of motion. This result suggests that the liquidity trap is stable under social
+20:850:36616:18:0:72:116:80:12:g_d0_f4:12:g_d0_f4:B:learning.
+21:851:36627:0:14:72:540:701:12:g_d0_f4:12:g_d0_f4:B:Figure 2: Learning the Liquidity Trap: Evolution of the Cross-Sectional Distribution of
+21:852:36714:14:125:72:102:687:12:g_d0_f4:12:g_d0_f4:B:PLMs
+21:853:36718:125:0:129:291:562:8:g_d0_f13:8:g_d0_f13:F:051015
+21:854:36724:0:0:108:128:569:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:855:36729:0:0:108:128:592:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:856:36734:0:0:124:128:615:8:g_d0_f13:8:g_d0_f13:F:0
+21:857:36735:0:0:113:129:637:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:858:36739:0:0:113:129:660:8:g_d0_f13:8:g_d0_f13:F:0.04
+21:859:36743:0:245:204:214:673:8:g_d0_f13:6:g_d0_f13:F:yiH
+21:860:36746:245:0:129:291:428:8:g_d0_f13:8:g_d0_f13:F:051015
+21:861:36752:0:0:108:128:435:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:862:36757:0:0:108:128:466:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:863:36762:0:0:124:128:496:8:g_d0_f13:8:g_d0_f13:F:0
+21:864:36763:0:0:113:129:527:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:865:36767:0:246:203:214:540:8:g_d0_f20:6:g_d0_f13:F:πiH
+21:866:36770:246:0:129:291:294:8:g_d0_f13:8:g_d0_f13:F:051015
+21:867:36776:0:0:108:128:301:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:868:36781:0:0:108:128:332:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:869:36786:0:0:124:128:362:8:g_d0_f13:8:g_d0_f13:F:0
+21:870:36787:0:0:113:129:393:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:871:36791:0:246:204:213:406:8:g_d0_f13:6:g_d0_f13:F:yiL
+21:872:36794:246:0:129:291:160:8:g_d0_f13:8:g_d0_f13:F:051015
+21:873:36800:0:0:108:128:167:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:874:36805:0:0:108:128:198:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:875:36810:0:0:124:128:228:8:g_d0_f13:8:g_d0_f13:F:0
+21:876:36811:0:0:113:129:259:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:877:36815:0:0:204:213:272:8:g_d0_f20:6:g_d0_f13:F:πiL
+21:878:36818:0:0:334:501:562:8:g_d0_f13:8:g_d0_f13:F:02004006008001000
+21:879:36835:0:0:313:333:569:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:880:36840:0:0:313:333:592:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:881:36845:0:0:329:333:615:8:g_d0_f13:8:g_d0_f13:F:0
+21:882:36846:0:0:318:334:637:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:883:36850:0:0:318:334:660:8:g_d0_f13:8:g_d0_f13:F:0.04
+21:884:36854:0:245:409:419:673:8:g_d0_f13:6:g_d0_f13:F:yiH
+21:885:36857:245:0:334:501:428:8:g_d0_f13:8:g_d0_f13:F:02004006008001000
+21:886:36874:0:0:313:333:435:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:887:36879:0:0:313:333:466:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:888:36884:0:0:329:333:496:8:g_d0_f13:8:g_d0_f13:F:0
+21:889:36885:0:0:318:334:527:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:890:36889:0:246:408:419:540:8:g_d0_f20:6:g_d0_f13:F:πiH
+21:891:36892:246:0:334:501:294:8:g_d0_f13:8:g_d0_f13:F:02004006008001000
+21:892:36909:0:0:313:333:301:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:893:36914:0:0:313:333:332:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:894:36919:0:0:329:333:362:8:g_d0_f13:8:g_d0_f13:F:0
+21:895:36920:0:0:318:334:393:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:896:36924:0:246:409:418:406:8:g_d0_f13:6:g_d0_f13:F:yiL
+21:897:36927:246:0:334:501:160:8:g_d0_f13:8:g_d0_f13:F:02004006008001000
+21:898:36944:0:0:313:333:167:8:g_d0_f13:8:g_d0_f13:F:−0.04
+21:899:36949:0:0:313:333:198:8:g_d0_f13:8:g_d0_f13:F:−0.02
+21:900:36954:0:0:329:333:228:8:g_d0_f13:8:g_d0_f13:F:0
+21:901:36955:0:0:318:334:259:8:g_d0_f13:8:g_d0_f13:F:0.02
+21:902:36959:0:126:409:418:272:8:g_d0_f20:6:g_d0_f13:F:πiL
+21:903:36962:126:14:72:540:146:11:g_d0_f11:11:g_d0_f11:F:Notes.  Both columns display the same objects, except that the first column displays only the
+21:904:37055:14:13:72:540:132:11:g_d0_f11:11:g_d0_f11:F:first 15 periods of the simulation. Each panel in a given column shows the cross-sectional mean
+21:905:37150:13:13:72:540:119:11:g_d0_f11:11:g_d0_f11:F:of individual PLMs and a two-standard deviation band aroundthe mean.  The solid horizontal
+21:906:37240:13:14:72:540:106:11:g_d0_f11:11:g_d0_f11:F:line corresponds to the PLM associated with the liquidity-trap equilibrium (RE-AB equilibrium)
+21:907:37334:14:14:72:540:92:11:g_d0_f11:11:g_d0_f11:F:and the broken horizontal line corresponds to the PLM associated with the intended equilibrium
+21:908:37428:14:13:72:539:78:11:g_d0_f11:11:g_d0_f11:F:(RE-NB equilibrium). The two-standard-deviation band associated with the initial distribution of
+21:909:37524:13:0:72:260:65:11:g_d0_f11:11:g_d0_f11:F:individual PLMs is shown with crosses.
+22:910:37564:0:14:72:540:624:12:g_d0_f4:12:g_d0_f4:B:Figure 3: Percent Deviations of Perceived Laws of Motion from the Liquidity-Trap Equilib-
+22:911:37653:14:178:72:194:610:12:g_d0_f4:12:g_d0_f5:B:rium in Periods 1 andT
+22:912:37675:178:0:102:289:432:9:g_d0_f13:9:g_d0_f13:F:0100200300400500
+22:913:37691:0:0:97:102:440:9:g_d0_f13:9:g_d0_f13:F:0
+22:914:37692:0:0:86:102:467:9:g_d0_f13:9:g_d0_f13:F:100
+22:915:37695:0:0:86:102:493:9:g_d0_f13:9:g_d0_f13:F:200
+22:916:37698:0:0:86:102:520:9:g_d0_f13:9:g_d0_f13:F:300
+22:917:37701:0:0:86:102:546:9:g_d0_f13:9:g_d0_f13:F:400
+22:918:37704:0:152:86:102:573:9:g_d0_f13:9:g_d0_f13:F:500
+22:919:37707:152:0:190:201:421:9:g_d0_f21:7:g_d0_f14:F:∆1
+22:920:37711:0:161:190:202:593:9:g_d0_f13:8:g_d0_f13:F:yiH
+22:921:37714:161:0:343:536:432:9:g_d0_f13:9:g_d0_f13:F:020406080100
+22:922:37726:0:0:337:342:440:9:g_d0_f13:9:g_d0_f13:F:0
+22:923:37727:0:0:332:343:468:9:g_d0_f13:9:g_d0_f13:F:20
+22:924:37729:0:0:332:343:495:9:g_d0_f13:9:g_d0_f13:F:40
+22:925:37731:0:0:332:343:523:9:g_d0_f13:9:g_d0_f13:F:60
+22:926:37733:0:0:332:343:551:9:g_d0_f13:9:g_d0_f13:F:80
+22:927:37735:0:157:327:343:578:9:g_d0_f13:9:g_d0_f13:F:100
+22:928:37738:157:0:431:441:421:9:g_d0_f21:7:g_d0_f14:F:∆1
+22:929:37742:0:355:431:443:593:9:g_d0_f20:8:g_d0_f13:F:πiH
+22:930:37745:355:0:102:264:238:9:g_d0_f13:9:g_d0_f13:F:020406080
+22:931:37754:0:0:97:102:246:9:g_d0_f13:9:g_d0_f13:F:0
+22:932:37755:0:0:91:102:275:9:g_d0_f13:9:g_d0_f13:F:20
+22:933:37757:0:0:91:102:304:9:g_d0_f13:9:g_d0_f13:F:40
+22:934:37759:0:0:91:102:333:9:g_d0_f13:9:g_d0_f13:F:60
+22:935:37761:0:135:91:102:362:9:g_d0_f13:9:g_d0_f13:F:80
+22:936:37763:135:0:190:201:227:9:g_d0_f21:7:g_d0_f14:F:∆1
+22:937:37767:0:161:191:202:399:9:g_d0_f13:8:g_d0_f13:F:yiL
+22:938:37770:161:0:343:505:238:9:g_d0_f13:9:g_d0_f13:F:020406080
+22:939:37779:0:0:337:342:246:9:g_d0_f13:9:g_d0_f13:F:0
+22:940:37780:0:0:332:343:275:9:g_d0_f13:9:g_d0_f13:F:20
+22:941:37782:0:0:332:343:304:9:g_d0_f13:9:g_d0_f13:F:40
+22:942:37784:0:0:332:343:333:9:g_d0_f13:9:g_d0_f13:F:60
+22:943:37786:0:135:332:343:362:9:g_d0_f13:9:g_d0_f13:F:80
+22:944:37788:135:0:431:441:227:9:g_d0_f21:7:g_d0_f14:F:∆1
+22:945:37792:0:190:431:442:399:9:g_d0_f20:8:g_d0_f13:F:πiL
+22:946:37795:190:15:72:540:209:11:g_d0_f11:11:g_d0_f11:F:Note. ∆1and ∆Tstand for the cross-sectional average percent absolute deviation of individual
+22:947:37887:15:14:72:539:194:11:g_d0_f11:11:g_d0_f11:F:perceived laws of motion from the liquidity-trap rational expectations equilibrium in periods 1 and
+22:948:37986:14:15:72:540:180:11:g_d0_f12:11:g_d0_f11:F:T= 1000, respectively. Each dot corresponds to one simulation, and there are 1000 simulations.
+22:949:38080:15:14:71:540:165:11:g_d0_f11:11:g_d0_f11:F:The length of each simulation isTIH+Tquarters, and the firstTIHquarters are dropped. The
+22:950:38168:14:0:72:279:151:11:g_d0_f11:11:g_d0_f11:F:solid line corresponds to the 45-degree line.
+23:951:38215:0:28:72:540:708:17:g_d0_f3:17:g_d0_f3:C:6  Stability of the Intended Equilibrium Under Social
+23:952:38268:28:29:101:175:680:17:g_d0_f3:17:g_d0_f3:C:Learning
+23:953:38276:29:18:72:539:651:12:g_d0_f4:12:g_d0_f4:B:It is of use to compare the convergence of the economy to the liquidity-trap rational expec-
+23:954:38368:18:18:72:539:633:12:g_d0_f4:12:g_d0_f4:B:tations equilibrium (the RE-AB equilibrium) with the convergence to the intended rational
+23:955:38457:18:18:72:540:615:12:g_d0_f4:12:g_d0_f4:B:expectations equilibrium (the RE-NB equilibrium) to see ifthe transition dynamics differ in
+23:956:38548:18:18:72:540:597:12:g_d0_f4:12:g_d0_f4:B:important ways. To this end, now assume that during the initial history (i.e., until period
+23:957:38639:18:18:72:540:579:12:g_d0_f5:12:g_d0_f4:B:TIH) the economy operates with all individual PLMs equal to the one associated with the
+23:958:38726:18:18:72:540:561:12:g_d0_f4:12:g_d0_f4:B:intended rational expectation equilibrium,znb. In periodTIH+1 the individual PLMs suffer
+23:959:38814:18:18:72:540:543:12:g_d0_f4:12:g_d0_f4:B:the same perturbation as the one applied in the analysis of the liquidity-trap equilibrium,
+23:960:38905:18:57:72:392:525:12:g_d0_f4:12:g_d0_f4:B:that is, the distribution of PLMs in periodTIH+ 1 is given by
+23:961:38966:57:0:89:110:468:12:g_d0_f5:12:g_d0_f8:C:zi≡
+23:962:38969:0:20:113:121:506:12:g_d0_f10:12:g_d0_f10:C:
+23:963:38970:20:8:113:121:486:12:g_d0_f10:12:g_d0_f10:C:
+23:964:38971:8:7:113:121:478:12:g_d0_f10:12:g_d0_f10:C:
+23:965:38972:7:7:113:121:471:12:g_d0_f10:12:g_d0_f10:C:
+23:966:38973:7:8:113:121:464:12:g_d0_f10:12:g_d0_f10:C:
+23:967:38974:8:0:113:121:456:12:g_d0_f10:12:g_d0_f10:C:
+23:968:38975:0:18:127:143:494:12:g_d0_f5:8:g_d0_f6:C:yiH
+23:969:38978:18:17:126:143:476:12:g_d0_f5:8:g_d0_f6:C:πiH
+23:970:38981:17:18:128:143:459:12:g_d0_f5:8:g_d0_f6:C:yiL
+23:971:38984:18:0:127:143:441:12:g_d0_f5:8:g_d0_f6:C:πiL
+23:972:38987:0:20:149:157:506:12:g_d0_f10:12:g_d0_f10:C:
+23:973:38988:20:8:149:157:486:12:g_d0_f10:12:g_d0_f10:C:
+23:974:38989:8:7:149:157:478:12:g_d0_f10:12:g_d0_f10:C:
+23:975:38990:7:7:149:157:471:12:g_d0_f10:12:g_d0_f10:C:
+23:976:38991:7:8:149:157:464:12:g_d0_f10:12:g_d0_f10:C:
+23:977:38992:8:0:149:157:456:12:g_d0_f10:12:g_d0_f10:C:
+23:978:38993:0:0:160:234:468:12:g_d0_f4:12:g_d0_f4:A:=znb+ Σνi=
+23:979:39003:0:20:238:246:506:12:g_d0_f10:12:g_d0_f10:C:
+23:980:39004:20:8:238:246:486:12:g_d0_f10:12:g_d0_f10:C:
+23:981:39005:8:7:238:246:478:12:g_d0_f10:12:g_d0_f10:C:
+23:982:39006:7:7:238:246:471:12:g_d0_f10:12:g_d0_f10:C:
+23:983:39007:7:8:238:246:464:12:g_d0_f10:12:g_d0_f10:C:
+23:984:39008:8:0:238:246:456:12:g_d0_f10:12:g_d0_f10:C:
+23:985:39009:0:18:260:292:494:12:g_d0_f4:12:g_d0_f4:A:0.0064
+23:986:39015:18:17:260:292:476:12:g_d0_f4:12:g_d0_f4:A:0.0002
+23:987:39021:17:18:251:292:459:12:g_d0_f8:12:g_d0_f4:A:−0.0064
+23:988:39028:18:0:251:292:441:12:g_d0_f8:12:g_d0_f4:A:−0.0002
+23:989:39035:0:20:298:306:506:12:g_d0_f10:12:g_d0_f10:C:
+23:990:39036:20:8:298:306:486:12:g_d0_f10:12:g_d0_f10:C:
+23:991:39037:8:7:298:306:478:12:g_d0_f10:12:g_d0_f10:C:
+23:992:39038:7:7:298:306:471:12:g_d0_f10:12:g_d0_f10:C:
+23:993:39039:7:8:298:306:464:12:g_d0_f10:12:g_d0_f10:C:
+23:994:39040:8:0:298:306:456:12:g_d0_f10:12:g_d0_f10:C:
+23:995:39041:0:0:308:317:468:12:g_d0_f4:12:g_d0_f4:A:+
+23:996:39042:0:20:320:328:506:12:g_d0_f10:12:g_d0_f10:C:
+23:997:39043:20:8:320:328:486:12:g_d0_f10:12:g_d0_f10:C:
+23:998:39044:8:7:320:328:478:12:g_d0_f10:12:g_d0_f10:C:
+23:999:39045:7:7:320:328:471:12:g_d0_f10:12:g_d0_f10:C:
+23:1000:39046:7:8:320:328:464:12:g_d0_f10:12:g_d0_f10:C:
+23:1001:39047:8:0:320:328:456:12:g_d0_f10:12:g_d0_f10:C:
+23:1002:39048:0:18:333:493:494:12:g_d0_f4:12:g_d0_f4:A:0.0123000
+23:1003:39057:18:17:359:493:476:12:g_d0_f4:12:g_d0_f4:A:0  0.010300
+23:1004:39068:17:18:359:493:459:12:g_d0_f4:12:g_d0_f4:A:00  0.01230
+23:1005:39079:18:0:359:492:441:12:g_d0_f4:12:g_d0_f4:A:000  0.0103
+23:1006:39090:0:20:498:506:506:12:g_d0_f10:12:g_d0_f10:C:
+23:1007:39091:20:8:498:506:486:12:g_d0_f10:12:g_d0_f10:C:
+23:1008:39092:8:7:498:506:478:12:g_d0_f10:12:g_d0_f10:C:
+23:1009:39093:7:7:498:506:471:12:g_d0_f10:12:g_d0_f10:C:
+23:1010:39094:7:8:498:506:464:12:g_d0_f10:12:g_d0_f10:C:
+23:1011:39095:8:0:498:506:456:12:g_d0_f10:12:g_d0_f10:C:
+23:1012:39096:0:57:510:522:468:12:g_d0_f5:12:g_d0_f5:C:νi.
+23:1013:39099:57:18:71:539:411:12:g_d0_f4:12:g_d0_f4:B:All structural parameters and hyperparameters of the social learning algorithm take the val-
+23:1014:39191:18:18:71:540:393:12:g_d0_f4:12:g_d0_f4:B:ues given in table 1. Figures 4 and 5 suggest that the intendedequilibrium is stable under
+23:1015:39281:18:18:71:539:375:12:g_d0_f4:12:g_d0_f4:B:social learning. Importantly, the transitional dynamics of the learning process are quali-
+23:1016:39371:18:18:71:540:357:12:g_d0_f4:12:g_d0_f4:B:tatively and quantitatively similar to those associated with the liquidity-trap equilibrium
+23:1017:39462:18:18:71:539:339:12:g_d0_f4:12:g_d0_f4:B:shown in figures 2 and 3. Notice that in figure 5 the percentage deviations from the intended
+23:1018:39555:18:17:71:540:321:12:g_d0_f4:12:g_d0_f4:B:rational expectations equilibrium appear much larger thanin the liquidity-trap equilibrium.
+23:1019:39646:17:18:71:540:304:12:g_d0_f4:12:g_d0_f4:B:This is due to the fact that deviations are expressed in percent and that the level values of
+23:1020:39739:18:18:71:539:286:12:g_d0_f4:12:g_d0_f4:B:the endogenous variables (especially inflation) are smaller in the intended equilibrium than
+23:1021:39831:18:18:71:539:268:12:g_d0_f4:12:g_d0_f4:B:in the liquidity trap (see equation (8)). We conclude that the liquidity-trap equilibrium is
+23:1022:39923:18:18:71:477:250:12:g_d0_f4:12:g_d0_f4:B:not more difficult to learn than the intended rational expectations equilibrium.
+23:1023:40003:18:18:89:540:232:12:g_d0_f4:12:g_d0_f4:A:To summarize, the main result of this section is that both theintended equilibrium (the
+23:1024:40090:18:18:71:539:214:12:g_d0_f4:12:g_d0_f4:B:RE-NB equilibrium) and the liquidity-trap equilibrium (the RE-AB equilibrium) are stable
+23:1025:40178:18:18:71:540:196:12:g_d0_f4:12:g_d0_f4:B:under social learning.  The key source of stability is tournaments.  This element of the
+23:1026:40266:18:18:71:539:178:12:g_d0_f4:12:g_d0_f4:B:learning algorithm allows agents with better forecasting ability to pass their perceived laws
+23:1027:40359:18:18:71:539:160:12:g_d0_f4:12:g_d0_f4:B:of motion to other agents. This is particularly important atthe beginning of the transitional
+23:1028:40452:18:18:71:540:142:12:g_d0_f4:12:g_d0_f4:B:dynamics, because, since fitness is a backward-looking statistic, the fittest agents are those
+23:1029:40546:18:18:71:539:124:12:g_d0_f4:12:g_d0_f4:B:whose PLMs are closer to the rational expectations PLM in thebeginning of the learning
+23:1030:40632:18:18:71:539:106:12:g_d0_f4:12:g_d0_f4:B:process (i.e., near periodTIH+ 1). In this regard, an important characteristic of the fitness
+23:1031:40725:18:0:72:540:88:12:g_d0_f4:12:g_d0_f4:B:measure is that it is a decreasing-gain average of squared forecast errors. Here the emphasis
+24:1032:40820:0:14:72:540:615:12:g_d0_f4:12:g_d0_f4:B:Figure 4: Learning the Intended Equilibrium: Evolution of the Cross-Sectional Distribution
+24:1033:40910:14:179:72:116:601:12:g_d0_f4:12:g_d0_f4:B:of PLMs
+24:1034:40917:179:0:97:293:422:10:g_d0_f13:10:g_d0_f13:F:02004006008001000
+24:1035:40934:0:0:72:96:430:10:g_d0_f13:10:g_d0_f13:F:−0.02
+24:1036:40939:0:0:72:96:458:10:g_d0_f13:10:g_d0_f13:F:−0.01
+24:1037:40944:0:0:91:96:485:10:g_d0_f13:10:g_d0_f13:F:0
+24:1038:40945:0:0:78:97:513:10:g_d0_f13:10:g_d0_f13:F:0.01
+24:1039:40949:0:0:78:97:541:10:g_d0_f13:10:g_d0_f13:F:0.02
+24:1040:40953:0:0:78:97:569:10:g_d0_f13:10:g_d0_f13:F:0.03
+24:1041:40957:0:162:185:197:584:10:g_d0_f13:8:g_d0_f13:F:yiH
+24:1042:40960:162:0:339:536:422:10:g_d0_f13:10:g_d0_f13:F:02004006008001000
+24:1043:40977:0:0:315:339:430:10:g_d0_f13:10:g_d0_f13:F:−0.03
+24:1044:40982:0:0:315:339:453:10:g_d0_f13:10:g_d0_f13:F:−0.02
+24:1045:40987:0:0:315:339:476:10:g_d0_f13:10:g_d0_f13:F:−0.01
+24:1046:40992:0:0:334:339:499:10:g_d0_f13:10:g_d0_f13:F:0
+24:1047:40993:0:0:320:339:523:10:g_d0_f13:10:g_d0_f13:F:0.01
+24:1048:40997:0:0:320:339:546:10:g_d0_f13:10:g_d0_f13:F:0.02
+24:1049:41001:0:0:320:339:569:10:g_d0_f13:10:g_d0_f13:F:0.03
+24:1050:41005:0:358:427:440:584:10:g_d0_f20:8:g_d0_f13:F:πiH
+24:1051:41008:358:0:97:293:226:10:g_d0_f13:10:g_d0_f13:F:02004006008001000
+24:1052:41025:0:0:72:96:234:10:g_d0_f13:10:g_d0_f13:F:−0.04
+24:1053:41030:0:0:72:96:254:10:g_d0_f13:10:g_d0_f13:F:−0.03
+24:1054:41035:0:0:72:96:274:10:g_d0_f13:10:g_d0_f13:F:−0.02
+24:1055:41040:0:0:72:96:293:10:g_d0_f13:10:g_d0_f13:F:−0.01
+24:1056:41045:0:0:91:96:313:10:g_d0_f13:10:g_d0_f13:F:0
+24:1057:41046:0:0:78:97:333:10:g_d0_f13:10:g_d0_f13:F:0.01
+24:1058:41050:0:0:78:97:353:10:g_d0_f13:10:g_d0_f13:F:0.02
+24:1059:41054:0:0:78:97:373:10:g_d0_f13:10:g_d0_f13:F:0.03
+24:1060:41058:0:162:185:196:388:10:g_d0_f13:8:g_d0_f13:F:yiL
+24:1061:41061:162:0:339:536:226:10:g_d0_f13:10:g_d0_f13:F:02004006008001000
+24:1062:41078:0:0:315:339:234:10:g_d0_f13:10:g_d0_f13:F:−0.03
+24:1063:41083:0:0:315:339:257:10:g_d0_f13:10:g_d0_f13:F:−0.02
+24:1064:41088:0:0:315:339:280:10:g_d0_f13:10:g_d0_f13:F:−0.01
+24:1065:41093:0:0:334:339:303:10:g_d0_f13:10:g_d0_f13:F:0
+24:1066:41094:0:0:320:339:327:10:g_d0_f13:10:g_d0_f13:F:0.01
+24:1067:41098:0:0:320:339:350:10:g_d0_f13:10:g_d0_f13:F:0.02
+24:1068:41102:0:0:320:339:373:10:g_d0_f13:10:g_d0_f13:F:0.03
+24:1069:41106:0:176:428:439:388:10:g_d0_f20:8:g_d0_f13:F:πiL
+24:1070:41109:176:14:72:540:212:11:g_d0_f11:11:g_d0_f11:F:Notes. Each panel shows the cross-sectional mean of individual PLMs and a two-standard deviation
+24:1071:41205:14:13:72:539:198:11:g_d0_f11:11:g_d0_f11:F:band around the mean.  The solid horizontal line correspondsto the PLM associated with the
+24:1072:41295:13:14:72:540:185:11:g_d0_f11:11:g_d0_f11:F:inteneded equilibrium (RE-NB) and the broken horizontal line corresponds to the PLM associated
+24:1073:41389:14:13:72:539:171:11:g_d0_f11:11:g_d0_f11:F:with the liquidity-trap equilibrium (RE-AB). The two-standard-deviation band associated with the
+24:1074:41485:13:0:72:363:158:11:g_d0_f11:11:g_d0_f11:F:initial distribution of individual PLMs is shown with crosses.
+25:1075:41549:0:15:72:540:623:12:g_d0_f4:12:g_d0_f4:B:Figure 5: Percent Deviations of Perceived Laws of Motion from the Intended Equilibrium in
+25:1076:41638:15:176:72:153:608:12:g_d0_f4:12:g_d0_f5:B:Periods 1 andT
+25:1077:41652:176:0:102:264:432:9:g_d0_f13:9:g_d0_f13:F:050100150
+25:1078:41661:0:0:97:102:440:9:g_d0_f13:9:g_d0_f13:F:0
+25:1079:41662:0:0:91:101:478:9:g_d0_f13:9:g_d0_f13:F:50
+25:1080:41664:0:0:86:102:516:9:g_d0_f13:9:g_d0_f13:F:100
+25:1081:41667:0:133:86:102:554:9:g_d0_f13:9:g_d0_f13:F:150
+25:1082:41670:133:0:189:200:421:9:g_d0_f21:7:g_d0_f14:F:∆1
+25:1083:41674:0:160:189:201:592:9:g_d0_f13:8:g_d0_f13:F:yiH
+25:1084:41677:160:0:341:536:432:9:g_d0_f13:9:g_d0_f13:F:010002000300040005000
+25:1085:41698:0:0:336:341:440:9:g_d0_f13:9:g_d0_f13:F:0
+25:1086:41699:0:0:320:341:467:9:g_d0_f13:9:g_d0_f13:F:1000
+25:1087:41703:0:0:320:341:495:9:g_d0_f13:9:g_d0_f13:F:2000
+25:1088:41707:0:0:320:341:522:9:g_d0_f13:9:g_d0_f13:F:3000
+25:1089:41711:0:0:320:341:550:9:g_d0_f13:9:g_d0_f13:F:4000
+25:1090:41715:0:156:320:341:577:9:g_d0_f13:9:g_d0_f13:F:5000
+25:1091:41719:156:0:429:439:421:9:g_d0_f21:7:g_d0_f14:F:∆1
+25:1092:41723:0:353:428:441:592:9:g_d0_f20:8:g_d0_f13:F:πiH
+25:1093:41726:353:0:102:264:239:9:g_d0_f13:9:g_d0_f13:F:050100150
+25:1094:41735:0:0:97:102:247:9:g_d0_f13:9:g_d0_f13:F:0
+25:1095:41736:0:0:91:101:285:9:g_d0_f13:9:g_d0_f13:F:50
+25:1096:41738:0:0:86:102:323:9:g_d0_f13:9:g_d0_f13:F:100
+25:1097:41741:0:133:86:102:361:9:g_d0_f13:9:g_d0_f13:F:150
+25:1098:41744:133:0:189:200:228:9:g_d0_f21:7:g_d0_f14:F:∆1
+25:1099:41748:0:160:190:201:399:9:g_d0_f13:8:g_d0_f13:F:yiL
+25:1100:41751:160:0:341:536:239:9:g_d0_f13:9:g_d0_f13:F:010002000300040005000
+25:1101:41772:0:0:336:341:247:9:g_d0_f13:9:g_d0_f13:F:0
+25:1102:41773:0:0:320:341:274:9:g_d0_f13:9:g_d0_f13:F:1000
+25:1103:41777:0:0:320:341:302:9:g_d0_f13:9:g_d0_f13:F:2000
+25:1104:41781:0:0:320:341:329:9:g_d0_f13:9:g_d0_f13:F:3000
+25:1105:41785:0:0:320:341:357:9:g_d0_f13:9:g_d0_f13:F:4000
+25:1106:41789:0:156:320:341:384:9:g_d0_f13:9:g_d0_f13:F:5000
+25:1107:41793:156:0:429:439:228:9:g_d0_f21:7:g_d0_f14:F:∆1
+25:1108:41797:0:189:429:440:399:9:g_d0_f20:8:g_d0_f13:F:πiL
+25:1109:41800:189:15:72:540:210:11:g_d0_f11:11:g_d0_f11:F:Note. ∆1and ∆Tstand for the cross-sectional average percent absolute deviation of individual
+25:1110:41892:15:14:72:539:195:11:g_d0_f11:11:g_d0_f11:F:perceived laws of motion from the intended rational expectations equilibrium in periods 1 and
+25:1111:41985:14:14:72:540:181:11:g_d0_f12:11:g_d0_f11:F:T= 1000, respectively. Each dot corresponds to one simulation, and there are 1000 simulations.
+25:1112:42079:14:15:71:540:167:11:g_d0_f11:11:g_d0_f11:F:The length of each simulation isTIH+Tquarters, and the firstTIHquarters are dropped. The
+25:1113:42167:15:0:72:279:152:11:g_d0_f11:11:g_d0_f11:F:solid line corresponds to the 45-degree line.
+26:1114:42214:0:18:72:540:708:12:g_d0_f4:12:g_d0_f4:B:is on decreasing gain.  This property can be seen from the factthat because all forecast
+26:1115:42302:18:18:72:540:690:12:g_d0_f4:12:g_d0_f4:B:errors are assigned the same weight, the most recent forecast error receives a smaller weight
+26:1116:42395:18:18:72:539:672:12:g_d0_f4:12:g_d0_f4:B:over time. We can show that this feature of tournaments is an important determinant of
+26:1117:42481:18:18:72:540:654:12:g_d0_f4:12:g_d0_f4:B:the learnability of the liquidity trap. Modeling fitness as an average of past forecasts with
+26:1118:42574:18:18:72:539:636:12:g_d0_f4:12:g_d0_f4:B:constant gain can make the liquidity trap non-learnable, atleast for the relatively large
+26:1119:42663:18:18:72:539:618:12:g_d0_f4:12:g_d0_f4:B:dispersion of beliefs (embodied in the diagonal elements ofthe matrix Σ) considered in our
+26:1120:42753:18:18:72:540:600:12:g_d0_f4:12:g_d0_f4:B:numerical analysis. This result obtains for different specifications of constant gains, including
+26:1121:42850:18:45:72:437:582:12:g_d0_f4:12:g_d0_f4:B:geometric averaging and averaging over a fixed number of pastperiods.
+26:1122:42919:45:30:72:268:537:17:g_d0_f3:17:g_d0_f3:C:7  Sensitivity Analysis
+26:1123:42942:30:18:72:540:507:12:g_d0_f4:12:g_d0_f4:B:In this section we present two types of sensitivity tests. One consists in changing the various
+26:1124:43037:18:18:72:540:489:12:g_d0_f4:12:g_d0_f4:B:hyperparameters that define the social learning algorithm.The other consists in replacing
+26:1125:43126:18:18:72:539:471:12:g_d0_f4:12:g_d0_f4:B:the initial random disturbance in individual PLMs for one inwhich all agents are given the
+26:1126:43216:18:39:72:433:453:12:g_d0_f4:12:g_d0_f4:B:PLM corresponding to the intended rational expectations equilibrium.
+26:1127:43284:39:22:72:539:414:14:g_d0_f3:14:g_d0_f3:C:7.1  Varying the Hyperparameters of the Social Learning Algo-
+26:1128:43345:22:26:108:148:392:14:g_d0_f3:14:g_d0_f3:C:rithm
+26:1129:43350:26:18:72:539:366:12:g_d0_f4:12:g_d0_f4:B:Figure 6 presents a number of robustness checks of the stability of the liquidity trap under
+26:1130:43442:18:18:72:540:348:12:g_d0_f4:12:g_d0_f4:B:learning, with a focus on the hyperparameters of the social learning algorithm. This analysis
+26:1131:43535:18:17:72:539:330:12:g_d0_f4:12:g_d0_f4:B:is motivated by the fact that for these parameters there is little, if any, empirical information
+26:1132:43632:17:18:72:539:313:12:g_d0_f4:12:g_d0_f4:B:backing their calibration. Each row of the figure redoes figure 3 for a different value of one
+26:1133:43726:18:18:72:540:295:12:g_d0_f4:12:g_d0_f4:B:hyperparameter. All other structural and hyperparametersare set at the values shown in
+26:1134:43812:18:18:72:539:277:12:g_d0_f4:12:g_d0_f4:B:table 1.  As a point of reference, the first row of the figure reproduces from figure 3 the
+26:1135:43903:18:18:72:356:259:12:g_d0_f4:12:g_d0_f4:B:predictions of the model under the baseline calibration.
+26:1136:43959:18:18:89:539:241:12:g_d0_f4:12:g_d0_f4:A:The sensitivity test of greatest interest is the one that varies the probability of mutation,
+26:1137:44052:18:18:72:539:223:12:g_d0_f5:12:g_d0_f4:B:pm. The reason is that large values of this parameter can compromise the convergence of the
+26:1138:44143:18:18:71:540:205:12:g_d0_f4:12:g_d0_f4:B:learning algorithm, as discussed in, for example, Lux and Schornstein (2002) and Arifovic,
+26:1139:44233:18:18:71:540:187:12:g_d0_f4:12:g_d0_f4:B:Bullard, and Kostyshyna (2012). The baseline value of 0.1 istaken from the latter study.
+26:1140:44321:18:18:71:540:169:12:g_d0_f4:12:g_d0_f4:B:The second row of figure 6 displays the stability test for a value ofpmof 0.5. As expected,
+26:1141:44412:18:18:71:539:151:12:g_d0_f4:12:g_d0_f4:B:the cloud of points moves closer to the 45-degree line, meaning that there is substantial
+26:1142:44501:18:18:71:540:133:12:g_d0_f4:12:g_d0_f4:B:dispersion of beliefs even after 1000 quarters. This is in part a mechanical outcome, since
+26:1143:44592:18:18:71:539:115:12:g_d0_f4:12:g_d0_f4:B:exogenously 50 percent of the population is assumed to revise their beliefs in an arbitrary
+26:1144:44683:18:17:71:540:97:12:g_d0_f4:12:g_d0_f4:B:and random fashion every quarter. It is reassuring, however, that in spite of the high degree
+26:1145:44776:17:0:71:540:80:12:g_d0_f4:12:g_d0_f4:B:of mutation the equilibrium dynamics under learning continue to be stable, as reflected by
+27:1146:44868:0:113:153:458:699:12:g_d0_f4:12:g_d0_f4:A:Figure 6: Learning the Liquidity Trap: Sensitivity Analysis
+27:1147:44927:113:0:119:193:586:9:g_d0_f13:9:g_d0_f13:F:0500
+27:1148:44931:0:0:114:119:593:9:g_d0_f13:9:g_d0_f13:F:0
+27:1149:44932:0:0:104:119:620:9:g_d0_f13:9:g_d0_f13:F:200
+27:1150:44935:0:71:104:119:647:9:g_d0_f13:9:g_d0_f13:F:400
+27:1151:44938:71:0:151:161:576:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1152:44942:0:96:132:181:682:9:g_d0_f13:9:g_d0_f13:F:yiH, baseline
+27:1153:44955:96:0:225:306:586:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1154:44961:0:0:220:225:593:9:g_d0_f13:9:g_d0_f13:F:0
+27:1155:44962:0:0:215:225:630:9:g_d0_f13:9:g_d0_f13:F:50
+27:1156:44964:0:91:210:225:667:9:g_d0_f13:9:g_d0_f13:F:100
+27:1157:44967:91:0:257:267:576:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1158:44971:0:96:238:287:682:9:g_d0_f20:9:g_d0_f13:F:πiH, baseline
+27:1159:44984:96:0:331:412:586:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1160:44990:0:0:326:331:593:9:g_d0_f13:9:g_d0_f13:F:0
+27:1161:44991:0:0:321:331:630:9:g_d0_f13:9:g_d0_f13:F:50
+27:1162:44993:0:91:316:331:667:9:g_d0_f13:9:g_d0_f13:F:100
+27:1163:44996:91:0:363:374:576:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1164:45000:0:96:345:393:682:9:g_d0_f13:9:g_d0_f13:F:yiL, baseline
+27:1165:45013:96:0:437:518:586:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1166:45019:0:0:432:437:593:9:g_d0_f13:9:g_d0_f13:F:0
+27:1167:45020:0:0:427:437:630:9:g_d0_f13:9:g_d0_f13:F:50
+27:1168:45022:0:91:422:437:667:9:g_d0_f13:9:g_d0_f13:F:100
+27:1169:45025:91:0:469:480:576:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1170:45029:0:213:451:499:682:9:g_d0_f20:9:g_d0_f13:F:πiL, baseline
+27:1171:45042:213:0:119:193:469:9:g_d0_f13:9:g_d0_f13:F:0500
+27:1172:45046:0:0:114:119:477:9:g_d0_f13:9:g_d0_f13:F:0
+27:1173:45047:0:0:104:119:504:9:g_d0_f13:9:g_d0_f13:F:200
+27:1174:45050:0:72:104:119:531:9:g_d0_f13:9:g_d0_f13:F:400
+27:1175:45053:72:0:151:161:459:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1176:45057:0:96:134:180:565:9:g_d0_f13:9:g_d0_f13:F:yiH, pm=0.5
+27:1177:45068:96:0:225:306:469:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1178:45074:0:0:220:225:477:9:g_d0_f13:9:g_d0_f13:F:0
+27:1179:45075:0:0:215:225:514:9:g_d0_f13:9:g_d0_f13:F:50
+27:1180:45077:0:92:210:225:551:9:g_d0_f13:9:g_d0_f13:F:100
+27:1181:45080:92:0:257:267:459:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1182:45084:0:96:239:286:565:9:g_d0_f20:9:g_d0_f13:F:πiH, pm=0.5
+27:1183:45095:96:0:331:412:469:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1184:45101:0:0:326:331:477:9:g_d0_f13:9:g_d0_f13:F:0
+27:1185:45102:0:0:321:331:514:9:g_d0_f13:9:g_d0_f13:F:50
+27:1186:45104:0:92:316:331:551:9:g_d0_f13:9:g_d0_f13:F:100
+27:1187:45107:92:0:363:374:459:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1188:45111:0:96:346:391:565:9:g_d0_f13:9:g_d0_f13:F:yiL, pm=0.5
+27:1189:45122:96:0:437:518:469:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1190:45128:0:0:432:437:477:9:g_d0_f13:9:g_d0_f13:F:0
+27:1191:45129:0:0:427:437:514:9:g_d0_f13:9:g_d0_f13:F:50
+27:1192:45131:0:92:422:437:551:9:g_d0_f13:9:g_d0_f13:F:100
+27:1193:45134:92:0:469:480:459:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1194:45138:0:213:452:498:565:9:g_d0_f20:9:g_d0_f13:F:πiL, pm=0.5
+27:1195:45149:213:0:119:193:352:9:g_d0_f13:9:g_d0_f13:F:0500
+27:1196:45153:0:0:114:119:360:9:g_d0_f13:9:g_d0_f13:F:0
+27:1197:45154:0:0:104:119:387:9:g_d0_f13:9:g_d0_f13:F:200
+27:1198:45157:0:72:104:119:414:9:g_d0_f13:9:g_d0_f13:F:400
+27:1199:45160:72:0:151:161:342:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1200:45164:0:96:133:180:448:9:g_d0_f13:9:g_d0_f13:F:yiH, T=2000
+27:1201:45175:96:0:225:306:352:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1202:45181:0:0:220:225:360:9:g_d0_f13:9:g_d0_f13:F:0
+27:1203:45182:0:0:215:225:397:9:g_d0_f13:9:g_d0_f13:F:50
+27:1204:45184:0:92:210:225:434:9:g_d0_f13:9:g_d0_f13:F:100
+27:1205:45187:92:0:257:267:342:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1206:45191:0:96:239:287:448:9:g_d0_f20:9:g_d0_f13:F:πiH, T=2000
+27:1207:45202:96:0:331:412:352:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1208:45208:0:0:326:331:360:9:g_d0_f13:9:g_d0_f13:F:0
+27:1209:45209:0:0:321:331:397:9:g_d0_f13:9:g_d0_f13:F:50
+27:1210:45211:0:92:316:331:434:9:g_d0_f13:9:g_d0_f13:F:100
+27:1211:45214:92:0:363:374:342:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1212:45218:0:96:346:392:448:9:g_d0_f13:9:g_d0_f13:F:yiL, T=2000
+27:1213:45229:96:0:437:518:352:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1214:45235:0:0:432:437:360:9:g_d0_f13:9:g_d0_f13:F:0
+27:1215:45236:0:0:427:437:397:9:g_d0_f13:9:g_d0_f13:F:50
+27:1216:45238:0:92:422:437:434:9:g_d0_f13:9:g_d0_f13:F:100
+27:1217:45241:92:0:469:480:342:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1218:45245:0:212:452:499:448:9:g_d0_f20:9:g_d0_f13:F:πiL, T=2000
+27:1219:45256:212:0:119:193:236:9:g_d0_f13:9:g_d0_f13:F:0500
+27:1220:45260:0:0:114:119:243:9:g_d0_f13:9:g_d0_f13:F:0
+27:1221:45261:0:0:104:119:270:9:g_d0_f13:9:g_d0_f13:F:200
+27:1222:45264:0:72:104:119:297:9:g_d0_f13:9:g_d0_f13:F:400
+27:1223:45267:72:0:151:161:225:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1224:45271:0:95:135:178:331:9:g_d0_f13:9:g_d0_f13:F:yiH, N=500
+27:1225:45281:95:0:225:306:236:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1226:45287:0:0:220:225:243:9:g_d0_f13:9:g_d0_f13:F:0
+27:1227:45288:0:0:215:225:280:9:g_d0_f13:9:g_d0_f13:F:50
+27:1228:45290:0:92:210:225:317:9:g_d0_f13:9:g_d0_f13:F:100
+27:1229:45293:92:0:257:267:225:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1230:45297:0:95:241:285:331:9:g_d0_f20:9:g_d0_f13:F:πiH, N=500
+27:1231:45307:95:0:331:412:236:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1232:45313:0:0:326:331:243:9:g_d0_f13:9:g_d0_f13:F:0
+27:1233:45314:0:0:321:331:280:9:g_d0_f13:9:g_d0_f13:F:50
+27:1234:45316:0:92:316:331:317:9:g_d0_f13:9:g_d0_f13:F:100
+27:1235:45319:92:0:363:374:225:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1236:45323:0:95:348:390:331:9:g_d0_f13:9:g_d0_f13:F:yiL, N=500
+27:1237:45333:95:0:437:518:236:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1238:45339:0:0:432:437:243:9:g_d0_f13:9:g_d0_f13:F:0
+27:1239:45340:0:0:427:437:280:9:g_d0_f13:9:g_d0_f13:F:50
+27:1240:45342:0:92:422:437:317:9:g_d0_f13:9:g_d0_f13:F:100
+27:1241:45345:92:0:469:480:225:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1242:45349:0:212:454:497:331:9:g_d0_f20:9:g_d0_f13:F:πiL, N=500
+27:1243:45359:212:0:119:193:119:9:g_d0_f13:9:g_d0_f13:F:0500
+27:1244:45363:0:0:114:119:126:9:g_d0_f13:9:g_d0_f13:F:0
+27:1245:45364:0:0:104:119:153:9:g_d0_f13:9:g_d0_f13:F:200
+27:1246:45367:0:71:104:119:180:9:g_d0_f13:9:g_d0_f13:F:400
+27:1247:45370:71:0:151:161:109:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1248:45374:0:96:135:178:215:9:g_d0_f13:9:g_d0_f13:F:yiH, pc=0.5
+27:1249:45385:96:0:225:306:119:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1250:45391:0:0:220:225:126:9:g_d0_f13:9:g_d0_f13:F:0
+27:1251:45392:0:0:215:225:163:9:g_d0_f13:9:g_d0_f13:F:50
+27:1252:45394:0:91:210:225:200:9:g_d0_f13:9:g_d0_f13:F:100
+27:1253:45397:91:0:257:267:109:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1254:45401:0:96:241:285:215:9:g_d0_f20:9:g_d0_f13:F:πiH, pc=0.5
+27:1255:45412:96:0:331:412:119:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1256:45418:0:0:326:331:126:9:g_d0_f13:9:g_d0_f13:F:0
+27:1257:45419:0:0:321:331:163:9:g_d0_f13:9:g_d0_f13:F:50
+27:1258:45421:0:91:316:331:200:9:g_d0_f13:9:g_d0_f13:F:100
+27:1259:45424:91:0:363:374:109:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1260:45428:0:96:348:390:215:9:g_d0_f13:9:g_d0_f13:F:yiL, pc=0.5
+27:1261:45439:96:0:437:518:119:9:g_d0_f13:9:g_d0_f13:F:050100
+27:1262:45445:0:0:432:437:126:9:g_d0_f13:9:g_d0_f13:F:0
+27:1263:45446:0:0:427:437:163:9:g_d0_f13:9:g_d0_f13:F:50
+27:1264:45448:0:91:422:437:200:9:g_d0_f13:9:g_d0_f13:F:100
+27:1265:45451:91:0:469:480:109:9:g_d0_f21:6:g_d0_f14:F:∆1
+27:1266:45455:0:125:454:496:215:9:g_d0_f20:9:g_d0_f13:F:πiL, pc=0.5
+27:1267:45466:125:14:72:539:90:11:g_d0_f11:11:g_d0_f11:F:Note. All parameters other than the one indicated in each roware kept at the values shown in
+27:1268:45558:14:0:72:230:76:11:g_d0_f11:11:g_d0_f11:F:table 1. See also note to figure 3.
+28:1269:45595:0:18:72:539:708:12:g_d0_f4:12:g_d0_f4:B:the fact that the clouds of points for all elements of the perceived laws of motion remain
+28:1270:45685:18:18:72:199:690:12:g_d0_f4:12:g_d0_f4:B:below the 45-degree line.
+28:1271:45710:18:18:89:540:672:12:g_d0_f4:12:g_d0_f4:A:Another sensitivity test of interest is to increase the length of the simulation period,
+28:1272:45798:18:18:72:540:654:12:g_d0_f4:12:g_d0_f4:B:because divergence can be slow to build up. The third row of figure 6 displays the stability
+28:1273:45890:18:18:72:539:636:12:g_d0_f4:12:g_d0_f4:B:test forT= 2000 quarters, a simulation period twice as long as in the baseline test. Com-
+28:1274:45979:18:18:71:540:618:12:g_d0_f4:12:g_d0_f4:B:paring the first and third rows of the figure reveals that the equilibrium dynamics remain
+28:1275:46069:18:18:71:539:600:12:g_d0_f4:12:g_d0_f4:B:stable after doubling the simulation period, suggesting absence of divergence. The last two
+28:1276:46160:18:18:71:540:582:12:g_d0_f4:12:g_d0_f4:B:sensitivity tests we perform are increasing the size of the population from 300 to 500 (row 4
+28:1277:46253:18:18:71:539:564:12:g_d0_f4:12:g_d0_f4:B:of figure 6) and to increase the probability of crossover from0.1 to 0.5 (row 5 of figure 6).
+28:1278:46346:18:18:71:540:546:12:g_d0_f4:12:g_d0_f4:B:Increasing the population size yields a richer variety of beliefs at every point in time, since
+28:1279:46441:18:18:71:539:528:12:g_d0_f4:12:g_d0_f4:B:mutation affects more agents. And an increase in the probability of crossover does not di-
+28:1280:46531:18:18:71:540:510:12:g_d0_f4:12:g_d0_f4:B:rectly affect the aggregate perceived law of motion because the latter is an arithmetic mean
+28:1281:46623:18:18:71:539:492:12:g_d0_f4:12:g_d0_f4:B:of the individual PLMs.  But it can affect the learning processindirectly by altering the
+28:1282:46712:18:18:71:540:474:12:g_d0_f4:12:g_d0_f4:B:fitness of individual PLMs. The stability of the liquidity trap under learning appears to be
+28:1283:46804:18:38:71:248:456:12:g_d0_f4:12:g_d0_f4:B:robust to both parameter changes.
+28:1284:46837:38:23:72:540:418:14:g_d0_f3:14:g_d0_f3:C:7.2  Convergence from the Intended Equilibrium to the Liquidity
+28:1285:46900:23:25:108:141:395:14:g_d0_f3:14:g_d0_f3:C:Trap
+28:1286:46904:25:18:72:539:370:12:g_d0_f4:12:g_d0_f4:B:Thus far, we have considered experiments in which the initial perturbation in the distribution
+28:1287:46998:18:18:72:539:352:12:g_d0_f4:12:g_d0_f4:B:of PLMs is mean preserving. Specifically, as described by equation (15), in periodTIH+1 the
+28:1288:47089:18:18:72:540:334:12:g_d0_f4:12:g_d0_f4:B:distribution of PLMs is centered around the one associated with the liquidity-trap rational
+28:1289:47180:18:18:72:539:316:12:g_d0_f4:12:g_d0_f4:B:expectations equilibrium,zab. We now test the stability of the liquidity trap under social
+28:1290:47270:18:18:72:540:298:12:g_d0_f4:12:g_d0_f4:B:learning by imposing a noncentered initial distribution ofPLMs. To discipline the exercise,
+28:1291:47361:18:18:72:540:280:12:g_d0_f4:12:g_d0_f4:B:we pick a degenerate initial distribution in which all agents are assigned the PLM associated
+28:1292:47454:18:18:72:361:262:12:g_d0_f4:12:g_d0_f4:B:with the intended rational expectations equilibrium,znb.
+28:1293:47510:18:18:89:539:244:12:g_d0_f4:12:g_d0_f4:A:The top panels of figure 7 display the transitional dynamics of the cross-sectional distri-
+28:1294:47601:18:18:72:540:226:12:g_d0_f4:12:g_d0_f4:B:bution of PLMs associated with this experiment for one simulation of 1000 quarters. The
+28:1295:47688:18:18:72:539:208:12:g_d0_f4:12:g_d0_f4:B:single cross that appears in period 1 in each plot indicates the corresponding element of
+28:1296:47777:18:17:72:540:190:12:g_d0_f5:12:g_d0_f4:B:znb. The figure shows that, as in the case of a mean-preserving initial PLM perturbation,
+28:1297:47866:17:18:72:540:173:12:g_d0_f4:12:g_d0_f4:B:the economy converges quickly to a stable distribution of PLMs around the liquidity-trap
+28:1298:47954:18:18:72:540:155:12:g_d0_f4:12:g_d0_f4:B:equilibrium. This finding is confirmed for 1000 simulations in the second row of panels,
+28:1299:48042:18:18:72:540:137:12:g_d0_f4:12:g_d0_f4:B:which shows the result of the convergence test described in section 5. By construction all
+28:1300:48132:18:18:72:540:119:12:g_d0_f4:12:g_d0_f4:B:1000 points line up in a column, since all simulations start from the same degenerate cross-
+28:1301:48224:18:18:72:539:101:12:g_d0_f4:12:g_d0_f4:B:sectional distribution of PLMs. The fact that the column of points lies below the 45-degree
+28:1302:48315:18:0:72:540:83:12:g_d0_f4:12:g_d0_f4:B:line implies that for all simulations the economy is closer to the liquidity trap at the end of
+29:1303:48412:0:152:110:501:558:12:g_d0_f4:12:g_d0_f4:A:Figure 7: Convergence from the Intended Equilibrium to the Liquidity Trap
+29:1304:48485:152:0:103:191:406:10:g_d0_f13:10:g_d0_f13:F:05001000
+29:1305:48493:0:0:79:104:415:10:g_d0_f13:10:g_d0_f13:F:−0.02
+29:1306:48498:0:0:79:104:442:10:g_d0_f13:10:g_d0_f13:F:−0.01
+29:1307:48503:0:0:98:103:469:10:g_d0_f13:10:g_d0_f13:F:0
+29:1308:48504:0:0:84:103:497:10:g_d0_f13:10:g_d0_f13:F:0.01
+29:1309:48508:0:0:84:103:524:10:g_d0_f13:10:g_d0_f13:F:0.02
+29:1310:48512:0:134:137:149:540:10:g_d0_f13:8:g_d0_f13:F:yiH
+29:1311:48515:134:0:218:306:406:10:g_d0_f13:10:g_d0_f13:F:05001000
+29:1312:48523:0:0:194:219:415:10:g_d0_f13:10:g_d0_f13:F:−0.03
+29:1313:48528:0:0:194:219:442:10:g_d0_f13:10:g_d0_f13:F:−0.02
+29:1314:48533:0:0:194:219:469:10:g_d0_f13:10:g_d0_f13:F:−0.01
+29:1315:48538:0:0:213:218:497:10:g_d0_f13:10:g_d0_f13:F:0
+29:1316:48539:0:0:199:218:524:10:g_d0_f13:10:g_d0_f13:F:0.01
+29:1317:48543:0:134:251:264:540:10:g_d0_f20:8:g_d0_f13:F:πiH
+29:1318:48546:134:0:333:421:406:10:g_d0_f13:10:g_d0_f13:F:05001000
+29:1319:48554:0:0:309:334:415:10:g_d0_f13:10:g_d0_f13:F:−0.03
+29:1320:48559:0:0:309:334:442:10:g_d0_f13:10:g_d0_f13:F:−0.02
+29:1321:48564:0:0:309:334:469:10:g_d0_f13:10:g_d0_f13:F:−0.01
+29:1322:48569:0:0:328:333:497:10:g_d0_f13:10:g_d0_f13:F:0
+29:1323:48570:0:0:314:333:524:10:g_d0_f13:10:g_d0_f13:F:0.01
+29:1324:48574:0:134:367:378:540:10:g_d0_f13:8:g_d0_f13:F:yiL
+29:1325:48577:134:0:448:536:406:10:g_d0_f13:10:g_d0_f13:F:05001000
+29:1326:48585:0:0:424:449:415:10:g_d0_f13:10:g_d0_f13:F:−0.02
+29:1327:48590:0:0:424:449:451:10:g_d0_f13:10:g_d0_f13:F:−0.01
+29:1328:48595:0:0:443:448:488:10:g_d0_f13:10:g_d0_f13:F:0
+29:1329:48596:0:0:429:448:524:10:g_d0_f13:10:g_d0_f13:F:0.01
+29:1330:48600:0:294:482:493:540:10:g_d0_f20:8:g_d0_f13:F:πiL
+29:1331:48603:294:0:103:188:246:10:g_d0_f13:10:g_d0_f13:F:0100200
+29:1332:48610:0:0:98:103:254:10:g_d0_f13:10:g_d0_f13:F:0
+29:1333:48611:0:0:92:103:282:10:g_d0_f13:10:g_d0_f13:F:50
+29:1334:48613:0:0:87:103:309:10:g_d0_f13:10:g_d0_f13:F:100
+29:1335:48616:0:0:87:103:336:10:g_d0_f13:10:g_d0_f13:F:150
+29:1336:48619:0:129:87:103:364:10:g_d0_f13:10:g_d0_f13:F:200
+29:1337:48622:129:0:137:147:235:10:g_d0_f21:7:g_d0_f14:F:∆1
+29:1338:48626:0:134:137:149:380:10:g_d0_f13:8:g_d0_f13:F:yiH
+29:1339:48629:134:0:218:296:246:10:g_d0_f13:10:g_d0_f13:F:050100
+29:1340:48635:0:0:213:218:254:10:g_d0_f13:10:g_d0_f13:F:0
+29:1341:48636:0:0:207:218:274:10:g_d0_f13:10:g_d0_f13:F:20
+29:1342:48638:0:0:207:218:294:10:g_d0_f13:10:g_d0_f13:F:40
+29:1343:48640:0:0:207:218:314:10:g_d0_f13:10:g_d0_f13:F:60
+29:1344:48642:0:0:207:218:334:10:g_d0_f13:10:g_d0_f13:F:80
+29:1345:48644:0:119:202:218:354:10:g_d0_f13:10:g_d0_f13:F:100
+29:1346:48647:119:0:252:262:235:10:g_d0_f21:7:g_d0_f14:F:∆1
+29:1347:48651:0:134:251:264:380:10:g_d0_f20:8:g_d0_f13:F:πiH
+29:1348:48654:134:0:333:415:246:10:g_d0_f13:10:g_d0_f13:F:050
+29:1349:48657:0:0:328:333:254:10:g_d0_f13:10:g_d0_f13:F:0
+29:1350:48658:0:0:322:333:276:10:g_d0_f13:10:g_d0_f13:F:10
+29:1351:48660:0:0:322:333:298:10:g_d0_f13:10:g_d0_f13:F:20
+29:1352:48662:0:0:322:333:320:10:g_d0_f13:10:g_d0_f13:F:30
+29:1353:48664:0:0:322:333:342:10:g_d0_f13:10:g_d0_f13:F:40
+29:1354:48666:0:129:322:333:364:10:g_d0_f13:10:g_d0_f13:F:50
+29:1355:48668:129:0:367:378:235:10:g_d0_f21:7:g_d0_f14:F:∆1
+29:1356:48672:0:134:367:378:380:10:g_d0_f13:8:g_d0_f13:F:yiL
+29:1357:48675:134:0:448:533:246:10:g_d0_f13:10:g_d0_f13:F:050100
+29:1358:48681:0:0:443:448:254:10:g_d0_f13:10:g_d0_f13:F:0
+29:1359:48682:0:0:437:448:276:10:g_d0_f13:10:g_d0_f13:F:20
+29:1360:48684:0:0:437:448:298:10:g_d0_f13:10:g_d0_f13:F:40
+29:1361:48686:0:0:437:448:320:10:g_d0_f13:10:g_d0_f13:F:60
+29:1362:48688:0:0:437:448:342:10:g_d0_f13:10:g_d0_f13:F:80
+29:1363:48690:0:129:432:448:364:10:g_d0_f13:10:g_d0_f13:F:100
+29:1364:48693:129:0:482:493:235:10:g_d0_f21:7:g_d0_f14:F:∆1
+29:1365:48697:0:163:482:493:380:10:g_d0_f20:8:g_d0_f13:F:πiL
+29:1366:48700:163:0:72:237:217:11:g_d0_f11:11:g_d0_f11:F:Note. See notes to figures 2 and 3.
+30:1367:48737:0:18:72:540:708:12:g_d0_f4:12:g_d0_f4:B:the simulation period than it was at the beginning, suggesting stability of the liquidity trap
+30:1368:48831:18:18:72:134:690:12:g_d0_f4:12:g_d0_f4:B:equilibrium.
+30:1369:48843:18:18:89:540:672:12:g_d0_f4:12:g_d0_f4:A:Why does the economy not stay at the intended equilibrium in spite of the fact that,
+30:1370:48927:18:18:72:539:654:12:g_d0_f4:12:g_d0_f4:B:as shown in section 6, this equilibrium is stable under social learning? The reason is that
+30:1371:49018:18:18:72:539:636:12:g_d0_f4:12:g_d0_f4:B:under social learning, history matters. And in the economy considered in this experiment,
+30:1372:49107:18:18:72:539:618:12:g_d0_f4:12:g_d0_f4:B:the history is one of an economy stuck in the liquidity trap. History matters in determining
+30:1373:49199:18:18:72:540:600:12:g_d0_f4:12:g_d0_f4:B:which members of the population will win tournaments, that is, convince other agents that
+30:1374:49288:18:18:72:539:582:12:g_d0_f4:12:g_d0_f4:B:they have the superior model of the economy. Immediately after the perturbation in period
+30:1375:49377:18:18:72:539:564:12:g_d0_f5:12:g_d0_f4:B:TIH+ 1, all agents have the same PLM. However, the mutations thatfollow will, by chance,
+30:1376:49465:18:18:72:540:546:12:g_d0_f4:12:g_d0_f4:B:make some agents’ PLMs closer to the one associated with the liquidity-trap equilibrium
+30:1377:49552:18:18:72:539:528:12:g_d0_f4:12:g_d0_f4:B:than others.  Agents with PLMs closer to the liquidity-trap PLM will enjoy a better fit,
+30:1378:49640:18:18:72:539:510:12:g_d0_f4:12:g_d0_f4:B:since the historical data on which PLMs are evaluated stems from the liquidity-trap rational
+30:1379:49732:18:18:72:539:492:12:g_d0_f4:12:g_d0_f4:B:expectations equilibrium.  Over time, these PLMs will spread across the population and
+30:1380:49818:18:45:72:260:474:12:g_d0_f4:12:g_d0_f4:B:dominate the beliefs in the economy.
+30:1381:49854:45:29:72:193:429:17:g_d0_f3:17:g_d0_f3:C:8  Conclusion
+30:1382:49867:29:18:72:540:400:12:g_d0_f4:12:g_d0_f4:B:The main strength of the Taylor principle is that, by promising to change interest rates by
+30:1383:49958:18:18:72:539:382:12:g_d0_f4:12:g_d0_f4:B:more than one-for-one with inflation, it ensures countercyclical real rates, which in turn, are
+30:1384:50053:18:18:72:539:364:12:g_d0_f4:12:g_d0_f4:B:conducive to aggregate stability. The main weakness of the Taylor principle is that it opens
+30:1385:50145:18:18:72:539:346:12:g_d0_f4:12:g_d0_f4:B:the door to unintended liquidity traps.  Large enough downward revisions in inflationary
+30:1386:50233:18:18:72:540:328:12:g_d0_f4:12:g_d0_f4:B:expectations can lead the monetary authority, by the sheer active nature of the policy rule,
+30:1387:50325:18:18:72:540:310:12:g_d0_f4:12:g_d0_f4:B:to lower interest rates to zero, placing the economy in a liquidity trap, from which it might
+30:1388:50418:18:18:72:181:292:12:g_d0_f4:12:g_d0_f4:B:be difficult to escape.
+30:1389:50441:18:18:89:539:274:12:g_d0_f4:12:g_d0_f4:A:The relevance of the Taylor-rule-induced liquidity trap has been put in doubt by a number
+30:1390:50530:18:18:72:540:256:12:g_d0_f4:12:g_d0_f4:B:of recent studies showing that it lacks stability when agents form expectations through least-
+30:1391:50624:18:18:72:540:238:12:g_d0_f4:12:g_d0_f4:B:square learning. This result can be placed in the context of theories that depart from the
+30:1392:50714:18:18:72:540:220:12:g_d0_f4:12:g_d0_f4:B:rational expectations hypothesis. There are multiple waysin which expectation formation
+30:1393:50801:18:18:72:539:202:12:g_d0_f4:12:g_d0_f4:B:can depart from rationality. The set of possibilities can belarge even if one restricts attention
+30:1394:50898:18:17:72:540:184:12:g_d0_f4:12:g_d0_f4:B:to departures that converge to rationality. The contribution of this paper is to show that
+30:1395:50988:17:18:72:540:167:12:g_d0_f4:12:g_d0_f4:B:the liquidity-trap equilibrium is stable under social learning. The relevance of this result,
+30:1396:51081:18:18:72:540:149:12:g_d0_f4:12:g_d0_f4:B:lies in the view that social learning is no less appealing as adescription of how agents form
+30:1397:51174:18:18:72:540:131:12:g_d0_f4:12:g_d0_f4:B:expectations in the real world than least square learning, especially given the fact that, as
+30:1398:51267:18:18:72:539:113:12:g_d0_f4:12:g_d0_f4:B:has been amply documented in the education and evolutionarysciences, learning has an
+30:1399:51351:18:18:72:219:95:12:g_d0_f4:12:g_d0_f4:B:important social component.
+30:1400:51378:18:0:89:540:77:12:g_d0_f4:12:g_d0_f4:A:We believe that going forward a promising line of research isto devise ways to discipline
+31:1401:51469:0:18:72:539:708:12:g_d0_f4:12:g_d0_f4:B:the choice of expectations formation mechanisms. As in any model selection problem, the
+31:1402:51556:18:18:72:539:690:12:g_d0_f4:12:g_d0_f4:B:guiding principle should be to confront with actual data thepredictions of models that
+31:1403:51642:18:18:72:540:672:12:g_d0_f4:12:g_d0_f4:B:incorporate different assumptions of how expectations are formed and to discriminate on the
+31:1404:51733:18:0:72:191:654:12:g_d0_f4:12:g_d0_f4:B:basis of goodness of fit.
+32:1405:51760:0:30:72:163:708:17:g_d0_f3:17:g_d0_f3:C:References
+32:1406:51770:30:18:72:540:678:12:g_d0_f4:12:g_d0_f4:B:Arifovic, Jasmina, James Bullard, and Olena Kostyshyna, “Social Learning and Monetary
+32:1407:51855:18:18:89:397:660:12:g_d0_f4:12:g_d0_f4:A:Policy Rules,”Economic Journal 123,March 2012, 38-76.
+32:1408:51908:18:18:71:540:642:12:g_d0_f4:12:g_d0_f4:B:Benhabib, Jess, Stephanie Schmitt-Groh ́e, and Mart ́ın Uribe, “The Perils of Taylor Rules,”
+32:1409:52000:18:18:89:423:624:12:g_d0_f22:12:g_d0_f4:A:Journal of Economic Theory 96,January-February 2001, 40-69.
+32:1410:52059:18:18:71:539:606:12:g_d0_f4:12:g_d0_f22:B:Bullard, James, and Kaushik Mitra, “Learning about Monetary Policy Rules,”Journal of
+32:1411:52143:18:18:89:312:588:12:g_d0_f22:12:g_d0_f4:A:Monetary Economics 49,2002, 1105-1129.
+32:1412:52181:18:18:72:540:570:12:g_d0_f4:12:g_d0_f4:B:Eggertsson, Gauti, and Michael Woodford, “The Zero Bound OnInterest Rates And Optimal
+32:1413:52266:18:18:89:483:552:12:g_d0_f4:12:g_d0_f4:A:Monetary Policy,”Brookings Papers On Economic Activity,2003, 139-211.
+32:1414:52335:18:18:72:540:534:12:g_d0_f4:12:g_d0_f22:B:Evans,George W., and Seppo Honkapohja,Learning and Expectations in Macroeconomics,
+32:1415:52417:18:18:89:338:516:12:g_d0_f4:12:g_d0_f4:A:Princeton, NJ: Princeton University Press, 2001.
+32:1416:52465:18:18:72:539:498:12:g_d0_f4:12:g_d0_f4:B:Evans, George W., Eran Guse, and Seppo Honkapohja, “Liquidity Traps, Learning and
+32:1417:52546:18:17:89:418:480:12:g_d0_f4:12:g_d0_f4:A:Stagnation,”European Economic Review 52,2008, 1438-1463.
+32:1418:52602:17:18:72:540:463:12:g_d0_f4:12:g_d0_f4:B:Evans, George W., and Bruce McGough, “Interest Rate Pegs in New Keynesian Models,”
+32:1419:52684:18:18:89:449:445:12:g_d0_f22:12:g_d0_f4:A:Journal of Money Credit and Banking,March 31, 2017, forthcoming.
+32:1420:52748:18:18:72:540:427:12:g_d0_f4:12:g_d0_f4:B:Lux, Thomas, and Sascha Schornstein, “Genetic Learning as an Explanation of Stylized
+32:1421:52832:18:18:89:539:409:12:g_d0_f4:12:g_d0_f4:A:Facts of Foreign Exchange Markets,”Journal of Mathematical Economics 41,February
+32:1422:52912:18:18:89:165:391:12:g_d0_f4:12:g_d0_f4:A:2005, 169-196.
+32:1423:52926:18:18:72:540:373:12:g_d0_f4:12:g_d0_f4:B:Marcet, Albert, and Thomas Sargent, “Convergence of Least Squares Learning Mechanisms
+32:1424:53011:18:18:89:540:355:12:g_d0_f4:12:g_d0_f4:A:in Self-Referential Linear Stochastic Models,”Journal of Economic Theory 48,August
+32:1425:53093:18:18:89:165:337:12:g_d0_f4:12:g_d0_f4:A:1989, 337-368.
+32:1426:53107:18:18:72:539:319:12:g_d0_f4:12:g_d0_f4:B:Woodford, Michael, “Optimal Monetary Policy Inertia,” NBER Working Paper 7261, July
+32:1427:53190:18:18:89:115:301:12:g_d0_f4:12:g_d0_f4:A:1999.
+32:1428:53195:18:18:72:539:283:12:g_d0_f4:12:g_d0_f22:B:Woodford, Michael,Interest and Prices:  Foundations of a Theory of Monetary Policy,
+32:1429:53278:18:0:89:338:265:12:g_d0_f4:12:g_d0_f4:A:Princeton, NJ: Princeton University Press, 2003.

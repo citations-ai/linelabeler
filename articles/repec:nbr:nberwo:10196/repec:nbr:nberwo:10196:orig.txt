@@ -1,0 +1,928 @@
+1:0:0:0:98:218:394:708:144:g_d0_f1:144:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:98:28:128:484:610:144:g_d0_f1:144:g_d0_f1:OPTIMAL POLICY WITH LOW-PROBABILITY EXTREME EVENTS
+1:2:75:28:28:258:353:582:144:g_d0_f1:144:g_d0_f1:Lars E.O. Svensson
+1:3:93:28:14:253:358:554:144:g_d0_f1:144:g_d0_f1:Working Paper 10196
+1:4:111:14:42:218:393:540:144:g_d0_f1:144:g_d0_f1:http://www.nber.org/papers/w10196
+1:5:144:42:14:173:438:498:144:g_d0_f1:144:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:6:180:14:14:237:374:484:144:g_d0_f1:144:g_d0_f1:1050 Massachusetts Avenue
+1:7:205:14:14:250:362:470:144:g_d0_f1:144:g_d0_f1:Cambridge, MA 02138
+1:8:224:14:222:267:343:456:144:g_d0_f1:144:g_d0_f1:December 2003
+1:9:237:222:13:72:539:234:121:g_d0_f1:121:g_d0_f1:A preliminary version of this paper was presented at “Macroeconomics, Monetary Policy, and Financial
+1:10:337:13:13:72:540:221:121:g_d0_f1:121:g_d0_f1:Stability,” a Festschrift for Charles (Chuck) Freedman hosted by the Bank of Canada, June 20, 2003. It was
+1:11:443:13:12:72:540:208:121:g_d0_f1:121:g_d0_f1:provoked  by  issues  raised  by  Chuck  [3]  in  the  general  discussion  of  Svensson  [6]  at  the  Jackson  Hole
+1:12:560:12:13:72:539:196:121:g_d0_f1:121:g_d0_f1:Symposium in 2002. I thank Chuck, Charles Bean, Guy Debelle, Pierre Duguay and Charles Goodhart for
+1:13:659:13:13:72:540:183:121:g_d0_f1:121:g_d0_f1:helpful  discussions  and  comments.  I  thank  Annika  Andreasson  and  Kathleen  Hurley  for  editorial  and
+1:14:769:13:13:72:540:170:121:g_d0_f1:121:g_d0_f1:secretarial assistance and Jose Mauricio Prado, Jr. for research assistance. Financial support from Princeton
+1:15:878:13:12:72:539:157:121:g_d0_f1:121:g_d0_f1:University’s Center for Economic Policy Studies is gratefully acknowledged. Remaining errors and expressed
+1:16:984:12:13:72:540:145:121:g_d0_f1:121:g_d0_f1:views are my own.  The views expressed herein are those of the authors and not necessarily those of the
+1:17:1087:13:25:72:249:132:121:g_d0_f1:121:g_d0_f1:National Bureau of Economic Research.
+1:18:1124:25:13:72:540:107:121:g_d0_f1:121:g_d0_f1:©2003 by Lars E.O. Svensson.  All rights reserved. Short sections of text, not to exceed two paragraphs, may
+1:19:1232:13:0:72:535:94:121:g_d0_f1:121:g_d0_f1:be quoted without explicit permission provided that full credit, including © notice, is given to the source.
+2:20:1340:0:14:72:331:694:144:g_d0_f1:144:g_d0_f1:Optimal Policy with Low-Probability Extreme Events
+2:21:1390:14:14:72:167:680:144:g_d0_f1:144:g_d0_f1:Lars E.O. Svensson
+2:22:1408:14:14:72:234:666:144:g_d0_f1:144:g_d0_f1:NBER Working Paper No. 10196
+2:23:1436:14:14:72:148:652:144:g_d0_f1:144:g_d0_f1:December 2003
+2:24:1449:14:28:72:185:638:144:g_d0_f1:144:g_d0_f1:JEL No. E52, E58, E61
+2:25:1470:28:25:273:338:610:144:g_d0_f2:144:g_d0_f2:ABSTRACT
+2:26:1478:25:24:72:540:585:144:g_d0_f1:144:g_d0_f1:The  optimal  policy  response  to  a  low-probability  extreme  event  is  examined.  A  simple  policy
+2:27:1582:24:24:72:540:561:144:g_d0_f1:144:g_d0_f1:problem is solved for a sequence of different loss functions: quadratic, combined quadratic/absolute-
+2:28:1683:24:24:72:540:537:144:g_d0_f1:144:g_d0_f1:deviation, absolute-deviation, combined quadratic/constant, and perfectionist. The paper shows that,
+2:29:1783:24:24:72:540:513:144:g_d0_f1:144:g_d0_f1:under  some  simplifying  assumptions,  each  of  these  loss  functions  puts  less  weight  on  a  low-
+2:30:1888:24:24:72:539:489:144:g_d0_f1:144:g_d0_f1:probability extreme event than the previous one, down to the quadratic/constant and perfectionist
+2:31:1985:24:24:72:540:465:144:g_d0_f1:144:g_d0_f1:loss functions, which completely ignores the low-probability extreme event. The case when the size
+2:32:2083:24:24:72:539:441:144:g_d0_f1:144:g_d0_f1:of the extreme shock is endogenous and depends on the policy is also examined. This introduces an
+2:33:2180:24:24:72:540:417:144:g_d0_f1:144:g_d0_f1:additional  effect  on  the  optimal  policy  except  for  the  combined  quadratic/constant  and  the
+2:34:2282:24:29:72:208:393:144:g_d0_f1:144:g_d0_f1:perfectionist loss functions. 
+2:35:2312:29:17:72:167:364:144:g_d0_f1:144:g_d0_f1:Lars E.O. Svensson
+2:36:2330:17:17:72:198:347:144:g_d0_f1:144:g_d0_f1:Department of Economics
+2:37:2353:17:17:72:126:330:144:g_d0_f1:144:g_d0_f1:Fisher Hall
+2:38:2364:17:17:72:172:313:144:g_d0_f1:144:g_d0_f1:Princeton University
+2:39:2384:17:17:72:198:296:144:g_d0_f1:144:g_d0_f1:Princeton, NJ 08544-1021
+2:40:2408:17:17:72:124:279:144:g_d0_f1:144:g_d0_f1:and NBER
+2:41:2416:17:0:72:192:262:144:g_d0_f1:144:g_d0_f1:svensson@princeton.edu
+3:42:2438:0:32:72:161:759:145:g_d0_f3:145:g_d0_f3:1. Introduction
+3:43:2453:32:20:72:525:727:121:g_d0_f4:121:g_d0_f4:A standard result in optimal-control theory iscertainty equivalence, which results under the
+3:44:2545:20:20:72:525:707:121:g_d0_f4:121:g_d0_f4:assumption of a linear model with additive uncertainty and a quadratic loss function.  Cer-
+3:45:2636:20:21:72:525:687:121:g_d0_f4:121:g_d0_f4:tainty equivalence implies that only themeanvalues (that is, the probability-weighted average
+3:46:2729:21:20:72:525:666:121:g_d0_f4:121:g_d0_f4:outcomes) of target variables matter for the optimal policy setting. Consider monetary policy
+3:47:2822:20:20:72:525:646:121:g_d0_f4:121:g_d0_f4:underflexible inflation targeting, where inflation and the output gap are the target variables.
+3:48:2917:20:21:72:525:626:121:g_d0_f4:121:g_d0_f4:Because of the sizable lags in the full effects of monetary policy actions on output and inflation,
+3:49:3016:21:20:72:525:605:121:g_d0_f4:121:g_d0_f4:say about a year for output and about two years for inflation, such monetary policy is most
+3:50:3107:20:20:72:525:585:121:g_d0_f4:121:g_d0_f4:effective if it is forward-looking and relies on inflation and output-gap projections. Certainty
+3:51:3203:20:21:72:525:565:121:g_d0_f4:121:g_d0_f4:equivalence then implies that optimal monetary policy need only consider mean inflation and
+3:52:3294:21:20:72:525:544:121:g_d0_f4:121:g_d0_f4:output-gap projections.  That is, the central bank need only to doflexible “mean” inflation
+3:53:3385:20:20:72:525:524:121:g_d0_f4:121:g_d0_f4:targeting, regardless of the degree of uncertainty of the projections. Only thefirst (statistical)
+3:54:3483:20:20:72:323:504:121:g_d0_f4:121:g_d0_f4:moment matters for policy, not the higher moments.
+3:55:3533:20:21:88:525:484:121:g_d0_f4:121:g_d0_f4:Furthermore, certainty equivalence implies that alow-probability extreme event(that is, a
+3:56:3622:21:20:72:525:463:121:g_d0_f4:121:g_d0_f4:large shock with a small probability) should be taken into account by themean  sizeof the
+3:57:3711:20:20:72:526:443:121:g_d0_f4:121:g_d0_f4:event, that is, the probability-weighted size of the shock. Such events could, for instance, be
+3:58:3806:20:21:72:526:423:121:g_d0_f4:121:g_d0_f4:a large and sudden depreciation of the currency (say, the pound or the dollar), a bursting of
+3:59:3899:21:20:72:526:402:121:g_d0_f4:121:g_d0_f4:an asset-price bubble (say, a property-price bubble), or a war in the Middle East with, among
+3:60:3992:20:20:72:525:382:121:g_d0_f4:121:g_d0_f4:other disturbances, an associated oil-price hike. For the Bank of England, the possibility of a
+3:61:4087:20:21:72:525:362:121:g_d0_f4:121:g_d0_f4:sudden substantial depreciation of the pound and resulting higher inflation has been a relevant
+3:62:4182:21:20:72:525:341:121:g_d0_f4:121:g_d0_f4:example. If the Bank of England normally aims at achieving the inflation target at a two-year
+3:63:4275:20:20:72:525:321:121:g_d0_f4:121:g_d0_f4:horizon, this would imply setting interest rates such that mean inflation about two years ahead,
+3:64:4371:20:21:72:525:301:121:g_d0_f4:121:g_d0_f4:including the possibility of a sudden depreciation, approximately equals the inflation target. If
+3:65:4468:21:20:72:525:280:121:g_d0_f4:121:g_d0_f4:a depreciation of the pound would not occur during the next two years, actual inflation would
+3:66:4561:20:20:72:525:260:121:g_d0_f4:121:g_d0_f4:most likely end up lower than the inflation target. Since a depreciation would occur only by a
+3:67:4655:20:21:72:525:240:121:g_d0_f4:121:g_d0_f4:small (subjective) probability, actual inflation would with a large probability fall short of the
+3:68:4752:21:20:72:146:219:121:g_d0_f4:121:g_d0_f4:inflation target.
+3:69:4769:20:20:88:525:199:121:g_d0_f4:121:g_d0_f4:In informal discussions, several central bankers have questioned whether, in such situations,
+3:70:4862:20:21:72:526:179:121:g_d0_f4:121:g_d0_f4:it may make sense to put less weight on the low-probability event than suggested by certainty
+3:71:4955:21:20:72:526:158:121:g_d0_f4:121:g_d0_f4:equivalence and the mean size of the event, perhaps even to ignore the low-probability event
+3:72:5047:20:20:72:525:138:121:g_d0_f4:121:g_d0_f4:altogether. For instance, another policy option is to wait and see, and to deal with the event
+3:73:5141:20:0:72:526:118:121:g_d0_f4:121:g_d0_f4:only if it occurs. Freedman [3, p. 319—330], at the Jackson Hole Symposium in 2002, sponsored
+4:74:5235:0:26:72:476:759:121:g_d0_f4:121:g_d0_f4:by the Federal Reserve Bank of Kansas City, stated, in commenting on Svensson [6]:
+4:75:5317:26:13:99:497:733:121:g_d0_f4:121:g_d0_f4:There are two points about this paper I’d like to make.  Thefirst relates to the
+4:76:5397:13:14:99:498:720:121:g_d0_f4:121:g_d0_f4:mean versus mode debate, and I’d like to tie that to the asset price issue. One of
+4:77:5479:14:13:99:498:706:121:g_d0_f4:121:g_d0_f4:the real challenges to central banks is how to deal with small probability cases. If
+4:78:5563:13:14:99:498:693:121:g_d0_f4:121:g_d0_f4:we have a situation where there is, say, a 10 percent probability of an asset price
+4:79:5646:14:13:99:498:679:121:g_d0_f4:121:g_d0_f4:collapse and a 90 percent probability that it is not going to happen, do you then go
+4:80:5730:13:14:99:498:666:121:g_d0_f4:121:g_d0_f4:ahead and focus on what one would call the mode, which is the appropriate path
+4:81:5808:14:13:99:498:652:121:g_d0_f4:121:g_d0_f4:for policy in the 90 percent case and say, “If the 10 percent case happens, we’ll try
+4:82:5893:13:14:99:498:639:121:g_d0_f4:121:g_d0_f4:and deal with it later.”? Or do we try to deal with the mean? In that case if the
+4:83:5974:14:13:99:498:625:121:g_d0_f4:121:g_d0_f4:small probability outcome doesn’t happen, you are going to have an interest rate
+4:84:6054:13:14:99:498:612:121:g_d0_f4:121:g_d0_f4:path that is not appropriate. But even if it does happen, you will not have moved
+4:85:6135:14:14:99:498:598:121:g_d0_f4:121:g_d0_f4:interest rates enough to deal with the collapse of asset prices in any case. So, it is
+4:86:6221:14:31:99:412:584:121:g_d0_f4:121:g_d0_f4:very much an open question of how to deal with such a situation.
+4:87:6285:31:21:88:525:553:121:g_d0_f4:121:g_d0_f4:The Monetary Policy Committee (MPC) of the Bank of England has raised issues like these,
+4:88:6373:21:20:71:525:532:121:g_d0_f4:121:g_d0_f4:for instance, on February 6—7, 2002, in discussingthe issue of a potential depreciation of the
+4:89:6467:20:25:71:152:512:121:g_d0_f4:121:g_d0_f4:pound, [1, p. 10]:
+4:90:6485:25:14:99:497:487:121:g_d0_f4:121:g_d0_f4:[S]ome members placed weight on upside risks to the inflation outlook. Two main
+4:91:6564:14:13:99:498:473:121:g_d0_f4:121:g_d0_f4:risks to inflation were emphasised: from the possibility of a depreciation of sterling’s
+4:92:6652:13:14:99:498:460:121:g_d0_f4:121:g_d0_f4:exchange rate and from the possibility that consumption would not slow as much as
+4:93:6733:14:13:99:498:446:121:g_d0_f4:121:g_d0_f4:projected. ... There was evidence that the exchange rate was overvalued. ... Other
+4:94:6815:13:14:99:498:433:121:g_d0_f4:121:g_d0_f4:members placed less weight on the exchange rate risk in the published fan charts
+4:95:6895:14:13:99:498:419:121:g_d0_f4:121:g_d0_f4:— either because they thought the probability of a depreciation was low or because
+4:96:6977:13:14:99:498:406:121:g_d0_f4:121:g_d0_f4:the pass through to prices would be small or because policy could react if and when
+4:97:7060:14:32:99:155:392:121:g_d0_f4:121:g_d0_f4:sterling fell.
+4:98:7074:32:20:71:525:360:121:g_d0_f4:121:g_d0_f4:Furthermore, MPC member Nickell [4, p. 19] discusses the issue of exchange rate movements for
+4:99:7167:20:25:71:393:340:121:g_d0_f4:121:g_d0_f4:the Bank of England’s monetary policy in somewhat greater detail:
+4:100:7232:25:14:99:498:315:121:g_d0_f4:121:g_d0_f4:The important question here is should we move interest rates up today in order to
+4:101:7313:14:13:99:498:301:121:g_d0_f4:121:g_d0_f4:forestall the potential inflationary consequences of a significant exchange rate fall
+4:102:7398:13:14:99:498:288:121:g_d0_f4:121:g_d0_f4:which might come about as UK domestic demand growth slows and international
+4:103:7473:14:32:99:229:274:121:g_d0_f4:121:g_d0_f4:demand growth speeds up?
+4:104:7497:32:25:71:281:242:121:g_d0_f4:121:g_d0_f4:He prefers a wait-and-see approach, though:
+4:105:7540:25:13:99:498:217:121:g_d0_f4:121:g_d0_f4:In my view, the answer is simply no. If, and when, such a fall in the exchange rate
+4:106:7623:13:14:99:498:204:121:g_d0_f4:121:g_d0_f4:comes about, then is the time to make appropriate adjustments, if any, in interest
+4:107:7705:14:14:99:498:190:121:g_d0_f4:121:g_d0_f4:rates. To act pre-emptively on this front is difficult because of the huge uncertainties
+4:108:7793:14:13:99:498:176:121:g_d0_f4:121:g_d0_f4:involved in forecasting exchange rate movements and not really necessary because
+4:109:7873:13:14:99:498:163:121:g_d0_f4:121:g_d0_f4:the lags to demand from interest rates and exchange rates are of the same order of
+4:110:7955:14:31:99:152:149:121:g_d0_f4:121:g_d0_f4:magnitude.
+4:111:7965:31:0:71:322:118:121:g_d0_f4:121:g_d0_f4:He clarifies the last point by stating [4, footnote 16]:
+5:112:8022:0:14:99:497:759:121:g_d0_f4:121:g_d0_f4:Theargumenthereisthatthefirst round, price level effects from sudden exchange
+5:113:8099:14:14:99:498:745:121:g_d0_f4:121:g_d0_f4:rate moves should be accommodated, with monetary policy only acting on the po-
+5:114:8177:14:32:99:232:731:121:g_d0_f4:121:g_d0_f4:tential second-round effects.
+5:115:8206:32:20:88:525:699:121:g_d0_f4:121:g_d0_f4:The quotes from the Bank of England’s minutes and Nickell’s speech could be interpreted as
+5:116:8296:20:21:71:525:679:121:g_d0_f4:121:g_d0_f4:indicating a desire to assume the problem away and to argue that there is no tradeoff, because
+5:117:8390:21:20:71:525:658:121:g_d0_f4:121:g_d0_f4:(i)itisappropriatetoaccommodatethefirst-round effect on inflation of a currency depreciation,
+5:118:8483:20:20:71:525:638:121:g_d0_f4:121:g_d0_f4:and (ii) the second-round effects on inflation have such long lags that they can be handled by
+5:119:8577:20:20:71:525:618:121:g_d0_f4:121:g_d0_f4:interest-rate adjustments once the depreciation has occurred. But what if it would be undesirable
+5:120:8674:20:21:71:365:598:121:g_d0_f4:121:g_d0_f4:to accommodate also thefirst-round effect on the price level?
+5:121:8735:21:20:88:525:577:121:g_d0_f4:121:g_d0_f4:Clearly, if the extreme event in question is such that there is time to react to it in case it
+5:122:8829:20:20:71:525:557:121:g_d0_f4:121:g_d0_f4:materializes, there is no point in trying to preempt the event. Instead, there is an option value of
+5:123:8929:20:21:71:525:537:121:g_d0_f4:121:g_d0_f4:waiting to see if the event materializes and only then take the appropriate action. But assume
+5:124:9023:21:20:71:525:516:121:g_d0_f4:121:g_d0_f4:that the event will, with some probability, occur within the lag between a policy action and
+5:125:9115:20:20:71:525:496:121:g_d0_f4:121:g_d0_f4:its impact on the target variables and, furthermore, have a sizable direct impact on the target
+5:126:9210:20:21:71:525:476:121:g_d0_f4:121:g_d0_f4:variable within that lag, so that any policy action after the event cannot undo this. Then, there
+5:127:9307:21:20:71:525:455:121:g_d0_f4:121:g_d0_f4:is a genuine tradeoffbetween acting to preempt the event by taking it into account by its mean
+5:128:9401:20:20:71:192:435:121:g_d0_f4:121:g_d0_f4:size, and not preempting.
+5:129:9426:20:21:88:525:415:121:g_d0_f4:121:g_d0_f7:This paper tries to come to grips with problems of this type, when there is a genuine tradeoff
+5:130:9520:21:20:71:525:394:121:g_d0_f4:121:g_d0_f4:between preempting and not, by examining what kind of optimal policy for a low-probability
+5:131:9610:20:20:71:525:374:121:g_d0_f4:121:g_d0_f4:shock is implied by other loss functions than the standard quadratic one.1The paper con-
+5:132:9698:20:21:71:525:354:121:g_d0_f4:121:g_d0_f4:siders a simple policy problem with a sequence of different loss functions: quadratic, combined
+5:133:9793:21:20:71:525:333:121:g_d0_f4:121:g_d0_f4:quadratic/absolute-deviation, absolute-deviation, combined quadratic/constant, and perfection-
+5:134:9887:20:20:71:525:313:121:g_d0_f4:121:g_d0_f4:ist.2Obviously, this is a short and far from exhaustive list of possible loss functions. The paper
+5:135:9985:20:21:72:525:293:121:g_d0_f4:121:g_d0_f4:shows that, under some simplifying assumptions, each of these loss functions puts less weight
+5:136:10078:21:20:72:525:272:121:g_d0_f4:121:g_d0_f4:on a low-probability extreme event than the previous one, down to the quadratic/constant and
+5:137:10170:20:20:72:525:252:121:g_d0_f4:121:g_d0_f4:perfectionist loss functions, which completely ignore the low-probability extreme event.  The
+5:138:10263:20:21:72:526:232:121:g_d0_f4:121:g_d0_f4:paper also examines the case when the size of the extreme shock is endogenous and depends
+5:139:10352:21:20:72:525:211:121:g_d0_f4:121:g_d0_f4:on the policy instrument. This introduces an additional effect on optimal policy of the extreme
+5:140:10447:20:16:71:499:191:121:g_d0_f4:121:g_d0_f4:shock for all loss functions except the combined quadratic/constant and the perfectionist.
+5:141:10537:16:14:84:525:175:36:g_d0_f9:82:g_d0_f10:1Vickers [9] and Wallis [10] have previously examinedwhether some of these lossfunctions motivate mean,
+5:142:10640:14:10:71:88:161:82:g_d0_f10:36:g_d0_f9:median or mode inflation targeting under normal circumstances.2
+5:143:10703:10:10:92:526:151:82:g_d0_f10:82:g_d0_f10:The combined quadratic/constant loss function can be seen as a simplification of the bell loss function
+5:144:10806:10:0:71:220:141:82:g_d0_f10:82:g_d0_f10:examined by Bray and Goodhart [2].
+6:145:10841:0:32:72:232:759:145:g_d0_f3:145:g_d0_f3:2. A simple policy problem
+6:146:10867:32:20:72:530:727:121:g_d0_f4:121:g_d0_f4:Letπdenote (the rate of) future inflation, and assume that future inflationisdeterminedby
+6:147:10956:20:20:72:525:707:121:g_d0_f4:121:g_d0_f4:the current state of the economy,x, a current (policy) instrument,i, and an exogenous future
+6:148:11048:20:21:72:227:687:121:g_d0_f4:121:g_d0_f4:stochastic shock,z, according to
+6:149:11080:21:24:262:335:666:121:g_d0_f12:121:g_d0_f12:π=x−αi+z,
+6:150:11089:24:20:72:525:642:121:g_d0_f4:121:g_d0_f4:whereαis a positive constant. Assume that the instrument has to be set before the future shock
+6:151:11183:20:20:72:525:622:121:g_d0_f4:121:g_d0_f4:is known but after the current state of the economy is observed. Assume that the future shock
+6:152:11276:20:26:72:411:602:121:g_d0_f4:121:g_d0_f4:is the sum of two independently distributed random variables,εandη,
+6:153:11343:26:25:275:322:576:121:g_d0_f12:121:g_d0_f4:z=ε+η.
+6:154:11349:25:21:72:525:551:121:g_d0_f4:121:g_d0_f4:Assume thatεhas a zero mean and a continuous distribution. It will be interpreted as a future
+6:155:11442:21:20:72:525:530:121:g_d0_f4:121:g_d0_f4:normal-size shock with relatively modest variance. Letf(ε) denote the density function of the
+6:156:11535:20:20:72:159:510:121:g_d0_f4:121:g_d0_f4:normal-size shock.
+6:157:11553:20:21:88:525:490:121:g_d0_f4:121:g_d0_f4:Letηhave a discrete distribution such that it can take two values, 0 anda, with probability
+6:158:11644:21:20:72:526:469:121:g_d0_f4:121:g_d0_f4:1−γ>0andγ>0, respectively. Leta>0 be a given large number, and letγbe a small
+6:159:11721:20:20:72:525:449:121:g_d0_f4:121:g_d0_f4:probability. (The case when the size of the shock is endogenous will be examined in section 8.)
+6:160:11816:20:21:72:525:429:121:g_d0_f4:121:g_d0_f4:The high-probability outcome,η= 0, and the resulting shock,z=ε,willbeidentified with a
+6:161:11902:21:20:72:525:408:121:g_d0_f4:121:g_d0_f4:futurenormaloutcome. The low-probability outcome,η=a, and the resulting shock,z=a+ε,
+6:162:11986:20:20:72:525:388:121:g_d0_f4:121:g_d0_f4:will be identified with a futureextremeoutcome. Thus, the extreme outcome is here a large
+6:163:12075:20:21:72:163:368:121:g_d0_f4:65:g_d0_f8:inflationary shock.3
+6:164:12095:21:20:88:525:347:121:g_d0_f4:121:g_d0_f4:Leth(z) be the density function of the future shockz. Under the assumptions above, it will
+6:165:12185:20:20:72:127:327:121:g_d0_f4:121:g_d0_f4:be given by
+6:166:12196:20:24:223:525:307:121:g_d0_f12:121:g_d0_f4:h(z)≡(1−γ)f(z)+γf(z−a).(2.1)
+6:167:12224:24:21:72:525:283:121:g_d0_f4:121:g_d0_f4:An example of such a density function is shown infigure 2.1. Theunconditional meanofz,Ez,
+6:168:12313:21:20:72:100:262:121:g_d0_f4:121:g_d0_f4:fulfills
+6:169:12321:20:0:244:271:242:121:g_d0_f4:121:g_d0_f13:Ez≡
+6:170:12324:0:15:273:279:257:121:g_d0_f14:121:g_d0_f14:Z
+6:171:12325:15:24:286:354:242:121:g_d0_f12:121:g_d0_f12:zh(z)dz=γa.
+6:172:12336:24:20:72:525:218:121:g_d0_f4:121:g_d0_f4:For future reference, let med(z)denotethemedianofz. It is (for a continuous distribution)
+6:173:12425:20:20:72:120:198:121:g_d0_f4:121:g_d0_f4:defined by
+6:174:12435:20:0:250:333:178:121:g_d0_f4:121:g_d0_f4:Pr[z≤med(z)] =
+6:175:12449:0:15:337:342:185:121:g_d0_f4:121:g_d0_f4:1
+6:176:12450:15:0:337:342:170:121:g_d0_f4:121:g_d0_f4:2
+6:177:12451:0:20:344:525:178:121:g_d0_f12:121:g_d0_f4:,(2.2)
+6:178:12457:20:13:84:525:158:36:g_d0_f9:82:g_d0_f10:3The extreme outcome could be a large deflationary shock. This brings in issues of the zero lower bound on
+6:179:12563:13:9:71:525:145:82:g_d0_f10:82:g_d0_f10:interest rates and the risk for the economy of falling into a liquidity trap with a prolonged recession and deflation.
+6:180:12681:9:9:71:524:136:82:g_d0_f10:82:g_d0_f10:These topical issues have to do with nonlinearities in the transmission mechanism of monetary policy and raise
+6:181:12791:9:9:71:525:127:82:g_d0_f10:82:g_d0_f10:separate issues that are not discussed here. See Svensson [7], for instance, for a recent discussion of deflation and
+6:182:12908:9:0:71:321:118:82:g_d0_f10:82:g_d0_f10:liquidity traps and references to the literature on those issues.
+7:183:12974:0:172:190:407:752:121:g_d0_f4:121:g_d0_f4:Figure 2.1: The density function of the shock
+7:184:13019:172:0:207:212:580:95:g_d0_f15:95:g_d0_f15:0
+7:185:13020:0:137:207:222:726:95:g_d0_f16:95:g_d0_f15:h(z)
+7:186:13024:137:7:410:414:589:95:g_d0_f16:95:g_d0_f16:z
+7:187:13025:7:0:360:365:582:95:g_d0_f16:95:g_d0_f16:a
+7:188:13026:0:52:237:276:680:95:g_d0_f15:95:g_d0_f15:(1−γ) f (z)
+7:189:13037:52:94:297:331:628:95:g_d0_f17:95:g_d0_f15:γf (z−a)
+7:190:13045:94:0:72:158:534:121:g_d0_f4:121:g_d0_f13:where Pr[z≤y]≡
+7:191:13059:0:13:161:172:543:121:g_d0_f14:65:g_d0_f18:Ry
+7:192:13061:13:16:166:525:530:65:g_d0_f19:121:g_d0_f12:−∞h(z)dzdenotes the probability that the realization of the future shockz
+7:193:13134:16:21:72:529:514:121:g_d0_f4:121:g_d0_f4:is less than or equal to a given valuey. Furthermore, let mode(z)denotethemodeofz,thatis,
+7:194:13223:21:30:72:521:493:121:g_d0_f4:121:g_d0_f4:the set ofz(which can have several elements) for which the probability density is the highest,
+7:195:13317:30:30:240:357:463:121:g_d0_f4:121:g_d0_f12:mode(z)≡arg maxh(z).
+7:196:13337:30:20:88:525:433:121:g_d0_f4:121:g_d0_f5:Let  ̄πdenote expected future inflation conditional on the future normal outcome, thenormal
+7:197:13428:20:21:72:186:413:121:g_d0_f5:121:g_d0_f4:mean(future)inflation,
+7:198:13450:21:26:260:338:392:121:g_d0_f4:121:g_d0_f12: ̄π≡E[π;η=0].
+7:199:13463:26:20:72:525:366:121:g_d0_f4:121:g_d0_f4:We note that normal mean inflation is related to the current state of the economy and the
+7:200:13552:20:21:72:177:346:121:g_d0_f4:121:g_d0_f4:current instrument by
+7:201:13573:21:26:272:525:325:121:g_d0_f4:121:g_d0_f4: ̄π=x−αi,(2.3)
+7:202:13587:26:30:72:470:299:121:g_d0_f4:121:g_d0_f4:and that the relation between realized future inflation and normal mean inflation is
+7:203:13671:30:30:273:525:269:121:g_d0_f12:121:g_d0_f4:π= ̄π+z.(2.4)
+7:204:13684:30:20:72:525:239:121:g_d0_f4:121:g_d0_f4:For given normal mean inflation, thedensity function of future inflationis then given byh(π− ̄π).
+7:205:13781:20:31:72:448:219:121:g_d0_f4:121:g_d0_f4:It is shown infigure 2.2.Unconditional mean(future)inflation,Eπ,willfulfill
+7:206:13856:31:0:222:250:188:121:g_d0_f4:121:g_d0_f13:Eπ≡
+7:207:13859:0:15:252:258:203:121:g_d0_f14:121:g_d0_f14:Z
+7:208:13860:15:30:265:525:188:121:g_d0_f12:121:g_d0_f4:πh(π− ̄π)dπ= ̄π+γa.(2.5)
+7:209:13884:30:20:88:525:158:121:g_d0_f4:121:g_d0_f4:It follows that we can conveniently discuss the policy action in terms of the resulting normal
+7:210:13978:20:20:72:525:138:121:g_d0_f4:121:g_d0_f4:mean inflation, and for given normal mean inflation (and current state of the economy) then
+7:211:14069:20:0:72:329:118:121:g_d0_f4:121:g_d0_f4:infer the corresponding instrument setting from (2.3).
+8:212:14124:0:176:177:420:752:121:g_d0_f4:121:g_d0_f4:Figure 2.2: The density function of future inflation
+8:213:14176:176:0:207:212:576:100:g_d0_f17:100:g_d0_f17:π
+8:214:14177:0:137:196:227:722:94:g_d0_f16:94:g_d0_f15:h(π−π)
+8:215:14183:137:8:409:414:585:100:g_d0_f17:100:g_d0_f17:π
+8:216:14184:8:0:351:373:577:100:g_d0_f17:94:g_d0_f16:π+ a
+8:217:14188:0:52:237:292:676:94:g_d0_f15:94:g_d0_f15:(1−γ) f (π−π)
+8:218:14201:52:0:296:349:624:94:g_d0_f17:94:g_d0_f15:γf (π−π−a)
+8:219:14211:0:146:221:224:726:94:g_d0_f16:94:g_d0_f16:-
+8:220:14212:146:0:209:212:580:94:g_d0_f16:94:g_d0_f16:-
+8:221:14213:0:99:286:289:680:94:g_d0_f16:94:g_d0_f16:-
+8:222:14214:99:0:353:356:581:94:g_d0_f16:94:g_d0_f16:-
+8:223:14215:0:99:329:332:628:94:g_d0_f16:94:g_d0_f16:-
+8:224:14216:99:20:88:525:529:121:g_d0_f4:121:g_d0_f4:LetL(π) be a loss function over inflation with afixed inflation target,π∗, which we take to be
+8:225:14310:20:20:72:525:509:121:g_d0_f4:121:g_d0_f4:a low positive number. The loss function has a minimum for the inflation target:L(π)≥L(π∗)
+8:226:14400:20:21:72:525:489:121:g_d0_f4:121:g_d0_f4:for allπ. The minimum will be unique for the loss functions considered here (L(π)>L(π∗)
+8:227:14487:21:20:72:525:468:121:g_d0_f4:121:g_d0_f4:for allπ6=π∗), but this is not necessary and the treatment here can easily be extended to
+8:228:14576:20:20:71:524:448:121:g_d0_f4:121:g_d0_f4:loss functions that have non-unique minima, for instance those corresponding to a “zone of
+8:229:14666:20:21:71:138:428:121:g_d0_f4:65:g_d0_f8:indifference.”4
+8:230:14681:21:20:88:525:407:121:g_d0_f4:121:g_d0_f4:The policy problem then consists of selecting the normal mean inflation,  ̄π, so as to minimize
+8:231:14776:20:20:71:153:387:121:g_d0_f4:121:g_d0_f4:theexpected loss,
+8:232:14793:20:0:179:223:367:121:g_d0_f4:121:g_d0_f13:EL(π)≡
+8:233:14799:0:15:225:231:382:121:g_d0_f14:121:g_d0_f14:Z
+8:234:14800:15:0:238:326:367:121:g_d0_f12:121:g_d0_f4:L(π)h(π− ̄π)dπ=
+8:235:14815:0:15:329:335:382:121:g_d0_f14:121:g_d0_f14:Z
+8:236:14816:15:27:341:417:367:121:g_d0_f12:121:g_d0_f12:L( ̄π+z)h(z)dz.
+8:237:14831:27:20:71:525:340:121:g_d0_f4:121:g_d0_f4:Since inflation is the only target variable (the only variable entering the loss function), this is a
+8:238:14932:20:21:71:493:320:121:g_d0_f4:121:g_d0_f4:case of so-called “strict” inflation targeting–an unrealistic but simple case to deal with.
+8:239:15023:21:24:88:382:299:121:g_d0_f4:121:g_d0_f4:Thefirst-order condition for an optimum can then be written
+8:240:15082:24:14:157:163:275:121:g_d0_f12:121:g_d0_f12:∂
+8:241:15083:14:0:154:166:261:121:g_d0_f12:121:g_d0_f12:∂ ̄π
+8:242:15087:0:0:168:214:268:121:g_d0_f4:121:g_d0_f4:EL(π)=
+8:243:15093:0:8:214:220:283:121:g_d0_f14:121:g_d0_f14:Z
+8:244:15094:8:14:228:276:275:121:g_d0_f12:121:g_d0_f4:∂L( ̄π+z)
+8:245:15103:14:0:246:259:261:121:g_d0_f12:121:g_d0_f12:∂π
+8:246:15105:0:0:277:321:268:121:g_d0_f12:121:g_d0_f4:h(z)dz=
+8:247:15112:0:8:323:329:283:121:g_d0_f14:121:g_d0_f14:Z
+8:248:15113:8:14:337:366:275:121:g_d0_f12:121:g_d0_f4:∂L(π)
+8:249:15118:14:0:345:358:261:121:g_d0_f12:121:g_d0_f12:∂π
+8:250:15120:0:33:367:444:268:121:g_d0_f12:121:g_d0_f12:h(π− ̄π)dπ=0,
+8:251:15133:33:20:72:525:235:121:g_d0_f4:121:g_d0_f4:where∂L(π)∂πis themarginal loss(function), the derivative of the loss function with respect to
+8:252:15227:20:31:72:284:215:121:g_d0_f4:121:g_d0_f4:inflation. Hence, we can write this simply as
+8:253:15272:31:0:266:273:184:121:g_d0_f4:121:g_d0_f4:E
+8:254:15273:0:15:277:306:191:121:g_d0_f12:121:g_d0_f4:∂L(π)
+8:255:15278:15:0:285:298:176:121:g_d0_f12:121:g_d0_f12:∂π
+8:256:15280:0:31:310:525:184:121:g_d0_f4:121:g_d0_f4:=0.(2.6)
+8:257:15288:31:16:71:525:153:121:g_d0_f4:121:g_d0_f4:That is, the normal mean inflation should be chosen so that theexpected marginal lossequals
+8:258:15379:16:14:84:525:137:36:g_d0_f9:82:g_d0_f10:4A loss function fulfillingL(π)=0for|π−π∗|≤c>0andL(π)=cfor|π−π∗|>cis an example of a
+8:259:15463:14:0:71:205:123:82:g_d0_f10:82:g_d0_f10:zone-of-indifference loss function.
+9:260:15499:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:zero.  This is theoptimal  targeting  rulefor this problem (see, for instance, Svensson [8] on
+9:261:15593:21:37:72:148:738:121:g_d0_f4:121:g_d0_f4:targeting rules).
+9:262:15610:37:31:72:389:701:145:g_d0_f3:145:g_d0_f3:3. A quadratic loss function: Mean inflation targeting
+9:263:15664:31:32:72:238:670:121:g_d0_f4:121:g_d0_f4:Consider a quadratic loss function,
+9:264:15699:32:0:252:287:638:121:g_d0_f12:121:g_d0_f13:L(π)≡
+9:265:15704:0:15:290:295:646:121:g_d0_f4:121:g_d0_f4:1
+9:266:15705:15:0:290:295:631:121:g_d0_f4:121:g_d0_f4:2
+9:267:15706:0:31:297:525:638:121:g_d0_f4:121:g_d0_f4:(π−π∗)2.(3.1)
+9:268:15719:31:20:71:525:607:121:g_d0_f4:121:g_d0_f4:This loss function is shown as the solid curve infigure 3.1. The marginal loss is continuous,
+9:269:15812:20:13:71:229:587:121:g_d0_f4:121:g_d0_f4:linear and increasing in inflation,
+9:270:15847:13:15:259:288:574:121:g_d0_f12:121:g_d0_f4:∂L(π)
+9:271:15852:15:0:267:280:559:121:g_d0_f12:121:g_d0_f12:∂π
+9:272:15854:0:27:293:525:567:121:g_d0_f4:121:g_d0_f4:=π−π∗.(3.2)
+9:273:15865:27:21:72:288:540:121:g_d0_f4:121:g_d0_f4:It is shown as the solid line AA’ infigure 3.2.
+9:274:15912:21:20:88:525:519:121:g_d0_f4:121:g_d0_f4:From the optimal targeting rule, (2.6), and the marginal loss, (3.2), it follows that the optimal
+9:275:16009:20:31:72:290:499:121:g_d0_f4:121:g_d0_f4:targetingruleinthequadraticcaseissimply
+9:276:16048:31:31:276:321:468:121:g_d0_f4:121:g_d0_f12:Eπ=π∗.
+9:277:16054:31:21:72:525:437:121:g_d0_f4:121:g_d0_f4:That is, normal mean inflation should be set so as to make unconditional mean inflation equal
+9:278:16147:21:20:72:530:416:121:g_d0_f4:121:g_d0_f4:to the inflation target, what we can call (unconditional)mean inflation targeting. Thisisan
+9:279:16238:20:20:72:526:396:121:g_d0_f4:121:g_d0_f4:example of the certainty equivalence that holds under the assumption of a linear model with
+9:280:16329:20:21:72:314:376:121:g_d0_f4:121:g_d0_f4:additive uncertainty and a quadratic loss function.
+9:281:16380:21:20:88:525:355:121:g_d0_f4:121:g_d0_f4:It follows from (2.5) that the optimal normal mean inflation with a quadratic loss function,
+9:282:16472:20:20:72:185:335:121:g_d0_f4:121:g_d0_f4:denoted  ̄πq,isgivenby
+9:283:16494:20:27:266:332:315:121:g_d0_f4:121:g_d0_f12: ̄πq=π∗−γa.
+9:284:16505:27:21:72:525:288:121:g_d0_f4:121:g_d0_f4:It hence undershoots the inflation target by the mean future extreme event,γa, the probability-
+9:285:16600:21:37:72:273:267:121:g_d0_f4:121:g_d0_f4:weighted size of the future extreme shock.
+9:286:16642:37:31:72:457:230:145:g_d0_f3:145:g_d0_f3:4. An absolute-deviation loss function: median inflation targeting
+9:287:16708:31:20:72:525:199:121:g_d0_f4:121:g_d0_f4:Consider an absolute-deviation loss function, that is, a loss function that is linear in the absolute
+9:288:16809:20:32:72:293:179:121:g_d0_f4:121:g_d0_f4:deviation of inflation from the inflation target,
+9:289:16858:32:0:259:525:147:121:g_d0_f12:121:g_d0_f4:L(π)≡|π−π∗|.(4.1)
+10:290:16876:0:26:209:387:752:121:g_d0_f4:121:g_d0_f4:Figure 3.1: Alternative loss functions
+10:291:16914:26:146:209:227:726:94:g_d0_f16:94:g_d0_f15:L(π)
+10:292:16918:146:0:210:215:580:94:g_d0_f15:94:g_d0_f15:0
+10:293:16919:0:9:389:394:589:100:g_d0_f17:100:g_d0_f17:π
+10:294:16920:9:0:317:303:580:100:g_d0_f17:94:g_d0_f16:π*+cπ*−cπ*
+10:295:16930:0:100:197:213:628:94:g_d0_f16:94:g_d0_f15:c2/2
+10:296:16934:100:35:187:410:528:121:g_d0_f4:121:g_d0_f4:Figure 3.2: Alternative marginal loss functions
+10:297:16981:35:79:183:225:493:100:g_d0_f17:100:g_d0_f17:∂L(π) /∂π
+10:298:16990:79:7:408:413:414:100:g_d0_f17:100:g_d0_f17:π
+10:299:16991:7:0:294:342:407:100:g_d0_f17:94:g_d0_f16:π*π*+c
+10:300:16997:0:0:237:259:418:100:g_d0_f17:94:g_d0_f16:π*−c
+10:301:17001:0:88:196:200:459:94:g_d0_f16:94:g_d0_f16:c
+10:302:17002:88:30:189:200:371:100:g_d0_f17:94:g_d0_f16:−c
+10:303:17004:30:0:224:231:341:94:g_d0_f15:94:g_d0_f15:A
+10:304:17005:0:0:251:257:365:94:g_d0_f15:94:g_d0_f15:B
+10:305:17006:0:0:328:338:462:94:g_d0_f15:94:g_d0_f15:B’
+10:306:17008:0:138:368:378:502:94:g_d0_f15:94:g_d0_f15:A’
+10:307:17010:138:0:207:213:364:94:g_d0_f15:94:g_d0_f15:C
+10:308:17011:0:58:394:404:463:94:g_d0_f15:94:g_d0_f15:C’
+10:309:17013:58:0:195:202:405:94:g_d0_f15:94:g_d0_f15:D
+10:310:17014:0:14:392:402:419:94:g_d0_f15:94:g_d0_f15:D’
+10:311:17016:14:0:239:245:405:94:g_d0_f15:94:g_d0_f15:E
+10:312:17017:0:54:337:346:419:94:g_d0_f15:94:g_d0_f15:E’
+10:313:17019:54:0:288:293:365:94:g_d0_f15:94:g_d0_f15:F
+10:314:17020:0:92:289:207:463:94:g_d0_f15:94:g_d0_f16:F’-
+10:315:17023:92:76:204:207:371:94:g_d0_f16:94:g_d0_f16:-
+10:316:17024:76:21:72:525:295:121:g_d0_f4:121:g_d0_f4:This loss function is shown as the V-shaped dashed-dotted line infigure 3.1.  For this loss
+10:317:17115:21:22:72:501:274:121:g_d0_f4:121:g_d0_f4:function, the marginal loss is discontinuous at the inflation target and otherwise constant,
+10:318:17207:22:15:226:255:252:121:g_d0_f12:121:g_d0_f4:∂L(π)
+10:319:17212:15:0:234:247:237:121:g_d0_f12:121:g_d0_f12:∂π
+10:320:17214:0:0:259:268:244:121:g_d0_f4:121:g_d0_f4:=
+10:321:17215:0:9:271:279:260:121:g_d0_f14:121:g_d0_f14:½
+10:322:17216:9:13:284:365:251:121:g_d0_f13:121:g_d0_f12:−1forπ<π∗,
+10:323:17226:13:24:294:365:238:121:g_d0_f4:121:g_d0_f12:1forπ>π∗.
+10:324:17235:24:20:71:343:214:121:g_d0_f4:121:g_d0_f4:It is shown as the step function CBFF’B’C’ infigure 3.2.
+10:325:17291:20:30:88:260:194:121:g_d0_f4:121:g_d0_f4:The expected marginal loss is hence
+10:326:17326:30:0:176:183:164:121:g_d0_f4:121:g_d0_f4:E
+10:327:17327:0:15:186:215:172:121:g_d0_f12:121:g_d0_f4:∂L(π)
+10:328:17332:15:0:194:207:157:121:g_d0_f12:121:g_d0_f12:∂π
+10:329:17334:0:0:226:254:164:121:g_d0_f4:121:g_d0_f13:=−
+10:330:17336:0:25:255:275:179:121:g_d0_f14:36:g_d0_f25:Zπ∗
+10:331:17339:25:0:261:276:154:65:g_d0_f19:65:g_d0_f19:−∞
+10:332:17341:0:0:279:344:164:121:g_d0_f12:121:g_d0_f4:h(π− ̄π)dπ+
+10:333:17352:0:25:345:365:179:121:g_d0_f14:65:g_d0_f19:Z∞
+10:334:17354:25:0:352:361:154:65:g_d0_f18:36:g_d0_f25:π∗
+10:335:17356:0:23:367:420:164:121:g_d0_f12:121:g_d0_f12:h(π− ̄π)dπ
+10:336:17366:23:23:226:371:141:121:g_d0_f4:121:g_d0_f4:=−Pr[π≤π∗]+Pr[π>π∗]
+10:337:17385:23:0:226:324:118:121:g_d0_f4:121:g_d0_f12:=1−2Pr[π≤π∗],
+11:338:17399:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:where I have used that Pr[π>π∗]=1−Pr[π≤π∗]. The optimal targeting rule, (2.6), requires
+11:339:17486:21:30:72:272:738:121:g_d0_f4:121:g_d0_f4:setting this equal to zero, which results in
+11:340:17530:30:0:260:326:708:121:g_d0_f4:121:g_d0_f4:Pr[π≤π∗]=
+11:341:17539:0:15:326:331:715:121:g_d0_f4:121:g_d0_f4:1
+11:342:17540:15:0:326:331:700:121:g_d0_f4:121:g_d0_f4:2
+11:343:17541:0:31:333:525:708:121:g_d0_f12:121:g_d0_f4:.(4.2)
+11:344:17547:31:20:88:525:677:121:g_d0_f4:121:g_d0_f4:It follows from (2.2) that normal mean inflation should be set so that median future inflation
+11:345:17641:20:31:71:411:657:121:g_d0_f4:121:g_d0_f4:equals the inflation target, what we can callmedian inflation targeting,
+11:346:17713:31:30:266:525:626:121:g_d0_f4:121:g_d0_f4:med(π)=π∗.(4.3)
+11:347:17728:30:21:88:528:596:121:g_d0_f4:121:g_d0_f4:It then follows from (2.4) and (4.3) that the optimal normal mean inflationwithanabsolute-
+11:348:17818:21:30:72:299:575:121:g_d0_f4:121:g_d0_f4:deviation loss function, denoted  ̄πa,isgivenby
+11:349:17865:30:36:255:525:545:121:g_d0_f4:121:g_d0_f4: ̄πa=π∗−med(z).(4.4)
+11:350:17885:36:27:71:171:509:121:g_d0_f28:121:g_d0_f28:4.1. A special case
+11:351:17904:27:20:71:529:482:121:g_d0_f4:121:g_d0_f4:Assume that the normal future shock,ε,has a bounded symmetric support,ε∈[−b, b](where
+11:352:17989:20:31:71:301:462:121:g_d0_f12:121:g_d0_f4:b>0 is a constant).5Furthermore, assume that
+11:353:18033:31:31:282:525:431:121:g_d0_f12:121:g_d0_f4:a>2b.(4.5)
+11:354:18043:31:20:72:525:400:121:g_d0_f4:121:g_d0_f4:This implies that the support of the extreme shock,z=a+ε∈[a−b, a+b], falls outside the
+11:355:18129:20:20:72:525:380:121:g_d0_f4:121:g_d0_f4:support of the normal shock (this is the case for the density function shown infigure 2.1). This
+11:356:18225:20:21:72:525:360:121:g_d0_f4:121:g_d0_f4:is consistent with the previous assumption that the variance of the normal shockεis modest
+11:357:18315:21:20:72:265:339:121:g_d0_f4:121:g_d0_f4:relative to the size of the extreme event.
+11:358:18357:20:20:88:525:319:121:g_d0_f4:121:g_d0_f4:Furthermore, in order to conveniently compute the median of the total future shock,z,
+11:359:18442:20:31:72:258:299:121:g_d0_f4:121:g_d0_f4:assume thatεis uniformly distributed,
+11:360:18479:31:0:233:268:268:121:g_d0_f12:121:g_d0_f4:f(ε)=
+11:361:18484:0:13:268:288:284:121:g_d0_f14:65:g_d0_f8:½1
+11:362:18486:13:10:282:357:271:65:g_d0_f8:121:g_d0_f12:2bfor|ε|≤b,
+11:363:18497:10:0:284:360:261:121:g_d0_f4:121:g_d0_f12:0for|ε|>b.
+11:364:18507:0:30:503:525:268:121:g_d0_f4:121:g_d0_f4:(4.6)
+11:365:18512:30:51:71:374:238:121:g_d0_f4:121:g_d0_f4:Then the density function of the future shock,h(z), is given by
+11:366:18575:51:0:191:226:187:121:g_d0_f12:121:g_d0_f4:h(z)=
+11:367:18580:0:9:226:236:222:121:g_d0_f29:121:g_d0_f29:
+11:368:18581:9:7:226:236:213:121:g_d0_f29:121:g_d0_f29:
+11:369:18583:7:26:226:236:206:121:g_d0_f29:121:g_d0_f29:
+11:370:18586:26:7:226:236:180:121:g_d0_f29:121:g_d0_f29:
+11:371:18588:7:0:226:236:173:121:g_d0_f29:121:g_d0_f29:
+11:372:18591:0:13:259:353:214:121:g_d0_f4:121:g_d0_f12:0forz<−b,
+11:373:18600:13:14:240:377:201:121:g_d0_f4:121:g_d0_f12:(1−γ)12bfor−b≤z≤b,
+11:374:18618:14:13:259:381:187:121:g_d0_f4:121:g_d0_f12:0forb<z<a−b,
+11:375:18630:13:14:254:400:174:121:g_d0_f12:121:g_d0_f12:γ12bfora−b≤z≤a+b,
+11:376:18647:14:0:259:364:160:121:g_d0_f4:121:g_d0_f12:0fora+b<z.
+11:377:18657:0:50:503:525:187:121:g_d0_f4:121:g_d0_f4:(4.7)
+11:378:18662:50:16:72:300:137:121:g_d0_f4:121:g_d0_f4:This density function is illustrated infigure 4.1.
+11:379:18712:16:0:84:525:121:36:g_d0_f9:82:g_d0_f10:5The support of a probabilitydistribution is the set of outcomes for which the density or probability is positive.
+12:380:18827:0:142:161:436:752:121:g_d0_f4:121:g_d0_f4:Figure 4.1: The special-case density function of the shock
+12:381:18885:142:0:416:420:610:95:g_d0_f16:95:g_d0_f16:z
+12:382:18886:0:124:228:243:726:95:g_d0_f16:95:g_d0_f15:h(z)
+12:383:18890:124:0:212:403:602:100:g_d0_f17:95:g_d0_f16:−b   0    b                                     a −b    a + b     
+12:384:18956:0:39:257:330:676:95:g_d0_f15:95:g_d0_f16:Height= (1−γ)/2b
+12:385:18972:39:82:281:337:637:95:g_d0_f15:95:g_d0_f16:Height= γ/2b
+12:386:18984:82:20:88:525:555:121:g_d0_f4:121:g_d0_f12:To compute the median ofz,med(z), we assume thatγ<12(recall that we assume thatγ
+12:387:19064:20:20:72:525:535:121:g_d0_f4:121:g_d0_f4:is a small positive number) and use that the median then falls within the support of the normal
+12:388:19159:20:21:72:101:515:121:g_d0_f4:121:g_d0_f4:shock,
+12:389:19165:21:26:260:525:494:121:g_d0_f4:121:g_d0_f4:0<med(z)<b.(4.8)
+12:390:19181:26:32:71:191:468:121:g_d0_f4:121:g_d0_f4:It follows from (4.7) that
+12:391:19207:32:0:201:321:436:121:g_d0_f4:121:g_d0_f4:Pr[z≤med(z)] = (1−γ)
+12:392:19227:0:15:325:330:444:121:g_d0_f4:121:g_d0_f4:1
+12:393:19228:15:0:323:333:429:121:g_d0_f4:121:g_d0_f12:2b
+12:394:19230:0:31:334:395:436:121:g_d0_f4:121:g_d0_f12:[med(z)+b],
+12:395:19241:31:31:71:454:405:121:g_d0_f4:121:g_d0_f4:which together with (2.2) results in a convenient expression for the median ofz,
+12:396:19321:31:0:256:305:374:121:g_d0_f4:121:g_d0_f4:med(z)=
+12:397:19328:0:15:316:322:381:121:g_d0_f12:121:g_d0_f12:γ
+12:398:19329:15:0:306:331:366:121:g_d0_f4:121:g_d0_f12:1−γ
+12:399:19332:0:31:332:525:374:121:g_d0_f12:121:g_d0_f4:b,(4.9)
+12:400:19339:31:21:71:525:343:121:g_d0_f4:121:g_d0_f4:confirming (4.8). It follows from (4.4) and (4.9) that normal inflation with an absolute-deviation
+12:401:19437:21:20:71:180:322:121:g_d0_f4:121:g_d0_f4:loss function will fulfill
+12:402:19463:20:0:242:290:302:121:g_d0_f4:121:g_d0_f13: ̄πa=π∗−
+12:403:19471:0:15:303:309:309:121:g_d0_f12:121:g_d0_f12:γ
+12:404:19472:15:0:293:318:294:121:g_d0_f4:121:g_d0_f12:1−γ
+12:405:19475:0:27:321:525:302:121:g_d0_f12:121:g_d0_f4:b<π∗.(4.10)
+12:406:19486:27:31:88:301:275:121:g_d0_f4:121:g_d0_f4:Unconditional mean inflation will then fulfill
+12:407:19532:31:0:223:306:244:121:g_d0_f4:121:g_d0_f13:Eπ=π∗+γ(a−
+12:408:19542:0:15:319:324:251:121:g_d0_f4:121:g_d0_f4:1
+12:409:19543:15:0:309:334:236:121:g_d0_f4:121:g_d0_f12:1−γ
+12:410:19546:0:31:335:373:244:121:g_d0_f12:121:g_d0_f12:b)>π∗,
+12:411:19552:31:0:72:296:213:121:g_d0_f4:121:g_d0_f4:where the inequality holds forγ<12and (4.5).
+13:412:19598:0:21:72:526:759:145:g_d0_f3:145:g_d0_f3:5. A combined quadratic/absolute-deviation loss function: Less weight on the
+13:413:19674:21:31:86:169:738:145:g_d0_f3:145:g_d0_f3:extreme event
+13:414:19687:31:21:72:525:707:121:g_d0_f4:121:g_d0_f4:Consider a loss function that is quadratic for moderate deviations of inflation from the inflation
+13:415:19785:21:29:72:448:686:121:g_d0_f4:121:g_d0_f4:target but linear in the absolute deviation from the target for large deviations,
+13:416:19866:29:0:188:222:657:121:g_d0_f12:121:g_d0_f13:L(π)≡
+13:417:19871:0:12:225:254:672:121:g_d0_f14:65:g_d0_f8:½1
+13:418:19873:12:0:250:286:660:65:g_d0_f8:121:g_d0_f12:2(π−π
+13:419:19878:0:18:286:403:668:65:g_d0_f19:121:g_d0_f12:∗)2for|π−π∗|≤c,
+13:420:19893:18:0:238:406:650:121:g_d0_f12:121:g_d0_f12:c|π−π∗|−12c2for|π−π∗|>c,
+13:421:19917:0:29:503:525:657:121:g_d0_f4:121:g_d0_f4:(5.1)
+13:422:19922:29:21:71:525:628:121:g_d0_f4:121:g_d0_f4:wherec>0 denotes the deviation from the target at which the loss function shifts from quadratic
+13:423:20017:21:20:72:525:607:121:g_d0_f4:121:g_d0_f4:to linear.  I shall refer to|π−π∗|≤cas thequadratic  rangeof the loss function and to
+13:424:20102:20:20:71:525:587:121:g_d0_f21:121:g_d0_f4:|π−π∗|>cas thelinear range. This loss function is shown as the combined solid curve for the
+13:425:20193:20:21:71:416:567:121:g_d0_f4:121:g_d0_f4:quadratic range and short-dashed lines for the linear range infigure 3.1.
+13:426:20266:21:20:88:525:546:121:g_d0_f4:121:g_d0_f4:Such a loss function represents a situation when a quadratic loss function with a rising
+13:427:20354:20:20:71:524:526:121:g_d0_f4:121:g_d0_f4:marginal loss is considered appropriate for moderate deviations from the target.  For large
+13:428:20445:20:21:71:525:506:121:g_d0_f4:121:g_d0_f4:deviations from the target, the marginal loss is considered constant rather than increasing,
+13:429:20537:21:20:71:318:485:121:g_d0_f4:121:g_d0_f4:corresponding to a linear range of the loss function.
+13:430:20590:20:28:88:409:465:121:g_d0_f4:121:g_d0_f4:The loss function is continuous and has a continuous marginal loss,
+13:431:20657:28:15:203:232:437:121:g_d0_f12:121:g_d0_f4:∂L(π)
+13:432:20662:15:0:211:224:422:121:g_d0_f12:121:g_d0_f12:∂π
+13:433:20664:0:0:236:245:430:121:g_d0_f4:121:g_d0_f4:=
+13:434:20665:0:10:248:258:452:121:g_d0_f29:121:g_d0_f29:
+13:435:20666:10:19:248:258:442:121:g_d0_f29:121:g_d0_f29:
+13:436:20667:19:0:248:258:423:121:g_d0_f29:121:g_d0_f29:
+13:437:20668:0:13:271:388:443:121:g_d0_f13:121:g_d0_f12:−cforπ−π∗<−c,
+13:438:20681:13:14:263:386:430:121:g_d0_f12:121:g_d0_f12:π−π∗for|π−π∗|≤c,
+13:439:20697:14:21:276:381:416:121:g_d0_f12:121:g_d0_f12:cforπ−π∗>c.
+13:440:20708:21:21:72:525:395:121:g_d0_f4:121:g_d0_f4:This marginal loss is shown infigure 3.2 and consists of the constant segment CB, the increasing
+13:441:20804:21:20:71:320:374:121:g_d0_f4:121:g_d0_f4:linear segment BB’, and the constant segment B’C’.
+13:442:20854:20:29:88:254:354:121:g_d0_f4:121:g_d0_f4:The expected marginal loss is then
+13:443:20888:29:0:93:100:325:121:g_d0_f4:121:g_d0_f4:E
+13:444:20889:0:15:104:132:332:121:g_d0_f12:121:g_d0_f4:∂L(π)
+13:445:20894:15:0:112:125:317:121:g_d0_f12:121:g_d0_f12:∂π
+13:446:20896:0:0:144:171:325:121:g_d0_f4:121:g_d0_f13:=−
+13:447:20898:0:25:174:205:340:121:g_d0_f14:65:g_d0_f18:Zπ∗−c
+13:448:20903:25:0:180:195:315:65:g_d0_f19:65:g_d0_f19:−∞
+13:449:20905:0:0:207:277:325:121:g_d0_f12:121:g_d0_f4:ch(π− ̄π)dπ+
+13:450:20917:0:25:279:310:340:121:g_d0_f14:65:g_d0_f18:Zπ∗+c
+13:451:20922:25:0:285:305:315:65:g_d0_f18:65:g_d0_f18:π∗−c
+13:452:20926:0:0:310:415:325:121:g_d0_f4:121:g_d0_f4:(π−π∗)h(π− ̄π)dπ+
+13:453:20943:0:25:417:437:340:121:g_d0_f14:65:g_d0_f19:Z∞
+13:454:20945:25:0:423:443:315:65:g_d0_f18:65:g_d0_f18:π∗+c
+13:455:20949:0:32:445:503:325:121:g_d0_f12:121:g_d0_f12:ch(π− ̄π)dπ
+13:456:20960:32:0:144:260:293:121:g_d0_f4:121:g_d0_f4:=−cPr[π≤π∗−c]+
+13:457:20974:0:25:261:292:308:121:g_d0_f14:65:g_d0_f18:Zπ∗+c
+13:458:20979:25:0:267:287:283:65:g_d0_f18:65:g_d0_f18:π∗−c
+13:459:20983:0:24:292:473:293:121:g_d0_f4:121:g_d0_f4:(π−π∗)h(π− ̄π)dπ+cPr[π>π∗+c]
+13:460:21011:24:23:144:457:269:121:g_d0_f4:121:g_d0_f4:=−cPr [π−π∗≤−c]+E[π−π∗;|π−π∗|≤c]Pr[|π−π∗|≤c]
+13:461:21055:23:29:162:254:246:121:g_d0_f4:121:g_d0_f12:+cPr [π−π∗>c].
+13:462:21069:29:21:71:525:217:121:g_d0_f4:121:g_d0_f4:Setting the expected marginal loss equal to zero in accordance with the optimal targeting rule,
+13:463:21164:21:29:71:144:196:121:g_d0_f4:121:g_d0_f4:(2.6), results in
+13:464:21181:29:0:140:268:167:121:g_d0_f4:121:g_d0_f12:E[π;|π−π∗|≤c]=π∗−c
+13:465:21199:0:8:269:277:183:121:g_d0_f14:121:g_d0_f14:½
+13:466:21200:8:15:278:442:175:121:g_d0_f4:121:g_d0_f4:Pr [π−π∗>c]−Pr [π−π∗≤−c]
+13:467:21224:15:0:323:398:160:121:g_d0_f4:121:g_d0_f4:Pr[|π−π∗|≤c]
+13:468:21236:0:16:444:452:183:121:g_d0_f14:121:g_d0_f14:¾
+13:469:21237:16:29:454:525:167:121:g_d0_f12:121:g_d0_f4:.(5.2)
+13:470:21243:29:20:88:525:138:121:g_d0_f4:121:g_d0_f4:This condition says that mean inflation conditional on inflation falling within the quadratic
+13:471:21336:20:0:72:525:118:121:g_d0_f4:121:g_d0_f4:range of the loss function should undershoot the inflation target by the product of the marginal
+14:472:21434:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:loss in the linear range times the ratio between (i) the difference between the probability of
+14:473:21528:21:20:72:525:738:121:g_d0_f4:121:g_d0_f4:inflation falling in the upper linear range and the probability of inflation falling in the lower
+14:474:21625:20:20:71:443:718:121:g_d0_f4:121:g_d0_f4:linear range and (ii) the probability of inflation falling in the quadratic range.
+14:475:21707:20:32:88:436:698:121:g_d0_f4:121:g_d0_f4:Regarding the special case discussed above, assume thata,bandcfulfill
+14:476:21776:32:0:226:264:666:121:g_d0_f12:121:g_d0_f12:a−b>
+14:477:21780:0:15:275:280:674:121:g_d0_f4:121:g_d0_f4:1
+14:478:21781:15:0:265:290:659:121:g_d0_f4:121:g_d0_f12:1−γ
+14:479:21784:0:0:292:311:666:121:g_d0_f12:121:g_d0_f12:c>
+14:480:21786:0:15:312:342:674:121:g_d0_f4:121:g_d0_f12:1−2γ
+14:481:21790:15:0:315:340:659:121:g_d0_f4:121:g_d0_f12:1−γ
+14:482:21793:0:31:344:525:666:121:g_d0_f12:121:g_d0_f4:c>b.(5.3)
+14:483:21802:31:20:71:525:635:121:g_d0_f4:121:g_d0_f4:That is,a−bexceedsbin (4.5) with a sufficient margin, so11−γcand1−2γ1−γcfit in between (recall
+14:484:21896:20:21:72:525:615:121:g_d0_f4:121:g_d0_f4:thatγis a small number, so these two expressions are close toc). This will imply that the
+14:485:21985:21:20:72:525:594:121:g_d0_f4:121:g_d0_f4:normal support of inflation, [ ̄π−b, ̄π+b], will fall within the quadratic range, and the extreme
+14:486:22082:20:20:72:522:574:121:g_d0_f4:121:g_d0_f4:support of inflation, [ ̄π+a−b, ̄π+a+b], will fall within the linear range of the loss function.
+14:487:22178:20:32:88:211:554:121:g_d0_f4:121:g_d0_f4:Given (5.3), we then have
+14:488:22203:32:31:120:477:522:121:g_d0_f4:121:g_d0_f12:E[π;|π−π∗|≤c]= ̄π,Pr [π−π∗≤−c]=0 and  Pr[π−π∗>c]=γ.
+14:489:22254:31:20:72:525:491:121:g_d0_f4:121:g_d0_f4:It follows from thefirst-order condition (5.2), that the optimal normal mean inflation under the
+14:490:22350:20:16:72:525:471:121:g_d0_f4:121:g_d0_f4:quadratic/absolute-deviation loss function, denoted  ̄πqa, undershoots the inflation target by the
+14:491:22448:16:8:78:82:455:65:g_d0_f18:65:g_d0_f18:γ
+14:492:22449:8:0:73:356:447:65:g_d0_f8:121:g_d0_f4:1−γtimes the marginal cost of inflation in the linear range,
+14:493:22509:0:35:356:360:454:65:g_d0_f8:65:g_d0_f8:6
+14:494:22510:35:0:241:293:419:121:g_d0_f4:121:g_d0_f13: ̄πqa=π∗−
+14:495:22519:0:15:306:312:427:121:g_d0_f12:121:g_d0_f12:γ
+14:496:22520:15:0:296:321:412:121:g_d0_f4:121:g_d0_f12:1−γ
+14:497:22523:0:31:323:525:419:121:g_d0_f12:121:g_d0_f4:c<π∗.(5.4)
+14:498:22533:31:31:88:284:388:121:g_d0_f4:121:g_d0_f4:Unconditional mean inflation then fulfills
+14:499:22575:31:0:223:306:357:121:g_d0_f4:121:g_d0_f13:Eπ=π∗+γ(a−
+14:500:22585:0:15:319:324:364:121:g_d0_f4:121:g_d0_f4:1
+14:501:22586:15:0:309:334:349:121:g_d0_f4:121:g_d0_f12:1−γ
+14:502:22589:0:32:335:373:357:121:g_d0_f12:121:g_d0_f12:c)>π∗,
+14:503:22595:32:37:72:260:325:121:g_d0_f4:121:g_d0_f4:where the inequality follows from (5.3).
+14:504:22635:37:21:72:525:288:145:g_d0_f3:145:g_d0_f3:6. A combined quadratic/constant loss function: Normal mean inflation tar-
+14:505:22709:21:31:86:122:267:145:g_d0_f3:145:g_d0_f3:geting
+14:506:22715:31:20:72:525:236:121:g_d0_f4:121:g_d0_f4:Consider a combined quadratic/constant loss function, that is quadratic for moderate deviations
+14:507:22810:20:32:72:407:216:121:g_d0_f4:121:g_d0_f4:of inflation from the inflation target and constant for large deviations,
+14:508:22883:32:0:199:233:184:121:g_d0_f12:121:g_d0_f13:L(π)≡
+14:509:22888:0:13:236:254:200:121:g_d0_f14:65:g_d0_f8:½1
+14:510:22890:13:0:250:286:187:65:g_d0_f8:121:g_d0_f12:2(π−π
+14:511:22895:0:13:286:392:195:65:g_d0_f19:121:g_d0_f12:∗)2for|π−π∗|≤c,
+14:512:22910:13:8:268:272:182:65:g_d0_f8:65:g_d0_f8:1
+14:513:22911:8:0:268:278:174:65:g_d0_f8:121:g_d0_f12:2c
+14:514:22913:0:22:278:525:182:65:g_d0_f8:121:g_d0_f4:2for|π−π∗|>c,(6.1)
+14:515:22931:22:14:84:525:160:36:g_d0_f9:82:g_d0_f24:6With this optimal normal mean inflation, the normal support of inflation is [π∗−γc/(1−γ)−b,π∗−γc/(1−
+14:516:23032:14:10:72:525:146:82:g_d0_f22:82:g_d0_f10:γ)+b], which by (5.3) falls within the quadratic range, [π∗−c,π∗+c]. The extreme support of inflation is
+14:517:23136:10:10:71:525:136:82:g_d0_f10:82:g_d0_f10:[π∗−γc/(1−γ)+a−b,π∗−γc/(1−γ)+a+b], which by (5.3) falls within the linear range above the inflation
+14:518:23235:10:0:71:148:126:82:g_d0_f10:82:g_d0_f10:target, [π∗+c,∞).
+15:519:23254:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:wherec>0 denotes the deviation from the target at which the loss function shifts from quadratic
+15:520:23349:21:20:72:526:738:121:g_d0_f4:121:g_d0_f4:to constant.  The loss function is shown as the combined curve for the quadratic range and
+15:521:23439:20:20:72:525:718:121:g_d0_f4:121:g_d0_f4:horizontal long-dashed line for the linear range infigure 3.1. The loss function is continuous,
+15:522:23534:20:22:72:344:698:121:g_d0_f4:121:g_d0_f4:whereas the marginal loss is discontinuous atπ=π∗±c,
+15:523:23586:22:15:205:234:676:121:g_d0_f12:121:g_d0_f4:∂L(π)
+15:524:23591:15:0:213:226:661:121:g_d0_f12:121:g_d0_f12:∂π
+15:525:23593:0:0:238:247:669:121:g_d0_f4:121:g_d0_f4:=
+15:526:23594:0:8:250:258:684:121:g_d0_f14:121:g_d0_f14:½
+15:527:23595:8:14:263:389:676:121:g_d0_f12:121:g_d0_f12:π−π∗for|π−π∗|<c,
+15:528:23611:14:22:276:389:662:121:g_d0_f4:121:g_d0_f12:0for|π−π∗|>c.
+15:529:23624:22:20:71:507:640:121:g_d0_f4:121:g_d0_f4:The marginal loss function, shown infigure 3.2, consists of the segment DE, BB’ and E’D’.
+15:530:23713:20:29:88:451:620:121:g_d0_f4:121:g_d0_f4:This loss function can be seen as a simplification of the “bell loss function,”
+15:531:23792:29:0:235:333:591:121:g_d0_f12:65:g_d0_f18:L(π)=c(1−e−(π−π
+15:532:23807:0:7:333:353:598:36:g_d0_f25:65:g_d0_f8:∗)2/2
+15:533:23812:7:29:354:361:591:121:g_d0_f4:121:g_d0_f12:),
+15:534:23814:29:20:72:526:562:121:g_d0_f4:121:g_d0_f4:which is discussed and examined by Bray and Goodhart [2]. The bell loss function is close to a
+15:535:23908:20:21:72:525:542:121:g_d0_f4:121:g_d0_f4:quadratic loss function for small deviations from the target and asymptotically approaches an
+15:536:24001:21:21:72:514:521:121:g_d0_f4:121:g_d0_f4:upper boundcfor large deviations. The marginal loss of the bell loss function is continuous,
+15:537:24093:21:15:226:254:500:121:g_d0_f12:121:g_d0_f4:∂L(π)
+15:538:24098:15:0:234:247:485:121:g_d0_f12:121:g_d0_f12:∂π
+15:539:24100:0:0:259:348:492:121:g_d0_f4:65:g_d0_f18:=c(π−π∗)e−(π−π
+15:540:24114:0:8:348:368:500:36:g_d0_f25:65:g_d0_f8:∗)2/2
+15:541:24119:8:28:369:372:492:121:g_d0_f12:121:g_d0_f12:,
+15:542:24120:28:21:72:525:464:121:g_d0_f4:121:g_d0_f4:approximately linear and increasing for small deviations from the inflation target and approach-
+15:543:24216:21:20:71:525:443:121:g_d0_f4:121:g_d0_f4:ing zero for large deviations.  It can be motivated by afinite upper bound for the loss, for
+15:544:24308:20:20:72:525:423:121:g_d0_f4:121:g_d0_f4:instance, if the worst thing that can happen to a central banker is to befired from the job after
+15:545:24405:20:21:72:343:403:121:g_d0_f4:121:g_d0_f4:bad performance and this is associated with afinite loss.
+15:546:24462:21:28:88:493:382:121:g_d0_f4:121:g_d0_f4:The expected marginal loss of the combined quadratic/constant loss function is then
+15:547:24545:28:0:106:113:354:121:g_d0_f4:121:g_d0_f4:E
+15:548:24546:0:15:116:145:361:121:g_d0_f12:121:g_d0_f4:∂L(π)
+15:549:24551:15:0:124:137:346:121:g_d0_f12:121:g_d0_f12:∂π
+15:550:24553:0:0:149:158:354:121:g_d0_f4:121:g_d0_f4:=
+15:551:24554:0:24:161:192:368:121:g_d0_f14:65:g_d0_f18:Zπ∗+c
+15:552:24559:24:0:167:187:344:65:g_d0_f18:65:g_d0_f18:π∗−c
+15:553:24563:0:29:192:491:354:121:g_d0_f4:121:g_d0_f12:(π−π∗)h(π− ̄π)dπ=E[π−π∗;|π−π∗|≤c]Pr[|π−π∗|≤c].
+15:554:24609:29:29:71:435:325:121:g_d0_f4:121:g_d0_f4:Setting this equal to zero, according to the optimal targeting rule, results in
+15:555:24688:29:29:242:525:296:121:g_d0_f4:121:g_d0_f4:E[π;|π−π∗|≤c]=π∗.(6.2)
+15:556:24710:29:20:72:525:267:121:g_d0_f4:121:g_d0_f4:Expected inflation conditional on inflation falling within the quadratic range of the loss function
+15:557:24809:20:21:72:228:247:121:g_d0_f4:121:g_d0_f4:should equal the inflation target.
+15:558:24843:21:20:88:525:226:121:g_d0_f4:121:g_d0_f4:In the special case of (5.3), we have E [π;|π−π∗|≤c]= ̄π. It follows that optimal normal
+15:559:24931:20:29:72:488:206:121:g_d0_f4:121:g_d0_f4:mean inflation under a combined quadratic/constant loss function, denoted,  ̄πqc,fulfills
+15:560:25020:29:29:277:320:177:121:g_d0_f4:121:g_d0_f12: ̄πqc=π∗.
+15:561:25029:29:28:88:305:148:121:g_d0_f4:121:g_d0_f4:The unconditional mean inflation then fulfills
+15:562:25075:28:0:250:346:120:121:g_d0_f4:121:g_d0_f12:Eπ=π∗+γa > π∗.
+16:563:25091:0:32:72:406:759:145:g_d0_f3:145:g_d0_f3:7. A perfectionist loss function: Mode inflation targeting
+16:564:25149:32:20:72:525:727:121:g_d0_f4:121:g_d0_f4:Finally, let us consider a perfectionist, all-or-nothing, loss function, a rather special case where
+16:565:25249:20:20:72:525:707:121:g_d0_f4:121:g_d0_f4:only an outcome right on the inflation target is acceptable and everything else is a failure. This
+16:566:25347:20:30:72:500:687:121:g_d0_f4:121:g_d0_f4:can be represented with the help of Dirac’s Delta function,δ(x), which has the properties
+16:567:25436:30:0:236:271:657:121:g_d0_f12:121:g_d0_f4:δ(x)=
+16:568:25441:0:8:271:279:672:121:g_d0_f14:121:g_d0_f14:½
+16:569:25442:8:14:284:354:664:121:g_d0_f13:121:g_d0_f12:∞forx=0,
+16:570:25450:14:23:287:354:650:121:g_d0_f4:121:g_d0_f12:0forx6=0,
+16:571:25459:23:20:71:254:627:121:g_d0_f4:121:g_d0_f14:andZ
+16:572:25463:20:26:261:349:607:121:g_d0_f12:121:g_d0_f4:δ(x)f(x)dx=f(0)
+16:573:25478:26:30:72:424:581:121:g_d0_f4:121:g_d0_f4:for any functionf(x). The perfectionist loss function can then be written
+16:574:25551:30:30:251:346:551:121:g_d0_f12:121:g_d0_f12:L(π)≡−δ(π−π∗),
+16:575:25565:30:21:71:525:521:121:g_d0_f4:121:g_d0_f4:giving an unbounded gain (negative loss) when inflation equals the inflation target and zero
+16:576:25657:21:20:71:525:500:121:g_d0_f4:121:g_d0_f4:otherwise. The Delta function can be seen as the limit of a sequence ofδn(x)-functions, the
+16:577:25748:20:30:72:421:480:121:g_d0_f4:121:g_d0_f4:tent-shaped function illustrated infigure 7.1, whennapproaches infinity,
+16:578:25820:30:30:230:367:450:121:g_d0_f12:121:g_d0_f12:δ(π−π∗)= limn→∞δn(π−π∗).
+16:579:25844:30:20:72:525:420:121:g_d0_f4:121:g_d0_f4:I avoid illustrating the Delta function infigure 3.1. It would be an infinitesimally thin negative
+16:580:25942:20:21:72:453:400:121:g_d0_f4:121:g_d0_f4:spike extending to minus infinity located atπ=π∗and equal to zero elsewhere.
+16:581:26018:21:20:88:525:379:121:g_d0_f4:121:g_d0_f4:The Delta function is not differentiable atπ=π∗, so we cannot specify the marginal loss in
+16:582:26108:20:20:71:524:359:121:g_d0_f4:121:g_d0_f4:this case. Therefore, the optimal targeting rule stating that the expected marginal loss should
+16:583:26203:20:30:71:506:339:121:g_d0_f4:121:g_d0_f4:equal zero does not apply here. Instead, we have to look directly at the expected loss. It is
+16:584:26296:30:0:194:238:309:121:g_d0_f4:121:g_d0_f13:EL(π)≡
+16:585:26302:0:15:240:246:324:121:g_d0_f14:121:g_d0_f14:Z
+16:586:26303:15:30:253:403:309:121:g_d0_f12:121:g_d0_f12:L(π)h(π− ̄π)dπ=−h(π∗− ̄π),
+16:587:26329:30:20:72:525:279:121:g_d0_f4:121:g_d0_f4:the negative of the density function for inflation at the inflation target. Minimizing the loss then
+16:588:26429:20:21:71:525:259:121:g_d0_f4:121:g_d0_f4:corresponds to adjusting normal mean inflation,  ̄π, so as to maximize the probability density of
+16:589:26526:21:20:71:525:238:121:g_d0_f4:121:g_d0_f4:an inflation outcome equal to the inflation target. This means adjusting normal mean inflation
+16:590:26620:20:30:71:508:218:121:g_d0_f4:121:g_d0_f4:such that the mode of inflation coincides with the inflation target,mode inflation targeting,
+16:591:26713:30:30:263:333:188:121:g_d0_f4:121:g_d0_f4:mode(π)=π∗.
+16:592:26724:30:20:72:525:158:121:g_d0_f4:121:g_d0_f4:It follows from (2.4) that the optimal normal mean inflation under the perfectionist loss function,
+16:593:26823:20:20:72:144:138:121:g_d0_f4:121:g_d0_f4: ̄πp,isgivenby
+16:594:26837:20:0:252:345:118:121:g_d0_f4:121:g_d0_f12: ̄πp=π∗−mode(z).
+17:595:26855:0:171:212:384:751:121:g_d0_f4:121:g_d0_f4:Figure 7.1: Theδn(π−π∗) function
+17:596:26887:171:0:320:310:580:99:g_d0_f17:94:g_d0_f16:π*π*+1/nπ*−1/n
+17:597:26901:0:116:197:202:703:94:g_d0_f16:94:g_d0_f16:n
+17:598:26902:116:0:404:409:587:99:g_d0_f17:99:g_d0_f17:π
+17:599:26903:0:146:187:227:725:99:g_d0_f17:94:g_d0_f15:δn(π−π*)
+17:600:26911:146:43:201:206:579:94:g_d0_f15:94:g_d0_f15:0
+17:601:26912:43:20:88:530:536:121:g_d0_f4:121:g_d0_f4:For the density functionh(z) in (2.1), since the probability of the extreme event,γ,isa
+17:602:26999:20:21:71:526:516:121:g_d0_f4:121:g_d0_f4:smallnumber,themodeofh(z) coincides with the mode off(z), the distribution for the normal
+17:603:27088:21:20:71:100:495:121:g_d0_f4:121:g_d0_f4:shock,
+17:604:27094:20:24:234:362:475:121:g_d0_f4:121:g_d0_f12:mode(z)=mode(z;η=0).
+17:605:27114:24:21:71:524:451:121:g_d0_f4:121:g_d0_f4:That is, since the extreme event has low probability, the mode occurs for the normal outcome
+17:606:27206:21:20:71:525:430:121:g_d0_f4:121:g_d0_f4:and is independent of the probability and the size of the extreme event. Thus, mode inflation
+17:607:27299:20:20:71:478:410:121:g_d0_f4:121:g_d0_f4:targeting completely disregards the extreme event (as long as it has low probability).
+17:608:27385:20:20:88:525:390:121:g_d0_f4:121:g_d0_f4:For a symmetric unimodal distribution for the normal outcome, the mode, the mean and the
+17:609:27473:20:21:71:525:370:121:g_d0_f4:121:g_d0_f4:median are all equal. This is the case for the probability distributionf(z)showninfigure 2.1,
+17:610:27566:21:20:71:525:349:121:g_d0_f4:121:g_d0_f4:for which mode(z) is zero. Hence, in this case, optimal normal inflation under the perfectionist
+17:611:27662:20:26:71:282:329:121:g_d0_f4:121:g_d0_f4:loss function,  ̄πp,equalstheinflation target,
+17:612:27708:26:26:278:319:303:121:g_d0_f4:121:g_d0_f4: ̄πp=π∗.
+17:613:27716:26:20:88:525:277:121:g_d0_f4:121:g_d0_f4:For distributions that are not symmetric or unimodal, the mode, the mean and the median
+17:614:27803:20:21:72:525:257:121:g_d0_f4:121:g_d0_f4:will generally differ from each other. Furthermore, the mode is not necessarily unique. The
+17:615:27894:21:20:72:525:236:121:g_d0_f4:121:g_d0_f4:uniform probability distribution, assumed in the special case and shown infigure 4.1, has the
+17:616:27987:20:26:72:440:216:121:g_d0_f4:121:g_d0_f4:mode equal to the whole support of the distribution for the normal outcome,
+17:617:28062:26:26:253:343:190:121:g_d0_f13:121:g_d0_f12:−b≤mode(z)≤b.
+17:618:28075:26:20:72:525:164:121:g_d0_f4:121:g_d0_f4:Thus, in this case, the optimal normal mean inflation under the perfectionist loss function,
+17:619:28167:20:26:72:316:144:121:g_d0_f4:121:g_d0_f4:denoted  ̄πp, is not unique but given by the interval
+17:620:28220:26:0:247:350:118:121:g_d0_f12:121:g_d0_f12:π∗−b≤ ̄πp≤π∗+b,
+18:621:28237:0:21:72:265:759:121:g_d0_f4:121:g_d0_f12:which we can write as  ̄πp=π∗+[−b, b].
+18:622:28275:21:20:88:525:738:121:g_d0_f4:121:g_d0_f4:Thus, a rather bizarre loss function is required to give prominence to mode projections.
+18:623:28363:20:20:71:524:718:121:g_d0_f4:121:g_d0_f4:Furthermore, mode projections have some undesirable properties. Of possible measures of the
+18:624:28454:20:21:71:524:698:121:g_d0_f4:121:g_d0_f4:“central tendency” of a projection, it seems less relevant than the mean or the median. Some
+18:625:28546:21:20:71:525:677:121:g_d0_f4:121:g_d0_f4:central banks nevertheless present their main projections as mode projections. This practice
+18:626:28638:20:37:71:376:657:121:g_d0_f4:121:g_d0_f4:seems difficult to defend, as noted by Svensson [5], for instance.
+18:627:28704:37:31:72:266:620:145:g_d0_f3:145:g_d0_f3:8. An endogenous extreme shock
+18:628:28734:31:21:72:525:589:121:g_d0_f4:121:g_d0_f4:Above, the size and probability of the extreme shock have been taken as exogenous. A possible
+18:629:28827:21:20:72:526:568:121:g_d0_f4:121:g_d0_f4:relevant case, however, is when the size and/or the probability of the extreme shock depend on
+18:630:28921:20:20:72:526:548:121:g_d0_f4:121:g_d0_f4:the policy instrument. For instance, the bursting of an asset-price bubble may depend on the
+18:631:29013:20:21:72:106:528:121:g_d0_f4:65:g_d0_f8:policy.7
+18:632:29021:21:29:88:526:507:121:g_d0_f4:121:g_d0_f4:A simple case is when the size of the extreme shock,a, is a linear function of the instrument,
+18:633:29115:29:30:268:329:478:121:g_d0_f12:121:g_d0_f12:a=a1+a2i,
+18:634:29124:30:20:72:525:448:121:g_d0_f4:121:g_d0_f4:wherea1is a given large positive number anda2is a given number. Let us assume that the
+18:635:29210:20:21:71:525:428:121:g_d0_f4:121:g_d0_f4:coefficienta2is positive, that is, the size of the extreme inflationary shock is increasing in the
+18:636:29308:21:20:71:526:407:121:g_d0_f4:121:g_d0_f4:instrument.  This would seem tofit the U.K. exchange-rate example, since a higher interest
+18:637:29398:20:20:71:525:387:121:g_d0_f4:121:g_d0_f4:rate might increase the potential overvaluation of the pound and thereby the later depreciation.
+18:638:29494:20:21:71:525:367:121:g_d0_f4:121:g_d0_f4:Generally, the sign of the coefficienta2could depend on the nature of the shock. The case above
+18:639:29589:21:20:71:525:346:121:g_d0_f4:121:g_d0_f4:with exogenousaobviously corresponds toa2= 0. We assume thataremains a large positive
+18:640:29674:20:20:71:303:326:121:g_d0_f4:121:g_d0_f4:number for the relevant range of the instrument.
+18:641:29722:20:30:88:429:306:121:g_d0_f4:121:g_d0_f4:The probability density function of the shockzcanthenbewrittenas
+18:642:29786:30:30:202:394:276:121:g_d0_f12:121:g_d0_f12:h(z,i)≡(1−γ)f(z)+γf(z−a1−a2i),
+18:643:29816:30:20:72:525:246:121:g_d0_f4:121:g_d0_f4:where the instrumentinow has a special direct effect on the density function, sincea2is different
+18:644:29913:20:30:72:420:226:121:g_d0_f4:121:g_d0_f4:from zero. It follows that the density function of inflation can be written
+18:645:29988:30:29:171:426:196:121:g_d0_f12:121:g_d0_f12:h(π− ̄π,i)=(1−γ)f(π− ̄π)+γf(π− ̄π−a1−a2i),
+18:646:30030:29:21:72:525:167:121:g_d0_f4:121:g_d0_f4:again with a direct effect of the instrument on the density, in addition to the standard effect on
+18:647:30128:21:16:72:223:146:121:g_d0_f4:121:g_d0_f4:normal mean inflationin(2.3).
+18:648:30157:16:12:84:525:130:36:g_d0_f9:82:g_d0_f10:7Pierre Duguay and Charles Goodhart made this point at the conference, which led me to add this section to
+18:649:30263:12:0:71:428:118:82:g_d0_f10:82:g_d0_f10:the paper. The section has benefited from additional comments from Charles Goodhart.
+19:650:30349:0:21:88:525:759:121:g_d0_f4:121:g_d0_f4:The optimal policy now has to take the special direct effect of the instrument into account.
+19:651:30441:21:30:71:167:738:121:g_d0_f4:121:g_d0_f4:The expected loss is
+19:652:30461:30:0:170:214:708:121:g_d0_f4:121:g_d0_f13:EL(π)≡
+19:653:30467:0:15:217:223:723:121:g_d0_f14:121:g_d0_f14:Z
+19:654:30468:15:0:229:326:708:121:g_d0_f12:121:g_d0_f4:L(π)h(π− ̄π,i)dπ=
+19:655:30485:0:15:329:335:723:121:g_d0_f14:121:g_d0_f14:Z
+19:656:30486:15:29:342:426:708:121:g_d0_f12:121:g_d0_f12:L( ̄π+z)h(z,i)dz.
+19:657:30503:29:23:72:399:679:121:g_d0_f4:121:g_d0_f4:The derivative of the expected loss with respect to the instrument is
+19:658:30572:23:15:154:160:656:121:g_d0_f12:121:g_d0_f12:∂
+19:659:30573:15:0:152:163:641:121:g_d0_f12:121:g_d0_f12:∂i
+19:660:30575:0:0:163:208:649:121:g_d0_f4:121:g_d0_f4:EL(π)=
+19:661:30581:0:8:208:214:664:121:g_d0_f14:121:g_d0_f14:Z
+19:662:30582:8:15:222:269:656:121:g_d0_f12:121:g_d0_f4:∂L( ̄π+z)
+19:663:30591:15:0:239:252:641:121:g_d0_f12:121:g_d0_f12:∂π
+19:664:30593:0:15:272:284:656:121:g_d0_f12:121:g_d0_f12:∂ ̄π
+19:665:30597:15:0:273:284:641:121:g_d0_f12:121:g_d0_f12:∂i
+19:666:30599:0:0:286:338:649:121:g_d0_f12:121:g_d0_f4:h(z,i)dz+
+19:667:30608:0:15:340:346:664:121:g_d0_f14:121:g_d0_f14:Z
+19:668:30609:15:0:352:394:649:121:g_d0_f12:121:g_d0_f4:L( ̄π+z)
+19:669:30617:0:15:395:430:656:121:g_d0_f12:121:g_d0_f4:∂h(z,i)
+19:670:30624:15:0:408:419:641:121:g_d0_f12:121:g_d0_f12:∂i
+19:671:30626:0:30:431:445:649:121:g_d0_f12:121:g_d0_f12:dz.
+19:672:30629:30:15:71:411:619:121:g_d0_f4:121:g_d0_f4:Since∂ ̄π∂i=−αby (2.3), thefirst term on the right side can be written
+19:673:30699:15:8:197:203:604:121:g_d0_f14:121:g_d0_f14:Z
+19:674:30700:8:14:211:259:596:121:g_d0_f12:121:g_d0_f4:∂L( ̄π+z)
+19:675:30709:14:0:228:241:582:121:g_d0_f12:121:g_d0_f12:∂π
+19:676:30711:0:14:261:274:596:121:g_d0_f12:121:g_d0_f12:∂ ̄π
+19:677:30715:14:0:263:274:582:121:g_d0_f12:121:g_d0_f12:∂i
+19:678:30717:0:0:275:341:589:121:g_d0_f12:121:g_d0_f4:h(z,i)dz=E
+19:679:30727:0:14:341:369:596:121:g_d0_f12:121:g_d0_f4:∂L(π)
+19:680:30732:14:0:348:361:582:121:g_d0_f12:121:g_d0_f12:∂π
+19:681:30734:0:30:371:399:589:121:g_d0_f4:121:g_d0_f12:(−α),
+19:682:30739:30:15:72:409:559:121:g_d0_f4:121:g_d0_f4:the expected marginal loss times−α. The second term can be written
+19:683:30805:15:15:135:141:544:121:g_d0_f14:121:g_d0_f14:Z
+19:684:30806:15:0:147:189:529:121:g_d0_f12:121:g_d0_f4:L( ̄π+z)
+19:685:30814:0:15:190:225:537:121:g_d0_f12:121:g_d0_f4:∂h(z,i)
+19:686:30821:15:0:203:214:522:121:g_d0_f12:121:g_d0_f12:∂i
+19:687:30823:0:0:227:310:529:121:g_d0_f12:121:g_d0_f4:dz=Pr[η=a]
+19:688:30833:0:15:313:319:537:121:g_d0_f12:121:g_d0_f12:∂
+19:689:30834:15:0:311:322:522:121:g_d0_f12:121:g_d0_f12:∂i
+19:690:30836:0:15:324:330:544:121:g_d0_f14:121:g_d0_f14:Z
+19:691:30837:15:29:337:462:529:121:g_d0_f12:121:g_d0_f12:L( ̄π+a1+a2i+z)f(z)dz
+19:692:30858:29:0:248:272:500:121:g_d0_f4:121:g_d0_f12:=γ
+19:693:30860:0:7:274:280:515:121:g_d0_f14:121:g_d0_f14:Z
+19:694:30861:7:15:288:387:508:121:g_d0_f12:121:g_d0_f4:∂L( ̄π+a1+a2i+z)
+19:695:30877:15:0:331:344:493:121:g_d0_f12:121:g_d0_f12:∂π
+19:696:30879:0:29:389:432:500:121:g_d0_f12:65:g_d0_f8:f(z)dz a2
+19:697:30888:29:0:248:280:471:121:g_d0_f4:121:g_d0_f4:=γE
+19:698:30891:0:8:282:288:487:121:g_d0_f14:121:g_d0_f14:·
+19:699:30892:8:15:289:317:479:121:g_d0_f12:121:g_d0_f4:∂L(π)
+19:700:30897:15:0:297:310:464:121:g_d0_f12:121:g_d0_f12:∂π
+19:701:30899:0:0:319:350:471:121:g_d0_f4:121:g_d0_f12:;η=a
+19:702:30903:0:16:350:356:487:121:g_d0_f14:121:g_d0_f14: ̧
+19:703:30905:16:30:357:371:471:121:g_d0_f12:121:g_d0_f12:a2,
+19:704:30908:30:20:71:525:441:121:g_d0_f4:121:g_d0_f4:the probability of the extreme event times the expected loss conditional on the extreme event
+19:705:31001:20:20:71:114:421:121:g_d0_f4:121:g_d0_f4:timesa2.
+19:706:31009:20:21:88:529:401:121:g_d0_f4:121:g_d0_f4:Thefirst-order condition with respect to the instrument sets the derivative∂∂iEL(π)=0.
+19:707:31095:21:29:71:451:380:121:g_d0_f4:121:g_d0_f4:This, together with the above expressions,results in the optimal targeting rule,
+19:708:31175:29:0:197:204:351:121:g_d0_f4:121:g_d0_f4:E
+19:709:31176:0:15:207:236:358:121:g_d0_f12:121:g_d0_f4:∂L(π)
+19:710:31181:15:0:215:228:343:121:g_d0_f12:121:g_d0_f12:∂π
+19:711:31183:0:0:238:288:351:121:g_d0_f4:121:g_d0_f4:(−α)+γE
+19:712:31190:0:8:290:296:366:121:g_d0_f14:121:g_d0_f14:·
+19:713:31191:8:15:297:326:358:121:g_d0_f12:121:g_d0_f4:∂L(π)
+19:714:31196:15:0:305:318:343:121:g_d0_f12:121:g_d0_f12:∂π
+19:715:31198:0:0:327:359:351:121:g_d0_f4:121:g_d0_f12:;η=a
+19:716:31202:0:15:358:364:366:121:g_d0_f14:121:g_d0_f14: ̧
+19:717:31204:15:30:366:525:351:121:g_d0_f12:121:g_d0_f4:a2=0.(8.1)
+19:718:31214:30:21:72:525:321:121:g_d0_f4:121:g_d0_f4:It can be interpreted as follows: A marginal increasedi >0 of the instrument shifts the whole
+19:719:31307:21:20:72:525:300:121:g_d0_f4:121:g_d0_f4:probability distribution of inflation infigure 2.2 to the left byαdi. The corresponding marginal
+19:720:31403:20:20:72:525:280:121:g_d0_f4:121:g_d0_f4:change of the expected loss is E∂L(π)∂π(−α)di. Furthermore, this increases the size of the extreme
+19:721:31501:20:21:71:525:260:121:g_d0_f4:121:g_d0_f4:shock byda=α2diand shifts the extreme part of the probability distribution of inflation infigure
+19:722:31597:21:20:72:525:239:121:g_d0_f4:121:g_d0_f4:2.2, the density function around  ̄π+a, to the right by the same amount. The corresponding
+19:723:31687:20:20:72:525:219:121:g_d0_f4:121:g_d0_f4:marginal change of the expected loss isγE[∂L(π)∂π;η=a]a2di, the probability of the extreme
+19:724:31777:20:21:71:525:199:121:g_d0_f4:121:g_d0_f4:shock times the expected marginal loss conditional on the extreme event times the increase in
+19:725:31870:21:20:71:525:178:121:g_d0_f4:121:g_d0_f4:the size of the extreme shock. The sum of these marginal changes in the expected loss must be
+19:726:31963:20:20:71:255:158:121:g_d0_f4:121:g_d0_f4:zero in an optimum, which gives (8.1).
+19:727:32001:20:20:88:526:138:121:g_d0_f4:121:g_d0_f4:Policy is affected by the endogeneity of the size of the shock only when the marginal loss
+19:728:32091:20:0:71:526:118:121:g_d0_f4:121:g_d0_f4:conditional on the extreme shock is nonzero. Then, we will have E∂L(π)∂π>0 instead of E∂L(π)∂π=
+20:729:32188:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:0, and optimal normal mean inflation will be higher than when the size of the extreme shock is
+20:730:32282:21:20:72:526:738:121:g_d0_f4:121:g_d0_f4:exogenous. It will be optimal to lower the size of the extreme shock somewhat, but this require
+20:731:32377:20:20:72:409:718:121:g_d0_f4:121:g_d0_f4:a lower instrument level and results in a higher normal mean inflation.
+20:732:32448:20:30:88:279:698:121:g_d0_f4:121:g_d0_f4:For thequadraticloss function, we have
+20:733:32486:30:0:212:219:668:121:g_d0_f4:121:g_d0_f4:E
+20:734:32487:0:15:223:251:675:121:g_d0_f12:121:g_d0_f4:∂L(π)
+20:735:32492:15:0:231:244:660:121:g_d0_f12:121:g_d0_f12:∂π
+20:736:32494:0:28:263:525:668:121:g_d0_f4:121:g_d0_f4:=E[π−π∗]= ̄πq+γaq−π∗,(8.2)
+20:737:32520:28:0:164:177:640:121:g_d0_f12:121:g_d0_f4:γE
+20:738:32522:0:8:179:185:656:121:g_d0_f14:121:g_d0_f14:·
+20:739:32523:8:15:186:215:648:121:g_d0_f12:121:g_d0_f4:∂L(π)
+20:740:32528:15:0:194:207:633:121:g_d0_f12:121:g_d0_f12:∂π
+20:741:32530:0:0:216:247:640:121:g_d0_f4:121:g_d0_f12:;η=a
+20:742:32534:0:16:247:253:656:121:g_d0_f14:121:g_d0_f14: ̧
+20:743:32536:16:29:263:525:640:121:g_d0_f4:121:g_d0_f4:=γE[π−π∗;η=a]=γ(aq−π∗),(8.3)
+20:744:32564:29:21:71:525:611:121:g_d0_f4:121:g_d0_f4:where  ̄πqandaqdenote the optimal normal mean inflation and size of the extreme shock,
+20:745:32650:21:30:71:228:590:121:g_d0_f4:121:g_d0_f4:respectively. They are related by
+20:746:32683:30:23:256:525:560:121:g_d0_f4:121:g_d0_f4: ̄πq=x−αiq,(8.4)
+20:747:32699:23:30:256:525:537:121:g_d0_f12:121:g_d0_f4:aq=a1+a2iq,(8.5)
+20:748:32715:30:20:71:525:507:121:g_d0_f4:121:g_d0_f4:whereiqdenotes the optimal instrument setting. Substitution of (8.2) and (8.3) into (8.1) leads
+20:749:32810:20:30:71:208:487:121:g_d0_f4:121:g_d0_f4:to the optimal targeting rule
+20:750:32839:30:0:225:356:457:121:g_d0_f4:121:g_d0_f4: ̄πq=π∗−γaq+γ(aq−π∗)
+20:751:32859:0:15:357:367:464:121:g_d0_f12:65:g_d0_f8:a2
+20:752:32861:15:0:359:366:449:121:g_d0_f12:121:g_d0_f12:α
+20:753:32862:0:30:369:525:457:121:g_d0_f12:121:g_d0_f4:.(8.6)
+20:754:32868:30:20:71:525:427:121:g_d0_f4:65:g_d0_f8:Substitution of (8.4) and (8.5) into (8.6) allows us to solve for the optimaliqand thereby  ̄πq
+20:755:32963:20:21:72:525:407:121:g_d0_f4:121:g_d0_f4:andaq.Sincewehaveaq>π∗(recall thatais assumed to remain a large positive number and
+20:756:33046:21:20:72:525:386:121:g_d0_f12:121:g_d0_f4:π∗is a low positive number), we see from (8.6) that normal mean inflation will undershoot the
+20:757:33139:20:20:72:525:366:121:g_d0_f4:121:g_d0_f4:inflation target by less than the mean size of the extreme shock. Ifa2/α > aq/(aq−π∗), normal
+20:758:33232:20:21:72:446:346:121:g_d0_f4:121:g_d0_f4:mean inflation will even overshoot rather than undershoot the inflation target.
+20:759:33311:21:30:88:417:325:121:g_d0_f4:121:g_d0_f4:For thecombined quadratic/absolute-deviationloss function, we have
+20:760:33377:30:0:158:165:295:121:g_d0_f4:121:g_d0_f4:E
+20:761:33378:0:15:169:198:303:121:g_d0_f12:121:g_d0_f4:∂L(π)
+20:762:33383:15:0:177:190:288:121:g_d0_f12:121:g_d0_f12:∂π
+20:763:33385:0:27:209:488:295:121:g_d0_f4:121:g_d0_f12:=(1−γ)E [π−π∗;η=0]+γc=(1−γ)( ̄πqa−π∗)+γc,
+20:764:33426:27:0:108:121:268:121:g_d0_f12:121:g_d0_f4:γE
+20:765:33428:0:8:125:131:284:121:g_d0_f14:121:g_d0_f14:·
+20:766:33429:8:15:132:161:276:121:g_d0_f12:121:g_d0_f4:∂L(π)
+20:767:33434:15:0:140:153:261:121:g_d0_f12:121:g_d0_f12:∂π
+20:768:33436:0:0:162:193:268:121:g_d0_f4:121:g_d0_f12:;η=a
+20:769:33440:0:16:193:199:284:121:g_d0_f14:121:g_d0_f14: ̧
+20:770:33442:16:30:209:242:268:121:g_d0_f4:121:g_d0_f12:=γc,
+20:771:33446:30:20:72:525:238:121:g_d0_f4:121:g_d0_f4:the latter under the assumption that the support of inflation for the extreme shock falls within
+20:772:33542:20:30:72:310:218:121:g_d0_f4:121:g_d0_f4:the linear range. Substituting this into (8.1) gives
+20:773:33594:30:0:234:286:188:121:g_d0_f4:121:g_d0_f13: ̄πqa=π∗−
+20:774:33603:0:14:299:305:195:121:g_d0_f12:121:g_d0_f12:γ
+20:775:33604:14:0:289:314:181:121:g_d0_f4:121:g_d0_f12:1−γ
+20:776:33607:0:0:316:341:188:121:g_d0_f12:121:g_d0_f13:c(1−
+20:777:33611:0:14:344:354:195:121:g_d0_f12:65:g_d0_f8:a2
+20:778:33613:14:0:346:353:181:121:g_d0_f12:121:g_d0_f12:α
+20:779:33614:0:30:356:363:188:121:g_d0_f4:121:g_d0_f12:).
+20:780:33616:30:20:72:529:158:121:g_d0_f4:121:g_d0_f4:The optimal normal mean inflation undershoots the inflationtargetbylessthanwhenthesize
+20:781:33702:20:20:72:525:138:121:g_d0_f4:121:g_d0_f4:of the extreme shock is exogenous, cf. (5.4). Ifa2>α,theoptimalnormalmeaninflation even
+20:782:33789:20:0:71:218:118:121:g_d0_f4:121:g_d0_f4:overshoots the inflation target.
+21:783:33823:0:32:88:320:759:121:g_d0_f4:121:g_d0_f4:For theabsolute-deviationloss function, we have
+21:784:33870:32:0:248:255:727:121:g_d0_f4:121:g_d0_f4:E
+21:785:33871:0:15:259:288:735:121:g_d0_f12:121:g_d0_f4:∂L(π)
+21:786:33876:15:0:267:280:720:121:g_d0_f12:121:g_d0_f12:∂π
+21:787:33878:0:27:299:397:727:121:g_d0_f4:121:g_d0_f12:=1−2Pr[π≤π∗],
+21:788:33891:27:0:198:211:700:121:g_d0_f12:121:g_d0_f4:γE
+21:789:33893:0:8:215:221:715:121:g_d0_f14:121:g_d0_f14:·
+21:790:33894:8:15:222:251:707:121:g_d0_f12:121:g_d0_f4:∂L(π)
+21:791:33899:15:0:230:243:692:121:g_d0_f12:121:g_d0_f12:∂π
+21:792:33901:0:0:252:284:700:121:g_d0_f4:121:g_d0_f12:;η=a
+21:793:33905:0:15:283:289:715:121:g_d0_f14:121:g_d0_f14: ̧
+21:794:33907:15:31:299:327:700:121:g_d0_f4:121:g_d0_f12:=γ.
+21:795:33910:31:32:72:227:669:121:g_d0_f4:121:g_d0_f4:Substituting this into (8.1) gives
+21:796:33944:32:0:237:302:637:121:g_d0_f4:121:g_d0_f4:Pr[π≤π∗]=
+21:797:33953:0:15:303:308:645:121:g_d0_f4:121:g_d0_f4:1
+21:798:33954:15:0:303:308:630:121:g_d0_f4:121:g_d0_f4:2
+21:799:33955:0:0:310:339:637:121:g_d0_f4:121:g_d0_f12:(1−γ
+21:800:33959:0:15:340:350:645:121:g_d0_f12:65:g_d0_f8:a2
+21:801:33961:15:0:342:349:630:121:g_d0_f12:121:g_d0_f12:α
+21:802:33962:0:31:352:525:637:121:g_d0_f4:121:g_d0_f4:),(8.7)
+21:803:33969:31:31:72:524:606:121:g_d0_f4:121:g_d0_f4:which implies that the median inflation will overshoot the inflation target. Let  ̃zbe defined by
+21:804:34066:31:0:241:296:575:121:g_d0_f4:121:g_d0_f13:Pr[z≤ ̃z]≡
+21:805:34076:0:15:300:305:582:121:g_d0_f4:121:g_d0_f4:1
+21:806:34077:15:0:300:305:567:121:g_d0_f4:121:g_d0_f4:2
+21:807:34078:0:0:306:335:575:121:g_d0_f4:121:g_d0_f12:(1−γ
+21:808:34082:0:15:337:347:582:121:g_d0_f12:65:g_d0_f8:a2
+21:809:34084:15:0:339:346:567:121:g_d0_f12:121:g_d0_f12:α
+21:810:34085:0:31:349:356:575:121:g_d0_f4:121:g_d0_f12:).
+21:811:34087:31:21:72:205:544:121:g_d0_f4:121:g_d0_f4:We have  ̃z<med(z). Then,
+21:812:34112:21:27:233:365:523:121:g_d0_f4:121:g_d0_f12: ̄πa=π∗− ̃z>π∗−med(z).
+21:813:34134:27:20:71:529:496:121:g_d0_f4:121:g_d0_f4:The optimal normal mean inflation undershoots the inflationtargetbylessthanwhenthesize
+21:814:34220:20:20:71:236:476:121:g_d0_f4:121:g_d0_f4:of the extreme shock is exogenous.
+21:815:34254:20:32:88:388:456:121:g_d0_f4:121:g_d0_f4:Under the special case of a uniform distribution,f(z), we have
+21:816:34316:32:0:180:271:424:121:g_d0_f4:121:g_d0_f4:Pr[z≤ ̃z]=(1−γ)
+21:817:34331:0:15:275:280:432:121:g_d0_f4:121:g_d0_f4:1
+21:818:34332:15:0:273:283:417:121:g_d0_f4:121:g_d0_f12:2b
+21:819:34334:0:32:284:417:425:121:g_d0_f4:121:g_d0_f12:( ̃z+b)for−b≤z≤b.
+21:820:34351:32:31:72:223:393:121:g_d0_f4:121:g_d0_f4:Combining this with (8.7) gives
+21:821:34382:31:0:204:221:362:121:g_d0_f4:121:g_d0_f4: ̃z=
+21:822:34386:0:15:234:240:369:121:g_d0_f12:121:g_d0_f12:γ
+21:823:34387:15:0:224:249:354:121:g_d0_f4:121:g_d0_f12:1−γ
+21:824:34390:0:0:250:276:362:121:g_d0_f12:121:g_d0_f13:b(1−
+21:825:34394:0:15:279:289:369:121:g_d0_f12:65:g_d0_f8:a2
+21:826:34396:15:0:281:288:354:121:g_d0_f12:121:g_d0_f12:α
+21:827:34397:0:0:291:359:362:121:g_d0_f4:121:g_d0_f4:)<med(z)=
+21:828:34406:0:15:369:375:369:121:g_d0_f12:121:g_d0_f12:γ
+21:829:34407:15:0:360:384:354:121:g_d0_f4:121:g_d0_f12:1−γ
+21:830:34410:0:31:386:394:362:121:g_d0_f12:121:g_d0_f12:b.
+21:831:34412:31:21:71:458:331:121:g_d0_f4:121:g_d0_f4:Fora2>α, ̃z<0, and optimal mean inflation will overshoot the inflation target.
+21:832:34490:21:20:88:525:310:121:g_d0_f4:121:g_d0_f4:For thecombined quadratic/constantloss function and theperfectionistloss function, the
+21:833:34576:20:20:71:525:290:121:g_d0_f4:121:g_d0_f4:endogeneity of the size of the extreme shock does not affect the optimal policy, since then
+21:834:34667:20:38:71:189:270:121:g_d0_f4:121:g_d0_f4:E[∂L(π)/∂π;η=a]=0.
+21:835:34685:38:31:72:422:232:145:g_d0_f3:145:g_d0_f3:9. Comparing optimal policy for the different loss functions
+21:836:34745:31:20:72:525:201:121:g_d0_f4:121:g_d0_f4:Comparing the resulting optimal normal mean inflation for the different loss functions when the
+21:837:34840:20:31:72:299:181:121:g_d0_f4:121:g_d0_f4:size of the extreme shock is exogenous, we have
+21:838:34887:31:0:72:229:150:121:g_d0_f4:121:g_d0_f13: ̄πq=π∗−mean(z)< ̄πqa=π∗−
+21:839:34912:0:15:241:247:157:121:g_d0_f12:121:g_d0_f12:γ
+21:840:34913:15:0:232:256:142:121:g_d0_f4:121:g_d0_f12:1−γ
+21:841:34916:0:0:258:525:150:121:g_d0_f12:121:g_d0_f12:c< ̄πa=π∗−med(z)< ̄πqc=π∗Q ̄πp=π∗−mode(z),
+22:842:34960:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:where mean(z)=γa, and where the median and the mode ofzdepend on the distributionf(z).
+22:843:35046:21:26:71:318:738:121:g_d0_f4:121:g_d0_f4:In the special case of (4.5), (4.6) and (5.3), we have
+22:844:35100:26:0:90:220:712:121:g_d0_f4:121:g_d0_f13: ̄πq=π∗−γa < ̄πqa=π∗−
+22:845:35121:0:15:233:239:720:121:g_d0_f12:121:g_d0_f12:γ
+22:846:35122:15:0:223:248:705:121:g_d0_f4:121:g_d0_f12:1−γ
+22:847:35125:0:0:250:318:712:121:g_d0_f12:121:g_d0_f13:c< ̄πa=π∗−
+22:848:35135:0:15:330:336:720:121:g_d0_f12:121:g_d0_f12:γ
+22:849:35136:15:0:321:346:705:121:g_d0_f4:121:g_d0_f12:1−γ
+22:850:35139:0:25:347:507:712:121:g_d0_f12:121:g_d0_f12:b< ̄πqc=π∗Q ̄πp=π∗+[−b, b].
+22:851:35166:25:21:88:525:687:121:g_d0_f4:121:g_d0_f4:The quadratic loss function implies setting unconditional mean inflation equal to the infla-
+22:852:35258:21:20:72:525:666:121:g_d0_f4:121:g_d0_f4:tion target and hence letting mean inflation conditional on the normal outcome, normal mean
+22:853:35349:20:20:72:525:646:121:g_d0_f4:121:g_d0_f4:inflation,  ̄πq, undershoot the target by the mean size of the extreme event,γa, the probability-
+22:854:35446:20:21:71:525:626:121:g_d0_f4:121:g_d0_f4:weightedsizeof the extreme event.  Thus, the amount of undershooting depends both on
+22:855:35530:21:20:71:525:605:121:g_d0_f4:121:g_d0_f4:the probability,γ, and the size,a, of the extreme event.  The quadratic/absolute-deviation
+22:856:35620:20:20:71:525:585:121:g_d0_f4:121:g_d0_f4:loss function implies letting normal mean inflation,  ̄πqa, undershoot the inflation target by the
+22:857:35718:20:21:71:525:565:121:g_d0_f4:121:g_d0_f4:probability-weightedconstant  marginal lossfor the extreme event,γc, which is less than the
+22:858:35809:21:20:71:525:544:121:g_d0_f4:121:g_d0_f4:probability-weighted size of the extreme event. Once the extreme shock is so large that inflation
+22:859:35906:20:20:71:524:524:121:g_d0_f4:121:g_d0_f4:then falls in the linear range, the weight on the extreme event is independent of the size of the
+22:860:36003:20:21:71:141:504:121:g_d0_f4:121:g_d0_f4:extreme event.
+22:861:36017:21:20:88:525:483:121:g_d0_f4:121:g_d0_f4:The absolute-deviation loss function implies setting median inflation equal to the target;
+22:862:36107:20:20:71:525:463:121:g_d0_f4:121:g_d0_f4:hence letting the normal mean inflation,  ̄πa, undershoot the target by the median of the total
+22:863:36202:20:21:71:525:443:121:g_d0_f4:121:g_d0_f12:shock to inflation, med(z)=γ1−γb. This puts even less weight on the extreme event (by (5.3),b
+22:864:36295:21:20:71:525:422:121:g_d0_f4:121:g_d0_f4:is less thanc). Again, the monetary-policy response is independent of the size of the extreme
+22:865:36388:20:20:71:525:402:121:g_d0_f4:121:g_d0_f4:event. Finally, the quadratic/constant loss function completely ignores the extreme event, letting
+22:866:36486:20:21:71:525:382:121:g_d0_f4:121:g_d0_f4:the normal mean inflation,  ̄πqc,equaltheinflation target. It ignores the extreme event when
+22:867:36578:21:20:71:524:361:121:g_d0_f4:121:g_d0_f4:the shock is large enough to fall in the constant range of the loss function, regardless of its
+22:868:36673:20:20:71:125:341:121:g_d0_f4:121:g_d0_f4:probability.
+22:869:36685:20:21:88:525:321:121:g_d0_f4:121:g_d0_f4:The perfectionist loss function leads to a focuson mode projections and thereby ignores the
+22:870:36776:21:20:72:526:300:121:g_d0_f4:121:g_d0_f4:extreme event because it is low-probability, regardless of its size. Whether this implies that
+22:871:36870:20:20:72:525:280:121:g_d0_f4:121:g_d0_f4:normal mean inflation under- or overshoots the target depends on whether or not the mode of
+22:872:36961:20:21:71:306:260:121:g_d0_f4:121:g_d0_f4:the normal shock under- or overshoots the mean.
+22:873:37008:21:20:88:525:239:121:g_d0_f4:121:g_d0_f4:We have also considered the case when the size of the extreme shock is endogenous and,
+22:874:37094:20:20:71:525:219:121:g_d0_f4:121:g_d0_f4:more precisely, a linear function of the policy instrument. We noted that whether the size of
+22:875:37187:20:21:71:524:199:121:g_d0_f4:121:g_d0_f4:the extreme shock is increasing and decreasing depends on the nature of the shock and took
+22:876:37277:21:20:71:525:178:121:g_d0_f4:121:g_d0_f4:as the main case the one where the size is increasing in the instrument, whichfits the U.K.
+22:877:37368:20:20:71:525:158:121:g_d0_f4:121:g_d0_f4:exchange-rate example. Then the size of the extreme shock and normal mean inflation move in
+22:878:37459:20:20:71:525:138:121:g_d0_f4:121:g_d0_f4:opposite directions when the instrument is adjusted. Then, optimal normal mean inflation will
+22:879:37552:20:0:71:525:118:121:g_d0_f4:121:g_d0_f4:undershoot the inflation target less for the quadratic, combined quadratic/absolute-deviation
+23:880:37647:0:21:72:525:759:121:g_d0_f4:121:g_d0_f4:and absolute-deviation loss functions than when the size of the extreme shock is exogenous. If
+23:881:37741:21:20:72:525:738:121:g_d0_f4:121:g_d0_f4:the effect on the size of the extreme shock of the instrument is sufficiently large relative to the
+23:882:37840:20:20:71:525:718:121:g_d0_f4:121:g_d0_f4:effect on inflation, the optimal normal mean inflationwillevenovershoottheinflation target in
+23:883:37933:20:21:71:525:698:121:g_d0_f4:121:g_d0_f4:those cases. The reason is that lowering the instrument and increasing the normal mean inflation
+23:884:38029:21:20:71:525:677:121:g_d0_f4:121:g_d0_f4:will reduce the size and thereby the expected loss from the extreme shock. For the combined
+23:885:38120:20:20:71:525:657:121:g_d0_f4:121:g_d0_f4:quadratic/constant and perfectionist loss functions, endogeneity of the size of the extreme shock
+23:886:38217:20:21:71:525:637:121:g_d0_f4:121:g_d0_f4:has no effect on policy, since the expected loss from the extreme shock is then independent of
+23:887:38311:21:20:71:106:616:121:g_d0_f4:121:g_d0_f4:its size.
+23:888:38320:20:20:88:525:596:121:g_d0_f4:121:g_d0_f4:Which of these different loss functions makes most sense for monetary policy? This is, of
+23:889:38409:20:21:71:525:576:121:g_d0_f4:121:g_d0_f4:course, a rather deep question. The answer depends on, for instance, whether the loss function is
+23:890:38506:21:20:71:525:555:121:g_d0_f4:121:g_d0_f4:an approximation to social welfare, assigned to thecentral bank by society or political authorities
+23:891:38605:20:20:71:525:535:121:g_d0_f4:121:g_d0_f4:as in a principal-agent situation, an interpretation by the central bank of less precise instructions
+23:892:38706:20:21:71:525:515:121:g_d0_f4:121:g_d0_f4:or legislation, or the private loss function of a decisionmaker.  In the latter case, Bray and
+23:893:38800:21:20:71:525:494:121:g_d0_f4:121:g_d0_f4:Goodhart [2] argue that there is nothing worse than beingfired, for which situation theyfind their
+23:894:38898:20:20:71:525:474:121:g_d0_f4:121:g_d0_f4:bell loss function with an upper bound appropriate. However, even in this case, a decisionmaker
+23:895:38993:20:21:71:525:454:121:g_d0_f4:121:g_d0_f4:can befired with more or less personal disgrace, making thefixed upper bound somewhat
+23:896:39078:21:20:71:114:433:121:g_d0_f4:121:g_d0_f4:doubtful.
+23:897:39087:20:20:88:525:413:121:g_d0_f4:121:g_d0_f4:One way to evaluate the sensibility of the loss functions is to consider the marginal loss. Does
+23:898:39183:20:21:71:525:393:121:g_d0_f4:121:g_d0_f4:it make sense that the marginal loss is increasing, constant or decreasing in the deviation from
+23:899:39279:21:20:71:525:372:121:g_d0_f4:121:g_d0_f4:the target? Is the marginal loss increasing for small deviations and constant or decreasing for
+23:900:39374:20:20:71:525:352:121:g_d0_f4:121:g_d0_f4:large ones? I hope I am excused for not having any definite answers to these questions, except
+23:901:39468:20:38:71:344:332:121:g_d0_f4:121:g_d0_f4:that the perfectionist loss function seems rather extreme.
+23:902:39526:38:31:72:135:294:145:g_d0_f3:145:g_d0_f3:References
+23:903:39536:31:20:77:525:263:121:g_d0_f4:121:g_d0_f5:[1] Bank of England (2002),Minutes of Monetary Policy Committee Meeting, 6 and 7 February
+23:904:39625:20:29:94:206:243:121:g_d0_f5:121:g_d0_f4:2002, Bank of England.
+23:905:39647:29:21:77:525:214:121:g_d0_f4:121:g_d0_f4:[2] Bray, Margaret, and Charles Goodhart (2002), “ ‘You Might as Well Be Hung for a Sheep
+23:906:39736:21:20:94:525:193:121:g_d0_f4:121:g_d0_f4:as a Lamb’: The Loss Function of an Agent,” LSE Financial Markets Group Discussion
+23:907:39818:20:29:94:165:173:121:g_d0_f4:121:g_d0_f4:Paper No. 418.
+23:908:39832:29:21:77:525:144:121:g_d0_f4:121:g_d0_f4:[3] Freedman, Charles (2002), “General Discussion: Monetary Policy and Real Stabilization,”
+23:909:39923:21:0:94:525:123:121:g_d0_f4:121:g_d0_f5:inRethinking Stabilization Policy, A Symposium Sponsored by the Federal Reserve Bank of
+24:910:40012:0:30:94:384:759:121:g_d0_f5:121:g_d0_f4:Kansas City, Federal Reserve Bank of Kansas City, 319—331.
+24:911:40070:30:20:77:525:729:121:g_d0_f4:121:g_d0_f4:[4] Nickell, Stephen (2002), “Monetary Policy Issues: Past, Present, Future,” speech on June
+24:912:40162:20:29:94:354:709:121:g_d0_f4:121:g_d0_f4:19, 2002, Bank of England, www.bankofengland.co.uk.
+24:913:40213:29:21:77:525:680:121:g_d0_f4:121:g_d0_f4:[5] Svensson, Lars. E.O. (2001), “Price Stability as a Target for Monetary Policy: Defining and
+24:914:40308:21:20:94:525:659:121:g_d0_f4:121:g_d0_f5:Maintaining Price Stability,” in Deutsche Bundesbank, ed. (2001),The Monetary Transmis-
+24:915:40395:20:20:94:525:639:121:g_d0_f5:121:g_d0_f4:sion Process:  Recent Developments and Lessons for Europe, Palgrave, New York, 60—102.
+24:916:40481:20:30:94:341:619:121:g_d0_f4:121:g_d0_f4:(Also available as NBER Working Paper No. 7276.)
+24:917:40529:30:20:77:524:589:121:g_d0_f4:121:g_d0_f5:[6] Svensson, Lars E.O. (2002), “Monetary Policy and Real Stabilization”, inRethinking Sta-
+24:918:40620:20:20:94:525:569:121:g_d0_f5:121:g_d0_f4:bilization Policy,  A Symposium Sponsoredby the Federal  Reserve Bank of Kansas City,
+24:919:40705:20:30:94:472:549:121:g_d0_f4:121:g_d0_f4:Federal Reserve Bank of Kansas City, 261—312, www.princeton.edu/∼svensson.
+24:920:40779:30:20:77:525:519:121:g_d0_f4:121:g_d0_f4:[7] Svensson, Lars E.O. (2003a), “Escaping from a Liquidity Trap and Deflation: The Foolproof
+24:921:40872:20:29:94:409:499:121:g_d0_f4:121:g_d0_f4:Way and Others,” working paper, www.princeton.edu/∼svensson.
+24:922:40932:29:20:77:525:470:121:g_d0_f4:121:g_d0_f4:[8] Svensson, Lars E.O. (2003b), “What Is Wrong with Taylor Rules?  Using Judgment in
+24:923:41017:20:30:94:517:450:121:g_d0_f4:121:g_d0_f4:Monetary Policy through Targeting Rules,”Journal of Economic Literature41, 426-477.
+24:924:41100:30:20:77:525:420:121:g_d0_f4:121:g_d0_f5:[9] Vickers, John (1998), “Inflation Targeting in Practice: The UK Experience,”Bank of Eng-
+24:925:41191:20:29:94:269:400:121:g_d0_f5:121:g_d0_f4:land Quarterly Bulletin38, 368—375.
+24:926:41226:29:21:72:525:371:121:g_d0_f4:121:g_d0_f4:[10] Wallis, Kenneth F. (1999), “Asymmetric Density Forecasts of Inflation and Bank of Eng-
+24:927:41317:21:0:94:428:350:121:g_d0_f4:121:g_d0_f4:land’s Fan Chart,”National Institute Economic Review167, 106—112.

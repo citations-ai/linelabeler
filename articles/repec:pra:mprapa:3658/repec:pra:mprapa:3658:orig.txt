@@ -1,0 +1,544 @@
+1:0:0:0:27:307:511:664:3425:g_d0_f1:3425:g_d0_f1:MPRA
+1:1:4:27:123:278:504:637:17:g_d0_f2:17:g_d0_f2:Munich Personal RePEc Archive
+1:2:33:123:25:81:437:514:21:g_d0_f3:21:g_d0_f3:Reconsidering the logit:  the risk of
+1:3:70:25:45:81:253:489:21:g_d0_f3:21:g_d0_f3:individual names
+1:4:86:45:36:81:190:444:17:g_d0_f2:17:g_d0_f2:Varsanyi Zoltan
+1:5:101:36:249:81:143:408:14:g_d0_f4:14:g_d0_f4:June 2007
+1:6:110:249:18:81:410:159:14:g_d0_f4:14:g_d0_f5:Online athttp://mpra.ub.uni-muenchen.de/3658/
+1:7:155:18:0:81:365:141:14:g_d0_f4:14:g_d0_f4:MPRA Paper No. 3658, posted 20. June 2007
+2:8:196:0:17:141:457:758:195:Times:195:Times:Reconsidering the logit: the risk of individual names 
+2:9:250:17:15:297:300:741:195:Times:195:Times: 
+2:10:250:15:17:249:348:726:195:g_d0_f7:195:g_d0_f7:Zoltan Varsanyi♣ 
+2:11:266:17:14:70:73:709:195:Times:195:Times: 
+2:12:266:14:14:97:499:695:144:g_d0_f7:144:g_d0_f7:In  this  paper  I  examine  whether  the  probability  of  default  (PD)  of  an  obligor  
+2:13:358:14:13:97:500:681:144:g_d0_f7:144:g_d0_f7:estimated by a logit model can really be considered a good estimate of the true PD. 
+2:14:442:13:14:97:496:668:144:g_d0_f7:144:g_d0_f7:The general answer seems to be no, although in this paper I don’t carry out a large 
+2:15:526:14:14:97:497:654:144:g_d0_f7:144:g_d0_f7:scale (simulation) analysis. With a simple set-up I show that the logit has a high 
+2:16:609:14:14:97:499:640:144:g_d0_f7:144:g_d0_f7:potential  of  ‘mixing’  probabilities,  that  is,  as1signing  similar  scores  to  obligors  
+2:17:704:14:14:97:499:626:144:g_d0_f7:144:g_d0_f7:with  quite  different  PDs.  I  demonstrate  how  this  situation  is  reflected  in  the  
+2:18:796:14:13:97:498:612:144:g_d0_f7:144:g_d0_f7:convexity  that  can  often  be  observed  in  empirical  ROC  curves.  I  think  that  the  
+2:19:889:13:14:97:499:599:144:g_d0_f7:144:g_d0_f7:results  have  important  implications  in  the  pricing  of  individual  exposures  and  
+2:20:979:14:14:97:497:585:144:g_d0_f7:144:g_d0_f7:raise  the  question  of  the  stability  of  estimated  PDs  when  the  value-combinations  
+2:21:1072:14:14:97:497:571:144:g_d0_f7:144:g_d0_f7:of the risk factors underlying the portfolio change. This latter issue also relates to 
+2:22:1159:14:14:97:497:557:144:g_d0_f7:144:g_d0_f7:capital  calculation,  model  building  and  validation  as  required  by  the  new  Basel  
+2:23:1251:14:13:97:497:543:144:g_d0_f7:144:g_d0_f7:capital rules. For example, because of the concavity of the risk weight formula a 
+2:24:1333:13:14:97:469:530:144:g_d0_f7:144:g_d0_f7:bank may want to avoid PD mixing thereby reducing its capital requirement. 
+2:25:1408:14:16:70:73:516:144:g_d0_f7:144:g_d0_f7: 
+2:26:1408:16:16:70:73:500:195:Times:195:Times: 
+2:27:1408:16:14:70:162:484:195:Times:195:Times:I. Introduction 
+2:28:1424:14:14:70:73:470:144:g_d0_f7:144:g_d0_f7: 
+2:29:1424:14:14:70:527:456:144:g_d0_f7:144:g_d0_f7:Logit models are standards in the credit risk assessment of banks’ customers. It is widely used 
+2:30:1520:14:14:70:530:442:144:g_d0_f7:144:g_d0_f7:in  the  retail  and  corporate  segment  where  data  scarcity  is  generally  not  a  problem.  The  
+2:31:1623:14:13:70:527:428:144:g_d0_f7:144:g_d0_f7:purpose of using these models is – through the assessment of riskiness of obligors – to assign 
+2:32:1718:13:14:70:528:415:144:g_d0_f7:144:g_d0_f7:obligors/exposures to homogenous risk-grades which, subsequently, forms (or may form) the 
+2:33:1808:14:14:70:331:401:144:g_d0_f7:144:g_d0_f7:basis of capital calculation, pricing, limit setting, etc.  
+2:34:1868:14:14:70:530:387:144:g_d0_f7:144:g_d0_f7:One  interesting  thing  in  this  process  is  that  while  we  are  interested  in  the  riskiness  of  
+2:35:1974:14:14:70:528:373:144:Times:144:g_d0_f7:individual  names  we  (can)  assess  it  using  the  actual  portfolio  that  those  names  are  assigned  
+2:36:2082:14:13:70:527:359:144:g_d0_f7:144:g_d0_f7:to.2 On the other hand, even using the whole portfolio doesn’t mean that we could determine 
+2:37:2174:13:14:70:528:346:144:g_d0_f7:144:g_d0_f7:the  loss-contribution  of  the  names  in  question  (which  changes  from  portfolio  to  portfolio)  –  
+2:38:2281:14:14:70:528:332:144:g_d0_f7:144:g_d0_f7:logit  models  only  assess  the  probability  of  default  (PD)  irrespective  of  concentrations  in  the  
+2:39:2390:14:14:70:185:318:144:g_d0_f7:144:g_d0_f7:portfolio, for example.  
+2:40:2415:14:14:70:528:304:144:g_d0_f7:144:g_d0_f7:That  is,  there  are  interesting  ‘interactions’  between  the  single  name  and  the  portfolio  levels.  
+2:41:2525:14:13:70:528:290:144:g_d0_f7:144:g_d0_f7:This  relationship  can  be  further  explored  by  the  following  question:  does  a  well-fitting  logit  
+2:42:2634:13:14:70:528:277:144:g_d0_f7:144:g_d0_f7:model  really  estimates  the  risk  (PD)  of  a  single  name  correctly?  I  arrived  at  this  question  in  
+2:43:2746:14:14:70:527:263:144:g_d0_f7:144:g_d0_f7:connection with a very general problem in economics: when someone wants to sell something 
+2:44:2836:14:14:70:529:249:144:g_d0_f7:144:g_d0_f7:he/she  can  be  expected  to  have  some  ‘informational  advantage’  over  the  buyer,  so  that  the  
+2:45:2941:14:14:70:527:235:144:g_d0_f7:144:g_d0_f7:latter one may think that the reason of the intention to sell is a ‘hidden’ problem with the item 
+2:46:3039:14:13:70:527:221:144:g_d0_f7:144:g_d0_f7:that is to be sold. This situation can be described by ‘informational asymmetry’ and may lead 
+2:47:3133:13:14:70:528:208:144:g_d0_f7:144:g_d0_f7:to ‘adverse selection’ in the portfolio of bought items of the buyer, i.e. the buyer will collect 
+2:48:3231:14:14:70:528:194:144:g_d0_f7:144:g_d0_f7:goods  of  inferior  quality,  for  example;  the  danger  of  this  happening  may  lead  the  buyer  to  
+2:49:3338:14:14:70:527:180:144:g_d0_f7:144:g_d0_f7:offer less for the item than it is actually worth. The problem can be mitigated if the buyer has 
+2:50:3435:14:14:70:478:166:144:g_d0_f7:144:g_d0_f7:the opportunity to carry out a thorough examination of the item before the purchase. 
+2:51:3520:14:13:70:527:152:144:g_d0_f7:144:g_d0_f7:The above described situation may appear in banking, for example, when a bank wants to sell 
+2:52:3612:13:31:70:527:139:144:g_d0_f7:144:g_d0_f7:its loan(s). It has an informational advantage over the potential buyers, since it has collected 
+2:53:3709:31:8:70:217:108:144:g_d0_f7:144:g_d0_f7:                                                 
+2:54:3757:8:16:70:517:100:42:g_d0_f8:100:g_d0_f7:♣  Economist, Magyar Nemzeti Bank (the central bank of Hungary). This paper has not yet been referenced nor 
+2:55:3864:16:7:70:323:84:100:g_d0_f7:100:g_d0_f7:discussed. Please send your comments to: varsanyiz@mnb.hu  
+2:56:3923:7:0:70:492:77:42:g_d0_f7:100:g_d0_f7:2 This can be compared to rating agency ratings where the assessment takes place on a stand-alone basis. 
+3:57:4028:0:14:70:527:760:144:g_d0_f7:144:g_d0_f7:information before and during the life of the loan. Moreover, why would a bank want to sell a 
+3:58:4122:14:14:70:397:746:144:g_d0_f7:144:g_d0_f7:loan unless there is a problem with it – a potential buyer could ask.  
+3:59:4193:14:14:70:528:732:144:g_d0_f7:144:g_d0_f7:The question that I examine in this paper is not related to the buyer’s side (e.g. how it could 
+3:60:4289:14:14:70:528:718:144:g_d0_f7:144:g_d0_f7:make  sure  it  doesn’t  make  a  bad  deal),  but  to  the  seller’s,  first  of  all:  whether  it  is  able  to  
+3:61:4405:14:13:70:528:704:144:g_d0_f7:144:g_d0_f7:assess the real riskiness of a single loan. I try to show that while logit models can work well 
+3:62:4501:13:14:70:527:691:144:g_d0_f7:144:g_d0_f7:(in terms of fit, discriminatory power, etc.) when there is a need to assign exposures to rating 
+3:63:4598:14:14:70:527:677:144:g_d0_f7:144:g_d0_f7:grades, their PD assessment for single names might be incorrect, even if estimated grade PDs 
+3:64:4691:14:14:70:528:663:144:g_d0_f7:144:g_d0_f7:are correct. Probably the most important reason why it may happen is that when fitting logit 
+3:65:4784:14:14:70:528:649:144:g_d0_f7:144:g_d0_f7:models it is usually taken as granted that the underlying data is actually generated by a logit 
+3:66:4880:14:13:70:529:635:144:g_d0_f7:144:g_d0_f7:model  and  there  is  a  ‘bias’  towards  accepting  the  results  that  seem  to  be  good.  In  fact,  this  
+3:67:4992:13:14:70:456:622:144:g_d0_f7:144:g_d0_f7:model imposes a strict structure on the data that may not always be appropriate. 
+3:68:5073:14:16:70:73:608:144:g_d0_f7:144:g_d0_f7: 
+3:69:5073:16:14:70:241:592:195:Times:195:Times:II. Logit models – the basics 
+3:70:5103:14:14:70:73:578:144:g_d0_f7:144:g_d0_f7: 
+3:71:5103:14:14:70:527:564:144:g_d0_f7:144:g_d0_f7:Instead of giving an in-depth discussion of logit models in this part I describe their basics and 
+3:72:5201:14:13:70:531:550:144:g_d0_f7:144:g_d0_f7:highlight  those  important  features  that  are  relevant  for  our  discussion  (e.g.  how  their  
+3:73:5302:13:14:70:267:537:144:g_d0_f7:144:g_d0_f7:appropriateness for a data set is judged). 
+3:74:5345:14:14:70:527:523:144:g_d0_f7:144:g_d0_f7:A loan can basically be in two status: either it defaults or not; and it has a certain probability 
+3:75:5444:14:14:70:528:509:144:g_d0_f7:144:g_d0_f7:of being in the default state (which variable I denote by PD  –  using  italics  to  differentiate  it  
+3:76:5548:14:14:70:530:495:144:g_d0_f7:144:g_d0_f7:from  the  generally  used  abbreviation  for  the  probability  of  default).  If  we  assume  (as  is  
+3:77:5653:14:13:70:531:481:144:g_d0_f7:144:g_d0_f7:general)  that  loans  (obligors)  are  independent  from  each  other  then  the  probability  of  
+3:78:5753:13:30:70:387:468:144:g_d0_f7:144:g_d0_f7:observing k defaults over a horizon in a portfolio of n obligors is: 
+3:79:5822:30:9:154:147:438:187:g_d0_f10:144:Times:()knkPDPD
+3:80:5831:9:0:118:123:429:144:Times:144:Times:k
+3:81:5832:0:19:119:125:447:144:Times:144:Times:n
+3:82:5833:19:0:87:93:428:144:Times:144:Times:n
+3:83:5834:0:7:87:92:445:144:Times:144:Times:k
+3:84:5835:7:12:73:131:438:144:Times:144:g_d0_f11:P−−⎟⎟
+3:85:5840:12:0:126:131:426:144:g_d0_f11:144:g_d0_f11:⎠
+3:86:5841:0:13:126:131:446:144:g_d0_f11:144:g_d0_f11:⎞
+3:87:5842:13:7:112:117:433:144:g_d0_f11:144:g_d0_f11:⎜⎜
+3:88:5844:7:0:112:117:426:144:g_d0_f11:144:g_d0_f11:⎝
+3:89:5845:0:8:112:117:446:144:g_d0_f11:144:g_d0_f11:⎛
+3:90:5846:8:11:103:100:438:144:g_d0_f10:144:g_d0_f11:=⎟
+3:91:5848:11:0:95:100:427:144:g_d0_f11:144:g_d0_f11:⎠
+3:92:5849:0:7:95:100:444:144:g_d0_f11:144:g_d0_f11:⎞
+3:93:5850:7:10:80:85:437:144:g_d0_f11:144:g_d0_f11:⎜
+3:94:5851:10:0:80:85:427:144:g_d0_f11:144:g_d0_f11:⎝
+3:95:5852:0:38:80:544:444:144:g_d0_f11:144:g_d0_f7:⎛1         (1) 
+3:96:5867:38:14:70:527:406:144:g_d0_f7:144:g_d0_f7:Having a sample of n observations with k defaults the maximum likelihood principle dictates 
+3:97:5959:14:14:70:527:392:144:g_d0_f7:144:g_d0_f7:to estimate PD by maximising (1) with respect to PD. In the product of the right hand side of 
+3:98:6053:14:14:70:529:378:144:g_d0_f7:144:g_d0_f7:(1)  we  insert  PD  for  the  k  defaulted  exposures  and  (1-PD)  for  the  rest.  Differentiating  the  
+3:99:6161:14:13:70:528:364:144:g_d0_f7:144:g_d0_f7:right-hand side and leaving the constant term out and equationg the resulting expression with 
+3:100:6255:13:38:70:268:351:144:g_d0_f7:144:g_d0_f7:zero leads to the well-known estimation: 
+3:101:6296:38:0:103:109:313:144:Times:144:Times:n
+3:102:6297:0:7:103:108:330:144:Times:144:Times:k
+3:103:6298:7:0:73:99:323:144:Times:144:g_d0_f10:PD=
+3:104:6301:0:11:78:82:334:49:g_d0_f10:49:g_d0_f10:∧
+3:105:6302:11:29:112:115:323:144:g_d0_f7:144:g_d0_f7: 
+3:106:6302:29:14:70:528:294:144:g_d0_f7:144:g_d0_f7:If PD is a function of more variables (risk factors) then the principle is the same, except that 
+3:107:6399:14:14:70:527:280:144:g_d0_f7:144:g_d0_f7:this time the parameters of the function (the sensitivity of PD to the factors) has to be adjusted 
+3:108:6498:14:14:70:527:266:144:g_d0_f7:144:g_d0_f7:in the optimisation. This way the estimated PD will be a function of the factor values; and the 
+3:109:6594:14:13:70:209:252:144:Times:144:g_d0_f7:PD is usually called a score. 
+3:110:6624:13:14:70:528:239:144:g_d0_f7:144:g_d0_f7:In the logit case the functional form that links the factors and PD is the logistic function, that 
+3:111:6723:14:26:70:84:225:144:g_d0_f7:144:g_d0_f7:is: 
+3:112:6727:26:0:132:128:199:49:Times:49:g_d0_f10:xePDβ−
+3:113:6733:0:21:78:82:214:49:g_d0_f10:49:g_d0_f10:∧
+3:114:6734:21:0:109:116:193:144:g_d0_f10:144:g_d0_f10:+
+3:115:6735:0:10:92:99:203:144:g_d0_f10:144:g_d0_f10:=
+3:116:6736:10:0:101:107:193:144:g_d0_f7:144:g_d0_f7:1
+3:117:6737:0:8:117:123:211:144:g_d0_f7:144:g_d0_f7:1
+3:118:6738:8:30:140:544:203:144:g_d0_f7:144:g_d0_f7:.          (2) 
+3:119:6753:30:14:70:528:173:144:g_d0_f7:144:g_d0_f7:Subsequently,  I  will  refer  to  βx  as  the  ‘risk  index’.  The  following  figure  shows  the  PD  as  a  
+3:120:6864:14:0:70:498:159:144:g_d0_f7:144:g_d0_f7:function of the risk index. It can be seen that the higher the risk index the higher the PD. 
+4:121:6957:0:0:286:290:531:75:g_d0_f7:75:g_d0_f7:0
+4:122:6958:0:0:280:291:553:75:g_d0_f7:75:g_d0_f7:0.1
+4:123:6961:0:0:280:291:576:75:g_d0_f7:75:g_d0_f7:0.2
+4:124:6964:0:0:280:291:598:75:g_d0_f7:75:g_d0_f7:0.3
+4:125:6967:0:0:280:291:620:75:g_d0_f7:75:g_d0_f7:0.4
+4:126:6970:0:0:280:291:642:75:g_d0_f7:75:g_d0_f7:0.5
+4:127:6973:0:0:280:291:665:75:g_d0_f7:75:g_d0_f7:0.6
+4:128:6976:0:0:280:291:687:75:g_d0_f7:75:g_d0_f7:0.7
+4:129:6979:0:0:280:291:709:75:g_d0_f7:75:g_d0_f7:0.8
+4:130:6982:0:0:280:291:731:75:g_d0_f7:75:g_d0_f7:0.9
+4:131:6985:0:236:286:290:754:75:g_d0_f7:75:g_d0_f7:1
+4:132:6986:236:18:78:545:518:75:g_d0_f7:75:g_d0_f7:-6-5-4-3-2-10123456
+4:133:7005:18:8:246:362:500:75:g_d0_f7:75:g_d0_f7:PD as a function of the risk index
+4:134:7039:8:17:523:526:492:144:g_d0_f7:144:g_d0_f7: 
+4:135:7039:17:15:70:527:475:144:g_d0_f7:144:Times:The figure and (2) give a nice interpretation of what the logit model does: it tries to find such 
+4:136:7137:15:14:70:528:460:144:Times:144:Times:values for the β parameters that for each value of the risk index the observed default ratio in 
+4:137:7233:14:13:70:529:446:144:Times:144:g_d0_f7:the  sample  around  that  value  equals  the  score.  This  is  not  the  only  criteria,  but  this  is  an  
+4:138:7344:13:14:70:146:433:144:g_d0_f7:144:g_d0_f7:important one.  
+4:139:7360:14:16:70:73:419:144:g_d0_f7:144:g_d0_f7: 
+4:140:7360:16:14:70:266:403:195:Times:195:Times:III. Can the logit be misleading? 
+4:141:7394:14:14:70:73:389:144:g_d0_f7:144:g_d0_f7: 
+4:142:7394:14:14:70:527:375:144:g_d0_f7:144:g_d0_f7:Given our last observation that the score should give a good estimation of the conditional PD 
+4:143:7488:14:13:70:528:361:144:g_d0_f7:144:g_d0_f7:around a risk index the main question of this paper arises: is it possible that the optimal logit 
+4:144:7586:13:14:70:527:348:144:g_d0_f7:144:g_d0_f7:incorrectly ‘mixes’ loans with different PDs to have the same score (that is their average PD)? 
+4:145:7682:14:14:70:529:334:144:g_d0_f7:144:g_d0_f7:For  example,  if  we  have  two  types  of  loans,  with  equal  weights  in  the  portfolio,  one  with  
+4:146:7789:14:14:70:527:320:144:Times:144:g_d0_f7:PD=0.2, the other with PD=0.4 and depending on the factors differently, is it possible that the 
+4:147:7885:14:14:70:284:306:144:g_d0_f7:144:g_d0_f7:estimated score for both groups will be 0.3? 
+4:148:7930:14:13:70:528:292:144:g_d0_f7:144:g_d0_f7:If the answer to the above questions were ‘yes’, that would pose several problems: the risk (in 
+4:149:8026:13:14:70:529:279:144:g_d0_f7:144:g_d0_f7:terms  of  PD)  of  individual  loans  would  not  be  estimated  correctly  and  the  correct  price  of  
+4:150:8133:14:14:70:528:265:144:g_d0_f7:144:g_d0_f7:such  loans  could  not  be  determined.  Moreover,  there  would  be  a  potential  danger  that  if  the  
+4:151:8241:14:14:70:444:251:144:g_d0_f7:144:g_d0_f7:portfolio changes the estimated PDs (the scores) would change significantly.  
+4:152:8319:14:16:70:73:237:144:g_d0_f7:144:g_d0_f7: 
+4:153:8319:16:14:70:370:221:195:Times:195:Times:III.1 Is the logit the data generating process (DGP)? 
+4:154:8373:14:14:70:73:207:144:g_d0_f7:144:g_d0_f7: 
+4:155:8373:14:13:70:528:193:144:g_d0_f7:144:g_d0_f7:When  testing  the  hypothesis  of  ‘PD  mixing’  an  important  question  is  how  one  regards  the  
+4:156:8476:13:14:70:528:180:144:g_d0_f7:144:g_d0_f7:logit  model.  To  my  experience,  it  is  always  regarded  as  the  true  DGP.  If  this  were  true,  one  
+4:157:8587:14:14:70:529:166:144:g_d0_f7:144:g_d0_f7:could  generally  expect  good  estimates  even  with  a  model  that  excludes  some  explanatory  
+4:158:8687:14:14:70:530:152:144:g_d0_f7:144:g_d0_f7:variables.  If,  for  example,  the  factors  are  uncorrelated,  the  estimated  coefficients  will  be  
+4:159:8793:14:14:70:527:138:144:g_d0_f7:144:g_d0_f7:unbiased and the effect of the excluded variables will appear in the error term; in the presence 
+4:160:8890:14:13:70:529:124:144:g_d0_f7:144:g_d0_f7:of  correlation  between  the  included  and  the  excluded  factors,  some  effect  of  the  excluded  
+4:161:8994:13:0:70:294:111:144:g_d0_f7:144:g_d0_f7:factors will be assumed by the included ones.  
+5:162:9041:0:14:70:527:760:144:g_d0_f7:144:g_d0_f7:What happens when the DGP is not the logit? Then we will try to force a functional form to 
+5:163:9132:14:14:70:529:746:144:g_d0_f7:144:g_d0_f7:the  data  that  is  different  from  the  true  one.  However,  even  in  this  case  we  can  expect  to  be  
+5:164:9244:14:14:70:395:732:144:g_d0_f7:144:g_d0_f7:able to estimate a logit form – the question then is how good it fits. 
+5:165:9315:14:16:70:73:718:144:g_d0_f7:144:g_d0_f7: 
+5:166:9315:16:14:70:167:702:195:Times:195:Times:III.2 An example 
+5:167:9332:14:13:70:73:688:144:g_d0_f7:144:g_d0_f7: 
+5:168:9332:13:14:70:527:675:144:g_d0_f7:144:g_d0_f7:To demonstrate the above I estimate a logit model on simulated data. For the simulation I take 
+5:169:9427:14:14:70:528:661:144:g_d0_f7:144:g_d0_f7:two factors, X1 and X2, and take four sub-portfolios. I create their PDs using the logit, using 
+5:170:9523:14:14:70:458:647:144:g_d0_f7:144:g_d0_f7:factor-values as described in the following table and all coefficients equalling 1: 
+5:171:9607:14:14:70:73:633:144:g_d0_f7:144:g_d0_f7: 
+5:172:9607:14:15:70:454:619:144:g_d0_f7:144:g_d0_f7:Sub-portfolio \ Factor values, PD X1 X2 PD 
+5:173:9650:15:15:70:620:604:144:g_d0_f7:144:g_d0_f7:P1                                                       -1                                                       0                                                       0.27                                                       
+5:174:9879:15:14:70:620:589:144:g_d0_f7:144:g_d0_f7:P2                                                       0                                                       1                                                       0.73                                                       
+5:175:10107:14:14:70:620:575:144:g_d0_f7:144:g_d0_f7:P3                                                       1                                                       0                                                       0.73                                                       
+5:176:10335:14:21:70:620:561:144:g_d0_f7:144:g_d0_f7:P4                                                       0                                                       -1                                                       0.27                                                       
+5:177:10564:21:14:70:528:540:144:g_d0_f7:144:g_d0_f7:If  I  simulated  all  the  sub-portfolios  and  estimated  the  logit,  the  estimated  coefficients  would  
+5:178:10674:14:13:70:529:526:144:g_d0_f7:144:g_d0_f7:be  around  1.  This  is  not  surprising,  since  for  the  estimation  I  used  the  model  that  actually  
+5:179:10784:13:14:70:528:513:144:g_d0_f7:144:g_d0_f7:generated  the  data.  More  importantly,  as  a  consequence,  the  estimated  scores  would  give  an  
+5:180:10889:14:14:70:528:499:144:g_d0_f7:144:g_d0_f7:accurate estimate of the PDs in the table – so there were no ‘PD mixing’, nor its inverse (i.e. 
+5:181:10985:14:20:70:384:485:144:g_d0_f7:144:g_d0_f7:when sub-portfolios with the same true PD get different scores).  
+5:182:11051:20:20:70:380:465:144:g_d0_f7:144:g_d0_f7:Now I create another scenario, according to the following table: 
+5:183:11116:20:15:70:454:445:144:g_d0_f7:144:g_d0_f7:Sub-portfolio \ Factor, PD X1 X2 PD 
+5:184:11152:15:15:70:596:430:144:g_d0_f7:144:g_d0_f7:P1                                                 -1                                                 0                                                 0.1                                                 
+5:185:11356:15:14:70:596:415:144:g_d0_f7:144:g_d0_f7:P2                                                 0                                                 1                                                 0.2                                                 
+5:186:11559:14:14:70:596:401:144:g_d0_f7:144:g_d0_f7:P3                                                 1                                                 0                                                 0.2                                                 
+5:187:11762:14:20:70:596:387:144:g_d0_f7:144:g_d0_f7:P4                                                 0                                                 -1                                                 0.3                                                 
+5:188:11966:20:14:70:527:367:144:g_d0_f7:144:g_d0_f7:What I did was simply overwriting PDs, so that they do not come from a (single) logit model 
+5:189:12058:14:15:70:527:353:144:g_d0_f7:144:g_d0_f7:any more. I estimated the equation with a constant term to allow more flexibility in the fitting. 
+5:190:12156:15:14:70:524:338:144:g_d0_f7:144:g_d0_f7:The  resulting  coefficients  of  the  estimation  are  β0=-1.40  (the  constant),  β1=0.34  and  β2=-
+5:191:12258:14:14:70:528:324:144:g_d0_f7:144:g_d0_f7:0.33, while the scores are, respectively, 0.15, 0.15, 0.25 and 0.25. That is, the PDs of the first 
+5:192:12357:14:13:70:529:310:144:g_d0_f7:144:g_d0_f7:and  the  last  two  sub-portfolios  have  been  mixed  and,  additionally,  in  such  a  way  that  the  
+5:193:12463:13:14:70:530:297:144:g_d0_f7:144:g_d0_f7:estimated  scores  are  the  averages  of  the  PDs  of  the  respective  sub-portfolios.  This  latter  
+5:194:12568:14:14:70:527:283:144:g_d0_f7:144:g_d0_f7:observation indicates to some extent that the estimated model is ‘good’, at least in that it gives 
+5:195:12667:14:14:70:454:269:144:g_d0_f7:144:g_d0_f7:correct default predictions – I return to the ‘goodness-issue’ in the next section. 
+5:196:12751:14:16:70:73:255:144:g_d0_f7:144:g_d0_f7: 
+5:197:12751:16:14:70:227:239:195:Times:195:Times:IV. Bad model – good fit? 
+5:198:12777:14:13:70:73:225:144:g_d0_f7:144:g_d0_f7: 
+5:199:12777:13:14:70:527:212:144:g_d0_f7:144:g_d0_f7:In the above last example two widely used tests support the model. The first is that the single 
+5:200:12873:14:14:70:527:198:144:g_d0_f7:144:g_d0_f7:factors should have a strong, at least monotone relationship with the PD. It is obvious that as 
+5:201:12969:14:14:70:528:184:144:g_d0_f7:144:g_d0_f7:X1  increases  the  PD  tends  to  increase,  while  as  X2  increases  the  PD  tends  to  decrease.  The  
+5:202:13077:14:14:70:527:170:144:g_d0_f7:144:g_d0_f7:second test has already been mentioned above: default rates in rating categories that are based 
+5:203:13173:14:13:70:486:156:144:g_d0_f7:144:g_d0_f7:on the estimates scores is correctly estimated by the score in that respective category.  
+5:204:13263:13:14:70:527:143:144:g_d0_f7:144:g_d0_f7:At this point one may note that my example is not very realistic. First, it has a very simplistic 
+5:205:13361:14:14:70:528:129:144:g_d0_f7:144:g_d0_f7:structure and second, in the example each exposure (loan) either depends on X1 or X2 thus it 
+5:206:13454:14:14:70:528:115:144:g_d0_f7:144:g_d0_f7:can  be  questioned  whether  the  same  model  should  be  fitted  to  both.  I  think  that  both  issues  
+5:207:13563:14:14:70:532:101:144:g_d0_f7:144:g_d0_f7:can  be  treated  by  complicating  the  structure  by  more  sub-portfolios  and  factor-value  
+5:208:13660:14:13:70:528:87:144:g_d0_f7:144:g_d0_f7:combinations – this is what I would do anyway, since it is required by another test of model 
+5:209:13753:13:0:70:205:74:144:g_d0_f7:144:g_d0_f7:goodness, the ROC curve.   
+6:210:13780:0:14:70:244:758:195:Times:195:Times:IV.1 Common tests of the logit 
+6:211:13811:14:14:70:73:744:144:g_d0_f7:144:g_d0_f7: 
+6:212:13811:14:14:70:529:730:144:g_d0_f7:144:g_d0_f7:In  this  section  I  briefly  discuss  tests  that  I  found  to  be  generally  used  to  judge  whether  the  
+6:213:13924:14:14:70:530:716:144:g_d0_f7:144:g_d0_f7:estimated  model  can  be  accepted  and  used  in  risk  management.  These  test  were  already  
+6:214:14023:14:14:70:158:702:144:g_d0_f7:144:g_d0_f7:mentioned above. 
+6:215:14040:14:13:70:527:688:144:g_d0_f7:144:g_d0_f7:First, it is usually checked, whether potential explanatory variables (factors) have explanatory 
+6:216:14137:13:14:70:529:675:144:g_d0_f7:144:g_d0_f7:power  in  themselves.  This  is  not  really  a  test  of  the  logit  model,  but  of  whether  a  given  
+6:217:14245:14:14:70:530:661:144:g_d0_f7:144:g_d0_f7:explanatory  variable  should  be  included  in  the  regression  at  all.  I  included  this  test  here  
+6:218:14352:14:14:70:527:647:144:g_d0_f7:144:g_d0_f7:because later, for the simulation, we will need to justify that we included relevant variables in 
+6:219:14450:14:14:70:528:633:144:g_d0_f7:144:g_d0_f7:the model. The test can be carried out using a form of regression with that single variable. If 
+6:220:14546:14:13:70:529:619:144:g_d0_f7:144:g_d0_f7:there  is  no  explanatory  power,  the  variable  can  generally  be  omitted.  At  this  stage  it  also  
+6:221:14654:13:14:70:529:606:144:g_d0_f7:144:g_d0_f7:should  be  checked  whether  there  can  be  any  non-linearity  in  the  relationship  between  the  
+6:222:14757:14:14:70:528:592:144:g_d0_f7:144:g_d0_f7:variable and the PD. If there is – for example, much larger as well as much smaller values go 
+6:223:14851:14:14:70:528:578:144:g_d0_f7:144:g_d0_f7:with higher PD, while values around the average go with  lower  PD  –  the  variable  should  be  
+6:224:14949:14:14:70:137:564:144:g_d0_f7:144:g_d0_f7:transformed.  
+6:225:14963:14:13:70:528:550:144:g_d0_f7:144:g_d0_f7:Second, scores should correctly reflect PDs. While from a practical point of view this issue is 
+6:226:15059:13:14:70:529:537:144:g_d0_f7:144:g_d0_f7:much  more  complicated  (cf.  the  issue  of  ‘rating  philosophies’,  or  the  Basel  II  regulation),  
+6:227:15165:14:14:70:528:523:144:g_d0_f7:144:g_d0_f7:technically,  I  think  it’s  simply  the  case  and  is  very  important.3  If  scores  do  not  give  a  good  
+6:228:15278:14:14:70:529:509:144:g_d0_f7:144:g_d0_f7:estimation  of  the  true  PD,  the  model  can  not  be  that  good  –  although  still  can  be  useful  
+6:229:15385:14:14:70:127:495:144:g_d0_f7:144:g_d0_f7:practically. 
+6:230:15398:14:13:70:529:481:144:g_d0_f7:144:g_d0_f7:The  third  test  I  highlight  is  the  examination  of  the  ROC  curve  and  the  calculation  of  the  
+6:231:15505:13:14:70:532:468:144:g_d0_f7:144:g_d0_f7:AUROC  (Area  Under  the  ROC)  statistic.4  In  the  first  step  we  order  the  sample  of  
+6:232:15600:14:14:70:529:454:144:g_d0_f7:144:g_d0_f7:defaults/non-defaults  according  to  the  score,  starting  from  the  worst  score.  Next,  we  move  
+6:233:15704:14:14:70:527:440:144:g_d0_f7:144:g_d0_f7:from score-to-score and at each move we take the sample that we left behind (all observations 
+6:234:15798:14:14:70:528:426:144:g_d0_f7:144:g_d0_f7:that have worse scores than the actual one). In this sub-sample we count all the defaults and 
+6:235:15892:14:13:70:527:412:144:g_d0_f7:144:g_d0_f7:divide it by the number of defaults in the whole sample – thus we get the Hit Rate (HR); then 
+6:236:15986:13:14:70:528:399:144:g_d0_f7:144:g_d0_f7:we count all non-defaults and divide it by all non-defaults in the sample – thereby getting the 
+6:237:16082:14:14:70:528:385:144:g_d0_f7:144:g_d0_f7:False Alarm Rate (FAR). We repeat this calculation for each score value, and, finally, graph 
+6:238:16175:14:14:70:528:371:144:g_d0_f7:144:g_d0_f7:HR against FAR. The better the discriminatory power of the model, the higher the proportion 
+6:239:16267:14:14:70:528:357:144:g_d0_f7:144:g_d0_f7:of defaults and the lower the proportion of non-defaults in the bad-score region and, thus, the 
+6:240:16363:14:13:70:188:343:144:g_d0_f7:144:g_d0_f7:steeper the ROC curve.  
+6:241:16387:13:14:70:528:330:144:g_d0_f7:144:g_d0_f7:Finally,  it  is  important,  that  these  tests  are  carried  out  both  on  the  sample  that  was  used  for  
+6:242:16501:14:14:70:529:316:144:g_d0_f7:144:g_d0_f7:model  estimation  (‘in-sample  test’)  and  on  a  different  sample  (‘out-of-sample  test’).  It  is  
+6:243:16606:14:14:70:529:302:144:g_d0_f7:144:g_d0_f7:usually  done  by  splitting  the  sample  available  for  the  analysis  into  a  larger  part  (e.g.  70%)  
+6:244:16716:14:14:70:529:288:144:g_d0_f7:144:g_d0_f7:directly  for  the  estimation  and  a  smaller  part  put  apart  for  validation.  Here,  it  can  be  a  
+6:245:16824:14:13:70:528:274:144:g_d0_f7:144:g_d0_f7:question  how  the  sample  is  split  –  e.g.  randomly  or  according  to  some  schedule  –  to  which  
+6:246:16931:13:14:70:187:261:144:g_d0_f7:144:g_d0_f7:issue I return a bit later. 
+6:247:16959:14:16:70:73:247:144:g_d0_f7:144:g_d0_f7: 
+6:248:16959:16:14:70:264:231:195:Times:195:Times:IV.2 A more complicated example 
+6:249:16991:14:14:70:73:217:144:g_d0_f7:144:g_d0_f7: 
+6:250:16991:14:14:70:528:203:144:g_d0_f7:144:g_d0_f7:To  examine  how  the  above  described  tests  behave  on  a  sample  which  is  not  generated  by  a  
+6:251:17096:14:14:70:528:189:144:g_d0_f7:144:g_d0_f7:logit  model  I  carried  out  some  simulations.  As  in  the  example  in  section  III.2,  there  are  two  
+6:252:17207:14:13:70:527:175:144:g_d0_f7:144:g_d0_f7:factors, X1 and X2; however, now there are 10 sub-portfolios and the PDs belonging to these 
+6:253:17299:13:14:70:527:162:144:g_d0_f7:144:g_d0_f7:sub-portfolios are generated by a specific formula. Namely, to assign PD to a pair of values of 
+6:254:17395:14:14:70:528:148:144:g_d0_f7:144:g_d0_f7:X1  and  X2  I  first  transformed  these  factor  values  into  numbers  between  0  and  1  using  the  
+6:255:17501:14:38:70:528:134:144:g_d0_f7:144:g_d0_f7:normal cumulative distribution function and then I used the Clayton copula to map these two 
+6:256:17593:38:7:70:217:96:144:g_d0_f7:144:g_d0_f7:                                                 
+6:257:17641:7:12:70:388:89:42:g_d0_f7:100:g_d0_f7:3 For the issues mentioned see Heitfield [2005] and Basel [2005], respectively. 
+6:258:17721:12:0:70:156:77:42:g_d0_f7:100:g_d0_f7:4 See Tasche [2005]. 
+7:259:17742:0:14:70:527:759:144:g_d0_f7:144:g_d0_f7:values onto (0,1).5 That is, the two steps are (θ is a parameter that was set at 2.5, the expected 
+7:260:17841:14:21:70:486:745:144:g_d0_f7:144:g_d0_f7:value and the standard deviation of the normal distribution was 1 and 2, respectively): 
+7:261:17929:21:18:88:286:724:144:g_d0_f10:144:g_d0_f7:• 2)2(,1)1(2,1pXNpXNXX==→ 
+7:262:17953:18:22:88:236:706:144:g_d0_f10:144:g_d0_f7:• θθθ/1)121(−−−−+=ppPD 
+7:263:17974:22:14:70:528:684:144:g_d0_f7:144:g_d0_f7:By  this  procedure  I  gave  a  structure  to  the  data  and  this  structure  is  quite  different  from  the  
+7:264:18088:14:18:70:413:670:144:g_d0_f7:144:g_d0_f7:logit. The following table shows the values of X1 and X2 and the PDs: 
+7:265:18158:18:19:187:410:652:100:Times:100:Times:Table 1: scenario for the simulation and the estimation 
+7:266:18214:19:15:74:457:633:144:g_d0_f7:144:g_d0_f7:Sub-portfolio \ Factor value, PD X1 X2 PD 
+7:267:18256:15:14:74:619:618:144:g_d0_f7:144:g_d0_f7:P1                                                     1                                                     -2                                                     0.06                                                     
+7:268:18477:14:14:74:619:604:144:g_d0_f7:144:g_d0_f7:P2                                                     -3                                                     0                                                     0.30                                                     
+7:269:18698:14:14:74:619:590:144:g_d0_f7:144:g_d0_f7:P3                                                     -1                                                     2                                                     0.45                                                     
+7:270:18919:14:14:74:619:576:144:g_d0_f7:144:g_d0_f7:P4                                                     0                                                     -3                                                     0.02                                                     
+7:271:19140:14:13:74:619:562:144:g_d0_f7:144:g_d0_f7:P5                                                     1                                                     3                                                     0.16                                                     
+7:272:19360:13:14:74:619:549:144:g_d0_f7:144:g_d0_f7:P6                                                     2                                                     1                                                     0.07                                                     
+7:273:19580:14:14:74:619:535:144:g_d0_f7:144:g_d0_f7:P7                                                     3                                                     -1                                                     0.02                                                     
+7:274:19801:14:14:74:619:521:144:g_d0_f7:144:g_d0_f7:P8                                                     2                                                     -2                                                     0.05                                                     
+7:275:20022:14:14:74:619:507:144:g_d0_f7:144:g_d0_f7:P9                                                     1                                                     0                                                     0.15                                                     
+7:276:20242:14:19:74:613:493:144:g_d0_f7:144:g_d0_f7:P10                                                   1                                                   -3                                                   0.02                                                   
+7:277:20456:19:14:70:528:474:144:g_d0_f7:144:g_d0_f7:In the next step, I simulated data with the above parameters having all the sub-portfolios the 
+7:278:20551:14:14:70:527:460:144:g_d0_f7:144:g_d0_f7:same weight and then I estimated a logit model on that simulated data. Finally, I evaluated the 
+7:279:20647:14:14:70:220:446:144:g_d0_f7:144:g_d0_f7:tests described in section IV.1. 
+7:280:20680:14:16:70:73:432:144:g_d0_f7:144:g_d0_f7: 
+7:281:20680:16:14:70:455:416:195:Times:195:Times:IV.3 Applying the tests to the model estimated on the simulated data 
+7:282:20749:14:13:70:73:402:144:g_d0_f7:144:g_d0_f7: 
+7:283:20749:13:14:70:527:389:144:g_d0_f7:144:g_d0_f7:In this section I examine how the model performs on a randomly selected sample. At each test 
+7:284:20842:14:14:70:528:375:144:g_d0_f7:144:g_d0_f7:that  reflects  a  good  performance  of  the  model  I  highlight  the  problems  that  arise  and  some  
+7:285:20949:14:14:70:298:361:144:g_d0_f7:144:g_d0_f7:signs that can suggest there are such problems. 
+7:286:20997:14:14:70:73:347:144:g_d0_f7:144:g_d0_f7: 
+7:287:20997:14:13:70:410:333:144:Times:144:Times:IV.3.1 The relationship between the PD and the individual factors 
+7:288:21063:13:14:70:73:320:144:g_d0_f7:144:g_d0_f7: 
+7:289:21063:14:14:70:527:306:144:g_d0_f7:144:g_d0_f7:Examining the relationship between the factors and the PD we can look at the DGP as well as 
+7:290:21155:14:14:70:528:292:144:g_d0_f7:144:g_d0_f7:the  logit  model  estimated  with  a  single  factor  as  explanatory  variable.  The  actual  data  that  I  
+7:291:21266:14:14:70:527:278:144:g_d0_f7:144:g_d0_f7:used for the analysis in this part fulfils the requirement of individual explanatory power: there 
+7:292:21364:14:13:70:528:264:144:g_d0_f7:144:g_d0_f7:is  a  strong  correlation  between  the  factors  and  the  PD  (-0.75  and  0.64,  respectively)  and  the  
+7:293:21474:13:14:70:529:251:144:g_d0_f7:144:g_d0_f7:factor  coefficients  in  the  single-variable  models  were  highly  significant.6  This  shows  that,  
+7:294:21579:14:14:70:527:237:144:g_d0_f7:144:g_d0_f7:indeed, at the end of the model-selection process the factors would have been selected into the 
+7:295:21675:14:14:70:156:223:144:g_d0_f7:144:g_d0_f7:final logit model. 
+7:296:21694:14:14:70:73:209:144:Times:144:Times: 
+7:297:21694:14:13:70:231:195:144:Times:144:Times:IV.3.2 The PD of rating grades 
+7:298:21725:13:14:70:73:182:144:g_d0_f7:144:g_d0_f7: 
+7:299:21725:14:20:70:499:168:144:g_d0_f7:144:g_d0_f7:The following table shows the true PDs of sub-portfolios as well as the estimated scores: 
+7:300:21815:20:29:70:73:148:144:g_d0_f7:144:g_d0_f7: 
+7:301:21815:29:7:70:217:119:144:g_d0_f7:144:g_d0_f7:                                                 
+7:302:21863:7:12:70:429:112:42:g_d0_f7:100:g_d0_f7:5 A copula is used here purely for technical reasons and not for modelling dependencies.  
+7:303:21953:12:16:70:527:100:42:g_d0_f7:100:g_d0_f7:6 However, the correlation strongly depends on what pairs of values of X1 and X2 one uses in the calculation of 
+7:304:22065:16:11:70:524:84:100:g_d0_f7:100:g_d0_f7:PD: if, for example, in Table 1 I change the X1 value for sub-portfolio P1 from 1 to -3 the correlation grows to -
+7:305:22179:11:0:70:133:73:100:g_d0_f7:100:g_d0_f7:0.5 from -0.72. 
+8:306:22195:0:17:74:548:758:144:g_d0_f7:144:g_d0_f7:                       P1          P2          P3          P4          P5          P6          P7          P8          P9          P10          
+8:307:22339:17:15:74:541:741:144:g_d0_f7:144:Times:Score 0.04       0.34       0.31       0.04       0.22       0.08       0.02       0.03       0.08       0.03       
+8:308:22455:15:14:74:542:726:144:g_d0_f7:144:g_d0_f7:PD         0.06       0.31       0.45       0.02       0.16       0.07       0.02       0.05       0.15       0.02       
+8:309:22576:14:14:70:73:712:144:g_d0_f7:144:g_d0_f7: 
+8:310:22576:14:14:70:529:698:144:g_d0_f7:144:g_d0_f7:Comparing  the  PDs  and  the  scores  it  can  generally  be  said  that  the  two  measures  differ  
+8:311:22679:14:14:70:529:684:144:g_d0_f7:144:g_d0_f7:significantly.  For  example,  for  sub-portfolio  P3  the  score  (that  is,  the  estimated  PD)  equals  
+8:312:22787:14:13:70:528:670:144:g_d0_f7:144:g_d0_f7:31% whereas the true PD is 45%; for sub-portfolio P5 there is a score of 22% versus a PD of 
+8:313:22879:13:14:70:101:657:144:g_d0_f7:144:g_d0_f7:16%.  
+8:314:22885:14:14:70:528:643:144:g_d0_f7:144:g_d0_f7:However,  if  one  creates  rating  grades  based  on  the  scores,  that  does  not  necessarily  lead  to  
+8:315:22994:14:14:70:528:629:144:g_d0_f7:144:g_d0_f7:problems: the score of a grade will give a good estimation of PD in that grade. Let’s see, for 
+8:316:23089:14:14:70:528:615:144:g_d0_f7:144:g_d0_f7:example,  the  grade  made  up  of  P1,  P7,  P8  and  P10  –  those  sub-portfolios  that  have  score  
+8:317:23194:14:13:70:529:601:144:g_d0_f7:144:g_d0_f7:around  3%:  although  scores  estimate  individual  sub-portfolio  PDs  poorly  (for  example,  3%  
+8:318:23295:13:14:70:527:588:144:g_d0_f7:144:g_d0_f7:instead of the true 5% in the case of P8), in the grade comprised of these four sub-portfolios 
+8:319:23390:14:14:70:528:574:144:g_d0_f7:144:g_d0_f7:the  average  PD  (4%)  is  relatively  close  to  the  average  score  (3%).  Grouping  P2,  P3  and  P5  
+8:320:23497:14:14:70:528:560:144:g_d0_f7:144:g_d0_f7:(although this latter one has somewhat smaller score than the former two) we have an average 
+8:321:23590:14:14:70:529:546:144:g_d0_f7:144:g_d0_f7:score  of  29%  against  an  average  PD  of  31%.  Moreover,  for  the  whole  sample  the  average  
+8:322:23692:14:13:70:252:532:144:g_d0_f7:144:g_d0_f7:score is 12% and the PD equals 13%. 
+8:323:23728:13:14:70:529:519:144:g_d0_f7:144:g_d0_f7:What  we  have  just  seen  is  the  ‘theoretical’  relationship:  I  used  the  ‘true’  PD  as  calculated  
+8:324:23837:14:14:70:527:505:144:g_d0_f7:144:g_d0_f7:according to section IV.2. Now, in the following table I show the relationship between the PD 
+8:325:23931:14:22:70:319:491:144:g_d0_f7:144:g_d0_f7:and the score in the test- and the validation sample: 
+8:326:23985:22:16:74:569:469:144:g_d0_f7:144:g_d0_f7:                  P1         P2         P3         P4         P5         P6         P7         P8         P9         P10         
+8:327:24114:16:16:74:563:453:144:Times:144:Times:Score      0.04      0.34      0.31      0.04      0.22      0.08      0.02      0.03      0.08      0.03      
+8:328:24225:16:15:74:563:437:144:g_d0_f7:144:g_d0_f7:PD      -      in-sample          0.04      0.26      0.46      0.03      0.12      0.05      0.01      0.04      0.14      0.03      
+8:329:24359:15:20:74:563:422:144:g_d0_f7:144:g_d0_f7:PD      -      out-of-sample      0.03      0.23      0.45      0.00      0.12      0.07      0.05      0.04      0.20      0.02      
+8:330:24493:20:14:70:528:402:144:g_d0_f7:144:g_d0_f7:As regards grades based on the scores, the average PD in the grade containing P1, P7, P8 and 
+8:331:24586:14:14:70:527:388:144:g_d0_f7:144:g_d0_f7:P10 has an average score of 3% and an average PD of 3% in-sample and 3.5% out-of-sample. 
+8:332:24675:14:14:70:527:374:144:g_d0_f7:144:g_d0_f7:The average in-sample PD in the grade that contains P2, P3 and P5 is 28%, the out-of-sample 
+8:333:24767:14:13:70:327:360:144:g_d0_f7:144:g_d0_f7:PD is 26% that compares with a 29% average score.  
+8:334:24818:13:14:70:531:347:144:g_d0_f7:144:Times:What  these  results  show  is  that  the  PD  of  individual  names  might  be  rather  poorly  
+8:335:24915:14:14:70:528:333:144:Times:144:Times:approximated by the score coming from a logit model; at the same time the logit model can be 
+8:336:25008:14:14:70:398:319:144:Times:144:g_d0_f7:expected to give a good estimation of PDs at the rating grade level. 
+8:337:25077:14:14:70:73:305:144:g_d0_f7:144:g_d0_f7: 
+8:338:25077:14:13:70:245:291:144:Times:144:Times:IV.3.3 The ROC and the AUROC 
+8:339:25106:13:14:70:73:278:144:g_d0_f7:144:g_d0_f7: 
+8:340:25106:14:14:70:529:264:144:g_d0_f7:144:g_d0_f7:Finally,  I  calculate  FAR,  HR  and  AUROC  and  check  whether  these  indicators  support  to  
+8:341:25205:14:14:70:528:250:144:g_d0_f7:144:g_d0_f7:accept  the  estimated  logit  model.  The  next  two  figures  show  the  ROC  curve  in-sample  and  
+8:342:25308:14:0:70:144:236:144:g_d0_f7:144:g_d0_f7:out-of-sample: 
+9:343:25323:0:0:82:85:621:41:g_d0_f7:41:g_d0_f7:0
+9:344:25324:0:0:77:85:634:41:g_d0_f7:41:g_d0_f7:0.1
+9:345:25327:0:0:77:85:648:41:g_d0_f7:41:g_d0_f7:0.2
+9:346:25330:0:0:77:85:661:41:g_d0_f7:41:g_d0_f7:0.3
+9:347:25333:0:0:77:85:674:41:g_d0_f7:41:g_d0_f7:0.4
+9:348:25336:0:0:77:85:688:41:g_d0_f7:41:g_d0_f7:0.5
+9:349:25339:0:0:77:85:702:41:g_d0_f7:41:g_d0_f7:0.6
+9:350:25342:0:0:77:85:715:41:g_d0_f7:41:g_d0_f7:0.7
+9:351:25345:0:0:77:85:728:41:g_d0_f7:41:g_d0_f7:0.8
+9:352:25348:0:0:77:85:742:41:g_d0_f7:41:g_d0_f7:0.9
+9:353:25351:0:144:82:85:755:41:g_d0_f7:41:g_d0_f7:1
+9:354:25352:144:15:88:274:611:41:g_d0_f7:41:g_d0_f7:00.20.40.60.81
+9:355:25366:15:0:169:207:596:41:g_d0_f7:41:g_d0_f7:in-sample ROC
+9:356:25379:0:0:296:299:621:42:g_d0_f7:42:g_d0_f7:0
+9:357:25380:0:0:291:299:635:42:g_d0_f7:42:g_d0_f7:0.1
+9:358:25383:0:0:291:299:648:42:g_d0_f7:42:g_d0_f7:0.2
+9:359:25386:0:0:291:299:662:42:g_d0_f7:42:g_d0_f7:0.3
+9:360:25389:0:0:291:299:675:42:g_d0_f7:42:g_d0_f7:0.4
+9:361:25392:0:0:291:299:689:42:g_d0_f7:42:g_d0_f7:0.5
+9:362:25395:0:0:291:299:703:42:g_d0_f7:42:g_d0_f7:0.6
+9:363:25398:0:0:291:299:716:42:g_d0_f7:42:g_d0_f7:0.7
+9:364:25401:0:0:291:299:730:42:g_d0_f7:42:g_d0_f7:0.8
+9:365:25404:0:0:291:299:743:42:g_d0_f7:42:g_d0_f7:0.9
+9:366:25407:0:146:296:299:757:42:g_d0_f7:42:g_d0_f7:1
+9:367:25408:146:15:302:491:611:42:g_d0_f7:42:g_d0_f7:00.20.40.60.81
+9:368:25422:15:23:378:503:596:42:g_d0_f7:144:g_d0_f7:out-of-sample ROC 
+9:369:25439:23:14:70:527:573:144:g_d0_f7:144:g_d0_f7:Evaluating the curves visually at first it can be said that both represent a good discriminatory 
+9:370:25536:14:13:70:529:559:144:g_d0_f7:144:g_d0_f7:power.7  More  importantly,  the  AUROC  indicator  which  I  calculated  by  approximating  the  
+9:371:25634:13:14:70:524:546:144:g_d0_f7:144:g_d0_f7:ROC  curve  with  a  step-function  from  below  equals  around  0.79  in-sample  and  0.76  out-of-
+9:372:25734:14:14:70:114:532:144:g_d0_f7:144:g_d0_f7:sample!  
+9:373:25743:14:14:70:73:518:144:g_d0_f7:144:g_d0_f7: 
+9:374:25743:14:14:70:251:504:144:Times:144:Times:IV.3.3.1 The ROC should be concave 
+9:375:25778:14:13:70:73:490:144:g_d0_f7:144:g_d0_f7: 
+9:376:25778:13:14:70:527:477:144:g_d0_f7:144:g_d0_f7:Our first conclusion is that we estimated a good model to the data. However, if we want to dig 
+9:377:25873:14:14:70:527:463:144:g_d0_f7:144:g_d0_f7:into the issue more deeply, we have to notice that the ROC curve is not concave, but there are 
+9:378:25968:14:14:70:361:449:144:g_d0_f7:144:g_d0_f7:convex parts in it, for example around the FAR=0.1 region.  
+9:379:26028:14:14:70:528:435:144:g_d0_f7:144:g_d0_f7:Why do we require a concave curve? The following figure shows the distribution (density) of 
+9:380:26120:14:240:70:402:421:144:g_d0_f7:144:g_d0_f7:hypothetical non-defaulted and defaulted exposures over the scores.  
+9:381:26189:240:0:94:98:181:75:g_d0_f7:75:g_d0_f7:0
+9:382:26190:0:0:79:98:206:75:g_d0_f7:75:g_d0_f7:0.005
+9:383:26195:0:0:83:98:230:75:g_d0_f7:75:g_d0_f7:0.01
+9:384:26199:0:0:79:98:255:75:g_d0_f7:75:g_d0_f7:0.015
+9:385:26204:0:0:83:98:279:75:g_d0_f7:75:g_d0_f7:0.02
+9:386:26208:0:0:79:98:304:75:g_d0_f7:75:g_d0_f7:0.025
+9:387:26213:0:0:83:98:328:75:g_d0_f7:75:g_d0_f7:0.03
+9:388:26217:0:0:79:98:352:75:g_d0_f7:75:g_d0_f7:0.035
+9:389:26222:0:0:83:98:377:75:g_d0_f7:75:g_d0_f7:0.04
+9:390:26226:0:232:79:98:401:75:g_d0_f7:75:g_d0_f7:0.045
+9:391:26231:232:22:102:501:169:75:g_d0_f7:75:Times:0 102030405060708090100scores
+9:392:26260:22:7:272:357:147:75:g_d0_f7:75:g_d0_f7:Non-defaultDefault
+9:393:26278:7:32:523:526:140:144:g_d0_f7:144:g_d0_f7: 
+9:394:26278:32:8:70:217:108:144:g_d0_f7:144:g_d0_f7:                                                 
+9:395:26326:8:16:70:525:100:42:g_d0_f7:100:g_d0_f7:7 In fact, we have only 10 points of the ROC curves that can be seen in the figures, since there are only 10 factor-
+9:396:26442:16:11:70:528:84:100:g_d0_f7:100:g_d0_f7:value  combinations.  For  this  reason  the  calculated  AUROC  measure  is  not  fully  accurate,  although  it  can  be  
+9:397:26566:11:0:70:271:73:100:g_d0_f7:100:g_d0_f7:expected to give a relatively good approximation. 
+10:398:26616:0:14:70:527:760:144:g_d0_f7:144:g_d0_f7:To get the ROC curve we need to calculate the FAR and the HR indicators. The calculation of 
+10:399:26708:14:14:70:528:746:144:g_d0_f7:144:g_d0_f7:the  FAR  amounts  to  simply  moving  the  dashed  black  line  to  the  left  (towards  better  scores)  
+10:400:26815:14:14:70:528:732:144:g_d0_f7:144:g_d0_f7:and calculating the probability mass that the non-defaults’ distribution has to the right of the 
+10:401:26912:14:14:70:528:718:144:g_d0_f7:144:g_d0_f7:curve.  Similarly,  the  HR  is  calculated  as  the  probability  mass  of  the  defaults’  distribution  to  
+10:402:27023:14:13:70:528:704:144:g_d0_f7:144:g_d0_f7:the  right  of  the  curve.  Thus,  a  change  in  the  HR  (FAR)  can  be  expressed  as  a  change  in  the  
+10:403:27134:13:14:70:528:691:144:g_d0_f7:144:g_d0_f7:probability  that  a  given  score  occurs  as  we  change  the  score  slightly,  with  the  condition  of  
+10:404:27243:14:28:70:445:677:144:g_d0_f7:144:g_d0_f7:default (non-default). We can express it for the HR, using Bayes’ theorem as: 
+10:405:27321:28:0:117:197:649:187:g_d0_f10:187:g_d0_f10:()
+10:406:27323:0:17:182:262:657:187:g_d0_f10:187:g_d0_f10:()
+10:407:27325:17:0:298:274:640:144:g_d0_f7:144:g_d0_f7:)1(
+10:408:27328:0:17:291:285:657:144:g_d0_f7:144:g_d0_f7:)(
+10:409:27330:17:0:226:203:640:144:g_d0_f7:144:g_d0_f7:)1(
+10:410:27333:0:8:243:210:657:144:g_d0_f7:144:g_d0_f7:)(|1
+10:411:27337:8:9:152:81:649:144:g_d0_f7:49:g_d0_f7:1|)(1
+10:412:27342:9:0:284:291:640:144:g_d0_f10:144:g_d0_f10:=
+10:413:27343:0:9:251:258:649:144:g_d0_f10:144:g_d0_f10:=
+10:414:27344:9:0:213:220:640:144:g_d0_f10:144:g_d0_f10:=
+10:415:27345:0:8:196:203:657:144:g_d0_f10:144:g_d0_f10:=
+10:416:27346:8:9:163:106:649:144:g_d0_f10:144:g_d0_f10:==≡
+10:417:27349:9:0:275:269:640:144:Times:144:Times:yP
+10:418:27351:0:17:286:281:657:144:Times:144:Times:ssP
+10:419:27354:17:0:204:198:640:144:Times:144:Times:yP
+10:420:27356:0:8:238:181:657:144:Times:144:Times:sPsyP
+10:421:27361:8:31:134:550:649:144:Times:144:g_d0_f7:ysPsP,      (3a) 
+10:422:27378:31:28:70:420:618:144:g_d0_f7:144:g_d0_f7:where y is the default indicator and s is the score. For the FAR we have: 
+10:423:27452:28:0:118:202:590:187:g_d0_f10:187:g_d0_f10:()
+10:424:27454:0:17:204:318:598:187:g_d0_f10:187:g_d0_f10:()()
+10:425:27458:17:0:328:304:581:144:g_d0_f7:144:g_d0_f7:)1(
+10:426:27461:0:17:333:291:598:144:g_d0_f7:144:g_d0_f7:)()1(
+10:427:27466:17:0:248:202:581:144:g_d0_f7:144:g_d0_f7:)1(1
+10:428:27470:0:8:268:185:598:144:g_d0_f7:144:g_d0_f7:)(|11
+10:429:27475:8:9:154:81:590:144:g_d0_f7:49:g_d0_f7:0|)(0
+10:430:27480:9:0:315:322:581:144:g_d0_f10:144:g_d0_f10:=
+10:431:27481:0:8:297:304:598:144:g_d0_f10:144:g_d0_f10:−
+10:432:27482:8:9:276:283:590:144:g_d0_f10:144:g_d0_f10:=
+10:433:27483:9:0:235:210:581:144:g_d0_f10:144:g_d0_f10:=−
+10:434:27485:0:8:217:194:598:144:g_d0_f10:144:g_d0_f10:=−
+10:435:27487:8:9:166:107:590:144:g_d0_f10:144:g_d0_f10:==≡
+10:436:27490:9:0:306:300:581:144:Times:144:Times:yP
+10:437:27492:0:17:328:311:598:144:Times:144:Times:sPs
+10:438:27495:17:0:226:220:581:144:Times:144:Times:yP
+10:439:27497:0:8:263:203:598:144:Times:144:Times:sPsyP
+10:440:27502:8:31:136:550:590:144:Times:144:g_d0_f7:ysPsP.     (3b) 
+10:441:27518:31:14:70:530:559:144:g_d0_f7:144:g_d0_f7:It is important to note that P(s) above is the density of the score distribution; more importantly, 
+10:442:27618:14:13:70:530:545:144:g_d0_f7:144:g_d0_f7:the  same  is  true  for  P0(s)  and  P1(s)  –  that  is,  the  formulas  express  the  change  in  the  
+10:443:27723:13:14:70:528:532:144:g_d0_f7:144:g_d0_f7:distribution of defaulted and non-defaulted exposures over scores. Now, concavity means that 
+10:444:27816:14:14:70:528:518:144:g_d0_f7:144:g_d0_f7:the derivative of the HR with respect to the score is smaller than that of the FAR up to certain 
+10:445:27913:14:14:70:527:504:144:g_d0_f7:144:g_d0_f7:scores value, above which it becomes larger; and the ratio of the two measures is increasing in 
+10:446:28009:14:14:70:524:490:144:Times:144:g_d0_f7:s  strictly  monotonely.8  This  is  the  same  as  saying  that  the  area  under  the  density  of  non-
+10:447:28115:14:13:70:528:476:144:g_d0_f7:144:g_d0_f7:defaults  for  certain  score  values  is  larger  in  the  case  of  certain  scores  (smaller  scores  where  
+10:448:28227:13:14:70:527:463:144:g_d0_f7:144:g_d0_f7:there are more non-defaults) and above a level it becomes increasingly smaller than the area 
+10:449:28320:14:54:70:510:449:144:g_d0_f7:144:g_d0_f7:under the density of defaults.  The ratio of the change in HR and FAR can be expressed as: 
+10:450:28411:54:0:219:224:395:144:Times:144:Times:s
+10:451:28412:0:17:211:216:412:144:Times:144:Times:s
+10:452:28413:17:0:166:160:395:144:Times:144:Times:yP
+10:453:28415:0:33:173:167:412:144:Times:144:Times:yP
+10:454:28417:33:0:103:97:379:144:Times:144:Times:yP
+10:455:28419:0:0:118:101:396:144:Times:144:Times:sPs
+10:456:28422:0:0:95:89:412:144:Times:144:Times:yP
+10:457:28424:0:33:106:101:428:144:Times:144:Times:ssP
+10:458:28427:33:0:209:182:395:144:g_d0_f10:144:g_d0_f10:−=
+10:459:28429:0:8:182:158:412:144:g_d0_f10:144:g_d0_f10:=−
+10:460:28431:8:25:134:141:404:144:g_d0_f10:144:g_d0_f10:=
+10:461:28432:25:0:111:87:379:144:g_d0_f10:144:g_d0_f10:=−
+10:462:28434:0:0:87:94:396:144:g_d0_f10:144:g_d0_f10:−
+10:463:28435:0:17:104:111:412:144:g_d0_f10:144:g_d0_f10:=
+10:464:28436:17:0:202:164:395:144:g_d0_f7:144:g_d0_f7:1)1(
+10:465:28440:0:33:196:150:412:144:g_d0_f7:144:g_d0_f7:)1(1
+10:466:28444:33:0:125:79:379:144:g_d0_f7:144:g_d0_f7:)1(1
+10:467:28448:0:0:123:80:396:144:g_d0_f7:144:g_d0_f7:)()1(
+10:468:28453:0:0:117:94:412:144:g_d0_f7:144:g_d0_f7:)1(
+10:469:28456:0:24:111:105:428:144:g_d0_f7:144:g_d0_f7:)(
+10:470:28458:24:47:226:235:404:144:g_d0_f7:144:g_d0_f7: , 
+10:471:28461:47:14:70:529:357:144:g_d0_f7:144:g_d0_f7:which  is  an  increasing  function  of  s  and  has  values  both  above  and  below  one  –  so  that,  
+10:472:28567:14:14:70:443:343:144:g_d0_f7:144:g_d0_f7:‘theoretically’, we should have a concave ROC. Why don’t we have it then?  
+10:473:28642:14:13:70:73:329:144:g_d0_f7:144:g_d0_f7: 
+10:474:28642:13:14:70:281:316:144:Times:144:Times:IV.3.3.2 When the ROC has convex regions 
+10:475:28683:14:14:70:73:302:144:g_d0_f7:144:g_d0_f7: 
+10:476:28683:14:14:70:527:288:144:g_d0_f7:144:g_d0_f7:One explanation, which is the primary focus of this paper, for the convexity in the ROC curve 
+10:477:28777:14:14:70:527:274:144:g_d0_f7:144:g_d0_f7:might be the probability-mixing by the logit, i.e. its tendency to give similar scores to obligors 
+10:478:28876:14:13:70:527:260:144:g_d0_f7:144:g_d0_f7:with different PDs. As a result, the last equality in (3a) and (3b) will not hold – the score will 
+10:479:28975:13:14:70:527:247:144:g_d0_f7:144:g_d0_f7:not always reflect the conditional (on the factors) PD correctly. To demonstrate the situation I 
+10:480:29072:14:14:70:529:233:144:g_d0_f7:144:g_d0_f7:denoted  three  score-domains  on  the  figure  below,  each  with  the  same  width,  with  different  
+10:481:29176:14:14:70:528:219:144:g_d0_f7:144:g_d0_f7:colours.9  The  changes  in  the  points  of  a  ROC  curve  are  produced  by  adding  the  mass  under  
+10:482:29282:14:14:70:528:205:144:g_d0_f7:144:g_d0_f7:the  grey  curve  in  a  colour-band  to  the  HR  and  adding  the  mass  in  the  same  band  under  the  
+10:483:29390:14:13:70:528:191:144:g_d0_f7:144:g_d0_f7:black curve to the FAR. In the base case as we move to the left we add always less and less to 
+10:484:29485:13:14:70:527:178:144:g_d0_f7:144:g_d0_f7:the HR and more and more to the FAR. To put it differently, the ratio of the change in the HR 
+10:485:29579:14:14:70:527:164:144:g_d0_f7:144:g_d0_f7:and the change in the FAR decreases as we move from the blue band to the green or from the 
+10:486:29670:14:42:70:478:150:144:g_d0_f7:144:g_d0_f7:green to the orange – thereby the ROC curve becomes concave, as we saw it above.  
+10:487:29752:42:8:70:217:108:144:g_d0_f7:144:g_d0_f7:                                                 
+10:488:29800:8:16:70:504:100:42:g_d0_f7:100:g_d0_f7:8 Although in the figure we moved from the worse scores to the better ones, in this argument we move in he 
+10:489:29907:16:7:70:261:84:100:g_d0_f7:100:g_d0_f7:opposite direction, starting from the best score. 
+10:490:29957:7:0:70:388:77:42:g_d0_f7:100:g_d0_f7:9 The curve is not linked to the simulation, so the numbers are not comparable. 
+11:491:30037:0:0:94:98:531:75:g_d0_f7:75:g_d0_f7:0
+11:492:30038:0:0:79:99:556:75:g_d0_f7:75:g_d0_f7:0.005
+11:493:30043:0:0:83:98:580:75:g_d0_f7:75:g_d0_f7:0.01
+11:494:30047:0:0:79:99:605:75:g_d0_f7:75:g_d0_f7:0.015
+11:495:30052:0:0:83:98:630:75:g_d0_f7:75:g_d0_f7:0.02
+11:496:30056:0:0:79:99:654:75:g_d0_f7:75:g_d0_f7:0.025
+11:497:30061:0:0:83:98:679:75:g_d0_f7:75:g_d0_f7:0.03
+11:498:30065:0:0:79:99:704:75:g_d0_f7:75:g_d0_f7:0.035
+11:499:30070:0:0:83:98:729:75:g_d0_f7:75:g_d0_f7:0.04
+11:500:30074:0:235:79:99:753:75:g_d0_f7:75:g_d0_f7:0.045
+11:501:30079:235:19:103:547:518:75:g_d0_f7:75:g_d0_f7:0 102030405060708090100
+11:502:30102:19:7:271:356:499:75:g_d0_f7:75:g_d0_f7:Non-defaultDefault
+11:503:30120:7:17:523:526:492:144:g_d0_f7:144:g_d0_f7: 
+11:504:30120:17:14:70:528:475:144:g_d0_f7:144:g_d0_f7:What happens when the densities are not monotone in the region where they should be (like 
+11:505:30210:14:14:70:527:461:144:g_d0_f7:144:g_d0_f7:where the green and orange colour-bands are)? Such deviations are shown in the figure by red 
+11:506:30303:14:14:70:527:447:144:g_d0_f7:144:g_d0_f7:lines. For example, in the case of defaulted exposures, there are less defaults in the sample in 
+11:507:30400:14:13:70:528:433:144:g_d0_f7:144:g_d0_f7:the green band and more in the orange band than in the base case. The deviations depicted in 
+11:508:30493:13:14:70:529:420:144:g_d0_f7:144:g_d0_f7:the  figure  will  have  the  following  effect:  as  we  move  from  the  blue  band  to  the  green  the  
+11:509:30601:14:14:70:528:406:144:g_d0_f7:144:g_d0_f7:quotient  of  the  increase  in  the  HR  and  the  FAR  will  be  even  smaller  than  in  the  base  case.  
+11:510:30711:14:14:70:528:392:144:g_d0_f7:144:g_d0_f7:This will increase the concavity of the curve. As we move from the green band to the yellow, 
+11:511:30804:14:13:70:524:378:144:g_d0_f7:144:g_d0_f7:however,  the  quotient  increases,  since  in  that  region  there  are  more  defaults  and  less  non-
+11:512:30909:13:14:70:528:365:144:g_d0_f7:144:g_d0_f7:defaults than in the base case. The increase in the quotients will lead to such increase in the 
+11:513:31005:14:14:70:527:351:144:g_d0_f7:144:g_d0_f7:curve that it turns into convex. At the same time, the deviations can be constructed (red lines 
+11:514:31101:14:14:70:528:337:144:g_d0_f7:144:g_d0_f7:can  be  drawn)  in  such  a  way  that  the  average  PD  in  the  green  and  the  orange  bands  taken  
+11:515:31208:14:14:70:373:323:144:g_d0_f7:144:g_d0_f7:together is the same as the average of the scores in this region. 
+11:516:31274:14:14:70:73:309:144:g_d0_f7:144:g_d0_f7: 
+11:517:31274:14:13:70:398:295:144:Times:144:Times:IV.3.4 Out-of-sample test: how should sampling be carried out? 
+11:518:31337:13:14:70:73:282:144:g_d0_f7:144:g_d0_f7: 
+11:519:31337:14:14:70:524:268:144:g_d0_f7:144:g_d0_f7:When carrying out the out-of-sample test I split the sample into estimation and validation sub-
+11:520:31432:14:14:70:528:254:144:g_d0_f7:144:g_d0_f7:sample  randomly.  Without  going  deeper  into  the  issue,  it  may  be  worth  splitting  the  sample  
+11:521:31538:14:13:70:528:240:144:g_d0_f7:144:g_d0_f7:according to groups of similar factor-value combinations. Then, if the structure of the data is 
+11:522:31634:13:14:70:527:227:144:g_d0_f7:144:g_d0_f7:really different from logit, the model fitted on the estimation sample should not fit well on the 
+11:523:31732:14:14:70:527:213:144:g_d0_f7:144:g_d0_f7:validation sample. The question is still open, however, what an institution should do when it 
+11:524:31826:14:14:70:207:199:144:g_d0_f7:144:g_d0_f7:encounters such a problem.  
+11:525:31854:14:16:70:73:185:144:g_d0_f7:144:g_d0_f7: 
+11:526:31854:16:14:70:158:169:195:Times:195:Times:V. Conclusion 
+11:527:31868:14:14:70:73:155:144:g_d0_f7:144:g_d0_f7: 
+11:528:31868:14:13:70:529:141:144:g_d0_f7:144:g_d0_f7:In  this  paper  I  explored  some  effects  of  estimating  a  logit  model  to  data  that  has  an  actual  
+11:529:31979:13:14:70:528:128:144:g_d0_f7:144:g_d0_f7:structure  different  from  the  logit.  The  main  conclusion  is  that  the  logit  in  such  a  case  easily  
+11:530:32092:14:14:70:529:114:144:g_d0_f7:144:g_d0_f7:leads  to  ‘probability-mixing’,  that  is,  the  model  may  assign  similar  scores  to  obligors  with  
+11:531:32199:14:14:70:509:100:144:g_d0_f7:144:g_d0_f7:rather different default probabilities; convexity in ROC curves can reflect such a problem.  
+11:532:32292:14:0:70:73:86:144:g_d0_f7:144:g_d0_f7: 
+12:533:32292:0:14:70:130:760:144:g_d0_f7:144:g_d0_f7:References: 
+12:534:32304:14:14:70:73:746:144:g_d0_f7:144:g_d0_f7: 
+12:535:32304:14:14:70:529:732:144:g_d0_f7:144:g_d0_f7:Basel  [2005]:  ‘International  Convergence  of  Capital  Measurement  and  Capital  Standards’,  
+12:536:32402:14:17:99:455:718:144:g_d0_f7:144:g_d0_f7:Basel Committee on Banking Supervision, BIS, November 2005 (update) 
+12:537:32470:17:14:70:528:701:144:g_d0_f7:144:g_d0_f7:Heitfield, E. [2005]: ‘Dynamics of rating systems’, in: ‘Studies on the Validation of Internal 
+12:538:32565:14:17:99:393:687:144:g_d0_f7:144:g_d0_f7:Rating Systems’, BIS Working Paper No. 14, February 2005 
+12:539:32622:17:14:70:529:670:144:g_d0_f7:144:g_d0_f7:Tasche,  D.  [2005]:  ‘Validation  of  internal  rating  systems  and  PD  estimates’,  in:  ‘Studies  on  
+12:540:32729:14:13:99:527:656:144:g_d0_f7:144:g_d0_f7:the Validation of Internal Rating Systems’, BIS Working Paper No. 14, February 2005, 
+12:541:32814:13:17:99:300:643:144:g_d0_f7:100:Helvetica:or: www.defaultrisk.com/pp_test_04.htm 
+12:542:32852:17:17:70:73:626:144:g_d0_f7:144:g_d0_f7: 
+12:543:32852:17:0:70:73:609:144:g_d0_f7:144:g_d0_f7: 

@@ -1,0 +1,1419 @@
+1:0:0:0:100:219:395:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:28:147:468:610:12:Times:12:Times:C:DISSECTING CHARACTERISTICS NONPARAMETRICALLY
+1:2:69:28:14:259:355:582:12:Times:12:Times:C:Joachim Freyberger
+1:3:87:14:14:265:350:568:12:Times:12:Times:C:Andreas Neuhierl
+1:4:103:14:28:270:344:554:12:Times:12:Times:C:Michael Weber
+1:5:116:28:14:254:360:526:12:Times:12:Times:C:Working Paper 23227
+1:6:135:14:42:220:395:512:12:Times:12:Times:C:http://www.nber.org/papers/w23227
+1:7:168:42:14:174:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:204:14:14:239:376:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:229:14:14:251:363:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:248:14:102:278:336:428:12:Times:12:Times:C:March 2017
+1:11:258:102:14:71:545:326:12:Times:12:Times:C:We  thank  Jonathan  Berk,  Philip  Bond,  Oleg  Bondarenko,  John  Campbell,  Jason  Chen,  Josh 
+1:12:356:14:14:71:545:312:12:Times:12:Times:C:Coval, Gene  Fama,  Ken  French,  Erwin  Hansen,  Lars  Hansen,  Bryan  Kelly,  Leonid  Kogan, 
+1:13:450:14:14:71:545:298:12:Times:12:Times:C:Shimon  Kogan, Jon  Lewellen,  Bill  McDonald,  Stefan  Nagel,  Stavros  Panageas,  Lubos  Pastor, 
+1:14:548:14:14:71:546:284:12:Times:12:Times:C:Seth Pruitt, Alberto Rossi, George Skoulakis, Raman Uppal, Adrien Verdelhan, Amir Yaron and 
+1:15:639:14:14:71:545:270:12:Times:12:Times:C:conference   and   seminar participants   at   Dartmouth   College,   FRA   Conference   2016,   HEC 
+1:16:739:14:14:71:546:256:12:Times:12:Times:C:Montreal, McGill, 2017 Revelstoke Finance Conference, Santiago Finance Workshop, Stockholm 
+1:17:829:14:14:71:545:242:12:Times:12:Times:C:School  of  Economics,  TAU  Finance Conference  2016,  Tsinghua  University  PBCSF,  Tsinghua 
+1:18:923:14:14:71:545:228:12:Times:12:Times:C:University SEM, the University of Chicago, the University of Illinois at Chicago, the University 
+1:19:1019:14:14:71:546:214:12:Times:12:Times:C:of  Notre  Dame,  and  the  University  of  Washington for  valuable  comments.  Weber  gratefully 
+1:20:1117:14:14:71:546:200:12:Times:12:Times:C:acknowledges financial support from the University of Chicago and the Fama-Miller Center. The 
+1:21:1210:14:14:71:545:186:12:Times:12:Times:C:views  expressed  herein  are  those  of  the  authors  and  do  not  necessarily reflect  the  views  of  the 
+1:22:1320:14:28:71:265:172:12:Times:12:Times:C:National Bureau of Economic Research.
+1:23:1357:28:14:71:545:144:12:Times:12:Times:C:NBER working papers are circulated for discussion and comment purposes. They have not been 
+1:24:1448:14:14:71:545:130:12:Times:12:Times:C:peer-reviewed  or  been  subject  to  the  review  by  the  NBER  Board  of  Directors  that  accompanies 
+1:25:1554:14:28:71:206:116:12:Times:12:Times:C:official NBER publications.
+1:26:1580:28:14:72:545:88:12:Times:12:g_d0_f1:C:© 2017 by Joachim Freyberger, Andreas Neuhierl, and Michael Weber. All rights reserved. Short 
+1:27:1673:14:14:72:546:74:12:Times:12:Times:C:sections  of  text,  not  to  exceed  two  paragraphs,  may  be  quoted  without  explicit  permission 
+1:28:1776:14:0:72:392:60:12:Times:12:Times:C:provided that full credit, including © notice, is given to the source.
+2:29:1845:0:14:72:290:700:12:Times:12:Times:C:Dissecting Characteristics Nonparametrically
+2:30:1889:14:14:72:359:686:12:Times:12:Times:C:Joachim Freyberger, Andreas Neuhierl, and Michael Weber
+2:31:1944:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 23227
+2:32:1972:14:14:72:130:658:12:Times:12:Times:C:March 2017
+2:33:1982:14:28:72:205:644:12:Times:12:Times:C:JEL No. C14,C52,C58,G12
+2:34:2005:28:28:273:338:616:12:Times:12:Times:C:ABSTRACT
+2:35:2013:28:14:72:546:588:12:Times:12:Times:C:We   propose   a   nonparametric   method   to   test   which   characteristics   provide   independent 
+2:36:2117:14:14:72:545:574:12:Times:12:Times:C:information for the cross section of expected returns. We use the adaptive group LASSO to select 
+2:37:2213:14:14:72:545:560:12:Times:12:Times:C:characteristics and  to  estimate  how  they  affect  expected  returns  nonparametrically.  Our  method 
+2:38:2317:14:14:72:545:546:12:Times:12:Times:C:can  handle  a  large number  of  characteristics,  allows  for  a  flexible  functional  form,  and  is 
+2:39:2421:14:14:71:545:532:12:Times:12:Times:C:insensitive  to  outliers.  Many of  the  previously  identified  return  predictors  do  not  provide 
+2:40:2523:14:14:71:545:518:12:Times:12:Times:C:incremental  information  for  expected  returns, and  nonlinearities  are  important.  Our  proposed 
+2:41:2624:14:14:71:545:504:12:Times:12:Times:C:method  has  higher  out-of-sample  explanatory  power compared  to  linear  panel  regressions,  and 
+2:42:2725:14:34:72:225:490:12:Times:12:Times:C:increases Sharpe ratios by 50%.
+2:43:2756:34:14:72:168:456:12:Times:12:Times:C:Joachim Freyberger
+2:44:2774:14:14:72:201:442:12:Times:12:Times:C:Department of Economics 
+2:45:2798:14:14:72:238:428:12:Times:12:g_d0_f1:C:University of Wisconsin-Madison 
+2:46:2829:14:14:72:191:414:12:Times:12:g_d0_f1:C:1180 Observatory Drive 
+2:47:2851:14:14:72:171:400:12:Times:12:g_d0_f1:C:Madison, WI 53706 
+2:48:2868:14:28:72:196:386:12:Times:12:Times:C:jfreyberger@ssc.wisc.edu
+2:49:2892:28:14:72:157:358:12:Times:12:Times:C:Andreas Neuhierl
+2:50:2908:14:14:72:200:344:12:Times:12:g_d0_f1:C:University of Notre Dame 
+2:51:2932:14:14:72:168:330:12:Times:12:Times:C:College of Business
+2:52:2951:14:14:72:141:316:12:Times:12:Times:C:221 Mendoza 
+2:53:2963:14:14:72:185:302:12:Times:12:g_d0_f1:C:Notre Dame, IN 46556 
+2:54:2983:14:0:72:157:288:12:Times:12:Times:C:aneuhier@nd.edu
+2:55:2998:0:14:314:388:456:12:Times:12:Times:C:Michael Weber
+2:56:3011:14:14:314:438:442:12:Times:12:Times:C:Booth School of Business
+2:57:3035:14:14:314:421:428:12:Times:12:Times:C:University of Chicago
+2:58:3056:14:14:314:465:414:12:Times:12:Times:C:5807 South Woodlawn Avenue
+2:59:3082:14:14:314:404:400:12:Times:12:Times:C:Chicago, IL 60637
+2:60:3099:14:14:314:366:386:12:Times:12:Times:C:and NBER
+2:61:3107:14:0:314:480:372:12:Times:12:Times:C:michael.weber@chicagobooth.edu
+3:62:3137:0:34:72:205:735:17:g_d0_f2:17:g_d0_f2:C:I    Introduction
+3:63:3154:34:21:72:526:701:12:g_d0_f3:12:g_d0_f3:B:In  his  presidential  address,  Cochrane  (2011)  argues  the  cross  section  of  the  expected
+3:64:3251:21:22:72:526:680:12:g_d0_f3:12:g_d0_f3:B:return “is once again descending into chaos”.  Harvey et al. (2016) identify more than 300
+3:65:3341:22:22:72:524:658:12:g_d0_f3:8:g_d0_f4:B:published factors that have predictive power for the cross section of expected returns.1
+3:66:3429:22:21:71:525:636:12:g_d0_f3:12:g_d0_f3:B:Many economic models, such as the consumption CAPM of Lucas (1978), Breeden (1979),
+3:67:3512:21:22:71:525:615:12:g_d0_f3:12:g_d0_f3:B:and Rubinstein (1976), instead predict that only a small number of state variables suffice
+3:68:3602:22:22:71:372:593:12:g_d0_f3:12:g_d0_f3:B:to summarize cross-sectional variation in expected returns.
+3:69:3661:22:21:95:525:571:12:g_d0_f3:12:g_d0_f3:A:Researchers   typically   employ   two   methods   to   identify   return   predictors:(i)
+3:70:3751:21:22:71:525:550:12:g_d0_f3:12:g_d0_f3:B:(conditional)  portfolio  sorts  based  on  one  or  multiple  characteristics  such  as  size  or
+3:71:3849:22:22:71:525:528:12:g_d0_f3:12:g_d0_f3:B:book-to-market, and (ii) linear regression in the spirit of Fama and MacBeth (1973).  Both
+3:72:3939:22:21:71:525:506:12:g_d0_f3:12:g_d0_f3:B:methods have many important applications, but they fall short in what Cochrane (2011)
+3:73:4024:21:22:71:525:485:12:g_d0_f3:12:g_d0_f5:B:calls the multidimensional challenge:  “[W]hich characteristics really provideindependent
+3:74:4113:22:22:71:525:463:12:g_d0_f3:12:g_d0_f3:B:information about average returns?  Which are subsumed by others?”  Portfolio sorts are
+3:75:4200:22:21:71:525:441:12:g_d0_f3:12:g_d0_f3:B:subject to the curse of dimensionality when the number of characteristics is large,  and
+3:76:4288:21:22:71:524:420:12:g_d0_f3:8:g_d0_f4:B:linear regressions make strong functional-form assumptions and are sensitive to outliers.2
+3:77:4378:22:22:71:525:398:12:g_d0_f3:12:g_d0_f3:B:Cochrane (2011) speculates,  “To address these questions in the zoo of new variables,  I
+3:78:4466:22:21:71:312:376:12:g_d0_f3:12:g_d0_f3:B:suspect we will have to use different methods.”
+3:79:4513:21:22:95:525:355:12:g_d0_f3:12:g_d0_f3:A:We propose a nonparametric method to determine which firm characteristics provide
+3:80:4594:22:22:71:525:333:12:g_d0_f3:12:g_d0_f3:B:independent  information  for  the  cross  section  of  expected  returns  without  making
+3:81:4684:22:21:71:525:311:12:g_d0_f3:12:g_d0_f3:B:strong functional-form assumptions.  Specifically, we use a group LASSO (least absolute
+3:82:4771:21:22:71:525:290:12:g_d0_f3:12:g_d0_f3:B:shrinkage  and  selection  operator)  procedure  suggested  by  Huang,  Horowitz,  and  Wei
+3:83:4862:22:22:71:525:268:12:g_d0_f3:12:g_d0_f3:B:(2010)  for  model  selection  and  nonparametric  estimation.   Model  selection  deals  with
+3:84:4956:22:21:71:525:246:12:g_d0_f3:12:g_d0_f3:B:the  question  of  which  characteristics  have  incremental  predictive  power  for  expected
+3:85:5050:21:22:71:525:225:12:g_d0_f3:12:g_d0_f3:B:returns, given the other characteristics.  Nonparametric estimation deals with estimating
+3:86:5139:22:22:71:525:203:12:g_d0_f3:12:g_d0_f3:B:the  effect  of  important  characteristics  on  expected  returns  without  imposing  a  strong
+3:87:5235:22:21:71:157:181:12:g_d0_f3:8:g_d0_f4:B:functional-form.3
+3:88:5252:21:18:95:525:160:12:g_d0_f3:12:g_d0_f3:A:We  show  three  applications  of  our  proposed  framework.    First,  we  study  which
+3:89:5340:18:12:85:367:142:7:g_d0_f6:10:g_d0_f7:F:1Figure 2 documents the number of discovered factors over time.
+3:90:5403:12:16:85:525:130:7:g_d0_f6:10:g_d0_f7:F:2We discuss these, and related concerns in Section II and compare current methods with our proposed
+3:91:5502:16:8:72:182:114:10:g_d0_f7:10:g_d0_f7:F:framework in Section III.
+3:92:5527:8:0:85:347:106:7:g_d0_f6:10:g_d0_f7:F:3In our empirical application, we estimate quadratic splines.
+4:93:5589:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:characteristics provide independent information for the cross section of expected returns.
+4:94:5679:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:We  estimate  our  model  on  36  characteristics  including  size,  book-to-market,  beta,  and
+4:95:5775:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:other  prominent  variables  and  anomalies  on  a  sample  period  from  July  1963  to  June
+4:96:5869:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:2015.   Only  15  variables,  including  size,  idiosyncratic  volatility,  and  past  return-based
+4:97:5968:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:predictors, have independent explanatory power for expected returns for the full sample
+4:98:6055:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:period and all stocks.  An equally-weighted hedge portfolio going long the stocks with the
+4:99:6145:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:10% highest expected returns and shorting the 10% of stocks with the lowest predicted
+4:100:6230:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:returns  has  an  in-sample  Sharpe  ratio  of  close  to  3.   Only  eight  characteristics  have
+4:101:6328:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:predictive power for returns in the first half of our sample.  In the second half, instead,
+4:102:6419:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:we find 17 characteristics are significantly associated with cross-sectional return premia.
+4:103:6510:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:For stocks whose market capitalization is above the 20% NYSE size percentile, only seven
+4:104:6598:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:characteristics, including size, past returns, and standardized unexplained volume, remain
+4:105:6688:21:22:72:507:475:12:g_d0_f3:12:g_d0_f3:B:significant return predictors.  The in-sample Sharpe ratio is still 1.81 for large stocks.
+4:106:6778:22:22:95:525:453:12:g_d0_f3:12:g_d0_f3:A:Second, we compare the out-of-sample performance of the nonparametric model with
+4:107:6858:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:a linear model.  We estimate both models over a period until 1990 and select significant
+4:108:6946:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:return predictors.  We then use 10 years of data to estimate the model on the selected
+4:109:7032:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:characteristics.   In  the  first  month  after  the  end  of  our  estimation  period,  we  take  the
+4:110:7134:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:selected characteristics, predict one-month-ahead returns, and construct a hedge portfolio
+4:111:7224:21:22:72:526:345:12:g_d0_f3:12:g_d0_f3:B:similar to our in-sample exercise.  We roll the estimation and prediction period forward
+4:112:7312:22:22:72:422:323:12:g_d0_f3:12:g_d0_f3:B:by one month and repeat the procedure until the end of the sample.
+4:113:7378:22:21:95:525:301:12:g_d0_f3:12:g_d0_f3:A:Specifically,  we  perform  model  selection  once  until  December  1990.Our  first
+4:114:7462:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:estimation  period  is  from  December  of  1981  until  November  of  1990,  and  the  first
+4:115:7555:22:22:72:524:258:12:g_d0_f3:8:g_d0_f4:B:out-of-sample prediction is for January 1991 using characteristics from December 1990.4
+4:116:7642:22:21:71:525:236:12:g_d0_f3:12:g_d0_f3:B:We  then  move  the  estimation  and  prediction  period  forward  by  one  month.The
+4:117:7727:21:22:71:525:215:12:g_d0_f3:12:g_d0_f3:B:nonparametric  model  generates  an  average  Sharpe  ratio  for  an  equally-weighted  hedge
+4:118:7820:22:22:71:525:193:12:g_d0_f3:12:g_d0_f3:B:portfolio  of  3.42  compared  to  2.26  for  the  linear  model.5The  linear  model  selects
+4:119:7913:22:21:71:525:171:12:g_d0_f3:12:g_d0_f3:B:21  characteristics  in  sample  compared  to  only  eight  for  the  nonparametric  model,  but
+4:120:8009:21:18:71:525:150:12:g_d0_f3:12:g_d0_f3:B:performs  worse  out  of  sample.   Nonlinearities  are  important.   We  find  an  increase  in
+4:121:8105:18:16:85:525:132:7:g_d0_f6:10:g_d0_f7:F:4We  merge  balance-sheet  variables  to  returns  following  the  Fama  and  French  (1993)  convention  of
+4:122:8213:16:8:72:459:116:10:g_d0_f7:10:g_d0_f7:F:requiring a lag of at least six months, and our results are therefore indeed out of sample.
+4:123:8304:8:0:85:512:108:7:g_d0_f6:10:g_d0_f7:F:5The linear model we estimate and the results for the linear model are similar to Lewellen (2015).
+5:124:8403:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:out-of-sample  Sharpe  ratios  relative  to  the  Sharpe  ratio  of  the  linear  model  when  we
+5:125:8500:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:employ the nonparametric model for prediction on the 21 characteristics the linear model
+5:126:8588:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:selects.   The  linear  model  appears  to  overfit  the  data  in  sample.   We  find  an  identical
+5:127:8689:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:Sharpe ratio for the linear model when we use the eight characteristics we select with the
+5:128:8779:22:22:72:495:648:12:g_d0_f3:12:g_d0_f3:B:nonparametric model as we do with the 21 characteristics the linear model selects.
+5:129:8861:22:21:95:525:626:12:g_d0_f3:12:g_d0_f3:A:Third, we study whether the predictive power of characteristics for expected returns
+5:130:8945:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:varies over time.  We estimate the model using 120 months of data on all characteristics we
+5:131:9036:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:select in our baseline analysis, and then estimate rolling one-month-ahead return forecasts.
+5:132:9128:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:We find substantial time variation in the predictive power of characteristics for expected
+5:133:9218:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:returns.  As an example, momentum returns conditional on other return predictors vary
+5:134:9303:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:substantially over time, and we find a momentum crash similar to Daniel and Moskowitz
+5:135:9388:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:(2016) as past losers appreciated during the recent financial crisis.  Size conditional on the
+5:136:9482:21:22:72:526:475:12:g_d0_f3:12:g_d0_f3:B:other selected return predictors, instead, has a significant predictive power for expected
+5:137:9572:22:22:72:526:453:12:g_d0_f3:12:g_d0_f3:B:returns throughout our sample period similar to the findings in Asness, Frazzini, Israel,
+5:138:9661:22:43:72:241:431:12:g_d0_f3:12:g_d0_f3:B:Moskowitz, and Pedersen (2015).
+5:139:9692:43:30:72:231:388:14:g_d0_f8:14:g_d0_f2:C:ARelated Literature
+5:140:9711:30:21:72:526:358:12:g_d0_f3:12:g_d0_f3:B:The capital asset pricing model (CAPM) of Sharpe (1964), Lintner (1965), and Mossin
+5:141:9794:21:22:72:526:337:12:g_d0_f3:12:g_d0_f3:B:(1966) predicts that an asset’s beta with respect to the market portfolio is a sufficient
+5:142:9883:22:22:72:526:315:12:g_d0_f3:12:g_d0_f3:B:statistic  for  the  cross  section  of  expected  returns.   Fama  and  MacBeth  (1973)  provide
+5:143:9980:22:21:72:526:293:12:g_d0_f3:12:g_d0_f3:B:empirical  support  for  the  CAPM.  Subsequently,  researchers  identified  many  variables,
+5:144:10073:21:22:72:526:272:12:g_d0_f3:12:g_d0_f3:B:such as size (Banz (1981)), the book-to-market ratio (Rosenberg et al. (1985)), leverage
+5:145:10161:22:22:72:526:250:12:g_d0_f3:12:g_d0_f3:B:(Bhandari (1988)), earnings-to-price ratios (Basu (1983)), or past returns (Jegadeesh and
+5:146:10250:22:21:72:526:228:12:g_d0_f3:12:g_d0_f3:B:Titman  (1993))  that  contain  additional  independent  information  for  expected  returns.
+5:147:10343:21:22:72:526:207:12:g_d0_f3:12:g_d0_f3:B:Sorting stocks into portfolios based on these characteristics often led to rejection of the
+5:148:10434:22:22:72:526:185:12:g_d0_f3:12:g_d0_f3:B:CAPM because the spread in CAPM betas could not explain the spread in returns.  Fama
+5:149:10518:22:21:72:526:163:12:g_d0_f3:12:g_d0_f3:B:and French (1992) synthesize these findings,  and Fama and French (1993) show that a
+5:150:10602:21:22:72:526:142:12:g_d0_f3:12:g_d0_f3:B:three-factor model with the market return,  a size,  and a value factor can explain cross
+5:151:10691:22:22:72:526:120:12:g_d0_f3:12:g_d0_f3:B:sections of stocks sorted on characteristics that appeared anomalous relative to the CAPM.
+5:152:10781:22:0:72:526:98:12:g_d0_f3:12:g_d0_f3:B:In this sense, Fama and French (1993) and Fama and French (1996) achieve a significant
+6:153:10868:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:dimension reduction:  researchers who want to explain the cross section of stock returns
+6:154:10956:22:22:72:312:713:12:g_d0_f3:12:g_d0_f3:B:only have to explain the size and value factors.
+6:155:11004:22:21:95:525:691:12:g_d0_f3:12:g_d0_f3:A:Daniel and Titman (1997),  on the contrary,  argue that characteristics have higher
+6:156:11087:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:explanatory power for the cross section of expected returns than loadings on pervasive
+6:157:11173:22:22:72:525:648:12:g_d0_f3:12:g_d0_f3:B:risk  factors.Chordia,  Goyal,  and  Shanken  (2015)  develop  a  method  to  estimate
+6:158:11259:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:bias-corrected return premia from cross-sectional data for individual stocks.  They find
+6:159:11347:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:firm  characteristics  explain  more  of  the  cross-sectional  variation  in  expected  returns
+6:160:11443:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:compared  to  factor  loadings.   Kozak,  Nagel,  and  Santosh  (2015)  show  comovements  of
+6:161:11536:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:stocks  and  associations  of  returns  with  characteristics  orthogonal  to  factor  exposures
+6:162:11632:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:do not allow researchers to disentangle rational from behavioral explanations for return
+6:163:11720:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:spreads.   We  study  which  characteristics  provide  incremental  information  for  expected
+6:164:11814:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:returns but do not aim to investigate whether rational models or behavioral explanations
+6:165:11902:21:22:72:165:475:12:g_d0_f3:12:g_d0_f3:B:drive our findings.
+6:166:11921:22:22:95:525:453:12:g_d0_f3:12:g_d0_f3:A:In the 20 years following the publication of Fama and French (1992), many researchers
+6:167:12006:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:joined  a  “fishing  expedition”  to  identify  characteristics  and  factor  exposures  that  the
+6:168:12104:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:three-factor model cannot explain.  Harvey, Liu, and Zhu (2016) provide an overview of
+6:169:12190:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:this literature and list over 300 published papers that study the cross section of expected
+6:170:12281:22:21:72:525:366:12:g_d0_f3:12:g_d0_f3:B:returns.  They propose at-statistic of 3 for new factors to account for multiple testing on
+6:171:12372:21:22:72:526:345:12:g_d0_f3:12:g_d0_f3:B:a  common  data  set.   Figure  3  shows  the  suggested  adjustment  over  time.   However,
+6:172:12464:22:22:72:525:323:12:g_d0_f3:12:g_d0_f3:B:even  employing  the  higher  threshold  for  thet-statistic  still  leaves  approximately  150
+6:173:12559:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:characteristics as useful predictors for the cross section of expected returns.  Fama and
+6:174:12648:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:French  (2015)  take  a  different  route  and  augment  the  three-factor  model  of  Fama  and
+6:175:12744:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:French  (1993)  with  an  investment  and  profitability  factor  (Haugen  and  Baker  (1996)
+6:176:12837:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:and Novy-Marx (2013)).  Fama and French (2016) test the five-factor model on a small
+6:177:12921:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:set of anomalies and find substantial improvements relative to a three-factor model, but
+6:178:13009:22:22:72:526:193:12:g_d0_f3:12:g_d0_f3:B:also substantial unexplained return variation across portfolios.  Hou et al. (2015) test a
+6:179:13099:22:21:72:526:171:12:g_d0_f3:12:g_d0_f3:B:q-factor model consisting of four factors on 35 anomalies that are univariately associated
+6:180:13189:21:22:72:526:150:12:g_d0_f3:12:g_d0_f3:B:with cross-sectional return premia, and find their model can reduce monthly alphas to an
+6:181:13277:22:22:72:526:128:12:g_d0_f3:12:g_d0_f3:B:average of 0.20%.  Barillas and Shanken (2016) develop a new method to directly compare
+6:182:13364:22:0:72:201:106:12:g_d0_f3:12:g_d0_f3:B:competing factor models.
+7:183:13389:0:22:95:525:735:12:g_d0_f3:12:g_d0_f3:A:The  large  number  of  significant  predictors  is  not  a  shortcoming  of  Harvey  et  al.
+7:184:13482:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:(2016),  who  address  the  issue  of  multiple  testing.   Instead,  authors  in  this  literature
+7:185:13581:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:usually  consider  their  proposed  return  predictor  in  isolation  without  conditioning  on
+7:186:13676:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:previously discovered return predictors.  Haugen and Baker (1996) and Lewellen (2015)
+7:187:13761:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:are notable exceptions.  They employ Fama and MacBeth (1973) regressions to combine
+7:188:13844:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:the information in multiple characteristics.  Lewellen (2015) jointly studies the predictive
+7:189:13936:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:power of 15 characteristics and finds that only a few are significant predictors for the cross
+7:190:14030:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:section of expected returns.  Green, Hand, and Zhang (2016) extend Lewellen (2015) to
+7:191:14115:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:many  more  characteristics  for  a  shorter  sample  starting  in  1980,  but  confirm  his  basic
+7:192:14214:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:conclusion.   Although  Fama-MacBeth  regressions  carry  a  lot  of  intuition,  they  do  not
+7:193:14309:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:offer a formal method to select significant return predictors.  We build on Lewellen (2015)
+7:194:14400:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:and provide a framework that allows for nonlinear association between characteristics and
+7:195:14489:21:22:72:526:475:12:g_d0_f3:12:g_d0_f3:B:returns,  provide a formal framework to disentangle significant from insignificant return
+7:196:14578:22:22:72:322:453:12:g_d0_f3:12:g_d0_f3:B:predictors, and study many more characteristics.
+7:197:14626:22:21:95:525:431:12:g_d0_f3:12:g_d0_f3:A:Light,  Maslov,  and Rytchkov (2016) use partial least squares (PLS) to summarize
+7:198:14707:21:22:72:525:410:12:g_d0_f3:12:g_d0_f3:B:the  predictive  power  of  firm  characteristics  for  expected  returns.PLS  summarizes
+7:199:14796:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:the  predictive  power  of  all  characteristics  and  therefore  does  not  directly  disentangle
+7:200:14894:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:important   from   unimportant   characteristics   and   does   not   reduce   the   number   of
+7:201:14990:21:22:72:525:345:12:g_d0_f3:12:g_d0_f3:B:characteristics   for   return   prediction.Brandt,   Santa-Clara,   and   Valkanov   (2009)
+7:202:15082:22:22:72:526:323:12:g_d0_f3:12:g_d0_f3:B:parameterize  portfolio  weights  as  a  function  of  stock  characteristics  to  sidestep  the
+7:203:15178:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:task to model the joint distribution of expected returns and characteristics.  DeMiguel,
+7:204:15266:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:Martin-Utrera,  Nogales,  and  Uppal  (2016)  extend  the  parametric  portfolio  approach
+7:205:15356:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:of  Brandt  et  al.  (2009)  to  study  which  characteristics  provide  incremental  information
+7:206:15453:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:for  the  cross  section  of  returns.    Specifically,  DeMiguel  et  al.  (2016)  add  long-short
+7:207:15552:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:characteristic-sorted portfolios to benchmark portfolios, such as the value-weighted market
+7:208:15643:22:22:72:373:193:12:g_d0_f3:12:g_d0_f3:B:portfolio, and ask which portfolios increase investor utility.
+7:209:15705:22:21:95:525:171:12:g_d0_f3:12:g_d0_f3:A:We also contribute to a small literature estimating non-linear asset-pricing models
+7:210:15788:21:22:72:526:150:12:g_d0_f3:12:g_d0_f3:B:using  semi-  and  nonparametric  methods.   Bansal  and  Viswanathan  (1993)  extend  the
+7:211:15878:22:22:72:526:128:12:g_d0_f3:12:g_d0_f3:B:arbitrage pricing theory (APT) of Ross (1976) and estimate the stochastic discount factor
+7:212:15967:22:0:72:526:106:12:g_d0_f3:12:g_d0_f3:B:semiparametrically using neural nets.  They allow for payoffs to be nonlinear in risk factors
+8:213:16061:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:and find their APT is better able to explain the returns of size-sorted portfolios. Chapman
+8:214:16152:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:(1997) explains the size effect with a consumption-based model in which he approximates
+8:215:16239:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:the  stochastic  discount  factor  with  orthonormal  polynomials  in  a  low  number  of  state
+8:216:16335:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:variables.   Connor,  Hagmann,  and  Linton  (2012)  propose  a  nonparametric  regression
+8:217:16425:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:method  relating  firm  characteristics  to  factor  loadings  in  a  nonlinear  way.   They  find
+8:218:16523:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:momentum and stock volatility have explanatory power similar to size and value for the
+8:219:16609:21:22:72:331:605:12:g_d0_f3:12:g_d0_f3:B:cross section of expected returns as size and value.
+8:220:16661:22:22:95:525:583:12:g_d0_f3:12:g_d0_f3:A:We build on a large literature in economics and statistics using penalized regressions.
+8:221:16748:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:Horowitz (2016) gives a general overview of model selection in high-dimensional models,
+8:222:16835:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:and  Huang,  Horowitz,  and  Wei  (2010)  discuss  variable  selection  in  a  nonparametric
+8:223:16927:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:additive model similar to the one we implement empirically. Recent applications of LASSO
+8:224:17015:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:methods in finance are Huang and Shi (2016), who use an adaptive group LASSO in a
+8:225:17096:21:22:72:526:475:12:g_d0_f3:12:g_d0_f3:B:linear framework and construct macro factors to test for determinants of bond risk premia.
+8:226:17186:22:22:72:526:453:12:g_d0_f3:12:g_d0_f3:B:Chinco, Clark-Joseph, and Ye (2015) assume the irrepresentable condition of Meinshausen
+8:227:17273:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:and B ̈uhlmann (2006) to achieve model-selection consistency in a single-step LASSO. They
+8:228:17362:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:use a linear model for high-frequency return predictability using past returns of related
+8:229:17451:22:22:72:430:388:12:g_d0_f3:12:g_d0_f3:B:stocks, and find their method increases predictability relative to OLS.
+8:230:17522:22:21:95:525:366:12:g_d0_f3:12:g_d0_f3:A:Bryzgalova (2016) highlights that weak identification in linear factor models could
+8:231:17605:21:22:72:525:345:12:g_d0_f3:12:g_d0_f3:B:result  in  an  overstatement  of  significant  cross-sectional  risk  factors.6She  proposes  a
+8:232:17701:22:22:72:526:323:12:g_d0_f3:12:g_d0_f3:B:shrinkage-based estimator to detect possible rank deficiency in the design matrix and to
+8:233:17789:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:identify strong asset-pricing factors.  Giglio and Xiu (2016) instead propose a three-pass
+8:234:17879:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:regression method that combines principal component analysis and a two-stage regression
+8:235:17966:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:framework  to  estimate  consistent  factor  risk  premia  in  the  presence  of  omitted  factors
+8:236:18064:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:when  the  cross  section  of  test  assets  is  large.   We,  instead,  are  mainly  concerned  with
+8:237:18165:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:formal model selection, that is, which characteristics provide incremental information in
+8:238:18254:22:18:72:259:193:12:g_d0_f3:12:g_d0_f3:B:the presence of other characteristics.
+8:239:18292:18:15:85:525:175:7:g_d0_f6:10:g_d0_f7:F:6See  also  Jagannathan  and  Wang  (1998),  Kan  and  Zhang  (1999),  Kleibergen  (2009),  Gospodinov,
+8:240:18395:15:0:72:407:160:10:g_d0_f7:10:g_d0_f7:F:Kan, and Robotti (2014), Kleibergen and Zhan (2015), and Burnside (2016).
+9:241:18469:0:39:72:291:735:17:g_d0_f2:17:g_d0_f2:C:II    Current Methodology
+9:242:18494:39:29:72:463:696:14:g_d0_f8:14:g_d0_f2:C:AExpected Returns and the Curse of Dimensionality
+9:243:18543:29:22:72:526:667:12:g_d0_f3:12:g_d0_f3:B:One aim of the empirical asset-pricing literature is to identify characteristics that predict
+9:244:18636:22:22:72:525:645:12:g_d0_f3:12:g_d0_f3:B:expected returns, that is, find a characteristicCin periodt−1 that predicts excess returns
+9:245:18726:22:21:72:525:623:12:g_d0_f3:12:g_d0_f3:B:of firmiin the following period,Rit.  Formally, we try to describe the conditional mean
+9:246:18813:21:22:72:117:602:12:g_d0_f3:12:g_d0_f3:B:function,
+9:247:18822:22:31:263:525:580:12:g_d0_f9:12:g_d0_f3:A:E[Rit|Cit−1].(1)
+9:248:18838:31:22:95:525:549:12:g_d0_f3:12:g_d0_f3:A:We often use portfolio sorts to approximate equation (1).  We typically sort stocks
+9:249:18921:22:22:72:526:527:12:g_d0_f3:12:g_d0_f3:B:into 10 portfolios and compare mean returns across portfolios.  Portfolio sorts are simple,
+9:250:19012:22:21:72:526:505:12:g_d0_f3:12:g_d0_f3:B:straightforward,  and  intuitive,  but  they  also  suffer  from  several  shortcomings.   First,
+9:251:19109:21:22:72:526:484:12:g_d0_f3:12:g_d0_f3:B:we can only use portfolio sorts to analyze a small set of characteristics.  Imagine sorting
+9:252:19200:22:22:72:526:462:12:g_d0_f3:12:g_d0_f3:B:stocks jointly into five portfolios based on CAPM beta, size, book-to-market, profitability,
+9:253:19292:22:21:72:525:440:12:g_d0_f3:12:g_d0_f3:B:and investment.  We would end up with 55= 3125 portfolios,  which is larger than the
+9:254:19376:21:22:72:525:419:12:g_d0_f3:12:g_d0_f3:B:number  of  stocks  at  the  beginning  of  our  sample.7Second,  portfolio  sorts  offer  little
+9:255:19473:22:22:72:526:397:12:g_d0_f3:12:g_d0_f3:B:formal  guidance  to  discriminate  between  characteristics.   Consider  the  case  of  sorting
+9:256:19569:22:21:72:526:375:12:g_d0_f3:12:g_d0_f3:B:stocks into five portfolios based on size, and within these, into five portfolios based on the
+9:257:19663:21:22:72:526:354:12:g_d0_f3:12:g_d0_f3:B:book-to-market ratio.  If we now find the book-to-market ratio only leads to a spread in
+9:258:19751:22:22:72:526:332:12:g_d0_f3:12:g_d0_f3:B:returns for the smallest stocks, do we conclude it does not matter for expected returns?
+9:259:19839:22:21:72:526:310:12:g_d0_f3:12:g_d0_f3:B:Fama and French (2008) call this second shortcoming “awkward.”  Third, we implicitly
+9:260:19923:21:22:72:526:289:12:g_d0_f3:12:g_d0_f3:B:assume  expected  returns  are  constant  over  a  part  of  the  characteristic  distribution,
+9:261:20018:22:22:72:526:267:12:g_d0_f3:12:g_d0_f3:B:such as the smallest 10% of stocks,  when we use portfolio sorts as an estimator of the
+9:262:20105:22:21:72:524:245:12:g_d0_f3:8:g_d0_f4:B:conditional mean function. Fama and French (2008) call this third shortcoming “clumsy.”8
+9:263:20193:21:22:71:525:224:12:g_d0_f3:12:g_d0_f3:B:Nonetheless, portfolio sorts are by far the most commonly used technique to analyze which
+9:264:20282:22:22:71:369:202:12:g_d0_f3:12:g_d0_f3:B:characteristics have predictive power for expected returns.
+9:265:20341:22:18:95:525:180:12:g_d0_f3:12:g_d0_f3:A:Instead of (conditional) double sorts, we could sort stocks into portfolios and perform
+9:266:20428:18:16:85:525:162:7:g_d0_f6:10:g_d0_f7:F:7The curse of dimensionality is a well-understood shortcoming of portfolio sorts.  See Fama and French
+9:267:20530:16:12:72:526:146:10:g_d0_f7:10:g_d0_f7:F:(2015) for a recent discussion in the context of the factor construction for their five-factor model.  They
+9:268:20637:12:8:72:417:134:10:g_d0_f7:10:g_d0_f7:F:also argue not-well-diversified portfolios have little power in asset-pricing tests.
+9:269:20721:8:16:85:525:126:7:g_d0_f6:10:g_d0_f7:F:8Portfolio  sorts  are  a  restricted  form  of  nonparametric  regression.   We  will  use  the  similarities  of
+9:270:20835:16:0:72:513:110:10:g_d0_f7:10:g_d0_f7:F:portfolio sorts and nonparametric regressions to develop intuition for our proposed framework below.
+10:271:20936:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:spanning tests, that is, we regress long-short portfolios on a set of risk factors.  Take 10
+10:272:21028:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:portfolios  sorted  on  profitability  and  regress  the  hedge  return  on  the  three  Fama  and
+10:273:21126:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:French (1993) factors.  A significant time-series intercept would correspond to an increase
+10:274:21217:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:in Sharpe ratios for a mean-variance investor relative to the investment set the three Fama
+10:275:21308:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:and  French  (1993)  factors  span  (see  Gibbons,  Ross,  and  Shanken  (1989)).   The  order
+10:276:21402:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:in  which  we  test  characteristics  matters,  and  spanning  tests  cannot  solve  the  selection
+10:277:21501:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:problem of which characteristics provide incremental information for the cross section of
+10:278:21590:22:22:72:161:583:12:g_d0_f3:12:g_d0_f3:B:expected returns.
+10:279:21607:22:21:95:525:561:12:g_d0_f3:12:g_d0_f3:A:An alternative to portfolio sorts and spanning tests is toassumelinearity of equation
+10:280:21692:21:44:71:493:540:12:g_d0_f3:12:g_d0_f3:B:(1) and run linear panel regressions of excess returns onScharacteristics, namely,
+10:281:21774:44:0:226:276:496:12:g_d0_f9:12:g_d0_f3:A:Rit=α+
+10:282:21780:0:29:285:296:511:8:g_d0_f11:12:g_d0_f13:C:S∑
+10:283:21782:29:0:280:295:482:8:g_d0_f11:8:g_d0_f4:F:s=1
+10:284:21785:0:42:298:525:496:12:g_d0_f9:12:g_d0_f3:A:βsCs,it−1+εit.(2)
+10:285:21802:42:22:71:525:454:12:g_d0_f3:12:g_d0_f3:B:Linear regressions allow us to study the predictive power for expected returns of many
+10:286:21888:22:21:71:525:432:12:g_d0_f3:12:g_d0_f3:B:characteristics  jointly,  but  they  also  have  potential  pitfalls.   First,  no  a  priori  reason
+10:287:21990:21:22:71:525:411:12:g_d0_f3:12:g_d0_f3:B:explains why the conditional mean function should be linear.9Fama and French (2008)
+10:288:22073:22:22:71:525:389:12:g_d0_f3:12:g_d0_f3:B:estimate linear regressions as in equation (2) to dissect anomalies, but raise concerns over
+10:289:22165:22:21:71:525:367:12:g_d0_f3:12:g_d0_f3:B:potential  nonlinearities.   They  make  ad  hoc  adjustments  and  use,  for  example,  the  log
+10:290:22262:21:22:71:525:346:12:g_d0_f3:12:g_d0_f3:B:book-to-market ratio as a predictive variable.  Second, linear regressions are sensitive to
+10:291:22353:22:22:71:525:324:12:g_d0_f3:12:g_d0_f3:B:outliers.   Third,  small,  illiquid  stocks  might  have  a  large  influence  on  point  estimates
+10:292:22453:22:21:71:525:302:12:g_d0_f3:12:g_d0_f3:B:because they represent the majority of stocks.  Researchers often use ad hoc techniques to
+10:293:22543:21:22:71:525:281:12:g_d0_f3:12:g_d0_f3:B:mitigate concerns related to microcaps and outliers, such as winsorizing observations and
+10:294:22632:22:22:71:525:259:12:g_d0_f3:12:g_d0_f3:B:estimating linear regressions separately for small and large stocks (see Lewellen (2015) for
+10:295:22724:22:21:71:165:237:12:g_d0_f3:12:g_d0_f3:B:a recent example).
+10:296:22742:21:22:95:525:216:12:g_d0_f3:12:g_d0_f3:A:Cochrane (2011) synthesizes many of the challenges that portfolio sorts and linear
+10:297:22824:22:22:71:525:194:12:g_d0_f3:12:g_d0_f3:B:regressions face in the context of many return predictors, and suspects “we will have to
+10:298:22912:22:15:71:190:172:12:g_d0_f3:12:g_d0_f3:B:use different methods.”
+10:299:22935:15:16:85:525:157:7:g_d0_f6:10:g_d0_f7:F:9Fama and MacBeth (1973) regressions also assume a linear relationship between expected returns and
+10:300:23034:16:12:72:526:141:10:g_d0_f7:10:g_d0_f7:F:characteristics.  Fama-MacBeth point estimates are numerically equivalent to estimates from equation (2)
+10:301:23138:12:0:72:264:129:10:g_d0_f7:10:g_d0_f7:F:when characteristics are constant over time.
+11:302:23183:0:30:72:474:735:14:g_d0_f8:14:g_d0_f2:C:BEquivalence between Portfolio Sorts and Regressions
+11:303:23235:30:21:72:526:705:12:g_d0_f3:12:g_d0_f3:B:Cochrane (2011) conjectures in his presidential address, “[P]ortfolio sorts are really the
+11:304:23325:21:22:72:526:684:12:g_d0_f3:12:g_d0_f3:B:same thing as nonparametric cross-sectional regressions, using nonoverlapping histogram
+11:305:23412:22:22:72:526:662:12:g_d0_f3:12:g_d0_f3:B:weights.”   Additional  assumptions  are  necessary  to  show  a  formal  equivalence,  but  his
+11:306:23508:22:21:72:526:640:12:g_d0_f3:12:g_d0_f3:B:conjecture contains valuable intuition to model the conditional mean function formally.
+11:307:23595:21:22:72:526:619:12:g_d0_f3:12:g_d0_f3:B:We first show a formal equivalence between portfolio sorts and regressions and then use
+11:308:23682:22:22:72:403:597:12:g_d0_f3:8:g_d0_f4:B:the equivalence to motivate the use of nonparametric methods.10
+11:309:23745:22:21:95:525:575:12:g_d0_f3:12:g_d0_f3:A:Suppose  we  observe  excess  returnsRitand  a  single  characteristicCit−1for  stocks
+11:310:23831:21:22:71:525:554:12:g_d0_f9:12:g_d0_f3:B:i= 1,...,Ntand time periodst= 1,...,T.  We sort stocks intoLportfolios depending
+11:311:23911:22:22:71:525:532:12:g_d0_f3:12:g_d0_f3:B:on the value of the lagged characteristic,Cit−1.  Specifically,  stockiis in portfoliolat
+11:312:24000:22:21:72:525:510:12:g_d0_f3:12:g_d0_f3:B:timetifCit−1∈Itl,  whereItlindicates an interval of the distribution for a given firm
+11:313:24085:21:22:72:525:489:12:g_d0_f3:12:g_d0_f3:B:characteristic.   For  example,  take  a  firm  with  lagged  market  cap  in  the  45thpercentile
+11:314:24183:22:22:72:525:467:12:g_d0_f3:12:g_d0_f3:B:of the firm size distribution.  We would sort that stock in the 5thout of 10 portfolios in
+11:315:24273:22:43:72:474:445:12:g_d0_f3:12:g_d0_f3:B:periodt.  For each time periodt, letNtlbe the number of stocks in portfoliol,
+11:316:24350:43:0:238:266:402:12:g_d0_f9:12:g_d0_f3:A:Ntl=
+11:317:24354:0:28:273:286:417:8:g_d0_f11:12:g_d0_f13:C:Nt∑
+11:318:24357:28:0:271:285:389:8:g_d0_f11:8:g_d0_f4:F:i=1
+11:319:24360:0:42:288:359:402:12:g_d0_f2:12:g_d0_f9:C:1(Cit−1∈Itl).
+11:320:24373:42:43:72:343:360:12:g_d0_f3:12:g_d0_f3:B:The excess return of portfoliolat timet,Ptl, is then
+11:321:24425:43:0:221:247:317:12:g_d0_f9:12:g_d0_f3:A:Ptl=
+11:322:24429:0:16:256:262:325:12:g_d0_f3:12:g_d0_f3:A:1
+11:323:24430:16:0:252:267:309:12:g_d0_f9:8:g_d0_f11:C:Ntl
+11:324:24433:0:28:275:287:332:8:g_d0_f11:12:g_d0_f13:C:N∑
+11:325:24435:28:0:272:286:304:8:g_d0_f11:8:g_d0_f4:F:i=1
+11:326:24438:0:42:290:375:317:12:g_d0_f9:12:g_d0_f9:C:Rit1(Cit−1∈Itl).
+11:327:24454:42:22:72:525:275:12:g_d0_f3:12:g_d0_f3:B:The difference in average excess returns between portfolioslandl′, or the excess return
+11:328:24541:22:26:72:117:253:12:g_d0_f9:12:g_d0_f3:B:e(l,l′), is
+11:329:24552:26:0:232:274:227:12:g_d0_f9:12:g_d0_f3:A:e(l,l′) =
+11:330:24561:0:17:280:286:236:12:g_d0_f3:12:g_d0_f3:A:1
+11:331:24562:17:0:279:286:219:12:g_d0_f9:12:g_d0_f9:C:T
+11:332:24563:0:28:296:307:242:8:g_d0_f11:12:g_d0_f13:C:T∑
+11:333:24565:28:0:292:306:214:8:g_d0_f11:8:g_d0_f4:F:t=1
+11:334:24568:0:34:308:365:227:12:g_d0_f3:12:g_d0_f9:A:(Ptl−Ptl′),
+11:335:24579:34:22:72:526:193:12:g_d0_f3:12:g_d0_f3:B:which is the intercept in a (time-series) regression of the difference in portfolio returns,
+11:336:24671:22:22:72:204:171:12:g_d0_f9:8:g_d0_f4:C:Ptl−Ptl′, on a constant.11
+11:337:24697:22:17:95:525:149:12:g_d0_f3:12:g_d0_f3:A:Alternatively,  we  can  run  a  pooled  time-series  cross-sectional  regression  of  excess
+11:338:24790:17:16:81:525:132:7:g_d0_f6:10:g_d0_f7:F:10Cattaneo et al. (2016) develop inference methods for a portfolio-sorting estimator and also show the
+11:339:24892:16:8:72:371:116:10:g_d0_f7:10:g_d0_f7:F:equivalence between portfolio sorting and nonparametric estimation.
+11:340:24959:8:0:81:422:108:7:g_d0_f6:10:g_d0_f7:F:11We only consider univariate portfolio sorts in this example to gain intuition.
+12:341:25041:0:22:72:525:735:12:g_d0_f3:12:g_d0_f3:B:returns  on  dummy  variables,  which  equal  1  if  firmiis  in  portfoliolin  periodt.   We
+12:342:25134:22:43:72:359:713:12:g_d0_f3:12:g_d0_f3:B:denote the dummy variables by1(Cit−1∈Itl) and write,
+12:343:25186:43:0:220:247:670:12:g_d0_f9:12:g_d0_f3:A:Rit=
+12:344:25190:0:30:257:268:685:8:g_d0_f11:12:g_d0_f13:C:L∑
+12:345:25192:30:0:253:266:655:8:g_d0_f11:8:g_d0_f4:F:l=1
+12:346:25195:0:43:270:377:670:12:g_d0_f9:12:g_d0_f9:C:βl1(Cit−1∈Itl) +εit.
+12:347:25215:43:22:72:525:627:12:g_d0_f3:12:g_d0_f3:B:LetRbe theNT×1 vector of excess returns and letXbe theNT×Lmatrix of dummy
+12:348:25288:22:36:72:336:605:12:g_d0_f3:12:g_d0_f3:B:variables,1(Cit−1∈Itl).  Letˆβbe an OLS estimate,
+12:349:25337:36:43:254:344:569:12:g_d0_f3:12:g_d0_f9:A:ˆβ= (X′X)−1X′R.
+12:350:25352:43:36:72:171:526:12:g_d0_f3:12:g_d0_f3:B:It then follows that
+12:351:25372:36:8:155:206:490:12:g_d0_f3:12:g_d0_f13:A:ˆβl=1∑
+12:352:25378:8:9:206:211:482:8:g_d0_f11:8:g_d0_f11:F:T
+12:353:25379:9:0:206:220:473:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:354:25382:0:13:222:242:486:12:g_d0_f13:8:g_d0_f11:C:∑N
+12:355:25384:13:0:235:319:473:8:g_d0_f11:12:g_d0_f3:A:i=11(Cit−1∈Itl)
+12:356:25399:0:28:327:339:501:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:357:25401:28:0:324:338:473:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:358:25404:0:28:346:358:501:8:g_d0_f11:12:g_d0_f13:C:N∑
+12:359:25406:28:0:343:357:473:8:g_d0_f11:8:g_d0_f4:F:i=1
+12:360:25409:0:40:360:444:486:12:g_d0_f9:12:g_d0_f3:A:Rit1(Cit−1∈Itl)
+12:361:25424:40:0:173:182:446:12:g_d0_f3:12:g_d0_f3:A:=
+12:362:25425:0:9:213:219:454:12:g_d0_f3:12:g_d0_f3:A:1
+12:363:25426:9:13:193:211:445:12:g_d0_f13:8:g_d0_f11:C:∑T
+12:364:25428:13:0:206:238:432:8:g_d0_f11:8:g_d0_f11:F:t=1Ntl
+12:365:25434:0:29:247:258:461:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:366:25436:29:0:243:257:432:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:367:25439:0:29:265:277:461:8:g_d0_f11:12:g_d0_f13:C:N∑
+12:368:25441:29:0:262:276:432:8:g_d0_f11:8:g_d0_f4:F:i=1
+12:369:25444:0:41:280:363:446:12:g_d0_f9:12:g_d0_f3:A:Rit1(Cit−1∈Itl)
+12:370:25459:41:0:173:182:405:12:g_d0_f3:12:g_d0_f3:A:=
+12:371:25460:0:9:213:219:413:12:g_d0_f3:12:g_d0_f3:A:1
+12:372:25461:9:12:193:211:404:12:g_d0_f13:8:g_d0_f11:C:∑T
+12:373:25463:12:0:206:238:392:8:g_d0_f11:8:g_d0_f11:F:t=1Ntl
+12:374:25469:0:28:247:258:420:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:375:25471:28:0:243:257:392:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:376:25474:0:40:260:289:405:12:g_d0_f9:8:g_d0_f11:C:NtlPtl
+12:377:25480:40:0:173:182:365:12:g_d0_f3:12:g_d0_f3:A:=
+12:378:25481:0:16:195:201:373:12:g_d0_f3:12:g_d0_f3:A:1
+12:379:25482:16:0:193:200:357:12:g_d0_f9:12:g_d0_f9:C:T
+12:380:25483:0:29:211:222:380:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:381:25485:29:0:207:221:351:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:382:25488:0:13:245:261:373:12:g_d0_f9:8:g_d0_f11:C:Ntl
+12:383:25491:13:9:228:232:360:8:g_d0_f4:8:g_d0_f4:F:1
+12:384:25492:9:0:227:232:351:8:g_d0_f11:8:g_d0_f11:F:T
+12:385:25493:0:13:236:254:364:12:g_d0_f13:8:g_d0_f11:C:∑T
+12:386:25495:13:0:249:280:351:8:g_d0_f11:8:g_d0_f11:F:t=1Ntl
+12:387:25501:0:42:282:298:365:12:g_d0_f9:12:g_d0_f9:C:Ptl.
+12:388:25505:42:22:95:525:323:12:g_d0_f3:12:g_d0_f3:A:Now suppose we have the same number of stocks in each portfoliolfor each time
+12:389:25582:22:40:72:281:301:12:g_d0_f3:12:g_d0_f3:B:periodt, that is,Ntl= ̄Nlfor allt.  Then
+12:390:25622:40:11:264:297:261:12:g_d0_f3:12:g_d0_f3:A:ˆβl=1
+12:391:25627:11:0:289:296:250:12:g_d0_f9:12:g_d0_f9:C:T
+12:392:25628:0:29:307:318:273:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:393:25630:29:0:303:317:244:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:394:25633:0:42:320:334:258:12:g_d0_f9:8:g_d0_f11:C:Ptl
+12:395:25636:42:19:72:91:216:12:g_d0_f3:12:g_d0_f3:B:and
+12:396:25639:19:11:207:267:197:12:g_d0_f3:12:g_d0_f3:A:ˆβl−ˆβl′=1
+12:397:25649:11:0:259:266:186:12:g_d0_f9:12:g_d0_f9:C:T
+12:398:25650:0:29:276:288:209:8:g_d0_f11:12:g_d0_f13:C:T∑
+12:399:25652:29:0:273:287:180:8:g_d0_f11:8:g_d0_f4:F:t=1
+12:400:25655:0:34:288:391:194:12:g_d0_f3:12:g_d0_f9:A:(Ptl−Ptl′) =e(l,l′).
+12:401:25675:34:21:72:526:160:12:g_d0_f3:12:g_d0_f3:B:Hence, the slope coefficients in pooled time-series cross-sectional regressions are equivalent
+12:402:25769:21:22:72:526:139:12:g_d0_f3:12:g_d0_f3:B:to average portfolio returns, and the difference between two slope coefficients is the excess
+12:403:25862:22:22:72:227:117:12:g_d0_f3:12:g_d0_f3:B:return between two portfolios.
+12:404:25892:22:0:95:525:95:12:g_d0_f3:12:g_d0_f3:A:If the number of stocks in the portfolios changes over time, then portfolio sorts and
+13:405:25979:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:regressions typically differ.  We can restore equivalence in two ways.  First, we could take
+13:406:26071:22:22:72:525:713:12:g_d0_f3:12:g_d0_f3:B:the  different  number  of  stocks  in  portfoliolover  time  into  account  when  we  calculate
+13:407:26167:22:42:72:260:691:12:g_d0_f3:12:g_d0_f3:B:averages, and define excess return as
+13:408:26204:42:0:163:210:649:12:g_d0_f9:12:g_d0_f3:A:e∗(l,l′) =
+13:409:26214:0:9:234:240:657:12:g_d0_f3:12:g_d0_f3:A:1
+13:410:26215:9:13:214:232:648:12:g_d0_f13:8:g_d0_f11:C:∑T
+13:411:26217:13:0:227:259:635:8:g_d0_f11:8:g_d0_f11:F:t=1Ntl
+13:412:26223:0:29:268:279:664:8:g_d0_f11:12:g_d0_f13:C:T∑
+13:413:26225:29:0:264:278:635:8:g_d0_f11:8:g_d0_f4:F:t=1
+13:414:26228:0:0:281:322:649:12:g_d0_f9:12:g_d0_f10:C:NtlPtl−
+13:415:26235:0:9:347:353:657:12:g_d0_f3:12:g_d0_f3:A:1
+13:416:26236:9:13:326:344:648:12:g_d0_f13:8:g_d0_f11:C:∑T
+13:417:26238:13:0:339:372:635:8:g_d0_f11:6:g_d0_f15:F:t=1Ntl′
+13:418:26245:0:29:382:394:664:8:g_d0_f11:12:g_d0_f13:C:T∑
+13:419:26247:29:0:379:393:635:8:g_d0_f11:8:g_d0_f4:F:t=1
+13:420:26250:0:46:396:434:649:12:g_d0_f9:12:g_d0_f9:C:Ntl′Ptl′,
+13:421:26259:46:21:72:305:603:12:g_d0_f3:12:g_d0_f3:B:in which case, we again getˆβl−ˆβl′=e∗(l,l′).
+13:422:26304:21:37:95:396:582:12:g_d0_f3:12:g_d0_f3:A:Second, we could use the weighted least squares estimator,
+13:423:26362:37:43:241:357:545:12:g_d0_f3:12:g_d0_f9:A: ̃β= (X′WX)−1X′WR,
+13:424:26380:43:21:72:525:502:12:g_d0_f3:12:g_d0_f3:B:where theNT×NTweight matrixWis a diagonal matrix with the inverse number of
+13:425:26455:21:51:72:521:481:12:g_d0_f3:12:g_d0_f3:B:stocks on the diagonal, diag(1/Ntl).  With this estimator, we again get ̃βl− ̃βl′=e(l,l′).
+13:426:26545:51:34:71:339:430:17:g_d0_f2:17:g_d0_f2:C:III    Nonparametric Estimation
+13:427:26576:34:21:71:525:396:12:g_d0_f3:12:g_d0_f3:B:We now use the relationship between portfolio sorts and regressions to develop intuition
+13:428:26664:21:22:71:525:375:12:g_d0_f3:12:g_d0_f3:B:for  our  nonparametric  estimator,  and  show  how  we  can  interpret  portfolio  sorts  as  a
+13:429:26760:22:22:71:525:353:12:g_d0_f3:12:g_d0_f3:B:special  case  of  nonparametric  estimation.   We  then  show  how  to  select  characteristics
+13:430:26856:22:21:71:453:331:12:g_d0_f3:12:g_d0_f3:B:with independent information for expected returns within that framework.
+13:431:26928:21:40:95:525:310:12:g_d0_f3:12:g_d0_f3:A:Suppose we knew the conditional mean functionmt(c)≡E[Rit|Cit−1=c].12Then,
+13:432:27001:40:0:173:279:270:12:g_d0_f9:12:g_d0_f3:A:E[Rit|Cit−1∈Ilt] =
+13:433:27019:0:27:282:289:286:12:g_d0_f13:12:g_d0_f13:C:∫
+13:434:27020:27:0:288:297:259:8:g_d0_f11:6:g_d0_f14:F:Itl
+13:435:27023:0:40:300:423:270:12:g_d0_f9:12:g_d0_f9:C:mt(c)fCit−1|Cit−1∈Itl(c)dc,
+13:436:27050:40:21:72:525:230:12:g_d0_f3:12:g_d0_f3:B:wherefCit−1|Cit−1∈Itlis the density function of the characteristic in periodt−1, conditional
+13:437:27142:21:22:72:525:209:12:g_d0_f3:12:g_d0_f3:B:onCit−1∈Itl.    Hence,  to  obtain  the  expected  return  of  portfoliol,  we  can  simply
+13:438:27233:22:22:72:526:187:12:g_d0_f3:12:g_d0_f3:B:integrate the conditional mean function over the appropriate interval of the characteristic
+13:439:27324:22:21:72:525:165:12:g_d0_f3:12:g_d0_f3:B:distribution.Therefore,  the  conditional  mean  function  contains  all  information  for
+13:440:27414:21:22:72:525:144:12:g_d0_f3:12:g_d0_f3:B:portfolio  returns.However,   knowingmt(c)  provides  additional  information  about
+13:441:27498:22:18:72:526:122:12:g_d0_f3:12:g_d0_f3:B:nonlinearities in the relationship between expected returns and characteristics, and the
+13:442:27586:18:0:81:355:104:7:g_d0_f6:10:g_d0_f7:F:12We take the expected excess return for a fixed time periodt.
+14:443:27650:0:22:72:232:735:12:g_d0_f3:12:g_d0_f3:B:functional form more generally.
+14:444:27681:22:22:95:525:713:12:g_d0_f3:12:g_d0_f3:A:To  estimate  the  conditional  mean  function,mt,  consider  again  regressing  excess
+14:445:27768:22:43:72:331:691:12:g_d0_f3:12:g_d0_f3:B:returns,Rit, onLdummy variables,1(Cit−1∈Itl),
+14:446:27813:43:0:220:247:648:12:g_d0_f9:12:g_d0_f3:A:Rit=
+14:447:27817:0:29:257:268:663:8:g_d0_f11:12:g_d0_f13:C:L∑
+14:448:27819:29:0:253:266:634:8:g_d0_f11:8:g_d0_f4:F:l=1
+14:449:27822:0:43:270:377:648:12:g_d0_f9:12:g_d0_f9:C:βl1(Cit−1∈Itl) +εit.
+14:450:27842:43:22:72:525:605:12:g_d0_f3:12:g_d0_f3:B:In nonparametric estimation, we call indicator functions of the form1(Cit−1∈Itl) constant
+14:451:27931:22:22:72:525:583:12:g_d0_f3:12:g_d0_f3:B:splines.  Estimating the conditional mean function,mt, with constant splines, means we
+14:452:28017:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:approximate  it  by  a  step  function.   In  this  sense,  portfolio  sorting  is  a  special  case  of
+14:453:28121:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:nonparametric regression.  A step function is nonsmooth and therefore has undesirable
+14:454:28206:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:theoretical  properties  as  a  nonparametric  estimator,  but  we  build  on  this  intuition  to
+14:455:28304:22:21:72:239:496:12:g_d0_f3:8:g_d0_f4:B:estimatemtnonparametrically.13
+14:456:28334:21:22:95:525:475:12:g_d0_f3:12:g_d0_f3:A:Figures 4–6 illustrate the intuition behind the relationship between portfolio sorts and
+14:457:28422:22:22:72:526:453:12:g_d0_f3:12:g_d0_f3:B:nonparametric regressions.  These figures show returns on the y-axis and book-to-market
+14:458:28509:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:ratios  on  the  x-axis,  as  well  as  portfolio  returns  and  the  nonparametric  estimator  we
+14:459:28607:21:22:72:245:410:12:g_d0_f3:12:g_d0_f3:B:propose below for simulated data.
+14:460:28640:22:22:95:525:388:12:g_d0_f3:12:g_d0_f3:A:We see in Figure 4 that most of the dispersion in book-to-market ratios and returns
+14:461:28723:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:is  in  the  extreme  portfolios.   Little  variation  in  returns  occurs  across  portfolios  2-4  in
+14:462:28826:21:22:72:526:345:12:g_d0_f3:12:g_d0_f3:B:line with empirical settings (see Fama and French (2008)).  Portfolio means offer a good
+14:463:28914:22:22:72:526:323:12:g_d0_f3:12:g_d0_f3:B:approximation of the conditional mean function for intermediate portfolios.  We also see,
+14:464:29003:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:however, that portfolios 1 and 5 have difficulty capturing the nonlinearities we see in the
+14:465:29094:21:22:72:98:280:12:g_d0_f3:12:g_d0_f3:B:data.
+14:466:29099:22:22:95:525:258:12:g_d0_f3:12:g_d0_f3:A:Figure 5 documents that a nonparametric estimator of the conditional mean function
+14:467:29181:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:provides a good approximation for the relationship between book-to-market ratios and
+14:468:29265:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:returns  for  intermediate  values  of  the  characteristic,  but  also  in  the  extremes  of  the
+14:469:29364:22:22:72:135:193:12:g_d0_f3:12:g_d0_f3:B:distribution.
+14:470:29377:22:21:95:525:171:12:g_d0_f3:12:g_d0_f3:A:Finally,  we see in Figure 6 that portfolio means provide a better fit in the tails of
+14:471:29463:21:22:72:526:150:12:g_d0_f3:12:g_d0_f3:B:the distribution once we allow for more portfolios.  Portfolio mean returns become more
+14:472:29550:22:18:72:526:128:12:g_d0_f3:12:g_d0_f3:B:comparable to the predictions from the nonparametric estimator the larger the number
+14:473:29634:18:0:81:341:110:7:g_d0_f6:10:g_d0_f7:F:13We formally define our estimator in Section III.Dbelow.
+15:474:29693:0:44:72:137:735:12:g_d0_f3:12:g_d0_f3:B:of portfolios.
+15:475:29707:44:29:72:525:691:14:g_d0_f8:14:g_d0_f2:C:AMultiple Regression & Additive Conditional Mean Function
+15:476:29764:29:22:72:526:662:12:g_d0_f3:12:g_d0_f3:B:Both portfolio sorts and regressions theoretically allow us to look at several characteristics
+15:477:29858:22:22:72:525:640:12:g_d0_f3:12:g_d0_f3:B:simultaneously.  Consider small (S) and big (B) firms and value (V) and growth (G) firms.
+15:478:29947:22:21:71:525:618:12:g_d0_f3:12:g_d0_f3:B:We  could  now  study  four  portfolios:  (SV),(SG),(BV),and  (BG).   However,  portfolio
+15:479:30036:21:22:72:526:597:12:g_d0_f3:12:g_d0_f3:B:sorts quickly become infeasible as the number of characteristics increases.  For example,
+15:480:30125:22:22:72:526:575:12:g_d0_f3:12:g_d0_f3:B:if we have four characteristics and partition each characteristics into five portfolios, we
+15:481:30216:22:21:72:525:553:12:g_d0_f3:12:g_d0_f3:B:end up with 54=  625 portfolios.  Analyzing 625 portfolio returns would,  of course,  be
+15:482:30304:21:22:72:405:532:12:g_d0_f3:12:g_d0_f3:B:impractical, but would also result in poorly diversified portfolios.
+15:483:30372:22:22:95:525:510:12:g_d0_f3:12:g_d0_f3:A:In   nonparametric   regressions,   an   analogous   problem   arises.Estimating   the
+15:484:30458:22:21:72:525:488:12:g_d0_f3:12:g_d0_f3:B:conditional mean functionmt(c)≡E[Rit|Cit=c] fully nonparametrically with many
+15:485:30535:21:22:72:524:467:12:g_d0_f3:8:g_d0_f4:B:regressors  results  in  a  slow  rate  of  convergence  and  imprecise  estimates  in  practice.14
+15:486:30634:22:22:72:525:445:12:g_d0_f3:12:g_d0_f3:B:Specifically,  withScharacteristics  andNtobservations,  assuming  technical  regularity
+15:487:30722:22:21:72:525:423:12:g_d0_f3:12:g_d0_f3:B:conditions, the optimal rate of convergence in mean square isN−4/(4+S)t, which is always
+15:488:30810:21:22:72:525:402:12:g_d0_f3:12:g_d0_f3:B:smaller than the rate of convergence for the parametric estimator ofN−1t.  Notice the rate
+15:489:30900:22:22:72:525:380:12:g_d0_f3:12:g_d0_f3:B:of convergence decreases asSincreases.15Consequently, we get an estimator with poor
+15:490:30983:22:21:72:399:358:12:g_d0_f3:12:g_d0_f3:B:finite sample properties if the number of characteristics is large.
+15:491:31050:21:22:95:525:337:12:g_d0_f3:12:g_d0_f3:A:As an illustration, suppose we observe one characteristic, in which case, the rate of
+15:492:31135:22:22:72:525:315:12:g_d0_f3:12:g_d0_f3:B:convergence isN−4/5t.  Now suppose instead we have 11 characteristics, and letN∗tbe the
+15:493:31222:22:21:72:526:293:12:g_d0_f3:12:g_d0_f3:B:number of observations necessary to get the same rate of convergence as in the case with
+15:494:31310:21:40:72:209:272:12:g_d0_f3:12:g_d0_f3:B:one characteristic.  We get,
+15:495:31338:40:40:217:379:232:12:g_d0_f3:12:g_d0_f9:A:(N∗t)−4/15=N−4/5t⇒N∗t=N3t.
+15:496:31364:40:21:72:526:192:12:g_d0_f3:12:g_d0_f3:B:Hence, in the case with 11 characteristics, we have to raise the sample size to the power
+15:497:31453:21:22:72:526:171:12:g_d0_f3:12:g_d0_f3:B:of 3 to obtain the same rate of convergence and comparable finite sample properties as
+15:498:31539:22:18:72:525:149:12:g_d0_f3:12:g_d0_f3:B:in the case with only one characteristic.  Consider a sample size,Nt, of 1,000.  Then, we
+15:499:31628:18:15:81:525:131:7:g_d0_f6:10:g_d0_f7:F:14This literature refers to this phenomenon as the “curse of dimensionality” (see Stone (1982) for a
+15:500:31728:15:9:72:153:116:10:g_d0_f7:10:g_d0_f7:F:formal treatment).
+15:501:31746:9:0:81:444:107:7:g_d0_f6:10:g_d0_f7:F:15We assume the conditional mean functionmtis twice continuously differentiable.
+16:502:31828:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:would need 1 billion return observations to obtain similar finite sample properties of an
+16:503:31917:22:22:72:381:713:12:g_d0_f3:12:g_d0_f3:B:estimated conditional mean function with 11 characteristics.
+16:504:31977:22:21:95:526:691:12:g_d0_f3:12:g_d0_f3:A:Conversely, supposeS= 11 and we haveN∗t= 1,000 observations.  This combination
+16:505:32055:21:22:71:525:670:12:g_d0_f3:12:g_d0_f3:B:yields similar properties as an estimation with one characteristic and a sample sizeNt=
+16:506:32142:22:22:71:141:648:12:g_d0_f3:12:g_d0_f3:B:(N∗t)1/3of 10.
+16:507:32156:22:21:95:525:626:12:g_d0_f3:12:g_d0_f3:A:Nevertheless,   if  we  are  interested  in  which  characteristics  provide  incremental
+16:508:32245:21:22:71:525:605:12:g_d0_f3:12:g_d0_f3:B:information  for  expected  returns  given  other  characteristics,  we  cannot  look  at  each
+16:509:32340:22:22:71:525:583:12:g_d0_f3:12:g_d0_f3:B:characteristic in isolation.  A natural solution in the nonparametric regression framework
+16:510:32430:22:42:71:233:561:12:g_d0_f3:12:g_d0_f3:B:is to assume an additive model,
+16:511:32461:42:0:226:308:519:12:g_d0_f9:12:g_d0_f3:A:mt(c1,...,cS) =
+16:512:32476:0:29:318:329:534:8:g_d0_f11:12:g_d0_f13:C:S∑
+16:513:32478:29:0:313:328:505:8:g_d0_f11:8:g_d0_f4:F:s=1
+16:514:32481:0:43:331:370:519:12:g_d0_f9:12:g_d0_f9:C:mts(cs),
+16:515:32489:43:22:71:525:476:12:g_d0_f3:12:g_d0_f3:B:wheremts(·)  are  unknown  functions.   The  main  theoretical  advantage  of  the  additive
+16:516:32581:22:22:71:525:454:12:g_d0_f3:12:g_d0_f3:B:specification is that the rate of convergence is alwaysN−4/5t, which does not depend on
+16:517:32668:22:21:71:525:432:12:g_d0_f3:12:g_d0_f3:B:the  number  of  characteristicsS(see  Stone  (1985),  Stone  (1986),  and  Horowitz  et  al.
+16:518:32761:21:22:71:111:411:12:g_d0_f3:12:g_d0_f3:B:(2006)).
+16:519:32769:22:31:95:346:389:12:g_d0_f3:12:g_d0_f3:A:An important restriction of the additive model is
+16:520:32818:31:17:247:329:358:12:g_d0_f9:12:g_d0_f3:A:∂2mt(c1,...,cS)
+16:521:32833:17:0:270:304:341:12:g_d0_f9:6:g_d0_f15:C:∂cs∂cs′
+16:522:32840:0:39:333:351:349:12:g_d0_f3:12:g_d0_f3:A:= 0
+16:523:32843:39:22:72:525:310:12:g_d0_f3:12:g_d0_f3:B:for  alls6=s′;  therefore,  the  additive  model  does  not  allow  for  interactions  between
+16:524:32937:22:21:71:525:288:12:g_d0_f3:12:g_d0_f3:B:characteristics; for example, the predictive power of the book-to-market ratio for expected
+16:525:33028:21:22:71:525:267:12:g_d0_f3:12:g_d0_f3:B:returns does not vary with firm size.  One way around this shortcoming is to add certain
+16:526:33116:22:22:71:525:245:12:g_d0_f3:12:g_d0_f3:B:interactions as additional regressors.  For instance, we could interact every characteristic
+16:527:33208:22:22:71:525:223:12:g_d0_f3:12:g_d0_f3:B:with size to see if small firms are really different.  An alternative solution is to estimate
+16:528:33301:22:21:71:525:201:12:g_d0_f3:12:g_d0_f3:B:the  model  separately  for  small  and  large  stocks.   Brandt  et  al.  (2009)  make  a  similar
+16:529:33400:21:22:71:525:180:12:g_d0_f3:12:g_d0_f3:B:assumption  but  also  stress  that  we  can  always  interpret  characteristicscas  the  cross
+16:530:33495:22:22:72:305:158:12:g_d0_f3:12:g_d0_f3:B:product of a more basic set of characteristics.
+16:531:33542:22:21:95:525:136:12:g_d0_f3:12:g_d0_f3:A:Although the assumption of an additive model is somewhat restrictive, it provides
+16:532:33623:21:0:72:526:115:12:g_d0_f3:12:g_d0_f3:B:desirable econometric advantages and is far less restrictive than assuming linearity right
+17:533:33715:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:away as we do in Fama-MacBeth regressions.  Another major advantage of an additive
+17:534:33797:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:model is that we can jointly estimate the model for a large number of characteristics, select
+17:535:33890:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:important characteristics, and estimate the summands of the conditional mean function,
+17:536:33976:21:44:72:314:670:12:g_d0_f9:12:g_d0_f3:B:mt, simultaneously, as we explain in SectionD.
+17:537:34022:44:29:72:440:626:14:g_d0_f8:14:g_d0_f2:C:BComparison of Linear & Nonparametric Models
+17:538:34066:29:22:72:526:597:12:g_d0_f3:12:g_d0_f3:B:We now want to compare portfolio sorts and a linear model with nonparametric models
+17:539:34149:22:22:72:526:575:12:g_d0_f3:12:g_d0_f3:B:in some specific numerical examples.  The comparison helps us understand the potential
+17:540:34235:22:21:72:526:553:12:g_d0_f3:12:g_d0_f3:B:pitfalls from assuming a linear relationship between characteristics and returns, and gain
+17:541:34325:21:22:72:526:532:12:g_d0_f3:12:g_d0_f3:B:some intuition for why we might select different characteristics in a linear model in our
+17:542:34414:22:22:72:217:510:12:g_d0_f3:12:g_d0_f3:B:empirical tests in Section V.
+17:543:34443:22:21:95:525:488:12:g_d0_f3:12:g_d0_f3:A:Suppose we observe excess returnsRitand a single characteristic,Cit−1distributed
+17:544:34523:21:22:72:525:467:12:g_d0_f3:12:g_d0_f3:B:according toCit−1∼U[0,1] fori= 1,...,Nandt= 1,...,Twith the data-generating
+17:545:34598:22:22:72:112:445:12:g_d0_f3:12:g_d0_f3:B:process,
+17:546:34606:22:31:244:353:423:12:g_d0_f9:12:g_d0_f9:C:Rit=mt(Cit−1) +εit,
+17:547:34625:31:22:72:193:392:12:g_d0_f3:12:g_d0_f3:B:whereE[εit|Cit−1] = 0.
+17:548:34647:22:21:95:526:370:12:g_d0_f3:12:g_d0_f3:A:Without  knowing  the  conditional  mean  functionmt,  we  could  sort  stocks  into
+17:549:34731:21:22:72:525:349:12:g_d0_f3:12:g_d0_f3:B:portfolios  according  to  the  distribution  of  the  characteristic.Cit−1predicts  returns  if
+17:550:34827:22:22:72:526:327:12:g_d0_f3:12:g_d0_f3:B:mean  returns  differ  significantly  across  portfolios.   For  example,  we  could  construct  10
+17:551:34926:22:21:72:526:305:12:g_d0_f3:12:g_d0_f3:B:portfolios based on the percentiles of the distribution and test if the first portfolio has a
+17:552:35019:21:22:72:337:284:12:g_d0_f3:12:g_d0_f3:B:significantly different return than the 10thportfolio.
+17:553:35073:22:22:95:525:262:12:g_d0_f3:12:g_d0_f3:A:If we knew the conditional mean functionmt, we could conclude thatCit−1predicts
+17:554:35152:22:21:72:525:240:12:g_d0_f3:12:g_d0_f3:B:returns ifmtis not constant on [0,1].  Moreover, knowing the conditional mean function
+17:555:35238:21:22:72:526:219:12:g_d0_f3:12:g_d0_f3:B:allows us to construct portfolios with a large spread in returns.  Instead of sorting stocks
+17:556:35330:22:22:72:525:197:12:g_d0_f3:12:g_d0_f3:B:based on the values of the characteristicCit−1, we could sort stocks directly based on the
+17:557:35420:22:21:72:525:175:12:g_d0_f3:12:g_d0_f3:B:conditional mean functionmt(Cit−1). For example, letqt(α) be theα-quantile ofmt(Cit−1)
+17:558:35506:21:22:72:526:154:12:g_d0_f3:12:g_d0_f3:B:and let stockibe in portfoliolat timetifmt(Cit−1)∈[qt((l−1)/10),qt(l/10)].  That
+17:559:35586:22:22:72:526:132:12:g_d0_f3:12:g_d0_f3:B:is, we construct 10 portfolios based on return predictions.  Portfolio 1 contains the 10%
+17:560:35675:22:0:72:526:110:12:g_d0_f3:12:g_d0_f3:B:of stocks with the lowest predicted returns, and portfolio 10 contains the 10% of stocks
+18:561:35765:0:22:72:250:735:12:g_d0_f3:12:g_d0_f3:B:with the highest predicted returns.
+18:562:35800:22:22:95:525:713:12:g_d0_f5:12:g_d0_f3:A:Ifmtis monotoneand we only study a single characteristic, both sorting based on
+18:563:35879:22:21:72:525:691:12:g_d0_f3:12:g_d0_f3:B:the value of the characteristic and sorting based on predicted returnsmt(Cit−1) results in
+18:564:35969:21:22:72:525:670:12:g_d0_f3:12:g_d0_f3:B:the same portfolios.  However, ifmtis not monotone, the “10-1 portfolio” return is higher
+18:565:36058:22:22:72:244:648:12:g_d0_f3:12:g_d0_f3:B:when we sort based onmt(Cit−1).
+18:566:36089:22:21:95:525:626:12:g_d0_f3:12:g_d0_f3:A:As a simple example, supposemt(c) = (c−0.5)2.  Then the expected “10-1 portfolio”
+18:567:36170:21:22:72:355:605:12:g_d0_f3:12:g_d0_f3:B:return when sorting based on characteristic,Cit−1, is 0.
+18:568:36226:22:22:95:525:583:12:g_d0_f3:12:g_d0_f3:A:We  now  consider  two  characteristics,C1,it−1∼U[0,1]  andC2,it−1∼U[0,1],  and
+18:569:36305:22:39:72:306:561:12:g_d0_f3:12:g_d0_f3:B:assume the following data-generating process:
+18:570:36350:39:40:201:395:522:12:g_d0_f9:12:g_d0_f9:C:Rit=mt1(C1,it−1) +mt2(C2,it−1) +εit,
+18:571:36386:40:21:72:526:482:12:g_d0_f3:12:g_d0_f3:B:whereE[εit|C1,it−1,C2,it−1] = 0.  Again, we can construct portfolios with a large spread
+18:572:36474:21:22:72:525:461:12:g_d0_f3:12:g_d0_f3:B:in predicted returns based on the value of the conditional mean function,mt.  The idea is
+18:573:36563:22:40:72:526:439:12:g_d0_f3:12:g_d0_f3:B:similar to constructing trading strategies based on the predicted values of a linear model,
+18:574:36654:40:39:204:392:399:12:g_d0_f9:12:g_d0_f9:C:Rit=β0+β1C1,it−1+β2C2,it−1+εit.
+18:575:36685:39:22:72:526:360:12:g_d0_f3:12:g_d0_f3:B:We  will  now,  however,  illustrate  the  potential  pitfalls  of  the  linear  model  and  how  a
+18:576:36784:22:22:72:282:338:12:g_d0_f3:12:g_d0_f3:B:nonparametric model can alleviate them.
+18:577:36823:22:39:95:341:316:12:g_d0_f3:12:g_d0_f3:A:Assume the following return-generating process:
+18:578:36870:39:0:185:270:277:12:g_d0_f9:12:g_d0_f3:A:Rit=−0.2 + 0.3
+18:579:36884:0:10:270:282:287:12:g_d0_f13:12:g_d0_f13:C:√
+18:580:36885:10:40:282:411:277:12:g_d0_f9:12:g_d0_f9:C:C1,it−1+ 0.25C22,it−1+εit.
+18:581:36911:40:22:72:525:237:12:g_d0_f3:12:g_d0_f3:B:In this example, a regression of returnsRiton the characteristicsC1,it−1andC2,it−1yields
+18:582:36999:22:21:71:525:215:12:g_d0_f3:12:g_d0_f3:B:slope coefficients of around 0.25 in large samples.  Therefore,  the predicted values of a
+18:583:37089:21:22:71:525:194:12:g_d0_f3:12:g_d0_f3:B:linear model treatC1,it−1andC2,it−1almost identically, although they affect returns very
+18:584:37177:22:22:72:126:172:12:g_d0_f3:12:g_d0_f3:B:differently.
+18:585:37189:22:21:95:525:150:12:g_d0_f3:12:g_d0_f3:A:We  now  compare  the  performance  of  the  linear  and  nonparametric  model  for  the
+18:586:37277:21:0:72:526:129:12:g_d0_f3:12:g_d0_f3:B:“10-1” hedge portfolio.  The table below shows monthly returns, standard deviations, and
+19:587:37367:0:22:72:501:735:12:g_d0_f3:8:g_d0_f4:B:Sharpe ratios from a simulation for 2,000 stocks and 240 periods for both models.16
+19:588:37450:22:22:95:525:713:12:g_d0_f3:12:g_d0_f3:A:Predicted returns for the nonparametric model are slightly higher compared to the
+19:589:37531:22:21:71:525:691:12:g_d0_f3:12:g_d0_f3:B:linear model, with almost identical standard deviations resulting in larger Sharpe ratios
+19:590:37620:21:22:71:525:670:12:g_d0_f3:12:g_d0_f3:B:with the nonparametric method.  Nevertheless, the linear model is a good approximation
+19:591:37706:22:22:71:525:648:12:g_d0_f3:12:g_d0_f3:B:in this example, and the nonparametric method improves only marginally on the linear
+19:592:37790:22:26:71:105:626:12:g_d0_f3:12:g_d0_f3:B:model.
+19:593:37796:26:22:278:399:600:12:g_d0_f3:12:g_d0_f3:A:Linear    Nonparametric
+19:594:37819:22:21:198:377:578:12:g_d0_f3:12:g_d0_f3:A:Return0.17040.1734
+19:595:37837:21:22:198:377:557:12:g_d0_f3:12:g_d0_f3:A:Std0.20550.2054
+19:596:37852:22:40:198:375:535:12:g_d0_f3:12:g_d0_f3:A:Sharpe Ratio0.83290.8480
+19:597:37876:40:40:95:407:495:12:g_d0_f3:12:g_d0_f3:A:Instead, now we study the following data-generating process:
+19:598:37936:40:39:117:479:455:12:g_d0_f9:12:g_d0_f9:C:Rit=−0.3 + 0.3Φ((C1,it−1−0.1)/0.1) + 0.3Φ((C2,it−1−0.9)/0.1) +εit,
+19:599:38002:39:22:72:526:416:12:g_d0_f3:12:g_d0_f3:B:where Φ denotes the standard normal cdf.  Figure 1 plots the two functions, along with a
+19:600:38090:22:22:72:436:394:12:g_d0_f3:12:g_d0_f3:B:parametric and a nonparametric estimate for a representative data set.
+19:601:38160:22:21:95:525:372:12:g_d0_f3:12:g_d0_f3:A:In this example, a regression ofRitonC1,it−1andC2,it−1yields two slope coefficients
+19:602:38243:21:22:72:525:351:12:g_d0_f3:12:g_d0_f3:B:of around 0.15.  Hence, as in the previous example, the predicted values of a linear model
+19:603:38333:22:32:72:250:329:12:g_d0_f3:12:g_d0_f3:B:treatC1,it−1andC2,it−1identically.
+19:604:38367:32:22:278:399:297:12:g_d0_f3:12:g_d0_f3:A:Linear    Nonparametric
+19:605:38390:22:22:198:377:275:12:g_d0_f3:12:g_d0_f3:A:Return0.11540.1863
+19:606:38408:22:22:198:377:253:12:g_d0_f3:12:g_d0_f3:A:Std0.15760.1576
+19:607:38423:22:29:198:377:231:12:g_d0_f3:12:g_d0_f3:A:Sharpe Ratio0.73521.1876
+19:608:38447:29:21:95:525:202:12:g_d0_f3:12:g_d0_f3:A:The  portfolio  returns  using  the  nonparametric  model  are  now  substantially  higher
+19:609:38537:21:22:72:526:181:12:g_d0_f3:12:g_d0_f3:B:compared  to  the  linear  model,  with  almost  identical  standard  deviations,  resulting  in
+19:610:38633:22:18:72:526:159:12:g_d0_f3:12:g_d0_f3:B:much  larger  Sharpe  ratios.   In  this  example,  the  linear  model  is  a  poor  approximation
+19:611:38731:18:15:81:525:141:7:g_d0_f6:10:g_d0_f7:F:16The numbers in the table are averages of portfolio means,  standard deviations,  and Sharpe ratios
+19:612:38831:15:12:72:525:126:10:g_d0_f7:10:g_d0_f7:F:of 1,000 simulated data sets.  We use the first 120 periods to estimate the conditional functions using
+19:613:38934:12:12:72:526:114:10:g_d0_f7:10:g_d0_f7:F:quadratic splines, which we explain below, and form portfolios for each remaining period based on the
+19:614:39035:12:0:72:443:102:10:g_d0_f7:10:g_d0_f7:F:estimates.  Therefore, the portfolio means in the table are based on 120 time periods.
+20:615:39123:0:9:123:287:524:4:Helvetica:4:Helvetica:F:00.20.40.60.81
+20:616:39137:9:0:194:213:515:5:g_d0_f21:3:g_d0_f22:F:C1;t!1
+20:617:39143:0:0:112:122:532:4:Helvetica:4:Helvetica:F:0.2
+20:618:39146:0:0:108:123:557:4:Helvetica:4:Helvetica:F:0.25
+20:619:39150:0:0:112:122:582:4:Helvetica:4:Helvetica:F:0.3
+20:620:39153:0:0:108:123:607:4:Helvetica:4:Helvetica:F:0.35
+20:621:39157:0:0:112:122:632:4:Helvetica:4:Helvetica:F:0.4
+20:622:39160:0:0:108:123:657:4:Helvetica:4:Helvetica:F:0.45
+20:623:39164:0:0:112:122:682:4:Helvetica:4:Helvetica:F:0.5
+20:624:39167:0:0:108:123:707:4:Helvetica:4:Helvetica:F:0.55
+20:625:39171:0:8:112:122:732:4:Helvetica:4:Helvetica:F:0.6
+20:626:39188:8:12:153:203:724:4:Helvetica:3:Helvetica:F:True function m1
+20:627:39204:12:9:153:199:712:4:Helvetica:4:Helvetica:F:Linear estimate
+20:628:39219:9:179:153:224:703:4:Helvetica:4:Helvetica:F:Nonparametric estimate
+20:629:39241:179:9:333:496:524:4:Helvetica:4:Helvetica:F:00.20.40.60.81
+20:630:39255:9:0:403:423:515:5:g_d0_f21:3:g_d0_f22:F:C2;t!1
+20:631:39261:0:0:322:332:532:4:Helvetica:4:Helvetica:F:0.1
+20:632:39264:0:0:318:333:558:4:Helvetica:4:Helvetica:F:0.15
+20:633:39268:0:0:322:332:583:4:Helvetica:4:Helvetica:F:0.2
+20:634:39271:0:0:318:333:609:4:Helvetica:4:Helvetica:F:0.25
+20:635:39275:0:0:322:332:634:4:Helvetica:4:Helvetica:F:0.3
+20:636:39278:0:0:318:333:660:4:Helvetica:4:Helvetica:F:0.35
+20:637:39282:0:0:322:332:686:4:Helvetica:4:Helvetica:F:0.4
+20:638:39285:0:0:318:333:711:4:Helvetica:4:Helvetica:F:0.45
+20:639:39289:0:13:322:332:737:4:Helvetica:4:Helvetica:F:0.5
+20:640:39306:13:12:363:414:724:4:Helvetica:3:Helvetica:F:True function m2
+20:641:39322:12:9:363:409:712:4:Helvetica:4:Helvetica:F:Linear estimate
+20:642:39337:9:220:363:434:703:4:Helvetica:4:Helvetica:F:Nonparametric estimate
+20:643:39359:220:34:183:413:483:12:g_d0_f3:12:g_d0_f3:A:Figure 1:  Regression functions and estimates
+20:644:39404:34:22:71:525:449:12:g_d0_f3:12:g_d0_f3:B:of the true data-generating process even though returns increase monotonically in both
+20:645:39490:22:21:71:155:427:12:g_d0_f3:8:g_d0_f4:B:characteristics.17
+20:646:39508:21:22:95:525:406:12:g_d0_f3:12:g_d0_f3:A:Note that we do not know the true data-generating process,  and the linear model
+20:647:39588:22:22:72:526:384:12:g_d0_f3:12:g_d0_f3:B:may provide a good or poor approximation.  Therefore, nonparametric methods are the
+20:648:39671:22:21:72:147:362:12:g_d0_f3:12:g_d0_f3:B:natural choice.
+20:649:39686:21:22:95:525:341:12:g_d0_f3:12:g_d0_f3:A:In  a  last  example,  we  want  to  discuss  how  the  linear  and  nonparametric  models
+20:650:39776:22:22:72:526:319:12:g_d0_f3:12:g_d0_f3:B:treat  nonlinear  transformations  of  variables.   This  example  helps  us  understand  why  a
+20:651:39872:22:21:72:526:297:12:g_d0_f3:12:g_d0_f3:B:linear  model  might  select  more  variables  in  empirical  settings.   Consider  the  following
+20:652:39970:21:22:72:196:276:12:g_d0_f3:12:g_d0_f3:B:data-generating process:
+20:653:39994:22:31:229:368:254:12:g_d0_f9:12:g_d0_f9:C:Rit=C1,it−1+C2,it−1+εit,
+20:654:40018:31:22:72:525:223:12:g_d0_f3:12:g_d0_f3:B:withC2,it−1=C21,it−1;  that  is,  the  second  characteristic  is  just  the  square  of  the  first
+20:655:40118:22:22:72:526:201:12:g_d0_f3:12:g_d0_f3:B:characteristic.   In  the  linear  model,  both  characteristics  are  important  to  describe  the
+20:656:40217:22:21:72:525:179:12:g_d0_f3:12:g_d0_f3:B:conditional  mean  function,  whereas  in  the  nonparametric  model,mtis  a  function  of
+20:657:40307:21:22:72:525:158:12:g_d0_f9:12:g_d0_f3:B:C1,it−1only  (or  alternatively,C2,it−1only).   In  SectionD,  we  consider  model  selection
+20:658:40400:22:18:72:526:136:12:g_d0_f3:12:g_d0_f3:B:next to estimation, and these differences between the linear and the nonparametric model
+20:659:40488:18:0:81:280:118:7:g_d0_f6:10:g_d0_f7:F:17We thank Seth Pruitt for raising this point.
+21:660:40536:0:44:72:213:735:12:g_d0_f3:12:g_d0_f3:B:will play an important role.
+21:661:40564:44:29:72:332:691:14:g_d0_f8:14:g_d0_f2:C:CNormalization of Characteristics
+21:662:40597:29:22:72:526:662:12:g_d0_f3:12:g_d0_f3:B:We now describe a suitable normalization of the characteristics, which will allow us to map
+21:663:40688:22:22:72:526:640:12:g_d0_f3:12:g_d0_f3:B:our nonparametric estimator directly to portfolio sorts.  As before, define the conditional
+21:664:40779:22:39:72:283:618:12:g_d0_f3:12:g_d0_f3:B:mean functionmtforScharacteristics as
+21:665:40816:39:40:165:431:579:12:g_d0_f9:12:g_d0_f9:C:mt(C1,it−1,...,CS,it−1) =E[Rit|C1,it−1,...,CS,it−1].
+21:666:40868:40:21:72:525:539:12:g_d0_f3:12:g_d0_f3:B:For each characteristics, letFs,t(·) be a known strictly monotone function and denote its
+21:667:40957:21:40:72:333:518:12:g_d0_f3:12:g_d0_f3:B:inverse byF−1s,t(·).  Define ̃Cs,it−1=Fs,t(Cs,it−1) and
+21:668:41012:40:40:191:407:478:12:g_d0_f3:12:g_d0_f9:A: ̃mt(c1,...,cS) =mt(F−11,t(c1),...,F−1S,t(cS)).
+21:669:41059:40:21:72:102:438:12:g_d0_f3:12:g_d0_f3:B:Then,
+21:670:41064:21:32:174:422:417:12:g_d0_f9:12:g_d0_f9:C:mt(C1,it−1,...,CS,it−1) =   ̃mt( ̃C1,it−1,..., ̃CS,it−1).
+21:671:41121:32:21:72:525:385:12:g_d0_f3:12:g_d0_f3:B:Knowledge of the conditional mean functionmtis equivalent to knowing the transformed
+21:672:41205:21:22:72:525:364:12:g_d0_f3:12:g_d0_f3:B:conditional  mean  function   ̃mt.   Moreover,  using  a  transformation  does  not  impose  any
+21:673:41301:22:22:72:403:342:12:g_d0_f3:12:g_d0_f3:B:additional restrictions and is therefore without loss of generality.
+21:674:41369:22:21:95:525:320:12:g_d0_f3:12:g_d0_f3:A:Instead  of  estimatingmt,  we  will  estimate   ̃mtfor  a  rank  transformation  that  has
+21:675:41460:21:22:72:526:299:12:g_d0_f3:12:g_d0_f3:B:desirable  properties  and  nicely  maps  to  portfolio  sorting.   When  we  sort  stocks  into
+21:676:41556:22:22:72:526:277:12:g_d0_f3:12:g_d0_f3:B:portfolios,  we  are  typically  not  interested  in  the  value  of  a  characteristic  in  isolation,
+21:677:41659:22:21:72:526:255:12:g_d0_f3:12:g_d0_f3:B:but rather in the rank of the characteristic in the cross section.  Consider firm size.  Size
+21:678:41752:21:22:72:526:234:12:g_d0_f3:12:g_d0_f3:B:grows over time, and a firm with a market capitalization of USD 1 billion in the 1960s
+21:679:41838:22:22:72:526:212:12:g_d0_f3:12:g_d0_f3:B:was considered a large firm, but today it is not.  Our normalization considers the relative
+21:680:41929:22:21:72:489:190:12:g_d0_f3:12:g_d0_f3:B:size in the cross section rather than the absolute size, similar to portfolio sorting.
+21:681:42015:21:22:95:525:169:12:g_d0_f3:12:g_d0_f3:A:Hence,  we  choose  the  rank  transformation  ofCs,it−1such  that  the  cross-sectional
+21:682:42103:22:22:72:525:147:12:g_d0_f3:12:g_d0_f3:B:distribution  of  a  given  characteristic  lies  in  the  unit  interval;  that  is,Cs,it−1∈[0,1].
+21:683:42202:22:21:72:148:125:12:g_d0_f3:12:g_d0_f3:B:Specifically, let
+21:684:42219:21:0:226:297:104:12:g_d0_f9:12:g_d0_f3:A:Fs,t(Cs,it−1) =
+21:685:42234:0:17:302:366:112:12:g_d0_f3:12:g_d0_f3:A:rank(Cs,it−1)
+21:686:42247:17:0:317:351:95:12:g_d0_f9:12:g_d0_f3:A:Nt+ 1
+21:687:42252:0:0:367:370:104:12:g_d0_f9:12:g_d0_f9:C:.
+22:688:42255:0:22:72:525:735:12:g_d0_f3:12:g_d0_f9:B:Here,  rank(mini=1...,NtCs,it−1) = 1 and rank(maxi=1...,NtCs,it−1) =Nt.  Therefore,  theα
+22:689:42344:22:22:72:525:713:12:g_d0_f3:12:g_d0_f3:B:quantile of ̃Cs,it−1isα.  We use this particular transformation because portfolio sorting
+22:690:42433:22:21:72:293:691:12:g_d0_f3:8:g_d0_f4:B:maps into our estimator as a special case.18
+22:691:42477:21:22:95:525:670:12:g_d0_f3:12:g_d0_f3:A:Although knowingmtis equivalent to knowing   ̃mt, in finite samples, the estimates
+22:692:42559:22:40:72:245:648:12:g_d0_f3:12:g_d0_f3:B:of the two typically differ; that is,
+22:693:42596:40:39:191:407:608:12:g_d0_f13:12:g_d0_f9:C:̂mt(c1,...,cS)6=̂ ̃mt(F−11,t(c1),...,F−1S,t(cS)).
+22:694:42645:39:22:72:526:569:12:g_d0_f3:12:g_d0_f3:B:In  numerical  simulations  and  in  the  empirical  application,  we  found   ̃mtyields  better
+22:695:42741:22:21:72:525:547:12:g_d0_f3:12:g_d0_f3:B:out-of-sample predictions thanmt.  The transformed estimator appears to be less sensitive
+22:696:42830:21:22:72:526:526:12:g_d0_f3:12:g_d0_f3:B:to outliers thanks to the rank transformation, which could be one reason for the superior
+22:697:42919:22:22:72:212:504:12:g_d0_f3:12:g_d0_f3:B:out-of-sample performance.
+22:698:42945:22:21:95:525:482:12:g_d0_f3:12:g_d0_f3:A:In summary, the transformation does not impose any additional assumptions, directly
+22:699:43028:21:22:72:526:461:12:g_d0_f3:12:g_d0_f3:B:relates to portfolio sorting, and works well in finite samples because it appears more robust
+22:700:43121:22:44:72:135:439:12:g_d0_f3:8:g_d0_f4:B:to outliers.19
+22:701:43135:44:29:72:274:395:14:g_d0_f8:14:g_d0_f2:C:DAdaptive Group LASSO
+22:702:43156:29:22:72:526:366:12:g_d0_f3:12:g_d0_f3:B:We use a group LASSO procedure suggested by Huang et al. (2010) for estimation and
+22:703:43238:22:21:72:526:344:12:g_d0_f3:12:g_d0_f3:B:to select those characteristics that provide incremental information for expected returns,
+22:704:43328:21:22:72:526:323:12:g_d0_f3:12:g_d0_f3:B:that is, for model selection.  To recap, we are interested in modeling excess returns as a
+22:705:43418:22:43:72:247:301:12:g_d0_f3:12:g_d0_f3:B:function of characteristics; that is,
+22:706:43455:43:0:229:257:258:12:g_d0_f9:12:g_d0_f3:A:Rit=
+22:707:43459:0:29:266:277:273:8:g_d0_f11:12:g_d0_f13:C:S∑
+22:708:43461:29:0:261:276:244:8:g_d0_f11:8:g_d0_f4:F:s=1
+22:709:43464:0:45:281:525:258:12:g_d0_f3:12:g_d0_f3:A: ̃mts( ̃Cs,it−1) +εit,(3)
+22:710:43489:45:22:72:525:213:12:g_d0_f3:12:g_d0_f3:B:where   ̃ms(·) are unknown functions and ̃Cs,it−1denotes the rank-transformed character-
+22:711:43577:22:21:72:96:191:12:g_d0_f3:12:g_d0_f3:B:istic.
+22:712:43583:21:18:95:525:170:12:g_d0_f3:12:g_d0_f3:A:The  idea  of  the  group  LASSO  is  to  estimate  the  functions   ̃mtsnonparametrically,
+22:713:43674:18:16:81:525:152:7:g_d0_f6:10:g_d0_f7:F:18The  general  econometric  theory  we  discuss  in  SectionD(model  selection,  consistency,  etc.)   also
+22:714:43782:16:8:72:500:136:10:g_d0_f7:10:g_d0_f7:F:applies to any other monotonic transformation or the non-transformed conditional mean function.
+22:715:43877:8:15:81:525:128:7:g_d0_f6:10:g_d0_f7:F:19Cochrane (2011) stresses the sensitivity of regressions to outliers.  Our transformation is insensitive
+22:716:43982:15:0:72:263:113:10:g_d0_f7:10:g_d0_f7:F:to outliers and nicely addresses his concern.
+23:717:44029:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:while setting functions for a given characteristic to 0 if the characteristic does not help
+23:718:44120:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:predict expected returns.  Therefore, the procedure achieves model selection;  that is, it
+23:719:44210:22:21:72:525:691:12:g_d0_f3:12:g_d0_f3:B:discriminates between the functions   ̃mts, which are constant, and the functions that are
+23:720:44300:21:22:71:147:670:12:g_d0_f3:8:g_d0_f4:B:not constant.20
+23:721:44315:22:22:95:525:648:12:g_d0_f3:12:g_d0_f3:A:In  portfolio  sorts,  we  approximate   ̃mtsby  a  constant  within  each  portfolio.   We
+23:722:44406:22:21:71:525:626:12:g_d0_f3:12:g_d0_f3:B:instead propose to estimate quadratic functions over parts of the normalized characteristic
+23:723:44497:21:22:71:525:605:12:g_d0_f3:12:g_d0_f3:B:distribution.  Let 0 =t0< t1<···< tL−1< tL= 1 be a sequence of increasing numbers
+23:724:44578:22:22:71:525:583:12:g_d0_f3:12:g_d0_f3:B:between 0 and 1 similar to portfolio breakpoints, and let ̃Ilforl= 1,...,Lbe a partition
+23:725:44666:22:21:72:525:561:12:g_d0_f3:12:g_d0_f3:B:of the unit interval,  that is, ̃Il=  [tl−1,tl) forl=  1,...,L−1 and ̃IL=  [tL−1,tL].  We
+23:726:44755:21:22:72:525:540:12:g_d0_f3:12:g_d0_f3:B:refer  tot1,...,tL−1as  knots  and  choosetl=l/Lfor  alll=  1,...,Lin  our  empirical
+23:727:44840:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:application.  Because we apply the rank transformation to the characteristics, the knots
+23:728:44928:22:21:72:525:496:12:g_d0_f3:8:g_d0_f11:B:correspond to quantiles of the characteristic distribution and we can think of ̃Ilas thelth
+23:729:45019:21:22:72:119:475:12:g_d0_f3:12:g_d0_f3:B:portfolio.
+23:730:45029:22:22:95:526:453:12:g_d0_f3:12:g_d0_f3:A:To estimate   ̃mt, we usequadraticsplines; that is, we approximate   ̃mtas a quadratic
+23:731:45115:22:21:72:525:431:12:g_d0_f3:12:g_d0_f3:B:function on each interval ̃Il. We choose these functions so that the endpoints are connected
+23:732:45207:21:22:72:525:410:12:g_d0_f3:12:g_d0_f3:B:and   ̃mtis differentiable on [0,1].  We can approximate each   ̃mtsby a series expansion with
+23:733:45301:22:25:72:178:388:12:g_d0_f3:12:g_d0_f3:B:these properties, i.e.,
+23:734:45324:25:0:243:285:363:12:g_d0_f3:12:g_d0_f10:A: ̃mts( ̃c)≈
+23:735:45335:0:29:289:306:378:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+23:736:45339:29:0:290:306:349:8:g_d0_f11:8:g_d0_f4:F:k=1
+23:737:45342:0:35:308:525:363:12:g_d0_f9:12:g_d0_f3:A:βtskpk( ̃c),(4)
+23:738:45357:35:22:72:277:328:12:g_d0_f3:8:g_d0_f4:B:wherepk(c) are known basis functions.21
+23:739:45396:22:22:95:525:306:12:g_d0_f3:12:g_d0_f3:A:The  number  of  intervalsLis  a  user-specified  smoothing  parameter,  similar  to  the
+23:740:45485:22:21:72:525:284:12:g_d0_f3:12:g_d0_f3:B:number of portfolios.  AsLincreases, the precision of the approximation increases, but so
+23:741:45574:21:22:72:526:263:12:g_d0_f3:12:g_d0_f3:B:does the number of parameters we have to estimate and hence the variance.  Recall that
+23:742:45660:22:22:72:526:241:12:g_d0_f3:12:g_d0_f3:B:portfolio sorts can be interpreted as approximating the conditional mean function as a
+23:743:45746:22:21:72:525:219:12:g_d0_f3:12:g_d0_f3:B:constant function overLintervals.  Our estimator is a smooth and more flexible estimator,
+23:744:45835:21:22:72:334:198:12:g_d0_f3:12:g_d0_f3:B:but follows a similar idea (see again Figures 4 – 6).
+23:745:45888:22:18:95:525:176:12:g_d0_f3:12:g_d0_f3:A:We  now  discuss  the  two  steps  of  the  adaptive  group  LASSO.  In  the  first  step,  we
+23:746:45982:18:15:81:525:158:7:g_d0_f6:10:g_d0_f7:F:20The  “adaptive”  part  indicates  a  two-step  procedure,   because  the  LASSO  selects  too  many
+23:747:46083:15:12:72:526:143:10:g_d0_f7:10:g_d0_f7:F:characteristics in the first step and is therefore not model-selection consistent unless restrictive conditions
+23:748:46194:12:12:72:526:131:10:g_d0_f7:10:g_d0_f7:F:on the design matrix are satisfied (see Meinshausen and B ̈uhlmann (2006) and Zou (2006) for an in-depth
+23:749:46298:12:9:72:272:119:10:g_d0_f7:10:g_d0_f7:F:treatment of the LASSO in the linear model).
+23:750:46342:9:15:81:525:110:7:g_d0_f6:10:g_d0_f7:F:21In particular,p1(c) = 1,p2(c) =c,p3(c) =c2, andpk(c) = max{c−tk−3,0}2fork= 4,...,L+ 2.
+23:751:46430:15:0:72:303:95:10:g_d0_f7:10:g_d0_f7:F:See Chen (2007) for an overview of series estimation.
+24:752:46485:0:42:72:263:735:12:g_d0_f3:12:g_d0_f3:B:obtain estimates of the coefficients as
+24:753:46524:42:13:87:178:693:12:g_d0_f3:12:g_d0_f3:A: ̃βt=arg min
+24:754:46536:13:0:113:206:680:8:g_d0_f11:8:g_d0_f4:F:bsk:s=1,...,S;k=1,...,L+2
+24:755:46561:0:29:212:224:705:8:g_d0_f11:12:g_d0_f13:C:N∑
+24:756:46563:29:0:209:223:676:8:g_d0_f11:8:g_d0_f4:F:i=1
+24:757:46566:0:21:227:236:711:12:g_d0_f13:12:g_d0_f13:C:(
+24:758:46567:21:0:236:263:690:12:g_d0_f9:12:g_d0_f10:C:Rit−
+24:759:46571:0:28:272:283:705:8:g_d0_f11:12:g_d0_f13:C:S∑
+24:760:46573:28:0:267:282:677:8:g_d0_f11:8:g_d0_f4:F:s=1
+24:761:46576:0:29:286:302:705:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+24:762:46580:29:0:286:302:676:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:763:46583:0:0:305:371:690:12:g_d0_f9:12:g_d0_f3:A:bskpk( ̃Cs,it−1)
+24:764:46599:0:21:371:384:711:12:g_d0_f13:8:g_d0_f4:C:)2
+24:765:46601:21:0:387:410:690:12:g_d0_f3:8:g_d0_f4:A:+λ1
+24:766:46604:0:28:419:430:705:8:g_d0_f11:12:g_d0_f13:C:S∑
+24:767:46606:28:0:414:429:677:8:g_d0_f11:8:g_d0_f4:F:s=1
+24:768:46609:0:9:432:459:711:12:g_d0_f13:8:g_d0_f4:C:(L+2
+24:769:46613:9:26:442:459:702:12:g_d0_f13:12:g_d0_f13:C:∑
+24:770:46614:26:0:442:458:676:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:771:46617:0:0:461:474:690:12:g_d0_f9:8:g_d0_f11:C:b2sk
+24:772:46621:0:21:475:489:711:12:g_d0_f13:6:g_d0_f17:C:)12
+24:773:46624:21:45:493:525:690:12:g_d0_f9:12:g_d0_f3:A:,(5)
+24:774:46628:45:22:72:488:645:12:g_d0_f3:12:g_d0_f3:B:where ̃βtis an (L+ 2)×Svector ofbskestimates andλ1is a penalty parameter.
+24:775:46701:22:21:95:525:623:12:g_d0_f3:12:g_d0_f3:A:The first part of equation (5) is just the sum of the squared residuals as in ordinary
+24:776:46787:21:22:72:526:602:12:g_d0_f3:12:g_d0_f3:B:least squares regressions; the second part is the LASSO group penalty function.  Rather
+24:777:46874:22:22:72:525:580:12:g_d0_f3:12:g_d0_f3:B:than penalizing individual coefficients,bsk, the LASSO penalizes all coefficients associated
+24:778:46966:22:21:72:526:558:12:g_d0_f3:12:g_d0_f3:B:with a given characteristic.  Thus, we can set the point estimates of an entire expansion
+24:779:47055:21:22:72:525:537:12:g_d0_f3:12:g_d0_f3:B:of   ̃mtto  0  when  a  given  characteristic  does  not  provide  independent  information  for
+24:780:47151:22:22:72:526:515:12:g_d0_f3:12:g_d0_f3:B:expected returns.  Due to the penalty, the LASSO is applicable even when the number
+24:781:47234:22:21:72:526:493:12:g_d0_f3:12:g_d0_f3:B:of  characteristics  is  larger  than  the  sample  size.   In  the  application,  we  chooseλ1in  a
+24:782:47334:21:22:72:526:472:12:g_d0_f3:12:g_d0_f3:B:data-dependent way to minimize a Bayes Information Criterion (BIC) proposed by Yuan
+24:783:47417:22:22:72:152:450:12:g_d0_f3:12:g_d0_f3:B:and Lin (2006).
+24:784:47432:22:21:95:525:428:12:g_d0_f3:12:g_d0_f3:A:However,  as  in  a  linear  model,  the  first  step  of  the  LASSO  selects  too  many
+24:785:47521:21:22:72:526:407:12:g_d0_f3:12:g_d0_f3:B:characteristics.   Informally  speaking,  the  LASSO  selects  all  characteristics  that  predict
+24:786:47619:22:22:72:526:385:12:g_d0_f3:12:g_d0_f3:B:returns,  but  also  selects  some  characteristics  that  have  no  predictive  power.   A  second
+24:787:47718:22:21:72:216:363:12:g_d0_f3:12:g_d0_f3:B:step addresses this problem.
+24:788:47746:21:48:95:284:342:12:g_d0_f3:12:g_d0_f3:A:We first define the following weights:
+24:789:47784:48:0:186:211:294:12:g_d0_f9:12:g_d0_f3:A:ws=
+24:790:47787:0:10:215:226:318:12:g_d0_f13:12:g_d0_f13:C:
+24:791:47788:10:22:215:226:308:12:g_d0_f13:12:g_d0_f13:C:
+24:792:47789:22:0:215:226:286:12:g_d0_f13:12:g_d0_f13:C:
+24:793:47790:0:8:230:251:316:12:g_d0_f13:12:g_d0_f13:C:(∑
+24:794:47792:8:9:250:267:308:8:g_d0_f11:8:g_d0_f4:F:L+2
+24:795:47795:9:0:250:266:299:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:796:47798:0:0:271:284:306:12:g_d0_f3:8:g_d0_f11:A: ̃β2sk
+24:797:47804:0:13:285:304:316:12:g_d0_f13:6:g_d0_f17:C:)−12
+24:798:47808:13:0:315:322:303:12:g_d0_f3:12:g_d0_f3:A:if
+24:799:47810:0:13:332:361:312:12:g_d0_f13:8:g_d0_f4:C:∑L+2
+24:800:47814:13:0:345:360:299:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:801:47817:0:26:365:401:306:12:g_d0_f3:12:g_d0_f3:A: ̃β2sk6= 0
+24:802:47827:26:0:230:322:280:12:g_d0_f10:12:g_d0_f3:A:∞if
+24:803:47830:0:13:332:361:289:12:g_d0_f13:8:g_d0_f4:C:∑L+2
+24:804:47834:13:0:345:360:276:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:805:47837:0:0:365:404:283:12:g_d0_f3:12:g_d0_f9:A: ̃β2sk= 0.
+24:806:47847:0:48:510:525:294:12:g_d0_f3:12:g_d0_f3:A:(6)
+24:807:47850:48:22:71:525:246:12:g_d0_f3:12:g_d0_f3:B:Intuitively, these weights guarantee we do not select any characteristic in the second step
+24:808:47941:22:21:71:269:224:12:g_d0_f3:12:g_d0_f3:B:that we did not select in the first step.
+24:809:47982:21:44:95:394:203:12:g_d0_f3:12:g_d0_f3:A:In the second step of the adaptive group LASSO, we solve
+24:810:48038:44:13:79:171:159:12:g_d0_f3:12:g_d0_f3:A: ̆βt=arg min
+24:811:48050:13:0:106:198:146:8:g_d0_f11:8:g_d0_f4:F:bsk:s=1,...,S;k=1,...,L+2
+24:812:48075:0:29:205:217:171:8:g_d0_f11:12:g_d0_f13:C:N∑
+24:813:48077:29:0:202:216:142:8:g_d0_f11:8:g_d0_f4:F:i=1
+24:814:48080:0:20:219:228:176:12:g_d0_f13:12:g_d0_f13:C:(
+24:815:48081:20:0:229:256:156:12:g_d0_f9:12:g_d0_f10:C:Rit−
+24:816:48085:0:29:265:276:171:8:g_d0_f11:12:g_d0_f13:C:S∑
+24:817:48087:29:0:260:275:142:8:g_d0_f11:8:g_d0_f4:F:s=1
+24:818:48090:0:29:278:295:171:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+24:819:48094:29:0:279:294:142:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:820:48097:0:0:297:364:156:12:g_d0_f9:12:g_d0_f3:A:bskpk( ̃Cs,it−1)
+24:821:48113:0:20:363:377:176:12:g_d0_f13:8:g_d0_f4:C:)2
+24:822:48115:20:0:380:403:156:12:g_d0_f3:8:g_d0_f4:A:+λ2
+24:823:48118:0:29:411:422:171:8:g_d0_f11:12:g_d0_f13:C:S∑
+24:824:48120:29:0:407:422:142:8:g_d0_f11:8:g_d0_f4:F:s=1
+24:825:48123:0:20:425:434:176:12:g_d0_f13:12:g_d0_f13:C:(
+24:826:48124:20:0:434:447:156:12:g_d0_f9:8:g_d0_f11:C:ws
+24:827:48126:0:29:449:466:171:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+24:828:48130:29:0:450:465:142:8:g_d0_f11:8:g_d0_f4:F:k=1
+24:829:48133:0:0:468:481:156:12:g_d0_f9:8:g_d0_f11:C:b2sk
+24:830:48137:0:20:482:497:176:12:g_d0_f13:6:g_d0_f17:C:)12
+24:831:48140:20:43:500:525:156:12:g_d0_f9:12:g_d0_f3:A:.(7)
+24:832:48144:43:0:72:273:113:12:g_d0_f3:12:g_d0_f3:B:We again chooseλ2to minimize a BIC.
+25:833:48181:0:22:95:525:735:12:g_d0_f3:12:g_d0_f3:A:Huang et al. (2010) show ̆βtis model-selection consistent; that is, it correctly selects
+25:834:48269:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:the non-constant functions with probability approaching 1 as the sample size grows large.
+25:835:48358:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:However, the estimators have unfavorable statistical properties because they are not oracle
+25:836:48449:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:efficient.  We re-estimate the model for the selected characteristics with OLS to address
+25:837:48538:22:22:72:140:648:12:g_d0_f3:12:g_d0_f3:B:this problem.
+25:838:48551:22:21:95:525:626:12:g_d0_f3:12:g_d0_f3:A:Denote the estimated coefficients for characteristicsbyˆβts.  The estimator of the
+25:839:48633:21:22:71:174:605:12:g_d0_f3:12:g_d0_f3:B:function   ̃mtsis then
+25:840:48655:22:0:243:286:583:12:g_d0_f13:12:g_d0_f3:A:̂ ̃mts( ̃c) =
+25:841:48668:0:29:289:306:595:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+25:842:48672:29:0:290:305:566:8:g_d0_f11:8:g_d0_f4:F:k=1
+25:843:48675:0:38:310:355:584:12:g_d0_f3:12:g_d0_f9:A:ˆβtskpk( ̃c).
+25:844:48688:38:22:95:525:546:12:g_d0_f3:12:g_d0_f3:A:If   the   cross   section   is   sufficiently   large,   model   selection   and   estimation   can
+25:845:48788:22:21:72:525:524:12:g_d0_f3:12:g_d0_f3:B:be  performed  period  by  period.Hence,  the  method  allows  for  the  importance  of
+25:846:48875:21:22:72:526:503:12:g_d0_f3:12:g_d0_f3:B:characteristics  and  the  shape  of  the  conditional  mean  function  to  vary  over  time.   For
+25:847:48974:22:22:72:526:481:12:g_d0_f3:12:g_d0_f3:B:example,  some  characteristics  might  lose  their  predictive  power  for  expected  returns.
+25:848:49069:22:21:72:526:459:12:g_d0_f3:12:g_d0_f3:B:McLean and Pontiff (2016) show that for 97 return predictors,  predictability decreases
+25:849:49156:21:22:72:526:438:12:g_d0_f3:12:g_d0_f3:B:by 58% post publication.  However, if the conditional mean function was time-invariant,
+25:850:49243:22:22:72:526:416:12:g_d0_f3:12:g_d0_f3:B:pooling the data across time would lead to more precise estimates of the function and
+25:851:49328:22:21:72:526:394:12:g_d0_f3:12:g_d0_f3:B:therefore more reliable predictions.  In our empirical application in Section V, we estimate
+25:852:49420:21:22:72:526:373:12:g_d0_f3:12:g_d0_f3:B:our  model  over  subsamples  and  also  estimate  rolling  specifications  to  investigate  the
+25:853:49516:22:44:72:344:351:12:g_d0_f3:12:g_d0_f3:B:variation in the conditional mean function over time.
+25:854:49569:44:29:72:226:307:14:g_d0_f8:14:g_d0_f2:C:EConfidence Bands
+25:855:49586:29:22:72:525:278:12:g_d0_f3:12:g_d0_f3:B:We also report uniform confidence bands for the functions   ̃mts.  We approximate   ̃mts( ̃c)
+25:856:49679:22:0:72:84:256:12:g_d0_f3:12:g_d0_f3:B:by
+25:857:49681:0:12:88:117:265:12:g_d0_f13:8:g_d0_f4:C:∑L+2
+25:858:49685:12:0:100:261:253:8:g_d0_f11:12:g_d0_f3:A:k=1βtskpk( ̃c) and estimate it by
+25:859:49718:0:12:265:294:265:12:g_d0_f13:8:g_d0_f4:C:∑L+2
+25:860:49722:12:18:277:344:253:8:g_d0_f11:12:g_d0_f3:A:k=1ˆβtskpk( ̃c).
+25:861:49738:18:22:95:525:235:12:g_d0_f3:12:g_d0_f3:A:Letp( ̃c) = (p1( ̃c),...,pL+2( ̃c))′be the vector of spline functions and let Σtsbe the
+25:862:49825:22:0:72:245:213:12:g_d0_f9:12:g_d0_f3:B:L+ 2×L+ 2 covariance matrix of
+25:863:49855:0:9:248:258:222:12:g_d0_f10:12:g_d0_f10:C:√
+25:864:49856:9:22:258:525:213:12:g_d0_f9:12:g_d0_f3:A:n(ˆβts−βts).  We defineˆΣtsas the heteroscedasticity-
+25:865:49909:22:0:72:308:191:12:g_d0_f3:12:g_d0_f3:B:consistent estimator of Σtsand define ˆσts( ̃c) =
+25:866:49958:0:15:312:324:206:12:g_d0_f13:12:g_d0_f13:C:√
+25:867:49959:15:21:324:386:191:12:g_d0_f9:12:g_d0_f3:A:p( ̃c)′ˆΣtsp( ̃c).
+25:868:49977:21:22:95:357:170:12:g_d0_f3:12:g_d0_f3:A:The uniform confidence band for   ̃mtsis of the form
+25:869:50029:22:9:165:189:148:12:g_d0_f13:8:g_d0_f4:C:[L+2
+25:870:50033:9:26:172:189:139:12:g_d0_f13:12:g_d0_f13:C:∑
+25:871:50034:26:0:173:188:113:8:g_d0_f11:8:g_d0_f4:F:k=1
+25:872:50037:0:0:193:298:131:12:g_d0_f3:12:g_d0_f9:A:ˆβtskpk( ̃c)−dtsˆσts( ̃c),
+25:873:50063:0:29:300:317:142:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+25:874:50067:29:0:301:317:113:8:g_d0_f11:8:g_d0_f4:F:k=1
+25:875:50070:0:0:321:420:131:12:g_d0_f3:12:g_d0_f3:A:ˆβtskpk( ̃c) +dtsˆσts( ̃c)
+25:876:50096:0:21:419:426:148:12:g_d0_f13:12:g_d0_f13:C:]
+25:877:50097:21:0:428:431:127:12:g_d0_f9:12:g_d0_f9:C:,
+26:878:50100:0:22:72:191:735:12:g_d0_f3:12:g_d0_f3:B:wheredtsis a constant.
+26:879:50122:22:46:95:433:713:12:g_d0_f3:12:g_d0_f3:A:To choose the constant, letZ∼N(0,ˆΣts) and letdtsbe such that
+26:880:50183:46:0:190:198:667:12:g_d0_f9:12:g_d0_f9:C:P
+26:881:50184:0:22:201:211:691:12:g_d0_f13:12:g_d0_f13:C:
+26:882:50185:22:13:201:233:669:12:g_d0_f13:12:g_d0_f3:A:sup
+26:883:50189:13:0:212:237:656:8:g_d0_f4:8:g_d0_f4:F: ̃c∈[0,1]
+26:884:50198:0:7:238:242:691:12:g_d0_f13:12:g_d0_f13:C:∣
+26:885:50199:7:7:238:242:684:12:g_d0_f13:12:g_d0_f13:C:∣
+26:886:50200:7:7:238:242:677:12:g_d0_f13:12:g_d0_f13:C:∣
+26:887:50201:7:8:238:242:670:12:g_d0_f13:12:g_d0_f13:C:∣
+26:888:50202:8:7:238:242:662:12:g_d0_f13:12:g_d0_f13:C:∣
+26:889:50203:7:0:238:242:655:12:g_d0_f13:12:g_d0_f13:C:∣
+26:890:50204:0:8:263:295:675:12:g_d0_f9:12:g_d0_f3:A:Z′p( ̃c)
+26:891:50212:8:15:244:256:667:12:g_d0_f13:12:g_d0_f13:C:√
+26:892:50213:15:0:256:315:652:12:g_d0_f9:12:g_d0_f3:A:p( ̃c)′ˆΣtsp( ̃c)
+26:893:50230:0:7:316:320:691:12:g_d0_f13:12:g_d0_f13:C:∣
+26:894:50231:7:7:316:320:684:12:g_d0_f13:12:g_d0_f13:C:∣
+26:895:50232:7:7:316:320:677:12:g_d0_f13:12:g_d0_f13:C:∣
+26:896:50233:7:8:316:320:670:12:g_d0_f13:12:g_d0_f13:C:∣
+26:897:50234:8:7:316:320:662:12:g_d0_f13:12:g_d0_f13:C:∣
+26:898:50235:7:0:316:320:655:12:g_d0_f13:12:g_d0_f13:C:∣
+26:899:50236:0:0:323:349:667:12:g_d0_f10:8:g_d0_f11:C:≤dts
+26:900:50240:0:22:349:359:691:12:g_d0_f13:12:g_d0_f13:C:
+26:901:50241:22:50:349:407:669:12:g_d0_f13:12:g_d0_f9:C:= 1−α.
+26:902:50248:50:22:71:443:619:12:g_d0_f3:12:g_d0_f3:B:We can calculate the probability on the left-hand side using simulations.
+26:903:50321:22:22:95:525:597:12:g_d0_f3:12:g_d0_f3:A:Given consistent model selection and under the conditions in Belloni, Chernozhukov,
+26:904:50404:22:43:71:303:575:12:g_d0_f3:12:g_d0_f3:B:Chetverikov, and Kato (2015), it follows that
+26:905:50449:43:0:78:86:532:12:g_d0_f9:12:g_d0_f9:C:P
+26:906:50450:0:20:90:99:552:12:g_d0_f13:12:g_d0_f13:C:(
+26:907:50451:20:0:101:142:532:12:g_d0_f3:12:g_d0_f10:A: ̃mts( ̃c)∈
+26:908:50462:0:9:146:170:552:12:g_d0_f13:8:g_d0_f4:C:[L+2
+26:909:50466:9:25:153:170:543:12:g_d0_f13:12:g_d0_f13:C:∑
+26:910:50467:25:0:153:169:518:8:g_d0_f11:8:g_d0_f4:F:k=1
+26:911:50470:0:0:173:278:535:12:g_d0_f3:12:g_d0_f9:A:ˆβtskpk( ̃c)−dtsˆσts( ̃c),
+26:912:50496:0:29:281:298:547:8:g_d0_f11:12:g_d0_f13:C:L+2∑
+26:913:50500:29:0:282:297:518:8:g_d0_f11:8:g_d0_f4:F:k=1
+26:914:50503:0:0:302:400:535:12:g_d0_f3:12:g_d0_f3:A:ˆβtskpk( ̃c) +dtsˆσts( ̃c)
+26:915:50529:0:20:400:407:552:12:g_d0_f13:12:g_d0_f13:C:]
+26:916:50530:20:0:412:462:532:12:g_d0_f10:12:g_d0_f3:A:∀ ̃c∈[0,1]
+26:917:50540:0:20:462:471:552:12:g_d0_f13:12:g_d0_f13:C:)
+26:918:50541:20:43:475:518:532:12:g_d0_f10:12:g_d0_f9:C:→1−α
+26:919:50545:43:43:72:216:489:12:g_d0_f3:12:g_d0_f3:B:as the sample size increases.
+26:920:50574:43:30:72:446:446:14:g_d0_f8:14:g_d0_f2:C:FInterpretation of the Conditional Mean Function
+26:921:50622:30:21:72:526:416:12:g_d0_f3:12:g_d0_f3:B:In  a  nonparametric  additive  model,  the  locations  of  the  functions  are  not  identified.
+26:922:50719:21:28:72:403:395:12:g_d0_f3:12:g_d0_f3:B:Consider the following example.  Letαsbe S constants such that
+26:923:50781:28:29:276:287:367:8:g_d0_f11:12:g_d0_f13:C:S∑
+26:924:50783:29:0:272:286:338:8:g_d0_f11:8:g_d0_f4:F:s=1
+26:925:50786:0:42:290:326:352:12:g_d0_f9:12:g_d0_f9:C:αs= 0.
+26:926:50792:42:25:72:102:310:12:g_d0_f3:12:g_d0_f3:B:Then,
+26:927:50797:25:0:174:254:285:12:g_d0_f3:12:g_d0_f3:A: ̃mt( ̃c1,..., ̃cS) =
+26:928:50818:0:29:263:274:300:8:g_d0_f11:12:g_d0_f13:C:S∑
+26:929:50820:29:0:259:274:271:8:g_d0_f11:8:g_d0_f4:F:s=1
+26:930:50823:0:0:279:325:285:12:g_d0_f3:12:g_d0_f3:A: ̃mts( ̃cs) =
+26:931:50836:0:29:335:346:300:8:g_d0_f11:12:g_d0_f13:C:S∑
+26:932:50838:29:0:330:345:271:8:g_d0_f11:8:g_d0_f4:F:s=1
+26:933:50841:0:34:348:425:285:12:g_d0_f3:12:g_d0_f9:A:(  ̃mts( ̃cs) +αs).
+26:934:50860:34:22:72:525:251:12:g_d0_f3:12:g_d0_f3:B:Therefore,  the  summands  of  the  transformed  conditional  mean  function,   ̃ms,  are  only
+26:935:50955:22:22:72:526:229:12:g_d0_f3:12:g_d0_f3:B:identified  up  to  a  constant.   The  model-selection  procedure,  expected  returns,  and  the
+26:936:51052:22:21:72:526:207:12:g_d0_f3:12:g_d0_f3:B:portfolios we construct do not depend on these constants.  However, the constants matter
+26:937:51140:21:22:72:525:186:12:g_d0_f3:12:g_d0_f3:B:when we plot an estimate of the conditional mean function for one characteristic,   ̃ms.  We
+26:938:51232:22:22:72:280:164:12:g_d0_f3:12:g_d0_f3:B:now discuss two possible normalizations.
+26:939:51272:22:0:95:525:142:12:g_d0_f3:12:g_d0_f3:A:Let  ̄csbe a fixed value of a given transformed characteristics, such as the mean or
+27:940:51358:0:25:72:168:735:12:g_d0_f3:12:g_d0_f3:B:the median.  Then,
+27:941:51376:25:0:197:340:710:12:g_d0_f3:12:g_d0_f3:A: ̃mt( ̃c1, ̄c2..., ̄cS) =   ̃mt1( ̃c1) +
+27:942:51416:0:29:349:360:725:8:g_d0_f11:12:g_d0_f13:C:S∑
+27:943:51418:29:0:345:359:696:8:g_d0_f11:8:g_d0_f4:F:s=2
+27:944:51421:0:34:365:402:710:12:g_d0_f3:12:g_d0_f9:A: ̃mts( ̄cs),
+27:945:51433:34:22:72:525:676:12:g_d0_f3:12:g_d0_f3:B:which is identified and a function of   ̃c1only.  This function is the expected return as a
+27:946:51524:22:21:72:526:654:12:g_d0_f3:12:g_d0_f3:B:function of the first characteristic when we fix the values of all other characteristics.  When
+27:947:51619:21:22:72:526:633:12:g_d0_f3:12:g_d0_f3:B:we set the other characteristics to different values, we change the level of the function,
+27:948:51709:22:22:72:526:611:12:g_d0_f3:12:g_d0_f3:B:but not the slope.  We will report these functions in our empirical section,  and we can
+27:949:51797:22:21:72:346:589:12:g_d0_f3:12:g_d0_f3:B:interpret both the level and the slope of the function.
+27:950:51852:21:22:95:525:568:12:g_d0_f3:12:g_d0_f3:A:An  alternative  normalization  is   ̃m1(0.5)  =  0.   The  conditional  mean  function  for
+27:951:51944:22:22:72:526:546:12:g_d0_f3:12:g_d0_f3:B:a  characteristic  now  takes  the  value  of  0  for  the  median  observation.   Now,  we  cannot
+27:952:52043:22:21:72:526:524:12:g_d0_f3:12:g_d0_f3:B:interpret the level of the function.  This normalization, however, is easier to interpret when
+27:953:52137:21:22:72:526:503:12:g_d0_f3:12:g_d0_f3:B:we plot the estimated functions over time in a three-dimensional surface plot.  Changes
+27:954:52224:22:22:72:526:481:12:g_d0_f3:12:g_d0_f3:B:in the slope over time now tell us the relative importance of the characteristic in the time
+27:955:52316:22:21:72:526:459:12:g_d0_f3:12:g_d0_f3:B:series.  The first normalization has the disadvantage that in years with very low overall
+27:956:52405:21:22:72:526:438:12:g_d0_f3:12:g_d0_f3:B:returns,  the  conditional  mean  function  is  much  lower.   Hence,  interpreting  the  relative
+27:957:52503:22:22:72:526:416:12:g_d0_f3:12:g_d0_f3:B:importance of a characteristic over time from surface plots is more complicated when we
+27:958:52590:22:51:72:210:394:12:g_d0_f3:12:g_d0_f3:B:use the first normalization.
+27:959:52618:51:33:72:154:343:17:g_d0_f2:17:g_d0_f2:C:IV    Data
+27:960:52628:33:22:72:526:310:12:g_d0_f3:12:g_d0_f3:B:Stock return data come from the Center for Research in Security Prices (CRSP) monthly
+27:961:52713:22:22:72:526:288:12:g_d0_f3:12:g_d0_f3:B:stock file.  We follow standard conventions and restrict the analysis to common stocks of
+27:962:52802:22:21:72:526:266:12:g_d0_f3:12:g_d0_f3:B:firms incorporated in the United States trading on NYSE, Amex, or Nasdaq with market
+27:963:52886:21:22:72:176:245:12:g_d0_f3:12:g_d0_f3:B:prices above USD 5.
+27:964:52905:22:22:95:525:223:12:g_d0_f3:12:g_d0_f3:A:Market equity (ME) is the total market capitalization at the firm level.LMEis the
+27:965:52986:22:21:72:525:201:12:g_d0_f3:12:g_d0_f3:B:total market capitalization at the end of the previous calendar month.LTurnoveris the
+27:966:53071:21:22:72:526:180:12:g_d0_f3:12:g_d0_f3:B:ratio of total monthly trading volume over total market capitalization at the end of the
+27:967:53159:22:22:72:525:158:12:g_d0_f3:12:g_d0_f3:B:previous month.  The bid-ask spread (spread) is the average daily bid-ask spread during
+27:968:53246:22:21:72:525:136:12:g_d0_f3:12:g_d0_f3:B:the previous month.  We also construct lagged returns over the previous month (r2−1), the
+27:969:53335:21:0:72:525:115:12:g_d0_f3:12:g_d0_f3:B:previous 12 months leaving out the last month (r12−2), intermediate momentum (r12−7),
+28:970:53422:0:22:72:525:735:12:g_d0_f3:12:g_d0_f3:B:and long-run returns from three years ago until last year (r36−13).  We follow Frazzini and
+28:971:53513:22:22:72:525:713:12:g_d0_f3:12:g_d0_f3:B:Pedersen (2014) in the definition of Beta (Beta), and idiosyncratic volatility (Idio vol)
+28:972:53602:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:is the residual from a regression of daily returns on the three Fama and French factors in
+28:973:53692:21:22:72:405:670:12:g_d0_f3:12:g_d0_f3:B:the previous month as in Ang, Hodrick, Xing, and Zhang (2006).
+28:974:53754:22:22:95:525:648:12:g_d0_f3:12:g_d0_f3:A:Balance-sheet data are from the Standard and Poor’s Compustat database. We define
+28:975:53835:22:21:72:525:626:12:g_d0_f3:12:g_d0_f3:B:book equity (BE) as total stockholders’ equity plus deferred taxes and investment tax
+28:976:53920:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:credit (if available) minus the book value of preferred stock.  Based on availability, we use
+28:977:54013:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:the redemption value, liquidation value, or par value (in that order) for the book value
+28:978:54101:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:of preferred stock.  We prefer the shareholders’ equity number as reported by Compustat.
+28:979:54189:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:If these data are not available, we calculate shareholders’ equity as the sum of common
+28:980:54276:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:and preferred equity.  If neither of the two are available, we define shareholders’ equity as
+28:981:54369:22:21:72:525:496:12:g_d0_f3:12:g_d0_f3:B:the difference between total assets and total liabilities.  The book-to-market (BM) ratio
+28:982:54458:21:22:72:525:475:12:g_d0_f3:12:g_d0_f3:B:of yeartis then the book equity for the fiscal year ending in calendar yeart−1 over
+28:983:54541:22:22:72:525:453:12:g_d0_f3:12:g_d0_f3:B:the market equity as of Decembert−1.  We use the book-to-market ratio for estimation
+28:984:54625:22:21:72:525:431:12:g_d0_f3:12:g_d0_f9:B:starting in June of yeartuntil May of yeart+ 1 predicting returns from July of yeart
+28:985:54709:21:22:72:525:410:12:g_d0_f3:12:g_d0_f3:B:until June of yeart.  We use the same timing convention for balance-sheet variables unless
+28:986:54799:22:22:72:194:388:12:g_d0_f3:12:g_d0_f3:B:we specify it differently.
+28:987:54825:22:21:95:525:366:12:g_d0_f2:12:g_d0_f3:A:ATare  total  assets,ATOare  sales  scaled  by  net  operating  assets,  and  cash  (C)
+28:988:54912:21:22:72:525:345:12:g_d0_f3:12:g_d0_f3:B:is cash and short-term investments over total assets.CTOis capital turnover,D2Ais
+28:989:54993:22:22:72:525:323:12:g_d0_f3:12:g_d0_f3:B:depreciation and amortization over total assets, andDPI2Ais the change in property,
+28:990:55076:22:21:72:525:301:12:g_d0_f3:12:g_d0_f3:B:plant,  and equipment.E2Pis the earnings-to-price ratio.  We define expenses to sales
+28:991:55161:21:22:72:525:280:12:g_d0_f3:12:g_d0_f3:B:(FC2Y)  as  the  sum  of  advertising  expenses;  research  and  development  expenses;  and
+28:992:55253:22:22:72:525:258:12:g_d0_f3:12:g_d0_f3:B:selling, general, and administrative expenses over sales, andFree CFis net income and
+28:993:55338:22:21:72:525:236:12:g_d0_f3:12:g_d0_f2:B:depreciation and amortization less the change in working capital and capex.Investment
+28:994:55423:21:22:72:525:215:12:g_d0_f3:12:g_d0_f3:B:is  the  growth  rate  in  total  assets,Levis  the  ratio  of  total  debt  to  total  debt  and
+28:995:55520:22:22:72:526:193:12:g_d0_f3:12:g_d0_f3:B:shareholders’ equity, andNOAare net operating assets to lagged total assets.  We define
+28:996:55607:22:21:72:525:171:12:g_d0_f3:12:g_d0_f3:B:operating accruals (OA) as in Sloan (1996), and operating leverage (OL) is the ratio of
+28:997:55694:21:22:72:526:150:12:g_d0_f3:12:g_d0_f3:B:cost of goods sold and selling, general, and administrative expenses over total assets.  We
+28:998:55785:22:22:72:525:128:12:g_d0_f3:12:g_d0_f3:B:define the price-to-cost margin (PCM) as sales minus cost of goods sold over sales, the
+28:999:55872:22:0:72:525:106:12:g_d0_f3:12:g_d0_f3:B:profit margin (PM) as operating income after depreciation to net sales, gross profitability
+29:1000:55965:0:22:72:525:735:12:g_d0_f3:12:g_d0_f3:B:(Prof) as gross profits over book value of equity,  andQis Tobin’s Q.Rel to highis
+29:1001:56047:22:22:72:525:713:12:g_d0_f3:12:g_d0_f3:B:the closeness to the 52-week high price andRNAis the return on net operating assets.
+29:1002:56131:22:21:72:525:691:12:g_d0_f3:12:g_d0_f3:B:The return-on-assets (ROA) is income before extraordinary items to total assets and the
+29:1003:56218:21:22:72:525:670:12:g_d0_f3:12:g_d0_f3:B:return-on-equity (ROE) is the ratio of income before extraordinary items to lagged book
+29:1004:56305:22:22:71:525:648:12:g_d0_f3:12:g_d0_f3:B:value of equity.S2Pis the ratio of sales to market capitalization,SGA2Sis the ratio of
+29:1005:56391:22:21:72:525:626:12:g_d0_f3:12:g_d0_f3:B:selling, general, and administrative expenses to net sales,spreadis the monthly average
+29:1006:56478:21:22:72:393:605:12:g_d0_f3:12:g_d0_f3:B:bid-ask spread, andSUVis standardized unexplained volume.
+29:1007:56535:22:22:95:525:583:12:g_d0_f3:12:g_d0_f3:A:To alleviate a potential survivorship bias due to backfilling, we require that a firm
+29:1008:56620:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:has at least two years of Compustat data.  Our sample period is July 1963 until June 2015.
+29:1009:56710:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:Table 1 reports summary statistics for various firm characteristics and return predictors.
+29:1010:56800:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:We calculate all statistics annually and then average over time.  On average we have 2.5
+29:1011:56888:22:21:72:256:496:12:g_d0_f3:12:g_d0_f3:B:million observations in our analysis.
+29:1012:56925:21:22:95:525:475:12:g_d0_f3:12:g_d0_f3:A:Section I in the online appendix contains a detailed description of the characteristics,
+29:1013:57013:22:51:72:303:453:12:g_d0_f3:12:g_d0_f3:B:the construction, and the relevant references.
+29:1014:57059:51:33:72:168:402:17:g_d0_f2:17:g_d0_f2:C:V    Results
+29:1015:57071:33:22:72:526:369:12:g_d0_f3:12:g_d0_f3:B:We  now  study  which  of  the  36  characteristics  we  describe  in  Section  IV  provide
+29:1016:57162:22:22:72:526:347:12:g_d0_f3:12:g_d0_f3:B:independent  information  for  expected  returns,  using  the  adaptive  group  LASSO  for
+29:1017:57252:22:43:72:199:325:12:g_d0_f3:12:g_d0_f3:B:selection and estimation.
+29:1018:57277:43:30:72:413:282:14:g_d0_f8:14:g_d0_f2:C:ASelected Characteristics and Their Influence
+29:1019:57322:30:21:72:526:252:12:g_d0_f3:12:g_d0_f3:B:Table  2  reports  average  annualized  returns  with  standard  errors  in  parentheses  of  10
+29:1020:57418:21:22:72:525:231:12:g_d0_f3:12:g_d0_f3:B:equally-weighted  portfolios  sorted  on  the  characteristics  we  study.Most  of  the  36
+29:1021:57509:22:22:72:526:209:12:g_d0_f3:12:g_d0_f3:B:characteristics  have  individually  predictive  power  for  expected  returns  in  our  sample
+29:1022:57604:22:21:72:526:187:12:g_d0_f3:12:g_d0_f3:B:period and result in large and statistically significant hedge portfolio returns and alphas
+29:1023:57695:21:22:72:526:166:12:g_d0_f3:12:g_d0_f3:B:relative  to  the  Fama  and  French  three-factor  model  (Table  3).   Twenty-one  sorts  have
+29:1024:57791:22:22:72:526:144:12:g_d0_f3:12:g_d0_f3:B:annualized hedge returns of more than 5%, and 12 characteristics are even associated with
+29:1025:57880:22:21:72:526:122:12:g_d0_f3:12:g_d0_f3:B:excess returns of more than 10%.  Twenty-one characteristics have a t-statistic above 2.
+29:1026:57968:21:0:72:526:101:12:g_d0_f3:12:g_d0_f3:B:Correcting for exposure to the Fama-French three-factor model has little impact on these
+30:1027:58058:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:findings.   The  vast  majority  of  economic  models,  that  is,  the  ICAPM  (Merton  (1973))
+30:1028:58153:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:or consumption-based models, as surveyed in Cochrane (2007), suggest a low number of
+30:1029:58237:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:state variables can explain the cross section of returns.  Therefore, all characteristics are
+30:1030:58330:21:22:72:408:670:12:g_d0_f3:12:g_d0_f3:B:unlikely to provide independent information for expected returns.
+30:1031:58395:22:22:95:525:648:12:g_d0_f3:12:g_d0_f3:A:To  tackle  the  multi-dimensionality  challenge,  we  now  estimate  the  adaptive  group
+30:1032:58485:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:LASSO  with  four,  nine,  14,  and  19  knots.   The  number  of  knots  corresponds  to  the
+30:1033:58579:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:smoothing parameter we discuss in Section III. Nine knots corresponds to 10 portfolios
+30:1034:58665:22:22:72:113:583:12:g_d0_f3:12:g_d0_f3:B:in sorts.
+30:1035:58674:22:21:95:525:561:12:g_d0_f3:12:g_d0_f3:A:Figure  7  and  Figure  8  show  the  mean  function,   ̃m( ̃Cit−1),  for  Tobin’s  Q,  return-
+30:1036:58769:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:on-assets,  profitability,  and investment.  The left panels report the unconditional mean
+30:1037:58859:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:functions,  whereas  the  right  panels  plot  the  association  between  the  characteristic  and
+30:1038:58957:22:21:72:374:496:12:g_d0_f3:12:g_d0_f3:B:expected returns conditional on all selected characteristics.
+30:1039:59018:21:22:95:525:475:12:g_d0_f3:12:g_d0_f3:A:Stocks with low Q, low return on assets, investment, but high profitability have higher
+30:1040:59105:22:22:72:526:453:12:g_d0_f3:12:g_d0_f3:B:expected returns than stocks with high Q, return on assets, investment, or low profitability
+30:1041:59197:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:unconditionally.  These results are consistent with our findings for portfolio sorts in Table
+30:1042:59290:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:2.  Portfolio sorts result in average annualized hedge portfolio returns of around 14%, 5%,
+30:1043:59381:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:13%, and 6% for sorts on Q, return on assets, investment, and profitability, respectively.
+30:1044:59471:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:Profitability, Q, and investment also have t-stats relative to the Fama-French three-factor
+30:1045:59562:21:22:72:525:345:12:g_d0_f3:12:g_d0_f3:B:model substantially larger than the threshold Harvey et al. (2016) suggest (see Table 3).
+30:1046:59651:22:22:95:525:323:12:g_d0_f3:12:g_d0_f3:A:These characteristics, however, are correlated with other firm characteristics. We now
+30:1047:59737:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:want  to  understand  whether  they  have  marginal  predictive  power  for  expected  returns
+30:1048:59831:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:conditional  on  all  other  firm  characteristics  we  study.   We  see  in  the  right  panels  that
+30:1049:59933:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:the association of these characteristics with expected returns vanishes once we condition
+30:1050:60022:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:on other stock characteristics.  The estimated conditional mean functions are now close
+30:1051:60109:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:to  constant  and  do  not  vary  with  the  characteristics.   The  constant  conditional  mean
+30:1052:60205:22:22:72:526:193:12:g_d0_f3:12:g_d0_f3:B:functions  imply  Q,  return  on  assets,  investment,  and  profitability  have  no  marginal
+30:1053:60299:22:21:72:510:171:12:g_d0_f3:12:g_d0_f3:B:predictive power for expected returns once we condition on other firm characteristics.
+30:1054:60385:21:22:95:525:150:12:g_d0_f3:12:g_d0_f3:A:The examples of Tobin’s Q, return-on-asset, profitability, and investment show the
+30:1055:60467:22:22:72:526:128:12:g_d0_f3:12:g_d0_f3:B:importance  of  conditioning  on  other  characteristics  to  infer  on  the  predictive  power  of
+30:1056:60566:22:0:72:526:106:12:g_d0_f3:12:g_d0_f3:B:characteristics for expected returns. We now study this question for 36 firm characteristics
+31:1057:60660:0:22:72:245:735:12:g_d0_f3:12:g_d0_f3:B:using the adaptive group LASSO.
+31:1058:60691:22:22:95:525:713:12:g_d0_f3:12:g_d0_f3:A:Table 4 reports the selected characteristics of the nonparametric model for different
+31:1059:60776:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:numbers  of  knots,  sets  of  firms,  and  sample  periods.   We  see  in  column  (1)  that  the
+31:1060:60874:21:22:72:526:670:12:g_d0_f3:12:g_d0_f3:B:baseline estimation for all stocks over the full sample period using 14 knots selects 15 out
+31:1061:60966:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:of the universe of 36 firm characteristics.  The assets-to-market cap,  total assets,  beta,
+31:1062:61058:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:capital  intensity,  earnings  to  price,  fixed  costs  to  sales,  idiosyncratic  volatility,  lagged
+31:1063:61161:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:market cap, lagged turnover, the closeness to the 52-week high, momentum, short-term
+31:1064:61245:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:reversal, long-term reversal, SG&A -to-market cap, and standardized unexplained volume
+31:1065:61331:22:21:72:525:561:12:g_d0_f3:12:g_d0_f3:B:all provide incremental information conditional on all other selected firm characteristics.
+31:1066:61422:21:22:95:525:540:12:g_d0_f3:12:g_d0_f3:A:When we allow for a wider grid in column (2) with only nine knots, we also select cash
+31:1067:61508:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:to total assets, free cash flow, intermediate momentum, and the average bid-ask spread.
+31:1068:61595:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:We instead select the same characteristics when we impose a finer grid and estimate the
+31:1069:61682:21:22:72:382:475:12:g_d0_f3:12:g_d0_f3:B:group LASSO with 19 interpolation points (see column (3)).
+31:1070:61740:22:22:95:525:453:12:g_d0_f3:12:g_d0_f3:A:We estimate the nonparametric model only on large stocks above the 10%-,  20%-,
+31:1071:61819:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:and  50%-size  quintile  of  NYSE  stocks  in  columns  (3)  to  (5),  reducing  the  sample  size
+31:1072:61917:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:from  more  than  1  million  observations  to  around  300,000.   Assets-to-market  cap,  total
+31:1073:62013:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:assets,  beta,  fixed-costs to sales,  and idiosyncratic volatility lose their predictive power
+31:1074:62108:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:for returns for a sample of firms above the 10%-size threshold compared to all stocks in
+31:1075:62196:21:22:72:526:345:12:g_d0_f3:12:g_d0_f3:B:column (1), whereas operating accruals becomes a significant return predictor.  For firms
+31:1076:62285:22:22:72:526:323:12:g_d0_f3:12:g_d0_f3:B:above the 20%-size threshold of NYSE firms, we also see capital intensity, earnings to price,
+31:1077:62378:22:21:72:526:301:12:g_d0_f3:12:g_d0_f3:B:lagged turnover, and momentum lose the predictive power, but intermediate momentum
+31:1078:62460:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:becomes a significant return predictor.  For the largest firms, only seven characteristics
+31:1079:62550:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:have significant incremental predictive power for expected returns,  including the book-
+31:1080:62638:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:to-market ratio, the closeness to the high price, past return-based predictors, SG&A to
+31:1081:62725:21:22:72:341:215:12:g_d0_f3:8:g_d0_f4:B:market cap, and standardized unexplained volume.22
+31:1082:62775:22:22:95:525:193:12:g_d0_f3:12:g_d0_f3:A:Columns  (7)  and  (8)  split  our  sample  in  half  and  re-estimate  our  benchmark
+31:1083:62861:22:21:72:526:171:12:g_d0_f3:12:g_d0_f3:B:nonparametric model in both sub-samples separately to see whether the importance of
+31:1084:62944:21:18:72:526:150:12:g_d0_f3:12:g_d0_f3:B:characteristics  for  predicted  returns  varies  over  time.   Only  eight  characteristics  have
+31:1085:63042:18:16:81:525:132:7:g_d0_f6:10:g_d0_f7:F:22The number of knots increases with the sample size.  The penalty function instead increases in the
+31:1086:63142:16:12:72:526:116:10:g_d0_f7:10:g_d0_f7:F:number of knots.  In the nonparametric model with nine knots, the penalty is proportional to 12 times
+31:1087:63243:12:0:72:509:104:10:g_d0_f7:10:g_d0_f7:F:the number of selected characteristics, which is why we select fewer characteristics with more knots.
+32:1088:63346:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:predictive  power  for  expected  returns  in  the  sample  until  1990.   All  the  characteristics
+32:1089:63446:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:we select in the first half of our sample still provide incremental information for expected
+32:1090:63538:22:21:72:526:691:12:g_d0_f3:12:g_d0_f3:B:returns in the second half starting in 1991, but now nine additional characteristics gain
+32:1091:63627:21:22:72:267:670:12:g_d0_f3:12:g_d0_f3:B:predictive power for expected returns.
+32:1092:63665:22:22:95:525:648:12:g_d0_f3:12:g_d0_f3:A:Size, the closeness to the previous 52-week high, short-term reversal, and standardized
+32:1093:63752:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:unexplained  volume  are  the  most  consistent  return  predictors  across  different  sample
+32:1094:63846:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:periods, number of interpolation points, and sets of firms. Table A.1 in the online appendix
+32:1095:63938:22:22:72:376:583:12:g_d0_f3:12:g_d0_f3:B:reports selected characteristics for additional specifications.
+32:1096:64001:22:21:95:525:561:12:g_d0_f3:12:g_d0_f3:A:Figure 9 and Figure 10 plot the conditional and unconditional mean functions for
+32:1097:64081:21:22:72:526:540:12:g_d0_f3:12:g_d0_f3:B:short-term  reversal,  momentum,  size,  and  the  assets-to-market-cap  ratio.   We  see  in
+32:1098:64174:22:22:72:526:518:12:g_d0_f3:12:g_d0_f3:B:Figure  9  both  for  reversal  and  momentum  a  more  monotonic  association  between  the
+32:1099:64266:22:21:72:526:496:12:g_d0_f3:12:g_d0_f3:B:characteristic distribution and expected returns once we condition on other characteristics
+32:1100:64357:21:22:72:526:475:12:g_d0_f3:12:g_d0_f3:B:in the right panel relative to the unconditional association in the left panels.  Size matters
+32:1101:64451:22:22:72:526:453:12:g_d0_f3:12:g_d0_f3:B:for  returns  for  all  firms  in  the  right  panel  of  Figure  9  and  the  conditional  association
+32:1102:64554:22:21:72:526:431:12:g_d0_f3:12:g_d0_f3:B:is more pronounced than the relationship in the left panel.  This finding is reminiscent
+32:1103:64642:21:22:72:526:410:12:g_d0_f3:12:g_d0_f3:B:of  Asness,  Frazzini,  Israel,  Moskowitz,  and  Pedersen  (2015),  who  argue  “size  matters,
+32:1104:64738:22:22:72:526:388:12:g_d0_f3:12:g_d0_f3:B:if you control your junk”.  We see in the lower panels, the assets-to-market-cap ratio is
+32:1105:64827:22:21:72:526:366:12:g_d0_f3:12:g_d0_f3:B:unconditionally positively associated with expected returns.  Once we condition on other
+32:1106:64915:21:22:72:526:345:12:g_d0_f3:12:g_d0_f3:B:characteristics, though, the association flips sign, and stocks with a high ratio have lower
+32:1107:65007:22:22:72:358:323:12:g_d0_f3:12:g_d0_f3:B:expected returns compared to stocks with a lower ratio.
+32:1108:65062:22:21:95:525:301:12:g_d0_f3:12:g_d0_f3:A:Figure 11 plots the conditional and unconditional mean functions for the book-to-
+32:1109:65143:21:22:72:526:280:12:g_d0_f3:12:g_d0_f3:B:market ratio and idiosyncratic volatility.  Both book-to-market and idiosyncratic volatility
+32:1110:65235:22:22:72:526:258:12:g_d0_f3:12:g_d0_f3:B:have  a  monotonic,  positive  unconditional  association  with  expected  returns  across  the
+32:1111:65330:22:21:72:526:236:12:g_d0_f3:12:g_d0_f3:B:whole  characteristic  distribution.   Conditional  on  other  characteristics,  book-to-market
+32:1112:65425:21:22:72:526:215:12:g_d0_f3:12:g_d0_f3:B:loses  the  predictive  power  for  returns  and  only  stocks  with  the  highest  idiosyncratic
+32:1113:65522:22:22:72:328:193:12:g_d0_f3:12:g_d0_f3:B:volatility are significantly associated with returns.
+32:1114:65575:22:21:95:525:171:12:g_d0_f3:12:g_d0_f3:A:This section shows that many of the univariate significant return predictors do not
+32:1115:65658:21:22:72:526:150:12:g_d0_f3:12:g_d0_f3:B:provide  incremental  predictive  power  for  expected  returns  once  we  condition  on  other
+32:1116:65753:22:0:72:178:128:12:g_d0_f3:12:g_d0_f3:B:stock characteristics.
+33:1117:65777:0:30:72:361:735:14:g_d0_f8:14:g_d0_f2:C:BTime Variation in Return Predictors
+33:1118:65813:30:21:72:526:705:12:g_d0_f3:12:g_d0_f3:B:McLean  and  Pontiff  (2016)  document  substantial  variation  over  time  in  the  predictive
+33:1119:65908:21:22:72:526:684:12:g_d0_f3:12:g_d0_f3:B:power  of  many  characteristics  for  expected  returns.   Figure  12  to  Figure  15  show  the
+33:1120:66005:22:22:72:526:662:12:g_d0_f3:12:g_d0_f3:B:conditional mean function for our baseline nonparametric model for all stocks and nine
+33:1121:66091:22:21:72:526:640:12:g_d0_f3:12:g_d0_f3:B:knots  over  time.   We  perform  model  selection  on  the  first  10  years  of  data.   We  then
+33:1122:66190:21:22:72:526:619:12:g_d0_f3:12:g_d0_f3:B:fix the selected characteristics and estimate the nonparametric model on a rolling basis
+33:1123:66278:22:22:72:526:597:12:g_d0_f3:12:g_d0_f3:B:using 10 years of data.  We normalize the conditional mean function to equal 0 when the
+33:1124:66365:22:21:72:490:575:12:g_d0_f3:12:g_d0_f3:B:normalized characteristic equals 0.5 (the median characteristic in a given month).
+33:1125:66447:21:22:95:525:554:12:g_d0_f3:12:g_d0_f3:A:We see in Figure 12 that the conditional mean function is non-constant throughout
+33:1126:66528:22:22:72:526:532:12:g_d0_f3:12:g_d0_f3:B:the   sample   period   for   lagged   market   cap.Small   firms   have   higher   expected
+33:1127:66620:22:21:72:526:510:12:g_d0_f3:12:g_d0_f3:B:returns  compared  to  large  firms,  conditional  on  all  other  significant  return  predictors.
+33:1128:66719:21:22:72:526:489:12:g_d0_f3:12:g_d0_f3:B:Interestingly, the size effect seems largest during the end of our sample period, contrary
+33:1129:66809:22:22:72:526:467:12:g_d0_f3:12:g_d0_f3:B:to conventional wisdom (see Asness et al. (2015) for a related finding).  The bottom panel
+33:1130:66899:22:21:72:526:445:12:g_d0_f3:12:g_d0_f3:B:shows  that  firms  with  higher  total  assets  have  higher  expected  returns  conditional  on
+33:1131:66996:21:22:72:491:424:12:g_d0_f3:12:g_d0_f3:B:other firm characteristics, contrary to the unconditional association (see Table 2).
+33:1132:67080:22:22:95:525:402:12:g_d0_f3:12:g_d0_f3:A:We see in the top panel of Figure 13 that intermediate momentum has a significant
+33:1133:67161:22:21:72:526:380:12:g_d0_f3:12:g_d0_f3:B:conditional association with expected returns throughout the sample period. Interestingly,
+33:1134:67251:21:22:72:526:359:12:g_d0_f3:12:g_d0_f3:B:past intermediate losers tend to outperform once we condition on other characteristics.
+33:1135:67338:22:22:72:526:337:12:g_d0_f3:12:g_d0_f3:B:In the bottom panel,  we see momentum lost part of the predictive power for expected
+33:1136:67422:22:21:72:526:315:12:g_d0_f3:12:g_d0_f3:B:returns in the more recent period because of high returns of past losers, consistent with
+33:1137:67511:21:22:72:283:294:12:g_d0_f3:12:g_d0_f3:B:findings in Daniel and Moskowitz (2016).
+33:1138:67551:22:22:95:525:272:12:g_d0_f3:12:g_d0_f3:A:Figure  14  shows  the  effect  of  long-term  reversal  on  expected  returns  has  been
+33:1139:67640:22:21:72:526:250:12:g_d0_f3:12:g_d0_f3:B:strongest in the modern sample period because past losers tend to appreciate more than
+33:1140:67726:21:22:72:526:229:12:g_d0_f3:12:g_d0_f3:B:they did historically.  The bottom panel shows the association of idiosyncratic volatility
+33:1141:67816:22:22:72:526:207:12:g_d0_f3:12:g_d0_f3:B:and returns has been flat until the early 1990s and only afterwards did stocks with the
+33:1142:67903:22:21:72:526:185:12:g_d0_f3:12:g_d0_f3:B:highest  level  of  idiosyncratic  volatility  earn  substantially  higher  returns  than  all  other
+33:1143:68004:21:0:72:106:164:12:g_d0_f3:12:g_d0_f3:B:stocks.
+34:1144:68013:0:30:72:470:735:14:g_d0_f8:14:g_d0_f2:C:COut-of-Sample Performance and Model Comparison
+34:1145:68060:30:21:72:526:705:12:g_d0_f3:12:g_d0_f3:B:We argued in Section II that the nonparametric method we propose overcomes potential
+34:1146:68144:21:22:72:526:684:12:g_d0_f3:12:g_d0_f3:B:shortcomings of more traditional methods, and show potential advantages of the adaptive
+34:1147:68231:22:22:72:222:662:12:g_d0_f3:12:g_d0_f3:B:group LASSO in simulations.
+34:1148:68258:22:21:95:525:640:12:g_d0_f3:12:g_d0_f3:A:We now want to compare the performance of the nonparametric model with the linear
+34:1149:68339:21:22:72:526:619:12:g_d0_f3:12:g_d0_f3:B:model out of sample.  The out-of-sample context ensures that in-sample overfit does not
+34:1150:68426:22:22:72:439:597:12:g_d0_f3:12:g_d0_f3:B:explain a potentially superior performance of the nonparametric model.
+34:1151:68496:22:21:95:525:575:12:g_d0_f3:12:g_d0_f3:A:We  estimate  the  nonparametric  model  for  a  period  from  1963  to  1990  and  carry
+34:1152:68585:21:22:72:526:554:12:g_d0_f3:12:g_d0_f3:B:out model selection with the adaptive group LASSO with nine knots,  but also use the
+34:1153:68669:22:22:72:526:532:12:g_d0_f3:12:g_d0_f3:B:adaptive LASSO for model selection in the linear model over the same sample period and
+34:1154:68755:22:21:72:526:510:12:g_d0_f3:12:g_d0_f3:B:with  the  same  number  of  knots.   We  then  use  10  years  of  data  to  estimate  the  model
+34:1155:68853:21:22:72:526:489:12:g_d0_f3:12:g_d0_f3:B:on the selected characteristics.  In the next months, we take the selected characteristics
+34:1156:68943:22:22:72:526:467:12:g_d0_f3:12:g_d0_f3:B:and predict one-month-ahead returns and construct a hedge portfolio going long stocks
+34:1157:69028:22:21:72:526:445:12:g_d0_f3:12:g_d0_f3:B:with the 10% highest predicted returns and shorting stocks with the 10% lowest predicted
+34:1158:69116:21:22:72:526:424:12:g_d0_f3:12:g_d0_f3:B:returns.  We roll the estimation and prediction period forward by one month and repeat
+34:1159:69202:22:22:72:288:402:12:g_d0_f3:12:g_d0_f3:B:the procedure until the end of the sample.
+34:1160:69244:22:21:95:525:380:12:g_d0_f3:12:g_d0_f3:A:Specifically, in our first out-of-sample predictions, we use return data from January
+34:1161:69329:21:22:72:526:359:12:g_d0_f3:12:g_d0_f3:B:1981 until December 1990 and characteristics data from December 1980 until November
+34:1162:69412:22:22:72:525:337:12:g_d0_f3:12:g_d0_f3:B:1990 to get estimatorsˆβ.23We then take the estimated coefficients and characteristics
+34:1163:69498:22:21:72:526:315:12:g_d0_f3:12:g_d0_f3:B:data  from  January  1981  until  December  1990  to  predict  returns  for  January  1991  and
+34:1164:69593:21:22:72:526:294:12:g_d0_f3:12:g_d0_f3:B:form two portfolios for each method.  We buy the stocks with the 10% highest expected
+34:1165:69678:22:22:72:526:272:12:g_d0_f3:12:g_d0_f3:B:returns  and  sell  the  stocks  with  the  10%  lowest  predicted  returns.   We  then  move  our
+34:1166:69776:22:21:72:526:250:12:g_d0_f3:12:g_d0_f3:B:estimation sample forward by one month from February 1981 until January 1991, get new
+34:1167:69861:21:22:72:341:229:12:g_d0_f3:12:g_d0_f3:B:estimatorsˆβ, and predict returns for February 1991.
+34:1168:69913:22:22:95:525:207:12:g_d0_f3:12:g_d0_f3:A:Table 5 reports the out-of-sample Sharpe ratios for both the nonparametric and linear
+34:1169:69998:22:21:72:526:185:12:g_d0_f3:12:g_d0_f3:B:models for different sample periods,  number of knots,  and equally- and value-weighted
+34:1170:70085:21:22:72:526:164:12:g_d0_f3:12:g_d0_f3:B:portfolios.   For  a  sample  from  1991  to  2014  and  nine  knots,  the  nonparametric  model
+34:1171:70181:22:18:72:526:142:12:g_d0_f3:12:g_d0_f3:B:generates an out-of-sample Sharpe ratio for an equally-weighted hedge portfolio of 3.42
+34:1172:70268:18:15:81:525:124:7:g_d0_f6:10:g_d0_f7:F:23To be more precise, for returns until June 1981, many of the balance-sheet variables will be from the
+34:1173:70371:15:0:72:185:109:10:g_d0_f7:10:g_d0_f7:F:fiscal year ending in 1979.
+35:1174:70400:0:22:72:525:735:12:g_d0_f3:12:g_d0_f3:B:compared to 2.26 for the linear model (compare columns (1) and (3)).24The linear model
+35:1175:70486:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:selects 21 characteristics in sample compared to only eight for the nonparametric model,
+35:1176:70574:22:21:72:255:691:12:g_d0_f3:8:g_d0_f4:B:but performs worse out of sample.25
+35:1177:70609:21:22:95:525:670:12:g_d0_f3:12:g_d0_f3:A:We see a substantial drop in out-of-sample Sharpe ratios both for the nonparametric
+35:1178:70692:22:22:71:525:648:12:g_d0_f3:12:g_d0_f3:B:and linear model when we study value-weighted portfolios (see columns (2) and (4)).  The
+35:1179:70780:22:21:71:525:626:12:g_d0_f3:12:g_d0_f3:B:difference  in  Sharpe  ratios  between  value-  and  equally-weighted  portfolios  is  similar  to
+35:1180:70879:21:22:71:525:605:12:g_d0_f3:12:g_d0_f3:B:Lewellen (2015), who finds Sharpe ratios of value-weighted portfolios 50% smaller than
+35:1181:70965:22:22:71:525:583:12:g_d0_f3:12:g_d0_f3:B:the equally-weighted counterpart.  Most studies in empirical finance winsorize the data,
+35:1182:71053:22:21:71:525:561:12:g_d0_f3:12:g_d0_f3:B:including size.  When we winsorize size at the 1% and 5% levels, we find out-of-sample
+35:1183:71139:21:22:71:525:540:12:g_d0_f3:12:g_d0_f3:B:value-weighted Sharpe ratios of 1.38 and 1.73 for the nonparametric model (results not
+35:1184:71225:22:22:71:122:518:12:g_d0_f3:12:g_d0_f3:B:reported).
+35:1185:71235:22:21:95:525:496:12:g_d0_f3:12:g_d0_f3:A:Column  (5)  studies  a  linear  model  that  also  employs  the  rank  transformation  we
+35:1186:71325:21:22:71:525:475:12:g_d0_f3:12:g_d0_f3:B:discuss  in  Section  III.  The  linear  model  now  selects  even  27  of  the  36  characteristics,
+35:1187:71426:22:22:71:525:453:12:g_d0_f3:12:g_d0_f3:B:but  the  out-of-sample  Sharpe  ratio  is  similar  to  the  linear  model  for  non-transformed
+35:1188:71523:22:21:71:147:431:12:g_d0_f3:12:g_d0_f3:B:characteristics.
+35:1189:71539:21:22:95:525:410:12:g_d0_f3:12:g_d0_f3:A:Nonlinearities  are  important.   We  find  an  increase  in  out-of-sample  Sharpe  ratios
+35:1190:71630:22:22:71:525:388:12:g_d0_f3:12:g_d0_f3:B:relative to the Sharpe ratio of the linear model when we employ the nonparametric model
+35:1191:71717:22:21:71:525:366:12:g_d0_f3:12:g_d0_f3:B:for  prediction  on  the  21  characteristics  the  linear  model  selects  (see  column  (6)).   The
+35:1192:71818:21:22:71:525:345:12:g_d0_f3:12:g_d0_f3:B:linear model appears to overfit the data in sample.  The Sharpe ratio for the linear model
+35:1193:71908:22:22:71:525:323:12:g_d0_f3:12:g_d0_f3:B:when we use the eight characteristics we select with the nonparametric model is identical
+35:1194:71997:22:21:71:525:301:12:g_d0_f3:12:g_d0_f3:B:to the one we find when we use the 21 characteristics the linear model selects (see column
+35:1195:72087:21:22:71:94:280:12:g_d0_f3:12:g_d0_f3:B:(7)).
+35:1196:72092:22:22:95:525:258:12:g_d0_f3:12:g_d0_f3:A:We see in columns (8) and (9) that Sharpe ratios drop by more than 50% for both
+35:1197:72171:22:21:71:525:236:12:g_d0_f3:12:g_d0_f3:B:models when we exclude firms below the 10thpercentile of NYSE stocks (around 200,000
+35:1198:72255:21:22:71:525:215:12:g_d0_f3:12:g_d0_f3:B:firm-months observations out of 650,000).  Lewellen (2015) also finds Sharpe ratios for an
+35:1199:72345:22:22:71:525:193:12:g_d0_f3:12:g_d0_f3:B:equally-weighted hedge portfolio that are lower by 50% when he excludes “all but tiny
+35:1200:72430:22:18:71:525:171:12:g_d0_f3:12:g_d0_f3:B:stocks.”   Columns  (10)  to  (12)  show  Sharpe  ratios  larger  than  3  for  an  out-of-sample
+35:1201:72527:18:16:81:525:153:7:g_d0_f6:10:g_d0_f7:F:24The linear model we estimate and the results are similar to Lewellen (2015).  Specifically, he finds
+35:1202:72629:16:12:72:526:137:10:g_d0_f7:10:g_d0_f7:F:for a linear model out-of-sample Sharpe ratios of 1.65 and 0.85 for equally- and value-weighted hedge
+35:1203:72730:12:8:72:312:125:10:g_d0_f7:10:g_d0_f7:F:portfolios and an out-of-sample period of 1974 to 2013.
+35:1204:72785:8:16:81:525:117:7:g_d0_f6:10:g_d0_f7:F:25The  linear  model  might  be  misspecified  and  therefore  select  more  variables  (see  discussion  and
+35:1205:72894:16:0:72:217:101:10:g_d0_f7:10:g_d0_f7:F:simulation results in Section III).
+36:1206:72931:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:period starting in 1975 using the first 10 years for model selection and estimation and for
+36:1207:73022:22:22:72:526:713:12:g_d0_f3:12:g_d0_f3:B:our baseline sample starting in 1991, or using 4 or 14 knots rather than 9 as in column
+36:1208:73109:22:21:72:90:691:12:g_d0_f3:12:g_d0_f3:B:(1).
+36:1209:73113:21:22:95:525:670:12:g_d0_f3:12:g_d0_f3:A:We also studied whether the return forecasts of the nonparametric model actually
+36:1210:73193:22:22:72:526:648:12:g_d0_f3:12:g_d0_f3:B:picks up cross-sectional variation in ex-post realized returns at the firm level.  A return
+36:1211:73284:22:21:72:526:626:12:g_d0_f3:12:g_d0_f3:B:estimate  that  provides  an  unbiased  forecast  of  returns  should  predict  ex-post  returns
+36:1212:73380:21:22:72:526:605:12:g_d0_f3:12:g_d0_f3:B:with a slope of 1.  For all stocks and a sample from 1991 until 2014, we find the return
+36:1213:73468:22:22:72:526:583:12:g_d0_f3:12:g_d0_f3:B:forecasts from the nonparametric model have a slope estimate of 0.78 and explain 3.11%
+36:1214:73554:22:21:72:526:561:12:g_d0_f3:12:g_d0_f3:B:of the ex-post variation in returns at the firm level.  These estimates compare favorably
+36:1215:73643:21:51:72:507:540:12:g_d0_f3:12:g_d0_f3:B:to Lewellen (2015), who typically finds smaller point estimates andR2s of below 1%.
+36:1216:73726:51:34:72:206:489:17:g_d0_f2:17:g_d0_f2:C:VI    Conclusion
+36:1217:73742:34:21:72:526:455:12:g_d0_f3:12:g_d0_f3:B:We propose a nonparametric method to tackle the challenge posed by Cochrane (2011)
+36:1218:73824:21:22:72:526:434:12:g_d0_f3:12:g_d0_f3:B:in  his  presidential  address,  namely,  which  firm  characteristics  provide  independent
+36:1219:73916:22:22:72:526:412:12:g_d0_f3:12:g_d0_f3:B:information for expected returns.  We use the adaptive group LASSO to select significant
+36:1220:74004:22:21:72:301:390:12:g_d0_f3:12:g_d0_f3:B:return predictors and to estimate the model.
+36:1221:74048:21:22:95:525:369:12:g_d0_f3:12:g_d0_f3:A:We  document  the  properties  of  our  framework  in  three  applications:   (i)  Which
+36:1222:74136:22:22:72:526:347:12:g_d0_f3:12:g_d0_f3:B:characteristics  have  incremental  forecasting  power  for  expected  returns?   (ii)  Does  the
+36:1223:74233:22:21:72:526:325:12:g_d0_f3:12:g_d0_f3:B:predictive  power  of  characteristics  vary  over  time?   (iii)  How  does  the  nonparametric
+36:1224:74329:21:22:72:320:304:12:g_d0_f3:12:g_d0_f3:B:model compare to a linear model out of sample?
+36:1225:74375:22:22:95:525:282:12:g_d0_f3:12:g_d0_f3:A:Our  results  are  as  follows:   (i)  Out  of  36  characteristics,  only  7  to  15  provide
+36:1226:74469:22:21:72:526:260:12:g_d0_f3:12:g_d0_f3:B:independent  information  depending  on  the  number  of  interpolation  points  (similar  to
+36:1227:74562:21:22:72:526:239:12:g_d0_f3:12:g_d0_f3:B:the number of portfolios in portfolio sorts), sample period, and universe of stocks (large
+36:1228:74652:22:22:72:526:217:12:g_d0_f3:12:g_d0_f3:B:versus small stocks).  (ii) Substantial time variation is present in the predictive power of
+36:1229:74744:22:21:72:526:195:12:g_d0_f3:12:g_d0_f3:B:characteristics.  (iii) The nonparametric model selects fewer characteristics than the linear
+36:1230:74837:21:22:72:414:174:12:g_d0_f3:12:g_d0_f3:B:model in sample and has a 50% higher Sharpe ratio out of sample.
+36:1231:74901:22:22:95:525:152:12:g_d0_f3:12:g_d0_f3:A:We see our paper as a starting point only and ask the following questions.  Are the
+36:1232:74984:22:21:72:526:130:12:g_d0_f3:12:g_d0_f3:B:characteristics we identify related to factor exposures?  How many factors are important?
+36:1233:75073:21:0:72:523:109:12:g_d0_f3:12:g_d0_f9:B:Can we achieve a dimension reduction and identifyKfactors that can summarize theN
+37:1234:75156:0:22:72:526:735:12:g_d0_f3:12:g_d0_f3:B:independent dimensions of expected returns withK << Nsimilar to Fama and French
+37:1235:75235:22:0:72:262:713:12:g_d0_f3:12:g_d0_f3:B:(1993) and Fama and French (1996)?
+38:1236:75271:0:27:72:163:735:17:g_d0_f2:17:g_d0_f2:C:References
+38:1237:75281:27:14:72:526:708:12:g_d0_f3:12:g_d0_f3:B:Ang, A., R. J. Hodrick, Y. Xing, and X. Zhang (2006). The cross-section of volatility and
+38:1238:75370:14:16:83:383:694:12:g_d0_f3:12:g_d0_f3:A:expected returns.The Journal of Finance 61(1), 259–299.
+38:1239:75425:16:14:72:526:678:12:g_d0_f3:12:g_d0_f3:B:Asness, C. S., A. Frazzini, R. Israel, T. J. Moskowitz, and L. H. Pedersen (2015).  Size
+38:1240:75513:14:16:83:504:664:12:g_d0_f3:12:g_d0_f3:A:matters, if you control your junk.Unpublished Manuscript, University of Chicago.
+38:1241:75593:16:15:72:526:648:12:g_d0_f3:12:g_d0_f3:B:Balakrishnan, K., E. Bartov, and L. Faurel (2010).  Post loss/profit announcement drift.
+38:1242:75681:15:16:83:351:633:12:g_d0_f5:12:g_d0_f3:A:Journal of Accounting and Economics 50(1), 20–41.
+38:1243:75730:16:14:71:525:617:12:g_d0_f3:12:g_d0_f3:B:Ball, R., J. Gerakos, J. T. Linnainmaa, and V. V. Nikolaev (2015). Deflating profitability.
+38:1244:75821:14:16:83:337:603:12:g_d0_f5:12:g_d0_f3:A:Journal of Financial Economics 117(2), 225–248.
+38:1245:75868:16:15:71:525:587:12:g_d0_f3:12:g_d0_f3:B:Bansal,  R.  and  S.  Viswanathan  (1993).   No  arbitrage  and  arbitrage  pricing:   A  new
+38:1246:75961:15:15:83:356:572:12:g_d0_f3:12:g_d0_f3:A:approach.The Journal of Finance 48(4), 1231–1262.
+38:1247:76010:15:15:71:525:557:12:g_d0_f3:12:g_d0_f3:B:Banz, R. W. (1981). The relationship between return and market value of common stocks.
+38:1248:76096:15:16:83:309:542:12:g_d0_f5:12:g_d0_f3:A:Journal of Financial Economics 9(1), 3–18.
+38:1249:76138:16:14:71:525:526:12:g_d0_f3:12:g_d0_f5:B:Barillas,  F.  and  J.  Shanken  (2016).Which  alpha?Review of Financial Studies
+38:1250:76218:14:16:83:202:512:12:g_d0_f5:12:g_d0_f3:A:(forthcoming), hhw101.
+38:1251:76240:16:15:71:525:496:12:g_d0_f3:12:g_d0_f3:B:Basu, S. (1983).  The relationship between earnings’ yield, market value and return for
+38:1252:76327:15:14:83:525:481:12:g_d0_f3:12:g_d0_f3:A:NYSE common stocks:  Further evidence.Journal of Financial Economics 12(1), 129–
+38:1253:76407:14:16:83:104:467:12:g_d0_f3:12:g_d0_f3:A:156.
+38:1254:76411:16:15:72:525:451:12:g_d0_f3:12:g_d0_f3:B:Belloni,   A.,   V.  Chernozhukov,   D.  Chetverikov,   and  K.  Kato  (2015).Some  new
+38:1255:76498:15:14:83:525:436:12:g_d0_f3:12:g_d0_f5:A:asymptotic  theory  for  least  squares  series:   Pointwise  and  uniform  results.Journal
+38:1256:76589:14:16:83:256:422:12:g_d0_f5:12:g_d0_f3:A:of Econometrics 186(2), 345–366.
+38:1257:76621:16:14:72:526:406:12:g_d0_f3:12:g_d0_f3:B:Bhandari, L. C. (1988). Debt/equity ratio and expected common stock returns: Empirical
+38:1258:76707:14:16:83:340:392:12:g_d0_f3:12:g_d0_f3:A:evidence.The Journal of Finance 43(2), 507–528.
+38:1259:76754:16:15:72:526:376:12:g_d0_f3:12:g_d0_f3:B:Brandt, M. W., P. Santa-Clara, and R. Valkanov (2009).  Parametric portfolio policies:
+38:1260:76840:15:14:83:525:361:12:g_d0_f3:12:g_d0_f5:A:Exploiting characteristics in the cross-section of equity returns.Review of Financial
+38:1261:76925:14:16:83:216:347:12:g_d0_f5:12:g_d0_f3:A:Studies 22(9), 3411–3447.
+38:1262:76950:16:15:72:526:331:12:g_d0_f3:12:g_d0_f3:B:Breeden, D. T. (1979). An intertemporal asset pricing model with stochastic consumption
+38:1263:77037:15:16:83:484:316:12:g_d0_f3:12:g_d0_f3:A:and investment opportunities.Journal of Financial Economics 7(3), 265–296.
+38:1264:77111:16:14:72:526:300:12:g_d0_f3:12:g_d0_f3:B:Bryzgalova, S. (2016).  Spurious factors in linear asset pricing models.  Technical report,
+38:1265:77202:14:16:83:319:286:12:g_d0_f3:12:g_d0_f3:A:Unpublished Manuscript, Stanford University.
+38:1266:77246:16:14:72:526:270:12:g_d0_f3:12:g_d0_f3:B:Burnside, C. (2016). Identification and inference in linear stochastic discount factor models
+38:1267:77339:14:16:83:452:256:12:g_d0_f3:12:g_d0_f3:A:with excess returns.Journal of Financial Econometrics 14(2), 295–330.
+38:1268:77408:16:15:72:526:240:12:g_d0_f3:12:g_d0_f3:B:Bustamante, M. C. and A. Donangelo (2016).  Product market competition and industry
+38:1269:77491:15:16:83:348:225:12:g_d0_f3:12:g_d0_f3:A:returns.Review of Financial Studies (forthcoming).
+38:1270:77541:16:14:72:526:209:12:g_d0_f3:12:g_d0_f3:B:Cattaneo, M. D., R. K. Crump, M. H. Farrell, and E. Schaumburg (2016). Characteristic-
+38:1271:77627:14:16:83:436:195:12:g_d0_f3:12:g_d0_f3:A:sorted portfolios:  estimation and inference.Unpublished Manuscript.
+38:1272:77695:16:14:72:525:179:12:g_d0_f3:12:g_d0_f5:B:Chapman,  D.  A.  (1997).Approximating  the  asset  pricing  kernel.The Journal of
+38:1273:77777:14:16:83:220:165:12:g_d0_f5:12:g_d0_f3:A:Finance 52(4), 1383–1410.
+38:1274:77802:16:15:72:526:149:12:g_d0_f3:12:g_d0_f3:B:Chinco, A., A. D. Clark-Joseph, and M. Ye (2015).  Sparse signals in the cross-section of
+38:1275:77891:15:16:83:273:134:12:g_d0_f3:12:g_d0_f3:A:returns.Available at SSRN 2606396.
+38:1276:77925:16:14:72:526:118:12:g_d0_f3:12:g_d0_f3:B:Chordia,  T.,  A.  Goyal,  and  J.  A.  Shanken  (2015).   Cross-sectional  asset  pricing  with
+38:1277:78021:14:0:83:525:104:12:g_d0_f3:12:g_d0_f5:A:individual  stocks:    betas  versus  characteristics.Unpublished Manuscript, Emory
+39:1278:78106:0:16:83:140:735:12:g_d0_f5:12:g_d0_f3:A:University.
+39:1279:78117:16:15:72:526:719:12:g_d0_f3:12:g_d0_f3:B:Chung, K. H. and H. Zhang (2014).  A simple approximation of intraday spreads using
+39:1280:78200:15:16:83:356:704:12:g_d0_f3:12:g_d0_f3:A:daily data.Journal of Financial Markets 17, 94–120.
+39:1281:78251:16:14:72:526:688:12:g_d0_f3:12:g_d0_f3:B:Cochrane,  J.  H.  (2007).   Financial  markets  and  the  real  economy.   In  R.  Mehra  (Ed.),
+39:1282:78348:14:16:83:330:674:12:g_d0_f5:12:g_d0_f3:A:Handbook of the Equity Risk Premium. Elsevier.
+39:1283:78394:16:14:72:525:658:12:g_d0_f3:12:g_d0_f3:B:Cochrane, J. H. (2011).  Presidential address:  Discount rates.Journal of Finance 66(4),
+39:1284:78482:14:16:83:139:644:12:g_d0_f3:12:g_d0_f3:A:1047–1108.
+39:1285:78492:16:15:71:525:628:12:g_d0_f3:12:g_d0_f3:B:Connor, G., M. Hagmann, and O. Linton (2012).  Efficient Semiparametric Estimation of
+39:1286:78577:15:16:83:444:613:12:g_d0_f3:12:g_d0_f3:A:the Fama ̈ı¿12French Model and Extensions.Econometrica 80, 713–754.
+39:1287:78644:16:14:72:526:597:12:g_d0_f3:12:g_d0_f3:B:Cooper, M. J., H. Gulen, and M. J. Schill (2008).  Asset growth and the cross-section of
+39:1288:78732:14:16:83:376:583:12:g_d0_f3:12:g_d0_f3:A:stock returns.The Journal of Finance 63(4), 1609–1651.
+39:1289:78786:16:15:72:526:567:12:g_d0_f3:12:g_d0_f3:B:D’Acunto, F., R. Liu, C. E. Pflueger, and M. Weber (2016). Flexible prices and leverage.
+39:1290:78874:15:16:83:328:552:12:g_d0_f5:12:g_d0_f3:A:Unpublished Manuscript, University of Chicago.
+39:1291:78920:16:14:72:525:536:12:g_d0_f3:12:g_d0_f5:B:Daniel,  K.  and  T.  J.  Moskowitz  (2016).    Momentum  crashes.Journal of Financial
+39:1292:79006:14:16:83:228:522:12:g_d0_f5:12:g_d0_f3:A:Economics 122(2), 221–247.
+39:1293:79032:16:14:72:526:506:12:g_d0_f3:12:g_d0_f3:B:Daniel,  K.  and  S.  Titman  (1997).   Evidence  on  the  characteristics  of  cross  sectional
+39:1294:79128:14:16:83:386:492:12:g_d0_f3:12:g_d0_f3:A:variation in stock returns.Journal of Finance 52(1), 1–33.
+39:1295:79186:16:15:72:526:476:12:g_d0_f3:12:g_d0_f3:B:Datar,  V.  T.,  N.  Y.  Naik,  and  R.  Radcliffe  (1998).   Liquidity  and  stock  returns:   An
+39:1296:79284:15:16:83:398:461:12:g_d0_f3:12:g_d0_f3:A:alternative test.Journal of Financial Markets 1(2), 203–219.
+39:1297:79344:16:14:72:526:445:12:g_d0_f3:12:g_d0_f3:B:Davis,  J.  L.,  E.  F.  Fama,  and  K.  R.  French  (2000).   Characteristics,  covariances,  and
+39:1298:79442:14:16:83:449:431:12:g_d0_f3:12:g_d0_f3:A:average returns:  1929 to 1997.The Journal of Finance 55(1), 389–406.
+39:1299:79511:16:15:72:525:415:12:g_d0_f3:12:g_d0_f5:B:De Bondt, W. F. and R. Thaler (1985).  Does the stock market overreact?The Journal
+39:1300:79593:15:15:83:222:400:12:g_d0_f5:12:g_d0_f3:A:of Finance 40(3), 793–805.
+39:1301:79619:15:15:72:526:385:12:g_d0_f3:12:g_d0_f3:B:DeMiguel, V., A. Martin-Utrera, F. Nogales, and R. Uppal (2016). A portfolio perspective
+39:1302:79707:15:14:83:525:370:12:g_d0_f3:12:g_d0_f5:A:on  the  multitude  of  firm  characteristics.Unpublished Manuscript, London Business
+39:1303:79792:14:16:83:212:356:12:g_d0_f5:12:g_d0_f3:A:School 22(5), 1915–1953.
+39:1304:79816:16:15:72:525:340:12:g_d0_f3:12:g_d0_f5:B:Fama, E. F. and K. R. French (1992). The cross-section of expected stock returns.Journal
+39:1305:79904:15:16:83:222:325:12:g_d0_f5:12:g_d0_f3:A:of Finance 47(2), 427–465.
+39:1306:79930:16:14:72:526:309:12:g_d0_f3:12:g_d0_f3:B:Fama, E. F. and K. R. French (1993).  Common risk factors in the returns on stocks and
+39:1307:80016:14:16:83:353:295:12:g_d0_f3:12:g_d0_f3:A:bonds.Journal of Financial Economics 33(1), 3–56.
+39:1308:80065:16:14:72:526:279:12:g_d0_f3:12:g_d0_f3:B:Fama, E. F. and K. R. French (1996). Multifactor explanations of asset pricing anomalies.
+39:1309:80154:14:16:83:254:265:12:g_d0_f5:12:g_d0_f3:A:Journal of Finance 51(1), 55–84.
+39:1310:80186:16:15:72:525:249:12:g_d0_f3:12:g_d0_f3:B:Fama, E. F. and K. R. French (2008).  Dissecting anomalies.Journal of Finance 63(4),
+39:1311:80270:15:16:83:139:234:12:g_d0_f3:12:g_d0_f3:A:1653–1678.
+39:1312:80280:16:14:72:525:218:12:g_d0_f3:12:g_d0_f5:B:Fama,  E.  F.  and  K.  R.  French  (2015).   A  five-factor  asset  pricing  model.Journal of
+39:1313:80374:14:16:83:264:204:12:g_d0_f5:12:g_d0_f3:A:Financial Economics 116(1), 1–22.
+39:1314:80407:16:15:72:526:188:12:g_d0_f3:12:g_d0_f3:B:Fama,  E.  F.  and  K.  R.  French  (2016).   Dissecting  anomalies  with  a  five-factor  model.
+39:1315:80504:15:16:83:304:173:12:g_d0_f5:12:g_d0_f3:A:Review of Financial Studies 29(1), 69–103.
+39:1316:80546:16:14:72:526:157:12:g_d0_f3:12:g_d0_f3:B:Fama, E. F. and J. D. MacBeth (1973).  Risk, return, and equilibrium:  Empirical tests.
+39:1317:80633:14:16:83:317:143:12:g_d0_f5:12:g_d0_f3:A:Journal of Political Economy 81(3), 607–636.
+39:1318:80677:16:14:72:525:127:12:g_d0_f3:12:g_d0_f5:B:Frazzini,  A.  and  L.  H.  Pedersen  (2014).   Betting  against  beta.Journal of Financial
+39:1319:80768:14:16:83:211:113:12:g_d0_f5:12:g_d0_f3:A:Economics 111(1), 1–25.
+39:1320:80791:16:0:72:525:97:12:g_d0_f3:12:g_d0_f5:B:Gandhi, P. and H. Lustig (2015).  Size anomalies in US bank stock returns.The Journal
+40:1321:80878:0:16:83:222:735:12:g_d0_f5:12:g_d0_f3:A:of Finance 70(2), 733–768.
+40:1322:80904:16:15:71:525:719:12:g_d0_f3:12:g_d0_f5:B:Garfinkel, J. A. (2009).  Measuring investors’ opinion divergence.Journal of Accounting
+40:1323:80991:15:16:83:224:704:12:g_d0_f5:12:g_d0_f3:A:Research 47(5), 1317–1348.
+40:1324:81017:16:14:72:525:688:12:g_d0_f3:12:g_d0_f5:B:George, T. J. and C.-Y. Hwang (2004). The 52-week high and momentum investing.The
+40:1325:81098:14:16:83:277:674:12:g_d0_f5:12:g_d0_f3:A:Journal of Finance 59(5), 2145–2176.
+40:1326:81134:16:14:72:526:658:12:g_d0_f3:12:g_d0_f3:B:Gibbons, M. R., S. A. Ross, and J. Shanken (1989).  A test of the efficiency of a given
+40:1327:81221:14:16:83:301:644:12:g_d0_f3:12:g_d0_f3:A:portfolio.Econometrica 57(5), 1121–1152.
+40:1328:81261:16:15:72:526:628:12:g_d0_f3:12:g_d0_f3:B:Giglio,  S.  W.  and  D.  Xiu  (2016).   Inference  on  risk  premia  in  the  presence  of  omitted
+40:1329:81361:15:16:83:371:613:12:g_d0_f3:12:g_d0_f3:A:factors.Unpublished Manuscript, University of Chicago.
+40:1330:81415:16:14:72:526:597:12:g_d0_f3:12:g_d0_f3:B:Gorodnichenko, Y. and M. Weber (2016).  Are sticky prices costly?  Evidence from the
+40:1331:81499:14:16:83:415:583:12:g_d0_f3:12:g_d0_f3:A:stock market.The American Economic Review 106(1), 165–199.
+40:1332:81557:16:15:72:526:567:12:g_d0_f3:12:g_d0_f3:B:Gospodinov, N., R. Kan, and C. Robotti (2014). Misspecification-robust inference in linear
+40:1333:81647:15:14:83:525:552:12:g_d0_f3:12:g_d0_f3:A:asset-pricing  models  with  irrelevant  risk  factors.Review of Financial Studies 27(7),
+40:1334:81736:14:16:83:139:538:12:g_d0_f3:12:g_d0_f3:A:2139–2170.
+40:1335:81746:16:14:72:526:522:12:g_d0_f3:12:g_d0_f3:B:Green, J., J. R. Hand, and F. Zhang (2016). The characteristics that provide independent
+40:1336:81834:14:15:83:525:508:12:g_d0_f3:12:g_d0_f5:A:information  about  average  us  monthly  stock  returns.Review of Financial Studies
+40:1337:81918:15:16:83:156:493:12:g_d0_f5:12:g_d0_f3:A:(forthcoming).
+40:1338:81932:16:14:72:526:477:12:g_d0_f3:12:g_d0_f3:B:Harvey, C. R., Y. Liu, and H. Zhu (2016).  ... and the cross-section of expected returns.
+40:1339:82021:14:16:83:293:463:12:g_d0_f5:12:g_d0_f3:A:Review of Financial Studies 29(1), 5–68.
+40:1340:82061:16:15:72:526:447:12:g_d0_f3:12:g_d0_f3:B:Haugen, R. A. and N. L. Baker (1996).  Commonality in determinants of expected stock
+40:1341:82145:15:16:83:376:432:12:g_d0_f3:12:g_d0_f3:A:returns.Journal of Financial Economics 41(3), 401–439.
+40:1342:82199:16:14:72:526:416:12:g_d0_f3:12:g_d0_f3:B:Hirshleifer, D., K. Hou, S. H. Teoh, and Y. Zhang (2004).  Do investors overvalue firms
+40:1343:82286:14:16:83:498:402:12:g_d0_f3:12:g_d0_f3:A:with bloated balance sheets?Journal of Accounting and Economics 38, 297–331.
+40:1344:82362:16:14:72:526:386:12:g_d0_f3:12:g_d0_f3:B:Horowitz,  J.,  J.  Klemel ̈a,  and  E.  Mammen  (2006).    Optimal  estimation  in  additive
+40:1345:82455:14:16:83:313:372:12:g_d0_f3:12:g_d0_f3:A:regression models.Bernoulli 12(2), 271–298.
+40:1346:82498:16:15:72:526:356:12:g_d0_f3:12:g_d0_f3:B:Horowitz,  J.  L.  (2016).   Variable  selection  and  estimation  in  high-dimensional  models.
+40:1347:82594:15:16:83:332:341:12:g_d0_f5:12:g_d0_f3:A:Canadian Journal of Economics 48(2), 389–407.
+40:1348:82639:16:14:72:526:325:12:g_d0_f3:12:g_d0_f3:B:Hou, K., G. A. Karolyi, and B.-C. Kho (2011).  What factors drive global stock returns?
+40:1349:82726:14:16:83:322:311:12:g_d0_f5:12:g_d0_f3:A:Review of Financial Studies 24(8), 2527–2574.
+40:1350:82771:16:15:72:526:295:12:g_d0_f3:12:g_d0_f3:B:Hou, K., C. Xue, and L. Zhang (2015).  Digesting anomalies:  An investment approach.
+40:1351:82855:15:15:83:310:280:12:g_d0_f5:12:g_d0_f3:A:Review of Financial Studies 28(3), 660–705.
+40:1352:82898:15:15:72:526:265:12:g_d0_f3:12:g_d0_f3:B:Huang, J., J. L. Horowitz, and F. Wei (2010). Variable selection in nonparametric additive
+40:1353:82988:15:16:83:323:250:12:g_d0_f3:12:g_d0_f3:A:models.Annals of Statistics 38(4), 2282–2313.
+40:1354:83033:16:14:72:525:234:12:g_d0_f3:12:g_d0_f5:B:Huang,  J.-Z.  and  Z.  Shi  (2016).Determinants  of  bond  risk  premia.Unpublished
+40:1355:83117:14:16:83:266:220:12:g_d0_f5:12:g_d0_f3:A:Manuscript, Penn State University.
+40:1356:83151:16:15:72:526:204:12:g_d0_f3:12:g_d0_f3:B:Jagannathan, R. and Z. Wang (1998).  An asymptotic theory for estimating beta-pricing
+40:1357:83236:15:16:83:506:189:12:g_d0_f3:12:g_d0_f3:A:models using cross-sectional regression.The Journal of Finance 53(4), 1285–1309.
+40:1358:83316:16:14:72:525:173:12:g_d0_f3:12:g_d0_f5:B:Jegadeesh, N. (1990).  Evidence of predictable behavior of security returns.The Journal
+40:1359:83403:14:16:83:222:159:12:g_d0_f5:12:g_d0_f3:A:of Finance 45(3), 881–898.
+40:1360:83429:16:14:72:526:143:12:g_d0_f3:12:g_d0_f3:B:Jegadeesh,  N. and S. Titman (1993).    Returns to Buying Winners and Selling Losers:
+40:1361:83514:14:16:83:452:129:12:g_d0_f3:12:g_d0_f3:A:Implications for Stock Market Efficiency.Journal of Finance 48, 65–91.
+40:1362:83584:16:15:72:526:113:12:g_d0_f3:12:g_d0_f3:B:Kan, R. and C. Zhang (1999). Two-pass tests of asset pricing models with useless factors.
+40:1363:83673:15:0:83:265:98:12:g_d0_f5:12:g_d0_f3:A:Journal of Finance 54(1), 203–235.
+41:1364:83709:0:15:72:525:735:12:g_d0_f3:12:g_d0_f5:B:Kleibergen,  F.  (2009).Tests  of  risk  premia  in  linear  factor  models.Journal of
+41:1365:83795:15:16:83:239:720:12:g_d0_f5:12:g_d0_f3:A:econometrics 149(2), 149–173.
+41:1366:83824:16:14:72:526:704:12:g_d0_f3:12:g_d0_f3:B:Kleibergen, F. and Z. Zhan (2015).  Unexplained factors and their effects on second pass
+41:1367:83912:14:16:83:363:690:12:g_d0_f3:12:g_d0_f3:A:r-squared’s.Journal of Econometrics 189(1), 101–116.
+41:1368:83964:16:14:72:525:674:12:g_d0_f3:12:g_d0_f5:B:Kozak,  S.,  S.  Nagel,  and  S.  Santosh  (2015).   Interpreting  factor  models.Unpublished
+41:1369:84057:14:16:83:270:660:12:g_d0_f5:12:g_d0_f3:A:Manuscript, University of Michigan.
+41:1370:84092:16:15:72:525:644:12:g_d0_f3:12:g_d0_f5:B:Lewellen,  J.  (2015).    The  cross  section  of  expected  stock  returns.Critical Finance
+41:1371:84184:15:16:83:180:629:12:g_d0_f5:12:g_d0_f3:A:Review 4(1), 1–44.
+41:1372:84202:16:14:71:525:613:12:g_d0_f3:12:g_d0_f3:B:Light,  N.,  D.  Maslov,  and  O.  Rytchkov  (2016).   Aggregation  of  information  about  the
+41:1373:84297:14:15:83:525:599:12:g_d0_f3:12:g_d0_f5:A:cross section of stock returns:  A latent variable approach.Review of Financial Studies
+41:1374:84384:15:16:83:156:584:12:g_d0_f5:12:g_d0_f3:A:(forthcoming).
+41:1375:84398:16:14:71:525:568:12:g_d0_f3:12:g_d0_f3:B:Lintner, J. (1965).  The valuation of risk assets and the selection of risky investments in
+41:1376:84489:14:15:83:525:554:12:g_d0_f3:12:g_d0_f3:A:stock portfolios and capital budgets.The Review of Economics and Statistics 47(1),
+41:1377:84571:15:15:83:116:539:12:g_d0_f3:12:g_d0_f3:A:13–37.
+41:1378:84577:15:15:71:525:524:12:g_d0_f3:12:g_d0_f3:B:Lucas, R. E. (1978).  Asset prices in an exchange economy.Econometrica 46(6), 1429–
+41:1379:84660:15:16:83:110:509:12:g_d0_f3:12:g_d0_f3:A:1445.
+41:1380:84665:16:14:71:525:493:12:g_d0_f3:12:g_d0_f3:B:Lyandres, E., L. Sun, and L. Zhang (2008). The new issues puzzle: Testing the investment-
+41:1381:84754:14:16:83:422:479:12:g_d0_f3:12:g_d0_f3:A:based explanation.Review of Financial Studies 21(6), 2825–2855.
+41:1382:84817:16:15:71:525:463:12:g_d0_f3:12:g_d0_f3:B:McLean, D. R. and J. Pontiff (2016). Does academic research destroy return predictability.
+41:1383:84907:15:16:83:248:448:12:g_d0_f5:12:g_d0_f3:A:Journal of Finance 71(1), 5–32.
+41:1384:84938:16:14:71:525:432:12:g_d0_f3:12:g_d0_f3:B:Meinshausen, N. and P. B ̈uhlmann (2006). High-dimensional graphs and variable selection
+41:1385:85026:14:16:83:363:418:12:g_d0_f3:12:g_d0_f3:A:with the Lasso.Annals of Statistics 34(3), 1436–1462.
+41:1386:85079:16:14:71:525:402:12:g_d0_f3:12:g_d0_f3:B:Merton, R. C. (1973). An intertemporal capital asset pricing model.Econometrica 41(5),
+41:1387:85165:14:16:83:127:388:12:g_d0_f3:12:g_d0_f3:A:867–887.
+41:1388:85173:16:16:71:522:372:12:g_d0_f3:12:g_d0_f3:B:Mossin, J. (1966).  Equilibrium in a capital asset market.Econometrica 34(4), 768–783.
+41:1389:85259:16:16:71:477:356:12:g_d0_f3:12:g_d0_f3:B:Novy-Marx, R. (2011).  Operating leverage.Review of Finance 15(1), 103–134.
+41:1390:85334:16:15:71:525:340:12:g_d0_f3:12:g_d0_f5:B:Novy-Marx,  R.  (2012).Is  momentum  really  momentum?Journal of Financial
+41:1391:85408:15:16:83:228:325:12:g_d0_f5:12:g_d0_f3:A:Economics 103(3), 429–453.
+41:1392:85434:16:14:71:525:309:12:g_d0_f3:12:g_d0_f5:B:Novy-Marx, R. (2013). The other side of value:  The gross profitability premium.Journal
+41:1393:85521:14:16:83:277:295:12:g_d0_f5:12:g_d0_f3:A:of Financial Economics 108(1), 1–28.
+41:1394:85557:16:14:72:525:279:12:g_d0_f3:12:g_d0_f5:B:Palazzo,  B.  (2012).   Cash  holdings,  risk,  and  expected  returns.Journal of Financial
+41:1395:85648:14:16:83:228:265:12:g_d0_f5:12:g_d0_f3:A:Economics 104(1), 162–185.
+41:1396:85674:16:15:71:525:249:12:g_d0_f3:12:g_d0_f3:B:Rosenberg, B., K. Reid, and R. Lanstein (1985). Persuasive evidence of market inefficiency.
+41:1397:85765:15:16:83:346:234:12:g_d0_f5:12:g_d0_f3:A:The Journal of Portfolio Management 11(3), 9–16.
+41:1398:85813:16:14:72:525:218:12:g_d0_f3:12:g_d0_f5:B:Ross, S. A. (1976).  The arbitrage theory of capital asset pricing.Journal of Economic
+41:1399:85899:14:16:83:203:204:12:g_d0_f5:12:g_d0_f3:A:Theory 13(3), 341–360.
+41:1400:85921:16:15:71:525:188:12:g_d0_f3:12:g_d0_f3:B:Rubinstein,  M.  (1976).   The  valuation  of  uncertain  income  streams  and  the  pricing  of
+41:1401:86017:15:16:83:367:173:12:g_d0_f3:12:g_d0_f3:A:options.The Bell Journal of Economics 7(2), 407–425.
+41:1402:86069:16:14:71:525:157:12:g_d0_f3:12:g_d0_f3:B:Sharpe,  W.  F.  (1964).    Capital  asset  prices:   A  theory  of  market  equilibrium  under
+41:1403:86164:14:16:83:385:143:12:g_d0_f3:12:g_d0_f3:A:conditions of risk.The Journal of Finance 19(3), 425–442.
+41:1404:86221:16:14:71:525:127:12:g_d0_f3:12:g_d0_f3:B:Sloan, R. (1996). Do stock prices fully reflect information in accruals and cash flows about
+41:1405:86313:14:16:83:353:113:12:g_d0_f3:12:g_d0_f3:A:future earnings?Accounting Review 71(3), 289–315.
+41:1406:86362:16:0:71:525:97:12:g_d0_f3:12:g_d0_f5:B:Soliman,  M.  T.  (2008).    The  use  of  DuPont  analysis  by  market  participants.The
+42:1407:86453:0:16:83:264:735:12:g_d0_f5:12:g_d0_f3:A:Accounting Review 83(3), 823–853.
+42:1408:86486:16:15:71:525:719:12:g_d0_f3:12:g_d0_f3:B:Stone,  C. J. (1982).  Optimal global rates of convergence for nonparametric regression.
+42:1409:86574:15:16:83:279:704:12:g_d0_f5:12:g_d0_f3:A:Annals of Statistics 10(4), 1040–1053.
+42:1410:86612:16:14:72:525:688:12:g_d0_f3:12:g_d0_f5:B:Stone, C. J. (1985).  Additive regression and other nonparametric models.The Annals of
+42:1411:86698:14:16:83:214:674:12:g_d0_f5:12:g_d0_f3:A:Statistics 13(2), 689–705.
+42:1412:86724:16:14:72:526:658:12:g_d0_f3:12:g_d0_f3:B:Stone,  C.  J.  (1986).    The  dimensionality  reduction  principle  for  generalized  additive
+42:1413:86820:14:16:83:335:644:12:g_d0_f3:12:g_d0_f3:A:models.The Annals of Statistics 14(2), 590–606.
+42:1414:86867:16:15:72:525:628:12:g_d0_f3:12:g_d0_f3:B:Yuan,  M.  and  Y.  Lin  (2006).Model  selection  and  estimation  in  regression  with
+42:1415:86954:15:14:83:525:613:12:g_d0_f3:12:g_d0_f5:A:grouped  variables.Journal of the Royal Statistical Society:  Series B (Statistical
+42:1416:87037:14:16:83:223:599:12:g_d0_f5:12:g_d0_f3:A:Methodology) 68(1), 49–67.
+42:1417:87063:16:15:72:525:583:12:g_d0_f3:12:g_d0_f5:B:Zou, H. (2006).  The adaptive Lasso and its oracle properties.Journal of the American
+42:1418:87148:15:0:83:310:568:12:g_d0_f5:12:g_d0_f3:A:Statistical Association 101(476), 1418–1429.

@@ -1,0 +1,1516 @@
+1:0:0:0:99:218:394:708:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:99:14:196:415:609:12:g_d0_f1:12:g_d0_f1:SHOCKS AND GOVERNMENT BELIEFS: 
+1:2:56:14:28:173:437:595:12:g_d0_f1:12:g_d0_f1:THE RISE AND FALL OF AMERICAN INFLATION
+1:3:95:28:15:266:344:567:12:g_d0_f1:12:g_d0_f1:Thomas Sargent
+1:4:109:15:14:269:342:552:12:g_d0_f1:12:g_d0_f1:Noah Williams
+1:5:122:14:28:285:325:538:12:g_d0_f1:12:g_d0_f1:Tao Zha
+1:6:129:28:14:253:358:510:12:g_d0_f1:12:g_d0_f1:Working Paper 10764
+1:7:147:14:43:218:392:496:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w10764
+1:8:180:43:14:173:437:453:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:9:216:14:14:237:373:439:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:10:241:14:14:250:361:425:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:11:260:14:198:266:344:411:12:g_d0_f1:12:g_d0_f1:September 2004
+1:12:274:198:13:71:539:213:11:g_d0_f1:11:g_d0_f1:We thank seminar participants at the NBER Summer Institute, Eric Leeper, James Nason, Ricardo Reis,
+1:13:373:13:13:71:539:200:11:g_d0_f1:11:g_d0_f1:William Roberds, Frank Schorfheide, Christopher Sims, and Lars Svensson for helpful discussions and Jordi
+1:14:478:13:13:71:539:187:11:g_d0_f1:11:g_d0_f1:Mondria for excellent research assistance. The views expressed herein do not necessarily reflect those of the
+1:15:587:13:13:71:539:174:11:g_d0_f1:11:g_d0_f1:Federal Reserve Bank of Atlanta or the Federal Reserve System. Sargent and Williams thank the National
+1:16:689:13:12:71:539:161:11:g_d0_f1:11:g_d0_f1:Science Foundation for support. The views expressed herein are those of the author(s) and not necessarily
+1:17:794:12:26:71:307:149:11:g_d0_f1:11:g_d0_f1:those of the National Bureau of Economic Research. 
+1:18:845:26:13:71:539:123:11:g_d0_f1:11:g_d0_f1:©2004 by Thomas Sargent, Noah Williams, and Tao Zha. All rights reserved. Short sections of text, not to
+1:19:949:13:13:71:539:110:11:g_d0_f1:11:g_d0_f1:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including ©
+1:20:1052:13:0:71:200:97:11:g_d0_f1:11:g_d0_f1:notice, is given to the source.
+2:21:1083:0:14:71:424:708:12:g_d0_f1:12:g_d0_f1:Shocks and Government Beliefs: The Rise and Fall of American Inflation
+2:22:1153:14:14:71:295:694:12:g_d0_f1:12:g_d0_f1:Thomas Sargent, Noah Williams, and Tao Zha
+2:23:1195:14:14:71:232:680:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 10764
+2:24:1223:14:14:71:149:666:12:g_d0_f1:12:g_d0_f1:September 2004
+2:25:1237:14:29:71:127:652:12:g_d0_f1:12:g_d0_f1:JEL No. E5
+2:26:1247:29:31:273:338:623:12:g_d0_f2:12:g_d0_f2:ABSTRACT
+2:27:1255:31:20:71:539:592:12:g_d0_f1:12:g_d0_f1:We use a Bayesian Markov Chain Monte Carlo algorithm to estimate a model that allows temporary
+2:28:1349:20:20:71:539:572:12:g_d0_f1:12:g_d0_f1:gaps between a true expectational Phillips curve and the monetary authority's approximating non-
+2:29:1445:20:21:71:539:552:12:g_d0_f1:12:g_d0_f1:expectational Phillips curve. A dynamic programming problem implies that the monetary authority's
+2:30:1542:21:20:71:539:531:12:g_d0_f1:12:g_d0_f1:inflation target evolves as its estimated Phillips curve moves. Our estimates attribute the rise and fall
+2:31:1647:20:20:71:539:511:12:g_d0_f1:12:g_d0_f1:of post WWII inflation in the US to an intricate interaction between the monetary authority's beliefs
+2:32:1748:20:21:71:539:491:12:g_d0_f1:12:g_d0_f1:and economic shocks. Shocks in the 1970s altered the monetary authority's estimates and made it
+2:33:1843:21:20:71:539:470:12:g_d0_f1:12:g_d0_f1:misperceive the tradeoff between inflation and unemployment. That caused a sharp rise in inflation
+2:34:1941:20:20:71:539:450:12:g_d0_f1:12:g_d0_f1:in the 1970s. Our estimates say that policymakers updated their beliefs continuously. By the 1980s,
+2:35:2040:20:21:71:539:430:12:g_d0_f1:12:g_d0_f1:their beliefs about the Phillips curve had changed enough to account for Volcker's conquest of US
+2:36:2137:21:27:71:203:409:12:g_d0_f1:12:g_d0_f1:inflation in the early 1980s.
+2:37:2166:27:15:71:149:382:12:g_d0_f1:12:g_d0_f1:Thomas Sargent
+2:38:2180:15:14:71:197:367:12:g_d0_f1:12:g_d0_f1:Department of Economics
+2:39:2203:14:14:71:175:353:12:g_d0_f1:12:g_d0_f1:New York University
+2:40:2222:14:14:71:205:339:12:g_d0_f1:12:g_d0_f1:269 Mercer Street, 7th Floor
+2:41:2250:14:14:71:177:325:12:g_d0_f1:12:g_d0_f1:New York, NY 10003
+2:42:2268:14:14:71:123:311:12:g_d0_f1:12:g_d0_f1:and NBER
+2:43:2276:14:29:71:192:297:12:g_d0_f1:12:g_d0_f1:thomas.sargent@nyu.edu
+2:44:2298:29:14:71:144:268:12:g_d0_f1:12:g_d0_f1:Noah Williams
+2:45:2311:14:14:71:197:254:12:g_d0_f1:12:g_d0_f1:Department of Economics
+2:46:2334:14:14:71:171:240:12:g_d0_f1:12:g_d0_f1:Princeton University
+2:47:2354:14:14:71:145:226:12:g_d0_f1:12:g_d0_f1:001 Fisher Hall
+2:48:2369:14:15:71:197:212:12:g_d0_f1:12:g_d0_f1:Princeton, NJ 08544-1021
+2:49:2393:15:14:71:123:197:12:g_d0_f1:12:g_d0_f1:and NBER
+2:50:2401:14:28:71:179:183:12:g_d0_f1:12:g_d0_f1:noahw@princeton.edu
+2:51:2420:28:14:71:111:155:12:g_d0_f1:12:g_d0_f1:Tao Zha
+2:52:2427:14:14:71:177:141:12:g_d0_f1:12:g_d0_f1:Research Department 
+2:53:2447:14:14:71:228:127:12:g_d0_f1:12:g_d0_f1:Federal Reserve Bank of Atlanta
+2:54:2478:14:15:71:200:113:12:g_d0_f1:12:g_d0_f1:1000 Peachtree Street N.E.
+2:55:2504:15:14:71:191:98:12:g_d0_f1:12:g_d0_f1:Atlanta, GA 30309-4470
+2:56:2526:14:0:71:164:84:12:g_d0_f1:12:g_d0_f1:tao.zha@atl.frb.org
+3:57:2575:0:28:259:352:673:12:Times:10:Times:I.INTRODUCTION
+3:58:2589:28:21:101:521:645:12:Times:12:Times:Today, many statesmen and macroeconomists believe that inflation can largely be de-
+3:59:2672:21:21:90:522:624:12:Times:12:Times:termined by a government monetary authority.  Then why did the Federal Reserve Board
+3:60:2756:21:20:90:522:603:12:Times:12:Times:preside over high US inflation during the late 1960s and the 1970s?  And why, under Paul
+3:61:2844:20:21:90:522:583:12:Times:12:Times:Volcker, did it rapidly bring inflation down during the early 1980s?  This paper answers
+3:62:2932:21:21:90:522:562:12:Times:12:Times:these questions by estimating a model that features a particular process that makes a pro-
+3:63:3022:21:21:90:522:541:12:Times:12:Times:cession of economic shocks induce the monetary authority to alter its model of inflation-
+3:64:3111:21:21:90:521:520:12:Times:12:Times:unemployment dynamics, the Phillips curve. At each datet, the monetary authority updates
+3:65:3199:21:21:90:522:499:12:Times:12:Times:its beliefs about the Phillips curve and then recomputes a first-period action recommended
+3:66:3289:21:21:90:522:478:12:Times:12:Times:by a “Phelps problem”, a discounted dynamic programming problem that minimizes the
+3:67:3371:21:21:90:521:457:12:Times:9:Times:expected value of a discounted quadratic loss function of inflation and unemployment.1
+3:68:3457:21:21:90:522:436:12:Times:12:Times:The monetary authority pursues the same objectives at each date, using the same structural
+3:69:3547:21:21:90:521:415:12:Times:12:Times:model, with only its estimates of that model changing over time.2This model of the sys-
+3:70:3634:21:21:90:522:394:12:Times:12:Times:tematic part of inflation puts the monetary authority’s beliefs about the Phillips curve front
+3:71:3728:21:21:90:145:373:12:Times:9:Times:and center.3
+3:72:3740:21:20:101:521:352:12:Times:12:Times:We assume that the monetary authority’s model of the Phillips curve deviates in two
+3:73:3823:20:21:90:522:332:12:Times:12:Times:subtle but important ways from what it would be in a rational expectations model (e.g.,
+3:74:3910:21:21:90:521:311:12:Times:12:Times:Kydland and Prescott (1977)).  The first deviation is that, while the true Phillips curve is
+3:75:4002:21:21:90:522:290:12:Times:12:Times:like Kydland and Prescott’s, we assume that the monetary authority omits the public’s ex-
+3:76:4091:21:21:90:522:269:12:Times:12:Times:pected rate of inflation from its Phillips curve.  By itself, this omission need not prevent
+3:77:4183:21:21:90:522:248:12:Times:12:Times:the outcomes of our model from coinciding with those of Kydland and Prescott’s, nor need
+3:78:4271:21:54:90:522:227:12:Times:12:Times:it imply that the government’s model is wrong in a way that could be detected from even
+3:79:4358:54:16:101:352:173:9:Times:10:Times:1Sargent (1999) contributed the nomenclature Phelps problem.
+3:80:4418:16:22:101:522:157:9:Times:10:Times:2There is some debate about whether policy objectives or the structural models used by policymakers have
+3:81:4522:22:18:90:522:135:10:Times:10:Times:evolved over time.  However introducing such an evolution of understanding into formal models is difficult
+3:82:4628:18:14:90:427:117:10:Times:10:Times:without arbitrarily imposing exogenous changes. We need no such exogenous shifts.
+3:83:4709:14:0:101:448:103:9:Times:10:Times:3As does Kydland and Prescott’s (1977) model of time-consistent suboptimal inflation.
+4:84:4824:0:21:90:522:673:12:Times:12:Times:an infinite sample.  Whether the monetary authority’s model is wrong in a statistically de-
+4:85:4915:21:21:90:522:652:12:Times:12:Times:tectable way depends on how we allow the monetary authority to reestimate the parameters
+4:86:5003:21:21:90:522:631:12:Times:12:Times:of its model. In particular, if the monetary authority were to believe that the coefficients of
+4:87:5098:21:20:90:522:610:12:Times:12:Times:its Phillips curve are constant over time, then its estimates would converge to ones that sup-
+4:88:5192:20:21:90:522:590:12:Times:12:Times:port a self-confirming equilibrium (SCE). After convergence, its estimated Phillips curve
+4:89:5281:21:21:90:522:569:12:Times:12:Times:would correctly describe occurrences along the SCE path for inflation and unemployment.
+4:90:5368:21:21:90:522:548:12:Times:12:Times:Such an after-convergence version of our model has little hope of explaining the rise and
+4:91:5457:21:21:90:522:527:12:Times:12:Times:fall of US inflation:  that model would have inflation fluctuating randomly around a con-
+4:92:5546:21:21:90:522:506:12:Times:12:Times:stant SCE level that coincides with Kydland and Prescott’s time consistent suboptimal (i.e.,
+4:93:5638:21:21:90:171:485:12:Times:9:Times:excessive) level.4
+4:94:5656:21:21:101:521:464:12:Times:12:Times:This outcome motivates our second subtle deviation from a rational expectations equi-
+4:95:5741:21:21:90:522:443:12:Times:12:Times:librium.  Instead of thinking that the regression coefficients in its Phillips curve are time
+4:96:5834:21:21:90:522:422:12:Times:12:Times:invariant  (which  they  indeedarein  an  SCE),  our  monetary  authority  believes  that  they
+4:97:5929:21:21:90:522:401:12:Times:12:Times:form a vector random walk with innovation covariance matrixV.  Given that model, the
+4:98:6013:21:21:90:521:380:12:Times:12:Times:monetary authority updates its beliefs using Bayes’ rule. The covariance matrixVand the
+4:99:6100:21:21:90:522:359:12:Times:12:Times:initial condition for the regression parameters in the monetary authority’s Phillips curve
+4:100:6190:21:20:90:522:338:12:Times:12:Times:become the hyperparameters of a model that shapes evolution of the monetary authority’s
+4:101:6277:20:21:90:522:318:12:Times:12:Times:beliefs.5After calibrating the initial condition and imposing that the systematic part of
+4:102:6366:21:21:90:522:297:12:Times:12:Times:inflation is determined by the timetsolution of the Phelps problem, we estimateValong
+4:103:6451:21:21:90:521:276:12:Times:12:Times:with parameters of thetrueexpectational Phillips curve that, unbeknownst to the monetary
+4:104:6539:21:21:90:522:255:12:Times:12:Times:authority,  truly  describes  inflation-unemployment  dynamics.   Using  a  Bayesian  Markov
+4:105:6631:21:21:90:522:234:12:Times:12:Times:Chain Monte Carlo (MCMC) algorithm, we report statistics that describe the posterior dis-
+4:106:6720:21:22:90:522:213:12:Times:12:Times:tribution of these parameters of our model.  We obtain a much better explanation of the
+4:107:6807:22:22:101:522:191:9:Times:10:Times:4Michael Parkin (1993) and Peter Ireland (1999) advocate the hypothesis that the post WWII US inflation
+4:108:6910:22:18:90:522:169:10:Times:10:Times:data can be accounted for by well understood medium term movements in the natural rate of unemploy-
+4:109:7009:18:18:90:522:151:10:Times:10:Times:ment, stable government preferences, and a steady adherence to the time-consistent suboptimal equilibrium
+4:110:7114:18:12:90:218:133:10:Times:10:Times:of Kydland and Prescott (1977).
+4:111:7145:12:22:101:522:121:9:Times:10:Times:5As would be true in a rational expectations model, the monetary authority’s beliefs are outcomes, not free
+4:112:7252:22:0:90:136:99:10:Times:10:Times:parameters.
+5:113:7293:0:21:90:522:673:12:Times:12:Times:monetary authority’s inflation choices than earlier efforts to estimate similar models had
+5:114:7383:21:21:90:135:652:12:Times:12:Times:achieved.
+5:115:7392:21:21:101:522:631:12:Times:12:Times:With very particular a priori settings of the parameter innovation covariance matrixV,
+5:116:7478:21:20:90:521:610:12:Times:12:Times:Sims (1988), Chung (1990), Sargent (1999), and Cho, Williams, and Sargent (2002) all
+5:117:7562:20:21:90:522:590:12:Times:12:Times:studied versions of our model.6When Chung and Sargent estimated their a-priori-fixed-
+5:118:7647:21:21:89:521:569:12:Times:12:Times:Vversions of our model, they obtained discouraging results.  They did not come close to
+5:119:7734:21:21:90:522:548:12:Times:12:Times:explaining the rise and fall of US inflation in terms of a process of the monetary authority’s
+5:120:7828:21:21:90:248:527:12:Times:9:Times:learning about its Phillips curve.7
+5:121:7863:21:21:101:521:506:12:Times:12:Times:This paper estimates settings forVthat attain substantial improvements in the model’s
+5:122:7948:21:21:90:522:485:12:Times:12:Times:ability to rationalize the choices made by the US monetary authority.  The MCMC algo-
+5:123:8033:21:21:90:521:464:12:Times:12:Times:rithm finds values forVthat allow the model to reverse engineer from the data a sequence of
+5:124:8124:21:21:90:522:443:12:Times:12:Times:government beliefs about the Phillips curve that, through the intermediation of the Phelps
+5:125:8214:21:21:90:522:422:12:Times:12:Times:problem, capture both the acceleration of US inflation in the 1970s and its rapid decline in
+5:126:8306:21:21:90:522:401:12:Times:12:Times:the early 1980s. Our MCMC method estimates aVthat accommodates an avenue by which
+5:127:8387:21:21:90:522:380:12:Times:12:Times:economic shocks impinge on the monetary authority’s beliefs, via its use of Bayes’ rule,
+5:128:8475:21:21:90:522:359:12:Times:12:Times:and its decisions, via successive solutions of its Phelps problem. The monetary authority’s
+5:129:8566:21:20:90:522:338:12:Times:12:Times:views about parameter drift and its application of Bayes’ rule add a source of history de-
+5:130:8656:20:21:90:522:318:12:Times:12:Times:pendence to its procession of decisions that is absent, for example, in either Sargent’s SCE
+5:131:8748:21:21:90:522:297:12:Times:12:Times:or the Markov perfect equilibrium of Kydland and Prescott’s model. The resulting interac-
+5:132:8837:21:21:90:522:276:12:Times:12:Times:tions of shocks and monetary beliefs forms the basis for our explanation of the rise and fall
+5:133:8930:21:21:90:164:255:12:Times:12:Times:of US inflation.
+5:134:8946:21:21:101:522:234:12:Times:12:Times:The rest of the paper is organized as follows.  In SectionII, we lay out the model and
+5:135:9032:21:59:90:522:213:12:Times:12:Times:discuss the theoretical characterizations of it.  In SectionIII, we develop a method for the
+5:136:9124:59:22:101:521:154:9:Times:10:Times:6Sargent and Williams (2003) is an extensive theoretical study of a version of our model that focuses on
+5:137:9228:22:11:90:508:132:10:Times:10:Times:the impact of different settings ofVon rates of convergence to, escapes from, and cycles around an SCE.
+5:138:9331:11:22:101:522:121:9:Times:10:Times:7Previous failures to match the data with a model like ours seem to be widely recognized and helped to
+5:139:9433:22:0:90:437:99:10:Times:10:Times:promote a literature that makes the “stickiness” (or persistence) of inflation exogenous.
+6:140:9552:0:21:90:521:673:12:Times:12:Times:estimation and inference of the model.  SectionIVpresents our empirical results, exam-
+6:141:9638:21:21:90:522:652:12:Times:12:Times:ines the performance of the model, and explores implications.  SectionVconducts some
+6:142:9722:21:21:90:521:631:12:Times:12:Times:counterfactual exercises.  SectionVIrelates our findings to some other literature.  Finally,
+6:143:9814:21:20:90:522:610:12:Times:12:Times:SectionVIIconcludes.  Six appendices describe the data, provide technical details about
+6:144:9901:20:21:90:522:590:12:Times:12:Times:the setting of our prior distribution for estimation and the sampling scheme for inference,
+6:145:9992:21:21:90:522:569:12:Times:12:Times:compare key forecasting features of our learning model to those of alternative statistical
+6:146:10082:21:21:90:522:548:12:Times:12:Times:models, and report statistical inference on the estimates of the government’s inflation pol-
+6:147:10174:21:42:90:222:527:12:Times:12:Times:icy and perceived tradeoffs.
+6:148:10202:42:28:265:345:485:12:Times:10:Times:II.THEMODEL
+6:149:10213:28:20:101:521:457:12:Times:12:Times:The  model  is  an  extension  of  Sargent  and  Williams  (2003),  which  is  composed  of  a
+6:150:10307:20:34:90:489:437:12:Times:12:Times:Lucas-Sargent natural-rate version of the Phillips curve and a true inflation process:
+6:151:10393:34:26:129:522:403:12:Times:12:Times:ut−u∗=θ0(πt−Et−1πt)+θ1(πt−1−Et−2πt−1)+τ1(ut−1−u∗)+σ1w1t,(1)
+6:152:10452:26:34:261:522:377:12:Symbol:12:Times:πt=xt−1+σ2w2t,(2)
+6:153:10469:34:21:90:521:343:12:Times:12:Times:whereutis the unemployment rate,πtis inflation,xtis the part of inflation controllable by
+6:154:10558:21:21:90:522:322:12:Times:12:Times:the government given the information up to timet, andw1tandw2tare i.i.d. uncorrelated
+6:155:10643:21:21:90:522:301:12:Times:12:Times:standard  normal  random  variables.   Equation  (1)  is  an  expectations-augmented  Phillips
+6:156:10737:21:21:90:521:280:12:Times:12:Times:curve.   Ifabs(θ0)>abs(θ1),  (1) becomes a version of a natural-rate Phillips curve that
+6:157:10825:21:21:90:522:259:12:Times:12:Times:allows a serially correlated disturbance (Sargent1999). Equation (2) states that the govern-
+6:158:10917:21:21:90:522:238:12:Times:12:Times:ment sets policy to influence inflation up to a random shock. The government’s policy is to
+6:159:11008:21:21:90:521:217:12:Times:9:Times:minimize a loss function that dislikes both inflation and unemployment. The decisionxt−1
+6:160:11096:21:34:90:229:196:12:Times:12:Times:solves the “Phelps problem”:
+6:161:11124:34:7:211:230:162:12:Times:12:Times:min
+6:162:11127:7:0:213:228:155:9:Times:7:Times:xt−1
+6:163:11131:0:0:233:237:164:12:Times:12:Times:ˆE
+6:164:11133:0:16:245:251:175:9:Symbol:9:Symbol:∞
+6:165:11134:16:9:242:254:159:17:Symbol:17:Symbol:∑
+6:166:11135:9:0:241:255:150:9:Times:9:Times:t=1
+6:167:11138:0:36:258:522:162:12:Symbol:12:Times:δt((πt−π∗)2+λ(ut−u∗∗)2)(3)
+6:168:11164:36:26:90:173:126:12:Times:12:Times:subject to (2) and
+6:169:11182:26:0:256:522:100:12:Times:12:Times:ut=ˆα′t|t−1Φt+σwt,(4)
+7:170:11233:0:21:90:521:673:12:Times:12:Times:whereπ∗andu∗∗are the targeted levels of inflation and unemployment, bothˆαt|t−1and
+7:171:11315:21:21:90:522:652:12:Symbol:12:Times:Φtarer×1vectors,wtis an i.i.d. standard normal random variable, and where (4) is the
+7:172:11399:21:21:90:522:631:12:Times:12:Times:core of the monetary authority’s model of inflation-unemployment dynamics.  The vector
+7:173:11485:21:20:90:521:610:12:Symbol:12:Times:Φtof regressors consists of lags of unemployment and inflation.  By comparing (4) with
+7:174:11571:20:21:90:521:590:12:Times:12:Times:(1), we see that the government fails to account explicitly for the role of expectations in
+7:175:11662:21:21:90:522:569:12:Times:12:Times:determining the unemployment rate.  HereˆErepresents expectations with respect to the
+7:176:11747:21:21:90:521:548:12:Times:12:Times:government’s subjective model, and the subscriptt−1means that the government updates
+7:177:11831:21:21:92:521:527:12:Times:12:Times:ˆαt|t−1and at eachtcomputesxt−1by solving the timetPhelps problem before observing
+7:178:11913:21:21:90:522:506:12:Symbol:12:Times:πtandut. Thus, the government sets policy based on its misspecified Phillips curve (4), not
+7:179:12004:21:21:90:521:485:12:Times:12:Times:the true Phillips curve (1). A self-confirming equilibrium (SCE) is a vector of government
+7:180:12094:21:21:90:521:464:12:Times:12:Times:beliefs ̄αthat is consistent with what it observes in the sense of satisfying the population
+7:181:12186:21:28:89:269:443:12:Times:12:Times:least squares orthogonality condition:
+7:182:12224:28:0:251:258:415:12:Times:12:Times:E
+7:183:12225:0:10:261:266:425:12:g_d0_f6:12:g_d0_f6:[
+7:184:12226:10:0:266:331:415:12:Symbol:12:g_d0_f4:Φt(ut−Φ′t ̄α)
+7:185:12239:0:10:331:336:425:12:g_d0_f6:12:g_d0_f6:]
+7:186:12240:10:28:338:522:415:12:g_d0_f4:12:Times:=0,(5)
+7:187:12246:28:21:90:521:387:12:Times:9:Times:where the expectation is taken with respect to the probability distribution ofut,πt, andxt−1
+7:188:12338:21:21:89:506:366:12:Times:12:Times:that satisfies (1), (2), and the decision rule when the government optimizes based on ̄α.
+7:189:12427:21:21:101:521:345:12:Times:12:Times:Self-confirming equilibrium outcomes agree with the time-consistent Nash equilibrium
+7:190:12511:21:21:90:522:324:12:Times:12:Times:outcomes in which policymakers set inflation at a higher level than the socially optimal
+7:191:12599:21:28:90:335:303:12:Times:12:Times:Ramsey level (see Sargent1999).8Nash inflation is
+7:192:12648:28:0:192:315:275:12:Symbol:12:g_d0_f4:πNash=π∗−λ(u∗−u∗∗)
+7:193:12666:0:9:316:321:284:12:g_d0_f6:12:g_d0_f6:[
+7:194:12667:9:0:321:408:275:12:g_d0_f4:9:Times:(1+δ τ1)θ0+δ θ1
+7:195:12682:0:9:409:414:284:12:g_d0_f6:12:g_d0_f6:]
+7:196:12683:9:29:415:522:275:12:g_d0_f5:12:Times:.(6)
+7:197:12687:29:20:90:521:246:12:Times:12:Times:The larger areu∗−u∗∗,θ0, andθ1in absolute value, the higher is the Nash inflation rate
+7:198:12773:20:21:90:247:226:12:Times:12:Times:compared to the Ramsey rateπ∗.
+7:199:12803:21:21:101:521:205:12:Times:12:Times:A self-confirming equilibrium is a population concept that restricts beliefs to be time-
+7:200:12891:21:21:90:522:184:12:Times:12:Times:invariant and that is a benchmark – and as it sometimes turns out, a limit point – for our
+7:201:12981:21:21:90:522:163:12:Times:12:Times:model.  In our model, unlike an SCE, at any point in history the government updates its
+7:202:13068:21:22:90:521:142:12:Times:12:Times:beliefs as it learns.   In particular,  the government basesˆαt|t−1,  its mean estimate of the
+7:203:13162:22:22:101:522:120:9:Times:10:Times:8As explained by Sargent (1999, chapter 3), the gap between the Ramsey and Nash or SCE outcomes for
+7:204:13261:22:0:90:417:98:10:Times:10:Times:inflation reflects the benefit to the government of being able to commit to a policy.
+8:205:13376:0:21:90:522:673:12:Times:12:Times:drifting parameter vectorαt, on the observations up to and including timet−1from the
+8:206:13460:21:31:90:305:652:12:Times:12:Times:following (misspecified) econometric model:
+8:207:13503:31:26:264:522:621:12:Times:12:Times:ut=α′tΦt+σwt,(7)
+8:208:13519:26:32:268:522:595:12:Symbol:12:Times:αt=αt−1+Λt,(8)
+8:209:13533:32:21:90:522:563:12:Times:12:Times:whereΛt, uncorrelated withwt, is an i.i.d. Gaussian random vector with mean 0 and co-
+8:210:13618:21:21:90:521:542:12:Times:12:Times:variance matrixV.  Thus, the government believes that the true economy drifts over time.
+8:211:13706:21:21:90:522:521:12:Times:12:Times:That is why it continually adapts its parameter estimates. The innovation covariance matrix
+8:212:13797:21:21:89:522:500:12:Times:12:Times:Vgoverns the perceived volatility of increments to the parameters, and is a key component
+8:213:13886:21:30:90:449:479:12:Times:12:Times:of the model. The mean estimate ofαtfor the econometric model (7)-(8) is
+8:214:13958:30:27:257:356:449:12:Times:12:g_d0_f5:ˆαt|t−1≡ˆE(αt|It−1),
+8:215:13978:27:32:247:364:422:12:g_d0_f7:12:g_d0_f5:It≡{u1,π1,...,ut,πt}.
+8:216:13999:32:24:90:106:390:12:Times:12:Times:Let
+8:217:14002:24:28:251:360:366:12:Times:12:g_d0_f5:Pt|t−1≡̂Var(αt|It−1).
+8:218:14023:28:21:90:522:338:12:Times:12:Times:Given the government’s model, the mean estimates are optimally updated via the special
+8:219:14109:21:20:90:521:317:12:Times:12:Times:case  of  Bayes  rule  known  as  the  Kalman  filter.   Givenˆα1|0andP1|0,  the  Kalman  filter
+8:220:14205:20:39:89:341:297:12:Times:12:Times:algorithm updatesˆαt|t−1with the following formula:
+8:221:14256:39:0:209:287:258:12:Times:12:g_d0_f4:ˆαt+1|t=ˆαt|t−1+
+8:222:14272:0:19:290:401:269:12:Times:12:g_d0_f4:Pt|t−1Φt(ut−Φ′tˆαt|t−1)
+8:223:14295:19:0:307:382:250:12:Symbol:9:Times:σ2+Φ′tPt|t−1Φt
+8:224:14309:0:42:401:522:258:12:g_d0_f5:12:Times:,(9)
+8:225:14313:42:0:215:292:216:12:Times:12:g_d0_f3:Pt+1|t=Pt|t−1−
+8:226:14327:0:19:295:371:227:12:Times:9:Times:Pt|t−1ΦtΦ′tPt|t−1
+8:227:14344:19:0:295:371:208:12:Symbol:9:Times:σ2+Φ′tPt|t−1Φt
+8:228:14358:0:34:375:522:216:12:g_d0_f4:12:Times:+V.(10)
+8:229:14365:34:21:90:522:182:12:Times:12:Times:Instead of using the Kalman filter, many models of adaptation assume a learning rule known
+8:230:14455:21:21:90:460:161:12:Times:12:Times:as recursive least squares (RLS), which is closely related to the Kalman filter.
+8:231:14535:21:21:101:521:140:12:Times:12:Times:An important issue about any learning rule is whether the learning process will converge
+8:232:14623:21:21:90:522:119:12:Times:12:Times:to a self-confirming equilibrium. To summarize what we known about this, we scale the in-
+8:233:14712:21:0:90:521:98:12:Times:12:Times:novation covariance matrix asV=ε2ˆV, forε>0. Key analytical results from Sargent and
+9:234:14826:0:21:90:522:673:12:Times:12:Times:Williams (2003) that underscore the role of the government’s learning from misspecified
+9:235:14913:21:28:90:145:652:12:Times:12:Times:models are:
+9:236:14924:28:21:107:521:624:12:Times:12:Times:(1)In this model, inflation converges much faster to the SCE under Kalman filtering
+9:237:15007:21:21:126:521:603:12:Times:12:Times:learning than under RLS. In effect,  the Kalman filter learning rule with drifting
+9:238:15089:21:21:126:521:582:12:Times:12:Times:coefficients seems to discount the past data more rapidly than the constant gain
+9:239:15169:21:21:126:215:561:12:Times:12:Times:RLS learning rule.
+9:240:15187:21:20:107:522:540:12:Times:12:Times:(2)As the government’s prior belief parameterε→0(at the0limit there is no time
+9:241:15265:20:21:126:521:520:12:Times:12:Times:variation in the parameters), inflation converges to the self-confirming equilibrium
+9:242:15349:21:21:126:405:499:12:Times:12:Times:(SCE) and the mean escape time becomes arbitrarily long.
+9:243:15405:21:21:107:521:478:12:Times:12:Times:(3)As the government’s prior belief parameterσ→0(in the0limit, there is no vari-
+9:244:15485:21:21:126:521:457:12:Times:12:Times:ation in the government’s regression error or arbitrarily large time variation in the
+9:245:15570:21:21:126:521:436:12:Times:12:Times:drifting parameters), large escapes from an SCE can happen arbitrarily often and
+9:246:15650:21:21:126:260:415:12:Times:12:Times:nonconvergence is possible.
+9:247:15677:21:21:107:521:394:12:Times:12:Times:(4)The covariance matrixVin the government’s prior belief about the volatility of the
+9:248:15762:21:21:126:521:373:12:Times:12:Times:drifting parameters affects the speed of escape. The covariance matrixVcombined
+9:249:15841:21:21:126:522:352:12:Times:12:Times:with the prior belief parameterε, affects the speed of convergence to the SCE from
+9:250:15923:21:58:126:224:331:12:Times:12:Times:a low inflation level.
+9:251:15945:58:28:219:392:273:12:Times:10:Times:III.ESTIMATION ANDINFERENCE
+9:252:15972:28:21:101:521:245:12:Times:12:Times:The theoretical results indicate how very different outcomes can emerge from different
+9:253:16058:21:21:90:522:224:12:Times:12:Times:government beliefs.  The overriding task of this paper is to fit the model to the data and
+9:254:16148:21:21:90:521:203:12:Times:12:Times:thereby to estimate and quantify the uncertainty about the parameters,σ2andV, jointly
+9:255:16233:21:21:90:522:182:12:Times:12:Times:with the model’s other structural parameters, including those governing the “true” expec-
+9:256:16322:21:20:90:522:161:12:Times:12:Times:tational Phillips curve (1).  Before estimation, we fix the values ofδ,λ,π∗,u∗∗, andˆα1|0.
+9:257:16412:20:43:89:300:141:12:Times:12:Times:Group all other free structural parameters as
+9:258:16457:43:0:210:401:98:12:Symbol:12:g_d0_f5:φ={v∗,θ0,θ1,τ1,ζ1,ζ2,u(CP),u(CV)},
+10:259:16521:0:21:90:522:673:12:Times:12:Times:wherev∗=u∗(1−τ1),CPandCVare upper triangular such thatP1|0=C′PCPandV=C′VCV,
+10:260:16596:21:21:90:522:652:12:Times:12:Times:andζ1=1/σ21andζ2=1/σ22represent the precisions of the corresponding innovations.
+10:261:16676:21:21:89:522:631:12:Times:12:Times:The notationu(CP)oru(CV)means that only the upper triangular part ofCPorCVare
+10:262:16753:21:20:90:220:610:12:Times:12:Times:among the free parameters.
+10:263:16779:20:21:101:522:590:12:Times:12:Times:The structural parameterζ=1/σ2is not a free parameter.  It is clear from (9), (10),
+10:264:16862:21:21:90:522:569:12:Times:12:Times:and (B1) that if we scaleVandP1|0byκandζby1/κ, the likelihood value remains the
+10:265:16941:21:21:90:521:548:12:Times:12:Times:same. There would exist a continuum of maximum likelihood estimates (MLEs) ifζwere
+10:266:17023:21:21:90:522:527:12:Times:12:Times:not restricted (i.e., the model is unidentified). Some normalization is necessary. Following
+10:267:17115:21:21:90:522:506:12:Times:12:Times:Sargent and Williams, we impose the restrictionζ=ζ1.  This normalization implies that
+10:268:17200:21:21:89:521:485:12:Times:12:Times:the variation that policymakers observe in the unemployment rate is correctly decomposed
+10:269:17288:21:21:89:521:464:12:Times:12:Times:into variation in the regressors and variation due to exogenous shocks. This assumption has
+10:270:17379:21:21:89:393:443:12:Times:9:Times:an advantage because it makes limiting results easier to derive.9
+10:271:17444:21:21:101:521:422:12:Times:12:Times:As we’ve noted, Sargent and Williams (2003) show that whether monetary policy stays
+10:272:17527:21:21:90:522:401:12:Times:12:Times:close to a path associated with a self-confirming equilibrium, and if not, how it evolves over
+10:273:17621:21:21:90:522:380:12:Times:12:Times:time are both sensitive to the model’s parameters (especially the government’s belief about
+10:274:17712:21:21:90:522:359:12:Times:12:Times:the covariance matrix for the drifting coefficients). No doubt this sensitivity contributes to
+10:275:17806:21:20:90:464:338:12:Times:12:Times:the outcome that we are able to estimate the key structural parameters sharply.
+10:276:17885:20:21:101:524:318:12:Times:12:Times:To take into account the parameter uncertainty explicitly, we employ the Bayesian method
+10:277:17973:21:21:90:522:297:12:Times:12:Times:and develop a Monte Carlo Markov Chain (MCMC) algorithm that breaksφinto three sep-
+10:278:18056:21:75:89:274:276:12:Times:12:Times:arate blocks:θ,{ζ1,ζ2}, andφwhere
+10:279:18089:75:0:279:298:201:12:Symbol:12:g_d0_f4:θ=
+10:280:18091:0:21:301:309:243:12:g_d0_f6:12:g_d0_f6:
+10:281:18092:21:7:301:309:222:12:g_d0_f6:12:g_d0_f6:
+10:282:18093:7:7:301:309:215:12:g_d0_f6:12:g_d0_f6:
+10:283:18094:7:7:301:309:208:12:g_d0_f6:12:g_d0_f6:
+10:284:18095:7:7:301:309:201:12:g_d0_f6:12:g_d0_f6:
+10:285:18096:7:8:301:309:194:12:g_d0_f6:12:g_d0_f6:
+10:286:18097:8:0:301:309:186:12:g_d0_f6:12:g_d0_f6:
+10:287:18098:0:21:309:318:232:12:Times:9:g_d0_f3:v∗
+10:288:18100:21:21:309:319:211:12:Symbol:9:Times:θ0
+10:289:18102:21:21:309:319:190:12:Symbol:9:Times:θ1
+10:290:18104:21:0:309:318:169:12:Symbol:9:Times:τ1
+10:291:18106:0:21:320:328:243:12:g_d0_f6:12:g_d0_f6:
+10:292:18107:21:7:320:328:222:12:g_d0_f6:12:g_d0_f6:
+10:293:18108:7:7:320:328:215:12:g_d0_f6:12:g_d0_f6:
+10:294:18109:7:7:320:328:208:12:g_d0_f6:12:g_d0_f6:
+10:295:18110:7:7:320:328:201:12:g_d0_f6:12:g_d0_f6:
+10:296:18111:7:8:320:328:194:12:g_d0_f6:12:g_d0_f6:
+10:297:18112:8:0:320:328:186:12:g_d0_f6:12:g_d0_f6:
+10:298:18113:0:80:329:332:201:12:g_d0_f5:12:g_d0_f5:,
+10:299:18114:80:7:101:515:121:9:Times:10:Symbol:9Note that an SCE requires the orthogonality conditions, not necessarily the equality restrictionζ=ζ
+10:300:18214:7:15:515:521:114:7:Times:10:Times:1.
+10:301:18216:15:0:89:292:99:10:Times:10:Times:Indeed, the examples of Sims (1988) allowζ6=ζ1.
+11:302:18294:0:31:90:507:673:12:Times:12:Times:andφ={u(CP),u(CV)}. The prior distributions of bothθandφtake a Gaussian form:
+11:303:18371:31:26:249:522:642:12:Times:12:Times:p(θ) =Normal( ̄θ, ̄Σθ);(11)
+11:304:18398:26:32:248:522:616:12:Times:12:Times:p(φ) =Normal( ̄φ, ̄Σφ).(12)
+11:305:18425:32:21:90:522:584:12:Times:12:Times:The prior probability density for the precision parametersζ1andζ2is a Gamma distribu-
+11:306:18510:21:24:89:111:563:12:Times:12:Times:tion:
+11:307:18515:24:0:181:319:539:12:Times:12:g_d0_f4:p(ζ1,ζ2) =Gamma( ̄α, ̄β) =
+11:308:18541:0:16:326:330:552:9:Times:9:Times:2
+11:309:18542:16:10:322:336:536:17:Symbol:17:Symbol:∏
+11:310:18543:10:0:322:335:526:9:Times:9:Times:i=1
+11:311:18546:0:18:357:363:547:12:Times:12:Times:1
+11:312:18547:18:0:340:379:529:12:Symbol:9:Symbol:Γ( ̄α) ̄β ̄α
+11:313:18559:0:0:381:412:539:12:Symbol:12:Times:ζ ̄α−1ie
+11:314:18567:0:7:412:425:546:9:g_d0_f3:7:Symbol:−ζi ̄β
+11:315:18573:7:30:428:522:539:12:g_d0_f5:12:Times:.(13)
+11:316:18578:30:21:101:521:509:12:Times:12:Times:The posterior distribution ofφcan be simulated by alternately sampling from the condi-
+11:317:18664:21:31:90:317:488:12:Times:12:Times:tional posterior distributions (a Gibbs sampler):
+11:318:18713:31:26:258:353:457:12:Times:12:g_d0_f5:p(θ|IT,ζ1,ζ2,φ),
+11:319:18729:26:27:258:353:431:12:Times:12:g_d0_f5:p(ζ1,ζ2|IT,θ,φ),
+11:320:18745:27:31:258:353:404:12:Times:12:g_d0_f5:p(φ|IT,θ,ζ1,ζ2).
+11:321:18761:31:21:90:522:373:12:Times:12:Times:The following two propositions state that the first two conditional posterior distributions
+11:322:18852:21:33:90:287:352:12:Times:12:Times:are Gaussian. AppendixBoffers a proof.
+11:323:18890:33:25:90:157:319:12:Times:12:Times:Proposition1.
+11:324:18903:25:27:215:522:294:12:Times:12:Times:p(θ|IT,ζ1,ζ2,φ) =Normal( ̃θ, ̃Σθ),(14)
+11:325:18941:27:29:90:119:267:12:Times:12:Times:where
+11:326:18946:29:7:245:262:238:12:Times:9:Times: ̃Σ−1
+11:327:18951:7:0:251:287:231:9:Symbol:9:Times:θ=ζ1
+11:328:18955:0:15:294:299:248:9:Times:9:Times:T
+11:329:18956:15:10:291:303:233:17:Symbol:17:Symbol:∑
+11:330:18957:10:0:290:304:223:9:Times:9:Times:t=1
+11:331:18960:0:38:305:367:235:12:g_d0_f4:12:g_d0_f5:(yty′t)+ ̄Σ−1θ,
+11:332:18975:38:7:231:257:197:12:Times:12:Symbol: ̃θ= ̃Σ
+11:333:18982:7:0:257:262:190:9:Symbol:9:Symbol:θ
+11:334:18983:0:21:265:274:215:12:g_d0_f6:12:g_d0_f6:(
+11:335:18984:21:0:274:284:194:12:Symbol:9:Times:ζ1
+11:336:18986:0:15:291:296:207:9:Times:9:Times:T
+11:337:18987:15:10:288:300:192:17:Symbol:17:Symbol:∑
+11:338:18988:10:0:286:300:182:9:Times:9:Times:t=1
+11:339:18991:0:0:302:367:194:12:g_d0_f4:12:Symbol:(utyt)+ ̄Σ−1θ ̄θ
+11:340:19007:0:21:369:378:215:12:g_d0_f6:12:g_d0_f6:)
+11:341:19008:21:36:380:383:194:12:g_d0_f5:12:g_d0_f5:,
+11:342:19009:36:0:237:258:158:12:Times:12:g_d0_f4:yt=
+11:343:19012:0:14:261:267:171:12:g_d0_f6:12:g_d0_f6:[
+11:344:19013:14:0:266:359:157:12:Times:9:Times:1z2tz2t−1ut−1
+11:345:19026:0:13:360:368:171:12:g_d0_f6:9:g_d0_f3:]′
+11:346:19028:13:27:370:373:158:12:g_d0_f5:12:g_d0_f5:,
+11:347:19029:27:26:136:474:131:12:Times:12:g_d0_f5:z1t=ut−u∗−θ0(πt−Et−1πt)−θ1(πt−1−Et−2πt−1)−τ1(ut−1−u∗),
+11:348:19083:26:0:269:342:105:12:Times:12:g_d0_f5:z2t=πt−xt−1.
+12:349:19126:0:30:90:157:673:12:Times:12:Times:Proposition2.
+12:350:19139:30:7:165:327:643:12:Times:9:Symbol:p(ζ1,ζ2|IT,θ,φ) =Gamma( ̃αζ
+12:351:19166:7:0:328:331:636:7:Times:7:Times:1
+12:352:19167:0:7:332:347:643:12:g_d0_f5:9:Symbol:, ̃βζ
+12:353:19172:7:0:348:351:636:7:Times:7:Times:1
+12:354:19173:0:7:352:413:643:12:g_d0_f4:9:Symbol:)Gamma( ̃αζ
+12:355:19184:7:0:414:417:636:7:Times:7:Times:2
+12:356:19185:0:7:418:434:643:12:g_d0_f5:9:Symbol:, ̃βζ
+12:357:19190:7:0:434:437:636:7:Times:7:Times:2
+12:358:19191:0:30:438:522:643:12:g_d0_f4:12:Times:),(15)
+12:359:19197:30:29:90:119:613:12:Times:12:Times:where
+12:360:19202:29:8:259:268:584:12:Times:9:Symbol: ̃αζ
+12:361:19206:8:0:269:272:576:7:Times:7:Times:1
+12:362:19207:0:7:276:300:583:12:g_d0_f4:9:Symbol:= ̃αζ
+12:363:19212:7:0:300:303:576:7:Times:7:Times:2
+12:364:19213:0:0:307:316:583:12:g_d0_f4:12:g_d0_f4:=
+12:365:19214:0:16:320:327:591:12:Times:12:Times:T
+12:366:19215:16:0:321:327:575:12:Times:12:Times:2
+12:367:19216:0:27:331:354:583:12:g_d0_f4:12:g_d0_f5:+ ̄α,
+12:368:19221:27:8:214:218:556:12:Times:12:Symbol: ̃β
+12:369:19224:8:0:218:237:548:9:Symbol:12:g_d0_f4:ζi=
+12:370:19227:0:18:281:287:561:12:Times:12:Times:1
+12:371:19228:18:0:241:326:543:12:Times:9:Times:0.5∑Tt=1z2it+ ̄β−1
+12:372:19246:0:80:328:399:553:12:g_d0_f5:12:g_d0_f5:,∀i∈{1,2}.
+12:373:19256:80:30:101:470:473:12:Times:12:Times:The government’s optimization problem renders the conditional posterior pdf
+12:374:19331:30:30:260:352:443:12:Times:12:g_d0_f4:p(φ|IT,θ,ζ1,ζ2)
+12:375:19346:30:21:90:522:413:12:Times:12:Times:one of nonstandard form.  To draw from this distribution, therefore, we use the following
+12:376:19435:21:35:90:195:392:12:Times:12:Times:Metropolis algorithm.
+12:377:19456:35:21:89:521:357:12:Times:12:Times:Metropolis Algorithm.  We employ four steps to simulateφfrom its conditional posterior
+12:378:19542:21:24:89:147:336:12:Times:12:Times:distribution.
+12:379:19555:24:29:107:361:312:12:Times:12:Times:(1)Given the valueφlast, compute the proposal draw
+12:380:19605:29:30:263:347:283:12:Symbol:12:g_d0_f5:φprop=φlast+ξ,
+12:381:19619:30:21:126:521:253:12:Times:12:Times:whereξis randomly drawn from the normal distribution with mean zero and co-
+12:382:19694:21:21:126:522:232:12:Times:12:Times:variancec ̃Σφspecified  in  (D1).   The  scale  factorcwill  be  adjusted  to  keep  the
+12:383:19782:21:21:126:350:211:12:Times:12:Times:acceptance ratio optimal (around25%−40%).
+12:384:19823:21:23:107:170:190:12:Times:12:Times:(2)Compute
+12:385:19833:23:0:213:253:167:12:Times:12:Times:q=min
+12:386:19838:0:9:255:264:184:12:g_d0_f6:12:g_d0_f6:{
+12:387:19839:9:16:266:370:175:12:Times:12:g_d0_f4:p(φprop|IT,θ,ζ1,ζ2)
+12:388:19858:16:0:268:368:159:12:Times:12:g_d0_f4:p(φlast|IT,θ,ζ1,ζ2)
+12:389:19877:0:0:371:384:167:12:g_d0_f5:12:Times:,1
+12:390:19879:0:17:384:393:184:12:g_d0_f6:12:g_d0_f6:}
+12:391:19880:17:27:394:397:167:12:g_d0_f5:12:g_d0_f5:.
+12:392:19881:27:21:107:397:140:12:Times:12:Times:(3)Randomly drawνfrom the uniform distributionU(0,1).
+12:393:19934:21:21:107:522:119:12:Times:12:Times:(4)Ifν<=q, acceptφpropas the value of the current draw; otherwise, keepφlastas
+12:394:20012:21:0:126:265:98:12:Times:12:Times:the value of the current draw.
+13:395:20073:0:21:101:521:673:12:Times:12:Times:It  follows  from  Propositions  1  and  2  and  the  properties  of  the  Metropolis  algorithm
+13:396:20169:21:21:90:522:652:12:Times:12:Times:that a large number of MCMC samples alternately drawn from these conditional posterior
+13:397:20255:21:21:90:521:631:12:Times:12:Times:distributions will eventually form an empirical distribution ofφthat emulates the posterior
+13:398:20346:21:48:90:156:610:12:Times:9:Times:distribution.10
+13:399:20361:48:28:237:373:562:12:Times:10:Times:IV.EMPIRICALEVIDENCE
+13:400:20381:28:21:101:521:534:12:Times:12:Times:In this section, we present our results. Using the monthly US data described in Appendix
+13:401:20469:21:21:90:521:513:12:Times:12:Times:Aand the prior specified in AppendixC, we estimateφby maximizing the posterior density
+13:402:20555:21:21:90:522:492:12:Times:12:Times:function.  We obtained similar results using maximum likelihood, but the prior is crucial
+13:403:20644:21:21:90:522:471:12:Times:12:Times:for small sample inference.  In estimation, we setδ=0.9936,λ=1,π∗=2, andu∗∗=1.
+13:404:20722:21:21:89:522:450:12:Times:12:Times:The value ofu∗∗is set at a low value to allow Nash inflation to be higher than Ramsey
+13:405:20807:21:21:90:522:429:12:Times:12:Times:inflation.11Setting the unemployment target closer to the natural rate has no effect our
+13:406:20895:21:21:90:158:408:12:Times:7:Times:main results.12
+13:407:20910:21:21:101:521:387:12:Times:12:Times:The initial beliefˆα1|0is set at the regression estimate using the presample data from
+13:408:20996:21:21:89:521:366:12:Times:12:Times:January 1948 to December 1959.13We tried to fixP1|0at the value that scales up and down
+13:409:21083:21:21:90:521:345:12:Times:12:Times:the presample regression estimateˆσ2(Φ′Φ)−1, but the fit was extremely poor.  Similarly,
+13:410:21171:21:32:89:521:324:12:Times:12:Times:lettingVbe fixed at the presample-estimated covariance matrix with different scales does
+13:411:21259:32:7:101:316:292:9:Times:10:Symbol:10For each draw ofφ,ζis normalized to be equal toζ
+13:412:21309:7:15:316:522:285:7:Times:10:Times:1before the government’s inflation policy is solved.
+13:413:21361:15:11:89:522:270:10:Times:10:Times:This normalization is consistent with Wald normalization discussed in Hamilton, Waggoner, and Zha (2003).
+13:414:21466:11:22:101:522:259:9:Times:10:Times:11Alan Blinder (1998) emphasizes that the source of time inconsistency in Kydland and Prescott’s (1977)
+13:415:21569:22:18:90:522:237:10:Times:10:Times:Phillips curve example is their settingu∗∗6=u∗in the monetary authority’s preferences (3).  Citing his ex-
+13:416:21675:18:18:90:522:219:10:Times:10:Times:perience as Vice Chairman of the Federal Reserve, Blinder questions whether there was ever much of a gap
+13:417:21779:18:10:90:169:201:10:Times:10:Times:betweenu∗∗andu∗.
+13:418:21795:10:22:101:521:191:7:Times:10:Times:12Narrowing the gap betweenu∗andu∗∗slightly increases the magnitude of the estimated Phillips curve
+13:419:21894:22:18:90:521:169:10:Times:10:Times:slope parametersθ0andθ1.  But this change is small enough as to be essentially inconsequential for our
+13:420:21996:18:12:89:118:151:10:Times:10:Times:results.
+13:421:22004:12:22:101:521:139:9:Times:10:Times:13In an earlier draft, we followed Chung (1990) to let this belief be estimated using the sample data. Since
+13:422:22112:22:18:90:522:117:10:Times:10:Times:it is influenced by the updated beliefs in the sample, the value estimated this way is as difficult to interpret as
+13:423:22227:18:0:90:147:99:10:Times:10:Times:that in Chung.
+14:424:22272:0:21:90:521:672:12:Times:12:Times:not improve the poor fit.14Departing from Sargent (1999), therefore, we estimate the gov-
+14:425:22361:21:21:90:522:651:12:Times:12:Times:ernment’s prior beliefsP1|0andVwithin the sample. Our MCMC or maximum likelihood
+14:426:22441:21:21:90:522:630:12:Times:12:Times:algorithm is “reverse engineering” the empirical Phillips curve at each date that, in con-
+14:427:22531:21:20:90:522:609:12:Times:12:Times:junction with the Phelps problem, is needed to rationalize that date’s inflation rate.  Such
+14:428:22623:20:21:90:522:589:12:Times:12:Times:flexibility is crucial to allow this reverse engineering to back out correct correlations in
+14:429:22715:21:21:90:522:568:12:Times:12:Times:P1|0andV.  Moreover, this flexibility is arguably reasonable.  The presample data may be
+14:430:22803:21:21:90:522:547:12:Times:12:Times:informative of the government’s subjective point estimates (which we fix), but less so of its
+14:431:22896:21:21:90:522:526:12:Times:12:Times:subjective uncertainty (which we estimate).  Thus, we use the presample data to pin down
+14:432:22984:21:21:90:521:505:12:Times:12:Times:the mean of the government’s estimate of the empirical Phillips curve, butnotto estimate
+14:433:23072:21:31:90:291:484:12:Times:12:Times:the belief innovation covariance matrixV.
+14:434:23113:31:21:90:522:453:12:Times:12:Times:IV.1.Model Fit.The posterior estimate ofφis reported in Table1, along with the68%
+14:435:23194:21:21:90:521:432:12:Times:12:Times:and90%probability intervals around the estimate.15In our estimation and inference, the
+14:436:23280:21:31:90:473:411:12:Times:12:Times:regressor vector in the government’s (subtly) misspecified Phillips regression is:
+14:437:23362:31:0:207:232:380:12:Symbol:12:g_d0_f4:Φt=
+14:438:23365:0:14:235:241:393:12:g_d0_f6:12:g_d0_f6:[
+14:439:23366:14:0:240:390:379:12:Symbol:12:Times:πtπt−1ut−1πt−2ut−21
+14:440:23385:0:13:390:398:393:12:g_d0_f6:9:g_d0_f3:]′
+14:441:23387:13:31:400:403:380:12:g_d0_f5:12:g_d0_f5:.
+14:442:23388:31:21:101:521:349:12:Times:12:Times:As mentioned,  among the parameters that we estimate are those of the expectational
+14:443:23471:21:21:90:522:328:12:Times:12:Times:Phillips curve (1) that we assume truly governs the data.  As can be seen in Table1, the
+14:444:23559:21:20:90:522:307:12:Times:12:Times:natural rate of unemploymentu∗in equation (1) is estimated to be 6.1 and its probability
+14:445:23647:20:21:90:522:287:12:Times:12:Times:intervals are wide, consistent with the confidence interval in the statistical model of Staiger,
+14:446:23743:21:21:90:522:266:12:Times:12:Times:Stock, and Watson (1997).  Responses of unemployment to inflation surprises (θ0andθ1)
+14:447:23828:21:21:89:521:245:12:Times:12:Times:are extremely weak and are statistically insignificant by the probability intervals.  This is
+14:448:23921:21:21:89:522:224:12:Times:12:Times:an important finding for us, partly because it implies from (6) that Nash inflation is close
+14:449:24013:21:21:90:522:203:12:Times:12:Times:toπ∗despite the large difference betweenu∗andu∗∗. In the long run, therefore, the mean
+14:450:24099:21:21:90:522:182:12:Times:12:Times:dynamics of inflation are always close to the Ramsey outcomes. Unemployment is by itself
+14:451:24187:21:24:90:365:161:12:Times:12:Times:a persistent series and the persistence is tightly estimated.
+14:452:24248:24:16:101:293:137:9:Times:10:Times:14This point is illustrated further in SectionV.2.
+14:453:24298:16:22:101:521:121:9:Times:10:Times:15All probability intervals are derived from the empirical joint posterior distribution generated from a
+14:454:24402:22:0:90:229:99:10:Times:10:Times:sequence of 50,000 MCMC draws.
+15:455:24463:0:21:101:521:673:12:Times:12:Times:It can be seen from the estimates and probability intervals ofζ1andζ2that their posterior
+15:456:24552:21:21:89:521:652:12:Times:12:Times:distribution is tight but skewed downward, especially forζ1whose posterior estimate is
+15:457:24638:21:21:89:208:631:12:Times:12:Times:outside the 90% interval.
+15:458:24663:21:20:101:522:610:12:Times:12:Times:The estimatedP1|0shows strong correlations (at least above0.95) among all the ele-
+15:459:24745:20:21:90:522:590:12:Times:12:Times:ments.  The relatively large variance for the drifting coefficient onπt−2(the4th element)
+15:460:24834:21:21:89:521:569:12:Times:12:Times:implies that the government is quite uncertain about this coefficient, which affects the un-
+15:461:24926:21:21:89:521:548:12:Times:12:Times:certainty about other coefficients even though their marginal variances are relatively small.
+15:462:25019:21:21:101:522:527:12:Times:12:Times:The estimatedVshows strong correlations among the coefficients on current and lagged
+15:463:25103:21:21:90:522:506:12:Times:12:Times:inflation variables.  The variances on the inflation variables are large in the sense of Sar-
+15:464:25196:21:21:90:521:485:12:Times:12:Times:gent and Williams (2003).   The constant term has a very large variance and affects the
+15:465:25283:21:21:90:522:464:12:Times:12:Times:coefficients on the lagged unemployment variables because of high correlations, but it has
+15:466:25373:21:21:90:522:443:12:Times:12:Times:a small influence on the inflation coefficients in the government’s model.  BecauseVis
+15:467:25459:21:21:90:522:422:12:Times:12:Times:not small, the government’s beliefs are likely to drift significantly and inflation is likely to
+15:468:25555:21:21:90:522:401:12:Times:12:Times:escape to the near-Ramsey region.  Our estimates of the true expectational Phillips curve
+15:469:25644:21:21:90:522:380:12:Times:12:Times:(1) imply that there is a negligible difference between the SCE andπ∗.  But as we show
+15:470:25730:21:21:89:521:359:12:Times:12:Times:later, even when we artificially alter the parameters of (1) to allow the SCE inflation rate to
+15:471:25825:21:20:90:521:338:12:Times:12:Times:be considerably higher than the Ramsey rate, this largeVpermits frequent escapes to low
+15:472:25912:20:21:90:158:318:12:Times:12:Times:inflation rates.
+15:473:25928:21:21:101:522:297:12:Times:12:Times:The one-step forecasts of inflation are plotted against the actual path in Figure1, and
+15:474:26015:21:21:90:521:276:12:Times:12:Times:one-step forecasts of unemployment are plotted against the actual path in Figure2. It is ev-
+15:475:26107:21:21:90:522:255:12:Times:12:Times:ident from these figures that the model fits the data well; so well, in fact, that it is difficult to
+15:476:26208:21:21:90:522:234:12:Times:12:Times:discern the difference between the series.  By this fit criterion, our reverse engineering ex-
+15:477:26302:21:21:90:522:213:12:Times:12:Times:ercise is a success, especially compared to those carried out by Chung (1990) and Sargent
+15:478:26391:21:21:90:522:192:12:Times:12:Times:(1999).  Figures3and4plot the one-step forecast errors for inflation and unemployment,
+15:479:26477:21:21:90:522:171:12:Times:12:Times:showing that for most of the sample, the forecasts are within one half a percentage point
+15:480:26566:21:29:90:522:150:12:Times:12:Times:of the realized value.16In AppendixEwe provide a more formal comparison of our model
+15:481:26650:29:22:101:521:121:9:Times:10:Times:16These forecast errors are comparable to those from the random walk model or an AR(1) model.  These
+15:482:26750:22:0:90:329:99:10:Times:10:Times:statistical models treat an inflation process to be exogenous.
+16:483:26843:0:31:183:428:675:12:Times:12:Times:TABLE1.Posterior estimates of model parameters
+16:484:26889:31:21:183:425:644:12:Times:12:Times:Log value of posterior kernel at its peak:81.56096
+16:485:26939:21:21:143:465:623:12:Times:12:Times:Estimates of coefficients in true Phillips curve and inflation process
+16:486:27009:21:21:173:435:602:12:Times:12:Times:with 68% and 90% probability intervals in parentheses
+16:487:27062:21:21:184:424:581:12:Times:12:g_d0_f4:u∗:  6.1104(5.2500,7.1579)  (4.2238,9.0586)
+16:488:27105:21:21:170:438:560:12:Symbol:12:g_d0_f4:θ0:−0.0008(−0.0237,0.0475)  (−0.0458,0.0719)
+16:489:27149:21:20:170:438:539:12:Symbol:12:g_d0_f4:θ1:−0.0122(−0.0375,0.0297)  (−0.0589,0.0526)
+16:490:27193:20:21:184:424:519:12:Symbol:12:g_d0_f4:τ1:  0.9892(0.9852,0.9960)  (0.9817,0.9996)
+16:491:27236:21:21:169:439:498:12:Symbol:12:g_d0_f4:ζ1:  35.6538(28.7565,32.4947)  (27.6017,33.7890)
+16:492:27284:21:22:166:442:477:12:Symbol:12:g_d0_f4:ζ2:  18.97671(15.6565,18.2557)  (14.7008,19.1196)
+16:493:27333:22:21:265:343:455:12:Times:12:Times:Estimate ofP1|0:
+16:494:27349:21:21:146:471:434:12:Times:12:Times:10.870514.32362.2518−25.4037−0.9279−10.1548
+16:495:27392:21:21:146:471:413:12:Times:12:Times:14.323619.37212.9624−33.9832−1.1883−13.5923
+16:496:27435:21:21:152:471:392:12:Times:12:Times:2.25182.96240.4690−5.2629−0.1928−2.1050
+16:497:27474:21:21:137:471:371:12:g_d0_f3:12:Times:−25.4037−33.9832−5.262959.89972.133923.9551
+16:498:27517:21:21:143:471:350:12:g_d0_f3:12:Times:−0.9279−1.1883−0.19282.13390.08160.8526
+16:499:27556:21:20:137:471:329:12:g_d0_f3:12:Times:−10.1548−13.5923−2.105023.95510.85269.5810
+16:500:27598:20:21:269:338:309:12:Times:12:Times:Estimate ofV:
+16:501:27611:21:21:152:465:288:12:Times:12:Times:8.2323−7.77810.92084.9782−0.8136−41.414
+16:502:27650:21:21:143:465:267:12:g_d0_f3:12:Times:−7.77818.14000.0303−5.0891.935368.591
+16:503:27687:21:21:152:465:246:12:Times:12:Times:0.92080.03032.98540.11873.701272.067
+16:504:27723:21:21:152:465:225:12:Times:12:Times:4.9782−5.0890.11873.2032−1.0548−39.963
+16:505:27761:21:21:143:471:204:12:g_d0_f3:12:Times:−0.81361.93533.7012−1.05485.1362100.6400
+16:506:27801:21:0:137:471:183:12:g_d0_f3:12:Times:−41.41468.59172.067−39.963100.6400   2588.3000
+17:507:27878:0:0:168:172:455:4:Helvetica:4:Helvetica:19601965197019751980198519901995200020050
+17:508:27919:0:0:169:172:496:4:Helvetica:4:Helvetica:2
+17:509:27920:0:0:169:172:532:4:Helvetica:4:Helvetica:4
+17:510:27921:0:0:169:172:568:4:Helvetica:4:Helvetica:6
+17:511:27922:0:0:169:172:603:4:Helvetica:4:Helvetica:8
+17:512:27923:0:0:166:173:639:4:Helvetica:4:Helvetica:10
+17:513:27925:0:227:166:173:675:4:Helvetica:4:Helvetica:12
+17:514:27927:227:0:261:361:448:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+17:515:27983:0:7:417:434:668:4:Helvetica:4:Helvetica:Actual
+17:516:27989:7:250:417:441:661:4:Helvetica:4:Helvetica:Forecast
+17:517:27997:250:238:100:512:411:12:Times:12:Times:FIGURE1.Inflation: actual vs one-step forecast (i.e, government controlled inflation)
+17:518:28082:238:0:168:172:173:4:Helvetica:4:Helvetica:19601965197019751980198519901995200020053
+17:519:28123:0:0:169:172:205:4:Helvetica:4:Helvetica:4
+17:520:28124:0:0:169:172:231:4:Helvetica:4:Helvetica:5
+17:521:28125:0:0:169:172:258:4:Helvetica:4:Helvetica:6
+17:522:28126:0:0:169:172:285:4:Helvetica:4:Helvetica:7
+17:523:28127:0:0:169:172:312:4:Helvetica:4:Helvetica:8
+17:524:28128:0:0:169:172:339:4:Helvetica:4:Helvetica:9
+17:525:28129:0:0:166:173:366:4:Helvetica:4:Helvetica:10
+17:526:28131:0:228:166:173:393:4:Helvetica:4:Helvetica:11
+17:527:28133:228:0:261:361:165:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+17:528:28192:0:7:417:434:386:4:Helvetica:4:Helvetica:Actual
+17:529:28198:7:250:417:441:379:4:Helvetica:4:Helvetica:Forecast
+17:530:28206:250:0:162:449:129:12:Times:12:Times:FIGURE2.Unemployment rate: actual vs one-step forecast
+18:531:28291:0:0:172:177:458:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−1.5
+18:532:28335:0:0:170:177:506:4:Helvetica:4:Helvetica:−1
+18:533:28337:0:0:165:177:548:4:Helvetica:4:Helvetica:−0.5
+18:534:28341:0:0:174:177:591:4:Helvetica:4:Helvetica:0
+18:535:28342:0:0:169:177:633:4:Helvetica:4:Helvetica:0.5
+18:536:28345:0:224:174:177:675:4:Helvetica:4:Helvetica:1
+18:537:28346:224:36:264:363:451:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+18:538:28395:36:235:112:499:415:12:Times:12:Times:FIGURE3.Differences between actual values and one-step forecasts of inflation
+18:539:28472:235:0:172:177:180:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−0.8
+18:540:28516:0:0:165:177:209:4:Helvetica:4:Helvetica:−0.6
+18:541:28520:0:0:165:177:232:4:Helvetica:4:Helvetica:−0.4
+18:542:28524:0:0:165:177:256:4:Helvetica:4:Helvetica:−0.2
+18:543:28528:0:0:174:177:279:4:Helvetica:4:Helvetica:0
+18:544:28529:0:0:169:177:303:4:Helvetica:4:Helvetica:0.2
+18:545:28532:0:0:169:177:326:4:Helvetica:4:Helvetica:0.4
+18:546:28535:0:0:169:177:350:4:Helvetica:4:Helvetica:0.6
+18:547:28538:0:0:169:177:373:4:Helvetica:4:Helvetica:0.8
+18:548:28541:0:224:174:177:397:4:Helvetica:4:Helvetica:1
+18:549:28542:224:36:264:363:173:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+18:550:28591:36:0:97:515:137:12:Times:12:Times:FIGURE4.Differences between actual values and one-step forecasts of unemployment
+19:551:28702:0:21:90:522:673:12:Times:12:Times:to an atheoretical VAR. There we show that the VAR outperforms our model based on a
+19:552:28785:21:21:90:522:652:12:Times:12:Times:marginal likelihood criterion, although this may be sensitive to the priors we chose in esti-
+19:553:28878:21:21:90:522:631:12:Times:12:Times:mating our model. In terms of forecasting the rise and fall of inflation, our model performs
+19:554:28970:21:20:90:522:610:12:Times:12:Times:as well as or better than the VAR. Without any assumption about exogenous components
+19:555:29054:20:21:90:522:590:12:Times:12:Times:of the persistence of inflation, the government’s inflation policy explains, almost entirely,
+19:556:29147:21:21:90:522:569:12:Times:12:Times:the rise and fall of post-war American inflation (Figure1). This kind of result has not been
+19:557:29239:21:53:90:457:548:12:Times:12:Times:achieved in previous work (e.g., Sims1988, Chung1990, and Sargent1999).
+19:558:29310:53:21:90:522:495:12:Times:12:Times:IV.2.Short-Run  Dynamics:  Shocks  and  Beliefs.The  rise  and  fall  of  inflation  in  our
+19:559:29402:21:20:90:522:474:12:Times:12:Times:model is driven by the Phelps problem in conjunction with government’s belief in an ex-
+19:560:29489:20:21:90:522:454:12:Times:12:Times:ploitable tradeoff between inflation and unemployment, which leads to a high inflation rate
+19:561:29580:21:21:90:522:433:12:Times:12:Times:in the early 70s.  But then occasional sequences of stochastic shocks lead the government
+19:562:29669:21:21:90:522:412:12:Times:12:Times:temporarily to believe that it can cut inflation with no rise in unemployment, which leads
+19:563:29759:21:21:90:522:391:12:Times:12:Times:to  rapid  disinflations  in  the  early  80s.   During  these  episodes,  the  government  learns  a
+19:564:29860:21:21:90:522:370:12:Times:12:Times:version of the natural rate theory in which the sum of the coefficients on inflation in the
+19:565:29951:21:21:90:469:349:12:Times:12:Times:government’s model is nearly zero, reflecting a vertical long-run Phillips curve.
+19:566:30032:21:21:101:522:328:12:Times:12:Times:Such an evolution of the government’s updated beliefs are displayed in Figure5.  The
+19:567:30116:21:21:90:522:307:12:Times:12:Times:sum of the coefficients on inflation becomes very negative in the early 70s and stay quite
+19:568:30206:21:21:90:522:286:12:Times:12:Times:negative until the late 70s. In the 1980s, although the sum of the inflation coefficients is still
+19:569:30304:21:21:90:522:265:12:Times:12:Times:negative, it is small enough for policymakers to decide cutting inflation without worrying
+19:570:30394:21:21:90:263:244:12:Times:12:Times:much about costs in unemployment.
+19:571:30427:21:21:101:521:223:12:Times:12:Times:Figure6displays the suspected covariations in the drift of some key parameters in the
+19:572:30512:21:20:90:521:202:12:Times:12:Times:government’s  Phillips  curve,  derived  from  our  estimatedVreported  in  Table1.   These
+19:573:30603:20:21:90:522:182:12:Times:12:Times:key parameters are the sum of the coefficients on current and lagged inflation variables
+19:574:30691:21:21:90:522:161:12:Times:12:Times:(α1+α2+α4), the sum of the coefficients on current and lagged unemployment variables
+19:575:30775:21:21:89:521:140:12:Times:12:Times:(1−α3−α5),  and  the  coefficient  on  the  constant  term  (α6).   As  shown  by  the  symbol
+19:576:30869:21:21:89:522:119:12:Times:12:Times:“∗” in the first row of graphs of Figure6, the estimated constant coefficient has a large,
+19:577:30959:21:0:90:522:98:12:Times:12:Times:positive value while the sum of the estimated inflation coefficients is quite negative.  This
+20:578:31083:0:0:193:167:443:4:Helvetica:4:Helvetica:19651970197519801985199019952000−2
+20:579:31117:0:0:155:168:486:4:Helvetica:4:Helvetica:−1.5
+20:580:31121:0:0:160:167:524:4:Helvetica:4:Helvetica:−1
+20:581:31123:0:0:155:168:561:4:Helvetica:4:Helvetica:−0.5
+20:582:31127:0:0:164:168:599:4:Helvetica:4:Helvetica:0
+20:583:31128:0:0:158:167:636:4:Helvetica:4:Helvetica:0.5
+20:584:31131:0:239:164:168:674:4:Helvetica:4:Helvetica:1
+20:585:31132:239:0:260:365:435:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+20:586:31164:0:256:322:365:656:4:Helvetica:4:Helvetica:Sum of π coefs
+20:587:31178:256:30:187:425:400:12:Times:12:Times:FIGURE5.Evolution of the government’s beliefs
+20:588:31223:30:21:90:522:370:12:Times:12:Times:combination  leads  to  a  perceived  high  tradeoff  between  unemployment  and  inflation  in
+20:589:31318:21:21:90:169:349:12:Times:12:Times:December 1973.
+20:590:31332:21:21:101:522:328:12:Times:12:Times:In contrast,  at the point associated with the SCE (indicated by the symbol “◦” in the
+20:591:31418:21:21:90:522:307:12:Times:12:Times:second row of Figure6),  the estimated constant coefficient is small and the sum of the
+20:592:31505:21:21:90:522:286:12:Times:12:Times:inflation coefficients is near zero, giving the government no incentive to inflate in pursuit
+20:593:31598:21:21:90:207:265:12:Times:12:Times:of lower unemployment.
+20:594:31620:21:21:101:522:244:12:Times:12:Times:The probability ellipses shown in Figure6are quite large along the dimension of the
+20:595:31703:21:21:90:522:223:12:Times:12:Times:constant coefficient.  The large variation implies that a tradeoff between inflation and un-
+20:596:31795:21:20:90:522:202:12:Times:12:Times:employment can be severe if there is a high probability of the constant coefficient and the
+20:597:31886:20:21:90:522:182:12:Times:12:Times:sum of the inflation coefficients falling far into the north-west quadrant, as in the case of the
+20:598:31983:21:21:90:522:161:12:Times:12:Times:upper-left graph.  The bottom-left graph shows the historical estimates of these two belief
+20:599:32074:21:21:90:522:140:12:Times:12:Times:parameters,  induced by the particular sequence of shocks throughout our post-war sam-
+20:600:32160:21:21:90:522:119:12:Times:12:Times:ple. The area in which the sum of the inflation coefficients is less than -1 and the constant
+20:601:32253:21:0:90:421:98:12:Times:12:Times:coefficient is greater than 15 covers most of the estimates for the 70s.
+21:602:32356:0:0:151:282:591:6:Helvetica:6:Helvetica:−6−4−2024
+21:603:32365:0:0:125:143:603:6:Helvetica:6:Helvetica:−100
+21:604:32369:0:0:130:143:617:6:Helvetica:6:Helvetica:−50
+21:605:32372:0:0:139:143:631:6:Helvetica:6:Helvetica:0
+21:606:32373:0:0:134:143:645:6:Helvetica:6:Helvetica:50
+21:607:32375:0:0:130:143:659:6:Helvetica:6:Helvetica:100
+21:608:32378:0:91:130:143:673:6:Helvetica:6:Helvetica:150
+21:609:32381:91:0:193:245:582:6:Helvetica:6:Helvetica:Sum of π coefs
+21:610:32408:0:0:337:497:591:6:Helvetica:6:Helvetica:−10−50510
+21:611:32417:0:0:326:344:603:6:Helvetica:6:Helvetica:−100
+21:612:32421:0:0:331:344:617:6:Helvetica:6:Helvetica:−50
+21:613:32424:0:0:340:344:631:6:Helvetica:6:Helvetica:0
+21:614:32425:0:0:335:344:645:6:Helvetica:6:Helvetica:50
+21:615:32427:0:0:331:344:659:6:Helvetica:6:Helvetica:100
+21:616:32430:0:91:331:344:673:6:Helvetica:6:Helvetica:150
+21:617:32433:91:90:394:446:582:6:Helvetica:6:Helvetica:Sum of u coefs
+21:618:32460:90:0:151:282:492:6:Helvetica:6:Helvetica:−6−4−2024
+21:619:32469:0:0:125:143:504:6:Helvetica:6:Helvetica:−100
+21:620:32473:0:0:130:143:518:6:Helvetica:6:Helvetica:−50
+21:621:32476:0:0:139:143:532:6:Helvetica:6:Helvetica:0
+21:622:32477:0:0:134:143:546:6:Helvetica:6:Helvetica:50
+21:623:32479:0:0:130:143:560:6:Helvetica:6:Helvetica:100
+21:624:32482:0:91:130:143:574:6:Helvetica:6:Helvetica:150
+21:625:32485:91:0:193:245:483:6:Helvetica:6:Helvetica:Sum of π coefs
+21:626:32512:0:0:337:497:492:6:Helvetica:6:Helvetica:−10−50510
+21:627:32521:0:0:326:344:504:6:Helvetica:6:Helvetica:−100
+21:628:32525:0:0:331:344:518:6:Helvetica:6:Helvetica:−50
+21:629:32528:0:0:340:344:532:6:Helvetica:6:Helvetica:0
+21:630:32529:0:0:335:344:546:6:Helvetica:6:Helvetica:50
+21:631:32531:0:0:331:344:560:6:Helvetica:6:Helvetica:100
+21:632:32534:0:91:331:344:574:6:Helvetica:6:Helvetica:150
+21:633:32537:91:91:394:446:483:6:Helvetica:6:Helvetica:Sum of u coefs
+21:634:32564:91:0:139:294:392:6:Helvetica:6:Helvetica:−2−101
+21:635:32570:0:0:139:143:399:6:Helvetica:6:Helvetica:0
+21:636:32571:0:0:134:143:418:6:Helvetica:6:Helvetica:10
+21:637:32573:0:0:134:143:437:6:Helvetica:6:Helvetica:20
+21:638:32575:0:0:134:143:455:6:Helvetica:6:Helvetica:30
+21:639:32577:0:91:134:143:474:6:Helvetica:6:Helvetica:40
+21:640:32579:91:0:193:245:383:6:Helvetica:6:Helvetica:Sum of π coefs
+21:641:32606:0:0:344:495:392:6:Helvetica:6:Helvetica:01234
+21:642:32611:0:0:340:344:399:6:Helvetica:6:Helvetica:0
+21:643:32612:0:0:335:344:418:6:Helvetica:6:Helvetica:10
+21:644:32614:0:0:335:344:437:6:Helvetica:6:Helvetica:20
+21:645:32616:0:0:335:344:455:6:Helvetica:6:Helvetica:30
+21:646:32618:0:91:335:344:474:6:Helvetica:6:Helvetica:40
+21:647:32620:91:25:394:446:383:6:Helvetica:6:Helvetica:Sum of u coefs
+21:648:32647:25:21:126:485:358:12:Times:12:Times:FIGURE6.68% and 90% probability ellipses about key parameters in the
+21:649:32715:21:21:125:485:337:12:Times:12:Times:government’s Phillips curve.  The first row is based on the observation at
+21:650:32789:21:21:125:485:316:12:Times:12:Times:73:12; the second row is based on a limiting case associated with an SCE;
+21:651:32862:21:21:125:485:295:12:Times:12:Times:the third row displays scattered plots of the estimates throughout our 60:02-
+21:652:32939:21:21:125:486:274:12:Times:12:Times:03:12 sample.   The asterisk symbol∗in the first row depicts the govern-
+21:653:33011:21:20:125:486:253:12:Times:12:Times:ment’s estimates at 73:12. The circle symbol◦in the second and third rows
+21:654:33084:20:21:125:485:233:12:Times:12:Times:depicts SCE values, which also equal limiting estimates from the mean dy-
+21:655:33157:21:30:125:162:212:12:Times:12:Times:namics.
+21:656:33164:30:21:101:521:182:12:Times:12:Times:The constant and the sum of the unemployment coefficients are highly but negatively
+21:657:33247:21:21:90:522:161:12:Times:12:Times:correlated, as shown in the first two graphs in the second column of Figure6.  Later we
+21:658:33334:21:21:90:522:140:12:Times:12:Times:will see that in the transition to the SCE the economy may go through periods of very
+21:659:33419:21:21:90:522:119:12:Times:12:Times:volatile inflation.  The negative correlation between the constant and the unemployment
+21:660:33506:21:0:90:522:98:12:Times:12:Times:coefficients is the most likely cause of these volatile inflation paths, if these two parameters
+22:661:33633:0:0:160:165:440:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−10
+22:662:33676:0:0:158:165:468:4:Helvetica:4:Helvetica:−5
+22:663:33678:0:0:162:165:490:4:Helvetica:4:Helvetica:0
+22:664:33679:0:0:162:165:512:4:Helvetica:4:Helvetica:5
+22:665:33680:0:0:158:165:534:4:Helvetica:4:Helvetica:10
+22:666:33682:0:0:158:165:556:4:Helvetica:4:Helvetica:15
+22:667:33684:0:0:158:165:578:4:Helvetica:4:Helvetica:20
+22:668:33686:0:0:158:165:600:4:Helvetica:4:Helvetica:25
+22:669:33688:0:0:158:165:623:4:Helvetica:4:Helvetica:30
+22:670:33690:0:0:158:165:645:4:Helvetica:4:Helvetica:35
+22:671:33692:0:0:158:165:667:4:Helvetica:4:Helvetica:40
+22:672:33694:0:256:214:401:674:4:Helvetica:4:Helvetica:Perceived Long−Run Excess Unemployment Under Ramsey Policy
+22:673:33752:256:21:126:486:418:12:Times:12:Times:FIGURE7.Perceived  long-run  excess  unemployment  under  the  Ramsey
+22:674:33821:21:30:125:413:397:12:Times:12:Times:policy of 2% inflation according to the government’s model.
+22:675:33880:30:21:90:522:367:12:Times:12:Times:fall in the south-east and north-west quadrants. Fortunately for US inflation outcomes, our
+22:676:33971:21:21:90:522:346:12:Times:12:Times:historical estimates have been concentrated around the north-east quadrant, as shown in the
+22:677:34062:21:21:90:522:325:12:Times:12:Times:bottom-right graph.  It is only in out of sample simulations that we enter the more volatile
+22:678:34154:21:21:90:128:304:12:Times:12:Times:regions.
+22:679:34162:21:20:101:521:283:12:Times:12:Times:The three belief parameters discussed above are key inputs to the government’s perceived
+22:680:34250:20:21:90:522:263:12:Times:12:Times:sacrifice ratio. The government’s estimate of the long-run unemployment above the natural
+22:681:34339:21:22:90:364:242:12:Times:12:Times:rateu∗under the government’s Ramsey inflation policy is
+22:682:34394:22:17:237:346:220:12:Symbol:9:Times:π∗(α1+α2+α4)+α6
+22:683:34409:17:0:264:319:203:12:Times:9:Times:1−α3−α5
+22:684:34416:0:30:350:522:211:12:g_d0_f3:12:Times:−u∗.(16)
+22:685:34424:30:21:90:522:181:12:Times:12:Times:Under any inflation policy in history that differs from Ramsey, the tradeoff will be a simple
+22:686:34517:21:21:90:522:160:12:Times:12:Times:scaled version of (16) in proportion to that difference.17Figure7plots the government’s
+22:687:34604:21:22:101:521:139:9:Times:10:Times:17Note that our measure of the sacrifice ratio differs from the more conventional usage, which gives the
+22:688:34708:22:18:90:522:117:10:Times:10:Times:cost of disinflating from a current inflation rate.  Instead, ours is a long-run measure, independent of current
+22:689:34820:18:0:90:126:99:10:Times:10:Times:inflation.
+23:690:34861:0:21:90:522:673:12:Times:12:Times:perceived  long  run  excess  unemployment  under  the  Ramsey  policy.   Here  we  see  that,
+23:691:34955:21:21:90:522:652:12:Times:12:Times:throughout the 1970s, the government’s model implied that substantial increases in unem-
+23:692:35043:21:21:90:521:631:12:Times:12:Times:ployment would result from a low inflation policy.18It wasn’t until the early 1980s that
+23:693:35131:21:20:90:522:610:12:Times:12:Times:this ratio fell to near zero, at which time the disinflation commenced.  This point will be
+23:694:35222:20:44:90:451:590:12:Times:12:Times:reinforced below when we present medium term forecasts around that time.
+23:695:35294:44:21:90:522:546:12:Times:12:Times:IV.3.Two Peaks and an Enduring Decline.We now analyze how the model forecasts
+23:696:35371:21:21:90:522:525:12:Times:12:Times:the two peaks of inflation in the 1970s and the sharp decline in the early 1980s.  We use
+23:697:35460:21:21:90:522:504:12:Times:12:Times:Monte Carlo simulations to assess the distribution of forecasts going forward over four
+23:698:35547:21:21:90:522:483:12:Times:12:Times:year horizons from different initial conditions.  In each case, we take the estimated beliefs
+23:699:35640:21:21:90:521:462:12:Times:12:Times:at the starting date and draw 5000 simulations of 50 periods each.19The figures then plot
+23:700:35729:21:21:90:522:441:12:Times:12:Times:the actual experienced inflation and the estimated government controlled inflation (xt−1),
+23:701:35819:21:21:90:522:420:12:Times:12:Times:along with 68% and 90% probability bands. In each plot, the initial condition is shown as
+23:702:35908:21:21:90:333:399:12:Times:12:Times:date zero, from which we look forward 50 periods.
+23:703:35957:21:21:101:521:378:12:Times:12:Times:Figure8reports the forecasts. The upper left panel starts in January 1973 when inflation
+23:704:36045:21:21:90:522:357:12:Times:12:Times:was at a very low level (3.3%). This is also near the time that the government most overes-
+23:705:36136:21:20:90:521:336:12:Times:12:Times:timated the tradeoff between inflation and unemployment (see Figure5). According to the
+23:706:36223:20:21:90:522:316:12:Times:12:Times:model, the government exploited the tradeoff and pushed up inflation to lower unemploy-
+23:707:36310:21:21:90:522:295:12:Times:12:Times:ment.  The model predicts a steadily rising inflation path as high as10%towards the end
+23:708:36397:21:21:90:522:274:12:Times:12:Times:of the 4-year horizon (the upper90%band), and gives little probability to a lower inflation
+23:709:36488:21:21:90:202:253:12:Times:12:Times:rate in the medium run.
+23:710:36511:21:21:101:521:232:12:Times:12:Times:Due to a sequence of shocks,  the inflation path actually experienced reached its peak
+23:711:36597:21:36:90:522:211:12:Times:12:Times:earlier than the model predicts.  But this is a treacherous period in which to predict, and
+23:712:36688:36:22:101:521:175:9:Times:10:Times:18A temporary drop in this sacrifice ratio around 1976 led to a temporary decline in inflation around that
+23:713:36794:22:18:90:522:153:10:Times:10:Times:time.  See Cogley and Sargent (2004) for a story in which the government was deterred from stabilizing in
+23:714:36899:18:18:90:522:135:10:Times:10:Times:the mid 1970s because it attached a small positive probability to a model that assigned high unemployment
+23:715:37004:18:14:90:190:117:10:Times:10:Times:costs to a rapid deflation.
+23:716:37031:14:0:101:428:103:9:Times:10:Times:19Adding uncertainty in the parameters would certainly widen our forecast bands.
+24:717:37142:0:0:119:103:520:2:Helvetica:2:Helvetica:5101520253035404550−5
+24:718:37163:0:0:101:103:562:2:Helvetica:2:Helvetica:0
+24:719:37164:0:0:101:103:600:2:Helvetica:2:Helvetica:5
+24:720:37165:0:0:98:103:639:2:Helvetica:2:Helvetica:10
+24:721:37167:0:163:98:103:677:2:Helvetica:2:Helvetica:15
+24:722:37193:163:0:175:230:514:2:Helvetica:2:Helvetica:Forecast months after 73:01
+24:723:37220:0:152:264:295:672:2:Helvetica:2:Helvetica:ActualMedian forecast
+24:724:37241:152:0:336:320:520:2:Helvetica:2:Helvetica:5101520253035404550−5
+24:725:37262:0:0:318:320:562:2:Helvetica:2:Helvetica:0
+24:726:37263:0:0:318:320:600:2:Helvetica:2:Helvetica:5
+24:727:37264:0:0:315:320:639:2:Helvetica:2:Helvetica:10
+24:728:37266:0:163:315:320:677:2:Helvetica:2:Helvetica:15
+24:729:37292:163:0:392:447:514:2:Helvetica:2:Helvetica:Forecast months after 74:01
+24:730:37319:0:324:481:512:672:2:Helvetica:2:Helvetica:ActualMedian forecast
+24:731:37340:324:0:119:103:348:2:Helvetica:2:Helvetica:5101520253035404550−5
+24:732:37361:0:0:101:103:390:2:Helvetica:2:Helvetica:0
+24:733:37362:0:0:101:103:428:2:Helvetica:2:Helvetica:5
+24:734:37363:0:0:98:103:467:2:Helvetica:2:Helvetica:10
+24:735:37365:0:162:98:103:505:2:Helvetica:2:Helvetica:15
+24:736:37391:162:0:175:230:343:2:Helvetica:2:Helvetica:Forecast months after 77:01
+24:737:37418:0:152:264:295:500:2:Helvetica:2:Helvetica:ActualMedian forecast
+24:738:37439:152:0:336:320:348:2:Helvetica:2:Helvetica:5101520253035404550−5
+24:739:37460:0:0:318:320:390:2:Helvetica:2:Helvetica:0
+24:740:37461:0:0:318:320:428:2:Helvetica:2:Helvetica:5
+24:741:37462:0:0:315:320:467:2:Helvetica:2:Helvetica:10
+24:742:37464:0:162:315:320:505:2:Helvetica:2:Helvetica:15
+24:743:37490:162:0:392:447:343:2:Helvetica:2:Helvetica:Forecast months after 80:04
+24:744:37517:0:181:481:512:500:2:Helvetica:2:Helvetica:ActualMedian forecast
+24:745:37538:181:21:126:485:319:12:Times:12:Times:FIGURE8.Dynamic forecasts of inflation with 68% and 90% error bands,
+24:746:37606:21:54:125:461:298:12:Times:12:Times:using as initial estimated conditions at 73:01, 74:01, 77:01, and 80:04.
+24:747:37678:54:21:90:522:244:12:Times:12:Times:the prediction of rising inflation by the model compares favorably to alternative statistical
+24:748:37771:21:21:90:214:223:12:Times:12:Times:models (see AppendixE).
+24:749:37794:21:20:101:521:202:12:Times:12:Times:A year later in January 1974, which is shown in the upper right panel of Figure8, in-
+24:750:37879:20:21:90:522:182:12:Times:12:Times:flation had continued upward, now reaching 8.4%.  Here we see that the model tracks the
+24:751:37966:21:21:90:522:161:12:Times:12:Times:actual inflation path quite well, predicting a further increase in inflation prior to a return to
+24:752:38063:21:21:90:150:140:12:Times:12:Times:lower levels.
+24:753:38076:21:21:101:521:119:12:Times:12:Times:January 1977 was another difficult time to predict inflation because inflation was at its
+24:754:38165:21:0:90:522:98:12:Times:12:Times:trough and a second run-up was about to begin. Although actual inflation reached its peak
+25:755:38285:0:21:90:522:673:12:Times:12:Times:at the later date, the model assigns an overwhelming probability to higher inflation and the
+25:756:38377:21:21:90:361:652:12:Times:12:Times:upper90%reaches as high as10%(the lower left panel).
+25:757:38429:21:21:101:521:631:12:Times:12:Times:The disinflation episode in the early 1980s is often interpreted as reflecting the intellec-
+25:758:38521:21:20:90:522:610:12:Times:12:Times:tual triumph of the rational expectations version of the natural rate theory.  What does our
+25:759:38613:20:21:90:522:590:12:Times:12:Times:learning model say about this period?  Would the government continue to pursue a higher
+25:760:38700:21:21:90:522:569:12:Times:12:Times:inflation policy?  After all, from the vantage point of April 1980 when inflation reached
+25:761:38789:21:21:90:522:548:12:Times:12:Times:its second peak, most forecasting models either predict that inflation was very likely to go
+25:762:38881:21:21:90:522:527:12:Times:12:Times:higher than it actually did, or they fail to predict the fall of inflation. The lower right panel
+25:763:38978:21:21:90:522:506:12:Times:12:Times:of Figure8displays the forecast from our learning model.  While actual inflation declines
+25:764:39067:21:21:90:522:485:12:Times:12:Times:at somewhat a slower speed than what the model predicts in 1980 and 1981, the forecast of
+25:765:39156:21:21:90:522:464:12:Times:12:Times:a fast decline in inflation is remarkable.  The model’s prediction is especially good further
+25:766:39249:21:21:90:522:443:12:Times:12:Times:out in the forecasting period. Unlike many forecasting models, our model gives almost no
+25:767:39337:21:21:90:522:422:12:Times:12:Times:probability to rising inflation in the medium horizon, because the tradeoff between infla-
+25:768:39427:21:21:90:522:401:12:Times:12:Times:tion and unemployment by then is not high enough for the government to pursue higher
+25:769:39511:21:47:90:133:380:12:Times:12:Times:inflation.
+25:770:39521:47:21:90:522:333:12:Times:12:Times:IV.4.Long-Run Dynamics.So far we have shown that our model is able to explain and
+25:771:39602:21:21:90:522:312:12:Times:12:Times:predict the rise and fall of US inflation experienced. It is equally important to examine the
+25:772:39695:21:21:90:522:291:12:Times:12:Times:long run properties of the model to see if the government’s adapting beliefs will eventually
+25:773:39787:21:20:90:522:270:12:Times:12:Times:lead to good inflation outcomes. We first discuss the convergence of our baseline model to
+25:774:39877:20:21:90:522:250:12:Times:12:Times:a limit distribution. Then we analyze the small variation limits as in Sargent and Williams
+25:775:39968:21:47:90:124:229:12:Times:12:Times:(2003).
+25:776:39975:47:21:90:522:182:12:Times:12:Times:IV.4.1.Long-Run Convergence.Figure9shows the inflation dynamics over 30,000 months
+25:777:40057:21:21:90:522:161:12:Times:12:Times:starting at our estimated initial conditions: 1960:03 (the beginning of the sample), 1973:12
+25:778:40149:21:21:90:521:140:12:Times:12:Times:(the date where the sum of theπcoefficients is most negative in the sample), and 2003:12
+25:779:40237:21:21:89:521:119:12:Times:12:Times:(the end of the sample).  Clearly,  they all converge to a limiting distribution around the
+25:780:40328:21:0:89:521:98:12:Times:12:Times:Ramsey outcomes.  This convergence occurs from the estimated initial conditions at any
+26:781:40445:0:21:90:522:673:12:Times:12:Times:date.  The fluctuations at the beginning of the simulation reflect the rise and fall of Amer-
+26:782:40538:21:21:90:522:652:12:Times:12:Times:ican inflation that was temporarily off the equilibrium.  As shown in the lower left panel,
+26:783:40629:21:21:90:522:631:12:Times:12:Times:we are likely to see some high inflation in the near future but such high inflation is caused
+26:784:40722:21:20:90:522:610:12:Times:12:Times:purely by exogenous random shocks to inflation, as the government will continue to see
+26:785:40808:20:21:90:522:590:12:Times:12:Times:no tradeoff between inflation and unemployment (see the lower right panel of Figure9).
+26:786:40894:21:21:90:522:569:12:Times:12:Times:The government’s beliefs are volatile for a while but eventually the sum of coefficients on
+26:787:40985:21:21:90:521:548:12:Times:12:Times:inflation converges to near zero.20Consequently, the mean dynamics suggest that inflation
+26:788:41074:21:21:90:522:527:12:Times:12:Times:converges to around2%.   These long run properties foster a view of US monetary his-
+26:789:41158:21:21:90:522:506:12:Times:12:Times:tory as a process of continual learning before inflation becomes stable around the Ramsey
+26:790:41247:21:39:90:139:485:12:Times:12:Times:outcomes.
+26:791:41256:39:21:90:522:446:12:Times:12:Times:IV.4.2.Small Variation Limits.In the previous section, we saw evidence from simulations
+26:792:41343:21:21:90:522:425:12:Times:12:Times:that the economy converges to a limit distribution. In order to obtain more explicit analytic
+26:793:41436:21:21:90:522:404:12:Times:12:Times:results, we consider small variation limits. While it is difficult to obtain explicit results for
+26:794:41533:21:21:90:521:383:12:Times:12:Times:any arbitrary setting ofV, for smallerVthe beliefs drift at a slower rate, allowing us to
+26:795:41622:21:21:90:522:362:12:Times:12:Times:approximate their evolution with a differential equation.  In particular, as in Sargent and
+26:796:41713:21:21:90:521:341:12:Times:12:Times:Williams (2003), we letV=ε2ˆVand study limits asε→0. However,Pt|t→0asε→0, so
+26:797:41789:21:21:90:521:320:12:Times:12:Times:we define a scaled matrixˆPt|t=Pt|t/εthat does not vanish. Sargent and Williams show that
+26:798:41878:21:34:90:521:299:12:Times:12:Times:asε→0, the sequence{αt|t,ˆPt|t}generated by (9)-(10) converges weakly to the solution
+26:799:41963:34:22:101:521:265:9:Times:10:Times:20In those volatile periods, the constant coefficient in the government’s estimated Phillips curve is often
+26:800:42070:22:18:90:522:243:10:Times:10:Times:very large (on the order of 100) and the sum of the unemployment coefficients tends to be negative.  Thus,
+26:801:42176:18:18:90:522:225:10:Times:10:Times:these two government Phillips curve parameters fall in the north-west quadrant of the graph discussed in
+26:802:42280:18:18:90:521:207:10:Times:10:Times:SectionIV.2. If the sum of the inflation coefficients is negative, one can see from (16) that the government’s
+26:803:42390:18:18:90:522:189:10:Times:10:Times:dynamic programming problem implies a large increase in inflation to restrain adverse fluctuations in unem-
+26:804:42497:18:18:90:522:171:10:Times:10:Times:ployment.  Similarly, if this sum is positive, the government tends to generate a large rate of deflation.  Such
+26:805:42609:18:18:90:522:153:10:Times:10:Times:values for the government parameters in our simulations are far outside of the range attained by the historical
+26:806:42720:18:18:90:522:135:10:Times:10:Times:estimates, as shown in the third row of graphs in Figure6.  When by chance we draw a sequence of shocks
+26:807:42823:18:18:90:522:117:10:Times:10:Times:that keeps these government Phillips curve parameters within their historical range, convergence to a stable
+26:808:42931:18:0:90:306:99:10:Times:10:Times:inflation path occurs without large swings of inflation.
+27:809:43018:0:8:128:303:507:2:Helvetica:2:Helvetica:0.511.522.53
+27:810:43030:8:0:291:301:499:2:Helvetica:1:Helvetica:x 104
+27:811:43035:0:0:90:95:510:2:Helvetica:2:Helvetica:−2
+27:812:43037:0:0:93:96:529:2:Helvetica:2:Helvetica:0
+27:813:43038:0:0:93:96:548:2:Helvetica:2:Helvetica:2
+27:814:43039:0:0:93:96:567:2:Helvetica:2:Helvetica:4
+27:815:43040:0:0:93:96:586:2:Helvetica:2:Helvetica:6
+27:816:43041:0:0:93:96:605:2:Helvetica:2:Helvetica:8
+27:817:43042:0:0:91:96:624:2:Helvetica:2:Helvetica:10
+27:818:43044:0:0:91:96:643:2:Helvetica:2:Helvetica:12
+27:819:43046:0:161:91:96:662:2:Helvetica:2:Helvetica:14
+27:820:43048:161:0:191:206:501:2:Helvetica:2:Helvetica:Months
+27:821:43054:0:170:175:224:677:2:Helvetica:2:Helvetica:Initial Condition 1960:03
+27:822:43079:170:8:345:519:507:2:Helvetica:2:Helvetica:0.511.522.53
+27:823:43091:8:0:507:518:499:2:Helvetica:1:Helvetica:x 104
+27:824:43096:0:0:307:312:510:2:Helvetica:2:Helvetica:−2
+27:825:43098:0:0:310:313:529:2:Helvetica:2:Helvetica:0
+27:826:43099:0:0:310:313:548:2:Helvetica:2:Helvetica:2
+27:827:43100:0:0:310:313:567:2:Helvetica:2:Helvetica:4
+27:828:43101:0:0:310:313:586:2:Helvetica:2:Helvetica:6
+27:829:43102:0:0:310:313:605:2:Helvetica:2:Helvetica:8
+27:830:43103:0:0:307:312:624:2:Helvetica:2:Helvetica:10
+27:831:43105:0:0:307:312:643:2:Helvetica:2:Helvetica:12
+27:832:43107:0:161:307:312:662:2:Helvetica:2:Helvetica:14
+27:833:43109:161:0:408:423:501:2:Helvetica:2:Helvetica:Months
+27:834:43115:0:357:392:441:677:2:Helvetica:2:Helvetica:Initial Condition 1973:12
+27:835:43140:357:8:128:303:320:2:Helvetica:2:Helvetica:0.511.522.53
+27:836:43152:8:0:291:301:312:2:Helvetica:1:Helvetica:x 104
+27:837:43157:0:0:90:95:324:2:Helvetica:2:Helvetica:−2
+27:838:43159:0:0:93:96:343:2:Helvetica:2:Helvetica:0
+27:839:43160:0:0:93:96:362:2:Helvetica:2:Helvetica:2
+27:840:43161:0:0:93:96:381:2:Helvetica:2:Helvetica:4
+27:841:43162:0:0:93:96:400:2:Helvetica:2:Helvetica:6
+27:842:43163:0:0:93:96:419:2:Helvetica:2:Helvetica:8
+27:843:43164:0:0:91:96:437:2:Helvetica:2:Helvetica:10
+27:844:43166:0:0:91:96:456:2:Helvetica:2:Helvetica:12
+27:845:43168:0:160:91:96:475:2:Helvetica:2:Helvetica:14
+27:846:43170:160:0:191:206:315:2:Helvetica:2:Helvetica:Months
+27:847:43176:0:170:175:224:490:2:Helvetica:2:Helvetica:Initial Condition 2003:12
+27:848:43201:170:8:345:519:320:2:Helvetica:2:Helvetica:0.511.522.53
+27:849:43213:8:0:507:518:312:2:Helvetica:1:Helvetica:x 104
+27:850:43218:0:0:311:314:324:2:Helvetica:2:Helvetica:0
+27:851:43219:0:0:307:313:340:2:Helvetica:2:Helvetica:0.1
+27:852:43222:0:0:307:313:356:2:Helvetica:2:Helvetica:0.2
+27:853:43225:0:0:307:313:372:2:Helvetica:2:Helvetica:0.3
+27:854:43228:0:0:307:313:388:2:Helvetica:2:Helvetica:0.4
+27:855:43231:0:0:307:313:404:2:Helvetica:2:Helvetica:0.5
+27:856:43234:0:0:307:313:420:2:Helvetica:2:Helvetica:0.6
+27:857:43237:0:0:307:313:436:2:Helvetica:2:Helvetica:0.7
+27:858:43240:0:0:307:313:452:2:Helvetica:2:Helvetica:0.8
+27:859:43243:0:0:307:313:468:2:Helvetica:2:Helvetica:0.9
+27:860:43246:0:169:311:314:484:2:Helvetica:2:Helvetica:1
+27:861:43247:169:0:409:424:315:2:Helvetica:2:Helvetica:Months
+27:862:43253:0:11:392:441:489:2:Helvetica:2:Helvetica:Initial Condition 2003:12
+27:863:43278:11:188:482:513:478:2:Helvetica:2:Helvetica:Sum of π Coefs
+27:864:43292:188:21:126:485:290:12:Times:12:Times:FIGURE9.Government’s inflation choice in long Monte Carlo simulations,
+27:865:43362:21:34:125:348:269:12:Times:12:Times:using the different estimated initial conditions.
+27:866:43411:34:34:90:202:235:12:Times:12:Times:of the following ODEs:
+27:867:43433:34:0:239:289:201:12:Times:12:Times: ̇α=PE
+27:868:43439:0:10:291:296:210:12:g_d0_f6:12:g_d0_f6:[
+27:869:43440:10:0:296:361:200:12:Symbol:12:g_d0_f4:Φt(ut−Φ′tα)
+27:870:43451:0:10:361:366:210:12:g_d0_f6:12:g_d0_f6:]
+27:871:43452:10:23:502:522:200:12:Times:12:Times:(17)
+27:872:43456:23:37:241:522:177:12:Times:12:Times: ̇P=σ−2ˆV−PE(ΦtΦ′t)P,(18)
+27:873:43481:37:21:90:521:140:12:Times:12:Times:where the expectations are calculated for fixedα.  As we let the prior belief variance go
+27:874:43570:21:21:89:521:119:12:Times:12:Times:to zero by shrinkingε,  the government’s beliefs track the trajectories of these differen-
+27:875:43660:21:0:90:522:98:12:Times:12:Times:tial equations.  We call the ODEs (17)-(18) themean dynamicsbecause they govern the
+28:876:43774:0:0:167:455:434:4:Helvetica:4:Helvetica:012345678
+28:877:43783:0:0:160:164:450:4:Helvetica:4:Helvetica:0
+28:878:43784:0:0:154:163:489:4:Helvetica:4:Helvetica:0.2
+28:879:43787:0:0:154:163:529:4:Helvetica:4:Helvetica:0.4
+28:880:43790:0:0:154:163:568:4:Helvetica:4:Helvetica:0.6
+28:881:43793:0:0:154:163:607:4:Helvetica:4:Helvetica:0.8
+28:882:43796:0:0:160:164:647:4:Helvetica:4:Helvetica:1
+28:883:43797:0:113:286:332:674:4:Helvetica:4:Helvetica:Mean Dynamics
+28:884:43810:113:8:403:444:561:4:Helvetica:4:Helvetica:Sum of π Coef
+28:885:43823:8:8:403:448:553:4:Helvetica:4:Helvetica:Sum of u Coef  
+28:886:43838:8:133:403:441:545:4:Helvetica:4:Helvetica:Constant       
+28:887:43853:133:21:126:486:412:12:Times:12:Times:FIGURE10.Mean dynamics for the baseline estimates,  initialized at the
+28:888:43923:21:51:125:216:391:12:Times:12:Times:start of the sample.
+28:889:43943:51:21:90:522:340:12:Times:12:Times:expected evolution of the government’s beliefs.  If the ODEs have a stable point( ̄α, ̄P),
+28:890:44033:21:21:89:522:319:12:Times:12:Times:then the government’s beliefs will converge to it asε→0andt→∞.   Note from (17)
+28:891:44112:21:21:90:521:298:12:Times:12:Times:that the limiting beliefs satisfy the key least squares orthogonality condition (5) and hence
+28:892:44205:21:21:90:522:277:12:Times:12:Times:comprise a self-confirming equilibrium. This orthogonality condition is the key identifying
+28:893:44296:21:21:90:522:256:12:Times:12:Times:assumption in the government’s subjective model, and in the limit it is satisfied by the true
+28:894:44389:21:21:90:123:235:12:Times:12:Times:model.
+28:895:44395:21:21:101:521:214:12:Times:12:Times:In  Figure10we  plot  trajectories  of  the  mean  dynamics  for  the  government’s  beliefs
+28:896:44487:21:21:90:522:193:12:Times:12:Times:starting from the initial conditions at the beginning of the sample.  Here we see that the
+28:897:44577:21:21:90:522:172:12:Times:12:Times:mean dynamics converge to a stable self-confirming equilibrium in the long run. The self-
+28:898:44666:21:49:90:257:151:12:Times:12:Times:confirming equilibrium beliefs are:
+28:899:44701:49:0:152:460:102:12:Times:12:g_d0_f5: ̄α= [−0.0008−0.0000   0.9725   0.0000   0.0165   0.0688].
+29:900:44790:0:21:90:521:673:12:Times:12:Times:Thus,  we  see  that  in  the  SCE  the  government  learns  the  true  value  ofθ0,  the  effect  of
+29:901:44891:21:21:89:521:652:12:Times:12:Times:current inflation on unemployment. In the SCE, the government believes in a small tradeoff
+29:902:44981:21:21:89:521:631:12:Times:12:Times:between inflation and unemployment, and so sets inflation slightly above the Ramsey level.
+29:903:45071:21:20:89:521:610:12:Times:12:Times:In particular, the mean inflation rate in the SCE is2.24%instead of the Ramsey level of
+29:904:45158:20:21:90:109:590:12:Times:12:Times:2%.
+29:905:45161:21:21:101:521:569:12:Times:12:Times:However, the mean dynamics and the self-confirming equilibrium govern the dynamics
+29:906:45243:21:21:90:522:548:12:Times:12:Times:of our model only for smallε. In practice,εmust be quite small, on the order of10−4, for
+29:907:45331:21:21:90:521:527:12:Times:12:Times:the asymptotic approximations to be accurate. Thus, for our baseline estimatedVthe mean
+29:908:45418:21:21:90:520:506:12:Times:12:Times:dynamics do not fully characterize the evolution of beliefs.  Loosely speaking, for anyV
+29:909:45506:21:21:90:522:485:12:Times:12:Times:we get convergence to a limit distribution.  Asε→0this limit distribution converges to a
+29:910:45594:21:42:89:224:464:12:Times:12:Times:self-confirming equilibrium.
+29:911:45622:42:21:90:521:422:12:Times:12:Times:IV.5.Keynesian Direction of Fit.King and Watson (1994) discuss the importance of the
+29:912:45706:21:21:90:522:401:12:Times:12:Times:direction in which a statistical Phillips curve is fit to the data.   They use the adjectives
+29:913:45799:21:21:90:522:380:12:Times:12:Times:Keynesian and Classical to denote Phillips curves with unemployment on the right and left
+29:914:45888:21:21:90:521:359:12:Times:12:Times:sides, respectively.21Unlike the version we consider above, the typical Samuelson-Solow
+29:915:45975:21:21:90:522:338:12:Times:12:Times:Keynesian type of Phillips curve puts inflation on the left hand side of the regression.  In
+29:916:46067:21:39:90:342:317:12:Times:12:Times:this case, the government’s Phelps problem becomes
+29:917:46117:39:8:210:229:278:12:Times:12:Times:min
+29:918:46120:8:0:216:221:270:9:Times:7:Times:xt
+29:919:46122:0:0:231:235:280:12:Times:12:Times:ˆE
+29:920:46124:0:15:243:249:290:9:Symbol:9:Symbol:∞
+29:921:46125:15:10:240:252:275:17:Symbol:17:Symbol:∑
+29:922:46126:10:0:239:253:265:9:Times:9:Times:t=1
+29:923:46129:0:42:256:402:278:12:Symbol:12:g_d0_f4:δt((πt−π∗)2+λ1(ut−u∗∗)2)
+29:924:46153:42:35:90:173:236:12:Times:12:Times:subject to (2) and
+29:925:46171:35:26:157:359:201:12:Symbol:9:Times:πt=ˆβ0,t|t−1ut+ˆβ1,t|t−1ut−1+ˆβ2,t|t−1πt−1
+29:926:46213:26:0:226:454:175:12:g_d0_f4:12:g_d0_f5:+ˆβ3,t|t−1ut−2+ˆβ4,t|t−1πt−2+ˆβ5,t|t−1+σKwKt,
+29:927:46258:0:48:502:522:189:12:Times:12:Times:(19)
+29:928:46262:48:38:90:355:141:12:Times:12:Times:wherewKtis an i.i.d. standard normal random variable.
+29:929:46315:38:0:101:466:103:9:Times:10:Times:21Sargent (1999, Chapter 7) discusses how the direction of fit affects the SCE that emerges.
+30:930:46438:0:21:101:522:672:12:Times:12:Times:With the normalizationσK=σ1, the government’s beliefsˆβi,t|t−1are updated using the
+30:931:46521:21:24:89:516:651:12:Times:12:Times:usual Kalman filter. The government’s Phelps problem is posed after inverting (19) to get
+30:932:46610:24:27:157:361:627:12:Times:9:Times:ut=ˆα0,t|t−1πt+ˆα1,t|t−1πt−1+ˆα2,t|t−1ut−1
+30:933:46652:27:0:227:454:600:12:g_d0_f4:12:g_d0_f5:+ˆα3,t|t−1πt−2+ˆα4,t|t−1ut−2+ˆα5,t|t−1−σtwKt,
+30:934:46697:0:37:502:522:614:12:Times:12:Times:(20)
+30:935:46701:37:28:90:119:577:12:Times:12:Times:where
+30:936:46706:28:26:259:354:549:12:Times:12:g_d0_f5:ˆα0,t|t−1=1/ˆβ0,t|t−1,
+30:937:46728:26:26:240:373:523:12:Times:12:g_d0_f5:ˆα1,t|t−1=−ˆβ2,t|t−1/ˆβ0,t|t−1,
+30:938:46759:26:26:240:373:497:12:Times:12:g_d0_f5:ˆα2,t|t−1=−ˆβ1,t|t−1/ˆβ0,t|t−1,
+30:939:46790:26:26:240:373:471:12:Times:12:g_d0_f5:ˆα3,t|t−1=−ˆβ4,t|t−1/ˆβ0,t|t−1,
+30:940:46821:26:26:240:373:445:12:Times:12:g_d0_f5:ˆα4,t|t−1=−ˆβ3,t|t−1/ˆβ0,t|t−1,
+30:941:46852:26:27:240:373:419:12:Times:12:g_d0_f5:ˆα5,t|t−1=−ˆβ5,t|t−1/ˆβ0,t|t−1,
+30:942:46883:27:28:264:346:392:12:Symbol:12:g_d0_f5:σt=σK/ˆβ0,t|t−1.
+30:943:46899:28:21:101:521:364:12:Times:12:Times:For comparison with our results above, we re-estimate the model using the Keynesian
+30:944:46982:21:29:90:425:343:12:Times:12:Times:direction of fit. The estimated values for the structural parameters are:
+30:945:47055:29:28:104:507:314:12:Times:12:g_d0_f5:u∗=5.7467,θ0=−0.0287,θ1=−0.0136,τ1=0.9881,ζ1=29.4602,ζ2=4.3244,
+30:946:47118:28:21:90:522:286:12:Times:12:Times:and the log value of the posterior kernel at its peak is -271.6802, which is much smaller
+30:947:47207:21:21:90:522:265:12:Times:12:Times:than that in the classical model. These estimates are somewhat different from those for the
+30:948:47298:21:21:90:522:244:12:Times:12:Times:classical model reported in Table1. The biggest difference shows up in the estimate ofζ2.
+30:949:47387:21:21:90:521:223:12:Times:12:Times:The significantly smaller value ofζ2in the Keynesian model implies large inflation shocks
+30:950:47476:21:21:90:281:202:12:Times:9:Times:that tend to make the system unstable.22
+30:951:47516:21:21:101:522:181:12:Times:12:Times:Figure11shows that even with the help of large inflation shocks, the fit is not nearly
+30:952:47602:21:21:90:522:160:12:Times:12:Times:as good as the classical model, consistent with the findings of Cogley and Sargent (2004),
+30:953:47692:21:18:90:522:139:12:Times:12:Times:who computed a sequence of Bayesian posterior odds for three models of the Phillips curve.
+30:954:47782:18:7:101:324:121:9:Times:10:Symbol:22The results do not change much when we normalizeσ
+30:955:47833:7:15:324:522:114:7:Times:10:Times:Kdifferently. For example, instead of normalizing
+30:956:47882:15:0:90:502:99:10:Times:10:Times:onσKdirectly, we letσt=σ1. This normalization implies thatσKis time-varying andσKt=ˆβ0,t|t−1σ1.
+31:957:48008:0:0:168:172:455:4:Helvetica:4:Helvetica:19601965197019751980198519901995200020050
+31:958:48049:0:0:169:172:496:4:Helvetica:4:Helvetica:2
+31:959:48050:0:0:169:172:532:4:Helvetica:4:Helvetica:4
+31:960:48051:0:0:169:172:568:4:Helvetica:4:Helvetica:6
+31:961:48052:0:0:169:172:603:4:Helvetica:4:Helvetica:8
+31:962:48053:0:0:166:173:639:4:Helvetica:4:Helvetica:10
+31:963:48055:0:227:166:173:675:4:Helvetica:4:Helvetica:12
+31:964:48057:227:0:261:361:448:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+31:965:48113:0:7:417:434:668:4:Helvetica:4:Helvetica:Actual
+31:966:48119:7:250:417:441:661:4:Helvetica:4:Helvetica:Forecast
+31:967:48127:250:235:142:469:411:12:Times:12:Times:FIGURE11.Keynesian model: actual inflation vs one-step forecast.
+31:968:48191:235:0:172:177:176:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−2.5
+31:969:48235:0:0:170:177:208:4:Helvetica:4:Helvetica:−2
+31:970:48237:0:0:165:177:234:4:Helvetica:4:Helvetica:−1.5
+31:971:48241:0:0:170:177:261:4:Helvetica:4:Helvetica:−1
+31:972:48243:0:0:165:177:287:4:Helvetica:4:Helvetica:−0.5
+31:973:48247:0:0:174:177:314:4:Helvetica:4:Helvetica:0
+31:974:48248:0:0:169:177:340:4:Helvetica:4:Helvetica:0.5
+31:975:48251:0:0:174:177:367:4:Helvetica:4:Helvetica:1
+31:976:48252:0:224:169:177:393:4:Helvetica:4:Helvetica:1.5
+31:977:48255:224:24:264:363:169:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+31:978:48304:24:21:126:486:145:12:Times:12:Times:FIGURE12.Keynesian model: differences between actual values and one-
+31:979:48372:21:0:125:249:124:12:Times:12:Times:step forecasts of inflation.
+32:980:48431:0:0:211:187:445:4:Helvetica:4:Helvetica:19651970197519801985199019952000−2
+32:981:48465:0:0:175:187:477:4:Helvetica:4:Helvetica:−1.5
+32:982:48469:0:0:180:187:503:4:Helvetica:4:Helvetica:−1
+32:983:48471:0:0:175:187:529:4:Helvetica:4:Helvetica:−0.5
+32:984:48475:0:0:184:187:555:4:Helvetica:4:Helvetica:0
+32:985:48476:0:0:179:187:581:4:Helvetica:4:Helvetica:0.5
+32:986:48479:0:0:184:187:608:4:Helvetica:4:Helvetica:1
+32:987:48480:0:0:179:187:634:4:Helvetica:4:Helvetica:1.5
+32:988:48483:0:222:184:187:660:4:Helvetica:4:Helvetica:2
+32:989:48484:222:0:273:371:438:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+32:990:48516:0:249:407:448:652:4:Helvetica:4:Helvetica:Sum of π Coefs
+32:991:48530:249:29:138:474:403:12:Times:12:Times:FIGURE13.Keynesian model: evolution of the government’s beliefs.
+32:992:48594:29:21:90:522:374:12:Times:12:Times:The forecast errors reported in Figure12reinforce this point. The persistent over-prediction
+32:993:48686:21:21:90:522:353:12:Times:12:Times:of inflation in the early 60s is caused by the misperceived tradeoff between inflation and
+32:994:48776:21:21:90:522:332:12:Times:12:Times:unemployment under the estimated Keynesian Phillips curve,  as is shown in Figure13.
+32:995:48860:21:21:90:522:311:12:Times:12:Times:We see there that, throughout the 1960s, the government’s Keynesian model implied an
+32:996:48944:21:21:90:522:290:12:Times:12:Times:exploitable tradeoff.  However this tradeoff dwindles in the early 70s and the sum of the
+32:997:49033:21:21:90:522:269:12:Times:12:Times:coefficients on inflation reversed its sign sharply in the mid-to-late 70s. In particular, from
+32:998:49128:21:20:90:521:248:12:Times:12:Times:1975 to 1980 the government’s model shows no sign of a tradeoff (Figure13), and hence
+32:999:49213:20:21:90:521:228:12:Times:12:Times:the model predicts lower inflation than actually occurred over this period (Figure12). It is
+32:1000:49305:21:21:90:522:207:12:Times:12:Times:difficult to explain why the government did not cut inflation in the late 70s within the Key-
+32:1001:49398:21:21:90:522:186:12:Times:12:Times:nesian story. One possibility is that because of large shocks in the government’s Keynesian
+32:1002:49489:21:21:90:522:165:12:Times:12:Times:Phillips curve, policymakers decided to ignore the evidence that there was no tradeoff in the
+32:1003:49582:21:21:90:522:144:12:Times:12:Times:later part of 1970s.  Instead, they produced high inflation based on an inherited Keynesian
+32:1004:49673:21:20:90:273:123:12:Times:7:Times:belief that the tradeoff must be there.23
+32:1005:49714:20:0:101:503:103:7:Times:10:Times:23This interpretation was provided by James Nason, based on oral descriptions by Fed policymakers.
+33:1006:49843:0:0:174:434:450:4:Helvetica:4:Helvetica:19651970197519801985199019952000
+33:1007:49875:0:0:170:173:469:4:Helvetica:4:Helvetica:0
+33:1008:49876:0:0:170:173:537:4:Helvetica:4:Helvetica:5
+33:1009:49877:0:0:166:173:606:4:Helvetica:4:Helvetica:10
+33:1010:49879:0:233:166:173:675:4:Helvetica:4:Helvetica:15
+33:1011:49881:233:0:260:370:442:4:Helvetica:4:Helvetica:From February 1964 to December 2003
+33:1012:49940:0:7:404:421:668:4:Helvetica:4:Helvetica:Actual
+33:1013:49946:7:8:404:448:661:4:Helvetica:4:Helvetica:64:01 gov coefs
+33:1014:49961:8:247:404:448:653:4:Helvetica:4:Helvetica:73:12 gov coefs
+33:1015:49976:247:53:115:496:406:12:Times:12:Times:FIGURE14.Inflation dynamics with fixed beliefs at the dates 64:01 and 73:12.
+33:1016:50052:53:28:223:387:353:12:Times:10:Times:V.COUNTERFACTUALRESULTS
+33:1017:50075:28:21:101:521:325:12:Times:12:Times:As a way to quantify the role of econometric policy evaluation in the government’s learn-
+33:1018:50164:21:21:90:522:304:12:Times:12:Times:ing process, we use our estimated classical model to calculate what would have happened
+33:1019:50251:21:21:90:522:283:12:Times:12:Times:if the government’s beliefs had differed from our estimates.  First, we will look at belief
+33:1020:50342:21:21:90:522:262:12:Times:12:Times:drifts in the Phillips curve.  Then, we will examine how the covariance matrixVaffects
+33:1021:50428:21:59:90:146:241:12:Times:12:Times:these drifts.
+33:1022:50441:59:21:90:521:182:12:Times:12:Times:V.1.Two Historical Episodes.All of the results in this section condition on our estimates
+33:1023:50530:21:21:90:522:161:12:Times:12:Times:of the historical shocks of unemployment and inflation inferred from our model estimates.
+33:1024:50619:21:21:90:471:140:12:Times:12:Times:We treat these shocks as random and exogenous in our counterfactual exercises.
+33:1025:50697:21:21:101:521:119:12:Times:12:Times:The first episode begins in 1964:01.  As seen from Figure5, there is still little belief in
+33:1026:50788:21:0:90:522:98:12:Times:12:Times:the inflation-unemployment tradeoff in the early 1964, but by then end of 1973 the sum of
+34:1027:50908:0:0:170:416:450:4:Helvetica:4:Helvetica:19801985199019952000
+34:1028:50928:0:0:170:173:469:4:Helvetica:4:Helvetica:0
+34:1029:50929:0:0:170:173:537:4:Helvetica:4:Helvetica:5
+34:1030:50930:0:0:166:173:606:4:Helvetica:4:Helvetica:10
+34:1031:50932:0:233:166:173:675:4:Helvetica:4:Helvetica:15
+34:1032:50934:233:0:258:372:442:4:Helvetica:4:Helvetica:From November 1979 to December 2003
+34:1033:50993:0:7:404:421:668:4:Helvetica:4:Helvetica:Actual
+34:1034:50999:7:8:404:448:661:4:Helvetica:4:Helvetica:79:10 gov coefs
+34:1035:51014:8:247:404:448:653:4:Helvetica:4:Helvetica:73:12 gov coefs
+34:1036:51029:247:41:115:496:406:12:Times:12:Times:FIGURE15.Inflation dynamics with fixed beliefs at the dates 79:10 and 73:12.
+34:1037:51105:41:21:90:522:365:12:Times:12:Times:the inflation coefficients is most negative.24Such continual adaptation of beliefs towards
+34:1038:51195:21:21:90:522:344:12:Times:12:Times:a bigger inflation-unemployment tradeoff gives the government an incentive, through the
+34:1039:51282:21:20:90:522:323:12:Times:12:Times:Phelps problem,  to run a high inflation policy.   This can be seen indirectly in Figure7
+34:1040:51371:20:21:90:522:303:12:Times:12:Times:as the perceived costs of low inflation rise dramatically in the early 1970s.  To obtain a
+34:1041:51461:21:21:90:522:282:12:Times:12:Times:more direct comparison,  suppose the government’s beliefs had been frozen at the 64:01
+34:1042:51547:21:21:90:521:261:12:Times:12:Times:initial condition. As shown in Figure14, the inflation path would have been smoother and
+34:1043:51635:21:21:90:522:240:12:Times:12:Times:avoided much of the two large run-ups of actual inflation in the 70s.  To take an opposite
+34:1044:51725:21:21:90:522:219:12:Times:12:Times:example, we replace the government’s 64:01 beliefs with the 73:12 beliefs and fix them
+34:1045:51811:21:21:90:521:198:12:Times:12:Times:throughout the history.  In this case, Figure14shows that inflation would have been much
+34:1046:51899:21:21:90:522:177:12:Times:12:Times:higher than was actually experienced throughout the sample and would have continued to
+34:1047:51985:21:35:90:173:156:12:Times:12:Times:stay around10%.
+34:1048:52000:35:22:101:521:121:9:Times:10:Times:24See Sargent (1999, chapter 5) for how the sum of coefficients onπaffects the advice rendered by the
+34:1049:52101:22:0:90:155:99:10:Times:10:Times:Phelps problem.
+35:1050:52147:0:21:101:522:673:12:Times:12:Times:Figure15displays the second episode beginning with 1979:10, when Volcker’s disin-
+35:1051:52228:21:21:90:522:652:12:Times:12:Times:flation policy took place.  As we’ve seen, if the government had held fixed to its 1973:12
+35:1052:52318:21:21:90:522:631:12:Times:12:Times:perceived tradeoff,  inflation would have stayed much higher.   On the other hand,  if the
+35:1053:52408:21:20:90:522:610:12:Times:12:Times:government’s belief at 1979:10 had been fixed throughout the rest of the history, inflation
+35:1054:52499:20:21:90:522:590:12:Times:12:Times:would have come down to5%by 1986 due to the sequence of historical shocks, but there
+35:1055:52583:21:21:90:522:569:12:Times:12:Times:would have been a tendency to return to a higher inflation level. These outcomes show the
+35:1056:52672:21:21:90:522:548:12:Times:12:Times:importance of the adaptation of the government’s beliefs to achieve low inflation. With the
+35:1057:52763:21:21:90:522:527:12:Times:12:Times:same sequence of historical shocks, actual inflation came down and remained low as shown
+35:1058:52851:21:21:90:522:506:12:Times:12:Times:by the inflation path in Figure15.  Although the government’s beliefs at the end of 1979
+35:1059:52939:21:21:90:521:485:12:Times:12:Times:favored a disinflation, Figure5shows how the government’s views continued to evolve to
+35:1060:53025:21:21:90:522:464:12:Times:12:Times:favor a low inflation policy. The experience of disinflation and continued low inflation led
+35:1061:53117:21:21:90:461:443:12:Times:12:Times:the government away from believing in an exploitable Phillips curve tradeoff.
+35:1062:53194:21:21:101:521:422:12:Times:12:Times:These  exercises  suggest  that  while  the  rise  of  inflation  in  the  70s  was  caused  by  the
+35:1063:53294:21:21:90:522:401:12:Times:12:Times:government’s misperceptions about the Phillips-curve relationship, the fall of inflation in
+35:1064:53385:21:21:90:522:380:12:Times:12:Times:the 1980s can be rationalized by an econometric policy evaluation procedure that embodies
+35:1065:53474:21:34:90:174:359:12:Times:9:Times:adapted beliefs.25
+35:1066:53492:34:21:90:521:325:12:Times:12:Times:V.2.Importance ofV.As we’ve already noted,  crucial to our empirical success is the
+35:1067:53575:21:20:90:522:304:12:Times:12:Times:flexibility of our model in fitting the government’s beliefs.  In particular,  previous work
+35:1068:53667:20:21:90:522:284:12:Times:12:Times:of Sims, Chung, Sargent, and Cho, Williams, and Sargent (but not Sargent and Williams)
+35:1069:53753:21:21:90:521:263:12:Times:12:Times:had assumed a particular form for the key matrixVin (8) that governs the innovations to
+35:1070:53840:21:21:90:522:242:12:Times:12:Times:the parameters in the government’s model.  We have already discussed theoretical reasons
+35:1071:53928:21:21:90:521:221:12:Times:12:Times:why theVmatrix is so important and how different specifications of it greatly affect the
+35:1072:54016:21:25:90:522:200:12:Times:12:Times:speed, direction, and stability of the learning dynamics. Previous work fixedVin ways that
+35:1073:54106:25:22:101:521:175:9:Times:10:Times:25Changes in beliefs do not necessarily imply changes in the linearized policy rule in whichxtis regressed
+35:1074:54212:22:18:90:522:153:10:Times:10:Times:on its own lagged values and current and lagged unemployment variables. In our case, becausexttracks the
+35:1075:54316:18:18:90:522:135:10:Times:10:Times:actual inflation path so well, our results are consistent with reduced-form empirical findings that changes in
+35:1076:54426:18:18:90:521:117:10:Times:10:Times:the policy rule or the inflation process are difficult to detect statistically (Cogley and Sargent2003, Primiceri
+35:1077:54539:18:0:90:219:99:10:Times:10:Times:2003a, and Sims and Zha2004).
+36:1078:54599:0:0:171:176:458:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−30
+36:1079:54642:0:0:166:176:498:4:Helvetica:4:Helvetica:−20
+36:1080:54645:0:0:166:176:534:4:Helvetica:4:Helvetica:−10
+36:1081:54648:0:0:173:176:569:4:Helvetica:4:Helvetica:0
+36:1082:54649:0:0:169:176:604:4:Helvetica:4:Helvetica:10
+36:1083:54651:0:0:169:176:640:4:Helvetica:4:Helvetica:20
+36:1084:54653:0:225:169:176:675:4:Helvetica:4:Helvetica:30
+36:1085:54655:225:0:264:363:450:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+36:1086:54711:0:7:418:435:668:4:Helvetica:4:Helvetica:Actual
+36:1087:54717:7:235:418:441:661:4:Helvetica:4:Helvetica:Forecast
+36:1088:54725:235:21:126:485:426:12:Times:12:Times:FIGURE16.Actual and forecast inflation (government policy) withVde-
+36:1089:54792:21:35:125:232:405:12:Times:12:Times:rived fromE(ΦΦ′)−1.
+36:1090:54811:35:21:90:522:370:12:Times:12:Times:constrained how learning could occur, thereby diminishing the variation in the data that
+36:1091:54899:21:21:90:337:349:12:Times:12:Times:could be explained by evolving government beliefs.
+36:1092:54949:21:21:101:521:328:12:Times:12:Times:One particular example of the importance of theVmatrix is shown in Figure16. There
+36:1093:55031:21:21:90:522:307:12:Times:12:Times:we fix the values of all the other structural parameters (including the estimated initial con-
+36:1094:55125:21:21:90:522:286:12:Times:12:Times:ditionP1|0) but only alterV.  Most learning models such as Sargent (1999) have focused
+36:1095:55211:21:21:90:522:265:12:Times:12:Times:on a recursive least squares learning rule that is closely related to the Kalman filter.  Sar-
+36:1096:55305:21:21:90:520:244:12:Times:12:Times:gent and Williams (2003) show that RLS can be approximated by a Kalman filter withV
+36:1097:55388:21:21:90:522:223:12:Times:12:Times:proportional toσ2E(ΦΦ′)−1.  In the figure, therefore, we use the sample estimate of the
+36:1098:55475:21:20:89:521:202:12:Times:12:Times:second moment matrix and we choose the proportionality factor so that the newVmatrix
+36:1099:55559:20:21:90:522:182:12:Times:12:Times:has the same norm as our estimate.  This choice ofVevidently leads to a substantial de-
+36:1100:55646:21:21:90:522:161:12:Times:12:Times:terioration in fit. The government’s optimal policy suggests very low inflation (with a few
+36:1101:55737:21:21:90:522:140:12:Times:12:Times:outliers) for almost the entire sample, which is what Sargent (1999) found. In particular, it
+36:1102:55830:21:21:90:522:119:12:Times:12:Times:completely misses the two peaks in inflation in the 1970s. This illustrates a point made by
+36:1103:55921:21:0:90:522:98:12:Times:12:Times:Chung (1990) and Sargent (1999), both of whom noted that their models implied that the
+37:1104:56038:0:0:168:173:455:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−4
+37:1105:56080:0:0:166:173:487:4:Helvetica:4:Helvetica:−2
+37:1106:56082:0:0:169:172:514:4:Helvetica:4:Helvetica:0
+37:1107:56083:0:0:169:172:541:4:Helvetica:4:Helvetica:2
+37:1108:56084:0:0:169:172:568:4:Helvetica:4:Helvetica:4
+37:1109:56085:0:0:169:172:594:4:Helvetica:4:Helvetica:6
+37:1110:56086:0:0:169:172:621:4:Helvetica:4:Helvetica:8
+37:1111:56087:0:0:166:173:648:4:Helvetica:4:Helvetica:10
+37:1112:56089:0:227:166:173:675:4:Helvetica:4:Helvetica:12
+37:1113:56091:227:0:261:361:448:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+37:1114:56147:0:7:417:434:668:4:Helvetica:4:Helvetica:Actual
+37:1115:56153:7:238:417:441:661:4:Helvetica:4:Helvetica:Forecast
+37:1116:56161:238:21:126:486:423:12:Times:12:Times:FIGURE17.Actual and forecast inflation (government policy) withVbeing
+37:1117:56230:21:32:125:227:402:12:Times:12:Times:scaled down by0.01.
+37:1118:56249:32:21:90:522:370:12:Times:12:Times:government should have cut inflation much earlier than actually occurred in the data. How-
+37:1119:56339:21:21:90:522:349:12:Times:12:Times:ever, that outcome relied on attributing to the government very particular beliefs about how
+37:1120:56431:21:21:90:522:328:12:Times:12:Times:its model changes over time. By allowing the data to inform our choice of these beliefs, we
+37:1121:56522:21:21:90:373:307:12:Times:12:Times:are able much better to explain the rise and fall of inflation.
+37:1122:56585:21:21:101:522:286:12:Times:12:Times:As discussed in SectionIV.4.2, the self-confirming equilibrium (SCE) governs the infla-
+37:1123:56672:21:21:90:521:265:12:Times:12:Times:tion dynamics of our model only for a scaled-down value ofV.  Figure17shows another
+37:1124:56755:21:21:90:522:244:12:Times:12:Times:example of the importance of theVmatrix where the originally estimatedVis scaled down
+37:1125:56840:21:21:90:522:223:12:Times:12:Times:by0.01. Again, this inflation policy completely misses the rise and fall of actual inflation.
+37:1126:56933:21:20:90:522:202:12:Times:12:Times:In this case,  the model remains close to the self-confirming equilibrium throughout the
+37:1127:57021:20:21:90:356:182:12:Times:12:Times:sample, and we’ve seen that inflation is low in the SCE.
+37:1128:57077:21:21:101:522:161:12:Times:12:Times:What are the long-run implications of the estimatedV?  The large value ofVsuggests
+37:1129:57159:21:21:90:522:140:12:Times:12:Times:that  one  expect  escapes  from  SCE  to  be  frequent  even  if  the  inflation  rate  at  the  Nash
+37:1130:57261:21:21:90:521:119:12:Times:12:Times:equilibrium is much higher. To illustrate this point, we changeθ0from its estimated value
+37:1131:57350:21:0:90:522:98:12:Times:12:Times:of−0.0008to−1.0while keeping all the other estimates fixed. This implies that the Nash
+38:1132:57467:0:11:208:455:442:4:Helvetica:4:Helvetica:0.511.522.53
+38:1133:57479:11:0:438:452:431:4:Helvetica:3:Helvetica:x 104
+38:1134:57484:0:0:155:162:447:4:Helvetica:4:Helvetica:−5
+38:1135:57486:0:0:159:163:504:4:Helvetica:4:Helvetica:0
+38:1136:57487:0:0:159:163:561:4:Helvetica:4:Helvetica:5
+38:1137:57488:0:0:155:162:618:4:Helvetica:4:Helvetica:10
+38:1138:57490:0:241:155:162:675:4:Helvetica:4:Helvetica:15
+38:1139:57492:241:26:298:319:434:4:Helvetica:4:Helvetica:Months
+38:1140:57498:26:21:126:485:408:12:Times:12:Times:FIGURE18.Long-run inflation dynamics withθ0=−1.0, using the end-
+38:1141:57562:21:40:125:328:387:12:Times:12:Times:of-sample estimate as the initial condition.
+38:1142:57606:40:21:89:521:347:12:Times:12:Times:inflation rate is around10%, while the socially optimal Ramsey level remains at 2%.  As
+38:1143:57693:21:21:90:521:326:12:Times:12:Times:can be seen from Figure18, inflation tends to be high, but the large time-variation of the
+38:1144:57783:21:21:90:522:305:12:Times:12:Times:drifting beliefs implied byVallows the dynamics to escape to low inflation repeatedly, and
+38:1145:57873:21:21:90:521:284:12:Times:12:Times:there is no tendency for inflation to stay very long at the high level.  Thus, ourVmatrix is
+38:1146:57965:21:21:90:522:263:12:Times:12:Times:consistent with repeated escapes in the long run, but they are difficult to detect under our
+38:1147:58057:21:53:90:341:242:12:Times:12:Times:estimates because we estimated a low sacrifice ratio.
+38:1148:58110:53:28:206:405:189:12:Times:10:Times:VI.RELATION TOOTHERLITERATURE
+38:1149:58139:28:21:101:521:161:12:Times:12:Times:Sargent (1999) fashions two competing stories about the acceleration of US inflation
+38:1150:58223:21:21:90:522:140:12:Times:12:Times:during the 1970s and Volcker’s conquest of inflation during the early 1980s. The first story,
+38:1151:58316:21:21:90:522:119:12:Times:12:Times:called the ‘triumph of the natural rate theory’, explains the run up of inflation as reflecting
+38:1152:58411:21:0:90:522:98:12:Times:12:Times:the monetary authority’s yielding to the temptation to exploit a non-expectational Phillips
+39:1153:58533:0:21:90:522:673:12:Times:12:Times:curve, while Volcker’s conquest of inflation comes from the monetary authority first learn-
+39:1154:58624:21:21:90:522:652:12:Times:12:Times:ing a correct rational expectations version of the natural unemployment rate hypothesis,
+39:1155:58712:21:21:90:522:631:12:Times:12:Times:then  somehow  managing  to  commit  itself  to  the  Ramsey  policy.   The  competing  story,
+39:1156:58806:21:20:90:522:610:12:Times:12:Times:called the ‘vindication of econometric policy evaluation’, shares the ‘triumph’ story’s ac-
+39:1157:58897:20:21:90:522:590:12:Times:12:Times:count of the run up of inflation but differs about Volcker’s stabilization.  According to the
+39:1158:58990:21:21:90:522:569:12:Times:12:Times:vindication story, the Fed never learned a sharp rational expectations version of the natural
+39:1159:59083:21:21:90:522:548:12:Times:12:Times:rate hypothesis.  Instead, sequentially refitting themisspecifiednon-expectational Phillips
+39:1160:59174:21:21:90:522:527:12:Times:12:Times:curve led the Fed to discover inflation-unemployment dynamics that prompted it, through
+39:1161:59261:21:21:90:522:506:12:Times:12:Times:a Phelps problem, to stabilize inflation by the early 1980s. According to the vindication ar-
+39:1162:59354:21:21:90:522:485:12:Times:12:Times:gument, allowing the data to speak continuously, even through estimates of a misspecified
+39:1163:59443:21:21:90:457:464:12:Times:9:Times:Phillips curve model, did a good enough job to prompt the Fed to stabilize.26
+39:1164:59520:21:21:101:522:443:12:Times:12:Times:Sargent (1999), Cho, Williams, and Sargent (2002), and Sargent and Williams (2003)
+39:1165:59602:21:21:90:522:422:12:Times:12:Times:added structure and further features to the vindication story by analyzing versions of the
+39:1166:59692:21:21:90:522:401:12:Times:12:Times:model in this paper. They a priori adopted parameter specifications that opened a substantial
+39:1167:59785:21:21:90:522:380:12:Times:12:Times:gap between the Ramsey and Nash inflation outcomes, and their work discovered both the
+39:1168:59871:21:21:90:522:359:12:Times:12:Times:mean  dynamics  that  on  average  push  outcomes  toward  the  Nash  inflation  level  and  the
+39:1169:59967:21:20:90:424:338:12:Times:12:Times:escape dynamics that recurrently push it toward the Ramsey outcome.
+39:1170:60034:20:21:101:521:318:12:Times:12:Times:The present paper produces estimates of the key parameters that ignite the mean dynam-
+39:1171:60120:21:21:90:522:297:12:Times:12:Times:ics and escape dynamics.  As we have stressed, our empirical estimates deemphasize the
+39:1172:60206:21:21:90:521:276:12:Times:12:Times:roles ofboththe mean dynamics and the escape dynamics and instead emphasize the short-
+39:1173:60292:21:21:90:522:255:12:Times:12:Times:term impacts of shocks on government beliefs.  In addition, our estimate of a small gap
+39:1174:60379:21:21:90:521:234:12:Times:12:Times:between the Nash and Ramsey inflation levels supports Blinder’s (1998) skepticism about
+39:1175:60466:21:21:90:505:213:12:Times:12:Times:whether that gap is central quantitatively to the monetary authority’s decision problem.
+39:1176:60554:21:21:101:522:192:12:Times:12:Times:Cogley and Sargent (2004) provides an alternative econometric explanation of US post
+39:1177:60638:21:21:90:522:171:12:Times:12:Times:WWII inflation that also features the interaction of a government learning process and a
+39:1178:60726:21:29:90:522:150:12:Times:12:Times:sequence of Phelps problems.  Cogley and Sargent’s learning process has the government
+39:1179:60812:29:22:101:521:121:9:Times:10:Times:26The oral tradition in which the vindication story originates, which Sargent heard from Albert Ando, saw
+39:1180:60917:22:0:90:301:99:10:Times:10:Times:it as a puzzle that Volcker waited so long to stabilize.
+40:1181:61004:0:21:90:522:673:12:Times:12:Times:apply Bayes’ rule as it estimates three Phillips curve models, one of which a rational ex-
+40:1182:61094:21:21:90:291:652:12:Times:12:Times:pectations version of a natural rate model.
+40:1183:61137:21:21:101:522:631:12:Times:12:Times:Primiceri (2003b) also develops a learning model to explain the rise and fall of US infla-
+40:1184:61227:21:20:90:522:610:12:Times:12:Times:tion. He estimates his model on US data and finds that its fit is comparable to an atheoretical
+40:1185:61322:20:21:90:522:590:12:Times:12:Times:VAR as a description of the data.  Like us, he emphasizes that inflation remained high in
+40:1186:61411:21:21:90:522:569:12:Times:12:Times:the 1970s due to the government’s perception that disinflation was too costly. Unlike us, a
+40:1187:61502:21:21:90:522:548:12:Times:12:Times:key component of his model is the mismeasurement of the natural rate of unemployment,
+40:1188:61587:21:21:90:522:527:12:Times:12:Times:which caused policy to be looser than policymakers thought. Our paper differ substantially
+40:1189:61677:21:21:90:522:506:12:Times:12:Times:from his in its theoretical structure. Our true economy is a rational expectations natural rate
+40:1190:61772:21:21:90:522:485:12:Times:12:Times:model, and policymakers can eventually converge to a self-confirming equilibrium, a type
+40:1191:61860:21:21:90:522:464:12:Times:12:Times:of rational expectations equilibrium. Primiceri’s main focus is on a backward-looking Key-
+40:1192:61950:21:21:90:522:443:12:Times:12:Times:nesian model, with no role for expectations.27We view the rational expectations natural
+40:1193:62037:21:39:90:444:422:12:Times:12:Times:rate theory as a useful starting point in analyzing the behavior of inflation.
+40:1194:62115:39:28:258:353:383:12:Times:10:Times:VII.CONCLUSION
+40:1195:62129:28:21:101:528:355:12:Times:12:Times:Our estimates attribute the differing inflation outcomes over the post-war period to changes
+40:1196:62221:21:21:90:522:334:12:Times:12:Times:over time in the monetary authority’s beliefs. According to our estimated model, that learn-
+40:1197:62313:21:21:90:441:313:12:Times:12:Times:ing process explains the delayed reaction to rising inflation in that period.
+40:1198:62390:21:21:101:521:292:12:Times:12:Times:Our empirical results suggest an interpretation that differs from the work we build on.
+40:1199:62477:21:20:90:521:271:12:Times:12:Times:Sargent (1999) and Cho, Williams, and Sargent (2002) suggested that US experience could
+40:1200:62564:20:21:90:522:251:12:Times:12:Times:be explained by convergence to a high Nash inflation level coupled with occasional escapes
+40:1201:62654:21:21:90:522:230:12:Times:12:Times:to a lower Ramsey level. As discussed by Sargent and Williams (2003), these outcomes also
+40:1202:62743:21:21:90:522:209:12:Times:12:Times:occur in our model when we set parameters of the true Phillips curve to allow a larger gap
+40:1203:62833:21:21:90:522:188:12:Times:12:Times:between the Nash and Ramsey levels of inflation, and when we also impose what, relative
+40:1204:62920:21:21:90:521:167:12:Times:12:Times:to our estimates, is a scaled-down innovation volatility matrixVin the government’s belief-
+40:1205:63011:21:25:90:521:146:12:Times:12:Times:drift dynamics (8).  However, with our estimates, it appears that oscillations between the
+40:1206:63101:25:22:101:521:121:9:Times:10:Times:27Primiceri also considers a New Keynesian rational expectations model, but it fits substantially worse
+40:1207:63204:22:0:90:251:99:10:Times:10:Times:than his backward-looking specification.
+41:1208:63275:0:21:90:522:673:12:Times:12:Times:Nash and Ramsey levels of inflation, driven alternately by the mean dynamics and then the
+41:1209:63364:21:21:90:521:652:12:Times:12:Times:escape dynamics of, say, the Sargent-Williams (2003) model, were not the main forces that
+41:1210:63453:21:21:90:522:631:12:Times:12:Times:accounted for the inflation process that the monetary authorities in the US chose to preside
+41:1211:63545:21:20:90:522:610:12:Times:12:Times:over during the post WWII years. For one thing, our estimates of the Nash level of inflation
+41:1212:63637:20:21:90:521:590:12:Times:12:Times:turned out to be near the Ramsey level.28Instead, the rise in inflation was driven by the
+41:1213:63726:21:21:90:522:569:12:Times:12:Times:interaction of shocks and government beliefs, and the fall in inflation was due to changes in
+41:1214:63819:21:21:90:522:548:12:Times:12:Times:those beliefs.  If the US monetary authority remembers the lessons that prompted Volcker
+41:1215:63907:21:52:90:522:527:12:Times:12:Times:to disinflate in the early 1980s, then maybe Volcker’s conquest of US inflation will endure.
+41:1216:63999:52:28:255:357:475:12:Times:10:Times:APPENDIXA.DATA
+41:1217:64013:28:28:101:346:447:12:Times:12:Times:The two monthly series employed in this paper are:
+41:1218:64063:28:20:115:521:419:12:g_d0_f3:12:Times:•Civilian unemployment rate, 16 years and older, seasonally adjusted (source: BLS);
+41:1219:64146:20:28:115:467:399:12:g_d0_f3:12:Times:•PCE chain price index (2000=100), seasonally adjusted (source: BEA).
+41:1220:64215:28:20:90:522:371:12:Times:12:Times:Inflation is measured as an annual rate (12-month ended) of change of the PCE price index.
+41:1221:64305:20:53:90:475:351:12:Times:12:Times:The estimation sample (including lags) is from January 1960 to December 2003.
+41:1222:64382:53:28:182:429:298:12:Times:12:Times:APPENDIXB.PROOF OFPROPOSITIONS1AND2
+41:1223:64417:28:21:101:521:270:12:Times:12:Times:From equations (1) and (2) it can be seen that the Jacobian transformation fromw1tand
+41:1224:64502:21:45:90:424:249:12:Times:12:Times:w2ttoutandπtis equal to 1. It follows that the likelihood function is:
+41:1225:64572:45:0:174:237:204:12:g_d0_f7:12:g_d0_f4:L(IT|φ) =
+41:1226:64581:0:19:241:273:215:12:Symbol:9:Times:ζT/21ζT/22
+41:1227:64591:19:0:244:282:196:12:g_d0_f4:9:Times:(2π)T/2
+41:1228:64598:0:0:289:306:204:12:Times:12:Times:exp
+41:1229:64601:0:21:308:318:225:12:g_d0_f6:12:g_d0_f6:{
+41:1230:64602:21:0:317:326:204:12:g_d0_f3:12:g_d0_f3:−
+41:1231:64603:0:17:328:334:213:12:Times:12:Times:1
+41:1232:64604:17:0:328:334:196:12:Times:12:Times:2
+41:1233:64605:0:15:340:345:217:9:Times:9:Times:T
+41:1234:64606:15:10:337:349:202:17:Symbol:17:Symbol:∑
+41:1235:64607:10:0:336:350:192:9:Times:9:Times:t=1
+41:1236:64610:0:10:353:358:214:12:g_d0_f6:12:g_d0_f6:[
+41:1237:64611:10:0:358:416:204:12:Symbol:9:Times:ζ1z21t+ζ2z22t
+41:1238:64624:0:0:417:422:214:12:g_d0_f6:12:g_d0_f6:]
+41:1239:64625:0:21:422:432:225:12:g_d0_f6:12:g_d0_f6:}
+41:1240:64626:21:47:433:522:204:12:g_d0_f5:12:Times:.(B1)
+41:1241:64631:47:22:101:521:157:9:Times:10:Times:28Furthermore, if we arbitrarily set the parameters of the true expectational Phillips curve to create a big
+41:1242:64739:22:18:90:521:135:10:Times:10:Times:gap between the SCE-Nash and the Ramsey inflations, but retain estimated innovation covarianceV, escapes
+41:1243:64843:18:18:90:522:117:10:Times:10:Times:from a SCE again occur frequently enough to vitiate any pattern of recurrent oscillations between the SCE
+41:1244:64948:18:0:90:213:99:10:Times:10:Times:and Ramsey levels of inflation.
+42:1245:65010:0:30:90:386:673:12:Times:12:Times:As defined in the text,z1tandz2tare the functions ofθandφ:
+42:1246:65068:30:26:154:457:643:12:Times:12:g_d0_f5:z1t=ut−u∗−θ0(πt−xt−1)−θ1(πt−1−xt−2)−τ1(ut−1−u∗),
+42:1247:65116:26:31:269:342:617:12:Times:12:g_d0_f5:z2t=πt−xt−1,
+42:1248:65128:31:30:90:413:586:12:Times:12:Times:where the optimal decision rule depends onφ. The prior pdf ofφis
+42:1249:65192:30:30:239:373:556:12:Times:12:g_d0_f5:p(φ) =p(θ)p(φ)p(ζ1,ζ2),
+42:1250:65215:30:21:90:522:526:12:Times:12:Times:where the pdfs on the right hand side of the above equation are defined in (11), (12), and
+42:1251:65305:21:21:90:112:505:12:Times:12:Times:(13).
+42:1252:65310:21:21:101:521:484:12:Times:12:Times:The posterior pdf ofφis proportional to the product of the likelihood (B1) and the prior
+42:1253:65398:21:23:90:116:463:12:Times:12:Times:p(φ):
+42:1254:65403:23:27:238:522:440:12:Times:12:Times:p(φ|IT)∝L(IT|φ)p(φ).(B2)
+42:1255:65427:27:21:101:521:413:12:Times:12:Times:Becausext−1does not depend onθ,ζ1, andζ2, it can be seen from (B2) and (B1) that
+42:1256:65507:21:21:90:522:392:12:Times:12:Times:the posterior distribution ofθconditional on all other parameters is Gaussian and that the
+42:1257:65597:21:21:90:522:371:12:Times:12:Times:posterior distribution ofζ1andζ2is of Gamma.  Algebra leads to the Gaussian form (14)
+42:1258:65682:21:34:90:217:350:12:Times:12:Times:and the Gamma form (15).
+42:1259:65706:34:28:226:385:316:12:Times:10:Times:APPENDIXC.PRIORSETTINGS
+42:1260:65729:28:21:101:521:288:12:Times:12:Times:Our estimation results are quite similar to the maximum likelihood estimates.  But the
+42:1261:65815:21:21:90:522:267:12:Times:12:Times:prior is essential for obtaining finite-sample inferences because the government belief pa-
+42:1262:65906:21:21:90:522:246:12:Times:12:Times:rameter matrixVmay not have a proper density function when there is no prior. The prior
+42:1263:65993:21:21:90:522:225:12:Times:12:Times:forθis mostly based on economic theory. For example, the mass prior probability ofθ0is
+42:1264:66079:21:21:90:196:204:12:Times:12:Times:in the negative region.
+42:1265:66102:21:8:101:243:183:12:Times:12:Times:The prior mean forθis set to
+42:1266:66130:8:21:280:288:175:12:g_d0_f6:12:g_d0_f6:
+42:1267:66131:21:8:280:288:154:12:g_d0_f6:12:g_d0_f6:
+42:1268:66132:8:7:280:288:146:12:g_d0_f6:12:g_d0_f6:
+42:1269:66133:7:7:280:288:139:12:g_d0_f6:12:g_d0_f6:
+42:1270:66134:7:7:280:288:132:12:g_d0_f6:12:g_d0_f6:
+42:1271:66135:7:8:280:288:125:12:g_d0_f6:12:g_d0_f6:
+42:1272:66136:8:0:280:288:117:12:g_d0_f6:12:g_d0_f6:
+42:1273:66137:0:21:293:314:163:12:Times:12:Times:0.12
+42:1274:66141:21:21:288:318:142:12:g_d0_f3:12:Times:−0.20
+42:1275:66146:21:21:288:318:121:12:g_d0_f3:12:Times:−0.16
+42:1276:66151:21:0:293:314:100:12:Times:12:Times:0.98
+42:1277:66155:0:21:318:326:175:12:g_d0_f6:12:g_d0_f6:
+42:1278:66156:21:8:318:326:154:12:g_d0_f6:12:g_d0_f6:
+42:1279:66157:8:7:318:326:146:12:g_d0_f6:12:g_d0_f6:
+42:1280:66158:7:7:318:326:139:12:g_d0_f6:12:g_d0_f6:
+42:1281:66159:7:7:318:326:132:12:g_d0_f6:12:g_d0_f6:
+42:1282:66160:7:8:318:326:125:12:g_d0_f6:12:g_d0_f6:
+42:1283:66161:8:0:318:326:117:12:g_d0_f6:12:g_d0_f6:
+42:1284:66162:0:0:328:331:133:12:g_d0_f5:12:g_d0_f5:,
+43:1285:66194:0:21:90:522:673:12:Times:12:Times:which implies that the natural rate of unemployment is 6.0 with somewhat persistent un-
+43:1286:66281:21:21:90:521:652:12:Times:12:Times:employment.  The prior mean ofθ1is only slightly less than that ofθ0in absolute value
+43:1287:66366:21:21:89:522:631:12:Times:12:Times:(.16< .20), implying the low serial correlation of structural disturbances in Sargent’s ver-
+43:1288:66458:21:73:90:465:610:12:Times:12:Times:sion of the Phillips curve (pp.70-71, Sargent1999). The prior variance forθis
+43:1289:66535:73:0:276:286:537:12:Symbol:9:Times:λ1
+43:1290:66537:0:21:289:297:579:12:g_d0_f6:12:g_d0_f6:
+43:1291:66538:21:8:289:297:558:12:g_d0_f6:12:g_d0_f6:
+43:1292:66539:8:7:289:297:550:12:g_d0_f6:12:g_d0_f6:
+43:1293:66540:7:7:289:297:543:12:g_d0_f6:12:g_d0_f6:
+43:1294:66541:7:7:289:297:536:12:g_d0_f6:12:g_d0_f6:
+43:1295:66542:7:8:289:297:529:12:g_d0_f6:12:g_d0_f6:
+43:1296:66543:8:0:289:297:521:12:g_d0_f6:12:g_d0_f6:
+43:1297:66544:0:21:297:322:567:12:Times:9:Times:0.062
+43:1298:66549:21:21:297:322:546:12:Times:9:Times:0.102
+43:1299:66554:21:21:297:322:525:12:Times:9:Times:0.082
+43:1300:66559:21:0:297:322:504:12:Times:9:Times:0.012
+43:1301:66564:0:21:323:331:579:12:g_d0_f6:12:g_d0_f6:
+43:1302:66565:21:8:323:331:558:12:g_d0_f6:12:g_d0_f6:
+43:1303:66566:8:7:323:331:550:12:g_d0_f6:12:g_d0_f6:
+43:1304:66567:7:7:323:331:543:12:g_d0_f6:12:g_d0_f6:
+43:1305:66568:7:7:323:331:536:12:g_d0_f6:12:g_d0_f6:
+43:1306:66569:7:8:323:331:529:12:g_d0_f6:12:g_d0_f6:
+43:1307:66570:8:0:323:331:521:12:g_d0_f6:12:g_d0_f6:
+43:1308:66571:0:74:332:335:537:12:g_d0_f5:12:g_d0_f5:,
+43:1309:66572:74:21:90:522:463:12:Times:12:Times:whereλ1controls  the  tightness  of  the  prior  variance.   Withλ1=1,  the  prior  standard
+43:1310:66664:21:21:89:521:442:12:Times:12:Times:deviation  allows  large  variation  but  at  the  same  time  gives  little  probability  to  negative
+43:1311:66767:21:21:89:522:421:12:Times:12:Times:values ofv∗, or positive values ofθ0andθ1, or the value ofτ1being greater than 1 (an
+43:1312:66851:21:21:90:164:400:12:Times:12:Times:explosive root).
+43:1313:66867:21:21:101:521:379:12:Times:12:Times:For the prior ofζ1andζ2, we set ̄α=4and ̄β=12.5λ2.  By settingλ2=1, the prior
+43:1314:66944:21:21:90:521:358:12:Times:12:Times:mean forζibecomes 50 and the prior variance becomes252, implying a quite loose prior
+43:1315:67028:21:21:90:118:337:12:Times:12:Times:forζi.
+43:1316:67034:21:21:101:521:316:12:Times:9:Times:The prior mean forCPandCVis 0.  The prior variance is52λ3for the diagonals ofCP
+43:1317:67113:21:21:90:522:295:12:Times:12:Times:andCVand2.52for the off-diagonal elements. The tightness control hyperparameter is set
+43:1318:67199:21:21:90:120:274:12:Times:12:Times:at 0.5.
+43:1319:67206:21:20:101:521:253:12:Times:12:Times:In this paper, we have checked the robustness of our estimated results by varying the
+43:1320:67291:20:65:90:361:233:12:Times:12:Times:values of the tightness control parametersλ1,λ2, andλ3.
+43:1321:67346:65:28:126:486:168:12:Times:10:Times:APPENDIXD.PROPOSAL DENSITY FOR THEMETROPOLIS ALGORITHM
+43:1322:67400:28:21:101:522:140:12:Times:12:Times:The  key  to  the  Metropolis  algorithm  for  the  posterior  distributionφis  to  obtain  the
+43:1323:67495:21:21:90:521:119:12:Times:12:Times:covariance matrix for a normal proposal density.  Sincext−1is a function ofφ, one can
+43:1324:67580:21:0:90:522:98:12:Times:12:Times:approximate it by a second-order Taylor expansion at the posterior estimateˆφ.  It can be
+44:1325:67700:0:38:90:502:673:12:Times:12:Times:seen from (B2) that this approximation leads to the following covariance matrix forφ:
+44:1326:67785:38:0:122:208:635:12:Times:12:g_d0_f4: ̃Σ−1φ=(ζ1θ20+ζ2)
+44:1327:67802:0:15:213:218:645:9:Times:9:Times:T
+44:1328:67803:15:10:210:222:630:17:Symbol:17:Symbol:∑
+44:1329:67804:10:0:209:223:620:9:Times:9:Times:t=2
+44:1330:67807:0:17:226:272:642:12:Symbol:12:g_d0_f4:∂xt−1(ˆφ)
+44:1331:67816:17:0:241:256:625:12:Symbol:12:Symbol:∂ φ
+44:1332:67819:0:17:274:319:642:12:Symbol:12:g_d0_f4:∂x′t−1(ˆφ)
+44:1333:67829:17:0:288:303:625:12:Symbol:12:Symbol:∂ φ
+44:1334:67832:0:0:321:354:633:12:g_d0_f4:9:Times:+ζ1θ21
+44:1335:67838:0:15:361:366:645:9:Times:9:Times:T
+44:1336:67839:15:10:358:370:630:17:Symbol:17:Symbol:∑
+44:1337:67840:10:0:357:371:620:9:Times:9:Times:t=2
+44:1338:67843:0:17:374:419:642:12:Symbol:12:g_d0_f4:∂xt−2(ˆφ)
+44:1339:67852:17:0:389:404:625:12:Symbol:12:Symbol:∂ φ
+44:1340:67855:0:17:421:467:642:12:Symbol:12:g_d0_f4:∂x′t−2(ˆφ)
+44:1341:67865:17:32:436:451:625:12:Symbol:12:Symbol:∂ φ
+44:1342:67868:32:0:153:197:593:12:g_d0_f4:9:Times:+ζ1θ0θ1
+44:1343:67875:0:16:203:208:606:9:Times:9:Times:T
+44:1344:67876:16:9:200:212:590:17:Symbol:17:Symbol:∑
+44:1345:67877:9:0:199:213:581:9:Times:9:Times:t=2
+44:1346:67880:0:8:215:221:610:12:g_d0_f6:12:g_d0_f6:[
+44:1347:67881:8:17:222:268:602:12:Symbol:12:g_d0_f4:∂xt−1(ˆφ)
+44:1348:67890:17:0:237:252:585:12:Symbol:12:Symbol:∂ φ
+44:1349:67893:0:17:270:315:602:12:Symbol:12:g_d0_f4:∂x′t−2(ˆφ)
+44:1350:67903:17:0:284:299:585:12:Symbol:12:Symbol:∂ φ
+44:1351:67906:0:0:317:326:593:12:g_d0_f4:12:g_d0_f4:+
+44:1352:67907:0:17:330:375:602:12:Symbol:12:g_d0_f4:∂xt−2(ˆφ)
+44:1353:67916:17:0:344:359:585:12:Symbol:12:Symbol:∂ φ
+44:1354:67919:0:17:377:422:602:12:Symbol:12:g_d0_f4:∂x′t−1(ˆφ)
+44:1355:67929:17:0:392:407:585:12:Symbol:12:Symbol:∂ φ
+44:1356:67932:0:17:423:429:610:12:g_d0_f6:12:g_d0_f6:]
+44:1357:67933:17:0:431:464:593:12:g_d0_f4:12:g_d0_f5:+ ̄Σ−1φ,
+44:1358:67941:0:62:499:522:613:12:Times:12:Times:(D1)
+44:1359:67945:62:49:90:310:551:12:Times:12:Times:where ̄Σφis the prior covariance matrix forφ.
+44:1360:67990:49:28:170:441:502:12:Times:10:Times:APPENDIXE.STATISTICALCOMPARISON TOBVARS
+44:1361:68029:28:20:101:521:474:12:Times:12:Times:We compute the marginal data density (MDD) for our learning model, using the modified
+44:1362:68114:20:21:90:521:454:12:Times:12:Times:harmonic mean method described in Geweke (1999).  The log MDD value is about 27.50,
+44:1363:68197:21:21:90:522:433:12:Times:12:Times:which is substantially lower compared to monthly Bayesian vector autoregression (BVAR)
+44:1364:68283:21:21:90:522:412:12:Times:12:Times:models of unemployment and inflation. With the standard prior settings proposed by Sims
+44:1365:68370:21:21:90:521:391:12:Times:12:Times:and Zha (1998), the log MDD value is 172.05 for the BVAR with one lag and 244.65 for
+44:1366:68454:21:21:90:522:370:12:Times:12:Times:the BVAR with 13 lags. By the measure of Bayes factors, the BVARs (including the BVAR
+44:1367:68539:21:21:90:522:349:12:Times:12:Times:with only one lag) dominate our learning model.  Note that this result may be sensitive to
+44:1368:68629:21:21:90:522:328:12:Times:12:Times:the priors used in estimating the models.  The prior for our model was loose along several
+44:1369:68719:21:21:90:522:307:12:Times:12:Times:dimensions, which means that the MDD may be penalizing our model more heavily than
+44:1370:68801:21:21:90:134:286:12:Times:12:Times:the VAR.
+44:1371:68809:21:21:101:521:265:12:Times:12:Times:Higher  Bayes  factors  do  not  necessarily  imply  that  BVARs  outperform  our  learning
+44:1372:68900:21:21:90:521:244:12:Times:12:Times:model in explaining the rise and fall of inflation.   FigureE1displays the forecast from
+44:1373:68988:21:21:90:522:223:12:Times:12:Times:the BVAR(1). The68%and90%error bands are produced by simulating the VAR shocks
+44:1374:69066:21:20:90:522:202:12:Times:12:Times:while holding the parameter estimates fixed at those obtained using the 60:01-03:12 sam-
+44:1375:69154:20:21:90:522:182:12:Times:12:Times:ple, the same procedure as we did for our learning model. As can be seen, this BVAR fails
+44:1376:69243:21:21:90:522:161:12:Times:12:Times:to predict any rise of inflation with a significant probability.  And the upper90%band is
+44:1377:69332:21:21:90:170:140:12:Times:12:Times:well below10%.
+44:1378:69346:21:21:101:521:119:12:Times:12:Times:FigureE2shows the forecasts of inflation at the various dates from the BVAR(13), re-
+44:1379:69430:21:0:90:521:98:12:Times:12:Times:sembling Figure8.  The forecasts at 73:01 from the BVAR(13) are not so different from
+45:1380:69546:0:0:195:173:452:4:Helvetica:4:Helvetica:5101520253035404550−5
+45:1381:69567:0:0:169:172:512:4:Helvetica:4:Helvetica:0
+45:1382:69568:0:0:169:172:566:4:Helvetica:4:Helvetica:5
+45:1383:69569:0:0:166:173:621:4:Helvetica:4:Helvetica:10
+45:1384:69571:0:230:166:173:675:4:Helvetica:4:Helvetica:15
+45:1385:69597:230:0:274:351:445:4:Helvetica:4:Helvetica:Forecast months after 73:01
+45:1386:69624:0:7:401:418:668:4:Helvetica:4:Helvetica:Actual
+45:1387:69630:7:241:401:445:661:4:Helvetica:4:Helvetica:Median forecast
+45:1388:69645:241:21:126:485:420:12:Times:12:Times:FIGUREE1.Dynamic forecasts of inflation from BVAR(1) at 73:01, with
+45:1389:69712:21:92:125:281:399:12:Times:12:Times:68%and90%probability bands.
+45:1390:69739:92:21:90:522:307:12:Times:12:Times:those from the BVAR(1) except the error bands are much wider. It gives half probability to
+45:1391:69829:21:21:90:192:286:12:Times:12:Times:a decline of inflation.
+45:1392:69852:21:21:101:521:265:12:Times:12:Times:For the forecasts at 74:01, the BVAR forecasts are comparable to those from our learning
+45:1393:69940:21:21:90:123:244:12:Times:12:Times:model.
+45:1394:69946:21:21:101:521:223:12:Times:12:Times:The forecasts at 77:01 from the BVAR(13) again gives half probability to a decline of
+45:1395:70031:21:20:90:521:202:12:Times:12:Times:inflation  while  the  forecasts  from  our  learning  model  (Figure8)  put  a  vast  majority  of
+45:1396:70130:20:21:90:231:182:12:Times:12:Times:probability to rising inflation.
+45:1397:70162:21:21:101:521:161:12:Times:12:Times:For the forecast at 84:04, the BVAR(13) predicts the decline of inflation like our learning
+45:1398:70253:21:21:90:522:140:12:Times:12:Times:model.  But our learning model predicts a much sharper decline of inflation with narrow
+45:1399:70340:21:21:90:522:119:12:Times:12:Times:bands while the BVAR gives a considerable probability of higher inflation than the actual
+45:1400:70429:21:0:90:199:98:12:Times:12:Times:path with wider bands.
+46:1401:70482:0:0:119:103:520:2:Helvetica:2:Helvetica:5101520253035404550−5
+46:1402:70503:0:0:101:103:562:2:Helvetica:2:Helvetica:0
+46:1403:70504:0:0:101:103:600:2:Helvetica:2:Helvetica:5
+46:1404:70505:0:0:98:103:639:2:Helvetica:2:Helvetica:10
+46:1405:70507:0:163:98:103:677:2:Helvetica:2:Helvetica:15
+46:1406:70533:163:0:175:230:514:2:Helvetica:2:Helvetica:Forecast months after 73:01
+46:1407:70560:0:152:264:295:672:2:Helvetica:2:Helvetica:ActualMedian forecast
+46:1408:70581:152:0:336:320:520:2:Helvetica:2:Helvetica:5101520253035404550−5
+46:1409:70602:0:0:318:320:562:2:Helvetica:2:Helvetica:0
+46:1410:70603:0:0:318:320:600:2:Helvetica:2:Helvetica:5
+46:1411:70604:0:0:315:320:639:2:Helvetica:2:Helvetica:10
+46:1412:70606:0:163:315:320:677:2:Helvetica:2:Helvetica:15
+46:1413:70632:163:0:392:447:514:2:Helvetica:2:Helvetica:Forecast months after 74:01
+46:1414:70659:0:324:481:512:672:2:Helvetica:2:Helvetica:ActualMedian forecast
+46:1415:70680:324:0:119:103:348:2:Helvetica:2:Helvetica:5101520253035404550−5
+46:1416:70701:0:0:101:103:390:2:Helvetica:2:Helvetica:0
+46:1417:70702:0:0:101:103:428:2:Helvetica:2:Helvetica:5
+46:1418:70703:0:0:98:103:467:2:Helvetica:2:Helvetica:10
+46:1419:70705:0:162:98:103:505:2:Helvetica:2:Helvetica:15
+46:1420:70731:162:0:175:230:343:2:Helvetica:2:Helvetica:Forecast months after 77:01
+46:1421:70758:0:152:264:295:500:2:Helvetica:2:Helvetica:ActualMedian forecast
+46:1422:70779:152:0:336:320:348:2:Helvetica:2:Helvetica:5101520253035404550−5
+46:1423:70800:0:0:318:320:390:2:Helvetica:2:Helvetica:0
+46:1424:70801:0:0:318:320:428:2:Helvetica:2:Helvetica:5
+46:1425:70802:0:0:315:320:467:2:Helvetica:2:Helvetica:10
+46:1426:70804:0:162:315:320:505:2:Helvetica:2:Helvetica:15
+46:1427:70830:162:0:392:447:343:2:Helvetica:2:Helvetica:Forecast months after 80:04
+46:1428:70857:0:181:481:512:500:2:Helvetica:2:Helvetica:ActualMedian forecast
+46:1429:70878:181:21:126:486:319:12:Times:12:Times:FIGUREE2.Dynamic  forecasts  of  inflation  from  BVAR(13)  at  73:01,
+46:1430:70948:21:47:125:396:298:12:Times:12:Times:74:01, 77:01, and 80:04, with 68% and 90% error bands.
+46:1431:71002:47:28:151:460:251:12:Times:10:Times:APPENDIXF.ACCOUNTING FORPARAMETERUNCERTAINTY
+46:1432:71046:28:21:101:521:223:12:Times:12:Times:In this appendix, we report probability bands on key government policy variables.  We
+46:1433:71131:21:20:90:521:202:12:Times:12:Times:first assess how sharply inflation set by the government’s policy (xt−1) is estimated. Figure
+46:1434:71224:20:21:90:522:182:12:Times:12:Times:F1displays the error bands, which are generated with both parameter uncertainty and ex-
+46:1435:71311:21:21:90:522:161:12:Times:12:Times:ogenous random inflation shocks.  Clearly, the bands themselves track the rise and fall of
+46:1436:71401:21:21:90:212:140:12:Times:12:Times:actual inflation very well.
+46:1437:71428:21:21:101:521:119:12:Times:12:Times:The key insight into the intricate interactions between shocks and government beliefs is
+46:1438:71516:21:0:90:522:98:12:Times:12:Times:the perceived long-run tradeoffs under the Ramsey policy. FigureF2reports the estimated
+47:1439:71634:0:0:168:173:455:4:Helvetica:4:Helvetica:1960196519701975198019851990199520002005−2
+47:1440:71676:0:0:169:172:487:4:Helvetica:4:Helvetica:0
+47:1441:71677:0:0:169:172:514:4:Helvetica:4:Helvetica:2
+47:1442:71678:0:0:169:172:541:4:Helvetica:4:Helvetica:4
+47:1443:71679:0:0:169:172:568:4:Helvetica:4:Helvetica:6
+47:1444:71680:0:0:169:172:594:4:Helvetica:4:Helvetica:8
+47:1445:71681:0:0:166:173:621:4:Helvetica:4:Helvetica:10
+47:1446:71683:0:0:166:173:648:4:Helvetica:4:Helvetica:12
+47:1447:71685:0:227:166:173:675:4:Helvetica:4:Helvetica:14
+47:1448:71687:227:0:261:361:448:4:Helvetica:4:Helvetica:From March 1960 to December 2003
+47:1449:71743:0:7:408:425:668:4:Helvetica:4:Helvetica:Actual
+47:1450:71749:7:7:408:440:661:4:Helvetica:4:Helvetica:Lower band
+47:1451:71759:7:243:408:441:654:4:Helvetica:4:Helvetica:Higher band
+47:1452:71770:243:258:133:478:411:12:Times:12:Times:FIGUREF1.Inflation: actual vs one-step forecast with 90% error bands
+47:1453:71838:258:0:192:165:153:4:Helvetica:4:Helvetica:19651970197519801985199019952000−10
+47:1454:71873:0:0:162:166:186:4:Helvetica:4:Helvetica:0
+47:1455:71874:0:0:158:165:214:4:Helvetica:4:Helvetica:10
+47:1456:71876:0:0:158:165:243:4:Helvetica:4:Helvetica:20
+47:1457:71878:0:0:158:165:271:4:Helvetica:4:Helvetica:30
+47:1458:71880:0:0:158:165:299:4:Helvetica:4:Helvetica:40
+47:1459:71882:0:0:158:165:328:4:Helvetica:4:Helvetica:50
+47:1460:71884:0:0:158:165:356:4:Helvetica:4:Helvetica:60
+47:1461:71886:0:0:158:165:384:4:Helvetica:4:Helvetica:70
+47:1462:71888:0:15:222:401:392:4:Helvetica:4:Helvetica:Perceived log−run excess unemployment under Ramsey policy
+47:1463:71945:15:8:413:438:377:4:Helvetica:4:Helvetica:Estimate
+47:1464:71953:8:7:413:447:369:4:Helvetica:4:Helvetica:Lower band
+47:1465:71963:7:233:413:448:362:4:Helvetica:4:Helvetica:Higher band
+47:1466:71974:233:21:126:485:129:12:Times:12:Times:FIGUREF2.Perceived long-run excess unemployment under Ramsey pol-
+47:1467:72039:21:0:125:281:108:12:Times:12:Times:icy of2%with90%error bands.
+48:1468:72097:0:21:90:522:673:12:Times:12:Times:tradeoffs with90%error bands. The large tradeoffs in the 70s are sharply estimated. Judg-
+48:1469:72186:21:21:90:522:652:12:Times:12:Times:ing by the error bands, the small but sharp fluctuations of tradeoffs experienced in the 60s
+48:1470:72278:21:21:90:522:631:12:Times:12:Times:do not exist in the 90s; the government’s perceived tradeoffs are smaller and stabler in the
+48:1471:72370:21:0:90:110:610:12:Times:12:Times:90s.
+49:1472:72405:0:28:272:339:673:12:Times:10:Times:REFERENCES
+49:1473:72415:28:21:90:522:645:12:Times:12:Times:BLINDER, A. S.(1998):Central Banking in Theory and Practice. MIT Press, Cambridge,
+49:1474:72497:21:21:101:173:624:12:Times:12:Times:Massachusetts.
+49:1475:72511:21:20:90:522:603:12:Times:12:Times:CHO, I.-K., N. WILLIAMS,ANDT. J. SARGENT(2002): “Escaping Nash Inflation,”Re-
+49:1476:72588:20:21:101:275:583:12:Times:12:Times:view of Economic Studies, 69, 1–40.
+49:1477:72623:21:21:90:522:562:12:Times:12:Times:CHUNG, H.(1990):Did Policy Makers Really Believe in the Phillips Curve?  An Econo-
+49:1478:72705:21:21:101:483:541:12:Times:12:Times:metric Test. University of Minnesota, Minneapolis, USA, ph.d. dissertation edn.
+49:1479:72784:21:21:90:521:520:12:Times:12:Times:COGLEY, T.,ANDT. J. SARGENT(2003): “Drifts and Volatilities: Monetary Policies and
+49:1480:72866:21:21:101:521:499:12:Times:12:Times:Outcomes in the Post WWII U.S.,”  Manuscript,  University of California (Davis) and
+49:1481:72949:21:21:101:205:478:12:Times:12:Times:New York University.
+49:1482:72969:21:21:135:522:457:12:Times:12:Times:(2004):  “The  Conquest  of  U.S.  Inflation:  Learning  and  Robutsness  to  Model
+49:1483:73052:21:21:101:507:436:12:Times:12:Times:Uncertainty,” Manuscript, University of California (Davis) and New York University.
+49:1484:73135:21:21:90:522:415:12:Times:12:Times:GEWEKE, J.(1999):  “Using Simulation Methods for Bayesian Econometric Models:  In-
+49:1485:73217:21:21:101:488:394:12:Times:12:Times:ference, Development, and Communication,”Econometric Reviews, 18(1), 1–73.
+49:1486:73291:21:21:90:522:373:12:Times:12:Times:HAMILTON,  J.  D.,  D.  F.  WAGGONER,ANDT.  ZHA(2003):  “Normalization in Econo-
+49:1487:73371:21:20:101:521:352:12:Times:12:Times:metrics,” Manuscript, University of California (San Diego) and Federal Reserve Bank of
+49:1488:73457:20:21:101:139:332:12:Times:12:Times:Atlanta.
+49:1489:73465:21:21:90:521:311:12:Times:12:Times:IRELAND, P.(1999): “Does the Time-Consistency Problem Explain the Behavior of Infla-
+49:1490:73549:21:21:101:470:290:12:Times:12:Times:tion in the United States?,”Journal of Monetary Economics, 44(2), 279–292.
+49:1491:73623:21:21:90:521:269:12:Times:12:Times:KING, R. G.,ANDM. WATSON(1994): “The Post-War U.S. Phillips Curve: A Revisionist
+49:1492:73703:21:21:101:522:248:12:Times:12:Times:Econometric History,”Carnegie-Rochester Conference Series on Public Policy, 41, 157–
+49:1493:73787:21:21:101:122:227:12:Times:12:Times:219.
+49:1494:73791:21:21:90:522:206:12:Times:12:Times:KYDLAND,  F.  E.,ANDE.  C.  PRESCOTT(1977):  “Rules Rather Than Discretion:  The
+49:1495:73871:21:21:101:484:185:12:Times:12:Times:Inconsistency of Optimal Plans,”Journal of Political Economy, 85(3), 473–492.
+49:1496:73948:21:21:90:521:164:12:Times:12:Times:PARKIN, M.(1993): “Inflation in North America,” inStabilizing the World Economy in the
+49:1497:74034:21:21:101:344:143:12:Times:12:Times:1990s, ed. by K. Shigehara. Bank of Japan, Tokyo.
+49:1498:74083:21:21:90:521:122:12:Times:12:Times:PRIMICERI, G.(2003a):  “Time Varying Structural Vector Autoregressions and Monetary
+49:1499:74166:21:0:101:242:101:12:Times:12:Times:Policy,” Princeton University.
+50:1500:74227:0:21:133:521:673:12:Times:12:Times:(2003b):  “Why Inflation Rose and Fell:  Policymakers’ Beliefs and US Postwar
+50:1501:74304:21:21:101:305:652:12:Times:12:Times:Stabilization Policy,” Princeton University.
+50:1502:74348:21:21:90:521:631:12:Times:12:Times:SARGENT, T. J.(1999):The Conquest of American Inflation. Princeton University Press,
+50:1503:74432:21:20:101:210:610:12:Times:12:Times:Princeton, New Jersey.
+50:1504:74454:20:21:90:521:590:12:Times:12:Times:SARGENT, T. J.,ANDN. WILLIAMS(2003): “Impacts of Priors on Convergence and Es-
+50:1505:74532:21:21:101:521:569:12:Times:12:Times:capes from Nash Inflation,” Manuscript, New York University and Princeton University.
+50:1506:74617:21:21:90:521:548:12:Times:12:Times:SIMS, C. A.(1988): “Projecting Policy Effects with Statistical Models,”Revista de Anali-
+50:1507:74705:21:21:101:216:527:12:Times:12:Times:sis Economico, 3, 3–20.
+50:1508:74728:21:21:90:521:506:12:Times:12:Times:SIMS, C. A.,ANDT. ZHA(1998): “Bayesian Methods for Dynamic Multivariate Models,”
+50:1509:74808:21:21:101:335:485:12:Times:12:Times:International Economic Review, 39(4), 949–968.
+50:1510:74854:21:21:134:521:464:12:Times:12:Times:(2004):  “Were There Regime Switches in US Monetary Policy?,”  Manuscript,
+50:1511:74928:21:21:101:383:443:12:Times:12:Times:Princeton University and Federal Reserve Bank of Atlanta.
+50:1512:74985:21:21:90:522:422:12:Times:12:Times:STAIGER, D., J. H. STOCK,ANDM. W. WATSON(1997): “The NAIRU, Unemployment
+50:1513:75057:21:30:101:482:401:12:Times:12:Times:and Monetary Policy,”Journal of Economic Perspectives, Winter, 11(1), 33–49.
+50:1514:75133:30:18:102:521:371:10:Times:10:Times:NEWYORKUNIVERSITY  ANDHOOVERINSTITUTION, PRINCETONUNIVERSITY  ANDNBER, FED-
+50:1515:75208:18:0:90:239:353:8:Times:8:Times:ERALRESERVEBANK OFATLANTA

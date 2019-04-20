@@ -1,0 +1,1236 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:496:610:12:Times:12:Times:ESTIMATION OF DSGE MODELS WHEN THE DATA ARE PERSISTENT
+1:2:79:28:14:306:359:582:12:Times:12:Times:Yuriy Gorodnichenko
+1:3:98:14:28:306:331:568:12:Times:12:Times:Serena Ng
+1:4:107:28:14:306:359:540:12:Times:12:Times:Working Paper 15187
+1:5:126:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w15187
+1:6:159:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:195:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:220:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:239:14:200:306:330:442:12:Times:12:Times:July 2009
+1:10:248:200:14:72:540:242:12:Times:12:Times:This paper was presented at Brown University, the University of Michigan, the 2007 NBER Summer
+1:11:342:14:14:72:540:228:12:Times:12:Times:Institute, Princeton University, UC Berkeley,  and the New York Area  Macro Conference. We thank
+1:12:438:14:14:72:540:214:12:Times:12:Times:Marc Giannone,Tim Cogley, Anna Mikusheva, and two anonymous referees for many helpful comments.
+1:13:533:14:14:72:540:200:12:Times:12:Times:The second author acknowledges financial support from the National Science Foundation (SES 0549978).
+1:14:633:14:14:72:540:186:12:Times:12:Times:The views expressed herein are those of the author(s) and do not necessarily reflect the views of the
+1:15:734:14:28:72:266:172:12:Times:12:Times:National Bureau of Economic Research.
+1:16:771:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:17:867:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:18:962:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:19:980:28:14:72:540:88:12:Times:12:Times:© 2009 by Yuriy Gorodnichenko and Serena Ng. All rights reserved. Short sections of text, not to
+1:20:1076:14:14:72:540:74:12:Times:12:Times:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:21:1177:14:0:72:224:60:12:Times:12:Times:© notice, is given to the source.
+2:22:1210:0:14:72:353:700:12:Times:12:Times:Estimation of DSGE Models When the Data are Persistent
+2:23:1264:14:14:72:251:686:12:Times:12:Times:Yuriy Gorodnichenko and Serena Ng
+2:24:1297:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 15187
+2:25:1325:14:14:72:119:658:12:Times:12:Times:July 2009
+2:26:1334:14:28:72:162:644:12:Times:12:Times:JEL No. E3,F4,O4
+2:27:1350:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:28:1358:28:14:72:540:588:12:Times:12:Times:Dynamic Stochastic General Equilibrium (DSGE) models are often  solved and estimated  under specific
+2:29:1458:14:14:72:540:574:12:Times:12:Times:assumptions as to whether the exogenous variables  are difference or trend stationary. However, even
+2:30:1558:14:14:72:540:560:12:Times:12:Times:mild departures of the data generating process from these assumptions can severely bias the estimates
+2:31:1659:14:14:72:540:546:12:Times:12:Times:of the model parameters. This paper proposes  new estimators  that do not require researchers to take
+2:32:1760:14:14:72:540:532:12:Times:12:Times:a stand on whether shocks  have permanent or transitory effects. These procedures have two key features.
+2:33:1864:14:14:72:540:518:12:Times:12:Times:First, the same filter is applied to both the data and the model variables. Second, the filtered variables
+2:34:1970:14:14:72:540:504:12:Times:12:Times:are stationary when evaluated at the true parameter vector. The estimators are approximately normally
+2:35:2071:14:14:72:540:490:12:Times:12:Times:distributed  not only when the shocks are mildly persistent, but also when they  have near or exact
+2:36:2170:14:14:72:540:476:12:Times:12:Times:unit roots. Simulations  show that these robust estimators perform well especially  when the shocks
+2:37:2269:14:14:72:540:462:12:Times:12:Times:are highly persistent yet stationary. In such cases, linear detrending and first differencing are shown
+2:38:2372:14:42:72:255:448:12:Times:12:Times:to yield biased or imprecise estimates.
+2:39:2411:42:14:72:178:406:12:Times:12:Times:Yuriy Gorodnichenko
+2:40:2430:14:14:72:198:392:12:Times:12:Times:Department of Economics
+2:41:2453:14:14:72:179:378:12:Times:12:Times:549 Evans Hall #3880
+2:42:2473:14:14:72:237:364:12:Times:12:Times:University of California, Berkeley
+2:43:2507:14:14:72:199:350:12:Times:12:Times:Berkeley, CA 94720-3880
+2:44:2530:14:14:72:124:336:12:Times:12:Times:and NBER
+2:45:2538:14:28:72:214:322:12:Times:12:Times:ygorodni@econ.berkeley.edu
+2:46:2564:28:14:72:122:294:12:Times:12:Times:Serena Ng
+2:47:2573:14:14:72:198:280:12:Times:12:Times:Department of Economics
+2:48:2596:14:14:72:173:266:12:Times:12:Times:Columbia University
+2:49:2615:14:14:72:144:252:12:Times:12:Times:440 W. 118 St.
+2:50:2629:14:14:72:267:238:12:Times:12:Times:International Affairs Building, MC 3308
+2:51:2668:14:14:72:122:224:12:Times:12:Times:New York
+2:52:2676:14:14:72:122:210:12:Times:12:Times:NY 10027
+2:53:2684:14:0:72:194:196:12:Times:12:Times:serena.ng@columbia.edu
+3:54:2706:0:29:72:160:699:11:g_d0_f1:11:g_d0_f1:1    Introduction
+3:55:2723:29:18:72:554:670:11:g_d0_f2:11:g_d0_f2:Dynamic stochastic general equilibrium (DSGE) models are now accepted as the primary framework
+3:56:2817:18:18:72:554:652:11:g_d0_f2:11:g_d0_f2:for macroeconomic analysis.  Until recently, counterfactual experiments were conducted by assigning
+3:57:2916:18:18:72:554:634:11:g_d0_f2:11:g_d0_f2:the parameters of the models with values that are loosely calibrated to the data.  More recently, serious
+3:58:3021:18:18:72:554:616:11:g_d0_f2:11:g_d0_f2:efforts have been made to estimate the model parameters using classical and Bayesian methods.  This
+3:59:3120:18:18:72:554:598:11:g_d0_f2:11:g_d0_f2:permits researchers to assess how well the models fit the data both in and out of samples.  Formal
+3:60:3218:18:18:72:554:580:11:g_d0_f2:11:g_d0_f2:estimation also permits errors arising from sampling or model uncertainty to be explicitly accounted
+3:61:3318:18:18:72:554:562:11:g_d0_f2:11:g_d0_f2:for in counterfactual policy simulations.  Arguably, DSGE models are now taken more seriously as a
+3:62:3416:18:18:72:426:544:11:g_d0_f2:11:g_d0_f2:tool for policy analysis because of such serious econometric investigations.
+3:63:3492:18:18:88:553:526:11:g_d0_f2:11:g_d0_f2:Any attempt to estimate DSGE models must confront the fact that macroeconomic data are highly
+3:64:3585:18:17:72:554:508:11:g_d0_f2:11:g_d0_f2:persistent.  This fact often requires researchers to take a stand on the specification of the trends in
+3:65:3688:17:18:72:554:491:11:g_d0_f2:11:g_d0_f2:DSGE models.  Specifically, to take the model to the data, a researcher needs to use sample analogs
+3:66:3787:18:18:72:554:473:11:g_d0_f2:11:g_d0_f2:of the deviations from steady states and,  in doing so,  must decide how to detrend the variables in
+3:67:3887:18:18:72:554:455:11:g_d0_f2:11:g_d0_f2:the  model  and  in  the  data.   Table  1  is  a  non-exhaustive  listing  of  how  trends  are  treated  in  some
+3:68:4002:18:18:72:554:437:11:g_d0_f2:11:g_d0_f2:notable papers.1Some studies assume stochastic trends for the model and use first differenced data in
+3:69:4103:18:18:72:554:419:11:g_d0_f2:11:g_d0_f2:estimation.  A number of studies specify deterministic trends for the model and use linearly detrended
+3:70:4205:18:18:72:554:401:11:g_d0_f2:11:g_d0_f2:data  in  estimation.   Studies  that  apply  the  Hodrick-Prescott  (HP)  filter  to  the  data  differ  in  what
+3:71:4319:18:18:72:554:383:11:g_d0_f2:11:g_d0_f2:trends are specified for the model.  Some assume simple linear trends, while others assume unit root
+3:72:4419:18:18:72:554:365:11:g_d0_f2:11:g_d0_f2:processes.  Table 1 clearly demonstrates that a variety of trends have been specified for the model and
+3:73:4522:18:18:72:370:347:11:g_d0_f2:11:g_d0_f2:a variety of detrending methods have been used in estimation.
+3:74:4583:18:18:88:553:329:11:g_d0_f2:11:g_d0_f2:The problem for researchers is that it is not easy to ascertain whether highly persistent data are
+3:75:4681:18:18:72:554:311:11:g_d0_f2:11:g_d0_f2:trend stationary or difference stationary in finite samples.  While many have studied the implications
+3:76:4783:18:18:72:553:293:11:g_d0_f2:11:g_d0_f2:for estimation and inference of inappropriate detrending in linear models,2much less is known about
+3:77:4882:18:18:72:554:275:11:g_d0_f2:11:g_d0_f2:the  effects  of  detrending  in  estimation  of  non-linear  models.   From  simulation  evidence  of  Doorn
+3:78:4991:18:18:72:554:257:11:g_d0_f2:11:g_d0_f2:(2006) for an inventory model, it seems that HP filtering can significantly bias the estimated dynamic
+3:79:5093:18:17:72:554:239:11:g_d0_f2:11:g_d0_f2:parameters.  As well, while the local-to-unit framework is available to help researchers understand the
+3:80:5196:17:18:72:554:222:11:g_d0_f2:11:g_d0_f2:properties  of  the  estimated  autoregressive  root  when  the  data  are  strongly  persistent,  it  is  unclear
+3:81:5310:18:18:72:554:204:11:g_d0_f2:11:g_d0_f2:to what extent the framework can be used in non-linear estimation even in the single equation case.
+3:82:5409:18:16:72:554:186:11:g_d0_f2:11:g_d0_f2:What makes estimation of DSGE models distinct is that they consist of a system of equations and
+3:83:5504:16:15:84:554:170:6:g_d0_f4:9:g_d0_f5:1As of June 2009, these papers were cited almost 2500 times at the Web of Science (former Social Science Citation
+3:84:5617:15:7:72:269:155:9:g_d0_f5:9:g_d0_f5:Index) and almost 8000 times at Google Scholar.
+3:85:5664:7:15:84:554:148:6:g_d0_f4:9:g_d0_f5:2For example, Nelson and Kang (1981) showed that linear detrending a unit root process can generate spurious cycles.
+3:86:5780:15:11:72:554:133:9:g_d0_f5:9:g_d0_f5:Cogley and Nason (1995a) found that improper filtering can alter the persistence and the volatility of the series while
+3:87:5899:11:11:72:554:122:9:g_d0_f5:9:g_d0_f5:spurious correlations in the filtered data was documented in Harvey and Jaeger (1993).  Singleton (1988) and Christiano
+3:88:6018:11:0:72:522:111:9:g_d0_f5:9:g_d0_f5:and den Haan (1996) discussed how inappropriate filtering can affect estimation and inference in linear models.
+4:89:6130:0:18:72:415:699:11:g_d0_f2:11:g_d0_f2:misspecification in one equation can affect estimates in other equations.
+4:90:6203:18:18:88:553:681:11:g_d0_f2:11:g_d0_f2:This paper develops robust estimation procedures that do not require researchers to take a stand on
+4:91:6302:18:18:72:554:663:11:g_d0_f2:11:g_d0_f2:whether shocks in the model have an exact or a near unit root, and yet obtain consistent estimates of
+4:92:6403:18:18:72:554:645:11:g_d0_f2:11:g_d0_f2:the model parameters.  All robust procedures have two characteristics.  First, the same transformation
+4:93:6505:18:18:72:554:627:11:g_d0_f2:11:g_d0_f2:(filter) is applied to both the data and the model variables.  Second, the filtered variables are stationary
+4:94:6613:18:9:72:554:609:11:g_d0_f2:11:g_d0_f2:when evaluated at the true parameter vector.  The estimators have the classical properties of being
+4:95:6712:9:9:72:81:600:11:g_d0_f6:11:g_d0_f6:√
+4:96:6713:9:18:81:498:591:11:g_d0_f7:11:g_d0_f2:Tconsistent and asymptotically normal for all values of the largest autoregressive root.
+4:97:6801:18:18:88:553:573:11:g_d0_f2:11:g_d0_f2:Our point of departure is that the not too uncommon practice of applying different filters to the
+4:98:6898:18:18:72:554:555:11:g_d0_f2:11:g_d0_f2:model variables and the data can have undesirable consequences.  Indeed, as we will show, estimates
+4:99:6997:18:18:72:554:537:11:g_d0_f2:11:g_d0_f2:of parameters governing the propagation and amplification mechanisms in the model can be severely
+4:100:7094:18:18:72:554:519:11:g_d0_f2:11:g_d0_f2:distorted when the trend specified for the model is not consistent with the one applied to the data.
+4:101:7194:18:18:72:554:501:11:g_d0_f2:11:g_d0_f2:Accordingly, we insist on estimators that apply the same transformation to both the model and the
+4:102:7291:18:18:72:554:483:11:g_d0_f2:11:g_d0_f2:data.  This, however, may still lead to biased estimates if the filter does not remove the trends actually
+4:103:7397:18:17:72:554:465:11:g_d0_f2:11:g_d0_f2:present in the data.  Accordingly, we need to work with filters that can remove both deterministic and
+4:104:7499:17:18:72:554:448:11:g_d0_f2:11:g_d0_f2:stochastic trends without the researcher taking a stand before solving and estimating the model.  The
+4:105:7600:18:18:72:554:430:11:g_d0_f2:11:g_d0_f2:idea of applying robust filters to both the model and the data is not new.  Christiano and den Haan
+4:106:7699:18:18:72:554:412:11:g_d0_f2:11:g_d0_f2:(1996)  as  well  as  Burnside  (1998)  applied  the  HP  filter  to  both  the  model  and  the  data,  but  they
+4:107:7813:18:18:72:554:394:11:g_d0_f2:11:g_d0_f2:had to resort to simulation estimation to get around the large state vector that the HP filter induces.
+4:108:7916:18:18:72:554:376:11:g_d0_f2:11:g_d0_f2:The filters we consider have the same desirable feature as the HP in that they adapt to the trends
+4:109:8014:18:18:72:554:358:11:g_d0_f2:11:g_d0_f2:in the data.  However, they can be implemented with simple modifications to the state space system
+4:110:8112:18:18:72:554:340:11:g_d0_f2:11:g_d0_f2:while keeping the dimension of the state vector small.  Specifically, we consider four transformations:
+4:111:8215:18:18:72:554:322:11:g_d0_f2:11:g_d0_f2:(i) quasi-differencing,  (ii) unconstrained first differencing,  (iii) hybrid differencing,  and (iv) the HP
+4:112:8323:18:18:72:554:304:11:g_d0_f2:11:g_d0_f2:filter.  All filters can be used in GMM estimation but not every method can be implemented in the
+4:113:8420:18:18:72:554:286:11:g_d0_f2:11:g_d0_f2:likelihood framework.  Importantly,  one can use standard asymptotic inference as the finite sample
+4:114:8519:18:18:72:554:268:11:g_d0_f2:11:g_d0_f2:distribution of the estimators are well approximated by the normal distribution not only when the
+4:115:8616:18:18:72:554:250:11:g_d0_f2:11:g_d0_f2:large autoregressive root is far from one, but also when it is near or on the unit circle.  The procedures
+4:116:8722:18:18:72:554:232:11:g_d0_f2:11:g_d0_f2:can be applied to DSGE models whose solution can be shown to exist and is unique, and can be solved
+4:117:8821:18:18:72:500:214:11:g_d0_f2:11:g_d0_f2:using variations of the method discussed in Blanchard and Kahn (1980) and Sims (2002).
+4:118:8907:18:17:88:553:196:11:g_d0_f2:11:g_d0_f2:As discussed in Canova and Sala (2009), DSGE models are susceptible to identification failure, in
+4:119:9004:17:18:72:554:179:11:g_d0_f2:11:g_d0_f2:which case, consistent estimation of parameters is not possible irrespective of the treatment of trends.
+4:120:9108:18:18:72:554:161:11:g_d0_f2:11:g_d0_f2:In view of this consideration and to fix ideas, we use a basic stochastic growth model whose properties
+4:121:9211:18:18:72:554:143:11:g_d0_f2:11:g_d0_f2:are well understood.  The model, which will be presented in Section 2, will also be used to perform
+4:122:9310:18:18:72:554:125:11:g_d0_f2:11:g_d0_f2:baseline simulation experiments.  The new estimators are presented in Sections 3 and 4.  Sections 5
+4:123:9409:18:0:72:554:107:11:g_d0_f2:11:g_d0_f2:and 6 use simulations to show that the robust approaches perform well especially when the shocks are
+5:124:9510:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:highly persistent yet stationary.  These results also hold up in larger models though some filters are
+5:125:9612:18:18:72:554:681:11:g_d0_f2:11:g_d0_f2:more sensitive to the number of shocks than others.  In contrast, linear detrending and first differencing
+5:126:9718:18:18:72:554:663:11:g_d0_f2:11:g_d0_f2:often lead to severely biased estimates.  Implementation issues and related work in the literature are
+5:127:9820:18:29:72:280:645:11:g_d0_f2:11:g_d0_f2:discussed in Section 7.  Section 8 concludes.
+5:128:9865:29:29:72:164:616:11:g_d0_f1:11:g_d0_f1:2    Preliminaries
+5:129:9883:29:28:72:513:587:11:g_d0_f2:11:g_d0_f2:Consider the one sector stochastic growth model.  The problem facing the central planner is:
+5:130:9975:28:0:260:293:559:11:g_d0_f2:8:g_d0_f8:maxEt
+5:131:9980:0:27:299:311:573:8:g_d0_f9:11:g_d0_f10:∞∑
+5:132:9982:27:0:296:310:546:8:g_d0_f8:8:g_d0_f3:t=0
+5:133:9985:0:29:313:365:559:11:g_d0_f7:11:g_d0_f2:βtθ(Ct,Lt)
+5:134:9995:29:24:72:123:530:11:g_d0_f2:11:g_d0_f2:subject  to
+5:135:10006:24:21:167:289:506:11:g_d0_f7:8:g_d0_f8:θ(Ct,Lt)   =   lnCt−θLt
+5:136:10029:21:21:199:362:485:11:g_d0_f7:8:g_d0_f3:Yt=Ct+It=Kαt−1(ZtLt)(1−α)
+5:137:10054:21:21:197:315:464:11:g_d0_f7:8:g_d0_f8:Kt=   (1−δ)Kt−1+It
+5:138:10072:21:24:198:458:443:11:g_d0_f7:11:g_d0_f2:Zt=   exp( ̄gt) exp(uzt),  uzt=ρzuzt−1+ezt,|ρz|≤1
+5:139:10121:24:18:72:554:419:11:g_d0_f2:11:g_d0_f2:whereYtis output,Ctis consumption,Ktis capital,Ltis labor input,Ztis the level of technology,
+5:140:10214:18:18:72:554:401:11:g_d0_f7:11:g_d0_f2:eztis  an  innovation  in  technology.   Note  that  we  allowρzto  be  on  the  unit  circle.   The  first  order
+5:141:10328:18:24:72:142:383:11:g_d0_f2:11:g_d0_f2:conditions are:
+5:142:10343:24:24:207:352:359:11:g_d0_f7:8:g_d0_f8:θCt=   (1−α)Kαt−1Z(1−α)tL−αt
+5:143:10371:24:0:219:264:335:11:g_d0_f2:8:g_d0_f8:1   =Et
+5:144:10378:0:16:264:270:351:11:g_d0_f10:11:g_d0_f10:[
+5:145:10379:16:0:270:276:335:11:g_d0_f7:11:g_d0_f7:β
+5:146:10380:0:15:283:294:343:11:g_d0_f7:8:g_d0_f8:Ct
+5:147:10382:15:0:278:300:328:11:g_d0_f7:8:g_d0_f3:Ct+1
+5:148:10386:0:12:303:310:347:11:g_d0_f10:11:g_d0_f10:(
+5:149:10387:12:0:310:464:335:11:g_d0_f7:11:g_d0_f2:αKα−1t(Zt+1Lt+1)(1−α)+ (1−δ)
+5:150:10415:0:37:465:479:347:11:g_d0_f10:11:g_d0_f10:)]
+5:151:10417:37:24:147:363:310:11:g_d0_f7:11:g_d0_f7:Kαt−1(ZtLt)(1−α)=Ct+Kt−(1−δ)Kt−1.
+5:152:10450:24:18:88:554:286:11:g_d0_f2:11:g_d0_f2:Let lower case letters denote the natural logarithm of the variables, e.g.ct= logCt.  Letc∗tbe such
+5:153:10549:18:18:72:553:268:11:g_d0_f2:11:g_d0_f2:thatct−c∗tis stationary;k∗tandz∗tare similarly defined.  Given our assumptions, laborLtis stationary
+5:154:10649:18:18:72:554:250:11:g_d0_f2:11:g_d0_f2:for allρz≤1 and thusl∗t= 0.  Collect the observed model variables into the vectormt= (ct,kt,lt)
+5:155:10744:18:18:72:554:232:11:g_d0_f2:11:g_d0_f2:and denote the trend component of the model variables bym∗t= (c∗t,k∗t,l∗t).  In general, how we define
+5:156:10846:18:18:72:553:214:11:g_d0_f7:11:g_d0_f2:m∗t, how we linearize the model, and how we estimate the parameters will depend on whetherρz<1
+5:157:10940:18:18:72:118:196:11:g_d0_f2:11:g_d0_f2:orρz= 1.
+5:158:10948:18:17:88:554:178:11:g_d0_f2:11:g_d0_f2:Whenρz<1, we havec∗t=k∗t=  ̄gt, and thusm∗t= ( ̄gt, ̄gt,0).  The detrended variables in the
+5:159:11039:17:50:72:554:161:11:g_d0_f2:11:g_d0_f2:model arêmt= (̂ct,̂kt,̂lt) = (ct− ̄gt,kt− ̄gt,lt) =mt−m∗t.  The log-linearized model in terms of̂mtis
+5:160:11141:50:0:72:83:111:11:g_d0_f7:8:g_d0_f8:Et
+5:161:11143:0:20:85:92:133:11:g_d0_f10:11:g_d0_f10:
+5:162:11144:20:0:85:92:113:11:g_d0_f10:11:g_d0_f10:
+5:163:11145:0:13:92:132:124:11:g_d0_f2:11:g_d0_f2:0   00
+5:164:11151:13:14:92:135:111:11:g_d0_f2:8:g_d0_f3:1   0A0
+5:165:11158:14:0:92:132:97:11:g_d0_f2:11:g_d0_f2:0   00
+5:166:11164:0:20:136:143:133:11:g_d0_f10:11:g_d0_f10:
+5:167:11165:20:0:136:143:113:11:g_d0_f10:11:g_d0_f10:
+5:168:11166:0:20:145:152:133:11:g_d0_f10:11:g_d0_f10:
+5:169:11167:20:0:145:152:113:11:g_d0_f10:11:g_d0_f10:
+5:170:11168:0:12:153:172:126:11:g_d0_f10:8:g_d0_f3:̂ct+1
+5:171:11173:12:15:152:172:114:11:g_d0_f10:8:g_d0_f3:̂kt+1
+5:172:11178:15:0:153:171:99:11:g_d0_f10:8:g_d0_f3:̂lt+1
+5:173:11183:0:20:172:179:133:11:g_d0_f10:11:g_d0_f10:
+5:174:11184:20:0:172:191:113:11:g_d0_f10:11:g_d0_f2:=
+5:175:11186:0:20:194:201:133:11:g_d0_f10:11:g_d0_f10:
+5:176:11187:20:0:194:201:113:11:g_d0_f10:11:g_d0_f10:
+5:177:11188:0:13:201:269:124:11:g_d0_f6:11:g_d0_f7:−10−α
+5:178:11193:13:14:206:263:111:11:g_d0_f2:11:g_d0_f2:1A00
+5:179:11197:14:0:202:274:97:11:g_d0_f7:11:g_d0_f2:A1A2α−1
+5:180:11204:0:20:274:281:133:11:g_d0_f10:11:g_d0_f10:
+5:181:11205:20:0:274:281:113:11:g_d0_f10:11:g_d0_f10:
+5:182:11206:0:20:283:290:133:11:g_d0_f10:11:g_d0_f10:
+5:183:11207:20:0:283:290:113:11:g_d0_f10:11:g_d0_f10:
+5:184:11208:0:12:291:299:126:11:g_d0_f10:8:g_d0_f8:̂ct
+5:185:11211:12:15:290:299:114:11:g_d0_f10:8:g_d0_f8:̂kt
+5:186:11214:15:0:291:298:99:11:g_d0_f10:8:g_d0_f8:̂lt
+5:187:11217:0:20:300:307:133:11:g_d0_f10:11:g_d0_f10:
+5:188:11218:20:0:300:317:113:11:g_d0_f10:11:g_d0_f2:+
+5:189:11220:0:20:320:327:133:11:g_d0_f10:11:g_d0_f10:
+5:190:11221:20:0:320:327:113:11:g_d0_f10:11:g_d0_f10:
+5:191:11222:0:13:328:371:124:11:g_d0_f2:11:g_d0_f2:0α0
+5:192:11225:13:14:328:371:111:11:g_d0_f2:11:g_d0_f2:000
+5:193:11228:14:0:328:371:97:11:g_d0_f2:11:g_d0_f2:0A40
+5:194:11232:0:20:371:378:133:11:g_d0_f10:11:g_d0_f10:
+5:195:11233:20:0:371:378:113:11:g_d0_f10:11:g_d0_f10:
+5:196:11234:0:20:380:387:133:11:g_d0_f10:11:g_d0_f10:
+5:197:11235:20:0:380:387:113:11:g_d0_f10:11:g_d0_f10:
+5:198:11236:0:12:388:406:126:11:g_d0_f10:8:g_d0_f3:̂ct−1
+5:199:11241:12:15:388:407:114:11:g_d0_f10:8:g_d0_f3:̂kt−1
+5:200:11246:15:0:388:406:99:11:g_d0_f10:8:g_d0_f3:̂lt−1
+5:201:11251:0:20:408:415:133:11:g_d0_f10:11:g_d0_f10:
+5:202:11252:20:0:408:425:113:11:g_d0_f10:11:g_d0_f2:+
+5:203:11254:0:20:428:435:133:11:g_d0_f10:11:g_d0_f10:
+5:204:11255:20:0:428:435:113:11:g_d0_f10:11:g_d0_f10:
+5:205:11256:0:13:444:449:124:11:g_d0_f2:11:g_d0_f2:0
+5:206:11257:13:14:436:456:111:11:g_d0_f6:8:g_d0_f3:−A0
+5:207:11260:14:0:444:449:97:11:g_d0_f2:11:g_d0_f2:0
+5:208:11261:0:20:457:464:133:11:g_d0_f10:11:g_d0_f10:
+5:209:11262:20:0:457:509:113:11:g_d0_f10:11:g_d0_f2:Etuzt+1+
+5:210:11271:0:20:512:519:133:11:g_d0_f10:11:g_d0_f10:
+5:211:11272:20:0:512:519:113:11:g_d0_f10:11:g_d0_f10:
+5:212:11273:0:13:519:545:124:11:g_d0_f2:11:g_d0_f7:1−α
+5:213:11276:13:14:529:534:111:11:g_d0_f2:11:g_d0_f2:0
+5:214:11277:14:0:519:544:97:11:g_d0_f7:11:g_d0_f2:α−1
+5:215:11280:0:20:545:552:133:11:g_d0_f10:11:g_d0_f10:
+5:216:11281:20:0:545:563:113:11:g_d0_f10:8:g_d0_f8:uzt
+6:217:11286:0:29:72:315:699:11:g_d0_f2:11:g_d0_f2:where we have suppressed the constants terms and
+6:218:11334:29:0:151:217:670:11:g_d0_f7:11:g_d0_f7:A∗0=   1−β
+6:219:11344:0:15:219:243:677:11:g_d0_f2:11:g_d0_f7:1−δ
+6:220:11347:15:0:219:243:662:11:g_d0_f2:11:g_d0_f7:1 +  ̄g
+6:221:11354:0:29:244:452:670:11:g_d0_f7:11:g_d0_f7:,  A0= (α−1)A∗0,  A4=−α−(1−δ)A3,
+6:222:11386:29:0:151:182:641:11:g_d0_f7:11:g_d0_f2:A3=
+6:223:11389:0:15:209:222:649:11:g_d0_f7:11:g_d0_f7:αβ
+6:224:11391:15:0:193:238:634:11:g_d0_f2:8:g_d0_f3:(1 +  ̄g)A∗0
+6:225:11403:0:30:240:475:641:11:g_d0_f7:11:g_d0_f7:,  A2= (1 +  ̄g)A3,1 =A1+A2−(1−δ)A3.
+6:226:11439:30:29:88:414:611:11:g_d0_f2:11:g_d0_f2:Solving the system of expectation equations yields the reduced form
+6:227:11506:29:21:261:554:582:11:g_d0_f10:11:g_d0_f2:̂mt=   Π̂mt−1+Buzt(1)
+6:228:11527:21:29:261:358:561:11:g_d0_f7:11:g_d0_f7:uzt=ρzuzt−1+ezt.
+6:229:11543:29:18:71:553:532:11:g_d0_f2:11:g_d0_f2:We assume that all roots of Π are strictly less than one, so that non-stationarity can only arise because
+6:230:11648:18:18:71:554:514:11:g_d0_f7:11:g_d0_f2:ρzis on the unit circle.  Note that whenρz= 1,  the model needs to be linearized and solved with
+6:231:11744:18:17:71:554:496:11:g_d0_f7:11:g_d0_f2:m∗t=  (ut+  ̄gt,ut+  ̄gt,0)  =  (zt,zt,0).   Despite  the  fact  that  the  permanent  shockuztis  now  part
+6:232:11852:17:18:71:554:479:11:g_d0_f2:11:g_d0_f2:ofm∗t,  (1) is still the reduced form representation forlevelsof the linearly detrended variables.  In
+6:233:11954:18:18:71:554:461:11:g_d0_f2:11:g_d0_f2:other words, the reduced form representation for̂mtis continuous inρzeven though how we arrive
+6:234:12048:18:18:71:554:443:11:g_d0_f2:11:g_d0_f2:at  this  representation  will  depend  onρz.   Hence,  without  loss  of  generality,  we  will  always  use  the
+6:235:12162:18:18:71:375:425:11:g_d0_f2:11:g_d0_f2:representation (1) in subsequent discussions for all values ofρz.
+6:236:12227:18:18:88:554:407:11:g_d0_f2:11:g_d0_f2:Note that by definition,̂mtis the linearly detrended component of the model variablesmt.  In other
+6:237:12325:18:18:71:554:389:11:g_d0_f2:11:g_d0_f2:words,̂mtis a model concept.  Hereafter, we letdtdenote the data analog ofmt.  For the stochastic
+6:238:12422:18:18:71:553:371:11:g_d0_f2:11:g_d0_f2:growth model,dt= (ct,kt,lt) are the data collected for the empirical exercise.  Let̂dtbe obtained by
+6:239:12522:18:30:71:420:353:11:g_d0_f2:11:g_d0_f2:removing deterministic trends fromdt.  Then̂dtis the data analog of̂mt.
+6:240:12593:30:29:71:193:323:11:g_d0_f1:11:g_d0_f1:3    Robust Estimators
+6:241:12615:29:18:71:553:294:11:g_d0_f2:11:g_d0_f2:In this section, we present robust methods that do not require the researcher to take a stand on the
+6:242:12715:18:18:71:553:276:11:g_d0_f2:11:g_d0_f2:properties of trends  in the data.  We use the  stochastic neoclassical growth model to  illustrate  the
+6:243:12819:18:18:71:260:258:11:g_d0_f2:11:g_d0_f2:intuition behind the proposed methods.
+6:244:12857:18:17:88:554:240:11:g_d0_f2:11:g_d0_f2:Many  estimators  have  been  used  to  estimate  DSGE  models.3Our  focus  will  be  a  method  of
+6:245:12956:17:18:71:553:223:11:g_d0_f2:11:g_d0_f2:moments  (MM)  estimator  that  minimizes  the  distance  between  the  second  moments  of  data  and
+6:246:13058:18:18:71:553:205:11:g_d0_f2:11:g_d0_f2:the  second  moments  implied  by  the  model,  as  in  Christiano  and  den  Haan  (1996),  Christiano  and
+6:247:13166:18:18:71:553:187:11:g_d0_f2:11:g_d0_f2:Eichenbaum (1992).  Adaptation to likelihood based estimation will be discussed in Section 6.  Let Θ
+6:248:13266:18:18:71:554:169:11:g_d0_f2:11:g_d0_f2:denote the unknown structural parameters of the model and partition Θ = (Θ−,ρz).  The generical
+6:249:13361:18:14:71:287:151:11:g_d0_f2:11:g_d0_f2:MM estimator can be summarized as follows:
+6:250:13403:14:15:84:554:137:6:g_d0_f4:9:g_d0_f5:3Likelihood and Bayesian based methods, (e.g.  Fernandez-Villaverde and Rubio-Ramirez (2006) and Ireland (1997)),
+6:251:13516:15:11:72:554:122:9:g_d0_f5:9:g_d0_f5:two-step minimum distance approach (e.g., Sbordone (2006)), as well as simulation estimation (e.g., Altig et al. (2004))
+6:252:13636:11:0:72:475:111:9:g_d0_f5:9:g_d0_f5:have been used to estimate DSGE models.  Ruge-Murcia (2007) provides a review of these methods.
+7:253:13732:0:18:85:554:699:11:g_d0_f2:11:g_d0_f2:1:  Apply a filter (if necessary) todtand computêΩd(j),  the estimated covariance matrix of the
+7:254:13828:18:29:99:395:681:11:g_d0_f11:11:g_d0_f2:filteredseries at lagj.  Collect the data moments in the vector
+7:255:13891:29:34:206:447:652:11:g_d0_f10:11:g_d0_f7:̂ωd= (vech(̂Ωd(0))′vec(̂Ωd(1))′... vec(̂Ωd(M))′)′.
+7:256:13941:34:18:85:554:618:11:g_d0_f2:11:g_d0_f2:2:  Solve  the  rational  expectations  model  for  a  guess  of  Θ.   Compute  Ωm(j),  the  model  implied
+7:257:14048:18:17:99:554:600:11:g_d0_f2:11:g_d0_f2:autocovariances of thefiltered̂mtanalytically or by simulation.  Collect the model moments in
+7:258:14141:17:18:99:147:583:11:g_d0_f2:11:g_d0_f2:the vector
+7:259:14151:18:29:199:454:565:11:g_d0_f7:11:g_d0_f7:ωm= (vech(Ωm(0))′vec(Ωm(1))′... vec(Ωm(M))′)′.
+7:260:14197:29:0:85:348:536:11:g_d0_f2:8:g_d0_f3:3:  Estimate the structural parameters aŝΘ = argminΘ
+7:261:14250:0:7:349:355:545:11:g_d0_f10:11:g_d0_f10:∥
+7:262:14251:7:0:349:413:538:11:g_d0_f10:11:g_d0_f2:∥̂ωd−ωm(Θ)
+7:263:14261:0:7:413:419:545:11:g_d0_f10:11:g_d0_f10:∥
+7:264:14262:7:32:413:422:538:11:g_d0_f10:11:g_d0_f2:∥.
+7:265:14264:32:18:72:554:506:11:g_d0_f2:11:g_d0_f2:The choice of moments in MM can be important for identification (see e.g.  Canova and Sala (2009)).
+7:266:14363:18:18:72:554:488:11:g_d0_f2:11:g_d0_f2:We  use  the  unconditional  autocovariances  but  matching  impulse  responses  can  also  be  considered.
+7:267:14470:18:18:72:554:470:11:g_d0_f2:11:g_d0_f2:Although MM is somewhat less widely used than maximum likelihood estimators in the DSGE liter-
+7:268:14564:18:18:72:554:452:11:g_d0_f2:11:g_d0_f2:ature, it does not require parametric specification of the error processes and it is easy to implement.
+7:269:14667:18:18:72:554:434:11:g_d0_f2:11:g_d0_f2:The more important reason for using MM is practical as it can be used with many popular filters.  We
+7:270:14767:18:18:72:252:416:11:g_d0_f2:11:g_d0_f2:will return to this point subsequently.
+7:271:14806:18:18:88:554:398:11:g_d0_f2:11:g_d0_f2:The statistical properties of̂Θ will depend onρzand the filters used.  The robust approaches we
+7:272:14901:18:18:72:554:380:11:g_d0_f2:11:g_d0_f2:consider  always  apply  the  same  filter  to  the  model  and  the  data  so  that  the  filtered  variables  are
+7:273:15016:18:18:72:554:362:11:g_d0_f2:11:g_d0_f2:stationary when evaluated at the true parameter ofρz,  which can be one or close to one.  We now
+7:274:15112:18:18:72:554:344:11:g_d0_f2:11:g_d0_f2:consider four filters and then explore which of these have better finite samples properties.  Properties
+7:275:15216:18:28:72:396:326:11:g_d0_f2:11:g_d0_f2:of estimators that do not have these features will also be compared.
+7:276:15284:28:25:72:204:298:11:g_d0_f1:11:g_d0_f1:3.1    The QD Estimator
+7:277:15307:25:18:72:553:273:11:g_d0_f2:11:g_d0_f2:Let ∆ρz= 1−ρzLbe the quasi-differencing (QD) operator and let ∆ρẑmt= (1−ρzL)̂mt.  Multiplying
+7:278:15401:18:29:72:347:255:11:g_d0_f2:11:g_d0_f2:both sides of (1) by ∆ρzand usinguzt=ρzuzt−1+eztgives
+7:279:15454:29:29:247:554:226:11:g_d0_f2:11:g_d0_f2:∆ρẑmt= Π∆ρẑmt−1+Bezt.(2)
+7:280:15480:29:18:72:554:197:11:g_d0_f2:11:g_d0_f2:Note that the error term in the quasi-differenced model is an i.i.d.  innovation.  As ∆ρẑmtis stationary
+7:281:15585:18:18:72:554:179:11:g_d0_f2:11:g_d0_f2:for allρz≤1, its moments are well defined.  In contrast, the moments of̂mtare not well defined when
+7:282:15684:18:30:72:311:161:11:g_d0_f7:11:g_d0_f2:ρz= 1.  This motivates estimation of Θ as follows:
+7:283:15734:30:0:85:157:131:11:g_d0_f2:11:g_d0_f2:1:  Initializeρz.
+8:284:15752:0:18:85:554:699:11:g_d0_f2:11:g_d0_f2:2:  Quasi-differencêdtwithρzto  obtain  ∆ρẑdt.   ComputêΩd∆ρz(j)  =cov(∆ρẑdt,∆ρẑdt−j),  the
+8:285:15848:18:26:99:514:681:11:g_d0_f2:11:g_d0_f2:sample autocovariance matrix of the quasi-differenced data at lagj= 0,...,M.  Define
+8:286:15932:26:30:257:397:655:11:g_d0_f10:11:g_d0_f2:̂Υd∆ρz(j) =̂Ωd∆ρz(j)−̂Ωd∆ρz(0)
+8:287:15962:30:27:99:355:625:11:g_d0_f2:11:g_d0_f2:and let̂ωd∆ρz= (vec(̂Υd∆ρz(1))′, ..., vec(̂Υd∆ρz(M))′)′;
+8:288:16018:27:18:85:553:598:11:g_d0_f2:11:g_d0_f2:3:  For a givenρzand Θ−, solve for the reduced form (1). Apply ∆ρztômtand compute Ωm∆ρz(j),j=
+8:289:16112:18:28:99:534:580:11:g_d0_f2:11:g_d0_f2:1,...,M, the model implied autocovariance matrices of the quasi-differenced variables.  Let
+8:290:16203:28:27:255:397:552:11:g_d0_f2:11:g_d0_f2:Υm∆ρz(j) = Ωm∆ρz(j)−Ωm∆ρz(0)
+8:291:16231:27:27:99:371:525:11:g_d0_f2:11:g_d0_f2:Defineωm∆ρz(ρz) = (vec(Υm∆ρz(1))′, ..., vec(Υm∆ρz(M))′)′;
+8:292:16288:27:0:85:330:498:11:g_d0_f2:8:g_d0_f3:4:  Find the structural parameterŝΘQD= arg minΘ
+8:293:16336:0:9:332:338:507:11:g_d0_f10:11:g_d0_f10:∥∥
+8:294:16338:9:0:339:433:498:11:g_d0_f10:11:g_d0_f2:̂ωd∆ρz(ρz)−ωm∆ρz(Θ)
+8:295:16357:0:9:433:439:507:11:g_d0_f10:11:g_d0_f10:∥∥
+8:296:16359:9:29:439:442:498:11:g_d0_f2:11:g_d0_f2:.
+8:297:16360:29:18:88:553:469:11:g_d0_f2:11:g_d0_f2:The QD estimator is based on the difference between the model and the sample autocovariances
+8:298:16452:18:18:72:554:451:11:g_d0_f2:11:g_d0_f2:of the filtered variables, normalized by the respective variance matrix Ω∆ρz(0).  The QD differs from
+8:299:16553:18:18:72:554:433:11:g_d0_f2:11:g_d0_f2:a  standard covariance  estimator  in one  important  respect.  The  parameterρznow  affects  both the
+8:300:16655:18:18:72:554:415:11:g_d0_f2:11:g_d0_f2:moments  of  the  model  and  the  data  since  the  latter  are  computed  for  the  data  quasi-differenced
+8:301:16764:18:18:72:554:397:11:g_d0_f2:11:g_d0_f2:atρz.   Asρzand  Θ−are  estimated  simultaneously,  the  filter  is  data  dependent  rather  than  fixed.
+8:302:16870:18:18:72:554:379:11:g_d0_f2:11:g_d0_f2:The crucial feature is that the quasi-transformed data are stationary when evaluated at the trueρz,
+8:303:16969:18:18:72:554:361:11:g_d0_f2:11:g_d0_f2:which subsequently permits application of a central limit theorem.  The normalization of the lagged
+8:304:17068:18:27:72:375:343:11:g_d0_f2:11:g_d0_f2:autocovariances by the variance amounts to using the moments
+8:305:17128:27:28:162:463:316:11:g_d0_f7:11:g_d0_f2:cov(∆ρẑdt,∆ρẑdt−∆ρẑdt−j)−cov(∆ρẑmt,∆ρẑmt−∆ρẑmt−j)
+8:306:17183:28:18:71:554:288:11:g_d0_f2:11:g_d0_f2:for  estimation.   Thej-th  difference  of  ∆ρẑdtis  always  stationary  and  ensures  that  the  asymptotic
+8:307:17292:18:18:71:553:270:11:g_d0_f2:11:g_d0_f2:distribution  is  well  behaved.   Finally,  observe  that  since  we  solve  the  model  in  levels  and  use  the
+8:308:17407:18:18:71:553:252:11:g_d0_f2:11:g_d0_f2:transformed  variables  only  to  compute  moments,  we  preserve  all  equilibrium  relationships  between
+8:309:17514:18:29:71:116:234:11:g_d0_f2:11:g_d0_f2:variables.
+8:310:17524:29:25:71:201:205:11:g_d0_f1:11:g_d0_f1:3.2    The FD Estimator
+8:311:17547:25:18:71:554:180:11:g_d0_f2:11:g_d0_f2:If  ∆ρẑmtis  stationary  whenρz≤1,  the  data  vector  is  also  stationary  when  quasi-differenced  at
+8:312:17652:18:18:71:554:162:11:g_d0_f7:11:g_d0_f2:ρz= 1.  Denote the first-differencing (FD) operator by ∆ = 1−Land consider the following estimation
+8:313:17751:18:29:71:121:144:11:g_d0_f2:11:g_d0_f2:procedure:
+8:314:17761:29:17:85:553:115:11:g_d0_f2:11:g_d0_f2:1:  ComputêΩd∆(j)  =cov(∆̂dt,∆̂dt−j),  the  sample  autocovariance  matrix  of  the  first  differenced
+8:315:17865:17:0:99:456:98:11:g_d0_f2:11:g_d0_f2:data at lagj= 1,...,M.  Definêωd∆= (vech(̂Ωd∆(1))′, ..., vec(̂Ωd∆(M))′)′;
+9:316:17940:0:18:85:554:699:11:g_d0_f2:11:g_d0_f2:2:  For a given Θ, solve for the reduced form (1).  Compute Ωm∆(j), the model implied autocovariance
+9:317:18040:18:26:99:554:681:11:g_d0_f2:11:g_d0_f2:matrices of the first-differenced variables ∆̂mt. Defineωm∆= (vech(Ωm∆(0))′, ..., vec(Ωm∆(M))′)′;
+9:318:18137:26:0:85:330:655:11:g_d0_f2:8:g_d0_f3:3:  Find the structural parameterŝΘFD= arg minΘ
+9:319:18185:0:7:332:338:664:11:g_d0_f10:11:g_d0_f10:∥
+9:320:18186:7:0:332:398:657:11:g_d0_f10:11:g_d0_f2:∥̂ωd∆−ωm∆(Θ)
+9:321:18198:0:7:398:404:664:11:g_d0_f10:11:g_d0_f10:∥
+9:322:18199:7:30:398:407:657:11:g_d0_f10:11:g_d0_f2:∥.
+9:323:18201:30:18:88:553:627:11:g_d0_f2:11:g_d0_f2:To be clear, we compute autocovariances for first difference of the data and the model variables,
+9:324:18298:18:18:71:554:609:11:g_d0_f2:11:g_d0_f2:butρzis a free parameter which we estimate.  Note that the QD and FD estimators are equivalent
+9:325:18392:18:18:71:554:591:11:g_d0_f2:11:g_d0_f2:whenρz= 1.  The key difference between FD and QD is that FD is a fixed filter while the QD is a
+9:326:18487:18:28:71:174:573:11:g_d0_f2:11:g_d0_f2:data dependent filter.
+9:327:18509:28:25:71:223:545:11:g_d0_f1:11:g_d0_f1:3.3    The Hybrid Estimator
+9:328:18536:25:18:71:554:520:11:g_d0_f2:11:g_d0_f2:One drawback of the FD estimator is that whenρzis far from unity, over-differencing induces a non-
+9:329:18634:18:18:71:553:502:11:g_d0_f2:11:g_d0_f2:invertible moving-average component.  The estimates obtained by matching a small number of lagged
+9:330:18731:18:18:71:554:484:11:g_d0_f2:11:g_d0_f2:autocovariances  may  be  inefficient.   The  QD  estimator  does  not  have  this  problem,  but̂Ωd∆ρz(j)  is
+9:331:18841:18:18:71:554:466:11:g_d0_f2:11:g_d0_f2:quadratic inρz.  As will be explained below,  this is why we normalizêΩd∆ρz(j) bŷΩd∆ρz(0).  These
+9:332:18940:18:25:71:272:448:11:g_d0_f2:11:g_d0_f2:considerations suggest a hybrid estimator:
+9:333:18982:25:26:85:470:423:11:g_d0_f2:11:g_d0_f2:1:  Transform the observed data to obtain ∆ρẑdt(as in QD) and ∆̂dt(as in FD).
+9:334:19060:26:18:85:554:397:11:g_d0_f2:11:g_d0_f2:2:  ComputêΩdQD,∆(j)  =cov(∆ρẑdt,∆̂dt−j),  the  covariance  between  ∆ρẑdtand  ∆̂dt−j.   Define
+9:335:19158:18:26:99:339:379:11:g_d0_f10:11:g_d0_f2:̂ωdQD,∆= (vec(̂ΩdQD,∆(0))′, ..., vec(̂ΩdQD,∆(M))′)′;
+9:336:19210:26:18:85:554:353:11:g_d0_f2:11:g_d0_f2:3:  For a given Θ, solve for the reduced form (1), and compute the model implied autocovariances
+9:337:19306:18:26:99:440:335:11:g_d0_f2:11:g_d0_f2:between the quasi-differenced and the first differenced variables.  Define
+9:338:19380:26:30:209:444:309:11:g_d0_f7:11:g_d0_f2:ωmQD,∆= (vec(ΩmQD,∆(0))′,...,vec(ΩmQD,∆(M))′)′;
+9:339:19427:30:0:85:331:279:11:g_d0_f2:8:g_d0_f3:4:  Find the structural parameterŝΘHD= arg minΘ
+9:340:19475:0:13:333:339:291:11:g_d0_f10:11:g_d0_f10:∥∥
+9:341:19477:13:0:333:449:278:11:g_d0_f10:11:g_d0_f2:∥̂ωdQD,∆(ρz)−ωmQD,∆(Θ)
+9:342:19499:0:13:449:455:291:11:g_d0_f10:11:g_d0_f10:∥∥
+9:343:19501:13:24:449:458:278:11:g_d0_f10:11:g_d0_f2:∥.
+9:344:19503:24:18:71:554:254:11:g_d0_f2:11:g_d0_f2:Notice that̂ΩdQD,∆(j) is now linear inρz, unlikêΩd∆ρz(j).  We denote this estimator with HD (hybrid
+9:345:19603:18:29:72:134:236:11:g_d0_f2:11:g_d0_f2:differencing).
+9:346:19617:29:25:72:203:207:11:g_d0_f1:11:g_d0_f1:3.4    The HP Estimator
+9:347:19640:25:17:72:554:182:11:g_d0_f2:11:g_d0_f2:Some  linear  filters  such  as  the  HP  and  the  bandpass  can  also  remove  deterministic  and  stochastic
+9:348:19751:17:18:72:554:165:11:g_d0_f2:11:g_d0_f2:trends, see Baxter and King (1999) and King and Rebelo (1993).  In this paper, we will focus only on
+9:349:19851:18:45:72:524:147:11:g_d0_f2:11:g_d0_f2:the HP filter, which is heavily used in empirical analysis.  An HP detrended series is defined as
+9:350:19948:45:0:212:273:102:11:g_d0_f7:11:g_d0_f2:HP(L)dt=
+9:351:19956:0:15:294:390:110:11:g_d0_f7:8:g_d0_f3:λ(1−L)2(1−L−1)2
+9:352:19971:15:0:285:400:95:11:g_d0_f2:8:g_d0_f3:1 +λ(1−L)2(1−L−1)2
+9:353:19989:0:0:401:414:102:11:g_d0_f7:11:g_d0_f7:dt.
+10:354:19993:0:30:88:432:699:11:g_d0_f2:11:g_d0_f2:Given this transformation, the procedure can be summarized as follows:
+10:355:20063:30:18:85:554:669:11:g_d0_f2:11:g_d0_f2:1:  Compute  the  autocovariance  matrices  of  the  HP-filtered  datâΩdHP(0), ...,̂ΩdHP(M).   Define
+10:356:20165:18:27:99:318:651:11:g_d0_f10:11:g_d0_f2:̂ωdHP= (vech(̂ΩdHP(0))′, ..., vec(̂ΩdHP(M))′)′;
+10:357:20212:27:18:85:554:624:11:g_d0_f2:11:g_d0_f2:2:  For  a  given  guess  of  Θ,  solve  for  the  reduced  form  (1),  and  compute  Ωm(j),  the  autoco-
+10:358:20318:18:18:99:554:606:11:g_d0_f2:11:g_d0_f2:variances  of̂mt.    Apply  the  Fourier  transform  to  obtain  the  spectrum  for̂mtat  frequen-
+10:359:20416:18:18:99:554:588:11:g_d0_f2:11:g_d0_f2:cies  2πs/T,s=  0,...,T−1.   Multiply  the  spectrum  by  the  gain  of  the  HP  filter.   Inverse
+10:360:20515:18:18:99:553:570:11:g_d0_f2:11:g_d0_f2:Fourier  transform  to  obtain  ΩHP(j),  the  autocovariances  of  the  HP(L)̂mt.    DefineωmHP=
+10:361:20611:18:27:99:282:552:11:g_d0_f2:11:g_d0_f2:(vech(ΩmHP(0))′, ..., vec(ΩmHP(M))′)′.
+10:362:20649:27:0:85:330:525:11:g_d0_f2:8:g_d0_f3:3:  Find the structural parameterŝΘHP= arg minΘ
+10:363:20697:0:7:332:338:535:11:g_d0_f10:11:g_d0_f10:∥
+10:364:20698:7:0:332:411:528:11:g_d0_f10:11:g_d0_f2:∥̂ωdHP−ωmHP(Θ)
+10:365:20712:0:7:411:417:535:11:g_d0_f10:11:g_d0_f10:∥
+10:366:20713:7:33:411:420:528:11:g_d0_f10:11:g_d0_f2:∥.
+10:367:20715:33:18:88:553:495:11:g_d0_f2:11:g_d0_f2:This approach is similar to Burnside (1998) who also applies the HP filter to both the model and
+10:368:20811:18:18:72:554:477:11:g_d0_f2:11:g_d0_f2:the data series, but he uses simulations to compute model-implied moments. Like the FD, the variables
+10:369:20912:18:17:72:553:459:11:g_d0_f2:11:g_d0_f2:in the model and the data will be stationary withoutρzentering the filter.  By construction of the HP
+10:370:21013:17:18:72:554:442:11:g_d0_f2:11:g_d0_f2:filter, both the filtered data and the filtered model variables are stationary for allρz≤1.  Note that
+10:371:21115:18:18:72:554:424:11:g_d0_f2:11:g_d0_f2:HP filtering involves (implicitly or explicitly) estimation of many more autocovariances than the other
+10:372:21218:18:18:72:554:406:11:g_d0_f2:11:g_d0_f2:estimators considered above.  Burnside (1998) reports that although the HP filter removes variation
+10:373:21317:18:18:72:554:388:11:g_d0_f2:11:g_d0_f2:potentially informative for estimation of the structural parameters, the HP filtered model and data
+10:374:21416:18:30:72:479:370:11:g_d0_f2:11:g_d0_f2:series have sufficient variability to discriminate competing theories of business cycles.
+10:375:21505:30:29:72:248:340:11:g_d0_f1:11:g_d0_f1:4    Properties of the Estimators
+10:376:21538:29:18:72:553:311:11:g_d0_f2:11:g_d0_f2:Let̂ωdjgenerically denote thej−thsample moments of the filtered variables whileωmj(Θ) denote the
+10:377:21634:18:29:72:299:293:11:g_d0_f2:11:g_d0_f2:model moment based on the same filter.  Define
+10:378:21680:29:29:264:362:264:11:g_d0_f2:11:g_d0_f2: ̄gj(Θ) =̂ωdj−ωmj(Θ)
+10:379:21700:29:18:72:554:235:11:g_d0_f2:11:g_d0_f2:and let   ̄g(Θ) = ( ̄g0(Θ), ̄g1(Θ),..., ̄gM(Θ)).  Then the MM estimator iŝΘ = minΘ|| ̄g(Θ)||is a non-
+10:380:21802:18:17:72:554:217:11:g_d0_f2:11:g_d0_f2:linear GMM estimator using an identity weighting matrix.  This sub-optimal weighting matrix is used
+10:381:21901:17:18:72:554:200:11:g_d0_f2:11:g_d0_f2:because when there are fewer shocks than variables in the system, stochastic singularity will induce
+10:382:22001:18:18:72:554:182:11:g_d0_f2:11:g_d0_f2:collinearity in the variables resulting in a matrix of covariances that would be singular.  Even if there
+10:383:22106:18:18:72:554:164:11:g_d0_f2:11:g_d0_f2:are as many shocks as endogenous variables, Abowd and Card (1989), Altonji and Segal (1996) and
+10:384:22201:18:18:72:554:146:11:g_d0_f2:11:g_d0_f2:others find that an identity matrix performs better than the optimal weighting matrix in the context of
+10:385:22304:18:18:72:554:128:11:g_d0_f2:11:g_d0_f2:estimating covariance structures.  The optimal weighting matrix, which contains high order moments,
+10:386:22403:18:0:72:554:110:11:g_d0_f2:11:g_d0_f2:tends to correlate with the moments and this correlation undermines the performance of the estimator.
+11:387:22505:0:18:88:554:699:11:g_d0_f2:11:g_d0_f2:Let ̄G(Θ) be the matrix of derivatives of  ̄g(Θ) with respect to Θ.  In standard covariance structure
+11:388:22606:18:18:72:553:681:11:g_d0_f2:8:g_d0_f8:estimation,  the  parameters  enter  the  model  momentsωm(Θ)  but  not  the  samplêωd,  so  that  if̂ωd
+11:389:22711:18:18:72:554:663:11:g_d0_f2:11:g_d0_f2:are moments of stationary variables,  then under regularity conditions such as stated in Newey and
+11:390:22809:18:19:72:497:645:11:g_d0_f2:11:g_d0_f2:McFadden (1994), we have the conventional result that the estimators are consistent and
+11:391:22896:19:10:248:257:626:11:g_d0_f6:11:g_d0_f6:√
+11:392:22897:10:29:257:378:616:11:g_d0_f7:11:g_d0_f2:T(̂Θ−Θ0)d−→A·N(0,S)
+11:393:22916:29:0:72:205:587:11:g_d0_f2:11:g_d0_f2:whereA= (G′0G0)−1G′0and
+11:394:22939:0:10:208:217:597:11:g_d0_f6:11:g_d0_f6:√
+11:395:22940:10:0:217:252:587:11:g_d0_f7:11:g_d0_f2:T ̄g(Θ0)
+11:396:22948:0:7:259:263:594:8:g_d0_f8:8:g_d0_f8:d
+11:397:22949:7:18:252:554:587:11:g_d0_f6:11:g_d0_f2:−→N(0,S), andG0is the probability limit of ̄G(Θ) evaluated at
+11:398:23010:18:18:71:554:569:11:g_d0_f2:11:g_d0_f2:Θ = Θ0. This distribution theory applies to the FD and the HP because these two filters do not depend
+11:399:23111:18:17:71:553:551:11:g_d0_f2:8:g_d0_f8:on unknown parameters and the filtered variables are always stationary.  For the HD estimator,̂ωd
+11:400:23208:17:18:72:554:534:11:g_d0_f2:11:g_d0_f2:depends onρzbut its first derivative does not, so that a quadratic expansion of the objective function
+11:401:23310:18:18:72:554:516:11:g_d0_f2:11:g_d0_f2:can still be used to derive the asymptotic distribution of the estimator.  Although ̄G(Θ) for the HD
+11:402:23410:18:18:72:554:498:11:g_d0_f2:11:g_d0_f2:has a random limit whenρz= 1,̂ωdis a vector of covariances of stationary variables when evaluated
+11:403:23507:18:18:72:554:480:11:g_d0_f2:11:g_d0_f2:at the true value ofρz.  Thus, the ’standardized’ estimator (or thetstatistic) remains asymptotically
+11:404:23608:18:18:72:108:462:11:g_d0_f2:11:g_d0_f2:normal.
+11:405:23615:18:18:88:553:444:11:g_d0_f2:11:g_d0_f2:To  understand  the  properties  of  the  QD  estimator,  we  need  to  explain  why  we  normalize  the
+11:406:23719:18:18:72:554:426:11:g_d0_f2:11:g_d0_f2:lagged  autocovariances  by  the  variance.   Suppose  we  had  used ̃gj(Θ)  =̂Ωd∆ρz(j)−Ωm∆ρz(j)  instead
+11:407:23824:18:18:72:554:408:11:g_d0_f2:11:g_d0_f2:of   ̄gj(Θ)  =̂ωd∆ρz(j)−ωm∆ρz(j)  whereωd∆ρz(j)  =̂Ωd∆ρz(j)−̂Ωd∆ρz(0),  andωm∆ρzis  likewise  defined.
+11:408:23926:18:15:72:554:390:11:g_d0_f2:11:g_d0_f2:Minimizing|| ̃g(Θ)||over  Θ  yields  an  estimator  that  we  can  call  QD0.   The  problem  here  is  that
+11:409:24034:15:21:72:554:375:11:g_d0_f10:11:g_d0_f2:̂Ωd∆ρz(j) is a cross-product of data quasi-differenced atρz, and is thus quadratic inρz.  The quadratic
+11:410:24137:21:18:72:554:354:11:g_d0_f2:11:g_d0_f2:expansion of|| ̃g(Θ)||around Θ0contains terms that are not negligible whenρzis one.  As such, the
+11:411:24234:18:18:72:554:336:11:g_d0_f2:11:g_d0_f2:sample objective function cannot be shown to converge uniformly to the population objective function.
+11:412:24335:18:18:72:554:318:11:g_d0_f2:11:g_d0_f2:In fact, we show in Gorodnichenko et al. (2009) in a simpler setting that the QD0estimator forρzis
+11:413:24433:18:18:72:554:300:11:g_d0_f2:11:g_d0_f2:consistent but it has a convergence rate ofT3/4and is not asymptotically normal.  The QD estimator
+11:414:24531:18:17:72:554:282:11:g_d0_f2:11:g_d0_f2:is motivated by the fact that the offending term in the quadratic expansion of̂Ωd∆ρz(j) is collinear
+11:415:24631:17:30:72:200:265:11:g_d0_f2:11:g_d0_f2:witĥΩd∆ρz(0) whenρz= 1.
+11:416:24655:30:18:72:554:235:11:g_d0_f1:11:g_d0_f11:Proposition 1Consider  a  DSGE  model  whose  reduced  form  is  given  by  (1)  and  all  roots  ofΠless
+11:417:24760:18:18:72:554:217:11:g_d0_f11:11:g_d0_f11:than  one.   LetΘbe  the  unknown  parameters  of  the  model  and  let̂ΘQDbe  the  QD  estimator  ofΘ.
+11:418:24863:18:0:72:97:199:11:g_d0_f11:11:g_d0_f11:Then
+11:419:24867:0:9:100:109:208:11:g_d0_f6:11:g_d0_f6:√
+11:420:24868:9:30:109:280:199:11:g_d0_f7:11:g_d0_f11:T(̂ΘQD−Θ0)d−→N(0,Avar(̂ΘQD)).
+11:421:24897:30:18:88:553:169:11:g_d0_f2:11:g_d0_f2:A sketch of the argument is given in the Appendix for the baseline model whose closed-form solution
+11:422:24996:18:18:71:553:151:11:g_d0_f2:11:g_d0_f2:is known.  By subtracting the variance from each lagged autocovariance, the quadratic terms in the
+11:423:25094:18:18:71:553:133:11:g_d0_f2:11:g_d0_f2:expansion of the objective function are asymptotically negligible.  This leads to the rather unexpected
+11:424:25197:18:17:71:554:115:11:g_d0_f2:11:g_d0_f2:property  that̂Θ  is  asymptotically  normal  even  whenρz=  1.   From  a  practical  perspective,  the
+11:425:25300:17:0:71:553:98:11:g_d0_f2:11:g_d0_f2:primary  advantage  of  the  robust  estimators  is  that  when  properly  studentized,  the  estimators  are
+12:426:25410:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:normally distributed whetherρz<1 orρz= 1, which greatly facilitates inference.  Since all estimators
+12:427:25510:18:18:71:553:681:11:g_d0_f2:11:g_d0_f2:are consistent and asymptotically normal, it remains to consider which estimator is more efficient in
+12:428:25611:18:29:71:139:663:11:g_d0_f2:11:g_d0_f2:finite samples.
+12:429:25626:29:25:71:202:634:11:g_d0_f1:11:g_d0_f1:4.1    Related Literature
+12:430:25651:25:18:71:553:609:11:g_d0_f2:11:g_d0_f2:Our approach is related to other methods considered in the literature.  Cogley (2001) considers several
+12:431:25754:18:18:71:553:591:11:g_d0_f2:11:g_d0_f2:alternative estimation strategies and finds that using cointegration relationships in unconditional Euler
+12:432:25859:18:18:71:553:573:11:g_d0_f2:11:g_d0_f2:equations works quite well, as the moments used in GMM estimation remain stationary irrespective
+12:433:25955:18:18:71:553:555:11:g_d0_f2:11:g_d0_f2:of whether the data are trend or difference stationary.  Our method is similar (and complementary)
+12:434:26053:18:18:71:553:537:11:g_d0_f2:11:g_d0_f2:to  Cogley’s  (2001)  in  that  neither  requires  the  researcher  to  take  a  stand  on  the  properties  of  the
+12:435:26169:18:18:71:553:519:11:g_d0_f2:11:g_d0_f2:trend dynamics before estimation, but there are important differences.  First, quasi-differencing can
+12:436:26270:18:18:71:553:501:11:g_d0_f2:11:g_d0_f2:easily handle multiple I(1) or highly persistent shocks.  In contrast, using cointegration relationships
+12:437:26374:18:18:71:553:483:11:g_d0_f2:11:g_d0_f2:works  only  for  certain  types  of  shocks.   For  example,  if  the  shock  to  disutility  of  labor  supply  is
+12:438:26490:18:17:71:553:465:11:g_d0_f2:11:g_d0_f2:an  I(1)  process,  there  is  no  cointegration  vector  to  nullify  a  trend  in  hours.   Second,  cointegration
+12:439:26606:17:18:71:553:448:11:g_d0_f2:11:g_d0_f2:often involves estimating identities and therefore the researcher has to add an error term (typically
+12:440:26707:18:18:71:553:430:11:g_d0_f2:11:g_d0_f2:measurement error) to avoid singularity.  Our approach does not estimate specific equations and hence
+12:441:26808:18:18:71:553:412:11:g_d0_f2:11:g_d0_f2:does not need to augment the model with additional, atheoretical shocks.  Finally, using unconditional
+12:442:26910:18:18:71:553:394:11:g_d0_f2:11:g_d0_f2:cointegration vectors may make estimation of some structural parameters such as adjustment costs
+12:443:27006:18:18:71:553:376:11:g_d0_f2:11:g_d0_f2:impossible because adjustment costs are often zero by construction in the steady state.  In contrast,
+12:444:27107:18:18:71:553:358:11:g_d0_f2:11:g_d0_f2:our approach utilizes short-run dynamics in estimation and thus can estimate the parameters affecting
+12:445:27208:18:18:71:553:340:11:g_d0_f2:11:g_d0_f2:short-run dynamics of the variables.  Overall, our approach exploit different properties of the model
+12:446:27309:18:18:71:400:322:11:g_d0_f2:11:g_d0_f2:in estimation and hence can be used in a broader array of situations.
+12:447:27378:18:18:88:553:304:11:g_d0_f2:11:g_d0_f2:Fukac and Pagan (2006) consider how the treatment of trends might affect estimation of DSGE
+12:448:27469:18:18:71:553:286:11:g_d0_f2:11:g_d0_f2:models,  but  their  analysis  is  confined  to  a  single  equation  framework.   They  propose  to  use  the
+12:449:27579:18:18:71:553:268:11:g_d0_f2:11:g_d0_f2:Beveridge-Nelson decomposition to estimate and remove the permanent components in the data. Apart
+12:450:27676:18:18:71:553:250:11:g_d0_f2:11:g_d0_f2:from the fact that the permanent component in the Beveridge-Nelson decomposition may be different
+12:451:27773:18:18:71:553:232:11:g_d0_f2:11:g_d0_f2:from actual trend and is derived under some strong assumptions, our approach is a one-step procedure
+12:452:27873:18:18:71:356:214:11:g_d0_f2:11:g_d0_f2:that can handle multiple I(1) shocks as we discussed above.
+12:453:27932:18:17:88:553:196:11:g_d0_f2:11:g_d0_f2:Canova  (2008)  explicitly  treats  the  latent  trends  as  unobserved  components  and  estimates  the
+12:454:28036:17:18:71:553:179:11:g_d0_f2:11:g_d0_f2:trends and cycles directly.  While this allows the data to select the trend endogenously, the procedure
+12:455:28139:18:18:71:553:161:11:g_d0_f2:11:g_d0_f2:can be imprecise when the random walk component is small.  Canova and Ferroni (2008) considered
+12:456:28234:18:18:71:553:143:11:g_d0_f2:11:g_d0_f2:many filters and treat each as the true cyclical component measured with error.  They are primarily
+12:457:28333:18:18:71:553:125:11:g_d0_f2:11:g_d0_f2:concerned with the consequences of data filtering taking the model specification as given.  We take
+12:458:28432:18:0:71:553:107:11:g_d0_f2:11:g_d0_f2:the view that the trends specified for the model should be consistent with the facts that we sought to
+13:459:28536:0:30:72:290:699:11:g_d0_f2:11:g_d0_f2:explain.  As such, it cannot be taken as given.
+13:460:28583:30:29:72:248:669:11:g_d0_f1:11:g_d0_f1:5    Simulations:  Baseline Model
+13:461:28616:29:18:72:554:640:11:g_d0_f2:11:g_d0_f2:In this section we use the stochastic growth model to conduct Monte Carlo experiments.  We generate
+13:462:28715:18:18:72:553:622:11:g_d0_f2:11:g_d0_f2:data with either deterministic trends (ρz<1) or stochastic trends (ρz= 1) using the model equations
+13:463:28814:18:18:71:553:604:11:g_d0_f2:11:g_d0_f2:for̂mt.  The model variables are then rescaled back to level form and treated as observed datadt=
+13:464:28911:18:18:71:554:586:11:g_d0_f2:11:g_d0_f2:(ct,kt,yt,lt), which we take as given in estimation.  We use the variance and first order autocovariance
+13:465:29015:18:18:71:554:568:11:g_d0_f2:11:g_d0_f2:(including cross variances) of the four variables as moments.  Thus,M= 1.  We also experimented
+13:466:29110:18:18:71:553:550:11:g_d0_f2:11:g_d0_f2:with alternative choices of observed variables, such as excluding the capital stock series, and we found
+13:467:29214:18:18:71:165:532:11:g_d0_f2:11:g_d0_f2:very similar results.
+13:468:29235:18:18:88:554:514:11:g_d0_f2:11:g_d0_f2:We estimate Θ = (α,ρ,σ) and treat parameters (β,δ,θ) as known.4We estimate only a handful
+13:469:29324:18:18:72:554:496:11:g_d0_f2:11:g_d0_f2:of  parameters  because  we  want  to  decouple  the  issues  related  to  the  treatment  of  trends  from  the
+13:470:29436:18:17:72:554:478:11:g_d0_f2:11:g_d0_f2:identification issues that might arise.  We calibrate the model as follows:  capital intensityα= 0.33;
+13:471:29538:17:18:71:554:461:11:g_d0_f2:11:g_d0_f2:disutility of laborθ= 1;  discount factorβ= 0.99;  depreciation rateδ= 0.1;  gross growth rate in
+13:472:29635:18:18:72:554:443:11:g_d0_f2:11:g_d0_f2:technology  ̄g=  ̄γ= 1.005.  We restrict the admissible range of the estimates ofαto [0.01,0.99].  We
+13:473:29736:18:18:72:554:425:11:g_d0_f2:11:g_d0_f2:vary  the  persistence  parameterρzto  take  values  (0.95,  0.99,  1).   We  have  only  one  shock  in  this
+13:474:29846:18:18:72:554:407:11:g_d0_f2:11:g_d0_f2:baseline model.  Thus, we set the standard deviation ofezttoσz= 1 without loss of generality.  We
+13:475:29943:18:18:72:554:389:11:g_d0_f2:11:g_d0_f2:perform 2,000 replications for each choice of parameter values.  In each replication, we create series
+13:476:30045:18:18:72:386:371:11:g_d0_f2:11:g_d0_f2:with T=200 observations.  Other sample sizes are also considered.
+13:477:30110:18:18:88:553:353:11:g_d0_f2:11:g_d0_f2:In all simulations and for all estimators, we set the starting values in optimization routines equal
+13:478:30210:18:18:72:554:335:11:g_d0_f2:11:g_d0_f2:to the true parameter values.  The model is solved using the Anderson and Moore (1985) algorithm.
+13:479:30307:18:18:72:554:317:11:g_d0_f2:11:g_d0_f2:We allow mildly explosive estimates as solutions for otherwisêρzwill be truncated to the right at one,
+13:480:30410:18:18:72:554:299:11:g_d0_f2:11:g_d0_f2:making the distribution of̂ρzhighly skewed.  We only keep as solution those sets of estimates that are
+13:481:30512:18:18:72:357:281:11:g_d0_f2:8:g_d0_f3:consistent with a unique rational expectations equilibrium.5
+13:482:30572:18:18:88:553:263:11:g_d0_f2:11:g_d0_f2:We report simulation results for the baseline neoclassical growth model in Table 2.  The persistence
+13:483:30672:18:18:71:553:245:11:g_d0_f2:11:g_d0_f2:of  technology  shocks  is  given  in  the  left  column.   The  first  and  second  rows  indicate  which  filter
+13:484:30786:18:18:71:553:227:11:g_d0_f2:11:g_d0_f2:is  applied  to  both  the  data  and  the  model  variables.   Columns  (1)-(4)  report  results  for  the  four
+13:485:30899:18:17:71:553:209:11:g_d0_f2:11:g_d0_f2:estimators.  By and large, all four filters yield estimates which are very close to the true values.  Notice
+13:486:31007:17:18:71:553:192:11:g_d0_f2:11:g_d0_f2:that whileρzis always precisely estimated, the variance of the estimates varies substantially across
+13:487:31107:18:16:71:553:174:11:g_d0_f2:11:g_d0_f2:filters.  The QD estimates has the lowest standard deviation while the HP estimates are two to five
+13:488:31206:16:11:84:522:158:6:g_d0_f4:9:g_d0_f5:4The average growth rate  ̄gis estimated in the preliminary step when we project series on linear time trend.
+13:489:31315:11:15:84:554:147:6:g_d0_f4:9:g_d0_f5:5A rational expectations solution is said to be stable if the number of unstable eigenvalues of the system equals the
+13:490:31432:15:11:72:554:132:9:g_d0_f5:9:g_d0_f5:number  of forward looking variables.   Stability  in this  context refers  to the  internal  dynamics of  the system.   This is
+13:491:31560:11:11:72:554:121:9:g_d0_f5:9:g_d0_f5:distinct from covariance stationarity of the time series data, which obtains whenρz<1.  It is possible forρzto be mildly
+13:492:31680:11:0:72:410:110:9:g_d0_f5:9:g_d0_f5:explosive and yet the system has a stable, unique rational expectations equilibrium.
+14:493:31766:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:times more variable than the QD. The HD is more precise than the FD but is less precise than the
+14:494:31862:18:18:72:302:681:11:g_d0_f2:11:g_d0_f2:QD. This pattern is recurrent in all simulations.
+14:495:31911:18:18:88:553:663:11:g_d0_f2:11:g_d0_f2:Figure 1 shows the root mean squared error (RMSE) for different estimators and sample sizes.  The
+14:496:32008:18:18:72:554:645:11:g_d0_f2:11:g_d0_f2:QD estimator performs the best while the FD tends to have the largest RMSE in almost all cases.
+14:497:32103:18:18:72:554:627:11:g_d0_f2:11:g_d0_f2:The performance of the HP estimator varies with sample size.  In small samples, the HP tends to lead
+14:498:32203:18:18:72:554:609:11:g_d0_f2:11:g_d0_f2:to large RMSE while in larger samples, the HP approaches the HD which is only slightly inferior to
+14:499:32301:18:18:72:111:591:11:g_d0_f2:11:g_d0_f2:the QD.
+14:500:32308:18:0:88:482:573:11:g_d0_f2:11:g_d0_f2:Figures  2  through  4  present  the  kernel  density  of  the  normalized  estimator  (ie.
+14:501:32399:0:9:492:501:582:11:g_d0_f6:11:g_d0_f6:√
+14:502:32400:9:18:501:554:573:11:g_d0_f7:11:g_d0_f2:T(̂Θ−Θ))
+14:503:32408:18:18:72:554:555:11:g_d0_f2:11:g_d0_f2:for sample sizes ofT=150 and 300.  Results are also reported for T=2000 to study the asymptotic
+14:504:32503:18:18:72:554:537:11:g_d0_f2:11:g_d0_f2:properties of the estimators. Approximate normality of̂ρzwhenρzis close to one, is totally unexpected,
+14:505:32605:18:18:72:554:519:11:g_d0_f2:11:g_d0_f2:given that the literature on integrated regressors prepared us to expect super consistent estimators with
+14:506:32710:18:18:72:554:501:11:g_d0_f2:11:g_d0_f2:Dickey-Fuller type distributions that are skewed.  Instead, all densities are bell-shaped and symmetric
+14:507:32813:18:18:72:554:483:11:g_d0_f2:11:g_d0_f2:for allρz≤1 with no apparent discontinuity as we increaseρzto one.  The normal approximation is
+14:508:32908:18:17:72:554:465:11:g_d0_f2:11:g_d0_f2:not perfect in small samples, suggesting that some size distortion will occur if we use thetstatistic for
+14:509:33013:17:18:72:554:448:11:g_d0_f2:11:g_d0_f2:inference.  In results not reported, we constructt-statistics using Newey-West standard errors and find
+14:510:33116:18:18:72:554:430:11:g_d0_f2:11:g_d0_f2:that the rejection rates tend to be greater than the nominal size for all estimators except the HP, which
+14:511:33221:18:18:72:553:412:11:g_d0_f2:8:g_d0_f8:can be undersized.  For example, the rejection rate of the QD estimator for the two-sided t-test ofρz
+14:512:33322:18:18:72:554:394:11:g_d0_f2:11:g_d0_f2:at the true value of 1 is 0.055 when T=200 while for testingαat the true value of 0.33, the rejection
+14:513:33423:18:18:72:554:376:11:g_d0_f2:11:g_d0_f2:rate is 0.21.  This is larger than the nominal size of 0.05.  As the sample size increases,  the actual
+14:514:33526:18:18:72:554:358:11:g_d0_f2:11:g_d0_f2:size gets closer (and eventually converges) to the nominal rates.  For example, at T=1000 for QD, the
+14:515:33627:18:18:72:554:340:11:g_d0_f2:11:g_d0_f2:two-sided t-test ofρz= 1 has a rejection rate of 0.05, while thettest forα=.33 is 0.10.  The QD and
+14:516:33726:18:18:71:553:322:11:g_d0_f2:11:g_d0_f2:HD generally have better size than the FD and the HP. The finite sample size distortion seems to be
+14:517:33825:18:18:71:553:304:11:g_d0_f2:11:g_d0_f2:a general problem with covariance structure estimators and not specific to the estimator we consider.
+14:518:33926:18:18:71:553:286:11:g_d0_f2:11:g_d0_f2:Burnside and Eichenbaum (1996) reported similar results in covariance structure estimation with as
+14:519:34024:18:18:71:553:268:11:g_d0_f2:11:g_d0_f2:many overidentifying restrictions as we have, and also using the Newey-West estimator of the variance
+14:520:34125:18:29:71:129:250:11:g_d0_f2:11:g_d0_f2:of moments.
+14:521:34136:29:25:71:281:221:11:g_d0_f1:11:g_d0_f1:5.1    Variations to the Baseline Model
+14:522:34175:25:17:71:553:196:11:g_d0_f2:11:g_d0_f2:In response to the finding in Cogley and Nason (1995b) that the basic real business cycle model has
+14:523:34274:17:18:71:553:179:11:g_d0_f2:11:g_d0_f2:weak internal propagation, researchers often augment the basic model to strengthen the propagation
+14:524:34372:18:18:71:553:161:11:g_d0_f2:11:g_d0_f2:and  to  better  fit  the  data  at  business  cycle  frequencies.   One  consideration  is  to  introduce  serial
+14:525:34486:18:18:71:554:143:11:g_d0_f2:11:g_d0_f2:correlation in the growth rate of shocks to technology by assumingut= (ρz+κ)ut−1−κρzut−2+ezt.
+14:526:34579:18:18:72:554:125:11:g_d0_f2:11:g_d0_f2:This specification generates serial correlation ofκin the growth rate of technology whenρz≈1.  Our
+14:527:34677:18:0:71:553:107:11:g_d0_f2:11:g_d0_f2:baseline model corresponds toκ= 0.  When we simulate data withκ= 0 and estimateκfreely, the
+15:528:34770:0:18:72:394:699:11:g_d0_f2:11:g_d0_f2:QD, HD, FD, and HP correctly find thatκ= 0 (Table 3, Panel A).
+15:529:34832:18:18:88:553:681:11:g_d0_f2:11:g_d0_f2:Habit in consumption is another popular way to introduce greater persistence in business cycle
+15:530:34926:18:18:71:554:663:11:g_d0_f2:11:g_d0_f2:models.  Consider the utility function:θ(Ct,Ct−1,Lt) = ln(Ct−φCt−1)−θLtwhereφmeasures the
+15:531:35015:18:18:72:554:645:11:g_d0_f2:11:g_d0_f2:degree of habit in consumption. We setφ= 0 and estimateφalong with other parameters to investigate
+15:532:35113:18:18:72:554:627:11:g_d0_f2:11:g_d0_f2:how the treatment of the trends might affect estimates of this internal propagation mechanism.  The
+15:533:35212:18:18:72:554:609:11:g_d0_f2:11:g_d0_f2:robust estimators again find̂φto be numerically small and not statistically from zero for all values of
+15:534:35315:18:18:72:178:591:11:g_d0_f7:11:g_d0_f2:ρz(Table 3, Panel B).
+15:535:35336:18:18:88:554:573:11:g_d0_f2:11:g_d0_f2:We also augment our baseline model with a preference shockQtsuch that the utility isθ(Ct,Lt) =
+15:536:35430:18:18:72:553:555:11:g_d0_f2:11:g_d0_f2:lnCt−θLt/Qtwhereqt= lnQt=ρqqt−1+eqtandeqt∼iid(0,σ2q).  In our simulations, we setρq= 0.8
+15:537:35518:18:18:72:553:537:11:g_d0_f2:11:g_d0_f2:so  that  the  preference  shock  is  stationary.   We  letσq=  (0.5,1.0,1.5).   To  conserve  space,  we  only
+15:538:35629:18:18:72:554:519:11:g_d0_f2:11:g_d0_f2:report estimates forαin Table 3, Panel C. Consistent with the results thus far, the HP estimates have
+15:539:35730:18:18:72:554:501:11:g_d0_f2:11:g_d0_f2:the largest variability although the difference with other estimators is not as large as it was in the
+15:540:35832:18:18:72:554:483:11:g_d0_f2:11:g_d0_f2:baseline model.  Note that as we increaseσq, the difference across methods shrinks while the precision
+15:541:35934:18:17:72:202:465:11:g_d0_f2:11:g_d0_f2:for all estimators improves.
+15:542:35962:17:18:88:553:448:11:g_d0_f2:11:g_d0_f2:A recurrent result is that the HP estimates have the largest variability.  One possibility is that the
+15:543:36064:18:18:72:554:430:11:g_d0_f2:11:g_d0_f2:HP filters out more low frequency variation than other filters, and the parametersφandκare identified
+15:544:36165:18:18:72:554:412:11:g_d0_f2:11:g_d0_f2:from these frequencies (see also discussion in Burnside (1998)).  Another possibility is that the HP
+15:545:36265:18:18:72:554:394:11:g_d0_f2:11:g_d0_f2:implicitly uses estimated autocovariances at many more lags than other filters (recall that we apply the
+15:546:36369:18:18:72:554:376:11:g_d0_f2:11:g_d0_f2:inverse Fourier transform to many autocovariances).  This extensive use of sample autocovariances can
+15:547:36470:18:18:72:554:358:11:g_d0_f2:11:g_d0_f2:also introduce variability to the estimator.  In addition, we find that HP is much more computationally
+15:548:36573:18:30:72:257:340:11:g_d0_f2:11:g_d0_f2:intensive than other robust estimators.
+15:549:36612:30:29:72:431:310:11:g_d0_f1:11:g_d0_f1:6    Non-Robust Estimators and a Model with Multiple Rigidities
+15:550:36675:29:18:72:554:281:11:g_d0_f2:11:g_d0_f2:In this section, we report results of the non-robust estimators applied to different models to illustrate
+15:551:36780:18:18:72:554:263:11:g_d0_f2:11:g_d0_f2:how  treatment  of  trends  can  lead  to  misleading  conclusions  about  the  propagating  mechanism  of
+15:552:36886:18:28:72:521:245:11:g_d0_f2:11:g_d0_f2:shocks.  We also compare the estimators using a model with many more endogenous variables.
+15:553:36976:28:25:72:294:217:11:g_d0_f1:11:g_d0_f1:6.1    Alternative Detrending Procedures
+15:554:37016:25:18:72:554:192:11:g_d0_f2:11:g_d0_f2:Up to this point, we have considered approaches where the same transformation is applied to the data
+15:555:37116:18:18:72:554:174:11:g_d0_f2:11:g_d0_f2:and the model variables.  Much has been written about the effects of filtering on business cycle facts.
+15:556:37219:18:18:72:554:156:11:g_d0_f2:11:g_d0_f2:King and Rebelo (1993) and Canova (1998) showed that the HP filtered data are qualitatively different
+15:557:37320:18:18:72:554:138:11:g_d0_f2:11:g_d0_f2:from the raw data.  Canova (1998) showed that the stylized facts of business cycles are sensitive to the
+15:558:37424:18:18:72:554:120:11:g_d0_f2:11:g_d0_f2:filter used to remove the trending components.  Gregory and Smith (1996) used a calibrated business
+15:559:37523:18:0:72:554:102:11:g_d0_f2:11:g_d0_f2:cycle model to investigate what type of trend can produce a cyclical component in the data that is
+16:560:37623:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:similar to the cyclical component in the model.  Although these authors did not estimate a DSGE
+16:561:37718:18:18:72:554:681:11:g_d0_f2:11:g_d0_f2:model on filtered data, they hinted that the estimates of the structural parameters can be adversely
+16:562:37818:18:18:72:167:663:11:g_d0_f2:11:g_d0_f2:affected by filtering.
+16:563:37840:18:18:88:553:645:11:g_d0_f2:11:g_d0_f2:We now investigate the consequences of using different and/or inappropriate filters by considering
+16:564:37938:18:27:72:161:627:11:g_d0_f2:11:g_d0_f2:four combinations:
+16:565:37956:27:27:81:482:600:11:g_d0_f2:11:g_d0_f2:A)  The autocovariances are computed for linearly detrended model and data series;
+16:566:38038:27:18:81:554:573:11:g_d0_f2:11:g_d0_f2:B)  The autocovariances are computed for the first differenced model and data series with imposed
+16:567:38135:18:27:99:132:555:11:g_d0_f7:11:g_d0_f2:ρz= 1;
+16:568:38141:27:18:81:554:528:11:g_d0_f2:11:g_d0_f2:C)  The sample autocovariances are computed for HP filtered data but the model autocovariances
+16:569:38235:18:27:99:338:510:11:g_d0_f2:11:g_d0_f2:are computed for the linearly detrended variables;
+16:570:38285:27:18:81:554:483:11:g_d0_f2:11:g_d0_f2:D)  The sample autocovariances are computed for HP filtered data.  The model autocovariances are
+16:571:38381:18:17:99:554:465:11:g_d0_f2:11:g_d0_f2:computed for series normalized by the level of technology, i.e.,mt−ztwhereztis the level of
+16:572:38472:17:27:99:152:448:11:g_d0_f2:11:g_d0_f2:technology.
+16:573:38483:27:18:71:553:421:11:g_d0_f2:11:g_d0_f2:Each combination has been used in the literature (see e.g.  Table 1).  (A) and (B) are aimed to show the
+16:574:38587:18:18:71:553:403:11:g_d0_f2:11:g_d0_f2:effects of imposing incorrect assumptions about trends.  (C) and (D) illustrate the consequences when
+16:575:38688:18:18:71:553:385:11:g_d0_f2:11:g_d0_f2:different trends are applied to the model and the data.  As a general observation, the starting values
+16:576:38790:18:18:71:553:367:11:g_d0_f2:11:g_d0_f2:are very important for non-robust methods as the optimization routines can get stuck in local optima.
+16:577:38891:18:18:71:553:349:11:g_d0_f2:11:g_d0_f2:With the robust estimators, the converged estimates do not change as we start the optimization from
+16:578:38990:18:18:71:517:331:11:g_d0_f2:11:g_d0_f2:values other than the true parameters, though the search for global minimum was often long.
+16:579:39081:18:18:88:553:313:11:g_d0_f2:11:g_d0_f2:The results are reported in Table 2.  For (A), which is reported in column (5), we see that when
+16:580:39177:18:18:71:554:295:11:g_d0_f7:11:g_d0_f2:ρz= 0.95,  the parameter estimates are slightly biased.  Asρzincreases,  the estimates are strongly
+16:581:39276:18:18:71:554:277:11:g_d0_f2:11:g_d0_f2:biased.  This shows that whenρzis close to unity yet stationary, assuming trend stationarity still yields
+16:582:39381:18:18:71:554:259:11:g_d0_f2:11:g_d0_f2:imprecise estimates.  Atρz= 1, the mean of̂ρzis 0.694 (instead of 1), the mean of̂αis approximately
+16:583:39480:18:18:71:553:241:11:g_d0_f2:11:g_d0_f2:0.905 (instead of 0.33), the mean of̂σzis 19.8 (instead of 1).  The case ofρz≤1 is empirically relevant
+16:584:39583:18:18:71:553:223:11:g_d0_f2:11:g_d0_f2:because macroeconomic data are highly persistent and well approximated by unit root processes.  Our
+16:585:39682:18:18:71:553:205:11:g_d0_f2:11:g_d0_f2:results  show  that  linear  detrending  of  nearly  integrated  data  in  non-linear  estimation  can  lead  to
+16:586:39794:18:17:71:553:187:11:g_d0_f2:11:g_d0_f2:biased estimates of the structural parameters.  This resembles the univariate finding of Nelson and
+16:587:39893:17:18:71:528:170:11:g_d0_f2:11:g_d0_f2:Kang (1981) that projecting a series with a unit root on time trend can lead to spurious cycles.
+16:588:39989:18:18:88:553:152:11:g_d0_f2:8:g_d0_f8:Turning to (B) in column (6) of Table 2, we find that while the estimates are fairly precise whenρz
+16:589:40088:18:18:71:554:134:11:g_d0_f2:11:g_d0_f2:is indeed equal to one, asρzdeparts from one, the estimates get increasingly biased.  Hence imposing
+16:590:40188:18:18:71:553:116:11:g_d0_f2:11:g_d0_f2:a stochastic trend when the data generating process is trend stationary can lead to seriously distorted
+16:591:40291:18:0:71:554:98:11:g_d0_f2:11:g_d0_f2:estimates.  Results for combination (C) are reported in column (7) of Table 2.  The estimates ofρzare
+17:592:40394:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:downward biased whilêαand̂σzare upward biased.  Taken at face value, these estimates suggest a
+17:593:40489:18:18:72:451:681:11:g_d0_f2:11:g_d0_f2:significant role for capital as a mechanism for propagating shocks in the model.
+17:594:40569:18:18:88:554:663:11:g_d0_f2:11:g_d0_f2:Results  for  (D)  are  reported  in  column  (8)  of  Table  2.   Here,  the  estimates  ofαoften  hit  the
+17:595:40677:18:18:72:553:645:11:g_d0_f2:8:g_d0_f8:boundary of the permissible space while estimates ofσzare close to zero.  The reason is that whenzt
+17:596:40776:18:18:71:554:627:11:g_d0_f2:11:g_d0_f2:has a unit root, shocks tomt−ztare transitory.  Thus, the endogenous variables such as consumption
+17:597:40874:18:18:71:553:609:11:g_d0_f2:11:g_d0_f2:adjust quickly to the permanent technology shock.  But the HP filtered data are serially correlated.
+17:598:40974:18:18:71:553:591:11:g_d0_f2:11:g_d0_f2:Thus, the estimator is forced to produce parameter values that can generate a strong serial correlation
+17:599:41077:18:18:71:553:573:11:g_d0_f2:11:g_d0_f2:in the model variables.  Results for (C) and (D) are consistent with the findings of Cogley and Nason
+17:600:41178:18:18:71:553:555:11:g_d0_f2:11:g_d0_f2:(1995a), King and Rebelo (1993) and Harvey and Jaeger (1993).  These papers suggest that the HP
+17:601:41273:18:18:71:553:537:11:g_d0_f2:11:g_d0_f2:filter changes not only the persistence of the series but also the relative volatility and serial correlation
+17:602:41382:18:18:71:553:519:11:g_d0_f2:11:g_d0_f2:of the series.  This translates into biased estimates of all parameters because the estimator is forced
+17:603:41485:18:18:71:312:501:11:g_d0_f2:11:g_d0_f2:to match the serial correlation of the filtered data.
+17:604:41538:18:18:88:553:483:11:g_d0_f2:11:g_d0_f2:Clearly,  the  large  estimates  ofαwill  alert  the  researcher  that  the  model  is  likely  misspecified.
+17:605:41647:18:17:71:554:465:11:g_d0_f2:11:g_d0_f7:Suppose  the  researcher  allows  for  serially  correlated  shocks  in  technology  growth  by  estimatingκ
+17:606:41755:17:18:71:554:448:11:g_d0_f2:11:g_d0_f2:freely.  Panel A, Table 3 shows that the non-robust methods now yield estimates ofαaround 0.4-0.5,
+17:607:41853:18:18:71:554:430:11:g_d0_f2:11:g_d0_f2:which seem more plausible than whenκwas assumed zero.  However, these estimates are achieved by
+17:608:41948:18:18:71:554:412:11:g_d0_f2:11:g_d0_f2:havinĝκstrongly negative and statistically significant when the true value is zero.  Suppose now the
+17:609:42049:18:18:71:553:394:11:g_d0_f2:11:g_d0_f2:researcher modifies the model by allowing for habits in consumption.  Evidently, the estimated habit
+17:610:42149:18:18:71:554:376:11:g_d0_f2:11:g_d0_f2:formation parameterφis sensitive to which non-robust estimator is used.  In particular,  (A) has a
+17:611:42247:18:18:71:554:358:11:g_d0_f2:11:g_d0_f2:strong downward bias, while (B) produces a negative bias in̂φwhenρzdeparts from one.  On the other
+17:612:42345:18:18:71:553:340:11:g_d0_f2:11:g_d0_f2:hand, (C) and (D) have a strong upward bias.  With either modification, the fit of the misspecified
+17:613:42444:18:18:71:553:322:11:g_d0_f2:11:g_d0_f2:models improves relative to the correctly specified model.  However,  these modifications should not
+17:614:42544:18:18:71:553:304:11:g_d0_f2:11:g_d0_f2:have been undertaken as they do not exist in the data generating process.  These examples indicate
+17:615:42642:18:18:71:553:286:11:g_d0_f2:11:g_d0_f2:how the treatment of trends can mislead the researcher to augment correctly specified models with
+17:616:42739:18:18:71:402:268:11:g_d0_f2:11:g_d0_f2:spurious propagation mechanisms to match the moments of the data.
+17:617:42804:18:18:88:553:250:11:g_d0_f2:11:g_d0_f2:Results for the model with an additional labor supply shock are reported in Table 3, Panel C. The
+17:618:42901:18:18:71:553:232:11:g_d0_f2:11:g_d0_f2:estimates  continue  to  be  biased  although  the  biases  tend  to  be  smaller  than  in  the  baseline  model
+17:619:43014:18:18:71:554:214:11:g_d0_f2:11:g_d0_f2:with a single persistent shock.  In general, a smallerρzand a largerσqlead to smaller biases.  In some
+17:620:43116:18:17:71:554:196:11:g_d0_f2:11:g_d0_f2:cases, we find̂σq>̂σz, so that the researcher may be tempted to conclude that preference shocks have
+17:621:43216:17:29:71:400:179:11:g_d0_f2:11:g_d0_f2:larger volatility than shocks to technology while the opposite is true.
+17:622:43287:29:25:71:271:150:11:g_d0_f1:11:g_d0_f1:6.2    The Smets and Wouters Model
+17:623:43321:25:18:71:553:125:11:g_d0_f2:11:g_d0_f2:Although the baseline model is an illuminating laboratory to evaluate how the estimators work, it is
+17:624:43421:18:0:71:553:107:11:g_d0_f2:11:g_d0_f2:overly simplistic.  We now consider the model of Smets and Wouters (2007) (henceforth SW). We use
+18:625:43520:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:SW’s estimates for the post-1982 sample as the true values.  We then simulate series of size T=150
+18:626:43618:18:18:72:554:681:11:g_d0_f2:11:g_d0_f2:and apply the estimators to the simulated series.  To separate identification issues from issues related
+18:627:43722:18:18:72:553:663:11:g_d0_f2:8:g_d0_f8:to  the  treatment  of  trends,  we  estimate  only  four  parameters:  persistence  of  technology  shocksρz
+18:628:43831:18:18:72:554:645:11:g_d0_f2:11:g_d0_f2:whose  true  value  varies  across  simulations,  investment  adjustment  costφwhose  true  value  is  5.48,
+18:629:43939:18:18:72:553:627:11:g_d0_f2:11:g_d0_f2:external habit formation in consumptionλwhose true value is 0.71, and Calvo’s probability of wage
+18:630:44036:18:18:72:261:609:11:g_d0_f2:11:g_d0_f2:adjustmentξwwhose true value is 0.73.
+18:631:44073:18:18:88:553:591:11:g_d0_f2:11:g_d0_f2:The results are reported in Table 4.  All robust methods yield precise estimates of the parameters.
+18:632:44172:18:18:72:554:573:11:g_d0_f2:11:g_d0_f2:Although the HP continues to be less precise, the difference with the other three robust estimators is
+18:633:44274:18:18:72:554:555:11:g_d0_f2:11:g_d0_f2:smaller than in the baseline model.  This is similar to what we observed when we compare the two-
+18:634:44371:18:18:72:554:537:11:g_d0_f2:11:g_d0_f2:shock and one-shock neoclassical growth models.  These differences between the baseline and the more
+18:635:44471:18:18:72:554:519:11:g_d0_f2:11:g_d0_f2:complicated models can occur for several reasons.  First, the SW model has six other structural shocks
+18:636:44573:18:18:72:554:501:11:g_d0_f2:11:g_d0_f2:so that technology shocks explain only a fraction of variation in key macroeconomic variables.  The HP
+18:637:44675:18:18:72:554:483:11:g_d0_f2:11:g_d0_f2:estimator may simply need more shocks to identify the parameters.  Second, the SW model imposes
+18:638:44770:18:17:72:554:465:11:g_d0_f2:11:g_d0_f2:many  cross  equation  restrictions  on  the  handful  of  the  parameters  we  estimate.   These  restrictions
+18:639:44881:17:18:72:554:448:11:g_d0_f2:11:g_d0_f2:may improve the efficiency of some estimators more than others.  Third, some estimators may be more
+18:640:44980:18:18:72:554:430:11:g_d0_f2:11:g_d0_f2:sensitive to the size of the model than others.  The general observation, however, is that our robust
+18:641:45081:18:18:72:507:412:11:g_d0_f2:11:g_d0_f2:estimators perform reasonably well for all values ofρzin simple and more complex models.
+18:642:45169:18:18:88:553:394:11:g_d0_f2:11:g_d0_f2:In contrast, the non-robust estimators (A) through (D) have dramatic biases in all four parameters
+18:643:45267:18:18:72:554:376:11:g_d0_f2:11:g_d0_f2:being estimated when (i) the filter used for the model and the data are different, when (ii) the assumed
+18:644:45371:18:18:72:554:358:11:g_d0_f2:11:g_d0_f2:trends are different from trends in the data generating process, or when (iii) the data are stationary
+18:645:45473:18:18:72:554:340:11:g_d0_f2:11:g_d0_f2:but highly persistent.  Obviously, the impulse responses (and other analyses about the role of rigidities
+18:646:45578:18:18:72:554:322:11:g_d0_f2:11:g_d0_f2:in amplification and propagation of shocks in business cycle models) based on these biased estimates
+18:647:45678:18:18:72:554:304:11:g_d0_f2:11:g_d0_f2:of the structural parameters will be misleading.  As an illustration, Figure 5 highlights the difference
+18:648:45782:18:18:72:554:286:11:g_d0_f2:11:g_d0_f2:between the true response of key macroeconomic variables to a technology shock in the SW model and
+18:649:45880:18:18:72:554:268:11:g_d0_f2:11:g_d0_f2:the responses based on parameter estimates from approaches (A) through (D). For instance, consider
+18:650:45978:18:18:72:554:250:11:g_d0_f2:11:g_d0_f2:the  response  of  consumption.   Estimates  from  approaches  (A)  and  (C)  imply  grossly  understated
+18:651:46083:18:18:72:554:232:11:g_d0_f2:11:g_d0_f2:responses.  Estimates from approach (D) suggest a considerably more delayed consumption response
+18:652:46179:18:18:72:554:214:11:g_d0_f2:11:g_d0_f2:than the true one.  The consumption response implied by approach (B) is qualitatively similar to the
+18:653:46279:18:17:72:553:196:11:g_d0_f2:11:g_d0_f2:true response, but the responses are noticeably different quantitatively especially whenρzis further
+18:654:46379:17:0:72:144:179:11:g_d0_f2:11:g_d0_f2:away from one.
+19:655:46395:0:25:72:302:699:11:g_d0_f1:11:g_d0_f1:7    Extensions and Implementation Issues
+19:656:46436:25:25:72:187:674:11:g_d0_f1:11:g_d0_f1:7.1    Multiple shocks
+19:657:46458:25:23:72:510:649:11:g_d0_f2:11:g_d0_f2:The reduced form solution (1) can be easily generalized to other models and takes the form
+19:658:46548:23:21:262:554:626:11:g_d0_f10:11:g_d0_f2:̂mt=   Π̂mt−1+But(3)
+19:659:46568:21:24:263:360:605:11:g_d0_f7:11:g_d0_f7:ut=ρut−1+Set,
+19:660:46581:24:18:71:553:581:11:g_d0_f2:11:g_d0_f2:whereutis now a vector of exogenous forcing variables,etis a vector of innovations inut, and the
+19:661:46677:18:18:71:280:563:11:g_d0_f2:11:g_d0_f2:matrices Π,B,S,ρare of conformable sizes.
+19:662:46718:18:23:88:422:545:11:g_d0_f2:11:g_d0_f2:Suppose there areJunivariate shock processes, each characterized by
+19:663:46785:23:23:234:390:522:11:g_d0_f2:11:g_d0_f7:(1−ρjL)ujt=ejt,  j= 1,...,J
+19:664:46812:23:31:71:349:499:11:g_d0_f2:11:g_d0_f2:where someJ∗of theρjmay be on the unit circle.  Define
+19:665:46866:31:0:259:301:468:11:g_d0_f2:11:g_d0_f2:∆ρ(L) =
+19:666:46873:0:27:306:318:482:8:g_d0_f8:11:g_d0_f10:J∗∏
+19:667:46876:27:0:304:319:455:8:g_d0_f8:8:g_d0_f3:j=1
+19:668:46879:0:29:318:366:468:11:g_d0_f2:11:g_d0_f7:(1−ρjL).
+19:669:46887:29:18:71:554:439:11:g_d0_f2:11:g_d0_f2:Now the quasi-differencing operator is the product of theJ∗polynomials in lag operator.  For example,
+19:670:46988:18:18:71:554:421:11:g_d0_f2:11:g_d0_f2:if one knows that shocks to tastes dissipate quickly while technology shocksztare highly persistent, we
+19:671:47091:18:18:71:554:403:11:g_d0_f2:11:g_d0_f2:can still use (1−ρzL) as ∆ρ.  Once the model is solved to arrive at (3), we can compute moments for
+19:672:47190:18:18:71:554:385:11:g_d0_f2:11:g_d0_f2:the quasi-differences of̂mt.  Whether none, one, or more shocks are permanent, the autocovariances
+19:673:47288:18:28:71:286:367:11:g_d0_f2:11:g_d0_f2:of the transformed variables are well defined.
+19:674:47334:28:25:71:221:339:11:g_d0_f1:11:g_d0_f1:7.2    Likelihood Estimation
+19:675:47362:25:18:71:553:314:11:g_d0_f2:11:g_d0_f2:As likelihood and Bayesian estimation is commonly used in the DSGE literature, one may wonder how
+19:676:47459:18:18:71:553:296:11:g_d0_f2:11:g_d0_f2:the ideas considered in this paper can be implemented in likelihood based estimation.  Conceptually,
+19:677:47559:18:18:71:553:278:11:g_d0_f2:11:g_d0_f2:if  we  can  write  the  model  in  a  state  space  form,  we  can  specify  the  likelihood  which  makes  MLE
+19:678:47671:18:18:71:553:260:11:g_d0_f2:11:g_d0_f2:and Bayesian estimation possible.  This involves using the measurement equations to establish a strict
+19:679:47773:18:18:71:429:242:11:g_d0_f2:11:g_d0_f2:correspondence between the detrended series in the model and in the data.
+19:680:47846:18:18:88:553:224:11:g_d0_f2:11:g_d0_f2:As  an  example,  consider  the  FD  estimator  for  the  generalized  model  (3).   We  can  define  the
+19:681:47951:18:23:71:192:206:11:g_d0_f2:11:g_d0_f2:measurement equation as
+19:682:47974:23:0:237:291:183:11:g_d0_f7:11:g_d0_f2:xt=Hst=
+19:683:47981:0:9:295:300:192:11:g_d0_f10:11:g_d0_f10:[
+19:684:47982:9:0:299:350:183:11:g_d0_f2:11:g_d0_f2:Ψ−Ψ   0
+19:685:47989:0:9:350:355:192:11:g_d0_f10:11:g_d0_f10:]
+19:686:47990:9:24:357:554:183:11:g_d0_f7:11:g_d0_f2:st,(4)
+19:687:47996:24:18:71:554:159:11:g_d0_f2:11:g_d0_f2:wherextis the vector of filtered variable, Ψ is the selection matrix, ands′t= (̂mt,̂mt−1,ut) is the state
+19:688:48101:18:9:71:302:141:11:g_d0_f2:11:g_d0_f2:vector.  The corresponding transition equation is
+19:689:48150:9:20:198:205:132:11:g_d0_f10:11:g_d0_f10:
+19:690:48151:20:0:198:205:112:11:g_d0_f10:11:g_d0_f10:
+19:691:48152:0:13:212:223:123:11:g_d0_f10:8:g_d0_f8:̂mt
+19:692:48155:13:14:207:228:110:11:g_d0_f10:8:g_d0_f3:̂mt−1
+19:693:48160:14:0:212:221:96:11:g_d0_f7:8:g_d0_f8:ut
+19:694:48162:0:20:229:236:132:11:g_d0_f10:11:g_d0_f10:
+19:695:48163:20:0:229:247:112:11:g_d0_f10:11:g_d0_f2:=
+19:696:48165:0:20:251:258:132:11:g_d0_f10:11:g_d0_f10:
+19:697:48166:20:0:251:258:112:11:g_d0_f10:11:g_d0_f10:
+19:698:48167:0:13:258:305:123:11:g_d0_f2:11:g_d0_f7:Π   0Bρ
+19:699:48174:13:14:259:301:110:11:g_d0_f7:11:g_d0_f2:I00
+19:700:48177:14:0:259:302:96:11:g_d0_f2:11:g_d0_f7:0    0ρ
+19:701:48184:0:20:306:313:132:11:g_d0_f10:11:g_d0_f10:
+19:702:48185:20:0:306:313:112:11:g_d0_f10:11:g_d0_f10:
+19:703:48186:0:20:315:322:132:11:g_d0_f10:11:g_d0_f10:
+19:704:48187:20:0:315:322:112:11:g_d0_f10:11:g_d0_f10:
+19:705:48188:0:13:324:345:123:11:g_d0_f10:8:g_d0_f3:̂mt−1
+19:706:48193:13:14:324:345:110:11:g_d0_f10:8:g_d0_f3:̂mt−2
+19:707:48198:14:0:324:344:96:11:g_d0_f7:8:g_d0_f3:ut−1
+19:708:48202:0:20:346:353:132:11:g_d0_f10:11:g_d0_f10:
+19:709:48203:20:0:346:364:112:11:g_d0_f10:11:g_d0_f2:+
+19:710:48205:0:20:367:374:132:11:g_d0_f10:11:g_d0_f10:
+19:711:48206:20:0:367:374:112:11:g_d0_f10:11:g_d0_f10:
+19:712:48207:0:13:374:390:123:11:g_d0_f7:11:g_d0_f7:BS
+19:713:48209:13:14:379:384:110:11:g_d0_f2:11:g_d0_f2:0
+19:714:48210:14:0:378:385:96:11:g_d0_f7:11:g_d0_f7:S
+19:715:48211:0:20:390:397:132:11:g_d0_f10:11:g_d0_f10:
+19:716:48212:20:0:390:407:112:11:g_d0_f10:8:g_d0_f8:et
+20:717:48217:0:18:72:82:699:11:g_d0_f2:11:g_d0_f2:or
+20:718:48219:18:25:267:554:681:11:g_d0_f7:11:g_d0_f2:st= Π∗st−1+B∗et(5)
+20:719:48237:25:18:72:554:656:11:g_d0_f2:11:g_d0_f2:withet∼i.i.d.(0,Σ).  The measured variablextis stationary irrespective of whether̂mthas stochastic
+20:720:48335:18:0:72:332:638:11:g_d0_f2:11:g_d0_f2:or deterministic trends.  For the QD0estimator,H=
+20:721:48384:0:9:337:342:647:11:g_d0_f10:11:g_d0_f10:[
+20:722:48385:9:0:341:398:638:11:g_d0_f2:11:g_d0_f2:Ψ−ρΨ   0
+20:723:48393:0:9:398:403:647:11:g_d0_f10:11:g_d0_f10:]
+20:724:48394:9:18:402:553:638:11:g_d0_f2:11:g_d0_f2:.  As with all quasi-differencing
+20:725:48427:18:18:72:554:620:11:g_d0_f2:11:g_d0_f2:estimators, the treatment of initial condition is important especially when there is strong persistence.
+20:726:48531:18:17:72:554:602:11:g_d0_f2:11:g_d0_f2:In simulations, we condition on the first observation being fixed and find that the MLE version of the
+20:727:48633:17:18:72:554:585:11:g_d0_f2:11:g_d0_f2:FD gives precise estimates, but thetstatistics are less well approximated by the normal distribution
+20:728:48733:18:18:72:247:567:11:g_d0_f2:11:g_d0_f2:compared to MM-FD (see Figure 6).
+20:729:48766:18:18:88:553:549:11:g_d0_f2:11:g_d0_f2:For the other three estimators, the extension to MLE is either not possible or not practical.  For
+20:730:48864:18:18:72:554:531:11:g_d0_f2:11:g_d0_f2:MLE-HP, we would need to write out the entire data density of the HP filtered data, and the Jacobian
+20:731:48964:18:18:72:554:513:11:g_d0_f2:11:g_d0_f2:transformation from the unfiltered to filtered data involves an infinite dimensional matrix.  For the QD
+20:732:49068:18:18:72:554:495:11:g_d0_f2:11:g_d0_f2:estimator, recall that we normalized the autocovariances by the variance in constructing the QD. By
+20:733:49167:18:18:72:554:477:11:g_d0_f2:11:g_d0_f2:analogy, MLE-QD would require modifying the score vector.  Although such modification is possible in
+20:734:49267:18:18:72:554:459:11:g_d0_f2:11:g_d0_f2:theory, it is beyond the scope of this paper.  We leave this promising idea for future research.  For the
+20:735:49372:18:18:72:554:441:11:g_d0_f2:11:g_d0_f2:HD estimator, the MLE implementation is cumbersome because HD exploits covariances of variables
+20:736:49467:18:18:72:554:423:11:g_d0_f2:11:g_d0_f2:computed with different filters.  The difference between the MM and MLE really boils down to a choice
+20:737:49568:18:29:72:382:405:11:g_d0_f2:8:g_d0_f3:of moments, and the MM is more straightforward to implement.6
+20:738:49629:29:25:72:173:376:11:g_d0_f1:11:g_d0_f1:7.3    Computation
+20:739:49647:25:18:72:554:351:11:g_d0_f1:11:g_d0_f2:Computing Filtered AutocovarianceMoments of the filtered model variables can be computed
+20:740:49735:18:17:72:554:333:11:g_d0_f2:11:g_d0_f2:analytically or by using simulations. We use the analytical moments whenever possible since it tends to
+20:741:49838:17:18:72:554:316:11:g_d0_f2:11:g_d0_f2:be much faster than simulations and it does not have simulation errors.  Although there are a variety of
+20:742:49942:18:18:72:554:298:11:g_d0_f2:11:g_d0_f2:methods for analytical calculations, methods that exploit measurement equations are computationally
+20:743:50041:18:18:72:554:280:11:g_d0_f2:11:g_d0_f2:attractive especially in large models.  Combining the measurement equationxt=Hstand the state
+20:744:50134:18:16:72:251:262:11:g_d0_f2:11:g_d0_f2:equationst= Π∗st−1+B∗et, we have
+20:745:50166:16:8:211:217:246:11:g_d0_f10:11:g_d0_f10:[
+20:746:50167:8:14:216:225:238:11:g_d0_f7:8:g_d0_f8:xt
+20:747:50169:14:0:217:225:224:11:g_d0_f7:8:g_d0_f8:st
+20:748:50171:0:15:226:232:246:11:g_d0_f10:11:g_d0_f10:]
+20:749:50172:15:0:242:250:231:11:g_d0_f2:11:g_d0_f2:=
+20:750:50173:0:8:260:268:246:11:g_d0_f10:11:g_d0_f10:(
+20:751:50174:8:14:268:306:238:11:g_d0_f2:8:g_d0_f9:0HΠ∗
+20:752:50178:14:0:268:301:224:11:g_d0_f2:8:g_d0_f9:0Π∗
+20:753:50181:0:8:307:323:246:11:g_d0_f10:11:g_d0_f10:)[
+20:754:50183:8:14:322:342:238:11:g_d0_f7:8:g_d0_f3:xt−1
+20:755:50187:14:0:323:341:224:11:g_d0_f7:8:g_d0_f3:st−1
+20:756:50191:0:15:343:349:246:11:g_d0_f10:11:g_d0_f10:]
+20:757:50192:15:0:351:359:231:11:g_d0_f2:11:g_d0_f2:+
+20:758:50193:0:8:362:370:246:11:g_d0_f10:11:g_d0_f10:(
+20:759:50194:8:14:370:393:238:11:g_d0_f7:8:g_d0_f9:HB∗
+20:760:50197:14:0:375:388:224:11:g_d0_f7:8:g_d0_f9:B∗
+20:761:50199:0:15:393:401:246:11:g_d0_f10:11:g_d0_f10:)
+20:762:50200:15:31:403:415:231:11:g_d0_f7:11:g_d0_f7:et.
+20:763:50203:31:29:71:197:200:11:g_d0_f2:11:g_d0_f2:Letw′t= (x′t,s′t).  We have
+20:764:50230:29:16:252:353:171:11:g_d0_f7:11:g_d0_f7:wt=D0wt−1+D1et.
+20:765:50245:16:15:84:554:155:6:g_d0_f4:9:g_d0_f5:6One practical drawback of GMM is perhaps that when many parameters have to be estimated, the objective function
+20:766:50357:15:11:72:554:140:9:g_d0_f5:9:g_d0_f5:can be ill behaved which frustrates convergence.  However,  Chernozhukov and Hong (2003) suggest a novel approach
+20:767:50470:11:11:72:554:129:9:g_d0_f5:9:g_d0_f5:by which GMM can take advantage of MCMC methods.  Coibion and Gorodnichenko (2008) use Chernozhukov-Hong’s
+20:768:50576:11:0:72:379:118:9:g_d0_f5:9:g_d0_f5:MCMC method based on GMM to estimate a relatively large DSGE model.
+21:769:50645:0:29:72:463:699:11:g_d0_f2:11:g_d0_f2:The variance matrix Ωw(0) =E(wtw′t) can be computed by iterating the equation
+21:770:50722:29:28:220:554:670:11:g_d0_f2:11:g_d0_f2:Ω(i)w(0) =D0Ω(i−1)w(0)D′0+D1ΣD′1(6)
+21:771:50757:28:18:72:554:642:11:g_d0_f2:11:g_d0_f2:until convergence.  The autocovariance matrices can then be computed as Ωw(j) =Dk0Ωw(0).  Since we
+21:772:50855:18:18:72:554:624:11:g_d0_f2:11:g_d0_f2:are only interested in computing the moments of variables in the measurement vectorxt, we iterate
+21:773:50952:18:33:72:513:606:11:g_d0_f2:8:g_d0_f3:equation (6) until the block that corresponds toxtconverges, i.e.‖Ω(i)x(0)−Ω(i−1)x(0)‖< -.7
+21:774:51043:33:18:72:554:573:11:g_d0_f1:11:g_d0_f2:Calculating moments of HP-filtered model seriesThe HP filtered series can alternatively be
+21:775:51133:18:28:72:165:555:11:g_d0_f2:11:g_d0_f2:obtained as follows:
+21:776:51153:28:0:177:306:527:11:g_d0_f7:11:g_d0_f2:HP(L)dt=HP+(L)∆dt=
+21:777:51171:0:14:322:413:534:11:g_d0_f7:8:g_d0_f3:λ(1−L)(1−L−1)2
+21:778:51185:14:0:311:425:520:11:g_d0_f2:8:g_d0_f3:1 +λ(1−L)2(1−L−1)2
+21:779:51203:0:30:427:448:527:11:g_d0_f2:11:g_d0_f7:∆dt.
+21:780:51207:30:18:72:554:497:11:g_d0_f2:11:g_d0_f2:In practice, usingHP+(L) and the autocovariances for ∆dtand ∆̂mttend to give more stable results
+21:781:51303:18:18:72:554:479:11:g_d0_f2:11:g_d0_f2:whenρzis close to one.  It is possible to speed up estimation based on HP filtered series by using a
+21:782:51403:18:18:71:553:461:11:g_d0_f2:11:g_d0_f2:smaller number of leads and lags. This modification however would deteriorate the HP’s approximation
+21:783:51503:18:33:71:293:443:11:g_d0_f2:8:g_d0_f3:to the desired filter removing low frequencies.8
+21:784:51551:33:18:72:554:410:11:g_d0_f1:11:g_d0_f2:Treatment of stationary variablesRecall that in the stochastic growth model,m∗t= ( ̄gt, ̄gt,0)
+21:785:51645:18:18:72:553:392:11:g_d0_f2:11:g_d0_f2:when|ρz|<1 andm∗t= (ut+  ̄gt,ut+  ̄gt,0) when|ρz|= 1, where the third component ofm∗tis the trend
+21:786:51742:18:18:72:554:374:11:g_d0_f2:11:g_d0_f2:for labor supply,lt.  Sincelthas no deterministic or stochastic trend component, the autocovariances
+21:787:51842:18:18:71:554:356:11:g_d0_f2:11:g_d0_f2:are computed forltand not̂lt, though the results do not change materially if we had filtered these
+21:788:51940:18:18:71:554:338:11:g_d0_f2:11:g_d0_f2:series as well.  In general, if thej-th component ofm∗tis zero, it is understood that the autocovariances
+21:789:52045:18:18:71:553:320:11:g_d0_f2:11:g_d0_f2:are computed for the level of the variable both in the model and in the data.  An alternative is to
+21:790:52144:18:18:71:553:302:11:g_d0_f2:11:g_d0_f2:deal with these non-trending variables through the measurement equation.  Then some variables can
+21:791:52241:18:30:71:450:284:11:g_d0_f2:11:g_d0_f2:be quasi-differenced or first-differenced, while others require no transformation.
+21:792:52323:30:28:71:204:254:11:g_d0_f1:11:g_d0_f1:8    Concluding Remarks
+21:793:52346:28:18:71:553:226:11:g_d0_f2:11:g_d0_f2:A realistic situation encountered with estimation of DSGE model is that (a) the data are trending; (b)
+21:794:52448:18:18:71:553:208:11:g_d0_f2:11:g_d0_f2:deviations from the trend are persistent; (c) the researcher does not know whether the data generating
+21:795:52550:18:18:71:553:190:11:g_d0_f2:11:g_d0_f2:process is difference or trend stationary.  We document that the treatment of trends can significantly
+21:796:52652:18:16:71:553:172:11:g_d0_f2:11:g_d0_f2:affect the parameter estimates of DSGE models and propose several robust approaches that produce
+21:797:52748:16:15:84:554:156:6:g_d0_f4:9:g_d0_f5:7Since parts ofwtmay be exploding, we found that it useful to limit the size of elements in the covariance matrix
+21:798:52861:15:11:72:553:141:9:g_d0_f5:9:g_d0_f5:Ω(i)w(0) by a fixed large number.  This introduces an error in the calculated moments ofxtbut we found that this error
+21:799:52979:11:7:72:167:130:9:g_d0_f5:9:g_d0_f5:is negligible in practice.
+21:800:53005:7:15:84:554:123:6:g_d0_f4:9:g_d0_f5:8We also experimented with a simulation procedure.  For each Θ, we use the model to generatej= 1,...,Rsamples
+21:801:53114:15:10:72:554:108:9:g_d0_f5:9:g_d0_f5:of sizeT.  For eachjwe computed moments.  Then we average the moments overjand use this average forωmHP.  This
+21:802:53224:10:0:71:470:98:9:g_d0_f5:9:g_d0_f5:procedure is computationally more intensive and the results are similar to the one considered here.
+22:803:53325:0:18:72:554:699:11:g_d0_f2:11:g_d0_f2:precise  estimates  without  the  researcher  having  to  take  a  stand  of  trend  specification.   The  key  is
+22:804:53439:18:18:72:554:681:11:g_d0_f2:11:g_d0_f2:to apply the same filter to the data and the model variables to yield well-defined moments for the
+22:805:53537:18:18:72:554:663:11:g_d0_f2:11:g_d0_f2:estimation  of  the  structural  parameters.   We  consider  several  filters  that  can  be  used  in  methods
+22:806:53648:18:18:72:554:645:11:g_d0_f2:11:g_d0_f2:of  moments  estimation,  and  the  estimators  have  approximately  normal  finite  sample  distributions.
+22:807:53755:18:18:72:553:627:11:g_d0_f2:8:g_d0_f3:Undoubtedly,  the  estimators  require  further  scrutiny  and  can  be  improved  in  various  dimensions.9
+22:808:53863:18:18:71:553:609:11:g_d0_f2:11:g_d0_f2:Our analysis is a first step in the sparse literature on non-linear estimation when the data are highly
+22:809:53966:18:41:71:120:591:11:g_d0_f2:11:g_d0_f2:persistent.
+22:810:53977:41:22:71:130:550:11:g_d0_f1:11:g_d0_f1:References
+22:811:53987:22:11:71:553:528:11:g_d0_f2:11:g_d0_f2:Abowd,  J.  M.  and  Card,  D.  1989,  On  the  Covariance  Structure  of  Earnings  and  Hours  Changes,
+22:812:54092:11:20:82:227:517:11:g_d0_f11:11:g_d0_f2:Econometrica57(2), 411–445.
+22:813:54119:20:11:71:553:497:11:g_d0_f2:11:g_d0_f2:Altig, D., Christiano, L., Eichenbaum, M. and Linde, J. 2004, Firm-Specific Capital, Nominal Rigidi-
+22:814:54219:11:19:82:361:486:11:g_d0_f2:11:g_d0_f2:ties, and the Business Cycle, FRB Cleveland WP 2004-16.
+22:815:54274:19:11:71:554:467:11:g_d0_f2:11:g_d0_f11:Altonji, J. and Segal, L. 1996, Small-sample bias in GMM estimation of covariance structures,Journal
+22:816:54374:11:20:82:335:456:11:g_d0_f11:11:g_d0_f2:of Business and Economic Statistics14(3), 353–366.
+22:817:54424:20:11:71:554:436:11:g_d0_f2:11:g_d0_f11:Altug, S. 1989, Time-to-Build and Aggregate Fluctuations:  Some New Evidence,International  Eco-
+22:818:54520:11:19:82:213:425:11:g_d0_f11:11:g_d0_f2:nomic Review30, 889–920.
+22:819:54544:19:11:71:553:406:11:g_d0_f2:11:g_d0_f2:Anderson,  G.  and  Moore,  G.  1985,  A  linear  algebraic  procedure  for  solving  linear  perfect  foresight
+22:820:54656:11:20:82:285:395:11:g_d0_f2:11:g_d0_f2:models,Economic Letters17(3), 247–252.
+22:821:54694:20:11:71:553:375:11:g_d0_f2:11:g_d0_f2:Baxter, M. and King, R. 1999, Measuring Business Cycles:  Approximate Bandpass Filters for Eco-
+22:822:54789:11:20:82:414:364:11:g_d0_f2:11:g_d0_f2:nomic Time Series,Review of Economics and Statistics81:4, 575593.
+22:823:54854:20:11:72:554:344:11:g_d0_f2:11:g_d0_f2:Blanchard, O. and Kahn, C. 1980, The Solution of Linear Difference Models under Rational Expecta-
+22:824:54951:11:19:82:252:333:11:g_d0_f2:11:g_d0_f2:tions,Econometrica48, 1305–1313.
+22:825:54983:19:11:71:553:314:11:g_d0_f2:11:g_d0_f2:Bouakez, H., Cardia, E. and Ruge-Murcia, F. J. 2005, Habit Formation and the Persistence of Mone-
+22:826:55080:11:20:82:373:303:11:g_d0_f2:11:g_d0_f2:tary Shocks,Journal of Monetary Economics52, 1073–1088.
+22:827:55135:20:11:71:554:283:11:g_d0_f2:11:g_d0_f11:Burnside, C. 1998, Detrending and Business Cycle Facts: a Comment,Journal of Monetary Economics
+22:828:55230:11:19:82:143:272:11:g_d0_f1:11:g_d0_f2:41, 513–532.
+22:829:55242:19:11:71:554:253:11:g_d0_f2:11:g_d0_f11:Burnside, C. and Eichenbaum, M. 1996, Small-sample Properties of GMM-based Wald Tests,Jornal
+22:830:55334:11:20:82:319:242:11:g_d0_f11:11:g_d0_f2:of Business and Economic Statistics14, 294–308.
+22:831:55381:20:11:72:554:222:11:g_d0_f2:11:g_d0_f11:Burnside, C., Eichenbaum, M. and Rebelo, S. 1993, Labor Hoarding and the Business Cycle,Journal
+22:832:55476:11:20:82:252:211:11:g_d0_f11:11:g_d0_f2:of Political Economy101, 245–273.
+22:833:55509:20:19:72:554:191:11:g_d0_f2:11:g_d0_f2:Canova, F. 1998, Detrending and Business Cycle Facts,Journal of Monetary Economics41, 475–512.
+22:834:55603:19:16:72:427:172:11:g_d0_f2:11:g_d0_f2:Canova, F. 2008, Estimating DSGE models with Unfilterred Data,mimeo.
+22:835:55671:16:15:84:554:156:6:g_d0_f4:9:g_d0_f5:9For example, one can use the bootstrap developed for covariance structures in Horowitz (1998) to correct for small-
+22:836:55787:15:11:72:554:141:9:g_d0_f5:9:g_d0_f5:sample biases because the asymptotic distribution of the t-statistic is normal.  One might also consider a model-based
+22:837:55905:11:11:72:554:130:9:g_d0_f5:9:g_d0_f5:weighting matrix computed as follows.  Given a set of parameters, simulate the model to generate series and compute the
+22:838:56024:11:11:72:554:119:9:g_d0_f5:9:g_d0_f5:moments.  By repeating this many times, we can compute covariance of simulated moments rather than the Newey-West
+22:839:56137:11:10:72:554:108:9:g_d0_f5:9:g_d0_f5:estimates.  Results in Burnside and Eichenbaum (1996) suggest that using a relatively small number of moments and as
+22:840:56253:10:0:72:407:98:9:g_d0_f5:9:g_d0_f5:much a priori information (e.g., model structure) as possible can improve coverage.
+23:841:56338:0:11:72:554:699:11:g_d0_f2:11:g_d0_f2:Canova,  F.  and  Ferroni,  F.  2008,  Multiple  Filtering  Devices  for  the  Estimation  of  Cyclical  DSGE
+23:842:56447:11:20:82:156:688:11:g_d0_f2:11:g_d0_f2:models,mimeo.
+23:843:56460:20:11:71:554:668:11:g_d0_f2:11:g_d0_f11:Canova, F. and Sala, L. 2009, Back to Square One:  Identification Issues in DSGE Models,Journal of
+23:844:56558:11:19:82:247:657:11:g_d0_f11:11:g_d0_f2:Monetary Economics56, 431–449.
+23:845:56588:19:11:71:554:638:11:g_d0_f2:11:g_d0_f11:Chernozhukov, V. and Hong, H. 2003, An MCMC approach to classical estimation,Journal of Econo-
+23:846:56682:11:20:82:190:627:11:g_d0_f11:11:g_d0_f2:metrics115, 293  346.
+23:847:56703:20:11:72:554:607:11:g_d0_f2:11:g_d0_f2:Christiano, L. and den Haan, W. 1996, Small-Sample Properties of GMM for Business Cycle Analysis,
+23:848:56800:11:19:82:360:596:11:g_d0_f11:11:g_d0_f2:Journal of Business and Economic Statistics14, 309–327.
+23:849:56855:19:11:72:554:577:11:g_d0_f2:11:g_d0_f2:Christiano, L. and Eichenbaum, M. 1992, Current Real-Business-Cycle Theories and Aggregate Labor-
+23:850:56952:11:20:82:384:566:11:g_d0_f2:11:g_d0_f2:Market Fluctuations,American Economic Review82, 430–450.
+23:851:57008:20:11:72:554:546:11:g_d0_f2:11:g_d0_f2:Christiano, L., Eichenbaum, M. and Evans, C. 2005, Nominal Rigidities and the Dynamic Effects of a
+23:852:57106:11:19:82:420:535:11:g_d0_f2:11:g_d0_f2:Shock to Monetary Policy,Quarterly Journal of Economics113, 1–45.
+23:853:57171:19:11:72:554:516:11:g_d0_f2:11:g_d0_f2:Clarida,  R.,  Gali,  J.  and  Gertler,  M.  2000,  Monetary  Policy  Rules  and  Macroeconomic  Stability:
+23:854:57278:11:20:82:443:505:11:g_d0_f2:11:g_d0_f2:Evidence and Some Theory,Quarterly Journal of Economics115, 147–180.
+23:855:57346:20:11:72:554:485:11:g_d0_f2:11:g_d0_f2:Cogley, T. 2001, Estimating and Testing Rational Expectations Models When the Trend Specification
+23:856:57443:11:19:82:433:474:11:g_d0_f2:11:g_d0_f2:is Uncertain,Journal of Economic Dynamics and Control25, 1485–1525.
+23:857:57510:19:11:72:554:455:11:g_d0_f2:11:g_d0_f2:Cogley, T. and Nason, J. 1995a, Effects of the Hodrick-Prescott Filter on Trend and Difference Sta-
+23:858:57609:11:11:82:553:444:11:g_d0_f2:11:g_d0_f11:tionary Time Series:  Implications for Business Cycle research,Journal of Economic Dynamics and
+23:859:57704:11:20:82:182:433:11:g_d0_f11:11:g_d0_f2:Control19, 253–278.
+23:860:57723:20:11:72:554:413:11:g_d0_f2:11:g_d0_f11:Cogley, T. and Nason, J. 1995b, Output dynamics in real business cycle models,American Economic
+23:861:57818:11:19:82:174:402:11:g_d0_f11:11:g_d0_f2:Review85, 492511.
+23:862:57835:19:11:71:553:383:11:g_d0_f2:11:g_d0_f2:Coibion, O. and Gorodnichenko, Y. 2008, Strategic interaction among heterogeneous price-setters in
+23:863:57933:11:20:82:305:372:11:g_d0_f2:11:g_d0_f2:an estimated DSGE model.  NBER WP 14323.
+23:864:57973:20:11:71:553:352:11:g_d0_f2:11:g_d0_f2:Del Negro, M., Schorfheide, F., Smets, F. and Wouters, R. 2007, On the Fit of New Keynesian models,
+23:865:58072:11:19:82:360:341:11:g_d0_f11:11:g_d0_f2:Journal of Business and Economic Statistics25, 123–143.
+23:866:58127:19:11:71:554:322:11:g_d0_f2:11:g_d0_f11:Dib,  A.  2003,  An  Estimated  Canadian  DSGE  Model  with  Nominal  and  Real  Rigidities,Canadian
+23:867:58227:11:20:82:250:311:11:g_d0_f11:11:g_d0_f2:Journal of Economics36, 949–972.
+23:868:58259:20:11:71:553:291:11:g_d0_f2:11:g_d0_f2:Doorn, D. 2006, Consequences of Hodrick-Prescott Filtering for Parameter Estimation in a Structural
+23:869:58358:11:19:82:345:280:11:g_d0_f2:11:g_d0_f2:Model of Inventory,Applied Economics38, 1863–1875.
+23:870:58408:19:11:71:554:261:11:g_d0_f2:11:g_d0_f2:Faia, E. 2007, Finance and International Business Cycles,Journal of Monetary Economics54, 1018–
+23:871:58503:11:20:82:107:250:11:g_d0_f2:11:g_d0_f2:1034.
+23:872:58508:20:11:71:553:230:11:g_d0_f2:11:g_d0_f2:Fernandez-Villaverde, J. and Rubio-Ramirez 2006, Estimating Macroeconomic Models:  A Likelihood
+23:873:58603:11:19:82:169:219:11:g_d0_f2:11:g_d0_f2:Approach,mimeo.
+23:874:58618:19:11:71:554:200:11:g_d0_f2:11:g_d0_f11:Fuhrer, J. 1997, The (Un)Importance of Forward-Looking Behavior in Price Specifications,Journal of
+23:875:58716:11:20:82:282:189:11:g_d0_f11:11:g_d0_f2:Money, Credit, and Banking29, 338–350.
+23:876:58754:20:11:71:554:169:11:g_d0_f2:11:g_d0_f11:Fuhrer, J. and Rudebusch, G. 2004, Estimating the Euler Equation for Output,Journal of Monetary
+23:877:58849:11:19:82:208:158:11:g_d0_f11:11:g_d0_f2:Economics51, 1133–1153.
+23:878:58872:19:11:71:553:139:11:g_d0_f2:11:g_d0_f2:Fukac,  M.  and  Pagan,  A.  2006,  Limited  Information  estimation  and  Evaluation  of  DSGE  Models,
+23:879:58976:11:20:82:222:128:11:g_d0_f2:11:g_d0_f2:NCER Working Paper No. 6.
+23:880:59001:20:10:71:553:108:11:g_d0_f2:11:g_d0_f2:Gorodnichenko, Y., Mikusheva, A. and Ng, S. 2009, A Simple root-T Consistent and Asymptotically
+23:881:59096:10:0:82:385:98:11:g_d0_f2:11:g_d0_f2:Normal Estimator for the Largest Autoregressive Root, mimeo.
+24:882:59158:0:11:72:553:699:11:g_d0_f2:11:g_d0_f11:Gregory, A. and Smith, G. 1996, Measuring Business Cycles with Business-cycle Models,Journal  of
+24:883:59254:11:20:82:316:688:11:g_d0_f11:11:g_d0_f2:Economic Dynamics and Control20, 1007–1025.
+24:884:59297:20:11:71:554:668:11:g_d0_f2:11:g_d0_f11:Harvey,  A.  and  Jaeger,  A.  1993,  Detrending,  Stylized  Factors,  and  the  Business  Cycle,Journal  of
+24:885:59405:11:20:82:244:657:11:g_d0_f11:11:g_d0_f2:Applied Econometrics8, 231–247.
+24:886:59436:20:11:71:554:637:11:g_d0_f2:11:g_d0_f2:Horowitz, J. 1998, Bootstrap Methods for Covariance Structures,Journal of Human Resources33, 39–
+24:887:59532:11:20:82:96:626:11:g_d0_f2:11:g_d0_f2:61.
+24:888:59535:20:11:71:554:606:11:g_d0_f2:11:g_d0_f11:Ireland,  P.  1997,  A  Small  Structural  Quarterly  Model  for  Monetary  Policy  Evaluaton,Carnegie-
+24:889:59638:11:20:82:353:595:11:g_d0_f11:11:g_d0_f2:Rochester Conference Series on Public Policy47, 83108.
+24:890:59692:20:11:72:554:575:11:g_d0_f2:11:g_d0_f11:Ireland,  P.  2001,  Sticky-price  models  of  the  business  cycle:   Specification  and  stability,Journal  of
+24:891:59804:11:20:82:231:564:11:g_d0_f11:11:g_d0_f2:Monetary Economics47, 3–18.
+24:892:59831:20:11:72:554:544:11:g_d0_f2:11:g_d0_f11:Ireland, P. 2004, Technology Shocks in the New Keynesian Model,Review of Economics and Statistics
+24:893:59928:11:20:82:137:533:11:g_d0_f1:11:g_d0_f2:86, 923936.
+24:894:59939:20:11:72:554:513:11:g_d0_f2:11:g_d0_f11:Kim, J. 2000, Constructing and Estimating a Realistic Optimizing Model of Monetary Policy,Journal
+24:895:60036:11:20:82:260:502:11:g_d0_f11:11:g_d0_f2:of Monetary Economics45, 329–359.
+24:896:60069:20:11:72:554:482:11:g_d0_f2:11:g_d0_f11:King, R. and Rebelo, S. 1993, Low Frequency Filtering and Real Business Cycles,Journal of Economic
+24:897:60167:11:19:82:254:471:11:g_d0_f11:11:g_d0_f2:Dynamics and Control17, 207–231.
+24:898:60199:19:11:72:554:452:11:g_d0_f2:11:g_d0_f2:Kydland, F. and Prescott, E. 1982, Time to Build and Aggregate Fluctuations,Econometrica50, 1345–
+24:899:60296:11:20:82:107:441:11:g_d0_f2:11:g_d0_f2:1370.
+24:900:60301:20:11:72:554:421:11:g_d0_f2:11:g_d0_f2:Lubik,  T.  and  Schorfheide,  F.  2004,  Testing  for  Indeterminacy:  An  Application  to  U.S.  Monetary
+24:901:60408:11:20:82:315:410:11:g_d0_f2:11:g_d0_f2:Policy,American Economic Review94, 190–217.
+24:902:60451:20:11:72:554:390:11:g_d0_f2:11:g_d0_f2:McGrattan, E., Rogerson, R. and Wright, R. 1997, An Equilibrium Model of the Business Cycle with
+24:903:60547:11:20:82:494:379:11:g_d0_f2:11:g_d0_f2:Household Production and Fiscal Policy,International Economic Review38, 267–290.
+24:904:60627:20:11:72:554:359:11:g_d0_f2:11:g_d0_f11:Nelson, C. and Kang, H. 1981, Spurious Periodicity in Inappropriately Detrended time Series,Econo-
+24:905:60725:11:20:82:182:348:11:g_d0_f11:11:g_d0_f2:metrica49, 741–751.
+24:906:60744:20:11:72:554:328:11:g_d0_f2:11:g_d0_f11:Newey, W. and McFadden, D. 1994, Large Sample Estimators and Hypothesis Testing,Handbook  of
+24:907:60836:11:20:82:317:317:11:g_d0_f11:11:g_d0_f2:Econometrics, Vol. 4,Chapter 36, North Holland.
+24:908:60883:20:11:72:554:297:11:g_d0_f2:11:g_d0_f11:Ruge-Murcia, F. 2007, Methods to Estimate Dynamic Stochastic General Equilibrium Models,Journal
+24:909:60978:11:20:82:328:286:11:g_d0_f11:11:g_d0_f2:of Economic Dynamics and Control31, 2599–2636.
+24:910:61024:20:20:72:524:266:11:g_d0_f2:11:g_d0_f2:Sbordone, A. 2006, U.S. Wage and Price Dynamics:  A Limited Information Approach, mimeo.
+24:911:61112:20:20:72:539:246:11:g_d0_f2:11:g_d0_f2:Sims, C. 2002, Solving Linear Rational Expectations Models,Computational Economicspp. 1–20.
+24:912:61203:20:11:72:554:226:11:g_d0_f2:11:g_d0_f2:Singleton,  K.  J.  1988,  Econometric  Issues  in  the  Analysis  of  Equilibrium  Business  Cycle  Models,
+24:913:61311:11:20:82:300:215:11:g_d0_f11:11:g_d0_f2:Journal of Monetary Economics21, 361–368.
+24:914:61352:20:10:72:554:195:11:g_d0_f2:11:g_d0_f2:Smets,  F. and Wouters,  R. 2003,  An Estimated Dynamic Stochastic General Equilibrium Model of
+24:915:61447:10:20:82:461:185:11:g_d0_f2:11:g_d0_f2:the Euro Area,Journal of the European Economics Assocation1:5, 1123–1175.
+24:916:61520:20:11:72:554:165:11:g_d0_f2:11:g_d0_f2:Smets,  F.  and  Wouters,  R.  2007,  Shocks  and  Frictions  in  US  Business  Cycles:  A  Bayesian  DSGE
+24:917:61626:11:20:82:333:154:11:g_d0_f2:11:g_d0_f2:Approach,American Economic Review97, 586–606.
+24:918:61671:20:11:72:554:134:11:g_d0_f2:11:g_d0_f11:Wu,  C.  F.  1981,  Asymptotic  Theory  of  NonLinear  Least  Squares  Estimation,Annals  of  Statistics
+24:919:61775:11:0:82:146:123:11:g_d0_f1:11:g_d0_f2:9:3, 501–513.
+25:920:61790:0:22:72:144:699:11:g_d0_f1:11:g_d0_f1:9    Appendix
+25:921:61803:22:19:72:327:677:11:g_d0_f2:11:g_d0_f2:Consistency of the estimators follow from Wu (1981):
+25:922:61855:19:11:72:554:658:11:g_d0_f1:11:g_d0_f11:Lemma 1Letθbe the parameter of interest and letθ0denote the true value ofθ.  Suppose that for
+25:923:61948:11:11:72:117:647:11:g_d0_f11:11:g_d0_f2:anyδ >0
+25:924:61955:11:7:170:199:636:11:g_d0_f2:11:g_d0_f2:lim inf
+25:925:61962:7:0:174:197:629:8:g_d0_f8:8:g_d0_f9:T→∞
+25:926:61965:0:7:215:227:636:11:g_d0_f2:11:g_d0_f2:inf
+25:927:61968:7:0:202:240:629:8:g_d0_f9:8:g_d0_f8:‖θ−θ0‖≥δ
+25:928:61976:0:28:240:455:636:11:g_d0_f2:11:g_d0_f7:(QT(θ)−QT(θ0))>0a.s.or in probability.
+25:929:62014:28:18:72:285:608:11:g_d0_f11:11:g_d0_f11:Then̂θTa.s.−→θ0(or in probability) asT→∞.
+25:930:62055:18:20:88:437:590:11:g_d0_f2:11:g_d0_f2:From solving the baseline model, the endogenous variableythas solution
+25:931:62125:20:14:258:367:570:11:g_d0_f7:8:g_d0_f8:yt=vykkt−1+vyzzt
+25:932:62141:14:14:258:367:556:11:g_d0_f7:8:g_d0_f8:kt=vkkkt−1+vkzzt
+25:933:62157:14:21:259:346:542:11:g_d0_f7:11:g_d0_f7:zt=ρzt−1+et.
+25:934:62169:21:20:72:356:521:11:g_d0_f2:11:g_d0_f2:It is straightforward to show thatytis an ARMA(2,1) with
+25:935:62225:20:20:229:396:501:11:g_d0_f7:8:g_d0_f8:yt(1−vkkL)(1−ρL) = (1−θyL)et
+25:936:62253:20:11:72:553:481:11:g_d0_f2:11:g_d0_f2:whereθy=vkk−αvkz.  Note thatvkkdoes not depend onρ, butvkzdoes.  A similar equation holds
+25:937:62342:11:12:72:554:470:11:g_d0_f2:11:g_d0_f2:for consumption.  Let the true parameters be denoted by a superscript 0 and to focus on the issue, we
+25:938:62443:12:22:72:305:458:11:g_d0_f2:11:g_d0_f2:assumeσ2andvkkare known.  Generically, write
+25:939:62487:22:20:211:414:436:11:g_d0_f2:8:g_d0_f3:(1−ρ0L)(1−v0kkL)yt=et+b(ρ0,v0kk)et−1
+25:940:62523:20:23:71:359:416:11:g_d0_f2:11:g_d0_f2:whereb(ρ,vkk) is continuous inρandvkk.  Then the DGP is
+25:941:62578:23:22:274:350:393:11:g_d0_f7:8:g_d0_f8:yt=ρ0yt−1+ut
+25:942:62590:22:10:71:553:371:11:g_d0_f2:8:g_d0_f8:whereutis ARMA(1,1).  Let ̃y0t= (1−ρ0L)ytbeytquasi-differenced at the trueρand let ̃ytbeyt
+25:943:62680:10:11:72:554:361:11:g_d0_f2:11:g_d0_f2:quasi-differenced at an arbitraryρ.  For anyρthat is assumed to be true, the analytical autocovariance
+25:944:62782:11:29:72:191:350:11:g_d0_f2:11:g_d0_f2:at lagjfor ̃ytis given by
+25:945:62807:29:0:201:265:321:11:g_d0_f7:8:g_d0_f3:γ0(ρ)   =σ2
+25:946:62818:0:15:267:401:328:11:g_d0_f2:11:g_d0_f2:1 +b(ρ,vkk)2+ 2vkkb(ρ,vkk)
+25:947:62844:15:24:317:350:313:11:g_d0_f2:8:g_d0_f8:1−v2kk
+25:948:62850:24:0:201:265:289:11:g_d0_f7:8:g_d0_f3:γ1(ρ)   =σ2
+25:949:62861:0:15:267:423:296:11:g_d0_f2:11:g_d0_f2:(1 +vkkb(ρ,v0kk))(vkk+b(ρ,vkk))
+25:950:62892:15:18:328:361:281:11:g_d0_f2:8:g_d0_f8:1−v2kk
+25:951:62898:18:34:201:346:263:11:g_d0_f7:11:g_d0_f2:γj(ρ)   =v0,j−1kkγ1(ρ),  j≥2
+25:952:62926:34:12:71:394:229:11:g_d0_f2:11:g_d0_f2:The derivatives ofγj(ρ) with respect toρexists and is well defined.
+25:953:62993:12:34:88:481:217:11:g_d0_f2:11:g_d0_f2:LetγTj(ρ) be the sample autocovariance ofyquasi-transformed at an arbitraryρ.
+25:954:63070:34:0:108:157:183:11:g_d0_f7:11:g_d0_f2:γTj(ρ)   =
+25:955:63080:0:14:169:174:190:11:g_d0_f2:11:g_d0_f2:1
+25:956:63081:14:0:168:174:176:11:g_d0_f7:11:g_d0_f7:T
+25:957:63082:0:27:184:195:197:8:g_d0_f8:11:g_d0_f10:T∑
+25:958:63084:27:0:180:194:170:8:g_d0_f8:8:g_d0_f3:t=1
+25:959:63087:0:32:197:517:183:11:g_d0_f10:11:g_d0_f7: ̃y0t ̃y0t−j−(ρ−ρ0)yt−1 ̃y0t−j−(ρ−ρ0)yt−j−1 ̃y0t+ (ρ−ρ0)2yt−1yt−j−1.
+25:960:63155:32:12:72:553:151:11:g_d0_f2:11:g_d0_f2:Without loss of generality, considerj= 1 and focus on the last term of the expression above.  Now
+25:961:63252:12:26:72:227:139:11:g_d0_f7:11:g_d0_f2:yt−1=ρ0yt−2+ut−1.  Atρ0= 1,
+25:962:63279:26:14:195:200:113:11:g_d0_f2:11:g_d0_f2:1
+25:963:63280:14:0:194:200:99:11:g_d0_f7:11:g_d0_f7:T
+25:964:63281:0:27:210:221:120:8:g_d0_f8:11:g_d0_f10:T∑
+25:965:63283:27:0:206:220:93:8:g_d0_f8:8:g_d0_f3:t=1
+25:966:63286:0:0:222:318:106:11:g_d0_f7:11:g_d0_f6:yt−1yt−2−y2t−1=−
+25:967:63302:0:14:320:325:113:11:g_d0_f2:11:g_d0_f2:1
+25:968:63303:14:0:319:325:99:11:g_d0_f7:11:g_d0_f7:T
+25:969:63304:0:27:335:346:120:8:g_d0_f8:11:g_d0_f10:T∑
+25:970:63306:27:0:331:345:93:8:g_d0_f8:8:g_d0_f3:t=1
+25:971:63309:0:0:348:433:106:11:g_d0_f7:11:g_d0_f7:yt−1ut−1=Op(1).
+26:972:63326:0:29:72:364:699:11:g_d0_f2:11:g_d0_f2:It is easy to see that for anyρin the1√Tneighborhood ofρ0,
+26:973:63384:29:10:112:121:670:11:g_d0_f6:11:g_d0_f6:√
+26:974:63385:10:0:121:230:660:11:g_d0_f7:11:g_d0_f2:T(γT1(ρ)−γT0(ρ))   =
+26:975:63405:0:16:240:246:676:11:g_d0_f10:11:g_d0_f10:[
+26:976:63406:16:0:246:273:660:11:g_d0_f7:8:g_d0_f3:T−1/2
+26:977:63411:0:27:280:291:674:8:g_d0_f8:11:g_d0_f10:T∑
+26:978:63413:27:0:276:290:647:8:g_d0_f8:8:g_d0_f3:t=1
+26:979:63416:0:0:293:359:660:11:g_d0_f10:8:g_d0_f3: ̃y0t ̃y0t−1−( ̃y0t)2
+26:980:63437:0:54:360:366:676:11:g_d0_f10:11:g_d0_f10:]
+26:981:63438:54:0:240:248:622:11:g_d0_f6:11:g_d0_f6:−
+26:982:63439:0:10:249:258:632:11:g_d0_f6:11:g_d0_f6:√
+26:983:63440:10:0:258:303:622:11:g_d0_f7:11:g_d0_f2:T(ρ−ρ0)
+26:984:63447:0:14:306:311:629:11:g_d0_f2:11:g_d0_f2:1
+26:985:63448:14:0:305:311:615:11:g_d0_f7:11:g_d0_f7:T
+26:986:63449:0:27:320:331:636:8:g_d0_f8:11:g_d0_f10:T∑
+26:987:63451:27:0:316:330:609:8:g_d0_f8:8:g_d0_f3:t=1
+26:988:63454:0:15:333:339:637:11:g_d0_f10:11:g_d0_f10:[
+26:989:63455:15:0:339:469:622:11:g_d0_f7:8:g_d0_f8:yt−1 ̃y0t−1+yt−2 ̃y0t−2yt−1 ̃y0t
+26:990:63487:0:15:471:477:637:11:g_d0_f10:11:g_d0_f10:]
+26:991:63488:15:36:479:514:622:11:g_d0_f2:11:g_d0_f2:+op(1)
+26:992:63494:36:0:71:159:586:11:g_d0_f2:8:g_d0_f3:since (ρ−ρ0)2T−1
+26:993:63510:0:12:162:178:594:11:g_d0_f10:8:g_d0_f8:∑T
+26:994:63512:12:0:173:246:582:8:g_d0_f8:11:g_d0_f7:t=1ytut=Op(T
+26:995:63524:0:29:248:494:589:8:g_d0_f9:11:g_d0_f2:−1/2).  The scaled sample orthogonality condition is
+26:996:63576:29:10:142:151:560:11:g_d0_f6:11:g_d0_f6:√
+26:997:63577:10:0:151:197:550:11:g_d0_f7:11:g_d0_f2:T ̄g(ρ)   =
+26:998:63588:0:8:207:213:566:11:g_d0_f10:11:g_d0_f10:[
+26:999:63589:8:8:220:225:558:11:g_d0_f2:11:g_d0_f2:1
+26:1000:63590:8:9:214:223:550:11:g_d0_f6:11:g_d0_f6:√
+26:1001:63591:9:0:223:229:541:11:g_d0_f7:11:g_d0_f7:T
+26:1002:63592:0:27:239:250:564:8:g_d0_f8:11:g_d0_f10:T∑
+26:1003:63594:27:0:235:249:537:8:g_d0_f8:8:g_d0_f3:t=1
+26:1004:63597:0:16:251:259:566:11:g_d0_f10:11:g_d0_f10:(
+26:1005:63598:16:0:260:327:550:11:g_d0_f10:11:g_d0_f2: ̃y0t ̃y0t−1−γ1(ρ)
+26:1006:63616:0:16:327:335:566:11:g_d0_f10:11:g_d0_f10:)
+26:1007:63617:16:0:338:346:550:11:g_d0_f6:11:g_d0_f6:−
+26:1008:63618:0:16:349:357:566:11:g_d0_f10:11:g_d0_f10:(
+26:1009:63619:16:0:357:418:550:11:g_d0_f2:11:g_d0_f2:( ̃y0t)2−γ0(ρ)
+26:1010:63633:0:54:418:432:566:11:g_d0_f10:11:g_d0_f10:)]
+26:1011:63635:54:0:207:215:512:11:g_d0_f6:11:g_d0_f6:−
+26:1012:63636:0:10:215:224:522:11:g_d0_f6:11:g_d0_f6:√
+26:1013:63637:10:0:224:270:512:11:g_d0_f7:11:g_d0_f2:T(ρ−ρ0)
+26:1014:63644:0:15:273:278:519:11:g_d0_f2:11:g_d0_f2:1
+26:1015:63645:15:0:271:277:504:11:g_d0_f7:11:g_d0_f7:T
+26:1016:63646:0:27:287:298:526:8:g_d0_f8:11:g_d0_f10:T∑
+26:1017:63648:27:0:283:297:499:8:g_d0_f8:8:g_d0_f3:t=1
+26:1018:63651:0:15:300:306:527:11:g_d0_f10:11:g_d0_f10:[
+26:1019:63652:15:0:306:435:512:11:g_d0_f7:8:g_d0_f8:yt−1 ̃y0t−1+yt−2 ̃y0t−2yt−1 ̃y0t
+26:1020:63684:0:15:438:444:527:11:g_d0_f10:11:g_d0_f10:]
+26:1021:63685:15:42:446:484:512:11:g_d0_f2:11:g_d0_f7:+op(1).
+26:1022:63692:42:0:72:147:470:11:g_d0_f2:8:g_d0_f8:LetGT(ρ)  =1T
+26:1023:63705:0:11:151:168:478:11:g_d0_f10:8:g_d0_f8:∑T
+26:1024:63707:11:0:163:177:467:8:g_d0_f8:8:g_d0_f3:t=1
+26:1025:63710:0:16:179:185:486:11:g_d0_f10:11:g_d0_f10:[
+26:1026:63711:16:0:185:318:470:11:g_d0_f7:8:g_d0_f8:yt−1 ̃y0t−1+yt−2 ̃y0t−2yt−1 ̃y0t
+26:1027:63743:0:16:320:326:486:11:g_d0_f10:11:g_d0_f10:]
+26:1028:63744:16:19:326:554:470:11:g_d0_f2:11:g_d0_f2:.   The  first  order  condition  isG′T(̂ρ) ̄g(̂ρ)  =  0.
+26:1029:63801:19:11:71:554:451:11:g_d0_f2:11:g_d0_f2:Evaluated atγ1(ρ0) andγ0(ρ0), the terms in the first square bracket obeys a central limit theorem.
+26:1030:63899:11:15:71:388:440:11:g_d0_f2:11:g_d0_f2:Letξ1andξ0be two independent normal random variables.  Then
+26:1031:63958:15:10:201:210:425:11:g_d0_f6:11:g_d0_f6:√
+26:1032:63959:10:0:210:332:415:11:g_d0_f7:11:g_d0_f2:T ̄g(̂ρ) =ξ1−ξ0+G′T(ρ0)
+26:1033:63982:0:10:332:341:425:11:g_d0_f6:11:g_d0_f6:√
+26:1034:63983:10:22:341:424:415:11:g_d0_f7:11:g_d0_f2:T(̂ρ−ρ0) +op(1)
+26:1035:63998:22:15:72:187:393:11:g_d0_f2:11:g_d0_f2:Direct calculations yield
+26:1036:64023:15:10:168:177:378:11:g_d0_f6:11:g_d0_f6:√
+26:1037:64024:10:24:177:458:368:11:g_d0_f7:11:g_d0_f7:T(̂ρ−ρ0)   =−(G′T(̂ρ)GT(ρ0))−1G′T(ρ0)(ξ1−ξ0) +op(1).
+26:1038:64076:24:34:72:233:344:11:g_d0_f2:11:g_d0_f2:Nowξ1−ξ0has variance 2σ4and
+26:1039:64103:34:0:169:217:310:11:g_d0_f7:11:g_d0_f2:GT(ρ)   =
+26:1040:64112:0:15:229:234:317:11:g_d0_f2:11:g_d0_f2:1
+26:1041:64113:15:0:228:234:302:11:g_d0_f7:11:g_d0_f7:T
+26:1042:64114:0:26:243:255:323:8:g_d0_f8:11:g_d0_f10:T∑
+26:1043:64116:26:0:240:254:297:8:g_d0_f8:8:g_d0_f3:t=1
+26:1044:64119:0:15:256:262:325:11:g_d0_f10:11:g_d0_f10:[
+26:1045:64120:15:0:262:392:310:11:g_d0_f7:8:g_d0_f8:yt−1 ̃y0t−1+yt−2 ̃y0t−2yt−1 ̃y0t
+26:1046:64152:0:53:394:400:325:11:g_d0_f10:11:g_d0_f10:]
+26:1047:64153:53:0:208:216:272:11:g_d0_f2:11:g_d0_f2:=
+26:1048:64154:0:15:229:234:279:11:g_d0_f2:11:g_d0_f2:1
+26:1049:64155:15:0:228:234:264:11:g_d0_f7:11:g_d0_f7:T
+26:1050:64156:0:26:243:255:285:8:g_d0_f8:11:g_d0_f10:T∑
+26:1051:64158:26:0:240:253:259:8:g_d0_f8:8:g_d0_f3:t−1
+26:1052:64161:0:38:254:456:272:11:g_d0_f2:8:g_d0_f3:(yt−2+ut−1)ut−1+yt−2ut−2yt−1ut→σ2
+26:1053:64194:38:0:72:115:234:11:g_d0_f2:8:g_d0_f3:sinceT−1
+26:1054:64202:0:11:118:135:242:11:g_d0_f10:8:g_d0_f8:∑T
+26:1055:64204:11:0:130:198:231:8:g_d0_f8:11:g_d0_f7:t=1yt−2ut−1,T
+26:1056:64217:0:7:200:229:238:8:g_d0_f9:8:g_d0_f8:−1∑T
+26:1057:64221:7:0:224:298:231:8:g_d0_f8:11:g_d0_f7:t=1yt−1utandT
+26:1058:64234:0:7:300:330:238:8:g_d0_f9:8:g_d0_f8:−1∑T
+26:1059:64238:7:0:325:484:231:8:g_d0_f8:11:g_d0_f7:t=1yt−2utall converge weakly toω
+26:1060:64270:0:8:485:502:238:8:g_d0_f3:8:g_d0_f3:2∫1
+26:1061:64273:8:11:496:564:230:8:g_d0_f3:11:g_d0_f2:0W(r)dW(r),
+26:1062:64284:11:0:72:447:219:11:g_d0_f7:11:g_d0_f2:W(r) is a standard Brownian motion, andω2is the long run variance ofut. Thus
+26:1063:64360:0:9:449:458:228:11:g_d0_f6:11:g_d0_f6:√
+26:1064:64361:9:11:458:554:219:11:g_d0_f7:11:g_d0_f2:T(̂ρ−ρ0)d−→N(0,2).
+26:1065:64379:11:13:72:554:208:11:g_d0_f2:11:g_d0_f2:When other parameters are estimated, the asymptotic variance will be different but the developments
+26:1066:64478:13:0:72:440:195:11:g_d0_f2:11:g_d0_f2:are analogous.  A local to unity framework can be used to show that̂ρis also
+26:1067:64554:0:9:444:453:204:11:g_d0_f6:11:g_d0_f6:√
+26:1068:64555:9:11:453:553:195:11:g_d0_f7:8:g_d0_f3:Tconsistent whenρ0
+26:1069:64573:11:0:72:554:184:11:g_d0_f2:11:g_d0_f2:is in the local neighborhood of one.  A more rigorous analysis is given in Gorodnichenko et al. (2009).
+27:1070:64678:0:14:234:392:699:10:g_d0_f2:10:g_d0_f2:Table 1:  Summary of Selected Work
+27:1071:64712:14:12:141:545:685:10:g_d0_f2:10:g_d0_f2:PaperEquationsForcingModelDataEstimator
+27:1072:64751:12:12:308:470:673:10:g_d0_f2:10:g_d0_f2:variableFilterFilter
+27:1073:64771:12:15:90:548:661:10:g_d0_f2:10:g_d0_f2:Kydland and Prescott (1982)systemARMA(1,1)LTHPcalibration
+27:1074:64828:15:15:126:535:646:10:g_d0_f2:10:g_d0_f2:Altug (1989)systemI(1)FD1FD1MLE
+27:1075:64859:15:15:77:537:631:10:g_d0_f2:10:g_d0_f2:Christiano and Eichenbaum (1992)systemI(1)ztHPGMM
+27:1076:64908:15:15:106:537:616:10:g_d0_f2:10:g_d0_f2:Burnside et al. (1993)systemAR(1)LTHPGMM
+27:1077:64948:15:15:81:537:601:10:g_d0_f2:10:g_d0_f2:Burnside and Eichenbaum (1996)systemI(1)ztHPGMM
+27:1078:64995:15:15:101:535:586:10:g_d0_f2:10:g_d0_f2:McGrattan et al. (1997)systemVAR(2)LTLT,HPMLE
+27:1079:65040:15:15:124:537:571:10:g_d0_f2:10:g_d0_f2:Fuhrer (1997)equationnot specifiednot specifiedHP,LT,QTGMM
+27:1080:65098:15:15:109:537:556:10:g_d0_f2:10:g_d0_f2:Clarida et al. (2000)equationAR(1)not specifiedLT,HP,CBOGMM
+27:1081:65157:15:15:129:535:541:10:g_d0_f2:10:g_d0_f2:Kim (2000)systemAR(1)LTLTMLE
+27:1082:65185:15:15:123:535:526:10:g_d0_f2:10:g_d0_f2:Ireland (2001)systemAR(1)LTLTMLE
+27:1083:65217:15:15:96:543:511:10:g_d0_f2:10:g_d0_f2:Smets and Wouters (2003)systemAR(1)LTHPBayesian
+27:1084:65264:15:15:130:535:496:10:g_d0_f2:10:g_d0_f2:Dib (2003)systemAR(1)LTLTMLE
+27:1085:65292:15:15:89:549:481:10:g_d0_f2:10:g_d0_f2:Fuhrer and Rudebusch (2004)equationnot specifiednot specifiedHP,CBO,QTMLE,GMM
+27:1086:65369:15:15:89:543:466:10:g_d0_f2:10:g_d0_f2:Lubik and Schorfheide (2004)systemAR(1)LTHP,LTBayesian
+27:1087:65423:15:15:115:537:451:10:g_d0_f2:10:g_d0_f2:Altig et al. (2004)systemARI(1,1)FD1FD1GMM
+27:1088:65465:15:15:123:535:436:10:g_d0_f2:10:g_d0_f2:Ireland (2004)systemI(1)FD1FD1MLE
+27:1089:65498:15:14:107:535:421:10:g_d0_f2:10:g_d0_f2:Bouakez et al. (2005)systemAR(1)LTLTMLE
+27:1090:65537:14:15:103:537:407:10:g_d0_f2:10:g_d0_f2:Christiano et al. (2005)systemnot specifiednot specifiedVARGMM
+27:1091:65599:15:15:104:543:392:10:g_d0_f2:10:g_d0_f2:Del Negro et al. (2007)systemARI(1,1)FD1FD1Bayesian
+27:1092:65650:15:15:129:548:377:10:g_d0_f2:10:g_d0_f2:Faia (2007)systemAR(1)LTHPcalibration
+27:1093:65687:15:30:96:543:362:10:g_d0_f2:10:g_d0_f2:Smets and Wouters (2007)systemAR(1)FDFDBayesian
+27:1094:65734:30:11:88:553:332:11:g_d0_f2:11:g_d0_f2:Note:  CBO denotes actual series minus the Congress Budget Office’s measure of potential output.
+27:1095:65830:11:11:72:554:321:11:g_d0_f2:11:g_d0_f2:I(1) and ARI(1,1) denote forcing variables with stochastic trends.  VAR, AR and ARMA denote trend
+27:1096:65927:11:11:72:554:310:11:g_d0_f2:11:g_d0_f2:stationary  forcing  variables.   FD  is  first  differencing,  FD1is  first  differencing  with  the  restriction
+27:1097:66041:11:11:72:554:299:11:g_d0_f2:11:g_d0_f2:that  the  forcing  variable  has  a  unit  root  (e.g.,ρz=  1),  LT  is  projection  on  linear  time  trend,  QT
+27:1098:66155:11:11:72:554:288:11:g_d0_f2:11:g_d0_f2:is projection on quadratic time trend, HP is Hodrick-Prescott filter,ztis detrending by the level of
+27:1099:66255:11:11:72:554:277:11:g_d0_f2:11:g_d0_f2:technology.  The second column shows whether a paper estimates a system of equations (“system”) or
+27:1100:66353:11:0:72:270:266:11:g_d0_f2:11:g_d0_f2:a single structural equation (“equation”).
+28:1101:66397:0:13:226:400:699:11:g_d0_f2:11:g_d0_f2:Table 2.  Neoclassical Growth Model
+28:1102:66432:13:14:126:525:686:11:g_d0_f7:11:g_d0_f2:ρzdata filterQDHDFDHPLTFD1HPHP
+28:1103:66462:14:13:178:520:672:11:g_d0_f2:8:g_d0_f8:model filerQDHDFDHPLTFD1LTzt
+28:1104:66490:13:14:246:523:659:11:g_d0_f2:11:g_d0_f2:(1)(2)(3)(4)(5)(6)(7)(8)
+28:1105:66514:14:14:99:164:645:11:g_d0_f2:11:g_d0_f7:Estimate ofα
+28:1106:66526:14:13:122:528:631:11:g_d0_f2:11:g_d0_f2:0.95mean0.318    0.333    0.367    0.3500.4800.400    0.675    0.990
+28:1107:66594:13:14:188:492:618:11:g_d0_f2:11:g_d0_f2:st.dev.0.052    0.061    0.110    0.1030.1200.083    0.022
+28:1108:66652:14:14:122:528:604:11:g_d0_f2:11:g_d0_f2:0.99mean0.308    0.324    0.372    0.3600.8100.377    0.789    0.990
+28:1109:66720:14:13:188:492:590:11:g_d0_f2:11:g_d0_f2:st.dev.0.053    0.066    0.115    0.1200.2010.109    0.024
+28:1110:66778:13:14:122:528:577:11:g_d0_f2:11:g_d0_f2:1.00mean0.304    0.312    0.349    0.3510.9050.357    0.817    0.990
+28:1111:66846:14:14:188:492:563:11:g_d0_f2:11:g_d0_f2:st.dev.0.054    0.061    0.105    0.1150.1830.113    0.022
+28:1112:66904:14:13:97:165:549:11:g_d0_f2:8:g_d0_f8:Estimate ofρz
+28:1113:66917:13:14:122:528:536:11:g_d0_f2:11:g_d0_f2:0.95mean0.949    0.949    0.950    0.9500.9141.000    0.541    1.000
+28:1114:66985:14:13:188:492:522:11:g_d0_f2:11:g_d0_f2:st.dev.0.006    0.014    0.017    0.0150.0420.049
+28:1115:67034:13:14:122:528:509:11:g_d0_f2:11:g_d0_f2:0.99mean0.989    0.990    0.991    0.9910.8641.000    0.485    1.000
+28:1116:67102:14:13:188:492:495:11:g_d0_f2:11:g_d0_f2:st.dev.0.002    0.005    0.007    0.0160.0940.041
+28:1117:67151:13:14:122:528:482:11:g_d0_f2:11:g_d0_f2:1.00mean0.999    1.000    0.998    1.0000.6941.000    0.461    1.000
+28:1118:67219:14:14:188:492:468:11:g_d0_f2:11:g_d0_f2:st.dev.0.001    0.003    0.005    0.0110.1230.039
+28:1119:67268:14:13:97:166:454:11:g_d0_f2:8:g_d0_f8:Estimate ofσz
+28:1120:67281:13:14:122:528:441:11:g_d0_f2:11:g_d0_f2:0.95mean0.981    1.021    1.157    1.0761.1351.334    1.949    0.046
+28:1121:67349:14:13:188:528:427:11:g_d0_f2:11:g_d0_f2:st.dev.0.123    0.187    0.441    0.2910.2830.285    0.167    0.006
+28:1122:67416:13:14:122:528:414:11:g_d0_f2:11:g_d0_f2:0.99mean0.962    1.001    1.154    1.1074.3481.185    2.912    0.042
+28:1123:67484:14:14:188:528:400:11:g_d0_f2:11:g_d0_f2:st.dev.0.111    0.170    0.367    0.3032.1690.347    0.397    0.006
+28:1124:67551:14:13:122:529:386:11:g_d0_f2:11:g_d0_f2:1.00mean0.955    0.974    1.073    1.087    19.803    1.107    3.289    0.041
+28:1125:67628:13:27:188:529:373:11:g_d0_f2:11:g_d0_f2:st.dev.0.108    0.145    0.295    0.513    10.681    0.341    0.478    0.005
+28:1126:67704:27:11:88:553:346:11:g_d0_f2:11:g_d0_f2:Note:  The number of simulations is 2,000.  Sample size is T=200.  LT is linear detrending,  HP
+28:1127:67799:11:11:72:554:335:11:g_d0_f2:11:g_d0_f2:is Hodrick-Prescott filter,  FD is first differencing,  FD1is first differencing with the restriction that
+28:1128:67905:11:0:72:554:324:11:g_d0_f7:11:g_d0_f2:ρz= 1, QD is quasi differencing, HD is hybrid differencing,ztis detrending by the level of technology.
+29:1129:68009:0:15:160:466:699:11:g_d0_f2:11:g_d0_f2:Table 3.  Augmented Versions of the Neoclassical Growth Model
+29:1130:68070:15:14:145:508:684:11:g_d0_f2:11:g_d0_f2:data filterQDHDFDHPLTFD1HPHP
+29:1131:68098:14:14:116:503:670:11:g_d0_f7:8:g_d0_f8:ρzmodel filerQDHDFDHPLTFD1LTzt
+29:1132:68128:14:13:213:506:656:11:g_d0_f2:11:g_d0_f2:(1)(2)(3)(4)(5)(6)(7)(8)
+29:1133:68152:13:14:185:441:643:11:g_d0_f2:11:g_d0_f2:Panel A: serially correlated growth rate in technology
+29:1134:68206:14:14:270:355:629:11:g_d0_f2:11:g_d0_f2:Estimate ofκ= 0
+29:1135:68221:14:13:112:514:615:11:g_d0_f2:11:g_d0_f2:0.95mean-0.010    -0.001    0.001    -0.019    -0.180    -0.100    -0.224    -0.369
+29:1136:68304:13:14:153:512:602:11:g_d0_f2:11:g_d0_f2:st.dev.0.0630.0580.0500.1600.1650.0350.0380.106
+29:1137:68351:14:13:112:514:588:11:g_d0_f2:11:g_d0_f2:0.99mean-0.014    -0.003    0.002    -0.016    -0.498    -0.021    -0.255    -0.429
+29:1138:68434:13:14:153:512:575:11:g_d0_f2:11:g_d0_f2:st.dev.0.0440.0460.0410.1550.0880.0300.0380.070
+29:1139:68481:14:13:112:514:561:11:g_d0_f2:11:g_d0_f2:1.00mean-0.014    -0.003    0.003    -0.020    -0.600    -0.002    -0.256    -0.446
+29:1140:68564:13:14:153:512:548:11:g_d0_f2:11:g_d0_f2:st.dev.0.0380.0390.0350.1610.0290.0280.0380.058
+29:1141:68611:14:14:214:410:534:11:g_d0_f2:11:g_d0_f2:Panel B: habit formation in consumption
+29:1142:68650:14:13:270:355:520:11:g_d0_f2:11:g_d0_f2:Estimate ofφ= 0
+29:1143:68665:13:14:112:512:507:11:g_d0_f2:11:g_d0_f2:0.95mean0.0200.0080.006    -0.014    -0.410    -0.0860.1930.679
+29:1144:68728:14:13:153:512:493:11:g_d0_f2:11:g_d0_f2:st.dev.0.0750.0730.0710.2550.3390.0660.3820.074
+29:1145:68775:13:14:112:512:480:11:g_d0_f2:11:g_d0_f2:0.99mean0.0190.0090.0080.023-0.647    -0.0180.4950.637
+29:1146:68829:14:14:153:512:466:11:g_d0_f2:11:g_d0_f2:st.dev.0.0700.0740.0690.1680.2410.0830.4000.070
+29:1147:68876:14:13:112:512:452:11:g_d0_f2:11:g_d0_f2:1.00mean0.0180.0230.0110.025-0.7020.0110.6030.622
+29:1148:68925:13:14:153:512:439:11:g_d0_f2:11:g_d0_f2:st.dev.0.0670.0870.0760.1560.1740.0950.3730.068
+29:1149:68972:14:14:243:382:425:11:g_d0_f2:8:g_d0_f8:Panel C: preference shocksqt
+29:1150:69000:14:13:263:363:411:11:g_d0_f2:11:g_d0_f2:Estimate ofα= 0.33
+29:1151:69018:13:14:149:188:398:11:g_d0_f7:11:g_d0_f2:σq= 0.5
+29:1152:69025:14:13:112:512:384:11:g_d0_f2:11:g_d0_f2:0.95mean0.3440.3350.3610.3290.4650.2990.5910.337
+29:1153:69073:13:14:153:512:371:11:g_d0_f2:11:g_d0_f2:st.dev.0.0400.0250.0800.0750.1260.0430.0370.137
+29:1154:69120:14:13:112:512:357:11:g_d0_f2:11:g_d0_f2:1.00mean0.3530.3420.3520.3350.5080.3520.6650.485
+29:1155:69168:13:27:153:512:344:11:g_d0_f2:11:g_d0_f2:st.dev.0.0520.0340.0670.0720.3570.0630.0500.265
+29:1156:69215:27:14:149:188:317:11:g_d0_f7:11:g_d0_f2:σq= 1.0
+29:1157:69222:14:14:112:512:303:11:g_d0_f2:11:g_d0_f2:0.95mean0.3390.3410.3490.3310.4310.3160.5040.344
+29:1158:69270:14:13:153:512:289:11:g_d0_f2:11:g_d0_f2:st.dev.0.0230.0300.0490.0600.1030.0220.0310.022
+29:1159:69317:13:14:112:512:276:11:g_d0_f2:11:g_d0_f2:1.00mean0.3470.3470.3570.3400.6110.3410.5290.364
+29:1160:69365:14:27:153:512:262:11:g_d0_f2:11:g_d0_f2:st.dev.0.0280.0340.0500.0550.2570.0250.0360.023
+29:1161:69412:27:13:149:188:235:11:g_d0_f7:11:g_d0_f2:σq= 1.5
+29:1162:69419:13:14:112:512:222:11:g_d0_f2:11:g_d0_f2:0.95mean0.3380.3430.3490.3330.3990.3260.4690.378
+29:1163:69467:14:13:153:512:208:11:g_d0_f2:11:g_d0_f2:st.dev.0.0210.0300.0420.0530.0780.0170.0200.024
+29:1164:69514:13:14:112:512:195:11:g_d0_f2:11:g_d0_f2:1.00mean0.3410.3460.3530.3380.5150.3380.4770.391
+29:1165:69562:14:27:153:512:181:11:g_d0_f2:11:g_d0_f2:st.dev.0.0200.0290.0380.0490.2030.0170.0210.023
+29:1166:69609:27:11:88:554:154:11:g_d0_f2:11:g_d0_f2:Note:  Panels A and B: other parameters fixed atα= 0.33 andσz= 1.  Panel C: five parameters
+29:1167:69700:11:11:72:554:143:11:g_d0_f2:11:g_d0_f2:are  estimated  (α,ρz,ρq,σz,σq).   The  number  of  simulations  is  2,000.   Sample  size  is  T=200.   LT  is
+29:1168:69811:11:11:72:554:132:11:g_d0_f2:11:g_d0_f2:linear detrending, HP is Hodrick-Prescott filter, FD is first differencing, FD1is first differencing with
+29:1169:69916:11:11:72:554:121:11:g_d0_f2:11:g_d0_f2:the restriction thatρz= 1, QD is quasi differencing, HD is hybrid differencing,ztis detrending by the
+29:1170:70017:11:0:72:162:110:11:g_d0_f2:11:g_d0_f2:level of technology.
+30:1171:70039:0:16:210:416:699:11:g_d0_f2:11:g_d0_f2:Table 4.  Smets and Wouters (2007) model.
+30:1172:70080:16:14:156:499:683:11:g_d0_f2:11:g_d0_f2:data filterQDHDFDHPLTFD1HPHP
+30:1173:70108:14:13:127:494:669:11:g_d0_f7:8:g_d0_f8:ρzmodel filerQDHDFDHPLTFD1LTzt
+30:1174:70138:13:14:222:497:656:11:g_d0_f2:11:g_d0_f2:(1)(2)(3)(4)(5)(6)(7)(8)
+30:1175:70162:14:14:200:425:642:11:g_d0_f2:8:g_d0_f8:Estimate of persistence in technology shocksρz
+30:1176:70208:14:13:123:503:628:11:g_d0_f2:11:g_d0_f2:0.95mean0.965    0.967    0.962    0.945    0.864    1.000    -0.100    1.000
+30:1177:70285:13:14:164:464:615:11:g_d0_f2:11:g_d0_f2:st.dev.0.038    0.037    0.044    0.137    0.1420.157
+30:1178:70338:14:13:123:503:601:11:g_d0_f2:11:g_d0_f2:0.99mean0.986    0.984    0.986    0.967    0.836    1.000    -0.114    1.000
+30:1179:70415:13:14:164:464:588:11:g_d0_f2:11:g_d0_f2:st.dev.0.027    0.027    0.028    0.123    0.2270.090
+30:1180:70468:14:13:123:503:574:11:g_d0_f2:11:g_d0_f2:1.00mean0.990    0.989    0.993    0.971    0.744    1.000    -0.123    1.000
+30:1181:70545:13:14:164:464:561:11:g_d0_f2:11:g_d0_f2:st.dev.0.027    0.026    0.025    0.123    0.3050.075
+30:1182:70598:14:14:196:430:547:11:g_d0_f2:11:g_d0_f2:Estimate of investment adjustment costφ= 5.48
+30:1183:70643:14:13:123:503:533:11:g_d0_f2:11:g_d0_f2:0.95mean5.057    5.381    5.227    5.066    3.932    4.7004.4479.818
+30:1184:70711:13:14:164:503:520:11:g_d0_f2:11:g_d0_f2:st.dev.2.236    2.548    2.306    3.354    1.917    2.4870.2650.609
+30:1185:70778:14:14:123:503:506:11:g_d0_f2:11:g_d0_f2:0.99mean5.432    5.563    5.373    5.095    5.595    5.2364.3669.662
+30:1186:70846:14:13:164:503:492:11:g_d0_f2:11:g_d0_f2:st.dev.2.321    2.463    2.404    3.012    2.647    2.7940.2570.588
+30:1187:70913:13:14:123:503:479:11:g_d0_f2:11:g_d0_f2:1.00mean5.863    6.253    6.014    5.617    6.173    6.0494.3779.541
+30:1188:70981:14:14:164:503:465:11:g_d0_f2:11:g_d0_f2:st.dev.2.375    2.775    2.781    3.279    2.983    3.0460.2300.548
+30:1189:71048:14:13:224:402:451:11:g_d0_f2:11:g_d0_f2:Estimate of habit formationλ= 0.71
+30:1190:71082:13:14:123:503:438:11:g_d0_f2:11:g_d0_f2:0.95mean0.725    0.730    0.749    0.753    0.730    0.8643.9320.673
+30:1191:71150:14:13:164:503:424:11:g_d0_f2:11:g_d0_f2:st.dev.0.057    0.063    0.062    0.049    0.063    0.1421.9170.134
+30:1192:71217:13:14:123:503:411:11:g_d0_f2:11:g_d0_f2:0.99mean0.699    0.718    0.719    0.718    0.543    0.7440.9080.941
+30:1193:71285:14:13:164:503:397:11:g_d0_f2:11:g_d0_f2:st.dev.0.056    0.053    0.062    0.134    0.177    0.0530.0330.006
+30:1194:71352:13:14:123:503:384:11:g_d0_f2:11:g_d0_f2:1.00mean0.686    0.711    0.716    0.709    0.470    0.7310.9120.940
+30:1195:71420:14:14:164:503:370:11:g_d0_f2:11:g_d0_f2:st.dev.0.056    0.055    0.064    0.145    0.261    0.0570.0280.005
+30:1196:71487:14:13:191:435:356:11:g_d0_f2:11:g_d0_f2:Estimate of wage adjustment probabilityξw= 0.73
+30:1197:71534:13:14:123:503:343:11:g_d0_f2:11:g_d0_f2:0.95mean0.704    0.730    0.734    0.686    0.657    0.7590.4840.220
+30:1198:71602:14:13:164:503:329:11:g_d0_f2:11:g_d0_f2:st.dev.0.073    0.063    0.075    0.117    0.105    0.0770.0850.019
+30:1199:71669:13:14:123:503:316:11:g_d0_f2:11:g_d0_f2:0.99mean0.686    0.704    0.709    0.659    0.530    0.7180.4580.213
+30:1200:71737:14:14:164:503:302:11:g_d0_f2:11:g_d0_f2:st.dev.0.081    0.065    0.079    0.125    0.214    0.0840.0780.016
+30:1201:71804:14:13:123:503:288:11:g_d0_f2:11:g_d0_f2:1.00mean0.673    0.697    0.700    0.641    0.457    0.7000.4440.210
+30:1202:71872:13:27:164:503:275:11:g_d0_f2:11:g_d0_f2:st.dev.0.092    0.068    0.083    0.138    0.262    0.0910.0720.015
+30:1203:71939:27:11:88:553:248:11:g_d0_f2:11:g_d0_f2:Note:  The number of simulations is 2,000.  Sample size is T=150.  LT is linear detrending,  HP
+30:1204:72034:11:11:72:554:237:11:g_d0_f2:11:g_d0_f2:is Hodrick-Prescott filter,  FD is first differencing,  FD1is first differencing with the restriction that
+30:1205:72140:11:102:72:554:226:11:g_d0_f7:11:g_d0_f2:ρz= 1, QD is quasi differencing, HD is hybrid differencing,ztis detrending by the level of technology.
+31:1206:72285:102:0:198:408:124:36:g_d0_f18:36:Helvetica:ρz=0.95ρz=1.00
+32:1207:72676:0:0:172:434:127:36:g_d0_f20:36:Helvetica:ρz=0.95ρz=0.99ρz=1.00
+33:1208:73104:0:8:172:434:132:36:g_d0_f20:36:Helvetica:ρz=0.95ρz=0.99ρz=1.00
+34:1209:73488:8:0:172:434:124:36:g_d0_f20:36:Helvetica:ρz=0.95ρz=0.99ρz=1.00
+36:1210:74554:0:0:190:442:541:64:Helvetica:64:Helvetica:−4−3−2−101234
+36:1211:74567:0:0:190:194:548:64:Helvetica:64:Helvetica:0
+36:1212:74568:0:0:184:195:572:64:Helvetica:64:Helvetica:0.1
+36:1213:74571:0:0:184:195:596:64:Helvetica:64:Helvetica:0.2
+36:1214:74574:0:0:184:195:620:64:Helvetica:64:Helvetica:0.3
+36:1215:74577:0:0:184:195:644:64:Helvetica:64:Helvetica:0.4
+36:1216:74580:0:0:184:195:668:64:Helvetica:64:Helvetica:0.5
+36:1217:74583:0:305:316:321:678:64:g_d0_f18:64:g_d0_f18:α
+36:1218:74584:305:0:190:442:373:64:Helvetica:64:Helvetica:−4−3−2−101234
+36:1219:74597:0:0:190:194:380:64:Helvetica:64:Helvetica:0
+36:1220:74598:0:0:184:195:410:64:Helvetica:64:Helvetica:0.2
+36:1221:74601:0:0:184:195:440:64:Helvetica:64:Helvetica:0.4
+36:1222:74604:0:0:184:195:470:64:Helvetica:64:Helvetica:0.6
+36:1223:74607:0:0:184:195:500:64:Helvetica:64:Helvetica:0.8
+36:1224:74610:0:307:315:322:513:64:g_d0_f18:41:Helvetica:ρz
+36:1225:74612:307:0:190:194:206:64:Helvetica:64:Helvetica:−4−3−2−1012340
+36:1226:74626:0:0:184:195:236:64:Helvetica:64:Helvetica:0.1
+36:1227:74629:0:0:184:195:260:64:Helvetica:64:Helvetica:0.2
+36:1228:74632:0:0:184:195:284:64:Helvetica:64:Helvetica:0.3
+36:1229:74635:0:0:184:195:308:64:Helvetica:64:Helvetica:0.4
+36:1230:74638:0:0:184:195:332:64:Helvetica:64:Helvetica:0.5
+36:1231:74641:0:133:314:322:345:64:g_d0_f18:41:Helvetica:σz
+36:1232:74643:133:0:196:198:212:64:Helvetica:64:Helvetica: 
+36:1233:74643:0:146:439:441:332:64:Helvetica:64:Helvetica: 
+36:1234:74643:146:33:260:405:186:64:Helvetica:64:Helvetica:MLE FDMM QDMM FD
+36:1235:74659:33:0:142:482:153:11:g_d0_f2:11:g_d0_f2:Figure 6:  Density of simulated t-statistic for MLE and MM estimators.

@@ -1,0 +1,1244 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:159:452:610:12:g_d0_f1:12:g_d0_f1:C:THE MINIMUM WAGE AND THE GREAT RECESSION:
+1:2:66:14:28:150:462:596:12:g_d0_f1:12:g_d0_f1:C:EVIDENCE FROM THE CURRENT POPULATION SURVEY
+1:3:109:28:28:266:344:568:12:g_d0_f1:12:g_d0_f1:C:Jeffrey Clemens
+1:4:124:28:14:253:359:540:12:g_d0_f1:12:g_d0_f1:C:Working Paper 21830
+1:5:143:14:42:218:393:526:12:g_d0_f1:12:g_d0_f1:C:http://www.nber.org/papers/w21830
+1:6:176:42:14:173:438:484:12:g_d0_f1:12:g_d0_f1:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:212:14:14:237:374:470:12:g_d0_f1:12:g_d0_f1:C:1050 Massachusetts Avenue
+1:8:237:14:14:250:362:456:12:g_d0_f1:12:g_d0_f1:C:Cambridge, MA 02138
+1:9:256:14:102:267:343:442:12:g_d0_f1:12:g_d0_f1:C:December 2015
+1:10:269:102:14:72:540:340:12:g_d0_f1:12:g_d0_f1:C:Significant portions of text draw heavily on the text of Clemens and Wither (2014), which this paper
+1:11:369:14:14:72:540:326:12:g_d0_f1:12:g_d0_f1:C:supplements. This applies, in particular, to sections describing the minimum wage literature, the background
+1:12:477:14:14:72:540:312:12:g_d0_f1:12:g_d0_f1:C:associated with the minimum wage changes analyzed, the backdrop of this period's aggregate employment
+1:13:578:14:14:72:540:298:12:g_d0_f1:12:g_d0_f1:C:shifts, and the basic estimation framework.  Special thanks to Michael Best, Marika Cabral, Joanna
+1:14:676:14:14:72:540:284:12:g_d0_f1:12:g_d0_f1:C:Lahey, Neale Mahoney, Day Manoli, Jonathan Meer, John Shoven, Michael Strain, Rob Valletta, and
+1:15:771:14:14:72:540:270:12:g_d0_f1:12:g_d0_f1:C:Stan Veuger, as well as to seminar participants at LSE and Marquette University, for valuable comments
+1:16:873:14:14:72:540:256:12:g_d0_f1:12:g_d0_f1:C:and discussions.  Thanks also to the Stanford Institute for Economic Policy Research and the Federal
+1:17:973:14:14:72:540:242:12:g_d0_f1:12:g_d0_f1:C:Reserve Bank of San Francisco for their hospitality while working on this paper.  Finally, special thanks
+1:18:1078:14:14:72:540:228:12:g_d0_f1:12:g_d0_f1:C:to Jean Roth for greatly easing the navigation of the CPS-MORG files as made available through NBER.
+1:19:1178:14:14:72:539:214:12:g_d0_f1:12:g_d0_f1:C:I gratefully acknowledge support from the UCSD Academic Senate through its small grant program.
+1:20:1273:14:14:72:540:200:12:g_d0_f1:12:g_d0_f1:C:The views expressed herein are those of the author and do not necessarily reflect the views of the National
+1:21:1380:14:28:72:221:186:12:g_d0_f1:12:g_d0_f1:C:Bureau of Economic Research.
+1:22:1408:28:14:72:540:158:12:g_d0_f1:12:g_d0_f1:C:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:23:1504:14:14:72:540:144:12:g_d0_f1:12:g_d0_f1:C:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:24:1599:14:28:72:169:130:12:g_d0_f1:12:g_d0_f1:C:NBER publications.
+1:25:1617:28:14:72:540:102:12:g_d0_f1:12:g_d0_f1:C:© 2015 by Jeffrey Clemens. All rights reserved. Short sections of text, not to exceed two paragraphs,
+1:26:1718:14:14:72:540:88:12:g_d0_f1:12:g_d0_f1:C:may be quoted without explicit permission provided that full credit, including © notice, is given to
+1:27:1818:14:0:72:124:74:12:g_d0_f1:12:g_d0_f1:C:the source.
+2:28:1829:0:14:72:519:700:12:g_d0_f1:12:g_d0_f1:C:The Minimum Wage and the Great Recession: Evidence from the Current Population Survey
+2:29:1914:14:14:72:150:686:12:g_d0_f1:12:g_d0_f1:C:Jeffrey Clemens
+2:30:1929:14:14:72:234:672:12:g_d0_f1:12:g_d0_f1:C:NBER Working Paper No. 21830
+2:31:1957:14:14:72:148:658:12:g_d0_f1:12:g_d0_f1:C:December 2015
+2:32:1970:14:28:72:217:644:12:g_d0_f1:12:g_d0_f1:C:JEL No. E24,J21,J31,J38,K31
+2:33:1997:28:28:273:338:616:12:Times:12:Times:C:ABSTRACT
+2:34:2005:28:14:72:540:588:12:g_d0_f1:12:g_d0_f1:C:I analyze recent federal minimum wage increases using the Current Population Survey.  The relevant
+2:35:2103:14:14:72:540:574:12:g_d0_f1:12:g_d0_f1:C:minimum wage increases were differentially binding across states, generating natural comparison
+2:36:2198:14:14:72:540:560:12:g_d0_f1:12:g_d0_f1:C:groups.  I first estimate a standard difference-in-differences model on samples restricted to relatively
+2:37:2302:14:14:72:540:546:12:g_d0_f1:12:g_d0_f1:C:low-skilled individuals, as described by their ages and education levels.  I also employ a triple-difference
+2:38:2410:14:14:72:540:532:12:g_d0_f1:12:g_d0_f1:C:framework that utilizes continuous variation in the minimum wage's bite across skill groups.  In both
+2:39:2511:14:14:72:540:518:12:g_d0_f1:12:g_d0_f1:C:frameworks, estimates are robust to adopting a range of alternative strategies, including matching on
+2:40:2612:14:14:72:540:504:12:g_d0_f1:12:g_d0_f1:C:the size of states' housing declines, to account for variation in the Great Recession's severity across
+2:41:2715:14:14:72:540:490:12:g_d0_f1:12:g_d0_f1:C:states.  My baseline estimate is that this period's full set of minimum wage increases reduced employment
+2:42:2820:14:14:72:540:476:12:g_d0_f1:12:g_d0_f1:C:among individuals ages 16 to 30 with less than a high school education by 5.6 percentage points.  This
+2:43:2922:14:14:72:540:462:12:g_d0_f1:12:g_d0_f1:C:estimate accounts for 43 percent of the sustained, 13 percentage point decline in this skill group's employment
+2:44:3033:14:42:72:533:448:12:g_d0_f1:12:g_d0_f1:C:rate and a 0.49 percentage point decline in employment across the full population ages 16 to 64.
+2:45:3129:42:14:72:150:406:12:g_d0_f1:12:g_d0_f1:C:Jeffrey Clemens
+2:46:3144:14:14:72:198:392:12:g_d0_f1:12:g_d0_f1:C:Department of Economics
+2:47:3167:14:14:72:244:378:12:g_d0_f1:12:g_d0_f1:C:University of California, San Diego
+2:48:3202:14:14:72:198:364:12:g_d0_f1:12:g_d0_f1:C:9500 Gilman Drive #0508
+2:49:3225:14:14:72:166:350:12:g_d0_f1:12:g_d0_f1:C:La Jolla, CA 92093
+2:50:3243:14:14:72:124:336:12:g_d0_f1:12:g_d0_f1:C:and NBER
+2:51:3251:14:0:72:181:322:12:g_d0_f1:12:g_d0_f1:C:jeffclemens@ucsd.edu
+3:52:3271:0:24:89:539:708:12:g_d0_f2:12:g_d0_f2:A:The  U.S.  labor  market  recovered  slowly  in  the  Great  Recession’s  wake.   Between
+3:53:3360:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:December2006and December2009, the employment rate among individuals ages16to
+3:54:3436:24:24:72:540:660:12:g_d0_f3:12:g_d0_f2:B:64declined from72.2to66.4percent. In December2012it stood at67.2percent and it has
+3:55:3518:24:24:72:539:636:12:g_d0_f2:12:g_d0_f2:B:more recently settled between68and69percent.  Declines were particularly large and
+3:56:3600:24:24:71:539:612:12:g_d0_f2:12:g_d0_f2:B:prolonged  among  individuals  with  relatively  low  levels  of  observable  skills.   Between
+3:57:3695:24:24:71:539:588:12:g_d0_f2:12:g_d0_f2:B:December2006and December2009, employment among individuals ages16to30with
+3:58:3768:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:less than a high school degree declined from40to28percent. Through2014, this group’s
+3:59:3852:24:24:72:516:540:12:g_d0_f2:12:g_d0_f2:B:employment remained13percentage points (33percent) below pre-recession levels.
+3:60:3930:24:24:89:539:516:12:g_d0_f2:12:g_d0_f2:A:Analyses of the recovery’s sluggishness have considered a variety of potentially com-
+3:61:4015:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:plementary explanations.  Some work highlights structural factors like slow-moving de-
+3:62:4101:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:mographic  trends  (Aaronson,  Cajner,  Fallick,  Galbis-Reig,  Smith,  and  Wascher,2014).
+3:63:4192:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:Other work points to long-unfolding declines in manufacturing and provides evidence
+3:64:4275:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:that  such  trends  were  temporarily  masked  by  the  housing  boom  (Charles,  Hurst,  and
+3:65:4368:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:Notowidigdo,2013).   Additional  research  emphasizes  macroeconomic  factors  ranging
+3:66:4454:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:from  heightened  economic  uncertainty  (Bloom,2009;  Baker,  Bloom,  and  Davis,2015;
+3:67:4541:24:24:72:539:349:12:g_d0_f2:12:g_d0_f2:B:Shoag and Veuger,2014) to “scarring” resulting from the recession’s severity (DeLong
+3:68:4625:24:24:72:183:325:12:g_d0_f2:12:g_d0_f2:B:and Summers,2012).
+3:69:4643:24:24:89:539:301:12:g_d0_f2:12:g_d0_f2:A:A  second  set  of  candidate  factors  involves  the  landscape  of  policies  with  social  in-
+3:70:4740:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:surance  and/or  redistributive  objectives.   Several  papers  consider  the  unemployment
+3:71:4831:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:insurance  extensions  enacted  during  this  period  (Hagedorn,  Karahan,  Manovskii,  and
+3:72:4922:24:24:72:539:229:12:g_d0_f2:12:g_d0_f2:B:Mitman,2013;  Rothstein,2011;  Farber  and  Valletta,2013).    Additional  analyses  con-
+3:73:5011:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:sider  expansions  of  redistributive  programs  involving  health  insurance,  food  stamps,
+3:74:5104:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:and disability benefits (Mulligan,2012,2014; Hall,2014).  Finally,  Clemens and Wither
+3:75:5190:24:24:72:539:158:12:g_d0_f2:12:g_d0_f2:B:(2014b) consider the role of contemporaneous minimum wage changes, which brought
+3:76:5270:24:24:72:539:134:12:g_d0_f2:12:g_d0_f2:B:the federal minimum wage from $5.15in2007to $7.25in2009.  This paper supplements
+3:77:5350:24:0:72:539:110:12:g_d0_f2:12:g_d0_f2:B:Clemens and Wither’s (2014b) investigation of these minimum wage increases’ impact
+4:78:5433:0:24:72:534:708:12:g_d0_f2:12:g_d0_f2:B:on the employment of low-education, low-experience workers during this time period.
+4:79:5516:24:24:89:540:684:12:g_d0_f2:12:g_d0_f2:A:Clemens and Wither (2014b) analyze recent minimum wage increases’ effects using
+4:80:5595:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:the2008panel of the Survey of Income and Program Participation (SIPP). The analysis
+4:81:5678:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:makes use of the fact that this period’s federal minimum wage increases were differen-
+4:82:5764:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:tially binding across states, generating natural comparison groups.  As discussed below,
+4:83:5852:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:the SIPP has both advantages and disadvantages for analyzing these differentially bind-
+4:84:5939:24:24:72:226:564:12:g_d0_f2:12:g_d0_f2:B:ing minimum wage changes.
+4:85:5964:24:24:89:539:540:12:g_d0_f2:12:g_d0_f2:A:The current paper analyzes this historical episode using the Current Population Sur-
+4:86:6048:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:vey (CPS). While the CPS lacks some of the SIPP’s novel features, it has advantages with
+4:87:6136:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:regards to data quality and the horizon over which it permits analysis. Because the CPS
+4:88:6223:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:underlies the Bureau of Labor Statistics’ (BLS) unemployment series, in-sample employ-
+4:89:6309:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:ment changes map directly into standard regional and national employment statistics.
+4:90:6393:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:As shown below, this paper’s findings reinforce Clemens and Wither’s (2014b) conclu-
+4:91:6477:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:sion that this period’s minimum wage increases had significant, negative effects on low-
+4:92:6565:24:24:72:230:373:12:g_d0_f2:12:g_d0_f2:B:skilled workers’ employment.
+4:93:6593:24:24:89:544:349:12:g_d0_f2:12:g_d0_f2:A:My analysis employs two estimation frameworks. I first conduct a standard difference-
+4:94:6678:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:in-differences analysis of the employment of a particularly low-skilled group, namely in-
+4:95:6767:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:dividuals ages16to30with less than a high school education. I then introduce a triple-
+4:96:6853:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:difference  extension  of  the  difference-in-differences  framework.   The  latter  framework
+4:97:6947:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:exploits variation in the minimum wage’s bite across skill groups that fully partition the
+4:98:7037:24:24:72:203:229:12:g_d0_f2:12:g_d0_f2:B:working age population.
+4:99:7060:24:23:89:539:205:12:g_d0_f2:12:g_d0_f2:A:The primary threat to these research designs is the possibility that low-skilled work-
+4:100:7146:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:ers were differentially affected by the Great Recession in states that were fully versus par-
+4:101:7239:24:24:72:540:158:12:g_d0_f2:12:g_d0_f2:B:tially bound by this period’s federal minimum wage increases. House price data make it
+4:102:7325:24:24:72:540:134:12:g_d0_f2:12:g_d0_f2:B:apparent that the housing crisis was relatively severe in states that were partially bound.
+4:103:7416:24:0:72:540:110:12:g_d0_f2:12:g_d0_f2:B:Macroeconomic conditions thus had a more negative effect on employment among low-
+5:104:7498:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:skilled  workers  in  partially  bound  states  than  in  fully  bound  states.   This  will  tend  to
+5:105:7600:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:bias estimated effects of this period’s minimum wage increases on employment towards
+5:106:7684:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:zero. In the basic difference-in-differences framework, I take two approaches to address-
+5:107:7773:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:ing this concern. My simplest approach is to control directly for a proxy for the housing
+5:108:7862:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:decline’s  severity,  namely  the  all-transactions  median  house  price  index  produced  by
+5:109:7956:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:the Federal Housing Finance Agency (FHFA). Within this approach, I then explore the
+5:110:8039:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:baseline’s sensitivity to controlling further  for a variety of macroeconomic aggregates,
+5:111:8128:24:24:72:524:540:12:g_d0_f2:12:g_d0_f2:B:including stimulus spending through the American Reinvestment and Recovery Act.
+5:112:8207:24:24:89:539:516:12:g_d0_f2:12:g_d0_f2:A:My baseline estimate is that the differentially binding portion of this period’s mini-
+5:113:8293:24:24:72:539:492:12:g_d0_f2:12:g_d0_f2:B:mum wage increases reduced the employment of individuals ages16to30with less than
+5:114:8374:24:23:72:539:468:12:g_d0_f2:12:g_d0_f2:B:a high school education by3.7percentage points.  Controlling for additional macroeco-
+5:115:8459:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:nomic  covariates  has  little  impact  on  this  estimate.   By  contrast,  taking  no  measure  to
+5:116:8559:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:account for variation in the housing decline’s severity results in a downwardly biased
+5:117:8645:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:estimate.   Employment  among  young,  low-education  adults  declined  by1percentage
+5:118:8730:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:point more in fully bound states than in partially bound states in spite of the fact that
+5:119:8819:24:24:72:421:349:12:g_d0_f2:9:g_d0_f3:B:the latter states’ housing declines were significantly more severe.1
+5:120:8887:24:24:89:539:325:12:g_d0_f2:12:g_d0_f2:A:Within the difference-in-differences framework, my second approach involves match-
+5:121:8969:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:ing states on the basis of the severity of their housing declines.  In the baseline version
+5:122:9060:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:of  this  approach,  I  restrict  the  sample  to  matches  for  which  the  difference  in  the  me-
+5:123:9161:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:dian house price decline was less than $10,000.  Using this criterion, I estimate that the
+5:124:9251:24:24:72:540:229:12:g_d0_f2:12:g_d0_f2:B:differentially binding portion of this period’s minimum wage increases reduced the em-
+5:125:9337:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:ployment of low-skilled individuals by3.8percentage points.  This estimate involves no
+5:126:9423:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:additional effort to control for heterogeneity in the Great Recession’s severity. Including
+5:127:9514:24:36:72:540:158:12:g_d0_f2:12:g_d0_f2:B:the controls used in the more basic difference-in-differences design results in an estimate
+5:128:9605:36:16:88:540:122:8:g_d0_f3:10:g_d0_f2:F:1As discussed in section3, the implied magnitude of the bias associated with taking no steps to account
+5:129:9708:16:11:72:540:106:10:g_d0_f2:10:g_d0_f2:F:for variation in the housing decline’s severity is roughly what one can infer using external estimates from
+5:130:9815:11:0:72:253:95:10:g_d0_f2:10:g_d0_f2:F:Charles, Hurst, and Notowidigdo (2013).
+6:131:9855:0:24:72:539:708:12:g_d0_f2:12:g_d0_f2:B:just over4percentage points.  Allowing the threshold for what constitutes a sufficiently
+6:132:9943:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:good  match  to  range  from  $5,000to  $20,000has  essentially  no  effect  on  the  resulting
+6:133:10038:24:24:72:123:660:12:g_d0_f2:9:g_d0_f3:B:estimate.2
+6:134:10048:24:24:89:539:636:12:g_d0_f2:12:g_d0_f2:A:My second estimation framework utilizes additional variation in the extent to which
+6:135:10131:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:minimum  wage  increases  bite  the  wage  distributions  of  different  skill  groups.   Using
+6:136:10226:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:baseline  wage  information  from  the  CPS’s  Merged  Outgoing  Rotation  Groups  (CPS-
+6:137:10314:24:24:72:539:564:12:g_d0_f2:9:g_d0_f3:B:MORG), I estimate variation in the minimum wage’s bite across age-by-education cells.3
+6:138:10400:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:I  then  implement  a  triple-difference  estimation  framework  in  which  the  degree  of  the
+6:139:10496:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:minimum  wage’s  bite  serves  as  a  continuous  treatment  variable.4This  approach  thus
+6:140:10587:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:makes  more  extensive  use  of  the  information  on  treatment  intensity  that  can  be  har-
+6:141:10683:24:23:72:355:468:12:g_d0_f2:12:g_d0_f2:B:nessed in the CPS’s repeated cross sectional samples.
+6:142:10736:23:24:89:539:445:12:g_d0_f2:12:g_d0_f2:A:Like the difference-in-differences estimates, the estimates exploiting differential bite
+6:143:10824:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:across  skill  groups  provide  evidence  of  negative  effects  on  employment.  That  is,  they
+6:144:10921:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:provide evidence that the differentially binding portion of this period’s minimum wage
+6:145:11007:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:increases  reduced  the  employment  of  low-skilled  workers.    As  in  the  difference-in-
+6:146:11100:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:differences  results,  the  estimated  employment  declines  are  robust  to  augmenting  the
+6:147:11193:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:baseline  specification  with  additional  controls  for  the  evolution  of  macroeconomic  ag-
+6:148:11289:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:gregates. They are similarly robust to restricting the sample to “good” matches based on
+6:149:11377:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:the size of states’ housing declines.  Also as in the difference-in-differences framework,
+6:150:11467:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:estimates  on  the  matched  sample  are  robust  to  dropping  controls  for  macroeconomic
+6:151:11559:24:24:72:187:229:12:g_d0_f2:12:g_d0_f2:B:conditions altogether.
+6:152:11581:24:44:89:539:205:12:g_d0_f2:12:g_d0_f2:A:I next assess my estimates’ implications for the effects of this period’s minimum wage
+6:153:11667:44:19:88:499:161:8:g_d0_f3:10:g_d0_f2:F:2I also implement matching based on the percent decline rather than the level of the change.
+6:154:11759:19:16:88:540:142:8:g_d0_f3:10:g_d0_f2:F:3The analysis includes a3age group by3education group approach and a5age group by4education
+6:155:11850:16:16:72:146:126:10:g_d0_f2:10:g_d0_f2:F:group approach.
+6:156:11865:16:15:88:539:110:8:g_d0_f3:10:g_d0_f2:F:4For  a  recent  example  of  a  similar  estimation  framework,  see  Hoynes  and  Schanzenbach’s  (2012)
+6:157:11971:15:0:72:330:95:10:g_d0_f2:10:g_d0_f2:F:analysis of the food stamp program’s employment effects.
+7:158:12028:0:24:72:539:708:12:g_d0_f2:12:g_d0_f2:B:increases on aggregate employment.  From2006to2012, the average effective minimum
+7:159:12109:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:wage rose by $1.72across the United States.  The differential change between fully and
+7:160:12195:24:24:72:539:660:12:g_d0_f2:12:g_d0_f2:B:partially bound states was $0.62. Extrapolating from in-sample estimates to the full effect
+7:161:12286:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:of the $1.72increase comes with standard caveats, which are discussed in section4.  My
+7:162:12372:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:baseline  estimate  is  that  this  period’s  minimum  wage  increases  reduced  employment
+7:163:12463:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:among individuals ages16to30with less than a high school degree by5.6percentage
+7:164:12542:24:24:72:539:564:12:g_d0_f2:12:g_d0_f2:B:points.  This amounts to43percent of the decline in this group’s employment between
+7:165:12625:24:24:72:539:540:12:g_d0_f3:12:g_d0_f2:B:2006and2012. Further, it accounts for a0.49percentage point decline in the employment
+7:166:12710:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:to population ratio across all individuals ages16to64.  This aggregate impact,  which
+7:167:12795:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:is derived exclusively from impacts on individuals ages16to30with less than a high
+7:168:12877:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:school  education,  is  modestly  smaller  than  the  full-population  employment  estimate
+7:169:12968:23:24:72:259:445:12:g_d0_f2:9:g_d0_f3:B:from Clemens and Wither (2014b).5
+7:170:13001:24:24:89:539:421:12:g_d0_f2:12:g_d0_f2:A:The paper proceeds as follows. Section1presents background information regarding
+7:171:13081:24:24:72:539:397:12:g_d0_f2:12:g_d0_f2:B:the minimum wage increases I analyze.  Section2presents the difference-in-differences
+7:172:13166:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:model, matching strategy, and triple-difference model employed in the analysis. Section
+7:173:13253:24:24:72:539:349:12:g_d0_f3:12:g_d0_f2:B:3presents  the  results.   Section4extrapolates  the  baseline  results  into  aggregate  em-
+7:174:13346:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:ployment impacts.  Section5briefly recapitulates the evidence.  For interested readers,
+7:175:13433:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:Appendix  A  contrasts  the  analyses  in  this  paper  and  in  Clemens  and  Wither  (2014b)
+7:176:13527:24:155:72:402:277:12:g_d0_f2:12:g_d0_f2:B:with other analyses of this period’s minimum wage increases.
+7:177:13587:155:16:88:540:122:8:g_d0_f3:10:g_d0_f2:F:5In the prior paper,  the SIPP’s panel structure enabled a more concentrated harnessing of the mini-
+7:178:13687:16:11:72:539:106:10:g_d0_f2:10:g_d0_f2:F:mum wage’s bite on the workers it targets.  Clemens and Wither’s (2014b) preferred estimate implied an
+7:179:13789:11:0:72:346:95:10:g_d0_f2:10:g_d0_f2:F:aggregate employment rate reduction of0.7percentage point.
+8:180:13848:0:37:72:543:707:17:g_d0_f4:17:g_d0_f5:C:1Background on Recent Federal Minimum Wage Increases
+8:181:13900:37:24:89:539:670:12:g_d0_f2:12:g_d0_f2:A:I estimate the minimum wage’s effects on employment using variation driven by fed-
+8:182:13982:24:23:72:539:646:12:g_d0_f2:9:g_d0_f3:B:erally mandated increases in the minimum wage rates applicable across the U.S. states.6
+8:183:14069:23:24:72:539:623:12:g_d0_f2:12:g_d0_f2:B:On May25,2007, Congress legislated a series of minimum wage increases through the
+8:184:14150:24:24:72:540:599:12:g_d0_f2:12:g_d0_f2:B:”U.S.  Troop  Readiness,  Veterans’  Care,  Katrina  Recovery,  and  Iraq  Accountability  Ap-
+8:185:14244:24:24:72:540:575:12:g_d0_f2:12:g_d0_f2:B:propriations Act.” Increases went into effect on July24th of2007,2008, and2009. In July
+8:186:14331:24:24:72:539:551:12:g_d0_f3:12:g_d0_f2:B:2007, the federal minimum rose from $5.15to $5.85, in July2008it rose to $6.55, and in
+8:187:14417:24:24:72:204:527:12:g_d0_f2:12:g_d0_f2:B:July2009it rose to $7.25.
+8:188:14442:24:24:89:539:503:12:g_d0_f2:12:g_d0_f2:A:Figure1shows my division of states into those that were fully and partially bound
+8:189:14523:24:24:72:540:479:12:g_d0_f2:12:g_d0_f2:B:by changes in the federal minimum wage,  which follows the division in Clemens and
+8:190:14605:24:24:72:540:455:12:g_d0_f2:12:g_d0_f2:B:Wither (2014b).7The designation is based on whether a state’s January2008minimum
+8:191:14685:24:24:72:540:431:12:g_d0_f2:12:g_d0_f2:B:was below $6.55, rendering it at least partially bound by the July2008increase and fully
+8:192:14773:24:24:72:539:407:12:g_d0_f2:12:g_d0_f2:B:bound by the July2009increase.  Using Bureau of Labor Statistics (BLS) data on states’
+8:193:14859:24:23:72:397:383:12:g_d0_f2:12:g_d0_f2:B:prevailing minimum wage rates,27states fit this description.
+8:194:14919:23:24:89:539:360:12:g_d0_f2:12:g_d0_f2:A:Figure2shows the time paths of the average effective minimum wage rates in fully
+8:195:14999:24:24:72:539:336:12:g_d0_f2:12:g_d0_f2:B:bound states relative to partially bound states.8The average effective minimum wage
+8:196:15082:24:24:72:540:312:12:g_d0_f2:12:g_d0_f2:B:in partially bound states exceeded the minimum applicable in fully bound states prior
+8:197:15167:24:24:72:540:288:12:g_d0_f2:12:g_d0_f2:B:to  the  passage  of  the2007to2009federal  increases.   On  average,  the  effective  mini-
+8:198:15259:24:24:71:539:264:12:g_d0_f2:12:g_d0_f2:B:mum  across  partially  bound  states  rose  by  $1.42between2006and2012.   By  contrast,
+8:199:15348:24:24:72:540:240:12:g_d0_f2:12:g_d0_f2:B:fully bound states saw their effective minimums rise by $2.04as a result of the federal
+8:200:15435:24:24:72:217:216:12:g_d0_f2:12:g_d0_f2:B:minimum wage legislation.
+8:201:15460:24:43:89:540:192:12:g_d0_f2:12:g_d0_f2:A:As observed in Clemens and Wither (2014b),  the principal challenge to the estima-
+8:202:15542:43:19:88:408:149:8:g_d0_f3:10:g_d0_f2:F:6This section draws liberally on the text of Clemens and Wither (2014b).
+8:203:15614:19:20:88:371:130:8:g_d0_f3:10:g_d0_f2:F:7Clemens and Wither (2014b) is the original source for Figure1.
+8:204:15677:20:15:88:539:110:8:g_d0_f3:10:g_d0_f2:F:8Figure2is modified from the equivalent figure in Clemens and Wither (2014b) to incorporate the full
+8:205:15777:15:0:71:272:95:10:g_d0_f2:10:g_d0_f2:F:sample period analyzed in the present paper.
+9:206:15822:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:tion  frameworks  developed  in  the  following  section  is  the  possibility  that  low-skilled
+9:207:15919:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:workers in fully and partially bound states were differentially affected by the Great Re-
+9:208:16008:24:24:72:539:660:12:g_d0_f2:12:g_d0_f2:B:cession.  Figure3presents data from the BLS, the Bureau of Economic Analysis (BEA),
+9:209:16091:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:and the Federal Housing Finance Agency (FHFA) on the macroeconomic experiences of
+9:210:16172:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:fully and partially bound states over this time period.9The economic indicators reveal
+9:211:16258:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:that  fully  bound  states  were  less  severely  impacted  by  the  Great  Recession  than  were
+9:212:16355:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:partially  bound  states.   Most  notably,  Panel  C  reveals  that  partially  bound  states  had
+9:213:16453:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:relatively  severe  housing  declines.   This  would,  if  controlled  for  insufficiently,  tend  to
+9:214:16554:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:bias the magnitudes of estimated employment impacts towards0. The following section
+9:215:16637:24:56:72:393:492:12:g_d0_f2:12:g_d0_f2:B:describes my empirical strategy for addressing this concern.
+9:216:16697:56:36:72:539:436:17:g_d0_f4:17:g_d0_f5:C:2Framework for Analyzing the Effects of Minimum Wage
+9:217:16749:36:37:97:470:400:17:g_d0_f5:17:g_d0_f5:C:Increases Using the Current Population Survey
+9:218:16794:37:24:89:539:363:12:g_d0_f2:12:g_d0_f2:A:My  analysis  uses  monthly  employment  data  from  the  Current  Population  Survey
+9:219:16879:24:23:72:540:339:12:g_d0_f2:12:g_d0_f2:B:(CPS),  which  underlies  official  BLS  unemployment  statistics.10The  primary  analysis
+9:220:16969:23:24:71:540:316:12:g_d0_f2:12:g_d0_f2:B:sample extends from January2006through December2012.  My sole sample inclusion
+9:221:17047:24:24:72:539:292:12:g_d0_f2:12:g_d0_f2:B:criterion is that surveyed individuals be between16and64years of age.  The samples
+9:222:17129:24:24:72:519:268:12:g_d0_f2:12:g_d0_f2:B:are thus fully representative of the working age population during this time period.
+9:223:17213:24:24:89:539:244:12:g_d0_f2:12:g_d0_f2:A:The  estimation  frameworks  developed  below  make  use  of  the  fact  that  minimum
+9:224:17299:24:24:72:540:220:12:g_d0_f2:12:g_d0_f2:B:wage  increases  are  differentially  binding  on  the  wage  distributions  of  different  skill
+9:225:17396:24:42:72:540:196:12:g_d0_f2:12:g_d0_f2:B:groups.   Wage  data  in  the  CPS’s  Merged  Outgoing  Rotation  Groups  (CPS-MORG)  in-
+9:226:17485:42:16:88:539:154:8:g_d0_f3:10:g_d0_f2:F:9Figure3is modified from the equivalent figure in Clemens and Wither (2014b) to incorporate the full
+9:227:17585:16:12:72:540:138:10:g_d0_f2:10:g_d0_f2:F:sample period analyzed in the present paper.  All series are weighted by  state population to reflect the
+9:228:17690:12:16:72:270:126:10:g_d0_f2:10:g_d0_f2:F:weighting applied in the regression analysis.
+9:229:17735:16:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:10Specifically, I use extracts generated using the Minnesota Population Center’s Integrated Public Use
+9:230:17837:15:0:72:322:95:10:g_d0_f2:10:g_d0_f2:F:Microsamples (Flood, King, Ruggles, and Warren,2015).
+10:231:17891:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:form my assessment of the extent to which the relevant minimum wage increases were
+10:232:17973:24:24:72:463:684:12:g_d0_f2:12:g_d0_f2:B:binding on the wage distribution of a given age-by-education skill group.
+10:233:18046:24:24:89:539:660:12:g_d0_f2:12:g_d0_f2:A:For an age-by-education groupg, I use data from January2006through July2009to
+10:234:18123:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:estimate the fraction of months during which the relevant individuals had wage rates
+10:235:18207:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:between  $5.15and  $7.25,  which  were  the  prevailing  federal  minimum  wage  rates  on
+10:236:18297:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:January1,2006,  and  July31,2009,  respectively.11For  each  observation  in  the  CPS-
+10:237:18384:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:MORG, I first construct an indicator equal to1if the individual’s self-reported wage rate
+10:238:18473:24:48:72:229:540:12:g_d0_f2:12:g_d0_f2:B:falls between $5.15and $7.25:
+10:239:18502:48:34:194:540:492:12:g_d0_f6:12:g_d0_f2:A:Ai,s,t=1{5.15≥Hourly Wagei,s,t<7.25}.(1)
+10:240:18542:34:24:72:540:458:12:g_d0_f2:12:g_d0_f2:B:For each demographic groupg(i), I then then average theseAi,s,tseparately across in-
+10:241:18626:24:24:72:540:434:12:g_d0_f2:12:g_d0_f2:B:dividuals in fully and partially bound states over the period preceding July2009.  That
+10:242:18713:24:24:72:540:410:12:g_d0_f2:12:g_d0_f2:B:is,  I estimateEg[Ai,s,t|(Bounds=1, Postt=0)]andEg[Ai,s,t|(Bounds=0, Postt=0)].
+10:243:18792:24:68:71:172:386:12:g_d0_f2:12:g_d0_f2:B:Finally, I construct:
+10:244:18813:68:43:92:540:318:12:g_d0_f2:12:g_d0_f2:A:Biteg=Eg[Ai,s,t|(Bounds=1, Postt=0)]−Eg[Ai,s,t|(Bounds=0, Postt=0)].(2)
+10:245:18884:43:24:72:540:275:12:g_d0_f6:12:g_d0_f2:B:Bitegthus  describes  the  difference  in  the  fraction  of  months  individuals  in  each  skill
+10:246:18982:24:24:71:539:251:12:g_d0_f2:12:g_d0_f2:B:group spent at affected wage rates in fully bound states relative to partially bound states.
+10:247:19074:24:24:89:539:227:12:g_d0_f2:12:g_d0_f2:A:Table1presents the resulting estimates of the “bite” of this period’s minimum wage
+10:248:19156:24:24:71:540:203:12:g_d0_f2:12:g_d0_f2:B:increases  across  a  set  of9age-by-education  skill  groups.   The  minimum  wage’s  bite
+10:249:19247:24:57:71:539:179:12:g_d0_f2:12:g_d0_f2:B:across this set of skill groups is, unsurprisingly, strongest among individuals ages16to
+10:250:19335:57:16:85:540:122:8:g_d0_f3:10:g_d0_f2:F:11Some workers report wage rates below the $5.15federal minimum.  Such cases reflect some combi-
+10:251:19431:16:11:72:540:106:10:g_d0_f2:10:g_d0_f2:F:nation  of  reporting  error,  employment  in  jobs  not  covered  by  the  federal  minimum  (e.g.,  workers  who
+10:252:19545:11:0:72:282:95:10:g_d0_f2:10:g_d0_f2:F:receive tips), and possibly some illegal evasion.
+11:253:19595:0:24:72:539:708:12:g_d0_f3:12:g_d0_f2:B:30with less than a high school education.12There is non-trivial, but significantly less,
+11:254:19683:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:bite among individuals ages16to30with a completed high school education, as well as
+11:255:19766:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:among dropouts between ages31and45.  This period’s minimum wage increases had
+11:256:19843:24:48:72:477:636:12:g_d0_f2:12:g_d0_f2:B:relatively trivial bite on the wage distributions of higher skilled individuals.
+11:257:19923:48:32:72:352:588:14:g_d0_f4:14:g_d0_f5:C:2.1Difference-in-Differences Framework
+11:258:19961:32:24:89:539:556:12:g_d0_f2:12:g_d0_f2:A:I begin my analysis by estimating the following difference-in-differences specification
+11:259:20048:24:24:72:540:532:12:g_d0_f2:12:g_d0_f3:B:on a sample restricted to the most affected skill group, namely individuals ages16to30
+11:260:20134:24:68:72:280:508:12:g_d0_f2:12:g_d0_f2:B:with less than a high school education:
+11:261:20173:68:13:196:255:440:12:g_d0_f6:17:g_d0_f10:C:Yi,s,t=∑
+11:262:20181:13:0:235:262:427:9:g_d0_f6:9:g_d0_f2:F:p(t)6=0
+11:263:20188:0:38:265:394:440:12:g_d0_f11:9:g_d0_f7:C:βp(t)Bounds×Periodp(t)
+11:264:20210:38:43:220:540:402:12:g_d0_f7:12:g_d0_f2:A:+α1sStates+α2tTimet+Xs,tγ+εi,s,t.(3)
+11:265:20246:43:24:72:539:359:12:g_d0_f2:12:g_d0_f2:B:The primary outcome variable of interest,Yi,s,t, is employment. The specification controls
+11:266:20336:24:24:72:540:335:12:g_d0_f2:12:g_d0_f2:B:for  the  standard  features  of  difference-in-differences  estimation,  namely  sets  of  state,
+11:267:20434:24:24:72:540:311:12:g_d0_f2:12:g_d0_f2:B:States, and time, Timet, fixed effects.  The vectorXs,tcontains time varying controls for
+11:268:20523:24:24:72:540:287:12:g_d0_f2:12:g_d0_f2:B:each state’s macroeconomic conditions. In my baseline specification,Xs,tincludes the all-
+11:269:20612:24:24:72:540:263:12:g_d0_f2:12:g_d0_f2:B:transactions FHFA median house price index, which proxies for the state-level severity
+11:270:20698:24:38:72:191:239:12:g_d0_f2:9:g_d0_f3:B:of the housing crisis.13
+11:271:20722:38:15:85:540:201:8:g_d0_f3:10:g_d0_f2:F:12In the construction ofAi,s,t,  I code individuals as0if they do not report being paid on any hourly
+11:272:20823:15:12:71:539:186:10:g_d0_f2:10:g_d0_f2:F:basis.  Consequently,  the fractions are lower than what one would obtain if one made additional use of
+11:273:20926:12:16:71:352:174:10:g_d0_f2:10:g_d0_f2:F:wage rates imputed on the basis of weekly earnings and hours.
+11:274:20987:16:16:85:540:158:8:g_d0_f3:10:g_d0_f2:F:13It is not uncommon for minimum wage studies to control directly for a region’s overall employment or
+11:275:21089:16:12:71:539:142:10:g_d0_f2:10:g_d0_f2:F:unemployment rate.  Econometrically, it is likely preferable to exclude such variables.  The policy change
+11:276:21195:12:12:71:539:130:10:g_d0_f2:10:g_d0_f2:F:of  interest  may  directly  affect  statewide  employment,  for  example,  which  is  the  aggregate  outcome  of
+11:277:21309:12:12:71:539:118:10:g_d0_f2:10:g_d0_f2:F:primary  interest.   Median  house  prices  are  less  subject  to  this  concern  for  two  reasons.   First,  many
+11:278:21425:12:11:71:539:106:10:g_d0_f2:10:g_d0_f2:F:minimum wage workers are dependents.  Many of their incomes will thus have minimal impact on their
+11:279:21523:11:0:71:539:95:10:g_d0_f2:10:g_d0_f2:F:households’ housing decisions.  Second,  even households headed by minimum wage workers will tend
+12:280:21622:0:24:89:540:708:12:g_d0_f2:12:g_d0_f2:A:Equation (3) allows for two potentially important sources of dynamics in the federal
+12:281:21706:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:minimum  wage  legislation’s  effects.   First,  and  most  importantly,  the  legislation  was
+12:282:21801:24:24:72:539:660:12:g_d0_f2:12:g_d0_f2:B:enacted  in  May2007,  with  wage  increases  going  into  effect  in  July  of2007,2008,  and
+12:283:21895:24:24:72:539:636:12:g_d0_f3:12:g_d0_f2:B:2009.  The specification thus treats May2007through July2009as a period of transition
+12:284:21980:24:24:72:539:612:12:g_d0_f2:12:g_d0_f2:B:(periodp=Transition)  from  the  old  policy  regime  to  the  new  policy  regime.   Prior
+12:285:22071:24:24:71:348:588:12:g_d0_f2:12:g_d0_f2:B:months correspond to the baseline, or periodp=0.
+12:286:22119:24:24:89:539:564:12:g_d0_f2:12:g_d0_f2:A:Second,  as  in  Clemens  and  Wither  (2014b),  the  specification  allows  the  minimum
+12:287:22208:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:wage’s effects to unfold differentially over the short- and medium-run.  I code August
+12:288:22294:24:24:71:540:516:12:g_d0_f3:12:g_d0_f2:B:2009through July2010as period Post1and all subsequent months as period Post2. This
+12:289:22376:24:24:71:539:492:12:g_d0_f2:12:g_d0_f2:B:straightforwardly allows for the possibility that firms’ and workers’ short- and medium-
+12:290:22464:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:run  responses  may  differ.   Within  the  recent  minimum  wage  literature,  evidence  from
+12:291:22558:23:24:71:540:445:12:g_d0_f2:12:g_d0_f2:B:Aaronson, French, and Sorkin (2013), Meer and West (Forthcoming), and Sorkin (2015)
+12:292:22641:24:24:71:540:421:12:g_d0_f2:12:g_d0_f2:B:indicates that such effects may be important.14The primary coefficients of interest are
+12:293:22728:24:24:72:539:397:12:g_d0_f11:12:g_d0_f2:B:βPost1(t)andβPost2(t),  which  characterize  the  differential  evolution  of  employment  in
+12:294:22821:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:states  that  were  fully  bound  by  the  new  federal  minimum  relative  to  states  that  were
+12:295:22919:24:24:71:539:349:12:g_d0_f2:12:g_d0_f2:B:partially  bound.   I  calculate  the  standard  errors  on  these  coefficients  allowing  for  the
+12:296:23019:24:48:71:311:325:12:g_d0_f2:12:g_d0_f2:B:errors,εi,s,t, to be correlated at the state level.
+12:297:23070:48:32:71:458:277:14:g_d0_f4:14:g_d0_f5:C:2.2Matching on the Severity of States’ Housing Declines
+12:298:23125:32:24:89:540:245:12:g_d0_f2:12:g_d0_f2:A:Within equation (3)’s difference-in-differences framework, I examine the results’ ro-
+12:299:23210:24:24:71:539:221:12:g_d0_f2:12:g_d0_f2:B:bustness to applying sample restrictions motivated by a matching procedure.  I match
+12:300:23294:24:35:71:539:197:12:g_d0_f2:12:g_d0_f2:B:states  on  the  size  of  their  median  house  price  declines  between2006and2012(with
+12:301:23383:35:12:72:540:162:10:g_d0_f2:10:g_d0_f2:F:to  have  tangential  if  any  influence  on  the  housing  market  segments  in  which  median  home  values  are
+12:302:23497:12:12:72:540:150:10:g_d0_f2:10:g_d0_f2:F:determined.  I present specifications with additional macroeconomic controls primarily to check whether
+12:303:23600:12:12:72:540:138:10:g_d0_f2:10:g_d0_f2:F:my results are sensitive to the inclusion of controls used regularly in the literature. The results are affected
+12:304:23712:12:16:72:277:126:10:g_d0_f2:10:g_d0_f2:F:little by the inclusion of these variables inXs,t.
+12:305:23762:16:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:14In the current setting, the lag between legislation and full implementation is sufficiently long that the
+12:306:23869:15:0:71:444:95:10:g_d0_f2:10:g_d0_f2:F:relevant dynamics might largely be expected to unfold during the transition period.
+13:307:23954:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:values averaged across all months in these years).  The matches are thus based on the
+13:308:24039:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:extent of the housing decline from the first to the last year of the baseline analysis sam-
+13:309:24130:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:ple.   To  be  more  precise  regarding  the  procedure,  I  apply  nearest  neighbor  matching
+13:310:24225:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:without  replacement.   I  then  restrict  the  sample  on  the  basis  of  the  quality  of  the  re-
+13:311:24327:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:sulting matches. For example, the baseline matching sample requires that the difference
+13:312:24414:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:in matched states’ housing declines be no greater than $10,000.15I explore the results’
+13:313:24501:24:24:72:503:564:12:g_d0_f2:12:g_d0_f2:B:robustness to applying alternative thresholds of $5,000, $20,000, and5log points.
+13:314:24582:24:24:89:540:540:12:g_d0_f2:12:g_d0_f2:A:Table2presents  summary  statistics  for  the  housing  declines  in  fully  and  partially
+13:315:24673:24:24:72:539:516:12:g_d0_f2:12:g_d0_f2:B:bound states for the analysis samples I utilize. Row1shows the disparity in the severity
+13:316:24761:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:of  the  housing  decline  between  the  full  sets  of  fully  and  partially  bound  states.   Be-
+13:317:24861:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:tween2006and2012,  the  FHFA’s  all-transactions  median  house  price  index  declined,
+13:318:24949:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:on  average,  by  $72,000in  partially  bound  states  and  by  $24,700in  fully  bound  states.
+13:319:25045:24:24:72:539:421:12:g_d0_f2:12:g_d0_f2:B:Row2shows the comparable means for the sample restricted to pairs with declines no
+13:320:25127:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:more than $5,000apart from one another.  For this sample, which retains20states, the
+13:321:25211:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:mean decline in partially bound states was $29,700and the mean decline in fully bound
+13:322:25296:24:24:71:540:349:12:g_d0_f2:12:g_d0_f2:B:states  was  $27,400.   The  $10,000matching  criterion  retains24states  and  yields  means
+13:323:25388:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:of $32,000and $29,700respectively.  The $20,000matching criterion retains32states and
+13:324:25473:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:yields means of $38,500and $27,200respectively.  Finally,  the requirement that the de-
+13:325:25560:24:24:72:540:277:12:g_d0_f2:12:g_d0_f3:B:clines be within5log points of one another retains30states and yields means of $36,900
+13:326:25646:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:and $24,100.  The difference in the means in the latter sample reflects the fact that the
+13:327:25735:24:24:72:540:229:12:g_d0_f2:12:g_d0_f2:B:baselinelevelof median house prices is, on average, higher in partially bound states than
+13:328:25824:24:95:72:185:205:12:g_d0_f2:12:g_d0_f2:B:in fully bound states.
+13:329:25846:95:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:15This  approach  to  sample  selection  is  sometimes  called  the  “caliper”  method  (Cochran  and  Rubin,
+13:330:25955:15:0:72:280:95:10:g_d0_f3:10:g_d0_f2:F:1973; Crump, Hotz, Imbens, and Mitnik,2006).
+14:331:26001:0:30:72:549:708:14:g_d0_f4:14:g_d0_f5:C:2.3A Framework for Harnessing Heterogeneity in the Minimum Wage’s
+14:332:26066:30:32:104:278:678:14:g_d0_f5:14:g_d0_f5:C:“Bite” across Skill Groups
+14:333:26092:32:24:89:539:646:12:g_d0_f2:12:g_d0_f2:A:I make further use of variation in the minimum wage’s bite across skill groups by esti-
+14:334:26179:24:24:72:540:622:12:g_d0_f2:12:g_d0_f2:B:mating the specification below, which is a triple-difference framework with a continuous
+14:335:26267:24:68:72:172:598:12:g_d0_f2:12:g_d0_f2:B:treatment variable:
+14:336:26286:68:13:71:130:530:12:g_d0_f6:17:g_d0_f10:C:Yi,s,t=∑
+14:337:26294:13:0:110:138:517:9:g_d0_f6:9:g_d0_f2:F:p(t)6=0
+14:338:26301:0:38:140:320:530:12:g_d0_f11:9:g_d0_f7:C:βp(t)Periodp(t)×Bounds×Biteg(i)
+14:339:26332:38:27:96:541:492:12:g_d0_f7:9:g_d0_f7:C:+α1s,p(t)States×Periodp(t)+α2s,g(i)States×Groupg(i)+α3p(t),g(i)Periodp(t)×Groupg(i)
+14:340:26415:27:43:96:540:465:12:g_d0_f7:12:g_d0_f2:A:+α4sStates+α5tTimet+α6gGroupg(i)+Xs,t,g(i)γ+εi,s,t.(4)
+14:341:26469:43:24:71:539:422:12:g_d0_f2:12:g_d0_f2:B:Equation  (4)  augments  equation  (3)  with  the  standard  components  of  triple-difference
+14:342:26563:24:24:71:539:398:12:g_d0_f2:12:g_d0_f2:B:estimation. These include group-by-time-period effects, group-by-state effects, and state-
+14:343:26653:24:24:71:539:374:12:g_d0_f2:12:g_d0_f2:B:by-time-period  effects.   These  controls  account  for  differential  changes  in  employment
+14:344:26748:24:24:71:539:350:12:g_d0_f2:12:g_d0_f2:B:across skill groups over time, cross-state differences in the relative employment of these
+14:345:26838:24:24:71:539:326:12:g_d0_f2:12:g_d0_f2:B:groups at baseline, and time varying spatial heterogeneity in economic conditions.  For
+14:346:26925:24:24:71:539:302:12:g_d0_f2:12:g_d0_f2:B:computational  ease,  I  collapse  the  data  set  into  state-by-group-by-month  cells  before
+14:347:27020:24:24:71:207:278:12:g_d0_f2:9:g_d0_f3:B:estimating equation (4).16
+14:348:27046:24:24:89:539:254:12:g_d0_f2:12:g_d0_f2:A:A shortcoming of the triple-difference approach involves the possibility of employer
+14:349:27130:24:24:71:539:230:12:g_d0_f2:12:g_d0_f2:B:substitution of workers in low “bite” skill groups for workers in high “bite” skill groups.
+14:350:27221:24:23:71:539:206:12:g_d0_f2:12:g_d0_f2:B:Substitution of this form could lead the triple-difference approach to overstate a mini-
+14:351:27309:23:24:71:539:183:12:g_d0_f2:12:g_d0_f2:B:mum wage increases’ total employment impacts.  In this paper’s empirical context, the
+14:352:27394:24:49:71:540:159:12:g_d0_f2:12:g_d0_f2:B:aggregate  employment  impacts  implied  by  estimates  of  equations  (3)  and  (4)  are  ulti-
+14:353:27490:49:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:16Weights  are  utilized  throughout  to  maintain  the  national  and  state-level  representativeness  of  the
+14:354:27602:15:0:72:106:95:10:g_d0_f2:10:g_d0_f2:F:sample.
+15:355:27611:0:56:72:181:708:12:g_d0_f2:12:g_d0_f2:B:mately quite similar.
+15:356:27632:56:37:72:468:652:17:g_d0_f4:17:g_d0_f5:C:3Estimates of Minimum Wage Increases’ Effects
+15:357:27677:37:24:89:539:615:12:g_d0_f2:12:g_d0_f2:A:This section presents my estimates of the effects of binding minimum wage increases
+15:358:27760:24:24:72:540:591:12:g_d0_f2:12:g_d0_f2:B:on  the  employment  and  other  outcomes  of  low-skilled  workers.   Its  first  sub-section
+15:359:27854:24:24:72:540:567:12:g_d0_f2:12:g_d0_f2:B:presents estimates of employment impacts using equation (3)’s difference-in-differences
+15:360:27941:24:24:72:540:543:12:g_d0_f2:12:g_d0_f2:B:specification.   Its  second  sub-section  explores  this  specification’s  robustness.   Its  third
+15:361:28041:24:24:72:540:519:12:g_d0_f2:12:g_d0_f2:B:sub-section explores the minimum wage increases’ effects on additional employment and
+15:362:28126:24:24:72:540:495:12:g_d0_f2:12:g_d0_f2:B:earnings  margins.   Its  fourth  sub-section  presents  additional  evidence  of  employment
+15:363:28219:24:24:72:539:471:12:g_d0_f2:12:g_d0_f2:B:impacts using equation (4)’s triple-difference specification.  Its fifth subsection presents
+15:364:28311:24:23:72:540:447:12:g_d0_f2:12:g_d0_f2:B:estimates that allow the minimum wage increases’ effects to unfold with finer dynamics.
+15:365:28398:23:24:72:540:424:12:g_d0_f2:12:g_d0_f2:B:Finally,  its sixth subsection presents estimates of equation (4) on samples that exclude
+15:366:28487:24:24:72:540:400:12:g_d0_f2:12:g_d0_f2:B:the  very  lowest  skilled  workers.   This  final  piece  of  analysis  explores  whether  there  is
+15:367:28588:24:24:72:540:376:12:g_d0_f2:12:g_d0_f2:B:evidence  of  employment  impacts  on  low-wage  workers  within  skill  groups  outside  of
+15:368:28680:24:48:72:415:352:12:g_d0_f2:12:g_d0_f2:B:individuals ages16to30with less than a high school education.
+15:369:28741:48:32:72:389:304:14:g_d0_f4:14:g_d0_f5:C:3.1Baseline Estimates of Employment Impacts
+15:370:28784:32:24:89:539:272:12:g_d0_f2:12:g_d0_f2:A:Column1of Table3reports the baseline estimates of differentially binding minimum
+15:371:28864:24:24:72:540:248:12:g_d0_f2:12:g_d0_f2:B:wage increases’ effects on employment among individuals ages16to30with less than
+15:372:28944:24:24:72:540:224:12:g_d0_f2:12:g_d0_f2:B:a  high  school  degree.   Conditional  on  the  decline  in  states’  median  house  prices,  em-
+15:373:29042:24:24:72:539:200:12:g_d0_f2:12:g_d0_f2:B:ployment within this skill group declined by3.7percentage points more in fully bound
+15:374:29126:24:24:72:539:176:12:g_d0_f2:12:g_d0_f2:B:states than in partially bound states.  This is an economically substantial28percent of
+15:375:29213:24:24:72:540:152:12:g_d0_f2:12:g_d0_f2:B:the total decline in this group’s employment rate over this time period. Because this skill
+15:376:29304:24:24:72:539:128:12:g_d0_f2:12:g_d0_f2:B:group accounts for8.4percent of the working age population, the associated in-sample
+15:377:29388:24:0:72:539:104:12:g_d0_f2:12:g_d0_f2:B:effect on fully bound states’ aggregate employment to population ratios is0.31percent-
+16:378:29476:0:24:72:539:708:12:g_d0_f2:12:g_d0_f2:B:age point. In Section4I consider the assumptions needed to extrapolate this estimate to
+16:379:29563:24:24:72:504:684:12:g_d0_f2:12:g_d0_f2:B:infer the employment effects of this period’s full set of minimum wage increases.
+16:380:29644:24:24:89:539:660:12:g_d0_f2:12:g_d0_f2:A:For columns2and3,  I estimate equation (3) on samples of higher-skilled workers.
+16:381:29724:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:The sample in column2includes skill groups for which the minimum wage’s “bite,” as
+16:382:29806:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:reported in column3of Table1, was between0.015and0.03.  The estimated change in
+16:383:29885:24:24:72:539:588:12:g_d0_f2:12:g_d0_f2:B:this group’s employment is a negative,  statistically insignificant -1.1percentage points
+16:384:29974:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:in the short run and -0.5percentage point in the medium run.  The sample in column
+16:385:30056:24:24:72:540:540:12:g_d0_f3:12:g_d0_f3:C:3includes skill groups for which the minimum wage’s “bite,” as reported in column3
+16:386:30138:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:of Table1, was less than0.015.  The estimated change in this group’s employment is an
+16:387:30223:24:24:72:539:492:12:g_d0_f2:12:g_d0_f2:B:even smaller, and again statistically insignificant, -0.4percentage point in the short run
+16:388:30313:24:23:72:315:468:12:g_d0_f2:12:g_d0_f2:B:and -0.0percentage point in the medium run.
+16:389:30356:23:24:89:540:445:12:g_d0_f2:12:g_d0_f2:A:Across broad skill groups, the magnitudes of the estimates in Table3are monotoni-
+16:390:30437:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:cally increasing in the measure of the minimum wage’s bite.  Reassuringly, the estimate
+16:391:30524:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:for the highest of these broad skill groups is economically quite close to0.  The employ-
+16:392:30613:24:24:72:539:373:12:g_d0_f2:12:g_d0_f2:B:ment decline estimated in column1thus does not appear to be associated with employ-
+16:393:30696:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:ment declines among skill groups that would implausibly be affected by increases in the
+16:394:30783:24:24:72:159:325:12:g_d0_f2:12:g_d0_f2:B:minimum wage.
+16:395:30796:24:24:89:539:301:12:g_d0_f2:12:g_d0_f2:A:The  estimates  associated  with  the  housing  price  index  are  also  informative.   The
+16:396:30887:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:housing price index is strongly, positively correlated with employment among individu-
+16:397:30973:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:als in each skill group. Consistent with findings from Charles, Hurst, and Notowidigdo
+16:398:31059:24:24:72:539:229:12:g_d0_f2:12:g_d0_f2:B:(2013), this is particularly true among the lowest skilled.  For the lowest skilled, the es-
+16:399:31151:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:timate implies that a $100,000decline in median house prices predicts a2.8percentage
+16:400:31235:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:point decline in employment. The associated estimate for relatively high skilled workers
+16:401:31323:24:24:72:540:158:12:g_d0_f2:12:g_d0_f2:B:is that a $100,000decline in median house prices predicts a0.5percentage point decline
+16:402:31409:24:24:72:540:134:12:g_d0_f2:12:g_d0_f2:B:in  employment.   An  implication  of  this  finding  for  estimates  that  pool  high  and  low
+16:403:31505:24:0:72:539:110:12:g_d0_f2:12:g_d0_f2:B:skilled workers, as in estimates of equation (4), is that the coefficients on proxies for the
+17:404:31600:0:48:72:447:708:12:g_d0_f2:12:g_d0_f2:B:housing decline’s severity must be allowed to vary across skill groups.
+17:405:31671:48:33:72:523:660:14:g_d0_f4:14:g_d0_f5:C:3.2Robustness of the Baseline Difference-in-Differences Estimates
+17:406:31736:33:24:89:539:627:12:g_d0_f2:12:g_d0_f2:A:Table4explores  the  relevance  of  the  inclusion  of  macroeconomic  controls  for  the
+17:407:31825:24:23:72:539:603:12:g_d0_f2:12:g_d0_f2:B:baseline  estimate  from  Table3’s  column1.   Column2repeats  the  baseline  estimate.
+17:408:31912:23:24:72:540:580:12:g_d0_f2:12:g_d0_f2:B:Column3shows that controlling additionally for macroeconomic aggregates including
+17:409:31993:24:24:72:540:556:12:g_d0_f2:12:g_d0_f2:B:the  statewide  employment  rate  and  personal  income  per  capita  yields  an  estimate  of
+17:410:32087:24:24:72:540:532:12:g_d0_f2:12:g_d0_f2:B:-3.3percentage  points.17Column4shows  that  controlling  additionally  for  stimulus
+17:411:32172:24:24:72:540:508:12:g_d0_f2:12:g_d0_f2:B:spending associated with the American Reinvestment and Recovery Act has no effect on
+17:412:32256:24:24:72:540:484:12:g_d0_f2:12:g_d0_f2:B:this estimate.18Consistent with Clemens and Wither’s (2014b) analysis using the SIPP,
+17:413:32341:24:24:72:540:460:12:g_d0_f2:12:g_d0_f2:B:columns3and4thus show that the baseline estimate is little affected by incorporating
+17:414:32425:24:24:72:271:436:12:g_d0_f2:9:g_d0_f3:B:additional macroeconomic controls.19
+17:415:32461:24:24:89:539:412:12:g_d0_f2:12:g_d0_f2:A:Column5shows that, as implied by the data from Figure3, taking no measures to
+17:416:32538:24:24:72:540:388:12:g_d0_f2:12:g_d0_f2:B:control for variation in the severity of the housing crisis yields a downwardly biased es-
+17:417:32628:24:24:72:540:364:12:g_d0_f2:12:g_d0_f2:B:timate. Specifically, it shows that employment among individuals ages16to30with less
+17:418:32712:24:23:72:540:340:12:g_d0_f2:12:g_d0_f2:B:than a high school degree declined by1percentage point more in fully bound states than
+17:419:32798:23:24:71:539:317:12:g_d0_f2:12:g_d0_f2:B:in partially bound states in spite of the fact that the housing crisis was much more severe
+17:420:32889:24:36:71:539:293:12:g_d0_f2:12:g_d0_f2:B:among partially bound states. The differential effect of the housing decline thus obscures
+17:421:32979:36:16:85:540:257:8:g_d0_f3:10:g_d0_f2:F:17As discussed in Section2,  the inclusion of these controls is less econometrically attractive than the
+17:422:33083:16:12:71:539:241:10:g_d0_f2:10:g_d0_f2:F:inclusion of the median house price index. I present specifications with these additional controls primarily
+17:423:33191:12:16:71:539:229:10:g_d0_f2:10:g_d0_f2:F:to show that my results are relatively insensitive to the inclusion of controls used regularly in the literature.
+17:424:33304:16:15:85:540:213:8:g_d0_f3:10:g_d0_f2:F:18The stimulus variable is constructed using data from Chodorow-Reich, Feiveson, Liscow, and Wool-
+17:425:33402:15:12:71:540:198:10:g_d0_f2:10:g_d0_f2:F:ston (2012). Consistent with Chodorow-Reich, Feiveson, Liscow, and Woolston’s (2012) findings, I obtain a
+17:426:33507:12:12:71:539:186:10:g_d0_f2:10:g_d0_f2:F:positive coefficient on stimulus spending in regressions involving the samples of middle- and higher-skill
+17:427:33613:12:12:71:539:174:10:g_d0_f2:10:g_d0_f2:F:groups  (results  not  shown).   The  implied  “dollars  per  job”  numbers  have  magnitudes  similar  to  those
+17:428:33726:12:12:71:539:162:10:g_d0_f2:10:g_d0_f2:F:estimated  by  Chodorow-Reich,  Feiveson,  Liscow,  and  Woolston  (2012).  The  associated  t-statistics  range
+17:429:33838:12:12:71:539:150:10:g_d0_f2:10:g_d0_f2:F:between1.5and2.3depending on the combination of macroeconomic covariates included as controls. The
+17:430:33936:12:12:71:539:138:10:g_d0_f2:10:g_d0_f2:F:absence of a positive correlation in my specification involving individuals ages16to30with less than a
+17:431:34038:12:12:71:539:126:10:g_d0_f2:10:g_d0_f2:F:high school education suggests that stimulus spending created jobs more likely to be held by individuals
+17:432:34142:12:16:71:270:114:10:g_d0_f2:10:g_d0_f2:F:in groups with higher observable skill levels.
+17:433:34188:16:0:85:467:98:8:g_d0_f3:10:g_d0_f2:F:19The relevant analysis in Clemens and Wither (2014b) appears in Appendix Table A6.
+18:434:34273:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:a substantial2to3percentage points of the effect of the differentially binding portion
+18:435:34359:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:of this period’s minimum wage increases.  The magnitude of this bias is roughly what
+18:436:34443:24:24:72:539:660:12:g_d0_f2:9:g_d0_f3:B:one can infer using external estimates from Charles, Hurst, and Notowidigdo (2013).20
+18:437:34528:24:24:71:539:636:12:g_d0_f2:12:g_d0_f2:B:Because the housing decline is so relevant, the persuasiveness of the results rests in part
+18:438:34619:24:24:71:540:612:12:g_d0_f2:12:g_d0_f2:B:on the consistency of the estimates obtained using equations (3) and (4), the robustness
+18:439:34707:24:24:71:539:588:12:g_d0_f2:12:g_d0_f2:B:of each baseline to the matching strategy,  the robustness of each baseline to the incor-
+18:440:34796:24:24:71:539:564:12:g_d0_f2:12:g_d0_f2:B:poration  of  additional  controls,  the  plausibility  of  the  underlying  dynamics,  and  the
+18:441:34892:24:24:71:471:540:12:g_d0_f2:12:g_d0_f2:B:consistency of the results with the analysis in Clemens and Wither (2014b).
+18:442:34967:24:24:89:539:516:12:g_d0_f2:12:g_d0_f2:A:Table5shows that the estimates in Table4are moderately reduced by expanding the
+18:443:35046:24:24:71:540:492:12:g_d0_f2:12:g_d0_f2:B:baseline  period  to  include2005.   A  comparison  of  Table4and  Table5’s  first  columns
+18:444:35137:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:provides an explanation for this result.  The dependent variable in these columns is the
+18:445:35225:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:level  of  states’  effective  minimum  wage  rates.   The  reported  coefficients  thus  describe
+18:446:35323:24:24:71:539:421:12:g_d0_f2:12:g_d0_f2:B:the differential change, from the full pre-legislation period to the post-implementation
+18:447:35411:24:24:71:539:397:12:g_d0_f2:12:g_d0_f2:B:period, in fully and partially bound states’ average effective minimum wage rates.  Ex-
+18:448:35498:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:panding the base period reduces this differential change, reflecting the fact that some of
+18:449:35588:24:24:71:540:349:12:g_d0_f2:12:g_d0_f2:B:the partially bound states increased their minimum wage rates between2005and2006.
+18:450:35669:24:24:72:539:325:12:g_d0_f2:12:g_d0_f2:B:The estimated employment decline per $1increase in the minimum wage is essentially
+18:451:35751:24:35:72:333:301:12:g_d0_f2:12:g_d0_f2:B:unchanged as one moves from Table4to Table5.
+18:452:35795:35:16:85:540:266:8:g_d0_f3:10:g_d0_f2:F:20On  the  upside  of  the  housing  boom,  Charles,  Hurst,  and  Notowidigdo  (2013)  estimate  that  a  one
+18:453:35905:16:12:72:539:250:10:g_d0_f2:10:g_d0_f2:F:standard  deviation  change  in  housing  demand  predicts  an0.8percentage  point  change  in  employment
+18:454:36011:12:12:72:540:238:10:g_d0_f2:10:g_d0_f2:F:among the full population ages21to55(in Table2, see the entry in column5of the row labeled “Housing
+18:455:36110:12:12:72:540:226:10:g_d0_f2:10:g_d0_f2:F:Demand  Change”).   While  their  estimate  is  from  the  housing  swing’s  upside,  Charles,  Hurst,  and  No-
+18:456:36222:12:12:72:539:214:10:g_d0_f2:10:g_d0_f2:F:towidigdo (2013) emphasize that this period’s local housing booms and busts were roughly symmetric.
+18:457:36321:12:12:72:539:202:10:g_d0_f2:10:g_d0_f2:F:The housing decline was, on average, moderately less than1standard deviation (of the distribution across
+18:458:36425:12:12:72:540:190:10:g_d0_f2:10:g_d0_f2:F:all states) larger in partially bound states than in fully bound states. If my estimation sample consisted of
+18:459:36534:12:12:72:540:178:10:g_d0_f2:10:g_d0_f2:F:a skill group that exhibited the same sensitivity to housing demand, Charles, Hurst, and Notowidigdo’s
+18:460:36636:12:12:72:539:166:10:g_d0_f2:10:g_d0_f2:F:(2013)  estimates  would  suggest  a  bias  of  just  under0.8percentage  points.  The  actual  bias  exceeds  this
+18:461:36751:12:12:71:540:154:10:g_d0_f2:10:g_d0_f2:F:because, as shown in Table3, the employment of high school dropouts ages16to30was more sensitive
+18:462:36847:12:12:72:540:142:10:g_d0_f2:10:g_d0_f2:F:to the housing crisis than the employment of other groups.  For this group, the coefficient on the housing
+18:463:36953:12:12:72:540:130:10:g_d0_f2:10:g_d0_f2:F:price index was0.28.  When I estimate this coefficient on a sample containing all individuals ages21to
+18:464:37055:12:12:72:539:118:10:g_d0_f3:10:g_d0_f2:F:55, I obtain a coefficient of0.10. The bias suggested by Charles, Hurst, and Notowidigdo’s (2013) estimate
+18:465:37161:12:11:71:540:106:10:g_d0_f2:10:g_d0_f2:F:is thus on the order of 0.8×0.280.10≈2.4.  This is roughly the difference between the estimates reported in
+18:466:37268:11:0:72:298:95:10:g_d0_f2:10:g_d0_f2:F:Table4’s column5relative to columns2through4.
+19:467:37315:0:24:89:539:708:12:g_d0_f2:12:g_d0_f2:A:Tables6and7report estimates of equation (3) on samples that have been restricted
+19:468:37395:24:24:71:540:684:12:g_d0_f2:12:g_d0_f2:B:using  the  matching  criteria  described  in  Section2.2.   The  results  in  Table6show  the
+19:469:37489:24:24:71:540:660:12:g_d0_f2:12:g_d0_f2:B:estimates obtained when imposing the4match-quality thresholds described in Table2.
+19:470:37571:24:24:72:539:636:12:g_d0_f2:12:g_d0_f2:B:In  column1the  criterion  is  that  each  match  involve  a  house  price  decline  that  differs
+19:471:37669:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:no more than $10,000between the fully and partially bound state.  In column2the cri-
+19:472:37753:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:terion is $5,000.  In column3the criterion is $20,000.  Finally, in column4the criterion
+19:473:37841:24:24:71:539:564:12:g_d0_f2:12:g_d0_f2:B:is5log points.  In all cases, the medium run estimate is between -3.7and -4.0percent-
+19:474:37926:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:age points.  Note that these specifications include no direct controls for heterogeneity in
+19:475:38017:24:24:71:539:516:12:g_d0_f2:12:g_d0_f2:B:macroeconomic conditions.21Matching on the size of states’ housing declines thus pro-
+19:476:38102:24:24:71:539:492:12:g_d0_f2:12:g_d0_f2:B:duces estimates in line with that in Table3’s column1without taking additional steps
+19:477:38186:24:23:71:290:468:12:g_d0_f2:12:g_d0_f2:B:to control for macroeconomic conditions.
+19:478:38226:23:24:89:539:445:12:g_d0_f2:12:g_d0_f2:A:Figure4presents time series tabulations of the employment rates in fully and par-
+19:479:38307:24:24:71:540:421:12:g_d0_f2:12:g_d0_f2:B:tially bound states that underlie the matching estimate from column1. Panel A presents
+19:480:38393:24:24:71:539:397:12:g_d0_f2:12:g_d0_f2:B:unadjusted tabulations while Panel B presents tabulations adjusted to smooth out sea-
+19:481:38478:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:sonal  fluctuations.   Averages,  taken  over  the  relevant  time  periods,  of  the  presented
+19:482:38574:24:24:71:540:349:12:g_d0_f2:12:g_d0_f2:B:data translate directly into the point estimates from column1of Table7.  Over the base-
+19:483:38661:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:line, low-skilled workers’ employment in fully bound states exceeded their counterparts’
+19:484:38749:24:24:71:539:301:12:g_d0_f2:12:g_d0_f2:B:employment in partially bound states by nearly5percentage points. This difference nar-
+19:485:38835:24:24:71:539:277:12:g_d0_f2:12:g_d0_f2:B:rowed to just under2percentage points over the year following July2009increase in the
+19:486:38920:24:24:71:535:253:12:g_d0_f2:12:g_d0_f2:B:federal minimum wage. It averaged roughly1percentage point over subsequent years.
+19:487:39001:24:24:89:539:229:12:g_d0_f2:12:g_d0_f2:A:The results in Table7show that the estimates from column1of Table6are largely
+19:488:39078:24:23:71:540:205:12:g_d0_f2:12:g_d0_f2:B:insensitive to incorporating the macroeconomic controls considered in Table4.  The es-
+19:489:39164:23:24:71:540:182:12:g_d0_f2:12:g_d0_f2:B:timates  range  from  -3.8percentage  points  (the  matching  sample  specification  with  no
+19:490:39257:24:48:71:540:158:12:g_d0_f2:12:g_d0_f3:B:controls)  to  -4.5percentage  points.   Taken  together,  the  results  in  Tables4,5,6,  and7
+19:491:39352:48:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:21That  is,  the  housing  price  index  is  used  in  the  matching  procedure,  but  then  excluded  from  the
+19:492:39464:15:0:72:120:95:10:g_d0_f2:10:g_d0_f2:F:regression.
+20:493:39477:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:provide evidence that the baseline result from column1of Table3is robust to taking a
+20:494:39561:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:range of approaches to controlling for heterogeneity in Great Recession’s severity across
+20:495:39650:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:states.  Appendix Tables B.2, B.3, B.4, and B.5present further estimates in which I aug-
+20:496:39738:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:ment the specifications already presented with flexible sets of time-varying controls for
+20:497:39827:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:individual-level  demographics  (specifically  in  age,  education,  race/ethnicity,  and  gen-
+20:498:39922:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:der).  Estimates of the primary coefficient of interest range from -2.8to -4.3percentage
+20:499:40010:24:48:72:484:564:12:g_d0_f2:12:g_d0_f2:B:points and are statistically distinguishable from0at the0.01level in all cases.
+20:500:40089:48:29:72:540:516:14:g_d0_f4:14:g_d0_f5:C:3.3Difference-in-Differences Estimates of Effects on Additional La-
+20:501:40156:29:33:104:237:487:14:g_d0_f5:14:g_d0_f5:C:bor Market Markets
+20:502:40174:33:24:89:540:454:12:g_d0_f2:12:g_d0_f2:A:This section reports estimates of equation (3) for additional labor market outcomes
+20:503:40257:24:24:72:540:430:12:g_d0_f2:12:g_d0_f2:B:of potential interest.  While most of these outcomes are available in the full CPS, weekly
+20:504:40347:24:24:72:540:406:12:g_d0_f2:12:g_d0_f2:B:earnings are only available in the smaller samples associated with the CPS-MORG. Table
+20:505:40433:24:23:72:540:382:12:g_d0_f3:12:g_d0_f2:B:8reports estimates for margins including full time employment, part time employment,
+20:506:40517:23:24:72:540:359:12:g_d0_f2:12:g_d0_f2:B:hours, and hours conditional on employment using the full CPS. Column1repeats the
+20:507:40598:24:24:72:539:335:12:g_d0_f2:12:g_d0_f2:B:baseline  estimate.   Columns2and3show  that  there  was,  on  net,  no  change  in  the
+20:508:40686:24:24:72:540:311:12:g_d0_f2:12:g_d0_f2:B:number of part time jobs and a significant decline in the number of full time jobs held
+20:509:40773:24:24:72:415:287:12:g_d0_f2:12:g_d0_f2:B:by individuals ages16to30with less than a high school degree.
+20:510:40834:24:24:89:540:263:12:g_d0_f2:12:g_d0_f2:A:Columns4and5shed further light on the results in columns2and3.  The average
+20:511:40909:24:24:72:540:239:12:g_d0_f2:12:g_d0_f2:B:decline  in  hours,  including  both  extensive  and  intensive  margin  adjustments,  was  be-
+20:512:41004:24:24:72:539:215:12:g_d0_f2:12:g_d0_f2:B:tween1.7and1.8hours per week.  This1.8hour decline accounts for an economically
+20:513:41083:24:24:72:540:191:12:g_d0_f2:12:g_d0_f2:B:substantial17percent of this skill group’s labor input at baseline.  Column5shows that
+20:514:41169:24:24:72:539:167:12:g_d0_f2:12:g_d0_f2:B:the decline in weekly hours conditional employment was roughly1.3over the long run.
+20:515:41252:24:24:72:540:143:12:g_d0_f2:12:g_d0_f2:B:The net stability of the number of part time jobs thus appears to reflect two offsetting
+20:516:41340:24:23:72:540:119:12:g_d0_f2:12:g_d0_f2:B:effects.  The first effect is a conversion of some full time work into part time work.  The
+20:517:41431:23:0:72:406:96:12:g_d0_f2:12:g_d0_f2:B:second effect is the elimination of some initially part time jobs.
+21:518:41499:0:24:89:539:708:12:g_d0_f2:12:g_d0_f2:A:Table9reports  estimates  that  use  the  CPS-MORG  to  supplement  the  estimates  of
+21:519:41585:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:effects on employment, hours, and hours conditional on employment with estimates of
+21:520:41668:24:24:72:539:660:12:g_d0_f2:12:g_d0_f2:B:effects on weekly earnings. Columns1through3show that the overall estimated effects
+21:521:41751:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:on  employment,  hours,  and  hours  conditional  on  employment  are  quite  similar  when
+21:522:41842:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:comparing the full CPS and the CPS-MORG. Column4reports a $15decline in weekly
+21:523:41920:24:24:72:539:588:12:g_d0_f2:12:g_d0_f2:B:earnings over the short run and a $13decline over the medium run.22These declines
+21:524:42001:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:follow directly from the overall reductions in hours. At the new minimum wage of $7.25,
+21:525:42088:24:24:72:539:540:12:g_d0_f2:12:g_d0_f2:B:a decline of1.8hours per week translates directly into a $13decline in weekly earnings.
+21:526:42175:24:24:89:539:516:12:g_d0_f2:12:g_d0_f2:A:The minimum wage increases’ mechanical effect on earnings offsets much less of the
+21:527:42257:24:24:71:540:492:12:g_d0_f2:12:g_d0_f3:B:decline due to reductions in hours than one might initially expect.  Recall from Table1
+21:528:42344:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:that the differential bite of this period’s minimum wage increases on the lowest-skilled
+21:529:42432:23:24:71:540:445:12:g_d0_f2:12:g_d0_f2:B:workers  in  fully  bound  states  relative  to  partially  bound  states  was  only5percentage
+21:530:42527:24:24:71:539:421:12:g_d0_f2:12:g_d0_f2:B:points.  This largely reflects three factors.  First,  individuals in this skill group worked
+21:531:42620:24:24:71:539:397:12:g_d0_f2:12:g_d0_f2:B:in just under40percent of months at baseline.  Second, during months when these in-
+21:532:42703:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:dividuals were employed, their self-reported wage rates were between the old and new
+21:533:42787:24:24:71:539:349:12:g_d0_f2:12:g_d0_f2:B:federal minimum roughly one third of the time.  Finally, some of the instances when in-
+21:534:42874:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:dividuals report wage rates in the affected range involve employment in uncovered jobs
+21:535:42960:24:24:71:539:301:12:g_d0_f2:12:g_d0_f2:B:(e.g., workers who receive tips). The minimum wage increases’ mechanical contribution
+21:536:43045:24:28:71:443:277:12:g_d0_f2:9:g_d0_f3:B:to this group’s average weekly earnings turns out to be less than $3.23
+21:537:43116:28:15:85:539:249:8:g_d0_f3:10:g_d0_f2:F:22These estimates relate quite closely to estimates from Clemens and Wither (2014b).  The prior paper
+21:538:43217:15:12:72:540:234:10:g_d0_f2:10:g_d0_f2:F:analyzes a more concentrated sample of low wage workers. That paper’s estimates of employment effects
+21:539:43318:12:12:72:540:222:10:g_d0_f2:10:g_d0_f2:F:and  declines  in  average  earnings  are  correspondingly  moderately  larger.    For  example,  Clemens  and
+21:540:43428:12:12:72:539:210:10:g_d0_f2:10:g_d0_f2:F:Wither (2014b) estimate a $90short run decline in average monthly earnings, which is moderately larger
+21:541:43530:12:12:72:539:198:10:g_d0_f2:10:g_d0_f2:F:the monthly decline implied by a $15decline in weekly earnings. Clemens (Forthcoming) further analyzes
+21:542:43632:12:12:72:539:186:10:g_d0_f2:10:g_d0_f2:F:the implications of Clemens and Wither’s (2014b) estimates for payroll tax revenues and spending through
+21:543:43736:12:16:72:248:174:10:g_d0_f2:10:g_d0_f2:F:a variety of public assistance programs.
+21:544:43776:16:16:85:540:158:8:g_d0_f3:10:g_d0_f2:F:23The steps in this calculation are as follows.  First, the minimum wage increases’ differential bite on
+21:545:43880:16:12:72:540:142:10:g_d0_f2:10:g_d0_f2:F:this skill group’s wage distribution, in fully bound states relative to partially bound states, was5percent
+21:546:43987:12:12:72:539:130:10:g_d0_f2:10:g_d0_f2:F:of survey months as reported in Table1.  Second, this skill group’s average hours of work when working
+21:547:44089:12:12:72:540:118:10:g_d0_f2:10:g_d0_f2:F:is27.  The product of these values would thus yield a $2.84increase in weekly earnings in fully bound
+21:548:44190:12:11:71:540:106:10:g_d0_f2:10:g_d0_f3:F:states  relative  to  partially  bound  states  if  the  minimum  wage’s  bite  in  each  instance  was  the  full  $2.10
+21:549:44311:11:0:71:539:95:10:g_d0_f2:10:g_d0_f2:F:increase  from  $5.15to  $7.25.   This  is  an  upper  bound  because  affected  workers’  initial  wage  rates  were
+22:550:44430:0:30:72:540:708:14:g_d0_f4:14:g_d0_f5:C:3.4Estimates Utilizing Continuous Measures of the Minimum Wage’s
+22:551:44494:30:32:104:278:678:14:g_d0_f5:14:g_d0_f5:C:“Bite” across Skill Groups
+22:552:44520:32:24:89:540:646:12:g_d0_f2:12:g_d0_f2:A:Table10presents estimates of equation (4), in which identification comes from varia-
+22:553:44604:24:24:72:540:622:12:g_d0_f2:12:g_d0_f2:B:tion in the minimum wage’s bite across skill groups. Informally speaking, the procedure
+22:554:44691:24:24:72:540:598:12:g_d0_f2:12:g_d0_f2:B:involves stacking the skill groups on which separate difference-in-differences regressions
+22:555:44781:24:24:72:539:574:12:g_d0_f2:12:g_d0_f2:B:were  estimated  for  Table3.   Columns1and2allow  for  variation  across  the9age-by-
+22:556:44867:24:24:71:540:550:12:g_d0_f2:12:g_d0_f3:B:education skill-groups described in Table1. The38,556observations are the product of9
+22:557:44952:24:24:71:540:526:12:g_d0_f2:12:g_d0_f2:B:skill groups by84months by51states. Columns3and4allow for20distinct skill groups
+22:558:45032:24:24:72:540:502:12:g_d0_f2:12:g_d0_f2:B:defined by four education groups (separating those with some college from those with
+22:559:45116:24:24:72:539:478:12:g_d0_f2:12:g_d0_f2:B:a  BA  or  more  education)  and  five10-year  age  bands.  The85,680observations  are  the
+22:560:45207:24:24:72:540:454:12:g_d0_f2:12:g_d0_f2:B:product of20skill groups by84months by51states.  In columns1and3the housing
+22:561:45282:24:24:72:540:430:12:g_d0_f2:12:g_d0_f2:B:price index is the only macroeconomic control, while columns2and4control further for
+22:562:45366:24:23:72:540:406:12:g_d0_f2:12:g_d0_f2:B:the state employment rate, state personal income per capita, and stimulus spending per
+22:563:45452:23:24:72:540:383:12:g_d0_f2:12:g_d0_f2:B:capita.  Because skill groups were differentially affected by the housing crisis, as found
+22:564:45542:24:24:72:540:359:12:g_d0_f2:12:g_d0_f2:B:by Charles,  Hurst,  and Notowidigdo (2013) and shown directly in Table3,  I allow the
+22:565:45628:24:24:72:483:335:12:g_d0_f2:9:g_d0_f3:B:relationship between these controls and employment to vary across groups.24
+22:566:45703:24:24:89:539:311:12:g_d0_f2:12:g_d0_f2:A:The estimates in Table10provide evidence that, comparing changes in fully bound
+22:567:45782:24:24:72:540:287:12:g_d0_f2:12:g_d0_f2:B:states to partially bound states, skill groups more intensively affected by minimum wage
+22:568:45870:24:24:72:540:263:12:g_d0_f2:12:g_d0_f2:B:increases experienced greater declines in employment. The estimates, which fall between
+22:569:45957:24:24:72:539:239:12:g_d0_f2:12:g_d0_f2:B:-0.7and -0.8, relate to the estimates from Table3as follows. Recall Table3’s finding that,
+22:570:46047:24:24:72:540:215:12:g_d0_f2:12:g_d0_f2:B:comparing fully bound states to partially bound states, employment in the lowest skill
+22:571:46133:24:24:72:540:191:12:g_d0_f2:12:g_d0_f2:B:group  declined  by3.7percentage  points.   Recall  further  that  employment  among  the
+22:572:46222:24:41:72:539:167:12:g_d0_f2:12:g_d0_f2:B:highest  skill  groups  was  essentially  unchanged.   Next,  recall  Table1’s  presentation  of
+22:573:46318:41:16:72:366:126:10:g_d0_f2:10:g_d0_f2:F:often between $5.15and $7.25rather than pinned directly to $5.15.
+22:574:46383:16:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:24Note that if these controls were not allowed to vary across groups they would be perfectly collinear
+22:575:46485:15:0:71:262:95:10:g_d0_f2:10:g_d0_f2:F:with a complete set of state by time effects.
+23:576:46532:0:24:72:539:708:12:g_d0_f2:12:g_d0_f2:B:the measure of “bite.”  Table1showed that “bite” is around4percentage points higher
+23:577:46615:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:among workers in the lowest skill group than in the highest skill groups.  Multiplying
+23:578:46701:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:this4percentage point difference by -0.75,  which is the average of the point estimates
+23:579:46788:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:from  Table10,  yields3percentage  points.   This  returns  us  to  the  estimated  decline  in
+23:580:46883:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:employment among individuals ages16to30with less than a high school degree net
+23:581:46961:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:of  employment  changes  among  higher  skilled  groups  (that  is,  just  over3percentage
+23:582:47051:24:24:72:112:564:12:g_d0_f2:12:g_d0_f2:B:points).
+23:583:47059:24:24:89:539:540:12:g_d0_f2:12:g_d0_f2:A:Tables11and12explore the robustness of estimates of equation (4) to restricting the
+23:584:47142:24:24:72:539:516:12:g_d0_f2:12:g_d0_f2:B:sample using the matching criteria discussed in Section2.2.  Table11presents estimates
+23:585:47228:24:24:72:539:492:12:g_d0_f2:12:g_d0_f2:B:that allow the minimum wage’s bite to vary across9skill groups, while Table12allows
+23:586:47311:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:for20skill groups.  As with the estimates reported in Table7,  none of these specifica-
+23:587:47398:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:tions contain direct controls for heterogeneity in macroeconomic conditions. The results
+23:588:47486:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:thus reveal that the estimated employment effects are robust to applying the matching
+23:589:47571:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:strategy  in  lieu  of  controlling  directly  for  heterogeneity  in  the  severity  of  the  housing
+23:590:47673:24:48:72:171:373:12:g_d0_f2:12:g_d0_f2:B:crisis across states.
+23:591:47694:48:32:72:382:325:14:g_d0_f4:14:g_d0_f5:C:3.5Graphical Presentation of Finer Dynamics
+23:592:47737:32:24:89:539:293:12:g_d0_f2:12:g_d0_f2:A:The  panels  of  Figure5display  graphical  presentations  of  regression  estimates  that
+23:593:47827:24:24:72:540:269:12:g_d0_f2:12:g_d0_f2:B:allow the effects of differentially binding minimum wage increases to unfold with finer
+23:594:47914:24:24:72:539:245:12:g_d0_f2:12:g_d0_f2:B:dynamics over time.  Panels A and B present estimates of equation (3), while Panels C
+23:595:47999:24:24:72:539:221:12:g_d0_f2:12:g_d0_f2:B:and D present estimates of equation (4). In the underlying regressions, each time period
+23:596:48087:24:24:72:540:197:12:g_d0_f2:12:g_d0_f2:B:is a6month interval. Periodp=0, relative to which subsequent changes are estimated,
+23:597:48170:24:24:72:272:173:12:g_d0_f2:12:g_d0_f2:B:extends from January to June of2006.
+23:598:48206:24:24:89:540:149:12:g_d0_f2:12:g_d0_f2:A:In Panel A, the marker associated with July through December of2008reveals that
+23:599:48285:24:24:72:540:125:12:g_d0_f2:12:g_d0_f2:B:there was little net differential change in the employment of low-skilled workers in fully
+23:600:48375:24:0:72:539:101:12:g_d0_f2:12:g_d0_f2:B:and partially bound states between the base period and the second half of2008. There is
+24:601:48464:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:weak evidence of initial employment declines between July2008and June2009, which
+24:602:48544:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:follows  the  second  increment  of  the  increase  in  the  federal  minimum  wage.   A3to
+24:603:48635:24:24:72:540:660:12:g_d0_f3:12:g_d0_f2:B:4percentage  point  decline  in  low-skilled  workers’  employment  in  fully  bound  states
+24:604:48727:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:relative  to  partially  bound  states  emerges  in  all  periods  following  July2009.   Panel  B
+24:605:48825:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:shows that these declines were not experienced among higher-skilled worker groups, as
+24:606:48910:24:24:72:225:588:12:g_d0_f2:12:g_d0_f2:B:shown previously in Table3.
+24:607:48937:24:24:89:539:564:12:g_d0_f2:12:g_d0_f2:A:In  Panels  C  and  D,  the  estimates  again  reveal  that  there  was  little  net  differential
+24:608:49035:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:change  in  the  employment  of  low-skilled  workers  (relative  to  higher-skilled  workers)
+24:609:49129:24:24:72:539:516:12:g_d0_f2:12:g_d0_f2:B:in  fully  and  partially  bound  states  from  the  base  period  through  the  end  of2007.   In
+24:610:49227:24:24:72:539:492:12:g_d0_f2:12:g_d0_f2:B:these  specifications,  initial  evidence  of  employment  declines  emerges  during2008,  as
+24:611:49320:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:the  federal  minimum  wage  rose  from  $5.85to  $6.55.   Estimated  employment  declines
+24:612:49410:23:24:72:531:445:12:g_d0_f2:12:g_d0_f2:B:hold steady through2009,2010, and2011, possibly moderating near the sample’s end.
+24:613:49491:24:24:89:540:421:12:g_d0_f2:12:g_d0_f2:A:The dynamics displayed in Figures4and5provide evidence on two points deserv-
+24:614:49567:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:ing  emphasis.   First,  the  figures  provide  evidence  against  the  concern  that  differential
+24:615:49666:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:declines in employment among low-skilled workers predated the legislation of this pe-
+24:616:49751:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:riod’s  differentially  binding  minimum  wage  increases.   That  is,  they  provide  evidence
+24:617:49846:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:against  potentially  confounding  pre-existing  trends.  Second,  they  reveal  economically
+24:618:49939:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:relevant  dynamics  in  the  legislation’s  effects.   Specifically,  they  provide  evidence  that
+24:619:50038:24:24:72:540:277:12:g_d0_f2:12:g_d0_f3:B:these minimum wage increases’ effects began to unfold around the time of the July2008
+24:620:50123:24:24:71:343:253:12:g_d0_f2:12:g_d0_f2:B:implementation of the increase from $5.85to $6.55.
+24:621:50173:24:24:89:539:229:12:g_d0_f2:12:g_d0_f2:A:The observed dynamics are of precisely the sort that can be partially misattributed in
+24:622:50259:24:23:71:539:205:12:g_d0_f2:12:g_d0_f2:B:difference-in-differences specifications with state-specific trends.  In the minimum wage
+24:623:50348:23:24:71:540:182:12:g_d0_f2:12:g_d0_f2:B:context,  simulations  from  Meer  and  West  (2013)  demonstrate  the  downward  bias  that
+24:624:50440:24:24:71:539:158:12:g_d0_f2:12:g_d0_f2:B:can arise in such specifications.  Studies in settings ranging from divorce law (Wolfers,
+24:625:50529:24:24:71:540:134:12:g_d0_f3:12:g_d0_f2:B:2006) to school desegregation (Baum-Snow and Lutz,2011) have similarly demonstrated
+24:626:50612:24:0:71:539:110:12:g_d0_f2:12:g_d0_f2:B:that state-trends specifications can bias estimates when a policy change’s effects unfold
+25:627:50703:0:48:72:240:708:12:g_d0_f2:9:g_d0_f3:B:with these kinds of dynamics.25
+25:628:50734:48:33:72:458:660:14:g_d0_f4:14:g_d0_f5:C:3.6Estimates Excluding the Very Lowest Skilled Workers
+25:629:50788:33:24:89:539:627:12:g_d0_f2:12:g_d0_f2:A:An  important  question  for  assessing  the  aggregate  employment  effects  of  this  pe-
+25:630:50879:24:23:72:542:603:12:g_d0_f2:12:g_d0_f2:B:riod’s minimum wage increases is whether employment declined among low-wage work-
+25:631:50960:23:24:72:539:580:12:g_d0_f2:12:g_d0_f2:B:ers in groups other than the very lowest skilled.  Recall from Table3that, across broad
+25:632:51047:24:24:72:540:556:12:g_d0_f2:12:g_d0_f2:B:skill  groups,  estimated  employment  declines  increased  monotonically  in  the  extent  of
+25:633:51141:24:24:72:539:532:12:g_d0_f2:12:g_d0_f2:B:the minimum wage’s bite.  Estimates for skill groups outside of individuals ages16to
+25:634:51225:24:24:71:540:508:12:g_d0_f3:12:g_d0_f2:B:30with less than a high school degree were negative, but small and statistically indis-
+25:635:51312:24:24:71:539:484:12:g_d0_f2:12:g_d0_f2:B:tinguishable from0.  While the point estimates were small, it is important to note that
+25:636:51399:24:24:71:539:460:12:g_d0_f2:12:g_d0_f2:B:the  pools  of  individuals  in  these  higher-skilled  groups  are  much  larger  than  the  pool
+25:637:51497:24:24:71:539:436:12:g_d0_f2:12:g_d0_f2:B:of  individuals  ages16to30with  less  than  a  high  school  education.   Small  effects  on
+25:638:51590:24:24:71:539:412:12:g_d0_f2:12:g_d0_f2:B:large skill groups can thus significantly alter one’s assessment of aggregate employment
+25:639:51678:24:24:71:115:388:12:g_d0_f2:12:g_d0_f2:B:impacts.
+25:640:51686:24:24:89:539:364:12:g_d0_f2:12:g_d0_f2:A:I explore the presence of employment declines among low-wage workers in higher
+25:641:51764:24:23:71:539:340:12:g_d0_f2:12:g_d0_f2:B:skilled demographic groups by estimating equation (4) on samples that exclude the very
+25:642:51850:23:24:71:540:317:12:g_d0_f2:12:g_d0_f2:B:lowest  skilled  workers.   Specifically,  in  both  the9-group  and20-group  specifications  I
+25:643:51945:24:24:71:539:293:12:g_d0_f2:12:g_d0_f2:B:drop  groups  for  which  the  minimum  wage’s  estimated  bite  is  greater  than0.05.26I
+25:644:52035:24:24:71:540:269:12:g_d0_f2:12:g_d0_f2:B:present the estimates in Table13. The estimates are negative, but vary nontrivially across
+25:645:52125:24:24:71:539:245:12:g_d0_f2:12:g_d0_f2:B:specifications  and  are  generally  not  statistically  distinguishable  from0.   The  presence
+25:646:52221:24:24:71:539:221:12:g_d0_f2:12:g_d0_f2:B:and  magnitudes  of  effects  within  these  groups  is  thus  uncertain.   The  negative  point
+25:647:52317:24:43:71:539:197:12:g_d0_f2:12:g_d0_f2:B:estimates suggest that estimates of aggregate employment impacts that assume effects
+25:648:52401:43:16:85:540:154:8:g_d0_f3:10:g_d0_f2:F:25Controlling directly for state-specific trends can, of course, be appropriate in many circumstances. It is
+25:649:52509:16:12:72:540:138:10:g_d0_f2:10:g_d0_f2:F:also worth noting that fully saturated triple difference models are not sensitive to this form of specification
+25:650:52620:12:16:72:450:126:10:g_d0_f2:10:g_d0_f2:F:error because state-specific trends are subsumed by state by time period fixed effects.
+25:651:52707:16:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:26In the9-group specification this drops individuals ages16to30with less than a high school education.
+25:652:52809:15:0:72:537:95:10:g_d0_f2:10:g_d0_f2:F:In the20-group specification this drops individuals aged16to25with less than a high school education.
+26:653:52912:0:56:72:325:708:12:g_d0_f2:12:g_d0_f2:B:on these populations are0will be conservative.
+26:654:52958:56:37:72:546:652:17:g_d0_f4:17:g_d0_f5:C:4Implications for Changes in Aggregate Employment Over
+26:655:53012:37:36:97:254:615:17:g_d0_f5:17:g_d0_f5:C:the Great Recession
+26:656:53031:36:24:89:540:579:12:g_d0_f2:12:g_d0_f3:A:Between2006and2012, the average effective minimum wage rose from $5.82to $7.55
+26:657:53109:24:24:72:540:555:12:g_d0_f2:12:g_d0_f2:B:across  the  United  States.   Over  this  same  time  period,  the  employment  to  population
+26:658:53204:24:24:72:539:531:12:g_d0_f2:12:g_d0_f2:B:ratio among adults ages16to64declined by nearly5percentage points.  Clemens and
+26:659:53283:24:24:71:539:507:12:g_d0_f2:12:g_d0_f2:B:Wither (2014a) more fully characterize the demographic and cross-country dimensions of
+26:660:53369:24:24:71:539:483:12:g_d0_f2:12:g_d0_f2:B:this period’s employment declines.  The demographic and cross-country data highlight
+26:661:53453:24:24:71:539:459:12:g_d0_f2:12:g_d0_f2:B:that  U.S.-specific  developments  associated  with  low-skilled  workers  are  an  important
+26:662:53546:24:24:71:271:435:12:g_d0_f2:12:g_d0_f2:B:dimension of the employment slump.
+26:663:53580:24:24:89:539:411:12:g_d0_f2:12:g_d0_f2:A:Sustained  U.S.  employment  declines  were  particularly  dramatic  for  low-education,
+26:664:53668:24:23:71:539:387:12:g_d0_f2:12:g_d0_f2:B:low-experience  individuals.   Figure6’s  Panels  A  and  B  provide  detailed  looks  at  the
+26:665:53762:23:24:71:539:364:12:g_d0_f2:12:g_d0_f2:B:evolution of the employment and wage distributions of individuals ages16to30with
+26:666:53842:24:24:71:540:340:12:g_d0_f2:12:g_d0_f2:B:less than a high school education between2002and2014.  Between2006and2010, this
+26:667:53921:24:24:72:540:316:12:g_d0_f2:12:g_d0_f3:B:skill group’s employment rate declined by13percentage points, from40percent to27
+26:668:54001:24:24:71:539:292:12:g_d0_f2:12:g_d0_f2:B:percent. It remained down by13percentage points through2014.27Panel A reveals that
+26:669:54083:24:24:72:540:268:12:g_d0_f2:12:g_d0_f2:B:the  profile  of  this  group’s  real  wage  distribution  either  shifted  down  or  was  stagnant
+26:670:54182:24:24:72:540:244:12:g_d0_f2:12:g_d0_f2:B:from2002to2006, from2006to2010, and again from2010to2014. These developments
+26:671:54258:24:24:72:540:220:12:g_d0_f2:12:g_d0_f2:B:are broadly consistent with findings from recent work on the labor market implications
+26:672:54344:24:24:72:540:196:12:g_d0_f2:12:g_d0_f2:B:of  technological  advance  (Beaudry,  Green,  and  Sand,2013;  Autor,  Dorn,  and  Hanson,
+26:673:54435:24:24:72:540:172:12:g_d0_f2:12:g_d0_f2:B:Forthcoming)  and  the  composition  of  recent  trade  growth  (Autor,  Dorn,  and  Hanson,
+26:674:54527:24:26:72:539:148:12:g_d0_f3:12:g_d0_f2:B:2013).  For present purposes, these developments’ most relevant implication is that the
+26:675:54614:26:16:85:540:122:8:g_d0_f3:10:g_d0_f2:F:27This does not primarily reflect a shift between employment and schooling among teenage dropouts.
+26:676:54712:16:11:72:539:106:10:g_d0_f2:10:g_d0_f2:F:The employment rate among dropouts ages20to25similarly declined by13percentage points between
+26:677:54805:11:0:72:384:95:10:g_d0_f3:10:g_d0_f2:F:2006and2010and remained down by13percentage points as of2014.
+27:678:54868:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:minimum  wage  has  become  more  binding  on  the  distribution  of  low-education,  low-
+27:679:54958:24:24:72:540:684:12:g_d0_f2:12:g_d0_f3:B:experience individuals’ wages over time.  The federal minimum wage’s rise from $5.15
+27:680:55042:24:24:72:539:660:12:g_d0_f2:12:g_d0_f2:B:to $7.25occurred over the same time period as a20percent downward shift in the profile
+27:681:55128:24:24:71:272:636:12:g_d0_f2:12:g_d0_f2:B:of this group’s real wage distribution.
+27:682:55167:24:24:89:539:612:12:g_d0_f2:12:g_d0_f2:A:Table3contains the full set of results underlying my extrapolation to aggregate em-
+27:683:55250:24:24:71:539:588:12:g_d0_f2:12:g_d0_f2:B:ployments effects. Recall that the table presents estimates of equation (3) on sub-samples
+27:684:55340:24:24:71:540:564:12:g_d0_f2:12:g_d0_f2:B:that fully partition the population ages16to64. Column1reports a3.7percentage point
+27:685:55423:24:24:71:540:540:12:g_d0_f2:12:g_d0_f3:B:decline among individuals ages16to30with less than a high school degree. Columns2
+27:686:55504:24:24:71:539:516:12:g_d0_f2:12:g_d0_f2:B:and3report near0estimates for groups with higher levels of experience and education.
+27:687:55588:24:24:89:540:492:12:g_d0_f2:12:g_d0_f2:A:Extrapolating the estimates from Table3requires sensitivity to the fact that the em-
+27:688:55672:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:ployment effects of minimum wage increases may be non-linear, likely with larger effects
+27:689:55760:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:for final increments than for initial increases. Further, a given nominal value of the min-
+27:690:55851:24:24:71:539:421:12:g_d0_f2:12:g_d0_f2:B:imum wage has more purchasing power, and hence likely more bite, in the typical fully
+27:691:55936:24:24:71:540:397:12:g_d0_f2:12:g_d0_f2:B:bound  state  relative  to  the  typical  partially  bound  state.   Figure3showed  that  fully
+27:692:56031:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:bound states have relatively low incomes and housing costs, perhaps making it unsur-
+27:693:56115:24:24:71:539:349:12:g_d0_f2:12:g_d0_f2:B:prising that they had not voluntarily brought their minimums to the levels seen in the
+27:694:56201:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:partially  bound  states.   Indeed,  the  July2009increase  in  the  federal  minimum  wage
+27:695:56292:24:24:71:539:301:12:g_d0_f2:12:g_d0_f2:B:brought  the  minimum  to  nearly50percent  of  the  median  wage  in  many  fully  bound
+27:696:56381:24:24:71:495:277:12:g_d0_f2:12:g_d0_f2:B:states, and did so during the weakest national labor market of the last75years.
+27:697:56460:24:24:89:539:253:12:g_d0_f2:12:g_d0_f2:A:The extrapolation proceeds as follows. My in-sample estimate is that the differentially
+27:698:56547:24:24:71:539:229:12:g_d0_f2:12:g_d0_f2:B:binding portion of this period’s minimum wage increases reduced the employment of
+27:699:56628:24:23:71:539:205:12:g_d0_f2:12:g_d0_f2:B:individuals ages16to30with less than a high school education by3.7percentage points
+27:700:56711:23:24:71:539:182:12:g_d0_f2:12:g_d0_f2:B:(9percent).   The95percent  confidence  interval  on  this  estimate  extends  from1.5to
+27:701:56799:24:24:71:539:158:12:g_d0_f3:12:g_d0_f2:B:5.9percentage points.  Applying the relevant sample weights, this group accounted for
+27:702:56884:24:24:71:540:134:12:g_d0_f3:12:g_d0_f2:B:8.4percent of the full population ages16to64.  A3.7percentage point decline in this
+27:703:56967:24:0:71:539:110:12:g_d0_f2:12:g_d0_f2:B:group’s employment thus implies an 8.4×0.037=0.31 percentage point decline in fully
+28:704:57052:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:bound states’ employment to population ratios. The confidence interval on this estimate
+28:705:57139:24:24:72:540:684:12:g_d0_f2:12:g_d0_f3:B:extends from0.13to0.49percentage point.  Because fully bound states account for41
+28:706:57220:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:percent of the full U.S. population, the purely in-sample decline in employment implies
+28:707:57307:24:24:72:539:636:12:g_d0_f2:12:g_d0_f2:B:a 0.31×0.41≈0.13 percentage point decline in the national, working-age employment
+28:708:57388:24:24:72:175:612:12:g_d0_f2:12:g_d0_f2:B:to population ratio.
+28:709:57408:24:24:89:540:588:12:g_d0_f2:12:g_d0_f2:A:The0.13percentage point decline in the national employment to population ratio is
+28:710:57489:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:a  purely  in-sample  estimate  for  the  differential  change  in  the  minimum  wage  in  fully
+28:711:57586:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:bound states relative to partially bound states.  That is, it is an estimate of the effect of
+28:712:57679:24:24:72:539:516:12:g_d0_f2:12:g_d0_f2:B:a $0.62differential increase in the minimum wage in states that account for41percent
+28:713:57763:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:of  the  working  age  population.   On  average  across  all  states,  the  effective  minimum
+28:714:57858:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:wage  rose  by  $1.72over  this  time  period.   A  purely  linear  extrapolation,  both  within
+28:715:57954:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:and  across  states,  thus  implies  an  aggregate  effect  of  roughly  0.13×1.41×1.72.62≈0.86
+28:716:58049:24:24:72:164:421:12:g_d0_f2:12:g_d0_f2:B:percentage point.
+28:717:58066:24:24:89:539:397:12:g_d0_f2:12:g_d0_f2:A:My baseline extrapolation splits the difference between a purely linear extrapolation
+28:718:58151:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:and failing to extrapolate at all.  I estimate that this period’s minimum wage increases
+28:719:58239:24:24:72:539:349:12:g_d0_f2:12:g_d0_f2:B:account for a0.49percentage point decline in the employment to population ratio among
+28:720:58324:24:24:72:539:325:12:g_d0_f6:12:g_d0_f2:B:allindividuals ages16to64. This estimate is derived solely from estimated employment
+28:721:58408:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:declines  among  individuals  ages16to30with  less  than  a  high  school  degree,  as  my
+28:722:58498:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:estimates of effects on low-wage workers within older and more educated demographic
+28:723:58581:24:35:72:540:253:12:g_d0_f2:12:g_d0_f2:B:groups  were  relatively  imprecise.28Among  individuals  ages16to30with  less  than
+28:724:58665:35:16:85:539:218:8:g_d0_f3:10:g_d0_f2:F:28In Figure6’s panels C and D, the2010and2014wage distributions provide additional,  suggestive
+28:725:58760:16:12:71:539:202:10:g_d0_f2:10:g_d0_f2:F:evidence that this period’s minimum wage increases reduced employment among the lowest-skilled in-
+28:726:58858:12:12:71:539:190:10:g_d0_f2:10:g_d0_f2:F:dividuals in slightly higher observable skill groups.  The panels plot wage distributions for high school
+28:727:58963:12:12:71:539:178:10:g_d0_f2:10:g_d0_f2:F:dropouts between ages31and45. The relevant feature of this group’s real wages, as shown in Panel C, is
+28:728:59065:12:12:71:540:166:10:g_d0_f2:10:g_d0_f3:F:that the2010and2014distributions were indistinguishable from one another at all wage rates above $7.25
+28:729:59167:12:12:71:540:154:10:g_d0_f2:10:g_d0_f2:F:in  nominal  terms.   That  is,  the  real  wages  of  individuals  in  percentiles1through55of  this  skill  group
+28:730:59282:12:12:71:539:142:10:g_d0_f2:10:g_d0_f2:F:were essentially the same in2014as in2010. Between2010and2014, the real value of the minimum wage
+28:731:59379:12:12:71:540:130:10:g_d0_f2:10:g_d0_f2:F:declined by8percent, from $7.25to $6.68in2010dollars. In2014, the figure reveals that employment had
+28:732:59479:12:12:71:539:118:10:g_d0_f2:10:g_d0_f2:F:emerged at wage rates between $7.25and $6.68(again in2010dollars).  Erosion of the minimum wage’s
+28:733:59576:12:11:71:540:106:10:g_d0_f2:10:g_d0_f2:F:real value corresponded with a3percentage point, or5percent, increase in this skill group’s employment
+28:734:59678:11:0:71:539:95:10:g_d0_f2:10:g_d0_f2:F:rate.  The absence of shifts elsewhere in the wage distribution is suggestive that, as the minimum wage’s
+29:735:59785:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:a  high  school  degree,  I  estimate  that  this  period’s  minimum  wage  increases  reduced
+29:736:59879:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:employment by5.6percentage points.  This amounts to43percent of the decline in this
+29:737:59962:24:56:72:420:660:12:g_d0_f2:12:g_d0_f2:B:group’s employment from2006to2010, as illustrated in Figure6.
+29:738:60023:56:37:72:282:604:17:g_d0_f4:17:g_d0_f5:C:5Concluding Discussion
+29:739:60045:37:24:89:539:567:12:g_d0_f2:12:g_d0_f2:A:I  conclude  by  briefly  recapitulating  the  key  elements  and  findings  of  this  paper’s
+29:740:60139:24:24:72:540:543:12:g_d0_f2:12:g_d0_f2:B:analysis.   I  analyze  the  effects  of  recent  federal  minimum  wage  increases,  which  were
+29:741:60236:24:24:72:540:519:12:g_d0_f2:12:g_d0_f2:B:differentially binding across states.  Because these minimum wage increases took effect
+29:742:60323:24:24:72:540:495:12:g_d0_f2:12:g_d0_f2:B:during the Great Recession, I document heterogeneity in the housing decline’s severity
+29:743:60409:24:24:72:540:471:12:g_d0_f2:12:g_d0_f2:B:and implement several approaches to accounting for its influence on low-skilled workers’
+29:744:60497:24:23:72:142:447:12:g_d0_f2:12:g_d0_f2:B:employment.
+29:745:60508:23:24:89:539:424:12:g_d0_f2:12:g_d0_f2:A:My analysis of this period’s minimum wage increases’ effects has the following struc-
+29:746:60593:24:24:72:540:400:12:g_d0_f2:12:g_d0_f2:B:ture.   First,  I  take  a  straightforward  approach  to  controlling  for  heterogeneity  in  the
+29:747:60692:24:24:72:540:376:12:g_d0_f2:12:g_d0_f2:B:housing decline’s severity within a standard difference-in-differences specification.  Sec-
+29:748:60783:24:24:72:540:352:12:g_d0_f2:12:g_d0_f2:B:ond, I show that controlling for additional macroeconomic covariates has little effect on
+29:749:60872:24:24:72:540:328:12:g_d0_f2:12:g_d0_f2:B:the  initial  estimates.   Third,  I  show  that  the  bias  associated  with  making  no  attempt
+29:750:60970:24:24:72:540:304:12:g_d0_f2:12:g_d0_f2:B:to control for heterogeneity in the housing decline’s severity is of a magnitude in line
+29:751:61058:24:24:72:539:280:12:g_d0_f2:12:g_d0_f2:B:with what one can infer from Charles, Hurst, and Notowidigdo’s (2013) analysis of the
+29:752:61143:24:24:72:540:256:12:g_d0_f2:12:g_d0_f2:B:housing  boom  and  bust.   Fourth,  I  show  that  the  results  are  robust  to  implementing
+29:753:61238:24:24:72:540:232:12:g_d0_f2:12:g_d0_f2:B:triple-difference specifications that make relatively extensive use of variation in the min-
+29:754:61330:24:23:72:540:208:12:g_d0_f2:12:g_d0_f2:B:imum  wage’s  relevance  across  skill  groups.   Finally,  I  show  that  the  results  from  both
+29:755:61429:23:31:72:540:185:12:g_d0_f2:12:g_d0_f2:B:the difference-in-differences and triple-difference specifications are robust to accounting
+29:756:61520:31:12:72:540:154:10:g_d0_f2:10:g_d0_f2:F:real value eroded, we are observing movement down a labor demand curve.  A similar picture emerges
+29:757:61618:12:12:72:540:142:10:g_d0_f2:10:g_d0_f2:F:among  individuals  ages16to30with  exactly  a  high  school  degree.   By  contrast,  employment  among
+29:758:61722:12:12:72:540:130:10:g_d0_f2:10:g_d0_f2:F:individuals ages16to30with less than a high school degree did not recover between2010and2014.  As
+29:759:61819:12:12:72:540:118:10:g_d0_f2:10:g_d0_f2:F:shown in Panel A, this group’s real wage distribution shifted modestly down between2010and2014, such
+29:760:61919:12:11:71:540:106:10:g_d0_f2:10:g_d0_f2:F:that its nominal wage distribution (and with it the $7.25minimum wage rate’s bite) had not shifted (Panel
+29:761:62024:11:0:71:537:95:10:g_d0_f2:10:g_d0_f2:F:B). The $7.25minimum wage was thus similarly binding on this group’s wage distribution in both years.
+30:762:62127:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:for  heterogeneity  in  the  housing  decline’s  severity  using  a  standard  matching  proce-
+30:763:62222:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:dure.  The evidence supports the view that this period’s minimum wage increases had
+30:764:62305:24:0:72:417:660:12:g_d0_f2:12:g_d0_f2:B:significant, negative effects on low-skilled workers’ employment.
+31:765:62372:0:37:72:158:707:17:g_d0_f5:17:g_d0_f5:C:References
+31:766:62382:37:24:72:540:670:12:g_d0_f2:12:g_d0_f2:B:Aaronson,  D.,  E.  French,andI.  Sorkin(2013):  “Firm  Dynamics  and  the  Minimum
+31:767:62465:24:32:83:534:646:12:g_d0_f2:12:g_d0_f2:A:Wage: A Putty-Clay Approach,” Discussion paper, Federal Reserve Bank of Chicago.
+31:768:62545:32:24:71:540:614:12:g_d0_f2:12:g_d0_f3:B:Aaronson,  S.,  T.  Cajner,  B.  Fallick,  F.  Galbis-Reig,  C.  L.  Smith,andW.  Wascher
+31:769:62634:24:23:83:539:590:12:g_d0_f2:12:g_d0_f2:A:(2014):  “Labor Force Participation:  Recent Developments and Future Prospects,” Dis-
+31:770:62719:23:33:83:351:567:12:g_d0_f2:12:g_d0_f2:A:cussion paper, Federal Reserve Bank of Cleveland.
+31:771:62768:33:24:72:539:534:12:g_d0_f2:12:g_d0_f2:B:Acemoglu,  D.,andJ.-S.  Pischke(1999):   “Minimum  wages  and  on-the-job  training,”
+31:772:62853:24:32:83:222:510:12:g_d0_f6:12:g_d0_f2:A:NBER Working Paper7184.
+31:773:62876:32:24:72:539:478:12:g_d0_f2:12:g_d0_f2:B:Addison, J. T., M. L. Blackburn,andC. D. Cotti(2013):  “Minimum wage increases in
+31:774:62957:24:32:83:390:454:12:g_d0_f2:12:g_d0_f2:A:a recessionary environment,”Labour Economics,23,30–39.
+31:775:63011:32:24:72:540:422:12:g_d0_f2:12:g_d0_f2:B:Arulampalam, W., A. L. Booth,andM. L. Bryan(2004):  “Training and the new mini-
+31:776:63090:24:32:83:374:398:12:g_d0_f2:12:g_d0_f2:A:mum wage*,”The Economic Journal,114(494), C87–C94.
+31:777:63140:32:24:72:539:366:12:g_d0_f2:12:g_d0_f2:B:Autor, D. H., D. Dorn,andG. H. Hanson(2013):  “The China Syndrome:  Local Labor
+31:778:63219:24:23:83:540:342:12:g_d0_f2:12:g_d0_f2:A:Market Effects of Import Competition in the United States,”American Economic Review,
+31:779:63303:23:33:83:166:319:12:g_d0_f3:12:g_d0_f2:A:103(6),2121–68.
+31:780:63318:33:23:115:540:286:12:g_d0_f2:12:g_d0_f2:A:(Forthcoming):  “Untangling Trade and Technology:  Evidence from Local Labor
+31:781:63394:23:33:83:249:263:12:g_d0_f2:12:g_d0_f2:A:Markets,”The Economic Journal.
+31:782:63424:33:23:72:539:230:12:g_d0_f2:12:g_d0_f2:B:Baker,  S.  R.,  N.  Bloom,andS.  J.  Davis(2015):  “Measuring  Economic  Policy  Uncer-
+31:783:63512:23:33:83:270:207:12:g_d0_f2:12:g_d0_f2:A:tainty,”NBER Working Paper21633.
+31:784:63544:33:23:71:539:174:12:g_d0_f2:12:g_d0_f2:B:Baum-Snow, N.,andB. F. Lutz(2011): “School desegregation, school choice and changes
+31:785:63627:23:33:83:523:151:12:g_d0_f2:12:g_d0_f2:A:in residential location patterns by race,”The American economic review,101(7),3019.
+31:786:63710:33:23:72:539:118:12:g_d0_f2:12:g_d0_f2:B:Beaudry, P., D. A. Green,andB. M. Sand(2013): “The great reversal in the demand for
+31:787:63793:23:0:83:368:95:12:g_d0_f2:12:g_d0_f2:A:skill and cognitive tasks,”NBER Working Paper18901.
+32:788:63846:0:34:72:519:708:12:g_d0_f2:12:g_d0_f2:B:Bloom, N. (2009): “The Impact of Uncertainty Shocks,”Econometrica,77(3),623–685.
+32:789:63926:34:24:72:540:674:12:g_d0_f2:12:g_d0_f2:B:Burkhauser, R. V.,andJ. J. Sabia(2007): “The Effectiveness of Minimum Wage Increases
+32:790:64010:24:24:83:540:650:12:g_d0_f2:12:g_d0_f2:A:in Reducing Poverty:  Past, Present, and Future,”Contemporary Economic Policy,25(2),
+32:791:64094:24:34:83:128:626:12:g_d0_f3:12:g_d0_f2:A:262–281.
+32:792:64102:34:24:71:540:592:12:g_d0_f2:12:g_d0_f2:B:Card, D. (1992a): “Do Minimum Wages Reduce Employment? A Case Study of Califor-
+32:793:64181:24:34:83:418:568:12:g_d0_f2:12:g_d0_f2:A:nia,1987-89,”Industrial and Labor Relations Review,46(1),38–54.
+32:794:64244:34:24:113:540:534:12:g_d0_f2:12:g_d0_f2:A:(1992b): “Using Regional Variation in Wages to Measure the Effects of the Federal
+32:795:64325:24:34:83:441:510:12:g_d0_f2:12:g_d0_f2:A:Minimum Wage,”Industrial and Labor Relations Review,46(1),22–37.
+32:796:64389:34:23:72:539:476:12:g_d0_f2:12:g_d0_f2:B:Card, D.,andA. B. Krueger(1994): “Minimum Wages and Employment: A Case Study
+32:797:64465:23:24:83:540:453:12:g_d0_f2:12:g_d0_f2:A:of the Fast-Food Industry in New Jersey and Pennsylvania,”American Economic Review,
+32:798:64548:24:34:83:112:429:12:g_d0_f3:12:g_d0_f2:A:84(4).
+32:799:64554:34:24:72:539:395:12:g_d0_f2:12:g_d0_f2:B:Charles,  K.  K.,  E.  Hurst,andM.  J.  Notowidigdo(2013):   “Manufacturing  decline,
+32:800:64639:24:34:83:444:371:12:g_d0_f2:12:g_d0_f2:A:housing booms, and non-employment,”NBER Working Paper18949.
+32:801:64698:34:24:72:540:337:12:g_d0_f2:12:g_d0_f2:B:Chodorow-Reich, G., L. Feiveson, Z. Liscow,andW. G. Woolston(2012): “Does state
+32:802:64777:24:24:83:539:313:12:g_d0_f2:12:g_d0_f2:A:fiscal  relief  during  recessions  increase  employment?   Evidence  from  the  American
+32:803:64866:24:24:83:540:289:12:g_d0_f2:12:g_d0_f2:A:Recovery  and  Reinvestment  Act,”American Economic Journal: Economic Policy,4(3),
+32:804:64948:24:34:83:128:265:12:g_d0_f3:12:g_d0_f2:A:118–145.
+32:805:64956:34:24:72:539:231:12:g_d0_f2:12:g_d0_f2:B:Clemens,  J.  (Forthcoming):  “Redistribution  through  Minimum  Wage  Regulation:  An
+32:806:65042:24:23:83:539:207:12:g_d0_f2:12:g_d0_f6:A:Analysis of Program Linkages and Budgetary Spillovers,” inTax Policy and the Economy,
+32:807:65127:23:34:83:380:184:12:g_d0_f6:12:g_d0_f2:A:Volume30, ed. by J. Brown. University of Chicago Press.
+32:808:65182:34:24:72:540:150:12:g_d0_f2:12:g_d0_f2:B:Clemens, J.,andM. Wither(2014a):  “Just the Facts:  Demographic and Cross-Country
+32:809:65263:24:24:83:539:126:12:g_d0_f2:12:g_d0_f2:A:Dimensions of the Employment Slump,” Discussion paper, University of California at
+32:810:65345:24:0:83:140:102:12:g_d0_f2:12:g_d0_f2:A:San Diego.
+33:811:65357:0:24:118:540:708:12:g_d0_f2:12:g_d0_f2:A:(2014b):   “The  Minimum  Wage  and  the  Great  Recession:   Evidence  of  Effects
+33:812:65440:24:24:83:540:684:12:g_d0_f2:12:g_d0_f6:A:on the Employment and Income Trajectories of Low-Skilled Workers,”NBER Working
+33:813:65518:24:34:83:147:660:12:g_d0_f6:12:g_d0_f2:A:Paper20724.
+33:814:65529:34:24:72:540:626:12:g_d0_f2:12:g_d0_f2:B:Cochran, W. G.,andD. B. Rubin(1973):  “Controlling bias in observational studies:  A
+33:815:65613:24:34:83:450:602:12:g_d0_f2:12:g_d0_f2:A:review,”Sankhy ̄a: The Indian Journal of Statistics, Series A, pp.417–446.
+33:816:65687:34:24:72:540:568:12:g_d0_f2:12:g_d0_f2:B:Crump,  R. K.,  V. J. Hotz,  G. W. Imbens,andO. A. Mitnik(2006):  “Moving the Goal-
+33:817:65770:24:24:83:539:544:12:g_d0_f2:12:g_d0_f2:A:posts: Addressing Limited Overlap in the Estimation of Average Treatment Effects by
+33:818:65853:24:34:83:435:520:12:g_d0_f2:12:g_d0_f2:A:Changing the Estimand,”NBER Technical Working Paper330, (330).
+33:819:65915:34:24:71:539:486:12:g_d0_f2:12:g_d0_f2:B:Currie, J.,andB. C. Fallick(1996): “The Minimum Wage and the Employment of Youth
+33:820:65995:24:33:83:439:462:12:g_d0_f2:12:g_d0_f2:A:Evidence from the NLSY,”Journal of Human Resources, pp.404–428.
+33:821:66058:33:24:71:539:429:12:g_d0_f2:12:g_d0_f2:B:DeLong,  J.  B.,andL.  H.  Summers(2012):   “Fiscal  Policy  in  a  Depressed  Economy,”
+33:822:66146:24:34:83:348:405:12:g_d0_f6:12:g_d0_f2:A:Brookings Papers on Economic Activity, pp.233–297.
+33:823:66196:34:24:71:540:371:12:g_d0_f2:12:g_d0_f2:B:Dolado, J., F. Kramarz, S. Machin, A. Manning, D. Margolis, C. Teulings, G. Saint-
+33:824:66278:24:24:83:540:347:12:g_d0_f2:12:g_d0_f2:A:Paul,andM.  Keen(1996):  “The  economic  impact  of  minimum  wages  in  Europe,”
+33:825:66359:24:34:83:234:323:12:g_d0_f6:12:g_d0_f2:A:Economic policy, pp.319–372.
+33:826:66387:34:24:72:539:289:12:g_d0_f2:12:g_d0_f2:B:Dube, A., T. W. Lester,andM. Reich(2010):  “Minimum wage effects across state bor-
+33:827:66469:24:24:83:540:265:12:g_d0_f2:12:g_d0_f2:A:ders: Estimates using contiguous counties,”The review of economics and statistics,92(4),
+33:828:66557:24:34:83:128:241:12:g_d0_f3:12:g_d0_f2:A:945–964.
+33:829:66565:34:23:72:540:207:12:g_d0_f2:12:g_d0_f2:B:Even, W. E.,andD. A. Macpherson(2010):  “The Teen Employment Crisis:  The Effects
+33:830:66646:23:24:83:540:184:12:g_d0_f2:12:g_d0_f6:A:of the2007-2009Federal Minimum Wage Increases on Teen Employment,”Employment
+33:831:66722:24:34:83:257:160:12:g_d0_f6:12:g_d0_f2:A:Policies Institute, Washington, DC.
+33:832:66757:34:0:71:539:126:12:g_d0_f2:12:g_d0_f2:B:Farber, H. S.,andR. Valletta(2013):  “Extended unemployment insurance and unem-
+34:833:66838:0:24:83:539:708:12:g_d0_f2:12:g_d0_f6:A:ployment duration in the Great Recession:  The US experience,”FRBSF Working Paper
+34:834:66919:24:34:83:126:684:12:g_d0_f12:12:g_d0_f2:A:2013-09.
+34:835:66927:34:24:72:539:650:12:g_d0_f2:12:g_d0_f2:B:Flood,  S.,  M. King,  S. Ruggles,andJ. R. Warren(2015):  “Integrated Public Use Mi-
+34:836:67011:24:24:83:540:626:12:g_d0_f2:12:g_d0_f2:A:crodata Series, Current Population Survey: Version4.0. [Machine-readable database],”
+34:837:67095:24:33:83:215:602:12:g_d0_f2:12:g_d0_f2:A:University of Minnesota.
+34:838:67119:33:24:72:539:569:12:g_d0_f2:12:g_d0_f2:B:Gittings, R. K.,andI. M. Schmutte(2014):  “Getting Handcuffs on an Octopus:  Mini-
+34:839:67201:24:34:83:540:545:12:g_d0_f2:12:g_d0_f2:A:mum Wages, Employment, and Turnover,”Employment, and Turnover (January30,2014).
+34:840:67280:34:24:72:540:511:12:g_d0_f2:12:g_d0_f2:B:Giuliano,  L.  (2013):   “Minimum  wage  effects  on  employment,  substitution,  and  the
+34:841:67370:24:24:83:540:487:12:g_d0_f2:12:g_d0_f2:A:teenage labor supply: evidence from personnel data,”Journal of Labor Economics,31(1),
+34:842:67455:24:33:83:128:463:12:g_d0_f3:12:g_d0_f2:A:155–194.
+34:843:67463:33:24:72:539:430:12:g_d0_f2:12:g_d0_f2:B:Hagedorn,  M.,  F.  Karahan,  I.  Manovskii,andK.  Mitman(2013):  “Unemployment
+34:844:67542:24:24:83:540:406:12:g_d0_f2:12:g_d0_f6:A:benefits and unemployment in the great recession:  the role of macro effects,”NBER
+34:845:67624:24:34:83:193:382:12:g_d0_f6:12:g_d0_f2:A:Working Paper19499.
+34:846:67643:34:24:72:539:348:12:g_d0_f2:12:g_d0_f2:B:Hall, R. E. (2014): “Quantifying the Lasting Harm to the US Economy from the Financial
+34:847:67729:24:33:83:539:324:12:g_d0_f2:12:g_d0_f2:A:Crisis,” inNBER Macroeconomics Annual2014, Volume29. University of Chicago Press.
+34:848:67810:33:24:72:539:291:12:g_d0_f2:12:g_d0_f2:B:Hirsch,  B.  T.,  B.  E.  Kaufman,andT.  Zelenska(2015):  “Minimum  wage  channels  of
+34:849:67896:24:34:83:510:267:12:g_d0_f2:12:g_d0_f2:A:adjustment,”Industrial Relations: A Journal of Economy and Society,54(2),199–239.
+34:850:67977:34:23:72:539:233:12:g_d0_f2:12:g_d0_f2:B:Hoffman,  S.  D.,andC.  Ke(2010):  “Employment  Effects  of  the2009Minimum  Wage
+34:851:68058:23:34:83:527:210:12:g_d0_f2:12:g_d0_f2:A:Increase: Evidence from State Comparisons of At-Risk Workers,” Discussion paper.
+34:852:68138:34:24:72:539:176:12:g_d0_f2:12:g_d0_f2:B:Hoynes, H. W.,andD. W. Schanzenbach(2012): “Work incentives and the food stamp
+34:853:68216:24:34:83:363:152:12:g_d0_f2:12:g_d0_f2:A:program,”Journal of Public Economics,96(1),151–162.
+34:854:68267:34:23:72:539:118:12:g_d0_f2:12:g_d0_f2:B:Katz, L. F.,andA. B. Krueger(1992):  “The Effect of the Minimum Wage on the Fast-
+34:855:68348:23:0:83:413:95:12:g_d0_f2:12:g_d0_f2:A:Food Industry,”Industrial and Labor Relations Review, pp.6–21.
+35:856:68412:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:Kim, T.,andL. J. Taylor(1995):  “The employment effect in retail trade of California’s
+35:857:68498:24:34:83:540:684:12:g_d0_f3:12:g_d0_f2:A:1988minimum wage increase,”Journal of Business & Economic Statistics,13(2),175–182.
+35:858:68581:34:24:72:540:650:12:g_d0_f2:12:g_d0_f2:B:Meer, J.,andJ. West(2013): “Effects of the Minimum Wage on Employment Dynamics,”
+35:859:68661:24:33:83:228:626:12:g_d0_f6:12:g_d0_f2:A:NBER Working Paper19262.
+35:860:68685:33:24:118:539:593:12:g_d0_f2:12:g_d0_f2:A:(Forthcoming):   “Effects  of  the  Minimum  Wage  on  Employment  Dynamics,”
+35:861:68762:24:34:83:226:569:12:g_d0_f6:12:g_d0_f2:A:Journal of Human Resources.
+35:862:68789:34:24:71:540:535:12:g_d0_f2:12:g_d0_f2:B:Mincer,  J.,andL.  S.  Leighton(1980):  “Effect  of  minimum  wages  on  human  capital
+35:863:68876:24:33:83:281:511:12:g_d0_f2:12:g_d0_f2:A:formation,”NBER Working Paper441.
+35:864:68909:33:24:71:539:478:12:g_d0_f2:12:g_d0_f2:B:Mulligan, C. B. (2012): “Do welfare policies matter for labor market aggregates? Quan-
+35:865:68995:24:34:83:475:454:12:g_d0_f2:12:g_d0_f2:A:tifying safety net work incentives since2007,”NBER Working Paper18088.
+35:866:69065:34:24:115:539:420:12:g_d0_f2:12:g_d0_f6:A:(2014):  “The ACA: Some Unpleasant Welfare Arithmetic,”NBER Working Paper
+35:867:69138:24:33:83:116:396:12:g_d0_f12:12:g_d0_f2:A:20020.
+35:868:69144:33:24:72:540:363:12:g_d0_f2:12:g_d0_f2:B:Neumark, D., J. I. Salas,andW. Wascher(2014):  “Revisiting the Minimum WageEm-
+35:869:69222:24:24:83:540:339:12:g_d0_f2:12:g_d0_f6:A:ployment  Debate:  Throwing  Out  the  Baby  with  the  Bathwater?,”Industrial & Labor
+35:870:69308:24:34:83:284:315:12:g_d0_f6:12:g_d0_f2:A:Relations Review,67(3suppl),608–648.
+35:871:69344:34:24:72:540:281:12:g_d0_f2:12:g_d0_f2:B:Neumark,  D.,andW.  Wascher(1995):  “The  Effects  of  Minimum  Wages  on  Teenage
+35:872:69426:24:24:83:540:257:12:g_d0_f2:12:g_d0_f6:A:Employment and Enrollment:  Evidence from Matched CPS Surveys,”NBER Working
+35:873:69501:24:33:83:180:233:12:g_d0_f6:12:g_d0_f2:A:Paper5092, (5092).
+35:874:69519:33:24:117:540:200:12:g_d0_f2:12:g_d0_f2:A:(2000):  “Minimum  wages  and  employment:  A  case  study  of  the  fast-food  in-
+35:875:69602:24:24:83:539:176:12:g_d0_f2:12:g_d0_f2:A:dustry  in  New  Jersey  and  Pennsylvania:  Comment,”American Economic Review,  pp.
+35:876:69686:24:34:83:140:152:12:g_d0_f3:12:g_d0_f2:A:1362–1396.
+35:877:69696:34:23:117:540:118:12:g_d0_f2:12:g_d0_f2:A:(2001):  “Minimum  Wages  and  Training  Revisited,”Journal of Labor Economics,
+35:878:69775:23:0:83:160:95:12:g_d0_f3:12:g_d0_f2:A:19(3),563–595.
+36:879:69791:0:24:72:539:708:12:g_d0_f2:12:g_d0_f6:B:Rosen, S. (1972):  “Learning and experience in the labor market,”Journal of Human Re-
+36:880:69876:24:34:83:191:684:12:g_d0_f6:12:g_d0_f2:A:sources, pp.326–342.
+36:881:69896:34:24:72:539:650:12:g_d0_f2:12:g_d0_f2:B:Rothstein, J. (2011): “Unemployment insurance and job search in the Great Recession,”
+36:882:69981:24:34:83:228:626:12:g_d0_f6:12:g_d0_f2:A:NBER Working Paper17534.
+36:883:70005:34:24:72:540:592:12:g_d0_f2:12:g_d0_f3:B:Sabia, J. J.,andR. V. Burkhauser(2010):  “Minimum wages and poverty:  will a $9.50
+36:884:70087:24:24:83:540:568:12:g_d0_f2:12:g_d0_f2:A:Federal  minimum  wage  really  help  the  working  poor?,”Southern Economic Journal,
+36:885:70172:24:34:83:160:544:12:g_d0_f3:12:g_d0_f2:A:76(3),592–623.
+36:886:70186:34:24:72:540:510:12:g_d0_f2:12:g_d0_f2:B:Sabia, J. J., R. V. Burkhauser,andB. Hansen(2012): “Are the Effects of Minimum Wage
+36:887:70269:24:24:83:540:486:12:g_d0_f2:12:g_d0_f6:A:Increases Always Small-New Evidence from a Case Study of New York State,”Indus.
+36:888:70348:24:33:83:209:462:12:g_d0_f6:12:g_d0_f2:A:& Lab. Rel. Rev.,65,350.
+36:889:70372:33:24:72:540:429:12:g_d0_f2:12:g_d0_f2:B:Shoag, D.,andS. Veuger(2014):  “Uncertainty and the Geography of the Great Reces-
+36:890:70453:24:34:83:315:405:12:g_d0_f2:12:g_d0_f2:A:sion,”AEI Economics Working Paper2013-05.
+36:891:70494:34:24:72:539:371:12:g_d0_f2:12:g_d0_f6:B:Sorkin, I. (2015): “Are there long-run effects of the minimum wage?,”Review of economic
+36:892:70581:24:34:83:213:347:12:g_d0_f6:12:g_d0_f2:A:dynamics,18(2),306–333.
+36:893:70604:34:24:72:540:313:12:g_d0_f2:12:g_d0_f2:B:Wolfers, J. (2006): “Did Unilateral Divorce Laws Raise Divorce Rates? A Reconciliation
+36:894:70690:24:0:83:419:289:12:g_d0_f2:12:g_d0_f2:A:and New Results,”American Economic Review,96(5),1802–1820.
+37:895:70750:0:255:231:380:707:17:g_d0_f5:17:g_d0_f5:C:Figures and Tables
+37:896:70768:255:12:72:472:452:12:g_d0_f2:11:g_d0_f5:B:Figure1:States Bound by the2008and2009Federal Minimum Wage Increases:
+37:897:70837:12:12:72:539:440:10:g_d0_f2:10:g_d0_f2:F:The map differentiates states on the basis of whether they were fully or partially bound by the July2007,
+37:898:70942:12:12:72:540:428:10:g_d0_f3:10:g_d0_f3:F:2008and2009increases in the federal minimum wage. I define states as fully bound if their January2008
+37:899:71043:12:12:72:539:416:10:g_d0_f2:10:g_d0_f2:F:minimum wage, as reported by the Bureau of Labor Statistics (BLS), was less than $6.55. Such states were
+37:900:71147:12:12:72:540:404:10:g_d0_f2:10:g_d0_f3:F:at least partially bound by the July2008increase in the federal minimum and fully bound by the July2009
+37:901:71250:12:13:72:196:392:10:g_d0_f2:10:g_d0_f2:F:increase from $6.55to $7.25.
+38:902:71324:13:22:140:467:379:0:Helvetica:0:Helvetica:F:Jan,05Jan,07Jan,09Jan,11Jan,13
+38:903:71354:22:14:214:441:357:0:Helvetica:0:Helvetica:F:States Bound by Federal Minimum Wage Increases
+38:904:71400:14:0:214:459:343:0:Helvetica:0:Helvetica:F:States Not Bound by Federal Minimum Wage Increases
+38:905:71450:0:284:212:428:588:0:Helvetica:0:Helvetica:F:Average Effective Minimum Wages
+38:906:71481:284:12:72:491:304:12:g_d0_f2:11:g_d0_f5:B:Figure2:Evolution of the Average Minimum Wage in Bound and Unbound States:
+38:907:71555:12:12:72:540:292:10:g_d0_f2:10:g_d0_f2:F:As in the previous figure, states are defined as fully bound if they were reported by the Bureau of Labor
+38:908:71660:12:12:72:539:280:10:g_d0_f2:10:g_d0_f2:F:Statistics (BLS) to have had a minimum wage less than $6.55in January2008.  Such states were at least
+38:909:71761:12:12:71:540:268:10:g_d0_f2:10:g_d0_f2:F:partially bound by the July2008increase in the federal minimum and fully bound by the July2009increase
+38:910:71863:12:12:71:540:256:10:g_d0_f2:10:g_d0_f2:F:from  $6.55to  $7.25.   Effective  monthly  minimum  wage  data  were  taken  from  the  detailed  replication
+38:911:71973:12:12:71:539:244:10:g_d0_f2:10:g_d0_f2:F:materials associated with Meer and West (Forthcoming). Within each group of states, the average effective
+38:912:72078:12:12:71:540:232:10:g_d0_f2:10:g_d0_f2:F:minimum wage is weighted by state population.  The dashed vertical line indicates the May2007passage
+38:913:72178:12:12:71:540:220:10:g_d0_f2:10:g_d0_f3:F:of the federal minimum wage increases, while the solid vertical line indicates the timing of the July2009
+38:914:72283:12:46:71:320:208:10:g_d0_f2:10:g_d0_f2:F:implementation of the final increase from $6.55to $7.25.
+39:915:72341:46:10:216:108:162:0:Helvetica:0:Helvetica:F:036912
+39:916:72347:10:0:211:330:152:0:Helvetica:0:Helvetica:F:BLS Unemployment Rate
+39:917:72428:0:11:219:108:431:0:Helvetica:0:Helvetica:F:5457606366
+39:918:72438:11:257:210:328:420:0:Helvetica:0:Helvetica:F:BLS Employment to Pop.
+39:919:72521:257:11:403:297:163:0:Helvetica:0:Helvetica:F:200300400500600
+39:920:72536:11:0:379:473:152:0:Helvetica:0:Helvetica:F:Housing Price Index
+39:921:72613:0:12:400:288:432:0:Helvetica:0:Helvetica:F:4044485256
+39:922:72623:12:0:397:527:420:0:Helvetica:0:Helvetica:F:Per Cap. Real GDP (1000s)
+40:923:73752:0:27:175:436:709:12:g_d0_f5:12:g_d0_f5:C:Tabulations from the Baseline Matched Sample
+40:924:73796:27:193:286:325:682:12:g_d0_f6:12:g_d0_f6:C:Panel A
+40:925:73836:193:16:168:425:489:0:g_d0_f13:0:g_d0_f13:F:Jan,06Jan,08Jan,10Jan,12
+40:926:73860:16:11:238:403:473:0:g_d0_f13:0:g_d0_f13:F:States Bound by Federal Minimum Wage Increases
+40:927:73906:11:0:238:416:462:0:g_d0_f13:0:g_d0_f13:F:States Not Bound by Federal Minimum Wage Increases
+40:928:73956:0:10:230:398:662:0:g_d0_f13:0:g_d0_f13:F:Employment among Young Dropouts:
+40:929:73988:10:219:217:411:652:0:g_d0_f13:0:g_d0_f13:F:States Matched on Size of Housing Decline
+40:930:74029:219:193:287:325:433:12:g_d0_f6:12:g_d0_f6:C:Panel B
+40:931:74069:193:16:170:427:240:0:g_d0_f13:0:g_d0_f13:F:Jan,06Jan,08Jan,10Jan,12
+40:932:74093:16:11:239:404:224:0:g_d0_f13:0:g_d0_f13:F:States Bound by Federal Minimum Wage Increases
+40:933:74139:11:0:239:417:213:0:g_d0_f13:0:g_d0_f13:F:States Not Bound by Federal Minimum Wage Increases
+40:934:74189:0:10:232:400:413:0:g_d0_f13:0:g_d0_f13:F:Employment among Young Dropouts:
+40:935:74221:10:10:219:413:403:0:g_d0_f13:0:g_d0_f13:F:States Matched on Size of Housing Decline
+40:936:74262:10:208:267:365:393:0:g_d0_f13:0:g_d0_f13:F:(Seasonally Adjusted)
+40:937:74283:208:12:72:540:185:12:g_d0_f2:10:g_d0_f2:B:Figure4:Tabulations from the Baseline Matched Sample:The figure presents the means of employ-
+40:938:74376:12:12:72:539:173:10:g_d0_f2:10:g_d0_f2:F:ment  among  individuals  ages16to30with  less  than  a  high  school  education  in  bound  and  unbound
+40:939:74481:12:12:72:540:161:10:g_d0_f2:10:g_d0_f2:F:states.  The means in Panel A are unadjusted while the means in Panel B are adjusted for state-specific
+40:940:74584:12:12:72:539:149:10:g_d0_f2:10:g_d0_f2:F:seasonal effects estimated on2006samples.  The sample of states is restricted in accordance with the cri-
+40:941:74689:12:12:71:540:137:10:g_d0_f2:10:g_d0_f2:F:terion that nearest neighbor matches,  selected on the size of states’ housing declines between2006and
+40:942:74791:12:12:72:539:125:10:g_d0_f3:10:g_d0_f2:F:2012, have housing declines that differ no more than $10,000within a matched pair.  The dashed vertical
+40:943:74894:12:12:72:540:113:10:g_d0_f2:10:g_d0_f2:F:line indicates the May2007passage of the federal minimum wage increases, while the solid vertical lines
+40:944:74997:12:12:72:540:101:10:g_d0_f2:10:g_d0_f2:F:indicate the implementation of the July2007, July2008, and July2009increases in the federal minimum
+40:945:75096:12:0:72:98:89:10:g_d0_f2:10:g_d0_f2:F:wage.
+41:946:75144:0:7:231:124:161:0:g_d0_f13:0:g_d0_f13:F:-0.08-0.040.00.04
+41:947:75161:7:0:207:292:154:0:g_d0_f13:0:g_d0_f13:F:Change in Employment Prob.
+41:948:75331:0:7:231:133:431:0:g_d0_f13:0:g_d0_f13:F:-0.06-0.030.00.03
+41:949:75348:7:263:207:292:424:0:g_d0_f13:0:g_d0_f13:F:Change in Employment Prob.
+41:950:75510:263:7:432:321:161:0:g_d0_f13:0:g_d0_f13:F:-1.6-0.80.00.8
+41:951:75524:7:0:410:495:154:0:g_d0_f13:0:g_d0_f13:F:Change in Employment Prob.
+41:952:75665:0:8:432:321:433:0:g_d0_f13:0:g_d0_f13:F:-1.6-0.80.00.8
+41:953:75679:8:264:410:495:425:0:g_d0_f13:0:g_d0_f13:F:Change in Employment Prob.
+42:954:77014:264:7:207:106:161:0:g_d0_f14:0:g_d0_f14:F:0481216
+42:955:77021:7:0:177:230:154:0:g_d0_f14:0:g_d0_f14:F:Real Hourly Wage
+42:956:77225:0:7:207:106:431:0:g_d0_f14:0:g_d0_f14:F:0481216
+42:957:77232:7:263:182:245:424:0:g_d0_f14:0:g_d0_f14:F:Nominal Hourly Wage
+42:958:77410:263:7:410:309:161:0:g_d0_f14:0:g_d0_f14:F:0102030
+42:959:77417:7:0:380:433:154:0:g_d0_f14:0:g_d0_f14:F:Real Hourly Wage
+42:960:77587:0:8:410:309:433:0:g_d0_f14:0:g_d0_f14:F:0102030
+42:961:77594:8:0:385:448:425:0:g_d0_f14:0:g_d0_f14:F:Nominal Hourly Wage
+44:962:80349:0:15:72:539:612:12:g_d0_f2:12:g_d0_f5:B:Table2:Summary Statistics on the Magnitudes of Declines in the FHFA Median
+44:963:80423:15:24:72:173:597:12:g_d0_f5:12:g_d0_f5:C:House Price Index
+44:964:80440:24:15:332:435:573:12:g_d0_f2:12:g_d0_f2:A:(1)(2)
+44:965:80446:15:14:296:463:558:12:g_d0_f2:12:g_d0_f2:A:Unbound States    Bound States
+44:966:80476:14:15:304:456:544:12:g_d0_f2:12:g_d0_f2:A:Median House Price Decline
+44:967:80502:15:15:326:434:529:12:g_d0_f2:12:g_d0_f2:A:(Millions of Dollars)
+44:968:80523:15:14:141:445:514:12:g_d0_f2:12:g_d0_f3:A:Full Sample0.07200.0247
+44:969:80546:14:26:319:449:500:12:g_d0_f2:12:g_d0_f2:A:(0.0666)(0.0538)
+44:970:80562:26:15:141:445:474:12:g_d0_f2:12:g_d0_f3:A:Matched within5K0.02970.0274
+44:971:80590:15:26:319:449:459:12:g_d0_f2:12:g_d0_f2:A:(0.0403)(0.0412)
+44:972:80606:26:15:141:445:433:12:g_d0_f2:12:g_d0_f3:A:Matched within10K0.03320.0297
+44:973:80635:15:26:319:449:418:12:g_d0_f2:12:g_d0_f2:A:(0.0397)(0.0429)
+44:974:80651:26:15:141:445:392:12:g_d0_f2:12:g_d0_f3:A:Matched within20K0.03850.0272
+44:975:80680:15:26:319:449:377:12:g_d0_f2:12:g_d0_f2:A:(0.0371)(0.0423)
+44:976:80696:26:14:141:445:351:12:g_d0_f2:12:g_d0_f3:A:Matched within5percent0.03690.0241
+44:977:80730:14:15:319:449:337:12:g_d0_f2:12:g_d0_f2:A:(0.0379)(0.0394)
+44:978:80746:15:16:141:434:322:12:g_d0_f2:12:g_d0_f3:A:No. of States (Full Sample)2427
+44:979:80777:16:14:72:540:306:10:g_d0_f2:10:g_d0_f2:F:Note: This table reports summary statistics on the magnitudes of declines in states’ all-transactions FHFA
+44:980:80883:14:15:72:540:292:10:g_d0_f2:10:g_d0_f2:F:median house prices indices. Changes are calculated as the average in2006minus the average in2012. Row
+44:981:80985:15:14:72:540:277:10:g_d0_f3:10:g_d0_f2:F:1reports the means of these changes for the full samples of fully and partially bound states.  Subsequent
+44:982:81090:14:15:72:540:263:10:g_d0_f2:10:g_d0_f2:F:rows report means for samples of states that have been restricted based on the quality of nearest neighbor
+44:983:81196:15:14:72:539:248:10:g_d0_f2:10:g_d0_f2:F:matches.   For  row2the  criterion  was  that  the  nearest  neighbor  match  deliver  a  match  for  which  the
+44:984:81308:14:15:71:539:234:10:g_d0_f2:10:g_d0_f2:F:difference  in  the  states’  housing  declines  was  less  than  $5,000.   Row3is  similar,  with  a  threshold  of
+44:985:81424:15:0:71:453:219:10:g_d0_f2:10:g_d0_f2:F:$10,000, row4with a threshold of $20,000, and row5with a threshold of5log points.
+45:986:81507:0:25:72:540:617:12:g_d0_f2:12:g_d0_f5:B:Table3:Effects of Binding Minimum Wage Increases across Broad Population Groups
+45:987:81586:25:14:298:443:592:12:g_d0_f2:12:g_d0_f2:A:(1)(2)(3)
+45:988:81595:14:15:278:464:578:12:g_d0_f2:12:g_d0_f2:A:Employed    Employed    Employed
+45:989:81627:15:15:144:452:563:12:g_d0_f2:12:g_d0_f3:A:Bound x Post1-0.037**-0.011-0.004
+45:990:81660:15:14:287:454:548:12:g_d0_f2:12:g_d0_f2:A:(0.011)(0.008)(0.005)
+45:991:81681:14:15:144:452:534:12:g_d0_f2:12:g_d0_f3:A:Bound x Post2-0.037**-0.005-0.000
+45:992:81714:15:14:287:454:519:12:g_d0_f2:12:g_d0_f2:A:(0.011)(0.008)(0.005)
+45:993:81735:14:14:144:454:505:12:g_d0_f2:12:g_d0_f2:A:Housing Price Index0.280*0.185***0.054**
+45:994:81775:14:15:287:454:491:12:g_d0_f2:12:g_d0_f2:A:(0.107)(0.035)(0.020)
+45:995:81796:15:15:145:460:476:12:g_d0_f6:12:g_d0_f3:C:N580,248    2,098,879   4,621,282
+45:996:81829:15:14:144:447:461:12:g_d0_f2:12:g_d0_f3:A:Mean of Dep. Var.0.380.690.78
+45:997:81858:14:15:144:455:447:12:g_d0_f2:12:g_d0_f2:A:Estimation FrameworkD-in-DD-in-DD-in-D
+45:998:81896:15:14:144:446:432:12:g_d0_f2:12:g_d0_f2:A:State and Time EffectsYesYesYes
+45:999:81927:14:16:144:462:418:12:g_d0_f2:12:g_d0_f2:A:Degree of BiteMost BiteSmall BiteLeast Bite
+45:1000:81970:16:14:72:539:402:10:g_d0_f2:10:g_d0_f2:F:Note: +, *, **, and *** indicate statistical significance at the0.10,0.05,0.01, and0.001levels respectively. The
+45:1001:82082:14:15:71:539:388:10:g_d0_f2:10:g_d0_f2:F:table reports estimates of the minimum wage’s short and medium run effects on the relevant dependent
+45:1002:82182:15:14:71:540:373:10:g_d0_f2:10:g_d0_f2:F:variables, which are named in the heading of each column.  More specifically, the estimates in row1are
+45:1003:82284:14:15:72:539:359:10:g_d0_f2:10:g_d0_f2:F:of the coefficientβp(t)from equation (3), where the relevantp(t)corresponds with the period beginning
+45:1004:82385:15:14:71:539:344:10:g_d0_f2:8:g_d0_f7:F:in  August2009and  extending  through  July2010.   The  estimates  in  row2are  of  the  coefficientβp(t)
+45:1005:82490:14:15:71:539:330:10:g_d0_f2:10:g_d0_f2:F:from  equation  (3),  where  the  relevantp(t)corresponds  with  the  period  beginning  one  year  after  the
+45:1006:82600:15:14:71:539:315:10:g_d0_f2:10:g_d0_f2:F:July2009increase  in  the  federal  minimum  wage.   Across  the  three  columns,  the  samples  comprise  all
+45:1007:82710:14:14:71:540:301:10:g_d0_f2:10:g_d0_f2:F:individuals ages16to64who were surveyed in the full Current Population Survey during the relevant
+45:1008:82807:14:15:71:539:287:10:g_d0_f2:10:g_d0_f2:F:years.  The sample in column1consists of all individuals between ages16and30with less than a high
+45:1009:82904:15:14:71:539:272:10:g_d0_f2:10:g_d0_f2:F:school  education.   The  sample  in  column2includes  all  groups  from  Table1for  which  the  differential
+45:1010:83013:14:15:72:539:258:10:g_d0_f2:10:g_d0_f2:F:bite  reported  in  column3was  between0.015and0.030.   The  sample  in  column3includes  all  groups
+45:1011:83114:15:14:72:539:243:10:g_d0_f2:10:g_d0_f2:F:from Table1for which the differential bite reported in column3was less than0.015.  The sample extends
+45:1012:83215:14:15:72:539:229:10:g_d0_f2:10:g_d0_f2:F:from January2006through December2012.  The reported standard error estimates allow for state level
+45:1013:83313:15:0:72:284:214:10:g_d0_f2:10:g_d0_f2:F:correlation clusters across the estimation errors.
+56:1014:100429:0:49:230:381:707:17:g_d0_f5:17:g_d0_f5:C:Appendix Material
+56:1015:100446:49:37:72:369:658:17:g_d0_f5:17:g_d0_f5:C:A  Comparisons with Prior Research
+56:1016:100480:37:24:89:539:621:12:g_d0_f2:12:g_d0_f2:A:This  appendix  contrasts  the  current  paper’s  analysis  with  the  analyses  in  other  re-
+56:1017:100575:24:24:72:540:597:12:g_d0_f2:12:g_d0_f2:B:cent minimum wage studies.  I focus primarily on comparisons with other analyses of
+56:1018:100658:24:24:72:540:573:12:g_d0_f2:12:g_d0_f2:B:the  minimum  wage  changes  implemented  during  the  Great  Recession.   The  empirical
+56:1019:100747:24:24:72:540:549:12:g_d0_f2:12:g_d0_f2:B:debate  over  the  longer  panel  of  state  and  federal  minimum  wage  changes,  in  which
+56:1020:100840:24:23:72:540:525:12:g_d0_f2:12:g_d0_f2:B:Dube, Lester, and Reich (2010), Neumark, Salas, and Wascher (2014), and Meer and West
+56:1021:100925:23:24:72:427:502:12:g_d0_f2:12:g_d0_f2:B:(Forthcoming) are prominent entries, is beyond this paper’s scope.
+56:1022:100991:24:24:89:539:478:12:g_d0_f2:12:g_d0_f2:A:The  current  paper’s  analysis  relates  most  closely  to  the  analysis  in  Clemens  and
+56:1023:101083:24:24:72:540:454:12:g_d0_f2:12:g_d0_f2:B:Wither (2014b). My estimation frameworks mirror those in Clemens and Wither (2014b)
+56:1024:101166:24:24:72:540:430:12:g_d0_f2:12:g_d0_f2:B:as closely as possible.  They are the repeated cross sectional analogs of the prior paper’s
+56:1025:101257:24:24:72:540:406:12:g_d0_f2:12:g_d0_f2:B:analysis  of  individual  level  panel  data.   One  purpose  of  the  current  paper  is  thus  to
+56:1026:101356:24:24:72:540:382:12:g_d0_f2:12:g_d0_f2:B:explore whether CPS data cross validate the prior paper’s analysis of SIPP samples from
+56:1027:101443:24:24:72:219:358:12:g_d0_f2:12:g_d0_f2:B:the same historical episode.
+56:1028:101471:24:24:89:539:334:12:g_d0_f2:12:g_d0_f2:A:Several  differences  between  the  CPS  and  SIPP  data  environments  are  worth  dis-
+56:1029:101559:24:24:72:540:310:12:g_d0_f2:12:g_d0_f2:B:cussing.   The  CPS  enjoys  advantages  with  regards  to  data  quality  and  the  time  frame
+56:1030:101655:24:24:72:540:286:12:g_d0_f2:12:g_d0_f2:B:over which I am able to construct analysis samples. A first point worth noting is that the
+56:1031:101745:24:23:72:540:262:12:g_d0_f2:12:g_d0_f2:B:CPS underlies national statistical agencies’ best estimates of the unemployment rate at
+56:1032:101832:23:24:72:540:239:12:g_d0_f2:12:g_d0_f2:B:both the state and national levels.  As noted above, this paper’s analysis samples cover
+56:1033:101920:24:24:72:540:215:12:g_d0_f2:12:g_d0_f2:B:the full universe of CPS respondents ages16to64. In-sample employment changes thus
+56:1034:102002:24:24:71:540:191:12:g_d0_f2:12:g_d0_f2:B:map  directly  into  national  employment  statistics.   Second,  the2008SIPP  panel  begins
+56:1035:102094:24:24:71:539:167:12:g_d0_f2:12:g_d0_f2:B:during the summer of2008, limiting the analysis in Clemens and Wither (2014b) to an
+56:1036:102177:24:33:71:540:143:12:g_d0_f2:12:g_d0_f2:B:interval  spanning  the  July2009increase  in  the  federal  minimum  wage.29By  contrast,
+56:1037:102267:33:15:85:539:110:8:g_d0_f3:10:g_d0_f2:F:29A  related  point  is  that  Clemens  and  Wither’s  (2014b)  approach  to  identifying  affected  individuals
+56:1038:102379:15:0:72:540:95:10:g_d0_f2:10:g_d0_f2:F:relies  on  observed  wage  rates,  and  thus  generates  samples  of  individuals  who  were  employed  for  at
+57:1039:102493:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:the CPS allows me to initiate samples in the years preceding the May2007legislation
+57:1040:102576:24:24:71:539:684:12:g_d0_f2:12:g_d0_f2:B:behind this period’s minimum wage increases.  This makes it possible to investigate the
+57:1041:102663:24:24:71:435:660:12:g_d0_f2:12:g_d0_f2:B:full transitional dynamics associated with the law’s implementation.
+57:1042:102731:24:24:89:539:636:12:g_d0_f2:12:g_d0_f2:A:The SIPP, by contrast, has advantages with respect to the identification of low-skilled
+57:1043:102818:24:24:71:539:612:12:g_d0_f2:12:g_d0_f2:B:workers  and  the  outcomes  it  is  able  to  track.   Monthly  panel  data  makes  it  possible
+57:1044:102915:24:24:71:539:588:12:g_d0_f2:12:g_d0_f2:B:to  identify  affected  workers  with  greater  precision  than  the  demographic  and  indus-
+57:1045:103009:24:24:71:539:564:12:g_d0_f2:12:g_d0_f2:B:trial  proxies  used  regularly  in  the  literature.  Specifically,  the  analysis  in  Clemens  and
+57:1046:103110:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:Wither (2014b) uses12months of wage and employment information,  extending from
+57:1047:103189:24:24:71:540:516:12:g_d0_f2:12:g_d0_f2:B:August2008through July2009, to identify workers whose wage rates would be affected
+57:1048:103271:24:24:71:540:492:12:g_d0_f2:12:g_d0_f2:B:by  the  July2009minimum  wage  increase.   The  analysis  shows  that  such  individuals
+57:1049:103360:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:were  roughly3times  as  likely  to  report  wage  rates  between  the  old  and  new  federal
+57:1050:103454:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:minimums as were teenagers.  With regards to outcomes, the2008SIPP panel makes it
+57:1051:103535:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:possible to track the evolution of an individual’s employment and earnings for3years
+57:1052:103619:24:24:71:346:397:12:g_d0_f2:9:g_d0_f3:B:following the July2009minimum wage increases.30
+57:1053:103666:24:24:89:540:373:12:g_d0_f2:12:g_d0_f2:A:Addison,  Blackburn,  and  Cotti  (2013)  aptly  describe  several  recent  analyses  of  this
+57:1054:103760:24:48:72:323:349:12:g_d0_f2:9:g_d0_f3:B:period’s minimum wage increases as follows:31
+57:1055:103805:48:12:72:540:301:10:g_d0_f2:10:g_d0_f2:F:least some portion of the year between August2008and July2009.  This limits the ability of Clemens and
+57:1056:103907:12:12:72:539:289:10:g_d0_f2:10:g_d0_f2:F:Wither’s (2014b) primary analysis sample to speak to the effects of minimum wage increases on transitions
+57:1057:104012:12:12:72:540:277:10:g_d0_f6:10:g_d0_f2:F:intoemployment.  The analysis does, however, include separate estimates of transitions into employment
+57:1058:104114:12:16:72:532:265:10:g_d0_f2:10:g_d0_f2:F:among samples of individuals who were unemployed each month from August2008through July2009.
+57:1059:104206:16:15:85:540:249:8:g_d0_f3:10:g_d0_f2:F:30Early analyses of employment-based human capital accumulation highlighted the theoretical possi-
+57:1060:104304:15:12:72:539:234:10:g_d0_f2:10:g_d0_f2:F:bility  that  minimum  wage  increases  may  reduce  opportunities  for  on-the-job  training  (Rosen,1972).  In
+57:1061:104416:12:12:72:540:222:10:g_d0_f2:10:g_d0_f2:F:standard  models  of  general  and  firm  specific  human  capital,  the  incidence  of  firms’  costs  for  general
+57:1062:104532:12:12:72:540:210:10:g_d0_f2:10:g_d0_f2:F:human  capital  training  falls  on  workers  through  wage  offsets.   Wage  floors  may  reduce  the  scope  for
+57:1063:104646:12:12:72:540:198:10:g_d0_f2:10:g_d0_f2:F:these implicit exchanges of compensation for training.  Direct analyses of the minimum wage’s effects on
+57:1064:104750:12:12:72:539:186:10:g_d0_f2:10:g_d0_f2:F:training  are  rare  and  arrive  at  mixed  results  (Neumark  and  Wascher,2001;  Mincer  and  Leighton,1980;
+57:1065:104861:12:12:72:540:174:10:g_d0_f2:10:g_d0_f2:F:Acemoglu and Pischke,1999; Arulampalam, Booth, and Bryan,2004).  Clemens and Wither’s (2014b) ev-
+57:1066:104958:12:12:72:540:162:10:g_d0_f2:10:g_d0_f2:F:idence  on  earnings  trajectories  suggest  that  dynamics  of  this  sort,  coupled  with  more  straightforward
+57:1067:105072:12:16:72:466:150:10:g_d0_f2:10:g_d0_f2:F:losses in experience accumulation, may have been at work during this historical episode.
+57:1068:105160:16:16:85:539:134:8:g_d0_f3:10:g_d0_f2:F:31I  have  changed  the  years  associated  with  Addison,  Blackburn,  and  Cotti’s  (2013)  references  if  the
+57:1069:105273:16:12:72:540:118:10:g_d0_f2:10:g_d0_f2:F:reference has subsequently been published or if I was unable to find the original source cited.  As of this
+57:1070:105380:12:11:72:540:106:10:g_d0_f2:10:g_d0_f2:F:writing, the first three references remain in working paper form, while Hirsch, Kaufman, and Zelenska’s
+57:1071:105483:11:0:72:515:95:10:g_d0_f2:10:g_d0_f2:F:(2015) analysis of Georgia and Alabama quick-service restaurants has subsequently been published.
+58:1072:105582:0:24:101:510:708:12:g_d0_f2:12:g_d0_f2:A:Even and Macpherson (2010) use CPS data from the2005-2009period to es-
+58:1073:105652:24:24:101:510:684:12:g_d0_f2:12:g_d0_f2:A:timate standard minimum-wage employment equations, and report negative
+58:1074:105722:24:24:101:510:660:12:g_d0_f2:12:g_d0_f2:A:minimum  wage  effects  on  employment  for  teenagers  during  this  interval.
+58:1075:105801:24:24:101:510:636:12:g_d0_f2:12:g_d0_f2:A:Gittings and Schmutte (2014),  using both CPS and Quarterly Workforce In-
+58:1076:105874:24:24:101:510:612:12:g_d0_f2:12:g_d0_f2:A:dicators  data,  find  a  negative  effect  on  teenage  employment  for  the  longer
+58:1077:105959:24:24:101:510:588:12:g_d0_f2:12:g_d0_f2:A:sample period2000-2009.  Hoffman and Ke (2010) focus on the final install-
+58:1078:106033:24:24:101:511:564:12:g_d0_f2:12:g_d0_f2:A:ment  of  the  latest  federal  minimum  wage  increase  in2009.   They  estimate
+58:1079:106114:24:24:101:510:540:12:g_d0_f2:12:g_d0_f2:A:cross-state differenced models of the minimum-wage impact, finding no sig-
+58:1080:106188:24:24:101:510:516:12:g_d0_f2:12:g_d0_f2:A:nificant disemployment effects among teenagers but a significantly negative
+58:1081:106263:24:24:101:511:492:12:g_d0_f2:12:g_d0_f2:A:effect for workers aged20to24.  On the other hand, Hirsch, Kaufman, and
+58:1082:106334:24:23:101:510:468:12:g_d0_f2:12:g_d0_f2:A:Zelenska  (2015),  who  investigate  establishment-level  data  for  quick-service
+58:1083:106416:23:24:101:510:445:12:g_d0_f2:12:g_d0_f2:A:restaurants in Georgia and Alabama,2007-2009, fail to uncover any evidence
+58:1084:106490:24:37:101:274:421:12:g_d0_f2:12:g_d0_f2:A:of a negative employment effect.
+58:1085:106522:37:24:71:539:384:12:g_d0_f2:12:g_d0_f2:B:The most obvious difference between the current paper and the analyses in the papers
+58:1086:106606:24:24:71:539:360:12:g_d0_f2:12:g_d0_f2:B:referenced  above  is  their  emphasis  on  employment  among  teenagers  and/or  in  food
+58:1087:106696:24:24:71:202:336:12:g_d0_f2:9:g_d0_f3:B:service establishments.32
+58:1088:106721:24:24:89:539:312:12:g_d0_f2:12:g_d0_f2:A:Analyzing populations beyond teenagers and food service establishments is impor-
+58:1089:106801:24:24:71:539:288:12:g_d0_f2:12:g_d0_f2:B:tant for two reasons.  First,  teenagers are less relevant than low-skilled adults from an
+58:1090:106891:24:39:71:540:264:12:g_d0_f2:12:g_d0_f2:B:anti-poverty  policy  perspective.33They  are  more  likely  than  low-skilled  adults  to  be
+58:1091:106985:39:15:85:540:225:8:g_d0_f3:10:g_d0_f2:F:32Somewhat earlier work on particular demographic groups, such as teenagers, includes Card (1992a),
+58:1092:107084:15:12:72:539:210:10:g_d0_f2:10:g_d0_f2:F:Card (1992b), Neumark and Wascher (1995), and Currie and Fallick (1996). Additional work on teenagers
+58:1093:107185:12:12:72:540:198:10:g_d0_f2:10:g_d0_f2:F:and/or  specific  industries,  like  food  service  and  retail,  includes  Katz  and  Krueger  (1992),  Card  and
+58:1094:107299:12:12:72:540:186:10:g_d0_f2:10:g_d0_f2:F:Krueger  (1994),  Kim  and  Taylor  (1995),  Neumark  and  Wascher  (2000),  Dube,  Lester,  and  Reich  (2010),
+58:1095:107411:12:12:72:539:174:10:g_d0_f2:10:g_d0_f2:F:and Giuliano (2013).  An exception is Meer and West (Forthcoming), who analyze aggregate employment
+58:1096:107510:12:16:72:106:162:10:g_d0_f2:10:g_d0_f2:F:growth.
+58:1097:107517:16:16:85:539:146:8:g_d0_f3:10:g_d0_f2:F:33As emphasized by Burkhauser and Sabia (2007) and Sabia and Burkhauser (2010), it is primarily low-
+58:1098:107617:16:12:72:540:130:10:g_d0_f2:10:g_d0_f2:F:skilled adults, rather than teenage dependents, who are the intended beneficiaries of anti-poverty efforts.
+58:1099:107724:12:12:72:540:118:10:g_d0_f2:10:g_d0_f2:F:In the European context, Dolado, Kramarz, Machin, Manning, Margolis, Teulings, Saint-Paul, and Keen
+58:1100:107823:12:11:72:540:106:10:g_d0_f2:10:g_d0_f2:F:(1996) observed during the mid-1990s that teenagers, at that time, accounted for a relatively small share
+58:1101:107928:11:0:72:178:95:10:g_d0_f2:10:g_d0_f2:F:of all low-paid workers.
+59:1102:107954:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:dependents and less likely to have dependents of their own.  Additionally, teenage em-
+59:1103:108040:24:24:72:539:684:12:g_d0_f2:12:g_d0_f2:B:ployment is now significantly less common than it was30, or even15, years ago. Between
+59:1104:108126:24:24:71:540:660:12:g_d0_f3:12:g_d0_f2:B:2003and the present, the teenage employment rate’s peak was at37.4percent in Febru-
+59:1105:108209:24:24:71:539:636:12:g_d0_f2:12:g_d0_f2:B:ary2004.   In2012it  averaged26.4percent.   By  contrast,  the  teenage  employment  rate
+59:1106:108298:24:24:71:539:612:12:g_d0_f2:12:g_d0_f2:B:averaged44percent over the1980s and1990s.  Early analyses of teenagers, for example
+59:1107:108381:24:24:71:540:588:12:g_d0_f2:12:g_d0_f2:B:those of Card (1992a,b), thus involved periods during which teenage employment was
+59:1108:108463:24:24:71:539:564:12:g_d0_f2:12:g_d0_f2:B:a more prominent phenomenon.  In the current labor market, teenage employment is a
+59:1109:108545:24:24:71:234:540:12:g_d0_f2:12:g_d0_f2:B:less relevant object of analysis.
+59:1110:108578:24:24:89:539:516:12:g_d0_f2:12:g_d0_f2:A:Second, labor demand elasticities may vary across both industries and demographic
+59:1111:108659:24:24:71:539:492:12:g_d0_f2:12:g_d0_f2:B:groups. This would be expected, for example, if the shapes of within-skill-group produc-
+59:1112:108747:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:tivity distributions vary meaningfully across groups. A similar point applies to analyses
+59:1113:108836:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:of food service establishments.  While it is interesting to observe how such firms adjust,
+59:1114:108926:24:24:71:539:421:12:g_d0_f2:12:g_d0_f2:B:food service establishments likely face different input substitution and output demand
+59:1115:109012:24:24:71:539:397:12:g_d0_f2:12:g_d0_f2:B:elasticities  than  firms  in  other  sectors.   Direct  analysis  of  the  minimum  wage’s  effects
+59:1116:109112:24:24:71:539:373:12:g_d0_f2:12:g_d0_f2:B:across sectors is thus preferable to inferring economy-wide effects using estimates asso-
+59:1117:109201:24:24:71:316:349:12:g_d0_f2:12:g_d0_f2:B:ciated with food service establishments alone.
+59:1118:109247:24:24:89:539:325:12:g_d0_f2:12:g_d0_f2:A:Assessing the minimum wage’s effects on poverty rates, employment opportunities,
+59:1119:109327:24:24:71:539:301:12:g_d0_f2:12:g_d0_f2:B:and  the  earnings  distribution  requires  directly  analyzing  the  employment  and  earn-
+59:1120:109419:24:24:71:539:277:12:g_d0_f2:12:g_d0_f2:B:ings  of  low-skilled  workers  themselves.   In  contrast  with  the  studies  discussed  above,
+59:1121:109516:24:24:71:540:253:12:g_d0_f2:12:g_d0_f2:B:Clemens  and  Wither  (2014b)  use  panel  data  to  identify  a  much  broader  population
+59:1122:109607:24:24:71:539:229:12:g_d0_f2:12:g_d0_f2:B:of  very  low-skilled  workers.   In  the  CPS’s  repeated  cross-sectional  setting,  the  present
+59:1123:109706:24:23:71:539:205:12:g_d0_f2:12:g_d0_f2:B:study’s differences-in-differences analysis focuses on individuals ages16to30with less
+59:1124:109792:23:24:71:539:182:12:g_d0_f2:12:g_d0_f2:B:than a high school education.34Its second empirical approach exploits continuous vari-
+59:1125:109878:24:48:71:539:158:12:g_d0_f2:12:g_d0_f2:B:ation  in  the  minimum  wage’s  bite  across  sets  of  skill  groups  that  fully  partition  the
+59:1126:109977:48:15:85:540:110:8:g_d0_f3:10:g_d0_f2:F:34See  Sabia,  Burkhauser,  and  Hansen  (2012)  for  a  recent  paper  that  primarily  analyzes  low-skilled
+59:1127:110087:15:0:72:102:95:10:g_d0_f2:10:g_d0_f2:F:adults.
+60:1128:110096:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:working age population.  The current paper and Clemens and Wither (2014b) thus at-
+60:1129:110178:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:tempt to utilize as much variation in the minimum wage’s bite as possible in the CPS
+60:1130:110262:24:24:72:292:660:12:g_d0_f2:12:g_d0_f2:B:and SIPP data environments respectively.
+60:1131:110302:24:24:89:540:636:12:g_d0_f2:12:g_d0_f2:A:To compare results across potential analysis samples, Table A.1reports estimates of
+60:1132:110385:24:24:72:539:612:12:g_d0_f2:12:g_d0_f2:B:equation  (3)  on  a  sample  restricted  to  teenagers.  The  outcomes  are  the  same  as  those
+60:1133:110483:24:24:72:539:588:12:g_d0_f2:12:g_d0_f2:B:analyzed  in  Table8.   I  estimate  that  the  differentially  binding  portion  of  this  period’s
+60:1134:110583:24:24:72:539:564:12:g_d0_f2:12:g_d0_f2:B:minimum wage increases reduced teenage employment by nearly2percentage points.
+60:1135:110661:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:The point estimates are thus non-trivially smaller than the estimated impact on individ-
+60:1136:110749:24:24:71:539:516:12:g_d0_f2:12:g_d0_f2:B:uals ages16to30with less than a high school education.  Both the short- and medium-
+60:1137:110832:24:24:71:539:492:12:g_d0_f2:12:g_d0_f2:B:run  estimate  are  on  the  margins  of  statistical  significance  at  the5percent  level,  with
+60:1138:110930:24:23:71:539:468:12:g_d0_f2:12:g_d0_f2:B:the  short-run  estimate  achieving  it  and  the  medium-run  estimate  failing  to  do  so.   In
+60:1139:111028:23:24:71:539:445:12:g_d0_f2:12:g_d0_f2:B:this particular historical episode, analyses of teenagers thus appear to have less power
+60:1140:111116:24:24:71:539:421:12:g_d0_f2:12:g_d0_f2:B:to  detect  a  minimum  wage  change’s  employment  effects  than  do  analyses  of  broader
+60:1141:111208:24:24:71:308:397:12:g_d0_f2:12:g_d0_f2:B:populations with low observable skill levels.
+60:1142:111253:24:24:89:539:373:12:g_d0_f2:12:g_d0_f2:A:The current paper and Clemens and Wither (2014b) also differ from recent analyses
+60:1143:111334:24:24:71:539:349:12:g_d0_f2:12:g_d0_f2:B:in  their  approach  to  documenting  and  accounting  for  the  housing  decline’s  effect  on
+60:1144:111429:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:low-skilled  workers’  employment.   The  housing  crisis  is  sufficiently  well  documented
+60:1145:111522:24:24:71:539:301:12:g_d0_f2:12:g_d0_f2:B:that the need to account for it is readily apparent.  The data required to do so are also
+60:1146:111611:24:24:71:539:277:12:g_d0_f2:12:g_d0_f2:B:readily  at  hand.   As  shown  in  Table2,  partially  bound  states’  housing  declines  were
+60:1147:111706:24:24:71:539:253:12:g_d0_f2:12:g_d0_f2:B:significantly less severe than fully bound states’ housing declines.  As also noted above,
+60:1148:111796:24:24:71:539:229:12:g_d0_f2:12:g_d0_f2:B:estimates from Charles,  Hurst,  and Notowidigdo (2013) make it possible to gauge the
+60:1149:111881:24:23:71:539:205:12:g_d0_f2:12:g_d0_f2:B:likely  bias  associated  with  this  heterogeneity  in  the  housing  decline’s  severity  across
+60:1150:111979:23:24:71:539:182:12:g_d0_f2:12:g_d0_f2:B:states.  I thus adopt a baseline specification with several relevant characteristics.  First, I
+60:1151:112074:24:24:71:539:158:12:g_d0_f2:12:g_d0_f2:B:take a straightforward approach to controlling directly for heterogeneity in the housing
+60:1152:112162:24:0:71:539:134:12:g_d0_f2:12:g_d0_f2:B:declines’ severity.  Second, I demonstrate that controlling for additional macroeconomic
+61:1153:112252:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:covariates  leaves  the  baseline  estimates  little  changed.35Third,  I  show  that  the  bias
+61:1154:112348:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:associated with making no attempt to control for heterogeneity in the housing declines’
+61:1155:112435:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:severity is of the expected sign and magnitude. Fourth, I show that the results are robust
+61:1156:112525:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:to implementing triple-difference extensions that make more extensive use of variation
+61:1157:112611:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:in the minimum wage’s relevance across skill groups.  Fifth, I show that the results are
+61:1158:112699:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:robust to accounting for heterogeneity in the housing decline’s severity using a standard
+61:1159:112788:24:24:72:183:564:12:g_d0_f2:12:g_d0_f2:B:matching procedure.
+61:1160:112807:24:24:89:540:540:12:g_d0_f2:12:g_d0_f2:A:Finally,  the  analyses  in  this  paper  and  Clemens  and  Wither  (2014b)  hew  closely  to
+61:1161:112901:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:standard program evaluation methods.  This contrasts with what Addison,  Blackburn,
+61:1162:112984:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:and Cotti (2013) describe as the traditional estimation of “standard minimum-wage em-
+61:1163:113069:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:ployment equations.” It is increasingly recognized that the traditional approach embeds
+61:1164:113156:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:quite strong assumptions regarding the dynamics with which a minimum wage change
+61:1165:113236:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:influences employment.  It can also obscure dynamics linked to lags between legislation
+61:1166:113323:24:24:72:540:397:12:g_d0_f2:12:g_d0_f2:B:and implementation.  Because lags between legislation and implementation may differ
+61:1167:113406:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:significantly across natural experiments, this can be particularly problematic for studies
+61:1168:113496:24:24:72:416:349:12:g_d0_f2:12:g_d0_f2:B:of the longer panel of state and federal minimum wage changes.
+61:1169:113558:24:24:89:539:325:12:g_d0_f2:12:g_d0_f2:A:Implementation lags and dynamics at least partially underly observers’ difficulty in
+61:1170:113642:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:adjudicating the empirical debate over historical minimum wage changes’ effects.  The
+61:1171:113727:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:debate within the literature suggests that analyses of the longer panel of minimum wage
+61:1172:113814:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:changes  are  sensitive  to  a  combination  of  specification  choices  and  sample  selection
+61:1173:113909:24:24:72:539:229:12:g_d0_f2:12:g_d0_f2:B:procedures.36Given  the  diversity  of  natural  experiments  involved,  it  seems  unlikely
+61:1174:114001:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:that any one approach to selecting control groups or any one specification of dynamics
+61:1175:114087:23:28:72:253:182:12:g_d0_f2:12:g_d0_f2:B:would be universally appropriate.
+61:1176:114120:28:16:85:540:154:8:g_d0_f3:10:g_d0_f2:F:35The point estimates decline modestly in the full sample analysis and increase modestly in the analysis
+61:1177:114224:16:16:72:420:138:10:g_d0_f2:10:g_d0_f2:F:of samples in which states were matched on the size of their housing declines.
+61:1178:114302:16:16:85:540:122:8:g_d0_f3:10:g_d0_f2:F:36The discussion of the strengths and weaknesses of various estimation strategies by Dolado, Kramarz,
+61:1179:114403:16:11:72:539:106:10:g_d0_f2:10:g_d0_f2:F:Machin,  Manning,  Margolis,  Teulings,  Saint-Paul,  and  Keen  (1996)  is,  in  many  respects,  quite  prescient
+61:1180:114518:11:0:72:330:95:10:g_d0_f2:10:g_d0_f2:F:regarding sources of disagreement in the recent literature.
+62:1181:114579:0:24:89:539:708:12:g_d0_f2:12:g_d0_f2:A:A key element of the program evaluation approach adopted here is the visual pre-
+62:1182:114659:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:sentation of results (see Figures4and5) that provide evidence on potentially relevant
+62:1183:114744:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:dynamics.  Potentially relevant dynamics include anticipation effects and the possibility
+62:1184:114833:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:of differences between short and long run responses.  Allowance for anticipation effects
+62:1185:114921:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:is  particularly  important  in  this  setting  due  to  the26month  lag  between  the  relevant
+62:1186:115017:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:legislation  and  the  implementation  of  the  third  and  final  increase  in  the  federal  min-
+62:1187:115116:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:imum  wage.   Regarding  employment  dynamics,  simulations  by  Meer  and  West  (2013)
+62:1188:115204:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:show  why  analyses  of  the  longer  panel  of  state  minimum  wage  changes  will  tend  to
+62:1189:115298:24:24:72:463:516:12:g_d0_f2:12:g_d0_f2:B:have difficulty estimating anything other than relatively short-run effects.
+62:1190:115374:24:24:89:540:492:12:g_d0_f2:12:g_d0_f2:A:Sorkin (2015) provides a theoretical basis for expecting the distinction between short-
+62:1191:115461:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:and long-run effects to be economically meaningful.  The considerations Sorkin (2015)
+62:1192:115546:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:highlights  point  to  two  conceptually  relevant  features  of  the  setting  I  analyze.   A  first
+62:1193:115648:24:24:72:540:421:12:g_d0_f2:12:g_d0_f2:B:point is that my post-legislation analysis window is long by the literature’s standards. It
+62:1194:115739:24:24:72:539:397:12:g_d0_f2:12:g_d0_f2:B:includes both a26month implementation phase and a40month post-implementation
+62:1195:115815:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:period.37Second,  because  the  analysis  involves  a  period  of  significant  labor  market
+62:1196:115908:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:upheaval, the shifts in production technologies Sorkin (2015) emphasizes may have been
+62:1197:115994:24:24:72:357:325:12:g_d0_f2:12:g_d0_f2:B:hastened relative to less turbulent historical episodes.
+62:1198:116050:24:24:89:539:301:12:g_d0_f2:12:g_d0_f2:A:The  empirical  approaches  in  this  paper  and  Clemens  and  Wither  (2014b)  are  facil-
+62:1199:116142:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:itated  in  part  by  the  historical  setting.   In  contrast  with  the  longer  panel  of  state  and
+62:1200:116246:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:federal minimum wage changes, the period analyzed here has three attractive features.
+62:1201:116331:24:24:72:540:229:12:g_d0_f2:12:g_d0_f2:B:First, there is a relatively clean division of states into those that were fully and partially
+62:1202:116425:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:bound by this period’s federal minimum wage changes.  Second, this division roughly
+62:1203:116508:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:evenly  divides  the  U.S.  population.   Third,  because  states  enacted  very  few  minimum
+62:1204:116602:24:48:72:540:158:12:g_d0_f2:12:g_d0_f2:B:wage changes between July2009and December2012, the analysis period has a less con-
+62:1205:116684:48:15:85:539:110:8:g_d0_f3:10:g_d0_f2:F:37After2012, the setting encounter’s the minimum wage literature’s usual problem that the post-policy
+62:1206:116785:15:0:72:522:95:10:g_d0_f2:10:g_d0_f2:F:change period becomes contaminated with additional state (and municipal) minimum wage changes.
+63:1207:116881:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:taminated “post” policy change interval than is available to many studies. These features
+63:1208:116970:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:of the policy space make this a well suited application for relatively straightforward pro-
+63:1209:117061:24:0:72:211:660:12:g_d0_f2:12:g_d0_f2:B:gram evaluation methods.
+65:1210:118617:0:37:72:338:707:17:g_d0_f5:17:g_d0_f5:C:B  Additional Robustness Tables
+65:1211:118648:37:15:72:540:670:12:g_d0_f2:12:g_d0_f5:B:Table  B.2:Effects of Binding Minimum Wage Increases across Broad Population
+65:1212:118724:15:24:72:113:655:12:g_d0_f5:12:g_d0_f5:C:Groups
+65:1213:118730:24:15:335:481:631:12:g_d0_f2:12:g_d0_f2:A:(1)(2)(3)
+65:1214:118739:15:15:315:501:616:12:g_d0_f2:12:g_d0_f2:A:Employed    Employed    Employed
+65:1215:118771:15:14:106:490:601:12:g_d0_f2:12:g_d0_f3:A:Bound x Post1-0.029**-0.008-0.004
+65:1216:118804:14:15:325:492:587:12:g_d0_f2:12:g_d0_f2:A:(0.009)(0.007)(0.005)
+65:1217:118825:15:14:106:488:572:12:g_d0_f2:12:g_d0_f3:A:Bound x Post2-0.028**-0.0020.000
+65:1218:118857:14:14:325:492:558:12:g_d0_f2:12:g_d0_f2:A:(0.009)(0.007)(0.004)
+65:1219:118878:14:15:106:492:544:12:g_d0_f2:12:g_d0_f2:A:Housing Price Index0.209*0.173***0.066**
+65:1220:118918:15:15:325:492:529:12:g_d0_f2:12:g_d0_f2:A:(0.083)(0.030)(0.024)
+65:1221:118939:15:14:107:498:514:12:g_d0_f6:12:g_d0_f3:C:N580,248    2,098,879   4,621,282
+65:1222:118972:14:15:106:485:500:12:g_d0_f2:12:g_d0_f3:A:Mean of Dep. Var.0.380.690.78
+65:1223:119001:15:14:106:493:485:12:g_d0_f2:12:g_d0_f2:A:Estimation FrameworkD-in-DD-in-DD-in-D
+65:1224:119039:14:14:106:483:471:12:g_d0_f2:12:g_d0_f2:A:State and Time EffectsYesYesYes
+65:1225:119070:14:15:106:483:457:12:g_d0_f2:12:g_d0_f2:A:Time Varying Demographic ControlsYesYesYes
+65:1226:119112:15:16:106:500:442:12:g_d0_f2:12:g_d0_f2:A:Degree of BiteMost BiteSmall BiteLeast Bite
+65:1227:119155:16:14:72:539:426:10:g_d0_f2:10:g_d0_f2:F:Note: +, *, **, and *** indicate statistical significance at the0.10,0.05,0.01, and0.001levels respectively. The
+65:1228:119267:14:15:71:539:412:10:g_d0_f2:10:g_d0_f2:F:table reports estimates of the minimum wage’s short and medium run effects on the relevant dependent
+65:1229:119367:15:14:71:540:397:10:g_d0_f2:10:g_d0_f2:F:variables, which are named in the heading of each column.  More specifically, the estimates in row1are
+65:1230:119469:14:15:72:539:383:10:g_d0_f2:10:g_d0_f2:F:of the coefficientβp(t)from equation (3), where the relevantp(t)corresponds with the period beginning
+65:1231:119570:15:14:71:539:368:10:g_d0_f2:8:g_d0_f7:F:in  August2009and  extending  through  July2010.   The  estimates  in  row2are  of  the  coefficientβp(t)
+65:1232:119675:14:14:71:539:354:10:g_d0_f2:10:g_d0_f2:F:from  equation  (3),  where  the  relevantp(t)corresponds  with  the  period  beginning  one  year  after  the
+65:1233:119785:14:15:71:539:340:10:g_d0_f2:10:g_d0_f2:F:July2009increase  in  the  federal  minimum  wage.   Across  the  three  columns,  the  samples  comprise  all
+65:1234:119895:15:14:71:539:325:10:g_d0_f2:10:g_d0_f2:F:individuals aged16to64who were surveyed in the full Current Population Survey during the relevant
+65:1235:119992:14:15:71:539:311:10:g_d0_f2:10:g_d0_f2:F:years.  The sample in column1consists of all individuals between ages16and30with less than a high
+65:1236:120089:15:14:71:540:296:10:g_d0_f2:10:g_d0_f2:F:school education. The sample in column2includes all groups from Table1for which the differential bite
+65:1237:120190:14:15:71:539:282:10:g_d0_f2:10:g_d0_f2:F:reported  in  column3was  between0.015and0.030.   The  sample  in  column3includes  all  groups  from
+65:1238:120291:15:14:71:540:267:10:g_d0_f2:10:g_d0_f2:F:Table1for which the differential bite reported in column3was less than0.015.  The sample extends from
+65:1239:120392:14:15:71:540:253:10:g_d0_f2:10:g_d0_f2:F:January2006through December2012.  The time varying demographic controls include full sets of period
+65:1240:120491:15:14:71:539:238:10:g_d0_f2:10:g_d0_f2:F:(p(t)as defined in the text) indicators interacted with full sets of indicators for the values taken by the
+65:1241:120598:14:14:71:539:224:10:g_d0_f2:10:g_d0_f2:F:CPS variables “age,” “educ,” “sex,” and a recoded race/ethnicity variable with separate values for Asian,
+65:1242:120703:14:15:71:539:210:10:g_d0_f2:10:g_d0_f2:F:Black,  White Non-Hispanic,  Hispanic,  and Other.  The reported standard error estimates allow for state
+65:1243:120808:15:0:71:306:195:10:g_d0_f2:10:g_d0_f2:F:level correlation clusters across the estimation errors.

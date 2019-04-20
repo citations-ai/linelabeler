@@ -1,0 +1,878 @@
+1:0:0:0:27:307:511:664:3425:g_d0_f1:3425:g_d0_f1:C:MPRA
+1:1:4:27:123:278:504:637:17:g_d0_f2:17:g_d0_f2:C:Munich Personal RePEc Archive
+1:2:33:123:25:81:486:514:21:g_d0_f3:21:g_d0_f3:C:Hedging Effectiveness under Conditions
+1:3:71:25:45:81:226:489:21:g_d0_f3:21:g_d0_f3:C:of Asymmetry
+1:4:83:45:36:81:289:444:17:g_d0_f2:17:g_d0_f2:C:John Cotter and James Hanly
+1:5:110:36:249:81:109:408:14:g_d0_f4:14:g_d0_f4:C:2007
+1:6:114:249:18:81:410:159:14:g_d0_f4:14:g_d0_f5:C:Online athttp://mpra.ub.uni-muenchen.de/3501/
+1:7:159:18:0:81:365:141:14:g_d0_f4:14:g_d0_f4:C:MPRA Paper No. 3501, posted 12. June 2007
+2:8:200:0:28:165:450:723:12:g_d0_f6:12:g_d0_f6:C:Hedging Effectiveness under Conditions of Asymmetry 
+2:9:252:28:27:267:347:695:12:g_d0_f7:12:g_d0_f7:A:March 31st 2006 
+2:10:267:27:28:283:331:668:12:g_d0_f6:12:g_d0_f6:C:Abstract 
+2:11:276:28:27:72:75:640:12:g_d0_f7:12:g_d0_f7:B: 
+2:12:276:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:We  examine  whether  hedging  effectiveness  is  affected  by  asymmetry  in  the  return  distribution 
+2:13:381:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:by applying tail specific metrics to compare the hedging effectiveness of short and long hedgers 
+2:14:478:28:27:71:542:557:12:g_d0_f7:12:g_d0_f7:B:using  Oil  futures  contracts.  The  metrics  used  include  Lower  Partial  Moments  (LPM),  Value  at 
+2:15:583:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:Risk  (VaR)  and  Conditional  Value  at  Risk  (CVAR).  Comparisons  are  applied  to  a  number  of 
+2:16:685:28:27:71:542:502:12:g_d0_f7:12:g_d0_f7:B:hedging  strategies  including  OLS  and  both  Symmetric  and  Asymmetric  GARCH  models.  Our 
+2:17:781:27:28:71:542:475:12:g_d0_f7:12:g_d0_f7:B:findings  show  that  asymmetry  reduces  in-sample  hedging  performance  and  that  there  are 
+2:18:878:28:28:71:542:447:12:g_d0_f7:12:g_d0_f7:B:significant  differences  in  hedging  performance  between  short  and  long  hedgers.  Thus,  tail 
+2:19:979:28:27:71:542:419:12:g_d0_f7:12:g_d0_f7:B:specific performance metrics should be applied in evaluating hedging effectiveness. We also find 
+2:20:1076:27:28:71:542:392:12:g_d0_f7:12:g_d0_f7:B:that  the  Ordinary  Least  Squares  (OLS)  model  provides  consistently  good  performance  across 
+2:21:1177:28:27:71:542:364:12:g_d0_f7:12:g_d0_f7:B:different   measures   of   hedging   effectiveness   and   estimation   methods   irrespective   of   the 
+2:22:1284:27:28:71:293:337:12:g_d0_f7:12:g_d0_f7:B:characteristics of the underlying distribution.  
+2:23:1333:28:28:71:74:309:12:g_d0_f7:12:g_d0_f7:B: 
+2:24:1333:28:27:71:74:281:12:g_d0_f7:12:g_d0_f7:B: 
+2:25:1333:27:28:71:542:254:12:g_d0_f6:12:g_d0_f7:B:Keywords: Hedging  Performance;  Asymmetry;  Downside  Risk;  Value  at  Risk,  Conditional 
+2:26:1424:28:27:71:142:226:12:g_d0_f7:12:g_d0_f7:B:Value at Risk. 
+2:27:1439:27:28:71:254:199:12:g_d0_f7:12:g_d0_f7:B:JEL classification: G10, G12, G15.     
+2:28:1478:28:26:71:482:171:12:g_d0_f7:12:g_d0_f7:B:____________________________________________________________________ 
+2:29:1547:26:11:71:519:145:10:g_d0_f7:10:g_d0_f7:F:John Cotter, Director of Centre for Financial Markets, Department of Banking and Finance, University College 
+2:30:1656:11:12:71:510:134:10:g_d0_f7:10:g_d0_f7:F:Dublin, Blackrock, Co. Dublin, Ireland, tel 353 1 716 8900, e-mail john.cotter@ucd.ie. Jim Hanly, School of 
+2:31:1764:12:11:72:542:122:10:g_d0_f7:10:g_d0_f7:F:Accounting  and  Finance,  Dublin  Institute  of  Technology,  tel  353  1  402  3180,  e-mail  james.hanly@dit.ie.  The 
+2:32:1885:11:12:72:543:111:10:g_d0_f7:10:g_d0_f7:F:authors  would  like  to  thank  the  participants  at  the  Global  Finance  Annual  Conference  for  their  constructive 
+2:33:2008:12:11:72:118:99:10:g_d0_f7:10:g_d0_f7:F:comments. 
+2:34:2018:11:0:72:74:88:10:g_d0_f7:10:g_d0_f7:F: 
+3:35:2019:0:28:71:175:723:12:g_d0_f6:12:g_d0_f6:C:1. Introduction 
+3:36:2035:28:27:72:75:695:12:g_d0_f7:12:g_d0_f7:B: 
+3:37:2035:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:A  large  literature  has  developed  in  the  evaluation  of  futures  based  hedging  strategies.  The 
+3:38:2140:28:27:71:542:640:12:g_d0_f7:12:g_d0_f7:B:dominant hedging framework uses the variance  as the risk measure and the optimal hedge ratio 
+3:39:2234:27:28:71:542:613:12:g_d0_f7:12:g_d0_f7:B:(OHR)  has,  therefore,  become  synonymous  with  the  minimum  variance  hedge  ratio  (see,  for 
+3:40:2334:28:28:71:542:585:12:g_d0_f7:12:g_d0_f7:B:example  Lien  and  Tse,  2002,  for  a  comprehensive  survey).  A  shortcoming  of  the  variance  risk 
+3:41:2440:28:27:71:542:557:12:g_d0_f7:12:g_d0_f7:B:measure is that it cannot distinguish between positive and negative returns and therefore it does 
+3:42:2538:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:not provide an accurate measure of risk for asymmetric distributions. Given asymmetry, hedging 
+3:43:2633:28:27:71:542:502:12:g_d0_f7:12:g_d0_f7:B:effectiveness  metrics  that  cannot  distinguish  between  tail  probabilities  may  be  inaccurate  in 
+3:44:2738:27:28:71:208:475:12:g_d0_f7:12:g_d0_f7:B:terms of risk measurement.  
+3:45:2766:28:28:71:74:447:12:g_d0_f7:12:g_d0_f7:B: 
+3:46:2766:28:27:71:528:419:12:g_d0_f7:12:g_d0_f7:B:In the literature on optimal hedging, two broad strands have emerged that address these issues. 
+3:47:2862:27:28:71:542:392:12:g_d0_f7:12:g_d0_f7:B:The first approach is the use of hedging estimation methods that seek to minimise some measure 
+3:48:2957:28:27:71:542:364:12:g_d0_f7:12:g_d0_f7:B:of risk other than the variance. These include LPM and methods relating to VaR and CVaR. The 
+3:49:3050:27:28:71:542:337:12:g_d0_f7:12:g_d0_f7:B:second approach is the use of hedging estimation methods that allow for asymmetry in the return 
+3:50:3146:28:28:71:542:309:12:g_d0_f7:12:g_d0_f7:B:distribution. Of these, asymmetric extensions to the GARCH class of models have been applied 
+3:51:3239:28:27:71:542:281:12:g_d0_f7:12:g_d0_f7:B:in a number of studies (see, for  example, Brooks  et al, 2002). However no study  has  addressed 
+3:52:3337:27:28:71:542:254:12:g_d0_f7:12:g_d0_f7:B:the  issue  of  hedging  effectiveness  under  conditions  of  asymmetry  by  combining  these  models, 
+3:53:3441:28:27:71:542:226:12:g_d0_f7:12:g_d0_f7:B:together with hedging effectiveness methods that measure tail probabilities. This study addresses 
+3:54:3539:27:28:71:348:199:12:g_d0_f7:12:g_d0_f7:B:this, and differs from prior research in a number of ways. 
+3:55:3598:28:28:71:74:171:12:g_d0_f7:12:g_d0_f7:B: 
+3:56:3598:28:27:71:542:143:12:g_d0_f7:12:g_d0_f7:B:Firstly,  we  apply  tail  specific  hedging  effectiveness  measures  together  with  estimation  methods 
+3:57:3705:27:28:71:542:116:12:g_d0_f7:12:g_d0_f7:B:that  allow  for  asymmetry  to  Oil  spot  and  futures  contracts.  This  allows  us  to  compare  the 
+3:58:3810:28:27:71:542:88:12:g_d0_f7:12:g_d0_f7:B:hedging effectiveness of short and long hedgers under conditions of asymmetry. Oil commodity 
+3:59:3903:27:0:71:542:61:12:g_d0_f7:12:g_d0_f7:B:markets  were  chosen  as  they  are  particularly  suited  for  an  examination  into  the  effects  of 
+4:60:4009:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:asymmetry  on  hedging  effectiveness  given  their  distributional  characteristics  and  in  particular, 
+4:61:4116:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:their  tendency  to  be  non-symmetrically  distributed  (see,  for  example,  Baillie  and  Myers,  1991, 
+4:62:4223:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:Lien and Wilson, 2001). The  cash prices of Oil tend toward excess skewness  given the volatile 
+4:63:4319:28:27:71:542:640:12:g_d0_f7:12:g_d0_f7:B:nature  of  the  market  and  the  underlying  supply  conditions.  Also,  since  the  futures  price  of  a 
+4:64:4428:27:28:71:542:613:12:g_d0_f7:12:g_d0_f7:B:commodity is driven by  storage costs and the  convenience  yield, the relationship between them 
+4:65:4525:28:28:71:542:585:12:g_d0_f7:12:g_d0_f7:B:may  give  rise  to  asymmetric  returns.  Secondly,  we  use  empirical  data  based  on  distributional 
+4:66:4631:28:27:71:542:557:12:g_d0_f7:12:g_d0_f7:B:characteristics whereby a symmetric and an asymmetric dataset were chosen specifically so as to 
+4:67:4727:27:28:71:446:530:12:g_d0_f7:12:g_d0_f7:B:compare hedging effectiveness for both normal and asymmetric distributions. 
+4:68:4803:28:27:71:74:502:12:g_d0_f7:12:g_d0_f7:B: 
+4:69:4803:27:28:71:542:475:12:g_d0_f7:12:g_d0_f7:B:The  hedging  estimation  models  used  are;  naïve  hedge,  rolling  window  OLS  hedge,  and  two 
+4:70:4903:28:28:71:542:447:12:g_d0_f7:12:g_d0_f7:B:bivariate  GARCH  models  including  an  asymmetric  GARCH  model.  Four  different  hedging 
+4:71:4996:28:27:71:542:419:12:g_d0_f7:12:g_d0_f7:B:effectiveness metrics are applied. These are based on; Variance, LPM, VaR; and CVaR. With the 
+4:72:5090:27:28:71:542:392:12:g_d0_f7:12:g_d0_f7:B:exception  of  the  variance,  these  metrics  can  account  for  asymmetries  as  they  can  measure  both 
+4:73:5198:28:27:71:542:364:12:g_d0_f7:12:g_d0_f7:B:left tail and right tail probabilities. This approach allows us to comprehensively examine hedging 
+4:74:5297:27:28:71:542:337:12:g_d0_f7:12:g_d0_f7:B:effectiveness  of  both  short  and  long  hedgers  for  both  symmetric  and  asymmetric  distributions 
+4:75:5402:28:28:71:542:309:12:g_d0_f7:12:g_d0_f7:B:and  to  see  whether  there  is  a  dominant  OHR  estimation  method  that  emerges  across  a  broad 
+4:76:5506:28:27:71:265:281:12:g_d0_f7:12:g_d0_f7:B:range of hedging effectiveness metrics.  
+4:77:5547:27:21:71:74:254:12:g_d0_f7:12:g_d0_f7:B: 
+4:78:5547:21:27:71:539:233:12:g_d0_f7:12:g_d0_f7:B:Our most important finding is that the presence of skewness in the return distribution reduces in-
+4:79:5645:27:28:71:542:206:12:g_d0_f7:12:g_d0_f7:B:sample  hedging  effectiveness.  Therefore  hedges  may  fail  during  stressful  market  conditions 
+4:80:5746:28:28:71:542:178:12:g_d0_f7:12:g_d0_f7:B:when  they  are  most  required.  We  also  find  significant  differences  between  the  hedging 
+4:81:5844:28:27:71:542:150:12:g_d0_f7:12:g_d0_f7:B:effectiveness of short and long hedgers for each of the tail specific measures we apply, with the 
+4:82:5942:27:28:71:542:123:12:g_d0_f7:12:g_d0_f7:B:differences  being  more  pronounced  for  the  skewed  distribution.  This  implies  that  hedgers  who 
+4:83:6047:28:27:71:542:95:12:g_d0_f7:12:g_d0_f7:B:fail to use tail specific hedging performance metrics may chose inefficient hedging strategies that 
+4:84:6147:27:0:71:542:68:12:g_d0_f7:12:g_d0_f7:B:result in them being mishedged vis a vis their hedging objectives. Our results also show that the 
+5:85:6246:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:OLS  model  yields  the  best  overall  performance  irrespective  of  the  distributional  characteristics 
+5:86:6354:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:of  the  index  being  hedged,  or  the  hedging  effectiveness  criteria  being  applied.  Based  on  this 
+5:87:6462:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:finding,  it  would  appear  that  there  is  little  to  be  gained  in  terms  of  hedging  efficiency  from  the 
+5:88:6578:28:27:71:542:640:12:g_d0_f7:12:g_d0_f7:B:use  of  more  complicated  hedging  strategies  such  as  asymmetric  GARCH  models  and  that  a 
+5:89:6677:27:28:71:524:613:12:g_d0_f7:12:g_d0_f7:B:simple hedging solution based on OLS is adequate for both normal and skewed distributions.  
+5:90:6769:28:28:71:74:585:12:g_d0_f7:12:g_d0_f7:B: 
+5:91:6769:28:27:71:542:557:12:g_d0_f7:12:g_d0_f7:B:The  remainder  of  the  paper  proceeds  as  follows.  In  section  2  we  outline  the  models  used  for 
+5:92:6877:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:estimating  optimal  hedge  ratios.  In  Section  3  we  describe  the  metrics  for  measuring  hedging 
+5:93:6982:28:27:71:542:502:12:g_d0_f7:12:g_d0_f7:B:effectiveness.  Section  4  describes  the  data  and  summary  statistics.  Section  5  presents  our 
+5:94:7085:27:28:71:347:475:12:g_d0_f7:12:g_d0_f7:B:empirical findings. Section 6 summarises and concludes. 
+5:95:7141:28:28:71:74:447:12:g_d0_f7:12:g_d0_f7:B: 
+5:96:7141:28:27:71:194:419:12:g_d0_f6:12:g_d0_f7:B:2. Hedging Models 
+5:97:7158:27:28:71:542:392:12:g_d0_f7:12:g_d0_f7:B:The  OHR  is  defined  in  the  literature  as  the  ratio  that  minimises  the  risk  of  the  payoff  of  the 
+5:98:7271:28:32:71:377:364:12:g_d0_f7:12:g_d0_f7:B:hedged portfolio. The payoff of a hedged portfolio is given as:  
+5:99:7336:32:34:158:525:332:7:g_d0_f8:12:g_d0_f7:A:fsrrb-+ (short hedger)         (1a) 
+5:100:7365:34:32:158:526:298:7:g_d0_f8:12:g_d0_f7:A:fsrrb+- (long hedger)        (1b) 
+5:101:7392:32:32:71:542:266:12:g_d0_f7:12:g_d0_f7:B:where srand fr  are  the  returns  on  the  spot  and  futures  respectively,  and bis  the  estimated 
+5:102:7495:32:27:71:542:234:12:g_d0_f7:12:g_d0_f7:B:OHR.  We  define  a  short  (long)  hedger  as  being  long  (short)  the  spot  asset  and  short  (long)  the 
+5:103:7607:27:28:71:542:207:12:g_d0_f7:12:g_d0_f7:B:futures asset. In this study we utilise five different methods for estimating OHR’s. The simplest 
+5:104:7705:28:27:71:542:179:12:g_d0_f7:12:g_d0_f7:B:models  are  a  Hedge  Ratio  (HR)  of  zero  (no  hedge)  and  a  1:1  or  Naïve  hedge  ratio  where  each 
+5:105:7814:27:28:71:542:152:12:g_d0_f7:12:g_d0_f7:B:unit of the Oil contract is hedged with equivalent units of the futures contract. The third method 
+5:106:7913:28:28:71:542:124:12:g_d0_f7:12:g_d0_f7:B:we  use  is  an  OLS  HR  using  the  slope  coefficient  of  a  regression  of  the  spot  on  the  futures 
+5:107:8022:28:27:71:542:96:12:g_d0_f7:12:g_d0_f7:B:returns.  An  OHR  estimated  by  OLS  was  first  used  by  Ederington  (1979)  and  has  been  applied 
+5:108:8127:27:0:71:542:69:12:g_d0_f7:12:g_d0_f7:B:extensively  in  the  literature.  Cecchetti  et  al.,  (1988)  argue  that  the  OLS  method  is  not  optimal 
+6:109:8240:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:because  it  assumes  that  the  OHR  is  constant  whereas  time-varying  volatility  is  the  rule  for 
+6:110:8346:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:financial time series and as the OHR depends on the conditional distribution of spot and futures 
+6:111:8443:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:returns, so too should the hedge ratio. We therefore use a rolling window OLS model to account 
+6:112:8538:28:29:71:271:640:12:g_d0_f7:12:g_d0_f7:B:for time varying effects. This is given as: 
+6:113:8582:29:32:71:520:611:12:g_d0_f7:12:g_d0_f7:B:  tfttstrreba++=        (2) 
+6:114:8600:32:33:72:543:579:12:g_d0_f7:12:g_d0_f7:B:where strand ftrare  the  spot  and  futures  returns  respectively  for  period  t, teis  the  disturbance 
+6:115:8708:33:53:71:341:546:12:g_d0_f7:12:g_d0_f7:B:term and tb is the OHR. This can also be expressed as: 
+6:116:8763:53:0:184:188:493:7:g_d0_f8:7:g_d0_f8:F:ft
+6:117:8765:0:9:182:189:511:7:g_d0_f8:7:g_d0_f8:F:sft
+6:118:8768:9:0:153:181:502:7:g_d0_f8:12:g_d0_f8:C:tH
+6:119:8770:0:9:172:181:514:12:g_d0_f8:12:g_d0_f8:C:H
+6:120:8771:9:43:160:520:505:12:g_d0_f9:12:g_d0_f7:A:=b         (3) 
+6:121:8777:43:31:72:543:462:12:g_d0_f7:12:g_d0_f7:B:where ftHdenotes  the  variance  of  futures  returns  and sftHis  the  covariance  between  spot  and 
+6:122:8880:31:28:71:542:431:12:g_d0_f7:12:g_d0_f7:B:futures  returns.  We  also  use  two  additional  estimation  methods  that  allow  the  OHR  to  be  time 
+6:123:8988:28:28:71:402:403:12:g_d0_f7:12:g_d0_f7:B:varying. These are a symmetric and an asymmetric GARCH model.  
+6:124:9051:28:27:71:74:375:12:g_d0_f7:12:g_d0_f7:B: 
+6:125:9051:27:28:71:384:348:12:g_d0_f6:12:g_d0_f6:C:The Symmetric Diagonal VECH GARCH Model (SDVECH) 
+6:126:9100:28:27:71:542:320:12:g_d0_f7:12:g_d0_f7:B:The first GARCH model that we use is the Diagonal Vech model proposed by Bollerslev, Engle 
+6:127:9191:27:28:71:542:293:12:g_d0_f7:12:g_d0_f7:B:and Wooldridge (1988). This model imposes a symmetric response on the variance and is useful 
+6:128:9284:28:27:71:542:265:12:g_d0_f7:12:g_d0_f7:B:for comparison of hedging estimation and performance as it has been extensively applied in the 
+6:129:9379:27:28:71:542:238:12:g_d0_f7:12:g_d0_f7:B:literature to generate OHR’s (see, for example, Cotter and Hanly, 2006). This model is specified 
+6:130:9476:28:42:71:126:210:12:g_d0_f7:12:g_d0_f7:B:as follows: 
+6:131:9488:42:8:166:291:168:7:g_d0_f8:7:g_d0_f8:F:stststrem+= ftftftrem+=,  ()tt
+6:132:9517:8:0:266:270:160:7:g_d0_f8:7:g_d0_f8:F:ft
+6:133:9519:0:7:265:270:178:7:g_d0_f8:7:g_d0_f8:F:st
+6:134:9521:7:13:337:277:171:12:g_d0_f8:12:g_d0_f10:C:HN,0~1-W-
+6:135:9530:13:0:272:277:158:12:g_d0_f10:12:g_d0_f10:C:-
+6:136:9531:0:11:272:277:180:12:g_d0_f10:12:g_d0_f10:C:-
+6:137:9532:11:11:254:259:169:12:g_d0_f10:12:g_d0_f10:C:-
+6:138:9533:11:0:254:259:158:12:g_d0_f10:12:g_d0_f10:C:-
+6:139:9534:0:17:254:259:180:12:g_d0_f10:12:g_d0_f10:C:-
+6:140:9535:17:0:258:263:163:13:g_d0_f9:13:g_d0_f9:C:e
+6:141:9536:0:10:258:263:181:13:g_d0_f9:13:g_d0_f9:C:e
+6:142:9537:10:47:356:520:171:12:g_d0_f7:12:g_d0_f7:A:     (4) 
+6:143:9543:47:0:242:246:124:7:g_d0_f7:7:g_d0_f7:F:1
+6:144:9544:0:10:187:191:134:7:g_d0_f7:7:g_d0_f7:F:2
+6:145:9545:10:36:193:520:124:7:g_d0_f7:12:g_d0_f7:A:1--++=tsstssstsHBACHe         (5) 
+6:146:9573:36:0:253:256:88:7:g_d0_f7:7:g_d0_f7:F:1
+6:147:9574:0:12:195:198:100:7:g_d0_f7:7:g_d0_f7:F:2
+6:148:9575:12:0:200:542:88:7:g_d0_f7:12:g_d0_f7:A:1--++=tfftffftfHBACHe       (6)  
+7:149:9601:0:29:276:520:715:7:g_d0_f7:12:g_d0_f7:A:111---++=tsfsffttssfsfsftHBACHee        (7) 
+7:150:9640:29:37:72:543:686:12:g_d0_f7:12:g_d0_f7:B:where ftstrr,  are  the  returns  on  spot  and  futures  respectively, ftstee,  are  the  residuals, 
+7:151:9742:37:28:107:543:649:7:g_d0_f8:12:g_d0_f7:A:ftstHH,denotes the variance of spot and futures and sftHis the covariance between them. C is a 
+7:152:9837:28:28:71:542:621:12:g_d0_f7:12:g_d0_f7:B:3x1  column  vector,  and  A  and  B  are  3x3  matrices.  The  matrices  A  and  B  are  restricted  to  be 
+7:153:9946:28:27:71:542:593:12:g_d0_f7:12:g_d0_f7:B:diagonal.  This  means  that  the  conditional  variance  of  the  spot  returns  depends  only  on  past 
+7:154:10052:27:28:71:542:566:12:g_d0_f7:12:g_d0_f7:B:values  of  itself  and  past  values  of  the  squared  innovations  in  the  spot  returns.  The  conditional 
+7:155:10164:28:28:71:542:538:12:g_d0_f7:12:g_d0_f7:B:variance  of  the  futures  returns  and  the  conditional  covariance  between  spot  and  futures  returns 
+7:156:10273:28:27:71:542:510:12:g_d0_f7:12:g_d0_f7:B:have  similar  structures.    Because  of  the  diagonal  restriction  we  use  only  the  upper  triangular 
+7:157:10382:27:28:71:542:483:12:g_d0_f7:12:g_d0_f7:B:portion  of  the  variance  covariance  matrix,  the  model  is  therefore  parsimonious,  with  only  nine 
+7:158:10490:28:27:71:542:455:12:g_d0_f7:12:g_d0_f7:B:parameters  in  the  conditional  variance-covariance  structure  of  the  Diagonal  VECH  model  to  be 
+7:159:10595:27:29:71:543:428:12:g_d0_f7:12:g_d0_f7:B:estimated.  This  is  subject  to  the  requirement  that  the  variance-covariance  matrix is  positive 
+7:160:10699:29:31:71:404:399:12:g_d0_f7:12:g_d0_f7:B:definite for all values oftein order to generate positive hedge ratios.  
+7:161:10772:31:28:72:75:368:12:g_d0_f7:12:g_d0_f7:B: 
+7:162:10772:28:27:71:402:340:12:g_d0_f6:12:g_d0_f6:C:The Asymmetric Diagonal VECH GARCH Model (ASDVECH)  
+7:163:10824:27:28:71:542:313:12:g_d0_f7:12:g_d0_f7:B:The second GARCH model that we use is an asymmetric extension of the SDVECH model. We 
+7:164:10910:28:27:71:542:285:12:g_d0_f7:12:g_d0_f7:B:require  both  a  symmetric  and  an  asymmetric  GARCH  model  since  we  are  examining  their 
+7:165:11007:27:28:71:542:258:12:g_d0_f7:12:g_d0_f7:B:suitability  for  symmetric  and  asymmetric  datasets.  The  key  advantage  of  using  an  asymmetric 
+7:166:11111:28:27:71:542:230:12:g_d0_f7:12:g_d0_f7:B:model is that it is able to capture the asymmetries both within and between Oil spot and futures 
+7:167:11208:27:28:71:542:203:12:g_d0_f7:12:g_d0_f7:B:markets.  It  therefore  allows  for  different  volatility  response  to  negative  and  positive  returns 
+7:168:11316:28:28:71:542:175:12:g_d0_f7:12:g_d0_f7:B:which  means  that  dynamic  hedging  strategies  will  differ  from  those  models  that  impose 
+7:169:11414:28:27:71:542:147:12:g_d0_f7:12:g_d0_f7:B:symmetry.  The  asymmetric  GARCH  model  we  use  builds  on  the  univariate  GJR  asymmetric 
+7:170:11510:27:28:71:542:120:12:g_d0_f7:12:g_d0_f7:B:GARCH  model  of  Glosten  et  al,  (1993).  The  GJR  model  allows  the  variance  to  respond 
+7:171:11607:28:27:71:542:92:12:g_d0_f7:12:g_d0_f7:B:differently  to  positive  and  negative  return  innovations  through  the  use  of  an  additional  term 
+7:172:11714:27:0:71:542:65:12:g_d0_f7:12:g_d0_f7:B:designed to capture asymmetries. The multivariate model is similar to that used in de Goeij and 
+8:173:11811:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:Marquering  (2004).  It  differs  from  the  SDVECH  model  by  changing  the  equations  for  the 
+8:174:11910:28:33:71:430:695:12:g_d0_f7:12:g_d0_f7:B:variances of the spot and futures given in equations (5) and (6) as follows: 
+8:175:11987:33:0:302:305:662:7:g_d0_f7:7:g_d0_f7:F:1
+8:176:11988:0:8:278:281:670:7:g_d0_f7:7:g_d0_f7:F:2
+8:177:11989:8:0:286:245:662:7:g_d0_f7:7:g_d0_f7:F:11
+8:178:11991:0:10:187:190:671:7:g_d0_f7:7:g_d0_f7:F:2
+8:179:11992:10:33:193:520:661:7:g_d0_f7:12:g_d0_f7:A:1----+++=tststsstssstsIDHBACHee      (8) 
+8:180:12027:33:0:315:318:628:7:g_d0_f7:7:g_d0_f7:F:1
+8:181:12028:0:8:291:294:636:7:g_d0_f7:7:g_d0_f7:F:2
+8:182:12029:8:0:300:256:628:7:g_d0_f7:7:g_d0_f7:F:11
+8:183:12031:0:11:195:198:637:7:g_d0_f7:7:g_d0_f7:F:2
+8:184:12032:11:28:200:520:626:7:g_d0_f7:12:g_d0_f7:A:1----+++=tftftfftffftfIDHBACHee      (9) 
+8:185:12069:28:29:71:543:598:12:g_d0_f7:12:g_d0_f7:B:whereD  is  an  additional  term  added  to  account  for  possible  asymmetries,  andIis  an  indicator 
+8:186:12174:29:31:71:542:569:12:g_d0_f7:12:g_d0_f7:B:function  whereby 11=-tIif 0,11<--ftstee, 01=-tIif 0,11>--ftstee.  Therefore,  the  asymmetric 
+8:187:12269:31:28:71:427:538:12:g_d0_f7:12:g_d0_f6:B:effects are only applied to the variances involving lagged own residuals.   
+8:188:12344:28:27:71:74:510:12:g_d0_f7:12:g_d0_f7:B: 
+8:189:12344:27:28:71:542:483:12:g_d0_f7:12:g_d0_f7:B:The advantage of GARCH models is that they can jointly estimate the conditional variances and 
+8:190:12438:28:27:71:542:455:12:g_d0_f7:12:g_d0_f7:B:covariances  required  for  optimal  hedge  ratios  and  can  also  account  for  asymmetric  effects  in 
+8:191:12544:27:28:71:542:428:12:g_d0_f7:12:g_d0_f7:B:volatility when extended as appropriate (see, for example, Kroner and Sultan, 1993; De Goeij, et 
+8:192:12641:28:28:71:542:400:12:g_d0_f7:12:g_d0_f7:B:al, 2004). However, the performance of these models has been mixed. Over short time horizons 
+8:193:12734:28:27:71:542:372:12:g_d0_f7:12:g_d0_f7:B:and  in-sample  they  have  performed  well  (Conrad,  Gultekin  and  Kaul,  1991),  however,  over 
+8:194:12834:27:28:71:542:345:12:g_d0_f7:12:g_d0_f7:B:longer  hedging  horizons  and  out-of-sample  their  performance  has  been  poor  (Lin  et  al,  1994). 
+8:195:12940:28:27:71:542:317:12:g_d0_f7:12:g_d0_f7:B:Brooks et al, (2002) use an asymmetric model to compare the hedging performance of symmetric 
+8:196:13033:27:28:71:542:290:12:g_d0_f7:12:g_d0_f7:B:and  asymmetric  GARCH.  Their  findings  indicate  that  accounting  for  asymmetry  may  yield 
+8:197:13130:28:28:71:542:262:12:g_d0_f7:12:g_d0_f7:B:marginal  improvements  in  hedging  efficiency  in-sample  but  will  not  improve  out-of-sample 
+8:198:13229:28:27:71:542:234:12:g_d0_f7:12:g_d0_f7:B:hedging.  There  is  no  conclusive  evidence  that  the  GARCH  class  of  models  can  consistently 
+8:199:13331:27:28:71:542:207:12:g_d0_f7:12:g_d0_f7:B:outperform  the  simpler  Naïve  and  OLS  based  OHR’s.  However,  the  majority  of  studies  have 
+8:200:13432:28:27:71:542:179:12:g_d0_f7:12:g_d0_f7:B:only  applied  very  narrow  performance  criteria  in  evaluating  hedging  performance.    In  addition, 
+8:201:13539:27:28:71:542:152:12:g_d0_f7:12:g_d0_f7:B:the findings in general relate to financial asset hedging as relatively few studies have focused on 
+8:202:13639:28:28:71:542:124:12:g_d0_f7:12:g_d0_f7:B:commodity  hedging  as  we  do  in  this  paper.  We  now  turn  to  hedging  effectiveness  in  the  next 
+8:203:13746:28:27:71:111:96:12:g_d0_f7:12:g_d0_f7:B:section. 
+8:204:13755:27:0:71:74:69:12:g_d0_f7:12:g_d0_f7:B: 
+9:205:13756:0:28:71:226:723:12:g_d0_f6:12:g_d0_f6:C:3. Hedging Effectiveness  
+9:206:13782:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:We  address  a  gap  in  the  literature  on  commodity  hedging  by  employing  a  number  of  hedging 
+9:207:13886:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:effectiveness  metrics  in  addition  to  the  variance.  Each  of  these  can  distinguish  between  tail 
+9:208:13993:28:27:71:542:640:12:g_d0_f7:12:g_d0_f7:B:probabilities and can therefore measure performance for short and long hedgers for asymmetric 
+9:209:14087:27:28:71:542:613:12:g_d0_f7:12:g_d0_f7:B:distributions.  The  hedging  effectiveness  metrics  we  use  are  based  on  the  Variance,  LPM,  VaR, 
+9:210:14193:28:28:71:130:585:12:g_d0_f7:12:g_d0_f7:B:and CVaR.  
+9:211:14204:28:27:71:74:557:12:g_d0_f7:12:g_d0_f7:B: 
+9:212:14204:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:The performance metric generally applied in the literature on hedging is the percentage reduction 
+9:213:14302:28:27:71:542:502:12:g_d0_f7:12:g_d0_f7:B:in the variance of the spot (unhedged) position to the variance of the hedged portfolio. This was 
+9:214:14400:27:28:71:436:475:12:g_d0_f7:12:g_d0_f7:B:proposed by Ederington (1979) and has been widely adopted. It is given as: 
+9:215:14475:28:38:71:74:447:12:g_d0_f7:12:g_d0_f7:B: 
+9:216:14475:38:12:107:298:409:12:g_d0_f7:12:g_d0_f10:A: -
+9:217:14476:12:0:293:298:397:12:g_d0_f10:12:g_d0_f10:C:-
+9:218:14477:0:11:293:298:417:12:g_d0_f10:12:g_d0_f10:C:-
+9:219:14478:11:9:161:166:406:12:g_d0_f10:12:g_d0_f10:C:-
+9:220:14479:9:0:161:166:397:12:g_d0_f10:12:g_d0_f10:C:-
+9:221:14480:0:8:161:166:417:12:g_d0_f10:12:g_d0_f10:C:-
+9:222:14481:8:12:152:143:409:12:g_d0_f9:12:g_d0_f9:C:-=
+9:223:14483:12:0:266:265:397:7:g_d0_f8:7:g_d0_f8:F:rtfolioUnhedgedPo
+9:224:14500:0:16:267:267:416:7:g_d0_f8:7:g_d0_f8:F:folioHedgedPort
+9:225:14515:16:0:173:230:400:12:g_d0_f8:12:g_d0_f8:C:VARIANCE
+9:226:14523:0:10:176:233:419:12:g_d0_f8:12:g_d0_f8:C:VARIANCE
+9:227:14531:10:40:113:526:409:12:g_d0_f8:12:g_d0_f7:A:HE11      (10) 
+9:228:14540:40:28:107:110:369:12:g_d0_f7:12:g_d0_f7:A: 
+9:229:14540:28:27:71:542:341:12:g_d0_f7:12:g_d0_f7:B:The  use  of  the  variance  as  a  measure  of  risk  has  been  criticised  because  it  fails  to  distinguish 
+9:230:14654:27:28:71:542:314:12:g_d0_f7:12:g_d0_f7:B:between  the  tails  of  the  distribution  and  therefore  fails  to  differentiate  in  performance  terms 
+9:231:14763:28:28:71:542:286:12:g_d0_f7:12:g_d0_f7:B:between  short  and  long  hedgers.  Where  distributions  are  asymmetric,  the  variance  will  over  or 
+9:232:14870:28:27:71:542:258:12:g_d0_f7:12:g_d0_f7:B:underestimate  risk.  It  is  therefore  not  an  adequate  measure  of  risk  for  hedgers  except  where 
+9:233:14977:27:28:71:542:231:12:g_d0_f7:12:g_d0_f7:B:distributions are symmetric. Also, Lien (2005) argues that the reason that the literature finds that 
+9:234:15078:28:27:71:542:203:12:g_d0_f7:12:g_d0_f7:B:the  OLS  hedging  strategies  tend  to  perform  as  well  or  better  than  more  complex  estimation 
+9:235:15182:27:28:71:542:176:12:g_d0_f7:12:g_d0_f7:B:models  such  as  GARCH,  can  be  attributed  to  the  use  of  the  Ederington  effectiveness  measure. 
+9:236:15288:28:28:71:542:148:12:g_d0_f7:12:g_d0_f7:B:Demirer  (2005)  argues  that  the  variance  performance  criterion  is  only  valid  for  OLS  based 
+9:237:15391:28:27:71:542:120:12:g_d0_f7:12:g_d0_f7:B:hedging  strategies  and  that  using  it  to  evaluate  non-OLS  OHR’s  will  lead  to  the  incorrect 
+9:238:15495:27:28:71:404:93:12:g_d0_f7:12:g_d0_f7:B:conclusion that OLS OHR’s are the best from a hedging perspective. 
+9:239:15562:28:0:71:74:65:12:g_d0_f7:12:g_d0_f7:B: 
+10:240:15563:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:Therefore, while the variance based measure is appropriate where the hedger seeks to minimise 
+10:241:15657:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:variance,  in  practice,  hedgers  may  seek  to  minimise  some  measure  of  risk  other  than  the 
+10:242:15759:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:variance.    We  therefore  use  three  additional  hedging  effectiveness  metrics  that  will  allow  us  to 
+10:243:15870:28:27:71:542:640:12:g_d0_f7:12:g_d0_f7:B:make  a  robust  comparison  of  different  hedging  models  under  both  symmetric  and  asymmetric 
+10:244:15971:27:28:71:130:613:12:g_d0_f7:12:g_d0_f7:B:conditions.  
+10:245:15984:28:28:71:74:585:12:g_d0_f7:12:g_d0_f7:B: 
+10:246:15984:28:27:71:542:557:12:g_d0_f6:12:g_d0_f7:B: The  LPM  is  the  first  of  a  number  of  hedging  effectiveness  metrics  that  we  use  to  address  the 
+10:247:16094:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:shortcoming in the variance measure. The LPM distinguishes between the left and right tail of a 
+10:248:16190:28:27:71:542:502:12:g_d0_f7:12:g_d0_f7:B:distribution and can, therefore, measure risk in the presence of asymmetries as it is a function of 
+10:249:16290:27:28:71:542:475:12:g_d0_f7:12:g_d0_f7:B:the underlying distribution (Bawa, 1975).  The LPM measures the probability of falling below a 
+10:250:16385:28:39:71:412:447:12:g_d0_f7:12:g_d0_f6:B:pre-specified target return.  The LPM of order n around - is defined as 
+10:251:16456:39:0:107:282:408:12:g_d0_f7:12:g_d0_f9:A:LPMn (-;R) =[](){}
+10:252:16474:0:7:271:274:415:7:g_d0_f8:7:g_d0_f8:F:n
+10:253:16475:7:13:256:333:408:12:g_d0_f8:18:g_d0_f10:C:RE-t,0max∫ ()()-
+10:254:16490:13:0:329:329:395:7:g_d0_f9:7:g_d0_f9:F:•-
+10:255:16492:0:0:346:353:408:12:g_d0_f9:12:g_d0_f9:C:-
+10:256:16493:0:14:328:331:422:7:g_d0_f9:7:g_d0_f9:F:t
+10:257:16494:14:0:337:362:408:13:g_d0_f9:12:g_d0_f8:C:tRdFR
+10:258:16499:0:7:367:370:415:7:g_d0_f8:7:g_d0_f8:F:n
+10:259:16500:7:39:404:526:408:12:g_d0_f7:12:g_d0_f7:A:   (11) 
+10:260:16505:39:28:72:543:369:12:g_d0_f7:12:g_d0_f7:B:where F(R) is the cumulative distribution function of the investment return R and - is the target 
+10:261:16603:28:27:71:543:341:12:g_d0_f7:12:g_d0_f7:B:return parameter. The value of - will depend on the level of return or loss that is acceptable to the 
+10:262:16705:27:28:71:542:314:12:g_d0_f7:12:g_d0_f7:B:investor. Some values of - that may be considered are, zero or the risk free rate of interest. For a 
+10:263:16806:28:28:71:543:286:12:g_d0_f7:12:g_d0_f7:B:hedger a small negative return may be acceptable to reflect the cost of hedging. The parameter n 
+10:264:16902:28:28:71:542:258:12:g_d0_f7:12:g_d0_f7:B:reflects  the  weighting  applied  to  shortfalls  from  the  target  return.  The  more  risk  averse  an 
+10:265:17009:28:28:71:543:230:12:g_d0_f7:12:g_d0_f7:B:investor the higher the weight (n) that would be attached. Fishburn (1977) shows that 10<<nis 
+10:266:17103:28:27:71:543:202:12:g_d0_f7:12:g_d0_f7:B:suitable  for  a  risk  seeking  investor, 1=n  for  risk  neutral,  and 1>nfor  a  risk  adverse  investor. 
+10:267:17212:27:28:71:542:175:12:g_d0_f7:12:g_d0_f7:B:We  can  form  a  complete  set  of  downside  risk  measures  by  changing  the -  and n  parameters  to 
+10:268:17318:28:28:71:542:147:12:g_d0_f7:12:g_d0_f7:B:reflect  the  position  and  risk  preferences  of  different  types  of  hedger.  The  more  risk  averse 
+10:269:17425:28:27:71:542:119:12:g_d0_f7:12:g_d0_f7:B:investors  may  set -  as  the  disaster  level  of  return  and  have  utilities  that  would  reflect  an  LPM 
+10:270:17538:27:30:71:543:92:12:g_d0_f7:12:g_d0_f7:B:with ....3,2=nFor example, an investor who views the consequences of a disaster level return as 
+10:271:17634:30:0:72:348:62:12:g_d0_f7:12:g_d0_f7:B:being unacceptable may use an order of LPM with5=n. 
+11:272:17687:0:28:71:74:723:12:g_d0_f7:12:g_d0_f7:B: 
+11:273:17687:28:27:71:542:695:12:g_d0_f7:12:g_d0_f7:B:Interest  in  one  sided  risk  measures  has  increased  in  recent  years  as  investors  do  not  weight 
+11:274:17795:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:positive  and  negative  outcomes  evenly,  but  focus  on  downside  or  tail  specific  risk.  The  LPM 
+11:275:17901:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:therefore serves as an intuitive measure of  risk that is in line with the  risk preferences of many 
+11:276:18002:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:investors  (Lee  and  Rao,  1988).  Price  and  Nantell  (1982)  in  a  comparison  of  LPM  and  variance 
+11:277:18109:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:based measures of hedging effectiveness, find that they provide equivalent measures for normal 
+11:278:18204:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:distributions  but  that  the  LPM  differentiates  for  distributions  that  are  asymmetric  as  it  is  a  tail 
+11:279:18319:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:specific  measure  that  measures  the  left  and  right  tail  probabilities  independently.  A  number  of 
+11:280:18428:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:studies  have  compared  the  hedging  effectiveness  of  short  and  long  hedgers  using  the  LPM 
+11:281:18529:27:28:72:543:475:12:g_d0_f7:12:g_d0_f7:B:methodology  (see,  for  example,  Demirer  and  Lien,  2003,  and  Demirer  et  al,  2005).  The  results 
+11:282:18636:28:28:72:543:447:12:g_d0_f7:12:g_d0_f7:B:from these studies indicate that hedging effectiveness for long hedgers differs from that of short 
+11:283:18735:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:hedgers  with  long  hedgers  deriving  more  benefit  from  hedging  in  terms  of  risk  reduction  as 
+11:284:18840:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:measured by reduced LPM’s. Other studies that use the LPM include Lien and Tse (1998), who 
+11:285:18931:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:examined  the  consequences  of  time-varying  conditional  heteroskedasticity  on  optimal  LPM 
+11:286:19028:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:based hedge ratios. They find that the optimal LPM hedge ratios are, on average, smaller than the 
+11:287:19126:28:28:72:542:309:12:g_d0_f7:12:g_d0_f7:B:minimum-variance  hedge  ratios. Lien  and  Tse  (2000)  argue that  the  minimum-variance  hedge 
+11:288:19222:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:strategy  is  inappropriate  for  investors  who  are  strongly  risk  averse  such  as  those  with  utilities 
+11:289:19334:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:that  reflect  the  higher  orders  of  magnitude  allowed  for  by  the  LPM.    Since  the  majority  of 
+11:290:19441:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:hedgers  seek  to  limit  losses,  it  may  therefore,  be  appropriate  for  hedgers  to  seek  to  minimise  a 
+11:291:19554:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:risk measure that is tail specific. Two additional metrics that are closely related to the LPM and 
+11:292:19653:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:which also have similar advantages as measures of risk for hedging are VaR and CVaR. Both of 
+11:293:19746:28:27:72:543:143:12:g_d0_f7:12:g_d0_f7:B:these  measures  are  also  tail  specific  and  may  be  used  to  measure  downside  risk.  These  are 
+11:294:19851:27:28:72:197:116:12:g_d0_f7:12:g_d0_f7:B:considered in due course. 
+11:295:19877:28:0:72:75:88:12:g_d0_f7:12:g_d0_f7:B: 
+12:296:19879:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:We  calculate  the  lower  partial  moment  using  a  target  return  of  zero  since  the  general  aim  of 
+12:297:19988:28:27:72:542:695:12:g_d0_f7:12:g_d0_f7:B:hedging is to avoid negative outcomes. We also use n=3 as the order of LPM, as this corresponds 
+12:298:20084:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:to  a  strongly  risk  averse  investor.  The  metric  we  apply  to  evaluate  hedging  effectiveness  based 
+12:299:20194:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:on  the  LPM  is  the  percentage  reduction  in  the  LPM  of  each  hedging  estimation  method  as 
+12:300:20296:27:28:72:253:613:12:g_d0_f7:12:g_d0_f7:B:compared with a no hedge position1.  
+12:301:20333:28:41:72:175:585:12:g_d0_f7:12:g_d0_f7:B:This is calculated as: 
+12:302:20356:41:9:263:268:544:12:g_d0_f10:12:g_d0_f10:C:-
+12:303:20357:9:0:263:268:535:12:g_d0_f10:12:g_d0_f10:C:-
+12:304:20358:0:11:263:268:555:12:g_d0_f10:12:g_d0_f10:C:-
+12:305:20359:11:9:159:164:544:12:g_d0_f10:12:g_d0_f10:C:-
+12:306:20360:9:0:159:164:535:12:g_d0_f10:12:g_d0_f10:C:-
+12:307:20361:0:8:159:164:555:12:g_d0_f10:12:g_d0_f10:C:-
+12:308:20362:8:13:150:141:547:12:g_d0_f9:12:g_d0_f9:C:-=
+12:309:20364:13:0:236:236:534:7:g_d0_f8:7:g_d0_f8:F:rtfolioUnhedgedPo
+12:310:20381:0:15:238:238:553:7:g_d0_f8:7:g_d0_f8:F:folioHedgedPort
+12:311:20396:15:0:172:196:538:12:g_d0_f8:12:g_d0_f8:C:LPM
+12:312:20399:0:10:175:199:557:12:g_d0_f8:12:g_d0_f8:C:LPM
+12:313:20402:10:12:110:126:547:12:g_d0_f8:12:g_d0_f8:C:HE
+12:314:20404:12:0:197:200:535:7:g_d0_f7:7:g_d0_f7:F:3
+12:315:20405:0:10:200:203:554:7:g_d0_f7:7:g_d0_f7:F:3
+12:316:20406:10:38:126:526:544:7:g_d0_f7:12:g_d0_f7:A:21       (12) 
+12:317:20413:38:28:72:542:506:12:g_d0_f7:12:g_d0_f7:B:The third hedging effectiveness metric is VaR2. This is the loss level of a portfolio over a certain 
+12:318:20514:28:28:72:543:478:12:g_d0_f7:12:g_d0_f7:B:period that will not be exceeded with a specified probability. VaR has two parameters, the time 
+12:319:20610:28:27:72:543:450:12:g_d0_f7:12:g_d0_f7:B:horizon  (N)  and  the  confidence  level  (x).  Generally  VaR  is  the  (100-x)th  percentile  of  the 
+12:320:20715:27:28:72:543:423:12:g_d0_f7:12:g_d0_f7:B:portfolio over the next N days. We calculate VaR using 99=x and1=N. This corresponds to 
+12:321:20803:28:28:72:543:395:12:g_d0_f7:12:g_d0_f7:B:the  first  percentile  of  the  return  distribution  of  each  portfolio  over  a  one-day  period  which  is 
+12:322:20915:28:27:72:543:367:12:g_d0_f7:12:g_d0_f7:B:consistent  with  the  OHR  estimation  period  used  in  this  study.  Similar  to  the  LPM,  the 
+12:323:21015:27:42:72:413:340:12:g_d0_f7:12:g_d0_f7:B:performance metric employed is the percentage reduction in the VaR.  
+12:324:21084:42:8:262:267:298:12:g_d0_f10:12:g_d0_f10:C:-
+12:325:21085:8:0:262:267:290:12:g_d0_f10:12:g_d0_f10:C:-
+12:326:21086:0:12:262:267:310:12:g_d0_f10:12:g_d0_f10:C:-
+12:327:21087:12:8:158:163:298:12:g_d0_f10:12:g_d0_f10:C:-
+12:328:21088:8:0:158:163:290:12:g_d0_f10:12:g_d0_f10:C:-
+12:329:21089:0:8:158:163:310:12:g_d0_f10:12:g_d0_f10:C:-
+12:330:21090:8:13:149:140:302:12:g_d0_f9:12:g_d0_f9:C:-=
+12:331:21092:13:0:235:235:289:7:g_d0_f8:7:g_d0_f8:F:rtfolioUnhedgedPo
+12:332:21109:0:15:237:237:308:7:g_d0_f8:7:g_d0_f8:F:folioHedgedPort
+12:333:21124:15:0:170:191:293:12:g_d0_f8:12:g_d0_f8:C:VaR
+12:334:21127:0:10:173:194:312:12:g_d0_f8:12:g_d0_f8:C:VaR
+12:335:21130:10:12:110:126:302:12:g_d0_f8:12:g_d0_f8:C:HE
+12:336:21132:12:0:193:192:290:7:g_d0_f7:7:g_d0_f7:F:%1
+12:337:21134:0:10:196:195:309:7:g_d0_f7:7:g_d0_f7:F:%1
+12:338:21136:10:39:125:526:299:7:g_d0_f7:12:g_d0_f7:A:31       (13) 
+12:339:21143:39:27:72:543:260:12:g_d0_f7:12:g_d0_f7:B:A  shortcoming  in  VaR  is  that  it  is  not  a  coherent  measure  of  risk,  as  it  is  not  subadditive.  In 
+12:340:21258:27:28:72:546:233:12:g_d0_f7:12:g_d0_f7:B:practice  this  means  that  two  portfolios  may  have  the  same  VaR  but  different  potential  losses.  
+12:341:21367:28:27:72:542:205:12:g_d0_f7:12:g_d0_f7:B:This is because VaR does not account for losses beyond the (100-x)th percentile. We address this 
+12:342:21464:27:28:72:543:178:12:g_d0_f7:12:g_d0_f7:B:by  estimating  an  additional  performance  metric;  Conditional  Value  at  Risk  (CVaR)  that 
+12:343:21561:28:33:72:408:150:12:g_d0_f7:12:g_d0_f7:B:addresses the shortcoming in VaR as it is a coherent measure of risk.  
+12:344:21632:33:7:71:217:117:10:g_d0_f7:10:g_d0_f7:F:                                                           
+12:345:21690:7:16:71:522:110:6:g_d0_f7:10:g_d0_f7:F:1 The percentage reduction in the relevant performance measure is generally compared with a no-hedge position 
+12:346:21800:16:11:71:506:94:10:g_d0_f7:10:g_d0_f7:F:however there may be some cases where a no-hedge position does not yield the worst hedging performance, 
+12:347:21904:11:7:71:509:83:10:g_d0_f7:10:g_d0_f7:F:whereby the comparison is than made against the hedging model that yields the worst hedging performance.  
+12:348:22010:7:7:71:513:76:6:g_d0_f7:10:g_d0_f7:F:2 VaR can be viewed as a special case of the LPM in equation (11) setting n=0. By fixing the probability LPM
+12:349:22118:7:10:512:536:69:6:g_d0_f7:10:g_d0_f7:F:0, the 
+12:350:22125:10:0:72:346:59:10:g_d0_f7:10:g_d0_f7:F:corresponding VaR can be calculated. Therefore VaR = F-1(LPM0).  
+13:351:22192:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:Coherent measures of risk are subadditive. What this means is that the risk of two positions when 
+13:352:22290:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:added together is never greater than the sum of the risks of the two individual positions (see, for 
+13:353:22390:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:example,  Artzner  et  al,  1999).  Few  studies  in  the  hedging  literature  have  applied  VaR  as  a 
+13:354:22496:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:hedging effectiveness measure, however, Giot and Laurent (2003) use both the VAR and CVaR 
+13:355:22586:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:measures  to  examine  the  risk  of  short  and  long  trading  positions  over  a  one  day  time  horizon. 
+13:356:22696:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:They  estimate  volatility  using  both  symmetric  and  asymmetric  GARCH  type  approaches.  Their 
+13:357:22797:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:findings  show  that  symmetric  models  underperform  models  that  account  for  asymmetry; 
+13:358:22891:27:28:72:371:530:12:g_d0_f7:12:g_d0_f7:B:however, their analysis is only applied to unhedged positions. 
+13:359:22954:28:27:72:75:502:12:g_d0_f7:12:g_d0_f7:B: 
+13:360:22954:27:28:72:482:475:12:g_d0_f7:12:g_d0_f7:B:CVaR is the expected loss conditional that we have exceeded the VaR. It is given as: 
+13:361:23039:28:28:72:527:447:12:g_d0_f7:12:g_d0_f7:B:  CVaR = E[L|L> VaR]         (14) 
+13:362:23066:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:This measures the expected value of our losses, L, if we get a loss in excess of the VaR. CVaR is 
+13:363:23164:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:preferable  to  the  VaR  because  it  estimates  not  only  of  the  probability  of  a  loss,  but  also  the 
+13:364:23276:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:magnitude of a possible  loss.  In calculating CVaR we use the 1% confidence level which gives 
+13:365:23371:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:us  the  expected  shortfall  beyond  the  1%  VaR.  The  performance  metric  we  use  to  evaluate 
+13:366:23472:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:hedging  effectiveness  is  the  percentage  reduction  in  CVaR  as  compared  with  a  no  hedge 
+13:367:23571:28:42:72:117:281:12:g_d0_f7:12:g_d0_f7:B:position. 
+13:368:23581:42:8:275:280:239:12:g_d0_f10:12:g_d0_f10:C:-
+13:369:23582:8:0:275:280:231:12:g_d0_f10:12:g_d0_f10:C:-
+13:370:23583:0:12:275:280:251:12:g_d0_f10:12:g_d0_f10:C:-
+13:371:23584:12:8:159:164:239:12:g_d0_f10:12:g_d0_f10:C:-
+13:372:23585:8:0:159:164:231:12:g_d0_f10:12:g_d0_f10:C:-
+13:373:23586:0:8:159:164:251:12:g_d0_f10:12:g_d0_f10:C:-
+13:374:23587:8:13:150:142:243:12:g_d0_f9:12:g_d0_f9:C:-=
+13:375:23589:13:0:247:246:230:7:g_d0_f8:7:g_d0_f8:F:rtfolioUnhedgedPo
+13:376:23606:0:17:248:248:250:7:g_d0_f8:7:g_d0_f8:F:folioHedgedPort
+13:377:23621:17:0:172:201:233:12:g_d0_f8:12:g_d0_f8:C:CVaR
+13:378:23625:0:10:175:204:253:12:g_d0_f8:12:g_d0_f8:C:CVaR
+13:379:23629:10:13:110:126:243:12:g_d0_f8:12:g_d0_f8:C:HE
+13:380:23631:13:0:204:203:230:7:g_d0_f7:7:g_d0_f7:F:%1
+13:381:23633:0:10:207:206:250:7:g_d0_f7:7:g_d0_f7:F:%1
+13:382:23635:10:39:126:526:240:7:g_d0_f7:12:g_d0_f7:A:41        (15) 
+13:383:23645:39:28:107:110:201:12:g_d0_f7:12:g_d0_f7:A: 
+13:384:23645:28:27:71:542:173:12:g_d0_f7:12:g_d0_f7:B:Next we turn to our application of both the hedging models and performance measures outlined 
+13:385:23738:27:0:71:390:146:12:g_d0_f7:12:g_d0_f7:B:to examine hedging effectiveness under conditions of asymmetry. 
+14:386:23804:0:28:71:197:723:12:g_d0_f6:12:g_d0_f7:B:4. Data Description 
+14:387:23823:28:27:71:74:695:12:g_d0_f6:12:g_d0_f6:C: 
+14:388:23823:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:Our data consist of daily commodity Oil cash and futures data. Oil was chosen as it potentially 
+14:389:23919:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:exhibits  significant  asymmetric  effects  based  on  the  reasons  discussed  earlier,  because  it  is  the 
+14:390:24030:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:largest  traded  commodity  in  the  world  in  terms  of  monetary  value,  because  of  its  economic 
+14:391:24134:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:importance  and  because  it  is  widely  hedged.  It  is  therefore  a  suitable  asset  to  use  in  an 
+14:392:24240:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:examination  into  the  effects  of  asymmetry  on  hedging.  The  oil  contract  used  is  the  NYMEX 
+14:393:24343:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:West  Texas  Light  Sweet  Crude  which  was  chosen  as  it  is  used  as  an  international  oil  pricing 
+14:394:24451:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:benchmark  given  its  liquidity  and  price  transparency.  All  data  was  obtained  from  Commodity 
+14:395:24554:27:28:72:543:475:12:g_d0_f7:12:g_d0_f7:B:Systems  and  daily  returns  were  calculated  as  the  differenced  logarithmic  prices.  A  continuous 
+14:396:24660:28:28:72:543:447:12:g_d0_f7:12:g_d0_f7:B:series was formed with the contract being rolled over by volume. This means that the price of the 
+14:397:24758:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:largest traded contract by volume was used and that the price switched from one contract to the 
+14:398:24854:27:28:72:481:392:12:g_d0_f7:12:g_d0_f7:B:next when that contract’s volume fell below the volume of the next traded contract.   
+14:399:24940:28:27:72:75:364:12:g_d0_f7:12:g_d0_f7:B: 
+14:400:24940:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:Since we are examining the influence of asymmetry and its effects on hedging effectiveness, we 
+14:401:25035:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:have  used  an  innovative  approach  in  choosing  the  data.  The  oil  contract  and  the  sample  period 
+14:402:25144:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:were  chosen  on  the  basis  of  their  distributional  characteristics  as  we  required  data  with  both 
+14:403:25253:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:symmetric  and  asymmetric  distributions.  A  single  oil  contract  was  used  for  the  sample  period 
+14:404:25359:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:from  1  January  2000  –  31  December  2001.  We  broke  down  the  data  into  two  separate  periods, 
+14:405:25465:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:one symmetric and one asymmetric. The first dataset corresponds to the period 1 January 2000 – 
+14:406:25560:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:31 December 2000 and is termed Period 1. The second dataset corresponds to the period from 1 
+14:407:25653:28:27:72:360:143:12:g_d0_f7:12:g_d0_f7:B:January 2001 – 31 December 2001 and is termed Period 2.  
+14:408:25710:27:28:72:75:116:12:g_d0_f7:12:g_d0_f7:B: 
+14:409:25710:28:27:72:543:88:12:g_d0_f7:12:g_d0_f7:B:For  each  period,  the  first  160  observations  comprise  the  in-sample  period.  The  remaining  100 
+14:410:25816:27:0:72:543:61:12:g_d0_f7:12:g_d0_f7:B:observations  were  used  to  facilitate  out-of-sample  comparisons.  Summary  statistics  for  the  data 
+15:411:25925:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:are  displayed  in  Table  I.  The  characteristics  of  the  return  distributions  for  both  series  are 
+15:412:26033:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:markedly different. From table 1, we can see that period 1 is non-symmetric and is characterised 
+15:413:26130:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:by  negative  skewness.  In  contrast,  Period  2  can  be  characterised  as  Gaussian  given  the 
+15:414:26230:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:insignificant  skewness  figure  and  our  failure  to  reject  the  hypothesis  of  normality  based  on  the 
+15:415:26341:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:Bera-Jarque  statistic.  The  use  of  a  symmetric  period  also  allows  us  to  compare  the  hedging 
+15:416:26446:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:effectiveness  under  Gaussian  market  conditions  of  each  of  the  different  models  using  the 
+15:417:26547:28:27:72:317:557:12:g_d0_f7:12:g_d0_f7:B:hedging effectiveness metrics previously outlined. 
+15:418:26598:27:14:71:445:530:12:g_d0_f6:12:g_d0_f7:B:Table 1: Summary Statistics of Daily Oil Spot and Futures Returns 
+15:419:26663:14:11:71:318:516:10:g_d0_f6:10:g_d0_f6:F:Sample Period PERIOD 1 
+15:420:26685:11:12:258:329:505:10:g_d0_f6:10:g_d0_f6:F:Oil-Asymmetric 
+15:421:26700:12:0:282:305:493:10:g_d0_f6:10:g_d0_f12:F:2001 
+15:422:26704:0:11:438:487:516:10:g_d0_f6:10:g_d0_f6:F:PERIOD 2 
+15:423:26713:11:12:430:496:505:10:g_d0_f6:10:g_d0_f6:F:Oil-Symmetric 
+15:424:26727:12:11:451:474:493:10:g_d0_f6:10:g_d0_f12:F:2002 
+15:425:26731:11:14:71:520:482:10:g_d0_f6:10:g_d0_f7:F:Index  Spot Futures Spot Futures 
+15:426:26764:14:14:71:519:468:10:g_d0_f6:10:g_d0_f7:F:Mean -0.0012 -0.0012 0.0018 0.0017 
+15:427:26799:14:14:72:521:454:10:g_d0_f6:10:g_d0_f7:F:Min -0.1653 -0.1654 -0.0586 -0.0627 
+15:428:26835:14:14:71:519:440:10:g_d0_f6:10:g_d0_f7:F:Max 0.1039 0.0807 0.0613 0.0595 
+15:429:26867:14:14:72:519:426:10:g_d0_f6:10:g_d0_f7:F:Std Dev 0.0277 0.0261 0.0212 0.0208 
+15:430:26903:14:14:72:518:412:10:g_d0_f6:10:g_d0_f7:F:Skewness -0.633* -1.003* -0.066 -0.041 
+15:431:26942:14:15:72:517:398:10:g_d0_f6:10:g_d0_f7:F:Kurtosis 6.746* 6.762* 0.421 0.384 
+15:432:26977:15:14:71:517:383:10:g_d0_f6:10:g_d0_f7:F:B-J 512.36* 541.14* 2.112 1.678 
+15:433:27009:14:13:71:522:369:10:g_d0_f6:10:g_d0_f7:F:LM 7.17 1.53 9.48 11.41** 
+15:434:27035:13:14:71:521:356:10:g_d0_f6:10:g_d0_f7:F:Stationarity -16.25* -15.43* -16.83* -17.51* 
+15:435:27080:14:9:71:541:342:8:g_d0_f7:8:g_d0_f7:F:Notes: Summary statistics are presented for the log returns of each spot and futures series.  The skewness statistic measures asymmetry where 
+15:436:27222:9:9:71:533:333:8:g_d0_f7:8:g_d0_f7:F:zero would indicate a symmetric distribution. The kurtosis statistic measures the shape of a distribution as compared with a normal distribution. 
+15:437:27368:9:10:71:531:324:8:g_d0_f7:8:g_d0_f7:F:Figures reported for kurtosis are for excess kurtosis where a value of zero would indicate a normal distribution.  The Bera-Jarque (B-J) statistic 
+15:438:27515:10:9:71:532:314:8:g_d0_f7:8:g_d0_f7:F:combines skewness and kurtosis to measure normality.  LM is the Lagrange Multiplier test proposed by Engle (1982). The test statistic for B-J, 
+15:439:27658:9:9:71:514:305:8:g_d0_f7:8:g_d0_f7:F:LM tests are distributed -2. Stationarity is tested using the Dickey-Fuller unit root test.  *Denotes Significance at the 1% level. **Denotes 
+15:440:27799:9:9:71:165:296:8:g_d0_f7:8:g_d0_f7:F:Significance at the 5% level. 
+15:441:27829:9:20:71:73:287:8:g_d0_f7:8:g_d0_f7:F: 
+15:442:27829:20:14:71:73:267:10:g_d0_f7:10:g_d0_f7:F: 
+15:443:27829:14:27:71:542:253:12:g_d0_f7:12:g_d0_f7:B:The data were  checked  for stationarity using Dickey  Fuller unit root tests. As expected, the log 
+15:444:27929:27:28:72:543:226:12:g_d0_f7:12:g_d0_f7:B:returns for both series are stationary. Stationarity is important as a non-stationary series may lead 
+15:445:28031:28:28:72:543:198:12:g_d0_f7:12:g_d0_f7:B:to spurious regressions and invalidate the estimated optimal hedge ratios. LM tests were used to 
+15:446:28128:28:27:72:543:170:12:g_d0_f7:12:g_d0_f7:B:check  for  heteroskedasticity  with  only  the  futures  returns  for  Period  2  showing  significant 
+15:447:28232:27:28:72:543:143:12:g_d0_f7:12:g_d0_f7:B:GARCH  effects.  This  may  limit  the  theoretical  advantages  of  the  GARCH  models  over  the 
+15:448:28331:28:27:72:319:115:12:g_d0_f7:12:g_d0_f7:B:hedging strategies that assume a constant variance. 
+15:449:28383:27:0:72:75:88:12:g_d0_f7:12:g_d0_f7:B: 
+16:450:28385:0:14:71:209:723:12:g_d0_f6:12:g_d0_f6:C:5. Empirical Findings 
+16:451:28407:14:14:74:77:709:12:g_d0_f7:12:g_d0_f7:B: 
+16:452:28407:14:13:74:77:695:12:g_d0_f7:12:g_d0_f7:B: 
+16:453:28407:13:28:71:542:682:12:g_d0_f7:12:g_d0_f7:B:We compare the short and long hedging effectiveness of five different OHR estimation methods 
+16:454:28500:28:28:72:543:654:12:g_d0_f7:12:g_d0_f7:B:for  distributions  with  symmetric  and  asymmetric  characteristics.  We  construct  hedge  portfolios 
+16:455:28605:28:27:72:543:626:12:g_d0_f7:12:g_d0_f7:B:using  (1a)  and  (1b)  and  then  evaluate  hedging  effectiveness  over  a  1-day  re-balancing  period 
+16:456:28711:27:28:72:543:599:12:g_d0_f7:12:g_d0_f7:B:using  the  performance  metrics  outlined  in  section  3.  The  results  of  the  hedging  estimation 
+16:457:28815:28:27:72:542:571:12:g_d0_f7:12:g_d0_f7:B:models  are  quite  standard  and  are  therefore  not  reproduced  in  detail3.  Figure  1  presents  OHR’s 
+16:458:28924:27:28:72:396:544:12:g_d0_f7:12:g_d0_f7:B:for the Rolling OLS, symmetric and asymmetric GARCH models.  
+16:459:28985:28:26:72:75:516:12:g_d0_f7:12:g_d0_f7:B: 
+16:460:28985:26:18:71:243:490:10:g_d0_f7:10:g_d0_f7:F: Figure 1: Optimal Hedge Ratios  
+16:461:29016:18:158:260:315:472:8:g_d0_f13:8:g_d0_f13:F:Period 1 - 2001
+16:462:29031:158:0:153:469:314:8:g_d0_f14:8:g_d0_f14:F:20406080100120140160180200220240260
+16:463:29066:0:0:93:104:322:8:g_d0_f14:8:g_d0_f14:F:0.5
+16:464:29069:0:0:93:104:343:8:g_d0_f14:8:g_d0_f14:F:0.6
+16:465:29072:0:0:93:104:363:8:g_d0_f14:8:g_d0_f14:F:0.7
+16:466:29075:0:0:93:104:384:8:g_d0_f14:8:g_d0_f14:F:0.8
+16:467:29078:0:0:93:104:404:8:g_d0_f14:8:g_d0_f14:F:0.9
+16:468:29081:0:0:93:104:425:8:g_d0_f14:8:g_d0_f14:F:1.0
+16:469:29084:0:0:93:104:445:8:g_d0_f14:8:g_d0_f14:F:1.1
+16:470:29087:0:164:93:104:466:8:g_d0_f14:8:g_d0_f14:F:1.2
+16:471:29090:164:182:504:506:302:10:g_d0_f7:10:g_d0_f7:F: 
+16:472:29090:182:0:218:367:120:6:g_d0_f14:6:g_d0_f14:F:OLSSDVECHASDVECH
+16:473:29106:0:152:260:315:286:8:g_d0_f13:8:g_d0_f13:F:Period 2 - 2002
+16:474:29121:152:0:157:469:134:8:g_d0_f14:8:g_d0_f14:F:20406080100120140160180200220240260
+16:475:29156:0:0:93:108:142:8:g_d0_f14:8:g_d0_f14:F:0.54
+16:476:29160:0:0:93:108:162:8:g_d0_f14:8:g_d0_f14:F:0.63
+16:477:29164:0:0:93:108:181:8:g_d0_f14:8:g_d0_f14:F:0.72
+16:478:29168:0:0:93:108:201:8:g_d0_f14:8:g_d0_f14:F:0.81
+16:479:29172:0:0:93:108:220:8:g_d0_f14:8:g_d0_f14:F:0.90
+16:480:29176:0:0:93:108:240:8:g_d0_f14:8:g_d0_f14:F:0.99
+16:481:29180:0:0:93:108:259:8:g_d0_f14:8:g_d0_f14:F:1.08
+16:482:29184:0:175:93:108:279:8:g_d0_f14:8:g_d0_f14:F:1.17
+16:483:29188:175:9:504:506:104:10:g_d0_f7:10:g_d0_f7:F: 
+16:484:29188:9:11:71:494:95:10:g_d0_f7:10:g_d0_f7:F:Notes:    Figure 1 displays OHR’s for both asymmetric (period 1) and symmetric (period 2) distributions. 
+16:485:29293:11:13:71:73:84:10:g_d0_f7:10:g_d0_f7:F: 
+16:486:29293:13:7:71:217:71:10:g_d0_f7:10:g_d0_f7:F:                                                           
+16:487:29351:7:0:71:222:64:6:g_d0_f7:10:g_d0_f7:F:3 Full details are available on request 
+17:488:29393:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:Figure  1  reveals  significant  differences  between  the  OHR’s  for  the  different  models  for  both 
+17:489:29499:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:periods. The gap between the GARCH model OHR’s for the asymmetric period is to be expected 
+17:490:29590:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:however  there  is  also  a  large  difference  between  the  OHR’s  for  the  GARCH  models  for  the 
+17:491:29693:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:symmetric period. This indicates that although the Period 2 dataset is symmetric as measured by 
+17:492:29789:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:skewness, there may still be an asymmetric response to positive and negative return innovations 
+17:493:29885:28:28:72:546:585:12:g_d0_f7:12:g_d0_f7:B:that is being picked up by  the asymmetric  GARCH model and this is considered in due course.  
+17:494:29980:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:The OHR’s also appear to be stationary, therefore, while we would expect to see different model 
+17:495:30076:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:hedging  performance  for  each  of  the  different  models,  the  performance  gap  may  be  narrow  in 
+17:496:30181:28:27:72:133:502:12:g_d0_f7:12:g_d0_f7:B:many cases. 
+17:497:30193:27:28:72:75:475:12:g_d0_f7:12:g_d0_f7:B: 
+17:498:30193:28:28:72:543:447:12:g_d0_f7:12:g_d0_f7:B:Table  2  presents  results  for  hedging  effectiveness.  Comparisons  are  made  between  the  hedging 
+17:499:30298:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:effectiveness  of  short  and  long  hedgers  for  both  the  asymmetric  data  (Period  1)  and  symmetric 
+17:500:30406:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:data (Period 2). Statistical comparisons are made using Efrons (1979) bootstrap methodology by 
+17:501:30501:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:employing t-tests of the differences between short and long hedgers based on the point estimates 
+17:502:30598:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:of our results. This approach is also adopted in tests of model hedging effectiveness and allows 
+17:503:30695:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:us  to  make  statistical  as  well  as  economic  inferences  from  our  results.  Comparisons  are  carried 
+17:504:30805:28:27:72:516:281:12:g_d0_f7:12:g_d0_f7:B:out both in-sample and out-of-sample and across each of the hedging effectiveness metrics.  
+17:505:30897:27:28:72:75:254:12:g_d0_f7:12:g_d0_f7:B: 
+17:506:30897:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:Examining  first  general  hedging  performance,  we  can  observe  large  differences  in  hedging 
+17:507:30997:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:effectiveness  for  the  asymmetric  and  symmetric  datasets.  General  hedging  performance  across 
+17:508:31099:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:all  models  and  risk  measures  is  worse  for  the  asymmetric  period.  For  example,  variance 
+17:509:31199:28:27:72:543:143:12:g_d0_f7:12:g_d0_f7:B:reductions for the symmetric period are of the order of 95% as compared with an average of 29% 
+17:510:31294:27:28:72:543:116:12:g_d0_f7:12:g_d0_f7:B:in-sample  for  the  asymmetric  period  when  all  hedging  models  are  used.  This  finding  persists  if 
+17:511:31403:28:27:72:543:88:12:g_d0_f7:12:g_d0_f7:B:we  use  the  tail  specific  measures  with  average  differences  in  hedging  performance  between  the 
+17:512:31510:27:0:72:543:61:12:g_d0_f7:12:g_d0_f7:B:symmetric and asymmetric periods of 27% and 31% for short and long hedgers respectively. We 
+18:513:31604:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:derive  a  number  of  conclusions  from  this  result.  First,  the  in-sample  hedging  performance  is 
+18:514:31710:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:much  better  for  symmetric  distributions  suggesting  that  hedging  oil  commodity  using  futures  is 
+18:515:31817:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:of  limited  use  during  volatile  periods  where  returns  may  be  skewed.  Secondly,  hedging 
+18:516:31915:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:effectiveness  for  oil  commodities  in  general  is  not  as  good  as  for  other  assets  such  as  equity 
+18:517:32026:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:indices.   This   may   be   attributed   to   the   relationship   between   spot   and   futures   prices   in 
+18:518:32139:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:commodities markets which may be volatile depending on changes in the underlying supply and 
+18:519:32231:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:demand conditions. An interesting result is that hedging is not as effective in reducing VaR and 
+18:520:32328:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:CVaR  as  it  is  at  reducing  the  LPM,  with  differences  in  hedging  effectiveness  typically  ranging 
+18:521:32437:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:from  15%-50%.  We  can  also  see  that  the  different  hedging  models  yield  poor  performance  in 
+18:522:32541:27:28:72:543:475:12:g_d0_f7:12:g_d0_f7:B:terms  of  reducing  the  VaR  and  especially  the  CVaR.  Using  the  best  performing  models  for 
+18:523:32643:28:28:72:543:447:12:g_d0_f7:12:g_d0_f7:B:example, the in-sample results for the skewed period 1 series indicate only an 11% reduction in 
+18:524:32739:28:27:72:396:419:12:g_d0_f7:12:g_d0_f7:B:the CVaR for short hedgers and a 29% reduction for long hedgers.  
+18:525:32805:27:28:72:75:392:12:g_d0_f7:12:g_d0_f7:B: 
+18:526:32805:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:These  results may be  related to the ability  of the  VaR and CVaR metrics  to model extreme tail 
+18:527:32904:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:events whereas the LPM is a more general metric that doesn’t pick up the most extreme outliers 
+18:528:32999:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:in  the  same  way4.  This  result  indicates  that  hedging  Oil  commodities  may  be  quite  limited  in 
+18:529:33107:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:reducing extreme losses as measured by the VaR or CVaR. These hedging effectiveness metrics 
+18:530:33199:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:may  therefore  be  appropriate  for  use  by  strongly  risk  averse  investors  as  a  measure  of  risk  for 
+18:531:33311:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:distributions that may be skewed by a small number of observations. A key point is that hedges 
+18:532:33406:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:may  not  be  as  effective  in  volatile  markets  that  are  skewed.  In  hedging  terms,  this  means  that 
+18:533:33517:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:investors may face the risk that their hedges will not fulfil their function of risk reduction during 
+18:534:33619:28:49:72:529:143:12:g_d0_f7:12:g_d0_f7:B:stressful markets conditions when they are most needed. When we examine the out-of-sample  
+18:535:33710:49:7:71:217:94:10:g_d0_f7:10:g_d0_f7:F:                                                           
+18:536:33768:7:16:71:524:87:6:g_d0_f7:10:g_d0_f7:F:4 While each of these measures is one sided, the LPM with a  target rate set t=0 will include all observations less 
+18:537:33884:16:12:72:511:71:10:g_d0_f7:10:g_d0_f7:F:than 0, whereas both the VaR and CVaR calculated at the 1% interval will include only extreme observations 
+18:538:33991:12:0:72:236:59:10:g_d0_f7:10:g_d0_f7:F:located in the left tail of the distribution. 
+19:539:34039:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:results,  we  find  that  only  the  variance  metric  supports  the  in-sample  results  and  that  the  tail 
+19:540:34150:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:specific  metrics  tend  to  show  better  hedging  effectiveness  for  the  asymmetric  period  as 
+19:541:34250:27:28:72:543:668:12:g_d0_f7:12:g_d0_f7:B:compared  with  the  symmetric.  However,  this  result  is  economically  significant  for  the  short 
+19:542:34354:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:hedgers  only  and  may  be  biased  given  the  relatively  small  sample.  Also,  again  we  can  see  the 
+19:543:34463:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:limited  use  of  hedging  in  reducing  risk  as  measured  by  VaR  and  CVaR  metrics.  This  is  an 
+19:544:34567:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:indication  that  extreme  values  may  persist  for  commodity  Oil  returns  that  cannot  be  hedged 
+19:545:34671:28:27:72:112:557:12:g_d0_f7:12:g_d0_f7:B:away.    
+19:546:34680:27:12:71:412:530:12:g_d0_f6:12:g_d0_f6:C:Table 2: Hedging Effectiveness – Short Vs Long Comparison 
+19:547:34738:12:9:110:204:518:8:g_d0_f6:5:g_d0_f6:F:(1) (2) HE1 
+19:548:34750:9:9:174:207:509:8:g_d0_f6:8:g_d0_f6:F:Variance 
+19:549:34759:9:0:179:203:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:550:34767:0:9:226:253:518:8:g_d0_f6:5:g_d0_f6:F:(3) HE2 
+19:551:34775:9:9:230:250:509:8:g_d0_f6:8:g_d0_f6:F:LPM 
+19:552:34779:9:0:228:252:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:553:34787:0:9:272:300:518:8:g_d0_f6:8:g_d0_f6:F:(4) HE3 
+19:554:34794:9:9:277:295:509:8:g_d0_f6:8:g_d0_f6:F:VaR 
+19:555:34798:9:0:274:298:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:556:34806:0:9:318:346:518:8:g_d0_f6:8:g_d0_f6:F:(5) HE4 
+19:557:34813:9:9:320:343:509:8:g_d0_f6:8:g_d0_f6:F:CVaR 
+19:558:34818:9:0:320:344:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:559:34826:0:9:368:395:518:8:g_d0_f6:5:g_d0_f6:F:(6) HE1 
+19:560:34834:9:9:365:398:509:8:g_d0_f6:8:g_d0_f6:F:Variance 
+19:561:34843:9:0:370:394:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:562:34851:0:9:417:444:518:8:g_d0_f6:5:g_d0_f6:F:(7) HE2 
+19:563:34859:9:9:421:441:509:8:g_d0_f6:8:g_d0_f6:F:LPM 
+19:564:34863:9:0:419:443:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:565:34871:0:9:463:491:518:8:g_d0_f6:8:g_d0_f6:F:(8) HE3 
+19:566:34878:9:9:468:486:509:8:g_d0_f6:8:g_d0_f6:F:VaR 
+19:567:34882:9:0:465:489:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:568:34890:0:9:509:537:518:8:g_d0_f6:8:g_d0_f6:F:(9) HE4 
+19:569:34897:9:9:511:534:509:8:g_d0_f6:8:g_d0_f6:F:CVaR 
+19:570:34902:9:10:511:535:500:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+19:571:34910:10:13:71:500:490:8:g_d0_f6:8:g_d0_f6:F: Panel A: SHORT HEDGERS Panel B: LONG  HEDGERS 
+19:572:34956:13:13:71:378:477:8:g_d0_f6:8:g_d0_f6:F: IN SAMPLE 
+19:573:34966:13:9:71:110:464:8:g_d0_f6:8:g_d0_f6:F:PERIOD 1 
+19:574:34975:9:0:71:132:455:8:g_d0_f6:8:g_d0_f6:F:OIL-Asymmetric 
+19:575:34990:0:9:189:333:464:8:g_d0_f7:8:g_d0_f7:F:    
+19:576:34990:9:9:380:524:455:8:g_d0_f7:8:g_d0_f7:F:    
+19:577:34990:9:13:71:533:446:8:g_d0_f6:8:g_d0_f7:F: None 00.00 00.00 00.00 11.61* 00.00 00.00 00.00 00.00 
+19:578:35045:13:13:71:535:433:8:g_d0_f6:8:g_d0_f6:F: Naïve 28.32 76.18* 13.19 0.00 28.32 36.55 26.38* 29.07* 
+19:579:35102:13:12:71:535:420:8:g_d0_f6:8:g_d0_f6:F: OLS 31.29 69.97* 20.61 9.91 31.29 55.27 26.55* 22.57* 
+19:580:35157:12:13:71:535:408:8:g_d0_f6:8:g_d0_f6:F: SDVECH 27.84 72.13* 18.25 3.97 27.84 44.93 30.05* 24.53* 
+19:581:35215:13:13:71:535:395:8:g_d0_f6:8:g_d0_f6:F: ASDVECH 29.51 74.17* 17.77 3.05 29.51 43.30 29.25* 26.09* 
+19:582:35274:13:13:71:356:382:8:g_d0_f6:8:g_d0_f7:F:  
+19:583:35274:13:9:71:110:369:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+19:584:35283:9:9:71:524:360:8:g_d0_f6:8:g_d0_f7:F:OIL-Symmetric         
+19:585:35297:9:13:71:533:351:8:g_d0_f6:8:g_d0_f7:F: None 00.00 00.00 00.00 00.00 00.00 00.00 00.00 00.00 
+19:586:35351:13:13:71:535:338:8:g_d0_f6:8:g_d0_f6:F: Naïve 95.87 92.02 42.01 33.18 95.87 87.05 47.17 51.43* 
+19:587:35407:13:12:71:533:325:8:g_d0_f6:8:g_d0_f7:F: OLS 95.98 90.08 45.59 48.94* 95.98 90.82 47.77 40.47 
+19:588:35461:12:13:71:535:313:8:g_d0_f6:8:g_d0_f6:F: SDVECH 96.23 93.29 45.45 36.26 96.23 89.26 55.38* 56.17* 
+19:589:35519:13:13:71:535:300:8:g_d0_f6:8:g_d0_f6:F: ASDVECH 96.02 92.76 43.97 33.86 96.02 88.00 52.74* 54.35* 
+19:590:35578:13:13:71:389:287:8:g_d0_f6:8:g_d0_f6:F: OUT OF SAMPLE 
+19:591:35592:13:9:72:111:274:8:g_d0_f6:8:g_d0_f6:F:PERIOD 1 
+19:592:35601:9:9:72:524:265:8:g_d0_f6:8:g_d0_f7:F:OIL-Asymmetric         
+19:593:35616:9:13:71:533:256:8:g_d0_f6:8:g_d0_f7:F: None 00.00 00.00 00.00 00.00 00.00 00.00 00.00 00.00 
+19:594:35670:13:13:71:533:243:8:g_d0_f6:8:g_d0_f7:F: Naïve 80.54 79.97 64.02* 59.77* 80.54 93.56* 40.77 36.06 
+19:595:35728:13:12:71:533:230:8:g_d0_f6:8:g_d0_f7:F: OLS 81.11 85.37 51.69 62.99* 81.11 93.53* 52.08 47.85 
+19:596:35783:12:13:71:533:218:8:g_d0_f6:8:g_d0_f7:F: SDVECH 80.22 80.87 62.88* 64.23* 80.22 94.12* 37.44 40.00 
+19:597:35842:13:13:71:533:205:8:g_d0_f6:8:g_d0_f7:F: ASDVECH 80.37 81.62 62.86* 64.90* 80.37 94.14* 37.58 40.55 
+19:598:35902:13:13:71:524:192:8:g_d0_f6:8:g_d0_f7:F:         
+19:599:35902:13:9:71:110:179:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+19:600:35911:9:9:71:524:170:8:g_d0_f6:8:g_d0_f7:F:OIL-Symmetric         
+19:601:35925:9:13:71:533:161:8:g_d0_f6:8:g_d0_f7:F: None 00.00 00.00 00.00 2.90* 00.00 00.00 00.00 00.00 
+19:602:35979:13:12:71:535:148:8:g_d0_f6:8:g_d0_f6:F: Naïve 90.95 76.82* 15.40 0.00 90.95 62.83 33.43* 26.25* 
+19:603:36036:12:13:71:533:136:8:g_d0_f6:8:g_d0_f6:F: OLS 91.31 75.63 24.40 16.75 91.31 71.64 29.94 19.71 
+19:604:36089:13:13:71:535:123:8:g_d0_f6:8:g_d0_f6:F: SDVECH 91.31 78.25* 17.58 3.06 91.31 66.62 35.28* 28.25* 
+19:605:36147:13:14:71:535:110:8:g_d0_f6:8:g_d0_f6:F: ASDVECH 91.61 81.02* 19.05 2.84 91.61 66.92 35.50* 36.48* 
+19:606:36206:14:9:71:542:96:8:g_d0_f7:8:g_d0_f7:F:Notes: Figures are in percentages. HE1 – HE4 give the percentage reduction in the performance metric from the hedged model as compared 
+19:607:36341:9:9:71:541:87:8:g_d0_f7:8:g_d0_f7:F:with  the  worst  hedge  position.  For  example,  short  hedging  the  Oil  contract  for  Period  1  with  the  NAIVE  model  yields  a  76.18%  in-sample 
+19:608:36498:9:10:71:541:78:8:g_d0_f7:8:g_d0_f7:F:reduction in the variance as compared with a No-Hedge strategy. Comparisons are made between the performance of short and long hedgers on a 
+19:609:36638:10:9:71:541:68:8:g_d0_f7:8:g_d0_f7:F:metric by metric basis. The highlighted figures indicate where one set of hedgers outperform the other for a given hedging effectiveness metric. * 
+19:610:36785:9:0:71:260:59:8:g_d0_f7:8:g_d0_f7:F:indicates significant difference at the 1% confidence level. 
+20:611:36848:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:The second comparison we make is between the hedging performance of short and long hedgers 
+20:612:36939:28:27:72:543:695:12:g_d0_f7:12:g_d0_f7:B:for  asymmetric  as  compared  to  symmetric  periods.  For  Period  1  (Asymmetric)  the  hedging 
+20:613:37038:27:28:72:540:668:12:g_d0_f7:12:g_d0_f7:B:effectiveness differences between short and long hedgers are significant at the 1% level in every  
+20:614:37137:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:single case in-sample and in 92% of cases out-of-sample whereas for Period 2 (Symmetric) they 
+20:615:37231:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:are significant in only 50% of cases in-sample and 69% of cases out-of-sample. The differences 
+20:616:37326:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:between short and long hedgers even for the symmetric period indicate that one must be careful 
+20:617:37421:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:of  using  the  skewness  statistic  to  measure  asymmetry  as  positive  and  negative  skewness  may 
+20:618:37525:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:cancel each other out. It also indicates the importance of using tail specific hedging effectiveness 
+20:619:37626:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:metrics  irrespective  of  the  characteristics  of  the  return  distribution.  This  finding  is  supported 
+20:620:37736:27:28:72:426:475:12:g_d0_f7:12:g_d0_f7:B:across each of the different tail specific metrics of hedging performance.  
+20:621:37812:28:28:72:75:447:12:g_d0_f7:12:g_d0_f7:B: 
+20:622:37812:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:Table  3  presents  absolute  figures  for  the  performance  effectiveness  measures  of  each  of  the 
+20:623:37917:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:hedging  models.  We  compare  the  results  for  Period  1  and  Period  2  to  see  whether  the 
+20:624:38016:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:distributional characteristics will have an effect on the hedging effectiveness of different models. 
+20:625:38117:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:In-sample, the best overall hedging model for the asymmetric Period 1 is the OLS model in 50% 
+20:626:38211:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:of  cases.  This  result  applies  to  both  short  and  long  hedgers.  The  best  overall  model  for  the 
+20:627:38320:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:symmetric  Period  2  is  the  SDVECH  model.  Out-of  sample  results  indicate  that  the  OLS  and 
+20:628:38422:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:ASDVECH models are the best overall performers for periods 1 and 2 respectively.  While this 
+20:629:38515:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:demonstrates that the OLS and GARCH models tend to provide better hedging performance than 
+20:630:38606:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:a naïve hedge, a key issue is whether there are significant differences in the performance of the 
+20:631:38704:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:different  hedging  models.  To  test  this  we  compared  the  performance  of  the  different  hedging 
+20:632:38809:28:27:72:543:143:12:g_d0_f7:12:g_d0_f7:B:models  again  employing  Efrons  (1979)  bootstrap  methodology.  We  find  significant  differences 
+20:633:38911:27:28:72:543:116:12:g_d0_f7:12:g_d0_f7:B:between model hedging performances in almost 70% of cases both in-sample and out-of-sample 
+20:634:39002:28:27:72:543:88:12:g_d0_f7:12:g_d0_f7:B:however if we exclude the no-hedge model, this figure drops by around 10%. Looking just at the 
+20:635:39097:27:0:72:538:61:12:g_d0_f7:12:g_d0_f7:B:OLS and GARCH models, we can see that there is little to choose between them as the absolute  
+21:636:39193:0:12:71:467:723:12:g_d0_f6:12:g_d0_f7:B:Table 3:  Statistical Comparison of Hedging Model Performance  
+21:637:39254:12:9:110:197:711:8:g_d0_f6:5:g_d0_f6:F:(1) (2) 
+21:638:39261:9:9:175:208:702:8:g_d0_f6:8:g_d0_f6:F:Variance 
+21:639:39270:9:0:180:204:693:8:g_d0_f6:8:g_d0_f6:F:(x10-3) 
+21:640:39278:0:9:239:249:711:8:g_d0_f6:5:g_d0_f6:F:(3) 
+21:641:39281:9:9:235:255:702:8:g_d0_f6:8:g_d0_f6:F:LPM 
+21:642:39285:9:0:233:257:693:8:g_d0_f6:8:g_d0_f6:F:(x10-5) 
+21:643:39293:0:9:286:297:711:8:g_d0_f6:8:g_d0_f6:F:(4) 
+21:644:39297:9:9:283:301:702:8:g_d0_f6:8:g_d0_f6:F:VaR 
+21:645:39301:9:0:280:304:693:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+21:646:39309:0:9:329:340:711:8:g_d0_f6:8:g_d0_f6:F:(5) 
+21:647:39313:9:9:323:346:702:8:g_d0_f6:8:g_d0_f6:F:CVaR 
+21:648:39318:9:0:323:347:693:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+21:649:39326:0:9:377:387:711:8:g_d0_f6:5:g_d0_f6:F:(6) 
+21:650:39329:9:9:366:399:702:8:g_d0_f6:8:g_d0_f6:F:Variance 
+21:651:39338:9:0:371:395:693:8:g_d0_f6:8:g_d0_f6:F:(x10-3) 
+21:652:39346:0:9:430:440:711:8:g_d0_f6:5:g_d0_f6:F:(7) 
+21:653:39349:9:9:426:446:702:8:g_d0_f6:8:g_d0_f6:F:LPM 
+21:654:39353:9:0:424:448:693:8:g_d0_f6:8:g_d0_f6:F:(x10-5) 
+21:655:39361:0:9:477:488:711:8:g_d0_f6:8:g_d0_f6:F:(8) 
+21:656:39365:9:9:474:492:702:8:g_d0_f6:8:g_d0_f6:F:VaR 
+21:657:39369:9:0:471:495:693:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+21:658:39377:0:9:519:530:711:8:g_d0_f6:8:g_d0_f6:F:(9) 
+21:659:39381:9:9:513:536:702:8:g_d0_f6:8:g_d0_f6:F:CVaR 
+21:660:39386:9:10:513:537:693:8:g_d0_f6:8:g_d0_f6:F:(x10-2) 
+21:661:39394:10:13:71:501:683:8:g_d0_f6:8:g_d0_f6:F: Panel A: SHORT HEDGERS Panel B: LONG  HEDGERS 
+21:662:39440:13:13:71:379:670:8:g_d0_f6:8:g_d0_f6:F: IN-SAMPLE 
+21:663:39450:13:9:72:111:657:8:g_d0_f6:8:g_d0_f6:F:PERIOD 1 
+21:664:39459:9:0:72:133:648:8:g_d0_f6:8:g_d0_f6:F:OIL-Asymmetric 
+21:665:39474:0:10:191:336:658:8:g_d0_f7:8:g_d0_f7:F:    
+21:666:39474:10:9:382:526:648:8:g_d0_f7:8:g_d0_f7:F:    
+21:667:39474:9:13:71:537:639:8:g_d0_f6:8:g_d0_f14:F: NONE 0.238* 1.375* 5.278* 5.700 0.238* 0.722* 5.917* 8.107* 
+21:668:39535:13:12:71:536:626:8:g_d0_f6:8:g_d0_f14:F: NAIVE 0.171 0.328 4.582* 6.449* 0.171 0.458* 4.356 5.750 
+21:669:39593:12:13:71:537:614:8:g_d0_f6:8:g_d0_f14:F: OLS 0.164 0.413* 4.190 5.810 0.164 0.323 4.346 6.277* 
+21:670:39648:13:13:71:537:601:8:g_d0_f6:8:g_d0_f14:F: SDVECH 0.172 0.383 4.315 6.193 0.172 0.398* 4.139 6.118* 
+21:671:39706:13:13:71:537:588:8:g_d0_f6:8:g_d0_f14:F: ASDVECH 0.168 0.355 4.340 6.252 0.168 0.410* 4.186 5.992* 
+21:672:39765:13:12:71:526:575:8:g_d0_f6:8:g_d0_f14:F:         
+21:673:39765:12:10:71:110:563:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+21:674:39774:10:9:71:526:553:8:g_d0_f6:8:g_d0_f14:F:OIL-Symmetric         
+21:675:39788:9:13:71:537:544:8:g_d0_f6:8:g_d0_f14:F: NONE 2.160* 1.075* 5.115* 5.587* 2.160* 0.895* 5.518* 6.131* 
+21:676:39850:13:12:71:537:531:8:g_d0_f6:8:g_d0_f14:F: NAIVE 0.089* 0.086* 2.966* 3.733* 0.089* 0.116* 2.915* 2.978* 
+21:677:39913:12:13:71:537:519:8:g_d0_f6:8:g_d0_f14:F: OLS 0.087* 0.107* 2.783 2.853 0.087* 0.082 2.882* 3.650* 
+21:678:39971:13:13:71:536:506:8:g_d0_f6:8:g_d0_f14:F: SDVECH 0.081 0.072 2.790 3.561* 0.081 0.096* 2.462 2.687 
+21:679:40029:13:13:71:537:493:8:g_d0_f6:8:g_d0_f14:F: ASDVECH 0.086 0.078 2.866 3.695* 0.086 0.107* 2.608* 2.799* 
+21:680:40090:13:12:71:390:480:8:g_d0_f6:8:g_d0_f7:F: OUT-OF-SAMPLE 
+21:681:40103:12:10:71:110:468:8:g_d0_f6:8:g_d0_f6:F:PERIOD 1 
+21:682:40112:10:9:71:526:458:8:g_d0_f6:8:g_d0_f7:F:OIL-Asymmetric         
+21:683:40127:9:12:71:540:449:8:g_d0_f6:8:g_d0_f14:F: NONE 1.240* 2.862* 12.183* 16.531* 1.240* 8.110* 9.399* 10.395* 
+21:684:40192:12:13:71:537:437:8:g_d0_f6:8:g_d0_f14:F: NAIVE 0.241 0.573* 4.383 6.650* 0.241 0.522 5.567* 6.647* 
+21:685:40251:13:13:71:536:424:8:g_d0_f6:8:g_d0_f14:F: OLS 0.234 0.419 5.885* 6.118 0.234 0.524 4.504 5.421 
+21:686:40305:13:13:71:537:411:8:g_d0_f6:8:g_d0_f14:F: SDVECH 0.245 0.548* 4.522 5.913 0.245 0.476 5.880* 6.237* 
+21:687:40364:13:12:71:537:398:8:g_d0_f6:8:g_d0_f14:F: ASDVECH 0.243 0.526* 4.525 5.803 0.243 0.475 5.867* 6.180* 
+21:688:40424:12:13:71:526:386:8:g_d0_f6:8:g_d0_f7:F:         
+21:689:40424:13:9:71:110:373:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+21:690:40433:9:10:71:526:364:8:g_d0_f6:8:g_d0_f7:F:OIL-Symmetric         
+21:691:40447:10:12:71:537:354:8:g_d0_f6:8:g_d0_f14:F: NONE 1.120* 0.634* 4.278* 4.312* 1.120* 0.469* 4.974* 5.353* 
+21:692:40509:12:13:71:537:342:8:g_d0_f6:8:g_d0_f14:F: Naïve 0.101* 0.147* 3.619* 4.441* 0.101* 0.174* 3.311 3.948* 
+21:693:40571:13:13:71:537:329:8:g_d0_f6:8:g_d0_f14:F: OLS 0.097 0.154* 3.234 3.697 0.097 0.133 3.485* 4.298* 
+21:694:40627:13:13:71:537:316:8:g_d0_f6:8:g_d0_f14:F: SDVECH 0.097 0.138* 3.526* 4.305* 0.097 0.157* 3.219 3.841* 
+21:695:40688:13:14:71:536:303:8:g_d0_f6:8:g_d0_f14:F: ASDVECH 0.094 0.120 3.463* 4.315* 0.094 0.155* 3.208 3.400 
+21:696:40748:14:9:71:542:289:8:g_d0_f7:8:g_d0_f7:F:Notes: Statistical comparisons are made for each hedging model against the best performing model. For example, short hedging period 1, if 
+21:697:40886:9:9:71:541:280:8:g_d0_f7:8:g_d0_f7:F:we  examine  column  1,  we  can  see  that  the  in-sample  hedging  effectiveness  of  the  no  hedge  model  is  significantly  different  than  the  best 
+21:698:41044:9:9:71:326:271:8:g_d0_f7:8:g_d0_f7:F:performing OLS model at the 1% level. * Denotes significance at the 1% level. 
+21:699:41122:9:13:71:73:262:8:g_d0_f7:8:g_d0_f7:F: 
+21:700:41122:13:12:71:401:249:12:g_d0_f6:12:g_d0_f7:B:Table 4: Summary of Best Performing Hedging Model   
+21:701:41172:12:9:95:167:237:8:g_d0_f12:5:g_d0_f12:F:(1) (2) 
+21:702:41179:9:9:145:181:228:8:g_d0_f12:8:g_d0_f12:F:Variance 
+21:703:41188:9:10:161:163:219:8:g_d0_f12:8:g_d0_f12:F: 
+21:704:41188:10:0:161:163:209:8:g_d0_f12:8:g_d0_f12:F: 
+21:705:41188:0:9:210:221:237:8:g_d0_f12:5:g_d0_f12:F:(3) 
+21:706:41191:9:0:206:225:228:8:g_d0_f12:8:g_d0_f12:F:LPM 
+21:707:41195:0:9:256:268:237:8:g_d0_f12:8:g_d0_f12:F:(4) 
+21:708:41199:9:0:253:271:228:8:g_d0_f12:8:g_d0_f12:F:VaR 
+21:709:41203:0:9:302:314:237:8:g_d0_f12:8:g_d0_f12:F:(5) 
+21:710:41207:9:9:296:320:228:8:g_d0_f12:8:g_d0_f12:F:CVaR 
+21:711:41212:9:10:306:308:219:8:g_d0_f12:8:g_d0_f12:F: 
+21:712:41212:10:0:306:308:209:8:g_d0_f12:8:g_d0_f12:F: 
+21:713:41212:0:9:355:366:237:8:g_d0_f12:5:g_d0_f12:F:(6) 
+21:714:41215:9:0:343:379:228:8:g_d0_f12:8:g_d0_f12:F:Variance 
+21:715:41224:0:9:408:419:237:8:g_d0_f12:5:g_d0_f12:F:(7) 
+21:716:41227:9:0:405:424:228:8:g_d0_f12:8:g_d0_f12:F:LPM 
+21:717:41231:0:9:461:473:237:8:g_d0_f12:8:g_d0_f12:F:(8) 
+21:718:41235:9:9:458:476:228:8:g_d0_f12:8:g_d0_f12:F:VaR 
+21:719:41239:9:10:466:468:219:8:g_d0_f12:8:g_d0_f12:F: 
+21:720:41239:10:0:466:468:209:8:g_d0_f12:8:g_d0_f12:F: 
+21:721:41239:0:9:514:526:237:8:g_d0_f12:8:g_d0_f12:F:(9) 
+21:722:41243:9:28:508:532:228:8:g_d0_f12:8:g_d0_f12:F:CVaR 
+21:723:41248:28:13:71:492:200:8:g_d0_f12:8:g_d0_f12:F: Panel A: SHORT HEDGERS Panel B: LONG  HEDGERS 
+21:724:41294:13:12:71:364:187:8:g_d0_f6:8:g_d0_f12:F: IN-SAMPLE 
+21:725:41304:12:10:72:109:175:8:g_d0_f6:8:g_d0_f6:F:PERIOD1 
+21:726:41312:10:0:72:116:165:8:g_d0_f6:8:g_d0_f6:F:Asymmetric 
+21:727:41323:0:19:153:533:175:8:g_d0_f14:8:g_d0_f14:F:OLS NAÏVE OLS NONE OLS OLS SDVECH NAÏVE 
+21:728:41363:19:9:71:110:156:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+21:729:41372:9:0:71:110:147:8:g_d0_f6:8:g_d0_f6:F:Symmetric 
+21:730:41382:0:18:145:538:156:8:g_d0_f14:8:g_d0_f14:F:SDVECH SDVECH OLS OLS SDVECH OLS SDVECH SDVECH 
+21:731:41429:18:13:71:375:138:8:g_d0_f6:8:g_d0_f14:F: OUT-OF-SAMPLE 
+21:732:41442:13:9:71:108:125:8:g_d0_f6:8:g_d0_f6:F:PERIOD1 
+21:733:41450:9:0:71:115:116:8:g_d0_f6:8:g_d0_f6:F:Asymmetric 
+21:734:41461:0:18:153:529:125:8:g_d0_f14:8:g_d0_f14:F:OLS OLS NAÏVE ASDVECH OLS ASDVECH OLS OLS 
+21:735:41503:18:9:71:110:107:8:g_d0_f6:8:g_d0_f6:F:PERIOD 2 
+21:736:41512:9:0:71:110:98:8:g_d0_f6:8:g_d0_f6:F:Symmetric 
+21:737:41522:0:20:142:540:107:8:g_d0_f14:8:g_d0_f14:F:ASDVECH ASDVECH OLS OLS ASDVECH OLS ASDVECH ASDVECH 
+21:738:41574:20:9:71:542:87:8:g_d0_f7:8:g_d0_f7:F:Notes: Table 4 provides a summary of the best hedging model for both short and long hedgers for each measure of hedging effectiveness. For 
+21:739:41713:9:9:72:542:78:8:g_d0_f7:8:g_d0_f7:F:example  the  best  hedging  model  in  terms  of  risk  reduction  for  Period  1  in-sample  is  the  OLS  model  in  four  out  of  eight  cases  for  both  sets  of 
+21:740:41882:9:0:71:102:69:8:g_d0_f7:8:g_d0_f7:F:hedgers.  
+22:741:41894:0:28:71:542:723:12:g_d0_f7:12:g_d0_f7:B:differences  between  models  are  small  and  not  economically  significant.  This  may  in  part  be 
+22:742:41998:28:27:72:404:695:12:g_d0_f7:12:g_d0_f7:B:attributable to the low incidence of heteroskedasticity of our sample. 
+22:743:42069:27:28:71:74:668:12:g_d0_f7:12:g_d0_f7:B: 
+22:744:42069:28:27:71:539:640:12:g_d0_f7:12:g_d0_f7:B:Table 4 provides a summary of the best performing models.  Examining both in-sample and out-
+22:745:42161:27:28:71:527:613:12:g_d0_f7:12:g_d0_f7:B:of-sample results, we can see that for an asymmetric distribution the OLS model is clearly the  
+22:746:42257:28:28:71:542:585:12:g_d0_f7:12:g_d0_f7:B:best  performer  across  all  hedging  effectiveness  metrics.  For  a  symmetric  distribution  the  OLS 
+22:747:42363:28:27:71:542:557:12:g_d0_f7:12:g_d0_f7:B:model again performs strongly although the GARCH models perform best in a small majority of 
+22:748:42455:27:28:71:542:530:12:g_d0_f7:12:g_d0_f7:B:cases.  This  is  clear  evidence  of  the  failure  of  the  asymmetric  GARCH  model  to  provide  better 
+22:749:42563:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:hedging performance for skewed distributions. The failure of the asymmetric GARCH model to 
+22:750:42654:27:28:72:543:475:12:g_d0_f7:12:g_d0_f7:B:provide better performance for asymmetric distributions contrasts with that of Giot and Laurent 
+22:751:42750:28:28:72:543:447:12:g_d0_f7:12:g_d0_f7:B:(2003).  This  may  relate  to  the  earlier  point  relating  to  the  ability  of  the  ASDVECH  model  to 
+22:752:42859:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:model positive and negative return innovations separately, however, this is not the same as being 
+22:753:42957:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:able  to  model  skewness  in  the  distribution.    Taken  together  with  the  results  from  table  3,  we 
+22:754:43067:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:would have to conclude that there is little to be gained from the more complex GARCH models 
+22:755:43159:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:in performance terms over the simpler OLS model irrespective of the characteristics of the return 
+22:756:43257:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:distribution. This finding supports the broad literature on optimal hedging and indicates that the 
+22:757:43356:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:OLS  model  provides  an  efficient  outcome  across  a  selection  of  risk  measures.  It  is  therefore  in 
+22:758:43467:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:support  of  the  criticism  by  Lien  (2005)  who  suggests  that  the  failure  of  more  complicated 
+22:759:43571:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:hedging estimation models to outperform OLS are a result of the widespread use of the variance 
+22:760:43666:27:0:72:167:199:12:g_d0_f7:12:g_d0_f7:B:reduction criterion. 
+23:761:43689:0:28:71:248:723:12:g_d0_f6:12:g_d0_f6:C:6. Summary and Conclusions 
+23:762:43716:28:27:71:74:695:12:g_d0_f7:12:g_d0_f7:B: 
+23:763:43716:27:28:71:542:668:12:g_d0_f7:12:g_d0_f7:B:This paper compares the hedging effectiveness of commodity oil futures for both symmetric and 
+23:764:43810:28:27:72:543:640:12:g_d0_f7:12:g_d0_f7:B:asymmetric distributions. We also compare the hedging effectiveness of short and long hedgers 
+23:765:43904:27:28:72:543:613:12:g_d0_f7:12:g_d0_f7:B:using  a  variety  of  hedging  estimation  methods.  A  gap  in  the  literature  on  optimal  hedging  is 
+23:766:44012:28:28:72:543:585:12:g_d0_f7:12:g_d0_f7:B:addressed  by  applying  a  comprehensive  set  of  hedging  effectiveness  measures  that  are  tail 
+23:767:44114:28:27:72:543:557:12:g_d0_f7:12:g_d0_f7:B:specific. We find that in-sample hedging effectiveness is significantly reduced by the presence of 
+23:768:44213:27:28:72:543:530:12:g_d0_f7:12:g_d0_f7:B:skewness in the return distribution. This is an important finding as it indicates that hedging may 
+23:769:44312:28:27:72:543:502:12:g_d0_f7:12:g_d0_f7:B:not be as effective during volatile periods and therefore investors may not be effectively hedging 
+23:770:44411:27:28:72:291:475:12:g_d0_f7:12:g_d0_f7:B:during the periods when they most require it. 
+23:771:44457:28:28:72:75:447:12:g_d0_f7:12:g_d0_f7:B: 
+23:772:44457:28:27:72:543:419:12:g_d0_f7:12:g_d0_f7:B:We also find larger differences in hedging performance between the short and long hedgers  for 
+23:773:44552:27:28:72:543:392:12:g_d0_f7:12:g_d0_f7:B:the asymmetric distribution when compared with a symmetric distribution. Therefore the use of 
+23:774:44646:28:27:72:543:364:12:g_d0_f7:12:g_d0_f7:B:one-sided  hedging  performance  measures  that  are  consistent  with  modern  risk  management 
+23:775:44743:27:28:72:543:337:12:g_d0_f7:12:g_d0_f7:B:techniques  such  as  VaR  and  CVaR  is  to  be  recommended,  as  the  traditional  variance  reduction 
+23:776:44849:28:28:72:543:309:12:g_d0_f7:12:g_d0_f7:B:criterion  is  not  adequate  and  will  provide  inaccurate  measures  of  risk  for  different  types  of 
+23:777:44957:28:27:72:543:281:12:g_d0_f7:12:g_d0_f7:B:hedgers. Also, we find that the best hedging estimation model to emerge is the OLS model. This 
+23:778:45052:27:28:72:543:254:12:g_d0_f7:12:g_d0_f7:B:provides  the  best  overall  hedging  performance  across  all  measures  of  hedging  effectiveness  for 
+23:779:45159:28:27:72:543:226:12:g_d0_f7:12:g_d0_f7:B:both  short  and  long  hedgers.  While  the  GARCH  models  perform  well  for  the  symmetric 
+23:780:45255:27:28:72:543:199:12:g_d0_f7:12:g_d0_f7:B:distribution, the differences in performance as compared with the OLS model are not significant. 
+23:781:45352:28:28:72:543:171:12:g_d0_f7:12:g_d0_f7:B:We also find that employing a GARCH model that allows for asymmetries yields no significant 
+23:782:45444:28:27:72:543:143:12:g_d0_f7:12:g_d0_f7:B:improvement  in  performance.  This  finding  suggests  that  there  is  little  economic  benefit  to  be 
+23:783:45551:27:28:72:543:116:12:g_d0_f7:12:g_d0_f7:B:gained  by  the  use  of  more  complex  hedging  estimation  models  over  the  simpler  OLS  model 
+23:784:45652:28:27:72:360:88:12:g_d0_f7:12:g_d0_f7:B:irrespective of the characteristics of the return distribution.  
+23:785:45717:27:0:72:75:61:12:g_d0_f7:12:g_d0_f7:B: 
+24:786:45719:0:14:71:141:723:12:g_d0_f6:12:g_d0_f6:C:Bibliography 
+24:787:45732:14:14:71:74:709:12:g_d0_f6:12:g_d0_f6:C: 
+24:788:45732:14:13:71:542:695:12:g_d0_f7:12:g_d0_f7:B:Alexander,  C,  &  Barbosa,  A.  (2005).  The  Spider  in  the  Hedge.  Working  Paper,  University  of 
+24:789:45836:13:14:72:121:682:12:g_d0_f7:12:g_d0_f7:B:Reading.  
+24:790:45846:14:14:71:74:668:12:g_d0_f6:12:g_d0_f6:C: 
+24:791:45846:14:14:71:542:654:12:g_d0_f7:12:g_d0_f7:B:Artzner, P., Delbaen, F., Eber, J., & Heath, D.  (1999). Coherent measures of risk. Mathematical 
+24:792:45943:14:14:72:168:640:12:g_d0_f7:12:g_d0_f7:B:Finance, 203 - 228. 
+24:793:45963:14:13:72:75:626:12:g_d0_f7:12:g_d0_f7:B: 
+24:794:45963:13:14:72:543:613:12:g_d0_f7:12:g_d0_f7:B:Baillie, R.T., & Myers,  R.J. (1991). Bivariate GARCH estimation of the optimal futures hedge. 
+24:795:46058:14:14:72:303:599:12:g_d0_f7:12:g_d0_f7:B:Journal of Applied Econometrics, 6, 109 – 124. 
+24:796:46105:14:14:72:75:585:12:g_d0_f7:12:g_d0_f7:B: 
+24:797:46105:14:14:72:483:571:12:g_d0_f7:12:g_d0_f7:B:Bawa, S. (1975). Optimal rules for ordering uncertain prospects. Journal of Financial 
+24:798:46191:14:13:72:183:557:12:g_d0_f7:12:g_d0_f7:B:Economics, 2, 95-121. 
+24:799:46213:13:14:72:75:544:12:g_d0_f7:12:g_d0_f7:B: 
+24:800:46213:14:14:72:543:530:12:g_d0_f7:12:g_d0_f7:B:Bekaert.,  G,  &  Wu,  G.  (2000).  Asymmetric  volatility  and  risk  in  equity  markets,  Review  of 
+24:801:46317:14:14:72:207:516:12:g_d0_f7:12:g_d0_f7:B:Financial Studies, 13, 1-42. 
+24:802:46346:14:14:72:75:502:12:g_d0_f7:12:g_d0_f7:B: 
+24:803:46346:14:13:72:526:488:12:g_d0_f7:12:g_d0_f7:B:Black, F. 1976. Studies of stock price volatility changes. Proceedings of the 1976 Meetings of 
+24:804:46441:13:14:72:513:475:12:g_d0_f7:12:g_d0_f7:B:the American Statistical Association, Business and Economical Statistics Section, 177-181. 
+24:805:46532:14:14:72:75:461:12:g_d0_f7:12:g_d0_f7:B: 
+24:806:46532:14:14:72:455:447:12:g_d0_f7:12:g_d0_f7:B:Bollerslev, T., Engle, R.F., & Wooldridge, J.M.  (1988). A capital asset pricing 
+24:807:46613:14:14:72:473:433:12:g_d0_f7:12:g_d0_f7:B:model with time-varying covariances. Journal of Political Economy, 96, 116 - 131. 
+24:808:46695:14:13:72:75:419:12:g_d0_f7:12:g_d0_f7:B: 
+24:809:46695:13:14:72:543:406:12:g_d0_f7:12:g_d0_f7:B:Brooks,  C.,  Henry,  O.T.,  &  Persand,  G.  (2002).  The  effects  of  asymmetries  on  optimal  hedge 
+24:810:46800:14:14:72:277:392:12:g_d0_f7:12:g_d0_f7:B:ratios. Journal of Business, 75, 333 – 352. 
+24:811:46844:14:14:72:75:378:12:g_d0_f7:12:g_d0_f7:B: 
+24:812:46844:14:14:72:543:364:12:g_d0_f7:12:g_d0_f7:B:Cecchetti, S.G., Cumby,  R.E., &  Figlewski, S. (1988). Estimation of the  optimal futures hedge. 
+24:813:46942:14:13:72:323:350:12:g_d0_f7:12:g_d0_f7:B:Review of Economics and Statistics, 70, 623 – 630. 
+24:814:46993:13:14:72:75:337:12:g_d0_f7:12:g_d0_f7:B: 
+24:815:46993:14:14:72:543:323:12:g_d0_f7:12:g_d0_f7:B:Conrad, J., Gultekin, M., & Kaul, G. (1991). Asymmetric predictability of conditional variances. 
+24:816:47090:14:14:72:272:309:12:g_d0_f7:12:g_d0_f7:B:Review of Financial Studies, 4, 597-622. 
+24:817:47131:14:14:72:75:295:12:g_d0_f7:12:g_d0_f7:B: 
+24:818:47131:14:13:72:543:281:12:g_d0_f7:12:g_d0_f7:B:Cotter,   J.,   &   Hanly,   J.   (2006).   Re-examining   Hedging   Performance.   Journal   of   Futures 
+24:819:47238:13:14:72:231:268:12:g_d0_f7:12:g_d0_f7:B:Markets,Volume etc to go here. 
+24:820:47269:14:14:72:75:254:12:g_d0_f7:12:g_d0_f7:B: 
+24:821:47269:14:14:72:543:240:12:g_d0_f7:12:g_d0_f7:B:De Goeij, P., & Marquering, W. (2004). Modeling the conditional covariance between stock and 
+24:822:47362:14:13:72:534:226:12:g_d0_f7:12:g_d0_f7:B:bond returns: a multivariate GARCH approach, Journal of Financial Econometrics, 4, 531–564. 
+24:823:47454:13:14:72:75:213:12:g_d0_f7:12:g_d0_f7:B: 
+24:824:47454:14:14:72:543:199:12:g_d0_f7:12:g_d0_f7:B:Demirer, R., & Lien, D. (2003). Downside risk for short and long hedgers. International Review 
+24:825:47549:14:14:72:269:185:12:g_d0_f7:12:g_d0_f7:B:of Economics and Finance, 12, 25 – 44.  
+24:826:47589:14:14:72:75:171:12:g_d0_f7:12:g_d0_f7:B: 
+24:827:47589:14:13:72:543:157:12:g_d0_f7:12:g_d0_f7:B:Demirer, R., Lien, D., & Shaffer, D. (2005). Comparisons of short and long hedge performance: 
+24:828:47683:13:14:72:460:144:12:g_d0_f7:12:g_d0_f7:B:The case of Taiwan. Journal of Multinational Financial Management, 15, 51-66. 
+24:829:47761:14:14:71:74:130:12:g_d0_f6:12:g_d0_f6:C: 
+24:830:47761:14:14:71:542:116:12:g_d0_f7:12:g_d0_f7:B:Ederington, L. (1979). The hedging performance of the new futures markets. Journal of Finance, 
+24:831:47856:14:14:72:144:102:12:g_d0_f7:12:g_d0_f7:B:34, 157 – 170. 
+24:832:47871:14:13:72:75:88:12:g_d0_f7:12:g_d0_f7:B: 
+24:833:47871:13:14:72:508:75:12:g_d0_f7:12:g_d0_f7:B:Engle. R.F., & Ng, V.K. (1993). Measuring and Testing the Impact of News on Volatility, 
+24:834:47959:14:0:72:251:61:12:g_d0_f7:12:g_d0_f7:B:Journal of Finance, 48, 1749 – 1778. 
+25:835:47998:0:14:71:74:723:12:g_d0_f7:12:g_d0_f7:B: 
+25:836:47998:14:14:71:542:709:12:g_d0_f7:12:g_d0_f7:B:Fishburn,  P.  (1977).  Mean-risk  analysis  with  risk  associated  with  below-target  returns.  The 
+25:837:48101:14:13:72:283:695:12:g_d0_f7:12:g_d0_f7:B:American Economic Review, 67, 116–126. 
+25:838:48140:13:14:72:75:682:12:g_d0_f7:12:g_d0_f7:B: 
+25:839:48140:14:14:72:515:668:12:g_d0_f7:12:g_d0_f7:B:Giot, P., & Laurent, S. (2003).Value-at-Risk for long and short trading positions. Journal of 
+25:840:48234:14:14:72:250:654:12:g_d0_f7:12:g_d0_f7:B:Applied Econometrics, 18, 641-663. 
+25:841:48269:14:14:72:75:640:12:g_d0_f7:12:g_d0_f7:B: 
+25:842:48269:14:13:72:521:626:12:g_d0_f7:12:g_d0_f7:B:Glosten, L., Jagannathan, R., & Runkle, D. (1993). On the relationship between the expected 
+25:843:48361:13:14:72:541:613:12:g_d0_f7:12:g_d0_f7:B:value and the volatility of the normal excess return on stocks, Journal of Finance, 48, 1779-1801. 
+25:844:48460:14:14:72:75:599:12:g_d0_f7:12:g_d0_f7:B: 
+25:845:48460:14:14:72:543:585:12:g_d0_f7:12:g_d0_f7:B:Kroner, K.F.,  & Sultan,  J. (1993). Time varying  distribution and dynamic hedging with foreign 
+25:846:48557:14:14:72:450:571:12:g_d0_f7:12:g_d0_f7:B:currency futures. Journal of Financial and Quantitative Analysis, 28, 535-551. 
+25:847:48636:14:13:72:75:557:12:g_d0_f7:12:g_d0_f7:B: 
+25:848:48636:13:14:72:472:544:12:g_d0_f7:12:g_d0_f7:B:Lee, W., & Rao, R. (1988). Mean lower partial moment valuation and lognormally 
+25:849:48715:14:14:72:341:530:12:g_d0_f7:12:g_d0_f7:B:distributed returns, Management Science, 34, 446–453. 
+25:850:48769:14:14:72:75:516:12:g_d0_f7:12:g_d0_f7:B: 
+25:851:48769:14:14:72:543:502:12:g_d0_f7:12:g_d0_f7:B:Lien,  D. (2005). The use and abuse of the hedging  effectiveness measure.  International Review 
+25:852:48866:14:13:72:250:488:12:g_d0_f7:12:g_d0_f7:B:of Financial Analysis, 14,  277– 282 
+25:853:48903:13:14:72:75:475:12:g_d0_f7:12:g_d0_f7:B: 
+25:854:48903:14:14:72:543:461:12:g_d0_f7:12:g_d0_f7:B:Lien,  D.,  &  Tse,  Y.K.  (2002).  Some  recent  developments  in  futures  hedging.  Journal  of 
+25:855:49002:14:14:72:240:447:12:g_d0_f7:12:g_d0_f7:B:Economic Surveys, 16, 357 – 396. 
+25:856:49035:14:14:72:75:433:12:g_d0_f7:12:g_d0_f7:B: 
+25:857:49035:14:13:72:543:419:12:g_d0_f7:12:g_d0_f7:B:Lien, D., & Tse, Y.K. (1998). Hedging time-varying downside risk. Journal of Futures Markets, 
+25:858:49129:13:14:72:144:406:12:g_d0_f7:12:g_d0_f7:B:18, 705 – 722. 
+25:859:49144:14:14:72:75:392:12:g_d0_f7:12:g_d0_f7:B: 
+25:860:49144:14:14:72:531:378:12:g_d0_f7:12:g_d0_f7:B:Lien, D. & Tse, Y. K. (2000). Hedging downside risk with futures contracts. Applied Financial 
+25:861:49238:14:14:72:209:364:12:g_d0_f7:12:g_d0_f7:B:Economics, 10, 163 — 170. 
+25:862:49264:14:13:72:75:350:12:g_d0_f7:12:g_d0_f7:B: 
+25:863:49264:13:14:72:543:337:12:g_d0_f7:12:g_d0_f7:B:Lien,  D.  &  Wilson,  B.K.  (2001).  Multiperiod  hedging  in  the  presence  of  stochastic  volatility. 
+25:864:49371:14:14:72:348:323:12:g_d0_f7:12:g_d0_f7:B:International Review of Financial Analysis, 10, 395–406 
+25:865:49427:14:14:72:75:309:12:g_d0_f7:12:g_d0_f7:B: 
+25:866:49427:14:14:72:496:295:12:g_d0_f7:12:g_d0_f7:B:Lin, J. W., Najand, M., & Yung, K. (1994). Hedging with currency futures: OLS versus 
+25:867:49512:14:13:72:410:281:12:g_d0_f7:12:g_d0_f7:B:GARCH. Journal of Multinational Financial Management, 4, 45 – 67. 
+25:868:49578:13:14:72:75:268:12:g_d0_f7:12:g_d0_f7:B: 
+25:869:49578:14:14:72:503:254:12:g_d0_f7:12:g_d0_f7:B:Price, K., Price, B. & Nantell, T. (1982). Variance and lower partial moment measures of 
+25:870:49667:14:14:72:498:240:12:g_d0_f7:12:g_d0_f7:B:systematic risk: Some analytical and empirical results. Journal of Finance, 37, 843- 855. 
+25:871:49757:14:14:72:75:226:12:g_d0_f7:12:g_d0_f7:B: 
+25:872:49757:14:13:71:74:212:12:g_d0_f6:12:g_d0_f6:C: 
+25:873:49757:13:12:71:77:199:12:g_d0_f7:12:g_d0_f7:B:  
+25:874:49759:12:14:71:73:187:10:g_d0_f6:10:g_d0_f6:F: 
+25:875:49759:14:27:89:92:173:12:g_d0_f7:12:g_d0_f7:A: 
+25:876:49759:27:28:89:92:146:12:g_d0_f7:12:g_d0_f7:A: 
+25:877:49759:28:0:72:75:118:12:g_d0_f7:12:g_d0_f7:B: 
