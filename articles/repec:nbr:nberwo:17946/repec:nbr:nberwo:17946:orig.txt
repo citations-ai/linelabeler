@@ -1,0 +1,1509 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:100:28:184:427:610:12:g_d0_f1:12:g_d0_f1:THE MYSTERY OF ZERO-LEVERAGE FIRMS
+1:2:59:28:14:262:350:582:12:g_d0_f1:12:g_d0_f1:Ilya A. Strebulaev
+1:3:77:14:28:267:345:568:12:g_d0_f1:12:g_d0_f1:Baozhong Yang
+1:4:90:28:14:253:359:540:12:g_d0_f1:12:g_d0_f1:Working Paper 17946
+1:5:109:14:42:218:393:526:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w17946
+1:6:142:42:14:173:438:484:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:178:14:14:237:374:470:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:8:203:14:14:250:362:456:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:9:222:14:172:276:334:442:12:g_d0_f1:12:g_d0_f1:March 2012
+1:10:232:172:14:71:539:270:12:g_d0_f1:12:g_d0_f1:We are grateful to John Graham and Harley R. (Chip) Ryan for providing us with data. We would
+1:11:325:14:14:71:539:256:12:g_d0_f1:12:g_d0_f1:like to thank Vikas Agarwal, Kenneth Ahern, Mark Chen, Martijn Cremers, Darrell Duffie, John Graham,
+1:12:425:14:14:71:539:242:12:g_d0_f1:12:g_d0_f1:Lubomir Litov, Jayant Kale, Omesh Kini, Ulrike Malmendier, Erwan Morellec, Francisco Pérez-González,
+1:13:525:14:14:71:539:228:12:g_d0_f1:12:g_d0_f1:Michael Roberts, Chip Ryan, Toni Whited, Jeff Zwiebel, and participants of Western Finance Association
+1:14:627:14:14:71:539:214:12:g_d0_f1:12:g_d0_f1:2006 meeting in Keystone, and Baruch College, Stanford GSB FRILLS and PhD seminars for thoughtful
+1:15:724:14:14:71:539:200:12:g_d0_f1:12:g_d0_f1:comments, and Paul G. Ellis for editorial advice. The views expressed herein are those of the authors
+1:16:825:14:28:71:467:186:12:g_d0_f1:12:g_d0_f1:and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:17:910:28:14:71:539:158:12:g_d0_f1:12:g_d0_f1:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:18:1006:14:14:71:539:144:12:g_d0_f1:12:g_d0_f1:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:19:1101:14:28:71:168:130:12:g_d0_f1:12:g_d0_f1:NBER publications.
+1:20:1119:28:14:71:539:102:12:g_d0_f1:12:g_d0_f1:© 2012 by Ilya A. Strebulaev and Baozhong Yang. All rights reserved. Short sections of text, not to
+1:21:1218:14:14:71:539:88:12:g_d0_f1:12:g_d0_f1:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:22:1319:14:0:71:223:74:12:g_d0_f1:12:g_d0_f1:© notice, is given to the source.
+2:23:1352:0:14:72:252:700:12:g_d0_f1:12:g_d0_f1:The Mystery of Zero-Leverage Firms
+2:24:1386:14:14:72:261:686:12:g_d0_f1:12:g_d0_f1:Ilya A. Strebulaev and Baozhong Yang
+2:25:1422:14:14:72:234:672:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 17946
+2:26:1450:14:14:72:130:658:12:g_d0_f1:12:g_d0_f1:March 2012
+2:27:1460:14:28:72:201:644:12:g_d0_f1:12:g_d0_f1:JEL No. G3,G32,G34,G35
+2:28:1482:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:29:1490:28:14:72:540:588:12:g_d0_f1:12:g_d0_f1:This paper documents the puzzling evidence that a substantial number of large public non-financial
+2:30:1588:14:14:72:540:574:12:g_d0_f1:12:g_d0_f1:US firms follow a zero-debt policy. Over the 1962-2009 period, on average 10.2% of such firms have
+2:31:1686:14:14:72:540:560:12:g_d0_f1:12:g_d0_f1:zero debt and almost 22% have less than 5% book leverage ratio. Neither industry nor size can account
+2:32:1787:14:14:72:540:546:12:g_d0_f1:12:g_d0_f1:for such puzzling behavior. Zero-leverage behavior is a persistent phenomenon, with 30% of zero-debt
+2:33:1887:14:14:72:540:532:12:g_d0_f1:12:g_d0_f1:firms refrain from debt for at least five consecutive years. Particularly surprising is the presence of
+2:34:1990:14:14:72:540:518:12:g_d0_f1:12:g_d0_f1:a large number of zero-leverage firms who pay dividends. They are more profitable, pay higher taxes,
+2:35:2090:14:14:72:540:504:12:g_d0_f1:12:g_d0_f1:issue less equity, and have higher cash balances than their proxies chosen by industry and size. These
+2:36:2192:14:14:72:540:490:12:g_d0_f1:12:g_d0_f1:firms also pay substantially higher dividends than their proxies and thus their total payout ratio is virtually
+2:37:2303:14:14:72:540:476:12:g_d0_f1:12:g_d0_f1:independent of leverage. Firms with higher CEO ownership and longer CEO tenure are more likely
+2:38:2397:14:14:72:540:462:12:g_d0_f1:12:g_d0_f1:to follow a zero-leverage policy, especially if boards are smaller and less independent. Family firms
+2:39:2498:14:14:72:540:448:12:g_d0_f1:12:g_d0_f1:are also more likely to be zero-levered. Our results suggest that managerial and governance  characteristics
+2:40:2606:14:42:72:366:434:12:g_d0_f1:12:g_d0_f1:are related to the zero-leverage phenomena in an important way.
+2:41:2669:42:14:72:160:392:12:g_d0_f1:12:g_d0_f1:Ilya A. Strebulaev
+2:42:2687:14:14:72:211:378:12:g_d0_f1:12:g_d0_f1:Graduate School of Business
+2:43:2714:14:14:72:167:364:12:g_d0_f1:12:g_d0_f1:Stanford University
+2:44:2733:14:14:72:152:350:12:g_d0_f1:12:g_d0_f1:655 Knight Way
+2:45:2747:14:14:72:169:336:12:g_d0_f1:12:g_d0_f1:Stanford, CA 94305
+2:46:2765:14:14:72:124:322:12:g_d0_f1:12:g_d0_f1:and NBER
+2:47:2773:14:28:72:195:308:12:g_d0_f1:12:g_d0_f1:istrebulaev@stanford.edu
+2:48:2797:28:14:72:150:280:12:g_d0_f1:12:g_d0_f1:Baozhong Yang
+2:49:2810:14:14:72:258:266:12:g_d0_f1:12:g_d0_f1:J. Mack Robinson College of Business
+2:50:2846:14:14:72:191:252:12:g_d0_f1:12:g_d0_f1:Georgia State University
+2:51:2870:14:14:72:300:238:12:g_d0_f1:12:g_d0_f1:35 Broad Street, Suite 1243, Atlanta GA 30303
+2:52:2915:14:0:72:155:224:12:g_d0_f1:12:g_d0_f1:bzyang@gsu.edu
+3:53:2964:0:19:99:544:653:11:g_d0_f4:11:g_d0_f4:In the year 2000, 701 (or 14.0%) of large public non-financial US firms had zero outstanding
+3:54:3056:19:18:82:543:634:11:g_d0_f4:11:g_d0_f4:debt, including both short- and long-term debt, in their capital structure.  This is neither an
+3:55:3151:18:18:82:543:616:11:g_d0_f4:11:g_d0_f4:outlier nor an aberration. Between 1962 and 2009, on average 10.2% of firms show no debt in
+3:56:3242:18:19:82:543:598:11:g_d0_f4:11:g_d0_f4:their capital structure, and 32% have zero or negative net debt. This is also not a short-term fad,
+3:57:3341:19:18:82:543:579:11:g_d0_f4:11:g_d0_f4:for 61% of firms that have no debt in their capital structure in any given year show no inclination
+3:58:3440:18:18:82:543:561:11:g_d0_f4:11:g_d0_f4:to take on any debt in the next year. We call the tendency of so many firms to eschew any debt
+3:59:3534:18:19:82:543:543:11:g_d0_f2:11:g_d0_f4:the zero-leverage puzzle. In this paper we document the puzzle along various dimensions and test
+3:60:3630:19:18:82:543:524:11:g_d0_f4:11:g_d0_f4:a number of economic mechanisms that can shed light on such an extreme corporate financial
+3:61:3720:18:18:82:113:506:11:g_d0_f4:11:g_d0_f4:policy.
+3:62:3727:18:18:99:543:488:11:g_d0_f4:11:g_d0_f4:There are a number of reasons why studying the zero-leverage phenomenon is important for
+3:63:3815:18:19:82:543:470:11:g_d0_f4:11:g_d0_f4:better understanding of capital structure decisions. It is closely related to the much studied low-
+3:64:3914:19:18:82:543:451:11:g_d0_f4:11:g_d0_f4:leverage puzzle, which refers to the stylized fact that on average firms have low leverage ratios
+3:65:4011:18:18:82:543:433:11:g_d0_f4:11:g_d0_f4:relative to what we would expect from various models of capital structure. The way theoretical
+3:66:4105:18:19:82:543:415:11:g_d0_f4:11:g_d0_f4:work has typically addressed the low-leverage puzzle is by considering plausible economics forces
+3:67:4202:19:18:82:542:396:11:g_d0_f4:11:g_d0_f4:that would drive the optimal average leverage ratio down (e.g., Goldstein, Ju, and Leland (2001)).
+3:68:4300:18:18:82:543:378:11:g_d0_f4:11:g_d0_f4:However, this reconciles empirical facts with theory only insofar as average leverage ratios are
+3:69:4396:18:18:82:543:360:11:g_d0_f4:11:g_d0_f4:equated. What we show is that to explain the low-leverage puzzle one really needs to explain why
+3:70:4492:18:19:82:543:342:11:g_d0_f4:11:g_d0_f4:some firms tend not to have debt at all rather than why firms on average have lower outstanding
+3:71:4587:19:18:82:543:323:11:g_d0_f4:11:g_d0_f4:debt than expected, and most of extant models fail on this dimension. For example, excluding
+3:72:4679:18:18:82:543:305:11:g_d0_f4:11:g_d0_f4:firms with lower than 5% of book (market) leverage (optimal leverage under a reasonable set of
+3:73:4773:18:19:82:543:287:11:g_d0_f4:11:g_d0_f4:parameters is higher than 5% in most theoretical models) increases the average book (market)
+3:74:4865:19:18:82:542:268:11:g_d0_f4:11:g_d0_f4:leverage ratio from 25% to 32% (28% to 37%). Thus, this result partially replaces the low-leverage
+3:75:4963:18:18:82:543:250:11:g_d0_f4:11:g_d0_f4:puzzle with a zero-leverage puzzle. In addition, corporate theorists find it difficult to explain the
+3:76:5064:18:18:82:543:232:11:g_d0_f4:11:g_d0_f4:coexistence of different securities (e.g. debt and equity) at the firm level (e.g., Tirole (2001)) and
+3:77:5166:18:19:82:480:214:11:g_d0_f4:11:g_d0_f4:zero-levered firms is the only type of public firms to resolve this coexistence puzzle.
+3:78:5253:19:18:99:543:195:11:g_d0_f4:11:g_d0_f4:From the empirical perspective, studying the determinants of zero-leverage behavior can shed
+3:79:5345:18:18:82:543:177:11:g_d0_f4:11:g_d0_f4:light on the economic mechanisms that lead firms to become low-levered as such factors are likely
+3:80:5442:18:19:82:543:159:11:g_d0_f4:11:g_d0_f4:to be dominating for zero-debt firms and are thus easier to identify. In addition, it is important to
+3:81:5543:19:18:82:543:140:11:g_d0_f4:11:g_d0_f4:investigate whether zero-leverage firms leave a substantial fraction of their value on the table by
+3:82:5642:18:18:82:538:122:11:g_d0_f4:11:g_d0_f4:not optimizing on tax benefits of debt, extending line of research originated by Graham (2000).
+3:83:5737:18:18:99:543:104:11:g_d0_f4:11:g_d0_f4:In addition to documenting the extent of the zero-leverage behavior, the paper presents evi-
+3:84:5829:18:0:82:543:86:11:g_d0_f4:11:g_d0_f4:dence on another surprising (given our theories of capital structure and dividend policies) stylized
+4:85:5964:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:fact that about a third of zero-leverage firms pay dividends. Moreover, and more intriguingly,
+4:86:6058:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:we find that, conditional on paying dividends, firms effectively replace interest expense with div-
+4:87:6157:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:idends and share repurchases, so that the total payout ratio is relatively flat across the whole
+4:88:6253:18:19:82:183:625:11:g_d0_f4:11:g_d0_f4:spectrum of leverage.
+4:89:6274:19:18:99:542:606:11:g_d0_f4:11:g_d0_f4:To understand better the nature of zero-leverage behavior, we construct for each zero-leverage
+4:90:6368:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:firm-year observation a reference set of proxy firms that serve as control observations. Each set
+4:91:6465:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:has up to four firm-observations in the same year and industry that are closest in size and have
+4:92:6561:18:19:82:543:552:11:g_d0_f4:11:g_d0_f4:the same dividend-paying status as the zero-leverage observation. Importantly, in constructing
+4:93:6655:19:18:82:543:533:11:g_d0_f4:11:g_d0_f4:reference sets, we do not condition on debt policy.  Our findings strongly indicate that there
+4:94:6749:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:are substantial differences in fundamental characteristics between zero-leverage firms and their
+4:95:6845:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:proxies. Proxy firms are highly levered (on average 20%), indicating that neither industry nor
+4:96:6939:19:18:82:265:478:11:g_d0_f4:11:g_d0_f4:size can account for zero-debt policies.
+4:97:6979:18:18:99:543:460:11:g_d0_f4:11:g_d0_f4:Firms that follow zero-leverage policy have higher market-to-book ratios and higher cash
+4:98:7067:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:balances, are more profitable, and pay more taxes and dividends.  Perhaps surprisingly, zero-
+4:99:7160:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:leverage firms are not younger than their control firms. Our analysis also indicates that debt
+4:100:7254:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:substitutes such as leasing and pension liabilities cannot account for zero-leverage behavior. Taken
+4:101:7354:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:together, these stylized facts provide a striking illustration of the assertion by Graham (2000) that
+4:102:7455:18:19:82:307:369:11:g_d0_f4:11:g_d0_f4:many profitable firms seem to be underlevered.
+4:103:7501:19:18:99:543:350:11:g_d0_f4:11:g_d0_f4:Dividend-paying zero-leverage firms leave a lot of money on the table by not levering up. Were
+4:104:7595:18:18:82:543:332:11:g_d0_f4:11:g_d0_f4:an average such firm to increase its leverage to the level of its dividend-paying proxies, potential
+4:105:7695:18:18:82:543:314:11:g_d0_f4:11:g_d0_f4:tax benefits amount, under the conservative scenario, to more than 7% of the market value of
+4:106:7787:18:19:82:543:296:11:g_d0_f4:11:g_d0_f4:equity. Were the same firm to refinance to the point where its marginal corporate tax rate is zero,
+4:107:7886:19:18:82:377:277:11:g_d0_f4:11:g_d0_f4:gains would be much larger at about 15% of the equity value.
+4:108:7946:18:18:99:543:259:11:g_d0_f4:11:g_d0_f4:Zero-leverage behavior is a highly persistent phenomenon. For example, conditioning on sur-
+4:109:8037:18:19:82:543:241:11:g_d0_f4:11:g_d0_f4:vival for five years, 30% of zero-leverage firms do not raise any debt in the next four years. In
+4:110:8134:19:18:82:543:222:11:g_d0_f4:11:g_d0_f4:the absence of persistence, simulations show that this fraction is only 0.3%. If the firm survives
+4:111:8232:18:18:82:464:204:11:g_d0_f4:11:g_d0_f4:for 10 years, it does not have any debt over the ten-year period in 15% of cases.
+4:112:8313:18:19:99:543:186:11:g_d0_f4:11:g_d0_f4:A plausible explanation of the zero-leverage phenomenon is that the manager’s personal prefer-
+4:113:8407:19:18:82:543:167:11:g_d0_f4:11:g_d0_f4:ences differ from those of shareholders. For example, if the manager is endowed with substantial
+4:114:8503:18:18:82:543:149:11:g_d0_f4:11:g_d0_f4:stock ownership and thus under-diversified, he would find debt more costly than shareholders.
+4:115:8596:18:18:82:543:131:11:g_d0_f4:11:g_d0_f4:Furthermore, if the board is more manager-friendly, a manager will find it easier to implement
+4:116:8690:18:19:82:543:113:11:g_d0_f4:11:g_d0_f4:a strategy of his personal choice. In our empirical analysis, we find strong evidence consistent
+4:117:8786:19:0:82:543:94:11:g_d0_f4:11:g_d0_f4:with these mechanisms. For example, for the sample of 1,006 firm-year observations with CEO
+5:118:8912:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:ownership above 10%, 22% of observations have no debt, doublethe fraction for the total sample.
+5:119:9007:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:Controlling for other factors, a one standard deviation increase in CEO ownership increases the
+5:120:9102:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:likelihood that a firm adopts (almost) zero-leverage policy by an economically significant 2.8%.
+5:121:9198:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:We also find that firms with longer-tenured CEOs and smaller and more independent boards are
+5:122:9290:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:more likely to use debt conservatively. Moreover, CEO ownership and tenure are significantly re-
+5:123:9386:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:lated to zero-leverage policy only in firms with smaller and less independent boards. Interestingly,
+5:124:9486:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:these findings are much stronger in the dividend-paying sample than in the zero-dividend sample,
+5:125:9582:18:19:82:543:552:11:g_d0_f4:11:g_d0_f4:indicating that economic forces related to managerial preferences have a potential to explain the
+5:126:9679:19:18:82:297:533:11:g_d0_f4:11:g_d0_f4:most puzzling part of zero-leverage behavior.
+5:127:9724:18:18:99:543:515:11:g_d0_f4:11:g_d0_f4:Family-controlled firms can also be expected to follow conservative debt policies. Becker (1981)
+5:128:9820:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:and Bertrand and Schoar (2006) argue that family members can be altruistic and derive utility
+5:129:9913:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:from passing on the family legacy and safeguarding the well being of other family members. Desire
+5:130:10010:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:for the long-term survival increases the perceived risk of default-risky debt. Consistent with this
+5:131:10109:18:18:82:478:442:11:g_d0_f4:11:g_d0_f4:intuition, we find that family firms are substantially more likely to be zero-levered.
+5:132:10195:18:19:99:543:424:11:g_d0_f4:11:g_d0_f4:Our paper belongs to the cohort of empirical studies that have recently investigated conser-
+5:133:10287:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:vatism in corporate debt policy. Graham (2000) finds that firms are substantially underlevered
+5:134:10381:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:from the debt tax benefits viewpoint; moreover, firms that follow conservative debt policy are more
+5:135:10480:18:19:82:542:369:11:g_d0_f4:11:g_d0_f4:likely to be stable and profitable. Minton and Wruck (2001) analyze the behavior of low-leverage
+5:136:10576:19:18:82:543:350:11:g_d0_f4:11:g_d0_f4:firms. Similar to our study, they form reference sets for low-leverage firms in their sample and an-
+5:137:10676:18:18:82:543:332:11:g_d0_f4:11:g_d0_f4:alyze the persistence and implications of financial conservatism. Our empirical method and set of
+5:138:10773:18:18:82:543:314:11:g_d0_f4:11:g_d0_f4:questions differ from theirs in a number of ways. Their low-leverage sample includes firms that had
+5:139:10872:18:19:82:543:296:11:g_d0_f4:11:g_d0_f4:long-term leverage in the bottom 20% of all firms for five pre-specified years, and the reference set
+5:140:10973:19:18:82:543:277:11:g_d0_f4:11:g_d0_f4:includes all remaining firms. Thus, their proxy construction is conditioned on leverage, while our
+5:141:11071:18:18:82:543:259:11:g_d0_f4:11:g_d0_f4:proxy construction specifically exclude capital structure. Our results also add to the existing body
+5:142:11171:18:19:82:543:241:11:g_d0_f4:11:g_d0_f4:of literature exploring relationship between managerial features and corporate capital structure
+5:143:11267:19:18:82:543:222:11:g_d0_f4:11:g_d0_f4:policies. One stream of literature (Agrawal and Nagarajan (1990), Berger, Ofek, and Yermack
+5:144:11358:18:18:82:543:204:11:g_d0_f4:11:g_d0_f4:(1997), Lewellen (2006), and Coles, Daniel, and Naveen (2006)) has examined the influence of
+5:145:11450:18:19:82:542:186:11:g_d0_f4:11:g_d0_f4:managerial ownership and compensation on leverage choices. Graham and Narasimhan (2004)
+5:146:11537:19:18:82:543:167:11:g_d0_f4:11:g_d0_f4:and Malmendier, Tate, and Yan (2011) show that CEO characteristics such as overconfidence and
+5:147:11630:18:18:82:543:149:11:g_d0_f4:11:g_d0_f4:Great Depression experience cause managers to reduce leverage. Our findings complement this
+5:148:11721:18:18:82:543:131:11:g_d0_f4:11:g_d0_f4:literature by linking the puzzling extreme debt conservatism with several salient CEO and firm
+5:149:11815:18:19:82:359:113:11:g_d0_f4:11:g_d0_f4:characteristics, such as CEO ownership and family status.
+5:150:11872:19:0:99:543:94:11:g_d0_f4:11:g_d0_f4:The rest of the paper is organized as follows. The following section presents the data, the
+6:151:11998:0:19:82:544:680:11:g_d0_f4:11:g_d0_f4:methodology we use to estimate capital structure and construct proxies for zero-leverage firms,
+6:152:12093:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:and our initial empirical analysis. Section II provides further empirical analysis on potential tax
+6:153:12192:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:benefits, relation between zero-debt policy and industry and size, and the persistence of zero-
+6:154:12287:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:debt behavior. Section III presents our analysis of the relation between zero-leverage policy and
+6:155:12384:19:35:82:367:606:11:g_d0_f4:11:g_d0_f4:managerial and governance variables. Section IV concludes.
+6:156:12442:35:29:162:463:571:12:g_d0_f5:12:g_d0_f5:I.  Data Description and Initial Empirical Evidence
+6:157:12493:29:30:82:404:542:12:g_d0_f6:12:g_d0_f6:I.A. Data Sources, Sample Selection, and Leverage Definitions
+6:158:12554:30:18:99:543:512:11:g_d0_f4:11:g_d0_f4:To construct our sample, we start with the merged annual Compustat/CRSP data set over the
+6:159:12643:18:18:82:543:494:11:g_d0_f4:11:g_d0_f4:period 1962–2009.1We exclude financial companies (SIC 6000–6999), utilities (SIC 4900–4999),
+6:160:12735:18:18:82:543:476:11:g_d0_f4:11:g_d0_f4:non-U.S. companies (entries in Compustat withF ICcode not equal to USA), and non-publicly
+6:161:12824:18:19:82:543:458:11:g_d0_f4:11:g_d0_f4:traded firms and subsidiaries (entries in Compustat with stock-ownership variable,ST KO, equal
+6:162:12918:19:18:82:543:439:11:g_d0_f4:11:g_d0_f4:to 1 or 2). There are 259,579 firm-year observations that satisfy these criteria. We also exclude
+6:163:13015:18:18:82:542:421:11:g_d0_f4:11:g_d0_f4:firm-years with total book value of assets (Compustat data itemAT) of less than $10 million
+6:164:13106:18:19:82:543:403:11:g_d0_f4:11:g_d0_f4:in inflation-adjusted year-2000 dollars.2All nominal values are converted into year 2000 dollar
+6:165:13201:19:18:82:543:384:11:g_d0_f4:11:g_d0_f4:values using CPI index from the U.S. Bureau of Labor Statistics. In the paper, “datet” always
+6:166:13294:18:18:82:543:366:11:g_d0_f4:11:g_d0_f4:refers to calendar yeart.3We also require the observations to have valid market leverage and
+6:167:13386:18:18:82:543:348:11:g_d0_f4:11:g_d0_f4:book leverage ratios as defined below. This leaves us with 157,536 firm-year observations with
+6:168:13480:18:19:82:543:330:11:g_d0_f4:11:g_d0_f4:14,327 unique firms, from a minimum of 471 observations in 1962 to a maximum of 5,358 in 1997.
+6:169:13574:19:36:99:365:311:11:g_d0_f4:11:g_d0_f4:We define the book leverage ratio of firmiin yeartby:
+6:170:13627:36:0:250:284:275:11:g_d0_f8:11:g_d0_f4:BLit=
+6:171:13632:0:15:289:370:282:11:g_d0_f8:8:g_d0_f9:DLT Tit+DLCit
+6:172:13645:15:0:319:340:267:11:g_d0_f8:8:g_d0_f9:ATit
+6:173:13649:0:27:372:543:275:11:g_d0_f8:11:g_d0_f4:,(1)
+6:174:13653:27:19:82:543:248:11:g_d0_f4:11:g_d0_f4:whereDLT Tis the amount of long-term debt exceeding maturity of one year andDLCis debt
+6:175:13739:19:18:82:543:229:11:g_d0_f4:11:g_d0_f4:in current liabilities, including long-term debt due within one year. The book leverage ratio is
+6:176:13835:18:18:82:543:211:11:g_d0_f4:11:g_d0_f4:defined similarly in most recent capital structure papers (e.g., Lemmon, Roberts, and Zender
+6:177:13927:18:17:82:525:193:11:g_d0_f4:8:g_d0_f7:(2008), Graham and Leary (2010), Leary and Roberts (2010), Lemmon and Zender (2010)).4
+6:178:14013:17:11:95:353:176:6:g_d0_f10:9:g_d0_f11:1The Compustat data before 1962 is biased towards large firms.
+6:179:14075:11:15:95:543:165:6:g_d0_f10:9:g_d0_f11:2Another possibility is to exclude all firms with less than $10 million nominal value of book assets, which results
+6:180:14190:15:10:82:543:150:9:g_d0_f11:9:g_d0_f11:in the omission of more observations. As the exclusion of small firms is due to the presence of noise in the accounting
+6:181:14309:10:11:82:542:140:9:g_d0_f11:9:g_d0_f11:data, the rationale for either of the two procedures depends on the nature of noise, which can be either fixed across
+6:182:14426:11:11:82:543:129:9:g_d0_f11:9:g_d0_f11:years or proportional to average input numbers. We have replicated all the empirical analysis in the paper on the
+6:183:14539:11:8:82:397:118:9:g_d0_f11:9:g_d0_f11:resulting second data set without any of the qualitative results being affected.
+6:184:14619:8:14:95:543:110:6:g_d0_f10:9:g_d0_f11:3Specifically, we use Compustat data itemDAT ADAT Ewhich is the calendar date of the fiscal year end. For
+6:185:14724:14:8:82:390:96:9:g_d0_f11:9:g_d0_f11:consistency, we also use fiscal-year end stock prices (the variableP RCCF).
+6:186:14799:8:7:95:449:88:6:g_d0_f10:5:g_d0_f14:4An alternative definition used in earlier papers isBLit=DLT Tit+DLCit
+6:187:14869:7:0:332:543:81:6:g_d0_f13:9:g_d0_f11:DLT Tit+DLCit+ATit+T XDIT Cit−P ST KLit−LTit, where
+7:188:14955:0:33:99:505:680:11:g_d0_f4:11:g_d0_f4:By the same token, we define the (quasi-)market leverage ratioof firmiin yeartby:
+7:189:15036:33:0:190:226:647:11:g_d0_f8:11:g_d0_f4:M Lit=
+7:190:15042:0:15:290:372:654:11:g_d0_f8:8:g_d0_f9:DLT Tit+DLCit
+7:191:15055:15:0:231:431:639:11:g_d0_f8:8:g_d0_f9:DLT Tit+DLCit+CSHOit×PRCCFit
+7:192:15083:0:34:433:543:647:11:g_d0_f8:11:g_d0_f4:,(2)
+7:193:15087:34:18:82:543:613:11:g_d0_f4:11:g_d0_f4:whereP RCCFis the fiscal year-end common share price andCSHOis the fiscal year-end
+7:194:15169:18:18:82:227:595:11:g_d0_f4:11:g_d0_f4:number of shares outstanding.
+7:195:15198:18:18:99:543:577:11:g_d0_f4:11:g_d0_f4:The choice of leverage definitions requires a special discussion in the context of our paper.
+7:196:15291:18:19:82:543:559:11:g_d0_f4:11:g_d0_f4:As we are interested in interpreting empirical results, we would like to use the measures most
+7:197:15385:19:18:82:543:540:11:g_d0_f4:11:g_d0_f4:often used in the empirical literature. From this perspective, definitions (1) and (2) are the most
+7:198:15484:18:18:82:543:522:11:g_d0_f4:11:g_d0_f4:common definitions of total leverage. At the same time, there is no widespread consensus on what
+7:199:15580:18:19:82:542:504:11:g_d0_f4:11:g_d0_f4:constitutes “debt” and one alternative is to use total liabilities (e.g., Rajan and Zingales (1995)).
+7:200:15681:19:18:82:543:485:11:g_d0_f4:11:g_d0_f4:However, we are interested in active capital structure choices of firms while a non-trivial portion
+7:201:15780:18:18:82:543:467:11:g_d0_f4:11:g_d0_f4:of non-debt liabilities (such as accounts payable) may reflect day-to-day business arrangements
+7:202:15875:18:18:82:261:449:11:g_d0_f4:8:g_d0_f7:rather than financing considerations.5
+7:203:15913:18:19:99:543:431:11:g_d0_f4:11:g_d0_f4:The choice of denominator is less important in the context of zero leverage. Also, since all U.S.
+7:204:16010:19:18:82:543:412:11:g_d0_f4:11:g_d0_f4:firms follow broadly the same accounting rules, there is no need to make any of the adjustments one
+7:205:16109:18:18:82:543:394:11:g_d0_f4:11:g_d0_f4:has to make when comparing leverage internationally (e.g., Rajan and Zingales (1995)). Finally,
+7:206:16204:18:36:82:533:376:11:g_d0_f4:11:g_d0_f4:using the interest-coverage ratio as our main definition does not materially change our results.
+7:207:16300:36:29:82:379:340:12:g_d0_f6:12:g_d0_f6:I.B. Zero/Almost Zero-Leverage Firms and Their Proxies
+7:208:16354:29:29:246:380:311:12:g_d0_f6:12:g_d0_f6:B.1. Zero-Leverage Firms
+7:209:16378:29:19:99:543:282:11:g_d0_f4:11:g_d0_f4:We define firmiin yeartas azero-leverage (ZL)firm if in that year the outstanding amounts
+7:210:16467:19:18:82:543:263:11:g_d0_f4:11:g_d0_f4:of both short-term debt (DLC) and long-term debt (DLT T) equal zero.6Column 1 of Table I
+7:211:16555:18:18:82:543:245:11:g_d0_f4:11:g_d0_f4:shows the fraction of ZL firms relative to the total size of the sample in each year between 1962
+7:212:16652:18:18:82:542:227:11:g_d0_f4:11:g_d0_f4:and 2009. On average, 10.2% of firm-years over the whole sample period exhibit zero leverage,
+7:213:16745:18:19:82:543:209:11:g_d0_f4:11:g_d0_f4:from a minimum of 4.3% in 1980 to a maximum of 19.9% in 2005. The table shows a substantial
+7:214:16836:19:20:82:543:190:11:g_d0_f4:11:g_d0_f4:variation in the fraction of unlevered firms across years. For comparison, we also calculate the
+7:215:16932:20:10:82:543:170:9:g_d0_f12:9:g_d0_f11:LTis the book value of total liabilities,T XDIT Cis deferred taxes, andP ST KLis preferred stock (see e.g. Fama
+7:216:17043:10:11:82:543:160:9:g_d0_f11:9:g_d0_f11:and French (2002)). Defining book equity this way using accounting variables may lead to low or negative values of
+7:217:17157:11:11:82:543:149:9:g_d0_f11:9:g_d0_f11:book equity causing outliers in leverage ratios. Replicating all our results using this definition of book equity while
+7:218:17276:11:8:82:282:138:9:g_d0_f11:9:g_d0_f11:controlling for outliers does not affect our results.
+7:219:17329:8:14:95:543:130:6:g_d0_f10:9:g_d0_f11:5The unreported analysis of other liabilities such as accounts payable confirms that these liabilities are typically
+7:220:17445:14:7:82:260:116:9:g_d0_f11:9:g_d0_f11:substantially smaller for zero-leverage firms.
+7:221:17491:7:15:95:543:109:6:g_d0_f10:9:g_d0_f11:6As a robustness check, we excluded from the final sample all observations with zero debt for the first time. It
+7:222:17603:15:0:82:242:94:9:g_d0_f11:9:g_d0_f11:does not change any qualitative results.
+8:223:17678:0:19:82:590:680:11:g_d0_f4:11:g_d0_f4:fraction of firms with zero long-term debt.  Column 2 reports that about 15% of the sample  [Table I
+8:224:17778:19:18:553:543:661:11:g_d0_f4:11:g_d0_f4:here]carry no long-term debt, implying that on average about 30% of firms with zero long-term debt
+8:225:17876:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:carry liabilities classified by Compustat as short-term debt. Whether these firms refinance their
+8:226:17973:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:short-term debt every year, or the definition of short-term debt includes items that would not be
+8:227:18070:19:18:82:464:606:11:g_d0_f4:11:g_d0_f4:classified as “debt” for financial, as opposed to accounting, purposes, is unclear.
+8:228:18153:18:18:99:543:588:11:g_d0_f4:11:g_d0_f4:We also define the second category of firms which we callalmost zero-leverage (AZL)firms.
+8:229:18242:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:AZL firms have a marginal debt presence in their capital structure and we classify a firm as an AZL
+8:230:18341:18:19:82:543:552:11:g_d0_f4:11:g_d0_f4:firm if its book leverage ratio is less than 5%. There are a number of reasons why we consider these
+8:231:18441:19:18:82:543:533:11:g_d0_f4:11:g_d0_f4:firms in addition to ZL firms. From a theoretical standpoint, a number of models (e.g., Fisher,
+8:232:18536:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:Heinkel, and Zechner (1989), Leland (1994), Leland and Toft (1996), Leland (1998), Goldstein, Ju,
+8:233:18633:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:and Leland (2001), Ju, Parrino, Poteshman, and Weisbach (2005)) produce leverage ratios that
+8:234:18725:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:are well above zero. Cross-sectional dynamics modeled by Strebulaev (2007) may produce firms
+8:235:18817:18:18:82:542:460:11:g_d0_f4:11:g_d0_f4:that are almost zero-leverage but in his benchmark case their fraction is very low. Practically,
+8:236:18913:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:the finance nature of various liabilities assigned by accounting conventions to debt is ambiguous
+8:237:19010:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:(for example, advances to finance construction or installment obligations). While our choice of
+8:238:19105:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:the 5% cut-off is ad hoc, it is likely on the conservative side. Increasing the cut-off to 7% (10%)
+8:239:19204:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:increases the average annual fraction of AZL firms by 3.1 (7.7) percentage points. As Columns
+8:240:19297:18:19:82:543:369:11:g_d0_f4:11:g_d0_f4:3 of Table I shows, an astonishing 22% of firms are almost zero-levered for the whole sample
+8:241:19389:19:18:82:544:350:11:g_d0_f4:11:g_d0_f4:and almost 28% can be classified as AZL over the 1987–2009 period.7To reflect on the models
+8:242:19480:18:18:82:543:332:11:g_d0_f4:11:g_d0_f4:mentioned above, none of them, whether dynamic or static, can produce such low leverage for
+8:243:19571:18:18:82:543:314:11:g_d0_f4:11:g_d0_f4:reasonable parameters (for example, in Strebulaev (2007), less than 1% of firms have leverage of
+8:244:19667:18:19:82:210:296:11:g_d0_f4:11:g_d0_f4:less than 5% in dynamics.)
+8:245:19693:19:18:99:543:277:11:g_d0_f4:11:g_d0_f4:Finally, as cash may be viewed as negative debt in some contexts, we also investigate the
+8:246:19782:18:18:82:543:259:11:g_d0_f4:11:g_d0_f4:fraction of firms that have non-positive net debt (NPND), where net debt is defined as the book
+8:247:19877:18:19:82:543:241:11:g_d0_f4:11:g_d0_f4:value of debt minus cash (CHE).8We find that 33% (39%) of firms had non-positive net debt
+8:248:19966:19:18:82:543:222:11:g_d0_f4:11:g_d0_f4:over the 1962–2009 (1987–2009) period.  Again, the means hide a substantial variation across
+8:249:20058:18:18:82:543:204:11:g_d0_f4:11:g_d0_f4:years. A comparison of ZL and NPND firms suggests that for a substantial number of firms cash
+8:250:20151:18:16:82:426:186:11:g_d0_f4:11:g_d0_f4:plays a more important role in their balance sheets than debt liabilities.
+8:251:20225:16:11:95:450:170:6:g_d0_f10:9:g_d0_f11:7Untabulated results for AZL firms defined by market leverage are qualitatively similar.
+8:252:20313:11:15:95:543:159:6:g_d0_f10:9:g_d0_f11:8For the analysis of corporate cash policy and differences between cash and negative debt, see Gamba and
+8:253:20417:15:0:82:515:144:9:g_d0_f11:9:g_d0_f11:Triantis (2006), Acharya, Almeida, and Campello (2007), and Acharya, Davydenko, and Strebulaev (2011).
+9:254:20554:0:30:280:345:680:12:g_d0_f6:12:g_d0_f6:B.2. Proxies
+9:255:20566:30:18:99:543:650:11:g_d0_f4:11:g_d0_f4:The consistently large fractions of ZL and AZL firms are surprising and the obvious next
+9:256:20654:18:18:82:543:632:11:g_d0_f4:11:g_d0_f4:question to ask is whether comparable firms have different leverage ratios.  To gauge this, we
+9:257:20748:18:18:82:543:614:11:g_d0_f4:11:g_d0_f4:proceed by constructing for every ZL and AZL firm-year observation a reference set of proxy firm-
+9:258:20845:18:19:82:543:596:11:g_d0_f4:11:g_d0_f4:years. Our benchmark construction procedure is by calendar year, industry, size, and dividend-
+9:259:20939:19:18:82:543:577:11:g_d0_f4:11:g_d0_f4:paying status. It is important to stress that we donotcondition on leverage-related measures.
+9:260:21032:18:18:82:543:559:11:g_d0_f4:11:g_d0_f4:For example, proxies can be zero-levered as well. Specifically, we start by identifying for each
+9:261:21128:18:19:82:543:541:11:g_d0_f4:11:g_d0_f4:ZL/AZL firm-year all firms in that year with the same three-digit SIC code. Compustat reports
+9:262:21221:19:18:82:543:522:11:g_d0_f4:11:g_d0_f4:historical SIC codes (SICH) starting from 1987. For firm-years before 1987 we have to use the
+9:263:21314:18:18:82:543:504:11:g_d0_f4:11:g_d0_f4:1987 historical SIC codes or, if unavailable, the codes in Compustat primary SIC variable (SIC)
+9:264:21409:18:18:82:168:486:11:g_d0_f4:8:g_d0_f7:reported in 2009.9
+9:265:21427:18:19:99:543:468:11:g_d0_f4:11:g_d0_f4:As most industries include firms in different stages of their life, such as high-growth (by
+9:266:21518:19:18:82:543:449:11:g_d0_f4:11:g_d0_f4:industry standards) and mature, we condition by choosing only those proxies that follow the
+9:267:21609:18:18:82:543:431:11:g_d0_f4:11:g_d0_f4:same dividend policy:  for zero-dividend (dividend-paying) ZL/AZL firms, proxies are chosen
+9:268:21700:18:19:82:543:413:11:g_d0_f4:11:g_d0_f4:among zero-dividend (dividend-paying) firms. This conditioning has been used in other studies.
+9:269:21794:19:18:82:543:394:11:g_d0_f4:11:g_d0_f4:For example, Fama and French (2002) justify the separation of ZD and DP firms by arguing that
+9:270:21887:18:18:82:543:376:11:g_d0_f4:11:g_d0_f4:it tests better the implications of the pecking order idea (Myers (1984)), and Lemmon, Roberts,
+9:271:21982:18:18:82:525:358:11:g_d0_f4:8:g_d0_f7:and Zender (2008) control for dividend payers in their empirical analysis of leverage ratios.10
+9:272:22077:18:19:99:543:340:11:g_d0_f4:11:g_d0_f4:Of all the firms in the same three-digit SIC industry in the yearof the observation and the
+9:273:22168:19:18:82:543:321:11:g_d0_f4:11:g_d0_f4:same dividend-paying status we choose up to four firms closest to the ZL/AZL observation in size,
+9:274:22265:18:18:82:543:303:11:g_d0_f4:11:g_d0_f4:as measured by the natural logarithm of the book value of assets, as long as the value of book
+9:275:22359:18:19:82:543:285:11:g_d0_f4:11:g_d0_f4:assets is between 0.5 and 2 times the corresponding value of the ZL/AZL observation. We call
+9:276:22451:19:18:82:543:266:11:g_d0_f4:11:g_d0_f4:this a reference set of proxy firms. On average, for each ZL/AZL observation, this set contains
+9:277:22546:18:18:82:543:248:11:g_d0_f4:11:g_d0_f4:3.4 proxies. The set of proxy firms varies cross-sectionally for ZL/AZL firms within the same
+9:278:22639:18:18:82:543:230:11:g_d0_f4:11:g_d0_f4:industry because of differences in size and varies temporally for the same ZL/AZL firm because
+9:279:22733:18:19:82:296:212:11:g_d0_f4:11:g_d0_f4:of the evolution in the industry composition.
+9:280:22778:19:18:99:543:193:11:g_d0_f4:11:g_d0_f4:Panel A of Table II reports the range of descriptive statistics for ZL/AZL firms and their
+9:281:22868:18:18:82:543:175:11:g_d0_f4:11:g_d0_f4:proxies. Definitions of all the variables are given in Appendix B. To produce the statistics for
+9:282:22964:18:19:82:594:157:11:g_d0_f4:11:g_d0_f4:proxies, we weigh all observations equally within each reference set. All statistics are then equally  [Table II
+9:283:23076:19:12:553:543:138:11:g_d0_f4:9:g_d0_f11:here]9In unreported analysis, using the 1987–2009 sample does not change our results qualitatively. Thus the potential
+9:284:23194:12:7:82:479:126:9:g_d0_f11:9:g_d0_f11:misidentification of the industry code prior to 1987 does not seem to bias the results substantially.
+9:285:23295:7:15:91:543:119:6:g_d0_f10:9:g_d0_f11:10In an earlier version of the paper, we used two proxy sets for each ZL/AZL firm, with and without conditioning
+9:286:23407:15:0:82:517:104:9:g_d0_f11:9:g_d0_f11:on the dividend-paying status. Most results hold for both proxy sets; the results are available upon request.
+10:287:23551:0:19:82:544:680:11:g_d0_f4:11:g_d0_f4:weighted for each year and then annual statistics are averaged.11The table demonstrates that
+10:288:23643:19:18:82:542:661:11:g_d0_f4:11:g_d0_f4:proxy firms do indeed have substantially larger leverage. For the 1962–2009 period, the average
+10:289:23738:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:book (market) leverage ratio of proxies is 19% (20%)12. These statistics are also closer to the
+10:290:23833:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:average leverage ratio in the aggregate Compustat sample (which is 25% (28%) for book (market)
+10:291:23927:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:leverage) than to their ZL/AZL counterparts. This suggests that industry and size alone can
+10:292:24018:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:not account for the zero-leverage phenomenon. The unreported results for the 1987–2009 period
+10:293:24111:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:are similar suggesting that using constant SIC for the pre-1987 sample is unlikely to introduce a
+10:294:24208:18:19:82:159:552:11:g_d0_f4:11:g_d0_f4:substantial bias.
+10:295:24225:19:18:99:543:533:11:g_d0_f4:11:g_d0_f4:ZL/AZL firms and their proxies are also different along a number of other dimensions: on
+10:296:24313:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:average, they have higher market-to-book ratio, less tangible assets, are more profitable, pay
+10:297:24407:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:higher dividends and higher income taxes.13An important observation is that ZL/AZL firms
+10:298:24495:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:have substantially higher cash balances, on average 75% more, than their proxies.14This suggests
+10:299:24591:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:that zero-leverage firms may prefer having negative debt to the extent that increasing cash is a
+10:300:24687:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:substitute for negative debt. If that is the case, it may have non-trivial implications for standard
+10:301:24787:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:econometric analysis of leverage decisions for it implies that zero leverage is in fact a binding
+10:302:24884:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:constraint and the results reported in the first three columns of Table I may underestimate the
+10:303:24979:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:number of low-levered firms. At the same time, ZL/AZL firms and their proxies are similar along
+10:304:25074:18:19:82:543:369:11:g_d0_f4:11:g_d0_f4:other dimensions, such as “age” (defined as the number of years in Compustat), R&D expenditure,
+10:305:25169:19:35:82:190:350:11:g_d0_f4:11:g_d0_f4:and earnings volatility.
+10:306:25193:35:29:184:441:315:12:g_d0_f6:12:g_d0_f6:B.3. Dividend-Paying and Zero-Dividend Samples
+10:307:25239:29:18:99:543:286:11:g_d0_f4:11:g_d0_f4:While this descriptive analysis is suggestive, it overlooksthe possibility that the differences
+10:308:25334:18:19:82:543:268:11:g_d0_f4:11:g_d0_f4:are driven by ZL firms that are high-growth firms. That very high-growth firms may prefer having
+10:309:25430:19:18:82:543:249:11:g_d0_f4:11:g_d0_f4:substantially less debt is not very surprising. At the same time, for the total sample, ZL/AZL
+10:310:25524:18:18:82:543:231:11:g_d0_f4:11:g_d0_f4:firms pay higher dividends and have higher cash balances. As a standard approach to distinguish
+10:311:25619:18:18:82:543:213:11:g_d0_f4:11:g_d0_f4:between high-growth firms and cash cows we study dividend-paying (DP) and zero-dividend (ZD)
+10:312:25711:18:16:82:543:195:11:g_d0_f4:11:g_d0_f4:samples separately.  From an economic viewpoint, it would be more surprising to observe ZL
+10:313:25801:16:11:91:445:179:6:g_d0_f10:9:g_d0_f11:11Averaging equally across observations does not change any of the results significantly.
+10:314:25890:11:15:91:543:168:6:g_d0_f10:9:g_d0_f11:12Note that book leverage is slightly lower than market leverage because of the way we define book leverage. See
+10:315:26002:15:7:82:125:153:9:g_d0_f11:9:g_d0_f11:footnote 4.
+10:316:26013:7:15:91:543:146:6:g_d0_f10:9:g_d0_f11:13One has to be careful in interpreting the tax-related results, as the accepted GAAP measures and the actual
+10:317:26122:15:7:82:308:131:9:g_d0_f11:9:g_d0_f11:taxes reported to the IRS can be substantially different.
+10:318:26179:7:15:91:543:124:6:g_d0_f10:9:g_d0_f11:14One well-known explanation of higher cash balances is that large global companies are tax-disadvantaged when
+10:319:26289:15:11:82:543:109:9:g_d0_f11:9:g_d0_f11:repatriating profits into the U.S. and thus keep cash in their foreign subsidiaries (Foley, Hartzell, Titman, and
+10:320:26402:11:11:82:543:98:9:g_d0_f11:9:g_d0_f11:Twite (2007)). See also Graham and Tucker (2006) for the analysis of tax shelters in general. If we exclude the
+10:321:26513:11:0:82:364:87:9:g_d0_f11:9:g_d0_f11:largest zero-leverage firms, however, the result is virtually unchanged.
+11:322:26620:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:firms that also pay dividends thus effectively replacing payoutto debtholders with payout to
+11:323:26712:19:18:82:157:661:11:g_d0_f4:8:g_d0_f7:equityholders.15
+11:324:26728:18:18:99:544:643:11:g_d0_f4:11:g_d0_f4:The table below summarizes our final classification of the sample, with the abbreviated names
+11:325:26821:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:for the four classes of firms. For example, firms that pay a dividend and have the book leverage
+11:326:26917:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:ratio of less than 5% are called AZL-DP firms.  It might be of more economic importance to
+11:327:27007:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:document and explain the puzzling prevalence of ZL/AZL-DP firms, the issue on which we mostly
+11:328:27100:18:28:82:205:570:11:g_d0_f4:11:g_d0_f4:concentrate in this paper.
+11:329:27126:28:19:266:450:542:11:g_d0_f4:11:g_d0_f4:Zero Leverage  Almost Zero Leverage
+11:330:27161:19:18:176:418:523:11:g_d0_f4:11:g_d0_f4:Dividend PayersZL-DPAZL-DP
+11:331:27187:18:26:176:417:505:11:g_d0_f4:11:g_d0_f4:Zero DividendZL-ZDAZL-ZD
+11:332:27211:26:18:99:543:479:11:g_d0_f4:11:g_d0_f4:Panels B and C of Table II report descriptive statistics for DP and ZD firms and their proxies,
+11:333:27306:18:19:82:543:461:11:g_d0_f4:11:g_d0_f4:respectively. An important result is that conditioning on dividend-paying policy does not resolve
+11:334:27403:19:18:82:543:442:11:g_d0_f4:11:g_d0_f4:the zero-leverage puzzle: both ZL/AZL-ZD and ZL/AZL-DP firms have substantially lower lever-
+11:335:27495:18:18:82:543:424:11:g_d0_f4:11:g_d0_f4:age than their proxies. The characteristics of ZL/AZL-ZD firms support the contention that these
+11:336:27591:18:18:82:543:406:11:g_d0_f4:11:g_d0_f4:firms are high-growth: their size is smaller than that of DP firms, they are younger, their R&D
+11:337:27686:18:19:82:543:388:11:g_d0_f4:11:g_d0_f4:expense is higher, and, importantly, they are on average substantially less profitable than DP
+11:338:27780:19:18:82:543:369:11:g_d0_f4:11:g_d0_f4:firms.16Perhaps surprisingly, ZL/AZL-ZD and ZL/AZL-DP firms are similar along a number of
+11:339:27869:18:18:82:543:351:11:g_d0_f4:11:g_d0_f4:other dimensions in that ZD firms also have higher cash balances and pay higher income taxes
+11:340:27961:18:19:82:170:333:11:g_d0_f4:11:g_d0_f4:than their proxies.
+11:341:27980:19:18:99:543:314:11:g_d0_f4:11:g_d0_f4:ZL-DP(AZL-DP) firms have substantially higher dividend ratios than their proxies: they pay
+11:342:28070:18:18:82:543:296:11:g_d0_f4:11:g_d0_f4:out on average 57% (41%) more than their proxies as measured relative to book assets. What
+11:343:28160:18:18:82:543:278:11:g_d0_f4:11:g_d0_f4:is then about the total payout of these firms? Figure 1 shows the decomposition of the ratio of
+11:344:28255:18:19:82:543:260:11:g_d0_f4:11:g_d0_f4:total payout to book assets as a function of leverage for the total sample period. It shows that, as
+11:345:28355:19:18:82:543:241:11:g_d0_f4:11:g_d0_f4:expected, interest expense is a monotonically increasing function of leverage. It also shows that
+11:346:28452:18:18:82:543:223:11:g_d0_f4:11:g_d0_f4:dividends and share repurchases are almost monotonically decreasing in leverage. A surprising
+11:347:28545:18:19:82:543:205:11:g_d0_f4:11:g_d0_f4:observation is that the total payout ratio is relatively stable across the leverage spectrum, between
+11:348:28646:19:18:82:543:186:11:g_d0_f4:11:g_d0_f4:about 5.1% to 6.1%. If anything, the payout ratio of zero-leverage firms isalmost the largestof
+11:349:28741:18:18:82:543:168:11:g_d0_f4:11:g_d0_f4:all firms at 6.0%. This supports the intuition that ZL/AZL-DP firms do not choose to eschew
+11:350:28832:18:16:82:543:150:11:g_d0_f4:11:g_d0_f4:debt because they think they have to retain a higher fraction of earnings – something one would
+11:351:28927:16:15:91:543:134:6:g_d0_f10:9:g_d0_f11:15We also explored several alternative classification schemes, for example, based on (a) the expected tax benefits
+11:352:29041:15:7:82:542:119:9:g_d0_f11:9:g_d0_f11:and (b) on the total payout policy (the sum of interest and dividend payments) with qualitatively similar conclusions.
+11:353:29159:7:15:91:543:112:6:g_d0_f10:9:g_d0_f11:16Although many of these firms report negative GAAP profits, some still pay income taxes. We also do not take
+11:354:29268:15:0:82:372:97:9:g_d0_f11:9:g_d0_f11:into account tax credits and the non-linearities in income tax schedules.
+12:355:29377:0:0:196:196:472:8:Helvetica:8:Helvetica:0204060801000
+12:356:29390:0:0:192:196:516:8:Helvetica:8:Helvetica:2
+12:357:29391:0:0:192:196:555:8:Helvetica:8:Helvetica:4
+12:358:29392:0:0:192:196:593:8:Helvetica:8:Helvetica:6
+12:359:29393:0:0:192:196:632:8:Helvetica:8:Helvetica:8
+12:360:29394:0:206:188:196:670:8:Helvetica:8:Helvetica:10
+12:361:29396:206:0:280:361:464:8:Helvetica:8:Helvetica:Quasi−Market Leverage
+12:362:29442:0:0:197:199:479:5:Helvetica:5:Helvetica: 
+12:363:29442:0:9:442:444:671:5:Helvetica:5:Helvetica: 
+12:364:29442:9:9:376:433:662:8:Helvetica:8:Helvetica:Interest Expense
+12:365:29458:9:9:376:405:653:8:Helvetica:8:Helvetica:Dividend
+12:366:29466:9:9:376:438:644:8:Helvetica:8:Helvetica:Stock Repurchase
+12:367:29482:9:204:376:418:635:8:Helvetica:8:Helvetica:Total Payout
+12:368:29494:204:13:82:543:431:11:g_d0_f17:11:g_d0_f4:Figure 1. Decomposition of Payout for Dividend-Paying Firms.The total payout ratio
+12:369:29576:13:14:82:543:418:11:g_d0_f4:11:g_d0_f4:(in percent, measured relative to book assets) and its components are plotted against market
+12:370:29668:14:14:82:543:404:11:g_d0_f4:11:g_d0_f4:leverage ratios for the 1962–2009 period. Total payout is defined as the sum of dividend payout
+12:371:29763:14:33:82:426:390:11:g_d0_f4:11:g_d0_f4:(including preferred dividend), share repurchases, and interest payment.
+12:372:29835:33:18:82:543:357:11:g_d0_f4:11:g_d0_f4:expect from high-growth firms in the presence of financial constraints.17The upshot of this figure
+12:373:29933:18:19:82:543:339:11:g_d0_f4:11:g_d0_f4:is that to explain the zero-leverage puzzle we need to identify economic mechanisms that make
+12:374:30026:19:35:82:465:320:11:g_d0_f4:11:g_d0_f4:firms willing to replace payments to debtholders with payments to shareholders.
+12:375:30105:35:29:249:377:285:12:g_d0_f6:12:g_d0_f6:B.4. Regression Analysis
+12:376:30129:29:18:99:543:256:11:g_d0_f4:11:g_d0_f4:To explore further the properties of zero-leverage firms, Table III reports the results of mul-
+12:377:30224:18:19:82:543:238:11:g_d0_f4:11:g_d0_f4:tivariate logit regressions, where the dependent variable takes the value of 1 if a firm-year ob-
+12:378:30321:19:18:82:543:219:11:g_d0_f4:11:g_d0_f4:servation is AZL, i.e., has a book leverage of 5% or less, for the total sample as well as for the
+12:379:30419:18:18:82:543:201:11:g_d0_f4:11:g_d0_f4:DP and ZD subsamples. Unreported, when we conduct the analysis only for the sample of AZL
+12:380:30508:18:19:82:543:183:11:g_d0_f4:11:g_d0_f4:firms and their proxies, or using the ZL dummy variable as the dependent variable, the results are
+12:381:30606:19:18:82:543:164:11:g_d0_f4:11:g_d0_f4:very similar. Firms that follow zero-leverage policy are smaller, have higher market-to-book ratio,
+12:382:30705:18:16:82:543:146:11:g_d0_f4:11:g_d0_f4:more profitable, have less tangible assets, and pay higher dividends. Zero-leverage policy is also
+12:383:30803:16:15:91:543:130:6:g_d0_f10:9:g_d0_f11:17Unreported, when we produce the same figure for zero-dividend firms, the result is strikingly different: ZD
+12:384:30912:15:11:82:543:115:9:g_d0_f11:9:g_d0_f11:firms have a payout that is monotonically increasing with leverage. These firms may need to save retained earnings
+12:385:31026:11:10:82:543:104:9:g_d0_f11:9:g_d0_f11:for expansion and their access to credit may be more limited. Also unreported, the results of both of these figures,
+12:386:31142:10:0:82:280:94:9:g_d0_f11:9:g_d0_f11:for DP and ZD firms, are consistent across years.
+13:387:31227:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:persistent: firms that have zero leverage when they are reported in Compustat for the first time,
+13:388:31324:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:are more likely to have zero leverage in subsequent years. Firms are also more likely to have zero
+13:389:31422:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:leverage when the fraction of ZL firms is high in their three-digit SIC industry. The table also
+13:390:31518:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:shows the economic significance of these measures by providing the change in probability that the
+13:391:31615:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:firm follows a ZL policy for one standard deviation change in the independent variable (or for the
+13:392:31713:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:change from 0 to 1 for a dummy variable). A one standard deviation increase in profitability is
+13:393:31808:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:associated with an increase in propensity to become an AZL firm by between 2.1% and 3.8% and
+13:394:31900:18:19:82:504:552:11:g_d0_f4:11:g_d0_f4:the same change in tangibility with a decrease in propensity by between 4.9% and 8.0%.
+13:395:31986:19:18:99:543:533:11:g_d0_f4:11:g_d0_f4:A straightforward explanation of low leverage is that debt is squeezed out by various sub-
+13:396:32076:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:stitutes or non-debt tax shields (DeAngelo and Masulis (1980), Graham, Lang, and Shackleford
+13:397:32168:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:(2004), Graham and Tucker (2006), Shivdasani and Stefanescu (2010)). Data availability allows
+13:398:32261:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:us to check two such economic mechanisms. First, although capital leases are included on the
+13:399:32353:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:balance sheet as debt, operating leases are not. Recently, the topic of operating leases has re-
+13:400:32449:18:18:82:542:442:11:g_d0_f4:11:g_d0_f4:ceived renewed attention in the capital structure literature. Rampini and Viswanathan (2010)
+13:401:32541:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:and Rauh and Sufi (2010) propose including the capitalized value of operating leases in total
+13:402:32634:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:debt valuation. However, operating leases can both complement traditional debt and play the
+13:403:32725:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:role of its substitute (see, e.g., Ang and Petersen (1984), Lewis and Schallheim (1992), Graham,
+13:404:32821:18:19:82:543:369:11:g_d0_f4:11:g_d0_f4:Lemmon, and Schallheim (1998), Yan (2006), Eisfeldt and Rampini (2010)). Following Graham,
+13:405:32911:19:18:82:543:350:11:g_d0_f4:11:g_d0_f4:Lemmon, and Schallheim (1998), we define operating leases as the sum of current rental payment
+13:406:33005:18:18:82:543:332:11:g_d0_f4:11:g_d0_f4:(XREN T) and the discounted present value of future rental commitments (M RC1,M RC2,. . .,
+13:407:33095:18:18:82:543:314:11:g_d0_f8:11:g_d0_f4:M RC5). The discount rate is set to be 10% for all firms as in Graham, Lemmon, and Schallheim
+13:408:33188:18:19:82:543:296:11:g_d0_f4:11:g_d0_f4:(1998).18Results of univariate comparison in Table II and logit regressions Table III show that
+13:409:33283:19:18:82:543:277:11:g_d0_f4:11:g_d0_f4:(A)ZL firms’ use of operating leases are not significantly different from other firms, for all the
+13:410:33381:18:18:82:543:259:11:g_d0_f4:11:g_d0_f4:samples we consider. This finding suggests that operating leases are unlikely to play a major role
+13:411:33479:18:19:82:243:241:11:g_d0_f4:11:g_d0_f4:in explaining zero-leverage policy.
+13:412:33514:19:18:99:543:222:11:g_d0_f4:11:g_d0_f4:Second, unfunded pension and healthcare liabilities constitute potentially an important debt
+13:413:33606:18:18:82:543:204:11:g_d0_f4:11:g_d0_f4:substitute. These liabilities have recently played an important part in many high-profile bankrupt-
+13:414:33705:18:19:82:543:186:11:g_d0_f4:11:g_d0_f4:cies, such as GM and United Airlines. Shivdasani and Stefanascu (2010) find that for firms with
+13:415:33800:19:18:82:543:167:11:g_d0_f4:11:g_d0_f4:defined benefit pension plans, tax deductions of pension contributions equal about one-third of
+13:416:33895:18:18:82:543:149:11:g_d0_f4:11:g_d0_f4:that of debt interest payments. Following Shivdasani and Stefanascu, we define Pension Obliga-
+13:417:33989:18:17:82:543:131:11:g_d0_f4:11:g_d0_f4:tions as the sum of Projected Pension Obligations (P BP RO) and Projected Pension Obligations
+13:418:34082:17:14:91:543:114:6:g_d0_f10:9:g_d0_f11:18We also tried an alternative definition of operating leases using available short-term borrowing rate (BAST R).
+13:419:34195:14:11:82:543:100:9:g_d0_f11:9:g_d0_f11:Adopting this alternative definition reduces the size of the sample by more than two thirds, but does not change
+13:420:34307:11:0:82:171:89:9:g_d0_f11:9:g_d0_f11:any results materially.
+14:421:34366:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:(Underfunded) (PBP RU), and Pension Assets as the sum of Pension Plan Assets (P P LAO) and
+14:422:34456:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:Pension Plan Assets (Underfunded) (P P LAU). We define (Net) Pension Liabilities as the dif-
+14:423:34548:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:ference between Pension Obligations and Pension Assets if Pension Obligations are greater than
+14:424:34642:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:or equal to Pension Assets, and as zero otherwise. We use Pension Liabilites as a proxy for the
+14:425:34737:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:extent of tax deductibility of pension plans.19In our sample, only about one-tenth (16,966) of the
+14:426:34835:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:firm-year observations report positive Pension Liabilities. Interestingly, Tables II and  III show
+14:427:34933:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:that zero-leverage firms have significantly less (net) pension liabilities than other firms.  This
+14:428:35031:18:19:82:543:552:11:g_d0_f4:11:g_d0_f4:result is consistent with a stylized observation that firms with large unfunded pension plans are
+14:429:35128:19:18:82:543:533:11:g_d0_f4:11:g_d0_f4:also typically highly levered. Overall, it is likely that economic factors that lead to higher debt
+14:430:35227:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:usage also contribute to larger pension liabilities and are unlikely to explain zero-leverage policy.
+14:431:35328:18:19:99:543:497:11:g_d0_f4:11:g_d0_f4:The results of our regression analysis need to be taken with a large grain of salt as leverage
+14:432:35422:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:decisions are obviously endogenous to other financial and investment decisions. Nevertheless, the
+14:433:35519:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:reported correlations are suggestive: firms (and more so, dividend-paying firms) that prefer to
+14:434:35614:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:eschew debt are profitable, exhibit large tax payments, accumulate large cash balances, pay out
+14:435:35709:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:larger dividends — in fact, they replace interest payments with dividends and stock repurchases. If
+14:436:35808:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:anything, these firms violate the standard trade-off proposition and take to the extreme Graham’s
+14:437:35905:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:(2000) assertion that firms that are “large, profitable, liquid, in stable industries, and face low ex
+14:438:36007:18:36:82:319:369:11:g_d0_f4:11:g_d0_f4:ante costs of distress” (p. 1902) are underlevered.
+14:439:36058:36:29:187:439:333:12:g_d0_f5:12:g_d0_f5:II.  Understanding Zero-Leverage Behavior
+14:440:36099:29:29:82:426:304:12:g_d0_f6:12:g_d0_f6:II.A. The Value of Potential Tax Benefits for Zero-Leverage Firms
+14:441:36164:29:19:99:543:275:11:g_d0_f4:11:g_d0_f4:How much in tax benefits can ZL/AZL firms potentially get if theyincrease their leverage?
+14:442:36253:19:18:82:543:256:11:g_d0_f4:11:g_d0_f4:In other words, how much money do they leave on the table by not levering up? This is a similar
+14:443:36348:18:18:82:543:238:11:g_d0_f4:11:g_d0_f4:question to the one investigated by Graham (2000) for a cross-section of U.S. firms. If the marginal
+14:444:36448:18:18:82:543:220:11:g_d0_f4:11:g_d0_f4:tax rates for ZL firms are close to zero, the potential tax benefits of borrowing are limited and
+14:445:36545:18:19:82:543:202:11:g_d0_f4:11:g_d0_f4:the ZL phenomenon may not be puzzling after all. Some preliminary evidence, such as that on
+14:446:36636:19:18:82:543:183:11:g_d0_f4:11:g_d0_f4:the extent of profitability of dividend-paying ZL/AZL firms, suggests that the marginal tax rates
+14:447:36733:18:18:82:543:165:11:g_d0_f4:11:g_d0_f4:of ZL firms are in fact likely to be higher than those of comparable firms. In this section, we
+14:448:36828:18:19:82:433:147:11:g_d0_f4:11:g_d0_f4:quantify the value of these tax shields to explore the issue in more detail.
+14:449:36904:19:16:99:543:128:11:g_d0_f4:11:g_d0_f4:Consider a scenario when a firm intends to raise its (market) leverage from its current ratio
+14:450:36997:16:15:91:543:112:6:g_d0_f10:9:g_d0_f11:19Using Pension Contributions as an alternative proxy does not generate any differences between ZL/AZL firms
+14:451:37105:15:0:82:148:97:9:g_d0_f11:9:g_d0_f11:and proxy firms.
+15:452:37157:0:19:82:543:680:11:g_d0_f8:11:g_d0_f4:L0to the target leverage ratioL∗by undergoing recapitalization.  For tractability, we assume
+15:453:37249:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:that debt takes the form of perpetuity and is issued at par, and that all parameters are constant.
+15:454:37347:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:As long as finite maturity debt issues are expected to be routinely rolled over, this assumption is
+15:455:37446:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:innocuous. Let firm’s outstanding book debt isD0and the current value of its market equity is
+15:456:37539:19:18:82:543:606:11:g_d0_f8:11:g_d0_f8:ME0. After restructuring, book debt and market equity values arerespectively,D∗=D0+ ∆D
+15:457:37625:18:35:82:444:588:11:g_d0_f4:11:g_d0_f4:andM E∗. The potential tax benefits, denoted byPT B(∆D), are given by:
+15:458:37695:35:0:239:303:553:11:g_d0_f8:11:g_d0_f4:P T B(∆D) =
+15:459:37706:0:24:306:348:567:11:g_d0_f19:8:g_d0_f9:ZD0+∆D
+15:460:37712:24:0:312:323:543:8:g_d0_f9:6:g_d0_f10:D0
+15:461:37714:0:35:351:543:553:11:g_d0_f8:11:g_d0_f4:τ(x)dx,(3)
+15:462:37724:35:19:82:543:518:11:g_d0_f4:11:g_d0_f4:whereτ(x) is the marginal tax rate of the firm with debt levelx. We assume that tax benefits
+15:463:37816:19:18:82:543:499:11:g_d0_f4:11:g_d0_f4:accrue to equityholders, and that any debt raised is used to pay dividends or repurchase shares.
+15:464:37912:18:33:82:279:481:11:g_d0_f4:11:g_d0_f4:The new market equity value is given by:
+15:465:37952:33:33:230:543:448:11:g_d0_f8:11:g_d0_f4:M E∗=ME0+PT B(∆D)−∆D,(4)
+15:466:37976:33:33:82:248:415:11:g_d0_f4:11:g_d0_f4:and the target leverage ratioL∗is:
+15:467:38010:33:0:203:226:382:11:g_d0_f8:11:g_d0_f4:L∗=
+15:468:38013:0:15:250:264:389:11:g_d0_f8:8:g_d0_f18:D∗
+15:469:38015:15:0:231:283:374:11:g_d0_f8:8:g_d0_f18:M E∗+D∗
+15:470:38022:0:0:288:296:382:11:g_d0_f4:11:g_d0_f4:=
+15:471:38023:0:15:337:382:389:11:g_d0_f8:11:g_d0_f8:D0+ ∆D
+15:472:38029:15:0:301:417:374:11:g_d0_f8:8:g_d0_f7:M E0+PT B(∆D) +D0
+15:473:38046:0:33:419:543:382:11:g_d0_f8:11:g_d0_f4:.(5)
+15:474:38050:33:19:99:543:349:11:g_d0_f4:11:g_d0_f4:To compute the potential tax benefits for each firm, we need marginal tax rates at all leverage
+15:475:38145:19:18:82:543:330:11:g_d0_f4:11:g_d0_f4:levels.  For the marginal tax rateτ(D0) at the firm’s current leverage, we use both the after-
+15:476:38239:18:18:82:543:312:11:g_d0_f4:11:g_d0_f4:interest and before-interest marginal tax rates (Graham, Lemmon, Schallheim (1998) and Graham
+15:477:38332:18:19:82:543:294:11:g_d0_f4:11:g_d0_f4:(2000)).20We then assume thatτ(x)is linearly declining fromx=D0tox=Dm, whereDmis
+15:478:38412:19:43:82:453:275:11:g_d0_f4:11:g_d0_f4:the debt level at which the marginal tax rate first becomes 0. In other words:
+15:479:38490:43:0:221:253:232:11:g_d0_f8:11:g_d0_f4:τ(x) =
+15:480:38496:0:9:256:266:257:11:g_d0_f19:11:g_d0_f19:
+15:481:38497:9:23:256:266:248:11:g_d0_f19:11:g_d0_f19:
+15:482:38499:23:0:256:266:225:11:g_d0_f19:11:g_d0_f19:
+15:483:38501:0:0:266:286:241:11:g_d0_f8:8:g_d0_f9:τ0D
+15:484:38504:0:11:287:305:248:6:g_d0_f13:8:g_d0_f9:m−x
+15:485:38507:11:0:276:393:237:8:g_d0_f9:11:g_d0_f8:Dm−D0,D0≤x< D
+15:486:38520:0:26:393:404:245:8:g_d0_f9:11:g_d0_f4:m;
+15:487:38522:26:0:266:375:219:11:g_d0_f4:11:g_d0_f8:0,x≥Dm.
+15:488:38529:0:34:529:543:232:11:g_d0_f4:11:g_d0_f4:(6)
+15:489:38532:34:15:91:543:198:6:g_d0_f10:9:g_d0_f11:20Although after-interest marginal tax rates is commonly used to compute tax benefits of debt, Graham, Lem-
+15:490:38639:15:11:82:543:183:9:g_d0_f11:9:g_d0_f11:mon, Schallheim (1998) proposes using before-interest marginal tax rates under certain circumstances to avoid the
+15:491:38752:11:11:82:543:172:9:g_d0_f11:9:g_d0_f11:endogeneous influence of capital structure on marginal tax rates. We thank John Graham for making the data
+15:492:38858:11:11:82:543:161:9:g_d0_f11:9:g_d0_f11:available to us. Since Graham’s data starts in 1980, we restrict our sample in this section to the 1980–2009 period.
+15:493:38974:11:11:82:543:150:9:g_d0_f11:9:g_d0_f11:The resulting subsample consists of 72,597 (81,522) observations between 1980 and 2009 if we use the before-interest
+15:494:39090:11:0:82:217:139:9:g_d0_f11:9:g_d0_f11:(after-interest) marginal tax rate.
+16:495:39161:0:35:82:267:680:11:g_d0_f4:11:g_d0_f4:We estimateDmfor each firm-year as:
+16:496:39196:35:0:252:305:645:11:g_d0_f8:11:g_d0_f4:Dmi,t= max
+16:497:39206:0:7:306:314:661:11:g_d0_f19:11:g_d0_f19:-
+16:498:39207:7:16:316:339:654:11:g_d0_f8:8:g_d0_f9:CFmi,t
+16:499:39213:16:0:324:332:638:11:g_d0_f8:8:g_d0_f9:rt
+16:500:39215:0:0:342:360:645:11:g_d0_f8:8:g_d0_f7:, D0
+16:501:39219:0:16:361:369:661:11:g_d0_f19:11:g_d0_f19:-
+16:502:39220:16:33:370:543:645:11:g_d0_f8:11:g_d0_f4:,(7)
+16:503:39224:33:18:82:543:612:11:g_d0_f4:11:g_d0_f4:whereCFmi,treflects the projected cash flow capability andrtis the applicable interest rate. In
+16:504:39319:18:18:82:543:594:11:g_d0_f4:11:g_d0_f4:essence, we assume that the firm can utilize tax benefits only to the extent it is profitable and
+16:505:39416:18:19:82:543:576:11:g_d0_f4:11:g_d0_f4:ignore the complications of tax carry provisions. As a conservative benchmark case, we assume
+16:506:39509:19:18:82:543:557:11:g_d0_f4:11:g_d0_f4:that the marginal tax rate is zero at the minimum cash flow level that the firm had over the last
+16:507:39606:18:18:82:123:539:11:g_d0_f8:11:g_d0_f4:Nyears:
+16:508:39613:18:0:188:247:521:11:g_d0_f8:11:g_d0_f4:CFmi,t= min
+16:509:39624:0:8:248:256:536:11:g_d0_f19:11:g_d0_f19:-
+16:510:39625:8:15:257:306:528:11:g_d0_f8:8:g_d0_f9:EBITi,t−s
+16:511:39634:15:0:265:298:513:11:g_d0_f8:8:g_d0_f9:ATi,t−s
+16:512:39641:0:0:310:394:521:11:g_d0_f4:11:g_d0_f4::s=0, . . . , N−1
+16:513:39658:0:15:395:403:536:11:g_d0_f19:11:g_d0_f19:-
+16:514:39659:15:27:405:543:521:11:g_d0_f16:11:g_d0_f4:·ATi,t,(8)
+16:515:39669:27:18:82:543:494:11:g_d0_f4:11:g_d0_f4:where earnings are rescaled by the firm’s book assets in yeart. This definition ofDmensures
+16:516:39760:18:19:82:543:476:11:g_d0_f4:11:g_d0_f4:that in each period the interest paymentrD∗for debt levelD∗< Dmis smaller than any of
+16:517:39845:19:18:82:544:457:11:g_d0_f4:11:g_d0_f4:the cash flows in the pastNyears, so that this firm, if it refinances toD∗, is unlikely to face a
+16:518:39942:18:18:82:543:439:11:g_d0_f4:11:g_d0_f4:liquidity crisis in the future. Specifically, if in any year cash flow is negative, the marginal tax
+16:519:40042:18:19:82:543:421:11:g_d0_f4:11:g_d0_f4:rate is assumed zero. As a proxy forrtwe use the average corporate bond interest rate in yeart.
+16:520:40137:19:18:82:528:402:11:g_d0_f4:8:g_d0_f7:In the benchmark case, we chooseN= 5 andrt=rAAt, the AA-rated corporate bond yield.21
+16:521:40222:18:40:99:543:384:11:g_d0_f4:11:g_d0_f4:Alternatively, we defineCFmi,tto be the average (rescaled) cash flow level in the pastNyears:
+16:522:40315:40:0:224:260:344:11:g_d0_f8:11:g_d0_f4:CFmi,t=
+16:523:40322:0:15:267:272:351:11:g_d0_f4:11:g_d0_f4:1
+16:524:40323:15:0:265:274:336:11:g_d0_f8:11:g_d0_f8:N
+16:525:40324:0:8:287:305:362:11:g_d0_f19:8:g_d0_f7: N−1
+16:526:40327:8:23:288:304:354:11:g_d0_f19:11:g_d0_f19:X
+16:527:40328:23:0:289:304:331:8:g_d0_f9:8:g_d0_f7:s=  0
+16:528:40333:0:15:308:357:351:11:g_d0_f8:8:g_d0_f9:EBITi,t−s
+16:529:40342:15:0:316:349:336:11:g_d0_f8:8:g_d0_f9:ATi,t−s
+16:530:40349:0:18:358:367:362:11:g_d0_f19:11:g_d0_f19:!
+16:531:40350:18:38:369:543:344:11:g_d0_f16:11:g_d0_f4:·ATi,t.(9)
+16:532:40360:38:18:82:543:306:11:g_d0_f4:11:g_d0_f4:This formulation is less conservative in a sense that even in the case of tax losses, it assumes that
+16:533:40461:18:19:82:543:288:11:g_d0_f4:11:g_d0_f4:the firm will be able to utilize them later. We also consider the alternative choice for interest rate
+16:534:40563:19:18:82:314:269:11:g_d0_f8:11:g_d0_f4:rt=rBBBt, the BBB-rated corporate bond yield.
+16:535:40608:18:44:99:359:251:11:g_d0_f4:11:g_d0_f4:With (6) and (3), the potential tax benefit function is:
+16:536:40664:44:0:157:221:207:11:g_d0_f8:11:g_d0_f4:P T B(∆D) =
+16:537:40675:0:10:224:234:233:11:g_d0_f19:11:g_d0_f19:
+16:538:40676:10:23:224:234:223:11:g_d0_f19:11:g_d0_f19:
+16:539:40678:23:0:224:234:200:11:g_d0_f19:11:g_d0_f19:
+16:540:40680:0:0:233:261:217:11:g_d0_f8:11:g_d0_f8:τ0∆D
+16:541:40684:0:12:263:270:229:11:g_d0_f19:11:g_d0_f19:-
+16:542:40685:12:0:270:332:217:11:g_d0_f4:8:g_d0_f7:1−∆D2(Dm−D0)
+16:543:40697:0:12:334:341:229:11:g_d0_f19:11:g_d0_f19:-
+16:544:40698:12:19:342:467:217:11:g_d0_f8:11:g_d0_f4:,0≤∆D< Dm−D0;
+16:545:40711:19:8:235:239:198:8:g_d0_f7:8:g_d0_f7:1
+16:546:40712:8:0:235:263:190:8:g_d0_f7:11:g_d0_f8:2τ0(D
+16:547:40717:0:0:263:447:198:8:g_d0_f9:11:g_d0_f8:m−D0),∆D≥Dm−D0.
+16:548:40732:0:34:524:543:207:11:g_d0_f4:11:g_d0_f4:(10)
+16:549:40736:34:0:91:432:173:6:g_d0_f10:9:g_d0_f11:21We use Moody’s AA corporate bond yield time series from Global Financial Data.
+17:550:40852:0:48:82:323:680:11:g_d0_f4:11:g_d0_f4:Plugging (10) into (5), the target leverage ratio is:
+17:551:40905:48:0:166:189:632:11:g_d0_f8:11:g_d0_f4:L∗=
+17:552:40908:0:10:193:203:661:11:g_d0_f19:11:g_d0_f19:
+17:553:40909:10:26:193:203:651:11:g_d0_f19:11:g_d0_f19:
+17:554:40912:26:0:193:203:625:11:g_d0_f19:11:g_d0_f19:
+17:555:40915:0:12:252:283:650:8:g_d0_f9:8:g_d0_f9:D0+∆D
+17:556:40920:12:0:204:252:638:8:g_d0_f9:8:g_d0_f9:M E0+τ0∆D
+17:557:40929:0:9:252:257:647:8:g_d0_f20:8:g_d0_f20:(
+17:558:40930:9:0:257:308:638:8:g_d0_f7:6:g_d0_f10:1−∆D2(Dm−D0)
+17:559:40942:0:9:309:314:647:8:g_d0_f20:8:g_d0_f20:)
+17:560:40943:9:0:314:331:638:8:g_d0_f7:6:g_d0_f10:+D0
+17:561:40946:0:23:333:458:645:11:g_d0_f8:11:g_d0_f4:,0≤∆D< Dm−D0;
+17:562:40959:23:10:236:268:622:8:g_d0_f9:8:g_d0_f9:D0+∆D
+17:563:40964:10:0:204:399:612:8:g_d0_f9:11:g_d0_f8:M E0+12τ0(Dm−D0)+D0,∆D≥D
+17:564:40988:0:0:400:438:621:8:g_d0_f9:11:g_d0_f8:m−D0.
+17:565:40993:0:47:524:543:632:11:g_d0_f4:11:g_d0_f4:(11)
+17:566:40997:47:19:82:541:585:11:g_d0_f4:11:g_d0_f4:The solution of ∆Din terms of the target leverage, ∆D= ∆D(L∗), is provided in Appendix A.
+17:567:41086:19:18:99:543:566:11:g_d0_f4:11:g_d0_f4:Table IV shows the potential tax benefits of ZL/AZL firms as a fraction of market asset values
+17:568:41180:18:18:82:543:548:11:g_d0_f4:11:g_d0_f4:(where the market value of equity is measured before relevering) for various target leverage ratios
+17:569:41279:18:18:82:543:530:11:g_d0_f4:11:g_d0_f4:and alternative assumptions. We first investigate the scenario of target leverageL∗being the
+17:570:41371:18:19:82:598:512:11:g_d0_f4:11:g_d0_f4:average market leverage ratio of the reference set, which we denote byLP r.22To control for  [Table IV
+17:571:41473:19:18:553:543:493:11:g_d0_f4:11:g_d0_f4:here]implicit distress costs, we impose an additional upper bound of 70% (see e.g. Asquith, Gertner,
+17:572:41573:18:18:82:542:475:11:g_d0_f4:8:g_d0_f7:and Scharfstein (1994) for evidence of distress at high leverage). Thus,L∗= min(LP r,7  0%).23
+17:573:41667:18:19:82:543:457:11:g_d0_f4:11:g_d0_f4:For brevity, we discuss the results using the before-interest tax rates (Panel A) and note that
+17:574:41762:19:18:82:543:438:11:g_d0_f4:11:g_d0_f4:the results in Panel B are quantitatively similar. Column 1 in Panel A of Table IV shows that
+17:575:41855:18:18:82:543:420:11:g_d0_f4:11:g_d0_f4:dividend-paying ZL firms leave on average 7.6% (8.0% at the median) of their market value
+17:576:41944:18:18:82:543:402:11:g_d0_f4:11:g_d0_f4:“on the table” by not increasing leverage ratios to the level of their proxy firms. In this case,
+17:577:42041:18:19:82:543:384:11:g_d0_f4:11:g_d0_f4:the use of average proxy leverage can also be thought of as accounting for unobserved industry
+17:578:42135:19:18:82:543:365:11:g_d0_f4:11:g_d0_f4:factors. Our second choice ofL∗is the optimal leverage ratio,Lm. Again, to be conservative,
+17:579:42226:18:18:82:543:347:11:g_d0_f4:11:g_d0_f4:we useL∗= min(Lm,7  0%). Column 2 of Panel A shows that dividend-paying ZL firms give up
+17:580:42314:18:19:82:543:329:11:g_d0_f4:11:g_d0_f4:on average a striking 15.6% (17.1% at the median) of their market value by not restructuring to
+17:581:42409:19:18:82:543:310:11:g_d0_f4:11:g_d0_f4:optimal leverage ratios. Potential savings for dividend-paying AZL firms are of similar magnitude.
+17:582:42507:18:18:82:543:292:11:g_d0_f4:11:g_d0_f4:The other columns of Table IV also show that these numbers are robust to alternative assumptions
+17:583:42603:18:18:82:543:274:11:g_d0_f4:11:g_d0_f4:about cash flows and corporate bond interest rates. On the other hand, the tax savings for zero-
+17:584:42699:18:19:82:543:256:11:g_d0_f4:11:g_d0_f4:dividend ZL/AZL firms are much smaller at 2.8% (0.1%) for an average (median) ZD-ZL firm. The
+17:585:42792:19:18:82:543:237:11:g_d0_f4:11:g_d0_f4:difference between means and medians indicates, however, that tax benefits are also substantial
+17:586:42887:18:18:82:543:219:11:g_d0_f4:11:g_d0_f4:for a number of (A)ZL firms that do not pay dividends, which include such high-profile firms such
+17:587:42984:18:19:82:272:201:11:g_d0_f4:11:g_d0_f4:as Microsoft (until recently) and Apple.
+17:588:43024:19:18:99:543:182:11:g_d0_f4:11:g_d0_f4:Our assumptions in deriving potential tax benefits are mostly on the conservative side: (i)
+17:589:43115:18:18:82:543:164:11:g_d0_f4:11:g_d0_f4:tax savings from carry-forward/-back provisions are largely excluded; (ii) by using the minimum
+17:590:43210:18:16:82:543:146:11:g_d0_f4:11:g_d0_f4:cash flow in the past five years as the liquidity threshold in the benchmark case, the chances
+17:591:43304:16:15:91:543:130:6:g_d0_f10:9:g_d0_f11:22If the target leverage ratioL∗is less than the current leverage ratioL0, we do not recapitalize and we let the
+17:592:43416:15:11:82:543:115:9:g_d0_f11:9:g_d0_f11:potential tax-benefit function be zero. This does not change any results as there can be no such cases for ZL firms
+17:593:43531:11:7:82:203:104:9:g_d0_f11:9:g_d0_f11:and only a few for AZL firms.
+17:594:43560:7:0:91:405:97:6:g_d0_f10:9:g_d0_f11:23Unreported, our results are not sensitive to an increase in the upper bound.
+18:595:43674:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:that the firm goes into liquidity crisis and incurs significantcosts of distress are much lower; (iii)
+18:596:43776:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:the assumption that the marginal tax rate function is linear decreases tax benefits relative to
+18:597:43871:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:the case when it is concave (which is more likely to be the case in practice). Therefore, the fact
+18:598:43969:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:that ZL-DP firms give up substantial amount of tax benefits reinforces the mystery about their
+18:599:44063:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:extreme debt aversion. One issue where we are likely to have overestimated the potential tax
+18:600:44155:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:benefits is our lack of adjustment for personal taxes. As the level of marginal personal taxes on
+18:601:44252:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:income and capital gains depends on the ownership structure of firms, and firm-specific marginal
+18:602:44348:18:36:82:421:552:11:g_d0_f4:11:g_d0_f4:personal tax rates are not available, we leave it for further exploration.
+18:603:44422:36:29:82:413:516:12:g_d0_f6:12:g_d0_f6:II.B. Relation Between Zero-Leverage and Low-Leverage Puzzles
+18:604:44483:29:18:99:543:487:11:g_d0_f4:11:g_d0_f4:The low-leverage puzzle refers to the stylized fact that, on average, firms are lower levered than
+18:605:44581:18:18:82:543:469:11:g_d0_f4:11:g_d0_f4:otherwise would be expected by standard trade-off models of capital structure. For example, over
+18:606:44677:18:19:82:543:451:11:g_d0_f4:11:g_d0_f4:the period 1987–2003, the market leverage ratio of an average firm in the Compustat sample is
+18:607:44770:19:18:82:543:432:11:g_d0_f4:11:g_d0_f4:about 26%. A benchmark static capital structure model of Leland (1994) produces a leverage ratio
+18:608:44866:18:18:82:543:414:11:g_d0_f4:11:g_d0_f4:in the order of 70–90% under reasonable parameters. A number of studies have been trying to
+18:609:44957:18:19:82:543:396:11:g_d0_f4:11:g_d0_f4:identify theoretically the reasons why firms are on average low levered. For example, Goldstein, Ju,
+18:610:45057:19:18:82:543:377:11:g_d0_f4:11:g_d0_f4:and Leland (2001), Ju, Parrino, Poteshman, and Weisbach (2005) and Strebulaev (2007) explain
+18:611:45149:18:18:82:543:359:11:g_d0_f4:11:g_d0_f4:the low-leverage puzzle by considering dynamic capital structure and non-linear tax benefits to
+18:612:45244:18:18:82:543:341:11:g_d0_f4:11:g_d0_f4:debt. In addition, Strebulaev (2007) shows that in dynamic capital structure models typically
+18:613:45337:18:19:82:543:323:11:g_d0_f4:11:g_d0_f4:lead to higher leverage in dynamics compared to refinancing points. Ju et al. (2005) and Morellec
+18:614:45434:19:18:82:543:304:11:g_d0_f4:11:g_d0_f4:(2003) consider managerial risk-aversion and managerial entrenchment.  All these studies find
+18:615:45527:18:18:82:543:286:11:g_d0_f4:11:g_d0_f4:that their calibrated models can produce, under reasonable parameters, lower leverage ratios,
+18:616:45620:18:19:82:543:268:11:g_d0_f4:11:g_d0_f4:thus explaining the average corporate leverage ratio in the economy. For example, by considering
+18:617:45716:19:18:82:543:249:11:g_d0_f4:11:g_d0_f4:the dynamic version of their static model, Goldstein et al. (2001) reduce the benchmark leverage
+18:618:45812:18:18:82:451:231:11:g_d0_f4:11:g_d0_f4:ratio in their calibrations from 55% to a more reasonable 36% at refinancing.
+18:619:45889:18:18:99:543:213:11:g_d0_f4:11:g_d0_f4:Characteristically, however, all these models produce arelatively highlowest leverage ratio
+18:620:45980:18:19:82:543:195:11:g_d0_f4:11:g_d0_f4:under the most cases they consider: the lowest leverage is 34.3% in Goldstein et al. (2001, Table
+18:621:46077:19:18:82:543:176:11:g_d0_f4:11:g_d0_f4:1, page 498), 6% at the 1 percentile value in the dynamic version of Strebulaev (2007, Table 3,
+18:622:46172:18:18:82:543:158:11:g_d0_f4:11:g_d0_f4:page 40), 9.35% in Morellec (2003, Table 1, page 274) and 8.03% in Ju et al. (2005, Table 2, page
+18:623:46269:18:19:82:543:140:11:g_d0_f4:11:g_d0_f4:270). The exceptions are models with endogenous investment (Hennessy and Whited (2005)) and
+18:624:46360:19:18:82:543:121:11:g_d0_f4:11:g_d0_f4:models which introduce fixed costs in the dynamic capital structure model with sufficiently small
+18:625:46457:18:18:82:428:103:11:g_d0_f4:11:g_d0_f4:firms optimally choosing zero leverage (Kurshev and Strebulaev (2006)).
+18:626:46528:18:0:99:543:85:11:g_d0_f4:11:g_d0_f4:These models are a long way from being able to explain the presence of ZL/AZL firms in
+19:627:46650:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:the economy.  Broadly, our results demonstrate that these models are unlikely to explain the
+19:628:46742:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:cross-sectionaldistributionof corporate leverage ratios. This is consistent with the observation
+19:629:46838:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:of Graham (2003) that many low-debt firms are not firms that one would think of having high
+19:630:46929:18:19:82:146:625:11:g_d0_f4:11:g_d0_f4:costs of debt.
+19:631:46943:19:18:99:543:606:11:g_d0_f4:11:g_d0_f4:The low-leverage and zero-leverage puzzles are closely connected. Table V shows that if one
+19:632:47034:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:excludes ZL firms from the Compustat sample, then the average (market) leverage ratio over the
+19:633:47128:18:18:82:594:570:11:g_d0_f4:11:g_d0_f4:1987–2009 period increases from 24.7% to 28.6%. Moreover, if one also excludes AZL firms (as  [Table V
+19:634:47230:18:19:553:543:552:11:g_d0_f4:11:g_d0_f4:here]most of these models can not produce almost zero leverage as well), the average leverage ratio
+19:635:47329:19:18:82:543:533:11:g_d0_f4:11:g_d0_f4:increases further from 28.6% to 36%, which is roughly the level of debt produced by such models as
+19:636:47427:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:Goldstein et al. (2001) and Strebulaev (2007). The fact that excluding ZL/AZL firms produces a
+19:637:47521:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:moderately “high” leverage of about 36% suggests that the explanation of the low-leverage puzzle
+19:638:47617:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:is likely to lie not in the behavior of the average firm, which is almost “normally” levered, but in
+19:639:47717:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:the extremely low-levered firms. In other words, these results show that the low-leverage puzzle
+19:640:47813:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:is actually an artifact of the zero-leverage puzzle and we may need a new generation of theoretical
+19:641:47912:18:36:82:180:424:11:g_d0_f4:11:g_d0_f4:models to explain it.
+19:642:47933:36:29:82:309:388:12:g_d0_f6:12:g_d0_f6:II.C. Persistence of Zero-Leverage Behavior
+19:643:47976:29:18:99:543:359:11:g_d0_f4:11:g_d0_f4:It is well known that corporate leverage is a persistent phenomenon (e.g. Lemmon, Roberts,
+19:644:48066:18:18:82:543:341:11:g_d0_f4:11:g_d0_f4:and Zender (2008)). In this section we therefore address an important question of whether zero-
+19:645:48161:18:19:82:543:323:11:g_d0_f4:11:g_d0_f4:leverage policy is persistent. If zero-leverage is an artifact of imbalance between maturing debt
+19:646:48258:19:18:82:543:304:11:g_d0_f4:11:g_d0_f4:contracts and new debt issuance, this would imply that the puzzling behavior is only of short
+19:647:48351:18:18:82:126:286:11:g_d0_f4:11:g_d0_f4:duration.
+19:648:48360:18:19:99:543:268:11:g_d0_f4:11:g_d0_f4:To analyze the persistence with which firms follow ZL/AZL policies, for each firmjin our
+19:649:48448:19:18:82:544:249:11:g_d0_f4:11:g_d0_f4:sample and for eachkbetween 1 and 20, we estimate the probability that firmjfollows the ZL
+19:650:48538:18:18:82:543:231:11:g_d0_f4:11:g_d0_f4:(AZL) policy continuously fork−1 more years, conditional on adopting such a policy in any
+19:651:48627:18:18:82:543:213:11:g_d0_f4:11:g_d0_f4:given year and surviving for at leastk−1 years. To give an example, assume the firm has 25
+19:652:48717:18:19:82:543:195:11:g_d0_f4:11:g_d0_f4:consecutive annual observations in Compustat and has zero leverage in the first 15 years and is
+19:653:48812:19:18:82:543:176:11:g_d0_f4:11:g_d0_f4:highly levered in the remaining 10 years. There are 15 sequences ofk= 10 consecutive years for
+19:654:48906:18:18:82:543:158:11:g_d0_f4:11:g_d0_f4:this firm beginning with a year in which the firm has zero debt. The firm follows the zero-debt
+19:655:49001:18:19:82:543:140:11:g_d0_f4:11:g_d0_f4:policy for at least 10 years for 6 out of these 15 sequences. Thus, conditional on adopting a ZL
+19:656:49097:19:18:82:542:121:11:g_d0_f4:11:g_d0_f4:policy, the firm continues to follow it for a further 9 years with likelihood of 0.4. By averaging
+19:657:49195:18:18:82:543:103:11:g_d0_f4:11:g_d0_f4:over all firms we get a measure of thek-year conditional persistence of a chosen debt policy in
+19:658:49290:18:0:82:444:85:11:g_d0_f4:11:g_d0_f4:the sample. Averaging over firms avoids bias in favor of more mature firms.
+20:659:49401:0:19:99:543:680:11:g_d0_f4:11:g_d0_f4:Table VI reports the results of this exercise. Firms have a 61%chance of continuing a ZL
+20:660:49489:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:policy in the next year. About 30%, 15%, and 5% (35%, 20%, and 9%) of firms that survived for
+20:661:49582:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:5, 10, and 20 years respectively continuously exhibit ZL (AZL) behavior. Although these numbers
+20:662:49677:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:are suggestive, to compare them to similar statistics in the absence of intertemporal dependence,
+20:663:49774:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:we construct the same persistence measure for Monte Carlo (MC) simulated economies. The MC
+20:664:49864:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:economy is generated by preserving the number of firms and the distribution of firms’ leverage
+20:665:49958:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:ratios in each year so as to be identical to the Compustat economy, but otherwise randomly
+20:666:50048:18:19:82:598:552:11:g_d0_f4:11:g_d0_f4:reshuffling firms cross-sectionally. Constructed in this way, the MC economy can be thought of  [Table VI
+20:667:50153:19:18:553:543:533:11:g_d0_f4:11:g_d0_f4:here]as a benchmark economy with no persistence in debt policies, which at the same time produces
+20:668:50250:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:cross-sectional descriptive statistics of leverage ratios identical to the economy actually observed
+20:669:50350:18:19:82:142:497:11:g_d0_f4:11:g_d0_f4:in each year.
+20:670:50363:19:18:99:543:478:11:g_d0_f4:11:g_d0_f4:Table VI reports that in the MC economy a ZL firm stays ZL in the next year with a 9.3%
+20:671:50450:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:chance, compared with the actually observed 61%. For longer periods the MC economy generates
+20:672:50542:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:persistence values close to zero. As confirmed by t-statistics, there is a statistically significant
+20:673:50642:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:difference in persistence between the actual and MC economies. Such differences effectively rule
+20:674:50738:19:18:82:543:405:11:g_d0_f4:11:g_d0_f4:out the possibility that zero-leverage is not a persistent phenomenon. This result is consistent with
+20:675:50839:18:18:82:543:387:11:g_d0_f4:11:g_d0_f4:findings that firms restructure their leverage infrequently (Leary and Roberts (2005), Strebulaev
+20:676:50936:18:36:82:119:369:11:g_d0_f4:11:g_d0_f4:(2007)).
+20:677:50944:36:29:82:288:333:12:g_d0_f6:12:g_d0_f6:II.D. Industry and Zero-Leverage Firms
+20:678:50982:29:18:99:544:304:11:g_d0_f4:11:g_d0_f4:Results in Table III strongly indicate that zero-leverage behavior is driven in part by industry-
+20:679:51079:18:18:82:543:286:11:g_d0_f4:11:g_d0_f4:specific factors. To explore this further, Panel A of Table VII reports the distribution of ZL/AZL
+20:680:51177:18:19:82:542:268:11:g_d0_f4:11:g_d0_f4:firms in major industries. There is indeed a substantial variation of the extent of zero-leverage
+20:681:51274:19:18:82:543:249:11:g_d0_f4:11:g_d0_f4:behavior across industries – from 4.3% (9.4%) of firms following a ZL (AZL) policy in the Tele-
+20:682:51369:18:18:82:543:231:11:g_d0_f4:11:g_d0_f4:com sector to 15.0% (32.0%) of firms following ZL (AZL) policy in the Technology sector over the
+20:683:51465:18:18:82:543:213:11:g_d0_f4:11:g_d0_f4:1962–2009 period. The extent of ZL (AZL) behavior in healthcare and technology industries may
+20:684:51558:18:19:82:543:195:11:g_d0_f4:11:g_d0_f4:be consistent with the view that reputation, human capital, and asset illiquidity considerations
+20:685:51654:19:18:82:543:176:11:g_d0_f4:11:g_d0_f4:are influential. Nevertheless, as the table shows, there is a significant number of ZL/AZL firms in
+20:686:51753:18:18:82:543:158:11:g_d0_f4:11:g_d0_f4:each industry, indicating that extreme debt-aversion is a widespread rather than a specialized phe-
+20:687:51852:18:19:82:602:140:11:g_d0_f4:11:g_d0_f4:nomenon. The results over the two sample periods (1962–2009 and 1987–2009) also demonstrate  [Table VII
+20:688:51955:19:0:553:459:121:11:g_d0_f4:11:g_d0_f4:Here]that the distribution of ZL firms in each industry is relatively stable over time.
+21:689:52078:0:30:148:477:680:12:g_d0_f5:12:g_d0_f5:III.  Zero-Leverage Behavior and Corporate Governance
+21:690:52131:30:18:99:543:650:11:g_d0_f4:11:g_d0_f4:A plausible explanation of the puzzling zero-leverage behavior is in the preferences of corporate
+21:691:52228:18:18:82:543:632:11:g_d0_f4:11:g_d0_f4:decision-makers, managers and large shareholders. Firms may end up low levered if managers have
+21:692:52323:18:18:82:543:614:11:g_d0_f4:11:g_d0_f4:a personal preference to use debt conservatively. For example, CEOs with large stock ownership
+21:693:52417:18:19:82:543:596:11:g_d0_f4:11:g_d0_f4:are likely to be less diversified than institutional investors, leading to personal costs of distress
+21:694:52518:19:18:82:543:577:11:g_d0_f4:11:g_d0_f4:being substantially higher.24Furthermore, when CEOs are more entrenched and face friendlier
+21:695:52609:18:18:82:542:559:11:g_d0_f4:11:g_d0_f4:boards, they are more likely to be successful in pursuing policies of their choice (Weisbach (1988),
+21:696:52709:18:19:82:543:541:11:g_d0_f4:11:g_d0_f4:Hermalin and Weisbach (1998)). In this section, we examine whether the relationship between
+21:697:52800:19:18:82:543:522:11:g_d0_f4:11:g_d0_f4:zero-leverage phenomena and CEO and governance variables is consistent with some of these
+21:698:52889:18:18:82:159:504:11:g_d0_f4:11:g_d0_f4:economic forces.
+21:699:52905:18:18:99:543:486:11:g_d0_f4:11:g_d0_f4:There is by now a substantial empirical literature linking managerial preferences and corpo-
+21:700:52997:18:19:82:543:468:11:g_d0_f4:11:g_d0_f4:rate actions. For example, Lewellen (2006) finds that the larger the stock ownership of CEOs
+21:701:53089:19:18:82:543:449:11:g_d0_f4:11:g_d0_f4:and the smaller their option grants the more likely their firms have lower leverage. Agrawal and
+21:702:53185:18:18:82:543:431:11:g_d0_f4:11:g_d0_f4:Nagarajan (1990) find that firms that had no long term debt between 1979 and 1983 have higher
+21:703:53278:18:19:82:542:413:11:g_d0_f4:11:g_d0_f4:managerial stockholdings than their levered industry counterparts. Coles, Daniel, and Naveen
+21:704:53370:19:18:82:543:394:11:g_d0_f4:11:g_d0_f4:(2006) find that managers with greater delta (sensitivity of compensation to stock prices) and
+21:705:53464:18:18:82:544:376:11:g_d0_f4:11:g_d0_f4:smaller vega (sensitivity of compensation to stock volatility) use less debt.25In addition, Graham
+21:706:53562:18:18:82:543:358:11:g_d0_f4:11:g_d0_f4:and Narasimhan (2004) show that CEOs with Great Depression experience tend to rely more on
+21:707:53652:18:19:82:543:340:11:g_d0_f4:11:g_d0_f4:internal than external financing and Malmendier, Tate, and Yan (2011) show that CEO overconfi-
+21:708:53746:19:18:82:543:321:11:g_d0_f4:11:g_d0_f4:dence and Great Depression experience lead to more conservative leverage policy. In a theoretical
+21:709:53843:18:18:82:543:303:11:g_d0_f4:11:g_d0_f4:model, Hackbarth (2008) studies the implications of managerial traits such as optimism and over-
+21:710:53939:18:19:82:543:285:11:g_d0_f4:11:g_d0_f4:confidence on leverage decisions. Ryan and Wang (2011) find that CEOs who have worked for
+21:711:54028:19:18:82:543:266:11:g_d0_f4:11:g_d0_f4:more employers increase firm’s leverage. Our results complement these studies by providing links
+21:712:54124:18:14:82:520:248:11:g_d0_f4:8:g_d0_f7:between the extreme debt conservatism of firms and salient CEO and firm characteristics.26
+21:713:54214:14:14:91:543:234:6:g_d0_f10:9:g_d0_f11:24Another argument that CEOs who are large shareholders may be unwilling to lever up is that their personal
+21:714:54321:14:11:82:543:220:9:g_d0_f11:9:g_d0_f11:tax situation is different from that of a marginal shareholder. Grinblatt and Titman (2002, p. 552) give an example
+21:715:54436:11:8:82:538:209:9:g_d0_f11:9:g_d0_f11:of Microsoft, suggesting that a potential reason of Microsoft’s zero leverage is Bill Gates’s personal tax situation.
+21:716:54553:8:14:91:543:201:6:g_d0_f10:9:g_d0_f11:25However, in an earlier work, Berger, Ofek, and Yermack (1997) find that both CEO stock ownership and option
+21:717:54662:14:8:82:252:187:9:g_d0_f11:9:g_d0_f11:holdings are positively related to leverage.
+21:718:54706:8:14:91:543:179:6:g_d0_f10:9:g_d0_f11:26Zwiebel (1996) proposes an economic mechanism, in which managers may optimally choose higher leverage
+21:719:54809:14:11:82:543:165:9:g_d0_f11:9:g_d0_f11:when faced with a possibility of hostile takeovers.  Using such measures as the G-index of Gompers, Ishii, and
+21:720:54919:11:11:82:543:154:9:g_d0_f11:9:g_d0_f11:Metrick (2003) we do not find support for this argument. However, these measures are known to be endogenous
+21:721:55026:11:11:82:543:143:9:g_d0_f11:9:g_d0_f11:and more robust empirical methods, such as structural modeling, are needed to shed further light on this issue. We
+21:722:55140:11:0:82:188:132:9:g_d0_f11:9:g_d0_f11:leave it to future research.
+22:723:55204:0:30:82:216:680:12:g_d0_f6:12:g_d0_f6:III.A. Data and Variables
+22:724:55229:30:18:99:543:650:11:g_d0_f4:11:g_d0_f4:Adding CEO characteristics, as well as ownership and corporate governance measures, reduces
+22:725:55320:18:18:82:543:632:11:g_d0_f4:11:g_d0_f4:our sample substantially. We first introduce the new variables and discuss the resulting sample.
+22:726:55416:18:18:82:543:614:11:g_d0_f4:11:g_d0_f4:We use board and certain CEO characteristics from the RiskMetrics Directors database (formerly
+22:727:55510:18:19:82:543:596:11:g_d0_f4:11:g_d0_f4:IRRC). The database covers the S&P 1500 firms over the period 1996–2009. The variables we
+22:728:55599:19:18:82:543:577:11:g_d0_f4:11:g_d0_f4:use are:Board Size, the number of directors in the board;Frac.  Indep.  Directors, the fraction of
+22:729:55697:18:18:82:543:559:11:g_d0_f4:11:g_d0_f4:independent (non-insider and non-affliated) directors in the board;CEO Tenure, the number of
+22:730:55789:18:19:82:360:541:11:g_d0_f4:11:g_d0_f4:years that the current CEO has served as the firm’s CEO.
+22:731:55845:19:18:99:543:522:11:g_d0_f4:11:g_d0_f4:We also use CEO ownership and compensation variables from the Compustat ExecComp
+22:732:55925:18:18:82:543:504:11:g_d0_f4:11:g_d0_f4:database, which covers essentially the S&P 1500 firms over the period 1992–2009. The variables
+22:733:56019:18:18:82:543:486:11:g_d0_f4:11:g_d0_f4:we use are:CEO Stock Ownership, CEO holdings of the firm’s stock as a fraction of total shares
+22:734:56113:18:19:82:543:468:11:g_d0_f4:11:g_d0_f4:outstanding;CEO Option Holdings, CEO holdings of the firm’s stock options as a fraction of
+22:735:56203:19:18:82:543:449:11:g_d0_f4:11:g_d0_f4:stock shares outstanding;CEO Cash Comp., logarithm of the sum of CEO salary and bonus. In
+22:736:56292:18:18:82:543:431:11:g_d0_f4:11:g_d0_f4:this section, we restrict analysis to firms in our entire sample for which the above CEO and board
+22:737:56390:18:19:82:543:413:11:g_d0_f4:11:g_d0_f4:variables are defined. The restricted sample consists of of 13,446 observations with 1,962 unique
+22:738:56487:19:35:82:237:394:11:g_d0_f4:11:g_d0_f4:firms over the period 1996–2009.
+22:739:56519:35:29:82:213:359:12:g_d0_f6:12:g_d0_f6:III.B. Empirical Analysis
+22:740:56544:29:18:99:543:330:11:g_d0_f4:11:g_d0_f4:We start by describing the relationship between zero-leverage policies and CEO ownership in
+22:741:56635:18:19:82:543:312:11:g_d0_f4:11:g_d0_f4:our sample. Table VIII ranks all sample firm-years (Panel A) and firms (Panel B) by CEO stock
+22:742:56728:19:18:82:543:293:11:g_d0_f4:11:g_d0_f4:ownership and reports the fraction of ZL and AZL among these firms. The table clearly shows
+22:743:56819:18:18:82:606:275:11:g_d0_f4:11:g_d0_f4:that two measures are highly correlated. For example, consider 100 firms with the highest CEO  [Table VIII
+22:744:56925:18:18:553:543:257:11:g_d0_f4:11:g_d0_f4:here]ownership. For these firms, the average CEO ownership is 24% (vs. 2.8% for the whole sample)
+22:745:57022:18:19:82:543:239:11:g_d0_f4:11:g_d0_f4:and the fraction of these firms that pursue ZL (AZL) policy is 20.4% (40.5%) compared to just
+22:746:57115:19:18:82:543:220:11:g_d0_f4:11:g_d0_f4:14.1% (27.1%) for the whole sample. Overall, the table shows a nearly monotonic relationship
+22:747:57207:18:18:82:457:202:11:g_d0_f4:11:g_d0_f4:between the extent of the CEO stock ownership and the zero-leverage policies.
+22:748:57284:18:19:99:543:184:11:g_d0_f4:11:g_d0_f4:Table IX shows the results of the logit analysis of AZL policy. For all regressions, we control for
+22:749:57383:19:18:82:543:165:11:g_d0_f4:11:g_d0_f4:the variables used in Table III (except Net Pension Liabilities and Operating Leases). Unreported,
+22:750:57481:18:18:82:543:147:11:g_d0_f4:11:g_d0_f4:the economic and statistical significance of these variables are consistent with the results in Table
+22:751:57582:18:18:82:543:129:11:g_d0_f4:11:g_d0_f4:III, suggesting that the determinants of ZL policy in the restricted sample have a similar impact.
+22:752:57680:18:19:99:543:111:11:g_d0_f4:11:g_d0_f4:Table IX shows that firms with larger CEO stock ownership are substantially more likely to
+22:753:57770:19:18:82:598:92:11:g_d0_f4:11:g_d0_f4:be zero-levered, consistent with managerial preference explanations. A one standard deviation  [Table IX
+22:754:57874:18:0:553:576:74:11:g_d0_f4:11:g_d0_f4:here]
+23:755:57915:0:19:82:543:680:11:g_d0_f4:11:g_d0_f4:increase in CEO stock ownership increases the likelihood of AZL policy by an economically and
+23:756:58008:19:18:82:543:661:11:g_d0_f4:11:g_d0_f4:statistically significant 2.8 percentage points. In addition, firms in which CEOs have larger option-
+23:757:58109:18:18:82:543:643:11:g_d0_f4:11:g_d0_f4:based compensation packages are likely to be more levered, although this relation is less robust.
+23:758:58206:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:The results also indicate that poorer corporate governance is related to ZL policy: firms with
+23:759:58300:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:more independent directors, larger boards, and shorter CEO tenure are less likely to choose zero
+23:760:58396:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:leverage. In addition, unreported results show that these results are substantially stronger for
+23:761:58492:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:the sample of dividend-paying firms than for zero-dividend firms, suggesting that the managerial
+23:762:58588:18:19:82:543:552:11:g_d0_f4:11:g_d0_f4:preference story is able to explain the most puzzling part of zero-leverage behavior.  Existing
+23:763:58683:19:18:82:543:533:11:g_d0_f4:11:g_d0_f4:empirical evidence on the relationship between board size and firm performance is ambiguous
+23:764:58774:18:18:82:543:515:11:g_d0_f4:11:g_d0_f4:(e.g., Yermack (1996), Eisenberg, Sundgren, and Wells (1998), Bhagat and Black (2001), and
+23:765:58864:18:19:82:543:497:11:g_d0_f4:11:g_d0_f4:Coles, Daniel, and Naveen (2008)).  Cheng (2008) finds that firms with a larger board adopt
+23:766:58955:19:18:82:543:478:11:g_d0_f4:11:g_d0_f4:less extreme policies, suggesting that it is harder for a larger group to reach a consensus. This
+23:767:59052:18:18:82:543:460:11:g_d0_f4:11:g_d0_f4:economic mechanism can explain why a smaller board is more associated with ZL policy. In an
+23:768:59143:18:18:82:543:442:11:g_d0_f4:11:g_d0_f4:unreported analysis, we also find that lagged CEO and governance variables can predict firms’
+23:769:59236:18:19:82:543:424:11:g_d0_f4:11:g_d0_f4:decisions to adopt and abandon ZL policy. For example, larger CEO ownership is associated with
+23:770:59330:19:18:82:540:405:11:g_d0_f4:11:g_d0_f4:a significantly higher chance of adopting and lower chance of abandoning a zero leverage status.
+23:771:59426:18:18:99:543:387:11:g_d0_f4:11:g_d0_f4:The governance story suggests that CEOs should find it easier to adopt a low-debt policy with
+23:772:59519:18:19:82:543:369:11:g_d0_f4:11:g_d0_f4:a more favorable board. Therefore, the effects of the CEO ownership and tenure are likely to be
+23:773:59614:19:18:82:543:350:11:g_d0_f4:11:g_d0_f4:stronger when the board is smaller and less independent. Table X reports the results of the logit
+23:774:59711:18:18:82:594:332:11:g_d0_f4:11:g_d0_f4:analysis where we include the interaction terms of board and CEO characteristics. Specifically,  [Table X
+23:775:59816:18:18:553:543:314:11:g_d0_f4:11:g_d0_f4:here]we include the interactions of a board size dummy (where Small (Large) Board is defined as the
+23:776:59915:18:19:82:543:296:11:g_d0_f4:11:g_d0_f4:board with the size below (above) the sample median) and a board independence dummy (where
+23:777:60005:19:18:82:543:277:11:g_d0_f4:11:g_d0_f4:Low (High) Independence is defined as the board with the fraction of independent directors below
+23:778:60101:18:18:82:543:259:11:g_d0_f4:11:g_d0_f4:(above) the sample median) with CEO stock ownership and tenure. The results suggest that the
+23:779:60193:18:19:82:543:241:11:g_d0_f4:11:g_d0_f4:effects of CEO stock ownership and tenure are indeed mostly driven by observations where the
+23:780:60285:19:18:82:267:222:11:g_d0_f4:11:g_d0_f4:boards are less independent and small.
+23:781:60323:18:18:99:543:204:11:g_d0_f4:11:g_d0_f4:It is important to emphasize that, although the economic mechanisms underlying our intuition
+23:782:60415:18:19:82:543:186:11:g_d0_f4:11:g_d0_f4:are plausible, we cannot rule out the potential explanation that firms for which zero-leverage policy
+23:783:60516:19:18:82:543:167:11:g_d0_f4:11:g_d0_f4:is optimal (for as yet unknown to us reasons), choose CEOs and their compensation packages
+23:784:60606:18:18:82:543:149:11:g_d0_f4:11:g_d0_f4:correspondingly. Our results in this section clearly indicate the need for further study of these
+23:785:60703:18:0:82:349:131:11:g_d0_f4:11:g_d0_f4:economic mechanisms when additional data is available.
+24:786:60793:0:30:82:319:680:12:g_d0_f6:12:g_d0_f6:III.C. Family Firms and Zero-Leverage Firms
+24:787:60836:30:18:99:543:650:11:g_d0_f4:11:g_d0_f4:The private benefits of control is another well-recognized dimension of agency costs. Large
+24:788:60927:18:18:82:543:632:11:g_d0_f4:11:g_d0_f4:shareholders and founders may care more about the private benefits of control and their voting
+24:789:61021:18:18:82:543:614:11:g_d0_f4:11:g_d0_f4:rights. With respect to family firms, Becker (1981) and Bertrand and Schoar (2006) argue that
+24:790:61114:18:19:82:543:596:11:g_d0_f4:11:g_d0_f4:family members can be altruistic in the sense that they can derive utility from maintaining the
+24:791:61209:19:18:82:543:577:11:g_d0_f4:11:g_d0_f4:family legacy or the well being of other family members. Taken together, CEOs of family firms
+24:792:61302:18:18:82:396:559:11:g_d0_f4:11:g_d0_f4:may be particularly averse to risks posed by the presence of debt.
+24:793:61368:18:19:99:543:541:11:g_d0_f4:11:g_d0_f4:To shed light on this issue, we use a hand-collected dataset that contains family firm status
+24:794:61461:19:18:82:543:522:11:g_d0_f4:11:g_d0_f4:for S&P 1500 firms over the 2003–2006 period.27The definition of a family firm follows that
+24:795:61552:18:18:82:543:504:11:g_d0_f4:11:g_d0_f4:of Anderson and Reeb (2003), Villalonga and Amit (2006), and Li, Wang, and Ryan (2011).
+24:796:61639:18:18:82:543:486:11:g_d0_f4:11:g_d0_f4:Specifically, a family firm is one in which the founder or any family member of the founding
+24:797:61731:18:19:82:543:468:11:g_d0_f4:11:g_d0_f4:family is a director, an officer, or owns 5% or more of the outstanding equity.  Our resulting
+24:798:61825:19:18:82:476:449:11:g_d0_f4:11:g_d0_f4:sample consists of 4,010 firm-year observations for 1,457 unique firms over 4 years.
+24:799:61909:18:18:99:543:431:11:g_d0_f4:11:g_d0_f4:As Table XI reports, a family firm is significantly more likely to use debt conservatively. At
+24:800:62003:18:19:82:543:413:11:g_d0_f4:11:g_d0_f4:the same time, most of related corporate governance variables remain significant (apart from the
+24:801:62099:19:18:82:598:394:11:g_d0_f4:11:g_d0_f4:board independence). Even after controlling for other variables, family firms are 7% more likely  [Table XI
+24:802:62206:18:18:553:543:376:11:g_d0_f4:11:g_d0_f4:here]to pursue zero-leverage policy than non-family firms.28Given the limited availability of data on
+24:803:62307:18:18:82:543:358:11:g_d0_f4:11:g_d0_f4:family status in our sample, a broader study of the impact of family firms can shed more light on
+24:804:62404:18:36:82:377:340:11:g_d0_f4:11:g_d0_f4:their relation with other CEO and governance characteristics.
+24:805:62465:36:29:239:387:304:12:g_d0_f5:12:g_d0_f5:IV.  Concluding Remarks
+24:806:62488:29:18:99:543:275:11:g_d0_f4:11:g_d0_f4:This paper documents the puzzling evidence that a substantial number of large public non-
+24:807:62577:18:18:82:543:257:11:g_d0_f4:11:g_d0_f4:financial US firms follow a zero-debt policy. Using the Compustat data set we find that, over
+24:808:62670:18:19:82:543:239:11:g_d0_f4:11:g_d0_f4:the 1962–2003 period, on average 10.2% of such firms have zero leverage and almost 22% have
+24:809:62761:19:18:82:543:220:11:g_d0_f4:11:g_d0_f4:a less than 5% book leverage ratio.  Neither industry nor size can fully explain such puzzling
+24:810:62855:18:18:82:543:202:11:g_d0_f4:11:g_d0_f4:behavior. Particularly surprising evidence is the presence of a large number of zero-leverage firms
+24:811:62954:18:19:82:543:184:11:g_d0_f4:11:g_d0_f4:who pay dividends. Zero-leverage dividend-paying firms are more profitable, pay higher taxes,
+24:812:63047:19:18:82:543:165:11:g_d0_f4:11:g_d0_f4:and have higher cash balances than their proxies chosen by industry and size. These firms also
+24:813:63141:18:16:82:543:147:11:g_d0_f4:11:g_d0_f4:pay substantially higher dividends than their proxies and thus the total payout ratio is relatively
+24:814:63240:16:15:91:543:131:6:g_d0_f10:9:g_d0_f11:27We thank Harley R. Ryan for generously sharing the data with us. See Li, Wang, and Ryan (2011) for a detailed
+24:815:63351:15:7:82:176:116:9:g_d0_f11:9:g_d0_f11:description of the data.
+24:816:63375:7:14:91:543:109:6:g_d0_f10:9:g_d0_f11:28Consistent with the intuition that family members care about survival, ZL firms on average survive by about
+24:817:63484:14:0:82:274:95:9:g_d0_f11:9:g_d0_f11:13% (10 months) longer than their proxy firms.
+25:818:63566:0:19:82:197:680:11:g_d0_f4:11:g_d0_f4:independent of leverage.
+25:819:63590:19:18:99:543:661:11:g_d0_f4:11:g_d0_f4:Were they to lever up to the level of their proxies, zero-leverage dividend-paying firms would
+25:820:63684:18:18:82:542:643:11:g_d0_f4:11:g_d0_f4:save about 7% of the market equity value in a conservative scenario. Nevertheless, zero-leverage
+25:821:63780:18:19:82:543:625:11:g_d0_f4:11:g_d0_f4:policy is found to be persistent over the long term. Firms with large CEO ownership and more
+25:822:63872:19:18:82:543:606:11:g_d0_f4:11:g_d0_f4:CEO-friendly boards are more likely to end up being zero-levered. Family firms are also more
+25:823:63964:18:18:82:543:588:11:g_d0_f4:11:g_d0_f4:likely to pursue zero-leverage policies.  Overall, our results suggest that CEO and governance
+25:824:64058:18:18:82:543:570:11:g_d0_f4:11:g_d0_f4:features of firms are important determinants of the zero-leverage phenomena.  More research
+25:825:64149:18:19:82:542:552:11:g_d0_f4:11:g_d0_f4:that further explores these relationships will be helpful for our understanding of the zero-leverage
+25:826:64249:19:35:82:276:533:11:g_d0_f4:11:g_d0_f4:puzzle and debt conservatism in general.
+25:827:64289:35:27:164:462:498:12:g_d0_f5:12:g_d0_f5:Appendix A.  Estimation of Potential Tax Benefits
+25:828:64338:27:31:99:370:471:10:g_d0_f4:10:g_d0_f4:Equation (11) can be solved algebraically to find ∆D. Define:
+25:829:64399:31:0:252:270:440:10:g_d0_f8:10:g_d0_f4:A=
+25:830:64401:0:14:274:369:447:10:g_d0_f8:7:g_d0_f22:L∗M E0−(1−L∗)D0
+25:831:64416:14:0:301:342:433:10:g_d0_f8:7:g_d0_f22:Dm−D0
+25:832:64421:0:32:370:543:440:10:g_d0_f8:10:g_d0_f4:.(A1)
+25:833:64426:32:22:82:395:408:10:g_d0_f4:7:g_d0_f22:SinceL∗≥L0=D0D0+ME0, it follows thatA≥0. There are two cases:29
+25:834:64489:22:33:91:188:386:10:g_d0_f4:10:g_d0_f4:(1) If 0≤A <1, then
+25:835:64508:33:0:205:284:353:10:g_d0_f4:10:g_d0_f4:∆D= (Dm−D0)
+25:836:64519:0:8:285:295:368:10:g_d0_f19:10:g_d0_f19:p
+25:837:64520:8:14:295:447:360:10:g_d0_f4:10:g_d0_f4:(1−τ0L∗)2+ 2τ0L∗A−(1−τ0L∗)
+25:838:64546:14:0:356:375:346:10:g_d0_f8:7:g_d0_f21:τ0L∗
+25:839:64550:0:33:523:543:353:10:g_d0_f4:10:g_d0_f4:(A2)
+25:840:64554:33:16:91:170:320:10:g_d0_f4:10:g_d0_f4:(2) IfA >1, then
+25:841:64570:16:0:258:358:304:10:g_d0_f4:10:g_d0_f4:∆D= (Dm−D0)(A+
+25:842:64584:0:14:362:367:311:10:g_d0_f4:10:g_d0_f4:1
+25:843:64585:14:0:362:367:297:10:g_d0_f4:10:g_d0_f4:2
+25:844:64586:0:206:368:543:304:10:g_d0_f8:10:g_d0_f4:τ0L∗).(A3)
+25:845:64596:206:15:91:544:98:6:g_d0_f10:9:g_d0_f11:29In the trivial cases when either the current marginal tax rateτ0= 0 or the target leverageL∗= 0, orDm=D0,
+25:846:64703:15:0:82:227:83:9:g_d0_f11:9:g_d0_f11:we setD∗=D0andP T B(D∗) = 0.
+26:847:64767:0:25:206:420:680:12:g_d0_f5:12:g_d0_f5:Appendix B.  Definition of Variables
+26:848:64803:25:21:82:445:655:10:g_d0_f4:10:g_d0_f4:Compustat variable names (in upper case letters) are used in the definitions below.
+26:849:64886:21:14:88:474:634:10:g_d0_f4:10:g_d0_f4:VariableDescriptionDefinition
+26:850:64915:14:14:88:522:620:10:g_d0_f4:10:g_d0_f8:Book LeverageBook leverage(DLT T+DLC)/AT
+26:851:64955:14:13:88:552:606:10:g_d0_f4:10:g_d0_f4:Market LeverageMarket leverage(DLT T+DLC)/(DLT T+
+26:852:65004:13:13:431:552:593:10:g_d0_f8:10:g_d0_f4:DLC+CSHO×P RCCF)
+26:853:65020:13:14:88:419:580:10:g_d0_f4:10:g_d0_f4:CPIAnnual consumer price index from the Bureau of La-
+26:854:65073:14:13:192:250:566:10:g_d0_f4:10:g_d0_f4:bor Statistics
+26:855:65087:13:14:88:419:553:10:g_d0_f4:10:g_d0_f4:Log(Size)Natural logarithm of book assets adjusted to 2000
+26:856:65145:14:0:192:221:539:10:g_d0_f4:10:g_d0_f4:dollars
+26:857:65152:0:27:431:546:553:10:g_d0_f4:10:g_d0_f4:log(ATt×CP I2000/CP It)
+26:858:65175:27:13:88:552:526:10:g_d0_f4:10:g_d0_f16:Market to BookRatio of market assets to book assets (Tobin’s q)(LT+P ST KL−
+26:859:65250:13:14:431:552:513:10:g_d0_f8:10:g_d0_f16:T XDIT C+CSHO×
+26:860:65264:14:13:431:495:499:10:g_d0_f8:10:g_d0_f8:P RCCF)/AT
+26:861:65274:13:13:88:473:486:10:g_d0_f4:10:g_d0_f8:DividendRatio of common dividends to book assetsDV C/AT
+26:862:65329:13:14:88:474:473:10:g_d0_f4:10:g_d0_f8:CashRatio of cash holdings to book assetsCHE/AT
+26:863:65376:14:13:88:419:459:10:g_d0_f4:10:g_d0_f4:ProfitabilityRatio of earnings before interests, taxes and depre-
+26:864:65441:13:0:192:287:446:10:g_d0_f4:10:g_d0_f4:ciation to book assets
+26:865:65463:0:27:431:485:459:10:g_d0_f8:10:g_d0_f8:OIBDP/AT
+26:866:65471:27:13:88:495:432:10:g_d0_f4:10:g_d0_f8:Share RepurchasesRatio of share repurchases to book assetsP RST KC/AT
+26:867:65540:13:13:88:488:419:10:g_d0_f4:10:g_d0_f8:TangibilityRatio of fixed assets to book assetsP P EN T /AT
+26:868:65599:13:14:88:472:406:10:g_d0_f4:10:g_d0_f8:TaxRatio of taxes paid to book assetsT XT /AT
+26:869:65644:14:13:88:490:392:10:g_d0_f4:10:g_d0_f8:R&DRatio of R&D expenses to salesXRD/SALE
+26:870:65685:13:14:88:419:379:10:g_d0_f4:10:g_d0_f4:AgeNumber of years since the firm’s record first appears
+26:871:65741:14:13:192:383:365:10:g_d0_f4:10:g_d0_f4:in Compustat (Age = 0 for the first record)
+26:872:65784:13:13:88:419:352:10:g_d0_f4:10:g_d0_f4:Earnings Vol.Volatility of profitability calculated for the past 10
+26:873:65851:13:14:192:374:339:10:g_d0_f4:10:g_d0_f4:years (minimum 3 years of data required)
+26:874:65891:14:13:88:480:325:10:g_d0_f4:10:g_d0_f8:Capital Expenditure   Ratio of capital expenditure to book assetsCAP X/AT
+26:875:65964:13:14:88:519:312:10:g_d0_f4:10:g_d0_f8:Asset SaleRatio of asset sales to book assets(SP P E+SIV)/AT
+26:876:66024:14:13:88:545:298:10:g_d0_f4:10:g_d0_f8:Net Equity Issuance   Ratio of net equity issuance to book assets(SST K−P RST KC)/AT
+26:877:66108:13:13:88:419:285:10:g_d0_f4:10:g_d0_f4:Net Debt IssuanceRatio of the change in current and long-term debt to
+26:878:66177:13:0:192:242:272:10:g_d0_f4:10:g_d0_f4:book assets
+26:879:66188:0:13:431:552:285:10:g_d0_f4:10:g_d0_f16:(DLCt+DLT Tt−
+26:880:66201:13:14:431:546:272:10:g_d0_f8:7:g_d0_f23:DLCt−1−DLT Tt−1)/ATt
+26:881:66221:14:13:88:419:258:10:g_d0_f4:10:g_d0_f4:Init. Book Lev.Initial book leverage of the firm (first record in Com-
+26:882:66291:13:13:192:224:245:10:g_d0_f4:10:g_d0_f4:pustat)
+26:883:66298:13:14:88:419:232:10:g_d0_f4:10:g_d0_f4:Init. Market Lev.Initial market leverage of the firm (first record in
+26:884:66367:14:13:192:244:218:10:g_d0_f4:10:g_d0_f4:Compustat)
+26:885:66377:13:14:88:419:205:10:g_d0_f4:10:g_d0_f4:Init. ZLDummy variable: 1 if initial book leverage is zero
+26:886:66435:14:13:192:261:191:10:g_d0_f4:10:g_d0_f4:and 0 otherwise
+26:887:66450:13:13:88:419:178:10:g_d0_f4:10:g_d0_f4:Init. AZLDummy variable: 1 if initial book leverage is 5% or
+26:888:66510:13:14:192:287:165:10:g_d0_f4:10:g_d0_f4:lower and 0 otherwise
+26:889:66531:14:13:88:419:151:10:g_d0_f4:10:g_d0_f4:Operating LeasesSum of current rental payment and the discounted
+26:890:66595:13:14:192:419:138:10:g_d0_f4:10:g_d0_f4:present value of future rental commitments (up to
+26:891:66644:14:0:192:237:124:10:g_d0_f4:10:g_d0_f4:five years)
+26:892:66655:0:8:431:442:151:10:g_d0_f8:10:g_d0_f19:XREN T+P
+26:893:66663:8:8:442:446:143:7:g_d0_f22:7:g_d0_f22:5
+26:894:66664:8:0:442:455:135:7:g_d0_f23:7:g_d0_f22:s=1
+26:895:66667:0:8:464:468:142:7:g_d0_f22:7:g_d0_f22:1
+26:896:66668:8:23:459:504:134:7:g_d0_f22:7:g_d0_f23:1.1sM RCs
+26:897:66677:23:13:88:180:111:10:g_d0_f4:10:g_d0_f4:Net Pension Liabili-
+26:898:66697:13:0:88:103:98:10:g_d0_f4:10:g_d0_f4:ties
+26:899:66701:0:13:192:419:111:10:g_d0_f4:10:g_d0_f4:Difference between pension obligations and pension
+26:900:66751:13:0:192:344:98:10:g_d0_f4:10:g_d0_f4:assets (=0 if the result is negative)
+26:901:66788:0:13:431:552:111:10:g_d0_f4:10:g_d0_f16:max(P BP RO+P BP RU−
+26:902:66808:13:0:431:531:98:10:g_d0_f8:10:g_d0_f4:P P LAO−P P LAU,0)
+27:903:66862:0:23:276:343:680:12:g_d0_f5:12:g_d0_f5:References.
+27:904:66873:23:11:82:542:657:11:g_d0_f25:11:g_d0_f4:Acharya, Viral V., Heitor Almeida, and Murillo Campello,2007, “Is cash negative
+27:905:66952:11:12:82:543:646:11:g_d0_f4:11:g_d0_f2:debt? A hedging perspective on corporate financial policies”,Journal of Financial Intermediation
+27:906:67048:12:15:82:140:634:11:g_d0_f4:11:g_d0_f4:16, 515–554.
+27:907:67060:15:12:82:543:619:11:g_d0_f25:11:g_d0_f4:Acharya, Viral V., Sergei Davydenko, and Ilya A. Strebulaev, 2011, “Cash Holdings
+27:908:67141:12:11:82:543:607:11:g_d0_f4:11:g_d0_f4:and Credit Risk”, Working Paper, New York University, Stanford University, and University of
+27:909:67233:11:16:82:122:596:11:g_d0_f4:11:g_d0_f4:Toronto.
+27:910:67241:16:12:82:543:580:11:g_d0_f25:11:g_d0_f4:Agrawal, Anup, and Nandu J. Nagarajan, 1990, “Corporate Capital Structure, Agency
+27:911:67322:12:11:82:543:568:11:g_d0_f4:11:g_d0_f4:Costs, and Ownership Control: The Case of All-Equity Firms”,Journal of Finance, 45, 1325–
+27:912:67411:11:16:82:107:557:11:g_d0_f4:11:g_d0_f4:1331.
+27:913:67416:16:12:82:543:541:11:g_d0_f25:11:g_d0_f4:Anderson, R. C., and D. M. Reeb, 2003, “Founding Family Ownership and Firm Performance:
+27:914:67503:12:16:82:391:529:11:g_d0_f4:11:g_d0_f4:Evidence from the S&P 500”,Journal of Finance 58, 1301–1329.
+27:915:67563:16:11:82:543:513:11:g_d0_f25:11:g_d0_f4:Ang, James, and Pamela P. Peterson, 1984, “The Leasing Puzzle”,Journal of Finance39,
+27:916:67647:11:16:82:134:502:11:g_d0_f4:11:g_d0_f4:1055–1065.
+27:917:67657:16:11:82:543:486:11:g_d0_f25:11:g_d0_f4:Asquith, Paul, Robert Gertner, and David Scharfstein, 1994, “Anatomy of Financial
+27:918:67738:11:16:82:543:475:11:g_d0_f4:11:g_d0_f4:Distress: An Examination of Junk Bond Issuers,”Quarterly Journal of Economics, 109, 625–658.
+27:919:67830:16:12:82:543:459:11:g_d0_f25:11:g_d0_f2:Becker, Gary, 1981, “Altruism in the family and selfishness in the market place”,Economica
+27:920:67920:12:16:82:124:447:11:g_d0_f4:11:g_d0_f4:48, 1–15.
+27:921:67929:16:11:82:543:431:11:g_d0_f25:11:g_d0_f4:Berger, Philip G, Eli Ofek, and David L. Yermack, 1997, “Managerial entrenchment and
+27:922:68013:11:16:82:382:420:11:g_d0_f4:11:g_d0_f4:capital structure decisions”,Journal of Finance52, 1411–1438.
+27:923:68074:16:12:82:543:404:11:g_d0_f25:11:g_d0_f2:Bertrand, M., and A. Schoar, 2006, “The role of family in family firms”,Journal of Economic
+27:924:68165:12:16:82:187:392:11:g_d0_f2:11:g_d0_f4:Perspective20, 73–96.
+27:925:68186:16:11:82:543:376:11:g_d0_f25:11:g_d0_f4:Bhagat, Sanjai, and Bernard Black, 2001, “The non-correlation between board indepen-
+27:926:68270:11:16:82:472:365:11:g_d0_f4:11:g_d0_f4:dence and long term firm performance”,Journal of Corporation Law27, 231–274.
+27:927:68346:16:11:82:543:349:11:g_d0_f25:11:g_d0_f2:Cheng, Shijun, 2008, “Board size and the variability of corporate performance”,Journal  of
+27:928:68436:11:16:82:244:338:11:g_d0_f2:11:g_d0_f4:Financial Economics87, 157–176.
+27:929:68467:16:12:82:543:322:11:g_d0_f25:11:g_d0_f4:Coles, Jeffrey L., Naveen D. Daniel, and Lalitha Naveen, 2006, “Managerial incentives
+27:930:68552:12:16:82:381:310:11:g_d0_f4:11:g_d0_f4:and risk-taking”,Journal of Financial Economics79, 431–468.
+27:931:68611:16:11:82:543:294:11:g_d0_f25:11:g_d0_f4:Coles, Jeffrey L., Naveen D. Daniel, and Lalitha Naveen, 2008, “Boards: Does one-size
+27:932:68696:11:16:82:343:283:11:g_d0_f4:11:g_d0_f4:fit all?”,Journal of Financial Economics87, 329–356..
+27:933:68749:16:12:82:543:267:11:g_d0_f25:11:g_d0_f4:DeAngelo, Harry, and Ronald W Masulis, 1980, “Optimal Capital Structure Under Cor-
+27:934:68831:12:16:82:433:255:11:g_d0_f4:11:g_d0_f4:porate and Personal Taxation”,Journal of Financial Economics, 8, 3–29.
+27:935:68901:16:11:82:544:239:11:g_d0_f25:11:g_d0_f4:Eisenberg, T., S. Sundgren, and M. Wells, 1998, “Larger board size and decreasing firm
+27:936:68987:11:16:82:392:228:11:g_d0_f4:11:g_d0_f4:value in small firms”,Journal of Financial Economics48, 35–54.
+27:937:69049:16:11:82:543:212:11:g_d0_f25:11:g_d0_f4:Eisfeldt, Andrea, and Adriano Rampini, 2009, “Leasing, Ability to Reposess, and Debt
+27:938:69133:11:16:82:342:201:11:g_d0_f4:11:g_d0_f4:Capacity”,Review of Financial Studies22, 1621–1657.
+27:939:69184:16:12:82:543:185:11:g_d0_f25:11:g_d0_f4:Fama, Eugene F., and Kenneth R. French, 2002, “Testing Trade-Off and Pecking Order
+27:940:69266:12:16:82:460:173:11:g_d0_f4:11:g_d0_f4:Predictions about Dividends and Debt”,Review of Financial Studies, 15, 1–33.
+27:941:69342:16:11:82:543:157:11:g_d0_f25:11:g_d0_f4:Fischer, Edwin O., Robert Heinkel, and Josef Zechner, 1989, “Optimal Dynamic Capital
+27:942:69426:11:16:82:411:146:11:g_d0_f4:11:g_d0_f4:Structure Choice: Theory and Tests”,Journal of Finance, 44, 19–40.
+27:943:69492:16:12:82:543:130:11:g_d0_f25:11:g_d0_f4:Foley, C. Fritz, Jay Hartzell, Sheridan Titman, and Garry Twite, 2007. “Why Do
+27:944:69570:12:11:82:543:118:11:g_d0_f4:11:g_d0_f4:Firms Hold So Much Cash?  A Tax-Based Explanation”,Journal  of  Financial  Economics86,
+27:945:69657:11:0:82:123:107:11:g_d0_f4:11:g_d0_f4:579–607.
+28:946:69701:0:12:82:543:680:11:g_d0_f25:11:g_d0_f2:Gamba, Andrea, and Alexander Triantis,2008, “The Value of Financial Flexibility”,Jour-
+28:947:69787:12:16:82:224:668:11:g_d0_f2:11:g_d0_f4:nal of Finance63, 2263–2296.
+28:948:69815:16:11:82:543:652:11:g_d0_f25:11:g_d0_f4:Goldstein, Robert, Nengjiu Ju, and Hayne E. Leland, 2001, “An EBIT-Based Model of
+28:949:69896:11:16:82:384:641:11:g_d0_f4:11:g_d0_f4:Dynamic Capital Structure”,Journal of Business, 74, 483–512.
+28:950:69956:16:12:82:543:625:11:g_d0_f25:11:g_d0_f4:Gompers, Paul A., Joy L. Ishii, and Andrew Metrick, 2003, “Corporate Governance and
+28:951:70039:12:16:82:380:613:11:g_d0_f4:11:g_d0_f4:Equity Prices”,Quarterly Journal of Economics118, 107–155.
+28:952:70097:16:11:82:543:597:11:g_d0_f25:11:g_d0_f4:Graham, John R., 2000, “How Big Are the Tax Benefits of Debt”,Journal  of  Finance55,
+28:953:70182:11:16:82:134:586:11:g_d0_f4:11:g_d0_f4:1901–1941.
+28:954:70192:16:11:82:543:570:11:g_d0_f25:11:g_d0_f2:Graham, John R., 2003, “Taxes and Corporate Finance:  A Review”,Review  of  Financial
+28:955:70277:11:16:82:192:559:11:g_d0_f2:11:g_d0_f4:Studies, 16, 1074–1128.
+28:956:70300:16:12:82:543:543:11:g_d0_f25:11:g_d0_f4:Graham, John R., Mark H. Lang, and Douglas Shackelford, 2004, “Employee Stock
+28:957:70377:12:16:82:469:531:11:g_d0_f4:11:g_d0_f4:Options, Corporate Taxes, and Debt Policy”,Journal of Finance, 59, 1585–1618.
+28:958:70454:16:11:82:542:515:11:g_d0_f25:11:g_d0_f4:Graham, John R. and Mark Leary, 2010, A Review of Empirical Capital Structure Research
+28:959:70540:11:16:82:493:504:11:g_d0_f4:11:g_d0_f4:and Directions for the Future,Annual Review of Financial Economics3, forthcoming.
+28:960:70621:16:12:82:543:488:11:g_d0_f25:11:g_d0_f4:Graham, John R., and Krishnamoorthy Narasimhan, 2004, “Corporate Survival and Man-
+28:961:70703:12:16:82:484:476:11:g_d0_f4:11:g_d0_f4:agerial Experiences During the Great Depression”, Working paper, Duke University.
+28:962:70784:16:11:82:543:460:11:g_d0_f25:11:g_d0_f4:Graham, John R., Michael Lemmon, and James Schallheim, 1998, “Debt, Leases, and
+28:963:70863:11:16:82:498:449:11:g_d0_f4:11:g_d0_f4:Taxes and the Endogeneity of Corporate Tax Status”,Journal of Finance, 53, 131-162.
+28:964:70946:16:11:82:543:433:11:g_d0_f25:11:g_d0_f4:Graham, John R., and Alan L. Tucker, 2006, “Tax Shelters and Corporate Debt Policy”,
+28:965:71030:11:16:82:300:422:11:g_d0_f2:11:g_d0_f4:Journal of Financial Economics, 81, 563–594.
+28:966:71074:16:12:82:543:406:11:g_d0_f25:11:g_d0_f4:Grinblatt, Mark, and Sheridan Titman, 2002,Financial Markets and Corporate Strategy,
+28:967:71158:12:16:82:210:394:11:g_d0_f4:11:g_d0_f4:2nd Edition, McGraw-Hill.
+28:968:71183:16:11:82:543:378:11:g_d0_f25:11:g_d0_f2:Hackbarth, Dirk, 2008, “Managerial Traits and Capital Structure Decisions”,Journal of Fi-
+28:969:71272:11:16:82:305:367:11:g_d0_f2:11:g_d0_f4:nancial and Quantitative Analysis, 43, 843–81.
+28:970:71318:16:12:82:543:351:11:g_d0_f25:11:g_d0_f4:Hermalin Benjamin E., and Michael S. Weisbach, 1998, “Endogenously Chosen Boards of
+28:971:71401:12:16:82:497:339:11:g_d0_f4:11:g_d0_f4:Directors and Their Monitoring of the CEO”,American Economic Review, 88, 96–118.
+28:972:71481:16:11:82:542:323:11:g_d0_f25:11:g_d0_f4:Hennessy, Chris, and Toni Whited, 2005, “Debt Dynamics”,Journal of Finance, 60, 1129–
+28:973:71566:11:16:82:107:312:11:g_d0_f4:11:g_d0_f4:1165.
+28:974:71571:16:11:82:543:296:11:g_d0_f25:11:g_d0_f4:Ju, Nengjiu, Robert Parrino, Allen M. Poteshman, and Michael S. Weisbach, 2005,
+28:975:71650:11:12:82:543:285:11:g_d0_f4:11:g_d0_f4:“Horse and Rabbits? Optimal Dynamic Capital Structure from Shareholder and Manager Per-
+28:976:71737:12:16:82:411:273:11:g_d0_f4:11:g_d0_f4:spectives”,Journal of Financial and Quantitative Analysis, 259–281.
+28:977:71804:16:11:82:543:257:11:g_d0_f25:11:g_d0_f4:Kurshev, Alexander, and Ilya A. Strebulaev, 2006, “Firm Size and Capital Structure”,
+28:978:71888:11:16:82:345:246:11:g_d0_f4:11:g_d0_f4:Working Paper, Stanford Graduate School of Business.
+28:979:71940:16:12:82:543:230:11:g_d0_f25:11:g_d0_f4:Leary, Mark T., and Michael R. Roberts, 2005, “Do Firms Rebalance their Capital Struc-
+28:980:72026:12:16:82:288:218:11:g_d0_f4:11:g_d0_f4:tures?”Journal of Finance, 60, 2575–2619.
+28:981:72067:16:11:82:543:202:11:g_d0_f25:11:g_d0_f4:Leary, Mark T., and Michael R. Roberts, 2010, “The Pecking Order, Debt Capacity, and
+28:982:72151:11:16:82:424:191:11:g_d0_f4:11:g_d0_f4:Information Asymmetry”,Journal of Financial Economics95, 332–355.
+28:983:72216:16:11:82:543:175:11:g_d0_f25:11:g_d0_f4:Leland, Hayne E., 1994, “Corporate Debt Value, Bond Covenants, and Optimal Capital Struc-
+28:984:72305:11:16:82:280:164:11:g_d0_f4:11:g_d0_f4:ture,”Journal of Finance, 49, 1213–1252.
+28:985:72345:16:12:82:543:148:11:g_d0_f25:11:g_d0_f2:Leland, Hayne E., 1998, “Agency Costs, Risk Management, and Capital Structure”,Journal
+28:986:72431:12:16:82:209:136:11:g_d0_f2:11:g_d0_f4:of Finance, 53, 1213–1243.
+28:987:72457:16:11:82:557:120:11:g_d0_f25:11:g_d0_f4:Leland, Hayne E., and Klaus Toft, 1996, “Optimal Capital Structure, Endogenous Bankruptcy,
+28:988:72547:11:16:82:457:109:11:g_d0_f4:11:g_d0_f4:and the Term Structure of Credit Spreads”,Journal of Finance, 51, 987–1019.
+28:989:72622:16:0:82:543:93:11:g_d0_f25:11:g_d0_f4:Lemmon, Michael L., Michael R. Roberts, and Jaime F. Zender, 2008, “Back to the
+29:990:72737:0:12:82:543:680:11:g_d0_f4:11:g_d0_f2:Beginning: Persistence and the Cross-Section of Corporate Capital Structure”,Journal of Finance
+29:991:72832:12:16:82:151:668:11:g_d0_f4:11:g_d0_f4:63, 1575–1608.
+29:992:72846:16:11:82:543:652:11:g_d0_f25:11:g_d0_f4:Lemmon, Michael L. and Jaime F. Zender, 2010, “Debt Capacity and Tests of Capital
+29:993:72927:11:16:82:482:641:11:g_d0_f4:11:g_d0_f4:Structure Theories”,Journal of Financial and Quantitative Analysis45, 1161–1187.
+29:994:73007:16:12:82:543:625:11:g_d0_f25:11:g_d0_f2:Lewellen, Katharina, 2006, “Financing decisions when managers are risk averse”,Journal of
+29:995:73096:12:16:82:244:613:11:g_d0_f2:11:g_d0_f4:Financial Economics82, 551–590.
+29:996:73127:16:11:82:543:597:11:g_d0_f25:11:g_d0_f4:Lewis, Craig M., and James S. Schallheim, 1992, “Are Debt and Leases Substitutes?”,
+29:997:73210:11:16:82:370:586:11:g_d0_f2:11:g_d0_f4:Journal of Financial and Quantitative Analysis27, 497–511.
+29:998:73268:16:11:82:543:570:11:g_d0_f25:11:g_d0_f4:Li, Zhi, Harley E. Ryan, and Lingling Wang, 2011, “Top Management Compensation
+29:999:73346:11:16:82:530:559:11:g_d0_f4:11:g_d0_f4:Incentives in Family Firms”, Working Paper, Georgia State University and Tulane University.
+29:1000:73437:16:12:82:543:543:11:g_d0_f25:11:g_d0_f4:Malmendier, Ulrike, Geoffrey Tate, and Jon Yan, 2011, “Overconfidence and Early-
+29:1001:73517:12:11:82:543:531:11:g_d0_f4:11:g_d0_f2:life Experiences: The Effect of Managerial Traits on Corporate Financial Policies”,Journal of
+29:1002:73610:11:16:82:193:520:11:g_d0_f2:11:g_d0_f4:Finance66, 1687–1733.
+29:1003:73631:16:12:82:543:504:11:g_d0_f25:11:g_d0_f4:Minton, Bernadette A., and Karen Hopper Wruck, 2001, “Financial Conservatism: Ev-
+29:1004:73712:12:16:82:536:492:11:g_d0_f4:11:g_d0_f4:idence on Capital Structure from Low Leverage Firms”, Working paper, Ohio State University.
+29:1005:73803:16:11:82:543:476:11:g_d0_f25:11:g_d0_f4:Morellec, Erwan, 2003, “Can Managerial Discretion Explain Observed Leverage Ratios?”,
+29:1006:73888:11:16:82:278:465:11:g_d0_f2:11:g_d0_f4:Review of Financial Studies, 17, 257-294.
+29:1007:73929:16:16:82:529:449:11:g_d0_f25:11:g_d0_f4:Myers, Stuart C., 1984, “The Capital Structure Puzzle”,Journal of Finance, 39, 575–592.
+29:1008:74016:16:11:82:543:433:11:g_d0_f25:11:g_d0_f4:Parrino, Robert, and Michael S. Weisbach, 1999, “Measuring investment distortions aris-
+29:1009:74103:11:16:82:494:422:11:g_d0_f4:11:g_d0_f4:ing from stockholder-bondholder conflicts”,Journal of Financial Economics, 53, 3–42.
+29:1010:74187:16:12:82:543:406:11:g_d0_f25:11:g_d0_f4:Rajan, Raghuram G., and Luigi Zingales, 1995, “What Do We Know about Capital Struc-
+29:1011:74270:12:16:82:481:394:11:g_d0_f4:11:g_d0_f4:ture? Some Evidence from International Data”,Journal of Finance, 50, 1421–1460.
+29:1012:74349:16:11:82:543:378:11:g_d0_f25:11:g_d0_f4:Rampini, Adriano A., and S. Viswanathan, 2010, “Collateral, risk management, and the
+29:1013:74433:11:16:82:394:367:11:g_d0_f4:11:g_d0_f4:distribution of debt capacity”,Journal of Finance65, 2293–2322.
+29:1014:74496:16:12:82:543:351:11:g_d0_f25:11:g_d0_f4:Rauh, Joshua, and Amir Sufi, 2010, “Explaining Corporate Capital Structure: Product Mar-
+29:1015:74584:12:16:82:409:339:11:g_d0_f4:11:g_d0_f4:kets, Leases, and Asset Similarity”,Review of Finance, forthcoming.
+29:1016:74651:16:11:82:543:323:11:g_d0_f25:11:g_d0_f4:Harley E. Ryan, and Lingling Wang, 2011, “CEO Mobility and the CEO-Firm Match:
+29:1017:74729:11:11:82:543:312:11:g_d0_f4:11:g_d0_f4:Evidence from CEO Employment History”, Working paper, Georgia State University and Tulane
+29:1018:74818:11:16:82:133:301:11:g_d0_f4:11:g_d0_f4:University.
+29:1019:74829:16:12:82:543:285:11:g_d0_f25:11:g_d0_f4:Shivdasani, Anil, and Irina Stefanescu, 2010, “How Do Pensions Affect Corporate Capital
+29:1020:74916:12:16:82:398:273:11:g_d0_f4:11:g_d0_f4:Structure Decisions?”,Review of Financial Studies23, 1287–1323.
+29:1021:74979:16:11:82:543:257:11:g_d0_f25:11:g_d0_f4:Strebulaev, Ilya A., 2007, “Do Tests of Capital Structure Theory Mean What They Say?”,
+29:1022:75065:11:16:82:247:246:11:g_d0_f2:11:g_d0_f4:Journal of Finance62, 2633–2671.
+29:1023:75097:16:16:82:426:230:11:g_d0_f25:11:g_d0_f4:Tirole, Jean, 2001, “Corporate Governance”,Econometrica, 69, 1–35.
+29:1024:75163:16:12:82:543:214:11:g_d0_f25:11:g_d0_f4:Villalonga, Belen, and Raphael Amit, 2006, “How Do Family Ownership, Control, and
+29:1025:75244:12:16:82:465:202:11:g_d0_f4:11:g_d0_f4:Management Affect Firm Value?”,Journal of Financial Economics80, 385–417.
+29:1026:75317:16:11:82:544:186:11:g_d0_f25:11:g_d0_f2:Weisbach, Michael S., 1988, “Outside Directors and CEO Turnover”,Journal of Financial
+29:1027:75402:11:16:82:198:175:11:g_d0_f2:11:g_d0_f4:Economics, 20, 431–460.
+29:1028:75425:16:11:82:543:159:11:g_d0_f25:11:g_d0_f2:Yan, An, 2006, “Leasing and Debt Financing: Substitutes or Complements?”Journal of Finan-
+29:1029:75514:11:16:82:289:148:11:g_d0_f2:11:g_d0_f4:cial and Quantitative Analysis41, 709–731.
+29:1030:75556:16:12:82:543:132:11:g_d0_f25:11:g_d0_f4:Yermack, David, 1996, “Higher market valuation of companies with a small board of directors”,
+29:1031:75649:12:16:82:297:120:11:g_d0_f2:11:g_d0_f4:Journal of Financial Economics40, 185–212.
+29:1032:75691:16:11:82:543:104:11:g_d0_f25:11:g_d0_f2:Zwiebel, Jeffrey, 1996, “Dynamic Capital Structure under Managerial Entrenchment”,Amer-
+29:1033:75778:11:0:82:265:93:11:g_d0_f2:11:g_d0_f4:ican Economic Review, 86, 1197–1215.
+30:1034:75850:0:33:202:421:627:10:g_d0_f17:10:g_d0_f17:Table I: Frequency of Zero-Leverage Firms
+30:1035:75891:33:14:115:511:594:11:g_d0_f4:11:g_d0_f4:ZL firms are firms that have zero book debt (DLT T+DLC= 0). ZLTD firms
+30:1036:75961:14:14:115:510:580:11:g_d0_f4:11:g_d0_f4:are firms that have zero long-term debt (DLT T= 0). AZL firms are firms with
+30:1037:76037:14:13:115:511:566:11:g_d0_f4:11:g_d0_f4:book leverage not exceeding 5% in a given year. NPND firms are firms that have
+30:1038:76115:13:14:115:510:553:11:g_d0_f4:11:g_d0_f4:non-positive net debt in a given year, i.e.,DLT T+DLC−CHE≤0. Columns
+30:1039:76183:14:13:115:511:539:11:g_d0_f4:11:g_d0_f4:ZL, ZLTD, AZL, and NPND report corresponding fractions of firms relative to the
+30:1040:76262:13:45:115:500:526:11:g_d0_f4:11:g_d0_f4:total sample in each year. Column N gives the number of firms of in the sample.
+30:1041:76341:45:14:208:408:481:11:g_d0_f4:11:g_d0_f4:Year   ZL   ZLTD  AZL  NPND    N
+30:1042:76373:14:13:208:412:467:11:g_d0_f4:11:g_d0_f4:1962  12.7   17.4   23.6    39.5471
+30:1043:76408:13:14:208:412:454:11:g_d0_f4:11:g_d0_f4:1963  12.9   17.5   25.7    42.4498
+30:1044:76443:14:13:208:412:440:11:g_d0_f4:11:g_d0_f4:1964  11.9   17.7   24.0    39.2530
+30:1045:76478:13:14:208:412:427:11:g_d0_f4:11:g_d0_f4:1965  10.5   16.9   21.2    34.3638
+30:1046:76513:14:13:208:416:413:11:g_d0_f4:11:g_d0_f4:1966   9.6    15.3   16.9    25.8   1,281
+30:1047:76554:13:14:208:416:400:11:g_d0_f4:11:g_d0_f4:1967   7.9    12.2   14.8    22.2   1,398
+30:1048:76595:14:13:208:416:386:11:g_d0_f4:11:g_d0_f4:1968   8.0    12.9   16.2    24.6   1,844
+30:1049:76636:13:14:208:416:373:11:g_d0_f4:11:g_d0_f4:1969   6.4    10.5   13.9    22.1   2,101
+30:1050:76677:14:14:208:417:359:11:g_d0_f4:11:g_d0_f4:1970   5.89.4    12.1    18.1   2,509
+30:1051:76714:14:13:208:417:345:11:g_d0_f4:11:g_d0_f4:1971   6.29.6    13.3    20.3   2,771
+30:1052:76751:13:14:208:416:332:11:g_d0_f4:11:g_d0_f4:1972   6.6    10.3   15.0    22.2   3,019
+30:1053:76792:14:13:208:416:318:11:g_d0_f4:11:g_d0_f4:1973   6.1    10.2   12.8    19.9   3,085
+30:1054:76833:13:14:208:417:305:11:g_d0_f4:11:g_d0_f4:1974   4.78.8    11.0    16.4   3,124
+30:1055:76870:14:13:208:417:291:11:g_d0_f4:11:g_d0_f4:1975   5.48.6    13.2    20.2   3,055
+30:1056:76907:13:14:208:417:278:11:g_d0_f4:11:g_d0_f4:1976   5.99.0    13.9    23.6   3,022
+30:1057:76944:14:13:208:417:264:11:g_d0_f4:11:g_d0_f4:1977   5.68.5    13.6    21.7   2,932
+30:1058:76981:13:14:208:417:251:11:g_d0_f4:11:g_d0_f4:1978   4.97.4    12.2    19.7   3,034
+30:1059:77018:14:13:208:417:237:11:g_d0_f4:11:g_d0_f4:1979   4.37.0    11.2    18.1   3,153
+30:1060:77055:13:14:208:417:224:11:g_d0_f4:11:g_d0_f4:1980   4.36.6    11.4    18.5   3,126
+30:1061:77092:14:14:208:417:210:11:g_d0_f4:11:g_d0_f4:1981   5.07.8    13.0    24.0   3,400
+30:1062:77129:14:13:208:417:196:11:g_d0_f4:11:g_d0_f4:1982   5.27.5    13.9    24.6   3,371
+30:1063:77166:13:14:208:417:183:11:g_d0_f4:11:g_d0_f4:1983   5.88.7    17.7    31.3   3,505
+30:1064:77203:14:13:208:417:169:11:g_d0_f4:11:g_d0_f4:1984   5.98.8    17.3    29.3   3,611
+30:1065:77240:13:14:208:417:156:11:g_d0_f4:11:g_d0_f4:1985   5.98.9    16.4    28.7   3,507
+30:1066:77277:14:0:208:416:142:11:g_d0_f4:11:g_d0_f4:1986   6.7    10.3   16.8    29.7   3,579
+31:1067:77354:0:43:171:451:592:10:g_d0_f17:10:g_d0_f17:Table I: Frequency of Zero-Leverage Firms (continued)
+31:1068:77407:43:14:181:430:549:11:g_d0_f4:11:g_d0_f4:YearZL   ZLTD  AZL  NPNDN
+31:1069:77432:14:14:181:439:535:11:g_d0_f4:11:g_d0_f4:19876.7    10.6   16.7    28.63,740
+31:1070:77467:14:13:181:439:521:11:g_d0_f4:11:g_d0_f4:19886.3    10.3   15.7    27.33,609
+31:1071:77502:13:14:181:439:508:11:g_d0_f4:11:g_d0_f4:19897.1    11.5   16.8    27.43,445
+31:1072:77537:14:13:181:439:494:11:g_d0_f4:11:g_d0_f4:19907.6    11.8   18.0    28.23,366
+31:1073:77572:13:14:181:439:481:11:g_d0_f4:11:g_d0_f4:19919.4    13.5   21.1    32.23,427
+31:1074:77607:14:13:181:439:467:11:g_d0_f4:11:g_d0_f4:199210.0   14.9   24.2    34.93,662
+31:1075:77642:13:14:181:439:454:11:g_d0_f4:11:g_d0_f4:199311.3   16.8   25.6    36.74,063
+31:1076:77677:14:13:181:439:440:11:g_d0_f4:11:g_d0_f4:199411.6   16.2   25.8    35.84,367
+31:1077:77712:13:14:181:439:427:11:g_d0_f4:11:g_d0_f4:199511.3   16.3   26.2    35.84,703
+31:1078:77747:14:13:181:439:413:11:g_d0_f4:11:g_d0_f4:199613.1   18.4   29.5    39.85,220
+31:1079:77782:13:14:181:439:400:11:g_d0_f4:11:g_d0_f4:199713.2   18.5   29.6    39.65,358
+31:1080:77817:14:14:181:439:386:11:g_d0_f4:11:g_d0_f4:199813.0   18.4   27.3    36.85,179
+31:1081:77852:14:13:181:439:372:11:g_d0_f4:11:g_d0_f4:199913.1   19.2   28.7    38.05,107
+31:1082:77887:13:14:181:439:359:11:g_d0_f4:11:g_d0_f4:200014.0   20.8   31.7    42.25,015
+31:1083:77922:14:13:181:439:345:11:g_d0_f4:11:g_d0_f4:200114.8   21.5   31.2    42.74,485
+31:1084:77957:13:14:181:439:332:11:g_d0_f4:11:g_d0_f4:200215.9   22.2   31.1    43.14,144
+31:1085:77992:14:13:181:439:318:11:g_d0_f4:11:g_d0_f4:200318.0   24.3   33.0    45.93,900
+31:1086:78027:13:14:181:439:305:11:g_d0_f4:11:g_d0_f4:200419.1   24.7   34.9    48.53,906
+31:1087:78062:14:13:181:439:291:11:g_d0_f4:11:g_d0_f4:200519.9   25.5   35.6    49.03,841
+31:1088:78097:13:14:181:439:278:11:g_d0_f4:11:g_d0_f4:200619.5   25.3   34.7    47.83,811
+31:1089:78132:14:13:181:439:264:11:g_d0_f4:11:g_d0_f4:200719.8   26.2   35.5    48.33,786
+31:1090:78167:13:14:181:439:251:11:g_d0_f4:11:g_d0_f4:200818.9   26.9   32.4    44.23,555
+31:1091:78202:14:23:181:439:237:11:g_d0_f4:11:g_d0_f4:200919.5   26.9   34.2    48.33,283
+31:1092:78237:23:23:181:444:214:11:g_d0_f4:11:g_d0_f4:Total10.6   15.3   22.6    33.1   157,536
+31:1093:78278:23:13:181:439:191:11:g_d0_f4:11:g_d0_f4:Mean (87–09)  13.6   19.2   27.8    39.24,129
+31:1094:78323:13:0:181:439:178:11:g_d0_f4:11:g_d0_f4:Mean (62–09)  10.2   14.8   21.5    32.03,282
+32:1095:78404:0:22:105:521:651:10:g_d0_f17:10:g_d0_f17:Table II: Descriptive Statistics for Zero-Leverage and Almost Zero-Leverage Firms
+32:1096:78485:22:13:82:551:629:11:g_d0_f4:11:g_d0_f4:This table reports the descriptive statistics for ZL/AZL firms and their proxy firms.  ZL firms
+32:1097:78580:13:14:82:550:616:11:g_d0_f4:11:g_d0_f4:are firms that have zero book debt in a given year. AZL firms are firms with book leverage not
+32:1098:78674:14:13:82:550:602:11:g_d0_f4:11:g_d0_f4:exceeding 5% in a given year. The selection procedure of proxy firms is described in Section I.B.2.
+32:1099:78773:13:14:82:550:589:11:g_d0_f4:11:g_d0_f4:All variables are defined in Appendix B. Panel A reports statistics for all ZL/AZL firms and their
+32:1100:78871:14:14:82:550:575:11:g_d0_f4:11:g_d0_f4:proxy firms. Panel B reports the same statistics for dividend-paying (DP) ZL/AZL firms and Panel
+32:1101:78967:14:13:82:550:561:11:g_d0_f4:11:g_d0_f4:C for zero-dividend (ZD) ZL/AZL firms. The statistics of ZL/AZL firms are obtained by taking
+32:1102:79059:13:14:82:550:548:11:g_d0_f4:11:g_d0_f4:first means for firms in each year and then averaging over all years. To compute proxy statistics,
+32:1103:79157:14:13:82:550:534:11:g_d0_f4:11:g_d0_f4:proxy firms for each ZL/AZL observation are first equally weighted, then means are taken for each
+32:1104:79254:13:14:82:550:521:11:g_d0_f4:11:g_d0_f4:year, assigning equal weight to each set of proxy firms, and then means are averaged over all years.
+32:1105:79354:14:13:82:550:507:11:g_d0_f4:11:g_d0_f4:Thet-statistic is obtained by applying the Fama-MacBeth procedure to the time-series of annual
+32:1106:79448:13:14:82:550:494:11:g_d0_f4:11:g_d0_f4:averages. The absolute value of a positive (negative)sigis the number of years in which there is a
+32:1107:79546:14:13:82:550:480:11:g_d0_f4:11:g_d0_f4:significant positive (negative) difference (at 5% level) between ZL/AZL firms and proxy firms. The
+32:1108:79644:13:18:82:492:467:11:g_d0_f4:11:g_d0_f4:‘All’ columns give the means for the total sample (all DP (ZD) firms in Panel B (C)).
+32:1109:79729:18:23:82:387:449:11:g_d0_f4:11:g_d0_f4:Panel A: Comparison of ZL/AZL Firms and Their Proxy Firms
+32:1110:79786:23:14:100:525:426:11:g_d0_f4:11:g_d0_f4:VariableZL  Proxy   t-stat   sig  AZL  Proxy   t-stat   sigAll
+32:1111:79848:14:13:100:525:412:11:g_d0_f4:11:g_d0_f4:Market Leverage0.0    19.9  -20.39  -48    1.2    19.7  -20.19  -48   27.0
+32:1112:79922:13:14:100:525:399:11:g_d0_f4:11:g_d0_f4:Book Leverage0.0    19.1  -36.49  -48    2.7    19.6  -32.66  -48   24.8
+32:1113:79994:14:14:100:525:385:11:g_d0_f4:11:g_d0_f4:Log(Size)4.54.5   -0.23    0    4.74.8   -0.09    05.3
+32:1114:80048:14:13:100:525:371:11:g_d0_f4:11:g_d0_f4:Market-to-Book2.41.9    3.96   40    2.62.0    5.66   481.7
+32:1115:80107:13:14:100:525:358:11:g_d0_f4:11:g_d0_f4:Cash33.0    19.6    7.12   48   28.2    19.1    5.16   48   14.0
+32:1116:80171:14:13:100:525:344:11:g_d0_f4:11:g_d0_f4:Profitability12.49.2    1.62   23   13.09.5    1.80   32   11.0
+32:1117:80234:13:14:100:525:331:11:g_d0_f4:11:g_d0_f4:Dividend2.21.3    3.03   35    2.01.3    2.45   371.2
+32:1118:80287:14:13:100:525:317:11:g_d0_f4:11:g_d0_f4:Share Repurchase1.31.0    2.25   25    1.31.0    1.95   291.0
+32:1119:80348:13:14:100:525:304:11:g_d0_f4:11:g_d0_f4:Tangibility21.3    26.2   -3.81  -38   23.4    26.7   -2.53  -39   31.4
+32:1120:80419:14:13:100:525:290:11:g_d0_f4:11:g_d0_f4:Tax6.23.9    3.73   47    6.23.9    3.85   483.5
+32:1121:80467:13:14:100:525:277:11:g_d0_f4:11:g_d0_f4:R&D20.1    18.1    0.52    1   21.4    18.7    0.67    69.4
+32:1122:80526:14:13:100:525:263:11:g_d0_f4:11:g_d0_f4:Age6.77.1   -0.52   -3    6.97.5   -0.84  -239.1
+32:1123:80574:13:14:100:525:250:11:g_d0_f4:11:g_d0_f4:Earnings Vol.9.19.1   -0.06    2    8.98.9    0.01    37.0
+32:1124:80632:14:14:100:525:236:11:g_d0_f4:11:g_d0_f4:Capital Expenditure5.96.8   -2.97  -16    6.97.0   -0.27   -27.3
+32:1125:80696:14:13:100:525:222:11:g_d0_f4:11:g_d0_f4:Asset Sale3.02.2    1.55   25    2.42.2    0.57   231.9
+32:1126:80751:13:14:100:525:209:11:g_d0_f4:11:g_d0_f4:Net Debt Issuance-0.70.5   -1.12   22   -0.70.7   -2.89  -230.8
+32:1127:80814:14:13:100:525:195:11:g_d0_f4:11:g_d0_f4:Net Equity Issuance7.87.0    0.70   11    9.56.9    2.01   334.0
+32:1128:80878:13:14:100:525:182:11:g_d0_f4:11:g_d0_f4:Init. ZL58.0    16.6   19.59   48   31.7    15.9   14.56   48   12.2
+32:1129:80946:14:13:100:525:168:11:g_d0_f4:11:g_d0_f4:Init. AZL83.0    45.8   16.48   48   77.2    45.9   14.79   48   34.4
+32:1130:81015:13:14:100:525:155:11:g_d0_f4:11:g_d0_f4:Operating Leases8.69.3   -0.82    0    8.99.2   -0.26    08.7
+32:1131:81076:14:13:100:525:141:11:g_d0_f4:11:g_d0_f4:Net Pension Liabilities  0.06    0.11   -2.05   23   0.08    0.12   -1.59   230.2
+32:1132:81157:13:0:100:525:128:11:g_d0_f4:11:g_d0_f4:No. obs. (per year)313   1,081769   2,6413,282
+33:1133:81239:0:27:259:367:682:10:g_d0_f17:10:g_d0_f17:Table II: (Continued)
+33:1134:81260:27:23:82:470:655:11:g_d0_f4:11:g_d0_f4:Panel B: Comparison of Dividend-Paying ZL/AZL Firms and Their Proxy Firms
+33:1135:81333:23:14:100:525:632:11:g_d0_f4:11:g_d0_f4:VariableZL  Proxy   t-stat   sig  AZL  Proxy   t-stat   sigAll
+33:1136:81395:14:14:100:525:618:11:g_d0_f4:11:g_d0_f4:Market Leverage0.0    18.3  -20.11  -48    1.3    19.0  -20.04  -48   24.4
+33:1137:81469:14:13:100:525:604:11:g_d0_f4:11:g_d0_f4:Book Leverage0.0    16.8  -36.82  -48    1.2    17.4  -39.88  -48   22.4
+33:1138:81541:13:14:100:525:591:11:g_d0_f4:11:g_d0_f4:Log(Size)5.05.0   -0.50    0    5.35.3   -0.30    06.2
+33:1139:81595:14:13:100:525:577:11:g_d0_f4:11:g_d0_f4:Market to Book2.21.7    5.40   33    2.11.7    4.70   401.6
+33:1140:81654:13:14:100:525:564:11:g_d0_f4:11:g_d0_f4:Cash26.6    15.1   12.69   47   22.0    13.8   11.55   48   10.1
+33:1141:81718:14:13:100:525:550:11:g_d0_f4:11:g_d0_f4:Profitability21.1    17.1    6.41   36   20.6    16.9    6.87   40   16.3
+33:1142:81791:13:14:100:525:537:11:g_d0_f4:11:g_d0_f4:Dividend4.42.8   11.07   43    3.82.7    7.96   402.5
+33:1143:81844:14:13:100:525:523:11:g_d0_f4:11:g_d0_f4:Share Repurchase1.81.5    1.04   14    1.81.5    1.07   161.4
+33:1144:81905:13:14:100:525:510:11:g_d0_f4:11:g_d0_f4:Tangibility25.6    29.5   -4.62  -10   26.8    29.7   -3.75  -17   34.9
+33:1145:81976:14:14:100:525:496:11:g_d0_f4:11:g_d0_f4:Tax7.85.3    5.71   42    7.55.2    5.63   444.6
+33:1146:82024:14:13:100:525:482:11:g_d0_f4:11:g_d0_f4:R&D2.22.1    0.26    1    2.22.0    0.79    01.2
+33:1147:82072:13:14:100:525:469:11:g_d0_f4:11:g_d0_f4:Age11.2    11.1    0.07    1   12.0    11.8    0.14    1   13.7
+33:1148:82135:14:13:100:525:455:11:g_d0_f4:11:g_d0_f4:Earnings Vol.5.45.3    0.21    2    5.04.9    0.34    24.0
+33:1149:82193:13:14:100:525:442:11:g_d0_f4:11:g_d0_f4:Capital Expenditure5.96.8   -3.72   -8    6.26.7   -2.28  -117.2
+33:1150:82257:14:13:100:525:428:11:g_d0_f4:11:g_d0_f4:Asset Sale2.71.9    1.79   11    2.31.8    1.27   111.5
+33:1151:82312:13:14:100:525:415:11:g_d0_f4:11:g_d0_f4:Operating Leases7.07.4   -0.53    0    7.27.4   -0.35    06.7
+33:1152:82373:14:13:100:525:401:11:g_d0_f4:11:g_d0_f4:Net Pension Liabilities  0.16    0.27   -1.82   24   0.22    0.30   -1.13   240.5
+33:1153:82454:13:29:100:525:388:11:g_d0_f4:11:g_d0_f4:No. obs. (per year)832261835021,343
+33:1154:82489:29:23:82:458:359:11:g_d0_f4:11:g_d0_f4:Panel C: Comparison of Zero-Dividend ZL/AZL Firms and Their Proxy Firms
+33:1155:82560:23:13:100:525:336:11:g_d0_f4:11:g_d0_f4:VariableZL  Proxy   tstat   sig  AZL  Proxy   tstat   sigAll
+33:1156:82620:13:14:100:525:323:11:g_d0_f4:11:g_d0_f4:Market Leverage0.0    23.3  -16.22  -44    1.3    23.0  -17.74  -46   31.1
+33:1157:82694:14:14:100:525:309:11:g_d0_f4:11:g_d0_f4:Book Leverage0.0    23.4  -25.53  -44    1.1    23.6  -27.15  -44   28.8
+33:1158:82766:14:13:100:525:295:11:g_d0_f4:11:g_d0_f4:Log(Size)3.93.9   -0.08    3    4.14.1   -0.08    14.6
+33:1159:82820:13:14:100:525:282:11:g_d0_f4:11:g_d0_f4:Market to Book2.72.0    4.09   30    2.62.0    3.99   381.8
+33:1160:82879:14:13:100:525:268:11:g_d0_f4:11:g_d0_f4:Cash35.6    20.3    7.29   46   31.3    19.5    5.85   43   15.2
+33:1161:82943:13:14:100:525:255:11:g_d0_f4:11:g_d0_f4:Profitability8.04.5    1.88    9    8.95.7    1.77   137.4
+33:1162:83001:14:13:100:525:241:11:g_d0_f4:11:g_d0_f4:Dividend0.00.047    0.00.0480.0
+33:1163:83032:13:14:100:525:228:11:g_d0_f4:11:g_d0_f4:Share Repurchase1.30.9    2.94   25    1.20.9    2.55   240.8
+33:1164:83093:14:13:100:525:214:11:g_d0_f4:11:g_d0_f4:Tangibility17.3    24.0   -5.50  -33   19.2    25.2   -4.66  -37   29.1
+33:1165:83164:13:14:100:525:201:11:g_d0_f4:11:g_d0_f4:Tax4.92.4    4.78   40    4.92.6    4.69   412.4
+33:1166:83212:14:14:100:525:187:11:g_d0_f4:11:g_d0_f4:R&D25.6    22.3    0.73    4   24.8    20.9    0.89    5   12.6
+33:1167:83275:14:13:100:525:173:11:g_d0_f4:11:g_d0_f4:Age5.05.6   -1.07  -16    5.05.7   -1.16  -286.7
+33:1168:83323:13:14:100:525:160:11:g_d0_f4:11:g_d0_f4:Earnings Vol.11.6    11.4    0.15    4   11.0    10.8    0.21    68.9
+33:1169:83392:14:13:100:525:146:11:g_d0_f4:11:g_d0_f4:Capital Expenditure6.27.0   -1.75   -9    6.77.2   -0.99   -87.6
+33:1170:83456:13:14:100:525:133:11:g_d0_f4:11:g_d0_f4:Asset Sale3.42.6    1.42   22    2.72.4    0.53   222.2
+33:1171:83511:14:13:100:525:119:11:g_d0_f4:11:g_d0_f4:Operating Leases10.0    10.0    0.01    3   10.29.9    0.39    19.9
+33:1172:83578:13:14:100:525:106:11:g_d0_f4:11:g_d0_f4:Net Pension Liabilities  0.05    0.08   -1.97   22   0.05    0.09   -1.75   230.2
+33:1173:83659:14:0:100:525:92:11:g_d0_f4:11:g_d0_f4:No. obs. (per year)230855483   1,7771,939
+34:1174:83736:0:28:165:460:682:10:g_d0_f17:10:g_d0_f17:Table III: Determinants of (Almost) Zero-Leverage Policy
+34:1175:83792:28:13:82:551:654:11:g_d0_f4:11:g_d0_f4:This table reports the results of logit regressions on the sample over 1962–2009. The dependent
+34:1176:83887:13:14:82:550:641:11:g_d0_f4:11:g_d0_f4:variable is the dummy that equals 1 if a firm-year is AZL, i.e., when it has book leverage less
+34:1177:83982:14:13:82:550:627:11:g_d0_f4:11:g_d0_f4:than 5%. Columns (1)-(2) present results for the entire sample. Columns (3)-(4) present results
+34:1178:84077:13:14:82:550:614:11:g_d0_f4:11:g_d0_f4:for the subsample of dividend payers. Columns (5)-(6) present results for the subsample of zero-
+34:1179:84173:14:13:82:550:600:11:g_d0_f4:11:g_d0_f4:dividend firms. “Ind. Frac. AZL” is the fraction of AZL firms (excluding the firm in question)
+34:1180:84267:13:14:82:550:587:11:g_d0_f4:11:g_d0_f4:in the same industry, defined by 3-digit SIC, and the same year. All other variables are defined
+34:1181:84363:14:13:82:550:573:11:g_d0_f4:11:g_d0_f4:in Appendix B. Coefficients, t-statistics (in parentheses), and economic significance are reported.
+34:1182:84462:13:14:82:550:560:11:g_d0_f4:11:g_d0_f4:Economic significance is the average change in probability for a one standard deviation change
+34:1183:84556:14:13:82:550:546:11:g_d0_f4:11:g_d0_f4:for a continuous independent variable, or for the change from 0 to 1 for a dummy variable. Year
+34:1184:84651:13:14:82:550:533:11:g_d0_f4:11:g_d0_f4:fixed effects for calendar years are included. All standard errors adjust for heteroscedasticity and
+34:1185:84751:14:14:82:550:519:11:g_d0_f4:11:g_d0_f4:clustering at the firm level. Coefficients marked with ***, **, and * are significant at the 1%, 5%,
+34:1186:84851:14:36:82:212:505:11:g_d0_f4:11:g_d0_f4:and 10% level, respectively.
+34:1187:84879:36:14:233:491:469:10:g_d0_f4:10:g_d0_f4:All FirmsDP FirmsZD Firms
+34:1188:84904:14:37:110:502:455:10:g_d0_f4:10:g_d0_f4:Variables(1)(2)(3)(4)(5)(6)
+34:1189:84931:37:12:110:516:418:10:g_d0_f4:10:g_d0_f4:Log(Size)-0.358***   -0.361***   -0.510***   -0.549***  -0.217***  -0.231***
+34:1190:85007:12:12:208:513:406:10:g_d0_f4:10:g_d0_f4:(-24.43)(-24.00)(-19.82)(-19.54)    (-13.48)    (-13.98)
+34:1191:85063:12:12:213:507:394:10:g_d0_f4:10:g_d0_f4:-7.6%-7.6%-10.3%-10.9%-3.7%-3.8%
+34:1192:85095:12:12:110:514:382:10:g_d0_f4:10:g_d0_f4:Market to Book0.231***   0.198***   0.155***   0.162***   0.232***   0.201***
+34:1193:85172:12:11:210:511:370:10:g_d0_f4:10:g_d0_f4:(20.07)(17.26)(4.92)(5.01)(19.86)(17.08)
+34:1194:85212:11:12:214:506:359:10:g_d0_f4:10:g_d0_f4:3.5%3.0%1.7%1.8%3.8%3.2%
+34:1195:85236:12:12:110:514:347:10:g_d0_f4:10:g_d0_f4:Profitability1.212***   1.641***   3.526***   3.822***   0.864***   1.225***
+34:1196:85312:12:12:210:511:335:10:g_d0_f4:10:g_d0_f4:(15.34)(18.13)(9.78)(10.57)(11.00)(13.70)
+34:1197:85353:12:12:214:506:323:10:g_d0_f4:10:g_d0_f4:2.6%3.4%3.5%3.8%2.1%2.8%
+34:1198:85377:12:12:110:516:311:10:g_d0_f4:10:g_d0_f4:Tangibility-2.495***   -2.933***   -2.379***   -2.125***  -2.564***  -3.216***
+34:1199:85455:12:12:208:512:299:10:g_d0_f4:10:g_d0_f4:(-20.32)(-19.18)(-10.05)(-7.57)(-19.66)    (-19.21)
+34:1200:85506:12:12:213:507:287:10:g_d0_f4:10:g_d0_f4:-6.6%-7.6%-5.6%-4.9%-6.6%-8.0%
+34:1201:85536:12:12:110:291:275:10:g_d0_f4:10:g_d0_f4:Dividend Payer-0.0500.022
+34:1202:85561:12:12:211:293:263:10:g_d0_f4:10:g_d0_f4:(-0.85)(0.37)
+34:1203:85574:12:12:213:290:251:10:g_d0_f4:10:g_d0_f4:-0.6%0.3%
+34:1204:85583:12:12:110:411:239:10:g_d0_f4:10:g_d0_f4:Dividend24.045***  24.413***  22.939***  22.379***
+34:1205:85633:12:12:210:404:227:10:g_d0_f4:10:g_d0_f4:(16.38)(16.68)(14.78)(14.29)
+34:1206:85661:12:12:214:399:215:10:g_d0_f4:10:g_d0_f4:5.0%5.1%5.3%5.1%
+34:1207:85677:12:12:110:516:203:10:g_d0_f4:10:g_d0_f4:Earnings Volatility   -0.322***   -0.358***   2.236**1.788**   -0.305***  -0.337***
+34:1208:85760:12:12:211:510:191:10:g_d0_f4:10:g_d0_f4:(-3.20)(-3.46)(2.48)(2.05)(-3.01)(-3.26)
+34:1209:85800:12:12:213:507:179:10:g_d0_f4:10:g_d0_f4:-0.5%-0.6%1.0%0.8%-0.6%-0.6%
+34:1210:85828:12:12:110:514:167:10:g_d0_f4:10:g_d0_f4:Init. ZL1.401***   1.361***   1.427***   1.425***   1.356***   1.297***
+34:1211:85899:12:12:210:511:155:10:g_d0_f4:10:g_d0_f4:(33.19)(32.09)(18.19)(18.17)(30.02)(28.76)
+34:1212:85941:12:12:212:508:143:10:g_d0_f4:10:g_d0_f4:16.9%16.2%16.6%16.3%15.4%14.3%
+34:1213:85971:12:12:110:514:131:10:g_d0_f4:10:g_d0_f4:Ind. Frac. ZL1.500***   1.371***   1.142***   1.054***   1.562***   1.450***
+34:1214:86047:12:12:210:511:119:10:g_d0_f4:10:g_d0_f4:(14.01)(12.55)(5.57)(5.11)(13.09)(11.93)
+34:1215:86087:12:21:214:506:107:10:g_d0_f4:10:g_d0_f4:3.3%3.0%2.0%1.8%3.4%3.1%
+34:1216:86111:21:0:82:211:86:10:g_d0_f4:10:g_d0_f4:(Continued on the next page)
+35:1217:86175:0:33:82:135:564:10:g_d0_f4:10:g_d0_f4:(Continued)
+35:1218:86186:33:14:242:487:531:10:g_d0_f4:10:g_d0_f4:All FirmsDP FirmsZD Firms
+35:1219:86211:14:36:114:498:517:10:g_d0_f4:10:g_d0_f4:Variables(1)(2)(3)(4)(5)(6)
+35:1220:86238:36:12:114:511:481:10:g_d0_f4:10:g_d0_f4:R&D0.162***0.2140.125***
+35:1221:86262:12:12:275:505:469:10:g_d0_f4:10:g_d0_f4:(7.32)(0.35)(5.79)
+35:1222:86280:12:12:278:502:457:10:g_d0_f4:10:g_d0_f4:1.2%0.1%1.1%
+35:1223:86292:12:12:114:512:445:10:g_d0_f4:10:g_d0_f4:Log(Age)-0.051**0.229***-0.086***
+35:1224:86325:12:12:274:506:433:10:g_d0_f4:10:g_d0_f4:(-2.01)(4.12)(-3.10)
+35:1225:86345:12:12:276:503:421:10:g_d0_f4:10:g_d0_f4:-0.5%2.1%-0.8%
+35:1226:86359:12:12:114:511:409:10:g_d0_f4:10:g_d0_f4:Capital Expenditure2.207***-0.8703.049***
+35:1227:86400:12:12:275:507:397:10:g_d0_f4:10:g_d0_f4:(8.00)(-1.49)(10.19)
+35:1228:86420:12:12:278:502:385:10:g_d0_f4:10:g_d0_f4:1.8%-0.6%2.5%
+35:1229:86433:12:12:114:511:373:10:g_d0_f4:10:g_d0_f4:Asset Sale1.480***1.917***1.266***
+35:1230:86467:12:12:275:505:361:10:g_d0_f4:10:g_d0_f4:(9.62)(4.43)(7.94)
+35:1231:86485:12:12:278:502:349:10:g_d0_f4:10:g_d0_f4:1.4%1.2%1.3%
+35:1232:86497:12:12:114:504:337:10:g_d0_f4:10:g_d0_f4:Operating Leases0.0190.334-0.030
+35:1233:86529:12:12:275:506:325:10:g_d0_f4:10:g_d0_f4:(0.15)(1.32)(-0.23)
+35:1234:86548:12:12:278:503:313:10:g_d0_f4:10:g_d0_f4:0.0%0.5%-0.1%
+35:1235:86561:12:12:114:504:301:10:g_d0_f4:10:g_d0_f4:Pension Liabilities-7.286***-13.915***-1.295
+35:1236:86605:12:12:274:506:289:10:g_d0_f4:10:g_d0_f4:(-4.00)(-4.87)(-0.63)
+35:1237:86626:12:11:276:503:277:10:g_d0_f4:10:g_d0_f4:-1.0%-2.0%-0.2%
+35:1238:86641:11:12:114:510:266:10:g_d0_f4:10:g_d0_f4:Constant-0.428***   -0.315*   0.435*0.219-2.678***   -1.443**
+35:1239:86702:12:24:221:506:254:10:g_d0_f4:10:g_d0_f4:(-2.67)(-1.89)    (1.86)(0.95)(-2.83)(-2.51)
+35:1240:86746:24:12:114:506:230:10:g_d0_f4:10:g_d0_f4:Observations127,074125,297   55,17354,63571,90170,633
+35:1241:86799:12:0:114:503:218:10:g_d0_f4:10:g_d0_f4:Pseudo R-squared0.2590.2640.2960.3020.2390.244
+36:1242:86881:0:35:168:457:679:10:g_d0_f17:10:g_d0_f17:Table IV: Potential Tax Benefits for Zero-Leverage Firms
+36:1243:86937:35:13:82:551:644:11:g_d0_f4:11:g_d0_f4:This table reports the value of potential tax benefits as a percentage of market asset values for
+36:1244:87034:13:14:82:550:631:11:g_d0_f4:11:g_d0_f4:ZL and AZL firms. Medians are reported in parentheses. The sample of DP/ZD-ZL/AZL firms
+36:1245:87121:14:13:82:550:617:11:g_d0_f4:11:g_d0_f4:are considered separately. Panels A and B present results computed using the before-interest and
+36:1246:87217:13:14:82:550:604:11:g_d0_f4:11:g_d0_f4:after-interest marginal tax rates, respectively. To calculate the potential tax benefits, the marginal
+36:1247:87319:14:13:82:550:590:11:g_d0_f4:11:g_d0_f4:tax rateτ(D) is assumed to decline linearly with book debt levelDfrom the current debt level
+36:1248:87411:13:14:82:551:577:11:g_d0_f8:11:g_d0_f4:D0toDmand is zero for higher debt levels. The optimal debt levelDm=Dmi,t=CFmi,t/rt, where
+36:1249:87500:14:13:82:551:563:11:g_d0_f8:11:g_d0_f4:CFmi,tis the minimum cash flow (rescaled to current book assets) in the pastNyears (including the
+36:1250:87597:13:14:82:550:550:11:g_d0_f4:11:g_d0_f4:current yeart) of firmi, andris the average corporate bond yield. The benchmark assumptions
+36:1251:87688:14:13:82:550:536:11:g_d0_f4:11:g_d0_f4:areN= 5 andrt=rAAt, the AA-rated corporate bond yield. Column 1 considers the case of the
+36:1252:87777:13:14:82:550:523:11:g_d0_f4:11:g_d0_f4:target leverageL∗= min(LP r,7  0%), whereLP ris the average market leverage ratio of the firm’s
+36:1253:87872:14:14:82:550:509:11:g_d0_f4:11:g_d0_f4:proxies. In Column 2, the target leverageL∗= min(Lm,7  0%), whereLmis the optimal leverage
+36:1254:87962:14:13:82:550:495:11:g_d0_f4:11:g_d0_f4:ratio. Columns 3, 4 and 5 consider the caseL∗= min(LP r,7  0%) with alternative assumptions.
+36:1255:88054:13:14:82:549:482:11:g_d0_f4:8:g_d0_f9:Column 3 changes the definition ofCFmto be the current cash flow. Column 4 changesCFm
+36:1256:88139:14:13:82:550:468:11:g_d0_f4:11:g_d0_f4:to be the average (rescaled) cash flow of the past 5 years. Column 5 changesrtto berBBBt, the
+36:1257:88232:13:14:82:550:455:11:g_d0_f4:11:g_d0_f4:BBB-rated corporate bond yield. Columns 6, 7 and 8 consider the caseL∗= min(Lm,7  0%) with
+36:1258:88322:14:27:82:302:441:11:g_d0_f4:11:g_d0_f4:parallel assumptions as in columns 3, 4 and 5.
+36:1259:88368:27:14:317:361:414:11:g_d0_f4:11:g_d0_f4:Scenarios
+36:1260:88377:14:27:181:496:400:11:g_d0_f4:11:g_d0_f4:12345678
+36:1261:88385:27:15:115:387:373:11:g_d0_f4:11:g_d0_f4:Panel A. Results using before-interest marginal tax rates
+36:1262:88442:15:14:115:506:358:11:g_d0_f4:11:g_d0_f4:DP-ZL7.5815.638.458.827.3919.12    20.11    14.68
+36:1263:88491:14:18:168:511:344:11:g_d0_f4:11:g_d0_f4:( 7.97)  (17.14)  ( 8.91)  ( 9.12)  ( 7.70)  (20.66)  (21.29)  (15.83)
+36:1264:88561:18:14:115:506:326:11:g_d0_f4:11:g_d0_f4:DP-AZL   7.7116.278.538.817.5319.71    20.52    15.32
+36:1265:88614:14:18:168:511:312:11:g_d0_f4:11:g_d0_f4:( 8.22)  (17.97)  ( 9.01)  ( 9.16)  ( 8.02)  (21.09)  (21.46)  (16.78)
+36:1266:88684:18:13:115:503:294:11:g_d0_f4:11:g_d0_f4:ZD-ZL2.816.373.744.042.739.9110.595.95
+36:1267:88722:13:19:168:510:281:11:g_d0_f4:11:g_d0_f4:( 0.10)  ( 0.82)  ( 1.41)  ( 1.92)  ( 0.10)  ( 8.06)   ( 9.33)   ( 0.76)
+36:1268:88794:19:13:115:503:262:11:g_d0_f4:11:g_d0_f4:ZD-AZL   3.106.954.074.363.0110.58    11.226.51
+36:1269:88841:13:23:168:510:249:11:g_d0_f4:11:g_d0_f4:( 0.42)  ( 2.40)  ( 1.97)  ( 2.52)  ( 0.40)  ( 9.56)  (10.60)  ( 2.20)
+36:1270:88911:23:14:115:379:226:11:g_d0_f4:11:g_d0_f4:Panel B. Results using after-interest marginal tax rates
+36:1271:88967:14:14:115:506:212:11:g_d0_f4:11:g_d0_f4:DP-ZL7.0714.467.837.996.8917.55    18.03    13.59
+36:1272:89016:14:18:168:511:198:11:g_d0_f4:11:g_d0_f4:( 7.38)  (16.04)  ( 8.51)  ( 8.67)  ( 7.12)  (19.80)  (20.14)  (14.73)
+36:1273:89086:18:13:115:506:180:11:g_d0_f4:11:g_d0_f4:DP-AZL   7.0814.797.797.916.9217.83    18.21    13.94
+36:1274:89139:13:19:168:511:167:11:g_d0_f4:11:g_d0_f4:( 7.67)  (16.85)  ( 8.57)  ( 8.65)  ( 7.43)  (20.21)  (20.48)  (15.60)
+36:1275:89209:19:13:115:503:148:11:g_d0_f4:11:g_d0_f4:ZD-ZL2.004.682.572.621.947.047.064.37
+36:1276:89246:13:19:168:510:135:11:g_d0_f4:11:g_d0_f4:( 0.00)  ( 0.00)  ( 0.12)  ( 0.16)  ( 0.00)  ( 0.58)   ( 0.70)   ( 0.00)
+36:1277:89318:19:13:115:503:116:11:g_d0_f4:11:g_d0_f4:ZD-AZL   2.174.982.762.802.107.337.364.66
+36:1278:89359:13:0:168:510:103:11:g_d0_f4:11:g_d0_f4:( 0.00)  ( 0.00)  ( 0.14)  ( 0.17)  ( 0.00)  ( 0.65)   ( 0.78)   ( 0.00)
+37:1279:89467:0:33:186:440:682:10:g_d0_f17:10:g_d0_f17:Table V: Low-Leverage and Zero-Leverage Puzzles
+37:1280:89514:33:13:115:511:649:11:g_d0_f4:11:g_d0_f4:This table reports means and medians of leverage ratios for the total sample, the
+37:1281:89595:13:14:115:511:636:11:g_d0_f4:11:g_d0_f4:sample excluding zero-leverage firms and excluding almost zero-leverage firms. Re-
+37:1282:89677:14:14:115:511:622:11:g_d0_f4:11:g_d0_f4:sults for the 1962–2009 and 1987–2009 periods are given in Panel A and Panel B,
+37:1283:89756:14:13:115:511:608:11:g_d0_f4:11:g_d0_f4:respectively. Columns 1 and 2 report market leverage and Columns 3 and 4 book
+37:1284:89833:13:14:115:511:595:11:g_d0_f4:11:g_d0_f4:leverage. For consistency, in Columns 1 and 2, AZL firms are defined by market
+37:1285:89911:14:13:115:511:581:11:g_d0_f4:11:g_d0_f4:leverage not exceeding 5%, while in Columns 3 and 4 they are defined by book
+37:1286:89987:13:35:115:243:568:11:g_d0_f4:11:g_d0_f4:leverage not exceeding 5%.
+37:1287:90013:35:23:283:458:533:11:g_d0_f4:11:g_d0_f4:Market LeverageBook Leverage
+37:1288:90041:23:23:283:459:510:11:g_d0_f4:11:g_d0_f4:mean   medianmean  median
+37:1289:90066:23:15:248:376:487:11:g_d0_f4:11:g_d0_f4:Panel A: Period 1962–2009
+37:1290:90091:15:14:167:451:472:11:g_d0_f4:11:g_d0_f4:All Firms27.520.925.221.9
+37:1291:90116:14:13:167:451:458:11:g_d0_f4:11:g_d0_f4:Excluding ZL Firms30.725.128.224.8
+37:1292:90150:13:22:167:451:445:11:g_d0_f4:11:g_d0_f4:Excluding AZL Firms   36.831.832.328.2
+37:1293:90188:22:16:248:376:423:11:g_d0_f4:11:g_d0_f4:Panel B: Period 1987–2009
+37:1294:90213:16:13:167:451:407:11:g_d0_f4:11:g_d0_f4:All Firms24.716.424.719.8
+37:1295:90238:13:14:167:451:394:11:g_d0_f4:11:g_d0_f4:Excluding ZL Firms28.621.728.524.3
+37:1296:90272:14:0:167:451:380:11:g_d0_f4:11:g_d0_f4:Excluding AZL Firms   36.030.133.929.1
+38:1297:90346:0:33:215:410:682:10:g_d0_f17:10:g_d0_f17:Table VI: Persistence of Zero Leverage
+38:1298:90384:33:17:82:543:649:11:g_d0_f4:11:g_d0_f4:This table reports the persistence of ZL and AZL policies. Thepersistence measure for ZL policy
+38:1299:90479:17:0:82:217:632:11:g_d0_f4:8:g_d0_f18:is defined asP erZLk=1|Ak|
+38:1300:90505:0:11:220:232:640:11:g_d0_f19:11:g_d0_f19:P
+38:1301:90506:11:0:232:251:629:8:g_d0_f9:6:g_d0_f13:i∈Ak
+38:1302:90510:0:12:255:268:639:8:g_d0_f9:6:g_d0_f13:sPerZLi,k
+38:1303:90519:12:14:261:543:627:8:g_d0_f9:11:g_d0_f4:sZLi,k,w   hereAkis the set of firms with at least onek-year
+38:1304:90579:14:16:82:543:613:11:g_d0_f4:11:g_d0_f4:sequence of observations that begins with a ZL observation,sZLi,kis the number ofk-year sequences
+38:1305:90676:16:13:82:543:597:11:g_d0_f4:11:g_d0_f8:for firmithat begin with a ZL observation, andsP erZLi,kis the number ofk-year sequences for firmi
+38:1306:90774:13:14:82:543:584:11:g_d0_f4:11:g_d0_f4:that are all ZL observations. The persistence of AZL policy is similarly defined. Column 1 gives the
+38:1307:90874:14:13:82:543:570:11:g_d0_f4:11:g_d0_f4:number of consecutive yearskin consideration. Columns 2 and 3 report the persistence measure
+38:1308:90966:13:14:82:543:557:11:g_d0_f4:11:g_d0_f4:(in percentage points) of the ZL policy for the Compustat sample and the Monte Carlo (MC)
+38:1309:91055:14:13:82:543:543:11:g_d0_f4:11:g_d0_f4:simulated economy. The reported benchmark measure is the average over 500 MC simulations.
+38:1310:91144:13:14:82:543:530:11:g_d0_f4:11:g_d0_f4:Column 4 reports the t-statistics of the persistence measure for Compustat sample obtained from
+38:1311:91239:14:13:82:543:516:11:g_d0_f4:11:g_d0_f4:the MC simulation. Columns 5 and 6 report the (average) number of firms in the setAkfor each
+38:1312:91331:13:33:82:402:503:11:g_d0_f4:11:g_d0_f4:givenk. Columns 7 to 11 report the same measures for AZL firms.
+38:1313:91394:33:23:183:466:470:11:g_d0_f4:11:g_d0_f4:ZL BehaviorAZL Behavior
+38:1314:91417:23:22:140:526:447:11:g_d0_f4:11:g_d0_f4:PersistenceNo. of FirmsPersistenceNo. of Firms
+38:1315:91463:22:16:91:528:425:11:g_d0_f8:11:g_d0_f4:kEmpirical  MC  t-stat   Empirical  MC   Empirical  MC  t-stat   Empirical  MC
+38:1316:91541:16:13:91:534:409:11:g_d0_f4:11:g_d0_f4:1100.0   100.04,146   8,077100.0   100.07,323   10,957
+38:1317:91595:13:14:91:531:396:11:g_d0_f4:11:g_d0_f4:260.99.3  236.63,627   7,19463.920.3  184.56,588    9,835
+38:1318:91652:14:14:91:531:382:11:g_d0_f4:11:g_d0_f4:345.01.5  418.83,190   6,38849.15.9  270.75,809    8,772
+38:1319:91708:14:13:91:531:368:11:g_d0_f4:11:g_d0_f4:435.80.5  424.32,804   5,67040.42.3  300.95,160    7,814
+38:1320:91764:13:14:91:531:355:11:g_d0_f4:11:g_d0_f4:530.00.3  373.22,452   5,04934.51.4  274.34,571    6,991
+38:1321:91820:14:13:91:531:341:11:g_d0_f4:11:g_d0_f4:624.70.3  311.52,124   4,50429.31.0  250.84,021    6,278
+38:1322:91876:13:14:91:531:328:11:g_d0_f4:11:g_d0_f4:721.40.2  280.81,885   4,03225.90.8  248.83,573    5,669
+38:1323:91932:14:13:91:531:314:11:g_d0_f4:11:g_d0_f4:818.10.2  223.31,659   3,61823.00.7  195.33,201    5,142
+38:1324:91988:13:14:91:531:301:11:g_d0_f4:11:g_d0_f4:916.70.2  206.21,483   3,25121.50.7  187.52,900    4,667
+38:1325:92044:14:13:91:531:287:11:g_d0_f4:11:g_d0_f4:10    14.80.3  145.51,309   2,91519.60.9  136.22,609    4,216
+38:1326:92105:13:14:91:531:274:11:g_d0_f4:11:g_d0_f4:158.20.3   64.5687    1,66212.50.8   67.61,408    2,461
+38:1327:92160:14:0:91:530:260:11:g_d0_f4:11:g_d0_f4:205.20.1   41.53859828.50.4   48.17761479
+39:1328:92237:0:33:211:414:682:10:g_d0_f17:10:g_d0_f17:Table VII: Zero Leverage and Industries
+39:1329:92276:33:14:82:543:649:11:g_d0_f4:11:g_d0_f4:This table reports the distribution of ZL/AZL firms in major industries as defined by the Fama-
+39:1330:92371:14:14:82:543:635:11:g_d0_f4:11:g_d0_f4:French 12-industry classification scheme. Columns 1 and 2 report the average fractions (in per-
+39:1331:92466:14:13:82:542:621:11:g_d0_f4:11:g_d0_f4:cent) of zero-leverage and almost zero-leverage observations in a given sector over the 1962–2009
+39:1332:92563:13:14:82:543:608:11:g_d0_f4:11:g_d0_f4:period, with equal weights assigned to each year. Column 3 gives the average number of firms in
+39:1333:92658:14:44:82:501:594:11:g_d0_f4:11:g_d0_f4:each year in a sector. Columns 4 to 6 report the same results for the 1987–2009 period.
+39:1334:92745:44:23:290:464:550:11:g_d0_f4:11:g_d0_f4:1962–20091987–2009
+39:1335:92763:23:15:276:480:527:11:g_d0_f4:11:g_d0_f8:ZL  AZLNZL  AZLN
+39:1336:92779:15:14:144:481:512:11:g_d0_f4:11:g_d0_f4:Consumer NonDurables   8.7   18.3   3089.1   19.1   298
+39:1337:92834:14:13:144:481:498:11:g_d0_f4:11:g_d0_f4:Consumer Durables8.0   17.3   1268.8   18.4   134
+39:1338:92883:13:14:144:481:485:11:g_d0_f4:11:g_d0_f4:Manufacturing6.8   15.6   5857.4   17.6   578
+39:1339:92928:14:13:144:481:471:11:g_d0_f4:11:g_d0_f4:Energy6.7   13.3   1728.1   15.2   200
+39:1340:92966:13:14:144:481:458:11:g_d0_f4:11:g_d0_f4:Chemicals7.2   17.9   1065.2   14.8   117
+39:1341:93007:14:14:144:482:444:11:g_d0_f4:11:g_d0_f4:Technology15.0   32.0   59923.9   46.6   917
+39:1342:93051:14:13:144:481:430:11:g_d0_f4:11:g_d0_f4:Telecom4.3    9.4   1034.8   12.4   157
+39:1343:93090:13:14:144:481:417:11:g_d0_f4:11:g_d0_f4:Shops6.9   15.5   4779.1   20.3   570
+39:1344:93127:14:13:144:482:403:11:g_d0_f4:11:g_d0_f4:Healthcare13.1   30.2   29819.0   38.3   502
+39:1345:93171:13:14:144:482:390:11:g_d0_f4:11:g_d0_f4:Other9.6   19.4   50911.7   23.2   657
+39:1346:93209:14:0:144:482:376:11:g_d0_f4:11:g_d0_f4:All10.2   21.5  328213.6   27.8  4129
+40:1347:93282:0:33:177:448:640:10:g_d0_f17:10:g_d0_f17:Table VIII: Zero Leverage and CEO Stock Ownership
+40:1348:93331:33:14:82:543:607:11:g_d0_f4:11:g_d0_f4:This table reports the relationship between ZL/AZL policy and CEO stock ownership. In Panel
+40:1349:93422:14:14:82:543:593:11:g_d0_f4:11:g_d0_f4:A (B), all firm-years (firms) are ranked by CEO stock ownership. Columns ZL and AZL show
+40:1350:93510:14:13:82:543:579:11:g_d0_f4:11:g_d0_f4:the fraction of firm-years (firms) with zero debt. In Panel B, for each firm, time-series average of
+40:1351:93610:13:23:82:240:566:11:g_d0_f4:11:g_d0_f4:its CEO stock ownership is used.
+40:1352:93642:23:30:82:395:543:11:g_d0_f4:11:g_d0_f4:Panel A. ZL/AZL Policy and CEO Stock Ownership: Firm-Years
+40:1353:93700:30:13:196:259:513:11:g_d0_f4:11:g_d0_f4:N Firm-years
+40:1354:93712:13:14:197:257:500:11:g_d0_f4:11:g_d0_f4:with Largest
+40:1355:93724:14:13:201:255:486:11:g_d0_f4:11:g_d0_f4:CEO Stock
+40:1356:93733:13:0:202:253:473:11:g_d0_f4:11:g_d0_f4:Ownership
+40:1357:93742:0:14:284:338:507:11:g_d0_f4:11:g_d0_f4:CEO Stock
+40:1358:93751:14:14:285:336:493:11:g_d0_f4:11:g_d0_f4:Ownership
+40:1359:93760:14:0:302:320:479:11:g_d0_f4:11:g_d0_f4:(%)
+40:1360:93763:0:32:351:441:493:11:g_d0_f4:11:g_d0_f4:ZL (%)  AZL (%)
+40:1361:93778:32:14:222:428:461:11:g_d0_f4:11:g_d0_f4:5050.844.058.0
+40:1362:93792:14:14:219:428:447:11:g_d0_f4:11:g_d0_f4:10044.936.060.0
+40:1363:93807:14:13:219:428:433:11:g_d0_f4:11:g_d0_f4:20038.529.550.0
+40:1364:93822:13:14:219:428:420:11:g_d0_f4:11:g_d0_f4:50029.026.047.6
+40:1365:93837:14:13:217:428:406:11:g_d0_f4:11:g_d0_f4:100021.221.943.4
+40:1366:93853:13:14:217:428:393:11:g_d0_f4:11:g_d0_f4:200013.820.538.2
+40:1367:93869:14:13:217:428:379:11:g_d0_f4:11:g_d0_f4:50006.414.929.3
+40:1368:93884:13:26:199:428:366:11:g_d0_f4:11:g_d0_f4:All (13,446)2.511.723.3
+40:1369:93907:26:31:82:369:340:11:g_d0_f4:11:g_d0_f4:Panel B. ZL/AZL Policy and CEO Stock Ownership: Firms
+40:1370:93960:31:13:195:259:309:11:g_d0_f4:11:g_d0_f4:N Firms with
+40:1371:93972:13:14:198:257:296:11:g_d0_f4:11:g_d0_f4:largest CEO
+40:1372:93983:14:0:187:268:282:11:g_d0_f4:11:g_d0_f4:Stock Ownership
+40:1373:93998:0:14:285:336:317:11:g_d0_f4:11:g_d0_f4:Avg. CEO
+40:1374:94006:14:14:297:323:303:11:g_d0_f4:11:g_d0_f4:Stock
+40:1375:94011:14:13:285:336:289:11:g_d0_f4:11:g_d0_f4:Ownership
+40:1376:94020:13:0:302:320:276:11:g_d0_f4:11:g_d0_f4:(%)
+40:1377:94023:0:33:351:441:296:11:g_d0_f4:11:g_d0_f4:ZL (%)  AZL (%)
+40:1378:94038:33:13:222:428:263:11:g_d0_f4:11:g_d0_f4:1043.533.360.7
+40:1379:94052:13:14:222:428:250:11:g_d0_f4:11:g_d0_f4:2038.828.952.7
+40:1380:94066:14:13:222:428:236:11:g_d0_f4:11:g_d0_f4:3035.026.048.9
+40:1381:94080:13:14:222:428:223:11:g_d0_f4:11:g_d0_f4:4032.524.144.2
+40:1382:94094:14:14:222:428:209:11:g_d0_f4:11:g_d0_f4:5030.522.542.7
+40:1383:94108:14:13:219:428:195:11:g_d0_f4:11:g_d0_f4:10024.020.440.5
+40:1384:94123:13:14:219:428:182:11:g_d0_f4:11:g_d0_f4:20017.221.240.6
+40:1385:94138:14:13:219:428:168:11:g_d0_f4:11:g_d0_f4:5009.420.036.6
+40:1386:94152:13:14:217:428:155:11:g_d0_f4:11:g_d0_f4:10005.216.431.3
+40:1387:94167:14:0:202:428:141:11:g_d0_f4:11:g_d0_f4:All (1,962)2.814.127.1
+41:1388:94225:0:27:106:519:643:10:g_d0_f17:10:g_d0_f17:Table IX: Determinants of Zero-Leverage Policy: CEO and Governance Variables
+41:1389:94301:27:14:82:550:616:11:g_d0_f4:11:g_d0_f4:This table reports the results of logit regressions of AZL policy. The dependent variable is the
+41:1390:94397:14:13:82:550:602:11:g_d0_f4:11:g_d0_f4:dummy that equals 1 if a firm-year has book leverage≤5%. Coefficients and t-statistics (in paren-
+41:1391:94494:13:14:82:550:589:11:g_d0_f4:11:g_d0_f4:theses) significance are reported. Control variables include Log(Size), Market to Book, Profitability,
+41:1392:94596:14:13:82:550:575:11:g_d0_f4:11:g_d0_f4:Tangibility, Dividend, Earnings Volatility, R&D, Log(Age), Initial AZL Dummy, Industry Fraction
+41:1393:94691:13:14:82:550:562:11:g_d0_f4:11:g_d0_f4:of AZL, Capital Expenditure, and Asset Sale. Industry Fraction of AZL is the fraction of AZL firms
+41:1394:94789:14:14:82:550:548:11:g_d0_f4:11:g_d0_f4:(excluding the firm in question) in the same industry defined by 3-digit SIC and the same year.
+41:1395:94884:14:13:82:550:534:11:g_d0_f4:11:g_d0_f4:All other variables are defined in Appendix B. Coefficients, t-statistics (in parentheses), and eco-
+41:1396:94984:13:14:82:550:521:11:g_d0_f4:11:g_d0_f4:nomic significance are reported. Economic significance is the average change in probability for one
+41:1397:95083:14:13:82:550:507:11:g_d0_f4:11:g_d0_f4:standard deviation change. Year fixed effects for calendar years are included in all regressions. All
+41:1398:95184:13:14:82:550:494:11:g_d0_f4:11:g_d0_f4:standard errors adjust for heteroscedasticity and clustering at the firm level. Coefficients marked
+41:1399:95283:14:43:82:453:480:11:g_d0_f4:11:g_d0_f4:with ***, **, and * are significant at the 1%, 5%, and 10% level, respectively.
+41:1400:95362:43:24:222:544:437:10:g_d0_f4:10:g_d0_f4:(1)(2)(3)(4)(5)(6)(7)
+41:1401:95383:24:12:88:557:413:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.039***0.029***   0.020***
+41:1402:95429:12:12:216:551:401:10:g_d0_f4:10:g_d0_f4:(5.38)(4.25)(2.65)
+41:1403:95447:12:12:218:548:389:10:g_d0_f4:10:g_d0_f4:2.8%2.1%1.4%
+41:1404:95459:12:12:88:551:377:10:g_d0_f4:10:g_d0_f4:CEO Options Ownership-0.055**-0.038-0.039
+41:1405:95500:12:12:264:552:365:10:g_d0_f4:10:g_d0_f4:(-2.01)(-1.50)(-1.56)
+41:1406:95521:12:12:266:549:353:10:g_d0_f4:10:g_d0_f4:-1.4%-0.9%-1.0%
+41:1407:95536:12:12:88:551:341:10:g_d0_f4:10:g_d0_f4:CEO Cash Comp.-0.068-0.076
+41:1408:95562:12:12:470:552:329:10:g_d0_f4:10:g_d0_f4:(-1.27)(-1.44)
+41:1409:95576:12:11:472:549:317:10:g_d0_f4:10:g_d0_f4:-0.7%-0.8%
+41:1410:95586:11:12:88:557:306:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.027***0.016***
+41:1411:95612:12:12:315:551:294:10:g_d0_f4:10:g_d0_f4:(5.69)(2.94)
+41:1412:95624:12:12:317:548:282:10:g_d0_f4:10:g_d0_f4:3.0%1.7%
+41:1413:95632:12:12:88:558:270:10:g_d0_f4:10:g_d0_f4:Log(Board Size)-1.129***-1.019***  -0.976***
+41:1414:95676:12:12:364:552:258:10:g_d0_f4:10:g_d0_f4:(-5.04)(-4.73)(-4.57)
+41:1415:95697:12:12:367:549:246:10:g_d0_f4:10:g_d0_f4:-3.5%-3.1%-3.0%
+41:1416:95712:12:12:88:558:234:10:g_d0_f4:10:g_d0_f4:Frac. Ind. Directors-1.279***  -0.901***  -0.770***
+41:1417:95763:12:12:417:552:222:10:g_d0_f4:10:g_d0_f4:(-4.26)(-3.08)(-2.65)
+41:1418:95784:12:12:420:549:210:10:g_d0_f4:10:g_d0_f4:-2.6%-1.8%-1.5%
+41:1419:95799:12:12:88:557:198:10:g_d0_f4:10:g_d0_f4:Constant2.161***  2.797***  2.237***   4.188***   3.092***   4.599***   4.438***
+41:1420:95879:12:24:216:551:186:10:g_d0_f4:10:g_d0_f4:(4.64)(5.79)(4.79)(7.40)(6.53)(7.41)(7.14)
+41:1421:95921:24:12:88:545:162:10:g_d0_f4:10:g_d0_f4:Control VariablesYesYesYesYesYesYesYes
+41:1422:95959:12:12:88:552:150:10:g_d0_f4:10:g_d0_f4:Observations12,02912,02912,02912,02912,02912,02912,029
+41:1423:96013:12:0:88:549:138:10:g_d0_f4:10:g_d0_f4:Pseudo R-squared0.3320.3250.3320.3300.3280.3400.342
+42:1424:96100:0:12:95:530:682:10:g_d0_f17:10:g_d0_f17:Table X: Determinants of Zero-Leverage Policy: Interactions of CEO and Governance
+42:1425:96181:12:27:290:336:670:10:g_d0_f17:10:g_d0_f17:Variables
+42:1426:96190:27:13:82:550:643:11:g_d0_f4:11:g_d0_f4:This table reports the results of logit regressions of AZL policy. The dependent variable is the
+42:1427:96286:13:14:82:550:630:11:g_d0_f4:11:g_d0_f4:dummy that equals 1 if a firm-year has book leverage≤5%. Small (Large) Board Dummy is 1 if
+42:1428:96376:14:14:82:550:616:11:g_d0_f4:11:g_d0_f4:the board size is below (above) the sample median and 0 otherwise. Low (High) Board Indepen-
+42:1429:96468:14:13:82:550:602:11:g_d0_f4:11:g_d0_f4:dence dummy is 1 if the fraction of independent directors is below (above) the sample median and
+42:1430:96564:13:14:82:550:589:11:g_d0_f4:11:g_d0_f4:0 otherwise. Control variables include Log(Size), Market to Book, Profitability, Tangibility, Divi-
+42:1431:96663:14:13:82:550:575:11:g_d0_f4:11:g_d0_f4:dend, Earnings Volatility, R&D, Log(Age), Initial AZL Dummy, Industry Fraction of AZL, Capital
+42:1432:96757:13:14:82:550:562:11:g_d0_f4:11:g_d0_f4:Expenditure, and Asset Sale. Industry Fraction of AZL is the fraction of AZL firms (excluding
+42:1433:96850:14:13:82:550:548:11:g_d0_f4:11:g_d0_f4:the firm in question) in the same industry defined by 3-digit SIC and the same year. All other
+42:1434:96944:13:14:82:550:535:11:g_d0_f4:11:g_d0_f4:variables are defined in Appendix B. Coefficients and t-statistics (in parentheses) are reported.
+42:1435:97041:14:13:82:550:521:11:g_d0_f4:11:g_d0_f4:Year fixed effects for calendar years are included in all regressions. All standard errors adjust for
+42:1436:97142:13:14:82:550:508:11:g_d0_f4:11:g_d0_f4:heteroscedasticity and clustering at the firm level. Coefficients marked with ***, **, and * are
+42:1437:97238:14:31:82:339:494:11:g_d0_f4:11:g_d0_f4:significant at the 1%, 5%, and 10% level, respectively.
+42:1438:97293:31:24:240:509:463:10:g_d0_f4:10:g_d0_f4:(1)(2)(3)(4)(5)(6)
+42:1439:97311:24:12:102:365:439:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.029***0.026***
+42:1440:97346:12:12:112:359:427:10:g_d0_f16:10:g_d0_f4:×Small Board Dummy    (3.41)(3.02)
+42:1441:97380:12:12:102:357:415:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership-0.0000.010
+42:1442:97410:12:12:112:359:403:10:g_d0_f16:10:g_d0_f4:×Large Board Dummy   (-0.02)(0.73)
+42:1443:97444:12:12:102:365:391:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.021***  0.021***
+42:1444:97472:12:12:112:359:379:10:g_d0_f16:10:g_d0_f4:×Small Board Dummy(3.59)(3.40)
+42:1445:97502:12:12:102:357:367:10:g_d0_f4:10:g_d0_f4:CEO Tenure-0.0030.001
+42:1446:97523:12:12:112:359:355:10:g_d0_f16:10:g_d0_f4:×Large Board Dummy(-0.27)(0.08)
+42:1447:97554:12:12:102:522:343:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.030***0.026***
+42:1448:97589:12:12:112:516:331:10:g_d0_f16:10:g_d0_f4:×Low Board Indep.(3.50)(2.94)
+42:1449:97618:12:11:102:514:319:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.0050.014
+42:1450:97647:11:12:112:516:308:10:g_d0_f16:10:g_d0_f4:×High Board Indep.(0.43)(1.03)
+42:1451:97677:12:12:102:522:296:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.024***   0.023***
+42:1452:97706:12:12:112:516:284:10:g_d0_f16:10:g_d0_f4:×Low Board Indep.(4.10)(3.86)
+42:1453:97735:12:12:102:514:272:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.0020.005
+42:1454:97755:12:24:112:516:260:10:g_d0_f16:10:g_d0_f4:×High Board Indep.(0.29)(0.53)
+42:1455:97785:24:12:102:469:236:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.024***0.023***
+42:1456:97820:12:12:283:463:224:10:g_d0_f4:10:g_d0_f4:(2.99)(2.95)
+42:1457:97832:12:12:102:416:212:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.016***0.017***
+42:1458:97858:12:12:234:410:200:10:g_d0_f4:10:g_d0_f4:(3.06)(3.13)
+42:1459:97870:12:12:102:524:188:10:g_d0_f4:10:g_d0_f4:Large Board Dummy-0.314**    -0.127-0.131    -0.385***  -0.397***  -0.394***
+42:1460:97946:12:12:232:517:176:10:g_d0_f4:10:g_d0_f4:(-2.55)(-0.81)(-0.83)(-3.32)(-3.41)(-3.38)
+42:1461:97988:12:12:102:514:164:10:g_d0_f4:10:g_d0_f4:High Board Independence   -0.179*   -0.183**   -0.182**-0.1200.0540.050
+42:1462:98059:12:12:232:516:152:10:g_d0_f4:10:g_d0_f4:(-1.93)(-1.98)(-1.97)(-1.24)(0.41)(0.38)
+42:1463:98099:12:12:102:522:140:10:g_d0_f4:10:g_d0_f4:Constant1.834***  1.802***  1.809***   1.820***   1.732***   1.741***
+42:1464:98168:12:24:234:516:128:10:g_d0_f4:10:g_d0_f4:(3.95)(3.86)(3.89)(3.90)(3.71)(3.72)
+42:1465:98204:24:12:102:510:104:10:g_d0_f4:10:g_d0_f4:Control VariablesYesYesYesYesYesYes
+42:1466:98239:12:12:102:517:92:10:g_d0_f4:10:g_d0_f4:Observations12,03812,03812,03812,03812,03812,038
+42:1467:98287:12:0:102:514:80:10:g_d0_f4:10:g_d0_f4:Pseudo R-squared0.3380.3390.3390.3380.3390.339
+43:1468:98369:0:27:186:439:671:10:g_d0_f17:10:g_d0_f17:Table XI: Zero-Leverage Policy and Family Firms
+43:1469:98416:27:13:82:551:644:11:g_d0_f4:11:g_d0_f4:This table reports the results of logit regressions of AZL policy. The sample includes all observa-
+43:1470:98515:13:14:82:550:631:11:g_d0_f4:11:g_d0_f4:tions over the period 2003–2006 for which CEO, governance, and family firm variables are available.
+43:1471:98614:14:13:82:550:617:11:g_d0_f4:11:g_d0_f4:The dependent variable is the dummy that equals 1 if a firm-year has book leverage≤5%. Control
+43:1472:98708:13:14:82:550:604:11:g_d0_f4:11:g_d0_f4:variables include Log(Size), Market to Book, Profitability, Tangibility, Dividend, Earnings Volatil-
+43:1473:98808:14:14:82:550:590:11:g_d0_f4:11:g_d0_f4:ity, R&D, Log(Age), Initial AZL Dummy, Industry Fraction of AZL, Capital Expenditure, and
+43:1474:98897:14:13:82:550:576:11:g_d0_f4:11:g_d0_f4:Asset Sale. Industry Fraction of AZL is the fraction of AZL firms (excluding the firm in question)
+43:1475:98995:13:14:82:550:563:11:g_d0_f4:11:g_d0_f4:in the same industry defined by 3-digit SIC and the same year. All other variables are defined
+43:1476:99089:14:13:82:550:549:11:g_d0_f4:11:g_d0_f4:in Appendix B. Coefficients, t-statistics (in parentheses), and economic significance are reported.
+43:1477:99188:13:14:82:550:536:11:g_d0_f4:11:g_d0_f4:Economic significance is the average change in probability for one standard deviation change for a
+43:1478:99286:14:13:82:550:522:11:g_d0_f4:11:g_d0_f4:continuous independent variable, or for the change from 0 to 1 for a dummy variable. Year fixed
+43:1479:99381:13:14:82:550:509:11:g_d0_f4:11:g_d0_f4:effects for calendar years are included in all regressions. All standard errors adjust for heteroskedas-
+43:1480:99485:14:13:82:550:495:11:g_d0_f4:11:g_d0_f4:ticity and clustering at the firm level. Coefficients marked with ***, **, and * are significant at
+43:1481:99584:13:37:82:274:482:11:g_d0_f4:11:g_d0_f4:the 1%, 5%, and 10% level, respectively.
+43:1482:99624:37:24:264:481:445:10:g_d0_f4:10:g_d0_f4:(1)(2)(3)(4)(5)
+43:1483:99639:24:12:131:488:421:10:g_d0_f4:10:g_d0_f4:CEO Stock Ownership0.025**0.020*
+43:1484:99671:12:12:258:487:409:10:g_d0_f4:10:g_d0_f4:(2.21)(1.88)
+43:1485:99683:12:12:260:485:397:10:g_d0_f4:10:g_d0_f4:1.9%1.5%
+43:1486:99691:12:12:131:487:385:10:g_d0_f4:10:g_d0_f4:CEO Options Ownership-0.011
+43:1487:99718:12:12:460:489:373:10:g_d0_f4:10:g_d0_f4:(-0.44)
+43:1488:99725:12:12:462:486:361:10:g_d0_f4:10:g_d0_f4:-0.3%
+43:1489:99730:12:12:131:486:349:10:g_d0_f4:10:g_d0_f4:CEO Cash Comp.0.044
+43:1490:99749:12:12:461:487:337:10:g_d0_f4:10:g_d0_f4:(0.50)
+43:1491:99755:12:12:464:485:325:10:g_d0_f4:10:g_d0_f4:0.5%
+43:1492:99759:12:12:131:337:313:10:g_d0_f4:10:g_d0_f4:CEO Tenure0.018**
+43:1493:99776:12:12:308:334:301:10:g_d0_f4:10:g_d0_f4:(2.29)
+43:1494:99782:12:12:310:331:289:10:g_d0_f4:10:g_d0_f4:2.1%
+43:1495:99786:12:12:131:495:277:10:g_d0_f4:10:g_d0_f4:Log(Board Size)-1.446***-1.376***
+43:1496:99819:12:12:357:489:265:10:g_d0_f4:10:g_d0_f4:(-4.14)(-3.95)
+43:1497:99833:12:12:359:486:253:10:g_d0_f4:10:g_d0_f4:-4.4%-4.2%
+43:1498:99843:12:12:131:487:241:10:g_d0_f4:10:g_d0_f4:Frac. Ind. Directors-0.582-0.461
+43:1499:99875:12:12:409:489:229:10:g_d0_f4:10:g_d0_f4:(-1.25)(-0.99)
+43:1500:99889:12:12:411:486:217:10:g_d0_f4:10:g_d0_f4:-1.1%-0.8%
+43:1501:99899:12:12:131:493:205:10:g_d0_f4:10:g_d0_f4:Family Firm Dummy0.534***  0.460***   0.651***   0.581***   0.537***
+43:1502:99967:12:12:258:487:193:10:g_d0_f4:10:g_d0_f4:(3.43)(2.92)(4.35)(3.82)(3.41)
+43:1503:99997:12:23:260:485:181:10:g_d0_f4:10:g_d0_f4:6.8%5.8%8.2%7.4%6.7%
+43:1504:100017:23:12:131:493:158:10:g_d0_f4:10:g_d0_f4:Constant2.918***  2.170***   4.364***   2.639***   5.172***
+43:1505:100076:12:12:258:487:146:10:g_d0_f4:10:g_d0_f4:(3.96)(3.26)(5.04)(3.70)(5.02)
+43:1506:100106:12:12:131:482:134:10:g_d0_f4:10:g_d0_f4:Control VariablesYesYesYesYesYes
+43:1507:100138:12:12:131:486:122:10:g_d0_f4:10:g_d0_f4:Observations3,3643,3643,3643,3643,364
+43:1508:100175:12:0:131:486:110:10:g_d0_f4:10:g_d0_f4:Pseudo R-squared0.3210.3220.3260.3180.329

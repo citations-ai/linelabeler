@@ -1,0 +1,1472 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:?:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:547:610:12:Times:12:Times:?:MONETARY POLICY MISTAKES AND THE EVOLUTION OF INFLATION EXPECTATIONS
+1:2:93:28:14:306:362:582:12:Times:12:Times:?:Athanasios Orphanides
+1:3:114:14:28:306:341:568:12:Times:12:Times:?:John Williams
+1:4:127:28:14:306:359:540:12:Times:12:Times:?:Working Paper 17080
+1:5:146:14:42:306:393:526:12:Times:12:Times:?:http://www.nber.org/papers/w17080
+1:6:179:42:14:306:439:484:12:Times:12:Times:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:215:14:14:306:374:470:12:Times:12:Times:?:1050 Massachusetts Avenue
+1:8:240:14:14:306:362:456:12:Times:12:Times:?:Cambridge, MA 02138
+1:9:259:14:186:306:330:442:12:Times:12:Times:?:May 2011
+1:10:267:186:14:72:540:256:12:Times:12:Times:?:We thank Nick Bloom, Bob Hall, Seppo Honkapohja, Andy Levin, John Taylor, Bharat Trehan, and
+1:11:359:14:14:72:540:242:12:Times:12:Times:?:participants at the NBER Conference on the "Great Inflation" and other presentations for helpful comments
+1:12:464:14:14:72:540:228:12:Times:12:Times:?:and suggestions. We also thank Justin Weidner for excellent research assistance. The opinions expressed
+1:13:567:14:14:72:540:214:12:Times:12:Times:?:are those of the authors and do not necessarily reflect the views of the Central Bank of Cyprus, the
+1:14:667:14:14:72:540:200:12:Times:12:Times:?:Governing Council of the European Central Bank, the Federal Reserve Bank of San Francisco, the
+1:15:761:14:28:72:540:186:12:Times:12:Times:?:Board of Governors of the Federal Reserve System, or the National Bureau of Economic Research.
+1:16:855:28:14:72:540:158:12:Times:12:Times:?:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:17:951:14:14:72:540:144:12:Times:12:Times:?:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:18:1046:14:28:72:169:130:12:Times:12:Times:?:NBER publications.
+1:19:1064:28:14:72:540:102:12:Times:12:Times:?:© 2011 by Athanasios Orphanides and John Williams. All rights reserved. Short sections of text, not
+1:20:1163:14:14:72:540:88:12:Times:12:Times:?:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:21:1267:14:0:72:224:74:12:Times:12:Times:?:© notice, is given to the source.
+2:22:1300:0:14:72:409:700:12:Times:12:Times:?:Monetary Policy Mistakes and the Evolution of Inflation Expectations
+2:23:1368:14:14:72:277:686:12:Times:12:Times:?:Athanasios Orphanides and John Williams
+2:24:1407:14:14:72:234:672:12:Times:12:Times:?:NBER Working Paper No. 17080
+2:25:1435:14:14:72:121:658:12:Times:12:Times:?:May 2011
+2:26:1443:14:28:72:134:644:12:Times:12:Times:?:JEL No. E52
+2:27:1454:28:28:306:339:616:12:Times:12:Times:?:ABSTRACT
+2:28:1462:28:14:72:540:588:12:Times:12:Times:?:What monetary policy framework, if adopted by the Federal Reserve, would have avoided the Great
+2:29:1557:14:14:72:540:574:12:Times:12:Times:?:Inflation of the 1960s and 1970s? We use counterfactual simulations of an estimated model of the
+2:30:1653:14:14:72:540:560:12:Times:12:Times:?:U.S. economy to evaluate alternative monetary policy strategies. We show that policies constructed
+2:31:1751:14:14:72:540:546:12:Times:12:Times:?:using modern optimal control techniques aimed at stabilizing inflation, economic activity, and interest
+2:32:1854:14:14:72:540:532:12:Times:12:Times:?:rates would have succeeded in achieving a high degree of economic stability as well as price stability
+2:33:1956:14:14:72:540:518:12:Times:12:Times:?:only if the Federal Reserve had possessed excellent information regarding the structure of the economy
+2:34:2058:14:14:72:540:504:12:Times:12:Times:?:or if it had acted as if it placed relatively low weight on stabilizing the real economy. Neither condition
+2:35:2165:14:14:72:540:490:12:Times:12:Times:?:held true. We document that policymakers at the time both had an overly optimistic view of the natural
+2:36:2267:14:14:72:540:476:12:Times:12:Times:?:rate of unemployment and put a high priority on achieving full employment. We show that in the presence
+2:37:2370:14:14:72:540:462:12:Times:12:Times:?:of realistic informational imperfections and with an emphasis on stabilizing economic activity, an
+2:38:2468:14:14:72:540:448:12:Times:12:Times:?:optimal control approach would have failed to keep inflation expectations well anchored, resulting
+2:39:2566:14:14:72:540:434:12:Times:12:Times:?:in high and highly volatile inflation during the 1970s. Finally, we show that a strategy of following
+2:40:2667:14:14:72:540:420:12:Times:12:Times:?:a robust first-difference policy rule would have been highly effective at stabilizing inflation and unemployment
+2:41:2779:14:14:72:540:406:12:Times:12:Times:?:in the presence of informational imperfections. This robust monetary policy rule yields simulated outcomes
+2:42:2885:14:42:72:532:392:12:Times:12:Times:?:that are close to those seen during the period of the Great Moderation starting in the mid-1980s.
+2:43:2982:42:14:72:184:350:12:Times:12:Times:?:Athanasios Orphanides
+2:44:3003:14:14:72:186:336:12:Times:12:Times:?:Central Bank of Cyprus
+2:45:3025:14:14:72:171:322:12:Times:12:Times:?:80 Kennedy Avenue
+2:46:3042:14:14:72:176:308:12:Times:12:Times:?:1076 Nicosia, Cyprus
+2:47:3062:14:28:72:286:294:12:Times:12:Times:?:Athanasios.Orphanides@centralbank.gov.cy
+2:48:3102:28:14:72:142:266:12:Times:12:Times:?:John Williams
+2:49:3115:14:14:72:262:252:12:Times:12:Times:?:Federal Reserve Bank of San Francisco
+2:50:3152:14:14:72:278:238:12:Times:12:Times:?:Economic Research Department, MS 1130
+2:51:3189:14:14:72:144:224:12:Times:12:Times:?:101 Market St.
+2:52:3203:14:14:72:195:210:12:Times:12:Times:?:San Francisco, CA 94105
+2:53:3226:14:0:72:202:196:12:Times:12:Times:?:john.c.williams@sf.frb.org
+3:54:3252:0:22:117:495:694:11:g_d0_f1:11:g_d0_f1:?:In monetary policy central bankers have a potent means for fostering stability in
+3:55:3333:22:22:117:495:672:11:g_d0_f1:11:g_d0_f1:?:the general price level. By training, if not also by temperament, they are inclined
+3:56:3416:22:22:117:495:650:11:g_d0_f1:11:g_d0_f1:?:to lay great stress on price stability. . . .  And yet, despite their antipathy to
+3:57:3498:22:22:117:495:628:11:g_d0_f1:11:g_d0_f1:?:inflation and the powerful weapons they could yield against it, central bankers
+3:58:3577:22:22:117:495:606:11:g_d0_f1:11:g_d0_f1:?:have failed so utterly in this mission in recent years. In this paradox lies the
+3:59:3657:22:35:117:379:584:11:g_d0_f1:11:g_d0_f1:?:anguish of central banking. (Arthur Burns, 1979, p. 7)
+3:60:3711:35:33:89:202:549:14:g_d0_f2:14:g_d0_f2:C:1  Introduction
+3:61:3726:33:22:90:522:516:11:g_d0_f1:11:g_d0_f1:B:Numerous explanations have been put forward for the causes of the Great Inflation of the
+3:62:3814:22:22:89:521:494:11:g_d0_f1:11:g_d0_f1:B:late 1960s and 1970s in the United States.  But one explanation that may be the most
+3:63:3898:22:22:90:522:472:11:g_d0_f1:11:g_d0_f1:B:worrisome for the future is that policy mistakes made by otherwise well-informed and well-
+3:64:3988:22:22:89:521:450:11:g_d0_f1:11:g_d0_f1:B:intentioned policymakers, free of institutional and political constraints, were responsible
+3:65:4079:22:22:90:522:428:11:g_d0_f1:11:g_d0_f1:B:for these outcomes.  The epigraph quoted above, from the 1979 Per Jacobsson Lecture
+3:66:4162:22:22:89:521:406:11:g_d0_f1:11:g_d0_f1:B:delivered by Arthur Burns shortly after the end of his tenure as Chairman of the Federal
+3:67:4250:22:23:90:522:384:11:g_d0_f1:11:g_d0_f1:B:Reserve, exemplifies this concern. In this paper, we provide a historical account of the Great
+3:68:4344:23:22:89:521:361:11:g_d0_f1:11:g_d0_f1:B:Inflation and subsequent evolution of the economy in the United States using an estimated
+3:69:4433:22:22:90:522:339:11:g_d0_f1:11:g_d0_f1:B:model with a benevolent and sophisticated policymaker.  We examine how the economy
+3:70:4515:22:22:89:521:317:11:g_d0_f1:11:g_d0_f1:B:would have fared if the Federal Reserve had applied modern optimal control techniques—of
+3:71:4603:22:22:90:522:295:11:g_d0_f1:11:g_d0_f1:B:the type recommended by many academic researchers today—to reach its policy decisions
+3:72:4688:22:22:89:522:273:11:g_d0_f1:11:g_d0_f1:B:from the middle of the 1960s on.1We then compare the resulting simulated outcomes to
+3:73:4772:22:22:89:521:251:11:g_d0_f1:11:g_d0_f1:B:those obtained under alternative monetary policy strategies designed to be robust to model
+3:74:4862:22:22:90:168:229:11:g_d0_f1:11:g_d0_f1:B:misspecification.
+3:75:4879:22:22:106:521:207:11:g_d0_f1:11:g_d0_f1:A:The main thesis of this paper is that the modern optimal control approach to monetary
+3:76:4964:22:23:89:521:185:11:g_d0_f1:11:g_d0_f1:B:policy is prone to inviting policy errors that lead to instability in inflation and inflation
+3:77:5057:23:16:90:522:162:11:g_d0_f1:11:g_d0_f1:B:expectations like those that occurred during the Great Inflation, while alternative robust
+3:78:5147:16:14:102:521:146:6:g_d0_f4:9:g_d0_f5:F:1Optimal control methods were first developed in the 1960s and have gained popularity in the academic
+3:79:5248:14:11:89:521:132:9:g_d0_f5:9:g_d0_f5:F:literature during the past 10 years.  See Svensson and Woodford, 2003; Woodford, 2003; Giannoni and
+3:80:5347:11:11:90:522:121:9:g_d0_f5:9:g_d0_f5:F:Woodford, 2005; and Svensson and Tetlow, 2005, for modern derivations and applications of optimal control
+3:81:5452:11:11:89:521:110:9:g_d0_f5:9:g_d0_f5:F:techniques to monetary policy. See Levin and Williams (2003) and Orphanides and Williams (2008, 2009)
+3:82:5553:11:0:90:406:99:9:g_d0_f5:9:g_d0_f5:F:for analysis of the optimal control approach to realistic degrees of uncertainty.
+4:83:5635:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:policy strategies could have been more effective at stabilizing inflation and unemployment.
+4:84:5726:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:Our reading of the narrative evidence highlights three critical factors that contributed to
+4:85:5817:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:the unmooring of inflation expectations and the resulting runaway inflation of the Great
+4:86:5905:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:Inflation. First, policymakers placed a high priority on stabilizing real economic activity
+4:87:5996:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:relative to price stability. Second, they severely overestimated the productive capacity of
+4:88:6087:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:the economy during the critical period of 1965 to 1975. In particular, contemporaneous
+4:89:6173:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:measures of the unemployment rate corresponding to full employment were significantly
+4:90:6258:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:lower than retrospective estimates. Third, they were overly confident of their understanding
+4:91:6350:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:of the precise linkage between measures of utilization gaps and inflation.  The modern
+4:92:6436:22:22:89:472:495:11:g_d0_f1:11:g_d0_f1:B:optimal control approach is not designed to protect against any of these factors.
+4:93:6517:22:22:106:521:473:11:g_d0_f1:11:g_d0_f1:A:This paper provides a “stress test” of optimal control policies and other policy strategies
+4:94:6608:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:to see how they would have fared in times of particular macroeconomic turmoil and when the
+4:95:6698:22:22:90:522:429:11:g_d0_f1:11:g_d0_f1:B:central bank faced imperfect information. The 1960s and 1970s provide an ideal laboratory
+4:96:6787:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:for such an experiment. The U.S. economy was buffeted by large shocks, providing severe
+4:97:6874:22:23:90:522:385:11:g_d0_f1:11:g_d0_f1:B:stress to the economy, and the realized macroeconomic performance was abysmal.  Our
+4:98:6957:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:analysis is related to that of Orphanides (2002) and Orphanides and Williams (2005a), who
+4:99:7046:22:22:90:522:340:11:g_d0_f1:11:g_d0_f1:B:show that a strong response to flawed measures of economic slack can help explain the
+4:100:7131:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:very high inflation and unemployment that developed during the 1960s and 1970s and that
+4:101:7218:22:22:90:522:296:11:g_d0_f1:11:g_d0_f1:B:policies that reacted less aggressively to slack would have been more effective at stabilizing
+4:102:7312:22:22:89:521:274:11:g_d0_f1:11:g_d0_f1:B:both inflation and unemployment during that period.  The contribution of the current
+4:103:7396:22:22:90:522:252:11:g_d0_f1:11:g_d0_f1:B:paper is to analyze the stabilization properties of optimal control policies and alternative
+4:104:7488:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:policy approaches using counterfactual simulations of the U.S. economy over the past several
+4:105:7580:22:23:90:522:208:11:g_d0_f1:11:g_d0_f1:B:decades. In so doing, we aim to use the experiences of the past to glean lessons for the
+4:106:7668:23:22:89:317:185:11:g_d0_f1:11:g_d0_f1:B:design of robust monetary policy for the future.
+4:107:7716:22:22:106:521:163:11:g_d0_f1:11:g_d0_f1:A:Our model respects the natural rate hypothesis and shares key features with modern
+4:108:7798:22:22:89:521:141:11:g_d0_f1:11:g_d0_f1:B:models used for monetary policy analysis. We investigate what would have happened over
+4:109:7884:22:22:90:522:119:11:g_d0_f1:11:g_d0_f1:B:history had policymakers implemented state-of-the-art optimal control methods under the
+4:110:7971:22:0:89:521:97:11:g_d0_f1:11:g_d0_f1:B:assumption of rational expectations. We focus on the difficulties associated with anchoring
+5:111:8063:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:inflation expectations when policymakers attempt to maintain a high degree of employment
+5:112:8151:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:stability relative to price stability in an environment where the central bank has imperfect
+5:113:8243:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:information about the economy.  The estimated model confirms the presence of adverse
+5:114:8327:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:supply shocks and natural rate misperceptions during the 1970s, which caused policy to
+5:115:8413:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:become overly expansionary. However, we find that these shocks alone cannot account for
+5:116:8500:22:23:89:236:584:11:g_d0_f1:11:g_d0_f1:B:the Great Inflation experience.
+5:117:8531:23:22:106:521:561:11:g_d0_f1:11:g_d0_f1:A:Using counterfactual simulations, we show that in the absence of informational im-
+5:118:8613:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:perfections, following the optimal control policy during the 1960s and 1970s would have
+5:119:8700:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:maintained reasonably well-anchored inflation expectations and succeeded in achieving a
+5:120:8787:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:relatively high degree of economic and price stability. Under these assumptions, monetary
+5:121:8876:22:22:90:477:473:11:g_d0_f1:11:g_d0_f1:B:policy could have offset the shocks that buffeted the economy during this period.
+5:122:8957:22:22:106:521:451:11:g_d0_f1:11:g_d0_f1:A:However, our model simulations also show that informational imperfections, such as
+5:123:9039:22:22:89:521:429:11:g_d0_f1:11:g_d0_f1:B:policymakers’ misperceptions of the natural rate of unemployment, significantly reduce the
+5:124:9129:22:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:effectiveness of this approach to policy. The presence of imperfect knowledge amplifies the
+5:125:9220:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:effects of the underlying shocks, and optimal control monetary policies designed assuming
+5:126:9309:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:complete information would have failed to keep inflation expectations well anchored. Indeed,
+5:127:9401:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:optimal control policies would have avoided the Great Inflation only if the weight given to
+5:128:9492:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:stabilizing the real economy were relatively modest—with the best results achieved if the
+5:129:9581:22:22:89:307:296:11:g_d0_f1:11:g_d0_f1:B:most weight were placed on stabilizing prices.
+5:130:9627:22:22:106:521:274:11:g_d0_f1:11:g_d0_f1:A:We also examine an alternative policy strategy that could have been more robust and
+5:131:9710:22:22:89:521:252:11:g_d0_f1:11:g_d0_f1:B:avoided this experience, even in the presence of supply shocks and natural rate mispercep-
+5:132:9800:22:22:90:522:230:11:g_d0_f1:11:g_d0_f1:B:tions. We show that such a strategy would have been very effective at stabilizing inflation
+5:133:9891:22:23:89:521:208:11:g_d0_f1:11:g_d0_f1:B:and economic activity, despite the large shocks of the 1970s. A striking result is that this
+5:134:9983:23:22:90:522:185:11:g_d0_f1:11:g_d0_f1:B:policy rule yields simulated outcomes close to the realized behavior of the economy dur-
+5:135:10071:22:22:89:521:163:11:g_d0_f1:11:g_d0_f1:B:ing the Great Moderation starting in the mid-1980s, suggesting that the actual practice of
+5:136:10161:22:22:90:522:141:11:g_d0_f1:11:g_d0_f1:B:monetary policy during this period changed in ways that incorporated the key properties
+5:137:10248:22:22:89:256:119:11:g_d0_f1:11:g_d0_f1:B:of the robust monetary policy rule.
+5:138:10283:22:0:106:521:97:11:g_d0_f1:11:g_d0_f1:A:The remainder of the paper is organized as follows. Section 2 examines the narrative
+6:139:10368:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:evidence of policymakers’ views on the natural rate of unemployment and the importance
+6:140:10454:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:of stabilizing economic activity during the 1960s and 1970s. Our model of the U.S. economy
+6:141:10544:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:and its estimation are described in Section 3. Section 4 describes the optimal control mon-
+6:142:10635:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:etary policy and its implementation in the model simulations. The models of expectations
+6:143:10723:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:formation and the simulation methods are described in Sections 5 and 6, respectively. Sec-
+6:144:10813:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:tion 7 examines the performance of the optimal control policy using counterfactual model
+6:145:10901:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:simulations. Section 8 analyzes the performance of a simple robust monetary policy rule,
+6:146:10989:22:34:89:206:539:11:g_d0_f1:11:g_d0_f1:B:and Section 9 concludes.
+6:147:11013:34:33:90:258:505:14:g_d0_f2:14:g_d0_f2:C:2  A Narrative History
+6:148:11035:33:22:89:521:472:11:g_d0_f1:11:g_d0_f1:B:In this section, we examine the narrative evidence regarding the views of policymakers
+6:149:11121:22:22:90:522:450:11:g_d0_f1:11:g_d0_f1:B:regarding the natural rate of unemployment and the role of stabilizing real activity at “full
+6:150:11214:22:22:89:522:428:11:g_d0_f1:11:g_d0_f1:B:employment” before, during, and after the Great Inflation.2We use this narrative evidence
+6:151:11303:22:22:89:521:406:11:g_d0_f1:11:g_d0_f1:B:to inform the specification of monetary policy in the model simulations reported in the
+6:152:11390:22:23:90:248:384:11:g_d0_f1:11:g_d0_f1:B:subsequent sections of the paper.
+6:153:11423:23:22:106:521:361:11:g_d0_f1:11:g_d0_f1:A:To set the stage for later events, it is useful to recall the evolution of the policy debate in
+6:154:11518:22:22:89:521:339:11:g_d0_f1:11:g_d0_f1:B:the post-World War II period. In the Employment Act of 1946, Congress declared that “it
+6:155:11605:22:22:90:522:317:11:g_d0_f1:11:g_d0_f1:B:is the continuing policy and responsibility of the Federal Government to use all practicable
+6:156:11697:22:22:89:521:295:11:g_d0_f1:11:g_d0_f1:B:means ... to promote maximum employment, production and purchasing power” (quoted in
+6:157:11781:22:22:90:522:273:11:g_d0_f1:11:g_d0_f1:B:Council of Economic Advisers, 1966, p. 170).3Until the 1960s, policymakers interpreted the
+6:158:11871:22:22:89:521:251:11:g_d0_f1:11:g_d0_f1:B:Employment Act of 1946 to be a broad mandate to protect price stability, that is, to promote
+6:159:11963:22:22:90:522:229:11:g_d0_f1:11:g_d0_f1:B:“purchasing power” and growth and to dampen business cycle fluctuations. In congressional
+6:160:12052:22:22:89:521:207:11:g_d0_f1:11:g_d0_f1:B:testimony in August 1957, for example, Federal Reserve Chairman William McChesney
+6:161:12133:22:23:90:522:185:11:g_d0_f1:11:g_d0_f1:B:Martin stated that “[t]he objective of the System is always the same—to promote monetary
+6:162:12221:23:16:89:521:162:11:g_d0_f1:11:g_d0_f1:B:and credit conditions that will foster sustained economic growth together with stability in
+6:163:12312:16:14:102:521:146:6:g_d0_f4:9:g_d0_f5:F:2See, Mayer (1999), Meltzer (2003) and Hetzel (2008a), among others, for detailed histories of Federal
+6:164:12414:14:7:89:225:132:9:g_d0_f5:9:g_d0_f5:F:Reserve policy during this period.
+6:165:12448:7:15:102:522:125:6:g_d0_f4:9:g_d0_f5:F:3Chapter 7 of the 1966Economic Report of the Presidentwas devoted to the 20 years of experience with
+6:166:12548:15:11:89:521:110:9:g_d0_f5:9:g_d0_f5:F:the Act since it became law on February 20, 1946.  This edition of the report, published in early 1966,
+6:167:12651:11:0:90:412:99:9:g_d0_f5:9:g_d0_f5:F:provides a useful snapshot of policy thinking at the start of the Great Inflation.
+7:168:12734:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:the value of the dollar.” To this end, he stressed the importance of price stability: “Price
+7:169:12826:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:stability is essential to sustainable growth. Inflation fosters maladjustments” (Martin, 1957,
+7:170:12920:22:22:90:117:650:11:g_d0_f1:11:g_d0_f1:B:p. 8).
+7:171:12926:22:22:106:521:628:11:g_d0_f1:11:g_d0_f1:A:During the 1960s, an increasing number of economists argued that fiscal and monetary
+7:172:13010:22:22:89:521:606:11:g_d0_f1:11:g_d0_f1:B:policy should play a more active role in managing aggregate demand with the goal of achiev-
+7:173:13101:22:23:90:522:584:11:g_d0_f1:11:g_d0_f1:B:ing and maintaining full employment. In 1961, the incoming Council of Economic Advisers
+7:174:13188:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:(CEA) adopted what became known as the “New Economics,” which was highlighted in
+7:175:13268:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:the 1962Economic Report of the President(Council of Economic Advisers, 1962). The new
+7:176:13353:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:strategy was eloquently summarized by Walter Heller, who, according toTime Magazine,
+7:177:13437:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:as “Chief Economic Adviser of the Kennedy Council, presided over the birth of the New
+7:178:13522:22:28:90:460:473:11:g_d0_f1:11:g_d0_f1:B:Economics as a practical policy” (Time Magazine, 1965, p. 67A). Heller said:
+7:179:13598:28:22:117:495:445:11:g_d0_f1:11:g_d0_f1:?:The promise of modern economic policy, managed with an eye to maintain-
+7:180:13669:22:22:117:495:423:11:g_d0_f1:11:g_d0_f1:?:ing prosperity, subduing inflation, and raising the quality of life, is indeed great.
+7:181:13754:22:23:117:495:401:11:g_d0_f1:11:g_d0_f1:?:And although we have made no startling conceptual breakthroughs in economics
+7:182:13830:23:22:117:494:378:11:g_d0_f1:11:g_d0_f1:?:in recent years, wehave, more effectively than ever before, harnessed the ex-
+7:183:13907:22:22:117:495:356:11:g_d0_f1:11:g_d0_f1:?:isting economics—the economics that has been taught in the nation’s college
+7:184:13982:22:22:117:495:334:11:g_d0_f1:11:g_d0_f1:?:classrooms for some twenty years—to the purposes of prosperity, stability, and
+7:185:14060:22:28:117:380:312:11:g_d0_f1:11:g_d0_f1:?:growth. (Heller, 1966, p. 116, emphasis in the original)
+7:186:14116:28:22:106:521:284:11:g_d0_f1:11:g_d0_f1:A:A key aspect of the New Economics was a heightened focus on achieving a desired
+7:187:14195:22:22:89:522:262:11:g_d0_f7:11:g_d0_f1:B:levelof economic activity, as measured by the unemployment rate or the level of GDP,
+7:188:14279:22:23:89:521:240:11:g_d0_f1:11:g_d0_f1:B:rather than the less demanding goal of economic expansion. This focus on achieving the
+7:189:14365:23:22:90:522:217:11:g_d0_f1:11:g_d0_f1:B:economy’s potential level of activity necessitated the measurement of potential output and
+7:190:14455:22:22:89:521:195:11:g_d0_f1:11:g_d0_f1:B:the unemployment rate corresponding to full employment. Arthur Okun, Chairman of the
+7:191:14539:22:22:90:522:173:11:g_d0_f1:11:g_d0_f1:B:CEA in the late 1960s, later summarized the implications of the new strategy for economic
+7:192:14628:22:28:89:170:151:11:g_d0_f1:11:g_d0_f1:B:policy as follows:
+7:193:14646:28:22:117:495:123:11:g_d0_f1:11:g_d0_f1:?:The revised strategy emphasized, as the standard for judging economic perfor-
+7:194:14723:22:22:117:495:101:11:g_d0_f1:11:g_d0_f1:?:mance, whether the economy was living up to its potential rather than merely
+7:195:14799:22:0:117:495:79:11:g_d0_f1:11:g_d0_f1:?:whether it was advancing. Ideally, total demand should be in balance with the
+8:196:14877:0:22:117:495:694:11:g_d0_f1:11:g_d0_f1:?:nation’s supply capabilities. When the balance is achieved, there is neither the
+8:197:14957:22:22:117:495:672:11:g_d0_f1:11:g_d0_f1:?:waste of idle resources nor the strain of inflationary pressure. The nation is then
+8:198:15040:22:31:117:406:650:11:g_d0_f1:11:g_d0_f1:?:actually producing its potential output. (Okun, 1970, p. 40)
+8:199:15100:31:22:89:521:619:11:g_d0_f1:11:g_d0_f1:B:Okun explained that the New Economics reflected a “shift in emphasis from the achievement
+8:200:15189:22:22:90:522:597:11:g_d0_f1:11:g_d0_f1:B:of expansion to the realization of potential” (p. 41) and explained how this implied greater
+8:201:15281:22:31:89:164:575:11:g_d0_f1:11:g_d0_f1:B:policy activism:
+8:202:15297:31:23:117:495:544:11:g_d0_f1:11:g_d0_f1:?:[T]he focus on the gap between potential and actual output provided a new
+8:203:15370:23:22:117:495:521:11:g_d0_f1:11:g_d0_f1:?:scale for the evaluation of economic performance, replacing the dichotomized
+8:204:15446:22:22:117:495:499:11:g_d0_f1:11:g_d0_f1:?:business cycle standard which viewed expansion as satisfactory and recession
+8:205:15522:22:22:117:495:477:11:g_d0_f1:11:g_d0_f1:?:as unsatisfactory. This new scale of evaluation, in turn, led to greater activism
+8:206:15603:22:22:117:495:455:11:g_d0_f1:11:g_d0_f1:?:in economic policy: As long as the economy was not realizing its potential,
+8:207:15678:22:22:117:495:433:11:g_d0_f1:11:g_d0_f1:?:improvement was needed and government had a responsibility to promote it.
+8:208:15751:22:31:117:150:411:11:g_d0_f1:11:g_d0_f1:?:(p. 41)
+8:209:15758:31:22:106:521:380:11:g_d0_f1:11:g_d0_f1:A:The shift in emphasis towards more explicit targets for employment and the level of eco-
+8:210:15846:22:23:89:521:358:11:g_d0_f1:11:g_d0_f1:B:nomic activity was not intended to downplay the need to preserve price stability. The twin
+8:211:15936:23:22:90:522:335:11:g_d0_f1:11:g_d0_f1:B:policy objectives of full employment and price stability were stressed repeatedly, starting
+8:212:16027:22:22:89:521:313:11:g_d0_f1:11:g_d0_f1:B:with the very first study that provided the quantitative definitions of full employment that
+8:213:16119:22:22:90:522:291:11:g_d0_f1:11:g_d0_f1:B:would shape policy throughout the 1960s: “The full employment goal must be understood
+8:214:16204:22:22:89:495:269:11:g_d0_f1:11:g_d0_f1:B:as striving for maximum production without inflation pressure” (Okun, 1962, p. 82).
+8:215:16287:22:22:106:521:247:11:g_d0_f1:11:g_d0_f1:A:The New Economics also emphasized the importance of monetary policy in achieving
+8:216:16367:22:22:89:521:225:11:g_d0_f1:11:g_d0_f1:B:these goals.  Indeed, the essence of monetary policy was seen in a rather conventional
+8:217:16453:22:22:90:521:203:11:g_d0_f1:11:g_d0_f7:B:manner not inconsistent with current views. According to the 1962Economic Report of the
+8:218:16540:22:22:89:522:181:11:g_d0_f7:11:g_d0_f1:B:President: “The proper degree of ‘tightness’ or ‘easiness’ of monetary policy . . .  depend[s]
+8:219:16634:22:23:89:521:159:11:g_d0_f1:11:g_d0_f1:B:on the state of the domestic economy, on the fiscal policies of the Government, and on
+8:220:16720:23:22:90:522:136:11:g_d0_f1:11:g_d0_f1:B:the international economic position. When the economy is in recession or beset by high
+8:221:16806:22:22:89:521:114:11:g_d0_f1:11:g_d0_f1:B:unemployment and excess capacity, monetary policy should clearly be expansionary. . . .
+8:222:16893:22:0:90:522:92:11:g_d0_f1:11:g_d0_f1:B:When demand is threatening to outrun the economy’s production potential, monetary policy
+9:223:16982:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:should be restrictive” (Council of Economic Advisers, 1962, p. 85). As this quote makes
+9:224:17069:22:22:89:503:672:11:g_d0_f1:11:g_d0_f1:B:clear, such a policy depends crucially on measuring the economy’s capacity accurately.
+9:225:17155:22:22:106:521:650:11:g_d0_f1:11:g_d0_f1:A:The critical test for the New Economics would begin in 1965, when the economy was
+9:226:17236:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:nearing what was perceived at the time to be full employment. The apparent success of
+9:227:17321:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:economic policy up to that point was the topic of the cover story of the December 1965
+9:228:17407:22:23:89:521:584:11:g_d0_f7:11:g_d0_f1:B:Timemagazine.  The story noted that “[e]conomists have descended in force from their
+9:229:17491:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:ivory towers and now sit confidently at the elbow of almost every important leader in
+9:230:17576:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:Government and business, where they are increasingly called upon to forecast, plan and
+9:231:17662:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:decide” (p. 65). Indeed, Okun later remarked, “The high-water mark of the economists
+9:232:17746:22:22:90:440:495:11:g_d0_f1:11:g_d0_f1:B:prestige in Washington was probably reached late in 1965” (1970, p. 59).
+9:233:17818:22:22:106:521:473:11:g_d0_f1:11:g_d0_f1:A:Although the New Economics held sway at the CEA and at many academic institutions,
+9:234:17900:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:Federal Reserve Chairman Martin remained skeptical that policymakers would ever possess
+9:235:17987:22:22:90:522:429:11:g_d0_f1:11:g_d0_f1:B:the precise knowledge of the economy demanded by the policies of the New Economics.
+9:236:18070:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:Although Martin’s attitude was interpreted by some as a mistrust of economists, it would
+9:237:18158:22:23:90:522:385:11:g_d0_f1:11:g_d0_f1:B:be more accurate to describe his views as reflecting a mistrust of the fine-tuning approach
+9:238:18249:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:advocated by some economists who were gaining influence at the time. As Sherman Maisel,
+9:239:18336:22:22:90:522:340:11:g_d0_f1:11:g_d0_f1:B:an economist who joined the Board of Governors in 1965, later recounted: “The press
+9:240:18419:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:frequently reported Martin’s dismay over the number of economists appointed to the Board.
+9:241:18508:22:22:90:522:296:11:g_d0_f1:11:g_d0_f1:B:He felt that the economy was too complex to explain in detail; intuition would be lost and
+9:242:18598:22:22:89:521:274:11:g_d0_f1:11:g_d0_f1:B:false leads followed if too much stress were put on measurement” (Maisel 1973, p. 114).
+9:243:18685:22:22:90:522:252:11:g_d0_f1:11:g_d0_f1:B:Nonetheless, by 1965, the center of gravity at the Federal Reserve was shifting away from
+9:244:18774:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:what we would describe as Martin’s robust policy approach toward a fine-tuning approach
+9:245:18861:22:23:90:490:208:11:g_d0_f1:11:g_d0_f1:B:that sought to achieve a quantitative full-employment goal as well as price stability.
+9:246:18947:23:22:106:521:185:11:g_d0_f1:11:g_d0_f1:A:By July 1965 the unemployment rate had fallen to about 4-1/2 percent and the balance of
+9:247:19034:22:22:89:521:163:11:g_d0_f1:11:g_d0_f1:B:payments was deteriorating. Martin believed that policy needed to be tightened to restrain
+9:248:19124:22:22:90:522:141:11:g_d0_f1:11:g_d0_f1:B:inflationary pressures. During the second half of 1965, he attempted to forge a consensus
+9:249:19213:22:22:89:521:119:11:g_d0_f1:11:g_d0_f1:B:at the Federal Reserve towards policy tightening. But the Council of Economic Advisers
+9:250:19299:22:0:90:522:97:11:g_d0_f1:11:g_d0_f1:B:and like-minded economists at the Federal Reserve argued against such a preemptive move.
+10:251:19388:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:In their view, a 4 percent unemployment rate corresponded to full employment. Therefore,
+10:252:19476:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:the economy was operating below its full-employment level and inflationary pressures were
+10:253:19565:22:22:90:184:650:11:g_d0_f1:8:g_d0_f3:B:unlikely to emerge.4
+10:254:19585:22:22:106:521:628:11:g_d0_f1:11:g_d0_f1:A:Martin postponed proposing a policy tightening until December 1965, when, despite
+10:255:19666:22:22:89:521:606:11:g_d0_f1:11:g_d0_f1:B:significant opposition from members of the Board of Governors, he felt it was no longer
+10:256:19753:22:23:90:522:584:11:g_d0_f1:11:g_d0_f1:B:prudent to wait. On December 3, 1965, the Federal Reserve Board increased the discount
+10:257:19839:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:rate from 4.0 to 4.5 percent with four members of the Board voting in favor of and three
+10:258:19927:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:voting against the rate hike. The published announcement explained: “With slack in man-
+10:259:20014:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:power and productive capacity now reduced to narrow proportions, with the economy closer
+10:260:20102:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:to full potential than at any time in nearly a decade ... it was felt that excessive additions
+10:261:20196:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:to money and credit availability in an effort to hold present levels of interest rates would
+10:262:20288:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:spill over into further price increases. Such price rises would endanger the sustainable na-
+10:263:20380:22:22:89:521:429:11:g_d0_f1:11:g_d0_f1:B:ture of the present business expansion” (Board of Governors of the Federal Reserve System,
+10:264:20470:22:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:1965, p. 1668). Governors Robertson, Mitchell, and Maisel dissented from the discount
+10:265:20555:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:rate action “on the ground that it was at least premature in the absence of more compelling
+10:266:20646:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:evidence of inflationary dangers” (Board of Governors of the Federal Reserve System, 1965,
+10:267:20736:22:22:89:132:340:11:g_d0_f1:11:g_d0_f1:B:p. 1668).
+10:268:20745:22:22:106:521:318:11:g_d0_f1:11:g_d0_f1:A:In remarks that were delivered a few days later, on December 8, Chairman Martin had
+10:269:20828:22:31:89:362:296:11:g_d0_f1:11:g_d0_f1:B:an opportunity to explain his reasoning for the rate hike:
+10:270:20886:31:22:117:495:265:11:g_d0_f1:11:g_d0_f1:?:The Federal Reserve, in all its actions, aims always at the same goal: to help the
+10:271:20968:22:22:117:495:243:11:g_d0_f1:11:g_d0_f1:?:economy move forward at the fastest sustainable pace. We reach our destination
+10:272:21046:22:22:117:494:221:11:g_d0_f1:11:g_d0_f1:?:most rapidly as well as more assuredly when we travel at maximumsafespeed—
+10:273:21120:22:27:117:480:199:11:g_d0_f1:11:g_d0_f1:?:and this speed cannot be the same under all conditions and at all times. . . .
+10:274:21198:27:16:117:495:172:11:g_d0_f1:11:g_d0_f1:?:To me, the effective time to act against inflationary pressures is when they are
+10:275:21278:16:15:102:521:156:6:g_d0_f4:9:g_d0_f5:F:4The CEA (1962) put the unemployment rate corresponding to full employment at 4 percent. The 1962
+10:276:21375:15:11:89:521:141:9:g_d0_f6:9:g_d0_f5:F:Economic Report of the Presidentindicated that “in the existing economic circumstances, an unemployment
+10:277:21478:11:11:89:521:130:9:g_d0_f5:9:g_d0_f5:F:rate of about 4 percent is a reasonable and prudent full employment target for stabilization policy” (p. 46).
+10:278:21587:11:11:90:522:119:9:g_d0_f5:9:g_d0_f5:F:Although this goal of a 4 percent unemployment rate may appear overly ambitious in retrospect, it did not
+10:279:21692:11:11:89:521:108:9:g_d0_f5:9:g_d0_f5:F:appear so at the time. Indeed, many considered the 4 percent goal for the unemployment rate insufficiently
+10:280:21798:11:11:90:522:97:9:g_d0_f5:9:g_d0_f5:F:ambitious. For them, 4 percent was seen to be an interim goal, with the ultimate objective being even lower
+10:281:21905:11:0:89:151:86:9:g_d0_f5:9:g_d0_f5:F:unemployment.
+11:282:21919:0:22:117:495:694:11:g_d0_f1:11:g_d0_f1:?:in the development stage—before they have become full-blown and the damage
+11:283:21993:22:22:117:495:672:11:g_d0_f1:11:g_d0_f1:?:has been done.  Precautionary measures are more likely to be effective than
+11:284:22068:22:22:117:495:650:11:g_d0_f1:11:g_d0_f1:?:remedial action: the old proverb that an ounce of prevention is worth a pound
+11:285:22145:22:27:117:429:628:11:g_d0_f1:11:g_d0_f1:?:of cure applies to monetary policy as well as to anything else. . . .
+11:286:22214:27:22:117:495:601:11:g_d0_f1:11:g_d0_f1:?:[S]o long as inflation is merely a threat rather than a reality, it is enough to
+11:287:22294:22:22:117:495:579:11:g_d0_f1:11:g_d0_f1:?:prevent the pace of economic expansion from accelerating dangerously.  But
+11:288:22368:22:22:117:495:557:11:g_d0_f1:11:g_d0_f1:?:once that pace has become unsustainably fast, then it becomes necessary to
+11:289:22442:22:22:117:495:535:11:g_d0_f1:11:g_d0_f1:?:reduce the speed, and once such a reduction is started, there is no assurance it
+11:290:22522:22:22:117:495:513:11:g_d0_f1:11:g_d0_f1:?:can be stopped in time to avoid an actual downswing (Martin, 1965, emphasis
+11:291:22597:22:31:117:173:491:11:g_d0_f1:11:g_d0_f1:?:in original).
+11:292:22610:31:23:106:521:460:11:g_d0_f1:11:g_d0_f1:A:The discount rate increase prompted a bruising congressional hearing the following week,
+11:293:22698:23:22:89:521:437:11:g_d0_f1:11:g_d0_f1:B:on December 13-14, 1965. The hearing on “Recent Federal Reserve Action and Economic
+11:294:22781:22:22:90:522:415:11:g_d0_f1:11:g_d0_f1:B:Policy Coordination” (U.S. Congress, 1966) served as a forum for criticizing Chairman
+11:295:22866:22:22:89:521:393:11:g_d0_f1:11:g_d0_f1:B:Martin for tightening policy. It provides an invaluable glimpse into the policy debate at the
+11:296:22959:22:22:90:522:371:11:g_d0_f1:11:g_d0_f1:B:time and highlights the crucial role that perceptions about full employment had acquired.
+11:297:23048:22:22:89:521:349:11:g_d0_f1:11:g_d0_f1:B:Martin represented the majority view and Governors Mitchell and Maisel, who opposed the
+11:298:23135:22:22:90:522:327:11:g_d0_f1:11:g_d0_f1:B:tightening, represented the dissenting view at the hearing on December 13, 1965. At the
+11:299:23222:22:22:89:521:305:11:g_d0_f1:11:g_d0_f1:B:hearing, it was confirmed that a crucial reason for the disagreement on the tightening was
+11:300:23312:22:23:90:522:283:11:g_d0_f1:11:g_d0_f1:B:a disagreement about the risks to the inflation outlook. Furthermore, details emerged as
+11:301:23400:23:22:89:521:260:11:g_d0_f1:11:g_d0_f1:B:to the assessments of the Chairman and dissenting members of the Board regarding what
+11:302:23485:22:22:90:227:238:11:g_d0_f1:11:g_d0_f1:B:constituted full employment.
+11:303:23513:22:22:106:521:216:11:g_d0_f1:11:g_d0_f1:A:The discussion centered on whether a 4 percent unemployment rate was the appropriate
+11:304:23597:22:22:89:521:194:11:g_d0_f1:11:g_d0_f1:B:definition of full employment. Martin remarked, “As long as unemployment of manpower
+11:305:23681:22:22:90:522:172:11:g_d0_f1:11:g_d0_f1:B:and plant capacity was greater than could be considered acceptable or normal, we had
+11:306:23765:22:22:89:521:150:11:g_d0_f1:11:g_d0_f1:B:every reason to lean on the side of monetary stimulus.” Senator Jacob Javits asked, “Do
+11:307:23852:22:22:90:522:128:11:g_d0_f1:11:g_d0_f1:B:you consider a 4 percent unemployment acceptable and normal and is that the basis for
+11:308:23937:22:22:89:521:106:11:g_d0_f1:11:g_d0_f1:B:your decision?” (U.S. Congress, 1966, p. 116). Noting that this is a long-standing debate
+11:309:24026:22:0:90:522:84:11:g_d0_f1:11:g_d0_f1:B:among experts, Martin replied that, although the Federal Reserve Board would want “as
+12:310:24112:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:low a level as it is possible to have,” he did not know what the right level ought to be.
+12:311:24201:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:Responding to subsequent questions he added, “We [the Board of Governors] have never
+12:312:24285:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:addressed ourselves to a definitive discussion of the 3 or 4 or 5 percent.” But he admitted
+12:313:24376:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:that in making the policy decision the Board deemed that “we were approaching a state
+12:314:24461:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:of full employment” (pp. 116-117). The unemployment rate had fallen to 4.2 percent in
+12:315:24546:22:23:89:165:584:11:g_d0_f1:11:g_d0_f1:B:November 1965.
+12:316:24560:23:22:106:521:561:11:g_d0_f1:11:g_d0_f1:A:Those arguing against a policy tightening pointed to the fact that unemployment was
+12:317:24643:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:still above 4 percent and therefore inflationary pressures should be absent, despite the fact
+12:318:24736:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:that inflation, as measured by the consumer price index, had been edging up for some time.
+12:319:24826:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:In his prepared statement at the hearing, Governor Mitchell explained that the challenge
+12:320:24914:22:22:90:522:473:11:g_d0_f1:11:g_d0_f1:B:to policy at the end of 1965 was to “ease the economy onto a steady growth path at full
+12:321:25001:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:employment,” adding, “I believe this can be done with reasonably stable prices” (United
+12:322:25088:22:22:90:522:429:11:g_d0_f1:11:g_d0_f1:B:States Congress, 1966, p. 21). But, with the unemployment rate exceeding 4 percent, he
+12:323:25174:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:disagreed that a policy tightening was necessary. “[T]he evidence on prices does not, in my
+12:324:25265:22:23:90:522:385:11:g_d0_f1:11:g_d0_f1:B:view, now call for more monetary restraint than is already being applied” (p. 22). The
+12:325:25351:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:crux of his argument evolved around the definition of full employment: “Those who regard
+12:326:25439:22:22:90:522:340:11:g_d0_f1:11:g_d0_f1:B:4 percent unemployment ... as the approximate total of the frictionally unemployed ... may
+12:327:25529:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:feel that we have achieved our employment goals and that any further progress in reducing
+12:328:25618:22:22:90:522:296:11:g_d0_f1:11:g_d0_f1:B:unemployment cannot come from aggregate demand. ... I am not yet ready to agree that
+12:329:25702:22:22:89:476:274:11:g_d0_f1:11:g_d0_f1:B:there is no further room for compression of the unemployment rate” (pp. 22-23).
+12:330:25781:22:22:106:521:252:11:g_d0_f1:11:g_d0_f1:A:Indeed, Governor Maisel argued that 4 percent may have been too high a target for the
+12:331:25866:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:unemployment rate. He explained that he disagreed with the policy decision because he
+12:332:25951:22:23:90:522:208:11:g_d0_f1:11:g_d0_f1:B:felt that policy tightening was premature. In his prepared remarks, he noted, “Raising the
+12:333:26041:23:22:89:521:185:11:g_d0_f1:11:g_d0_f1:B:discount rate would be interpreted as a view by the Board that because full employment
+12:334:26127:22:22:90:522:163:11:g_d0_f1:11:g_d0_f1:B:increases inflationary problems, restrictive monetary policy must be invoked at its mere
+12:335:26215:22:22:89:521:141:11:g_d0_f1:11:g_d0_f1:B:approach” (p. 31). Asked about his views on full employment, in the light of the various
+12:336:26303:22:22:90:522:119:11:g_d0_f1:11:g_d0_f1:B:efforts to reduce frictional unemployment he replied, “My assumption is that the retraining
+12:337:26394:22:0:89:521:97:11:g_d0_f1:11:g_d0_f1:B:enables us to say that 4 percent unemployment was only an interim goal. ... As a result
+13:338:26483:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:4 percent might have been a proper goal five years ago. ... Now we need to think of these
+13:339:26572:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:retraining programs you have cited and see what our present goal should be. Should it be
+13:340:26660:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:3 percent or what?” (p. 181). The view that the interim goal for unemployment could
+13:341:26743:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:perhaps be adjusted downwards was also shared by the Council of Economic Advisers. As
+13:342:26828:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:noted in theEconomic Report of the Presidentpublished in early 1966, “The unemployment
+13:343:26914:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:rate has now virtually reached the interim target and is projected to fall below 4 percent
+13:344:27004:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:in 1966. There is strong evidence that the conditions originally set for lowering the target
+13:345:27096:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:are in fact being met, and that the economy can operate efficiently at lower unemployment
+13:346:27185:22:22:90:337:517:11:g_d0_f1:11:g_d0_f1:B:rates” (Council of Economic Advisers, 1966, p. 75).
+13:347:27236:22:22:106:521:495:11:g_d0_f1:11:g_d0_f1:A:This debate centered on estimates of the unemployment rate consistent with price sta-
+13:348:27321:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:bility and the proper policy response to movements in inflation and unemployment. Im-
+13:349:27406:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:portantly, the participants did not possess fundamentally divergent views of the inflation
+13:350:27496:22:22:89:521:429:11:g_d0_f1:11:g_d0_f1:B:process. Indeed, both sides used a relatively conventional understanding of the process of
+13:351:27586:22:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:inflation and the effect of “gaps” on inflation. In particular, policymakers clearly believed
+13:352:27679:22:23:89:521:385:11:g_d0_f1:11:g_d0_f7:B:that they had the power to control inflation through monetary policy. The 1966Economic
+13:353:27765:23:31:89:522:362:11:g_d0_f7:11:g_d0_f1:B:Report of the Presidentprovides a view of inflation that relates well to models used today:
+13:354:27856:31:22:117:495:331:11:g_d0_f1:11:g_d0_f1:?:As a first approximation, the classical law of supply and demand leads one
+13:355:27930:22:22:117:495:309:11:g_d0_f1:11:g_d0_f1:?:to expect that the change in the price level will depend mainly on the size of
+13:356:28008:22:22:117:495:287:11:g_d0_f1:11:g_d0_f1:?:the gap between capacity and actual output. The more production falls short
+13:357:28083:22:22:117:495:265:11:g_d0_f1:11:g_d0_f1:?:of potential—i.e., the greater is excess productive capacity—the further prices
+13:358:28162:22:22:117:495:243:11:g_d0_f1:11:g_d0_f1:?:should drop. Conversely, when demand outruns aggregate supply, the imbalance
+13:359:28238:22:27:117:222:221:11:g_d0_f1:11:g_d0_f1:?:should raise prices. ...
+13:360:28262:27:22:117:495:194:11:g_d0_f1:11:g_d0_f1:?:Expectations and attitudes also affect price changes. An economy accustomed
+13:361:28337:22:22:117:495:172:11:g_d0_f1:11:g_d0_f1:?:to price stability is less vulnerable to inflation” (Council of Economic Advisers,
+13:362:28419:22:31:117:198:150:11:g_d0_f1:11:g_d0_f1:?:1966, pp. 63-65).
+13:363:28436:31:16:89:518:119:11:g_d0_f1:8:g_d0_f3:B:Note the explicit recognition of the role of expectations in the determination of inflation.5
+13:364:28529:16:15:102:521:103:6:g_d0_f4:9:g_d0_f5:F:5To be sure, there are differences between the reasoning in the 1960s and modern models. One important
+13:365:28631:15:0:89:521:88:9:g_d0_f5:9:g_d0_f5:F:difference is that the models of the New Economics era typically implied a long-term trade-off between infla-
+14:366:28742:0:22:106:521:694:11:g_d0_f1:11:g_d0_f1:A:Even when inflation got noticeably higher in the second half of the 1960s, the mistaken
+14:367:28829:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:belief that the full-employment unemployment rate was very low continued to distort policy
+14:368:28919:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:decisions, exacerbating inflationary pressures. Although the rise in inflation during 1966
+14:369:29009:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:and thereafter vindicated Martin’s position, this evidence proved insufficient to stem the
+14:370:29099:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:tide toward greater fine-tuning with an emphasis on achieving what was believed to be full
+14:371:29189:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:employment. Later, Herbert Stein went so far as to call the belief that the natural rate of
+14:372:29280:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:unemployment was 4 percent “the most serious error of the Nixon CEA” (Stein, 1996, p.
+14:373:29365:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:19). As he explained, “fascinated by the idea of ‘the natural rate of unemployment,’ which
+14:374:29455:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:we thought to be 4 percent, we thought it necessary only to let the unemployment rate rise
+14:375:29545:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:slightly above that to hold down inflation” (pp. 19-20). The resulting policy actions would
+14:376:29636:22:22:90:522:473:11:g_d0_f1:11:g_d0_f1:B:have been the “optimum feasible path,” except that they built upon a fatally flawed view
+14:377:29724:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:of the productive capacity of the economy. Instead of restoring stability, they led to further
+14:378:29818:22:22:90:191:429:11:g_d0_f1:11:g_d0_f1:B:increases in inflation.
+14:379:29841:22:22:106:521:407:11:g_d0_f1:11:g_d0_f1:A:The inflation rate rose from below 2 percent in the early 1960s to over 5 percent by
+14:380:29925:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:1970.  Figure 1 shows the four-quarter average of the U.S. inflation rate, measured by
+14:381:30011:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:the GDP price deflator, from 1955 to 2003.  (Note that throughout this paper, unless
+14:382:30095:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:otherwise indicated, the figures show the four-quarter moving average of the inflation rate
+14:383:30186:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:to reduce the visual clutter caused by quarterly volatility in this series.) For comparison, the
+14:384:30282:22:22:89:521:296:11:g_d0_f1:11:g_d0_f1:B:horizontal line shows the 2 percent inflation target that we assume reflects the policymaker’s
+14:385:30376:22:22:90:522:274:11:g_d0_f1:11:g_d0_f1:B:price stability objective for our counterfactual simulations reported in later sections. The
+14:386:30468:22:22:89:521:252:11:g_d0_f1:11:g_d0_f1:B:inflation rate was around this level before the Great Inflation and returned once again to
+14:387:30558:22:22:90:522:230:11:g_d0_f1:11:g_d0_f1:B:this level in the last decade of our sample. Inflation expectations became unmoored during
+14:388:30648:22:23:89:521:208:11:g_d0_f1:11:g_d0_f1:B:the Great Inflation (see Levin and Taylor, 2009, for further discussion of the evidence on
+14:389:30738:23:22:90:522:185:11:g_d0_f1:11:g_d0_f1:B:inflation expectations) and only in the 1990s did they become anchored again.  By the
+14:390:30823:22:19:89:521:163:11:g_d0_f1:11:g_d0_f1:B:beginning of the 1980s, survey measures of long-run inflation expectations had risen to over
+14:391:30915:19:11:90:522:144:9:g_d0_f5:9:g_d0_f5:F:tion and unemployment, whereas modern models such as ours typically respect the natural rate hypothesis.
+14:392:31019:11:11:89:521:133:9:g_d0_f5:9:g_d0_f5:F:But this difference is not key for explaining the Great Inflation in our view. As explained by Modigliani
+14:393:31124:11:11:90:522:122:9:g_d0_f5:9:g_d0_f5:F:and Papademos (1975), in both types of models, there exists a rate of unemployment (the NAIRU) that is
+14:394:31226:11:11:89:521:111:9:g_d0_f5:9:g_d0_f5:F:consistent with the policymaker’s definition of reasonable price stability. In our model, this corresponds to
+14:395:31335:11:11:90:522:100:9:g_d0_f5:9:g_d0_f5:F:the natural rate of unemployment. What is critical is that in both types of models, misperceptions about
+14:396:31439:11:0:89:518:89:9:g_d0_f5:9:g_d0_f5:F:the NAIRU (or natural rate) have inflationary consequences under the optimal control approach to policy.
+15:397:31545:0:22:90:137:694:11:g_d0_f1:11:g_d0_f1:B:8 percent.
+15:398:31555:22:22:106:521:672:11:g_d0_f1:11:g_d0_f1:A:Under Arthur Burns, who became Fed Chairman in 1970, the Federal Reserve continued
+15:399:31637:22:22:89:521:650:11:g_d0_f1:11:g_d0_f1:B:the activist bent with even greater force (Hetzel, 1998, Orphanides, 2003). The high degree
+15:400:31728:22:22:90:522:628:11:g_d0_f1:11:g_d0_f1:B:of confidence that economists had regarding their ability to measure the capacity of the
+15:401:31816:22:22:89:521:606:11:g_d0_f1:11:g_d0_f1:B:economy and to gauge inflationary pressures is nicely illustrated by the staff briefing to the
+15:402:31910:22:23:90:522:584:11:g_d0_f1:11:g_d0_f1:B:Board of Governors from August 1970 presented by John Charles Partee (who become a
+15:403:31992:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:Governor in 1976): “there is substantial underutilization of resources, as evidenced by a
+15:404:32081:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:5 per cent unemployment rate and an operating rate in manufacturing estimated at well
+15:405:32166:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:under 80 per cent of capacity. In these circumstances, there is virtually no risk that economic
+15:406:32261:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:recovery over the year ahead would add to the inflationary problem through stimulation of
+15:407:32350:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:excess—or even robust—demand in product or labor markets” (Board of Governors, 1970,
+15:408:32434:22:22:90:122:451:11:g_d0_f1:11:g_d0_f1:B:p. 19).
+15:409:32441:22:22:106:521:429:11:g_d0_f1:11:g_d0_f1:A:In hisAnguishlecture, Burns admitted that the Federal Reserve was slow to recognize
+15:410:32524:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:the upward drift in the natural rate of unemployment, thus adding to inflation (Burns, 1979).
+15:411:32617:22:23:90:522:385:11:g_d0_f1:11:g_d0_f1:B:Figure 2 plots real-time estimates of the natural rate of unemployment and a retrospective
+15:412:32707:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:measure of the natural rate equal to the Congressional Budget Office (CBO) estimates
+15:413:32791:22:22:90:522:340:11:g_d0_f1:11:g_d0_f1:B:available at the time that this paper was written. The actual unemployment rate is plotted
+15:414:32881:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:as well. The real-time series for the natural rate is taken from Orphanides and Williams
+15:415:32969:22:22:90:522:296:11:g_d0_f1:11:g_d0_f1:B:(2005a), extended to include more recent data. These real-time estimates were constructed
+15:416:33058:22:22:89:521:274:11:g_d0_f1:11:g_d0_f1:B:drawing on a number of sources (see Orphanides and Williams, 2002, for details). As seen in
+15:417:33149:22:22:90:522:252:11:g_d0_f1:11:g_d0_f1:B:the figure, differences between real-time estimates of the natural rate of unemployment and
+15:418:33240:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:current retrospective estimates were especially large and persistent during the second half
+15:419:33331:22:23:90:522:208:11:g_d0_f1:11:g_d0_f1:B:of the 1960s and the 1970s. The mean absolute difference between the real-time and current
+15:420:33421:23:22:89:521:185:11:g_d0_f1:11:g_d0_f1:B:estimates was 1.2 percentage points over this period. But such natural rate “misperceptions”
+15:421:33513:22:22:90:522:163:11:g_d0_f1:11:g_d0_f1:B:are not merely a historical curiosity, with the mean absolute difference between the two
+15:422:33601:22:16:89:427:141:11:g_d0_f1:8:g_d0_f3:B:measures equaling 0.6 percentage points over the period of 1980-2003.6
+15:423:33671:16:15:102:521:125:6:g_d0_f4:9:g_d0_f5:F:6Note that this measure of natural rate misperceptions does not take into account uncertainty regarding
+15:424:33774:15:10:89:521:110:9:g_d0_f5:9:g_d0_f5:F:the CBO’s estimates of the natural rate. Instead, it merely measures changes in the estimates that reflect
+15:425:33880:10:0:90:301:100:9:g_d0_f5:9:g_d0_f5:F:changes in methodology and the effects of new data.
+16:426:33933:0:22:106:521:694:11:g_d0_f1:11:g_d0_f1:A:The overly optimistic estimates of the economy’s capacity was of particular importance
+16:427:34019:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:in light of the high value placed on achieving full employment relative to price stability.
+16:428:34110:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:Despite the upward trend in inflation since 1965, the Federal Reserve remained focused on
+16:429:34199:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:stabilizing real activity, with the hope that inflationary pressures would subside. At the
+16:430:34289:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:May 1975 meeting of the Federal Open Market Committee, the Board staff argued that
+16:431:34371:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:“there is such a large amount of slack in the economy now that real growth would have to
+16:432:34459:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:exceed our projection by a wide margin, and for an extended period, before excess aggregate
+16:433:34550:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:demand once again emerged as a significant problem.” (Board of Governors of the Federal
+16:434:34637:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:Reserve, 1975, p. 26). Furthermore, “Simulations using the econometric model suggested
+16:435:34723:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:that a considerably faster rate of expansion could be stimulated without having a significant
+16:436:34816:22:22:90:522:473:11:g_d0_f1:11:g_d0_f1:B:effect on the rate of increase in prices–that a considerably more rapid rate of increase in
+16:437:34907:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:real GNP would still be consistent with a further winding down of inflationary pressures”
+16:438:34996:22:22:90:522:429:11:g_d0_f1:11:g_d0_f1:B:(p. 27). The inflation rate in fact did come down from its 1975 peak of about 10 percent
+16:439:35084:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:over the next few years, but bottomed out above 5 percent, well in excess of conventional
+16:440:35173:22:23:90:200:385:11:g_d0_f1:11:g_d0_f1:B:views of price stability.
+16:441:35198:23:22:106:521:362:11:g_d0_f1:11:g_d0_f1:A:Monetary policy moved away from the policy activism of the earlier period and towards
+16:442:35283:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:an approach focused more on inflation stabilization only after Paul Volcker became Chair-
+16:443:35372:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:man in 1979. Volcker eschewed the fine-tuning approach and concentrated instead on the
+16:444:35458:22:22:89:521:296:11:g_d0_f1:11:g_d0_f1:B:goal of price stability, seeing this as the only way to effectively reanchor inflation expec-
+16:445:35551:22:22:90:522:274:11:g_d0_f1:11:g_d0_f1:B:tations and restore broader stability to the economy (Goodfriend and King, 2005, Hetzel,
+16:446:35639:22:22:89:521:252:11:g_d0_f1:11:g_d0_f1:B:2008b, Lindsey et al., 2005, Orphanides and Williams, 2005a). He explained his rationale
+16:447:35727:22:31:90:395:230:11:g_d0_f1:11:g_d0_f1:B:in his first Humphrey-Hawkins testimony on February 19, 1980.
+16:448:35788:31:23:117:495:199:11:g_d0_f1:11:g_d0_f1:?:In the past, at critical junctures for economic stabilization policy, we have usu-
+16:449:35870:23:22:117:495:176:11:g_d0_f1:11:g_d0_f1:?:ally been more preoccupied with the possibility of near-term weakness in eco-
+16:450:35947:22:22:117:495:154:11:g_d0_f1:11:g_d0_f1:?:nomic activity or other objectives than with the implications of our actions for
+16:451:36027:22:22:117:495:132:11:g_d0_f1:11:g_d0_f1:?:future inflation. To some degree, that has been true even during the long pe-
+16:452:36104:22:22:117:495:110:11:g_d0_f1:11:g_d0_f1:?:riod of expansion since 1975. As a consequence, fiscal and monetary policies
+16:453:36180:22:0:117:495:88:11:g_d0_f1:11:g_d0_f1:?:alike too often have been prematurely or excessively stimulative or insufficiently
+17:454:36264:0:22:117:495:694:11:g_d0_f1:11:g_d0_f1:?:restrictive. The result has been our now chronic inflationary problem, with a
+17:455:36341:22:22:117:495:672:11:g_d0_f1:11:g_d0_f1:?:growing conviction on the part of many that this process is likely to continue.
+17:456:36420:22:27:117:495:650:11:g_d0_f1:11:g_d0_f1:?:Anticipations of higher prices themselves help speed the inflationary process. ...
+17:457:36502:27:22:117:495:623:11:g_d0_f1:11:g_d0_f1:?:The broad objective of policy must be to break that ominous pattern. That
+17:458:36575:22:22:117:495:601:11:g_d0_f1:11:g_d0_f1:?:is why dealing with inflation has properly been elevated to a position of high
+17:459:36653:22:22:117:495:579:11:g_d0_f1:11:g_d0_f1:?:national priority. Success will require that policy be consistently and persistently
+17:460:36737:22:22:117:495:557:11:g_d0_f1:11:g_d0_f1:?:oriented to that end. Vacillation and procrastination, out of fears of recession
+17:461:36817:22:22:117:495:535:11:g_d0_f1:11:g_d0_f1:?:or otherwise, would run grave risks. Amid the present uncertainties, stimulative
+17:462:36897:22:22:117:495:513:11:g_d0_f1:11:g_d0_f1:?:policies could well be misdirected in the short run. More importantly, far from
+17:463:36976:22:23:117:495:491:11:g_d0_f1:11:g_d0_f1:?:assuring more growth over time, by aggravating the inflationary process and
+17:464:37051:23:26:117:448:468:11:g_d0_f1:11:g_d0_f1:?:psychology, they would threaten more instability and unemployment.
+17:465:37117:26:34:117:230:442:11:g_d0_f1:11:g_d0_f1:?:(Volcker, 1980, pp. 2-3)
+17:466:37141:34:33:89:413:408:14:g_d0_f2:14:g_d0_f2:C:3  An Estimated Model of the U.S. Economy
+17:467:37182:33:23:90:522:375:11:g_d0_f1:11:g_d0_f1:B:We now turn to the evaluation of alternative monetary policy strategies.  We use coun-
+17:468:37268:23:22:89:521:352:11:g_d0_f1:11:g_d0_f1:B:terfactual simulations of the estimated quarterly model of the U.S. economy described in
+17:469:37356:22:22:90:522:330:11:g_d0_f1:11:g_d0_f1:B:Orphanides and Williams (2008). The specification of the model is motivated by the recent
+17:470:37445:22:22:89:521:308:11:g_d0_f1:11:g_d0_f1:B:literature on micro-founded models incorporating some inertia in inflation and output (see
+17:471:37535:22:22:90:522:286:11:g_d0_f1:11:g_d0_f1:B:Woodford, 2003, for a fuller discussion). The main difference from other monetary policy
+17:472:37623:22:22:89:521:264:11:g_d0_f1:11:g_d0_f1:B:models is that the unemployment gap is substituted for the output gap in the model to
+17:473:37708:22:22:90:522:242:11:g_d0_f1:11:g_d0_f1:B:facilitate estimation using real-time data. The two concepts are closely related in practice
+17:474:37800:22:29:89:513:220:11:g_d0_f1:11:g_d0_f1:B:by Okun’s law, and the key properties of the model are largely unaffected by this choice.
+17:475:37889:29:30:90:185:191:12:g_d0_f2:12:g_d0_f2:C:3.1  The Model
+17:476:37903:30:22:89:521:161:11:g_d0_f1:11:g_d0_f1:B:The structural model consists of two equations that describe the behavior of the unemploy-
+17:477:37993:22:22:90:522:139:11:g_d0_f1:11:g_d0_f1:B:ment rate and the inflation rate and equations describing the time-series properties of the
+17:478:38084:22:22:89:521:117:11:g_d0_f1:11:g_d0_f1:B:exogenous shocks. To close the model, the short-term interest rate is set by the central
+17:479:38172:22:0:90:274:95:11:g_d0_f1:11:g_d0_f1:B:bank, as described in the next section.
+18:480:38213:0:22:106:521:694:11:g_d0_f1:11:g_d0_f1:A:The “IS curve” equation is motivated by the Euler equation for consumption with ad-
+18:481:38296:22:33:89:203:672:11:g_d0_f1:11:g_d0_f1:B:justment costs or habit:
+18:482:38320:33:33:177:522:639:11:g_d0_f8:11:g_d0_f1:A:ut=φuuet+1+ (1−φu)ut−1+αu(iet−πet+1−r∗) +vt,(1)
+18:483:38367:33:29:223:522:606:11:g_d0_f8:11:g_d0_f1:A:vt=ρvvt−1+ev,t,  ev∼N(0, σ2ev).(2)
+18:484:38401:29:22:89:522:577:11:g_d0_f1:11:g_d0_f1:B:Equation (1) relates the unemployment rate,ut, to the unemployment rate expected in the
+18:485:38488:22:22:89:521:555:11:g_d0_f1:11:g_d0_f1:B:next period, one lag of the unemployment rate, and the difference between the expected
+18:486:38574:22:22:90:522:533:11:g_d0_f1:11:g_d0_f1:B:ex ante real interest rate—equal to the difference between the expected nominal short-
+18:487:38660:22:22:89:521:511:11:g_d0_f1:11:g_d0_f1:B:term interest rate,iet, and the expected inflation rate in the following period,πet+1—and
+18:488:38749:22:22:89:522:489:11:g_d0_f1:11:g_d0_f1:B:the natural rate of interest,r∗. The unemployment rate is subject to a shock,vt, that is
+18:489:38837:22:22:89:521:467:11:g_d0_f1:11:g_d0_f1:B:assumed to follow an AR(1) process with innovation varianceσ2ev. The AR(1) specification
+18:490:38925:22:23:89:521:445:11:g_d0_f1:11:g_d0_f1:B:for the shock is based on the evidence of serial correlation in the residuals of the estimated
+18:491:39019:23:22:90:297:422:11:g_d0_f1:11:g_d0_f1:B:unemployment equation, as discussed later.
+18:492:39061:22:22:106:521:400:11:g_d0_f1:11:g_d0_f1:A:The “Phillips curve” equation is motivated by the New Keynesian Phillips curve with
+18:493:39144:22:33:89:142:378:11:g_d0_f1:11:g_d0_f1:B:indexation:
+18:494:39155:33:33:149:522:345:11:g_d0_f8:11:g_d0_f1:A:πt=φππet+1+ (1−φπ)πt−1+απ(ut−u∗t) +eπ,t,  eπ∼N(0, σ2eπ).(3)
+18:495:39214:33:22:89:521:312:11:g_d0_f1:11:g_d0_f1:B:It relates inflation,πt, (measured as the annualized percent change in the gross national
+18:496:39303:22:22:89:521:290:11:g_d0_f1:11:g_d0_f1:B:product (GNP) or gross domestic product (GDP) price index, depending on the period)
+18:497:39386:22:22:90:522:268:11:g_d0_f1:11:g_d0_f1:B:during quartertto lagged inflation, expected future inflation , and the difference between
+18:498:39476:22:22:89:522:246:11:g_d0_f1:11:g_d0_f1:B:the unemployment rate,ut, and the natural rate of unemployment,u∗t, during the current
+18:499:39562:22:23:89:521:224:11:g_d0_f1:11:g_d0_f1:B:quarter. The parameterφπmeasures the importance of expected inflation on the determi-
+18:500:39647:23:22:89:522:201:11:g_d0_f1:11:g_d0_f1:B:nation of inflation, while (1−φπ) captures the effects of inflation indexation. The “markup”
+18:501:39739:22:22:89:440:179:11:g_d0_f1:11:g_d0_f1:B:shock,eπ,t, is assumed to be a white noise disturbance with varianceσ2eπ.
+18:502:39812:22:22:106:521:157:11:g_d0_f1:11:g_d0_f1:A:We model the low frequency behavior of the natural rate of unemployment as an exoge-
+18:503:39896:22:33:89:349:135:11:g_d0_f1:11:g_d0_f1:B:nous AR(1) process independent of all other variables:
+18:504:39950:33:0:180:522:102:11:g_d0_f8:11:g_d0_f1:A:u∗t= (1−ρu∗) ̄u∗+ρu∗u∗t−1+eu∗,t,  eu∗∼N(0, σ2e∗u).(4)
+19:505:40005:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:We assume this process is stationary based on the finding using the standard augmented
+19:506:40091:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:Dickey-Fuller test that one can reject the null of nonstationarity of the unemployment rate
+19:507:40182:22:29:90:270:650:11:g_d0_f1:11:g_d0_f1:B:over 1950–2003 at the 5 percent level.
+19:508:40220:29:29:89:322:621:12:g_d0_f2:12:g_d0_f2:C:3.2  Model Estimation and Calibration
+19:509:40257:29:23:90:522:592:11:g_d0_f1:11:g_d0_f1:B:The IS curve and Phillips curve equations are estimated using forecasts from the Survey of
+19:510:40347:23:22:89:521:569:11:g_d0_f1:8:g_d0_f3:B:Professional Forecasters (SPF) as proxies for the expectations that appear in the equations.7
+19:511:40440:22:22:89:521:547:11:g_d0_f1:11:g_d0_f1:B:Expectations are assumed to be formed in the previous quarter; that is, the expectations
+19:512:40528:22:22:90:522:525:11:g_d0_f1:11:g_d0_f1:B:affecting inflation and unemployment in periodtare those collected in quartert−1. This
+19:513:40614:22:22:89:521:503:11:g_d0_f1:11:g_d0_f1:B:matches the informational structure in many theoretical models (see Woodford, 2003, and
+19:514:40701:22:22:90:522:481:11:g_d0_f1:11:g_d0_f1:B:Giannoni and Woodford, 2005). To match the inflation and unemployment data as closely
+19:515:40786:22:22:89:521:459:11:g_d0_f1:11:g_d0_f1:B:as possible with these forecasts, the first announced estimates of these series are used. These
+19:516:40881:22:22:90:522:437:11:g_d0_f1:11:g_d0_f1:B:are obtained from the Real-Time Dataset for Macroeconomists maintained by the Federal
+19:517:40966:22:23:89:521:415:11:g_d0_f1:11:g_d0_f1:B:Reserve Bank of Philadelphia. In estimating the inflation equation, the Congressional Bud-
+19:518:41056:23:22:90:522:392:11:g_d0_f1:11:g_d0_f1:B:get Office (2001) estimates of the natural rate of unemployment are used as proxies for the
+19:519:41147:22:22:89:521:370:11:g_d0_f1:11:g_d0_f1:B:true values over time. The data sample used for estimating the model runs from 1968:Q4
+19:520:41233:22:22:90:440:348:11:g_d0_f1:8:g_d0_f3:B:to 2004:Q2, where the starting date is the first sample point in the SPF.8
+19:521:41307:22:22:106:521:326:11:g_d0_f1:11:g_d0_f1:A:Estimation results are reported in equations (5) through (7), with standard errors in-
+19:522:41393:22:22:89:521:304:11:g_d0_f1:11:g_d0_f1:B:dicated in parentheses. The IS curve equation is estimated using least squares with AR(1)
+19:523:41482:22:22:90:522:282:11:g_d0_f1:11:g_d0_f1:B:residuals. Unrestricted estimation of the IS curve equation yields a point estimate forφuof
+19:524:41573:22:22:89:521:260:11:g_d0_f1:11:g_d0_f1:B:0.39, with a standard error of 0.15. This estimate is below the lower bound of 0.5 implied
+19:525:41663:22:22:90:521:238:11:g_d0_f1:11:g_d0_f1:B:by theory; however, the null hypothesis of a value of 0.5 is not rejected by the data.9Thus
+19:526:41754:22:16:89:522:216:11:g_d0_f1:11:g_d0_f1:B:the restrictionφu= 0.5 is imposed in estimating the remaining parameters of the equation.
+19:527:41843:16:15:102:521:200:6:g_d0_f4:9:g_d0_f5:F:7Specifically, the mean forecasts of the unemployment rate and the three-month Treasury bill rate are
+19:528:41944:15:11:89:521:185:9:g_d0_f5:9:g_d0_f5:F:used. The inflation forecasts are constructed using the annualized log difference of the GNP or GDP price
+19:529:42049:11:11:90:522:174:9:g_d0_f5:9:g_d0_f5:F:deflator, taken from the reported forecasts of real and nominal GNP or GDP. The survey is currently
+19:530:42148:11:11:89:521:163:9:g_d0_f5:9:g_d0_f5:F:maintained by the Federal Reserve Bank of Philadelphia. See Croushore (1993) and Croushore and Stark
+19:531:42248:11:7:90:273:152:9:g_d0_f5:9:g_d0_f5:F:(2001) for details on the survey methodology.
+19:532:42293:7:15:102:521:145:6:g_d0_f4:9:g_d0_f5:F:8Expectations for the Treasury bill rate were not collected in the first few years of the sample. When
+19:533:42395:15:11:89:521:130:9:g_d0_f5:9:g_d0_f5:F:these are not available, the expectations of the three-month rate implied by the slope of the term structure
+19:534:42503:11:7:90:267:119:9:g_d0_f5:9:g_d0_f5:F:under the expectations hypothesis are used.
+19:535:42546:7:15:102:521:112:6:g_d0_f4:9:g_d0_f5:F:9This finding is consistent with the results reported in Giannoni and Woodford (2005) who, in a similar
+19:536:42649:15:0:89:479:97:9:g_d0_f5:9:g_d0_f5:F:model, find that the corresponding coefficient is constrained to be at its theoretical lower bound.
+20:537:42750:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:Note that the estimated equation also includes a constant term (not shown) that provides
+20:538:42838:22:22:89:461:672:11:g_d0_f1:11:g_d0_f1:B:an estimate of the natural real interest rate, which is assumed to be constant:
+20:539:42917:22:14:176:329:650:11:g_d0_f8:11:g_d0_f1:A:ut= 0.5uet+1+ 0.5ut−1+ 0.056
+20:540:42945:14:0:305:330:636:8:g_d0_f3:8:g_d0_f3:?:(0.022)
+20:541:42952:0:51:335:522:650:11:g_d0_f1:11:g_d0_f1:A:(iet−πet+1−r∗) +vt,(5)
+20:542:42974:51:13:219:271:599:11:g_d0_f8:11:g_d0_f1:A:vt= 0.513
+20:543:42983:13:0:244:270:586:8:g_d0_f3:8:g_d0_f3:?:(0.085)
+20:544:42990:0:34:276:522:599:11:g_d0_f8:11:g_d0_f1:A:vt−1+ev,t,ˆσev= 0.30,(6)
+20:545:43014:34:14:157:308:565:11:g_d0_f8:11:g_d0_f1:?:πt= 0.5πet+1+ 0.5πt−1−0.294
+20:546:43041:14:0:283:309:551:8:g_d0_f3:8:g_d0_f3:?:(0.087)
+20:547:43048:0:33:314:522:565:11:g_d0_f1:11:g_d0_f1:A:(ut−u∗t) +eπ,t,ˆσeπ= 1.35.(7)
+20:548:43077:33:22:106:521:532:11:g_d0_f1:8:g_d0_f9:A:Unrestricted estimation of the Phillips curve equation yields a point estimate forφπ
+20:549:43161:22:22:89:522:510:11:g_d0_f1:11:g_d0_f1:B:of 0.51, just barely above the lower bound implied by theory.10For symmetry with the
+20:550:43245:22:22:89:522:488:11:g_d0_f1:11:g_d0_f1:B:treatment of the IS curve, the restrictionφπ= 0.5 is imposed and the remaining parameters
+20:551:43334:22:23:89:521:466:11:g_d0_f1:11:g_d0_f1:B:are estimated using ordinary least squares. The estimated residuals for this equation show
+20:552:43424:23:22:90:522:443:11:g_d0_f1:11:g_d0_f1:B:no signs of serial correlation in the price equation, consistent with the assumption of the
+20:553:43515:22:22:89:121:421:11:g_d0_f1:11:g_d0_f1:B:model.
+20:554:43521:22:22:106:521:399:11:g_d0_f1:11:g_d0_f1:A:We do not estimate the model of the natural rate of unemployment; instead, we set
+20:555:43602:22:22:89:521:377:11:g_d0_f1:11:g_d0_f1:B:the autocorrelation parameter,ρr∗, to 0.99 and set the unconditional mean to the sample
+20:556:43689:22:34:89:255:355:11:g_d0_f1:11:g_d0_f1:B:average of the unemployment rate.
+20:557:43722:34:33:90:232:321:14:g_d0_f2:14:g_d0_f2:C:4  Monetary Policy
+20:558:43740:33:22:89:521:288:11:g_d0_f1:11:g_d0_f1:B:We focus on two alternative approaches to monetary policy. The first is the optimal control
+20:559:43831:22:23:90:522:266:11:g_d0_f1:11:g_d0_f1:B:approach. The second is a simple monetary policy that is closely related to nominal income
+20:560:43921:23:22:89:521:243:11:g_d0_f1:11:g_d0_f1:B:growth targeting. In both cases, the policy instrument is the nominal short-term interest
+20:561:44010:22:22:90:522:221:11:g_d0_f1:11:g_d0_f1:B:rate. We assume that the central bank observes all variables from previous periods when
+20:562:44097:22:22:89:521:199:11:g_d0_f1:11:g_d0_f1:B:making the current-period policy decision.  We further assume that policy is conducted
+20:563:44183:22:14:90:184:177:11:g_d0_f1:11:g_d0_f1:B:under commitment.
+20:564:44200:14:14:98:521:163:6:g_d0_f4:9:g_d0_f5:F:10For comparison, Giannoni and Woodford (2005) find that the corresponding coefficient is constrained
+20:565:44301:14:0:89:260:149:9:g_d0_f5:9:g_d0_f5:F:to be at its theoretical lower bound of 0.5.
+21:566:44347:0:29:90:320:694:12:g_d0_f2:12:g_d0_f2:C:4.1  Optimal Control Monetary Policy
+21:567:44383:29:22:89:521:665:11:g_d0_f1:11:g_d0_f1:B:It is important to make clear from the start that we make no claim that the Federal Reserve
+21:568:44474:22:22:90:522:643:11:g_d0_f1:11:g_d0_f1:B:set policy according to the mechanical optimal control algorithms we describe in this paper
+21:569:44565:22:22:89:521:621:11:g_d0_f1:11:g_d0_f1:B:during the 1960s and 1970s. Indeed, the development of formal quantitative monetary policy
+21:570:44655:22:22:90:522:599:11:g_d0_f1:11:g_d0_f1:B:evaluation exercises was still in its infancy at that time. The Federal Reserve Board staff
+21:571:44746:22:23:89:521:577:11:g_d0_f1:11:g_d0_f1:B:first completed an ambitious project using optimal control in the mid-1970s (Kalchbrenner
+21:572:44835:23:22:90:522:554:11:g_d0_f1:11:g_d0_f1:B:and Tinsley, 1976). Although Federal Reserve Governor Henry Wallich (1976) stated that
+21:573:44921:22:22:89:521:532:11:g_d0_f1:11:g_d0_f1:B:“[t]he use of optimal control techniques in planning for economic stabilization is approaching
+21:574:45015:22:22:90:522:510:11:g_d0_f1:11:g_d0_f1:B:the policy stage,” in fact, this project was never integrated with the policy process at the
+21:575:45107:22:22:89:522:488:11:g_d0_f1:11:g_d0_f1:B:Federal Reserve during this period.11We would argue that the optimal control approach
+21:576:45192:22:22:89:521:466:11:g_d0_f1:11:g_d0_f1:B:resembles the spirit of fine-tuning practiced by policymakers at that time. In any case, our
+21:577:45284:22:22:90:522:444:11:g_d0_f1:11:g_d0_f1:B:goal is to evaluate the performance of such an optimal control strategy under the conditions
+21:578:45376:22:22:89:261:422:11:g_d0_f1:11:g_d0_f1:B:that existed in the 1960s and 1970s.
+21:579:45412:22:23:106:521:400:11:g_d0_f1:11:g_d0_f1:A:The optimal control approach stipulates that the policy instrument is chosen to minimize
+21:580:45500:23:22:89:521:377:11:g_d0_f1:11:g_d0_f1:B:the central bank’s loss function given the constraints imposed by the central bank’s model.
+21:581:45591:22:22:90:522:355:11:g_d0_f1:11:g_d0_f1:B:We construct the optimal control policy rule, as is typical in the literature, assuming that
+21:582:45683:22:22:89:521:333:11:g_d0_f1:11:g_d0_f1:B:the policymaker knows the true parameters of the structural model and assumes all agents
+21:583:45771:22:22:90:522:311:11:g_d0_f1:11:g_d0_f1:B:use rational expectations.  The parameters of the optimal control policy are computed
+21:584:45856:22:22:89:522:289:11:g_d0_f1:11:g_d0_f1:B:assuming the central bank knows the natural rate of unemployment.12Note that for the
+21:585:45940:22:22:89:521:267:11:g_d0_f1:11:g_d0_f1:B:optimal control policy, as well as the simple monetary policy rules described later, we use
+21:586:46031:22:22:90:522:245:11:g_d0_f1:11:g_d0_f1:B:lagged information in the determination of the interest rate, reflecting the lagged release of
+21:587:46125:22:22:89:113:223:11:g_d0_f1:11:g_d0_f1:B:data.
+21:588:46130:22:23:106:521:201:11:g_d0_f1:11:g_d0_f1:A:We assume that the central bank’s objective is to minimize a loss equal to the weighted
+21:589:46217:23:22:89:521:178:11:g_d0_f1:11:g_d0_f1:B:sum of the unconditional variances of the inflation rate, the difference between the unem-
+21:590:46307:22:16:90:522:156:11:g_d0_f1:11:g_d0_f1:B:ployment rate and the natural rate of unemployment, and the first-difference of the nominal
+21:591:46398:16:14:98:521:140:6:g_d0_f4:9:g_d0_f5:F:11Nonetheless, it is worth noting that the loss function in Kalchbrenner and Tinsley (1976) penalized
+21:592:46499:14:11:89:521:126:9:g_d0_f5:9:g_d0_f5:F:an unemployment rate above 4.8 percent and an inflation rate above 2.5 percent.  This target for the
+21:593:46599:11:11:90:522:115:9:g_d0_f5:9:g_d0_f5:F:unemployment rate is consistent with our analysis of real-time estimates of the natural rate of unemployment
+21:594:46707:11:11:89:521:104:9:g_d0_f5:9:g_d0_f5:F:used in the model simulations in this paper. The 2.5 percent inflation target is somewhat higher than the 2
+21:595:46814:11:7:90:334:93:9:g_d0_f5:9:g_d0_f5:F:percent inflation target we assume in our model simulations.
+21:596:46874:7:0:98:420:86:6:g_d0_f4:9:g_d0_f5:?:12See, for example, Sargent’s (2007) description of the optimal policy approach.
+22:597:46956:0:33:90:177:694:11:g_d0_f1:11:g_d0_f1:B:federal funds rate:
+22:598:46975:33:32:192:522:661:11:g_d0_f10:11:g_d0_f1:A:L=V ar(π−2) +λV ar(u−u∗) +νV ar(∆(i)),(8)
+22:599:47016:32:22:89:521:629:11:g_d0_f1:11:g_d0_f1:B:whereV ar(x) denotes the unconditional variance of variablex. We assume an inflation
+22:600:47100:22:22:89:521:607:11:g_d0_f1:11:g_d0_f1:B:target of 2 percent. In the following, we consider different values of the parameters of the
+22:601:47192:22:23:90:160:585:11:g_d0_f1:8:g_d0_f3:B:loss function.13
+22:602:47208:23:22:106:521:562:11:g_d0_f1:11:g_d0_f1:A:The optimal control policy is described by a set of equations that describes the first-
+22:603:47295:22:22:89:521:540:11:g_d0_f1:11:g_d0_f1:B:order optimality condition for monetary policy and the behavior of the Lagrange multipliers
+22:604:47386:22:22:90:522:518:11:g_d0_f1:11:g_d0_f1:B:associated with the constraints on the optimization problem implied by the structural equa-
+22:605:47477:22:22:89:521:496:11:g_d0_f1:11:g_d0_f1:B:tions of the model economy. Because we are interested in describing the setting of interest
+22:606:47568:22:22:90:522:474:11:g_d0_f1:11:g_d0_f1:B:rates in a potentially misspecified model, it is useful to represent the optimal control policy
+22:607:47663:22:22:89:521:452:11:g_d0_f1:11:g_d0_f1:B:by an equation that relates the policy instrument to macroeconomic variables, rather than
+22:608:47752:22:22:90:522:430:11:g_d0_f1:11:g_d0_f1:B:in terms of Lagrange multipliers that are model specific. There are infinitely many such
+22:609:47840:22:23:89:521:408:11:g_d0_f1:11:g_d0_f1:B:representations. In the following, we focus on one representation of the optimal control
+22:610:47928:23:22:90:522:385:11:g_d0_f1:11:g_d0_f1:B:policy, denoted as the “OC” policy. In the OC policy, the current interest rate depends
+22:611:48015:22:22:89:521:363:11:g_d0_f1:11:g_d0_f1:B:on three lags of the inflation rate, the difference between the unemployment rate and the
+22:612:48104:22:22:90:522:341:11:g_d0_f1:11:g_d0_f1:B:central bank’s estimate of the natural rate of unemployment, and the difference between the
+22:613:48195:22:22:89:521:319:11:g_d0_f1:11:g_d0_f1:B:nominal interest rate and the natural rate of interest. The OC representation yields a de-
+22:614:48285:22:22:90:522:297:11:g_d0_f1:11:g_d0_f1:B:terminate rational expectations equilibrium in our model. We find that including three lags
+22:615:48376:22:22:89:521:275:11:g_d0_f1:11:g_d0_f1:B:of these variables is sufficient to very closely mimic the optimal control outcome assuming
+22:616:48467:22:22:90:387:253:11:g_d0_f1:8:g_d0_f3:B:the central bank observes the natural rate of unemployment.14
+22:617:48528:22:22:106:521:231:11:g_d0_f1:11:g_d0_f1:A:As discussed previously, during much of the 1960s and 1970s, policymakers placed a
+22:618:48610:22:23:89:521:209:11:g_d0_f1:11:g_d0_f1:B:great deal of weight on the stabilization of real activity. We represent such preferences with
+22:619:48704:23:32:90:522:186:11:g_d0_f1:11:g_d0_f1:B:values ofλ= 16 andν= 1. In that case, the OC policy is given by the following equation:
+22:620:48791:32:17:225:522:154:11:g_d0_f8:11:g_d0_f1:A:it= 1.16it−1−0.05it−2−0.21it−3(9)
+22:621:48824:17:14:98:521:137:6:g_d0_f4:9:g_d0_f5:F:13Based on an Okun’s law type relationship, the variance of the unemployment gap is about one-fourth
+22:622:48924:14:11:89:521:123:9:g_d0_f5:9:g_d0_f5:F:that of the output gap, so a choice ofλ= 4 corresponds to equal weights on inflation and output gap
+22:623:49023:11:8:89:132:112:9:g_d0_f5:9:g_d0_f5:F:variability.
+22:624:49035:8:14:98:521:104:6:g_d0_f4:9:g_d0_f5:F:14In deriving the OC policy, we use the innovation processes from the estimated model and set the
+22:625:49132:14:11:89:521:90:9:g_d0_f5:9:g_d0_f5:F:innovation standard deviation of the natural rate of unemployment to 0.07. See Orphanides and Williams
+22:626:49234:11:0:90:161:79:9:g_d0_f5:9:g_d0_f5:F:(2009) for details.
+23:627:49255:0:28:228:382:694:11:g_d0_f1:8:g_d0_f3:?:+0.23πt−1−0.07πt−2+ 0.05πt−3
+23:628:49283:28:29:163:448:666:11:g_d0_f10:11:g_d0_f8:?:−3.70(ut−1−ˆu∗t−1) + 2.81(ut−2−ˆu∗t−1)−0.15(ut−3−ˆu∗t−1),
+23:629:49340:29:22:89:521:637:11:g_d0_f1:11:g_d0_f1:B:plus a constant reflecting the constant natural rate of interest and inflation target, where
+23:630:49432:22:22:90:454:615:11:g_d0_f1:11:g_d0_f1:B:ˆu∗tdenotes the central bank’s estimate of the natural rate of unemployment.
+23:631:49508:22:22:106:521:593:11:g_d0_f1:11:g_d0_f1:A:In the following, we also examine the performance of the OC policy derived for alter-
+23:632:49593:22:23:89:521:571:11:g_d0_f1:11:g_d0_f1:B:native values ofλ. The resulting OC policy forλ= 4 andν= 1 is given by the following
+23:633:49677:23:22:89:133:548:11:g_d0_f1:11:g_d0_f1:B:equation:
+23:634:49686:22:28:225:521:526:11:g_d0_f8:11:g_d0_f1:A:it= 1.17it−1+ 0.02it−2−0.28it−3(10)
+23:635:49721:28:29:228:382:498:11:g_d0_f1:8:g_d0_f3:?:+0.18πt−1+ 0.03πt−2+ 0.01πt−3
+23:636:49750:29:28:163:448:469:11:g_d0_f10:11:g_d0_f8:?:−2.47(ut−1−ˆu∗t−1) + 2.11(ut−2−ˆu∗t−1)−0.33(ut−3−ˆu∗t−1).
+23:637:49807:28:23:89:522:441:11:g_d0_f1:11:g_d0_f1:B:Compared to the OC policy derived withλ= 16, this policy is characterized by a stronger
+23:638:49894:23:22:89:521:418:11:g_d0_f1:11:g_d0_f1:B:response to inflation and a much smaller response to the unemployment rate. Finally, the
+23:639:49982:22:33:90:332:396:11:g_d0_f1:11:g_d0_f1:B:OC policy derived forλ= 0 andν= 1 is given by:
+23:640:50028:33:33:225:521:363:11:g_d0_f8:11:g_d0_f1:A:it= 1.12it−1+ 0.13it−2−0.34it−3(11)
+23:641:50063:33:28:228:382:330:11:g_d0_f1:8:g_d0_f3:?:+0.17πt−1+ 0.09πt−2−0.01πt−3
+23:642:50091:28:29:163:448:302:11:g_d0_f10:11:g_d0_f8:?:−1.63(ut−1−ˆu∗t−1) + 1.53(ut−2−ˆu∗t−1)−0.38(ut−3−ˆu∗t−1).
+23:643:50148:29:22:89:521:273:11:g_d0_f1:11:g_d0_f1:B:As expected, this policy is characterized by a stronger response to inflation and a much
+23:644:50236:22:29:90:480:251:11:g_d0_f1:11:g_d0_f1:B:smaller response to the unemployment rate than the OC policy derived forλ= 4.
+23:645:50313:29:29:89:343:222:12:g_d0_f2:12:g_d0_f2:C:4.2  Central Bank Natural Rate Estimates
+23:646:50353:29:23:90:522:193:11:g_d0_f1:11:g_d0_f1:B:As seen in these equations, a key input into the setting of OC policies is the central bank’s
+23:647:50446:23:22:89:521:170:11:g_d0_f1:11:g_d0_f1:B:estimate of the natural rate of unemployment. In deriving the OC policy, we assume that the
+23:648:50537:22:22:90:522:148:11:g_d0_f1:11:g_d0_f1:B:central bank knows the true structure of the economy, including the value of the natural
+23:649:50625:22:22:89:521:126:11:g_d0_f1:11:g_d0_f1:B:rate of unemployment.  In the model simulations, however, we also examine alternative
+23:650:50710:22:22:90:522:104:11:g_d0_f1:11:g_d0_f1:B:assumptions regarding the central bank’s knowledge of the natural rate. One alternative
+23:651:50797:22:0:89:521:82:11:g_d0_f1:11:g_d0_f1:B:is that the central bank’s estimates of the natural rate follow the historical pattern of the
+24:652:50892:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:real-time estimates reported in Figure 2. We refer to this case as “historical natural rate
+24:653:50983:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:misperceptions.” A second alternative is that the central bank estimates the natural rate
+24:654:51072:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:based on the Kalman filter applied to the Phillips curve equation for inflation. We refer to
+24:655:51164:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:this case as “Kalman filter estimates.” In each case, we assume that the true values of the
+24:656:51255:22:22:90:490:606:11:g_d0_f1:11:g_d0_f1:B:natural rate of unemployment follow the current CBO estimates shown in Figure 2.
+24:657:51335:22:23:106:521:584:11:g_d0_f1:11:g_d0_f1:A:In the case of Kalman filter estimation of the natural rate of unemployment, we as-
+24:658:51418:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:sume that the central bank uses an appropriate Kalman filter consistent with the data.
+24:659:51504:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:In particular, the central bank’s real-time Kalman filter estimate of the natural rate of
+24:660:51593:22:31:89:235:517:11:g_d0_f1:11:g_d0_f1:B:unemployment, ˆu∗t, is given by
+24:661:51624:31:31:231:521:486:11:g_d0_f1:11:g_d0_f1:A:ˆu∗t=a1ˆu∗t−1+a2(u∗t−eπ,t/απ),(12)
+24:662:51658:31:22:89:522:455:11:g_d0_f1:11:g_d0_f1:B:wherea1anda2are the Kalman gain parameters. The term within the parentheses is the
+24:663:51740:22:22:89:521:433:11:g_d0_f1:11:g_d0_f1:B:current-period “shock” to inflation that incorporates the effects of the transitory inflation
+24:664:51833:22:22:90:522:411:11:g_d0_f1:11:g_d0_f1:B:disturbance and the deviation of the natural rate of unemployment from its unconditional
+24:665:51921:22:22:89:521:389:11:g_d0_f1:11:g_d0_f1:B:mean, scaled in units of the unemployment rate. Note that the central bank only observes
+24:666:52009:22:22:90:412:367:11:g_d0_f1:11:g_d0_f1:B:this “surprise” and not the decomposition into its two components.
+24:667:52075:22:22:106:521:345:11:g_d0_f1:11:g_d0_f1:A:The optimal values of the gain parameters depend on the variances of the various shocks
+24:668:52162:22:23:89:521:323:11:g_d0_f1:11:g_d0_f1:B:in the model. Based on a calibrated Kalman filter model, we assume that the central bank
+24:669:52250:23:22:90:521:300:11:g_d0_f1:11:g_d0_f1:B:uses the following values:a1= 0.982 anda2= 0.008 (see Orphanides and Williams, 2009,
+24:670:52334:22:22:89:521:278:11:g_d0_f1:11:g_d0_f1:B:for the derivation of these values). We assume that the central bank starts the simulation
+24:671:52424:22:22:90:522:256:11:g_d0_f1:11:g_d0_f1:B:with the value of 4 percent, consistent with the evidence from real-time estimates reported
+24:672:52515:22:34:89:122:234:11:g_d0_f1:11:g_d0_f1:B:earlier.
+24:673:52523:34:33:90:385:200:14:g_d0_f2:14:g_d0_f2:C:5  Expectations and Simulation Methods
+24:674:52561:33:22:89:521:167:11:g_d0_f1:11:g_d0_f1:B:We assume that private agents and, in some cases, the central bank form expectations
+24:675:52645:22:22:90:522:145:11:g_d0_f1:11:g_d0_f1:B:using an estimated reduced-form forecasting model. Specifically, following Orphanides and
+24:676:52734:22:22:89:521:123:11:g_d0_f1:11:g_d0_f1:B:Williams (2005b), we posit that private agents engage in perpetual learning, that is, they
+24:677:52824:22:22:90:522:101:11:g_d0_f1:11:g_d0_f1:B:reestimate their forecasting model using a constant-gain least squares algorithm that weights
+24:678:52917:22:0:89:521:79:11:g_d0_f1:11:g_d0_f1:B:recent data more heavily than past data. (See Sargent, 1999; Cogley and Sargent, 2001; and
+25:679:53009:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:Evans and Honkapohja, 2001 for related treatments of learning.) This approach to modeling
+25:680:53098:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:learning allows for the possible presence of time variation in the economy, including the
+25:681:53187:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:natural rates of interest and unemployment.  It also implies that agents’ estimates are
+25:682:53274:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:always subject to sampling variation, that is, the estimates do not eventually converge to
+25:683:53364:22:22:90:148:606:11:g_d0_f1:11:g_d0_f1:B:fixed values.
+25:684:53377:22:23:106:521:584:11:g_d0_f1:11:g_d0_f1:A:Private agents forecast inflation, the unemployment rate, and the short-term interest
+25:685:53462:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:rate using an unrestricted vector autoregression (VAR) model containing three lags of these
+25:686:53553:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:three variables and a constant. Note that we assume that private agents do not observe or
+25:687:53642:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:estimate the natural rate of unemployment directly in forming expectations. The effects of
+25:688:53732:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:time variation in the natural rate on forecasts are reflected in the forecasting VAR by the
+25:689:53823:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:lags of the interest rate, inflation rate, and unemployment rate. As discussed in Orphanides
+25:690:53915:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:and Williams (2008), this VAR forecasting model provides accurate forecasts in model
+25:691:53999:22:22:89:146:429:11:g_d0_f1:11:g_d0_f1:B:simulations.
+25:692:54011:22:22:106:521:407:11:g_d0_f1:11:g_d0_f1:A:At the end of each period, agents update their estimates of their forecasting model
+25:693:54094:22:23:89:522:385:11:g_d0_f1:11:g_d0_f1:B:using data through the current period. LetYtdenote the 1×3 vector consisting of the
+25:694:54177:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:inflation rate, the unemployment rate, and the interest rate, each measured at timet:
+25:695:54262:22:22:89:522:340:11:g_d0_f8:11:g_d0_f1:B:Yt= (πt, ut, it). Further, letXtbe the 10×1 vector of regressors in the forecast model:
+25:696:54349:22:22:89:521:318:11:g_d0_f8:11:g_d0_f1:B:Xt= (1, πt−1, ut−1, it−1, . . . , πt−3, ut−3, it−3). Also, letctbe the 10×3 vector of coefficients
+25:697:54447:22:22:89:521:296:11:g_d0_f1:11:g_d0_f1:B:of the forecasting model. Using data through periodt, the coefficients of the forecasting
+25:698:54536:22:30:89:327:274:11:g_d0_f1:11:g_d0_f1:B:model can be written in recursive form as follows:
+25:699:54586:30:25:218:521:244:11:g_d0_f8:11:g_d0_f1:A:ct=ct−1+κR−1tXt(Yt−X′tct−1),(13)
+25:700:54618:25:30:214:521:219:11:g_d0_f8:11:g_d0_f1:A:Rt=Rt−1+κ(XtX′t−Rt−1),(14)
+25:701:54644:30:22:89:521:189:11:g_d0_f1:11:g_d0_f1:B:whereκis the gain. Agents construct the multiperiod forecasts that appear in the inflation
+25:702:54734:22:22:89:420:167:11:g_d0_f1:11:g_d0_f1:B:and unemployment equations in the model using the estimated VAR.
+25:703:54798:22:22:106:521:145:11:g_d0_f1:11:g_d0_f1:A:The matrixRtmay not be full rank at times.  To circumvent this problem, in each
+25:704:54877:22:22:89:521:123:11:g_d0_f1:11:g_d0_f1:B:period of the model simulations, we check the rank ofRt. If it is less than full rank, we
+25:705:54966:22:22:89:521:101:11:g_d0_f1:11:g_d0_f1:B:assume that agents apply a standard Ridge regression (Hoerl and Kennard, 1970), where
+25:706:55051:22:0:90:458:79:11:g_d0_f8:11:g_d0_f1:B:Rtis replaced byRt+ 0.00001∗I(10) andI(10) is a 10×10 identity matrix.
+26:707:55123:0:29:90:299:694:12:g_d0_f2:12:g_d0_f2:C:5.1  Calibrating the Learning Rate
+26:708:55157:29:22:89:521:665:11:g_d0_f1:11:g_d0_f1:B:A key parameter in the learning model is the private-agent updating parameter,κ. Esti-
+26:709:55243:22:22:89:521:643:11:g_d0_f1:11:g_d0_f1:B:mates of this parameter tend to be imprecise and sensitive to model specification, but tend
+26:710:55334:22:34:90:492:621:11:g_d0_f1:11:g_d0_f1:B:to lie between 0 and 0.04.15We take 0.02 to be a reasonable benchmark value forκ.
+26:711:55415:34:33:89:245:587:14:g_d0_f2:14:g_d0_f2:C:6  Model Simulations
+26:712:55435:33:22:90:522:554:11:g_d0_f1:11:g_d0_f1:B:We examine a set of alternative counterfactual simulations to investigate the implications
+26:713:55525:22:22:89:521:532:11:g_d0_f1:11:g_d0_f1:B:of alternative monetary policy frameworks on macroeconomic developments over the past
+26:714:55610:22:23:90:522:510:11:g_d0_f1:11:g_d0_f1:B:40 years. We start our simulations in the first quarter of 1966, which corresponds to what
+26:715:55700:23:22:89:521:487:11:g_d0_f1:11:g_d0_f1:B:we and many observers consider to be the beginning of the Great Inflation in the United
+26:716:55787:22:29:90:122:465:11:g_d0_f1:11:g_d0_f1:B:States.
+26:717:55794:29:29:89:223:436:12:g_d0_f2:12:g_d0_f2:C:6.1  Initial Conditions
+26:718:55817:29:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:The state variables of the model economy with learning are as follows: the current and
+26:719:55903:22:22:89:521:385:11:g_d0_f1:11:g_d0_f1:B:lagged values of the inflation rate, the federal funds rate, the unemployment rate, the true
+26:720:55995:22:22:90:522:363:11:g_d0_f1:11:g_d0_f1:B:natural rate of unemployment, the real-time estimate of the natural rate, the shocks to the
+26:721:56086:22:22:89:521:341:11:g_d0_f1:11:g_d0_f1:B:structural equations, and the matricesCandRfor the forecasting model. We initialize the
+26:722:56173:22:22:89:521:319:11:g_d0_f8:11:g_d0_f1:B:CandRmatrices using the values implied by the reduced-form solution of the model under
+26:723:56259:22:22:89:521:297:11:g_d0_f1:11:g_d0_f1:B:rational expectations for the stipulated monetary policy rule. In so doing, we are implicitly
+26:724:56352:22:22:90:522:275:11:g_d0_f1:11:g_d0_f1:B:assuming that the initial conditions for the agents’ learning model are consistent with the
+26:725:56443:22:23:89:521:253:11:g_d0_f1:11:g_d0_f1:B:policy rule in place. That is, we assume that at the start of the simulation, expectations are
+26:726:56537:23:22:90:522:230:11:g_d0_f1:11:g_d0_f1:B:well aligned with the monetary policy regime under consideration. Over time, expectations
+26:727:56626:22:22:89:521:208:11:g_d0_f1:11:g_d0_f1:B:then evolve as described above. This assumption implies that the initial conditions for these
+26:728:56719:22:22:90:522:186:11:g_d0_f1:11:g_d0_f1:B:state variables are different across the counterfactual simulations. As a result, the simulated
+26:729:56814:22:22:89:390:164:11:g_d0_f1:11:g_d0_f1:B:paths will often differ significantly from the historical patterns.
+26:730:56881:22:22:106:521:142:11:g_d0_f1:11:g_d0_f1:A:To compute the history of equation residuals, we first compute the implied forecasts
+26:731:56965:22:22:89:521:120:11:g_d0_f1:11:g_d0_f1:B:from our forecasting model of inflation, the unemployment rate, and the federal funds rate
+26:732:57055:22:15:90:522:98:11:g_d0_f1:11:g_d0_f1:B:over the period 1966–2003.  We treat the forecasts generated by the learning model as
+26:733:57140:15:0:98:517:83:6:g_d0_f4:9:g_d0_f5:F:15See Sheridan (2003), Orphanides and Williams (2005a), Branch and Evans (2006), and Milani (2007).
+27:734:57241:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:the true data for agents’ expectations and then compute tracking residuals, that is, the
+27:735:57329:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:values of the historical residuals for the equations for the unemployment rate, the inflation
+27:736:57422:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:rate, and the natural rate of unemployment. Thus, given these residuals and the historical
+27:737:57512:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:path for the nominal interest rate, the model’s predictions will exactly match the historical
+27:738:57605:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:paths for all endogenous variables. We then conduct counterfactual experiments in which
+27:739:57692:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:we modify assumptions regarding monetary policy, but do not change the paths for the
+27:740:57776:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:equation residuals for unemployment, inflation, and the natural rate of unemployment,
+27:741:57861:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:which we assume are exogenous. Each counterfactual simulation starts in the first quarter
+27:742:57950:22:34:90:314:517:11:g_d0_f1:11:g_d0_f1:B:of 1966 and ends in the fourth quarter of 2003.
+27:743:57997:34:33:89:401:483:14:g_d0_f2:14:g_d0_f2:C:7  Performance of Optimal Control Policies
+27:744:58039:33:22:90:522:450:11:g_d0_f1:11:g_d0_f1:B:If the Federal Reserve had accurate estimates of the natural rate of unemployment, then
+27:745:58126:22:22:89:521:428:11:g_d0_f1:11:g_d0_f1:B:the OC policy derived assuming a moderately large weight on unemployment stabilization
+27:746:58212:22:22:90:522:406:11:g_d0_f1:11:g_d0_f1:B:would have avoided the Great Inflation. Figure 3 shows the simulated paths for key variables
+27:747:58304:22:23:89:521:384:11:g_d0_f1:11:g_d0_f1:B:assuming that the Fed follows the OC policy derived underλ= 16 andν= 1.  The
+27:748:58380:23:22:89:521:361:11:g_d0_f1:11:g_d0_f1:B:left column of the figure shows the outcomes assuming the Fed knew the true values of
+27:749:58465:22:22:90:522:339:11:g_d0_f1:11:g_d0_f1:B:the natural rate of unemployment.  Inflation would have been somewhat volatile during
+27:750:58550:22:22:89:521:317:11:g_d0_f1:11:g_d0_f1:B:the 1970s, reflecting the effects of the large shocks hitting the economy at the time, but
+27:751:58640:22:22:90:522:295:11:g_d0_f1:11:g_d0_f1:B:the deviation of the four-quarter inflation rate from target would not have exceeded three
+27:752:58730:22:22:89:268:273:11:g_d0_f1:11:g_d0_f1:B:percentage points during that period.
+27:753:58767:22:22:106:521:251:11:g_d0_f1:11:g_d0_f1:A:In the absence of natural rate misperceptions, inflation expectations would have re-
+27:754:58851:22:22:89:521:229:11:g_d0_f1:11:g_d0_f1:B:mained reasonably contained during the 1970s. The middle left panel shows the simulated
+27:755:58938:22:22:90:522:207:11:g_d0_f1:11:g_d0_f1:B:four-quarter-ahead inflation expectations under the OC policy. For comparison, the fig-
+27:756:59025:22:23:89:521:185:11:g_d0_f1:11:g_d0_f1:B:ure also shows the corresponding SPF inflation forecasts, which rose dramatically in the
+27:757:59113:23:22:90:521:162:11:g_d0_f1:11:g_d0_f1:B:1970s.16As seen in Figure 3, the OC policy acts to raise the unemployment rate up to the
+27:758:59201:22:22:89:521:140:11:g_d0_f1:11:g_d0_f1:B:natural rate by 1967 and holds the unemployment rate moderately above the natural rate
+27:759:59287:22:16:90:522:118:11:g_d0_f1:11:g_d0_f1:B:through most of the 1970s, offsetting the inflationary effects of the supply shocks of that
+27:760:59378:16:15:98:521:102:6:g_d0_f4:9:g_d0_f5:F:16For this figure and those that follow, the SPF three-quarter-ahead inflation forecast is substituted for
+27:761:59484:15:0:89:449:87:9:g_d0_f5:9:g_d0_f5:F:the four-quarter-ahead forecast in the periods when the latter is missing from the survey.
+28:762:59576:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:period. These policy actions help stabilize inflation and inflation expectations and avoid
+28:763:59666:22:22:89:378:672:11:g_d0_f1:11:g_d0_f1:B:the need of a disinflationary policy at the end of the decade.
+28:764:59728:22:22:106:521:650:11:g_d0_f1:11:g_d0_f1:A:According to our model simulation, this same OC policy performs dismally in the face
+28:765:59812:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:of the historical natural rate misperceptions, leading to a Great Inflation outcome in the
+28:766:59902:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:1970s. The panels in the right column of Figure 3 show the outcomes when the Fed uses
+28:767:59987:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:the historical real-time natural rate estimates. The simulated path of inflation during the
+28:768:60078:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:1970s is similar to that seen in the actual data.  But, unlike the actual data, the high
+28:769:60166:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:volatility of inflation continues through to the end of the sample. Owing to the low real-
+28:770:60256:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:time estimate of the natural rate of unemployment, in this simulation the Fed does not
+28:771:60342:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:act to raise unemployment during the latter part of the 1960s and early 1970s, as seen in
+28:772:60431:22:22:90:522:473:11:g_d0_f1:11:g_d0_f1:B:the right panel of Figure 3. This extended period of easy policy leads to a sustained rise
+28:773:60521:22:22:89:521:451:11:g_d0_f1:11:g_d0_f1:B:in inflation and inflation expectations. By the time the supply shocks of the 1970s strike,
+28:774:60612:22:22:90:492:429:11:g_d0_f1:11:g_d0_f1:B:inflation expectations are completely untethered from the assumed 2 percent target.
+28:775:60695:22:22:106:521:407:11:g_d0_f1:11:g_d0_f1:A:Could the high inflation of the late 1970s have been mitigated by following an optimal
+28:776:60781:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:control policy predicated on placing a much lower weight on unemployment stabilization?
+28:777:60868:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:Orphanides and Williams (2008, 2009) show that “robust optimal control” policies derived
+28:778:60956:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:assuming downward biased values ofλandνcan be robust to imperfect knowledge of
+28:779:61034:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:the type studied in the present paper. We examine the effectiveness of such an approach
+28:780:61121:22:22:90:522:296:11:g_d0_f1:11:g_d0_f1:B:by evaluating the performance of the OC policies derived assuming alternative weights on
+28:781:61209:22:22:89:329:274:11:g_d0_f1:11:g_d0_f1:B:unemployment in the central bank loss of 4 and 0.
+28:782:61258:22:22:106:522:252:11:g_d0_f1:11:g_d0_f1:A:The OC policy derived assumingλ= 4 avoids the worst of the Great Inflation during
+28:783:61339:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:the 1970s, even with natural rate misperceptions. The left column in Figure 4 shows the
+28:784:61426:22:23:90:522:208:11:g_d0_f1:11:g_d0_f1:B:simulation results when the natural rate is known by the Fed. The results are similar to the
+28:785:61518:23:22:89:522:185:11:g_d0_f1:11:g_d0_f1:B:case of the OC policy derived assumingλ= 16. In the case of natural rate misperceptions,
+28:786:61606:22:22:89:521:163:11:g_d0_f1:11:g_d0_f1:B:monetary policy is too easy during the late 1960s and early 1970s and, as a result, inflation
+28:787:61699:22:22:90:522:141:11:g_d0_f1:11:g_d0_f1:B:and inflation expectations trend upwards. But, the rise in inflation during this period is
+28:788:61789:22:22:89:289:119:11:g_d0_f1:11:g_d0_f1:B:not as extreme as seen in the actual data.
+28:789:61831:22:0:106:521:97:11:g_d0_f1:11:g_d0_f1:A:In the absence of natural rate misperceptions, the OC policy that places no weight on
+29:790:61918:0:22:90:521:694:11:g_d0_f1:11:g_d0_f1:B:unemployment stabilization,λ= 0, is effective at stabilizing inflation during the 1970s (and
+29:791:62010:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:indeed for the entire sample period). The left column panels in Figure 5 show the simulated
+29:792:62101:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:paths of inflation, inflation expectations, and unemployment under this policy in the case
+29:793:62191:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:of no natural rate misperceptions. Under this policy, fluctuations in inflation and inflation
+29:794:62284:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:expectations are far more muted than under the OC policy derived assumingλ= 4 or 16.
+29:795:62368:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:This greater stabilization of inflation comes at the cost of only somewhat greater variability
+29:796:62462:23:22:90:217:561:11:g_d0_f1:11:g_d0_f1:B:in the unemployment rate.
+29:797:62487:22:22:106:521:539:11:g_d0_f1:11:g_d0_f1:A:With the historical natural rate misperceptions, the OC policy derived with a zero
+29:798:62569:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:weight placed on the stabilization of unemployment in the loss function avoids the Great
+29:799:62657:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:Inflation, but still allows some inflation volatility to develop. The panels in the right column
+29:800:62753:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:of Figure 5 show the simulated paths of inflation, inflation expectations, and unemployment
+29:801:62844:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:under this policy in the case of historical natural rate misperceptions. Given the incorrect
+29:802:62936:22:22:89:521:429:11:g_d0_f1:11:g_d0_f1:B:low estimate of the natural rate of unemployment at the start of the simulation, this policy
+29:803:63028:22:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:keeps unemployment too low for too long. As a result, in the simulation, the inflation rate
+29:804:63119:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:rises and inflation expectations become untethered. Note that the policy error does not
+29:805:63206:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:stem from a concern for stabilizing unemployment for its own good, but instead reflects
+29:806:63293:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:the importance of deviations of unemployment from its natural rate for the future path of
+29:807:63382:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:inflation. With inflation reaching 6 percent by mid-decade, policy acts aggressively to bring
+29:808:63475:22:22:89:512:296:11:g_d0_f1:11:g_d0_f1:B:inflation back down to target by the end of the 1970s and a major stagflation is averted.
+29:809:63564:22:22:106:521:274:11:g_d0_f1:11:g_d0_f1:A:Table 1 quantifies the performance of the various OC policies during the late 1960s and
+29:810:63651:22:22:89:521:252:11:g_d0_f1:11:g_d0_f1:B:1970s. The first three columns report the root mean squared differences of the inflation
+29:811:63739:22:22:90:522:230:11:g_d0_f1:11:g_d0_f1:B:rate from its target value of 2 percent, the unemployment rate from it natural rate, and the
+29:812:63831:22:23:89:521:208:11:g_d0_f1:11:g_d0_f1:B:first difference of the short-term interest rate, respectively. The final three columns report
+29:813:63925:23:22:90:522:185:11:g_d0_f1:11:g_d0_f1:B:the implied values of the central bank loss for three different values ofλ, the weight placed
+29:814:64018:22:22:89:521:163:11:g_d0_f1:11:g_d0_f1:B:on the squared deviations of the unemployment rate from the natural rate. Table 2 reports
+29:815:64107:22:22:90:365:141:11:g_d0_f1:11:g_d0_f1:B:the same set of statistics for the full sample of 1966-2003.
+29:816:64167:22:22:106:521:119:11:g_d0_f1:11:g_d0_f1:A:The first row of Table 1 reports key summary statistics for the actual data over the
+29:817:64251:22:0:89:521:97:11:g_d0_f1:11:g_d0_f1:B:period of the Great Inflation from 1966 to 1979. Corresponding results for the full sample are
+30:818:64347:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:reported in Table 2. Rows 2-4 of each table report the simulated outcomes under OC policies
+30:819:64438:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:in the case of no natural rate misperceptions. All three of these policies yield fluctuations
+30:820:64531:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:in inflation and the unemployment rate over 1966-1979 that are broadly comparable to
+30:821:64615:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:those experienced during the period of the Great Moderation and nothing like the horrible
+30:822:64704:22:22:90:390:606:11:g_d0_f1:11:g_d0_f1:B:performance that actually occurred during the Great Inflation.
+30:823:64766:22:23:106:521:584:11:g_d0_f1:11:g_d0_f1:A:The magnitude of simulated inflation fluctuations under the OC policies with histori-
+30:824:64851:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:cal natural rate misperceptions depends crucially on the weight placed on unemployment
+30:825:64937:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:stabilization in the objective function. Rows 5-7 of Tables 1 and 2 report the results for
+30:826:65027:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:OC policies with historical natural rate misperceptions. The policy designed assuming no
+30:827:65115:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:weight on unemployment stabilization performs the best of the three, even if the true value
+30:828:65206:22:22:89:522:473:11:g_d0_f1:11:g_d0_f1:B:ofλis 16. The OC policy designed forλ= 16 yields much larger central bank losses over
+30:829:65291:22:22:89:144:451:11:g_d0_f1:11:g_d0_f1:B:this period.
+30:830:65303:22:22:106:521:429:11:g_d0_f1:11:g_d0_f1:A:Interestingly, given the presence of natural rate misperceptions, the OC policies derived
+30:831:65392:22:22:89:521:407:11:g_d0_f1:11:g_d0_f1:B:with a nonnegligible weight on stabilizing unemployment yield much greater inflation vari-
+30:832:65482:22:23:90:522:385:11:g_d0_f1:11:g_d0_f1:B:ability in the final 20 years of our sample than is seen in the data. Although these policies
+30:833:65575:23:22:89:521:362:11:g_d0_f1:11:g_d0_f1:B:describe the Great Inflation period reasonably well, they do not match the experience since
+30:834:65666:22:22:90:522:340:11:g_d0_f1:11:g_d0_f1:B:the disinflation of the early 1980s. In contrast, the OC policy derived assuming no weight
+30:835:65756:22:22:89:521:318:11:g_d0_f1:11:g_d0_f1:B:on unemployment stabilization does a much better job of describing inflation during the
+30:836:65843:22:22:90:210:296:11:g_d0_f1:11:g_d0_f1:B:latter part of the sample.
+30:837:65869:22:22:106:521:274:11:g_d0_f1:11:g_d0_f1:A:The performance of OC policies is significantly improved if the central bank uses an
+30:838:65953:22:22:89:521:252:11:g_d0_f1:11:g_d0_f1:B:appropriate Kalman filter to estimate the natural rate of unemployment, rather than using
+30:839:66042:22:22:90:522:230:11:g_d0_f1:11:g_d0_f1:B:the historical estimates.  Rows 8-10 of Tables 1 and 2 report the summary statistics in
+30:840:66129:22:23:89:521:208:11:g_d0_f1:11:g_d0_f1:B:the case of Kalman filter estimation of natural rates. The simulated outcomes lie between
+30:841:66218:23:22:90:522:185:11:g_d0_f1:11:g_d0_f1:B:those of the two cases previously considered of no misperceptions and historical mispercep-
+30:842:66309:22:22:89:521:163:11:g_d0_f1:11:g_d0_f1:B:tions. As in the case of historical misperceptions, the OC policy designed for no weight
+30:843:66397:22:22:90:522:141:11:g_d0_f1:11:g_d0_f1:B:on unemployment stabilization performs the best. We also experimented with alternative
+30:844:66483:22:22:89:521:119:11:g_d0_f1:11:g_d0_f1:B:values of the Kalman gain (not shown). A higher gain applied to the inflation surprise,
+30:845:66570:22:0:90:522:97:11:g_d0_f8:11:g_d0_f1:B:a2, implies a quicker adjustment of the central bank’s estimate of the natural rate from 4
+31:846:66662:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:percent toward its true value of roughly 6 percent early in the sample. As a result, the OC
+31:847:66753:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:policies using higher gains perform somewhat better than the results reported in Tables 1
+31:848:66842:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:and 2. Conversely, a lower value ofa2than our benchmark value implies worse performance
+31:849:66929:22:22:89:248:628:11:g_d0_f1:11:g_d0_f1:B:during this period than reported.
+31:850:66962:22:22:106:521:606:11:g_d0_f1:11:g_d0_f1:A:In summary, this analysis suggests that a benevolent policymaker striving to achieve
+31:851:67046:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:full employment and price stability using modern optimal control methods could well have
+31:852:67134:23:22:90:522:561:11:g_d0_f1:11:g_d0_f1:B:made policy decisions during the 1960s and 1970s that would have led to unmoored inflation
+31:853:67224:22:22:89:521:539:11:g_d0_f1:11:g_d0_f1:B:expectations and highly volatile inflation. The magnitude of these problems depends on the
+31:854:67314:22:22:90:522:517:11:g_d0_f1:11:g_d0_f1:B:weight that the policymaker places on the stabilization of real activity. Only if that weight
+31:855:67407:22:22:89:521:495:11:g_d0_f1:11:g_d0_f1:B:is relatively small or if the policymaker has excellent information about the economy does
+31:856:67497:22:22:90:522:473:11:g_d0_f1:11:g_d0_f1:B:the optimal control policy perform reasonably well in terms of stabilizing inflation and
+31:857:67585:22:35:89:162:451:11:g_d0_f1:11:g_d0_f1:B:unemployment.
+31:858:67598:35:32:90:375:416:14:g_d0_f2:14:g_d0_f2:C:8  Performance of a Simple Policy Rule
+31:859:67636:32:23:89:521:384:11:g_d0_f1:11:g_d0_f1:B:We now examine the performance of an alternative monetary policy rule that has proven
+31:860:67721:23:22:90:522:361:11:g_d0_f1:11:g_d0_f1:B:to be robust to various forms of model uncertainty in other contexts (see Tetlow, 2006, and
+31:861:67812:22:22:89:521:339:11:g_d0_f1:11:g_d0_f1:B:Orphanides and Williams, 2008, 2009). The rule was proposed by Orphanides and Williams
+31:862:67898:22:33:90:217:317:11:g_d0_f1:11:g_d0_f1:B:(2007) and takes the form:
+31:863:67924:33:33:198:521:284:11:g_d0_f8:11:g_d0_f1:A:it=it−1+θπ( ̄πet+3−π∗) +θ∆u(ut−1−ut−2).(15)
+31:864:67967:33:22:89:521:251:11:g_d0_f1:11:g_d0_f1:B:A key feature of this policy is the absence of any measures of natural rates in the determi-
+31:865:68059:22:22:90:522:229:11:g_d0_f1:11:g_d0_f1:B:nation of policy. This policy rule is related to the elastic price standard proposed by Hall
+31:866:68151:22:22:89:521:207:11:g_d0_f1:11:g_d0_f1:B:(1984), whereby the central bank aims to maintain a stipulated relationship between the
+31:867:68238:22:22:90:522:185:11:g_d0_f1:11:g_d0_f1:B:forecast of the unemployment rate and the price level. It is also closely related to the first
+31:868:68332:22:23:89:521:163:11:g_d0_f1:11:g_d0_f1:B:difference of a modified Taylor-type policy rule in which the forecast of the price level is
+31:869:68424:23:22:90:319:140:11:g_d0_f1:11:g_d0_f1:B:substituted for the forecast of the inflation rate.
+31:870:68475:22:22:106:521:118:11:g_d0_f1:11:g_d0_f1:A:We choose the parameters of these simple rules to minimize the central bank loss for
+31:871:68559:22:0:89:522:96:11:g_d0_f8:11:g_d0_f1:B:λ= 4 andν= 1, under the assumptions of rational expectations and constant natural
+32:872:68642:0:32:90:357:694:11:g_d0_f1:11:g_d0_f1:B:rates.17The resulting optimized simple rule is given by:
+32:873:68698:32:33:190:521:662:11:g_d0_f8:11:g_d0_f1:A:it=it−1+ 1.74 ( ̄πet+3−π∗)−1.19 (ut−1−ut−2).(16)
+32:874:68746:33:22:89:521:629:11:g_d0_f1:11:g_d0_f1:B:This is the same rule as analyzed in Orphanides and Williams (2008, 2009), where it was
+32:875:68833:22:22:90:522:607:11:g_d0_f1:11:g_d0_f1:B:shown to be effective at stabilizing inflation and unemployment in model simulations with
+32:876:68922:22:22:89:190:585:11:g_d0_f1:11:g_d0_f1:B:imperfect knowledge.
+32:877:68942:22:23:106:521:563:11:g_d0_f1:11:g_d0_f1:A:According to the model simulation, if the Fed had followed this simple rule over the past
+32:878:69031:23:22:89:521:540:11:g_d0_f1:11:g_d0_f1:B:40 years, inflation would have been relatively stable and the Great Inflation would never
+32:879:69120:22:22:90:522:518:11:g_d0_f1:11:g_d0_f1:B:have occurred. Figure 6 compares the simulated paths of inflation, inflation expectations,
+32:880:69210:22:22:89:521:496:11:g_d0_f1:11:g_d0_f1:B:the real interest rate, and the unemployment rate under this simple robust policy rule to
+32:881:69299:22:22:90:522:474:11:g_d0_f1:11:g_d0_f1:B:the actual data. Because this simple policy rule does not respond to the natural rate of
+32:882:69387:22:22:89:521:452:11:g_d0_f1:11:g_d0_f1:B:unemployment, the simulations are invariant to the assumed path of central bank natural
+32:883:69474:22:22:90:522:430:11:g_d0_f1:11:g_d0_f1:B:rate estimates. Inflation does fluctuate a bit during the 1970s, reflecting the large shocks of
+32:884:69569:22:22:89:521:408:11:g_d0_f1:11:g_d0_f1:B:that period, but the deviations from target are short-lived. The simulated path for inflation
+32:885:69662:22:22:90:253:386:11:g_d0_f1:11:g_d0_f1:B:is very stable since the mid-1980s.
+32:886:69697:22:23:106:521:364:11:g_d0_f1:11:g_d0_f1:A:This simple policy rule is extremely effective at keeping inflation expectations well an-
+32:887:69786:23:22:89:521:341:11:g_d0_f1:11:g_d0_f1:B:chored. Although the inflation rate itself fluctuates under the simple policy rule, inflation
+32:888:69879:22:22:90:522:319:11:g_d0_f1:11:g_d0_f1:B:is expected to return to near its target rate of 2 percent within one year. As discussed
+32:889:69967:22:22:89:521:297:11:g_d0_f1:11:g_d0_f1:B:in Orphanides and Williams (2008), the anchoring of inflation expectations is key to the
+32:890:70055:22:22:90:522:275:11:g_d0_f1:11:g_d0_f1:B:success of this rule in stabilizing inflation and unemployment. A striking result is that this
+32:891:70149:22:22:89:521:253:11:g_d0_f1:11:g_d0_f1:B:simple rule does better at stabilizing inflation and inflation expectations than the OC policy
+32:892:70243:22:22:90:522:231:11:g_d0_f1:11:g_d0_f1:B:derived forλ= 0. The anchoring of inflation expectations implies that the gap between
+32:893:70328:22:22:89:521:209:11:g_d0_f1:11:g_d0_f1:B:the unemployment rate and the natural rate is considerably smaller throughout the sample
+32:894:70416:22:23:90:204:187:11:g_d0_f1:11:g_d0_f1:B:than in the actual data.
+32:895:70440:23:22:106:521:164:11:g_d0_f1:11:g_d0_f1:A:Interestingly, the simulated behavior of inflation, inflation expectations, and unemploy-
+32:896:70529:22:22:89:521:142:11:g_d0_f1:11:g_d0_f1:B:ment over the latter part of our sample is very close to that of the actual data.  This
+32:897:70616:22:16:90:522:120:11:g_d0_f1:11:g_d0_f1:B:finding suggests that the actual policy framework during this period may not have been
+32:898:70702:16:14:98:521:104:6:g_d0_f4:9:g_d0_f5:F:17If we allow for time-varying natural rates that areknown by all agents, the optimized parameters of this
+32:899:70808:14:11:89:521:90:9:g_d0_f5:9:g_d0_f5:F:simple rule under rational expectations are nearly unchanged. The relative performance of this policy is also
+32:900:70917:11:0:90:134:79:9:g_d0_f5:9:g_d0_f5:F:unaffected.
+33:901:70930:0:22:90:385:694:11:g_d0_f1:11:g_d0_f1:B:very different from that prescribed by this robust simple rule.
+33:902:70993:22:22:106:521:672:11:g_d0_f1:11:g_d0_f1:A:The simple robust policy rule performs as well as or better than the best OC policy where
+33:903:71082:22:22:89:521:650:11:g_d0_f1:11:g_d0_f1:B:the central bank uses the Kalman filter to estimate the natural rate of unemployment. The
+33:904:71171:22:22:90:522:628:11:g_d0_f1:11:g_d0_f1:B:final rows of Tables 1 and 2 report the summary statistics for the robust policy rule. This
+33:905:71262:22:22:89:438:606:11:g_d0_f1:11:g_d0_f1:B:holds for any of the three values of the central bank loss considered here.
+33:906:71337:22:23:106:521:584:11:g_d0_f1:11:g_d0_f1:A:The anchoring of long-run inflation expectations under the simple robust policy rule
+33:907:71421:23:22:89:521:561:11:g_d0_f1:11:g_d0_f1:B:is illustrated by the small variance in the simulated path for inflation expectations over
+33:908:71511:22:22:90:522:539:11:g_d0_f1:11:g_d0_f1:B:the next 10 years. The thin solid line in Figure 7 shows the simulated path for 10-year
+33:909:71598:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:inflation expectations when monetary policy follows the simple robust policy rule. This line
+33:910:71690:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:fluctuates very little over the entire sample. By comparison, surveys of 10-year consumer
+33:911:71779:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:price index inflation expectations (not shown) reached around 8 percent at the start of the
+33:912:71870:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:1980s, and then gradually fell to around 2-1/2 percent in the late 1990s. Since that time,
+33:913:71960:22:22:89:393:429:11:g_d0_f1:11:g_d0_f1:B:these long-run inflation expectations have fluctuated very little.
+33:914:72026:22:22:106:521:407:11:g_d0_f1:11:g_d0_f1:A:In contrast, the OC policy derived assumingλ= 16 does a poor job of anchoring long-
+33:915:72109:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:run inflation expectations.  The thick solid line in the chart shows the path of 10-year
+33:916:72197:23:22:90:521:362:11:g_d0_f1:11:g_d0_f1:B:inflation expectations under the OC policy optimized forλ= 16 and assuming historical
+33:917:72282:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:natural rate misperceptions. This line fluctuates considerably over the sample, reflecting the
+33:918:72376:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:relatively poor anchoring of inflation expectations under this regime. The dashed line shows
+33:919:72468:22:22:89:521:296:11:g_d0_f1:11:g_d0_f1:B:the corresponding outcomes under the OC policy optimized forλ= 16 and assuming no
+33:920:72549:22:22:89:521:274:11:g_d0_f1:11:g_d0_f1:B:natural rate misperceptions. Not surprisingly, long-run inflation expectations are generally
+33:921:72641:22:22:90:522:252:11:g_d0_f1:11:g_d0_f1:B:reasonably well anchored in this case.  However, even in this case, there are extended
+33:922:72727:22:22:89:521:230:11:g_d0_f1:11:g_d0_f1:B:episodes during the 1970s and early 2000s when long-run inflation expectations fluctuate
+33:923:72815:22:35:90:149:208:11:g_d0_f1:11:g_d0_f1:B:significantly.
+33:924:72829:35:33:89:190:173:14:g_d0_f2:14:g_d0_f2:C:9  Conclusion
+33:925:72842:33:22:90:522:140:11:g_d0_f1:11:g_d0_f1:B:Our narrative account and counterfactual simulations squarely attribute the Great Inflation
+33:926:72933:22:22:89:521:118:11:g_d0_f1:11:g_d0_f1:B:to policy actions that were viewed by many at the time to reflect the latest advances in
+33:927:73021:22:0:90:522:96:11:g_d0_f1:11:g_d0_f1:B:macroeconomics as embodied in the New Economics. The fine-tuning approach to monetary
+34:928:73108:0:22:90:522:694:11:g_d0_f1:11:g_d0_f1:B:policy, with its emphasis on stabilizing the level of real activity, might have succeeded in
+34:929:73200:22:22:89:521:672:11:g_d0_f1:11:g_d0_f1:B:stabilizing the economy if policymakers had possessed accurate real-time assessments of
+34:930:73287:22:22:90:522:650:11:g_d0_f1:11:g_d0_f1:B:the natural rate of unemployment. In the event, they did not and they failed to account
+34:931:73374:22:22:89:521:628:11:g_d0_f1:11:g_d0_f1:B:for their imperfect information regarding the economy’s potential and the effects of these
+34:932:73464:22:22:90:522:606:11:g_d0_f1:11:g_d0_f1:B:misperceptions on the evolution of inflation expectations and inflation. Price and economic
+34:933:73555:22:23:89:521:584:11:g_d0_f1:11:g_d0_f1:B:stability were only restored after the Federal Reserve, under Chairman Volcker, refocused
+34:934:73644:23:22:90:346:561:11:g_d0_f1:11:g_d0_f1:B:policy on establishing and maintaining price stability.
+34:935:73699:22:22:106:521:539:11:g_d0_f1:11:g_d0_f1:A:This paper shows that, even if the Federal Reserve had applied modern optimal control
+34:936:73784:22:22:89:521:517:11:g_d0_f1:11:g_d0_f1:B:techniques in conducting monetary policy, it would not have been more effective at stabiliz-
+34:937:73876:22:22:90:522:495:11:g_d0_f1:11:g_d0_f1:B:ing inflation during the 1970s owing to the presence of realistic informational imperfections
+34:938:73969:22:22:89:521:473:11:g_d0_f1:11:g_d0_f1:B:such as misperceptions of the natural rate of unemployment. Such optimal control policies
+34:939:74058:22:22:90:522:451:11:g_d0_f1:11:g_d0_f1:B:would likely have failed to keep inflation expectations well anchored, resulting in highly
+34:940:74148:22:22:89:521:429:11:g_d0_f1:11:g_d0_f1:B:volatile inflation. An optimal control policy would have succeeded only if the weight placed
+34:941:74240:22:22:90:522:407:11:g_d0_f1:11:g_d0_f1:B:on stabilizing the real economy were relatively modest—with the best results achieved if
+34:942:74328:22:23:89:521:385:11:g_d0_f1:11:g_d0_f1:B:virtually all the weight were placed on stabilizing prices. Finally, we show that a strategy
+34:943:74420:23:22:90:522:362:11:g_d0_f1:11:g_d0_f1:B:of following a simple first-difference policy rule would have been more successful than opti-
+34:944:74513:22:22:89:521:340:11:g_d0_f1:11:g_d0_f1:B:mal control policies in maintaining price stability and employment stability in the presence
+34:945:74605:22:22:90:522:318:11:g_d0_f1:11:g_d0_f1:B:of realistic informational imperfections. In addition, this policy rule yields simulated out-
+34:946:74698:22:22:89:521:296:11:g_d0_f1:11:g_d0_f1:B:comes close to the realized behavior of the economy during the Great Moderation starting
+34:947:74786:22:22:90:522:274:11:g_d0_f1:11:g_d0_f1:B:in the mid-1980s, suggesting that the actual practice of monetary policy during this period
+34:948:74877:22:0:89:515:252:11:g_d0_f1:11:g_d0_f1:B:changed in ways that incorporated the key properties of the robust monetary policy rule.
+35:949:74967:0:24:90:166:694:14:g_d0_f2:14:g_d0_f2:C:References
+35:950:74977:24:13:89:521:670:11:g_d0_f1:11:g_d0_f1:B:Board of Governors of the Federal Reserve System (1965), “Federal Reserve Policy Actions”,
+35:951:75067:13:19:106:333:657:11:g_d0_f7:11:g_d0_f1:A:Federal Reserve Bulletin, December, 1667-1668.
+35:952:75113:19:13:89:521:638:11:g_d0_f1:11:g_d0_f1:B:Board of Governors of the Federal Reserve System (1970), “Minutes of Action for the
+35:953:75196:13:19:106:412:625:11:g_d0_f1:11:g_d0_f1:A:Meeting of Federal Open Market Committee,” August 18, 1970.
+35:954:75255:19:13:89:521:606:11:g_d0_f1:11:g_d0_f1:B:Board of Governors of the Federal Reserve System (1975), “FOMC Memorandum of Dis-
+35:955:75336:13:19:106:202:593:11:g_d0_f1:11:g_d0_f1:A:cussion,” May 1975.
+35:956:75355:19:13:89:521:574:11:g_d0_f1:11:g_d0_f1:B:Branch, William A. and George W. Evans (2006), “A Simple Recursive Forecasting Model,”
+35:957:75441:13:18:106:254:561:11:g_d0_f7:11:g_d0_f1:A:Economics Letters91, 158-166.
+35:958:75470:18:13:89:521:543:11:g_d0_f1:11:g_d0_f1:B:Burns, Arthur (1979),The Anguish of Central BankingThe 1979 Per Jacobsson Lecture,
+35:959:75552:13:19:106:222:530:11:g_d0_f1:11:g_d0_f1:A:Belgrade, September 30.
+35:960:75575:19:13:89:521:511:11:g_d0_f1:11:g_d0_f1:B:Cogley, Timothy and Thomas Sargent (2001), “Evolving Post-World War II U.S. Inflation
+35:961:75660:13:13:106:521:498:11:g_d0_f1:11:g_d0_f1:A:Dynamics,” In: Bernanke, B.S., Rogoff, K.S. (Eds.), NBER Macroeconomics Annual
+35:962:75738:13:19:106:340:485:11:g_d0_f1:11:g_d0_f1:A:2001. Cambridge, MA: The MIT Press, 331–373.
+35:963:75782:19:13:89:521:466:11:g_d0_f1:11:g_d0_f1:B:Congressional Budget Office (2001), “CBO’s Method for Estimating Potential Output: An
+35:964:75867:13:18:106:421:453:11:g_d0_f1:11:g_d0_f1:A:Update,” Washington, DC: Government Printing Office (August).
+35:965:75928:18:13:89:522:435:11:g_d0_f1:11:g_d0_f1:B:Council of Economic Advisers (1962),Economic Report of the President, U.S. Government
+35:966:76013:13:19:106:265:422:11:g_d0_f1:11:g_d0_f1:A:Printing Office, Washington, DC.
+35:967:76045:19:13:89:522:403:11:g_d0_f1:11:g_d0_f1:B:Council of Economic Advisers (1966),Economic Report of the President, U.S. Government
+35:968:76130:13:19:106:265:390:11:g_d0_f1:11:g_d0_f1:A:Printing Office, Washington, DC.
+35:969:76162:19:13:89:521:371:11:g_d0_f1:11:g_d0_f1:B:Croushore, Dean (1993), “Introducing: The Survey of Professional Forecasters,” Federal
+35:970:76248:13:18:106:468:358:11:g_d0_f1:11:g_d0_f1:A:Reserve Bank of PhiladelphiaBusiness Review, November/December, 3–13.
+35:971:76317:18:13:89:521:340:11:g_d0_f1:11:g_d0_f1:B:Croushore, Dean and Tom Stark (2001), ”A Real-Time Data Set for Macroeconomists,”
+35:972:76398:13:19:106:346:327:11:g_d0_f7:11:g_d0_f1:A:Journal of Econometrics105, November, 111–130.
+35:973:76444:19:13:89:522:308:11:g_d0_f1:11:g_d0_f7:B:Evans, George and Seppo Honkapohja (2001),Learning and Expectations in Macroeco-
+35:974:76524:13:19:106:331:295:11:g_d0_f7:11:g_d0_f1:A:nomics, Princeton: Princeton University Press.
+35:975:76570:19:13:89:521:276:11:g_d0_f1:11:g_d0_f1:B:Giannoni, Marc P. and Michael Woodford (2005), “Optimal Inflation Targeting Rules,”
+35:976:76653:13:13:106:522:263:11:g_d0_f1:11:g_d0_f1:A:In: Bernanke, B.S., Woodford, M. (Eds.),The Inflation Targeting Debate, Chicago:
+35:977:76733:13:19:106:280:250:11:g_d0_f1:11:g_d0_f1:A:University of Chicago Press, 93–162.
+35:978:76769:19:13:89:521:231:11:g_d0_f1:11:g_d0_f1:B:Goodfriend, Marvin and Robert G. King (2005), “The Incredible Volcker Disinflation,”
+35:979:76853:13:18:106:343:218:11:g_d0_f7:11:g_d0_f1:A:Journal of Monetary Economics, 52(5), 981-1015.
+35:980:76900:18:13:89:521:200:11:g_d0_f1:11:g_d0_f7:B:Hall, Robert E. (1984), “Monetary strategy with an elastic price standard,”Price Stability
+35:981:76990:13:13:106:521:187:11:g_d0_f7:11:g_d0_f7:A:and Public Policy: A Symposium Sponsored by the Federal Reserve Bank of Kansas
+35:982:77068:13:19:106:425:174:11:g_d0_f7:11:g_d0_f1:A:City, Kansas City: Federal Reserve Bank of Kansas City, 137–159.
+35:983:77132:19:13:89:522:155:11:g_d0_f1:11:g_d0_f1:B:Heller, Walter W. (1966),New Dimensions of Political Economy, Cambridge, MA: Harvard
+35:984:77216:13:19:106:157:142:11:g_d0_f1:11:g_d0_f1:A:University.
+35:985:77227:19:13:89:522:123:11:g_d0_f1:11:g_d0_f7:B:Hetzel, Robert (1998), “Arthur Burns and Inflation,”Federal Reserve Bank of Richmond,
+35:986:77312:13:18:106:295:110:11:g_d0_f7:11:g_d0_f1:A:Economic Quarterly, 84, Winter, 21-44.
+35:987:77350:18:13:89:522:92:11:g_d0_f1:11:g_d0_f1:B:Hetzel, Robert (2008a),The Monetary Policy of the Federal Reserve: A History, Cambridge:
+35:988:77438:13:0:106:242:79:11:g_d0_f1:11:g_d0_f1:A:Cambridge University Press.
+36:989:77467:0:13:90:522:694:11:g_d0_f1:11:g_d0_f1:B:Hetzel, Robert (2008b), “What is the Monetary Standard, Or, How Did the Volcker-
+36:990:77547:13:13:106:522:681:11:g_d0_f1:11:g_d0_f7:A:Greenspan Fed Tame Inflation,”Federal Reserve Bank of Richmond Economic Quarterly
+36:991:77628:13:18:106:201:668:11:g_d0_f1:11:g_d0_f1:A:94, Spring, 147-171.
+36:992:77648:18:13:89:521:650:11:g_d0_f1:11:g_d0_f1:B:Hoerl, A.E. and R.W. Kennard (1970), “Ridge Regression: Biased Estimation of Nonorthog-
+36:993:77735:13:19:106:305:637:11:g_d0_f1:11:g_d0_f1:A:onal Problems,”Tecnometrics, 12, 69–82.
+36:994:77774:19:13:89:521:618:11:g_d0_f1:11:g_d0_f1:B:Kalchbrenner, J.H. and Peter.  A. Tinsley (1976), “On the Use of Feedback Control in
+36:995:77858:13:13:106:522:605:11:g_d0_f1:11:g_d0_f1:A:the Design of Aggregate Monetary Policy,”American Economic Review, 66(2), May,
+36:996:77936:13:19:106:142:592:11:g_d0_f1:11:g_d0_f1:A:349-355
+36:997:77943:19:13:89:521:573:11:g_d0_f1:11:g_d0_f1:B:Levin, Andrew T., and John B. Taylor (2009), “Falling Behind the Curve: A Positive
+36:998:78025:13:13:106:521:560:11:g_d0_f1:11:g_d0_f1:A:Analysis of Stop-Start Monetary Policies and the Great Inflation,” Stanford University,
+36:999:78112:13:18:106:156:547:11:g_d0_f1:11:g_d0_f1:A:December.
+36:1000:78121:18:13:89:521:529:11:g_d0_f1:11:g_d0_f1:B:Levin, Andrew T. and John C. Williams (2003), Robust Monetary Policy with Competing
+36:1001:78204:13:19:106:416:516:11:g_d0_f1:11:g_d0_f1:A:Reference Models.Journal of Monetary Economics, 50, 945–975.
+36:1002:78264:19:13:89:521:497:11:g_d0_f1:11:g_d0_f1:B:Lindsey, David E., Athanasios Orphanides and Robert H. Rasche (2005), “The Reform of
+36:1003:78348:13:13:106:522:484:11:g_d0_f1:11:g_d0_f7:A:1979: How It Happened and Why,” InReflections on Monetary Policy 25 Years After
+36:1004:78427:13:18:106:513:471:11:g_d0_f7:11:g_d0_f1:A:October 1979,Federal Reserve Bank of St. Louis Review, 87 (March/April): 187-235.
+36:1005:78508:18:19:89:419:453:11:g_d0_f1:11:g_d0_f1:B:Maisel, Sherman J. (1973),Managing the Dollar,New York: Norton.
+36:1006:78571:19:13:89:521:434:11:g_d0_f1:11:g_d0_f1:B:Martin, William M. (1957), “Statement” before the Committee of Finance, United States
+36:1007:78656:13:19:106:196:421:11:g_d0_f1:11:g_d0_f1:A:Senate, August 13.
+36:1008:78674:19:13:89:521:402:11:g_d0_f1:11:g_d0_f1:B:Martin, William M. (1965), “Remarks before the 59th annual meeting of the Life Insurance
+36:1009:78762:13:18:106:365:389:11:g_d0_f1:11:g_d0_f1:A:Association of America,” New York City, December 8.
+36:1010:78813:18:13:89:522:371:11:g_d0_f1:11:g_d0_f7:B:Mayer, Thomas (1999),Monetary Policy and the Great Inflation in the United States:
+36:1011:78895:13:13:106:522:358:11:g_d0_f7:11:g_d0_f1:A:The Federal Reserve and the Failure of Macroeconomic Policy, 1965–1979, Cheltenham:
+36:1012:78978:13:19:106:175:345:11:g_d0_f1:11:g_d0_f1:A:Edward Elgar.
+36:1013:78991:19:13:89:521:326:11:g_d0_f1:11:g_d0_f1:B:Meltzer, Allan H. (2003),A History of the Federal Reserve: Volume 1, University of Chicago
+36:1014:79081:13:19:106:179:313:11:g_d0_f1:11:g_d0_f1:A:Press, Chicago.
+36:1015:79096:19:13:89:521:294:11:g_d0_f1:11:g_d0_f7:B:Milani, Fabio (2007), “Expectations, Learning, and Macroeconomic Persistence,”Journal
+36:1016:79181:13:18:106:296:281:11:g_d0_f7:11:g_d0_f1:A:of Monetary Economics, 54, 2065–2082.
+36:1017:79218:18:13:89:521:263:11:g_d0_f1:11:g_d0_f1:B:Modigliani, Franco and Lucas Papademos (1975), “Targets for Monetary Policy in the
+36:1018:79300:13:19:106:421:250:11:g_d0_f1:11:g_d0_f1:A:Coming Year,”Brookings Papers for Economic Activity1, 141-63.
+36:1019:79361:19:13:89:521:231:11:g_d0_f1:11:g_d0_f1:B:Okun, Arthur (1962), “Potential Output: Its Measurement and Significance,” in Amer-
+36:1020:79444:13:13:106:521:218:11:g_d0_f1:11:g_d0_f1:A:ican Statistical Association1962 Proceedings of the Business and Economic Section,
+36:1021:79526:13:18:106:348:205:11:g_d0_f1:11:g_d0_f1:A:American Statistical Association, Washington DC.
+36:1022:79574:18:13:89:521:187:11:g_d0_f1:11:g_d0_f1:B:Okun, Arthur (1970),The Political Economy of Prosperity, Brookings Institution, Wash-
+36:1023:79659:13:19:106:159:174:11:g_d0_f1:11:g_d0_f1:A:ington DC.
+36:1024:79669:19:13:89:522:155:11:g_d0_f1:11:g_d0_f7:B:Orphanides, Athanasios (2002), “Monetary Policy Rules and the Great Inflation,”American
+36:1025:79756:13:19:106:296:142:11:g_d0_f7:11:g_d0_f1:A:Economic Review,92(2), May, 115–120.
+36:1026:79792:19:13:89:521:123:11:g_d0_f1:11:g_d0_f7:B:Orphanides, Athanasios (2003), “The Quest for Prosperity without Inflation.”Journal of
+36:1027:79878:13:18:106:286:110:11:g_d0_f7:11:g_d0_f1:A:Monetary Economics, 50(3), 633–663.
+36:1028:79913:18:13:89:521:92:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2002), “Robust Monetary Policy Rules with
+36:1029:79999:13:0:106:502:79:11:g_d0_f1:11:g_d0_f1:A:Unknown Natural Rates,”Brookings Papers on Economic Activity, 2:2002, 63–118.
+37:1030:80078:0:13:90:522:694:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2005a), “The Decline of Activist Stabiliza-
+37:1031:80166:13:13:106:521:681:11:g_d0_f1:11:g_d0_f7:A:tion Policy: Natural Rate Misperceptions, Learning, and Expectations.”Journal of
+37:1032:80246:13:19:106:414:668:11:g_d0_f7:11:g_d0_f1:A:Economic Dynamics and Control, 29(11), November, 1927–1950.
+37:1033:80305:19:13:89:521:649:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2005b), “Imperfect Knowledge, Inflation
+37:1034:80389:13:13:106:522:636:11:g_d0_f1:11:g_d0_f1:A:Expectations and Monetary Policy,” inThe Inflation Targeting Debate, Ben Bernanke
+37:1035:80470:13:19:106:478:623:11:g_d0_f1:11:g_d0_f1:A:and Michael Woodford (eds.), Chicago: University of Chicago Press, 201–234.
+37:1036:80545:19:12:89:521:604:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2007), “Inflation Targeting Under Imperfect
+37:1037:80633:12:13:106:521:592:11:g_d0_f1:11:g_d0_f1:A:Knowledge,” inMonetary Policy Under Inflation Targeting, Frederic Mishkin and Klaus
+37:1038:80716:13:19:106:412:579:11:g_d0_f1:11:g_d0_f1:A:Schmidt-Hebbel (eds.), Santiago: Central Bank of Chile, 77–123
+37:1039:80778:19:13:89:521:560:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2008), “Learning, Expectations Formation,
+37:1040:80864:13:13:106:521:547:11:g_d0_f1:11:g_d0_f7:A:and the Pitfalls of Optimal Control Monetary Policy,” inJournal of Monetary Eco-
+37:1041:80944:13:19:106:252:534:11:g_d0_f7:11:g_d0_f1:A:nomics, 55, October, S80–S96.
+37:1042:80973:19:13:89:521:515:11:g_d0_f1:11:g_d0_f1:B:Orphanides, Athanasios and John C. Williams (2009), “Imperfect Knowledge and the Pit-
+37:1043:81058:13:13:106:521:502:11:g_d0_f1:11:g_d0_f1:A:falls of Optimal Control Monetary Policy,” in Carl Walsh and Klaus Schmidt-Hebbel
+37:1044:81139:13:13:106:521:489:11:g_d0_f1:11:g_d0_f7:A:(ed.),Central Banking, Analysis and Economic Policies: Monetary Policy Under Un-
+37:1045:81219:13:19:106:483:476:11:g_d0_f7:11:g_d0_f1:A:certainty and Learning, Santiago, Chile: Central Bank of Chile, 2009, 115–144.
+37:1046:81297:19:13:89:521:457:11:g_d0_f1:11:g_d0_f1:B:Sargent, Thomas J. (1999),The Conquest of American Inflation, Princeton: Princeton
+37:1047:81379:13:19:106:187:444:11:g_d0_f1:11:g_d0_f1:A:University Press.
+37:1048:81396:19:13:89:521:425:11:g_d0_f1:11:g_d0_f1:B:Sargent, Thomas J. (2007), “Evolution and Intelligent Design,” mimeo, New York Univer-
+37:1049:81482:13:19:106:182:412:11:g_d0_f1:11:g_d0_f1:A:sity, September.
+37:1050:81498:19:13:89:521:393:11:g_d0_f1:11:g_d0_f1:B:Sheridan, Niamh (2003), “Forming Inflation Expectations,” Johns Hopkins University,
+37:1051:81581:13:19:106:172:380:11:g_d0_f1:11:g_d0_f1:A:mimeo, April.
+37:1052:81594:19:13:89:521:361:11:g_d0_f1:11:g_d0_f1:B:Stein, Herbert (1996), “A Successful Accident: Recollections and Speculations about the
+37:1053:81681:13:18:106:410:348:11:g_d0_f1:11:g_d0_f1:A:CEA,”Journal of Economic Perspectives, 10(3), 3-21, Summer.
+37:1054:81740:18:13:89:521:330:11:g_d0_f1:11:g_d0_f7:B:Svensson, Lars E. O. and Robert Tetlow (2005), “Optimum Policy Projections,”Interna-
+37:1055:81824:13:19:106:328:317:11:g_d0_f7:11:g_d0_f1:A:tional Journal of Central Banking, 1, 177–207.
+37:1056:81870:19:13:89:521:298:11:g_d0_f1:11:g_d0_f1:B:Svensson, Lars E. O. and Michael Woodford (2003), “Optimal Indicators for Monetary
+37:1057:81952:13:19:106:365:285:11:g_d0_f1:11:g_d0_f1:A:Policy,”Journal of Monetary Economics, 46, 229–256.
+37:1058:82003:19:13:89:521:266:11:g_d0_f1:11:g_d0_f1:B:Tetlow, Robert J. (2006), “Real-time Model Uncertainty in the United States: ‘Robust’
+37:1059:82088:13:19:106:422:253:11:g_d0_f1:11:g_d0_f1:A:Policies Put to the Test,” mimeo, Federal Reserve Board, May 22.
+37:1060:82152:19:19:89:417:234:11:g_d0_f1:11:g_d0_f1:B:Time Magazine (1965), “We Are All Keynesian Now,” December 31.
+37:1061:82214:19:13:90:522:215:11:g_d0_f1:11:g_d0_f7:B:United States Congress (1966),Recent Federal Reserve Action and Economic Policy Coor-
+37:1062:82299:13:13:106:522:202:11:g_d0_f7:11:g_d0_f1:A:dination, Hearings before the Joint Economic Committee, Part 1, December 13 and 14,
+37:1063:82382:13:19:106:380:189:11:g_d0_f1:11:g_d0_f1:A:1965, U.S. Government Printing Office, Washington, DC.
+37:1064:82436:19:13:89:521:170:11:g_d0_f1:11:g_d0_f1:B:Volcker, Paul A. (1980), “Statement,” before the Committee on Banking, Finance and
+37:1065:82518:13:19:106:365:157:11:g_d0_f1:11:g_d0_f1:A:Urban Affairs, House of Representatives, February 19.
+37:1066:82571:19:19:89:520:138:11:g_d0_f1:11:g_d0_f1:B:Wallich, Henry C. (1976), “Discussion,”American Economic Review, 66(2), May, 356-359.
+37:1067:82656:19:13:89:521:119:11:g_d0_f1:11:g_d0_f7:B:Woodford, Michael (2003),Interest and Prices: Foundations of a Theory of Monetary Pol-
+37:1068:82742:13:0:106:311:106:11:g_d0_f7:11:g_d0_f1:A:icy, Princeton: Princeton University Press.
+38:1069:82787:0:42:200:411:694:11:g_d0_f15:11:g_d0_f15:?:Table 1: Loss Comparison (1966-1979)
+38:1070:82823:42:14:294:451:652:11:g_d0_f1:11:g_d0_f10:?:RMSDLossL
+38:1071:82832:14:14:179:488:638:11:g_d0_f8:11:g_d0_f1:A:κπ- 2u−u∗∆iλ= 0λ= 4λ= 16
+38:1072:82856:14:27:122:488:624:11:g_d0_f1:11:g_d0_f1:?:Historical data4.2    1.5    0.718.2   27.856.5
+38:1073:82903:27:13:122:209:597:11:g_d0_f7:11:g_d0_f7:?:No misperceptions
+38:1074:82920:13:14:122:488:584:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)1.4    1.0    0.82.76.517.9
+38:1075:82956:14:13:122:488:570:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)1.4    0.8    1.03.15.613.0
+38:1076:82992:13:28:122:488:557:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)1.5    0.7    1.54.56.311.4
+38:1077:83029:28:13:122:241:529:11:g_d0_f7:11:g_d0_f7:?:Historical misperceptions
+38:1078:83054:13:14:122:488:516:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)2.3    1.0    0.65.69.320.3
+38:1079:83090:14:13:122:488:502:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)3.2    1.0    0.910.9   14.927.1
+38:1080:83131:13:27:122:488:489:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)4.7    1.1    1.324.0   28.943.4
+38:1081:83173:27:14:122:185:462:11:g_d0_f7:11:g_d0_f7:?:Kalman filter
+38:1082:83186:14:13:122:488:448:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)2.0    0.9    0.74.48.018.6
+38:1083:83222:13:14:122:488:435:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)2.6    0.9    0.97.6   11.222.9
+38:1084:83262:14:27:122:488:421:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)3.7    1.0    1.315.3   19.331.2
+38:1085:83304:27:0:122:488:394:11:g_d0_f1:11:g_d0_f1:?:Robust policy rule1.5    0.9    1.44.37.617.4
+39:1086:83351:0:42:202:413:694:11:g_d0_f15:11:g_d0_f15:?:Table 2: Loss Comparison (1966-2003)
+39:1087:83387:42:14:294:451:652:11:g_d0_f1:11:g_d0_f10:?:RMSDLossL
+39:1088:83396:14:14:179:488:638:11:g_d0_f8:11:g_d0_f1:A:κπ- 2u−u∗∆iλ= 0λ= 4λ= 16
+39:1089:83420:14:27:122:488:624:11:g_d0_f1:11:g_d0_f1:?:Historical data3.3    1.4    1.011.6   19.643.8
+39:1090:83467:27:13:122:209:597:11:g_d0_f7:11:g_d0_f7:?:No misperceptions
+39:1091:83484:13:14:122:488:584:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)1.2    0.7    0.62.04.010.0
+39:1092:83520:14:13:122:489:570:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)1.3    0.6    0.92.53.87.7
+39:1093:83555:13:28:122:489:557:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)1.5    0.5    1.23.74.67.3
+39:1094:83591:28:13:122:241:529:11:g_d0_f7:11:g_d0_f7:?:Historical misperceptions
+39:1095:83616:13:14:122:488:516:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)1.7    0.8    0.63.45.712.9
+39:1096:83652:14:13:122:488:502:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)2.3    0.8    0.86.08.415.5
+39:1097:83688:13:27:122:488:489:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)3.3    0.8    1.212.4   14.922.5
+39:1098:83730:27:14:122:185:462:11:g_d0_f7:11:g_d0_f7:?:Kalman filter
+39:1099:83743:14:13:122:488:448:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 0)1.6    0.8    0.62.95.312.6
+39:1100:83779:13:14:122:488:435:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 4)2.0    0.8    0.84.87.013.9
+39:1101:83815:14:27:122:488:421:11:g_d0_f1:11:g_d0_f1:?:OC (λ= 16)2.7    0.8    1.28.8   11.118.0
+39:1102:83856:27:0:122:488:394:11:g_d0_f1:11:g_d0_f1:?:Robust policy rule1.3    0.8    1.02.75.212.6
+40:1103:83903:0:266:224:387:694:11:g_d0_f15:11:g_d0_f15:A:Figure 1: The Great Inflation
+40:1104:83932:266:0:141:145:428:4:g_d0_f16:4:g_d0_f16:?:0
+40:1105:83933:0:0:141:145:447:4:g_d0_f16:4:g_d0_f16:?:1
+40:1106:83934:0:0:141:145:465:4:g_d0_f16:4:g_d0_f16:?:2
+40:1107:83935:0:0:141:145:484:4:g_d0_f16:4:g_d0_f16:?:3
+40:1108:83936:0:0:141:145:502:4:g_d0_f16:4:g_d0_f16:?:4
+40:1109:83937:0:0:141:145:521:4:g_d0_f16:4:g_d0_f16:?:5
+40:1110:83938:0:0:141:145:540:4:g_d0_f16:4:g_d0_f16:?:6
+40:1111:83939:0:0:141:145:558:4:g_d0_f16:4:g_d0_f16:?:7
+40:1112:83940:0:0:141:145:577:4:g_d0_f16:4:g_d0_f16:?:8
+40:1113:83941:0:0:141:145:595:4:g_d0_f16:4:g_d0_f16:?:9
+40:1114:83942:0:0:137:141:614:4:g_d0_f16:4:g_d0_f16:?:10
+40:1115:83944:0:0:137:141:632:4:g_d0_f16:4:g_d0_f16:?:11
+40:1116:83946:0:233:137:141:651:4:g_d0_f16:4:g_d0_f16:?:12
+40:1117:83948:233:0:144:476:418:4:g_d0_f16:4:g_d0_f16:?:19551960196519701975198019851990199520002005
+40:1118:83992:0:61:130:153:661:4:g_d0_f16:4:g_d0_f16:?:Percent
+40:1119:83999:61:9:327:411:600:4:g_d0_f17:4:g_d0_f17:?:Four-quarter log change
+40:1120:84022:9:132:337:401:591:4:g_d0_f17:4:g_d0_f17:?:in GDP price index
+40:1121:84040:132:10:259:312:459:4:g_d0_f17:4:g_d0_f17:?:Assumed target
+40:1122:84054:10:0:259:302:449:4:g_d0_f17:4:g_d0_f17:?:inflation rate
+41:1123:84070:0:266:144:468:694:11:g_d0_f15:11:g_d0_f15:?:Figure 2: Estimates of the Natural Rate of Unemployment
+41:1124:84125:266:0:141:145:428:4:g_d0_f16:4:g_d0_f16:?:3
+41:1125:84126:0:0:141:145:456:4:g_d0_f16:4:g_d0_f16:?:4
+41:1126:84127:0:0:141:145:484:4:g_d0_f16:4:g_d0_f16:?:5
+41:1127:84128:0:0:141:145:512:4:g_d0_f16:4:g_d0_f16:?:6
+41:1128:84129:0:0:141:145:540:4:g_d0_f16:4:g_d0_f16:?:7
+41:1129:84130:0:0:141:145:567:4:g_d0_f16:4:g_d0_f16:?:8
+41:1130:84131:0:0:141:145:595:4:g_d0_f16:4:g_d0_f16:?:9
+41:1131:84132:0:0:137:141:623:4:g_d0_f16:4:g_d0_f16:?:10
+41:1132:84134:0:233:137:141:651:4:g_d0_f16:4:g_d0_f16:?:11
+41:1133:84136:233:0:144:477:418:4:g_d0_f16:4:g_d0_f16:?:19551960196519701975198019851990199520002005
+41:1134:84180:0:199:130:153:661:4:g_d0_f16:4:g_d0_f16:?:Percent
+41:1135:84187:199:0:270:336:462:4:g_d0_f18:4:g_d0_f18:?:Real-time estimates
+41:1136:84206:0:10:205:250:539:4:g_d0_f18:4:g_d0_f18:?:Retrospective
+41:1137:84219:10:0:205:254:529:4:g_d0_f18:4:g_d0_f18:?:CBO estimates
+41:1138:84232:0:0:337:404:612:4:g_d0_f18:4:g_d0_f18:?:Unemployment rate
+42:1139:84251:0:45:123:488:694:11:g_d0_f15:11:g_d0_f1:?:Figure 3: Counterfactual Simulations under OC Policy withλ= 16
+42:1140:84313:45:27:145:492:649:11:g_d0_f1:11:g_d0_f1:?:Absent MisperceptionsWith Historical Misperceptions
+42:1141:84364:27:140:179:438:622:11:g_d0_f1:11:g_d0_f1:A:InflationInflation
+42:1142:84382:140:0:102:106:482:1:g_d0_f19:1:g_d0_f19:A:-2
+42:1143:84384:0:0:103:105:500:1:g_d0_f19:1:g_d0_f19:A:0
+42:1144:84385:0:0:103:105:518:1:g_d0_f19:1:g_d0_f19:A:2
+42:1145:84386:0:0:103:105:536:1:g_d0_f19:1:g_d0_f19:A:4
+42:1146:84387:0:0:103:105:554:1:g_d0_f19:1:g_d0_f19:A:6
+42:1147:84388:0:0:103:105:572:1:g_d0_f19:1:g_d0_f19:A:8
+42:1148:84389:0:0:101:103:590:1:g_d0_f19:1:g_d0_f19:?:10
+42:1149:84391:0:132:101:103:608:1:g_d0_f19:1:g_d0_f19:?:12
+42:1150:84393:132:0:105:297:476:1:g_d0_f19:1:g_d0_f19:A:196519701975198019851990199520002005
+42:1151:84429:0:106:97:110:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+42:1152:84436:106:0:128:178:507:1:g_d0_f20:5:g_d0_f477R:?:OC policy (---------
+42:1153:84456:0:100:188:196:582:1:g_d0_f20:1:g_d0_f20:A:Data
+42:1154:84460:100:0:321:325:482:1:g_d0_f19:1:g_d0_f19:?:-2
+42:1155:84462:0:0:322:324:500:1:g_d0_f19:1:g_d0_f19:?:0
+42:1156:84463:0:0:322:324:518:1:g_d0_f19:1:g_d0_f19:?:2
+42:1157:84464:0:0:322:324:536:1:g_d0_f19:1:g_d0_f19:?:4
+42:1158:84465:0:0:322:324:554:1:g_d0_f19:1:g_d0_f19:?:6
+42:1159:84466:0:0:322:324:572:1:g_d0_f19:1:g_d0_f19:?:8
+42:1160:84467:0:0:320:322:590:1:g_d0_f19:1:g_d0_f19:?:10
+42:1161:84469:0:132:320:322:608:1:g_d0_f19:1:g_d0_f19:?:12
+42:1162:84471:132:0:324:516:476:1:g_d0_f19:1:g_d0_f19:?:196519701975198019851990199520002005
+42:1163:84507:0:105:316:329:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+42:1164:84514:105:0:355:405:508:1:g_d0_f20:5:g_d0_f459R:?:OC policy (---------
+42:1165:84534:0:135:407:415:582:1:g_d0_f20:1:g_d0_f20:?:Data
+42:1166:84538:135:140:146:471:447:11:g_d0_f1:11:g_d0_f1:?:Inflation ExpectationsInflation Expectations
+42:1167:84582:140:0:103:105:307:1:g_d0_f16:1:g_d0_f16:A:0
+42:1168:84583:0:0:103:105:319:1:g_d0_f16:1:g_d0_f16:A:1
+42:1169:84584:0:0:103:105:332:1:g_d0_f16:1:g_d0_f16:A:2
+42:1170:84585:0:0:103:105:344:1:g_d0_f16:1:g_d0_f16:A:3
+42:1171:84586:0:0:103:105:357:1:g_d0_f16:1:g_d0_f16:A:4
+42:1172:84587:0:0:103:105:369:1:g_d0_f16:1:g_d0_f16:A:5
+42:1173:84588:0:0:103:105:382:1:g_d0_f16:1:g_d0_f16:A:6
+42:1174:84589:0:0:103:105:395:1:g_d0_f16:1:g_d0_f16:A:7
+42:1175:84590:0:0:103:105:407:1:g_d0_f16:1:g_d0_f16:A:8
+42:1176:84591:0:0:103:105:420:1:g_d0_f16:1:g_d0_f16:A:9
+42:1177:84592:0:131:101:103:432:1:g_d0_f16:1:g_d0_f16:?:10
+42:1178:84594:131:0:105:297:301:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+42:1179:84630:0:113:97:110:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+42:1180:84637:113:0:130:180:325:1:g_d0_f21:5:g_d0_f445R:?:OC policy (---------
+42:1181:84657:0:104:189:195:411:1:g_d0_f21:1:g_d0_f21:A:SPF
+42:1182:84660:104:0:322:324:307:1:g_d0_f16:1:g_d0_f16:?:0
+42:1183:84661:0:0:322:324:319:1:g_d0_f16:1:g_d0_f16:?:1
+42:1184:84662:0:0:322:324:332:1:g_d0_f16:1:g_d0_f16:?:2
+42:1185:84663:0:0:322:324:344:1:g_d0_f16:1:g_d0_f16:?:3
+42:1186:84664:0:0:322:324:357:1:g_d0_f16:1:g_d0_f16:?:4
+42:1187:84665:0:0:322:324:369:1:g_d0_f16:1:g_d0_f16:?:5
+42:1188:84666:0:0:322:324:382:1:g_d0_f16:1:g_d0_f16:?:6
+42:1189:84667:0:0:322:324:395:1:g_d0_f16:1:g_d0_f16:?:7
+42:1190:84668:0:0:322:324:407:1:g_d0_f16:1:g_d0_f16:?:8
+42:1191:84669:0:0:322:324:420:1:g_d0_f16:1:g_d0_f16:?:9
+42:1192:84670:0:131:320:322:432:1:g_d0_f16:1:g_d0_f16:?:10
+42:1193:84672:131:0:324:516:301:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+42:1194:84708:0:57:316:329:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+42:1195:84715:57:0:446:496:381:1:g_d0_f21:5:g_d0_f429R:?:OC policy (---------
+42:1196:84735:0:141:408:414:413:1:g_d0_f21:1:g_d0_f21:?:SPF
+42:1197:84738:141:141:150:467:272:11:g_d0_f1:11:g_d0_f1:?:Unemployment RateUnemployment Rate
+42:1198:84772:141:0:103:105:131:1:g_d0_f16:1:g_d0_f16:A:3
+42:1199:84773:0:0:103:105:147:1:g_d0_f16:1:g_d0_f16:A:4
+42:1200:84774:0:0:103:105:163:1:g_d0_f16:1:g_d0_f16:A:5
+42:1201:84775:0:0:103:105:179:1:g_d0_f16:1:g_d0_f16:A:6
+42:1202:84776:0:0:103:105:194:1:g_d0_f16:1:g_d0_f16:A:7
+42:1203:84777:0:0:103:105:210:1:g_d0_f16:1:g_d0_f16:A:8
+42:1204:84778:0:0:103:105:226:1:g_d0_f16:1:g_d0_f16:A:9
+42:1205:84779:0:0:101:103:241:1:g_d0_f16:1:g_d0_f16:?:10
+42:1206:84781:0:131:101:103:257:1:g_d0_f16:1:g_d0_f16:?:11
+42:1207:84783:131:0:105:297:126:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+42:1208:84819:0:65:97:110:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+42:1209:84826:65:0:126:150:198:1:g_d0_f22:5:g_d0_f415R:?:OC policy(---------
+42:1210:84845:0:84:197:205:241:1:g_d0_f22:1:g_d0_f22:?:Data
+42:1211:84849:84:26:221:244:157:1:g_d0_f22:1:g_d0_f22:A:Natural rate
+42:1212:84861:26:0:322:324:131:1:g_d0_f16:1:g_d0_f16:?:3
+42:1213:84862:0:0:322:324:147:1:g_d0_f16:1:g_d0_f16:?:4
+42:1214:84863:0:0:322:324:163:1:g_d0_f16:1:g_d0_f16:?:5
+42:1215:84864:0:0:322:324:179:1:g_d0_f16:1:g_d0_f16:?:6
+42:1216:84865:0:0:322:324:194:1:g_d0_f16:1:g_d0_f16:?:7
+42:1217:84866:0:0:322:324:210:1:g_d0_f16:1:g_d0_f16:?:8
+42:1218:84867:0:0:322:324:226:1:g_d0_f16:1:g_d0_f16:?:9
+42:1219:84868:0:0:320:322:241:1:g_d0_f16:1:g_d0_f16:?:10
+42:1220:84870:0:131:320:322:257:1:g_d0_f16:1:g_d0_f16:?:11
+42:1221:84872:131:0:324:516:126:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+42:1222:84908:0:104:316:329:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+42:1223:84915:104:0:401:425:159:1:g_d0_f22:5:g_d0_f398R:?:OC policy(---------
+42:1224:84934:0:84:416:424:241:1:g_d0_f22:1:g_d0_f22:?:Data
+42:1225:84938:84:0:440:463:157:1:g_d0_f22:1:g_d0_f22:?:Natural rate
+43:1226:84952:0:45:125:486:694:11:g_d0_f15:11:g_d0_f1:?:Figure 4: Counterfactual Simulations under OC Policy withλ= 4
+43:1227:85013:45:27:145:492:649:11:g_d0_f1:11:g_d0_f1:?:Absent MisperceptionsWith Historical Misperceptions
+43:1228:85064:27:140:179:438:622:11:g_d0_f1:11:g_d0_f1:A:InflationInflation
+43:1229:85082:140:0:102:106:482:1:g_d0_f19:1:g_d0_f19:A:-2
+43:1230:85084:0:0:103:105:500:1:g_d0_f19:1:g_d0_f19:A:0
+43:1231:85085:0:0:103:105:518:1:g_d0_f19:1:g_d0_f19:A:2
+43:1232:85086:0:0:103:105:536:1:g_d0_f19:1:g_d0_f19:A:4
+43:1233:85087:0:0:103:105:554:1:g_d0_f19:1:g_d0_f19:A:6
+43:1234:85088:0:0:103:105:572:1:g_d0_f19:1:g_d0_f19:A:8
+43:1235:85089:0:0:101:103:590:1:g_d0_f19:1:g_d0_f19:?:10
+43:1236:85091:0:132:101:103:608:1:g_d0_f19:1:g_d0_f19:?:12
+43:1237:85093:132:0:105:297:476:1:g_d0_f19:1:g_d0_f19:A:196519701975198019851990199520002005
+43:1238:85129:0:31:97:110:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+43:1239:85136:31:78:188:196:582:1:g_d0_f23:1:g_d0_f23:A:Data
+43:1240:85140:78:22:131:179:504:1:g_d0_f23:5:g_d0_f517R:?:OC Policy (--------
+43:1241:85159:22:0:321:325:482:1:g_d0_f19:1:g_d0_f19:?:-2
+43:1242:85161:0:0:322:324:500:1:g_d0_f19:1:g_d0_f19:?:0
+43:1243:85162:0:0:322:324:518:1:g_d0_f19:1:g_d0_f19:?:2
+43:1244:85163:0:0:322:324:536:1:g_d0_f19:1:g_d0_f19:?:4
+43:1245:85164:0:0:322:324:554:1:g_d0_f19:1:g_d0_f19:?:6
+43:1246:85165:0:0:322:324:572:1:g_d0_f19:1:g_d0_f19:?:8
+43:1247:85166:0:0:320:322:590:1:g_d0_f19:1:g_d0_f19:?:10
+43:1248:85168:0:132:320:322:608:1:g_d0_f19:1:g_d0_f19:?:12
+43:1249:85170:132:0:324:516:476:1:g_d0_f19:1:g_d0_f19:?:196519701975198019851990199520002005
+43:1250:85206:0:31:316:329:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+43:1251:85213:31:63:407:415:582:1:g_d0_f23:1:g_d0_f23:?:Data
+43:1252:85217:63:72:373:397:519:1:g_d0_f23:5:g_d0_f577R:?:OC Policy(--------
+43:1253:85235:72:140:146:471:447:11:g_d0_f1:11:g_d0_f1:?:Inflation ExpectationsInflation Expectations
+43:1254:85279:140:0:103:105:307:1:g_d0_f16:1:g_d0_f16:A:0
+43:1255:85280:0:0:103:105:319:1:g_d0_f16:1:g_d0_f16:A:1
+43:1256:85281:0:0:103:105:332:1:g_d0_f16:1:g_d0_f16:A:2
+43:1257:85282:0:0:103:105:344:1:g_d0_f16:1:g_d0_f16:A:3
+43:1258:85283:0:0:103:105:357:1:g_d0_f16:1:g_d0_f16:A:4
+43:1259:85284:0:0:103:105:369:1:g_d0_f16:1:g_d0_f16:A:5
+43:1260:85285:0:0:103:105:382:1:g_d0_f16:1:g_d0_f16:A:6
+43:1261:85286:0:0:103:105:395:1:g_d0_f16:1:g_d0_f16:A:7
+43:1262:85287:0:0:103:105:407:1:g_d0_f16:1:g_d0_f16:A:8
+43:1263:85288:0:0:103:105:420:1:g_d0_f16:1:g_d0_f16:A:9
+43:1264:85289:0:131:101:103:432:1:g_d0_f16:1:g_d0_f16:?:10
+43:1265:85291:131:0:105:297:301:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+43:1266:85327:0:27:97:110:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+43:1267:85334:27:88:189:195:411:1:g_d0_f24:1:g_d0_f24:A:SPF
+43:1268:85337:88:16:205:253:323:1:g_d0_f24:5:g_d0_f563R:?:OC Policy (--------
+43:1269:85356:16:0:322:324:307:1:g_d0_f16:1:g_d0_f16:?:0
+43:1270:85357:0:0:322:324:319:1:g_d0_f16:1:g_d0_f16:?:1
+43:1271:85358:0:0:322:324:332:1:g_d0_f16:1:g_d0_f16:?:2
+43:1272:85359:0:0:322:324:344:1:g_d0_f16:1:g_d0_f16:?:3
+43:1273:85360:0:0:322:324:357:1:g_d0_f16:1:g_d0_f16:?:4
+43:1274:85361:0:0:322:324:369:1:g_d0_f16:1:g_d0_f16:?:5
+43:1275:85362:0:0:322:324:382:1:g_d0_f16:1:g_d0_f16:?:6
+43:1276:85363:0:0:322:324:395:1:g_d0_f16:1:g_d0_f16:?:7
+43:1277:85364:0:0:322:324:407:1:g_d0_f16:1:g_d0_f16:?:8
+43:1278:85365:0:0:322:324:420:1:g_d0_f16:1:g_d0_f16:?:9
+43:1279:85366:0:131:320:322:432:1:g_d0_f16:1:g_d0_f16:?:10
+43:1280:85368:131:0:324:516:301:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+43:1281:85404:0:25:316:329:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+43:1282:85411:25:95:408:414:413:1:g_d0_f24:1:g_d0_f24:?:SPF
+43:1283:85414:95:46:423:471:318:1:g_d0_f24:5:g_d0_f547R:?:OC Policy (--------
+43:1284:85433:46:141:150:467:272:11:g_d0_f1:11:g_d0_f1:?:Unemployment RateUnemployment Rate
+43:1285:85467:141:0:103:105:131:1:g_d0_f16:1:g_d0_f16:A:3
+43:1286:85468:0:0:103:105:147:1:g_d0_f16:1:g_d0_f16:A:4
+43:1287:85469:0:0:103:105:163:1:g_d0_f16:1:g_d0_f16:A:5
+43:1288:85470:0:0:103:105:179:1:g_d0_f16:1:g_d0_f16:A:6
+43:1289:85471:0:0:103:105:194:1:g_d0_f16:1:g_d0_f16:A:7
+43:1290:85472:0:0:103:105:210:1:g_d0_f16:1:g_d0_f16:A:8
+43:1291:85473:0:0:103:105:226:1:g_d0_f16:1:g_d0_f16:A:9
+43:1292:85474:0:0:101:103:241:1:g_d0_f16:1:g_d0_f16:?:10
+43:1293:85476:0:131:101:103:257:1:g_d0_f16:1:g_d0_f16:?:11
+43:1294:85478:131:0:105:297:126:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+43:1295:85514:0:22:97:110:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+43:1296:85521:22:84:197:205:241:1:g_d0_f25:1:g_d0_f25:?:Data
+43:1297:85525:84:0:221:244:157:1:g_d0_f25:1:g_d0_f25:A:Natural rate
+43:1298:85537:0:38:186:209:169:1:g_d0_f25:5:g_d0_f533R:?:OC Policy(--------
+43:1299:85555:38:0:322:324:131:1:g_d0_f16:1:g_d0_f16:?:3
+43:1300:85556:0:0:322:324:147:1:g_d0_f16:1:g_d0_f16:?:4
+43:1301:85557:0:0:322:324:163:1:g_d0_f16:1:g_d0_f16:?:5
+43:1302:85558:0:0:322:324:179:1:g_d0_f16:1:g_d0_f16:?:6
+43:1303:85559:0:0:322:324:194:1:g_d0_f16:1:g_d0_f16:?:7
+43:1304:85560:0:0:322:324:210:1:g_d0_f16:1:g_d0_f16:?:8
+43:1305:85561:0:0:322:324:226:1:g_d0_f16:1:g_d0_f16:?:9
+43:1306:85562:0:0:320:322:241:1:g_d0_f16:1:g_d0_f16:?:10
+43:1307:85564:0:131:320:322:257:1:g_d0_f16:1:g_d0_f16:?:11
+43:1308:85566:131:0:324:516:126:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+43:1309:85602:0:22:316:329:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+43:1310:85609:22:84:416:424:241:1:g_d0_f25:1:g_d0_f25:?:Data
+43:1311:85613:84:0:440:426:157:1:g_d0_f25:5:g_d0_f501R:?:Natural rateOC Policy(--------
+44:1312:85645:0:45:125:486:694:11:g_d0_f15:11:g_d0_f1:?:Figure 5: Counterfactual Simulations under OC Policy withλ= 0
+44:1313:85706:45:27:145:492:649:11:g_d0_f1:11:g_d0_f1:?:Absent MisperceptionsWith Historical Misperceptions
+44:1314:85757:27:140:179:438:622:11:g_d0_f1:11:g_d0_f1:A:InflationInflation
+44:1315:85775:140:0:102:106:482:1:g_d0_f19:1:g_d0_f19:A:-2
+44:1316:85777:0:0:103:105:500:1:g_d0_f19:1:g_d0_f19:A:0
+44:1317:85778:0:0:103:105:518:1:g_d0_f19:1:g_d0_f19:A:2
+44:1318:85779:0:0:103:105:536:1:g_d0_f19:1:g_d0_f19:A:4
+44:1319:85780:0:0:103:105:554:1:g_d0_f19:1:g_d0_f19:A:6
+44:1320:85781:0:0:103:105:572:1:g_d0_f19:1:g_d0_f19:A:8
+44:1321:85782:0:0:101:103:590:1:g_d0_f19:1:g_d0_f19:?:10
+44:1322:85784:0:132:101:103:608:1:g_d0_f19:1:g_d0_f19:?:12
+44:1323:85786:132:0:105:297:476:1:g_d0_f19:1:g_d0_f19:A:196519701975198019851990199520002005
+44:1324:85822:0:31:97:110:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+44:1325:85829:31:76:188:196:582:1:g_d0_f26:1:g_d0_f26:A:Data
+44:1326:85833:76:24:201:248:506:1:g_d0_f26:5:g_d0_f616R:?:OC Policy (--0-----
+44:1327:85852:24:0:321:325:482:1:g_d0_f19:1:g_d0_f19:?:-2
+44:1328:85854:0:0:322:324:500:1:g_d0_f19:1:g_d0_f19:?:0
+44:1329:85855:0:0:322:324:518:1:g_d0_f19:1:g_d0_f19:?:2
+44:1330:85856:0:0:322:324:536:1:g_d0_f19:1:g_d0_f19:?:4
+44:1331:85857:0:0:322:324:554:1:g_d0_f19:1:g_d0_f19:?:6
+44:1332:85858:0:0:322:324:572:1:g_d0_f19:1:g_d0_f19:?:8
+44:1333:85859:0:0:320:322:590:1:g_d0_f19:1:g_d0_f19:?:10
+44:1334:85861:0:132:320:322:608:1:g_d0_f19:1:g_d0_f19:?:12
+44:1335:85863:132:0:324:516:476:1:g_d0_f19:1:g_d0_f19:?:196519701975198019851990199520002005
+44:1336:85899:0:31:316:329:613:1:g_d0_f19:1:g_d0_f19:?:Percent
+44:1337:85906:31:60:407:415:582:1:g_d0_f26:1:g_d0_f26:?:Data
+44:1338:85910:60:75:372:396:522:1:g_d0_f26:5:g_d0_f600R:?:OC Policy(--0-----
+44:1339:85928:75:140:146:471:447:11:g_d0_f1:11:g_d0_f1:?:Inflation ExpectationsInflation Expectations
+44:1340:85972:140:0:103:105:307:1:g_d0_f16:1:g_d0_f16:A:0
+44:1341:85973:0:0:103:105:319:1:g_d0_f16:1:g_d0_f16:A:1
+44:1342:85974:0:0:103:105:332:1:g_d0_f16:1:g_d0_f16:A:2
+44:1343:85975:0:0:103:105:344:1:g_d0_f16:1:g_d0_f16:A:3
+44:1344:85976:0:0:103:105:357:1:g_d0_f16:1:g_d0_f16:A:4
+44:1345:85977:0:0:103:105:369:1:g_d0_f16:1:g_d0_f16:A:5
+44:1346:85978:0:0:103:105:382:1:g_d0_f16:1:g_d0_f16:A:6
+44:1347:85979:0:0:103:105:395:1:g_d0_f16:1:g_d0_f16:A:7
+44:1348:85980:0:0:103:105:407:1:g_d0_f16:1:g_d0_f16:A:8
+44:1349:85981:0:0:103:105:420:1:g_d0_f16:1:g_d0_f16:A:9
+44:1350:85982:0:131:101:103:432:1:g_d0_f16:1:g_d0_f16:?:10
+44:1351:85984:131:0:105:297:301:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+44:1352:86020:0:27:97:110:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+44:1353:86027:27:89:189:195:411:1:g_d0_f27:1:g_d0_f27:A:SPF
+44:1354:86030:89:15:204:251:322:1:g_d0_f27:5:g_d0_f676R:?:OC Policy (--0-----
+44:1355:86049:15:0:322:324:307:1:g_d0_f16:1:g_d0_f16:?:0
+44:1356:86050:0:0:322:324:319:1:g_d0_f16:1:g_d0_f16:?:1
+44:1357:86051:0:0:322:324:332:1:g_d0_f16:1:g_d0_f16:?:2
+44:1358:86052:0:0:322:324:344:1:g_d0_f16:1:g_d0_f16:?:3
+44:1359:86053:0:0:322:324:357:1:g_d0_f16:1:g_d0_f16:?:4
+44:1360:86054:0:0:322:324:369:1:g_d0_f16:1:g_d0_f16:?:5
+44:1361:86055:0:0:322:324:382:1:g_d0_f16:1:g_d0_f16:?:6
+44:1362:86056:0:0:322:324:395:1:g_d0_f16:1:g_d0_f16:?:7
+44:1363:86057:0:0:322:324:407:1:g_d0_f16:1:g_d0_f16:?:8
+44:1364:86058:0:0:322:324:420:1:g_d0_f16:1:g_d0_f16:?:9
+44:1365:86059:0:131:320:322:432:1:g_d0_f16:1:g_d0_f16:?:10
+44:1366:86061:131:0:324:516:301:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+44:1367:86097:0:25:316:329:438:1:g_d0_f16:1:g_d0_f16:?:Percent
+44:1368:86104:25:90:408:414:413:1:g_d0_f27:1:g_d0_f27:?:SPF
+44:1369:86107:90:51:422:470:323:1:g_d0_f27:5:g_d0_f660R:?:OC Policy (--0-----
+44:1370:86126:51:141:150:467:272:11:g_d0_f1:11:g_d0_f1:?:Unemployment RateUnemployment Rate
+44:1371:86160:141:0:103:105:131:1:g_d0_f16:1:g_d0_f16:A:3
+44:1372:86161:0:0:103:105:147:1:g_d0_f16:1:g_d0_f16:A:4
+44:1373:86162:0:0:103:105:163:1:g_d0_f16:1:g_d0_f16:A:5
+44:1374:86163:0:0:103:105:179:1:g_d0_f16:1:g_d0_f16:A:6
+44:1375:86164:0:0:103:105:194:1:g_d0_f16:1:g_d0_f16:A:7
+44:1376:86165:0:0:103:105:210:1:g_d0_f16:1:g_d0_f16:A:8
+44:1377:86166:0:0:103:105:226:1:g_d0_f16:1:g_d0_f16:A:9
+44:1378:86167:0:0:101:103:241:1:g_d0_f16:1:g_d0_f16:?:10
+44:1379:86169:0:131:101:103:257:1:g_d0_f16:1:g_d0_f16:?:11
+44:1380:86171:131:0:105:297:126:1:g_d0_f16:1:g_d0_f16:A:196519701975198019851990199520002005
+44:1381:86207:0:22:97:110:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+44:1382:86214:22:84:197:205:241:1:g_d0_f28:1:g_d0_f28:?:Data
+44:1383:86218:84:0:221:244:157:1:g_d0_f28:1:g_d0_f28:A:Natural rate
+44:1384:86230:0:36:186:209:167:1:g_d0_f28:5:g_d0_f630R:?:OC Policy(--0-----
+44:1385:86248:36:0:322:324:131:1:g_d0_f16:1:g_d0_f16:?:3
+44:1386:86249:0:0:322:324:147:1:g_d0_f16:1:g_d0_f16:?:4
+44:1387:86250:0:0:322:324:163:1:g_d0_f16:1:g_d0_f16:?:5
+44:1388:86251:0:0:322:324:179:1:g_d0_f16:1:g_d0_f16:?:6
+44:1389:86252:0:0:322:324:194:1:g_d0_f16:1:g_d0_f16:?:7
+44:1390:86253:0:0:322:324:210:1:g_d0_f16:1:g_d0_f16:?:8
+44:1391:86254:0:0:322:324:226:1:g_d0_f16:1:g_d0_f16:?:9
+44:1392:86255:0:0:320:322:241:1:g_d0_f16:1:g_d0_f16:?:10
+44:1393:86257:0:131:320:322:257:1:g_d0_f16:1:g_d0_f16:?:11
+44:1394:86259:131:0:324:516:126:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+44:1395:86295:0:22:316:329:263:1:g_d0_f16:1:g_d0_f16:?:Percent
+44:1396:86302:22:84:416:424:241:1:g_d0_f28:1:g_d0_f28:?:Data
+44:1397:86306:84:0:440:425:157:1:g_d0_f28:5:g_d0_f646R:?:Natural rateOC Policy(--0-----
+45:1398:86338:0:46:89:522:694:11:g_d0_f15:11:g_d0_f15:F:Figure 6: Counterfactual Simulations under Robust Simple Policy Rule (λ= 4)
+45:1399:86413:46:140:179:471:648:11:g_d0_f1:11:g_d0_f1:A:InflationInflation Expectations
+45:1400:86444:140:0:102:106:508:1:g_d0_f19:1:g_d0_f19:A:-2
+45:1401:86446:0:0:103:105:526:1:g_d0_f19:1:g_d0_f19:A:0
+45:1402:86447:0:0:103:105:544:1:g_d0_f19:1:g_d0_f19:A:2
+45:1403:86448:0:0:103:105:562:1:g_d0_f19:1:g_d0_f19:A:4
+45:1404:86449:0:0:103:105:580:1:g_d0_f19:1:g_d0_f19:A:6
+45:1405:86450:0:0:103:105:598:1:g_d0_f19:1:g_d0_f19:A:8
+45:1406:86451:0:0:101:103:616:1:g_d0_f19:1:g_d0_f19:?:10
+45:1407:86453:0:131:101:103:634:1:g_d0_f19:1:g_d0_f19:?:12
+45:1408:86455:131:0:105:297:503:1:g_d0_f19:1:g_d0_f19:A:196519701975198019851990199520002005
+45:1409:86491:0:32:97:110:640:1:g_d0_f19:1:g_d0_f19:?:Percent
+45:1410:86498:32:76:188:196:608:1:g_d0_f29:1:g_d0_f29:A:Data
+45:1411:86502:76:24:194:230:532:1:g_d0_f29:1:g_d0_f29:?:Robust policy rule
+45:1412:86520:24:0:322:324:508:1:g_d0_f16:1:g_d0_f16:?:0
+45:1413:86521:0:0:322:324:521:1:g_d0_f16:1:g_d0_f16:?:1
+45:1414:86522:0:0:322:324:533:1:g_d0_f16:1:g_d0_f16:?:2
+45:1415:86523:0:0:322:324:546:1:g_d0_f16:1:g_d0_f16:?:3
+45:1416:86524:0:0:322:324:559:1:g_d0_f16:1:g_d0_f16:?:4
+45:1417:86525:0:0:322:324:571:1:g_d0_f16:1:g_d0_f16:?:5
+45:1418:86526:0:0:322:324:584:1:g_d0_f16:1:g_d0_f16:?:6
+45:1419:86527:0:0:322:324:596:1:g_d0_f16:1:g_d0_f16:?:7
+45:1420:86528:0:0:322:324:609:1:g_d0_f16:1:g_d0_f16:?:8
+45:1421:86529:0:0:322:324:621:1:g_d0_f16:1:g_d0_f16:?:9
+45:1422:86530:0:131:320:322:634:1:g_d0_f16:1:g_d0_f16:?:10
+45:1423:86532:131:0:324:516:503:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+45:1424:86568:0:115:316:329:640:1:g_d0_f16:1:g_d0_f16:?:Percent
+45:1425:86575:115:0:421:457:525:1:g_d0_f30:1:g_d0_f30:?:Robust policy rule
+45:1426:86593:0:137:408:414:610:1:g_d0_f30:1:g_d0_f30:?:SPF
+45:1427:86596:137:140:155:467:473:11:g_d0_f1:11:g_d0_f1:?:Real Interest RateUnemployment Rate
+45:1428:86631:140:0:102:106:333:1:g_d0_f19:1:g_d0_f19:A:-8
+45:1429:86633:0:0:102:106:347:1:g_d0_f19:1:g_d0_f19:A:-6
+45:1430:86635:0:0:102:106:361:1:g_d0_f19:1:g_d0_f19:A:-4
+45:1431:86637:0:0:102:106:375:1:g_d0_f19:1:g_d0_f19:A:-2
+45:1432:86639:0:0:103:105:389:1:g_d0_f19:1:g_d0_f19:A:0
+45:1433:86640:0:0:103:105:403:1:g_d0_f19:1:g_d0_f19:A:2
+45:1434:86641:0:0:103:105:417:1:g_d0_f19:1:g_d0_f19:A:4
+45:1435:86642:0:0:103:105:431:1:g_d0_f19:1:g_d0_f19:A:6
+45:1436:86643:0:0:103:105:445:1:g_d0_f19:1:g_d0_f19:A:8
+45:1437:86644:0:131:101:103:459:1:g_d0_f19:1:g_d0_f19:?:10
+45:1438:86646:131:0:105:297:328:1:g_d0_f19:1:g_d0_f19:A:196519701975198019851990199520002005
+45:1439:86682:0:24:97:110:464:1:g_d0_f19:1:g_d0_f19:?:Percent
+45:1440:86689:24:0:123:159:440:1:g_d0_f31:1:g_d0_f31:?:Robust policy rule
+45:1441:86707:0:118:189:204:451:1:g_d0_f31:1:g_d0_f31:A:Baseline
+45:1442:86715:118:0:322:324:333:1:g_d0_f16:1:g_d0_f16:?:3
+45:1443:86716:0:0:322:324:349:1:g_d0_f16:1:g_d0_f16:?:4
+45:1444:86717:0:0:322:324:364:1:g_d0_f16:1:g_d0_f16:?:5
+45:1445:86718:0:0:322:324:380:1:g_d0_f16:1:g_d0_f16:?:6
+45:1446:86719:0:0:322:324:396:1:g_d0_f16:1:g_d0_f16:?:7
+45:1447:86720:0:0:322:324:412:1:g_d0_f16:1:g_d0_f16:?:8
+45:1448:86721:0:0:322:324:427:1:g_d0_f16:1:g_d0_f16:?:9
+45:1449:86722:0:0:320:322:443:1:g_d0_f16:1:g_d0_f16:?:10
+45:1450:86724:0:131:320:322:459:1:g_d0_f16:1:g_d0_f16:?:11
+45:1451:86726:131:0:324:516:328:1:g_d0_f16:1:g_d0_f16:?:196519701975198019851990199520002005
+45:1452:86762:0:21:316:329:464:1:g_d0_f16:1:g_d0_f16:?:Percent
+45:1453:86769:21:84:416:424:443:1:g_d0_f32:1:g_d0_f32:?:Data
+45:1454:86773:84:73:440:424:359:1:g_d0_f32:1:g_d0_f32:?:Natural rateRobust policy rule
+45:1455:86803:73:0:190:421:286:11:g_d0_f8:11:g_d0_f8:A:it=it−1+ 1.74 ( ̄πet+3−π∗)−1.19 (ut−1−ut−2).
+46:1456:86849:0:287:153:458:694:11:g_d0_f15:11:g_d0_f15:?:Figure 7: Simulations of 10-Year Inflation Expectations
+46:1457:86904:287:0:137:141:407:4:g_d0_f16:4:g_d0_f16:?:0
+46:1458:86905:0:0:137:141:438:4:g_d0_f16:4:g_d0_f16:?:1
+46:1459:86906:0:0:137:141:470:4:g_d0_f16:4:g_d0_f16:?:2
+46:1460:86907:0:0:137:141:502:4:g_d0_f16:4:g_d0_f16:?:3
+46:1461:86908:0:0:137:141:534:4:g_d0_f16:4:g_d0_f16:?:4
+46:1462:86909:0:0:137:141:566:4:g_d0_f16:4:g_d0_f16:?:5
+46:1463:86910:0:0:137:141:598:4:g_d0_f16:4:g_d0_f16:?:6
+46:1464:86911:0:232:137:141:629:4:g_d0_f16:4:g_d0_f16:?:7
+46:1465:86912:232:0:140:475:397:4:g_d0_f16:4:g_d0_f16:?:196519701975198019851990199520002005
+46:1466:86948:0:187:130:153:639:4:g_d0_f16:4:g_d0_f16:?:Percent
+46:1467:86955:187:0:215:276:452:4:g_d0_f33:4:g_d0_f33:A:Robust policy rule
+46:1468:86973:0:9:254:306:589:4:g_d0_f33:4:g_d0_f33:?:OC Policy: with
+46:1469:86988:9:141:256:306:580:4:g_d0_f33:4:g_d0_f33:?:misperceptions
+46:1470:87002:141:9:363:409:439:4:g_d0_f33:4:g_d0_f33:?:OC Policy: no
+46:1471:87015:9:0:361:411:430:4:g_d0_f33:4:g_d0_f33:?:misperceptions

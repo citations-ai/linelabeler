@@ -1,0 +1,813 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:506:610:12:Times:12:Times:NONLINEAR PROGRAMMING METHOD FOR DYNAMIC PROGRAMMING
+1:2:77:28:14:306:341:582:12:Times:12:Times:Yongyang Cai
+1:3:89:14:14:306:346:568:12:Times:12:Times:Kenneth L. Judd
+1:4:104:14:14:306:353:554:12:Times:12:Times:Thomas S. Lontzek
+1:5:121:14:14:306:362:540:12:Times:12:Times:Valentina Michelangeli
+1:6:143:14:28:306:334:526:12:Times:12:Times:Che-Lin Su
+1:7:153:28:14:306:359:498:12:Times:12:Times:Working Paper 19034
+1:8:172:14:42:306:393:484:12:Times:12:Times:http://www.nber.org/papers/w19034
+1:9:205:42:14:306:439:442:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:10:241:14:14:306:374:428:12:Times:12:Times:1050 Massachusetts Avenue
+1:11:266:14:14:306:362:414:12:Times:12:Times:Cambridge, MA 02138
+1:12:285:14:186:306:330:400:12:Times:12:Times:May 2013
+1:13:293:186:14:72:540:214:12:Times:12:Times:Cai and Judd gratefully acknowledge NSF support (SES-0951576). Michelangeli acknowledges the
+1:14:385:14:14:72:540:200:12:Times:12:Times:funding of the Bank of Italy research fellowship. The views expressed herein are those of the authors
+1:15:486:14:14:72:540:186:12:Times:12:Times:and do not necessarily reflect the views of the National Bureau of Economic Research or the Bank
+1:16:582:14:28:72:110:172:12:Times:12:Times:of Italy.
+1:17:591:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:18:687:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:19:782:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:20:800:28:14:72:540:88:12:Times:12:Times:© 2013 by Yongyang Cai, Kenneth L. Judd, Thomas S. Lontzek, Valentina Michelangeli, and Che-Lin
+1:21:895:14:14:72:540:74:12:Times:12:Times:Su. All rights reserved. Short sections of text, not to exceed two paragraphs, may be quoted without
+1:22:995:14:0:72:487:60:12:Times:12:Times:explicit permission provided that full credit, including © notice, is given to the source.
+2:23:1085:0:14:72:362:700:12:Times:12:Times:Nonlinear Programming Method for Dynamic Programming
+2:24:1137:14:14:72:512:686:12:Times:12:Times:Yongyang Cai, Kenneth L. Judd, Thomas S. Lontzek, Valentina Michelangeli, and Che-Lin
+2:25:1222:14:14:72:85:672:12:Times:12:Times:Su
+2:26:1224:14:14:72:234:658:12:Times:12:Times:NBER Working Paper No. 19034
+2:27:1252:14:14:72:121:644:12:Times:12:Times:May 2013
+2:28:1260:14:28:72:158:630:12:Times:12:Times:JEL No. C61,C63
+2:29:1275:28:28:306:339:602:12:Times:12:Times:ABSTRACT
+2:30:1283:28:14:72:540:574:12:Times:12:Times:A nonlinear programming formulation is introduced to solve infinite horizon dynamic programming
+2:31:1378:14:14:72:540:560:12:Times:12:Times:problems. This extends the linear approach to dynamic programming by using ideas from approximation
+2:32:1477:14:14:72:540:546:12:Times:12:Times:theory to avoid inefficient discretization. Our numerical results show that this nonlinear programming
+2:33:1579:14:42:72:228:532:12:Times:12:Times:method is efficient and accurate.
+2:34:1612:42:14:72:142:490:12:Times:12:Times:Yongyang Cai
+2:35:1624:14:14:72:160:476:12:Times:12:Times:Hoover Institution
+2:36:1642:14:14:72:167:462:12:Times:12:Times:Stanford University
+2:37:1661:14:14:72:169:448:12:Times:12:Times:Stanford, CA 94305
+2:38:1679:14:28:72:169:434:12:Times:12:Times:yycai@stanford.edu
+2:39:1697:28:14:72:152:406:12:Times:12:Times:Kenneth L. Judd
+2:40:1712:14:14:72:160:392:12:Times:12:Times:Hoover Institution
+2:41:1730:14:14:72:167:378:12:Times:12:Times:Stanford University
+2:42:1749:14:14:72:200:364:12:Times:12:Times:Stanford, CA  94305-6010
+2:43:1773:14:14:72:124:350:12:Times:12:Times:and NBER
+2:44:1781:14:28:72:186:336:12:Times:12:Times:kennethjudd@mac.com
+2:45:1800:28:14:72:166:308:12:Times:12:Times:Thomas S. Lontzek
+2:46:1817:14:14:72:171:294:12:Times:12:Times:University of Zurich
+2:47:1837:14:14:72:228:280:12:Times:12:Times:Moussonstrasse 15, 8044 Zurich
+2:48:1867:14:0:72:241:266:12:Times:12:Times:Thomas.Lontzek@Business.uzh.ch
+2:49:1897:0:14:306:419:490:12:Times:12:Times:Valentina Michelangeli
+2:50:1919:14:14:306:372:476:12:Times:12:Times:Banca d'Italia
+2:51:1933:14:14:306:458:462:12:Times:12:Times:Via Nazionale 91, 00184 Roma
+2:52:1961:14:28:306:477:448:12:Times:12:Times:valentina.michelangeli@gmail.com
+2:53:1993:28:14:306:362:420:12:Times:12:Times:Che-Lin Su
+2:54:2003:14:14:306:413:406:12:Times:12:Times:University of Chicago
+2:55:2024:14:0:306:454:392:12:Times:12:Times:che-lin.su@ChicagoBooth.edu
+3:56:2051:0:25:117:227:704:14:g_d0_f1:14:g_d0_f1:1  Introduction
+3:57:2066:25:13:117:476:679:11:g_d0_f2:11:g_d0_f2:Dynamic programming (DP) is the essential tool in solving problems of dy-
+3:58:2139:13:14:117:476:666:11:g_d0_f2:11:g_d0_f2:namic and stochastic controls in economic analysis. The nonlinearities of
+3:59:2212:14:13:117:476:652:11:g_d0_f2:11:g_d0_f2:dynamic economic problems make them numerically challenging. To avoid
+3:60:2281:13:14:117:476:639:11:g_d0_f2:11:g_d0_f2:the nonlinearity, linear programming (LP) approaches have been studied in
+3:61:2354:14:13:117:476:625:11:g_d0_f2:11:g_d0_f2:the literature; see De Farias and Van Roy (2003), and Trick and Zin (1997).
+3:62:2429:13:14:117:476:612:11:g_d0_f2:11:g_d0_f2:However, the LP approach has limited value for problems with continuous ac-
+3:63:2504:14:14:117:476:598:11:g_d0_f2:11:g_d0_f2:tions and/or states since an LP approach would have to discretize the states
+3:64:2580:14:13:117:476:584:11:g_d0_f2:11:g_d0_f2:and controls. The most common discretization technique is the Cartesian
+3:65:2651:13:14:117:476:571:11:g_d0_f2:11:g_d0_f2:grid, which leads to a curse-of-dimensionality in both the state and action
+3:66:2726:14:13:117:476:557:11:g_d0_f2:11:g_d0_f2:spaces: if each of action or state variable is discretized bymequally spaced
+3:67:2802:13:14:117:476:544:11:g_d0_f2:11:g_d0_f2:nodes, then the number of points is up tomd, wheredis the number of
+3:68:2869:14:13:117:476:530:11:g_d0_f2:11:g_d0_f2:both action and state variables. Moreover, in many economic problems, es-
+3:69:2942:13:14:117:476:517:11:g_d0_f2:11:g_d0_f2:pecially those involving policy evaluations or welfare analysis, it is necessary
+3:70:3022:14:13:117:476:503:11:g_d0_f2:11:g_d0_f2:to obtain accurate approximations of the decision rules, a task that is much
+3:71:3098:13:14:117:476:490:11:g_d0_f2:11:g_d0_f2:more difficult than approximating the value function. Therefore, if we want
+3:72:3173:14:13:117:476:476:11:g_d0_f2:11:g_d0_f2:to have 5-digit accuracy for a problem defined on one state variable and two
+3:73:3249:13:14:117:476:463:11:g_d0_f2:11:g_d0_f2:controls, all of which are mapped to a unit cube, the LP approach would
+3:74:3320:14:14:117:476:449:11:g_d0_f2:11:g_d0_f2:require 100,000 points in each dimension for a total of1015points, a problem
+3:75:3396:14:13:117:265:435:11:g_d0_f2:11:g_d0_f2:size that is currently infeasible.
+3:76:3430:13:14:134:476:422:11:g_d0_f2:11:g_d0_f2:This paper presents a nonlinear programming (NLP) method, called
+3:77:3494:14:13:117:476:408:11:g_d0_f2:11:g_d0_f2:DPNLP, to solve the infinite horizon DP problems with or without stochas-
+3:78:3567:13:14:117:476:395:11:g_d0_f2:11:g_d0_f2:ticity. The method uses shape-preserving approximation methods to approx-
+3:79:3640:14:13:117:476:381:11:g_d0_f2:11:g_d0_f2:imate the optimal value function by adding some extra degree of freedom.
+3:80:3712:13:14:117:476:368:11:g_d0_f2:11:g_d0_f2:DPNLP solves the deterministic or stochastic DP problem with one or two
+3:81:3783:14:13:117:476:354:11:g_d0_f2:11:g_d0_f2:continuous state variables and several continuous control variables without
+3:82:3858:13:14:117:476:341:11:g_d0_f2:11:g_d0_f2:the curse-of-dimensionality of the action space. Moreover, in our numeri-
+3:83:3931:14:14:117:476:327:11:g_d0_f2:11:g_d0_f2:cal examples, DPNLP uses only 19 nodes of the continuous state and their
+3:84:4003:14:13:117:476:313:11:g_d0_f2:11:g_d0_f2:corresponding 19 two-dimensional actions and takes only seconds or about
+3:85:4075:13:14:117:476:300:11:g_d0_f2:11:g_d0_f2:one minute to achieve the 5-digit or higher accuracy for both determinis-
+3:86:4148:14:13:117:476:286:11:g_d0_f2:11:g_d0_f2:tic and stochastic DP problems with one continuous state (and one discrete
+3:87:4222:13:14:117:476:273:11:g_d0_f2:11:g_d0_f2:state for the stochastic DP) and two continuous control variables.  Since
+3:88:4295:14:13:117:476:259:11:g_d0_f2:11:g_d0_f2:DPNLP has no curse-of-dimensionality of the action space, it can also solve
+3:89:4370:13:14:117:476:246:11:g_d0_f2:11:g_d0_f2:DP problems with many continuous control variables easily and quickly. In
+3:90:4443:14:13:117:476:232:11:g_d0_f2:11:g_d0_f2:our two-country optimal growth examples, the problems have two contin-
+3:91:4513:13:14:117:476:219:11:g_d0_f2:11:g_d0_f2:uous state variables and six continuous control variables. This makes the
+3:92:4586:14:13:117:476:205:11:g_d0_f2:11:g_d0_f2:LP approach infeasible even within only 2-digit accuracy, but DPNLP solves
+3:93:4660:13:14:117:329:192:11:g_d0_f2:11:g_d0_f2:them in minutes with up to 5-digit accuracy.
+3:94:4704:14:14:134:476:178:11:g_d0_f2:11:g_d0_f2:In this paper, the DPNLP method is described as an adequate tool to
+3:95:4771:14:13:117:476:164:11:g_d0_f2:11:g_d0_f2:solve a DP problem with one or multiple continuous state variables (and
+3:96:4842:13:14:117:476:151:11:g_d0_f2:11:g_d0_f2:discrete state variables) and multiple continuous control variables.  Many
+3:97:4916:14:13:117:476:137:11:g_d0_f2:11:g_d0_f2:economic problems involve models with one or several variables that is “by
+3:98:4990:13:0:117:476:124:11:g_d0_f2:11:g_d0_f2:definition” continuous (such as wealth or capital). Discretizing such a state
+4:99:5068:0:14:117:476:704:11:g_d0_f2:11:g_d0_f2:would require many grid points, with the computational costs associated
+4:100:5139:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:to it. However, other state variables, even though continuous, often follow
+4:101:5214:13:14:117:476:677:11:g_d0_f2:11:g_d0_f2:processes that make them suitable for discretization, without significant loss
+4:102:5292:14:14:117:289:663:11:g_d0_f2:11:g_d0_f2:in terms of accuracy of the solution.
+4:103:5329:14:13:134:476:649:11:g_d0_f2:11:g_d0_f2:Our DPNLP method can also be a crucial component of empirical estima-
+4:104:5398:13:14:117:476:636:11:g_d0_f2:11:g_d0_f2:tion methods. Michelangeli (2009) used DPNLP inside an MPEC approach
+4:105:5466:14:13:117:476:622:11:g_d0_f2:11:g_d0_f2:(see Su and Judd, 2012) to estimating a model of the demand for reverse
+4:106:5537:13:14:117:168:609:11:g_d0_f2:11:g_d0_f2:mortgages.
+4:107:5547:14:13:134:476:595:11:g_d0_f2:11:g_d0_f2:The paper is constructed as follows. Section 2 describes the kind of dy-
+4:108:5619:13:14:117:476:582:11:g_d0_f2:11:g_d0_f2:namic problem commonly used in economics and the subject of this paper.
+4:109:5690:14:13:117:476:568:11:g_d0_f2:11:g_d0_f2:Section 3 briefly reviews approximation methods such as Chebyshev poly-
+4:110:5761:13:14:117:476:555:11:g_d0_f2:11:g_d0_f2:nomial approximation.  Section 4 defines the DPNLP method for solving
+4:111:5830:14:14:117:476:541:11:g_d0_f2:11:g_d0_f2:infinite horizon DP problems.  Section 5, 6 and 7 apply DPNLP to opti-
+4:112:5900:14:13:117:476:527:11:g_d0_f2:11:g_d0_f2:mal accumulation problems similar to many economics problems. Section 8
+4:113:5971:13:34:117:165:514:11:g_d0_f2:11:g_d0_f2:concludes.
+4:114:5981:34:25:117:302:480:14:g_d0_f1:14:g_d0_f1:2  Dynamic Programming
+4:115:6003:25:13:117:476:455:11:g_d0_f2:11:g_d0_f2:An infinite horizon stochastic optimal decision-making problem has the fol-
+4:116:6078:13:33:117:213:442:11:g_d0_f2:11:g_d0_f2:lowing general form:
+4:117:6098:33:8:205:294:409:11:g_d0_f3:11:g_d0_f5:V(x0,θ0) =max
+4:118:6111:8:0:262:307:401:8:g_d0_f4:8:g_d0_f6:at∈D(xt,θt)
+4:119:6122:0:0:309:316:409:11:g_d0_f9:11:g_d0_f9:E
+4:120:6123:0:8:318:338:427:11:g_d0_f10:8:g_d0_f8:{∞
+4:121:6125:8:23:327:343:419:11:g_d0_f10:11:g_d0_f10:∑
+4:122:6126:23:0:327:342:396:8:g_d0_f4:8:g_d0_f6:t=0
+4:123:6129:0:0:344:393:409:11:g_d0_f3:11:g_d0_f5:βtu(xt,at)
+4:124:6139:0:18:393:402:427:11:g_d0_f10:11:g_d0_f10:}
+4:125:6140:18:27:404:476:409:11:g_d0_f3:11:g_d0_f2:,(1)
+4:126:6144:27:16:273:393:382:11:g_d0_f2:11:g_d0_f3:s.t.xt+1=g(xt,θt,at),
+4:127:6165:16:25:302:376:366:11:g_d0_f3:11:g_d0_f3:θt+1=h(θt,-t),
+4:128:6179:25:13:117:476:341:11:g_d0_f2:11:g_d0_f2:wherextis the discrete time continuous state vector process with initial state
+4:129:6257:13:14:117:476:328:11:g_d0_f3:11:g_d0_f2:x0,θtis the discrete state vector process with initial stateθ0,-tis a serially
+4:130:6335:14:13:117:476:314:11:g_d0_f2:11:g_d0_f2:uncorrelated random vector process,gis a continuous function representing
+4:131:6408:13:14:117:476:301:11:g_d0_f2:11:g_d0_f3:the change in the statextas a function of the state and action,at, andh
+4:132:6479:14:13:117:476:287:11:g_d0_f2:11:g_d0_f2:represents the transition process forθtrespectively,D(xt,θt)is a feasible
+4:133:6552:13:14:117:476:274:11:g_d0_f2:11:g_d0_f3:set ofatdependent on(xt,θt),βis the discount factor with0< β <1,u
+4:134:6617:14:14:117:476:260:11:g_d0_f2:11:g_d0_f2:is a concave utility function, andE{·}is the expectation operator. While
+4:135:6689:14:13:117:476:246:11:g_d0_f2:11:g_d0_f2:this description does not apply to many applications of dynamic program-
+4:136:6761:13:14:117:476:233:11:g_d0_f2:11:g_d0_f2:ming, it does apply to most models in dynamic economics. Examples include
+4:137:6834:14:13:117:459:219:11:g_d0_f2:11:g_d0_f2:economic growth, portfolio decisions, and investment decisions by firms.
+4:138:6906:13:14:134:476:206:11:g_d0_f2:11:g_d0_f2:The DP model for the general infinite horizon problem is the following
+4:139:6976:14:24:117:283:192:11:g_d0_f2:11:g_d0_f2:Bellman equation (Bellman, 1957):
+4:140:7009:24:8:182:258:168:11:g_d0_f3:11:g_d0_f5:V(x,θ) =   max
+4:141:7023:8:0:230:265:160:8:g_d0_f4:8:g_d0_f6:a∈D(x,θ)
+4:142:7031:0:0:267:326:168:11:g_d0_f3:11:g_d0_f9:u(x,a) +βE
+4:143:7041:0:9:328:334:177:11:g_d0_f10:11:g_d0_f10:{
+4:144:7042:9:0:334:418:168:11:g_d0_f3:11:g_d0_f3:V(x+,θ+)|x,θ,a
+4:145:7056:0:9:418:424:177:11:g_d0_f10:11:g_d0_f10:}
+4:146:7057:9:24:426:476:168:11:g_d0_f3:11:g_d0_f2:,(2)
+4:147:7061:24:17:243:346:144:11:g_d0_f2:11:g_d0_f3:s.t.x+=g(x,θ,a),
+4:148:7077:17:0:272:332:127:11:g_d0_f3:11:g_d0_f3:θ+=h(θ,-),
+5:149:7088:0:14:117:476:704:11:g_d0_f2:11:g_d0_f2:where(x+,θ+)is the next-stage state conditional on the current-stage state
+5:150:7162:14:13:117:476:690:11:g_d0_f5:11:g_d0_f2:(x,θ)and the actiona,-is a random variable, andV(x,θ)is the value
+5:151:7227:13:14:117:159:677:11:g_d0_f2:11:g_d0_f2:function.
+5:152:7236:14:14:134:476:663:11:g_d0_f2:11:g_d0_f2:In the simpler case where there is no uncertainty, there is no stochastic
+5:153:7309:14:32:117:278:649:11:g_d0_f2:11:g_d0_f2:stateθt, the problem (1) becomes
+5:154:7341:32:8:226:296:617:11:g_d0_f3:11:g_d0_f5:V(x0) =   max
+5:155:7354:8:0:269:304:609:8:g_d0_f4:8:g_d0_f6:at∈D(xt)
+5:156:7362:0:26:316:328:630:8:g_d0_f8:11:g_d0_f10:∞∑
+5:157:7364:26:0:313:327:604:8:g_d0_f4:8:g_d0_f6:t=0
+5:158:7367:0:27:329:381:617:11:g_d0_f3:11:g_d0_f3:βtu(xt,at),
+5:159:7378:27:24:281:387:590:11:g_d0_f2:11:g_d0_f3:s.t.xt+1=g(xt,at),
+5:160:7396:24:25:117:250:566:11:g_d0_f2:11:g_d0_f2:and its Bellman equation is:
+5:161:7424:25:7:226:288:541:11:g_d0_f3:11:g_d0_f5:V(x) =  max
+5:162:7435:7:0:264:292:534:8:g_d0_f4:8:g_d0_f6:a∈D(x)
+5:163:7441:0:24:300:476:541:11:g_d0_f3:11:g_d0_f2:u(x,a) +βV(x+),(3)
+5:164:7459:24:34:269:361:517:11:g_d0_f2:11:g_d0_f3:s.t.x+=g(x,a).
+5:165:7473:34:25:117:245:483:14:g_d0_f1:14:g_d0_f1:3  Approximation
+5:166:7489:25:13:117:476:458:11:g_d0_f2:11:g_d0_f2:In the DP problem (3), we want to solve for the optimal value function. Even
+5:167:7565:13:14:117:476:445:11:g_d0_f2:11:g_d0_f2:though the method allows to compute both the value functions and the policy
+5:168:7640:14:13:117:476:431:11:g_d0_f2:11:g_d0_f2:functions, the implementation of the steps require to solve for the optimal
+5:169:7715:13:14:117:476:418:11:g_d0_f2:11:g_d0_f2:value functions. But when state and control variables are continuous such
+5:170:7788:14:13:117:476:404:11:g_d0_f2:11:g_d0_f2:that value functions are also continuous, we have to use some approximation
+5:171:7863:13:14:117:476:391:11:g_d0_f2:11:g_d0_f2:for the value functions, since computers cannot model the entire space of
+5:172:7936:14:13:117:217:377:11:g_d0_f2:11:g_d0_f2:continuous functions.
+5:173:7957:13:14:134:476:364:11:g_d0_f2:11:g_d0_f2:An approximation scheme consists of two parts: basis functions and ap-
+5:174:8027:14:13:117:476:350:11:g_d0_f2:11:g_d0_f2:proximation nodes. Approximation nodes can be chosen as uniformly spaced
+5:175:8099:13:14:117:476:337:11:g_d0_f2:11:g_d0_f2:nodes, Chebyshev nodes, or some other specified nodes.  From the view-
+5:176:8169:14:14:117:476:323:11:g_d0_f2:11:g_d0_f2:point of basis functions, approximation methods can be classified as either
+5:177:8244:14:13:117:476:309:11:g_d0_f2:11:g_d0_f2:spectral methods or finite element methods. A spectral method uses glob-
+5:178:8316:13:11:117:476:296:11:g_d0_f2:11:g_d0_f2:ally nonzero basis functions{φj(x)}and coefficientsb={bj}such that
+5:179:8382:11:16:119:476:285:11:g_d0_f5:11:g_d0_f2:ˆV(x;b) =∑nj=0bjφj(x)is a degree-napproximation. Examples of spectral
+5:180:8451:16:14:117:476:269:11:g_d0_f2:11:g_d0_f2:methods include ordinary polynomial approximation, Chebyshev polynomial
+5:181:8522:14:13:117:476:255:11:g_d0_f2:11:g_d0_f2:approximation, and shape-preserving Chebyshev polynomial approximation
+5:182:8592:13:14:117:476:242:11:g_d0_f2:11:g_d0_f2:(Cai and Judd, 2012b). In contrast, a finite element method uses locally basis
+5:183:8670:14:13:117:476:228:11:g_d0_f2:11:g_d0_f2:functions{φj(x)}that are nonzero over sub-domains of the approximation
+5:184:8740:13:14:117:476:215:11:g_d0_f2:11:g_d0_f2:domain. Examples of finite element methods include piecewise linear inter-
+5:185:8814:14:14:117:476:201:11:g_d0_f2:11:g_d0_f2:polation, Schumaker interpolation, shape-preserving rational function spline
+5:186:8890:14:13:117:476:187:11:g_d0_f2:11:g_d0_f2:Hermite interpolation (Cai and Judd, 2012a), cubic splines, and B-splines.
+5:187:8964:13:0:117:458:174:11:g_d0_f2:11:g_d0_f2:See Cai (2010), Cai and Judd (2010), and Judd (1998) for more details.
+6:188:9035:0:21:117:375:704:12:g_d0_f13:12:g_d0_f13:3.1  Chebyshev Polynomial Approximation
+6:189:9074:21:14:117:476:683:11:g_d0_f2:11:g_d0_f2:Chebyshev polynomials on[−1,1]are defined asTj(z)  =  cos(jcos−1(z)).
+6:190:9143:14:29:117:450:669:11:g_d0_f2:11:g_d0_f2:Economics problems typically live on an interval[xmin,xmax]; if we let
+6:191:9213:29:0:233:270:640:11:g_d0_f3:11:g_d0_f5:Z(x) =
+6:192:9219:0:15:274:355:648:11:g_d0_f5:8:g_d0_f6:2x−xmin−xmax
+6:193:9231:15:0:286:343:633:11:g_d0_f3:8:g_d0_f6:xmax−xmin
+6:194:9240:0:29:357:360:640:11:g_d0_f3:11:g_d0_f3:,
+6:195:9241:29:13:117:475:611:11:g_d0_f2:11:g_d0_f5:thenTj(Z(x))are Chebyshev polynomials adapted to[xmin,xmax]forj=
+6:196:9305:13:14:117:476:598:11:g_d0_f5:11:g_d0_f2:0,1,2,.... These polynomials are orthogonal under the weighted inner prod-
+6:197:9379:14:0:117:182:584:11:g_d0_f2:11:g_d0_f5:uct:〈f,g〉=
+6:198:9389:0:13:188:213:593:11:g_d0_f14:6:g_d0_f15: ́xmax
+6:199:9395:13:14:193:122:580:8:g_d0_f4:11:g_d0_f10:xminf(x)g(x)w(x)dxwith the weighting functionw(x)  =(
+6:200:9448:14:0:122:168:566:11:g_d0_f5:8:g_d0_f6:1−Z(x)2
+6:201:9455:0:9:169:193:575:11:g_d0_f10:8:g_d0_f6:)−1/2
+6:202:9460:9:14:194:476:566:11:g_d0_f2:11:g_d0_f5:. A degreenChebyshev polynomial approximation forV(x)
+6:203:9513:14:19:117:197:552:11:g_d0_f2:11:g_d0_f2:on[xmin,xmax]is
+6:204:9528:19:0:237:282:533:11:g_d0_f5:11:g_d0_f5:ˆV(x;b) =
+6:205:9537:0:27:290:301:544:8:g_d0_f4:11:g_d0_f10:n∑
+6:206:9539:27:0:285:300:517:8:g_d0_f4:8:g_d0_f6:j=0
+6:207:9542:0:31:303:476:530:11:g_d0_f3:11:g_d0_f2:bjTj(Z(x)),(4)
+6:208:9556:31:14:117:476:499:11:g_d0_f2:11:g_d0_f2:whereb={bj}are the Chebyshev coefficients. It is often more stable to use
+6:209:9629:14:13:117:476:485:11:g_d0_f2:11:g_d0_f2:the expanded Chebyshev polynomial interpolation (Cai, 2010), as the above
+6:210:9702:13:14:117:476:472:11:g_d0_f2:11:g_d0_f2:standard Chebyshev polynomial interpolation gives poor approximation in
+6:211:9773:14:13:117:269:458:11:g_d0_f2:11:g_d0_f2:the neighborhood of end points.
+6:212:9804:13:14:134:476:445:11:g_d0_f2:11:g_d0_f2:In this section we describe the Chebyshev polynomial approximation be-
+6:213:9874:14:13:117:476:431:11:g_d0_f2:11:g_d0_f2:cause it is the approximation scheme used in our examples. While also other
+6:214:9949:13:14:117:476:418:11:g_d0_f2:11:g_d0_f2:approximation schemes may be adequate and with good performances, the
+6:215:10018:14:13:117:476:404:11:g_d0_f2:11:g_d0_f2:Chebyshev polynomial approximation presents advantages in terms of coding
+6:216:10091:13:14:117:476:391:11:g_d0_f2:11:g_d0_f2:simplicity and reliability, and easy extension to multidimensional approxi-
+6:217:10166:14:29:117:153:377:11:g_d0_f2:11:g_d0_f2:mation.
+6:218:10173:29:21:117:472:348:12:g_d0_f13:12:g_d0_f13:3.2  Multidimensional Complete Chebyshev Approximation
+6:219:10227:21:13:117:476:327:11:g_d0_f2:11:g_d0_f2:In ad-dimensional approximation problem, let the domain of the approxi-
+6:220:10298:13:19:117:207:314:11:g_d0_f2:11:g_d0_f2:mation function be
+6:221:10316:19:8:176:182:295:11:g_d0_f10:11:g_d0_f10:{
+6:222:10317:8:0:182:406:287:11:g_d0_f3:11:g_d0_f3:x= (x1,...,xd) :xmini≤xi≤xmaxi, i= 1,...d
+6:223:10358:0:8:406:412:295:11:g_d0_f10:11:g_d0_f10:}
+6:224:10359:8:20:414:417:287:11:g_d0_f3:11:g_d0_f3:,
+6:225:10360:20:14:117:476:267:11:g_d0_f2:11:g_d0_f2:for some real numbersxminiandxmaxiwithxmaxi> xminifori=  1,...,d.
+6:226:10425:14:13:117:476:253:11:g_d0_f2:11:g_d0_f2:Letxmin= (xmin1,...,xmind)andxmax= (xmax1,...,xmaxd). Then we denote
+6:227:10493:13:14:117:476:240:11:g_d0_f5:11:g_d0_f2:[xmin,xmax]as the domain.  Letα=  (α1,...,αd)be a vector of nonneg-
+6:228:10560:14:14:117:475:226:11:g_d0_f2:11:g_d0_f5:ative integers.  LetTα(z)denote the productTα1(z1)···Tαd(zd)forz=
+6:229:10625:14:31:117:242:212:11:g_d0_f5:11:g_d0_f2:(z1,...,zd)∈[−1,1]d. Let
+6:230:10649:31:0:169:204:181:11:g_d0_f3:11:g_d0_f5:Z(x) =
+6:231:10655:0:8:206:214:196:11:g_d0_f10:11:g_d0_f10:(
+6:232:10656:8:15:216:290:188:11:g_d0_f5:8:g_d0_f6:2x1−xmin1−xmax1
+6:233:10671:15:0:230:277:173:11:g_d0_f3:8:g_d0_f6:xmax1−xmin1
+6:234:10682:0:0:303:325:181:11:g_d0_f3:11:g_d0_f3:,...,
+6:235:10687:0:16:329:403:189:11:g_d0_f5:8:g_d0_f4:2xd−xmind−xmaxd
+6:236:10702:16:0:344:390:173:11:g_d0_f3:8:g_d0_f4:xmaxd−xmind
+6:237:10713:0:43:416:424:196:11:g_d0_f10:11:g_d0_f10:)
+6:238:10714:43:0:117:301:153:11:g_d0_f2:11:g_d0_f2:for anyx= (x1,...,xd)∈[xmin,xmax].
+7:239:10749:0:14:134:476:704:11:g_d0_f2:11:g_d0_f2:Using these notations, the degree-ncomplete Chebyshev approximation
+7:240:10816:14:12:117:168:690:11:g_d0_f2:11:g_d0_f2:forV(x)is
+7:241:10825:12:0:224:273:678:11:g_d0_f5:11:g_d0_f5:ˆVn(x;b) =
+7:242:10835:0:24:284:300:685:11:g_d0_f10:11:g_d0_f10:∑
+7:243:10836:24:0:276:308:661:8:g_d0_f6:8:g_d0_f4:0≤|α|≤n
+7:244:10843:0:35:310:476:675:11:g_d0_f3:11:g_d0_f2:bαTα(Z(x)),(5)
+7:245:10857:35:0:117:172:640:11:g_d0_f2:11:g_d0_f5:where|α|=
+7:246:10866:0:11:176:191:648:11:g_d0_f10:8:g_d0_f4:∑d
+7:247:10868:11:12:187:476:637:8:g_d0_f4:11:g_d0_f2:i=1αifor the nonnegative integer vectorα= (α1,...,αd). So
+7:248:10925:12:0:117:290:625:11:g_d0_f2:11:g_d0_f5:the number of terms with0≤ |α|=
+7:249:10956:0:11:294:310:633:11:g_d0_f10:8:g_d0_f4:∑d
+7:250:10958:11:0:306:365:622:8:g_d0_f4:11:g_d0_f2:i=1αi≤nis
+7:251:10967:0:13:370:390:634:11:g_d0_f10:8:g_d0_f4:(n+d
+7:252:10971:13:0:381:385:621:8:g_d0_f4:8:g_d0_f4:d
+7:253:10972:0:9:391:396:634:11:g_d0_f10:11:g_d0_f10:)
+7:254:10973:9:13:400:476:625:11:g_d0_f2:11:g_d0_f3:for the degree-n
+7:255:10989:13:35:117:318:612:11:g_d0_f2:11:g_d0_f2:complete Chebyshev approximation inRd.
+7:256:11027:35:18:117:476:577:14:g_d0_f1:14:g_d0_f1:4  Nonlinear Programming Method to Solve Bell-
+7:257:11073:18:24:141:245:559:14:g_d0_f1:14:g_d0_f1:man Equations
+7:258:11086:24:14:117:476:535:11:g_d0_f2:11:g_d0_f2:There are many approaches to solve Bellman equations, such as value func-
+7:259:11159:14:13:117:476:521:11:g_d0_f2:11:g_d0_f2:tion iteration and policy iteration methods, or LP approaches. This section
+7:260:11234:13:14:117:476:508:11:g_d0_f2:11:g_d0_f2:describes the general nonlinear programming method (DPNLP) to solve the
+7:261:11305:14:29:117:256:494:11:g_d0_f2:11:g_d0_f2:Bellman equations (3) or (2).
+7:262:11334:29:20:117:230:465:12:g_d0_f13:12:g_d0_f13:4.1  Basic DPNLP
+7:263:11350:20:14:117:476:445:11:g_d0_f2:11:g_d0_f2:To solve the problem (3), we discretize the nonlinear approximation of the
+7:264:11424:14:14:117:476:431:11:g_d0_f2:11:g_d0_f2:value function instead of the state and action spaces. The following nonlinear
+7:265:11502:14:32:117:464:417:11:g_d0_f2:11:g_d0_f2:programming problem expresses one possible formulation of this method:
+7:266:11572:32:9:175:195:385:11:g_d0_f5:11:g_d0_f5:max
+7:267:11575:9:0:153:218:376:8:g_d0_f4:8:g_d0_f16:ai∈D(xi),x+i,vi,b
+7:268:11592:0:27:242:254:399:8:g_d0_f4:11:g_d0_f10:m∑
+7:269:11594:27:0:239:253:372:8:g_d0_f4:8:g_d0_f6:i=1
+7:270:11597:0:28:256:267:385:11:g_d0_f3:11:g_d0_f3:vi,
+7:271:11600:28:17:188:439:357:11:g_d0_f2:11:g_d0_f3:s.t.vi≤u(xi,ai) +βˆV(x+i;b),  i= 1,...,m,
+7:272:11641:17:17:238:383:340:11:g_d0_f3:11:g_d0_f3:x+i=g(xi,,ai),  i= 1,...,m,
+7:273:11668:17:25:238:377:323:11:g_d0_f3:11:g_d0_f3:vi=ˆV(xi;b),  i= 1,...,m,
+7:274:11693:25:13:117:476:298:11:g_d0_f2:11:g_d0_f2:wheremis the number of the approximation nodes. In this method, the
+7:275:11760:13:14:117:476:285:11:g_d0_f2:11:g_d0_f2:choice variables are the actionsa, the next-stage statesx+, the value func-
+7:276:11835:14:14:117:261:271:11:g_d0_f2:11:g_d0_f2:tionsv, and the coefficientsb.
+7:277:11865:14:13:134:476:257:11:g_d0_f2:11:g_d0_f2:Unfortunately the solutions of the above model often has no shape prop-
+7:278:11936:13:14:117:476:244:11:g_d0_f2:11:g_d0_f2:erties, i.e., the value function is not increasing or concave. One approach
+7:279:12011:14:13:117:476:230:11:g_d0_f2:11:g_d0_f2:to improve it is to add shape-preservation in the model. See Cai and Judd
+7:280:12084:13:0:117:476:217:11:g_d0_f2:11:g_d0_f2:(2010, 2012a, 2012b) for the discussion of importance of shape-preservation
+8:281:12160:0:30:117:336:704:11:g_d0_f2:11:g_d0_f2:in DP. Now we have the basic DPNLP model:
+8:282:12201:30:10:175:195:674:11:g_d0_f5:11:g_d0_f5:max
+8:283:12204:10:0:153:218:664:8:g_d0_f4:8:g_d0_f16:ai∈D(xi),x+i,vi,b
+8:284:12221:0:27:242:254:687:8:g_d0_f4:11:g_d0_f10:m∑
+8:285:12223:27:0:239:253:660:8:g_d0_f4:8:g_d0_f6:i=1
+8:286:12226:0:29:256:476:674:11:g_d0_f3:11:g_d0_f2:vi,(6)
+8:287:12232:29:17:188:439:645:11:g_d0_f2:11:g_d0_f3:s.t.vi≤u(xi,ai) +βˆV(x+i;b),  i= 1,...,m,
+8:288:12273:17:17:238:383:628:11:g_d0_f3:11:g_d0_f3:x+i=g(xi,,ai),  i= 1,...,m,
+8:289:12300:17:14:238:377:611:11:g_d0_f3:11:g_d0_f3:vi=ˆV(xi;b),  i= 1,...,m,
+8:290:12325:14:16:240:383:597:11:g_d0_f5:11:g_d0_f3:ˆV′(yi′;b)≥0,  i′= 1,...,m′,
+8:291:12353:16:28:240:386:581:11:g_d0_f5:11:g_d0_f3:ˆV′′(yi′;b)≤0,  i′= 1,...,m′,
+8:292:12382:28:13:117:476:553:11:g_d0_f2:11:g_d0_f2:where{yi′:i′= 1,...,m′}are the set of shape nodes for shape preservation
+8:293:12454:13:14:117:476:540:11:g_d0_f2:11:g_d0_f2:constraints. Usually the number of shape nodes,m′, is more than the number
+8:294:12528:14:13:117:248:526:11:g_d0_f2:11:g_d0_f2:of approximation nodes,m.
+8:295:12553:13:14:134:475:513:11:g_d0_f2:11:g_d0_f5:To solve the stochastic Bellman equation (2) whereθ∈Θ ={θj:j=
+8:296:12614:14:35:117:320:499:11:g_d0_f5:11:g_d0_f2:1,...,J}, the basic DPNLP model becomes
+8:297:12653:35:9:176:194:464:11:g_d0_f5:11:g_d0_f5:min
+8:298:12656:9:0:144:226:455:8:g_d0_f4:8:g_d0_f16:ai,j∈D(xi,θj),x+i,vi,b
+8:299:12678:0:27:251:262:478:8:g_d0_f4:11:g_d0_f10:J∑
+8:300:12680:27:0:247:262:451:8:g_d0_f4:8:g_d0_f6:j=1
+8:301:12683:0:27:268:280:478:8:g_d0_f4:11:g_d0_f10:m∑
+8:302:12685:27:0:265:279:451:8:g_d0_f4:8:g_d0_f6:i=1
+8:303:12688:0:40:281:299:464:11:g_d0_f3:11:g_d0_f3:vi,j,
+8:304:12693:40:0:195:340:424:11:g_d0_f5:11:g_d0_f3:s.t.vi,j≤u(xi,ai,j) +β
+8:305:12715:0:27:348:359:438:8:g_d0_f4:11:g_d0_f10:J∑
+8:306:12717:27:0:342:360:411:8:g_d0_f4:8:g_d0_f6:j′=1
+8:307:12721:0:29:361:447:424:11:g_d0_f3:11:g_d0_f3:Pj,j′ˆV(x+i,j,θj′;b),
+8:308:12742:29:19:246:339:395:11:g_d0_f3:11:g_d0_f3:x+i,j=g(xi,θj,ai,j),
+8:309:12762:19:14:246:333:376:11:g_d0_f3:11:g_d0_f3:vi,j=ˆV(xi,θj;b),
+8:310:12779:14:16:248:407:362:11:g_d0_f5:11:g_d0_f3:ˆV′(yi′,θj;b)≥0,  i′= 1,...,m′,
+8:311:12810:16:20:248:409:346:11:g_d0_f5:11:g_d0_f3:ˆV′′(yi′,θj;b)≤0,  i′= 1,...,m′,
+8:312:12842:20:24:246:365:326:11:g_d0_f3:11:g_d0_f3:i= 1,...,m, j= 1,...,J,
+8:313:12865:24:14:117:476:302:11:g_d0_f2:11:g_d0_f2:wherePj,j′is the conditional probability ofθ+=θj′givenθ=θj, i.e.,
+8:314:12930:14:0:117:163:288:11:g_d0_f3:11:g_d0_f5:Pj,j′= Pr
+8:315:12939:0:9:165:170:297:11:g_d0_f10:11:g_d0_f10:(
+8:316:12940:9:0:170:247:288:11:g_d0_f3:8:g_d0_f4:θ+=θj′|θ=θj
+8:317:12951:0:9:248:253:297:11:g_d0_f10:11:g_d0_f10:)
+8:318:12952:9:29:253:368:288:11:g_d0_f2:11:g_d0_f2:, for anyj,j′= 1,...,J.
+8:319:12975:29:21:117:250:259:12:g_d0_f13:12:g_d0_f13:4.2  Iterative DPNLP
+8:320:12995:21:13:117:476:238:11:g_d0_f2:11:g_d0_f2:One problem of the basic DPNLP model (6) is that an optimization solver of-
+8:321:13070:13:14:117:475:225:11:g_d0_f2:11:g_d0_f11:ten gives a solution where the equality in (7) does not hold whileˆV′(yi′;b)≥
+8:322:13147:14:13:117:476:211:11:g_d0_f5:11:g_d0_f2:0orˆV′′(yi′;b)≤0are binding at some shape nodes instead. However, the
+8:323:13216:13:14:117:476:198:11:g_d0_f2:11:g_d0_f2:true solution of the basic DPNLP model (6) should let the inequality con-
+8:324:13289:14:13:117:152:184:11:g_d0_f2:11:g_d0_f2:straints
+8:325:13297:13:21:233:476:171:11:g_d0_f3:11:g_d0_f2:vi≤u(xi,ai) +βˆV(x+i;b),(7)
+8:326:13324:21:14:117:476:150:11:g_d0_f2:11:g_d0_f2:be binding for alli= 1,...,m, andˆV(yi′;b)should be strictly increasing and
+8:327:13399:14:14:117:476:136:11:g_d0_f2:11:g_d0_f2:concave at all the shape nodes. We introduce an iterative DPNLP method
+8:328:13469:14:0:117:230:122:11:g_d0_f2:11:g_d0_f2:to solve these problems.
+9:329:13494:0:14:134:476:704:11:g_d0_f2:11:g_d0_f2:In this paper, we use the Chebyshev polynomial approximation inˆV. For
+9:330:13564:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:a smooth function, we know that the Chebyshev polynomial approximation
+9:331:13634:13:14:117:476:677:11:g_d0_f2:11:g_d0_f2:usually have a smaller coefficients in magnitude for higher-degree terms. This
+9:332:13712:14:14:117:476:663:11:g_d0_f2:11:g_d0_f2:tells us that a small-degree Chebyshev polynomial approximation inˆVis a
+9:333:13784:14:13:117:476:649:11:g_d0_f2:11:g_d0_f2:good initial guess for a higher-degree Chebyshev polynomial approximation.
+9:334:13858:13:14:117:473:636:11:g_d0_f2:11:g_d0_f3:Another issue is that a quadratic Chebyshev polynomial approximation inˆV
+9:335:13931:14:13:117:476:622:11:g_d0_f2:11:g_d0_f2:will be a good shape-preserving approximation with increasing and concave
+9:336:14004:13:14:117:476:609:11:g_d0_f2:11:g_d0_f2:properties. Therefore, we have the following iterative DPNLP method to
+9:337:14074:14:22:117:468:595:11:g_d0_f2:11:g_d0_f2:solve the infinite horizon deterministic optimal decision-making problems.
+9:338:14148:22:14:117:476:573:11:g_d0_f18:11:g_d0_f19:Algorithm1Iterative DPNLP Method for Infinite Horizon Deterministic
+9:339:14215:14:22:145:312:559:11:g_d0_f19:11:g_d0_f19:Optimal Decision-Making Problems
+9:340:14247:22:14:117:476:537:11:g_d0_f20:11:g_d0_f19:Initialization.Choosemexpanded Chebyshev nodes{xi: 1≤i≤m}on
+9:341:14306:14:13:145:476:523:11:g_d0_f19:11:g_d0_f19:the range[xmin,xmax]as the approximation nodes (with an odd num-
+9:342:14370:13:14:145:476:510:11:g_d0_f19:11:g_d0_f19:berm), choosem′expanded Chebyshev nodes{yi: 1≤i≤m′}on the
+9:343:14427:14:14:145:476:496:11:g_d0_f19:11:g_d0_f19:range[xmin,xmax]as the shape nodes, and choose the Chebyshev poly-
+9:344:14493:14:13:145:476:482:11:g_d0_f19:11:g_d0_f19:nomial approximation forˆV(x;b)with degreen. Then solve the Basic
+9:345:14558:13:14:145:476:469:11:g_d0_f19:11:g_d0_f19:DPNLP model (6) with degree-2 Chebyshev polynomial approximation.
+9:346:14623:14:22:145:432:455:11:g_d0_f19:11:g_d0_f19:For a degreen= 3,...,m−1, iterate through steps 1 and 2.
+9:347:14679:22:14:117:476:433:11:g_d0_f20:11:g_d0_f5:Step1. Use the solutions of the Basic DPNLP model (6) with degreen−1
+9:348:14747:14:13:145:476:419:11:g_d0_f19:11:g_d0_f19:Chebyshev polynomial approximation as the initial start point of the
+9:349:14815:13:23:145:330:406:11:g_d0_f19:11:g_d0_f19:Basic DPNLP model (6) with degreen.
+9:350:14850:23:13:117:476:383:11:g_d0_f20:11:g_d0_f19:Step2. Use a reliable optimizer to solve the Basic DPNLP model (6) with
+9:351:14921:13:23:145:186:370:11:g_d0_f19:11:g_d0_f19:degreen.
+9:352:14929:23:13:117:476:347:11:g_d0_f2:11:g_d0_f2:It is easy to extend the algorithm to solve the infinite horizon stochastic
+9:353:15004:13:35:117:403:334:11:g_d0_f2:11:g_d0_f2:and/or multidimensional optimal decision-making problems.
+9:354:15061:35:18:117:476:299:14:g_d0_f1:14:g_d0_f1:5  Applications to Deterministic Optimal Growth
+9:355:15108:18:24:141:206:281:14:g_d0_f1:14:g_d0_f1:Problems
+9:356:15116:24:14:117:476:257:11:g_d0_f2:11:g_d0_f2:An infinite-horizon economic problem is the discrete-time optimal growth
+9:357:15188:14:13:117:476:243:11:g_d0_f2:11:g_d0_f2:model with one good and one capital stock, which is a deterministic model1.
+9:358:15263:13:14:117:476:230:11:g_d0_f2:11:g_d0_f2:The aim is to find the optimal consumption function and the optimal labor
+9:359:15336:14:13:117:476:216:11:g_d0_f2:11:g_d0_f2:supply function such that the total utility over the infinite-horizon time is
+9:360:15413:13:32:117:181:203:11:g_d0_f2:11:g_d0_f2:maximal, i.e.,
+9:361:15427:32:8:221:284:171:11:g_d0_f3:11:g_d0_f5:V(k0) = max
+9:362:15438:8:0:269:278:163:8:g_d0_f4:8:g_d0_f4:c,l
+9:363:15441:0:26:298:311:184:8:g_d0_f8:11:g_d0_f10:∞∑
+9:364:15443:26:0:296:310:158:8:g_d0_f4:8:g_d0_f6:t=0
+9:365:15446:0:27:312:476:171:11:g_d0_f3:11:g_d0_f2:βtu(ct,lt),(8)
+9:366:15460:27:16:268:392:144:11:g_d0_f2:11:g_d0_f3:s.t.kt+1=F(kt,lt)−ct,
+9:367:15481:16:0:130:361:128:6:g_d0_f22:9:g_d0_f23:1Please see Judd (1998) for a detailed description of this.
+10:368:15541:0:14:117:476:704:11:g_d0_f2:11:g_d0_f2:wherektis the capital stock at timetwithk0given in[0.3,2],ctis the
+10:369:15607:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:consumption,ltis the labor supply,βis the discount factor,F(k,l)is the
+10:370:15677:13:14:117:430:677:11:g_d0_f2:11:g_d0_f2:aggregate production function, andu(ct,lt)is the utility function.
+10:371:15743:14:14:134:475:663:11:g_d0_f2:11:g_d0_f5:In the examples, the aggregate production function isF(k,l)  =k+
+10:372:15807:14:31:117:450:649:11:g_d0_f3:11:g_d0_f2:Akψl1−ψwithψ= 0.25andA= (1−β)/(ψβ). The utility function is
+10:373:15866:31:0:198:237:618:11:g_d0_f3:11:g_d0_f5:u(c,l) =
+10:374:15874:0:15:241:302:626:11:g_d0_f5:11:g_d0_f5:(c/A)1−γ−1
+10:375:15884:15:0:259:284:611:11:g_d0_f5:11:g_d0_f3:1−γ
+10:376:15887:0:0:306:352:618:11:g_d0_f11:11:g_d0_f5:−(1−ψ)
+10:377:15893:0:15:353:391:626:11:g_d0_f3:11:g_d0_f5:l1+η−1
+10:378:15899:15:0:360:384:611:11:g_d0_f5:11:g_d0_f3:1 +η
+10:379:15903:0:29:392:476:618:11:g_d0_f3:11:g_d0_f2:.(9)
+10:380:15907:29:13:117:476:589:11:g_d0_f2:11:g_d0_f2:The functional forms for utility and production imply that the steady state
+10:381:15982:13:14:117:476:576:11:g_d0_f2:11:g_d0_f2:of the infinite horizon deterministic optimal growth problems iskss= 1, and
+10:382:16057:14:13:117:476:562:11:g_d0_f2:11:g_d0_f2:the optimal consumption and the optimal labor supply atkssare respectively
+10:383:16131:13:14:117:476:549:11:g_d0_f3:11:g_d0_f2:css=Aandlss= 1. The code for DPNLP is written in GAMS (McCarl,
+10:384:16193:14:29:117:476:535:11:g_d0_f2:11:g_d0_f2:2011), and the optimization solver is CONOPT (in the GAMS environment).
+10:385:16264:29:21:117:228:506:12:g_d0_f13:12:g_d0_f13:5.1  True Solution
+10:386:16282:21:13:117:476:485:11:g_d0_f2:11:g_d0_f2:In order to estimate the accuracy of solution given by DPNLP, we compute
+10:387:16354:13:14:117:476:472:11:g_d0_f2:11:g_d0_f2:the “true” optimal solution on a large set of test points for initial capital
+10:388:16431:14:13:117:476:458:11:g_d0_f3:11:g_d0_f2:k0∈[0.3,2], and then compare those results with the computed optimal
+10:389:16499:13:14:117:476:445:11:g_d0_f2:11:g_d0_f2:solution from DPNLP. To get the “true” optimal solution, we discretize the
+10:390:16573:14:14:117:476:431:11:g_d0_f2:11:g_d0_f2:range of capital,[0.3,2], with one million equally-spaced capital nodes, and
+10:391:16649:14:13:117:476:417:11:g_d0_f2:11:g_d0_f2:also discretize the range of labor supply,[0.4,2.5], with another one million
+10:392:16726:13:14:117:476:404:11:g_d0_f2:11:g_d0_f2:equally-spaced labor supply nodes. for a discrete capital nodekamong the
+10:393:16798:14:13:117:476:390:11:g_d0_f2:11:g_d0_f2:one million capital nodes and a discrete labor supply nodelamong the one
+10:394:16870:13:14:117:476:377:11:g_d0_f2:11:g_d0_f2:million labor supply nodes, we choose consumptionc=F(k,l)−k+such
+10:395:16934:14:13:117:476:363:11:g_d0_f2:11:g_d0_f2:thatk+is also one node among the one million capital nodes. Then using the
+10:396:17008:13:14:117:476:350:11:g_d0_f2:11:g_d0_f2:one million capital nodes as discrete states, we apply the alternating sweep
+10:397:17084:14:13:117:476:336:11:g_d0_f2:11:g_d0_f2:Gauss-Seidel algorithm (Judd, 1998) to compute the optimal value function
+10:398:17157:13:30:117:364:323:11:g_d0_f2:11:g_d0_f2:until it converges under the stopping criterion10−7.
+10:399:17209:30:20:117:248:293:12:g_d0_f13:12:g_d0_f13:5.2  DPNLP Solution
+10:400:17228:20:14:117:476:273:11:g_d0_f2:11:g_d0_f2:We use the iterative DPNLP method (Algorithm 1) to solve the deterministic
+10:401:17302:14:32:117:370:259:11:g_d0_f2:11:g_d0_f2:optimal growth problem. The basic DPNLP model is
+10:402:17350:32:8:193:213:227:11:g_d0_f5:11:g_d0_f5:max
+10:403:17353:8:0:185:221:219:8:g_d0_f4:8:g_d0_f16:c,l,k+,v,b
+10:404:17363:0:27:235:247:241:8:g_d0_f4:11:g_d0_f10:m∑
+10:405:17365:27:0:232:246:214:8:g_d0_f4:8:g_d0_f6:i=1
+10:406:17368:0:28:248:476:227:11:g_d0_f3:11:g_d0_f2:vi,(10)
+10:407:17375:28:17:200:426:199:11:g_d0_f2:11:g_d0_f3:s.t.vi≤u(ci,li) +βˆV(k+i;b),  i= 1,...,m,
+10:408:17416:17:18:229:394:182:11:g_d0_f3:11:g_d0_f3:k+i≤F(ki,,li)−ci,  i= 1,...,m,
+10:409:17446:18:13:229:367:164:11:g_d0_f3:11:g_d0_f3:vi=ˆV(ki;b),  i= 1,...,m,
+10:410:17471:13:17:230:374:151:11:g_d0_f5:11:g_d0_f3:ˆV′(yi′;b)≥0,  i′= 1,...,m′,
+10:411:17499:17:0:230:376:134:11:g_d0_f5:11:g_d0_f3:ˆV′′(yi′;b)≤0,  i′= 1,...,m′.
+11:412:17529:0:14:134:476:704:11:g_d0_f2:11:g_d0_f2:For our examples in this section, we always choosem=  19expanded
+11:413:17593:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:Chebyshev nodes,ki, in[0.3,2], as the approximation nodes, and the ap-
+11:414:17663:13:14:117:476:677:11:g_d0_f2:11:g_d0_f2:proximation method,ˆV, is the expanded Chebyshev polynomial up to the
+11:415:17732:14:14:117:476:663:11:g_d0_f2:11:g_d0_f2:maximal degree 18, and we choosem′= 100expanded Chebyshev nodes,yi′,
+11:416:17800:14:13:117:476:649:11:g_d0_f2:11:g_d0_f2:in[0.3,2], as the shape nodes. In fact, in some cases among our examples,
+11:417:17873:13:14:117:476:636:11:g_d0_f2:11:g_d0_f2:we could use less numbers to save computational time but with almost the
+11:418:17945:14:29:117:188:622:11:g_d0_f2:11:g_d0_f2:same accuracy.
+11:419:17959:29:20:117:354:593:12:g_d0_f13:12:g_d0_f13:5.3  Error Analysis of DPNLP Solution
+11:420:17996:20:14:117:476:573:11:g_d0_f2:11:g_d0_f2:We next use some basic examples of the deterministic optimal growth prob-
+11:421:18069:14:14:117:475:559:11:g_d0_f2:11:g_d0_f5:lem to test DPNLP. We triesβ=  0.9,0.95,0.99,γ=  0.5,2,8, andη=
+11:422:18132:14:13:117:356:545:11:g_d0_f5:11:g_d0_f2:0.2,1,5, all these examples give us good solutions.
+11:423:18183:13:14:134:476:532:11:g_d0_f2:11:g_d0_f2:Table 1 lists relative errors of optimal solutions computed by DPNLP for
+11:424:18255:14:13:117:476:518:11:g_d0_f2:11:g_d0_f2:these cases in comparison with the “true” solution given by the high-precision
+11:425:18333:13:14:117:476:505:11:g_d0_f2:11:g_d0_f2:discretization method. The errors for optimal consumptions are computed
+11:426:18404:14:19:117:128:491:11:g_d0_f2:11:g_d0_f2:by
+11:427:18406:19:7:237:257:472:11:g_d0_f5:11:g_d0_f5:max
+11:428:18409:7:0:230:263:465:8:g_d0_f4:8:g_d0_f6:k∈[0.3,2]
+11:429:18418:0:15:266:359:480:11:g_d0_f11:11:g_d0_f11:|c∗DPNLP(k)−c∗(k)|
+11:430:18436:15:0:297:327:465:11:g_d0_f11:11:g_d0_f11:|c∗(k)|
+11:431:18443:0:26:360:363:472:11:g_d0_f3:11:g_d0_f3:,
+11:432:18444:26:14:117:476:446:11:g_d0_f2:11:g_d0_f2:wherec∗DPNLP(k)is the optimal consumption computed by DPNLP, and
+11:433:18508:14:13:117:476:432:11:g_d0_f3:11:g_d0_f2:c∗(k)is the “true” optimal consumption, fork∈[0.3,2].  The errors for
+11:434:18577:13:14:117:476:419:11:g_d0_f2:11:g_d0_f2:optimal labor supply,l∗DPNLP, have the similar computation formula. The
+11:435:18648:14:13:117:476:405:11:g_d0_f2:11:g_d0_f2:last column of Table 1 lists the running time of the iterative DPNLP method
+11:436:18723:13:14:117:476:392:11:g_d0_f2:11:g_d0_f2:for various cases in the GAMS environment, on a single core of a Mac laptop
+11:437:18798:14:13:117:240:378:11:g_d0_f2:11:g_d0_f2:with a 2.5 GHz processor.
+11:438:18823:13:14:134:476:365:11:g_d0_f2:11:g_d0_f2:Table 1 shows that DPNLP solves the examples with accuracy up to 5
+11:439:18889:14:13:117:476:351:11:g_d0_f2:11:g_d0_f2:digits or higher for optimal control policy functions in all cases. Moreover,
+11:440:18966:13:14:117:476:338:11:g_d0_f2:11:g_d0_f2:the DPNLP method is fast and takes only several seconds for each case For
+11:441:19039:14:14:117:476:324:11:g_d0_f2:11:g_d0_f2:example, row one in Table 1 assumesβ= 0.9,γ= 0.5, andη= 0.2. For
+11:442:19103:14:13:117:476:310:11:g_d0_f2:11:g_d0_f2:this case, the error in consumption is1.5×10−6, the error in labor supply
+11:443:19176:13:34:117:381:297:11:g_d0_f2:11:g_d0_f2:is1.8×10−6, and the running time is only6.8seconds.
+11:444:19227:34:18:117:477:263:14:g_d0_f1:14:g_d0_f1:6  Applications to Stochastic Optimal Growth Prob-
+11:445:19277:18:25:141:172:245:14:g_d0_f1:14:g_d0_f1:lems
+11:446:19281:25:13:117:476:220:11:g_d0_f2:11:g_d0_f2:When the capital stock is dependent on a random economic shockθt, the op-
+11:447:19354:13:14:117:476:207:11:g_d0_f2:11:g_d0_f2:timal growth problem (8) becomes a stochastic dynamic optimization prob-
+11:448:19426:14:13:117:475:193:11:g_d0_f2:11:g_d0_f2:lem.  Assume that the random economic shockθtis a stochastic process
+11:449:19494:13:14:117:476:180:11:g_d0_f2:11:g_d0_f2:followingθt+1=h(θt,εt), where-tis a serially uncorrelated random process.
+11:450:19567:14:14:117:476:166:11:g_d0_f2:11:g_d0_f2:Letf(k,l,θ)denote net production function, andF(k,l,θ) =k+f(k,l,θ).
+11:451:19634:14:0:117:476:152:11:g_d0_f2:11:g_d0_f2:Then the infinite-horizon discrete-time stochastic optimization problem be-
+12:452:19711:0:13:117:476:619:11:g_d0_f2:11:g_d0_f2:Table 1: Relative Errors of DPNLP for Deterministic Optimal Growth Prob-
+12:453:19783:13:11:117:138:606:11:g_d0_f2:11:g_d0_f2:lems
+12:454:19787:11:16:138:461:595:11:g_d0_f3:11:g_d0_f2:βγηError ofc∗DPNLPError ofl∗DPNLPTime (seconds)
+12:455:19834:16:14:134:432:579:11:g_d0_f5:11:g_d0_f5:0.90.50.21.5(−6)1.8(−6)6.8
+12:456:19860:14:14:193:432:565:11:g_d0_f5:11:g_d0_f5:13.1(−6)1.5(−6)3.8
+12:457:19878:14:14:193:432:551:11:g_d0_f5:11:g_d0_f5:53.0(−6)1.1(−6)4.4
+12:458:19896:14:14:167:432:537:11:g_d0_f5:11:g_d0_f5:20.21.1(−6)3.6(−6)4.3
+12:459:19917:14:14:193:432:523:11:g_d0_f5:11:g_d0_f5:11.4(−6)2.3(−6)7.0
+12:460:19935:14:14:193:432:509:11:g_d0_f5:11:g_d0_f5:52.2(−6)1.2(−6)4.5
+12:461:19953:14:14:167:432:495:11:g_d0_f5:11:g_d0_f5:80.29.7(−6)3.7(−6)5.7
+12:462:19974:14:14:193:432:481:11:g_d0_f5:11:g_d0_f5:11.0(−6)2.6(−6)3.9
+12:463:19992:14:13:193:432:467:11:g_d0_f5:11:g_d0_f5:51.5(−6)3.5(−6)3.8
+12:464:20010:13:14:131:432:454:11:g_d0_f5:11:g_d0_f5:0.950.50.23.1(−6)3.7(−6)3.8
+12:465:20037:14:14:193:432:440:11:g_d0_f5:11:g_d0_f5:14.7(−6)1.9(−6)3.7
+12:466:20055:14:14:193:432:426:11:g_d0_f5:11:g_d0_f5:54.8(−6)1.2(−6)3.4
+12:467:20073:14:14:167:432:412:11:g_d0_f5:11:g_d0_f5:20.21.6(−6)5.8(−6)4.2
+12:468:20094:14:14:193:432:398:11:g_d0_f5:11:g_d0_f5:12.2(−6)3.4(−6)4.3
+12:469:20112:14:14:193:432:384:11:g_d0_f5:11:g_d0_f5:53.5(−6)1.9(−6)3.7
+12:470:20130:14:14:167:432:370:11:g_d0_f5:11:g_d0_f5:80.21.2(−6)6.7(−6)4.6
+12:471:20151:14:14:193:432:356:11:g_d0_f5:11:g_d0_f5:11.2(−6)5.2(−6)4.3
+12:472:20169:14:14:193:432:342:11:g_d0_f5:11:g_d0_f5:52.8(−6)4.8(−6)4.3
+12:473:20187:14:14:131:432:328:11:g_d0_f5:11:g_d0_f5:0.990.50.21.2(−5)1.3(−5)4.8
+12:474:20214:14:14:193:432:314:11:g_d0_f5:11:g_d0_f5:13.0(−5)1.1(−5)4.8
+12:475:20232:14:14:193:432:300:11:g_d0_f5:11:g_d0_f5:54.2(−5)4.3(−6)3.9
+12:476:20250:14:14:167:432:286:11:g_d0_f5:11:g_d0_f5:20.26.1(−6)2.4(−5)5.7
+12:477:20271:14:14:193:432:272:11:g_d0_f5:11:g_d0_f5:11.0(−5)1.6(−5)5.3
+12:478:20289:14:14:193:432:258:11:g_d0_f5:11:g_d0_f5:51.8(−5)7.7(−6)5.6
+12:479:20307:14:14:167:432:244:11:g_d0_f5:11:g_d0_f5:80.22.0(−6)3.2(−5)7.4
+12:480:20328:14:14:193:432:230:11:g_d0_f5:11:g_d0_f5:13.9(−6)2.2(−5)6.3
+12:481:20346:14:15:193:432:216:11:g_d0_f5:11:g_d0_f5:51.1(−5)1.6(−5)6.9
+12:482:20364:15:0:117:243:201:11:g_d0_f2:11:g_d0_f2:Note:a(k)meansa×10k.
+13:483:20386:0:31:117:145:704:11:g_d0_f2:11:g_d0_f2:comes
+13:484:20391:31:8:206:283:673:11:g_d0_f3:11:g_d0_f5:V(k0,θ0) = max
+13:485:20405:8:0:266:282:665:8:g_d0_f4:8:g_d0_f4:k,c,l
+13:486:20410:0:0:293:300:673:11:g_d0_f9:11:g_d0_f9:E
+13:487:20411:0:8:302:322:691:11:g_d0_f10:8:g_d0_f8:{∞
+13:488:20413:8:23:311:327:683:11:g_d0_f10:11:g_d0_f10:∑
+13:489:20414:23:0:311:325:660:8:g_d0_f4:8:g_d0_f6:t=0
+13:490:20417:0:0:328:373:673:11:g_d0_f3:11:g_d0_f5:βtu(ct,lt)
+13:491:20427:0:18:373:382:691:11:g_d0_f10:11:g_d0_f10:}
+13:492:20428:18:27:384:476:673:11:g_d0_f3:11:g_d0_f2:,(11)
+13:493:20433:27:16:268:405:646:11:g_d0_f2:11:g_d0_f3:s.t.kt+1=F(kt,lt,θt)−ct,
+13:494:20457:16:25:297:371:630:11:g_d0_f3:11:g_d0_f3:θt+1=h(θt,εt),
+13:495:20471:25:13:117:476:605:11:g_d0_f2:11:g_d0_f2:wherek0∈[0.3,2]andθ0are given. The parameterθhas many economic
+13:496:20533:13:14:117:476:592:11:g_d0_f2:11:g_d0_f2:interpretations.  In the life-cycle interpretation,θis a state variable that
+13:497:20609:14:13:117:476:578:11:g_d0_f2:11:g_d0_f2:may affect either asset income, labor income, or both. In the monopolist
+13:498:20681:13:14:117:413:565:11:g_d0_f2:11:g_d0_f2:interpretation,θmay reflect shocks to costs, demand, or both.
+13:499:20742:14:13:134:476:551:11:g_d0_f2:11:g_d0_f2:We use the same utility function (9), but the production function is
+13:500:20810:13:14:117:169:538:11:g_d0_f2:11:g_d0_f2:changed to
+13:501:20820:14:20:236:357:524:11:g_d0_f3:8:g_d0_f4:F(k,l,θ) =k+θAkψl1−ψ
+13:502:20840:20:14:117:476:504:11:g_d0_f2:11:g_d0_f2:whereθis the stochastic state,ψ=  0.25andA=  (1−β)/(ψβ). In the
+13:503:20903:14:24:117:445:490:11:g_d0_f2:11:g_d0_f2:examples,θtis assumed to be a Markov chain with 3 possible values:
+13:504:20969:24:25:222:372:466:11:g_d0_f3:11:g_d0_f3:θ1= 0.95, θ2= 1.0, θ3= 1.05,
+13:505:20997:25:37:117:379:441:11:g_d0_f2:11:g_d0_f2:and the probability transition matrix fromθttoθt+1is
+13:506:21049:37:0:231:251:404:11:g_d0_f3:11:g_d0_f5:P=
+13:507:21051:0:20:254:261:426:11:g_d0_f10:11:g_d0_f10:
+13:508:21052:20:0:254:261:406:11:g_d0_f10:11:g_d0_f10:
+13:509:21053:0:14:267:337:418:11:g_d0_f5:11:g_d0_f5:0.75   0.250
+13:510:21065:14:14:267:345:404:11:g_d0_f5:11:g_d0_f5:0.250.50.25
+13:511:21076:14:0:274:345:390:11:g_d0_f5:11:g_d0_f5:00.25   0.75
+13:512:21088:0:20:350:357:426:11:g_d0_f10:11:g_d0_f10:
+13:513:21089:20:40:350:362:406:11:g_d0_f10:11:g_d0_f3:.
+13:514:21091:40:13:117:476:366:11:g_d0_f2:11:g_d0_f2:The code for DPNLP is written in GAMS (McCarl, 2011), and the optimiza-
+13:515:21162:13:30:117:370:353:11:g_d0_f2:11:g_d0_f2:tion solver is CONOPT (in the GAMS environment).
+13:516:21210:30:20:117:228:323:12:g_d0_f13:12:g_d0_f13:6.1  True Solution
+13:517:21228:20:14:117:476:303:11:g_d0_f2:11:g_d0_f2:For the deterministic optimal growth problem (8), we use the discretized
+13:518:21300:14:13:117:475:289:11:g_d0_f2:11:g_d0_f2:method and the alternating sweep Gauss-Seidel algorithm to get the “true”
+13:519:21373:13:14:117:476:276:11:g_d0_f2:11:g_d0_f2:solution.  But the DP method with high-precision discretization will be
+13:520:21444:14:13:117:476:262:11:g_d0_f2:11:g_d0_f2:too time-consuming for solving the stochastic optimal growth problem (11).
+13:521:21518:13:14:117:476:249:11:g_d0_f2:11:g_d0_f2:However, Cai and Judd (2012a) introduces a value function iteration method
+13:522:21592:14:13:117:476:235:11:g_d0_f2:11:g_d0_f2:using a shape-preserving rational spline interpolation and shows that it is
+13:523:21667:13:14:117:476:222:11:g_d0_f2:11:g_d0_f2:very accurate for solving multi-period portfolio optimization problems. For
+13:524:21742:14:14:117:476:208:11:g_d0_f2:11:g_d0_f2:the deterministic optimal growth problem, since the value function is smooth,
+13:525:21819:14:13:117:476:194:11:g_d0_f2:11:g_d0_f2:increasing and concave over the continuous state, capitalk, we can also ap-
+13:526:21894:13:14:117:476:181:11:g_d0_f2:11:g_d0_f2:ply this shape-preserving DP algorithm to solve the deterministic optimal
+13:527:21967:14:13:117:476:167:11:g_d0_f2:11:g_d0_f2:growth problem and realize that it is also very accurate (by comparing its
+13:528:22041:13:14:117:476:154:11:g_d0_f2:11:g_d0_f2:solution with those given by the alternating sweep Gauss-Seidel algorithm).
+13:529:22116:14:13:134:476:140:11:g_d0_f2:11:g_d0_f2:For the stochastic optimal growth problem, the value function for each
+13:530:22186:13:0:117:476:127:11:g_d0_f2:11:g_d0_f2:discrete state is also smooth, increasing and concave over the continuous
+14:531:22261:0:14:117:476:704:11:g_d0_f2:11:g_d0_f2:state, capitalk. Therefore, we can again choose the shape-preserving value
+14:532:22335:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:function iteration method to solve the stochastic optimal growth problem
+14:533:22407:13:14:117:476:677:11:g_d0_f2:11:g_d0_f2:and iterates until it converges under the stopping criterion10−7. We use
+14:534:22479:14:14:117:476:663:11:g_d0_f2:11:g_d0_f2:1000 equally-spaced interpolation nodes on the range of the continuous state,
+14:535:22556:14:28:117:270:649:11:g_d0_f5:11:g_d0_f2:[0.3,2], for each discrete stateθ.
+14:536:22590:28:21:117:248:621:12:g_d0_f13:12:g_d0_f13:6.2  DPNLP Solution
+14:537:22609:21:13:117:476:600:11:g_d0_f2:11:g_d0_f2:We use the iterative DPNLP method (stochastic version of Algorithm 1) to
+14:538:22681:13:30:117:466:587:11:g_d0_f2:11:g_d0_f2:solve the stochastic optimal growth problem. The basic DPNLP model is
+14:539:22750:30:8:189:209:557:11:g_d0_f5:11:g_d0_f5:max
+14:540:22753:8:0:181:217:549:8:g_d0_f4:8:g_d0_f16:c,l,k+,v,b
+14:541:22763:0:26:235:246:570:8:g_d0_f4:11:g_d0_f10:J∑
+14:542:22765:26:0:230:245:544:8:g_d0_f4:8:g_d0_f6:j=1
+14:543:22768:0:26:251:263:570:8:g_d0_f4:11:g_d0_f10:m∑
+14:544:22770:26:0:248:262:544:8:g_d0_f4:8:g_d0_f6:i=1
+14:545:22773:0:40:265:476:557:11:g_d0_f3:11:g_d0_f2:vi,j,(12)
+14:546:22782:40:0:195:321:517:11:g_d0_f2:11:g_d0_f3:s.t.vi,j≤u(ci,j,li,j) +β
+14:547:22806:0:27:330:340:530:8:g_d0_f4:11:g_d0_f10:J∑
+14:548:22808:27:0:324:341:503:8:g_d0_f4:8:g_d0_f6:j′=1
+14:549:22812:0:30:343:427:517:11:g_d0_f3:11:g_d0_f3:Pj,j′ˆV(k+i,j,θj′;b),
+14:550:22833:30:19:224:345:487:11:g_d0_f3:11:g_d0_f3:k+i,j≤F(ki,,li,j,θj)−ci,j,
+14:551:22859:19:14:224:309:468:11:g_d0_f3:11:g_d0_f3:vi,j=ˆV(ki,θj;b),
+14:552:22876:14:16:226:305:454:11:g_d0_f5:11:g_d0_f3:ˆV′(yi′,θj;b)≥0,
+14:553:22892:16:19:226:307:438:11:g_d0_f5:11:g_d0_f3:ˆV′′(yi′,θj;b)≤0,
+14:554:22909:19:21:224:409:419:11:g_d0_f3:11:g_d0_f3:i= 1,...,m, j= 1,...,J, i′= 1,...,m′.
+14:555:22946:21:11:117:476:398:11:g_d0_f2:11:g_d0_f2:whereJ= 3,m= 19,m′= 100,kiare expanded Chebyshev nodes in[0.3,2],
+14:556:23011:11:16:119:476:387:11:g_d0_f5:11:g_d0_f2:ˆVis the expanded Chebyshev polynomial up to the maximal degree 18, and
+14:557:23082:16:28:117:423:371:11:g_d0_f3:11:g_d0_f2:yi′are expanded Chebyshev nodes in[0.3,2]as the shape nodes.
+14:558:23142:28:21:117:354:343:12:g_d0_f13:12:g_d0_f13:6.3  Error Analysis of DPNLP Solution
+14:559:23179:21:14:117:476:322:11:g_d0_f2:11:g_d0_f2:We examine the errors for the stochastic model in the similar manner we did
+14:560:23254:14:13:117:476:308:11:g_d0_f2:11:g_d0_f2:for the deterministic optimal growth problems: We apply the high-precision
+14:561:23328:13:14:117:476:295:11:g_d0_f2:11:g_d0_f2:value function iteration to get the “true” optimal solution for every test
+14:562:23402:14:13:117:476:281:11:g_d0_f2:11:g_d0_f2:point of initial capitalk0and every possible initial discrete stateθ0, and
+14:563:23476:13:14:117:476:268:11:g_d0_f2:11:g_d0_f2:then use them to check the accuracy of the computed optimal solution from
+14:564:23549:14:13:117:232:254:11:g_d0_f2:11:g_d0_f2:the DPNLP model (12).
+14:565:23570:13:14:134:476:241:11:g_d0_f2:11:g_d0_f2:Table 2 lists relative errors of optimal solutions computed by DPNLP
+14:566:23638:14:13:117:475:227:11:g_d0_f2:11:g_d0_f5:for the stochastic optimal growth problem with the following cases:β=
+14:567:23707:13:14:117:476:214:11:g_d0_f5:11:g_d0_f2:0.9,0.95,0.99,γ= 0.5,2,8, andη= 0.2,1,5. The errors for optimal con-
+14:568:23775:14:26:117:296:200:11:g_d0_f2:11:g_d0_f2:sumptions at time 0 are computed by
+14:569:23810:26:7:226:246:174:11:g_d0_f5:11:g_d0_f5:max
+14:570:23813:7:0:187:286:167:8:g_d0_f4:8:g_d0_f8:k∈[0.3,2],θ∈{0.95,1.0,1.05}
+14:571:23840:0:15:289:402:182:11:g_d0_f11:11:g_d0_f11:|c∗DPNLP(k,θ)−c∗(k,θ)|
+14:572:23862:15:0:325:365:167:11:g_d0_f11:11:g_d0_f11:|c∗(k,θ)|
+14:573:23871:0:26:403:406:174:11:g_d0_f3:11:g_d0_f3:,
+14:574:23872:26:13:117:476:148:11:g_d0_f2:11:g_d0_f2:wherec∗DPNLPis the optimal consumption computed by DPNLP on the
+14:575:23935:13:14:117:476:135:11:g_d0_f2:11:g_d0_f2:model (12), andc∗is the “true” optimal consumption computed by the high-
+14:576:24007:14:0:117:476:121:11:g_d0_f2:11:g_d0_f2:precision value function iteration method. The similar formula applies to
+15:577:24082:0:13:117:476:614:11:g_d0_f2:11:g_d0_f2:Table 2: Relative Errors of DPNLP for Stochastic Optimal Growth Problems
+15:578:24154:13:16:138:461:601:11:g_d0_f3:11:g_d0_f2:βγηError ofc∗DPNLPError ofl∗DPNLPTime (seconds)
+15:579:24201:16:14:134:431:585:11:g_d0_f5:11:g_d0_f5:0.90.50.21.9(−7)5.2(−7)11
+15:580:24226:14:14:193:428:571:11:g_d0_f5:11:g_d0_f5:12.5(−7)4.5(−7)9
+15:581:24242:14:14:193:428:557:11:g_d0_f5:11:g_d0_f5:52.5(−7)4.7(−7)9
+15:582:24258:14:14:167:431:543:11:g_d0_f5:11:g_d0_f5:20.21.4(−7)5.0(−7)16
+15:583:24278:14:14:193:431:529:11:g_d0_f5:11:g_d0_f5:12.0(−7)5.9(−7)12
+15:584:24295:14:14:193:431:515:11:g_d0_f5:11:g_d0_f5:53.0(−7)4.4(−7)12
+15:585:24312:14:14:167:431:501:11:g_d0_f5:11:g_d0_f5:80.21.1(−7)8.4(−7)22
+15:586:24332:14:14:193:431:487:11:g_d0_f5:11:g_d0_f5:11.6(−7)8.8(−7)18
+15:587:24349:14:14:193:431:473:11:g_d0_f5:11:g_d0_f5:58.5(−7)1.2(−6)15
+15:588:24366:14:14:131:431:459:11:g_d0_f5:11:g_d0_f5:0.950.50.23.7(−7)4.8(−7)15
+15:589:24392:14:14:193:431:445:11:g_d0_f5:11:g_d0_f5:13.9(−7)4.2(−7)11
+15:590:24409:14:14:193:431:431:11:g_d0_f5:11:g_d0_f5:54.4(−7)4.4(−7)10
+15:591:24426:14:14:167:431:417:11:g_d0_f5:11:g_d0_f5:20.22.9(−7)6.6(−7)22
+15:592:24446:14:14:193:431:403:11:g_d0_f5:11:g_d0_f5:13.2(−7)5.9(−7)17
+15:593:24463:14:13:193:431:389:11:g_d0_f5:11:g_d0_f5:54.4(−7)4.4(−7)13
+15:594:24480:13:14:167:431:376:11:g_d0_f5:11:g_d0_f5:80.22.3(−7)9.6(−7)25
+15:595:24500:14:14:193:431:362:11:g_d0_f5:11:g_d0_f5:13.0(−7)8.7(−7)21
+15:596:24517:14:14:193:431:348:11:g_d0_f5:11:g_d0_f5:59.7(−7)1.3(−6)23
+15:597:24534:14:14:131:431:334:11:g_d0_f5:11:g_d0_f5:0.990.50.24.1(−7)6.1(−7)30
+15:598:24560:14:14:193:431:320:11:g_d0_f5:11:g_d0_f5:14.5(−7)4.6(−7)22
+15:599:24577:14:14:193:431:306:11:g_d0_f5:11:g_d0_f5:54.1(−7)4.6(−7)17
+15:600:24594:14:14:167:431:292:11:g_d0_f5:11:g_d0_f5:20.23.0(−7)1.1(−6)50
+15:601:24614:14:14:193:431:278:11:g_d0_f5:11:g_d0_f5:13.4(−7)7.4(−7)40
+15:602:24631:14:14:193:431:264:11:g_d0_f5:11:g_d0_f5:55.9(−7)5.4(−7)40
+15:603:24648:14:14:167:431:250:11:g_d0_f5:11:g_d0_f5:80.21.5(−7)1.5(−6)55
+15:604:24668:14:14:193:431:236:11:g_d0_f5:11:g_d0_f5:11.8(−7)1.3(−6)58
+15:605:24685:14:15:193:431:222:11:g_d0_f5:11:g_d0_f5:52.2(−6)3.1(−6)56
+15:606:24702:15:0:117:243:207:11:g_d0_f2:11:g_d0_f2:Note:a(k)meansa×10k.
+16:607:24724:0:14:117:476:704:11:g_d0_f2:11:g_d0_f2:compute errors for optimal labor supply. The last column of Table 2 lists
+16:608:24797:14:13:117:476:690:11:g_d0_f2:11:g_d0_f2:the running time of the iterative DPNLP method for various cases in the
+16:609:24868:13:14:117:476:677:11:g_d0_f2:11:g_d0_f2:GAMS environment, on a single core of a Mac laptop with a 2.5 GHz pro-
+16:610:24938:14:14:117:148:663:11:g_d0_f2:11:g_d0_f2:cessor.
+16:611:24945:14:13:134:476:649:11:g_d0_f2:11:g_d0_f2:From Table 2, we can also see the similar pattern shown in Table 1. That
+16:612:25017:13:14:117:476:636:11:g_d0_f2:11:g_d0_f2:is, DPNLP solves the examples with accuracy up to 6 or higher digits for
+16:613:25089:14:13:117:476:622:11:g_d0_f2:11:g_d0_f2:optimal control policy functions in all cases. Moreover, for these stochastic
+16:614:25166:13:14:117:476:609:11:g_d0_f2:11:g_d0_f2:examples, DPNLP is also fast, and takes less than one minute to solve any
+16:615:25239:14:13:117:476:595:11:g_d0_f2:11:g_d0_f2:one case. For example, row one in Table 2 assumesβ= 0.9,γ= 0.5, and
+16:616:25306:13:14:117:476:582:11:g_d0_f3:11:g_d0_f2:η= 0.2. For this case, the error in consumption is1.9×10−7, the error in
+16:617:25378:14:34:117:440:568:11:g_d0_f2:11:g_d0_f2:labor supply is5.2×10−7, and the running time is only11seconds.
+16:618:25441:34:18:117:483:534:14:g_d0_f1:14:g_d0_f1:7  Applications to Two-Dimensional Optimal Growth
+16:619:25490:18:25:141:200:516:14:g_d0_f1:14:g_d0_f1:Problem
+16:620:25497:25:13:117:476:491:11:g_d0_f2:11:g_d0_f2:The key DPNLP idea is clearly applicable to multidimensional problems. Of
+16:621:25570:13:14:117:476:478:11:g_d0_f2:11:g_d0_f2:course, multidimensional problems are more demanding. Our next exam-
+16:622:25638:14:13:117:476:464:11:g_d0_f2:11:g_d0_f2:ple illustrates DPNLP applied to a two-dimensional extension of our earlier
+16:623:25713:13:14:117:476:451:11:g_d0_f2:11:g_d0_f2:models. The results indicate that DPNLP is a reasonable method for low-
+16:624:25784:14:13:117:223:437:11:g_d0_f2:11:g_d0_f2:dimensional problems.
+16:625:25805:13:14:134:476:424:11:g_d0_f2:11:g_d0_f2:We assume that there are two countries, and letkt= (kt,1,kt,2)denote
+16:626:25873:14:13:117:476:410:11:g_d0_f2:11:g_d0_f2:the capital stocks of two countries which is a two-dimensional continuous
+16:627:25946:13:14:117:476:397:11:g_d0_f2:11:g_d0_f2:state vector at timet. Letlt= (lt,1,lt,2)denote elastic labor supply levels of
+16:628:26024:14:13:117:476:383:11:g_d0_f2:11:g_d0_f2:the countries which is a two-dimensional continuous control vector variable
+16:629:26099:13:25:117:435:370:11:g_d0_f2:11:g_d0_f2:at timet. Assume that the net production of countryiat timetis
+16:630:26161:25:24:242:351:345:11:g_d0_f3:11:g_d0_f3:fi(kt,i,lt,i) =Akψt,il1−ψt,i,
+16:631:26190:24:14:117:476:321:11:g_d0_f2:11:g_d0_f2:withA= (1−β)/(ψβ), fori= 1,2. Letct= (ct,1,ct,2)denote consumption
+16:632:26256:14:14:117:476:307:11:g_d0_f2:11:g_d0_f2:of the countries which is another two-dimensional continuous control vector
+16:633:26331:14:34:117:312:293:11:g_d0_f2:11:g_d0_f2:variable at timet. The utility function is
+16:634:26373:34:0:179:219:259:11:g_d0_f3:11:g_d0_f5:u(c,l) =
+16:635:26381:0:27:227:238:273:8:g_d0_f6:11:g_d0_f10:2∑
+16:636:26383:27:0:223:236:246:8:g_d0_f4:8:g_d0_f6:i=1
+16:637:26386:0:11:239:245:278:11:g_d0_f10:11:g_d0_f10:[
+16:638:26387:11:15:247:311:267:11:g_d0_f5:11:g_d0_f5:(ci/A)1−γ−1
+16:639:26398:15:0:266:291:252:11:g_d0_f5:11:g_d0_f3:1−γ
+16:640:26401:0:0:315:360:259:11:g_d0_f11:11:g_d0_f5:−(1−ψ)
+16:641:26407:0:15:364:401:267:11:g_d0_f3:11:g_d0_f5:l1+ηi−1
+16:642:26414:15:0:370:394:252:11:g_d0_f5:11:g_d0_f3:1 +η
+16:643:26418:0:19:403:409:278:11:g_d0_f10:11:g_d0_f10:]
+16:644:26419:19:33:411:414:259:11:g_d0_f3:11:g_d0_f3:.
+16:645:26420:33:14:117:476:226:11:g_d0_f2:11:g_d0_f2:We want to find an optimal consumption and labor supply decisions such
+16:646:26490:14:0:117:476:212:11:g_d0_f2:11:g_d0_f2:that expected total utility over the infinite-horizon time is maximized. That
+17:647:26569:0:33:117:127:704:11:g_d0_f2:11:g_d0_f2:is,
+17:648:26572:33:7:139:223:671:11:g_d0_f3:11:g_d0_f5:V(k0)   =max
+17:649:26584:7:0:195:230:664:8:g_d0_f4:6:g_d0_f7:kt,It,ct,lt
+17:650:26595:0:27:245:257:685:8:g_d0_f8:11:g_d0_f10:∞∑
+17:651:26597:27:0:242:256:658:8:g_d0_f4:8:g_d0_f6:t=0
+17:652:26600:0:26:259:476:671:11:g_d0_f3:11:g_d0_f2:βtu(ct,lt)(13)
+17:653:26614:26:25:206:350:645:11:g_d0_f2:11:g_d0_f3:s.t.kt+1,i= (1−δ)kt,i+It,i,
+17:654:26641:25:0:232:258:620:11:g_d0_f5:11:g_d0_f5:Γt,i=
+17:655:26646:0:15:263:268:628:11:g_d0_f3:11:g_d0_f3:ζ
+17:656:26647:15:0:263:268:613:11:g_d0_f5:11:g_d0_f5:2
+17:657:26648:0:0:270:283:620:11:g_d0_f3:8:g_d0_f4:kt,i
+17:658:26652:0:8:286:294:636:11:g_d0_f10:11:g_d0_f10:(
+17:659:26653:8:15:296:308:628:11:g_d0_f3:8:g_d0_f4:It,i
+17:660:26657:15:0:295:309:613:11:g_d0_f3:8:g_d0_f4:kt,i
+17:661:26661:0:0:313:329:620:11:g_d0_f11:11:g_d0_f3:−δ
+17:662:26663:0:16:329:341:636:11:g_d0_f10:8:g_d0_f6:)2
+17:663:26665:16:21:344:347:620:11:g_d0_f3:11:g_d0_f3:,
+17:664:26666:21:26:237:248:599:8:g_d0_f6:11:g_d0_f10:2∑
+17:665:26668:26:0:233:246:573:8:g_d0_f4:8:g_d0_f6:i=1
+17:666:26671:0:0:249:343:586:11:g_d0_f5:11:g_d0_f5:(ct,i+It,i−δkt,i) =
+17:667:26690:0:26:351:362:599:8:g_d0_f6:11:g_d0_f10:2∑
+17:668:26692:26:0:347:361:573:8:g_d0_f4:8:g_d0_f6:i=1
+17:669:26695:0:34:363:454:586:11:g_d0_f5:11:g_d0_f3:(fi(kt,i,lt,i)−Γt,i),
+17:670:26716:34:14:117:476:552:11:g_d0_f2:11:g_d0_f2:whereδis the depreciation rate of capital,It,iis the investment of country
+17:671:26790:14:13:117:476:538:11:g_d0_f3:11:g_d0_f2:i,Γt,iis the investment adjustment cost of countryi, andζgoverns the
+17:672:26858:13:14:117:476:525:11:g_d0_f2:11:g_d0_f2:intensity of the friction. Detailed discussion of multi-country growth models
+17:673:26935:14:13:117:476:511:11:g_d0_f2:11:g_d0_f2:with infinite horizon can be seen in Den Haan et al (2011) and Juillard and
+17:674:27010:13:14:117:476:498:11:g_d0_f2:11:g_d0_f2:Villemot (2011). For the multi-country growth models with finite horizon,
+17:675:27083:14:13:117:476:484:11:g_d0_f2:11:g_d0_f2:they can be solved efficiently using dynamic programming with Hermite
+17:676:27152:13:14:117:476:471:11:g_d0_f2:11:g_d0_f2:approximation, see Cai and Judd (2012c). In our examples, we letψ= 0.36,
+17:677:27224:14:13:117:227:457:11:g_d0_f3:11:g_d0_f2:δ= 0.025, andζ= 0.5.
+17:678:27244:13:14:134:476:444:11:g_d0_f2:11:g_d0_f2:The functional forms for utility and production imply that the steady
+17:679:27313:14:14:117:475:430:11:g_d0_f2:11:g_d0_f5:state of the infinite horizon deterministic optimal growth problems iskss,1=
+17:680:27389:14:13:117:476:416:11:g_d0_f3:11:g_d0_f2:kss,2=  1, and the optimal consumption, labor supply and investment at
+17:681:27459:13:14:117:476:403:11:g_d0_f2:11:g_d0_f2:the steady state are respectivelycss,1=css,2=A,lss,1=lss,2=  1, and
+17:682:27526:14:13:117:476:389:11:g_d0_f3:11:g_d0_f2:Iss,1=Iss,2=δ. The code for DPNLP is written in GAMS (McCarl, 2011),
+17:683:27594:13:29:117:451:376:11:g_d0_f2:11:g_d0_f2:and the optimization solver is CONOPT (in the GAMS environment).
+17:684:27658:29:21:117:228:347:12:g_d0_f13:12:g_d0_f13:7.1  True Solution
+17:685:27676:21:13:117:476:326:11:g_d0_f2:11:g_d0_f2:Discretization method will be too time-consuming to solve the two-country
+17:686:27749:13:14:117:476:313:11:g_d0_f2:11:g_d0_f2:optimal growth problem with two continuous state variables (kt,1,kt,2) and
+17:687:27823:14:14:117:476:299:11:g_d0_f2:11:g_d0_f2:six continuous control variables (ct,1,ct,2,lt,1,lt,2,It,1,It,2). In order to get the
+17:688:27908:14:13:117:476:285:11:g_d0_f2:11:g_d0_f2:“true” solution, we use the value function iteration with high-degree complete
+17:689:27986:13:14:117:476:272:11:g_d0_f2:11:g_d0_f2:Chebyshev polynomials and iterates until it converges under the stopping
+17:690:28058:14:13:117:476:258:11:g_d0_f2:11:g_d0_f2:criterion10−7(i.e., the difference between two consecutive value functions
+17:691:28132:13:14:117:476:245:11:g_d0_f2:11:g_d0_f2:is less than10−7). We use512tensor Chebyshev nodes on the state space
+17:692:28201:14:29:117:458:231:11:g_d0_f5:11:g_d0_f2:[0.5,1.5]2, and the degree of the complete Chebyshev polynomials is 30.
+17:693:28272:29:21:117:248:202:12:g_d0_f13:12:g_d0_f13:7.2  DPNLP Solution
+17:694:28291:21:13:117:476:181:11:g_d0_f2:11:g_d0_f2:We use the iterative DPNLP method (multidimensional version of Algorithm
+17:695:28363:13:0:117:476:168:11:g_d0_f2:11:g_d0_f2:1) to solve the two-dimensional optimal growth problem. The basic DPNLP
+18:696:28436:0:29:117:439:704:11:g_d0_f2:11:g_d0_f2:model is the multidimensional extension of the model (10). That is,
+18:697:28503:29:8:149:169:675:11:g_d0_f5:11:g_d0_f5:max
+18:698:28506:8:0:137:180:667:8:g_d0_f4:8:g_d0_f16:c,l,I,k+,v,b
+18:699:28518:0:27:193:205:689:8:g_d0_f4:11:g_d0_f10:m∑
+18:700:28520:27:0:190:204:662:8:g_d0_f4:8:g_d0_f6:i=1
+18:701:28523:0:28:207:480:675:11:g_d0_f3:11:g_d0_f2:vi,(14)
+18:702:28530:28:17:152:378:647:11:g_d0_f2:11:g_d0_f3:s.t.vi≤u(ci,li) +βˆV(k+i;b),  i= 1,...,m,
+18:703:28571:17:27:181:410:630:11:g_d0_f3:11:g_d0_f3:k+i,j≤(1−δ)ki,j+Ii,j,  i= 1,...,m, j= 1,2,
+18:704:28613:27:0:177:205:603:11:g_d0_f5:11:g_d0_f5:Γi,j=
+18:705:28618:0:15:209:214:611:11:g_d0_f3:11:g_d0_f3:ζ
+18:706:28619:15:0:209:214:596:11:g_d0_f5:11:g_d0_f5:2
+18:707:28620:0:0:216:231:603:11:g_d0_f3:8:g_d0_f4:ki,j
+18:708:28624:0:8:233:241:619:11:g_d0_f10:11:g_d0_f10:(
+18:709:28625:8:15:243:257:611:11:g_d0_f3:8:g_d0_f4:Ii,j
+18:710:28629:15:0:242:257:596:11:g_d0_f3:8:g_d0_f4:ki,j
+18:711:28633:0:0:261:277:603:11:g_d0_f11:11:g_d0_f3:−δ
+18:712:28635:0:16:277:289:619:11:g_d0_f10:8:g_d0_f6:)2
+18:713:28637:16:20:292:416:603:11:g_d0_f3:11:g_d0_f3:,  i= 1,...,m, j= 1,2,
+18:714:28659:20:27:183:193:583:8:g_d0_f6:11:g_d0_f10:2∑
+18:715:28661:27:0:178:192:556:8:g_d0_f4:8:g_d0_f6:j=1
+18:716:28664:0:0:195:291:569:11:g_d0_f5:11:g_d0_f5:(ci,j+Ii,j−δki,j) =
+18:717:28683:0:27:299:310:583:8:g_d0_f6:11:g_d0_f10:2∑
+18:718:28685:27:0:294:309:556:8:g_d0_f4:8:g_d0_f6:j=1
+18:719:28688:0:30:311:479:569:11:g_d0_f5:11:g_d0_f3:(fj(ki,j,li,j)−Γi,j),  i= 1,...,m,
+18:720:28722:30:14:181:318:539:11:g_d0_f3:11:g_d0_f3:vi=ˆV(ki;b),  i= 1,...,m,
+18:721:28747:14:16:182:326:525:11:g_d0_f5:11:g_d0_f3:ˆV′(yi′;b)≥0,  i′= 1,...,m′,
+18:722:28775:16:23:182:328:509:11:g_d0_f5:11:g_d0_f3:ˆV′′(yi′;b)≤0,  i′= 1,...,m′,
+18:723:28804:23:17:117:475:486:11:g_d0_f2:11:g_d0_f5:whereki= (ki,1,ki,2),ci= (ci,1,ci,2),li= (li,1,li,2),k+i= (k+i,1,k+i,2),yi′=
+18:724:28880:17:14:117:476:469:11:g_d0_f5:11:g_d0_f2:(yi′,1,yi′,2), andˆV′is the 2-dimensional gradient ofˆV, andˆV′′is the 2-
+18:725:28953:14:14:117:319:455:11:g_d0_f2:11:g_d0_f2:dimensional second order derivatives ofˆV.
+18:726:28995:14:13:134:476:441:11:g_d0_f2:11:g_d0_f2:For our examples in this section, we choosem= 112tensor Chebyshev
+18:727:29060:13:14:117:476:428:11:g_d0_f2:11:g_d0_f2:nodes in the state space[0.5,1.5]2, as the approximation nodes.  The ap-
+18:728:29132:14:14:117:476:414:11:g_d0_f2:11:g_d0_f2:proximation method,ˆV, is the complete Chebyshev polynomial up to the
+18:729:29201:14:13:117:476:400:11:g_d0_f2:11:g_d0_f2:maximal degree 10. And we choosem′= 100tensor Chebyshev nodes,yi′,
+18:730:29267:13:29:117:347:387:11:g_d0_f2:11:g_d0_f2:in the state space[0.5,1.5]2, as the shape nodes.
+18:731:29316:29:20:117:354:358:12:g_d0_f13:12:g_d0_f13:7.3  Error Analysis of DPNLP Solution
+18:732:29353:20:14:117:476:338:11:g_d0_f2:11:g_d0_f2:We examine the errors for the multidimensional model in the similar manner
+18:733:29427:14:13:117:476:324:11:g_d0_f2:11:g_d0_f2:we did for the unidimensional optimal growth problems: We apply the high-
+18:734:29500:13:14:117:476:311:11:g_d0_f2:11:g_d0_f2:precision value function iteration to get the “true” optimal solution for every
+18:735:29579:14:13:117:476:297:11:g_d0_f2:11:g_d0_f2:test point of initial capitals, and then use them to check the accuracy of the
+18:736:29657:13:14:117:388:284:11:g_d0_f2:11:g_d0_f2:computed optimal solution from the DPNLP model (12).
+18:737:29709:14:13:134:476:270:11:g_d0_f2:11:g_d0_f2:Table 3 lists relative errors of optimal solutions computed by DPNLP
+18:738:29777:13:14:117:476:257:11:g_d0_f2:11:g_d0_f2:for the two-dimensional optimal growth problem with the following cases:
+18:739:29849:14:14:117:476:243:11:g_d0_f3:11:g_d0_f2:β= 0.95,γ= 0.5,2,8, andη= 0.2,1,5. The last column of Table 3 lists the
+18:740:29920:14:13:117:476:229:11:g_d0_f2:11:g_d0_f2:running time of the iterative DPNLP method for various cases in the GAMS
+18:741:29992:13:14:117:462:216:11:g_d0_f2:11:g_d0_f2:environment, on a single core of a Mac laptop with a 2.5 GHz processor.
+18:742:30063:14:13:134:476:202:11:g_d0_f2:11:g_d0_f2:Table 3 shows that DPNLP solves the examples with accuracy up to 4
+18:743:30129:13:14:117:476:189:11:g_d0_f2:11:g_d0_f2:digits or higher for optimal control policy functions in all the cases besides
+18:744:30207:14:13:117:476:175:11:g_d0_f2:11:g_d0_f2:one case having 3 digits.  Moreover, the DPNLP method is not slow and
+18:745:30276:13:14:117:476:162:11:g_d0_f2:11:g_d0_f2:takes only several minutes for each case. For example, row one in Table 3
+18:746:30349:14:13:117:476:148:11:g_d0_f2:11:g_d0_f2:assumesγ= 0.5, andη= 0.2. For this case, the error in consumption is
+18:747:30417:13:14:117:476:135:11:g_d0_f5:11:g_d0_f2:6.4×10−5, the error in labor supply is1.5×10−4, and the running time is
+18:748:30488:14:0:117:175:121:11:g_d0_f5:11:g_d0_f2:3.9minutes.
+19:749:30501:0:13:117:476:697:11:g_d0_f2:11:g_d0_f2:Table 3: Relative Errors of DPNLP for Two-Country Optimal Growth Prob-
+19:750:30571:13:11:117:138:684:11:g_d0_f2:11:g_d0_f2:lems
+19:751:30575:11:16:150:447:673:11:g_d0_f3:11:g_d0_f2:γηError ofc∗DPNLPError ofl∗DPNLPTime (minutes)
+19:752:30621:16:14:146:417:657:11:g_d0_f5:11:g_d0_f5:0.50.26.4(−5)1.5(−4)3.9
+19:753:30644:14:14:176:417:643:11:g_d0_f5:11:g_d0_f5:19.0(−6)3.0(−5)2.5
+19:754:30662:14:14:176:417:629:11:g_d0_f5:11:g_d0_f5:58.0(−6)8.0(−7)1.4
+19:755:30680:14:14:151:417:615:11:g_d0_f5:11:g_d0_f5:20.26.2(−5)2.3(−4)3.6
+19:756:30701:14:14:176:417:601:11:g_d0_f5:11:g_d0_f5:14.5(−5)6.5(−5)3.1
+19:757:30719:14:14:176:417:587:11:g_d0_f5:11:g_d0_f5:58.5(−5)3.2(−5)2.2
+19:758:30737:14:14:151:417:573:11:g_d0_f5:11:g_d0_f5:80.28.4(−5)1.2(−3)5.0
+19:759:30758:14:14:176:417:559:11:g_d0_f5:11:g_d0_f5:12.1(−5)1.1(−4)6.6
+19:760:30776:14:15:176:417:545:11:g_d0_f5:11:g_d0_f5:51.3(−4)2.0(−4)5.6
+19:761:30794:15:33:117:243:530:11:g_d0_f2:11:g_d0_f2:Note:a(k)meansa×10k.
+19:762:30814:33:25:117:216:497:14:g_d0_f1:14:g_d0_f1:8  Conclusion
+19:763:30827:25:13:117:476:472:11:g_d0_f2:11:g_d0_f2:This paper presents a nonlinear programming formulation of dynamic pro-
+19:764:30898:13:14:117:476:459:11:g_d0_f2:11:g_d0_f2:gramming problems common in economic decision making. We have applied
+19:765:30967:14:13:117:476:445:11:g_d0_f2:11:g_d0_f2:it to a variety of optimal accumulation problems, showing that our DPNLP
+19:766:31039:13:14:117:476:432:11:g_d0_f2:11:g_d0_f2:method performs very well, with high accuracy, reliability and efficiency for
+19:767:31116:14:13:117:476:418:11:g_d0_f2:11:g_d0_f2:those problems. The variety of example problems indicate that our DPNLP
+19:768:31187:13:0:117:327:405:11:g_d0_f2:11:g_d0_f2:method could be applied to many problems.
+20:769:31230:0:25:117:191:704:14:g_d0_f1:14:g_d0_f1:References
+20:770:31240:25:13:162:476:679:11:g_d0_f2:11:g_d0_f2:[1] Bellman, R. (1957). Dynamic Programming. Princeton Univer-
+20:771:31302:13:22:179:228:666:11:g_d0_f2:11:g_d0_f2:sity Press.
+20:772:31313:22:13:162:476:644:11:g_d0_f2:11:g_d0_f2:[2] Cai, Y. (2010). Dynamic Programming and Its Application in
+20:773:31375:13:22:179:451:631:11:g_d0_f2:11:g_d0_f2:Economics and Finance. PhD thesis, Stanford University.
+20:774:31430:22:14:162:476:609:11:g_d0_f2:11:g_d0_f2:[3] Cai, Y., and K.L. Judd (2010). Stable and efficient computa-
+20:775:31494:14:13:179:476:595:11:g_d0_f2:11:g_d0_f2:tional methods for dynamic programming. Journal of the Eu-
+20:776:31552:13:22:179:442:582:11:g_d0_f2:11:g_d0_f2:ropean Economic Association, Vol. 8, No. 2-3, 626–634.
+20:777:31606:22:14:162:476:560:11:g_d0_f2:11:g_d0_f2:[4] Cai, Y., and K.L. Judd (2012a). Dynamic programming with
+20:778:31666:14:13:179:476:546:11:g_d0_f2:11:g_d0_f2:shape-preserving rational spline Hermite interpolation. Eco-
+20:779:31726:13:22:179:374:533:11:g_d0_f2:11:g_d0_f2:nomics Letters, Vol. 117, No. 1, 161–164.
+20:780:31767:22:13:162:476:511:11:g_d0_f2:11:g_d0_f2:[5] Cai, Y., and K.L. Judd (2012b). Shape-preserving dynamic
+20:781:31827:13:14:179:476:498:11:g_d0_f2:11:g_d0_f2:programming. Mathematical Methods of Operations Research,
+20:782:31884:14:22:179:336:484:11:g_d0_f2:11:g_d0_f2:DOI: 10.1007/s00186-012-0406-5.
+20:783:31915:22:13:162:476:462:11:g_d0_f2:11:g_d0_f2:[6] Cai, Y., and K.L. Judd (2012c). Dynamic programming with
+20:784:31975:13:22:179:461:449:11:g_d0_f2:11:g_d0_f2:Hermite approximation. NBER working paper No. w18540.
+20:785:32028:22:13:162:476:427:11:g_d0_f2:11:g_d0_f2:[7] De Farias, D.P., and B. Van Roy (2003). The linear program-
+20:786:32091:13:14:179:476:414:11:g_d0_f2:11:g_d0_f2:ming approach to approximate dynamic programming. Opera-
+20:787:32147:14:22:179:327:400:11:g_d0_f2:11:g_d0_f2:tions Research, 51(6), 850–865.
+20:788:32178:22:13:162:476:378:11:g_d0_f2:11:g_d0_f2:[8] Den Haan, W.J., K.L. Judd and M. Juillard (2011). Compu-
+20:789:32238:13:14:179:476:365:11:g_d0_f2:11:g_d0_f2:tational suite of models with heterogeneous agents II: Multi-
+20:790:32299:14:13:179:476:351:11:g_d0_f2:11:g_d0_f2:country real business cycle models. Journal of Economic Dy-
+20:791:32358:13:22:179:328:338:11:g_d0_f2:11:g_d0_f2:namics & Control, 35, 175–177.
+20:792:32388:22:13:162:476:316:11:g_d0_f2:11:g_d0_f2:[9] Judd, K.L. (1998). Numerical Methods in Economics. The MIT
+20:793:32450:13:22:179:207:303:11:g_d0_f2:11:g_d0_f2:Press.
+20:794:32456:22:14:156:476:281:11:g_d0_f2:11:g_d0_f2:[10] Juillard, M., and S. Villemot (2011). Multi-country real busi-
+20:795:32523:14:13:179:476:267:11:g_d0_f2:11:g_d0_f2:ness cycle models: Accuracy tests and test bench. Journal of
+20:796:32583:13:22:179:392:254:11:g_d0_f2:11:g_d0_f2:Economic Dynamics & Control, 35, 178–185.
+20:797:32624:22:13:156:476:232:11:g_d0_f2:11:g_d0_f2:[11] McCarl, B., et al. (2011). McCarl GAMS User Guide. GAMS
+20:798:32684:13:22:179:305:219:11:g_d0_f2:11:g_d0_f2:Development Corporation.
+20:799:32708:22:14:156:476:197:11:g_d0_f2:11:g_d0_f2:[12] Michelangeli, V. (2009). Economics of the Life-Cycle: Reverse
+20:800:32774:14:13:179:476:183:11:g_d0_f2:11:g_d0_f2:Mortgage, Mortgage and Marriage. PhD thesis, Boston Univer-
+20:801:32833:13:22:179:198:170:11:g_d0_f2:11:g_d0_f2:sity.
+20:802:32838:22:13:156:476:148:11:g_d0_f2:11:g_d0_f2:[13] Rust, J. (2008). Dynamic Programming. In:  Durlauf, S.N.,
+20:803:32900:13:14:179:476:135:11:g_d0_f2:11:g_d0_f2:Blume L.E. (Eds.), New Palgrave Dictionary of Economics. Pal-
+20:804:32961:14:0:179:335:121:11:g_d0_f2:11:g_d0_f2:grave Macmillan, second edition.
+21:805:32995:0:14:156:476:704:11:g_d0_f2:11:g_d0_f2:[14] Stokey, N.L., R.E. Lucas, and E.C. Prescott (1989). Recursive
+21:806:33061:14:22:179:461:690:11:g_d0_f2:11:g_d0_f2:Methods in Economic Dynamics. Harvard University Press.
+21:807:33116:22:14:156:476:668:11:g_d0_f2:11:g_d0_f2:[15] Su, C.H, and K.L. Judd (2012). Constrained Optimization Ap-
+21:808:33180:14:14:179:476:654:11:g_d0_f2:11:g_d0_f2:proaches to Estimation of Structural Models. Econometrica,
+21:809:33238:14:22:179:288:640:11:g_d0_f2:11:g_d0_f2:Vol. 80 (5), 2213–2230.
+21:810:33261:22:14:156:476:618:11:g_d0_f2:11:g_d0_f2:[16] Trick, M.A., and S.E. Zin (1997). Spline approximations to
+21:811:33324:14:13:179:476:604:11:g_d0_f2:11:g_d0_f2:value functions — linear programming approach. Macroeco-
+21:812:33380:13:0:179:317:591:11:g_d0_f2:11:g_d0_f2:nomic Dynamics, 1, 255–277.

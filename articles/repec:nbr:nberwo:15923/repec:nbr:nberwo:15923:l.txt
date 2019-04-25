@@ -1,0 +1,956 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:438:610:12:Times:12:Times:C:EXPLAINING THE FAVORITE-LONGSHOT BIAS:
+1:2:63:14:28:306:416:596:12:Times:12:Times:C:IS IT RISK-LOVE OR MISPERCEPTIONS?
+1:3:97:28:14:306:342:568:12:Times:12:Times:C:Erik Snowberg
+1:4:110:14:28:306:341:554:12:Times:12:Times:C:Justin Wolfers
+1:5:124:28:14:306:359:526:12:Times:12:Times:C:Working Paper 15923
+1:6:143:14:42:306:393:512:12:Times:12:Times:C:http://www.nber.org/papers/w15923
+1:7:176:42:14:306:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:212:14:14:306:374:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:237:14:14:306:362:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:256:14:102:306:332:428:12:Times:12:Times:C:April 2010
+1:11:266:102:14:72:540:326:12:Times:12:Times:F:We thank David Siegel of Equibase for supplying the data, and Scott Hereld and Ravi Pillai for their
+1:12:366:14:14:72:540:312:12:Times:12:Times:F:valuable assistance in managing the data. Jon Bendor, Bruno Jullien, Steven Levitt, Kevin Murphy,
+1:13:463:14:14:72:540:298:12:Times:12:Times:F:Marco Ottaviani, Bernard Salanie, Peter Norman Sørenson, Betsey Stevenson, Matthew White, William
+1:14:560:14:14:72:540:284:12:Times:12:Times:F:Ziemba and an anonymous referee provided useful feedback, as did seminar audiences at Carnegie
+1:15:654:14:14:72:540:270:12:Times:12:Times:F:Mellon, Chicago GSB, Haas School of Business, Harvard Business School, University of Lausanne,
+1:16:748:14:14:72:540:256:12:Times:12:Times:F:Kellogg (MEDS), University of Maryland, University of Michigan and Wharton. Snowberg gratefully
+1:17:843:14:14:72:540:242:12:Times:12:Times:F:acknowledges the SIEPR Dissertation Fellowship through a grant to the Stanford Institute for Economic
+1:18:944:14:14:72:540:228:12:Times:12:Times:F:Policy Research. Wolfers gratefully acknowledges a Hirtle, Callaghan & Co.–Arthur D. Miltenberger
+1:19:1041:14:14:72:540:214:12:Times:12:Times:F:Research Fellowship, and the support of the Zull/Lurie Real Estate Center, the Mack Center for Technological
+1:20:1149:14:14:72:540:200:12:Times:12:Times:F:Innovation, and Microsoft Research. The views expressed herein are those of the authors and do not
+1:21:1247:14:28:72:435:186:12:Times:12:Times:C:necessarily reflect the views of the National Bureau of Economic Research.
+1:22:1321:28:14:72:540:158:12:Times:12:Times:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:23:1417:14:14:72:540:144:12:Times:12:Times:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:24:1512:14:28:72:169:130:12:Times:12:Times:C:NBER publications.
+1:25:1530:28:14:72:540:102:12:Times:12:Times:F:© 2010 by Erik Snowberg and Justin Wolfers. All rights reserved. Short sections of text, not to exceed
+1:26:1632:14:14:72:540:88:12:Times:12:Times:F:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:27:1736:14:0:72:177:74:12:Times:12:Times:C:is given to the source.
+2:28:1759:0:14:72:433:700:12:Times:12:Times:C:Explaining the Favorite-Longshot Bias: Is it Risk-Love or Misperceptions?
+2:29:1832:14:14:72:237:686:12:Times:12:Times:C:Erik Snowberg and Justin Wolfers
+2:30:1864:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 15923
+2:31:1892:14:14:72:124:658:12:Times:12:Times:C:April 2010
+2:32:1902:14:28:72:229:644:12:Times:12:Times:C:JEL No. D03,D49,G13,G14,L83
+2:33:1929:28:28:306:339:616:12:Times:12:Times:C:ABSTRACT
+2:34:1937:28:14:72:540:588:12:Times:12:Times:F:The favorite-longshot bias describes the longstanding empirical regularity that betting odds provide
+2:35:2037:14:14:72:540:574:12:Times:12:Times:F:biased estimates of the probability of a horse winning—longshots are overbet, while favorites are underbet.
+2:36:2144:14:14:72:540:560:12:Times:12:Times:F:Neoclassical explanations of this phenomenon focus on rational gamblers who overbet longshots due
+2:37:2241:14:14:72:540:546:12:Times:12:Times:F:to risk-love. The competing behavioral explanations emphasize the role of misperceptions of probabilities.
+2:38:2347:14:14:72:540:532:12:Times:12:Times:F:We provide novel empirical tests that can discriminate between these competing theories by assessing
+2:39:2447:14:14:72:540:518:12:Times:12:Times:F:whether the models that explain gamblers’ choices in one part of their choice set (betting to win) can
+2:40:2549:14:14:72:540:504:12:Times:12:Times:F:also rationalize decisions over a wider choice set, including compound bets in the exacta, quinella
+2:41:2648:14:14:72:540:490:12:Times:12:Times:F:or trifecta pools. Using a new, large-scale dataset ideally suited to implement these tests we find evidence
+2:42:2756:14:14:72:540:476:12:Times:12:Times:F:in favor of the view that misperceptions of probability drive the favorite-longshot bias, as suggested
+2:43:2858:14:42:72:169:462:12:Times:12:Times:C:by Prospect Theory.
+2:44:2877:42:14:72:144:420:12:Times:12:Times:C:Erik Snowberg
+2:45:2890:14:14:72:205:406:12:Times:12:Times:C:Division of the Humanities 
+2:46:2917:14:14:72:207:392:12:Times:12:Times:C: and Social Sciences 228-77
+2:47:2944:14:14:72:236:378:12:Times:12:Times:C:California Institute of Technology
+2:48:2978:14:14:72:175:364:12:Times:12:Times:C:Pasadena, CA 91125 
+2:49:2997:14:28:72:184:350:12:Times:12:Times:C:snowberg@caltech.edu
+2:50:3017:28:14:72:142:322:12:Times:12:Times:C:Justin Wolfers
+2:51:3031:14:14:72:262:308:12:Times:12:Times:C:Business and Public Policy Department
+2:52:3068:14:14:72:287:294:12:Times:12:Times:C:Wharton School, University of Pennsylvania
+2:53:3110:14:14:72:161:280:12:Times:12:Times:C:3620 Locust Walk
+2:54:3126:14:14:72:244:266:12:Times:12:Times:C:Room 1456 Steinberg-Deitrich Hall
+2:55:3159:14:14:72:214:252:12:Times:12:Times:C:Philadelphia, PA 19104-6372
+2:56:3186:14:14:72:124:238:12:Times:12:Times:C:and NBER
+2:57:3194:14:0:72:214:224:12:Times:12:Times:C:jwolfers@wharton.upenn.edu
+3:58:3220:0:37:72:191:708:17:g_d0_f1:17:g_d0_f1:C:1  Introduction
+3:59:3235:37:24:72:540:671:12:g_d0_f2:12:g_d0_f2:B:The racetrack provides a natural laboratory for economists interested in understanding decision-
+3:60:3331:24:24:72:540:647:12:g_d0_f2:12:g_d0_f2:B:making under uncertainty. The most discussed empirical regularity in racetrack gambling markets
+3:61:3426:24:23:72:540:623:12:g_d0_f2:12:g_d0_f2:B:is thefavorite-longshot bias:  equilibrium market prices (betting odds) provide biased estimates
+3:62:3522:23:24:72:540:600:12:g_d0_f2:12:g_d0_f2:B:of the probability of a horse winning.  Specifically, bettors value longshots more than expected
+3:63:3618:24:24:72:540:576:12:g_d0_f2:12:g_d0_f2:B:given how rarely they win, and they value favorites too little given how often they win.  Figure
+3:64:3714:24:24:72:540:552:12:g_d0_f2:12:g_d0_f2:B:1 illustrates, showing that the rate of return to betting on horses with odds of 100/1 or greater is
+3:65:3814:24:24:72:539:528:12:g_d0_f2:12:g_d0_f2:B:about−61%, betting randomly yields average returns of−23%, while betting the favorite in every
+3:66:3908:24:35:72:223:504:12:g_d0_f2:12:g_d0_f2:B:race yields losses of only 5.5%.
+3:67:3940:35:46:146:461:469:12:g_d0_f2:12:g_d0_f2:?:Figure 1: The rate of return on win bets declines as risk increases.
+3:68:4008:46:0:155:179:423:5:g_d0_f5:5:g_d0_f5:?:Even  
+3:69:4014:0:49:152:174:431:5:g_d0_f5:5:g_d0_f5:?:Break
+3:70:4019:49:49:160:175:382:5:g_d0_f5:5:g_d0_f5:A:−20
+3:71:4022:49:49:160:175:333:5:g_d0_f5:5:g_d0_f5:A:−40
+3:72:4025:49:49:160:175:284:5:g_d0_f5:5:g_d0_f5:A:−60
+3:73:4028:49:15:160:175:235:5:g_d0_f5:5:g_d0_f5:A:−80
+3:74:4064:15:10:192:480:220:5:g_d0_f5:5:g_d0_f5:?:1/31/2Evens2/15/110/120/150/1100/1200/1
+3:75:4103:10:0:295:361:210:5:g_d0_f5:5:g_d0_f5:?:Odds (Log Scale)
+3:76:4119:0:13:228:372:280:5:g_d0_f5:5:g_d0_f5:?:Raw data: Aggregated into percentiles
+3:77:4156:13:13:228:265:267:5:g_d0_f5:5:g_d0_f5:?:All Races
+3:78:4165:13:13:228:381:254:5:g_d0_f5:5:g_d0_f5:?:Subsample: Exotic betting data available
+3:79:4205:13:0:228:353:241:5:g_d0_f5:5:g_d0_f5:?:Subsample: Last Race of the Day
+3:80:4236:0:0:189:359:294:6:g_d0_f5:6:g_d0_f5:?:Sample: US Horse Races, 1992−2001
+3:81:4269:0:257:253:404:445:7:g_d0_f5:7:g_d0_f5:?:The Favorite−Longshot Bias
+3:82:4295:257:12:126:486:188:10:g_d0_f2:10:g_d0_f2:?:Notes: Sample includes 5,610,580 horse race starts in the United States from 1992–2001.
+3:83:4382:12:50:126:325:176:10:g_d0_f2:10:g_d0_f2:?:Lines reflect Lowess smoothing (bandwidth=0.4).
+3:84:4429:50:24:89:539:126:12:g_d0_f2:12:g_d0_f2:A:Since the favorite-longshot bias was first noted by Griffith in 1949, it has been found in race-
+3:85:4525:24:0:72:540:102:12:g_d0_f2:12:g_d0_f2:B:track betting data around the world, with very few exceptions. The literature documenting this bias
+4:86:4625:0:24:72:407:708:12:g_d0_f2:9:g_d0_f2:B:is voluminous, and covers both bookmaker- and pari-mutuel markets.1
+4:87:4692:24:24:89:539:684:12:g_d0_f2:12:g_d0_f2:A:Two broad sets of theories have been proposed to explain the favorite-longshot bias.   First,
+4:88:4785:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:neoclassical  theory  suggests  that  the  prices  bettors  are  willing  to  pay  for  various  gambles  can
+4:89:4894:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:be used to recover their utility function.  While betting at any odds is actuarially unfair,  this is
+4:90:4995:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:particularly acute for longshots—which are also the riskiest investments.  Thus, the neoclassical
+4:91:5092:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:approach can reconcile both gambling and the longshot bias only by positing (at least locally)
+4:92:5186:24:24:72:375:564:12:g_d0_f2:12:g_d0_f2:B:risk-loving utility functions, as in Friedman and Savage (1948).
+4:93:5250:24:24:89:539:540:12:g_d0_f2:12:g_d0_f2:A:Alternatively, behavioral theories suggest that cognitive errors and misperceptions of probabil-
+4:94:5346:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:ities play a role in market mis-pricing.  These theories incorporate laboratory studies by cognitive
+4:95:5446:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:psychologists that show people are systematically poor at discerning between small and tiny prob-
+4:96:5543:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:abilities, and hence price both similarly.  Further, people exhibit a strong preference for certainty
+4:97:5644:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:over extremely likely outcomes, leading highly probable gambles to be under-priced. These results
+4:98:5741:24:24:72:466:421:12:g_d0_f2:12:g_d0_f2:B:form an important foundation of Prospect Theory (Kahneman and Tversky, 1979).
+4:99:5818:24:24:89:539:397:12:g_d0_f2:12:g_d0_f3:A:Our aim in this paper is to test whether therisk-love classof models or themisperceptions class
+4:100:5913:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:of models simultaneously fits data from multiple betting pools.  While there exist many specific
+4:101:6009:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:models of the favorite-longshot bias, we show in Section 3 that each yields implications for the
+4:102:6105:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:pricing of gambles equivalent to stark models of either a risk-loving representative agent,  or a
+4:103:6202:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:representative agent who bases her decisions on biased perceptions of true probabilities.  That is,
+4:104:6301:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:the favorite-longshot bias can be fully rationalized by a standard rational-expectations expected-
+4:105:6399:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:utility model,  or by appealing to an expected wealth maximizing agent who overweights small
+4:106:6491:24:24:72:539:229:12:g_d0_f2:12:g_d0_f2:B:probabilities and underweights large probabilities.2Thus, without parametric assumptions, which
+4:107:6586:24:23:72:499:205:12:g_d0_f2:12:g_d0_f2:B:we are unwilling to make, the two theories are observationally equivalent in win bet data.
+4:108:6676:23:19:89:539:182:12:g_d0_f2:12:g_d0_f2:A:We combine new data with a novel econometric identification strategy to discriminate between
+4:109:6768:19:15:85:539:163:7:g_d0_f2:10:g_d0_f2:F:1Thaler and Ziemba (1988), Sauer (1998) and Snowberg and Wolfers (2007) survey the literature. The exceptions
+4:110:6877:15:12:72:540:148:10:g_d0_f2:10:g_d0_f2:F:are Busche and Hall (1988), which finds that the favorite-longshot bias is not evident in data on 2,653 Hong Kong
+4:111:6990:12:12:72:540:136:10:g_d0_f2:10:g_d0_f2:F:races, and Busche (1994), which confirms this finding in an additional 2,690 races in Hong Kong, and 1,738 races in
+4:112:7105:12:9:72:97:124:10:g_d0_f2:10:g_d0_f2:F:Japan.
+4:113:7111:9:15:85:539:115:7:g_d0_f2:10:g_d0_f2:F:2Or adopting a behavioral versus neoclassical distinction, we follow Gabriel and Marsden (1990) in asking:  “are
+4:114:7223:15:12:72:540:100:10:g_d0_f2:10:g_d0_f2:F:we observing an inefficient market or simply one in which the tastes and preferences of the market participations lead
+4:115:7341:12:0:72:170:88:10:g_d0_f2:10:g_d0_f2:F:to the observed results?”
+5:116:7367:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:these  two  classes  of  theories.   Our  data  include  all  6.4  million  horse  race  starts  in  the  United
+5:117:7479:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:States from 1992 to 2001. These data are an order of magnitude larger than any dataset previously
+5:118:7576:24:24:72:498:660:12:g_d0_f2:12:g_d0_f2:B:examined, and allow us to be extremely precise in establishing the relevant stylized facts.
+5:119:7667:24:24:89:539:636:12:g_d0_f2:12:g_d0_f2:A:Our econometric innovation is to distinguish between these theories by deriving testable pre-
+5:120:7760:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:dictions about  the pricing of  compound lotteries (also  calledexotic betsat the  racetrack).   For
+5:121:7860:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:example, anexactais a bet on both which horse will come first and which will come second.  Es-
+5:122:7954:24:24:71:539:564:12:g_d0_f2:12:g_d0_f2:B:sentially, we ask whether the preferences and perceptions that rationalize the favorite-longshot bias
+5:123:8055:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:(in win bet data) can also explain the pricing of exactas,quinellas—a bet on two horses to come
+5:124:8150:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:first and second in either order—andtrifectas—a bet on which horse will come in first,  which
+5:125:8243:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:second and which third. By expanding the choice set under consideration (to correspond with the
+5:126:8338:24:23:72:540:468:12:g_d0_f2:12:g_d0_f2:B:bettor’s actual choice set!), we use each theory to derive unique testable predictions. We find that
+5:127:8438:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:the misperceptions class more accurately predicts the prices of exotic bets, and also their relative
+5:128:8538:24:24:72:104:421:12:g_d0_f2:12:g_d0_f2:B:prices.
+5:129:8545:24:24:89:539:397:12:g_d0_f2:12:g_d0_f2:A:To demonstrate the application of this idea to our data, note that betting on horses with odds
+5:130:8639:24:24:72:540:373:12:g_d0_f2:12:g_d0_f2:B:between 4/1 and 9/1 has an approximately constant rate of return (at−18%, see Figure 1).  Thus,
+5:131:8734:24:24:72:540:349:12:g_d0_f2:12:g_d0_f2:B:the misperceptions class infers bettors are equally well calibrated over this range, and hence betting
+5:132:8836:24:24:72:540:325:12:g_d0_f2:12:g_d0_f2:B:on combinations of outcomes among such horses will yield similar rates of return. That is, betting
+5:133:8934:24:24:72:540:301:12:g_d0_f2:12:g_d0_f2:B:on an exacta with a 4/1 horse to win and a 9/1 horse to come second will yield similar expected
+5:134:9029:24:24:72:540:277:12:g_d0_f2:12:g_d0_f2:B:returns to betting on the exacta with the reverse ordering (although the odds of the two exactas will
+5:135:9130:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:differ).  In contrast, under the risk-love model, bettors are willing to pay a larger risk penalty for
+5:136:9232:24:24:72:540:229:12:g_d0_f2:12:g_d0_f2:B:the riskier bet—such as the exacta in which the 9/1 horse wins, and the 4/1 horse runs second—
+5:137:9326:24:23:72:355:205:12:g_d0_f2:12:g_d0_f2:B:decreasing its rate of return relative to the reverse ordering.
+5:138:9389:23:24:89:539:182:12:g_d0_f2:12:g_d0_f2:A:Our research question is most similar to Jullien and Salani ́e (2000) and Gandhi (2007) who
+5:139:9480:24:24:72:540:158:12:g_d0_f2:12:g_d0_f2:B:attempt  to  differentiate  between  preference-  and  perception-based  explanations  of  the  favorite-
+5:140:9585:24:24:72:540:134:12:g_d0_f2:12:g_d0_f2:B:longshot  bias  using  only  data  on  the  price  of  win  bets.   The  results  of  the  former  study  favor
+5:141:9696:24:24:72:540:110:12:g_d0_f2:12:g_d0_f2:B:perception-based explanations and the results of the latter favor preference-based explanations.
+5:142:9792:24:0:72:540:86:12:g_d0_f2:12:g_d0_f2:B:Rosett (1965) conducts a related analysis in that he considers both win bets and combinations of
+6:143:9889:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:win bets as present in the bettors’ choice set.  Ali (1979), Asch and Quandt (1987) and Dolbear
+6:144:9984:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:(1993) test the efficiency of compound lottery markets. We believe that we are the first to use com-
+6:145:10084:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:pound lottery prices to distinguish between competing theories of possible market (in)efficiency.
+6:146:10181:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:Of course the idea is much older: Friedman and Savage (1948) notes that a hallmark of expected
+6:147:10275:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:utility theory is “that the reaction of persons to complicated gambles can be inferred from their
+6:148:10372:24:55:72:208:588:12:g_d0_f2:12:g_d0_f2:B:reaction to simple gambles.”
+6:149:10400:55:36:72:199:533:17:g_d0_f1:17:g_d0_f1:C:2  Stylized Facts
+6:150:10417:36:24:72:540:497:12:g_d0_f2:12:g_d0_f2:B:Our data contains all 6,403,712 horse starts run in the United States between 1992 and 2001. These
+6:151:10515:24:24:72:540:473:12:g_d0_f2:12:g_d0_f2:B:are official jockey club data; the most precise available.  Data of this nature are extremely expen-
+6:152:10615:24:24:72:540:449:12:g_d0_f2:12:g_d0_f2:B:sive, which presumably explains why previous studies have used substantially smaller samples.
+6:153:10708:24:24:72:312:425:12:g_d0_f2:12:g_d0_f2:B:The appendix provides more detail about the data.
+6:154:10757:24:24:89:539:401:12:g_d0_f2:12:g_d0_f2:A:We summarize our data in Figure 1. We calculate the rate of return to betting on every horse at
+6:155:10852:24:24:72:540:377:12:g_d0_f2:12:g_d0_f2:B:each odds, and use Lowess smoothing to take advantage of information from horses with similar
+6:156:10945:24:24:72:540:353:12:g_d0_f2:12:g_d0_f2:B:odds.  Data are graphed on a log-odds scale so as to better show their relevant range.  The vastly
+6:157:11043:24:24:72:540:329:12:g_d0_f2:12:g_d0_f2:B:better returns to betting on favorites rather than longshots is the favorite-longshot bias.   Figure
+6:158:11143:24:24:72:540:305:12:g_d0_f2:12:g_d0_f2:B:1 also shows the same pattern for the 206,808 races (with 1,485,112 horse starts) for which the
+6:159:11238:24:23:72:540:281:12:g_d0_f2:12:g_d0_f2:B:jockey club recorded payoffs to exacta, quinella or trifecta bets.  Given that much of our analysis
+6:160:11337:23:24:72:469:258:12:g_d0_f2:12:g_d0_f2:B:will focus on this smaller sample, it is reassuring to see a similar pattern of returns.
+6:161:11425:24:24:89:539:234:12:g_d0_f2:12:g_d0_f2:A:Figure 2 shows the same rate of return calculations for several other datasets. We present new
+6:162:11519:24:24:72:540:210:12:g_d0_f2:12:g_d0_f2:B:data from 2,725,000 starts in Australia from the South Coast Database, and 380,000 starts in Great
+6:163:11617:24:24:72:540:186:12:g_d0_f2:12:g_d0_f2:B:Britain from flatstats.co.uk. The favorite-longshot bias appears equally evident in these countries,
+6:164:11717:24:24:72:540:162:12:g_d0_f2:12:g_d0_f2:B:despite the fact that odds are determined by pari-mutuel markets in the United States, bookmakers
+6:165:11814:24:24:72:540:138:12:g_d0_f2:12:g_d0_f2:B:in the United Kingdom, and bookmakers competing with a state-run pari-mutuel market in Aus-
+6:166:11905:24:24:72:540:114:12:g_d0_f2:12:g_d0_f2:B:tralia. Figure 2 also includes historical estimates of the favorite-longshot bias, showing it has been
+6:167:12007:24:0:72:267:90:12:g_d0_f2:12:g_d0_f2:B:stable since first noted in Griffith (1949).
+7:168:12052:0:47:142:465:701:12:g_d0_f2:12:g_d0_f2:?:Figure 2: The favorite longshot bias has persisted for over 50 years.
+7:169:12121:47:0:155:179:654:5:g_d0_f6:5:g_d0_f6:?:Even  
+7:170:12127:0:46:152:174:661:5:g_d0_f6:5:g_d0_f6:?:Break
+7:171:12132:46:46:160:175:615:5:g_d0_f6:5:g_d0_f6:A:−20
+7:172:12135:46:47:160:175:569:5:g_d0_f6:5:g_d0_f6:A:−40
+7:173:12138:47:46:160:175:522:5:g_d0_f6:5:g_d0_f6:A:−60
+7:174:12141:46:24:160:175:476:5:g_d0_f6:5:g_d0_f6:A:−80
+7:175:12177:24:10:192:478:452:5:g_d0_f6:5:g_d0_f6:?:1/31/2Evens2/15/110/120/150/1100/1200/1
+7:176:12216:10:0:295:361:442:5:g_d0_f6:5:g_d0_f6:?:Odds (Log Scale)
+7:177:12232:0:9:228:276:539:4:g_d0_f6:4:g_d0_f6:?:US: 1992−2001
+7:178:12245:9:9:228:294:530:4:g_d0_f6:4:g_d0_f6:?:Australia: 1991−2004
+7:179:12265:9:10:228:277:521:4:g_d0_f6:4:g_d0_f6:?:UK: 1994−2004
+7:180:12278:10:9:228:311:511:4:g_d0_f6:4:g_d0_f6:?:Griffith, Am. J. Psych 1949
+7:181:12305:9:9:228:291:502:4:g_d0_f6:4:g_d0_f6:?:Weitzman, JPE 1965
+7:182:12323:9:10:228:291:493:4:g_d0_f6:4:g_d0_f6:?:Harville, JASA 1973
+7:183:12342:10:9:228:270:483:4:g_d0_f6:4:g_d0_f6:?:Ali, JPE 1977
+7:184:12355:9:0:228:317:474:4:g_d0_f6:4:g_d0_f6:?:Jullien and Salanie, JPE 2000
+7:185:12384:0:0:189:240:552:5:g_d0_f6:5:g_d0_f6:?:Data Source
+7:186:12395:0:295:253:404:678:7:g_d0_f6:7:g_d0_f6:?:The Favorite−Longshot Bias
+7:187:12421:295:24:89:539:383:12:g_d0_f2:12:g_d0_f2:A:The literature suggests two other empirical regularities to explore.  First, Thaler and Ziemba
+7:188:12515:24:24:72:540:359:12:g_d0_f2:12:g_d0_f2:B:(1988) suggest that there are positive rates of return to betting extreme favorites, perhaps suggesting
+7:189:12618:24:24:72:540:335:12:g_d0_f2:12:g_d0_f2:B:limits to arbitrage.  This is not true in any of our datasets, providing a similar finding to Levitt
+7:190:12718:24:24:72:540:311:12:g_d0_f2:12:g_d0_f2:B:(2004): despite significant anomalies in the pricing of bets, there are no profit opportunities from
+7:191:12818:24:24:72:191:287:12:g_d0_f2:12:g_d0_f2:B:simple betting strategies.
+7:192:12844:24:23:89:539:263:12:g_d0_f2:12:g_d0_f2:A:Second, McGlothlin (1956), Ali (1977) and Asch, Malkiel, and Quandt (1982) argue that the
+7:193:12933:23:24:72:540:240:12:g_d0_f2:12:g_d0_f2:B:rate of return to betting moderate longshots falls in the last race of the day.  These studies have
+7:194:13032:24:24:72:540:216:12:g_d0_f2:12:g_d0_f2:B:come to be widely cited despite being based on small samples.  Kahneman and Tversky (1979)
+7:195:13122:24:24:72:540:192:12:g_d0_f2:12:g_d0_f2:B:and Thaler and Ziemba (1988) interpret these results as consistent with loss aversion: most bettors
+7:196:13221:24:24:72:540:168:12:g_d0_f2:12:g_d0_f2:B:are losing at the end of the day,  and the last race provides them with a chance to recoup their
+7:197:13317:24:24:72:540:144:12:g_d0_f2:12:g_d0_f2:B:losses.  Thus, bettors underbet the favorite even more than usual, and overbet horses at odds that
+7:198:13415:24:24:72:540:120:12:g_d0_f2:12:g_d0_f2:B:would eliminate their losses.  The dashed line in Figure 1 separates out data from the last race;
+7:199:13512:24:24:72:540:96:12:g_d0_f2:12:g_d0_f2:B:while the point estimates differ slightly, these differences are not statistically significantly. If there
+7:200:13618:24:0:72:540:72:12:g_d0_f2:12:g_d0_f2:B:was evidence of loss aversion in earlier data,  it is no longer evident in recent data,  even as the
+8:201:13719:0:24:72:243:708:12:g_d0_f2:12:g_d0_f2:B:favorite-longshot bias has persisted.
+8:202:13756:24:24:89:539:684:12:g_d0_f2:12:g_d0_f2:A:In  the next  section  we argue  that  these facts  cannot  separate risk-love  from  misperception-
+8:203:13856:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:based theories. We propose new tests based on the requirement that a theory developed to explain
+8:204:13952:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:equilibrium odds of horses winning should also be able to explain the equilibrium odds in the
+8:205:14045:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:exacta,  quinella  and  trifecta  markets  separately,  as  well  as  the  equilibrium  odds  in  exacta  and
+8:206:14154:24:55:72:188:588:12:g_d0_f2:12:g_d0_f2:B:quinella markets jointly.
+8:207:14179:55:36:72:409:533:17:g_d0_f1:17:g_d0_f1:C:3  Two Models of the Favorite-Longshot Bias
+8:208:14222:36:24:72:540:497:12:g_d0_f2:12:g_d0_f2:B:We start with two extremely stark models, each of which has the merit of simplicity.  Both are
+8:209:14316:24:24:72:540:473:12:g_d0_f2:12:g_d0_f2:B:models where all agents have the same preferences and perceptions, but as we suggest below, can
+8:210:14411:24:24:72:540:449:12:g_d0_f2:12:g_d0_f2:B:be expanded to incorporate heterogeneity. Equilibrium price data cannot separately identify more
+8:211:14507:24:47:72:343:425:12:g_d0_f2:12:g_d0_f2:B:complex models from these representative agent models.
+8:212:14561:47:32:72:231:378:14:g_d0_f1:14:g_d0_f1:C:3.1  The Risk-Love Class
+8:213:14585:32:24:72:540:346:12:g_d0_f2:12:g_d0_f2:B:Following Weitzman (1965), we postulate expected utility maximizers with unbiased beliefs and
+8:214:14678:24:24:72:539:322:12:g_d0_f2:12:g_d0_f2:B:utilityU(·):R→R.  In equilibrium, bettors must be indifferent between betting on the favorite
+8:215:14771:24:24:71:539:298:12:g_d0_f2:12:g_d0_f2:B:horseAwith probability of winningpAand odds ofOA/1, and betting on a longshotBwith proba-
+8:216:14860:24:44:72:257:274:12:g_d0_f2:12:g_d0_f2:B:bility of winningpBand odds ofOB/1:
+8:217:14895:44:43:139:540:230:12:g_d0_f3:12:g_d0_f2:A:pAU(OA) =pBU(OB)(normalizing utility to zero, if the bet is lost).3(1)
+8:218:14965:43:24:89:540:187:12:g_d0_f2:12:g_d0_f2:A:The odds(OA,OB)and the probabilities(pA,pB)of horses winning, which we observe, identify
+8:219:15053:24:24:72:540:163:12:g_d0_f2:12:g_d0_f2:B:the representative bettor’s utility function up to a scaling factor.4To fix the scale we normalize
+8:220:15151:24:24:72:540:139:12:g_d0_f2:12:g_d0_f2:B:utility to zero if the bet loses, and to one if the bettor chooses not to bet.  Thus, if the bettor is
+8:221:15253:24:19:72:539:115:12:g_d0_f2:12:g_d0_f2:B:indifferent between accepting or rejecting a gamble offering odds ofO/1 that wins with probability
+8:222:15351:19:12:85:508:96:7:g_d0_f2:10:g_d0_f2:A:3We also assume that, consistent with the literature, each bettor chooses to bet on only one horse in a race.
+8:223:15460:12:0:85:488:84:7:g_d0_f2:10:g_d0_f2:A:4See Weitzman (1965), Ali (1977), Quandt (1986) and Jullien and Salani ́e (2000) for prior examples.
+9:224:15561:0:304:146:461:701:12:g_d0_f2:12:g_d0_f2:?:Figure 3: The win data is completely rationalized by both classes.
+9:225:15634:304:9:110:314:397:5:g_d0_f10:5:g_d0_f10:?:W0W0+20bW0+40bW0+60bW0+80bW0+100b
+9:226:15667:9:0:125:287:388:5:g_d0_f10:5:g_d0_f10:?:Wealth  [Units: W0=Initial Wealth; b=Bet Size]
+9:227:15713:0:8:155:209:647:5:g_d0_f10:5:g_d0_f10:?:Utility Function
+9:228:15729:8:13:155:265:639:5:g_d0_f10:5:g_d0_f10:?:fully rationalizing Longshot bias
+9:229:15762:13:13:155:254:626:5:g_d0_f10:5:g_d0_f10:?:Risk Neutral Utility Function
+9:230:15791:13:9:155:268:613:5:g_d0_f10:5:g_d0_f10:?:Constant Absolute Risk Aversion
+9:231:15822:9:0:155:285:604:5:g_d0_f10:5:g_d0_f10:?:Arrow−Pratt CARA=−.017 (risk love)
+9:232:15856:0:0:144:269:665:6:g_d0_f10:6:g_d0_f10:?:Assuming Unbiased Expectations
+9:233:15886:0:229:136:277:678:7:g_d0_f10:7:g_d0_f10:?:Risk−Loving Utility Function
+9:234:15914:229:0:323:338:449:5:g_d0_f10:5:g_d0_f10:?:.005
+9:235:15918:0:0:327:338:476:5:g_d0_f10:5:g_d0_f10:?:.01
+9:236:15921:0:0:327:338:503:5:g_d0_f10:5:g_d0_f10:?:.02
+9:237:15924:0:0:327:338:538:5:g_d0_f10:5:g_d0_f10:?:.05
+9:238:15927:0:0:332:338:564:5:g_d0_f10:5:g_d0_f10:?:.1
+9:239:15929:0:0:332:338:591:5:g_d0_f10:5:g_d0_f10:?:.2
+9:240:15931:0:0:332:338:626:5:g_d0_f10:5:g_d0_f10:?:.5
+9:241:15933:0:247:334:338:653:5:g_d0_f10:5:g_d0_f10:?:1
+9:242:15967:247:9:361:508:406:5:g_d0_f10:5:g_d0_f10:?:.005.01.02.05.1.2.51
+9:243:15987:9:9:376:478:397:5:g_d0_f10:5:g_d0_f10:?:Actual Probability (Log scale)
+9:244:16017:9:0:426:428:388:5:g_d0_f10:5:g_d0_f10:?: 
+9:245:16017:0:8:387:462:647:5:g_d0_f10:5:g_d0_f10:?:Probability Weighting
+9:246:16038:8:13:387:497:639:5:g_d0_f10:5:g_d0_f10:?:fully rationalizing Longshot bias
+9:247:16071:13:13:387:465:626:5:g_d0_f10:5:g_d0_f10:?:Unbiased Expectations
+9:248:16092:13:9:387:477:613:5:g_d0_f10:5:g_d0_f10:?:Prelec weighting function:
+9:249:16118:9:8:387:461:604:5:g_d0_f10:5:g_d0_f10:?:ln(pi)=−[−ln(prob)]^a
+9:250:16139:8:0:387:410:596:5:g_d0_f10:5:g_d0_f10:?:a=.928
+9:251:16145:0:0:377:477:665:6:g_d0_f10:6:g_d0_f10:?:Assuming Risk−Neutrality
+9:252:16169:0:353:352:502:678:7:g_d0_f10:7:g_d0_f10:?:Probability Weighting Function
+9:253:16199:353:0:72:148:325:12:g_d0_f3:12:g_d0_f7:C:p, thenU(O) =
+9:254:16212:0:16:153:159:333:12:g_d0_f2:12:g_d0_f2:?:1
+9:255:16213:16:0:154:160:317:12:g_d0_f3:12:g_d0_f3:C:p
+9:256:16214:0:24:161:540:325:12:g_d0_f2:12:g_d0_f2:A:.  The left panel of Figure 3 performs precisely this analysis, backing out the
+9:257:16293:24:24:72:386:301:12:g_d0_f2:12:g_d0_f2:B:utility function required to explain all of the variation in Figure 1.
+9:258:16363:24:24:89:539:277:12:g_d0_f2:12:g_d0_f2:A:As can be seen from Figure 3, a risk-loving utility function is required to rationalize the bettor
+9:259:16461:24:24:72:540:253:12:g_d0_f2:12:g_d0_f2:B:accepting lower average returns on longshots, even as they are riskier bets. The figure also shows
+9:260:16559:24:24:72:348:229:12:g_d0_f2:12:g_d0_f2:B:that a CARA utility function fits the data reasonably well.
+9:261:16618:24:24:89:539:205:12:g_d0_f2:12:g_d0_f2:A:Several  other  theories  of  the  favorite-longshot  bias  yield  implications  that  are  observation-
+9:262:16722:24:24:72:540:181:12:g_d0_f2:12:g_d0_f2:B:ally equivalent to this risk-loving representative agent model.  Some of these theories are clearly
+9:263:16821:24:23:72:540:157:12:g_d0_f2:12:g_d0_f2:B:equivalent—such as that of Golec and Tamarkin (1998),  which argues that bettors prefer skew
+9:264:16913:23:24:72:540:134:12:g_d0_f2:12:g_d0_f2:B:rather than risk—as they are theories about the shape of the utility function. It can easily be shown
+9:265:17014:24:24:72:540:110:12:g_d0_f2:12:g_d0_f2:B:that richer theories—such as that of Thaler and Ziemba (1988) where “bragging rights” accrue
+9:266:17106:24:0:72:540:86:12:g_d0_f2:12:g_d0_f2:B:from winning a bet at long odds, or that of Conlisk (1993) in which the mere purchase of a bet on
+10:267:17204:0:48:72:346:708:12:g_d0_f2:9:g_d0_f2:B:a longshot may confer some utility—are also equivalent.5
+10:268:17260:48:32:72:262:660:14:g_d0_f1:14:g_d0_f1:C:3.2  The Misperceptions Class
+10:269:17289:32:24:72:540:628:12:g_d0_f2:12:g_d0_f2:B:Alternatively, the misperceptions class postulates risk-neutral subjective expected utility maximiz-
+10:270:17389:24:23:72:540:604:12:g_d0_f2:12:g_d0_f2:B:ers, whose subjective beliefs are given by theprobability weighting functionπ(p):[0,1]→[0,1].
+10:271:17482:23:24:71:539:581:12:g_d0_f2:12:g_d0_f2:B:In equilibrium, there are no opportunities for subjectively-expected gain, so bettors must believe
+10:272:17580:24:44:71:470:557:12:g_d0_f2:12:g_d0_f2:B:that the subjective rates of return to betting on any pair of horsesAandBare equal:
+10:273:17663:44:44:216:540:513:12:g_d0_f11:12:g_d0_f2:A:π(pA)(OA+1) =π(pB)(OB+1) =1.(2)
+10:274:17694:44:24:71:540:469:12:g_d0_f2:12:g_d0_f2:B:Consequently, data on the odds(OA,OB)and the probabilities(pA,pB)of horses winning reveal
+10:275:17783:24:24:71:299:445:12:g_d0_f2:9:g_d0_f2:B:the misperceptions of the representative bettor.6
+10:276:17832:24:23:89:539:421:12:g_d0_f2:12:g_d0_f2:A:Note that the misperceptions class allows more flexibility in the way probabilities enter the
+10:277:17925:23:24:71:539:398:12:g_d0_f2:12:g_d0_f2:B:representative bettor’s value of a bet, but it is more restrictive than the risk-love class in terms of
+10:278:18028:24:24:71:539:374:12:g_d0_f2:12:g_d0_f2:B:how payoffs enter that function.  More to the point, without restrictive parametric assumptions,
+10:279:18124:24:24:71:539:350:12:g_d0_f2:12:g_d0_f2:B:each class of models is just-identified, so each yields identical predictions for the pricing of win
+10:280:18224:24:24:71:93:326:12:g_d0_f2:12:g_d0_f2:B:bets.
+10:281:18229:24:24:89:539:302:12:g_d0_f2:12:g_d0_f2:A:The right panel of Figure 3 shows the probability weighting functionπ(p)implied by the data
+10:282:18320:24:24:71:539:278:12:g_d0_f2:12:g_d0_f2:B:in Figure 1.  The low rates of return to betting longshots are rationalized by bettors who bet as
+10:283:18417:24:24:71:539:254:12:g_d0_f2:12:g_d0_f2:B:though horses with tiny probabilities of winning actually have moderate probabilities of winning.
+10:284:18514:24:18:71:539:230:12:g_d0_f2:12:g_d0_f2:B:The specific shape of the declining rates of return identifies the probability weighting function at
+10:285:18614:18:16:85:539:212:7:g_d0_f2:10:g_d0_f2:F:5Formally,  these  theories  suggest  agents  maximize  expected  utility,  where  utility  is  the  sum  of  the  felicity  of
+10:286:18741:16:12:72:539:196:10:g_d0_f2:10:g_d0_f2:F:wealth,y(·):R→R, and the felicity of bragging rights or the thrill of winning,b(·):R→R.  Hence the expected
+10:287:18848:12:12:72:539:184:10:g_d0_f2:10:g_d0_f2:F:utility to a bettor with initial wealthw0of a gamble at oddsOthat wins with probabilitypcan be expressed as:
+10:288:18956:12:12:72:539:172:10:g_d0_f3:10:g_d0_f2:F:E(U(O)) =p[y(w0+O) +b(O)] + [1−p]y(w0−1).  As before, bettors will accept lower returns on riskier wagers
+10:289:19061:12:12:72:540:160:10:g_d0_f2:10:g_d0_f2:F:(betting on longshots) ifU′′>0.  This is possible if either the felicity of wealth is sufficiently convex or bragging
+10:290:19178:12:12:72:540:148:10:g_d0_f2:10:g_d0_f2:F:rights are increasing in the payoff at a sufficiently increasing rate.  More to the point, revealed preference data do not
+10:291:19300:12:8:72:379:136:10:g_d0_f2:10:g_d0_f2:F:allow us to separately identify effects operating throughy(·), rather thanb(·).
+10:292:19379:8:16:85:540:128:7:g_d0_f2:10:g_d0_f2:F:6While we term the divergence betweenπ(p)andpmisperceptions, in non-expected utility theories,π(p)can
+10:293:19480:16:12:72:540:112:10:g_d0_f2:10:g_d0_f2:F:be interpreted as a preference over types of gambles.  Under either interpretation our approach is valid, in that we
+10:294:19596:12:12:72:540:100:10:g_d0_f2:10:g_d0_f2:F:test whether gambles are motivated by nonlinear functions of wealth or probability.  In (2) we implicitly assume that
+10:295:19713:12:0:72:258:88:10:g_d0_f11:10:g_d0_f2:F:π(1) =1, although we allow limp→1π(p)≤1.
+11:296:19754:0:24:72:539:708:12:g_d0_f2:12:g_d0_f2:B:each point.7This function shares some of the features of the decision weights in Prospect Theory
+11:297:19850:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:(Kahneman and Tversky, 1979), and the figure shows that the one-parameter probability weighting
+11:298:19945:24:24:72:316:660:12:g_d0_f2:12:g_d0_f2:B:function in Prelec (1998) fits the data quite closely.
+11:299:19999:24:24:89:539:636:12:g_d0_f2:12:g_d0_f2:A:While we have presented a very sparse model, a number of richer theories have been proposed
+11:300:20090:24:24:72:539:612:12:g_d0_f2:12:g_d0_f2:B:that yield similar implications.8For instance, Ottaviani and Sørenson (2009) show that initial infor-
+11:301:20191:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:mation asymmetries between bettors may lead to misperceptions of the true probabilities of horses
+11:302:20288:24:24:72:540:564:12:g_d0_f2:12:g_d0_f2:B:winning.  Moreover, Henery (1985) and Williams and Paton (1997) argue that bettors discount a
+11:303:20381:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:constant proportion of the gambles in which they bet on a loser, possibly due to a self-serving bias
+11:304:20481:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:in which losers argue that conditions were atypical.  Because longshot bets lose more often, this
+11:305:20578:24:47:72:475:492:12:g_d0_f2:12:g_d0_f2:B:discounting yields perceptions in which betting on a longshot seems more attractive.
+11:306:20662:47:32:72:381:445:14:g_d0_f1:14:g_d0_f1:C:3.3  Implications for Pricing Compound Lotteries
+11:307:20710:32:24:72:540:413:12:g_d0_f2:12:g_d0_f2:B:We now show how our two classes of models—while each just-identified based on data from win
+11:308:20801:24:24:72:540:389:12:g_d0_f2:12:g_d0_f2:B:bets—yield different implications for the prices of exotic bets. As such, our approach responds to
+11:309:20899:24:23:72:540:365:12:g_d0_f2:12:g_d0_f2:B:Sauer (1998, p.2026), which calls for research that provides “equilibrium pricing functions from
+11:310:20995:23:24:72:283:342:12:g_d0_f2:12:g_d0_f2:B:well-posed models of the wagering market.”
+11:311:21037:24:24:89:539:318:12:g_d0_f2:12:g_d0_f2:A:We discuss the pricing of exactas (picking the first two horses in order) in detail. Prices for these
+11:312:21138:24:24:72:540:294:12:g_d0_f2:12:g_d0_f2:B:bets are constructed from: the bettors’ utility function, indifference conditions as in (1) or (2), data
+11:313:21242:24:24:72:539:270:12:g_d0_f2:12:g_d0_f2:B:on the perceived likelihood of the pick for first,A, actually winning (pAorπ(pA), depending on
+11:314:21336:24:24:72:540:246:12:g_d0_f2:12:g_d0_f2:B:the class), and conditional onAwinning, the likelihood of the pick for second,B, coming second
+11:315:21430:24:24:72:539:222:12:g_d0_f2:12:g_d0_f2:B:(pB|Aorπ(pB|A)).  A bettor will be indifferent between betting on an exacta on horsesAthenBin
+11:316:21523:24:19:72:540:198:12:g_d0_f2:12:g_d0_f2:B:that order, paying odds ofEAB/1, and not betting (which yields no change in wealth, and hence a
+11:317:21618:19:15:85:540:179:7:g_d0_f2:10:g_d0_f2:F:7There remains one minor issue:  as Figure 1 shows, horses never win as often as suggested by their win odds
+11:318:21726:15:12:72:540:164:10:g_d0_f2:10:g_d0_f2:F:because of the track-take.  Thus we follow the convention in the literature and adjust the odds-implied probabilities
+11:319:21843:12:12:72:540:152:10:g_d0_f2:10:g_d0_f2:F:by a factor of one minus the track take for that specific race, so that they are on average unbiased;  our results are
+11:320:21961:12:9:72:316:140:10:g_d0_f2:10:g_d0_f2:F:qualitatively similar whether or not we make this adjustment.
+11:321:22022:9:15:85:539:131:7:g_d0_f2:10:g_d0_f2:F:8While the assumption of risk-neutrality may be too stark, as long as bettors gamble small proportions of their
+11:322:22133:15:12:72:540:116:10:g_d0_f2:10:g_d0_f2:F:wealth the relevant risk premia are second-order.  For instance, assuming log utility, if the bettor is indifferent over
+11:323:22253:12:12:72:540:104:10:g_d0_f2:10:g_d0_f7:F:bettingx% of their wealth on horseAorB, then:π(pA)log(w+wxOA) + (1−π(pA))log(w−wx) =π(pB)log(w+
+11:324:22348:12:12:72:540:92:10:g_d0_f3:10:g_d0_f7:F:wxOB)+(1−π(pB))log(w−wx), which under the standard approximation simplifies to:π(pA)(OA+1)≈π(pB)(OB+
+11:325:22448:12:0:72:120:80:10:g_d0_f2:10:g_d0_f2:F:1), as in (2).
+12:326:22463:0:46:72:154:708:12:g_d0_f2:12:g_d0_f2:B:utility of one), if:
+12:327:22483:46:20:72:154:662:12:g_d0_f1:12:g_d0_f1:C:Risk-Love Class
+12:328:22498:20:26:72:243:642:12:g_d0_f2:12:g_d0_f2:B:(Risk-lover, Unbiased expectations)
+12:329:22533:26:34:146:232:616:12:g_d0_f3:12:g_d0_f2:?:pApB|AU(EAB) =1
+12:330:22548:34:0:72:126:582:12:g_d0_f2:12:g_d0_f7:B:Notingp=
+12:331:22556:0:16:140:146:590:12:g_d0_f2:12:g_d0_f2:?:1
+12:332:22557:16:0:130:156:574:12:g_d0_f3:12:g_d0_f7:C:U(O)
+12:333:22561:0:35:160:200:582:12:g_d0_f2:12:g_d0_f2:A:from (1)
+12:334:22569:35:0:124:172:547:12:g_d0_f3:9:g_d0_f2:?:EAB=U-1
+12:335:22576:0:9:173:178:556:12:g_d0_f12:12:g_d0_f12:?:(
+12:336:22577:9:0:178:248:547:12:g_d0_f3:12:g_d0_f7:C:U(OA)U(OB|A)
+12:337:22589:0:9:248:253:556:12:g_d0_f12:12:g_d0_f12:?:)
+12:338:22590:9:0:292:306:547:12:g_d0_f2:12:g_d0_f2:?:(3)
+12:339:22593:0:20:324:432:660:12:g_d0_f1:12:g_d0_f1:C:Misperceptions Class
+12:340:22613:20:26:324:492:640:12:g_d0_f2:12:g_d0_f2:?:(Biased expectations, Risk-neutral)
+12:341:22648:26:34:366:497:614:12:g_d0_f11:12:g_d0_f2:?:π(pA)π(pB|A)(EAB+1) =1
+12:342:22670:34:0:323:396:580:12:g_d0_f2:12:g_d0_f7:?:Notingπ(p) =
+12:343:22682:0:16:410:416:588:12:g_d0_f2:12:g_d0_f2:?:1
+12:344:22683:16:0:399:426:572:12:g_d0_f3:12:g_d0_f2:?:O+1
+12:345:22686:0:31:431:471:580:12:g_d0_f2:12:g_d0_f2:?:from (2)
+12:346:22694:31:52:361:540:549:12:g_d0_f3:12:g_d0_f2:A:EAB= (OA+1)(OB|A+1)−1(4)
+12:347:22718:52:24:89:540:497:12:g_d0_f2:12:g_d0_f2:A:Thus, under the misperceptions class, the odds of the exactaEABare a simple function of the
+12:348:22809:24:24:71:540:473:12:g_d0_f2:12:g_d0_f2:B:odds of horseAwinning,OA, and conditional on this, on the odds ofBcoming second,OB|A. The
+12:349:22898:24:24:71:539:449:12:g_d0_f2:12:g_d0_f2:B:preferences class is more demanding, requiring that we estimate the utility function.  The utility
+12:350:22996:24:24:71:539:425:12:g_d0_f2:12:g_d0_f2:B:function is estimated from the pricing of win bets (in Figure 3), and can be inverted to compute
+12:351:23092:24:24:71:310:401:12:g_d0_f2:9:g_d0_f2:B:unbiased win probabilities from the betting odds.9
+12:352:23142:24:24:89:539:377:12:g_d0_f2:12:g_d0_f2:A:Our empirical tests simply determine which of (3) or (4) better fit the actual prices of exacta
+12:353:23237:24:24:71:539:353:12:g_d0_f2:12:g_d0_f2:B:bets.  We apply an analogous approach to the pricing of quinella and trifecta bets:  the intuition is
+12:354:23338:24:23:71:378:329:12:g_d0_f2:12:g_d0_f2:B:the same; the mathematical details are described in Appendix B.
+12:355:23401:23:24:89:539:306:12:g_d0_f2:12:g_d0_f2:A:Note that both (3) and (4) requireOB|A,  which is not directly observable.   In Section 4 we
+12:356:23493:24:24:71:540:282:12:g_d0_f2:12:g_d0_f2:B:infer the conditional probabilitypB|A(and henceπ(pB|A)andOB|A) from win odds by assuming
+12:357:23581:24:24:71:539:258:12:g_d0_f2:12:g_d0_f2:B:that bettors believe in conditional independence.  That is, we apply the Harville (1973) formula:
+12:358:23678:24:0:71:120:234:12:g_d0_f11:12:g_d0_f7:C:π(pB|A) =
+12:359:23687:0:16:135:164:242:12:g_d0_f11:12:g_d0_f7:C:π(pB)
+12:360:23692:16:0:125:173:226:12:g_d0_f2:12:g_d0_f7:?:1−π(pA)
+12:361:23699:0:24:174:540:234:12:g_d0_f2:12:g_d0_f2:A:;  replacingπ(p)withpin the risk-love class.   This assumption is akin to
+12:362:23772:24:24:72:540:210:12:g_d0_f2:12:g_d0_f2:B:thinking about the race for second as a “race within the race” (Sauer, 1998). While relying on the
+12:363:23870:24:24:72:540:186:12:g_d0_f2:12:g_d0_f2:B:Harville formula is standard in the literature—see for instance Asch and Quandt (1987)—we show
+12:364:23964:24:24:72:540:162:12:g_d0_f2:12:g_d0_f2:B:that our results are robust to dropping this assumption and estimating this conditional probability,
+12:365:24064:24:20:72:203:138:12:g_d0_f3:12:g_d0_f2:B:pB|A, directly from the data.
+12:366:24093:20:16:85:539:118:7:g_d0_f2:10:g_d0_f2:F:9Our econometric method imposes continuity on the utility and probability weighting functions; the data mandate
+12:367:24204:16:12:72:539:102:10:g_d0_f2:10:g_d0_f2:F:that both be strictly increasing.  Together this is sufficient to ensure thatπ(·)andU(·)are invertible.  As in Figure 1,
+12:368:24324:12:12:72:540:90:10:g_d0_f2:10:g_d0_f2:F:we do not have sufficient data to estimate the utility of winning bets at odds greater than 200/1. This prohibits us from
+12:369:24445:12:0:72:479:78:10:g_d0_f2:10:g_d0_f2:F:pricing bets whose odds are greater than 200/1, which is most limiting for our analysis of trifecta bets.
+13:370:24552:0:32:72:344:708:14:g_d0_f1:14:g_d0_f1:C:3.4  Failure to Reduce Compound Lotteries
+13:371:24593:32:24:72:540:676:12:g_d0_f2:12:g_d0_f2:B:As in Prospect Theory, the frame the bettor adopts in trying to assess each gamble is a key issue,
+13:372:24691:24:24:72:540:652:12:g_d0_f2:12:g_d0_f2:B:particularly for misperceptions-based models.  Specifically, (4) assumes that bettors first attempt
+13:373:24790:24:24:72:540:628:12:g_d0_f2:12:g_d0_f2:B:to assess the likelihood of horseAwinning,π(pA), and then assess the likelihood ofBcoming
+13:374:24879:24:24:71:539:604:12:g_d0_f2:12:g_d0_f2:B:second given thatAis the winner,π(pB|A). An alternative frame might suggest that bettors directly
+13:375:24976:24:24:71:408:580:12:g_d0_f2:9:g_d0_f2:B:assesses the likelihood of first-and-second combinations:π(pApB|A).10
+13:376:25045:24:24:89:539:556:12:g_d0_f2:12:g_d0_f2:A:There is a direct analogy to the literature on the assessment of compound lotteries: does the bet-
+13:377:25143:24:24:71:539:532:12:g_d0_f2:12:g_d0_f2:B:tor separately assess the likelihood of winning an initial gamble (picking the winning horse) which
+13:378:25242:24:24:71:539:508:12:g_d0_f2:12:g_d0_f2:B:yields a subsequent gamble as its prize (picking the second-placed horse), or does she consider the
+13:379:25341:24:24:71:539:484:12:g_d0_f2:12:g_d0_f2:B:equivalent simple lottery (as in Samuelson (1952))?  Consistent with (4), the accumulated experi-
+13:380:25438:24:24:71:539:460:12:g_d0_f2:12:g_d0_f2:B:mental evidence (Camerer and Ho, 1994) is more in line with subjects failing to reduce compound
+13:381:25533:24:23:71:220:436:12:g_d0_f2:9:g_d0_f2:B:lotteries into simple lotteries.11
+13:382:25567:23:24:89:539:413:12:g_d0_f2:12:g_d0_f2:A:Alternatively, we could choose not to defend either assumption, leaving it as a matter for em-
+13:383:25661:24:24:71:539:389:12:g_d0_f2:12:g_d0_f2:B:pirical testing. Interestingly, if gamblers adopt a frame consistent with the reduction of compound
+13:384:25760:24:24:71:539:365:12:g_d0_f2:12:g_d0_f2:B:lotteries into their equivalent simple lottery form, this yields a pricing rule for the misperceptions
+13:385:25862:24:24:71:539:341:12:g_d0_f2:12:g_d0_f2:B:class equivalent to that of the risk-love class.12Thus, evidence consistent with what we are calling
+13:386:25962:24:24:71:539:317:12:g_d0_f2:12:g_d0_f2:B:the risk-love class accommodates either risk-love by unbiased bettors, or risk-neutral but biased
+13:387:26059:24:24:71:539:293:12:g_d0_f2:12:g_d0_f2:B:bettors,  whose  bias  affects  their  perception  of  an  appropriately  reduced  compound  lottery.   By
+13:388:26165:24:24:71:539:269:12:g_d0_f2:12:g_d0_f2:B:contrast, the competing misperceptions class implies the failure to reduce compound lotteries and
+13:389:26262:24:24:71:319:245:12:g_d0_f2:12:g_d0_f2:B:posits the specific form of this failure, shown in (4).
+13:390:26317:24:24:89:539:221:12:g_d0_f2:12:g_d0_f2:A:This discussion implies that results consistent with our risk-love class are also consistent with
+13:391:26414:24:23:71:539:197:12:g_d0_f2:12:g_d0_f2:B:a richer set of models emphasizing choices over simple gambles.  These include models based on
+13:392:26508:23:19:71:539:174:12:g_d0_f2:12:g_d0_f2:B:the utility of gambling,  information asymmetry or limits to arbitrage,  such as Ali (1977),  Shin
+13:393:26606:19:15:82:540:155:7:g_d0_f2:10:g_d0_f2:F:10Unless the probability weighting function is a power function (π(p) =pα), these different frames yield different
+13:394:26720:15:9:72:181:140:10:g_d0_f2:10:g_d0_f2:F:implications (Acz ́el, 1966).
+13:395:26749:9:12:82:437:131:7:g_d0_f2:10:g_d0_f2:A:11Additionally, note that (4) satisfies the compound independence axiom of Segal (1990).
+13:396:26837:12:16:82:539:119:7:g_d0_f2:10:g_d0_f2:F:12To see this, note that identical data (from Figure 1) is used to construct the utility and decision weight functions
+13:397:26955:16:12:72:540:103:10:g_d0_f2:10:g_d0_f2:F:respectively,  so each is constructed to rationalize the same set of choices over simple lotteries.   This implies each
+13:398:27074:12:12:72:540:91:10:g_d0_f2:10:g_d0_f2:F:class also yields the same set of choices over compound lotteries if preferences in both classes obey the reduction of
+13:399:27192:12:0:72:276:79:10:g_d0_f2:10:g_d0_f2:F:compound lotteries into equivalent simple lotteries.
+14:400:27246:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:(1992), Hurley and McDonough (1995), Manski (2006). Any theory that prescribes a specific bias
+14:401:27340:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:in a market for a simple gamble (win betting) will yield similar implications in a related market for
+14:402:27441:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:compound gambles if gamblers assess their equivalent simple gamble form. By implication, reject-
+14:403:27537:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:ing the risk-love class substantially narrows the set of plausible theories of the favorite-longshot
+14:404:27637:24:55:72:94:612:12:g_d0_f2:12:g_d0_f2:B:bias.
+14:405:27642:55:36:72:279:557:17:g_d0_f1:17:g_d0_f1:C:4  Results from Exotic Bets
+14:406:27669:36:24:72:540:521:12:g_d0_f2:12:g_d0_f2:B:The first panel of Figure 4 shows the difference between the predictions for exactas of the risk-
+14:407:27766:24:24:72:540:497:12:g_d0_f2:12:g_d0_f2:B:love and misperceptions classes, expressed as a percent of the predictions.  This demonstrates the
+14:408:27864:24:24:72:540:473:12:g_d0_f2:12:g_d0_f2:B:two classes of models  yield qualitatively different predictions.   Exotic bets have relatively low
+14:409:27963:24:24:72:540:449:12:g_d0_f2:12:g_d0_f2:B:probabilities of winning, so under the risk-love class a risk penalty results, yielding lower odds.
+14:410:28062:24:24:72:540:425:12:g_d0_f2:12:g_d0_f2:B:By contrast, the misperceptions model is based on the underlying simple lotteries, many of which
+14:411:28158:24:24:72:540:401:12:g_d0_f2:12:g_d0_f2:B:suffer  smaller  perception  biases.   The  risk  penalty  becomes  particularly  important  as  odds  get
+14:412:28264:24:24:72:540:377:12:g_d0_f2:12:g_d0_f2:B:longer; thus the difference in predictions grows along a line from the bottom right to the top left of
+14:413:28366:24:24:72:196:353:12:g_d0_f2:12:g_d0_f2:B:the first panel of Figure 4.
+14:414:28394:24:24:89:539:329:12:g_d0_f2:12:g_d0_f2:A:To focus on shorter-odds bets, in Table 1 we convert the predictions into the price of a con-
+14:415:28487:24:0:72:380:305:12:g_d0_f2:12:g_d0_f7:B:tingent contract that pays $1 if the chosen exacta wins:Price=
+14:416:28549:0:16:404:410:313:12:g_d0_f2:12:g_d0_f2:?:1
+14:417:28550:16:0:384:429:297:12:g_d0_f3:12:g_d0_f2:?:Odds+1
+14:418:28556:0:24:430:539:305:12:g_d0_f2:12:g_d0_f2:A:.  We test the ability of
+14:419:28581:24:23:72:540:281:12:g_d0_f2:12:g_d0_f2:B:each economic model to predict this price by examining the mean absolute error of the predictions
+14:420:28678:23:24:72:540:258:12:g_d0_f2:12:g_d0_f2:B:of both models from the actual prices of exotic bets (column 1).  We further investigate which of
+14:421:28775:24:24:72:540:234:12:g_d0_f2:12:g_d0_f2:B:the models produces predictions that are closer, observation-by-observation, to the prices that are
+14:422:28874:24:24:72:540:210:12:g_d0_f2:12:g_d0_f2:B:actually observed (column 3).  The explanatory power of the misperceptions class is substantially
+14:423:28971:24:24:72:540:186:12:g_d0_f2:12:g_d0_f2:B:greater.  The misperceptions class is six percentage points closer to the actual prices of exactas
+14:424:29069:24:24:72:420:162:12:g_d0_f2:12:g_d0_f2:B:(column 2) an improvement of 6.3/34.3 = 18.4% over the risk-love class.
+14:425:29140:24:24:89:539:138:12:g_d0_f2:12:g_d0_f2:A:The second panel of Figure 4 plots the improvement of the misperceptions class according
+14:426:29228:24:24:72:540:114:12:g_d0_f2:12:g_d0_f2:B:to the odds of the first and second place horses.  When both horses have odds of less than 10/1,
+14:427:29324:24:0:72:540:90:12:g_d0_f2:12:g_d0_f2:B:which accounts for 70% of our data, the average improvement of the misperceptions class over the
+15:428:29422:0:276:133:474:688:12:g_d0_f2:12:g_d0_f2:?:Figure 4: Differences between theories: predictions and improvements.
+15:429:29491:276:0:228:368:412:6:g_d0_f13:6:g_d0_f13:?:Odds of First Place Horse (log scale)
+15:430:29566:0:13:245:351:668:7:g_d0_f13:7:g_d0_f13:?:Percentage Difference
+15:431:29587:13:229:233:364:655:7:g_d0_f13:7:g_d0_f13:?:between Exacta Predictions
+15:432:29613:229:0:173:175:426:4:g_d0_f14:4:g_d0_f14:?: 
+15:433:29613:0:226:421:423:647:4:g_d0_f14:4:g_d0_f14:?: 
+15:434:29613:226:0:200:400:421:4:g_d0_f14:4:g_d0_f14:?:1251020
+15:435:29620:0:0:169:172:450:4:g_d0_f14:4:g_d0_f14:?:1
+15:436:29621:0:0:169:172:491:4:g_d0_f14:4:g_d0_f14:?:2
+15:437:29622:0:0:169:172:544:4:g_d0_f14:4:g_d0_f14:?:5
+15:438:29623:0:0:165:172:584:4:g_d0_f14:4:g_d0_f14:?:10
+15:439:29625:0:180:165:172:624:4:g_d0_f14:4:g_d0_f14:?:20
+15:440:29627:180:0:444:451:444:4:g_d0_f14:4:g_d0_f14:?:10
+15:441:29629:0:0:444:451:481:4:g_d0_f14:4:g_d0_f14:?:20
+15:442:29631:0:0:444:451:518:4:g_d0_f14:4:g_d0_f14:?:30
+15:443:29633:0:0:444:451:555:4:g_d0_f14:4:g_d0_f14:?:40
+15:444:29635:0:0:444:451:592:4:g_d0_f14:4:g_d0_f14:?:50
+15:445:29637:0:113:444:451:629:4:g_d0_f14:4:g_d0_f14:?:60
+15:446:29639:113:75:180:197:516:5:g_d0_f15:5:g_d0_f15:?:10%
+15:447:29642:75:0:333:372:441:5:g_d0_f15:5:g_d0_f15:?:10%15%
+15:448:29648:0:0:364:381:454:5:g_d0_f15:5:g_d0_f15:?:20%
+15:449:29651:0:0:370:387:470:5:g_d0_f15:5:g_d0_f15:?:25%
+15:450:29654:0:0:383:400:482:5:g_d0_f15:5:g_d0_f15:?:30%
+15:451:29657:0:0:389:406:496:5:g_d0_f15:5:g_d0_f15:?:35%
+15:452:29660:0:0:392:409:510:5:g_d0_f15:5:g_d0_f15:?:40%
+15:453:29663:0:0:394:411:527:5:g_d0_f15:5:g_d0_f15:?:45%
+15:454:29666:0:0:396:413:543:5:g_d0_f15:5:g_d0_f15:?:50%
+15:455:29669:0:0:396:413:559:5:g_d0_f15:5:g_d0_f15:?:55%
+15:456:29672:0:456:396:413:574:5:g_d0_f15:5:g_d0_f15:?:60%
+15:457:29675:456:0:228:368:118:6:g_d0_f16:6:g_d0_f16:?:Odds of First Place Horse (log scale)
+15:458:29750:0:13:237:359:375:7:g_d0_f16:7:g_d0_f16:?:Percentage Improvement:
+15:459:29773:13:230:207:388:362:7:g_d0_f16:7:g_d0_f16:?:Misperceptions Class over Risk−Love
+15:460:29808:230:0:173:175:132:4:g_d0_f17:4:g_d0_f17:?: 
+15:461:29808:0:227:421:423:354:4:g_d0_f17:4:g_d0_f17:?: 
+15:462:29808:227:0:200:400:127:4:g_d0_f17:4:g_d0_f17:?:1251020
+15:463:29815:0:0:169:172:157:4:g_d0_f17:4:g_d0_f17:?:1
+15:464:29816:0:0:169:172:197:4:g_d0_f17:4:g_d0_f17:?:2
+15:465:29817:0:0:169:172:250:4:g_d0_f17:4:g_d0_f17:?:5
+15:466:29818:0:0:165:172:290:4:g_d0_f17:4:g_d0_f17:?:10
+15:467:29820:0:185:165:172:331:4:g_d0_f17:4:g_d0_f17:?:20
+15:468:29822:185:0:444:454:146:4:g_d0_f17:4:g_d0_f17:?:−20
+15:469:29825:0:0:444:454:174:4:g_d0_f17:4:g_d0_f17:?:−10
+15:470:29828:0:0:444:447:201:4:g_d0_f17:4:g_d0_f17:?:0
+15:471:29829:0:0:444:451:229:4:g_d0_f17:4:g_d0_f17:?:10
+15:472:29831:0:0:444:451:257:4:g_d0_f17:4:g_d0_f17:?:20
+15:473:29833:0:0:444:451:285:4:g_d0_f17:4:g_d0_f17:?:30
+15:474:29835:0:0:444:451:312:4:g_d0_f17:4:g_d0_f17:?:40
+15:475:29837:0:142:444:451:340:4:g_d0_f17:4:g_d0_f17:?:50
+15:476:29839:142:16:396:413:198:5:g_d0_f18:5:g_d0_f18:?:55%
+15:477:29842:16:34:390:407:182:5:g_d0_f18:5:g_d0_f18:?:50%
+15:478:29845:34:0:329:379:148:5:g_d0_f18:5:g_d0_f18:?:25%20%30%35%
+15:479:29857:0:0:378:395:157:5:g_d0_f18:5:g_d0_f18:?:40%
+15:480:29860:0:20:382:399:169:5:g_d0_f18:5:g_d0_f18:?:45%
+15:481:29863:20:0:220:237:149:5:g_d0_f18:5:g_d0_f18:?:15%
+15:482:29866:0:15:217:234:207:5:g_d0_f18:5:g_d0_f18:?:15%
+15:483:29869:15:0:199:216:192:5:g_d0_f18:5:g_d0_f18:?:20%
+15:484:29872:0:0:220:237:244:5:g_d0_f18:5:g_d0_f18:?:10%
+15:485:29875:0:0:221:233:280:5:g_d0_f18:5:g_d0_f18:?:5%
+15:486:29877:0:0:226:230:295:5:g_d0_f18:5:g_d0_f18:?:0
+15:487:29878:0:0:226:243:315:5:g_d0_f18:5:g_d0_f18:?:−5%
+15:488:29881:0:0:238:259:324:5:g_d0_f18:5:g_d0_f18:?:−10%
+15:489:29885:0:0:222:243:335:5:g_d0_f18:5:g_d0_f18:?:−15%
+15:490:29889:0:0:237:258:342:5:g_d0_f18:5:g_d0_f18:?:−20%
+16:491:29895:0:19:120:488:701:12:g_d0_f2:12:g_d0_f2:?:Table 1: Mean Error Based Tests of Risk-Love versus Misperceptions Model
+16:492:29967:19:18:242:478:682:12:g_d0_f2:12:g_d0_f2:?:(1)(2)(3)
+16:493:29976:18:17:79:519:664:12:g_d0_f3:12:g_d0_f2:A:Test:Absolute Error:Absolute % Error:Which Prediction is
+16:494:30032:17:22:199:524:647:12:g_d0_f4:12:g_d0_f2:?:|Prediction−Actual||Prediction−Actual|ActualCloser to Actual? (%)
+16:495:30097:22:22:284:448:625:12:g_d0_f2:12:g_d0_f2:?:Panel A: Exacta Bets (n=197,551)
+16:496:30129:22:22:79:487:603:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.013934.3%42.1%
+16:497:30160:22:21:79:487:581:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.012528.0%57.9%
+16:498:30196:21:15:79:367:560:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.001376.3%
+16:499:30223:15:22:85:368:545:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00002)(.1%)
+16:500:30256:22:21:283:449:523:12:g_d0_f2:12:g_d0_f2:?:Panel B: Quinella Bets (n=70,169)
+16:501:30289:21:22:79:487:502:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.027439.0%46.0%
+16:502:30320:22:22:79:487:480:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.025836.3%54.0%
+16:503:30356:22:14:79:367:458:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.001552.7%
+16:504:30383:14:22:85:368:444:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00003)(.2%)
+16:505:30416:22:21:282:450:422:12:g_d0_f2:12:g_d0_f2:?:Panel C: Trifecta Bets (n=137,756)
+16:506:30450:21:22:79:487:401:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.00796100%28.9%
+16:507:30481:22:22:79:487:379:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.0053257.4%71.1%
+16:508:30518:22:14:79:370:357:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.0026442.9%
+16:509:30546:14:21:85:368:343:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00001)(.2%)
+16:510:30579:21:12:79:532:322:10:g_d0_f2:10:g_d0_f2:A:Notes:Standard errors in parenthesis. Predictions and actual outcomes are measured in the price of a contract that
+16:511:30693:12:47:79:251:310:10:g_d0_f2:10:g_d0_f2:A:pays $1 if the event occurs, zero otherwise.
+16:512:30737:47:24:72:540:263:12:g_d0_f2:12:g_d0_f2:B:risk-love class is 16.8%.  At long odds (the top and right of the figure) there are clear patterns in
+16:513:30838:24:24:72:540:239:12:g_d0_f2:12:g_d0_f2:B:the data that are not well explained by either class, leaving room for more nuanced theories of the
+16:514:30937:24:24:72:179:215:12:g_d0_f2:12:g_d0_f2:B:favorite-longshot bias.
+16:515:30960:24:23:89:539:191:12:g_d0_f2:12:g_d0_f2:A:Panels B and C of Table 1 repeat this analysis, but this time extending our test to see which
+16:516:31053:23:24:72:540:168:12:g_d0_f2:12:g_d0_f2:B:model can better explain the pricing of quinella and trifecta bets.  The intuition is similar in all
+16:517:31153:24:24:72:540:144:12:g_d0_f2:12:g_d0_f2:B:three cases; Appendix B contains further mathematical detail.  Each of these tests across all three
+16:518:31252:24:19:72:501:120:12:g_d0_f2:9:g_d0_f2:B:panels shows that the misperceptions model fits the data better than the risk-love model.13
+16:519:31343:19:15:82:539:101:7:g_d0_f2:10:g_d0_f2:F:13We have also re-run these tests a number of other ways to test for robustness.   Our conclusions are unaltered
+16:520:31455:15:12:72:540:86:10:g_d0_f2:10:g_d0_f2:F:by:  whether or not we weight observations by the size of the betting pool, whether we drop observations where the
+16:521:31569:12:0:72:540:74:10:g_d0_f2:10:g_d0_f2:F:models imply very long odds, whether or not we adjust the models in the manner described in footnote 8; and different
+17:522:31688:0:32:72:439:708:14:g_d0_f1:14:g_d0_f1:C:4.1  Relaxing the Assumption of Conditional Independence
+17:523:31744:32:24:72:539:676:12:g_d0_f2:12:g_d0_f3:B:Recall that we observe all of the inputs to both pricing models exceptOB|A, the odds of horseB
+17:524:31838:24:24:71:539:652:12:g_d0_f2:12:g_d0_f2:B:finishing second, conditional on horseAwinning. In Section 4 we used the convenient assumption
+17:525:31932:24:24:71:539:628:12:g_d0_f2:12:g_d0_f2:B:of conditional independence to assess the likely odds of this bet, but there may be good reason
+17:526:32027:24:24:71:539:604:12:g_d0_f2:12:g_d0_f2:B:to doubt this assumption.  For example, if a heavily favored horse does not win a race, this may
+17:527:32123:24:24:71:539:580:12:g_d0_f2:12:g_d0_f2:B:reflect the fact that it was injured during the race, which would imply that it is very unlikely to
+17:528:32222:24:24:71:539:556:12:g_d0_f2:12:g_d0_f2:B:come second.  That is, the win odds may provide useful guidance on the probability of winning,
+17:529:32316:24:24:71:539:532:12:g_d0_f2:12:g_d0_f2:B:but may be a poor guide to the race for second. In this section we test the assumption of conditional
+17:530:32417:24:24:71:539:508:12:g_d0_f2:12:g_d0_f2:B:independence and derive two further tests can distinguish between the risk-love and misperceptions
+17:531:32515:24:24:71:255:484:12:g_d0_f2:9:g_d0_f2:B:models even if this assumption fails.14
+17:532:32554:24:24:89:539:460:12:g_d0_f2:12:g_d0_f2:A:We test the conditional independence assumption by asking whether we can improve on the
+17:533:32641:24:23:71:539:436:12:g_d0_f2:12:g_d0_f2:B:predictions of the Harville (1973) formula using other data. As in Section 3.3, the Harville formula
+17:534:32741:23:0:71:119:413:12:g_d0_f2:12:g_d0_f7:B:is:pB|A=
+17:535:32749:0:17:138:148:421:12:g_d0_f3:9:g_d0_f3:?:pB
+17:536:32751:17:0:123:163:404:12:g_d0_f7:12:g_d0_f7:C:(1−pA)
+17:537:32757:0:24:164:540:413:12:g_d0_f2:12:g_d0_f2:A:, wherepAandpBreflect the probability that horsesAandB, respectively, win
+17:538:32830:24:24:72:540:389:12:g_d0_f2:12:g_d0_f2:B:the race. We estimate linear probability model where the dependent variable is an indicator variable
+17:539:32930:24:24:72:458:365:12:g_d0_f2:12:g_d0_f2:B:for whether horseBfinished second. A probit specification yields similar results.
+17:540:33011:24:24:89:539:341:12:g_d0_f2:12:g_d0_f2:A:The first specification of Table 2 shows that the Harville formula is an extremely useful pre-
+17:541:33105:24:24:72:540:317:12:g_d0_f2:12:g_d0_f2:B:dictor of the probability of a horse finishing second. As a guide for thinking about the explanatory
+17:542:33205:24:24:72:540:293:12:g_d0_f2:12:g_d0_f2:B:power of the Harville formula, note that theR2of specification 1 is about four-fifths theR2of the
+17:543:33302:24:24:72:540:269:12:g_d0_f2:12:g_d0_f2:B:regression of an indicator for whether a horse won the race on its betting odds.  Columns 2 and 3
+17:544:33399:24:24:72:540:245:12:g_d0_f2:12:g_d0_f2:B:however, provide compelling evidence that we can do better than the Harville formula.  Column
+17:545:33492:24:24:72:540:221:12:g_d0_f2:12:g_d0_f2:B:2 adds dummy variables representing the odds of the first place horse and the odds of the second
+17:546:33588:24:23:72:540:197:12:g_d0_f2:12:g_d0_f2:B:placed horse (using 100 odds groupings in each case, each grouping containing 1% of the odds
+17:547:33680:23:24:72:540:174:12:g_d0_f2:12:g_d0_f2:B:distribution).   Column 3 includes a full set of interactions of these fixed effects,  estimating the
+17:548:33781:24:24:72:540:150:12:g_d0_f2:12:g_d0_f2:B:conditional probability non-parametrically from the odds of the first and second place horses; this
+17:549:33880:24:22:72:540:126:12:g_d0_f2:12:g_d0_f2:B:regression is equivalent to estimating a large table showing the proportion of horses at odds of
+17:550:33976:22:9:72:493:104:10:g_d0_f2:10:g_d0_f2:F:functional forms for the price of a bet, including the natural log price of a $1 claim, the odds, or log-odds.
+17:551:34086:9:15:82:539:95:7:g_d0_f2:10:g_d0_f2:F:14Even if conditional independence fails, it is not immediately obvious that it yields errors that are correlated in
+17:552:34202:15:0:72:416:80:10:g_d0_f2:10:g_d0_f2:F:such as way as to drive our main results. Even so, this is an issue for empirical testing.
+18:553:34294:0:22:131:477:701:12:g_d0_f2:12:g_d0_f2:?:Table 2: Predicting the Conditional Probability of a Second Place Finish
+18:554:34366:22:15:115:438:679:12:g_d0_f3:12:g_d0_f2:?:Dependent Variable:   Indicator for whether a horse came in second
+18:555:34432:15:22:201:341:664:12:g_d0_f2:12:g_d0_f2:?:(Conditional on not winning)
+18:556:34460:22:22:115:479:642:12:g_d0_f3:12:g_d0_f2:?:Specification:(1)(2)(3)
+18:557:34483:22:14:115:432:620:12:g_d0_f2:12:g_d0_f2:?:Prediction from Conditional Independence0.7930.908
+18:558:34533:14:23:115:437:606:12:g_d0_f2:12:g_d0_f2:?:(Harville Formula)(.0012)    (.0077)
+18:559:34569:23:14:115:436:583:12:g_d0_f2:12:g_d0_f2:?:Odds of this horse and odds of first horseF=32.3
+18:560:34617:14:22:115:436:569:12:g_d0_f2:12:g_d0_f2:?:(100 dummy variables for each)p=0.00
+18:561:34653:22:14:115:489:547:12:g_d0_f2:12:g_d0_f2:?:Full set of interactions: (this horse∗first horse)F=43.5
+18:562:34709:14:22:115:489:533:12:g_d0_f2:12:g_d0_f2:?:(10,000 dummy variables)p=0.00
+18:563:34739:22:21:115:489:511:12:g_d0_f3:12:g_d0_f2:?:R20.07820.07940.0813
+18:564:34759:21:12:115:496:490:10:g_d0_f2:10:g_d0_f2:?:Notes:Standard errors in parenthesis. Predictions and actual outcomes are measured in the price
+18:565:34854:12:47:115:357:478:10:g_d0_f2:10:g_d0_f2:?:of a contract that pays $1 if the event occurs, zero otherwise.
+18:566:34917:47:24:72:539:431:12:g_d0_f3:12:g_d0_f2:B:OB/1 who won the race for second, given the winner was at odds ofOA/1. In both columns 2 and
+18:567:35009:24:23:72:419:407:12:g_d0_f2:12:g_d0_f2:B:3, F-tests show that these fixed effects are jointly statistically significant.
+18:568:35088:23:24:89:539:384:12:g_d0_f2:12:g_d0_f2:A:We now use non-parametrically estimated probabilities as a robustness check of our results in
+18:569:35181:24:24:72:539:360:12:g_d0_f2:12:g_d0_f2:B:Table 1. That is, rather than inferringpB|A(and henceπ(pB|A)andOB|A) from the Harville formula,
+18:570:35276:24:24:71:539:336:12:g_d0_f2:12:g_d0_f2:B:we simply apply the empirical probabilities estimated using the Lowess procedure of Cleveland,
+18:571:35370:24:24:71:539:312:12:g_d0_f2:12:g_d0_f2:B:Devlin, and Grosse (1988).  We implement this exercise in Table 3, calculating the price of exotic
+18:572:35468:24:24:71:539:288:12:g_d0_f2:9:g_d0_f3:B:bets under the risk-love and misperception models, but adapting our earlier approach so thatpB|A
+18:573:35564:24:24:71:197:264:12:g_d0_f2:9:g_d0_f2:B:is derived from the data.15
+18:574:35591:24:24:89:539:240:12:g_d0_f2:12:g_d0_f2:A:The results in Table 3 are almost identical to those in Table 1. For exacta, quinella and trifecta
+18:575:35689:24:117:71:488:216:12:g_d0_f2:12:g_d0_f2:B:bets, the misperceptions model has greater explanatory power than the risk-love model.
+18:576:35775:117:16:82:540:99:7:g_d0_f2:10:g_d0_f2:F:15Because the precision of our estimates ofpB|Avary greatly, WLS weighted by the product of the squared standard
+18:577:35887:16:11:71:540:83:10:g_d0_f2:10:g_d0_f2:F:error ofpB|AandpAmight be appropriate.  Additionally, we could estimatepB|Adirectly from column 3 of Table 2.
+18:578:35996:11:0:71:296:72:10:g_d0_f2:10:g_d0_f2:F:These approaches produce qualitatively identical results.
+19:579:36055:0:19:132:477:701:12:g_d0_f2:12:g_d0_f2:?:Table 3: Robustness to Relaxing Conditional Independence Assumption
+19:580:36122:19:18:242:478:682:12:g_d0_f2:12:g_d0_f2:?:(1)(2)(3)
+19:581:36131:18:17:79:519:664:12:g_d0_f3:12:g_d0_f2:A:Test:Absolute Error:Absolute % Error:Which Prediction is
+19:582:36187:17:22:199:524:647:12:g_d0_f4:12:g_d0_f2:?:|Prediction−Actual||Prediction−Actual|ActualCloser to Actual? (%)
+19:583:36252:22:22:284:448:625:12:g_d0_f2:12:g_d0_f2:?:Panel A: Exacta Bets (n=197,551)
+19:584:36284:22:22:79:487:603:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.011733.7%42.9%
+19:585:36315:22:21:79:487:581:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.010924.4%57.1%
+19:586:36351:21:15:79:367:560:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.000829.3%
+19:587:36378:15:22:85:368:545:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00001)(.1%)
+19:588:36411:22:21:283:449:523:12:g_d0_f2:12:g_d0_f2:?:Panel B: Quinella Bets (n=70,169)
+19:589:36444:21:22:79:487:502:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.024037.7%48.7%
+19:590:36475:22:22:79:487:480:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.023533.8%51.3%
+19:591:36511:22:14:79:367:458:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.000463.9%
+19:592:36538:14:22:85:368:444:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00002)(.2%)
+19:593:36571:22:21:282:450:422:12:g_d0_f2:12:g_d0_f2:?:Panel C: Trifecta Bets (n=137,756)
+19:594:36605:21:22:79:487:401:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Model0.0065098.0%30.4%
+19:595:36637:22:22:79:487:379:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Model0.0046449.0%69.6%
+19:596:36674:22:14:79:370:357:12:g_d0_f2:12:g_d0_f2:A:Risk-Love Error−0.0018649.0%
+19:597:36702:14:21:85:368:343:12:g_d0_f2:12:g_d0_f2:A:Misperceptions Error(.00001)(.1%)
+19:598:36735:21:12:79:532:322:10:g_d0_f2:10:g_d0_f2:A:Notes:Standard errors in parenthesis. Predictions and actual outcomes are measured in the price of a contract that
+19:599:36849:12:47:79:251:310:10:g_d0_f2:10:g_d0_f2:A:pays $1 if the event occurs, zero otherwise.
+19:600:36893:47:36:72:442:263:17:g_d0_f1:17:g_d0_f1:C:5  Simultaneous Pricing of Exactas and Quinellas
+19:601:36941:36:24:72:540:227:12:g_d0_f2:12:g_d0_f2:B:Our final test of the two classes relies only on the relative pricing of exacta and quinella bets, and
+19:602:37043:24:24:72:539:203:12:g_d0_f2:12:g_d0_f2:B:is more stringent as it considers these bets simultaneously.16As before, we derive predictions
+19:603:37137:24:24:72:381:179:12:g_d0_f2:12:g_d0_f2:B:from each class and test which better explains the observed data.
+19:604:37202:24:24:89:539:155:12:g_d0_f2:12:g_d0_f2:A:The exactaAB(which representsAwinning andBcoming second) occurs with probability
+19:605:37282:24:20:72:539:131:12:g_d0_f3:12:g_d0_f2:B:pA∗pB|A; theBAexacta occurs with probabilitypB∗pA|B. By definition, the corresponding quinella
+19:606:37376:20:16:82:539:111:7:g_d0_f2:10:g_d0_f2:F:16Note that these tests are distinct from the work by authors such as Asch and Quandt (1987) and Dolbear (1993),
+19:607:37488:16:12:72:540:95:10:g_d0_f2:10:g_d0_f2:F:who  test  whether  exacta  pricing  is  arbitrage-linked  to  win  pricing.   Instead,  we  ask  whether  the  same  model  that
+19:608:37617:12:0:72:415:83:10:g_d0_f2:10:g_d0_f2:F:explains pricing of win bets can jointly explain the pricing of exacta and quinella bets.
+20:609:37708:0:24:72:539:708:12:g_d0_f2:12:g_d0_f7:B:pays off when the winning exacta is eitherABorBAand hence occurs with probabilitypA∗pB|A+
+20:610:37797:24:24:72:540:684:12:g_d0_f3:12:g_d0_f2:B:pB∗pA|B. Each model yields unique implications for the relative prices of the winning exacta and
+20:611:37893:24:0:71:291:660:12:g_d0_f2:12:g_d0_f2:B:quinella bets, and thus unique predictions for
+20:612:37939:0:11:313:336:667:9:g_d0_f3:7:g_d0_f3:?:pApB|A
+20:613:37945:11:20:297:539:656:9:g_d0_f3:12:g_d0_f3:F:pApB|A+pBpA|B, which is also the probability horseA
+20:614:37996:20:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:wins given thatAandBare the top two finishers.  Specifically, consider theABexacta at odds of
+20:615:38089:24:46:72:293:612:12:g_d0_f3:12:g_d0_f2:B:EAB/1, and the corresponding quinella atQ/1:
+20:616:38133:46:18:72:141:566:10:g_d0_f1:10:g_d0_f1:F:Risk-Love Class
+20:617:38148:18:18:72:215:548:10:g_d0_f2:10:g_d0_f2:F:(Risk-lover, Unbiased expectations)
+20:618:38183:18:29:72:178:530:10:g_d0_f3:10:g_d0_f2:F:Exacta:pApB|AU(EAB) =1
+20:619:38205:29:7:129:185:501:10:g_d0_f3:10:g_d0_f7:?:pB|A=U(OA)
+20:620:38215:7:0:157:187:494:10:g_d0_f3:10:g_d0_f7:A:U(EAB)
+20:621:38221:0:28:233:245:501:10:g_d0_f2:10:g_d0_f2:?:(5)
+20:622:38224:28:29:74:221:473:10:g_d0_f3:10:g_d0_f2:F:Quinella:[pApB|A+pBpA|B]U(Q) =1
+20:623:38255:29:0:87:140:444:10:g_d0_f3:10:g_d0_f7:A:pA|B=U(OB)
+20:624:38265:0:8:140:147:458:10:g_d0_f12:10:g_d0_f12:?:(
+20:625:38266:8:13:156:161:450:10:g_d0_f2:10:g_d0_f2:?:1
+20:626:38267:13:0:147:169:437:10:g_d0_f3:10:g_d0_f7:?:U(Q)
+20:627:38271:0:7:172:199:444:10:g_d0_f4:10:g_d0_f2:?:−1
+20:628:38273:7:0:181:211:437:10:g_d0_f3:10:g_d0_f7:?:U(EAB)
+20:629:38279:0:14:211:218:458:10:g_d0_f12:10:g_d0_f12:?:)
+20:630:38280:14:28:233:245:444:10:g_d0_f2:10:g_d0_f2:?:(7)
+20:631:38283:28:19:74:185:416:10:g_d0_f3:10:g_d0_f2:F:Hence from(1),(5)and(7):
+20:632:38307:19:15:124:149:397:10:g_d0_f3:7:g_d0_f3:?:pApB|A
+20:633:38313:15:0:106:167:382:10:g_d0_f3:7:g_d0_f3:?:pBpA|B+pApB|A
+20:634:38326:0:0:171:179:389:10:g_d0_f7:10:g_d0_f7:?:=
+20:635:38327:0:14:185:207:396:10:g_d0_f3:10:g_d0_f7:?:U(Q)
+20:636:38331:14:0:181:211:382:10:g_d0_f3:10:g_d0_f7:?:U(EAB)
+20:637:38337:0:0:233:245:389:10:g_d0_f2:10:g_d0_f2:?:(9)
+20:638:38340:0:18:248:338:568:10:g_d0_f1:10:g_d0_f1:?:Misperceptions Class
+20:639:38360:18:18:248:388:550:10:g_d0_f2:10:g_d0_f2:?:(Biased expectations, Risk-neutral)
+20:640:38395:18:29:248:391:532:10:g_d0_f3:10:g_d0_f2:?:Exacta:π(pA)π(pB|A)(EAB+1) =1
+20:641:38424:29:7:336:408:503:10:g_d0_f11:10:g_d0_f2:?:π(pB|A) =OA+1
+20:642:38437:7:0:380:410:496:10:g_d0_f3:10:g_d0_f2:?:EAB+1
+20:643:38442:0:0:413:466:503:10:g_d0_f4:7:g_d0_f2:?:⇒pB|A=π-1
+20:644:38451:0:8:466:473:517:10:g_d0_f12:10:g_d0_f12:?:(
+20:645:38452:8:13:476:503:509:10:g_d0_f3:10:g_d0_f2:?:OA+1
+20:646:38456:13:0:474:505:496:10:g_d0_f3:10:g_d0_f2:?:EAB+1
+20:647:38461:0:14:506:513:517:10:g_d0_f12:10:g_d0_f12:?:)
+20:648:38462:14:28:589:601:503:10:g_d0_f2:10:g_d0_f2:?:(6)
+20:649:38465:28:27:251:464:475:10:g_d0_f3:10:g_d0_f2:?:Quinella:[π(pA)π(pB|A)+π(pB)π(pA|B)](Q+1) =1
+20:650:38509:27:0:296:373:448:10:g_d0_f11:10:g_d0_f7:?:π(pA|B) = (OB+1)
+20:651:38525:0:7:373:379:459:10:g_d0_f12:10:g_d0_f12:?:(
+20:652:38526:7:7:385:389:452:7:g_d0_f2:7:g_d0_f2:?:1
+20:653:38527:7:0:379:404:445:7:g_d0_f3:10:g_d0_f4:?:Q+1−
+20:654:38531:0:7:415:419:452:7:g_d0_f2:7:g_d0_f2:?:1
+20:655:38532:7:0:407:428:445:7:g_d0_f3:7:g_d0_f2:?:EAB+1
+20:656:38537:0:11:428:434:459:10:g_d0_f12:10:g_d0_f12:?:)
+20:657:38538:11:0:436:489:448:10:g_d0_f4:7:g_d0_f2:?:⇒pA|B=π-1
+20:658:38547:0:7:489:503:459:10:g_d0_f12:7:g_d0_f3:?:((O
+20:659:38550:7:7:502:547:452:6:g_d0_f3:7:g_d0_f7:?:B+1)(EAB−Q)
+20:660:38561:7:0:497:545:445:7:g_d0_f7:7:g_d0_f7:?:(EAB+1)(Q+1)
+20:661:38573:0:11:547:553:459:10:g_d0_f12:10:g_d0_f12:?:)
+20:662:38574:11:24:589:601:448:10:g_d0_f2:10:g_d0_f2:?:(8)
+20:663:38577:24:27:251:362:424:10:g_d0_f3:10:g_d0_f2:?:Hence from(2),(6)and(8):
+20:664:38601:27:14:288:314:397:10:g_d0_f3:7:g_d0_f3:?:pApB|A
+20:665:38607:14:0:270:343:383:10:g_d0_f3:10:g_d0_f7:?:pApB|A+pBpA|B=
+20:666:38621:0:0:410:423:400:10:g_d0_f11:7:g_d0_f2:?:π-1
+20:667:38624:0:7:422:428:411:10:g_d0_f12:10:g_d0_f12:?:(
+20:668:38625:7:8:436:440:404:7:g_d0_f2:7:g_d0_f2:?:1
+20:669:38626:8:0:428:447:396:7:g_d0_f3:7:g_d0_f2:?:OA+1
+20:670:38630:0:11:447:453:411:10:g_d0_f12:10:g_d0_f12:?:)
+20:671:38631:11:0:454:466:400:10:g_d0_f11:7:g_d0_f2:?:π-1
+20:672:38634:0:7:465:471:411:10:g_d0_f12:10:g_d0_f12:?:(
+20:673:38635:7:8:473:491:404:7:g_d0_f3:7:g_d0_f2:?:OA+1
+20:674:38639:8:0:472:493:396:7:g_d0_f3:7:g_d0_f2:?:EAB+1
+20:675:38644:0:32:493:499:411:10:g_d0_f12:10:g_d0_f12:?:)
+20:676:38645:32:0:346:358:379:10:g_d0_f11:7:g_d0_f2:?:π-1
+20:677:38648:0:7:358:364:390:10:g_d0_f12:10:g_d0_f12:?:(
+20:678:38649:7:7:371:375:383:7:g_d0_f2:7:g_d0_f2:?:1
+20:679:38650:7:0:364:382:376:7:g_d0_f3:7:g_d0_f2:?:OA+1
+20:680:38654:0:11:382:388:390:10:g_d0_f12:10:g_d0_f12:?:)
+20:681:38655:11:0:389:402:379:10:g_d0_f11:7:g_d0_f2:?:π-1
+20:682:38658:0:8:401:414:390:10:g_d0_f12:7:g_d0_f3:?:(O
+20:683:38660:8:8:413:412:382:6:g_d0_f3:7:g_d0_f3:?:A+1E
+20:684:38664:8:0:411:428:374:6:g_d0_f3:7:g_d0_f2:?:AB+1
+20:685:38668:0:11:428:434:390:10:g_d0_f12:10:g_d0_f12:?:)
+20:686:38669:11:0:434:456:379:10:g_d0_f7:7:g_d0_f2:?:+π-1
+20:687:38673:0:7:455:461:390:10:g_d0_f12:10:g_d0_f12:?:(
+20:688:38674:7:7:469:473:383:7:g_d0_f2:7:g_d0_f2:?:1
+20:689:38675:7:0:461:480:376:7:g_d0_f3:7:g_d0_f2:?:OB+1
+20:690:38679:0:11:480:486:390:10:g_d0_f12:10:g_d0_f12:?:)
+20:691:38680:11:0:487:499:379:10:g_d0_f11:7:g_d0_f2:?:π-1
+20:692:38683:0:7:499:513:390:10:g_d0_f12:7:g_d0_f3:?:((O
+20:693:38686:7:8:512:557:383:6:g_d0_f3:7:g_d0_f7:?:B+1)(EAB−Q)
+20:694:38697:8:0:507:555:375:7:g_d0_f7:7:g_d0_f7:?:(EAB+1)(Q+1)
+20:695:38709:0:57:557:601:390:10:g_d0_f12:10:g_d0_f2:?:)(10)
+20:696:38714:57:24:89:540:333:12:g_d0_f2:12:g_d0_f2:A:Equations  (9)  and  (10)  show  that  for  any  pair  of  horses  at  win  oddsOA/1  andOB/1  with
+20:697:38813:24:24:71:539:309:12:g_d0_f2:12:g_d0_f2:B:quinella oddsQ/1, each class has different implications for how frequently we expect to observe
+20:698:38908:24:24:71:539:285:12:g_d0_f2:12:g_d0_f2:B:theABexacta winning,  relative to theBAexacta.   That is,  each class gives distinct predictions
+20:699:39004:24:24:71:540:261:12:g_d0_f2:12:g_d0_f2:B:about how often a horse with win oddsOA/1 will come in first, given that horses with win odds
+20:700:39097:24:24:71:539:237:12:g_d0_f3:12:g_d0_f2:B:OA/1 andOB/1 are the top two finishers.  As a first test, we regress an indicator for whether the
+20:701:39194:24:24:71:540:213:12:g_d0_f2:12:g_d0_f2:B:favorite out of horsesAandBactually won, given that horsesAandBfinished first and second,
+20:702:39283:24:24:71:539:189:12:g_d0_f2:12:g_d0_f2:B:on the predictions of each model.17In this simple specification, the misperceptions class yields a
+20:703:39381:24:24:71:540:165:12:g_d0_f2:12:g_d0_f2:B:robust and significant positive correlation with actual outcomes (coefficient=0.63; standard error
+20:704:39479:24:23:71:540:141:12:g_d0_f2:12:g_d0_f2:B:= 0.014,n=60,288), while the risk-love class is negatively correlated with outcomes (coefficient
+20:705:39575:23:24:71:297:118:12:g_d0_f7:12:g_d0_f2:B:=−0.59; standard error=0.013,n=60,288).
+20:706:39614:24:19:89:539:94:12:g_d0_f2:12:g_d0_f2:A:Where does the perverse negative correlation between the predictions of the risk-love class and
+20:707:39709:19:0:82:437:75:7:g_d0_f2:10:g_d0_f2:A:17In the rare event when horsesAandBhad the same odds we coded the indicator as 0.5.
+21:708:39795:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:actual outcomes come from? To fix ideas, consider the case where the relative favorite,A, has win
+21:709:39892:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:odds of 4/1 and the relative longshot,B, has win odds of 9/1.  The data give average exacta odds
+21:710:39988:24:24:72:539:660:12:g_d0_f3:12:g_d0_f2:B:EAB=39/1 andEBA=44/1 and average quinella oddsQ=20/1.  These data agree extremely
+21:711:40069:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:closely with the predictions of the misperceptions class, so when (10) is applied to data from such
+21:712:40168:24:0:72:275:612:12:g_d0_f2:12:g_d0_f2:B:a race, it makes accurate predictions about
+21:713:40211:0:11:295:318:619:9:g_d0_f3:7:g_d0_f3:?:pApB|A
+21:714:40217:11:20:279:339:608:9:g_d0_f3:12:g_d0_f2:?:pApB|A+pBpA|B.
+21:715:40231:20:24:89:539:588:12:g_d0_f2:12:g_d0_f2:A:Now examine the predictions of the risk-love class.  Under this class, an exacta bet at odds
+21:716:40323:24:24:72:539:564:12:g_d0_f3:12:g_d0_f2:B:EAB=39/1 is interpreted as having a large risk penalty, as should be clear from Figures 1 and
+21:717:40416:24:24:72:540:540:12:g_d0_f2:12:g_d0_f2:B:3.  But if, in fact, compound bets are priced according to the misperceptions class—where bets at
+21:718:40513:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:odds of 4/1 and 9/1 do not attract much of a risk (or misperceptions) penalty—then by inferring
+21:719:40608:24:24:72:540:492:12:g_d0_f2:12:g_d0_f2:B:the existence of such a penalty, the risk-love model implicitly underestimates the probability that
+21:720:40707:24:23:72:539:468:12:g_d0_f2:12:g_d0_f2:B:exactaABwill occur. This underestimation is severe enough that the risk-love class predicts a less
+21:721:40805:23:24:72:540:445:12:g_d0_f2:12:g_d0_f2:B:than 50% chance that the relatively favored horseAwill finish first out ofAandB. But given that
+21:722:40900:24:24:72:539:421:12:g_d0_f3:12:g_d0_f2:B:Ais the favorite of the two horses (OA/1=4/1<9/1=OB/1), it is in fact more likely than not to
+21:723:40993:24:24:71:145:397:12:g_d0_f2:12:g_d0_f2:B:finish beforeB.
+21:724:41008:24:24:89:539:373:12:g_d0_f2:12:g_d0_f2:A:If,  instead,  the relative longshotBwins,  the exactaEBA=44/1 is observed.   Applying the
+21:725:41098:24:24:71:539:349:12:g_d0_f2:12:g_d0_f2:B:logic above, the risk-love class infers that this price incorporates an even larger risk penalty, and
+21:726:41199:24:24:71:539:325:12:g_d0_f2:12:g_d0_f2:B:thus assigns a low probability to this exacta.  In turn, this means that it yields a low probability
+21:727:41299:24:24:71:540:301:12:g_d0_f2:12:g_d0_f2:B:of horseBcoming in first, given thatAandBare the top two finishers.  However, the risk-love
+21:728:41390:24:24:72:539:277:12:g_d0_f2:12:g_d0_f2:B:class will make this predictiononly whenexactaEBAis observed—that is, horseBactually wins
+21:729:41479:24:24:72:539:253:12:g_d0_f2:12:g_d0_f2:B:the race—which is exactly wrong.  Thus, conditional onAandBbeing the top two finishers, the
+21:730:41570:24:24:72:539:229:12:g_d0_f2:12:g_d0_f3:B:risk-love class predicts the relative favorite,A, will win with probability less than12wheneverA
+21:731:41666:24:23:72:540:205:12:g_d0_f2:12:g_d0_f2:B:wins. Similarly, wheneverBwins, the risk-love class predicts that the relative longshotBwill win
+21:732:41762:23:24:72:540:182:12:g_d0_f2:12:g_d0_f2:B:with probability less than12, and hence predicts that the probability that the relative favoriteAwins
+21:733:41863:24:24:72:487:158:12:g_d0_f2:12:g_d0_f2:B:is more than12. These two forces lead to the perverse negative correlation found above.
+21:734:41950:24:24:89:539:134:12:g_d0_f2:12:g_d0_f2:A:The risk-love class fails here because it insists that the same risk-penalty be priced into all bets
+21:735:42050:24:24:72:540:110:12:g_d0_f2:12:g_d0_f2:B:of a given risk, regardless of the pool from which the bets are drawn. Yet exotic bets with middling
+21:736:42150:24:0:72:540:86:12:g_d0_f2:12:g_d0_f2:B:risk—relative to the other bets available in a given pool—do not tend to attract large risk-penalties,
+22:737:42254:0:237:193:415:701:12:g_d0_f2:12:g_d0_f2:?:Figure 5: Dropping Conditional Independence
+22:738:42297:237:0:128:142:464:12:g_d0_f19:12:g_d0_f19:?:−.5
+22:739:42300:0:0:123:143:500:12:g_d0_f19:12:g_d0_f19:?:−.25
+22:740:42304:0:0:137:142:535:12:g_d0_f19:12:g_d0_f19:?:0
+22:741:42305:0:0:129:143:571:12:g_d0_f19:12:g_d0_f19:?:.25
+22:742:42308:0:184:134:142:607:12:g_d0_f19:12:g_d0_f19:?:.5
+22:743:42377:184:12:155:508:423:12:g_d0_f19:12:g_d0_f19:?:−.5−.250.25.5
+22:744:42390:12:11:290:370:411:12:g_d0_f19:12:g_d0_f19:?:Model Predictions
+22:745:42407:11:0:191:469:400:12:g_d0_f19:12:g_d0_f19:?:Proportion where Favorite beats Longshot, Relative to Baseline
+22:746:42469:0:15:299:397:635:12:g_d0_f19:12:g_d0_f19:?:Misperceptions Model
+22:747:42489:15:15:299:375:620:12:g_d0_f19:12:g_d0_f19:?:Risk Love Model
+22:748:42504:15:0:299:361:605:12:g_d0_f19:12:g_d0_f19:?:45 degree line
+22:749:42518:0:0:152:508:658:12:g_d0_f19:12:g_d0_f19:?:Proportion of Races in which Favored Horse Beats Longshot, relative to Baseline
+22:750:42597:0:298:179:480:674:17:g_d0_f19:17:g_d0_f19:?:Predicting the Winning Exacta Within a Quinella
+22:751:42644:298:12:90:522:376:10:g_d0_f2:10:g_d0_f2:A:Notes: Chart shows model predictions from (3) and (4) and actual outcomes relative to a fixed-effect region
+22:752:42751:12:12:90:522:364:10:g_d0_f2:10:g_d0_f2:A:baseline. For the first-two finishing horses the baseline controls for: (a) the odds of the favored horse, (b) the
+22:753:42865:12:12:90:522:352:10:g_d0_f2:10:g_d0_f2:A:odds of the longshot, (c) the odds of the quinella, and (d) all interactions of (a), (b) and (c).  The plot shows
+22:754:42978:12:12:90:521:340:10:g_d0_f2:10:g_d0_f2:A:model predictions after removing fixed effects, rounded to the nearest percentage point, on thex- axis and
+22:755:43084:12:47:89:325:328:10:g_d0_f2:10:g_d0_f2:A:actual outcomes, relative to the fixed effects, on they- axis.
+22:756:43146:47:24:71:526:281:12:g_d0_f2:12:g_d0_f2:B:even if those bets would be very risky relative to bets in the win pool (Asch and Quandt, 1987).
+22:757:43242:24:24:89:539:257:12:g_d0_f2:12:g_d0_f2:A:Note that (9) and (10) also yield distinct predictions of the winning exacta evenwithinany set
+22:758:43336:24:24:71:539:233:12:g_d0_f2:12:g_d0_f2:B:of apparently similar races (those whose first two finishers are atOA/1 andOB/1 with the quinella
+22:759:43433:24:23:71:539:209:12:g_d0_f2:12:g_d0_f3:B:payingQ/1).  Thus, we can include a full set of fixed effects forOA,OB,Q and their interactions
+22:760:43528:23:24:71:540:186:12:g_d0_f2:12:g_d0_f2:B:in our statistical tests of the predictions of each class.18The residual after differencing out these
+22:761:43629:24:24:71:539:162:12:g_d0_f2:12:g_d0_f2:B:fixed effects is the predicted likelihood thatAbeatsB, relative to the average for all races in which
+22:762:43730:24:24:71:539:138:12:g_d0_f2:12:g_d0_f2:B:a horses at odds ofOA/1 andOB/1 fill the quinella at oddsQ/1. That is, for all races we compute
+22:763:43825:24:19:71:540:114:12:g_d0_f2:12:g_d0_f2:B:the predictions of the likelihood that exacta with the relative favorite winning (AB) occurs, and
+22:764:43922:19:15:82:539:95:7:g_d0_f2:10:g_d0_f2:F:18Because the oddsOA,OBandQare actually continuous variables, we include fixed effects for each percentile of
+22:765:44031:15:0:71:405:80:10:g_d0_f2:10:g_d0_f2:F:the distribution of each variable (and a full set of interactions of these fixed effects).
+23:766:44123:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:subtract the baselineOA∗OB∗Qcell mean to yield the predictions for each class of model, relative
+23:767:44219:24:24:71:539:684:12:g_d0_f2:12:g_d0_f2:B:to the fixed effects. The results, summarized in Figure 5, are remarkably robust to the inclusion of
+23:768:44319:24:24:71:539:660:12:g_d0_f2:12:g_d0_f2:B:these multiple fixed effects (and interactions): the coefficient on the misperceptions class declines
+23:769:44420:24:24:71:539:636:12:g_d0_f2:12:g_d0_f2:B:slightly, and insignificantly, while the risk-love class maintains a significant but perversely negative
+23:770:44524:24:24:71:539:612:12:g_d0_f2:12:g_d0_f2:B:correlation with outcomes. It should be clear that this test, by focusing only on the relative rankings
+23:771:44627:24:24:71:539:588:12:g_d0_f2:12:g_d0_f2:B:of the first two horses, entirely eliminates parametric assumptions about the race for second place.
+23:772:44727:24:24:89:539:564:12:g_d0_f2:12:g_d0_f2:A:These tests imply that a model from the risk-love class that accounts for the pricing of win bets
+23:773:44824:24:24:71:539:540:12:g_d0_f2:12:g_d0_f2:B:yields inaccurate implications for the relative pricing of exacta and quinella bets. By contrast, the
+23:774:44925:24:24:71:539:516:12:g_d0_f2:12:g_d0_f2:B:misperceptions class is consistent with the pricing of exacta, quinella and trifecta bets, and, as this
+23:775:45028:24:24:71:539:492:12:g_d0_f2:12:g_d0_f2:B:section shows, also consistent with the relative pricing of exacta and quinella bets.  These results
+23:776:45128:24:55:71:391:468:12:g_d0_f2:12:g_d0_f2:B:are robust to a range of different approaches to testing the theories.
+23:777:45198:55:36:71:179:413:17:g_d0_f1:17:g_d0_f1:C:6  Conclusion
+23:778:45211:36:24:71:539:377:12:g_d0_f2:12:g_d0_f2:B:Employing a new dataset which is much larger than those in the existing literature, we document
+23:779:45306:24:24:71:539:353:12:g_d0_f2:12:g_d0_f2:B:stylized  facts  about  the  rates  of  return  to  betting  on  horses.   As  with  other  authors,  we  note  a
+23:780:45419:24:24:71:539:329:12:g_d0_f2:12:g_d0_f2:B:substantial favorite-longshot bias.  The term bias is somewhat misleading here.  That the rate of
+23:781:45516:24:24:71:539:305:12:g_d0_f2:12:g_d0_f2:B:return  to  betting  on  horses  at  long  odds  is  much  lower  than  the  return  to  betting  on  favorites
+23:782:45627:24:23:71:539:281:12:g_d0_f2:12:g_d0_f2:B:simply falsifies a model in which bettors maximize a function that is linear in probabilities and
+23:783:45724:23:24:71:539:258:12:g_d0_f2:12:g_d0_f2:B:linear in payoffs.  Thus, the pricing of win bets can be reconciled by a representative bettor with
+23:784:45823:24:24:71:539:234:12:g_d0_f2:12:g_d0_f2:B:either a concave utility function, or a subjective utility function employing non-linear probability
+23:785:45923:24:24:71:539:210:12:g_d0_f2:12:g_d0_f2:B:weights  that  violate  the  reduction  of  compound  lotteries.   For  compactness,  we  referred  to  the
+23:786:46030:24:24:71:539:186:12:g_d0_f2:12:g_d0_f2:B:former as explaining the data with risk-love, while we refer to the latter as explaining the data with
+23:787:46132:24:24:71:539:162:12:g_d0_f2:12:g_d0_f2:B:misperceptions.  Neither label is particularly accurate as each category includes a wider range of
+23:788:46230:24:24:71:165:138:12:g_d0_f2:12:g_d0_f2:B:competing theories.
+23:789:46249:24:24:89:539:114:12:g_d0_f2:12:g_d0_f2:A:We show that these classes of models can be separately identified using aggregate data by re-
+23:790:46342:24:0:71:539:90:12:g_d0_f2:12:g_d0_f2:B:quiring that they explain both choices over betting on different horses to win and choices over
+24:791:46439:0:24:72:540:708:12:g_d0_f2:12:g_d0_f2:B:compound bets:  exactas,  quinellas and trifectas.   Because the underlying risk or set of beliefs,
+24:792:46538:24:24:72:540:684:12:g_d0_f2:12:g_d0_f2:B:depending on the theory, is traded in both the win and compound betting markets, we can derive
+24:793:46632:24:24:72:540:660:12:g_d0_f2:12:g_d0_f2:B:unique testable implications from both sets of theories.  Our results are more consistent with the
+24:794:46730:24:24:72:540:636:12:g_d0_f2:12:g_d0_f2:B:favorite-longshot bias being driven by misperceptions rather than risk-love.  Indeed, while each
+24:795:46826:24:24:72:540:612:12:g_d0_f2:12:g_d0_f2:B:class is individually quite useful for pricing compound lotteries, the misperceptions class strongly
+24:796:46926:24:24:72:540:588:12:g_d0_f2:12:g_d0_f2:B:dominates the risk-love class.  This result is robust to a range of alternative approaches to distin-
+24:797:47027:24:24:72:217:564:12:g_d0_f2:12:g_d0_f2:B:guishing between the theories.
+24:798:47057:24:24:89:539:540:12:g_d0_f2:12:g_d0_f2:A:This bias likely persists in equilibrium because misperceptions are not large enough to generate
+24:799:47153:24:24:72:540:516:12:g_d0_f2:12:g_d0_f2:B:profit opportunities for unbiased bettors. That said, the cost of this bias is also very large, and de-
+24:800:47256:24:0:72:441:492:12:g_d0_f2:12:g_d0_f2:B:biasing an individual bettor could reduce their cost of gambling substantially.
+25:801:47337:0:27:72:196:708:17:g_d0_f1:17:g_d0_f1:C:Appendix  Data
+25:802:47351:27:15:72:540:681:12:g_d0_f2:12:g_d0_f2:B:Our dataset consists of all horse races run in North America from 1992 to 2001. The data was gen-
+25:803:47448:15:14:72:540:666:12:g_d0_f2:12:g_d0_f2:B:erously provided to us by Axcis Inc., a subsidiary of the jockey club. The data record performance
+25:804:47546:14:15:72:540:652:12:g_d0_f2:12:g_d0_f2:B:of every horse in each of its starts, and contains the universe of officially recorded variables having
+25:805:47649:15:14:72:379:637:12:g_d0_f2:12:g_d0_f2:B:to do with the horses themselves, the tracks and race conditions.
+25:806:47714:14:15:89:539:623:12:g_d0_f2:12:g_d0_f2:A:Our concern is with the pricing of bets.  Thus, our primary sample consists of the 6,403,712
+25:807:47806:15:14:72:540:608:12:g_d0_f2:12:g_d0_f2:B:observations in 865,934 races for which win odds and finishing positions are recorded.  We use
+25:808:47900:14:14:72:540:594:12:g_d0_f2:12:g_d0_f2:B:these data, subject to the data cleaning restrictions below, to generate Figures 1–3 and 5.  We are
+25:809:47999:14:15:72:540:580:12:g_d0_f2:12:g_d0_f2:B:also interested in pricing exacta, quinella and trifectas bets and have data on the winning payoffs
+25:810:48098:15:14:72:540:565:12:g_d0_f2:12:g_d0_f2:B:in 314,977, 116,307 and 282,576 races respectively.  The prices of non-winning combinations are
+25:811:48193:14:15:72:135:551:12:g_d0_f2:12:g_d0_f2:B:not recorded.
+25:812:48206:15:14:89:539:536:12:g_d0_f2:12:g_d0_f2:A:Due to the size of our dataset, whenever observations were problematic, we simply dropped
+25:813:48295:14:15:72:540:522:12:g_d0_f2:12:g_d0_f2:B:the entire race from our dataset. Specifically, if a race has more than one horse owned by the same
+25:814:48394:15:14:72:540:507:12:g_d0_f2:12:g_d0_f2:B:owner, rather than deal with coupled runners, we simply dropped the race.  Additionally, if a race
+25:815:48492:14:15:72:540:493:12:g_d0_f2:12:g_d0_f2:B:had a dead heat for first, second or third place the exacta, quinella and trifecta payouts may not be
+25:816:48593:15:14:72:540:478:12:g_d0_f2:12:g_d0_f2:B:accurately recorded and so we dropped these races. When the odds of any horse were reported as
+25:817:48687:14:14:72:540:464:12:g_d0_f2:12:g_d0_f2:B:zero we dropped the race. Further if the odds across all runners implied that the track take was less
+25:818:48788:14:15:72:540:450:12:g_d0_f2:12:g_d0_f2:B:than 15% or more than 22%, we dropped the race.  After these steps, we are left with 5,606,336
+25:819:48882:15:14:72:540:435:12:g_d0_f2:12:g_d0_f2:B:valid observations on win bets from 678,729 races and 1,485,112 observations from 206,808 races
+25:820:48977:14:41:72:397:421:12:g_d0_f2:12:g_d0_f2:B:include both valid win odds and payoffs for the winning exotic bets.
+25:821:49045:41:22:72:540:380:17:g_d0_f1:17:g_d0_f1:F:Appendix  Pricing of Compound Lotteries using Conditional
+25:822:49102:22:27:160:262:358:17:g_d0_f1:17:g_d0_f1:A:Independence
+25:823:49114:27:14:72:540:331:12:g_d0_f2:12:g_d0_f2:B:In the text we derived the pricing formulae for exacta bets explicitly; this appendix extends that
+25:824:49212:14:15:72:540:317:12:g_d0_f2:12:g_d0_f2:B:analysis to also include the pricing of quinella and trifecta bets.  The derivations of these pricing
+25:825:49313:15:26:72:453:302:12:g_d0_f2:12:g_d0_f2:B:formulae depend on the following two formulae originally derived in Section 3:
+25:826:49391:26:20:72:160:276:12:g_d0_f1:12:g_d0_f1:C:Risk-Love Model
+25:827:49406:20:32:72:243:256:12:g_d0_f2:12:g_d0_f2:B:(Risk-lover, Unbiased expectations)
+25:828:49441:32:0:154:193:224:12:g_d0_f3:12:g_d0_f7:C:U(O) =
+25:829:49447:0:16:197:203:232:12:g_d0_f2:12:g_d0_f2:?:1
+25:830:49448:16:0:197:203:216:12:g_d0_f3:12:g_d0_f3:C:p
+25:831:49449:0:0:268:288:224:12:g_d0_f2:12:g_d0_f2:?:(11)
+25:832:49453:0:20:324:438:275:12:g_d0_f1:12:g_d0_f1:C:Misperceptions Model
+25:833:49473:20:32:324:492:255:12:g_d0_f2:12:g_d0_f2:?:(Biased expectations, Risk-neutral)
+25:834:49508:32:0:398:434:223:12:g_d0_f11:12:g_d0_f7:C:π(p) =
+25:835:49514:0:16:448:454:231:12:g_d0_f2:12:g_d0_f2:?:1
+25:836:49515:16:0:437:464:215:12:g_d0_f3:12:g_d0_f2:?:O+1
+25:837:49518:0:45:520:540:223:12:g_d0_f2:12:g_d0_f2:A:(12)
+25:838:49522:45:15:89:539:178:12:g_d0_f2:12:g_d0_f2:A:As in the text, we derive pricing formulae by imposing that the expected utility of all bets is
+25:839:49617:15:14:71:540:163:12:g_d0_f2:12:g_d0_f2:B:equal.  Consider a horse race which includes horsesA,BandC.  An exacta requires the bettor to
+25:840:49710:14:15:71:539:149:12:g_d0_f2:12:g_d0_f2:B:correctly specify the first two horses, in order. A quinella is a bet on two horses to finish first and
+25:841:49813:15:14:71:539:134:12:g_d0_f2:12:g_d0_f2:B:second, but the bettor need not specify their order.  A quinella bet on horsesAandBgives odds
+25:842:49906:14:14:71:540:120:12:g_d0_f3:12:g_d0_f2:B:QAB. A trifecta is a bet on three horses to finish first, second and third, and the bettor must correctly
+25:843:50011:14:15:71:540:106:12:g_d0_f2:12:g_d0_f2:B:specify their order.  A trifecta bet on horsesA,BandC, in that order, gives oddsTABC.  Thus the
+25:844:50106:15:0:72:432:91:12:g_d0_f2:12:g_d0_f2:B:quinella and trifecta analogues to equations (3) and (4) in the main text are:
+26:845:50186:0:20:72:160:711:12:g_d0_f1:12:g_d0_f1:C:Risk-Love Model
+26:846:50201:20:21:72:243:691:12:g_d0_f2:12:g_d0_f2:B:(Risk-lover, Unbiased expectations)
+26:847:50236:21:26:72:116:670:12:g_d0_f3:12:g_d0_f2:B:Quinella:
+26:848:50245:26:41:119:258:644:12:g_d0_f7:12:g_d0_f2:?:[pApB|A+pBpA|B]U(QAB) =1
+26:849:50269:41:0:87:141:603:12:g_d0_f3:9:g_d0_f2:A:QAB=U−1
+26:850:50276:0:7:143:169:616:12:g_d0_f12:9:g_d0_f3:?:(U(O
+26:851:50280:7:10:169:259:609:7:g_d0_f3:9:g_d0_f7:?:A)U(OB|A)U(OB)U(OA|B)
+26:852:50301:10:0:150:262:599:9:g_d0_f3:9:g_d0_f7:?:U(OA)U(OB|A)+U(OB)U(OA|B)
+26:853:50326:0:13:263:270:616:12:g_d0_f12:12:g_d0_f12:?:)
+26:854:50327:13:24:286:306:603:12:g_d0_f2:12:g_d0_f2:?:(3q)
+26:855:50331:24:26:77:118:579:12:g_d0_f3:12:g_d0_f2:?:Trifecta:
+26:856:50340:26:29:130:248:553:12:g_d0_f3:12:g_d0_f2:?:pApB|ApC|A,BU(TABC) =1
+26:857:50362:29:0:89:142:524:12:g_d0_f3:9:g_d0_f2:A:TABC=U-1
+26:858:50370:0:10:143:148:534:12:g_d0_f12:12:g_d0_f12:?:(
+26:859:50371:10:0:148:265:524:12:g_d0_f3:12:g_d0_f7:C:U(OA)U(OB|A)U(OC|A,B)
+26:860:50392:0:10:265:270:534:12:g_d0_f12:12:g_d0_f12:?:)
+26:861:50393:10:0:288:305:524:12:g_d0_f2:12:g_d0_f2:?:(3t)
+26:862:50397:0:20:308:396:710:12:g_d0_f1:12:g_d0_f1:C:Risk-Love Model
+26:863:50412:20:21:308:479:690:12:g_d0_f2:12:g_d0_f2:?:(Risk-lover, Unbiased expectations)
+26:864:50447:21:26:308:353:669:12:g_d0_f3:12:g_d0_f2:?:Quinella:
+26:865:50456:26:41:316:533:643:12:g_d0_f7:12:g_d0_f2:?:[π(pA)π(pB|A)+π(pB)π(pA|B)](QAB+1) =1
+26:866:50493:41:0:351:382:602:12:g_d0_f3:12:g_d0_f7:C:QAB=
+26:867:50497:0:12:389:494:610:9:g_d0_f7:9:g_d0_f7:?:(OA+1)(OB|A)(OB+1)(OA|B)
+26:868:50521:12:20:386:542:598:9:g_d0_f7:12:g_d0_f2:A:(OA+1)(OB|A)+(OB+1)(OA|B)(4q)
+26:869:50550:20:26:314:354:578:12:g_d0_f3:12:g_d0_f2:?:Trifecta:
+26:870:50559:26:27:335:515:552:12:g_d0_f11:12:g_d0_f2:?:π(pA)π(pB|A)π(pC|A,B)(TABC+1) =1
+26:871:50591:27:37:314:542:525:12:g_d0_f3:12:g_d0_f2:A:TABC= (OA+1)(OB|A+1)(OC|A,B+1)−1  (4t)
+26:872:50629:37:14:89:539:488:12:g_d0_f2:12:g_d0_f2:A:The odds data,OA,OBandOCare directly observable. The utilityU(·)and probability weight-
+26:873:50716:14:14:72:539:474:12:g_d0_f2:12:g_d0_f2:B:ingπ(·)functions that we use are shown in Figure 3.  In order to price these compound bets we
+26:874:50809:14:15:72:362:460:12:g_d0_f2:12:g_d0_f2:B:also need the conditional probabilitiesOB|A,OA|BandOC|A,B.
+26:875:50867:15:14:89:539:445:12:g_d0_f2:12:g_d0_f2:A:As noted in Section 3.3, we provide two approaches to recovering these unobservables.  First,
+26:876:50960:14:15:72:539:431:12:g_d0_f2:12:g_d0_f7:B:we assume conditional independence,  as in Harville (1973).  Thus,pB|A=pB/(1−pA),pA|B=
+26:877:51046:15:14:72:539:416:12:g_d0_f3:12:g_d0_f2:B:pA/(1−pB)andpC|A,B=pC/(1−pA−pB). Our second approach directly estimatespB|A,pA|B, and
+26:878:51131:14:15:72:540:402:12:g_d0_f3:12:g_d0_f2:B:pC|A,Busing Lowess smoothing as described in Cleveland, Devlin, and Grosse (1988). Under both
+26:879:51224:15:14:72:540:387:12:g_d0_f2:12:g_d0_f2:B:the Harville and Lowess approach these probability estimates and (11) and (12) are used to recover
+26:880:51322:14:0:72:261:373:12:g_d0_f2:12:g_d0_f2:B:the relevant oddsOB|A,OA|BandOC|A,B.
+27:881:51360:0:27:72:152:708:17:g_d0_f1:17:g_d0_f1:C:References
+27:882:51370:27:15:72:539:681:12:g_d0_f2:12:g_d0_f2:B:Acz ́el, J. 1966.Lectures on Functional Equations and their Applications.  New York:  Academic
+27:883:51464:15:24:83:111:666:12:g_d0_f2:12:g_d0_f2:A:Press.
+27:884:51470:24:15:72:540:642:12:g_d0_f2:12:g_d0_f3:B:Ali, Mukhtar M. 1977.  “Probability and Utility Estimates for Racetrack Bettors.”The Journal of
+27:885:51565:15:24:83:251:627:12:g_d0_f3:12:g_d0_f2:A:Political Economy85 (4):803–815.
+27:886:51597:24:14:71:539:603:12:g_d0_f2:12:g_d0_f3:B:———.  1979.“Some  Evidence  of  the  Efficiency  of  a  Speculative  Market.”Econometrica
+27:887:51686:14:25:83:160:589:12:g_d0_f2:12:g_d0_f2:A:47 (2):387–392.
+27:888:51701:25:14:71:539:564:12:g_d0_f2:12:g_d0_f2:B:Asch, Peter, Burton G. Malkiel, and Richard E. Quandt. 1982.  “Racetrack Betting and Informed
+27:889:51794:14:25:83:372:550:12:g_d0_f2:12:g_d0_f2:A:Behavior.”Journal of Financial Economics10 (2):187–194.
+27:890:51849:25:14:71:540:525:12:g_d0_f2:12:g_d0_f3:B:Asch, Peter and Richard E. Quandt. 1987. “Efficiency and Profitability in Exotic Bets.”Economica
+27:891:51945:14:25:83:172:511:12:g_d0_f2:12:g_d0_f2:A:54 (215):289–298.
+27:892:51962:25:14:71:540:486:12:g_d0_f2:12:g_d0_f3:B:Busche, Kelly. 1994.  ““Efficient Market Results in an Asian Setting”.”  InEfficiency of Racetrack
+27:893:52060:14:14:83:539:472:12:g_d0_f3:12:g_d0_f2:A:Betting Markets, edited by Donald Hausch, V. Lo, and William T. Ziemba. New York: Academic
+27:894:52150:14:25:83:159:458:12:g_d0_f2:12:g_d0_f2:A:Press, 615–616.
+27:895:52165:25:14:71:539:433:12:g_d0_f2:12:g_d0_f2:B:Busche, Kelly and Christopher D. Hall. 1988.  “An Exception to the Risk Preference Anomaly.”
+27:896:52257:14:25:83:278:419:12:g_d0_f3:12:g_d0_f2:A:The Journal of Business61 (3):337–346.
+27:897:52295:25:14:71:539:394:12:g_d0_f2:12:g_d0_f2:B:Camerer, Colin F. and Teck Hua Ho. 1994. “Violations of the betweenness axiom and nonlinearity
+27:898:52389:14:25:83:387:380:12:g_d0_f2:12:g_d0_f2:A:in probability.”Journal of Risk and Uncertainty8 (2):167–196.
+27:899:52450:25:14:71:539:355:12:g_d0_f2:12:g_d0_f2:B:Cleveland,  William S.,  Susan J. Devlin,  and Eric Grosse. 1988.   “Regression by Local Fitting:
+27:900:52547:14:24:83:538:341:12:g_d0_f2:12:g_d0_f2:A:Methods, Properties, and Computational Algorithms.”Journal of Econometrics37 (1):87–114.
+27:901:52635:24:25:71:536:317:12:g_d0_f2:12:g_d0_f2:B:Conlisk, John. 1993. “The Utility of Gambling.”Journal of Risk and Uncertainty6 (3):255–275.
+27:902:52727:25:14:71:540:292:12:g_d0_f2:12:g_d0_f2:B:Dolbear, F. Trenery. 1993. “Is Racetrack Betting on Exactas Efficient?”Economica60 (237):105–
+27:903:52820:14:25:83:104:278:12:g_d0_f2:12:g_d0_f2:A:111.
+27:904:52824:25:14:71:539:253:12:g_d0_f2:12:g_d0_f2:B:Friedman, Milton and Leonard J. Savage. 1948. “The Utility Analysis of Choices Involving Risk.”
+27:905:52919:14:25:83:324:239:12:g_d0_f3:12:g_d0_f2:A:The Journal of Political Economy56 (4):279–304.
+27:906:52966:25:14:71:539:214:12:g_d0_f2:12:g_d0_f2:B:Gabriel, Paul E. and James R. Marsden. 1990.  “An Examination of Market Efficiency in British
+27:907:53059:14:24:83:422:200:12:g_d0_f2:12:g_d0_f2:A:Racetrack Betting.”The Journal of Political Economy98 (4):874–885.
+27:908:53125:24:15:71:539:176:12:g_d0_f2:12:g_d0_f2:B:Gandhi,  Amit. 2007.   “Rational Expectations at the Racetrack:  Testing Expected Utility Using
+27:909:53220:15:24:83:416:161:12:g_d0_f2:12:g_d0_f2:A:Prediction Market Prices.” University of Wisconsin-Madison,mimeo.
+27:910:53285:24:15:71:539:137:12:g_d0_f2:12:g_d0_f2:B:Golec,  Joseph  and  Maurry  Tamarkin.  1998.   “Bettors  Love  Skewness,  Not  Risk,  at  the  Horse
+27:911:53386:15:24:83:324:122:12:g_d0_f2:12:g_d0_f2:A:Track.”Journal of Political Economy106 (1):205.
+27:912:53433:24:15:71:539:98:12:g_d0_f2:12:g_d0_f3:B:Griffith, R.M. 1949. “Odds Adjustments by American Horse-Race Bettors.”The American Journal
+27:913:53524:15:0:83:230:83:12:g_d0_f3:12:g_d0_f2:A:of Psychology62 (2):290–294.
+28:914:53554:0:15:72:540:708:12:g_d0_f2:12:g_d0_f2:B:Harville, David A. 1973. “Assigning Probabilities to the Outcomes of Multi-Entry Competitions.”
+28:915:53649:15:24:83:401:693:12:g_d0_f3:12:g_d0_f2:A:Journal of the American Statistical Association68 (342):312–316.
+28:916:53713:24:15:71:539:669:12:g_d0_f2:12:g_d0_f2:B:Henery, Robert J. 1985. “On the Average Probability of Losing Bets on Horses with Given Starting
+28:917:53809:15:24:83:515:654:12:g_d0_f2:12:g_d0_f2:A:Price Odds.”Journal of the Royal Statistical Society. Series A (General)148 (4):342–349.
+28:918:53897:24:15:71:539:630:12:g_d0_f2:12:g_d0_f2:B:Hurley,  William and Lawrence McDonough. 1995.   “A Note on the Hayek Hypothesis and the
+28:919:53985:15:14:83:539:615:12:g_d0_f2:12:g_d0_f2:A:Favorite-Longshot Bias in Parimutuel Betting.”The American Economic Review85 (4):949–
+28:920:54070:14:24:83:104:601:12:g_d0_f2:12:g_d0_f2:A:955.
+28:921:54074:24:15:71:540:577:12:g_d0_f2:12:g_d0_f2:B:Jullien,  Bruno  and  Bernard  Salani ́e.  2000.   “Estimating  Preferences  Under  Risk:  The  Case  of
+28:922:54178:15:24:83:382:562:12:g_d0_f2:12:g_d0_f2:A:Racetrack Bettors.”Journal of Political Economy108 (3):503.
+28:923:54237:24:15:71:539:538:12:g_d0_f2:12:g_d0_f2:B:Kahneman, Daniel and Amos Tversky. 1979.  “Prospect Theory:  An Analysis of Decision under
+28:924:54327:15:24:83:264:523:12:g_d0_f2:12:g_d0_f2:A:Risk.”Econometrica47 (2):263–292.
+28:925:54360:24:15:71:539:499:12:g_d0_f2:12:g_d0_f2:B:Levitt,  Steven D. 2004.   “Why are Gambling Markets Organised so Differently from Financial
+28:926:54452:15:24:83:345:484:12:g_d0_f2:12:g_d0_f2:A:Markets?”The Economic Journal114 (495):223–246.
+28:927:54499:24:14:71:540:460:12:g_d0_f2:12:g_d0_f3:B:Manski, Charles F. 2006. “Interpreting the Predictions of Prediction Markets.”Economics Letters
+28:928:54594:14:25:83:160:446:12:g_d0_f2:12:g_d0_f2:A:91 (3):425–429.
+28:929:54609:25:14:71:540:421:12:g_d0_f2:12:g_d0_f3:B:McGlothlin, William H. 1956. “Stability of Choices among Uncertain Alternatives.”The American
+28:930:54702:14:25:83:270:407:12:g_d0_f3:12:g_d0_f2:A:Journal of Psychology69 (4):604–615.
+28:931:54738:25:14:71:539:382:12:g_d0_f2:12:g_d0_f2:B:Ottaviani,  Marco  and  Peter  Norman  Sørenson.  2009.    “Noise,  Information,  and  the  Favorite-
+28:932:54839:14:15:83:540:368:12:g_d0_f2:12:g_d0_f3:A:Longshot Bias in Parimutuel Predictions.”American Economic Journal: Microeconomics forth-
+28:933:54928:15:24:83:121:353:12:g_d0_f3:12:g_d0_f2:A:coming.
+28:934:54935:24:24:71:516:329:12:g_d0_f2:12:g_d0_f2:B:Prelec, Drazen. 1998. “The Probability Weighting Function.”Econometrica66 (3):497–527.
+28:935:55021:24:15:71:540:305:12:g_d0_f2:12:g_d0_f3:B:Quandt,  Richard  E.  1986.    “Betting  and  Equilibrium.”The  Quarterly  Journal  of  Economics
+28:936:55118:15:24:83:166:290:12:g_d0_f2:12:g_d0_f2:A:101 (1):201–208.
+28:937:55134:24:15:71:540:266:12:g_d0_f2:12:g_d0_f3:B:Rosett,  Richard  N.  1965.“Gambling  and  Rationality.”The  Journal  of  Political  Economy
+28:938:55226:15:24:83:160:251:12:g_d0_f2:12:g_d0_f2:A:73 (6):595–607.
+28:939:55241:24:15:71:539:227:12:g_d0_f2:12:g_d0_f3:B:Samuelson,  Paul A. 1952.   “Probability,  Utility,  and the Independence Axiom.”Econometrica
+28:940:55334:15:24:83:160:212:12:g_d0_f2:12:g_d0_f2:A:20 (4):670–678.
+28:941:55349:24:14:71:539:188:12:g_d0_f2:12:g_d0_f3:B:Sauer, Raymond D. 1998. “The Economics of Wagering Markets.”Journal of Economic Literature
+28:942:55439:14:25:83:172:174:12:g_d0_f2:12:g_d0_f2:A:36 (4):2021–2064.
+28:943:55456:25:14:71:540:149:12:g_d0_f2:12:g_d0_f2:B:Segal, Uzi. 1990. “Two-Stage Lotteries without the Reduction Axiom.”Econometrica58 (2):349–
+28:944:55547:14:25:83:104:135:12:g_d0_f2:12:g_d0_f2:A:377.
+28:945:55551:25:14:71:540:110:12:g_d0_f2:12:g_d0_f2:B:Shin,  Hyun  Song.  1992.“Prices  of  State  Contingent  Claims  with  Insider  Traders,  and  the
+28:946:55649:14:0:83:420:96:12:g_d0_f2:12:g_d0_f2:A:Favourite-Longshot Bias.”The Economic Journal102 (411):426–435.
+29:947:55714:0:15:72:540:708:12:g_d0_f2:12:g_d0_f2:B:Snowberg, Erik and Justin Wolfers. 2007. ““The Favorite-Longshot Bias: Understanding a Market
+29:948:55807:15:14:83:540:693:12:g_d0_f2:12:g_d0_f2:A:Anomaly”.” InEfficiency of Sports and Lottery Markets, edited by Donald Hausch and William
+29:949:55897:14:25:83:312:679:12:g_d0_f2:12:g_d0_f2:A:Ziemba. Elsevier: Handbooks in Finance series.
+29:950:55943:25:14:72:540:654:12:g_d0_f2:12:g_d0_f2:B:Thaler, Richard H. and William T. Ziemba. 1988. “Anomalies: Parimutuel Betting Markets: Race-
+29:951:56036:14:25:83:446:640:12:g_d0_f2:12:g_d0_f2:A:tracks and Lotteries.”The Journal of Economic Perspectives2 (2):161–174.
+29:952:56108:25:14:72:539:615:12:g_d0_f2:12:g_d0_f3:B:Weitzman, Martin. 1965.  “Utility Analysis and Group Behavior: An Empirical Study.”The Jour-
+29:953:56200:14:24:83:269:601:12:g_d0_f3:12:g_d0_f2:A:nal of Political Economy73 (1):18–26.
+29:954:56237:24:15:72:540:577:12:g_d0_f2:12:g_d0_f2:B:Williams, Leighton Vaughn and David Paton. 1997.  “Why is There a Favourite-Longshot Bias in
+29:955:56329:15:0:83:469:562:12:g_d0_f2:12:g_d0_f2:A:British Racetrack Betting Markets?”The Economic Journal107 (440):150–158.

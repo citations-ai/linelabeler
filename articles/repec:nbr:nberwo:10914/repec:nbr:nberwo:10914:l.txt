@@ -1,0 +1,1141 @@
+1:0:0:0:99:218:394:708:12:g_d0_f1:12:g_d0_f1:C:NBER WORKING PAPER SERIES
+1:1:25:99:14:232:380:609:12:g_d0_f1:12:g_d0_f1:C:PREDICTING VOLATILITY:
+1:2:47:14:14:182:429:595:12:g_d0_f1:12:g_d0_f1:C:GETTING THE MOST OUT OF RETURN DATA
+1:3:82:14:29:193:419:581:12:g_d0_f1:12:g_d0_f1:C:SAMPLED AT DIFFERENT FREQUENCIES
+1:4:114:29:14:275:336:552:12:g_d0_f1:12:g_d0_f1:C:Eric Ghysels
+1:5:126:14:14:262:350:538:12:g_d0_f1:12:g_d0_f1:C:Pedro Santa-Clara
+1:6:143:14:28:263:347:524:12:g_d0_f1:12:g_d0_f1:C:Rossen Valkanov
+1:7:158:28:15:253:358:496:12:g_d0_f1:12:g_d0_f1:C:Working Paper 10914
+1:8:176:15:42:218:392:481:12:g_d0_f1:12:g_d0_f1:C:http://www.nber.org/papers/w10914
+1:9:209:42:14:173:437:439:12:g_d0_f1:12:g_d0_f1:A:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:10:245:14:14:237:373:425:12:g_d0_f1:12:g_d0_f1:C:1050 Massachusetts Avenue
+1:11:270:14:15:250:361:411:12:g_d0_f1:12:g_d0_f1:C:Cambridge, MA 02138
+1:12:289:15:140:267:345:396:12:g_d0_f1:12:g_d0_f1:C:November 2004
+1:13:302:140:13:71:539:256:11:g_d0_f1:11:g_d0_f1:F:We  thank  Arthur  Sinko  for  outstanding  research  assistance  and  two  anonymous  referees  for  extremely
+1:14:413:13:13:71:539:243:11:g_d0_f1:11:g_d0_f1:F:helpful suggestions. We are grateful to Torben Andersen, Tim Bollerslev, Mike Chernov, Rob Engle, David
+1:15:516:13:13:71:536:230:11:g_d0_f1:11:g_d0_f1:F:Hendry, Nour Meddahi, Alberto Plazzi, Eric Renault, Neil Shephard, Jonathan Wright as well as seminar
+1:16:617:13:13:71:539:217:11:g_d0_f1:11:g_d0_f1:F:participants at City University of Hong Kong, Emory University, the Federal Reserve Board, ITAM, Korea
+1:17:719:13:13:71:537:204:11:g_d0_f1:11:g_d0_f1:F:University, New York University, Oxford University, Tsinghua University, University of Iowa, UNC and
+1:18:819:13:13:71:539:191:11:g_d0_f1:11:g_d0_f1:F:USC as well as participants at the Symposium on New Frontiers in Financial Volatility Modelling, Florence,
+1:19:925:13:13:71:539:178:11:g_d0_f1:11:g_d0_f1:F:the Academia Sinica Conference on Analysis of High-Frequency Financial Data and Market Microstructure,
+1:20:1027:13:13:71:539:165:11:g_d0_f1:11:g_d0_f1:F:Taipei, the CIREQ-CIRANO-MITACS conference on Financial Econometrics, Montreal and the Research
+1:21:1122:13:13:71:539:152:11:g_d0_f1:11:g_d0_f1:F:Triangle Conference, for helpful comments. All remaining errors are our own.  The  views expressed herein
+1:22:1227:13:13:71:539:139:11:g_d0_f1:11:g_d0_f1:F:are  those  of  the  authors  and  do  not  necessarily  reflect  the  views  of  the  National  Bureau  of  Economic
+1:23:1344:13:13:71:117:126:11:g_d0_f1:11:g_d0_f1:F:Research. 
+1:24:1354:13:13:71:74:113:11:g_d0_f1:11:g_d0_f1:F: 
+1:25:1354:13:13:71:539:100:11:g_d0_f1:11:g_d0_f1:F:© 2004 by Eric Ghysels, Pedro Santa-Clara, and Rossen Valkanov.  All rights reserved. Short sections of
+1:26:1457:13:13:71:539:87:11:g_d0_f1:11:g_d0_f1:F:text, not to exceed two  paragraphs, may be quoted without explicit permission provided that full credit,
+1:27:1562:13:0:71:262:74:11:g_d0_f1:11:g_d0_f1:F:including © notice, is given to the source.  
+2:28:1607:0:14:71:510:708:12:g_d0_f1:12:g_d0_f1:C:Predicting Volatility: Getting the Mos out of Return Data Sampled at Different Frequencies
+2:29:1697:14:14:71:336:694:12:g_d0_f1:12:g_d0_f1:C:Eric Ghysels, Pedro Santa-Clara, and Rossen Valkanov
+2:30:1749:14:14:71:232:680:12:g_d0_f1:12:g_d0_f1:C:NBER Working Paper No. 10914
+2:31:1777:14:14:71:149:666:12:g_d0_f1:12:g_d0_f1:C:November 2004
+2:32:1790:14:29:71:128:652:12:g_d0_f1:12:g_d0_f1:C:JEL No. G1
+2:33:1800:29:36:273:338:623:12:g_d0_f2:12:g_d0_f2:?:ABSTRACT
+2:34:1808:36:21:71:539:587:12:g_d0_f1:12:g_d0_f1:F:We consider various MIDAS (Mixed Data Sampling) regression models to predict volatility. The
+2:35:1900:21:22:71:539:566:12:g_d0_f1:12:g_d0_f1:F:models differ in the specification of regressors (squared returns, absolute returns, realized volatility,
+2:36:2005:22:21:71:539:544:12:g_d0_f1:12:g_d0_f1:F:realized power, and return ranges), in the use of daily or intra-daily (5-minute) data, and in the length
+2:37:2110:21:22:71:539:523:12:g_d0_f1:12:g_d0_f1:F:of the past history included in the forecasts. The MIDAS framework allows us to compare models
+2:38:2204:22:24:71:539:501:12:g_d0_f1:12:g_d0_f1:F:across all these dimensions in a very tightly parameterized fashion. Using equity return data, we find
+2:39:2306:24:25:71:539:477:12:g_d0_f1:12:g_d0_f1:F:that  daily  realized  power  (involving  5-minute  absolute  returns)  is  the  best  predictor  of  future
+2:40:2414:25:26:71:539:452:12:g_d0_f1:12:g_d0_f1:F:volatility (measured by increments in quadratic variation) and outperforms model based on realized
+2:41:2512:26:25:71:539:426:12:g_d0_f1:12:g_d0_f1:F:volatility (i.e. past increments in quadratic variation). Surprisingly, the direct use of high-frequency
+2:42:2616:25:25:71:539:401:12:g_d0_f1:12:g_d0_f1:F:(5-minute) data does not improve volatility predictions. Finally, daily lags of one to two months are
+2:43:2717:25:31:71:523:376:12:g_d0_f1:12:g_d0_f1:C:sucient to capture the persistence in volatility. These findings hold both in- and out-of-sample.
+2:44:2814:31:14:71:132:345:12:g_d0_f1:12:g_d0_f1:C:Eric Ghysels
+2:45:2826:14:14:71:271:331:12:g_d0_f1:12:g_d0_f1:C:University of North Carolina, Chapel Hill
+2:46:2867:14:14:71:183:317:12:g_d0_f1:12:g_d0_f1:C:Gardner Hall, CB 3305
+2:47:2888:14:15:71:210:303:12:g_d0_f1:12:g_d0_f1:C:Chapel Hill, NC 27599-3305
+2:48:2914:15:28:71:160:288:12:g_d0_f1:12:g_d0_f1:C:eghysels@unc.edu
+2:49:2930:28:14:71:159:260:12:g_d0_f1:12:g_d0_f1:C:Pedro Santa-Clara
+2:50:2947:14:14:71:154:246:12:g_d0_f1:12:g_d0_f1:C:Anderson School
+2:51:2962:14:14:71:103:232:12:g_d0_f1:12:g_d0_f1:C:UCLA
+2:52:2966:14:15:71:235:218:12:g_d0_f1:12:g_d0_f1:C:110 Westwood Plaza, Suite C4.21
+2:53:2997:15:14:71:215:203:12:g_d0_f1:12:g_d0_f1:C:Los Angeles, CA 90095-1481
+2:54:3023:14:14:71:123:189:12:g_d0_f1:12:g_d0_f1:C:and NBER
+2:55:3031:14:28:71:250:175:12:g_d0_f1:12:g_d0_f1:C:pedro.santa-clara@anderson.ucla.edu
+2:56:3066:28:14:71:155:147:12:g_d0_f1:12:g_d0_f1:C:Rossen Valkanov
+2:57:3081:14:14:71:154:133:12:g_d0_f1:12:g_d0_f1:C:Anderson School
+2:58:3096:14:15:71:103:119:12:g_d0_f1:12:g_d0_f1:C:UCLA
+2:59:3100:15:14:71:235:104:12:g_d0_f1:12:g_d0_f1:C:110 Westwood Plaza, Suite C4.21
+2:60:3131:14:14:71:215:90:12:g_d0_f1:12:g_d0_f1:C:Los Angeles, CA 90095-1481
+2:61:3157:14:0:71:246:76:12:g_d0_f1:12:g_d0_f1:C:rossen.valkanov@anderson.ucla.edu
+3:62:3190:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:Theconditionalvolatility literature,startingwithEngle's(1982)ARCH-classof models,
+3:63:3271:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:hasbeensuccessfulat capturingthedynamicsof returnvarianceusingsimpleparametric
+3:64:3349:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:models.A measureof thatsuccessis thewidespreaduseof such modelsin allareasof
+3:65:3425:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:\fnanceby academicsandpractitionersalike.  Andwhilemostresearcherswouldagreethat
+3:66:3505:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:it is important to have a good predictionmodelof conditionalvolatility, thequestionof what
+3:67:3595:18:25:72:225:581:12:g_d0_f3:12:g_d0_f3:B:modelto useis stillunsettled.
+3:68:3624:25:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:Whenit comesto forecastingvolatility, therearemany existingmodelsin additionto the
+3:69:3706:18:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:benchmarkARCH/GARCHmodelsof Engle(1982)andBollerslev(1986)which castfuture
+3:70:3780:18:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:varianceasa polynomialof pastsquaredreturns,i.e.,^-2t+1jt-A(L)r2t.  Onealternative
+3:71:3862:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:is to lookforvariables,otherthansquaredreturns,thatrelateto futurevolatility.  Ding
+3:72:3945:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:et al.(1993)andseveralothersshow thatlow-frequencycomponents of volatility might be
+3:73:4028:18:18:72:540:466:12:g_d0_f3:12:g_d0_f3:B:bettercapturedby absolutereturnsinsteadof squaredreturns.Also,Alizadehet al.(2002)
+3:74:4110:18:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:andGallant et al.(1999)\fnddailyranges(high-low priceranges)to be good predictorsof
+3:75:4193:18:17:72:539:430:12:g_d0_f3:12:g_d0_f3:B:volatility.  Anotherrapidlygrowingresearch areafocusesondata-drivenmodelsof realized
+3:76:4277:17:18:72:539:413:12:g_d0_f3:12:g_d0_f3:B:volatility computedfromintra-dailyreturnssampledat veryshortintervalssuch as 5 minutes
+3:77:4363:18:18:72:539:395:12:g_d0_f3:12:g_d0_f3:B:(AndersenandBollerslev(1998)).1Allthesemodelssuggesta variety of possibleways to
+3:78:4443:18:18:72:539:377:12:g_d0_f3:12:g_d0_f3:B:forecastvolatility. Hence,it seemsnaturalto askwhethersomeof thesuggestedpredictors
+3:79:4526:18:18:72:539:359:12:g_d0_f3:12:g_d0_f3:B:areclearlydominatedby othersandwhethertherearerealbene\ftsfromusinghigh-frequency
+3:80:4607:18:18:72:539:341:12:g_d0_f3:12:g_d0_f3:B:data.2Thesequestionshave proven di-cultto answer becausethemodelsconsideredareso
+3:81:4687:18:18:72:539:323:12:g_d0_f3:12:g_d0_f3:B:di-erent in termsof regressors,frequencies,parameterizations,andreturnhistories,thatis
+3:82:4773:18:25:72:259:305:12:g_d0_f3:12:g_d0_f3:B:it di-cultto directlycomparethem.
+3:83:4806:25:18:72:539:280:12:g_d0_f3:12:g_d0_f3:B:We useMixedDataSampling(henceforthMIDAS)regressionmodelsintroducedin Ghysels,
+3:84:4883:18:18:72:539:262:12:g_d0_f3:12:g_d0_f3:B:Santa-ClaraandValkanov  (2002a,b)toprovideanswerstothesequestions.MIDAS
+3:85:4954:18:18:72:539:244:12:g_d0_f3:12:g_d0_f3:B:regressionsallow usto runparsimoniouslyparameterizedregressionsof dataobservedat
+3:86:5034:18:18:72:539:226:12:g_d0_f3:12:g_d0_f3:B:di-erent frequencies.Thereareseveraladvantagesof usingmixeddatasamplingregressions.
+3:87:5117:18:18:72:539:208:12:g_d0_f3:12:g_d0_f3:B:Theyallow us to study, in a uni\fedframework,theforecastingperformanceof a largeclass
+3:88:5202:18:18:72:539:190:12:g_d0_f3:12:g_d0_f3:B:of volatility modelswhich involve:(i)datasampledatdi-erent frequencies;(ii)various
+3:89:5284:18:18:72:539:172:12:g_d0_f3:12:g_d0_f3:B:pastdatawindow lengths;and(iii)di-erent regressors.Thespeci\fcationof theregressions
+3:90:5368:18:16:85:539:154:7:g_d0_f9:10:g_d0_f10:F:1Also,seeAndersenetal.(2001,2002,2003),AndreouandGhysels(2002),Barndor--Nielsenand
+3:91:5450:16:8:72:381:138:10:g_d0_f10:10:g_d0_f10:F:Shephard(2001,2002a,b,2003a),TaylorandXu(1997),amongothers.
+3:92:5509:8:16:85:539:130:7:g_d0_f9:10:g_d0_f10:F:2High-frequencydataalsosu-erfrommicrostructureartifacts,such as bid-askbounce(Roll,1984),screen
+3:93:5604:16:12:72:539:114:10:g_d0_f10:10:g_d0_f10:F:\fghting,jumps,andirregularor missingdata,allof which canleadto biasesin thevolatility estimates.The
+3:94:5704:12:12:72:539:102:10:g_d0_f10:10:g_d0_f10:F:impactof microstructurenoiseonrealizedvariancehasbeenrecentlystudiedby A-t-Sahalia,Myklandand
+3:95:5798:12:12:72:540:90:10:g_d0_f10:10:g_d0_f10:F:Zhang(2003),HansenandLunde(2004),BandiandRussell(2003),Zhang,MyklandandA-t-Sahalia(2003),
+3:96:5888:12:0:72:133:78:10:g_d0_f10:10:g_d0_f10:F:amongothers.
+4:97:5901:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:combinerecent developments regardingestimationof volatility anda notso recent literature
+4:98:5989:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:ondistributedlagmodels.3We focusonpredictingfutureconditionalvariance,measuredas
+4:99:6069:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:increments in quadraticvariation(oritslogtransformation)fromoneweekto onemonth
+4:100:6147:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:horizons,becausethesearethehorizonsthataremostwidelyusedforoptionpricing,
+4:101:6220:18:25:72:321:599:12:g_d0_f3:12:g_d0_f3:B:portfoliomanagement, andhedgingapplications.
+4:102:6264:25:18:72:539:574:12:g_d0_f3:12:g_d0_f3:B:First,we useMIDASregressionsto examinewhetherfuturevolatility is wellpredictedby
+4:103:6344:18:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:pastdailysquaredreturns,absolutedailyreturns,realizeddailyvolatility, realizeddaily
+4:104:6427:18:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:power (sumof intra-dailyabsolutereturns,a measureproposedby Barndor--Nielsenand
+4:105:6506:18:18:72:538:520:12:g_d0_f3:12:g_d0_f3:B:Shephard(2003b,2004)andWoerner(2002)),anddailyrange.Sinceallof theregressors
+4:106:6582:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:areusedwithina frameworkwiththesamenumber of parametersandthesamemaximum
+4:107:6654:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:number of lags,theresultsfromMIDASregressionsaredirectlycomparable.Hence,the
+4:108:6730:18:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:MIDASsetupallowsus to determineif oneof theregressorsdominatesothers.We \fndthat,
+4:109:6811:18:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:fortheDow JonesIndexandsixindividualstock returnseries,therealizedpower clearly
+4:110:6890:18:17:72:539:430:12:g_d0_f3:12:g_d0_f3:B:dominatesallotherdailypredictorsof volatility at allhorizons.Importantly, thepredictive
+4:111:6977:17:18:72:539:413:12:g_d0_f3:12:g_d0_f3:B:content of therealizedpower is evident notonlyfromin-samplegoodnessof \ftmeasures,
+4:112:7059:18:18:72:539:395:12:g_d0_f3:12:g_d0_f3:B:butalsofromout-of-sampleforecasts.Thedailyrangeis alsoa good predictorin thesense
+4:113:7140:18:18:72:539:377:12:g_d0_f3:12:g_d0_f3:B:thatit dominatessquaredandabsolutedailyreturns.Ourmethod is a signi\fcant departure
+4:114:7223:18:18:72:539:359:12:g_d0_f3:12:g_d0_f3:B:fromtheusualautoregressive modelbuildingapproach embeddedin theARCHliterature
+4:115:7300:18:18:72:539:341:12:g_d0_f3:12:g_d0_f3:B:anditsrecent extensionssuch as high-frequencydata-basedapproaches.A comparisonof
+4:116:7380:18:18:72:539:323:12:g_d0_f3:12:g_d0_f3:B:theMIDASregressionswithpurelyautoregressive volatility modelsrevealsthattheMIDAS
+4:117:7460:18:25:72:487:305:12:g_d0_f3:12:g_d0_f3:B:forecastsarebetterat forecastingfuturerealizedvolatility in-andout-of-sample.
+4:118:7537:25:18:72:539:280:12:g_d0_f3:12:g_d0_f3:B:Second,theweights  in theMIDASregressionsareparameterizedby a \rexiblefunction.
+4:119:7616:18:18:72:539:262:12:g_d0_f3:12:g_d0_f3:B:Obviously, thechoiceof regressorsis as important as is thepro\fleof weights placedon them.
+4:120:7706:18:18:72:539:244:12:g_d0_f3:12:g_d0_f3:B:In ourMIDASframework,theshape of theweight functionis determinedby two parameters
+4:121:7787:18:18:72:539:226:12:g_d0_f3:12:g_d0_f3:B:thatareestimatedfromthedata.Hence,theweight pro\fleonthelaggedpredictorsis
+4:122:7861:18:18:72:539:208:12:g_d0_f3:12:g_d0_f3:B:capturedby theshape of thefunction,whoseparametersareestimatedfromthedatawith
+4:123:7938:18:18:72:539:190:12:g_d0_f3:12:g_d0_f3:B:noadditionalpre-testingor lag-selectionprocedures.We \fndthatdailylagslongerthan
+4:124:8018:18:25:72:463:172:12:g_d0_f3:12:g_d0_f3:B:about50 days donothelp(norhurt)theforecasts,forany of theregressors.
+4:125:8086:25:18:72:539:147:12:g_d0_f3:12:g_d0_f3:B:Third,mixeddataregressionsallow ustodirectlyprojectfuturerealizedvolatility onto
+4:126:8166:18:18:72:539:129:12:g_d0_f3:12:g_d0_f3:B:high-frequency(say 5-minute)squaredandabsolutereturnswithoutdailypre-\flteringand
+4:127:8247:18:16:85:539:111:7:g_d0_f9:10:g_d0_f10:F:3Seee.g.Dhrymes(1971)andSims(1974)forsurveysondistributedlagmodels.Many econometrics
+4:128:8331:16:12:71:539:95:10:g_d0_f10:10:g_d0_f10:F:textbooksalsocover thetopic,seee.g.Greene(2000,chap.17),Judgeet al.(1985,chap.9 - 10),Stock and
+4:129:8426:12:0:72:371:83:10:g_d0_f10:10:g_d0_f10:F:Watson(2003,chap.13)Wooldridge(2000,chap.18),amongothers.
+5:130:8484:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:withoutincreasingthenumber of parameters.Hence,we areableto analyzeif therearereal
+5:131:8566:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:bene\ftsfromdirectlyusinghigh-frequencydatain volatility forecasting.Surprisingly, we
+5:132:8651:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:\fndthatforecastsusinghigh-frequencydatadirectlydonotoutperformthosethatusedaily
+5:133:8731:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:regressors(althoughthedailyregressorsarethemselves obtainedthroughtheaggregationof
+5:134:8813:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:high-frequencydata).It mustbe notedthatnoneof theseresultsaredrivenby over-\ftting
+5:135:8895:18:18:72:539:581:12:g_d0_f3:12:g_d0_f3:B:or parameterproliferation.Indeed,allMIDASspeci\fcations{ dailyand5-minutes{ are
+5:136:8974:18:25:72:493:563:12:g_d0_f3:12:g_d0_f3:B:directlycomparablesincetheyallhave thesamenumber of estimatedparameters.
+5:137:9046:25:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:In summary, we \fndthatdailyrealizedpower is thebestpredictorof futureincrements in
+5:138:9129:18:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:quadraticvariation,followedby thedailyrange.Thepredictionequationsinvolve about
+5:139:9208:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:50dailylagsandthereis norealbene\ftof usingintra-dailydatadirectly.  TheseMIDAS
+5:140:9287:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:regressionsalsooutperformotherlinearforecastmodelsinvolvingdailyrealizedvolatility.
+5:141:9370:18:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:Finally, allof theabove resultsholdin-andout-of-sample.Theout-of-sampleforecasting
+5:142:9452:18:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:precision,which is perhapstheultimatemeasureof a model'sforecastingpotential,indicates
+5:143:9538:18:25:72:437:430:12:g_d0_f3:12:g_d0_f3:B:thatourresultsareunlikelyto be dueto samplingerroror over-\ftting.
+5:144:9604:25:18:72:539:405:12:g_d0_f3:12:g_d0_f3:B:TheMIDASregressionscanalsobe usedto modelasymmetriesandthejoint forecasting
+5:145:9679:18:18:72:539:387:12:g_d0_f3:12:g_d0_f3:B:power of theregressors.In fact,EngleandGallo(2003)usethemultiplicative errormodel
+5:146:9760:18:18:72:539:369:12:g_d0_f3:12:g_d0_f3:B:(MEM)of Engle(2002)and\fndimprovements in forecastingvolatility fromthejoint use
+5:147:9840:18:17:72:539:351:12:g_d0_f3:12:g_d0_f3:B:of absolutereturns,dailyranges,andrealizedvolatilitiesusingS&P500indexreturnsdata.
+5:148:9922:17:18:72:539:334:12:g_d0_f3:12:g_d0_f3:B:Interestinglyenough,theirresultsagreewithours,despitethedi-erent datasetanddi-erent
+5:149:10005:18:18:72:539:316:12:g_d0_f3:12:g_d0_f3:B:method, as theyarguethatrange-basedmeasuresin particularprovidea verygood forecast
+5:150:10087:18:25:72:167:298:12:g_d0_f3:12:g_d0_f3:B:of futurevolatility.
+5:151:10107:25:18:72:539:273:12:g_d0_f3:12:g_d0_f3:B:Thepaper is structuredasfollows.Ina \frstsectionwe introduceanddiscussMIDAS
+5:152:10182:18:18:72:539:255:12:g_d0_f3:12:g_d0_f3:B:volatility models.Insectiontwo,  we usedailyregressorstoforecastweeklytomonthly
+5:153:10261:18:18:72:539:237:12:g_d0_f3:12:g_d0_f3:B:volatility  intheMIDASframework.Thethirdsectionis  devotedtoMIDASvolatility
+5:154:10336:18:53:72:375:219:12:g_d0_f3:12:g_d0_f3:B:forecastsinvolvingintra-dailydata.Sectionfourconcludes.
+5:155:10391:53:37:72:445:166:17:g_d0_f11:17:g_d0_f11:C:1MIDASModelsof ConditionalVolatility
+5:156:10427:37:18:72:539:129:12:g_d0_f3:12:g_d0_f3:B:To \fxnotation,letdailyreturnsbe denotedbyrt;t-1=log(Pt)-log(Pt-1):Throughoutthe
+5:157:10507:18:17:72:539:111:12:g_d0_f3:12:g_d0_f3:B:paper thetimeindextwillreferto dailysampling.Whenthedatais sampledat a higher
+5:158:10584:17:18:72:539:94:12:g_d0_f3:12:g_d0_f3:B:frequency, say,m-timesin a day, we willdenotethereturnover thisinterval asrt;t-1=m=
+5:159:10667:18:0:72:539:76:12:g_d0_f3:12:g_d0_f3:B:log(Pt)-log(Pt-1=m):For instance,in ourstudy, returnsaresampledevery\fve minutes
+6:160:10748:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:betweenthetradinghoursof 9:30amand4:05pm(correspondingto 80 \fve-minuteintervals
+6:161:10828:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:withina tradingday),andwe willwritert;t-1=80= log(Pt)-log(Pt-1=80);which corresponds
+6:162:10912:18:25:72:276:635:12:g_d0_f3:12:g_d0_f4:B:to thelast5-minutereturnof dayt-1:
+6:163:10946:25:18:72:539:610:12:g_d0_f3:12:g_d0_f3:B:Ourgoalis to predicta measureof volatility over somefuturehorizonH,Vt+H;t. Asa primary
+6:164:11032:18:18:72:539:592:12:g_d0_f3:12:g_d0_f3:B:measureof volatility fortheperiodttot+H, we considertheincrements in thequadratic
+6:165:11113:18:18:72:540:574:12:g_d0_f3:12:g_d0_f3:B:variationof thereturnprocessQt+H;t. We focusonpredictingfuturerealizedvolatility from
+6:166:11198:18:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:oneweek(H= 5) to onemonth (H= 20)horizon.Thesearehorizonsthatmattermostly
+6:167:11271:18:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:foroptionpricingandportfoliomanagement.  Focusingonpredictingfutureincrements of
+6:168:11351:18:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:quadraticvariationalsoallowsus to make ouranalysisdirectlycomparablewitha largebody
+6:169:11434:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:of existingliterature.Thequadraticvariationis notobserveddirectlybutcanbe measured
+6:170:11516:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:withsomediscretizationerror.Onesuch measurewouldbe thesumof (future)squared
+6:171:11591:18:0:72:153:466:12:g_d0_f3:12:g_d0_f3:B:returns,namely
+6:172:11605:0:12:156:184:475:12:g_d0_f12:8:g_d0_f6:?:PHm
+6:173:11608:12:0:169:326:463:8:g_d0_f6:12:g_d0_f3:A:j=1[r(t+H)-(j-1)=m;(t+H)-(j-2)=m]
+6:174:11641:0:8:326:497:471:8:g_d0_f5:8:g_d0_f5:?:2;which we willdenoteby~Q(Hm)
+6:175:11670:8:15:476:540:463:8:g_d0_f6:12:g_d0_f3:A:t+H;tsinceit
+6:176:11682:15:18:72:538:448:12:g_d0_f3:12:g_d0_f3:B:involves a discretizationbasedonHmintra-dailyreturns.Thesuperscriptin parentheses
+6:177:11763:18:25:72:454:430:12:g_d0_f3:12:g_d0_f3:B:indicatesthenumber of high-frequencydatausedto computethevariable.
+6:178:11829:25:0:72:389:405:12:g_d0_f3:12:g_d0_f3:B:Besidesincrements in quadraticvariation,we alsoconsiderlog
+6:179:11887:0:11:392:399:419:12:g_d0_f12:12:g_d0_f12:?:-
+6:180:11888:11:0:402:430:408:12:g_d0_f3:8:g_d0_f6:A:~Q(Hm)t+H;t
+6:181:11899:0:14:431:438:419:12:g_d0_f12:12:g_d0_f12:?:-
+6:182:11900:14:18:442:539:405:12:g_d0_f3:12:g_d0_f3:A:as a targetvariable
+6:183:11919:18:18:72:539:387:12:g_d0_f3:12:g_d0_f3:B:to forecast.Previouspapers,includingAndersenet al. (2003),have observed thatforecasting
+6:184:12006:18:18:72:539:369:12:g_d0_f3:12:g_d0_f3:B:thelogtransformationyieldsbetterin-andout-of-sampleforecastsof thevarianceas it puts
+6:185:12090:18:46:72:391:351:12:g_d0_f3:8:g_d0_f5:B:lessweight onextremerealizationsof thequadraticvariation.4
+6:186:12148:46:33:72:290:305:14:g_d0_f13:14:g_d0_f13:C:1.1TheMIDASSpeci\fcation
+6:187:12172:33:39:72:349:272:12:g_d0_f3:12:g_d0_f3:B:A dailyMIDASvolatility modelis a regressionmodel:
+6:188:12221:39:0:186:277:233:12:g_d0_f4:8:g_d0_f6:?:V(Hm)t+H;t=-H+-H
+6:189:12237:0:30:280:299:248:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+6:190:12242:30:0:282:298:218:8:g_d0_f6:8:g_d0_f5:?:k=0
+6:191:12245:0:45:302:539:233:12:g_d0_f4:12:g_d0_f3:A:bH(k; -)~X(m)t-k;t-k-1+"Ht(1.1)
+6:192:12276:45:0:72:418:188:12:g_d0_f3:12:g_d0_f3:B:whereV(Hm)t+H;tis a measureof (future)volatility such as~Q(Hm)t+H;tor log
+6:193:12349:0:10:420:427:201:12:g_d0_f12:12:g_d0_f12:?:-
+6:194:12350:10:0:429:458:191:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t
+6:195:12361:0:13:459:466:201:12:g_d0_f12:12:g_d0_f12:?:-
+6:196:12362:13:18:468:540:188:12:g_d0_f4:12:g_d0_f3:A::Speci\fcation
+6:197:12376:18:18:72:539:170:12:g_d0_f3:12:g_d0_f3:B:(1.1)hasthreeimportant featureswhencomparedto othermodelsof conditionalvolatility
+6:198:12457:18:18:72:539:152:12:g_d0_f3:12:g_d0_f3:B:(discussedbelow).First,thevolatility  measureontheleft-handside,V(Hm)t+H;t,  andthe
+6:199:12540:18:18:72:539:134:12:g_d0_f3:12:g_d0_f3:B:variablesontheright-handside,~X(m)t-k;t-k-1,  might  be  sampledatdi-erent  frequencies.
+6:200:12628:18:20:72:539:116:12:g_d0_f3:12:g_d0_f3:B:Second,thepolynomiallagparametersbHareparameterizedto be a functionof-, thereby
+6:201:12707:20:15:85:539:96:7:g_d0_f9:10:g_d0_f10:F:4We alsoconsideredMIDASregressionswith(~Q(Hm)t+H;t)1=2aslefthandsidevariable.Theresultsare
+6:202:12797:15:0:72:521:81:10:g_d0_f10:10:g_d0_f10:F:omittedhereto save space.Theconclusionsconcurwiththosereportedin theempiricalsectionbelow.
+7:203:12888:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:allowingfora longerhistorywithouta proliferationof parameters.Third,MIDASregressions
+7:204:12972:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:typicallydonotexploitan autoregressive scheme,so that~X(m)t-k;t-k-1is notnecessarilyrelated
+7:205:13063:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:to lagsof thelefthandsidevariable.Instead,MIDASregressionsare\frstandforemost
+7:206:13140:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:regressionmodelsandthereforetheselectionof~X(m)t-k;t-k-1amounts to choosingthebest
+7:207:13222:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:predictorof futurequadraticvariationfromthesetof severalpossiblemeasuresof past
+7:208:13301:18:18:72:539:581:12:g_d0_f3:12:g_d0_f3:B:\ructuationsin returns.MIDASregressionscouldpotentiallyinvolve morethanonetype
+7:209:13379:18:18:72:539:563:12:g_d0_f3:12:g_d0_f3:B:of regressors,seeGhyselset al.(2004)forfurtherdiscussion.MIDASregressionmodels
+7:210:13457:18:18:72:539:545:12:g_d0_f3:12:g_d0_f3:B:may alsobe nonlinearandindeedsomeof theregressorswe willconsidermay providebetter
+7:211:13538:18:18:72:538:527:12:g_d0_f3:12:g_d0_f3:B:resultswithnonlinearspeci\fcations.For instance,EngleandGallo(2003)provideinteresting
+7:212:13623:18:18:72:540:509:12:g_d0_f3:12:g_d0_f3:B:resultsalongtheselines.For simplicity, in thispaper we consideronlya singleregressorlinear
+7:213:13713:18:46:72:152:491:12:g_d0_f3:12:g_d0_f3:B:MIDASsetting.
+7:214:13726:46:25:72:278:445:14:g_d0_f18:14:g_d0_f18:C:Samplingat Di-erentFrequencies
+7:215:13756:25:18:72:539:420:12:g_d0_f3:12:g_d0_f3:B:In equation(1.1),thevolatility is measuredat weekly, bi-weekly, tri-weekly, andmonthly
+7:216:13842:18:18:72:539:402:12:g_d0_f3:12:g_d0_f3:B:frequency, whereastheforecastingvariables~X(m)t-k;t-k-1areavailableat higherfrequencies.
+7:217:13930:18:18:72:539:384:12:g_d0_f3:12:g_d0_f3:B:For instance,we canusedailydatato computea forecastof nextmonth'svolatility (H= 22).
+7:218:14014:18:18:72:539:366:12:g_d0_f3:12:g_d0_f3:B:In otherwords,thereturnvolatility over themonth of, say, April(fromthecloseof themarket
+7:219:14101:18:18:72:539:348:12:g_d0_f3:12:g_d0_f3:B:duringthelastday of March to thecloseof themarket duringthelastday of April)will
+7:220:14181:18:18:72:539:330:12:g_d0_f3:12:g_d0_f3:B:be forecastedwithdailydataupto thelastday of March. Butwe couldalsousehourlyor
+7:221:14259:18:18:72:539:312:12:g_d0_f3:12:g_d0_f3:B:\fve-minutedatato formmonthlyvolatility forecasts.Thus,ourmodelallowsusnotonly
+7:222:14337:18:18:72:538:294:12:g_d0_f3:12:g_d0_f3:B:to forecastvolatility withdatasampleat di-erent frequencies,butalsoto comparesuch
+7:223:14418:18:18:72:539:276:12:g_d0_f3:12:g_d0_f3:B:forecastsandultimatelyto seewhetherMerton's(1980)well-knowncontinuousasymptotic
+7:224:14497:18:25:72:228:258:12:g_d0_f3:12:g_d0_f3:B:arguments holdupin practice.
+7:225:14525:25:18:72:539:233:12:g_d0_f3:12:g_d0_f3:B:In general,theMIDASframeworkallowsus to investigatewhethertheuseof high-frequency
+7:226:14606:18:18:72:539:215:12:g_d0_f3:12:g_d0_f3:B:datanecessarilyleadsto bettervolatility forecastsat varioushorizons.Theseissueshave
+7:227:14689:18:18:72:539:197:12:g_d0_f3:12:g_d0_f3:B:motivatedmuch of therecent literatureonhigh-frequencydata,seeAndersenet al.(2001,
+7:228:14770:18:18:72:539:179:12:g_d0_f3:12:g_d0_f3:B:2002,2003),AndreouandGhysels(2002),Barndor--NielsenandShephard(2001,2002a,b,
+7:229:14846:18:17:72:539:161:12:g_d0_f3:12:g_d0_f4:B:2003a),amongothers.In somecases,theright-handsidevariablesarecomputedusingm
+7:230:14921:17:18:72:539:144:12:g_d0_f3:12:g_d0_f3:B:high-frequencyreturns,in which casetheyaredenotedby a superscript(m).  For instance,
+7:231:15005:18:18:72:539:126:12:g_d0_f3:12:g_d0_f3:B:if we want to computea monthlyforecastof volatility usinglaggeddailyvolatility estimates
+7:232:15093:18:18:72:539:108:12:g_d0_f3:12:g_d0_f3:B:obtainedfrom\fve-minutedata,mwouldbe equalto 80,thenumber of \fve-minutesin a
+7:233:15170:18:0:72:92:90:12:g_d0_f3:12:g_d0_f3:B:day.
+8:234:15175:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:TheMIDASvolatility  modelsallow  fora  greatdegreeof\rexibility.Forthesake  of
+8:235:15253:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:systematizingtheresults,in thenextsectionwe considerforecastsatweekly,  bi-weekly,
+8:236:15335:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:tri-weekly, andmonthlyfrequencyusingdailydata.In a subsequent section,we willturnto
+8:237:15418:18:47:71:182:617:12:g_d0_f3:12:g_d0_f3:B:intra-dailyregressors.
+8:238:15440:47:25:71:265:570:14:g_d0_f18:14:g_d0_f18:C:Parsimonyof Parameterization
+8:239:15468:25:18:71:540:545:12:g_d0_f3:12:g_d0_f3:B:Anotherdistinguishingfeatureof (1.1)is thatthelagcoe-cientsbH(k; -) (weights)are
+8:240:15548:18:18:71:540:527:12:g_d0_f17:12:g_d0_f3:B:notunrestrictedparameters.Rathertheyareparameterizedas a functionof-, where-is a
+8:241:15628:18:18:71:539:509:12:g_d0_f3:12:g_d0_f3:B:small-dimensionalvector.A \rexibleparameterizationis an important element in theMIDAS
+8:242:15713:18:18:71:539:491:12:g_d0_f3:12:g_d0_f3:B:speci\fcation,as theinclusionof high-frequencydatamight implya signi\fcant increasein the
+8:243:15802:18:18:72:539:473:12:g_d0_f3:12:g_d0_f3:B:number of laggedforecastingvariablesandunrestrictedparametersto estimate.It allowsus
+8:244:15886:18:17:72:539:455:12:g_d0_f3:12:g_d0_f3:B:to dramaticallyreducethenumber of parametersto estimate,which is particularlyrelevant
+8:245:15971:17:18:71:539:438:12:g_d0_f3:12:g_d0_f3:B:in estimatinga persistent process,such as volatility, wheredistant~X(m)t-k;t-k-1arelikelyto
+8:246:16062:18:26:71:258:420:12:g_d0_f3:12:g_d0_f3:B:have animpactoncurrent volatility.
+8:247:16096:26:17:72:539:394:12:g_d0_f3:12:g_d0_f3:B:Evenwithdailyforecastingvariables,theunrestrictedspeci\fcationof theweights resultsin
+8:248:16181:17:18:72:539:377:12:g_d0_f3:12:g_d0_f3:B:a lotof parametersto estimate.Theproblemonlyworsenswithhigher-frequencydata.As
+8:249:16259:18:18:72:539:359:12:g_d0_f3:12:g_d0_f3:B:we willseebelow, a suitableparameterizationbH(k; -) circumvents theproblemof parameter
+8:250:16345:18:18:72:540:341:12:g_d0_f3:12:g_d0_f3:B:proliferationandof choosingthetruncationpointkmax. Hence,theparameterizationbH(k; -)
+8:251:16429:18:25:72:401:323:12:g_d0_f3:12:g_d0_f3:B:is oneof themostimportant ingredients in a MIDASregression.
+8:252:16488:25:18:72:539:298:12:g_d0_f3:12:g_d0_f3:B:TheweightsbH(k;-) arenormalizedto addupto one,which allowsusto estimatea scale
+8:253:16566:18:18:72:539:280:12:g_d0_f3:12:g_d0_f3:B:parameter-H.  Anotherrestrictionthatis veryusefulin thecontextof volatility modelsis
+8:254:16650:18:18:72:539:262:12:g_d0_f3:12:g_d0_f3:B:to insurethattheweightsbH(k;-) be non-negative.Such a conditionguaranteesthatthe
+8:255:16730:18:18:72:539:244:12:g_d0_f3:12:g_d0_f3:B:volatility processitselfis non-negative.5In general,therearemany ways of parameterizing
+8:256:16817:18:18:72:539:226:12:g_d0_f4:12:g_d0_f3:B:bH(k; -):We focusononeparticularspeci\fcationbasedontheBetafunction,which hasonly
+8:257:16898:18:38:72:228:208:12:g_d0_f3:12:g_d0_f3:B:two parameters,or-= [-1;-2]:
+8:258:16926:38:0:225:277:170:12:g_d0_f4:12:g_d0_f3:?:bH(k;-) =
+8:259:16935:0:10:299:368:179:12:g_d0_f4:12:g_d0_f3:A:f(kkmax; -1;-2)
+8:260:16950:10:12:281:313:169:12:g_d0_f12:6:g_d0_f14:?:Pkmax
+8:261:16955:12:0:294:328:157:8:g_d0_f6:12:g_d0_f3:A:j=1f(
+8:262:16960:0:9:337:340:165:8:g_d0_f6:8:g_d0_f6:?:j
+8:263:16961:9:0:329:386:156:8:g_d0_f6:12:g_d0_f3:?:kmax; -1;-2)
+8:264:16973:0:41:515:539:170:12:g_d0_f3:12:g_d0_f3:A:(1.2)
+8:265:16978:41:18:71:539:129:12:g_d0_f3:12:g_d0_f3:B:where:f(z; a; b) =za-1(1-z)b-1=\f(a; b) and\f(a; b) is basedontheGammafunction,or
+8:266:17059:18:16:85:539:111:7:g_d0_f9:10:g_d0_f10:F:5It  shouldparentheticallybe  notedthatNelsonandCao(1992)notethatimposingnon-negativity
+8:267:17146:16:12:72:539:95:10:g_d0_f10:10:g_d0_f10:F:constraints onGARCHparametersis unnecessarilyrestrictive. Theydoargue,however,thatnon-negativity
+8:268:17242:12:12:72:539:83:10:g_d0_f10:10:g_d0_f10:F:of theWoldrepresentationweights is necessary. RestrictingtheweightsbH(k;-) to be non-negative is very
+8:269:17343:12:0:72:302:71:10:g_d0_f10:10:g_d0_f10:F:similarto theconditionimposedby NelsonandCao.
+9:270:17389:0:18:72:539:671:12:g_d0_f4:12:g_d0_f3:B:\f(a; b) = -(a)-(b)=-(a+b):Speci\fcation(1.2)was introducedin Ghyselset al. (2002b,2004)
+9:271:17477:18:18:72:538:653:12:g_d0_f3:12:g_d0_f3:B:andhasseveralimportant characteristics.Namely, (1)it providespositive coe-cients,which
+9:272:17563:18:18:71:539:635:12:g_d0_f3:8:g_d0_f5:B:is necessaryfora:s:positive de\fnitenessof theestimatedvolatility, (2)with-1= 1 and-2
+9:273:17648:18:18:71:540:617:12:g_d0_f4:12:g_d0_f3:B:>1 onehasa slowlydecayingpatterntypicalof volatility \flters,which meansthatonlyone
+9:274:17731:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:parameteris leftto determinetheshape, and(3)with-1=-2= 1 onehasequalweights,
+9:275:17807:18:18:72:539:581:12:g_d0_f3:12:g_d0_f3:B:which correspondsto a rollingestimatorof thevolatility. The\rexibility of theBetafunction
+9:276:17896:18:18:71:539:563:12:g_d0_f3:12:g_d0_f3:B:is well known.It is oftenusedin Bayesianeconometricsto impose\rexible,yet parsimonious
+9:277:17982:18:18:71:539:545:12:g_d0_f3:12:g_d0_f3:B:priordistributions.Thefunctioncantake many shapes,including\ratweights,gradually
+9:278:18062:18:18:71:540:527:12:g_d0_f3:12:g_d0_f3:B:decliningweights as wellas hump-shapedpatterns.WhileMIDASregressionmodelsare
+9:279:18138:18:18:71:539:509:12:g_d0_f3:12:g_d0_f3:B:notlimitedto Betadistributedlagschemes,forourpurposewe focusourattentiononthis
+9:280:18216:18:17:72:539:491:12:g_d0_f3:12:g_d0_f3:B:speci\fcation.We referto Ghyselset al.(2002b,2004)foralternative weight speci\fcations
+9:281:18302:17:26:72:170:474:12:g_d0_f3:12:g_d0_f3:B:andfurtherdetails.
+9:282:18320:26:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:Theparameterizationalsoallowsus to compareMIDASmodelsat di-erent frequenciesas
+9:283:18398:18:17:72:539:430:12:g_d0_f3:12:g_d0_f3:B:thenumber of parameterstoestimatewillbe thesameeventhoughtheweights onthe
+9:284:18471:17:18:72:540:413:12:g_d0_f3:12:g_d0_f3:B:dataandtheforecastingcapabilitiesmight di-eracrosshorizons.We don'thave to adjust
+9:285:18552:18:18:72:539:395:12:g_d0_f3:12:g_d0_f3:B:ourmeasuresof \ft forthenumber of parameters.In allestimations,we have eitheroneor
+9:286:18634:18:18:72:539:377:12:g_d0_f3:12:g_d0_f3:B:two parametersdeterminingthepatternof theweights,theformerbeingthecasewhenwe
+9:287:18710:18:25:71:366:359:12:g_d0_f3:12:g_d0_f4:B:restrictourattentionto-1= 1 andonlyestimate-2>1:
+9:288:18758:25:18:71:539:334:12:g_d0_f3:12:g_d0_f3:B:To illustratetheissueof parameterproliferation,considerFigure1. It displays theestimated
+9:289:18846:18:18:71:539:316:12:g_d0_f17:12:g_d0_f3:B:unconstrainedparametersof equation(1.1)forlagsupto 10 days.The\fgurecontainsresults
+9:290:18929:18:18:71:539:298:12:g_d0_f3:12:g_d0_f3:B:fromvariousregressors~X(m)t-k;t-k-1, such as~Q(m)t-k;t-k-1, as well as absolutedailyreturns,daily
+9:291:19026:18:18:71:539:280:12:g_d0_f3:12:g_d0_f3:B:range,anddailyrealizedpower,allof which we discussat lengthbelow.We noticefromthe
+9:292:19107:18:18:71:539:262:12:g_d0_f3:12:g_d0_f3:B:resultsdisplayedin the\fgurethattheparameterestimatesappearto be erraticas thelag
+9:293:19188:18:18:71:539:244:12:g_d0_f3:12:g_d0_f3:B:increases.Hence,volatility modelssuch as (1.1),whoseweights arenottightlyparameterized,
+9:294:19275:18:18:71:539:226:12:g_d0_f3:12:g_d0_f3:B:doonlywellevenwitha smallnumber of lagsandalmostsurelywillproducepoor out-of-
+9:295:19352:18:18:71:539:208:12:g_d0_f3:12:g_d0_f3:B:sampleforecasts.It mustbe notedthattherobustperformanceof ARCH/GARCHmodels
+9:296:19426:18:18:71:539:190:12:g_d0_f3:12:g_d0_f3:B:canlargelybe attributedto capturingthedynamicsof a largenumber of pastshocks with
+9:297:19507:18:46:72:527:172:12:g_d0_f3:12:g_d0_f3:B:onlya fewparameters.Thisbasicideais alsotheinsight behindtheMIDASregressions.
+9:298:19584:46:26:72:188:126:14:g_d0_f18:14:g_d0_f18:C:VariousRegressors
+9:299:19601:26:0:72:276:100:12:g_d0_f3:12:g_d0_f4:B:In theMIDASvolatility model(1.1),~X
+9:300:19636:0:10:276:290:107:8:g_d0_f5:8:g_d0_f5:?:(m)
+9:301:19639:10:15:275:540:97:8:g_d0_f6:12:g_d0_f3:A:t-k;t-k-1canbe any variablethathastheability to
+9:302:19686:15:0:72:125:82:12:g_d0_f3:12:g_d0_f4:B:forecast~Q
+9:303:19696:0:10:125:146:89:8:g_d0_f5:8:g_d0_f5:?:(Hm)
+9:304:19700:10:0:125:482:79:8:g_d0_f6:12:g_d0_f3:?:t+H;t.  To putit di-erently, MIDASvolatility regressionscaninvolve
+9:305:19766:0:7:491:512:86:12:g_d0_f3:8:g_d0_f5:?:~X(m)
+9:306:19771:7:0:497:539:79:8:g_d0_f6:8:g_d0_f5:F:t-k;t-k-1
+10:307:19781:0:18:72:538:671:12:g_d0_f3:12:g_d0_f3:B:otherthanpastsquaredreturnsor pastrealizedvolatility, which aretheusualregressors
+10:308:19862:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:consideredin theautoregressive conditionalvolatility literature.TheMIDASapproach puts
+10:309:19947:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:us in themindsetof regressionanalysisandpromptsus to explorevariousregressorsthat
+10:310:20028:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:have  thepotentialtopredictfuturevolatility.   A number  of predictorsotherthanpast
+10:311:20111:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:realizedvolatility or squaredreturnshave beenproposedin variousmodels.Unlike MIDAS,
+10:312:20194:18:18:72:539:581:12:g_d0_f3:12:g_d0_f3:B:however,thesemodelsaretypicallyautoregressive in nature.TheMIDASsetupallowsus
+10:313:20271:18:18:72:539:563:12:g_d0_f3:12:g_d0_f3:B:to comparetheforecastingability of di-erent~X(m)t-k;t-k-1's andto choosethemodelwiththe
+10:314:20358:18:25:72:190:545:12:g_d0_f3:12:g_d0_f3:B:bestforecastingability.
+10:315:20381:25:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:Inthecontextofforecastingthequadraticvariation~Q(Hm)t+H;t,  we  considerthefollowing
+10:316:20465:18:37:72:121:502:12:g_d0_f3:12:g_d0_f3:B:regressors
+10:317:20475:37:0:166:268:465:12:g_d0_f3:8:g_d0_f6:A:~Q(Hm)t+H;t=-QH+-QH
+10:318:20494:0:29:271:290:477:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+10:319:20499:29:0:273:289:448:8:g_d0_f6:8:g_d0_f5:?:k=0
+10:320:20502:0:38:293:539:462:12:g_d0_f4:12:g_d0_f3:A:bQH(k; -)~Q(m)t-k;t-k-1+"QHt(1.3)
+10:321:20535:38:0:166:268:424:12:g_d0_f3:8:g_d0_f6:A:~Q(Hm)t+H;t=-GH+-GH
+10:322:20554:0:29:271:290:436:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+10:323:20559:29:0:273:289:407:8:g_d0_f6:8:g_d0_f5:?:k=0
+10:324:20562:0:38:293:539:421:12:g_d0_f4:12:g_d0_f3:A:bGH(k; -)(rt-k;t-k-1)2+"GHt(1.4)
+10:325:20594:38:0:166:268:383:12:g_d0_f3:8:g_d0_f6:A:~Q(Hm)t+H;t=-aH+-aH
+10:326:20613:0:29:271:290:395:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+10:327:20618:29:0:273:289:366:8:g_d0_f6:8:g_d0_f5:?:k=0
+10:328:20621:0:38:293:539:380:12:g_d0_f4:12:g_d0_f3:A:baH(k; -)jrt-k;t-k-1j+"aHt(1.5)
+10:329:20652:38:0:166:268:342:12:g_d0_f3:8:g_d0_f6:A:~Q(Hm)t+H;t=-rH+-rH
+10:330:20671:0:29:271:289:354:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+10:331:20676:29:0:273:289:325:8:g_d0_f6:8:g_d0_f5:?:k=0
+10:332:20679:0:37:293:539:339:12:g_d0_f4:12:g_d0_f3:A:brH(k; -)[hi-lo]t-k;t-k-1+"rHt(1.6)
+10:333:20714:37:7:166:194:302:12:g_d0_f3:8:g_d0_f5:A:~Q(Hm)
+10:334:20720:7:0:173:232:295:8:g_d0_f6:12:g_d0_f4:A:t+H;t=-
+10:335:20727:0:9:232:236:304:8:g_d0_f6:8:g_d0_f6:?:p
+10:336:20728:9:0:232:261:295:8:g_d0_f6:12:g_d0_f4:?:H+-
+10:337:20731:0:9:261:265:304:8:g_d0_f6:8:g_d0_f6:?:p
+10:338:20732:9:0:261:268:295:8:g_d0_f6:8:g_d0_f6:?:H
+10:339:20733:0:29:271:289:313:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+10:340:20738:29:0:273:289:284:8:g_d0_f6:8:g_d0_f5:?:k=0
+10:341:20741:0:0:293:341:298:12:g_d0_f4:12:g_d0_f4:A:bPH(k; -)~P
+10:342:20752:0:10:342:356:305:8:g_d0_f5:8:g_d0_f5:?:(m)
+10:343:20755:10:0:340:403:295:8:g_d0_f6:12:g_d0_f4:?:t-k;t-k-1+"
+10:344:20766:0:9:402:406:304:8:g_d0_f6:8:g_d0_f6:A:p
+10:345:20767:9:47:402:539:295:8:g_d0_f6:12:g_d0_f3:A:Ht(1.7)
+10:346:20774:47:18:71:539:248:12:g_d0_f3:12:g_d0_f3:B:Inequation(1.3),past~Q(m)t;t-1areusedtopredict~Q(Hm)t+H;t:Examplesof such modelshave
+10:347:20858:18:18:71:539:230:12:g_d0_f3:12:g_d0_f3:B:beenadvocatedby Andersenet al.(2001,2002,2003)andarediscussedat lengthbelow.
+10:348:20934:18:18:71:539:212:12:g_d0_f3:12:g_d0_f3:B:Speci\fcation(1.4)is a projectionof~Q(Hm)t+H;tonto laggeddailyreturnsandcorrespondsto the
+10:349:21023:18:25:72:430:194:12:g_d0_f3:8:g_d0_f5:B:ARCH/GARCHclassof models(undersomeparameterrestrictions).6
+10:350:21081:25:18:71:540:169:12:g_d0_f3:12:g_d0_f3:B:Equations(1.5)and(1.6)involve projecting~Q(Hm)t+H;tontopastdailyabsolutereturnsand
+10:351:21163:18:18:72:539:151:12:g_d0_f3:12:g_d0_f3:B:dailyranges,respectively, which aretwo alternative measuresof volatility.  Thereforethey
+10:352:21251:18:18:72:539:133:12:g_d0_f3:12:g_d0_f3:B:arenaturalcandidateregressorsin theMIDASspeci\fcation.It is oftenarguedthatin the
+10:353:21332:18:17:71:539:115:12:g_d0_f3:12:g_d0_f3:B:presenceof deviationsfromnormality absolutevaluescouldbe morerobustthansquared
+10:354:21410:17:16:85:539:98:7:g_d0_f9:10:g_d0_f10:F:6Technicallyspeaking,projectionsinvolve regressionswithouta constant term.Hereandin theremainder
+10:355:21506:16:0:72:335:82:10:g_d0_f10:10:g_d0_f10:F:of thepaper projectionswillincludea constant as regressor.
+11:356:21565:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:valuesforconditionalvarianceestimation(seee.g.DavidianandCaroll(1987))whereas
+11:357:21642:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:thevirtuesof dailyrangehave beenexploredmostrecentlyby Alizadehet al.(2001)and
+11:358:21720:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:Gallant et al.(1999).Typically, pastabsolutereturns(ranges)areusedto predictfuture
+11:359:21802:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:absolutereturns(ranges).In particular,whenabsolutereturns(dailyranges)areconsidered,
+11:360:21886:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:theautoregressive featuresof absolutereturns(dailyranges)arestudiedandmodeled(see
+11:361:21967:18:18:71:539:581:12:g_d0_f3:12:g_d0_f3:B:e.g.Dinget al.(1993)forabsolutereturnsandAlizadehet al.(2001)fordailyranges).
+11:362:22044:18:18:71:539:563:12:g_d0_f3:12:g_d0_f3:B:Hence,theexplorationof alternative measuresof volatility hasbeencastin thecontext
+11:363:22125:18:18:71:539:545:12:g_d0_f3:12:g_d0_f3:B:of autoregressive schemes.Herewe introduceabsolutereturnsandrangesasalternative
+11:364:22204:18:18:71:539:527:12:g_d0_f3:12:g_d0_f3:B:predictorsandexaminetheirsuccess(relative to theotherpredictors)at predictingrealized
+11:365:22289:18:25:71:526:509:12:g_d0_f3:12:g_d0_f3:B:volatility. TheMIDASregressionformatmakes thisa relativelystraightforwardexercise.
+11:366:22371:25:18:71:539:484:12:g_d0_f3:12:g_d0_f3:B:Thelastregression(1.7)involvessimilararguments  usingtechniquesanddevelopments
+11:367:22449:18:18:71:539:466:12:g_d0_f3:12:g_d0_f3:B:of morerecent date.Thepreferenceforabsolutereturnsis a subjectthathasreceived
+11:368:22526:18:18:71:539:448:12:g_d0_f3:12:g_d0_f3:B:much attentionrecently,  seein particularBarndor--NielsenandShephard(2003b,2004)
+11:369:22606:18:0:71:264:430:12:g_d0_f3:12:g_d0_f4:B:andWoerner(2002).Recallthat~Q
+11:370:22635:0:9:264:278:437:8:g_d0_f5:8:g_d0_f5:?:(m)
+11:371:22638:9:15:264:539:428:8:g_d0_f6:12:g_d0_f3:A:t;t+1is de\fnedasthesumofmintra-dailysquared
+11:372:22682:15:18:71:539:413:12:g_d0_f3:12:g_d0_f3:B:returns.Insteadof takingsquaredreturns,say every\fve minutes,Barndor--Nielsenand
+11:373:22762:18:18:71:540:395:12:g_d0_f3:12:g_d0_f3:B:Shephardsuggestto considerthesumof high-frequencyabsolutereturns,or theso-called
+11:374:22842:18:0:72:343:377:12:g_d0_f3:12:g_d0_f3:B:\realizedpower"variation~P(m)t+1;t, which is de\fnedas
+11:375:22896:0:13:348:367:386:12:g_d0_f12:8:g_d0_f6:?:Pm
+11:376:22898:13:14:360:539:373:8:g_d0_f6:12:g_d0_f3:A:j=1jrt-(j-1)=m;t-(j-2)=mj:Regression
+11:377:22934:14:25:72:418:359:12:g_d0_f3:12:g_d0_f3:B:(1.7)projectsfuturerealizedvolatility onpastdailyrealizedpower.
+11:378:22997:25:18:72:539:334:12:g_d0_f3:12:g_d0_f3:B:Finally, to forecastthelogof thequadraticvariation,we considerlogtransformationsof the
+11:379:23083:18:18:72:539:316:12:g_d0_f3:12:g_d0_f3:B:\fve regressorsin equations(1.3-1.7).In thisfashion,ourresultswouldbe directlycomparable
+11:380:23171:18:18:72:539:298:12:g_d0_f3:12:g_d0_f3:B:withthosein thepreviousliterature.To summarize,theMIDASframeworko-erstheability
+11:381:23250:18:18:72:539:280:12:g_d0_f3:12:g_d0_f3:B:to mixdatasampledat di-erent frequency, combinedwitha tightlyparameterizedmodel
+11:382:23329:18:46:72:336:262:12:g_d0_f3:12:g_d0_f3:B:thatallowsdi-erent regressorsto forecastvolatility.
+11:383:23380:46:33:72:481:216:14:g_d0_f13:14:g_d0_f13:C:1.2Comparisonof MIDASwithOtherVolatility Models
+11:384:23427:33:18:72:539:183:12:g_d0_f3:12:g_d0_f3:B:To furtherunderstandthe\rexibility of theMIDASvolatility models,it usefulto compare
+11:385:23510:18:0:72:539:165:12:g_d0_f3:12:g_d0_f3:B:themwithotherwidelyusedmodelsof  conditionalvolatility,  which  forthepurposeof
+12:386:23590:0:37:72:231:671:12:g_d0_f3:12:g_d0_f3:B:presentationwillbe writtenas:
+12:387:23619:37:0:177:279:634:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t=-QH+-QH
+12:388:23638:0:29:282:301:646:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+12:389:23643:29:0:284:300:617:8:g_d0_f6:8:g_d0_f5:?:k=0
+12:390:23646:0:38:304:539:631:12:g_d0_f4:12:g_d0_f3:A:bQH(k)~Q(m)t-k;t-k-1+"QHt(1.8)
+12:391:23676:38:0:177:279:593:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t=-GH+-GH
+12:392:23695:0:29:282:301:605:8:g_d0_f6:12:g_d0_f12:?:kmaxX
+12:393:23700:29:0:284:300:576:8:g_d0_f6:8:g_d0_f5:?:k=0
+12:394:23703:0:43:304:539:590:12:g_d0_f4:12:g_d0_f3:A:bGH(k;-)(rt-k;t-k-1)2+"GHt(1.9)
+12:395:23734:43:18:71:540:547:12:g_d0_f3:12:g_d0_f3:B:Inequation(1.8),past~Q(m)t;t-1areusedtopredict~Q(Hm)t+H;tandtheweightsbQH(k) arenot
+12:396:23817:18:18:72:539:529:12:g_d0_f3:12:g_d0_f3:B:parameterized.WhenH= 1 such  modelsforsocalledrealizedvolatility,  analyzedby
+12:397:23894:18:18:72:539:511:12:g_d0_f3:12:g_d0_f3:B:Andersenet al.(2001,2003),AndreouandGhysels(2002),Barndor--NielsenandShephard
+12:398:23971:18:18:72:539:493:12:g_d0_f3:12:g_d0_f3:B:(2001,2002a,b,2003a),andTaylorandXu(1997),oftenrelyonMerton's(1980)arguments
+12:399:24047:18:18:72:539:475:12:g_d0_f3:12:g_d0_f3:B:thatarbitrarilyaccurateestimatesof volatility canbe obtainedby increasingly\fnersampling
+12:400:24135:18:18:72:539:457:12:g_d0_f3:12:g_d0_f3:B:of returns.Theabove papersshow thattheuseof high-frequencydatais bene\fcialin
+12:401:24212:18:18:72:540:439:12:g_d0_f3:12:g_d0_f3:B:predictingvolatility.   Again,whenH= 1,  thedi-erencebetween(1.8)and(1.3)is the
+12:402:24291:18:18:72:539:421:12:g_d0_f3:12:g_d0_f3:B:speci\fcationof theweightsbQH.  In thisregard,it is important to notethatAndersenet al.
+12:403:24378:18:18:72:538:403:12:g_d0_f3:12:g_d0_f3:B:(2003)advocatetheuseof longmemorymodelsto parsimoniouslyparameterizetheweights.
+12:404:24457:18:39:72:363:385:12:g_d0_f3:12:g_d0_f3:B:In particular,theyconsidermodelsof thefollowingtype:
+12:405:24509:39:0:192:215:346:12:g_d0_f3:12:g_d0_f8:?:(1-
+12:406:24512:0:29:224:234:361:8:g_d0_f5:12:g_d0_f12:?:5X
+12:407:24514:29:0:218:234:332:8:g_d0_f6:8:g_d0_f5:?:k=1
+12:408:24517:0:40:237:540:346:12:g_d0_f4:12:g_d0_f3:A:bA(k)Lk)(1-L)dlog~Q(m)t+1;t=-+"t(1.10)
+12:409:24555:40:17:72:539:306:12:g_d0_f3:12:g_d0_f4:B:Hence,usinga fractionaldi-erencingapproach onecancapturewitha singleparameterd
+12:410:24633:17:18:72:539:289:12:g_d0_f3:12:g_d0_f3:B:slowlydecayingresponsepatternsassociatedwithlongmemory. In additionto thefractional
+12:411:24716:18:18:72:539:271:12:g_d0_f3:12:g_d0_f3:B:di-erencingparameterdin equation(1.10)Andersenet al.(2003)advocatetheuseof an
+12:412:24793:18:18:72:539:253:12:g_d0_f4:12:g_d0_f3:B:AR(5)autoregressive expansionappearingonthelefthandsideof theequation.Hence,
+12:413:24869:18:18:72:539:235:12:g_d0_f3:12:g_d0_f3:B:a totalof 6 parameters(notincludingtheconstant) areusedto modeltheautoregressive
+12:414:24949:18:18:72:539:217:12:g_d0_f3:12:g_d0_f3:B:dynamicsof realizedvolatility. Model(1.10)is expressedin termsof logvolatility as Andersen
+12:415:25039:18:18:72:539:199:12:g_d0_f3:12:g_d0_f3:B:et al.arguethatthelogtransformationinducesnormality andthereforejusti\festheuseof
+12:416:25120:18:18:72:539:181:12:g_d0_f3:12:g_d0_f3:B:linearautoregressive models.Thismodelwillbe ourbenchmarkforallin-sampleandout-
+12:417:25198:18:25:72:500:163:12:g_d0_f3:12:g_d0_f3:B:of-sampleforecastcomparisonsandis henceforthreferredto as the\ABDL"model.
+12:418:25271:25:18:72:539:138:12:g_d0_f3:12:g_d0_f3:B:It is important to stressthedi-erencesbetweenMIDASregressionmodelsandthebenchmark
+12:419:25352:18:18:72:539:120:12:g_d0_f3:12:g_d0_f3:B:ABDLARFI(5,d)modelspeci\fcationappearingin equation(1.10).Noneof theMIDAS
+12:420:25425:18:18:72:539:102:12:g_d0_f3:12:g_d0_f3:B:regressionsoperatethroughautoregressionwhereastheABDLspeci\fcationfollowsmuch
+12:421:25502:18:0:72:539:84:12:g_d0_f3:12:g_d0_f3:B:closerthetraditionof ARCH-type modelssince~Q(m)t+1;tis projectedonto itslaggedvalues.
+13:422:25589:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:Furthermore,MIDASregressionsinvolve at mosttwo parametersfortheBetapolynomial,a
+13:423:25668:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:scalingparameterandanintercept,i.e.lessthanthetypicalABDLsetting.Thechallengeis
+13:424:25747:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:to outperformtheABDLspeci\fcationwhilechoosing:(1)thetype of regressors;and(2)the
+13:425:25828:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:decay patternsthroughjudiciouschoiceof parameterizationsof thepolynomialweighting
+13:426:25909:18:25:72:457:599:12:g_d0_f3:8:g_d0_f5:B:schemes.Thesuccessof thischallengeis themainargument of thispaper.7
+13:427:25976:25:18:72:539:574:12:g_d0_f3:12:g_d0_f3:B:Finally,  it  shouldbe  notedthatequation(1.9)is  a  versionofthemostwidelyused
+13:428:26055:18:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:speci\fcationof conditionalvolatility, namely, theARCH-type modelsof Engle(1982)(see
+13:429:26139:18:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:alsoBollerslev(1986)).In(1.9),futurevolatility is projectedontolaggeddailysquared
+13:430:26220:18:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:returns(anda constant),wheretheweights aretightlyparameterizedviaanautoregression
+13:431:26301:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:such as in thepopularGARCH(1,1)speci\fcation.Andersenet al.(2003)show thatmodels
+13:432:26381:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:appearingin equation(1.10)outperformARCH-type models,which is why we usetheformer
+13:433:26462:18:46:72:155:466:12:g_d0_f3:12:g_d0_f3:B:as a benchmark.
+13:434:26477:46:33:72:495:420:14:g_d0_f13:14:g_d0_f13:C:1.3In-SampleFitandOut-of-SampleForecastEvaluations
+13:435:26527:33:18:71:539:387:12:g_d0_f3:12:g_d0_f3:B:Theusefulnessof theMIDASframeworkis bestjudgedby itsability to producegood in-
+13:436:26605:18:18:72:539:369:12:g_d0_f3:12:g_d0_f3:B:sample\ft andanout-of-sampleforecastsof realizedvolatility.  We elaborateherein some
+13:437:26689:18:18:71:539:351:12:g_d0_f3:12:g_d0_f3:B:detailonhow thevariousmodelswillbe compared.In theempiricalresultsthatfollow,we
+13:438:26768:18:17:71:540:333:12:g_d0_f3:12:g_d0_f3:B:considerthemeansquareerrorof a givenMIDASmodel,M SEM IDAS, andcompareit to
+13:439:26842:17:18:72:540:316:12:g_d0_f3:12:g_d0_f3:B:themeansquarederrorfromtheABDLmodel,denotedbyM SEABDL. Thesemeasuresare
+13:440:26913:18:18:72:540:298:12:g_d0_f3:12:g_d0_f3:B:computedin-sampleandin anout-of-sampleexperiment.  Ultimately, we reporttheratios
+13:441:26994:18:18:72:539:280:12:g_d0_f4:12:g_d0_f3:B:M SEM IDAS=M SEABDLas a measureof theforecastingperformanceof theMIDASmodels
+13:442:27070:18:18:72:539:262:12:g_d0_f3:12:g_d0_f3:B:relative to theABDL.Ratiosbelow 1 indicatethata givenMIDASmodeloutperformsthe
+13:443:27147:18:18:71:539:244:12:g_d0_f3:12:g_d0_f3:B:benchmark.SincetheABDLhasproven to be oneof themostsuccessfulmodelsin volatility
+13:444:27227:18:25:71:370:226:12:g_d0_f3:12:g_d0_f3:B:forecasting,theMIDASmodelshave to cleara highmark.
+13:445:27277:25:18:71:539:201:12:g_d0_f3:12:g_d0_f3:B:We follow a slightlydi-erent approach forthein-sampleandout-of-samplecomparisons.
+13:446:27358:18:18:71:539:183:12:g_d0_f3:12:g_d0_f3:B:Namely, thein-sampleandout-of-samplecomparisonsdi-erent withrespectto thevariable
+13:447:27439:18:25:71:153:165:12:g_d0_f3:12:g_d0_f3:B:beingpredicted.
+13:448:27454:25:18:71:539:140:12:g_d0_f3:12:g_d0_f3:B:Intheout-of-samplecomparison,we  follow  Andersenetal.(2003)whopredictfuture
+13:449:27530:18:18:72:539:122:12:g_d0_f3:12:g_d0_f3:B:logvolatility,  exponentiatetheprediction,andthencomputethesquareroottoobtain
+13:450:27607:18:16:85:539:104:7:g_d0_f9:10:g_d0_f10:F:7In morerecent workAndersen,BollerslevandDiebold(2003)have advocatedtheuseof so-called\HAR
+13:451:27697:16:11:71:540:88:10:g_d0_f10:10:g_d0_f10:F:regressions,"proposedin Corsi(2003)andsharingfeatureswithMIDASregressions,involvingregressors
+13:452:27790:11:0:71:493:77:10:g_d0_f10:10:g_d0_f10:F:thatexcludethejumpcomponent of quadraticvariation.We willelaboratefurtheronthislater.
+14:453:27877:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:a predictionof futurestandarddeviation.We useexactlythesamestrategyforourlog
+14:454:27953:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:volatility speci\fcation.For speci\fcationswherewe predictthelevel of volatility (asopposed
+14:455:28044:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:to thelog),onlya squareroot transformationis necessary.  Allout-of-sampleM SEratios
+14:456:28127:18:18:71:539:617:12:g_d0_f3:12:g_d0_f3:B:re\recttherelative  performanceof predictfuturestandarddeviationsover  fourdi-erent
+14:457:28210:18:25:71:283:599:12:g_d0_f3:12:g_d0_f3:B:horizons,rangingfromoneto fourweeks.
+14:458:28246:25:18:72:539:574:12:g_d0_f3:12:g_d0_f3:B:Thein-samplecomparisonis slightlydi-erent.  Thepredictionof theMIDASmodelsis in
+14:459:28325:18:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:termsof thelefthandsidespeci\fcation,namelyV(Hm)t+H;t. Hence,a MIDASmodelpredicting
+14:460:28408:18:18:72:539:538:12:g_d0_f3:12:g_d0_f3:B:logsis comparedwiththeABDLmodelwhich predictslogstoo.However,fortheMIDAS
+14:461:28480:18:18:71:539:520:12:g_d0_f3:12:g_d0_f3:B:regressionpredictingthelevel of volatility theABDLmodelpredictionis exponentiated.
+14:462:28562:18:18:71:539:502:12:g_d0_f3:12:g_d0_f3:B:Thismay perhapsputtheABDLmodelat a slight disadvantage,yet thatdisadvantageis
+14:463:28639:18:25:71:122:484:12:g_d0_f3:12:g_d0_f3:B:negligible.
+14:464:28650:25:18:71:539:459:12:g_d0_f3:12:g_d0_f3:B:Itis  important  toemphasizeanotherdi-erencebetweenABDLmodelsandMIDAS
+14:465:28719:18:18:72:539:441:12:g_d0_f3:12:g_d0_f3:B:regressions.Whenpredictingfuture,say, weeklyvolatility Andersenet al.(2003)predictthe
+14:466:28804:18:18:71:539:423:12:g_d0_f3:12:g_d0_f3:B:dailyvolatility foreach day of theweekandadduptheforecasts.In a MIDASregression
+14:467:28883:18:18:71:540:405:12:g_d0_f3:12:g_d0_f3:B:thefutureweeklyvolatility is takendirectlyas targetof interestin theprediction.Thisis a
+14:468:28970:18:25:71:470:387:12:g_d0_f3:12:g_d0_f3:B:good illustrationof theadvantageof usinga mixed-datasamplingframework.
+14:469:29040:25:18:71:539:362:12:g_d0_f3:12:g_d0_f3:B:It is alsoworthnotingthatonemight objectto theuseofM SEas a measureof forecast
+14:470:29118:18:18:71:539:344:12:g_d0_f3:12:g_d0_f3:B:comparison.Arguably, thiscriterionmay be criticizedin thecontextof volatility predictions
+14:471:29207:18:17:72:539:326:12:g_d0_f3:12:g_d0_f3:B:as forportfolioor riskmanagement theobjective functionmay neitherbe symmetricnorbe
+14:472:29289:17:18:72:539:309:12:g_d0_f3:12:g_d0_f3:B:directlyrelatedto a puremeasureof statistical\ft.Even as faras statisticalcriteriago,since
+14:473:29379:18:18:72:539:291:12:g_d0_f3:12:g_d0_f3:B:we comparemany modelsestimatedwithdi-erent number of parameters,onecouldarguein
+14:474:29458:18:18:72:539:273:12:g_d0_f3:12:g_d0_f17:B:favor of theadjustedR2forcomparisons.MIDASregressions,however,always involveless
+14:475:29538:18:18:72:539:255:12:g_d0_f3:12:g_d0_f3:B:parametersthanthebenchmark.Hence,penalizinga modelforthenumber of parameters
+14:476:29614:18:18:72:539:237:12:g_d0_f3:12:g_d0_f3:B:wouldactuallypenalizethebenchmarkmodel.We arethereforeusingtheM SEcriterion
+14:477:29689:18:18:72:539:219:12:g_d0_f3:12:g_d0_f3:B:which e-ectivelyincreasesthehurdlefortheperformanceof MIDASregressions.Moreover,
+14:478:29769:18:18:72:539:201:12:g_d0_f3:12:g_d0_f3:B:thein-sampleMSEratioof two modelsis equivalent to theirunadjustedR2ratio.We opted
+14:479:29850:18:18:72:540:183:12:g_d0_f3:12:g_d0_f3:B:fortheratioof theMSEs(ratherthanR2s) becausewe cancomparethesemeasuresacross
+14:480:29926:18:18:72:539:165:12:g_d0_f3:12:g_d0_f3:B:in-sampleandout-of-sampleresults.Such a comparisoncangive us anideaof whetherthe
+14:481:30006:18:18:72:539:147:12:g_d0_f3:12:g_d0_f3:B:in-sampleresultsarebeingpurelydrivenby over-\fttingor samplingerror.Finally, we do
+14:482:30088:18:18:72:539:129:12:g_d0_f3:12:g_d0_f3:B:nottestwhetherM SEs arestatisticallysigni\fcant fromeach other,as thistaskis notso
+14:483:30170:18:18:72:235:111:12:g_d0_f3:8:g_d0_f5:B:straightforwardin thiscontext.8
+14:484:30201:18:0:85:532:93:7:g_d0_f9:10:g_d0_f10:?:8Seee.g.West(2004)fora discussionof thevalidity of asymptotic-basedtestsandtheissuesinvolved.
+15:485:30296:0:37:72:306:671:17:g_d0_f11:17:g_d0_f11:C:2ResultswithDailyData
+15:486:30317:37:18:71:539:634:12:g_d0_f3:12:g_d0_f3:B:We usetheMIDASframeworkto forecastthevolatility in theUSstock market.Ourdataset
+15:487:30396:18:18:72:539:616:12:g_d0_f3:12:g_d0_f3:B:consistsof \fve-minuteintra-day returnsof theDow JonesCompositePortfolio(DJ)over a
+15:488:30478:18:18:72:539:598:12:g_d0_f3:12:g_d0_f3:B:tenyearperiod, fromApril1, 1993to October 31,2003.We alsohave \fve-minutereturns
+15:489:30558:18:18:72:539:580:12:g_d0_f3:12:g_d0_f3:B:forindividualstocks thatbelongto theDow.In thissection,we focusexclusivelyontheDJ
+15:490:30639:18:18:72:539:562:12:g_d0_f3:12:g_d0_f3:B:indexandexaminetheevidenceobtainedfromindividualstocks laterin thepaper.Hence,
+15:491:30717:18:18:72:539:544:12:g_d0_f3:12:g_d0_f3:B:theDJindexis theleadexample,whileevidencefromindividualstocks willbe usedto show
+15:492:30797:18:18:72:539:526:12:g_d0_f3:12:g_d0_f3:B:therobustnessof our\fndings.Allreturndataarereportedfrom9:30amto 4:05pmevery
+15:493:30873:18:18:72:539:508:12:g_d0_f3:12:g_d0_f3:B:tradingday. Thereturnsforsomedays areremovedfromthesampleto avoidtheinclusion
+15:494:30950:18:18:72:539:490:12:g_d0_f3:12:g_d0_f3:B:of regularandpredictablemarket closureswhich a-ectthecharacterizationof thevolatility
+15:495:31035:18:18:72:539:472:12:g_d0_f3:12:g_d0_f3:B:dynamics.In cleaningthedataset,we follow Andersenet al.(2001)whousea similar\fve-
+15:496:31116:18:17:72:539:454:12:g_d0_f3:12:g_d0_f3:B:minutedatasetwithreturnsfromtheforeignexchangemarket.The\fnaldatasetcontains
+15:497:31192:17:18:72:539:437:12:g_d0_f3:12:g_d0_f3:B:2,669tradingdays with80 observationsper day fora totalof 213,520\fve-minutereturnsfor
+15:498:31277:18:18:72:539:419:12:g_d0_f3:12:g_d0_f3:B:each asset.Fromthisdataset,we computedailyrealizedvolatility, dailysquaredreturns,
+15:499:31359:18:25:72:358:401:12:g_d0_f3:12:g_d0_f3:B:dailyabsolutereturns,dailyranges,andrealizedpower.
+15:500:31409:25:18:72:539:376:12:g_d0_f3:12:g_d0_f3:B:Asnotedbefore,we  considerfourpredictionhorizons,from1  through4  weeks.The
+15:501:31484:18:18:72:539:358:12:g_d0_f3:12:g_d0_f3:B:horizonscover mostpracticallyrelevant cases,particularlyin thecontextof Value-at-Risk
+15:502:31569:18:18:72:539:340:12:g_d0_f3:12:g_d0_f3:B:computations,optionpricing,andportfoliomanagement. Theregressionsarerunwithnon-
+15:503:31648:18:18:72:540:322:12:g_d0_f3:12:g_d0_f3:B:overlapping(log)~Q(Hm)t+H;t;forH= 5 days (1wk),H= 10(2wks), 15(3wks) and20(4wks)
+15:504:31728:18:18:72:539:304:12:g_d0_f3:12:g_d0_f3:B:days respectively. TheMIDASregressionsareobtainedwiththeBetalagstructure(1.2).We
+15:505:31808:18:18:72:539:286:12:g_d0_f3:12:g_d0_f3:B:usea truncationof 50dailylagsin theestimation,orkmax= 50sinceusinglongerlagshas
+15:506:31887:18:18:72:539:268:12:g_d0_f3:12:g_d0_f3:B:littlee-ecton theresults.Themodelsareestimatedwithquasi-maximumlikelihood andthe
+15:507:31967:18:18:72:539:250:12:g_d0_f3:12:g_d0_f3:B:standarderrorsareobtainedusingtheBollerslevandWooldridge(1992)approach to account
+15:508:32048:18:18:72:540:232:12:g_d0_f3:12:g_d0_f3:B:forheteroscedasticity. A detaileddiscussionaboutestimatingMIDASregressionmodelscan
+15:509:32130:18:18:72:540:214:12:g_d0_f3:12:g_d0_f3:B:be foundin Ghyselset al.(2002b).In general,theerrorsof MIDASregressionsmay feature
+15:510:32212:18:18:72:539:196:12:g_d0_f3:12:g_d0_f3:B:autocorrelationor heteroskedasticity.  However,in thecurrent application,allregressions
+15:511:32299:18:18:72:539:178:12:g_d0_f3:12:g_d0_f3:B:involve non-overlappingpredictionsamplesto avoidautocorrelationin theresidualsdueto
+15:512:32382:18:17:72:539:160:12:g_d0_f3:12:g_d0_f3:B:overlappingpredictionhorizons.Regressiondiagnostics,discussedlater,willrevealthatthe
+15:513:32466:17:18:72:450:143:12:g_d0_f3:8:g_d0_f5:B:residualsindeedappearuncorrelatedandin somecasesGaussianas well.9
+15:514:32531:18:16:85:539:125:7:g_d0_f9:10:g_d0_f10:F:9For theABDLbenchmarkmodelwe re-estimatetheARparameters,whereasthefractionaldi-erencing
+15:515:32618:16:12:72:539:109:10:g_d0_f10:10:g_d0_f10:F:parameteris pre-setat 0:40096:Thelatterparameteris quitestableacrossassets,as notedby Andersenet
+15:516:32714:12:0:72:482:97:10:g_d0_f10:10:g_d0_f10:F:al.(2003).We thereforefollow theirstrategyof keepinga commonvalueofdacrossallassets.
+16:517:32800:0:33:72:206:671:14:g_d0_f13:14:g_d0_f13:C:2.1In-SampleFit
+16:518:32815:33:18:71:539:638:12:g_d0_f3:12:g_d0_f3:B:Table1 presents thein-sampleratiosM SEM IDAS=M SEABDL:Theresultsfromforecasting
+16:519:32894:18:0:72:309:620:12:g_d0_f3:12:g_d0_f3:B:thetwo measuresof volatility~Q(Hm)t+H;tandlog
+16:520:32939:0:10:311:318:633:12:g_d0_f12:12:g_d0_f12:?:-
+16:521:32940:10:0:321:349:623:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t
+16:522:32951:0:13:350:357:633:12:g_d0_f12:12:g_d0_f12:?:-
+16:523:32952:13:18:363:540:620:12:g_d0_f3:12:g_d0_f3:A:arepresentedin PanelsA andB,
+16:524:32980:18:18:71:539:602:12:g_d0_f3:12:g_d0_f3:B:respectively.  TheresultsfromtheApril1993to March 2001subsampleandfortheentire
+16:525:33058:18:18:71:539:584:12:g_d0_f3:12:g_d0_f3:B:samplearepresented.In PanelA of Table1, we look at theforecastsof~Q(Hm)t+H;tusingvarious
+16:526:33146:18:18:72:539:566:12:g_d0_f3:12:g_d0_f3:B:dailypredictorsover theApril1993to March 2001subsampleandthefullsampleendingin
+16:527:33224:18:18:72:539:548:12:g_d0_f3:12:g_d0_f3:B:2003.Whenwe userealizeddailyvariancesas regressors(equation(1.3)),therelative MSE
+16:528:33305:18:18:72:539:530:12:g_d0_f3:12:g_d0_f3:B:rangesfrom0:871to 0:683acrosstheforecastinghorizonsandsamples.Theresultsarevery
+16:529:33384:18:18:72:539:512:12:g_d0_f3:12:g_d0_f3:B:much similaracrossthefullsampleandthesubsample.Thelogtransformationputsthe
+16:530:33458:18:17:72:539:494:12:g_d0_f3:12:g_d0_f3:B:MIDASandABDLmodelsmoreonanequalfooting(in-sample),as notedfromPanelB in
+16:531:33529:17:18:72:539:477:12:g_d0_f3:12:g_d0_f3:B:Table1. TheMSEratiovariesfrom0:924to 0:812;againdependingonhorizonandlength
+16:532:33604:18:26:72:539:459:12:g_d0_f3:12:g_d0_f3:B:of sample,witha morepronouncedadvantagefortheMIDASmodelsat thelongerhorizons.
+16:533:33681:26:17:72:539:433:12:g_d0_f3:12:g_d0_f3:B:Onedi-erencebetweentheMIDASregressionsandthebenchmarkis theweightingscheme.
+16:534:33756:17:18:71:539:416:12:g_d0_f3:12:g_d0_f3:B:Whenwe uselaggedrealizedvolatility as a MIDASpredictor,thereis nootherdi-erence
+16:535:33835:18:18:72:539:398:12:g_d0_f3:12:g_d0_f3:B:betweenthetwo models.IntheABDLmodel,theweight onpastdailyobservationsis
+16:536:33906:18:18:72:539:380:12:g_d0_f3:12:g_d0_f3:B:capturedby theARFIpolynomial,whereasin theMIDASframework,it is given by theBeta
+16:537:33985:18:18:72:539:362:12:g_d0_f3:12:g_d0_f3:B:polynomial.Figures2 and3 show thepro\flesof theestimatedMIDASregressionweights
+16:538:34063:18:0:72:308:344:12:g_d0_f3:12:g_d0_f3:B:(entiresample)forthe4wkshorizonforthelog
+16:539:34103:0:10:310:317:357:12:g_d0_f12:12:g_d0_f12:?:-
+16:540:34104:10:0:320:348:347:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t
+16:541:34115:0:13:349:356:357:12:g_d0_f12:12:g_d0_f12:?:-
+16:542:34116:13:18:359:539:344:12:g_d0_f3:12:g_d0_f3:A:and~Q(Hm)t+H;tregressions,respectively.
+16:543:34155:18:18:72:539:326:12:g_d0_f3:12:g_d0_f3:B:We candirectlycomparetheweights of theABDLspeci\fcationandthecorrespondinglog
+16:544:34232:18:18:72:539:308:12:g_d0_f3:12:g_d0_f3:B:volatility MIDASmodel.Figure2 displaysthesetwo modelsandseveralotherMIDAS
+16:545:34305:18:18:72:539:290:12:g_d0_f3:12:g_d0_f3:B:regressionswhich willbe discussedin detaillater.Theweights in the\fguresarenormalized
+16:546:34390:18:18:72:539:272:12:g_d0_f3:12:g_d0_f3:B:to sumupto oneandhencehave a commonscale.Consequently, the\fgurestellusthe
+16:547:34464:18:18:72:539:254:12:g_d0_f3:12:g_d0_f3:B:relative shareof weights acrossallthelags.For themoment, we focusonthepatternsfor
+16:548:34545:18:18:72:539:236:12:g_d0_f3:12:g_d0_f3:B:theABDLmodel(solidline)andtheQVMIDASmodelas it is labeledin the\fgure.The
+16:549:34618:18:18:72:540:218:12:g_d0_f3:12:g_d0_f3:B:di-erencesareremarkable.TheABDLweightingschemeis somewhatjaggedforthe\frstlags
+16:550:34696:18:17:72:539:200:12:g_d0_f3:12:g_d0_f3:B:dueto theAR(5)augmentationandthenwe recognizethelongslowlydecayingtailtypical
+16:551:34773:17:18:72:539:183:12:g_d0_f3:12:g_d0_f3:B:forlongmemorymodels.In fact,theweights persistbeyond50days.In contrast,theQV
+16:552:34849:18:18:72:539:165:12:g_d0_f3:12:g_d0_f3:B:MIDASmodelproducesa smoothlydecliningweightingschemethatdiesoutroughlyaround
+16:553:34925:18:18:72:539:147:12:g_d0_f3:12:g_d0_f3:B:25 to 30 days.Hencein theMIDASregressionsmoreweight is attributedto themorerecent
+16:554:35006:18:18:72:539:129:12:g_d0_f3:12:g_d0_f3:B:past.Thisexplainswhy therearenogainsmadewithincreasingthelaglengthbeyond50
+16:555:35080:18:18:72:105:111:12:g_d0_f3:8:g_d0_f5:B:days.10
+16:556:35087:18:16:81:539:93:7:g_d0_f9:10:g_d0_f10:F:10In a relatedpaper,pertainingto therisk-returntrade-o-(Ghyselset al.(2002a))it is shown(seefor
+16:557:35182:16:0:71:539:77:10:g_d0_f10:10:g_d0_f10:F:instanceFigure3) thata monthlyGARCHhasexactlythesameproblem,namelytheweights dieouttoo
+17:558:35270:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:Figure3 displays similarpatterns(withouttheABDLspeci\fcation)forMIDASregressions
+17:559:35350:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:notinvolvingthelogtransformation.Thememoryfeaturesare,notsurprisingly, similar.
+17:560:35429:18:18:71:538:635:12:g_d0_f3:12:g_d0_f3:B:Returningto thelogtransformation,it is alsoworthnotingthatlogsquaredreturns(which
+17:561:35510:18:18:71:538:617:12:g_d0_f3:12:g_d0_f3:B:areidenticalto logabsolutereturnsupto a scalingfactor)have a decay patternthatresembles
+17:562:35597:18:18:71:539:599:12:g_d0_f3:12:g_d0_f3:B:morecloselythatof theABDLspeci\fcation.11Obviously, squaredreturnsperformpoorly
+17:563:35676:18:18:71:539:581:12:g_d0_f3:12:g_d0_f3:B:relative to theABDLspeci\fcation,as dailysquaredreturnsarea noisymeasureof past
+17:564:35755:18:18:71:539:563:12:g_d0_f3:12:g_d0_f3:B:realizedvolatility.  In thelanguageof MIDAS,squaredreturnsarepoor regressorswitha
+17:565:35836:18:18:71:539:545:12:g_d0_f3:12:g_d0_f3:B:decay pattern(obtainedviaBetapolynomialweight \ftting)similarto theARFI(5,d)ABDL
+17:566:35916:18:25:71:137:527:12:g_d0_f3:12:g_d0_f3:B:speci\fcation.
+17:567:35930:25:18:71:539:502:12:g_d0_f3:12:g_d0_f3:B:Table2 complements Figures2 and3. Thetablereportsregressiondiagnosticsandnumerical
+17:568:36012:18:18:71:538:484:12:g_d0_f3:12:g_d0_f3:B:valuesforsomeof theMIDASregressions.Theparameterestimatesof-arenotdisplayed
+17:569:36087:18:18:71:540:466:12:g_d0_f3:12:g_d0_f3:B:becausetheyhave noeconomicinterpretationin andof themselves.We show theother
+17:570:36163:18:18:71:539:448:12:g_d0_f3:12:g_d0_f3:B:parameterestimatesincludinga summaryof theestimatedweight function.In addition,we
+17:571:36244:18:17:71:539:430:12:g_d0_f3:12:g_d0_f3:B:includetheQPortmanteautestforserialcorrelationin theresiduals.TheQtestshowsthat,
+17:572:36324:17:18:71:539:413:12:g_d0_f3:12:g_d0_f3:B:exceptfortheshorthorizon,all residualsappearuncorrelated.Thisis of coursean appealing
+17:573:36409:18:18:71:539:395:12:g_d0_f3:12:g_d0_f3:B:featurefortheMIDASregressions.Althoughnotreported,we alsotestedtheresiduals
+17:574:36484:18:18:71:539:377:12:g_d0_f3:12:g_d0_f3:B:fornormality andfound,usingtheJarque-Beratest,thattheresidualsof thelogvolatility
+17:575:36565:18:18:71:539:359:12:g_d0_f3:12:g_d0_f3:B:MIDASregressionappearnormalforall regressors.For thelevel volatility MIDASregression
+17:576:36649:18:18:71:539:341:12:g_d0_f3:12:g_d0_f3:B:models,againusingtheJarque-Beratest,thenullof normality was barelyrejected.If we
+17:577:36729:18:18:71:539:323:12:g_d0_f3:12:g_d0_f3:B:look at theweight functionresults,theday1 weight is much higherwiththelogspeci\fcation
+17:578:36815:18:18:71:539:305:12:g_d0_f3:12:g_d0_f3:B:comparedto thelevel.Thelogspeci\fcationalsoshowshigherweights throughoutas it is
+17:579:36895:18:18:71:539:287:12:g_d0_f3:12:g_d0_f3:B:morepredictable.Fromthetable,we canalsoseethatbetween80and99percent of the
+17:580:36969:18:18:71:539:269:12:g_d0_f3:12:g_d0_f3:B:weight is placedonthe\frsttwenty dailylagsof theregressors.However,between40 and50
+17:581:37051:18:18:71:539:251:12:g_d0_f3:12:g_d0_f3:B:percent is placedonlaggeddailyforecastersbetweendays 6 and20.Hence,a dailymodel
+17:582:37130:18:18:71:539:233:12:g_d0_f3:12:g_d0_f3:B:thattakes into account only, say, \fve dailylagsis likelyto missa lotof thedependencein the
+17:583:37221:18:18:71:539:215:12:g_d0_f3:12:g_d0_f3:B:data.Asanotherremarkto Table2, theMIDASregressionsnotinvolvingpastreturnsmay
+17:584:37297:18:17:72:539:197:12:g_d0_f3:12:g_d0_f3:B:resultin negative intercepts.(Naturally, theproblemis notpresent forthelogspeci\fcation)
+17:585:37385:17:22:71:539:180:12:g_d0_f3:12:g_d0_f3:B:Thereis obviouslya scalingissuesthatgetresolvedthroughtheregressionbutit does not
+17:586:37466:22:12:72:539:158:10:g_d0_f10:10:g_d0_f10:F:slowlywhencomparedto a monthlyMIDAS(thedailyGARCHin thesame\fgureyieldstheoppositeresult
+17:587:37554:12:12:71:539:146:10:g_d0_f10:10:g_d0_f10:F:butthisis a morecomplexcomparisonsinceit involves aggregation- it is thereforenotdirectlyrelatedto
+17:588:37652:12:8:71:172:134:10:g_d0_f10:10:g_d0_f10:F:whatis reportedhere).
+17:589:37673:8:16:81:539:126:7:g_d0_f9:10:g_d0_f10:F:11It alsois interestingto notethatin thecontextof therisk-returntradeo-Ghyselset al.(2002a)obtain
+17:590:37770:16:12:71:539:110:10:g_d0_f10:10:g_d0_f10:F:estimatesof volatility basedonsquareddailyreturns,sincehigh-frequencydataarenotavailableforlong
+17:591:37865:12:12:71:539:98:10:g_d0_f10:10:g_d0_f10:F:historicalsamples.In thecontextof therisk-returntradeo-withmonthlyreturnstheyalso\fndlonglags
+17:592:37958:12:0:71:299:86:10:g_d0_f10:10:g_d0_f10:F:usingdailysquaredreturns,as depictedin Figure2.
+18:593:38007:0:25:72:513:671:12:g_d0_f3:12:g_d0_f3:B:prove to adverselya-ecttheout-of-sampleperformanceof themodel,as shownbelow.
+18:594:38083:25:18:72:539:646:12:g_d0_f3:12:g_d0_f3:B:Sofar,we  discussedMIDASmodelsthatarealmostdirectlycomparabletotheABDL
+18:595:38153:18:18:72:539:628:12:g_d0_f3:12:g_d0_f3:B:benchmark.PerhapsthemostinterestingMIDASresultsinvolve theperformanceof daily
+18:596:38230:18:18:72:539:610:12:g_d0_f3:12:g_d0_f3:B:rangeandrealizedpower (equations(1.6)and(1.7)).Table1 presents thein-sampleratios
+18:597:38311:18:18:72:539:592:12:g_d0_f4:12:g_d0_f3:B:M SEM IDAS=M SEABDLforbothmodels.Forecastswith[hi-lo]t-k;t-k-1producerelative
+18:598:38388:18:18:72:539:574:12:g_d0_f4:12:g_d0_f3:B:M SEs in therangeof 0:722and0:993.It appearsalsothattheforecastingperformanceof
+18:599:38467:18:18:72:539:556:12:g_d0_f3:12:g_d0_f3:B:theMIDASregressionsin thesubsampleis slightlybetterthanin thefullsample.Overall
+18:600:38546:18:18:72:540:538:12:g_d0_f3:12:g_d0_f3:B:theratiosarelower thanthegoodnessof \ftobtainedfrom~Q(m)t-k;t-k-1, (rt-k;t-k-1)2, and
+18:601:38631:18:18:72:539:520:12:g_d0_f8:12:g_d0_f3:B:jrt-k;t-k-1jat any horizon.Thesuperiorperformanceof rangeshasbeennotedbefore,see
+18:602:38711:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:e.g.Gallant et al.(1999).12Oneadvantageof using[hi-lo]t-k;t-k-1is thatit arguably
+18:603:38792:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:does notinvolve any measurement errorissues(seee.g.Alizadehet al.(2001)),Andersen
+18:604:38873:18:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:et al.(2003),AndreouandGhysels(2002),Barndor--NielsenandShephard(2001,2002a,b,
+18:605:38951:18:25:72:370:448:12:g_d0_f3:12:g_d0_f3:B:2003a)forfurtherdiscussionof measurement errorissues).
+18:606:39005:25:18:72:540:423:12:g_d0_f3:12:g_d0_f3:B:Themostremarkablepredictorof volatility is therealizedpower~P(m)t-k;t-k-1.   At various
+18:607:39092:18:18:72:539:405:12:g_d0_f3:12:g_d0_f3:B:horizons,theM SEratiosobtainedfromtherealizedpower MIDASregressionsarebetween
+18:608:39169:18:18:72:539:387:12:g_d0_f3:12:g_d0_f3:B:0:606and0:826forthelevel speci\fcationand0:761and0:921forthelogs.Particularlyat
+18:609:39248:18:18:72:539:369:12:g_d0_f3:12:g_d0_f3:B:longerhorizon,thein-sampleperformanceis considerablybetterthanthoseobtainedwith
+18:610:39327:18:17:72:539:351:12:g_d0_f3:12:g_d0_f3:B:[hi-lo]t-k;t-k-1, andsigni\fcantlybetterthantheotherpredictors.Hence,thebestpredictor
+18:611:39412:17:25:72:473:334:12:g_d0_f3:12:g_d0_f3:B:of futureincrements in quadraticvariationis thepastrealizedpower measure.
+18:612:39485:25:18:72:540:309:12:g_d0_f3:12:g_d0_f3:B:TurningtoTable2, theweights attributedtothedi-erent lagsareslightlylargerwhen
+18:613:39562:18:18:72:539:291:12:g_d0_f3:12:g_d0_f3:B:comparedto thosefromthequadraticvariationspeci\fcation.In Figures2 and3, we observe
+18:614:39645:18:18:71:539:273:12:g_d0_f3:12:g_d0_f3:B:thatthedecay patternsacrossthevariousMIDASregressionspeci\fcations(excludingdaily
+18:615:39726:18:18:72:539:255:12:g_d0_f3:12:g_d0_f3:B:squaredandabsolutereturns)arequitesimilar.Thisevidencesuggeststhattherearetwo
+18:616:39803:18:18:71:539:237:12:g_d0_f3:12:g_d0_f3:B:reasonsforthesuccessof theMIDASapproach, namely:(1)theweightingscheme;and(2)
+18:617:39879:18:18:72:539:219:12:g_d0_f3:12:g_d0_f3:B:thejudiciouschoiceof regressors.Bothfactorsareimportant contributorsin thesuccessof
+18:618:39962:18:25:71:181:201:12:g_d0_f3:12:g_d0_f3:B:theMIDASforecasts.
+18:619:39980:25:18:72:539:176:12:g_d0_f3:12:g_d0_f3:B:Asa \fnalcomment,  it is interestingtocomparetheweight functionsacrossforecasting
+18:620:40061:18:16:81:539:158:7:g_d0_f9:10:g_d0_f10:F:12TheGallant et al.(1999)approach to range-basedvolatility predictionsharessomefeatureswiththe
+18:621:40155:16:12:72:539:142:10:g_d0_f10:10:g_d0_f10:F:regressionappearingin (1.6).Themaindi-erenceis thatthesetupin Gallant et al.(1999)involves a
+18:622:40247:12:12:72:540:130:10:g_d0_f10:10:g_d0_f10:F:parametriccontinuoustimemodelanda so calledre-projectionprocedureusingsimulatedsampleswhere
+18:623:40338:12:11:72:539:118:10:g_d0_f10:10:g_d0_f10:F:parameterproliferationis lessof anissue.Theuseof MIDASregressionsallowsus to treatparsimoniously
+18:624:40434:11:12:72:539:107:10:g_d0_f10:10:g_d0_f10:F:thepredictive power of range-basedmeasuresin a reduced-formsettingwithoutspecifyinganunderlying
+18:625:40529:12:0:72:345:95:10:g_d0_f10:10:g_d0_f10:F:structuralcontinuoustimedatageneratingprocessforreturns.
+19:626:40587:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:horizons.13At a shorthorizonof 1 week,a largerfractionof theMIDASweights areplaced
+19:627:40669:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:onthe\frstdailylag(between13and20percent, dependingonthespeci\fcation)andvery
+19:628:40746:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:littleweight is placedonlagsbeyondthe\frst20days(between0.3and3 percent).As
+19:629:40821:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:thehorizonincreasesto 4 weeks,theweight onthe\frstday decreasessubstantiallyanda
+19:630:40901:18:46:72:502:599:12:g_d0_f3:12:g_d0_f3:B:signi\fcant weight (from10 to 20 percent) is placedonlagsbeyondthe\frst20 days.
+19:631:40980:46:33:72:307:553:14:g_d0_f13:14:g_d0_f13:C:2.2Out-of-SampleComparisons
+19:632:41007:33:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:Thein-sample\ft measuresindicatethattheMIDASmodelsare\rexibleenoughto capture
+19:633:41084:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:thefeaturesof thedata.However,theultimatetestof forecastingmodelsis whetherthey
+19:634:41163:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:maintaintheirperformanceout-of-sample.Theout-of-sampleMSEsof theMIDASmodels
+19:635:41238:18:25:72:536:466:12:g_d0_f3:12:g_d0_f3:B:relative to thebenchmarkaredisplayedin Table3 which featuresa fewinterestingresults.
+19:636:41322:25:18:72:539:441:12:g_d0_f3:12:g_d0_f3:B:First,therealizedpower~P(m)t-k;t-k-1is thedominant out-of-samplepredictorof futurerealized
+19:637:41412:18:18:71:539:423:12:g_d0_f3:12:g_d0_f3:B:volatility. Also,MIDASregressionsinvolvingrangeandpastdailyrealizedvolatility continue
+19:638:41498:18:25:71:532:405:12:g_d0_f3:12:g_d0_f3:B:to outperformtheABDLbenchmarkmodel.These\fndingsparallelthein-sampleresults.
+19:639:41574:25:18:71:539:380:12:g_d0_f3:12:g_d0_f3:B:Second,fortherealizedpower speci\fcation,thegaininM SEis typicallyof theorderof
+19:640:41653:18:18:71:539:362:12:g_d0_f3:12:g_d0_f3:B:20to 30percent.  Hence,thein-sampleM SEs (Table1) andout-of-sampleM SEs (Table
+19:641:41731:18:18:71:539:344:12:g_d0_f3:12:g_d0_f3:B:3) areverycomparablein magnitude.Thisindicatesthattheperformanceof theMIDAS
+19:642:41806:18:25:72:287:326:12:g_d0_f3:12:g_d0_f3:B:modelis notdueto in-sampleover-\ftting.
+19:643:41845:25:18:72:539:301:12:g_d0_f3:12:g_d0_f3:B:Third,longerhorizonforecastsdonotnecessarilyproduceworseout-of-sampleperformance
+19:644:41925:18:18:71:539:283:12:g_d0_f3:12:g_d0_f3:B:(atleastupto 4 weeks).Thisis becausewe usethemixed-frequencyregressionto directly
+19:645:42006:18:18:72:539:265:12:g_d0_f3:12:g_d0_f3:B:producelonghorizonforecastsinsteadof cumulatingshorthorizonforecasts.Moreover,we
+19:646:42086:18:18:72:539:247:12:g_d0_f3:12:g_d0_f3:B:saw thattheestimatedMIDASweights aredi-erent as thehorizonincreases,which suggests
+19:647:42168:18:25:72:495:229:12:g_d0_f3:12:g_d0_f3:B:thatourframeworkis \rexibleenoughto accommodatevariousvolatility dynamics.
+19:648:42242:25:18:72:539:204:12:g_d0_f3:12:g_d0_f3:B:Finally, theMIDASregressionspredictingthelogandthelevel of volatility tendto produce
+19:649:42326:18:18:71:539:186:12:g_d0_f3:12:g_d0_f3:B:similarout-of-sampleforecasts.Hence,despitetheextratransformation(exponentiation)
+19:650:42407:18:17:71:540:168:12:g_d0_f3:12:g_d0_f3:B:anditspotentialsourceof bias,it seemsthatthelogtransformationis a viableway of
+19:651:42485:17:18:71:190:151:12:g_d0_f3:8:g_d0_f5:B:formulatingforecasts.14
+19:652:42508:18:14:81:307:133:7:g_d0_f9:10:g_d0_f10:?:13We thanktheRefereeforsuggestingthisanalysis.
+19:653:42554:14:7:81:493:119:7:g_d0_f9:7:g_d0_f9:?:14We have alsoexperimentedwithMIDASmodelspredictingdirectlythesquareroot of~Q(Hm)
+19:654:42635:7:9:473:540:112:7:g_d0_f16:10:g_d0_f10:F:t+H;t:Theydid
+19:655:42648:9:12:72:539:103:10:g_d0_f10:10:g_d0_f10:F:notperformas well as thelogspeci\fcation,indicatingtheimportant roleplayed by thepredictability rather
+19:656:42750:12:0:72:115:91:10:g_d0_f10:10:g_d0_f10:F:thanbias.
+20:657:42761:0:33:72:514:671:14:g_d0_f13:14:g_d0_f13:C:2.3Robustnessof Findings:EvidencefromIndividualStocks
+20:658:42814:33:18:71:539:638:12:g_d0_f3:12:g_d0_f3:B:In thissection,we examinetherobustnessof our\fndings.To doso,we considerevidence
+20:659:42894:18:18:71:539:620:12:g_d0_f3:12:g_d0_f3:B:froma collectionof individualstocks thatbelongto theDJIndex.Thestocks considered
+20:660:42974:18:18:71:539:602:12:g_d0_f3:12:g_d0_f3:B:are:Disney(DIS),ExxonMobil(XOM),GeneralElectric(GE),Honeywell(HON),J.P.
+20:661:43045:18:18:72:539:584:12:g_d0_f3:12:g_d0_f3:B:MorganCaseandCo(JPM)andMcDonald's(MCD).Thesesixstocks werepartof theDJ
+20:662:43115:18:18:71:539:566:12:g_d0_f3:12:g_d0_f3:B:Indexover theentiresampleandrepresent di-erent sectorsof theUSeconomy. Theresults
+20:663:43196:18:18:72:539:548:12:g_d0_f3:12:g_d0_f3:B:appearin Table4.To avoidreportingmany results,we simplyfocusontheout-of-sample
+20:664:43274:18:25:71:137:530:12:g_d0_f3:12:g_d0_f3:B:performance.
+20:665:43286:25:18:71:539:505:12:g_d0_f3:12:g_d0_f3:B:Table4 is analogousto Table3 fortheDJindex.TheresultsobtainedwiththeDJindex
+20:666:43361:18:18:71:539:487:12:g_d0_f3:12:g_d0_f3:B:remaintruefortheindividualstocks.Therealizedpower variationproducesthebestout-
+20:667:43439:18:18:71:539:469:12:g_d0_f3:12:g_d0_f3:B:of-sampleforecastsamongalllevel~Q(Hm)t+H;tMIDASregressions.Thisis trueforallstocks
+20:668:43521:18:18:71:540:451:12:g_d0_f3:12:g_d0_f3:B:andacrosshorizons.For thelogspeci\fcation,therealizedpower alsodominatesallother
+20:669:43601:18:17:72:539:433:12:g_d0_f3:12:g_d0_f3:B:predictors.For a fewstocks andforselectedhorizons,therangeandthequadraticvariations
+20:670:43684:17:18:71:539:416:12:g_d0_f3:12:g_d0_f3:B:producemarginallybetterforecasts.Theoverallresultsfromthevolatility of sixmajorstock
+20:671:43768:18:18:71:539:398:12:g_d0_f3:12:g_d0_f3:B:returnsconvey thesamemessage.First,theMIDASweights are\rexibleenoughto produce
+20:672:43846:18:18:71:539:380:12:g_d0_f3:12:g_d0_f3:B:in-andout-of-samplevolatility forecaststhatmatch thosefromthemostbenchmark.Second,
+20:673:43928:18:25:71:463:362:12:g_d0_f3:12:g_d0_f3:B:therealizedpower volatility is thebestpredictorof futurerealizedvolatility.
+20:674:44003:25:18:71:539:337:12:g_d0_f3:12:g_d0_f3:B:Asa \fnalrobustnessnote,in a previousversionof thepaper we obtainedverysimilarresults
+20:675:44088:18:18:71:539:319:12:g_d0_f3:12:g_d0_f3:B:usinga di-erent high-frequencydatasetfromtheforeignexchangemarket.15Unfortunately,
+20:676:44170:18:18:71:539:301:12:g_d0_f3:12:g_d0_f3:B:thatdatasetwas outdatedandoure-ortsto updateit andto providenewout-of-sample
+20:677:44246:18:18:71:539:283:12:g_d0_f3:12:g_d0_f3:B:resultswereunsuccessful.However,giventhatthepredictive  accuracyoftheMIDAS
+20:678:44320:18:18:71:540:265:12:g_d0_f3:12:g_d0_f3:B:regressionswithrealizeddailypower predictorshasbeendemonstratedin-andout-of-sample,
+20:679:44403:18:18:71:539:247:12:g_d0_f3:12:g_d0_f3:B:withanindexandindividualdatareturns,andacrossmarketsleadsus to believe thatour
+20:680:44481:18:52:71:231:229:12:g_d0_f3:12:g_d0_f3:B:resultsareindeedquiterobust.
+20:681:44509:52:37:71:496:177:17:g_d0_f11:17:g_d0_f11:C:3MIDASRegressionsandHigh-FrequencyData
+20:682:44547:37:18:71:539:140:12:g_d0_f3:12:g_d0_f3:B:Sofar,we discussedthatMIDASregressionsareableto accommodatea variety of predictors
+20:683:44629:18:18:71:539:122:12:g_d0_f3:12:g_d0_f3:B:in a parsimoniousrepresentationof longlagstructures.In thissection,we exploreanother
+20:684:44713:18:18:71:539:104:12:g_d0_f3:12:g_d0_f3:B:appealingfeatureof theMIDASframework{ itsability to easilymixsamplingfrequencies.
+20:685:44794:18:15:81:539:86:7:g_d0_f9:10:g_d0_f10:F:15We wereusingtheOlsenandAssociates5-minuteDM/US$ returndatacoveringtheperiod December
+20:686:44880:15:0:72:177:71:10:g_d0_f10:10:g_d0_f10:F:1986to November 1996.
+21:687:44903:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:Moreconcretely,  we investigatewhetherthedirectuseof high-frequencydataresultsin
+21:688:44983:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:betterforecastsof futurevolatility. We revisitthechoiceof regressorsin thecontextof high-
+21:689:45072:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:frequency(5-minute)dataanddiscussinformationsets,polynomials,andimplicit\flters.
+21:690:45152:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:The\fnalsubsectionexplorestheempiricalevidenceof volatility predictability usinghigh-
+21:691:45237:18:46:72:150:599:12:g_d0_f3:12:g_d0_f3:B:frequencydata.
+21:692:45251:46:33:72:338:553:14:g_d0_f13:14:g_d0_f13:C:3.1Choiceof Intra-DailyRegressors
+21:693:45284:33:18:72:539:520:12:g_d0_f3:12:g_d0_f3:B:Letusreconsidertheargument  thatarbitrarilyaccurateestimatesof  volatility  canbe
+21:694:45365:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:obtainedby increasingthesamplingfrequencyof returns.Unlike equation(1.3),wherefuture
+21:695:45449:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:increments in quadraticvariationareprojectedonto a number of lagsof dailyquadratic
+21:696:45531:18:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:variation,we explorea newdimensioninherent to MIDASregression.Insteadof aggregating
+21:697:45614:18:18:72:540:448:12:g_d0_f3:12:g_d0_f3:B:intra-dailysquaredreturnsor absolutereturnsto dailymeasures~Q(m)t;t-1and~P(m)t;t-1why not
+21:698:45703:18:18:72:540:430:12:g_d0_f3:12:g_d0_f3:B:runMIDASregressionsdirectlyonthehigh-frequencydata?UsingthenotationB(L1=m)
+21:699:45777:18:18:72:539:412:12:g_d0_f3:12:g_d0_f4:B:fora distributedlagpolynomialinL1=mwhich hasthepropertyL1=mrt;t-1=m=rt-1=m;t-2=m;
+21:700:45858:18:29:72:212:394:12:g_d0_f3:12:g_d0_f3:B:we considertheregressions:
+21:701:45884:29:7:185:217:365:12:g_d0_f3:8:g_d0_f5:?:~Q(Hm1)
+21:702:45891:7:0:191:254:358:8:g_d0_f6:12:g_d0_f4:?:t+H;t=-
+21:703:45898:0:8:254:258:367:8:g_d0_f6:8:g_d0_f6:?:s
+21:704:45899:8:0:254:283:359:8:g_d0_f6:12:g_d0_f4:?:H+-
+21:705:45902:0:8:283:287:367:8:g_d0_f6:8:g_d0_f6:?:s
+21:706:45903:8:0:283:300:359:8:g_d0_f6:12:g_d0_f4:?:HB
+21:707:45905:0:8:301:305:367:8:g_d0_f6:8:g_d0_f6:A:s
+21:708:45906:8:0:300:321:359:8:g_d0_f6:12:g_d0_f4:A:H(L
+21:709:45909:0:7:321:354:367:8:g_d0_f5:12:g_d0_f4:?:1=m2)[r
+21:710:45916:7:0:354:393:360:8:g_d0_f6:12:g_d0_f3:?:t;t-1=m2]
+21:711:45925:0:8:393:422:367:8:g_d0_f5:8:g_d0_f6:?:2+"s
+21:712:45929:8:15:418:539:359:8:g_d0_f6:12:g_d0_f3:A:Ht(3.1)
+21:713:45936:15:36:185:539:344:12:g_d0_f3:12:g_d0_f3:A:~Q(Hm1)t+H;t=-aH+-aHBaH(L1=m2)jrt;t-1=m2j+"aHt(3.2)
+21:714:45987:36:18:72:539:308:12:g_d0_f3:12:g_d0_f3:B:wherethe\frstequationinvolves projecting~Q(Hm1)t+H;tonto pastsquaredreturnssampledat
+21:715:46071:18:18:72:539:290:12:g_d0_f3:12:g_d0_f3:B:frequency1=m2:Notethatthesamplingfrequencyusedtocomputequadraticvariation
+21:716:46144:18:18:72:539:272:12:g_d0_f3:12:g_d0_f3:B:(m1) may di-erfromthesamplingfrequencyusedto computehigh-frequencyreturns.The
+21:717:46221:18:18:72:539:254:12:g_d0_f3:12:g_d0_f3:B:speci\fcationappearingin (3.1)is closelyrelatedto boththedailyrealizedvolatility model
+21:718:46307:18:18:72:539:236:12:g_d0_f3:12:g_d0_f3:B:in (1.8)andthedailyMIDASregressionin (1.3).With,say,  50daysof lagsthereis a
+21:719:46383:18:17:72:539:218:12:g_d0_f3:12:g_d0_f3:B:directcomparisonbetween(3.1)and(1.3)sincetheybothinvolve thesameinformation
+21:720:46458:17:18:72:539:201:12:g_d0_f3:12:g_d0_f3:B:set.Similararguments applytoabsoluteintra-dailyreturnsusedin equation(3.2)and
+21:721:46535:18:18:72:539:183:12:g_d0_f3:12:g_d0_f3:B:theMIDASregressioninvolvingrealizedpowersin equation(1.7).We now turnto topics
+21:722:46613:18:0:72:458:165:12:g_d0_f3:12:g_d0_f3:B:pertainingto informationsetsandpolynomialsin thenexttwo subsections.
+22:723:46683:0:33:72:226:671:14:g_d0_f13:14:g_d0_f13:C:3.2InformationSets
+22:724:46701:33:33:72:421:638:12:g_d0_f3:12:g_d0_f3:B:We willconsider\frstprojectionsinvolvingsquaredreturns,namely:
+22:725:46763:33:33:148:539:605:12:g_d0_f4:12:g_d0_f3:A:EL(~Q(Hm1)t+H;tj[rt;t-j=m2]2; j-0)--sH+-sHBsH(L1=m2)[rt;t-1=m2]2(3.3)
+22:726:46832:33:18:72:539:572:12:g_d0_f3:12:g_d0_f3:B:whereEL(:j:) denotesa linearprojection.Whenwe considerinformationsetsinvolvingpast
+22:727:46914:18:32:72:487:554:12:g_d0_f3:12:g_d0_f3:B:realizationsof measuredquadraticvariation,i.e.~Q(m)t-j;t-j-1; j= 1; : : : :we obtain:
+22:728:46999:32:40:170:539:522:12:g_d0_f4:12:g_d0_f3:A:EL(~Q(Hm1)t+H;tj~Q(m1)t-j;t-j-1; j-0)--QH+-QHBH(L)~Q(m1)t;t-1:(3.4)
+22:729:47066:40:18:72:540:482:12:g_d0_f3:12:g_d0_f3:B:Sincetheinformationset[~Q(m)t-j;t-j-1; j-0] is a subsetof [rt;t-j=m]2; j-0 (assuminga
+22:730:47151:18:18:71:539:464:12:g_d0_f3:12:g_d0_f3:B:commonm) we know thefollowingproperty holdsforlinearprojectionsandquadraticloss
+22:731:47230:18:33:72:122:446:12:g_d0_f3:12:g_d0_f3:B:functions:
+22:732:47240:33:33:106:539:413:12:g_d0_f4:12:g_d0_f3:A:M SE(EL(~Q(m)t+H;tj[rt;t-j=m]2; j-0))-M SE(EL(~Q(m)t+H;tj~Q(m)t-j;t-j-1; j-0))(3.5)
+22:733:47323:33:18:72:539:380:12:g_d0_f3:12:g_d0_f3:B:Thereductionof informationfrom[rt;t-j=m]2; j-0 to [~Q(m)t-j;t-j-1; j-0] hastheresulting
+22:734:47410:18:18:71:539:362:12:g_d0_f3:12:g_d0_f3:B:(linear)projectiononlyin termsof dailylags,whereasthelinearprojection(3.1)involves
+22:735:47492:18:17:71:539:344:12:g_d0_f3:12:g_d0_f3:B:many lagsof high-frequencydata.Ontheonehand,therelationin (3.5)may notbe attained
+22:736:47573:17:18:72:539:327:12:g_d0_f3:12:g_d0_f3:B:in practiceas thelinearprojectionin (3.3)involves a verylargenumber of parameters.Onthe
+22:737:47660:18:18:71:539:309:12:g_d0_f3:12:g_d0_f3:B:otherhand,a parsimoniousmodelbuiltona parametricspeci\fcationof thehigh-frequency
+22:738:47741:18:18:71:539:291:12:g_d0_f3:12:g_d0_f3:B:dynamicsmay yieldverycomplicatedprojectionformulas.Mixeddatasamplingregressions
+22:739:47820:18:18:71:539:273:12:g_d0_f3:12:g_d0_f3:B:exploita much largerinformationset,withoutthecostof parameterproliferation,which is a
+22:740:47905:18:18:72:539:255:12:g_d0_f3:12:g_d0_f3:B:de\fningfeatureof mixeddatasamplingregressionmodels.Hence,we trythekeeptherich
+22:741:47983:18:25:72:484:237:12:g_d0_f3:12:g_d0_f3:B:informationsetwithoutbeingpenalizedby prohibitivelylargeparameterspaces.
+22:742:48055:25:18:72:539:212:12:g_d0_f3:12:g_d0_f3:B:It shouldalsobe notedthattheMIDASregressionapproach is explicitabouttheinformation
+22:743:48137:18:18:72:539:194:12:g_d0_f3:12:g_d0_f3:B:setsinvolved.Namely,  if  oneconsiderstwo  samplingfrequenciesm1andm2with,
+22:744:48211:18:18:72:539:176:12:g_d0_f3:12:g_d0_f3:B:forinstance,m1<  m2;thenthereis  a  MIDASregressionmodelassociatedwitheach
+22:745:48285:18:18:72:539:158:12:g_d0_f3:12:g_d0_f3:B:oneof  thesamplingfrequencies.Such  MIDASregressions,involvinglinearprojections
+22:746:48364:18:18:72:539:140:12:g_d0_f4:12:g_d0_f3:B:EL(~Q(Hm1)t+H;tj[rt;t-j=m1]2; j-0) andEL(~Q(Hm1)t+H;tj[rt;t-j=m2]2; j-0);couldbe viewedas nested
+22:747:48460:18:18:71:539:122:12:g_d0_f3:12:g_d0_f3:B:models,thoughthismay notleadto any practicaltestablerestrictions.However,we canuse
+22:748:48542:18:18:72:539:104:12:g_d0_f3:12:g_d0_f3:B:standardregressionmethods to appraisethe\ft of thetwo projections.Namely, in practice
+22:749:48627:18:0:71:539:86:12:g_d0_f3:12:g_d0_f3:B:we may runinto microstructurenoiseandlinearregressionswithmtoo highmay therefore
+23:750:48709:0:18:72:540:671:12:g_d0_f3:12:g_d0_f3:B:under-perform.TheMIDASregressionframeworkandtheexplicittreatment of information
+23:751:48788:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:setsallowsustoaddresstheseissuesratherdirectly, insteadof assessingseparately\frst
+23:752:48870:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:thequality of realizedvolatility extractionsandthenproceedin a secondstagewithmodel
+23:753:48953:18:25:72:138:617:12:g_d0_f3:12:g_d0_f3:B:speci\fcation.
+23:754:48967:25:18:72:539:592:12:g_d0_f3:12:g_d0_f3:B:Thearguments regardinginformationsetsalsoapplyto absolutereturnsandrealizedpower
+23:755:49047:18:33:72:353:574:12:g_d0_f3:12:g_d0_f3:B:speci\fcations.Considerthefollowinglinearprojection:
+23:756:49099:33:33:153:539:541:12:g_d0_f4:12:g_d0_f3:A:EL(~Q(Hm1)t+H;tjjrt;t-j=m2j; j-0)--aH+-aHBaH(L1=m2)jrt;t-1=m2j(3.6)
+23:757:49166:33:32:72:530:508:12:g_d0_f3:12:g_d0_f3:B:andthelinearprojectiononto pastrealizedabsolutepower de\fnedas~P(m)t-j;t-j-1;yielding:
+23:758:49252:32:33:173:539:476:12:g_d0_f4:12:g_d0_f3:A:EL(~Q(Hm1)t+H;tj~P(m1)t-j;t-j-1; j-0)--PH+-PHBPH(L)~P(m1)t;t-1(3.7)
+23:759:49319:33:46:72:495:443:12:g_d0_f3:8:g_d0_f5:B:Thearguments regardinginformationsetsapplyto thesetwo projectionsas well.16
+23:760:49394:46:33:72:337:397:14:g_d0_f13:14:g_d0_f13:C:3.3PolynomialsandImplicitFilters
+23:761:49426:33:18:72:539:364:12:g_d0_f3:12:g_d0_f3:B:Thedailyregression(1.3)involvingquadraticvariationcanbe viewedasfactorizingthe
+23:762:49504:18:18:72:539:346:12:g_d0_f3:12:g_d0_f3:B:polynomialB(L1=m) in equation(3.1)into subpolynomialsthataredirectlyinterpretable.
+23:763:49586:18:18:72:539:328:12:g_d0_f3:12:g_d0_f3:B:For example,in thelinearprojection(3.3)onecouldconsidera factorizationof thefollowing
+23:764:49671:18:18:72:539:310:12:g_d0_f3:12:g_d0_f3:B:type:B(L1=m)-Bd(L)Brv(L1=m);whereBd(L) is a polynomialin lagL(henceinvolving
+23:765:49747:18:18:72:539:292:12:g_d0_f3:12:g_d0_f3:B:dailysampling)andBrv(L1=m) is a predeterminedpolynomialrepresentingrealizedvolatility,
+23:766:49833:18:0:72:161:274:12:g_d0_f3:12:g_d0_f8:B:i.e.Brv(L1=m)-
+23:767:49847:0:12:167:187:283:12:g_d0_f12:8:g_d0_f6:A:Pm
+23:768:49849:12:0:180:207:271:8:g_d0_f6:12:g_d0_f4:?:j=1(L
+23:769:49854:0:22:207:539:278:8:g_d0_f5:12:g_d0_f3:A:1=m)jwhich resultsin takingthesumof 1=msampledsquared
+23:770:49907:22:18:72:540:256:12:g_d0_f3:12:g_d0_f3:B:returnsandhencecomputingQ(m)t;t-1:Asnotedbefore,anddiscussedatlengthnotably
+23:771:49982:18:18:72:539:238:12:g_d0_f3:12:g_d0_f3:B:by  AndreouandGhysels(2002b)andBarndor--NielsenandShephard(2001,2002a,b,
+23:772:50054:18:18:72:538:220:12:g_d0_f3:12:g_d0_f3:B:2003a),realizedvolatilitiesareestimatesof thequadraticvariationof a di-usionsubject
+23:773:50137:18:17:72:539:202:12:g_d0_f3:12:g_d0_f3:B:tomeasurement  error.Thepresenceof measurement  errorhaspromptedAndreouand
+23:774:50211:17:18:72:539:185:12:g_d0_f3:12:g_d0_f3:B:Ghysels(2002b)to considerrollingsampleestimatorsof quadraticvariation,calledHQV,
+23:775:50291:18:18:72:539:167:12:g_d0_f3:12:g_d0_f3:B:referringto historicalquadraticvariation.MIDASregressionvolatility modelsalsoinclude
+23:776:50375:18:18:72:539:149:12:g_d0_f3:12:g_d0_f3:B:factorizationsinvolvingHQVestimators.For example,onecouldconsidera factorization
+23:777:50455:18:19:72:539:131:12:g_d0_f3:12:g_d0_f3:B:of thefollowingtype:B(L1=m)-Bd(L)[Bw(L)Brv(L1=m)];whereBw(L) represents a rolling
+23:778:50536:19:13:81:539:112:7:g_d0_f9:10:g_d0_f10:F:16It shouldbe notedhowever,thattherearedi-erencesin theasymptotics,namelywhenm! 1:With
+23:779:50622:13:14:74:540:99:10:g_d0_f10:10:g_d0_f10:F:~Pwe needapmnormalization,whereaswith~Qthereis noneedto normalizebymas shownby Barndor--
+23:780:50710:14:12:72:539:85:10:g_d0_f10:10:g_d0_f10:F:NielsenandShephard(2003b,2004).We donotendeavor into theasymptoticsofm!1in thecontextof
+23:781:50797:12:0:72:118:73:10:g_d0_f10:10:g_d0_f10:F:thispaper.
+24:782:50809:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:samplepredeterminedpolynomialcombiningdailyrealizedvolatilities.Alternatively, one
+24:783:50891:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:couldalsoconsidertheintra-dailysmoothingproposedby AndreouandGhysels(2002b),
+24:784:50967:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:which consistsof takingBd(L)[Bw(L1=m)Brv(L1=m)];withweightingschemesrollingthrough
+24:785:51049:18:18:71:539:617:12:g_d0_f3:12:g_d0_f3:B:intra-dailyquadraticvariationestimators.It may be clearby now thatthedirectestimation
+24:786:51134:18:18:71:539:599:12:g_d0_f3:12:g_d0_f3:B:of MIDASregressionvolatility models,is a simpleapproach to accomplishtwo operations
+24:787:51217:18:18:71:539:581:12:g_d0_f3:12:g_d0_f3:B:in onesinglestep.The\frstoperationis \flteringpasthigh-frequencyreturnssuch thatthey
+24:788:51301:18:18:72:539:563:12:g_d0_f3:12:g_d0_f3:B:represent pastdailyvolatilities.Thesecondoperationis theprojectionof futurerealizations
+24:789:51388:18:18:71:540:545:12:g_d0_f3:12:g_d0_f3:B:onto past\flteredvolatilitiesto obtainpredictions.Thecombinationof thetwo operations
+24:790:51472:18:18:71:540:527:12:g_d0_f3:12:g_d0_f3:B:into onestephasmany advantages.For instance,witha \rexibleenoughlagstructure,one
+24:791:51552:18:18:71:539:509:12:g_d0_f3:12:g_d0_f3:B:cancomputepredictionsthatexploitdirectlythehigh-frequencydataset.Combininghigh-
+24:792:51631:18:17:71:539:491:12:g_d0_f3:12:g_d0_f3:B:frequencydata\frstinto dailyestimatesentailsa lossof informationthatcannotbe recovered
+24:793:51717:17:18:72:539:474:12:g_d0_f3:12:g_d0_f3:B:in thesecondstep.Moreover,thedesignof extraction\flters,i.e.,is thechoiceof quadratic
+24:794:51802:18:18:71:539:456:12:g_d0_f3:12:g_d0_f3:B:variationestimator,is by-passedandthereforetheworryaboutnoisyvolatility estimatesis
+24:795:51885:18:47:71:113:438:12:g_d0_f3:12:g_d0_f3:B:avoided.
+24:796:51893:47:32:71:427:391:14:g_d0_f13:14:g_d0_f13:C:3.4EmpiricalResultswithHigh-FrequencyData
+24:797:51934:32:18:72:539:359:12:g_d0_f3:12:g_d0_f3:B:We now turnourattentionto theestimationof MIDASregressionsinvolvingintra-daily
+24:798:52012:18:18:71:539:341:12:g_d0_f3:12:g_d0_f3:B:(5-minute)data.A majorissueis thatintra-dailyseasonalpatternsin \fnancialmarkets
+24:799:52092:18:18:72:539:323:12:g_d0_f3:12:g_d0_f3:B:have beenwidelydocumentedin theliteraturesincetheworkof Wood et al.(1985).Clearly
+24:800:52173:18:18:72:539:305:12:g_d0_f3:12:g_d0_f3:B:tomorrow'squadraticvariationdoes notfeatureseasonalintra-daily\ructuations,whereas
+24:801:52255:18:18:72:539:287:12:g_d0_f3:12:g_d0_f3:B:thehigh-frequencyintra-dailyreturnsdo.Themostpracticalway to addresssuch a situation
+24:802:52339:18:18:71:539:269:12:g_d0_f3:12:g_d0_f3:B:is to remove thehigh-frequencyintra-dailyseasonalpatternsfromreturnspriorto \fttingthe
+24:803:52425:18:18:71:539:251:12:g_d0_f3:12:g_d0_f3:B:lagstructures.Onemay thereforewonderwhetheronecouldimprove MIDASregressions
+24:804:52500:18:18:71:539:233:12:g_d0_f3:12:g_d0_f3:B:involvingintra-dailydataby  consideringseasonaladjustment  priorto\fttinga  MIDAS
+24:805:52581:18:18:71:539:215:12:g_d0_f3:12:g_d0_f3:B:polynomial.Ontheotherhand,onecouldalsoaccommodatetheintra-dailypatternsdirectly
+24:806:52660:18:18:71:540:197:12:g_d0_f3:12:g_d0_f3:B:viathespeci\fcationof thepolynomiallagstructure.A mixtureof Betalagpolynomialscan
+24:807:52741:18:18:71:539:179:12:g_d0_f3:12:g_d0_f3:B:accommodatethisby centeringonepolynomialonthemeanof a seasonallag.For example,
+24:808:52819:18:17:71:539:161:12:g_d0_f3:12:g_d0_f3:B:supposeoneday'sworthof lagsis 288,thenthereare24hourlypeaksin thelagstructure.
+24:809:52897:17:18:71:539:144:12:g_d0_f3:12:g_d0_f3:B:Thereforeonecantake-= ((ai; bi); i= 1; : : : ;24),andcentertheBetapolynomialsat the
+24:810:52980:18:18:71:539:126:12:g_d0_f3:12:g_d0_f3:B:hourlylags,i.e.ai=(ai+bi) = 12ifori= 1; : : : ;24:Thiswouldnotbe veryappealing,
+24:811:53059:18:18:71:539:108:12:g_d0_f3:12:g_d0_f3:B:however,as onewouldinvolve at least48parameters,to obtaina polynomiallagstructure
+24:812:53140:18:18:71:539:90:12:g_d0_f3:12:g_d0_f3:B:\rexibleenoughto accommodateall theupsanddownsof periodicmarket activity throughout
+24:813:53223:18:0:71:539:72:12:g_d0_f3:12:g_d0_f3:B:a businessday.  Notethatin lesscomplexseasonalsettings,involvingquarterlyor monthly
+25:814:53308:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:data,thestrategymay indeedbe appealing.Thealternative is to seasonallyadjustthedata
+25:815:53391:18:42:72:422:653:12:g_d0_f3:12:g_d0_f3:B:priorto \fttingMIDASregressions,a subjectto which we turnnext.
+25:816:53453:42:33:72:316:611:12:g_d0_f21:12:g_d0_f21:C:3.4.1Seasonality in MIDASRegressions
+25:817:53489:33:18:72:539:578:12:g_d0_f3:12:g_d0_f3:B:Therearetheoreticalarguments thatsupportseasonallyadjustingthedatapriorto \ftting
+25:818:53570:18:18:72:539:560:12:g_d0_f3:12:g_d0_f3:B:a MIDASregressionmodel,andthosearguments arespelledoutin detailin Hansenand
+25:819:53645:18:18:72:539:542:12:g_d0_f3:12:g_d0_f3:B:Sargent (1993)andSims(1993).We consideragaina genericregressorx(m);which may
+25:820:53721:18:18:71:539:524:12:g_d0_f3:12:g_d0_f3:B:be squaredreturns,absolutereturnsorrange,thatis adjustedfor(intra-daily)seasonal
+25:821:53801:18:18:71:540:506:12:g_d0_f3:12:g_d0_f3:B:patterns.We denotebyx(m)theraw regressors,and~x(m)theadjustedones.We have
+25:822:53874:18:17:71:539:488:12:g_d0_f3:12:g_d0_f3:B:consideredtwo alternative schemesforremovingtheperiodicpatterns.The\frstconsistsof
+25:823:53956:17:18:72:540:471:12:g_d0_f3:12:g_d0_f3:B:subtractinghourlymeansof squaredreturns,i.e.[~x(m)t-j=m]2-[~x(m)t-j=m]2-Mh(j);whereh(j)
+25:824:54043:18:18:72:539:453:12:g_d0_f3:12:g_d0_f3:B:is thehourto which thejthobservationbelongsandMhis themeanof [x(m)t-j=m]2forhour
+25:825:54123:18:18:72:539:435:12:g_d0_f4:12:g_d0_f3:B:h.  Thesecondschemeis slightlymoregeneralas it addsa day-of-the-weeke-ect,namely
+25:826:54203:18:18:72:540:417:12:g_d0_f3:12:g_d0_f3:B:[~x(m)t-j=m]2-[x(m)t-j=m]2-Mh(j);d(t);whered(t) is theday of theweekof daytandMh;dis
+25:827:54287:18:18:72:540:399:12:g_d0_f3:12:g_d0_f3:B:themeanofx(m)t-j=m]2forhourhondayd.  Obviouslyonecouldconsiderotheradjustment
+25:828:54364:18:25:72:161:381:12:g_d0_f3:8:g_d0_f5:B:schemesas well.17
+25:829:54381:25:18:72:539:356:12:g_d0_f3:12:g_d0_f3:B:Letus considertheexampleof squaredreturnregressorsandrewrite(3.1)in termsof adjusted
+25:830:54465:18:15:72:122:338:12:g_d0_f3:12:g_d0_f3:B:returnsas
+25:831:54474:15:29:158:455:323:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm1)t+H;t=-sH+-sHBsH(L1=m2)([~rt;t-j=m2]2-Mh(j);d(t)) +"stH
+25:832:54536:29:30:72:226:294:12:g_d0_f3:12:g_d0_f3:B:which canalsobe rewrittenas
+25:833:54563:30:36:174:539:264:12:g_d0_f3:12:g_d0_f3:A:~Q(Hm1)t+H;t=-sH+-sHBsH(L1=m2)[~rt;t-j=m2]2+\f2zt+"stH(3.8)
+25:834:54622:36:18:72:539:228:12:g_d0_f3:12:g_d0_f4:B:where\f2ztrepresents a setof seasonaldummies,i.e.zt-(zdt; d= 1; : : : ;5) withzdt= 1 ifd
+25:835:54710:18:17:72:539:210:12:g_d0_f3:12:g_d0_f3:B:=d(t) andzerootherwise.Finally, theparameters\f2arecoe-cients implicitlyde\fnedby
+25:836:54791:17:18:72:539:193:12:g_d0_f3:12:g_d0_f3:B:therelationshipB1(L1=m)Mh(j);d(t)-\f2zt:Comparingequations(3.8)and(3.1)yieldsthe
+25:837:54871:18:18:72:539:175:12:g_d0_f3:12:g_d0_f3:B:resultthatin principleonecouldruna regressionwithseasonaldummiesandraw datato
+25:838:54948:18:18:72:539:157:12:g_d0_f3:12:g_d0_f3:B:estimateBsH(L1=m);insteadof adjustingsquaredreturns\frstandestimatethepolynomial
+25:839:55028:18:18:72:539:139:12:g_d0_f3:12:g_d0_f3:B:lagstructurewithr(m)t:Unfortunately,  botharenotnecessarilyequivalent evenin large
+25:840:55110:18:16:81:540:121:7:g_d0_f9:10:g_d0_f10:F:17Thereis lotsof evidencethattheintra-dailyseasonality is bestcapturedby a multiplicative type of factor,
+25:841:55215:16:12:71:539:105:10:g_d0_f10:10:g_d0_f10:F:seee.g.Martenset al.(2002).Thissuggeststhatdivisionby a seasonalfactor,ratherthandemeaning,is a
+25:842:55310:12:12:72:539:93:10:g_d0_f10:10:g_d0_f10:F:naturalapproach to seasonaladjustment.  In thelogvolatility speci\fcationsinvolvinglogregressorswe de
+25:843:55411:12:0:72:291:81:10:g_d0_f10:10:g_d0_f10:F:factoapplysuch a multiplicative type adjustment.
+26:844:55461:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:samples.Themainreasonis thatwe aredealingwithpotentiallymisspeci\fedmodelssince
+26:845:55540:18:18:72:539:653:12:g_d0_f3:12:g_d0_f3:B:thepolynomiallagstructureis anapproximationto a highlyover-parameterizedprojection.
+26:846:55623:18:18:72:539:635:12:g_d0_f3:12:g_d0_f3:B:In such circumstances,it is oftenbetterto adjustseriespriorto \ftting\approximate"models.
+26:847:55712:18:18:72:539:617:12:g_d0_f3:12:g_d0_f3:B:Theformalarguments in HansenandSargent (1993)andSims(1993)arebasedonthefact
+26:848:55787:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:thattheapproximationerrormay be undulyin\ruencedby thelargeseasonalvariationin the
+26:849:55869:18:18:72:539:581:12:g_d0_f3:12:g_d0_f3:B:data.In theempiricalworkinvolvingintra-dailydata,we show thatadjustingthesquared
+26:850:55949:18:18:71:539:563:12:g_d0_f3:12:g_d0_f3:B:returnspriorto runningmixeddatasamplingregressionsdoes notseemto have much of
+26:851:56026:18:18:72:539:545:12:g_d0_f3:12:g_d0_f3:B:animpact.Onthecontrary, usingraw datayieldsbetterresultsthatthoseobtainedwith
+26:852:56103:18:42:72:159:527:12:g_d0_f3:12:g_d0_f3:B:adjustedreturns.
+26:853:56119:42:32:72:217:485:12:g_d0_f21:12:g_d0_f21:C:3.4.2EmpiricalResults
+26:854:56140:32:18:72:540:453:12:g_d0_f3:12:g_d0_f3:B:Table5 presents thein-sampleratiosM SEM IDAS=M SEABDL;wheretheMIDASregressions
+26:855:56218:18:18:72:538:435:12:g_d0_f3:12:g_d0_f3:B:involve eitherunadjustedreturnsor hourlyadjustedreturns,as discussedin theprevious
+26:856:56300:18:20:72:538:417:12:g_d0_f3:8:g_d0_f6:B:subsection.We reportagainresultsfromforecastingthetwo measuresof volatility~Q(Hm)t+H;t
+26:857:56386:20:0:72:108:397:12:g_d0_f3:12:g_d0_f3:B:andlog
+26:858:56392:0:10:110:117:410:12:g_d0_f12:12:g_d0_f12:?:-
+26:859:56393:10:0:120:148:400:12:g_d0_f3:8:g_d0_f6:?:~Q(Hm)t+H;t
+26:860:56404:0:13:150:157:410:12:g_d0_f12:12:g_d0_f12:?:-
+26:861:56405:13:18:160:539:397:12:g_d0_f3:12:g_d0_f3:A:fortheApril1993to March 2001subsampleandfortheentiresample.Note
+26:862:56468:18:18:72:539:379:12:g_d0_f3:12:g_d0_f3:B:thatthelogspeci\fcationis reducedto onemodelas theregressorsareidenticalapartfroma
+26:863:56550:18:18:72:540:361:12:g_d0_f3:12:g_d0_f3:B:scalingfactor.Withunadjustedintra-dailysquaredreturnswe have in-sample\ftsthatare
+26:864:56631:18:0:72:404:343:12:g_d0_f3:12:g_d0_f4:B:roughlyequalto thoseobtainedwiththeaggregatedmeasure~Q
+26:865:56685:0:10:404:418:350:8:g_d0_f5:8:g_d0_f5:A:(m)
+26:866:56688:10:15:404:540:340:8:g_d0_f6:12:g_d0_f3:A:t;t-1:Thisis trueforboth
+26:867:56712:15:17:72:539:325:12:g_d0_f3:12:g_d0_f3:B:thesubsampleandthefullsample.Likewise,withunadjustedintra-dailyabsolutereturns
+26:868:56790:17:18:72:539:308:12:g_d0_f3:12:g_d0_f3:B:we have in-sample\ftsthatarealsoroughlyequalto thoseobtainedwiththecorresponding
+26:869:56870:18:18:72:540:290:12:g_d0_f3:12:g_d0_f3:B:aggregatedmeasure~P(m)t;t-1:Thelogspeci\fcation,forwhich thereis onlyoneregression,also
+26:870:56957:18:18:72:540:272:12:g_d0_f3:12:g_d0_f3:B:comescloseto dailyregressionMIDASmodelswith~Q(m)t;t-1;ratherthan~P(m)t;t-1:Perhapsthis
+26:871:57043:18:18:72:539:254:12:g_d0_f3:12:g_d0_f3:B:is notso surprisingas thelogtransformationputsthesquaredandabsolutereturnsonan
+26:872:57121:18:25:72:141:236:12:g_d0_f3:12:g_d0_f3:B:equalfooting.
+26:873:57134:25:18:72:539:211:12:g_d0_f3:12:g_d0_f3:B:Aninterestingobservationemergesfromlookingattheright panelof Table5.Hourly
+26:874:57208:18:18:72:539:193:12:g_d0_f3:12:g_d0_f3:B:adjustingthereturnsdoes notyieldany gainsin thein-sample\ft.In fact,quiteoftenit yields
+26:875:57295:18:18:72:539:175:12:g_d0_f3:12:g_d0_f3:B:slight deteriorationsof thein-sample\ft comparedto theMIDASregressionswithunadjusted
+26:876:57379:18:18:72:539:157:12:g_d0_f3:12:g_d0_f3:B:returns(andthereforealsowiththecorrespondingdailyregressors).Notethatin noneof
+26:877:57457:18:18:72:539:139:12:g_d0_f3:12:g_d0_f3:B:thecasesany explicitpenalty was introducedfortheuseof parametersin estimatingthe
+26:878:57537:18:18:72:539:121:12:g_d0_f3:12:g_d0_f3:B:adjustments.This\fndingsuggeststhatmorecomplicatedmodelsmay be neededto adjust
+26:879:57615:18:18:72:539:103:12:g_d0_f3:12:g_d0_f3:B:forseasonality in returns,seee.g.AndersenandBollerslev(1997)forfurtherdiscussionon
+26:880:57697:18:0:72:539:85:12:g_d0_f3:12:g_d0_f3:B:thismatter.However,morecomplicatedadjustment modelsmay alsodefythepurposeof
+27:881:57774:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:parsimony. In a di-erent context,the\fndingmay notbe true,as thereareprobablymany
+27:882:57855:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:othersettingswhereseasonalsareeasierto model.Macroeconomicdataserieswouldbe a
+27:883:57932:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:good exampleto investigatethisquestionfurther,as a monthlycyclewouldbe easierto
+27:884:58011:18:18:71:539:617:12:g_d0_f3:12:g_d0_f3:B:capturethananintra-dailyone.The\fndingsreportedin Table5 aresigni\fcant, however,
+27:885:58092:18:18:72:539:599:12:g_d0_f3:12:g_d0_f3:B:as oneadvantageof computingdailymeasuresis thatseasonality issuesareforegonethrough
+27:886:58175:18:18:71:539:581:12:g_d0_f3:12:g_d0_f3:B:theaggregationprocess.It appearsfromour\fndingsthatthepresenceof seasonalsis not
+27:887:58255:18:25:71:489:563:12:g_d0_f3:12:g_d0_f3:B:anobstacleto theapplicationof MIDASmodelsto high-frequency\fnancialdata.
+27:888:58327:25:18:71:539:538:12:g_d0_f3:12:g_d0_f3:B:Figure4  displaysthepro\fleofpolynomialsestimatedwithseasonallyadjustedand
+27:889:58401:18:18:72:538:520:12:g_d0_f3:12:g_d0_f3:B:unadjustedreturns.This\fgureplotstheweights thattheMIDASestimatorsof oneweek
+27:890:58477:18:18:72:539:502:12:g_d0_f3:12:g_d0_f3:B:(1wk) predictionhorizonfora MIDASmodelpredictinglogincrements of quadraticvariation
+27:891:58560:18:18:72:539:484:12:g_d0_f3:12:g_d0_f3:B:basedonlog5-minutehigh-frequencyintra-dailysquared(absolute)returnsappearingin
+27:892:58638:18:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:regression(3.1).TheMIDASpolynomialweights forbothhourlyadjustedandunadjusted
+27:893:58714:18:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:squaredreturnsaredisplayed.We  notethatthereis  verylittledi-erencebetweenthe
+27:894:58791:18:17:72:539:430:12:g_d0_f3:12:g_d0_f3:B:polynomials,exceptforthefactthattheMIDASregressioninvolvingunadjustedreturns
+27:895:58867:17:18:72:539:413:12:g_d0_f3:12:g_d0_f3:B:tendsto putmoreweight onthemostrecent days,in comparisonto theMIDASregression
+27:896:58944:18:26:72:209:395:12:g_d0_f3:12:g_d0_f3:B:involvingadjustedreturns.
+27:897:58969:26:18:72:539:369:12:g_d0_f3:12:g_d0_f3:B:Theout-of-sampleresultsappearin Table6.Theresultsparallelthein-sample\fndings,
+27:898:59047:18:17:72:540:351:12:g_d0_f3:12:g_d0_f3:B:namelythedirectuseof unadjustedintra-dailyhigh-frequencydataneitherhelpsnorhurts.
+27:899:59128:17:25:72:477:334:12:g_d0_f3:12:g_d0_f3:B:Hourlyadjustment doagainmuch worseandarethereforenotrecommendable.
+27:900:59194:25:18:72:539:309:12:g_d0_f3:12:g_d0_f3:B:Overall,we notethatMIDASregressionscanhandledirectlyintra-dailyhigh-frequencydata.
+27:901:59276:18:18:72:539:291:12:g_d0_f3:12:g_d0_f3:B:Theadvantageof ouruni\fedframeworkis thatit enablesus to concludethattheincremental
+27:902:59359:18:18:72:539:273:12:g_d0_f3:12:g_d0_f3:B:valueof usingdirectlyhigh-frequencydataappearsto be non-existent, at leastin thepresent
+27:903:59446:18:53:72:251:255:12:g_d0_f3:12:g_d0_f3:B:contextof 5-minuteequity returns.
+27:904:59479:53:37:72:202:202:17:g_d0_f11:17:g_d0_f11:C:4Conclusions
+27:905:59491:37:18:72:539:165:12:g_d0_f3:12:g_d0_f3:B:We studythepredictability of returnvolatility withMIDASregressions.Ourapproach
+27:906:59569:18:18:72:539:147:12:g_d0_f3:12:g_d0_f3:B:allowsusto compareforecastingmodelswithdi-erent measuresof volatility, frequencies,
+27:907:59652:18:18:72:539:129:12:g_d0_f3:12:g_d0_f3:B:andlaglengths.Whilethemainfocusof thispaper is volatility forecasting,it is clear
+27:908:59733:18:17:72:539:111:12:g_d0_f3:12:g_d0_f3:B:thattheMIDASframeworkis generalin natureandcan\fnda good usein any empirical
+27:909:59809:17:18:72:539:94:12:g_d0_f3:12:g_d0_f3:B:investigationthatinvolves datasampledat di-erent frequencies.Simplicity, robustness,and
+27:910:59896:18:0:72:289:76:12:g_d0_f3:12:g_d0_f3:B:parsimony arethreeof itsmainattributes.
+28:911:59937:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:We  reportseveralintriguing\fndingsregardingthepredictability  of  weeklytomonthly
+28:912:60019:18:18:71:539:653:12:g_d0_f3:12:g_d0_f3:B:realizedvolatility in equity markets.First,we \fndthatdailyrealizedpower outperforms
+28:913:60103:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:dailyrealizedvolatility  andthatdailyandintra-dailyabsolutereturnsoutperform
+28:914:60179:18:18:71:539:617:12:g_d0_f3:12:g_d0_f3:B:respectivelydailyandintra-dailysquaredreturns.Thissetof resultssuggeststhatabsolute
+28:915:60262:18:18:71:539:599:12:g_d0_f3:12:g_d0_f3:B:returnsareverysuccessfulat capturing\ructuationsin futurereturnvolatility, despitethe
+28:916:60347:18:18:71:539:581:12:g_d0_f3:12:g_d0_f3:B:predominant emphasisin theliteratureonsquaredreturns.Also,we \fndthatdailyranges
+28:917:60427:18:18:72:539:563:12:g_d0_f3:12:g_d0_f3:B:areextremelygood forecastersof futurevolatility andareonlysecondto realizedpower.
+28:918:60508:18:18:72:540:545:12:g_d0_f3:12:g_d0_f3:B:Thislast\fndingis consistent withresultsin Gallant et al.(1999),Alizadehet al.(2002)
+28:919:60592:18:18:72:539:527:12:g_d0_f3:12:g_d0_f3:B:andEngleandGallo(2003),amongothers,whousedi-erent methodsanddi-erent data.
+28:920:60666:18:18:72:539:509:12:g_d0_f3:12:g_d0_f3:B:Finally, we show thatthedirectuseof high-frequencydatadoes notnecessarilyleadto better
+28:921:60752:18:25:72:168:491:12:g_d0_f3:12:g_d0_f3:B:volatility forecasts.
+28:922:60773:25:18:72:539:466:12:g_d0_f3:12:g_d0_f3:B:Ourpaper leaves oneunansweredissue:Why is realizedpower such a good predictorof
+28:923:60852:18:18:72:539:448:12:g_d0_f3:12:g_d0_f3:B:futurevolatility?Whiletherestillisn'ta satisfactoryanswer to thisquestion,severalrecent
+28:924:60939:18:17:71:539:430:12:g_d0_f3:12:g_d0_f3:B:papershave madeconsiderableprogress.First,thereis now anelegant asymptotictheory
+28:925:61019:17:18:71:539:413:12:g_d0_f3:12:g_d0_f3:B:thatwasdevelopedin a setof papersby Barndor--NielsenandShephard(2003b,2004)
+28:926:61094:18:18:72:540:395:12:g_d0_f3:12:g_d0_f3:B:showinghow realizedpower,anda measurecalledbi-power,excludethejumpcomponent of
+28:927:61172:18:18:72:539:377:12:g_d0_f3:12:g_d0_f3:B:increments in quadraticvariation.BuildingontheBarndor--NielsenandShephardanalysis,
+28:928:61254:18:18:72:539:359:12:g_d0_f3:12:g_d0_f3:B:ForsbergandGhysels(2004)studythetheoreticalpropertiesof realizedpower in thecontext
+28:929:61337:18:18:72:539:341:12:g_d0_f3:12:g_d0_f3:B:of continuoustimestochasticvolatility models.Theycon\frmtheintuitionthatrealized
+28:930:61417:18:18:72:539:323:12:g_d0_f3:12:g_d0_f3:B:power is a persistent processmorecloselyrelatedto thelongruncomponent of volatility,
+28:931:61501:18:18:72:539:305:12:g_d0_f3:12:g_d0_f3:B:which explainsitssuccessas a regressorin thecontextof MIDASregressions.Forsbergand
+28:932:61583:18:18:72:539:287:12:g_d0_f3:12:g_d0_f3:B:Ghysels(2004)alsoshow thatrealizedpower hasfarlessmeasurement noisein comparison
+28:933:61663:18:18:72:539:269:12:g_d0_f3:12:g_d0_f3:B:withrealizedvolatility andbi-power.Theyalsodiscussotherappealingfeaturesof realized
+28:934:61746:18:18:72:539:251:12:g_d0_f3:12:g_d0_f3:B:power,such as higherpersistenceandpredictabiity in comparisonwithbi-power andrealized
+28:935:61831:18:25:72:119:233:12:g_d0_f3:12:g_d0_f3:B:volatility.
+28:936:61842:25:18:72:539:208:12:g_d0_f3:12:g_d0_f3:B:Ina recent paper,Andersen,BollerslevandDiebold(2003)suggesttousethebi-power
+28:937:61917:18:18:72:539:190:12:g_d0_f3:12:g_d0_f3:B:variationaspredictorof  volatility  becausejumpcomponents  are\noise"nothelpfulin
+28:938:61998:18:18:72:539:172:12:g_d0_f3:12:g_d0_f3:B:predictingfuturevolatility . Thebi-power regressoris usedin \HARregressions,"proposed
+28:939:62083:18:18:72:539:154:12:g_d0_f3:12:g_d0_f3:B:in Corsi(2003),andis shownto improve theforecastingof volatility.  Ourpaper sharesa
+28:940:62166:18:18:72:539:136:12:g_d0_f3:12:g_d0_f3:B:commonthemewithAndersen,BollerslevandDiebold(2003).Bothpapersarguein di-erent
+28:941:62243:18:17:72:539:118:12:g_d0_f3:12:g_d0_f3:B:ways thattakinga volatility measureimmuneto jumps- such as realizedpower or bi-power,
+28:942:62328:17:18:72:315:101:12:g_d0_f3:8:g_d0_f5:B:is a good regressorto predictfuturevolatility.18
+28:943:62376:18:0:81:539:83:7:g_d0_f9:10:g_d0_f10:F:18Earlydraftsof thecurrent paper andversionsof theAndersen,BollerslevandDiebold(2003)paper
+29:944:62468:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:We have keptthemixeddatasamplingregressionsassimpleaspossiblein theinterest
+29:945:62543:18:18:72:538:653:12:g_d0_f3:12:g_d0_f3:B:ofclarity  andconciseness.However,therearea  hostofissues,such  asasymmetries,
+29:946:62621:18:18:71:539:635:12:g_d0_f3:12:g_d0_f3:B:multiplepredictors,andoption-impliedmeasuresof volatility, thatmeritfurtherattention.
+29:947:62706:18:18:71:540:617:12:g_d0_f3:12:g_d0_f3:B:Theseextensionsareeasilyaccommodatedin theMIDASframeworkandsomeof themare
+29:948:62779:18:528:71:412:599:12:g_d0_f3:12:g_d0_f3:B:addressedin Ghyselset al.(2002a).Othersremainto be explored.
+29:949:62839:528:0:72:312:71:10:g_d0_f10:10:g_d0_f10:F:werewrittenalmostsimultaneouslyandindependently.
+30:950:62889:0:35:72:163:671:17:g_d0_f11:17:g_d0_f11:C:References
+30:951:62899:35:18:77:539:636:12:g_d0_f3:12:g_d0_f3:A:[1]A-t-Sahalia,Y.,Mykland,P.  A.andZhang,L.(2003),\How  oftentosamplea
+30:952:62970:18:17:96:539:618:12:g_d0_f3:12:g_d0_f3:A:continuous-timeprocessin thepresenceof market microstructurenoise",WorkingPaper
+30:953:63049:17:28:96:172:601:12:g_d0_f3:12:g_d0_f3:A:w9611,NBER.
+30:954:63060:28:17:77:539:573:12:g_d0_f3:12:g_d0_f3:A:[2]Alizadeh,S.,M.BrandtandF.X.Diebold,(2002),"Range-basedestimationof
+30:955:63129:17:27:96:425:556:12:g_d0_f3:12:g_d0_f3:A:stochasticvolatility models",Journalof Finance, 57,1047-1091.
+30:956:63190:27:18:77:539:529:12:g_d0_f3:12:g_d0_f3:A:[3]Andersen,T. andT. Bollerslev(1997),\HeterogeneousInformationArrivalsandReturn
+30:957:63270:18:18:96:540:511:12:g_d0_f3:12:g_d0_f17:A:Volatility Dynamics:UncoveringtheLongRunin high-frequencyReturns",Journalof
+30:958:63345:18:27:96:210:493:12:g_d0_f17:12:g_d0_f3:A:Finance, 52,975-1005.
+30:959:63366:27:18:77:539:466:12:g_d0_f3:12:g_d0_f3:A:[4]Andersen,T.andT.Bollerslev(1998),\AnsweringtheSkeptics:Yes,Standard
+30:960:63436:18:18:96:539:448:12:g_d0_f3:12:g_d0_f3:A:Volatility ModelsDoProvideAccurateForecasts",InternationalEconomicReview, 39,
+30:961:63513:18:27:96:138:430:12:g_d0_f3:12:g_d0_f3:A:885-905.
+30:962:63521:27:18:77:539:403:12:g_d0_f3:12:g_d0_f3:A:[5]Andersen,T.,T.Bollerslev,F. X.DieboldandP. Labys (2001),\TheDistributionof
+30:963:63598:18:27:96:516:385:12:g_d0_f3:12:g_d0_f3:A:ExchangeRateVolatility",Journalof American Statistical Association, 96,42-55.
+30:964:63675:27:18:77:539:358:12:g_d0_f3:12:g_d0_f3:A:[6]Andersen,T.G.,Bollerslev,T.andF.X.Diebold,(2002),\  Parametricand
+30:965:63743:18:18:96:539:340:12:g_d0_f3:12:g_d0_f3:A:NonparametricVolatility  Measurement,"inL.P.  HansenandY.A-t-Sahalia(eds.),
+30:966:63819:18:27:96:510:322:12:g_d0_f3:12:g_d0_f3:A:Handbookof FinancialEconometrics. Amsterdam:North-Holland,forthcoming.
+30:967:63889:27:18:77:539:295:12:g_d0_f3:12:g_d0_f3:A:[7]Andersen,T.,T.Bollerslev,F.X.DieboldandP.  Labys(2003),\Modelingand
+30:968:63959:18:27:96:402:277:12:g_d0_f3:12:g_d0_f3:A:ForecastingRealizedVolatility",Econometrica, 71,529-626.
+30:969:64015:27:18:77:539:250:12:g_d0_f3:12:g_d0_f3:A:[8]Andersen,T.G.,Bollerslev,T.andF.X.Diebold,(2003),\SomeLike it Smooth,and
+30:970:64090:18:18:96:539:232:12:g_d0_f3:12:g_d0_f3:A:SomeLike it Rough:UntanglingContinuousandJumpComponents in Measuring,
+30:971:64159:18:18:96:538:214:12:g_d0_f3:12:g_d0_f3:A:Modeling,andForecastingAssetReturnVolatility," Manuscript,Duke, Northwestern
+30:972:64235:18:27:96:258:196:12:g_d0_f3:12:g_d0_f3:A:andUniversity of Pennsylvania.
+30:973:64265:27:18:77:539:169:12:g_d0_f3:12:g_d0_f3:A:[9]Andreou,E.andE.Ghysels(2002),\Rollingsamplevolatility  estimators:some
+30:974:64338:18:17:96:539:151:12:g_d0_f3:12:g_d0_f17:A:newtheoretical,simulationandempiricalresults"Journalof BusinessandEconomic
+30:975:64412:17:27:96:223:134:12:g_d0_f17:12:g_d0_f3:A:Statistics, 20,3, 363-376.
+30:976:64438:27:18:72:539:107:12:g_d0_f3:12:g_d0_f3:B:[10]Baillie,R.T.,T.BollerslevandH.O.Mikkelsen(1996),\Fractionallyintegrated
+30:977:64513:18:18:96:539:89:12:g_d0_f3:12:g_d0_f3:A:generalizedautoregressive conditionalheteroskedasticity"Journalof Econometrics, 74,
+30:978:64596:18:0:96:121:71:12:g_d0_f3:12:g_d0_f3:A:3-30.
+31:979:64603:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:[11]Bandi,F.M.andJ.R.Russell,(2003),\Microstructurenoise,realizedvolatility,  and
+31:980:64684:18:18:96:539:653:12:g_d0_f3:12:g_d0_f3:A:optimalsampling",Workingpaper,GraduateSchool of Business,TheUniversity of
+31:981:64757:18:28:96:140:635:12:g_d0_f3:12:g_d0_f3:A:Chicago.
+31:982:64765:28:18:71:539:607:12:g_d0_f3:12:g_d0_f3:B:[12]Barndor--Nielsen,O.andN.Shephard(2001),\Non-GaussianOrnstein{Uhlenbeck-
+31:983:64840:18:18:96:539:589:12:g_d0_f3:12:g_d0_f17:A:basedmodelsandsomeof theirusesin \fnancialeconomics(withdiscussion),Journal
+31:984:64915:18:28:96:368:571:12:g_d0_f17:12:g_d0_f3:A:of theRoyalStatistical Society, SeriesB, 63,167-241.
+31:985:64967:28:17:71:539:543:12:g_d0_f3:12:g_d0_f3:B:[13]Barndor--Nielsen,O.andN.Shephard(2002a),\Econometricanalysisofrealized
+31:986:65041:17:18:96:540:526:12:g_d0_f3:12:g_d0_f17:A:volatility anditsusein estimatingstochasticvolatility models",Journalof theRoyal
+31:987:65121:18:28:96:302:508:12:g_d0_f17:12:g_d0_f3:A:Statistical Society, SeriesB, 64,253-280.
+31:988:65162:28:18:71:539:480:12:g_d0_f3:12:g_d0_f3:B:[14]Barndor--Nielsen,O.andN.Shephard(2002b)\Estimatingquadraticvariationusing
+31:989:65239:18:28:96:425:462:12:g_d0_f3:12:g_d0_f3:A:realisedvariance"Journalof Applied Econometrics, 17,457-477.
+31:990:65299:28:18:71:539:434:12:g_d0_f3:12:g_d0_f3:B:[15]Barndor--Nielsen,O.andN.Shephard(2003a)\How  accurateis  theasymptotic
+31:991:65373:18:18:96:539:416:12:g_d0_f3:12:g_d0_f3:A:approximationto thedistributionof realisedvolatility?"in D.W.K.Andrews,J. Powell,
+31:992:65454:18:17:96:540:398:12:g_d0_f3:12:g_d0_f17:A:P. RuudandJ. Stock (ed.),Identi\fcationandInference forEconometricModels.A
+31:993:65528:17:28:96:485:381:12:g_d0_f17:12:g_d0_f3:A:FestschriftforTomRothenberg, CambridgeUniversity Press,(forthcoming).
+31:994:65597:28:18:71:539:353:12:g_d0_f3:12:g_d0_f3:B:[16]Barndor--Nielsen,O. andN. Shephard(2003b)\Realisedpower variationandstochastic
+31:995:65679:18:28:96:257:335:12:g_d0_f3:12:g_d0_f3:A:volatility"Bernoulli9, 243-265.
+31:996:65710:28:18:71:539:307:12:g_d0_f3:12:g_d0_f3:B:[17]Barndor--Nielsen,O.andN.Shephard(2004)\Powerandbipowervariationwith
+31:997:65781:18:18:96:539:289:12:g_d0_f3:12:g_d0_f3:A:stochasticvolatility andjumps"(withdiscussion)Journalof FinancialEconometrics,
+31:998:65859:18:28:96:134:271:12:g_d0_f3:12:g_d0_f3:A:2, 1-48.
+31:999:65867:28:17:71:538:243:12:g_d0_f3:12:g_d0_f3:B:[18]Bollerslev,T.(1986),\GeneralizedAutoregressive  ConditionalHeteroskedasticity",
+31:1000:65950:17:28:96:289:226:12:g_d0_f17:12:g_d0_f3:A:Journalof Econometrics, 31,307-327.
+31:1001:65985:28:18:71:539:198:12:g_d0_f3:12:g_d0_f3:B:[19]Bollerslev,T.,R.EngleandD.Nelson(1994),\ARCHModels,in R.EngleandD.
+31:1002:66055:18:28:96:452:180:12:g_d0_f3:12:g_d0_f3:A:McFadden(eds.),Handbook of Econometrics, Vol.4, ElsevierScience.
+31:1003:66119:28:18:71:539:152:12:g_d0_f3:12:g_d0_f3:B:[20]Bollerslev,T. andJ. M.Wooldridge(1992),"Quasi-MaxmimumLikelihood Estimation
+31:1004:66198:18:18:96:539:134:12:g_d0_f3:12:g_d0_f17:A:andInferenceinDynamicModelswithTime-VaryingCovariances,"Econometric
+31:1005:66265:18:27:96:200:116:12:g_d0_f17:12:g_d0_f3:A:Reviews, 11,143172.
+31:1006:66284:27:18:71:539:89:12:g_d0_f3:12:g_d0_f3:B:[21]Bollerslev,T. andJ. Wright (2001),\High-frequencydata,frequencydomaininference,
+31:1007:66367:18:0:96:485:71:12:g_d0_f3:12:g_d0_f3:A:andvolatility forecasting",Reviewof EconomicsandStatistics, 83,596-602.
+32:1008:66440:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:[22]Corsi,F. (2003),\ASimpleLongMemoryModelof RealizedVolatility",Manuscript,
+32:1009:66517:18:28:96:278:653:12:g_d0_f3:12:g_d0_f3:A:University of SouthernSwitzerland.
+32:1010:66551:28:18:71:539:625:12:g_d0_f3:12:g_d0_f17:B:[23]DavidianM.andR.J.Carroll(1987),\VarianceFunctionEstimation",Journalof the
+32:1011:66628:18:28:96:341:607:12:g_d0_f17:12:g_d0_f3:A:American Statistical Association, 82,1079-1091.
+32:1012:66675:28:18:71:539:579:12:g_d0_f3:12:g_d0_f3:B:[24]Dhrymes,P.  (1971),Distributed  Lags:ProblemsofFormulationandEstimation,
+32:1013:66751:18:28:96:236:561:12:g_d0_f3:12:g_d0_f3:A:Holden-Day, SanFrancisco.
+32:1014:66776:28:18:71:539:533:12:g_d0_f3:12:g_d0_f3:B:[25]Ding,Z.,andC. W.J. Granger(1996),\ModelingVolatility Persistenceof Speculative
+32:1015:66858:18:28:96:439:515:12:g_d0_f3:12:g_d0_f3:A:Returns:A NewApproach",Journalof Econometrics, 73,185-215.
+32:1016:66916:28:17:72:539:487:12:g_d0_f3:12:g_d0_f3:B:[26]Ding,Z.,C.W.JGrangerandR.F. Engle(1993),\Alongmemoryproperty of stock
+32:1017:66989:17:28:96:487:470:12:g_d0_f3:12:g_d0_f3:A:market returnsanda newmodels",Journalof Empirical Finance, 1, 83-106.
+32:1018:67058:28:18:72:539:442:12:g_d0_f3:12:g_d0_f3:B:[27]Engle,R.F.(1982),\Autoregressive ConditionalHeteroscedasticity withEstimatesof
+32:1019:67140:18:28:96:466:424:12:g_d0_f3:12:g_d0_f3:A:theVarianceof UnitedKingdomIn\ration",Econometrica, 50,987-1008.
+32:1020:67204:28:18:72:539:396:12:g_d0_f3:12:g_d0_f3:B:[28]Engle,R.F.andG.Gallo(2003),\AMultipleIndicatorModelforVolatility UsingIntra
+32:1021:67283:18:28:96:419:378:12:g_d0_f3:12:g_d0_f3:A:DailyData",DiscussionPaper NYUandUniversit-a di Firenze.
+32:1022:67339:28:18:72:539:350:12:g_d0_f3:12:g_d0_f3:B:[29]Forsberg,L. andE. Ghysels(2004),\Jumpsor NoJumps,Smoothor Rough:It Does
+32:1023:67414:18:18:96:539:332:12:g_d0_f3:12:g_d0_f3:A:NotMatterFor PredictingVolatility - ChoosingtheRight RegressorDoes,"Discussion
+32:1024:67492:18:28:96:158:314:12:g_d0_f3:12:g_d0_f3:A:paper UNC.
+32:1025:67502:28:18:72:539:286:12:g_d0_f3:12:g_d0_f3:B:[30]Gallant,  A.R.,C.-T.Hsu,andTauchen,G.(1999),\UsingDailyRangeDatato
+32:1026:67572:18:18:96:539:268:12:g_d0_f3:12:g_d0_f17:A:CalibrateVolatility Di-usionsandExtracttheForwardIntegratedVolatility",Review
+32:1027:67649:18:28:96:305:250:12:g_d0_f17:12:g_d0_f3:A:of EconomicsandStatistics, 84,617-631.
+32:1028:67687:28:17:72:539:222:12:g_d0_f3:12:g_d0_f3:B:[31]Ghysels,E.,P. Santa-ClaraandR.Valkanov (2002a),\Thereis a Risk-returnTradeo-
+32:1029:67767:17:28:96:390:205:12:g_d0_f3:12:g_d0_f3:A:afterall,"Journalof FinancialEconomics(forthcoming).
+32:1030:67819:28:18:72:539:177:12:g_d0_f3:12:g_d0_f3:B:[32]Ghysels,E.,P.  Santa-ClaraandR.Valkanov  (2002b),\TheMIDASTouch:
+32:1031:67887:18:18:96:539:159:12:g_d0_f3:12:g_d0_f3:A:MixedDataSamplingRegression,"DiscussionPaper UCLAandUNCavailableat:
+32:1032:67954:18:28:96:251:141:12:g_d0_f3:12:g_d0_f3:A:http://www.unc.edu/eghysels
+32:1033:67981:28:18:72:539:113:12:g_d0_f3:12:g_d0_f3:B:[33]Ghysels,E.,P. Santa-Clara,A.Sinko andR.Valkanov (2004),\MIDASRegressions:
+32:1034:68058:18:0:96:338:95:12:g_d0_f3:12:g_d0_f3:A:ResultsandNewDirections"Workin progress.
+33:1035:68100:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:[34]Giraitis,L.,P. Kokoszka andR. Leipus(2000),\StationaryARCHmodels:dependence
+33:1036:68179:18:28:96:482:653:12:g_d0_f3:12:g_d0_f3:A:structureandCentralLimitTheorem",EconometricTheory, 16,3-22,2000
+33:1037:68243:28:18:71:539:625:12:g_d0_f3:12:g_d0_f3:B:[35]Granger,C.W.J.(1969),InvestigatingCausalRelationsby EconometricModelsand
+33:1038:68319:18:28:96:362:607:12:g_d0_f3:12:g_d0_f3:A:CrossSpectralMethods,Econometrica, 37,428-438.
+33:1039:68365:28:28:71:460:579:12:g_d0_f3:12:g_d0_f3:B:[36]Greene,W.H.(2000),EconometicAnalysis, FourthEd.,PrenticeHall.
+33:1040:68430:28:18:71:539:551:12:g_d0_f3:12:g_d0_f3:B:[37]Hansen,L.P. andT.J.Sargent (1993),\Seasonality andapproximationerrorsin rational
+33:1041:68514:18:28:96:394:533:12:g_d0_f3:12:g_d0_f3:A:expectationsmodels",JournalOf Econometrics55,21-55.
+33:1042:68565:28:18:71:539:505:12:g_d0_f3:12:g_d0_f3:B:[38]Hansen,P. andA.Lunde,(2004),\RealizedVarianceandIIDMarket Microstructure
+33:1043:68641:18:27:96:223:487:12:g_d0_f3:12:g_d0_f3:A:Noise"DiscussionPaper.
+33:1044:68663:27:18:71:539:460:12:g_d0_f3:12:g_d0_f3:B:[39]Harvey, A.C.(1998)\LongMemoryin StochasticVolatility," in J. Knight andS. Satchell
+33:1045:68749:18:28:96:525:442:12:g_d0_f3:12:g_d0_f3:A:(eds.)ForecastingVolatilityin FinancialMarkets, Butterworth-Heinemann,Oxford.
+33:1046:68826:28:18:72:540:414:12:g_d0_f3:12:g_d0_f17:B:[40]Judge,G.,W.E.Gri-th,R.C.Hill,H.LutkepohlandT.-C.Lee(1985)Thetheoryand
+33:1047:68899:18:28:96:418:396:12:g_d0_f17:12:g_d0_f3:A:Practice of Econometrics, SecondEdition,JhonWiley& Sons.
+33:1048:68955:28:18:71:540:368:12:g_d0_f3:12:g_d0_f3:B:[41]Martens,M.,Y.-C.ChangandS.J.Taylor(2002),\AComparisonofSeasonal
+33:1049:69022:18:18:96:539:350:12:g_d0_f3:12:g_d0_f17:A:Adjustment  MethodswhenForecastingIntraday  Volatility",JournalofFinancial
+33:1050:69096:18:28:96:204:332:12:g_d0_f17:12:g_d0_f3:A:Research,25,283299.
+33:1051:69115:28:18:72:539:304:12:g_d0_f3:12:g_d0_f3:B:[42]Merton,R.C.(1980),"Onestimatingtheexpectedreturnonthemarket:An
+33:1052:69181:18:28:96:461:286:12:g_d0_f3:12:g_d0_f3:A:exploratoryinvestigation",Journalof FinancialEconomics, 8, 323-361.
+33:1053:69248:28:18:72:539:258:12:g_d0_f3:12:g_d0_f3:B:[43]Nelson,D.B.andC.Q.Cao(1992),\ Inequality Constraints in theUnivariateGARCH
+33:1054:69326:18:28:96:433:240:12:g_d0_f3:12:g_d0_f3:A:Model"Journalof BusinessandEconomicStatistics, 10,229-235.
+33:1055:69384:28:17:72:539:212:12:g_d0_f3:12:g_d0_f3:B:[44]Sims,C.A.(1974),"Distributedlags",in Intrilligator,M.D.andD.A.Kendrick,
+33:1056:69459:17:28:96:446:195:12:g_d0_f17:12:g_d0_f3:A:Frontiersof QuantitativeEconomicsII, North-Holland,Amsterdam.
+33:1057:69520:28:18:71:539:167:12:g_d0_f3:12:g_d0_f3:B:[45]Sims,C.A.(1993),\Rationalexpectationsmodelingwithseasonallyadjusteddata",
+33:1058:69597:18:28:96:275:149:12:g_d0_f17:12:g_d0_f3:A:JournalOfEconometrics, 55,9-19.
+33:1059:69628:28:28:71:533:121:12:g_d0_f3:12:g_d0_f3:B:[46]Stock, J.H.andM.W.Watson(2003),Introductionto Econometrics, Addison-Wesley.
+33:1060:69707:28:18:72:539:93:12:g_d0_f3:12:g_d0_f3:B:[47]Taylor,S. J. andX.Xu(1997),\Theincrementalvolatility informationin onemillion
+33:1061:69788:18:0:96:464:75:12:g_d0_f3:12:g_d0_f3:A:foreignexchangequotations",Journalof Empirical Finance, 4, 317-340.
+34:1062:69857:0:18:72:539:671:12:g_d0_f3:12:g_d0_f3:B:[48]West,K.(2004),\ForecastEvaluation"inElliott,G.,C.W.J.GrangerandA.
+34:1063:69926:18:28:96:497:653:12:g_d0_f3:12:g_d0_f3:A:Timmerman(eds.)Handbook of EconomicForecasting(Elsevier,forthcoming).
+34:1064:69995:28:18:71:540:625:12:g_d0_f3:12:g_d0_f3:B:[49]WoernerJ. (2002),\Variationalsumsandpower variation:a unifyingapproach to
+34:1065:70072:18:18:96:539:607:12:g_d0_f3:12:g_d0_f3:A:modelselectionandestimationin semimartingalemodels",DiscussionPaper,Oxford
+34:1066:70146:18:28:96:150:589:12:g_d0_f3:12:g_d0_f3:A:University.
+34:1067:70157:28:18:71:539:561:12:g_d0_f3:12:g_d0_f3:B:[50]Wooldridge,J.M.(1999),IntroductoryEconometrics:A  ModernApproach,  South-
+34:1068:70234:18:28:96:141:543:12:g_d0_f3:12:g_d0_f3:A:Western.
+34:1069:70242:28:18:72:539:515:12:g_d0_f3:12:g_d0_f3:B:[51]Wood, R.A.,T.H.McInishandJ. K.Ord(1985)\AnInvestigationof Transactions
+34:1070:70316:18:27:96:389:497:12:g_d0_f3:12:g_d0_f3:A:DataforNYSEStocks",Journalof Finance, 40,723-739.
+34:1071:70365:27:18:72:539:470:12:g_d0_f3:12:g_d0_f3:B:[52]Zhang,L.,Mykland,P. A.andA-t-Sahalia,Y.(2003),\Ataleof two timescales:
+34:1072:70440:18:18:96:539:452:12:g_d0_f3:12:g_d0_f3:A:Determiningintegratedvolatility  withnoisyhigh-frequencydata",WorkingPaper
+34:1073:70514:18:0:96:177:434:12:g_d0_f3:12:g_d0_f3:A:w10111,NBER.
+35:1074:70528:0:18:122:484:568:12:g_d0_f21:12:g_d0_f21:C:Figure1: UnconstrainedWeights onLaggedDailyPredictors
+35:1075:70581:18:12:71:540:550:10:g_d0_f10:10:g_d0_f10:F:This\fgureplotstheweights (normalizedto sumupto one)obtainedfromanOLSlogvolatility regression
+35:1076:70674:12:12:72:539:538:10:g_d0_f10:10:g_d0_f10:F:fora fourweek(4wks) predictionhorizonwith10 lagsof thefollowingdailyregressors:(1)realizedvolatility,
+35:1077:70775:12:12:72:539:526:10:g_d0_f10:10:g_d0_f10:F:denotedbyQVM IDAS; (2)realizedpower variation,denotedbyP V M IDAS; (3)absolutereturns;and
+35:1078:70864:12:295:72:539:514:10:g_d0_f10:10:g_d0_f10:F:(4)dailyrange,denotedby dailyR.Theweights areestimatedwithnorestrictionsusingtheentiresample.
+35:1079:70957:295:0:103:103:219:9:Helvetica:9:Helvetica:?:12345678910−0.1
+35:1080:70972:0:0:79:103:253:9:Helvetica:9:Helvetica:A:−0.05
+35:1081:70977:0:0:98:103:283:9:Helvetica:9:Helvetica:A:0
+35:1082:70978:0:0:85:103:314:9:Helvetica:9:Helvetica:?:0.05
+35:1083:70982:0:0:90:103:344:9:Helvetica:9:Helvetica:?:0.1
+35:1084:70985:0:0:85:103:374:9:Helvetica:9:Helvetica:?:0.15
+35:1085:70989:0:0:90:103:404:9:Helvetica:9:Helvetica:?:0.2
+35:1086:70992:0:0:85:103:435:9:Helvetica:9:Helvetica:?:0.25
+35:1087:70996:0:0:90:103:465:9:Helvetica:9:Helvetica:?:0.3
+35:1088:70999:0:10:85:470:495:9:Helvetica:9:Helvetica:?:0.35QV MIDAS
+35:1089:71011:10:10:424:454:485:9:Helvetica:9:Helvetica:?:Daily absolute returnsDaily R
+35:1090:71040:10:0:424:469:475:9:Helvetica:9:Helvetica:?:PV MIDAS
+36:1091:71050:0:17:83:524:585:12:g_d0_f21:12:g_d0_f21:C:Figure2: MIDASandABDLLogVolatility predictionFourWeekHorizon
+36:1092:71110:17:12:71:539:568:10:g_d0_f10:10:g_d0_f10:F:This\fgureplotstheweights of theMIDASestimatorswitha four-weekpredictionhorizonfordi-erent
+36:1093:71200:12:12:72:539:556:10:g_d0_f10:10:g_d0_f10:F:regressors:(1)a MIDASmodelbasedondailysquaredreturnsappearingin regression(1.9);(2)MIDAS
+36:1094:71288:12:12:72:539:544:10:g_d0_f10:10:g_d0_f10:F:regressioninvolvingpastdailyrealizedvolatility appearingin regression(1.1)denotedby QV;(3)daily
+36:1095:71383:12:12:72:539:532:10:g_d0_f10:10:g_d0_f10:F:realizedpower torunregression(1.7)denotedby PV;(4)dailyabsolutereturnstorunregression(1.5)
+36:1096:71473:12:12:72:540:520:10:g_d0_f10:10:g_d0_f10:F:denotedABSand\fnally;and(5)thedailyrangeforregression(1.6)denotedby R.Thesolidlineis the
+36:1097:71561:12:12:72:539:508:10:g_d0_f10:10:g_d0_f10:F:benchmarkABDLARFI(5,d)modelspeci\fcationappearingin equation(1.10).Allestimatesareobtained
+36:1098:71651:12:295:72:176:496:10:g_d0_f10:10:g_d0_f10:F:usingtheentiresample.
+36:1099:71672:295:0:97:97:201:9:Helvetica:9:Helvetica:A:051015202530354045500
+36:1100:71693:0:0:79:97:244:9:Helvetica:9:Helvetica:A:0.05
+36:1101:71697:0:0:84:97:283:9:Helvetica:9:Helvetica:?:0.1
+36:1102:71700:0:0:79:97:322:9:Helvetica:9:Helvetica:A:0.15
+36:1103:71704:0:0:84:97:361:9:Helvetica:9:Helvetica:?:0.2
+36:1104:71707:0:0:79:97:400:9:Helvetica:9:Helvetica:A:0.25
+36:1105:71711:0:0:84:97:439:9:Helvetica:9:Helvetica:?:0.3
+36:1106:71714:0:10:79:452:478:9:Helvetica:9:Helvetica:A:0.35ABDL
+36:1107:71722:10:10:428:515:468:9:Helvetica:9:Helvetica:?:QV MIDASDaily squared returns
+36:1108:71751:10:0:428:472:458:9:Helvetica:9:Helvetica:?:Daily RPV MIDAS
+37:1109:71768:0:18:95:512:613:12:g_d0_f21:12:g_d0_f21:A:Figure3: MIDASVolatility FourWeeksHorizonandDailyRegressors
+37:1110:71827:18:12:71:539:595:10:g_d0_f10:10:g_d0_f10:F:This\fgureplotstheweights thattheMIDASestimatorswitha four-weeks(4wks) predictionhorizonfor
+37:1111:71918:12:12:72:539:583:10:g_d0_f10:10:g_d0_f10:F:di-erent regressors:(1)a MIDASmodelbasedondailysquaredreturnsappearingin regression(1.9);(2)
+37:1112:72010:12:12:72:539:571:10:g_d0_f10:10:g_d0_f10:F:MIDASregressioninvolvingpastdailyrealizedvolatility appearingin regression(1.1)denotedby QV;(3)
+37:1113:72105:12:11:72:539:559:10:g_d0_f10:10:g_d0_f10:F:dailyrealizedpower to runregression(1.7)denotedby PV;(4)dailyabsolutereturnsto runregression(1.5)
+37:1114:72202:11:12:72:539:548:10:g_d0_f10:10:g_d0_f10:F:denotedby ABS;and(5)thedailyrangeforregression(1.6)denotedby R. Allestimatesareobtainedusing
+37:1115:72294:12:329:72:150:536:10:g_d0_f10:10:g_d0_f10:F:theentiresample.
+37:1116:72310:329:0:139:139:207:8:Helvetica:8:Helvetica:?:051015202530354045500
+37:1117:72331:0:0:128:139:245:8:Helvetica:8:Helvetica:?:0.1
+37:1118:72334:0:0:128:139:279:8:Helvetica:8:Helvetica:?:0.2
+37:1119:72337:0:0:128:139:313:8:Helvetica:8:Helvetica:?:0.3
+37:1120:72340:0:0:128:139:347:8:Helvetica:8:Helvetica:?:0.4
+37:1121:72343:0:0:128:139:381:8:Helvetica:8:Helvetica:?:0.5
+37:1122:72346:0:0:128:139:415:8:Helvetica:8:Helvetica:?:0.6
+37:1123:72349:0:0:128:139:449:8:Helvetica:8:Helvetica:?:0.7
+37:1124:72352:0:10:128:521:483:8:Helvetica:8:Helvetica:?:0.8Daily squared returns
+37:1125:72376:10:10:442:480:473:8:Helvetica:8:Helvetica:?:Daily QVDaily ABS
+37:1126:72393:10:0:442:474:463:8:Helvetica:8:Helvetica:?:Daily RDaily PV
+38:1127:72410:0:18:86:521:601:12:g_d0_f21:12:g_d0_f21:C:Figure4: MIDASWeights OneWeekHorizonandIntra-DailyRegressors
+38:1128:72470:18:12:71:539:583:10:g_d0_f10:10:g_d0_f10:F:This\fgureplotstheweights of theMIDASestimatorsforoneweek(1wk) predictionhorizonforpredictinglog
+38:1129:72566:12:12:72:539:571:10:g_d0_f10:10:g_d0_f10:F:increments of quadraticvariationbasedon log5-minutehigh-frequencyintra-dailysquared(absolute)returns
+38:1130:72666:12:11:72:539:559:10:g_d0_f10:10:g_d0_f10:F:appearingin regression(3.1).TheMIDASpolynomialweights forbothhourlyadjustedandunadjusted
+38:1131:72754:11:362:71:428:548:10:g_d0_f10:10:g_d0_f10:F:squaredreturnsaredisplayed.Allestimatesareobtainedusingtheentiresample.
+38:1132:72825:362:0:86:86:186:10:Helvetica:10:Helvetica:?:051015202530354045500
+38:1133:72846:0:0:72:86:244:10:Helvetica:10:Helvetica:F:0.5
+38:1134:72849:0:0:80:86:298:10:Helvetica:10:Helvetica:A:1
+38:1135:72850:0:0:72:86:351:10:Helvetica:10:Helvetica:F:1.5
+38:1136:72853:0:0:80:86:405:10:Helvetica:10:Helvetica:A:2
+38:1137:72854:0:0:72:86:459:10:Helvetica:10:Helvetica:F:2.5
+38:1138:72857:0:0:80:109:512:10:Helvetica:10:Helvetica:A:3x 10
+38:1139:72862:0:14:109:117:520:7:Helvetica:7:Helvetica:?:−3
+38:1140:72864:14:0:531:549:506:10:Helvetica:10:Helvetica:?:Unadj.Adj.

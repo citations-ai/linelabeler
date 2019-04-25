@@ -1,0 +1,1769 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:?:NBER WORKING PAPER SERIES
+1:1:25:100:14:175:435:610:12:g_d0_f1:12:g_d0_f1:?:ASSET PRICING IN THE FREQUENCY DOMAIN:
+1:2:63:14:28:238:374:596:12:g_d0_f1:12:g_d0_f1:?:THEORY AND EMPIRICS
+1:3:82:28:14:266:345:568:12:g_d0_f1:12:g_d0_f1:A:Ian Dew-Becker
+1:4:96:14:28:270:340:554:12:g_d0_f1:12:g_d0_f1:A:Stefano Giglio
+1:5:110:28:14:253:359:526:12:g_d0_f1:12:g_d0_f1:A:Working Paper 19416
+1:6:129:14:42:218:393:512:12:g_d0_f1:12:g_d0_f1:?:http://www.nber.org/papers/w19416
+1:7:162:42:14:173:438:470:12:g_d0_f1:12:g_d0_f1:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:198:14:14:237:374:456:12:g_d0_f1:12:g_d0_f1:?:1050 Massachusetts Avenue
+1:9:223:14:14:250:362:442:12:g_d0_f1:12:g_d0_f1:?:Cambridge, MA 02138
+1:10:242:14:172:266:344:428:12:g_d0_f1:12:g_d0_f1:A:September 2013
+1:11:256:172:14:72:539:256:12:g_d0_f1:12:g_d0_f1:A:We appreciate helpful comments and discussions from Francisco Barillas, Rhys Bidder, Jarda
+1:12:346:14:14:72:539:242:12:g_d0_f1:12:g_d0_f1:A:Borovicka, John Campbell, John Cochrane, Lars Hansen, John Heaton, Urban Jermann, Bryan Kelly,
+1:13:439:14:14:72:539:228:12:g_d0_f1:12:g_d0_f1:A:Nikola Mirkov, Marius Rodriguez, Eric Swanson, and seminar participants at the San Francisco
+1:14:530:14:14:72:537:214:12:g_d0_f1:12:g_d0_f1:A:Fed, University of Bergen, University of Wisconsin, Chicago Booth, UC Santa Cruz, Bank of
+1:15:618:14:14:71:538:200:12:g_d0_f1:12:g_d0_f1:A:Canada, Kellogg Junior Finance Conference, SED, ITAM, and the Macro Finance Society. The
+1:16:705:14:14:72:539:186:12:g_d0_f1:12:g_d0_f1:A:views expressed herein are those of the authors and do not necessarily reflect the views of the
+1:17:799:14:28:72:266:172:12:g_d0_f1:12:g_d0_f1:A:National Bureau of Economic Research.
+1:18:836:28:14:72:540:144:12:g_d0_f1:12:g_d0_f1:A:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:19:932:14:14:72:540:130:12:g_d0_f1:12:g_d0_f1:A:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:20:1027:14:28:72:169:116:12:g_d0_f1:12:g_d0_f1:A:NBER publications.
+1:21:1045:28:14:72:540:88:12:g_d0_f1:12:g_d0_f1:A:© 2013 by Ian Dew-Becker and Stefano Giglio. All rights reserved. Short sections of text, not to exceed
+1:22:1148:14:14:72:540:74:12:g_d0_f1:12:g_d0_f1:A:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:23:1252:14:0:72:177:60:12:g_d0_f1:12:g_d0_f1:A:is given to the source.
+2:24:1275:0:14:72:369:700:12:g_d0_f1:12:g_d0_f1:A:Asset Pricing in the Frequency Domain: Theory and Empirics
+2:25:1333:14:14:72:245:686:12:g_d0_f1:12:g_d0_f1:A:Ian Dew-Becker and Stefano Giglio
+2:26:1366:14:14:72:234:672:12:g_d0_f1:12:g_d0_f1:A:NBER Working Paper No. 19416
+2:27:1394:14:14:72:150:658:12:g_d0_f1:12:g_d0_f1:A:September 2013
+2:28:1408:14:28:72:210:644:12:g_d0_f1:12:g_d0_f1:A:JEL No. E2,E21,G0,G1,G12
+2:29:1432:28:28:273:338:616:12:Times:12:Times:A:ABSTRACT
+2:30:1440:28:14:72:540:588:12:g_d0_f1:12:g_d0_f1:A:In affine asset pricing models, the innovation to the pricing kernel is a function of innovations to current
+2:31:1548:14:14:72:540:574:12:g_d0_f1:12:g_d0_f1:A:and expected future values of an economic state variable, for example consumption growth, aggregate
+2:32:1647:14:14:72:540:560:12:g_d0_f1:12:g_d0_f1:A:market returns, or short-term interest rates. The impulse response of this priced variable to fundamental
+2:33:1752:14:14:72:540:546:12:g_d0_f1:12:g_d0_f1:A:shocks has a frequency (Fourier) decomposition, which captures the fluctuations induced in the priced
+2:34:1853:14:14:72:540:532:12:g_d0_f1:12:g_d0_f1:A:variable at different frequencies. We show that the price of risk for a given shock can be represented
+2:35:1955:14:14:72:540:518:12:g_d0_f1:12:g_d0_f1:A:as a weighted integral over that spectral decomposition. The weight assigned to each frequency then
+2:36:2054:14:14:72:540:504:12:g_d0_f1:12:g_d0_f1:A:represents the frequency-specific price of risk, and is entirely determined by the preferences of investors.
+2:37:2162:14:14:72:540:490:12:g_d0_f1:12:g_d0_f1:A:For example, standard Epstein-Zin preferences imply that the weight of the pricing kernel lies almost
+2:38:2263:14:14:72:540:476:12:g_d0_f1:12:g_d0_f1:A:entirely at extremely low frequencies, most of it on cycles longer than 230 years; internal habit-formation
+2:39:2370:14:14:72:540:462:12:g_d0_f1:12:g_d0_f1:A:models imply that the weight is shifted to high frequencies. We estimate the frequency-specific risk
+2:40:2470:14:14:72:540:448:12:g_d0_f1:12:g_d0_f1:A:prices for the equity market, focusing on economically interesting frequencies. Most of the pricing
+2:41:2569:14:14:72:540:434:12:g_d0_f1:12:g_d0_f1:A:weight falls on low frequencies – corresponding to cycles longer than 8 years – broadly consistent
+2:42:2667:14:42:72:214:420:12:g_d0_f1:12:g_d0_f1:A:with Epstein-Zin preferences.
+2:43:2696:42:14:72:151:378:12:g_d0_f1:12:g_d0_f1:A:Ian Dew-Becker
+2:44:2710:14:14:72:197:364:12:g_d0_f1:12:g_d0_f1:A:Fuqua School of Business
+2:45:2734:14:14:72:152:350:12:g_d0_f1:12:g_d0_f1:A:Duke University
+2:46:2749:14:14:72:167:336:12:g_d0_f1:12:g_d0_f1:A:Durham, NC 27705
+2:47:2765:14:28:72:204:322:12:g_d0_f1:12:g_d0_f1:A:ian.dewbecker@gmail.com
+2:48:2788:28:14:72:142:294:12:g_d0_f1:12:g_d0_f1:A:Stefano Giglio
+2:49:2802:14:14:72:179:280:12:g_d0_f1:12:g_d0_f1:A:University of Chicago
+2:50:2823:14:14:72:196:266:12:g_d0_f1:12:g_d0_f1:A:Booth School of Business
+2:51:2847:14:14:72:205:252:12:g_d0_f1:12:g_d0_f1:A:5807 S. Woodlawn Avenue
+2:52:2870:14:14:72:162:238:12:g_d0_f1:12:g_d0_f1:A:Chicago, IL 60637
+2:53:2887:14:14:72:124:224:12:g_d0_f1:12:g_d0_f1:A:and NBER
+2:54:2895:14:0:72:234:210:12:g_d0_f1:12:g_d0_f1:A:stefano.giglio@chicagobooth.edu
+3:55:2926:0:30:54:190:703:17:g_d0_f3:17:g_d0_f3:C:1  Introduction
+3:56:2941:30:18:54:558:673:12:g_d0_f4:12:g_d0_f4:B:This paper studies how risk prices for shocks depend on their dynamic e§ects on the economy.
+3:57:3033:18:18:54:558:655:12:g_d0_f4:12:g_d0_f4:B:Theoretical asset pricing models have strong implications for how short- and long-term shocks
+3:58:3126:18:18:54:558:637:12:g_d0_f4:12:g_d0_f4:B:should be priced, and we empirically estimate how the power of a shock at di§erent frequencies
+3:59:3220:18:17:54:180:619:12:g_d0_f4:12:g_d0_f4:B:determines its risk price.
+3:60:3246:17:18:71:558:602:12:g_d0_f4:12:g_d0_f4:A:A¢ ne models, which model innovations to the pricing kernel as being linearly (or log-linearly)
+3:61:3341:18:18:54:558:584:12:g_d0_f4:12:g_d0_f4:B:related to innovations in economic state variables, comprise the backbone of both theoretical and
+3:62:3438:18:18:54:558:566:12:g_d0_f4:12:g_d0_f4:B:empirical asset pricing. This paper shows that many widely used a¢ ne frameworks can be written,
+3:63:3534:18:18:54:558:548:12:g_d0_f4:12:g_d0_f4:B:estimated, and interpreted in the frequency domain. The frequency-domain decompositions give a
+3:64:3628:18:18:54:558:530:12:g_d0_f4:12:g_d0_f4:B:clear and compact characterization of the precise manner in which the dynamics of the economy
+3:65:3721:18:18:54:558:512:12:g_d0_f4:12:g_d0_f4:B:a§ect risk prices and provide sharp tests of competing asset pricing models. The decomposition
+3:66:3815:18:18:54:558:494:12:g_d0_f4:12:g_d0_f4:B:is also economically intuitive in the sense that it provides a direct link between priced shocks and
+3:67:3915:18:18:54:248:476:12:g_d0_f4:12:g_d0_f4:B:their dynamic e§ects on the economy.
+3:68:3951:18:18:71:558:458:12:g_d0_f4:12:g_d0_f4:A:Economic dynamics are a key input to many asset pricing models. Under EpsteinñZin (1989)
+3:69:4039:18:18:54:558:440:12:g_d0_f4:12:g_d0_f4:B:preferences, the risk premium of an asset depends on the covariance of its return with current
+3:70:4133:18:18:54:558:422:12:g_d0_f4:12:g_d0_f4:B:and expected future consumption growth. For the intertemporal CAPM (Merton, 1973; Campbell,
+3:71:4224:18:18:54:558:404:12:g_d0_f4:12:g_d0_f4:B:1993), risk premia depend on covariances with shocks to both current market returns and also
+3:72:4316:18:18:54:558:386:12:g_d0_f4:12:g_d0_f4:B:expected future returns. And in a¢ ne term structure models, risk premia can be expressed as a
+3:73:4410:18:17:54:519:368:12:g_d0_f4:12:g_d0_f4:B:function of the covariance with innovations to current and future short-term interest rates.
+3:74:4502:17:18:71:558:351:12:g_d0_f4:12:g_d0_f4:A:In dynamic asset pricing models, then, the price of risk for a shock depends on how it a§ects
+3:75:4595:18:18:54:558:333:12:g_d0_f4:12:g_d0_f4:B:the state of the economy in the current period and in the future. Under the standard time-domain
+3:76:4691:18:18:54:558:315:12:g_d0_f4:12:g_d0_f4:B:representation, the dynamic response of the economy to a shock is summarized by an impulse
+3:77:4781:18:18:54:558:297:12:g_d0_f4:12:g_d0_f4:B:response function (IRF). Long-run shocks to consumption growth that have large risk prices under
+3:78:4877:18:18:54:558:279:12:g_d0_f4:12:g_d0_f4:B:EpsteinñZin preferences, for example, those studied in Bansal and Yaron (2004), have IRFs that
+3:79:4971:18:18:54:120:261:12:g_d0_f4:12:g_d0_f4:B:decay slowly.
+3:80:4984:18:18:71:558:243:12:g_d0_f4:12:g_d0_f4:A:In this paper we propose and derive a new frequency-domain representation of risk prices. First,
+3:81:5080:18:18:54:558:225:12:g_d0_f4:12:g_d0_f4:B:we map the IRF of a shock into the frequency domain. A shock that has strong long-run e§ects
+3:82:5172:18:18:54:558:207:12:g_d0_f4:12:g_d0_f4:B:has high power at low frequencies, whereas shocks that dissipate rapidly have more power at high
+3:83:5268:18:18:54:558:189:12:g_d0_f4:12:g_d0_f4:B:frequencies. We refer to the frequency-domain version of the IRF as the impulse transfer function
+3:84:5365:18:18:54:87:171:12:g_d0_f4:12:g_d0_f4:B:(ITF).
+3:85:5371:18:18:71:558:153:12:g_d0_f4:12:g_d0_f4:A:Our key result is that the price of risk for a shock depends on the integral of the impulse transfer
+3:86:5471:18:17:54:557:135:12:g_d0_f4:12:g_d0_f4:B:function over the set of all frequencies!, weighted by a functionZ(!). The weighting function,Z,
+3:87:5567:17:18:54:558:118:12:g_d0_f4:12:g_d0_f4:B:determines how shocks are priced depending on how they a§ect the economy at di§erent frequencies.
+3:88:5664:18:18:54:557:100:12:g_d0_f4:12:g_d0_f4:B:In other words,Z(!)represents the price of exposure to shocks with frequency!: it is a frequency-
+3:89:5761:18:0:54:558:82:12:g_d0_f4:12:g_d0_f4:B:speciÖc price of risk. In this paper we deriveZ(!)in closed form for various theoretical models and
+4:90:5861:0:18:54:266:703:12:g_d0_f4:12:g_d0_f4:B:estimate it empirically in equity markets.
+4:91:5903:18:18:71:558:685:12:g_d0_f4:12:g_d0_f4:A:The advantage of studying risk prices in the frequency domain is thatZgives a compact and
+4:92:5992:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:intuitive measure of how di§erent shocks a§ect the pricing kernel. Importantly, we obtain a sep-
+4:93:6088:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:aration result: the total price of risk for a shock depends on the interaction of two objects: the
+4:94:6186:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:impulse transfer function of the shock, which depends on the dynamics of the economy but not
+4:95:6278:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:on the agentís preferences, and theZfunction, whichonlydepends on the preferences. We can
+4:96:6367:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:therefore study the frequency-speciÖc risk prices by only looking at the agentsíutility functions. For
+4:97:6469:17:18:54:558:578:12:g_d0_f4:12:g_d0_f4:B:example, under power utility, the only thing that determines the price of risk for a shock is how it
+4:98:6569:18:18:54:558:560:12:g_d0_f4:12:g_d0_f4:B:a§ects consumption today. SoZis perfectly áat across frequencies because cycles of all frequencies
+4:99:6667:18:18:54:558:542:12:g_d0_f4:12:g_d0_f4:B:receive identical weight in the pricing kernel. Under EpsteinñZin preferences, long-run risks matter,
+4:100:6768:18:18:54:557:524:12:g_d0_f4:12:g_d0_f4:B:andZplaces much more weight at low than high frequencies; in fact, the weight is focused only
+4:101:6861:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:at the very lowest frequencies. Conversely, for an agent with internal habit formation most of the
+4:102:6959:18:18:54:269:488:12:g_d0_f4:12:g_d0_f4:B:weight ofZis located at high frequencies.
+4:103:7000:18:18:71:558:470:12:g_d0_f4:12:g_d0_f4:A:The spectral representation we derive is useful for two main reasons.  First, it gives us new
+4:104:7093:18:18:54:558:452:12:g_d0_f4:12:g_d0_f4:B:insights about the importance of the dynamics of shocks for asset prices in di§erent models. For
+4:105:7189:18:18:54:558:434:12:g_d0_f4:12:g_d0_f4:B:example, from the spectral decomposition we learn that EpsteinñZin preferences imply that the
+4:106:7282:18:18:54:558:416:12:g_d0_f4:12:g_d0_f4:B:majority of the pricing weight lies extraordinarily close to frequency zero: under a standard cali-
+4:107:7381:18:18:54:558:398:12:g_d0_f4:12:g_d0_f4:B:bration of the model, more than half of the mass of the spectral weighting function lies on cycles
+4:108:7479:18:18:54:558:380:12:g_d0_f4:12:g_d0_f4:B:longer than 230 years. Conversely, for an agent with internal habit formation most of the weight of
+4:109:7578:18:18:54:558:362:12:g_d0_f5:12:g_d0_f4:B:Zis located at high frequencies. The decomposition also tells us which aspects of the consumption
+4:110:7675:18:17:54:558:344:12:g_d0_f4:12:g_d0_f4:B:process one needs to focus on most when calibrating models: for example, under EpsteinñZin pref-
+4:111:7771:17:18:54:558:327:12:g_d0_f4:12:g_d0_f4:B:erences, we Önd that the key statistics are the unconditional standard deviation and the long-run
+4:112:7868:18:18:54:558:309:12:g_d0_f4:12:g_d0_f4:B:standard deviation of consumption growth; other aspects of consumptionís dynamic behavior are
+4:113:7961:18:18:54:125:291:12:g_d0_f4:8:g_d0_f4:B:unimportant.1
+4:114:7974:18:18:71:558:273:12:g_d0_f4:12:g_d0_f4:A:The second key reason the spectral representation is useful is that it enables more general and
+4:115:8069:18:18:54:561:255:12:g_d0_f4:12:g_d0_f4:B:powerful estimation of dynamic asset pricing models. Our theoretical analysis shows that Epsteinñ
+4:116:8166:18:18:54:558:237:12:g_d0_f4:12:g_d0_f4:B:Zin preferences put weight on mainly the lowest-frequency e§ects of shocks on consumption growth.
+4:117:8263:18:18:54:558:219:12:g_d0_f4:12:g_d0_f4:B:But low frequencies are precisely where we have the least estimation power empirically. Our spectral
+4:118:8363:18:18:54:558:201:12:g_d0_f4:12:g_d0_f4:B:decomposition makes it simple to test a more general model in which agents still care about ìlong-
+4:119:8461:18:18:54:558:183:12:g_d0_f4:12:g_d0_f4:B:runî shocks, but where the long-run is deÖned as say, 10 or more years in the future, rather
+4:120:8553:18:18:54:558:165:12:g_d0_f4:12:g_d0_f4:B:than 200 years. Economically, given the range of peopleís lifespans, it makes sense to test for the
+4:121:8652:18:18:54:558:147:12:g_d0_f4:12:g_d0_f4:B:importance of áuctuations that last for decades but decay before reaching one or two hundred years.
+4:122:8751:18:18:54:558:129:12:g_d0_f4:12:g_d0_f4:B:Furthermore, we obtain much more precise estimates of the weighting functions when considering
+4:123:8845:18:17:54:558:111:12:g_d0_f4:12:g_d0_f4:B:this alternative deÖnition of ìlong-runî because estimation power rises substantially as we move
+4:124:8941:17:16:67:557:94:7:g_d0_f4:10:g_d0_f4:F:1See Dew-Becker (2013) for a more extensive analysis of the issues around calibrating the long-run standard
+4:125:9048:16:0:54:97:78:10:g_d0_f4:10:g_d0_f4:F:deviation.
+5:126:9059:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:away from the lowest frequencies. We are thus able to retain the economic intuition from tightly
+5:127:9155:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:theorized models that long-term consumption dynamics may be important for asset pricing, but at
+5:128:9250:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:the same time estimate a model in a more reduced form that is superior statistically in the sense
+5:129:9347:18:18:54:477:649:12:g_d0_f4:12:g_d0_f4:B:that risk prices are more tightly estimated, as well as economically more plausible.
+5:130:9431:18:18:71:558:631:12:g_d0_f4:12:g_d0_f4:A:After deriving the frequency decomposition in section 2 and characterizing weighting functions
+5:131:9525:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:theoretically for various consumption-based models in section 3, we proceed in section 4 to estimate
+5:132:9625:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:them using the cross-section of equity prices.  Since we are interested in distinguishing among
+5:133:9720:17:18:54:558:578:12:g_d0_f4:12:g_d0_f4:B:theoretical models that have very stark implications for the pricing of di§erent frequencies, we
+5:134:9816:18:18:54:558:560:12:g_d0_f4:12:g_d0_f4:B:parametrizeZto be able to capture separately the price of high-frequency and low-frequency shocks,
+5:135:9914:18:18:54:558:542:12:g_d0_f4:12:g_d0_f4:B:letting the data speak on which are considered the more important frequencies by investors. We
+5:136:10008:18:18:54:558:524:12:g_d0_f4:12:g_d0_f4:B:do this in two ways: by restricting the weighting functionZto be the one literally implied by
+5:137:10101:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:the various models, and, second, by focusing on the pricing of economically interesting groups of
+5:138:10198:18:18:54:558:488:12:g_d0_f4:12:g_d0_f4:B:frequencies ñfrequencies related to the business cycle, trends lasting longer than the business cycle,
+5:139:10300:18:18:54:360:470:12:g_d0_f4:12:g_d0_f4:B:and áuctuations at frequencies shorter than business cycles.
+5:140:10360:18:18:71:558:452:12:g_d0_f4:12:g_d0_f4:A:The estimation shows strong support for long-run risk models, but only when we deÖne the long-
+5:141:10454:18:18:54:558:434:12:g_d0_f4:12:g_d0_f4:B:run based on the frequency-domain interpretation of shocks with cycles longer than the business
+5:142:10549:18:18:54:558:416:12:g_d0_f4:12:g_d0_f4:B:cycle. When we estimate the parameters of EpsteinñZin preferences structurally, most of them are
+5:143:10645:18:18:54:558:398:12:g_d0_f4:12:g_d0_f4:B:insigniÖcant or barely signiÖcant, which would normally be interpreted as a rejection of the model:
+5:144:10744:18:18:54:558:380:12:g_d0_f4:12:g_d0_f4:B:neither short- nor long-run consumption growth seems to price equities. But that rejection would
+5:145:10840:18:18:54:558:362:12:g_d0_f4:12:g_d0_f4:B:be a mistake. When we allow ìlong-runîto simply mean cycles longer than the business cycle, we
+5:146:10934:18:17:54:558:344:12:g_d0_f4:12:g_d0_f4:B:Önd that covariance with long-run shocks is a statistically and economically signiÖcant determinant
+5:147:11033:17:18:54:197:327:12:g_d0_f4:12:g_d0_f4:B:of average portfolio returns.
+5:148:11062:18:18:71:558:309:12:g_d0_f4:12:g_d0_f4:A:Section 5 extends the analysis to returns-based models, in which agents price equity portfolios
+5:149:11157:18:18:54:558:291:12:g_d0_f4:12:g_d0_f4:B:based on their covariance with short- and long-run shocks to equity market returns.  We Önd
+5:150:11248:18:18:54:558:273:12:g_d0_f4:12:g_d0_f4:B:(consistent with Campbell and Vuolteenaho, 2004) that it is low-frequency shocks to equity market
+5:151:11345:18:18:54:558:255:12:g_d0_f4:12:g_d0_f4:B:returns that drive the pricing kernel. In section 6 we show that the methodology easily generalizes to
+5:152:11447:18:18:54:558:237:12:g_d0_f4:12:g_d0_f4:B:pricing kernels that depend on innovations of multiple variables. For example, stochastic volatility
+5:153:11547:18:18:54:558:219:12:g_d0_f4:12:g_d0_f4:B:models (as in Campbell et al., 2013) can imply that agents care about long-run innovations in
+5:154:11640:18:18:54:166:201:12:g_d0_f4:12:g_d0_f4:B:returnsandvolatility.
+5:155:11661:18:18:71:558:183:12:g_d0_f4:12:g_d0_f4:A:There is very little extant analysis of preference-based asset pricing in the frequency domain.
+5:156:11756:18:18:54:558:165:12:g_d0_f4:12:g_d0_f4:B:Otrok, Ravikumar, and Whiteman (2002) and Yu (2012) are two recent examples. While these
+5:157:11844:18:18:54:558:147:12:g_d0_f4:12:g_d0_f4:B:papers also present spectral decompositions of prices and consumption áuctuations, the object of
+5:158:11940:18:18:54:558:129:12:g_d0_f4:12:g_d0_f4:B:the decomposition is di§erent from ours. Instead of studying how shocks at di§erent frequencies are
+5:159:12039:18:18:54:558:111:12:g_d0_f4:12:g_d0_f4:B:priced by an agent, they ask how the price of a consumption claim depends on the spectral density
+5:160:12136:18:0:54:558:93:12:g_d0_f4:12:g_d0_f4:B:of consumption and its relation with returns. Since the price of the asset reáects a combination of
+6:161:12236:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:preferences and dynamics, it is impossible to evaluate the relative importance of the two beyond very
+6:162:12337:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:speciÖc cases (in other words, no separation holds in their analysis). Relatedly, unlike this paper,
+6:163:12437:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:they do not obtain analytic relationships between the spectrum and asset prices; their results are
+6:164:12535:18:18:54:189:649:12:g_d0_f4:8:g_d0_f4:B:all generated numerically.2
+6:165:12562:18:18:71:558:631:12:g_d0_f4:12:g_d0_f4:A:Our paper is closely related to a vast empirical literature studying the importance of dynamics
+6:166:12657:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:for asset pricing in the time domain. Empirically, a number of papers study the relationship between
+6:167:12757:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:asset returns and consumption growth at long horizons as methods of testing the implications of
+6:168:12852:17:18:54:557:578:12:g_d0_f4:12:g_d0_f4:B:EpsteinñZin or power utility preferences.3These papers test the asset pricing implications of speciÖc
+6:169:12953:18:18:54:558:560:12:g_d0_f4:12:g_d0_f4:B:models (power utility, EpsteinñZin) about the pricing of consumption risk at di§erent horizons.
+6:170:13048:18:18:54:558:542:12:g_d0_f4:12:g_d0_f4:B:By working in the frequency domain, we can allow for a much more general speciÖcation where
+6:171:13139:18:18:54:558:524:12:g_d0_f4:12:g_d0_f4:B:shocks to consumption at di§erent horizons may have di§erent risk prices, for example a modiÖed
+6:172:13234:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:interpretation of ìlong-run risksîin which the important shocks are those with cycles longer than
+6:173:13331:18:18:54:148:488:12:g_d0_f4:12:g_d0_f4:B:the business cycle.
+6:174:13350:18:18:71:558:470:12:g_d0_f4:12:g_d0_f4:A:Finally, our work is related to other important decompositions of the stochastic discount factor
+6:175:13446:18:18:54:558:452:12:g_d0_f4:12:g_d0_f4:B:(SDF), most notably Alvarez and Jermann (2005), Hansen and Scheinkman (2009) and Borovicka
+6:176:13536:18:18:54:558:434:12:g_d0_f4:12:g_d0_f4:B:et al.  (2011).  These decompositions study the dynamic e§ects of shocks for the evolution of
+6:177:13629:18:18:54:558:416:12:g_d0_f4:12:g_d0_f7:B:the stochastic discount factor over time. Instead, we focus on decomposing how theone-period
+6:178:13721:18:18:54:558:398:12:g_d0_f7:12:g_d0_f4:B:innovationin the stochastic discount factor depends on the way consumption responds dynamically
+6:179:13816:18:18:53:557:380:12:g_d0_f4:12:g_d0_f4:B:to the shocks. In other words, these papers analyze the impulse response function of the SDF,
+6:180:13909:18:18:53:557:362:12:g_d0_f4:12:g_d0_f4:B:while we study the impulse response function of consumption (and how it a§ects the one-period
+6:181:14002:18:17:53:557:344:12:g_d0_f4:12:g_d0_f4:B:innovation in the SDF). Relative to these alternative decompositions, our approach has advantages
+6:182:14099:17:18:53:557:327:12:g_d0_f4:12:g_d0_f4:B:and disadvantages. The disadvantage is that we cannot study the theoretical valuation of claims
+6:183:14194:18:18:53:557:309:12:g_d0_f4:12:g_d0_f4:B:to consumption many periods from now (the focus for example of Hansen, Heaton, and Li, 2008,
+6:184:14286:18:18:53:557:291:12:g_d0_f4:12:g_d0_f4:B:and Lettau and Wachter, 2007). The reason is that these depend on the evolution of the interest
+6:185:14381:18:18:53:557:273:12:g_d0_f4:12:g_d0_f4:B:rate, which in turn depends on how the mean of the SDF will evolve over time. Naturally, this
+6:186:14474:18:18:53:557:255:12:g_d0_f4:12:g_d0_f4:B:does not leave us unable to price assets; one-period innovations in the SDF are enough to study the
+6:187:14573:18:18:53:557:237:12:g_d0_f4:12:g_d0_f4:B:cross-section of returns. The main advantage of our approach is that by focusing on the spectral
+6:188:14669:18:18:53:557:219:12:g_d0_f4:12:g_d0_f4:B:decomposition of the one-period innovation, we are able to separately study thedynamicsof the
+6:189:14762:18:18:54:557:201:12:g_d0_f4:12:g_d0_f4:B:shocks from thepreferencesabout the dynamics, a separation result that is not possible when
+6:190:14853:18:18:54:558:183:12:g_d0_f4:12:g_d0_f4:B:studying the evolution of the whole SDF. As the next sections will show, this separation result
+6:191:14948:18:15:67:557:165:7:g_d0_f4:10:g_d0_f4:F:2Another related paper, Ortu et al. (2013), studies a di§erent decomposition of the consumption growth process,
+6:192:15059:15:12:54:558:150:10:g_d0_f4:10:g_d0_f4:F:based on components that operate at di§erent time scales. That paper shows by numerical calibration that the more
+6:193:15172:12:12:54:558:138:10:g_d0_f4:10:g_d0_f4:F:persistent components of the consumption growth process (as estimated from the data) could be responsible for the
+6:194:15285:12:9:54:294:126:10:g_d0_f4:10:g_d0_f4:F:high equity premium in a standard EpsteinñZin model.
+6:195:15337:9:15:67:557:117:7:g_d0_f4:10:g_d0_f4:F:3For example, Parker and Julliard, 2005 ; Malloy, Moskowitz, and Vissing-Jorgensen, 2009; Bansal, Dittmar, and
+6:196:15447:15:12:54:558:102:10:g_d0_f4:10:g_d0_f4:F:Lundblad, 2005; Yu, 2012; Daniel and Marshall, 1997; Binsbergen, Brandt and Koijen, 2012; Hansen, Heaton, and
+6:197:15556:12:0:54:97:90:10:g_d0_f4:10:g_d0_f4:F:Li (2008).
+7:198:15567:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:will be crucial both for understanding the implications of di§erent models for dynamics, and for
+7:199:15663:18:45:54:506:685:12:g_d0_f4:12:g_d0_f4:B:allowing us to extend and generalize the models in an economically important direction.
+7:200:15750:45:30:54:515:640:17:g_d0_f3:17:g_d0_f3:C:2  Spectral decomposition and the weighting function
+7:201:15802:30:18:54:558:610:12:g_d0_f4:12:g_d0_f4:B:We derive our spectral decomposition of the pricing kernel under two main assumptions. First,
+7:202:15895:18:18:54:557:592:12:g_d0_f4:12:g_d0_f4:B:the log pricing kernel,mt, depends on the current and future values of a scalar state variable,
+7:203:15990:18:18:54:558:574:12:g_d0_f5:12:g_d0_f4:B:xt(perhaps consumption growth or market returns). Second, the dynamics of the economy are
+7:204:16079:18:18:54:399:556:12:g_d0_f4:12:g_d0_f4:B:described by a vector moving average processXtwhich includesxt.
+7:205:16142:18:18:71:274:538:12:g_d0_f3:12:g_d0_f4:A:Assumption 1:Structure of the SDF.
+7:206:16176:18:17:71:557:520:12:g_d0_f4:12:g_d0_f4:A:Denote the log pricing kernel (or stochastic discount factor, SDF)mt+1=log(Mt+1).4We
+7:207:16260:17:38:53:542:503:12:g_d0_f4:12:g_d0_f4:B:assume thatmtdepends on current and future values of some state variable in the economyxt:
+7:208:16350:38:0:216:331:465:12:g_d0_f5:8:g_d0_f9:?:mt+1=F(It)--Et+1
+7:209:16366:0:29:337:350:480:8:g_d0_f11:12:g_d0_f12:A:1X
+7:210:16368:29:0:334:349:451:8:g_d0_f8:8:g_d0_f9:A:k=0
+7:211:16371:0:40:352:558:465:12:g_d0_f5:12:g_d0_f4:A:zkxt+1+k(1)
+7:212:16382:40:18:53:557:425:12:g_d0_f4:12:g_d0_f4:B:wherextis thepriced variable,F(It)is some unspeciÖed function of the time-t information set
+7:213:16473:18:18:53:558:407:12:g_d0_f5:12:g_d0_f4:B:It,-Et+1-Et+1-Etdenotes the innovation in expectations, andEtis the expectation opera-
+7:214:16559:18:18:53:558:389:12:g_d0_f4:12:g_d0_f4:B:tor conditional on information available on datet,It. This speciÖcation is su¢ ciently áexible to
+7:215:16656:18:18:53:557:371:12:g_d0_f4:12:g_d0_f4:B:match standard empirical applications of power utility, habit formation, EpsteinñZin preferences,
+7:216:16753:18:18:53:557:353:12:g_d0_f4:12:g_d0_f4:B:the CAPM and the ICAPM (in some cases under log-linearization). Equation (1) implies that risk
+7:217:16847:18:18:53:373:335:12:g_d0_f4:12:g_d0_f4:B:prices are constant, but we relax that assumption in section 6.
+7:218:16910:18:18:71:295:317:12:g_d0_f3:12:g_d0_f4:A:Assumption 2:Dynamics of the economy.
+7:219:16947:18:33:71:399:299:12:g_d0_f5:12:g_d0_f4:A:xtis driven by anN-dimensional vector moving average process
+7:220:17007:33:20:275:558:266:12:g_d0_f5:12:g_d0_f4:A:xt=B1Xt(2)
+7:221:17017:20:33:272:558:246:12:g_d0_f5:12:g_d0_f4:A:Xt= - (L)"t(3)
+7:222:17031:33:39:53:547:213:12:g_d0_f4:12:g_d0_f4:B:whereXthas dimensionN-1,Lis the lag operator,- (L)is anN-Nmatrix lag polynomial,
+7:223:17111:39:0:262:301:174:12:g_d0_f6:12:g_d0_f6:A:- (L) =
+7:224:17118:0:29:309:321:189:8:g_d0_f11:12:g_d0_f12:?:1X
+7:225:17120:29:0:305:321:160:8:g_d0_f8:8:g_d0_f9:?:k=0
+7:226:17123:0:40:323:558:174:12:g_d0_f6:12:g_d0_f4:A:-kLk(4)
+7:227:17130:40:18:53:558:134:12:g_d0_f4:12:g_d0_f4:B:and"tis anN-1vector of (potentially correlated) martingale di§erence sequences.  We refer
+7:228:17219:18:17:53:558:116:12:g_d0_f4:12:g_d0_f4:B:to"tas the fundamental shocks to the economy. We make no assumptions about the conditional
+7:229:17309:17:16:67:557:99:7:g_d0_f4:10:g_d0_f4:F:4We do not take a position on whethermtis the pricing kernel for all markets or whether there is some sort of
+7:230:17418:16:0:54:479:83:10:g_d0_f4:10:g_d0_f4:F:market segmentation. We also do not assume at this point that there is a representative investor.
+8:231:17516:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:distribution of"texcept that it has a mean of zero. Throughout the paperBjdenotes a conformable
+8:232:17611:18:18:54:557:685:12:g_d0_f4:12:g_d0_f4:B:(here,1-N) vector equal to 1 in elementjand zero elsewhere. We assume without loss of generality
+8:233:17707:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:thatxtis the Örst element ofXt. Furthermore, we require- (L)to have properties su¢ cient to
+8:234:17798:18:18:54:451:649:12:g_d0_f4:12:g_d0_f4:B:ensure thatxtis covariance stationary with a Önite and continuous spectrum.
+8:235:17873:18:18:71:558:631:12:g_d0_f4:12:g_d0_f4:A:Putting together the assumptions aboutmt+1with those about the dynamics of the economy,
+8:236:17960:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:we can write the innovations to the pricing kernel as function of the impulse-response functions
+8:237:18056:18:17:54:557:595:12:g_d0_f4:12:g_d0_f4:B:(IRFs) ofxtto each of the fundamental shocks. In particular, for thejth fundamental shock,"j;t,
+8:238:18151:17:41:54:354:578:12:g_d0_f4:12:g_d0_f4:B:the IRF ofxtis the set ofgj;kfor all horizonskdeÖned as:
+8:239:18207:41:0:233:262:537:12:g_d0_f5:12:g_d0_f10:?:gj;k-
+8:240:18212:0:12:266:276:558:12:g_d0_f12:12:g_d0_f12:A:(
+8:241:18213:12:18:280:372:546:12:g_d0_f5:12:g_d0_f6:A:B1-kB0jfork-0
+8:242:18226:18:0:297:355:528:12:g_d0_f6:12:g_d0_f4:A:0otherwise
+8:243:18236:0:39:543:558:537:12:g_d0_f4:12:g_d0_f4:A:(5)
+8:244:18239:39:39:54:333:498:12:g_d0_f4:12:g_d0_f4:B:We can then rewrite the innovation to the log SDF as:
+8:245:18292:39:0:206:288:459:12:g_d0_f6:12:g_d0_f10:?:-Et+1mt+1=-
+8:246:18303:0:26:291:308:471:12:g_d0_f12:12:g_d0_f12:?:X
+8:247:18304:26:0:297:300:445:8:g_d0_f8:8:g_d0_f8:A:j
+8:248:18305:0:9:324:332:480:12:g_d0_f12:8:g_d0_f11:A: 1
+8:249:18306:9:26:319:336:471:12:g_d0_f12:12:g_d0_f12:A:X
+8:250:18307:26:0:320:336:445:8:g_d0_f8:8:g_d0_f9:A:k=0
+8:251:18310:0:0:339:367:459:12:g_d0_f5:8:g_d0_f8:?:zkgj;k
+8:252:18316:0:21:368:377:480:12:g_d0_f12:12:g_d0_f12:A:!
+8:253:18317:21:41:379:558:459:12:g_d0_f5:12:g_d0_f4:A:"j;t+1(6)
+8:254:18326:41:0:54:140:418:12:g_d0_f4:12:g_d0_f6:B:and we refer to(
+8:255:18342:0:13:140:160:427:12:g_d0_f12:8:g_d0_f11:?:P1
+8:256:18344:13:14:152:558:414:8:g_d0_f8:12:g_d0_f4:A:k=0zkgj;k)as the price of risk for shockj. In this representation, the e§ect of a
+8:257:18425:14:18:54:558:400:12:g_d0_f4:12:g_d0_f4:B:fundamental shock"j;t+1on the pricing kernel is decomposed by horizon: for every horizonk, the
+8:258:18519:18:18:54:558:382:12:g_d0_f4:12:g_d0_f4:B:e§ect of the shock onmt+1depends on the response ofxat that horizon (captured bygj;k) and on
+8:259:18611:18:18:54:234:364:12:g_d0_f4:12:g_d0_f4:B:the horizon-speciÖc price of riskzk.
+8:260:18647:18:18:71:558:346:12:g_d0_f4:12:g_d0_f4:A:Our main result is a spectral decomposition in which the price of risk of a shock depends on the
+8:261:18743:18:18:54:541:328:12:g_d0_f4:12:g_d0_f4:B:response ofxto that shock at each frequency!and on a frequency-speciÖc price of risk,Z(!).
+8:262:18833:18:35:71:523:310:12:g_d0_f3:12:g_d0_f7:A:Result 1.Under Assumptions 1 and 2, we can write the innovations to the log SDF as,
+8:263:18916:35:0:173:255:275:12:g_d0_f6:12:g_d0_f10:?:-Et+1mt+1=-
+8:264:18927:0:25:257:274:286:12:g_d0_f12:12:g_d0_f12:A:X
+8:265:18928:25:0:264:267:261:8:g_d0_f8:8:g_d0_f8:A:j
+8:266:18929:0:8:277:286:291:12:g_d0_f12:12:g_d0_f12:A:-
+8:267:18930:8:17:290:296:283:12:g_d0_f6:12:g_d0_f6:C:1
+8:268:18931:17:0:287:300:266:12:g_d0_f6:12:g_d0_f5:C:2-
+8:269:18933:0:27:303:320:291:12:g_d0_f12:8:g_d0_f8:A:Z-
+8:270:18935:27:0:309:321:264:8:g_d0_f11:8:g_d0_f8:?:--
+8:271:18937:0:0:324:401:275:12:g_d0_f5:12:g_d0_f5:A:Z(!)Gj(!)d!
+8:272:18948:0:16:402:411:291:12:g_d0_f12:12:g_d0_f12:?:-
+8:273:18949:16:42:412:558:275:12:g_d0_f5:12:g_d0_f4:A:"j;t+1(7)
+8:274:18958:42:18:71:557:233:12:g_d0_f7:12:g_d0_f7:A:whereZ(!)is a weighting function depending on the risk pricesfzkgandGj(!)measures the
+8:275:19043:18:38:53:327:215:12:g_d0_f7:12:g_d0_f7:C:dynamic e§ects of"j;tonxin the frequency domain,
+8:276:19091:38:0:227:313:177:12:g_d0_f5:12:g_d0_f6:A:Z(!)-z0+ 2
+8:277:19101:0:30:319:331:192:8:g_d0_f11:12:g_d0_f12:A:1X
+8:278:19103:30:0:315:331:162:8:g_d0_f8:8:g_d0_f9:A:k=1
+8:279:19106:0:39:333:558:177:12:g_d0_f5:12:g_d0_f4:A:zkcos (!k)(8)
+8:280:19119:39:0:222:271:138:12:g_d0_f5:12:g_d0_f10:?:Gj(!)-
+8:281:19125:0:29:286:299:153:8:g_d0_f11:12:g_d0_f12:?:1X
+8:282:19127:29:0:283:298:124:8:g_d0_f8:8:g_d0_f9:?:k=0
+8:283:19130:0:0:301:558:138:12:g_d0_f6:12:g_d0_f4:A:cos (!k)gj;k(9)
+9:284:19146:0:24:54:370:703:12:g_d0_f7:12:g_d0_f7:C:Equivalently, the price of risk for a shock"jcan be written as
+9:285:19208:24:29:221:233:679:8:g_d0_f11:12:g_d0_f12:?:1X
+9:286:19210:29:0:217:233:650:8:g_d0_f8:8:g_d0_f9:?:k=0
+9:287:19213:0:0:236:275:664:12:g_d0_f5:12:g_d0_f6:C:zkgj;k=
+9:288:19220:0:16:283:289:672:12:g_d0_f6:12:g_d0_f6:C:1
+9:289:19221:16:0:280:293:656:12:g_d0_f6:12:g_d0_f5:A:2-
+9:290:19223:0:28:296:313:681:12:g_d0_f12:8:g_d0_f8:?:Z-
+9:291:19225:28:0:302:314:653:8:g_d0_f11:8:g_d0_f8:A:--
+9:292:19227:0:39:317:558:664:12:g_d0_f5:12:g_d0_f4:A:Z(!)Gj(!)d!(10)
+9:293:19242:39:18:71:222:625:12:g_d0_f3:12:g_d0_f3:A:Derivation and discussion
+9:294:19267:18:18:71:558:607:12:g_d0_f4:12:g_d0_f4:A:For each shock"j;t, the set of coe¢ cientsfgj;kgis the impulse-response function ofxtat di§erent
+9:295:19363:18:18:54:558:589:12:g_d0_f4:12:g_d0_f4:B:horizonsk. Moving into the frequency domain, the Örst step is to decompose the e§ects of each
+9:296:19456:18:18:54:558:571:12:g_d0_f4:12:g_d0_f4:B:shock"j;ton the future values ofxtinto cycles of di§erent frequencies. To do this, we use the
+9:297:19549:18:32:54:235:553:12:g_d0_f4:12:g_d0_f4:B:discrete Fourier transform to deÖne
+9:298:19584:32:0:253:295:521:12:g_d0_f6:12:g_d0_f10:A:~Gj(!)-
+9:299:19591:0:29:303:316:533:8:g_d0_f11:12:g_d0_f12:A:1X
+9:300:19593:29:0:300:316:504:8:g_d0_f8:8:g_d0_f9:A:k=0
+9:301:19596:0:42:318:558:518:12:g_d0_f5:12:g_d0_f4:A:e-i!kgj;k(11)
+9:302:19609:42:18:54:557:476:12:g_d0_f4:12:g_d0_f4:B:If"j;thas very long-lasting e§ects onx, then most of the mass of~Gj(!)will lie at low frequencies,
+9:303:19707:18:18:54:557:458:12:g_d0_f4:8:g_d0_f4:B:while if"j;tinduces mainly transitory dynamics inx, then~Gj(!)will isolate high frequencies.5
+9:304:19800:18:18:54:558:440:12:g_d0_f4:12:g_d0_f4:B:We refer to~Gjas theimpulse transfer function(ITF) of shockjsince it is the transfer function
+9:305:19893:18:0:54:181:422:12:g_d0_f4:12:g_d0_f4:B:associated with the Ölter
+9:306:19918:0:13:184:205:431:12:g_d0_f12:8:g_d0_f11:?:P1
+9:307:19920:13:0:197:239:418:8:g_d0_f8:12:g_d0_f5:?:k=0gj;kL
+9:308:19928:0:22:239:247:426:8:g_d0_f8:12:g_d0_f4:?:k.
+9:309:19930:22:23:71:412:404:12:g_d0_f4:12:g_d0_f4:A:Using the inverse Fourier transform, the price of risk for shockjis
+9:310:19997:23:29:202:215:381:8:g_d0_f11:12:g_d0_f12:?:1X
+9:311:19999:29:0:199:215:352:8:g_d0_f8:8:g_d0_f9:?:k=0
+9:312:20002:0:0:217:257:366:12:g_d0_f5:12:g_d0_f6:C:zkgj;k=
+9:313:20009:0:29:265:277:381:8:g_d0_f11:12:g_d0_f12:A:1X
+9:314:20011:29:0:261:277:352:8:g_d0_f8:8:g_d0_f9:A:k=0
+9:315:20014:0:17:279:288:383:12:g_d0_f12:12:g_d0_f12:A:-
+9:316:20015:17:0:288:298:366:12:g_d0_f5:8:g_d0_f8:?:zk
+9:317:20017:0:16:303:309:374:12:g_d0_f6:12:g_d0_f6:A:1
+9:318:20018:16:0:300:313:358:12:g_d0_f6:12:g_d0_f5:A:2-
+9:319:20020:0:28:316:333:383:12:g_d0_f12:8:g_d0_f8:A:Z-
+9:320:20022:28:0:323:334:355:8:g_d0_f11:8:g_d0_f8:A:--
+9:321:20024:0:0:340:403:369:12:g_d0_f6:12:g_d0_f5:C:~Gj(!)ei!kd!
+9:322:20036:0:17:404:413:383:12:g_d0_f12:12:g_d0_f12:?:-
+9:323:20037:17:39:537:558:366:12:g_d0_f4:12:g_d0_f4:A:(12)
+9:324:20041:39:20:54:558:327:12:g_d0_f4:12:g_d0_f4:B:Now note thatgj;k= 0for allk <0. In the Appendix we show that, as a consequence, for any
+9:325:20129:20:15:67:557:307:7:g_d0_f4:10:g_d0_f4:F:5To be more rigorous about the sense in which~Ggives weights in terms of cycles of di§erent frequencies, we
+9:326:20236:15:12:53:558:292:10:g_d0_f4:10:g_d0_f4:F:refer to the spectral representation theorem. SpeciÖcally, denote-xk;tthe process induced inxtif the only shock
+9:327:20347:12:20:53:196:280:10:g_d0_f4:10:g_d0_f4:F:realizations were for"k. That is,
+9:328:20380:20:0:263:289:260:10:g_d0_f15:10:g_d0_f15:A:-xk;t=
+9:329:20386:0:25:295:305:273:7:g_d0_f16:10:g_d0_f12:?:1X
+9:330:20388:25:0:292:305:248:7:g_d0_f14:7:g_d0_f17:?:j=0
+9:331:20391:0:28:308:348:260:10:g_d0_f13:7:g_d0_f14:?:gk;j"k;t-k
+9:332:20401:28:18:54:197:232:10:g_d0_f13:10:g_d0_f4:F:"k;thas a spectral representation
+9:333:20434:18:0:260:285:214:10:g_d0_f13:10:g_d0_f15:A:"k;t=
+9:334:20439:0:23:288:303:228:10:g_d0_f12:7:g_d0_f14:?:Z-
+9:335:20441:23:0:294:305:205:7:g_d0_f16:7:g_d0_f14:?:--
+9:336:20443:0:24:307:351:214:10:g_d0_f13:10:g_d0_f15:?:eit!dZ(!)
+9:337:20452:24:12:54:557:190:10:g_d0_f4:10:g_d0_f4:F:wheredZ(!)is an orthogonal increment process with constant variance (see, e.g., Priestley, 1981, for a textbook
+9:338:20563:12:30:54:505:178:10:g_d0_f4:10:g_d0_f4:F:statement and proof of the spectral representation theorem). The spectral representation ofxk;tis then
+9:339:20665:30:0:178:204:148:10:g_d0_f15:10:g_d0_f15:?:-xk;t=
+9:340:20671:0:22:207:222:161:10:g_d0_f12:7:g_d0_f14:?:Z-
+9:341:20673:22:0:212:224:139:7:g_d0_f16:7:g_d0_f14:?:--
+9:342:20675:0:0:226:241:148:10:g_d0_f13:7:g_d0_f14:A:eit!
+9:343:20679:0:24:247:258:160:7:g_d0_f16:10:g_d0_f12:?:1X
+9:344:20681:24:0:244:258:136:7:g_d0_f14:7:g_d0_f17:?:j=0
+9:345:20684:0:0:260:337:148:10:g_d0_f13:10:g_d0_f15:A:gk;je-ij!dZ(!) =
+9:346:20700:0:22:340:355:161:10:g_d0_f12:7:g_d0_f14:?:Z-
+9:347:20702:22:0:345:357:139:7:g_d0_f16:7:g_d0_f14:A:--
+9:348:20704:0:32:359:434:148:10:g_d0_f13:10:g_d0_f15:?:eit!~Gk(!)dZ(!)
+9:349:20719:32:0:56:372:116:10:g_d0_f15:10:g_d0_f4:F:~Gkthus determines the magnitude of áuctuations in-xk;tat frequency!.
+10:350:20789:0:25:54:250:703:12:g_d0_f5:12:g_d0_f4:B:k >0we can rewrite equation (12) as:
+10:351:20825:25:29:173:185:678:8:g_d0_f11:12:g_d0_f12:?:1X
+10:352:20827:29:0:169:185:649:8:g_d0_f8:8:g_d0_f9:?:k=0
+10:353:20830:0:0:187:227:663:12:g_d0_f5:12:g_d0_f6:C:zkgj;k=
+10:354:20837:0:16:235:241:671:12:g_d0_f6:12:g_d0_f6:C:1
+10:355:20838:16:0:231:244:655:12:g_d0_f6:12:g_d0_f5:A:2-
+10:356:20840:0:28:248:265:680:12:g_d0_f12:8:g_d0_f8:?:Z-
+10:357:20842:28:0:254:266:652:8:g_d0_f11:8:g_d0_f8:A:--
+10:358:20844:0:0:268:301:663:12:g_d0_f5:12:g_d0_f6:A:Gj(!)
+10:359:20849:0:21:303:312:684:12:g_d0_f12:12:g_d0_f12:A: 
+10:360:20849:21:0:312:343:663:12:g_d0_f5:12:g_d0_f6:C:z0+ 2
+10:361:20854:0:29:349:362:678:8:g_d0_f11:12:g_d0_f12:A:1X
+10:362:20856:29:0:346:361:649:8:g_d0_f8:8:g_d0_f9:A:k=1
+10:363:20859:0:0:364:418:663:12:g_d0_f5:12:g_d0_f6:A:zkcos (!k)
+10:364:20869:0:21:418:427:684:12:g_d0_f12:12:g_d0_f12:A:!
+10:365:20870:21:42:429:558:663:12:g_d0_f5:12:g_d0_f4:A:d!(13)
+10:366:20876:42:39:54:252:621:12:g_d0_f4:12:g_d0_f4:B:whereGj(!)is the real part of~Gj(!),
+10:367:20912:39:0:207:261:582:12:g_d0_f5:12:g_d0_f5:C:G(!) =re
+10:368:20920:0:11:263:270:596:12:g_d0_f12:12:g_d0_f12:A:-
+10:369:20921:11:0:273:303:585:12:g_d0_f6:12:g_d0_f6:A:~Gj(!)
+10:370:20927:0:14:303:310:596:12:g_d0_f12:12:g_d0_f12:A:-
+10:371:20928:14:0:313:322:582:12:g_d0_f6:12:g_d0_f6:A:=
+10:372:20929:0:29:330:343:597:8:g_d0_f11:12:g_d0_f12:A:1X
+10:373:20931:29:0:327:342:568:8:g_d0_f8:8:g_d0_f9:A:k=0
+10:374:20934:0:39:345:558:582:12:g_d0_f6:12:g_d0_f4:A:cos (!k)gj;k(14)
+10:375:20950:39:18:71:558:543:12:g_d0_f4:12:g_d0_f4:A:In other words, the price of risk for any shock depends on the integral of its response in the
+10:376:21044:18:39:54:436:525:12:g_d0_f4:12:g_d0_f4:B:frequency domain,Gj(!), weighted by a real-valued functionZ(!), where
+10:377:21113:39:0:231:306:486:12:g_d0_f5:12:g_d0_f6:A:Z(!)-z0+ 2
+10:378:21123:0:29:312:324:501:8:g_d0_f11:12:g_d0_f12:?:1X
+10:379:21125:29:0:308:324:472:8:g_d0_f8:8:g_d0_f9:?:k=1
+10:380:21128:0:39:326:558:486:12:g_d0_f5:12:g_d0_f4:A:zkcos (!k)(15)
+10:381:21142:39:24:54:123:447:12:g_d0_f4:12:g_d0_f4:B:We thus have
+10:382:21154:24:29:223:235:423:8:g_d0_f11:12:g_d0_f12:?:1X
+10:383:21156:29:0:219:235:394:8:g_d0_f8:8:g_d0_f9:?:k=0
+10:384:21159:0:0:238:277:409:12:g_d0_f5:12:g_d0_f6:C:zkgj;k=
+10:385:21166:0:17:285:291:417:12:g_d0_f6:12:g_d0_f6:C:1
+10:386:21167:17:0:282:295:400:12:g_d0_f6:12:g_d0_f5:A:2-
+10:387:21169:0:27:298:315:425:12:g_d0_f12:8:g_d0_f8:A:Z-
+10:388:21171:27:0:304:316:398:8:g_d0_f11:8:g_d0_f8:A:--
+10:389:21173:0:34:319:558:409:12:g_d0_f5:12:g_d0_f4:A:Gj(!)Z(!)d!(16)
+10:390:21188:34:18:53:558:375:12:g_d0_f4:12:g_d0_f4:B:This equation maps an element-by-element product of the inÖnite collectionsfgj;kgandfzkginto
+10:391:21280:18:18:53:557:357:12:g_d0_f4:12:g_d0_f4:B:a simple integral over a Önite range in the frequency domain. This result is closely related to the
+10:392:21379:18:18:53:557:339:12:g_d0_f4:12:g_d0_f4:B:convolution and Parsevalís theorems, but is not identical because we take advantage of the fact that
+10:393:21479:18:17:53:328:321:12:g_d0_f5:8:g_d0_f4:C:gj;k= 0fork <0to ensure thatZ(!)is real-valued.6
+10:394:21527:17:18:71:557:304:12:g_d0_f4:12:g_d0_f4:A:The price of risk for shock"jthus depends on an integral over the functionGj(!), with weights
+10:395:21620:18:18:53:558:286:12:g_d0_f5:12:g_d0_f6:F:Z(!). Recall that for each frequency!,Gj(!)tells us the e§ect of"jonxat frequency!.Z(!)
+10:396:21707:18:18:53:486:268:12:g_d0_f4:12:g_d0_f4:B:therefore determines the price of risk for any shock to the variablexat frequency!.
+10:397:21790:18:18:71:557:250:12:g_d0_f4:12:g_d0_f4:A:Three Önal points are worth making. First, in our derivation we assume that thelogSDF,mt+1,
+10:398:21881:18:18:53:558:232:12:g_d0_f4:12:g_d0_f4:B:is linear in the news about future values ofxt. We present the result in this form because the most
+10:399:21980:18:18:53:557:214:12:g_d0_f4:12:g_d0_f4:B:widely used models (including log-linearized version of non-a¢ ne models) usually specify an a¢ ne
+10:400:22078:18:18:53:557:196:12:g_d0_f4:12:g_d0_f4:B:form for the log SDF. The same decomposition holds if, instead of assuming thatmt+1is a¢ ne, we
+10:401:22173:18:18:53:557:178:12:g_d0_f4:12:g_d0_f4:B:assume that thelevelof the SDFMt+1is linear in the news terms. For the remainder of the paper,
+10:402:22267:18:18:53:388:160:12:g_d0_f4:12:g_d0_f4:B:we focus on the decomposition of the innovations in the log SDF.
+10:403:22331:18:18:71:558:142:12:g_d0_f4:12:g_d0_f4:A:Second, the result does not hinge on any particular assumption about the conditional distribution
+10:404:22428:18:18:53:558:124:12:g_d0_f4:12:g_d0_f4:B:of the shocks"t+1(e.g., normality). Third, we are also not making any assumptions about whether
+10:405:22523:18:18:53:557:106:12:g_d0_f4:12:g_d0_f4:B:the conditional distribution of"t+1is identical across periods or varies over time.  It could be
+10:406:22619:18:0:67:554:88:7:g_d0_f4:10:g_d0_f4:F:6We thank Urban Jermann for pointing out an alternative derivation of our result based on Parsevalís theorem.
+11:407:22729:0:39:54:202:703:12:g_d0_f4:12:g_d0_f4:B:heteroskedastic, for example.
+11:408:22758:39:26:54:407:664:14:g_d0_f3:14:g_d0_f6:C:2.1  Examples of impulse transfer functionsGj(!)
+11:409:22806:26:18:54:558:638:12:g_d0_f4:12:g_d0_f4:B:Before proceeding further, it is helpful to see examples of what the impulse transfer function looks
+11:410:22906:18:17:54:558:620:12:g_d0_f4:12:g_d0_f4:B:like for some simple impulse response functions.  For the sake of concreteness, suppose for the
+11:411:23001:17:18:54:401:603:12:g_d0_f4:12:g_d0_f4:B:moment that the priced variablextis log consumption growth,-ct.
+11:412:23064:18:18:71:557:585:12:g_d0_f4:12:g_d0_f4:A:Figure 1 plots the impulse response and impulse transfer functions for four di§erent hypothetical
+11:413:23161:18:18:53:557:567:12:g_d0_f4:12:g_d0_f4:B:shocks. Note that while we are ultimately interested in the e§ects of the shocks on consumption
+11:414:23256:18:18:53:557:549:12:g_d0_f4:12:g_d0_f4:B:growth,-ct(since this is what enters the log SDF), we plot the IRF in terms of consumption levels,
+11:415:23354:18:18:53:391:531:12:g_d0_f5:12:g_d0_f4:B:ct, as they are the more natural way to think about consumption.
+11:416:23418:18:18:71:558:513:12:g_d0_f4:12:g_d0_f4:A:The Örst shock is a simple one-time increase in the level of consumption. This shock has a
+11:417:23508:18:18:53:557:495:12:g_d0_f4:12:g_d0_f4:B:áat impulse transfer function on consumption growth, indicating it has power at all frequencies.
+11:418:23604:18:18:53:557:477:12:g_d0_f4:12:g_d0_f4:B:The second shock is a long-run-risk type shock, inducing persistently positive consumption growth,
+11:419:23702:18:18:53:557:459:12:g_d0_f4:12:g_d0_f4:B:with the level of consumption ultimately reaching the same level as that induced by the Örst shock.
+11:420:23801:18:18:53:557:441:12:g_d0_f4:12:g_d0_f4:B:In this case, there is much less power at high frequencies, but the power at frequency zero is
+11:421:23895:18:18:53:557:423:12:g_d0_f4:12:g_d0_f4:B:identical, sinceG(0)depends only on the long-run e§ect of the shock on the level of consumption
+11:422:23990:18:0:53:101:405:12:g_d0_f4:12:g_d0_f6:B:(Gj(0) =
+11:423:23998:0:12:104:125:414:12:g_d0_f12:8:g_d0_f11:?:P1
+11:424:24000:12:15:117:159:402:8:g_d0_f8:12:g_d0_f4:?:k=0gj;k).
+11:425:24009:15:18:71:558:387:12:g_d0_f4:12:g_d0_f4:A:The next two shocks have purely transitory e§ects. The third shock raises consumption for just a
+11:426:24105:18:17:53:557:369:12:g_d0_f4:12:g_d0_f4:B:single period, and we see now zero power at frequency zero and positive power at high frequencies.
+11:427:24203:17:18:53:557:352:12:g_d0_f4:12:g_d0_f4:B:The fourth shock is more interesting.  Consumption rises initially, turns negative in the second
+11:428:24299:18:18:53:557:334:12:g_d0_f4:12:g_d0_f4:B:period, and returns to its initial level in the third period. The transfer function is again equal to
+11:429:24400:18:18:53:558:316:12:g_d0_f4:12:g_d0_f4:B:zero at!= 0, but it now actually has negative power at low and middle frequencies. This is a
+11:430:24492:18:18:53:557:298:12:g_d0_f4:12:g_d0_f4:B:result of the fact that the impulse response of consumption is actually negative in some periods.
+11:431:24589:18:18:53:557:280:12:g_d0_f4:12:g_d0_f4:B:The sign ofGreáects the direction in which the shock drives consumption. If we had reversed the
+11:432:24684:18:18:53:557:262:12:g_d0_f4:12:g_d0_f4:B:signs of the impulse responses for the Örst three shocks, their transfer functions would all have been
+11:433:24786:18:45:53:99:244:12:g_d0_f4:12:g_d0_f4:B:negative.
+11:434:24795:45:30:53:508:199:17:g_d0_f3:17:g_d0_f3:C:3  Weighting functions in consumption-based models
+11:435:24845:30:18:53:558:169:12:g_d0_f4:12:g_d0_f4:B:This section applies the analysis above to a range of standard utility functions for whichmt+1can
+11:436:24942:18:18:53:557:151:12:g_d0_f4:12:g_d0_f4:B:be written as a linear function of innovations to consumption growth. We analyze power utility,
+11:437:25037:18:18:53:558:133:12:g_d0_f4:12:g_d0_f4:B:models of internal and external habit formation, and EpsteinñZin preferences.7We then estimate
+11:438:25131:18:15:67:557:115:7:g_d0_f4:10:g_d0_f4:F:7While these models of preferences are often applied under the assumption of the existence of a representative
+11:439:25241:15:12:54:558:100:10:g_d0_f4:10:g_d0_f4:F:agent, note that that assumption is not strictly necessary. In particular, the pricing kernel generated by an agentís
+11:440:25358:12:0:54:558:88:10:g_d0_f4:10:g_d0_f4:F:Euler equation will hold for any market in which he participates. We thus do not concern ourselves, for now, with
+12:441:25473:0:39:54:366:703:12:g_d0_f4:12:g_d0_f4:B:weighting functions empirically using data on equity returns.
+12:442:25534:39:25:54:386:664:14:g_d0_f3:14:g_d0_f3:C:3.1  Weighting functions in theoretical models
+12:443:25580:25:26:54:172:639:12:g_d0_f3:12:g_d0_f3:C:3.1.1  Power utility
+12:444:25600:26:33:54:281:613:12:g_d0_f4:12:g_d0_f4:B:Under power utility, the log pricing kernel is
+12:445:25646:33:33:247:558:580:12:g_d0_f5:12:g_d0_f4:A:mt+1= log\f---ct+1(17)
+12:446:25668:33:18:53:557:547:12:g_d0_f4:12:g_d0_f4:B:wherectdenotes the log of an agentís consumption,-is the coe¢ cient of relative risk aversion, and
+12:447:25766:18:18:53:557:529:12:g_d0_f10:12:g_d0_f4:B:-log\fis the rate of pure time preference. (17) implies thatz0=-andzk= 0for allk >0, so the
+12:448:25857:18:32:53:299:511:12:g_d0_f4:12:g_d0_f4:B:weighting function under power utility is simply
+12:449:25905:32:33:268:558:479:12:g_d0_f5:12:g_d0_f4:A:Zpower(!) =-(18)
+12:450:25921:33:18:53:557:446:12:g_d0_f5:12:g_d0_f4:B:Zpoweris áat and exactly equal to the coe¢ cient of relative risk aversion.Zpoweris constant because
+12:451:26021:18:18:53:557:428:12:g_d0_f4:12:g_d0_f4:B:the only determinant of the innovation to the SDF is the innovation to consumption on datet+ 1.
+12:452:26116:18:18:53:557:410:12:g_d0_f4:12:g_d0_f4:B:A shock to consumption growth has the same e§ect on the pricing kernel regardless of how long the
+12:453:26213:18:34:53:207:392:12:g_d0_f4:12:g_d0_f4:B:innovation is expected to last.
+12:454:26244:34:26:53:133:358:12:g_d0_f3:12:g_d0_f3:C:3.1.2  Habits
+12:455:26257:26:38:53:451:332:12:g_d0_f4:12:g_d0_f4:B:Adding an internal habit to the preferences yields the lifetime utility function
+12:456:26337:38:0:225:248:294:12:g_d0_f5:12:g_d0_f6:A:Vt=
+12:457:26340:0:29:256:268:309:8:g_d0_f11:12:g_d0_f12:A:1X
+12:458:26342:29:0:253:268:280:8:g_d0_f8:8:g_d0_f9:A:j=0
+12:459:26345:0:0:271:281:294:12:g_d0_f5:8:g_d0_f8:A:\fj
+12:460:26348:0:16:283:384:302:12:g_d0_f6:8:g_d0_f8:?:(Ct+j-bCt+j-1)1--
+12:461:26365:16:0:320:347:286:12:g_d0_f6:12:g_d0_f5:A:1--
+12:462:26368:0:41:537:558:294:12:g_d0_f4:12:g_d0_f4:A:(19)
+12:463:26372:41:18:53:557:253:12:g_d0_f4:12:g_d0_f4:B:whereCt=  exp (ct)is the level of consumption and0-b <1is a parameter determining the
+12:464:26457:18:37:53:289:235:12:g_d0_f4:12:g_d0_f4:B:importance of the habit. The pricing kernel is
+12:465:26503:37:0:162:239:198:12:g_d0_f6:12:g_d0_f5:C:exp (mt+1) =\f
+12:466:26517:0:17:240:446:206:12:g_d0_f6:8:g_d0_f8:?:(Ct+1-bCt)---Et+1b(Ct+2-bCt+1)--
+12:467:26549:17:0:251:436:189:12:g_d0_f6:8:g_d0_f8:A:(Ct-bCt-1)---Etb(Ct+1-bCt)--
+12:468:26577:0:36:537:558:198:12:g_d0_f4:12:g_d0_f4:A:(20)
+12:469:26581:36:18:53:557:162:12:g_d0_f4:12:g_d0_f4:B:If we log-linearize the pricing kernel in terms of-ct+1and-ct+2around a zero-growth steady-state,
+12:470:26678:18:33:54:104:144:12:g_d0_f4:12:g_d0_f4:B:we obtain
+12:471:26687:33:0:116:206:111:12:g_d0_f6:12:g_d0_f5:C:-Et+1mt+1---
+12:472:26699:0:10:208:213:121:12:g_d0_f12:12:g_d0_f12:?:-
+12:473:26700:10:0:214:287:111:12:g_d0_f5:12:g_d0_f6:C:b(1-b)-2+ 1
+12:474:26711:0:10:287:292:121:12:g_d0_f12:12:g_d0_f12:?:-
+12:475:26712:10:23:294:558:111:12:g_d0_f6:12:g_d0_f4:A:-Et+1-ct+1+-b(1-b)-2-Et+1-ct+2(21)
+12:476:26746:23:12:54:557:88:10:g_d0_f4:10:g_d0_f4:F:issues of market completeness or the existence of a representative agent. Of course, wewillassume a representative
+12:477:26860:12:0:54:352:76:10:g_d0_f4:10:g_d0_f4:F:agent when testing the model using data on aggregate consumption.
+13:478:26927:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:With internal habits the pricing kernel depends on both the innovation to current consumption
+13:479:27020:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:growth and also the change in consumption growth between datest+ 1andt+ 2. The spectral
+13:480:27107:18:33:54:278:667:12:g_d0_f4:12:g_d0_f4:B:weighting function under habit formation is
+13:481:27150:33:0:161:244:634:12:g_d0_f5:12:g_d0_f5:C:Zinternal(!) =-
+13:482:27165:0:10:246:251:644:12:g_d0_f12:12:g_d0_f12:?:-
+13:483:27166:10:0:252:324:634:12:g_d0_f6:8:g_d0_f9:A:1 +b(1-b)-2
+13:484:27177:0:10:325:330:644:12:g_d0_f12:12:g_d0_f12:A:-
+13:485:27178:10:32:333:558:634:12:g_d0_f10:12:g_d0_f4:A:--b(1-b)-22 cos (!)(22)
+13:486:27201:32:18:54:558:602:12:g_d0_f4:12:g_d0_f4:B:The weighting function with habits is equal to a constant plus a negative multiple ofcos (!). As
+13:487:27297:18:18:54:335:584:12:g_d0_f4:12:g_d0_f4:B:we would expect,Zinternal(!) =Zpower(!)whenb= 0.
+13:488:27345:18:18:71:558:566:12:g_d0_f4:12:g_d0_f4:A:The left panel of Figure 2 plotsZinternal(!)for various values ofb. Here and in all cases below
+13:489:27440:18:18:54:558:548:12:g_d0_f4:12:g_d0_f4:B:we only plotZbetween0and-as is standard, sinceZis even and periodic. The x-axis lists the
+13:490:27529:18:18:54:558:530:12:g_d0_f4:12:g_d0_f4:B:wavelength of the cycles, as opposed to the frequency!. Given a frequency of!, the corresponding
+13:491:27625:18:18:54:481:512:12:g_d0_f4:12:g_d0_f4:B:cycle has length2-=!periods (the smallest cycle we can discern lasts two periods).
+13:492:27707:18:18:71:557:494:12:g_d0_f4:12:g_d0_f4:A:Asbrises, there are two e§ects. First, the integral overZgets larger, and second, its mass
+13:493:27797:18:18:54:558:476:12:g_d0_f4:12:g_d0_f4:B:shifts to higher frequencies. The latter e§ect is consistent with the usual intuition about internal
+13:494:27897:18:18:54:558:458:12:g_d0_f4:12:g_d0_f4:B:habit formation that households prefer to smooth consumption growth and avoid high-frequency
+13:495:27989:18:18:54:409:440:12:g_d0_f4:8:g_d0_f4:B:áuctuations to a greater extent than they would under power utility.8
+13:496:28058:18:18:71:557:422:12:g_d0_f4:12:g_d0_f4:A:One lesson from the equation forZinternalis that as long asbis the only parameter we can vary,
+13:497:28152:18:17:54:558:404:12:g_d0_f4:12:g_d0_f4:B:there is little áexibility in controlling preferences over di§erent frequencies.cos (!)always crosses
+13:498:28253:17:18:54:557:387:12:g_d0_f4:12:g_d0_f4:B:zero at-=2, so the pricing kernel will always place higher weight on cycles of frequency greater
+13:499:28349:18:18:54:557:369:12:g_d0_f4:8:g_d0_f8:B:than-=2and relatively less weight on cycles with frequency less than-=2. Furthermore,Zinternal
+13:500:28443:18:18:54:266:351:12:g_d0_f4:8:g_d0_f4:B:is monotone, regardless of the value ofb.9
+13:501:28485:18:39:71:294:333:12:g_d0_f4:12:g_d0_f4:A:Under external habit formation, the SDF is
+13:502:28527:39:0:227:303:294:12:g_d0_f6:12:g_d0_f5:A:exp (mt+1) =\f
+13:503:28541:0:9:305:310:312:12:g_d0_f12:12:g_d0_f12:?:-
+13:504:28542:9:0:310:364:303:12:g_d0_f5:8:g_d0_f8:?:Ct+1-b-Ct
+13:505:28551:0:19:365:382:312:12:g_d0_f12:8:g_d0_f8:A:---
+13:506:28554:19:10:305:310:293:12:g_d0_f12:12:g_d0_f12:?:-
+13:507:28555:10:0:310:364:283:12:g_d0_f5:8:g_d0_f9:?:Ct-b-Ct-1
+13:508:28564:0:39:365:558:293:12:g_d0_f12:12:g_d0_f4:A:---(23)
+13:509:28571:39:18:53:557:254:12:g_d0_f4:12:g_d0_f4:B:where-Cdenotes some external measure of consumption (e.g. aggregate consumption or that of an
+13:510:28664:18:18:53:557:236:12:g_d0_f4:12:g_d0_f4:B:agentís neighbors). In this case, the innovation to the SDF depends only on the innovation toCt+1.
+13:511:28762:18:18:53:557:218:12:g_d0_f4:12:g_d0_f4:B:So the weighting function with an external habit will be completely áat. Otrok, Ravikumar, and
+13:512:28856:18:18:53:558:200:12:g_d0_f4:12:g_d0_f4:B:Whiteman (2002) show that the external habit has a strong e§ect on what weightsutilityplaces on
+13:513:28951:18:18:53:557:182:12:g_d0_f4:12:g_d0_f4:B:consumption cycles of di§erent frequencies, but what we show here is the SDF is driven entirely by
+13:514:29049:18:16:67:557:164:7:g_d0_f4:10:g_d0_f4:F:8Otrok, Ravikumar, and Whiteman (2002) obtain a similar result, but in a di§erent manner.  Rather than
+13:515:29151:16:11:54:558:148:10:g_d0_f4:10:g_d0_f4:F:characterize the volatility of the pricing kernel, they characterize the price of a Lucas tree, which is equivalent to
+13:516:29269:11:12:54:558:137:10:g_d0_f4:10:g_d0_f4:F:simply characterizing lifetime utility as a function of the spectral density of consumption growth. While lifetime
+13:517:29383:12:12:54:558:125:10:g_d0_f4:10:g_d0_f4:F:utility is important, it is not the same as the price of risk in the economy. Our results are therefore complements
+13:518:29498:12:9:54:157:113:10:g_d0_f4:10:g_d0_f4:F:rather than substitutes.
+13:519:29522:9:15:67:557:104:7:g_d0_f4:10:g_d0_f4:F:9One potential way to enrich preferences to allow preferences to isolate smaller ranges of the spectrum may be to
+13:520:29635:15:0:54:333:89:10:g_d0_f4:10:g_d0_f4:F:allow for more lags of consumption to enter the utility function.
+14:521:29702:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:one-period innovations, so all cycles receive the same weight in pricing assets. The pricing kernel
+14:522:29801:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:in models with external habit formation, e.g. Campbell and Cochrane (1999), places equal weight
+14:523:29896:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:on all frequencies. On the other hand, the internal habit models of Constantinides (1990) and Abel
+14:524:29994:18:34:54:384:649:12:g_d0_f4:12:g_d0_f4:B:(1990) are heavily weighted towards high-frequency áuctuations.
+14:525:30057:34:26:54:236:615:12:g_d0_f3:12:g_d0_f3:C:3.1.3  EpsteinñZin preferences
+14:526:30087:26:18:54:558:589:12:g_d0_f4:12:g_d0_f4:B:An alternative way of incorporating non-separabilities over time is Epstein and Zinís (1991) for-
+14:527:30184:18:18:54:558:571:12:g_d0_f4:12:g_d0_f4:B:mulation of recursive preferences.  In general, under recursive preferences, anything that a§ects
+14:528:30281:18:18:54:558:553:12:g_d0_f4:12:g_d0_f4:B:an agentís welfare a§ects the pricing kernel. So not only shocks to current and future consump-
+14:529:30376:18:18:54:558:535:12:g_d0_f4:12:g_d0_f4:B:tion growth, but also innovations to higher moments will be priced. We begin by focusing on the
+14:530:30471:18:18:54:558:517:12:g_d0_f4:12:g_d0_f4:B:case where consumption growth is log-normal and homoskedastic. Section 5 considers models with
+14:531:30565:18:18:54:156:499:12:g_d0_f4:12:g_d0_f4:B:stochastic volatility.
+14:532:30587:18:35:71:259:481:12:g_d0_f4:12:g_d0_f4:A:Suppose an agent has lifetime utility
+14:533:30624:35:0:194:217:446:12:g_d0_f5:12:g_d0_f6:C:Vt=
+14:534:30627:0:13:220:228:459:12:g_d0_f12:12:g_d0_f12:?:n
+14:535:30628:13:0:228:313:446:12:g_d0_f6:12:g_d0_f5:A:(1-\f)C1--t+\f
+14:536:30642:0:9:316:321:455:12:g_d0_f12:12:g_d0_f12:A:-
+14:537:30643:9:0:321:333:446:12:g_d0_f5:8:g_d0_f8:A:Et
+14:538:30645:0:9:335:340:455:12:g_d0_f12:12:g_d0_f12:?:-
+14:539:30646:9:0:340:361:446:12:g_d0_f5:8:g_d0_f9:?:V1--t+1
+14:540:30653:0:9:367:415:455:12:g_d0_f12:6:g_d0_f20:A:--1--o11--
+14:541:30663:9:33:537:558:446:12:g_d0_f4:12:g_d0_f4:A:(24)
+14:542:30667:33:18:53:557:413:12:g_d0_f4:12:g_d0_f4:B:Campbell (1993) and Restoy and Weil (1998) show that if consumption growth is log-normal and
+14:543:30759:18:39:53:516:395:12:g_d0_f4:12:g_d0_f4:B:homoskedastic, the stochastic discount factor for these preferences can be log-linearized as
+14:544:30851:39:0:141:224:356:12:g_d0_f6:12:g_d0_f10:?:-Et+1mt+1--
+14:545:30862:0:20:226:235:376:12:g_d0_f12:12:g_d0_f12:A: 
+14:546:30862:20:0:235:389:356:12:g_d0_f5:8:g_d0_f9:?:--Et+1-ct+1+ (---) -Et+1
+14:547:30886:0:29:396:409:371:8:g_d0_f11:12:g_d0_f12:?:1X
+14:548:30888:29:0:393:408:342:8:g_d0_f8:8:g_d0_f9:?:j=0
+14:549:30891:0:0:411:459:356:12:g_d0_f5:8:g_d0_f8:A:-j-ct+1+j
+14:550:30900:0:20:461:470:376:12:g_d0_f12:12:g_d0_f12:?:!
+14:551:30901:20:42:537:558:356:12:g_d0_f4:12:g_d0_f4:A:(25)
+14:552:30905:42:18:54:558:314:12:g_d0_f4:12:g_d0_f4:B:where-is the inverse elasticity of intertemporal substitution (EIS), and-is the coe¢ cient of
+14:553:30998:18:17:54:558:296:12:g_d0_f4:12:g_d0_f4:B:relative risk aversion.-is a parameter (generally close to 1) that comes from the log-linearization
+14:554:31097:17:18:54:557:279:12:g_d0_f4:12:g_d0_f4:B:of the return on the agentís wealth portfolio (Campbell and Shiller, 1988).10-is a measure of
+14:555:31190:18:18:54:558:261:12:g_d0_f4:12:g_d0_f4:B:impatience: if the agent is highly impatient, then he consumes a large fraction of his wealth in each
+14:556:31291:18:18:54:412:243:12:g_d0_f4:12:g_d0_f4:B:period and-is small. In the case where-= 1, equation (25) is exact.
+14:557:31358:18:39:71:353:225:12:g_d0_f4:12:g_d0_f4:A:For the case of equation (25), the weighting function is
+14:558:31414:39:0:208:324:186:12:g_d0_f5:12:g_d0_f6:C:ZEZ(!)--+ (---)
+14:559:31429:0:29:330:343:201:8:g_d0_f11:12:g_d0_f12:A:1X
+14:560:31431:29:0:327:342:172:8:g_d0_f8:8:g_d0_f9:A:j=1
+14:561:31434:0:34:345:558:186:12:g_d0_f5:12:g_d0_f4:A:-j2 cos (!j)(26)
+14:562:31450:34:16:63:557:152:7:g_d0_f4:10:g_d0_f4:F:10SpeciÖcally,-=-1 +DP--1, whereDPis the dividend-price ratio for the wealth portfolio (i.e. the consumption-
+14:563:31559:16:12:54:557:136:10:g_d0_f4:10:g_d0_f4:F:wealth ratio) around which we approximate.-generalizes the rate of pure time preference somewhat because it also
+14:564:31671:12:0:53:358:124:10:g_d0_f4:10:g_d0_f4:F:depends on discounting due to uncertainty about future consumption.
+15:565:31740:0:37:54:340:703:12:g_d0_f4:12:g_d0_f4:B:which can be further simpliÖed using Eulerís formula as
+15:566:31795:37:0:190:306:666:12:g_d0_f5:12:g_d0_f6:C:ZEZ(!) =-+ (---)
+15:567:31811:0:8:307:316:683:12:g_d0_f12:12:g_d0_f12:?:-
+15:568:31812:8:17:348:379:675:12:g_d0_f6:8:g_d0_f9:A:1--2
+15:569:31816:17:0:317:410:658:12:g_d0_f6:8:g_d0_f9:A:1-2-cos (!) +-2
+15:570:31831:0:17:412:421:683:12:g_d0_f12:12:g_d0_f12:A:-
+15:571:31832:17:37:537:558:666:12:g_d0_f4:12:g_d0_f4:A:(27)
+15:572:31836:37:18:54:558:629:12:g_d0_f4:12:g_d0_f4:B:Under power utility,-=-andZEZ(!)  =-is áat, so all frequencies receive equal weight, as
+15:573:31923:18:18:54:557:611:12:g_d0_f4:12:g_d0_f4:B:discussed above. On the other hand, if-6=-, then weights can vary across frequencies due to the
+15:574:32018:18:18:54:119:593:12:g_d0_f4:12:g_d0_f4:B:second term.
+15:575:32030:18:18:71:557:575:12:g_d0_f5:12:g_d0_f4:A:ZEZis much richer than what we obtain in the case of power utility and it has a number of
+15:576:32119:18:18:53:557:557:12:g_d0_f4:12:g_d0_f4:B:interesting properties. First, as with power utility, its average value is exactly equal to the coe¢ cient
+15:577:32225:18:12:53:175:539:12:g_d0_f4:12:g_d0_f4:B:of relative risk aversion,
+15:578:32251:12:16:252:258:527:12:g_d0_f6:12:g_d0_f6:A:1
+15:579:32252:16:0:251:258:511:12:g_d0_f5:12:g_d0_f5:A:-
+15:580:32253:0:27:261:278:536:12:g_d0_f12:8:g_d0_f8:A:Z-
+15:581:32255:27:0:268:272:509:8:g_d0_f9:8:g_d0_f9:A:0
+15:582:32256:0:28:281:558:519:12:g_d0_f5:12:g_d0_f4:A:ZEZ(!)d!=-(28)
+15:583:32270:28:18:53:557:491:12:g_d0_f4:12:g_d0_f4:B:Therefore, the total weight placed on the spectrum depends only on risk aversion. Another way to
+15:584:32366:18:18:53:557:473:12:g_d0_f4:12:g_d0_f4:B:see this is that-is the price of a shock that a§ects all frequencies equally (and therefore has impulse
+15:585:32469:18:17:53:558:455:12:g_d0_f4:12:g_d0_f4:B:transfer functionGj(!)equal to 1, like shock 1 in Figure 1). To the extent that the volatility of
+15:586:32566:17:18:53:558:438:12:g_d0_f4:12:g_d0_f4:B:the pricing kernel depends on the EIS, it is due only to how---a§ects which frequencies receive
+15:587:32661:18:18:54:90:420:12:g_d0_f4:12:g_d0_f4:B:weight.
+15:588:32668:18:18:71:558:402:12:g_d0_f4:12:g_d0_f4:A:An obvious question is how rapidlyZEZfalls as!rises above zero. That is, how much of the
+15:589:32756:18:18:53:558:384:12:g_d0_f4:12:g_d0_f4:B:mass ofZEZis concentrated at very low frequencies? In the limit as-!1, i.e. the case where
+15:590:32846:18:33:53:462:366:12:g_d0_f4:12:g_d0_f4:B:households are indi§erent about when consumption occurs,ZEZ(!)approaches
+15:591:32918:33:33:228:558:333:12:g_d0_f5:12:g_d0_f4:A:ZEZ(!) = (---)D1(!) +-(29)
+15:592:32944:33:18:53:558:300:12:g_d0_f4:12:g_d0_f4:B:whereD1is the limit of the Dirichlet kernel (closely related to the Dirac delta function), with the
+15:593:33043:18:32:53:125:282:12:g_d0_f4:12:g_d0_f4:B:key properties
+15:594:33057:32:16:271:558:250:12:g_d0_f5:12:g_d0_f4:A:D1(!)   =   0for!6= 0(30)
+15:595:33082:16:16:222:228:234:12:g_d0_f6:12:g_d0_f6:C:1
+15:596:33083:16:0:218:231:218:12:g_d0_f6:12:g_d0_f5:C:2-
+15:597:33085:0:27:234:251:242:12:g_d0_f12:8:g_d0_f8:?:Z-
+15:598:33087:27:0:241:252:215:8:g_d0_f11:8:g_d0_f8:?:--
+15:599:33089:0:37:255:558:226:12:g_d0_f5:12:g_d0_f4:A:D1(!)d!=   1(31)
+15:600:33105:37:18:54:557:189:12:g_d0_f4:12:g_d0_f4:B:for!in the interval(--;-).ZEZ(!)can thus be thought of as roughly a point mass weighted by
+15:601:33195:18:18:54:557:171:12:g_d0_f6:12:g_d0_f4:B:(---)plus a constant-. For an agent who is e§ectively inÖnitely patient, then, two features of
+15:602:33289:18:18:54:558:153:12:g_d0_f4:12:g_d0_f4:B:the consumption process matter: the permanent innovations at!= 0(limj!1-Et+1ct+j), which
+15:603:33377:18:18:54:558:135:12:g_d0_f4:12:g_d0_f4:B:are weighted by-, and all transitory innovations, which have no e§ect onlimj!1-Et+1ct+j, and
+15:604:33469:18:18:54:147:117:12:g_d0_f4:12:g_d0_f4:B:are weighted by-.
+15:605:33486:18:18:71:557:99:12:g_d0_f4:12:g_d0_f4:A:Moving away from the limiting case, the right-hand panel of Ögure 2 plotsZEZfor a variety
+15:606:33575:18:0:54:558:81:12:g_d0_f4:12:g_d0_f4:B:of parameterizations. The parameterizations are meant to correspond to annual data, so we take
+16:607:33671:0:18:54:557:703:12:g_d0_f5:12:g_d0_f6:F:-= 0:975as our benchmark, which corresponds to a 2.5 percent annual dividend yield. For-= 5
+16:608:33762:18:18:53:558:685:12:g_d0_f4:12:g_d0_f4:B:and-= 0:5(an EIS of 2), we see a large peak near frequency zero, with little weight elsewhere. In
+16:609:33859:18:18:53:558:667:12:g_d0_f4:12:g_d0_f4:B:fact, half the mass ofZEZin this case lies on cycles with length of 230yearsor more, and 75 percent
+16:610:33958:18:18:53:557:649:12:g_d0_f4:12:g_d0_f4:B:lies on cycles with length 72 years or more. In this parameterization, it is e§ectively only the very
+16:611:34059:18:18:53:557:631:12:g_d0_f4:12:g_d0_f4:B:longest cycles in consumption (up to permanent shocks) that carry any substantial weight in the
+16:612:34154:18:18:53:557:613:12:g_d0_f4:12:g_d0_f4:B:pricing kernel. Purely temporary shocks to the level of consumption (which is what are induced
+16:613:34248:18:17:53:557:595:12:g_d0_f4:12:g_d0_f4:B:by shocks to monetary policy in standard models, for example) are essentially unpriced. One way
+16:614:34343:17:18:53:557:578:12:g_d0_f4:12:g_d0_f4:B:to interpret these numbers is the following. Take a permanent shock to consumption (like shock 1
+16:615:34439:18:18:53:558:560:12:g_d0_f4:12:g_d0_f4:B:in Figure 1). We have seen above that it will have price of risk of-. Now suppose we eliminate
+16:616:34533:18:18:53:557:542:12:g_d0_f4:12:g_d0_f4:B:all áuctuations induced by this shock that are longer than 230 years. The price of this new shock
+16:617:34630:18:18:53:557:524:12:g_d0_f4:12:g_d0_f4:B:will be one half that of the permanent shock. Then suppose we further remove all áuctuations with
+16:618:34727:18:18:53:557:506:12:g_d0_f4:12:g_d0_f4:B:cycles longer than 72 years. The price of the remaining shock drops to one quarter of that of the
+16:619:34824:18:18:53:557:488:12:g_d0_f4:12:g_d0_f4:B:permanent shock. A very large part of the risk premium comes from the longest áuctuations (of
+16:620:34917:18:18:53:222:470:12:g_d0_f4:12:g_d0_f4:B:hundreds of years) in this model.
+16:621:34950:18:18:71:557:452:12:g_d0_f4:12:g_d0_f4:A:The line that is highly negative near!= 0is for-= 0:5and-= 5, where households prefer
+16:622:35035:18:18:53:558:434:12:g_d0_f4:12:g_d0_f4:B:a late resolution of uncertainty. In this case, the mass ofZEZis still e§ectively isolated near zero,
+16:623:35136:18:18:53:557:416:12:g_d0_f4:12:g_d0_f4:B:but because households now prefer an early resolution of uncertainty,ZEZis negative at that point.
+16:624:35234:18:34:53:514:398:12:g_d0_f4:8:g_d0_f4:B:The integral ofZEZis still equal to-, though, so it turns positive at higher frequencies.11
+16:625:35325:34:26:53:295:364:12:g_d0_f3:12:g_d0_f3:C:3.1.4  Ambiguity aversion interpretation
+16:626:35365:26:18:53:557:338:12:g_d0_f4:12:g_d0_f4:B:As usual, the analysis of EpsteinñZin preferences naturally also applies to the preferences of an
+16:627:35462:18:18:53:557:320:12:g_d0_f4:12:g_d0_f4:B:ambiguity averse agent (e.g.  Hansen and Sargent, 2001; Barillas, Hansen, and Sargent, 2009).
+16:628:35555:18:18:53:557:302:12:g_d0_f4:12:g_d0_f4:B:When the agent has a preference for robustness, he can be viewed as having a reference distribution
+16:629:35654:18:18:53:557:284:12:g_d0_f4:12:g_d0_f4:B:(the true distribution) and a worst-case distribution, which is what he uses to actually price assets.
+16:630:35756:18:18:53:557:266:12:g_d0_f4:12:g_d0_f4:B:Under the reference distribution, the agent simply has power utility, so his weighting function would
+16:631:35857:18:18:53:560:248:12:g_d0_f4:12:g_d0_f4:B:be áat. Under the worst-case distribution, though, he places relatively more weight on certain ìbadî
+16:632:35957:18:18:53:557:230:12:g_d0_f4:12:g_d0_f4:B:states of the world (based on a joint entropy condition on the two distributions). Our weighting
+16:633:36053:18:17:53:557:212:12:g_d0_f4:12:g_d0_f4:B:function shows the e§ect of that reweighing in the frequency domain.  Agents essentially place
+16:634:36147:17:18:53:557:195:12:g_d0_f4:12:g_d0_f4:B:more weight on the possibility of the occurrence of low-frequency áuctuations, which gives them a
+16:635:36244:18:18:53:281:177:12:g_d0_f4:8:g_d0_f4:B:relatively high weight in the functionZEZ.12
+16:636:36288:18:18:71:558:159:12:g_d0_f4:12:g_d0_f4:A:Ambiguity aversion also gives a convenient way to motivate a more general spectral weighting
+16:637:36380:18:18:53:557:141:12:g_d0_f4:12:g_d0_f4:B:function than those derived above for standard models. SpeciÖcally, suppose an agent is ambiguity
+16:638:36477:18:16:63:557:123:7:g_d0_f4:10:g_d0_f4:F:11Note, though, that the case where- > -is not taken as a benchmark and is not widely viewed as empirically
+16:639:36584:16:8:54:246:107:10:g_d0_f4:10:g_d0_f4:F:relevant (see, e.g., Bansal and Yaron, 2004).
+16:640:36629:8:16:63:557:99:7:g_d0_f4:10:g_d0_f4:F:12Hansen and Sargent (2007) provide a similar interpretation of their multiplier preferences in the frequency domain
+16:641:36745:16:0:54:222:83:10:g_d0_f4:10:g_d0_f4:F:for a linear-quadratic control problem.
+17:642:36786:0:37:54:247:703:12:g_d0_f4:12:g_d0_f4:B:averse in the sense that he maximizes
+17:643:36823:37:0:255:267:666:12:g_d0_f5:8:g_d0_f8:A:E-t
+17:644:36826:0:9:271:291:687:12:g_d0_f12:8:g_d0_f11:A:"1
+17:645:36828:9:26:278:295:678:12:g_d0_f12:12:g_d0_f12:A:X
+17:646:36829:26:0:280:294:652:8:g_d0_f8:8:g_d0_f9:A:j=0
+17:647:36832:0:0:298:347:666:12:g_d0_f5:8:g_d0_f8:A:zjlogCt+j
+17:648:36841:0:21:349:356:687:12:g_d0_f12:12:g_d0_f12:A:#
+17:649:36842:21:40:537:558:666:12:g_d0_f4:12:g_d0_f4:A:(32)
+17:650:36846:40:18:54:558:626:12:g_d0_f4:12:g_d0_f4:B:whereE-is an expectation taken under some subjective probability measure.  The set of pa-
+17:651:36935:18:18:54:557:608:12:g_d0_f4:12:g_d0_f4:B:rameterszjdetermines how much weight consumption receives at various dates in the future.
+17:652:37024:18:18:54:558:590:12:g_d0_f4:12:g_d0_f4:B:The appendix shows that in a standard implementation of Hansen and Sargentís constraint pref-
+17:653:37117:18:18:54:558:572:12:g_d0_f4:12:g_d0_f4:B:erences, i.e.  whereE-is taken under a distribution that di§ers from the true distribution by
+17:654:37210:18:18:54:558:554:12:g_d0_f4:12:g_d0_f4:B:some constrained entropy distance, the agent will have a spectral weighting function equal to
+17:655:37303:18:0:54:140:536:12:g_d0_f5:8:g_d0_f9:C:Z(!)-1 + 2--1
+17:656:37316:0:13:143:163:545:12:g_d0_f12:8:g_d0_f11:?:P1
+17:657:37318:13:0:155:274:532:8:g_d0_f8:12:g_d0_f5:A:k=1zkcos (!k), where-
+17:658:37339:0:23:274:557:541:8:g_d0_f11:12:g_d0_f4:A:-1is the Lagrange multiplier on the entropy constraint,
+17:659:37394:23:18:54:558:518:12:g_d0_f4:12:g_d0_f4:B:which essentially determines risk aversion. Ambiguity averse preferences thus give a way to under-
+17:660:37492:18:18:54:558:500:12:g_d0_f4:12:g_d0_f4:B:stand where an arbitrary spectral weighting function might come from, and what it would imply
+17:661:37585:18:45:54:219:482:12:g_d0_f4:12:g_d0_f4:B:for an agentís underlying utility.
+17:662:37619:45:30:54:359:437:17:g_d0_f3:17:g_d0_f3:C:4  Estimates of weighting functions
+17:663:37654:30:18:54:558:407:12:g_d0_f4:12:g_d0_f4:B:We now estimate the weighting functionZ(!)for consumption growth using the cross-section of
+17:664:37745:18:18:54:557:389:12:g_d0_f4:12:g_d0_f4:B:equity prices. EstimatingZinvolves three main steps. First, we need to estimate the dynamics of the
+17:665:37844:18:18:54:557:371:12:g_d0_f4:12:g_d0_f4:B:economy and identify the fundamental shocks"t+1and the dynamic response of consumption growth
+17:666:37937:18:17:54:558:353:12:g_d0_f4:12:g_d0_f4:B:to these shocks. Second, we parametrize the functionZ(!). Third, we estimate the parameters of
+17:667:38031:17:39:54:273:336:12:g_d0_f5:12:g_d0_f4:B:Zusing the cross-section of equity returns.
+17:668:38074:39:26:54:342:297:14:g_d0_f3:14:g_d0_f3:C:4.1  Step 1: Estimation of the dynamics
+17:669:38113:26:30:54:472:271:12:g_d0_f4:12:g_d0_f4:B:We assume the process driving the priced variable,xt, follows a Önite-order VAR,
+17:670:38193:30:36:256:558:241:12:g_d0_f6:12:g_d0_f4:A:-Xt=-\b (L)-Xt-1+"t(33)
+17:671:38216:36:18:54:557:205:12:g_d0_f4:12:g_d0_f4:B:wherext=B1-Xtis the Örst element of-Xtand-Xthas dimensionN-1.13In our benchmark results,
+17:672:38304:18:18:53:557:187:12:g_d0_f5:12:g_d0_f5:F:xtis log consumption growth,-ct. If the lag polynomial-\b (L)has orderK, then we can stackK
+17:673:38395:18:0:53:278:169:12:g_d0_f4:12:g_d0_f10:B:consecutive observations of-Xtso thatXt-
+17:674:38435:0:10:282:296:179:12:g_d0_f12:12:g_d0_f6:A:--
+17:675:38437:10:0:287:344:169:12:g_d0_f5:12:g_d0_f5:C:X0t;-X0t-1;:::
+17:676:38451:0:10:344:351:179:12:g_d0_f12:8:g_d0_f11:A:-0
+17:677:38453:10:32:356:444:169:12:g_d0_f4:12:g_d0_f4:C:follows a VAR(1)
+17:678:38469:32:33:263:558:137:12:g_d0_f5:12:g_d0_f4:A:Xt= \bXt-1+"t(34)
+17:679:38486:33:18:53:473:104:12:g_d0_f4:12:g_d0_f4:B:andxt=B1Xt. We estimate this VAR using OLS, yielding estimates of\band"t.
+17:680:38559:18:0:63:495:86:7:g_d0_f4:10:g_d0_f4:?:13Recall thatBjrepresents a conformable selection vector equal to1in elementjand0elsewhere.
+18:681:38652:0:26:54:505:703:14:g_d0_f3:14:g_d0_f3:C:4.2  Step 2: Parametrization of the spectral weighting function
+18:682:38715:26:18:54:557:677:12:g_d0_f4:12:g_d0_f4:B:The weighting function that we want to estimate,Z(!), is potentially inÖnite-dimensional, but
+18:683:38808:18:17:54:557:659:12:g_d0_f4:12:g_d0_f4:B:we only have a Önite number of risk prices (one for each estimated shock in"t) with which to
+18:684:38900:17:18:54:557:642:12:g_d0_f4:12:g_d0_f4:B:estimate it. We therefore need to choose a functional form to approximateZwith a Önite number
+18:685:38993:18:18:54:558:624:12:g_d0_f4:12:g_d0_f4:B:of parameters. We consider two speciÖcations, a áexible function motivated by the utility functions
+18:686:39092:18:35:54:244:606:12:g_d0_f4:12:g_d0_f4:B:discussed above, and a step function.
+18:687:39129:35:26:54:191:571:12:g_d0_f3:12:g_d0_f3:C:4.2.1  The utility basis
+18:688:39153:26:37:54:488:545:12:g_d0_f4:12:g_d0_f4:B:The analysis of the utility functions in the previous sections suggests modelingZas:
+18:689:39237:37:0:196:256:508:12:g_d0_f5:8:g_d0_f9:?:ZU(!) =q1
+18:690:39246:0:29:263:275:523:8:g_d0_f11:12:g_d0_f12:A:1X
+18:691:39248:29:0:260:275:494:8:g_d0_f8:8:g_d0_f9:A:j=1
+18:692:39251:0:42:278:558:508:12:g_d0_f5:12:g_d0_f4:A:-jcos (!j) +q2+q3cos (!)(35)
+18:693:39279:42:18:54:557:466:12:g_d0_f4:12:g_d0_f4:B:whereq1,q2, andq3are unknown coe¢ cients. We call (35) theutility basisbecause it nests the
+18:694:39370:18:18:54:557:448:12:g_d0_f4:12:g_d0_f4:B:weighting functions derived from utility-based models.  Ifq3=  0, (35) matches the weighting
+18:695:39462:18:18:54:557:430:12:g_d0_f4:12:g_d0_f4:B:function for EpsteinñZin preferences in (26). Ifq1= 0, the long-run component that is crucial in
+18:696:39558:18:17:54:558:412:12:g_d0_f4:12:g_d0_f4:B:the EpsteinñZin case is shut o§, and we obtain the weighting function for internal habit formation in
+18:697:39659:17:18:54:557:395:12:g_d0_f4:12:g_d0_f4:B:(22). Finally, if bothq1= 0andq3= 0, then we have the weighting function for power utility. Note
+18:698:39755:18:18:53:558:377:12:g_d0_f4:12:g_d0_f4:B:that we have an extra parameter-here. Following the most common calibration of the EpsteinñZin
+18:699:39849:18:18:53:557:359:12:g_d0_f4:12:g_d0_f4:B:model that motivated our speciÖcation of theZfunction, we choose-= 0:9751=4for quarterly data,
+18:700:39943:18:18:53:395:341:12:g_d0_f4:8:g_d0_f4:B:corresponding to a 2.5 percent annual consumption/wealth ratio.14
+18:701:40008:18:18:71:558:323:12:g_d0_f4:12:g_d0_f4:A:Because the utility basis is so closely related to the weighting functions we derived under various
+18:702:40107:18:18:53:557:305:12:g_d0_f4:12:g_d0_f4:B:preference speciÖcations, the constituent functions are already plotted in Figure 2. In particular,
+18:703:40206:18:0:53:369:287:12:g_d0_f4:12:g_d0_f4:B:the lines in the right-hand panel represent the Örst function,
+18:704:40268:0:13:374:395:296:12:g_d0_f12:8:g_d0_f11:A:P1
+18:705:40270:13:0:387:409:283:8:g_d0_f8:12:g_d0_f5:A:j=1-
+18:706:40274:0:23:410:558:292:8:g_d0_f8:12:g_d0_f4:A:jcos (!j), shifted upward by
+18:707:40302:23:18:53:557:269:12:g_d0_f4:12:g_d0_f4:B:a constant. This function clearly isolates very low frequencies, and the extent to which the lowest
+18:708:40401:18:35:53:322:251:12:g_d0_f4:12:g_d0_f4:B:frequencies are isolated depends on the parameter-.
+18:709:40452:35:25:53:208:216:12:g_d0_f3:12:g_d0_f3:C:4.2.2  The bandpass basis
+18:710:40477:25:18:53:557:191:12:g_d0_f4:12:g_d0_f4:B:One advantage of working in the frequency domain is that it is straightforward to estimate risk
+18:711:40572:18:18:53:558:173:12:g_d0_f4:12:g_d0_f4:B:prices for ranges of frequencies of interest. In particular, we can modelZ(!)directly in a way
+18:712:40666:18:18:53:557:155:12:g_d0_f4:12:g_d0_f4:B:that captures the preferences of agents for economically interesting frequencies, without mapping
+18:713:40763:18:18:53:557:137:12:g_d0_f4:12:g_d0_f4:B:literally to any of the models presented above. This generalizes the various models by focusing
+18:714:40858:18:18:53:557:119:12:g_d0_f4:12:g_d0_f4:B:on the main intuitions about the preferences over dynamics.  To do this, we simply break the
+18:715:40950:18:15:63:558:101:7:g_d0_f4:10:g_d0_f4:F:14In theory, we could estimate-. However, we Önd that it is poorly identiÖed in the data, so we proceed to calibrate
+18:716:41066:15:0:54:286:86:10:g_d0_f4:10:g_d0_f4:F:it to the value most commonly used in the literature.
+19:717:41121:0:18:54:557:703:12:g_d0_f4:12:g_d0_f4:B:interval[0;-]into three economically motivated intervals, corresponding to business-cycle length
+19:718:41217:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:áuctuations with wavelength between 6 and 32 quarters (as is standard in the macro literature,
+19:719:41311:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:e.g. Christiano and Fitzgerald, 2003), and frequencies above and below that window. If agents
+19:720:41404:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:dislike long-run risks, we would expect most of the weight ofZto lie in the range of frequencies
+19:721:41500:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:below the business cycle, while habit formation-type preferences imply that the mass should lie
+19:722:41595:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:at higher frequencies. At the same time, what is considered ìlong-run riskîhere is not the literal
+19:723:41693:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:interpretation of the EpsteinñZin calibration (230 years): we generalize that model by considering
+19:724:41791:17:18:54:466:578:12:g_d0_f4:12:g_d0_f4:B:as ìlong-run risksîany shocks that induce cycles longer than the business cycle.
+19:725:41871:18:18:71:558:560:12:g_d0_f4:12:g_d0_f4:A:We refer to the set of three step functions as thebandpass basis, sinceZ(!)is composed of the
+19:726:41964:18:39:54:321:542:12:g_d0_f4:12:g_d0_f4:B:sum of three bandpass Ölters. SpeciÖcally, we deÖne
+19:727:42015:39:0:226:283:503:12:g_d0_f5:12:g_d0_f10:A:Z(a;b)(!)-
+19:728:42025:0:12:287:297:523:12:g_d0_f12:12:g_d0_f12:?:(
+19:729:42026:12:18:301:379:511:12:g_d0_f6:12:g_d0_f5:A:1ifa <j!j-b
+19:730:42037:18:0:311:369:493:12:g_d0_f6:12:g_d0_f4:C:0otherwise
+19:731:42047:0:42:537:558:503:12:g_d0_f4:12:g_d0_f4:A:(36)
+19:732:42051:42:17:54:557:461:12:g_d0_f4:12:g_d0_f4:B:For quarterly data, our three basis functions are thenZ(0;2-=32)(!),Z(2-=32;2-=6)(!), andZ(2-=6;-)(!).
+19:733:42153:17:33:54:232:444:12:g_d0_f4:12:g_d0_f4:B:We therefore estimate the function
+19:734:42187:33:39:148:558:411:12:g_d0_f5:12:g_d0_f4:A:ZBP(!) =q1Z(0;2-=32)(!) +q2Z(2-=32;2-=6)(!) +q3Z(2-=6;-)(!)(37)
+19:735:42250:39:26:54:468:372:14:g_d0_f3:14:g_d0_f3:C:4.3  Step 3: Estimation of the spectral weighting function
+19:736:42308:26:33:54:465:346:12:g_d0_f4:12:g_d0_f4:B:Result 1 and the estimated VAR imply that the innovations to the log SDF are:
+19:737:42385:33:32:241:558:313:12:g_d0_f6:12:g_d0_f4:A:-Et+1mt+1=-W(-q)"t+1(38)
+19:738:42409:32:18:54:557:281:12:g_d0_f4:12:g_d0_f4:B:for a1-NvectorWthat depends on the parameters-q-[q1q2q3]0:We then estimate the vector
+19:739:42494:18:18:54:256:263:12:g_d0_f6:12:g_d0_f4:B:-qusing the cross-section of asset prices.
+19:740:42536:18:18:71:557:245:12:g_d0_f4:12:g_d0_f4:A:To ÖndW(-q)for a given basis (either utility or bandpass), we go back to the VAR representation
+19:741:42631:18:21:54:106:227:12:g_d0_f4:12:g_d0_f4:B:and write:
+19:742:42641:21:0:225:307:206:12:g_d0_f6:12:g_d0_f10:A:-Et+1mt+1=-
+19:743:42652:0:29:314:326:221:8:g_d0_f11:12:g_d0_f12:A:1X
+19:744:42654:29:0:310:326:192:8:g_d0_f8:8:g_d0_f9:?:k=0
+19:745:42657:0:33:329:558:206:12:g_d0_f5:12:g_d0_f4:A:zkB1\bk"t+1(39)
+19:746:42672:33:40:54:557:173:12:g_d0_f4:12:g_d0_f4:B:According to Result 1, the time-domain weightsfzkgare transformations of the weighting function,
+19:747:42768:40:0:199:222:133:12:g_d0_f5:12:g_d0_f6:C:zk=
+19:748:42771:0:8:225:235:154:12:g_d0_f12:12:g_d0_f12:A:(
+19:749:42772:8:8:263:267:146:8:g_d0_f9:8:g_d0_f9:A:1
+19:750:42773:8:0:261:270:138:8:g_d0_f9:8:g_d0_f8:A:2-
+19:751:42775:0:14:273:286:151:12:g_d0_f12:8:g_d0_f8:A:R-
+19:752:42777:14:9:279:386:137:8:g_d0_f11:12:g_d0_f6:A:--Z(!)d!fork= 0
+19:753:42792:9:8:242:246:128:8:g_d0_f9:8:g_d0_f9:?:1
+19:754:42793:8:0:241:246:120:8:g_d0_f8:8:g_d0_f8:?:-
+19:755:42794:0:13:250:263:133:12:g_d0_f12:8:g_d0_f8:?:R-
+19:756:42796:13:0:255:406:120:8:g_d0_f11:12:g_d0_f6:A:--Z(!) cos (!k)d!fork >0
+19:757:42820:0:39:537:558:133:12:g_d0_f4:12:g_d0_f4:A:(40)
+19:758:42824:39:0:53:556:94:12:g_d0_f4:8:g_d0_f8:B:For both the utility and bandpass basis,Z(!)is linear in the coe¢ cients-q, which implies thatzk
+20:759:42922:0:18:54:209:703:12:g_d0_f4:12:g_d0_f4:B:is also linear in-q. SpeciÖcally,
+20:760:42955:18:26:281:558:685:12:g_d0_f5:12:g_d0_f4:A:zk= -q0Hk(41)
+20:761:42968:26:18:53:558:659:12:g_d0_f4:12:g_d0_f4:B:whereHkcontains the integrals of the basis functions forZ. Importantly, theseHkvectors are
+20:762:43058:18:18:53:557:641:12:g_d0_f4:12:g_d0_f4:B:completely known (they donít need to be estimated) because they only depend on the choice of the
+20:763:43154:18:48:53:273:623:12:g_d0_f4:12:g_d0_f4:B:set of basis functions. For the utility basis,
+20:764:43200:48:0:78:105:575:12:g_d0_f5:12:g_d0_f6:A:H0=
+20:765:43203:0:21:108:116:603:12:g_d0_f12:12:g_d0_f12:?:2
+20:766:43204:21:8:108:116:582:12:g_d0_f12:12:g_d0_f12:?:6
+20:767:43205:8:0:108:116:574:12:g_d0_f12:12:g_d0_f12:?:4
+20:768:43206:0:9:125:129:597:8:g_d0_f9:8:g_d0_f9:?:1
+20:769:43207:9:0:123:132:588:8:g_d0_f9:8:g_d0_f8:?:2-
+20:770:43209:0:14:135:148:602:12:g_d0_f12:8:g_d0_f8:?:R-
+20:771:43211:14:0:141:152:588:8:g_d0_f11:8:g_d0_f8:?:--
+20:772:43213:0:13:155:176:602:12:g_d0_f12:8:g_d0_f11:A:P1
+20:773:43215:13:0:168:189:589:8:g_d0_f8:12:g_d0_f5:?:i=1-
+20:774:43219:0:19:190:248:598:8:g_d0_f8:12:g_d0_f5:?:icos (!i)d!
+20:775:43230:19:8:162:166:579:8:g_d0_f9:8:g_d0_f9:?:1
+20:776:43231:8:0:160:169:571:8:g_d0_f9:8:g_d0_f8:?:2-
+20:777:43233:0:14:172:185:584:12:g_d0_f12:8:g_d0_f8:?:R-
+20:778:43235:14:9:178:211:570:8:g_d0_f11:12:g_d0_f5:?:--1d!
+20:779:43240:9:8:147:151:561:8:g_d0_f9:8:g_d0_f9:?:1
+20:780:43241:8:0:144:154:553:8:g_d0_f9:8:g_d0_f8:?:2-
+20:781:43243:0:13:157:170:566:12:g_d0_f12:8:g_d0_f8:?:R-
+20:782:43245:13:0:163:226:553:8:g_d0_f11:12:g_d0_f5:?:--cos (!)d!
+20:783:43256:0:21:254:262:603:12:g_d0_f12:12:g_d0_f12:A:3
+20:784:43257:21:8:254:262:582:12:g_d0_f12:12:g_d0_f12:A:7
+20:785:43258:8:0:254:316:574:12:g_d0_f12:12:g_d0_f6:A:5Hk>0=
+20:786:43264:0:21:319:327:603:12:g_d0_f12:12:g_d0_f12:A:2
+20:787:43265:21:8:319:327:582:12:g_d0_f12:12:g_d0_f12:A:6
+20:788:43266:8:0:319:327:574:12:g_d0_f12:12:g_d0_f12:A:4
+20:789:43267:0:9:334:338:597:8:g_d0_f9:8:g_d0_f9:A:1
+20:790:43268:9:0:334:339:588:8:g_d0_f8:8:g_d0_f8:A:-
+20:791:43269:0:14:342:355:602:12:g_d0_f12:8:g_d0_f8:A:R-
+20:792:43271:14:0:348:359:588:8:g_d0_f11:8:g_d0_f8:A:--
+20:793:43273:0:13:362:382:602:12:g_d0_f12:8:g_d0_f11:A:P1
+20:794:43275:13:0:374:396:589:8:g_d0_f8:12:g_d0_f5:A:i=1-
+20:795:43279:0:19:396:498:598:8:g_d0_f8:12:g_d0_f5:?:icos (!i) cos (!k)d!
+20:796:43299:19:8:374:378:579:8:g_d0_f9:8:g_d0_f9:A:1
+20:797:43300:8:0:374:379:571:8:g_d0_f8:8:g_d0_f8:A:-
+20:798:43301:0:14:382:395:584:12:g_d0_f12:8:g_d0_f8:A:R-
+20:799:43303:14:9:388:458:570:8:g_d0_f11:12:g_d0_f5:A:--cos (!k)d!
+20:800:43315:9:8:356:360:561:8:g_d0_f9:8:g_d0_f9:?:1
+20:801:43316:8:0:356:361:553:8:g_d0_f8:8:g_d0_f8:?:-
+20:802:43317:0:13:364:377:566:12:g_d0_f12:8:g_d0_f8:A:R-
+20:803:43319:13:0:370:476:553:8:g_d0_f11:12:g_d0_f5:A:--cos (!) cos (!k)d!
+20:804:43339:0:21:504:512:603:12:g_d0_f12:12:g_d0_f12:A:3
+20:805:43340:21:8:504:512:582:12:g_d0_f12:12:g_d0_f12:A:7
+20:806:43341:8:47:504:558:574:12:g_d0_f12:12:g_d0_f4:A:5(42)
+20:807:43346:47:48:71:248:527:12:g_d0_f4:12:g_d0_f4:A:For the bandpass basis, we obtain:
+20:808:43380:48:0:83:109:479:12:g_d0_f5:12:g_d0_f6:A:H0=
+20:809:43383:0:21:113:121:507:12:g_d0_f12:12:g_d0_f12:?:2
+20:810:43384:21:8:113:121:486:12:g_d0_f12:12:g_d0_f12:?:6
+20:811:43385:8:0:113:121:478:12:g_d0_f12:12:g_d0_f12:?:4
+20:812:43386:0:9:136:140:501:8:g_d0_f9:8:g_d0_f9:?:1
+20:813:43387:9:0:134:143:492:8:g_d0_f9:8:g_d0_f8:?:2-
+20:814:43389:0:14:146:159:506:12:g_d0_f12:8:g_d0_f8:?:R-
+20:815:43391:14:0:152:174:492:8:g_d0_f11:12:g_d0_f5:A:--Z
+20:816:43394:0:18:175:245:501:8:g_d0_f9:12:g_d0_f5:?:(0;2-=32)(!)d!
+20:817:43408:18:8:129:133:483:8:g_d0_f9:8:g_d0_f9:?:1
+20:818:43409:8:0:127:136:475:8:g_d0_f9:8:g_d0_f8:?:2-
+20:819:43411:0:14:139:152:488:12:g_d0_f12:8:g_d0_f8:?:R-
+20:820:43413:14:0:145:167:474:8:g_d0_f11:12:g_d0_f5:?:--Z
+20:821:43416:0:18:168:251:483:8:g_d0_f9:12:g_d0_f5:?:(2-=32;2-=6)(!)d!
+20:822:43433:18:8:138:142:465:8:g_d0_f9:8:g_d0_f9:?:1
+20:823:43434:8:0:135:145:457:8:g_d0_f9:8:g_d0_f8:?:2-
+20:824:43436:0:13:148:161:470:12:g_d0_f12:8:g_d0_f8:A:R-
+20:825:43438:13:0:154:176:457:8:g_d0_f11:12:g_d0_f5:?:--Z
+20:826:43441:0:0:177:243:465:8:g_d0_f9:12:g_d0_f5:?:(2-=6;-)(!)d!
+20:827:43454:0:21:257:265:507:12:g_d0_f12:12:g_d0_f12:A:3
+20:828:43455:21:8:257:265:486:12:g_d0_f12:12:g_d0_f12:A:7
+20:829:43456:8:0:257:313:478:12:g_d0_f12:12:g_d0_f6:A:5Hk>0=
+20:830:43462:0:21:316:324:507:12:g_d0_f12:12:g_d0_f12:A:2
+20:831:43463:21:8:316:324:486:12:g_d0_f12:12:g_d0_f12:A:6
+20:832:43464:8:0:316:324:478:12:g_d0_f12:12:g_d0_f12:A:4
+20:833:43465:0:9:338:342:501:8:g_d0_f9:8:g_d0_f9:?:1
+20:834:43466:9:0:337:342:492:8:g_d0_f8:8:g_d0_f8:?:-
+20:835:43467:0:14:346:359:506:12:g_d0_f12:8:g_d0_f8:A:R-
+20:836:43469:14:0:351:374:492:8:g_d0_f11:12:g_d0_f5:A:--Z
+20:837:43472:0:18:375:487:501:8:g_d0_f9:12:g_d0_f5:A:(0;2-=32)(!) cos (!k)d!
+20:838:43495:18:8:331:335:483:8:g_d0_f9:8:g_d0_f9:A:1
+20:839:43496:8:0:331:336:475:8:g_d0_f8:8:g_d0_f8:A:-
+20:840:43497:0:14:339:352:488:12:g_d0_f12:8:g_d0_f8:?:R-
+20:841:43499:14:0:345:367:474:8:g_d0_f11:12:g_d0_f5:A:--Z
+20:842:43502:0:18:368:494:483:8:g_d0_f9:12:g_d0_f5:A:(2-=32;2-=6)(!) cos (!k)d!
+20:843:43528:18:8:340:344:465:8:g_d0_f9:8:g_d0_f9:?:1
+20:844:43529:8:0:339:344:457:8:g_d0_f8:8:g_d0_f8:?:-
+20:845:43530:0:13:347:360:470:12:g_d0_f12:8:g_d0_f8:A:R-
+20:846:43532:13:0:353:375:457:8:g_d0_f11:12:g_d0_f5:A:--Z
+20:847:43535:0:0:376:485:465:8:g_d0_f9:12:g_d0_f5:A:(2-=6;-)(!) cos (!k)d!
+20:848:43557:0:21:500:508:507:12:g_d0_f12:12:g_d0_f12:A:3
+20:849:43558:21:8:500:508:486:12:g_d0_f12:12:g_d0_f12:A:7
+20:850:43559:8:47:500:558:478:12:g_d0_f12:12:g_d0_f4:A:5(43)
+20:851:43564:47:18:54:558:431:12:g_d0_f4:12:g_d0_f4:B:which can be further simpliÖed as a function of sines (without integrals) and then computed nu-
+20:852:43659:18:18:54:103:413:12:g_d0_f4:12:g_d0_f4:B:merically.
+20:853:43669:18:40:71:255:395:12:g_d0_f4:12:g_d0_f4:A:Given thatzk= -q0Hk, (39) becomes
+20:854:43702:40:0:209:299:355:12:g_d0_f6:8:g_d0_f11:?:-Et+1mt+1=--q0
+20:855:43716:0:9:316:324:375:12:g_d0_f12:8:g_d0_f11:A: 1
+20:856:43717:9:25:311:328:366:12:g_d0_f12:12:g_d0_f12:?:X
+20:857:43718:25:0:312:327:341:8:g_d0_f8:8:g_d0_f9:?:j=0
+20:858:43721:0:0:330:370:355:12:g_d0_f5:8:g_d0_f8:A:HjB1\bj
+20:859:43728:0:20:371:380:375:12:g_d0_f12:12:g_d0_f12:A:!
+20:860:43729:20:41:382:558:355:12:g_d0_f5:12:g_d0_f4:A:"t+1(44)
+20:861:43737:41:18:54:558:314:12:g_d0_f6:12:g_d0_f4:B:-Et+1mt+1is thus a function of the VAR parameters\b, the innovations"t=Xt-\bXt-1, and the
+20:862:43826:18:18:54:207:296:12:g_d0_f4:12:g_d0_f4:B:three parametersq1;q2andq3.
+20:863:43853:18:18:71:558:278:12:g_d0_f4:12:g_d0_f4:A:Equation (44) suggests an alternative interpretation of the decomposition we propose, most
+20:864:43943:18:17:54:558:260:12:g_d0_f4:12:g_d0_f4:B:immediate for the case of the bandpass basis. By regrouping the right hand side of that equation,
+20:865:44040:17:18:54:122:243:12:g_d0_f4:12:g_d0_f4:B:we can write:
+20:866:44053:18:26:250:361:225:12:g_d0_f6:8:g_d0_f9:?:-Et+1mt+1=--q0ut+1
+20:867:44071:26:22:54:77:199:12:g_d0_f4:12:g_d0_f4:B:with
+20:868:44075:22:0:237:270:177:12:g_d0_f5:12:g_d0_f6:C:ut+1=
+20:869:44080:0:9:287:295:197:12:g_d0_f12:8:g_d0_f11:?: 1
+20:870:44081:9:25:283:300:188:12:g_d0_f12:12:g_d0_f12:?:X
+20:871:44082:25:0:284:299:163:8:g_d0_f8:8:g_d0_f9:?:j=0
+20:872:44085:0:0:302:341:177:12:g_d0_f5:8:g_d0_f8:A:HjB1\bj
+20:873:44092:0:20:343:352:197:12:g_d0_f12:12:g_d0_f12:A:!
+20:874:44093:20:35:354:374:177:12:g_d0_f5:8:g_d0_f9:A:"t+1
+20:875:44097:35:18:54:558:142:12:g_d0_f4:12:g_d0_f4:B:It is then clear that the linearity ofZ(!)with respect to the basis functions gives us a linear factor
+20:876:44199:18:18:54:558:124:12:g_d0_f4:12:g_d0_f4:B:model: the factors will be the shocksut+1, obtained by rotating the fundamental shocks"t+1into
+20:877:44293:18:18:54:558:106:12:g_d0_f4:12:g_d0_f4:B:the three frequency-determined directions: a ìlong-runîdirection, a ìbusiness cycleîdirection, and
+20:878:44391:18:0:54:557:88:12:g_d0_f4:12:g_d0_f4:B:a ìhigh frequencyîdirection. The parametersq1;q2andq3can then be directly interpreted as the
+21:879:44485:0:18:54:227:703:12:g_d0_f4:12:g_d0_f4:B:prices of these three types of risk.
+21:880:44521:18:18:71:558:685:12:g_d0_f4:12:g_d0_f4:A:We can now proceed and estimate the model by specifying the moment conditions.  Follow-
+21:881:44608:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:ing a large empirical literature (for example Campbell and Vuolteenaho, 2004; Campbell et al.,
+21:882:44702:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:2013; Bansal et al., 2013) we assume joint lognormality of the shocks and the returns.  As we
+21:883:44795:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:show below, this assumption yields a linear factor model, which is easy to estimate and inter-
+21:884:44889:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:pret.  However, similar results are obtained by directly using the nonlinear moment condition
+21:885:44982:18:17:54:557:595:12:g_d0_f5:8:g_d0_f4:F:E[exp(-Et+1mt+1)(Rt+1-Rft+1)]  =  0, which does not require the assumption of lognormality.15
+21:886:45075:17:18:54:558:578:12:g_d0_f4:12:g_d0_f4:B:Under the assumption of log-normality of the shocks, the risk prices can be estimated from the
+21:887:45169:18:33:54:177:560:12:g_d0_f4:8:g_d0_f4:B:asset pricing condition16
+21:888:45194:33:29:172:558:527:12:g_d0_f5:12:g_d0_f4:A:E[Rit+1-Rft+1]   =-Cov(mt+1;rit+1)(45)
+21:889:45232:29:0:262:290:498:12:g_d0_f6:12:g_d0_f5:A:=E
+21:890:45234:0:21:292:299:519:12:g_d0_f12:12:g_d0_f12:?:"
+21:891:45235:21:0:300:307:498:12:g_d0_f6:8:g_d0_f11:A:-q0
+21:892:45238:0:9:323:331:519:12:g_d0_f12:8:g_d0_f11:A: 1
+21:893:45239:9:26:319:336:510:12:g_d0_f12:12:g_d0_f12:A:X
+21:894:45240:26:0:320:335:484:8:g_d0_f8:8:g_d0_f9:A:j=0
+21:895:45243:0:0:338:377:498:12:g_d0_f5:8:g_d0_f8:?:HjB1\bj
+21:896:45250:0:21:379:388:519:12:g_d0_f12:12:g_d0_f12:A:!
+21:897:45251:21:0:390:432:498:12:g_d0_f5:8:g_d0_f9:?:"t+1rit+1
+21:898:45260:0:21:432:439:519:12:g_d0_f12:12:g_d0_f12:A:#
+21:899:45261:21:40:537:558:498:12:g_d0_f4:12:g_d0_f4:A:(46)
+21:900:45265:40:20:54:320:458:12:g_d0_f4:12:g_d0_f4:B:which, as mentioned above, is a linear factor model.
+21:901:45317:20:17:63:558:438:7:g_d0_f4:10:g_d0_f4:F:15To derive that equation, consider that for any excess returnRt+1-Rft+1, we haveEt[exp(mt+1)(Rt+1-Rft+1)] = 0.
+21:902:45428:17:12:54:558:421:10:g_d0_f4:10:g_d0_f4:F:Premultiplying byexp(-Etmt+1)we obtain:Et[exp(mt+1-Etmt+1)(Rt+1-Rft+1)] = 0. The moment condition is
+21:903:45528:12:9:54:214:409:10:g_d0_f4:10:g_d0_f4:F:then obtained by conditioning down.
+21:904:45563:9:15:63:557:400:7:g_d0_f4:10:g_d0_f4:F:16The derivation of this equation follows Campbell and Vuolteenaho (2004). Given the assumption of lognormality
+21:905:45674:15:16:54:171:385:10:g_d0_f4:10:g_d0_f4:F:of all shocks, we can write:
+21:906:45702:16:7:210:290:369:10:g_d0_f13:10:g_d0_f15:?:Etrit+1-rft+1+1
+21:907:45717:7:0:285:290:362:10:g_d0_f15:10:g_d0_f15:?:2
+21:908:45718:0:24:291:401:369:10:g_d0_f13:10:g_d0_f15:?:-2it=-Covt(mt+1;rit+1)
+21:909:45740:24:35:54:463:345:10:g_d0_f4:10:g_d0_f4:F:whererit+1=log(1 +Rit+1),rft+1=log(1 +Rft+1), and-2it=V art(rit+1). We then note that
+21:910:45825:35:0:76:418:310:10:g_d0_f13:7:g_d0_f16:A:Covt(mt+1;rit+1) =Covt(-Et+1mt+1;rit+1) =Et(-Et+1mt+1rit+1) =Et(--q0
+21:911:45893:0:17:421:430:330:10:g_d0_f12:10:g_d0_f12:A:0
+21:912:45894:17:0:421:430:313:10:g_d0_f12:10:g_d0_f12:A:@
+21:913:45895:0:24:433:444:323:7:g_d0_f16:10:g_d0_f12:A:1X
+21:914:45897:24:0:430:444:299:7:g_d0_f14:7:g_d0_f17:A:j=0
+21:915:45900:0:0:446:480:310:10:g_d0_f13:7:g_d0_f14:?:HjB1\bj
+21:916:45907:0:17:482:491:330:10:g_d0_f12:10:g_d0_f12:?:1
+21:917:45908:17:36:482:535:313:10:g_d0_f12:10:g_d0_f15:?:A"t+1rit+1)
+21:918:45919:36:23:53:146:277:10:g_d0_f4:10:g_d0_f4:F:Therefore, we obtain:
+21:919:45940:23:7:183:263:254:10:g_d0_f13:10:g_d0_f15:?:Etrit+1-rft+1+1
+21:920:45955:7:0:258:263:247:10:g_d0_f15:10:g_d0_f15:A:2
+21:921:45956:0:0:264:312:254:10:g_d0_f13:7:g_d0_f16:A:-2it=Et(-q0
+21:922:45967:0:18:314:323:274:10:g_d0_f12:10:g_d0_f12:A:0
+21:923:45968:18:0:314:323:256:10:g_d0_f12:10:g_d0_f12:A:@
+21:924:45969:0:24:326:337:266:7:g_d0_f16:10:g_d0_f12:A:1X
+21:925:45971:24:0:323:337:242:7:g_d0_f14:7:g_d0_f17:A:j=0
+21:926:45974:0:0:339:374:254:10:g_d0_f13:7:g_d0_f14:?:HjB1\bj
+21:927:45981:0:18:375:384:274:10:g_d0_f12:10:g_d0_f12:A:1
+21:928:45982:18:34:375:428:256:10:g_d0_f12:10:g_d0_f15:A:A"t+1rit+1)
+21:929:45993:34:35:63:482:222:10:g_d0_f4:10:g_d0_f4:?:SinceEtrit+1-rft+1+12-2it'Et[Rit+1-Rft], and taking unconditional expectations, we obtain
+21:930:46082:35:0:196:279:187:10:g_d0_f13:10:g_d0_f13:?:E[Rit+1-Rft] =E
+21:931:46097:0:18:282:289:207:10:g_d0_f12:10:g_d0_f12:A:2
+21:932:46098:18:0:282:295:189:10:g_d0_f12:7:g_d0_f16:A:4-q0
+21:933:46102:0:18:298:307:207:10:g_d0_f12:10:g_d0_f12:A:0
+21:934:46103:18:0:298:307:189:10:g_d0_f12:10:g_d0_f12:A:@
+21:935:46104:0:24:310:320:199:7:g_d0_f16:10:g_d0_f12:?:1X
+21:936:46106:24:0:307:320:175:7:g_d0_f14:7:g_d0_f17:?:j=0
+21:937:46109:0:0:322:357:187:10:g_d0_f13:7:g_d0_f14:A:HjB1\bj
+21:938:46116:0:18:358:367:207:10:g_d0_f12:10:g_d0_f12:?:1
+21:939:46117:18:0:358:407:189:10:g_d0_f12:7:g_d0_f17:?:A"t+1rit+1
+21:940:46127:0:18:408:415:207:10:g_d0_f12:10:g_d0_f12:A:3
+21:941:46128:18:0:408:415:189:10:g_d0_f12:10:g_d0_f12:A:5
+22:942:46131:0:57:71:463:703:12:g_d0_f4:12:g_d0_f4:A:Our full set of moment conditions identifying the parameters of the model is
+22:943:46207:57:0:65:131:646:12:g_d0_f5:12:g_d0_f6:C:Gt+1(\b;-q) =
+22:944:46220:0:21:135:143:684:12:g_d0_f12:12:g_d0_f12:?:2
+22:945:46221:21:7:135:143:663:12:g_d0_f12:12:g_d0_f12:?:6
+22:946:46222:7:7:135:143:656:12:g_d0_f12:12:g_d0_f12:?:6
+22:947:46223:7:7:135:143:649:12:g_d0_f12:12:g_d0_f12:?:6
+22:948:46224:7:8:135:143:642:12:g_d0_f12:12:g_d0_f12:?:6
+22:949:46225:8:0:135:143:634:12:g_d0_f12:12:g_d0_f12:?:4
+22:950:46226:0:7:143:240:646:12:g_d0_f6:8:g_d0_f8:?:(Xt+1-\bXt)\nXt
+22:951:46241:7:11:143:240:639:12:g_d0_f12:12:g_d0_f12:?:|{z}
+22:952:46245:11:0:164:218:628:8:g_d0_f4:8:g_d0_f4:?:VAR moments
+22:953:46256:0:0:244:287:646:12:g_d0_f4:12:g_d0_f10:?:,Rt+1-
+22:954:46262:0:24:345:463:670:8:g_d0_f4:8:g_d0_f4:A:Mapping into frequency domain
+22:955:46291:24:0:290:325:646:12:g_d0_f5:12:g_d0_f10:?:Rft+1-
+22:956:46297:0:20:338:437:666:12:g_d0_f12:12:g_d0_f12:?: z}|{
+22:957:46301:20:0:338:345:646:12:g_d0_f5:8:g_d0_f11:?:q0
+22:958:46303:0:20:348:380:659:12:g_d0_f12:8:g_d0_f11:A:-X1
+22:959:46306:20:0:372:387:639:8:g_d0_f8:8:g_d0_f9:A:j=0
+22:960:46309:0:0:390:429:646:12:g_d0_f5:8:g_d0_f8:?:HjB1\bj
+22:961:46316:0:13:430:437:659:12:g_d0_f12:12:g_d0_f12:A:-
+22:962:46317:13:0:439:509:646:12:g_d0_f6:12:g_d0_f6:C:(Xt+1-\bXt)
+22:963:46328:0:20:509:518:666:12:g_d0_f12:12:g_d0_f12:?:!
+22:964:46329:20:19:518:538:646:12:g_d0_f21:8:g_d0_f9:?:rt+1
+22:965:46333:19:11:251:538:627:12:g_d0_f12:12:g_d0_f12:A:|{z}
+22:966:46337:11:0:352:436:616:8:g_d0_f4:8:g_d0_f4:A:Asset pricing moments
+22:967:46358:0:21:538:546:684:12:g_d0_f12:12:g_d0_f12:A:3
+22:968:46359:21:7:538:546:663:12:g_d0_f12:12:g_d0_f12:A:7
+22:969:46360:7:7:538:546:656:12:g_d0_f12:12:g_d0_f12:A:7
+22:970:46361:7:7:538:546:649:12:g_d0_f12:12:g_d0_f12:A:7
+22:971:46362:7:8:538:546:642:12:g_d0_f12:12:g_d0_f12:A:7
+22:972:46363:8:31:538:546:634:12:g_d0_f12:12:g_d0_f12:A:5
+22:973:46364:31:18:537:558:603:12:g_d0_f4:12:g_d0_f4:A:(47)
+22:974:46368:18:18:54:558:585:12:g_d0_f4:12:g_d0_f4:B:whereRtis the vector of test asset returns,Rftis the risk-free rate andrt+1is the vector of log test
+22:975:46468:18:18:54:123:567:12:g_d0_f4:12:g_d0_f4:B:asset returns.
+22:976:46482:18:18:71:558:549:12:g_d0_f4:12:g_d0_f4:A:While we could in principle minimize the GMM objective function for all the parameters si-
+22:977:46572:18:17:54:558:531:12:g_d0_f4:12:g_d0_f4:B:multaneously, that method has the drawbacks that the optimization is di¢ cult to perform (due
+22:978:46665:17:18:54:558:514:12:g_d0_f4:12:g_d0_f4:B:to the large number of parameters) and that it allows errors in the asset pricing model to a§ect
+22:979:46761:18:18:54:557:496:12:g_d0_f4:12:g_d0_f4:B:the VAR estimates. We therefore construct estimates of\band-qby minimizing the two moment
+22:980:46850:18:18:53:557:478:12:g_d0_f4:12:g_d0_f6:B:conditions separately. That is,\bis simply estimated through OLS and then-qis estimated taking\b
+22:981:46946:18:18:53:557:460:12:g_d0_f4:12:g_d0_f4:B:as given, using GMM.17Given estimates^\bandb-q, we construct standard errors using thefullset of
+22:982:47042:18:0:54:115:442:12:g_d0_f4:12:g_d0_f5:B:moments,G
+22:983:47051:0:10:117:124:455:12:g_d0_f12:12:g_d0_f12:?:-
+22:984:47052:10:0:126:143:445:12:g_d0_f6:12:g_d0_f5:C:^\b;b-q
+22:985:47059:0:13:144:151:455:12:g_d0_f12:12:g_d0_f12:?:-
+22:986:47060:13:18:151:557:442:12:g_d0_f4:12:g_d0_f4:A:. The standard errors we report for the risk prices-qtherefore always incorporate
+22:987:47141:18:18:54:358:424:12:g_d0_f4:12:g_d0_f4:B:uncertainty about the dynamics of the economy through\b.
+22:988:47197:18:18:71:558:406:12:g_d0_f4:12:g_d0_f4:A:We perform the GMM estimation of-q, taking\bas given, using either one-step GMM (using
+22:989:47283:18:18:54:558:388:12:g_d0_f4:12:g_d0_f4:B:the identity matrix to weight the asset pricing moments) or two-step GMM (using the estimated
+22:990:47376:18:18:54:558:370:12:g_d0_f4:12:g_d0_f4:B:variance-covariance matrix of the moment residuals to construct the weighting matrix for the second
+22:991:47475:18:39:54:264:352:12:g_d0_f4:8:g_d0_f4:B:step), and report the results separately.18
+22:992:47518:39:25:54:211:313:14:g_d0_f3:14:g_d0_f3:C:4.4  Empirical results
+22:993:47540:25:26:54:124:288:12:g_d0_f3:12:g_d0_f3:C:4.4.1  Data
+22:994:47551:26:18:54:558:262:12:g_d0_f4:12:g_d0_f4:B:The most natural choice for the priced variable,xt, is consumption growth, but we also explore
+22:995:47645:18:18:54:558:244:12:g_d0_f4:12:g_d0_f4:B:using other variables: GDP, durable consumption, and investment growth. The rationale for using
+22:996:47740:18:18:54:558:226:12:g_d0_f4:12:g_d0_f4:B:variables other than consumption, even though we are motivated by consumption-based models, is
+22:997:47834:18:15:63:557:208:7:g_d0_f4:10:g_d0_f4:F:17The same methodology is used in Campbell and Vuolteenaho (2004) and Campbell et al. (2013). Optimizing
+22:998:47938:15:12:54:558:193:10:g_d0_f4:10:g_d0_f4:F:the full GMM objective function (or even using two-stage GMM) would be more e¢ cient, so our standard errors will
+22:999:48051:12:9:54:315:181:10:g_d0_f4:10:g_d0_f4:F:in general be larger than if we used a fully e¢ cient method.
+22:1000:48112:9:15:63:557:172:7:g_d0_f4:10:g_d0_f4:F:18When computing the standard errors incorporating the full estimation uncertainty (according to eq. 47), we
+22:1001:48220:15:12:54:557:157:10:g_d0_f4:10:g_d0_f4:F:take into account the weighting matrix we have used to estimate-q. We construct the full weighting matrix in the
+22:1002:48332:12:12:54:558:145:10:g_d0_f4:10:g_d0_f4:F:following way. We assign equal weight to all VAR moment conditions (i.e. we use the identity matrix for the block of
+22:1003:48448:12:12:54:558:133:10:g_d0_f4:10:g_d0_f4:F:the weighting matrix that corresponds to the VAR moment conditions). For the block that corresponds to the asset
+22:1004:48560:12:12:54:557:121:10:g_d0_f4:10:g_d0_f4:F:pricing moments, we use the same weighting matrix we used in the estimation ofq. We set to zero the weight on the
+22:1005:48673:12:12:54:558:109:10:g_d0_f4:10:g_d0_f4:F:cross-product between VAR and asset pricing moment conditions. Finally, we scale the VAR moment conditions by
+22:1006:48782:12:12:54:558:97:10:g_d0_f4:10:g_d0_f4:F:a (common) constant such that on average the block of VAR moments and the block of asset pricing moments get
+22:1007:48890:12:0:54:127:85:10:g_d0_f4:10:g_d0_f4:F:the same weight.
+23:1008:48908:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:that to the extent that the pricing kernel is driven by permanent shocks to consumption, permanent
+23:1009:49006:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:shocks to any variable that is cointegrated with consumption should also proxy for the pricing kernel,
+23:1010:49108:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:since the permanent shocks to consumption and any variable it is cointegrated with must be perfectly
+23:1011:49208:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:correlated. That said, households want to smooth consumption compared to income, so we cannot
+23:1012:49301:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:view estimates of the spectral weighting function for aggregates other than consumption as yielding
+23:1013:49400:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:direct tests comparing utility functions. Rather, we interpret them as simply illustrating how the
+23:1014:49498:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:dynamics of the economy are priced. Furthermore, Cochrane (1996) argues that investment growth
+23:1015:49592:17:18:54:558:578:12:g_d0_f4:12:g_d0_f4:B:should price the cross-section of asset returns. Our results on investment are a generalization of his
+23:1016:49694:18:18:54:493:560:12:g_d0_f4:12:g_d0_f4:B:analysis that asks whether and how future dynamics of investment growth are priced.
+23:1017:49777:18:18:71:558:542:12:g_d0_f4:12:g_d0_f4:A:For the vector of state variables-Xt, we want variables that are both priced in the cross-section
+23:1018:49874:18:18:54:557:524:12:g_d0_f4:12:g_d0_f4:B:and can forecast our priced variablext.  Since the number of parameters of the VAR increases
+23:1019:49966:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:quadratically with the dimension of-Xt, we look for a parsimonious representation with few state
+23:1020:50062:18:18:54:557:488:12:g_d0_f4:12:g_d0_f4:B:variables.  The Örst element of-Xtis the priced variable, and the other elements are the Örst
+23:1021:50155:18:18:53:557:470:12:g_d0_f4:12:g_d0_f4:B:two principal components of a set of 9 real and Önancial variables: the aggregate price/earnings
+23:1022:50251:18:18:53:557:452:12:g_d0_f4:12:g_d0_f4:B:and price/dividend ratios; the 10 year/3 month term spread; the AaañBaa corporate yield spread
+23:1023:50345:18:18:53:557:434:12:g_d0_f4:12:g_d0_f4:B:(default spread); the small-stock value spread; the unemployment rate minus its 8-year moving
+23:1024:50438:18:18:53:557:416:12:g_d0_f4:12:g_d0_f4:B:average; RREL, the detrended version of the short-term interest rate that Campbell (1991) Önds
+23:1025:50532:18:18:53:557:398:12:g_d0_f4:12:g_d0_f4:B:forecasts market returns; the three-month Treasury yield rate; and Lettau and Ludvigsonís (2001)
+23:1026:50628:18:18:53:558:380:12:g_d0_f5:12:g_d0_f4:B:cay. The results are robust to the choice of variables from which the principal components are
+23:1027:50722:18:18:53:557:362:12:g_d0_f4:12:g_d0_f4:B:extracted. Because some of the variables used are only available after 1952, in the analysis that
+23:1028:50819:18:17:53:557:344:12:g_d0_f4:12:g_d0_f4:B:follows we use the quarterly data over the period 1952ñ2011. Finally, in the analysis that follows
+23:1029:50917:17:18:53:557:327:12:g_d0_f4:12:g_d0_f4:B:we use 3 lags of quarterly data, as suggested by the Akaike information criterion, but results are
+23:1030:51015:18:18:53:557:309:12:g_d0_f4:12:g_d0_f4:B:robust to the choice of the number of lags. Table 1 reports the VAR coe¢ cients of the consumption
+23:1031:51113:18:35:53:351:291:12:g_d0_f4:12:g_d0_f4:B:equation (using consumption growth as a priced variable).
+23:1032:51170:35:26:53:215:256:12:g_d0_f3:12:g_d0_f3:C:4.4.2  Parameter estimates
+23:1033:51196:26:18:53:557:230:12:g_d0_f4:12:g_d0_f4:B:Table 2 reports the estimation results using two-step GMM to estimate the risk prices. The left-
+23:1034:51292:18:17:53:557:212:12:g_d0_f4:12:g_d0_f4:B:hand side uses the set of 25 size- and book/market-sorted portfolios, while the right-hand side adds
+23:1035:51392:17:18:53:557:195:12:g_d0_f4:12:g_d0_f4:B:in a set of 49 industry portfolios (both sets of portfolios are obtained from Ken Frenchís website; we
+23:1036:51494:18:18:53:557:177:12:g_d0_f4:12:g_d0_f4:B:drop six industry portfolios that have missing data in the period considered). For both portfolio sets
+23:1037:51596:18:18:53:558:159:12:g_d0_f4:12:g_d0_f4:B:we estimate both the bandpass basis and the utility basis. For the bandpass basis,q1corresponds to
+23:1038:51694:18:18:53:558:141:12:g_d0_f4:12:g_d0_f4:B:the price of lower-than-business cycle risks,q2to business cycle risks, andq3to higher-than-business
+23:1039:51794:18:18:53:558:123:12:g_d0_f4:12:g_d0_f4:B:cycle risks. For the utility basis,q1is price of the long-run component,q2is the constant, andq3is
+23:1040:51892:18:18:53:329:105:12:g_d0_f4:12:g_d0_f4:B:the high-frequency component (coe¢ cient oncos(!)).
+23:1041:51943:18:0:71:558:87:12:g_d0_f4:12:g_d0_f4:A:The Örst set of rows in table 2 reports results obtained using consumption growth as priced
+24:1042:52036:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:variable in the SDF. We Önd that long-run shocks to consumption are strongly priced both in the
+24:1043:52131:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:25 FamañFrench portfolios and in the industry portfolios, while business-cycle frequency shocks and
+24:1044:52230:18:18:54:300:667:12:g_d0_f4:12:g_d0_f4:B:high frequency shocks do not seem to be priced.
+24:1045:52277:18:18:71:558:649:12:g_d0_f4:12:g_d0_f4:A:The result can be seen much more clearly when using the bandpass basis. When looking at the
+24:1046:52368:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:utility basis, we can barely reject at the 10 percent level that long-run consumption shocks are not
+24:1047:52468:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:priced, and the coe¢ cient on the long-run (EpsteinñZin) shock is not statistically di§erent from
+24:1048:52565:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:0 when industry portfolios are included. In other words, when estimating structural preference-
+24:1049:52660:17:18:54:558:578:12:g_d0_f4:12:g_d0_f4:B:based models, we Önd no signiÖcant parameters, implying that neither short- nor long-run shocks
+24:1050:52755:18:18:54:558:560:12:g_d0_f4:12:g_d0_f4:B:to consumption growth are priced in equity returns. On the other hand, with the bandpass basis
+24:1051:52849:18:18:54:323:542:12:g_d0_f4:12:g_d0_f4:B:we Önd that long-run shocks are signiÖcantly priced.
+24:1052:52901:18:18:71:558:524:12:g_d0_f4:12:g_d0_f4:A:We obtain similar results for the other priced variables: with the bandpass basis we Önd strongly
+24:1053:52998:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:signiÖcant low-frequency risk prices in almost all of the variables (GDP growth, durable consumption
+24:1054:53098:18:18:54:558:488:12:g_d0_f4:12:g_d0_f4:B:growth, and the various measures of investment growth).  On the contrary, we Önd almost no
+24:1055:53188:18:18:54:260:470:12:g_d0_f4:12:g_d0_f4:B:signiÖcance when using the utility basis.
+24:1056:53229:18:18:71:558:452:12:g_d0_f4:12:g_d0_f4:A:The appendix reports two main robustness tests: it shows that we obtain similar results when
+24:1057:53321:18:18:54:558:434:12:g_d0_f4:12:g_d0_f4:B:we bootstrap the p-values instead of using the asymptotic approximation, and also when we include
+24:1058:53418:18:18:54:558:416:12:g_d0_f4:12:g_d0_f4:B:a set of risk-sorted portfolios (obtained sorting stocks by their loadings on the shocks in the di§erent
+24:1059:53522:18:18:54:558:398:12:g_d0_f4:12:g_d0_f4:B:frequency ranges). The appendix also reports the factor loadings of the size and book/market sorted
+24:1060:53621:18:18:54:266:380:12:g_d0_f4:8:g_d0_f4:B:portfolios and the risk-sorted portfolios.19
+24:1061:53665:18:18:71:558:362:12:g_d0_f4:12:g_d0_f4:A:Table 3 repeats the analysis using one-step GMM (i.e. using the identity matrix as a weighting
+24:1062:53759:18:17:54:558:344:12:g_d0_f4:12:g_d0_f4:B:matrix when estimating the risk prices). Using the utility basis, we can only distinguish the price
+24:1063:53858:17:18:54:558:327:12:g_d0_f4:12:g_d0_f4:B:of long-run risk from zero in a single case (residential investment, only for the cross-section of the
+24:1064:53960:18:18:54:558:309:12:g_d0_f4:12:g_d0_f4:B:25 FF portfolios). Using the bandpass basis, we Önd several cases in which the long-run risk price
+24:1065:54058:18:18:54:558:291:12:g_d0_f4:12:g_d0_f4:B:is signiÖcant: consumption growth, durables growth, Öxed investment and residential investment.
+24:1066:54153:18:18:54:558:273:12:g_d0_f4:12:g_d0_f4:B:In any case, the bandpass basis yields results on the price of long-run risks that are much stronger
+24:1067:54253:18:18:54:278:255:12:g_d0_f4:12:g_d0_f4:B:than the ones indicated by the utility basis.
+24:1068:54298:18:18:71:558:237:12:g_d0_f4:12:g_d0_f4:A:We interpret these results in two ways. First, it is possible that agents do care about long-
+24:1069:54391:18:18:54:558:219:12:g_d0_f4:12:g_d0_f4:B:run shocks, but their deÖnition of ìlong-runîis closer to the one captured by the bandpass basis
+24:1070:54487:18:18:54:558:201:12:g_d0_f4:12:g_d0_f4:B:(cycles longer than the business cycle) rather than that captured by the utility basis (where more
+24:1071:54585:18:18:54:558:183:12:g_d0_f4:12:g_d0_f4:B:than half of the pricing weight falls on cycles longer than 230 years). Second, the bandpass basis
+24:1072:54683:18:18:54:558:165:12:g_d0_f4:12:g_d0_f4:B:loads on frequencies that can be economically considered ìlong-runîbut are much easier to detect
+24:1073:54779:18:18:54:461:147:12:g_d0_f4:12:g_d0_f4:B:empirically than frequencies close to 0 for which we have little empirical power.
+24:1074:54860:18:17:71:558:129:12:g_d0_f4:12:g_d0_f4:A:Using the frequency-domain decomposition leads us to very di§erent conclusions about the
+24:1075:54948:17:16:63:557:112:7:g_d0_f4:10:g_d0_f4:F:19We have also looked at whether our factors can explain the average returns on short-term dividend strips
+24:1076:55054:16:12:54:558:96:10:g_d0_f4:10:g_d0_f4:F:documented by van Binsbergen, Brandt, and Koijen (2012), but Önd inconclusive results because of the brevity of
+24:1077:55165:12:0:54:264:84:10:g_d0_f4:10:g_d0_f4:F:the available sample, which only begins in 1996.
+25:1078:55215:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:underlying theories than standard time-domain techniques would have. The results that employ
+25:1079:55307:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:the utility basis show essentially no support for the long-run risk model. Looking at the problem
+25:1080:55404:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:using the bandpass Ölter and targeting the economically relevant set of frequencies instead yields
+25:1081:55502:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:strong and robust support for the idea that low-frequency shocks to the economy are priced in
+25:1082:55595:18:34:54:133:631:12:g_d0_f4:12:g_d0_f4:B:equity markets.
+25:1083:55610:34:26:54:336:597:12:g_d0_f3:12:g_d0_f3:C:4.4.3  Impulse transfer and weighting functions
+25:1084:55657:26:18:54:557:571:12:g_d0_f4:12:g_d0_f4:B:The left-hand panel of Ögure 3 plots the estimated impulse transfer functions,Gj, of the three
+25:1085:55751:18:18:53:558:553:12:g_d0_f4:12:g_d0_f4:B:shocks"jfor consumption growth. To help show the behavior of the functions near frequency zero,
+25:1086:55846:18:18:53:558:535:12:g_d0_f4:12:g_d0_f4:B:we plot them from--to-, instead of beginning at zero as elsewhere. Note that the functions are
+25:1087:55940:18:18:53:557:517:12:g_d0_f4:12:g_d0_f4:B:all symmetrical across the vertical axis (since they are linear combinations of cosines). The shaded
+25:1088:56040:18:18:53:345:499:12:g_d0_f4:12:g_d0_f4:B:regions in each Ögure are 95-percent conÖdence intervals.
+25:1089:56097:18:18:71:558:481:12:g_d0_f4:12:g_d0_f4:A:There are two key features of the transfer functions to note. First, there are meaningful qual-
+25:1090:56192:18:17:53:557:463:12:g_d0_f4:12:g_d0_f4:B:itative and quantitative di§erences across the functions in how power is distributed, which helps
+25:1091:56289:17:18:53:557:446:12:g_d0_f4:12:g_d0_f4:B:identify the underlying risk prices. If the transfer functions were all highly similar, then we would
+25:1092:56390:18:18:53:557:428:12:g_d0_f4:12:g_d0_f4:B:not expect to be able to distinguish risk prices across frequencies very well. Looking at the con-
+25:1093:56488:18:18:53:557:410:12:g_d0_f4:12:g_d0_f4:B:Ödence bands, though, it is clear that the transfer functions are poorly estimated near frequency
+25:1094:56585:18:18:53:557:392:12:g_d0_f4:12:g_d0_f4:B:zero.!= 0corresponds to the the inÖnite-horizon response to each shock, so it is not surprising
+25:1095:56680:18:18:53:557:374:12:g_d0_f4:12:g_d0_f4:B:that it is most di¢ cult to estimate. Nevertheless, the fact that the uncertainty rises so much at very
+25:1096:56783:18:18:53:557:356:12:g_d0_f4:12:g_d0_f4:B:low frequencies helps explain why we have trouble estimating the coe¢ cient on the low-frequency
+25:1097:56879:18:18:53:210:338:12:g_d0_f4:12:g_d0_f4:B:component of the utility basis.
+25:1098:56910:18:18:71:558:320:12:g_d0_f4:12:g_d0_f4:A:The right-hand set of plots in each Ögure zooms in on frequencies corresponding to cycles longer
+25:1099:57006:18:18:53:557:302:12:g_d0_f4:12:g_d0_f4:B:than 5 years.  In each of those right-hand-side Ögures, the vertical lines demarcate the set of
+25:1100:57101:18:18:53:557:284:12:g_d0_f4:12:g_d0_f4:B:frequencies that receive half the weight under our benchmark calibration of EpsteinñZin preferences
+25:1101:57200:18:18:53:557:266:12:g_d0_f4:12:g_d0_f4:B:(i.e. cycles longer than 230 years). In all the cases, it is clear that the conÖdence bands are far
+25:1102:57299:18:18:53:557:248:12:g_d0_f4:12:g_d0_f4:B:larger in the region where the mass of the EpsteinñZin weighting function is focused than elsewhere.
+25:1103:57399:18:18:71:558:230:12:g_d0_f4:12:g_d0_f4:A:Figure 4 plots the estimated spectral weighting functions for consumption growth and 95-percent
+25:1104:57494:18:17:53:557:212:12:g_d0_f4:12:g_d0_f4:B:conÖdence intervals, obtained using the 25 FamañFrench portfolios, for the bandpass basis (darker
+25:1105:57591:17:18:53:557:195:12:g_d0_f4:12:g_d0_f4:B:shaded area) and the utility basis (lighter shaded area). The left panel plots all frequencies, while
+25:1106:57692:18:18:53:557:177:12:g_d0_f4:12:g_d0_f4:B:the right panel zooms in on the cycles longer than 5 years. The Ögure shows signiÖcant weight
+25:1107:57785:18:18:53:557:159:12:g_d0_f4:12:g_d0_f4:B:at low frequencies.  The price of long-run risks is quite precisely estimated using the bandpass
+25:1108:57881:18:18:53:557:141:12:g_d0_f4:12:g_d0_f4:B:basis (and signiÖcantly di§erent from zero), while the standard errors of the utility basis estimates
+25:1109:57982:18:18:53:557:123:12:g_d0_f4:12:g_d0_f4:B:diverge quickly as we look at frequencies closer to zero, conÖrming the huge amount of statistical
+25:1110:58080:18:0:53:495:105:12:g_d0_f4:12:g_d0_f4:B:uncertainty exactly in the frequency range most important for the EpsteinñZin model.
+26:1111:58166:0:34:54:462:703:17:g_d0_f3:17:g_d0_f3:C:5  Weighting functions in returns-based models
+26:1112:58212:34:26:54:225:669:14:g_d0_f3:14:g_d0_f3:C:5.1  Theoretical models
+26:1113:58235:26:25:54:165:643:12:g_d0_f3:12:g_d0_f3:C:5.1.1  The CAPM
+26:1114:58250:25:36:54:548:618:12:g_d0_f4:12:g_d0_f4:B:Under the CAPM, innovations to the SDF are proportional to innovations to the market return,
+26:1115:58342:36:0:155:256:582:12:g_d0_f5:12:g_d0_f10:?:mt+1-Etmt+1=-
+26:1116:58355:0:17:265:353:591:12:g_d0_f5:12:g_d0_f6:A:E[rm;t+1-rf;t+1]
+26:1117:58371:17:0:258:361:574:12:g_d0_f5:12:g_d0_f6:A:V ar(rm;t+1-rf;t+1)
+26:1118:58390:0:35:364:558:582:12:g_d0_f6:12:g_d0_f4:A:(rm;t+1-Erm;t+1)(48)
+26:1119:58410:35:36:53:520:547:12:g_d0_f4:12:g_d0_f4:B:whererm;t+1is the market return. The weighting function under the CAPM is thus simply
+26:1120:58495:36:0:217:286:511:12:g_d0_f5:12:g_d0_f6:C:ZCAPM(!) =
+26:1121:58505:0:17:297:386:519:12:g_d0_f5:12:g_d0_f6:A:E[rm;t+1-rf;t+1]
+26:1122:58521:17:0:290:394:502:12:g_d0_f5:12:g_d0_f6:C:V ar(rm;t+1-rf;t+1)
+26:1123:58540:0:38:537:558:511:12:g_d0_f4:12:g_d0_f4:A:(49)
+26:1124:58544:38:18:53:558:473:12:g_d0_f5:12:g_d0_f4:B:ZCAPMis áat, and its level depends on the price of risk in the market, just like we obtain with
+26:1125:58639:18:34:53:384:455:12:g_d0_f4:12:g_d0_f4:B:power utility (though obviously with a di§erent priced variable).
+26:1126:58704:34:26:53:270:421:12:g_d0_f3:12:g_d0_f3:C:5.1.2  EpsteinñZin and power utility
+26:1127:58740:26:18:53:557:395:12:g_d0_f4:12:g_d0_f4:B:In a model with a representative agent with EpsteinñZin preferences (with power utility as a special
+26:1128:58840:18:18:53:557:377:12:g_d0_f4:12:g_d0_f4:B:case) and where consumption growth is log-normal and homoskedastic, Campbell (1993) shows that
+26:1129:58934:18:18:53:557:359:12:g_d0_f4:12:g_d0_f4:B:innovations to the pricing kernel can be written purely in terms of returns on the representative
+26:1130:59031:18:37:53:177:341:12:g_d0_f4:12:g_d0_f4:B:agentís wealth portfolio,
+26:1131:59056:37:0:142:398:304:12:g_d0_f5:8:g_d0_f9:?:mt+1-Etmt+1=---Et+1rw;t+1-(--1) -Et+1
+26:1132:59093:0:29:405:418:319:8:g_d0_f11:12:g_d0_f12:?:1X
+26:1133:59095:29:0:402:417:290:8:g_d0_f8:8:g_d0_f9:?:j=1
+26:1134:59098:0:41:420:558:304:12:g_d0_f5:12:g_d0_f4:A:-jrw;t+1+j(50)
+26:1135:59112:41:18:53:557:263:12:g_d0_f4:12:g_d0_f4:B:whererwis the log return of the wealth portfolio of the representative agent.-is the same log-
+26:1136:59206:18:18:53:557:245:12:g_d0_f4:12:g_d0_f4:B:linearization parameter as in the previous section. Campbell (1993) interprets (50) as a version of
+26:1137:59305:18:18:53:557:227:12:g_d0_f4:12:g_d0_f4:B:Mertonís (1973) intertemporal CAPM because both current returns and changes in the investment
+26:1138:59398:18:18:53:251:209:12:g_d0_f4:12:g_d0_f4:B:opportunity set are priced risk factors.
+26:1139:59438:18:38:71:244:191:12:g_d0_f4:12:g_d0_f4:A:The weighting function for (50) is
+26:1140:59472:38:0:193:342:153:12:g_d0_f5:12:g_d0_f6:C:ZEZ-returns(!) =-+ (--1)
+26:1141:59496:0:29:349:361:168:8:g_d0_f11:12:g_d0_f12:A:1X
+26:1142:59498:29:0:346:361:139:8:g_d0_f8:8:g_d0_f9:A:j=1
+26:1143:59501:0:41:364:558:153:12:g_d0_f5:12:g_d0_f4:A:-j2cos(!j)(51)
+26:1144:59515:41:18:53:203:112:12:g_d0_f4:12:g_d0_f4:B:As-!1we obtain the limit
+26:1145:59539:18:0:236:558:94:12:g_d0_f5:12:g_d0_f4:A:Z(!) = (--1)D1(!) + 1(52)
+27:1146:59566:0:18:54:557:703:12:g_d0_f4:12:g_d0_f4:B:withD1the limit of the Dirichlet kernel, which essentially corresponds to a point mass at 0. All
+27:1147:59662:18:18:53:558:685:12:g_d0_f4:12:g_d0_f4:B:agents, then, regardless of-(i.e., regardless of whether they have power utility or more general
+27:1148:59758:18:34:54:504:667:12:g_d0_f4:12:g_d0_f4:B:recursive preferences) place high weight on low-frequency áuctuations in equity returns.
+27:1149:59846:34:44:54:558:633:12:g_d0_f3:12:g_d0_f3:F:5.1.3  Returns-based asset pricing when we can forecast returns but not consumption
+27:1150:59929:44:18:54:558:589:12:g_d0_f4:12:g_d0_f4:B:Campbellís (1993) analysis, and that used in Campbell and Vuolteenaho (2004), assumes that risk
+27:1151:60024:18:18:54:558:571:12:g_d0_f4:12:g_d0_f4:B:premia are constant and that consumption growth is potentially forecastable. Suppose, alternatively,
+27:1152:60124:18:18:54:558:553:12:g_d0_f4:12:g_d0_f4:B:that we cannot forecast consumption growth at all, and that when we forecast asset returns we are
+27:1153:60221:18:18:54:558:535:12:g_d0_f4:12:g_d0_f4:B:simply forecasting risk premia.  For example, return predictability might arise from stochastic
+27:1154:60316:18:18:54:558:517:12:g_d0_f4:12:g_d0_f4:B:volatility (as in Bansal and Yaron, 2004 and Campbell, Giglio, Polk and Turley, 2012) or time-
+27:1155:60410:18:18:54:558:499:12:g_d0_f4:12:g_d0_f4:B:varying risk aversion (Campbell and Cochrane, 1999; Dew-Becker, 2012). The CampbellñShiller
+27:1156:60501:18:38:54:369:481:12:g_d0_f4:12:g_d0_f4:B:approximation when consumption is unpredictable reduces to
+27:1157:60559:38:0:177:363:443:12:g_d0_f6:8:g_d0_f9:?:-Et+1rw;t+1= -Et+1-ct+1--Et+1
+27:1158:60588:0:29:370:383:458:8:g_d0_f11:12:g_d0_f12:A:1X
+27:1159:60590:29:0:367:382:429:8:g_d0_f8:8:g_d0_f9:A:j=1
+27:1160:60593:0:34:385:558:443:12:g_d0_f5:12:g_d0_f4:A:-jrw;t+j+1(53)
+27:1161:60607:34:38:53:177:409:12:g_d0_f4:12:g_d0_f4:B:and the pricing kernel is
+27:1162:60632:38:0:153:325:371:12:g_d0_f6:12:g_d0_f5:C:-Et+1mt+1=---Et+1rw;t+1--
+27:1163:60657:0:16:326:353:379:12:g_d0_f6:12:g_d0_f5:A:1--
+27:1164:60660:16:0:327:353:363:12:g_d0_f6:12:g_d0_f5:A:1--
+27:1165:60663:0:0:355:388:371:12:g_d0_f6:8:g_d0_f9:?:-Et+1
+27:1166:60668:0:29:394:407:386:8:g_d0_f11:12:g_d0_f12:?:1X
+27:1167:60670:29:0:391:406:357:8:g_d0_f8:8:g_d0_f9:?:j=1
+27:1168:60673:0:41:409:558:371:12:g_d0_f5:12:g_d0_f4:A:-jrw;t+j+1(54)
+27:1169:60687:41:18:54:558:330:12:g_d0_f4:12:g_d0_f4:B:This result is notably di§erent from that of Campbell (1993) and equation (50) above, which are
+27:1170:60782:18:18:54:558:312:12:g_d0_f4:12:g_d0_f4:B:derived assuming risk premia are constant. SpeciÖcally, if the EIS is greater than 1 (- <1), then
+27:1171:60879:18:18:54:558:294:12:g_d0_f4:12:g_d0_f7:B:the coe¢ cient on expected future returns becomes proportional to-(1--): it has theopposite
+27:1172:60970:18:18:54:558:276:12:g_d0_f4:12:g_d0_f4:B:sign from the one found in Campbell (1993) and equation (50). The intuition for this result is as
+27:1173:61067:18:18:54:558:258:12:g_d0_f4:12:g_d0_f4:B:follows. In Campbell (1993), news about high future returns corresponds to an improvement in
+27:1174:61159:18:18:54:558:240:12:g_d0_f4:12:g_d0_f4:B:future expected consumption growth (or, in the language of ICAPM, the investment opportunity
+27:1175:61251:18:18:54:558:222:12:g_d0_f4:12:g_d0_f4:B:set), which is unambiguously good.  If, however, high expected returns are due to high future
+27:1176:61344:18:18:54:558:204:12:g_d0_f4:12:g_d0_f4:B:risk aversion or volatility, then there is only a discounting e§ect: high future expected returns are
+27:1177:61445:18:38:54:545:186:12:g_d0_f4:12:g_d0_f4:B:associated with low lifetime utility. An increase in risk aversion or volatility is purely bad news.
+27:1178:61545:38:26:54:350:148:14:g_d0_f3:14:g_d0_f3:C:5.2  Estimation of the weighting function
+27:1179:61586:26:26:54:147:122:12:g_d0_f3:12:g_d0_f3:C:5.2.1  Methods
+27:1180:61600:26:18:54:558:96:12:g_d0_f4:12:g_d0_f4:B:Given that the weighting function presented above can be decomposed in two of the three constituent
+27:1181:61699:18:0:54:558:78:12:g_d0_f4:12:g_d0_f4:B:functions that we saw for the case of consumption (and that are plotted in Figure 2), the utility
+28:1182:61798:0:38:54:346:703:12:g_d0_f4:12:g_d0_f4:B:basis representation in the case of returns will simply be:
+28:1183:61857:38:0:229:287:665:12:g_d0_f5:8:g_d0_f9:A:ZU(!) =q1
+28:1184:61866:0:29:294:307:680:8:g_d0_f11:12:g_d0_f12:?:1X
+28:1185:61868:29:0:291:306:651:8:g_d0_f8:8:g_d0_f9:?:j=1
+28:1186:61871:0:40:309:558:665:12:g_d0_f5:12:g_d0_f4:A:-jcos(!j) +q2(55)
+28:1187:61888:40:18:71:558:625:12:g_d0_f4:12:g_d0_f4:A:Since we are mostly interested in estimating the pricing of long-run discount rate news, we
+28:1188:61979:18:33:53:553:607:12:g_d0_f4:12:g_d0_f4:B:parametrize the bandpass basis to only include a constant and a generalized long-run component,
+28:1189:62074:33:33:229:558:574:12:g_d0_f5:12:g_d0_f4:A:ZBP(!) =q1Z(0;2-=32)(!) +q2(56)
+28:1190:62105:33:18:53:349:541:12:g_d0_f4:12:g_d0_f4:B:again capturing frequencies lower than the business cycle.
+28:1191:62163:18:18:71:558:523:12:g_d0_f4:12:g_d0_f4:A:As in Campbell and Vuolteenaho (2004), we use a VAR(1) with state vector composed of log
+28:1192:62251:18:18:53:557:505:12:g_d0_f4:12:g_d0_f4:B:excess returns, the price/earnings ratio, term spread and default spread. We use quarterly data
+28:1193:62346:18:18:53:558:487:12:g_d0_f4:12:g_d0_f4:B:from 1926q3 to 2011q2. We estimate the VAR using OLS, and set-= 0:95per year as in Campbell
+28:1194:62437:18:17:53:179:469:12:g_d0_f4:12:g_d0_f4:B:and Vuolteenaho (2004).
+28:1195:62460:17:18:71:558:452:12:g_d0_f4:12:g_d0_f4:A:We then use GMM as above to estimate the two parametersq1andq2using the cross-section
+28:1196:62545:18:18:53:557:434:12:g_d0_f4:12:g_d0_f4:B:of 25 Fama-French portfolios or the combination of those assets and the 49 industry portfolios.
+28:1197:62640:18:18:53:557:416:12:g_d0_f4:12:g_d0_f4:B:As before, we estimate\band-q-[q1;q2]separately.  Again, we report results using both one-
+28:1198:62730:18:18:53:558:398:12:g_d0_f4:12:g_d0_f4:B:step and the two-step GMM to estimateq, and compute standard errors forqtaking into account
+28:1199:62821:18:18:54:558:380:12:g_d0_f4:12:g_d0_f4:B:the uncertainty related to the estimation of the VAR parameters as explained in Section 4. For
+28:1200:62915:18:18:54:558:362:12:g_d0_f4:12:g_d0_f4:B:robustness, we also compute the results using the three-parameters bandpass and utility basis we
+28:1201:63011:18:35:54:170:344:12:g_d0_f4:12:g_d0_f4:B:presented in Section 4.
+28:1202:63034:35:25:54:138:309:12:g_d0_f3:12:g_d0_f3:C:5.2.2  Results
+28:1203:63048:25:18:54:558:284:12:g_d0_f4:12:g_d0_f4:B:Table 4 shows the results using only the 25 FamañFrench portfolios (left columns) or adding the 49
+28:1204:63146:18:18:54:558:266:12:g_d0_f4:12:g_d0_f4:B:industry portfolios (right columns). The top panel reports the version with two parameters (where
+28:1205:63243:18:18:54:558:248:12:g_d0_f4:12:g_d0_f4:B:the Örst one captures the long-run risks) discussed in the previous section. For both the bandpass
+28:1206:63341:18:18:54:558:230:12:g_d0_f4:12:g_d0_f4:B:basis and the utility basis, we Önd evidence that the long-run component of return news is priced, at
+28:1207:63442:18:18:54:558:212:12:g_d0_f4:12:g_d0_f4:B:least when using only two parameters and using the e¢ cient matrix to estimateq. Consistent with
+28:1208:63538:18:18:54:558:194:12:g_d0_f4:12:g_d0_f4:B:equation (51), when we use the utility basis we Önd that both the constant and the discount-rate
+28:1209:63634:18:18:54:557:176:12:g_d0_f4:12:g_d0_f4:B:news (long-run shock to expected returns) are priced, and thatq1is approximately equal toq2-1.
+28:1210:63728:18:18:53:557:158:12:g_d0_f4:12:g_d0_f4:B:Similarly, for the bandpass basis, the price for frequencies below the business cycle is positive and
+28:1211:63829:18:18:53:557:140:12:g_d0_f4:12:g_d0_f4:B:signiÖcant. The bottom panel of Table 4 reports estimates of the three-parameter version described
+28:1212:63927:18:18:53:557:122:12:g_d0_f4:12:g_d0_f4:B:in Section 4. Here we Önd weaker evidence that long-run innovations in returns are priced. Overall,
+28:1213:64026:18:18:53:557:104:12:g_d0_f4:12:g_d0_f4:B:though, looking at returns we Önd some evidence that news about the long-term expected returns
+28:1214:64120:18:0:53:557:86:12:g_d0_f4:12:g_d0_f4:B:carry a positive risk price, though the results seem to be more sensitive to the speciÖcation used
+29:1215:64220:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:than in the previous section. Furthermore, the results are more consistent with a model in which the
+29:1216:64320:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:main source of news is about future expected consumption rather than future expected volatility
+29:1217:64415:18:45:54:135:667:12:g_d0_f4:12:g_d0_f4:B:or risk aversion.
+29:1218:64432:45:30:54:503:622:17:g_d0_f3:17:g_d0_f3:C:6  Multiple priced variables and stochastic volatility
+29:1219:64486:30:18:54:558:592:12:g_d0_f4:12:g_d0_f4:B:So far the analysis has focused only on the case where there is a single priced variable. In some
+29:1220:64583:18:18:54:558:574:12:g_d0_f4:12:g_d0_f4:B:models, though, the dynamics of multiple variables matter for asset pricing. For example, in many
+29:1221:64680:18:18:54:558:556:12:g_d0_f4:12:g_d0_f4:B:applications with EpsteinñZin preferences, both consumption growth and variation in volatility
+29:1222:64774:18:18:54:558:538:12:g_d0_f4:12:g_d0_f4:B:or disaster risk are priced (e.g.  Bansal and Yaron, 2004; Campbell et al., 2013; Gourio, 2012;
+29:1223:64869:18:17:54:558:520:12:g_d0_f4:12:g_d0_f4:B:Constantinides and Ghosh, 2013, study a model with time-varying cross-sectional skewness with
+29:1224:64962:17:18:54:514:503:12:g_d0_f4:12:g_d0_f4:B:similar results). It turns out that the results above map easily into a multivariate setting.
+29:1225:65055:18:18:71:294:485:12:g_d0_f3:12:g_d0_f3:A:Assumption 1a: Structure of the SDF
+29:1226:65090:18:18:71:557:467:12:g_d0_f4:12:g_d0_f4:A:Instead of there being a single priced variablext, suppose there is anM-1vector of priced
+29:1227:65179:18:23:53:145:449:12:g_d0_f4:12:g_d0_f4:B:variables,~xt, with
+29:1228:65198:23:0:214:330:426:12:g_d0_f5:8:g_d0_f9:?:mt+1=F(It)--Et+1
+29:1229:65214:0:29:337:350:441:8:g_d0_f11:12:g_d0_f12:?:1X
+29:1230:65216:29:0:333:349:412:8:g_d0_f8:8:g_d0_f9:A:k=0
+29:1231:65219:0:33:352:558:426:12:g_d0_f5:12:g_d0_f4:A:Zk~xt+1+k(57)
+29:1232:65232:33:18:53:446:393:12:g_d0_f4:12:g_d0_f4:B:whereZkis a1-Mvector of weights andF(It)is a scalar valued function.
+29:1233:65300:18:18:71:320:375:12:g_d0_f3:12:g_d0_f3:A:Assumption 2a: Dynamics of the economy
+29:1234:65338:18:33:71:452:357:12:g_d0_f4:12:g_d0_f4:A:We assume that~xtis driven by a vector moving average process as before,
+29:1235:65410:33:21:269:558:324:12:g_d0_f5:12:g_d0_f4:A:~xt=JXt(58)
+29:1236:65421:21:33:266:558:303:12:g_d0_f5:12:g_d0_f4:A:Xt=   - (L)"t(59)
+29:1237:65438:33:18:53:260:270:12:g_d0_f4:12:g_d0_f4:B:for some matrixJof dimensionM-N.
+29:1238:65470:18:18:71:366:252:12:g_d0_f4:12:g_d0_f4:A:The appendix derives the following extension to Result 1,
+29:1239:65527:18:35:71:517:234:12:g_d0_f3:12:g_d0_f7:A:Result 2.Under Assumptions 1a and 2a, we can write the innovations to the SDF as,
+29:1240:65608:35:0:177:260:199:12:g_d0_f6:12:g_d0_f10:?:-Et+1Mt+1=-
+29:1241:65619:0:25:262:279:210:12:g_d0_f12:12:g_d0_f12:A:X
+29:1242:65620:25:0:269:272:185:8:g_d0_f8:8:g_d0_f8:A:j
+29:1243:65621:0:9:281:290:216:12:g_d0_f12:12:g_d0_f12:A:-
+29:1244:65622:9:16:295:301:207:12:g_d0_f6:12:g_d0_f6:C:1
+29:1245:65623:16:0:291:304:191:12:g_d0_f6:12:g_d0_f5:C:2-
+29:1246:65625:0:27:308:324:215:12:g_d0_f12:8:g_d0_f8:?:Z-
+29:1247:65627:27:0:314:326:188:8:g_d0_f11:8:g_d0_f8:A:--
+29:1248:65629:0:0:330:397:202:12:g_d0_f5:12:g_d0_f5:A:~Z(!)G(!)d!
+29:1249:65640:0:17:398:407:216:12:g_d0_f12:12:g_d0_f12:?:-
+29:1250:65641:17:44:409:558:199:12:g_d0_f5:12:g_d0_f4:A:"j;t+1(60)
+29:1251:65651:44:0:71:558:155:12:g_d0_f7:12:g_d0_f7:A:where~Z(!)is a(1-M)vector-valued weighting function andG(!)is an(M-N)transfer
+30:1252:65730:0:35:54:460:703:12:g_d0_f7:12:g_d0_f7:C:function that measures the dynamic e§ects of"ton~xin the frequency domain,
+30:1253:65804:35:0:222:311:668:12:g_d0_f5:12:g_d0_f6:C:~Z(!)-Z0+ 2
+30:1254:65815:0:29:317:330:680:8:g_d0_f11:12:g_d0_f12:A:1X
+30:1255:65817:29:0:314:329:651:8:g_d0_f8:8:g_d0_f9:A:k=1
+30:1256:65820:0:39:332:558:665:12:g_d0_f5:12:g_d0_f4:A:Zkcos (!k)(61)
+30:1257:65834:39:0:222:268:626:12:g_d0_f5:12:g_d0_f10:?:G(!)-
+30:1258:65839:0:29:282:295:641:8:g_d0_f11:12:g_d0_f12:A:1X
+30:1259:65841:29:0:279:294:612:8:g_d0_f8:8:g_d0_f9:A:k=0
+30:1260:65844:0:39:297:558:626:12:g_d0_f6:12:g_d0_f4:A:cos (!k) -gk(62)
+30:1261:65860:39:33:54:312:587:12:g_d0_f7:12:g_d0_f7:C:and-gkis the vector of impulse response functions,
+30:1262:65910:33:32:283:328:554:12:g_d0_f6:8:g_d0_f8:?:-gk-J-k
+30:1263:65917:32:18:71:558:522:12:g_d0_f4:12:g_d0_f4:A:In this case, then, we have multiple variables whose impulse responses we track inG, and each
+30:1264:66010:18:39:54:555:504:12:g_d0_f4:12:g_d0_f4:B:of the priced variables has its own weighting function, represented as one of the elements of~Z(!).
+30:1265:66109:39:26:54:354:465:14:g_d0_f3:14:g_d0_f3:C:6.1  EpsteinñZin with stochastic volatility
+30:1266:66152:26:18:54:558:439:12:g_d0_f4:12:g_d0_f4:B:Using Result 2, we now extend the results on EpsteinñZin preferences to also allow for stochastic
+30:1267:66249:18:18:54:558:421:12:g_d0_f4:12:g_d0_f4:B:volatility, similar to Campbell et al. (2013) and Bansal and Yaron (2004). We use the same log-
+30:1268:66344:18:18:54:558:403:12:g_d0_f4:12:g_d0_f4:B:normal and log-linear framework as above. The log stochastic discount factor under EpsteinñZin
+30:1269:66438:18:19:54:125:385:12:g_d0_f4:12:g_d0_f4:B:preferences is,
+30:1270:66453:19:0:211:267:366:12:g_d0_f5:12:g_d0_f5:C:mt+1=--
+30:1271:66460:0:16:268:296:374:12:g_d0_f6:12:g_d0_f5:A:1--
+30:1272:66463:16:0:269:295:358:12:g_d0_f6:12:g_d0_f5:A:1--
+30:1273:66466:0:0:297:338:366:12:g_d0_f6:12:g_d0_f6:A:-ct+1+
+30:1274:66472:0:16:342:370:374:12:g_d0_f5:12:g_d0_f5:A:---
+30:1275:66475:16:0:343:369:358:12:g_d0_f6:12:g_d0_f5:A:1--
+30:1276:66478:0:28:371:558:366:12:g_d0_f5:12:g_d0_f4:A:rw;t+1(63)
+30:1277:66488:28:18:54:557:338:12:g_d0_f4:12:g_d0_f4:B:whererw;t+1is the return on a consumption claim on datet+1. Whereas we previously assumed that
+30:1278:66582:18:18:54:558:320:12:g_d0_f4:12:g_d0_f4:B:consumption growth was log-normal and homoskedastic, we now allow for time-varying volatility
+30:1279:66675:18:17:54:558:302:12:g_d0_f4:12:g_d0_f4:B:driven by a variable-2t. We assume that-2tfollows a linear, homoskedastic, and stationary process.
+30:1280:66773:17:18:54:558:285:12:g_d0_f4:12:g_d0_f4:B:We assume that log consumption growth is driven by a VMA process as in assumption 1, but that
+30:1281:66866:18:18:54:362:267:12:g_d0_f4:12:g_d0_f4:B:now the shocks"thave variances that scale linearly with-2t.
+30:1282:66925:18:33:71:541:249:12:g_d0_f4:12:g_d0_f4:A:It is then straightforward to show that expected returns on a consumption claim will follow
+30:1283:67016:33:33:223:558:216:12:g_d0_f5:12:g_d0_f4:A:Etrw;t+1=k0+-Et-ct+1+k1-2t(64)
+30:1284:67046:33:18:54:558:183:12:g_d0_f4:12:g_d0_f4:B:wherek0andk1are constants that depend on the underlying process driving consumption growth.
+30:1285:67137:18:38:54:524:165:12:g_d0_f4:12:g_d0_f4:B:Using the CampbellñShiller approximation, we can then write the innovation to the SDF as
+30:1286:67225:38:0:128:347:127:12:g_d0_f6:8:g_d0_f9:?:-Et+1mt+1=---ct+1-(---) -Et+1
+30:1287:67254:0:28:353:366:142:8:g_d0_f11:12:g_d0_f12:A:1X
+30:1288:67256:28:0:350:365:114:8:g_d0_f8:8:g_d0_f9:A:j=1
+30:1289:67259:0:40:368:558:127:12:g_d0_f5:12:g_d0_f4:A:-j-ct+1+j(65)
+30:1290:67272:40:0:214:223:87:12:g_d0_f10:12:g_d0_f10:?:-
+30:1291:67273:0:16:225:253:95:12:g_d0_f5:12:g_d0_f5:A:---
+30:1292:67276:16:0:226:252:79:12:g_d0_f6:12:g_d0_f5:A:1--
+30:1293:67279:0:0:254:337:87:12:g_d0_f6:12:g_d0_f10:A:-Et+1-k1-2t+1-
+30:1294:67293:0:16:341:369:95:12:g_d0_f5:12:g_d0_f5:A:---
+30:1295:67296:16:0:342:368:79:12:g_d0_f6:12:g_d0_f5:A:1--
+30:1296:67299:0:0:370:403:87:12:g_d0_f6:8:g_d0_f9:A:-Et+1
+30:1297:67304:0:28:409:422:102:8:g_d0_f11:12:g_d0_f12:A:1X
+30:1298:67306:28:0:406:421:74:8:g_d0_f8:8:g_d0_f9:?:j=1
+30:1299:67309:0:0:424:558:87:12:g_d0_f5:12:g_d0_f4:A:-j-k1-2t+j+1(66)
+31:1300:67327:0:38:54:420:703:12:g_d0_f4:12:g_d0_f4:B:The weighting functions for consumption growth and volatility are now
+31:1301:67396:38:0:178:327:665:12:g_d0_f5:12:g_d0_f6:C:ZEZ-SVC(!)   =-+ (---)
+31:1302:67418:0:29:333:345:680:8:g_d0_f11:12:g_d0_f12:A:1X
+31:1303:67420:29:0:330:345:651:8:g_d0_f8:8:g_d0_f9:A:j=1
+31:1304:67423:0:41:348:558:665:12:g_d0_f5:12:g_d0_f4:A:-j2 cos (!j)(67)
+31:1305:67439:41:0:178:283:624:12:g_d0_f5:8:g_d0_f9:?:ZEZ-SV-2(!)   =-k1
+31:1306:67457:0:16:285:313:632:12:g_d0_f5:12:g_d0_f5:C:---
+31:1307:67460:16:0:286:312:616:12:g_d0_f6:12:g_d0_f5:C:1--
+31:1308:67463:0:20:316:325:644:12:g_d0_f12:12:g_d0_f12:A: 
+31:1309:67463:20:0:326:344:624:12:g_d0_f6:12:g_d0_f6:A:1 +
+31:1310:67466:0:29:351:363:639:8:g_d0_f11:12:g_d0_f12:A:1X
+31:1311:67468:29:0:347:362:610:8:g_d0_f8:8:g_d0_f9:A:j=1
+31:1312:67471:0:0:365:424:624:12:g_d0_f5:12:g_d0_f6:A:-j2 cos (!j)
+31:1313:67483:0:20:423:432:644:12:g_d0_f12:12:g_d0_f12:A:!
+31:1314:67484:20:41:537:558:624:12:g_d0_f4:12:g_d0_f4:A:(68)
+31:1315:67488:41:18:53:557:583:12:g_d0_f4:12:g_d0_f4:B:So the price of risk for a shock depends on its ITFs for both consumption growth and volatility.
+31:1316:67584:18:18:53:558:565:12:g_d0_f4:12:g_d0_f6:B:In the case where-= 0,ZEZ-SVCis exactly proportional toZEZ-SV-2. In any case, even for- >1
+31:1317:67674:18:18:53:558:547:12:g_d0_f4:12:g_d0_f4:B:they are highly similar.ZEZ-SVCis in fact the same we obtained in the homoskedastic case. Both
+31:1318:67768:18:18:53:557:529:12:g_d0_f4:12:g_d0_f4:B:weighting functions have a constant and also allow for a point mass near zero.ZEZ-SV-2always has
+31:1319:67864:18:17:53:558:511:12:g_d0_f4:12:g_d0_f4:B:the same basic shape regardless of the value of-: unless we are in the particular case-=-in
+31:1320:67955:17:18:53:558:494:12:g_d0_f4:12:g_d0_f4:B:whichZEZ-SV-2(!) = 0, agents always place high weight on the low-frequency features of volatility.
+31:1321:68053:18:38:71:544:476:12:g_d0_f4:12:g_d0_f4:A:Alternatively, the weighting functions can be written in terms of returns and their volatility,
+31:1322:68148:38:0:172:334:438:12:g_d0_f5:12:g_d0_f6:C:ZEZ-SV-RR(!)   =--(1--)
+31:1323:68171:0:29:339:352:453:8:g_d0_f11:12:g_d0_f12:?:1X
+31:1324:68173:29:0:336:351:424:8:g_d0_f8:8:g_d0_f9:?:j=1
+31:1325:68176:0:42:354:558:438:12:g_d0_f5:12:g_d0_f4:A:-j2 cos (!j)(69)
+31:1326:68192:42:0:172:290:396:12:g_d0_f5:8:g_d0_f9:?:ZEZ-SV-R-2(!)   =-k1
+31:1327:68212:0:16:292:319:404:12:g_d0_f6:12:g_d0_f5:C:1--
+31:1328:68215:16:0:292:319:388:12:g_d0_f6:12:g_d0_f5:C:1--
+31:1329:68218:0:21:323:332:417:12:g_d0_f12:12:g_d0_f12:A: 
+31:1330:68218:21:0:332:350:396:12:g_d0_f6:12:g_d0_f6:A:1 +
+31:1331:68221:0:28:357:370:411:8:g_d0_f11:12:g_d0_f12:?:1X
+31:1332:68223:28:0:354:369:383:8:g_d0_f8:8:g_d0_f9:A:j=1
+31:1333:68226:0:0:372:430:396:12:g_d0_f5:12:g_d0_f6:A:-j2 cos (!j)
+31:1334:68238:0:21:430:439:417:12:g_d0_f12:12:g_d0_f12:A:!
+31:1335:68239:21:40:537:558:396:12:g_d0_f4:12:g_d0_f4:A:(70)
+31:1336:68243:40:45:53:262:356:12:g_d0_f4:12:g_d0_f4:B:which yields conceptually similar results.
+31:1337:68285:45:30:53:175:311:17:g_d0_f3:17:g_d0_f3:C:7  Conclusion
+31:1338:68298:30:18:53:557:281:12:g_d0_f4:12:g_d0_f4:B:This paper studies risk prices in the frequency domain.  The impulse response of consumption
+31:1339:68390:18:18:53:557:263:12:g_d0_f4:12:g_d0_f4:B:growth to a given shock to the economy can be decomposed into components of varying frequen-
+31:1340:68482:18:18:53:557:245:12:g_d0_f4:12:g_d0_f4:B:cies. In a model where innovations to current and expected future consumption growth drive the
+31:1341:68576:18:18:53:557:227:12:g_d0_f4:12:g_d0_f4:B:pricing kernel, the price of risk for a given shock then depends on a weighted integral over the
+31:1342:68672:18:18:53:557:209:12:g_d0_f4:12:g_d0_f4:B:frequency-domain representation of the impulse response function. The weights assigned to each
+31:1343:68766:18:18:53:557:191:12:g_d0_f4:12:g_d0_f4:B:frequency represent frequency-speciÖc prices of risk. They can be characterized in closed form and
+31:1344:68864:18:18:53:557:173:12:g_d0_f4:12:g_d0_f4:B:only depend on the agentsípreferences. We study this weighting function both theoretically and
+31:1345:68958:18:18:53:557:155:12:g_d0_f4:12:g_d0_f4:B:empirically. Theoretically, we Önd that the weighting function helps us gain a deeper understanding
+31:1346:69057:18:18:53:557:137:12:g_d0_f4:12:g_d0_f4:B:of the behavior of asset pricing models. Empirically, our estimates of the weighting function are
+31:1347:69154:18:18:53:557:119:12:g_d0_f4:12:g_d0_f4:B:consistent with the idea of long-run risk models. Estimating a standard version of EpsteinñZin
+31:1348:69248:18:17:53:557:101:12:g_d0_f4:12:g_d0_f4:B:preferences yields statistically weak results, but using our spectral decomposition to target eco-
+31:1349:69346:17:0:53:557:84:12:g_d0_f4:12:g_d0_f4:B:nomically meaningful ìlong-runî frequencies (speciÖcally, below-business-cycle frequencies) yields
+32:1350:69446:0:45:54:399:703:12:g_d0_f4:12:g_d0_f4:B:strong support for the importance of long-run risks for asset prices.
+32:1351:69515:45:30:54:145:658:17:g_d0_f3:17:g_d0_f3:C:References
+32:1352:69525:30:18:54:558:628:12:g_d0_f3:12:g_d0_f7:F:Abel, Andrew B., ìAsset Prices under Habit Formation and Catching up with the Joneses,îThe
+32:1353:69615:18:28:78:453:610:12:g_d0_f7:12:g_d0_f4:A:American Economic Review, Papers and Proceedings, 1990,80(2), 38ñ42.
+32:1354:69683:28:18:53:557:582:12:g_d0_f3:12:g_d0_f4:B:Alvarez, Fernando and Urban J. Jermann, ìUsing Asset Prices to Measure the Persistence of
+32:1355:69772:18:28:78:446:564:12:g_d0_f4:12:g_d0_f4:A:the Marginal Utility of Wealth,îEconometrica, 2005,73(6), 1977ñ2016.
+32:1356:69840:28:18:53:557:536:12:g_d0_f3:12:g_d0_f4:B:Bansal, Ravi and Amir Yaron, ìRisks for the Long Run: A Potential Resolution of Asset
+32:1357:69925:18:27:78:398:518:12:g_d0_f4:12:g_d0_f4:A:Pricing Puzzles,îJournal of Finance, 2004,59(4), 1481ñ1509.
+32:1358:69984:27:18:78:558:491:12:g_d0_f3:12:g_d0_f4:A:, Dana Kiku, Ivan Shaliastovich, and Amir Yaron, ìVolatility, the Macroeconomy and
+32:1359:70066:18:28:78:285:473:12:g_d0_f4:12:g_d0_f4:A:Asset Prices,îJournal of Finance, 2013.
+32:1360:70105:28:18:78:558:445:12:g_d0_f3:12:g_d0_f4:A:, Robert F. Dittmar, and Christian T. Lundblad, ìConsumption, Dividends, and the
+32:1361:70185:18:28:78:482:427:12:g_d0_f4:12:g_d0_f4:A:Cross-Section of Equity Returns,îJournal of Finance, 2005,60(4), 1639ñ1672.
+32:1362:70260:28:18:54:561:399:12:g_d0_f3:12:g_d0_f4:B:Barillas, Francisco, Lars P. Hansen, and Thomas J. Sargent, ìDoubts or Variability?,î
+32:1363:70345:18:28:78:359:381:12:g_d0_f7:12:g_d0_f4:A:Journal of Economic Theory, 2009,144(6), 2388ñ2418.
+32:1364:70396:28:18:54:557:353:12:g_d0_f3:12:g_d0_f4:B:Borovicka, Jaroslav, Lars P. Hansen, Mark Hendricks, and Jose A. Scheinkman, ìRisk-
+32:1365:70479:18:28:78:423:335:12:g_d0_f4:12:g_d0_f4:A:price dynamics,îJournal of Financial Econometrics, 2011,9, 3ñ65.
+32:1366:70543:28:18:54:557:307:12:g_d0_f3:12:g_d0_f4:B:Campbell, John Y., ìA Variance Decomposition for Stock Returns,îThe Economic Journal,
+32:1367:70628:18:28:78:205:289:12:g_d0_f4:12:g_d0_f4:A:1991,101(405), 157ñ179.
+32:1368:70651:28:17:78:557:261:12:g_d0_f4:12:g_d0_f4:A:, ìIntertemporal Asset Pricing Without Consumption Data,îAmerican Economic Review,
+32:1369:70733:17:28:78:187:244:12:g_d0_f4:12:g_d0_f4:A:1993,83(3), 487ñ512.
+32:1370:70753:28:18:82:557:216:12:g_d0_f3:12:g_d0_f4:A:and John H. Cochrane, ìBy Force of Habit: A Consumption-Based Explanation of Aggre-
+32:1371:70836:18:28:78:509:198:12:g_d0_f4:12:g_d0_f4:A:gate Stock Market Behavior,îJournal of Political Economy, 1999,107(2), 205ñ251.
+32:1372:70915:28:18:83:557:170:12:g_d0_f3:12:g_d0_f4:A:and Robert J. Shiller, ìThe Dividend-Price Ratio and Expectations of Future Dividends
+32:1373:71000:18:28:78:472:152:12:g_d0_f4:12:g_d0_f4:A:and Discount Factors,îReview of Financial Studies, 1988,1(3)(3), 195ñ228.
+32:1374:71073:28:18:83:558:124:12:g_d0_f3:12:g_d0_f7:A:and Tuomo Vuolteenaho, ìBad Beta, Good Beta,îAmerican Economic Review, 2004,94
+32:1375:71151:18:0:78:156:106:12:g_d0_f4:12:g_d0_f4:A:(5), 1249ñ1275.
+33:1376:71168:0:18:78:557:703:12:g_d0_f3:12:g_d0_f4:A:, Stefano Giglio, Christopher Polk, and Robert Turley, ìAn Intertemporal CAPM with
+33:1377:71250:18:28:78:305:685:12:g_d0_f4:12:g_d0_f4:A:Stochastic Volatility,î2013. Working paper.
+33:1378:71293:28:18:54:558:657:12:g_d0_f3:12:g_d0_f7:F:Christiano, Lawrence J. and Terry J. Fitzgerald, ìThe Band Pass Filter,îInternational
+33:1379:71378:18:28:78:284:639:12:g_d0_f7:12:g_d0_f4:A:Economic Review, 2003,44(2), 435ñ465.
+33:1380:71415:28:18:54:560:611:12:g_d0_f3:12:g_d0_f4:B:Cochrane, John H., ìA Cross-Sectional Test of an Investment-Based Asset Pricing Model,î
+33:1381:71502:18:27:78:353:593:12:g_d0_f7:12:g_d0_f4:A:Journal of Political Economy, 1996,104(3), 572ñ621.
+33:1382:71553:27:18:53:560:566:12:g_d0_f3:12:g_d0_f4:B:Constantinides, George M., ìHabit Formation: A Resolution of the Equity Premium Puzzle,î
+33:1383:71641:18:28:78:367:548:12:g_d0_f7:12:g_d0_f4:A:The Journal of Political Economy, 1990,98(3), 519ñ543.
+33:1384:71695:28:18:84:560:520:12:g_d0_f3:12:g_d0_f4:A:and Anisha Ghosh, ìAsset Pricing with Countercyclical Household Consumption Risk,î
+33:1385:71777:18:28:78:189:502:12:g_d0_f4:12:g_d0_f4:A:2013. Working paper.
+33:1386:71797:28:18:54:558:474:12:g_d0_f3:12:g_d0_f4:B:Daniel, Kent D. and David A. Marshall, ìThe Equity Premium Puzzle and the Risk-Free
+33:1387:71880:18:28:78:488:456:12:g_d0_f4:12:g_d0_f4:A:Rate Puzzle at Long Horizons,îMacroeconomic Dynamics, 1997,1(2), 452ñ484.
+33:1388:71953:28:18:54:558:428:12:g_d0_f3:12:g_d0_f4:B:Dew-Becker, Ian, ìA Model of Time-Varying Risk Premia with Habits and Production,î2011.
+33:1389:72040:18:28:78:157:410:12:g_d0_f4:12:g_d0_f4:A:Working paper.
+33:1390:72054:28:18:78:557:382:12:g_d0_f4:12:g_d0_f4:A:, ìEstimates of the volatility of the permanent component of consumption and their implica-
+33:1391:72145:18:28:78:313:364:12:g_d0_f4:12:g_d0_f4:A:tions for asset pricing,î2013. Working paper.
+33:1392:72190:28:27:54:558:336:12:g_d0_f3:12:g_d0_f4:B:Efron, Bradley and R.J. Tibshirani,An Introduction to the Bootstrap, Chapman & Hall, 1994.
+33:1393:72280:27:18:54:557:309:12:g_d0_f3:12:g_d0_f4:B:Epstein, Larry G. and Stanley E. Zin, ìSubstitution, Risk Aversion, and the Temporal Be-
+33:1394:72368:18:18:78:558:291:12:g_d0_f4:12:g_d0_f4:A:havior of Consumption and Asset Returns: A Theoretical Framework,îEconometrica, 1989,
+33:1395:72453:18:28:78:157:273:12:g_d0_f7:12:g_d0_f4:A:57(4), 937ñ969.
+33:1396:72468:28:18:84:558:245:12:g_d0_f3:12:g_d0_f4:A:and, ìSubstitution, Risk Aversion, and the Temporal Behavior of Consumption and
+33:1397:72547:18:18:78:561:227:12:g_d0_f4:12:g_d0_f4:A:Asset Returns: An Empirical Analysis,îThe Journal of Political Economy, 1991,99(2), 263ñ
+33:1398:72635:18:28:78:99:209:12:g_d0_f4:12:g_d0_f4:A:286.
+33:1399:72639:28:28:54:442:181:12:g_d0_f3:12:g_d0_f4:B:Gourio, Francois, ìCredit Risk and Disaster Risk,î2011. Working paper.
+33:1400:72709:28:18:54:558:153:12:g_d0_f3:12:g_d0_f7:F:Hansen, Lars P. and Jose A. Scheinkman, ìLong-term risk: an operator approach,îEcono-
+33:1401:72794:18:28:78:217:135:12:g_d0_f7:12:g_d0_f4:A:metrica, 2009,77, 177ñ234.
+33:1402:72820:28:18:83:558:107:12:g_d0_f3:12:g_d0_f7:A:and Thomas J. Sargent, ìRobust Control and Model Uncertainty,îAmerican Economic
+33:1403:72899:18:0:78:219:89:12:g_d0_f7:12:g_d0_f4:A:Review, 2001,91(2), 60ñ66.
+34:1404:72927:0:28:83:374:703:12:g_d0_f3:12:g_d0_f4:A:and,Robustness, Princeton University Press, 2007.
+34:1405:72976:28:18:78:561:675:12:g_d0_f3:12:g_d0_f4:A:, John C. Heaton, and Nan Li, ìConsumption Strikes Back? Measuring Long-Run Risk,î
+34:1406:73058:18:28:78:350:657:12:g_d0_f7:12:g_d0_f4:A:Journal of Political Economy, 2008,116(2), 260ñ302.
+34:1407:73109:28:18:54:557:629:12:g_d0_f3:12:g_d0_f4:B:Lettau, Martin and Jessica A. Wachter, ìWhy Is Long-Horizon Equity Less Risky?  A
+34:1408:73190:18:28:78:557:611:12:g_d0_f4:12:g_d0_f4:A:Duration-Based Explanation of the Value Premium,îJournal of Finance, 2007,62(1), 55ñ92.
+34:1409:73277:28:17:82:560:583:12:g_d0_f3:12:g_d0_f4:A:and Sydney Ludvigson, ìConsumption, Aggregate Wealth, and Expected Stock Returns,î
+34:1410:73359:17:28:78:295:566:12:g_d0_f7:12:g_d0_f4:A:Journal of Finance, 2001,56(3), 815ñ849.
+34:1411:73399:28:18:54:557:538:12:g_d0_f3:12:g_d0_f4:B:Malloy, Christopher J., Tobias J. Moskowitz, and Annette Vissing-J ̄rgensen, ìLong-
+34:1412:73482:18:18:78:557:520:12:g_d0_f4:12:g_d0_f4:A:Run Stockholder Consumption Risk and Asset Returns,îJournal of Finance, 2009,64(6),
+34:1413:73565:18:28:78:134:502:12:g_d0_f4:12:g_d0_f4:A:2427ñ2479.
+34:1414:73575:28:18:54:558:474:12:g_d0_f3:12:g_d0_f7:F:Merton, Robert C., ìAn Intertemporal Capital Asset Pricing Model,îEconometrica, 1973,41
+34:1415:73662:18:28:78:144:456:12:g_d0_f4:12:g_d0_f4:A:(5), 867ñ887.
+34:1416:73675:28:18:54:558:428:12:g_d0_f3:12:g_d0_f4:B:Ortu, Fulvio, Andrea Tamoni, and Claudio Tebaldi, ìLong Run Risk and the Persistence of
+34:1417:73762:18:28:78:413:410:12:g_d0_f4:12:g_d0_f4:A:Consumption Shocks,îReview of Financial Studies, forthcoming.
+34:1418:73823:28:18:54:558:382:12:g_d0_f3:12:g_d0_f4:B:Otrok, Christopher, B. Ravikumar, and Charles H. Whiteman, ìHabit Formation: A
+34:1419:73901:18:18:78:557:364:12:g_d0_f4:12:g_d0_f4:A:Resolution of the Equity Premium Puzzle?,îJournal of Monetary Economics, 2002,49(6),
+34:1420:73985:18:27:78:134:346:12:g_d0_f4:12:g_d0_f4:A:1261ñ1288.
+34:1421:73995:27:18:54:558:319:12:g_d0_f3:12:g_d0_f4:B:Parker, Jonathan A. and Christian Julliard, ìConsumption Risk and the Cross Section of
+34:1422:74081:18:28:78:455:301:12:g_d0_f4:12:g_d0_f4:A:Expected Returns,îJournal of Political Economy, 2005,113(1), 185ñ222.
+34:1423:74150:28:18:54:558:273:12:g_d0_f3:12:g_d0_f4:B:Restoy, Fernando and Philippe Weil, ìApproximate Equilibrium Asset Prices,î1998. NBER
+34:1424:74235:18:28:78:159:255:12:g_d0_f4:12:g_d0_f4:A:Working Paper.
+34:1425:74249:28:18:54:558:227:12:g_d0_f3:12:g_d0_f4:B:van Binsbergen, Jules H., Michael W. Brandt, and Ralph Koijen, ìOn the Timing and
+34:1426:74330:18:28:78:457:209:12:g_d0_f4:12:g_d0_f4:A:Pricing of Dividends,îAmerican Economic Review, 2012,102, 1596ñ1618.
+34:1427:74398:28:18:54:558:181:12:g_d0_f3:12:g_d0_f4:B:van Binsbergen, Jules, Michael Brandt, and Ralph Koijen, ìOn the Timing and Pricing of
+34:1428:74484:18:28:78:443:163:12:g_d0_f4:12:g_d0_f4:A:Dividends,îThe American Economic Review, 2012,102(4), 1596ñ1618.
+34:1429:74548:28:18:54:561:135:12:g_d0_f3:12:g_d0_f4:B:Yu, Jianfeng, ìUsing Long-Run Consumption-Return Correlations to Test Asset Pricing Models,î
+34:1430:74640:18:0:78:189:117:12:g_d0_f4:12:g_d0_f4:A:2012. Working paper.
+35:1431:74662:0:30:54:319:702:17:g_d0_f3:17:g_d0_f3:C:A  Derivation of equation (13)
+35:1432:74692:30:21:54:161:672:12:g_d0_f4:12:g_d0_f4:B:For anygj;k, we have
+35:1433:74712:21:0:190:219:651:12:g_d0_f5:12:g_d0_f6:C:gj;k=
+35:1434:74717:0:16:227:233:659:12:g_d0_f6:12:g_d0_f6:A:1
+35:1435:74718:16:0:224:236:643:12:g_d0_f6:12:g_d0_f5:A:2-
+35:1436:74720:0:27:240:257:668:12:g_d0_f12:8:g_d0_f8:?:Z-
+35:1437:74722:27:0:246:258:641:8:g_d0_f11:8:g_d0_f8:?:--
+35:1438:74724:0:32:263:558:654:12:g_d0_f6:12:g_d0_f4:A:~Gj(!) (cos (!k) +isin (!k))d!(71)
+35:1439:74758:32:40:53:316:622:12:g_d0_f4:12:g_d0_f4:B:Now sincegj;k= 0fork <0, for anyk >0we have
+35:1440:74801:40:0:129:241:582:12:g_d0_f5:12:g_d0_f6:C:gj;k=gj;k+gj;-k=
+35:1441:74817:0:16:249:255:590:12:g_d0_f6:12:g_d0_f6:C:1
+35:1442:74818:16:0:246:259:574:12:g_d0_f6:12:g_d0_f5:C:2-
+35:1443:74820:0:27:262:279:599:12:g_d0_f12:8:g_d0_f8:A:Z-
+35:1444:74822:27:0:269:280:572:8:g_d0_f11:8:g_d0_f8:A:--
+35:1445:74824:0:0:285:316:585:12:g_d0_f6:12:g_d0_f6:C:~Gj(!)
+35:1446:74830:0:12:317:326:603:12:g_d0_f12:12:g_d0_f12:A: 
+35:1447:74830:12:18:341:443:591:12:g_d0_f6:12:g_d0_f6:A:cos (!k) +isin (!k)
+35:1448:74849:18:0:332:452:573:12:g_d0_f6:12:g_d0_f6:A:cos (-!k) +isin (-!k)
+35:1449:74870:0:21:456:465:603:12:g_d0_f12:12:g_d0_f12:?:!
+35:1450:74871:21:35:468:481:582:12:g_d0_f5:12:g_d0_f5:C:d!
+35:1451:74873:35:0:156:165:547:12:g_d0_f6:12:g_d0_f6:C:=
+35:1452:74874:0:16:180:186:555:12:g_d0_f6:12:g_d0_f6:C:1
+35:1453:74875:16:0:176:189:539:12:g_d0_f6:12:g_d0_f5:C:2-
+35:1454:74877:0:27:192:209:563:12:g_d0_f12:8:g_d0_f8:?:Z-
+35:1455:74879:27:0:199:210:536:8:g_d0_f11:8:g_d0_f8:?:--
+35:1456:74881:0:42:216:311:550:12:g_d0_f6:12:g_d0_f5:C:~Gj(!) 2 cos (!k)d!
+35:1457:74900:42:17:54:558:508:12:g_d0_f4:12:g_d0_f4:B:Furthermore, note that the complex part of~G(!)multiplied by anycos (!k)for integerkintegrates
+35:1458:74994:17:0:54:296:491:12:g_d0_f4:12:g_d0_f5:B:to zero, which is why we can just studyG-re
+35:1459:75037:0:10:298:305:504:12:g_d0_f12:12:g_d0_f12:A:-
+35:1460:75038:10:0:308:314:494:12:g_d0_f6:12:g_d0_f5:C:~G
+35:1461:75040:0:13:314:321:504:12:g_d0_f12:12:g_d0_f12:A:-
+35:1462:75041:13:30:322:400:491:12:g_d0_f4:12:g_d0_f4:A:. We thus have
+35:1463:75055:30:29:173:185:461:8:g_d0_f11:12:g_d0_f12:?:1X
+35:1464:75057:29:0:169:185:432:8:g_d0_f8:8:g_d0_f9:?:k=0
+35:1465:75060:0:0:187:227:446:12:g_d0_f5:12:g_d0_f6:C:zkgj;k=
+35:1466:75067:0:16:235:241:454:12:g_d0_f6:12:g_d0_f6:C:1
+35:1467:75068:16:0:231:244:438:12:g_d0_f6:12:g_d0_f5:A:2-
+35:1468:75070:0:27:248:265:462:12:g_d0_f12:8:g_d0_f8:?:Z-
+35:1469:75072:27:0:254:266:435:8:g_d0_f11:8:g_d0_f8:A:--
+35:1470:75074:0:0:268:301:446:12:g_d0_f5:12:g_d0_f6:A:Gj(!)
+35:1471:75079:0:20:303:312:466:12:g_d0_f12:12:g_d0_f12:A: 
+35:1472:75079:20:0:312:343:446:12:g_d0_f5:12:g_d0_f6:C:z0+ 2
+35:1473:75084:0:29:349:362:461:8:g_d0_f11:12:g_d0_f12:A:1X
+35:1474:75086:29:0:346:361:432:8:g_d0_f8:8:g_d0_f9:A:k=1
+35:1475:75089:0:0:364:418:446:12:g_d0_f5:12:g_d0_f6:A:zkcos (!k)
+35:1476:75099:0:20:418:427:466:12:g_d0_f12:12:g_d0_f12:A:!
+35:1477:75100:20:45:429:558:446:12:g_d0_f5:12:g_d0_f4:A:d!(72)
+35:1478:75106:45:30:54:537:401:17:g_d0_f3:17:g_d0_f3:C:B  Ambiguity aversion and generalized time discounting
+35:1479:75160:30:38:54:471:371:12:g_d0_f4:12:g_d0_f4:B:Suppose the utility an agent gets from a realization of her consumption stream is
+35:1480:75241:38:0:260:310:333:12:g_d0_f5:12:g_d0_f6:A:U0=c0+
+35:1481:75247:0:29:317:330:348:8:g_d0_f11:12:g_d0_f12:A:1X
+35:1482:75249:29:0:314:329:319:8:g_d0_f8:8:g_d0_f9:A:j=1
+35:1483:75252:0:40:332:558:333:12:g_d0_f5:12:g_d0_f4:A:zjcj(73)
+35:1484:75260:40:18:54:557:293:12:g_d0_f5:12:g_d0_f4:B:U0represents the total utility that the agent gets from consumption between dates0and1,
+35:1485:75347:18:18:54:557:275:12:g_d0_f4:12:g_d0_f4:B:discounted from the perspective of date0in the absence of any uncertainty.  We assume that
+35:1486:75437:18:33:54:262:257:12:g_d0_f4:12:g_d0_f4:B:consumption follows an MA(1) process,
+35:1487:75474:33:33:276:558:224:12:g_d0_f5:12:g_d0_f4:A:ct=b(L)"t(74)
+35:1488:75487:33:18:54:558:191:12:g_d0_f4:12:g_d0_f4:B:We do not make any assumptions about the distribution of"tother than that it is not serially
+35:1489:75579:18:18:54:507:173:12:g_d0_f4:12:g_d0_f4:B:correlated. It may be non-normal and heteroskedastic. We assume that"j= 0forj-0.
+35:1490:75659:18:39:71:340:155:12:g_d0_f4:12:g_d0_f4:A:Now suppose the agent solves the minimax problem,
+35:1491:75708:39:10:162:250:116:12:g_d0_f5:12:g_d0_f6:C:V0=c0+  min
+35:1492:75719:10:0:227:254:106:8:g_d0_f8:12:g_d0_f6:A:G("11)
+35:1493:75725:0:0:256:265:116:12:g_d0_f5:12:g_d0_f5:A:E
+35:1494:75726:0:21:267:274:137:12:g_d0_f12:12:g_d0_f12:A:"
+35:1495:75727:21:0:274:309:116:12:g_d0_f5:12:g_d0_f6:A:G("11)
+35:1496:75733:0:28:315:328:131:8:g_d0_f11:12:g_d0_f12:A:1X
+35:1497:75735:28:0:312:327:103:8:g_d0_f8:8:g_d0_f9:?:j=1
+35:1498:75738:0:0:330:387:116:12:g_d0_f5:8:g_d0_f9:A:zjb(L)"j+1
+35:1499:75748:0:21:387:394:137:12:g_d0_f12:12:g_d0_f12:A:#
+35:1500:75749:21:29:537:558:116:12:g_d0_f4:12:g_d0_f4:A:(75)
+35:1501:75753:29:0:202:558:87:12:g_d0_f6:12:g_d0_f4:A:+-"E[G("11) logG("11)-K]--E[G("11)-1](76)
+36:1502:75796:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:where"11denotes a particular history of"jforj= 1to1.G("11)is the extra weight placed on
+36:1503:75883:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:a given history under the agentís subjective measure.-multiplies the constraint on the entropy
+36:1504:75977:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:of the shift in the distribution (withKbeing the bound), and-multiplies the constraint that the
+36:1505:76072:18:18:54:274:649:12:g_d0_f4:12:g_d0_f4:B:subjective distribution must integrate to 1.
+36:1506:76116:18:37:71:261:631:12:g_d0_f4:12:g_d0_f4:A:The Örst-order condition forGyields
+36:1507:76151:37:0:201:226:594:12:g_d0_f6:12:g_d0_f6:C:0   =
+36:1508:76156:0:29:240:253:609:8:g_d0_f11:12:g_d0_f12:?:1X
+36:1509:76158:29:0:237:252:580:8:g_d0_f8:8:g_d0_f9:?:j=1
+36:1510:76161:0:42:255:558:594:12:g_d0_f5:12:g_d0_f4:A:zjb(L)"j+-(1 + logG)--(77)
+36:1511:76187:42:0:197:254:552:12:g_d0_f5:12:g_d0_f6:C:G=   exp
+36:1512:76195:0:11:256:265:573:12:g_d0_f12:12:g_d0_f12:A: 
+36:1513:76195:11:0:266:275:562:12:g_d0_f10:12:g_d0_f10:A:-
+36:1514:76196:0:13:278:298:571:12:g_d0_f12:8:g_d0_f11:A:P1
+36:1515:76198:13:14:290:396:558:8:g_d0_f8:12:g_d0_f5:?:j=1zjb(L)"j+---
+36:1516:76213:14:0:328:335:544:12:g_d0_f5:12:g_d0_f5:C:-
+36:1517:76214:0:21:397:406:573:12:g_d0_f12:12:g_d0_f12:?:!
+36:1518:76215:21:45:537:558:552:12:g_d0_f4:12:g_d0_f4:A:(78)
+36:1519:76219:45:0:217:226:507:12:g_d0_f6:12:g_d0_f6:C:=
+36:1520:76220:0:0:258:276:519:12:g_d0_f6:12:g_d0_f6:A:exp
+36:1521:76223:0:14:278:285:533:12:g_d0_f12:12:g_d0_f12:A:-
+36:1522:76224:14:0:285:294:519:12:g_d0_f10:12:g_d0_f10:?:-
+36:1523:76225:0:12:296:317:528:12:g_d0_f12:8:g_d0_f11:?:P1
+36:1524:76227:12:0:309:385:516:8:g_d0_f8:12:g_d0_f5:?:j=1zjb(L)"j=-
+36:1525:76240:0:38:384:391:533:12:g_d0_f12:12:g_d0_f12:A:-
+36:1526:76241:38:0:237:265:495:12:g_d0_f5:8:g_d0_f11:?:E0-1
+36:1527:76245:0:13:267:273:508:12:g_d0_f12:12:g_d0_f12:A:h
+36:1528:76246:13:0:273:291:495:12:g_d0_f6:12:g_d0_f6:A:exp
+36:1529:76249:0:13:293:300:508:12:g_d0_f12:12:g_d0_f12:?:-
+36:1530:76250:13:0:300:309:495:12:g_d0_f10:12:g_d0_f10:A:-
+36:1531:76251:0:13:311:332:504:12:g_d0_f12:8:g_d0_f11:?:P1
+36:1532:76253:13:0:324:400:491:8:g_d0_f8:12:g_d0_f5:?:j=1zjb(L)"j=-
+36:1533:76266:0:45:400:558:508:12:g_d0_f12:12:g_d0_f4:A:-i(79)
+36:1534:76272:45:31:53:385:463:12:g_d0_f4:12:g_d0_f4:B:The pricing kernel between dates0and1is then proportional to
+36:1535:76332:31:17:190:196:432:12:g_d0_f6:12:g_d0_f6:C:1
+36:1536:76333:17:0:173:213:415:12:g_d0_f6:12:g_d0_f6:C:exp (c1)
+36:1537:76341:0:0:213:282:424:12:g_d0_f5:12:g_d0_f6:C:G("11)/exp
+36:1538:76351:0:20:284:293:444:12:g_d0_f12:12:g_d0_f12:?: 
+36:1539:76351:20:0:293:302:424:12:g_d0_f10:12:g_d0_f10:?:-
+36:1540:76352:0:20:305:314:444:12:g_d0_f12:12:g_d0_f12:?: 
+36:1541:76352:20:0:314:352:424:12:g_d0_f6:8:g_d0_f9:A:1 +--1
+36:1542:76358:0:29:359:372:439:8:g_d0_f11:12:g_d0_f12:?:1X
+36:1543:76360:29:0:356:371:410:8:g_d0_f8:8:g_d0_f9:?:j=1
+36:1544:76363:0:0:374:408:424:12:g_d0_f5:12:g_d0_f6:A:zjb(L)
+36:1545:76369:0:20:408:417:444:12:g_d0_f12:12:g_d0_f12:A:!
+36:1546:76370:20:0:419:429:424:12:g_d0_f5:8:g_d0_f9:A:"1
+36:1547:76372:0:20:429:438:444:12:g_d0_f12:12:g_d0_f12:A:!
+36:1548:76373:20:47:537:558:424:12:g_d0_f4:12:g_d0_f4:A:(80)
+36:1549:76377:47:0:54:265:377:12:g_d0_f4:12:g_d0_f4:B:So the price of risk for a shock"1is then
+36:1550:76418:0:14:269:276:391:12:g_d0_f12:12:g_d0_f12:A:-
+36:1551:76419:14:0:277:314:377:12:g_d0_f6:8:g_d0_f9:A:1 +--1
+36:1552:76425:0:12:317:338:386:12:g_d0_f12:8:g_d0_f11:A:P1
+36:1553:76427:12:0:330:381:374:8:g_d0_f8:12:g_d0_f6:A:j=1zjb(L)
+36:1554:76436:0:14:381:388:391:12:g_d0_f12:12:g_d0_f12:A:-
+36:1555:76437:14:19:388:558:377:12:g_d0_f4:12:g_d0_f4:A:, and thus the spectral weighting
+36:1556:76470:19:0:54:198:358:12:g_d0_f4:8:g_d0_f9:B:function isZ(!) = 1 + 2--1
+36:1557:76496:0:12:201:221:367:12:g_d0_f12:8:g_d0_f11:?:P1
+36:1558:76498:12:42:213:361:355:8:g_d0_f8:12:g_d0_f4:?:j=1cos (!j)zj, as in the text.
+36:1559:76528:42:27:54:558:313:17:g_d0_f3:17:g_d0_f3:F:C  Derivation of weighting function with multiple priced
+36:1560:76584:27:42:87:161:286:17:g_d0_f3:17:g_d0_f3:A:variables
+36:1561:76593:42:32:54:266:244:12:g_d0_f4:12:g_d0_f4:B:The impulse response function is denoted
+36:1562:76633:32:33:283:558:212:12:g_d0_f6:12:g_d0_f4:A:-gk-J-k(81)
+36:1563:76644:33:18:54:557:179:12:g_d0_f4:12:g_d0_f4:B:where-gkis anM-Nmatrix whosefm;ngelement determines the e§ect of a shock to thenth
+36:1564:76726:18:40:54:452:161:12:g_d0_f4:12:g_d0_f4:B:element of"ton themth element of-Xt+k. The innovation to the SDF is then
+36:1565:76798:40:0:221:303:121:12:g_d0_f6:12:g_d0_f10:?:-Et+1mt+1=-
+36:1566:76809:0:9:320:328:142:12:g_d0_f12:8:g_d0_f11:A: 1
+36:1567:76810:9:26:315:332:133:12:g_d0_f12:12:g_d0_f12:A:X
+36:1568:76811:26:0:316:332:107:8:g_d0_f8:8:g_d0_f9:A:k=0
+36:1569:76814:0:0:335:357:121:12:g_d0_f5:8:g_d0_f8:?:Zk-gk
+36:1570:76819:0:21:358:367:142:12:g_d0_f12:12:g_d0_f12:?:!
+36:1571:76820:21:40:370:558:121:12:g_d0_f5:12:g_d0_f4:A:"t+1(82)
+36:1572:76828:40:0:54:409:81:12:g_d0_f4:12:g_d0_f4:B:The price of risk for thejth element of"is simply thejth element of
+36:1573:76895:0:12:413:433:90:12:g_d0_f12:8:g_d0_f11:A:P1
+36:1574:76897:12:0:425:470:78:8:g_d0_f8:12:g_d0_f4:A:k=0Zk-gk.
+37:1575:76908:0:35:71:411:703:12:g_d0_f4:12:g_d0_f4:A:As before, we take the discrete Fourier transform off-gkg, deÖning
+37:1576:76974:35:0:258:296:668:12:g_d0_f6:12:g_d0_f10:A:~G(!)-
+37:1577:76980:0:29:304:317:680:8:g_d0_f11:12:g_d0_f12:A:1X
+37:1578:76982:29:0:301:316:651:8:g_d0_f8:8:g_d0_f9:A:k=0
+37:1579:76985:0:45:319:558:665:12:g_d0_f5:12:g_d0_f4:A:e-i!k-gk(83)
+37:1580:76997:45:0:53:384:620:12:g_d0_f4:12:g_d0_f5:B:Following the same steps as in section 2 and deÖningG(!)-re
+37:1581:77056:0:10:386:393:633:12:g_d0_f12:12:g_d0_f12:A:-
+37:1582:77057:10:0:395:421:623:12:g_d0_f6:12:g_d0_f6:C:~G(!)
+37:1583:77062:0:13:421:428:633:12:g_d0_f12:12:g_d0_f12:A:-
+37:1584:77063:13:28:428:496:620:12:g_d0_f4:12:g_d0_f4:A:, we arrive at
+37:1585:77077:28:30:193:206:592:8:g_d0_f11:12:g_d0_f12:?:1X
+37:1586:77079:30:0:190:205:562:8:g_d0_f8:8:g_d0_f9:?:k=0
+37:1587:77082:0:0:208:264:577:12:g_d0_f5:12:g_d0_f6:C:Zk-gkBj=
+37:1588:77090:0:17:279:285:585:12:g_d0_f6:12:g_d0_f6:A:1
+37:1589:77091:17:0:275:288:568:12:g_d0_f6:12:g_d0_f5:A:2-
+37:1590:77093:0:27:291:308:593:12:g_d0_f12:8:g_d0_f8:?:Z-
+37:1591:77095:27:0:298:310:566:8:g_d0_f11:8:g_d0_f8:A:--
+37:1592:77097:0:39:314:558:580:12:g_d0_f5:12:g_d0_f4:A:~Z(!)G(!)Bjd!(84)
+37:1593:77114:39:0:255:264:541:12:g_d0_f6:12:g_d0_f6:A:=
+37:1594:77115:0:16:279:285:549:12:g_d0_f6:12:g_d0_f6:A:1
+37:1595:77116:16:0:275:288:533:12:g_d0_f6:12:g_d0_f5:A:2-
+37:1596:77118:0:27:291:308:557:12:g_d0_f12:8:g_d0_f8:?:Z-
+37:1597:77120:27:0:298:310:530:8:g_d0_f11:8:g_d0_f8:A:--
+37:1598:77122:0:25:312:329:552:12:g_d0_f12:12:g_d0_f12:?:X
+37:1599:77123:25:0:317:324:527:8:g_d0_f8:8:g_d0_f8:A:m
+37:1600:77124:0:42:333:558:544:12:g_d0_f5:12:g_d0_f4:A:~Zm(!)Gm;j(!)d!(85)
+37:1601:77143:42:18:53:83:502:12:g_d0_f4:12:g_d0_f4:B:where
+37:1602:77148:18:0:230:306:484:12:g_d0_f5:12:g_d0_f6:A:~Z(!)-Z0+ 2
+37:1603:77159:0:29:312:324:496:8:g_d0_f11:12:g_d0_f12:?:1X
+37:1604:77161:29:0:308:324:467:8:g_d0_f8:8:g_d0_f9:?:k=1
+37:1605:77164:0:36:326:558:481:12:g_d0_f5:12:g_d0_f4:A:Zkcos (!k)(86)
+37:1606:77178:36:18:53:557:445:12:g_d0_f4:12:g_d0_f4:B:and where~Zm(!)denotes themth element of~Z(!)andGm;j(!)denotes them;jth element of
+37:1607:77260:18:18:53:558:427:12:g_d0_f5:12:g_d0_f4:B:G(!). We thus haveMdi§erent weighting functions, one for each of the priced variables. The
+37:1608:77350:18:18:53:557:409:12:g_d0_f5:12:g_d0_f4:B:Mweighting functions each multiplyNdi§erent impulse transfer functions,Gm;j(!). The price of
+37:1609:77442:18:45:53:490:391:12:g_d0_f4:12:g_d0_f4:B:risk for shockjdepends on how it a§ects the various priced variables at all horizons.
+37:1610:77527:45:27:53:557:346:17:g_d0_f3:17:g_d0_f3:F:D  Robustness tests for the empirical analysis and factor
+37:1611:77584:27:30:88:157:319:17:g_d0_f3:17:g_d0_f3:C:loadings
+37:1612:77592:30:18:53:557:289:12:g_d0_f4:12:g_d0_f4:B:This section discusses three issues related to the robustness of the main results. First, we bootstrap
+37:1613:77694:18:18:53:557:271:12:g_d0_f4:12:g_d0_f4:B:the t-statistics to account for the possibility that the GMM asymptotics provide a poor small-sample
+37:1614:77794:18:17:53:557:253:12:g_d0_f4:12:g_d0_f4:B:approximation. Second, we augment our set of test assets with nine risk-sorted portfolios and Önd
+37:1615:77891:17:18:53:557:236:12:g_d0_f4:12:g_d0_f4:B:similar results to what is in the main text. Finally, we report the factor loadings of the individual
+37:1616:77992:18:18:53:557:218:12:g_d0_f4:12:g_d0_f4:B:portfolios to emphasize the fact that there large and statistically signiÖcant di§erence in the factor
+37:1617:78094:18:39:53:185:200:12:g_d0_f4:12:g_d0_f4:B:loadings across portfolios.
+37:1618:78121:39:26:53:269:161:14:g_d0_f3:14:g_d0_f3:C:D.1  Bootstrapped t-statistics
+37:1619:78151:26:18:53:557:135:12:g_d0_f4:12:g_d0_f4:B:We compute bootstrapped t-statistics following suggestions in Efron and Tibshirani (1994). Specif-
+37:1620:78249:18:18:53:557:117:12:g_d0_f4:12:g_d0_f4:B:ically, in every bootstrap sample we calculate the t-statistic for each coe¢ cient and then use the
+37:1621:78348:18:18:53:557:99:12:g_d0_f4:12:g_d0_f4:B:simulated distribution of the t-statistics to construct p-values for the test of whether the coe¢ cients
+37:1622:78452:18:0:53:170:81:12:g_d0_f4:12:g_d0_f4:B:are di§erent from zero.
+38:1623:78477:0:18:71:558:703:12:g_d0_f4:12:g_d0_f4:A:The estimation has two separate parts: the VAR and the asset pricing equations. For the VAR,
+38:1624:78569:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:we bootstrap the residuals, and then use the simulated innovations to construct a new time series
+38:1625:78666:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:of the state variables (based on the estimated feedback matrix). For the test assets, we draw the
+38:1626:78763:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:returns for the same dates for which we drew the VAR residuals. More concretely, given a sample
+38:1627:78858:18:18:54:557:631:12:g_d0_f4:12:g_d0_f4:B:size ofN, we take (discrete) uniformly distributed draws from the interval[1;N]with replacement.
+38:1628:78954:18:18:54:557:613:12:g_d0_f4:12:g_d0_f4:B:Thejth draw in bootstrap simulationiis denotedbij(that is, eachbijis a random draw from the
+38:1629:79045:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:discrete uniform distribution on[1;N]). Theith simulated dataset is then the set of VAR residuals
+38:1630:79142:17:0:54:249:578:12:g_d0_f4:12:g_d0_f4:B:and test asset returns for observations
+38:1631:79181:0:9:252:259:587:12:g_d0_f12:12:g_d0_f12:A:\b
+38:1632:79183:9:0:259:267:578:12:g_d0_f5:8:g_d0_f8:A:bij
+38:1633:79186:0:14:275:282:587:12:g_d0_f12:8:g_d0_f8:A:	N
+38:1634:79188:14:13:275:558:573:8:g_d0_f8:12:g_d0_f4:A:j=1. To construct the set of state variables, we draw an
+38:1635:79244:13:18:54:558:560:12:g_d0_f4:12:g_d0_f4:B:initial value of the state variables randomly from the set of observations and then use the drawn
+38:1636:79341:18:18:54:261:542:12:g_d0_f4:12:g_d0_f4:B:innovations to construct the full sample.
+38:1637:79382:18:18:71:558:524:12:g_d0_f4:12:g_d0_f4:A:The estimation then proceeds on the simulated dataset exactly as it does on the true dataset.
+38:1638:79475:18:18:54:558:506:12:g_d0_f4:12:g_d0_f4:B:For each simulated sample we form t-statistics for the di§erence between the bootstrapped estimate
+38:1639:79573:18:18:54:558:488:12:g_d0_f4:12:g_d0_f4:B:of the coe¢ cient and the original point estimate. Suppose the empirically observed t-statistic in the
+38:1640:79675:18:18:54:557:470:12:g_d0_f4:12:g_d0_f4:B:main estimate for some coe¢ cientkis equal to^tk>0. Then the bootstrapped p-value is twice the
+38:1641:79769:18:18:53:557:452:12:g_d0_f4:12:g_d0_f4:B:fraction of the simulated t-statistics at least as high as^tk(for a full description of the procedure,
+38:1642:79871:18:18:53:215:434:12:g_d0_f4:12:g_d0_f4:B:see Efron and Tibshirani, 1994)
+38:1643:79902:18:18:71:558:416:12:g_d0_f4:12:g_d0_f4:A:Table A1 replicates table 2 but using bootstrapped p-values instead of the asymptotic values
+38:1644:79994:18:18:53:557:398:12:g_d0_f4:12:g_d0_f4:B:reported in table 2. We now obtain far more signiÖcant coe¢ cients. The reason is that according to
+38:1645:80093:18:18:53:557:380:12:g_d0_f4:12:g_d0_f4:B:the bootstrap, many of the estimators are substantially biased (which should not be too surprising,
+38:1646:80192:18:18:53:557:362:12:g_d0_f4:12:g_d0_f4:B:since it is well known that GMM can be poorly behaved in small samples). For example, when we
+38:1647:80285:18:17:53:557:344:12:g_d0_f4:12:g_d0_f4:B:simulate the model using consumption growth as the priced risk factor, the coe¢ cient estimates
+38:1648:80380:17:18:53:557:327:12:g_d0_f4:12:g_d0_f4:B:are in general substantially smaller than we observe in the empirical sample, which implies that
+38:1649:80476:18:18:53:557:309:12:g_d0_f4:12:g_d0_f4:B:the estimator is biased downwards. By bootstrapping the t-statistics, we are implicitly taking this
+38:1650:80575:18:18:53:557:291:12:g_d0_f4:12:g_d0_f4:B:bias into account when forming p-values (though note that to be conservative we do not adjust the
+38:1651:80672:18:18:53:557:273:12:g_d0_f4:12:g_d0_f4:B:point estimate to account for the bias as this would generally increase the variance of the estimate).
+38:1652:80774:18:18:53:557:255:12:g_d0_f4:12:g_d0_f4:B:The basic result in table A1 is that the results we obtain are if anything stronger when we use
+38:1653:80869:18:39:53:541:237:12:g_d0_f4:12:g_d0_f4:B:bootstrapped conÖdence intervals rather than those obtained from the asymptotic distribution.
+38:1654:80962:39:26:53:247:198:14:g_d0_f3:14:g_d0_f3:C:D.2  Risk-sorted portfolios
+38:1655:80989:26:18:53:557:172:12:g_d0_f4:12:g_d0_f4:B:The 25 FamañFrench portfolios were originally constructed because their returns spanned a number
+38:1656:81085:18:18:53:557:154:12:g_d0_f4:12:g_d0_f4:B:of observed anomalies in the cross-section of excess returns. We would not necessarily expect them
+38:1657:81183:18:18:53:557:136:12:g_d0_f4:12:g_d0_f4:B:to have large spreads in their loadings on shocks to consumption growth at di§erent horizons. In
+38:1658:81279:18:17:53:557:118:12:g_d0_f4:12:g_d0_f4:B:this section we therefore construct portfolios that are speciÖcally designed to have a large spread
+38:1659:81378:17:18:53:145:101:12:g_d0_f4:12:g_d0_f4:B:in factor loadings.
+38:1660:81397:18:0:71:558:83:12:g_d0_f4:12:g_d0_f4:A:In every quarter, we estimate factor loadings with respect to the low- and business-cycle fre-
+39:1661:81493:0:18:54:558:703:12:g_d0_f4:12:g_d0_f4:B:quency shocks (we refrain from also sorting on the high-frequency shocks to keep the portfolios
+39:1662:81588:18:18:54:558:685:12:g_d0_f4:12:g_d0_f4:B:relatively large and well diversiÖed). The loadings are estimated on quarterly data over the previ-
+39:1663:81687:18:18:54:557:667:12:g_d0_f4:12:g_d0_f4:B:ous 10 years. The loadings on each factor are split into terciles and we construct3-3portfolios.
+39:1664:81783:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:The low- and business-cycle frequency shocks are constructed using the bandpass basis and equation
+39:1665:81881:18:40:54:187:631:12:g_d0_f4:12:g_d0_f4:B:(44). SpeciÖcally, we have
+39:1666:81907:40:0:208:299:591:12:g_d0_f6:8:g_d0_f11:?:-Et+1Mt+1=--q0
+39:1667:81921:0:9:316:324:612:12:g_d0_f12:8:g_d0_f11:A: 1
+39:1668:81922:9:25:312:329:603:12:g_d0_f12:12:g_d0_f12:?:X
+39:1669:81923:25:0:313:328:578:8:g_d0_f8:8:g_d0_f9:A:j=0
+39:1670:81926:0:0:331:370:591:12:g_d0_f5:8:g_d0_f8:A:HjB1\bj
+39:1671:81933:0:21:371:380:612:12:g_d0_f12:12:g_d0_f12:A:!
+39:1672:81934:21:33:383:558:591:12:g_d0_f5:12:g_d0_f4:A:"t+1(87)
+39:1673:81942:33:25:54:201:558:12:g_d0_f4:12:g_d0_f4:B:The rotated shocks are thus,
+39:1674:81970:25:0:237:270:533:12:g_d0_f5:12:g_d0_f6:C:ut+1=
+39:1675:81975:0:9:287:295:554:12:g_d0_f12:8:g_d0_f11:?: 1
+39:1676:81976:9:25:283:300:545:12:g_d0_f12:12:g_d0_f12:?:X
+39:1677:81977:25:0:284:299:520:8:g_d0_f8:8:g_d0_f9:?:j=0
+39:1678:81980:0:0:302:341:533:12:g_d0_f5:8:g_d0_f8:A:HjB1\bj
+39:1679:81987:0:21:343:352:554:12:g_d0_f12:12:g_d0_f12:A:!
+39:1680:81988:21:33:354:558:533:12:g_d0_f5:12:g_d0_f4:A:"t+1(88)
+39:1681:81996:33:18:54:544:500:12:g_d0_f4:12:g_d0_f4:B:And the low- and business-cycle frequency components are the Örst two elements of this vector.
+39:1682:82090:18:18:71:558:482:12:g_d0_f4:12:g_d0_f4:A:Table A1 reports results using the risk-sorted portfolios in addition to the size- and book/market-
+39:1683:82189:18:18:54:558:464:12:g_d0_f4:12:g_d0_f4:B:sorted portfolios.  The results correspond to those in table 2 in that we use the e¢ cient GMM
+39:1684:82283:18:18:54:558:446:12:g_d0_f4:12:g_d0_f4:B:weighting matrix.  The left-hand set of columns combines the 9 risk-sorted portfolios with the
+39:1685:82377:18:18:54:558:428:12:g_d0_f4:12:g_d0_f4:B:25 FamañFrench portfolios used in the main text, while the right-hand side uses only 6 size- and
+39:1686:82473:18:18:54:558:410:12:g_d0_f4:12:g_d0_f4:B:book/market-sorted portfolios (two size categories and three book/market categories) to put rela-
+39:1687:82570:18:18:54:298:392:12:g_d0_f4:12:g_d0_f4:B:tively more weight on the risk-sorted portfolios.
+39:1688:82619:18:18:71:558:374:12:g_d0_f4:12:g_d0_f4:A:In both sets of columns we replicate our main results that low-frequency components of con-
+39:1689:82710:18:18:54:558:356:12:g_d0_f4:12:g_d0_f4:B:sumption growth and other real variables are signiÖcantly priced under the bandpass basis, and
+39:1690:82804:18:18:54:558:338:12:g_d0_f4:12:g_d0_f4:B:that few if any coe¢ cients are signiÖcant with the utility basis. The coe¢ cients are also of a similar
+39:1691:82908:18:39:54:209:320:12:g_d0_f4:12:g_d0_f4:B:magnitude to those in table 2.
+39:1692:82938:39:25:54:203:281:14:g_d0_f3:14:g_d0_f3:C:D.3  Factor loadings
+39:1693:82958:25:18:54:558:256:12:g_d0_f4:12:g_d0_f4:B:Table A3 reports the factor loadings and standard errors for the 25 FamañFrench portfolios and
+39:1694:83052:18:18:54:558:238:12:g_d0_f4:12:g_d0_f4:B:our nine risk-sorted portfolios. For the FamañFrench portfolios, the di§erences in loadings on both
+39:1695:83151:18:18:54:558:220:12:g_d0_f4:12:g_d0_f4:B:the low- and business-cycle-frequency shocks are large and statistically signiÖcant for all the small
+39:1696:83252:18:18:54:558:202:12:g_d0_f4:12:g_d0_f4:B:versus large comparisons. Small Örms appear to be robustly more exposed to long-run and business-
+39:1697:83349:18:18:54:558:184:12:g_d0_f4:12:g_d0_f4:B:cycle shocks than large Örms, and this wide spread in factor loadings is what helps us identify the
+39:1698:83448:18:18:54:558:166:12:g_d0_f4:12:g_d0_f4:B:risk prices in tables 2 and 3. On the value-growth dimension we Önd a much smaller spread, most of
+39:1699:83546:18:18:54:558:148:12:g_d0_f4:12:g_d0_f4:B:the time statistically insigniÖcant. In fact, we Önd no signiÖcant spread between value and growth
+39:1700:83644:18:18:54:558:130:12:g_d0_f4:12:g_d0_f4:B:stocks if one excludes the extreme growth portfolios (especially the small growth portfolio, typically
+39:1701:83746:18:18:54:558:112:12:g_d0_f4:12:g_d0_f4:B:di¢ cult to price), which display a modestly higher exposure to long-run and business-cycle shocks.
+39:1702:83845:18:18:54:558:94:12:g_d0_f4:12:g_d0_f4:B:We conclude that most of the identiÖcation within the 25 Fama-French portfolio comes from the
+39:1703:83938:18:0:54:558:76:12:g_d0_f4:12:g_d0_f4:B:heterogeneity in loadings between small and large Örms, though we note that it is not the main
+40:1704:84034:0:18:54:420:703:12:g_d0_f4:12:g_d0_f4:B:purpose of this paper to explain the small-large or value-growth puzzle.
+40:1705:84106:18:18:71:558:685:12:g_d0_f4:12:g_d0_f4:A:We see similarly large variation in the factor loadings for the risk-sorted portfolios. Interestingly,
+40:1706:84208:18:18:54:558:667:12:g_d0_f4:12:g_d0_f4:B:it seems that the FamañFrench portfolios actually have a slightly wider degree of variation in their
+40:1707:84308:18:18:54:558:649:12:g_d0_f4:12:g_d0_f4:B:loadings. This is due to two factors. First, there are simply more of the FamañFrench portfolios,
+40:1708:84405:18:18:54:558:631:12:g_d0_f4:12:g_d0_f4:B:so we are more likely to Önd large di§erences. Second, factor loadings for individual Örms are not
+40:1709:84503:18:18:54:558:613:12:g_d0_f4:12:g_d0_f4:B:particularly persistent (especially since we estimate them using quarterly data, so the loadings used
+40:1710:84604:18:17:54:558:595:12:g_d0_f4:12:g_d0_f4:B:for portfolio formation may be somewhat imprecise). The resulting risk-sorted portfolios thus have
+40:1711:84702:17:450:54:541:578:12:g_d0_f4:12:g_d0_f4:B:a much smaller spread in post-formation loadings than they do in their pre-formation loadings.
+43:1712:86081:450:13:52:493:128:11:g_d0_f23:11:g_d0_f23:F:Notes: Impulse transfer functions estimated from a VAR in consumption growth and the two principal 
+43:1713:86180:13:13:52:485:115:11:g_d0_f23:11:g_d0_f23:F:components. Shaded regions represent 95-percent confidence intervals. The left-hand plots are for all 
+43:1714:86282:13:14:52:504:102:11:g_d0_f23:11:g_d0_f23:F:frequencies, while the right-hand plots zoom in on cycles longer than 5 years. The range between the lines 
+43:1715:86389:14:13:52:468:88:11:g_d0_f23:11:g_d0_f23:F:on the right-hand side contains 50 percent of the mass of the weighting function for Epstein–Zin 
+43:1716:86486:13:13:52:512:75:11:g_d0_f23:11:g_d0_f23:F:preferences with RRA=5 and EIS=2 (cycles longer than 230 years). The x-axis gives frequencies in terms of 
+43:1717:86592:13:0:52:223:62:11:g_d0_f23:11:g_d0_f23:F:quarters. Shocks are not orthogonalized.
+43:1718:86632:0:14:78:487:712:14:g_d0_f22:14:g_d0_f22:A:Figure 3. Estimated impulse transfer functions for consumption VAR
+43:1719:86698:14:119:183:476:698:11:g_d0_f22:11:g_d0_f22:?:All frequenciesCycles longer than 5 years
+43:1720:86808:119:12:129:189:579:11:g_d0_f23:11:g_d0_f23:?:Cycles longer 
+43:1721:86822:12:156:129:180:567:11:g_d0_f23:11:g_d0_f23:?:than 5 years
+43:1722:86834:156:13:129:189:411:11:g_d0_f23:11:g_d0_f23:?:Cycles longer 
+43:1723:86848:13:148:129:180:398:11:g_d0_f23:11:g_d0_f23:?:than 5 years
+43:1724:86860:148:12:131:191:250:11:g_d0_f23:11:g_d0_f23:?:Cycles longer 
+43:1725:86874:12:0:131:182:238:11:g_d0_f23:11:g_d0_f23:?:than 5 years
+43:1726:86886:0:12:411:491:560:11:g_d0_f23:11:g_d0_f23:A:50% of E–Z mass 
+43:1727:86902:12:12:411:495:548:11:g_d0_f23:11:g_d0_f23:A:(benchmark params
+43:1728:86919:12:140:411:504:536:11:g_d0_f23:11:g_d0_f23:A:═>cycles >230 years)
+43:1729:86939:140:12:413:493:396:11:g_d0_f23:11:g_d0_f23:A:50% of E–Z mass 
+43:1730:86955:12:12:413:497:384:11:g_d0_f23:11:g_d0_f23:A:(benchmark params
+43:1731:86972:12:128:413:506:372:11:g_d0_f23:11:g_d0_f23:A:═>cycles >230 years)
+43:1732:86992:128:13:414:494:244:11:g_d0_f23:11:g_d0_f23:A:50% of E–Z mass 
+43:1733:87008:13:12:414:498:231:11:g_d0_f23:11:g_d0_f23:A:(benchmark params
+43:1734:87025:12:0:414:507:219:11:g_d0_f23:11:g_d0_f23:A:═>cycles >230 years)
+51:1735:95657:0:15:56:272:708:12:g_d0_f29:12:g_d0_f29:C:Table A3. Factor loadings for test portfolios
+51:1736:95702:15:30:56:168:693:12:g_d0_f30:12:g_d0_f30:C:Low-frequency loadings:
+51:1737:95725:30:15:56:553:663:12:g_d0_f30:12:g_d0_f30:C:Small72.4  (12.3)   68.0  (10.1)   53.0  (9.0)    49.9  (8.6)   53.9  (9.8)   -18.5 (6.7)
+51:1738:95814:15:14:56:553:648:12:g_d0_f30:12:g_d0_f30:C:264.6  (10.9)   55.2  (9.0)    48.5  (8.1)    48.1  (8.0)   51.7  (9.0)   -12.9 (6.7)
+51:1739:95899:14:15:56:553:634:12:g_d0_f30:12:g_d0_f30:C:362.5  (9.7)    46.9  (8.1)    41.6  (7.5)    41.8  (7.5)   43.5  (8.3)   -18.9 (6.7)
+51:1740:95984:15:15:56:553:619:12:g_d0_f30:12:g_d0_f30:C:454.0  (8.8)    45.2  (7.6)    41.3  (7.4)    41.4  (7.3)   48.7  (8.4)   -5.3  (6.5)
+51:1741:96069:15:15:56:553:604:12:g_d0_f30:12:g_d0_f30:C:Large41.6  (7.1)    32.6  (6.5)    29.3  (6.1)    31.3  (6.5)   38.2  (7.4)   -3.4  (5.9)
+51:1742:96158:15:30:56:482:589:12:g_d0_f31:12:g_d0_f30:C:Difference-30.8  (8.9)   -35.4  (7.0)   -23.7  (6.4)   -18.6 (5.9)   -15.7 (6.8)
+51:1743:96238:30:29:56:212:559:12:g_d0_f30:12:g_d0_f30:C:Business-cycle frequency loadings:
+51:1744:96272:29:15:56:553:530:12:g_d0_f30:12:g_d0_f30:C:Small39.1  (5.6)    35.6  (4.6)    26.9  (4.1)    25.1  (4.0)   28.5  (4.5)   -10.6 (3.1)
+51:1745:96361:15:15:56:553:515:12:g_d0_f30:12:g_d0_f30:C:233.7  (5.0)    28.0  (4.1)    24.4  (3.7)    23.3  (3.7)   26.1  (4.1)   -7.6  (3.1)
+51:1746:96446:15:15:56:553:500:12:g_d0_f30:12:g_d0_f30:C:332.3  (4.4)    23.9  (3.7)    21.0  (3.5)    21.1  (3.5)   21.9  (3.8)   -10.5 (3.1)
+51:1747:96531:15:15:56:553:485:12:g_d0_f30:12:g_d0_f30:C:427.3  (4.0)    23.1  (3.5)    21.4  (3.4)    20.3  (3.4)   24.8  (3.9)   -2.4  (3.0)
+51:1748:96616:15:14:56:553:470:12:g_d0_f30:12:g_d0_f30:C:Large22.5  (3.2)    17.3  (3.0)    16.4  (2.8)    17.2  (3.0)   20.5  (3.4)   -2.0  (2.7)
+51:1749:96705:14:45:56:482:456:12:g_d0_f31:12:g_d0_f30:C:Difference-16.6  (4.1)   -18.3  (3.2)   -10.6  (3.0)    -7.8  (2.8)   -8.0  (3.2)
+51:1750:96786:45:30:56:168:411:12:g_d0_f30:12:g_d0_f30:C:Low-frequency loadings:
+51:1751:96809:30:14:56:411:381:12:g_d0_f30:12:g_d0_f30:C:LF beta low   23.5  (6.0)    23.8  (5.7)    26.7  (6.4)3.2  (3.8)
+51:1752:96874:14:15:56:411:367:12:g_d0_f30:12:g_d0_f30:C:226.3  (6.0)    27.9  (6.4)    35.8  (7.3)9.5  (3.7)
+51:1753:96926:15:15:56:411:352:12:g_d0_f30:12:g_d0_f30:C:LF beta high  35.6  (7.8)    46.7  (8.8)    57.8  (11.1)   22.2  (5.5)
+51:1754:96996:15:30:56:337:337:12:g_d0_f31:12:g_d0_f30:C:Difference12.1  (4.9)    22.9  (5.8)    31.2  (7.6)
+51:1755:97047:30:29:56:212:307:12:g_d0_f30:12:g_d0_f30:C:Business-cycle frequency loadings:
+51:1756:97081:29:15:56:411:278:12:g_d0_f30:12:g_d0_f30:C:LF beta low   16.6  (3.6)    17.0  (3.5)    19.7  (3.9)3.1  (2.3)
+51:1757:97146:15:15:56:411:263:12:g_d0_f30:12:g_d0_f30:C:218.5  (3.7)    20.7  (3.9)    27.1  (4.4)8.5  (2.3)
+51:1758:97198:15:15:56:411:248:12:g_d0_f30:12:g_d0_f30:C:LF beta high  26.4  (4.7)    33.8  (5.3)    42.0  (6.7)    15.6  (3.4)
+51:1759:97268:15:30:56:336:233:12:g_d0_f31:12:g_d0_f30:C:Difference9.7  (3.0)    16.8  (3.5)    22.2  (4.6)
+51:1760:97318:30:14:56:540:203:12:g_d0_f30:12:g_d0_f30:C:Notes: Each cell of each table is a factor loading for one of the portfolio returns with respect to either the 
+51:1761:97429:14:14:56:558:189:12:g_d0_f30:12:g_d0_f30:F:low- or business-cycle frequency shock. The top two panels report results for the 25 Fama–French portfolios, 
+51:1762:97538:14:15:56:550:175:12:g_d0_f30:12:g_d0_f30:C:while the bottom two panels are for the risk-sorted portfolios used in table A2. The numbers in parentheses 
+51:1763:97646:15:0:56:297:160:12:g_d0_f30:12:g_d0_f30:C:are standard errors for the estimated factor loadings. 
+51:1764:97701:0:0:507:545:545:12:g_d0_f31:12:g_d0_f31:C:Difference
+51:1765:97711:0:133:138:545:678:12:g_d0_f30:12:g_d0_f31:C:Growth234ValueDifference
+51:1766:97735:133:149:138:469:545:12:g_d0_f30:12:g_d0_f30:C:Growth234Value
+51:1767:97749:149:104:128:403:396:12:g_d0_f30:12:g_d0_f31:C:BC beta low2BC beta highDifference
+51:1768:97783:104:0:128:403:292:12:g_d0_f30:12:g_d0_f31:C:BC beta low2BC beta highDifference

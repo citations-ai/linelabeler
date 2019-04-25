@@ -1,0 +1,1201 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:183:431:610:12:g_d0_f1:12:g_d0_f1:C:                          HEDONIC PRICES AND IMPLICIT MARKETS: 
+1:2:88:14:14:59:502:596:12:g_d0_f1:12:g_d0_f1:C:              ESTIMATING MARGINAL WILLINGNESS TO PAY FOR DIFFERENTIATED
+1:3:159:14:28:161:449:582:12:g_d0_f1:12:g_d0_f1:C:PRODUCTS WITHOUT INSTRUMENTAL VARIABLES
+1:4:198:28:14:267:345:554:12:g_d0_f1:12:g_d0_f1:C:Kelly C. Bishop
+1:5:213:14:28:254:357:540:12:g_d0_f1:12:g_d0_f1:C:Christopher Timmins
+1:6:232:28:14:253:359:512:12:g_d0_f1:12:g_d0_f1:C:Working Paper 17611
+1:7:251:14:42:218:393:498:12:g_d0_f1:12:g_d0_f1:C:http://www.nber.org/papers/w17611
+1:8:284:42:14:173:438:456:12:g_d0_f1:12:g_d0_f1:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:9:320:14:14:237:374:442:12:g_d0_f1:12:g_d0_f1:C:1050 Massachusetts Avenue
+1:10:345:14:14:250:362:428:12:g_d0_f1:12:g_d0_f1:C:Cambridge, MA 02138
+1:11:364:14:158:267:345:414:12:g_d0_f1:12:g_d0_f1:C:November 2011
+1:12:377:158:14:71:539:256:12:g_d0_f1:12:g_d0_f1:F:We thank the seminar/conference participants at the AERE/ASSA Annual Meetings, Camp Resources,
+1:13:471:14:14:71:539:242:12:g_d0_f1:12:g_d0_f1:F:Iowa State University, Montana State University, Syracuse University, the Triangle Resource and
+1:14:566:14:14:71:539:228:12:g_d0_f1:12:g_d0_f1:F:Environmental Economics Workshop, the UEA/RSAI Annual Meetings, the University of Wisconsin,
+1:15:658:14:14:71:539:214:12:g_d0_f1:12:g_d0_f1:F:the University of Stirling, the University of Aberdeen, LSE Center for Economic Performance, and
+1:16:754:14:14:71:539:200:12:g_d0_f1:12:g_d0_f1:F:Econometric Society Summer Meetings for their helpful comments and suggestions. The views expressed
+1:17:853:14:14:71:539:186:12:g_d0_f1:12:g_d0_f1:F:herein are those of the authors and do not necessarily reflect the views of the National Bureau of Economic
+1:18:960:14:28:71:118:172:12:g_d0_f1:12:g_d0_f1:C:Research.
+1:19:969:28:14:71:539:144:12:g_d0_f1:12:g_d0_f1:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:20:1065:14:14:71:539:130:12:g_d0_f1:12:g_d0_f1:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:21:1160:14:28:71:168:116:12:g_d0_f1:12:g_d0_f1:C:NBER publications.
+1:22:1178:28:14:71:539:88:12:g_d0_f1:12:g_d0_f1:F:© 2011 by Kelly C. Bishop and Christopher Timmins. All rights reserved. Short sections of text, not
+1:23:1277:14:14:71:539:74:12:g_d0_f1:12:g_d0_f1:F:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:24:1381:14:0:71:223:60:12:g_d0_f1:12:g_d0_f1:C:© notice, is given to the source.
+2:25:1414:0:14:72:535:700:12:g_d0_f1:12:g_d0_f1:C:Hedonic Prices and Implicit Markets: Estimating Marginal Willingness to Pay for Differentiated
+2:26:1508:14:14:72:269:686:12:g_d0_f1:12:g_d0_f1:C:Products Without Instrumental Variables
+2:27:1547:14:14:72:276:672:12:g_d0_f1:12:g_d0_f1:C:Kelly C. Bishop and Christopher Timmins
+2:28:1586:14:14:72:234:658:12:g_d0_f1:12:g_d0_f1:C:NBER Working Paper No. 17611
+2:29:1614:14:14:72:150:644:12:g_d0_f1:12:g_d0_f1:C:November 2011
+2:30:1627:14:28:72:153:630:12:g_d0_f1:12:g_d0_f1:C:JEL No. Q51,R0
+2:31:1641:28:28:273:338:602:12:Times:12:Times:?:ABSTRACT
+2:32:1649:28:14:72:540:574:12:g_d0_f1:12:g_d0_f1:F:The hedonic model of Rosen (1974) has become a workhorse for valuing the characteristics of differentiated
+2:33:1755:14:14:72:540:560:12:g_d0_f1:12:g_d0_f1:F:products despite a number of well-documented econometric problems. For example, Bartik (1987)
+2:34:1848:14:14:72:540:546:12:g_d0_f1:12:g_d0_f1:F:and Epple (1987) each describe a source of endogeneity in the second stage of Rosen's procedure that
+2:35:1948:14:14:72:540:532:12:g_d0_f1:12:g_d0_f1:F:has proven difficult to overcome.  In this paper, we propose a new approach for recovering the marginal
+2:36:2051:14:14:72:540:518:12:g_d0_f1:12:g_d0_f1:F:willingness-to-pay function that altogether avoids these endogeneity problems. Applying this estimator
+2:37:2153:14:14:72:540:504:12:g_d0_f1:12:g_d0_f1:F:to data on large changes in violent crime rates, we find that marginal willingness-to-pay increases
+2:38:2252:14:42:72:405:490:12:g_d0_f1:12:g_d0_f1:C:by ten cents with each additional violent crime per 100,000 residents.
+2:39:2322:42:14:72:150:448:12:g_d0_f1:12:g_d0_f1:C:Kelly C. Bishop
+2:40:2337:14:14:72:175:434:12:g_d0_f1:12:g_d0_f1:C:Olin Business School
+2:41:2357:14:14:72:242:420:12:g_d0_f1:12:g_d0_f1:C:Washington University in St. Louis
+2:42:2391:14:14:72:214:406:12:g_d0_f1:12:g_d0_f1:C:Box 1133, 1 Brookings Drive
+2:43:2418:14:14:72:177:392:12:g_d0_f1:12:g_d0_f1:C:St. Louis, MO 63130 
+2:44:2438:14:28:72:167:378:12:g_d0_f1:12:g_d0_f1:C:kbishop@wustl.edu
+2:45:2455:28:14:72:175:350:12:g_d0_f1:12:g_d0_f1:C:Christopher Timmins
+2:46:2474:14:14:72:198:336:12:g_d0_f1:12:g_d0_f1:C:Department of Economics
+2:47:2497:14:14:72:152:322:12:g_d0_f1:12:g_d0_f1:C:Duke University
+2:48:2512:14:14:72:213:308:12:g_d0_f1:12:g_d0_f1:C:209 Social Sciences Building
+2:49:2540:14:14:72:149:294:12:g_d0_f1:12:g_d0_f1:C:P.O. Box 90097
+2:50:2554:14:14:72:195:280:12:g_d0_f1:12:g_d0_f1:C:Durham, NC 27708-0097
+2:51:2575:14:14:72:124:266:12:g_d0_f1:12:g_d0_f1:C:and NBER
+2:52:2583:14:0:72:223:252:12:g_d0_f1:12:g_d0_f1:C:christopher.timmins@duke.edu
+3:53:2611:0:46:68:204:696:17:g_d0_f2:17:g_d0_f2:C:1    Introduction
+3:54:2628:46:24:68:542:650:12:g_d0_f3:12:g_d0_f3:B:Dating back to the work of Court (1939),  Grilliches (1961),  and Lancaster (1966),  hedonic
+3:55:2720:24:24:68:542:626:12:g_d0_f3:12:g_d0_f3:B:techniques have been used to estimate the implicit prices associated with the attributes of
+3:56:2811:24:23:68:542:602:12:g_d0_f3:12:g_d0_f3:B:differentiated  products.   Rosen’s  (1974)  seminal  work  proposed  a  theoretical  structure  for
+3:57:2911:23:24:68:542:579:12:g_d0_f3:12:g_d0_f3:B:the hedonic regression and a two-stage procedure for the recovery of marginal willingness-to-
+3:58:3004:24:24:68:542:555:12:g_d0_f3:12:g_d0_f3:B:pay (MWTP) functions of heterogeneous individuals for the characteristics of differentiated
+3:59:3095:24:24:68:542:531:12:g_d0_f3:12:g_d0_f3:B:products.  Importantly, his two-stage approach allowed for two sources of preference hetero-
+3:60:3187:24:24:68:542:507:12:g_d0_f3:12:g_d0_f3:B:geneity: individuals’ MWTP functions could differ with (i) their individual attributes and (ii)
+3:61:3282:24:24:68:542:483:12:g_d0_f3:12:g_d0_f3:B:the quantity of the product attribute that they consume.  The latter is particularly important
+3:62:3376:24:24:68:542:459:12:g_d0_f3:12:g_d0_f3:B:when considering non-marginal policy changes (i.e., any change that is large enough to alter
+3:63:3468:24:24:68:542:435:12:g_d0_f3:12:g_d0_f3:B:the  individual’s  willingness  to  pay  at  the  margin).   The  two-stage  procedure  suggested  by
+3:64:3569:24:24:68:542:411:12:g_d0_f3:12:g_d0_f3:B:Rosen (and further developed by subsequent authors) uses variation in implicit prices (ob-
+3:65:3659:24:24:68:542:387:12:g_d0_f3:12:g_d0_f3:B:tained either by employing data from multiple markets or by allowing for non-linearity in the
+3:66:3752:24:34:68:355:363:12:g_d0_f3:12:g_d0_f3:B:hedonic price function) to identify the MWTP function.
+3:67:3806:34:24:93:542:329:12:g_d0_f3:12:g_d0_f3:A:With  Rosen  (1974)  as  a  backdrop,  the  property  value  hedonic  model  has  become  the
+3:68:3899:24:24:68:542:305:12:g_d0_f3:12:g_d0_f3:B:workhorse for valuing local public goods and environmental amenities, despite a number of
+3:69:3988:24:24:68:541:281:12:g_d0_f3:12:g_d0_f3:B:well-known and well-documented econometric problems.1Our concern in this paper is with
+3:70:4074:24:24:68:542:257:12:g_d0_f3:12:g_d0_f3:B:an  important  problem  that  arises  in  the  second  stage  of  Rosen’s  two-step  procedure.   In
+3:71:4174:24:23:68:542:233:12:g_d0_f3:12:g_d0_f3:B:separate  papers,  Bartik  (1987)  and  Epple  (1987)  describe  a  source  of  endogeneity  that  is
+3:72:4275:23:24:68:542:210:12:g_d0_f3:12:g_d0_f3:B:difficult to overcome using standard exclusion restriction arguments.  Specifically, they note
+3:73:4369:24:24:68:542:186:12:g_d0_f3:12:g_d0_f3:B:that  unless  the  hedonic  price  function  is  linear,  the  hedonic  price  of  a  product  attribute
+3:74:4473:24:24:68:542:162:12:g_d0_f3:12:g_d0_f3:B:varies systematically with the quantity consumed.  The researcher therefore faces a difficult
+3:75:4566:24:18:68:542:138:12:g_d0_f3:12:g_d0_f3:B:endogeneity  problem  in  the  estimation  of  Rosen’s  second  stage.   Moreover,  because  of  the
+3:76:4666:18:16:81:542:120:7:g_d0_f6:10:g_d0_f7:F:1See Taylor (2003) and Palmquist (2005) for a comprehensive discussion.  Some of these problems arise in
+3:77:4770:16:11:68:542:104:10:g_d0_f7:10:g_d0_f7:F:the first stage of Rosen’s two-step procedure; for example, omitted variables that may be correlated with the
+3:78:4879:11:12:68:542:93:10:g_d0_f7:10:g_d0_f7:F:local attribute of interest.  There is a large and growing literature that describes both quasi-experimental and
+3:79:4991:12:0:68:439:81:10:g_d0_f7:10:g_d0_f7:F:structural solutions to this problem (see Parmeter and Pope (2009) for a discussion).
+4:80:5077:0:24:68:542:696:12:g_d0_f3:12:g_d0_f3:B:equilibrium features of the hedonic model, there are very few natural exclusion restrictions
+4:81:5169:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:that one can use to solve this endogeneity problem.  In particular, within-market supply-side
+4:82:5262:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:shifters – the typical instrument of choice when estimating a demand equation – are not valid
+4:83:5355:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:in this context.  This has generally left researchers to choose from a variety of weak instrument
+4:84:5452:24:24:68:542:601:12:g_d0_f3:12:g_d0_f3:B:strategies or instruments based on cross-market preference homogeneity assumptions that may
+4:85:5543:24:24:68:542:577:12:g_d0_f3:12:g_d0_f3:B:be difficult to justify.  With a few exceptions, the hedonics literature has subsequently ignored
+4:86:5640:24:24:68:542:553:12:g_d0_f3:12:g_d0_f3:B:Rosen’s second stage, focusing instead on recovering estimates of the hedonic price function
+4:87:5732:24:34:68:326:529:12:g_d0_f3:8:g_d0_f5:B:and valuing only marginal changes in amenities.2,3
+4:88:5782:34:24:93:542:495:12:g_d0_f3:12:g_d0_f3:A:In this paper, we propose an estimation procedure for the recovery of the structural pa-
+4:89:5870:24:24:68:542:471:12:g_d0_f3:12:g_d0_f3:B:rameters underlying the MWTP function that avoids the Bartik-Epple endogeneity problem
+4:90:5956:24:24:68:542:447:12:g_d0_f3:12:g_d0_f3:B:altogether.  We do this by exploiting the relationship between the quantity of the amenity
+4:91:6046:24:24:68:542:423:12:g_d0_f3:12:g_d0_f3:B:being consumed and the attributes of the individuals doing the consumption.  That such a
+4:92:6134:24:24:68:542:399:12:g_d0_f3:12:g_d0_f3:B:relationship should exist in hedonic equilibrium goes back to the idea of “stratification” found
+4:93:6230:24:24:68:542:375:12:g_d0_f3:12:g_d0_f3:B:in Ellickson (1971), which became the basis for estimable Tiebout sorting models.4Our pro-
+4:94:6320:24:24:68:542:351:12:g_d0_f3:12:g_d0_f3:B:posed method is identified even in a single-market setting, given a flexible representation of
+4:95:6414:24:24:68:542:327:12:g_d0_f3:12:g_d0_f3:B:the hedonic price function and a parametric representation of the MWTP function.  Impor-
+4:96:6502:24:23:68:542:303:12:g_d0_f3:12:g_d0_f3:B:tantly,  our procedure is computationally simple and easy to implement.  Moreover,  it does
+4:97:6593:23:18:68:542:280:12:g_d0_f3:12:g_d0_f3:B:not require any more in terms of data or assumptions than does the standard hedonic model.
+4:98:6683:18:16:81:542:262:7:g_d0_f6:10:g_d0_f7:F:2See, for example, Black (1999), Gayer, Hamilton, and Viscusi (2000), Bui and Mayer (2003), Davis (2004),
+4:99:6788:16:12:68:542:246:10:g_d0_f7:10:g_d0_f7:F:Figlio and Lucas (2004), Chay and Greenstone (2005), Linden and Rockoff (2008), Pope (2008), Greenstone
+4:100:6891:12:12:68:542:234:10:g_d0_f7:10:g_d0_f7:F:and Gallagher (2008),  Bajari,  Cooley,  Kim,  and Timmins (2011),  and Gamper-Rabindran,  Mastromonaco,
+4:101:6995:12:8:68:160:222:10:g_d0_f7:10:g_d0_f7:F:and Timmins (2011).
+4:102:7014:8:16:81:542:214:7:g_d0_f6:10:g_d0_f7:F:3Deacon et al.  (1998) noted that “To date no hedonic model with site specific environmental amenities
+4:103:7116:16:12:68:542:198:10:g_d0_f7:10:g_d0_f7:F:has successfully estimated the second stage marginal willingness to pay function.”  Since that time, a number
+4:104:7225:12:12:68:542:186:10:g_d0_f7:10:g_d0_f7:F:of papers have examined the problem of recovering preferences from hedonic estimates.  Bajari and Benkard
+4:105:7330:12:12:68:542:174:10:g_d0_f7:10:g_d0_f7:F:(2005) avoid the Bartik-Epple endogeneity problem by relying on strong parametric assumptions on utility
+4:106:7434:12:12:68:542:162:10:g_d0_f7:10:g_d0_f7:F:that turn Rosen’s second-stage from an estimation problem into a preference-inversion procedure.  We report
+4:107:7541:12:11:68:542:150:10:g_d0_f7:10:g_d0_f7:F:results based on their suggested procedure in our application.  Ekeland, Heckman, and Nesheim (2004) provide
+4:108:7649:11:12:68:542:139:10:g_d0_f7:10:g_d0_f7:F:an alternative approach to recovering MWTP that imposes very little in terms of parametric restrictions, but
+4:109:7757:12:12:68:542:127:10:g_d0_f7:10:g_d0_f7:F:requires an additive separability assumption in the MWTP specification.  Heckman, Matzkin, and Nesheim
+4:110:7859:12:12:68:542:115:10:g_d0_f7:10:g_d0_f7:F:(2010) illustrate conditions under which non-separable utility functions may be non-parametrically identified
+4:111:7968:12:9:68:413:103:10:g_d0_f7:10:g_d0_f7:F:(in both single and multiple markets) and propose a non-parametric estimator.
+4:112:8045:9:15:81:542:94:7:g_d0_f6:10:g_d0_f7:F:4See, for example, Epple, Filimon and Romer (1984), Epple and Romano (1998), Epple and Platt (1998),
+4:113:8145:15:0:68:187:79:10:g_d0_f7:10:g_d0_f7:F:and Epple and Sieg (1999).
+5:114:8172:0:24:93:542:696:12:g_d0_f3:12:g_d0_f3:A:To demonstrate the usefulness of this approach, we implement our estimation procedure
+5:115:8257:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:using data on large changes in violent crime rates in the San Francisco Bay Metropolitan Area
+5:116:8350:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:over the period 1994 to 2000.  We find that recovering the full MWTP function is economically
+5:117:8443:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:important; an individual’s marginal willingness to pay to avoid an incident of violent crime
+5:118:8535:24:24:68:542:601:12:g_d0_f3:12:g_d0_f3:B:(measured by cases per 100,000 residents) increases by 10 cents with each additional incident.
+5:119:8629:24:24:68:542:577:12:g_d0_f3:12:g_d0_f3:B:Non-marginal reductions in crime of the sort seen in San Francisco and the rest of the nation
+5:120:8722:24:24:68:542:553:12:g_d0_f3:12:g_d0_f3:B:during  the  1990s  therefore  have  the  potential  to  significantly  affect  MWTP.  We  find  that
+5:121:8823:24:24:68:542:529:12:g_d0_f3:12:g_d0_f3:B:naive estimators, which ignore this effect, yield estimates of total willingness to pay for crime
+5:122:8920:24:24:68:542:505:12:g_d0_f3:12:g_d0_f3:B:reductions in San Francisco that are significantly biased.  Similar problems are likely to arise
+5:123:9016:24:24:68:542:481:12:g_d0_f3:12:g_d0_f3:B:in other settings where policy changes are not marginal – e.g., air quality, school reform, and
+5:124:9111:24:34:68:241:457:12:g_d0_f3:12:g_d0_f3:B:hazardous waste site remediation.
+5:125:9144:34:24:93:542:423:12:g_d0_f3:12:g_d0_f3:A:This paper proceeds as follows.  Section 2 describes the endogeneity problem discussed
+5:126:9230:24:24:68:542:399:12:g_d0_f3:12:g_d0_f3:B:by Bartik (1987) and Epple (1987) and reiterates the intuition for why the problem has been
+5:127:9321:24:24:68:542:375:12:g_d0_f3:12:g_d0_f3:B:so difficult to solve with standard exclusion restrictions.  Section 3 describes our alternative
+5:128:9417:24:24:68:542:351:12:g_d0_f3:12:g_d0_f3:B:estimation procedure in detail.  Section 4 describes the data used in our application – hous-
+5:129:9510:24:24:68:542:327:12:g_d0_f3:12:g_d0_f3:B:ing transactions data from the San Francisco Metropolitan Area combined with violent and
+5:130:9598:24:23:68:542:303:12:g_d0_f3:12:g_d0_f3:B:property crime data from the RAND California Database.  Section 5 reports the results of
+5:131:9686:23:24:68:542:280:12:g_d0_f3:12:g_d0_f3:B:applying our estimator to these data.  Section 6 calculates the welfare effects from the actual
+5:132:9781:24:24:68:542:256:12:g_d0_f3:12:g_d0_f3:B:non-marginal changes in crime faced by a subset of homeowners and compares these welfare
+5:133:9869:24:24:68:542:232:12:g_d0_f3:12:g_d0_f3:B:effects with those calculated with alternative procedures in the existing literature.  Finally,
+5:134:9964:24:0:68:171:208:12:g_d0_f3:12:g_d0_f3:B:Section 7 concludes.
+6:135:9985:0:36:68:542:696:17:g_d0_f2:17:g_d0_f2:F:2    Why Has It Been So Difficult To Recover The MWTP
+6:136:10038:36:46:97:180:660:17:g_d0_f2:17:g_d0_f2:A:Function?
+6:137:10047:46:24:68:542:614:12:g_d0_f3:12:g_d0_f3:B:In  their  respective  1987  articles,  Epple  and  Bartik  each  discuss  the  econometric  problems
+6:138:10148:24:24:68:542:590:12:g_d0_f3:12:g_d0_f3:B:induced by the equilibrium sorting process that underlies the formation of the hedonic price
+6:139:10240:24:24:68:542:566:12:g_d0_f3:12:g_d0_f3:B:function.   In  particular,  unobserved  determinants  of  tastes  affect  both  the  quantity  of  an
+6:140:10342:24:24:68:542:542:12:g_d0_f3:12:g_d0_f3:B:amenity  that  an  individual  consumes  and  (if  the  hedonic  price  function  is  not  linear)  the
+6:141:10445:24:24:68:541:518:12:g_d0_f3:12:g_d0_f3:B:hedonic  price  of  the  attribute.5In  a  regression  like  the  one  described  in  the  second  stage
+6:142:10549:24:23:68:542:494:12:g_d0_f3:12:g_d0_f3:B:of Rosen’s two-step procedure, the quantity of the amenity that an individual consumes will
+6:143:10640:23:24:68:542:471:12:g_d0_f3:12:g_d0_f3:B:therefore  be  endogenous.   Moreover,  the  exclusion  restrictions  typically  used  to  estimate  a
+6:144:10742:24:24:68:542:447:12:g_d0_f3:12:g_d0_f3:B:demand system (i.e., using supplier attributes as instruments) will not work because, in ad-
+6:145:10834:24:24:68:542:423:12:g_d0_f3:12:g_d0_f3:B:dition to affecting the quantity of amenity and the hedonic price paid for it, the unobservable
+6:146:10929:24:24:68:542:399:12:g_d0_f3:12:g_d0_f3:B:component of preferences also determines the supplier from whom the individual purchases.
+6:147:11018:24:24:68:542:375:12:g_d0_f3:12:g_d0_f3:B:Supplier  attributes,  which  might  naturally  be  used  to  trace-out  the  demand  function,  are
+6:148:11118:24:24:68:542:351:12:g_d0_f3:12:g_d0_f3:B:therefore correlated with the unobserved determinants of MWTP because of the sorting pro-
+6:149:11207:24:34:68:274:327:12:g_d0_f3:12:g_d0_f3:B:cess underlying the hedonic equilibrium.
+6:150:11247:34:24:93:542:293:12:g_d0_f3:12:g_d0_f3:A:To make these ideas concrete, consider the following simple example which is based on
+6:151:11332:24:52:68:463:269:12:g_d0_f3:12:g_d0_f3:B:Epple’s model.  We begin with the quadratic hedonic price function given by:
+6:152:11408:52:0:68:337:217:12:g_d0_f3:12:g_d0_f3:B:(1)P(Zi;β) =β0+β1Zi+
+6:153:11428:0:16:341:352:225:12:g_d0_f4:8:g_d0_f5:?:β2
+6:154:11430:16:0:344:350:209:12:g_d0_f3:12:g_d0_f3:?:2
+6:155:11431:0:44:354:390:217:12:g_d0_f4:8:g_d0_f8:?:Z2i+-i
+6:156:11437:44:24:68:541:173:12:g_d0_f3:12:g_d0_f3:B:wherei= 1,...,Nindexes houses,P(Zi;β) measures the price of housei, andZimeasures
+6:157:11518:24:18:68:541:149:12:g_d0_f3:12:g_d0_f3:B:the level of the amenity associated with housei(for the sake of illustration, we ignore other
+6:158:11611:18:16:81:542:131:7:g_d0_f6:10:g_d0_f7:F:5The linear hedonic price function assumes that attributes can be unbundled and repackaged in any com-
+6:159:11713:16:12:68:542:115:10:g_d0_f7:10:g_d0_f7:F:bination  without  affecting  their  marginal  value  (e.g.,  the  marginal  value  of  another  bedroom  is  the  same
+6:160:11832:12:12:68:542:103:10:g_d0_f7:10:g_d0_f7:F:regardless of how many bedrooms a house already has).  In most empirical settings, this assumption is unre-
+6:161:11939:12:0:68:96:91:10:g_d0_f7:10:g_d0_f7:F:alistic.
+7:162:11948:0:24:68:542:696:12:g_d0_f3:12:g_d0_f3:B:amenities and house attributes).  For now, we consider data from just a single market, but
+7:163:12038:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:allow for multi-market data in the following section.  The linear price gradient associated with
+7:164:12134:24:43:68:219:648:12:g_d0_f3:12:g_d0_f3:B:this hedonic price function is:
+7:165:12165:43:0:68:271:605:12:g_d0_f3:12:g_d0_f10:B:(2)P′(Zi;β)≡
+7:166:12177:0:16:281:331:613:12:g_d0_f4:12:g_d0_f3:?:∂P(Zi;β)
+7:167:12185:16:0:297:315:597:12:g_d0_f4:8:g_d0_f8:?:∂Zi
+7:168:12188:0:44:335:395:605:12:g_d0_f3:8:g_d0_f8:?:=β1+β2Zi
+7:169:12196:44:34:68:312:561:12:g_d0_f3:12:g_d0_f3:B:whereP′(Zi;β) denotes the implicit price ofZi.
+7:170:12242:34:24:93:542:527:12:g_d0_f3:12:g_d0_f3:A:The second stage of Rosen’s procedure seeks to recover the coefficients of demand (or
+7:171:12327:24:24:68:542:503:12:g_d0_f3:12:g_d0_f3:B:marginal willingness to pay) and supply (or marginal willingness to accept) functions for the
+7:172:12420:24:44:68:456:479:12:g_d0_f3:8:g_d0_f5:B:attributeZfrom the first-order conditions of the equilibrium relationships:6
+7:173:12496:44:63:68:428:435:12:g_d0_f3:12:g_d0_f3:B:(3)P′(Zdi;β) =α1+α2Zdi+α3Xdi+νdi(demand)
+7:174:12536:63:44:68:422:372:12:g_d0_f3:12:g_d0_f3:B:(4)P′(Zsi;β) =γ1+γ2Zsi+γ3Xsi+νsi(supply)
+7:175:12576:44:24:68:539:328:12:g_d0_f3:8:g_d0_f8:B:whereXdiandXsirepresent attributes of the buyers and sellers of housei, respectively.νdi
+7:176:12664:24:34:68:517:304:12:g_d0_f3:12:g_d0_f3:B:andνsisimilarly represent unobserved idiosyncratic shocks to tastes and marginal costs.
+7:177:12751:34:24:93:542:270:12:g_d0_f3:12:g_d0_f3:A:The problem we consider in this paper arises from the fact thatZdimust necessarily be
+7:178:12836:24:24:68:542:246:12:g_d0_f3:12:g_d0_f3:B:correlated withνdibecause of the hedonic sorting process.  This is easily shown in the following
+7:179:12932:24:24:68:542:222:12:g_d0_f3:12:g_d0_f3:B:equation.  Noting thatZi=Zdiin hedonic equilibrium and combining Equations (2) and (3)
+7:180:13018:24:43:68:100:198:12:g_d0_f3:12:g_d0_f3:B:yields:
+7:181:13025:43:0:68:234:155:12:g_d0_f3:12:g_d0_f3:B:(5)Zi=
+7:182:13031:0:17:254:260:163:12:g_d0_f3:12:g_d0_f3:?:1
+7:183:13032:17:0:238:276:146:12:g_d0_f4:8:g_d0_f5:?:β2−α2
+7:184:13037:0:26:278:399:155:12:g_d0_f3:12:g_d0_f3:?:[(α1−β1) +α3Xdi+νdi]
+7:185:13057:26:16:81:542:129:7:g_d0_f6:10:g_d0_f7:F:6This  MWTP  function  is  consistent  with  the  underlying  indirect  utility  function  given  by:Ui=α0+
+7:186:13164:16:0:68:237:113:10:g_d0_f11:10:g_d0_f7:F:α1Zdi+12α2(Zdi)2+α3XdiZdi+νiZdi+
+7:187:13196:0:8:239:244:121:10:g_d0_f13:10:g_d0_f13:?:(
+7:188:13197:8:0:243:302:113:10:g_d0_f11:10:g_d0_f7:?:Ii−P(Zdi;β)
+7:189:13208:0:8:302:307:121:10:g_d0_f13:10:g_d0_f13:?:)
+7:190:13209:8:13:310:542:113:10:g_d0_f7:10:g_d0_f7:F:whereIiis the income of householdi.  This marginal
+7:191:13259:13:0:68:527:100:10:g_d0_f7:10:g_d0_f7:F:willingness to accept function is consistent with the underlying profit function given by:  Πi=P(Zsi;β)
+7:192:13362:0:8:527:532:108:10:g_d0_f13:10:g_d0_f13:?:)
+7:193:13363:8:12:534:542:100:10:g_d0_f10:10:g_d0_f10:F:−
+7:194:13364:12:0:68:247:88:10:g_d0_f11:10:g_d0_f7:F:γ0−γ1Zsi−12γ2(Zsi)2−γ3XsiZsi−νsiZsi.
+8:195:13401:0:24:93:541:696:12:g_d0_f3:12:g_d0_f3:A:Equation (5) makes explicit thatZiwill be correlated withνdi.7Therefore, in order to
+8:196:13485:24:34:68:469:672:12:g_d0_f3:12:g_d0_f3:B:estimate Equation (3) directly, the literature has sought an instrument forZdi.
+8:197:13564:34:24:93:542:638:12:g_d0_f3:12:g_d0_f3:A:The typical approach to estimating demand functions with endogenous quantities uses
+8:198:13647:24:24:68:542:614:12:g_d0_f3:12:g_d0_f3:B:supply function shifters.  The problem with that approach in this context, however, is that
+8:199:13738:24:24:68:542:590:12:g_d0_f3:12:g_d0_f3:B:hedonic sorting induces a correlation betweenνdiandXsi.  Put differently,νdidetermines the
+8:200:13828:24:34:68:541:566:12:g_d0_f3:12:g_d0_f3:B:supplier from whom individualipurchases, so thatXsicannot be used to instrument forZdi.
+8:201:13915:34:24:93:542:532:12:g_d0_f3:12:g_d0_f3:A:In  three  respective  papers,  Epple  (1987),  Bartik  (1987),  and  Kahn  and  Lang  (1988)
+8:202:14008:24:24:68:542:508:12:g_d0_f3:12:g_d0_f3:B:propose alternative instrumental variables strategies to deal with this problem.  Bartik, for
+8:203:14101:24:23:68:541:484:12:g_d0_f3:12:g_d0_f3:B:example,  suggests  instrumenting  forZdiwith  market  indicator  variables.   Kahn  and  Lang
+8:204:14195:23:24:68:542:461:12:g_d0_f3:12:g_d0_f3:B:suggest  a  similar  instrument  of  market  indicators  interacted  with  household  demographic
+8:205:14292:24:24:68:542:437:12:g_d0_f3:12:g_d0_f3:B:attributes.  The intuition for these strategies is that differences in the distribution of suppliers
+8:206:14392:24:24:68:542:413:12:g_d0_f3:12:g_d0_f3:B:across markets will provide an exogenous source of variation in the equilibrium quantity of the
+8:207:14487:24:24:68:542:389:12:g_d0_f3:12:g_d0_f3:B:amenity chosen by each individual.  The problem with these approaches is that they require
+8:208:14577:24:24:68:542:365:12:g_d0_f3:12:g_d0_f3:B:strong assumptions about cross-market preference homogeneity and the instrument may not
+8:209:14664:24:24:68:542:341:12:g_d0_f3:12:g_d0_f3:B:induce sufficient variation in the endogenous variable. Ekeland, Heckman, and Nesheim (2004)
+8:210:14756:24:24:68:542:317:12:g_d0_f3:12:g_d0_f3:B:propose an alternative instrumental variables approach to overcome the endogeneity problem.
+8:211:14847:24:24:68:542:293:12:g_d0_f3:12:g_d0_f3:B:They show that due to the non-linearity of the hedonic model, the conditional expectation
+8:212:14936:24:24:68:541:269:12:g_d0_f3:12:g_d0_f3:B:ofZdigivenXdimay be used to instrument forZdi.  This instrumentation strategy does not
+8:213:15022:24:24:68:542:245:12:g_d0_f3:12:g_d0_f3:B:require assumptions about cross-market preference homogeneity and may be used in a single-
+8:214:15112:24:23:68:542:221:12:g_d0_f3:12:g_d0_f3:B:market setting.  Our proposed estimation strategy differs from these previous approaches as
+8:215:15203:23:18:68:499:198:12:g_d0_f3:12:g_d0_f3:B:we avoid instrumental variables altogether.  Our strategy is the subject of Section 3.
+8:216:15289:18:7:81:276:180:7:g_d0_f6:7:g_d0_f12:?:7It is clear thatZiwill be correlated withνd
+8:217:15333:7:0:272:541:173:7:g_d0_f12:10:g_d0_f7:F:ieven when we allow for data coming from multiple markets.
+9:218:15392:0:46:68:287:696:17:g_d0_f2:17:g_d0_f2:C:3    Model and Estimation
+9:219:15417:46:24:68:542:650:12:g_d0_f3:12:g_d0_f3:B:In this section, we describe an alternative econometric approach, which avoids this difficult
+9:220:15510:24:24:68:542:626:12:g_d0_f3:12:g_d0_f3:B:endogeneity problem altogether, while not imposing strong assumptions on the shape of pref-
+9:221:15601:24:23:68:542:602:12:g_d0_f3:12:g_d0_f3:B:erences.   Beginning  with  Rosen,  the  traditional  approach  has  been  to  equate  the  implicit
+9:222:15701:23:24:68:541:579:12:g_d0_f3:12:g_d0_f3:B:price of the amenityZ(from the estimation of the hedonic price function) to its marginal
+9:223:15789:24:24:68:541:555:12:g_d0_f3:12:g_d0_f3:B:benefit (which is a function ofZ) and use the resulting expression as the estimating equation.
+9:224:15883:24:24:68:542:531:12:g_d0_f3:12:g_d0_f3:B:The majority of the literature following Rosen has retained this framework while proposing
+9:225:15973:24:24:68:542:507:12:g_d0_f3:12:g_d0_f3:B:corrective strategies to deal with the endogeneity ofZ.  We note that while the first-order
+9:226:16064:24:24:68:542:483:12:g_d0_f3:12:g_d0_f3:B:conditions for hedonic equilibrium provide a set of equations that will hold in equilibrium,
+9:227:16156:24:24:68:542:459:12:g_d0_f3:12:g_d0_f3:B:nothing requires us to write the estimating equation in this manner.  While this representation
+9:228:16251:24:24:68:542:435:12:g_d0_f3:12:g_d0_f3:B:does provide an intuitive interpretation of utility maximization, it is the “marginal cost equals
+9:229:16348:24:24:68:542:411:12:g_d0_f3:12:g_d0_f3:B:marginal benefit” econometric specification itself which has created the endogeneity problem
+9:230:16440:24:34:68:292:387:12:g_d0_f3:12:g_d0_f3:B:that has plagued this literature for decades.
+9:231:16485:34:24:93:542:353:12:g_d0_f3:12:g_d0_f3:A:Returning to the basic structure of the hedonic model,  there is no fundamental endo-
+9:232:16570:24:24:68:541:329:12:g_d0_f3:12:g_d0_f3:B:geneity problem.  When choosing how much of the amenityZto consume, individuals take
+9:233:16654:24:24:68:542:305:12:g_d0_f3:12:g_d0_f3:B:the  hedonic  price  function  as  given  and  chooseZito  maximize  utility  based  on  their  in-
+9:234:16753:24:24:68:542:281:12:g_d0_f3:12:g_d0_f3:B:dividual  preferences.   These  preferences  are  determined  by  a  vector  of  observed  individual
+9:235:16854:24:24:68:542:257:12:g_d0_f3:12:g_d0_f3:B:characteristics,Xdi, and unobserved taste shifters,νdi.  AsνdiandXdiare typically assumed
+9:236:16943:24:23:68:542:233:12:g_d0_f3:12:g_d0_f3:B:to be orthogonal in the hedonic model, we are left with a familiar econometric modeling en-
+9:237:17034:23:24:68:542:210:12:g_d0_f3:12:g_d0_f3:B:vironment:  an endogenous outcome variable,Zi, which is a function of a vector of exogenous
+9:238:17125:24:24:68:541:186:12:g_d0_f3:12:g_d0_f3:B:variables,Xdi, and an econometric error,νdi.  Intuitively, our approach finds the parameters of
+9:239:17220:24:34:68:535:162:12:g_d0_f3:12:g_d0_f3:B:the MWTP function that maximize the likelihood of observing each household’s chosenZi.
+9:240:17306:34:24:93:541:128:12:g_d0_f3:12:g_d0_f3:A:We first consider the case in which a closed-form solution forZiexists and the estimation
+9:241:17395:24:24:68:542:104:12:g_d0_f3:12:g_d0_f3:B:approach is intuitive and simple.  In the general case of our model, where a closed-form for
+9:242:17487:24:0:68:541:80:12:g_d0_f4:12:g_d0_f3:B:Zimay  not  exist,  we  show  that  by  using  a  simple  change-of-variables  technique  it  is  still
+10:243:17591:0:24:68:541:696:12:g_d0_f3:12:g_d0_f3:B:straightforward to compute the likelihood of observingZi.  Also in this section, we provide
+10:244:17682:24:56:68:522:672:12:g_d0_f3:12:g_d0_f3:B:evidence of our estimator’s small sample properties with Monte Carlo simulation results.
+10:245:17770:56:42:68:542:616:14:g_d0_f2:14:g_d0_f2:F:3.1    The Simple Model: When a Closed-Form Solution forZExists
+10:246:17833:42:24:68:542:574:12:g_d0_f3:12:g_d0_f3:B:In this subsection, we consider a special case of the general model in whichZimay be easily
+10:247:17924:24:24:68:542:550:12:g_d0_f3:12:g_d0_f3:B:isolated in the first-order condition for utility maximization.  While our proposed estimator is
+10:248:18020:24:24:68:542:526:12:g_d0_f3:12:g_d0_f3:B:applicable to a much richer specification of the model (as discussed in Section 3.2), we present
+10:249:18116:24:34:68:457:502:12:g_d0_f3:12:g_d0_f3:B:this simplified case first as the estimation strategy is extremely transparent.
+10:250:18195:34:24:93:542:468:12:g_d0_f3:12:g_d0_f3:A:Consider the simple,  linear-quadratic model where the hedonic price function is given
+10:251:18281:24:44:68:84:444:12:g_d0_f3:12:g_d0_f3:B:by:
+10:252:18284:44:0:68:338:400:12:g_d0_f3:12:g_d0_f3:B:(6)P(Zi,j;β) =β0+β1,jZi,j+
+10:253:18310:0:16:342:359:408:12:g_d0_f4:8:g_d0_f8:?:β2,j
+10:254:18314:16:0:348:354:392:12:g_d0_f3:12:g_d0_f3:?:2
+10:255:18315:0:43:361:407:400:12:g_d0_f4:8:g_d0_f8:?:Z2i,j+-i,j
+10:256:18325:43:24:68:542:357:12:g_d0_f3:12:g_d0_f3:B:andiindexes houses andjindexes markets (defined by space or time).  The hedonic price
+10:257:18410:24:44:68:241:333:12:g_d0_f3:12:g_d0_f3:B:gradient for marketjis therefore:
+10:258:18443:44:0:68:264:289:12:g_d0_f3:12:g_d0_f10:B:(7)P′(Zi,j;β)≡
+10:259:18457:0:16:269:325:297:12:g_d0_f4:12:g_d0_f3:?:∂P(Zi,j;β)
+10:260:18467:16:0:285:308:281:12:g_d0_f4:8:g_d0_f8:?:∂Zi,j
+10:261:18472:0:44:329:408:289:12:g_d0_f3:8:g_d0_f8:?:=β1,j+β2,jZi,j
+10:262:18486:44:34:68:325:245:12:g_d0_f3:12:g_d0_f3:B:whereP′(Zi,j;β) denotes the implicit price ofZi,j.
+10:263:18536:34:44:93:324:211:12:g_d0_f3:12:g_d0_f3:A:Specifying the household’s indirect utility as:
+10:264:18583:44:0:68:269:167:12:g_d0_f3:12:g_d0_f3:B:(8)U(Zi,j,Xdi;α) =α0,j+α1,jZi,j+
+10:265:18615:0:16:273:279:175:12:g_d0_f3:12:g_d0_f3:?:1
+10:266:18616:16:0:273:279:159:12:g_d0_f3:12:g_d0_f3:?:2
+10:267:18617:0:0:280:435:167:12:g_d0_f4:12:g_d0_f3:?:α2Z2i,j+α3,jXdiZi,j+νdi,jZi,j+
+10:268:18647:0:10:438:443:177:12:g_d0_f13:12:g_d0_f13:C:(
+10:269:18648:10:0:443:516:167:12:g_d0_f4:12:g_d0_f3:?:Ii−P(Z,-;β)
+10:270:18659:0:53:515:520:177:12:g_d0_f13:12:g_d0_f13:C:)
+10:271:18660:53:0:68:541:124:12:g_d0_f3:12:g_d0_f3:B:whereIirepresents householdi’s income, we arrive at the following first-order condition for
+11:272:18752:0:43:68:88:696:12:g_d0_f4:12:g_d0_f3:B:Zi,j:
+11:273:18757:43:54:68:427:653:12:g_d0_f3:12:g_d0_f3:B:(9)α1,j+α2Zi,j+α3,jXdi+νdi,j−β1,j−β2,jZi,j= 0
+11:274:18802:54:24:93:542:599:12:g_d0_f3:12:g_d0_f3:A:The traditional estimation strategy associated with Rosen would first recover an estimate
+11:275:18891:24:0:68:77:575:12:g_d0_f3:12:g_d0_f3:B:of
+11:276:18893:0:9:82:87:584:12:g_d0_f13:12:g_d0_f13:C:(
+11:277:18894:9:0:87:154:575:12:g_d0_f4:8:g_d0_f8:?:β1,j+β2,jZi,j
+11:278:18907:0:9:155:160:584:12:g_d0_f13:12:g_d0_f13:C:)
+11:279:18908:9:24:165:542:575:12:g_d0_f3:12:g_d0_f3:A:from the estimated price gradient, isolate this term on the left hand side
+11:280:18982:24:24:68:542:551:12:g_d0_f3:12:g_d0_f3:B:of Equation (9), and estimate the resulting regression equation (i.e., the MWTP function),
+11:281:19072:24:44:68:388:527:12:g_d0_f3:12:g_d0_f3:B:treatingνdi,jas the regression error, in a separate second stage:
+11:282:19137:44:0:68:89:483:12:g_d0_f3:12:g_d0_f3:B:(10)
+11:283:19141:0:10:187:192:493:12:g_d0_f13:12:g_d0_f13:C:(
+11:284:19142:10:0:193:259:483:12:g_d0_f4:8:g_d0_f8:?:β1,j+β2,jZi,j
+11:285:19155:0:10:260:265:493:12:g_d0_f13:12:g_d0_f13:C:)
+11:286:19156:10:54:269:421:483:12:g_d0_f3:8:g_d0_f8:?:=α1,j+α2Zi,j+α3,jXdi+νdi,j
+11:287:19182:54:24:93:542:429:12:g_d0_f3:12:g_d0_f3:A:Our approach is to alternatively rearrange Equation (9) such that the single endogenous
+11:288:19269:24:43:68:251:405:12:g_d0_f3:12:g_d0_f3:B:variable,Zi,j, is isolated on the left:
+11:289:19308:43:0:68:209:362:12:g_d0_f3:12:g_d0_f3:B:(11)Zi,j= (
+11:290:19319:0:17:210:260:370:12:g_d0_f4:8:g_d0_f8:?:α1,j−β1,j
+11:291:19328:17:0:213:257:353:12:g_d0_f4:8:g_d0_f5:?:β2,j−α2
+11:292:19335:0:0:262:286:362:12:g_d0_f3:12:g_d0_f3:?:) + (
+11:293:19340:0:17:300:317:370:12:g_d0_f4:8:g_d0_f8:?:α3,j
+11:294:19344:17:0:287:330:353:12:g_d0_f4:8:g_d0_f5:?:β2,j−α2
+11:295:19351:0:0:332:371:362:12:g_d0_f3:12:g_d0_f3:?:)Xdi+ (
+11:296:19358:0:17:392:398:370:12:g_d0_f3:12:g_d0_f3:?:1
+11:297:19359:17:0:373:416:353:12:g_d0_f4:8:g_d0_f5:?:β2,j−α2
+11:298:19366:0:54:418:437:362:12:g_d0_f3:8:g_d0_f8:?:)νdi,j
+11:299:19372:54:24:93:542:308:12:g_d0_f3:12:g_d0_f3:A:Equation (11) describes how the consumption of the amenityZvaries with observable
+11:300:19453:24:24:68:541:284:12:g_d0_f3:12:g_d0_f3:B:household  characteristics,Xdi,  unobservable  preference  shocks,νdi,j,  and  parameters  of  the
+11:301:19551:24:24:68:541:260:12:g_d0_f3:12:g_d0_f3:B:hedonic price function,{β1,j,β2,j}.  This equation contains all of the information necessary
+11:302:19643:24:24:68:541:236:12:g_d0_f3:12:g_d0_f3:B:to  recover  the  parameters  describing  individual  preferences,{α1,j,α2,α3,j,σ}.   Using  hats
+11:303:19740:24:24:68:541:212:12:g_d0_f3:12:g_d0_f3:B:to  indicate  that{̂β1,j,̂β2,j}are  known  from  the  first-stage  estimation  of  the  hedonic  price
+11:304:19842:24:44:68:189:188:12:g_d0_f3:12:g_d0_f3:B:function, we may write:
+11:305:19865:44:0:68:209:144:12:g_d0_f3:12:g_d0_f3:B:(12)Zi,j= (
+11:306:19876:0:15:210:260:152:12:g_d0_f4:8:g_d0_f8:?:α1,j−̂β1,j
+11:307:19886:15:0:214:257:137:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+11:308:19894:0:0:262:286:144:12:g_d0_f3:12:g_d0_f3:?:) + (
+11:309:19899:0:15:300:317:152:12:g_d0_f4:8:g_d0_f8:?:α3,j
+11:310:19903:15:0:287:330:137:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+11:311:19911:0:0:332:371:144:12:g_d0_f3:12:g_d0_f3:?:)Xdi+ (
+11:312:19918:0:15:392:398:152:12:g_d0_f3:12:g_d0_f3:?:1
+11:313:19919:15:0:373:416:137:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+11:314:19927:0:55:418:437:144:12:g_d0_f3:8:g_d0_f8:?:)νdi,j
+11:315:19933:55:0:93:541:89:12:g_d0_f3:12:g_d0_f3:A:Making the distributional assumption thatνdi,j∼N(0,σ2),Zi,jis then distributed nor-
+12:316:20018:0:0:68:191:694:12:g_d0_f3:8:g_d0_f9:B:mally with mean ((α1,j−
+12:317:20041:0:12:192:204:702:8:g_d0_f16:6:g_d0_f15:?:̂β1,j
+12:318:20046:12:0:173:230:690:8:g_d0_f16:12:g_d0_f3:?:̂β2,j−α2) + (
+12:319:20059:0:10:239:253:700:8:g_d0_f8:6:g_d0_f15:?:α3,j
+12:320:20063:10:0:232:278:690:8:g_d0_f16:12:g_d0_f4:?:̂β2,j−α2)X
+12:321:20073:0:7:278:282:698:8:g_d0_f8:8:g_d0_f8:?:d
+12:322:20074:7:0:277:424:691:8:g_d0_f8:12:g_d0_f3:?:i)) and standard deviation (
+12:323:20102:0:9:438:443:699:8:g_d0_f8:8:g_d0_f8:?:σ
+12:324:20103:9:20:425:542:690:8:g_d0_f8:12:g_d0_f3:A:β2,j−α2).  This reveals a
+12:325:20128:20:24:68:542:670:12:g_d0_f3:12:g_d0_f3:B:straightforward Maximum Likelihood approach for estimating the remaining parameters.8In
+12:326:20215:24:24:68:541:646:12:g_d0_f3:12:g_d0_f3:B:particular, we find the vector of parameters,{α1,j,α2,α3,j,σ}, that maximizes the likelihood
+12:327:20307:24:32:68:516:622:12:g_d0_f3:12:g_d0_f3:B:of the observed vector{Zi,j}Ni=1.  This likelihood is given by ΠNi=1`(Zi,j,Xdi;α,σ) where:
+12:328:20397:32:24:68:89:590:12:g_d0_f3:12:g_d0_f3:B:(13)
+12:329:20401:24:0:76:165:566:12:g_d0_f4:12:g_d0_f3:?:`(Zi,j,Xdi;α,σ) =
+12:330:20418:0:18:200:206:574:12:g_d0_f3:12:g_d0_f3:?:1
+12:331:20419:18:7:170:181:556:12:g_d0_f3:8:g_d0_f8:?:(σ̂β
+12:332:20423:7:0:180:206:549:6:g_d0_f14:6:g_d0_f14:?:2,j−α2
+12:333:20429:0:0:208:213:556:12:g_d0_f3:12:g_d0_f3:?:)
+12:334:20430:0:10:212:222:566:12:g_d0_f10:12:g_d0_f10:?:√
+12:335:20431:10:0:222:235:556:12:g_d0_f3:12:g_d0_f4:?:2π
+12:336:20433:0:0:236:269:566:12:g_d0_f3:12:g_d0_f10:?:exp{−
+12:337:20438:0:16:294:300:574:12:g_d0_f3:12:g_d0_f3:?:1
+12:338:20439:16:7:271:287:558:12:g_d0_f3:8:g_d0_f8:?:2(σ̂β
+12:339:20444:7:0:287:313:551:6:g_d0_f14:6:g_d0_f14:?:2,j−α2
+12:340:20450:0:0:314:323:558:12:g_d0_f3:8:g_d0_f5:?:)2
+12:341:20452:0:0:325:370:566:12:g_d0_f3:12:g_d0_f3:?:(Zi,j−((
+12:342:20460:0:16:372:422:574:12:g_d0_f4:8:g_d0_f8:?:α1,j−̂β1,j
+12:343:20470:16:0:375:419:558:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+12:344:20478:0:0:424:448:566:12:g_d0_f3:12:g_d0_f3:?:) + (
+12:345:20483:0:16:461:479:574:12:g_d0_f4:8:g_d0_f8:?:α3,j
+12:346:20487:16:0:448:492:558:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+12:347:20495:0:56:494:534:566:12:g_d0_f3:12:g_d0_f10:?:)Xdi))2}
+12:348:20503:56:42:68:241:510:12:g_d0_f2:12:g_d0_f2:C:3.1.1    Indirect Least Squares
+12:349:20534:42:24:68:542:468:12:g_d0_f3:12:g_d0_f3:B:It  is  worth  considering  the  very  special  case  of  this  model  when  estimation  is  particularly
+12:350:20639:24:23:68:542:444:12:g_d0_f3:12:g_d0_f3:B:straightforward:  the case where the structural parameters may be recovered using a least-
+12:351:20729:23:34:68:166:421:12:g_d0_f3:12:g_d0_f3:B:squares estimation.
+12:352:20748:34:24:93:542:387:12:g_d0_f3:12:g_d0_f3:A:As an example, consider the specification above with exactly two markets.  In this case,
+12:353:20836:24:24:68:542:363:12:g_d0_f3:12:g_d0_f3:B:Equation (12) may be estimated using an extremely transparent indirect least squares (ILS)
+12:354:20926:24:24:68:541:339:12:g_d0_f3:12:g_d0_f3:B:procedure.  With the same number of equations as unknown structural parameters,9it be-
+12:355:21012:24:24:68:542:315:12:g_d0_f3:12:g_d0_f3:B:comes  a  simple  matter  to  recover  the  structural  parameters{α1,j,α2,α3,j,σ}from  the
+12:356:21103:24:23:68:542:291:12:g_d0_f3:12:g_d0_f3:B:reduced-form parameters{θ0,j,θ1,j,σu,j}(which are recovered using OLS for each marketj)
+12:357:21190:23:44:68:355:268:12:g_d0_f3:12:g_d0_f3:B:by exploiting the unique mapping between the two sets:
+12:358:21244:44:0:68:209:224:12:g_d0_f3:12:g_d0_f3:B:(14)Zi,j= (
+12:359:21255:0:16:210:260:232:12:g_d0_f4:8:g_d0_f8:?:α1,j−̂β1,j
+12:360:21265:16:0:213:257:216:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+12:361:21273:0:19:262:267:224:12:g_d0_f3:12:g_d0_f3:?:)
+12:362:21274:19:10:204:266:205:12:g_d0_f13:12:g_d0_f13:C:︸︷︷︸
+12:363:21278:10:0:228:241:195:8:g_d0_f8:6:g_d0_f15:?:θ0,j
+12:364:21282:0:0:268:284:224:12:g_d0_f3:12:g_d0_f3:?:+ (
+12:365:21285:0:16:298:316:232:12:g_d0_f4:8:g_d0_f8:?:α3,j
+12:366:21289:16:0:285:329:216:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+12:367:21297:0:19:331:336:224:12:g_d0_f3:12:g_d0_f3:?:)
+12:368:21298:19:10:279:335:205:12:g_d0_f13:12:g_d0_f13:C:︸︷︷︸
+12:369:21302:10:0:300:313:195:8:g_d0_f8:6:g_d0_f15:?:θ1,j
+12:370:21306:0:0:337:371:224:12:g_d0_f4:12:g_d0_f3:?:Xdi+ (
+12:371:21312:0:16:392:398:232:12:g_d0_f3:12:g_d0_f3:?:1
+12:372:21313:16:0:373:417:216:12:g_d0_f13:8:g_d0_f5:?:̂β2,j−α2
+12:373:21321:0:19:418:438:224:12:g_d0_f3:8:g_d0_f8:?:)νdi,j
+12:374:21327:19:10:367:438:205:12:g_d0_f13:12:g_d0_f13:C:︸︷︷︸
+12:375:21331:10:18:396:409:195:8:g_d0_f8:6:g_d0_f15:?:ui,j
+12:376:21335:18:16:81:542:177:7:g_d0_f6:10:g_d0_f7:F:8Kahn and Lang (1988) suggest estimating a restricted version of Equation (12) via non-linear least squares.
+12:377:21443:16:12:68:542:161:10:g_d0_f7:10:g_d0_f7:F:However,  their  estimator  requires  the  strong  cross-market  homogeneity  assumption  that  all  of  the  utility
+12:378:21560:12:11:68:542:149:10:g_d0_f7:10:g_d0_f7:F:parameters  are  constant  across  markets.   Additionally,  their  proposed  estimator  is  only  applicable  for  the
+12:379:21679:11:12:68:542:138:10:g_d0_f7:10:g_d0_f7:F:subset of cases where a closed-form solution for Z exists and does not generalize to the cases we present in
+12:380:21787:12:9:68:118:126:10:g_d0_f7:10:g_d0_f7:F:Section 3.2.
+12:381:21799:9:15:81:541:117:7:g_d0_f6:10:g_d0_f7:F:9LetLdenote  the  number  of  elements  inXandJdenote  the  number  of  markets.   The  reduced-form
+12:382:21899:15:0:68:148:102:10:g_d0_f7:10:g_d0_f7:F:estimation returns
+12:383:21917:0:8:152:157:110:10:g_d0_f13:10:g_d0_f13:?:(
+12:384:21918:8:0:157:223:102:10:g_d0_f11:10:g_d0_f11:?:J∗(L+ 1) +J
+12:385:21929:0:8:223:228:110:10:g_d0_f13:10:g_d0_f13:?:)
+12:386:21930:8:13:231:73:102:10:g_d0_f7:10:g_d0_f13:?:parameters.  The number of structural parameters in Equation (12) is(
+12:387:21999:13:0:72:137:89:10:g_d0_f11:10:g_d0_f7:F:J∗(L+ 1) + 2
+12:388:22011:0:8:137:142:97:10:g_d0_f13:10:g_d0_f13:?:)
+12:389:22012:8:12:142:542:89:10:g_d0_f7:10:g_d0_f7:F:.  Therefore, forJ= 1, this model is underidentified (given the linear price gradient).  For
+12:390:22104:12:0:68:367:77:10:g_d0_f11:10:g_d0_f7:F:J= 2, it is exactly identified.  ForJ≥3, the model is overidentified.
+13:391:22175:0:24:93:542:696:12:g_d0_f3:12:g_d0_f3:A:With more than two markets, one could add richer heterogeneity to the MWTP function
+13:392:22258:24:24:68:541:672:12:g_d0_f3:12:g_d0_f3:B:(e.g., by parameterizing either the slope of the MWTP function or the variance ofν) in order
+13:393:22350:24:56:68:311:648:12:g_d0_f3:8:g_d0_f5:B:to take advantage of all available information.10
+13:394:22399:56:30:68:541:592:14:g_d0_f2:14:g_d0_f2:F:3.2    The General Model:  When a Closed-Form Solution forZMay
+13:395:22461:30:42:105:174:562:14:g_d0_f2:14:g_d0_f2:C:Not Exist
+13:396:22470:42:24:68:542:520:12:g_d0_f3:12:g_d0_f3:B:We  now  consider  a  more  general  form  of  the  model,  in  which  we  do  not  rely  on  finding  a
+13:397:22574:24:24:68:541:496:12:g_d0_f3:12:g_d0_f3:B:closed-form  solution  forZi,j.   The  lack  of  a  closed-form  solution  will  be  the  case  for  most
+13:398:22679:24:24:68:542:472:12:g_d0_f3:12:g_d0_f3:B:non-linear gradient specifications (including the log-linear gradient specification that we use
+13:399:22774:24:23:68:542:448:12:g_d0_f3:12:g_d0_f3:B:in our application in Section 5).11In this case, we are still able to estimate the model using
+13:400:22868:23:35:68:406:425:12:g_d0_f3:12:g_d0_f3:B:Maximum Likelihood with a simple change-of-variables technique.
+13:401:22931:35:24:93:541:390:12:g_d0_f3:12:g_d0_f3:A:Consider first the case whereνdi,jis an additively-separable error that enters households’
+13:402:23021:24:24:68:542:366:12:g_d0_f3:12:g_d0_f3:B:linear MWTP functions and does not enter the hedonic price function.  In this case, finding a
+13:403:23114:24:23:68:541:342:12:g_d0_f3:12:g_d0_f3:B:closed-form solution forνdi,jis trivial.  We show that by employing a basic change of variables
+13:404:23209:23:24:68:542:319:12:g_d0_f3:12:g_d0_f3:B:(fromZtoνd), a closed-form solution forνdi,jis sufficient for forming the likelihood of observing
+13:405:23306:24:35:68:88:295:12:g_d0_f4:12:g_d0_f3:B:Zi,j.
+13:406:23311:35:23:93:542:260:12:g_d0_f3:12:g_d0_f3:A:In the following example,  we impose no parametric assumption on the price function,
+13:407:23395:23:19:68:542:237:12:g_d0_f4:12:g_d0_f3:B:P(Zi,j;β), and show how it may no longer be possible to rearrange the first-order condition
+13:408:23486:19:16:77:542:218:7:g_d0_f6:10:g_d0_f7:F:10One could also use this additional information with a more general estimation strategy to overidentify
+13:409:23590:16:8:68:173:202:10:g_d0_f7:10:g_d0_f7:F:the model’s parameters.
+13:410:23613:8:16:77:542:194:7:g_d0_f6:10:g_d0_f7:F:11As a general rule, one should not expect the hedonic price gradient to be linear. Additionally, specifying the
+13:411:23725:16:12:68:542:178:10:g_d0_f7:10:g_d0_f7:F:MWTP to be linear is not inconsistent with a nonlinear price gradient in equilibrium; as clearly demonstrated
+13:412:23834:12:12:68:542:166:10:g_d0_f7:10:g_d0_f7:F:by  Ekeland,  Heckman,  and  Nesheim  (2004),  a  linear  MWTP  function  alone  does  not  imply  a  linear  price
+13:413:23949:12:12:68:542:154:10:g_d0_f7:10:g_d0_f7:F:gradient.  For the equilibrium price gradient to be linear (with demand- and supply-side heterogeneity),  it
+13:414:24057:12:12:68:542:142:10:g_d0_f7:10:g_d0_f7:F:would not only require that consumers have a perfectly linear MWTP function, but also that suppliers have
+13:415:24162:12:12:68:542:130:10:g_d0_f7:10:g_d0_f7:F:a perfectly linear marginal willingness-to-accept function and that shocks to both preferences and profits are
+13:416:24272:12:11:68:542:118:10:g_d0_f7:10:g_d0_f7:F:exactly normal.  A key insight of the Ekeland, Heckman, and Nesheim paper is that very minor perturbations
+13:417:24378:11:0:68:530:107:10:g_d0_f7:10:g_d0_f7:F:of any of these conditions will lead to substantial non-linearity in the resulting equilibrium price gradient.
+14:418:24490:0:43:68:139:696:12:g_d0_f3:12:g_d0_f3:B:to isolateZi,j:
+14:419:24505:43:54:68:419:653:12:g_d0_f3:12:g_d0_f3:B:(15)α1,j+α2Zi,j+α3,jXdi+νdi,j−P′(Zi,j;β) = 0
+14:420:24549:54:44:93:511:599:12:g_d0_f3:12:g_d0_f3:A:However, in this case we are still able to easily find a closed-form solution forνdi,j:
+14:421:24636:44:54:68:406:555:12:g_d0_f3:8:g_d0_f8:B:(16)νdi,j=P′(Zi,j;β)−α1,j−α2Zi,j−α3,jXdi
+14:422:24676:54:24:93:541:501:12:g_d0_f3:12:g_d0_f3:A:Making the distributional assumption thatνdi,j∼N(0,σ2) and using a textbook applica-
+14:423:24760:24:24:68:542:477:12:g_d0_f3:12:g_d0_f3:B:tion of a change of variables, it is straightforward to form the likelihood ΠNi=1`(Zi,j,Xdi;α,σ)
+14:424:24856:24:44:68:101:453:12:g_d0_f3:12:g_d0_f3:B:where:
+14:425:24862:44:0:68:270:409:12:g_d0_f3:12:g_d0_f3:B:(17)`(Zi,j,Xdi;α,σ) =
+14:426:24883:0:17:287:293:417:12:g_d0_f3:12:g_d0_f3:?:1
+14:427:24884:17:0:275:282:400:12:g_d0_f4:12:g_d0_f4:?:σ
+14:428:24885:0:10:282:292:410:12:g_d0_f10:12:g_d0_f10:?:√
+14:429:24886:10:0:292:305:400:12:g_d0_f3:12:g_d0_f4:?:2π
+14:430:24888:0:0:306:339:409:12:g_d0_f3:12:g_d0_f10:?:exp{−
+14:431:24893:0:16:346:352:417:12:g_d0_f3:12:g_d0_f3:?:1
+14:432:24894:16:0:340:357:401:12:g_d0_f3:8:g_d0_f5:?:2σ2
+14:433:24897:0:0:359:394:409:12:g_d0_f3:12:g_d0_f10:?:(νdi,j)2}
+14:434:24906:0:7:394:398:423:12:g_d0_f13:12:g_d0_f13:C:∣
+14:435:24907:7:7:394:398:416:12:g_d0_f13:12:g_d0_f13:C:∣
+14:436:24908:7:0:394:398:409:12:g_d0_f13:12:g_d0_f13:C:∣
+14:437:24909:0:18:401:422:419:12:g_d0_f4:8:g_d0_f8:?:∂νdi,j
+14:438:24915:18:0:399:423:401:12:g_d0_f4:8:g_d0_f8:?:∂Zi,j
+14:439:24920:0:7:425:429:423:12:g_d0_f13:12:g_d0_f13:C:∣
+14:440:24921:7:7:425:429:416:12:g_d0_f13:12:g_d0_f13:C:∣
+14:441:24922:7:54:425:429:409:12:g_d0_f13:12:g_d0_f13:C:∣
+14:442:24923:54:24:93:542:355:12:g_d0_f3:12:g_d0_f3:A:To implement this Maximum Likelihood procedure, we only need to calculate the value
+14:443:25006:24:23:68:541:331:12:g_d0_f3:12:g_d0_f3:B:ofνdi,jconsistent with the observed value ofZi,j(givenα,̂β, andXdi) and the determinant
+14:444:25093:23:24:68:542:308:12:g_d0_f3:12:g_d0_f3:B:of  the  Jacobian  associated  with  the  change  of  variables  (i.e.,  we  do  not  need  to  solve  the
+14:445:25199:24:44:68:421:284:12:g_d0_f3:12:g_d0_f3:B:differential equation forZi,j).  Respectively, these terms are given by:
+14:446:25271:44:44:68:406:240:12:g_d0_f3:8:g_d0_f8:B:(18)νdi,j=P′(Zi,j;̂β)−α1,j−α2Zi,j−α3,jXdi
+14:447:25312:44:43:68:90:196:12:g_d0_f3:12:g_d0_f3:B:and:
+14:448:25316:43:0:68:89:153:12:g_d0_f3:12:g_d0_f3:B:(19)
+14:449:25320:0:7:236:240:166:12:g_d0_f13:12:g_d0_f13:C:∣
+14:450:25321:7:7:236:240:159:12:g_d0_f13:12:g_d0_f13:C:∣
+14:451:25322:7:0:236:240:152:12:g_d0_f13:12:g_d0_f13:C:∣
+14:452:25323:0:18:242:264:162:12:g_d0_f4:8:g_d0_f8:?:∂νdi,j
+14:453:25329:18:0:241:265:144:12:g_d0_f4:8:g_d0_f8:?:∂Zi,j
+14:454:25334:0:7:267:271:166:12:g_d0_f13:12:g_d0_f13:C:∣
+14:455:25335:7:7:267:271:159:12:g_d0_f13:12:g_d0_f13:C:∣
+14:456:25336:7:53:267:373:152:12:g_d0_f13:12:g_d0_f10:?:∣=|P′′(Zi,j;̂β)−α2|
+14:457:25355:53:0:93:542:99:12:g_d0_f3:12:g_d0_f3:A:In practice, finding the vector of parameters that maximizes the likelihood is straight-
+15:458:25445:0:34:68:530:696:12:g_d0_f3:8:g_d0_f5:B:forward and may even be reduced to a one-dimensional numerical optimization problem.12
+15:459:25531:34:24:93:541:662:12:g_d0_f3:12:g_d0_f3:A:The model presented thus far is one whereZi,jis a scalar amenity. However, our approach
+15:460:25618:24:24:68:541:638:12:g_d0_f3:12:g_d0_f3:B:may be easily extended to estimate models that consider aK-dimensional vector of amenities
+15:461:25708:24:24:68:541:614:12:g_d0_f3:12:g_d0_f3:B:denotedZi,j= [Z1i,j,...,ZKi,j].  Assuming that the elements of the vectorνdi,jare distributed
+15:462:25801:24:24:68:541:590:12:g_d0_f3:12:g_d0_f3:B:jointly  normal  with  mean  zero  and  variance-covariance  matrixΣ,  the  likelihood  may  be
+15:463:25896:24:23:68:542:566:12:g_d0_f3:12:g_d0_f3:B:formed employing the change-of-variables technique without the need to solve the differential
+15:464:25989:23:44:68:302:543:12:g_d0_f3:12:g_d0_f3:B:equations forZi,j.  This likelihood is given by:
+15:465:26037:44:0:68:265:499:12:g_d0_f3:8:g_d0_f9:B:(20)`(Zi,j,Xdi,νdi,j;α,Σ) = (2π)−
+15:466:26070:0:8:265:271:507:6:g_d0_f15:6:g_d0_f14:?:K2
+15:467:26072:8:0:274:297:499:12:g_d0_f10:8:g_d0_f9:?:|Σ|−
+15:468:26076:0:8:298:302:507:6:g_d0_f14:6:g_d0_f14:?:12
+15:469:26078:8:0:306:339:499:12:g_d0_f3:12:g_d0_f10:?:exp{−
+15:470:26083:0:0:340:352:508:12:g_d0_f17:8:g_d0_f8:?:νd
+15:471:26085:0:10:355:357:515:6:g_d0_f18:6:g_d0_f18:?:′
+15:472:26086:10:0:348:366:505:8:g_d0_f8:12:g_d0_f3:?:i,jΣ
+15:473:26090:0:7:367:390:512:8:g_d0_f9:8:g_d0_f8:?:−1νd
+15:474:26094:7:14:386:395:505:8:g_d0_f8:8:g_d0_f8:?:i,j
+15:475:26097:14:0:365:371:491:12:g_d0_f3:12:g_d0_f3:?:2
+15:476:26098:0:0:397:403:499:12:g_d0_f10:12:g_d0_f10:?:}
+15:477:26099:0:8:405:409:513:12:g_d0_f13:12:g_d0_f13:C:∣
+15:478:26100:8:7:405:409:505:12:g_d0_f13:12:g_d0_f13:C:∣
+15:479:26101:7:0:405:409:498:12:g_d0_f13:12:g_d0_f13:C:∣
+15:480:26102:0:17:411:488:508:12:g_d0_f4:12:g_d0_f3:?:∂(νd1i,j,...,νd Ki,j)
+15:481:26123:17:0:413:485:491:12:g_d0_f4:12:g_d0_f3:?:∂(Z1i,j,...,ZKi,j)
+15:482:26141:0:8:488:492:513:12:g_d0_f13:12:g_d0_f13:C:∣
+15:483:26142:8:7:488:492:505:12:g_d0_f13:12:g_d0_f13:C:∣
+15:484:26143:7:43:488:492:498:12:g_d0_f13:12:g_d0_f13:C:∣
+15:485:26144:43:61:68:101:455:12:g_d0_f3:12:g_d0_f3:B:where:
+15:486:26150:61:0:68:140:394:12:g_d0_f3:12:g_d0_f3:B:(21)νdi,j=
+15:487:26160:0:21:143:151:433:12:g_d0_f13:12:g_d0_f13:C:
+15:488:26161:21:7:143:151:412:12:g_d0_f13:12:g_d0_f13:C:
+15:489:26162:7:8:143:151:405:12:g_d0_f13:12:g_d0_f13:C:
+15:490:26163:8:7:143:151:397:12:g_d0_f13:12:g_d0_f13:C:
+15:491:26164:7:7:143:151:390:12:g_d0_f13:12:g_d0_f13:C:
+15:492:26165:7:0:143:151:383:12:g_d0_f13:12:g_d0_f13:C:
+15:493:26166:0:16:153:168:417:12:g_d0_f4:8:g_d0_f8:?:νd1i,j
+15:494:26172:16:8:160:163:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:495:26174:8:24:160:163:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:496:26175:24:0:151:166:369:12:g_d0_f4:8:g_d0_f8:?:νd Ki,j
+15:497:26182:0:21:173:181:433:12:g_d0_f13:12:g_d0_f13:C:
+15:498:26183:21:7:173:181:412:12:g_d0_f13:12:g_d0_f13:C:
+15:499:26184:7:8:173:181:405:12:g_d0_f13:12:g_d0_f13:C:
+15:500:26185:8:7:173:181:397:12:g_d0_f13:12:g_d0_f13:C:
+15:501:26186:7:7:173:181:390:12:g_d0_f13:12:g_d0_f13:C:
+15:502:26187:7:0:173:181:383:12:g_d0_f13:12:g_d0_f13:C:
+15:503:26188:0:0:184:193:394:12:g_d0_f3:12:g_d0_f3:?:=
+15:504:26189:0:21:197:205:433:12:g_d0_f13:12:g_d0_f13:C:
+15:505:26190:21:7:197:205:412:12:g_d0_f13:12:g_d0_f13:C:
+15:506:26191:7:8:197:205:405:12:g_d0_f13:12:g_d0_f13:C:
+15:507:26192:8:7:197:205:397:12:g_d0_f13:12:g_d0_f13:C:
+15:508:26193:7:7:197:205:390:12:g_d0_f13:12:g_d0_f13:C:
+15:509:26194:7:0:197:205:383:12:g_d0_f13:12:g_d0_f13:C:
+15:510:26195:0:11:206:246:424:8:g_d0_f8:8:g_d0_f5:?:∂P(Zi,j;β)
+15:511:26205:11:12:216:235:413:8:g_d0_f8:6:g_d0_f15:?:∂Z1i,j
+15:512:26211:12:8:224:227:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:513:26213:8:18:224:227:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:514:26214:18:11:206:246:375:8:g_d0_f8:8:g_d0_f5:?:∂P(Zi,j;β)
+15:515:26224:11:0:216:235:364:8:g_d0_f8:6:g_d0_f15:?:∂ZKi,j
+15:516:26230:0:21:247:255:433:12:g_d0_f13:12:g_d0_f13:C:
+15:517:26231:21:7:247:255:412:12:g_d0_f13:12:g_d0_f13:C:
+15:518:26232:7:8:247:255:405:12:g_d0_f13:12:g_d0_f13:C:
+15:519:26233:8:7:247:255:397:12:g_d0_f13:12:g_d0_f13:C:
+15:520:26234:7:7:247:255:390:12:g_d0_f13:12:g_d0_f13:C:
+15:521:26235:7:0:247:255:383:12:g_d0_f13:12:g_d0_f13:C:
+15:522:26236:0:0:258:267:394:12:g_d0_f10:12:g_d0_f10:?:−
+15:523:26237:0:21:270:278:433:12:g_d0_f13:12:g_d0_f13:C:
+15:524:26238:21:7:270:278:412:12:g_d0_f13:12:g_d0_f13:C:
+15:525:26239:7:8:270:278:405:12:g_d0_f13:12:g_d0_f13:C:
+15:526:26240:8:7:270:278:397:12:g_d0_f13:12:g_d0_f13:C:
+15:527:26241:7:7:270:278:390:12:g_d0_f13:12:g_d0_f13:C:
+15:528:26242:7:0:270:278:383:12:g_d0_f13:12:g_d0_f13:C:
+15:529:26243:0:16:278:296:417:12:g_d0_f4:8:g_d0_f8:?:α11,j
+15:530:26248:16:8:286:289:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:531:26250:8:24:286:289:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:532:26251:24:0:278:296:369:12:g_d0_f4:8:g_d0_f8:?:αK1,j
+15:533:26256:0:21:296:304:433:12:g_d0_f13:12:g_d0_f13:C:
+15:534:26257:21:7:296:304:412:12:g_d0_f13:12:g_d0_f13:C:
+15:535:26258:7:8:296:304:405:12:g_d0_f13:12:g_d0_f13:C:
+15:536:26259:8:7:296:304:397:12:g_d0_f13:12:g_d0_f13:C:
+15:537:26260:7:7:296:304:390:12:g_d0_f13:12:g_d0_f13:C:
+15:538:26261:7:0:296:304:383:12:g_d0_f13:12:g_d0_f13:C:
+15:539:26262:0:0:307:316:394:12:g_d0_f10:12:g_d0_f10:?:−
+15:540:26263:0:21:319:327:433:12:g_d0_f13:12:g_d0_f13:C:
+15:541:26264:21:7:319:327:412:12:g_d0_f13:12:g_d0_f13:C:
+15:542:26265:7:8:319:327:405:12:g_d0_f13:12:g_d0_f13:C:
+15:543:26266:8:7:319:327:397:12:g_d0_f13:12:g_d0_f13:C:
+15:544:26267:7:7:319:327:390:12:g_d0_f13:12:g_d0_f13:C:
+15:545:26268:7:0:319:327:383:12:g_d0_f13:12:g_d0_f13:C:
+15:546:26269:0:16:329:398:417:12:g_d0_f4:8:g_d0_f5:?:α1,12···α1,K2
+15:547:26282:16:8:336:339:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:548:26284:8:0:336:339:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:549:26285:0:7:361:399:400:12:g_d0_f3:12:g_d0_f3:?:.....
+15:550:26290:7:24:396:399:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:551:26291:24:0:327:396:369:12:g_d0_f4:8:g_d0_f5:?:αK,12···αK,K2
+15:552:26304:0:21:410:418:433:12:g_d0_f13:12:g_d0_f13:C:
+15:553:26305:21:7:410:418:412:12:g_d0_f13:12:g_d0_f13:C:
+15:554:26306:7:8:410:418:405:12:g_d0_f13:12:g_d0_f13:C:
+15:555:26307:8:7:410:418:397:12:g_d0_f13:12:g_d0_f13:C:
+15:556:26308:7:7:410:418:390:12:g_d0_f13:12:g_d0_f13:C:
+15:557:26309:7:0:410:418:383:12:g_d0_f13:12:g_d0_f13:C:
+15:558:26310:0:21:420:428:433:12:g_d0_f13:12:g_d0_f13:C:
+15:559:26311:21:7:420:428:412:12:g_d0_f13:12:g_d0_f13:C:
+15:560:26312:7:8:420:428:405:12:g_d0_f13:12:g_d0_f13:C:
+15:561:26313:8:7:420:428:397:12:g_d0_f13:12:g_d0_f13:C:
+15:562:26314:7:7:420:428:390:12:g_d0_f13:12:g_d0_f13:C:
+15:563:26315:7:0:420:428:383:12:g_d0_f13:12:g_d0_f13:C:
+15:564:26316:0:16:428:445:417:12:g_d0_f4:8:g_d0_f8:?:Z1i,j
+15:565:26321:16:8:435:438:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:566:26323:8:24:435:438:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:567:26324:24:0:428:445:369:12:g_d0_f4:8:g_d0_f8:?:ZKi,j
+15:568:26329:0:21:446:454:433:12:g_d0_f13:12:g_d0_f13:C:
+15:569:26330:21:7:446:454:412:12:g_d0_f13:12:g_d0_f13:C:
+15:570:26331:7:8:446:454:405:12:g_d0_f13:12:g_d0_f13:C:
+15:571:26332:8:7:446:454:397:12:g_d0_f13:12:g_d0_f13:C:
+15:572:26333:7:7:446:454:390:12:g_d0_f13:12:g_d0_f13:C:
+15:573:26334:7:0:446:454:383:12:g_d0_f13:12:g_d0_f13:C:
+15:574:26335:0:0:456:465:394:12:g_d0_f10:12:g_d0_f10:?:−
+15:575:26336:0:21:468:476:433:12:g_d0_f13:12:g_d0_f13:C:
+15:576:26337:21:7:468:476:412:12:g_d0_f13:12:g_d0_f13:C:
+15:577:26338:7:8:468:476:405:12:g_d0_f13:12:g_d0_f13:C:
+15:578:26339:8:7:468:476:397:12:g_d0_f13:12:g_d0_f13:C:
+15:579:26340:7:7:468:476:390:12:g_d0_f13:12:g_d0_f13:C:
+15:580:26341:7:0:468:476:383:12:g_d0_f13:12:g_d0_f13:C:
+15:581:26342:0:16:476:494:417:12:g_d0_f4:8:g_d0_f8:?:α13,j
+15:582:26347:16:8:484:487:401:12:g_d0_f3:12:g_d0_f3:?:..
+15:583:26349:8:24:484:487:393:12:g_d0_f3:12:g_d0_f3:?:.
+15:584:26350:24:0:476:494:369:12:g_d0_f4:8:g_d0_f8:?:αK3,j
+15:585:26355:0:21:495:503:433:12:g_d0_f13:12:g_d0_f13:C:
+15:586:26356:21:7:495:503:412:12:g_d0_f13:12:g_d0_f13:C:
+15:587:26357:7:8:495:503:405:12:g_d0_f13:12:g_d0_f13:C:
+15:588:26358:8:7:495:503:397:12:g_d0_f13:12:g_d0_f13:C:
+15:589:26359:7:7:495:503:390:12:g_d0_f13:12:g_d0_f13:C:
+15:590:26360:7:0:495:503:383:12:g_d0_f13:12:g_d0_f13:C:
+15:591:26361:0:73:505:517:394:12:g_d0_f4:8:g_d0_f8:?:Xdi
+15:592:26364:73:24:93:542:321:12:g_d0_f3:12:g_d0_f3:A:Finally, while the MWTP function specified thus far has been both linear and additively
+15:593:26451:24:24:68:541:297:12:g_d0_f3:12:g_d0_f3:B:separable  in  the  idiosyncratic  shock,νdi,j,  richer  specifications  of  the  MWTP  function  may
+15:594:26552:24:24:68:542:273:12:g_d0_f3:12:g_d0_f3:B:be estimated using our framework.  Our estimator simply requires that one is able to isolate
+15:595:26644:24:24:68:542:249:12:g_d0_f3:12:g_d0_f3:B:the idiosyncratic shock,νdi,j.  For example, (returning to a scalar amenity,Z) if the MWTP
+15:596:26734:24:43:68:195:225:12:g_d0_f3:8:g_d0_f5:B:function were given by:13
+15:597:26759:43:20:68:378:182:12:g_d0_f3:8:g_d0_f8:B:(22)P′(Zi,j;β) =Zα2i,j(Xdi)α3,jνdi,j
+15:598:26795:20:16:77:542:162:7:g_d0_f6:10:g_d0_f7:F:12Concentrating the likelihood function given by Equation (17) allows for a single-dimensional search over
+15:599:26901:16:14:68:541:146:10:g_d0_f11:7:g_d0_f12:F:α2.  For each iteration of the likelihood (i.e., for each guess ofα2), the likelihood-maximizing values ofα1,j
+15:600:27011:14:0:68:352:132:10:g_d0_f7:10:g_d0_f7:F:andα3,jmay be recovered through the least-squares regression of
+15:601:27074:0:8:356:361:140:10:g_d0_f13:10:g_d0_f13:?:(
+15:602:27075:8:0:360:442:132:10:g_d0_f11:7:g_d0_f12:?:P′(Zi,j;̂β)−̂α2Zi,j
+15:603:27094:0:8:444:449:140:10:g_d0_f13:10:g_d0_f13:?:)
+15:604:27095:8:14:451:541:132:10:g_d0_f7:10:g_d0_f7:F:on market indicators
+15:605:27115:14:0:68:398:118:10:g_d0_f7:7:g_d0_f12:F:andXdi, while the likelihood-maximizing value ofσ2may be recovered as1N
+15:606:27186:0:11:402:419:126:10:g_d0_f13:7:g_d0_f12:?:∑N
+15:607:27188:11:0:413:435:115:7:g_d0_f12:10:g_d0_f11:?:i=1(ν
+15:608:27193:0:13:436:456:122:7:g_d0_f12:10:g_d0_f7:?:di,j)2.
+15:609:27200:13:15:77:541:109:7:g_d0_f6:10:g_d0_f7:F:13In   this   case,   the   underlying   indirect   utility   function   would   be   given   by:U(Zi,j,Xdi;α)    =
+15:610:27315:15:0:68:269:94:10:g_d0_f7:10:g_d0_f7:F:(1α2+1)Zα2+1i,j(Xdi)α3,jνdi,j+ (Ii−P(Zi,j;β)).
+16:611:27363:0:45:68:221:696:12:g_d0_f3:12:g_d0_f3:B:thenνdi,jmay be recovered as:
+16:612:27392:45:0:68:284:651:12:g_d0_f3:12:g_d0_f3:B:(23)νdi,j=
+16:613:27402:0:16:295:346:659:12:g_d0_f4:12:g_d0_f3:?:P′(Zi,j;̂β)
+16:614:27413:16:26:289:350:643:12:g_d0_f4:6:g_d0_f15:?:Zα2i,j(Xdi)α3,j
+16:615:27428:26:7:68:72:617:12:g_d0_f13:12:g_d0_f13:C:∣
+16:616:27429:7:8:68:72:610:12:g_d0_f13:12:g_d0_f13:C:∣
+16:617:27430:8:0:68:72:602:12:g_d0_f13:12:g_d0_f13:C:∣
+16:618:27431:0:11:74:91:610:8:g_d0_f8:6:g_d0_f15:?:∂νdi,j
+16:619:27437:11:0:73:92:599:8:g_d0_f8:6:g_d0_f15:?:∂Zi,j
+16:620:27442:0:7:94:98:617:12:g_d0_f13:12:g_d0_f13:A:∣
+16:621:27443:7:8:94:98:610:12:g_d0_f13:12:g_d0_f13:A:∣
+16:622:27444:8:49:94:209:602:12:g_d0_f13:12:g_d0_f3:A:∣may be recovered as:
+16:623:27465:49:0:68:89:553:12:g_d0_f3:12:g_d0_f3:B:(24)
+16:624:27469:0:7:198:202:567:12:g_d0_f13:12:g_d0_f13:C:∣
+16:625:27470:7:7:198:202:560:12:g_d0_f13:12:g_d0_f13:C:∣
+16:626:27471:7:0:198:202:553:12:g_d0_f13:12:g_d0_f13:C:∣
+16:627:27472:0:18:205:226:563:12:g_d0_f4:8:g_d0_f8:?:∂νdi,j
+16:628:27478:18:0:203:227:545:12:g_d0_f4:8:g_d0_f8:?:∂Zi,j
+16:629:27483:0:7:229:233:567:12:g_d0_f13:12:g_d0_f13:C:∣
+16:630:27484:7:7:229:233:560:12:g_d0_f13:12:g_d0_f13:C:∣
+16:631:27485:7:0:229:245:553:12:g_d0_f13:12:g_d0_f3:?:∣=
+16:632:27487:0:7:249:253:574:12:g_d0_f13:12:g_d0_f13:C:∣
+16:633:27488:7:7:249:253:567:12:g_d0_f13:12:g_d0_f13:C:∣
+16:634:27489:7:7:249:253:560:12:g_d0_f13:12:g_d0_f13:C:∣
+16:635:27490:7:7:249:253:553:12:g_d0_f13:12:g_d0_f13:C:∣
+16:636:27491:7:0:249:253:546:12:g_d0_f13:12:g_d0_f13:C:∣
+16:637:27492:0:18:254:406:563:12:g_d0_f4:12:g_d0_f3:?:P′′(Zi,j;̂β)−α2Z−1i,jP′(Zi,j;̂β)
+16:638:27524:18:0:300:358:545:12:g_d0_f4:6:g_d0_f15:?:Zα2i,j(Xdi)α3,j
+16:639:27539:0:7:407:411:574:12:g_d0_f13:12:g_d0_f13:C:∣
+16:640:27540:7:7:407:411:567:12:g_d0_f13:12:g_d0_f13:C:∣
+16:641:27541:7:7:407:411:560:12:g_d0_f13:12:g_d0_f13:C:∣
+16:642:27542:7:7:407:411:553:12:g_d0_f13:12:g_d0_f13:C:∣
+16:643:27543:7:36:407:411:546:12:g_d0_f13:12:g_d0_f13:C:∣
+16:644:27544:36:35:68:448:510:12:g_d0_f3:12:g_d0_f3:B:and the likelihood may be formed using the change-of-variables technique.
+16:645:27617:35:23:93:542:475:12:g_d0_f3:12:g_d0_f3:A:It is important to note that the contribution of this paper is to illustrate a new estimation
+16:646:27710:23:24:68:542:452:12:g_d0_f3:12:g_d0_f3:B:approach that avoids the traditional endogeneity problems that have plagued the literature.
+16:647:27801:24:24:68:542:428:12:g_d0_f3:12:g_d0_f3:B:As the formal identification of the hedonic model has been discussed in detail in Brown and
+16:648:27892:24:24:68:542:404:12:g_d0_f3:12:g_d0_f3:B:Rosen (1982), Mendelsohn (1985), and particularly, Ekeland, Heckman, and Nesheim (2004)
+16:649:27979:24:24:68:542:380:12:g_d0_f3:12:g_d0_f3:B:and Heckman,  Matzkin,  and Nesheim (2010),  we instead provide an informal discussion of
+16:650:28068:24:24:68:542:356:12:g_d0_f3:12:g_d0_f3:B:identification, as the nature of our estimator allows for easy illustration of what data features
+16:651:28165:24:34:68:322:332:12:g_d0_f3:12:g_d0_f3:B:pin down the parameters of the MWTP function.
+16:652:28210:34:24:93:542:298:12:g_d0_f3:12:g_d0_f3:A:Consider the model with linear MWTP outlined earlier in this section. When the MWTP
+16:653:28293:24:24:68:541:274:12:g_d0_f3:12:g_d0_f3:B:intercept (α1), the coefficients onXd(α3), and the MWTP variance (σ2) are common across
+16:654:28380:24:24:68:541:250:12:g_d0_f3:12:g_d0_f3:B:markets, they are identified by the meanZ, the covariance betweenZandXd, and the variance
+16:655:28469:24:24:68:541:226:12:g_d0_f3:12:g_d0_f3:B:ofZ, respectively.  Four sources of variation identify the slope of the MWTP function.  The
+16:656:28560:24:24:68:541:202:12:g_d0_f3:12:g_d0_f3:B:first source is the sensitivity of meanZto changes in the price gradient across markets.  The
+16:657:28653:24:24:68:541:178:12:g_d0_f3:12:g_d0_f3:B:second source is the sensitivity of the variance ofZto changes in the price gradient across
+16:658:28744:24:24:68:541:154:12:g_d0_f3:12:g_d0_f3:B:markets.   The  third  source  is  the  sensitivity  of  the  covariance  ofZandXto  changes  in
+16:659:28840:24:23:68:542:130:12:g_d0_f3:12:g_d0_f3:B:the price  gradient  across markets.  The  final,  fourth  source  is the  nonlinearity  of the  price
+16:660:28942:23:24:68:541:107:12:g_d0_f3:12:g_d0_f3:B:gradient;Zwill not be distributed normally when the gradient is nonlinear creating additional
+16:661:29035:24:0:68:514:83:12:g_d0_f3:12:g_d0_f3:B:identifying variation (particularly ifZis allowed to have market-specific distributions).
+17:662:29126:0:24:93:542:696:12:g_d0_f3:12:g_d0_f3:A:When the intercept of the MWTP function is allowed to vary by market, the variation
+17:663:29209:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:in  meanZacross  markets  is  used  to  identify  the  market-specific  intercepts  of  the  MWTP
+17:664:29306:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:function and is no longer available to identify the slope of MWTP. In this case, higher levels
+17:665:29400:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:of meanZare associated with higher market-specific values forα1,j, all else equal.  A similar
+17:666:29493:24:24:68:542:601:12:g_d0_f3:12:g_d0_f3:B:logic  applies  when  the  coefficients  onXdare  allowed  to  vary  by  market  and  differences  in
+17:667:29594:24:24:68:541:577:12:g_d0_f3:8:g_d0_f8:B:the covariance betweenZandXdare used to identify{α3,j}Jj=1or when the variance ofνd
+17:668:29677:24:24:68:542:553:12:g_d0_f3:12:g_d0_f3:B:is allowed to vary by market and variance ofZis used to identify{σ2j}Jj=1.  Finally, when all
+17:669:29770:24:24:68:542:529:12:g_d0_f3:12:g_d0_f3:B:of the parameters of the MWTP function are allowed to vary by market, this is analogous to
+17:670:29860:24:24:68:542:505:12:g_d0_f3:12:g_d0_f3:B:multiple single-market cases and the non-linearity of the price gradient is the only remaining
+17:671:29954:24:24:68:542:481:12:g_d0_f3:12:g_d0_f3:B:source of identification of the MWTP slope.  This is consistent with the established wisdom in
+17:672:30048:24:24:68:542:457:12:g_d0_f3:12:g_d0_f3:B:the hedonic literature - one either needs a non-linear hedonic price gradient or multi-market
+17:673:30141:24:55:68:278:433:12:g_d0_f3:12:g_d0_f3:B:data to recover the full MWTP function.
+17:674:30180:55:41:68:263:378:14:g_d0_f2:14:g_d0_f2:C:3.3    Monte Carlo Evidence
+17:675:30207:41:24:68:542:337:12:g_d0_f3:12:g_d0_f3:B:In  this  subsection,  we  provide  Monte  Carlo  evidence  on  the  performance  of  our  proposed
+17:676:30306:24:24:68:542:313:12:g_d0_f3:12:g_d0_f3:B:estimator.  We begin with Monte Carlo simulations of the simplest two-market model.  From
+17:677:30395:24:24:68:542:289:12:g_d0_f3:12:g_d0_f3:B:this starting point, we increase the number of markets and increase the level of heterogeneity
+17:678:30489:24:24:68:542:265:12:g_d0_f3:12:g_d0_f3:B:in  both  the  market-specific  gradient  intercepts  and  slopes.   Finally,  we  allow  the  MWTP
+17:679:30588:24:33:68:213:241:12:g_d0_f3:12:g_d0_f3:B:intercept to vary by market.
+17:680:30616:33:44:93:390:208:12:g_d0_f3:12:g_d0_f3:A:For the first simulations, the hedonic gradient is given by:
+17:681:30676:44:44:68:371:164:12:g_d0_f3:8:g_d0_f8:B:(25)P′(Zi,j;β) =β1,j+β2,jZi,j
+17:682:30705:44:43:68:401:120:12:g_d0_f3:12:g_d0_f3:B:and the first-order condition for utility maximization is given by:
+17:683:30772:43:0:68:391:77:12:g_d0_f3:12:g_d0_f3:B:(26)α1+α2Zi,j+νdi,j−P′(Zi,j;β) = 0
+18:684:30808:0:43:68:220:696:12:g_d0_f3:12:g_d0_f3:B:yielding the MWTP function:
+18:685:30835:43:44:68:381:653:12:g_d0_f3:8:g_d0_f8:B:(27)P′(Zi,j;β) =α1+α2Zi,j+νdi,j
+18:686:30866:44:44:68:228:609:12:g_d0_f3:12:g_d0_f3:B:and optimal consumption ofZ:
+18:687:30894:44:0:68:255:565:12:g_d0_f3:12:g_d0_f3:B:(28)Zi,j= (
+18:688:30905:0:16:256:300:573:12:g_d0_f4:8:g_d0_f8:?:α1−β1,j
+18:689:30912:16:0:256:300:557:12:g_d0_f4:8:g_d0_f5:?:β2,j−α2
+18:690:30919:0:0:302:326:565:12:g_d0_f3:12:g_d0_f3:?:) + (
+18:691:30924:0:16:346:352:573:12:g_d0_f3:12:g_d0_f3:?:1
+18:692:30925:16:0:327:370:557:12:g_d0_f4:8:g_d0_f5:?:β2,j−α2
+18:693:30932:0:53:372:391:565:12:g_d0_f3:8:g_d0_f8:?:)νdi,j
+18:694:30938:53:24:93:541:512:12:g_d0_f3:12:g_d0_f3:A:We  allow  the  number  of  markets  to  take  on  the  following  values:j={2,5,10,50}.
+18:695:31026:24:24:68:541:488:12:g_d0_f3:12:g_d0_f10:B:We specify thatβ1,j= 2 +η1andβ2,j= 0.7 +η2whereη1∼γ1∗U(−0.3,0.3) andη2∼γ2∗
+18:696:31100:24:33:68:541:464:12:g_d0_f4:12:g_d0_f3:B:U(−0.15,0.15).γis allowed to take on the following values:γ1={1,2,3}andγ2={0,1,2,3}.
+18:697:31184:33:24:93:542:431:12:g_d0_f3:12:g_d0_f3:A:In all cases, we keep the total number of observations fixed atn= 5,000 with observations
+18:698:31273:24:24:68:541:407:12:g_d0_f3:12:g_d0_f3:B:per market given bynj.  The number of Monte Carlo repetitions per experiment is 1,000.  We
+18:699:31363:24:34:68:530:383:12:g_d0_f3:12:g_d0_f3:B:set the structural parameters to the following “true” values:α1=3,α2=−0.3, andσ=0.5.
+18:700:31447:34:24:93:542:349:12:g_d0_f3:12:g_d0_f3:A:The results in Table (1) show that there is very little bias in the finite samples,  even
+18:701:31536:24:24:68:542:325:12:g_d0_f3:12:g_d0_f3:B:in  the  case  of  only  two  markets  with  limited  information  coming  from  each  market.   The
+18:702:31636:24:23:68:542:301:12:g_d0_f3:12:g_d0_f3:B:standard  deviations  of  the  estimated  parameters  are  small  relative  to  the  parameters  and,
+18:703:31737:23:24:68:542:278:12:g_d0_f3:12:g_d0_f3:B:more importantly, the efficiency of the estimator is increasing in both market size and level
+18:704:31830:24:34:68:198:254:12:g_d0_f3:12:g_d0_f3:B:of gradient heterogeneity.
+18:705:31856:34:24:93:542:220:12:g_d0_f3:12:g_d0_f3:A:For comparison, we run the same set of Monte Carlo experiments using the traditional
+18:706:31940:24:24:68:542:196:12:g_d0_f3:12:g_d0_f3:B:two-step Rosen framework.  Results are presented in Table (2).  As expected, the estimator
+18:707:32030:24:24:68:542:172:12:g_d0_f3:12:g_d0_f3:B:performs poorly, particularly when it comes to recovering the slope of the MWTP function,
+18:708:32119:24:23:68:541:148:12:g_d0_f4:12:g_d0_f3:B:α2.  In all cases (even with 50 markets and maximum gradient heterogeneity across markets),
+18:709:32210:23:24:68:542:125:12:g_d0_f3:12:g_d0_f3:B:both the MWTP intercept (α1) and the standard deviation of the preference shock (σ) are
+18:710:32297:24:24:68:542:101:12:g_d0_f3:12:g_d0_f3:B:significantly biased downwards.  In addition, the MWTP slope is always biased upwards (as
+18:711:32386:24:0:68:542:77:12:g_d0_f3:12:g_d0_f3:B:expected); in all but two of the experiments, the mean value of the slope takes on a positive
+19:712:32481:0:27:182:427:689:12:g_d0_f3:12:g_d0_f3:?:Table 1:  Bishop-Timmins Results (commonα1)
+19:713:32524:27:20:165:444:662:12:g_d0_f3:12:g_d0_f3:?:(“true” parameter values:α1= 3,α2=−0.3,σ= 0.5)
+19:714:32570:20:18:208:515:642:12:g_d0_f3:12:g_d0_f3:?:mean(α1)mean(α2)mean(σ)std(α1)std(α2)std(σ)
+19:715:32613:18:14:94:516:624:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 1,γ2= 03.0035-0.30360.50150.07090.07060.0357
+19:716:32666:14:15:94:516:610:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 2,γ2= 03.0004-0.30060.50000.03540.03470.0182
+19:717:32719:15:14:94:516:595:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 3,γ2= 03.0000-0.30010.49980.02410.02310.0127
+19:718:32772:14:15:94:516:581:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 13.0015-0.30160.50050.04600.04520.0233
+19:719:32822:15:14:94:516:566:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 23.0002-0.30030.49990.02400.02220.0124
+19:720:32872:14:15:94:516:552:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 33.0000-0.30010.49970.01710.01460.0091
+19:721:32922:15:14:94:516:537:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 13.0002-0.30030.49990.03420.03310.0175
+19:722:32972:14:15:94:516:523:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 22.9998-0.29990.49970.01820.01590.0097
+19:723:33022:15:14:94:516:508:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 32.9998-0.29990.49970.01330.01000.0074
+19:724:33072:14:14:94:516:494:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 13.0002-0.30030.49980.03090.02960.0158
+19:725:33123:14:15:94:516:480:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 22.9998-0.29990.49970.01660.01410.0089
+19:726:33174:15:14:94:516:465:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 32.9998-0.29990.49970.01230.00870.0069
+19:727:33225:14:15:94:516:451:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 13.0000-0.30010.49980.02850.02710.0147
+19:728:33276:15:14:94:516:436:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 22.9998-0.29990.49960.01550.01280.0084
+19:729:33327:14:50:94:516:422:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 32.9998-0.29990.49960.01170.00780.0066
+19:730:33378:50:34:68:328:372:12:g_d0_f3:12:g_d0_f3:B:value (implying an upward sloping demand curve).
+19:731:33426:34:24:93:542:338:12:g_d0_f3:12:g_d0_f3:A:Finally,  we  return  to  our  estimator  and  run  a  set  of  experiments  where  the  MWTP
+19:732:33519:24:24:68:542:314:12:g_d0_f3:12:g_d0_f3:B:intercept,α1, is allowed to vary across markets.  We specify thatα1,j∼U(2,4), while keeping
+19:733:33610:24:24:68:541:290:12:g_d0_f4:12:g_d0_f3:B:α2=−0.3  andσ=  0.5.   Note  that  in  this  specification,  we  require  heterogeneity  in  the
+19:734:33706:24:24:68:542:266:12:g_d0_f3:12:g_d0_f3:B:the slope of the gradients across markets and do not estimate the cases whereγ2= 0.  Our
+19:735:33794:24:23:68:542:242:12:g_d0_f3:12:g_d0_f3:B:estimator performs well in each case, including the case with only two markets and minimum
+19:736:33884:23:0:68:510:219:12:g_d0_f3:12:g_d0_f3:B:gradient heterogeneity.  The results from these experiments are presented in Table (3).
+20:737:33973:0:27:209:400:689:12:g_d0_f3:12:g_d0_f3:?:Table 2:  Rosen Results (commonα1)
+20:738:34007:27:20:165:444:662:12:g_d0_f3:12:g_d0_f3:?:(“true” parameter values:α1= 3,α2=−0.3,σ= 0.5)
+20:739:34053:20:18:208:515:642:12:g_d0_f3:12:g_d0_f3:?:mean(α1)mean(α2)mean(σ)std(α1)std(α2)std(σ)
+20:740:34096:18:14:94:516:624:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 1,γ2= 02.03850.66150.09800.00260.00260.0003
+20:741:34148:14:15:94:516:610:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 2,γ2= 02.13810.56190.18570.00440.00420.0009
+20:742:34200:15:14:94:516:595:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1= 3,γ2= 02.26490.43500.25720.00530.00490.0017
+20:743:34252:14:15:94:516:581:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 12.08020.61290.14550.00350.00360.0007
+20:744:34301:15:14:94:516:566:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 22.25570.42240.25980.00550.00490.0019
+20:745:34350:14:15:94:516:552:12:g_d0_f4:12:g_d0_f3:A:j= 2,γ1=γ2= 32.42990.23320.33690.00680.00500.0029
+20:746:34399:15:14:94:516:537:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 12.14920.53810.19840.00480.00470.0012
+20:747:34448:14:15:94:516:523:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 22.41310.25250.32990.00680.00520.0028
+20:748:34497:15:14:94:516:508:12:g_d0_f4:12:g_d0_f3:A:j= 5,γ1=γ2= 32.61500.03580.40220.00790.00470.0038
+20:749:34546:14:14:94:516:494:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 12.17740.50760.21630.00500.00490.0014
+20:750:34596:14:15:94:516:480:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 22.46540.19630.35010.00710.00510.0031
+20:751:34646:15:14:94:516:465:12:g_d0_f4:12:g_d0_f3:A:j= 10,γ1=γ2= 32.6669-0.01870.41850.00810.00450.0040
+20:752:34697:14:15:94:516:451:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 12.20220.48070.23090.00530.00500.0015
+20:753:34747:15:14:94:516:436:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 22.50670.15190.36520.00730.00500.0033
+20:754:34797:14:49:94:516:422:12:g_d0_f4:12:g_d0_f3:A:j= 50,γ1=γ2= 32.7046-0.05820.42990.00820.00430.0042
+20:755:34848:49:27:163:447:373:12:g_d0_f3:12:g_d0_f3:?:Table 3:  Bishop-Timmins Results (market-specificα1,j)
+20:756:34902:27:20:186:423:346:12:g_d0_f3:12:g_d0_f3:?:(“true” parameter values:α2=−0.3,σ= 0.5)
+20:757:34942:20:18:260:458:326:12:g_d0_f3:12:g_d0_f3:?:mean(α2)mean(σ)std(α2)std(σ)
+20:758:34970:18:14:151:458:308:12:g_d0_f4:12:g_d0_f3:?:j= 2,γ1=γ2= 1-0.35310.52630.24060.1209
+20:759:35008:14:15:151:458:294:12:g_d0_f4:12:g_d0_f3:?:j= 2,γ1=γ2= 2-0.31390.50660.10280.0524
+20:760:35046:15:14:151:458:279:12:g_d0_f4:12:g_d0_f3:?:j= 2,γ1=γ2= 3-0.30680.50310.06620.0345
+20:761:35084:14:15:151:458:265:12:g_d0_f4:12:g_d0_f3:?:j= 5,γ1=γ2= 1-0.32770.51340.15350.0775
+20:762:35122:15:14:151:458:250:12:g_d0_f4:12:g_d0_f3:?:j= 5,γ1=γ2= 2-0.30840.50370.06930.0359
+20:763:35160:14:15:151:458:236:12:g_d0_f4:12:g_d0_f3:?:j= 5,γ1=γ2= 3-0.30450.50180.04310.0233
+20:764:35198:15:14:151:458:221:12:g_d0_f4:12:g_d0_f3:?:j= 10,γ1=γ2= 1-0.32210.51030.13350.0675
+20:765:35237:14:15:151:458:207:12:g_d0_f4:12:g_d0_f3:?:j= 10,γ1=γ2= 2-0.30680.50270.06060.0316
+20:766:35276:15:14:151:458:192:12:g_d0_f4:12:g_d0_f3:?:j= 10,γ1=γ2= 3-0.30360.50120.03700.0204
+20:767:35315:14:14:151:458:178:12:g_d0_f4:12:g_d0_f3:?:j= 50,γ1=γ2= 1-0.31930.50690.12200.0616
+20:768:35354:14:15:151:458:164:12:g_d0_f4:12:g_d0_f3:?:j= 50,γ1=γ2= 2-0.30610.50030.05540.0290
+20:769:35393:15:0:151:458:149:12:g_d0_f4:12:g_d0_f3:?:j= 50,γ1=γ2= 3-0.30330.49900.03330.0186
+21:770:35434:0:46:68:138:696:17:g_d0_f2:17:g_d0_f2:C:4    Data
+21:771:35443:46:24:68:542:650:12:g_d0_f3:12:g_d0_f3:B:We apply our estimator to valuing the willingness to pay to avoid violent crime in the San
+21:772:35533:24:24:68:542:626:12:g_d0_f3:12:g_d0_f3:B:Francisco Metropolitan Area over the period 1994 to 2000.  Further details and results of this
+21:773:35627:24:34:68:300:602:12:g_d0_f3:12:g_d0_f3:B:application are discussed in Sections 5 and 6.
+21:774:35673:34:24:93:542:568:12:g_d0_f3:12:g_d0_f3:A:In  the  first  stage  of  our  estimation,  we  recover  the  parameters  of  the  hedonic  price
+21:775:35771:24:24:68:542:544:12:g_d0_f3:12:g_d0_f3:B:function for each year of our sample.  In the second stage of our estimation, we recover the
+21:776:35863:24:24:68:542:520:12:g_d0_f3:12:g_d0_f3:B:structural  parameters  of  the  linear  MWTP  function,  allowing  MWTP  to  vary  with  demo-
+21:777:35958:24:23:68:542:496:12:g_d0_f3:12:g_d0_f3:B:graphic  characteristics.   Finally,  to  demonstrate  the  policy  implications  of  various  hedonic
+21:778:36060:23:24:68:542:473:12:g_d0_f3:12:g_d0_f3:B:estimators, we consider the non-marginal policy analysis of the observed changes in crime for
+21:779:36153:24:35:68:253:449:12:g_d0_f3:12:g_d0_f3:B:the one year period of 1999 to 2000.
+21:780:36189:35:23:93:542:414:12:g_d0_f3:12:g_d0_f3:A:To estimate these specifications, we employ a varied set of data from multiple sources.
+21:781:36276:23:57:68:339:391:12:g_d0_f3:12:g_d0_f3:B:These data and our sample cuts are discussed below.
+21:782:36327:57:42:68:302:334:14:g_d0_f2:14:g_d0_f2:C:4.1    Property Transactions Data
+21:783:36360:42:24:68:542:292:12:g_d0_f3:12:g_d0_f3:B:The  real  estate  transactions  data  that  we  employ  covers  six  counties  of  the  San  Francisco
+21:784:36463:24:24:68:542:268:12:g_d0_f3:12:g_d0_f3:B:Bay Area (Alameda, Contra Costa, Marin, San Francisco, San Mateo, and Santa Clara) over
+21:785:36550:24:24:68:542:244:12:g_d0_f3:12:g_d0_f3:B:the period 1994 to 2000.  This dataset (used under a licensing agreement with DataQuick,
+21:786:36638:24:24:68:542:220:12:g_d0_f3:12:g_d0_f3:B:Inc.)  includes dates,  prices,  loan amounts,  and buyers’,  sellers’,  and lenders’ names for all
+21:787:36737:24:24:68:542:196:12:g_d0_f3:12:g_d0_f3:B:transactions.  In addition,  for the final observed transaction of each single-family property,
+21:788:36832:24:24:68:542:172:12:g_d0_f3:12:g_d0_f3:B:the dataset includes housing characteristics such as exact street address, square footage, year
+21:789:36927:24:34:68:391:148:12:g_d0_f3:12:g_d0_f3:B:built, lot size, number of bedrooms, and number of bathrooms.
+21:790:36988:34:24:93:542:114:12:g_d0_f3:12:g_d0_f3:A:Additional data cuts are made in order to deal with the fact that DataQuick only reports
+21:791:37076:24:0:68:542:90:12:g_d0_f3:12:g_d0_f3:B:housing characteristics at the time of the final observed transaction, but we need to use housing
+22:792:37175:0:24:68:541:696:12:g_d0_f3:12:g_d0_f3:B:characteristics from all transactions as controls in our hedonic price regressions.14First, to
+22:793:37269:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:control for land sales or total re-builds, we drop all transactions where “year built” is missing
+22:794:37366:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:or later than the observed transaction date.  Second, to control for major improvements or
+22:795:37456:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:degradations,  we drop any property with an observed average appreciation or depreciation
+22:796:37545:24:24:68:542:601:12:g_d0_f3:12:g_d0_f3:B:rate exceeding the county- and year- specific mean price change by more than 50 percentage
+22:797:37635:24:24:68:542:577:12:g_d0_f3:12:g_d0_f3:B:points  (in  either  direction).   Additionally,  we  drop  any  property  that  moves  more  than  40
+22:798:37737:24:24:68:542:553:12:g_d0_f3:12:g_d0_f3:B:percentile points (in either direction) between transactions in the overall county- and year-
+22:799:37830:24:24:68:542:529:12:g_d0_f3:12:g_d0_f3:B:specific distribution of price.  We drop transactions where the price is missing or zero and,
+22:800:37923:24:24:68:542:505:12:g_d0_f3:12:g_d0_f3:B:after using the consumer price index to convert all transaction prices into 2000 dollars,  we
+22:801:38016:24:24:68:542:481:12:g_d0_f3:12:g_d0_f3:B:drop one percent of observations from each tail of the price distribution to minimize the effect
+22:802:38112:24:24:68:542:457:12:g_d0_f3:12:g_d0_f3:B:of outliers.  As we merge the pollution data using the property’s geographic coordinates, we
+22:803:38204:24:24:68:542:433:12:g_d0_f3:12:g_d0_f3:B:drop properties where latitude and longitude are missing.  Finally, we drop houses with more
+22:804:38296:24:24:68:542:409:12:g_d0_f3:12:g_d0_f3:B:than  three  observed  transactions  over  the  7  year  sample  and  drop  multiple  sales  within  a
+22:805:38398:24:34:68:131:385:12:g_d0_f3:8:g_d0_f5:B:given year.15
+22:806:38411:34:23:93:542:351:12:g_d0_f3:12:g_d0_f3:A:This yields a final sample of 403,036 transactions.  Table (4) reports the summary statis-
+22:807:38501:23:57:68:267:328:12:g_d0_f3:12:g_d0_f3:B:tics for the property transactions data.
+22:808:38541:57:42:68:317:271:14:g_d0_f2:14:g_d0_f2:C:4.2    Household Demographic Data
+22:809:38574:42:24:68:542:229:12:g_d0_f3:12:g_d0_f3:B:For our demographic characteristics,  we use information on the race and income of buyers
+22:810:38663:24:23:68:542:205:12:g_d0_f3:12:g_d0_f3:B:recorded  on  mortgage  applications  and  published  in  accordance  with  the  Home  Mortgage
+22:811:38758:23:24:68:542:182:12:g_d0_f3:12:g_d0_f3:B:Disclosure Act (HMDA) of 1975.  The HMDA data also describe the mortgage lender’s name,
+22:812:38845:24:18:68:542:158:12:g_d0_f3:12:g_d0_f3:B:the loan amount, the year, and the property’s census tract.  As the variables of lender name,
+22:813:38938:18:12:77:492:140:7:g_d0_f6:10:g_d0_f7:?:14Approximately fifty-five percent of observed sales are the only observed sale for the property.
+22:814:39035:12:15:77:542:128:7:g_d0_f6:10:g_d0_f7:F:15To maintain a fairly homogenous sample (i.e., properties that would be competing in the same housing
+22:815:39137:15:12:68:542:113:10:g_d0_f7:10:g_d0_f7:F:market),  we  make  the  additional  sample  cuts.   We  drop  houses  where  “year  built”  is  less  than  1850,  “lot
+22:816:39257:12:12:68:542:101:10:g_d0_f7:10:g_d0_f7:F:size” is greater than 3 acres,  “square footage” is zero or greater than 10,000 square feet,  total “number of
+22:817:39367:12:12:68:542:89:10:g_d0_f7:10:g_d0_f7:F:bathrooms” is greater than 10, total “number of bedrooms” is greater than 10, total “number of rooms” is
+22:818:39471:12:0:68:420:77:10:g_d0_f7:10:g_d0_f7:F:missing or greater than 15, and “number of stories” is missing or greater than 3.
+23:819:39554:0:27:172:436:690:12:g_d0_f3:12:g_d0_f3:?:Table 4:  Property Transactions Summary Statistics
+23:820:39604:27:17:137:471:663:12:g_d0_f3:12:g_d0_f3:?:VariableMeanStd.  Dev.
+23:821:39626:17:18:137:472:646:12:g_d0_f3:12:g_d0_f3:?:Price (constant 2000 dollars)345,823.00192,210.00
+23:822:39675:18:19:137:460:628:12:g_d0_f3:12:g_d0_f3:?:Year Built1966.6423.16
+23:823:39697:19:18:137:467:609:12:g_d0_f3:12:g_d0_f3:?:Lot Size (sq.  ft)6,453.557,927.96
+23:824:39731:18:18:137:463:591:12:g_d0_f3:12:g_d0_f3:?:Square Footage1662.76671.69
+23:825:39758:18:19:137:457:573:12:g_d0_f3:12:g_d0_f3:?:Number Bathrooms2.070.73
+23:826:39782:19:18:137:457:554:12:g_d0_f3:12:g_d0_f3:?:Number Bedrooms3.011.09
+23:827:39805:18:19:137:463:536:12:g_d0_f3:12:g_d0_f3:?:Property Crimes (per 100,000 residents)1,803.43771.48
+23:828:39858:19:53:137:463:517:12:g_d0_f3:12:g_d0_f3:?:Violent Crimes (per 100,000 residents)445.69241.19
+23:829:39908:53:24:68:542:464:12:g_d0_f3:12:g_d0_f3:B:loan amount, year, and census tract are also available in the DataQuick data, we are able to
+23:830:40000:24:24:68:542:440:12:g_d0_f3:12:g_d0_f3:B:merge the buyer characteristics data with the property transactions data using the algorithm
+23:831:40092:24:24:68:541:416:12:g_d0_f3:12:g_d0_f3:B:described in Bayer et.  al.  (2011).16We drop all households where either race or income is
+23:832:40183:24:34:68:109:392:12:g_d0_f3:12:g_d0_f3:B:missing.
+23:833:40191:34:24:93:542:358:12:g_d0_f3:12:g_d0_f3:A:Table (5) reports the summary statistics for the sample of buyers in both the full sample
+23:834:40280:24:24:68:542:334:12:g_d0_f3:12:g_d0_f3:B:and  in  the  restricted,  1999-only  sample.   This  restricted  sample  will  be  used  in  the  policy
+23:835:40385:24:24:68:542:310:12:g_d0_f3:12:g_d0_f3:B:analysis that demonstrates the implications of valuing non-marginal changes in violent crime
+23:836:40477:24:57:68:96:286:12:g_d0_f3:12:g_d0_f3:B:rates.
+23:837:40483:57:42:68:245:229:14:g_d0_f2:14:g_d0_f2:C:4.3    Violent Crime Data
+23:838:40508:42:23:68:542:187:12:g_d0_f3:12:g_d0_f3:B:The  violent  crime  rate  that  we  employ  comes  from  the  RAND  California  database  and  is
+23:839:40606:23:18:68:542:164:12:g_d0_f3:12:g_d0_f3:B:defined as the number of incidents per 100,000 residents.17Violent crime is reported for each
+23:840:40699:18:16:77:542:146:7:g_d0_f6:10:g_d0_f7:F:16Using this algorithm, we are able to uniquely match approximately eighty percent of all housing trans-
+23:841:40803:16:12:68:542:130:10:g_d0_f7:10:g_d0_f7:F:actions  to  buyers  in  the  HMDA  dataset.   The  characteristics  of  the  final  sample  of  buyers  and  houses  is
+23:842:40923:12:12:68:542:118:10:g_d0_f7:10:g_d0_f7:F:remarkably  close  to  those  found  in  IPUMS  samples.   See  Bayer  et.   al.   (2011)  for  examples  and  further
+23:843:41041:12:8:68:114:106:10:g_d0_f7:10:g_d0_f7:F:discussion.
+23:844:41052:8:16:77:542:98:7:g_d0_f6:10:g_d0_f7:F:17In the data, violent crime is defined as “crimes against people, including homicide, forcible rape, robbery,
+23:845:41162:16:0:68:176:82:10:g_d0_f7:10:g_d0_f7:F:and aggravated assault.”
+24:846:41188:0:27:146:463:689:12:g_d0_f3:12:g_d0_f3:?:Table 5:  Buyer Summary Statistics (Full- and 1999- Samples)
+24:847:41248:27:17:248:444:662:12:g_d0_f3:12:g_d0_f3:?:Full Sample1999 Sample
+24:848:41270:17:17:243:445:645:12:g_d0_f3:12:g_d0_f3:?:(n= 262,498)(n= 49,438)
+24:849:41293:17:19:135:470:628:12:g_d0_f3:12:g_d0_f3:?:VariableMeanStd.  Dev.MeanStd.  Dev.
+24:850:41329:19:19:135:471:609:12:g_d0_f3:12:g_d0_f3:?:Price354,002.90193,464.20372,028.60200,698.10
+24:851:41374:19:18:135:461:590:12:g_d0_f3:12:g_d0_f3:?:Violent Crime445.46242.24369.06171.67
+24:852:41411:18:19:135:468:572:12:g_d0_f3:12:g_d0_f3:?:Income111,312.90111,607.30111,338.4087,321.00
+24:853:41456:19:18:135:455:553:12:g_d0_f3:12:g_d0_f3:?:White0.630.480.610.49
+24:854:41477:18:18:135:455:535:12:g_d0_f3:12:g_d0_f3:?:Asian0.240.420.250.43
+24:855:41498:18:19:135:455:517:12:g_d0_f3:12:g_d0_f3:?:Black0.040.190.030.18
+24:856:41519:19:19:135:455:498:12:g_d0_f3:12:g_d0_f3:?:Hispanic0.100.300.110.31
+24:857:41543:19:14:135:473:479:10:g_d0_f23:10:g_d0_f23:?:Prices and incomes are expressed in constant 2000 dollars.  The violent crime
+24:858:41620:14:49:135:261:465:10:g_d0_f23:10:g_d0_f23:?:rate is per 100,000 residents.
+24:859:41650:49:24:68:542:416:12:g_d0_f3:12:g_d0_f3:B:of the 80 cities in the San Francisco Metropolitan Area for each year of our data.  Figure (1)
+24:860:41744:24:32:68:264:392:12:g_d0_f3:12:g_d0_f3:B:illustrates the locations of these cities.
+24:861:41786:32:277:91:518:360:12:g_d0_f3:12:g_d0_f3:A:Figure 1:  Locations of Crime-reporting Cities within the San Francisco Metro Area
+24:862:41868:277:0:93:542:83:12:g_d0_f3:12:g_d0_f3:A:For  our  analysis,  we  impute  a  violent  crime  rate  for  each  individual  house  using  an
+25:863:41967:0:24:68:541:696:12:g_d0_f3:12:g_d0_f3:B:inverse distance-squared weighted average of the crime rate in each city.18As a control in our
+25:864:42061:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:hedonic regressions,  we also create an analogous measure of property crime rates from the
+25:865:42151:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:RAND California database.19,20Table (4) provides summary statistics for both violent crime
+25:866:42241:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:and property crime at the level of the house.  Table (5) provides summary statistics for our
+25:867:42333:24:35:68:370:601:12:g_d0_f3:12:g_d0_f3:B:variable of interest, violent crime, at the level of the buyer.
+25:868:42396:35:23:93:542:566:12:g_d0_f3:12:g_d0_f3:A:We see a significant amount of variation (both cross-sectional and time-series) in our key
+25:869:42486:23:24:68:542:543:12:g_d0_f3:12:g_d0_f3:B:variable of interest,  violent crime.  Figures (2) and (3) illustrate the distribution of violent
+25:870:42583:24:24:68:542:519:12:g_d0_f3:12:g_d0_f3:B:crime rates and the time-trend of mean violent crime rates, respectively.  The declining trend
+25:871:42677:24:24:68:542:495:12:g_d0_f3:12:g_d0_f3:B:observed in the San Francisco Metropolitan Area is consistent with the decreases in violent
+25:872:42768:24:35:68:353:471:12:g_d0_f3:12:g_d0_f3:B:crime observed in most of the US over the same period.
+25:873:42822:35:295:99:509:436:12:g_d0_f3:12:g_d0_f3:?:Figure 2:  Distribution of Violent Crime Rates (Incidents per 100,000 Residents)
+25:874:42902:295:16:77:542:141:7:g_d0_f6:10:g_d0_f7:F:18Distance  is  computed  using  the  Great  Circle  estimator,  geographic  coordinates  of  city  centroids,  and
+25:875:43017:16:8:68:232:125:10:g_d0_f7:10:g_d0_f7:F:geographic coordinates of each house.
+25:876:43054:8:12:77:518:117:7:g_d0_f6:10:g_d0_f7:?:19Property crime is defined as “crimes against property, including burglary and motor vehicle theft.”
+25:877:43155:12:16:77:542:105:7:g_d0_f6:10:g_d0_f7:F:20We  use  the  property  crime  rate  as  a  control  in  our  hedonic  estimation  and  focus  attention  on  violent
+25:878:43274:16:12:68:542:89:10:g_d0_f7:10:g_d0_f7:F:crimes in our valuation exercise, as violent crimes are less likely to be subject to systematic under-reporting
+25:879:43385:12:0:68:146:77:10:g_d0_f7:10:g_d0_f7:F:(Gibbons (2004)).
+26:880:43404:0:302:91:517:689:12:g_d0_f3:12:g_d0_f3:A:Figure 3:  Time Variation in Violent Crime Rates (Incidents per 100,000 Residents)
+26:881:43486:302:51:68:159:387:17:g_d0_f2:17:g_d0_f2:C:5    Results
+26:882:43498:51:42:68:271:336:14:g_d0_f2:14:g_d0_f2:C:5.1    Hedonic Price Function
+26:883:43527:42:24:68:542:294:12:g_d0_f3:12:g_d0_f3:B:In  this  subsection,  we  discuss  the  results  from  the  estimation  of  a  log-linear  hedonic  price
+26:884:43633:24:24:68:542:270:12:g_d0_f3:12:g_d0_f3:B:function.  Separately for each year, 1994 to 2000, we regress the log of sales price on housing
+26:885:43728:24:24:68:542:246:12:g_d0_f3:12:g_d0_f3:B:attributes and tract-level fixed effects.  Regression results are reported in Table (6), with each
+26:886:43826:24:24:68:542:222:12:g_d0_f3:12:g_d0_f3:B:row representing a separate annual regression.  In the vast majority of cases, hedonic price
+26:887:43918:24:34:68:327:198:12:g_d0_f3:8:g_d0_f5:B:estimates have the expected sign and magnitude.21
+26:888:43967:34:24:93:542:164:12:g_d0_f3:12:g_d0_f3:A:For discussion purposes,  we calculate the implicit price of each attribute at the mean
+26:889:44054:24:18:68:541:140:12:g_d0_f3:12:g_d0_f3:B:housing price of $345,823, given in 2000 dollars, and annualize these implicit prices by multi-
+26:890:44149:18:15:77:542:122:7:g_d0_f6:10:g_d0_f7:F:21An exception is the sign on property crime, which exhibits a counterintuitive positive sign in 1994 and
+26:891:44254:15:12:68:542:107:10:g_d0_f7:10:g_d0_f7:F:1996.  This is not surprising as property crime is usually considered to be under-reported (unlike violent crime,
+26:892:44367:12:12:68:542:95:10:g_d0_f7:10:g_d0_f7:F:which we focus on in our analysis).  If underreporting is more severe in low-price neighborhoods, this could
+26:893:44475:12:0:68:227:83:10:g_d0_f7:10:g_d0_f7:F:the coefficient to be biased upwards.
+27:894:44514:0:37:194:415:690:12:g_d0_f3:12:g_d0_f3:?:Table 6:  Hedonic Price Function Estimates
+27:895:44556:37:14:97:536:653:11:g_d0_f7:11:g_d0_f7:?:Year BuiltLot SizeSq.  FootageBathroomsBedroomsProp.  CrimeViolent Crime
+27:896:44628:14:14:69:533:639:11:g_d0_f7:11:g_d0_f7:F:19948.26E-04***6.47061E-06***3.45E-04***6.00E-03**0.0348***-4.77E-05***-2.65E-04***
+27:897:44711:14:18:97:528:625:11:g_d0_f7:11:g_d0_f7:?:(9.36E-05)(2.57963E-07)(3.24E-06)(2.77E-03)(1.69E-03)(5.81E-06)(2.40E-05)
+27:898:44784:18:14:69:533:607:11:g_d0_f7:11:g_d0_f7:F:19958.19E-04***6.63532E-06***3.49E-04***9.51E-03***0.0370***-1.04E-05-5.04E-04***
+27:899:44865:14:19:97:528:593:11:g_d0_f7:11:g_d0_f7:?:(1.09E-04)(2.95071E-07)(4.76E-06)(3.53E-03)(1.93E-03)(6.92E-06)(3.30E-05)
+27:900:44938:19:13:69:533:574:11:g_d0_f7:11:g_d0_f7:F:19967.41E-04***6.53443E-06***3.58E-04***0.0136***0.0432***-1.64E-05**-4.64E-04***
+27:901:45019:13:19:97:528:561:11:g_d0_f7:11:g_d0_f7:?:(8.85E-05)(3.3423E-07)(4.29E-06)(3.24E-03)(1.69E-03)(7.50E-06)(3.05E-05)
+27:902:45091:19:13:69:533:542:11:g_d0_f7:11:g_d0_f7:F:19974.40E-04***7.12735E-06***3.57E-04***0.0186***0.0430***8.05E-07-6.04E-04***
+27:903:45169:13:19:97:528:529:11:g_d0_f7:11:g_d0_f7:?:(7.61E-05)(2.64862E-07)(4.62E-06)(3.03E-03)(1.67E-03)(8.48E-06)(2.95E-05)
+27:904:45242:19:13:69:533:510:11:g_d0_f7:11:g_d0_f7:F:19982.34E-04***7.05921E-06***3.56E-04***0.0251***0.0430***1.13E-04***-9.73E-04***
+27:905:45323:13:19:97:528:497:11:g_d0_f7:11:g_d0_f7:?:(8.55E-05)(3.33583E-07)(6.01E-06)(3.59E-03)(2.03E-03)(9.16E-06)(3.98E-05)
+27:906:45396:19:13:69:533:478:11:g_d0_f7:11:g_d0_f7:F:19999.28E-057.38838E-06***3.55E-04***0.0211***0.0451***6.18E-05***-1.01E-03***
+27:907:45474:13:19:97:528:465:11:g_d0_f7:11:g_d0_f7:?:(7.99E-05)(2.52938E-07)(3.30E-06)(2.51E-03)(1.37E-03)(9.68E-06)(3.35E-05)
+27:908:45547:19:13:69:533:446:11:g_d0_f7:11:g_d0_f7:F:20003.86E-04***8.016E-06***3.35E-04***0.0246***0.0431***1.32E-04***-1.22E-03***
+27:909:45626:13:19:97:528:433:11:g_d0_f7:11:g_d0_f7:?:(8.55E-05)(3.6165E-07)(4.24E-06)(2.97E-03)(1.71E-03)(1.03E-05)(4.74E-05)
+27:910:45698:19:14:69:543:414:10:g_d0_f23:10:g_d0_f23:F:Dependent variable is the log of sales price.  Data are mean-differenced to remove 830 tract-level fixed effects.
+27:911:45811:14:49:69:339:400:10:g_d0_f23:10:g_d0_f23:F:Significance is indicated by:  ***(0.01), **(0.05), and *(0.10).
+27:912:45875:49:24:68:541:351:12:g_d0_f3:12:g_d0_f3:B:plying them by 0.05.22The implicit price of an additional square foot of lot size is, on average,
+27:913:45972:24:24:68:542:327:12:g_d0_f3:12:g_d0_f3:B:11 cents per year in 1994.  The implicit price of an additional square foot of living space is
+27:914:46066:24:23:68:542:303:12:g_d0_f3:12:g_d0_f3:B:$5.97 per year in 1994.  These prices vary somewhat, but are relatively stable over time.  Also
+27:915:46161:23:24:68:542:280:12:g_d0_f3:12:g_d0_f3:B:in 1994, an additional bathroom costs $103.75 per year, while an additional bedroom costs
+27:916:46250:24:24:68:541:256:12:g_d0_f3:12:g_d0_f3:B:$602.37 per year.  The implicit prices of bedrooms and bathrooms vary somewhat over time,
+27:917:46339:24:35:68:520:232:12:g_d0_f3:12:g_d0_f3:B:while the effect of year built varies a great deal over time (both in magnitude and sign).
+27:918:46429:35:23:93:542:197:12:g_d0_f3:12:g_d0_f3:A:Our amenity of interest, violent crime, exhibits an intuitive negative effect on housing
+27:919:46517:23:24:68:542:174:12:g_d0_f3:12:g_d0_f3:B:prices that is statistically significant.  Over the period of our sample,  we see this effect in-
+27:920:46614:24:24:68:541:150:12:g_d0_f3:12:g_d0_f3:B:creasing over time.  In 1994, the implicit price of additional unit of violent crime is−$4.59,
+27:921:46708:24:19:68:541:126:12:g_d0_f3:12:g_d0_f3:B:while in 2000 it is−$21.07.  Table (7) reports the year-to-year variation in the implicit price
+27:922:46803:19:15:77:542:107:7:g_d0_f6:10:g_d0_f7:F:22These measures of implicit price are those that often used as simple, marginal measures of willingness to
+27:923:46910:15:0:68:196:92:10:g_d0_f7:10:g_d0_f7:F:pay in the existing literature.
+28:924:46943:0:29:68:151:696:12:g_d0_f3:12:g_d0_f3:B:of violent crime.
+28:925:46960:29:27:159:450:667:12:g_d0_f3:12:g_d0_f3:?:Table 7:  Variation in the Implicit Price of Violent Crime
+28:926:47018:27:16:244:355:640:12:g_d0_f3:12:g_d0_f3:?:YearImplicit Price
+28:927:47036:16:15:244:335:624:12:g_d0_f3:12:g_d0_f3:?:1994-4.59
+28:928:47045:15:15:244:335:609:12:g_d0_f3:12:g_d0_f3:?:1995-8.71
+28:929:47054:15:16:244:335:594:12:g_d0_f3:12:g_d0_f3:?:1996-8.02
+28:930:47063:16:15:244:338:578:12:g_d0_f3:12:g_d0_f3:?:1997-10.44
+28:931:47073:15:16:244:338:563:12:g_d0_f3:12:g_d0_f3:?:1998-16.82
+28:932:47083:16:15:244:338:547:12:g_d0_f3:12:g_d0_f3:?:1999-17.48
+28:933:47093:15:75:244:338:532:12:g_d0_f3:12:g_d0_f3:?:2000-21.07
+28:934:47103:75:41:68:226:457:14:g_d0_f2:14:g_d0_f2:C:5.2    MWTP Function
+28:935:47123:41:24:68:542:416:12:g_d0_f3:12:g_d0_f3:B:In this subsection, we report the results from our procedure for recovering estimates of the
+28:936:47215:24:24:68:542:392:12:g_d0_f3:12:g_d0_f3:B:MWTP function using the first-stage hedonic price function estimates and data on individual
+28:937:47306:24:24:68:542:368:12:g_d0_f3:12:g_d0_f3:B:home buyers.  With the log-linear specification for the hedonic price function, a closed-form
+28:938:47399:24:24:68:541:344:12:g_d0_f3:12:g_d0_f3:B:solution forZi,jcannot be recovered and we employ a change of variables fromZtoνd.  We
+28:939:47485:24:24:68:542:320:12:g_d0_f3:12:g_d0_f3:B:specify a linear MWTP function and allow the intercept of the MWTP function to vary by
+28:940:47571:24:44:68:368:296:12:g_d0_f3:12:g_d0_f3:B:year by including a set of year dummies in our estimation:
+28:941:47629:44:0:68:369:252:12:g_d0_f3:8:g_d0_f8:B:(29)P′(V Ci,t;β) =α1,t+α2V Ci,t+Xd
+28:942:47663:0:11:372:374:260:6:g_d0_f18:6:g_d0_f18:?:′
+28:943:47664:11:0:364:408:249:8:g_d0_f8:12:g_d0_f4:?:iα3+ν
+28:944:47669:0:8:408:412:257:8:g_d0_f8:8:g_d0_f8:?:d
+28:945:47670:8:40:407:415:249:8:g_d0_f8:8:g_d0_f8:?:i,t
+28:946:47673:40:44:68:101:209:12:g_d0_f3:12:g_d0_f3:B:where:
+28:947:47679:44:44:68:342:165:12:g_d0_f3:12:g_d0_f3:B:(30)νdi,t∼N(0,σ2)
+28:948:47696:44:24:68:541:121:12:g_d0_f3:12:g_d0_f3:B:andXdiis a vector comprised of income (in thousands of 2000 dollars) and a vector of race
+28:949:47785:24:17:68:392:97:12:g_d0_f3:8:g_d0_f5:B:dummies (Asian-Pacific Islander, black, Hispanic, and white).23
+28:950:47848:17:0:77:205:80:7:g_d0_f6:10:g_d0_f7:?:23White is the excluded race.
+29:951:47879:0:24:93:542:696:12:g_d0_f3:12:g_d0_f3:A:The first column of Table (8) reports the results from our estimator.  First, consider the
+29:952:47969:24:24:68:541:672:12:g_d0_f3:12:g_d0_f3:B:coefficient on violent crime,α2, which reveals the amount by which the individual’s MWTP
+29:953:48057:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:to avoid violent crime changes with an increase in this disamenity.  Intuitively, this coefficient
+29:954:48155:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:should be negative, indicating that the MWTP to avoid violent crime increases as the rate of
+29:955:48247:24:24:68:542:601:12:g_d0_f3:12:g_d0_f3:B:violent crime increases (consistent with a demand curve for public safety that is downward
+29:956:48337:24:24:68:542:577:12:g_d0_f3:12:g_d0_f3:B:sloping).  We find this to be the case with our model;  each additional incident per 100,000
+29:957:48429:24:24:68:542:553:12:g_d0_f3:12:g_d0_f3:B:residents raises MWTP to avoid violent crime by 10 cents.  As we show in Section 6, this has
+29:958:48521:24:24:68:542:529:12:g_d0_f3:12:g_d0_f3:B:important implications for the value ascribed to large reductions in violent crime rates like
+29:959:48614:24:34:68:306:505:12:g_d0_f3:12:g_d0_f3:B:those witnessed over the period of our sample.
+29:960:48660:34:24:93:542:471:12:g_d0_f3:12:g_d0_f3:A:Looking at the the remaining coefficient estimates derived using our model, an increase
+29:961:48747:24:24:68:542:447:12:g_d0_f3:12:g_d0_f3:B:in income of $1,000 per year increases MWTP to avoid violent crime by 5.8 cents (consistent
+29:962:48838:24:24:68:542:423:12:g_d0_f3:12:g_d0_f3:B:with  public  safety  being  a  normal  good).   Considering  differences  in  MWTP  by  race,  the
+29:963:48937:24:24:68:542:399:12:g_d0_f3:12:g_d0_f3:B:excluded group (Whites) has the highest mean MWTP to avoid violent crime.  Our model
+29:964:49021:24:24:68:542:375:12:g_d0_f3:12:g_d0_f3:B:suggests that Asian-Pacific Islanders have a slightly lower mean MWTP (as indicated by their
+29:965:49113:24:24:68:542:351:12:g_d0_f3:12:g_d0_f3:B:positive intercept shift of $2.84).  Blacks have the lowest mean MWTP to avoid violent crime,
+29:966:49206:24:34:68:181:327:12:g_d0_f3:12:g_d0_f3:B:followed by Hispanics.
+29:967:49228:34:24:93:542:293:12:g_d0_f3:12:g_d0_f3:A:For the sake of comparison, the second column of Table (8) reports the results from the
+29:968:49315:24:24:68:542:269:12:g_d0_f3:12:g_d0_f3:B:traditional Rosen estimation approach.  These results are strikingly different from the results
+29:969:49410:24:24:68:542:245:12:g_d0_f3:12:g_d0_f3:B:presented in the first column.  In contrast to our estimator, estimates from the Rosen model
+29:970:49502:24:23:68:542:221:12:g_d0_f3:12:g_d0_f3:B:suggest that increases in violent crime reduce the MWTP to avoid violent crime (indicating
+29:971:49592:23:24:68:542:198:12:g_d0_f3:12:g_d0_f3:B:that the demand curve for public safety is upward sloping).  This is exactly the direction of
+29:972:49685:24:24:68:542:174:12:g_d0_f3:12:g_d0_f3:B:bias suggested by both Bartik and Epple and leads to upwardly biased estimates of the welfare
+29:973:49778:24:24:68:542:150:12:g_d0_f3:12:g_d0_f3:B:associated with non-marginal reductions in violent crime (which we show in Section 6).  Ad-
+29:974:49869:24:24:68:542:126:12:g_d0_f3:12:g_d0_f3:B:ditionally, while the coefficient on income is of the same sign, the magnitude is much smaller.
+29:975:49964:24:24:68:542:102:12:g_d0_f3:12:g_d0_f3:B:Finally, race does not appear to play an economically significant role in the estimates derived
+29:976:50059:24:0:68:536:78:12:g_d0_f3:12:g_d0_f3:B:using the Rosen estimation approach (although the coefficients are statistically significant).
+30:977:50155:0:25:210:399:690:12:g_d0_f3:12:g_d0_f3:?:Table 8:  MWTP Function Estimates
+30:978:50188:25:15:269:414:665:12:g_d0_f3:12:g_d0_f3:?:Bishop-TimminsRosen
+30:979:50207:15:15:179:420:650:12:g_d0_f3:12:g_d0_f3:?:Violent Crime-0.10083.51E-03
+30:980:50235:15:17:285:425:635:12:g_d0_f3:12:g_d0_f3:?:(3.66E-03)(1.05E-04)
+30:981:50255:17:15:179:416:618:12:g_d0_f3:12:g_d0_f3:?:Income (/1000)-0.0581-0.0252
+30:982:50283:15:17:285:425:603:12:g_d0_f3:12:g_d0_f3:?:(4.88E-03)(2.75E-03)
+30:983:50303:17:15:179:415:586:12:g_d0_f3:12:g_d0_f3:?:Asian2.83520.0949
+30:984:50320:15:17:291:420:571:12:g_d0_f3:12:g_d0_f3:?:(0.1868)(0.0337)
+30:985:50336:17:14:179:415:554:12:g_d0_f3:12:g_d0_f3:?:Black25.04981.9942
+30:986:50354:14:18:291:420:540:12:g_d0_f3:12:g_d0_f3:?:(0.9251)(0.0684)
+30:987:50370:18:14:179:415:522:12:g_d0_f3:12:g_d0_f3:?:Hispanic13.98131.1989
+30:988:50391:14:18:291:420:508:12:g_d0_f3:12:g_d0_f3:?:(0.5706)(0.0748)
+30:989:50407:18:14:179:416:490:12:g_d0_f3:12:g_d0_f3:?:Constant54.1218-3.3790
+30:990:50429:14:18:291:420:476:12:g_d0_f3:12:g_d0_f3:?:(1.6280)(0.3542)
+30:991:50445:18:14:179:416:458:12:g_d0_f3:12:g_d0_f3:?:1995 dummy-6.2501-2.2899
+30:992:50469:14:18:295:415:444:12:g_d0_f3:12:g_d0_f3:?:0.51870.4489
+30:993:50481:18:14:179:416:426:12:g_d0_f3:12:g_d0_f3:?:1996 dummy-11.8685-1.5536
+30:994:50506:14:17:295:415:412:12:g_d0_f3:12:g_d0_f3:?:0.50900.4167
+30:995:50518:17:15:179:416:395:12:g_d0_f3:12:g_d0_f3:?:1997 dummy-12.8032-3.1074
+30:996:50543:15:17:295:415:380:12:g_d0_f3:12:g_d0_f3:?:0.51720.3957
+30:997:50555:17:15:179:416:363:12:g_d0_f3:12:g_d0_f3:?:1998 dummy-18.4337-7.2178
+30:998:50580:15:17:295:415:348:12:g_d0_f3:12:g_d0_f3:?:0.60210.4639
+30:999:50592:17:15:179:416:331:12:g_d0_f3:12:g_d0_f3:?:1999 dummy-27.1906-7.5220
+30:1000:50617:15:17:295:415:316:12:g_d0_f3:12:g_d0_f3:?:0.72190.4835
+30:1001:50629:17:14:179:419:299:12:g_d0_f3:12:g_d0_f3:?:2000 dummy-29.8092-10.7238
+30:1002:50655:14:18:295:415:285:12:g_d0_f3:12:g_d0_f3:?:0.81000.6091
+30:1003:50667:18:14:179:401:267:12:g_d0_f4:12:g_d0_f3:?:σν23.8670–
+30:1004:50677:14:21:295:401:253:12:g_d0_f3:12:g_d0_f3:?:0.8092–
+30:1005:50684:21:34:167:431:232:10:g_d0_f23:10:g_d0_f23:?:All coefficients are significant at the1%level of significance.
+30:1006:50747:34:36:68:551:198:17:g_d0_f2:17:g_d0_f2:C:6    Measuring the Welfare Implications of a Non-Marginal
+30:1007:50804:36:46:97:364:162:17:g_d0_f2:17:g_d0_f2:C:Change in Violent Crime Rates
+30:1008:50833:46:24:68:542:116:12:g_d0_f3:12:g_d0_f3:B:As  is  clear  from  our  data  description,  the  San  Francisco  Metropolitan  Area  experienced  a
+30:1009:50934:24:0:68:542:92:12:g_d0_f3:12:g_d0_f3:B:large and persistent reduction in average violent crime rates over the course of our sample
+31:1010:51027:0:24:68:542:696:12:g_d0_f3:12:g_d0_f3:B:period.  Similar reductions have been observed in numerous other cities across the US. Out of
+31:1011:51120:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:the 25 cities that he considers, Levitt (2004) ranks San Francisco 12th in terms of the size of
+31:1012:51215:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:the reduction in homicides experienced between 1991 - 2001.  This change in the violent crime
+31:1013:51308:23:35:68:524:625:12:g_d0_f3:8:g_d0_f5:B:rate represents a significant improvement on average and is, importantly, non-marginal.24
+31:1014:51397:35:24:93:542:590:12:g_d0_f3:12:g_d0_f3:A:There is a large and growing literature aimed at valuing the benefits of crime reductions
+31:1015:51486:24:23:68:542:566:12:g_d0_f3:12:g_d0_f3:B:(with, for example, the goal of conducting cost-benefit analysis of police force expansions).
+31:1016:51579:23:24:68:542:543:12:g_d0_f3:12:g_d0_f3:B:This literature was  recently  surveyed by  Heaton  (2010).  He notes that  the property value
+31:1017:51673:24:24:68:542:519:12:g_d0_f3:12:g_d0_f3:B:hedonic technique is valuable for recovering the intangible costs of crime (e.g.,  lost quality
+31:1018:51768:24:24:68:542:495:12:g_d0_f3:12:g_d0_f3:B:of life for fear of victimization or effective loss of public space).  Such intangibles are likely
+31:1019:51866:24:24:68:542:471:12:g_d0_f3:12:g_d0_f3:B:to be particularly important for measuring the costs of violent crime (a point emphasized by
+31:1020:51958:24:34:68:372:447:12:g_d0_f3:12:g_d0_f3:B:Linden and Rockoff (2008) with respect to sexual offenses).
+31:1021:52017:34:24:93:542:413:12:g_d0_f3:12:g_d0_f3:A:For this welfare analysis, we consider the set of all individuals who purchased a house in
+31:1022:52107:24:24:68:542:389:12:g_d0_f3:12:g_d0_f3:B:1999 (summary statistics describing these individuals is given in Table (5)).  We then measure
+31:1023:52201:24:24:68:542:365:12:g_d0_f3:12:g_d0_f3:B:the value of the crime changes that these individuals actually experienced between 1999 and
+31:1024:52292:24:24:68:542:341:12:g_d0_f3:12:g_d0_f3:B:2000.  It is highly likely that these individuals still occupy the same residence in 2000 and, as
+31:1025:52389:24:24:68:542:317:12:g_d0_f3:12:g_d0_f3:B:we show in this section, the changes that occurred over this year were substantial enough that
+31:1026:52483:24:24:68:542:293:12:g_d0_f3:12:g_d0_f3:B:proper identification of the MWTP function becomes important in measuring their change in
+31:1027:52572:24:24:68:542:269:12:g_d0_f3:12:g_d0_f3:B:welfare.  In particular, Figure (4) illustrates the distribution of changes in violent crime rates
+31:1028:52670:24:24:68:542:245:12:g_d0_f3:12:g_d0_f3:B:experienced by this set of households.  The 1999 data allows us to consider the welfare changes
+31:1029:52765:24:23:68:542:221:12:g_d0_f3:12:g_d0_f3:B:associated with both reductions and increases in crime; approximately sixty percent of these
+31:1030:52857:23:24:68:542:198:12:g_d0_f3:12:g_d0_f3:B:households  experienced  reductions  in  violent  crime  during  this  period  while  the  remaining
+31:1031:52957:24:18:68:334:174:12:g_d0_f3:12:g_d0_f3:B:forty percent experienced increases in violent crime.
+31:1032:53010:18:16:77:542:156:7:g_d0_f6:10:g_d0_f7:F:24Levitt (2004) discusses six factors that he argues were not responsible for these declines, including economic
+31:1033:53122:16:12:68:542:140:10:g_d0_f7:10:g_d0_f7:F:growth  and  reduced  unemployment,  shifting  age  and  racial  demographics,  changes  in  policing  strategies,
+31:1034:53236:12:12:68:542:128:10:g_d0_f7:10:g_d0_f7:F:changes in gun control laws and laws controlling concealed weapons, and changes in capital punishment.  He
+31:1035:53342:12:12:68:542:116:10:g_d0_f7:10:g_d0_f7:F:argues instead that there is a strong case to be made for the role of increasing size of the police force, increased
+31:1036:53458:12:12:68:542:104:10:g_d0_f7:10:g_d0_f7:F:incarceration rats, declines in the crack epidemic, and the legalization of abortion twenty years prior.  The
+31:1037:53567:12:12:68:542:92:10:g_d0_f7:10:g_d0_f7:F:relative  importance  of  each  of  these  factors  is  still  a  contentious  topic.   See,  for  example,  Blumstein  and
+31:1038:53690:12:0:68:141:80:10:g_d0_f7:10:g_d0_f7:F:Wallman (2006).
+32:1039:53707:0:393:98:512:690:12:g_d0_f3:12:g_d0_f3:?:Figure 4:  Distribution of One-Year Violent Crime Rate Changes for 1999 Buyers
+32:1040:53785:393:24:93:542:297:12:g_d0_f3:12:g_d0_f3:A:For the purposes of illustration, we report valuations based on three different estimation
+32:1041:53875:24:24:68:542:273:12:g_d0_f3:12:g_d0_f3:B:strategies:  (i) Bishop-Timmins, (ii) Rosen, and (iii) horizontal MWTP. The third approach
+32:1042:53965:24:24:68:542:249:12:g_d0_f3:12:g_d0_f3:B:assigns a constant willingness to pay to each individual equal to the slope of the hedonic price
+32:1043:54061:24:24:68:542:225:12:g_d0_f3:12:g_d0_f3:B:function  at  their  observed  housing  choice.   As  the  utility  function  is  assumed  to  be  linear
+32:1044:54166:24:24:68:542:201:12:g_d0_f3:12:g_d0_f3:B:inZ(i.e.,  the  MWTP  function  is  constant  inZ),  this  approach  corresponds  to  either  the
+32:1045:54263:24:24:68:542:177:12:g_d0_f3:12:g_d0_f3:B:“inversion” procedure outlined in Bajari and Benkard (2005) or to the Rosen (1974) model
+32:1046:54351:24:24:68:542:153:12:g_d0_f3:12:g_d0_f3:B:where  the  endogeneity  problem  is  trivially  solved  by  assuming  that  the  MWTP  function
+32:1047:54447:24:23:68:541:129:12:g_d0_f3:12:g_d0_f3:B:doesn’t depend onZ.  In this case, the welfare effects may be calculated as the area of the
+32:1048:54538:23:24:68:542:106:12:g_d0_f3:12:g_d0_f3:B:rectangle under the horizontal MWTP, with the width given by the experienced change in
+32:1049:54624:24:0:68:542:82:12:g_d0_f3:12:g_d0_f3:B:violent crime.  For the first two strategies, the value associated with a change in the violent
+33:1050:54721:0:24:68:542:696:12:g_d0_f3:12:g_d0_f3:B:crime rate is calculated as the area of the trapezoid under the MWTP function over the width
+33:1051:54813:24:34:68:287:672:12:g_d0_f3:12:g_d0_f3:B:of the experienced change in violent crime.
+33:1052:54856:34:24:93:542:638:12:g_d0_f3:12:g_d0_f3:A:We report results separately for the sixty percent of buyers who experienced a reduction
+33:1053:54944:24:24:68:542:614:12:g_d0_f3:12:g_d0_f3:B:in their violent crime rate and for the remaining forty percent of buyers who experienced an
+33:1054:55036:24:24:68:542:590:12:g_d0_f3:12:g_d0_f3:B:increase in Table (9).25Note that the large standard deviations of WTP illustrate skewness
+33:1055:55126:24:23:68:542:566:12:g_d0_f3:12:g_d0_f3:B:of the distributions, versus individuals experiencing counterintuitive (positive) signs on their
+33:1056:55222:23:33:68:99:543:12:g_d0_f3:12:g_d0_f3:B:WTP.
+33:1057:55226:33:26:153:457:510:12:g_d0_f3:12:g_d0_f3:?:Table 9:  WTP for Non-Marginal Changes in Violent Crime
+33:1058:55281:26:15:236:482:484:12:g_d0_f3:12:g_d0_f3:?:Buyers with ReductionsBuyers with Increases
+33:1059:55324:15:15:264:459:469:12:g_d0_f3:12:g_d0_f3:?:(n= 29,953)(n= 19,485)
+33:1060:55346:15:14:236:478:454:12:g_d0_f3:12:g_d0_f3:?:AverageStd.  Dev.AverageStd.  Dev.
+33:1061:55380:14:30:242:466:440:12:g_d0_f3:12:g_d0_f3:?:WTPWTPWTPWTP
+33:1062:55392:30:19:127:471:410:12:g_d0_f3:12:g_d0_f3:?:Bishop-Timmins269.57328.26-980.691896.06
+33:1063:55432:19:18:127:469:391:12:g_d0_f3:12:g_d0_f3:?:Rosen401.15543.86-581.88679.76
+33:1064:55462:18:60:127:469:373:12:g_d0_f3:12:g_d0_f3:?:Horizontal MWTP395.83532.83-595.31710.78
+33:1065:55502:60:24:93:542:313:12:g_d0_f3:12:g_d0_f3:A:The bias from improperly accounting for the effect of a non-marginal change in violent
+33:1066:55588:24:24:68:542:289:12:g_d0_f3:12:g_d0_f3:B:crime on MWTP is evident.  Consider first the case of crime reductions.  The Rosen model and
+33:1067:55680:24:24:68:542:265:12:g_d0_f3:12:g_d0_f3:B:horizontal MWTP yield estimates of the average WTP for observed reductions that are 1.49
+33:1068:55768:24:24:68:542:241:12:g_d0_f3:12:g_d0_f3:B:times greater than our model, implying an almost fifty-percent upward bias.  The direction
+33:1069:55858:24:23:68:542:217:12:g_d0_f3:12:g_d0_f3:B:of  the  bias  is  reversed  when  we  consider  increases  in  the  rates  of  violent  crime.   Here,  the
+33:1070:55966:23:24:68:542:194:12:g_d0_f3:12:g_d0_f3:B:alternative  models  yield  estimates  of  average  WTP  for  observed  crime  reductions  that  are
+33:1071:56066:24:24:68:542:170:12:g_d0_f3:12:g_d0_f3:B:only 0.59 of our estimate.  These differences are far from trivial and would have an important
+33:1072:56160:24:18:68:256:146:12:g_d0_f3:12:g_d0_f3:B:impacts on any cost-benefit analysis.
+33:1073:56197:18:16:77:542:128:7:g_d0_f6:10:g_d0_f7:F:25In the calculations for buyers experiencing a decrease in violent crime, we restrict the marginal willingness
+33:1074:56308:16:12:68:542:112:10:g_d0_f7:10:g_d0_f7:F:to pay curve to be non-positive.  This has little effect on the welfare implications; our average willingness to
+33:1075:56420:12:0:68:232:100:10:g_d0_f7:10:g_d0_f7:F:pay without this restriction is 243.68.
+34:1076:56461:0:46:68:190:696:17:g_d0_f2:17:g_d0_f2:C:7    Conclusion
+34:1077:56476:46:24:68:542:650:12:g_d0_f3:12:g_d0_f3:B:Researchers regularly ascribe downward sloping demand curves to households for goods rang-
+34:1078:56566:24:24:68:542:626:12:g_d0_f3:12:g_d0_f3:B:ing from breakfast cereals to BMWs.  In fact, recovering the price elasticity of demand for such
+34:1079:56662:24:23:68:542:602:12:g_d0_f3:12:g_d0_f3:B:goods constitutes one of the main activities undertaken by applied microeconomists.  How-
+34:1080:56751:23:24:68:542:579:12:g_d0_f3:12:g_d0_f3:B:ever, because of the difficult endogeneity problems associated with the recovery of the MWTP
+34:1081:56843:24:24:68:542:555:12:g_d0_f3:12:g_d0_f3:B:function using the hedonic technique, the same flexibility has generally not been applied to
+34:1082:56935:24:24:68:542:531:12:g_d0_f3:12:g_d0_f3:B:household demand for local public goods and amenities.  Instead, applications of the hedo-
+34:1083:57025:24:24:68:542:507:12:g_d0_f3:12:g_d0_f3:B:nic method have tended to focus only on the first-stage hedonic price regression; recovering
+34:1084:57117:24:24:68:542:483:12:g_d0_f3:12:g_d0_f3:B:parameters  that  only  yield  valid  welfare  estimates  for  marginal  policies.   In  order  to  prop-
+34:1085:57222:24:24:68:542:459:12:g_d0_f3:12:g_d0_f3:B:erly evaluate the welfare effects associated with larger policies, the researcher must recover
+34:1086:57316:24:24:68:542:435:12:g_d0_f3:12:g_d0_f3:B:the structural parameters of the MWTP function.  In this paper, we propose an estimation
+34:1087:57404:24:24:68:542:411:12:g_d0_f3:12:g_d0_f3:B:approach for the recovery of these parameters,  while avoiding the endogeneity problems so
+34:1088:57494:24:34:68:304:387:12:g_d0_f3:12:g_d0_f3:B:commonly associated with the hedonic model.
+34:1089:57537:34:24:93:542:353:12:g_d0_f3:12:g_d0_f3:A:We show that there is no fundamental endogeneity problem in the hedonic model; the
+34:1090:57619:24:24:68:542:329:12:g_d0_f3:12:g_d0_f3:B:endogeneity problems are largely manufactured and are a result of framing Rosen’s second
+34:1091:57707:24:24:68:542:305:12:g_d0_f3:12:g_d0_f3:B:stage regression in terms of marginal cost (implicit attribute price) equaling marginal benefit
+34:1092:57802:24:24:68:542:281:12:g_d0_f3:12:g_d0_f3:B:(marginal utility from consuming the amenity in question).  We instead rearrange the informa-
+34:1093:57895:24:24:68:542:257:12:g_d0_f3:12:g_d0_f3:B:tion provided by the hedonic equilibrium and arrive at a simple modeling environment with
+34:1094:57984:24:23:68:542:233:12:g_d0_f3:12:g_d0_f3:B:a single endogenous outcome variable, a vector of exogenous variables, and an econometric
+34:1095:58073:23:35:68:96:210:12:g_d0_f3:12:g_d0_f3:B:error.
+34:1096:58079:35:24:93:542:175:12:g_d0_f3:12:g_d0_f3:A:Estimation of the model is straightforward and consists of a standard Maximum Like-
+34:1097:58162:24:23:68:542:151:12:g_d0_f3:12:g_d0_f3:B:lihood  procedure  which  employs  a  textbook  change-of-variables  technique.   In  a  restricted
+34:1098:58261:23:24:68:542:128:12:g_d0_f3:12:g_d0_f3:B:version of the model, a closed-form solution for the amenity of interest may be found analyt-
+34:1099:58354:24:24:68:542:104:12:g_d0_f3:12:g_d0_f3:B:ically and the change of variables is not required.  Estimation in the simplest version of the
+34:1100:58448:24:0:68:542:80:12:g_d0_f3:12:g_d0_f3:B:model may even be reduced to an indirect least squares procedure, exploiting the one-to-one
+35:1101:58541:0:24:68:542:696:12:g_d0_f3:12:g_d0_f3:B:mapping between the structural and reduced-form parameters.  Like the Rosen model,  our
+35:1102:58628:24:24:68:542:672:12:g_d0_f3:12:g_d0_f3:B:approach is (i) quite intuitive, as it is derived from the first-order condition for utility max-
+35:1103:58725:24:23:68:542:648:12:g_d0_f3:12:g_d0_f3:B:imization, (ii) able to incorporate rich individual- and market- level heterogeneity, and (iii)
+35:1104:58820:23:24:68:542:625:12:g_d0_f3:12:g_d0_f3:B:computationally light and easy to implement.  Additionally, our model requires no more in
+35:1105:58909:24:35:68:314:601:12:g_d0_f3:12:g_d0_f3:B:terms of data than the standard hedonic model.
+35:1106:58955:35:23:93:542:566:12:g_d0_f3:12:g_d0_f3:A:Using a series of Monte Carlo experiments, we demonstrate that our proposed estimator
+35:1107:59040:23:24:68:542:543:12:g_d0_f3:12:g_d0_f3:B:presents  very  little  bias  in  finite  samples.   Applying  our  model  to  data  on  violent  crime
+35:1108:59143:24:24:68:542:519:12:g_d0_f3:12:g_d0_f3:B:rates in California’s Bay Area, we find that properly accounting for the shape of the MWTP
+35:1109:59233:24:24:68:542:495:12:g_d0_f3:12:g_d0_f3:B:function has important implications for measuring the welfare effects of non-marginal changes
+35:1110:59326:24:24:68:542:471:12:g_d0_f3:12:g_d0_f3:B:in violent crime.  Considering the welfare effects associated with the observed one-year change
+35:1111:59421:24:24:68:542:447:12:g_d0_f3:12:g_d0_f3:B:in crime for those households that purchased a house in 1999, we find that alternative modeling
+35:1112:59516:24:24:68:542:423:12:g_d0_f3:12:g_d0_f3:B:procedures overstate benefits (for those households which experienced a decrease in violent
+35:1113:59607:24:24:68:542:399:12:g_d0_f3:12:g_d0_f3:B:crime) by fifty percent relative to our approach and understate costs (for those households
+35:1114:59698:24:24:68:542:375:12:g_d0_f3:12:g_d0_f3:B:which  experienced  an  increase  in  violent  crime)  by  forty  percent  relative  to  our  approach.
+35:1115:59801:24:24:68:542:351:12:g_d0_f3:12:g_d0_f3:B:These  differences  are  both  statistically  and  economically  significant  and  consequential  for
+35:1116:59902:24:0:68:492:327:12:g_d0_f3:12:g_d0_f3:B:cost-benefit analyses of policies that may have large impacts on future crime rates.
+36:1117:59988:0:34:68:159:696:17:g_d0_f2:17:g_d0_f2:C:References
+36:1118:59998:34:22:68:541:662:11:g_d0_f24:11:g_d0_f7:F:Bajari,  P.,  and  C.L.  Benkard.2005.  “Demand  Estimation  with  Heterogeneous  Consumers
+36:1119:60089:22:23:80:541:640:11:g_d0_f7:11:g_d0_f7:F:and Unobserved Product Characteristics:  A Hedonic Approach.”Journal  of  Political  Economy,
+36:1120:60182:23:32:80:169:617:11:g_d0_f7:11:g_d0_f7:?:113(6): 1239–1276.
+36:1121:60200:32:23:68:541:585:11:g_d0_f24:11:g_d0_f7:F:Bajari, P., J. Cooley, K. Kim, and C. Timmins.2010. “A Theory-Based Approach to Hedonic
+36:1122:60287:23:22:80:542:562:11:g_d0_f7:11:g_d0_f7:F:Price Regressions with Time-Varying Unobserved Product Attributes:  The Price of Pollution.”
+36:1123:60379:22:32:80:280:540:11:g_d0_f23:11:g_d0_f7:?:American Economic Review, forthcoming.
+36:1124:60417:32:23:68:541:508:11:g_d0_f24:11:g_d0_f23:F:Bartik, T.J.1987. “The Estimation of Demand Parameters in Hedonic Price Models.”The Journal
+36:1125:60508:23:32:80:247:485:11:g_d0_f23:11:g_d0_f7:?:of Political Economy, 95(1): 81–88.
+36:1126:60543:32:23:68:541:453:11:g_d0_f24:11:g_d0_f7:F:Bayer, P., R. McMillan, A. Murphy, and C. Timmins.2010. “A Dynamic Model of Demand
+36:1127:60625:23:32:80:396:430:11:g_d0_f7:11:g_d0_f7:?:for Houses and Neighborhoods.” Working Paper, Duke University.
+36:1128:60687:32:23:68:541:398:11:g_d0_f24:11:g_d0_f7:F:Bishop, K.C., and A.D. Murphy.2011. “Estimating the Willingness to Pay to Avoid Violent
+36:1129:60774:23:32:80:451:375:11:g_d0_f7:11:g_d0_f7:?:Crime:  A Dynamic Approach.”American Economic Review, 101(3): 625–629.
+36:1130:60844:32:22:68:542:343:11:g_d0_f24:11:g_d0_f7:F:Black,  S.E.1999.  “Do  Better  Schools  Matter?   Parental  Valuation  of  Elementary  Education.”
+36:1131:60943:22:33:80:318:321:11:g_d0_f23:11:g_d0_f7:?:Quarterly Journal of Economics, 114(2): 577–599.
+36:1132:60991:33:22:68:542:288:11:g_d0_f24:11:g_d0_f23:F:Blumstein, A., and J. Wallman.2006. “The Crime Drop and Beyond.”Annual Review of Law
+36:1133:61075:22:33:80:228:266:11:g_d0_f23:11:g_d0_f7:?:and Social Science, 2: 125–146.
+36:1134:61106:33:22:68:542:233:11:g_d0_f24:11:g_d0_f7:F:Bui, L.T.M., and C.J. Mayer.2003. “Regulation and Capitalization of Environmental Ameni-
+36:1135:61194:22:22:80:541:211:11:g_d0_f7:11:g_d0_f23:F:ties:  Evidence From the  Toxic  Release  Inventory  in  Massachusetts.”Review  of  Economics  and
+36:1136:61292:22:33:80:202:189:11:g_d0_f23:11:g_d0_f7:?:Statistics, 85(3): 693–708.
+36:1137:61319:33:22:68:542:156:11:g_d0_f24:11:g_d0_f7:F:Chay, K.Y., and M. Greenstone.2005. “Does Air Quality Matter?  Evidence from the Housing
+36:1138:61407:22:33:80:305:134:11:g_d0_f7:11:g_d0_f7:?:Market.”Journal of Political Economy, 113(2).
+36:1139:61452:33:22:68:542:101:11:g_d0_f24:11:g_d0_f23:F:Court,  A.  T.1939.  “Hedonic  Price  Indexes  with  Automotive  Examples.”  InThe  Dynamics  of
+36:1140:61548:22:0:80:315:79:11:g_d0_f23:11:g_d0_f7:?:Automobile Demand. New York:  General Motors.
+37:1141:61595:0:22:68:541:696:11:g_d0_f24:11:g_d0_f7:F:Davis, L.W.2004. “The Effect of Health Risk on Housing Values: Evidence from a Cancer Cluster.”
+37:1142:61690:22:33:80:325:674:11:g_d0_f23:11:g_d0_f7:?:The American Economic Review, 94(5): 1693–1704.
+37:1143:61737:33:22:68:541:641:11:g_d0_f24:11:g_d0_f7:F:Ekeland, I., J.J. Heckman, and L. Nesheim.2004. “Identification and Estimation of Hedonic
+37:1144:61826:22:32:80:357:619:11:g_d0_f7:11:g_d0_f7:?:Models.”Journal of Political Economy, 112(1): S60–S109.
+37:1145:61881:32:23:68:541:587:11:g_d0_f24:11:g_d0_f23:F:Ellickson,  B.1971.  “Jurisdictional  Fragmentation  and  Residential  Choice.”The  American  Eco-
+37:1146:61979:23:32:80:224:564:11:g_d0_f23:11:g_d0_f7:?:nomic Review, 61(2): 334–339.
+37:1147:62008:32:23:68:541:532:11:g_d0_f24:11:g_d0_f7:F:Epple,  D.,  and  G.J.  Platt.1998.  “Equilibrium  and  Local  Redistribution  in  an  Urban  Econ-
+37:1148:62107:23:22:80:541:509:11:g_d0_f7:11:g_d0_f7:F:omy When Households Differ in Both Preferences and Incomes.”Journal  of  Urban  Economics,
+37:1149:62197:22:32:80:142:487:11:g_d0_f7:11:g_d0_f7:?:43(1): 23–51.
+37:1150:62210:32:23:68:541:455:11:g_d0_f24:11:g_d0_f7:F:Epple, D., and R.E. Romano.1998. “Competition Between Private and Public Schools, Vouchers,
+37:1151:62301:23:32:80:427:432:11:g_d0_f7:11:g_d0_f7:?:and Peer-Group Effects.”The American Economic Review, 88(1): 33–62.
+37:1152:62368:32:23:68:541:400:11:g_d0_f24:11:g_d0_f7:F:Epple, D.1987. “Hedonic Prices and Implicit Markets:  Estimating Demand and Supply Functions
+37:1153:62460:23:32:80:450:377:11:g_d0_f7:11:g_d0_f7:?:for Differentiated Products.”The Journal of Political Economy, 95(1): 59–80.
+37:1154:62536:32:22:68:541:345:11:g_d0_f24:11:g_d0_f23:F:Epple, D., and H. Sieg.1999. “Estimating Equilibrium Models of Local Jurisdictions.”Journal
+37:1155:62627:22:33:80:250:323:11:g_d0_f23:11:g_d0_f7:?:of Political Economy, 107: 645–681.
+37:1156:62662:33:22:68:542:290:11:g_d0_f24:11:g_d0_f7:F:Epple, D., R. Filimon, and T. Romer.1984. “Equilibrium Among Local Jurisdictions: Towards
+37:1157:62751:22:23:80:542:268:11:g_d0_f7:11:g_d0_f7:F:an Integrated Approach of Voting and Residential Choice.”Journal of Public Economics, 24: 281–
+37:1158:62845:23:32:80:99:245:11:g_d0_f7:11:g_d0_f7:?:304.
+37:1159:62849:32:22:68:542:213:11:g_d0_f24:11:g_d0_f7:F:Figlio, D.N., and M.E. Lucas.2004. “Whats in a Grade?  School Report Cards and the Housing
+37:1160:62939:22:33:80:360:191:11:g_d0_f7:11:g_d0_f7:?:Market.”The American Economic Review, 94(3): 591–604.
+37:1161:62992:33:22:68:542:158:11:g_d0_f24:11:g_d0_f7:F:Gamper-Rabindran, S., R. Mastromonaco, and C. Timmins.2011. “Valuing the Benefits
+37:1162:63073:22:23:80:542:136:11:g_d0_f7:11:g_d0_f7:F:of Superfund Site Remediation:  Three Approaches to Measuring Localized Externalities.” NBER
+37:1163:63165:23:0:80:206:113:11:g_d0_f7:11:g_d0_f7:?:Working Paper No. 16655.
+38:1164:63191:0:22:68:541:696:11:g_d0_f24:11:g_d0_f7:F:Gayer,  T.,  J.T.  Hamilton,  and  W.K.  Viscusi.2000.  “Private  Values  of  Risk  Tradeoffs  at
+38:1165:63288:22:23:80:541:674:11:g_d0_f7:11:g_d0_f23:F:Superfund Sites:  Housing Market Evidence on Learning About Risk.”Review of Economics and
+38:1166:63377:23:32:80:202:651:11:g_d0_f23:11:g_d0_f7:?:Statistics, 82(3): 439–451.
+38:1167:63404:32:22:68:542:619:11:g_d0_f24:11:g_d0_f7:F:Gibbons, S.2004. “The Costs of Urban Property Crime.”The Economic Journal, 114(499): F441–
+38:1168:63494:22:33:80:107:597:11:g_d0_f7:11:g_d0_f7:?:F463.
+38:1169:63499:33:22:68:541:564:11:g_d0_f24:11:g_d0_f7:F:Greenstone, M., and J. Gallagher.2008. “Does Hazardous Waste Matter?  Evidence from the
+38:1170:63586:22:23:80:542:542:11:g_d0_f7:11:g_d0_f7:F:Housing Market and the Superfund Program.”The Quarterly Journal of Economics, 123(3): 951–
+38:1171:63676:23:32:80:105:519:11:g_d0_f7:11:g_d0_f7:?:1003.
+38:1172:63681:32:22:68:541:487:11:g_d0_f24:11:g_d0_f7:F:Griliches, Z.1961. “Hedonic Price Indexes for Automobiles:  An Econometric of Quality Change.”
+38:1173:63775:22:23:80:542:465:11:g_d0_f23:11:g_d0_f23:F:NBER  Chapters  -  The  Price  Statistics  of  the  Federal  Government:  Review,  Appraisal,  and  Rec-
+38:1174:63879:23:32:80:196:442:11:g_d0_f23:11:g_d0_f7:?:ommendations, 173–196.
+38:1175:63901:32:23:68:541:410:11:g_d0_f24:11:g_d0_f7:F:Heaton, P.2010. “Hidden in Plain Sight:  What the Cost of Crime Research Can Tell Us About
+38:1176:63991:23:32:80:437:387:11:g_d0_f7:11:g_d0_f7:?:Investing in Police.”RAND Center on Quality, Occasional Policing Paper.
+38:1177:64062:32:22:68:541:355:11:g_d0_f24:11:g_d0_f7:F:Heckman, J.J., R.L. Matzkin, and L. Nesheim2010. “Nonparametric Identification and Es-
+38:1178:64148:22:33:80:438:333:11:g_d0_f7:11:g_d0_f7:?:timation of Nonadditive Hedonic Models.”Econometrica, 78(5):1569–1591.
+38:1179:64218:33:22:68:541:300:11:g_d0_f24:11:g_d0_f23:F:Kahn, S., and K. Lang1988. “Efficient Estimation of Structural Hedonic Systems.”International
+38:1180:64311:22:33:80:211:278:11:g_d0_f23:11:g_d0_f7:?:Economic Review, 157–166.
+38:1181:64336:33:22:68:541:245:11:g_d0_f24:11:g_d0_f7:F:Lancaster, K.J.1966. “A New Approach to Consumer Theory.”The Journal of Political Economy,
+38:1182:64426:22:32:80:153:223:11:g_d0_f7:11:g_d0_f7:?:74(2): 132–157.
+38:1183:64441:32:23:68:541:191:11:g_d0_f24:11:g_d0_f7:F:Levitt, S.D.2004. “Understanding Why Crime Fell in the 1990s:  Four Factors that Explain the
+38:1184:64533:23:32:80:491:168:11:g_d0_f7:11:g_d0_f7:?:Decline and Six that Do Not.”The Journal of Economic Perspectives, 18(1): 163–190.
+38:1185:64615:32:23:68:541:136:11:g_d0_f24:11:g_d0_f7:F:Linden, L., and J.E. Rockoff.2008. “Estimates of the Impact of Crime Risk on Property Values
+38:1186:64707:23:0:80:430:113:11:g_d0_f7:11:g_d0_f7:?:from Megan’s Laws.”The American Economic Review, 98(3): 1103–1127.
+39:1187:64775:0:22:68:541:696:11:g_d0_f24:11:g_d0_f7:F:Palmquist, R. B.2005. “Property Value Models.” InThe Handbook of Environmental Economics.
+39:1188:64864:22:33:80:351:674:11:g_d0_f7:11:g_d0_f7:?:Vol. 2, , ed. K. Goran-Maler and J. R. Vincent. Elsevier.
+39:1189:64921:33:22:68:542:641:11:g_d0_f24:11:g_d0_f7:F:Parmenter, C.F., and J.C. Pope.2009. “Quasi-Experiments and Hedonic Property Value Meth-
+39:1190:65009:22:22:80:541:619:11:g_d0_f7:11:g_d0_f7:F:ods.” InHandbook on Experimental Economics and the Environment. , ed. J. A. List and M. K.
+39:1191:65099:22:33:80:233:597:11:g_d0_f7:11:g_d0_f7:?:Price. Edward Elgar Publishers.
+39:1192:65130:33:22:68:541:564:11:g_d0_f24:11:g_d0_f7:F:Pope, J.C.2008. “Buyer Information and the Hedonic:  The Impact of a Seller Disclosure on the
+39:1193:65223:22:33:80:458:542:11:g_d0_f7:11:g_d0_f7:?:Implicit Price for Airport Noise.”Journal of Urban Economics, 63(2): 498–516.
+39:1194:65300:33:22:68:541:509:11:g_d0_f24:11:g_d0_f7:F:Rosen, S.1974. “Hedonic Prices and Implicit Markets:  Product Differentiation in Pure Competi-
+39:1195:65394:22:32:80:302:487:11:g_d0_f7:11:g_d0_f7:?:tion.”Journal of Political Economy, 82(1): 34.
+39:1196:65440:32:23:68:541:455:11:g_d0_f24:11:g_d0_f7:F:Sieg, H., V.K. Smith, H.S. Banzhaf, and R. Walsh.2004. “Estimating the General Equilib-
+39:1197:65527:23:22:80:541:432:11:g_d0_f7:11:g_d0_f23:F:rium Benefits of Large Changes in Spatially Delineated Public Goods.”International  Economic
+39:1198:65619:22:33:80:189:410:11:g_d0_f23:11:g_d0_f7:?:Review, 45: 1047–1077.
+39:1199:65641:33:22:68:541:377:11:g_d0_f24:11:g_d0_f23:F:Taylor, L.O.2003. “The Hedonic Method.” InA Primer on Nonmarket Valuation of the Environ-
+39:1200:65730:22:0:80:500:355:11:g_d0_f23:11:g_d0_f7:?:ment. , ed. T. Brown P. Champ and K. Boyle. Dordrecht:  Kluwer Academic Publishers.

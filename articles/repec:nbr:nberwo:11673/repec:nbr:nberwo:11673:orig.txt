@@ -1,0 +1,1095 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:470:610:12:Times:12:Times:ESTIMATION AND IDENTIFICATION OF MERGER EFFECTS:
+1:2:73:14:28:306:425:596:12:Times:12:Times:AN APPLICATION TO HOSPITAL MERGERS
+1:3:107:28:28:306:350:568:12:Times:12:Times:Leemore S. Dafny
+1:4:123:28:14:306:359:540:12:Times:12:Times:Working Paper 11673
+1:5:142:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w11673
+1:6:175:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:211:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:236:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:255:14:186:306:339:442:12:Times:12:Times:October 2005
+1:10:267:186:14:72:540:256:12:Times:12:Times:I am grateful for helpful suggestions by an anonymous referee, Julie Cullen, David Dranove, Jon Gruber,
+1:11:370:14:14:72:540:242:12:Times:12:Times:Vivian Ho, Richard Lindrooth, Michael Mazzeo, Robert Town, and especially Julian Jamison, Ilyana
+1:12:466:14:14:72:540:228:12:Times:12:Times:Kuziemko, and Scott Stern. This paper has also benefited from comments by numerous colleagues
+1:13:559:14:14:72:540:214:12:Times:12:Times:at seminars and conferences. I thank David Dranove, Richard Lindrooth, and Laurence Baker for generously
+1:14:663:14:14:72:540:200:12:Times:12:Times:sharing their data, and Jean Roth of NBER for assistance with the HCRIS database. Angela Malakhov,
+1:15:761:14:14:72:540:186:12:Times:12:Times:Fiona Wong and Subramaniam Ramanarayanan provided excellent research assistance. Support from
+1:16:854:14:14:72:540:172:12:Times:12:Times:the Institute for Policy Research at Northwestern is gratefully acknowledged. The views expressed
+1:17:951:14:14:72:540:158:12:Times:12:Times:herein are those of the author(s) and do not necessarily reflect the views of the National Bureau of
+1:18:1051:14:28:72:171:144:12:Times:12:Times:Economic Research.
+1:19:1069:28:14:72:540:116:12:Times:12:Times:© 2005 by Leemore S. Dafny. All rights reserved. Short sections of text, not to exceed two paragraphs,
+1:20:1171:14:14:72:540:102:12:Times:12:Times:may be quoted without explicit permission provided that full credit, including © notice, is given to
+1:21:1271:14:0:72:124:88:12:Times:12:Times:the source.
+2:22:1282:0:14:72:480:700:12:Times:12:Times:Estimation and Identification of Merger Effects: An Application to Hospital Mergers
+2:23:1365:14:14:72:160:686:12:Times:12:Times:Leemore S. Dafny
+2:24:1381:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 11673
+2:25:1409:14:14:72:250:658:12:Times:12:Times:October 2005, Revised October 2007
+2:26:1443:14:28:72:159:644:12:Times:12:Times:JEL No. I1,D4,L0
+2:27:1459:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:28:1467:28:14:72:540:588:12:Times:12:Times:Advances in structural demand estimation have substantially improved economists' ability to forecast
+2:29:1567:14:14:72:540:574:12:Times:12:Times:the impact of mergers. However, these models rely on extensive assumptions about consumer choice
+2:30:1663:14:14:72:540:560:12:Times:12:Times:and firm objectives, and ultimately observational methods are needed to test their validity. Observational
+2:31:1769:14:14:72:540:546:12:Times:12:Times:studies, in turn, suffer from selection problems arising from the fact that merging entities differ from
+2:32:1873:14:14:72:540:532:12:Times:12:Times:non-merging entities in unobserved ways. To obtain an accurate estimate of the effect of consummated
+2:33:1973:14:14:72:540:518:12:Times:12:Times:mergers, I propose a combination of rival analysis and instrumental variables. By focusing on the effect
+2:34:2077:14:14:72:540:504:12:Times:12:Times:of a merger on the behavior of rival firms, and instrumenting for these mergers, unbiased estimates
+2:35:2176:14:14:72:540:490:12:Times:12:Times:of the effect of a merger on market outcomes can be obtained. Using this methodology, I evaluate
+2:36:2272:14:14:72:540:476:12:Times:12:Times:the impact of independent hospital mergers between 1989 and 1996 on rivals' prices. I find sharp increases
+2:37:2378:14:14:72:540:462:12:Times:12:Times:in rivals' prices following a merger, with the greatest effect on the closest rivals. The results for this
+2:38:2484:14:14:72:540:448:12:Times:12:Times:industry are more consistent with predictions from structural models than with prior observational
+2:39:2582:14:28:72:120:434:12:Times:12:Times:estimates.
+2:40:2592:28:14:72:160:406:12:Times:12:Times:Leemore S. Dafny
+2:41:2608:14:14:72:271:392:12:Times:12:Times:Department of Management and Strategy
+2:42:2645:14:14:72:226:378:12:Times:12:Times:Kellogg School of Management
+2:43:2673:14:14:72:191:364:12:Times:12:Times:Northwestern University
+2:44:2696:14:14:72:170:350:12:Times:12:Times:2001 Sheridan Road
+2:45:2714:14:14:72:198:336:12:Times:12:Times:Evanston, IL  60208-2001
+2:46:2738:14:14:72:124:322:12:Times:12:Times:and NBER
+2:47:2746:14:0:72:240:308:12:Times:12:Times:l-dafny@kellogg.northwestern.edu
+3:48:2779:0:47:90:173:705:257:g_d0_f2:257:g_d0_f2:Introduction 
+3:49:2792:47:28:90:497:658:144:g_d0_f2:144:g_d0_f2:In recent years, economists have taken advantage of methodological advances in the 
+3:50:2875:28:28:90:504:630:144:g_d0_f2:144:g_d0_f2:estimation of structural demand models to simulate the impact of horizontal mergers.  
+3:51:2961:28:27:90:498:602:144:g_d0_f2:144:g_d0_f2:The strengths of this approach are many, not least the ability to predict the impact of 
+3:52:3049:27:28:89:512:575:144:g_d0_f2:144:g_d0_f2:future mergers rather than extrapolate from the experience of mergers that have already 
+3:53:3137:28:27:89:485:547:144:g_d0_f2:144:g_d0_f2:occurred.   However, these models require extensive assumptions about consumer 
+3:54:3216:27:28:89:519:520:144:g_d0_f2:144:g_d0_f2:demand and firm objectives, do not fully incorporate rivals’ reactions to actions taken by 
+3:55:3307:28:28:89:487:492:144:g_d0_f2:144:g_d0_f2:merging parties, and are computationally intensive and challenging to implement.  
+3:56:3389:28:27:89:514:464:144:g_d0_f2:144:g_d0_f2:Moreover, the predictions generated by such models can only be validated by analyzing 
+3:57:3475:27:28:89:513:437:144:g_d0_f2:144:g_d0_f2:the effects of consummated mergers.  To date, the courts have also been more receptive 
+3:58:3562:28:27:89:517:409:144:g_d0_f2:144:g_d0_f2:to observational methods that provide “hard evidence” of the likely impact of merger, as 
+3:59:3651:27:42:89:255:382:144:g_d0_f2:144:g_d0_f2:in the Staples-Office Depot case.1 
+3:60:3685:42:27:126:508:340:144:g_d0_f2:144:g_d0_f2:Unfortunately, most observational or “reduced-form” analyses of the impact of 
+3:61:3763:27:28:89:516:313:144:g_d0_f2:144:g_d0_f2:mergers fail to address fundamental selection problems arising from the fact that merger 
+3:62:3852:28:28:89:521:285:144:g_d0_f2:144:g_d0_f2:events are not randomly assigned.  These studies typically compare outcomes of merging 
+3:63:3939:28:27:89:506:257:144:g_d0_f2:144:g_d0_f2:firms with those of non-merging firms.  The resulting estimates suffer from a classical 
+3:64:4027:27:28:89:490:230:144:g_d0_f2:144:g_d0_f2:selection problem, as merging firms are likely different from non-merging firms in 
+3:65:4110:28:27:89:479:202:144:g_d0_f2:144:g_d0_f2:unobserved ways that affect the outcomes of interest.  For example, suppose that 
+3:66:4191:27:28:89:513:175:144:g_d0_f2:144:g_d0_f2:financially-distressed firms are more likely to be party to a merger, and post-merger the 
+3:67:4281:28:27:89:520:147:144:g_d0_f2:144:g_d0_f2:new entities reduce costs and decrease prices.  Conditional on survival, these firms might 
+3:68:4372:27:7:234:237:120:144:g_d0_f2:144:g_d0_f2:                                                 
+3:69:4420:7:16:90:515:113:42:g_d0_f2:100:g_d0_f2:1 In its successful attempt to block this merger, the FTC presented evidence that office supply prices were 
+3:70:4528:16:12:90:509:97:100:g_d0_f2:100:g_d0_f2:lowest in markets where all three office supply superstores competed (Staples, Office Depot, and Office 
+3:71:4632:12:11:90:517:85:100:g_d0_f2:100:g_d0_f2:Max).  Prices were higher in markets with two competitors, and higher still in markets with a single office 
+3:72:4740:11:0:90:463:74:100:g_d0_f2:100:g_d0_f2:supply superstore.   Federal Trade Commission v. Staples, Inc. and Office Depot, Inc., 1997. 
+4:73:4832:0:27:90:524:708:144:g_d0_f2:144:g_d0_f2:have reduced costs and decreased prices even more absent a merger.  More generally, any 
+4:74:4920:27:28:90:520:681:144:g_d0_f2:144:g_d0_f2:omitted factor that is correlated with the outcome measure as well as with the probability 
+4:75:5011:28:41:89:405:653:144:g_d0_f2:144:g_d0_f2:of merger will generate biased estimates of the impact of merger. 
+4:76:5077:41:28:125:498:612:144:g_d0_f2:144:g_d0_f2:Some studies enhance the basic differences-in-differences approach by using 
+4:77:5153:28:28:90:503:584:144:g_d0_f2:144:g_d0_f2:matching algorithms to identify a superior control group (e.g. Dranove and Lindrooth 
+4:78:5238:28:27:90:508:556:144:g_d0_f2:144:g_d0_f2:2003).  Yet another approach, introduced by Eckbo (1983), is to eliminate the merging 
+4:79:5324:27:28:90:510:529:144:g_d0_f2:144:g_d0_f2:entities from the analysis entirely and to focus on the responses of rivals to mergers.  If 
+4:80:5416:28:27:90:497:501:144:g_d0_f2:144:Times:merging parties exercise their newly-acquired market power by raising price, ceteris 
+4:81:5501:27:28:90:519:474:144:Times:144:g_d0_f2:paribus their rivals will be able to raise price as well.2  Thus, rival analysis compares the 
+4:82:5595:28:28:90:515:446:144:g_d0_f2:144:g_d0_f2:outcomes of firms with merging rivals to the outcomes of firms without merging rivals.  
+4:83:5683:28:27:90:506:418:144:g_d0_f2:144:g_d0_f2:These results are also likely to be biased by selection, however, as firms with merging 
+4:84:5771:27:42:90:382:391:144:g_d0_f2:144:g_d0_f2:rivals are likely different from firms without merging rivals. 
+4:85:5834:42:27:125:521:349:144:g_d0_f2:144:g_d0_f2:This paper improves upon prior observational studies by combining rival analysis 
+4:86:5915:27:28:90:522:322:144:g_d0_f2:144:g_d0_f2:with instrumental variables (IV).  I estimate the effect of a rival’s merger on a firm’s own 
+4:87:6008:28:28:89:497:294:144:g_d0_f2:144:g_d0_f2:price, instrumenting for whether a firm is exposed to a rival’s merger.  Provided this 
+4:88:6095:28:27:89:514:266:144:g_d0_f2:144:g_d0_f2:instrument is correlated with the probability of rival merger and uncorrelated with other 
+4:89:6185:27:28:89:521:239:144:g_d0_f2:144:g_d0_f2:unobserved factors affecting a firm’s own price, this methodology will generate unbiased 
+4:90:6274:28:27:89:509:211:144:g_d0_f2:144:g_d0_f2:estimates of the causal effect of merger on market-level outcomes.  I test this approach 
+4:91:6363:27:28:89:466:184:144:g_d0_f2:144:g_d0_f2:using data on the general acute-care hospital industry in the U.S., a sector that 
+4:92:6445:28:36:90:369:156:144:g_d0_f2:144:g_d0_f2:experienced a wave of merger activity during the 1990s.   
+4:93:6503:36:7:234:237:120:144:g_d0_f2:144:g_d0_f2:                                                 
+4:94:6551:7:16:90:524:113:42:g_d0_f2:100:g_d0_f2:2 This argument assumes prices are strategic complements. Hospitals are typically modeled as differentiated 
+4:95:6659:16:12:89:511:97:100:g_d0_f2:100:g_d0_f2:Bertrand competitors, hence the assumption.  See Gaynor and Vogt (2003) for an excellent discussion of 
+4:96:6762:12:11:89:513:85:100:g_d0_f2:100:g_d0_f2:prior theoretical and empirical work.  Rival analysis has also been used to infer the competitive effects of 
+4:97:6871:11:0:89:371:74:100:g_d0_f2:100:g_d0_f2:other decisions, such as changes in capital structure (Chevalier 1995). 
+5:98:6944:0:27:126:522:708:144:g_d0_f2:144:g_d0_f2:The instrument I propose for merger in the hospital industry is co-location.  Using 
+5:99:7028:27:28:90:509:681:144:g_d0_f2:144:g_d0_f2:the exact latitude and longitude coordinates for each hospital’s main address in 1988, I 
+5:100:7117:28:27:89:504:653:144:g_d0_f2:144:g_d0_f2:identify co-located or adjacent hospitals, defined as hospitals within 0.3 miles of each 
+5:101:7206:27:28:89:514:626:144:g_d0_f2:144:g_d0_f2:other “as the crow files” and no more than 5 blocks apart.  Using this criterion, 191 (3.6 
+5:102:7297:28:28:89:502:598:144:g_d0_f2:144:g_d0_f2:percent) of the 5,373 general, non-federal hospitals in the non-territorial U.S. in 1988 
+5:103:7386:28:27:89:504:570:144:g_d0_f2:144:g_d0_f2:were co-located with at least one other hospital.  There are two reasons such hospitals 
+5:104:7474:27:28:89:493:543:144:g_d0_f2:144:g_d0_f2:should be more likely to merge: the potential to cut costs through the elimination of 
+5:105:7560:28:27:89:490:515:144:g_d0_f2:144:g_d0_f2:duplicate departments is greater, and the ability to increase price is greater because 
+5:106:7647:27:28:89:510:488:144:g_d0_f2:144:g_d0_f2:location is a primary differentiating factor for inpatient care (Dranove and White 1994, 
+5:107:7736:28:28:89:479:460:144:g_d0_f2:144:g_d0_f2:Tay 2003).  This prediction is borne out in the data, which shows that co-located 
+5:108:7818:28:27:89:506:432:144:g_d0_f2:144:g_d0_f2:hospitals are nearly three times as likely to merge as non-co-located hospitals, a factor 
+5:109:7908:27:28:89:480:405:144:g_d0_f2:144:g_d0_f2:that is scarcely diminished after controlling for a large set of hospital and market 
+5:110:7993:28:27:89:504:377:144:g_d0_f2:144:g_d0_f2:characteristics.  Thus, rival co-location is an excellent instrument for rival merger.  In 
+5:111:8084:27:28:89:519:350:144:g_d0_f2:144:g_d0_f2:this study, a rival is defined as another hospital located within a certain distance from the 
+5:112:8178:28:42:89:250:322:144:g_d0_f2:144:g_d0_f2:hospital in question, e.g. 7 miles. 
+5:113:8214:42:27:125:511:280:144:g_d0_f2:144:g_d0_f2:Using this instrument together with data on hospital mergers occurring between 
+5:114:8293:27:28:89:502:253:144:g_d0_f2:144:g_d0_f2:1989 and 1996, I find evidence of substantial post-merger price increases by rivals of 
+5:115:8380:28:27:89:500:225:144:g_d0_f2:144:g_d0_f2:merging hospitals.   These increases were realized by 1997; prices appear to stabilize 
+5:116:8467:27:28:90:516:198:144:g_d0_f2:144:g_d0_f2:thereafter.  Price increases were greater among hospitals that were geographically closer 
+5:117:8557:28:28:89:509:170:144:g_d0_f2:144:g_d0_f2:to the merging parties. Failing to instrument for rivals’ mergers produces a statistically 
+5:118:8648:28:0:89:309:142:144:g_d0_f2:144:g_d0_f2:insignificant estimate of less than 2 percent.   
+6:119:8698:0:27:126:502:708:144:g_d0_f2:144:g_d0_f2:The findings caution against analyses that compare merging and non-merging 
+6:120:8773:27:28:90:508:681:144:g_d0_f2:144:g_d0_f2:firms, particularly in the same market, where reactions to rivals’ prices are likely.  The 
+6:121:8864:28:27:90:515:653:144:g_d0_f2:144:g_d0_f2:estimates presented here are far more consistent with predictions from structural models 
+6:122:8953:27:28:90:501:626:144:g_d0_f2:144:g_d0_f2:of demand in similar settings (Capps, Dranove and Satterthwaite (2003); Gaynor and 
+6:123:9036:28:28:90:497:598:144:g_d0_f2:144:g_d0_f2:Vogt (2003)) than with estimates from prior observational studies (e.g. Connor et al. 
+6:124:9122:28:27:90:488:570:144:g_d0_f2:144:g_d0_f2:1998), which generally find no effect or a negative effect of merger on price.  This 
+6:125:9207:27:28:90:510:543:144:g_d0_f2:144:g_d0_f2:finding supports the use of structural models for prospective merger analysis.   Finally, 
+6:126:9297:28:27:90:509:515:144:g_d0_f2:144:g_d0_f2:the results suggest that hospital markets are far smaller than those typically adopted by 
+6:127:9387:27:42:90:271:488:144:g_d0_f2:144:g_d0_f2:researchers, practitioners, and courts. 
+6:128:9427:42:28:126:511:446:144:g_d0_f2:144:g_d0_f2:The paper proceeds as follows.  Section 2 lays the theoretical foundation for the 
+6:129:9509:28:27:90:489:418:144:g_d0_f2:144:g_d0_f2:empirical analysis.  Section 3 describes the hospital industry and summarizes prior 
+6:130:9593:27:28:90:518:391:144:g_d0_f2:144:g_d0_f2:related research.  Section 4 defines the study samples and provides descriptive statistics.  
+6:131:9686:28:27:90:485:363:144:g_d0_f2:144:g_d0_f2:Section 5 presents the empirical specifications and results.  Section 6 explores the 
+6:132:9771:27:46:90:449:336:144:g_d0_f2:144:g_d0_f2:sensitivity of the results to alternative specifications.  Section 7 concludes. 
+6:133:9851:46:47:90:305:290:257:g_d0_f2:257:g_d0_f2:2       Theoretical       Framework       
+6:134:9893:47:27:90:479:243:144:g_d0_f2:144:g_d0_f2:The theoretical foundation for my empirical strategy is a simple model of spatial 
+6:135:9975:27:28:90:522:216:144:g_d0_f2:144:g_d0_f2:differentiation, Salop’s Circular City (1979).  Firms independently maximize their profits 
+6:136:10066:28:28:90:500:188:144:g_d0_f2:144:g_d0_f2:taking others’ actions as given; differentiation among the firms produces equilibrium 
+6:137:10152:28:27:90:514:160:144:g_d0_f2:144:g_d0_f2:prices that exceed costs.  In Salop’s model, the location of N firms along a circle of unit 
+6:138:10244:27:36:90:474:133:144:g_d0_f2:144:g_d0_f2:circumference is exogenously determined.  Consumers of mass 1 are uniformly 
+6:139:10320:36:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+6:140:10368:7:16:90:521:90:42:g_d0_f2:100:g_d0_f2:4Colocated hospitals are by definition undifferentiated, so under common ownership the price would be the 
+6:141:10474:16:0:89:378:74:100:g_d0_f2:100:g_d0_f2:same regardless of the number of hospitals that remain open at the site.  
+7:142:10549:0:27:90:482:708:144:g_d0_f2:144:g_d0_f2:distributed along the circle, and have unitary demand and value v for the product, 
+7:143:10632:27:28:90:524:681:144:g_d0_f2:144:g_d0_f2:regardless of the firm supplying it.  When purchasing this product from firm j, consumer i 
+7:144:10722:28:27:90:510:653:144:g_d0_f2:144:g_d0_f2:incurs transport costs of t·dij, where dij denotes the distance (along the circle) between i 
+7:145:10814:27:28:90:480:626:144:g_d0_f2:144:g_d0_f2:and j.  Transport costs can be viewed more generally as the costs associated with 
+7:146:10896:28:28:90:521:598:144:g_d0_f2:144:g_d0_f2:consuming a product that differs from the consumer’s optimal product (i.e. a product that 
+7:147:10986:28:27:90:514:570:144:g_d0_f2:144:g_d0_f2:coincides with her location in product space).  To illustrate the effect of a merger in this 
+7:148:11079:27:28:89:524:543:144:g_d0_f2:144:g_d0_f2:setting, and particularly a merger of co-located firms, I solve Salop models that reflect the 
+7:149:11173:28:41:89:329:515:144:g_d0_f2:144:g_d0_f2:market structures I use to identify merger effects. 
+7:150:11225:41:28:125:518:474:144:g_d0_f2:144:g_d0_f2:Gal-Or (1999) also uses the Salop circle to model competition in this sector, with 
+7:151:11308:28:28:89:485:446:144:g_d0_f2:144:g_d0_f2:separate circles for hospitals and insurers in a given geographic market.  Gal-Or’s 
+7:152:11392:28:27:89:516:418:144:g_d0_f2:144:g_d0_f2:treatment focuses on when it is optimal to merge without closing a facility post-merger,  
+7:153:11482:27:28:89:523:391:144:g_d0_f2:144:g_d0_f2:and on how this decision is influenced by the interaction between the market structures of 
+7:154:11573:28:27:89:498:363:144:g_d0_f2:144:g_d0_f2:the hospital and insurance sectors.  The closure decision is a non-issue in the present 
+7:155:11661:27:28:89:492:336:144:g_d0_f2:144:g_d0_f2:setting, where the mergers of interest occur between co-located hospitals.4  I do not 
+7:156:11747:28:28:90:511:308:144:g_d0_f2:144:g_d0_f2:model the interaction between hospitals and insurers; this interaction clearly influences 
+7:157:11837:28:41:90:362:280:144:g_d0_f2:144:g_d0_f2:the realized prices, however, in the empirical analyses.   
+7:158:11896:41:28:126:463:239:144:g_d0_f2:144:g_d0_f2:Consider two circular cities with 3 firms each, denoted H, R1, and R2 
+7:159:11966:28:27:90:496:211:144:g_d0_f2:144:g_d0_f2:(representing the hospital of interest, rival 1, and rival 2).  In market 1, the rivals are 
+7:160:12058:27:28:90:513:184:144:g_d0_f2:144:g_d0_f2:located in exactly the same spot and H is as far away as possible.  In market 2, the three 
+7:161:12149:28:27:90:500:156:144:g_d0_f2:144:g_d0_f2:firms are distributed evenly around the circle.  These configurations are illustrated in 
+7:162:12238:27:42:90:169:129:144:g_d0_f2:144:g_d0_f2:Figure 1 below. 
+7:163:12254:42:0:126:129:87:144:g_d0_f2:144:g_d0_f2: 
+8:164:12255:0:41:90:339:708:144:g_d0_f2:144:g_d0_f2:Figure 1.  Illustration of Two Hypothetical Markets 
+8:165:12307:41:42:90:93:667:144:g_d0_f2:144:g_d0_f2: 
+8:166:12307:42:41:90:93:625:144:g_d0_f2:144:g_d0_f2: 
+8:167:12307:41:42:90:422:584:144:g_d0_f2:144:g_d0_f2: Market 1     Market 2 
+8:168:12330:42:28:90:524:542:144:g_d0_f2:144:g_d0_f2:I conjecture that R1 and R2 in market 1 are likelier to merge than R1 and R2 in market 2.  
+8:169:12421:28:27:90:523:514:144:g_d0_f2:144:g_d0_f2:If true, and if firm location is exogenous, H is exogenously more likely to be exposed to a 
+8:170:12513:27:28:90:517:487:144:g_d0_f2:144:g_d0_f2:rival merger.  Under these assumptions (explored in subsequent sections), the number of 
+8:171:12601:28:27:89:499:459:144:g_d0_f2:144:g_d0_f2:co-located rival pairs a hospital has can serve as an instrument for rival merger.  The 
+8:172:12689:27:42:89:287:432:144:g_d0_f2:144:g_d0_f2:outcome I consider in this study is price. 
+8:173:12732:42:28:125:524:390:144:g_d0_f2:144:g_d0_f2:To illustrate the effect on H’s price of a merger between co-located rivals, I derive 
+8:174:12818:28:27:89:505:362:144:g_d0_f2:144:g_d0_f2:the pre and post-merger equilibrium prices in market 1.  For the sake of comparison, I 
+8:175:12905:27:28:89:519:335:144:g_d0_f2:144:g_d0_f2:derive the same for market 2, assuming one of the R facilities closes post-merger and the 
+8:176:12995:28:27:89:523:307:144:g_d0_f2:144:g_d0_f2:other remains in the same location.5   Without loss of generality, I set the marginal cost of 
+8:177:13089:27:28:89:520:280:144:g_d0_f2:144:g_d0_f2:each firm equal to zero.  Appendix 1 gives the objective functions and equilibrium prices 
+8:178:13179:28:27:89:517:252:144:g_d0_f2:144:g_d0_f2:for each firm-type (R and H) in each market (1 and 2) and scenario (pre and post-merger 
+8:179:13267:27:42:89:336:225:144:g_d0_f2:144:g_d0_f2:of R1 and R2).  Here I describe the general results. 
+8:180:13320:42:28:125:478:183:144:g_d0_f2:144:g_d0_f2:So long as t is not so high that hospital H enjoys a local monopoly and is 
+8:181:13395:28:58:89:510:155:144:g_d0_f2:144:g_d0_f2:unaffected by the actions of its rivals, a merger of co-located rivals will result in a very 
+8:182:13488:58:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+8:183:13536:7:16:90:512:90:42:g_d0_f2:100:g_d0_f2:5 This seems the most plausible scenario given the high costs of construction and chronic overcapacity in 
+8:184:13642:16:0:89:239:74:100:g_d0_f2:100:g_d0_f2:the industry during the merger wave. 
+8:185:13679:0:0:144:368:597:100:g_d0_f2:100:g_d0_f2:H H
+8:186:13682:0:0:315:414:664:100:g_d0_f2:100:g_d0_f2:R1R2
+8:187:13686:0:0:133:164:686:100:g_d0_f2:100:g_d0_f2:R1, R2 
+9:188:13694:0:27:90:504:708:144:g_d0_f2:144:g_d0_f2:sizeable price increase (up to 100 percent).6  The price increase following a merger of 
+9:189:13782:27:28:89:518:681:144:g_d0_f2:144:g_d0_f2:non-co-located rivals (as in market 2) is relatively smaller.  The reason is that R1 and R2 
+9:190:13874:28:27:89:504:653:144:g_d0_f2:144:g_d0_f2:compete more intensely before the merger in market 1.  They are undifferentiated and 
+9:191:13959:27:28:89:483:626:144:g_d0_f2:144:g_d0_f2:therefore set their prices equal to cost.   When they merge, market prices increase 
+9:192:14043:28:28:89:510:598:144:g_d0_f2:144:g_d0_f2:dramatically.  In market 2, R1 and R2 are differentiated competitors pricing above cost 
+9:193:14131:28:41:89:514:570:144:g_d0_f2:144:g_d0_f2:prior to the merger, so the merger has a smaller impact on optimal post-merger pricing.  
+9:194:14220:41:28:125:521:529:144:g_d0_f2:144:g_d0_f2:In Section 6, “Extensions and Robustness,” I return to these models to investigate 
+9:195:14303:28:27:89:514:501:144:g_d0_f2:144:g_d0_f2:the theoretical validity of the identifying assumption for the instrumental variables-rival 
+9:196:14395:27:28:89:517:474:144:g_d0_f2:144:g_d0_f2:analysis: that during the merger wave, price growth in the two market types (conditional 
+9:197:14484:28:28:89:517:446:144:g_d0_f2:144:g_d0_f2:on observables) would have been the same but for the increased frequency of mergers in 
+9:198:14571:28:27:89:514:418:144:g_d0_f2:144:g_d0_f2:markets with co-located rivals.   (Note I need not assume that pre-merger price levels of 
+9:199:14661:27:28:89:482:391:144:g_d0_f2:144:g_d0_f2:the two market types are the same; indeed, the solutions presented in Appendix 1 
+9:200:14742:28:27:89:499:363:144:g_d0_f2:144:g_d0_f2:illustrate they are not.)   Both the theoretical results and the empirical tests presented 
+9:201:14833:27:28:89:502:336:144:g_d0_f2:144:g_d0_f2:below suggest colocation is not associated with faster price growth except through its 
+9:202:14920:28:42:89:254:308:144:g_d0_f2:144:g_d0_f2:effect on the propensity to merge. 
+9:203:14955:42:27:125:510:266:144:g_d0_f2:144:g_d0_f2:The following section describes the U.S. hospital industry during the 1980s and 
+9:204:15035:27:142:90:454:239:144:g_d0_f2:144:g_d0_f2:1990s, and discusses prior estimates of the effects of mergers in this sector. 
+9:205:15114:142:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+9:206:15162:7:16:90:514:90:42:g_d0_f2:100:g_d0_f2:6 The markets I consider are sufficiently small and contain a large enough number of providers to rule out 
+9:207:15269:16:0:89:184:74:100:g_d0_f2:100:g_d0_f2:monopolistic behavior. 
+10:208:15293:0:47:90:232:691:257:g_d0_f2:257:g_d0_f2:3       Background       
+10:209:15318:47:28:90:513:644:144:g_d0_f2:144:g_d0_f2:Until 1984, U.S. hospitals were generally reimbursed on a cost-plus basis by public and 
+10:210:15406:28:28:90:518:616:144:g_d0_f2:144:g_d0_f2:private insurers.  In an effort to control escalating costs, the Medicare program instituted 
+10:211:15499:28:27:90:505:588:144:g_d0_f2:144:g_d0_f2:the Prospective Payment System (PPS) in 1984.  Under PPS, hospitals receive a fixed 
+10:212:15583:27:28:90:505:561:144:g_d0_f2:144:g_d0_f2:payment for each Medicare patient in a given diagnosis-related group (DRG), making 
+10:213:15666:28:27:90:518:533:144:g_d0_f2:144:g_d0_f2:hospitals the residual claimants of any profits or losses.  Payments were generous during 
+10:214:15756:27:28:90:507:506:144:g_d0_f2:144:g_d0_f2:the first few years of PPS, but by 1989 the majority of hospitals were earning negative 
+10:215:15844:28:28:90:519:478:144:g_d0_f2:144:g_d0_f2:margins on Medicare admissions (Coulam and Gaumer 1991).  These financial pressures 
+10:216:15928:28:27:90:486:450:144:g_d0_f2:144:g_d0_f2:were exacerbated by the rise of managed care in the private sector.  Managed care 
+10:217:16010:27:28:90:502:423:144:g_d0_f2:144:g_d0_f2:penetration increased from under 30 percent of private insurance in 1988 to nearly 95 
+10:218:16096:28:27:90:506:395:144:g_d0_f2:144:g_d0_f2:percent by 1999 (Kaiser Family Foundation 2004), bringing about a shift from fee-for-
+10:219:16181:27:28:89:505:368:144:g_d0_f2:144:g_d0_f2:service to negotiated prices.  Thus, the motives to consolidate intensified substantially 
+10:220:16271:28:27:89:484:340:144:g_d0_f2:144:g_d0_f2:during the 1990s, triggering an unprecedented wave of mergers, acquisitions, and 
+10:221:16352:27:28:89:510:313:144:g_d0_f2:144:g_d0_f2:closures.  Between 1989 and 1996, there were 190 hospital mergers, as compared to 74 
+10:222:16437:28:28:89:511:285:144:g_d0_f2:144:g_d0_f2:during 1983-1988 (Bazzoli et al, 2002).7  As a result, recent studies of hospital mergers 
+10:223:16527:28:41:90:519:257:144:g_d0_f2:144:g_d0_f2:have focused on this time period (e.g. Bazzoli et al. 2002, Dranove and Lindrooth 2003). 
+10:224:16616:41:28:126:475:216:144:g_d0_f2:144:g_d0_f2:Hospital mergers have received a great deal of attention from healthcare 
+10:225:16689:28:28:90:517:188:144:g_d0_f2:144:g_d0_f2:economists and antitrust enforcement agencies, in part because of the volume of patients 
+10:226:16778:28:27:90:494:160:144:g_d0_f2:144:g_d0_f2:and revenues involved.  In 2001, the 5,801 hospitals in the U.S. treated 1.68 million 
+10:227:16864:27:36:90:499:133:144:g_d0_f2:144:g_d0_f2:outpatients and 658,000 inpatients each day, collecting $451 billion in revenues.  By 
+10:228:16950:36:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+10:229:16998:7:16:90:511:90:42:g_d0_f2:100:g_d0_f2:7 These merger counts refer to legal consolidations of two or more hospitals under single ownership, and 
+10:230:17103:16:0:89:498:74:100:g_d0_f2:100:g_d0_f2:were verified by the American Hospital Association for 1983-1988, and Bazzoli et al. for 1989-1996. 
+11:231:17204:0:27:90:515:708:144:g_d0_f2:144:g_d0_f2:comparison, expenditures on new passenger vehicles in 2001 totaled $106 billion.8  The 
+11:232:17291:27:28:89:495:681:144:g_d0_f2:144:g_d0_f2:localized nature of competition is also a source of concern for antitrust enforcement 
+11:233:17377:28:27:89:505:653:144:g_d0_f2:144:g_d0_f2:agencies, as monopoly and oligopoly providers in a given geographic area can sustain 
+11:234:17462:27:42:89:209:626:144:g_d0_f2:144:g_d0_f2:supracompetitive prices. 
+11:235:17487:42:28:125:513:584:144:g_d0_f2:144:g_d0_f2:The not-for-profit status of most hospitals, however, presents the possibility that 
+11:236:17571:28:27:89:508:556:144:g_d0_f2:144:g_d0_f2:hospitals will not exploit post-merger increases in market power.   This is an argument 
+11:237:17659:27:28:89:502:529:144:g_d0_f2:144:g_d0_f2:the courts have often cited in rejecting attempts to block proposed hospital mergers.9  
+11:238:17747:28:27:89:492:501:144:g_d0_f2:144:g_d0_f2:Since 1991, the Department of Justice and Federal Trade Commission have tried to 
+11:239:17828:27:28:89:505:474:144:g_d0_f2:144:g_d0_f2:enjoin 7 hospital mergers and failed to prevail a single time.10  After a long hiatus, the 
+11:240:17919:28:28:89:492:446:144:g_d0_f2:144:g_d0_f2:FTC changed course and began performing retrospective analyses of consummated 
+11:241:17997:28:27:89:508:418:144:g_d0_f2:144:g_d0_f2:mergers to identify possible anticompetitive conduct. This initiative was dealt a severe 
+11:242:18086:27:28:89:514:391:144:g_d0_f2:144:g_d0_f2:blow in 2007 when the full Commission failed to uphold an order to divest issued by an 
+11:243:18173:28:27:89:466:363:144:g_d0_f2:144:g_d0_f2:administrative judge against not-for-profit Evanston Northwestern Healthcare 
+11:244:18250:27:66:89:168:336:144:g_d0_f2:144:g_d0_f2:Corporation.11   
+11:245:18267:66:8:234:237:270:144:g_d0_f2:144:g_d0_f2:                                                 
+11:246:18315:8:11:90:332:262:42:g_d0_f2:100:g_d0_f2:8 U.S. Statistical Abstract (2003), Tables 158, 170, and 667. 
+11:247:18376:11:16:90:517:251:42:g_d0_f2:100:Times:9 There are at least two distinct arguments espoused in these court rulings.  In Long Island Jewish Medical 
+11:248:18484:16:12:89:522:235:100:Times:100:g_d0_f2:Center, the court cited the “genuine commitment” of the merging hospitals “to help their communities.”  In 
+11:249:18591:12:11:89:521:223:100:Times:100:g_d0_f2:Butterworth Health Corporation, the court was convinced that the merging hospitals would not raise prices 
+11:250:18697:11:12:89:513:212:100:g_d0_f2:100:g_d0_f2:“[b]ecause the boards are comprised of community and business leaders whose companies pay the health 
+11:251:18798:12:11:89:504:200:100:g_d0_f2:100:Times:care costs of their local employees.”  (Improving Health Care: A Dose of Competition, A Report by the 
+11:252:18900:11:7:89:383:189:100:Times:100:g_d0_f2:Federal Trade Commission and the Department of Justice, Ch. 4 p. 30)   
+11:253:18971:7:16:90:521:182:42:g_d0_f2:100:g_d0_f2:10 FTC Antitrust Actions in Health Care Services and Products, Washington, DC, October 2003, and Town 
+11:254:19072:16:7:90:166:166:100:g_d0_f2:100:g_d0_f2:and Vogt (2005).   
+11:255:19091:7:16:90:485:159:42:g_d0_f2:100:g_d0_f2:11 The complaint against Evanston Northwestern Healthcare Corporation (ENH) alleged that ENH 
+11:256:19184:16:12:90:514:143:100:g_d0_f2:100:g_d0_f2:increased price “far above price increases of other comparable hospitals” after acquiring nearby Highland 
+11:257:19290:12:11:90:506:131:100:g_d0_f2:100:Times:Park Hospital in 2000 (Evanston Northwestern Healthcare Corporation and ENH Medical Group, Inc., 
+11:258:19387:11:12:90:515:120:100:g_d0_f2:100:g_d0_f2:File No. 011 0234, Docket No. 9315, February 2004).  In October 2005, Chief Administrative Law Judge 
+11:259:19488:12:11:90:508:108:100:g_d0_f2:100:g_d0_f2:Stephen J. McGuire ruled in favor of the FTC and ordered ENH to divest Highland Park Hospital.  This 
+11:260:19589:11:12:90:509:97:100:g_d0_f2:100:g_d0_f2:order was stricken upon appeal to the full Commission in August 2007.  The opinion concurred with the 
+11:261:19691:12:11:90:488:85:100:g_d0_f2:100:Times:finding of anticompetitive conduct, but called the divestiture order “unwarranted.” (Opinion of The 
+11:262:19791:11:0:90:285:74:100:Times:100:g_d0_f2:Commission, Docket No. 9315, August 6, 2007) 
+12:263:19838:0:27:126:494:708:144:g_d0_f2:144:g_d0_f2:Despite the sustained interest in hospital mergers, including private lawsuits 
+12:264:19917:27:28:90:515:681:144:g_d0_f2:144:g_d0_f2:challenging post-merger price increases, economists have failed to reach a consensus on 
+12:265:20005:28:27:90:523:653:144:g_d0_f2:144:g_d0_f2:the price effects of mergers in this sector.  Gaynor and Vogt (2000), Connor and Feldman 
+12:266:20094:27:28:90:518:626:144:g_d0_f2:144:g_d0_f2:(1998), and Dranove and Lindrooth (2001) provide excellent summaries of the extensive 
+12:267:20180:28:28:90:507:598:144:g_d0_f2:144:g_d0_f2:literature on hospital competition and mergers.  Most relevant for the present work are 
+12:268:20268:28:27:90:513:570:144:g_d0_f2:144:g_d0_f2:longitudinal studies that compare pre and post-merger outcomes.  The majority of these 
+12:269:20355:27:28:90:510:543:144:g_d0_f2:144:g_d0_f2:studies focus on the cost reductions achieved by merging institutions because hospitals 
+12:270:20443:28:27:90:522:515:144:g_d0_f2:144:g_d0_f2:typically cite economies of scale and increased purchasing power as the main motives for 
+12:271:20532:27:28:89:502:488:144:g_d0_f2:144:g_d0_f2:merger.  These studies have generally found very modest impacts of merger on costs, 
+12:272:20616:28:28:89:521:460:144:g_d0_f2:144:g_d0_f2:with two recent exceptions, Alexander (1996) and Dranove and Lindrooth (2003).  Using 
+12:273:20702:28:27:89:509:432:144:g_d0_f2:144:g_d0_f2:data on mergers of previously independent hospitals that operate under a single license 
+12:274:20790:27:28:89:496:405:144:g_d0_f2:144:g_d0_f2:post-merger, Dranove and Lindrooth find post-merger cost decreases of 14 percent.  
+12:275:20873:28:27:89:502:377:144:g_d0_f2:144:g_d0_f2:These are precisely the mergers I use for my analysis.  The combination of large post-
+12:276:20959:27:28:89:523:350:144:g_d0_f2:144:g_d0_f2:merger price increases (implied by my results) and cost decreases suggests sizeable profit 
+12:277:21050:28:42:89:226:322:144:g_d0_f2:144:g_d0_f2:gains for merging hospitals. 
+12:278:21079:42:27:125:495:280:144:g_d0_f2:144:g_d0_f2:The pre vs. post pricing studies are fewer in number and generally find price 
+12:279:21157:27:28:89:506:253:144:Times:144:g_d0_f2:reductions following merger (e.g. Connor, Feldman, and Dowd 1998; Spang, Bazzoli, 
+12:280:21239:28:27:89:502:225:144:g_d0_f2:144:g_d0_f2:and Arnould 2001).  These estimates are plagued by the selection problems described 
+12:281:21323:27:28:89:510:198:144:g_d0_f2:144:g_d0_f2:earlier, and biased downward by the use of nonmerging hospitals as control groups.   If 
+12:282:21411:28:28:89:502:170:144:g_d0_f2:144:g_d0_f2:nonmerging rivals raise their prices in response to price increases by merging parties, 
+12:283:21499:28:27:90:522:142:144:g_d0_f2:144:g_d0_f2:mergers could be associated with no relative price increase for merging parties in a given 
+12:284:21590:27:0:89:469:115:144:g_d0_f2:144:g_d0_f2:market area but a large absolute price increase for the market area as a whole.  
+13:285:21673:0:27:126:513:708:144:g_d0_f2:144:g_d0_f2:Krishnan (2001) addresses the selection problem by comparing price growth for 
+13:286:21751:27:28:90:523:681:144:g_d0_f2:144:g_d0_f2:diagnoses in which merging hospitals gained substantial market power (>20%) with price 
+13:287:21838:28:27:90:513:653:144:g_d0_f2:144:g_d0_f2:growth for diagnoses in which they gained insignificant share (<5%).  Using data on 11 
+13:288:21925:27:28:90:485:626:144:g_d0_f2:144:g_d0_f2:hospital mergers in Ohio in 1994 and 1995, Krishnan finds that merging hospitals 
+13:289:22006:28:28:90:527:598:144:g_d0_f2:144:g_d0_f2:increased price 8.8 percent more in diagnoses where they gained substantial market share.  
+13:290:22097:28:27:90:517:570:144:g_d0_f2:144:g_d0_f2:By design, this estimate is downward-biased: it eliminates hospital-wide price increases, 
+13:291:22187:27:28:90:486:543:144:g_d0_f2:144:g_d0_f2:which are likely because many hospital features (e.g. location) are constant across 
+13:292:22271:28:27:90:523:515:144:g_d0_f2:144:g_d0_f2:services.  In examining hospital responses to diagnosis-specific price changes imposed by 
+13:293:22361:27:28:90:495:488:144:g_d0_f2:144:g_d0_f2:Medicare, Dafny (2005) finds little evidence that hospitals compete in quality at the 
+13:294:22447:28:28:90:528:460:144:g_d0_f2:144:g_d0_f2:diagnosis level; rather, the data are consistent with competition in overall hospital quality.  
+13:295:22543:28:41:90:505:432:144:g_d0_f2:144:Times:These results suggest the downward bias in Krishnan’s estimates may be substantial.   
+13:296:22628:41:28:126:513:391:144:g_d0_f2:144:g_d0_f2:Two prior studies use rival analysis to estimate the impact of merger on average 
+13:297:22709:28:27:90:489:363:144:g_d0_f2:144:g_d0_f2:market price.  Woolley (1989) is a classic “event study” that traces the effect of 29 
+13:298:22795:27:28:90:499:336:144:g_d0_f2:144:g_d0_f2:merger-related events from 1969-85 on the stock prices of rival hospital chains.  The 
+13:299:22881:28:28:90:505:308:144:g_d0_f2:144:g_d0_f2:study finds a positive relationship between pro-merger events and stock price, but has 
+13:300:22968:28:27:90:506:280:144:g_d0_f2:144:g_d0_f2:been criticized on methodological grounds due to the events selected, the definition of 
+13:301:23056:27:28:90:503:253:144:g_d0_f2:144:g_d0_f2:rival chains, and the fact that only a small fraction of hospitals are owned by publicly-
+13:302:23145:28:27:90:523:225:144:g_d0_f2:144:g_d0_f2:traded firms (Vita and Schumann 1991).   Connor and Feldman (1998) compare price and 
+13:303:23230:27:28:90:491:198:144:g_d0_f2:144:g_d0_f2:cost growth between 1986 and 1994 for non-merging hospitals with merging rivals 
+13:304:23310:28:28:90:513:170:144:g_d0_f2:144:g_d0_f2:(hereafter NMW hospitals) and non-merging hospitals without merging rivals (hereafter 
+13:305:23396:28:27:90:509:142:144:Times:144:g_d0_f2:NMWO hospitals).  They find no effect of rival mergers on price, with the exception of 
+13:306:23483:27:28:90:515:115:144:g_d0_f2:144:g_d0_f2:mergers with an intermediate level of post-merger market share, where a small effect (3 
+13:307:23571:28:0:90:521:87:144:g_d0_f2:144:g_d0_f2:percent over 8 years) is found. The lack of an effect for larger mergers is attributed to the 
+14:308:23667:0:27:90:514:708:144:g_d0_f2:144:g_d0_f2:ability of the newly-formed hospitals to dominate the market and suppress rivals’ prices 
+14:309:23756:27:42:90:321:681:144:g_d0_f2:144:g_d0_f2:through merger-related quality improvements.   
+14:310:23803:42:27:126:513:639:144:g_d0_f2:144:g_d0_f2:My analysis also focuses on price changes of non-merging hospitals over a long 
+14:311:23882:27:28:90:511:612:144:g_d0_f2:144:g_d0_f2:period of time (1988-1997) and across all states.  However, I take steps to examine and 
+14:312:23970:28:28:90:501:584:144:g_d0_f2:144:g_d0_f2:address the selection problem that persists in rival analyses of mergers.  First, I apply 
+14:313:24060:28:27:90:515:556:144:g_d0_f2:144:g_d0_f2:sample restrictions that substantially reduce the differences in observable characteristics 
+14:314:24152:27:28:90:523:529:144:g_d0_f2:144:g_d0_f2:of NMW and NMWO hospitals.  Second, I introduce rival colocation as an instrument for 
+14:315:24238:28:27:90:493:501:144:g_d0_f2:144:g_d0_f2:rival merger.  These steps are discussed in turn in section 4 (Data) and 5 (Empirical 
+14:316:24324:27:46:90:142:474:144:g_d0_f2:144:g_d0_f2:Analysis). 
+14:317:24335:46:47:90:188:428:257:g_d0_f2:257:g_d0_f2:4       Data              
+14:318:24361:47:27:90:515:381:144:g_d0_f2:144:g_d0_f2:Merger data constructed for Dranove and Lindrooth (2003) was generously provided by 
+14:319:24445:27:28:90:510:354:144:g_d0_f2:144:g_d0_f2:the authors.  Using the Annual Survey of Hospitals and the Annual Guide to Hospitals, 
+14:320:24531:28:28:90:504:326:144:g_d0_f2:144:g_d0_f2:both produced by the American Hospital Association (AHA), Dranove and Lindrooth 
+14:321:24611:28:27:89:496:298:144:g_d0_f2:144:g_d0_f2:identified 97 independent hospital mergers between 1989 and 1996.  They define an 
+14:322:24693:27:28:89:500:271:144:g_d0_f2:144:g_d0_f2:independent merger as a combination of two hospitals that are not affiliated with any 
+14:323:24779:28:27:89:510:243:144:g_d0_f2:144:g_d0_f2:hospital “system” into a single entity.  To qualify as a merger in this dataset, the newly-
+14:324:24870:27:28:89:477:216:144:g_d0_f2:144:g_d0_f2:created hospital must report a single set of financial and utilization statistics and 
+14:325:24956:28:28:89:516:188:144:g_d0_f2:144:g_d0_f2:surrender one of their facility licenses.  Figure 2 graphs the distribution of these mergers 
+14:326:25049:28:40:89:503:160:144:g_d0_f2:144:g_d0_f2:over time.13  Because my instrument only predicts the incidence and not the timing of 
+14:327:25135:40:7:234:237:120:144:g_d0_f2:144:g_d0_f2:                                                 
+14:328:25183:7:16:90:507:113:42:g_d0_f2:100:g_d0_f2:13 Although Dranove and Lindrooth’s data ends in 1996, merger figures reported by Cuellar and Gertler 
+14:329:25285:16:0:90:508:97:100:g_d0_f2:100:g_d0_f2:(2003) for 1994-2000 reveal a steep dropoff in merger activity in 1997, and a steady decline thereafter.   
+15:330:25394:0:27:90:495:708:144:g_d0_f2:144:g_d0_f2:merger (i.e. the instrument is not time-varying), I cannot exploit merger dates in my 
+15:331:25480:27:28:90:498:681:144:g_d0_f2:144:g_d0_f2:analysis.  I therefore create an indicator variable for merger between 1989 and 1996, 
+15:332:25566:28:27:90:513:653:144:g_d0_f2:144:g_d0_f2:using the sample of general, non-federal hospitals present in the 1988 AHA Survey and 
+15:333:25652:27:28:90:524:626:144:g_d0_f2:144:g_d0_f2:located in metropolitan statistical areas or counties with more than 100,000 residents.14  (I 
+15:334:25746:28:28:89:519:598:144:g_d0_f2:144:g_d0_f2:exclude these hospitals because Dranove and Lindrooth did not consider mergers in rural 
+15:335:25834:28:27:89:514:570:144:g_d0_f2:144:g_d0_f2:areas.)  The AHA survey provides descriptive data for each hospital, including location, 
+15:336:25923:27:28:89:514:543:144:g_d0_f2:144:g_d0_f2:ownership status, and number of beds.  Note that while independent mergers were more 
+15:337:26008:28:27:89:509:515:144:g_d0_f2:144:g_d0_f2:common during the latter part of the study period, those involving co-located hospitals 
+15:338:26096:27:28:89:496:488:144:g_d0_f2:144:g_d0_f2:(the subset that provides the variation exploited in the IV analysis), are fairly evenly 
+15:339:26185:28:42:89:207:460:144:g_d0_f2:144:g_d0_f2:distributed over time.15  
+15:340:26211:42:27:126:508:418:144:g_d0_f2:144:g_d0_f2:For each hospital in the sample, I obtain panel data on financial measures from 
+15:341:26291:27:28:90:510:391:144:g_d0_f2:144:g_d0_f2:the Healthcare Cost Reporting Information System (HCRIS), a database maintained by 
+15:342:26374:28:27:90:483:363:144:g_d0_f2:144:g_d0_f2:the Centers for Medicare and Medicaid Services (CMS).  HCRIS contains annual 
+15:343:26451:27:28:90:489:336:144:g_d0_f2:144:g_d0_f2:financial and utilization data for all providers receiving reimbursement from either 
+15:344:26536:28:28:89:515:308:144:g_d0_f2:144:g_d0_f2:program under CMS’ purview.  Over 99 percent of the hospitals in my sample appear in 
+15:345:26621:28:41:89:397:280:144:g_d0_f2:144:g_d0_f2:HCRIS, which can be purchased from CMS for a nominal fee.   
+15:346:26681:41:28:125:516:239:144:g_d0_f2:144:g_d0_f2:Average hospital price in a given year is calculated as inpatient revenue per case-
+15:347:26764:28:33:89:509:211:144:g_d0_f2:144:g_d0_f2:mix adjusted discharge. 16  Other researchers have used similar measures, e.g. inpatient 
+15:348:26853:33:8:234:237:178:144:g_d0_f2:144:g_d0_f2:                                                 
+15:349:26901:8:16:90:519:170:42:g_d0_f2:100:g_d0_f2:14 Of the 5,373 general, non-federal hospitals located in the mainland U.S. in 1988, 466 are dropped due to 
+15:350:27009:16:7:90:165:154:100:g_d0_f2:100:g_d0_f2:these restrictions.  
+15:351:27030:7:16:90:521:147:42:g_d0_f2:100:g_d0_f2:15 There are 10 mergers involving colocated hospitals during the study period; 9 of these are cases in which 
+15:352:27139:16:7:90:286:131:100:g_d0_f2:100:g_d0_f2:two colocated hospitals merged with each other. 
+15:353:27187:7:16:90:509:124:42:g_d0_f2:100:g_d0_f2:16 More precisely, price = [(hospital inpatient routine service charges + hospital intensive care charges + 
+15:354:27295:16:11:90:511:108:100:g_d0_f2:100:g_d0_f2:hospital inpatient ancillary charges)*discount factor – Medicare primary payor amounts – Medicare total 
+15:355:27399:11:12:90:476:97:100:g_d0_f2:100:g_d0_f2:amount payable]/[(total discharges excluding swing/SNF – total Medicare discharges excluding 
+15:356:27492:12:11:90:497:85:100:g_d0_f2:100:g_d0_f2:swing/SNF)*case-mix index]. The discount factor is defined as 1- (contractual discounts/total patient 
+15:357:27594:11:0:90:495:74:100:g_d0_f2:100:g_d0_f2:charges), and reflects the common practice of discounts for private insurers.  The above formula was 
+16:358:27697:0:27:90:484:708:144:g_d0_f2:144:g_d0_f2:revenue per discharge (Connor and Feldman 1998) or inpatient revenue per diem, 
+16:359:27776:27:28:90:502:681:144:g_d0_f2:144:g_d0_f2:controlling for patient diagnosis (Keeler et al. 1999).17  In calculating price, I exclude 
+16:360:27867:28:27:90:510:653:144:g_d0_f2:144:g_d0_f2:Medicare revenues and discharges because the federal government sets prices for these 
+16:361:27953:27:28:90:523:626:144:g_d0_f2:144:g_d0_f2:patients.  However, I use each hospital’s case-mix index (CMI) for Medicare patients as a 
+16:362:28043:28:28:90:506:598:144:g_d0_f2:144:g_d0_f2:proxy for the non-Medicare CMI, which is not reported.  Medicare CMIs are obtained 
+16:363:28126:28:27:90:517:570:144:g_d0_f2:144:g_d0_f2:from the Prospective Payment Impact Files produced annually by CMS.18  The variables 
+16:364:28211:27:28:90:516:543:144:g_d0_f2:144:g_d0_f2:needed to calculate price are available for FY1985-2000, which spans the period 3 years 
+16:365:28299:28:41:90:478:515:144:g_d0_f2:144:g_d0_f2:before the first merger in the data to three years after the last merger in the data.  
+16:366:28384:41:28:126:503:474:144:g_d0_f2:144:g_d0_f2:To reduce the influence of coding errors, observations in the 5-percent tails of 
+16:367:28465:28:28:90:483:446:144:g_d0_f2:144:g_d0_f2:price in a given year are assigned a missing value for that year.20   The dependent 
+16:368:28549:28:27:90:498:418:144:g_d0_f2:144:g_d0_f2:variables are the change in log price for a given hospital during 1985-1988 (the “pre-
+16:369:28635:27:28:90:505:391:144:g_d0_f2:144:g_d0_f2:period”), 1988-1997 (the “treatment period”), and 1997-2000 (the “post period”).  All 
+16:370:28721:28:27:90:496:363:144:g_d0_f2:144:g_d0_f2:dependent variables are censored at the 5th and 95th percentiles.  I also construct two 
+16:371:28809:27:28:90:516:336:144:g_d0_f2:144:g_d0_f2:indicators of financial distress using the 1988 HCRIS data: the share of patients covered 
+16:372:28899:28:28:90:517:308:144:g_d0_f2:144:g_d0_f2:by Medicaid, and the aggregate debt: asset ratio.  Prior research suggests that financially-
+16:373:28991:28:33:90:488:280:144:g_d0_f2:144:g_d0_f2:distressed hospitals are more likely to be party to a merger or acquisition.  I obtain 
+16:374:29078:33:12:521:524:247:144:g_d0_f2:144:g_d0_f2:                                                                                                                                                 
+16:375:29222:12:12:90:521:235:100:g_d0_f2:100:g_d0_f2:constructed with the guidance of HCRIS experts at CMS.  Records with discount factors outside of [0,1] or 
+16:376:29328:12:7:90:363:223:100:g_d0_f2:100:g_d0_f2:negative values for any measure in the price formula are excluded.   
+16:377:29397:7:16:90:500:216:42:g_d0_f2:100:g_d0_f2:17 Keeler et al. use a two-step process to adjust for each hospital’s case-mix.  First, they use California 
+16:378:29505:16:11:90:512:200:100:g_d0_f2:100:g_d0_f2:discharge data for 10 common diagnoses to run 10 separate regressions of net inpatient revenue per diem 
+16:379:29609:11:12:90:503:189:100:g_d0_f2:100:g_d0_f2:on patient characteristics and hospital dummies.  Next, they use the 10 coefficients for each hospital to 
+16:380:29715:12:7:90:259:177:100:g_d0_f2:100:g_d0_f2:construct a weighted average price index. 
+16:381:29757:7:16:90:507:170:42:g_d0_f2:100:g_d0_f2:18 CMS uses the distribution of a hospital’s Medicare admissions across roughly 500 Diagnosis-Related 
+16:382:29859:16:11:90:507:154:100:g_d0_f2:100:g_d0_f2:Groups, or DRGs, to construct that hospital’s annual CMI.  Each DRG is associated with a weight.  The 
+16:383:29961:11:12:90:492:143:100:g_d0_f2:100:g_d0_f2:CMI is the admissions-weighted average DRG weight for the hospital.  The weights were originally 
+16:384:30058:12:11:90:506:131:100:g_d0_f2:100:g_d0_f2:constructed (in 1984) so that the average CMI across all hospitals would equal 1; this average has since 
+16:385:30163:11:7:90:143:120:100:g_d0_f2:100:g_d0_f2:crept higher. 
+16:386:30177:7:16:90:511:113:42:g_d0_f2:100:g_d0_f2:20 Between 1985 and 2000, the 5th percentile of the annual price distribution ranges from $1374 to $1664 
+16:387:30282:16:0:90:323:97:100:g_d0_f2:100:g_d0_f2:(in $2000), and the 95th percentile from $6256 to $8334.   
+17:388:30342:0:27:90:509:708:144:g_d0_f2:144:g_d0_f2:market-level control variables such as county per-capita income in 1990 from the Area 
+17:389:30428:27:28:90:505:681:144:g_d0_f2:144:g_d0_f2:Resource File.  Estimates of county-level HMO penetration in 1994 were provided by 
+17:390:30511:28:41:90:180:653:144:g_d0_f2:144:g_d0_f2:Laurence Baker.21 
+17:391:30528:41:28:126:520:612:144:g_d0_f2:144:g_d0_f2:Latitude and longitude coordinates for the main address reported by each hospital 
+17:392:30610:28:28:89:511:584:144:g_d0_f2:144:g_d0_f2:in the 1988 AHA survey were purchased from geocode.com.   Using these coordinates, 
+17:393:30693:28:27:89:514:556:144:g_d0_f2:144:g_d0_f2:which contain 6 decimal places and are accurate up to the street segment, I calculate the 
+17:394:30783:27:28:89:492:529:144:g_d0_f2:144:g_d0_f2:straight-line distance between hospitals (“as the crow flies”).  After identifying 213 
+17:395:30870:28:27:89:474:501:144:g_d0_f2:144:g_d0_f2:hospitals located within 0.3 miles of another, I performed a secondary check by 
+17:396:30950:27:28:89:519:474:144:g_d0_f2:144:g_d0_f2:examining individual maps of these pairs from Mapquest.com.  Restricting the definition 
+17:397:31038:28:28:89:497:446:144:g_d0_f2:144:g_d0_f2:to exclude hospitals located more than 5 blocks apart reduces the final number of co-
+17:398:31123:28:27:89:475:418:144:g_d0_f2:144:g_d0_f2:located hospitals to 191.  In section 6, I illustrate the robustness of the results to 
+17:399:31210:27:42:89:262:391:144:g_d0_f2:144:g_d0_f2:alternative colocation definitions.22 
+17:400:31247:42:27:125:514:349:144:g_d0_f2:144:g_d0_f2:The first column in Table 1 presents descriptive statistics for the “All Hospitals” 
+17:401:31331:27:28:89:496:322:144:g_d0_f2:144:g_d0_f2:sample, which includes hospitals with nonmissing data for all independent variables 
+17:402:31415:28:28:89:519:294:144:g_d0_f2:144:g_d0_f2:(4,487 out of 4,907 hospitals, accounting for 91 percent of 1988 discharges).  Within this 
+17:403:31506:28:27:89:505:266:144:g_d0_f2:144:g_d0_f2:sample, 178 (4 percent) were party to an independent merger between 1989 and 1996, 
+17:404:31589:27:28:89:478:239:144:g_d0_f2:144:g_d0_f2:and 163 (3.6 percent) were co-located with at least one hospital.23  18 of the 163 
+17:405:31672:28:45:90:502:211:144:g_d0_f2:144:g_d0_f2:subsequently merged, yielding a merger rate of 11 percent in the co-located subset.24  
+17:406:31759:45:7:234:237:166:144:g_d0_f2:144:g_d0_f2:                                                 
+17:407:31807:7:12:90:478:159:42:g_d0_f2:100:g_d0_f2:21 These estimates were constructed using data from the Group Health Association of America.   
+17:408:31902:12:16:90:522:147:42:g_d0_f2:100:g_d0_f2:22 For the purposes of identifying co-located hospitals and counting rivals, all general, non-federal hospitals 
+17:409:32014:16:11:90:522:131:100:g_d0_f2:100:g_d0_f2:with valid addresses in the non-territorial U.S. are included; sample restrictions are applied after this step is 
+17:410:32128:11:7:90:132:120:100:g_d0_f2:100:g_d0_f2:complete. 
+17:411:32138:7:16:90:517:113:42:g_d0_f2:100:g_d0_f2:23 A total of 194 hospitals were involved in the 97 independent mergers between 1989 and 1996.  Of these 
+17:412:32243:16:12:90:515:97:100:g_d0_f2:100:g_d0_f2:hospitals, 192 are included in the 1988 AHA data, which is the starting point for the analysis.  All 192 are 
+17:413:32352:12:11:90:514:85:100:g_d0_f2:100:g_d0_f2:present when rival merger counts and colocation variables are constructed.  However, the “All Hospitals” 
+17:414:32457:11:0:90:503:74:100:g_d0_f2:100:g_d0_f2:sample excludes 13 of the 192 due to missing covariates, and 1 because it is located in a rural area.  As 
+18:415:32565:0:27:126:509:708:144:g_d0_f2:144:g_d0_f2:The “Rivals Sample” (Column 2) is limited to non-merging hospitals in the All 
+18:416:32643:27:28:90:505:681:144:g_d0_f2:144:g_d0_f2:Hospitals sample that have two or more rivals within 7 miles in 1988, and nonmissing 
+18:417:32728:28:27:90:512:653:144:g_d0_f2:144:g_d0_f2:price data during the pre-period and the treatment period.  The rationale for the 2+ rival 
+18:418:32819:27:28:90:521:626:144:g_d0_f2:144:g_d0_f2:requirement is straightforward: if a nonmerging hospital has fewer than 2 rivals, it cannot 
+18:419:32911:28:28:90:510:598:144:g_d0_f2:144:g_d0_f2:experience a rival merger and thus should not be included in the sample.  The rationale 
+18:420:32999:28:27:90:513:570:144:g_d0_f2:144:g_d0_f2:for the 7-mile cutoff is that the merger of adjacent hospitals can reasonably be expected 
+18:421:33089:27:28:90:520:543:144:g_d0_f2:144:g_d0_f2:to affect the prices of rivals located within fairly tight geographic bounds.  In Section 6, I 
+18:422:33184:28:27:90:518:515:144:g_d0_f2:144:g_d0_f2:examine the sensitivity of the results to alternative market definitions.  Given the sample 
+18:423:33276:27:28:90:504:488:144:g_d0_f2:144:g_d0_f2:restrictions, hospitals in the Rivals Sample are generally located in densely-populated 
+18:424:33364:28:28:90:473:460:144:g_d0_f2:144:g_d0_f2:urban areas. As compared to the All Hospitals sample, they are less likely to be 
+18:425:33445:28:27:90:509:432:144:g_d0_f2:144:g_d0_f2:government-owned (10 vs. 26 percent), and more likely to offer teaching programs (16 
+18:426:33530:27:42:90:164:405:144:g_d0_f2:144:g_d0_f2:vs. 6 percent).  
+18:427:33547:42:27:126:511:363:144:g_d0_f2:144:g_d0_f2:The Rivals Sample can be subdivided into hospitals with merging rivals (NMW 
+18:428:33623:27:28:90:506:336:144:g_d0_f2:144:g_d0_f2:hospitals, N=118, column 3), and hospitals without merging rivals (NMWO hospitals, 
+18:429:33706:28:28:90:523:308:144:g_d0_f2:144:g_d0_f2:N=759, column 4).  NMW and NMWO hospitals share similar observable characteristics, 
+18:430:33790:28:27:90:494:280:144:g_d0_f2:144:g_d0_f2:although there are some statistically significant differences.  NMW hospitals have a 
+18:431:33875:27:28:90:519:253:144:g_d0_f2:144:g_d0_f2:greater share of Medicaid patients, a larger number of rivals, and they operate in markets 
+18:432:33966:28:27:90:511:225:144:g_d0_f2:144:g_d0_f2:with slightly higher HMO penetration rates.  They are also more likely to be very small 
+18:433:34054:27:28:90:502:198:144:g_d0_f2:144:g_d0_f2:(<100 beds).  Price growth in the three years prior to the merger wave is significantly 
+18:434:34142:28:28:90:500:170:144:Times:144:g_d0_f2:lower for NMW than for NMWO hospitals (-2.9 vs. 4.2 percent).   This suggests that 
+18:435:34225:28:22:90:503:142:144:g_d0_f2:144:g_d0_f2:NMWO hospitals are inappropriate controls for NMW hospitals; that is, treating rival 
+18:436:34310:22:12:521:524:120:144:g_d0_f2:144:g_d0_f2:                                                                                                                                                 
+18:437:34454:12:11:90:497:108:100:g_d0_f2:100:g_d0_f2:noted in the text, rural hospitals are excluded because Dranove and Lindrooth did not seek to identify 
+18:438:34557:11:7:90:505:97:100:g_d0_f2:100:g_d0_f2:mergers in rural areas.  The sole exception is due to a merger between a non-rural and a rural hospital.   
+18:439:34664:7:16:90:496:90:42:g_d0_f2:100:g_d0_f2:24 All 10 mergers involving colocated hospitals are represented among these 18 hospitals (2 of the 20 
+18:440:34766:16:0:90:454:74:100:g_d0_f2:100:g_d0_f2:hospitals involved in the mergers are missing for reasons given in the preceding footnote). 
+19:441:34860:0:27:90:526:708:144:g_d0_f2:144:g_d0_f2:mergers as exogenous will produce underestimates of the impact of rival merger on price.  
+19:442:34950:27:46:90:426:681:144:g_d0_f2:144:g_d0_f2:This conjecture is corroborated in the OLS results presented below.    
+19:443:35021:46:47:90:253:635:257:g_d0_f2:257:g_d0_f2:5  Empirical Analysis 
+19:444:35043:47:27:90:523:588:144:g_d0_f2:144:g_d0_f2:To estimate the price effects of merger, I focus on the prices charged by rivals of merging 
+19:445:35135:27:28:90:522:561:144:g_d0_f2:144:g_d0_f2:hospitals.  If merging hospitals raise price, and prices are strategic complements, rivals of 
+19:446:35229:28:27:90:479:533:144:g_d0_f2:144:g_d0_f2:these hospitals should be able to raise price as well.  This approach allows me to 
+19:447:35312:27:28:90:518:506:144:g_d0_f2:144:g_d0_f2:eliminate merging hospitals from the primary analysis, which is ideal as they differ from 
+19:448:35402:28:28:90:501:478:144:g_d0_f2:144:g_d0_f2:nonmerging hospitals in unobservable ways that are likely to be correlated with price 
+19:449:35488:28:27:89:514:450:144:g_d0_f2:144:g_d0_f2:changes.  However, selection issues persist even in the sample of nonmerging hospitals, 
+19:450:35576:27:28:89:490:423:144:g_d0_f2:144:g_d0_f2:as nonmerging hospitals in markets with mergers (NMW hospitals) are likely to be 
+19:451:35657:28:27:89:503:395:144:g_d0_f2:144:g_d0_f2:different in relevant, unobserved ways from nonmerging hospitals in markets without 
+19:452:35741:27:28:89:496:368:144:g_d0_f2:144:g_d0_f2:mergers (NMWO hospitals).  Thus, I introduce an instrument for exposure to a rival 
+19:453:35824:28:27:89:474:340:144:g_d0_f2:144:g_d0_f2:merger, namely the number of co-located rival hospital pairs.  If this measure is 
+19:454:35906:27:28:89:515:313:144:g_d0_f2:144:g_d0_f2:correlated with the propensity for rivals to merge, and otherwise uncorrelated with price 
+19:455:35996:28:28:89:493:285:144:g_d0_f2:144:g_d0_f2:growth of area hospitals, it is a valid instrument for rival merger and can be used to 
+19:456:36083:28:41:89:390:257:144:g_d0_f2:144:g_d0_f2:produce unbiased estimates of the price effect of rival merger. 
+19:457:36147:41:28:125:524:216:144:g_d0_f2:144:g_d0_f2:I proceed in two steps.  First, I validate the conjecture that co-located hospitals are 
+19:458:36235:28:28:89:522:188:144:g_d0_f2:144:g_d0_f2:more likely to merge.  For this analysis, I use the All Hospitals sample.  Second, I use the 
+19:459:36328:28:0:89:510:160:144:g_d0_f2:144:g_d0_f2:Rivals Sample to obtain an instrumental variables estimate of the effect of rival merger 
+20:460:36419:0:27:90:513:708:144:g_d0_f2:144:g_d0_f2:on price.25  I compare this estimate with the estimate from an OLS regression that takes 
+20:461:36508:27:42:90:245:681:144:g_d0_f2:144:g_d0_f2:rival merger to be exogenous.    
+20:462:36541:42:27:90:331:639:144:g_d0_f2:144:g_d0_f2:5.1 Co-location and the Probability of Merger 
+20:463:36587:27:28:90:509:612:144:g_d0_f2:144:g_d0_f2:Using the raw data from the All Hospitals sample, co-location performs quite well as a 
+20:464:36674:28:28:89:520:584:144:g_d0_f2:144:g_d0_f2:predictor of merger: the merger rate for co-located hospitals is 11.0 percent, as compared 
+20:465:36765:28:27:89:490:556:144:g_d0_f2:144:g_d0_f2:to 3.7 percent for non-co-located hospitals.   Table 2 presents the results of a linear 
+20:466:36853:27:28:89:511:529:144:g_d0_f2:144:g_d0_f2:probability model that includes all of the hospital characteristics reported in Table 1, as 
+20:467:36945:28:27:89:516:501:144:g_d0_f2:144:g_d0_f2:well as market characteristics such as the county-level HMO penetration rate, per-capita 
+20:468:37034:27:28:89:510:474:144:g_d0_f2:144:g_d0_f2:income, and total population.  To control for the possibility that state regulatory boards 
+20:469:37125:28:28:89:443:446:144:g_d0_f2:144:g_d0_f2:affect the merger rate, results are also presented with state fixed effects.   
+20:470:37204:28:27:125:522:418:144:g_d0_f2:144:g_d0_f2:The relationship between the probability of merger and co-location is robust to all 
+20:471:37288:27:28:89:516:391:144:g_d0_f2:144:g_d0_f2:of the controls: co-location is associated with an increase of 6-7 percentage points in the 
+20:472:37380:28:27:89:499:363:144:g_d0_f2:144:g_d0_f2:probability of merger.  As a falsification exercise, I reestimate these models using an 
+20:473:37468:27:28:89:507:336:144:g_d0_f2:144:g_d0_f2:indicator for system merger as the dependent variable.  System mergers are defined by 
+20:474:37553:28:28:89:519:308:144:g_d0_f2:144:g_d0_f2:Dranove and Lindrooth as one-to-one consolidations of hospitals that did not surrender a 
+20:475:37642:28:27:89:480:280:144:g_d0_f2:144:g_d0_f2:facility license and report joint data following the consolidation.  The coefficient 
+20:476:37727:27:28:89:515:253:144:g_d0_f2:144:g_d0_f2:estimates from these regressions are small and statistically insignificant.26  As expected, 
+20:477:37819:28:27:90:493:225:144:g_d0_f2:144:g_d0_f2:co-location is a good predictor of fully-integrated mergers but not of all merger and 
+20:478:37905:27:28:90:507:198:144:g_d0_f2:144:g_d0_f2:acquisition-related activity.  Hence, the point estimates pertain only to these particular 
+20:479:37996:28:50:90:176:170:144:g_d0_f2:144:g_d0_f2:types of mergers. 
+20:480:38014:50:7:234:237:120:144:g_d0_f2:144:g_d0_f2:                                                 
+20:481:38062:7:16:90:486:113:42:g_d0_f2:100:g_d0_f2:25 An alternative approach would be to use own co-location as an instrument for own merger.  The 
+20:482:38159:16:12:90:521:97:100:g_d0_f2:100:g_d0_f2:advantage of rival analysis is that it potentially exploits each merger several times (when multiple hospitals 
+20:483:38270:12:7:90:388:85:100:g_d0_f2:100:g_d0_f2:are exposed to the same merger), increasing the sample size substantially. 
+20:484:38345:7:0:90:384:78:42:g_d0_f2:100:g_d0_f2:26 The point estimates are -.020 (.011) with or without state fixed effects. 
+21:485:38424:0:27:126:505:708:144:g_d0_f2:144:g_d0_f2:Given the strong relationship between co-location and merger, the relationship 
+21:486:38503:27:28:90:506:681:144:g_d0_f2:144:g_d0_f2:between rival co-location and rival merger in the rivals sample should also be strong.  
+21:487:38591:28:27:90:522:653:144:g_d0_f2:144:g_d0_f2:Table 2, column 3 reports the results of a linear regression of the number of rival mergers 
+21:488:38682:27:28:90:481:626:144:g_d0_f2:144:g_d0_f2:on the number of co-located rival pairs, again controlling for hospital and market 
+21:489:38765:28:28:90:490:598:144:g_d0_f2:144:g_d0_f2:characteristics.  Column 4 adds state fixed effects.  These specifications reveal that 
+21:490:38852:28:27:90:512:570:144:g_d0_f2:144:g_d0_f2:having one additional pair of co-located rivals is associated with an increase of roughly 
+21:491:38942:27:28:90:498:543:144:g_d0_f2:144:g_d0_f2:0.11 in the number of rival mergers, as compared to a mean of 0.16.  This regression 
+21:492:39027:28:41:90:424:515:144:g_d0_f2:144:g_d0_f2:constitutes the first stage in the two-stage least squares rival analysis. 
+21:493:39102:41:28:126:499:474:144:g_d0_f2:144:g_d0_f2:For rival co-location to be a good instrument for rival merger, it must also be 
+21:494:39182:28:28:90:519:446:144:g_d0_f2:144:g_d0_f2:uncorrelated with unobserved factors related to price growth.27  To examine whether this 
+21:495:39271:28:27:89:509:418:144:g_d0_f2:144:g_d0_f2:condition is satisfied, I regress price growth during the pre-period on the number of co-
+21:496:39360:27:28:89:520:391:144:g_d0_f2:144:g_d0_f2:located rival pairs and the controls listed above.28  The results, reported in columns 1 and 
+21:497:39453:28:27:90:500:363:144:g_d0_f2:144:g_d0_f2:2 of Table 3, reveal a negative and statistically insignificant relationship between the 
+21:498:39542:27:28:90:514:336:144:g_d0_f2:144:g_d0_f2:number of co-located rival pairs and price growth.  Thus, there is no empirical evidence 
+21:499:39631:28:28:90:506:308:144:g_d0_f2:144:g_d0_f2:suggesting that price growth before the merger wave was greater for hospitals with co-
+21:500:39717:28:91:90:160:280:144:g_d0_f2:144:g_d0_f2:located rivals. 
+21:501:39733:91:7:234:237:189:144:g_d0_f2:144:g_d0_f2:                                                 
+21:502:39781:7:16:90:501:182:42:g_d0_f2:100:g_d0_f2:27 This assumption would be violated if, for example, prior to1988 new hospitals were likelier to enter 
+21:503:39885:16:12:90:521:166:100:Times:100:g_d0_f2:adjacent to existing hospitals in areas where prices were expected to increase during 1988-96.  In that case, 
+21:504:39995:12:11:90:487:154:100:g_d0_f2:100:g_d0_f2:price growth for hospitals with colocated rivals would be faster for reasons unrelated to the greater 
+21:505:40097:11:12:90:513:143:100:g_d0_f2:100:g_d0_f2:propensity for these rivals to merge  As there has been very little entry in the acute-care hospital industry 
+21:506:40207:12:11:90:510:131:100:g_d0_f2:100:g_d0_f2:since the Hospital Survey and Construction Act of 1946 (known as Hill-Burton), this seems a reasonable 
+21:507:40310:11:12:90:512:120:100:g_d0_f2:100:g_d0_f2:assumption.  Exit was not uncommon, however less than one percent of the hospitals in the study sample 
+21:508:40413:12:11:90:520:108:100:g_d0_f2:100:g_d0_f2:have rivals who exited during the study period.  All results are robust to including a control for the number 
+21:509:40523:11:7:90:158:97:100:g_d0_f2:100:g_d0_f2:of exiting rivals. 
+21:510:40542:7:16:90:524:90:42:g_d0_f2:100:g_d0_f2:28 Regressions for pre-period price growth use hospital covariates from 1985.  Regressions for the treatment 
+21:511:40651:16:0:90:471:74:100:g_d0_f2:100:g_d0_f2:period use covariates from 1988, and regressions for the post-period use covariates from 1997. 
+22:512:40748:0:41:90:323:694:144:g_d0_f2:144:g_d0_f2:5.2 The Impact of Merger on Rivals’ Prices  
+22:513:40792:41:28:90:477:653:144:g_d0_f2:144:g_d0_f2:The reduced form of the rival analysis is a regression of price growth during the 
+22:514:40874:28:27:90:513:625:144:g_d0_f2:144:g_d0_f2:treatment period on the number of co-located rival pairs and all of the control variables. 
+22:515:40965:27:28:90:522:598:144:g_d0_f2:144:g_d0_f2:Price growth is measured as the change in logged price between 1988, the year before the 
+22:516:41054:28:27:90:506:570:144:g_d0_f2:144:g_d0_f2:first merger in the dataset, and 1997, the year following the last merger in the dataset.  
+22:517:41145:27:28:90:480:543:144:g_d0_f2:144:g_d0_f2:Results from the reduced form are reported in columns 3 and 4 of Table 3.  Each 
+22:518:41225:28:28:90:521:515:144:g_d0_f2:144:g_d0_f2:additional pair of co-located rivals is associated with a statistically-significant increase of 
+22:519:41321:28:27:90:514:487:144:g_d0_f2:144:g_d0_f2:0.045 in price growth, as compared to a mean of 0.010 during this period.  The estimate 
+22:520:41409:27:28:90:507:460:144:g_d0_f2:144:g_d0_f2:falls slightly to 0.034 and remains statistically significant upon inclusion of state fixed 
+22:521:41501:28:28:90:522:432:144:g_d0_f2:144:g_d0_f2:effects.  Columns 5 and 6 report results using price growth in the post period, 1997-2000, 
+22:522:41592:28:27:90:505:404:144:g_d0_f2:144:g_d0_f2:as the dependent variable.  As in the pre-period, there is no relationship between price 
+22:523:41681:27:42:90:303:377:144:g_d0_f2:144:g_d0_f2:growth and the number of co-located rivals. 
+22:524:41725:42:27:126:506:335:144:g_d0_f2:144:g_d0_f2:Table 4 presents the IV estimate of the effect of a rival’s merger between 1989 
+22:525:41805:27:28:90:521:308:144:g_d0_f2:144:g_d0_f2:and 1996 on price growth between 1988 and 1997.  The point estimate is simply the ratio 
+22:526:41893:28:27:90:501:280:144:g_d0_f2:144:g_d0_f2:of the reduced-form and first-stage coefficient estimates, 0.045/0.119 ≈ 0.376, with a 
+22:527:41980:27:28:90:489:253:144:g_d0_f2:144:g_d0_f2:standard error of 0.132.29  This figure translates into a cumulative price increase of 
+22:528:42067:28:28:90:517:225:144:g_d0_f2:144:g_d0_f2:approximately 46 percent (35 percent using the model with state fixed effects).30  This is 
+22:529:42158:28:27:89:522:197:144:g_d0_f2:144:g_d0_f2:equivalent to moving a hospital from the 25th to the 65th percentile of price growth during 
+22:530:42250:27:61:89:495:170:144:g_d0_f2:144:g_d0_f2:this period, or the 75th to the 95th percentile.  (Real price growth in the rivals sample 
+22:531:42340:61:8:234:237:109:144:g_d0_f2:144:g_d0_f2:                                                 
+22:532:42388:8:16:90:522:101:42:g_d0_f2:100:g_d0_f2:29 When using the exact (unrounded) coefficients, this ratio is identical to the IV estimate because there is a 
+22:533:42500:16:7:90:354:85:100:g_d0_f2:100:g_d0_f2:single endogenous regressor and the model is exactly identified.   
+22:534:42567:7:0:90:216:78:42:g_d0_f2:100:Times:30 e0.376 ≈ 1.46 and e0.301 ≈ 1.35  
+23:535:42604:0:27:90:520:708:144:g_d0_f2:144:g_d0_f2:averaged 1 percent between 1988 and 1997, with a standard deviation of 33 percent.) 31    
+23:536:42694:27:28:89:518:681:144:g_d0_f2:144:g_d0_f2:Given there is no relationship between co-located rival pairs and price growth during the 
+23:537:42784:28:27:89:521:653:144:g_d0_f2:144:g_d0_f2:post-merger period, these mergers appear to have induced a large one-time price increase 
+23:538:42873:27:28:89:511:626:144:g_d0_f2:144:g_d0_f2:or short-term boost in the pace of price growth rather than a transition to a permanently 
+23:539:42963:28:42:89:211:598:144:g_d0_f2:144:g_d0_f2:steeper price trajectory.   
+23:540:42991:42:27:125:517:556:144:g_d0_f2:144:g_d0_f2:Table 4 also reports OLS estimates of the effect of rival merger on price growth.  
+23:541:43074:27:28:89:491:529:144:g_d0_f2:144:g_d0_f2:As in Connor and Feldman (1998), I too find no statistically significant impact of a 
+23:542:43159:28:27:89:515:501:144:g_d0_f2:144:g_d0_f2:rival’s merger on price using OLS.  Hausman specification tests easily reject equality of 
+23:543:43249:27:46:89:406:474:144:g_d0_f2:144:g_d0_f2:the two estimates for models with and without state fixed effects. 
+23:544:43316:46:47:90:328:428:257:g_d0_f2:257:g_d0_f2:6       Extensions       and       Robustness       
+23:545:43368:47:41:90:267:381:144:g_d0_f2:144:g_d0_f2:6.1       Alternative       Explanations       
+23:546:43415:41:28:126:525:340:144:g_d0_f2:144:g_d0_f2:The identification strategy assumes that, controlling for observable characteristics, 
+23:547:43501:28:27:89:490:312:144:g_d0_f2:144:g_d0_f2:any systematic difference in the price growth exhibited by nonmerging hospitals in 
+23:548:43584:27:28:89:511:285:144:g_d0_f2:144:g_d0_f2:markets with co-located rivals and nonmerging hospitals in markets without co-located 
+23:549:43670:28:28:89:488:257:144:g_d0_f2:144:g_d0_f2:rivals is due to the greater frequency of rival mergers to which the former group is 
+23:550:43755:28:27:89:517:229:144:g_d0_f2:144:g_d0_f2:exposed.  The finding that price growth is similar for both groups prior to the start of the 
+23:551:43848:27:24:89:503:202:144:g_d0_f2:144:g_d0_f2:merger wave provides some support for this assumption; however, the study period is 
+23:552:43932:24:8:234:237:178:144:g_d0_f2:144:g_d0_f2:                                                 
+23:553:43980:8:16:90:512:170:42:g_d0_f2:100:g_d0_f2:31These estimates are similar in magnitude to the price increases implemented by Evanston Northwestern 
+23:554:44083:16:11:90:508:154:100:g_d0_f2:100:g_d0_f2:Healthcare (ENH) following its 1999 acquisition of nearby (but not co-located) Highland Park Hospital. 
+23:555:44186:11:12:90:514:143:100:g_d0_f2:100:g_d0_f2:ENH did not dispute the price increases alleged in the FTC complaint.  These include increases of 52% at 
+23:556:44291:12:11:90:515:131:100:g_d0_f2:100:g_d0_f2:the Evanston facility for UnitedHealthcare’s HMO, 190% for UnitedHealthcare’s PPO, 60% for Humana, 
+23:557:44390:11:12:90:499:120:100:g_d0_f2:100:g_d0_f2:40% for Private Healthcare Systems, and 15-20% for Aetna and Cigna’s HMOs (Modern Healthcare, 
+23:558:44484:12:11:90:512:108:100:g_d0_f2:100:g_d0_f2:1/2/2006).  Note these figures represent increases by merging hospitals rather than their rivals.  Increases 
+23:559:44593:11:12:90:518:97:100:g_d0_f2:100:g_d0_f2:by merging hospitals may be higher or lower than increases by rivals.  As demonstrated by Gal-Or (1999), 
+23:560:44698:12:11:90:523:85:100:g_d0_f2:100:g_d0_f2:Capps, Dranove, and Satterthwaite (2005), and Ho (2007), the average negotiated post-merger price for any 
+23:561:44804:11:0:90:519:74:100:g_d0_f2:100:g_d0_f2:given hospital depends on its relative bargaining power vis-a-vis insurers in the post-merger marketplace.   
+24:562:44915:0:27:90:516:708:144:g_d0_f2:144:g_d0_f2:long and it is possible that omitted factors affect the evolution of prices in these markets 
+24:563:45008:27:42:90:284:681:144:g_d0_f2:144:g_d0_f2:differently during this particular period. 
+24:564:45051:42:27:126:493:639:144:g_d0_f2:144:g_d0_f2:The most important such factor is the strength of managed care.  Although I 
+24:565:45127:27:28:89:503:612:144:g_d0_f2:144:g_d0_f2:control for the percent of the population enrolled in managed care in each market, the 
+24:566:45214:28:28:89:507:584:144:g_d0_f2:144:g_d0_f2:negotiating power of these organizations varies widely.  As a result, it is helpful to use 
+24:567:45305:28:27:89:494:556:144:g_d0_f2:144:g_d0_f2:the model from Section 2 to generate predictions regarding how changes in demand 
+24:568:45386:27:28:89:512:529:144:g_d0_f2:144:g_d0_f2:would affect prices in the two market types.  In the context of this model, the growth of 
+24:569:45476:28:27:89:499:501:144:g_d0_f2:144:g_d0_f2:managed care is similar to a reduction in v, buyers’ maximum willingness-to-pay for 
+24:570:45560:27:28:89:520:474:144:g_d0_f2:144:g_d0_f2:hospital services.  The impact of a decline in v on equilibrium price (i.e. dP*/dv) depends 
+24:571:45652:28:28:89:515:446:144:g_d0_f2:144:g_d0_f2:on the value of the transport cost t, but for the relevant range of t, price is as sensitive or 
+24:572:45748:28:27:89:501:418:144:Times:144:g_d0_f2:more sensitive to v markets with co-located rivals.  The intuition for this result is that 
+24:573:45839:27:28:89:499:391:144:g_d0_f2:144:g_d0_f2:prices in more competitive markets are more sensitive to changes in costs or demand 
+24:574:45923:28:27:89:504:363:144:g_d0_f2:144:g_d0_f2:because firms are less able to absorb such shocks by cutting into their profit margins.  
+24:575:46012:27:28:89:515:336:144:g_d0_f2:144:g_d0_f2:Thus, if anything we might expect lower price growth in markets with co-located rivals, 
+24:576:46100:28:28:89:507:308:144:g_d0_f2:144:g_d0_f2:strengthening the argument that the higher observed growth is due not to the structural 
+24:577:46187:28:27:89:511:280:144:g_d0_f2:144:g_d0_f2:propensity for hospitals in such markets to raise prices particularly rapidly but rather to 
+24:578:46279:27:42:89:373:253:144:g_d0_f2:144:g_d0_f2:the increased frequency of mergers induced by colocation. 
+24:579:46337:42:27:125:515:211:144:g_d0_f2:144:g_d0_f2:Another empirical test of the identifying assumption is to see whether the results 
+24:580:46420:27:28:89:482:184:144:g_d0_f2:144:g_d0_f2:are robust to the exclusion of all control variables.  Assuming that the correlation 
+24:581:46505:28:28:89:506:156:144:g_d0_f2:144:g_d0_f2:between observable factors and the instrument is similar to that between unobservable 
+24:582:46591:28:0:89:486:128:144:g_d0_f2:144:g_d0_f2:factors and the instrument, a robust result suggests the estimates are not biased by 
+25:583:46678:0:27:90:487:708:144:g_d0_f2:144:g_d0_f2:unobserved factors.  Indeed, the estimated merger effect, presented in column 2 of 
+25:584:46761:27:42:90:438:681:144:g_d0_f2:144:g_d0_f2:Appendix Table 1, is virtually unchanged when all controls are omitted. 
+25:585:46833:42:41:90:231:639:144:g_d0_f2:144:g_d0_f2:6.2  Specification Checks 
+25:586:46859:41:28:126:497:598:144:g_d0_f2:144:g_d0_f2:Table 5 explores the sensitivity of the results to alternative definitions for co-
+25:587:46941:28:27:89:512:570:144:g_d0_f2:144:g_d0_f2:location and changes in market boundaries.  IV estimates without state fixed effects are 
+25:588:47030:27:28:90:520:543:144:g_d0_f2:144:g_d0_f2:reported for all combinations of these definitions and boundaries.32  The results are fairly 
+25:589:47123:28:28:90:496:515:144:g_d0_f2:144:g_d0_f2:insensitive to the co-location definition, with statistically-significant point estimates 
+25:590:47213:28:27:90:524:487:144:g_d0_f2:144:g_d0_f2:ranging between 0.326 and 0.511.  The Mapquest corrections eliminate a small amount of 
+25:591:47300:27:28:90:513:460:144:g_d0_f2:144:g_d0_f2:noise in the co-location measure, but this noise does not appear to be systematic.  In the 
+25:592:47391:28:28:90:491:432:144:g_d0_f2:144:g_d0_f2:(unreported) first-stage regression using 0.3 miles as the co-location definition (i.e. 
+25:593:47479:28:27:90:515:404:144:g_d0_f2:144:g_d0_f2:eliminating the 5-block Mapquest restriction), the coefficient on co-located rival pairs is 
+25:594:47571:27:28:90:524:377:144:g_d0_f2:144:g_d0_f2:0.117 (.017), as compared to 0.119 (.018) for the Mapquest-corrected version (reported in 
+25:595:47661:28:41:90:142:349:144:g_d0_f2:144:g_d0_f2:Table 2).   
+25:596:47673:41:28:126:478:308:144:g_d0_f2:144:g_d0_f2:The alternative definitions for co-location can also be used to perform an 
+25:597:47748:28:27:90:498:280:144:g_d0_f2:144:g_d0_f2:overidentification test of the co-location instrument.  The model can be estimated by 
+25:598:47834:27:28:90:518:253:144:g_d0_f2:144:g_d0_f2:2SLS using two instruments for rival merger: the number of rival pairs less than .2 miles 
+25:599:47924:28:28:90:506:225:144:g_d0_f2:144:g_d0_f2:apart, and the number of rival pairs .2 to .3 miles apart.  Regressing the residuals from 
+25:600:48014:28:27:90:518:197:144:g_d0_f2:144:g_d0_f2:this model on all instruments (which includes the exogenous regressors) and multiplying 
+25:601:48102:27:28:90:511:170:144:g_d0_f2:144:g_d0_f2:the resulting R-squared by N produces a test statistic that is distributed as a chi-squared 
+25:602:48194:28:56:90:480:142:144:g_d0_f2:144:g_d0_f2:statistic with one degree of freedom (Hausman 1983).  The test statistic of .36 (p-
+25:603:48277:56:8:234:237:86:144:g_d0_f2:144:g_d0_f2:                                                 
+25:604:48325:8:0:90:385:78:42:g_d0_f2:100:g_d0_f2:32 Results with state fixed effects are similar and available upon request.   
+26:605:48405:0:27:90:522:708:144:g_d0_f2:144:g_d0_f2:value=.55) supports the null hypothesis of exogeneity of the instruments.  I obtain similar 
+26:606:48497:27:42:90:349:681:144:g_d0_f2:144:g_d0_f2:results using 0-.2 and .2-.4 as the co-location ranges.  
+26:607:48554:42:27:126:487:639:144:g_d0_f2:144:g_d0_f2:To expand the instrument set, I also considered a variant of the co-location 
+26:608:48631:27:28:90:503:612:144:g_d0_f2:144:g_d0_f2:instrument: the number of co-located rival pairs of the same ownership type (i.e. both 
+26:609:48718:28:28:90:492:584:144:g_d0_f2:144:g_d0_f2:NFP hospitals, both FP hospitals, and both government hospitals).  Ceteris paribus, 
+26:610:48802:28:27:90:489:556:144:g_d0_f2:144:g_d0_f2:hospitals of the same ownership type may be more likely to merge due to common 
+26:611:48881:27:28:90:487:529:144:g_d0_f2:144:g_d0_f2:objectives and financial arrangements.  Including these additional instruments had 
+26:612:48964:28:27:90:508:501:144:g_d0_f2:144:g_d0_f2:virtually no effect on the results as there were too few non-zero values.  Other variants 
+26:613:49054:27:28:90:515:474:144:g_d0_f2:144:g_d0_f2:that may be correlated with the propensity for co-located hospitals to merge, such as the 
+26:614:49144:28:28:90:515:446:144:g_d0_f2:144:g_d0_f2:overlap of particular service offerings, are not time-invariant and may not be exogenous 
+26:615:49233:28:41:90:290:418:144:g_d0_f2:144:g_d0_f2:to contemporaneous market conditions.33 
+26:616:49272:41:28:125:523:377:144:g_d0_f2:144:g_d0_f2:In the main analysis, the market for a given hospital is defined to include all rivals 
+26:617:49359:28:27:89:486:349:144:g_d0_f2:144:g_d0_f2:within 7 miles.  The number of rival mergers and co-located rival pairs within this 
+26:618:49443:27:28:89:508:322:144:g_d0_f2:144:g_d0_f2:circular boundary are then counted.  Theoretically, the effect of rival merger should be 
+26:619:49532:28:28:89:510:294:144:g_d0_f2:144:g_d0_f2:stronger for closer rivals, and weaker for rivals located further away.  Indeed, the point 
+26:620:49623:28:27:89:524:266:144:g_d0_f2:144:g_d0_f2:estimates more than double when the market radius is set at 5 miles, while the price effect 
+26:621:49715:27:42:89:498:239:144:g_d0_f2:144:g_d0_f2:is small and statistically insignificant when all rivals within 10 miles are included.34  
+26:622:49805:42:27:125:522:197:144:g_d0_f2:144:g_d0_f2:Appendix 2 presents results from a series of alternative specifications, including a 
+26:623:49890:27:28:89:520:170:144:g_d0_f2:144:g_d0_f2:model with a negative binomial regression in the first stage, and a model with changes in 
+26:624:49980:28:22:89:518:142:144:g_d0_f2:144:g_d0_f2:price levels (rather than logs) as the dependent variable.  The uniformity of the estimates 
+26:625:50072:22:7:234:237:120:144:g_d0_f2:144:g_d0_f2:                                                 
+26:626:50120:7:16:90:520:113:42:g_d0_f2:100:g_d0_f2:33 A small number of hospitals did undergo ownership conversions during the study period, but for the vast 
+26:627:50227:16:7:90:333:97:100:g_d0_f2:100:g_d0_f2:majority ownership status is time-invariant (as is location).   
+26:628:50291:7:16:90:515:90:42:g_d0_f2:100:g_d0_f2:34 Note that reducing the market size also reduces the number of observations, as there are fewer hospitals 
+26:629:50399:16:0:90:254:74:100:g_d0_f2:100:g_d0_f2:with 2+ rivals within a shorter distance.  
+27:630:50444:0:27:90:464:708:144:g_d0_f2:144:g_d0_f2:across the various specifications confirms the initial results: mergers between 
+27:631:50524:27:46:90:507:681:144:g_d0_f2:144:g_d0_f2:independent, close rivals lead to dramatic increases in market prices for inpatient care. 
+27:632:50614:46:47:90:233:635:257:g_d0_f2:257:g_d0_f2:7       Conclusions       
+27:633:50640:47:27:90:479:588:144:g_d0_f2:144:g_d0_f2:Observational studies of merger effects are plagued by severe selection bias.  To 
+27:634:50722:27:28:90:524:561:144:g_d0_f2:144:g_d0_f2:overcome this bias, I propose a combination of rival analysis with instrumental variables.  
+27:635:50814:28:27:90:481:533:144:g_d0_f2:144:g_d0_f2:This approach uses the responses of rivals to gauge the anticompetitive effects of 
+27:636:50897:27:28:90:497:506:144:g_d0_f2:144:g_d0_f2:mergers, instrumenting for whether a rival is exposed to a merger in the first place.   
+27:637:50985:28:28:90:485:478:144:g_d0_f2:144:g_d0_f2:Using data on mergers in the hospital industry between 1989 and 1996, I find that 
+27:638:51067:28:27:90:515:450:144:g_d0_f2:144:g_d0_f2:hospitals increase price substantially following the merger of rivals within 7 miles.  The 
+27:639:51158:27:28:90:516:423:144:g_d0_f2:144:g_d0_f2:point estimate of approximately 40 percent is consistent with predictions from structural 
+27:640:51248:28:41:90:226:395:144:g_d0_f2:144:g_d0_f2:models of hospital choice.35 
+27:641:51276:41:28:126:507:354:144:g_d0_f2:144:g_d0_f2:For these mergers to have increased consumer welfare, they would have had to 
+27:642:51353:28:28:90:512:326:144:g_d0_f2:144:g_d0_f2:generate enormous quality improvements.  Only one prior study has explored the effect 
+27:643:51439:28:27:90:490:298:144:g_d0_f2:144:g_d0_f2:of hospital mergers on quality, and this study finds evidence of slight reductions in 
+27:644:51525:27:28:90:508:271:144:g_d0_f2:144:g_d0_f2:quality (Hamilton and Ho 2000).  On the other hand, producer welfare appears to have 
+27:645:51610:28:27:89:518:243:144:g_d0_f2:144:g_d0_f2:increased substantially, both as a result of price gains (paired with inelastic demand) and 
+27:646:51702:27:28:89:484:216:144:g_d0_f2:144:g_d0_f2:potentially large cost reductions (Dranove and Lindrooth 2003).  Caution must be 
+27:647:51783:28:56:89:522:188:144:g_d0_f2:144:g_d0_f2:exercised, however, when extrapolating these conclusions to hospital mergers in general.  
+27:648:51873:56:8:234:237:132:144:g_d0_f2:144:g_d0_f2:                                                 
+27:649:51921:8:16:90:513:124:42:g_d0_f2:100:g_d0_f2:35 Using hospital discharge data from California, Capps et al. (2003) and Gaynor and Vogt (2003) predict 
+27:650:52026:16:11:90:493:108:100:g_d0_f2:100:g_d0_f2:price increases of 10 to 58 percent for hypothetical mergers in markets with few competitors.  These 
+27:651:52127:11:12:90:495:97:100:g_d0_f2:100:g_d0_f2:estimates are likely to be downward-biased, as the models assume that rivals do not react to the price 
+27:652:52230:12:11:90:517:85:100:g_d0_f2:100:g_d0_f2:increases of the merged institution. If prices are strategic complements, the newly-merged entity will raise 
+27:653:52339:11:0:90:326:74:100:g_d0_f2:100:g_d0_f2:prices more because it anticipates the reaction of its rivals. 
+28:654:52404:0:27:90:516:708:144:g_d0_f2:144:g_d0_f2:The estimates I obtain rely on responses to mergers of co-located hospitals, which enjoy 
+28:655:52493:27:42:89:372:681:144:g_d0_f2:144:g_d0_f2:especially strong post-merger increases in market power.   
+28:656:52552:42:27:125:518:639:144:g_d0_f2:144:g_d0_f2:There are four key implications of the findings.  First, comparing price growth of 
+28:657:52635:27:28:89:492:612:144:g_d0_f2:144:g_d0_f2:merging firms with price growth of non-merging rivals is likely to yield substantial 
+28:658:52720:28:28:90:494:584:144:g_d0_f2:144:g_d0_f2:underestimates of merger effects in differentiated oligopoly settings.  Second, when 
+28:659:52805:28:27:90:497:556:144:g_d0_f2:144:g_d0_f2:selection bias is addressed, there is conclusive evidence that mergers of independent 
+28:660:52891:27:28:90:501:529:144:g_d0_f2:144:g_d0_f2:hospitals can lead to large increases in area prices, a result that has not emerged from 
+28:661:52980:28:27:89:509:501:144:g_d0_f2:144:g_d0_f2:prior longitudinal studies.  Third, the magnitudes of these increases are consistent with 
+28:662:53070:27:28:90:501:474:144:g_d0_f2:144:g_d0_f2:predictions generated from structural models of similar settings (Capps, Dranove and 
+28:663:53155:28:28:90:518:446:144:g_d0_f2:144:g_d0_f2:Satterthwaite (2003) and Gaynor and Vogt (2003)).  Although these models have mainly 
+28:664:53240:28:27:90:500:418:144:g_d0_f2:144:g_d0_f2:been used to predict price increases of merging firms themselves, the large estimated 
+28:665:53326:27:28:90:507:391:144:g_d0_f2:144:g_d0_f2:effects (in concentrated markets) suggest rivals of these firms could sustain significant 
+28:666:53416:28:27:90:513:363:144:g_d0_f2:144:g_d0_f2:price increases.  Therefore, the results in this paper validate the use of careful structural 
+28:667:53510:27:28:90:509:336:144:g_d0_f2:144:g_d0_f2:modeling to estimate the impact of proposed mergers.  Fourth, the analysis reveals that 
+28:668:53598:28:28:90:497:308:144:g_d0_f2:144:g_d0_f2:most geographic definitions of hospital markets are too large for urban areas.  Fixed-
+28:669:53684:28:27:90:517:280:144:g_d0_f2:144:g_d0_f2:radius definitions of 5 to 7 miles appear to be more appropriate than the commonly-used 
+28:670:53772:27:42:90:352:253:144:g_d0_f2:144:g_d0_f2:15 to 20 miles (and by extension, counties or MSAs).  
+28:671:53826:42:27:126:502:211:144:g_d0_f2:144:g_d0_f2:The methodology in this study could be applied to a number of industries that 
+28:672:53904:27:28:90:499:184:144:g_d0_f2:144:g_d0_f2:have also experienced merger waves, ranging from independent video stores to retail 
+28:673:53988:28:28:90:523:156:144:g_d0_f2:144:g_d0_f2:banks.  Various permutations of distance between firms or outlets – whether in product or 
+28:674:54078:28:27:90:474:128:144:g_d0_f2:144:g_d0_f2:physical space – could serve as instruments for merger, assuming they meet the 
+28:675:54157:27:0:90:481:101:144:g_d0_f2:144:g_d0_f2:requirement of exogeneity.  More generally, research that carefully addresses the 
+29:676:54241:0:27:90:507:708:144:g_d0_f2:144:g_d0_f2:endogeneity of merger events or models the appropriate counterfactual outcome in the 
+29:677:54326:27:28:90:515:681:144:g_d0_f2:144:g_d0_f2:absence of merger is needed in order to achieve a greater understanding of the effects of 
+29:678:54416:28:0:90:262:653:144:g_d0_f2:144:g_d0_f2:consolidations in various settings.   
+30:679:54456:0:33:90:164:691:257:g_d0_f2:144:g_d0_f2:References 
+30:680:54466:33:14:90:93:658:144:g_d0_f2:144:g_d0_f2: 
+30:681:54466:14:14:90:520:644:144:g_d0_f2:144:g_d0_f2:Alexander, J.A., M.T. Halpern, and S.D. Lee (1996), “The Short-Term Effects of Merger 
+30:682:54552:14:14:90:419:630:144:g_d0_f2:144:g_d0_f2:on Hospital Operations,” Health Services Research, 30(6): 827-847. 
+30:683:54619:14:14:90:93:616:144:g_d0_f2:144:g_d0_f2: 
+30:684:54619:14:13:90:521:602:144:g_d0_f2:144:g_d0_f2:Bazzoli, Gloria J., Anthony LoSasso, Richard Arnould, and Madeleine Shalowitz (2002), 
+30:685:54705:13:14:90:506:589:144:g_d0_f2:144:Times:“Hospital Reorganization and Restructuring Achieved Through Merger,” Health Care 
+30:686:54786:14:14:90:256:575:144:Times:144:g_d0_f2:Management Review, 27(1): 7-20. 
+30:687:54818:14:14:90:93:561:144:g_d0_f2:144:g_d0_f2: 
+30:688:54818:14:13:90:513:547:144:g_d0_f2:144:g_d0_f2:Capps, Cory, David Dranove, and Mark Satterthwaite (2003) “Competition and Market 
+30:689:54900:13:14:90:484:534:144:g_d0_f2:144:g_d0_f2:Power in Option Demand Markets,” Rand Journal of Economics, 34(4): 737-763. 
+30:690:54976:14:14:90:93:520:144:g_d0_f2:144:g_d0_f2: 
+30:691:54976:14:14:90:520:506:144:g_d0_f2:144:g_d0_f2:Chevalier, Judith (1995), “Capital Structure and Product Market Competition: Empirical  
+30:692:55064:14:14:90:493:492:144:g_d0_f2:144:g_d0_f2:Evidence from the Supermarket Industry,” American Economic Review, June 1995. 
+30:693:55142:14:13:90:93:478:144:g_d0_f2:144:g_d0_f2: 
+30:694:55142:13:14:90:485:465:144:g_d0_f2:144:g_d0_f2:Connor, Robert, Roger Feldman, and Bryan Dowd (1998) “The Effects of Market 
+30:695:55218:14:14:90:493:451:144:g_d0_f2:144:Times:Concentration and Horizontal Mergers on Hospital Costs and Prices,” International 
+30:696:55300:14:14:90:342:437:144:Times:144:g_d0_f2:Journal of the Economics of Business, 5(2): 159-80. 
+30:697:55352:14:14:90:93:423:144:g_d0_f2:144:g_d0_f2: 
+30:698:55352:14:13:90:518:409:144:g_d0_f2:144:g_d0_f2:Connor, Robert and Roger Feldman (1998) “The Effects of Horizontal Hospital Mergers 
+30:699:55436:13:14:90:520:396:144:g_d0_f2:144:g_d0_f2:on Nonmerging Hospitals,” Managed Care and Changing Health Care Markets, (Michael 
+30:700:55518:14:14:90:342:382:144:g_d0_f2:144:g_d0_f2:A. Morrisey, ed.), Washington, DC: The AEI Press. 
+30:701:55568:14:14:90:93:368:144:g_d0_f2:144:g_d0_f2: 
+30:702:55568:14:14:90:522:354:144:g_d0_f2:144:Times:Cuellar, Alison E. and Paul J. Gertler (2003), “Trends in Hospital Consolidation,” Health 
+30:703:55658:14:14:90:194:340:144:Times:144:g_d0_f2:Affairs, 22(6): 77-87. 
+30:704:55681:14:13:90:93:326:144:g_d0_f2:144:g_d0_f2: 
+30:705:55681:13:14:90:497:313:144:g_d0_f2:144:Times:Dafny, Leemore (2005), “How Do Hospitals Respond to Price Changes?” American 
+30:706:55758:14:14:90:327:299:144:Times:144:g_d0_f2:Economic Review, December, 95(5): 1525-1547. 
+30:707:55803:14:14:90:93:285:144:g_d0_f2:144:g_d0_f2: 
+30:708:55803:14:14:90:492:271:144:g_d0_f2:144:g_d0_f2:Dranove, David and Richard Lindrooth (2003), “Hospital Consolidation and Costs: 
+30:709:55883:14:13:90:459:257:144:g_d0_f2:144:g_d0_f2:Another Look at the Evidence,” Journal of Health Economics, 22: 983-997.  
+30:710:55957:13:14:90:93:244:144:g_d0_f2:144:g_d0_f2: 
+30:711:55957:14:14:90:480:230:144:g_d0_f2:144:g_d0_f2:Dranove, David and William D. White (1994), “Recent Theory and Evidence on 
+30:712:56032:14:14:90:500:216:144:g_d0_f2:144:g_d0_f2:Competition in Hospital Markets,” Journal of Economics and Management Strategy, 
+30:713:56112:14:14:90:162:202:144:g_d0_f2:144:g_d0_f2:3(1): 169-209. 
+30:714:56127:14:13:90:96:188:144:g_d0_f2:144:g_d0_f2:  
+30:715:56129:13:14:90:522:175:144:g_d0_f2:144:Times:Eckbo, Espen (1983), “Horizontal Mergers, Collusion, and Stockholder Wealth,” Journal 
+30:716:56215:14:14:90:268:161:144:Times:144:g_d0_f2:of Financial Economics, 11: 241-73. 
+30:717:56251:14:14:90:93:147:144:g_d0_f2:144:g_d0_f2: 
+30:718:56251:14:14:90:505:133:144:g_d0_f2:144:g_d0_f2:Gal-Or, Esther (1999), "Mergers and Exclusionary Practices in Health Care Markets," 
+30:719:56335:14:13:89:402:119:144:Times:144:g_d0_f2:Journal of Economics and Management Strategy, 8(3): 315-350. 
+30:720:56396:13:0:89:92:106:144:g_d0_f2:144:g_d0_f2: 
+31:721:56398:0:13:90:515:708:144:g_d0_f2:144:g_d0_f2:Gaynor, Martin and William B. Vogt (2000), "Antitrust and Competition in Health Care 
+31:722:56483:13:14:90:521:695:144:g_d0_f2:144:g_d0_f2:Markets," Handbook of Health Economics, (Anthony J. Culyer and Joseph P. Newhouse, 
+31:723:56566:14:14:90:258:681:144:g_d0_f2:144:g_d0_f2:eds.), Amsterdam: North-Holland. 
+31:724:56599:14:14:90:93:667:144:g_d0_f2:144:g_d0_f2: 
+31:725:56599:14:14:90:506:653:144:g_d0_f2:144:Times:Gaynor, Martin and William B. Vogt (2003), "Competition Among Hospitals,” RAND 
+31:726:56678:14:13:90:279:639:144:Times:144:g_d0_f2:Journal of Economics, 34(4): 764-785. 
+31:727:56716:13:14:90:93:626:144:g_d0_f2:144:g_d0_f2: 
+31:728:56716:14:14:90:495:612:144:g_d0_f2:144:g_d0_f2:Hamilton, Barton and Vivian Ho (2000), “Hospital Mergers and Acquisitions: Does 
+31:729:56796:14:14:90:490:598:144:g_d0_f2:144:g_d0_f2:Market Consolidation Harm Patients?” Journal of Health Economics, 19: 767-791. 
+31:730:56875:14:14:90:93:584:144:g_d0_f2:144:g_d0_f2: 
+31:731:56875:14:13:90:485:570:144:g_d0_f2:144:g_d0_f2:Hausman, Jerry (1983), “Specification and Estimation of Simultaneous Equations 
+31:732:56954:13:14:90:467:557:144:g_d0_f2:144:g_d0_f2:Models,” in Z. Griliches and M. Intriligator, eds., Handbook of Econometrics, 
+31:733:57032:14:14:90:228:543:144:g_d0_f2:144:g_d0_f2:Amsterdam: North Holland. 
+31:734:57058:14:14:90:93:529:144:g_d0_f2:144:g_d0_f2: 
+31:735:57058:14:14:90:515:515:144:g_d0_f2:144:g_d0_f2:Ho, Katherine (2007), “Insurer-Provider Networks in the Medical Care Market,” NBER 
+31:736:57141:14:13:90:202:501:144:g_d0_f2:144:g_d0_f2:Working Paper 11822. 
+31:737:57162:13:14:90:93:488:144:g_d0_f2:144:g_d0_f2: 
+31:738:57162:14:14:90:523:474:144:g_d0_f2:144:g_d0_f2:Keeler, Emmett B., Glenn Melnick, and Jack Zwanziger (1999), “The changing effects of 
+31:739:57248:14:14:89:504:460:144:g_d0_f2:144:Times:competition on non-profit and for-profit hospital pricing behavior,” Journal of Health 
+31:740:57335:14:14:89:211:446:144:Times:144:g_d0_f2:Economics, 18(1): 69-86 
+31:741:57359:14:13:89:92:432:144:g_d0_f2:144:g_d0_f2: 
+31:742:57359:13:14:89:522:419:144:g_d0_f2:144:g_d0_f2:Kaiser Family Foundation (2004), Employer Health Benefits Annual Survey, Menlo Park, 
+31:743:57444:14:14:90:113:405:144:g_d0_f2:144:g_d0_f2:CA. 
+31:744:57448:14:14:90:93:391:144:g_d0_f2:144:g_d0_f2: 
+31:745:57448:14:14:90:512:377:144:g_d0_f2:144:g_d0_f2:Krishnan, Ranjani (2001), “Market Restructuring and Pricing in the Hospital Industry,” 
+31:746:57535:14:13:90:301:363:144:Times:144:g_d0_f2:Journal of Health Economics, 20: 213-237. 
+31:747:57577:13:14:90:93:350:144:g_d0_f2:144:g_d0_f2: 
+31:748:57577:14:14:90:506:336:144:g_d0_f2:144:Times:Salop, Steven (1979), “Monopolistic Competition with Experience Goods,” Quarterly 
+31:749:57659:14:14:90:268:322:144:Times:144:g_d0_f2:Journal of Economics, 101:265-279. 
+31:750:57694:14:13:90:93:308:144:g_d0_f2:144:g_d0_f2: 
+31:751:57694:13:14:90:501:295:144:g_d0_f2:144:g_d0_f2:Spang, Heather, Gloria Bazzoli, and Richard Arnould (2001), “Hospital Mergers and 
+31:752:57776:14:14:90:493:281:144:g_d0_f2:144:g_d0_f2:Savings for Consumers: Exploring New Evidence,” Health Affairs  20(4): 150-158. 
+31:753:57856:14:14:90:93:267:144:g_d0_f2:144:g_d0_f2: 
+31:754:57856:14:14:90:513:253:144:g_d0_f2:144:g_d0_f2:Stigler, George (1964), “A Theory of Oligopoly,” Journal of Political Economy, 72, 44-
+31:755:57942:14:13:90:108:239:144:g_d0_f2:144:g_d0_f2:61. 
+31:756:57946:13:14:90:93:226:144:g_d0_f2:144:g_d0_f2: 
+31:757:57946:14:14:90:513:212:144:g_d0_f2:144:g_d0_f2:Tay, Abigail (2003), “Assessing Competition in Hospital Care Markets: the Importance 
+31:758:58031:14:14:90:524:198:144:g_d0_f2:144:g_d0_f2:of Accounting for Quality Differentiation,” RAND Journal of Economics, 34(4): 786-814. 
+31:759:58117:14:14:90:93:184:144:g_d0_f2:144:g_d0_f2: 
+31:760:58117:14:13:90:502:170:144:g_d0_f2:144:g_d0_f2:Taylor, Mark (2006), “Behind the FTC’s Lawsuit: Payers Pointed Finger at Evanston 
+31:761:58199:13:14:90:319:157:144:g_d0_f2:144:g_d0_f2:Northwestern,” Modern Healthcare, January 2. 
+31:762:58244:14:14:90:93:143:144:g_d0_f2:144:g_d0_f2: 
+31:763:58244:14:14:90:504:129:144:g_d0_f2:144:g_d0_f2:Town, Robert and William B. Vogt (2005), “Hospital Consolidation: What Impact on 
+31:764:58325:14:14:90:235:115:144:g_d0_f2:144:g_d0_f2:Prices and Quality?”, mimeo. 
+31:765:58354:14:0:90:93:101:144:g_d0_f2:144:g_d0_f2: 
+32:766:58356:0:13:90:472:708:144:g_d0_f2:144:g_d0_f2:Vita, Michael G. and Laurence Schumann (1991), “The Competitive Effects of 
+32:767:58431:13:14:90:477:695:144:g_d0_f2:144:Times:Horizontal Mergers in the Hospital Industry: A Closer Look,” Journal of Health 
+32:768:58510:14:14:90:209:681:144:Times:144:g_d0_f2:Economics 10: 359-372. 
+32:769:58533:14:14:90:93:667:144:g_d0_f2:144:g_d0_f2: 
+32:770:58533:14:14:90:514:653:144:g_d0_f2:144:g_d0_f2:Wooldridge, Jeffrey M. (2002), Econometric Analysis of Cross Section and Panel Data, 
+32:771:58618:14:13:89:252:639:144:g_d0_f2:144:g_d0_f2:Cambridge, MA: The MIT Press. 
+32:772:58648:13:14:89:98:626:144:g_d0_f2:144:g_d0_f2:   
+32:773:58651:14:14:89:494:612:144:g_d0_f2:144:g_d0_f2:Woolley, J. Michael (1989), “The Competitive Effects of Horizontal Mergers in the 
+32:774:58733:14:246:89:383:598:144:g_d0_f2:144:g_d0_f2:Hospital Industry,” Journal of Health Economics, 8: 271-91. 
+33:775:58793:246:0:145:300:352:99:Times:99:Times:Source: Dranove and Lindrooth (2003)
+33:776:58829:0:15:190:456:571:144:Times:144:Times:Figure 2.  Timing of Independent Hospital Mergers,
+33:777:58879:15:145:297:349:556:144:Times:144:Times:1989-1996
+33:778:58888:145:0:180:185:411:117:Times:117:Times:0
+33:779:58889:0:0:180:185:433:117:Times:117:Times:5
+33:780:58890:0:0:175:186:456:117:Times:117:Times:10
+33:781:58892:0:0:175:186:479:117:Times:117:Times:15
+33:782:58894:0:0:175:186:502:117:Times:117:Times:20
+33:783:58896:0:131:175:186:525:117:Times:117:Times:25
+33:784:58898:131:354:202:484:394:117:Times:117:Times:19891990199119921993199419951996
+33:785:58947:354:0:299:311:40:144:Times:144:Times:31
+34:786:58949:0:12:262:315:687:99:Times:99:Times:All Hospitals
+34:787:58962:12:12:352:513:675:99:Times:99:Times:AllNMWNMWO
+34:788:58972:12:12:83:167:663:99:Times:99:Times:Dependent Variables
+34:789:58991:12:12:91:510:651:99:Times:99:Times:1985 price$3,223$3,951$3,935$3,953
+34:790:59025:12:12:91:510:639:99:Times:99:Times:1988 price$3,404$4,057$3,737$4,107
+34:791:59059:12:12:91:510:627:99:Times:99:Times:1997 price$3,851$4,091$3,823$4,133
+34:792:59093:12:12:91:510:615:99:Times:99:Times:2000 price$3,908$4,067$4,014$4,075
+34:793:59127:12:11:91:505:603:99:Times:99:Times:ln(1988 price)-ln(1985 price).064.032-.029.042
+34:794:59173:11:12:91:505:592:99:Times:99:Times:ln(1997 price)-ln(1988 price).132.010.020.009
+34:795:59218:12:24:91:507:580:99:Times:99:Times:ln(2000 price)-ln(1997 price).013.001.039-.005
+34:796:59264:24:12:83:223:556:99:Times:99:Times:Merger Indicators and Instruments
+34:797:59297:12:12:91:299:544:99:Times:99:Times:Merger   4.0%
+34:798:59310:12:12:91:299:532:99:Times:99:Times:Co-located3.6%
+34:799:59324:12:12:91:499:520:99:Times:99:Times:No. of rival mergers.1561.1610
+34:800:59354:12:23:91:505:508:99:Times:99:Times:No. of co-located rival pairs.332.712.273
+34:801:59395:23:12:83:181:485:99:Times:99:Times:Hospital Characteristics
+34:802:59419:12:12:91:510:473:99:Times:99:Times:For-profit15.2%15.2%16.1%15.0%
+34:803:59449:12:12:91:510:461:99:Times:99:Times:Government25.5%10.0%8.5%10.3%
+34:804:59478:12:12:91:510:449:99:Times:99:Times:Teaching hospital6.4%16.3%18.6%15.9%
+34:805:59514:12:12:91:510:437:99:Times:99:Times:Medicaid share of discharges11.4%11.2%15.1%10.6%
+34:806:59562:12:12:91:510:425:99:Times:99:Times:Debt: asset ratio55.1%55.7%58.9%55.2%
+34:807:59599:12:11:91:510:413:99:Times:99:Times:Occupancy rate56.5%66.3%67.7%66.1%
+34:808:59633:11:12:91:155:402:99:Times:99:Times:Number of beds
+34:809:59647:12:12:99:507:390:99:Times:99:Times:0-9941.0%5.4%10.2%4.6%
+34:810:59669:12:12:99:510:378:99:Times:99:Times:100-19926.1%18.8%16.1%19.2%
+34:811:59696:12:12:99:510:366:99:Times:99:Times:200-29914.7%26.1%25.4%26.2%
+34:812:59723:12:12:99:510:354:99:Times:99:Times:300-3998.3%20.9%22.9%20.6%
+34:813:59749:12:24:99:510:342:99:Times:99:Times:400+9.9%28.8%25.4%29.4%
+34:814:59772:24:12:83:175:318:99:Times:99:Times:Market Characteristics
+34:815:59794:12:11:91:505:306:99:Times:99:Times:No. of rivals within 7 miles3.167.3712.036.64
+34:816:59839:11:12:91:158:295:99:Times:99:Times:MSA Population
+34:817:59853:12:12:99:507:283:99:Times:99:Times:Not in MSA44.0%3.0%0.8%3.3%
+34:818:59880:12:12:99:510:271:99:Times:99:Times:<250,00010.7%9.9%6.8%10.4%
+34:819:59906:12:12:99:510:259:99:Times:99:Times:250,000-499,9999.4%17.6%16.9%17.7%
+34:820:59940:12:12:99:510:247:99:Times:99:Times:500,000-1,000,00010.7%19.2%20.3%19.0%
+34:821:59977:12:12:99:510:235:99:Times:99:Times:1,000,000-2,500,00013.8%27.4%25.4%27.7%
+34:822:60016:12:12:99:510:223:99:Times:99:Times:>2,500,00011.4%23.0%29.7%22.0%
+34:823:60046:12:11:91:510:211:99:Times:99:Times:County HMO penetration14.5%21.3%23.7%20.9%
+34:824:60088:11:12:91:512:200:99:Times:99:Times:County per-capita income$17,154$19,923$20,036$19,905
+34:825:60140:12:0:83:504:188:99:Times:99:Times:N*4487877118759
+34:826:60155:0:544:246:365:708:144:Times:144:Times:Table 1. Sample Means
+34:827:60176:544:12:83:529:164:99:Times:99:Times:Notes: Prices are inflated to year 2000 dollars using the CPI-U.  Price change variables are censored at the 95th 
+34:828:60290:12:13:83:527:152:99:Times:99:Times:and 5th percentiles.  Hospital and market characteristics are measured as of 1988, with the exception of county 
+34:829:60402:13:50:83:481:139:99:Times:99:Times:HMO penetration, which is for 1994.  Rivals are defined as hospitals located within a 7-mile radius.
+34:830:60502:50:13:83:484:89:99:Times:99:Times:Sources: Medicare Cost Reports, Prospective Payment Impact Files, Dranove and Lindrooth (2003), 
+34:831:60598:13:0:83:434:76:99:Times:99:Times:geocode.com, American Hospital Association, Area Resource File, author's calculations
+34:832:60683:0:13:83:493:125:99:Times:99:Times:*In column 1, N for the price data is: 3,802 (1985), 4,026 (1988), 3,462 (1997), and 3,240 (2000).  All 
+34:833:60787:13:12:83:518:112:99:Times:99:Times:hospitals in the Rivals Sample have price data for 1985, 1988, and 1997.  2000 data is available for 99 of the 
+34:834:60898:12:0:83:282:100:99:Times:99:Times:NMW hospitals and 672 of the NMWO hospitals.
+34:835:60942:0:647:398:456:687:99:Times:99:Times:Rivals Sample
+34:836:60955:647:0:299:311:40:144:Times:144:Times:32
+35:837:60957:0:12:263:474:668:99:Times:99:Times:(1)(2)(3)(4)
+35:838:60969:12:12:112:359:656:99:Times:99:Times:Co-located     .066***     .062***
+35:839:61003:12:12:257:347:644:99:Times:99:Times:(.016)(.016)
+35:840:61015:12:12:112:490:632:99:Times:99:Times:No. of co-located rival pairs    .119***     .112***
+35:841:61067:12:12:390:479:620:99:Times:99:Times:(.018)(.019)
+35:842:61079:12:12:112:210:608:99:Times:99:Times:Hospital Characteristics
+35:843:61103:12:12:120:486:596:99:Times:99:Times:For-profit-.005.003.071    .090**
+35:844:61136:12:11:257:479:584:99:Times:99:Times:(.009)(.009)(.044)(.046)
+35:845:61160:11:12:120:478:573:99:Times:99:Times:Government     -.045***     -.037***-.067-.045
+35:846:61206:12:12:257:479:561:99:Times:99:Times:(.007)(.008)(.047)(.047)
+35:847:61230:12:12:120:478:549:99:Times:99:Times:Teaching hospital     .027**.022-.008-.006
+35:848:61272:12:12:257:479:537:99:Times:99:Times:(.015)(.015)(.045)(.044)
+35:849:61296:12:12:120:486:525:99:Times:99:Times:Medicaid share.040.037     .399***    .321**
+35:850:61340:12:12:257:479:513:99:Times:99:Times:(.031)(.032)(.130)(.130)
+35:851:61364:12:12:120:478:501:99:Times:99:Times:Debt: asset ratio-.009-.008-.006-.059
+35:852:61401:12:11:257:479:489:99:Times:99:Times:(.008)(.008)(.049)(.048)
+35:853:61425:11:12:120:478:478:99:Times:99:Times:Occupancy rate.012-.004.189-.125
+35:854:61457:12:12:257:479:466:99:Times:99:Times:(.020)(.021)(.120)(.126)
+35:855:61481:12:12:120:185:454:99:Times:99:Times:Number of beds
+35:856:61495:12:12:129:481:442:99:Times:99:Times:100-199.009.013 -.156** -.118*
+35:857:61525:12:12:257:479:430:99:Times:99:Times:(.008)(.008)(.067)(.064)
+35:858:61549:12:12:129:488:418:99:Times:99:Times:200-299 .019*   .023** -.153**    -.129**
+35:859:61590:12:12:257:479:406:99:Times:99:Times:(.010)(.010)(.067)(.064)
+35:860:61614:12:11:129:478:394:99:Times:99:Times:300-399-.018-.010  -.153**-.089
+35:861:61645:11:12:257:479:383:99:Times:99:Times:(.013)(.013)(.070)(.067)
+35:862:61669:12:12:129:481:371:99:Times:99:Times:400+-.019-.009  -.184** -.127*
+35:863:61699:12:12:257:479:359:99:Times:99:Times:(.014)(.014)(.072)(.069)
+35:864:61723:12:12:112:204:347:99:Times:99:Times:Market Characteristics
+35:865:61745:12:12:120:187:335:99:Times:99:Times:MSA Population
+35:866:61759:12:12:129:476:323:99:Times:99:Times:<250,000     .047***    .053***.047.110
+35:867:61798:12:12:257:479:311:99:Times:99:Times:(.011)(.011)(.092)(.092)
+35:868:61822:12:12:129:476:299:99:Times:99:Times:250,000-499,999.000.004.055.101
+35:869:61853:12:11:257:479:287:99:Times:99:Times:(.012)(.012)(.087)(.087)
+35:870:61877:11:12:129:476:276:99:Times:99:Times:500,000-1,000,000-.003.001.056.059
+35:871:61911:12:12:257:479:264:99:Times:99:Times:(.012)(.012)(.089)(.091)
+35:872:61935:12:12:129:476:252:99:Times:99:Times:1,000,000-2,500,000   -.038***-.019-.030.021
+35:873:61979:12:12:257:479:240:99:Times:99:Times:(.012)(.013)(.090)(.092)
+35:874:62003:12:12:129:476:228:99:Times:99:Times:>2,500,000   -.050***  -.035**.056.141
+35:875:62041:12:12:257:479:216:99:Times:99:Times:(.014)(.015)(.093)(.096)
+35:876:62065:12:12:120:481:204:99:Times:99:Times:HMO penetration.037-.012     .464***  .379*
+35:877:62108:12:11:257:479:192:99:Times:99:Times:(.032).043(.141)(.222)
+35:878:62130:11:12:120:492:181:99:Times:99:Times:Ln(per-capita income)     .070***   .046**.002     -.277***
+35:879:62189:12:12:257:479:169:99:Times:99:Times:(.018)(.021)(.087)(.097)
+35:880:62213:12:13:120:471:157:99:Times:99:Times:State fixed effectsNYNY
+35:881:62236:13:64:112:475:144:99:Times:99:Times:N44874487877877
+35:882:62251:64:0:112:337:80:99:Times:99:Times:*** signifies p<.01, ** signifies p<.05, * signifies p<.10
+35:883:62309:0:15:169:501:708:144:Times:144:Times:Table 2.  Relationship Between Merger/Rival Merger                    
+35:884:62379:15:575:183:427:693:144:Times:144:Times:and Co-location/Rival Co-location  (First Stage)
+35:885:62427:575:13:112:487:118:99:Times:99:Times:Notes:  All specifications are estimated by OLS.  Models using own merger as the dependent 
+35:886:62518:13:13:112:499:105:99:Times:99:Times:variable are estimated on the All Hospitals Sample, while models using number of rival mergers 
+35:887:62613:13:0:112:358:92:99:Times:99:Times:as the dependent variable are estimated on the Rivals Sample.
+35:888:62674:0:640:277:486:680:99:Times:99:Times:Own MergerNumber of Rival Mergers
+35:889:62707:640:0:299:311:40:144:Times:144:Times:33
+36:890:62709:0:24:195:535:666:99:Times:99:Times:(1)(2)(3)(4)(5)(6)
+36:891:62727:24:11:53:539:642:99:Times:99:Times:No. of co-located rival pairs-.016-.013     .045***   .034**-.008-.001
+36:892:62797:11:12:189:540:631:99:Times:99:Times:(.010)(.011)(.014)(.015)(.013)(.014)
+36:893:62833:12:12:53:151:619:99:Times:99:Times:Hospital Characteristics
+36:894:62857:12:12:61:539:607:99:Times:99:Times:For-profit.001-.009  -.087**-.052-.026-.018
+36:895:62900:12:12:189:540:595:99:Times:99:Times:(.024)(.025)(.035)(.036)(.027)(.029)
+36:896:62936:12:12:61:537:583:99:Times:99:Times:Government    .062**   .056**.021.042.023.034
+36:897:62981:12:12:189:540:571:99:Times:99:Times:(.025)(.026)(.037)(.037)(.034)(.035)
+36:898:63017:12:12:61:539:559:99:Times:99:Times:Teaching hospital   -.052**-.048**.014.018-.013-.007
+36:899:63069:12:11:189:540:547:99:Times:99:Times:(.024)(.024)(.035)(.035)(.030)(.031)
+36:900:63105:11:12:61:537:536:99:Times:99:Times:Medicaid share     -.501***     -.441***     .315***   .224**.066.059
+36:901:63174:12:12:189:540:524:99:Times:99:Times:(.079)(.082)(.102)(.103)(.073)(.077)
+36:902:63210:12:12:61:537:512:99:Times:99:Times:Debt: asset ratio     -.155***-.040.046.004.021.012
+36:903:63261:12:12:189:540:500:99:Times:99:Times:(.033)(.035)(.038)(.038)(.032)(.034)
+36:904:63297:12:12:61:537:488:99:Times:99:Times:Occupancy rate     -.255***-.024.107-.079.025.033
+36:905:63346:12:12:189:540:476:99:Times:99:Times:(.071)(.078)(.093)(.100)(.073)(.078)
+36:906:63382:12:12:61:126:464:99:Times:99:Times:Number of beds
+36:907:63396:12:12:70:537:452:99:Times:99:Times:100-199-.048-.060*.028.048.021.027
+36:908:63430:12:11:189:540:440:99:Times:99:Times:(.037)(.036)(.052)(.050)(.048)(.048)
+36:909:63466:11:12:70:539:429:99:Times:99:Times:200-299-.017-.025.013.040-.033-.017
+36:910:63501:12:12:189:540:417:99:Times:99:Times:(.037)(.036)(.053)(.051)(.048)(.049)
+36:911:63537:12:12:70:537:405:99:Times:99:Times:300-399-.011-.032.003.024.005.028
+36:912:63570:12:12:189:540:393:99:Times:99:Times:(.039)(.038)(.055)(.053)(.049)(.050)
+36:913:63606:12:12:70:537:381:99:Times:99:Times:400+.007-.005.022.045-.005.016
+36:914:63636:12:12:189:540:369:99:Times:99:Times:(.040)(.040)(.056)(.055)(.050)(.051)
+36:915:63672:12:12:53:145:357:99:Times:99:Times:Market Characteristics
+36:916:63694:12:11:61:128:345:99:Times:99:Times:MSA Population
+36:917:63708:11:12:70:537:334:99:Times:99:Times:<250,000.064-.011-.020.104.049.059
+36:918:63742:12:12:189:540:322:99:Times:99:Times:(.050)(.052)(.072)(.073)(.062)(.067)
+36:919:63778:12:12:70:537:310:99:Times:99:Times:250,000-499,999-.003-.055-.060.030.032.047
+36:920:63820:12:12:189:540:298:99:Times:99:Times:(.048)(.049)(.068)(.069)(.058)(.062)
+36:921:63856:12:12:70:539:286:99:Times:99:Times:500,000-1,000,000.007-.072-.045.047-.018-.011
+36:922:63901:12:12:189:540:274:99:Times:99:Times:(.049)(.051)(.070)(.072)(.060)(.064)
+36:923:63937:12:12:70:537:262:99:Times:99:Times:1,000,000-2,500,000.026-.049-.105-.029.000.017
+36:924:63983:12:11:189:540:250:99:Times:99:Times:(.050)(.051)(.071)(.073)(.060)(.064)
+36:925:64019:11:12:70:539:239:99:Times:99:Times:>2,500,000.047.012-.124*-.025-.072-.057
+36:926:64058:12:12:189:540:227:99:Times:99:Times:(.051)(.054)(.073)(.076)(.062)(.068)
+36:927:64094:12:12:61:537:215:99:Times:99:Times:HMO penetration -.166**-.124    -.529***-.332*      .284***.089
+36:928:64157:12:12:189:540:203:99:Times:99:Times:(.078)(.124)(.110)(.176)(.097)(.162)
+36:929:64193:12:12:61:537:191:99:Times:99:Times:Ln(per-capita income) -.111**-.059     .269*** .140*.017.049
+36:930:64253:12:12:189:540:179:99:Times:99:Times:(.048)(.055)(.068)(.077)(.058)(.067)
+36:931:64289:12:13:61:532:167:99:Times:99:Times:State fixed effectsNYNYNY
+36:932:64314:13:40:53:536:154:99:Times:99:Times:N877877877877703703
+36:933:64333:40:0:53:278:114:99:Times:99:Times:*** signifies p<.01, ** signifies p<.05, * signifies p<.10
+36:934:64391:0:0:435:554:678:99:Times:99:Times:ln (2000 price)-ln(1997 price)
+36:935:64421:0:15:132:559:708:144:Times:144:Times:Table 3.  Relationship Between Price Growth and Rival Co-location                           
+36:936:64513:15:567:264:348:693:144:Times:144:Times:(Reduced Form)
+36:937:64527:567:0:53:344:126:99:Times:99:Times:Notes:  All specifications are estimated by OLS using the Rivals Sample.
+36:938:64599:0:638:175:425:678:99:Times:99:Times:ln(1988 price)-ln(1985 price)ln (1997 price)-ln(1988 price)
+36:939:64658:638:0:299:311:40:144:Times:144:Times:34
+37:940:64660:0:23:115:158:683:99:Times:99:Times:Estimation
+37:941:64670:23:12:115:476:660:99:Times:99:Times:Number of rival mergers       .376***    .301**.016-.003
+37:942:64726:12:12:255:477:648:99:Times:99:Times:(.132)(.147)(.026)(.027)
+37:943:64750:12:12:115:527:636:99:Times:99:Times:Hospital characteristicsYYYY
+37:944:64778:12:12:115:527:624:99:Times:99:Times:Market characteristicsYYYY
+37:945:64804:12:11:115:469:612:99:Times:99:Times:State fixed effectsNYNY
+37:946:64827:11:25:115:473:601:99:Times:99:Times:N877877877877
+37:947:64840:25:0:115:340:576:99:Times:99:Times:*** signifies p<.01, ** signifies p<.05, * signifies p<.10
+37:948:64898:0:12:307:426:695:99:Times:99:Times:ln(1997 price) -ln(1988 price)
+37:949:64928:12:0:294:440:683:99:Times:99:Times:IVOLS
+37:950:64933:0:669:178:434:709:144:Times:144:Times:Table 4.  Effect of Rival Mergers on Price Growth
+37:951:64982:669:0:299:311:40:144:Times:144:Times:35
+38:952:64984:0:0:113:350:675:99:Times:99:Times:Market Radius.2 miles.3 miles
+38:953:65013:0:12:370:434:683:99:Times:99:Times:.3 miles and <5 
+38:954:65029:12:25:387:483:671:99:Times:99:Times:blocks.4 miles
+38:955:65043:25:12:113:481:646:99:Times:99:Times:5 miles (N=722).992  .851**     .962*** 1.116*
+38:956:65089:12:11:256:478:634:99:Times:99:Times:(.687)(.340)(.377)(.603)
+38:957:65113:11:12:113:482:623:99:Times:99:Times:7 miles (N=877) .511*      .326***      .376***    .431*
+38:958:65169:12:12:256:478:611:99:Times:99:Times:(.298)(.125)(.132)(.221)
+38:959:65193:12:11:113:474:599:99:Times:99:Times:10 miles (N=1041).046.038.051.021
+38:960:65226:11:50:256:478:588:99:Times:99:Times:(.082)(.050)(.054)(.072)
+38:961:65250:50:0:113:338:538:99:Times:99:Times:*** signifies p<.01, ** signifies p<.05, * signifies p<.10
+38:962:65308:0:0:319:413:695:99:Times:99:Times:Co-location Definition
+38:963:65330:0:146:178:433:709:144:Times:144:Times:Table 5.  Sensitivity of Results to Distance Cutoffs
+38:964:65382:146:13:113:484:563:99:Times:99:Times:Notes:  Each entry in the table is the IV estimate from a separate rival analysis.  The entry in 
+38:965:65479:13:510:113:479:550:99:Times:99:Times:column 3, row 2 corresponds to the main specification that appears in column 1 of Table 4).
+38:966:65570:510:0:299:311:40:144:Times:144:Times:36
+39:967:65574:0:47:90:168:691:257:g_d0_f2:144:g_d0_f2:Appendix 1 
+39:968:65584:47:28:90:470:644:144:g_d0_f2:144:g_d0_f2:In this appendix, I derive the equilibrium price sets for the Salop circle models 
+39:969:65666:28:28:90:495:616:144:g_d0_f2:144:g_d0_f2:corresponding to market structures 1 and 2 in the text.  I compare these prices to the 
+39:970:65753:28:41:90:523:588:144:g_d0_f2:144:g_d0_f2:prices that would arise following a merger between R1 and R2 (in each market structure). 
+39:971:65842:41:42:90:136:547:144:g_d0_f2:144:g_d0_f2:Market 1 
+39:972:65850:42:27:90:522:505:144:g_d0_f2:144:g_d0_f2:Recall that co-located firms are undifferentiated and hence price at cost, which is zero.  If 
+39:973:65944:27:52:90:328:478:144:Times:144:g_d0_f2:t is sufficiently low, H will set price to maximize 
+39:974:65996:52:9:338:343:426:144:g_d0_f9:144:g_d0_f9:⎟
+39:975:65997:9:0:338:343:417:144:g_d0_f9:144:g_d0_f9:⎠
+39:976:65998:0:8:338:343:434:144:g_d0_f9:144:g_d0_f9:⎞
+39:977:65999:8:9:296:301:426:144:g_d0_f9:144:g_d0_f9:⎜
+39:978:66000:9:0:296:301:417:144:g_d0_f9:144:g_d0_f9:⎝
+39:979:66001:0:7:296:301:434:144:g_d0_f9:144:g_d0_f9:⎛
+39:980:66002:7:9:313:139:427:144:g_d0_f9:49:g_d0_f9:−====∏•••
+39:981:66011:9:0:331:330:418:144:g_d0_f2:144:g_d0_f2:t2
+39:982:66013:0:17:323:329:435:144:g_d0_f2:144:g_d0_f2:p
+39:983:66014:17:0:303:309:418:144:g_d0_f2:144:g_d0_f2:4
+39:984:66015:0:8:303:309:435:144:g_d0_f2:144:g_d0_f2:1
+39:985:66016:8:53:283:348:427:144:g_d0_f2:144:g_d0_f2:2p)0p,0p,p(DpHH2R1RHHH 
+39:986:66038:53:27:90:503:374:144:g_d0_f2:144:g_d0_f2:H’s demand (denoted D) consists of the individuals on either side (hence the multiple 
+39:987:66124:27:30:90:487:347:144:g_d0_f2:144:g_d0_f2:“2”) for whom transport costs to firms R1/R2 exceed pH.  The equilibrium price is 
+39:988:66206:30:44:128:142:317:144:g_d0_f2:144:Times:4/p*Ht=. 
+39:989:66214:44:27:126:522:273:144:g_d0_f2:144:g_d0_f2:If t exceeds a threshold level, H will set price so that the marginal consumer earns 
+39:990:66299:27:28:90:492:246:144:g_d0_f2:144:g_d0_f2:zero surplus.  If t is extremely high, H is totally unconstrained by competition from 
+39:991:66385:28:28:89:525:218:144:g_d0_f2:144:g_d0_f2:R1/R2 and prices as a local monopolist.  In this case, the market will not be fully covered, 
+39:992:66478:28:27:89:515:190:144:g_d0_f2:144:g_d0_f2:i.e. not all consumers will purchase the product.  (This range is unrealistic in this setting 
+39:993:66572:27:28:89:486:163:144:g_d0_f2:144:g_d0_f2:because hospital services generate a sufficiently high v relative to t to ensure fully-
+39:994:66659:28:38:90:364:135:144:g_d0_f2:144:g_d0_f2:covered markets.)  The full solution set is described by36 
+39:995:66717:38:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+39:996:66765:7:16:90:509:90:42:g_d0_f2:100:g_d0_f2:36This solution set may not appear intuitive at first blush.  When t is small, H’s price increases in t as the 
+39:997:66876:16:0:89:516:74:100:g_d0_f2:100:g_d0_f2:higher transport cost reduces competition with its rivals.  Once t is sufficiently large, H begins to compete 
+40:998:66988:0:29:144:238:708:144:Times:144:Times: t/4,  t < 8v/3 
+40:999:67003:29:30:107:265:679:144:g_d0_f9:144:Times:=*Hp 2v-t/2, 8v/3 < t < 3v 
+40:1000:67029:30:28:90:281:649:144:Times:144:Times:                  v/2,                                    t                  >3v.                  
+40:1001:67128:28:28:90:93:621:144:Times:144:Times: 
+40:1002:67128:28:28:90:486:593:144:g_d0_f2:144:g_d0_f2:If R1 and R2 merge (into R), competition between them ceases, which relaxes the 
+40:1003:67208:28:51:90:453:565:144:g_d0_f2:144:g_d0_f2:constraint on H substantially.  For the lowest range of t, H now maximizes  
+40:1004:67284:51:10:304:309:514:144:g_d0_f9:144:g_d0_f9:⎟
+40:1005:67285:10:0:304:309:504:144:g_d0_f9:144:g_d0_f9:⎠
+40:1006:67286:0:8:304:309:522:144:g_d0_f9:144:g_d0_f9:⎞
+40:1007:67287:8:10:236:241:514:144:g_d0_f9:144:g_d0_f9:⎜
+40:1008:67288:10:0:236:241:504:144:g_d0_f9:144:g_d0_f9:⎝
+40:1009:67289:0:15:236:139:521:144:g_d0_f9:49:g_d0_f9:⎛+−==∏•••
+40:1010:67298:15:0:297:297:506:144:g_d0_f2:144:g_d0_f2:t2
+40:1011:67300:0:16:290:296:522:144:g_d0_f2:144:g_d0_f2:p
+40:1012:67301:16:0:271:270:506:144:g_d0_f2:144:g_d0_f2:t2
+40:1013:67303:0:16:263:269:522:144:g_d0_f2:144:g_d0_f2:p
+40:1014:67304:16:0:243:249:506:144:g_d0_f2:144:g_d0_f2:4
+40:1015:67305:0:7:243:249:522:144:g_d0_f2:144:g_d0_f2:1
+40:1016:67306:7:55:223:313:515:144:g_d0_f2:144:g_d0_f2:2p)p,p(DpRHHRHHH 
+40:1017:67322:55:44:90:347:460:144:g_d0_f2:144:g_d0_f2:By symmetry, *R*Hpp= and takes the following form 
+40:1018:67371:44:29:144:238:416:144:Times:144:Times: t/2,  t < 4v/3 
+40:1019:67386:29:31:107:265:387:144:g_d0_f9:144:Times:=*Hp v-t/4, 4v/3 < t < 2v 
+40:1020:67411:31:27:90:281:356:144:Times:144:Times:                  v/2,                                    t                  >2v.                  
+40:1021:67510:27:28:90:93:329:144:Times:144:Times: 
+40:1022:67510:28:28:126:500:301:144:g_d0_f2:144:g_d0_f2:These solutions suggest that a merger of co-located rivals will result in a very 
+40:1023:67591:28:27:89:506:273:144:g_d0_f2:144:g_d0_f2:sizeable price increase (up to 100 percent) so long as H actively competes with R1/R2 
+40:1024:67677:27:100:89:243:246:144:g_d0_f2:144:g_d0_f2:(i.e. the first two ranges for t).   
+40:1025:67714:100:12:521:524:146:144:g_d0_f2:144:g_d0_f2:                                                                                                                                                 
+40:1026:67858:12:12:90:515:134:100:g_d0_f2:100:g_d0_f2:with another option available to consumers: no purchase.  The marginal consumer’s reservation value is a 
+40:1027:67963:12:14:90:520:122:100:g_d0_f2:100:g_d0_f2:binding constraint on H’s price, yielding 2/t)t/v2/1(tvp*H=−•−=.  (Note the marginal consumer is located at 
+40:1028:68071:14:11:90:522:108:100:Times:100:g_d0_f2:v/t, as this is the point at which surplus from purchasing from R1/R2 equals zero.)  Within this intermediate 
+40:1029:68181:11:12:89:496:97:100:g_d0_f2:100:g_d0_f2:range of t, price decreases in t in order to continue serving the marginal consumer.  Finally, when t is 
+40:1030:68286:12:11:89:514:85:100:g_d0_f2:100:g_d0_f2:extremely high the firm acts as a local monopolist and is no longer constrained by R1/R2.  In this range, t 
+40:1031:68393:11:0:89:484:74:100:g_d0_f2:100:g_d0_f2:does not affect the tradeoffs at the margin and therefore does not enter into the monopolist's price. 
+41:1032:68497:0:43:89:136:694:144:g_d0_f2:144:g_d0_f2:Market 2 
+41:1033:68505:43:44:89:479:651:144:g_d0_f2:144:g_d0_f2:The pre-merger*Hp    (and *1Rp and *2Rp    , by symmetry) in market 2 is described by 
+41:1034:68591:44:30:144:229:607:144:Times:144:Times: t/3,  t < 2v 
+41:1035:68604:30:30:107:255:577:144:g_d0_f9:144:Times:=*Hp v-t/6, 2v < t < 3v 
+41:1036:68627:30:28:90:278:547:144:Times:144:Times:                  v/2,                                    t                  >3v                  
+41:1037:68725:28:27:90:93:519:144:Times:144:Times: 
+41:1038:68725:27:30:90:499:492:144:g_d0_f2:144:g_d0_f2:Assuming that one of the R facilities closes post-merger and the other remains in the 
+41:1039:68811:30:44:90:253:462:144:g_d0_f2:144:g_d0_f2:same location, post-merger *Hp is 
+41:1040:68845:44:29:144:238:418:144:Times:144:Times: t/2,  t < 6v/5 
+41:1041:68860:29:31:107:274:389:144:g_d0_f9:144:Times:=*Hp v-t/3, 6v/5 < t < 3v/2 
+41:1042:68887:31:27:90:287:358:144:Times:144:Times:                  v/2,                                    t                  >3v/2                  
+41:1043:68987:27:28:90:93:331:144:g_d0_f2:144:g_d0_f2: 
+41:1044:68987:28:28:90:487:303:144:g_d0_f2:144:g_d0_f2:These solutions illustrate why mergers among co-located hospitals are likely to be 
+41:1045:69070:28:27:90:494:275:144:g_d0_f2:144:g_d0_f2:associated with particularly large price increases.  In the realistic range of t for each 
+41:1046:69160:27:28:90:508:248:144:g_d0_f2:144:g_d0_f2:market (the range in which there is pre and post-merger competition among hospitals), 
+41:1047:69246:28:123:90:475:220:144:g_d0_f2:144:g_d0_f2:the price increases in market 2 are much smaller on average than in market 1.37  
+41:1048:69327:123:7:234:237:97:144:g_d0_f2:144:g_d0_f2:                                                 
+41:1049:69375:7:16:90:515:90:42:g_d0_f2:100:g_d0_f2:37When v =1, the average price increase for market 1 is 66.7 percent, and for market 2 it is 40 percent (the 
+41:1050:69484:16:0:90:228:74:100:g_d0_f2:100:g_d0_f2:percentage increase varies with t). 
+42:1051:69522:0:47:90:168:691:257:g_d0_f2:144:g_d0_f2:Appendix 2 
+42:1052:69532:47:28:90:527:644:144:g_d0_f2:144:g_d0_f2:The following table presents the coefficients of interest from several specification checks.  
+42:1053:69626:28:28:90:501:616:144:g_d0_f2:144:g_d0_f2:All models are based on the main specification without state fixed effects.  Column 1 
+42:1054:69712:28:27:90:516:588:144:g_d0_f2:144:g_d0_f2:repeats the main results as a reference point.  Column 2 demonstrates that the results are 
+42:1055:69803:27:28:90:488:561:144:g_d0_f2:144:g_d0_f2:similar when all hospital and market controls are excluded.  Column 3 reveals that 
+42:1056:69886:28:27:90:486:533:144:g_d0_f2:144:g_d0_f2:censoring of the dependent variable has only a slight effect on the point estimates. 
+42:1057:69971:27:28:90:500:506:144:g_d0_f2:144:g_d0_f2:Column 4 adds controls for the number of rivals within a hospital’s market.  Because 
+42:1058:70056:28:28:90:506:478:144:g_d0_f2:144:g_d0_f2:hospitals with more rivals are more likely to have co-located rivals as well as merging 
+42:1059:70144:28:27:90:520:450:144:g_d0_f2:144:g_d0_f2:rivals, it is possible that the instrument is also capturing the effect of having more rivals.  
+42:1060:70240:27:28:89:497:423:144:g_d0_f2:144:g_d0_f2:Theoretically, this could bias the estimate downward, as it would cause a larger first-
+42:1061:70327:28:27:89:512:395:144:g_d0_f2:144:g_d0_f2:stage coefficient and a smaller reduced-form coefficient.  Column 4 includes individual 
+42:1062:70415:27:28:89:504:368:144:g_d0_f2:144:g_d0_f2:dummies for markets with 2,3,...9,10-15, and 15+ rivals.  The result indicates a small 
+42:1063:70502:28:27:89:490:340:144:g_d0_f2:144:g_d0_f2:downward bias, if any.  Column 5 excludes hospitals that are co-located with other 
+42:1064:70585:27:28:89:508:313:144:g_d0_f2:144:g_d0_f2:hospitals from the estimation sample (note the number of co-located rival pairs always 
+42:1065:70672:28:28:89:506:285:144:g_d0_f2:144:g_d0_f2:excludes the pair to which a hospital belongs, if any).  Column 6 uses the fitted values 
+42:1066:70761:28:27:89:514:257:144:g_d0_f2:144:g_d0_f2:from a negative binomial first-stage regression as the instrument for the number of rival 
+42:1067:70851:27:28:89:502:230:144:g_d0_f2:144:g_d0_f2:mergers (per Wooldridge 2002).  Finally, Column 7 uses the change in price levels in 
+42:1068:70936:28:27:89:517:202:144:g_d0_f2:144:g_d0_f2:place of the change in log prices as the dependent variable.  The point estimate of $1566 
+42:1069:71026:27:28:89:504:175:144:g_d0_f2:144:g_d0_f2:(in $2000) is equivalent to 1.1 standard deviations of the distribution of price changes 
+42:1070:71115:28:28:89:518:147:144:g_d0_f2:144:g_d0_f2:during this period, and corresponds to a movement from the 25th to the 65th, or the 75th to 
+42:1071:71207:28:27:90:509:119:144:g_d0_f2:144:g_d0_f2:the 95th percentiles in price (the same magnitude obtained using the original dependent 
+42:1072:71295:27:0:89:523:92:144:g_d0_f2:144:g_d0_f2:variable).  Yet another specification check (excluded here for lack of space) confirms that 
+43:1073:71389:0:27:89:509:708:144:g_d0_f2:144:g_d0_f2:controlling for the number of rival hospital closures during 1988-97 does not affect the 
+43:1074:71478:27:42:89:126:681:144:g_d0_f2:144:g_d0_f2:results. 
+43:1075:71487:42:29:89:92:639:144:g_d0_f2:144:g_d0_f2: 
+43:1076:71487:29:25:204:411:610:144:Times:144:Times:Appendix Table 1. Specification Checks 
+43:1077:71526:25:0:50:415:585:100:g_d0_f2:100:g_d0_f2:Dependent variable ln (1997 price) -ln(1988 price) 
+43:1078:71577:0:12:516:562:597:100:g_d0_f2:100:g_d0_f2:1997 price-
+43:1079:71588:12:12:518:563:585:100:g_d0_f2:100:g_d0_f2:1988 price 
+43:1080:71599:12:12:50:546:573:100:g_d0_f2:100:g_d0_f2:                                                                    (1)                                                                    (2)                                                                    (3)                                                                    (4)                                                                    (5)                                                                    (6)                                                                    (7) 
+43:1081:72097:12:13:537:540:561:100:g_d0_f2:100:g_d0_f2:           
+43:1082:72105:13:12:50:563:548:100:g_d0_f2:100:g_d0_f2:Number of rival mergers        .380***          .352***        .402**        .408**         .326**       .222**     1566*** 
+43:1083:72229:12:12:213:551:536:100:g_d0_f2:100:g_d0_f2:          (.132)          (.132)            (.143)          (.198)           (.122)          (.099)          (563) 
+43:1084:72344:12:12:50:594:524:100:Times:100:g_d0_f2:Hospital characteristics Y                     N                     Y                     Y                     Y                     Y                     Y                     
+43:1085:72523:12:12:50:594:512:100:Times:100:g_d0_f2:Market characteristics Y                     N                     Y                     Y                     Y                     Y                     Y                     
+43:1086:72700:12:12:50:594:500:100:Times:100:g_d0_f2:Censored dependent variable Y                     Y                     N                     Y                     Y                     Y                     Y                     
+43:1087:72882:12:12:50:594:488:100:Times:100:g_d0_f2:Number of rival dummies N                     N                     N                     Y                     N                     N                     N                     
+43:1088:73060:12:12:50:594:476:100:Times:100:g_d0_f2:Drop co-located hospitals N                     N                     N                     N                     Y                     N                     N                     
+43:1089:73240:12:12:50:594:464:100:Times:100:g_d0_f2:Use neg. binomial in first stage N                     N                     N                     N                     N                     Y                     N                     
+43:1090:73427:12:13:50:706:452:100:g_d0_f2:100:g_d0_f2:N                                                                877                                                                877                                                                877                                                                877                                                                816                                                                877                                                                877                                                                
+43:1091:73961:13:12:514:517:439:100:g_d0_f2:100:Helvetica:        
+43:1092:73968:12:12:50:449:427:100:g_d0_f2:100:g_d0_f2:Notes: All models are estimated by 2SLS.  Prices are inflated to year 2000 dollars using the CPI-U. 
+43:1093:74068:12:13:50:517:415:100:g_d0_f2:100:Helvetica:*** signifies p<.01, ** signifies p<.05, * signifies p<.10       
+43:1094:74132:13:0:90:93:402:144:g_d0_f2:144:g_d0_f2: 

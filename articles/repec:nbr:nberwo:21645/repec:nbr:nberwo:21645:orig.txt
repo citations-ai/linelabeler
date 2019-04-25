@@ -1,0 +1,1631 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:517:610:12:Times:12:Times:TRADING VOTES FOR VOTES. A DECENTRALIZED MATCHING ALGORITHM
+1:2:84:28:14:306:352:582:12:Times:12:Times:Alessandra Casella
+1:3:102:14:28:306:344:568:12:Times:12:Times:Thomas Palfrey
+1:4:116:28:14:306:359:540:12:Times:12:Times:Working Paper 21645
+1:5:135:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w21645
+1:6:168:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:204:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:229:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:248:14:102:306:339:442:12:Times:12:Times:October 2015
+1:10:260:102:14:72:540:340:12:Times:12:Times:We thank Enrico Zanardo, Kirill Pogorelskiy and Manuel Puente for research assistance, and participants
+1:11:363:14:14:72:540:326:12:Times:12:Times:to the June 2013 Alghero (Italy) workshop on "Institutions, Individual Behavior and Economic Outcomes",
+1:12:466:14:14:72:540:312:12:Times:12:Times:the 2015 Warwick/Princeton Political Economy Conference (Venice, Italy), the 2015 Montreal Political
+1:13:566:14:14:72:540:298:12:Times:12:Times:Economy Workshop, the 2015 Princeton Workshop on Social Choice and Public Economics, the 2015
+1:14:659:14:14:72:540:284:12:Times:12:Times:Wallis Institute Annual Conference at the University of Rochester, and to seminars at New York University,
+1:15:765:14:14:72:540:270:12:Times:12:Times:the University of Michigan, and the University of Pittsburgh for comments. We especially wish to
+1:16:861:14:14:72:540:256:12:Times:12:Times:thank Micael Castanheira, Andrew Gelman, Debraj Ray, Richard Van Veelden, and Alistair Wilson
+1:17:954:14:14:72:540:242:12:Times:12:Times:for detailed comments and suggestions. The National Science Foundation and the Gordon and Betty
+1:18:1049:14:14:72:540:228:12:Times:12:Times:Moore Foundation provided financial support. Part of the research was conducted while Casella was
+1:19:1146:14:14:72:540:214:12:Times:12:Times:a Straus Fellow at NYU Law School and Palfrey was a Visiting Scholar at the Russell Sage Foundation.
+1:20:1246:14:14:72:540:200:12:Times:12:Times:The hospitality and financial support of both institutions are gratefully acknowledged. The views expressed
+1:21:1353:14:14:72:540:186:12:Times:12:Times:herein are those of the authors and do not necessarily reflect the views of the National Bureau of Economic
+1:22:1460:14:28:72:119:172:12:Times:12:Times:Research.
+1:23:1469:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:24:1565:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:25:1660:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:26:1678:28:14:72:540:88:12:Times:12:Times:© 2015 by Alessandra Casella and Thomas Palfrey. All rights reserved. Short sections of text, not
+1:27:1775:14:14:72:540:74:12:Times:12:Times:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:28:1879:14:0:72:224:60:12:Times:12:Times:© notice, is given to the source.
+2:29:1912:0:14:72:375:700:12:Times:12:Times:Trading Votes for Votes. A Decentralized Matching Algorithm
+2:30:1971:14:14:72:263:686:12:Times:12:Times:Alessandra Casella and Thomas Palfrey
+2:31:2008:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 21645
+2:32:2036:14:14:72:138:658:12:Times:12:Times:October 2015
+2:33:2048:14:28:72:176:644:12:Times:12:Times:JEL No. C92,D7,D72
+2:34:2066:28:28:306:339:616:12:Times:12:Times:ABSTRACT
+2:35:2074:28:14:72:540:588:12:Times:12:Times:Vote-trading is common practice in committees and group decision-making. Yet we know very little
+2:36:2170:14:14:72:540:574:12:Times:12:Times:about its properties. Inspired by the similarity between the logic of sequential rounds of pairwise vote-trading
+2:37:2282:14:14:72:540:560:12:Times:12:Times:and matching algorithms, we explore three central questions that have parallels in the matching literature:
+2:38:2389:14:14:72:540:546:12:Times:12:Times:(1) Does a stable allocation of votes always exists? (2) Is it reachable through a decentralized algorithm?
+2:39:2496:14:14:72:540:532:12:Times:12:Times:(3) What welfare properties does it possess? We prove that a stable allocation exists and is always
+2:40:2595:14:14:72:540:518:12:Times:12:Times:reached in a finite number of trades, for any number of voters and issues, for any separable preferences,
+2:41:2700:14:14:72:540:504:12:Times:12:Times:and for any rule on how trades are prioritized. Its welfare properties however are guaranteed to be
+2:42:2799:14:14:72:540:490:12:Times:12:Times:desirable only under specific conditions. A laboratory experiment confirms that stability has predictive
+2:43:2903:14:14:72:540:476:12:Times:12:Times:power on the vote allocation achieved via sequential pairwise trades, but lends only weak support
+2:44:3000:14:42:72:223:462:12:Times:12:Times:to the dynamic algorithm itself.
+2:45:3032:42:14:72:164:420:12:Times:12:Times:Alessandra Casella
+2:46:3050:14:14:72:198:406:12:Times:12:Times:Department of Economics
+2:47:3073:14:14:72:173:392:12:Times:12:Times:Columbia University
+2:48:3092:14:14:72:170:378:12:Times:12:Times:420 West 118 Street
+2:49:3111:14:14:72:179:364:12:Times:12:Times:New York, NY 10027
+2:50:3129:14:14:72:124:350:12:Times:12:Times:and NBER
+2:51:3137:14:28:72:177:336:12:Times:12:Times:ac186@columbia.edu
+2:52:3155:28:14:72:148:308:12:Times:12:Times:Thomas Palfrey
+2:53:3169:14:14:72:283:294:12:Times:12:Times:Division of Humanities and Social Sciences
+2:54:3211:14:14:72:146:280:12:Times:12:Times:228-77 Caltech
+2:55:3225:14:14:72:172:266:12:Times:12:Times:Pasadena, CA 91125
+2:56:3243:14:14:72:124:252:12:Times:12:Times:and NBER
+2:57:3251:14:0:72:169:238:12:Times:12:Times:trp@hss.caltech.edu
+3:58:3270:0:33:93:229:686:17:g_d0_f1:17:g_d0_f1:1    Introduction
+3:59:3287:33:18:93:518:653:12:g_d0_f2:12:g_d0_f2:Trading support for one proposal in exchange for someone else’s support of a dif-
+3:60:3368:18:18:93:518:635:12:g_d0_f2:12:g_d0_f2:ferent proposal is a common aspect of voting in committees, legislatures, and other
+3:61:3451:18:17:93:518:617:12:g_d0_f2:12:g_d0_f2:bodies of group decision making.  Whether as exchanges of favors in small informal
+3:62:3533:17:18:93:518:600:12:g_d0_f2:12:g_d0_f2:committees  or  as  more  elaborate  deals  in  legislatures,  common  sense,  anecdotes,
+3:63:3622:18:18:93:518:582:12:g_d0_f2:12:g_d0_f2:and  systematic  evidence,  all  suggest  that  the  practice  is  a  central  component  of
+3:64:3714:18:18:93:518:564:12:g_d0_f2:12:g_d0_f2:decision-making in groups.1Yet we know very little about the properties of vote
+3:65:3793:18:18:93:518:546:12:g_d0_f2:12:g_d0_f2:trading.  Efforts at a theory were numerous and enthusiastic in the 1960’s and 70’s
+3:66:3876:18:18:93:518:528:12:g_d0_f2:12:g_d0_f2:but have fizzled and disappeared in the last 40 years.  John Ferejohn’s words in 1974,
+3:67:3962:18:18:93:518:510:12:g_d0_f2:12:g_d0_f2:towards the end of this wave of research, remain true today:  ”[W]e really know very
+3:68:4046:18:18:93:518:492:12:g_d0_f2:12:g_d0_f2:little theoretically about vote trading.  We cannot be sure about when it will occur,
+3:69:4131:18:18:93:518:474:12:g_d0_f2:12:g_d0_f2:or how often, or what sort of bargains will be made.  We don’t know if it has any
+3:70:4212:18:21:93:443:456:12:g_d0_f2:12:g_d0_f2:desirable normative or efficiency properties.” (Ferejohn, 1974, p.  25)
+3:71:4283:21:18:111:518:435:12:g_d0_f2:12:g_d0_f2:One  reason  for  the  lack  of  progress  is  that  the  problem  is  difficult:  not  only
+3:72:4375:18:17:93:518:417:12:g_d0_f2:12:g_d0_f2:does vote bartering occur without the equilibrating properties of a continuous price
+3:73:4459:17:18:93:518:400:12:g_d0_f2:12:g_d0_f2:mechanism, not only does it cause externalities to allies and opponents of the trading
+3:74:4545:18:18:93:518:382:12:g_d0_f2:12:g_d0_f2:parties,  but  each  exchange  triggers  new  profitable  exchanges.   If  we  think  of  the
+3:75:4638:18:18:93:518:364:12:g_d0_f2:12:g_d0_f2:trades  sequentially,  as  a  subset  of  voters  trade  votes  on  a  set  of  proposals,  the
+3:76:4733:18:18:93:518:346:12:g_d0_f2:12:g_d0_f2:default outcomes of these proposals change, generating incentives for a new round
+3:77:4814:18:18:93:518:328:12:g_d0_f2:12:g_d0_f2:of vote trades, which will again change outcomes and trigger new trades.  What is
+3:78:4895:18:21:93:440:310:12:g_d0_f2:12:g_d0_f2:the most productive approach to modeling such a complex process?
+3:79:4959:21:18:111:518:289:12:g_d0_f2:12:g_d0_f2:The perspective taken in this paper is inspired by a similarity between the logic of
+3:80:5043:18:18:93:518:271:12:g_d0_f2:12:g_d0_f2:sequential rounds of vote trading and the problem of achieving stability in sequential
+3:81:5129:18:18:93:518:253:12:g_d0_f2:12:g_d0_f2:rounds  of  matching  among  different  agents,  as  originally  proposed  by  Gale  and
+3:82:5217:18:18:93:518:235:12:g_d0_f2:12:g_d0_f2:Shapley  (1962).2In  line  with  the  matching  literature,  we  explore  the  properties
+3:83:5306:18:18:93:518:217:12:g_d0_f2:12:g_d0_f2:of  a  class  of  algorithms  through  which  a  sequence  of  decentralized  pairwise  vote
+3:84:5398:18:17:93:518:199:12:g_d0_f2:12:g_d0_f2:trades  are  realized,  and  in  particular  we  use  the  familiar  notion  of  stability  from
+3:85:5494:17:18:93:518:182:12:g_d0_f2:12:g_d0_f2:that literature.  An allocation of votes is stable if no pairwise-improving vote trade
+3:86:5580:18:16:107:518:164:7:g_d0_f4:10:g_d0_f5:1There is an substantial literature in political science documenting vote trading in legislatures.
+3:87:5678:16:12:93:518:148:10:g_d0_f5:10:g_d0_f5:For example, Stratmann (1992) provides evidence of vote trading in agricultural bills in the US
+3:88:5773:12:8:93:135:136:10:g_d0_f5:10:g_d0_f5:Congress.
+3:89:5782:8:16:107:518:128:7:g_d0_f4:10:g_d0_f5:2Roth and Sotomayor (1990) and Gusfield and Irving (1989) survey some of the main results,
+3:90:5872:16:12:93:518:112:10:g_d0_f5:10:g_d0_f5:from the perspective of economic theory and computer science, respectively.  This continues to be
+3:91:5969:12:0:93:223:100:10:g_d0_f5:10:g_d0_f5:a very active area of research.
+4:92:6001:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:exists.3We  ask  whether  a  stable  allocation  of  votes  exists,  whether  the  specific
+4:93:6092:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:algorithm  we  construct  converges  to  a  stable  allocation,  and  whether  we  can  say
+4:94:6183:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:anything about individuals’ preferences over the outcomes induced by stable vote
+4:95:6263:18:21:93:151:632:12:g_d0_f2:12:g_d0_f2:allocations.
+4:96:6275:21:18:111:518:611:12:g_d0_f2:12:g_d0_f2:We should note at the outset that the parallel to matching problems is imperfect.
+4:97:6356:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:The closest analogue is to a one-sided matching problem with externalities:  a single
+4:98:6441:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:group of individuals who match in pairs but such that everyone has preferences not
+4:99:6523:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:only over his own partner, but over the composition of all matches.  Here too there is
+4:100:6609:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:only one group–voters–and in principle everyone can match with everyone else,4and
+4:101:6690:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:preferences are defined over the full set of matches.  But in addition in our voting
+4:102:6774:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:problem preferences evolve endogenously in response to executed trades.  Trades by
+4:103:6856:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:others can reverse a voter’s status as winner or loser and affect his desire to trade,
+4:104:6942:18:21:93:334:468:12:g_d0_f2:12:g_d0_f2:as well as his attractiveness as trading partner.
+4:105:6991:21:18:111:518:447:12:g_d0_f2:12:g_d0_f2:The committee we study is formed by an odd number of voters and faces several
+4:106:7068:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:proposals, each of which may pass or fail and, after trade, is voted upon separately
+4:107:7152:18:18:93:518:411:12:g_d0_f2:12:g_d0_f2:through majority voting.  Every committee member can be in favor or opposed to
+4:108:7230:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:any proposal and attaches some cardinal value to his preferred direction prevailing.
+4:109:7314:17:18:93:518:376:12:g_d0_f2:12:g_d0_f2:Members’  preferences  are  separable  across  proposals.   A  vote  trade  is  a  physical
+4:110:7405:18:18:93:518:358:12:g_d0_f2:12:g_d0_f2:exchange of ballots.  For most of our analysis and in the experiment, we allow pair-
+4:111:7489:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:wise trading only:  two voters engage in a trade if one delivers his vote to the other
+4:112:7575:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:on one proposal, in exchange for the other’s vote on a different proposal.  As in the
+4:113:7660:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:matching literature, a trading pair is said toblocka given allocation of votes if it can
+4:114:7748:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:be better-off under an alternative allocation that is in the pair’s power to achieve,
+4:115:7833:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:keeping fixed the votes held by the other committee members.  A stable allocation
+4:116:7914:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:is then an allocation of votes that cannot be blocked,  i.e.  such that no pair-wise
+4:117:7998:18:21:93:211:232:12:g_d0_f2:12:g_d0_f2:improving trade exists.
+4:118:8021:21:18:111:518:211:12:g_d0_f2:12:g_d0_f2:We define a further restrictions of the possible stable vote allocations as those
+4:119:8102:18:18:93:518:193:12:g_d0_f2:12:g_d0_f2:that are achievable from the initial vote allocation via a sequence of pairwise trades.
+4:120:8189:18:17:93:518:175:12:g_d0_f2:12:g_d0_f2:We  consider  a  family  of  trading  algorithms,  according  to  which  these  trades  can
+4:121:8280:17:16:107:518:158:7:g_d0_f4:10:g_d0_f5:3This notion of stability has also been used in the analysis of network formation.  See Jackson
+4:122:8375:16:12:93:518:142:10:g_d0_f5:10:g_d0_f5:and  Wolinsky  (1996)  for  an  early  application,  and  Jackson  and  Watts  (2002)  for  the  analysis
+4:123:8480:12:12:93:518:130:10:g_d0_f5:10:g_d0_f5:of a dynamic  algorithm building stable network configurations through the creation of  pairwise
+4:124:8576:12:8:93:163:118:10:g_d0_f5:10:g_d0_f5:improving links.
+4:125:8592:8:16:107:518:110:7:g_d0_f4:10:g_d0_f5:4In contrast to two-sided matching problems where matches only occur between members of
+4:126:8679:16:0:93:438:94:10:g_d0_f5:10:g_d0_f5:two separate groups–men and women, students and schools, workers and firms.
+5:127:8755:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:take  place.   In  such  an  algorithm,  an  initial  payoff  improving  exchange  of  votes
+5:128:8847:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:between two voters is selected among all possible pairwise improving trades, using
+5:129:8929:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:a specific selection rule, including random rules.  This leads to a new allocation of
+5:130:9014:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:votes,  and the algorithm again selects a pairwise improving trade from the set of
+5:131:9096:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:all  pairwise  improving  trades.   The  algorithm  continues  until  a  vote  allocation  is
+5:132:9189:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:reached  where  there  are  no  more  pairwise  improving  trades.   The  family  of  such
+5:133:9279:18:20:93:430:578:12:g_d0_f2:12:g_d0_f2:algorithms is populated by considering all possible selection rules.
+5:134:9347:20:18:111:518:558:12:g_d0_f2:12:g_d0_f2:As remarked in Riker and Brams (1973), the requirement that a vote trade be
+5:135:9422:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:welfare improving for both traders implies that the votes being trade must be pivotal,
+5:136:9508:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:and we call the class of such algorithms thePivot  Algorithms.Our first result is
+5:137:9589:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:that a Pivot algorithmalwaysgenerates a stable vote allocation in a finite number
+5:138:9670:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:of steps, for any number of voters, any number of proposals, and any configuration
+5:139:9752:18:21:93:226:468:12:g_d0_f2:12:g_d0_f2:of (separable) preferences.
+5:140:9779:21:18:111:518:447:12:g_d0_f2:12:g_d0_f2:This is an interesting result, not only for its generality but also because stability–
+5:141:9865:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:convergence to a vote allocation such that no further vote trade is profitable–was
+5:142:9947:18:18:93:518:411:12:g_d0_f2:12:g_d0_f2:one of the two central questions of the early literature on vote trading.  The litera-
+5:143:10033:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:ture addressed the ambitious conjecture that vote trading may offer the solution to
+5:144:10116:17:18:93:518:376:12:g_d0_f2:12:g_d0_f2:majority cycles in the absence of a Condorcet winner.  The original analysis (Park
+5:145:10198:18:18:93:518:358:12:g_d0_f2:12:g_d0_f2:(1967)),  studied  non-binding  agreements  when  voters  vote  on  the  full  package  of
+5:146:10288:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:proposals (as opposed to voting separately on each proposal).  Park considered only
+5:147:10371:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:majority coalitions and concluded that the process can converge only if a Condorcet
+5:148:10454:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:winner exists.5Riker and Brams (1973) and Ferejohn (1974) simplified the prob-
+5:149:10532:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:lem by considering binding agreements and proposal-by-proposal voting, as in our
+5:150:10612:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:model.   Their  conclusions  are  ambiguous:  Riker  and  Brams  conjecture  that  even
+5:151:10699:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:if stability held for pair-wise trading it would be compromised by allowing trades
+5:152:10781:18:18:93:518:232:12:g_d0_f2:12:g_d0_f2:among  larger  coalitions  of  voters;  Ferejohn  suggests  that  a  stable  vote  allocation
+5:153:10874:18:18:93:518:214:12:g_d0_f2:12:g_d0_f2:may not hold even for pair-wise trading if voters are forward-looking, but does not
+5:154:10957:18:21:93:259:196:12:g_d0_f2:12:g_d0_f2:fully specify the game structure.
+5:155:10990:21:17:111:518:175:12:g_d0_f2:12:g_d0_f2:The  Pivot  algorithm  through  which  we  model  vote  trades  implies  that  voters
+5:156:11075:17:18:93:518:158:12:g_d0_f2:12:g_d0_f2:are myopic, and if pair-wise trades only are allowed, a stable vote allocation always
+5:157:11160:18:18:93:518:140:12:g_d0_f2:12:g_d0_f2:exists.   In  the  second  part  of  the  paper,  we  allow  vote-trading  among  coalitions
+5:158:11252:18:16:107:518:122:7:g_d0_f4:10:g_d0_f5:5The  result  was  later  echoed  by  other  studies,  for  example  Berholz  (1973),  Koehler  (1975),
+5:159:11355:16:0:93:166:106:10:g_d0_f5:10:g_d0_f5:Schwartz (1981).
+6:160:11372:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:of  voters  of  any  sizes.   Our  results  confirm  Riker  and  Brams’  conjecture.   With
+6:161:11463:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:coalition-trading  stability  cannot  be  guaranteed:   we  construct  an  example  with
+6:162:11551:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:well-behaved  preferences  where  a  cycle  develops  and  trading  need  never  end.   In
+6:163:11641:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:addition, in our model, with proposal-by-proposal voting and binding trades, there is
+6:164:11726:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:no logical connection between coalitional stability in vote-trading and the existence
+6:165:11811:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:of a Condorcet winner.  A coalition-stable vote allocation may exist in the absence of
+6:166:11897:18:18:93:518:578:12:g_d0_f2:12:g_d0_f2:a Condorcet winner, and may differ from the Condorcet winner when the Condorcet
+6:167:11976:18:20:93:163:560:12:g_d0_f2:12:g_d0_f2:winner exists.
+6:168:11990:20:18:111:518:540:12:g_d0_f2:12:g_d0_f2:The  second  conjecture  at  the  core  of  the  interest  in  vote  trading  in  the  60’s
+6:169:12081:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:and  70’s  concerned  not  the  existence  of  stable  vote  allocations  but  their  welfare
+6:170:12174:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:properties.   It  held  that  vote  trading  leads  to  Pareto  superior  outcomes  because
+6:171:12265:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:it  allows  the  expression  of  the  intensity  of  preferences.   The  conjecture  stemmed
+6:172:12357:18:18:93:518:468:12:g_d0_f2:12:g_d0_f2:from an early debate between Gordon Tullock and Anthony Downs6and was stated
+6:173:12433:18:18:93:518:450:12:g_d0_f2:12:g_d0_f2:explicitly  in  Buchanan  and  Tullock  (1965).7As  a  general  result,  the  claim  was
+6:174:12521:18:18:93:518:432:12:g_d0_f2:12:g_d0_f2:rejected by Riker and Brams’ (1973) influential ”paradox of vote trading”:  Riker
+6:175:12602:18:18:93:518:414:12:g_d0_f2:12:g_d0_f2:and  Brams  showed  that  if  vote  trading  is  pair-wise  and  binding,  there  are  non-
+6:176:12693:18:18:93:518:396:12:g_d0_f2:12:g_d0_f2:pathological preferences such that each pair of voters individually gains from vote
+6:177:12776:18:18:93:518:378:12:g_d0_f2:12:g_d0_f2:trading and yet everyone strictly prefers the no-trade outcome.  Opposite examples
+6:178:12858:18:18:93:518:360:12:g_d0_f2:12:g_d0_f2:where vote trading is Pareto superior to no-trade can easily be constructed too8,
+6:179:12939:18:17:93:518:342:12:g_d0_f2:12:g_d0_f2:and the literature eventually ran dry with the tentative conclusion that no general
+6:180:13022:17:21:93:392:325:12:g_d0_f2:12:g_d0_f2:statement on the desirability of vote trading can be made.
+6:181:13080:21:18:111:518:304:12:g_d0_f2:12:g_d0_f2:Our algorithm leads us to the same conclusion, but we reach some unexpected
+6:182:13155:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:results in special cases.  In particular, when the committee is faced with only two
+6:183:13238:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:proposals (and thus, since each proposal can either pass or fail, four possible out-
+6:184:13322:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:comes), then for any number of voters and any (separable) preferences, the outcome
+6:185:13404:18:18:93:518:232:12:g_d0_f2:12:g_d0_f2:associated with all stable vote allocations must be unique, is always Pareto optimal,
+6:186:13489:18:18:93:518:214:12:g_d0_f2:12:g_d0_f2:is the Condorcet winner, if a Condorcet winner exists, and must be preferred by the
+6:187:13572:18:18:93:518:196:12:g_d0_f2:12:g_d0_f2:majority to the no-trade outcome if it differs from it.  These results hold whether
+6:188:13655:18:18:93:518:178:12:g_d0_f2:12:g_d0_f2:trade is restricted to pairs of voters or coalitions are allowed.  They are surprising
+6:189:13741:18:18:93:518:160:12:g_d0_f2:12:g_d0_f2:because it has always been understood that vote trades’ ambiguous welfare prop-
+6:190:13820:18:17:93:518:142:12:g_d0_f2:12:g_d0_f2:erties are due to the externalities inherent in the exchanges.  But externalities are
+6:191:13905:17:12:107:302:125:7:g_d0_f4:10:g_d0_f5:6Tullock, 1959 and 1961, Downs, 1957, 1961.
+6:192:13948:12:12:107:445:113:7:g_d0_f4:10:g_d0_f5:7See also Coleman (1966), Haefele (1970), Tullock (1970), and Wilson (1969).
+6:193:14024:12:0:107:243:101:7:g_d0_f4:10:g_d0_f5:8For example, Schwartz (1975).
+7:194:14055:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:clearly present in the two-proposal case, and yet the algorithm delivers an outcome
+7:195:14138:18:21:93:263:668:12:g_d0_f2:12:g_d0_f2:with desirable welfare properties.
+7:196:14172:21:18:111:518:647:12:g_d0_f2:12:g_d0_f2:Approaching vote trading through a mechanical algorithm allowed us to make
+7:197:14246:18:18:93:518:629:12:g_d0_f2:12:g_d0_f2:some  progress  by  avoiding  the  difficulties  of  a  strategic  model.   We  have  chosen
+7:198:14338:18:18:93:518:611:12:g_d0_f2:12:g_d0_f2:this direction, however, for a second reason too:  we conjectured that it may have
+7:199:14420:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:predictive power.  In the second part of the paper, we test the Pivot algorithm in
+7:200:14502:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:the laboratory.  The barter nature of the task, and thus the lack of a common unit
+7:201:14584:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:of exchange, the changing profitability of trades in response to others’ trades, the
+7:202:14668:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:role of pivotality, all make the experiment unusually complex.9For this reason, we
+7:203:14750:18:21:93:346:522:12:g_d0_f2:12:g_d0_f2:limit trades in the laboratory to pair-wise trades.
+7:204:14801:21:18:111:518:501:12:g_d0_f2:12:g_d0_f2:We  study  three  treatments,  corresponding  to  three  sets  of  cardinal  values  for
+7:205:14889:18:18:93:518:483:12:g_d0_f2:12:g_d0_f2:each  voter  over  each  proposal.   All  treatments  have  five  voters,  but  differ  in  the
+7:206:14984:18:18:93:518:465:12:g_d0_f2:12:g_d0_f2:number  of  proposals  (two  in  treatmentAB,  and  three  in  treatmentsABC1  and
+7:207:15066:18:18:93:518:447:12:g_d0_f7:12:g_d0_f2:ABC2), and in the prediction of the Pivot algorithm.  The Condorcet winner exists
+7:208:15147:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:in all three cases; it coincides with the unique stable outcome reachable through the
+7:209:15232:18:20:93:487:411:12:g_d0_f2:12:g_d0_f2:Pivot algorithm in treatmentsABandABC2; it differs in treatmentABC1.
+7:210:15300:20:18:111:518:391:12:g_d0_f2:12:g_d0_f2:Our experiment produces three main results.  First,  we find that stability is a
+7:211:15380:18:18:93:518:373:12:g_d0_f2:12:g_d0_f2:useful predictive tool.  In all treatments, two thirds or more of the vote allocations
+7:212:15466:18:21:93:320:355:12:g_d0_f2:12:g_d0_f2:reached by experimental subjects are stable.
+7:213:15510:21:18:111:518:334:12:g_d0_f2:12:g_d0_f2:Second,  although  the  final  vote  allocations  provide  some  qualified  support  for
+7:214:15598:18:18:93:518:316:12:g_d0_f2:12:g_d0_f2:the  Pivot  algorithm’s  ability  to  predict  where  vote  trading  will  stop.   Across  all
+7:215:15692:18:18:93:518:298:12:g_d0_f2:12:g_d0_f2:treatments, across all voters, across all proposals, in every single case in which the
+7:216:15778:18:18:93:518:280:12:g_d0_f2:12:g_d0_f2:stable allocation reachable via the Pivot algorithm reflects a net purchase of votes,
+7:217:15863:18:18:93:518:262:12:g_d0_f2:12:g_d0_f2:or a net sale, we observe it in the data.  Yet, the final outcomes differ from the Pivot
+7:218:15951:18:18:93:518:244:12:g_d0_f2:12:g_d0_f2:predictions, typically displaying more inertia around the no-trade outcome than the
+7:219:16034:18:20:93:219:226:12:g_d0_f2:12:g_d0_f2:algorithm would predict.
+7:220:16058:20:18:111:518:206:12:g_d0_f2:12:g_d0_f2:The reason, and this is our third result, is that, contrary to the Pivot-algorithm,
+7:221:16141:18:18:93:518:188:12:g_d0_f2:12:g_d0_f2:a large fraction of trades do not improve the myopic outcome for the traders but
+7:222:16221:18:18:93:518:170:12:g_d0_f2:12:g_d0_f2:increase  the  number  of  votes  held  on  high-value  issues–what  we  define  as  ”score-
+7:223:16313:18:18:93:518:152:12:g_d0_f2:12:g_d0_f2:increasing trades”.  Trades that increase the number of votes held by the winning
+7:224:16394:18:18:93:518:134:12:g_d0_f2:12:g_d0_f2:side make further Pivot trades impossible and create a bias towards pre-trade out-
+7:225:16476:18:15:107:518:116:7:g_d0_f4:10:g_d0_f5:9To  our  knowledge,  barter  experiments  are  rare.   Ledyard,  Porter  and  Rangel  (1994)  is  an
+7:226:16577:15:0:93:424:101:10:g_d0_f5:10:g_d0_f5:example that demonstrates the challenges to both design and data analysis.
+8:227:16652:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:comes.  Interestingly, score-increasing trades are not predictive of final vote alloca-
+8:228:16739:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:tions: trading stops when no opportunity for payoff gains remains, as in our stability
+8:229:16825:18:21:93:499:650:12:g_d0_f2:12:g_d0_f2:concept, even when it is still possible to increase votes on high value proposals.
+8:230:16907:21:18:111:518:629:12:g_d0_f2:12:g_d0_f2:The first experimental paper studying vote trading was McKelvey and Ordeshook
+8:231:16984:18:18:93:518:611:12:g_d0_f2:12:g_d0_f2:(1980).   That  paper  reports  results  from  a  large  series  of  experiments,  all  done
+8:232:17076:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:face-to-face and under various protocols designed to allow either pair-wise only or
+8:233:17159:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:coalitional trades, and either binding or non-binding agreements. The methodologies
+8:234:17242:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:are different enough to make a direct comparison of results nearly impossible, and
+8:235:17324:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:McKelvey and Ordeshook’s focus on alternative cooperative solution concepts has no
+8:236:17406:18:18:93:517:522:12:g_d0_f2:12:g_d0_f2:counterpart in our experiment.10Closer to our computerized experimental protocols
+8:237:17487:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:are recent experiments on decentralized matching, in particular Echenique and Yariv
+8:238:17570:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:(2013).11In  that  work,  as  in  ours,  a  central  finding  is  the  extent  to  which  the
+8:239:17663:18:18:93:518:468:12:g_d0_f2:12:g_d0_f2:experimental subjects succeed in reaching a far-from-apparent set of stable matches.
+8:240:17747:18:18:93:518:450:12:g_d0_f2:12:g_d0_f2:The set-up however differs substantially from ours, even within the perspective of
+8:241:17829:18:18:93:518:432:12:g_d0_f2:12:g_d0_f2:matching  theory:   a  two-sided  matching  problem  with  no  externalities  and  fixed
+8:242:17917:18:18:93:518:414:12:g_d0_f2:12:g_d0_f2:preferences,  in  Echenique  and  Yariv  contrasting  with  the  the  one-sided  matching
+8:243:18006:18:18:93:518:396:12:g_d0_f2:12:g_d0_f2:problem  with  externalities  and  evolving  preferences  in  our  case.   In  addition,  the
+8:244:18099:18:20:93:459:378:12:g_d0_f2:12:g_d0_f2:substantive questions we ask are specific to vote-trading, not matching.
+8:245:18171:20:18:111:518:358:12:g_d0_f2:12:g_d0_f2:The paper proceeds as follows.  The next section presents our model and derives
+8:246:18250:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:the  model’s  theoretical  predictions;  section  3  discusses  the  experimental  design;
+8:247:18340:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:section 4 reports the experimental results, and section 5 concludes. Longer proofs are
+8:248:18426:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:collected in the Appendix 1, and the instructions from a representative experimental
+8:249:18510:18:18:93:227:286:12:g_d0_f2:12:g_d0_f2:session are in Appendix 2.
+8:250:18536:18:16:103:518:268:7:g_d0_f4:10:g_d0_f5:10Fischbacher and Schudy (2010) conduct a voting experiment to examine the possible behavioral
+8:251:18630:16:11:93:518:252:10:g_d0_f5:10:g_d0_f5:role of reciprocity when a sequence of proposals come up for vote.  There is no explicit vote trading,
+8:252:18732:11:12:93:518:241:10:g_d0_f5:10:g_d0_f5:but voters can voluntarily vote against their short term interest on an early proposal in hopes that
+8:253:18832:12:9:93:363:229:10:g_d0_f5:10:g_d0_f5:such favors will be reciprocated by other voters in later votes.
+8:254:18896:9:15:103:518:220:7:g_d0_f4:10:g_d0_f5:11Other related works are Nalbantian and Schotter (1995), Niederle and Roth (2011) and Pais,
+8:255:18988:15:12:93:518:205:10:g_d0_f5:10:g_d0_f5:Pinter and Vesztegz (2011).  These papers have incomplete information and study the effects of
+8:256:19082:12:12:93:518:193:10:g_d0_f5:10:g_d0_f5:different offer protocols and other frictions.  Kagel and Roth (2000) study forces leading to the
+8:257:19179:12:0:93:256:181:10:g_d0_f5:10:g_d0_f5:unraveling of decentralized matching.
+9:258:19217:0:33:93:215:686:17:g_d0_f1:17:g_d0_f1:2    The Model
+9:259:19231:33:18:93:517:653:12:g_d0_f2:12:g_d0_f7:Consider  a  committee  ofN(odd)  voters  who  must  approve  or  reject  each  ofK
+9:260:19314:18:18:93:518:635:12:g_d0_f2:12:g_d0_f2:independent binary proposals.  The set of proposals is denotedP={1,...,k,...,K}.
+9:261:19394:18:17:93:518:617:12:g_d0_f2:12:g_d0_f2:Committee  members  have  separable  preferences  summarized  by  a  set  of  cardinal
+9:262:19480:17:18:93:517:600:12:g_d0_f2:12:g_d0_f2:valuesZ, wherezkiis the value attached by memberito the approval of proposal
+9:263:19556:18:18:93:518:582:12:g_d0_f7:12:g_d0_f2:k, or the utilityiexperiences ifkpasses.  Valuezkiis positive ifiis in favor ofkand
+9:264:19639:18:18:93:517:564:12:g_d0_f2:12:g_d0_f7:negative ifiis opposed.  Proposals are voted upon one-by-one, and each proposalk
+9:265:19719:18:21:93:311:546:12:g_d0_f2:12:g_d0_f2:is decided through simple majority voting.
+9:266:19761:21:18:111:518:525:12:g_d0_f2:12:g_d0_f2:Before voting takes place, committee members can trade votes.  The initial al-
+9:267:19839:18:18:93:518:507:12:g_d0_f2:12:g_d0_f2:location of votes assigns one vote to each committee member over each proposal.
+9:268:19918:18:18:93:518:489:12:g_d0_f2:12:g_d0_f2:We treat votes as if they were physical ballots, specialized by proposal–for example,
+9:269:20003:18:18:93:518:471:12:g_d0_f2:12:g_d0_f2:imagine ballots of different colors for different proposals.  A votetradeis thus mod-
+9:270:20088:18:18:93:518:453:12:g_d0_f2:12:g_d0_f2:eled as an actual exchange of ballots, with no enforcement or credibility problem,
+9:271:20170:18:18:93:518:435:12:g_d0_f2:12:g_d0_f2:where by exchange we mean that each trader must give away and receive at least
+9:272:20248:18:17:93:518:417:12:g_d0_f2:12:g_d0_f2:one vote.  After trading, a voter may own zero votes over some proposals and several
+9:273:20332:17:18:93:518:400:12:g_d0_f2:12:g_d0_f7:over others, but cannot hold negative votes.  We callvkithe votes held by voteri
+9:274:20412:18:18:93:518:382:12:g_d0_f2:12:g_d0_f2:over proposalk,Vi={vki,k= 1,..,K}the set of votes held byiover all proposals,
+9:275:20489:18:18:93:518:364:12:g_d0_f2:12:g_d0_f2:andV={Vi,i= 1,..,N}the profile (orallocation) of vote holdings over all voters
+9:276:20567:18:0:93:460:346:12:g_d0_f2:12:g_d0_f8:and proposals.Vdenotes the set of feasible vote allocations:V∈V ⇐⇒
+9:277:20633:0:13:462:475:355:12:g_d0_f10:12:g_d0_f10:∑
+9:278:20634:13:0:475:486:342:8:g_d0_f9:12:g_d0_f7:iv
+9:279:20636:0:7:486:490:350:8:g_d0_f9:8:g_d0_f9:k
+9:280:20637:7:15:486:516:343:8:g_d0_f9:12:g_d0_f7:i=N
+9:281:20640:15:18:93:518:328:12:g_d0_f2:12:g_d0_f2:for allkandvki≥0 for allvki∈V.12The initial allocation of votes is denoted by
+9:282:20717:18:21:93:108:310:12:g_d0_f7:12:g_d0_f2:V0.
+9:283:20720:21:18:111:518:289:12:g_d0_f2:12:g_d0_f2:Given a feasible vote allocationV, we assume that at the time of voting, voters
+9:284:20799:18:18:93:518:271:12:g_d0_f2:12:g_d0_f2:who attach positive value to a proposal cast all votes they own over that proposal in
+9:285:20884:18:18:93:518:253:12:g_d0_f2:12:g_d0_f2:its favor, and voters who oppose it cast all available votes against it.  We indicate by
+9:286:20972:18:18:93:517:235:12:g_d0_f1:12:g_d0_f2:P(V)∈Pthe set of proposals that receive at least (N+ 1)/2 favorable votes, and
+9:287:21050:18:18:93:518:217:12:g_d0_f2:12:g_d0_f2:therefore pass. We callP(V) theoutcomeof the vote if voting occurs at allocationV.
+9:288:21132:18:17:93:518:199:12:g_d0_f2:12:g_d0_f2:Note that withKindependent binary proposals, there are 2Kpotential outcomes
+9:289:21207:17:18:93:518:182:12:g_d0_f2:12:g_d0_f2:(all  possible  combinations  of  passing  and  failing  for  each  proposal).   Finally,  we
+9:290:21300:18:0:93:436:164:12:g_d0_f2:12:g_d0_f2:defineui(V) as the utility of voteriif voting occurs atV:ui(V) =
+9:291:21364:0:13:439:452:173:12:g_d0_f10:12:g_d0_f10:∑
+9:292:21365:13:0:452:490:160:8:g_d0_f9:12:g_d0_f7:k∈P(V)z
+9:293:21372:0:7:491:495:168:8:g_d0_f9:8:g_d0_f9:k
+9:294:21373:7:18:490:499:161:8:g_d0_f9:12:g_d0_f2:i.
+9:295:21375:18:18:111:518:143:12:g_d0_f2:12:g_d0_f2:Our  focus  is  on  the  existence  and  properties  of  vote  allocations  that  hold  no
+9:296:21465:18:7:103:169:125:7:g_d0_f4:10:g_d0_f10:12Note that∑
+9:297:21477:7:0:168:180:118:7:g_d0_f13:10:g_d0_f14:kv
+9:298:21479:0:16:180:518:125:7:g_d0_f13:10:g_d0_f5:ki6=Kis feasible because we are allowing a voter to trade votes on multiple
+9:299:21554:16:15:93:104:109:10:g_d0_f5:10:g_d0_f10:issues  in  exchange  for  one  or  more  votes  on  a  single  issue.   Of  course,  the  aggregate  constraint∑
+9:300:21667:15:0:104:107:94:7:g_d0_f13:7:g_d0_f13:i
+9:301:21668:0:11:109:120:105:10:g_d0_f10:10:g_d0_f10:∑
+9:302:21669:11:0:119:131:94:7:g_d0_f13:10:g_d0_f14:kv
+9:303:21671:0:0:131:217:101:7:g_d0_f13:10:g_d0_f5:ki=NKmust hold.
+10:304:21687:0:37:93:351:686:12:g_d0_f2:12:g_d0_f2:incentives for further trading.  We can then define:
+10:305:21739:37:18:93:518:649:12:g_d0_f1:12:g_d0_f6:Definition 1A  pair  of  votersi,i′is  said  toblockVif  there  exists  a  feasible
+10:306:21822:18:18:93:518:631:12:g_d0_f6:12:g_d0_f6:vote  allocation̂V∈ Vsuch  that̂Vj=Vjfor  allj6=i,i′,  andui(̂V)> ui(V),
+10:307:21894:18:32:93:175:613:12:g_d0_f7:12:g_d0_f6:ui′(̂V)> ui′(V).
+10:308:21910:32:18:93:518:581:12:g_d0_f1:12:g_d0_f6:Definition 2An  allocationV∈ Vispair-wise stableif  there  exists  no  pair  of
+10:309:21989:18:32:93:235:563:12:g_d0_f6:12:g_d0_f6:votersi,i′who can blockV.
+10:310:22014:32:18:111:518:531:12:g_d0_f2:12:g_d0_f2:We can show immediately that a feasible allocation of votes that yields dictator
+10:311:22094:18:18:93:518:513:12:g_d0_f2:12:g_d0_f2:power to a single voteriis trivially pair-wise stable:  no exchange of votes involving
+10:312:22180:18:18:93:518:495:12:g_d0_f2:12:g_d0_f2:voterican makeistrictly better-off; and no exchange of votes that does not involve
+10:313:22262:18:37:93:383:477:12:g_d0_f2:12:g_d0_f2:voterican make anyone else strictly better-off.13Hence:
+10:314:22317:37:42:93:505:440:12:g_d0_f1:12:g_d0_f6:Proposition 1A pair-wise stable vote allocationVexists for allZ,N, andK.
+10:315:22389:42:28:93:281:398:14:g_d0_f1:14:g_d0_f1:2.1    Dynamic adjustment.
+10:316:22415:28:18:93:518:370:12:g_d0_f2:12:g_d0_f2:Pair-wise stable allocations exist, but are they reachable through sequential decen-
+10:317:22499:18:18:93:518:352:12:g_d0_f2:12:g_d0_f2:tralized trades?  To answer the question,  we need to specify the dynamic process
+10:318:22580:18:21:93:518:334:12:g_d0_f2:12:g_d0_f2:through which bilateral trades take place.  Our focus is on simple myopic algorithms.
+10:319:22665:21:37:111:310:313:12:g_d0_f2:12:g_d0_f2:We begin with the following definition:
+10:320:22704:37:18:93:518:276:12:g_d0_f1:12:g_d0_f6:Definition 3A trade isminimalif it consists of a minimal package of votes such
+10:321:22782:18:37:93:389:258:12:g_d0_f6:12:g_d0_f6:that both members of the pair strictly gain from the trade.
+10:322:22841:37:18:111:517:221:12:g_d0_f2:8:g_d0_f3:Recall  that  a  trade  involves  the  exchange  of  at  least  one  vote  on  each  side.14
+10:323:22933:18:18:93:518:203:12:g_d0_f2:12:g_d0_f2:Concentrating on minimal trades allows to ”unbundle” complex trades into elemen-
+10:324:23013:18:18:93:518:185:12:g_d0_f2:12:g_d0_f2:tary trades.  For any individual voter, multiple welfare-improving trades cannot be
+10:325:23096:18:18:93:518:167:12:g_d0_f2:12:g_d0_f2:bundled, and zero-utility trades cannot be bundled with strictly welfare-improving
+10:326:23178:18:15:93:128:149:12:g_d0_f2:12:g_d0_f2:trades.
+10:327:23185:15:7:103:504:134:7:g_d0_f4:7:g_d0_f13:13Other examples are easy to construct.  For example, any allocation such that for allk,vk
+10:328:23275:7:13:499:109:127:7:g_d0_f13:7:g_d0_f4:ik≥n+1
+10:329:23281:13:9:100:518:114:7:g_d0_f4:10:g_d0_f5:2, whereikis the voter who, among all, attributes highest value to winning on proposalk, is
+10:330:23372:9:8:93:163:105:10:g_d0_f5:10:g_d0_f5:pair-wise stable.
+10:331:23389:8:0:103:459:97:7:g_d0_f4:10:g_d0_f5:14Thus surrendering votes to an ally with no myopic utility change is not a trade.
+11:332:23472:0:18:111:518:686:12:g_d0_f2:12:g_d0_f2:Although  the  literature  does  not  make  explicit  reference  to  an  algorithm,  the
+11:333:23560:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:sequential myopic trades envisioned by Riker and Brams (1973) and Ferejohn (1974)
+11:334:23641:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:lend themselves naturally to such a formalization.  In line with these earlier analyses,
+11:335:23729:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:we define thePivot Algorithmsas sequences of pair-wise trades yielding myopic strict
+11:336:23813:18:34:93:204:614:12:g_d0_f2:12:g_d0_f2:gains to both traders:
+11:337:23835:34:18:93:518:580:12:g_d0_f1:12:g_d0_f6:Definition 4APivot Algorithmis  any  mechanism  generating  a  sequence  of
+11:338:23910:18:18:93:518:562:12:g_d0_f6:12:g_d0_f6:trades in the following way:  Start from any vote allocationV0.  If there is no minimal
+11:339:23997:18:18:93:518:544:12:g_d0_f6:12:g_d0_f6:pairwise  (strictly)  improving  trade,  stop.  If  there  is  one  such  trade,  execute  it.  If
+11:340:24095:18:18:93:518:526:12:g_d0_f6:12:g_d0_f6:there  are  multiple  pairwise  improving  trades,  choose  one  according  to  a  possibly
+11:341:24186:18:18:93:518:508:12:g_d0_f6:12:g_d0_f6:stochastic choice ruleR.  Continue in this fashion until no further improving trade
+11:342:24269:18:29:93:124:490:12:g_d0_f6:12:g_d0_f6:exists.
+11:343:24276:29:18:111:518:461:12:g_d0_f2:12:g_d0_f2:The  definition  above  defines  a  whole  family  of  algorithms,  depending  on  the
+11:344:24362:18:18:93:517:443:12:g_d0_f2:12:g_d0_f2:choice rule that is applied when there are multiple improving trades. RuleRspecifies
+11:345:24446:18:18:93:518:425:12:g_d0_f2:12:g_d0_f2:how the algorithm selects among multiple possible trades; for example,Rmay select
+11:346:24527:18:18:93:518:407:12:g_d0_f2:12:g_d0_f2:each potential trade with equal probability (fully random); or give priority to trades
+11:347:24613:18:17:93:518:389:12:g_d0_f2:12:g_d0_f2:with higher total gains; or to trades involving specific voters.  The family of Pivot
+11:348:24698:17:18:93:518:372:12:g_d0_f2:12:g_d0_f2:algorithms corresponds to the class of possibleRrules, and individual algorithms
+11:349:24778:18:18:93:518:354:12:g_d0_f2:12:g_d0_f2:differ in the specification of ruleR.  At this stage,  it is not necessary to be more
+11:350:24863:18:21:93:179:336:12:g_d0_f2:12:g_d0_f2:specific aboutR.
+11:351:24879:21:18:111:518:315:12:g_d0_f2:12:g_d0_f2:Pivot trades are not restricted to two proposals only:  a voter can trade his vote,
+11:352:24962:18:18:93:518:297:12:g_d0_f2:12:g_d0_f2:or votes, on one issue in exchange for other voters’ vote(s) on more than one issue.
+11:353:25046:18:18:93:518:279:12:g_d0_f2:12:g_d0_f2:The only constraint is the requirement that trades be minimal:  zero-utility trades
+11:354:25129:18:18:93:518:261:12:g_d0_f2:12:g_d0_f2:cannot be bundled with welfare improving trades.  If a trade is welfare improving
+11:355:25210:18:21:93:347:243:12:g_d0_f2:12:g_d0_f2:and minimal, it is a legitimate trade under Pivot.
+11:356:25260:21:18:111:518:222:12:g_d0_f2:12:g_d0_f2:A crucial property was anticipated by Riker and Brams and gives the name to
+11:357:25335:18:34:93:166:204:12:g_d0_f2:12:g_d0_f2:our algorithm:
+11:358:25349:34:18:93:518:170:12:g_d0_f1:12:g_d0_f6:Lemma 1(Riker  and  Brams)  Under  the  Pivot  algorithms,  all  votes  transferred
+11:359:25432:18:34:93:173:152:12:g_d0_f6:12:g_d0_f6:must be pivotal.
+11:360:25448:34:18:111:518:118:12:g_d0_f1:12:g_d0_f2:Proof.Immediate from the requirement of minimal trades and the definition of
+11:361:25524:18:0:93:182:100:12:g_d0_f2:12:g_d0_f2:Pivot algorithms.
+12:362:25542:0:29:93:377:686:14:g_d0_f1:14:g_d0_f1:2.2    Existence of stable vote allocations
+12:363:25585:29:17:93:518:657:12:g_d0_f2:12:g_d0_f2:The question we want to ask is whether a stable vote allocation is reachable through
+12:364:25669:17:40:93:260:640:12:g_d0_f2:12:g_d0_f2:the Pivot algorithms.  We define:
+12:365:25702:40:18:93:518:600:12:g_d0_f1:12:g_d0_f2:Definition 5An  allocation  of  votesVisPivot-stableand  is  denoted  byVT(R)
+12:366:25779:18:18:93:518:582:12:g_d0_f6:12:g_d0_f6:if  it  is  stable  and  reachable  through  a  Pivot  algorithm  in  a  finite  number  of  steps,
+12:367:25878:18:40:93:179:564:12:g_d0_f6:12:g_d0_f6:following ruleR.
+12:368:25894:40:18:111:518:524:12:g_d0_f2:12:g_d0_f2:Does a Pivot-stable allocation always exist?  Surprisingly, the answer is clear-cut
+12:369:25977:18:18:93:518:506:12:g_d0_f2:12:g_d0_f2:and positive.  Pivot-stable vote allocations always exist, for the entire class of Pivot
+12:370:26065:18:17:93:518:488:12:g_d0_f2:12:g_d0_f2:algorithms, independently of the rulesRthrough which competing claims to trade
+12:371:26143:17:40:93:236:471:12:g_d0_f2:12:g_d0_f2:are resolved.  We  can state:
+12:372:26172:40:40:93:505:431:12:g_d0_f1:12:g_d0_f6:Theorem 1For allK,N,Z, a Pivot-stable allocation of votes exists for allR.
+12:373:26246:40:18:111:518:391:12:g_d0_f1:12:g_d0_f2:Proof.Consider  trades  dictated  by  the  Pivot  algorithm.   By  Lemma  1,  if  a
+12:374:26329:18:18:93:518:373:12:g_d0_f2:12:g_d0_f2:trade occurs atV0it can only concern proposals that atV0are decided by minimal
+12:375:26407:18:18:93:518:355:12:g_d0_f2:12:g_d0_f2:majority.  But by minimality of trade, it then follows that the same proposals must
+12:376:26490:18:18:93:518:337:12:g_d0_f2:12:g_d0_f2:still  be  decided  by  minimal  majority  in  any  subsequent  votes  allocationVt,  with
+12:377:26580:18:18:93:518:319:12:g_d0_f7:12:g_d0_f2:t >0.   But  sinceV0={1,1,1,..},  no  more  than  one  vote  is  ever  traded  on  any
+12:378:26666:18:17:93:518:301:12:g_d0_f2:12:g_d0_f2:given proposal (although trades could involve bundles of proposals).  Now consider
+12:379:26748:17:18:93:518:284:12:g_d0_f2:12:g_d0_f2:voteriwith valuesZiand absolute values|Zi|≡Xi.  We calli’sscoreat steptthe
+12:380:26822:18:41:93:252:266:12:g_d0_f2:12:g_d0_f2:functionσit(Xi,Vit) defined by:
+12:381:26853:41:0:270:295:225:12:g_d0_f7:12:g_d0_f2:σit=
+12:382:26857:0:29:303:315:240:8:g_d0_f9:12:g_d0_f10:K∑
+12:383:26859:29:0:299:315:211:8:g_d0_f9:8:g_d0_f3:k=1
+12:384:26862:0:41:318:341:225:12:g_d0_f7:8:g_d0_f9:xkivkit
+12:385:26869:41:18:93:518:184:12:g_d0_f2:12:g_d0_f2:wherexkiis the (absolute) valueiattaches to each proposalk, andvkitis the number
+12:386:26949:18:18:93:518:166:12:g_d0_f2:12:g_d0_f2:of votesiholds on that proposal att.  Ifidoes not trade att, thenσit+1=σit.  If
+12:387:27028:18:18:93:518:148:12:g_d0_f7:12:g_d0_f2:idoes trade, then, by the argument above,i’s vote allocation must fall by one vote
+12:388:27110:18:17:93:518:130:12:g_d0_f2:12:g_d0_f2:on some proposals{k,k′,..}thatiwas winning and increase by one vote on some
+12:389:27185:17:18:93:518:113:12:g_d0_f2:12:g_d0_f2:other proposals{ ̃k, ̃k′,..}thatiwas losing.  Call the first set of proposalsPi,tand
+12:390:27269:18:0:93:518:95:12:g_d0_f2:12:g_d0_f2:the secondP−i,t.  Note that although the two sets may have different cardinality, by
+13:391:27355:0:0:93:292:686:12:g_d0_f2:12:g_d0_f2:definition of pair-wise improving trade,
+13:392:27395:0:13:296:309:695:12:g_d0_f10:12:g_d0_f10:∑
+13:393:27396:13:0:309:343:682:8:g_d0_f9:12:g_d0_f7:k∈Pi,tx
+13:394:27403:0:7:343:347:690:8:g_d0_f9:8:g_d0_f9:k
+13:395:27404:7:0:343:360:683:8:g_d0_f9:12:g_d0_f7:i<
+13:396:27406:0:13:364:377:695:12:g_d0_f10:12:g_d0_f10:∑
+13:397:27407:13:0:376:417:682:8:g_d0_f9:12:g_d0_f7:k∈P−i,tx
+13:398:27415:0:7:417:421:690:8:g_d0_f9:8:g_d0_f9:k
+13:399:27416:7:15:417:518:683:8:g_d0_f9:12:g_d0_f2:iand, since a single
+13:400:27436:15:0:93:258:668:12:g_d0_f2:12:g_d0_f2:vote is traded on each proposal,
+13:401:27468:0:12:262:275:677:12:g_d0_f10:12:g_d0_f10:∑
+13:402:27469:12:0:274:309:665:8:g_d0_f9:12:g_d0_f7:k∈Pi,tx
+13:403:27476:0:7:309:313:672:8:g_d0_f9:8:g_d0_f9:k
+13:404:27477:7:0:309:320:665:8:g_d0_f9:12:g_d0_f7:iv
+13:405:27479:0:7:320:324:672:8:g_d0_f9:8:g_d0_f9:k
+13:406:27480:7:0:320:339:665:8:g_d0_f9:12:g_d0_f7:it<
+13:407:27483:0:12:343:356:677:12:g_d0_f10:12:g_d0_f10:∑
+13:408:27484:12:0:355:396:665:8:g_d0_f9:12:g_d0_f7:k∈P−i,tx
+13:409:27492:0:7:395:399:672:8:g_d0_f9:8:g_d0_f9:k
+13:410:27493:7:0:395:406:665:8:g_d0_f9:12:g_d0_f7:iv
+13:411:27495:0:7:407:411:672:8:g_d0_f9:8:g_d0_f9:k
+13:412:27496:7:15:406:518:665:8:g_d0_f9:12:g_d0_f2:it+1.  Hence ifitrades
+13:413:27518:15:18:93:518:650:12:g_d0_f2:12:g_d0_f2:att,σit+1> σit:  for alli,σit(Xi,Vit) must be non-decreasing int.  At anyt, either
+13:414:27600:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:there is no trade and the Pivot-stable allocation has been reached, or there is trade,
+13:415:27686:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:and thus there are two votersiandi′for whichσit+1> σitandσi′t+1> σi′t.  But
+13:416:27761:18:18:93:518:596:12:g_d0_f7:12:g_d0_f2:σit(Xi,Vit) is bounded above and the number of voters is finite.  Hence trade must
+13:417:27843:18:18:93:518:578:12:g_d0_f2:12:g_d0_f2:stop in finite steps:  a Pivot-stable allocation of votes always exists.15Note that we
+13:418:27929:18:17:93:518:560:12:g_d0_f2:12:g_d0_f2:have made no assumptions onR, the rule through which trades are selected when
+13:419:28006:17:27:93:476:543:12:g_d0_f2:12:g_d0_f19:multiple are possible.  A Pivot-stable allocation of votes exists for anyR.-
+13:420:28082:27:18:111:518:516:12:g_d0_f2:12:g_d0_f2:The generality of the result is surprising:  a Pivot-stable allocation always exists,
+13:421:28167:18:18:93:518:498:12:g_d0_f2:12:g_d0_f2:regardless  of  the  number  of  voters  and  proposals,  for  all  (separable)  preferences,
+13:422:28260:18:18:93:518:480:12:g_d0_f2:12:g_d0_f2:and  regardless  of  the  order  in  which  different  possible  trades  are  chosen.   As  we
+13:423:28354:18:18:93:518:462:12:g_d0_f2:12:g_d0_f2:said, the parallel to the matching literature is imperfect, and indeed no such result
+13:424:28439:18:18:93:518:444:12:g_d0_f2:12:g_d0_f2:can be found there.  In one-sided matching problems, it is well-known that a stable
+13:425:28522:18:18:93:518:426:12:g_d0_f2:12:g_d0_f2:match  may  not  exist.16When  it  does  exist,  it  is  not  the  case  that  any  sequence
+13:426:28614:18:18:93:518:408:12:g_d0_f2:12:g_d0_f2:of decentralized myopic matchings will converge to a stable matching.  Cycles are
+13:427:28695:18:18:93:518:390:12:g_d0_f2:12:g_d0_f2:possible.   If  preferences  are  strict,  one  converging  sequence  of  matchings  always
+13:428:28786:18:18:93:518:372:12:g_d0_f2:12:g_d0_f2:exists, but if matchings are decentralized, guaranteeing convergence requires some
+13:429:28868:18:17:93:518:354:12:g_d0_f2:12:g_d0_f2:randomness in the selection of blocking pairs:  a random rule assigning a positive
+13:430:28950:17:18:93:518:337:12:g_d0_f2:12:g_d0_f2:probability of selection to any blocking pair.17The difficulty of achieving stability is
+13:431:29038:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:increased by the presence of externalities. We are not aware of comparable results for
+13:432:29124:18:18:93:518:301:12:g_d0_f2:12:g_d0_f2:one-sided matching problems with externalities.  In two-sided matching problems,
+13:433:29204:18:18:93:518:283:12:g_d0_f2:12:g_d0_f2:guaranteeing the existence of a stable match in the presence of externalities requires
+13:434:29290:18:18:93:517:265:12:g_d0_f2:12:g_d0_f2:a  very  stringent  definition  of  blocking.18In  our  problem,  the  score  function  we
+13:435:29380:18:18:93:518:247:12:g_d0_f2:12:g_d0_f2:have defined above is not subject to cycles.  Because it is always non-decreasing in
+13:436:29464:18:18:93:518:229:12:g_d0_f7:12:g_d0_f2:t,  convergence  to  a  stable  allocation  of  votes  is  guaranteed  for  any  selection  rule
+13:437:29560:18:15:103:518:211:7:g_d0_f4:10:g_d0_f5:15It is not difficult to find the upper boundary on the number of trades needed to reach a Pivot-
+13:438:29657:15:15:93:518:196:10:g_d0_f5:10:g_d0_f5:stable allocation.  It equals the maximum number of trades that could shift all individuals’ votes
+13:439:29755:15:0:93:287:181:10:g_d0_f5:10:g_d0_f5:to their respective highest-value proposal, or
+13:440:29801:0:14:291:327:192:10:g_d0_f10:7:g_d0_f4:[K(K−1)
+13:441:29808:14:0:310:314:178:7:g_d0_f4:7:g_d0_f4:2
+13:442:29809:0:14:329:364:192:10:g_d0_f10:7:g_d0_f4:][(N−1)
+13:443:29816:14:0:351:355:178:7:g_d0_f4:7:g_d0_f4:2
+13:444:29817:0:11:366:371:192:10:g_d0_f10:10:g_d0_f10:]
+13:445:29818:11:11:370:373:181:10:g_d0_f5:10:g_d0_f5:.
+13:446:29819:11:12:103:221:170:7:g_d0_f4:10:g_d0_f5:16Gale and Shapley (1962).
+13:447:29845:12:16:103:518:158:7:g_d0_f4:10:g_d0_f5:17Diamantoudi et al.  (2004).  The result that randomness in the selection of the blocking pair
+13:448:29940:16:12:93:518:142:10:g_d0_f5:10:g_d0_f5:induces  convergence  builds  on  Roth  and  Vande  Vate  (1990),  who  established  it  in  the  case  of
+13:449:30046:12:8:93:180:130:10:g_d0_f5:10:g_d0_f5:two-sided matching.
+13:450:30065:8:15:103:518:122:7:g_d0_f4:10:g_d0_f5:18Sasaki and Toda (1996).  Two individuals block an existing match if they strictly gain from
+13:451:30158:15:0:93:407:107:10:g_d0_f5:10:g_d0_f5:matching with one another under any possible rematching by all others.
+14:452:30230:0:42:93:205:686:12:g_d0_f2:12:g_d0_f2:among blocking pairs.
+14:453:30251:42:28:93:364:644:14:g_d0_f1:14:g_d0_f1:2.3    Preferences over stable outcomes
+14:454:30290:28:18:93:518:616:12:g_d0_f1:12:g_d0_f6:Definition 6An  outcomeP(V)isPivot-stableif  it  is  achieved  from  a  Pivot-
+14:455:30368:18:38:93:221:598:12:g_d0_f6:12:g_d0_f6:stable allocation of votes.
+14:456:30395:38:18:111:518:560:12:g_d0_f2:12:g_d0_f2:We denote byP(VT(R)) the set of all stable outcomes reachable with positive
+14:457:30470:18:18:93:518:542:12:g_d0_f2:12:g_d0_f2:probability through a Pivot algorithm with ruleR.  What are the welfare proper-
+14:458:30549:18:18:93:518:524:12:g_d0_f2:12:g_d0_f2:ties ofP(VT(R))?  We have modeled vote trading through an algorithm,  and our
+14:459:30626:18:18:93:518:506:12:g_d0_f2:12:g_d0_f2:institution-free approach demands a welfare evaluation that is equally institution-
+14:460:30709:18:18:93:518:488:12:g_d0_f2:12:g_d0_f2:free.  We ask whether outcomes inP(VT(R) must belong to the Pareto set; whether
+14:461:30788:18:17:93:518:470:12:g_d0_f2:12:g_d0_f2:they must include the Condorcet winner, if one exists, and more generally whether
+14:462:30869:17:18:93:518:453:12:g_d0_f2:12:g_d0_f2:they can be ranked, in terms of majority preferences, relative to the no-trade out-
+14:463:30952:18:21:93:122:435:12:g_d0_f2:12:g_d0_f2:come.
+14:464:30957:21:18:111:518:414:12:g_d0_f2:12:g_d0_f2:Our first set of answers is unexpectedly positive.  Because we characterize results
+14:465:31040:18:18:93:518:396:12:g_d0_f2:12:g_d0_f2:that hold for allR, we can use the simpler notationP(VT) with elementP(VT).  We
+14:466:31119:18:38:93:143:378:12:g_d0_f2:12:g_d0_f2:can show:
+14:467:31128:38:18:93:518:340:12:g_d0_f1:12:g_d0_f6:Proposition 2IfK= 2,  then,  for  allN,Z,  andR:  (1)P(VT)is  unique.19(2)
+14:468:31202:18:18:93:518:322:12:g_d0_f1:12:g_d0_f6:P(VT)is Pareto optimal.  (3) If a Condorcet winner exists, thenP(VT)is the Con-
+14:469:31281:18:18:93:518:304:12:g_d0_f6:12:g_d0_f6:dorcet winner.  (4)P(VT)can never be the Condorcet loser.  (5) IfP(VT)6=P(V0),
+14:470:31359:18:38:93:299:286:12:g_d0_f6:12:g_d0_f6:then a majority prefersP(VT)toP(V0).
+14:471:31395:38:20:111:236:248:12:g_d0_f1:12:g_d0_f2:Proof:See Appendix 1.
+14:472:31416:20:18:111:518:228:12:g_d0_f2:12:g_d0_f2:Proposition 1 is interesting because it highlights that the lack of Pareto optimal-
+14:473:31499:18:18:93:518:210:12:g_d0_f2:12:g_d0_f2:ity in vote trading examples, in particular Riker and Brams’ paradox of vote trading,
+14:474:31584:18:18:93:518:192:12:g_d0_f2:12:g_d0_f2:is not an immediate result of voting externalities.  Externalities are not eliminated
+14:475:31669:18:18:93:518:174:12:g_d0_f2:12:g_d0_f2:whenK= 2, and yet the outcome of the Pivot algorithm (the same myopic vote-
+14:476:31744:18:18:93:518:156:12:g_d0_f2:12:g_d0_f2:trading rule studied by Riker and Brams) is always Pareto optimal.  Similarly, when
+14:477:31827:18:17:93:443:138:12:g_d0_f7:8:g_d0_f3:K= 2 vote trading performs well in terms of majority preferences.20
+14:478:31894:17:12:103:384:121:7:g_d0_f4:10:g_d0_f5:19Note that uniquess ofP(VT) does not imply uniqueness ofVT.
+14:479:31954:12:16:103:518:109:7:g_d0_f4:10:g_d0_f5:20Possibly, but not necessarily also in terms of total utilitarian welfare.  In a finite electorate,
+14:480:32054:16:0:93:471:93:10:g_d0_f5:10:g_d0_f5:results on utilitarian welfare depend on the distributions from which values are drawn.
+15:481:32143:0:18:111:518:686:12:g_d0_f2:12:g_d0_f2:In  fact,  there  is  another  scenario  in  which,  for  all  valuesZ,  the  Pivot-stable
+15:482:32233:18:33:93:312:668:12:g_d0_f2:12:g_d0_f2:outcome is related to majority preferences:
+15:483:32276:33:18:93:518:635:12:g_d0_f1:12:g_d0_f6:Proposition 3IfN=  3,  then  for  allK,Z,  andR:  (1)  If  a  Condorcet  winner
+15:484:32355:18:18:93:518:617:12:g_d0_f6:12:g_d0_f6:exists,P(VT)is  unique  and  is  the  Condorcet  winner.  (2)P(VT)can  never  be  the
+15:485:32440:18:33:93:176:599:12:g_d0_f6:12:g_d0_f6:Condorcet loser.
+15:486:32456:33:25:111:236:566:12:g_d0_f1:12:g_d0_f2:Proof:See Appendix 1.
+15:487:32477:25:18:111:518:541:12:g_d0_f2:12:g_d0_f2:The  intuition  behind  Proposition  3  is  straightforward:  with  three  voters,  any
+15:488:32564:18:18:93:518:523:12:g_d0_f2:12:g_d0_f2:Pivot trade between a pair reflects the majority’s preferences.  We know from Park
+15:489:32646:18:18:93:518:505:12:g_d0_f2:12:g_d0_f2:(1967) and Kadane’s (1972) that if there is a Condorcet winner, it can only be the
+15:490:32728:18:18:93:518:487:12:g_d0_f2:12:g_d0_f2:no-trade outcome21, and thus with three voters there cannot be any trade under the
+15:491:32810:18:18:93:518:469:12:g_d0_f2:12:g_d0_f2:Pivot algorithm.  If the Condorcet loser exists, it must be such that all proposals
+15:492:32893:18:18:93:518:451:12:g_d0_f2:12:g_d0_f2:are decided in the direction favored by the minority, but since any trade reflects the
+15:493:32979:18:20:93:415:433:12:g_d0_f2:12:g_d0_f2:majority’s preferences, such an outcome is impossible to reach.
+15:494:33042:20:33:111:472:413:12:g_d0_f2:12:g_d0_f2:The results from Pivot trading are less predictable in the general case:
+15:495:33114:33:18:93:518:380:12:g_d0_f1:12:g_d0_f6:Proposition 4IfK >2andN >3,  then:  (1)  There  existZsuch  that  for  any
+15:496:33188:18:18:93:518:362:12:g_d0_f7:12:g_d0_f6:Rno  outcome  in  the  Pareto  set  is  Pivot-stable.   (2)  There  existZsuch  that  the
+15:497:33277:18:33:93:405:344:12:g_d0_f6:12:g_d0_f6:Condorcet winner exists, but for anyRit is not Pivot-stable.
+15:498:33337:33:18:111:518:311:12:g_d0_f1:12:g_d0_f2:Proof:We prove the two statements by example, and because the examples are
+15:499:33411:18:18:93:518:293:12:g_d0_f2:12:g_d0_f2:simple and instructive,  we report them here in detail.  (1) Consider the following
+15:500:33494:18:21:93:264:275:12:g_d0_f2:12:g_d0_f2:example, withK= 5 andN= 5:
+15:501:33520:21:18:111:517:254:12:g_d0_f2:12:g_d0_f2:Each row in Table 1 is a proposal (A,B,C,D,andE) and each column a voter
+15:502:33592:18:18:93:518:236:12:g_d0_f2:12:g_d0_f2:(1,2,3,4,and 5). Each cell{k,i}reportszki, the value attached by voterito proposal
+15:503:33674:18:18:93:518:218:12:g_d0_f7:12:g_d0_f2:kpassing.  No voter is pivotal, and thusV0cannot be blocked.  The unique stable
+15:504:33753:18:18:93:518:200:12:g_d0_f2:12:g_d0_f2:outcome isP(VT) =P(V0) ={∅},  all proposals fail.  Yet,  all proposals failing is
+15:505:33834:18:17:93:518:182:12:g_d0_f2:12:g_d0_f2:not Pareto optimal:  it is Pareto-dominated by all proposals passing.  The example
+15:506:33916:17:18:93:518:165:12:g_d0_f2:12:g_d0_f2:suggests the importance of allowing for trades among coalitions of more than two
+15:507:33996:18:21:93:304:147:12:g_d0_f2:12:g_d0_f2:voters, a point to which we return below.
+15:508:34037:21:17:111:419:126:12:g_d0_f2:12:g_d0_f2:(2) Consider the following example, withK= 3 andN= 5:
+15:509:34090:17:16:103:518:109:7:g_d0_f4:10:g_d0_f5:21Because  the  majority  must  prefer  the  no-trade  outcome  to  any  outcome  that  differs  from
+15:510:34191:16:0:93:278:93:10:g_d0_f5:10:g_d0_f5:no-trade in the resolution of a single issue.
+16:511:34238:0:14:255:369:687:12:g_d0_f2:12:g_d0_f2:12345
+16:512:34243:14:15:233:378:673:12:g_d0_f7:12:g_d0_f2:A10−1−1−1−1
+16:513:34254:15:15:233:378:658:12:g_d0_f7:12:g_d0_f2:B−110−1−1−1
+16:514:34265:15:15:233:378:643:12:g_d0_f7:12:g_d0_f2:C−1−110−1−1
+16:515:34276:15:15:233:378:628:12:g_d0_f7:12:g_d0_f2:D−1−1−110−1
+16:516:34287:15:38:233:375:613:12:g_d0_f7:12:g_d0_f2:E−1−1−1−110
+16:517:34298:38:24:95:516:575:12:g_d0_f2:12:g_d0_f6:Table 1:Preference profile such that no outcome in the Pareto Set is Pivot Stable.
+16:518:34380:24:14:254:369:551:12:g_d0_f2:12:g_d0_f2:12345
+16:519:34385:14:15:233:369:537:12:g_d0_f7:12:g_d0_f2:A4−71−14
+16:520:34393:15:14:233:378:522:12:g_d0_f7:12:g_d0_f2:B11−44−1
+16:521:34401:14:38:233:369:508:12:g_d0_f7:12:g_d0_f2:C−342−22
+16:522:34409:38:34:103:508:470:12:g_d0_f2:12:g_d0_f6:Table 2:Preference profile such that the Condorcet Winner is not Pivot Stable.
+16:523:34487:34:18:111:518:436:12:g_d0_f2:12:g_d0_f2:For the preference profile in Table 2,P(V0) ={ABC}is the Condorcet winner
+16:524:34560:18:18:93:518:418:12:g_d0_f2:12:g_d0_f2:but this example has a unique Pivot-stable outcomeP(VT) ={A}.  It is not difficult
+16:525:34642:18:18:93:518:400:12:g_d0_f2:12:g_d0_f2:to verify that there are three possible trade chains but all stop atP(VT) ={A}.
+16:526:34721:18:18:93:518:382:12:g_d0_f2:12:g_d0_f2:Indicating  in  order  the  voters  engaged  in  the  trade,  the  proposals  on  which  they
+16:527:34814:18:18:93:518:364:12:g_d0_f2:12:g_d0_f2:trade votes (in lower-case letters)22, and, in parenthesis, the outcome correspond-
+16:528:34897:18:18:93:518:346:12:g_d0_f2:12:g_d0_f2:ing  to  that  allocation  of  votes,  we  can  describe  the  three  chains  as{{13cb(A),
+16:529:34987:18:17:93:518:328:12:g_d0_f2:12:g_d0_f2:45bc(ABC),  23ab(C),  45ca(A)},{23ab(C),  45ba(ABC),  13cb(A)},  and{23ab(C),
+16:530:35064:17:26:93:271:311:12:g_d0_f2:12:g_d0_f19:45ca(A), 45bc(ABC), 13cb(A)}.-
+16:531:35094:26:35:111:408:285:12:g_d0_f2:12:g_d0_f2:Note that result (2) in Proposition 3 immediately implies:
+16:532:35152:35:18:93:518:250:12:g_d0_f1:12:g_d0_f2:Corollary 1IfK >2andN >3, then there existZsuch that for allR,P(VT)6=
+16:533:35221:18:35:93:343:232:12:g_d0_f1:12:g_d0_f6:P(V0), butP(V0)is majority preferred toP(VT).
+16:534:35266:35:18:111:518:197:12:g_d0_f2:12:g_d0_f2:The  first  example  is  an  immediate  implication  of  Lemma  1:  under  the  Pivot
+16:535:35351:18:18:93:518:179:12:g_d0_f2:12:g_d0_f2:algorithm, trade can occur only between pivotal voters.  If the vote allocation does
+16:536:35435:18:18:93:518:161:12:g_d0_f2:12:g_d0_f2:not correspond to minimal majority, no pivotal voters exist.  Thus the status quo
+16:537:35516:18:17:93:518:143:12:g_d0_f2:12:g_d0_f2:is Pivot-stable, and delivers the unique Pivot-stable outcome; if such an outcome is
+16:538:35600:17:17:93:476:126:12:g_d0_f2:12:g_d0_f2:Pareto-inferior, then the stable outcome does not belong to the Pareto set.
+16:539:35675:17:16:103:518:109:7:g_d0_f4:10:g_d0_f14:22For example, 13cbindicates that voter 1 acquires aCvote from voter 3, in exchange for aB
+16:540:35765:16:0:93:114:93:10:g_d0_f5:10:g_d0_f5:vote.
+17:541:35772:0:18:111:518:686:12:g_d0_f2:12:g_d0_f2:The  second  example  is  more  unexpected.   Why  does  the  positive  result  with
+17:542:35856:18:18:93:518:668:12:g_d0_f7:12:g_d0_f2:K=  2  not  extend  to  a  larger  number  of  issues?   Intuitively,  the  problem  is  that
+17:543:35949:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:previous trades over some issueskandk′can make it impossible for a pair of voters
+17:544:36030:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:to execute a different, desired trade overk′andk′′.  Thus, contrary to theK= 2
+17:545:36108:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:case, the Pivot algorithm does not allow voters to exploit all opportunities for mutual
+17:546:36195:18:42:93:153:596:12:g_d0_f2:12:g_d0_f2:agreements.
+17:547:36206:42:28:93:259:554:14:g_d0_f1:14:g_d0_f1:2.4    Coalitional Trades
+17:548:36231:28:18:93:518:526:12:g_d0_f2:12:g_d0_f2:A natural aspect of vote trading is the possibility of forming coalitions, indeed the
+17:549:36316:18:18:93:518:508:12:g_d0_f2:12:g_d0_f2:incentive to do so.  The experiment we describe below focuses on pair-wise trades,
+17:550:36398:18:18:93:518:490:12:g_d0_f2:12:g_d0_f2:but our approach can be extended to the study of coalitions and sheds some light
+17:551:36478:18:18:93:518:472:12:g_d0_f2:12:g_d0_f2:on the debates in the early literature on vote-trading.  In this subsection, we derive
+17:552:36564:18:18:93:518:454:12:g_d0_f2:12:g_d0_f2:two main results.  First, the stability highlighted by our theorem on pair-wise trades
+17:553:36650:18:18:93:518:436:12:g_d0_f2:12:g_d0_f2:does not generalize to vote-trading within larger coalitions of voters.  Second, in our
+17:554:36737:18:17:93:518:418:12:g_d0_f2:12:g_d0_f2:model, there is no logical connection between stability under coalitional trade and
+17:555:36820:17:21:93:271:401:12:g_d0_f2:12:g_d0_f2:existence of the Condorcet winner.
+17:556:36854:21:18:111:518:380:12:g_d0_f2:12:g_d0_f2:We  begin  by  redefining  stability  in  the  presence  of  coalitions.   A  coalition  of
+17:557:36945:18:15:93:518:362:12:g_d0_f2:12:g_d0_f2:votersC={i,i′,i′′,..}is said to blockVif there exists a feasible vote allocation
+17:558:37025:15:21:94:518:347:12:g_d0_f10:12:g_d0_f2:̂V∈ Vsuch  that̂Vj=Vjfor  allj /∈C,  andui(̂V)> ui(V)  for  alli∈C.   The
+17:559:37098:21:18:93:517:326:12:g_d0_f2:12:g_d0_f2:allocationV∈ Viscoalition-stableif there exists no coalition of votersCwho can
+17:560:37176:18:18:93:518:308:12:g_d0_f2:12:g_d0_f2:blockV.  Up to now, we have restrictedCto be of size 2; here we allowCto have
+17:561:37253:18:21:93:229:290:12:g_d0_f2:12:g_d0_f2:any size between 2 andN.
+17:562:37277:21:18:111:518:269:12:g_d0_f2:12:g_d0_f2:As in the case of pair-wise trades, the first observation is that a coalition-stable
+17:563:37361:18:17:93:518:251:12:g_d0_f2:12:g_d0_f2:allocation  always  exists:   a  feasible  allocation  of  votes  that  gives  decision  power
+17:564:37455:17:18:93:518:234:12:g_d0_f2:12:g_d0_f2:to  a  single  voter  over  all  proposals  remains  trivially  stable  because  no  coalition
+17:565:37549:18:18:93:518:216:12:g_d0_f2:12:g_d0_f2:that excludes the dictator can change the outcome, and the dictator cannot strictly
+17:566:37632:18:18:93:518:198:12:g_d0_f2:12:g_d0_f2:gain from participating in any coalition.  The interesting question is not whether a
+17:567:37716:18:18:93:518:180:12:g_d0_f2:12:g_d0_f2:stable allocation exists, but rather whether it can be reached through the relevant
+17:568:37799:18:21:93:342:162:12:g_d0_f2:12:g_d0_f2:extensions of our algorithm to coalitional trades.
+17:569:37849:21:18:111:518:141:12:g_d0_f2:12:g_d0_f2:To extend the algorithm, the previous definitions need to be amended.  Keeping
+17:570:37927:18:18:93:518:123:12:g_d0_f2:12:g_d0_f2:in mind that a vote trade must,  by definition,  include at least two voters and at
+17:571:38010:18:0:93:229:105:12:g_d0_f2:12:g_d0_f2:least two issues, we define:
+18:572:38040:0:18:93:518:686:12:g_d0_f1:12:g_d0_f6:Definition 7A coalition-improving trade isminimalif it concerns:  (1) the min-
+18:573:38118:18:18:93:518:668:12:g_d0_f6:12:g_d0_f6:imal  package  of  votes  such  that  all  members  of  the  coalition  strictly  gain  from  the
+18:574:38215:18:18:93:518:650:12:g_d0_f6:12:g_d0_f6:trade; and (2) the minimal number of members such that the outcome corresponding
+18:575:38295:18:41:93:203:632:12:g_d0_f6:12:g_d0_f6:tôVcan be achieved.
+18:576:38315:41:18:93:518:591:12:g_d0_f1:12:g_d0_f6:Definition 8AC-Pivot Algorithmis any mechanism generating a sequence of
+18:577:38386:18:18:93:518:573:12:g_d0_f6:12:g_d0_f6:trades  in  the  following  way:  Start  from  any  vote  allocationV0.  If  there  is  no  min-
+18:578:38482:18:18:93:518:555:12:g_d0_f6:12:g_d0_f6:imal coalitional (strictly) improving trade,  stop.  If there is one such trade,  execute
+18:579:38571:18:18:93:518:537:12:g_d0_f6:12:g_d0_f6:it.  If there are multiple coalitional improving trades, choose one according to a pos-
+18:580:38658:18:18:93:518:519:12:g_d0_f6:12:g_d0_f6:sibly stochastic choice ruleRC.  Continue in this fashion until no further coalitional
+18:581:38744:18:34:93:209:501:12:g_d0_f6:12:g_d0_f6:improving trade exists.
+18:582:38767:34:18:111:518:467:12:g_d0_f2:12:g_d0_f2:TheC-Pivot  Algorithmis the natural generalization of the Pivot Algorithm to
+18:583:38843:18:17:93:518:449:12:g_d0_f2:12:g_d0_f2:coalitions.  Note again that coalitions can be of any size and we have imposed no rule
+18:584:38929:17:18:93:518:432:12:g_d0_f2:12:g_d0_f2:selecting among them in the order of trades, when several coalition-improving trades
+18:585:39013:18:18:93:518:414:12:g_d0_f2:12:g_d0_f2:are possible.  We callC-Pivot  stablean allocation of votes that cannot be blocked
+18:586:39095:18:18:93:518:396:12:g_d0_f2:12:g_d0_f2:by any coalition and is reachable via the C-Pivot algorithm in a finite number of
+18:587:39176:18:18:93:518:378:12:g_d0_f2:12:g_d0_f2:steps, and define aC-Pivot stable outcomeas an outcomePC(VT) that corresponds
+18:588:39253:18:21:93:291:360:12:g_d0_f2:12:g_d0_f2:to a C-Pivot stable allocation of votes.
+18:589:39293:21:34:111:454:339:12:g_d0_f2:12:g_d0_f2:In the presence of coalitions, stability becomes a more elusive goal:
+18:590:39362:34:17:93:518:305:12:g_d0_f1:12:g_d0_f6:Proposition 5There existK,N,Z, andRCsuch that the C-Pivot algorithm never
+18:591:39435:17:34:93:279:288:12:g_d0_f6:12:g_d0_f6:converges to a stable vote allocation.
+18:592:39473:34:26:111:236:254:12:g_d0_f1:12:g_d0_f2:Proof:See Appendix 1.
+18:593:39494:26:17:111:518:228:12:g_d0_f2:12:g_d0_f2:In the presence of coalitions, stability may fail because trades can be profitable for
+18:594:39580:17:18:93:518:211:12:g_d0_f2:12:g_d0_f2:the coalition even when the pair-wise trades that are part of the overall exchange are
+18:595:39666:18:18:93:518:193:12:g_d0_f2:12:g_d0_f2:not:  coalition members benefits from the positive externalities that originate from
+18:596:39750:18:18:93:518:175:12:g_d0_f2:12:g_d0_f2:the trades of other members.  As a result, the score function defined in the proof
+18:597:39832:18:18:93:518:157:12:g_d0_f2:12:g_d0_f2:of the Theorem in section 3 is no longer monotonically increasing in the number of
+18:598:39914:18:21:93:452:139:12:g_d0_f2:12:g_d0_f2:trades, and the logic of that proof does not extend to coalition trades.
+18:599:39986:21:18:111:518:118:12:g_d0_f2:12:g_d0_f2:But if a C-Pivot stable allocation exists, does it have desirable welfare properties?
+18:600:40071:18:0:93:277:100:12:g_d0_f2:12:g_d0_f2:A first, positive result is immediate:
+19:601:40111:0:18:93:518:686:12:g_d0_f1:12:g_d0_f6:Proposition 6If a C-Pivot stable outcome exists, then it cannot be Pareto domi-
+19:602:40190:18:40:93:124:668:12:g_d0_f6:12:g_d0_f6:nated.
+19:603:40196:40:18:111:518:628:12:g_d0_f2:12:g_d0_f2:Regardless of the history of previous trades, if an outcome is Pareto dominated,
+19:604:40276:18:18:93:518:610:12:g_d0_f2:12:g_d0_f2:then the coalition of the whole can always reach the Pareto superior outcome.  But
+19:605:40358:18:17:93:518:592:12:g_d0_f2:12:g_d0_f2:then  the  allocation  corresponding  to  the  Pareto  dominated  outcomes  cannot  be
+19:606:40444:17:21:93:178:575:12:g_d0_f2:8:g_d0_f3:C-Pivot stable.23
+19:607:40461:21:40:111:317:554:12:g_d0_f2:12:g_d0_f2:But further results are more ambiguous:
+19:608:40500:40:18:93:518:514:12:g_d0_f1:12:g_d0_f6:Proposition 7ConsiderZsuch  that  the  Condorcet  winner  exists.   (1)  If  either
+19:609:40583:18:18:93:518:496:12:g_d0_f7:12:g_d0_f6:K=  2orN=  3,  then  the  C-Pivot  stable  outcome  always  exists,  is  unique,  and
+19:610:40668:18:18:93:518:478:12:g_d0_f6:12:g_d0_f6:coincides with the Condorcet winner.  (2) IfK >2andN >3,  if a C-Pivot stable
+19:611:40745:18:39:93:417:460:12:g_d0_f6:12:g_d0_f6:outcome exists, it need not coincide with the Condorcet winner.
+19:612:40808:39:18:111:518:421:12:g_d0_f1:12:g_d0_f2:Proof.(1) See Appendix 1.  (2) Consider Example 2, in the proof of Proposition
+19:613:40886:18:18:93:518:403:12:g_d0_f2:12:g_d0_f2:4.   There  are  twoC-stable  outcomes:P(VT)  ={A},  reached  through  pair-wise
+19:614:40966:18:18:93:518:385:12:g_d0_f2:12:g_d0_f2:trades as described earlier, andP(VT) ={A,B}, if we allow|C|>2.  The second
+19:615:41041:18:18:93:518:367:12:g_d0_f2:12:g_d0_f2:stable outcome is reached through the following trades:  after voters 2 and 3 have
+19:616:41123:18:18:93:517:349:12:g_d0_f2:12:g_d0_f2:traded votes onAandB, a coalition of voters 1, 4, and 5 is formed; 4 gives anAvote
+19:617:41205:18:18:93:518:331:12:g_d0_f2:12:g_d0_f2:to 1; 5 gives aBvote to 4, and aCvote to 1.  Note that the trade is minimal, and
+19:618:41285:18:18:93:518:313:12:g_d0_f2:12:g_d0_f2:the resulting vote allocation cannot be blocked.  HenceP(VT) ={A,B}.  Neither
+19:619:41362:18:27:93:275:295:12:g_d0_f2:12:g_d0_f19:outcome is the Condorcet winner.-
+19:620:41395:27:18:111:518:268:12:g_d0_f2:12:g_d0_f2:Proposition 7 establishes that aC-stable outcome, when it exists, has no nec-
+19:621:41472:18:17:93:518:250:12:g_d0_f2:12:g_d0_f2:essary link to the Condorcet winner.  In some cases,  (K= 2 orN= 3),  the two
+19:622:41549:17:18:93:518:233:12:g_d0_f2:12:g_d0_f2:must coincide; in others, (K >2 andN >3), the existence of the Condorcet winner
+19:623:41628:18:18:93:518:215:12:g_d0_f2:12:g_d0_f2:gives no information about the welfare properties ofC-stable outcomes.  The result
+19:624:41710:18:18:93:518:197:12:g_d0_f2:12:g_d0_f2:is driven by two central assumptions of our model:  (1) vote trades are binding, and
+19:625:41794:18:19:93:294:179:12:g_d0_f2:12:g_d0_f2:(2) voting occurs proposal-by-proposal.
+19:626:41833:19:15:103:518:160:7:g_d0_f4:10:g_d0_f5:23Note that if the coalition trade is not minimal, it can be made so by eliminating redundant
+19:627:41926:15:0:93:169:145:10:g_d0_f5:10:g_d0_f5:trades or traders.
+20:628:41946:0:33:93:261:686:17:g_d0_f1:17:g_d0_f1:3    The Experiment
+20:629:41965:33:18:93:518:653:12:g_d0_f2:12:g_d0_f2:The experiment was run at the Columbia Experimental Laboratory for the Social
+20:630:42042:18:18:93:518:635:12:g_d0_f2:12:g_d0_f2:Sciences (CELSS) in November 2014, with Columbia University students recruited
+20:631:42120:18:17:93:518:617:12:g_d0_f2:12:g_d0_f2:from  the  whole  campus  through  the  laboratory’s  ORSEE  site.   No  subject  par-
+20:632:42206:17:18:93:518:600:12:g_d0_f2:12:g_d0_f2:ticipated  in  more  than  one  session.   After  entering  the  computer  laboratory,  the
+20:633:42297:18:18:93:518:582:12:g_d0_f2:12:g_d0_f2:students were seated randomly in booths separated by partitions; the experimenter
+20:634:42378:18:18:93:518:564:12:g_d0_f2:12:g_d0_f2:then  read  aloud  the  instructions,  projected  views  of  the  computer  screens  during
+20:635:42469:18:21:93:369:546:12:g_d0_f2:8:g_d0_f3:the experiment, and answered all questions publicly.24
+20:636:42523:21:18:111:518:525:12:g_d0_f2:12:g_d0_f2:Because the design of the trading platform presents some challenges, we describe
+20:637:42603:18:21:93:211:507:12:g_d0_f2:8:g_d0_f3:it here is some detail.25
+20:638:42628:21:18:111:518:486:12:g_d0_f2:12:g_d0_f2:At the start of each treatment, a subject saw on his computer screen the matrix
+20:639:42707:18:18:93:518:468:12:g_d0_f2:12:g_d0_f2:of  values,  denominated  in  experimental  points,  and  the  vote  allocation.   To  help
+20:640:42798:18:17:93:518:450:12:g_d0_f2:12:g_d0_f2:intuition, the two alternatives for each issue–Pass or Fail–were identified with two
+20:641:42882:17:18:93:518:433:12:g_d0_f2:12:g_d0_f2:colors–Orange or Blue–, and each individual’s values were written in the color of the
+20:642:42967:18:18:93:518:415:12:g_d0_f2:12:g_d0_f2:individual’s preferred alternative.26The screen also showed the votes totals and the
+20:643:43051:18:18:93:518:397:12:g_d0_f2:12:g_d0_f2:points the subject would win if voting were held immediately.  Each subject started
+20:644:43134:18:21:93:237:379:12:g_d0_f2:12:g_d0_f2:with one vote on each issue.
+20:645:43162:21:18:111:518:358:12:g_d0_f2:12:g_d0_f2:After  having  observed  the  matrix  of  values  and  the  current  vote  allocation,  a
+20:646:43251:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:subject could post a bid for a vote on one of the issues, in exchange for his vote on
+20:647:43336:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:a different issue.  The bid appeared on all committee members’ monitors, together
+20:648:43417:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:with the ID of the subject posting the bid.  A different subject could then accept
+20:649:43499:18:20:93:345:286:12:g_d0_f2:8:g_d0_f3:the bid by clicking the offer and highlighting it.27
+20:650:43551:20:18:111:518:266:12:g_d0_f2:12:g_d0_f2:A central feature of vote trading is that the preferences and vote holdings of the
+20:651:43633:18:18:93:518:248:12:g_d0_f2:12:g_d0_f2:specific individuals making a trade determine the effect of the trade.  Contrary to
+20:652:43716:18:18:93:518:230:12:g_d0_f2:12:g_d0_f2:standard market experiments, then, subjects must not only post potentially prof-
+20:653:43796:18:18:93:518:212:12:g_d0_f2:12:g_d0_f2:itable bids, but also consider the specific identity of their trading partner.  In adapt-
+20:654:43885:18:18:93:518:194:12:g_d0_f2:12:g_d0_f2:ing the bidding platform used in market experiments, we added a confirmation step.
+20:655:43967:18:12:103:466:176:7:g_d0_f4:10:g_d0_f5:24A copy of the instructions and sample trading screens are in an online Appendix.
+20:656:44049:12:16:103:518:164:7:g_d0_f4:10:g_d0_f5:25The computerized trading platform was implemented the Multistage program, an open source
+20:657:44139:16:11:93:518:148:10:g_d0_f5:10:g_d0_f5:software developed at Caltech’s Social Science Experimental Laboratory (SSEL). The software is
+20:658:44233:11:9:93:462:137:10:g_d0_f5:10:g_d0_f5:available for public download at http://multistage.ssel.caltech.edu:8000/multistage/.
+20:659:44318:9:15:103:518:128:7:g_d0_f4:10:g_d0_f5:26Thus all experimental values were positive and indicated earnings from one’s preferred alter-
+20:660:44413:15:9:93:310:113:10:g_d0_f5:10:g_d0_f5:native winning (relative to zero earning if it lost).
+20:661:44466:9:0:103:435:104:7:g_d0_f4:10:g_d0_f5:27We reproduce in Appendix B three screenshots shown during instructions.
+21:662:44541:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:After a bid is accepted, a window appears on the bidder’s screen detailing the ef-
+21:663:44623:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:fects of that specific trade–what the outcome would be upon immediate voting–and
+21:664:44703:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:asking the bidder to confirm or reject the trade.  If the trade is rejected, a message
+21:665:44789:18:21:93:518:632:12:g_d0_f2:12:g_d0_f2:appears on the screen of the rejected trade partner, informing him of the rejection.
+21:666:44873:21:18:111:518:611:12:g_d0_f2:12:g_d0_f2:After  a  trade  was  concluded,  the  vote  tally  on  each  issue  was  updated  and
+21:667:44959:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:conveyed  to  all  subjects  via  a  specific  message  on  all  screens.   The  message  also
+21:668:45053:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:reported the post-trade voting outcome if voting were to occur immediately.  Note
+21:669:45134:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:that  the  value  matrix  and  the  updated  vote  holdings  were  always  present  on  the
+21:670:45225:18:21:93:128:540:12:g_d0_f2:12:g_d0_f2:screen.
+21:671:45232:21:18:111:518:519:12:g_d0_f2:12:g_d0_f2:The  market  was  open  for  three  minutes.28However,  in  a  market  where  each
+21:672:45314:18:18:93:518:501:12:g_d0_f2:12:g_d0_f2:concluded trade can trigger a new chain of desired trades, it is particularly important
+21:673:45401:18:18:93:518:483:12:g_d0_f2:12:g_d0_f2:to ensure that all desired trades have the time to be executed.  Thus the time limit
+21:674:45485:18:18:93:518:465:12:g_d0_f2:12:g_d0_f2:was automatically extended by 10 seconds whenever a new trade occurred within
+21:675:45562:18:21:93:272:447:12:g_d0_f2:12:g_d0_f2:10 seconds of the expected closure.
+21:676:45597:21:17:111:518:426:12:g_d0_f2:12:g_d0_f2:Only trades of a single vote on one issue against a single vote on a different issue
+21:677:45681:17:18:93:518:409:12:g_d0_f2:12:g_d0_f2:were allowed, again to limit the complexity of the task.  No bid could be posted if
+21:678:45764:18:18:93:518:391:12:g_d0_f2:12:g_d0_f2:a subject did not have enough votes to execute it if accepted;  thus a voter could
+21:679:45846:18:18:93:518:373:12:g_d0_f2:12:g_d0_f2:post multiple bids only as long as he had enough votes to execute them all, had all
+21:680:45929:18:18:93:518:355:12:g_d0_f2:12:g_d0_f2:been  accepted.   Posted  bids  could  be  canceled  at  any  time,  an  important  feature
+21:681:46020:18:18:93:518:337:12:g_d0_f2:12:g_d0_f2:in a market where somebody else’s executed trade can make an existing posted bid
+21:682:46100:18:21:93:207:319:12:g_d0_f2:12:g_d0_f2:suddenly unprofitable.
+21:683:46122:21:18:111:518:298:12:g_d0_f2:12:g_d0_f2:Once the market closed, voting took place automatically, with all votes on each
+21:684:46201:18:18:93:518:280:12:g_d0_f2:12:g_d0_f2:issue cast by the computer in the direction preferred by each subject.  Then a new
+21:685:46283:18:20:93:166:262:12:g_d0_f2:12:g_d0_f2:round started.
+21:686:46297:20:18:111:518:242:12:g_d0_f2:12:g_d0_f2:The  experiment  consisted  of  three  treatments,AB,ABC1,  andABC2,  each
+21:687:46371:18:18:93:518:224:12:g_d0_f2:12:g_d0_f2:corresponding to a different matrix of values.  In all three treatments,  the size of
+21:688:46456:18:18:93:518:206:12:g_d0_f2:12:g_d0_f2:the voting committee was five (N=  5),  while the number of issues depended on
+21:689:46534:18:18:93:517:188:12:g_d0_f2:12:g_d0_f2:the  treatment:K=  2  in  treatmentAB,  andK=  3  in  treatmentsABC1,  and
+21:690:46608:18:18:93:518:170:12:g_d0_f7:12:g_d0_f2:ABC2.  In each committee, subjects were identified by ID’s randomly assigned by
+21:691:46687:18:18:93:517:152:12:g_d0_f2:12:g_d0_f7:the computer, and issues were denoted byAandB(in treatmentAB), andA,B
+21:692:46756:18:18:93:517:134:12:g_d0_f2:12:g_d0_f2:andC(in treatmentsABC1 andABC2).  Each session started with two practice
+21:693:46828:18:18:93:518:116:12:g_d0_f2:12:g_d0_f2:rounds;  then three rounds of treatmentAB,  and then five rounds each ofABC1
+21:694:46904:18:0:103:340:98:7:g_d0_f4:10:g_d0_f5:28Two minutes in treatmentAB, with two issues only.
+22:695:46957:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:andABC2,  alternating the order.29We did not alternate the order of treatment
+22:696:47034:18:18:93:518:668:12:g_d0_f7:12:g_d0_f2:ABbecause its smaller size (K= 2) made it substantially easier for the subjects,
+22:697:47114:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:and thus we used it as further practice before the more complex treatments.  This
+22:698:47195:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:is also the reason for the smaller number of rounds (three forAB, versus five for
+22:699:47276:18:21:93:195:614:12:g_d0_f7:12:g_d0_f2:ABC1 andABC2).
+22:700:47290:21:17:111:518:593:12:g_d0_f2:12:g_d0_f2:Committees were randomly formed, and ID’s randomly assigned at the start of
+22:701:47365:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:each new treatment, but the composition of each group and subjects’ ID’s were kept
+22:702:47447:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:unchanged for all rounds of the same treatment, to help subjects learn.  All but one
+22:703:47531:18:18:93:517:540:12:g_d0_f2:8:g_d0_f3:sessions consisted of 15 subjects, divided into three committees of five subjects.30
+22:704:47615:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:At the end of each session,  subjects were paid their cumulative earnings from all
+22:705:47697:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:rounds,  converting  experimental  points  into  dollars  via  a  preannounced  exchange
+22:706:47785:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:rate, plus a fixed show-up fee.  Each session lasted about 90 minutes, and average
+22:707:47867:18:21:93:187:468:12:g_d0_f2:12:g_d0_f2:earnings were $34.
+22:708:47885:21:18:111:518:447:12:g_d0_f2:12:g_d0_f2:We designed the three treatments according to the following criteria.  First, we
+22:709:47965:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:wanted aK= 2 treatment, both as further training for the subjects and because
+22:710:48042:18:18:93:518:411:12:g_d0_f2:12:g_d0_f2:of  the  sharp  theoretical  predictions  of  the  Pivot  algorithm  in  this  case.   Second,
+22:711:48136:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:we chose value matrices for which the stable outcome reachable via Pivot trades is
+22:712:48218:17:18:93:517:376:12:g_d0_f2:12:g_d0_f2:unique but requires multiple trades.  InAB, the path to stability is unique, while
+22:713:48300:18:18:93:518:358:12:g_d0_f2:12:g_d0_f2:in  bothABC1  andABC2  the  Pivot  stable  outcome  can  be  reached  via  multiple
+22:714:48383:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:paths, with no path being clearly focal.  Third, we chose matrices such that not only
+22:715:48468:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:is the Pivot stable outcome unique, but the stable vote allocation reached via Pivot
+22:716:48552:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:trades  is  unique,  even  with  multiple  possible  trading  paths.   Fourth,  we  designed
+22:717:48644:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:matrices  for  which  the  Condorcet  winner  exists,  but  need  not  correspond  to  the
+22:718:48734:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:Pivot stable outcome:  it does inAB(by necessity–see Proposition 2), and inABC2
+22:719:48813:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:(by construction), but not inABC1.  Finally, we wantedABC1 andABC2 to be
+22:720:48885:18:18:93:518:232:12:g_d0_f2:12:g_d0_f2:superficially very similar and to have Pivot trading paths of similar multiplicity and
+22:721:48971:18:18:93:518:214:12:g_d0_f2:12:g_d0_f2:length, allowing us to test whether the different force of attraction of the Condorcet
+22:722:49057:18:18:93:518:196:12:g_d0_f2:12:g_d0_f2:winner predicted by the theory is reflected in the data.  Note that we do not specify
+22:723:49142:18:18:93:518:178:12:g_d0_f7:12:g_d0_f2:R,  the  selection  rule  when  multiple  trades  are  possible,  but  let  the  experimental
+22:724:49235:18:20:93:497:160:12:g_d0_f2:12:g_d0_f2:subjects select which trades to conclude.  Our theoretical results hold for allR.
+22:725:49316:20:18:111:487:140:12:g_d0_f2:12:g_d0_f2:The three preference profiles used in the experiment are given in Table 3.
+22:726:49390:18:16:103:518:122:7:g_d0_f4:10:g_d0_f5:29Two of the sessions had only two treatments:ABandABC1 in one case, andAandABC2
+22:727:49470:16:8:93:147:106:10:g_d0_f5:10:g_d0_f5:in the other.
+22:728:49483:8:0:103:370:98:7:g_d0_f4:10:g_d0_f5:30One session had only ten subjects, divided into two groups.
+23:729:49546:0:15:300:320:688:12:g_d0_f1:12:g_d0_f1:AB
+23:730:49548:15:15:247:366:673:12:g_d0_f2:12:g_d0_f2:12345
+23:731:49553:15:15:226:382:658:12:g_d0_f7:12:g_d0_f2:A49−29−2912−12
+23:732:49567:15:22:226:372:643:12:g_d0_f7:12:g_d0_f2:B12−12−492949
+23:733:49580:22:14:200:236:621:12:g_d0_f1:12:g_d0_f1:ABC1
+23:734:49584:14:15:144:282:607:12:g_d0_f2:12:g_d0_f2:12345
+23:735:49589:15:15:122:288:592:12:g_d0_f7:12:g_d0_f2:A23−2310−1023
+23:736:49602:15:15:122:288:577:12:g_d0_f7:12:g_d0_f2:B−10−1023−2310
+23:737:49616:15:0:122:297:562:12:g_d0_f7:12:g_d0_f2:C18−18−1818−18
+23:738:49630:0:14:394:430:621:12:g_d0_f1:12:g_d0_f1:ABC2
+23:739:49634:14:15:338:470:607:12:g_d0_f2:12:g_d0_f2:12345
+23:740:49639:15:15:316:470:592:12:g_d0_f7:12:g_d0_f2:A−2115−9219
+23:741:49650:15:15:316:485:577:12:g_d0_f7:12:g_d0_f2:B15915−15−15
+23:742:49662:15:44:316:476:562:12:g_d0_f7:12:g_d0_f2:C−9−2121921
+23:743:49673:44:26:184:427:518:12:g_d0_f2:12:g_d0_f6:Table 3:Preference profiles used in experiment.
+23:744:49720:26:15:150:460:492:10:g_d0_f5:10:g_d0_f5:SessionTreatments# Subjects# Groups# Rounds
+23:745:49763:15:14:150:436:477:10:g_d0_f5:10:g_d0_f5:s1AB,ABC1,ABC21023,5,5
+23:746:49785:14:15:150:436:463:10:g_d0_f5:10:g_d0_f5:s2AB,ABC2,ABC11533,5,5
+23:747:49807:15:14:150:436:448:10:g_d0_f5:10:g_d0_f5:s3AB,ABC1,ABC21533,5,5
+23:748:49829:14:15:150:436:434:10:g_d0_f5:10:g_d0_f5:s4AB,ABC2,ABC11533,5,5
+23:749:49851:15:14:150:429:419:10:g_d0_f5:10:g_d0_f5:s5AB,ABC21533,5
+23:750:49866:14:38:150:429:405:10:g_d0_f5:10:g_d0_f5:s6AB,ABC11533,5
+23:751:49881:38:14:93:518:367:12:g_d0_f2:12:g_d0_f2:Table 4:  Experimental Design.  Note:  A programming error in sessions s5 and s6
+23:752:49961:14:37:93:314:353:12:g_d0_f2:12:g_d0_f2:made the last five rounds of data unusable.
+23:753:50004:37:17:111:518:316:12:g_d0_f2:12:g_d0_f2:In all three cases, the initial vote allocationV0is unstable.  In the case of matrix
+23:754:50088:17:18:93:518:299:12:g_d0_f7:12:g_d0_f2:AB,P={B}is the Condorcet winner and the unique Pivot-stable outcome.  The
+23:755:50161:18:18:93:518:281:12:g_d0_f2:12:g_d0_f2:Pivot algorithm follows a unique path, of length two (i.e.  consists of a sequence of
+23:756:50246:18:18:93:518:263:12:g_d0_f2:12:g_d0_f2:two trades).  MatrixABC1 has identical properties to the matrix of values discussed
+23:757:50329:18:18:93:518:245:12:g_d0_f2:12:g_d0_f2:in  the  proof  of  Proposition  4.   The  Condorcet  winner  exists  and  corresponds  to
+23:758:50419:18:18:93:518:227:12:g_d0_f1:12:g_d0_f2:P={A}, but the unique Pivot-stable outcome isP={A,B,C}.  In matrixABC2,
+23:759:50490:18:18:93:518:209:12:g_d0_f2:12:g_d0_f2:the Condorcet winner isP={A,B,C}, and corresponds to the unique Pivot stable
+23:760:50566:18:18:93:518:191:12:g_d0_f2:12:g_d0_f2:outcome.  With both matricesABC1 andABC2,  the Pivot algorithm can follow
+23:761:50639:18:18:93:518:173:12:g_d0_f2:12:g_d0_f2:three different paths, and for both matrices two of these paths have length four, and
+23:762:50724:18:21:93:208:155:12:g_d0_f2:8:g_d0_f3:one has length three.31
+23:763:50747:21:23:111:318:134:12:g_d0_f2:12:g_d0_f2:Table 4 reports the experimental design.
+23:764:50787:23:0:103:324:111:7:g_d0_f4:10:g_d0_f5:31The possible paths are detailed in the Appendix.
+24:765:50839:0:14:106:505:687:10:g_d0_f5:10:g_d0_f5:TreatmentTot tradesgroups×roundsMean tradesMedians.dMaxPivot
+24:766:50899:14:15:106:487:673:12:g_d0_f7:10:g_d0_f5:AB115512.2521.92132
+24:767:50918:15:14:106:502:658:12:g_d0_f7:10:g_d0_f5:ABC1211703.031.6793,3,4
+24:768:50941:14:38:106:502:644:12:g_d0_f7:10:g_d0_f5:ABC2175702.521.3673,3,4
+24:769:50964:38:36:236:376:606:12:g_d0_f2:12:g_d0_f2:Table 5:  Number of trades.
+24:770:50991:36:37:93:310:570:17:g_d0_f1:17:g_d0_f1:4    Experimental Results.
+24:771:51017:37:28:93:185:533:14:g_d0_f1:14:g_d0_f1:4.1    Trading
+24:772:51031:28:18:93:518:505:12:g_d0_f2:12:g_d0_f2:How much trading did we see?  Table 5 reports basic statistics on observed trades.
+24:773:51113:18:18:93:518:487:12:g_d0_f2:12:g_d0_f2:”Pivot” refers to the predicted number of trades under the Pivot algorithm.  The
+24:774:51193:18:21:93:294:469:12:g_d0_f2:12:g_d0_f2:unit of analysis is the group per round.
+24:775:51233:21:18:111:518:448:12:g_d0_f2:12:g_d0_f2:A histogram of the number of trades per treatment (Figure 1) shows clearly the
+24:776:51311:18:18:93:518:430:12:g_d0_f2:12:g_d0_f2:higher frequency of few trades in theABtreatment, withK= 2.  Between the two
+24:777:51387:18:18:93:518:412:12:g_d0_f7:12:g_d0_f2:K= 3 treatments,ABC2 has consistently higher fractions of low trades, but the
+24:778:51464:18:18:93:518:394:12:g_d0_f2:12:g_d0_f2:differences  are  not  striking–56  percent  of  rounds  end  with  two  or  fewer  trades  in
+24:779:51558:18:18:93:518:376:12:g_d0_f7:12:g_d0_f2:ABC2, as opposed to 41 percent inABC1, and 80 percent end with three or fewer
+24:780:51635:18:18:93:518:358:12:g_d0_f2:12:g_d0_f2:trades inABC2, as opposed to 76 percent inABC1.  In all treatments, few rounds
+24:781:51713:18:20:93:233:340:12:g_d0_f2:12:g_d0_f2:include five or more trades.
+24:782:51741:20:18:111:518:320:12:g_d0_f2:12:g_d0_f2:As expected, the bidder’s option of rejecting trades, and thus discriminating over
+24:783:51823:18:18:93:518:302:12:g_d0_f2:12:g_d0_f2:who accepted the original bid, was important.  In columns 2-4 of Table 3, we report
+24:784:51906:18:18:93:518:284:12:g_d0_f2:12:g_d0_f2:the total number of bids, how many of these found a taker in the market, and how
+24:785:51986:18:18:93:518:266:12:g_d0_f2:12:g_d0_f2:many of these acceptances were then rejected by the bidder.  A large fraction of all
+24:786:52070:18:18:93:518:248:12:g_d0_f2:12:g_d0_f2:posted bids found a counterpart–from a minimum of 77 percent inABC2 to more
+24:787:52145:18:18:93:518:230:12:g_d0_f2:12:g_d0_f2:than 95 percent inAB–but about a third of these accepted trades were rejected by
+24:788:52225:18:18:93:517:212:12:g_d0_f2:12:g_d0_f2:the bidder– 32 percent inA, 29 percent inABC1, and 34 percent inABC2.  As the
+24:789:52302:18:18:93:518:194:12:g_d0_f2:12:g_d0_f2:last column of the table shows, some rejected trades were associated with a strict
+24:790:52384:18:18:93:518:176:12:g_d0_f2:12:g_d0_f2:increase in myopic payoff for the bidder, but the number is small–between 10 and
+24:791:52464:18:20:93:304:158:12:g_d0_f2:12:g_d0_f2:20 percent of rejections in all treatments.
+24:792:52507:20:18:111:518:138:12:g_d0_f2:12:g_d0_f2:Whether in terms of number of trades or of any other variable studied below,
+24:793:52583:18:18:93:518:120:12:g_d0_f2:12:g_d0_f2:the  data  show  no  evidence  of  learning  or  of  order  effects–behavior  appears  very
+24:794:52674:18:0:93:518:102:12:g_d0_f2:12:g_d0_f2:consistent  across  rounds,  and  regardless  of  whetherABC1  orABC2  was  played
+25:795:52758:0:27:201:410:462:12:g_d0_f2:12:g_d0_f2:Figure 1:  Number of trades.  Frequencies
+25:796:52799:27:14:124:487:435:10:g_d0_f5:10:g_d0_f5:TreatmentTot bidsAcceptedRejected by bidderRejected with payoff gain
+25:797:52867:14:15:124:381:421:12:g_d0_f7:10:g_d0_f5:AB177169546
+25:798:52878:15:14:124:386:406:12:g_d0_f7:10:g_d0_f5:ABC13682968515
+25:799:52892:14:38:124:386:392:12:g_d0_f7:10:g_d0_f5:ABC23452679211
+25:800:52906:38:36:94:517:354:12:g_d0_f2:12:g_d0_f2:Table 6:  Bids, accepted bids, and rejected trades.  Tot bids excludes canceled bids.
+25:801:52991:36:42:93:516:318:12:g_d0_f2:12:g_d0_f2:first.  Thus we present the experimental results aggregating over rounds and order.
+25:802:53074:42:29:93:190:276:14:g_d0_f1:14:g_d0_f1:4.2    Stability
+25:803:53090:29:18:93:518:247:12:g_d0_f2:12:g_d0_f2:Our point of departure is the definition of stable vote allocations.  Is the stability
+25:804:53176:18:17:93:518:229:12:g_d0_f2:12:g_d0_f2:requirement satisfied in the vote allocation to which our subjects converge at the
+25:805:53258:17:18:93:518:212:12:g_d0_f2:12:g_d0_f2:end  of  each  round?   Figure  2  shows  the  CDF  of  steps  to  stability  for  the  three
+25:806:53351:18:18:93:518:194:12:g_d0_f2:12:g_d0_f2:treatments, in blue, as well as in 5,000 simulations with random trading, in grey,
+25:807:53433:18:18:93:518:176:12:g_d0_f2:12:g_d0_f2:with the dottted line.  The horizontal axis measures the minimal number of Pivot
+25:808:53513:18:18:93:518:158:12:g_d0_f2:12:g_d0_f2:trades necessary to reach stability, and the vertical axis the proportion of final vote
+25:809:53600:18:21:93:498:140:12:g_d0_f2:12:g_d0_f2:allocations not further from stability than the corresponding number of trades.
+25:810:53679:21:18:111:518:119:12:g_d0_f2:12:g_d0_f2:The fraction of stable vote allocations in the experimental data was 76 percent in
+25:811:53761:18:0:93:517:101:12:g_d0_f7:12:g_d0_f2:AB, and 64 percent in both treatmentsABC1 andABC2.  In all treatments, more
+26:812:53838:0:36:144:466:354:12:g_d0_f2:12:g_d0_f2:Figure 2:  Steps to stability.  Cumulative distribution functions.
+26:813:53904:36:18:93:518:318:12:g_d0_f2:12:g_d0_f2:than 80 percent of all vote allocations were within one step (one trade) of stability,
+26:814:53990:18:18:93:518:300:12:g_d0_f2:12:g_d0_f2:although the figure also shows the predictably easier convergence to stability in the
+26:815:54075:18:18:93:518:282:12:g_d0_f7:12:g_d0_f2:ABtreatment,  with only two proposals.  In all three treatments,  the distribution
+26:816:54157:18:21:93:518:264:12:g_d0_f2:12:g_d0_f2:corresponding to random trading FOSD’s the distribution for the experimental data.
+26:817:54239:21:18:111:518:243:12:g_d0_f2:12:g_d0_f2:The simulation of random trades provides the yardstick of comparison for our
+26:818:54315:18:18:93:518:225:12:g_d0_f2:12:g_d0_f2:data.   We  will  use  it  repeatedly  in  what  follows,  and  it  is  worth  describing  the
+26:819:54409:18:18:93:518:207:12:g_d0_f2:12:g_d0_f2:methodology in some detail.  In each treatment, we constructed the random trades
+26:820:54489:18:18:93:518:189:12:g_d0_f2:12:g_d0_f2:by randomly selecting an individual, one or two issues (in the two- and three-issue
+26:821:54572:18:18:93:518:171:12:g_d0_f2:12:g_d0_f2:treatments, respectively), a partner, and a direction of trade, all with equal probabil-
+26:822:54660:18:17:93:518:153:12:g_d0_f2:12:g_d0_f2:ity, and enacting the trade as long as both traders’ budget constraints are satisfied.
+26:823:54746:17:18:93:518:136:12:g_d0_f2:12:g_d0_f2:If  budget  constraints  are  violated,  we  cancel  the  proposed  trade  and  restart.   In
+26:824:54839:18:18:93:518:118:12:g_d0_f2:12:g_d0_f2:each group, a trade occurs with specified probability over a short time interval, with
+26:825:54925:18:0:93:518:100:12:g_d0_f2:12:g_d0_f2:both parameters calculated to match the observed average length of rounds and the
+27:826:55008:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:average number of trades in the treatment.32For each treatment, we repeated the
+27:827:55087:18:21:93:378:668:12:g_d0_f2:8:g_d0_f3:procedure 5,000 times, each time focusing on a group.33
+27:828:55142:21:18:111:518:647:12:g_d0_f2:12:g_d0_f2:Figure 2 reports information on the stability of the vote allocations reached at
+27:829:55222:18:18:93:518:629:12:g_d0_f2:12:g_d0_f2:the end of trading.  But our data also give us information on dynamic convergence.
+27:830:55304:18:20:93:421:611:12:g_d0_f2:12:g_d0_f2:Do successive trades move the vote allocation towards stability?
+27:831:55368:20:18:111:518:591:12:g_d0_f2:12:g_d0_f2:Figures 3 and 4 show, for each treatment, the dynamic path of the vote alloca-
+27:832:55446:18:18:93:518:573:12:g_d0_f2:12:g_d0_f2:tion, as captured by the succession of trades.  The horizontal axis measures time,
+27:833:55528:18:18:93:518:555:12:g_d0_f2:12:g_d0_f2:in seconds.  A marker corresponds to a trade.  Thus, for any given marker, the hor-
+27:834:55611:18:18:93:518:537:12:g_d0_f2:12:g_d0_f2:izontal axis indicates when the trade took place, within the maximal round length
+27:835:55692:18:18:93:518:519:12:g_d0_f2:12:g_d0_f2:observed in the data for each treatment.34The vertical axis measures distance from
+27:836:55774:18:18:93:518:501:12:g_d0_f2:12:g_d0_f2:stability, defined, as in Figure 2, by the minimal number of Pivot trades necessary
+27:837:55857:18:18:93:518:483:12:g_d0_f2:12:g_d0_f2:to reach a stable allocation.  Such number is calculated first for the vote allocation
+27:838:55943:18:18:93:518:465:12:g_d0_f2:12:g_d0_f2:characterizing each group in the treatment at that moment in that round, and then
+27:839:56024:18:18:93:518:447:12:g_d0_f2:12:g_d0_f2:averaging over the groups.  The figure is drawn pooling over all groups and all ses-
+27:840:56108:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:sions, for given treatment, and each curve, with its own shade and marker symbol,
+27:841:56189:18:18:93:518:411:12:g_d0_f2:12:g_d0_f2:reports data from the same round (1-3 forABand 1-5 forABC1 andABC2).  The
+27:842:56262:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:jumps  between  dots  are  relatively  small  because  a  trade  concerns  a  single  group,
+27:843:56354:17:21:93:362:376:12:g_d0_f2:12:g_d0_f2:while the others’ vote allocations remain unchanged.
+27:844:56406:21:18:111:518:355:12:g_d0_f2:12:g_d0_f2:All curves decline, almost perfectly monotonically, showing the dynamic conver-
+27:845:56485:18:18:93:518:337:12:g_d0_f2:12:g_d0_f2:gence towards stability.  To help us evaluate such convergence, the black curve in
+27:846:56567:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:each  panel  reports  the  steps  from  stability  calculated  from  the  5,000  simulations
+27:847:56659:18:21:93:203:301:12:g_d0_f2:12:g_d0_f2:with random trading.
+27:848:56679:21:18:111:518:280:12:g_d0_f2:12:g_d0_f2:After the first minute, in all three treatments, the curve corresponding to random
+27:849:56761:18:18:93:518:262:12:g_d0_f2:12:g_d0_f2:trades remains higher than the curve corresponding to any round of experimental
+27:850:56840:18:15:103:518:244:7:g_d0_f4:10:g_d0_f5:32Given the average length of a round in the treatment, time is divided into a grid of 100 cells,
+27:851:56937:15:12:93:518:229:10:g_d0_f5:10:g_d0_f5:and in each cell a group can trade with probabilityp, such that 100pequals the mean number of
+27:852:57030:12:8:93:244:217:10:g_d0_f5:10:g_d0_f5:trades per round in the treatment.
+27:853:57064:8:16:103:518:209:7:g_d0_f4:10:g_d0_f5:33Note that random trading is a demanding comparison when applied to the stability of vote
+27:854:57154:16:12:93:518:193:10:g_d0_f5:10:g_d0_f5:allocations.  The reason is that a large fraction of feasible trades take the vote allocation away from
+27:855:57257:12:12:93:518:181:10:g_d0_f5:10:g_d0_f5:minimal majority, and hence make pivot trades impossible, and the allocation stable.  For example,
+27:856:57355:12:12:93:518:169:10:g_d0_f5:10:g_d0_f5:in treatmentAB, where breaking minimal majority on a single issue is sufficient to induce stability,
+27:857:57455:12:12:93:518:157:10:g_d0_f5:10:g_d0_f5:a single random vote trade from any unstable allocation has never less than a 30 percent chance
+27:858:57550:12:8:93:182:145:10:g_d0_f5:10:g_d0_f5:of inducing stability.
+27:859:57572:8:16:103:518:137:7:g_d0_f4:10:g_d0_f5:34The trading period lasts 180 seconds, but there is a 10 second delay with each trade, to give
+27:860:57667:16:12:93:518:121:10:g_d0_f5:10:g_d0_f5:time to subjects to study the new vote allocations.  In addition, 10 more seconds are added at the
+27:861:57765:12:0:93:373:109:10:g_d0_f5:10:g_d0_f5:end of the period if any trade takes place in the last 10 seconds.
+28:862:57833:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:data.35Notice also the lack of learning in the data–there is no systematic difference
+28:863:57918:18:263:93:270:668:12:g_d0_f2:8:g_d0_f3:between earlier and later rounds.36
+28:864:57953:263:15:93:505:405:12:g_d0_f2:12:g_d0_f23:Figure 3: Dynamic convergence to pivot stable outcomes. Data vs. Random. 
+28:865:58015:15:74:93:149:390:12:g_d0_f23:12:g_d0_f2:AB matrix.
+28:866:58025:74:29:93:247:316:14:g_d0_f1:14:g_d0_f1:4.3    Vote Allocations
+28:867:58048:29:18:93:518:287:12:g_d0_f2:12:g_d0_f2:For all three value matrices used in our experiment,  the Pivot algorithms predict
+28:868:58130:18:18:93:518:269:12:g_d0_f2:12:g_d0_f2:a unique stable vote allocation.  Is such an allocation reached by the experimental
+28:869:58213:18:18:93:518:251:12:g_d0_f2:12:g_d0_f2:subjects?  Figure 5 reports the number of votes held by each voter at the end of a
+28:870:58295:18:18:93:518:233:12:g_d0_f2:12:g_d0_f2:round, averaged over all rounds of the same treatment.  Each panel corresponds to a
+28:871:58378:18:18:93:518:215:12:g_d0_f2:12:g_d0_f2:treatment and reports the number of votes by voter ID, i.e.  by the vector of values
+28:872:58462:18:17:93:518:197:12:g_d0_f2:12:g_d0_f2:corresponding to each column of the value matrix.  The blue columns represent the
+28:873:58543:17:18:93:518:180:12:g_d0_f2:12:g_d0_f2:experimental data, the grey columns the Pivot prediction, and the red line the no-
+28:874:58625:18:17:93:518:162:12:g_d0_f2:12:g_d0_f2:trade status quo (or equivalently, the average vote holding after random trading).
+28:875:58707:17:12:103:350:145:7:g_d0_f4:10:g_d0_f5:35With the exception of two trades in round 5 inABC2.
+28:876:58760:12:16:103:518:133:7:g_d0_f4:10:g_d0_f5:36To verify that results were not driven by averaging, we computed CDF’s of steps to stability
+28:877:58854:16:12:93:518:117:10:g_d0_f5:10:g_d0_f5:for  the  data  and  for  the  random  simulations,  as  in  Figure  1,  at  all  30-second  intervals.   In  all
+28:878:58967:12:12:93:518:105:10:g_d0_f5:10:g_d0_f5:treatments and at all times, the CDF corresponding to random trading FOSD’s the CDF from the
+28:879:59059:12:0:93:115:93:10:g_d0_f5:10:g_d0_f5:data.
+29:880:59066:0:14:93:521:480:12:g_d0_f2:12:g_d0_f23:Figure 4: Dynamic convergence to pivot stable outcomes. Data vs. Random. 
+29:881:59128:14:37:93:160:466:12:g_d0_f23:12:g_d0_f2:ABC1, ABC2.
+29:882:59139:37:18:93:518:429:12:g_d0_f2:12:g_d0_f2:The figure reports data from all rounds, but remains effectively identical if we select
+29:883:59226:18:21:93:235:411:12:g_d0_f2:12:g_d0_f2:stable vote allocations only.
+29:884:59255:21:17:111:518:390:12:g_d0_f2:12:g_d0_f2:It is clear from the figure that the vote distribution in the data is less sharply
+29:885:59337:17:18:93:518:373:12:g_d0_f2:12:g_d0_f2:variable across issues than theory predicts, as we would expect in the presence of
+29:886:59419:18:18:93:518:355:12:g_d0_f2:12:g_d0_f2:noise.  Yet, the qualitative predictions are strongly supported.  There are five voters
+29:887:59506:18:18:93:517:337:12:g_d0_f2:12:g_d0_f2:in each treatment,  holding votes over two (inAB) or three issues (inABC1 and
+29:888:59583:18:18:93:518:319:12:g_d0_f7:12:g_d0_f2:ABC2)–a total of forty points.  Of these forty, the theory predicts that 14 should
+29:889:59665:18:18:93:518:301:12:g_d0_f2:12:g_d0_f2:be  above 1–the  voter  should  be a  net buyer  over  that issue–  and  15 below  1–the
+29:890:59753:18:18:93:518:283:12:g_d0_f2:12:g_d0_f2:voter should be a net seller.  The prediction is satisfied ineverysingle case, across
+29:891:59838:18:18:93:518:265:12:g_d0_f2:12:g_d0_f2:all treatments.  When the theory predicts holding a single vote–11 cases for which
+29:892:59920:18:18:93:518:247:12:g_d0_f2:12:g_d0_f2:the voter should exit trade with the same number of votes held at the start–, the
+29:893:60001:18:18:93:518:229:12:g_d0_f2:12:g_d0_f2:data show three cases where the average vote holding is below 1,  five where it is
+29:894:60083:18:18:93:518:211:12:g_d0_f2:12:g_d0_f2:above, and three where it is effectively indistinguishable from 1.  On average, our
+29:895:60166:18:18:93:518:193:12:g_d0_f2:12:g_d0_f2:subjects hold 0.56 votes when the theory predicts 0; 1.05 when the theory predicts
+29:896:60248:18:78:93:317:175:12:g_d0_f2:8:g_d0_f3:1, and 1.43 when the theory predicts 2.07.37
+29:897:60292:78:11:103:449:97:7:g_d0_f4:10:g_d0_f5:37The theory predicts that voter 3 in treatmentABC1 should hold three votes.
+30:898:60370:11:14:56:519:86:12:g_d0_f2:12:g_d0_f2:Figure 5:  Average vote allocations at the end of each round, by voter type.  Top Panel AB.
+30:899:60461:14:46:56:277:72:12:g_d0_f2:12:g_d0_f2:Middle Panel ABC1.  Bottom Panel ABC2.
+30:900:60499:46:0:282:294:26:12:g_d0_f2:12:g_d0_f2:28
+31:901:60501:0:29:93:177:686:14:g_d0_f1:14:g_d0_f1:4.4    Trades
+31:902:60514:29:17:93:518:657:12:g_d0_f2:12:g_d0_f2:According  to  our  results  so  far,  final  vote  allocations  tend  to  be  stable;  dynamic
+31:903:60609:17:18:93:518:640:12:g_d0_f2:12:g_d0_f2:trading moves towards stability, and final individual vote holdings mirror qualita-
+31:904:60692:18:18:93:518:622:12:g_d0_f2:12:g_d0_f2:tively  the  properties  of  Pivot-stable  allocations.   But  can  we  say  more  about  the
+31:905:60785:18:18:93:518:604:12:g_d0_f2:12:g_d0_f2:specific trades we see in the lab?  In particular, are these trades compatible with the
+31:906:60872:18:37:93:179:586:12:g_d0_f2:12:g_d0_f2:Pivot algorithm?
+31:907:60888:37:29:93:210:549:12:g_d0_f1:12:g_d0_f1:4.4.1    Pivot trades.
+31:908:60910:29:18:93:518:520:12:g_d0_f2:12:g_d0_f2:The class of Pivot algorithms is a class of mechanical selection rules among feasible
+31:909:60995:18:18:93:518:502:12:g_d0_f2:12:g_d0_f2:pair-wise trades.  It is not a model of individual behavior.  Accordingly, it should be
+31:910:61082:18:18:93:518:484:12:g_d0_f2:12:g_d0_f2:tested not on individual trades, but on binary trades–i.e.  by considering the fraction
+31:911:61169:18:18:93:518:466:12:g_d0_f2:12:g_d0_f2:of all trades associated with myopic strict increases in payoff for both traders.  We
+31:912:61254:18:18:93:518:448:12:g_d0_f2:12:g_d0_f2:plot such a fraction in Figure 6.  The blue columns correspond to the experimental
+31:913:61336:18:18:93:518:430:12:g_d0_f2:12:g_d0_f2:data, the light grey columns to the simulations with random trading, and the error
+31:914:61418:18:20:93:514:412:12:g_d0_f2:8:g_d0_f3:bars indicate 95 percent confidence intervals (under the null of random trading).38
+31:915:61501:20:18:111:518:392:12:g_d0_f2:12:g_d0_f2:The figure shows clearly the subjects’ search for gains.  With random trading,
+31:916:61579:18:18:93:518:374:12:g_d0_f2:12:g_d0_f2:the frequency of payoff gains for both traders is 3 percent inABand 1 percent in
+31:917:61659:18:18:93:518:356:12:g_d0_f7:12:g_d0_f2:ABC1 andABC2, or less than one fifth of what we observe inAB, and less than one
+31:918:61738:18:18:93:518:338:12:g_d0_f2:12:g_d0_f2:tenth inABC1 andABC2.  In all cases, the probability that the data are generated
+31:919:61818:18:21:93:251:320:12:g_d0_f2:12:g_d0_f2:by random trades is negligible.
+31:920:61849:21:18:111:518:299:12:g_d0_f2:12:g_d0_f2:But if the trading behavior of the experimental subjects is not random, it is also
+31:921:61931:18:18:93:518:281:12:g_d0_f2:12:g_d0_f2:true  that  the  fraction  of  trades  consistent  with  the  Pivot  algorithm  is  small:  17
+31:922:62025:18:18:93:518:263:12:g_d0_f2:12:g_d0_f2:percent inAB, 26 percent inABC1 and 18 percent inABC2.  Which other trades
+31:923:62099:18:37:93:218:245:12:g_d0_f2:12:g_d0_f2:are subjects concluding?
+31:924:62123:37:28:93:213:208:12:g_d0_f1:12:g_d0_f1:4.4.2    Other trades.
+31:925:62145:28:18:93:518:180:12:g_d0_f2:12:g_d0_f2:We find that a much larger share of the data can be explained by extending the Pivot
+31:926:62229:18:18:93:518:162:12:g_d0_f2:12:g_d0_f2:algorithm in one of two directions.  First, while the Pivot algorithm selects trades
+31:927:62313:18:18:93:518:144:12:g_d0_f2:12:g_d0_f2:with strict gains in payoffs, in every treatment more than 40 percent of all trades
+31:928:62396:18:17:93:518:126:12:g_d0_f2:12:g_d0_f2:result in no change in payoff for either trader.  Zero-gain trades are trades involving
+31:929:62483:17:16:103:518:109:7:g_d0_f4:10:g_d0_f5:38Note that under the null all observations are independent.  Thus no correction for correlation
+31:930:62579:16:0:93:142:93:10:g_d0_f5:10:g_d0_f5:is required.
+32:931:62593:0:58:207:383:448:12:g_d0_f2:12:g_d0_f2:Figure 6: Fraction of Pivot Trades
+32:932:62622:58:18:93:518:390:12:g_d0_f2:12:g_d0_f2:non-pivotal votes, and thus preserving the status quo outcome; they could be the
+32:933:62702:18:18:93:518:372:12:g_d0_f2:12:g_d0_f2:result of buying votes from allies with weak preferences, for example, or of buying
+32:934:62785:18:18:93:518:354:12:g_d0_f2:12:g_d0_f2:losing  votes,  to  strengthen  one’s  favorite  side’s  margin  of  victory.   No  (myopic)
+32:935:62877:18:18:93:518:336:12:g_d0_f2:12:g_d0_f2:rationality requirement is violated by trades that are only weakly-improving, either
+32:936:62961:18:18:93:518:318:12:g_d0_f2:12:g_d0_f2:for one or both traders, and our algorithm could be extended to accommodate such
+32:937:63041:18:21:93:128:300:12:g_d0_f2:12:g_d0_f2:trades.
+32:938:63048:21:18:111:518:279:12:g_d0_f2:12:g_d0_f2:Second, as we note in the proof of the Theorem, every Pivot trade corresponds to
+32:939:63128:18:18:93:518:261:12:g_d0_f2:12:g_d0_f2:an increase in the score functionσit(Xi,Vit) for the two traders involved.39But not
+32:940:63211:18:18:93:518:243:12:g_d0_f2:12:g_d0_f2:all increases in score correspond to Pivot trades:  trades that shift votes from low to
+32:941:63298:18:17:93:518:225:12:g_d0_f2:12:g_d0_f2:high-value proposals do not cause strict myopic payoff gains if they do not change
+32:942:63380:17:18:93:518:208:12:g_d0_f2:12:g_d0_f2:the resolution of the high-value proposals, either because they continue to be lost or
+32:943:63466:18:36:103:272:190:7:g_d0_f4:10:g_d0_f5:39Recall thatσit(Xi,Vit) is defined by:
+32:944:63505:36:0:274:297:154:10:g_d0_f14:10:g_d0_f5:σit=
+32:945:63509:0:25:303:313:167:7:g_d0_f13:10:g_d0_f10:K∑
+32:946:63511:25:0:299:314:142:7:g_d0_f13:7:g_d0_f4:k=1
+32:947:63514:0:32:315:337:154:10:g_d0_f14:7:g_d0_f13:xkivkit
+32:948:63521:32:12:93:518:122:10:g_d0_f5:10:g_d0_f5:wherexkiis the absolute valuation attached byito proposalkpassing, andvkitis the number of
+32:949:63611:12:0:93:202:110:10:g_d0_f5:10:g_d0_f5:votes onkheld byiatt.
+33:950:63634:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:because they were already won.  Such trades could reflect difficulties understanding
+33:951:63718:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:pivotality, but could also mirror behavior that is more forward-looking than Pivot
+33:952:63800:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:algorithms.  Myopic gains are evaluated assuming voting occurred immediately.  In
+33:953:63881:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:fact,  in  the  uncertain  and  complex  enviroment  of  our  experiment,  subjects  may
+33:954:63969:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:want  to  accumulate  votes  on  high  value  proposals,  regardless  of  their  resolution
+33:955:64060:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:under immediate voting,  because they conjecture that further trades are likely to
+33:956:64142:18:20:93:299:578:12:g_d0_f2:12:g_d0_f2:take place before voting actually occurs.
+33:957:64183:20:18:111:518:558:12:g_d0_f2:12:g_d0_f2:Figure 7 shows, for each treatment, the fraction of binary trades consistent with
+33:958:64264:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:Pivot trades (in dark blue), weak payoff increases for both traders (light blue), and
+33:959:64349:18:179:93:359:522:12:g_d0_f2:8:g_d0_f3:score increases, again for both traders (in orange).40
+33:960:64403:179:21:237:371:343:12:g_d0_f2:12:g_d0_f2:Figure 7:  Types of Trades
+33:961:64429:21:18:111:518:322:12:g_d0_f2:12:g_d0_f2:By construction, Pivot trades are a subset of both of the other two categories,
+33:962:64508:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:and  thus  must  explain  a  lower  fraction  of  observed  trades.   What  is  surprising  is
+33:963:64602:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:how much smaller.  The figure shows that Pivot trades are of the order of one third
+33:964:64685:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:of all weakly-payoff-improving trades in treatmentsAandABC2, and about two
+33:965:64759:18:21:93:485:250:12:g_d0_f2:12:g_d0_f2:fifths in treatmentABC1.  Similar numbers apply to score-improving trades.
+33:966:64833:21:18:111:518:229:12:g_d0_f2:12:g_d0_f2:The frequency of different types of trades is informative, but what we need to
+33:967:64911:18:18:93:518:211:12:g_d0_f2:12:g_d0_f2:understand  is  the  intentionality  of  such  trades.   As  we  remarked  about  Figure  6,
+33:968:65003:18:18:93:518:193:12:g_d0_f2:12:g_d0_f2:Pivot  trades  are  not  very  frequent,  but  they  appear  intentional:  they  cannot  be
+33:969:65094:18:20:93:438:175:12:g_d0_f2:12:g_d0_f2:explained by random trading.  Is that true of other types of trades?
+33:970:65162:20:18:111:518:155:12:g_d0_f2:12:g_d0_f2:Figure  8  plots,  for  the  representative  case  of  theABtreatment,  the  observed
+33:971:65247:18:18:93:518:137:12:g_d0_f2:12:g_d0_f2:fractions of Pivot trades, zero-payoff change trades, and score-increasing-not-Pivot
+33:972:65331:18:18:93:518:119:12:g_d0_f2:12:g_d0_f2:trades, together with the corresponding fractions under random trading and the 95
+33:973:65412:18:0:103:394:101:7:g_d0_f4:10:g_d0_f5:40The experimental matrices do not allow for weak score increases.
+34:974:65480:0:246:93:464:686:12:g_d0_f2:12:g_d0_f2:percent confidence interval under the null hypothesis of random trading.
+34:975:65552:246:59:198:411:440:12:g_d0_f2:12:g_d0_f2:Figure 8: AB trades by type v/s random.
+34:976:65584:59:18:111:518:381:12:g_d0_f2:12:g_d0_f2:The figure makes clear that although the fraction of zero-payoff changing trades
+34:977:65664:18:18:93:518:363:12:g_d0_f2:12:g_d0_f2:is large, we cannot rule out that it is the result of noisy trading:  because all non-
+34:978:65750:18:18:93:518:345:12:g_d0_f2:12:g_d0_f2:pivotal trades have zero effect on payoffs, for any given vote distribution a large share
+34:979:65839:18:18:93:518:327:12:g_d0_f2:12:g_d0_f2:of feasible trades belongs to this class and thus is chosen under random trading.  The
+34:980:65925:18:18:93:518:309:12:g_d0_f2:12:g_d0_f2:figure does show, however, that this is not true for non-Pivot-score-increasing trades:
+34:981:66012:18:18:93:518:291:12:g_d0_f2:12:g_d0_f2:the fraction observed in the data in significantly higher than under random trading
+34:982:66095:18:21:93:159:273:12:g_d0_f2:12:g_d0_f2:(p <0.0001).
+34:983:66107:21:37:111:518:252:12:g_d0_f2:12:g_d0_f2:Wecan make these observations more precise through a simple statistical model.
+34:984:66185:37:29:93:288:215:12:g_d0_f1:12:g_d0_f1:4.4.3    A simple statistical model
+34:985:66220:29:18:93:518:186:12:g_d0_f2:12:g_d0_f2:The model does not aim at explaining behavior but at classifying the types of trades,
+34:986:66305:18:18:93:518:168:12:g_d0_f2:12:g_d0_f2:lending some rigor to the comments suggested by the figures.  In line with the data
+34:987:66388:18:18:93:518:150:12:g_d0_f2:12:g_d0_f2:just reported, we suppose that executed trades are selected according to four myopic
+34:988:66472:18:17:93:518:132:12:g_d0_f2:12:g_d0_f2:criteria, synthetic summaries of the rules followed by the pairs of traders:  (1) Pivot
+34:989:66559:17:18:93:518:115:12:g_d0_f2:12:g_d0_f2:trades; (2) zero-payoff changing trades; (3) score-improving trades; (4) some other
+34:990:66642:18:0:93:518:97:12:g_d0_f2:12:g_d0_f2:criterion  we  ignore,  and  such  that  the  trade  appears  to  us  fully  random.   When
+35:991:66735:0:15:199:414:688:12:g_d0_f7:12:g_d0_f2:ABABC1ABC2
+35:992:66745:15:14:154:457:673:12:g_d0_f7:10:g_d0_f5:probP0.06[0, 0.14]0.19[0.13, 0.25]0.11[0.05, 0.17]
+35:993:66795:14:15:154:444:659:12:g_d0_f7:10:g_d0_f5:prob00.11[0, 0.23]0.07[0, 0.16]0[0, 0.10]
+35:994:66836:15:14:154:457:644:12:g_d0_f7:10:g_d0_f5:probS0.41[0.28, 0.55]0.34[0.25, 0.43]0.39[0.29, 0.49]
+35:995:66889:14:37:154:457:630:12:g_d0_f7:10:g_d0_f5:probR0.42[0.27, 0.57]0.40[0.29, 0.52]0.50[0.35, 0.59]
+35:996:66942:37:37:135:476:593:12:g_d0_f2:12:g_d0_f6:Table 7:Model parameter estimates with 95% confidence intervals.
+35:997:67006:37:17:93:518:556:12:g_d0_f2:12:g_d0_f2:executing a trade, each pair of traders follows one of these rules.  Each trade can
+35:998:67089:17:18:93:517:539:12:g_d0_f2:12:g_d0_f7:then  be  written  in  terms  of  the  probability  of  following  the  four  criteria:probP
+35:999:67181:18:18:93:518:521:12:g_d0_f2:12:g_d0_f2:for Pivot trading;prob0 for zero-payoff changing trades,probSfor score improving
+35:1000:67261:18:18:93:517:503:12:g_d0_f2:12:g_d0_f2:trades, andprobRfor random trades.  CallTtthe set of all trades feasible att, where
+35:1001:67344:18:18:93:518:485:12:g_d0_f2:12:g_d0_f2:a trade is defined by a pair of traders, a pair of proposals, and the direction of trade.
+35:1002:67433:18:18:93:518:467:12:g_d0_f2:12:g_d0_f2:Similarly, callTPtthe set of all feasible Pivot trades,T0tthe set of all feasible zero-
+35:1003:67520:18:18:93:518:449:12:g_d0_f2:12:g_d0_f2:payoff trades, andTStthe set of all feasible score-improving trades.  Suppose that
+35:1004:67602:18:18:93:518:431:12:g_d0_f2:12:g_d0_f2:we  observe  a  Pivot  trade.   The  probability  of  such  a  trade  equalsprobP/|TPt|+
+35:1005:67690:18:18:93:517:413:12:g_d0_f7:12:g_d0_f2:probS/|TSt|+probR/|Tt|.   Similarly,  the  probability  of  a  score-improving  but  not
+35:1006:67778:18:18:93:518:395:12:g_d0_f2:12:g_d0_f2:Pivot trade is given byprobS/|TSt|+probR/|Tt|.  Assuming that different trades are
+35:1007:67860:18:18:93:518:377:12:g_d0_f2:12:g_d0_f2:independent, the likelihood of observing the data set is simply the product of the
+35:1008:67942:18:18:93:518:359:12:g_d0_f2:12:g_d0_f2:probabilities  of  each  trade.The  probabilitiesprobP,prob0,probS,  andprobRcan
+35:1009:68022:18:18:93:518:341:12:g_d0_f2:12:g_d0_f2:then be estimated immediately through maximum likelihood.  The only challenge is
+35:1010:68102:18:18:93:518:323:12:g_d0_f2:12:g_d0_f2:that the sets of feasible trades,Tt,TPt,T0t, andTSt,  all evolve over time, as budget
+35:1011:68187:18:17:93:518:305:12:g_d0_f2:12:g_d0_f2:constraints  become  binding,  and  the  changes  in  vote  allocations  alter  the  payoff
+35:1012:68278:17:21:93:267:288:12:g_d0_f2:12:g_d0_f2:effects of different vote exchanges.
+35:1013:68314:21:18:111:518:267:12:g_d0_f2:12:g_d0_f2:We  report  our  estimates  in  Table  7,  together  with  the  95  percent  confidence
+35:1014:68401:18:21:93:148:249:12:g_d0_f2:8:g_d0_f3:intervals.41
+35:1015:68413:21:18:111:518:228:12:g_d0_f2:12:g_d0_f2:According to our statistical model, trade is very noisy and, as Figure 8 lead us
+35:1016:68493:18:18:93:518:210:12:g_d0_f2:12:g_d0_f2:to expect, there is no evidence of intentional zero-profit trades in any of the three
+35:1017:68578:18:18:93:518:192:12:g_d0_f2:12:g_d0_f2:treatments (in all treatments the 95 percent confidence interval forprob0 includes 0).
+35:1018:68664:18:18:93:518:174:12:g_d0_f2:12:g_d0_f2:There is however a significant probability of Pivot trades in treatmentsABC1 and
+35:1019:68744:18:18:93:518:156:12:g_d0_f7:12:g_d0_f2:ABC2, and of score-improving trades in all three treatments.  Again as implied by
+35:1020:68825:18:17:93:518:138:12:g_d0_f2:12:g_d0_f2:the figures,probPandprobSare not fully collinear and can be estimated separately.
+35:1021:68906:17:16:103:518:121:7:g_d0_f4:10:g_d0_f5:41We constructed the confidence intervals by bootstrapping the data and estimating the model’s
+35:1022:69000:16:12:93:518:105:10:g_d0_f5:10:g_d0_f5:parameters 1000 times.  The changing sets of different types of trades make the procedure compu-
+35:1023:69096:12:0:93:188:93:10:g_d0_f5:10:g_d0_f5:tationally demanding.
+36:1024:69119:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:Score-improvement is a less powerful hypothesis than Pivot trading but explains a
+36:1025:69200:18:37:93:229:668:12:g_d0_f2:12:g_d0_f2:larger fraction of the data.
+36:1026:69228:37:29:93:270:631:12:g_d0_f1:12:g_d0_f1:4.4.4    Score-improving trades
+36:1027:69259:29:18:93:518:602:12:g_d0_f2:12:g_d0_f2:Observing that a rising score can explain a substantial fraction of the experimental
+36:1028:69343:18:18:93:518:584:12:g_d0_f2:12:g_d0_f2:trades does not imply that the increase in score is the final objective pursued by our
+36:1029:69429:18:18:93:518:566:12:g_d0_f2:12:g_d0_f2:subjects.  A first reason to be skeptical is the frequency of rejected trades reported
+36:1030:69515:18:18:93:518:548:12:g_d0_f2:12:g_d0_f2:in Section 4.1.  Recall that about a third of all accepted bids are rejected by the
+36:1031:69598:18:18:93:518:530:12:g_d0_f2:12:g_d0_f2:bidder.  Contrary to payoff changes, score increases do not depend on the identity
+36:1032:69680:18:18:93:518:512:12:g_d0_f2:12:g_d0_f2:of the trading partner:  if score increases were the goal of the trades, they could be
+36:1033:69766:18:20:93:481:494:12:g_d0_f2:8:g_d0_f3:secured by the bidder and there would be no reason to reject any partner.42
+36:1034:69841:20:18:111:518:474:12:g_d0_f2:12:g_d0_f2:A second cause for doubt comes from investigating whether subjects have indeed
+36:1035:69919:18:18:93:518:456:12:g_d0_f2:12:g_d0_f2:exploited all opportunities for score increases when trade comes to an end.  We have
+36:1036:70003:18:18:93:518:438:12:g_d0_f2:12:g_d0_f2:defined  stability  as  the  absence  of  any  feasible  pairwise  strictly  payoff-improving
+36:1037:70096:18:18:93:517:420:12:g_d0_f2:12:g_d0_f2:trade.  We can construct the similar concept ofscore stability, defined as the absence
+36:1038:70182:18:18:93:518:402:12:g_d0_f2:12:g_d0_f2:of any feasible pairwise score-improving trade, and enquire whether score stability
+36:1039:70265:18:18:93:518:384:12:g_d0_f2:12:g_d0_f2:is a useful characterization of final vote allocations.43Figure 9 plots the CDF’s of
+36:1040:70349:18:18:93:518:366:12:g_d0_f2:12:g_d0_f2:minimal steps from score stability in the three treatments (in orange), together with
+36:1041:70434:18:156:93:372:348:12:g_d0_f2:12:g_d0_f2:the CDF of minimal steps to payoff stability (in blue).
+36:1042:70489:156:39:197:413:192:12:g_d0_f2:12:g_d0_f2:Figure 9:  CDF’s score and payoff stability
+36:1043:70532:39:18:111:518:153:12:g_d0_f2:12:g_d0_f2:Score stability is a much weaker explanation of final vote allocations than payoff
+36:1044:70614:18:16:103:518:135:7:g_d0_f4:10:g_d0_f5:42In fact, in all treatments more than two thirds of the trades rejected by the bidder would have
+36:1045:70711:16:8:93:261:119:10:g_d0_f5:10:g_d0_f5:caused the bidder an increase in score.
+36:1046:70750:8:16:103:518:111:7:g_d0_f4:10:g_d0_f5:43Note  that  a  score-stable  allocation  always  exists  in  pair-wise  trading  (by  the  proof  of  the
+36:1047:70857:16:0:93:138:95:10:g_d0_f5:10:g_d0_f5:Theorem).
+37:1048:70868:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:stability:  the fraction of score-stable final vote allocations is 34 percent inAB, 14
+37:1049:70954:18:18:93:517:668:12:g_d0_f2:12:g_d0_f2:percent inABC1, and 6 percent inABC2; the corresponding numbers for payoff-
+37:1050:71029:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:stability are 76 percent, 64 percent, and again 64 percent.  Not only does the orange
+37:1051:71114:18:21:93:464:632:12:g_d0_f2:12:g_d0_f2:CDF FOSD’s the blue CDF (inABandABC1), but the gaps are large.
+37:1052:71176:21:18:111:518:611:12:g_d0_f2:12:g_d0_f2:Our conclusion then is that subjects do engage in score-improving trades, even
+37:1053:71254:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:when  such  score  improvements  are  not  accompanied  by  myopic  increases  in  pay-
+37:1054:71341:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:offs.  But they recognize payoff-stable vote allocations and tend to stop trading at
+37:1055:71425:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:that  point.   Subjects  do  not  pursue  score  improvements  for  their  own  sake,  and
+37:1056:71515:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:stop trading long before achieving maximal score improvements.  Thus non-Pivot
+37:1057:71593:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:score-improving trades are unlikely to reflect primarily confusion about pivotality
+37:1058:71676:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:or  payoffs,  and  more  likely  to  result  from  some  cautionary  behavior  in  front  of
+37:1059:71768:18:42:93:258:486:12:g_d0_f2:12:g_d0_f2:uncertainty about future trades.
+37:1060:71800:42:28:93:200:444:14:g_d0_f1:14:g_d0_f1:4.5    Outcomes
+37:1061:71815:28:18:93:518:416:12:g_d0_f2:12:g_d0_f2:Which outcomes did the experimental subjects reach?  Figure 10 plots the frequency
+37:1062:71897:18:18:93:518:398:12:g_d0_f2:12:g_d0_f2:of different outcomes observed over the full data (light blue), or restricting attention
+37:1063:71985:18:254:93:279:380:12:g_d0_f2:12:g_d0_f2:to stable outcomes only (dark blue).
+37:1064:72021:254:33:122:489:126:12:g_d0_f2:12:g_d0_f2:Figure 10:  Frequency of outcomes.  All data and stable allocations only.
+37:1065:72094:33:0:111:518:93:12:g_d0_f2:12:g_d0_f2:Outcomes are ordered from lowest to highest aggregate payoff (thus the order is
+38:1066:72175:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:different inABC1 andABC2).  A star indicates the Condorcet winner, and a dot
+38:1067:72251:18:21:93:225:668:12:g_d0_f2:12:g_d0_f2:the Pivot stable outcome.
+38:1068:72276:21:18:111:518:647:12:g_d0_f2:12:g_d0_f2:The figure shows two immediate regularities.  First, in all treatments, the Con-
+38:1069:72356:18:18:93:518:629:12:g_d0_f2:12:g_d0_f2:dorcet winner is the most frequent outcome, whether we consider all outcomes, or
+38:1070:72436:18:18:93:518:611:12:g_d0_f2:12:g_d0_f2:stable outcomes only.  Second, in all treatments, the frequency of outcomes corre-
+38:1071:72518:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:lates positively and significantly with aggregate payoffs.  However, because both the
+38:1072:72603:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:Condorcet winner and aggregate payoffs also correlate perfectly with persistence of
+38:1073:72686:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:pre-trade outcomes44, both results may reflect the inertia built into the market by
+38:1074:72769:18:21:93:244:540:12:g_d0_f2:12:g_d0_f2:the frequent zero-gain trades.
+38:1075:72799:21:18:111:518:519:12:g_d0_f2:12:g_d0_f2:In terms of Pivot predictions, we see a higher frequency of the Condorcet winner,
+38:1076:72880:18:18:93:518:501:12:g_d0_f2:12:g_d0_f2:relative to the second most frequent outcome, in treatmentsABandABC2, where
+38:1077:72955:18:18:93:518:483:12:g_d0_f2:12:g_d0_f2:the Condorcet winner is Pivot-stable.  And among stable outcomes we see a small
+38:1078:73034:18:18:93:518:465:12:g_d0_f2:12:g_d0_f2:spike in the frequency of outcome{A,B,C}in treatmentABC1 where it is Pivot-
+38:1079:73109:18:18:93:518:447:12:g_d0_f2:12:g_d0_f2:stable, relatively to the outcome’s low payoff-rank.  On the whole, however, the clean
+38:1080:73195:18:18:93:518:429:12:g_d0_f2:12:g_d0_f2:predictions  on  outcomes  derived  from  the  Pivot  algorithm  are  not  evident  in  the
+38:1081:73286:18:18:93:518:411:12:g_d0_f2:12:g_d0_f2:data.  Contrary to a goods market, the outcomes of vote-trading are very sensitive
+38:1082:73368:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:to  deviations–one  subject’s  missed  trading  opportunity  affects  the  final  result  of
+38:1083:73460:17:18:93:518:376:12:g_d0_f2:12:g_d0_f2:voting for all.  As shown by Figure 11, the outcomes we observe are qualitatively in
+38:1084:73544:18:21:93:462:358:12:g_d0_f2:12:g_d0_f2:line with the trades’ characteristics highlighted by the statistical model.
+38:1085:73619:21:18:111:518:337:12:g_d0_f2:12:g_d0_f2:The figure reports the frequency of different outcomes in the data (considering
+38:1086:73698:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:here all final vote allocations, whether stable or unstable) and, in columns denoted
+38:1087:73782:18:18:93:518:301:12:g_d0_f2:12:g_d0_f2:by diagonal stripes, in 5,000 trading simulations in which, given the vote allocation,
+38:1088:73868:18:18:93:518:283:12:g_d0_f2:12:g_d0_f2:a trade is selected randomly, following the estimated probabilities in Table 7.  As
+38:1089:73951:18:18:93:518:265:12:g_d0_f2:12:g_d0_f2:in  all  simulations  in  the  paper,  at  each  time  interval  the  probability  of  a  trade
+38:1090:74046:18:18:93:518:247:12:g_d0_f2:12:g_d0_f2:occuring is calculated so as to replicate, on average, the observed number of trades
+38:1091:74130:18:18:93:518:229:12:g_d0_f2:12:g_d0_f2:in the treatment.  The model simulations match the ordinal ranks of the different
+38:1092:74211:18:18:93:518:211:12:g_d0_f2:12:g_d0_f2:outcomes’ frequencies, although they consistently overestimate the frequency of the
+38:1093:74294:18:18:93:518:193:12:g_d0_f2:12:g_d0_f2:Condorcet winner. Such overestimation, however, is mostly mechanical: the result of
+38:1094:74377:18:17:93:518:175:12:g_d0_f2:12:g_d0_f2:the relatively high probability of random trades, and the likelihood that such random
+38:1095:74462:17:18:93:518:158:12:g_d0_f2:12:g_d0_f2:trades  leave  outcomes  unchanged.   Because  zero-gain  trades  result  in  non-Pivotal
+38:1096:74551:18:18:93:518:140:12:g_d0_f2:12:g_d0_f2:vote allocations, they make Pivot-trades impossible, and thus bias the simulations
+38:1097:74633:18:16:103:518:122:7:g_d0_f4:10:g_d0_f5:44In our matrices, the fewer the changes in the resolution of the different issues, the higher the
+38:1098:74731:16:0:93:167:106:10:g_d0_f5:10:g_d0_f5:aggregate payoff.
+39:1099:74750:0:33:222:385:458:12:g_d0_f2:12:g_d0_f2:Figure 11: Simulated Outcomes
+39:1100:74776:33:35:94:377:425:12:g_d0_f2:12:g_d0_f2:towards pre-trade outcomes and the Condorcet winner.
+39:1101:74828:35:33:93:222:390:17:g_d0_f1:17:g_d0_f1:5    Conclusions
+39:1102:74844:33:18:93:518:357:12:g_d0_f2:12:g_d0_f2:The aim of this paper is to develop a theoretical framework for studying vote trad-
+39:1103:74927:18:18:93:518:339:12:g_d0_f2:12:g_d0_f2:ing  in  committees  and  to  use  the  framework  to  help  us  understand  data  from  a
+39:1104:75017:18:18:93:518:321:12:g_d0_f2:12:g_d0_f2:vote trading  laboratory experiment.  The  theoretical framework has  two  essential
+39:1105:75101:18:18:93:518:303:12:g_d0_f2:12:g_d0_f2:features: (1) a notion of stability; and (2) a class of rational vote trading algorithms.
+39:1106:75190:18:18:93:518:285:12:g_d0_f2:12:g_d0_f2:With respect to (1), we define as stable those vote allocations for which there are
+39:1107:75273:18:18:93:518:267:12:g_d0_f2:12:g_d0_f2:no strict payoff-improving vote trades between any two voters.  We then extend this
+39:1108:75356:18:18:93:518:249:12:g_d0_f2:12:g_d0_f2:definition to allow for coalitional trades.  With respect to (2),  we describe a fam-
+39:1109:75441:18:17:93:518:231:12:g_d0_f2:12:g_d0_f2:ily of algorithms called Pivot Algorithms, which define sequences of rational trades
+39:1110:75525:17:18:93:518:214:12:g_d0_f2:12:g_d0_f2:between pairs, or coalitions, of voters.  We show that if trades are limited to pairs
+39:1111:75610:18:18:93:518:196:12:g_d0_f2:12:g_d0_f2:of voters, Pivot Algorithms always converge to a stable vote allocations.  The result
+39:1112:75695:18:18:93:518:178:12:g_d0_f2:12:g_d0_f2:however  breaks  down  for  coalitional  trades.   We  show  that  the  outcomes  reached
+39:1113:75784:18:18:93:518:160:12:g_d0_f2:12:g_d0_f2:through the algorithms have desirable welfare properties in special cases (when only
+39:1114:75868:18:18:93:518:142:12:g_d0_f2:12:g_d0_f2:two proposals are on the table, or when the committee consists of three voters and
+39:1115:75950:18:21:93:433:124:12:g_d0_f2:12:g_d0_f2:the Condorcet winner exists) but need not be desirable in general.
+39:1116:76016:21:0:111:518:103:12:g_d0_f2:12:g_d0_f2:The experiment delivered three main findings.  First, our notion of stability helps
+40:1117:76101:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:in explaining the experimental data.  Overall, two-thirds of the final vote allocations
+40:1118:76188:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:in the experiment are stable, and more than eighty percent are at most one trade
+40:1119:76268:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:away  from  stability.   Second,  although  final  vote  allocations  are  in  line  with  the
+40:1120:76362:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:theory,  final outcomes show a clear bias towards the pre-trade outcome.  In vote-
+40:1121:76444:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:trading  environments,  individual  deviations  from  predicted  trades  can  have  large
+40:1122:76533:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:impacts. In particular, trades that cumulate votes on the side that is already winning
+40:1123:76619:18:18:93:518:578:12:g_d0_f2:12:g_d0_f2:make pivotal trades impossible and consolidate the pre-trade outcome.  Finally, an
+40:1124:76701:18:17:93:518:560:12:g_d0_f2:12:g_d0_f2:analysis of trade-by-trade data lends weak support to the pivot algorithm itself.  We
+40:1125:76786:17:18:93:518:543:12:g_d0_f2:12:g_d0_f2:classify trades though a simple statistical model and find that score-improving trades
+40:1126:76872:18:18:93:518:525:12:g_d0_f2:12:g_d0_f2:are more prevalent in the data than strict payoff-improving trades.  Score-improving
+40:1127:76956:18:18:93:518:507:12:g_d0_f2:12:g_d0_f2:trades are vote exchanges in which each voter trades a vote on a less important issue
+40:1128:77041:18:18:93:518:489:12:g_d0_f2:12:g_d0_f2:in exchange for a vote on a more important issue, without necessarily benefiting from
+40:1129:77126:18:18:93:518:471:12:g_d0_f2:12:g_d0_f2:the trade (either because the outcome does not change, or because the directions of
+40:1130:77209:18:18:93:518:453:12:g_d0_f2:12:g_d0_f2:preferences are such that one voter suffers a loss).  Because such trades co-exist with
+40:1131:77296:18:18:93:518:435:12:g_d0_f2:12:g_d0_f2:the subjects’ ability to recognize stable vote allocations–i.e.  to stop trading in the
+40:1132:77383:18:18:93:518:417:12:g_d0_f2:12:g_d0_f2:absence of further opportunities for payoff increases, we conjecture that they may
+40:1133:77465:18:18:93:518:399:12:g_d0_f2:12:g_d0_f2:be precautionary more than irrational.  It is an intriguing conclusion, suggesting the
+40:1134:77551:18:18:93:518:381:12:g_d0_f2:12:g_d0_f2:possibility of farsighted behavior by the experimental subjects, in a very complex
+40:1135:77633:18:48:93:488:363:12:g_d0_f2:12:g_d0_f2:environment.  We leave the discussion of such a possibility to future research.
+40:1136:77712:48:32:93:184:315:17:g_d0_f1:17:g_d0_f1:References
+40:1137:77722:32:18:99:518:283:12:g_d0_f2:12:g_d0_f6:[1]  Bernholz, P. 1973, ”Logrolling, Arrow Paradox and Cyclical Majorities”,Public
+40:1138:77804:18:28:117:208:265:12:g_d0_f6:12:g_d0_f2:Choice, 15, 87-96.
+40:1139:77822:28:18:99:518:237:12:g_d0_f2:12:g_d0_f2:[2]  Diamantoudi, E., E. Miyagawa, and L. Xue, 2004, ”Random Paths to Stability
+40:1140:77901:18:28:117:485:219:12:g_d0_f2:12:g_d0_f2:in the Roommate Problem”,Games and Economic Behavior, 48, 18-28.
+40:1141:77965:28:18:99:518:191:12:g_d0_f2:12:g_d0_f2:[3]  Echenique  F.  and  L.  Yariv,  2012,  ”An  Experimental  Study  of  Decentralized
+40:1142:78052:18:28:117:261:173:12:g_d0_f2:12:g_d0_f2:Matching”, mimeo, Caltech.
+40:1143:78078:28:18:99:518:145:12:g_d0_f2:12:g_d0_f2:[4]  Ferejohn, J, 1974, ”Sour notes on the theory of vote trading”, Caltech, Social
+40:1144:78161:18:0:117:272:127:12:g_d0_f2:12:g_d0_f2:Science Working Paper No.41.
+41:1145:78191:0:18:99:518:686:12:g_d0_f2:12:g_d0_f2:[5]  Fischbacher U. and S. Schudy, 2014, ”Reciprocity and Resistance to Compre-
+41:1146:78270:18:28:117:346:668:12:g_d0_f2:12:g_d0_f2:hensive Reform”,Public Choice160:411-428.
+41:1147:78311:28:18:99:518:640:12:g_d0_f2:12:g_d0_f2:[6]  Gale D. and L. Shapley, 1962, ”College Admissions and the Stability of Mar-
+41:1148:78391:18:28:117:368:622:12:g_d0_f2:12:g_d0_f2:riage,American Mathematical Monthly, 69, 9-15.
+41:1149:78437:28:18:99:517:594:12:g_d0_f2:12:g_d0_f2:[7]  Gusfield,  D.  and  R.  Irving,  1989,The  Stable  Marriage  Problem,  Cambridge,
+41:1150:78523:18:28:117:200:576:12:g_d0_f2:12:g_d0_f2:Ma:  MIT Press.
+41:1151:78538:28:17:99:518:548:12:g_d0_f2:12:g_d0_f2:[8]  Jackson, M. and A. Watts, 2002, The Evolution of Social And Economic Net-
+41:1152:78616:17:28:117:390:531:12:g_d0_f2:12:g_d0_f2:works,Journal of Economic Theory, 106(2):  265-295.
+41:1153:78667:28:18:99:518:503:12:g_d0_f2:12:g_d0_f2:[9]  Jackson, M. and A. Wolinsky, 1996, A Strategic Model of Social and Economic
+41:1154:78747:18:28:117:389:485:12:g_d0_f2:12:g_d0_f2:Networks,Journal of Economic Theory, 71(1):  44E4.
+41:1155:78797:28:28:93:518:457:12:g_d0_f2:12:g_d0_f2:[10]  Kadane, J., 1972, ”On the Division of the Question”,Public Choice,13, 47-54.
+41:1156:78879:28:18:93:518:429:12:g_d0_f2:12:g_d0_f2:[11]  Kagel,  J.  and  A.  Roth,  2000,  ”The  Dynamics  of  Reorganization  in  Match-
+41:1157:78966:18:18:117:518:411:12:g_d0_f2:12:g_d0_f2:ing Markets:  A Laboratory Experiment Motivated by a Natural Experiment”,
+41:1158:79039:18:28:117:356:393:12:g_d0_f6:12:g_d0_f2:Quarterly Journal of Economics,115, 201-235.
+41:1159:79083:28:18:93:518:365:12:g_d0_f2:12:g_d0_f2:[12]  Koehler,  1975,  ”Vote  Trading  and  the  Voting  Paradox:   A  Proof  of  Logical
+41:1160:79172:18:28:117:436:347:12:g_d0_f2:12:g_d0_f2:Equivalence”,American Political Science Review,69, 954-960.
+41:1161:79231:28:18:93:518:319:12:g_d0_f2:12:g_d0_f2:[13]  Ledyard, J.O., D. Porter, and A. Rangel, 1994, ”Using Computerized Exchange
+41:1162:79312:18:17:117:518:301:12:g_d0_f2:12:g_d0_f6:Systems to Solve an Allocation Problem in Project Management”,Journal  of
+41:1163:79385:17:28:117:310:284:12:g_d0_f6:12:g_d0_f2:Organizational Computing,4, 271-296.
+41:1164:79421:28:18:93:518:256:12:g_d0_f2:12:g_d0_f2:[14]  McKelvey, R. and P. Ordeshook, 1980, ”Vote trading: An experimental study”,
+41:1165:79502:18:28:117:255:238:12:g_d0_f6:12:g_d0_f2:Public Choice, 35, 151-184.
+41:1166:79529:28:18:93:518:210:12:g_d0_f2:12:g_d0_f2:[15]  Miller,  N.,  1977a,  ”Graph-Theoretical Approaches to the Theory of Voting”,
+41:1167:79612:18:28:117:360:192:12:g_d0_f6:12:g_d0_f2:American Journal of Political Science, 769-803.
+41:1168:79659:28:18:93:518:164:12:g_d0_f2:12:g_d0_f2:[16]  Miller,  N.,  1977b,  ”Logrolling,  Vote  Trading  and  the  Paradox  of  Voting:  A
+41:1169:79749:18:28:117:400:146:12:g_d0_f2:12:g_d0_f2:Game Theoretical Overview”,Public Choice, 30, 51-75.
+41:1170:79801:28:18:93:518:118:12:g_d0_f2:12:g_d0_f2:[17]  Mueller, D., 1967, ”The Possibility of a Social Welfare Function. Comment”,
+41:1171:79882:18:0:117:340:100:12:g_d0_f6:12:g_d0_f2:American Economic Review, 57, 1304-1311.
+42:1172:79924:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:[18]  Nalbantian, H. and A. Schotter, 1995, ”Matching and Efficiency in the Base-
+42:1173:80005:18:18:117:518:668:12:g_d0_f2:12:g_d0_f6:ball  Free-Agent  System:   An  Experimental  Examination”,Journal  of  Labor
+42:1174:80082:18:28:117:223:650:12:g_d0_f6:12:g_d0_f2:Economics, 13, 1-31.
+42:1175:80102:28:18:93:518:622:12:g_d0_f2:12:g_d0_f2:[19]  Niederle, M. and L.Yariv, 2011, ”Decentralized Matching with Aligned Prefer-
+42:1176:80184:18:28:117:222:604:12:g_d0_f2:12:g_d0_f2:ences”, unpublished.
+42:1177:80204:28:18:93:518:576:12:g_d0_f2:12:g_d0_f2:[20]  Pais,J., A. Pinter and R Veszteg, 2011, ”Decentralized Matching Markets:  A
+42:1178:80285:18:27:117:485:558:12:g_d0_f2:12:g_d0_f2:Laboratory Experiment”, mimeo, ISEG/Technical University of Lisbon.
+42:1179:80352:27:18:93:518:531:12:g_d0_f2:12:g_d0_f2:[21]  Park,  R.E.,  1967,  ”The  Possibility  of  a  Social  Welfare  Function.  Comment”,
+42:1180:80442:18:28:117:340:513:12:g_d0_f6:12:g_d0_f2:American Economic Review, 57, 1300-1304.
+42:1181:80482:28:18:93:518:485:12:g_d0_f2:12:g_d0_f6:[22]  Riker,  W.  and  S.  Brams,  1973,  ”The  Paradox  of  Vote  Trading”,American
+42:1182:80566:18:28:117:320:467:12:g_d0_f6:12:g_d0_f2:Political Science Review, 67, 1235-1247.
+42:1183:80606:28:18:93:518:439:12:g_d0_f2:12:g_d0_f6:[23]  Roth,  A.  and  M. Sotomayor,  1990,Two-Sided  Matching:  A  Study  in  Game-
+42:1184:80689:18:18:117:518:421:12:g_d0_f6:12:g_d0_f2:Theoretic  Modelling  and  Analysis,  Cambridge,  UK:  Cambridge  University
+42:1185:80765:18:28:117:147:403:12:g_d0_f2:12:g_d0_f2:Press.
+42:1186:80771:28:18:93:518:375:12:g_d0_f2:12:g_d0_f2:[24]  Roth A. and J. Vande Vate, 1990, ”Random Paths to Stability in Two-Sided
+42:1187:80849:18:28:117:314:357:12:g_d0_f2:12:g_d0_f2:Matching,Econometrica,58,1475-1480.
+42:1188:80884:28:18:93:518:329:12:g_d0_f2:12:g_d0_f2:[25]  Sasaki, H. and M. Toda, 1996, ”Two-Sided Matching Problems with External-
+42:1189:80963:18:27:117:360:311:12:g_d0_f2:12:g_d0_f2:ities”,Journal of Economic Theory, 70, 93-108.
+42:1190:81009:27:18:93:518:284:12:g_d0_f2:12:g_d0_f2:[26]  Schwartz, T., 1975, ”Vote Trading and Pareto Efficiency”,Public  Choice, 24,
+42:1191:81091:18:28:117:159:266:12:g_d0_f2:12:g_d0_f2:101-110.
+42:1192:81099:28:18:93:518:238:12:g_d0_f2:12:g_d0_f2:[27]  Stratmann,  T.  ,  1992,  ”The  Effects  of  Logrolling  on  Congressional  Voting”,
+42:1193:81189:18:28:117:336:220:12:g_d0_f6:12:g_d0_f2:American Economic Review, 82,1162-1176.
+42:1194:81228:28:18:93:518:192:12:g_d0_f2:12:g_d0_f6:[28]  Wilson,  R.,  1969,  ”An  Axiomatic  Model  of  Logrolling”,American  Economic
+42:1195:81312:18:0:117:221:174:12:g_d0_f6:12:g_d0_f2:Review,59, 331-341.
+43:1196:81333:0:33:93:395:686:17:g_d0_f1:17:g_d0_f1:Appendix 1.  For online Publication
+43:1197:81368:33:18:93:518:653:12:g_d0_f1:12:g_d0_f2:Proposition  2.IfK=  2,  then,  for  allN,Z,  andR:   (1)P(VT)  is  unique.
+43:1198:81443:18:18:93:518:635:12:g_d0_f6:12:g_d0_f6:(2)P(VT)is  Pareto  optimal.  (3)  If  a  Condorcet  winner  exists,  thenP(VT)is  the
+43:1199:81529:18:17:93:518:617:12:g_d0_f6:12:g_d0_f2:Condorcet  winner.   (4)P(VT)can  never  be  the  Condorcet  loser.   (5)  IfP(VT)6=
+43:1200:81613:17:21:93:337:600:12:g_d0_f1:12:g_d0_f6:P(V0),then a majority prefersP(VT) toP(V0).
+43:1201:81656:21:18:111:518:579:12:g_d0_f1:12:g_d0_f2:Proof.(1).  At any stept, if there is a unique blocking pair, thenVt+1is deter-
+43:1202:81735:18:18:93:518:561:12:g_d0_f2:12:g_d0_f2:mined uniquely and to any unique vote allocation corresponds a unique outcome.
+43:1203:81813:18:18:93:518:543:12:g_d0_f2:12:g_d0_f2:Multiplicity can arise only if at any step there are multiple blocking pairs (possibly
+43:1204:81899:18:18:93:518:525:12:g_d0_f2:12:g_d0_f2:with some voters belonging to more than one pair).  But ifK= 2 any trade by any
+43:1205:81978:18:18:93:518:507:12:g_d0_f2:12:g_d0_f2:of the blocking pairs must induce the identical change in outcome.  Thus at any step
+43:1206:82062:18:18:93:518:489:12:g_d0_f2:12:g_d0_f2:the outcome of the vote is unique.  And since a Pivot-stable outcome exists, it must
+43:1207:82146:18:21:93:471:471:12:g_d0_f2:12:g_d0_f2:be unique.  Note that the Pivot-stable vote allocation need not be unique.
+43:1208:82220:21:17:111:518:450:12:g_d0_f2:12:g_d0_f2:(2)  WithK=  2,  there  are  four  possible  outcomes:{{∅},{1},{2},{1,2}}.
+43:1209:82294:17:18:93:518:433:12:g_d0_f2:12:g_d0_f8:Suppose,  with no loss of generality,  thatP(V0)  ={1,2}.  WithK=  2,P(VT)∈
+43:1210:82369:18:18:93:518:415:12:g_d0_f8:12:g_d0_f2:{{1,2},{∅}}.   Majority  voting  atV0implies  that  at  least  one  trader  must  rank
+43:1211:82455:18:18:93:518:397:12:g_d0_f1:12:g_d0_f2:P(V0)  strictly  above  all  other  outcomes.   But  if  trade  occurs  andV0is  blocked,
+43:1212:82544:18:18:93:518:379:12:g_d0_f2:12:g_d0_f2:there must be at least two voters who strictly prefer{∅}toP(V0).  One of those
+43:1213:82622:18:18:93:518:361:12:g_d0_f2:12:g_d0_f8:voters  must  have  preferences:{2} - {∅} - {1,2} - {1},  and  the  other{1} -
+43:1214:82700:18:18:93:518:343:12:g_d0_f8:12:g_d0_f2:{∅} - {1,2} - {2}.  Thus, ifV0is blocked, no outcome is Pareto-dominated and
+43:1215:82776:18:18:93:518:325:12:g_d0_f2:12:g_d0_f2:all are Pareto-optimal.  IfV0is not blocked,P(V0) =P(VT) by definition, and again
+43:1216:82857:18:21:93:196:307:12:g_d0_f2:12:g_d0_f2:it is Pareto-optimal.
+43:1217:82878:21:18:111:518:286:12:g_d0_f2:12:g_d0_f2:(3) Again suppose, with no loss, thatP(V0) ={1,2}.  There are four possible
+43:1218:82953:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:preference  types,  which  we  callT1,2,T∅,T1,andT2,  with  rankings  as  in  Table  8.
+43:1219:83040:18:17:93:518:250:12:g_d0_f2:12:g_d0_f2:Preferences are transitive and the outcome in any cell is preferred to the outcome(s)
+43:1220:83125:17:18:93:518:233:12:g_d0_f2:12:g_d0_f2:below it; two outcomes are in the same cell when either could be ranked above the
+43:1221:83206:18:21:93:123:215:12:g_d0_f2:12:g_d0_f2:other.
+43:1222:83212:21:18:111:518:194:12:g_d0_f2:12:g_d0_f2:Calln1,2the  number  of  voters  of  typeT1,2,  and  similarly  for  the  other  types.
+43:1223:83299:18:18:93:518:176:12:g_d0_f2:12:g_d0_f2:WithP(V0) ={1,2}, both proposals are supported by a majority of voters.  Call
+43:1224:83376:18:18:93:518:158:12:g_d0_f7:12:g_d0_f2:M1(M2) the number of voters who prefer 1 (2) to pass rather than fail.  ThenM1=
+43:1225:83455:18:18:93:518:140:12:g_d0_f7:12:g_d0_f2:n1,2+n1≥(N+ 1)/2,  andM2=n1,2+n2≥(N+ 1)/2.   We  begin  by  asking
+43:1226:83521:18:18:93:518:122:12:g_d0_f2:12:g_d0_f2:whether any of the four possible outcomes could be the Condorcet winner.  With
+43:1227:83599:18:0:93:518:104:12:g_d0_f1:12:g_d0_f2:P(V0) ={1,2},  it follows immediately that{1,2}is preferred by the majority to
+44:1228:83679:0:14:253:352:687:12:g_d0_f7:8:g_d0_f3:T1,2T∅T1T2
+44:1229:83689:14:15:253:347:673:12:g_d0_f2:12:g_d0_f2:1,2∅12
+44:1230:83695:15:15:253:350:658:12:g_d0_f2:12:g_d0_f22:22∅∅
+44:1231:83699:15:15:253:358:643:12:g_d0_f2:12:g_d0_f2:111,21,2
+44:1232:83707:15:37:253:347:628:12:g_d0_f22:12:g_d0_f2:∅1,221
+44:1233:83713:37:37:199:412:591:12:g_d0_f2:12:g_d0_f6:Table 8:K= 2, possible preference types.
+44:1234:83753:37:17:93:518:554:12:g_d0_f8:12:g_d0_f2:{P1}and to{2}–more generally the no-trade outcome must be majority preferred
+44:1235:83829:17:18:93:518:537:12:g_d0_f2:12:g_d0_f2:to any outcome that differs in the direction in which a single proposal is decided.
+44:1236:83912:18:18:93:518:519:12:g_d0_f2:12:g_d0_f2:This is Park (1967) and Kadane’s (1972) result:  if there is a Condorcet winner, it
+44:1237:83995:18:18:93:518:501:12:g_d0_f2:12:g_d0_f2:can only be the no-trade outcome.  Here that isP(V0) ={1,2}.  Suppose then that
+44:1238:84074:18:21:93:253:483:12:g_d0_f1:12:g_d0_f2:P(V0) is the Condorcet winner.
+44:1239:84104:21:18:111:517:462:12:g_d0_f2:12:g_d0_f2:If  eitherM1>(N+ 1)/2  orM2>(N+ 1)/2,  no  voter  is  pivotal,V0cannot
+44:1240:84174:18:18:93:518:444:12:g_d0_f2:12:g_d0_f2:be  blocked,  andP(VT)  trivially  equalsP(V0),  the  Condorcet  winner.   Hence  the
+44:1241:84259:18:18:93:518:426:12:g_d0_f2:12:g_d0_f2:proposition holds.  The more interesting case is whenM1=M2= (N+ 1)/2,V0is
+44:1242:84332:18:18:93:518:408:12:g_d0_f2:12:g_d0_f2:blocked, and trade takes place.  Notice that in such a case (N+ 1)/2 =n1,2+n1=
+44:1243:84410:18:18:93:518:390:12:g_d0_f7:12:g_d0_f2:n1,2+n2.  Hencen1=n2.  Call such a numberm.{1,2}(P(V0)) is the Condorcet
+44:1244:84482:18:18:93:518:372:12:g_d0_f2:12:g_d0_f2:winner if it beats{∅}but the ranking of the two outcomes by typesT1andT2is
+44:1245:84556:18:18:93:518:354:12:g_d0_f2:12:g_d0_f2:ambiguous.  CallmP P1(m∅1) the number of voters of typeT1who rank{1,2}above
+44:1246:84631:18:17:93:518:336:12:g_d0_f2:12:g_d0_f2:(below){∅}, and similarly for voters of typeT2.P(V0) ={1,2}beats{∅}if and
+44:1247:84704:17:33:93:400:319:12:g_d0_f2:12:g_d0_f2:only if (n+ 1)/2+mP P1+mP P2>(n−1)/2+m∅1+m∅2, or:
+44:1248:84753:33:0:222:313:286:12:g_d0_f2:12:g_d0_f8:1>(m∅1+m∅2)−
+44:1249:84765:0:9:316:321:295:12:g_d0_f10:12:g_d0_f10:(
+44:1250:84766:9:0:321:374:286:12:g_d0_f7:8:g_d0_f3:mP P1+mP P2
+44:1251:84777:0:9:383:388:295:12:g_d0_f10:12:g_d0_f10:)
+44:1252:84778:9:33:503:518:286:12:g_d0_f2:12:g_d0_f2:(1)
+44:1253:84781:33:0:93:218:253:12:g_d0_f2:12:g_d0_f2:Note that (m∅1+m∅2) +
+44:1254:84802:0:10:220:225:263:12:g_d0_f10:12:g_d0_f10:(
+44:1255:84803:10:0:226:278:253:12:g_d0_f7:8:g_d0_f3:mP P1+mP P2
+44:1256:84814:0:10:288:293:263:12:g_d0_f10:12:g_d0_f10:)
+44:1257:84815:10:18:298:518:253:12:g_d0_f2:12:g_d0_f2:= 2m, an even number.  But if the sum of
+44:1258:84855:18:18:93:518:235:12:g_d0_f2:12:g_d0_f8:two numbers is even, the difference of those two numbers is also even.  Hence{1,2}
+44:1259:84937:18:0:93:361:217:12:g_d0_f2:12:g_d0_f2:is the Condorcet winner if and only if (m∅1+m∅2) =
+44:1260:84987:0:10:365:370:227:12:g_d0_f10:12:g_d0_f10:(
+44:1261:84988:10:0:370:423:217:12:g_d0_f7:8:g_d0_f3:mP P1+mP P2
+44:1262:84999:0:10:432:437:227:12:g_d0_f10:12:g_d0_f10:)
+44:1263:85000:10:18:441:518:217:12:g_d0_f8:12:g_d0_f7:−2R, whereR
+44:1264:85011:18:21:93:269:199:12:g_d0_f2:12:g_d0_f2:is an integer strictly larger than 0.
+44:1265:85048:21:17:111:517:178:12:g_d0_f2:12:g_d0_f2:We now show that if{1,2}is the Condorcet winner, than it must also be the
+44:1266:85121:17:18:93:517:161:12:g_d0_f2:12:g_d0_f2:Pivot-stable outcome. Any pair of traders blockingV0must be such that one of them
+44:1267:85202:18:18:93:518:143:12:g_d0_f2:12:g_d0_f2:is counted inm∅1and one is counted inm∅2.  WithK= 2, voters can only trade votes
+44:1268:85282:18:18:93:518:125:12:g_d0_f2:12:g_d0_f8:once.  HenceV0is blocked once if min(m∅1,m∅2) = 1 and anyVtsuch thatPt={1,2}
+44:1269:85358:18:0:93:518:107:12:g_d0_f2:12:g_d0_f2:can potentially be blockedstimes if min(m∅1,m∅2) =s. Similarly, ifV0is blocked and
+45:1270:85442:0:18:93:517:686:12:g_d0_f7:8:g_d0_f9:V1is such thatP1={∅},V1will be blocked if min(mP P1,mP P2) = 1. As above, anyVt
+45:1271:85521:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:such thatPt={∅}can potentially be blockeds′times if min(mP P1,mP P2) =s′. Thus
+45:1272:85599:18:18:93:518:650:12:g_d0_f8:12:g_d0_f2:{1,2}is the Pivot-stable outcome if and only if min(mP P1,mP P2)≥min(m∅1,m∅2).
+45:1273:85677:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:Now recall that (m∅1+mP P1) = (m∅2+mP P2) since both sums must equalm.  Thus
+45:1274:85753:18:0:93:354:614:12:g_d0_f2:12:g_d0_f2:if{1,2}is the Condorcet winner and (m∅1+m∅2) =
+45:1275:85799:0:10:357:362:624:12:g_d0_f10:12:g_d0_f10:(
+45:1276:85800:10:0:363:415:614:12:g_d0_f7:8:g_d0_f3:mP P1+mP P2
+45:1277:85811:0:10:425:430:624:12:g_d0_f10:12:g_d0_f10:)
+45:1278:85812:10:18:433:518:614:12:g_d0_f8:12:g_d0_f2:−2R, it must be
+45:1279:85827:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:thatm∅1=mP P2−Randm∅2=mP P1−R.  Hence min(mP P1,mP P2) = min(m∅1,m∅2) +
+45:1280:85898:18:18:93:518:578:12:g_d0_f7:12:g_d0_f2:R, or min(mP P1,mP P2)≥min(m∅1,m∅2), and{1,2}is the Pivot-stable outcome.  Note
+45:1281:85977:18:17:93:518:560:12:g_d0_f2:12:g_d0_f2:that identifyingP(V0) with{1,2}is with no loss of generality.  The proof can be
+45:1282:86056:17:18:93:518:543:12:g_d0_f2:12:g_d0_f2:restated as follows:  the only candidate for Condorcet winner isP(V0),  and when
+45:1283:86136:18:21:93:495:525:12:g_d0_f1:12:g_d0_f2:P(V0) is the Condorcet winner, then it must also be the Pivot-stable outcome.
+45:1284:86213:21:18:111:517:504:12:g_d0_f2:12:g_d0_f2:(4) By Kadane’s ”improvement algorithm”, ifP(V0) ={1,2}, then not only is
+45:1285:86286:18:18:93:518:486:12:g_d0_f8:12:g_d0_f2:{1,2}majority preferred to{1}and to{2}, but{1}and{2}are majority preferred
+45:1286:86360:18:18:93:518:468:12:g_d0_f2:12:g_d0_f8:to{∅}.   Hence  if  there  is  a  Condorcet  loser,  it  can  only  be{∅}.   But  if{∅}
+45:1287:86447:18:18:93:517:450:12:g_d0_f2:12:g_d0_f2:is  the  Condorcet  loser,  it  means  that{1,2}is  majority  preferred  to{∅}.   Hence
+45:1288:86534:18:21:93:473:432:12:g_d0_f1:12:g_d0_f2:P(V0) ={1,2}is the Condorcet winner, and by (2) aboveP(VT) =P(V0).
+45:1289:86600:21:18:111:518:411:12:g_d0_f2:12:g_d0_f2:(5).   From  (2)  above,  ifP(V0)  is  the  Condorcet  winner,thenP(VT)  =P(V0).
+45:1290:86680:18:17:93:518:393:12:g_d0_f2:12:g_d0_f2:Thus  ifP(VT)6=P(V0),P(V0)is  not  the  Condorcet  winner.   If,  with  no  loss  of
+45:1291:86764:17:18:93:518:376:12:g_d0_f2:12:g_d0_f2:generality,P(V0)  ={1,2},  then  ifP(VT)6=P(V0),P(VT)  ={∅}.   By  Kadane’s
+45:1292:86839:18:18:93:517:358:12:g_d0_f2:12:g_d0_f2:argument,P(V0) ={1,2}is majority preferred to{1}and to{2}.  Hence ifP(V0)is
+45:1293:86914:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:not the Condorcet winner,{∅}must be majority preferred to{1,2}=P(V0).  But
+45:1294:86988:18:18:93:517:322:12:g_d0_f8:12:g_d0_f2:{∅}=P(VT).   Hence  ifP(VT)6=P(V0),P(VT)  must  be  majority  preferred  to
+45:1295:87063:18:27:93:135:304:12:g_d0_f1:12:g_d0_f19:P(V0).-
+45:1296:87070:27:18:111:518:277:12:g_d0_f1:12:g_d0_f6:Proposition 3.IfN= 3, then for allK,Z, andR:  (1) if a Condorcet winner
+45:1297:87141:18:18:93:517:259:12:g_d0_f6:12:g_d0_f6:exists,P(VT)is  unique  and  is  the  Condorcet  winner.(2)P(VT)can  never  be  the
+45:1298:87224:18:21:93:184:241:12:g_d0_f6:8:g_d0_f3:Condorcet loser.45
+45:1299:87242:21:17:111:517:220:12:g_d0_f1:12:g_d0_f2:Proof.(1).  Select anykproposals, withk= 2,..,K−1.  CallP(V0,k−) the
+45:1300:87310:17:18:93:518:203:12:g_d0_f2:12:g_d0_f2:outcome  that  would  follow  if  thekproposals  were  decided  against  the  majority
+45:1301:87396:18:18:93:518:185:12:g_d0_f2:12:g_d0_f2:preference  atV0,  and  the  remainingK−kaccording  to  the  majority  preference
+45:1302:87477:18:18:93:517:167:12:g_d0_f2:12:g_d0_f2:atV0,  i.e.  as if one vote trade was executed on thekproposals and none on the
+45:1303:87556:18:18:93:518:149:12:g_d0_f2:12:g_d0_f2:remainder.   If  the  Condorcet  winner  exists,  by  Park  and  Kadane,  it  can  only  be
+45:1304:87647:18:19:93:517:131:12:g_d0_f1:12:g_d0_f2:P(V0).   Thus  for  anyP(V0,k−)  at  least  two  of  the  three  voters  preferP(V0)  to
+45:1305:87735:19:15:103:518:112:7:g_d0_f4:10:g_d0_f5:45Result (1) replicates the result in Koehler (1975),  under slightly different assumptions.  We
+45:1306:87831:15:0:93:304:97:10:g_d0_f5:10:g_d0_f5:find however that the result is limited toN= 3.
+46:1307:87880:0:18:93:517:686:12:g_d0_f1:8:g_d0_f3:P(V0,k−).  But then no trade can take place.  If the Condorcet winner exists,V0
+46:1308:87959:18:21:93:478:668:12:g_d0_f2:12:g_d0_f2:cannot be blocked.  ThusP(VT) equalsP(V0) and is the Condorcet winner.
+46:1309:88029:21:18:111:518:647:12:g_d0_f2:12:g_d0_f2:(2) We begin by reiterating, and generalizing, an argument we used above in the
+46:1310:88108:18:26:93:209:629:12:g_d0_f2:12:g_d0_f2:proof of Proposition 2.
+46:1311:88131:26:18:111:518:603:12:g_d0_f1:12:g_d0_f6:Lemma 2.CallP−(V0)the  outcome  obtained  by  choosing  the  minority’s  pre-
+46:1312:88208:18:18:93:518:585:12:g_d0_f6:12:g_d0_f6:ferred  direction  for  each  proposal  atV0.  If  a  Condorcet  loser  exists,  it  can  only  be
+46:1313:88306:18:21:93:134:567:12:g_d0_f1:12:g_d0_f6:P−(V0).
+46:1314:88313:21:18:111:518:546:12:g_d0_f1:12:g_d0_f2:Proof  of  Lemma  2.The  Lemma  follows  from  Kadane’s  improvement  algo-
+46:1315:88388:18:18:93:518:528:12:g_d0_f2:12:g_d0_f2:rithm.   Selectkfrom  theKproposals  (k=  1,..,K−1).   Consider  the  outcome
+46:1316:88465:18:18:93:518:510:12:g_d0_f1:12:g_d0_f2:P(V0,k−)  obtained  by  deciding  thosekproposals  in  the  direction  favored  by  the
+46:1317:88552:18:18:93:518:492:12:g_d0_f2:12:g_d0_f2:minority  atV0,  and  the  remainderK−kin  the  direction  favored  by  the  major-
+46:1318:88635:18:18:93:518:474:12:g_d0_f2:12:g_d0_f2:ity.  Now consider the outcome obtained by switching one additional proposal from
+46:1319:88716:18:18:93:518:456:12:g_d0_f2:12:g_d0_f2:the majority to the minority’s preferred direction atV0:P(V0,k−,(k+ 1)−), where
+46:1320:88795:18:18:93:517:438:12:g_d0_f2:12:g_d0_f7:the  argumentk−is  maintained  to  make  clear  that  the  selection  of  the  originalk
+46:1321:88883:18:17:93:518:420:12:g_d0_f2:12:g_d0_f2:proposals has not changed.  Then, by construction,P(V0,k−) is majority preferred
+46:1322:88963:17:18:93:518:403:12:g_d0_f2:12:g_d0_f2:toP(V0,k−,(k+ 1)−).  It follows that for anyP6=P−(V0) there always exists an
+46:1323:89039:18:18:93:518:385:12:g_d0_f2:12:g_d0_f2:outcomeP′that  differs  only  by  switching  the  direction  of  one  proposal  from  the
+46:1324:89128:18:18:93:518:367:12:g_d0_f2:12:g_d0_f2:majority’s to the minority’s atV0such thatPis majority preferred toP′.  Hence if
+46:1325:89208:18:27:93:352:349:12:g_d0_f2:12:g_d0_f19:a Condorcet loser exists, it can only beP−(V0).-
+46:1326:89256:27:18:111:518:322:12:g_d0_f2:12:g_d0_f2:We can now prove (2).  By Lemma 2, if a Condorcet loser exists it can only be
+46:1327:89333:18:18:93:518:304:12:g_d0_f1:12:g_d0_f2:P−(V0).  The result follows if we can show that ifP−(V0) is Pivot-stable, it cannot
+46:1328:89416:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:be the Condorcet loser.  SupposeP−(V0) is Pivot-stable, and callV−0any allocation
+46:1329:89497:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:of votes such thatP(V−0) =P−(V0).  Given preferencesZ, consider any allocation
+46:1330:89575:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:of votesV(Z) such thatV−0can be reached fromV(Z) through a strictly pair-wise
+46:1331:89652:18:18:93:518:232:12:g_d0_f2:12:g_d0_f2:improving  trade.   SinceP−(V0)6=P(V0)  andP−(V0)  is  Pivot-stable,V(Z)  must
+46:1332:89730:18:17:93:518:214:12:g_d0_f2:12:g_d0_f2:exist.  WithN= 3, the existence of a strictly pair-wise improving trade implies that
+46:1333:89814:17:18:93:518:197:12:g_d0_f1:12:g_d0_f2:P(V−0) =P−(V0) is majority preferred toP(V(Z)).  Hence ifP−(V0) is Pivot-stable,
+46:1334:89894:18:27:93:405:179:12:g_d0_f2:12:g_d0_f19:it cannot be the Condorcet loser, and the result is proven.-
+46:1335:89954:27:18:111:518:152:12:g_d0_f1:12:g_d0_f6:Proposition 5.There existK,N,Z, andRCsuch the C-Pivot algorithm never
+46:1336:90023:18:21:93:254:134:12:g_d0_f6:12:g_d0_f6:reaches a stable vote allocation.
+46:1337:90056:21:18:111:518:113:12:g_d0_f1:12:g_d0_f2:Proof.Consider the following example, where as usual rows represent proposals,
+46:1338:90134:18:0:93:518:95:12:g_d0_f2:12:g_d0_f2:columns represent voters and the entry in each cell iszki, the value attached by voter
+47:1339:90222:0:14:242:392:687:12:g_d0_f2:12:g_d0_f2:1234567
+47:1340:90229:14:15:220:392:673:12:g_d0_f7:12:g_d0_f2:A3−2−2−2111
+47:1341:90240:15:15:220:392:658:12:g_d0_f7:12:g_d0_f2:B−23−2−2111
+47:1342:90251:15:15:220:392:643:12:g_d0_f7:12:g_d0_f2:C−2−23−2111
+47:1343:90262:15:38:220:392:628:12:g_d0_f7:12:g_d0_f2:D−2−2−23111
+47:1344:90273:38:36:184:427:590:12:g_d0_f2:12:g_d0_f6:Table 9:Profile where C-Pivot never converges.
+47:1345:90319:36:21:93:213:554:12:g_d0_f7:12:g_d0_f2:ito proposalkpassing.
+47:1346:90340:21:18:111:518:533:12:g_d0_f2:12:g_d0_f2:AtV0,  all  proposals  pass,  andui(V0)  =−3  fori={1,2,3,4}.   Consider  a
+47:1347:90415:18:18:93:518:515:12:g_d0_f2:12:g_d0_f2:coalition composed of such voters, and the following coalition trade:  voter 1 gives
+47:1348:90499:18:18:93:518:497:12:g_d0_f2:12:g_d0_f2:hisAvote to voter 2, in exchange for hisBvote; voter 3 gives hisCvote to voter
+47:1349:90577:18:17:93:518:479:12:g_d0_f2:12:g_d0_f2:4, in exchange for hisDvote.  AtV1, all proposals fail andui(V1) = 0  for alli∈C.
+47:1350:90658:17:18:93:518:462:12:g_d0_f2:12:g_d0_f2:The  trade  is  strictly  improving  for  all  members  of  the  coalition.   In  addition,  it
+47:1351:90753:18:18:93:518:444:12:g_d0_f2:12:g_d0_f2:is  a  minimal  trade,  sinceV1cannot  be  reached  by  the  coalition  by  trading  fewer
+47:1352:90843:18:18:93:518:426:12:g_d0_f2:12:g_d0_f2:votes, nor can it be reached by a smaller coalition (each of the two pair-wise trades
+47:1353:90928:18:18:93:518:408:12:g_d0_f2:12:g_d0_f2:alone is welfare decreasing for the pair involved).  But note thatV1is not C-Pivot
+47:1354:91010:18:18:93:518:390:12:g_d0_f2:12:g_d0_f2:stable:  voters 1 and 2 can blockV1by trading back their respective votes onAand
+47:1355:91090:18:18:93:518:372:12:g_d0_f7:12:g_d0_f2:B, reaching outcomeP(V2) ={A,B}, and enjoying a strictly positive increase in
+47:1356:91167:18:18:93:518:354:12:g_d0_f2:12:g_d0_f2:payoffs:uj(V2) = 1  forj={1,2}.  The same argument applies to voters 3 and 4.  At
+47:1357:91248:18:18:93:518:336:12:g_d0_f7:12:g_d0_f2:V2,us(V2) =−4  fors={3,4}, but 3 and 4 can blockV2, trade back their votes on
+47:1358:91325:18:18:93:518:318:12:g_d0_f7:12:g_d0_f2:CandD, and obtain a strict improvement in their payoff:P(V3) ={A,B,C,D},
+47:1359:91397:18:18:93:518:300:12:g_d0_f2:12:g_d0_f2:andus(V3) =−3  fors={3,4}.  Note that the sequence of trades has generated
+47:1360:91471:18:18:93:518:282:12:g_d0_f2:12:g_d0_f2:a cycle:V3=V0,  an allocation that is blocked by coalitionC={1,2,3,4},  etc..
+47:1361:91548:18:18:93:518:264:12:g_d0_f2:12:g_d0_f2:Hence forRCthat selects the blocking coalitions in the order described, no C-Pivot
+47:1362:91630:18:26:93:312:246:12:g_d0_f2:12:g_d0_f19:stable allocation of votes can be reached.-
+47:1363:91673:26:18:111:518:220:12:g_d0_f2:12:g_d0_f2:The logic we exploited in the proof of the Theorem in section 3 does not extend to
+47:1364:91755:18:18:93:518:202:12:g_d0_f2:12:g_d0_f2:coalition trades.  Because of the externalities present in coalitional trades, the score
+47:1365:91843:18:18:93:518:184:12:g_d0_f2:12:g_d0_f2:function we defined earlier is no longer monotonically increasing in the number of
+47:1366:91925:18:18:93:518:166:12:g_d0_f2:12:g_d0_f2:trades.  In the example, voters 1,2,3,and  4 have a score of 9 before the coalition
+47:1367:92008:18:18:93:518:148:12:g_d0_f2:12:g_d0_f2:trade and a score of 8 after the trade.46Cycles become possible, and stability cannot
+47:1368:92093:18:15:103:518:130:7:g_d0_f4:10:g_d0_f5:46In the example, the coalition trade can be divided into two separate pair-wise trades, but this
+47:1369:92190:15:12:93:518:115:10:g_d0_f5:10:g_d0_f5:feaure plays no important role.  It is easy to generate examples where coalition trades are linked
+47:1370:92288:12:0:93:482:103:10:g_d0_f5:10:g_d0_f5:in a chain.  What matters is that scores can fall after a welfare-improving coalition trade.
+48:1371:92382:0:27:93:168:686:12:g_d0_f2:12:g_d0_f2:be guaranteed.
+48:1372:92396:27:18:111:518:659:12:g_d0_f1:12:g_d0_f6:Proposition  7.ConsiderZsuch  that  the  Condorcet  winner  exists.   (1)  If
+48:1373:92473:18:18:93:518:641:12:g_d0_f6:12:g_d0_f6:eitherK= 2orN= 3,  then  the  C-Pivot  stable  outcome  always  exists,  is  unique,
+48:1374:92557:18:18:93:518:623:12:g_d0_f6:12:g_d0_f6:and  coincides  with  the  Condorcet  winner.  (2)  IfK >2andN >3,  if  a  C-Pivot
+48:1375:92639:18:20:93:450:605:12:g_d0_f6:12:g_d0_f6:stable outcome exists, it need not coincide with the Condorcet winner.
+48:1376:92709:20:18:111:518:585:12:g_d0_f1:12:g_d0_f2:Proof.(1) (i) Consider first the caseK= 2.  The following Lemma establishes
+48:1377:92784:18:27:93:336:567:12:g_d0_f2:12:g_d0_f2:that the existence of aC-Pivot stable outcome:
+48:1378:92830:27:18:111:515:540:12:g_d0_f1:12:g_d0_f7:Lemma 3.IfK= 2,  then for allN,Z,andRa C-Pivot stable allocationV
+48:1379:92895:18:21:93:162:522:12:g_d0_f6:12:g_d0_f6:always exists.
+48:1380:92909:21:26:111:385:501:12:g_d0_f1:12:g_d0_f2:Proof of Lemma 3.We need two further Lemmas:
+48:1381:92953:26:18:111:518:475:12:g_d0_f1:12:g_d0_f6:Lemma 4.If atV0both proposals pass by minimal majority, then ifK= 2all
+48:1382:93023:18:21:93:298:457:12:g_d0_f6:12:g_d0_f6:C-Pivot trades must be pair-wise trades.
+48:1383:93063:21:18:111:518:436:12:g_d0_f1:12:g_d0_f2:Proof of Lemma 4.  By minimality of the coalition trades, if atV0both pro-
+48:1384:93137:18:18:93:518:418:12:g_d0_f2:12:g_d0_f2:posals pass by minimal majority then at each step of the algorithm both proposals
+48:1385:93218:18:18:93:518:400:12:g_d0_f2:12:g_d0_f2:must be decided by minimal majority.  At each steptany coalition must include a
+48:1386:93297:18:18:93:518:382:12:g_d0_f2:12:g_d0_f2:voter with preferences{1} -P(Vt) and a voter with preferences{2} -P(Vt), and
+48:1387:93373:18:18:93:518:364:12:g_d0_f2:12:g_d0_f2:each must have at least one vote to trade away, or they would not be part of the
+48:1388:93453:18:17:93:518:346:12:g_d0_f2:12:g_d0_f2:minimal coalition.  But if the proposals are decided by minimal majority, the two
+48:1389:93534:17:18:93:518:329:12:g_d0_f2:12:g_d0_f2:voters could just trade among themselves.  Hence the minimal coalition must be a
+48:1390:93614:18:27:93:126:311:12:g_d0_f2:12:g_d0_f19:pair.-
+48:1391:93620:27:18:111:517:284:12:g_d0_f1:12:g_d0_f6:Lemma 5.IfK= 2, there can be at most one trade that is not pair-wise, and
+48:1392:93693:18:21:93:209:266:12:g_d0_f6:12:g_d0_f6:it can only be the first.
+48:1393:93718:21:18:111:517:245:12:g_d0_f1:12:g_d0_f2:Proof of Lemma 5.By Lemma 4, if non pair-wise coalition trades occur, it
+48:1394:93790:18:18:93:518:227:12:g_d0_f2:12:g_d0_f2:must be that atV0at least one proposal is not decided by minimal majority.  Any
+48:1395:93869:18:18:93:518:209:12:g_d0_f2:12:g_d0_f2:blocking coalition atV0must then involve more than two voters.  But by minimality,
+48:1396:93951:18:17:93:518:191:12:g_d0_f2:12:g_d0_f2:after the coalition trade both proposals must be decided by minimal majority.  But
+48:1397:94033:17:27:93:429:174:12:g_d0_f2:12:g_d0_f19:then fromt= 1 onward, all trades can only be pair-wise trades.-
+48:1398:94096:27:18:111:518:147:12:g_d0_f2:12:g_d0_f2:We can now prove Lemma 3.  IfV0cannot be blocked, then it is trivially stable.
+48:1399:94174:18:18:93:518:129:12:g_d0_f2:12:g_d0_f2:If it can be blocked, then Lemma 4 and 5 imply that any voter can at most trade
+48:1400:94253:18:18:93:518:111:12:g_d0_f2:12:g_d0_f2:once.  Hence the trades must converge to a stable votes allocation.  We can say more:
+48:1401:94338:18:0:93:518:93:12:g_d0_f2:12:g_d0_f2:a stable votes allocation must be reached in at most (N−1)/2 steps, the maximal
+49:1402:94419:0:27:93:286:686:12:g_d0_f2:12:g_d0_f19:number of possible pair-wise trades.-
+49:1403:94456:27:18:111:518:659:12:g_d0_f2:12:g_d0_f2:We  can  now  prove  that  theC-Pivot  stable  outcome  must  coincide  with  the
+49:1404:94537:18:18:93:518:641:12:g_d0_f2:12:g_d0_f2:Condorcet winner, when the Condorcet winner exists, and thus be unique.47If at
+49:1405:94615:18:18:93:518:623:12:g_d0_f7:12:g_d0_f2:V0both proposals pass by minimal majority then by Lemma 4 Proposition 2 applies
+49:1406:94694:18:18:93:518:605:12:g_d0_f2:12:g_d0_f2:and the result follows.  Suppose then that atV0at least one proposal is not decided
+49:1407:94777:18:17:93:518:587:12:g_d0_f2:12:g_d0_f2:by  minimal  majority.   If  there  is  no  blocking  coalition,V0is  trivially  stable,  and
+49:1408:94870:17:18:93:518:570:12:g_d0_f2:12:g_d0_f2:since the Condorcet winner can only beP(V0), then the stable outcome coincides
+49:1409:94948:18:18:93:518:552:12:g_d0_f2:12:g_d0_f2:with  the  Condorcet  winner,  if  it  exists.   Suppose  then  that  at  least  one  blocking
+49:1410:95042:18:18:93:518:534:12:g_d0_f2:12:g_d0_f2:coalition  exists  (and  note  that  it  must  include  more  than  two  voters).   If  several
+49:1411:95137:18:18:93:518:516:12:g_d0_f2:12:g_d0_f2:exist, select one by ruleRC.  After the first coalitional trade,P(V1) ={∅}.  With
+49:1412:95218:18:18:93:517:498:12:g_d0_f7:12:g_d0_f2:K= 2, all members of a minimal coalition can only trade once, regardless of the
+49:1413:95297:18:18:93:517:480:12:g_d0_f2:12:g_d0_f7:coalition’s size.  We can construct a fictional vote allocation ̃V0and preferences ̃Z
+49:1414:95382:18:18:93:518:462:12:g_d0_f2:12:g_d0_f2:such that ̃vk0i=vk1iand ̃zki=zkifor alli /∈C, and ̃vk0i= 1 and ̃zki=−1 for alli∈C,
+49:1415:95464:18:18:93:518:444:12:g_d0_f7:12:g_d0_f2:k= 1,2.  Note thatP( ̃V0) =P(V1) =∅,  and ̃Zrespects all individuals’ ranking
+49:1416:95541:18:18:93:518:426:12:g_d0_f2:12:g_d0_f2:between the only possible outcomes,{1,2}and{∅}, but ̃V0and ̃Zguarantee that, as
+49:1417:95620:18:18:93:518:408:12:g_d0_f2:12:g_d0_f2:required, alli∈Cwill not trade any further.  At ̃V0, both proposals are decided by
+49:1418:95702:18:18:93:518:390:12:g_d0_f2:12:g_d0_f2:minimal majority, and starting from ̃V0all minimal coalitions will be pair-wise.  As
+49:1419:95786:18:18:93:518:372:12:g_d0_f2:12:g_d0_f2:a result, starting from ̃V0, Proposition 2 applies.  Note that, ifP(V0) ={1,2}is the
+49:1420:95870:18:17:93:518:354:12:g_d0_f2:12:g_d0_f2:Condorcet winner, then a majority prefersP(V0) toP( ̃V0).  Hence, by Proposition
+49:1421:95950:17:18:93:518:337:12:g_d0_f2:12:g_d0_f2:2,P( ̃V0) cannot be Pivot stable.  TheC-Pivot stable outcome is thenP(V0).  But
+49:1422:96029:18:21:93:378:319:12:g_d0_f1:12:g_d0_f2:P(V0) is the Condorcet winner and the result is proven.
+49:1423:96084:21:18:111:518:298:12:g_d0_f2:12:g_d0_f2:(ii).  Consider now the caseN= 3.  Recall that the Condorcet winner can only
+49:1424:96160:18:18:93:518:280:12:g_d0_f2:12:g_d0_f2:beP(V0).  IfN= 3, and the Condorcet winner exists, then no welfare improving
+49:1425:96236:18:18:93:518:262:12:g_d0_f2:12:g_d0_f2:trade exists atV0.  HenceP(V0) is triviallyC-Pivot stable,  and is the Condorcet
+49:1426:96316:18:27:93:140:244:12:g_d0_f2:12:g_d0_f19:winner.-
+49:1427:96324:27:20:111:364:217:12:g_d0_f1:12:g_d0_f1:Trade paths for the experimental matrices.
+49:1428:96366:20:18:111:517:197:12:g_d0_f2:12:g_d0_f2:(1)  MatrixAB.   There  is  a  unique  Pivot  path.   AtV0,  withP(V0)  ={B},  1
+49:1429:96446:18:18:93:518:179:12:g_d0_f2:12:g_d0_f2:trades hisBvote to 3 in exchange for 3’sAvote,  leading toP(V1) ={A};  then
+49:1430:96521:18:18:93:518:161:12:g_d0_f2:12:g_d0_f2:2  trades  hisBvote  to  4  in  exchange  for  4’sAvote.   The  resulting  vote  alloca-
+49:1431:96609:18:19:93:518:143:12:g_d0_f2:12:g_d0_f2:tion  is  stable,  andP(V2)  =P(VT)  ={B}.   (2)  MatrixABC1.P(V0)  ={A}is
+49:1432:96683:19:15:103:518:124:7:g_d0_f4:10:g_d0_f5:47In fact, withK= 2 it is possible to show that theC-Pivot stable outcome is always unique,
+49:1433:96774:15:12:93:518:109:10:g_d0_f5:10:g_d0_f5:whether or not the Condorcet winner exsts, and it is always Pareto optimal and always majority
+49:1434:96868:12:0:93:177:97:10:g_d0_f5:10:g_d0_f5:preferred toP(V0).
+50:1435:96888:0:18:93:517:686:12:g_d0_f2:12:g_d0_f2:the  Condorcet  winner,  butV0is  not  stable.   The  unique  Pivot-stable  outcome  is
+50:1436:96975:18:18:93:518:668:12:g_d0_f1:12:g_d0_f2:P(VT) ={A,B,C}.  Three alternative paths, of length{4,4,3}lead to it.  Indicat-
+50:1437:97054:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:ing first the ID’s of the trading partners, and then, in lower-case letters, the issue
+50:1438:97140:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:on  which  an  extra  vote  is  acquired  by  the  voter  listed  first,  the  three  paths  are:
+50:1439:97237:18:18:93:518:614:12:g_d0_f8:12:g_d0_f2:{13cb,45bc,23ab,45ca},{23ab,45ca,45bc,13cb}, and{23ab,45ba,13cb}.  (3) Matrix
+50:1440:97314:18:18:93:518:596:12:g_d0_f7:12:g_d0_f2:ABC2.P(V0)  ={A,B,C}is  the  Condorcet  winner  and  the  unique  Pivot-stable
+50:1441:97392:18:18:93:518:578:12:g_d0_f2:12:g_d0_f2:outcome.  HoweverV0is not stable.  Three alternative paths, of length{4,4,3}lead
+50:1442:97472:18:17:93:518:560:12:g_d0_f2:12:g_d0_f2:toP(VT) ={A,B,C}.  They are:{15ab,34ba,24cb,15bc},{24cb,15bc,15ab,34ba},
+50:1443:97544:17:0:93:209:543:12:g_d0_f2:12:g_d0_f2:and{24cb,15ac,34ba}.
+51:1444:97566:0:33:93:392:686:17:g_d0_f1:17:g_d0_f1:Appendix 2.  For online publication
+51:1445:97601:33:20:93:282:653:12:g_d0_f2:12:g_d0_f2:VOTE TRADING INSTRUCTIONS
+51:1446:97626:20:18:111:518:633:12:g_d0_f2:12:g_d0_f2:Make  yourself  comfortable,  and  then  please  turn  off  phones  and  don’t  talk  or
+51:1447:97714:18:18:93:518:615:12:g_d0_f2:12:g_d0_f2:use the computer.  Thank you for agreeing to participate in this decision making
+51:1448:97794:18:18:93:518:597:12:g_d0_f2:12:g_d0_f2:experiment.   You  will  be  paid  for  your  participation  in  cash,  at  the  end  of  the
+51:1449:97887:18:18:93:518:579:12:g_d0_f2:12:g_d0_f2:experiment.   Different  participants  may  earn  different  amounts.   What  you  earn
+51:1450:97974:18:18:93:518:561:12:g_d0_f2:12:g_d0_f2:depends partly on your decisions and partly on the decisions of others.  If you have
+51:1451:98058:18:18:93:518:543:12:g_d0_f2:12:g_d0_f2:any  questions  during  the  instructions,  raise  your  hand  and  your  question  will  be
+51:1452:98150:18:18:93:518:525:12:g_d0_f2:12:g_d0_f2:answered.   If  you  have  any  questions  after  the  experiment  has  begun,  raise  your
+51:1453:98241:18:21:93:360:507:12:g_d0_f2:12:g_d0_f2:hand and an experimenter will come and assist you.
+51:1454:98291:21:18:111:518:486:12:g_d0_f2:12:g_d0_f2:The experiment today is a committee voting experiment,  where you will have
+51:1455:98366:18:18:93:518:468:12:g_d0_f2:12:g_d0_f2:an opportunity to trade votes before voting on an outcome.  The experiment will be
+51:1456:98448:18:17:93:518:450:12:g_d0_f2:12:g_d0_f2:in three parts.  At the end of the experiment you will be paid the sum of what you
+51:1457:98530:17:18:93:518:433:12:g_d0_f2:12:g_d0_f2:have earned in all three parts of the experiment, plus your promised show-up fee of
+51:1458:98613:18:18:93:518:415:12:g_d0_f2:12:g_d0_f2:10 dollars.  Everyone will be paid in private and you are under no obligation to tell
+51:1459:98698:18:18:93:518:397:12:g_d0_f2:12:g_d0_f2:others how much you earned.  Your earnings during the experiment are denominated
+51:1460:98778:18:21:93:487:379:12:g_d0_f2:12:g_d0_f2:in POINTS. For this experiment every 100 POINTS earns you 6 DOLLARS.
+51:1461:98846:21:21:111:296:358:12:g_d0_f2:12:g_d0_f2:Here are the instructions for Part 1.
+51:1462:98883:21:18:111:518:337:12:g_d0_f2:12:g_d0_f2:You  will  be  randomly  assigned  to  one  of  3  committees,  each  composed  of  5
+51:1463:98968:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:members.  Each committee is completely independent of the others, and the decision
+51:1464:99050:18:18:93:518:301:12:g_d0_f2:12:g_d0_f2:taken in one committee has no effect on the others.  The committee will vote using
+51:1465:99132:18:17:93:518:283:12:g_d0_f2:12:g_d0_f2:majority rule to decide on 2 different motions, denoted A and B. Each motion can
+51:1466:99212:17:18:93:518:266:12:g_d0_f2:12:g_d0_f2:either pass or fail depending on how the committee votes.  There will be a separate
+51:1467:99295:18:18:93:518:248:12:g_d0_f2:12:g_d0_f2:vote on each motion.  The computer will assign you a committee member number
+51:1468:99371:18:21:93:323:230:12:g_d0_f2:12:g_d0_f2:(1, 2, 3, 4, or 5).  Part 1 consists of 3 rounds.
+51:1469:99420:21:18:111:518:209:12:g_d0_f2:12:g_d0_f2:You will be told, for each motion, whether you prefer it to pass or to fail.  The
+51:1470:99501:18:18:93:518:191:12:g_d0_f2:12:g_d0_f2:computer will assign you (and each other member) a value for each motion which
+51:1471:99579:18:18:93:518:173:12:g_d0_f2:12:g_d0_f2:will be a number between 1 and 100.  You will earn your value for a motion if you
+51:1472:99660:18:18:93:518:155:12:g_d0_f2:12:g_d0_f2:prefer that motion to pass and it passes, or if you prefer it to fail and it fails.  This
+51:1473:99749:18:18:93:518:137:12:g_d0_f2:12:g_d0_f2:is your only source of earnings.  Your earnings for the round are equal to the sum of
+51:1474:99834:18:20:93:277:119:12:g_d0_f2:12:g_d0_f2:your earnings over the two motions.
+51:1475:99869:20:0:111:518:99:12:g_d0_f2:12:g_d0_f2:Each committee member starts a round with 1 vote to cast on each motion. Then
+52:1476:99948:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:there will be a 2 minute trading period, during which you and the other members
+52:1477:100027:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:of  your  committee  will  have  an  opportunity  to  trade  votes  with  each  other.   For
+52:1478:100119:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:example, you may wish to trade your A vote in exchange for some other member’s
+52:1479:100197:18:21:93:379:632:12:g_d0_f2:12:g_d0_f2:B vote.  We will describe exactly how to do this shortly.
+52:1480:100254:21:18:111:518:611:12:g_d0_f2:12:g_d0_f2:After the trading period ends, you will proceed to the voting stage.  Once every-
+52:1481:100335:18:17:93:518:593:12:g_d0_f2:12:g_d0_f2:one has voted, you will be told what the final votes were in your committee and how
+52:1482:100418:17:18:93:518:576:12:g_d0_f2:12:g_d0_f2:much you earned in that round.  This will complete the first round.  The remaining
+52:1483:100500:18:18:93:518:558:12:g_d0_f2:12:g_d0_f2:2 rounds in Part 1 follow the same rules.  Each committee member starts the round
+52:1484:100581:18:18:93:518:540:12:g_d0_f2:12:g_d0_f2:with a single vote on each motion.  Your committee member number,  preferences
+52:1485:100659:18:18:93:518:522:12:g_d0_f2:12:g_d0_f2:for each motion (pass or fail), your value for each motion, and the preferences and
+52:1486:100742:18:18:93:518:504:12:g_d0_f2:12:g_d0_f2:values of the other four members of your committee all stay the same for all 3 rounds
+52:1487:100827:18:21:93:235:486:12:g_d0_f2:12:g_d0_f2:of part 1 of the experiment.
+52:1488:100855:21:18:111:518:465:12:g_d0_f2:12:g_d0_f2:Your  earnings  for  part  1  are  the  sum  of  your  earnings  in  all  3  rounds.   After
+52:1489:100947:18:21:93:455:447:12:g_d0_f2:12:g_d0_f2:round 3 ends, I will read you instructions for part 2 of the experiment.
+52:1490:101019:21:17:111:518:426:12:g_d0_f2:12:g_d0_f2:We now describe in detail how you and the other members of your committee
+52:1491:101092:17:18:93:518:409:12:g_d0_f2:12:g_d0_f2:can trade votes.  When we begin a round, you will see a screen like this, although
+52:1492:101174:18:18:93:518:391:12:g_d0_f2:12:g_d0_f2:the exact numbers may be different.  [Display Screen 1] On the right of the screen is
+52:1493:101259:18:18:93:518:373:12:g_d0_f2:12:g_d0_f2:an Information Table that contains a lot of information, so please listen carefully.  It
+52:1494:101347:18:18:93:518:355:12:g_d0_f2:12:g_d0_f2:displays each member’s preference for each motion (pass or fail), value, and number
+52:1495:101430:18:18:93:518:337:12:g_d0_f2:12:g_d0_f2:of votes.  If the member prefers the motion to fail,  then the value is written in a
+52:1496:101514:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:blue color.  If the member prefers the motion to pass, then the value is written in an
+52:1497:101600:18:18:93:518:301:12:g_d0_f2:12:g_d0_f2:orange color.  You can simply think of there being two sides - the orange side and
+52:1498:101682:18:18:93:518:283:12:g_d0_f2:12:g_d0_f2:the blue side - on each motion.  The number of votes held by each member on each
+52:1499:101762:18:18:93:518:265:12:g_d0_f2:12:g_d0_f2:motion is in parentheses.  Because no trading has occurred yet, each member holds
+52:1500:101843:18:21:93:262:247:12:g_d0_f2:12:g_d0_f2:exactly one vote on each motion.
+52:1501:101875:21:18:111:518:226:12:g_d0_f2:12:g_d0_f2:Your own row is specifically labeled and the label is highlighted in gray.  The last
+52:1502:101959:18:17:93:518:208:12:g_d0_f2:12:g_d0_f2:row in the table is labeled ”outcome”.  This row tells you, for each motion, what the
+52:1503:102044:17:18:93:518:191:12:g_d0_f2:12:g_d0_f2:total vote would be if voting took place now, by showing the column sum of votes
+52:1504:102124:18:18:93:518:173:12:g_d0_f2:12:g_d0_f2:on each motion.  The number of votes for is given first, in orange, and the number
+52:1505:102206:18:18:93:518:155:12:g_d0_f2:12:g_d0_f2:of votes against is given second, in blue.  If the votes in favor of a motion exceed
+52:1506:102290:18:18:93:518:137:12:g_d0_f2:12:g_d0_f2:the votes against, then all voters who prefer the motion to pass will earn their value
+52:1507:102376:18:18:93:518:119:12:g_d0_f2:12:g_d0_f2:for that motion, and all voters who prefer the motion to fail will earn zero for that
+52:1508:102461:18:0:93:518:101:12:g_d0_f2:12:g_d0_f2:motion.  Similarly, if the votes in favor of a motion failing exceed the votes in favor
+53:1509:102550:0:18:93:518:686:12:g_d0_f2:12:g_d0_f2:of it passing, then all voters who prefer the motion to fail will earn their value for
+53:1510:102636:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:that motion,  and all voters who prefer the motion to pass will earn zero for that
+53:1511:102718:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:motion.  There is a check mark next to your value if the outcome of that motion
+53:1512:102797:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:is the outcome you prefer.  This means that you earn your value for that motion.
+53:1513:102877:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:In this example, if there were no votes traded at all, then on motion A, there are
+53:1514:102959:18:18:93:518:596:12:g_d0_f2:12:g_d0_f2:2 votes held by members who prefer A to pass and 3 held by members who prefer
+53:1515:103036:18:18:93:518:578:12:g_d0_f2:12:g_d0_f2:A to fail, so motion A fails.  On motion B, there are 3 votes held by members who
+53:1516:103117:18:17:93:518:560:12:g_d0_f2:12:g_d0_f2:prefer B to pass and 2 held by members who prefer B to fail, so motion B passes.
+53:1517:103197:17:18:93:518:543:12:g_d0_f2:12:g_d0_f2:Since ID 1 (You) prefers both motions to pass, he earns his value for motion B but
+53:1518:103279:18:21:93:203:525:12:g_d0_f2:12:g_d0_f2:earns 0 for motion A.
+53:1519:103300:21:18:111:518:504:12:g_d0_f2:12:g_d0_f2:To  the  left  of  the  table,  in  grey,  is  the  trading  window.   At  any  time  during
+53:1520:103392:18:18:93:518:486:12:g_d0_f2:12:g_d0_f2:the  trading  period,  any  committee  member  may  post  a  trade  offer  by  requesting
+53:1521:103481:18:18:93:518:468:12:g_d0_f2:12:g_d0_f2:1 vote on one motion in exchange for 1 vote on some other motion.  Suppose the
+53:1522:103559:18:18:93:518:450:12:g_d0_f2:12:g_d0_f2:participant on the slide in front of the room wanted to post a trade requesting one
+53:1523:103642:18:18:93:518:432:12:g_d0_f2:12:g_d0_f2:A vote in exchange for one B vote.  This is done by entering a 1 in the A box under
+53:1524:103725:18:18:93:518:414:12:g_d0_f2:12:g_d0_f2:”Requests” and a 1 in the B box under ”Offers”.  [Screen 2].  You can only trade 1
+53:1525:103807:18:20:93:421:396:12:g_d0_f2:12:g_d0_f2:vote for 1 vote; you can neither request nor offer multiple votes.
+53:1526:103873:20:18:111:518:376:12:g_d0_f2:12:g_d0_f2:After you have entered this trade request and clicked the ”submit trade offer”
+53:1527:103951:18:18:93:518:358:12:g_d0_f2:12:g_d0_f2:button,  the  trade  is  posted  in  the  trading  panel  for  everyone  in  your  committee
+53:1528:104043:18:18:93:518:340:12:g_d0_f2:12:g_d0_f2:to  see.   [SCREEN  3]  If  another  committee  member  wants  to  accept  your  trade
+53:1529:104129:18:18:93:518:322:12:g_d0_f2:12:g_d0_f2:request, they may click on it to highlight it, and then click on the ”accept selected
+53:1530:104214:18:18:93:518:304:12:g_d0_f2:12:g_d0_f2:offer” button.[SCREEN 4] You now have 10 seconds to either confirm or reject the
+53:1531:104294:18:18:93:518:286:12:g_d0_f2:12:g_d0_f2:accepted trade.  A message will pop-up on your screen.  [SCREEN 5].  The message
+53:1532:104374:18:18:93:518:268:12:g_d0_f2:12:g_d0_f2:tells you what the outcome of the vote would be if you either accept or reject the
+53:1533:104456:18:18:93:518:250:12:g_d0_f2:12:g_d0_f2:trade and voting took place without any further trade.  If you reject the trade or do
+53:1534:104541:18:18:93:518:232:12:g_d0_f2:12:g_d0_f2:nothing for 10 seconds, the trade does not occur.  The committee member who had
+53:1535:104620:18:18:93:518:214:12:g_d0_f2:12:g_d0_f2:accepted your offer is informed that you declined to confirm the trade.[SCREEN 6].
+53:1536:104702:18:18:93:518:196:12:g_d0_f2:12:g_d0_f2:Your offer is reposted in the trading window, and some other voter can accept it.  If
+53:1537:104787:18:18:93:518:178:12:g_d0_f2:12:g_d0_f2:you confirm the trade, then the voter who accepted the offer now holds 0 A votes
+53:1538:104867:18:18:93:518:160:12:g_d0_f2:12:g_d0_f2:and 2 B votes, you now hold 2 A votes and 0 B votes, and the Information Table
+53:1539:104945:18:17:93:518:142:12:g_d0_f2:12:g_d0_f2:is updated accordingly.  The new Information Table is displayed for 10 seconds on
+53:1540:105026:17:21:93:416:125:12:g_d0_f2:12:g_d0_f2:a popup screen for everyone in your group to see.  [SCREEN 7]
+53:1541:105087:21:0:111:518:104:12:g_d0_f2:12:g_d0_f2:If you have a standing offer listed in the trading window, you may cancel it by
+54:1542:105168:0:21:93:518:686:12:g_d0_f2:12:g_d0_f2:first clicking on it and then clicking the ”cancel selected offer” button.[SCREEN 8]
+54:1543:105252:21:18:111:518:665:12:g_d0_f2:12:g_d0_f2:The trading period continues for 2 minutes.  The timer at the top tells you how
+54:1544:105331:18:18:93:518:647:12:g_d0_f2:12:g_d0_f2:much time remains in the trading period.  The clock is frozen when the Information
+54:1545:105413:18:18:93:518:629:12:g_d0_f2:12:g_d0_f2:Table is shown after a trade, with the new vote holdings.  If a trade occurs within
+54:1546:105496:18:18:93:518:611:12:g_d0_f2:12:g_d0_f2:10  seconds  of  the  end  of  the  trading  period,  the  trading  period  is  automatically
+54:1547:105589:18:20:93:255:593:12:g_d0_f2:12:g_d0_f2:lengthened by 10 more seconds.
+54:1548:105619:20:18:111:518:573:12:g_d0_f2:12:g_d0_f2:You are free to post trade requests at any time, but you are not allowed to offer
+54:1549:105700:18:18:93:518:555:12:g_d0_f2:12:g_d0_f2:to trade away a vote on a motion if you currently hold 0 votes for that motion or
+54:1550:105781:18:18:93:518:537:12:g_d0_f2:12:g_d0_f2:already have an offer posted on the trading window that would result in holding 0
+54:1551:105862:18:18:93:518:519:12:g_d0_f2:12:g_d0_f2:votes if accepted.  In that case you would first have to cancel your existing posted
+54:1552:105946:18:18:93:518:501:12:g_d0_f2:12:g_d0_f2:offer.  Also remember that you can only trade one vote for one motion in exchange
+54:1553:106027:18:18:93:518:483:12:g_d0_f2:12:g_d0_f2:for one vote for another motion.  If you try to do a trade that is not allowed, you
+54:1554:106110:18:18:93:518:465:12:g_d0_f2:12:g_d0_f2:will either receive an error message, or the action buttons will become gray and be
+54:1555:106193:18:21:93:406:447:12:g_d0_f2:12:g_d0_f2:deactivated, preventing you from proceeding with that trade.
+54:1556:106253:21:17:111:518:426:12:g_d0_f2:12:g_d0_f2:When the trading period for the round is over, we proceed to the voting stage.
+54:1557:106331:17:18:93:518:409:12:g_d0_f2:12:g_d0_f2:Your screen will now look something like this:  [SCREEN 9].  In this stage you do
+54:1558:106412:18:18:93:518:391:12:g_d0_f2:12:g_d0_f2:not really have any choice.  You are simply asked to click a button to cast all the
+54:1559:106495:18:18:93:518:373:12:g_d0_f2:12:g_d0_f2:votes you hold at the end of trading.  The computer will automatically cast your
+54:1560:106575:18:18:93:518:355:12:g_d0_f2:12:g_d0_f2:votes on each motion according to the preferences you were assigned.  For example,
+54:1561:106657:18:18:93:518:337:12:g_d0_f2:12:g_d0_f2:if you prefer motion B to fail and you hold two B votes after the trading period,
+54:1562:106738:18:18:93:518:319:12:g_d0_f2:12:g_d0_f2:those two votes will be cast automatically against motion B. Please cast all your
+54:1563:106819:18:21:93:355:301:12:g_d0_f2:12:g_d0_f2:votes without delay by clicking on the vote button.
+54:1564:106870:21:18:111:518:280:12:g_d0_f2:12:g_d0_f2:After you and the other members of the committee have voted, the results are
+54:1565:106946:18:20:93:307:262:12:g_d0_f2:12:g_d0_f2:displayed and summarized.  [SCREEN 10]
+54:1566:106984:20:18:111:518:242:12:g_d0_f2:12:g_d0_f2:As the experiment proceeds, at the bottom of each screen you will see a history
+54:1567:107063:18:18:93:518:224:12:g_d0_f2:12:g_d0_f2:table,  summarizing the results of the previous rounds [SCREEN 11.  Go over the
+54:1568:107142:18:21:93:515:206:12:g_d0_f2:12:g_d0_f2:different columns] If you switch to tab view, each round will be shown separately].
+54:1569:107225:21:18:111:518:185:12:g_d0_f2:12:g_d0_f2:We then proceed to the next round, where you again start out with one vote on
+54:1570:107302:18:18:93:518:167:12:g_d0_f2:12:g_d0_f2:each motion and the rules are the same as in the first round.  Remember that your
+54:1571:107383:18:18:93:518:149:12:g_d0_f2:12:g_d0_f2:assigned committee number, preferences for motions, values for motions, and those
+54:1572:107464:18:18:93:518:131:12:g_d0_f2:12:g_d0_f2:of the other members of your committee all stay the same for all 3 rounds of part 1
+54:1573:107547:18:18:93:518:113:12:g_d0_f2:12:g_d0_f2:of the experiment.  After the first 3 rounds are completed, we will read instructions
+54:1574:107632:18:0:93:288:95:12:g_d0_f2:12:g_d0_f2:for the second part of the experiment.
+55:1575:107672:0:18:111:518:686:12:g_d0_f2:12:g_d0_f2:To give you some experience with the trading screen, we will conduct two practice
+55:1576:107753:18:18:93:518:668:12:g_d0_f2:12:g_d0_f2:rounds.  The rules will be the same as they will be in the paid rounds, but the values
+55:1577:107839:18:18:93:518:650:12:g_d0_f2:12:g_d0_f2:and preference assignments, for or against a motion, are not the same as they will
+55:1578:107921:18:18:93:518:632:12:g_d0_f2:12:g_d0_f2:be in the paid rounds.  You are not paid for the practice rounds, so they have no
+55:1579:108002:18:18:93:518:614:12:g_d0_f2:12:g_d0_f2:effect on your final earnings.  The only purpose of the practice rounds is to help you
+55:1580:108088:18:20:93:436:596:12:g_d0_f2:12:g_d0_f2:become familiar with the computer interface and the trading rules.
+55:1581:108154:20:18:111:518:576:12:g_d0_f2:12:g_d0_f2:This  summary  slide  [SCREEN  12:  Summary  slide]  will  remain  up  during  the
+55:1582:108236:18:21:93:414:558:12:g_d0_f2:12:g_d0_f2:experiment to remind you of the rules on trading and on time.
+55:1583:108297:21:18:111:518:537:12:g_d0_f2:12:g_d0_f2:Are there any questions before we proceed to the first practice round?  [START
+55:1584:108375:18:21:93:143:519:12:g_d0_f2:12:g_d0_f2:SERVER]
+55:1585:108382:21:18:111:518:498:12:g_d0_f2:12:g_d0_f2:Please click on the icon marked Multistage Client on your desktop.  Then enter
+55:1586:108460:18:18:93:518:480:12:g_d0_f2:12:g_d0_f2:the number of your carrel (on the right side of the carrel), click enter, and then wait.
+55:1587:108548:18:18:93:518:462:12:g_d0_f2:12:g_d0_f2:Remember that you are not allowed to use the computer for any other purposes while
+55:1588:108630:18:20:93:370:444:12:g_d0_f2:12:g_d0_f2:waiting during the experiment (email, browsing, etc.).
+55:1589:108684:20:21:111:321:424:12:g_d0_f2:12:g_d0_f2:[CONNECT EVERYONE AND START]
+55:1590:108712:21:18:111:518:403:12:g_d0_f2:12:g_d0_f2:Please complete the practice rounds on your own.  Feel free to raise your hand if
+55:1591:108793:18:21:93:198:385:12:g_d0_f2:12:g_d0_f2:you have a question.
+55:1592:108813:21:21:111:458:364:12:g_d0_f2:12:g_d0_f2:[WAIT FOR SUBJECTS TO COMPLETE PRACTICE ROUNDS]
+55:1593:108860:21:18:111:518:343:12:g_d0_f2:12:g_d0_f2:The practice rounds are now over.  Remember, you will not be paid the earnings
+55:1594:108938:18:20:93:223:325:12:g_d0_f2:12:g_d0_f2:from the practice rounds.
+55:1595:108963:20:18:111:518:305:12:g_d0_f2:12:g_d0_f2:If you have any questions from now on, raise your hand, and an experimenter
+55:1596:109038:18:21:93:408:287:12:g_d0_f2:12:g_d0_f2:will come and assist you.  We will now begin the paid rounds.
+55:1597:109099:21:21:111:408:266:12:g_d0_f2:12:g_d0_f2:(Play 3 real rounds for Part 1) [After last ROUND, read:]
+55:1598:109156:21:18:111:518:245:12:g_d0_f2:12:g_d0_f2:We will now proceed to Part 2.  The rules for part 2 are the same as for part
+55:1599:109233:18:18:93:518:227:12:g_d0_f2:12:g_d0_f2:1, but there are now 3 motions for your group to vote on.  You can only trade one
+55:1600:109314:18:18:93:518:209:12:g_d0_f2:12:g_d0_f2:vote on one motion for one vote on another motion.  The trading period will last
+55:1601:109394:18:17:93:518:191:12:g_d0_f2:12:g_d0_f2:3 minutes.  As before, 10 seconds will be added to the clock if a trade takes place
+55:1602:109477:17:21:93:275:174:12:g_d0_f2:12:g_d0_f2:within 10 seconds of the time limit.
+55:1603:109513:21:18:111:518:153:12:g_d0_f2:12:g_d0_f2:The values and pass/fail preferences will be different from part 1, and your com-
+55:1604:109594:18:18:93:518:135:12:g_d0_f2:12:g_d0_f2:mittee number as well as the composition of your committee may change.  However,
+55:1605:109674:18:18:93:518:117:12:g_d0_f2:12:g_d0_f2:both the preferences and the composition of the committee will remain the same for
+55:1606:109756:18:0:93:518:99:12:g_d0_f2:12:g_d0_f2:all of Part 2.  Part 2 will last for 5 rounds.  At the end of the 5 rounds, we will stop
+56:1607:109846:0:21:93:287:686:12:g_d0_f2:12:g_d0_f2:and read the instructions for Part III.
+56:1608:109885:21:21:111:322:665:12:g_d0_f2:12:g_d0_f2:Are there any questions before we begin?
+56:1609:109925:21:20:111:407:644:12:g_d0_f2:12:g_d0_f2:(Play 5 real rounds for part 2) [After last ROUND, read:]
+56:1610:109982:20:18:111:518:624:12:g_d0_f2:12:g_d0_f2:We  will  now  proceed  to  Part  3.   Part  3  is  identical  to  Part  2,  but  the  values
+56:1611:110075:18:18:93:518:606:12:g_d0_f2:12:g_d0_f2:and pass/fail preferences may be different.  Your committee number as well as the
+56:1612:110156:18:18:93:518:588:12:g_d0_f2:12:g_d0_f2:composition of your committee may also change.  Part 3 will again last for 5 rounds
+56:1613:110239:18:18:93:518:570:12:g_d0_f2:12:g_d0_f2:and again the trading period is 3 minutes (plus 10 seconds if a trade is concluded
+56:1614:110321:18:21:93:279:552:12:g_d0_f2:12:g_d0_f2:within 10 seconds of the time limit).
+56:1615:110358:21:18:111:518:531:12:g_d0_f2:12:g_d0_f2:This is the end of the experiment.  You should now see a popup window, which
+56:1616:110434:18:18:93:518:513:12:g_d0_f2:12:g_d0_f2:displays your total earnings in the experiment.  Please record this and your Com-
+56:1617:110515:18:18:93:518:495:12:g_d0_f2:12:g_d0_f2:puter ID on your payment receipt sheet, rounding up to the nearest dollar.  After
+56:1618:110596:18:18:93:518:477:12:g_d0_f2:12:g_d0_f2:you are done, please, click ok to close the popup window.  Do not close any other
+56:1619:110677:18:17:93:518:459:12:g_d0_f2:12:g_d0_f2:windows on your computer and do not use your computer for anything else.  Also
+56:1620:110755:17:18:93:518:442:12:g_d0_f2:12:g_d0_f2:enter 10 dollars on the show-up fee row.  Add the two numbers and enter the sum
+56:1621:110834:18:21:93:155:424:12:g_d0_f2:12:g_d0_f2:as the total.
+56:1622:110847:21:21:111:184:403:12:g_d0_f2:12:g_d0_f2:[Write output]
+56:1623:110861:21:18:111:518:382:12:g_d0_f2:12:g_d0_f2:We will pay each of you in private in the next room in the order of your computer
+56:1624:110942:18:18:93:518:364:12:g_d0_f2:12:g_d0_f2:numbers. Remember you are under no obligation to reveal your earnings to the other
+56:1625:111024:18:18:93:518:346:12:g_d0_f2:12:g_d0_f2:players.  Please do not use the computer; be patient, and remain seated until we call
+56:1626:111109:18:18:93:518:328:12:g_d0_f2:12:g_d0_f2:you to be paid.  Do not converse with the other participants or use your cell phone.
+56:1627:111193:18:0:93:260:310:12:g_d0_f2:12:g_d0_f2:Thank you for your cooperation.
+57:1628:111226:0:14:93:518:483:12:g_d0_f2:12:g_d0_f2:Figure 12:  Screenshots for a subject posting a bid (on the left), and for a subject
+57:1629:111310:14:361:93:286:469:12:g_d0_f2:12:g_d0_f2:accepting a posted bid (on the right).
+57:1630:111348:361:0:184:427:108:12:g_d0_f2:12:g_d0_f2:Figure 13:  Confirmation request for the bidder.

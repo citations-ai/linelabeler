@@ -1,0 +1,2074 @@
+1:0:0:0:99:218:394:708:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:99:14:133:479:609:12:g_d0_f1:12:g_d0_f1:INFORMATION DYNAMICS AND EQUILIBRIUM MULTIPLICITY
+1:2:74:14:28:191:419:595:12:g_d0_f1:12:g_d0_f1:IN GLOBAL GAMES OF REGIME CHANGE
+1:3:106:28:15:243:367:567:12:g_d0_f1:12:g_d0_f1:George-Marios Angeletos
+1:4:129:15:14:263:349:552:12:g_d0_f1:12:g_d0_f1:Christian Hellwig
+1:5:146:14:28:262:348:538:12:g_d0_f1:12:g_d0_f1:Alessandro Pavan
+1:6:162:28:14:253:358:510:12:g_d0_f1:12:g_d0_f1:Working Paper 11017
+1:7:180:14:43:218:392:496:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w11017
+1:8:213:43:14:173:437:453:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:9:249:14:14:237:373:439:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:10:274:14:14:250:361:425:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:11:293:14:222:267:343:411:12:g_d0_f1:12:g_d0_f1:December 2004
+1:12:306:222:13:71:539:189:11:g_d0_f1:11:g_d0_f1:For helpful comments, we thank Andy Atkeson, Pierpaolo Battigalli, Alberto Bisin, V.V. Chari, Patrick
+1:13:407:13:13:71:539:176:11:g_d0_f1:11:g_d0_f1:Kehoe, Alessandro Lizzeri, Kiminori Matsuyama, Stephen Morris, Ivan Werning, and seminar participants
+1:14:508:13:13:71:539:163:11:g_d0_f1:11:g_d0_f1:at Berkeley, MIT, Northwestern, NYU, UBC, UCLA, Yale, the Minneapolis FRB, and the SED conference.
+1:15:606:13:13:71:539:150:11:g_d0_f1:11:g_d0_f1:The views expressed herein are those of the author(s) and do not necessarily reflect the views of the National
+1:16:716:13:26:71:211:137:11:g_d0_f1:11:g_d0_f1:Bureau of Economic Research. 
+1:17:745:26:13:71:539:111:11:g_d0_f1:11:g_d0_f1: © 2004 by George-Marios Angeletos, Christian Hellwig, and Alessandro Pavan.  All rights reserved. Short
+1:18:849:13:13:71:539:98:11:g_d0_f1:11:g_d0_f1:sections of text, not to exceed two paragraphs, may be quoted without explicit permission provided that full
+1:19:957:13:0:71:292:85:11:g_d0_f1:11:g_d0_f1:credit, including © notice, is given to the source.  
+2:20:1010:0:13:71:498:694:12:g_d0_f1:12:g_d0_f1:Information Dynamics and Equilibrium Multiplicity in Global Games of Regime Change
+2:21:1092:13:12:71:399:681:12:g_d0_f1:12:g_d0_f1:George-Marios Angeletos, Christian Hellwig, and Alessandro Pavan
+2:22:1156:12:13:71:232:669:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 11017
+2:23:1184:13:13:71:147:656:12:g_d0_f1:12:g_d0_f1:December 2004
+2:24:1197:13:27:71:188:643:12:g_d0_f1:12:g_d0_f1:JEL No. C7, D7, D8, F3
+2:25:1219:27:31:273:338:616:12:g_d0_f2:12:g_d0_f2:ABSTRACT
+2:26:1227:31:24:71:539:585:12:g_d0_f1:12:g_d0_f1:Global games of regime change –  that is, coordination games of incomplete information in which
+2:27:1322:24:24:71:539:561:12:g_d0_f1:12:g_d0_f1:a status quo is abandoned once a sufficiently large fraction of agents attacks it – have been used to
+2:28:1423:24:24:71:539:537:12:g_d0_f1:12:g_d0_f1:study crises phenomena such as currency attacks, bank runs, debt crises, and political change. We
+2:29:1520:24:24:71:539:513:12:g_d0_f1:12:g_d0_f1:extend the static benchmark examined in the literature by allowing agents to accumulate information
+2:30:1619:24:24:71:539:489:12:g_d0_f1:12:g_d0_f1:over time and take actions in many periods. It is shown that dynamics may lead to multiple equilibria
+2:31:1720:24:24:71:539:465:12:g_d0_f1:12:g_d0_f1:under  the  same  information  assumptions  that  guarantee  uniqueness  in  the  static  benchmark.
+2:32:1820:24:24:71:539:441:12:g_d0_f1:12:g_d0_f1:Multiplicity  originates  in  the  interaction  between  the  arrival  of  information  over  time  and  the
+2:33:1928:24:24:71:539:417:12:g_d0_f1:12:g_d0_f1:endogenous change in beliefs induced by the knowledge that the regime survived past attacks. This
+2:34:2025:24:24:71:539:393:12:g_d0_f1:12:g_d0_f1:interaction also generates interesting equilibrium properties, such as the possibility that fundamentals
+2:35:2129:24:24:71:539:369:12:g_d0_f1:12:g_d0_f1:predict the eventual regime outcome but not the timing or the number of attacks, or that dynamics
+2:36:2226:24:31:71:470:345:12:g_d0_f1:12:g_d0_f1:alternate between crises and phases of tranquility without changes in fundamentals.
+2:37:2309:31:14:71:198:314:12:g_d0_f1:12:g_d0_f1:George -Marios Angeletos
+2:38:2333:14:14:71:197:300:12:g_d0_f1:12:g_d0_f1:Department of Economics
+2:39:2356:14:14:71:93:286:12:g_d0_f1:12:g_d0_f1:MIT
+2:40:2359:14:15:71:211:272:12:g_d0_f1:12:g_d0_f1:50 Memorial Drive, E51-251
+2:41:2385:15:14:71:182:257:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02142
+2:42:2404:14:14:71:123:243:12:g_d0_f1:12:g_d0_f1:and NBER
+2:43:2412:14:28:71:153:229:12:g_d0_f1:12:g_d0_f1:angelet@mit.edu
+2:44:2427:28:14:71:157:201:12:g_d0_f1:12:g_d0_f1:Christian Hellwig
+2:45:2444:14:15:71:103:187:12:g_d0_f1:12:g_d0_f1:UCLA
+2:46:2448:15:28:71:171:172:12:g_d0_f1:12:g_d0_f1:chris@econ.ucla.edu
+2:47:2467:28:14:71:157:144:12:g_d0_f1:12:g_d0_f1:Alessandro Pavan
+2:48:2483:14:14:71:190:130:12:g_d0_f1:12:g_d0_f1:Northwestern University
+2:49:2506:14:0:71:207:116:12:g_d0_f1:12:g_d0_f1:alepavan@northwestern.edu
+3:50:2531:0:30:72:201:709:209:g_d0_f3:209:g_d0_f3:1Introduction
+3:51:2544:30:18:72:540:679:120:g_d0_f4:120:g_d0_f4:Coordination games in which a status quo is abandoned once a sufficiently large number of agents
+3:52:2640:18:18:72:540:661:120:g_d0_f4:120:g_d0_f4:takes an action that favors regime change  have been used to study a variety of socioeconomic
+3:53:2733:18:17:72:539:643:120:g_d0_f4:120:g_d0_f4:phenomena. Whereas the earlier contributions in the literature focused on the existence and im-
+3:54:2828:17:18:72:540:626:120:g_d0_f4:120:g_d0_f4:plications of multiple equilibria when agents can perfectly coordinate with each other, recent work
+3:55:2927:18:17:72:540:608:120:g_d0_f4:120:g_d0_f4:on global games by Carlsson and van Damme (1993) and Morris and Shin (1998, 2000, 2001)
+3:56:3014:17:18:72:540:591:120:g_d0_f4:120:g_d0_f4:has emphasized the fragility of this multiplicity to perturbations of the information structure away
+3:57:3114:18:18:72:539:573:120:g_d0_f4:120:g_d0_f4:from common knowledge: a unique equilibrium often survives when agents observe a payoff-relevant
+3:58:3210:18:18:71:446:555:120:g_d0_f4:120:g_d0_f4:variable, such as the strength of the status quo, with small idiosyncratic noise.
+3:59:3291:18:18:91:539:537:120:g_d0_f4:120:g_d0_f4:Variants of this uniqueness result have been established in the context of currency crises, bank
+3:60:3387:18:17:71:539:519:120:g_d0_f4:120:g_d0_f4:runs, debt crises, and political change.1Most of this work assumes a static coordination game, thus
+3:61:3486:17:18:71:539:502:120:g_d0_f4:120:g_d0_f4:abstracting from the possibility that agents may have the option to take multiple shots against the
+3:62:3585:18:19:71:496:484:120:g_d0_f4:120:g_d0_f4:regime. For many of the applications of interest, however, this possibility seems relevant.
+3:63:3676:19:17:91:539:465:120:g_d0_f4:120:g_d0_f4:In this paper, we extend the static benchmark examined in the literature by allowing agents
+3:64:3767:17:18:71:539:448:120:g_d0_f4:120:g_d0_f4:to take actions in multiple periods and accumulate information over time. There is a large number
+3:65:3864:18:17:71:539:430:120:g_d0_f4:120:g_d0_f4:of agents and two possible regimes, the status quo and an alternative. In any given period, each
+3:66:3960:17:18:71:539:413:120:g_d0_f4:120:g_d0_f4:agent has a binary choice: he may either “attack” the status quo (that is, take an action that favors
+3:67:4061:18:18:71:539:395:120:g_d0_f4:120:g_d0_f4:regime change) or “not attack”. Attacking is individually optimal if and only if the probability of
+3:68:4160:18:17:71:539:377:120:g_d0_f4:120:g_d0_f4:regime change in that period is sufficiently high. The status quo, in turn, is abandoned if and only
+3:69:4260:17:18:71:539:360:120:g_d0_f4:120:g_d0_f4:if the fraction of agents attacking exceeds a critical valueθ∈R,which parametrizes the strength of
+3:70:4358:18:18:71:540:342:120:g_d0_f4:120:g_d0_f4:the status quo.θis the component of the payoffstructure — commonly referred to as the exogenous
+3:71:4453:18:17:71:539:324:120:g_d0_f4:120:g_d0_f4:fundamentals — which is never common knowledge among the agents.  Instead, as time passes,
+3:72:4543:17:19:71:281:307:120:g_d0_f4:120:g_d0_f4:agents receive noisy private signals aboutθ.
+3:73:4587:19:17:91:540:288:120:g_d0_f4:120:g_d0_f4:We show that dynamics may sustain multiple equilibria under the same information assump-
+3:74:4675:17:18:71:539:271:120:g_d0_f4:120:g_d0_f4:tions that guarantee uniqueness in the static benchmark, namely that the precision of the agents’
+3:75:4772:18:18:71:539:253:120:g_d0_f4:120:g_d0_f4:private information is sufficiently high relative to the precision of the initial common prior. Multi-
+3:76:4874:18:17:71:539:235:120:g_d0_f4:120:g_d0_f4:plicity originates in the interaction between two elements: the knowledge that the regime survived
+3:77:4972:17:19:71:385:218:120:g_d0_f4:120:g_d0_f4:past attacks and the arrival of new private information over time.
+3:78:5038:19:17:91:539:199:120:g_d0_f4:120:g_d0_f4:In thefirst period, agentsfind it dominant to attack for sufficiently low realizations of their
+3:79:5133:17:18:71:539:182:120:g_d0_f4:120:g_d0_f4:private signals. This ensures that, in any equilibrium, regime change takes place in thefirst period
+3:80:5233:18:18:71:539:164:120:g_d0_f4:120:g_d0_f4:for sufficiently lowθ.At any future date, the observation that the status quo is still in place makes
+3:81:5334:18:17:71:540:146:120:g_d0_f4:120:g_d0_f4:it common certainty that it is not too weak, for otherwise it would have collapsed under thefirst
+3:82:5431:17:18:72:105:129:120:g_d0_f4:120:g_d0_f4:attack.
+3:83:5438:18:18:84:540:111:36:g_d0_f4:82:g_d0_f4:1See Morris and Shin (1998) for currency crises; Goldstein and Pauzner (2000) and Rochet and Vives (2004) for
+3:84:5547:18:14:71:539:93:82:g_d0_f4:82:g_d0_f4:bank runs; Morris and Shin (2004) and Corsetti, Guimaraes and Roubini (2004) for debt crises; Chamley (1999) for
+3:85:5659:14:0:71:406:79:82:g_d0_f4:82:g_d0_f4:regime switches; Atkeson (2000) and Edmond (2004) for riots and political change.
+4:86:5741:0:18:91:539:709:120:g_d0_f4:120:g_d0_f4:This effect implies that no agent is willing to attackin any subsequent period if he expects no
+4:87:5836:18:17:71:539:691:120:g_d0_f4:120:g_d0_f4:other agent to attack. Hence, there always exists an equilibrium in which no attack occurs after
+4:88:5932:17:18:71:540:674:120:g_d0_f4:120:g_d0_f4:thefirst period. In fact, if no new information wereto arrive over time, this would be the unique
+4:89:6029:18:18:71:540:656:120:g_d0_f4:120:g_d0_f4:equilibrium of the game. The possibility to takemultiple shots against the regime would then add
+4:90:6125:18:22:71:213:638:120:g_d0_f4:120:g_d0_f4:nothing to the static analysis.
+4:91:6156:22:17:91:540:616:120:g_d0_f4:120:g_d0_f4:However, as agents receive new private signals aboutθ, the impact of the knowledge that the
+4:92:6247:17:18:71:539:599:120:g_d0_f4:120:g_d0_f4:regime survived past attacks on posterior beliefs eventually vanishes. For the same reason, the
+4:93:6342:18:18:71:540:581:120:g_d0_f4:120:g_d0_f4:dependence of posterior beliefs on the initial common prior also diminishes over time. When the
+4:94:6437:18:17:71:539:563:120:g_d0_f4:120:g_d0_f4:prior is relatively aggressive, in the sense that it induces a large attack in thefirst period, the
+4:95:6536:17:18:71:539:546:120:g_d0_f4:120:g_d0_f4:increase in the precision of private information would induce less aggressive behavior even in the
+4:96:6634:18:17:71:540:528:120:g_d0_f4:120:g_d0_f4:absence of past attacks. In this case, no action after thefirst period remains the unique equilibrium.
+4:97:6736:17:18:71:540:511:120:g_d0_f4:120:g_d0_f4:In contrast, when the prior is relatively lenient, both the discounting of the prior and the discounting
+4:98:6840:18:18:71:539:493:120:g_d0_f4:120:g_d0_f4:of the knowledge that the regime survived past attacks contribute to making new attacks eventually
+4:99:6938:18:17:71:540:475:120:g_d0_f4:120:g_d0_f4:possible. Hence, there also exist equilibria where agents take multiple shots against the regime.
+4:100:7035:17:18:71:540:458:120:g_d0_f4:120:g_d0_f4:Indeed, we show that, unless the game ends for exogenous reasons infinite time, any arbitrary
+4:101:7128:18:22:72:315:440:120:g_d0_f4:120:g_d0_f4:number of attacks can be sustained in equilibrium.
+4:102:7178:22:18:91:539:418:120:g_d0_f4:120:g_d0_f4:In the benchmark model, we deliberately assume away the possibility that the critical size
+4:103:7268:18:17:72:540:400:120:g_d0_f4:120:g_d0_f4:of attack necessary for regime change varies over time.  This allows us to isolate the effects of
+4:104:7365:17:18:72:540:383:120:g_d0_f4:120:g_d0_f4:changes in information, as opposed to changes in fundamentals, on the dynamics of coordination.
+4:105:7460:18:17:72:540:365:120:g_d0_f4:120:g_d0_f4:Nevertheless, we also show that the multiplicity result is robust to the introduction of shocks to
+4:106:7558:17:18:72:540:348:120:g_d0_f4:120:g_d0_f4:the fundamentals — in which case dominant actions may exist in every period — provided that the
+4:107:7653:18:18:72:540:330:120:g_d0_f4:120:g_d0_f4:volatility of these shocks is sufficiently small. In the limit, as the volatility vanishes, any equilibrium
+4:108:7760:18:17:72:539:312:120:g_d0_f4:120:g_d0_f4:of the benchmark model can be approximated arbitrarily closely by an equilibrium in the game
+4:109:7852:17:18:72:540:295:120:g_d0_f4:120:g_d0_f4:with shocks. What sustains the multiplicity ofequilibria and the corresponding dynamics is again
+4:110:7948:18:17:72:540:277:120:g_d0_f4:120:g_d0_f4:the combination of the arrival of new information over time with the endogenous upward shift
+4:111:8040:17:18:72:540:260:120:g_d0_f4:120:g_d0_f4:in posterior beliefs that follows from the knowledge that the regime survived past attacks. That
+4:112:8136:18:18:72:539:242:120:g_d0_f4:120:g_d0_f4:this shift takes the form of a truncation in the benchmark model simplifies the construction of the
+4:113:8235:18:22:72:367:224:120:g_d0_f4:120:g_d0_f4:equilibrium set, but is not essential for the multiplicity result.
+4:114:8301:22:17:91:539:202:120:g_d0_f4:120:g_d0_f4:We also emphasize that multiplicity does not originate from the presence of exogenous public
+4:115:8393:17:18:72:540:185:120:g_d0_f4:120:g_d0_f4:signals or the observation of the size of past attacks. Indeed, for most of the analysis we assume
+4:116:8491:18:18:72:540:167:120:g_d0_f4:120:g_d0_f4:away any such source of information and concentrate on the case in which agents receive only
+4:117:8583:18:17:72:540:149:120:g_d0_f4:120:g_d0_f4:private signals over time.  What the introduction of public news does, is to “smooth out” the
+4:118:8676:17:18:72:540:132:120:g_d0_f4:120:g_d0_f4:dependence of the determinacy of equilibria on the initial prior: multiple equilibria then exist
+4:119:8772:18:17:72:540:114:120:g_d0_f4:120:g_d0_f4:whatever the horizon of the game and for any prior mean and any relative precision of public and
+4:120:8868:17:18:72:540:97:120:g_d0_f4:120:g_d0_f4:private information.  Finally, introducing endogenous signals about the size of past attacks — a
+4:121:8964:18:0:72:540:79:120:g_d0_f4:120:g_d0_f4:simple form of (noisy) social learning — does not change the equilibrium dynamics, except for the
+5:122:9062:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:possibility that the endogenous information revealed by the size of an attack may substitute for
+5:123:9158:18:17:72:540:691:120:g_d0_f4:120:g_d0_f4:the arrival of new exogenous information and render further attacks possible immediately after an
+5:124:9255:17:19:72:153:674:120:g_d0_f4:120:g_d0_f4:unsuccessful one.
+5:125:9272:19:18:91:539:655:120:g_d0_f4:120:g_d0_f4:The existence of multiple equilibria leads todynamics that might not have been possible with
+5:126:9364:18:17:71:540:637:120:g_d0_f4:120:g_d0_f4:either common knowledge or a unique equilibrium.  For example, fundamentals may determine
+5:127:9453:17:18:71:539:620:120:g_d0_f4:120:g_d0_f4:thefinal regime outcome (e.g., whether a currency is eventually devalued) but not the timing and
+5:128:9549:18:17:71:539:602:120:g_d0_f4:120:g_d0_f4:number of attacks. Moreover, dynamics may take the form of sequences of periods in which attacks
+5:129:9645:17:18:71:539:585:120:g_d0_f4:120:g_d0_f4:can not occur and agents only accumulate information, followed by periods in which an attack is
+5:130:9740:18:18:71:539:567:120:g_d0_f4:120:g_d0_f4:possible but does not take place, eventually resulting in a new attack. An economy can thus transit
+5:131:9839:18:18:71:537:549:120:g_d0_f4:120:g_d0_f4:from phases of tranquility to criseswithoutany change in the underlying economic fundamentals.
+5:132:9933:18:18:91:539:531:120:g_d0_f4:120:g_d0_f4:Below, we discuss the relation of the paper to the pertinent literature. Section 2 then reviews the
+5:133:10032:18:17:72:540:513:120:g_d0_f4:120:g_d0_f4:static benchmark and introduces the dynamic model. Section 3 characterizes the set of monotone
+5:134:10126:17:18:72:540:496:120:g_d0_f4:120:g_d0_f4:equilibria. Section 4 establishes the multiplicityresult and discusses equilibrium dynamics. Section
+5:135:10226:18:18:72:540:478:120:g_d0_f4:120:g_d0_f4:5 examines robustness to the introduction of shocks in the fundamentals.  Section 6 introduces
+5:136:10320:18:17:72:540:460:120:g_d0_f4:120:g_d0_f4:public news and signals about past attacks. Section 7 concludes. Proofs omitted in the main text
+5:137:10416:17:27:72:220:443:120:g_d0_f4:120:g_d0_f4:are presented in the Appendix.
+5:138:10446:27:17:91:540:416:120:g_d0_f11:120:g_d0_f4:Related Literature.This paper contributes to a small but growing literature on dynamic
+5:139:10532:17:18:71:539:399:120:g_d0_f4:120:g_d0_f4:global games. Heidhues and Melissas (2003) identify a condition of dynamic strategic complemen-
+5:140:10627:18:17:72:540:381:120:g_d0_f4:120:g_d0_f4:tarity that suffices for uniqueness in an investment model; this condition is also implicit in Gian-
+5:141:10727:17:18:72:539:364:120:g_d0_f4:120:g_d0_f4:nitsarou and Toxvaerd’s (2003) uniqueness theorem for recursive binary-action games. Dasgupta
+5:142:10820:18:18:72:540:346:120:g_d0_f4:120:g_d0_f4:(2002) examines the role of social learning in a two-period investment model with irreversible ac-
+5:143:10918:18:17:72:539:328:120:g_d0_f4:120:g_d0_f4:tions. Levin (2001) considers a global game with overlapping generations of players. Goldstein and
+5:144:11016:17:18:72:540:311:120:g_d0_f4:120:g_d0_f4:Pauzner (2001) and Goldstein (2002) consider models of contagion. Frankel and Pauzner (2000),
+5:145:11109:18:18:72:539:293:120:g_d0_f4:120:g_d0_f4:on the other hand, consider a complete-information dynamic coordination game, where uniqueness
+5:146:11203:18:17:72:539:275:120:g_d0_f4:120:g_d0_f4:is obtained by assuming aggregate shocks and idiosyncratic inertia. None of these papers, however,
+5:147:11301:17:19:72:407:258:120:g_d0_f4:120:g_d0_f4:examines the role of information dynamics in games of regime change.
+5:148:11369:19:17:91:539:239:120:g_d0_f4:120:g_d0_f4:Closer to our analysis, Morris and Shin (1999) consider a dynamic model whose stage game
+5:149:11457:17:18:72:540:222:120:g_d0_f4:120:g_d0_f4:is similar to ours, but where fundamentals follow a random walk and are commonly observed at
+5:150:11549:18:17:72:540:204:120:g_d0_f4:120:g_d0_f4:the end of each period.  This reduces the analysis to a sequence of static games with a unique
+5:151:11643:17:19:72:129:187:120:g_d0_f4:120:g_d0_f4:equilibrium.
+5:152:11655:19:18:91:539:168:120:g_d0_f4:120:g_d0_f4:This paper departs from the above literature in that it considers dynamics as a natural source of
+5:153:11752:18:17:72:540:150:120:g_d0_f4:120:g_d0_f4:information. In this respect, it shares with Angeletos, Hellwig and Pavan (2003) — which considers
+5:154:11850:17:18:72:540:133:120:g_d0_f4:120:g_d0_f4:the signaling effects of policy in a static game — the idea thatendogenousinformation structures
+5:155:11946:18:17:72:540:115:120:g_d0_f4:120:g_d0_f4:may overturn uniqueness results in global games and lead to predictions that would have not been
+5:156:12042:17:19:72:380:98:120:g_d0_f4:120:g_d0_f4:possible with either common knowledge or a unique equilibrium.
+5:157:12104:19:0:91:539:79:120:g_d0_f4:120:g_d0_f4:Finally, we share with Chari and Kehoe (2003) the motivation that understanding the dynamics
+6:158:12197:0:18:72:539:709:120:g_d0_f4:120:g_d0_f4:of information may help understand the dynamics of crises. However, whereas they focus on herding,
+6:159:12295:18:40:72:322:691:120:g_d0_f4:120:g_d0_f4:we examine the role of information for coordination.
+6:160:12347:40:29:72:325:651:209:g_d0_f3:209:g_d0_f3:2  A simple game of regime change
+6:161:12380:29:25:72:206:622:145:g_d0_f3:145:g_d0_f3:2.1  Static benchmark
+6:162:12401:25:18:72:539:597:120:g_d0_f11:120:g_d0_f4:Model  set-up.There is a continuum of agents of measure one, indexed byiand uniformly
+6:163:12486:18:18:72:539:579:120:g_d0_f4:120:g_d0_f4:distributed over[0,1]. Agents move simultaneously, choosing between two actions: they can either
+6:164:12582:18:17:72:526:561:120:g_d0_f4:120:g_d0_f4:attack the status quo (i.e., take an action that favors regime change) or refrain from attacking.
+6:165:12679:17:18:91:540:544:120:g_d0_f4:120:g_d0_f4:The payoffstructure is illustrated in Table 1. The payofffrom not attacking(ai=0)is zero,
+6:166:12768:18:18:72:542:526:120:g_d0_f4:120:g_d0_f12:whereas the payofffrom attacking(ai=1)is1−c>0if the status quo is abandoned(R=1)
+6:167:12848:18:17:72:540:508:120:g_d0_f4:120:g_d0_f4:and−c<0otherwise(R=0),wherec∈(0,1)parametrizes the relative cost of attacking. An
+6:168:12929:17:18:72:540:491:120:g_d0_f4:120:g_d0_f4:agent hencefinds it optimal to attack if and only if he expects regime change with probability at
+6:169:13026:18:17:72:540:473:120:g_d0_f4:120:g_d0_f4:leastc. The status quo is in turn abandoned if and only if the measure of agents attacking, which
+6:170:13123:17:18:72:539:456:120:g_d0_f4:120:g_d0_f4:we denote byA,is greater than or equal toθ∈R, which parametrizes the strength of the status
+6:171:13214:18:18:72:540:438:120:g_d0_f4:120:g_d0_f4:quo. An agent’s incentive to attack thus increases with the aggregate size of attack, implying that
+6:172:13313:18:34:72:276:420:120:g_d0_f4:65:g_d0_f4:agents’ actions are strategic complements.2
+6:173:13356:34:18:245:465:386:120:g_d0_f10:120:g_d0_f12:Regime Change(A≥θ)Status Quo(A<θ)
+6:174:13389:18:18:138:425:368:120:g_d0_f10:120:g_d0_f6:Attack(ai=1)1−c−c
+6:175:13406:18:21:138:421:350:120:g_d0_f10:120:g_d0_f12:Not Attack(ai=0)00
+6:176:13424:21:36:267:344:329:120:g_d0_f4:120:g_d0_f4:Table 1. Payoffs
+6:177:13440:36:18:91:539:293:120:g_d0_f4:120:g_d0_f4:Agents have heterogeneous information about the strength of the status quo. Naturefirst draws
+6:178:13533:18:18:72:547:275:120:g_d0_f6:120:g_d0_f4:θfrom a normal distributionN(z,1/β),which defines the initial common prior aboutθ.Each
+6:179:13619:18:17:72:539:257:120:g_d0_f4:120:g_d0_f4:agent then receives a private signalxi=θ+ξi,whereξi∼N(0,1/α)is noise, i.i.d. across agents
+6:180:13709:17:18:72:539:240:120:g_d0_f4:120:g_d0_f4:and independent ofθ. The Normality assumptions allow to parametrize the information structure
+6:181:13802:18:17:72:539:222:120:g_d0_f4:120:g_d0_f4:parsimoniously with(α, β, z),that is, the precision of private information and the precision and
+6:182:13898:17:24:72:202:205:120:g_d0_f4:120:g_d0_f4:mean of the common prior.
+6:183:13923:24:18:91:540:181:120:g_d0_f11:120:g_d0_f4:Interpretation.Although the game presented above is highly stylized, it admits a variety
+6:184:14011:18:18:72:540:163:120:g_d0_f4:120:g_d0_f4:of interpretations and possible applications. The most celebrated examples are self-fulfilling bank
+6:185:14110:18:17:72:540:145:120:g_d0_f4:120:g_d0_f4:runs, currency attacks, and debt crises. In these contexts, regime change occurs, respectively, when
+6:186:14210:17:17:72:540:128:120:g_d0_f4:120:g_d0_f4:a large run forces the banking system to suspend its payments, when a large speculative attack
+6:187:14304:17:18:84:542:111:36:g_d0_f4:82:g_d0_f4:2Theroleofcoordinationismostevidentwhenθis commonly known by all agents: forθ∈(0,1],thereexisttwo
+6:188:14401:18:14:72:539:93:82:g_d0_f4:82:g_d0_f4:pure-strategy equilibria, one in which all agents attack and the status quo is abandoned(A=1≥θ)and another in
+6:189:14510:14:0:72:354:79:82:g_d0_f4:82:g_d0_f4:which no agent attacks and the status quo is maintained(A=0<θ).
+7:190:14574:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:forces the central bank to abandon the peg, or when a country/company fails to coordinate its
+7:191:14667:18:17:72:540:691:120:g_d0_f4:120:g_d0_f4:creditors and is forced to bankruptcy. The model can also be interpreted as one of political change,
+7:192:14767:17:18:72:540:674:120:g_d0_f4:120:g_d0_f4:in which a large number of citizens decide whether or not to take actions to subvert a repressive
+7:193:14864:18:23:72:296:656:120:g_d0_f4:65:g_d0_f4:dictator or some other political establishment.3
+7:194:14912:23:18:91:540:633:120:g_d0_f11:120:g_d0_f4:Equilibrium analysis.Note that the c.d.f. of an agent’s posterior aboutθis decreasing in
+7:195:15000:18:18:72:539:615:120:g_d0_f4:120:g_d0_f4:his private signalx.Moreover, it is strictly dominant to attack for sufficiently low signals – namely
+7:196:15101:18:17:72:540:597:120:g_d0_f4:120:g_d0_f4:forx<x,wherexsolvesPr (θ≤0|x)=c– and not to attack for sufficient high signals – namely
+7:197:15188:17:18:71:539:580:120:g_d0_f4:120:g_d0_f4:forx> ̄x,where ̄xsolvesPr (θ≤1| ̄x)=c.It is thus natural to look atmonotoneBayesian Nash
+7:198:15276:18:17:71:366:562:120:g_d0_f4:120:g_d0_f4:equilibria in which the agents’ strategy is non-increasing inx.
+7:199:15339:17:18:91:540:545:120:g_d0_f4:120:g_d0_f4:Indeed, suppose there is a thresholdˆx∈Rsuch that each agent attacks if and only ifx≤ˆx.
+7:200:15427:18:18:72:544:527:120:g_d0_f4:120:g_d0_f12:The measure of agents attacking is then decreasing inθand is given byA(θ)=Pr(x≤ˆx|θ)=
+7:201:15512:18:0:71:83:509:120:g_d0_f18:120:g_d0_f12:Φ(
+7:202:15514:0:8:84:93:517:120:g_d0_f7:120:g_d0_f7:√
+7:203:15515:8:17:93:539:509:120:g_d0_f6:120:g_d0_f4:α(ˆx−θ)),whereΦis the c.d.f. of the standard Normal. It follows that the status quo is
+7:204:15601:17:25:71:414:492:120:g_d0_f4:120:g_d0_f4:abandoned if and only ifθ≤ˆθ,whereˆθsolvesˆθ=A(ˆθ),or equivalently
+7:205:15667:25:31:262:540:467:120:g_d0_f12:120:g_d0_f4:ˆθ=Φ(√α(ˆx−ˆθ)).(1)
+7:206:15686:31:18:72:543:436:120:g_d0_f4:120:g_d0_f12:The posterior probability of regime change for an agent with signalxis then simplyPr (R=1|x)=
+7:207:15779:18:17:71:539:418:120:g_d0_f12:120:g_d0_f4:Pr(θ≤ˆθ|x).Since the latter is decreasing inx,each agentfinds it optimal to attack if and only if
+7:208:15876:17:28:71:328:401:120:g_d0_f6:120:g_d0_f4:x≤ˆx,whereˆxsolvesPr(θ≤ˆθ|ˆx)=c,or equivalently
+7:209:15923:28:0:215:223:373:120:g_d0_f18:120:g_d0_f18:Φ
+7:210:15924:0:12:225:242:385:120:g_d0_f19:120:g_d0_f19:³p
+7:211:15926:12:0:242:269:373:120:g_d0_f6:120:g_d0_f6:α+β
+7:212:15929:0:10:271:278:385:120:g_d0_f19:120:g_d0_f19:³
+7:213:15930:10:0:278:360:375:120:g_d0_f12:120:g_d0_f6:ˆθ−αα+βˆx−βα+βz
+7:214:15945:0:12:361:374:385:120:g_d0_f19:120:g_d0_f19: ́ ́
+7:215:15949:12:28:377:540:373:120:g_d0_f12:120:g_d0_f4:=c.(2)
+7:216:15955:28:18:72:540:345:120:g_d0_f4:120:g_d0_f4:A monotone equilibrium is thus identified by a joint solution(ˆx,ˆθ)to (1) and (2). Such a solution
+7:217:16054:18:18:72:540:327:120:g_d0_f4:120:g_d0_f4:always exists and is unique for allzifandonlyifα≥β2/(2π).Moreover, iterated elimination of
+7:218:16144:18:17:72:539:309:120:g_d0_f4:120:g_d0_f4:strictly dominated strategies implies that, when the monotone equilibrium is unique, there is no
+7:219:16240:17:29:72:246:292:120:g_d0_f4:120:g_d0_f4:other equilibrium. We conclude that
+7:220:16275:29:18:72:540:263:120:g_d0_f3:120:g_d0_f10:Proposition 1 (Static benchmark)In the static game, the equilibrium is unique if and only if
+7:221:16367:18:33:72:285:245:120:g_d0_f6:120:g_d0_f10:α≥β2/(2π),and is in monotone strategies.
+7:222:16407:33:25:72:190:212:145:g_d0_f3:145:g_d0_f3:2.2  Dynamic game
+7:223:16424:25:17:72:540:187:120:g_d0_f4:120:g_d0_f4:Wemodifythestaticgamereviewedaboveintwoways:first, we allow agents to attack the status
+7:224:16511:17:18:72:417:170:120:g_d0_f4:120:g_d0_f4:quo repeatedly; second, we let agents accumulate information over time.
+7:225:16582:18:18:91:540:152:120:g_d0_f4:120:g_d0_f4:Time is discrete and indexed byt∈{1,2,...}.The game continues as long as the status quo
+7:226:16669:18:17:72:539:134:120:g_d0_f4:120:g_d0_f4:is in place and is over once the status quo is abandoned. We denote withRt=0the event that
+7:227:16759:17:18:72:540:117:120:g_d0_f4:120:g_d0_f4:the status quo is still in place at the beginning of periodt,withRt=1the alternative event, with
+7:228:16855:18:16:71:539:99:120:g_d0_f6:120:g_d0_f4:ait∈{0,1}the action of agenti,andwithAt∈[0,1]the measure of agents attacking in period
+7:229:16941:16:0:84:208:83:36:g_d0_f4:82:g_d0_f4:3For references, see footnote 1.
+8:230:16974:0:18:72:544:709:120:g_d0_f6:120:g_d0_f4:t. Conditional on the regime being in place at the beginning of periodt(Rt=0),theregimeis
+8:231:17063:18:17:72:539:691:120:g_d0_f4:120:g_d0_f4:abandoned in that period(Rt+1=1)if and only ifAt≥θ,whereθagain represents the strength
+8:232:17149:17:31:72:300:674:120:g_d0_f4:120:g_d0_f4:of the status quo. Agenti’s payoffin periodtis
+8:233:17195:31:30:258:353:643:120:g_d0_f6:120:g_d0_f6:πit=ait(Rt+1−c),
+8:234:17211:30:0:72:281:613:120:g_d0_f4:120:g_d0_f12:and his payofffrom the entire game isΠi=
+8:235:17251:0:11:284:305:621:120:g_d0_f19:65:g_d0_f21:P∞
+8:236:17253:11:0:296:318:610:65:g_d0_f13:120:g_d0_f6:t=1ρ
+8:237:17257:0:22:318:540:617:65:g_d0_f13:120:g_d0_f4:t−1(1−Rt)πit,whereρ∈(0,1)is the discount
+8:238:17297:22:18:72:103:595:120:g_d0_f4:120:g_d0_f4:factor.
+8:239:17304:18:18:91:539:577:120:g_d0_f4:120:g_d0_f4:Like in the static model,θis drawn at the beginning of the game fromN(z,1/β), which defines
+8:240:17395:18:17:72:540:559:120:g_d0_f4:120:g_d0_f4:the initial common prior, and never becomes common knowledge. Private information, however,
+8:241:17486:17:18:72:539:542:120:g_d0_f4:65:g_d0_f13:evolves over time.  In each periodt≥1, every agentireceives a private signal ̃xit=θ+ξit
+8:242:17573:18:17:72:540:524:120:g_d0_f4:120:g_d0_f4:aboutθ,whereξit∼N(0,1/ηt)is i.i.d. acrossi, independent ofθ,and serially uncorrelated. Let
+8:243:17663:17:18:72:540:507:120:g_d0_f12:120:g_d0_f4: ̃xti={ ̃xiτ}tτ=1denote agenti’s history of private signals up to periodt. Individual actions and the
+8:244:17764:18:18:71:539:489:120:g_d0_f4:120:g_d0_f4:size of past attacks arenotobservable,4hence the public history in periodtsimply consists of the
+8:245:17860:18:17:72:539:471:120:g_d0_f4:120:g_d0_f4:information that the regime is still in place, whereas the private history of an agent is the sequence
+8:246:17962:17:0:72:395:454:120:g_d0_f4:120:g_d0_f7:of own private signals ̃xtiand own past actions. Finally, we letαt≡
+8:247:18029:0:12:397:412:462:120:g_d0_f19:65:g_d0_f13:Pt
+8:248:18031:12:27:409:520:450:65:g_d0_f13:120:g_d0_f4:τ=1ητand assume that
+8:249:18051:27:30:204:407:423:120:g_d0_f7:120:g_d0_f6:∞>αt≥β2/(2π)∀tandlimt→∞αt=∞.
+8:250:18079:30:18:72:540:393:120:g_d0_f4:120:g_d0_f4:As shown in the next section,αtparametrizes the precision of private information in periodt.The
+8:251:18174:18:17:72:539:375:120:g_d0_f4:120:g_d0_f4:restrictions above ensure equilibrium uniqueness in the static game with precisionαt,and that
+8:252:18267:17:26:72:373:358:120:g_d0_f4:120:g_d0_f4:private information becomes infinitely precise only in the limit.
+8:253:18332:26:17:91:540:332:120:g_d0_f11:120:g_d0_f4:Remark.While this dynamic game is highly stylized, it captures two important dimensions
+8:254:18419:17:18:72:540:315:120:g_d0_f4:120:g_d0_f4:that are absent in the static benchmark:first, the possibility of multiple attacks against the status
+8:255:18520:18:18:72:540:297:120:g_d0_f4:120:g_d0_f4:quo; and, second, the evolution of beliefs about the probability of regime change. By assuming that
+8:256:18619:18:17:72:539:279:120:g_d0_f4:120:g_d0_f4:per-period payoffs do not depend on past or future actions and by ignoring specific institutional
+8:257:18716:17:18:72:539:262:120:g_d0_f4:120:g_d0_f4:details, the model may of course fail to capture other interesting effects introduced by dynamics,
+8:258:18814:18:17:72:540:244:120:g_d0_f4:120:g_d0_f4:such as, for example, the role of wealth accumulation or liquidity in currency crises.  However,
+8:259:18910:17:18:72:539:227:120:g_d0_f4:120:g_d0_f4:abstracting from these other dimensions allows us toisolate information as the driving force for the
+8:260:19010:18:25:72:246:209:120:g_d0_f4:120:g_d0_f4:dynamics of coordination and crises.
+8:261:19046:25:18:91:539:184:120:g_d0_f11:120:g_d0_f4:Equilibrium.In what follows, we limit attention tomonotone equilibria, that is, symmetric
+8:262:19135:18:18:71:540:166:120:g_d0_f4:120:g_d0_f4:Perfect Bayesian equilibria in which the probability an agent attacks in periodt, which with a slight
+8:263:19236:18:17:71:540:148:120:g_d0_f4:120:g_d0_f4:abuseofnotationwedenotewithat( ̃xt), is non-increasing in his private signals ̃xtand independent
+8:264:19332:17:18:72:540:131:120:g_d0_f4:120:g_d0_f4:of his own past actions.5Restricting attention to this class of equilibria suffices to establish our
+8:265:19432:18:18:71:164:113:120:g_d0_f4:120:g_d0_f4:multiplicity results.
+8:266:19453:18:12:84:511:95:36:g_d0_f4:82:g_d0_f4:4The possibility that agents observe noisy signals about aggregate past activity is considered in Section 6.
+8:267:19561:12:0:84:529:83:36:g_d0_f4:82:g_d0_f4:5We donotrestrict the set of available strategies: we look at equilibria in which these properties are satisfied.
+9:268:19675:0:29:72:298:709:209:g_d0_f3:209:g_d0_f3:3  Equilibrium characterization
+9:269:19706:29:18:72:540:680:120:g_d0_f4:120:g_d0_f4:Since neither individual nor aggregate actions are observable, andRt=0is always compatible with
+9:270:19801:18:17:71:540:662:120:g_d0_f4:120:g_d0_f4:any strategy profile at anyt,6no agent can detect out-of-equilibrium play as long as the status quo
+9:271:19900:17:18:72:539:645:120:g_d0_f4:120:g_d0_f4:is in place. It follows that beliefs are pinned down by Bayes’ rule in any relevant history of the game.
+9:272:20004:18:18:72:539:627:120:g_d0_f4:120:g_d0_f4:Furthermore, payoffs in one period do not depend on own or other players’ actions in any other
+9:273:20098:18:17:71:539:609:120:g_d0_f4:120:g_d0_f4:period and hence strategies are sequentially rational if and only if they maximize period-by-period
+9:274:20197:17:30:71:298:592:120:g_d0_f4:120:g_d0_f4:payoffs. Finally, definextandαtrecursively by
+9:275:20242:30:0:196:218:562:120:g_d0_f6:120:g_d0_f12:xt=
+9:276:20245:0:15:221:242:570:120:g_d0_f6:65:g_d0_f20:αt−1
+9:277:20249:15:0:227:237:555:120:g_d0_f6:65:g_d0_f13:αt
+9:278:20251:0:0:244:276:562:120:g_d0_f6:120:g_d0_f12:xt−1+
+9:279:20256:0:15:280:288:570:120:g_d0_f6:65:g_d0_f13:ηt
+9:280:20258:15:0:279:289:555:120:g_d0_f6:65:g_d0_f13:αt
+9:281:20260:0:29:291:415:562:120:g_d0_f12:120:g_d0_f6: ̃xtandαt=αt−1+ηt,
+9:282:20278:29:18:72:539:533:120:g_d0_f4:120:g_d0_f4:withx1= ̃x1andα1=η1;and note thatxtis a sufficient statistic for the agent’s private information
+9:283:20374:18:17:72:540:515:120:g_d0_f12:120:g_d0_f4: ̃xt={ ̃xτ}tτ=1with respect toθand therefore with respect to regime change as well. We conclude
+9:284:20469:17:30:71:238:498:120:g_d0_f4:120:g_d0_f4:that, in any monotone equilibrium,
+9:285:20503:30:8:182:263:468:120:g_d0_f6:120:g_d0_f12:at( ̃xt)∈arg max
+9:286:20519:8:0:240:266:460:65:g_d0_f13:65:g_d0_f20:a∈[0,1]
+9:287:20526:0:32:267:540:468:120:g_d0_f14:120:g_d0_f4:{(Pr [Rt+1=1|xt,Rt=0]−c)a},(3)
+9:288:20556:32:18:72:357:436:120:g_d0_f4:120:g_d0_f6:wherePr [·]is pinned down by Bayes’ rule using{at(·)}∞t=1.
+9:289:20614:18:18:91:540:418:120:g_d0_f4:120:g_d0_f4:This also implies that, inanyequilibrium of the dynamic game, agents play in period1exactly
+9:290:20705:18:17:72:540:400:120:g_d0_f4:120:g_d0_f4:as in the static game in which they can attack only in that period: an agent attacks if and only if
+9:291:20804:17:18:72:540:383:120:g_d0_f4:120:g_d0_f4:his private signal is sufficiently low and the status quo is maintained if and only ifθis sufficiently
+9:292:20906:18:31:72:495:365:120:g_d0_f4:65:g_d0_f4:high. The following lemma shows that a similar property applies to subsequent periods.7
+9:293:20993:31:18:72:539:334:120:g_d0_f3:120:g_d0_f7:Lemma 1For any monotone equilibrium, there is a sequence{x∗t,θ∗t}∞t=1,wherex∗t∈R≡R∪
+9:294:21076:18:18:72:237:316:120:g_d0_f14:120:g_d0_f10:{±∞}andθ∗t−1∈(0,1),such that:
+9:295:21105:18:18:91:442:298:120:g_d0_f12:120:g_d0_f12:(i)at anyt≥1,an agent attacks ifxt<x∗tand does not attack ifxt>x∗t;
+9:296:21172:18:31:91:404:280:120:g_d0_f12:120:g_d0_f6:(ii)the status quo is in place at anyt≥2if and only ifθ>θ∗t−1.
+9:297:21234:31:17:91:539:249:120:g_d0_f4:120:g_d0_f4:The fact that the status quo is in place in periodt≥2makes it common certainty that
+9:298:21317:17:18:72:539:232:120:g_d0_f6:120:g_d0_f4:θ>θ∗t−1.Sinceθ∗t−1≥θ∗1>0,this implies that there always exist equilibria in which nobody
+9:299:21405:18:17:71:540:214:120:g_d0_f4:120:g_d0_f4:attacks in periodt≥2,inwhichcasex∗t=−∞andθ∗t=θ∗t−1.In particular, there exists an
+9:300:21486:17:18:72:540:197:120:g_d0_f4:120:g_d0_f4:equilibrium in which an attack takes place in period 1 and never after. If this were always the
+9:301:21581:18:18:72:539:179:120:g_d0_f4:120:g_d0_f4:unique equilibrium, the possibility to take repeated actions against the regime would add nothing
+9:302:21678:18:17:72:540:161:120:g_d0_f4:120:g_d0_f4:to the static analysis and the equilibrium outcome in the dynamic game would coincide with that
+9:303:21773:17:18:72:540:144:120:g_d0_f4:120:g_d0_f4:in the static benchmark. In what follows we thus examine under what conditions there also exist
+9:304:21868:18:17:72:219:126:120:g_d0_f4:120:g_d0_f4:equilibria with further attacks.
+9:305:21900:17:12:84:537:109:36:g_d0_f4:82:g_d0_f15:6Indeed, the regime always survives any attack forθ>1and no realization of the private signal rules outθ>1.
+9:306:22007:12:18:84:539:97:36:g_d0_f4:82:g_d0_f4:7To simplify the notation, we allow forx∗t=−∞andx∗t=+∞, with which we denote the case where an agent
+9:307:22107:18:0:71:380:79:82:g_d0_f4:82:g_d0_f4:attacks for, respectively, none or every realization of his private information.
+10:308:22188:0:18:91:540:709:120:g_d0_f4:120:g_d0_f4:By Lemma 1, the size of the attack is given byAt(θ)=Pr(x≤x∗t|θ), which is decreasing
+10:309:22272:18:17:71:540:691:120:g_d0_f4:120:g_d0_f12:inθ, and the probability of regime change for an agent with sufficient statisticxtisPr(Rt+1=
+10:310:22364:17:0:72:164:674:120:g_d0_f12:120:g_d0_f12:1|xt,Rt=0)=Pr
+10:311:22377:0:8:162:167:682:120:g_d0_f19:120:g_d0_f19:¡
+10:312:22378:8:0:167:254:674:120:g_d0_f6:65:g_d0_f20:θ≤θ∗t|xt,θ>θ∗t−1
+10:313:22394:0:8:255:260:682:120:g_d0_f19:120:g_d0_f19:¢
+10:314:22395:8:18:260:539:674:120:g_d0_f4:120:g_d0_f4:, which is decreasing inxtifθ∗t>θ∗t−1.It follows that, in
+10:315:22452:18:28:72:406:656:120:g_d0_f4:120:g_d0_f4:any equilibrium in which an attack occurs in periodt, θ∗tandx∗tsolve
+10:316:22520:28:0:253:289:628:120:g_d0_f6:120:g_d0_f12:θ∗t=Φ(
+10:317:22526:0:7:290:299:635:120:g_d0_f7:120:g_d0_f7:√
+10:318:22527:7:39:299:540:628:120:g_d0_f6:120:g_d0_f4:αt(x∗t−θ∗t))(4)
+10:319:22542:39:0:191:208:589:120:g_d0_f12:120:g_d0_f7:1−
+10:320:22544:0:0:216:224:600:120:g_d0_f18:120:g_d0_f18:Φ
+10:321:22545:0:13:225:241:613:120:g_d0_f19:120:g_d0_f7:³√
+10:322:22547:13:0:241:271:600:120:g_d0_f6:120:g_d0_f6:αt+β
+10:323:22551:0:8:273:280:613:120:g_d0_f19:120:g_d0_f19:³
+10:324:22552:8:8:289:294:605:65:g_d0_f13:65:g_d0_f13:α
+10:325:22553:8:0:281:309:597:65:g_d0_f13:120:g_d0_f6:αt+βx
+10:326:22558:0:7:309:341:604:65:g_d0_f21:65:g_d0_f13:∗t+β
+10:327:22562:7:0:328:374:597:65:g_d0_f13:120:g_d0_f6:αt+βz−θ
+10:328:22569:0:0:374:377:604:65:g_d0_f21:65:g_d0_f13:∗t
+10:329:22571:0:35:379:392:613:120:g_d0_f19:120:g_d0_f19: ́ ́
+10:330:22575:35:0:211:219:578:120:g_d0_f18:120:g_d0_f18:Φ
+10:331:22576:0:12:221:236:590:120:g_d0_f19:120:g_d0_f7:³√
+10:332:22578:12:0:236:266:578:120:g_d0_f6:120:g_d0_f6:αt+β
+10:333:22582:0:8:269:276:590:120:g_d0_f19:120:g_d0_f19:³
+10:334:22583:8:8:284:289:582:65:g_d0_f13:65:g_d0_f13:α
+10:335:22584:8:0:276:304:574:65:g_d0_f13:120:g_d0_f6:αt+βx
+10:336:22589:0:7:304:308:582:65:g_d0_f21:65:g_d0_f21:∗
+10:337:22590:7:0:304:320:575:65:g_d0_f13:120:g_d0_f12:t+
+10:338:22592:0:9:331:336:583:65:g_d0_f13:65:g_d0_f13:β
+10:339:22593:9:0:324:369:574:65:g_d0_f13:120:g_d0_f6:αt+βz−θ
+10:340:22600:0:7:370:374:582:65:g_d0_f21:65:g_d0_f21:∗
+10:341:22601:7:0:369:383:575:65:g_d0_f13:65:g_d0_f20:t−1
+10:342:22604:0:35:384:540:590:120:g_d0_f19:120:g_d0_f4: ́ ́=c.(5)
+10:343:22614:35:17:72:540:555:120:g_d0_f4:120:g_d0_f4:Conditions (4) and (5) are the analogs in the dynamic game of conditions (1) and (2) in the static
+10:344:22712:17:18:72:540:538:120:g_d0_f4:120:g_d0_f4:game: (4) states that the equilibrium size of an attack is equal to the critical size that triggers
+10:345:22811:18:18:72:540:520:120:g_d0_f4:120:g_d0_f4:regime change if and only if the fundamentals areθ∗t,while (5) states that an agent is indifferent
+10:346:22909:18:17:71:453:502:120:g_d0_f4:120:g_d0_f6:between attacking and not attacking if and only if his private information isx∗t.
+10:347:22990:17:18:91:539:485:120:g_d0_f4:120:g_d0_f4:Solving (4) forx∗tgivesx∗t=X(θ∗t,αt)and substituting this into (5) gives a single equation in
+10:348:23083:18:18:72:122:467:120:g_d0_f6:120:g_d0_f4:θ∗t,namely
+10:349:23093:18:0:248:255:449:120:g_d0_f6:120:g_d0_f6:U
+10:350:23094:0:9:258:263:458:120:g_d0_f19:120:g_d0_f19:¡
+10:351:23095:9:0:263:336:449:120:g_d0_f6:120:g_d0_f6:θ∗t,θ∗t−1,αt,β,z
+10:352:23111:0:9:335:340:458:120:g_d0_f19:120:g_d0_f19:¢
+10:353:23112:9:24:343:540:449:120:g_d0_f12:120:g_d0_f4:=0,(6)
+10:354:23118:24:28:72:509:425:120:g_d0_f4:65:g_d0_f4:whereX:[0,1]×R+→RandU:[0,1]×R×R2+×R→[−c,1−c]are defined as follows:8
+10:355:23186:28:51:114:255:397:120:g_d0_f6:120:g_d0_f12:X(θ∗,α)≡θ∗+1√αΦ−1(θ∗)
+10:356:23207:51:0:72:171:346:120:g_d0_f6:120:g_d0_f7:U(θ∗,θ−1,α,β,z)≡
+10:357:23223:0:10:178:188:385:120:g_d0_f24:120:g_d0_f24:⎧
+10:358:23224:10:7:178:188:375:120:g_d0_f24:120:g_d0_f24:⎪⎪
+10:359:23226:7:10:178:188:368:120:g_d0_f24:120:g_d0_f24:⎪⎪⎪
+10:360:23229:10:19:178:188:358:120:g_d0_f24:120:g_d0_f24:⎨
+10:361:23230:19:7:178:188:339:120:g_d0_f24:120:g_d0_f24:⎪⎪
+10:362:23232:7:10:178:188:332:120:g_d0_f24:120:g_d0_f24:⎪⎪⎪
+10:363:23235:10:0:178:188:322:120:g_d0_f24:120:g_d0_f24:⎩
+10:364:23236:0:28:192:523:375:120:g_d0_f12:65:g_d0_f20:1−cifθ∗=0>θ−1
+10:365:23249:28:0:192:209:347:120:g_d0_f12:120:g_d0_f7:1−
+10:366:23251:0:0:251:257:358:65:g_d0_f25:65:g_d0_f25:Φ
+10:367:23252:0:10:257:283:369:65:g_d0_f19:65:g_d0_f13:μ√α
+10:368:23255:10:0:265:289:359:65:g_d0_f21:65:g_d0_f13:√α+β
+10:369:23259:0:11:290:294:369:65:g_d0_f24:65:g_d0_f24:∙
+10:370:23260:11:0:295:373:358:65:g_d0_f25:65:g_d0_f20:Φ−1(θ∗)+β√α(z−θ∗)
+10:371:23277:0:32:373:384:369:65:g_d0_f19:65:g_d0_f19: ̧¶
+10:372:23280:32:0:216:222:337:65:g_d0_f25:65:g_d0_f25:Φ
+10:373:23281:0:10:222:247:348:65:g_d0_f19:65:g_d0_f13:μ√α
+10:374:23284:10:0:229:254:338:65:g_d0_f21:65:g_d0_f13:√α+β
+10:375:23288:0:11:255:259:348:65:g_d0_f24:65:g_d0_f24:∙
+10:376:23289:11:0:259:338:337:65:g_d0_f25:65:g_d0_f20:Φ−1(θ∗)+β√α(z−θ∗)
+10:377:23306:0:11:338:342:348:65:g_d0_f19:65:g_d0_f19: ̧
+10:378:23308:11:0:342:408:337:65:g_d0_f20:65:g_d0_f20:+√α+β(θ∗−θ−1)
+10:379:23321:0:32:409:545:348:65:g_d0_f19:120:g_d0_f14:¶−cifθ∗>max{0,θ−1}
+10:380:23339:32:26:192:503:316:120:g_d0_f7:65:g_d0_f20:−cifθ∗≤θ−1
+10:381:23349:26:17:72:539:290:120:g_d0_f4:120:g_d0_f4:The functionsXandUhave a simple interpretation:X(θ∗;α)is the “marginal agent” that im-
+10:382:23435:17:18:72:539:273:120:g_d0_f4:120:g_d0_f4:plements regime change forθ≤θ∗when the precision of private information isα(that is, the
+10:383:23523:18:18:72:540:255:120:g_d0_f4:120:g_d0_f4:thresholdx∗such that, if agents attack if and only ifx≤x∗, the status quo is abandoned if
+10:384:23612:18:17:72:540:237:120:g_d0_f4:120:g_d0_f4:andonlyifθ≤θ∗);U(θ∗,θ−1,α,β,z)is the expected net payoffof the marginal agent from at-
+10:385:23698:17:18:72:540:220:120:g_d0_f4:120:g_d0_f4:tacking, conditional on the knowledge thatθ>θ−1.Condition (6) thus simply requires that the
+10:386:23789:18:17:72:539:202:120:g_d0_f4:120:g_d0_f6:marginal agent is indifferent between attacking and not attacking in periodt≥2.Asfort=1,
+10:387:23877:17:18:72:539:185:120:g_d0_f4:120:g_d0_f4:since the regime has never been challenged in the past, the corresponding indifference condition is
+10:388:23976:18:18:72:539:167:120:g_d0_f6:120:g_d0_f4:U(θ∗1,−∞,α1,β,z)=0,whereU(θ,−∞,α,β,z)coincides with the payoffof the marginal agent
+10:389:24059:18:17:72:189:149:120:g_d0_f4:120:g_d0_f4:in the static benchmark.
+10:390:24083:17:18:91:540:132:120:g_d0_f4:120:g_d0_f4:The next proposition then provides the complete set of necessary and sufficient conditions for
+10:391:24177:18:31:72:170:114:120:g_d0_f4:120:g_d0_f4:monotone equilibria.
+10:392:24197:31:0:84:483:83:36:g_d0_f4:82:g_d0_f15:8With a slight abuse of notation, we letΦ(+∞)=1,Φ(−∞)=0,Φ−1(1) =∞andΦ−1(0) =−∞.
+11:393:24277:0:18:72:540:709:120:g_d0_f3:120:g_d0_f10:Proposition 2 (Equilibrium characterization){at(·)}∞t=1is  a  monotone  equilibrium  if  and
+11:394:24369:18:18:72:318:691:120:g_d0_f10:120:g_d0_f10:only if there exists a sequence{x∗t,θ∗t}∞t=1such that:
+11:395:24423:18:18:91:364:673:120:g_d0_f12:120:g_d0_f6:(i)for allt, at(·)=1ifxt<x∗tandat(·)=0ifxt>x∗t.
+11:396:24470:18:18:91:415:655:120:g_d0_f12:120:g_d0_f6:(ii)fort=1,θ∗1solvesU(θ∗1,−∞,α1,β,z)=0andx∗1=X(θ∗1,α1).
+11:397:24525:18:18:91:539:637:120:g_d0_f12:120:g_d0_f10:(iii)for  anyt≥2,eitherθ∗t=θ∗t−1>0andx∗t=−∞,orθ∗t>θ∗t−1is  a  solution  to
+11:398:24599:18:0:72:79:619:120:g_d0_f6:120:g_d0_f6:U
+11:399:24600:0:9:82:87:628:120:g_d0_f19:120:g_d0_f19:¡
+11:400:24601:9:0:87:160:619:120:g_d0_f6:120:g_d0_f6:θ∗t,θ∗t−1,αt,β,z
+11:401:24617:0:9:159:164:628:120:g_d0_f19:120:g_d0_f19:¢
+11:402:24618:9:18:167:281:619:120:g_d0_f12:120:g_d0_f6:=0andx∗t=X(θ∗t,αt).
+11:403:24637:18:32:91:229:601:120:g_d0_f10:120:g_d0_f10:An equilibrium always exists.
+11:404:24666:32:18:91:540:569:120:g_d0_f4:120:g_d0_f4:Proposition 2 provides a simple algorithm for constructing the entire set of monotone equilibria:
+11:405:24763:18:17:71:540:551:120:g_d0_f4:120:g_d0_f4:start witht=1and letθ∗1be the unique solution toU(θ∗1,−∞,α1,β,z)=0; proceed to period
+11:406:24848:17:18:71:540:534:120:g_d0_f6:120:g_d0_f4:t=2and let eitherθ∗2=θ∗1orθ∗2be a solution to (6); repeat the same step for allt≥3;the set
+11:407:24938:18:17:71:539:516:120:g_d0_f4:120:g_d0_f4:of sequences{θ∗t}∞t=1constructed this way, together with the associated sequences{x∗t}∞t=1,gives
+11:408:25034:17:18:72:540:499:120:g_d0_f4:120:g_d0_f4:the set of monotone equilibria. Note that the above characterization is independent of whether the
+11:409:25132:18:18:72:540:481:120:g_d0_f4:120:g_d0_f4:horizon isfinite or infinite: it is clearly valid even if the game ends exogenously at an arbitrary
+11:410:25231:18:18:72:142:463:120:g_d0_f4:120:g_d0_f4:periodT<∞.
+11:411:25241:18:17:91:539:445:120:g_d0_f4:120:g_d0_f4:Existence of equilibrium follows immediately from the fact thatU(θ∗1,−∞,α1,β,z)=0always
+11:412:25328:17:18:72:539:428:120:g_d0_f4:120:g_d0_f4:admits a solution and henceθ∗t=θ∗1for alltis always an equilibrium. To understand whether there
+11:413:25423:18:18:72:539:410:120:g_d0_f4:120:g_d0_f4:are other equilibria, the next lemma investigates the properties ofUand the existence of solutions
+11:414:25521:18:32:71:101:392:120:g_d0_f4:120:g_d0_f4:to (6).
+11:415:25528:32:18:71:539:360:120:g_d0_f3:120:g_d0_f10:Lemma 2(i)U(θ∗,θ−1,α,β,z)is  continuous  in  all  its  arguments,  non-monotonic  and  single-
+11:416:25622:18:17:72:540:342:120:g_d0_f10:120:g_d0_f10:peaked inθ∗whenθ−1∈(0,1), and strictly decreasing inθ−1andzforθ−1<θ∗.Furthermore, for
+11:417:25707:17:19:72:440:325:120:g_d0_f10:120:g_d0_f6:allθ−1<1andθ∗>θ−1,limα→∞U(θ∗,θ−1,·)=θ∞−θ∗,whereθ∞≡1−c.
+11:418:25761:19:17:91:539:306:120:g_d0_f12:120:g_d0_f10:(ii)LetˆθtbetheuniquesolutiontoU(ˆθt,−∞,αt,β,z)=0.Asolutionto(6)exists only if
+11:419:25839:17:18:71:328:289:120:g_d0_f6:120:g_d0_f6:θ∗t−1<ˆθtand is necessarily bounded from above byˆθt.
+11:420:25892:18:18:91:441:271:120:g_d0_f12:120:g_d0_f10:(iii)Ifθ∗t−1>θ∞,asolutionto(6)does not exist forαtsufficiently high.
+11:421:25960:18:19:91:456:253:120:g_d0_f12:120:g_d0_f10:(iv)Ifθ∗t−1<θ∞,asolutionto(6)necessarily exists forαtsufficiently high.
+11:422:26031:19:17:91:540:234:120:g_d0_f12:120:g_d0_f12:(v)Ifθ∗t−1is the highest solution to(6)for periodt−1,thereexistsα>αt−1such that(6)
+11:423:26113:17:32:72:347:217:120:g_d0_f10:120:g_d0_f10:admits no solution for any periodτ≥tsuch thatατ<α.
+11:424:26163:32:0:91:223:185:120:g_d0_f4:120:g_d0_f6:The non-monotonicity ofU
+11:425:26187:0:9:227:232:194:120:g_d0_f19:120:g_d0_f19:¡
+11:426:26188:9:0:232:305:185:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,αt,β,z
+11:427:26203:0:9:304:309:194:120:g_d0_f19:120:g_d0_f19:¢
+11:428:26204:9:18:313:539:185:120:g_d0_f4:120:g_d0_f4:with respect toθ∗in any periodt≥2(where
+11:429:26243:18:18:72:540:167:120:g_d0_f12:120:g_d0_f4:0<θ∗t−1<1)is a direct consequence of the fact that, forθ∗<θ∗t−1, the marginal agent attaches
+11:430:26335:18:17:72:540:149:120:g_d0_f4:120:g_d0_f4:probability zero to regime change. Forθ∗>θ∗t−1, on the other hand, his belief about regime change
+11:431:26432:17:18:72:539:132:120:g_d0_f4:120:g_d0_f4:is necessarily positive, but converges to zero asθ∗→1,forthenX(θ∗,αt)→∞and hence he
+11:432:26515:18:17:72:539:114:120:g_d0_f4:120:g_d0_f4:attaches probability one toθ>1.His payoffis thus initially increasing and then decreasing, as
+11:433:26608:17:18:72:540:97:120:g_d0_f4:120:g_d0_f4:illustrated by the solid line in Figure 1. Any intersection with the horizontal axis corresponds to
+11:434:26707:18:0:72:539:79:120:g_d0_f4:120:g_d0_f4:a solution to (6). The dashed line instead represents the payoffof the marginal agent in the static
+12:435:26807:0:116:168:171:712:104:g_d0_f30:104:g_d0_f30: 
+12:436:26807:116:0:419:424:596:64:g_d0_f31:64:g_d0_f31:1
+12:437:26808:0:40:174:179:603:64:g_d0_f31:64:g_d0_f31:0
+12:438:26809:40:0:174:184:563:58:g_d0_f32:64:g_d0_f31:−c
+12:439:26811:0:0:169:184:697:64:g_d0_f31:64:g_d0_f31:1−c
+12:440:26814:0:102:184:196:711:104:g_d0_f33:104:g_d0_f33:U 
+12:441:26816:102:76:352:444:609:88:g_d0_f34:35:g_d0_f31:θt ^ θt-1* θ * 
+12:442:26827:76:47:202:410:533:120:g_d0_f4:120:g_d0_f4:Figure 1: The payoffof the marginal agent.
+12:443:26869:47:17:71:539:486:120:g_d0_f4:120:g_d0_f4:game. Whereas the monotonicity of the latter ensures uniqueness, the non-monotonicity in the
+12:444:26961:17:19:71:379:469:120:g_d0_f4:120:g_d0_f4:dynamic game leaves open the possibility for multiple equilibria.
+12:445:27026:19:17:91:539:450:120:g_d0_f4:120:g_d0_f4:The other properties identified in Lemma 2 are also quite intuitive. An increase in the mean of
+12:446:27121:17:18:71:539:433:120:g_d0_f4:120:g_d0_f4:the common prior implies afirst-order stochastic-dominance change in the posterior beliefs about
+12:447:27217:18:18:72:540:415:120:g_d0_f6:120:g_d0_f4:θ, which explains whyUdecreases withz.To understand whyUis also decreasing inθ−1,note
+12:448:27302:18:17:72:539:397:120:g_d0_f4:120:g_d0_f4:that the more aggressive the attacks in the past, the stronger the regime must have been in order
+12:449:27399:17:18:72:540:380:120:g_d0_f4:120:g_d0_f4:to have survived these attacks, and therefore the lower the expected payofffrom attacking in the
+12:450:27495:18:18:72:143:362:120:g_d0_f4:120:g_d0_f4:current period.
+12:451:27510:18:18:91:539:344:120:g_d0_f4:120:g_d0_f4:For the same reason, at anyt≥2,the payoffof the marginal agent is always lower than
+12:452:27593:18:17:72:540:326:120:g_d0_f6:120:g_d0_f4:U(θ∗,−∞,αt,β,z),that is, the payoffin the static game where the precision of private information
+12:453:27689:17:18:72:540:309:120:g_d0_f4:120:g_d0_f4:isαt. This explains why the static-game thresholdˆθt(which corresponds to the intersection of
+12:454:27782:18:18:72:540:291:120:g_d0_f4:120:g_d0_f4:the dashed line with the horizontal axis in Figure 1) is an upper bound for any solution to (6).
+12:455:27878:18:17:72:540:273:120:g_d0_f4:120:g_d0_f4:Nevertheless, the impact of the information thatθ>θ∗t−1on posterior beliefs vanishes for any
+12:456:27970:17:0:72:454:256:120:g_d0_f6:120:g_d0_f6:xt>θ∗t−1asαt→∞,and hence, for anyθ∗>θ∗t−1,the difference betweenU
+12:457:28035:0:9:458:463:265:120:g_d0_f19:120:g_d0_f19:¡
+12:458:28036:9:0:463:535:256:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,αt,β,z
+12:459:28051:0:27:535:540:265:120:g_d0_f19:120:g_d0_f19:¢
+12:460:28052:27:17:72:539:238:120:g_d0_f4:65:g_d0_f21:andU(θ∗,−∞,αt,β,z)also vanishes. Combined with the fact thatU(θ∗,−∞,αt,β,z)→θ∞−θ∗
+12:461:28133:17:18:72:540:221:120:g_d0_f4:120:g_d0_f4:asαt→∞,this in turn implies that, forαtsufficiently high, (6) admits a solution if and only if
+12:462:28227:18:18:72:540:203:120:g_d0_f6:120:g_d0_f4:θ∗t−1<θ∞,whereθ∞is the limit of the equilibrium threshold of the static game as the precision of
+12:463:28323:18:18:72:355:185:120:g_d0_f4:120:g_d0_f6:private information becomes infinite (i.e.,θ∞=limt→∞ˆθt).
+12:464:28380:18:18:91:539:167:120:g_d0_f4:120:g_d0_f4:Finally, to understand(v),note that any unsuccessful attack causes an upward shift (afirst-
+12:465:28471:18:17:71:540:149:120:g_d0_f4:120:g_d0_f4:order stochastic-dominance change) in the posterior beliefs about the strength of the regime, which
+12:466:28570:17:18:71:539:132:120:g_d0_f4:120:g_d0_f4:other things equal reduces the expected payofffrom attacking. It follows that, if the largest possible
+12:467:28672:18:17:71:539:114:120:g_d0_f4:120:g_d0_f4:attack (that is, the highest solution of (6)) is played in one period and no new information arrives
+12:468:28772:17:18:71:540:97:120:g_d0_f4:120:g_d0_f4:thereafter, no attack is possible in any subsequent period.  By continuity then, further attacks
+12:469:28868:18:0:71:539:79:120:g_d0_f4:120:g_d0_f4:remain impossible as long as the change in the precision of private information is not large enough.
+13:470:28970:0:95:156:159:710:116:g_d0_f30:116:g_d0_f30: 
+13:471:28970:95:0:424:429:615:72:g_d0_f31:72:g_d0_f31:1
+13:472:28971:0:70:168:173:623:72:g_d0_f31:72:g_d0_f31:0
+13:473:28972:70:0:163:173:553:65:g_d0_f32:72:g_d0_f31:−c
+13:474:28974:0:0:158:173:693:72:g_d0_f31:72:g_d0_f31:1−c
+13:475:28977:0:94:173:186:709:116:g_d0_f33:116:g_d0_f33:U 
+13:476:28979:94:0:218:233:615:98:g_d0_f34:39:g_d0_f31:θ1 * 
+13:477:28983:0:0:437:342:623:98:g_d0_f34:52:g_d0_f33:θ * θ3 ' θ3 " 
+13:478:28993:0:67:181:187:695:116:g_d0_f33:116:g_d0_f33: 
+13:479:28993:67:112:363:378:628:98:g_d0_f34:39:g_d0_f31:θ o o 
+13:480:28996:112:48:204:407:516:120:g_d0_f4:120:g_d0_f4:Figure 2: Equilibria with multiple attacks.
+13:481:29039:48:33:72:282:468:209:g_d0_f3:209:g_d0_f3:4  Multiplicity and dynamics
+13:482:29067:33:17:72:540:435:120:g_d0_f4:120:g_d0_f4:Part(v)of Lemma 2 highlights that the arrival of new private information is necessary for further
+13:483:29164:17:18:71:540:418:120:g_d0_f4:120:g_d0_f4:attacks to become possible after period 1. Whether this is also sufficient depends on the initial
+13:484:29261:18:18:71:539:400:120:g_d0_f4:120:g_d0_f4:prior. This is because an increase in the precisionof private information leads agents to discount,
+13:485:29360:18:17:71:539:382:120:g_d0_f4:120:g_d0_f4:not only the information conveyed by the fact that the regime survived past attacks, but also their
+13:486:29459:17:20:71:162:365:120:g_d0_f4:120:g_d0_f4:initial prior beliefs.
+13:487:29481:20:17:91:539:345:120:g_d0_f4:120:g_d0_f4:Whenzis low (“aggressive prior”), an increase in the precision of private information makes
+13:488:29572:17:18:71:540:328:120:g_d0_f4:120:g_d0_f4:the marginal agent less aggressive in the static game (that is,ˆθtdecreases withαt). The knowledge
+13:489:29670:18:18:72:540:310:120:g_d0_f4:120:g_d0_f4:that the regime survived past attacks then only reinforces this effect. Therefore, forzsufficiently
+13:490:29769:18:19:72:540:292:120:g_d0_f4:120:g_d0_f4:low, there exists a unique equilibrium and is such that no attack ever occurs after thefirst period.
+13:491:29869:19:18:91:540:273:120:g_d0_f4:120:g_d0_f4:When insteadzis high (“lenient prior”), the arrival of new private information makes the
+13:492:29957:18:17:72:539:255:120:g_d0_f4:120:g_d0_f4:marginal agent more aggressive, and may eventually offset the incentive not to attack induced by
+13:493:30053:17:18:72:539:238:120:g_d0_f4:120:g_d0_f6:the knowledge that the regime survived past attacks. Indeed, ifzis high enough so thatθ∗1<θ∞,
+13:494:30146:18:18:72:540:220:120:g_d0_f4:120:g_d0_f4:Lemma 2 ensures that a second attack necessarily becomes possible onceαtis sufficiently high.
+13:495:30239:18:17:72:540:202:120:g_d0_f4:120:g_d0_f4:Such an example is illustrated in Figure 2. The dashed line represents the payoffof the marginal
+13:496:30335:17:18:72:540:185:120:g_d0_f4:120:g_d0_f4:agent in period1.  Its intersection with the horizontal axis definesθ∗1<θ∞.The payoffof the
+13:497:30426:18:18:72:540:167:120:g_d0_f4:120:g_d0_f4:marginal agent in period2is represented by the dotted line, and that in period3by the solid line.
+13:498:30523:18:17:72:540:149:120:g_d0_f4:120:g_d0_f4:Clearly,α2is low enough that no attack is possible in period2.Incontrast,α3is high enough that
+13:499:30617:17:18:72:540:132:120:g_d0_f4:120:g_d0_f4:a new attack is possible. There thus exist at least three equilibria in this example: one in which
+13:500:30715:18:17:72:538:114:120:g_d0_f6:65:g_d0_f20:θ∗t=θ∗1for allt,another in whichθ∗2=θ∗1andθ∗t=θ03for allt≥3,andathirdinwhichθ∗2=θ∗1
+13:501:30798:17:18:72:539:97:120:g_d0_f4:120:g_d0_f4:andθ∗t=θ003for allt≥3,whereθ03andθ003correspond to the two intersections of the solid line with
+13:502:30893:18:0:72:164:79:120:g_d0_f4:120:g_d0_f4:the horizontal axis.
+14:503:30915:0:18:91:540:709:120:g_d0_f4:120:g_d0_f4:In the example of Figure 2, bothθ03andθ003are lower thanθ∞. By Lemma 2, then, a third attack
+14:504:31007:18:17:72:539:691:120:g_d0_f4:120:g_d0_f4:also becomes possible at some future date. More generally, ifzis sufficiently high, any solution
+14:505:31103:17:18:72:539:674:120:g_d0_f4:120:g_d0_f4:to (6) is bounded from above byθ∞in all periods, which ensures that a new attack eventually
+14:506:31194:18:18:72:539:656:120:g_d0_f4:120:g_d0_f4:becomes possible after any unsuccessful one.  Hence, forzsufficiently high, not only there are
+14:507:31288:18:27:72:495:638:120:g_d0_f4:120:g_d0_f4:multiple equilibria, but any arbitrary number of attacks can be sustained in equilibrium.
+14:508:31377:27:18:72:419:611:120:g_d0_f3:120:g_d0_f10:Theorem 1 (Multiplicity)There exist thresholdsz≤z≤zsuch that:
+14:509:31438:18:18:91:539:593:120:g_d0_f12:120:g_d0_f10:(i)Ifz≤z,thereisauniquemonotone equilibrium and an attack occurs only in period one.
+14:510:31522:18:17:91:540:575:120:g_d0_f12:120:g_d0_f7:(ii)Ifz∈(z,z),there are at mostfinitely many monotone equilibria and there exists ̄t<∞
+14:511:31608:17:18:72:265:558:120:g_d0_f10:120:g_d0_f6:such that no attack occurs after period ̄t.
+14:512:31651:18:17:91:539:540:120:g_d0_f12:120:g_d0_f10:(iii)Ifz>z,there areinfinitely manyequilibria; if in additionz>z,for anytandN,there
+14:513:31734:17:18:72:344:523:120:g_d0_f10:120:g_d0_f10:is an equilibrium in whichNattacks occur after periodt.
+14:514:31789:18:39:91:409:505:120:g_d0_f10:120:g_d0_f6:Finally,z=z=zwhenc≤1/2,whereasz≤z<zwhenc>1/2.
+14:515:31834:39:17:91:540:466:120:g_d0_f3:120:g_d0_f4:Proof.Recall thatθ∗1=ˆθ1and, for allt≥2,θ∗t<ˆθt,whereˆθt=ˆθ(αt,β,z)is the unique
+14:516:31914:17:18:72:539:449:120:g_d0_f4:120:g_d0_f4:solution toU(ˆθ,−∞,αt,β,z)=0.As we show in Lemma A1 in the Appendix, there exist thresholds
+14:517:32005:18:14:72:539:431:120:g_d0_f6:120:g_d0_f12:z≤z≤z(possibly functions ofα1andβ)with the following properties:ˆθt≤ˆθ1for alltifz≤z;
+14:518:32090:14:21:72:434:417:120:g_d0_f12:120:g_d0_f6:ˆθ1≤(≥)θ∞if and onlyz≥(≤)z;andˆθt<θ∞for alltif and only ifz>z.
+14:519:32152:21:18:91:539:396:120:g_d0_f12:120:g_d0_f4:(i)Considerfirstz≤z.Then,ˆθt≤ˆθ1=θ∗1for allt,and hence, by part (ii) of Lemma 2, (6)
+14:520:32236:18:17:72:508:378:120:g_d0_f4:120:g_d0_f6:admits no solution at anyt≥2. The unique monotone equilibrium is thusθ∗t=θ∗1for allt.
+14:521:32321:17:18:91:540:361:120:g_d0_f12:120:g_d0_f4:(ii)Next, considerz∈(z,z),in which caseˆθ1=θ∗1>θ∞, but we can not rule out the
+14:522:32399:18:17:72:540:343:120:g_d0_f4:120:g_d0_f4:possibility that there exists a periodt≥2such thatˆθt>ˆθ1andU(θ∗,θ∗1,αt,β,z)=0admits a
+14:523:32485:17:18:72:539:326:120:g_d0_f4:120:g_d0_f4:solution. Nevertheless, sinceθ∗t−1≥θ∗1>θ∞for allt,by part (iii) of Lemma 2 and the fact that
+14:524:32577:18:18:72:545:308:120:g_d0_f6:120:g_d0_f4:αt→∞ast→∞,thereexists ̄t<∞such that (6) admits no solution fort≥ ̄t.Moreover,since
+14:525:32659:18:17:71:540:290:120:g_d0_f6:120:g_d0_f4:Uis single-peaked, (6) has at most two solutions fort< ̄t. Hence, there are at mostfinitely many
+14:526:32755:17:18:71:434:273:120:g_d0_f4:120:g_d0_f4:monotone equilibria, and in any equilibrium no attack occurs after period ̄t.
+14:527:32832:18:17:91:540:255:120:g_d0_f12:120:g_d0_f4:(iii)Finally, considerz>z,in which caseθ∗1<θ∞.Then, by part (iv) of Lemma 2, there exists
+14:528:32921:17:18:72:539:238:120:g_d0_f4:120:g_d0_f6:at0<∞such thatU(θ∗,θ∗1,αt,β,z)=0admits a solution for allt≥t0.Hence, for anyt≥t0,
+14:529:33002:18:18:72:539:220:120:g_d0_f4:120:g_d0_f4:there is an equilibrium in whichθ∗τ=θ∗1forτ<t,θ∗tsolvesU(θ∗t,θ∗1,αt,β,z)=0,andθ∗τ=θ∗tfor
+14:530:33090:18:17:72:539:202:120:g_d0_f4:120:g_d0_f4:allτ>t.That is, there exist (countably) infinitely many equilibria, indexed by the time at which
+14:531:33186:17:18:72:192:185:120:g_d0_f4:120:g_d0_f4:the second attack occurs.
+14:532:33211:18:18:91:540:167:120:g_d0_f4:120:g_d0_f4:Whenz∈(z,z),the second attack may lead to a thresholdθ∗t>θ∞,in which case a third
+14:533:33292:18:17:72:539:149:120:g_d0_f4:120:g_d0_f4:attack might be impossible. If howeverz>z,thenˆθt<θ∞for allt,and hence by part (ii) of
+14:534:33378:17:18:72:539:132:120:g_d0_f4:120:g_d0_f4:Lemma 2,θ∗t<θ∞,for allt. But then by part (iv), a new attack eventually becomes possible after
+14:535:33472:18:17:71:539:114:120:g_d0_f4:120:g_d0_f4:any unsuccessful one. It follows that, for anyt≥1and anyN≥1,there exist increasing sequences
+14:536:33564:17:18:71:539:97:120:g_d0_f14:120:g_d0_f6:{t2,...,tN}and{θ2,..., θN},witht2≥t,such thatU(θ2,θ∗1,αt2,β,z)=0,U(θ3,θ2,αt3,β,z)=0,
+14:537:33648:18:0:72:539:79:120:g_d0_f4:120:g_d0_f14:and so on. The following is then an equilibrium:θ∗τ=θ∗1forτ<t2,θ∗τ=θjforτ∈{tj,...,tj+1−1}
+15:538:33739:0:18:72:539:709:120:g_d0_f4:120:g_d0_f4:andj∈{2,...,N−1},andθ∗τ=θNforτ≥tN.That is, for anyt≥1and anyN≥1,there exists
+15:539:33815:18:28:72:326:691:120:g_d0_f4:120:g_d0_f4:an equilibrium in whichNattacks occur after datet.
+15:540:33865:28:18:91:540:663:120:g_d0_f4:120:g_d0_f4:The existence of infinitely many equilibria in the casez>zrelies on the assumption that the
+15:541:33956:18:18:72:540:645:120:g_d0_f4:120:g_d0_f4:game continues forever as long as the status quo is in place: if the game ended for exogenous reasons
+15:542:34057:18:17:72:540:627:120:g_d0_f4:120:g_d0_f4:at afinite date, there would exist onlyfinitely many equilibria. Nevertheless, as long asz>zand
+15:543:34152:17:18:72:539:610:120:g_d0_f6:120:g_d0_f4:αt→∞ast→∞,then, for anyM,there exists afiniteTsuch that the game would have at least
+15:544:34236:18:17:71:539:592:120:g_d0_f6:120:g_d0_f4:Mequilibria if it ended at dateT. Moreover, even ifT=2,α2high enough suffices for the game to
+15:545:34329:17:18:71:540:575:120:g_d0_f4:120:g_d0_f4:have multiple equilibria whenz>z.Finally, as we show in Section 6.1, the introduction of public
+15:546:34424:18:18:72:433:557:120:g_d0_f4:120:g_d0_f6:signals ensures the existenceof multiple equilibria for anyT≥2and anyz.
+15:547:34495:18:17:91:539:539:120:g_d0_f4:120:g_d0_f4:In the remainder of this section, we identify equilibrium properties that may turn useful in
+15:548:34587:17:28:71:229:522:120:g_d0_f4:120:g_d0_f4:understanding crises phenomena.
+15:549:34618:28:18:71:540:494:120:g_d0_f3:120:g_d0_f10:Corollary 1Supposeθ>θ∞andz>z.The status quo survives in any equilibrium.  Neverthe-
+15:550:34701:18:17:72:540:476:120:g_d0_f10:120:g_d0_f10:less,  there existst<∞such that,  at anyt≥t,  an attack is possible,  yet need not take place.
+15:551:34795:17:28:72:341:459:120:g_d0_f10:120:g_d0_f10:Furthermore, any arbitrarynumber of attacks can occur.
+15:552:34849:28:18:91:539:431:120:g_d0_f4:120:g_d0_f4:This seems to square well with the common view that economic fundamentals may help predict
+15:553:34939:18:18:72:540:413:120:g_d0_f4:120:g_d0_f4:eventual outcomes (e.g., whether a currency is eventually devalued) but not when a crisis will occur
+15:554:35039:18:17:72:540:395:120:g_d0_f4:120:g_d0_f4:or whether attacks will cease. On the contrary, this view is inconsistent with the common-knowledge
+15:555:35138:17:18:72:540:378:120:g_d0_f4:120:g_d0_f4:version of the model, in which case fundamentals fail to predict both the timing of attacks and the
+15:556:35237:18:18:72:540:360:120:g_d0_f4:120:g_d0_f4:eventual regime outcome,9as well as with unique-equilibrium models like Morris and Shin (1999),
+15:557:35332:18:17:72:540:342:120:g_d0_f4:120:g_d0_f4:in which both the timing of attacks and the ultimate fate of the regime are uniquely pinned down
+15:558:35428:17:18:72:154:325:120:g_d0_f4:120:g_d0_f4:by fundamentals.
+15:559:35444:18:28:91:490:307:120:g_d0_f4:120:g_d0_f4:Consider now how the dynamics of attacks depend on the dynamics of information.
+15:560:35523:28:17:72:540:279:120:g_d0_f3:120:g_d0_f10:Corollary 2After the most aggressive attack for a given period occurs, the game enters a phase
+15:561:35617:17:18:72:539:262:120:g_d0_f10:120:g_d0_f10:of tranquillity, during which no attack is possible.  This phase is longer the slower the arrival of
+15:562:35717:18:28:72:168:244:120:g_d0_f10:120:g_d0_f10:private information.
+15:563:35737:28:18:91:539:216:120:g_d0_f4:120:g_d0_f4:Along with the property that forθ>θ∞andz>za new attack eventually becomes possible
+15:564:35819:18:17:72:539:198:120:g_d0_f4:120:g_d0_f4:after any unsuccessful one, the above result implies that dynamics may take the form of cycles in
+15:565:35916:17:18:72:539:181:120:g_d0_f4:120:g_d0_f4:which the economy alternates from phases of tranquillity to periods of crisis, eventually resulting
+15:566:36015:18:17:72:540:163:120:g_d0_f4:120:g_d0_f4:into a new attack, without any change in the underlying fundamentals. Once again, this would not
+15:567:36111:17:49:72:426:146:120:g_d0_f4:120:g_d0_f4:be possible either under common knowledge or with a unique equilibrium.
+15:568:36182:49:18:84:539:97:36:g_d0_f4:82:g_d0_f4:9Of course, this is true providedθ∈[0,1].If insteadθ/∈[0,1],fundamentals predict both the timing and thefinal
+15:569:36291:18:0:72:492:79:82:g_d0_f4:82:g_d0_f4:outcome, as forθ<0it is dominant to attack immediately and forθ>1it is dominant never to attack.
+16:570:36389:0:29:72:242:709:209:g_d0_f3:209:g_d0_f3:5  Unobservable shocks
+16:571:36411:29:17:72:539:680:120:g_d0_f4:120:g_d0_f4:In this section, we examine the possibility that the critical size of attack that triggers regime change
+16:572:36515:17:18:72:540:663:120:g_d0_f4:120:g_d0_f4:varies stochastically over time due to unobservable shocks. This is not only a realistic scenario,
+16:573:36613:18:17:72:540:645:120:g_d0_f4:120:g_d0_f4:but also an appropriate perturbation. In the model without shocks, the knowledge that the regime
+16:574:36709:17:18:72:540:628:120:g_d0_f4:120:g_d0_f4:is in place att≥2makes it common certainty thatθ>0,which explains why there always exist
+16:575:36797:18:18:71:539:610:120:g_d0_f4:120:g_d0_f4:equilibria in which nobody attacks att≥2.In contrast, shocks may guarantee that a positive
+16:576:36887:18:17:71:539:592:120:g_d0_f4:120:g_d0_f4:measure of agents attack in every period by “smoothing out” the information generated by the
+16:577:36979:17:18:71:539:575:120:g_d0_f4:120:g_d0_f4:knowledge that the regime survived past attacks and ensuring the existence of a lower dominance
+16:578:37074:18:18:71:179:557:120:g_d0_f4:120:g_d0_f4:region in every period.
+16:579:37097:18:17:91:539:539:120:g_d0_f4:120:g_d0_f4:We modify the game as follows. Agents continue to receive private signals aboutθas in the
+16:580:37186:17:18:71:543:522:120:g_d0_f4:120:g_d0_f4:benchmark model, but the regime is now abandoned in periodtifandonlyifAt≥θ+δωt,where
+16:581:37270:18:17:72:539:504:120:g_d0_f6:120:g_d0_f4:δ≥0andωtis a real random variable with continuous c.d.f.F,independent ofθand the noise in
+16:582:37359:17:18:71:539:487:120:g_d0_f4:120:g_d0_f4:the agents’ signals.ωtcan be interpreted as a shock to the fundamentals (i.e., the strength of the
+16:583:37457:18:18:71:540:469:120:g_d0_f4:120:g_d0_f4:regime) andδas the volatility of these shocks. Denoting withΓ(δ)the game in which the volatility
+16:584:37553:18:23:71:297:451:120:g_d0_f4:120:g_d0_f6:isδ,the baseline model can be nested asδ=0.
+16:585:37596:23:18:91:539:428:120:g_d0_f11:120:g_d0_f4:Equilibrium characterization withδ>0.In the presence of shocks, the regime outcome
+16:586:37678:18:17:71:540:410:120:g_d0_f4:120:g_d0_f4:depends, not only onθ,but also onωt.As a result, we loose the ability to characterize the set of
+16:587:37774:17:18:72:540:393:120:g_d0_f4:120:g_d0_f4:monotone equilibria in terms of a sequence of truncation points forθ. Nevertheless, we can still
+16:588:37870:18:17:72:539:375:120:g_d0_f4:120:g_d0_f4:characterize strategies as sequences of thresholds{ ̄xt}∞t=1such that an agent attacks in periodtif
+16:589:37969:17:18:72:233:358:120:g_d0_f4:120:g_d0_f6:andonlyifxt≤ ̄xt,where ̄xt∈R.
+16:590:37998:18:18:91:539:340:120:g_d0_f4:120:g_d0_f4:Considerfirst the regime outcomes induced by a given{ ̄xt}∞t=1.  The size of the attack in
+16:591:38088:18:0:72:179:322:120:g_d0_f4:120:g_d0_f18:periodtisAt(θ)=Φ
+16:592:38104:0:9:181:194:331:120:g_d0_f19:120:g_d0_f7:¡√
+16:593:38106:9:0:195:244:322:120:g_d0_f6:120:g_d0_f12:αt( ̄xt−θ)
+16:594:38116:0:9:244:249:331:120:g_d0_f19:120:g_d0_f19:¢
+16:595:38117:9:17:253:540:322:120:g_d0_f4:120:g_d0_f7:and hence the status quo is abandoned if and only ifωt≤
+16:596:38172:17:0:72:134:305:120:g_d0_f12:120:g_d0_f7: ̄ωt(θ; ̄xt,δ)≡
+16:597:38187:0:9:137:142:314:120:g_d0_f19:120:g_d0_f19:£
+16:598:38188:9:0:141:149:305:120:g_d0_f18:120:g_d0_f18:Φ
+16:599:38189:0:9:151:165:314:120:g_d0_f19:120:g_d0_f7:¡√
+16:600:38191:9:0:165:214:305:120:g_d0_f6:120:g_d0_f12:αt( ̄xt−θ)
+16:601:38201:0:9:215:220:314:120:g_d0_f19:120:g_d0_f19:¢
+16:602:38202:9:0:222:238:305:120:g_d0_f7:120:g_d0_f6:−θ
+16:603:38204:0:9:238:243:314:120:g_d0_f19:120:g_d0_f19:¤
+16:604:38205:9:18:245:540:305:120:g_d0_f6:120:g_d0_f6:/δ.It follows that the probability of regime change in periodt
+16:605:38267:18:28:71:473:287:120:g_d0_f4:120:g_d0_f4:conditional onθand given that agents use monotone strategies with threshold ̄xt,is
+16:606:38349:28:27:236:375:259:120:g_d0_f6:120:g_d0_f6:pt(θ; ̄xt,δ)=F( ̄ωt(θ; ̄xt,δ)).
+16:607:38380:27:0:91:222:232:120:g_d0_f4:65:g_d0_f13:Next, for anyt≥2,letψt
+16:608:38402:0:9:225:230:241:120:g_d0_f19:120:g_d0_f19:¡
+16:609:38403:9:0:230:273:232:120:g_d0_f6:120:g_d0_f6:θ; ̄xt−1,δ
+16:610:38413:0:9:271:276:241:120:g_d0_f19:120:g_d0_f19:¢
+16:611:38414:9:18:280:540:232:120:g_d0_f4:120:g_d0_f6:denote the density of thecommonposterior aboutθ,
+16:612:38462:18:17:72:539:214:120:g_d0_f4:120:g_d0_f4:when in previous periods agents followed monotone strategies with thresholds ̄xt−1={ ̄x1,..., ̄xt−1}.
+16:613:38563:17:31:72:144:197:120:g_d0_f4:120:g_d0_f4:By Bayes’ rule,
+16:614:38578:31:0:72:82:166:120:g_d0_f6:65:g_d0_f13:ψt
+16:615:38580:0:9:84:89:175:120:g_d0_f19:120:g_d0_f19:¡
+16:616:38581:9:0:89:132:166:120:g_d0_f6:120:g_d0_f6:θ; ̄xt−1,δ
+16:617:38591:0:9:130:135:175:120:g_d0_f19:120:g_d0_f19:¢
+16:618:38592:9:0:138:147:166:120:g_d0_f12:120:g_d0_f12:=
+16:619:38593:0:0:173:292:174:120:g_d0_f12:65:g_d0_f20:[1−pt−1(θ; ̄xt−1,δ)]ψt−1
+16:620:38617:0:9:294:299:183:120:g_d0_f19:120:g_d0_f19:¡
+16:621:38618:9:0:299:342:174:120:g_d0_f6:120:g_d0_f6:θ; ̄xt−2,δ
+16:622:38628:0:17:340:345:183:120:g_d0_f19:120:g_d0_f19:¢
+16:623:38629:17:13:151:174:166:120:g_d0_f19:65:g_d0_f21:R+∞
+16:624:38632:13:0:156:228:153:65:g_d0_f21:120:g_d0_f6:−∞[1−pt−1(θ
+16:625:38643:0:0:229:381:160:65:g_d0_f35:120:g_d0_f12:0; ̄xt−1,δ)]ψt−1(θ0; ̄xt−2,δ)dθ0=
+16:626:38676:0:7:407:538:173:120:g_d0_f18:120:g_d0_f12:Πt−1s=1[1−ps(θ; ̄xs,δ)]ψ1(θ)
+16:627:38704:7:13:384:407:166:120:g_d0_f19:65:g_d0_f21:R+∞
+16:628:38707:13:0:389:417:153:65:g_d0_f21:120:g_d0_f18:−∞Π
+16:629:38710:0:7:417:431:161:65:g_d0_f13:65:g_d0_f20:t−1
+16:630:38713:7:22:417:560:154:65:g_d0_f13:65:g_d0_f35:s=1[1−ps(θ0; ̄xs,δ)]ψ1(θ0)dθ0
+16:631:38742:22:0:72:145:132:120:g_d0_f4:120:g_d0_f12:whereψ1(θ)=
+16:632:38753:0:8:145:154:140:120:g_d0_f7:120:g_d0_f7:√
+16:633:38754:8:0:154:171:132:120:g_d0_f6:120:g_d0_f12:βφ(
+16:634:38757:0:8:172:181:140:120:g_d0_f7:120:g_d0_f7:√
+16:635:38758:8:18:181:540:132:120:g_d0_f6:120:g_d0_f4:β(θ−z))is the density of the initial prior. We similarly denote the density
+16:636:38833:18:0:71:295:114:120:g_d0_f4:65:g_d0_f13:of the correspondingprivateposteriors withψt
+16:637:38877:0:9:298:303:123:120:g_d0_f19:120:g_d0_f19:¡
+16:638:38878:9:0:302:355:114:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+16:639:38890:0:9:353:358:123:120:g_d0_f19:120:g_d0_f19:¢
+16:640:38891:9:17:361:511:114:120:g_d0_f4:120:g_d0_f4:fort≥2andψ1(θ|x)fort=1.
+16:641:38914:17:0:91:442:97:120:g_d0_f4:65:g_d0_f13:Finally, consider payoffs. For anyt≥1,x∈R,and ̄xt∈Rt,definevt
+16:642:38975:0:8:445:450:105:120:g_d0_f19:120:g_d0_f19:¡
+16:643:38976:8:0:450:483:97:120:g_d0_f6:120:g_d0_f6:x; ̄xt,δ
+16:644:38984:0:8:481:486:105:120:g_d0_f19:120:g_d0_f19:¢
+16:645:38985:8:18:490:539:97:120:g_d0_f4:120:g_d0_f4:as the net
+16:646:38995:18:0:72:540:79:120:g_d0_f4:120:g_d0_f4:expected payofffrom attacking in periodtfor an agent with sufficient statisticxwhen all other
+17:647:39090:0:29:72:539:709:120:g_d0_f4:120:g_d0_f12:agents attack in periodτ≤tif and only if their sufficient statistic inτis less than or equal to ̄xτ:
+17:648:39190:29:0:179:187:680:120:g_d0_f6:65:g_d0_f13:vt
+17:649:39192:0:9:190:195:689:120:g_d0_f19:120:g_d0_f19:¡
+17:650:39193:9:0:195:228:680:120:g_d0_f6:120:g_d0_f6:x; ̄xt,δ
+17:651:39201:0:9:226:231:689:120:g_d0_f19:120:g_d0_f19:¢
+17:652:39202:9:0:234:243:680:120:g_d0_f12:120:g_d0_f12:=
+17:653:39203:0:25:245:272:695:120:g_d0_f19:65:g_d0_f21:Z+∞
+17:654:39206:25:0:252:267:670:65:g_d0_f21:65:g_d0_f21:−∞
+17:655:39208:0:0:274:335:680:120:g_d0_f6:65:g_d0_f13:pt(θ; ̄xt,δ)ψt
+17:656:39222:0:9:338:343:689:120:g_d0_f19:120:g_d0_f19:¡
+17:657:39223:9:0:343:395:680:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+17:658:39235:0:9:393:398:689:120:g_d0_f19:120:g_d0_f19:¢
+17:659:39236:9:31:400:432:680:120:g_d0_f6:120:g_d0_f6:dθ−c.
+17:660:39241:31:0:72:129:649:120:g_d0_f4:65:g_d0_f13:Note thatvt
+17:661:39252:0:9:132:137:658:120:g_d0_f19:120:g_d0_f19:¡
+17:662:39253:9:0:137:169:649:120:g_d0_f6:120:g_d0_f6:x; ̄xt,δ
+17:663:39261:0:9:168:173:658:120:g_d0_f19:120:g_d0_f19:¢
+17:664:39262:9:17:176:539:649:120:g_d0_f4:120:g_d0_f4:depends on both the contemporaneous threshold ̄xtand the sequence of past
+17:665:39335:17:18:72:543:632:120:g_d0_f4:120:g_d0_f4:thresholds ̄xt−1;the former determines the probability of regime change conditional onθ,whereas
+17:666:39430:18:0:72:463:614:120:g_d0_f4:120:g_d0_f8:the latter determines the posterior beliefs aboutθ.Next, for anyt≥1and ̄xt∈R
+17:667:39506:0:7:463:466:621:65:g_d0_f13:65:g_d0_f13:t
+17:668:39507:7:41:467:486:614:120:g_d0_f6:120:g_d0_f4:,let
+17:669:39511:41:0:186:196:573:120:g_d0_f6:65:g_d0_f13:Vt
+17:670:39513:0:8:198:203:581:120:g_d0_f19:120:g_d0_f19:¡
+17:671:39514:8:0:204:223:573:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+17:672:39520:0:8:223:228:581:120:g_d0_f19:120:g_d0_f19:¢
+17:673:39521:8:0:231:240:573:120:g_d0_f7:120:g_d0_f7:≡
+17:674:39522:0:9:243:253:601:120:g_d0_f24:120:g_d0_f24:⎧
+17:675:39523:9:7:243:253:592:120:g_d0_f24:120:g_d0_f24:⎪⎪
+17:676:39525:7:20:243:253:585:120:g_d0_f24:120:g_d0_f24:⎨
+17:677:39526:20:0:243:253:565:120:g_d0_f24:120:g_d0_f24:⎪⎪⎩
+17:678:39529:0:0:257:311:589:120:g_d0_f12:65:g_d0_f13:limx→+∞vt
+17:679:39538:0:9:314:319:598:120:g_d0_f19:120:g_d0_f19:¡
+17:680:39539:9:0:319:352:589:120:g_d0_f6:120:g_d0_f6:x; ̄xt,δ
+17:681:39547:0:9:350:355:598:120:g_d0_f19:120:g_d0_f19:¢
+17:682:39548:9:17:365:418:589:120:g_d0_f4:120:g_d0_f7:if ̄xt=+∞
+17:683:39557:17:0:257:266:572:120:g_d0_f6:65:g_d0_f13:vt
+17:684:39559:0:9:268:273:581:120:g_d0_f19:120:g_d0_f19:¡
+17:685:39560:9:0:274:309:572:120:g_d0_f12:120:g_d0_f6: ̄xt; ̄xt,δ
+17:686:39571:0:9:307:312:581:120:g_d0_f19:120:g_d0_f19:¢
+17:687:39572:9:18:365:406:572:120:g_d0_f4:120:g_d0_f8:if ̄xt∈R
+17:688:39580:18:0:257:311:554:120:g_d0_f12:65:g_d0_f13:limx→−∞vt
+17:689:39589:0:9:314:319:563:120:g_d0_f19:120:g_d0_f19:¡
+17:690:39590:9:0:319:352:554:120:g_d0_f6:120:g_d0_f6:x; ̄xt,δ
+17:691:39598:0:9:350:355:563:120:g_d0_f19:120:g_d0_f19:¢
+17:692:39599:9:23:365:418:554:120:g_d0_f4:120:g_d0_f7:if ̄xt=−∞
+17:693:39608:23:18:72:539:531:120:g_d0_f6:120:g_d0_f4:Vtis the analogue of the functionUin the benchmark model: it represents the net payofffrom
+17:694:39698:18:17:72:379:513:120:g_d0_f4:65:g_d0_f4:attacking in periodtfor the marginal agent with threshold ̄xt.10
+17:695:39762:17:0:91:398:496:120:g_d0_f4:65:g_d0_f13:In Lemma A2 in the Appendix, we prove that, for anyδ>0,Vt
+17:696:39819:0:8:401:406:504:120:g_d0_f19:120:g_d0_f19:¡
+17:697:39820:8:0:406:425:496:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+17:698:39826:0:8:426:431:504:120:g_d0_f19:120:g_d0_f19:¢
+17:699:39827:8:18:434:539:496:120:g_d0_f4:120:g_d0_f4:is continuous in ̄xtfor
+17:700:39850:18:0:72:124:478:120:g_d0_f4:120:g_d0_f8:any ̄xt∈R
+17:701:39859:0:7:124:138:485:65:g_d0_f13:65:g_d0_f20:t−1
+17:702:39862:7:18:141:540:478:120:g_d0_f14:120:g_d0_f4:×R, which we use to establish the existence, and complete the characterization, of
+17:703:39944:18:28:72:170:460:120:g_d0_f4:120:g_d0_f4:monotone equilibria.
+17:704:39964:28:17:72:539:432:120:g_d0_f3:120:g_d0_f10:Proposition 3For anyδ>0,{at(·)}∞t=1is a monotone equilibrium forΓ(δ)if and only if there
+17:705:40052:17:18:72:240:415:120:g_d0_f10:120:g_d0_f10:exists a sequence{ ̄xt}∞t=1such that:
+17:706:40089:18:17:91:362:397:120:g_d0_f12:120:g_d0_f12:(i)for allt, at(·)=1ifxt< ̄xtandat(·)=0ifxt> ̄xt;
+17:707:40138:17:18:91:285:380:120:g_d0_f12:120:g_d0_f12:(ii)fort=1, ̄x1∈RandV1( ̄x1;δ)=0;
+17:708:40171:18:0:91:294:362:120:g_d0_f12:65:g_d0_f13:(iii)for anyt≥2,either ̄xt=−∞andVt
+17:709:40205:0:9:296:301:371:120:g_d0_f19:120:g_d0_f19:¡
+17:710:40206:9:0:302:321:362:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+17:711:40212:0:9:321:326:371:120:g_d0_f19:120:g_d0_f19:¢
+17:712:40213:9:0:329:433:362:120:g_d0_f7:65:g_d0_f13:≤0,or ̄xt∈RandVt
+17:713:40229:0:9:435:440:371:120:g_d0_f19:120:g_d0_f19:¡
+17:714:40230:9:0:441:460:362:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+17:715:40236:0:9:460:465:371:120:g_d0_f19:120:g_d0_f19:¢
+17:716:40237:9:18:468:488:362:120:g_d0_f12:120:g_d0_f6:=0.
+17:717:40240:18:28:91:262:344:120:g_d0_f10:120:g_d0_f6:An equilibrium exists for anyδ>0.
+17:718:40273:28:17:91:540:316:120:g_d0_f11:120:g_d0_f4:Convergence to benchmark game.We next consider the properties of the equilibrium
+17:719:40353:17:0:71:353:299:120:g_d0_f4:120:g_d0_f18:set asδ→0.Letθt( ̄xt)be the unique solution toθ=Φ
+17:720:40402:0:9:354:368:308:120:g_d0_f19:120:g_d0_f7:¡√
+17:721:40404:9:0:368:417:299:120:g_d0_f6:120:g_d0_f12:αt( ̄xt−θ)
+17:722:40414:0:9:418:423:308:120:g_d0_f19:120:g_d0_f19:¢
+17:723:40415:9:18:425:540:299:120:g_d0_f6:120:g_d0_f4:,withθt(−∞)=0and
+17:724:40431:18:0:72:165:281:120:g_d0_f6:65:g_d0_f13:θt(+∞)=1,andθt
+17:725:40445:0:9:168:173:290:120:g_d0_f19:120:g_d0_f19:¡
+17:726:40446:9:0:173:182:281:120:g_d0_f12:65:g_d0_f13: ̄xt
+17:727:40450:0:9:182:187:290:120:g_d0_f19:120:g_d0_f19:¢
+17:728:40451:9:18:191:539:281:120:g_d0_f12:120:g_d0_f4:=maxτ≤t{θτ( ̄xt)}.Asδ→0, the dependence of the regime outcome on
+17:729:40515:18:33:72:327:263:120:g_d0_f4:120:g_d0_f6:the shockωtvanishes: for any ̄xtand anyθ6=θt( ̄xt),
+17:730:40566:33:0:191:319:230:120:g_d0_f6:120:g_d0_f7:pt(θ; ̄xt,δ)→pt(θ; ̄xt,0)≡
+17:731:40592:0:11:322:331:249:120:g_d0_f19:120:g_d0_f19:(
+17:732:40593:11:18:336:413:238:120:g_d0_f12:120:g_d0_f12:1ifθ≤θt( ̄xt)
+17:733:40606:18:0:336:413:220:120:g_d0_f12:120:g_d0_f12:0ifθ>θt( ̄xt)
+17:734:40619:0:33:526:540:230:120:g_d0_f4:120:g_d0_f4:(7)
+17:735:40622:33:17:71:540:197:120:g_d0_f4:120:g_d0_f4:It follows that the common posterior in any periodt≥2converges pointwise to the truncated
+17:736:40711:17:0:71:309:180:120:g_d0_f4:65:g_d0_f20:Normal generated by the knowledge thatθ>θt−1
+17:737:40755:0:8:312:317:188:120:g_d0_f19:120:g_d0_f19:¡
+17:738:40756:8:0:318:337:180:120:g_d0_f12:65:g_d0_f20: ̄xt−1
+17:739:40762:0:8:337:342:188:120:g_d0_f19:120:g_d0_f19:¢
+17:740:40763:8:38:346:465:180:120:g_d0_f12:120:g_d0_f6::for any ̄xt−1and anyθ,
+17:741:40786:38:0:121:131:142:120:g_d0_f6:65:g_d0_f13:ψt
+17:742:40788:0:9:133:138:151:120:g_d0_f19:120:g_d0_f19:¡
+17:743:40789:9:0:138:180:142:120:g_d0_f6:120:g_d0_f6:θ; ̄xt−1,δ
+17:744:40799:0:9:179:184:151:120:g_d0_f19:120:g_d0_f19:¢
+17:745:40800:9:0:187:211:142:120:g_d0_f7:65:g_d0_f13:→ψt
+17:746:40803:0:9:214:219:151:120:g_d0_f19:120:g_d0_f19:¡
+17:747:40804:9:0:219:259:142:120:g_d0_f6:120:g_d0_f12:θ; ̄xt−1,0
+17:748:40814:0:9:260:265:151:120:g_d0_f19:120:g_d0_f19:¢
+17:749:40815:9:0:268:277:142:120:g_d0_f7:120:g_d0_f7:≡
+17:750:40816:0:10:279:289:165:120:g_d0_f24:120:g_d0_f24:⎧
+17:751:40817:10:20:279:289:155:120:g_d0_f24:120:g_d0_f24:⎨
+17:752:40818:20:0:279:289:135:120:g_d0_f24:120:g_d0_f24:⎩
+17:753:40819:0:0:294:451:153:120:g_d0_f12:65:g_d0_f20:0ifθ≤θt−1
+17:754:40828:0:9:454:459:162:120:g_d0_f19:120:g_d0_f19:¡
+17:755:40829:9:0:459:478:153:120:g_d0_f12:65:g_d0_f20: ̄xt−1
+17:756:40835:0:16:479:484:162:120:g_d0_f19:120:g_d0_f19:¢
+17:757:40836:16:18:313:373:146:65:g_d0_f21:120:g_d0_f12:√βφ(√β(θ−z))
+17:758:40848:18:0:295:447:128:65:g_d0_f20:120:g_d0_f4:1−Φ(√β(θt−1( ̄xt−1)−z))otherwise
+17:759:40880:0:31:526:540:142:120:g_d0_f4:120:g_d0_f4:(8)
+17:760:40883:31:18:80:540:111:36:g_d0_f4:82:g_d0_f4:10Since the distribution ofxgivenθsatisfies the MLRP andpt(θ; ̄xt,δ)is decreasing inθ,by standard representation
+17:761:40995:18:0:71:193:93:82:g_d0_f4:36:g_d0_f23:theorems (Milgrom, 1981),vt
+17:762:41022:0:7:195:199:100:82:g_d0_f19:82:g_d0_f19:¡
+17:763:41023:7:0:199:227:93:82:g_d0_f15:82:g_d0_f15:x; ̄xt,δ
+17:764:41031:0:7:225:229:100:82:g_d0_f19:82:g_d0_f19:¢
+17:765:41032:7:14:234:539:93:82:g_d0_f4:82:g_d0_f4:is decreasing inx.Sincevtis also bounded in[−c,1−c],it follows that
+17:766:41099:14:0:71:118:79:82:g_d0_f17:36:g_d0_f23:limx→±∞vt
+17:767:41108:0:7:120:124:86:82:g_d0_f19:82:g_d0_f19:¡
+17:768:41109:7:0:124:152:79:82:g_d0_f15:82:g_d0_f15:x; ̄xt,δ
+17:769:41117:0:7:151:155:86:82:g_d0_f19:82:g_d0_f19:¢
+17:770:41118:7:0:158:309:79:82:g_d0_f4:36:g_d0_f23:exist for any ̄xt∈Rtand thereforeVt
+17:771:41153:0:7:311:315:86:82:g_d0_f19:82:g_d0_f19:¡
+17:772:41154:7:0:316:334:79:82:g_d0_f17:82:g_d0_f15: ̄xt,δ
+17:773:41160:0:7:332:336:86:82:g_d0_f19:82:g_d0_f19:¢
+17:774:41161:7:0:340:451:79:82:g_d0_f4:82:g_d0_f15:is well-defined at ̄xt=±∞.
+18:775:41189:0:0:72:255:709:120:g_d0_f4:65:g_d0_f13:Similarly, for the private posteriors,ψt
+18:776:41229:0:9:258:263:718:120:g_d0_f19:120:g_d0_f19:¡
+18:777:41230:9:0:263:315:709:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+18:778:41242:0:9:313:318:718:120:g_d0_f19:120:g_d0_f19:¢
+18:779:41243:9:0:321:345:709:120:g_d0_f7:65:g_d0_f13:→ψt
+18:780:41246:0:9:348:353:718:120:g_d0_f19:120:g_d0_f19:¡
+18:781:41247:9:0:353:403:709:120:g_d0_f6:120:g_d0_f12:θ|x; ̄xt−1,0
+18:782:41259:0:9:403:408:718:120:g_d0_f19:120:g_d0_f19:¢
+18:783:41260:9:18:412:458:709:120:g_d0_f4:120:g_d0_f6:for anyx.
+18:784:41269:18:18:91:539:691:120:g_d0_f4:120:g_d0_f5:The pointwise convergence ofptandψtin turn implies pointwise convergence of the payoff
+18:785:41355:18:17:72:539:673:120:g_d0_f4:120:g_d0_f6:of the marginal agent except whent≥2and ̄xt=−∞.  In particular, fort=1and any ̄x1,
+18:786:41437:17:29:72:537:656:120:g_d0_f6:120:g_d0_f6:V1( ̄x1;δ)→V1( ̄x1;0)≡U(θ1( ̄x1),−∞,α1,β,z);and, for anyt≥2,any ̄xt−1and any ̄xt>−∞,
+18:787:41521:29:0:172:181:627:120:g_d0_f6:65:g_d0_f13:Vt
+18:788:41523:0:9:184:189:636:120:g_d0_f19:120:g_d0_f19:¡
+18:789:41524:9:0:190:208:627:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+18:790:41530:0:9:209:214:636:120:g_d0_f19:120:g_d0_f19:¢
+18:791:41531:9:0:217:240:627:120:g_d0_f7:65:g_d0_f13:→Vt
+18:792:41534:0:9:242:247:636:120:g_d0_f19:120:g_d0_f19:¡
+18:793:41535:9:0:248:269:627:120:g_d0_f12:120:g_d0_f12: ̄xt;0
+18:794:41541:0:9:268:273:636:120:g_d0_f19:120:g_d0_f19:¢
+18:795:41542:9:0:276:294:627:120:g_d0_f7:120:g_d0_f6:≡U
+18:796:41544:0:9:298:303:636:120:g_d0_f19:120:g_d0_f19:¡
+18:797:41545:9:0:302:357:627:120:g_d0_f6:65:g_d0_f20:θt( ̄xt),θt−1
+18:798:41558:0:9:359:364:636:120:g_d0_f19:120:g_d0_f19:¡
+18:799:41559:9:0:365:384:627:120:g_d0_f12:65:g_d0_f20: ̄xt−1
+18:800:41565:0:9:385:390:636:120:g_d0_f19:120:g_d0_f19:¢
+18:801:41566:9:0:392:430:627:120:g_d0_f6:120:g_d0_f6:,αt,β,z
+18:802:41573:0:9:429:434:636:120:g_d0_f19:120:g_d0_f19:¢
+18:803:41574:9:29:436:439:627:120:g_d0_f6:120:g_d0_f6:.
+18:804:41575:29:0:72:177:598:120:g_d0_f4:65:g_d0_f13:To understand whyVt
+18:805:41594:0:9:180:185:607:120:g_d0_f19:120:g_d0_f19:¡
+18:806:41595:9:0:185:204:598:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+18:807:41601:0:9:205:210:607:120:g_d0_f19:120:g_d0_f19:¢
+18:808:41602:9:0:213:326:598:120:g_d0_f4:65:g_d0_f13:need not converge toVt
+18:809:41624:0:9:328:333:607:120:g_d0_f19:120:g_d0_f19:¡
+18:810:41625:9:0:334:355:598:120:g_d0_f12:120:g_d0_f12: ̄xt;0
+18:811:41631:0:9:353:358:607:120:g_d0_f19:120:g_d0_f19:¢
+18:812:41632:9:18:361:540:598:120:g_d0_f12:120:g_d0_f4:=−cwhent≥2and ̄xt=−∞,note
+18:813:41657:18:17:72:540:580:120:g_d0_f4:120:g_d0_f4:that, in the presence of shocks, an agent with sufficiently lowxtmay attach probability higher
+18:814:41751:17:18:72:539:563:120:g_d0_f4:120:g_d0_f4:thancto regime change in periodt≥2even if he expects no other agent to attack in that period.
+18:815:41844:18:18:72:540:545:120:g_d0_f4:120:g_d0_f4:When this is the case, a positive measure of agents may attack in every period in the perturbed
+18:816:41939:18:17:72:539:527:120:g_d0_f4:120:g_d0_f7:game, unlike the benchmark model. Nevertheless, the pointwise convergence ofVtfor any ̄xt>−∞
+18:817:42031:17:18:72:329:510:120:g_d0_f4:120:g_d0_f6:ensures that this dominance region vanishes asδ→0.
+18:818:42081:18:18:91:539:492:120:g_d0_f4:120:g_d0_f4:More generally, we can prove that “essentially” all equilibria{x∗t}∞t=1in the benchmark game
+18:819:42173:18:17:72:540:474:120:g_d0_f18:120:g_d0_f4:Γ(0)can be approximated by equilibria{ ̄xt(δ)}∞t=1in the perturbed gameΓ(δ)forδ>0small
+18:820:42259:17:18:72:540:457:120:g_d0_f4:120:g_d0_f4:enough.11The qualification “essentially” is needed because convergence may fail in the knife-edge
+18:821:42356:18:0:72:137:439:120:g_d0_f4:65:g_d0_f13:case whereVt
+18:822:42368:0:9:139:144:448:120:g_d0_f19:120:g_d0_f19:¡
+18:823:42369:9:0:144:170:439:120:g_d0_f6:120:g_d0_f12:x∗t;0
+18:824:42374:0:9:169:174:448:120:g_d0_f19:120:g_d0_f19:¢
+18:825:42375:9:0:178:400:439:120:g_d0_f4:120:g_d0_f6:reaches its maximum atx∗t(or equivalentlyU
+18:826:42417:0:9:403:408:448:120:g_d0_f19:120:g_d0_f19:¡
+18:827:42418:9:0:408:481:439:120:g_d0_f6:120:g_d0_f6:θ∗t,θ∗t−1,αt,β,z
+18:828:42434:0:9:480:485:448:120:g_d0_f19:120:g_d0_f19:¢
+18:829:42435:9:17:489:539:439:120:g_d0_f4:120:g_d0_f4:reaches its
+18:830:42446:17:31:72:153:422:120:g_d0_f4:120:g_d0_f4:maximum atθ∗t).
+18:831:42461:31:17:71:539:391:120:g_d0_f3:120:g_d0_f12:Theorem 2 (Shocks in fundamentals)For anyε>0,andanyT≥1,thereexistsδ(ε,T)>0
+18:832:42535:17:18:71:315:374:120:g_d0_f10:120:g_d0_f10:such that, for allδ<δ(ε, T),the following is true:
+18:833:42585:18:0:91:385:356:120:g_d0_f10:65:g_d0_f13:For any equilibrium{x∗t}∞t=1ofΓ(0)such thatx∗t/∈arg maxxVt
+18:834:42643:0:9:387:392:365:120:g_d0_f19:120:g_d0_f19:¡
+18:835:42644:9:0:392:440:356:120:g_d0_f6:120:g_d0_f12:x∗t−1,x;0
+18:836:42653:0:9:439:444:365:120:g_d0_f19:120:g_d0_f19:¢
+18:837:42654:9:18:446:540:356:120:g_d0_f10:120:g_d0_f6:for allt∈{2,...,T},
+18:838:42673:18:17:72:544:338:120:g_d0_f10:120:g_d0_f10:there exists an equilibrium{ ̄xt(δ)}∞t=1ofΓ(δ)such that, for allt≤T,either|x∗t− ̄xt(δ)|<ε,or
+18:839:42765:17:31:71:207:321:120:g_d0_f6:120:g_d0_f6:x∗t=−∞and ̄xt(δ)<−1/ε.
+18:840:42787:31:17:91:540:290:120:g_d0_f4:120:g_d0_f4:The above establishes convergence of equilibrium play in thefirstTperiods of the infinite-
+18:841:42877:17:18:72:539:273:120:g_d0_f4:120:g_d0_f4:horizon game, for anyfiniteT.Sinceδ(ε, T)may converge to0asT→∞,the result need not
+18:842:42959:18:17:72:540:255:120:g_d0_f4:120:g_d0_f6:hold for an infinite number of periods. Of course, if the game ended for exogenous reasons atT,
+18:843:43054:17:18:72:497:238:120:g_d0_f4:120:g_d0_f4:the above would immediately imply convergence in all periods of thefinite-horizon game.
+18:844:43141:18:18:91:539:220:120:g_d0_f4:120:g_d0_f4:The result is illustrated in Figures 3 and 4 forT=2.  The solid line in Figure 3 repre-
+18:845:43228:18:17:72:539:202:120:g_d0_f4:120:g_d0_f12:sents the p.d.f. of the common posterior in period2generated byequilibriumplay in period1
+18:846:43317:17:18:72:539:185:120:g_d0_f4:120:g_d0_f4:in the game without shocks(δ=0).This is simply the initial prior truncated atθ∗1=θ1(x∗1),
+18:847:43406:18:18:72:540:167:120:g_d0_f4:120:g_d0_f4:wherex∗1is the unique solution toV1(x∗1;0) = 0(or equivalently whereθ∗1is the unique solu-
+18:848:43496:18:17:72:539:149:120:g_d0_f4:120:g_d0_f4:tion toU(θ∗1,−∞,α1,β,z)=0). The other two lines represent theequilibriumcommon poste-
+18:849:43581:17:18:71:539:132:120:g_d0_f4:120:g_d0_f4:riorsψ2(θ; ̄x1(δ),δ)for the game with shocks(δ>0),where ̄x1(δ)is the unique solution to
+18:850:43668:18:17:72:540:114:120:g_d0_f6:120:g_d0_f4:V1( ̄x1(δ);δ)=0; the dotted line corresponds to a relatively highδand the dashed one to a low
+18:851:43761:17:18:80:539:97:36:g_d0_f4:82:g_d0_f4:11Clearly, Proposition 3 applies also to the unperturbed game:{x∗t}∞t=1is a monotone equilibrium ofΓ(0)if and
+18:852:43870:18:0:71:218:79:82:g_d0_f4:82:g_d0_f15:only it satisfies(ii)−(iii)forδ=0.
+19:853:43906:0:0:208:319:562:89:g_d0_f31:89:g_d0_f31:01
+19:854:43908:0:0:442:447:571:81:g_d0_f32:81:g_d0_f32:θ
+19:855:43909:0:179:205:216:711:81:g_d0_f32:39:g_d0_f31:ψ2
+19:856:43911:179:156:173:438:532:120:g_d0_f4:120:g_d0_f4:Figure 3: Common posteriors with and without shocks.
+19:857:43963:156:0:181:436:376:84:g_d0_f32:84:g_d0_f32:−∞+∞
+19:858:43967:0:49:444:454:385:92:g_d0_f31:41:g_d0_f31:x2
+19:859:43969:49:0:161:173:336:84:g_d0_f32:92:g_d0_f31:−c
+19:860:43971:0:0:161:167:385:92:g_d0_f31:92:g_d0_f31:0
+19:861:43972:0:0:155:173:475:92:g_d0_f31:92:g_d0_f31:1−c
+19:862:43975:0:190:172:182:491:92:g_d0_f31:41:g_d0_f31:V2
+19:863:43977:190:50:152:459:301:120:g_d0_f4:120:g_d0_f4:Figure 4: Payoffof the marginal agent with and without shocks.
+19:864:44039:50:17:71:539:251:120:g_d0_f6:120:g_d0_f4:δ.Since the support ofωtis the entire real line, the probability of regime change is less than1for
+19:865:44137:17:18:72:539:234:120:g_d0_f4:120:g_d0_f12:anyθand thereforeψ2assigns positive probability to allθ.However, asδbecomes smaller, ̄x1(δ)
+19:866:44228:18:18:72:539:216:120:g_d0_f4:120:g_d0_f6:converges tox∗1and the probability of regime change converges to1forθ<θ∗1and to0forθ>θ∗1.
+19:867:44317:18:17:72:539:198:120:g_d0_f4:120:g_d0_f4:By implication, the smooth common posterior of the perturbed game in period2converges to the
+19:868:44409:17:20:72:261:181:120:g_d0_f4:120:g_d0_f4:truncated one of the benchmark model.
+19:869:44446:20:18:91:539:161:120:g_d0_f4:120:g_d0_f4:In Figure 4, the solid line represents the payoffV2(x∗1,x2;0)of the marginal agent in period
+19:870:44538:18:17:71:540:143:120:g_d0_f12:120:g_d0_f4:2forδ=0,whereas the other two lines representV2( ̄x1(δ),x2;δ)forδ>0.12Note that, for
+19:871:44622:17:18:72:540:126:120:g_d0_f6:120:g_d0_f4:x2small enough,V2is negative whenδ=0but positive whenδ>0,which implies that nobody
+19:872:44704:18:25:71:540:108:120:g_d0_f4:120:g_d0_f4:attacking in period2is part of an equilibrium in the benchmark model but not in the game with
+19:873:44797:25:0:80:540:83:36:g_d0_f4:82:g_d0_f15:12In order to illustrateV2over its entire domain, thefigure depictsV2( ̄x1(δ),x2;δ)againstΦ(x2)rather thanx2.
+20:874:44908:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:shocks.13Moreover, whenδis high (dotted line),V2is monotonic inx2and therefore has a single
+20:875:44999:18:17:72:540:691:120:g_d0_f4:120:g_d0_f4:intersection with the horizontal line, in which case the equilibrium would be unique if the game
+20:876:45095:17:18:72:539:674:120:g_d0_f4:120:g_d0_f4:endedinperiod2. When, instead,δis sufficiently small (dashed line),V2is non-monotonic and
+20:877:45184:18:18:72:540:656:120:g_d0_f4:120:g_d0_f4:has three intersections, which correspond to three different equilibria for the two-period game with
+20:878:45284:18:17:72:539:638:120:g_d0_f4:120:g_d0_f4:shocks. Finally, the middle and the highest intersections approximate the two intersections of the
+20:879:45382:17:18:72:545:621:120:g_d0_f4:120:g_d0_f4:solid line, while the lowest intersection is arbitrarily small, thus approximatingx∗2=−∞.Along
+20:880:45476:18:17:72:539:603:120:g_d0_f4:120:g_d0_f4:with the fact that ̄x1(δ)converges tox∗1,this implies that any equilibrium of the two-period game
+20:881:45573:17:19:72:449:586:120:g_d0_f4:120:g_d0_f4:without shocks can be approximated by an equilibrium in the perturbed game.
+20:882:45648:19:18:91:539:567:120:g_d0_f4:120:g_d0_f4:In conclusion, what sustains multiplicity in the dynamic game is the non-monotonicity of the
+20:883:45740:18:17:72:540:549:120:g_d0_f4:120:g_d0_f4:payoffof the marginal agent generated by the knowledge that the regime survived past attacks.
+20:884:45833:17:18:72:539:532:120:g_d0_f4:120:g_d0_f4:That this knowledge resulted in posterior beliefs that assign zero measure to sufficiently lowθin
+20:885:45930:18:45:72:255:514:120:g_d0_f4:120:g_d0_f4:the benchmark model, is not essential.
+20:886:45968:45:30:72:400:469:209:g_d0_f3:209:g_d0_f3:6  Public news and signals about past attacks
+20:887:46013:30:17:72:540:439:120:g_d0_f4:120:g_d0_f4:In this section, we consider two extensions of the information structure assumed in the benchmark
+20:888:46110:17:39:72:104:422:120:g_d0_f4:120:g_d0_f4:model.
+20:889:46116:39:26:72:249:383:145:g_d0_f3:145:g_d0_f3:6.1  Exogenous public signals
+20:890:46145:26:18:72:539:357:120:g_d0_f4:120:g_d0_f4:To capture the effect of public news, we now modify the game as follows. In addition to their private
+20:891:46246:18:17:71:540:339:120:g_d0_f4:120:g_d0_f4:signals, agents observe in each periodt≥1a public signal ̃zt=θ+εt,whereεtis common noise,
+20:892:46335:17:18:72:539:322:120:g_d0_f4:120:g_d0_f4:normally distributed with zero mean and precisionηzt>0,serially uncorrelated, and independent
+20:893:46428:18:17:72:540:304:120:g_d0_f4:120:g_d0_f4:ofθand the agent’s private noise.  These signals may represent, for example, the information
+20:894:46520:17:18:72:540:287:120:g_d0_f4:120:g_d0_f4:generated by news analysis in the media, publication of government statistics, or announcements
+20:895:46615:18:18:72:540:269:120:g_d0_f4:120:g_d0_f4:by policy makers. We also allow for the possibility that the game ends for exogenous reasons at a
+20:896:46712:18:18:72:483:251:120:g_d0_f9:120:g_d0_f4:finite date and denote the horizon of the game withT,whereT∈{2,3,...}orT=∞.
+20:897:46787:18:18:91:540:233:120:g_d0_f4:120:g_d0_f4:The common posterior aboutθconditional on ̃zt≡{ ̃zτ}tτ=1is Normal with meanztand
+20:898:46867:18:20:72:161:215:120:g_d0_f4:120:g_d0_f4:precisionβt,where
+20:899:46884:20:0:210:230:195:120:g_d0_f6:120:g_d0_f12:zt=
+20:900:46887:0:14:234:254:202:120:g_d0_f6:65:g_d0_f20:βt−1
+20:901:46891:14:0:239:249:188:120:g_d0_f6:65:g_d0_f13:βt
+20:902:46893:0:0:256:287:195:120:g_d0_f6:120:g_d0_f12:zt−1+
+20:903:46898:0:14:290:298:202:120:g_d0_f6:65:g_d0_f13:ηzt
+20:904:46901:14:0:290:299:188:120:g_d0_f6:65:g_d0_f13:βt
+20:905:46903:0:28:302:401:195:120:g_d0_f12:120:g_d0_f6: ̃zt,βt=βt−1+ηzt,
+20:906:46920:28:18:72:539:167:120:g_d0_f4:120:g_d0_f4:with(z0,β0)=(z,β).However, since equilibrium play in past periods now depends on the realiza-
+20:907:47013:18:18:72:547:149:120:g_d0_f4:120:g_d0_f4:tions of past public signals,ztis not a sufficient statisticconditionalonRt=0.Wethusallow
+20:908:47102:18:20:72:544:131:120:g_d0_f4:120:g_d0_f4:agents to condition their actions on the entire sequence ̃zt,or equivalently onzt≡{zτ}tτ=1.Apart
+20:909:47198:20:18:80:543:111:36:g_d0_f4:82:g_d0_f4:13In the examples in Figures 3 and 4, an agentfinds it optimal to attack in period2for sufficiently lowx2,even
+20:910:47308:18:14:71:539:93:82:g_d0_f4:82:g_d0_f4:if he expects no other agent to attack. However, this need not be the case ifωthad a bounded support andδwere
+20:911:47417:14:0:71:126:79:82:g_d0_f4:82:g_d0_f4:small enough.
+21:912:47432:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:from this modification, the set of monotone equilibria can be constructed in a similar way as in the
+21:913:47532:18:31:72:160:691:120:g_d0_f4:120:g_d0_f4:benchmark model.
+21:914:47548:31:18:72:539:660:120:g_d0_f3:120:g_d0_f10:Proposition 4{at(·)}Tt=0is a monotone equilibrium if and only if there exists a sequence of func-
+21:915:47645:18:18:72:389:642:120:g_d0_f10:120:g_d0_f10:tions{x∗t,θ∗t}Tt=1,withx∗t:Rt→Randθ∗t:Rt→(0,1),such that:
+21:916:47702:18:0:91:243:624:120:g_d0_f12:65:g_d0_f13:(i)for allt,at(·)=1ifxt<x∗t
+21:917:47729:0:9:246:251:633:120:g_d0_f19:120:g_d0_f19:¡
+21:918:47730:9:0:251:260:624:120:g_d0_f6:65:g_d0_f13:zt
+21:919:47732:0:9:260:265:633:120:g_d0_f19:120:g_d0_f19:¢
+21:920:47733:9:0:269:381:624:120:g_d0_f10:65:g_d0_f13:andat(·)=0ifxt>x∗t
+21:921:47751:0:9:385:390:633:120:g_d0_f19:120:g_d0_f19:¡
+21:922:47752:9:0:389:398:624:120:g_d0_f6:65:g_d0_f13:zt
+21:923:47754:0:9:399:404:633:120:g_d0_f19:120:g_d0_f19:¢
+21:924:47755:9:18:404:407:624:120:g_d0_f10:120:g_d0_f10:;
+21:925:47756:18:18:91:478:606:120:g_d0_f12:120:g_d0_f12:(ii)att=1,θ∗1(z1)solvesU(θ∗1,−∞,α1,β1,z1)=0andx∗1(z1)=X(θ∗1(z1),α1)
+21:926:47823:18:0:91:198:588:120:g_d0_f12:65:g_d0_f13:(iii)att≥2,eitherθ∗t
+21:927:47843:0:9:202:207:597:120:g_d0_f19:120:g_d0_f19:¡
+21:928:47844:9:0:207:216:588:120:g_d0_f6:65:g_d0_f13:zt
+21:929:47846:0:9:216:221:597:120:g_d0_f19:120:g_d0_f19:¢
+21:930:47847:9:29:225:252:588:120:g_d0_f10:120:g_d0_f10:solves
+21:931:47853:29:0:246:253:559:120:g_d0_f6:120:g_d0_f6:U
+21:932:47854:0:8:257:262:567:120:g_d0_f19:120:g_d0_f19:¡
+21:933:47855:8:0:262:339:559:120:g_d0_f6:65:g_d0_f13:θ∗t,θ∗t−1,αt,βt,zt
+21:934:47873:0:8:340:345:567:120:g_d0_f19:120:g_d0_f19:¢
+21:935:47874:8:30:348:540:559:120:g_d0_f12:120:g_d0_f4:=0(9)
+21:936:47879:30:0:72:102:529:120:g_d0_f10:65:g_d0_f13:andx∗t
+21:937:47885:0:9:105:110:538:120:g_d0_f19:120:g_d0_f19:¡
+21:938:47886:9:0:110:119:529:120:g_d0_f6:65:g_d0_f13:zt
+21:939:47888:0:9:120:125:538:120:g_d0_f19:120:g_d0_f19:¢
+21:940:47889:9:0:128:161:529:120:g_d0_f12:65:g_d0_f13:=X(θ∗t
+21:941:47895:0:9:165:170:538:120:g_d0_f19:120:g_d0_f19:¡
+21:942:47896:9:0:170:179:529:120:g_d0_f6:65:g_d0_f13:zt
+21:943:47898:0:9:179:184:538:120:g_d0_f19:120:g_d0_f19:¢
+21:944:47899:9:0:186:235:529:120:g_d0_f6:65:g_d0_f13:,αt),orθ∗t
+21:945:47909:0:9:239:244:538:120:g_d0_f19:120:g_d0_f19:¡
+21:946:47910:9:0:244:253:529:120:g_d0_f6:65:g_d0_f13:zt
+21:947:47912:0:9:253:258:538:120:g_d0_f19:120:g_d0_f19:¢
+21:948:47913:9:0:261:292:529:120:g_d0_f12:65:g_d0_f20:=θ∗t−1
+21:949:47919:0:9:294:299:538:120:g_d0_f19:120:g_d0_f19:¡
+21:950:47920:9:0:299:318:529:120:g_d0_f6:65:g_d0_f20:zt−1
+21:951:47924:0:9:319:324:538:120:g_d0_f19:120:g_d0_f19:¢
+21:952:47925:9:0:328:358:529:120:g_d0_f10:65:g_d0_f13:andx∗t
+21:953:47931:0:9:362:367:538:120:g_d0_f19:120:g_d0_f19:¡
+21:954:47932:9:0:367:375:529:120:g_d0_f6:65:g_d0_f13:zt
+21:955:47934:0:9:376:381:538:120:g_d0_f19:120:g_d0_f19:¢
+21:956:47935:9:31:384:418:529:120:g_d0_f12:120:g_d0_f6:=−∞.
+21:957:47939:31:18:91:539:498:120:g_d0_f4:120:g_d0_f4:Like in the benchmark model without public news, there always exist equilibria in which attacks
+21:958:48034:18:0:72:313:480:120:g_d0_f4:120:g_d0_f4:cease after any arbitrary period. However, for any
+21:959:48084:0:9:316:321:489:120:g_d0_f19:120:g_d0_f19:¡
+21:960:48085:9:0:321:370:480:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+21:961:48096:0:9:370:375:489:120:g_d0_f19:120:g_d0_f19:¢
+21:962:48097:9:18:377:540:480:120:g_d0_f6:120:g_d0_f4:,(9) admits a solution if and only
+21:963:48131:18:0:72:187:462:120:g_d0_f4:120:g_d0_f6:ifzt≤ ̄zt,where ̄zt= ̄z
+21:964:48154:0:9:189:194:471:120:g_d0_f19:120:g_d0_f19:¡
+21:965:48155:9:0:194:243:462:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+21:966:48166:0:9:244:249:471:120:g_d0_f19:120:g_d0_f19:¢
+21:967:48167:9:17:253:540:462:120:g_d0_f4:120:g_d0_f4:is alwaysfinite. Hence, there also exist equilibria in which
+21:968:48227:17:18:72:540:445:120:g_d0_f4:120:g_d0_f4:an attack occurs in periodtfor sufficiently low realizations ofzt. The following then extends and
+21:969:48324:18:31:72:296:427:120:g_d0_f4:120:g_d0_f4:reinforces the multiplicity result of Theorem 1.
+21:970:48372:31:18:72:540:396:120:g_d0_f3:120:g_d0_f10:Theorem 3 (Public news)In the game with public news, there always exist multiple equilibria,
+21:971:48464:18:18:72:540:378:120:g_d0_f10:120:g_d0_f10:no matter the meanzof the prior, the precisions{αt,βt}Tt=1of private and public information, and
+21:972:48560:18:31:72:200:360:120:g_d0_f10:120:g_d0_f10:the horizonTof the game.
+21:973:48584:31:18:91:540:329:120:g_d0_f4:120:g_d0_f4:Consider now how the introduction of public news affects the ability of an “econometrician”
+21:974:48675:18:17:72:540:311:120:g_d0_f4:120:g_d0_f4:to predict the regime outcome and/or the occurrence of an attack in any given period. For any
+21:975:48768:17:18:72:540:294:120:g_d0_f6:120:g_d0_f4:t,anyθ∈(0,1),and anyθ∗t−1<θ,(9) admits a solution higher thanθif and only ifztis low
+21:976:48852:18:17:72:540:276:120:g_d0_f4:120:g_d0_f4:enough, implying that, conditional onθ, the probability that the status quo is abandoned in any
+21:977:48947:17:18:72:539:259:120:g_d0_f4:120:g_d0_f4:givenperiodisstrictlybetween0and1.It follows that an econometrician who can observeθbut
+21:978:49034:18:18:72:539:241:120:g_d0_f4:120:g_d0_f4:can not observezt,necessarily faces uncertainty about the event of regime change. On the other
+21:979:49128:18:17:71:540:223:120:g_d0_f4:120:g_d0_f4:hand, if he also knowszt,he may be able to perfectly predict the regime outcome in a given period
+21:980:49225:17:18:72:540:206:120:g_d0_f4:120:g_d0_f4:for some combinations ofθandzt, without, however, being able to predict whether an attack will
+21:981:49319:18:0:72:299:188:120:g_d0_f4:65:g_d0_f13:take place. For example, at anyt≥2,ifθ> ̄θt
+21:982:49362:0:9:301:306:197:120:g_d0_f19:120:g_d0_f19:¡
+21:983:49363:9:0:306:315:188:120:g_d0_f6:65:g_d0_f13:zt
+21:984:49365:0:9:315:320:197:120:g_d0_f19:120:g_d0_f19:¢
+21:985:49366:9:17:324:540:188:120:g_d0_f6:120:g_d0_f4:>θ1(z1),whereθ1(z1)is the lowest solution
+21:986:49407:17:0:72:240:171:120:g_d0_f4:65:g_d0_f13:toU(θ∗,−∞,α1,β1,z1)=0and ̄θt
+21:987:49435:0:8:242:247:179:120:g_d0_f19:120:g_d0_f19:¡
+21:988:49436:8:0:247:256:171:120:g_d0_f6:65:g_d0_f13:zt
+21:989:49438:0:8:256:261:179:120:g_d0_f19:120:g_d0_f19:¢
+21:990:49439:8:18:265:539:171:120:g_d0_f4:120:g_d0_f4:the highest solution toU(θ∗,θ1(z1),αt,βt,zt),14there is
+21:991:49494:18:18:72:540:153:120:g_d0_f4:120:g_d0_f4:no equilibrium in which the status is abandoned in periodt,but there are both an equilibrium in
+21:992:49589:18:17:72:540:135:120:g_d0_f4:120:g_d0_f4:which an attack occurs and one in which no attack takes place in that period. The combination of
+21:993:49685:17:18:72:540:118:120:g_d0_f4:120:g_d0_f4:fundamentalsandpublic information may help predict regime outcomes but not the occurrence of
+21:994:49777:18:17:72:252:100:120:g_d0_f4:120:g_d0_f4:attacks, like in the benchmark model.
+21:995:49814:17:0:80:427:83:36:g_d0_f4:82:g_d0_f4:14Sinceθ∗t−1¡zt−1¢≥θ1(z1)in any equilibrium, ̄θt¡zt¢is an upper bound forθ∗t¡zt¢.
+22:996:49897:0:18:91:539:709:120:g_d0_f4:120:g_d0_f6:Finally, note that the threshold ̄zt,below which (9) admits a solution, decreases withθ∗t−1.
+22:997:49989:18:17:72:539:691:120:g_d0_f4:120:g_d0_f4:Hence, an unsuccessful attack, other things equal,causes a discrete increase in the probability the
+22:998:50088:17:18:72:540:674:120:g_d0_f4:120:g_d0_f4:game enters a phase of inaction during which no attack is possible. In this sense, the prediction of
+22:999:50188:18:18:72:540:656:120:g_d0_f4:120:g_d0_f4:the benchmark model that equilibrium dynamics are characterized by the alternation of phases of
+22:1000:50283:18:17:72:540:638:120:g_d0_f4:120:g_d0_f4:tranquility and phases of crises, survives the introduction of public news, but the transition from
+22:1001:50382:17:33:72:441:621:120:g_d0_f4:120:g_d0_f6:one phase to another is now stochastic, as it depends on the realization ofzt.
+22:1002:50460:33:25:72:257:588:145:g_d0_f3:145:g_d0_f3:6.2  Signals about past attacks
+22:1003:50491:25:18:72:540:563:120:g_d0_f4:120:g_d0_f4:We now introduce an additional source of information by allowing agents to receive private and
+22:1004:50585:18:23:72:435:545:120:g_d0_f4:120:g_d0_f4:public signals about the size of past attacks. These signals are, respectively,
+22:1005:50664:23:28:202:412:522:120:g_d0_f12:120:g_d0_f6: ̃Xit=S(At−1,uit)and ̃Zt=S(At−1,υt),
+22:1006:50700:28:18:72:549:494:120:g_d0_f4:120:g_d0_f4:fort≥2,whereuitis idiosyncratic noise,υtis common noise, andS:[0,1]×R→R.To
+22:1007:50774:18:17:72:540:476:120:g_d0_f4:120:g_d0_f4:preserve Normality of the information structure, we adopt a similar specification as Dasgupta
+22:1008:50867:17:18:72:417:459:120:g_d0_f4:120:g_d0_f6:(2002):S(A,u)=Φ−1(A)+u, uit∼N(0,1/γxt),andυt∼N(0,1/γzt).
+22:1009:50923:18:0:91:392:441:120:g_d0_f4:120:g_d0_f12:Using the property that in any monotone equilibriumAt−1=Φ(
+22:1010:50981:0:7:392:401:448:120:g_d0_f7:120:g_d0_f7:√
+22:1011:50982:7:0:401:421:441:120:g_d0_f6:65:g_d0_f20:αt−1
+22:1012:50986:0:9:424:429:450:120:g_d0_f19:120:g_d0_f19:¡
+22:1013:50987:9:0:429:468:441:120:g_d0_f6:120:g_d0_f6:x∗t−1−θ
+22:1014:50994:0:9:468:473:450:120:g_d0_f19:120:g_d0_f19:¢
+22:1015:50995:9:18:473:539:441:120:g_d0_f12:65:g_d0_f20:)—wherex∗t−1
+22:1016:51007:18:17:72:540:423:120:g_d0_f4:120:g_d0_f4:may depend on exogenous/endogenous public signals — and following similar steps as in Section 3,
+22:1017:51103:17:26:72:491:406:120:g_d0_f4:120:g_d0_f4:we can again construct sufficient statisticsxtandztwith precisionsαtandβtsuch that
+22:1018:51185:26:0:188:287:380:120:g_d0_f6:120:g_d0_f14:θ|( ̃xt, ̃zt, ̃Xt, ̃Zt)∼N
+22:1019:51210:0:8:291:298:392:120:g_d0_f19:120:g_d0_f19:³
+22:1020:51211:8:8:306:314:384:65:g_d0_f13:36:g_d0_f23:αt
+22:1021:51213:8:0:298:344:376:65:g_d0_f13:120:g_d0_f12:αt+βtxt+
+22:1022:51221:0:9:355:363:385:65:g_d0_f13:36:g_d0_f23:βt
+22:1023:51223:9:0:347:384:376:65:g_d0_f13:120:g_d0_f6:αt+βtzt,
+22:1024:51231:0:8:396:400:384:65:g_d0_f20:65:g_d0_f20:1
+22:1025:51232:8:0:387:410:376:65:g_d0_f13:36:g_d0_f23:αt+βt
+22:1026:51237:0:12:411:418:392:120:g_d0_f19:120:g_d0_f19: ́
+22:1027:51239:12:26:420:423:380:120:g_d0_f6:120:g_d0_f6:.
+22:1028:51240:26:26:72:365:354:120:g_d0_f4:120:g_d0_f4:The only difference is that these statistics are now defined by
+22:1029:51303:26:0:177:261:328:120:g_d0_f6:65:g_d0_f13:xt=αt−1αtxt−1+η
+22:1030:51318:0:13:262:264:337:36:g_d0_f23:36:g_d0_f23:xt
+22:1031:51320:13:0:257:289:324:65:g_d0_f13:120:g_d0_f12:αt ̃xt+
+22:1032:51327:0:10:292:335:334:65:g_d0_f40:36:g_d0_f23:1t−1αt−1γxt
+22:1033:51338:10:0:310:319:324:65:g_d0_f13:36:g_d0_f23:αt
+22:1034:51340:0:12:340:347:340:120:g_d0_f19:120:g_d0_f19:n
+22:1035:51341:12:0:348:421:328:120:g_d0_f6:65:g_d0_f13:x∗t−1−1√αt−1 ̃Xt
+22:1036:51357:0:12:422:429:340:120:g_d0_f19:120:g_d0_f19:o
+22:1037:51358:12:24:431:434:328:120:g_d0_f6:120:g_d0_f6:,
+22:1038:51359:24:0:180:261:304:120:g_d0_f6:65:g_d0_f13:zt=βt−1βtzt−1+η
+22:1039:51374:0:12:262:265:313:36:g_d0_f23:36:g_d0_f23:zt
+22:1040:51376:12:0:258:288:301:65:g_d0_f13:120:g_d0_f12:βt ̃zt+
+22:1041:51383:0:9:291:334:310:65:g_d0_f40:36:g_d0_f23:1t−1αt−1γzt
+22:1042:51394:9:0:309:317:301:65:g_d0_f13:36:g_d0_f23:βt
+22:1043:51396:0:13:339:346:317:120:g_d0_f19:120:g_d0_f19:n
+22:1044:51397:13:0:346:418:304:120:g_d0_f6:65:g_d0_f13:x∗t−1−1√αt−1 ̃Zt
+22:1045:51413:0:13:418:425:317:120:g_d0_f19:120:g_d0_f19:o
+22:1046:51414:13:23:428:431:304:120:g_d0_f6:120:g_d0_f6:,
+22:1047:51415:23:26:144:467:281:120:g_d0_f6:120:g_d0_f6:αt=αt−1+ηxt+1t−1αt−1γxtandβt=βt−1+ηzt+1t−1αt−1γzt,
+22:1048:51465:26:17:72:540:255:120:g_d0_f4:120:g_d0_f4:where1tis an indicator variable that takes value1if an attack occurrs att(At>0)and0otherwise.
+22:1049:51558:17:18:91:539:238:120:g_d0_f4:120:g_d0_f4:Although the realizations of(xt,zt)and similarly the dynamics of(αt,βt)are now partly
+22:1050:51643:18:18:72:540:220:120:g_d0_f4:120:g_d0_f4:endogenous, the equilibrium characterization is otherwise the same as in the model with only
+22:1051:51735:18:17:72:540:202:120:g_d0_f4:120:g_d0_f4:exogenous signals. By implication, the multiplicity results extend to the game with signals about
+22:1052:51832:17:18:72:540:185:120:g_d0_f4:120:g_d0_f4:past attacks. Similarly, the structure of equilibrium dynamics remains as in the benchmark model,
+22:1053:51929:18:18:72:540:167:120:g_d0_f4:120:g_d0_f4:except for the property that an unsuccessful attack does not necessarily reduce the incentives for
+22:1054:52027:18:17:72:540:149:120:g_d0_f4:120:g_d0_f4:further attacks. This is because an unsuccessfulattack now also generates new private and public
+22:1055:52123:17:18:72:540:132:120:g_d0_f4:120:g_d0_f4:signals, which in some cases may offset the impact of the knowledge that the status quo is still in
+22:1056:52222:18:17:71:98:114:120:g_d0_f4:120:g_d0_f4:place.
+22:1057:52228:17:18:91:539:97:120:g_d0_f4:120:g_d0_f4:To see this, consider the case where all signals are private(γxt>0,ηxt≥0,γzt=ηzt=0),in
+22:1058:52314:18:0:72:539:79:120:g_d0_f4:120:g_d0_f4:which case the only novel effect is that an unsuccessful attack leads to an endogenous increase in
+23:1059:52414:0:18:72:539:709:120:g_d0_f6:120:g_d0_f4:αt. A further attack is then possible only if this increase is large enough, like in the benchmark
+23:1060:52512:18:17:71:546:691:120:g_d0_f4:120:g_d0_f4:game.  On the other hand, when the endogenous signal is public(γzt>0=γxt),anewattack
+23:1061:52596:17:18:72:500:674:120:g_d0_f4:120:g_d0_f4:becomes possible if this signal is low enough, like in the case with exogenous public news.
+23:1062:52687:18:18:91:539:656:120:g_d0_f4:120:g_d0_f4:We conclude that signals about the size of past attacks may substitute for the exogenous arrival
+23:1063:52783:18:39:72:444:638:120:g_d0_f4:120:g_d0_f4:of private and/or public information, but do not otherwise affect the analysis.
+23:1064:52862:39:28:72:189:599:209:g_d0_f3:209:g_d0_f3:7Conclusion
+23:1065:52873:28:18:72:540:571:120:g_d0_f4:120:g_d0_f4:This paper examined how the dynamics of information influences the dynamics of coordination in
+23:1066:52967:18:17:72:540:553:120:g_d0_f4:120:g_d0_f4:a global game of regime change. We found that dynamics may sustain multiple equilibria under
+23:1067:53059:17:18:72:539:536:120:g_d0_f4:120:g_d0_f4:the same informational assumptions that guarantee uniqueness in the static benchmark examined
+23:1068:53152:18:18:72:151:518:120:g_d0_f4:120:g_d0_f4:in the literature.
+23:1069:53170:18:17:91:539:500:120:g_d0_f4:120:g_d0_f4:Although the model is highly stylized and abstracts from all sorts of institutional details and
+23:1070:53265:17:18:72:539:483:120:g_d0_f4:120:g_d0_f4:intertemporal payofflinkages, it generates a few distinctivepredictions for equilibrium dynamics,
+23:1071:53362:18:17:72:540:465:120:g_d0_f4:120:g_d0_f4:such as the possibility that fundamentals predict regime outcomes but not the timing and number
+23:1072:53457:17:18:72:540:448:120:g_d0_f4:120:g_d0_f4:of attacks, or the succession of phases of tranquility, during which agents accumulate information
+23:1073:53555:18:18:72:540:430:120:g_d0_f4:120:g_d0_f4:and no attacks are possible, and periods of crises, during which attacks may occur but do no
+23:1074:53647:18:17:72:540:412:120:g_d0_f4:120:g_d0_f4:necessarily take place. These predictions may help understand the dynamics of crises phenomena
+23:1075:53741:17:18:72:540:395:120:g_d0_f4:120:g_d0_f4:such as currency attacks,financial crashes, or political change. Extending the analysis to these
+23:1076:53837:18:89:72:314:377:120:g_d0_f4:120:g_d0_f4:applications is a promising line for future research.
+23:1077:53890:89:27:72:141:288:209:g_d0_f3:209:g_d0_f3:Appendix
+23:1078:53898:27:18:91:539:261:120:g_d0_f3:120:g_d0_f4:ProofofProposition1.Solving (1) forˆxgivesˆx=ˆθ+α−1/2Φ−1(ˆθ).Substituting this into
+23:1079:53981:18:17:71:224:243:120:g_d0_f4:120:g_d0_f12:(2) gives a single equation inˆθ:
+23:1080:54014:17:0:259:275:226:120:g_d0_f6:65:g_d0_f13:Ust
+23:1081:54017:0:9:277:284:238:120:g_d0_f19:120:g_d0_f19:³
+23:1082:54018:9:0:284:323:229:120:g_d0_f12:120:g_d0_f6:ˆθ;α, β,z
+23:1083:54027:0:12:323:330:238:120:g_d0_f19:120:g_d0_f19: ́
+23:1084:54029:12:22:332:539:226:120:g_d0_f12:120:g_d0_f4:=0,(10)
+23:1085:54036:22:18:71:99:204:120:g_d0_f4:120:g_d0_f4:where
+23:1086:54041:18:0:166:273:186:120:g_d0_f6:120:g_d0_f18:Ust(θ;α, β, z)≡1−Φ
+23:1087:54059:0:7:275:295:199:120:g_d0_f19:65:g_d0_f21:³√
+23:1088:54061:7:10:295:289:192:65:g_d0_f13:65:g_d0_f21:α√
+23:1089:54063:10:0:289:306:182:65:g_d0_f13:65:g_d0_f13:α+β
+23:1090:54066:0:13:310:315:199:120:g_d0_f19:120:g_d0_f19:h
+23:1091:54067:13:0:315:412:186:120:g_d0_f18:120:g_d0_f12:Φ−1(θ)+β√α(z−θ)
+23:1092:54082:0:13:412:424:199:120:g_d0_f19:120:g_d0_f19:i ́
+23:1093:54085:13:21:427:539:186:120:g_d0_f7:120:g_d0_f4:−c.(11)
+23:1094:54092:21:18:71:539:165:120:g_d0_f4:120:g_d0_f12:Note thatUst(θ;·)is continuous and differentiable inθ∈(0,1),withlimθ→0Ust(θ)=1−c>0
+23:1095:54174:18:19:72:491:147:120:g_d0_f4:120:g_d0_f4:andlimθ→1Ust(θ)=−c<0.A solution to (10) therefore always exists. Next, note that
+23:1096:54254:19:15:136:182:128:120:g_d0_f6:120:g_d0_f12:∂Ust(θ;.)
+23:1097:54263:15:0:153:165:113:120:g_d0_f6:120:g_d0_f6:∂θ
+23:1098:54265:0:0:186:207:121:120:g_d0_f12:120:g_d0_f7:=−
+23:1099:54267:0:10:213:225:132:65:g_d0_f21:65:g_d0_f13:√α
+23:1100:54269:10:0:207:240:122:65:g_d0_f21:120:g_d0_f6:√α+βφ
+23:1101:54274:0:7:241:262:133:120:g_d0_f19:65:g_d0_f21:³√
+23:1102:54276:7:10:262:256:126:65:g_d0_f13:65:g_d0_f21:α√
+23:1103:54278:10:0:256:273:116:65:g_d0_f13:65:g_d0_f13:α+β
+23:1104:54281:0:12:276:281:133:120:g_d0_f19:120:g_d0_f19:h
+23:1105:54282:12:0:281:379:121:120:g_d0_f18:120:g_d0_f12:Φ−1(θ)+β√α(z−θ)
+23:1106:54297:0:8:379:398:133:120:g_d0_f19:120:g_d0_f19:i ́ h
+23:1107:54302:8:8:416:420:125:65:g_d0_f20:65:g_d0_f20:1
+23:1108:54303:8:0:399:450:117:65:g_d0_f13:120:g_d0_f7:φ(Φ−1(θ))−
+23:1109:54313:0:10:457:460:126:65:g_d0_f13:65:g_d0_f21:β√
+23:1110:54315:10:0:460:465:116:65:g_d0_f13:65:g_d0_f13:α
+23:1111:54316:0:12:467:472:133:120:g_d0_f19:120:g_d0_f19:i
+23:1112:54317:12:24:474:477:121:120:g_d0_f6:120:g_d0_f6:.
+23:1113:54318:24:0:72:145:97:120:g_d0_f4:65:g_d0_f20:Sinceminθ∈(0,1)
+23:1114:54333:0:8:147:152:105:120:g_d0_f19:120:g_d0_f19:£
+23:1115:54334:8:0:152:169:97:120:g_d0_f12:120:g_d0_f6:1/φ
+23:1116:54337:0:8:171:176:105:120:g_d0_f19:120:g_d0_f19:¡
+23:1117:54338:8:0:176:211:97:120:g_d0_f18:120:g_d0_f12:Φ−1(θ)
+23:1118:54344:0:8:211:221:105:120:g_d0_f19:120:g_d0_f19:¢¤
+23:1119:54346:8:0:224:233:97:120:g_d0_f12:120:g_d0_f12:=
+23:1120:54347:0:9:235:244:106:120:g_d0_f7:120:g_d0_f7:√
+23:1121:54348:9:18:244:540:97:120:g_d0_f12:120:g_d0_f4:2π,the conditionα≥β2/(2π)is both necessary and sufficient
+23:1122:54405:18:0:72:539:79:120:g_d0_f4:120:g_d0_f4:forUstto be monotonic inθ,in which case the monotone equilibrium is unique.  Finally, for
+24:1123:54496:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:the proof that only this equilibrium survives iterated deletion of strictly dominated strategies, see
+24:1124:54597:18:25:72:215:691:120:g_d0_f4:120:g_d0_f4:Morris and Shin (2000, 2001).
+24:1125:54626:25:17:91:540:666:120:g_d0_f3:120:g_d0_f4:ProofofLemma1.We prove the claim by induction. Att=1,the result necessarily holds
+24:1126:54707:17:18:72:540:649:120:g_d0_f4:120:g_d0_f4:since in any equilibrium, the agents’ strategy fort=1is the same as in the static benchmark.
+24:1127:54799:18:18:72:539:631:120:g_d0_f4:120:g_d0_f4:Consider next anyt≥2and suppose that the result holds for anyτ≤t−1.Sinceat(·)is
+24:1128:54878:18:17:71:539:613:120:g_d0_f4:120:g_d0_f4:non-increasing in ̃xt,At(θ)is non-increasing inθ, implying that eitherAt(θ)<θ(and therefore
+24:1129:54969:17:18:72:539:596:120:g_d0_f6:120:g_d0_f4:Rt+1=0) for allθ>θ∗t−1,in which caseθ∗t=θ∗t−1,or there existsθ∗t>θ∗t−1such thatAt(θ)<θif
+24:1130:55057:18:17:71:539:578:120:g_d0_f4:120:g_d0_f6:and only ifθ>θ∗t. In the former case,Pr(Rt+1=1|xt,Rt=0)=0for allxtand hencex∗t=−∞.
+24:1131:55139:17:40:72:134:561:120:g_d0_f4:120:g_d0_f4:In the latter,
+24:1132:55153:40:0:96:237:521:120:g_d0_f12:120:g_d0_f12:Pr(Rt+1=1|xt,Rt=0)=Pr
+24:1133:55174:0:9:236:241:530:120:g_d0_f19:120:g_d0_f19:¡
+24:1134:55175:9:0:241:328:521:120:g_d0_f6:65:g_d0_f20:θ≤θ∗t|xt,θ>θ∗t−1
+24:1135:55191:0:9:329:334:530:120:g_d0_f19:120:g_d0_f19:¢
+24:1136:55192:9:0:337:365:521:120:g_d0_f12:120:g_d0_f7:=1−
+24:1137:55195:0:0:373:381:533:120:g_d0_f18:120:g_d0_f18:Φ
+24:1138:55196:0:12:382:398:545:120:g_d0_f19:120:g_d0_f7:³√
+24:1139:55198:12:0:398:428:533:120:g_d0_f6:120:g_d0_f6:αt+β
+24:1140:55202:0:7:431:436:545:120:g_d0_f19:120:g_d0_f19:h
+24:1141:55203:7:9:437:469:538:65:g_d0_f13:65:g_d0_f13:αtxt+βz
+24:1142:55210:9:0:443:489:529:65:g_d0_f13:120:g_d0_f6:αt+β−θ
+24:1143:55216:0:7:490:494:537:65:g_d0_f21:65:g_d0_f21:∗
+24:1144:55217:7:0:489:492:530:65:g_d0_f13:65:g_d0_f13:t
+24:1145:55218:0:35:494:506:545:120:g_d0_f19:120:g_d0_f19:i ́
+24:1146:55221:35:0:368:376:510:120:g_d0_f18:120:g_d0_f18:Φ
+24:1147:55222:0:12:378:393:522:120:g_d0_f19:120:g_d0_f7:³√
+24:1148:55224:12:0:393:423:510:120:g_d0_f6:120:g_d0_f6:αt+β
+24:1149:55228:0:7:426:431:522:120:g_d0_f19:120:g_d0_f19:h
+24:1150:55229:7:9:432:466:515:65:g_d0_f13:65:g_d0_f13:αtxt+βz
+24:1151:55236:9:0:438:485:506:65:g_d0_f13:120:g_d0_f6:αt+β−θ
+24:1152:55242:0:7:485:489:514:65:g_d0_f21:65:g_d0_f21:∗
+24:1153:55243:7:0:485:498:507:65:g_d0_f13:65:g_d0_f20:t−1
+24:1154:55246:0:40:499:515:522:120:g_d0_f19:120:g_d0_f6:i ́,
+24:1155:55250:40:18:71:540:482:120:g_d0_f4:120:g_d0_f4:which is strictly decreasing inxtand converges to1asxt→−∞and to0asxt→+∞,implying
+24:1156:55330:18:17:72:539:464:120:g_d0_f4:120:g_d0_f4:that there existsx∗t∈Rsuch thatPr(θ≤θ∗t|xt,θ > θ∗t−1)≥(≤)cif and only ifxt≤(≥)x∗t.In
+24:1157:55414:17:18:72:539:447:120:g_d0_f4:120:g_d0_f4:either case,At(θ)<1for allθand henceθ∗t<1,which together withθ∗t≥θ∗1>0,implies that
+24:1158:55497:18:25:72:293:429:120:g_d0_f6:120:g_d0_f4:θ∗t∈(0,1)for allt,which completes the proof.
+24:1159:55541:25:17:91:540:404:120:g_d0_f3:120:g_d0_f4:ProofofProposition2.Necessity follows from the arguments in the main text. For suffi-
+24:1160:55626:17:18:71:539:387:120:g_d0_f4:120:g_d0_f4:ciency, take any sequence{x∗t,θ∗t}∞t=1that satisfies conditions (ii) and (iii); letθ∗0=−∞;suppose
+24:1161:55723:18:18:72:539:369:120:g_d0_f4:120:g_d0_f12:all other agents follow strategies as in (i), in which caseRt=0ifandonlyifθ>θ∗t−1,for allt≥1;
+24:1162:55816:18:17:72:539:351:120:g_d0_f4:120:g_d0_f12:and consider the best response for an individual agent. Ifθ∗t=θ∗t−1,in which caset≥2,θ∗t−1>0
+24:1163:55908:17:0:72:312:334:120:g_d0_f4:120:g_d0_f12:andx∗t=−∞,thenPr (Rt+1=1|xt,Rt=0)=Pr
+24:1164:55944:0:9:311:316:343:120:g_d0_f19:120:g_d0_f19:¡
+24:1165:55945:9:0:316:402:334:120:g_d0_f6:65:g_d0_f20:θ≤θ∗t|xt,θ>θ∗t−1
+24:1166:55961:0:9:403:408:343:120:g_d0_f19:120:g_d0_f19:¢
+24:1167:55962:9:18:411:539:334:120:g_d0_f12:120:g_d0_f4:=0for allxtand therefore
+24:1168:55986:18:0:72:411:316:120:g_d0_f4:120:g_d0_f6:not attacking is indeed optimal. If insteadθ∗t>θ∗t−1,in which caseU
+24:1169:56053:0:9:414:419:325:120:g_d0_f19:120:g_d0_f19:¡
+24:1170:56054:9:0:419:492:316:120:g_d0_f6:120:g_d0_f6:θ∗t,θ∗t−1,αt,β,z
+24:1171:56070:0:9:491:496:325:120:g_d0_f19:120:g_d0_f19:¢
+24:1172:56071:9:17:500:540:316:120:g_d0_f12:120:g_d0_f4:=0and
+24:1173:56076:17:18:72:540:299:120:g_d0_f6:120:g_d0_f4:x∗t=X(θ∗t,αt),then, by the monotonicity of the private posterior and the definitions ofX(·)and
+24:1174:56170:18:0:71:111:281:120:g_d0_f6:120:g_d0_f12:U(·),Pr
+24:1175:56177:0:9:112:117:290:120:g_d0_f19:120:g_d0_f19:¡
+24:1176:56178:9:0:117:204:281:120:g_d0_f6:65:g_d0_f20:θ≤θ∗t|xt,θ>θ∗t−1
+24:1177:56194:0:9:205:210:290:120:g_d0_f19:120:g_d0_f19:¢
+24:1178:56195:9:0:213:269:281:120:g_d0_f7:120:g_d0_f6:−c≥(≤)U
+24:1179:56202:0:9:273:278:290:120:g_d0_f19:120:g_d0_f19:¡
+24:1180:56203:9:0:278:351:281:120:g_d0_f6:120:g_d0_f6:θ∗t,θ∗t−1,αt,β,z
+24:1181:56219:0:9:350:355:290:120:g_d0_f19:120:g_d0_f19:¢
+24:1182:56220:9:18:359:540:281:120:g_d0_f4:120:g_d0_f4:if and only ifxt≤(≥)X(θ∗t,αt)and
+24:1183:56252:18:25:72:458:263:120:g_d0_f4:120:g_d0_f6:therefore it is indeed optimal to attack forxt<x∗tand not to attack forxt>x∗t.
+24:1184:56330:25:18:91:393:238:120:g_d0_f3:120:g_d0_f6:Proof of Lemma 2.Part(i)follows directly by inspectingU.
+24:1185:56386:18:0:91:189:220:120:g_d0_f4:120:g_d0_f6:For(ii),note thatU
+24:1186:56404:0:9:192:197:229:120:g_d0_f19:120:g_d0_f19:¡
+24:1187:56405:9:0:197:270:220:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,αt,β,z
+24:1188:56420:0:9:269:274:229:120:g_d0_f19:120:g_d0_f19:¢
+24:1189:56421:9:17:277:540:220:120:g_d0_f6:120:g_d0_f4:<U(θ∗,−∞,αt,β,z)for allθ∗(sinceθ∗t−1>−∞)and
+24:1190:56464:17:18:72:539:203:120:g_d0_f4:120:g_d0_f4:thatU(θ∗,−∞,αt,β,z)=Ust(θ∗,αt,β,z)is strictly decreasing inθ∗(sinceαt≥β2/(2π)).It
+24:1191:56545:18:0:71:138:185:120:g_d0_f4:120:g_d0_f6:follows thatU
+24:1192:56558:0:9:141:146:194:120:g_d0_f19:120:g_d0_f19:¡
+24:1193:56559:9:0:146:219:185:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,αt,β,z
+24:1194:56574:0:9:218:223:194:120:g_d0_f19:120:g_d0_f19:¢
+24:1195:56575:9:18:226:425:185:120:g_d0_f6:120:g_d0_f4:<0for allθ∗≥bθt,which gives the result.
+24:1196:56614:18:18:91:544:167:120:g_d0_f4:120:g_d0_f12:For(iii),takeanyθ∗t−1>θ∞.Note that for allθ∗∈[θ∗t−1,1],limα→∞U(θ∗,−∞,α,β,z)=
+24:1197:56690:18:17:72:539:149:120:g_d0_f6:120:g_d0_f4:θ∞−θ∗<0.SinceU(θ∗,−∞,α,β,z)is continuous inθ∗and[θ∗t−1,1]is compact, it follows that
+24:1198:56774:17:18:72:539:132:120:g_d0_f4:120:g_d0_f4:there existsαsuch that, for anyα>α, U(θ∗,−∞,α,β,z)<0for allθ∗∈[θ∗t−1,1].Moreover, for
+24:1199:56859:18:0:72:109:114:120:g_d0_f4:120:g_d0_f6:allα, U
+24:1200:56866:0:9:112:117:123:120:g_d0_f19:120:g_d0_f19:¡
+24:1201:56867:9:0:117:186:114:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+24:1202:56881:0:9:185:190:123:120:g_d0_f19:120:g_d0_f19:¢
+24:1203:56882:9:0:194:337:114:120:g_d0_f12:120:g_d0_f6:=−c<0forθ≤θ∗t−1andU
+24:1204:56901:0:9:340:345:123:120:g_d0_f19:120:g_d0_f19:¡
+24:1205:56902:9:0:345:415:114:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+24:1206:56916:0:9:414:419:123:120:g_d0_f19:120:g_d0_f19:¢
+24:1207:56917:9:17:423:539:114:120:g_d0_f6:120:g_d0_f4:<U(θ∗,−∞,α,β,z)for
+24:1208:56935:17:0:72:275:97:120:g_d0_f6:120:g_d0_f6:θ∗>θ∗t−1.It follows that, for anyα>α, U
+24:1209:56974:0:8:277:282:105:120:g_d0_f19:120:g_d0_f19:¡
+24:1210:56975:8:0:282:352:97:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+24:1211:56989:0:8:351:356:105:120:g_d0_f19:120:g_d0_f19:¢
+24:1212:56990:8:18:359:540:97:120:g_d0_f6:120:g_d0_f4:<0for allθ∗and therefore (6) admits
+24:1213:57025:18:0:72:128:79:120:g_d0_f4:120:g_d0_f4:no solution.
+25:1214:57039:0:0:91:316:709:120:g_d0_f4:120:g_d0_f6:For(iv),take anyθ∗t−1<θ∞.Sincelimα→∞U
+25:1215:57076:0:9:319:324:718:120:g_d0_f19:120:g_d0_f19:¡
+25:1216:57077:9:0:324:394:709:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+25:1217:57091:0:9:393:398:718:120:g_d0_f19:120:g_d0_f19:¢
+25:1218:57092:9:18:402:539:709:120:g_d0_f12:120:g_d0_f7:=θ∞−θ∗>0for anyθ∗∈
+25:1219:57110:18:0:72:198:691:120:g_d0_f12:120:g_d0_f7:(θ∗t−1,θ∞),thereexistθ0∈
+25:1220:57134:0:9:201:206:700:120:g_d0_f19:120:g_d0_f19:¡
+25:1221:57135:9:0:206:245:691:120:g_d0_f6:65:g_d0_f21:θ∗t−1,θ∞
+25:1222:57143:0:9:245:250:700:120:g_d0_f19:120:g_d0_f19:¢
+25:1223:57144:9:0:253:417:691:120:g_d0_f4:120:g_d0_f6:andαsuch that, for anyα>α,U
+25:1224:57171:0:9:421:426:700:120:g_d0_f19:120:g_d0_f19:¡
+25:1225:57172:9:0:426:493:691:120:g_d0_f6:120:g_d0_f6:θ0,θ∗t−1,α,β,z
+25:1226:57186:0:9:492:497:700:120:g_d0_f19:120:g_d0_f19:¢
+25:1227:57187:9:17:501:545:691:120:g_d0_f6:120:g_d0_f4:>0.By
+25:1228:57192:17:0:72:164:674:120:g_d0_f4:120:g_d0_f6:the continuity ofU
+25:1229:57210:0:8:167:172:682:120:g_d0_f19:120:g_d0_f19:¡
+25:1230:57211:8:0:172:242:674:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+25:1231:57225:0:8:241:246:682:120:g_d0_f19:120:g_d0_f19:¢
+25:1232:57226:8:0:250:412:674:120:g_d0_f4:120:g_d0_f6:inθ∗and the fact thatlimθ∗→1U
+25:1233:57255:0:8:416:421:682:120:g_d0_f19:120:g_d0_f19:¡
+25:1234:57256:8:0:421:490:674:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+25:1235:57270:0:8:489:494:682:120:g_d0_f19:120:g_d0_f19:¢
+25:1236:57271:8:18:499:539:674:120:g_d0_f12:120:g_d0_f4:=−c,it
+25:1237:57277:18:18:72:311:656:120:g_d0_f4:120:g_d0_f4:follows then that (6) admits a solution forαt>α.
+25:1238:57325:18:17:91:540:638:120:g_d0_f4:120:g_d0_f12:Finally, consider(v).Fixt≥2,θ∗t−2,αt−1,β,andz(where we use the conventionθ∗0=
+25:1239:57402:17:18:72:539:621:120:g_d0_f7:120:g_d0_f4:−∞)and suppose thatθ∗t−1is the highest solution to (6) for periodt−1, which means that
+25:1240:57488:18:0:72:79:603:120:g_d0_f6:120:g_d0_f6:U
+25:1241:57489:0:9:82:87:612:120:g_d0_f19:120:g_d0_f19:¡
+25:1242:57490:9:0:87:171:603:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−2,αt−1,β,z
+25:1243:57507:0:9:170:175:612:120:g_d0_f19:120:g_d0_f19:¢
+25:1244:57508:9:17:178:543:603:120:g_d0_f6:120:g_d0_f12:<0for allθ∗>θ∗t−1.This, together with the properties thatU(θ∗,θ−1,α,β,z)
+25:1245:57580:17:18:72:539:586:120:g_d0_f4:120:g_d0_f4:is non-increasing inθ−1,continuous inθ∗,and equal to−cforθ∗≤θ−1, implies that there ex-
+25:1246:57667:18:0:72:188:568:120:g_d0_f4:120:g_d0_f6:ists∆>0such thatU
+25:1247:57684:0:9:191:196:577:120:g_d0_f19:120:g_d0_f19:¡
+25:1248:57685:9:0:196:280:568:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,αt−1,β,z
+25:1249:57702:0:9:279:284:577:120:g_d0_f19:120:g_d0_f19:¢
+25:1250:57703:9:18:289:540:568:120:g_d0_f6:120:g_d0_f4:<−∆for allθ∗∈[0,1].Furthermore, by continu-
+25:1251:57746:18:17:72:540:550:120:g_d0_f4:120:g_d0_f4:ity ofUin(θ∗,α),there existsα>αt−1such thatU(θ∗,·,α,·)is uniformly continuous over
+25:1252:57828:17:0:72:438:533:120:g_d0_f12:120:g_d0_f6:[0,1]×[αt−1,α].This also implies that there existsα∈(αt−1,α)such thatU
+25:1253:57898:0:9:441:446:542:120:g_d0_f19:120:g_d0_f19:¡
+25:1254:57899:9:0:446:516:533:120:g_d0_f6:120:g_d0_f6:θ∗,θ∗t−1,α,β,z
+25:1255:57913:0:9:514:519:542:120:g_d0_f19:120:g_d0_f19:¢
+25:1256:57914:9:18:523:539:533:120:g_d0_f6:120:g_d0_f12:<0
+25:1257:57916:18:18:72:544:515:120:g_d0_f4:120:g_d0_f6:for allα∈[αt−1,α)and allθ∗∈[0,1],which proves that (6) admits no solution in any periodτ>t
+25:1258:58006:18:22:72:156:497:120:g_d0_f4:120:g_d0_f4:for whichατ<α.
+25:1259:58020:22:18:72:540:475:120:g_d0_f3:120:g_d0_f10:Lemma A1There exist thresholdsz≤z≤zsuch that:ˆθt≤ˆθ1for alltifz≤z;ˆθ1≤(≥)θ∞if
+25:1260:58097:18:17:72:539:457:120:g_d0_f10:120:g_d0_f6:and onlyz≥(≤)z;andˆθt<θ∞for alltif and only ifz>z.These thresholds satisfyz=z=z
+25:1261:58176:17:23:72:279:440:120:g_d0_f10:120:g_d0_f6:whenc≤1/2andz≤z<zwhenc>1/2.
+25:1262:58203:23:0:91:200:417:120:g_d0_f3:65:g_d0_f20:Proof.For anyα≥α1
+25:1263:58220:0:9:203:208:426:120:g_d0_f19:120:g_d0_f19:¡
+25:1264:58221:9:0:208:258:417:120:g_d0_f7:120:g_d0_f12:≥β2/(2π)
+25:1265:58229:0:9:258:263:426:120:g_d0_f19:120:g_d0_f19:¢
+25:1266:58230:9:18:265:565:417:120:g_d0_f6:120:g_d0_f12:,letˆθ=ˆθ(α, β,z)be the unique solution toU(ˆθ,−∞,α,β,z)=
+25:1267:58287:18:26:72:282:399:120:g_d0_f12:120:g_d0_f4:0(i.e., the static equilibrium threshold) and
+25:1268:58332:26:0:191:265:373:120:g_d0_f12:120:g_d0_f12: ̃z(α, β)≡θ∞+
+25:1269:58345:0:15:268:311:385:65:g_d0_f21:65:g_d0_f13:√α+β−√α
+25:1270:58352:15:0:287:320:370:65:g_d0_f13:120:g_d0_f18:βΦ
+25:1271:58354:0:27:320:361:378:65:g_d0_f21:120:g_d0_f6:−1(θ∞),
+25:1272:58361:27:0:191:247:351:120:g_d0_f12:120:g_d0_f18:ˆz(α, β)≡Φ
+25:1273:58371:0:7:249:270:364:120:g_d0_f19:65:g_d0_f21:³√
+25:1274:58373:7:10:270:264:357:65:g_d0_f13:65:g_d0_f21:α√
+25:1275:58375:10:0:264:290:347:65:g_d0_f13:120:g_d0_f18:α+βΦ
+25:1276:58379:0:0:290:326:356:65:g_d0_f21:120:g_d0_f12:−1(θ∞)
+25:1277:58385:0:13:326:333:364:120:g_d0_f19:120:g_d0_f19: ́
+25:1278:58387:13:25:335:421:351:120:g_d0_f12:120:g_d0_f6:+1√α+βΦ−1(θ∞).
+25:1279:58401:25:18:72:539:326:120:g_d0_f4:120:g_d0_f4:The threshold ̃z(α,β)is defined byU(θ∞,−∞,α,β, ̃z(α, β))=0andissuchthatˆθ≥(≤)θ∞if
+25:1280:58482:18:18:72:541:308:120:g_d0_f4:120:g_d0_f12:andonlyifz≤(≥) ̃z.Thethresholdˆz(α, β),on the other hand, is defined so that∂ˆθ/∂α≥(≤)0
+25:1281:58569:18:17:72:539:290:120:g_d0_f4:120:g_d0_f12:ifandonlyifz≥(≤)ˆz.To simplify notation, we henceforth suppress the dependence ofˆθon(β,z)
+25:1282:58659:17:18:72:170:273:120:g_d0_f4:120:g_d0_f6:and of ̃zandˆzonβ.
+25:1283:58677:18:17:91:540:255:120:g_d0_f4:65:g_d0_f21:First, considerc=1/2,in which caseˆz(α)= ̃z(α)=1/2for allα.Whenz<1/2,ˆθ(α)>θ∞
+25:1284:58754:17:15:72:539:238:120:g_d0_f4:120:g_d0_f6:and∂ˆθ/∂α <0for allα≥α1and thereforeˆθ1≥ˆθt>θ∞for allt.When insteadz=1/2,
+25:1285:58827:15:21:72:539:223:120:g_d0_f12:120:g_d0_f4:ˆθ(α)=θ∞for anyα≥α1, and thereforeˆθ1=ˆθt=θ∞for allt. Finally, whenz>1/2,for any
+25:1286:58907:21:17:72:540:202:120:g_d0_f6:120:g_d0_f4:α≥α1,ˆθ(α)<θ∞and∂ˆθ/∂α >0,and henceˆθ1≤ˆθt<θ∞for allt.The result thus holds with
+25:1287:58987:17:18:72:151:185:120:g_d0_f6:120:g_d0_f6:z=z=z=1/2.
+25:1288:58997:18:18:91:540:167:120:g_d0_f4:120:g_d0_f6:Next, considerc<1/2,inwhichcase ̃z(α)andˆz(α)are both decreasing inα, satisfyˆz(α)>
+25:1289:59080:18:17:72:539:149:120:g_d0_f12:120:g_d0_f12: ̃z(α)>θ∞for allα,and converge toθ∞asα→∞.Whenz≤θ∞,then clearlyz< ̃z(α)<ˆz(α)
+25:1290:59156:17:15:72:540:132:120:g_d0_f4:120:g_d0_f4:for allαand thereforeˆθ(α)is always higher thanθ∞and decreasing inα,which implies that
+25:1291:59242:15:20:72:540:117:120:g_d0_f12:120:g_d0_f6:ˆθ1≥ˆθt>θ∞for allt.Whenz∈(θ∞, ̃z(α1)),there areα00>α0>α1such that ̃z(α0)=ˆz(α00)=z.
+25:1292:59325:20:18:72:539:97:120:g_d0_f4:120:g_d0_f12:Forα∈[α1,α0),ˆθ(α)is higher thanθ∞and decreases withα.As soon asα∈(α0,α00),ˆθ(α)
+25:1293:59405:18:0:72:539:79:120:g_d0_f4:120:g_d0_f4:becomes lower thanθ∞and continues to decrease withα.Onceα≥α00,ˆθ(α)starts increasing with
+26:1294:59496:0:18:72:539:709:120:g_d0_f6:120:g_d0_f4:α,but never exceedsθ∞.Hence,ˆθ1>θ∞andˆθ1≥ˆθtfor allt.Whenz= ̃z(α1),ˆθ1=θ∞≥ˆθtfor
+26:1295:59576:18:17:72:539:691:120:g_d0_f4:120:g_d0_f4:allt.Finally, whenz> ̃z(α1),ˆθ(α)<θ∞for allα,and thereforeˆθt<θ∞for allt.We conclude
+26:1296:59660:17:23:72:346:674:120:g_d0_f4:120:g_d0_f6:that the result holds forc<1/2withz=z=z= ̃z(α1).
+26:1297:59708:23:17:91:539:651:120:g_d0_f4:120:g_d0_f4:Finally, considerc>1/2,in which caseˆz(α)and ̃z(α)are both increasing inα,satisfy
+26:1298:59789:17:18:72:539:634:120:g_d0_f12:120:g_d0_f12:ˆz(α)< ̃z(α)<θ∞,and converge toθ∞asα→∞.Whenz≤ˆz(α1),then clearlyz<ˆz(α)< ̃z(α)
+26:1299:59867:18:18:72:539:616:120:g_d0_f4:120:g_d0_f4:for allα>α1and thereforeˆθ(α)is always higher thanθ∞and decreasing inα,which implies
+26:1300:59951:18:17:72:539:598:120:g_d0_f4:120:g_d0_f4:thatˆθ1≥ˆθt>θ∞for allt.Whenz∈(ˆz(α1), ̃z(α1)),there isα0>α1suchˆz(α0)=z.For
+26:1301:60026:17:18:72:540:581:120:g_d0_f6:120:g_d0_f4:α∈(α1,α0),ˆθ(α)is higher thanθ∞and increasing inα,whereas forα>α0,ˆθ(α)decreases
+26:1302:60106:18:17:72:539:563:120:g_d0_f4:120:g_d0_f6:withα,converging toθ∞from above. It follows thatmaxt≥1ˆθt≥ˆθ1>θ∞.Whenz= ̃z(α1),
+26:1303:60185:17:18:72:540:546:120:g_d0_f12:120:g_d0_f6:maxt≥1ˆθt≥ˆθ1=θ∞.Whenz∈( ̃z(α1),θ∞),there areα00>α0>α1such that ̃z(α0)=ˆz(α00)=z.
+26:1304:60266:18:18:72:540:528:120:g_d0_f4:120:g_d0_f4:Forα∈(α1,α0),ˆθ(α)is lower thanθ∞and increasing inα.Forα∈(α0,α00),ˆθ(α)is higher than
+26:1305:60351:18:17:72:539:510:120:g_d0_f6:120:g_d0_f4:θ∞and increases withα.And forα>α00,ˆθ(α)decreases withαand asymptotes toθ∞from above.
+26:1306:60436:17:18:72:540:493:120:g_d0_f4:120:g_d0_f4:Hence,maxt≥1ˆθt>θ∞>ˆθ1.Finally, whenz≥θ∞,then clearlyz> ̃z(α)>ˆz(α)for allαand
+26:1307:60514:18:15:72:539:475:120:g_d0_f4:120:g_d0_f4:thereforeˆθ(α)is always lower thanθ∞,increases withα,and asymptotesθ∞from below. Hence,
+26:1308:60601:15:20:72:539:460:120:g_d0_f12:120:g_d0_f6:ˆθ1≤ˆθt<θ∞for allt.We conclude that the result holds forc>1/2withz=ˆz(α1),z= ̃z(α1),
+26:1309:60685:20:38:72:130:440:120:g_d0_f4:120:g_d0_f6:andz=θ∞.
+26:1310:60693:38:0:72:298:402:120:g_d0_f3:65:g_d0_f13:Lemma A2For anyδ≥0and anyt≥2,Vt
+26:1311:60724:0:9:300:305:411:120:g_d0_f19:120:g_d0_f19:¡
+26:1312:60725:9:0:306:325:402:120:g_d0_f12:120:g_d0_f6: ̄xt;δ
+26:1313:60731:0:9:325:330:411:120:g_d0_f19:120:g_d0_f19:¢
+26:1314:60732:9:0:334:501:402:120:g_d0_f10:120:g_d0_f8:is continuous in ̄xtfor any ̄xt∈R
+26:1315:60765:0:7:501:514:409:65:g_d0_f13:65:g_d0_f20:t−1
+26:1316:60768:7:17:518:539:402:120:g_d0_f14:120:g_d0_f6:×R,
+26:1317:60771:17:38:72:363:385:120:g_d0_f10:65:g_d0_f4:and similarlyV1( ̄x1;δ)is continuous in ̄x1for any ̄x1∈R.15
+26:1318:60830:38:0:91:495:347:120:g_d0_f3:65:g_d0_f13:Proof.Considerfirstδ=0,in which caseV1( ̄x;0)≡U(θ1( ̄x),−∞,α1,β,z)andVt
+26:1319:60901:0:9:498:503:356:120:g_d0_f19:120:g_d0_f19:¡
+26:1320:60902:9:0:503:525:347:120:g_d0_f12:120:g_d0_f12: ̄xt;0
+26:1321:60908:0:9:523:528:356:120:g_d0_f19:120:g_d0_f19:¢
+26:1322:60909:9:17:531:540:347:120:g_d0_f7:120:g_d0_f7:≡
+26:1323:60910:17:0:72:79:330:120:g_d0_f6:120:g_d0_f6:U
+26:1324:60911:0:8:82:87:338:120:g_d0_f19:120:g_d0_f19:¡
+26:1325:60912:8:0:87:141:330:120:g_d0_f6:65:g_d0_f20:θt( ̄xt),θt−1
+26:1326:60925:0:9:144:149:339:120:g_d0_f19:120:g_d0_f19:¡
+26:1327:60926:9:0:149:169:330:120:g_d0_f12:65:g_d0_f20: ̄xt−1
+26:1328:60932:0:9:169:174:339:120:g_d0_f19:120:g_d0_f19:¢
+26:1329:60933:9:0:176:215:330:120:g_d0_f6:120:g_d0_f6:,αt,β,z
+26:1330:60940:0:8:214:219:338:120:g_d0_f19:120:g_d0_f19:¢
+26:1331:60941:8:18:223:540:330:120:g_d0_f4:120:g_d0_f4:fort≥2.Note that, for allt, θt( ̄xt)is continuous in ̄xt∈Rand
+26:1332:61002:18:0:72:425:312:120:g_d0_f4:65:g_d0_f13:takes values in[0,1].Since themaxoperator is continuous, it follows thatθt
+26:1333:61076:0:9:427:432:321:120:g_d0_f19:120:g_d0_f19:¡
+26:1334:61077:9:0:433:441:312:120:g_d0_f12:65:g_d0_f13: ̄xt
+26:1335:61081:0:9:442:447:321:120:g_d0_f19:120:g_d0_f19:¢
+26:1336:61082:9:18:450:539:312:120:g_d0_f7:120:g_d0_f14:≡maxτ≤t{θτ( ̄xτ)}
+26:1337:61099:18:0:72:200:294:120:g_d0_f4:120:g_d0_f8:is also continuous in ̄xt∈R
+26:1338:61126:0:7:200:203:301:65:g_d0_f13:65:g_d0_f13:t
+26:1339:61127:7:17:207:539:294:120:g_d0_f4:120:g_d0_f4:and takes values in[0,1].Furthermore,U(θ,−∞,α,β,z)is continuous
+26:1340:61190:17:0:72:507:277:120:g_d0_f4:65:g_d0_f13:inθ∈[0,1]andU(θ,θ−1,α,β,z)is continuous in(θ,θ−1)∈[0,1]2.It follows that, for allt, Vt
+26:1341:61276:0:9:509:514:286:120:g_d0_f19:120:g_d0_f19:¡
+26:1342:61277:9:0:515:536:277:120:g_d0_f12:120:g_d0_f12: ̄xt;0
+26:1343:61283:0:27:535:540:286:120:g_d0_f19:120:g_d0_f19:¢
+26:1344:61284:27:0:72:158:259:120:g_d0_f4:120:g_d0_f8:is continuous inR
+26:1345:61301:0:7:158:161:266:65:g_d0_f13:65:g_d0_f13:t
+26:1346:61302:7:22:161:164:259:120:g_d0_f4:120:g_d0_f4:.
+26:1347:61303:22:18:91:539:237:120:g_d0_f4:120:g_d0_f6:Consider nextδ>0.To simplify notation, we henceforth suppress the dependence ofpt,
+26:1348:61385:18:36:72:545:219:120:g_d0_f6:120:g_d0_f12:vtandVtonδwhenever there is no risk of confusion.  For allt≥1,the functionpt(θ; ̄xt)=
+26:1349:61470:36:18:80:539:183:36:g_d0_f4:82:g_d0_f4:15ContinuitycanbeextendedinRtas follows. For any functionf:A→R,whereA⊆Rtandt≥1,we say that
+26:1350:61560:18:15:71:540:165:82:g_d0_f15:82:g_d0_f4:fis continuous overAif and only if, for anyxt∈Aand anyε>0,there existsη>0such that, for any ̃xt∈Asuch
+26:1351:61661:15:14:71:540:150:82:g_d0_f4:82:g_d0_f4:that for allτ≤t:(a)| ̃xτ−xτ|<ηifxτ∈R;(b) ̃xτ<−1/ηifxτ=−∞;(c) ̃xτ>1/η,ifxτ=+∞,the following
+26:1352:61751:14:0:71:135:136:82:g_d0_f4:82:g_d0_f15:is true: (a’) iff
+26:1353:61768:0:7:137:141:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1354:61769:7:0:142:150:136:82:g_d0_f15:36:g_d0_f23:xt
+26:1355:61771:0:7:150:154:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1356:61772:7:0:157:207:136:82:g_d0_f16:82:g_d0_f15:∈R,then|f
+26:1357:61781:0:7:209:213:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1358:61782:7:0:214:221:136:82:g_d0_f17:36:g_d0_f23: ̃xt
+26:1359:61786:0:7:222:226:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1360:61787:7:0:228:242:136:82:g_d0_f16:82:g_d0_f15:−f
+26:1361:61789:0:7:244:248:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1362:61790:7:0:249:257:136:82:g_d0_f15:36:g_d0_f23:xt
+26:1363:61792:0:7:257:261:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1364:61793:7:0:263:320:136:82:g_d0_f39:82:g_d0_f15:|<ε;(b’) iff
+26:1365:61805:0:7:322:326:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1366:61806:7:0:326:334:136:82:g_d0_f15:36:g_d0_f23:xt
+26:1367:61808:0:7:335:339:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1368:61809:7:0:342:400:136:82:g_d0_f17:82:g_d0_f15:=−∞,thenf
+26:1369:61818:0:7:402:406:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1370:61819:7:0:407:414:136:82:g_d0_f17:36:g_d0_f23: ̃xt
+26:1371:61823:0:7:415:419:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1372:61824:7:0:422:489:136:82:g_d0_f15:82:g_d0_f15:<−1/ε;(c’) iff
+26:1373:61838:0:7:491:495:143:82:g_d0_f19:82:g_d0_f19:¡
+26:1374:61839:7:0:495:503:136:82:g_d0_f15:36:g_d0_f23:xt
+26:1375:61841:0:7:504:508:143:82:g_d0_f19:82:g_d0_f19:¢
+26:1376:61842:7:14:511:540:136:82:g_d0_f17:82:g_d0_f15:=+∞,
+26:1377:61846:14:0:71:97:122:82:g_d0_f4:82:g_d0_f15:thenf
+26:1378:61851:0:7:99:103:129:82:g_d0_f19:82:g_d0_f19:¡
+26:1379:61852:7:0:104:112:122:82:g_d0_f17:36:g_d0_f23: ̃xt
+26:1380:61856:0:7:112:116:129:82:g_d0_f19:82:g_d0_f19:¢
+26:1381:61857:7:14:119:145:122:82:g_d0_f15:82:g_d0_f15:>1/ε.
+26:1382:61862:14:15:81:540:108:82:g_d0_f4:82:g_d0_f15:Note that, iff:A→R,g:B→R,andq:C→Rare continuous, respectively, inA, BandC,whereA⊆Rt,
+26:1383:61946:15:0:71:417:93:82:g_d0_f15:82:g_d0_f15:B⊆Rk,andf(A)×g(B)⊆C⊆R2,then the functionw:A×B→Rdefined byw
+26:1384:62004:0:7:418:422:100:82:g_d0_f19:82:g_d0_f19:¡
+26:1385:62005:7:0:423:444:93:82:g_d0_f15:36:g_d0_f23:xt,xk
+26:1386:62010:0:7:445:449:100:82:g_d0_f19:82:g_d0_f19:¢
+26:1387:62011:7:0:452:466:93:82:g_d0_f17:82:g_d0_f15:=q
+26:1388:62013:0:7:468:472:100:82:g_d0_f19:82:g_d0_f19:¡
+26:1389:62014:7:0:472:477:93:82:g_d0_f15:82:g_d0_f15:f
+26:1390:62015:0:7:479:483:100:82:g_d0_f19:82:g_d0_f19:¡
+26:1391:62016:7:0:483:491:93:82:g_d0_f15:36:g_d0_f23:xt
+26:1392:62018:0:7:492:496:100:82:g_d0_f19:82:g_d0_f19:¢
+26:1393:62019:7:0:497:507:93:82:g_d0_f15:82:g_d0_f15:,g
+26:1394:62021:0:7:508:512:100:82:g_d0_f19:82:g_d0_f19:¡
+26:1395:62022:7:0:512:521:93:82:g_d0_f15:36:g_d0_f23:xk
+26:1396:62024:0:7:522:530:100:82:g_d0_f19:82:g_d0_f19:¢¢
+26:1397:62026:7:14:533:539:93:82:g_d0_f4:82:g_d0_f4:is
+26:1398:62028:14:0:71:157:79:82:g_d0_f4:82:g_d0_f4:continuous inA×B.
+27:1399:62047:0:0:72:79:709:120:g_d0_f6:120:g_d0_f6:F
+27:1400:62048:0:9:82:92:718:120:g_d0_f19:120:g_d0_f19:¡£
+27:1401:62050:9:0:91:99:709:120:g_d0_f18:120:g_d0_f18:Φ
+27:1402:62051:0:9:101:115:718:120:g_d0_f19:120:g_d0_f7:¡√
+27:1403:62053:9:0:115:164:709:120:g_d0_f6:120:g_d0_f12:αt( ̄xt−θ)
+27:1404:62063:0:9:165:170:718:120:g_d0_f19:120:g_d0_f19:¢
+27:1405:62064:9:0:172:188:709:120:g_d0_f7:120:g_d0_f6:−θ
+27:1406:62066:0:9:188:193:718:120:g_d0_f19:120:g_d0_f19:¤
+27:1407:62067:9:0:195:205:709:120:g_d0_f6:120:g_d0_f6:/δ
+27:1408:62069:0:9:205:210:718:120:g_d0_f19:120:g_d0_f19:¢
+27:1409:62070:9:33:214:533:709:120:g_d0_f4:120:g_d0_f6:is continuous in(θ, ̄xt)∈R2and strictly decreasing inθ.Fort≥2,
+27:1410:62132:33:0:126:136:676:120:g_d0_f6:65:g_d0_f13:ψt
+27:1411:62134:0:8:139:144:684:120:g_d0_f19:120:g_d0_f19:¡
+27:1412:62135:8:0:144:195:676:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+27:1413:62147:0:8:194:199:684:120:g_d0_f19:120:g_d0_f19:¢
+27:1414:62148:8:0:202:211:676:120:g_d0_f12:120:g_d0_f12:=
+27:1415:62149:0:0:237:244:684:120:g_d0_f6:120:g_d0_f6:φ
+27:1416:62150:0:8:245:259:692:120:g_d0_f19:120:g_d0_f7:¡√
+27:1417:62152:8:0:259:305:684:120:g_d0_f6:120:g_d0_f12:αt(x−θ)
+27:1418:62159:0:8:305:310:692:120:g_d0_f19:120:g_d0_f19:¢
+27:1419:62160:8:0:312:322:684:120:g_d0_f6:65:g_d0_f13:ψt
+27:1420:62162:0:8:325:330:692:120:g_d0_f19:120:g_d0_f19:¡
+27:1421:62163:8:0:330:372:684:120:g_d0_f6:120:g_d0_f6:θ; ̄xt−1,δ
+27:1422:62173:0:17:371:376:692:120:g_d0_f19:120:g_d0_f19:¢
+27:1423:62174:17:13:215:238:675:120:g_d0_f19:65:g_d0_f21:R+∞
+27:1424:62177:13:0:220:246:662:65:g_d0_f21:120:g_d0_f6:−∞φ
+27:1425:62180:0:9:248:262:675:120:g_d0_f19:120:g_d0_f7:¡√
+27:1426:62182:9:0:262:310:666:120:g_d0_f6:120:g_d0_f12:αt(x−θ0)
+27:1427:62190:0:9:310:315:675:120:g_d0_f19:120:g_d0_f19:¢
+27:1428:62191:9:32:317:397:666:120:g_d0_f6:65:g_d0_f35:ψt(θ0; ̄xt−1,δ)dθ0
+27:1429:62209:32:0:202:211:634:120:g_d0_f12:120:g_d0_f12:=
+27:1430:62210:0:0:238:338:645:120:g_d0_f18:120:g_d0_f6:Πt−1s=1[1−ps(θ; ̄xs)]φ
+27:1431:62232:0:12:339:355:657:120:g_d0_f19:120:g_d0_f7:³√
+27:1432:62234:12:0:355:385:645:120:g_d0_f6:120:g_d0_f6:αt+β
+27:1433:62238:0:12:387:394:657:120:g_d0_f19:120:g_d0_f19:³
+27:1434:62239:12:0:394:439:645:120:g_d0_f6:65:g_d0_f13:θ−αtx+βzαt+β
+27:1435:62251:0:26:444:457:657:120:g_d0_f19:120:g_d0_f19: ́ ́
+27:1436:62255:26:12:215:238:631:120:g_d0_f19:65:g_d0_f21:R+∞
+27:1437:62258:12:0:220:247:619:65:g_d0_f21:120:g_d0_f18:−∞Π
+27:1438:62261:0:8:248:261:627:65:g_d0_f13:65:g_d0_f20:t−1
+27:1439:62264:8:0:248:307:619:65:g_d0_f13:120:g_d0_f6:s=1[1−ps(θ
+27:1440:62274:0:0:308:342:626:65:g_d0_f35:120:g_d0_f6:0; ̄xs)]φ
+27:1441:62283:0:12:344:359:634:120:g_d0_f19:120:g_d0_f7:³√
+27:1442:62285:12:0:359:389:622:120:g_d0_f6:120:g_d0_f6:αt+β
+27:1443:62289:0:12:392:399:634:120:g_d0_f19:120:g_d0_f19:³
+27:1444:62290:12:0:398:446:622:120:g_d0_f6:65:g_d0_f13:θ0−αtx+βzαt+β
+27:1445:62303:0:12:452:465:634:120:g_d0_f19:120:g_d0_f19: ́ ́
+27:1446:62307:12:0:467:480:622:120:g_d0_f6:65:g_d0_f35:dθ0
+27:1447:62310:0:43:482:485:634:120:g_d0_f6:120:g_d0_f6:.
+27:1448:62311:43:0:72:511:591:120:g_d0_f4:120:g_d0_f8:The p.d.f.ψt— and similarly the c.d.f.Ψt—isthuscontinuousinθ∈Rand(x, ̄xt−1)∈R×R
+27:1449:62390:0:7:511:524:598:65:g_d0_f13:65:g_d0_f20:t−1
+27:1450:62393:7:17:525:539:591:120:g_d0_f6:120:g_d0_f4:.It
+27:1451:62396:17:0:72:142:574:120:g_d0_f4:65:g_d0_f13:follows thatvt
+27:1452:62410:0:9:144:149:583:120:g_d0_f19:120:g_d0_f19:¡
+27:1453:62411:9:0:149:195:574:120:g_d0_f6:65:g_d0_f13:x; ̄xt−1, ̄xt
+27:1454:62424:0:9:196:201:583:120:g_d0_f19:120:g_d0_f19:¢
+27:1455:62425:9:0:206:215:574:120:g_d0_f12:120:g_d0_f12:=
+27:1456:62426:0:13:220:242:583:120:g_d0_f19:65:g_d0_f21:R+∞
+27:1457:62429:13:0:225:303:570:65:g_d0_f21:65:g_d0_f13:−∞pt(θ; ̄xt)dΨt
+27:1458:62444:0:9:305:310:583:120:g_d0_f19:120:g_d0_f19:¡
+27:1459:62445:9:0:310:362:574:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+27:1460:62457:0:9:360:365:583:120:g_d0_f19:120:g_d0_f19:¢
+27:1461:62458:9:18:369:539:574:120:g_d0_f7:120:g_d0_f7:−cis continuous in(x, ̄xt−1, ̄xt)∈
+27:1462:62492:18:0:72:96:556:120:g_d0_f8:120:g_d0_f8:R×R
+27:1463:62495:0:7:96:109:563:65:g_d0_f13:65:g_d0_f20:t−1
+27:1464:62498:7:0:110:293:556:120:g_d0_f14:65:g_d0_f13:×R.16It is then immediate thatVt
+27:1465:62530:0:9:295:300:565:120:g_d0_f19:120:g_d0_f19:¡
+27:1466:62531:9:0:301:335:556:120:g_d0_f12:65:g_d0_f13: ̄xt−1, ̄xt
+27:1467:62542:0:9:335:340:565:120:g_d0_f19:120:g_d0_f19:¢
+27:1468:62543:9:0:346:369:556:120:g_d0_f12:65:g_d0_f13:=vt
+27:1469:62546:0:9:372:377:565:120:g_d0_f19:120:g_d0_f19:¡
+27:1470:62547:9:0:377:426:556:120:g_d0_f12:65:g_d0_f13: ̄xt; ̄xt−1, ̄xt
+27:1471:62563:0:9:427:432:565:120:g_d0_f19:120:g_d0_f19:¢
+27:1472:62564:9:17:437:539:556:120:g_d0_f4:120:g_d0_f4:is also continuous in
+27:1473:62585:17:18:72:539:539:120:g_d0_f12:120:g_d0_f4:( ̄xt−1, ̄xt)∈Rt−1×R. Similarly, fort=1,v1(x; ̄x1)is continuous in(x, ̄x1)∈R2and therefore
+27:1474:62675:18:24:72:221:521:120:g_d0_f6:120:g_d0_f4:V1( ̄x1)is continuous in ̄x1∈R.
+27:1475:62706:24:17:91:539:497:120:g_d0_f3:65:g_d0_f13:Proof of Proposition 3.(To simplify notation, we again suppress the dependence ofpt,vt
+27:1476:62792:17:18:72:327:480:120:g_d0_f4:120:g_d0_f4:andVtonδwhenever this does not create confusion.)
+27:1477:62841:18:18:91:539:462:120:g_d0_f11:120:g_d0_f4:Sufficiency.Consider a sequence{ ̄xt(δ)}∞t=1that satisfies conditions(ii)and(iii)in the
+27:1478:62928:18:0:72:251:444:120:g_d0_f4:65:g_d0_f13:proposition.  The monotonicity ofvt
+27:1479:62963:0:9:254:259:453:120:g_d0_f19:120:g_d0_f19:¡
+27:1480:62964:9:0:259:279:444:120:g_d0_f6:65:g_d0_f13:x; ̄xt
+27:1481:62970:0:9:280:285:453:120:g_d0_f19:120:g_d0_f19:¢
+27:1482:62971:9:17:290:539:444:120:g_d0_f4:120:g_d0_f4:with respect tox(see proof of Lemma A2 above)
+27:1483:63016:17:0:72:317:427:120:g_d0_f4:65:g_d0_f13:guarantees that, for anyx∈Rand any ̄xt∈Rt,vt
+27:1484:63060:0:9:319:324:436:120:g_d0_f19:120:g_d0_f19:¡
+27:1485:63061:9:0:324:344:427:120:g_d0_f6:65:g_d0_f13:x; ̄xt
+27:1486:63067:0:9:345:350:436:120:g_d0_f19:120:g_d0_f19:¢
+27:1487:63068:9:0:353:394:427:120:g_d0_f7:65:g_d0_f13:≥(≤)Vt
+27:1488:63074:0:9:396:401:436:120:g_d0_f19:120:g_d0_f19:¡
+27:1489:63075:9:0:402:410:427:120:g_d0_f12:65:g_d0_f13: ̄xt
+27:1490:63079:0:9:411:416:436:120:g_d0_f19:120:g_d0_f19:¢
+27:1491:63080:9:18:420:539:427:120:g_d0_f4:120:g_d0_f4:if and only ifx≤(≥) ̄xt.
+27:1492:63104:18:18:72:480:409:120:g_d0_f4:120:g_d0_f4:It follows that the strategies defined by(i)−(iii)constitute a monotone equilibrium.
+27:1493:63188:18:17:91:539:391:120:g_d0_f11:120:g_d0_f4:Necessity.Conversely, suppose that{at(·)}∞t=1is a monotone equilibrium. Since in any such
+27:1494:63277:17:18:72:539:374:120:g_d0_f4:120:g_d0_f4:equilibrium the measure of agents attacking in every period is decreasing inθ,the probability
+27:1495:63370:18:17:71:540:356:120:g_d0_f4:120:g_d0_f4:of regime change is also decreasing inθ. Then, by standard representation theorems (Milgrom,
+27:1496:63462:17:18:71:540:339:120:g_d0_f4:120:g_d0_f4:1981), the expected payofffrom attacking is decreasing inxt, implying that agents must follow
+27:1497:63555:18:0:72:485:321:120:g_d0_f4:65:g_d0_f13:cut-offstrategies. For{ ̄xt}∞t=1to be equilibrium cutoffs, it must be that, for allt, Vt
+27:1498:63643:0:9:487:492:330:120:g_d0_f19:120:g_d0_f19:¡
+27:1499:63644:9:0:493:501:321:120:g_d0_f12:65:g_d0_f13: ̄xt
+27:1500:63648:0:9:502:507:330:120:g_d0_f19:120:g_d0_f19:¢
+27:1501:63649:9:18:511:539:321:120:g_d0_f12:120:g_d0_f4:=0if
+27:1502:63653:18:0:72:165:303:120:g_d0_f7:65:g_d0_f13:−∞< ̄xt<+∞,Vt
+27:1503:63666:0:9:168:173:312:120:g_d0_f19:120:g_d0_f19:¡
+27:1504:63667:9:0:173:182:303:120:g_d0_f12:65:g_d0_f13: ̄xt
+27:1505:63671:0:9:182:187:312:120:g_d0_f19:120:g_d0_f19:¢
+27:1506:63672:9:0:190:302:303:120:g_d0_f7:65:g_d0_f13:≤0if ̄xt=−∞,andVt
+27:1507:63689:0:9:304:309:312:120:g_d0_f19:120:g_d0_f19:¡
+27:1508:63690:9:0:310:319:303:120:g_d0_f12:65:g_d0_f13: ̄xt
+27:1509:63694:0:9:319:324:312:120:g_d0_f19:120:g_d0_f19:¢
+27:1510:63695:9:17:327:404:303:120:g_d0_f7:120:g_d0_f6:≥0if ̄xt=+∞.
+27:1511:63707:17:18:91:539:286:120:g_d0_f4:120:g_d0_f4:We next show that, in any equilibrium, ̄xt<+∞for allt≥1and ̄x1>−∞.Indeed, if
+27:1512:63783:18:0:72:260:268:120:g_d0_f12:120:g_d0_f6: ̄xt=+∞,in which casept(θ;+∞)=F
+27:1513:63814:0:13:263:273:277:120:g_d0_f19:65:g_d0_f20:¡1
+27:1514:63816:13:0:269:309:264:65:g_d0_f13:120:g_d0_f12:δ(1−θ)
+27:1515:63822:0:9:309:314:277:120:g_d0_f19:120:g_d0_f19:¢
+27:1516:63823:9:0:316:501:268:120:g_d0_f6:120:g_d0_f8:,then, for anyt≥2,(x, ̄xt−1)∈R×R
+27:1517:63855:0:7:501:515:275:65:g_d0_f13:65:g_d0_f20:t−1
+27:1518:63858:7:18:515:540:268:120:g_d0_f6:120:g_d0_f4:,and
+27:1519:63862:18:30:72:104:250:120:g_d0_f6:120:g_d0_f6:θ0∈R,
+27:1520:63867:30:0:72:80:220:120:g_d0_f6:65:g_d0_f13:vt
+27:1521:63869:0:9:82:87:229:120:g_d0_f19:120:g_d0_f19:¡
+27:1522:63870:9:0:87:143:220:120:g_d0_f6:120:g_d0_f7:x; ̄xt−1,+∞
+27:1523:63881:0:9:143:148:229:120:g_d0_f19:120:g_d0_f19:¢
+27:1524:63882:9:0:151:160:220:120:g_d0_f12:120:g_d0_f12:=
+27:1525:63883:0:25:163:189:235:120:g_d0_f19:65:g_d0_f21:Z+∞
+27:1526:63886:25:0:169:184:210:65:g_d0_f21:65:g_d0_f21:−∞
+27:1527:63888:0:0:191:198:220:120:g_d0_f6:120:g_d0_f6:F
+27:1528:63889:0:13:201:211:229:120:g_d0_f19:65:g_d0_f20:¡1
+27:1529:63891:13:0:208:247:216:65:g_d0_f13:120:g_d0_f12:δ(1−θ)
+27:1530:63897:0:9:247:252:229:120:g_d0_f19:120:g_d0_f19:¢
+27:1531:63898:9:0:254:264:220:120:g_d0_f6:65:g_d0_f13:ψt
+27:1532:63900:0:9:267:272:229:120:g_d0_f19:120:g_d0_f19:¡
+27:1533:63901:9:0:272:324:220:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+27:1534:63913:0:9:322:327:229:120:g_d0_f19:120:g_d0_f19:¢
+27:1535:63914:9:33:329:358:220:120:g_d0_f6:120:g_d0_f6:dθ−c
+27:1536:63918:33:0:151:160:187:120:g_d0_f12:120:g_d0_f12:=
+27:1537:63919:0:25:163:180:202:120:g_d0_f19:36:g_d0_f38:Zθ0
+27:1538:63922:25:0:169:184:177:65:g_d0_f21:65:g_d0_f21:−∞
+27:1539:63924:0:0:186:193:187:120:g_d0_f6:120:g_d0_f6:F
+27:1540:63925:0:13:196:207:196:120:g_d0_f19:65:g_d0_f20:¡1
+27:1541:63927:13:0:203:242:183:65:g_d0_f13:120:g_d0_f12:δ(1−θ)
+27:1542:63933:0:9:243:248:196:120:g_d0_f19:120:g_d0_f19:¢
+27:1543:63934:9:0:249:259:187:120:g_d0_f6:65:g_d0_f13:ψt
+27:1544:63936:0:9:262:267:196:120:g_d0_f19:120:g_d0_f19:¡
+27:1545:63937:9:0:267:319:187:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+27:1546:63949:0:9:317:322:196:120:g_d0_f19:120:g_d0_f19:¢
+27:1547:63950:9:0:324:346:187:120:g_d0_f6:120:g_d0_f12:dθ+
+27:1548:63953:0:25:348:375:202:120:g_d0_f19:65:g_d0_f21:Z+∞
+27:1549:63956:25:0:354:361:177:65:g_d0_f13:36:g_d0_f38:θ0
+27:1550:63958:0:0:377:384:187:120:g_d0_f6:120:g_d0_f6:F
+27:1551:63959:0:13:387:397:196:120:g_d0_f19:65:g_d0_f20:¡1
+27:1552:63961:13:0:393:433:183:65:g_d0_f13:120:g_d0_f12:δ(1−θ)
+27:1553:63967:0:9:433:438:196:120:g_d0_f19:120:g_d0_f19:¢
+27:1554:63968:9:0:440:450:187:120:g_d0_f6:65:g_d0_f13:ψt
+27:1555:63970:0:9:452:457:196:120:g_d0_f19:120:g_d0_f19:¡
+27:1556:63971:9:0:457:509:187:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+27:1557:63983:0:9:508:513:196:120:g_d0_f19:120:g_d0_f19:¢
+27:1558:63984:9:27:515:544:187:120:g_d0_f6:120:g_d0_f6:dθ−c
+27:1559:63988:27:0:151:174:160:120:g_d0_f7:65:g_d0_f13:≤Ψt
+27:1560:63991:0:9:177:182:169:120:g_d0_f19:120:g_d0_f19:¡
+27:1561:63992:9:0:181:236:160:120:g_d0_f6:120:g_d0_f6:θ0|x; ̄xt−1,δ
+27:1562:64005:0:9:235:240:169:120:g_d0_f19:120:g_d0_f19:¢
+27:1563:64006:9:0:242:260:160:120:g_d0_f12:120:g_d0_f6:+F
+27:1564:64008:0:13:263:273:169:120:g_d0_f19:65:g_d0_f20:¡1
+27:1565:64010:13:0:270:274:156:65:g_d0_f13:65:g_d0_f13:δ
+27:1566:64011:0:9:277:282:169:120:g_d0_f19:120:g_d0_f19:¡
+27:1567:64012:9:0:282:308:160:120:g_d0_f12:65:g_d0_f35:1−θ0
+27:1568:64016:0:9:309:325:169:120:g_d0_f19:120:g_d0_f19:¢¢ £
+27:1569:64020:9:0:325:355:160:120:g_d0_f12:65:g_d0_f13:1−Ψt
+27:1570:64024:0:9:358:363:169:120:g_d0_f19:120:g_d0_f19:¡
+27:1571:64025:9:0:363:418:160:120:g_d0_f6:120:g_d0_f6:θ0|x; ̄xt−1,δ
+27:1572:64038:0:9:416:426:169:120:g_d0_f19:120:g_d0_f19:¢¤
+27:1573:64040:9:20:428:447:160:120:g_d0_f7:120:g_d0_f6:−c,
+27:1574:64043:20:7:80:272:140:36:g_d0_f4:36:g_d0_f26:16Note thatvt¡x; ̄xt¢can also be written asR1
+27:1575:64088:7:0:267:311:133:36:g_d0_f26:82:g_d0_f15:0Fp(y;x, ̄x
+27:1576:64099:0:18:311:539:140:36:g_d0_f23:82:g_d0_f15:t)dy,whereFp(y;x, ̄xt)is the (probability) measure ofθ
+27:1577:64153:18:0:71:374:122:82:g_d0_f4:36:g_d0_f23:for whichp(θ; ̄xt)>y,that is,Fp(y;x, ̄xt)=0ify=1andFp(y;x, ̄xt)=Ψt
+27:1578:64219:0:7:375:379:129:82:g_d0_f19:82:g_d0_f19:¡
+27:1579:64220:7:0:380:462:122:82:g_d0_f15:82:g_d0_f15:p−1(y; ̄xt)|x; ̄xt−1,δ
+27:1580:64242:0:7:460:464:129:82:g_d0_f19:82:g_d0_f19:¢
+27:1581:64243:7:14:467:540:122:82:g_d0_f4:82:g_d0_f4:ify∈[0,1),where
+27:1582:64258:14:15:71:540:108:82:g_d0_f15:82:g_d0_f17:p−1(y; ̄xt)denotes the inverse ofp(θ; ̄xt)with respect toθ.The continuities ofpandΨtthen imply thatFp(y;x, ̄xt)
+27:1583:64369:15:14:71:540:93:82:g_d0_f4:82:g_d0_f4:is continuous in(x, ̄xt)∈R×Rt−1×R,for anyy∈[0,1].SinceFp(y;·)is also bounded from above by1,from the
+27:1584:64469:14:0:71:270:79:82:g_d0_f4:82:g_d0_f4:Dominated Convergence Theorem, it follows that
+27:1585:64515:0:10:273:284:86:82:g_d0_f19:36:g_d0_f26:R1
+27:1586:64517:10:0:278:322:76:36:g_d0_f26:82:g_d0_f15:0Fp(y;x, ̄x
+27:1587:64528:0:0:323:455:83:36:g_d0_f23:82:g_d0_f15:t)dyis also continuous in(x, ̄xt).
+28:1588:64564:0:0:72:115:708:120:g_d0_f4:65:g_d0_f13:whereΨt
+28:1589:64571:0:9:117:122:717:120:g_d0_f19:120:g_d0_f19:¡
+28:1590:64572:9:0:122:177:708:120:g_d0_f6:120:g_d0_f6:θ0|x; ̄xt−1,δ
+28:1591:64585:0:9:175:180:717:120:g_d0_f19:120:g_d0_f19:¢
+28:1592:64586:9:0:184:193:708:120:g_d0_f12:120:g_d0_f12:=
+28:1593:64587:0:13:197:210:717:120:g_d0_f19:36:g_d0_f38:Rθ0
+28:1594:64590:13:0:202:229:704:65:g_d0_f21:65:g_d0_f13:−∞ψt
+28:1595:64594:0:9:232:237:717:120:g_d0_f19:120:g_d0_f19:¡
+28:1596:64595:9:0:237:289:708:120:g_d0_f6:120:g_d0_f6:θ|x; ̄xt−1,δ
+28:1597:64607:0:9:287:292:717:120:g_d0_f19:120:g_d0_f19:¢
+28:1598:64608:9:18:294:540:708:120:g_d0_f6:120:g_d0_f4:dθ.Furthermore, since the knowledge that the sta-
+28:1599:64657:18:17:72:539:690:120:g_d0_f4:65:g_d0_f4:tus quo survived past attacks causes afirst-order-stochastic-dominance change in posterior beliefs,17
+28:1600:64758:17:0:72:83:673:120:g_d0_f18:65:g_d0_f13:Ψt
+28:1601:64760:0:9:85:90:682:120:g_d0_f19:120:g_d0_f19:¡
+28:1602:64761:9:0:90:145:673:120:g_d0_f6:120:g_d0_f6:θ0|x; ̄xt−1,δ
+28:1603:64774:0:9:143:148:682:120:g_d0_f19:120:g_d0_f19:¢
+28:1604:64775:9:0:151:171:673:120:g_d0_f7:120:g_d0_f18:≤Φ
+28:1605:64777:0:12:173:188:685:120:g_d0_f19:120:g_d0_f7:³√
+28:1606:64779:12:0:188:218:673:120:g_d0_f6:120:g_d0_f6:αt+β
+28:1607:64783:0:12:221:228:685:120:g_d0_f19:120:g_d0_f19:³
+28:1608:64784:12:0:227:275:673:120:g_d0_f6:65:g_d0_f13:θ0−αtx+βzαt+β
+28:1609:64797:0:12:281:294:685:120:g_d0_f19:120:g_d0_f19: ́ ́
+28:1610:64801:12:0:294:409:673:120:g_d0_f4:120:g_d0_f18:.Alongwithlimx→+∞Φ
+28:1611:64819:0:12:411:426:685:120:g_d0_f19:120:g_d0_f7:³√
+28:1612:64821:12:0:427:456:673:120:g_d0_f6:120:g_d0_f6:αt+β
+28:1613:64825:0:12:459:466:685:120:g_d0_f19:120:g_d0_f19:³
+28:1614:64826:12:0:465:513:673:120:g_d0_f6:65:g_d0_f13:θ0−αtx+βzαt+β
+28:1615:64839:0:12:519:532:685:120:g_d0_f19:120:g_d0_f19: ́ ́
+28:1616:64843:12:18:535:544:673:120:g_d0_f12:120:g_d0_f12:=
+28:1617:64844:18:0:72:220:655:120:g_d0_f12:65:g_d0_f13:0,this implies thatlimx→+∞vt
+28:1618:64872:0:9:222:227:664:120:g_d0_f19:120:g_d0_f19:¡
+28:1619:64873:9:0:227:283:655:120:g_d0_f6:120:g_d0_f7:x; ̄xt−1,+∞
+28:1620:64884:0:9:283:288:664:120:g_d0_f19:120:g_d0_f19:¢
+28:1621:64885:9:0:292:310:655:120:g_d0_f7:120:g_d0_f6:≤F
+28:1622:64887:0:13:314:324:664:120:g_d0_f19:65:g_d0_f20:¡1
+28:1623:64889:13:0:320:355:651:65:g_d0_f13:120:g_d0_f6:δ(1−θ
+28:1624:64894:0:21:356:540:659:65:g_d0_f35:120:g_d0_f4:0)¢−c. Since the latter is true for any
+28:1625:64933:21:0:72:306:638:120:g_d0_f6:120:g_d0_f6:θ0∈R,it is also true forθ0→+∞,in which caseF
+28:1626:64977:0:12:309:320:646:120:g_d0_f19:65:g_d0_f20:¡1
+28:1627:64979:12:0:316:351:634:65:g_d0_f13:120:g_d0_f6:δ(1−θ
+28:1628:64984:0:22:351:539:642:65:g_d0_f35:120:g_d0_f4:0)¢→0.Together with the fact thatvtis
+28:1629:65021:22:0:72:295:620:120:g_d0_f4:120:g_d0_f6:bounded from below by−c,this implies thatV
+28:1630:65063:0:9:300:305:629:120:g_d0_f19:120:g_d0_f19:¡
+28:1631:65064:9:0:306:350:620:120:g_d0_f12:120:g_d0_f7: ̄xt−1,+∞
+28:1632:65073:0:9:350:355:629:120:g_d0_f19:120:g_d0_f19:¢
+28:1633:65074:9:0:358:423:620:120:g_d0_f12:65:g_d0_f13:=limx→+∞vt
+28:1634:65084:0:9:426:431:629:120:g_d0_f19:120:g_d0_f19:¡
+28:1635:65085:9:0:431:487:620:120:g_d0_f6:120:g_d0_f7:x; ̄xt−1,+∞
+28:1636:65096:0:9:487:492:629:120:g_d0_f19:120:g_d0_f19:¢
+28:1637:65097:9:18:495:539:620:120:g_d0_f12:120:g_d0_f12:=−c<0
+28:1638:65102:18:17:72:539:602:120:g_d0_f4:120:g_d0_f4:and hence ̄xt=+∞can not be part of any equilibrium. A similar argument rules out ̄x1=+∞.
+28:1639:65190:17:31:72:377:585:120:g_d0_f4:120:g_d0_f6:Finally, suppose ̄x1=−∞.Then, for anyx∈Rand anyθ0∈R,
+28:1640:65242:31:0:131:196:554:120:g_d0_f6:120:g_d0_f12:v1(x;−∞)=
+28:1641:65251:0:25:196:222:569:120:g_d0_f19:65:g_d0_f21:Z+∞
+28:1642:65254:25:0:202:217:544:65:g_d0_f21:65:g_d0_f21:−∞
+28:1643:65256:0:0:224:231:554:120:g_d0_f6:120:g_d0_f6:F
+28:1644:65257:0:12:235:245:563:120:g_d0_f19:65:g_d0_f20:¡1
+28:1645:65259:12:0:241:270:551:65:g_d0_f13:120:g_d0_f12:δ(−θ)
+28:1646:65264:0:9:270:275:563:120:g_d0_f19:120:g_d0_f19:¢
+28:1647:65265:9:0:277:372:554:120:g_d0_f6:65:g_d0_f20:ψ1(θ|x)dθ−c≥Ψ1
+28:1648:65279:0:9:375:380:563:120:g_d0_f19:120:g_d0_f19:¡
+28:1649:65280:9:0:380:397:554:120:g_d0_f6:120:g_d0_f6:θ0|x
+28:1650:65284:0:9:397:402:563:120:g_d0_f19:120:g_d0_f19:¢
+28:1651:65285:9:0:404:411:554:120:g_d0_f6:120:g_d0_f6:F
+28:1652:65286:0:12:414:424:563:120:g_d0_f19:65:g_d0_f20:¡1
+28:1653:65288:12:0:421:425:551:65:g_d0_f13:65:g_d0_f13:δ
+28:1654:65289:0:9:428:433:563:120:g_d0_f19:120:g_d0_f19:¡
+28:1655:65290:9:0:433:449:554:120:g_d0_f7:65:g_d0_f35:−θ0
+28:1656:65293:0:9:449:459:563:120:g_d0_f19:120:g_d0_f19:¢¢
+28:1657:65295:9:34:462:481:554:120:g_d0_f7:120:g_d0_f6:−c,
+28:1658:65298:34:0:72:159:520:120:g_d0_f4:120:g_d0_f12:whereΨ1(θ0|x)=
+28:1659:65312:0:13:158:172:529:120:g_d0_f19:36:g_d0_f38:Rθ0
+28:1660:65315:13:0:164:422:516:65:g_d0_f21:120:g_d0_f6:−∞ψ1(θ|x)dθ,and thereforelimx→−∞v1(x;−∞)≥F
+28:1661:65357:0:13:426:436:529:120:g_d0_f19:65:g_d0_f20:¡1
+28:1662:65359:13:0:432:457:516:65:g_d0_f13:120:g_d0_f6:δ(−θ
+28:1663:65363:0:21:457:539:524:65:g_d0_f35:120:g_d0_f4:0)¢−c.Since this
+28:1664:65379:21:18:72:543:503:120:g_d0_f4:120:g_d0_f12:is true also forθ0→−∞,and sincev1is bounded from above by1−c,we have thatV1(−∞)=
+28:1665:65459:18:18:72:513:485:120:g_d0_f12:120:g_d0_f4:limx→−∞v1(x;−∞)=1−c>0,implying that ̄x1=−∞can not be part of an equilibrium.
+28:1666:65535:18:17:91:448:467:120:g_d0_f4:120:g_d0_f4:We conclude that(i)−(iii)necessarily hold in any monotone equilibrium.
+28:1667:65605:17:18:91:540:450:120:g_d0_f11:120:g_d0_f4:Existence.For anyδ>0, the monotonicity ofv1(x; ̄x1)in ̄x1along with its continuity in
+28:1668:65690:18:17:72:540:432:120:g_d0_f6:120:g_d0_f4:xfor any ̄x1and the fact thatlimx→−∞v1(x,−∞)>0>limx→+∞v1(x,+∞), implies that there
+28:1669:65772:17:18:72:539:415:120:g_d0_f4:120:g_d0_f4:existx0,x00∈Rsuch thatV1(x0)≥v1(x0,−∞)>0>v1(x00,+∞)≥V1(x00).The continuity of
+28:1670:65849:18:18:72:463:397:120:g_d0_f6:120:g_d0_f6:V1( ̄x1)in ̄x1then ensures existence of a solution ̄x1(δ)∈(x0,x00)toV1( ̄x1;δ)=0.
+28:1671:65930:18:17:91:539:379:120:g_d0_f4:120:g_d0_f4:Next, considert≥2.For any given ̄xt−1,a similar argument as above ensures the existence
+28:1672:66017:17:0:72:190:362:120:g_d0_f4:65:g_d0_f13:ofx00∈Rsuch thatVt
+28:1673:66035:0:8:192:197:370:120:g_d0_f19:120:g_d0_f19:¡
+28:1674:66036:8:0:198:234:362:120:g_d0_f12:65:g_d0_f35: ̄xt−1,x00
+28:1675:66046:0:8:234:239:370:120:g_d0_f19:120:g_d0_f19:¢
+28:1676:66047:8:0:245:267:362:120:g_d0_f7:65:g_d0_f13:≤vt
+28:1677:66050:0:8:270:275:370:120:g_d0_f19:120:g_d0_f19:¡
+28:1678:66051:8:0:275:336:362:120:g_d0_f6:120:g_d0_f7:x00, ̄xt−1,+∞
+28:1679:66064:0:8:336:341:370:120:g_d0_f19:120:g_d0_f19:¢
+28:1680:66065:8:18:346:539:362:120:g_d0_f6:120:g_d0_f4:<0.Moreover, either there also exists
+28:1681:66102:18:0:71:170:344:120:g_d0_f6:65:g_d0_f13:x0∈Rsuch thatVt
+28:1682:66117:0:9:173:178:353:120:g_d0_f19:120:g_d0_f19:¡
+28:1683:66118:9:0:178:211:344:120:g_d0_f12:65:g_d0_f35: ̄xt−1,x0
+28:1684:66127:0:9:212:217:353:120:g_d0_f19:120:g_d0_f19:¢
+28:1685:66128:9:0:222:273:344:120:g_d0_f7:65:g_d0_f13:≥0,orVt
+28:1686:66135:0:9:275:280:353:120:g_d0_f19:120:g_d0_f19:¡
+28:1687:66136:9:0:281:315:344:120:g_d0_f12:65:g_d0_f13: ̄xt−1, ̄xt
+28:1688:66147:0:9:315:320:353:120:g_d0_f19:120:g_d0_f19:¢
+28:1689:66148:9:18:325:539:344:120:g_d0_f6:120:g_d0_f4:<0for all ̄xt∈R.In the former case, the
+28:1690:66187:18:0:72:146:326:120:g_d0_f4:65:g_d0_f13:continuity ofVt
+28:1691:66202:0:9:149:154:335:120:g_d0_f19:120:g_d0_f19:¡
+28:1692:66203:9:0:154:188:326:120:g_d0_f12:65:g_d0_f13: ̄xt−1, ̄xt
+28:1693:66214:0:9:189:194:335:120:g_d0_f19:120:g_d0_f19:¢
+28:1694:66215:9:0:198:467:326:120:g_d0_f4:65:g_d0_f13:in ̄xtensures the existence of ̄xt∈(x0,x00)such thatVt
+28:1695:66269:0:9:469:474:335:120:g_d0_f19:120:g_d0_f19:¡
+28:1696:66270:9:0:475:509:326:120:g_d0_f12:65:g_d0_f13: ̄xt−1, ̄xt
+28:1697:66281:0:9:509:514:335:120:g_d0_f19:120:g_d0_f19:¢
+28:1698:66282:9:17:518:539:326:120:g_d0_f12:120:g_d0_f6:=0.
+28:1699:66285:17:0:72:168:309:120:g_d0_f4:65:g_d0_f13:In the latter case,vt
+28:1700:66306:0:9:171:176:318:120:g_d0_f19:120:g_d0_f19:¡
+28:1701:66307:9:0:176:231:309:120:g_d0_f6:120:g_d0_f7:x; ̄xt−1,−∞
+28:1702:66318:0:9:232:237:318:120:g_d0_f19:120:g_d0_f19:¢
+28:1703:66319:9:0:240:260:309:120:g_d0_f7:65:g_d0_f13:≤vt
+28:1704:66322:0:9:262:267:318:120:g_d0_f19:120:g_d0_f19:¡
+28:1705:66323:9:0:267:312:309:120:g_d0_f6:120:g_d0_f6:x; ̄xt−1,x
+28:1706:66333:0:9:310:315:318:120:g_d0_f19:120:g_d0_f19:¢
+28:1707:66334:9:0:318:339:309:120:g_d0_f12:65:g_d0_f13:=Vt
+28:1708:66337:0:9:342:347:318:120:g_d0_f19:120:g_d0_f19:¡
+28:1709:66338:9:0:347:380:309:120:g_d0_f12:120:g_d0_f6: ̄xt−1,x
+28:1710:66346:0:9:378:383:318:120:g_d0_f19:120:g_d0_f19:¢
+28:1711:66347:9:18:386:539:309:120:g_d0_f6:120:g_d0_f4:<0for anyx∈Rand therefore
+28:1712:66372:18:0:72:152:291:120:g_d0_f4:65:g_d0_f13:at ̄xt=−∞,Vt
+28:1713:66384:0:9:154:159:300:120:g_d0_f19:120:g_d0_f19:¡
+28:1714:66385:9:0:160:203:291:120:g_d0_f12:120:g_d0_f7: ̄xt−1,−∞
+28:1715:66394:0:9:204:209:300:120:g_d0_f19:120:g_d0_f19:¢
+28:1716:66395:9:0:214:282:291:120:g_d0_f7:65:g_d0_f13:≡limx→−∞vt
+28:1717:66405:0:9:284:289:300:120:g_d0_f19:120:g_d0_f19:¡
+28:1718:66406:9:0:289:345:291:120:g_d0_f6:120:g_d0_f7:x; ̄xt−1,−∞
+28:1719:66417:0:9:345:350:300:120:g_d0_f19:120:g_d0_f19:¢
+28:1720:66418:9:17:355:539:291:120:g_d0_f7:120:g_d0_f4:≤0.We conclude that there exists a
+28:1721:66452:17:24:72:439:274:120:g_d0_f4:120:g_d0_f4:sequence{ ̄xt(δ)}∞t=0that satisfies conditions(ii)and(iii)in the proposition.
+28:1722:66529:24:18:91:547:250:120:g_d0_f3:120:g_d0_f4:ProofofTheorem2.We start by establishing pointwise convergence ofVtasδ→0.For
+28:1723:66605:18:0:72:158:232:120:g_d0_f4:120:g_d0_f4:anyt≥2and any
+28:1724:66618:0:9:162:167:241:120:g_d0_f19:120:g_d0_f19:¡
+28:1725:66619:9:0:167:201:232:120:g_d0_f12:65:g_d0_f13: ̄xt−1, ̄xt
+28:1726:66630:0:9:202:207:241:120:g_d0_f19:120:g_d0_f19:¢
+28:1727:66631:9:0:210:228:232:120:g_d0_f7:120:g_d0_f8:∈R
+28:1728:66633:0:7:228:242:239:65:g_d0_f13:65:g_d0_f20:t−1
+28:1729:66636:7:32:245:414:232:120:g_d0_f14:65:g_d0_f4:×R, by (7) and (8), we have that18
+28:1730:66670:32:7:89:104:200:120:g_d0_f12:120:g_d0_f12:lim
+28:1731:66673:7:0:88:104:193:65:g_d0_f13:65:g_d0_f20:δ→0
+28:1732:66676:0:0:106:116:200:120:g_d0_f6:65:g_d0_f13:Vt
+28:1733:66678:0:9:118:123:209:120:g_d0_f19:120:g_d0_f19:¡
+28:1734:66679:9:0:124:168:200:120:g_d0_f12:120:g_d0_f6: ̄xt−1, ̄xt;δ
+28:1735:66692:0:9:168:173:209:120:g_d0_f19:120:g_d0_f19:¢
+28:1736:66693:9:7:177:208:200:120:g_d0_f12:120:g_d0_f12:=lim
+28:1737:66697:7:0:188:204:193:65:g_d0_f13:65:g_d0_f20:δ→0
+28:1738:66700:0:24:207:233:215:120:g_d0_f19:65:g_d0_f21:Z+∞
+28:1739:66703:24:0:213:228:191:65:g_d0_f21:65:g_d0_f21:−∞
+28:1740:66705:0:0:235:303:200:120:g_d0_f6:65:g_d0_f13:pt(θ; ̄xt,δ)dΨt
+28:1741:66720:0:9:306:311:209:120:g_d0_f19:120:g_d0_f19:¡
+28:1742:66721:9:0:311:366:200:120:g_d0_f6:120:g_d0_f6:θ| ̄xt; ̄xt−1,δ
+28:1743:66736:0:9:365:370:209:120:g_d0_f19:120:g_d0_f19:¢
+28:1744:66737:9:0:372:414:200:120:g_d0_f7:65:g_d0_f13:−c=Ψt
+28:1745:66742:0:9:416:421:209:120:g_d0_f19:120:g_d0_f19:¡
+28:1746:66743:9:0:421:500:200:120:g_d0_f6:120:g_d0_f12:θt( ̄xt)| ̄xt; ̄xt−1,0
+28:1747:66765:0:9:500:505:209:120:g_d0_f19:120:g_d0_f19:¢
+28:1748:66766:9:27:508:523:200:120:g_d0_f7:120:g_d0_f6:−c
+28:1749:66768:27:0:177:195:173:120:g_d0_f12:120:g_d0_f6:=U
+28:1750:66770:0:9:198:203:182:120:g_d0_f19:120:g_d0_f19:¡
+28:1751:66771:9:0:203:258:173:120:g_d0_f6:65:g_d0_f20:θt( ̄xt);θt−1
+28:1752:66784:0:9:260:265:182:120:g_d0_f19:120:g_d0_f19:¡
+28:1753:66785:9:0:266:285:173:120:g_d0_f12:65:g_d0_f20: ̄xt−1
+28:1754:66791:0:9:286:291:182:120:g_d0_f19:120:g_d0_f19:¢
+28:1755:66792:9:0:293:331:173:120:g_d0_f6:120:g_d0_f6:,αt,β,z
+28:1756:66799:0:9:330:335:182:120:g_d0_f19:120:g_d0_f19:¢
+28:1757:66800:9:0:338:359:173:120:g_d0_f7:65:g_d0_f13:≡Vt
+28:1758:66803:0:9:361:366:182:120:g_d0_f19:120:g_d0_f19:¡
+28:1759:66804:9:0:367:414:173:120:g_d0_f12:120:g_d0_f12: ̄xt−1, ̄xt;0
+28:1760:66817:0:9:412:417:182:120:g_d0_f19:120:g_d0_f19:¢
+28:1761:66818:9:21:419:422:173:120:g_d0_f6:120:g_d0_f6:.
+28:1762:66819:21:7:80:518:152:36:g_d0_f4:36:g_d0_f23:17This can be seen by noting that the ratio of the densitiesψt¡θ|x; ̄xt−1,δ¢/√αt+βφ³√αt+β³θ−αtx+βz
+28:1763:66917:7:0:496:514:145:36:g_d0_f23:36:g_d0_f23:αt+β
+28:1764:66921:0:10:519:530:158:82:g_d0_f19:82:g_d0_f19: ́ ́
+28:1765:66925:10:14:533:539:148:82:g_d0_f4:82:g_d0_f4:is
+28:1766:66927:14:8:71:132:134:82:g_d0_f4:82:g_d0_f15:increasing inθ.
+28:1767:66942:8:18:80:539:126:36:g_d0_f4:82:g_d0_f17:18Forδ>0,letFp(y; ̄xt,δ)be as in footnote 16. Similarly, forδ=0,Fp(y; ̄xt,0) =Ψt¡θt( ̄xt)| ̄xt; ̄xt−1,0¢ify∈[0,1)
+28:1768:67055:18:15:71:540:108:82:g_d0_f4:82:g_d0_f15:andFp(y; ̄xt,0) = 0ify=1.SinceFpis bounded from above by1and, for anyy∈[0,1]and any ̄xt∈Rt−1×R,
+28:1769:67150:15:0:71:454:93:82:g_d0_f15:36:g_d0_f26:Fp(y; ̄xt,δ)→Fp(y; ̄xt,0)asδ→0,from standard Dominated Convergence Theorems,limδ→0
+28:1770:67232:0:10:455:474:100:82:g_d0_f19:36:g_d0_f22:R+∞
+28:1771:67235:10:0:460:504:90:36:g_d0_f26:82:g_d0_f15:0Fp(y; ̄x
+28:1772:67244:0:11:504:539:97:36:g_d0_f23:82:g_d0_f17:t,δ)dy=
+28:1773:67251:11:10:71:90:86:82:g_d0_f19:36:g_d0_f22:R+∞
+28:1774:67254:10:0:76:150:76:36:g_d0_f26:82:g_d0_f15:0limδ→0Fp(y; ̄x
+28:1775:67269:0:7:150:206:83:36:g_d0_f23:36:g_d0_f22:t,δ)dy=R+∞
+28:1776:67279:7:0:192:236:76:36:g_d0_f26:82:g_d0_f15:0Fp(y; ̄x
+28:1777:67288:0:0:236:357:83:36:g_d0_f23:82:g_d0_f4:t,0)dy,which gives the result.
+29:1778:67320:0:29:72:228:709:120:g_d0_f4:120:g_d0_f4:Similarly, for any ̄x1∈R,by (7),
+29:1779:67352:29:8:129:144:680:120:g_d0_f12:120:g_d0_f12:lim
+29:1780:67355:8:0:128:144:672:65:g_d0_f13:65:g_d0_f20:δ→0
+29:1781:67358:0:30:146:483:680:120:g_d0_f6:120:g_d0_f6:V1( ̄x1;δ)=Ψ1(θ1( ̄x1)| ̄x1)−c=U(θ1( ̄x1);−∞,α1,β,z)≡V1( ̄x1;0).
+29:1782:67422:30:18:91:539:650:120:g_d0_f4:120:g_d0_f4:We now prove the result by induction. To simplify the notation, for allt≥1,we henceforth let
+29:1783:67514:18:0:72:82:632:120:g_d0_f6:65:g_d0_f13:Ut
+29:1784:67516:0:9:84:89:641:120:g_d0_f19:120:g_d0_f19:¡
+29:1785:67517:9:0:90:99:632:120:g_d0_f12:65:g_d0_f13: ̄xt
+29:1786:67521:0:9:99:104:641:120:g_d0_f19:120:g_d0_f19:¢
+29:1787:67522:9:0:108:129:632:120:g_d0_f7:65:g_d0_f13:≡Vt
+29:1788:67525:0:9:132:137:641:120:g_d0_f19:120:g_d0_f19:¡
+29:1789:67526:9:0:137:159:632:120:g_d0_f12:120:g_d0_f12: ̄xt;0
+29:1790:67532:0:9:157:162:641:120:g_d0_f19:120:g_d0_f19:¢
+29:1791:67533:9:17:166:540:632:120:g_d0_f4:120:g_d0_f4:for the unperturbed game(δ=0)and reserve the use ofVtfor the perturbed
+29:1792:67603:17:18:72:141:615:120:g_d0_f4:120:g_d0_f4:games(δ>0).
+29:1793:67614:18:29:91:518:597:120:g_d0_f4:65:g_d0_f4:ConsiderfirstT=1andfix an arbitraryε>0.From the strict monotonicity ofU1( ̄x1),19
+29:1794:67695:29:30:234:377:568:120:g_d0_f6:120:g_d0_f6:U1(x∗1−ε)>0>U1(x∗1+ε).
+29:1795:67717:30:29:72:515:538:120:g_d0_f4:120:g_d0_f6:By the convergence ofV1toU1asδ→0,we canfindδ1(ε)>0such that, for anyδ<δ1(ε),
+29:1796:67793:29:29:225:386:509:120:g_d0_f6:120:g_d0_f6:V1(x∗1−ε;δ)>0>V1(x∗1+ε;δ).
+29:1797:67819:29:18:72:539:480:120:g_d0_f4:120:g_d0_f12:From the continuity ofV1( ̄x1;δ)in ̄x1for anyδ>0,it follows that there exists a solution ̄x1(δ)
+29:1798:67914:18:18:72:539:462:120:g_d0_f4:120:g_d0_f4:toV1(x1;δ)=0such thatx∗1−ε< ̄x1(δ)<x∗1+ε.Following the same steps as in the proof of
+29:1799:67998:18:17:72:540:444:120:g_d0_f4:120:g_d0_f4:existence in Proposition 3, we can then construct an equilibrium{ ̄xt(δ)}∞t=1forΓ(δ)such that
+29:1800:68091:17:18:72:311:427:120:g_d0_f14:120:g_d0_f6:| ̄x1(δ)−x∗1|<ε.ThisprovestheresultforT=1.
+29:1801:68133:18:18:91:491:409:120:g_d0_f4:120:g_d0_f6:Consider next an arbitraryT≥2,fixε>0,and suppose the result holds forT−1.
+29:1802:68206:18:18:91:538:391:120:g_d0_f4:65:g_d0_f13:Takefirst any equilibrium ofΓ(0)such thatx∗T>−∞.By the (local) strict monotonicity ofUT
+29:1803:68293:18:0:72:365:373:120:g_d0_f4:65:g_d0_f13:aroundx∗Timplied by the assumption thatx∗T/∈arg maxxUT
+29:1804:68347:0:9:368:373:382:120:g_d0_f19:120:g_d0_f19:¡
+29:1805:68348:9:0:373:414:373:120:g_d0_f6:120:g_d0_f6:x∗T−1,x
+29:1806:68355:0:9:412:417:382:120:g_d0_f19:120:g_d0_f19:¢
+29:1807:68356:9:17:417:540:373:120:g_d0_f4:120:g_d0_f4:, there existsεT<εsuch
+29:1808:68378:17:19:72:123:356:120:g_d0_f4:120:g_d0_f4:that either
+29:1809:68389:19:0:189:202:337:120:g_d0_f6:65:g_d0_f13:UT
+29:1810:68391:0:9:205:210:346:120:g_d0_f19:120:g_d0_f19:¡
+29:1811:68392:9:0:210:279:337:120:g_d0_f6:65:g_d0_f13:x∗T−1,x∗T−εT
+29:1812:68404:0:9:281:286:346:120:g_d0_f19:120:g_d0_f19:¢
+29:1813:68405:9:0:289:333:337:120:g_d0_f6:65:g_d0_f13:>0>UT
+29:1814:68410:0:9:336:341:346:120:g_d0_f19:120:g_d0_f19:¡
+29:1815:68411:9:0:341:410:337:120:g_d0_f6:65:g_d0_f13:x∗T−1,x∗T+εT
+29:1816:68423:0:9:412:417:346:120:g_d0_f19:120:g_d0_f19:¢
+29:1817:68424:9:24:419:422:337:120:g_d0_f6:120:g_d0_f6:,
+29:1818:68425:24:0:72:98:313:120:g_d0_f4:65:g_d0_f13:orUT
+29:1819:68429:0:8:102:107:321:120:g_d0_f19:120:g_d0_f19:¡
+29:1820:68430:8:0:107:176:313:120:g_d0_f6:65:g_d0_f13:x∗T−1,x∗T−εT
+29:1821:68442:0:8:177:182:321:120:g_d0_f19:120:g_d0_f19:¢
+29:1822:68443:8:0:187:235:313:120:g_d0_f6:65:g_d0_f13:<0<UT
+29:1823:68448:0:8:239:244:321:120:g_d0_f19:120:g_d0_f19:¡
+29:1824:68449:8:0:244:313:313:120:g_d0_f6:65:g_d0_f13:x∗T−1,x∗T+εT
+29:1825:68461:0:8:314:319:321:120:g_d0_f19:120:g_d0_f19:¢
+29:1826:68462:8:18:321:540:313:120:g_d0_f6:120:g_d0_f4:.Without loss of generality, assume thefirst
+29:1827:68506:18:0:72:470:295:120:g_d0_f4:65:g_d0_f13:case — the argument for the other case is identical.  From the continuity ofUT
+29:1828:68584:0:9:474:479:304:120:g_d0_f19:120:g_d0_f19:¡
+29:1829:68585:9:0:479:518:295:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+29:1830:68592:0:9:520:525:304:120:g_d0_f19:120:g_d0_f19:¢
+29:1831:68593:9:18:530:539:295:120:g_d0_f4:120:g_d0_f4:in
+29:1832:68595:18:0:72:117:277:120:g_d0_f6:120:g_d0_f8:xT−1∈R
+29:1833:68601:0:7:116:133:284:65:g_d0_f13:65:g_d0_f20:T−1
+29:1834:68604:7:17:137:539:277:120:g_d0_f4:120:g_d0_f4:and the fact that the result holds forT−1,there existssomeε0T∈(0,εT)such that,
+29:1835:68682:17:18:72:530:260:120:g_d0_f4:65:g_d0_f4:foranyδ<δ(ε0T,T−1), there is a sequence ̄xT−1(δ)satisfying the following three conditions:20
+29:1836:68774:18:18:91:542:242:120:g_d0_f4:120:g_d0_f12:[C1] for allt≤T−1,either ̄xt(δ)=−∞andVt( ̄xτ(δ))≤0,or ̄xt∈RandVτ( ̄xτ(δ);δ)=0;
+29:1837:68852:18:18:91:539:224:120:g_d0_f4:120:g_d0_f12:[C2] for allt≤T−1,|x∗t− ̄xt(δ)|<ε0T<εifx∗t∈R,and ̄xt(δ)<−1/ε0T<−1/εifx∗t=−∞;
+29:1838:68928:18:0:91:188:206:120:g_d0_f4:65:g_d0_f13:[C3] in periodT, UT
+29:1839:68947:0:9:191:196:215:120:g_d0_f19:120:g_d0_f19:¡
+29:1840:68948:9:0:197:275:206:120:g_d0_f12:65:g_d0_f13: ̄xT−1(δ),x∗T−εT
+29:1841:68964:0:9:276:281:215:120:g_d0_f19:120:g_d0_f19:¢
+29:1842:68965:9:0:284:328:206:120:g_d0_f6:65:g_d0_f13:>0>UT
+29:1843:68970:0:9:331:336:215:120:g_d0_f19:120:g_d0_f19:¡
+29:1844:68971:9:0:337:419:206:120:g_d0_f12:65:g_d0_f13: ̄xT−1(δ),x∗T+εT
+29:1845:68987:0:9:420:425:215:120:g_d0_f19:120:g_d0_f19:¢
+29:1846:68988:9:18:427:430:206:120:g_d0_f6:120:g_d0_f6:.
+29:1847:68989:18:0:72:219:188:120:g_d0_f4:65:g_d0_f13:Next, by the convergence ofVT
+29:1848:69018:0:9:222:227:197:120:g_d0_f19:120:g_d0_f19:¡
+29:1849:69019:9:0:227:267:188:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+29:1850:69026:0:9:268:273:197:120:g_d0_f19:120:g_d0_f19:¢
+29:1851:69027:9:0:277:303:188:120:g_d0_f4:65:g_d0_f13:toUT
+29:1852:69031:0:9:306:311:197:120:g_d0_f19:120:g_d0_f19:¡
+29:1853:69032:9:0:311:351:188:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+29:1854:69039:0:9:352:357:197:120:g_d0_f19:120:g_d0_f19:¢
+29:1855:69040:9:0:361:395:188:120:g_d0_f4:120:g_d0_f4:for any
+29:1856:69047:0:9:398:403:197:120:g_d0_f19:120:g_d0_f19:¡
+29:1857:69048:9:0:403:443:188:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+29:1858:69055:0:9:444:449:197:120:g_d0_f19:120:g_d0_f19:¢
+29:1859:69056:9:0:452:471:188:120:g_d0_f7:120:g_d0_f8:∈R
+29:1860:69058:0:7:471:487:195:65:g_d0_f13:65:g_d0_f20:T−1
+29:1861:69061:7:17:490:543:188:120:g_d0_f14:120:g_d0_f4:×R,there
+29:1862:69069:17:18:71:539:171:120:g_d0_f4:120:g_d0_f4:existsδT∈(0,δ(ε0T,T−1))such that, for anyδ<δT,there is ̄xT−1(δ)that satisfies [C1]-[C2] and
+29:1863:69160:18:15:72:120:153:120:g_d0_f4:120:g_d0_f4:such that:
+29:1864:69170:15:18:80:540:138:36:g_d0_f4:82:g_d0_f4:19This follows from the the monotonicity ofU(θ;−∞,α1,β,z)inθ— which in turn is implied byα1≥β2/√2π—
+29:1865:69269:18:9:71:224:120:82:g_d0_f4:82:g_d0_f15:and the monotonicity ofθ1( ̄x1)in ̄x1.
+29:1866:69307:9:18:80:539:111:36:g_d0_f4:82:g_d0_f4:20Continuity ofUimplies existence ofε0Tsuch that that [C3] holds forany ̄xT−1(δ)that satisfies [C2]; that the
+29:1867:69416:18:14:71:539:93:82:g_d0_f4:82:g_d0_f4:result holds forT−1then ensures that, for anyδ<δ(ε0T,T−1),there exists ̄xT−1(δ)that satisfies both [C1] and
+29:1868:69523:14:0:71:90:79:82:g_d0_f4:82:g_d0_f4:[C2].
+30:1869:69530:0:0:91:189:709:120:g_d0_f4:65:g_d0_f13:[C30]inperiodT, VT
+30:1870:69548:0:9:193:198:718:120:g_d0_f19:120:g_d0_f19:¡
+30:1871:69549:9:0:198:288:709:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ),x∗T−εT;δ
+30:1872:69567:0:9:288:293:718:120:g_d0_f19:120:g_d0_f19:¢
+30:1873:69568:9:0:296:339:709:120:g_d0_f6:65:g_d0_f13:>0>VT
+30:1874:69573:0:9:342:347:718:120:g_d0_f19:120:g_d0_f19:¡
+30:1875:69574:9:0:348:441:709:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ),x∗T+εT;δ
+30:1876:69592:0:9:441:446:718:120:g_d0_f19:120:g_d0_f19:¢
+30:1877:69593:9:18:448:451:709:120:g_d0_f6:120:g_d0_f6:.
+30:1878:69594:18:0:72:226:691:120:g_d0_f4:65:g_d0_f13:But then, by the continuity ofVT
+30:1879:69626:0:9:229:234:700:120:g_d0_f19:120:g_d0_f19:¡
+30:1880:69627:9:0:234:274:691:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+30:1881:69634:0:9:276:281:700:120:g_d0_f19:120:g_d0_f19:¢
+30:1882:69635:9:18:283:540:691:120:g_d0_f4:120:g_d0_f4:inxT,for the same ̄xT−1(δ),there exists an ̄xT(δ)∈R,
+30:1883:69687:18:0:72:274:673:120:g_d0_f4:65:g_d0_f13:with|x∗T− ̄xT(δ)|<εT<ε,that solvesVT
+30:1884:69723:0:9:277:282:682:120:g_d0_f19:120:g_d0_f19:¡
+30:1885:69724:9:0:283:361:673:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ), ̄xT(δ);δ
+30:1886:69743:0:9:361:366:682:120:g_d0_f19:120:g_d0_f19:¢
+30:1887:69744:9:18:369:389:673:120:g_d0_f12:120:g_d0_f6:=0.
+30:1888:69747:18:0:91:483:655:120:g_d0_f4:65:g_d0_f13:Next, take any equilibrium ofΓ(0)such thatx∗T=−∞.Recall that, for anyt≥2,Ut
+30:1889:69822:0:9:486:491:664:120:g_d0_f19:120:g_d0_f19:¡
+30:1890:69823:9:0:490:529:655:120:g_d0_f6:65:g_d0_f13:x∗t−1,xt
+30:1891:69831:0:9:530:535:664:120:g_d0_f19:120:g_d0_f19:¢
+30:1892:69832:9:18:538:547:655:120:g_d0_f12:120:g_d0_f12:=
+30:1893:69833:18:0:72:352:637:120:g_d0_f7:65:g_d0_f20:−c<0for allxt< ̃xt,where ̃xt>−∞solvesθt( ̃xt)=θt−1
+30:1894:69883:0:9:354:359:646:120:g_d0_f19:120:g_d0_f19:¡
+30:1895:69884:9:0:359:383:637:120:g_d0_f6:65:g_d0_f20:x∗t−1
+30:1896:69889:0:9:384:389:646:120:g_d0_f19:120:g_d0_f19:¢
+30:1897:69890:9:17:392:540:637:120:g_d0_f7:120:g_d0_f4:≡maxτ≤t−1θτ(x∗τ).Pick some
+30:1898:69916:17:0:72:337:620:120:g_d0_f6:65:g_d0_f13:x0T∈(−∞,min{−1/ε, ̃xT}).From the continuity ofUT
+30:1899:69964:0:9:340:345:629:120:g_d0_f19:120:g_d0_f19:¡
+30:1900:69965:9:0:345:385:620:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+30:1901:69972:0:9:387:392:629:120:g_d0_f19:120:g_d0_f19:¢
+30:1902:69973:9:18:396:540:620:120:g_d0_f4:120:g_d0_f4:inxT−1and the fact that the
+30:1903:70000:18:17:72:540:602:120:g_d0_f4:120:g_d0_f4:result holds forT−1,there existssomeε0∈(0,ε)such that, for anyδ<δ(ε0,T−1)),there is a
+30:1904:70085:17:18:72:537:585:120:g_d0_f4:120:g_d0_f4:sequence ̄xT−1(δ)which satisfies conditions [C1]-[C2] above (replacingε0Twithε0)andsuchthat:
+30:1905:70177:18:0:91:127:567:120:g_d0_f4:65:g_d0_f13:[C4]UT
+30:1906:70183:0:8:130:135:575:120:g_d0_f19:120:g_d0_f19:¡
+30:1907:70184:8:0:136:192:567:120:g_d0_f12:65:g_d0_f13: ̄xT−1(δ),x0T
+30:1908:70197:0:8:194:199:575:120:g_d0_f19:120:g_d0_f19:¢
+30:1909:70198:8:18:202:222:567:120:g_d0_f6:120:g_d0_f6:<0.
+30:1910:70201:18:18:72:539:549:120:g_d0_f4:120:g_d0_f4:By the pointwise convergence ofVTtoUT,there also exists aδT∈(0,δ(ε0,T−1)))such that, for
+30:1911:70289:18:18:72:391:531:120:g_d0_f4:120:g_d0_f4:anyδ<δT,there is ̄xT−1(δ)that satisfies [C1]-[C2] and such that:
+30:1912:70353:18:0:91:129:513:120:g_d0_f4:65:g_d0_f13:[C40]VT
+30:1913:70360:0:9:132:137:522:120:g_d0_f19:120:g_d0_f19:¡
+30:1914:70361:9:0:138:206:513:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ),x0T;δ
+30:1915:70376:0:9:206:211:522:120:g_d0_f19:120:g_d0_f19:¢
+30:1916:70377:9:17:214:234:513:120:g_d0_f6:120:g_d0_f6:<0.
+30:1917:70380:17:0:72:408:496:120:g_d0_f4:65:g_d0_f13:If, for the same ̄xT−1(δ),there exists anx00T∈(−∞,x0T)such thatVT
+30:1918:70445:0:9:411:416:505:120:g_d0_f19:120:g_d0_f19:¡
+30:1919:70446:9:0:417:481:496:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ),x00T;δ
+30:1920:70462:0:9:481:486:505:120:g_d0_f19:120:g_d0_f19:¢
+30:1921:70463:9:18:490:539:496:120:g_d0_f7:120:g_d0_f4:≥0,then,
+30:1922:70471:18:0:72:184:478:120:g_d0_f4:65:g_d0_f13:by the continuity ofVT
+30:1923:70493:0:9:188:193:487:120:g_d0_f19:120:g_d0_f19:¡
+30:1924:70494:9:0:193:233:478:120:g_d0_f6:65:g_d0_f13:xT−1,xT
+30:1925:70501:0:9:234:239:487:120:g_d0_f19:120:g_d0_f19:¢
+30:1926:70502:9:18:244:540:478:120:g_d0_f4:120:g_d0_f6:inxT∈R,thereisalsoan ̄xT(δ)∈R,withx00T< ̄xT(δ)<
+30:1927:70549:18:0:72:193:460:120:g_d0_f6:65:g_d0_f13:x0T<−1/ε,such thatVT
+30:1928:70569:0:9:196:201:469:120:g_d0_f19:120:g_d0_f19:¡
+30:1929:70570:9:0:202:283:460:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ), ̄xT(δ);δ
+30:1930:70589:0:9:284:289:469:120:g_d0_f19:120:g_d0_f19:¢
+30:1931:70590:9:0:293:378:460:120:g_d0_f12:65:g_d0_f13:=0.If insteadVT
+30:1932:70605:0:9:382:387:469:120:g_d0_f19:120:g_d0_f19:¡
+30:1933:70606:9:0:387:452:460:120:g_d0_f12:120:g_d0_f6: ̄xT−1(δ),xT;δ
+30:1934:70620:0:9:452:457:469:120:g_d0_f19:120:g_d0_f19:¢
+30:1935:70621:9:17:461:539:460:120:g_d0_f6:120:g_d0_f7:<0for allxT∈
+30:1936:70633:17:0:72:266:443:120:g_d0_f12:65:g_d0_f13:(−∞,x0T),then ̄xT(δ)=−∞satisfiesVT
+30:1937:70667:0:9:270:275:452:120:g_d0_f19:120:g_d0_f19:¡
+30:1938:70668:9:0:275:336:443:120:g_d0_f12:120:g_d0_f7: ̄xT−1(δ),−∞
+30:1939:70680:0:9:336:341:452:120:g_d0_f19:120:g_d0_f19:¢
+30:1940:70681:9:18:344:373:443:120:g_d0_f7:65:g_d0_f4:≤0.21
+30:1941:70686:18:18:91:540:425:120:g_d0_f4:120:g_d0_f4:Finally, recall that (6) admits at most two solutions in everytand therefore the set ofxT∗that
+30:1942:70780:18:17:72:540:407:120:g_d0_f4:120:g_d0_f4:can be part of an equilibrium ofΓ(0)isfinite. Hence, there isδ(ε, T)∈(0,δ(ε, T−1))such that,
+30:1943:70872:17:0:71:491:390:120:g_d0_f4:65:g_d0_f13:for anyδ<δ(ε,T)andeveryequilibrium{x∗t}∞t=1ofΓ(0)for whichx∗t/∈arg maxxUt
+30:1944:70945:0:8:494:499:398:120:g_d0_f19:120:g_d0_f19:¡
+30:1945:70946:8:0:499:536:390:120:g_d0_f6:120:g_d0_f6:xt−1∗,x
+30:1946:70953:0:26:535:540:398:120:g_d0_f19:120:g_d0_f19:¢
+30:1947:70954:26:18:72:545:372:120:g_d0_f4:120:g_d0_f6:for allt≤T,there exists ̄xT(δ)such that, for allt≤T:ifx∗t∈R,then| ̄xt(δ)−x∗t|<ε
+30:1948:71033:18:0:72:103:354:120:g_d0_f4:65:g_d0_f13:andVt
+30:1949:71038:0:9:105:110:363:120:g_d0_f19:120:g_d0_f19:¡
+30:1950:71039:9:0:111:147:354:120:g_d0_f12:120:g_d0_f6: ̄xt(δ);δ
+30:1951:71048:0:9:147:152:363:120:g_d0_f19:120:g_d0_f19:¢
+30:1952:71049:9:0:156:396:354:120:g_d0_f12:65:g_d0_f13:=0;and ifx∗t=−∞,then ̄xt(δ)<−1/εandVt
+30:1953:71086:0:9:398:403:363:120:g_d0_f19:120:g_d0_f19:¡
+30:1954:71087:9:0:404:428:354:120:g_d0_f12:120:g_d0_f12: ̄xt(δ)
+30:1955:71094:0:9:428:433:363:120:g_d0_f19:120:g_d0_f19:¢
+30:1956:71095:9:17:437:546:354:120:g_d0_f7:120:g_d0_f4:≤0.Usingthesame
+30:1957:71110:17:18:72:539:337:120:g_d0_f4:65:g_d0_f20:arguments as for the proof of existence in Proposition 3, ̄xT(δ)is part of an equilibrium{ ̄xt(δ)}∞t=1
+30:1958:71212:18:25:72:247:319:120:g_d0_f4:120:g_d0_f6:forΓ(δ),which completes the proof.
+30:1959:71246:25:17:91:539:294:120:g_d0_f3:120:g_d0_f4:ProofofProposition4.Apart from a notational adjustment — namely the dependence of
+30:1960:71327:17:18:72:540:277:120:g_d0_f6:120:g_d0_f4:Uin periodton(βt,zt)and of(x∗t,θ∗t)onzt— the proof follows exactly the same steps as in the
+30:1961:71418:18:25:72:401:259:120:g_d0_f4:120:g_d0_f4:model with only private information, and is thus omitted for brevity.
+30:1962:71487:25:18:91:539:234:120:g_d0_f3:120:g_d0_f4:ProofofTheorem3.Considerfirstt=1.For any(α1,β1,z1),U(θ∗,−∞,α1,β1,z1)is
+30:1963:71557:18:17:72:540:216:120:g_d0_f4:120:g_d0_f4:continuous inθ∗∈[0,1]withU(0,−∞,·)=1−candU(1,−∞,·)=−c.Hence a solution
+30:1964:71627:17:18:72:540:199:120:g_d0_f6:120:g_d0_f4:θ∗1(z1)toU(θ∗1,−∞,α1,β1,z1)=0always exists.22Next, consider anyt≥2and note that,
+30:1965:71707:18:0:72:301:181:120:g_d0_f4:120:g_d0_f6:for any(θ∗t−1,αt,βt)and anyθ∗∈(θ∗t−1,1),U
+30:1966:71748:0:9:299:304:190:120:g_d0_f19:120:g_d0_f19:¡
+30:1967:71749:9:0:304:381:181:120:g_d0_f6:65:g_d0_f13:θ∗,θ∗t−1,αt,βt,zt
+30:1968:71766:0:9:382:387:190:120:g_d0_f19:120:g_d0_f19:¢
+30:1969:71767:9:17:392:540:181:120:g_d0_f4:120:g_d0_f4:is strictly decreasing inztand
+30:1970:71797:17:18:72:539:164:120:g_d0_f6:120:g_d0_f12:U(θ∗,·,zt)→1−c>0aszt→−∞,implying that necessarilymaxθ∗∈[θ−1,1]U(θ∗,·,zt)>0
+30:1971:71871:18:18:72:539:146:120:g_d0_f4:120:g_d0_f6:forztsufficiently low.  Furthermore, sinceU(θ∗,·,zt)is continuous inθ∗∈[θ∗t−1,1]for anyzt,
+30:1972:71961:18:0:72:130:128:120:g_d0_f4:120:g_d0_f6:and sinceU
+30:1973:71971:0:9:134:139:137:120:g_d0_f19:120:g_d0_f19:¡
+30:1974:71972:9:0:139:181:128:120:g_d0_f6:120:g_d0_f14:θ∗,θ∗t−1,·
+30:1975:71982:0:9:181:186:137:120:g_d0_f19:120:g_d0_f19:¢
+30:1976:71983:9:19:192:539:128:120:g_d0_f7:120:g_d0_f4:→−cmonotonically for anyθ∗∈[θ∗t−1,1]aszt→+∞,from stan-
+30:1977:72037:19:12:80:380:109:36:g_d0_f4:82:g_d0_f4:21This follows from the same argument used in the proof of Proposition 3.
+30:1978:72110:12:18:80:540:97:36:g_d0_f4:82:g_d0_f4:22Note that the functionθ∗1(·)is unique if and only ifα1≥β21/2π.Hence forα1<β21/2π,the game trivially admits
+30:1979:72218:18:0:71:204:79:82:g_d0_f4:82:g_d0_f15:multiple equilibria even ifT=1.
+31:1980:72251:0:0:72:338:709:120:g_d0_f4:120:g_d0_f6:dard Monotone Convergence Theorems, the functionU
+31:1981:72300:0:9:342:347:718:120:g_d0_f19:120:g_d0_f19:¡
+31:1982:72301:9:0:347:402:709:120:g_d0_f6:65:g_d0_f13:θ∗,θ∗t−1,·,zt
+31:1983:72314:0:9:403:408:718:120:g_d0_f19:120:g_d0_f19:¢
+31:1984:72315:9:18:412:540:709:120:g_d0_f4:120:g_d0_f6:converges uniformly to−c
+31:1985:72339:18:0:72:282:691:120:g_d0_f4:120:g_d0_f6:aszt→+∞,implying thatmaxθ∗∈[θ−1,1]U
+31:1986:72374:0:9:286:291:700:120:g_d0_f19:120:g_d0_f19:¡
+31:1987:72375:9:0:291:368:691:120:g_d0_f6:65:g_d0_f13:θ∗,θ∗t−1,αt,βt,zt
+31:1988:72392:0:9:369:374:700:120:g_d0_f19:120:g_d0_f19:¢
+31:1989:72393:9:17:379:540:691:120:g_d0_f6:120:g_d0_f4:<0forztsufficiently high. The
+31:1990:72422:17:0:72:428:674:120:g_d0_f4:120:g_d0_f6:strict monotonicity ofUinztthen guarantees that there exists afinitez
+31:1991:72491:0:8:430:435:682:120:g_d0_f19:120:g_d0_f19:¡
+31:1992:72492:8:0:435:484:674:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+31:1993:72503:0:8:485:490:682:120:g_d0_f19:120:g_d0_f19:¢
+31:1994:72504:8:18:494:539:674:120:g_d0_f4:120:g_d0_f4:such that
+31:1995:72513:18:0:72:140:656:120:g_d0_f12:120:g_d0_f6:maxθ∗∈[θ−1,1]U
+31:1996:72527:0:9:144:149:665:120:g_d0_f19:120:g_d0_f19:¡
+31:1997:72528:9:0:149:226:656:120:g_d0_f6:65:g_d0_f13:θ∗,θ∗t−1,αt,βt,zt
+31:1998:72545:0:9:227:232:665:120:g_d0_f19:120:g_d0_f19:¢
+31:1999:72546:9:0:235:384:656:120:g_d0_f7:120:g_d0_f6:≥(≤)0ifandonlyifz≤(≥)z
+31:2000:72568:0:9:387:392:665:120:g_d0_f19:120:g_d0_f19:¡
+31:2001:72569:9:0:392:441:656:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+31:2002:72580:0:9:441:446:665:120:g_d0_f19:120:g_d0_f19:¢
+31:2003:72581:9:18:446:539:656:120:g_d0_f4:120:g_d0_f4:, which also implies
+31:2004:72601:18:0:72:402:638:120:g_d0_f4:120:g_d0_f6:that (9) admits a solutionθ∗t(zt)>θ∗t−1(zt−1)if and only ifzt≤z
+31:2005:72664:0:9:405:410:647:120:g_d0_f19:120:g_d0_f19:¡
+31:2006:72665:9:0:410:459:638:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+31:2007:72676:0:9:459:464:647:120:g_d0_f19:120:g_d0_f19:¢
+31:2008:72677:9:17:466:540:638:120:g_d0_f6:120:g_d0_f4:.The following
+31:2009:72691:17:18:72:540:621:120:g_d0_f4:120:g_d0_f4:is then an equilibrium: fort=1,θ∗1(z1)is any solution toU(θ∗1,−∞,α1,β1,z1)=0;for all
+31:2010:72775:18:0:72:306:603:120:g_d0_f6:120:g_d0_f6:t∈{2,...,T},θ∗t(zt)=max({θ∗t−1(zt−1)}∪{θ∗:U
+31:2011:72818:0:9:309:314:612:120:g_d0_f19:120:g_d0_f19:¡
+31:2012:72819:9:0:314:420:603:120:g_d0_f6:65:g_d0_f13:θ∗,θ∗t−1(zt−1),αt,βt,zt
+31:2013:72842:0:9:421:426:612:120:g_d0_f19:120:g_d0_f19:¢
+31:2014:72843:9:17:429:539:603:120:g_d0_f12:120:g_d0_f4:=0}.Note that, in this
+31:2015:72865:17:0:71:350:586:120:g_d0_f4:120:g_d0_f6:equilibrium, at anyt≥2,θ∗t(zt)>θ∗t−1(zt−1)for allzt≤z
+31:2016:72918:0:8:353:358:594:120:g_d0_f19:120:g_d0_f19:¡
+31:2017:72919:8:0:358:406:586:120:g_d0_f6:65:g_d0_f13:θ∗t−1,αt,βt
+31:2018:72930:0:8:407:412:594:120:g_d0_f19:120:g_d0_f19:¢
+31:2019:72931:8:0:414:457:586:120:g_d0_f6:65:g_d0_f13:.Sinceθ∗t
+31:2020:72940:0:8:461:466:594:120:g_d0_f19:120:g_d0_f19:¡
+31:2021:72941:8:0:466:474:586:120:g_d0_f6:65:g_d0_f13:zt
+31:2022:72943:0:8:475:480:594:120:g_d0_f19:120:g_d0_f19:¢
+31:2023:72944:8:18:483:539:586:120:g_d0_f12:120:g_d0_f4:=θ∗1(z1)for
+31:2024:72955:18:18:72:540:568:120:g_d0_f4:120:g_d0_f4:allztand alltis also an equilibrium, we conclude that the game admits multiple equilibria for any
+31:2025:73052:18:77:71:198:550:120:g_d0_f14:120:g_d0_f4:{αt,βt}Tt=1and anyT≥2.
+31:2026:73074:77:29:72:147:473:209:g_d0_f3:209:g_d0_f3:References
+31:2027:73084:29:18:77:540:444:120:g_d0_f4:120:g_d0_f4:[1] Angeletos, George-Marios, Christian Hellwig, and Alessandro Pavan (2003) “Coordination and
+31:2028:73178:18:28:94:372:426:120:g_d0_f4:120:g_d0_f4:Policy Traps,” working paper, MIT/UCLA/Northwestern.
+31:2029:73230:28:28:77:534:398:120:g_d0_f4:120:g_d0_f4:[2] Atkeson, Andrew (2000), “Discussion on Morris and Shin,”NBER Macroeconomics Annual.
+31:2030:73317:28:18:77:539:370:120:g_d0_f4:120:g_d0_f4:[3] Carlsson, Hans, and Eric van Damme (1993), “Global Games and Equilibrium Selection,”
+31:2031:73405:18:28:94:238:352:120:g_d0_f10:120:g_d0_f4:Econometrica61, 5, 989-1018.
+31:2032:73433:28:17:77:539:324:120:g_d0_f4:120:g_d0_f10:[4] Chamley, Christophe (1999), “Coordinating Regime Switches,”Quarterly  Journal  of  Eco-
+31:2033:73524:17:28:94:206:307:120:g_d0_f10:120:g_d0_f4:nomics114, 3, 869-905.
+31:2034:73546:28:18:77:539:279:120:g_d0_f4:120:g_d0_f4:[5] Chari, V.V., and Patrick Kehoe (2003), “Hot Money,”Journal  of  Political  Economy111,
+31:2035:73636:18:28:94:144:261:120:g_d0_f4:120:g_d0_f4:1262-1292.
+31:2036:73646:28:17:77:539:233:120:g_d0_f4:120:g_d0_f4:[6] Corsetti, Giancarlo, Bernardo Guimaraes and Nouriel Roubini, (2004), “International Lending
+31:2037:73741:17:18:94:540:216:120:g_d0_f4:120:g_d0_f4:of Last Resort and Moral Hazard: A Model of IMF’s Catalytic Finance,” working paper,
+31:2038:73825:18:28:94:189:198:120:g_d0_f4:120:g_d0_f4:University of Rome.
+31:2039:73844:28:18:77:540:170:120:g_d0_f4:120:g_d0_f4:[7] Dasgupta, Amil (2002), “Coordination, Learning and Delay,” working paper, London School
+31:2040:73935:18:27:94:160:152:120:g_d0_f4:120:g_d0_f4:of Economics.
+31:2041:73948:27:28:77:529:125:120:g_d0_f4:120:g_d0_f4:[8] Edmond, Chris (2003), “Information and the Limits to Autocracy,” working paper, UCLA.
+31:2042:74037:28:18:77:540:97:120:g_d0_f4:120:g_d0_f4:[9] Frankel, David, and Ady Pauzner (2000), “Resolving Indeterminacy in Dynamic Settings: The
+31:2043:74130:18:0:94:396:79:120:g_d0_f4:120:g_d0_f4:Role of Shocks,”Quarterly Journal of Economics115, 283-304.
+32:2044:74191:0:18:72:540:709:120:g_d0_f4:120:g_d0_f4:[10] Giannitsarou, Chryssi, and Flavio Toxvaerd(2003), “Recursive Global Games,” working paper,
+32:2045:74286:18:26:94:413:691:120:g_d0_f4:120:g_d0_f4:Universidade Nova de Lisboa and Hebrew University of Jerusalem.
+32:2046:74349:26:18:71:539:665:120:g_d0_f4:120:g_d0_f4:[11] Goldstein, Itay (2002), “Strategic Complementarities and the Twin Crises,” working paper,
+32:2047:74443:18:26:94:173:647:120:g_d0_f4:120:g_d0_f4:Duke University.
+32:2048:74459:26:18:71:539:621:120:g_d0_f4:120:g_d0_f4:[12] Goldstein, Itay, and Ady Pauzner (2000), “Demand Deposit Contracts and the Probability of
+32:2049:74553:18:26:94:430:603:120:g_d0_f4:120:g_d0_f4:bank Runs,” working paper, Duke University and Tel Aviv University.
+32:2050:74620:26:18:71:540:577:120:g_d0_f4:120:g_d0_f4:[13] Goldstein, Itay, and Ady Pauzner (2001), “Contagion of Self-Fulfilling Financial Crises due
+32:2051:74716:18:17:94:540:559:120:g_d0_f4:120:g_d0_f4:to Diversification of Investment Portfolios,” working paper, Duke University and Tel Aviv
+32:2052:74805:17:27:94:145:542:120:g_d0_f4:120:g_d0_f4:University.
+32:2053:74816:27:17:72:540:515:120:g_d0_f4:120:g_d0_f4:[14] Heidhues, Paul, and Nicolas Melissas (2003), “Equilibria in a Dynamic Global Game: The Role
+32:2054:74912:17:27:94:455:498:120:g_d0_f4:120:g_d0_f4:of Cohort Effects”, working paper, WZB Berlin and University of Leicester.
+32:2055:74986:27:17:72:539:471:120:g_d0_f4:120:g_d0_f4:[15] Levin, Jonathan (2001), “A Note on Global Games with Overlapping Generations,” working
+32:2056:75077:17:27:94:223:454:120:g_d0_f4:120:g_d0_f4:paper, Stanford University.
+32:2057:75104:27:18:72:540:427:120:g_d0_f4:120:g_d0_f4:[16] Milgrom, Paul (1981), “Good News and Bad News: Representation Theorems and Applica-
+32:2058:75192:18:26:94:317:409:120:g_d0_f4:120:g_d0_f4:tions,”Bell Journal of Economics12, 380-391.
+32:2059:75236:26:18:72:540:383:120:g_d0_f4:120:g_d0_f4:[17] Morris, Stephen, and Hyun Song Shin (1998), “Unique Equilibrium in a Model of Self-Fulfilling
+32:2060:75334:18:26:94:399:365:120:g_d0_f4:120:g_d0_f4:Currency Attacks,”American Economic Review, 88, 3, 587-597.
+32:2061:75393:26:18:72:539:339:120:g_d0_f4:120:g_d0_f4:[18] Morris, Stephen and Hyun Song Shin (1999), “A Theory of the Onset of Currency Attacks,” in
+32:2062:75488:18:17:94:540:321:120:g_d0_f4:120:g_d0_f4:Agenor, Vines and Weber, eds.,Asian Financial Crisis: Causes, Contagion and Consequences,
+32:2063:75577:17:27:94:312:304:120:g_d0_f4:120:g_d0_f4:Cambridge, UK: Cambridge University Press.
+32:2064:75619:27:17:72:540:277:120:g_d0_f4:120:g_d0_f4:[19] Morris, Stephen and Hyun Song Shin (2000), “Rethinking Multiple Equilibria in Macroeco-
+32:2065:75711:17:27:94:245:260:120:g_d0_f4:120:g_d0_f4:nomics,”NBER Macro Annual.
+32:2066:75737:27:17:72:540:233:120:g_d0_f4:120:g_d0_f4:[20] Morris, Stephen and Hyun Song Shin (2001), “Global Games - Theory and Applications,” in M.
+32:2067:75832:17:18:94:540:216:120:g_d0_f4:120:g_d0_f10:Dewatripont, L. Hansen, and S. Turnovsky, eds.,Advances in Economics and Econometrics
+32:2068:75917:18:17:94:540:198:120:g_d0_f4:120:g_d0_f4:(8th  World  Congress  of  the  Econometric  Society), Cambridge, UK: Cambridge University
+32:2069:76007:17:27:94:122:181:120:g_d0_f4:120:g_d0_f4:Press.
+32:2070:76013:27:17:71:539:154:120:g_d0_f4:120:g_d0_f4:[21] Morris, Stephen and Hyun Song Shin (2004), “Coordination Risk and the Price of Debt,”
+32:2071:76103:17:27:94:287:137:120:g_d0_f10:120:g_d0_f4:European Economic Review48, 133-153.
+32:2072:76139:27:17:72:539:110:120:g_d0_f4:120:g_d0_f4:[22] Rochet, Jean-Charles and Xavier Vives (2004), “Coordination Failures and the Lender of Last
+32:2073:76235:17:0:94:475:93:120:g_d0_f4:120:g_d0_f4:Resort: Was Bagehot Right After All?,” working paper, University of Toulouse.

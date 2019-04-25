@@ -1,0 +1,2038 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:451:610:12:Times:12:Times:FISCAL POLICY, WEALTH EFFECTS, AND MARKUPS
+1:2:67:28:14:306:356:582:12:Times:12:Times:Tommaso Monacelli
+1:3:84:14:28:306:343:568:12:Times:12:Times:Roberto Perotti
+1:4:99:28:14:306:359:540:12:Times:12:Times:Working Paper 14584
+1:5:118:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w14584
+1:6:151:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:187:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:212:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:231:14:214:306:344:442:12:Times:12:Times:December 2008
+1:10:244:214:14:72:540:228:12:Times:12:Times:We thank Andreja Lenarcic for excellent research assistance. We also thank seminar participants at
+1:11:342:14:14:72:540:214:12:Times:12:Times:University of Amsterdam, Graduate Institute in Geneva, London Business School, Norges Banks,
+1:12:434:14:14:72:540:200:12:Times:12:Times:and University of Pavia for helpful comments. All errors are our responsability only. The views expressed
+1:13:539:14:14:72:540:186:12:Times:12:Times:herein are those of the author(s) and do not necessarily reflect the views of the National Bureau of
+1:14:639:14:28:72:171:172:12:Times:12:Times:Economic Research.
+1:15:657:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:16:753:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:17:848:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:18:866:28:14:72:540:88:12:Times:12:Times:© 2008 by Tommaso Monacelli and Roberto Perotti. All rights reserved. Short sections of text, not
+1:19:963:14:14:72:540:74:12:Times:12:Times:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:20:1067:14:0:72:224:60:12:Times:12:Times:© notice, is given to the source.
+2:21:1100:0:14:72:281:700:12:Times:12:Times:Fiscal Policy, Wealth Effects, and Markups
+2:22:1142:14:14:72:269:686:12:Times:12:Times:Tommaso Monacelli and Roberto Perotti
+2:23:1179:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 14584
+2:24:1207:14:14:72:148:658:12:Times:12:Times:December 2008
+2:25:1220:14:28:72:180:644:12:Times:12:Times:JEL No. D91,E21,E62
+2:26:1239:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:27:1247:28:14:72:540:588:12:Times:12:Times:We document that variations in government purchases generate a rise in consumption, the real and
+2:28:1343:14:14:72:540:574:12:Times:12:Times:the product wage, and a fall in the markup. This evidence is robust across alternative empirical methodologies
+2:29:1453:14:14:72:540:560:12:Times:12:Times:used to identify innovations in government spending (structural VAR vs. narrative approach). Simultaneously
+2:30:1560:14:14:72:540:546:12:Times:12:Times:accounting for these facts is a formidable challenge for a neoclassical model, which relies on the wealth
+2:31:1665:14:14:72:540:532:12:Times:12:Times:effect on labor supply as the main channel of transmission of unproductive government spending shocks.
+2:32:1767:14:14:72:540:518:12:Times:12:Times:The goal of this paper is to explore further the role of the wealth effects in the transmission of government
+2:33:1876:14:14:72:540:504:12:Times:12:Times:spending shocks. To this end, we build an otherwise standard business cycle model with price rigidity,
+2:34:1978:14:14:72:540:490:12:Times:12:Times:in which preferences can be consistent with an arbitrarily small wealth effect on labor supply, and
+2:35:2077:14:14:72:540:476:12:Times:12:Times:highlight that such effect is linked to the degree of complementarity between consumption and hours.
+2:36:2177:14:14:72:540:462:12:Times:12:Times:We show that the model is able to match our empirical evidence on the effects of government spending
+2:37:2277:14:14:72:539:448:12:Times:12:Times:shocks remarkably well. This happens when the preferences are such that the positive wealth effect on
+2:38:2378:14:14:72:541:434:12:Times:12:Times:labor supply is small and therefore the negative wealth effect on consumption is, somewhat counterintuitively,
+2:39:2488:14:42:72:99:420:12:Times:12:Times:large.
+2:40:2494:42:14:72:172:378:12:Times:12:Times:Tommaso Monacelli
+2:41:2511:14:14:72:202:364:12:Times:12:Times:IGIER Universita' Bocconi
+2:42:2536:14:14:72:147:350:12:Times:12:Times:Via Roentgen 1
+2:43:2550:14:14:72:140:336:12:Times:12:Times:20136 Milano
+2:44:2562:14:14:72:94:322:12:Times:12:Times:Italy
+2:45:2567:14:28:72:240:308:12:Times:12:Times:tommaso.monacelli@unibocconi.it
+2:46:2598:28:14:72:146:280:12:Times:12:Times:Roberto Perotti
+2:47:2613:14:14:72:202:266:12:Times:12:Times:IGIER Universita' Bocconi
+2:48:2638:14:14:72:147:252:12:Times:12:Times:Via Roentgen 1
+2:49:2652:14:14:72:140:238:12:Times:12:Times:20136 Milano
+2:50:2664:14:14:72:94:224:12:Times:12:Times:Italy
+2:51:2669:14:14:72:124:210:12:Times:12:Times:and NBER
+2:52:2677:14:0:72:215:196:12:Times:12:Times:roberto.perotti@unibocconi.it
+3:53:2706:0:32:72:208:678:17:g_d0_f2:17:g_d0_f2:1  Introduction
+3:54:2721:32:20:72:526:646:12:g_d0_f3:12:g_d0_f3:The responses of several macroeconomic variables to government spending shocks are
+3:55:2803:20:21:72:526:626:12:g_d0_f3:12:g_d0_f3:interesting for their obvious policy implications, but also because some of these responses
+3:56:2894:21:20:72:526:605:12:g_d0_f3:12:g_d0_f3:(notably those of private consumption and of the real wage) are potentially powerful
+3:57:2978:20:20:72:526:585:12:g_d0_f3:12:g_d0_f3:tools to discriminate between di§erent models. Empirically, several authors (see Fat·s
+3:58:3064:20:20:72:526:565:12:g_d0_f3:12:g_d0_f3:and Mihov (2001), Blanchard and Perotti (2002), GalÌ, LÛpez-Salido and VallÈs (2007),
+3:59:3149:20:21:72:526:545:12:g_d0_f3:12:g_d0_f3:Perotti (2007)) have found that government spending shocks cause private consumption
+3:60:3233:21:20:72:526:524:12:g_d0_f3:12:g_d0_f3:and the real product wage to rise: although these Öndings are not unchallenged (see
+3:61:3316:20:20:72:526:504:12:g_d0_f3:12:g_d0_f3:e.g., Ramey and Shapiro (1998), Edelberg, Eichenbaum, and Fisher (1999), Burnside,
+3:62:3398:20:20:72:526:484:12:g_d0_f3:12:g_d0_f3:Eichenbaum, and Fisher (2004), and Ramey (2008)), we argue below that they are indeed
+3:63:3483:20:20:72:526:464:12:g_d0_f3:12:g_d0_f3:common to the two main time series methodologies that have been used in this debate.
+3:64:3567:20:21:72:526:444:12:g_d0_f3:12:g_d0_f3:We also show evidence that the markup responds negatively to government spending
+3:65:3647:21:20:72:526:423:12:g_d0_f3:12:g_d0_f3:shocks - a result that, to our knowledge, has not been noted before. We then ask what
+3:66:3732:20:20:72:419:403:12:g_d0_f3:12:g_d0_f3:implications these three pieces of evidence have for existing models.
+3:67:3801:20:20:89:525:383:12:g_d0_f3:12:g_d0_f3:As Örst pointed out in the seminal contribution of Barro and King (1984), a posi-
+3:68:3882:20:21:72:526:363:12:g_d0_f3:12:g_d0_f3:tive response of private consumption and the real product wage to a shock to wasteful,
+3:69:3968:21:20:72:526:342:12:g_d0_f3:12:g_d0_f3:unproductive government spending is a formidable challenge for the neoclassical model.
+3:70:4054:20:20:72:526:322:12:g_d0_f3:12:g_d0_f3:The key mechanism in that model is the negative wealth e§ect of a positive government
+3:71:4139:20:20:72:526:302:12:g_d0_f3:12:g_d0_f3:spending shock, that increases the net present value of taxes paid by the individuals.
+3:72:4225:20:20:72:526:282:12:g_d0_f3:12:g_d0_f3:This depresses their consumption and shifts out their labor supply, thereby also causing
+3:73:4313:20:21:72:424:262:12:g_d0_f3:12:g_d0_f3:a decline in the real product wage along a Öxed labor demand curve.
+3:74:4380:21:20:89:525:241:12:g_d0_f3:12:g_d0_f3:Some recent models (like Ravn, Schmitt-GrohÈ and UrÌbe (2006) and GalÌ, LÛpez-
+3:75:4458:20:20:72:526:221:12:g_d0_f3:12:g_d0_f3:Salido and VallÈs (2007)) are instead capable of generating a positive response of private
+3:76:4548:20:20:72:526:201:12:g_d0_f3:12:g_d0_f3:consumption, via positive responses of the real (consumption) wage and negative responses
+3:77:4637:20:21:72:526:181:12:g_d0_f3:12:g_d0_f3:of the markup. However, to overcome the negative wealth e§ect on private consumption
+3:78:4721:21:20:72:526:160:12:g_d0_f3:12:g_d0_f3:the former must assume a large decline in the markup, and yet consumption increases very
+3:79:4809:20:20:72:526:140:12:g_d0_f3:12:g_d0_f3:little; the latter must assume instead an extreme form of market incompleteness, whereby
+3:80:4897:20:0:72:526:120:12:g_d0_f3:12:g_d0_f3:a large fraction of individuals are immune from the negative wealth e§ect because they
+4:81:4984:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:do not have access to any type of asset, and must therefore consume their labor income
+4:82:5070:20:21:72:134:658:12:g_d0_f3:12:g_d0_f3:each period.
+4:83:5082:21:20:89:525:637:12:g_d0_f3:12:g_d0_f3:The mechanisms emphasized by these papers are important and likely to be empirically
+4:84:5166:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:relevant. But before resorting to forms of market incompleteness or speciÖc assumptions
+4:85:5253:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:about the elasticity of demand, the goal of this paper is to explore further the transmis-
+4:86:5343:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:sion mechanism of Öscal policy shocks in the most standard neoclassical model, except for
+4:87:5432:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:the presence of price rigidity. We start from the Barro-King observation that the driving
+4:88:5521:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:force behind any model with rational, forward-looking consumers is the wealth e§ect of
+4:89:5607:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:the taxes associated with government spending shocks. Hence, in order to generate a pos-
+4:90:5695:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:itive response of private consumption and the real wage one has to overcome the negative
+4:91:5783:20:21:72:525:476:12:g_d0_f3:12:g_d0_f3:wealth e§ect of government spending shockson consumption: rather counterintuitively,
+4:92:5867:21:20:72:525:455:12:g_d0_f3:12:g_d0_f4:we show that this can happen if preferences are such that the wealth e§ecton labor supply
+4:93:5956:20:20:72:526:435:12:g_d0_f3:12:g_d0_f3:is small, which from the budget constraint implies that the negative wealth e§ect of the
+4:94:6044:20:20:72:525:415:12:g_d0_f3:12:g_d0_f3:higher taxes on consumption islarge. We illustrate all this by assuming the type of pref-
+4:95:6133:20:20:72:526:395:12:g_d0_f3:12:g_d0_f3:erences introduced in the literature by Greenwood, Hercowitz and Hu§man (1988), which
+4:96:6218:20:21:72:526:375:12:g_d0_f3:12:g_d0_f3:essentially allow for an arbitrarily weak wealth e§ect on labor supply. These preferences
+4:97:6307:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:have been used by Jaimovich and Rebelo (2008) and Schmitt-GrohÈ and UrÌbe (2008)
+4:98:6387:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:to show that anticipated future news (on productivity) can drive the business cycle; the
+4:99:6475:20:20:72:526:314:12:g_d0_f3:12:g_d0_f3:latter authors also estimate the parameters of this utility function, and argue that the
+4:100:6563:20:21:72:496:294:12:g_d0_f3:12:g_d0_f3:evidence indicates that indeed the wealth e§ect on labor supply is practically zero.
+4:101:6647:21:20:89:525:273:12:g_d0_f3:12:g_d0_f3:Our paper relates also to previous work by Basu and Kimball (2003) who study the
+4:102:6727:20:20:72:526:253:12:g_d0_f3:12:g_d0_f3:transmission of government spending (and monetary) shocks in a standard New Keynesian
+4:103:6812:20:20:72:526:233:12:g_d0_f3:12:g_d0_f3:model. In particular, they show how di§erent assumptions about adjustment costs on
+4:104:6894:20:20:72:526:213:12:g_d0_f3:12:g_d0_f3:capital can alter the sign of the e§ect of government spending shocks on output. We
+4:105:6977:20:21:72:526:193:12:g_d0_f3:12:g_d0_f3:show that adjustment costs on capital have drastic implications also for the e§ects of
+4:106:7063:21:20:72:526:172:12:g_d0_f3:12:g_d0_f3:government spending shocks on private consumption. More fundamentally, in Basu and
+4:107:7145:20:20:72:526:152:12:g_d0_f3:12:g_d0_f3:Kimball (2003) all the e§ects of government spending are still driven by the standard
+4:108:7230:20:20:72:526:132:12:g_d0_f3:12:g_d0_f3:negative wealth e§ect on consumption and leisure, hence they have the opposite sign
+4:109:7313:20:0:72:168:112:12:g_d0_f3:12:g_d0_f3:than in our model.
+5:110:7332:0:20:89:525:678:12:g_d0_f3:12:g_d0_f3:The plan of the paper is as follows. In section 2 we present the empirical evidence.
+5:111:7416:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:Section 3 discusses brieáy the intuition of our model. Section 4 sets up the model. Sec-
+5:112:7504:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:tion 5 illustrates its working in a simple two-period version with áexible and with Öxed
+5:113:7592:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:prices. Section 6 discusses the full, inÖnite horizon version of the model, with áexible and
+5:114:7684:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:with sticky prices. Sections 7 and 8 present two important extensions: habit persistence
+5:115:7772:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:and capital accumulation. Section 9 discusses the match between the estimated impulse
+5:116:7857:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:responses and the impulse responses from a calibrated version of the model. Section 10
+5:117:7943:21:40:72:124:536:12:g_d0_f3:12:g_d0_f3:concludes.
+5:118:7953:40:22:72:526:496:17:g_d0_f2:17:g_d0_f2:2  Empirical evidence on consumption, the real wage,
+5:119:8005:22:32:101:237:474:17:g_d0_f2:17:g_d0_f2:and the markup
+5:120:8019:32:20:72:526:442:12:g_d0_f3:12:g_d0_f3:We focus on the joint responses to government spending shocks of private consumption,
+5:121:8104:20:20:72:526:422:12:g_d0_f3:12:g_d0_f3:private investment, the real wage (both the consumption and the product wage), and
+5:122:8186:20:20:72:526:402:12:g_d0_f3:12:g_d0_f3:the markup. We start by estimating a reduced form VAR in six variables: government
+5:123:8268:20:20:72:526:382:12:g_d0_f3:12:g_d0_f3:spending on goods and services, GDP, private consumption, private investment (all in
+5:124:8352:20:21:72:525:362:12:g_d0_f3:12:g_d0_f3:logs of real, per capita terms), the Barro-Sahasakul1average marginal tax rate on labor
+5:125:8439:21:20:72:526:341:12:g_d0_f3:12:g_d0_f3:income, and one of the following three variables in turn: the markup, the real consumption
+5:126:8529:20:20:72:526:321:12:g_d0_f3:12:g_d0_f3:wage, and the real product wage, all three again in logs. The VAR also includes a constant
+5:127:8619:20:20:72:526:301:12:g_d0_f3:12:g_d0_f3:and a linear trend. Government spending on goods and services is deÖned as government
+5:128:8704:20:21:72:526:281:12:g_d0_f3:12:g_d0_f3:consumption plus defense equipment investment, following international guidelines. The
+5:129:8790:21:20:72:526:260:12:g_d0_f3:12:g_d0_f3:sample runs from 1947:1 to 2003:4 (the constraint on the end date is the availability of
+5:130:8878:20:20:72:516:240:12:g_d0_f3:12:g_d0_f3:data for the Barro-Sahasakul tax rate). Appendix A describes the data in more detail.
+5:131:8963:20:20:89:525:220:12:g_d0_f3:12:g_d0_f3:We identify government spending shocks via two alternative methodologies. The Örst
+5:132:9045:20:21:72:526:200:12:g_d0_f3:12:g_d0_f3:is the "SVAR approach " of Blanchard and Perotti (2002): this is based on the idea that,
+5:133:9133:21:20:72:526:179:12:g_d0_f3:12:g_d0_f3:due to decision and implementation lags, there is no automatic or discretionary response
+5:134:9221:20:20:72:526:159:12:g_d0_f3:12:g_d0_f3:of government spending to output and other shocks within a quarter. Thus, government
+5:135:9305:20:18:72:526:139:12:g_d0_f3:12:g_d0_f3:spending shocks are identiÖed via a Choleski decomposition in which government spending
+5:136:9392:18:0:85:257:121:7:g_d0_f3:10:g_d0_f3:1See Barro and Sahasakul (1983, 1986).
+6:137:9431:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:comes Örst (see Blanchard and Perotti (2002)). If one, like us, is interested only in the
+6:138:9520:20:21:72:387:658:12:g_d0_f3:12:g_d0_f3:response to government spending shocks, this is all is needed.
+6:139:9582:21:20:89:525:637:12:g_d0_f3:12:g_d0_f3:The second method is based on the "Ramey-Shapiro approach" ("RS approach" there-
+6:140:9662:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:after) of Ramey and Shapiro (1998), Edelberg, Eichenbaum, and Fisher (1999), and Burn-
+6:141:9748:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:side, Eichenbaum, and Fisher (2004), in turn a variant of the Romer and Romer (1989)
+6:142:9832:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:"event study approach" to the identiÖcation of monetary policy shocks. In essence, the
+6:143:9918:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:method starts by deÖning a dummy variable capturing the main episodes of military
+6:144:9999:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:buildups due to foreign policy crises (which can be argued to be exogenous and unfore-
+6:145:10085:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:castable), and then it traces the e§ects over time of a shock to this dummy variable on
+6:146:10172:20:20:72:221:496:12:g_d0_f3:12:g_d0_f3:several endogenous variables.
+6:147:10201:20:21:89:525:476:12:g_d0_f3:12:g_d0_f3:Based on a careful reading of the weekly press, Ramey and Shapiro (1998) identify the
+6:148:10286:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:exact quarter when the expectations of the Korean,Vietnam and Carter-Reagan military
+6:149:10370:20:20:72:525:435:12:g_d0_f3:12:g_d0_f3:buildups Örst took hold, and deÖne the "war dummy variable"Dtas taking the value
+6:150:10450:20:20:72:526:415:12:g_d0_f3:12:g_d0_f3:of 1 on 1950:3, 1965:1, 1980:1; to these dates we (like Eichenbaum and Fisher (2004),
+6:151:10535:20:20:72:526:395:12:g_d0_f3:12:g_d0_f3:Ramey (2006) and Perotti (2007) before us) add 2003:1 to capture the expectation of the
+6:152:10622:20:21:72:525:375:12:g_d0_f3:12:g_d0_f3:post September-11 military buildup. We include lags 0 to 6 of the dummy variableDtin
+6:153:10706:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:the reduced form equations for government spending and taxation (the two Öscal policy
+6:154:10791:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:variables) and only lag 0 in the other reduced form equations. Formally, and assuming
+6:155:10876:20:20:72:526:314:12:g_d0_f3:12:g_d0_f3:for illustrative purposes that the VAR includes only two variables, government spending
+6:156:10963:20:27:72:317:294:12:g_d0_f3:12:g_d0_f3:and output, we estimate the reduced form VAR
+6:157:11007:27:0:138:238:267:12:g_d0_f5:12:g_d0_f7:gt=-10+-11t+
+6:158:11019:0:22:245:254:279:8:g_d0_f8:12:g_d0_f9:4P
+6:159:11021:22:0:240:254:257:8:g_d0_f6:8:g_d0_f8:i=1
+6:160:11024:0:0:256:304:267:12:g_d0_f5:12:g_d0_f7:a11igt-i+
+6:161:11033:0:22:312:321:279:8:g_d0_f8:12:g_d0_f9:4P
+6:162:11035:22:0:307:321:257:8:g_d0_f6:8:g_d0_f8:i=1
+6:163:11038:0:0:323:371:267:12:g_d0_f5:12:g_d0_f7:a12iyt-i+
+6:164:11047:0:22:379:387:279:8:g_d0_f8:12:g_d0_f9:6P
+6:165:11049:22:0:374:388:257:8:g_d0_f6:8:g_d0_f8:i=0
+6:166:11052:0:33:390:525:267:12:g_d0_f5:12:g_d0_f3:B11iDt-i+ugt(1)
+6:167:11067:33:0:138:238:234:12:g_d0_f5:12:g_d0_f7:yt=-20+-21t+
+6:168:11079:0:21:245:254:245:8:g_d0_f8:12:g_d0_f9:4P
+6:169:11081:21:0:240:254:224:8:g_d0_f6:8:g_d0_f8:i=1
+6:170:11084:0:0:256:304:234:12:g_d0_f5:12:g_d0_f7:a21igt-i+
+6:171:11093:0:21:312:321:245:8:g_d0_f8:12:g_d0_f9:4P
+6:172:11095:21:0:307:321:224:8:g_d0_f6:8:g_d0_f8:i=1
+6:173:11098:0:26:323:525:234:12:g_d0_f5:12:g_d0_f3:a22iyt-i+B21Dt+uyt(2)
+6:174:11119:26:20:72:526:208:12:g_d0_f3:12:g_d0_f3:By including six lags of the war dummy variable in the Öscal policy equation, we allow
+6:175:11205:20:21:72:526:188:12:g_d0_f3:12:g_d0_f3:the military episodes to explain a large part of the deviation from normal of the policy
+6:176:11293:21:20:72:526:167:12:g_d0_f3:12:g_d0_f3:variable for seven periods in each episode; but by including only lag 0 in the output
+6:177:11378:20:20:72:526:147:12:g_d0_f3:12:g_d0_f3:equation, we assume that, after the impact period, the dynamic response of output to these
+6:178:11468:20:20:72:526:127:12:g_d0_f3:12:g_d0_f3:military buildups follows the "normal" pattern. This speciÖcation captures the notion
+6:179:11553:20:0:72:526:107:12:g_d0_f3:12:g_d0_f3:that we learn from these military buildup episodes because they are large, exogenous and
+7:180:11642:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:(arguably) unforecasted, not because the response of the economy is special. In other
+7:181:11727:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:words, we estimate the "normal" dynamic response of the economy to these "abnormal"
+7:182:11810:21:20:72:474:637:12:g_d0_f3:8:g_d0_f3:policy events (see Perotti (2007) for a more extended discussion of this issue).2
+7:183:11891:20:20:89:525:617:12:g_d0_f3:12:g_d0_f3:We consider two di§erent measures of the markup, in the non-Önancial corporate
+7:184:11969:20:20:71:525:597:12:g_d0_f3:12:g_d0_f3:business sector and in manufacturing. The former, a "value added markup", is constructed
+7:185:12057:20:20:71:525:577:12:g_d0_f3:12:g_d0_f3:as the share of labor in value added of the non-Önancial corporate business sector (net of
+7:186:12147:20:21:71:525:557:12:g_d0_f3:12:g_d0_f3:indirect taxes, see Rotemberg and Woodford (1999)); the latter, a "gross output markup",
+7:187:12235:21:20:71:525:536:12:g_d0_f3:12:g_d0_f3:is constructed as the share of labor in manufacturing national income. One advantage of
+7:188:12322:20:20:71:525:516:12:g_d0_f3:12:g_d0_f3:value added data is that there is a linear relation between the log of the price markup
+7:189:12409:20:20:71:525:496:12:g_d0_f3:12:g_d0_f3:and the log of the labor share in value added3(see Appendix B); this is not the case with
+7:190:12498:20:21:71:525:476:12:g_d0_f3:12:g_d0_f3:gross output data, where the relation might depend on the share and the relative price of
+7:191:12587:21:20:71:180:455:12:g_d0_f3:12:g_d0_f3:materials and energy.
+7:192:12608:20:20:89:525:435:12:g_d0_f3:12:g_d0_f3:We do not have data on the hourly wage in the non-Önancial corporate business sector,
+7:193:12693:20:20:71:525:415:12:g_d0_f3:12:g_d0_f3:hence we use hourly compensation in the business sector; for manufacturing, we use the
+7:194:12779:20:20:71:525:395:12:g_d0_f3:12:g_d0_f3:average hourly earnings of production workers in manufacturing. To construct the product
+7:195:12867:20:21:71:525:375:12:g_d0_f3:12:g_d0_f3:wage, we divide the nominal wage measures by the implicit price deáator of the business
+7:196:12954:21:20:71:525:354:12:g_d0_f3:12:g_d0_f3:sector4and by the producer price index of manufacturing, respectively. To construct the
+7:197:13041:20:20:71:522:334:12:g_d0_f3:12:g_d0_f3:consumption wage, we divide the nominal wage measures by the CPI net of food prices.
+7:198:13125:20:20:89:525:314:12:g_d0_f3:12:g_d0_f3:Figure 1 displays the impulse responses of several variables to a government spending
+7:199:13210:20:21:71:525:294:12:g_d0_f3:12:g_d0_f3:shock in the SVAR speciÖcation (columns 1 and 2) and to a shock to the war dummy
+7:200:13290:21:18:71:525:273:12:g_d0_f3:12:g_d0_f3:variable in the RS speciÖcations (columns 3 and 4). In columns 1 and 3 the markup refers
+7:201:13378:18:16:85:525:255:7:g_d0_f3:10:g_d0_f3:2In contrast to our speciÖcation, Edelberg, Eichenbaum and Fisher (1999) and Burnside, Eichenbaum
+7:202:13475:16:12:72:525:239:10:g_d0_f3:10:g_d0_f3:and Fisher (2004) include lags 0 to 6 inallequations of the reduced form VAR. Thus, implicitly these
+7:203:13575:12:12:72:526:227:10:g_d0_f3:10:g_d0_f3:authors assume that the military buildup episodes explain a large part of the deviation from normal of the
+7:204:13681:12:12:72:525:215:10:g_d0_f3:10:g_d0_f3:dynamics ofallendogenous variables for six quarters after each episode. To make this clearer, suppose
+7:205:13782:12:11:71:525:203:10:g_d0_f3:10:g_d0_f3:there were only one military buildup episode: then including lags 0 to 6 of the war dummy variable in
+7:206:13883:11:12:71:525:192:10:g_d0_f3:10:g_d0_f3:all reduced form equations would cause the residuals of all equations to be 0 for seven quarters: in other
+7:207:13989:12:12:71:526:180:10:g_d0_f3:10:g_d0_f3:words, the episode would explainallthe deviation from normal ofallvariables for seven quarters. The
+7:208:14088:12:12:72:526:168:10:g_d0_f3:10:g_d0_f3:war dummy variable consists of four episodes, hence the problem is less extreme, but the underlying logic
+7:209:14193:12:9:72:151:156:10:g_d0_f3:10:g_d0_f3:remains the same.
+7:210:14210:9:15:85:525:147:7:g_d0_f3:10:g_d0_f3:3Possibly after appropriate corrections for the presence, for instance, of non-Cobb-Douglas production
+7:211:14312:15:12:72:526:132:10:g_d0_f3:10:g_d0_f3:functions, of overhad labor, of labor adjustment costs, or of market power in the labor market (see e.g.
+7:212:14416:12:9:72:223:120:10:g_d0_f3:10:g_d0_f3:Rotemberg and Woodford (1999)).
+7:213:14447:9:0:85:482:111:7:g_d0_f3:10:g_d0_f3:4We use the gross output deáator from BLS since we do not have the value added deáator.
+8:214:14535:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:to the non-Önancial corporate business sector, the wage variables to the entire business
+8:215:14623:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:sector; in columns 2 and 4, both the markup and the wage refer to the manufacturing
+8:216:14706:21:20:72:105:637:12:g_d0_f3:12:g_d0_f3:sector.
+8:217:14713:20:20:89:525:617:12:g_d0_f3:12:g_d0_f3:The responses of government spending, private consumption and private investment
+8:218:14793:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:are expressed as changes in the share of GDP relative to the pre-shock path, by multiply-
+8:219:14882:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:ing the original log response by the average share of each variable in GDP. The responses
+8:220:14971:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:of GDP, of the markup, and of the two wage variables are expressed in percentage point
+8:221:15057:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:deviations from the pre-shock path. In the SVAR speciÖcation, the initial shock to gov-
+8:222:15144:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:ernment spending is normalized to 1 percentage point of GDP. All responses are displayed
+8:223:15232:20:20:72:418:496:12:g_d0_f3:12:g_d0_f3:with one standard error bands above and below the point estimate.
+8:224:15297:20:21:89:525:476:12:g_d0_f3:12:g_d0_f3:Note Örst that the patterns of all responses are qualitatively similar in the SVAR and
+8:225:15383:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:RS speciÖcations, for virtually all variables, except partially private investment and the
+8:226:15473:20:20:72:526:435:12:g_d0_f3:12:g_d0_f3:product wage. In particular, the peak response of government spending is similar in the
+8:227:15560:20:20:72:526:415:12:g_d0_f3:12:g_d0_f3:SVAR and the RS speciÖcations, about 1 percent of GDP. We then highlight Öve results
+8:228:15644:20:20:72:292:395:12:g_d0_f3:12:g_d0_f3:that will be useful in discussing our model.
+8:229:15688:20:21:89:525:375:12:g_d0_f3:12:g_d0_f3:First, in both speciÖcations and with both manufacturing and non-Önancial corporate
+8:230:15771:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:business sector data, private consumption increases; the peak response is remarkably
+8:231:15855:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:similar in the SVAR and RS speciÖcations, about .5 percentage points of GDP, and
+8:232:15935:20:20:72:526:314:12:g_d0_f3:12:g_d0_f3:occurs at roughly the same horizon. Second, investment falls in the SVAR speciÖcation,
+8:233:16021:20:21:72:526:294:12:g_d0_f3:12:g_d0_f3:particularly with the non-Önancial corporate business sector data, while it is basically áat
+8:234:16113:21:20:72:526:273:12:g_d0_f3:12:g_d0_f3:(after a small initial increase) in the RS speciÖcation. Third, in the SVAR speciÖcation
+8:235:16201:20:20:72:526:253:12:g_d0_f3:12:g_d0_f3:the markup falls, by about .5 percent in the non-Önancial corporate business sector, and
+8:236:16289:20:20:72:526:233:12:g_d0_f3:12:g_d0_f3:by more than double this amount in manufacturing. The countercyclical response of the
+8:237:16374:20:20:72:526:213:12:g_d0_f3:12:g_d0_f3:markup is slightly more muted in the RS speciÖcation (in fact, the markup rises for the
+8:238:16461:20:21:72:526:193:12:g_d0_f3:12:g_d0_f3:Örst three quarters in manufacturing). Fourth, the real product wage also rises, by about
+8:239:16550:21:20:72:526:172:12:g_d0_f3:12:g_d0_f3:1 percentage point at the peak in the non-Önancial corporate business sector and again
+8:240:16636:20:20:72:526:152:12:g_d0_f3:12:g_d0_f3:by much more in manufacturing, where the markup response is also stronger. Fifth, the
+8:241:16721:20:20:72:526:132:12:g_d0_f3:12:g_d0_f3:real consumption wage rises, by less than 1 percentage point at the peak in both sectors,
+8:242:16810:20:0:72:303:112:12:g_d0_f3:12:g_d0_f3:although it is not always precisely estimated.
+9:243:16857:0:32:72:176:678:17:g_d0_f2:17:g_d0_f2:3  Intuition
+9:244:16869:32:20:72:526:646:12:g_d0_f3:12:g_d0_f3:The standard neoclassical model with inÖnitely-lived forward-looking agents, áexible
+9:245:16953:20:21:72:526:626:12:g_d0_f3:12:g_d0_f3:prices, complete asset markets, and lump-sum taxation (as in Baxter and King (1993))
+9:246:17037:21:20:72:526:605:12:g_d0_f3:12:g_d0_f3:has fundamental di¢ culties explaining the positive response of private consumption and
+9:247:17124:20:20:72:526:585:12:g_d0_f3:12:g_d0_f3:of the real product wage to a government spending shock that we have estimated in our
+9:248:17209:20:20:72:526:565:12:g_d0_f3:12:g_d0_f3:impulse responses. In that model, when government spending increases, expected taxa-
+9:249:17293:20:21:72:526:545:12:g_d0_f3:12:g_d0_f3:tion increases by the same present value, and the representative household experiences
+9:250:17379:21:20:72:526:524:12:g_d0_f3:12:g_d0_f3:a negative wealth shock; as a consequence, she consumes less and works more: the labor
+9:251:17465:20:20:72:526:504:12:g_d0_f3:12:g_d0_f3:supply curve shifts out along an unchanged labor demand curve. Thus, in a neoclassical
+9:252:17551:20:20:72:525:484:12:g_d0_f3:12:g_d0_f3:model the positive Hicksian wealth e§ect5of a government spending shock on labor sup-
+9:253:17636:20:20:71:525:464:12:g_d0_f3:12:g_d0_f3:ply plays the key role, and leads to a rise in hours and output and a decline in private
+9:254:17724:20:21:71:252:444:12:g_d0_f3:8:g_d0_f3:consumption and in the real wage.6
+9:255:17758:21:20:89:525:423:12:g_d0_f3:12:g_d0_f3:Despite the importance of the wealth e§ect on labor supply in this and virtually all
+9:256:17842:20:20:71:525:403:12:g_d0_f3:12:g_d0_f3:recent dynamic general equilibrium models with government spending (see e.g., Smets and
+9:257:17929:20:20:71:525:383:12:g_d0_f3:12:g_d0_f3:Wouters (2007)), surprisingly little macro evidence is available on its strength. Schmitt-
+9:258:18019:20:21:71:525:363:12:g_d0_f3:12:g_d0_f3:GrohÈ and UrÌbe (2008) estimate the parameters of the preferences introduced in the
+9:259:18102:21:20:71:525:342:12:g_d0_f3:12:g_d0_f3:literature by Greenwood, Hercowitz and Hu§man (1988) and recently popularized by
+9:260:18182:20:20:71:525:322:12:g_d0_f3:12:g_d0_f3:Jaimovich and Rebelo (2008), which allow for an arbitrarily small Hicksian wealth e§ect
+9:261:18269:20:20:71:348:302:12:g_d0_f3:12:g_d0_f3:on labor supply, and conclude that it is virtually zero.
+9:262:18325:20:19:89:525:282:12:g_d0_f3:12:g_d0_f3:Thus, we consider the standard King-Plosser-Rebelo (KPR henceforth) preferences
+9:263:18404:19:15:85:525:263:7:g_d0_f3:10:g_d0_f3:5For future reference, it is useful to distinguish between a "wealth shock" and a "wealth e§ect". The
+9:264:18505:15:12:72:526:248:10:g_d0_f3:10:g_d0_f3:former is the change in wealth caused by a given shock, the latter is the Hicksian wealth e§ect on a given
+9:265:18611:12:12:72:526:236:10:g_d0_f3:10:g_d0_f3:variable generated by the wealth shock. Thus, a negative wealth shock is a decline in wealth; the positive
+9:266:18717:12:12:72:526:224:10:g_d0_f3:10:g_d0_f3:Hicksian wealth e§ect on labor supply of a given negative wealth shock is the rightward shift in labor
+9:267:18819:12:12:72:526:212:10:g_d0_f3:10:g_d0_f3:supply caused by the decline in wealth. The Hicksian wealth e§ect on labor supply (of any given shock
+9:268:18920:12:12:72:526:200:10:g_d0_f3:10:g_d0_f3:to an exogenous variable) is the change in hours that would obtain if the household received a lump sum
+9:269:19023:12:12:72:526:188:10:g_d0_f3:10:g_d0_f3:that would generate the same change in utility caused by the shock, but at unchanged (pre-shock) real
+9:270:19124:12:8:72:100:176:10:g_d0_f3:10:g_d0_f3:prices.
+9:271:19131:8:16:85:525:168:7:g_d0_f3:10:g_d0_f3:6If taxation were distortionary (see Ohanian (1997), Cooley and Ohanian (1997), and Ludvigson
+9:272:19224:16:12:72:526:152:10:g_d0_f3:10:g_d0_f3:(1996)), one could think of speciÖc time paths of taxes inducing a pattern of intra- and inter-temporal
+9:273:19327:12:12:72:526:140:10:g_d0_f3:10:g_d0_f3:substitution that generates temporary increases in consumption or the real wage; however, because of the
+9:274:19431:12:12:72:526:128:10:g_d0_f3:10:g_d0_f3:negative wealth shock, the present value of consumption and of the real product wage must fall at some
+9:275:19533:12:0:72:97:116:10:g_d0_f3:10:g_d0_f3:point.
+10:276:19540:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:commonly used in business cycle analyses, but also the Greenwood-Hercowitz-Hu§man
+10:277:19621:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:(GHH henceforth) preferences, and show how the latter can modify radically the mode
+10:278:19704:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:of operation of Öscal policy in an otherwise standard neoclassical model. In this section,
+10:279:19794:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:we provide an intuitive argument of how a low Hicksian wealth e§ect on labor supply can
+10:280:19881:20:20:72:503:597:12:g_d0_f3:12:g_d0_f3:generate apositiveresponse of private consumption to government spending shocks.
+10:281:19961:20:20:89:525:577:12:g_d0_f3:12:g_d0_f3:When government spending increases, the consumer faces a negative wealth shock
+10:282:20039:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:from the associated higher taxes (in present value terms). As a consequence, the labor
+10:283:20125:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:supply curve shifts down in the case of KPR preferences: it stays still in the case of GHH
+10:284:20215:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:preferences, which feature no wealth e§ect on labor supply. If the real wage decreased,
+10:285:20302:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:the consumer would also experience a negative substitution e§ect on consumption (note
+10:286:20387:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:that in equilibrium there is no wealth e§ect from changes in the real wage, because in
+10:287:20473:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:our model of monopolistic competition changes in labor income and in proÖts cancel out,
+10:288:20560:20:20:72:526:435:12:g_d0_f3:12:g_d0_f3:given hours). Hence, a necessary condition for private consumption to increase is that the
+10:289:20650:20:20:72:205:415:12:g_d0_f3:12:g_d0_f3:real wage should increase.
+10:290:20676:20:20:89:525:395:12:g_d0_f3:12:g_d0_f3:A positive real wage response requires labor demand to shift out. This happens in our
+10:291:20761:20:21:72:526:375:12:g_d0_f3:12:g_d0_f3:model because of rigidities in price setting by monopolistically competitive Örms. When
+10:292:20848:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:government spending increases, Örms face an outward shift in the demand curve for the
+10:293:20933:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:variety they produce; those Örms that cannot change their prices meet this extra demand
+10:294:21020:20:20:72:457:314:12:g_d0_f3:8:g_d0_f3:by increasing production, hence shifting out the derived demand for labor.7
+10:295:21095:20:21:89:525:294:12:g_d0_f3:12:g_d0_f3:But because of price stickiness, movements in the real interest rate are limited. From
+10:296:21181:21:20:72:526:273:12:g_d0_f3:12:g_d0_f3:the Euler equation, this also limits changes in the marginal utility of consumption. For
+10:297:21269:20:20:72:526:253:12:g_d0_f3:12:g_d0_f3:illustrative purposes, consider an extreme case: the marginal utility of consumption is
+10:298:21356:20:20:72:526:233:12:g_d0_f3:12:g_d0_f3:Öxed in the short run. Assume, initially, that hours and consumption are complements,
+10:299:21441:20:20:72:463:213:12:g_d0_f3:12:g_d0_f3:in the usual sense that the cross-derivative of the utility function is positive.
+10:300:21522:20:18:89:525:193:12:g_d0_f3:12:g_d0_f3:When labor demand shifts out and hours increase along the labor supply curve, the
+10:301:21603:18:16:85:525:175:7:g_d0_f3:10:g_d0_f3:7In what follows, for expositional purposes it is useful to think of changes in the real wage as the result
+10:302:21710:16:12:72:526:159:10:g_d0_f3:10:g_d0_f3:of shifts in the supply of labor and in the (derived) demand for labor. The expression "labor demand"
+10:303:21811:12:12:72:526:147:10:g_d0_f3:10:g_d0_f3:has to be understood as the contemporaneous relation between the real wage and hours stemming from
+10:304:21909:12:12:72:526:135:10:g_d0_f3:10:g_d0_f3:the Örst order conditions for proÖt maximization, holding everything  else (including, possibly, current
+10:305:22013:12:0:72:325:123:10:g_d0_f3:10:g_d0_f3:and future values of some endogenous variables) constant.
+11:306:22071:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:marginal utility of consumption increases; to restore the initial value, consumption too
+11:307:22159:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:must increase (the derivative of the marginal utility of consumption with respect to con-
+11:308:22248:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:sumption is negative). This induces a new outward shift in the demand facing each Örm,
+11:309:22334:20:20:72:416:617:12:g_d0_f3:12:g_d0_f3:and therefore a new outward shift in the derived demand for labor.
+11:310:22400:20:20:89:525:597:12:g_d0_f3:12:g_d0_f3:When does the process stop? From the aggregate resource constraint of the economy
+11:311:22481:20:20:72:525:577:12:g_d0_f3:12:g_d0_f3:we know that, in equilibrium, thedi§erencebetween hours (and therefore output) and
+11:312:22563:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:private consumption must increase exactly by the change in government spending. Clearly,
+11:313:22651:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:the higher the complementarity between hours and consumption, the higher the needed
+11:314:22734:20:20:72:502:516:12:g_d0_f3:12:g_d0_f3:increase in hours and consumption until the above equilibrium condition is realized.
+11:315:22818:20:20:89:525:496:12:g_d0_f3:12:g_d0_f3:Below we show, as an implication of the Slutsky equation, that the degree of com-
+11:316:22899:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:plementarity between hours and consumption is inversely related to the strength of the
+11:317:22985:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:wealth e§ect on labor supply: hence complementarity is the highest under GHH prefer-
+11:318:23069:20:20:72:526:435:12:g_d0_f3:12:g_d0_f3:ences (which feature no wealth e§ect on labor supply), and declines as one moves towards
+11:319:23157:20:20:72:526:415:12:g_d0_f3:12:g_d0_f3:KPR preferences. This result explains why the multiplier e§ect on private consumption
+11:320:23242:20:20:72:526:395:12:g_d0_f3:12:g_d0_f3:is highest under GHH. In fact, under KPR preferences, consumption falls if hours and
+11:321:23326:20:21:72:343:375:12:g_d0_f3:12:g_d0_f3:consumption are substitutes instead of complements.
+11:322:23377:21:20:89:526:354:12:g_d0_f3:12:g_d0_f3:The above discussion clariÖes the role of the low wealth e§ecton labor supplyto
+11:323:23456:20:20:71:525:334:12:g_d0_f3:12:g_d0_f3:generate an increase in consumption. This argument might be counterintuitive at Örst,
+11:324:23541:20:20:71:525:314:12:g_d0_f3:12:g_d0_f3:because from the budget constraint a low wealth e§ect on labor supply implies a large
+11:325:23626:20:21:71:525:294:12:g_d0_f4:12:g_d0_f3:negativewealth e§ect of the higher taxeson consumption. But a low wealth e§ect on labor
+11:326:23713:21:20:71:525:273:12:g_d0_f3:12:g_d0_f3:supply also means a small (or zero, in the case of GHH preferences) downward shift in
+11:327:23798:20:20:71:525:253:12:g_d0_f3:12:g_d0_f3:labor supply; because of this, when labor demand shifts out the real wage increases more,
+11:328:23887:20:20:71:525:233:12:g_d0_f3:12:g_d0_f3:inducing a larger substitution e§ect from leisure into consumption.  Hence the degree
+11:329:23972:20:20:71:525:213:12:g_d0_f3:12:g_d0_f3:of complementarity and the substitution e§ect of a higher wage interact in producing a
+11:330:24058:20:0:71:240:193:12:g_d0_f3:12:g_d0_f3:multiplier e§ect on consumption.
+12:331:24091:0:32:72:192:678:17:g_d0_f2:17:g_d0_f2:4  The model
+12:332:24103:32:36:72:490:646:12:g_d0_f3:12:g_d0_f3:The representative household maximizes the expected discounted sum of utilities:
+12:333:24183:36:0:241:253:610:12:g_d0_f5:8:g_d0_f8:E0
+12:334:24185:0:9:256:278:630:12:g_d0_f9:8:g_d0_f10:(1
+12:335:24187:9:25:266:283:621:12:g_d0_f9:12:g_d0_f9:X
+12:336:24188:25:0:267:282:596:8:g_d0_f6:8:g_d0_f8:t=0
+12:337:24191:0:0:285:347:610:12:g_d0_f5:12:g_d0_f7:\ftU(Ct;Nt)
+12:338:24202:0:20:346:356:630:12:g_d0_f9:12:g_d0_f9:)
+12:339:24203:20:36:510:525:610:12:g_d0_f3:12:g_d0_f3:(3)
+12:340:24206:36:33:71:284:574:12:g_d0_f3:12:g_d0_f3:under the sequence of budget constraints:
+12:341:24247:33:0:170:382:541:12:g_d0_f5:12:g_d0_f7:Ct+EtfQt;t+1Bt+1g-WtNt-Tt+Bt+
+12:342:24276:0:27:384:400:557:12:g_d0_f9:8:g_d0_f8:Z1
+12:343:24278:27:0:391:395:530:8:g_d0_f8:8:g_d0_f8:0
+12:344:24279:0:32:403:525:541:12:g_d0_f7:12:g_d0_f3:-t(i)(4)
+12:345:24287:32:20:71:525:509:12:g_d0_f3:12:g_d0_f3:whereBt+1is a portfolio of real state contingent assets,Qt;t+1is the stochastic discount
+12:346:24375:20:20:71:525:489:12:g_d0_f3:12:g_d0_f3:factor,Ctis consumption of a composite Önal good which assembles a continuum of
+12:347:24454:20:20:71:525:469:12:g_d0_f3:12:g_d0_f3:di§erentiated varieties produced by monopolistically competitive Örms,Wtis the real
+12:348:24537:20:21:71:525:449:12:g_d0_f3:12:g_d0_f3:wage (the nominal wage divided by the consumption-based price indexPt;deÖned below),
+12:349:24621:21:20:71:525:428:12:g_d0_f5:12:g_d0_f3:Ntis labor hours,Ttis real lump-sum taxes, and-t(i)are the real proÖts of monopolistic
+12:350:24707:20:20:71:332:408:12:g_d0_f3:8:g_d0_f3:Örmi, whose shares are owned by the households.8
+12:351:24755:20:20:89:525:388:12:g_d0_f3:12:g_d0_f3:Final goods producers are perfectly competitive.  They assemble the di§erentiated
+12:352:24836:20:36:71:511:368:12:g_d0_f3:12:g_d0_f3:varieties for the production of the Önal goodYtaccording to the following technology:
+12:353:24921:36:0:237:260:332:12:g_d0_f5:12:g_d0_f7:Yt=
+12:354:24924:0:28:263:285:349:12:g_d0_f9:8:g_d0_f8:-Z1
+12:355:24927:28:0:276:280:321:8:g_d0_f8:8:g_d0_f8:0
+12:356:24928:0:0:288:312:332:12:g_d0_f5:12:g_d0_f7:Yt(i)
+12:357:24933:0:8:313:321:340:6:g_d0_f12:6:g_d0_f12:"-1"
+12:358:24937:8:0:327:337:332:12:g_d0_f5:12:g_d0_f5:di
+12:359:24939:0:17:337:358:349:12:g_d0_f9:6:g_d0_f14:-""-1
+12:360:24944:17:32:510:525:332:12:g_d0_f3:12:g_d0_f3:(5)
+12:361:24947:32:20:71:526:300:12:g_d0_f3:12:g_d0_f3:where" >1is the elasticity of substitution across di§erentiated varieties. As standard,
+12:362:25034:20:20:71:525:280:12:g_d0_f3:12:g_d0_f3:proÖt maximization by the Önal good producer yields the following demand function for
+12:363:25119:20:23:71:201:260:12:g_d0_f3:12:g_d0_f3:the di§erentiated variety:
+12:364:25145:23:0:245:281:237:12:g_d0_f5:12:g_d0_f7:Yt(i) =
+12:365:25152:0:9:284:293:254:12:g_d0_f9:12:g_d0_f9:-
+12:366:25153:9:16:294:319:245:12:g_d0_f5:12:g_d0_f7:Pt(i)
+12:367:25158:16:0:301:311:229:12:g_d0_f5:8:g_d0_f6:Pt
+12:368:25160:0:17:320:339:254:12:g_d0_f9:8:g_d0_f6:--"
+12:369:25163:17:36:341:525:237:12:g_d0_f5:12:g_d0_f3:Yt(6)
+12:370:25168:36:0:71:369:201:12:g_d0_f3:12:g_d0_f11:wherePt(i)is the price of di§erentiated varietyi, andPt-
+12:371:25224:0:7:373:385:214:12:g_d0_f9:12:g_d0_f9:hR
+12:372:25226:7:10:387:391:207:8:g_d0_f8:8:g_d0_f8:1
+12:373:25227:10:0:384:401:197:8:g_d0_f8:12:g_d0_f5:0P
+12:374:25229:0:8:402:417:206:8:g_d0_f8:8:g_d0_f6:1-"
+12:375:25232:8:0:401:445:198:8:g_d0_f6:12:g_d0_f5:t(i)di
+12:376:25238:0:13:445:465:214:12:g_d0_f9:6:g_d0_f12:i11-"
+12:377:25243:13:20:470:526:201:12:g_d0_f3:12:g_d0_f3:is the price
+12:378:25255:20:21:72:496:181:12:g_d0_f3:12:g_d0_f3:of the composite good consistent with the Önal good producer earning zero proÖts.
+12:379:25336:21:31:89:424:160:12:g_d0_f3:12:g_d0_f3:In turn, each di§erentiated good is produced with the technology
+12:380:25400:31:19:208:525:129:12:g_d0_f5:12:g_d0_f3:Yt(i) =Nt(i)-i2[0;1];   --1(7)
+12:381:25430:19:0:85:404:110:7:g_d0_f3:10:g_d0_f3:8Each domestic household owns an equal share of the monopolistic Örms.
+13:382:25502:0:20:72:525:678:12:g_d0_f3:12:g_d0_f3:In the absence of any form of nominal price rigidity each monopolistic producerisets its
+13:383:25590:20:19:71:323:658:12:g_d0_f3:12:g_d0_f3:relative price as a markup over the marginal cost
+13:384:25639:19:16:254:279:639:12:g_d0_f5:12:g_d0_f7:Pt(i)
+13:385:25644:16:0:261:272:623:12:g_d0_f5:8:g_d0_f6:Pt
+13:386:25646:0:0:283:306:631:12:g_d0_f7:8:g_d0_f6:=-t
+13:387:25649:0:16:317:332:639:12:g_d0_f5:8:g_d0_f6:Wt
+13:388:25651:16:0:307:342:623:12:g_d0_f5:8:g_d0_f6:MPNt
+13:389:25655:0:27:510:525:631:12:g_d0_f3:12:g_d0_f3:(8)
+13:390:25658:27:20:71:525:604:12:g_d0_f3:12:g_d0_f3:whereMPNtis the marginal product of labor and-tis the (possibly time-varying)
+13:391:25735:20:27:71:424:584:12:g_d0_f3:12:g_d0_f3:markup. In a symmetric equilibrium the above expression reduces to
+13:392:25801:27:0:265:292:557:12:g_d0_f5:12:g_d0_f7:Wt=
+13:393:25804:0:16:296:330:565:12:g_d0_f5:8:g_d0_f6:MPNt
+13:394:25808:16:0:308:318:549:12:g_d0_f5:8:g_d0_f6:-t
+13:395:25810:0:27:510:525:557:12:g_d0_f3:12:g_d0_f3:(9)
+13:396:25813:27:20:71:525:530:12:g_d0_f3:12:g_d0_f3:which, once a decision rule is given for the markup, could be interpreted as an aggregate
+13:397:25902:20:20:71:191:510:12:g_d0_f3:12:g_d0_f3:labor demand function.
+13:398:25924:20:21:89:525:490:12:g_d0_f3:12:g_d0_f3:The government buys the composite Önal good and throws it away, paying for it with
+13:399:26006:21:20:71:525:469:12:g_d0_f3:12:g_d0_f3:lump-sum taxesTt.  As it is well known, government debt makes no di§erence to the
+13:400:26087:20:20:71:525:449:12:g_d0_f3:12:g_d0_f3:equilibrium variables in this case, hence we will assume that the government budget is
+13:401:26173:20:20:71:510:429:12:g_d0_f3:12:g_d0_f3:balanced on a period-by-period basis:Tt=Gt, whereGtis real government spending.
+13:402:26252:20:19:89:454:409:12:g_d0_f3:12:g_d0_f3:The householdís optimization problem implies the following conditions:
+13:403:26322:19:16:251:316:390:12:g_d0_f11:12:g_d0_f7:-Un(Ct;Nt)
+13:404:26332:16:0:278:288:374:12:g_d0_f5:8:g_d0_f6:-t
+13:405:26334:0:47:320:525:382:12:g_d0_f7:12:g_d0_f3:=Wt(10)
+13:406:26341:47:0:198:286:335:12:g_d0_f5:8:g_d0_f6:Uc(Ct;Nt) =\fEt
+13:407:26356:0:9:289:298:352:12:g_d0_f9:12:g_d0_f9:-
+13:408:26357:9:16:299:388:343:12:g_d0_f5:8:g_d0_f6:Uc(Ct+1;Nt+1)Rt
+13:409:26372:16:0:332:355:327:12:g_d0_f7:8:g_d0_f8:-t+1
+13:410:26376:0:17:389:398:352:12:g_d0_f9:12:g_d0_f9:-
+13:411:26377:17:25:504:525:335:12:g_d0_f3:12:g_d0_f3:(11)
+13:412:26381:25:20:72:525:310:12:g_d0_f3:12:g_d0_f3:whereUjdenotes the Örst derivative of the period utility function with respect to the
+13:413:26466:20:20:72:525:290:12:g_d0_f3:12:g_d0_f3:argumentj=C;N; Rtis the nominal interest rate,-t+1is the ináation rate between
+13:414:26544:20:20:72:525:270:12:g_d0_f3:8:g_d0_f6:periodst+ 1andt;and-tis the marginal utility of (real) wealth. In equilibrium,-t
+13:415:26624:20:20:72:526:250:12:g_d0_f3:12:g_d0_f3:equals the marginal utility of consumption. As usual, equation (10) can be interpreted as
+13:416:26713:20:21:72:442:230:12:g_d0_f3:12:g_d0_f3:deÖning a labor supply relation between the real wageWtand hoursNt.
+13:417:26780:21:20:89:525:209:12:g_d0_f3:12:g_d0_f3:Because the Hicksian wealth e§ect on labor supply is so central to the operation of
+13:418:26863:20:20:72:526:189:12:g_d0_f3:12:g_d0_f3:government spending shocks, we use a general utility speciÖcation that allows for di§erent
+13:419:26953:20:20:72:526:169:12:g_d0_f3:12:g_d0_f3:intensities of this e§ect. SpeciÖcally, we use the period utility function introduced by
+13:420:27041:20:39:72:225:149:12:g_d0_f3:12:g_d0_f3:Jaimovich and Rebelo (2008):
+13:421:27069:39:0:188:251:110:12:g_d0_f5:12:g_d0_f7:U(Ct;Nt) =
+13:422:27079:0:14:256:263:136:12:g_d0_f9:12:g_d0_f9:-
+13:423:27080:14:0:263:326:122:12:g_d0_f5:8:g_d0_f6:Ct- N-tXt
+13:424:27089:0:34:326:349:136:12:g_d0_f9:8:g_d0_f6:-1--
+13:425:27093:34:0:289:316:102:12:g_d0_f7:12:g_d0_f5:1--
+13:426:27096:0:0:351:525:110:12:g_d0_f5:12:g_d0_f3:;   - >0(12)
+14:427:27110:0:31:72:334:678:12:g_d0_f3:12:g_d0_f3:whereXtis an index variable evolving according to
+14:428:27159:31:32:263:330:647:12:g_d0_f5:8:g_d0_f8:Xt=C\rtX1-\rt-1
+14:429:27174:32:20:71:525:615:12:g_d0_f3:12:g_d0_f3:For\r= 1this expression nests the utility function of KPR, which is standard in business
+14:430:27262:20:22:71:143:595:12:g_d0_f3:12:g_d0_f3:cycle analysis:
+14:431:27277:22:0:224:285:573:12:g_d0_f5:12:g_d0_f7:U(Ct;Nt) =
+14:432:27287:0:17:289:371:582:12:g_d0_f5:8:g_d0_f8:C1--te-(1--)f(Nt)
+14:433:27304:17:0:317:344:565:12:g_d0_f7:12:g_d0_f5:1--
+14:434:27307:0:27:504:525:573:12:g_d0_f3:12:g_d0_f3:(13)
+14:435:27311:27:32:72:475:546:12:g_d0_f3:12:g_d0_f3:withf(Nt) =-log(1- N-t). Under these preferences, equation (10) implies:
+14:436:27383:32:18:257:309:514:12:g_d0_f5:8:g_d0_f6: -N--1tCt
+14:437:27392:18:0:261:302:496:12:g_d0_f7:8:g_d0_f6:1- N-t
+14:438:27398:0:28:314:525:506:12:g_d0_f7:12:g_d0_f3:=Wt(14)
+14:439:27405:28:21:72:526:478:12:g_d0_f3:12:g_d0_f3:The key feature of the KPR utility function is that the marginal rate of substitution
+14:440:27490:21:20:72:525:457:12:g_d0_f3:12:g_d0_f3:between consumption and hours is a multiplicative function ofCt, so that hours remain
+14:441:27575:20:20:72:526:437:12:g_d0_f3:12:g_d0_f3:constant on a balanced-growth path where the real wage and consumption grow at the
+14:442:27657:20:20:72:526:417:12:g_d0_f3:12:g_d0_f3:same rate. In other words, with this utility function the substitution and income e§ects
+14:443:27745:20:20:72:337:397:12:g_d0_f3:8:g_d0_f3:of a permanent change in the real wage cancel out.9
+14:444:27796:20:21:89:525:377:12:g_d0_f3:12:g_d0_f3:In the case\r= 0the utility function (13) nests the preferences in GHH, which
+14:445:27873:21:20:72:525:356:12:g_d0_f3:12:g_d0_f3:display no wealth e§ect on labor supply. To see this, notice that when\r= 0(and after
+14:446:27958:20:20:72:525:336:12:g_d0_f3:12:g_d0_f3:normalizingXt= 1) the marginal rate of substitution between consumption and leisure
+14:447:28041:20:20:72:232:316:12:g_d0_f3:12:g_d0_f3:is independent of consumption:
+14:448:28071:20:27:263:525:296:12:g_d0_f5:12:g_d0_f3: -N--1t=Wt(15)
+14:449:28085:27:20:72:526:269:12:g_d0_f3:12:g_d0_f3:Hence, at an unchanged real wage (the relevant case to measure the Hicksian wealth
+14:450:28167:20:20:72:215:249:12:g_d0_f3:12:g_d0_f3:e§ect) hours do not change.
+14:451:28194:20:20:89:525:229:12:g_d0_f3:12:g_d0_f3:For our purposes, two more points should be noted about the utility function (12).
+14:452:28276:20:21:72:526:209:12:g_d0_f3:12:g_d0_f3:First, exactly because consumption does not appear in the expression for the marginal rate
+14:453:28366:21:20:72:526:188:12:g_d0_f3:12:g_d0_f3:of substitution between consumption and leisure, GHH preferences fail to be consistent
+14:454:28452:20:20:72:526:168:12:g_d0_f3:12:g_d0_f3:with the balanced-growth fact emphasized above. Nevertheless, to provide intuition we
+14:455:28537:20:20:72:525:148:12:g_d0_f3:12:g_d0_f3:will focus on the two polar cases of\r= 0and\r= 1; we will then look at the intermediate
+14:456:28625:20:18:72:423:128:12:g_d0_f3:12:g_d0_f3:case of0< \r <1, which does satisfy the balanced-growth condition.
+14:457:28691:18:0:85:239:110:7:g_d0_f3:10:g_d0_f3:9See also Basu and Kimball (2002).
+15:458:28727:0:20:89:525:678:12:g_d0_f3:12:g_d0_f3:Second, while the KPR speciÖcation exhibits (log) separability between hours and
+15:459:28807:20:21:72:525:658:12:g_d0_f3:12:g_d0_f3:consumption when-= 1, the GHH speciÖcation is always non separable: higher values
+15:460:28888:21:39:72:470:637:12:g_d0_f3:12:g_d0_f3:of-merely imply stronger complementarity between hours and consumption.
+15:461:28959:39:32:72:280:598:17:g_d0_f2:17:g_d0_f2:5  A two-period version
+15:462:28982:32:20:72:526:566:12:g_d0_f3:12:g_d0_f3:To gain insight into the working of the model, we Örst consider a two-period, perfect
+15:463:29067:20:20:72:526:546:12:g_d0_f3:12:g_d0_f3:foresight version. We compare a áexible-price equilibrium with a Öxed-price equilibrium.
+15:464:29155:20:21:72:525:526:12:g_d0_f3:12:g_d0_f3:When prices are áexible, the markup is constant at"=("-1); from equation (9) it follows
+15:465:29242:21:20:72:526:505:12:g_d0_f3:12:g_d0_f3:that, if the production function has constant returns to scale (-= 1), also the real wage
+15:466:29331:20:20:72:526:485:12:g_d0_f3:12:g_d0_f3:is constant. We henceforth focus on this case, which implies that under áexible prices any
+15:467:29421:20:20:72:526:465:12:g_d0_f3:12:g_d0_f3:substitution e§ect from changes in the real wage is eliminated. In turn this allows us to
+15:468:29510:20:20:72:354:445:12:g_d0_f3:12:g_d0_f3:concentrate speciÖcally on the role of the wealth e§ect.
+15:469:29566:20:28:89:507:425:12:g_d0_f3:12:g_d0_f3:The representative household maximizes the expected discounted sum of utilities:
+15:470:29646:28:28:235:525:397:12:g_d0_f5:12:g_d0_f3:U(C1;N1) +\fU(C2;N2)(16)
+15:471:29670:28:28:72:242:369:12:g_d0_f3:12:g_d0_f3:subject to the budget constraints
+15:472:29703:28:28:231:525:341:12:g_d0_f5:12:g_d0_f3:C1+B-W1N1-T1+ -1(17)
+15:473:29723:28:24:213:525:313:12:g_d0_f5:12:g_d0_f3:C2-W2N2+ (1 +r)B-T2+ -2(18)
+15:474:29750:24:21:72:526:289:12:g_d0_f3:12:g_d0_f3:whereBis real bonds,ris the real interest rate, and-is real proÖts; note that, by our
+15:475:29835:21:20:72:526:268:12:g_d0_f3:12:g_d0_f3:assumption of a balanced budget on a period by period basis, each period taxes are equal
+15:476:29923:20:20:72:198:248:12:g_d0_f3:12:g_d0_f3:to government spending.
+15:477:29946:20:20:89:525:228:12:g_d0_f3:12:g_d0_f3:In what follows we will refer, somewhat improperly, to the pre-shock áexible price
+15:478:30028:20:20:72:526:208:12:g_d0_f3:12:g_d0_f3:equilibrium as the "steady-state", so that we will not have to change notation and termi-
+15:479:30117:20:21:72:526:188:12:g_d0_f3:12:g_d0_f3:nology when we move to the inÖnite horizon model. Let an upper bar indicate a steady
+15:480:30201:21:20:72:525:167:12:g_d0_f3:12:g_d0_f3:state value, and small letters, likewt; ct;andnt, indicate log deviations from steady state
+15:481:30292:20:20:72:525:147:12:g_d0_f3:12:g_d0_f3:values. The exception isgt;which is deÖned as the percentage points deviation of the
+15:482:30376:20:20:72:525:127:12:g_d0_f3:12:g_d0_f3:share ofGtin steady state output:gt= (Gt-G)=N. Letgindicate the ratio of govern-
+15:483:30456:20:0:72:525:107:12:g_d0_f3:12:g_d0_f3:ment spending to GDP in the initial steady state:g=G=N. The economy starts in the
+16:484:30539:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:steady state with áexible prices, then at the beginning of period 1 an unexpected shock
+16:485:30626:20:21:72:525:658:12:g_d0_f5:12:g_d0_f3:g1>0to government spending occurs; if the shock is temporaryg2= 0; if the shock is
+16:486:30708:21:20:72:194:637:12:g_d0_f3:12:g_d0_f3:permanent,g2=g1>0.
+16:487:30726:20:20:89:525:617:12:g_d0_f3:12:g_d0_f3:We assume a feedback interest rate rule that relates the short-term nominal interest
+16:488:30810:20:12:72:156:597:12:g_d0_f3:12:g_d0_f3:rate to ináation:
+16:489:30827:12:17:277:286:585:12:g_d0_f5:12:g_d0_f5:R
+16:490:30828:17:0:277:286:568:12:g_d0_f5:12:g_d0_f5:R
+16:491:30829:0:25:291:525:577:12:g_d0_f7:12:g_d0_f3:=---(19)
+16:492:30837:25:20:72:526:552:12:g_d0_f3:12:g_d0_f3:where-= (P2-P1)=P1andR= 1=\fis the nominal interest rate in a steady state without
+16:493:30919:20:21:72:525:532:12:g_d0_f3:12:g_d0_f3:ináation; we assume-->1, which as it is well known is a necessary and su¢ cient
+16:494:30998:21:20:72:525:511:12:g_d0_f3:12:g_d0_f3:condition for the price level to be uniquely determined.10Note that according to this
+16:495:31083:20:20:72:526:491:12:g_d0_f3:12:g_d0_f3:monetary policy rule the ináation rate must be positive for the real interest rate to rise
+16:496:31173:20:34:72:235:471:12:g_d0_f3:12:g_d0_f5:above its steady state level1=\f:
+16:497:31206:34:28:72:211:437:14:g_d0_f2:14:g_d0_f2:5.1  Flexible prices
+16:498:31226:28:20:72:526:409:12:g_d0_f3:12:g_d0_f3:We start with the áexible price case. In equilibrium, proÖts are just production less labor
+16:499:31317:20:20:72:525:389:12:g_d0_f3:12:g_d0_f3:income:-t=  (1-Wt)Nt;henceWtNt+ -t=Nt. By combining this condition with
+16:500:31388:20:21:72:526:369:12:g_d0_f3:12:g_d0_f3:the timetbudget constraints of the consumer (equations (17) and (18)) and with the
+16:501:31470:21:20:72:526:348:12:g_d0_f3:12:g_d0_f3:government budget constraintTt=Gt;and imposing that in equilibrium net private debt
+16:502:31553:20:28:71:339:328:12:g_d0_f5:12:g_d0_f3:Bt= 0;we obtain the aggregate resource constraint:
+16:503:31603:28:28:264:525:300:12:g_d0_f5:12:g_d0_f3:Nt=Ct+Gt(20)
+16:504:31615:28:20:72:525:272:12:g_d0_f3:12:g_d0_f3:With the real wage Öxed atW= ("-1)=";in both periods equilibrium hours are pinned
+16:505:31696:20:28:72:260:252:12:g_d0_f3:12:g_d0_f3:down by the labor market condition:
+16:506:31731:28:0:216:225:224:12:g_d0_f11:12:g_d0_f11:-
+16:507:31732:0:16:226:308:232:12:g_d0_f5:12:g_d0_f7:Un(Nt-Gt;Nt)
+16:508:31744:16:0:227:307:216:12:g_d0_f5:12:g_d0_f7:Uc(Nt-Gt;Nt)
+16:509:31756:0:0:312:321:224:12:g_d0_f7:12:g_d0_f7:=
+16:510:31757:0:16:325:352:232:12:g_d0_f5:12:g_d0_f7:"-1
+16:511:31760:16:0:336:341:216:12:g_d0_f5:12:g_d0_f5:"
+16:512:31761:0:28:356:525:224:12:g_d0_f7:12:g_d0_f3:=W(21)
+16:513:31767:28:20:72:526:196:12:g_d0_f3:12:g_d0_f3:whereas consumption is determined by (20). Hence the analysis that follows applies to
+16:514:31852:20:20:72:343:176:12:g_d0_f3:12:g_d0_f3:the e§ects of both temporary and permanent shocks.
+16:515:31902:20:28:89:343:156:12:g_d0_f3:12:g_d0_f3:Log-linearizing the resource constraint (20) yields
+16:516:31953:28:18:251:525:128:12:g_d0_f5:12:g_d0_f3:nt=ct(1-g) +gt(22)
+16:517:31971:18:0:81:183:110:7:g_d0_f3:10:g_d0_f3:10See Woodford (2003).
+17:518:31995:0:32:72:489:678:12:g_d0_f3:12:g_d0_f3:Log-linearizing the labor market condition (21) under GHH and using (22) yields
+17:519:32074:32:0:237:331:646:12:g_d0_f5:12:g_d0_f11:nt= 0;   ct=-
+17:520:32087:0:16:341:350:654:12:g_d0_f5:8:g_d0_f6:gt
+17:521:32089:16:0:332:359:638:12:g_d0_f7:12:g_d0_f5:1-g
+17:522:32092:0:32:504:525:646:12:g_d0_f3:12:g_d0_f3:(23)
+17:523:32096:32:33:72:162:614:12:g_d0_f3:12:g_d0_f3:while under KPR
+17:524:32111:33:0:83:105:581:12:g_d0_f5:12:g_d0_f7:nt=
+17:525:32114:0:17:156:183:589:12:g_d0_f7:12:g_d0_f5:1-g
+17:526:32117:17:0:110:229:572:12:g_d0_f7:12:g_d0_f7:1 +W+ (--1)(1-g)
+17:527:32133:0:16:240:248:589:12:g_d0_f5:8:g_d0_f6:gt
+17:528:32135:16:0:231:257:573:12:g_d0_f7:12:g_d0_f5:1-g
+17:529:32138:0:0:262:342:581:12:g_d0_f5:12:g_d0_f11:>0;   ct=-
+17:530:32148:0:17:354:453:589:12:g_d0_f5:12:g_d0_f7:W+ (--1)(1-g)
+17:531:32161:17:0:344:463:572:12:g_d0_f7:12:g_d0_f7:1 +W+ (--1)(1-g)
+17:532:32177:0:16:473:482:589:12:g_d0_f5:8:g_d0_f6:gt
+17:533:32179:16:0:465:491:573:12:g_d0_f7:12:g_d0_f5:1-g
+17:534:32182:0:22:496:514:581:12:g_d0_f5:12:g_d0_f7:<0
+17:535:32184:22:20:504:525:559:12:g_d0_f3:12:g_d0_f3:(24)
+17:536:32188:20:20:72:526:539:12:g_d0_f3:12:g_d0_f3:Because the real wage is constant, the key e§ect at work here is the wealth e§ect of
+17:537:32272:20:21:72:526:519:12:g_d0_f3:12:g_d0_f3:higher government spending. With áexible prices, the main feature distinguishing the two
+17:538:32360:21:20:72:526:498:12:g_d0_f3:12:g_d0_f3:utility functions is how the negative wealth e§ect of an increase in government spending
+17:539:32448:20:20:72:312:478:12:g_d0_f3:12:g_d0_f3:is distributed between consumption and hours.
+17:540:32493:20:20:89:525:458:12:g_d0_f3:12:g_d0_f3:Under KPR, both leisure and consumption are normal goods; since the real wage is
+17:541:32573:20:20:72:525:438:12:g_d0_f3:12:g_d0_f3:constant, bothmustfall in each period in which government spending is above its steady
+17:542:32659:20:21:72:525:418:12:g_d0_f3:12:g_d0_f3:state value.11If the shock is temporary, the real interest rate, which is determined by the
+17:543:32750:21:20:72:526:397:12:g_d0_f3:12:g_d0_f3:Euler equation, increases, for the marginal utility of consumption in period 1 increases
+17:544:32838:20:20:72:526:377:12:g_d0_f3:12:g_d0_f3:(both because consumption falls and because hours increase). As discussed above, this
+17:545:32923:20:20:72:333:357:12:g_d0_f3:12:g_d0_f3:implies that goods price ináation must be positive.
+17:546:32974:20:21:89:525:337:12:g_d0_f3:12:g_d0_f3:Under GHH, there is no wealth e§ect on hours; hence, consumption absorbs all the
+17:547:33054:21:20:72:526:316:12:g_d0_f3:12:g_d0_f3:wealth shock, and falls by more than in the KPR case; in fact, from (20) it falls by exactly
+17:548:33146:20:20:72:525:296:12:g_d0_f3:12:g_d0_f3:the same increase inG. Note that, since the real wage is constant, the elasticity of sub-
+17:549:33235:20:20:72:525:276:12:g_d0_f3:12:g_d0_f3:stitution between consumption and hours-plays no role in determining the equilibrium
+17:550:33319:20:20:72:381:256:12:g_d0_f3:12:g_d0_f3:value of these variables, both in and out of the steady state.
+17:551:33381:20:21:89:525:236:12:g_d0_f3:12:g_d0_f3:The result that consumption falls might seem to contrast with Linnemann (2005),
+17:552:33460:21:20:72:526:215:12:g_d0_f3:12:g_d0_f3:who presents a model with áexible prices where hours and consumption are complements,
+17:553:33545:20:20:72:526:195:12:g_d0_f3:12:g_d0_f3:and consumption increases after a shock toG. The reason, however, is that he uses a
+17:554:33628:20:20:72:526:175:12:g_d0_f3:12:g_d0_f3:utility function that cannot be nested into (12), and has the feature that consumption is
+17:555:33717:20:19:72:514:155:12:g_d0_f3:12:g_d0_f3:an inferior good and the labor supply is downward sloping, as shown by Bilbie (2006).
+17:556:33802:19:15:81:525:136:7:g_d0_f3:10:g_d0_f3:11If the production function exhibited decreasing returns to scale to labor(- <1), the decline in
+17:557:33899:15:0:72:502:121:10:g_d0_f3:10:g_d0_f3:consumption would be even stronger, as the real wage would have to decline when hours increase.
+18:558:33996:0:20:89:525:678:12:g_d0_f3:12:g_d0_f3:It should be clear by now that, since consumption is a normal good under both KPR
+18:559:34077:20:21:72:525:658:12:g_d0_f3:12:g_d0_f3:and GHH, it can increaseonlyif the real wage increases, so that by the substitution e§ect
+18:560:34166:21:20:72:525:637:12:g_d0_f3:12:g_d0_f3:hours can increase.12Of course this is only a necessary condition for consumption to rise:
+18:561:34256:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:hours must increase beyond the level needed to pay for the higher government spending.
+18:562:34342:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:This is where nominal price rigidities (and therefore variable markup and real wage) enter
+18:563:34432:20:34:72:131:577:12:g_d0_f3:12:g_d0_f3:the picture.
+18:564:34444:34:28:72:195:543:14:g_d0_f2:14:g_d0_f2:5.2  Fixed prices
+18:565:34461:28:20:72:526:515:12:g_d0_f3:12:g_d0_f3:Note Örst that, in this perfect foresight model, if goods prices were Öxed only in period 1,
+18:566:34553:20:21:72:526:495:12:g_d0_f3:12:g_d0_f3:the áexible price allocation would obtain in both periods. The reason is that in period 2
+18:567:34642:21:20:72:526:474:12:g_d0_f3:12:g_d0_f3:the allocation would be identical to the áexible price equilibrium; and even though prices
+18:568:34732:20:20:72:526:454:12:g_d0_f3:12:g_d0_f3:are Öxed in period 1, prices in period 2 can move in order to obtain the exact real interest
+18:569:34824:20:20:72:526:434:12:g_d0_f3:12:g_d0_f3:rate that supports the áexible price allocation; the nominal wage in period 2 would then
+18:570:34912:20:21:72:525:414:12:g_d0_f3:12:g_d0_f3:adjust to obtain a real wage equal to ("-1)=":In other words, Öxing goods prices only
+18:571:34997:21:20:71:525:393:12:g_d0_f3:12:g_d0_f3:in period 1 would be equivalent to Öxing the composite goods price in period 1 as the
+18:572:35082:20:20:71:525:373:12:g_d0_f3:12:g_d0_f3:numeraire, but letting all relative prices in both periods and the ináation rate free to
+18:573:35170:20:20:71:106:353:12:g_d0_f3:12:g_d0_f3:adjust.
+18:574:35177:20:21:89:525:333:12:g_d0_f3:12:g_d0_f3:Hence, for illustrative purposes we consider an extreme version, with prices Öxed in
+18:575:35261:21:20:71:525:312:12:g_d0_f3:12:g_d0_f3:both periods 1 and 2. In turn, given the interest rate rule (19), this implies that the real
+18:576:35353:20:20:71:195:292:12:g_d0_f3:12:g_d0_f3:interest rate is constant.
+18:577:35379:20:20:89:525:272:12:g_d0_f3:12:g_d0_f3:Since a permanent shock has the same e§ect under áexible and Öxed prices, we consider
+18:578:35464:20:20:71:525:252:12:g_d0_f3:12:g_d0_f3:only temporary shocks. From the Euler equation, the marginal utility of consumption in
+18:579:35550:20:29:71:509:232:12:g_d0_f3:12:g_d0_f3:period 1 must be equal to the (constant) marginal utility of consumption in period 2:
+18:580:35635:29:28:222:525:203:12:g_d0_f5:12:g_d0_f3:Uc(C1;N1) =Uc(N(1-g);N)(25)
+18:581:35662:28:20:72:452:175:12:g_d0_f3:12:g_d0_f3:for both GHH and KPR. Di§erentiating with respect toC1andN1yields:
+18:582:35728:20:17:187:205:155:12:g_d0_f5:8:g_d0_f8:dC1
+18:583:35731:17:0:186:206:138:12:g_d0_f5:8:g_d0_f8:dN1
+18:584:35734:0:0:211:232:147:12:g_d0_f7:12:g_d0_f11:=-
+18:585:35736:0:17:234:251:155:12:g_d0_f5:8:g_d0_f6:Ucn
+18:586:35739:17:0:234:249:138:12:g_d0_f5:8:g_d0_f6:Ucc
+18:587:35742:0:25:255:525:147:12:g_d0_f11:12:g_d0_f3:--j-1;j=GHH; KPR(26)
+18:588:35762:25:15:81:525:122:7:g_d0_f3:10:g_d0_f3:12Recall that, in equilibrium, there is no wealth e§ect on labor supply from a change in the real wage,
+18:589:35865:15:0:72:396:107:10:g_d0_f3:10:g_d0_f3:since changes in labor income are o§set by changes in proÖts, given hours.
+19:590:35941:0:20:72:102:678:12:g_d0_f3:12:g_d0_f3:where
+19:591:35946:20:0:212:338:658:12:g_d0_f5:12:g_d0_f7:-GHH=W;-KPR=
+19:592:35958:0:17:343:371:666:12:g_d0_f5:12:g_d0_f7:--1
+19:593:35961:17:0:353:360:649:12:g_d0_f5:12:g_d0_f5:-
+19:594:35962:0:25:372:525:658:12:g_d0_f5:12:g_d0_f3:W(27)
+19:595:35967:25:20:89:525:633:12:g_d0_f3:12:g_d0_f3:Note that-jcan be interpreted as a speciÖc "index of complementarity" between hours
+19:596:36050:20:20:71:525:613:12:g_d0_f3:12:g_d0_f3:and consumption: it captures the strength of the comovement betweenCandN, holding
+19:597:36131:20:21:71:525:593:12:g_d0_f3:12:g_d0_f3:the marginal utility of consumption constant. Expressing the derivative in terms of log
+19:598:36218:21:27:71:494:572:12:g_d0_f3:12:g_d0_f3:deviations from steady-states, and using the resource constraint (22) we can write:
+19:599:36301:27:0:196:220:545:12:g_d0_f5:12:g_d0_f7:n1=
+19:600:36304:0:16:238:244:553:12:g_d0_f7:12:g_d0_f7:1
+19:601:36305:16:0:225:256:537:12:g_d0_f7:8:g_d0_f6:1--j
+19:602:36309:0:0:258:323:545:12:g_d0_f5:12:g_d0_f7:g1;c1=
+19:603:36315:0:17:338:348:554:12:g_d0_f5:8:g_d0_f6:-j
+19:604:36317:17:0:328:359:537:12:g_d0_f7:8:g_d0_f6:1--j
+19:605:36321:0:16:373:379:553:12:g_d0_f7:12:g_d0_f7:1
+19:606:36322:16:0:362:389:537:12:g_d0_f7:12:g_d0_f5:1-g
+19:607:36325:0:30:390:525:545:12:g_d0_f5:12:g_d0_f3:g1(28)
+19:608:36331:30:20:72:525:515:12:g_d0_f3:12:g_d0_f3:Clearly, the hours multipliern1=g1is positive under both speciÖcation of preferences.
+19:609:36416:20:20:72:525:495:12:g_d0_f3:12:g_d0_f3:Under GHH it is also always greater than 1, hence the consumption multiplierc1=g1is
+19:610:36499:20:20:72:525:475:12:g_d0_f3:12:g_d0_f3:positive too. Under KPR,n1=g1is greater than 1 andc1=g1is positive only if consumption
+19:611:36585:20:20:72:273:455:12:g_d0_f3:12:g_d0_f5:and hours are complements, i.e.,- >1:
+19:612:36622:20:21:89:526:435:12:g_d0_f3:12:g_d0_f3:Importantly, the complementarity index-jis inversely related to the wealth e§ect on
+19:613:36705:21:20:72:526:414:12:g_d0_f3:12:g_d0_f3:hours. From the Slutski equation the income e§ect of a change in the real wage on hours
+19:614:36792:20:12:72:225:394:12:g_d0_f3:12:g_d0_f9:is:-
+19:615:36796:12:16:227:242:382:12:g_d0_f5:12:g_d0_f5:dN
+19:616:36798:16:0:226:243:366:12:g_d0_f5:12:g_d0_f5:dW
+19:617:36800:0:17:246:282:391:12:g_d0_f9:8:g_d0_f6:-income
+19:618:36807:17:0:286:316:374:12:g_d0_f7:12:g_d0_f5:=-N
+19:619:36810:0:16:319:379:382:12:g_d0_f5:8:g_d0_f6:WUcc+Ucn
+19:620:36818:16:0:345:353:366:12:g_d0_f7:12:g_d0_f7:\b
+19:621:36820:0:25:504:525:374:12:g_d0_f3:12:g_d0_f3:(29)
+19:622:36824:25:20:72:526:349:12:g_d0_f3:12:g_d0_f3:where\bis a negative term by the second order conditions. Thus, if leisure is a normal
+19:623:36910:20:20:72:518:329:12:g_d0_f3:12:g_d0_f3:good, it must be the case that(WUcc+Ucn)-0, which implies (from 26) that--W.
+19:624:36986:20:20:89:525:309:12:g_d0_f3:12:g_d0_f3:Notice also that the index-is highest under GHH preferences, which feature no
+19:625:37063:20:21:71:525:289:12:g_d0_f3:12:g_d0_f3:wealth e§ect on hours, and then it falls under KPR preferences; in fact,-KPRis negative
+19:626:37150:21:20:71:525:268:12:g_d0_f3:12:g_d0_f3:if hours and consumption are substitutes (- <1). Appendix C provides an alternative
+19:627:37233:20:20:71:408:248:12:g_d0_f3:12:g_d0_f3:interpretation of-, based on the slopes of the indi§erence curves.
+19:628:37299:20:20:89:525:228:12:g_d0_f3:12:g_d0_f3:Thus, and to summarize, the Öxed-price model reverses the conclusions of the áexible-
+19:629:37384:20:20:71:525:208:12:g_d0_f3:12:g_d0_f3:price model: now private consumption can increase in response to a government spending
+19:630:37470:20:21:71:525:188:12:g_d0_f3:12:g_d0_f3:shock, and the response of consumption is larger, the stronger the negative wealth e§ect
+19:631:37558:21:20:71:525:167:12:g_d0_f3:12:g_d0_f3:on consumption (or, alternatively, the larger the complementarity index-j). Below we
+19:632:37642:20:20:71:307:147:12:g_d0_f3:12:g_d0_f3:provide an intuitive explanation of this result.
+19:633:37690:20:20:89:525:127:12:g_d0_f3:12:g_d0_f3:Unlike in standard consumption/leisure choice models, where non-labor income is
+19:634:37769:20:0:71:525:107:12:g_d0_f3:12:g_d0_f3:given, here in equilibrium we haveC=N-Gregardless ofW, since a higherWmeans
+20:635:37846:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:higher labor income but lower proÖts (for simplicity, in the remaining part of this section
+20:636:37937:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:we omit the time indices, but it should be understood that all variables refer to period
+20:637:38025:21:20:72:525:637:12:g_d0_f3:12:g_d0_f3:1). Thus, in equilibrium, from (26) the rate of substitution betweenNandCis driven
+20:638:38107:20:24:72:257:617:12:g_d0_f3:12:g_d0_f3:by the index of complementarity-j:
+20:639:38141:24:16:273:278:593:12:g_d0_f5:12:g_d0_f5:c
+20:640:38142:16:0:272:279:577:12:g_d0_f5:12:g_d0_f5:n
+20:641:38143:0:0:284:293:585:12:g_d0_f7:12:g_d0_f7:=
+20:642:38144:0:17:305:315:594:12:g_d0_f5:8:g_d0_f6:-j
+20:643:38146:17:0:298:324:577:12:g_d0_f7:12:g_d0_f5:1-g
+20:644:38149:0:32:504:525:585:12:g_d0_f3:12:g_d0_f3:(30)
+20:645:38153:32:20:72:526:553:12:g_d0_f3:12:g_d0_f3:while from the resource constraint the equilibrium rate of transformation between con-
+20:646:38239:20:13:72:186:533:12:g_d0_f3:12:g_d0_f3:sumption and hours is
+20:647:38260:13:16:250:255:520:12:g_d0_f5:12:g_d0_f5:c
+20:648:38261:16:0:249:256:504:12:g_d0_f5:12:g_d0_f5:n
+20:649:38262:0:0:261:270:512:12:g_d0_f7:12:g_d0_f7:=
+20:650:38263:0:16:285:291:520:12:g_d0_f7:12:g_d0_f7:1
+20:651:38264:16:0:275:301:504:12:g_d0_f7:12:g_d0_f5:1-g
+20:652:38267:0:14:304:311:526:12:g_d0_f9:12:g_d0_f9:-
+20:653:38268:14:0:311:329:512:12:g_d0_f7:12:g_d0_f11:1-
+20:654:38270:0:16:334:340:520:12:g_d0_f5:12:g_d0_f5:g
+20:655:38271:16:0:333:340:504:12:g_d0_f5:12:g_d0_f5:n
+20:656:38272:0:14:341:348:526:12:g_d0_f9:12:g_d0_f9:-
+20:657:38273:14:26:504:525:512:12:g_d0_f3:12:g_d0_f3:(31)
+20:658:38277:26:21:72:378:486:12:g_d0_f3:12:g_d0_f3:Equating (30) and (31) yields the set of expressions in (28).
+20:659:38338:21:20:89:525:465:12:g_d0_f3:12:g_d0_f3:Another way to interpret (28) is that, in equilibrium, the di§erence betweendNand
+20:660:38419:20:20:72:523:445:12:g_d0_f5:6:g_d0_f12:dCmust be equal todG, and sincedC=-jdNregardless ofW, this yieldsdNdG=11--j
+20:661:38494:20:0:72:121:425:12:g_d0_f3:12:g_d0_f7:anddCdG=
+20:662:38502:0:11:132:140:432:8:g_d0_f6:6:g_d0_f12:-j
+20:663:38504:11:16:126:526:421:8:g_d0_f8:12:g_d0_f3:1--j; once expressed in log deviations from the steady state, these conditions
+20:664:38582:16:20:72:526:405:12:g_d0_f3:12:g_d0_f3:give exactly the set of expressions (28). Hence, the percentage increase in consumption is
+20:665:38672:20:21:72:304:385:12:g_d0_f3:12:g_d0_f3:higher the higher the complementarity index.
+20:666:38716:21:20:89:525:364:12:g_d0_f3:12:g_d0_f3:How is the equilibrium brought about? WhenGincreases, Örms reduce the markup
+20:667:38792:20:20:72:524:344:12:g_d0_f3:8:g_d0_f3:to meet the extra demand at the given prices; as the real wage increases, hours increase.13
+20:668:38883:20:20:71:525:324:12:g_d0_f3:12:g_d0_f3:Think of a notional "Örst round" wheredN=dG, both under GHH and KPR; because
+20:669:38959:20:21:71:525:304:12:g_d0_f5:12:g_d0_f5:-GHH> -KPR,Cincreases more under GHH; hence(dN-dC)GHH<(dN-dC)KP R<
+20:670:39025:21:20:71:525:283:12:g_d0_f5:12:g_d0_f3:dG. Firms reduce the markup further to meet the extra demand, and so on; the process
+20:671:39109:20:20:71:525:263:12:g_d0_f3:12:g_d0_f3:stops whendN-dC=dG;clearly, in equilibrium,dCis higher the higher-. Thus, the
+20:672:39186:20:20:71:525:243:12:g_d0_f3:12:g_d0_f3:degree of complementarity between consumption and hours captures amultiplier e§ectof
+20:673:39270:20:20:71:525:223:12:g_d0_f3:12:g_d0_f3:the change inG. An additional implication is that the markup will fall more under GHH
+20:674:39355:20:21:71:448:203:12:g_d0_f3:12:g_d0_f3:relative to KPR preferences in response to a rise in government spending.
+20:675:39428:21:20:89:525:182:12:g_d0_f3:12:g_d0_f3:The key conclusion from this section is that, with áexible prices, and even if there
+20:676:39512:20:20:71:525:162:12:g_d0_f3:12:g_d0_f3:is strong complementarity between hours and consumption, the latter cannot increase in
+20:677:39598:20:18:71:525:142:12:g_d0_f3:12:g_d0_f3:response to a government spending shock, as long as leisure and consumption are normal
+20:678:39684:18:16:81:525:124:7:g_d0_f3:10:g_d0_f3:13Under KPR, hours increase also because of the downward shift in the labor supply curve due to the
+20:679:39783:16:0:72:130:108:10:g_d0_f3:10:g_d0_f3:wealth e§ect.
+21:680:39798:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:goods; in addition, the response of consumption is more negative, the stronger the negative
+21:681:39889:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:wealth e§ect of the initial increase in government spending on consumption. But with
+21:682:39973:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:Öxed prices the opposite holds true: consumption can increase, and it will increase more,
+21:683:40062:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:the stronger the negative wealth e§ect of government spending on consumption. In fact,
+21:684:40148:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:with Öxed prices consumption always increases under GHH; and it increases under KPR if
+21:685:40234:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:hours and consumption are complements. In any case, the response under KPR is always
+21:686:40318:20:21:72:203:557:12:g_d0_f3:12:g_d0_f3:smaller than under GHH.
+21:687:40341:21:20:89:525:536:12:g_d0_f3:12:g_d0_f3:The two period model is obviously extreme in that it Öxes the real interest rate. If
+21:688:40425:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:the real interest rate were allowed to move, then an additional intertemporal substitution
+21:689:40515:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:e§ect would come to play. But the basic principle remains: by limiting changes in the
+21:690:40600:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:real interest rate, price stickiness forces a stronger comovement between consumption and
+21:691:40689:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:hours when the utility function is non-separable; because hours increase, the degree of
+21:692:40776:20:40:72:370:435:12:g_d0_f3:12:g_d0_f3:complementarity determines the response of consumption.
+21:693:40831:40:32:72:232:395:17:g_d0_f2:17:g_d0_f2:6  InÖnite horizon
+21:694:40849:32:20:72:526:363:12:g_d0_f3:12:g_d0_f3:Armed with the above intuition, we now go back to the inÖnite horizon version of our
+21:695:40933:20:35:72:505:343:12:g_d0_f3:12:g_d0_f3:model. Once again we contrast the case of áexible prices to the case of sticky prices.
+21:696:41019:35:28:72:211:308:14:g_d0_f2:14:g_d0_f2:6.1  Flexible prices
+21:697:41039:28:20:72:525:280:12:g_d0_f3:12:g_d0_f3:We assume that the evolution of the exogenous variablegtis governed by the AR(1)
+21:698:41119:20:20:72:109:260:12:g_d0_f3:12:g_d0_f3:process
+21:699:41126:20:27:235:525:240:12:g_d0_f5:12:g_d0_f3:gt=-gt-1+-t- <1(32)
+21:700:41145:27:20:72:526:213:12:g_d0_f3:12:g_d0_f3:where-tis white noise. Thus, the case-= 1corresponds to a permanent shock. We start
+21:701:41228:20:20:71:525:193:12:g_d0_f3:12:g_d0_f3:in a steady state, and then assume that at time 0 a positive realization of-0occurs. We
+21:702:41315:20:20:72:526:173:12:g_d0_f3:12:g_d0_f3:study the impulse responses of selected endogenous variables to this government spending
+21:703:41403:20:21:72:104:153:12:g_d0_f3:12:g_d0_f3:shock.
+21:704:41409:21:20:89:525:132:12:g_d0_f3:12:g_d0_f3:It is easy to trace out the dynamics under áexible prices. In this case, the real wage
+21:705:41495:20:0:72:525:112:12:g_d0_f3:12:g_d0_f3:is constant at ("-1)=":Hence at any timetthe evolution ofntandctis described by
+22:706:41576:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:(23) under GHH and by (24) under KPR. In turn, the Euler condition (11) pins down the
+22:707:41661:20:21:72:291:658:12:g_d0_f3:12:g_d0_f3:process for the real interest rate residually.
+22:708:41707:21:20:89:525:637:12:g_d0_f3:12:g_d0_f3:If the shock is permanent, the system moves immediately to the new steady state,
+22:709:41787:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:with no change in hours under GHH preferences, and with some increase under KPR
+22:710:41866:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:preferences, but not enough to prevent a decline in consumption.  When the shock is
+22:711:41949:20:20:72:525:577:12:g_d0_f3:12:g_d0_f3:temporary, at timet= 0consumption falls under both speciÖcations (and by more under
+22:712:42032:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:GHH), and then goes back monotonically to the initial steady state, as the wealth e§ect
+22:713:42119:21:20:72:525:536:12:g_d0_f3:12:g_d0_f3:declines and resources are freed up by the decline inGafter the initial jump. This is
+22:714:42204:20:35:72:368:516:12:g_d0_f3:12:g_d0_f3:exactly analogous to the two-period model studied above.
+22:715:42260:35:28:72:199:481:14:g_d0_f2:14:g_d0_f2:6.2  Sticky prices
+22:716:42278:28:20:72:525:453:12:g_d0_f3:12:g_d0_f3:We now introduce sticky prices‡ laCalvo, whereby each period Örms face a given proba-
+22:717:42363:20:20:72:526:433:12:g_d0_f3:12:g_d0_f3:bility of being able to adjust their prices. As it is well known, in equilibrium, this feature
+22:718:42457:20:32:72:322:413:12:g_d0_f3:8:g_d0_f3:generates a log-linear Phillips curve of the type14
+22:719:42508:32:32:238:525:381:12:g_d0_f5:12:g_d0_f3:-t=\fEtf-t+1g+-mct(33)
+22:720:42530:32:21:72:525:349:12:g_d0_f3:12:g_d0_f5:wheremctis the log deviation of the real marginal cost from its steady state level, and-
+22:721:42618:21:20:72:526:328:12:g_d0_f3:12:g_d0_f3:is a positive function of the probability of adjusting the price (a negative function of the
+22:722:42710:20:20:72:206:308:12:g_d0_f3:12:g_d0_f3:degree of price stickiness).
+22:723:42738:20:20:89:525:288:12:g_d0_f3:12:g_d0_f3:Under both types of preferences, we are able to provide a closed-form solution. We
+22:724:42820:20:20:72:526:268:12:g_d0_f3:12:g_d0_f3:start with the GHH case. Using the log-linearized version of the labor market condition
+22:725:42907:20:33:72:401:248:12:g_d0_f3:12:g_d0_f3:(15) yields (recall that with constant returns to scalemct=wt):
+22:726:42970:33:32:258:525:215:12:g_d0_f5:12:g_d0_f3:mct= (--1)nt(34)
+22:727:42986:32:32:72:526:183:12:g_d0_f3:12:g_d0_f3:Combining this with the log-linearized resource constraint (22), the Phillips curve becomes
+22:728:43077:32:18:191:525:151:12:g_d0_f5:12:g_d0_f3:-t=\fEtf-t+1g+-(--1) [(1-g)ct+gt](35)
+22:729:43114:18:0:81:334:133:7:g_d0_f3:10:g_d0_f3:14See Yun (1996), Clarida et al. (1999), Woodford (2003).
+23:730:43173:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:Log linearizing the consumption Euler equation (11), and again using the resource con-
+23:731:43259:20:32:72:309:658:12:g_d0_f3:12:g_d0_f3:straint (20) to substitute for hours, we obtain:
+23:732:43307:32:0:87:283:626:12:g_d0_f5:12:g_d0_f11:ct(1--GHH) =Etfct+1g(1--GHH)-
+23:733:43336:0:17:287:313:634:12:g_d0_f5:6:g_d0_f12:-GHH
+23:734:43340:17:0:287:314:617:12:g_d0_f7:12:g_d0_f5:1-g
+23:735:43343:0:0:315:392:626:12:g_d0_f5:12:g_d0_f11:Et(gt+1-gt)-
+23:736:43355:0:17:396:407:634:12:g_d0_f5:8:g_d0_f6:-r
+23:737:43357:17:0:398:405:617:12:g_d0_f5:12:g_d0_f5:-
+23:738:43358:0:37:409:525:626:12:g_d0_f7:12:g_d0_f3:(rt-Etf-t+1g)(36)
+23:739:43375:37:0:71:128:589:12:g_d0_f3:12:g_d0_f11:where-r-
+23:740:43383:0:13:135:142:602:12:g_d0_f9:12:g_d0_f9:-
+23:741:43384:13:0:142:168:589:12:g_d0_f7:8:g_d0_f6:1-1-
+23:742:43388:0:12:170:193:596:8:g_d0_f6:6:g_d0_f12:-GHH
+23:743:43392:12:0:175:190:584:8:g_d0_f8:8:g_d0_f6:1-g
+23:744:43395:0:13:196:203:602:12:g_d0_f9:12:g_d0_f9:-
+23:745:43396:13:21:203:525:589:12:g_d0_f3:12:g_d0_f3:. Hence the rational expectations sticky-price equilibrium under
+23:746:43460:21:20:71:525:568:12:g_d0_f3:12:g_d0_f3:GHH can be described as a set of processes forfct,-t,rtg, for any given exogenous process
+23:747:43549:20:20:71:374:548:12:g_d0_f11:12:g_d0_f3:fgtg, solving (35), (36) and (the log-linear version of) (19).
+23:748:43611:20:32:89:360:528:12:g_d0_f3:12:g_d0_f3:We guess the following solution to the above system:
+23:749:43663:32:32:216:525:496:12:g_d0_f5:12:g_d0_f3:ct=AGHHcgt;-t=AGHH-gt(37)
+23:750:43688:32:20:72:503:464:12:g_d0_f3:8:g_d0_f6:Applying the method of undetermined coe¢ cients one obtains an expression forAGHHc
+23:751:43770:20:21:72:525:444:12:g_d0_f3:12:g_d0_f3:which we provide in Appendix D. In the case of purely áexible prices(-!1);it is easy
+23:752:43854:21:20:72:525:423:12:g_d0_f3:12:g_d0_f3:to show thatAGHHccoincides with the consumption multiplier in the two-period version
+23:753:43938:20:20:72:525:403:12:g_d0_f3:12:g_d0_f3:of the model, equation (23). Conversely, in the case of permanently Öxed prices (-!0),
+23:754:44024:20:20:72:444:383:12:g_d0_f5:12:g_d0_f3:AGHHcreduces to its counterpart in the two-period model, equation (28).
+23:755:44095:20:21:89:525:363:12:g_d0_f3:12:g_d0_f3:Consider now the KPR case.  Using the log linearized version of the labor market
+23:756:44175:21:22:72:144:342:12:g_d0_f3:12:g_d0_f3:condition (14)
+23:757:44189:22:0:225:303:320:12:g_d0_f5:12:g_d0_f7:mct= (--1 +
+23:758:44200:0:16:313:324:328:12:g_d0_f5:12:g_d0_f5:W
+23:759:44201:16:0:306:332:312:12:g_d0_f7:12:g_d0_f5:1-g
+23:760:44204:0:27:334:525:320:12:g_d0_f7:12:g_d0_f3:)nt+ct(38)
+23:761:44214:27:33:72:452:293:12:g_d0_f3:12:g_d0_f3:and the log-linearized resource constraint (22), the Phillips curve becomes
+23:762:44289:33:0:120:223:260:12:g_d0_f5:12:g_d0_f5:-t=\fEtf-t+1g+-
+23:763:44304:0:8:224:230:277:12:g_d0_f9:12:g_d0_f9:-
+23:764:44305:8:17:232:278:269:12:g_d0_f7:6:g_d0_f12:1 +-GHH
+23:765:44312:17:0:242:269:252:12:g_d0_f7:12:g_d0_f5:1-g
+23:766:44315:0:0:283:321:260:12:g_d0_f7:12:g_d0_f7:+--1
+23:767:44319:0:17:321:327:277:12:g_d0_f9:12:g_d0_f9:-
+23:768:44320:17:0:330:431:260:12:g_d0_f7:12:g_d0_f7:(1-g)ct+ (--1 +
+23:769:44335:0:17:435:460:269:12:g_d0_f5:6:g_d0_f12:-GHH
+23:770:44339:17:0:435:461:252:12:g_d0_f7:12:g_d0_f5:1-g
+23:771:44342:0:32:463:525:260:12:g_d0_f7:12:g_d0_f3:)gt(39)
+23:772:44349:32:20:72:526:228:12:g_d0_f3:12:g_d0_f3:Log linearizing the consumption Euler equation we obtain an expression which is isomor-
+23:773:44436:20:20:72:526:208:12:g_d0_f3:12:g_d0_f3:phic to its GHH counterpart (36), except that the elasticity of intertemporal substitution
+23:774:44526:20:21:72:525:188:12:g_d0_f3:12:g_d0_f3:is now1=-instead of-r=-(as we know, under KPR the parameter-indexes both the de-
+23:775:44606:21:20:72:526:167:12:g_d0_f3:12:g_d0_f3:gree of complementarity between consumption and hours and the elasticity of substitution
+23:776:44694:20:20:72:159:147:12:g_d0_f3:12:g_d0_f3:in consumption).
+23:777:44710:20:20:89:525:127:12:g_d0_f3:12:g_d0_f3:Like in the GHH case, applying the method of undetermined coe¢ cients one can
+23:778:44787:20:0:72:526:107:12:g_d0_f3:12:g_d0_f3:obtain an expression forAKP R;cwhich we also provide in Appendix D. Once again, in
+24:779:44871:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:the extreme cases of áexible and Öxed prices, this expression reduces to its two-period
+24:780:44958:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:counterparts, equations (24) and (28), respectively. Exactly like in the two period model,
+24:781:45048:21:20:72:525:637:12:g_d0_f3:12:g_d0_f3:it is easy to show thatAKP Rc< AGHHc. This implies that, relative to GHH, a larger degree
+24:782:45137:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:of price stickiness is necessary under KPR to obtain a positive consumption multiplier.
+24:783:45224:20:20:72:525:597:12:g_d0_f3:12:g_d0_f3:In addition,AKP Rcis certainly negative if-KPRis negative, i.e., if- <1. But unlike in
+24:784:45310:20:20:72:525:577:12:g_d0_f3:12:g_d0_f3:the two period model,AKP Rccan be negative even if- >1;if there is not enough price
+24:785:45393:20:21:72:123:557:12:g_d0_f3:12:g_d0_f3:stickiness.
+24:786:45404:21:20:89:525:536:12:g_d0_f3:12:g_d0_f3:Appendix D shows formally howAKP RcandAGHHcdepend on the various parameters
+24:787:45479:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:of the model. Here we provide the main intuition; we do not display the impulse responses
+24:788:45568:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:because all endogenous variables are linear functions ofgt, hence they are AR(1) processes
+24:789:45658:20:21:72:254:476:12:g_d0_f3:12:g_d0_f5:with persistence parametrized by-:
+24:790:45692:21:20:89:525:455:12:g_d0_f3:12:g_d0_f3:The multiplierAjcis decreasing in the intertemporal elasticity of substitution in con-
+24:791:45778:20:20:72:525:435:12:g_d0_f3:12:g_d0_f3:sumption, which is captured by-r=-under GHH and by1=-under KPR. Intuitively, the
+24:792:45858:20:20:72:526:415:12:g_d0_f3:12:g_d0_f3:larger that elasticity, the stronger the incentive to postpone consumption into the future,
+24:793:45949:20:20:72:526:395:12:g_d0_f3:12:g_d0_f3:for any given variation in the real interest rate (recall that real interest rate movements
+24:794:46040:20:21:72:473:375:12:g_d0_f3:12:g_d0_f3:were somehow artiÖcially restricted in the two-period model presented above).
+24:795:46117:21:20:89:525:354:12:g_d0_f5:12:g_d0_f3:Ajcis a positive function of the elasticity of the labor supply function, which is inversely
+24:796:46209:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:related to-:A áatter labor supply function means a bigger increase in hours given the
+24:797:46294:20:20:72:483:314:12:g_d0_f3:12:g_d0_f3:shift in labor demand, hence a stronger complementarity e§ect on consumption.
+24:798:46371:20:21:89:525:294:12:g_d0_f5:12:g_d0_f3:Ajcis also positively related to the degree of price stickiness (inversely related tok):
+24:799:46459:21:20:72:526:273:12:g_d0_f3:12:g_d0_f3:a higher degree of price stickiness implies that more Örms will respond to a shock by
+24:800:46544:20:20:72:526:253:12:g_d0_f3:12:g_d0_f3:increasing production rather than their price; it follows that markups will respond more
+24:801:46632:20:20:72:394:233:12:g_d0_f3:12:g_d0_f3:strongly, and the derived demand for labor will shift out more.
+24:802:46695:20:20:89:525:213:12:g_d0_f3:12:g_d0_f3:Finally,Ajcis decreasing in-, the degree of persistence of the government spending
+24:803:46777:20:21:72:525:193:12:g_d0_f3:12:g_d0_f3:process. Intuitively, the larger-, the stronger the impact on lifetime wealth of the required
+24:804:46870:21:0:72:520:172:12:g_d0_f3:12:g_d0_f3:increase in taxes, and therefore the stronger the negative wealth e§ect on consumption.
+25:805:46959:0:32:72:249:678:17:g_d0_f2:17:g_d0_f2:7  Habit persistence
+25:806:46979:32:20:72:526:646:12:g_d0_f3:12:g_d0_f3:Our model-based responses of private consumption decline monotonically towards the
+25:807:47061:20:21:72:526:626:12:g_d0_f3:12:g_d0_f3:steady state after the shock, while the VAR-based impulse responses typically build up
+25:808:47147:21:20:72:526:605:12:g_d0_f3:12:g_d0_f3:slowly and then go back to trend. We now introduce external habit persistence in con-
+25:809:47232:20:20:72:525:585:12:g_d0_f3:12:g_d0_f3:sumption. As it is well known from the recent literature15habit persistence helps dynamic
+25:810:47321:20:20:72:526:565:12:g_d0_f3:12:g_d0_f3:general equilibrium models capture the gradual buildup of many (real) variables in re-
+25:811:47407:20:21:72:526:545:12:g_d0_f3:12:g_d0_f3:sponse to alternative shocks. But in addition, we show below that with GHH preferences
+25:812:47493:21:20:72:341:524:12:g_d0_f3:12:g_d0_f3:habit persistence has surprising e§ects in our model.
+25:813:47546:20:42:89:282:504:12:g_d0_f3:12:g_d0_f3:The period utility function now reads
+25:814:47583:42:0:214:222:462:12:g_d0_f5:12:g_d0_f5:U
+25:815:47584:0:10:226:233:475:12:g_d0_f9:12:g_d0_f9:-
+25:816:47585:10:0:235:262:465:12:g_d0_f9:8:g_d0_f6:eCt;Nt
+25:817:47591:0:13:263:270:475:12:g_d0_f9:12:g_d0_f9:-
+25:818:47592:13:0:273:282:462:12:g_d0_f7:12:g_d0_f7:=
+25:819:47593:0:10:287:294:487:12:g_d0_f9:12:g_d0_f9:-
+25:820:47594:10:0:296:357:477:12:g_d0_f9:8:g_d0_f6:eCt- N-tXt
+25:821:47604:0:34:357:380:487:12:g_d0_f9:8:g_d0_f6:-1--
+25:822:47608:34:0:320:348:453:12:g_d0_f7:12:g_d0_f5:1--
+25:823:47611:0:32:504:525:462:12:g_d0_f3:12:g_d0_f3:(40)
+25:824:47615:32:20:72:102:430:12:g_d0_f3:12:g_d0_f3:where
+25:825:47620:20:26:263:525:410:12:g_d0_f5:12:g_d0_f3:Xt=eC\rtX1-\rt-1(41)
+25:826:47640:26:18:72:91:384:12:g_d0_f3:12:g_d0_f3:and
+25:827:47643:18:29:259:525:366:12:g_d0_f9:12:g_d0_f3:eCt-Ct-hCt-1(42)
+25:828:47659:29:20:72:327:337:12:g_d0_f3:12:g_d0_f3:withh >0being the habit persistence parameter.
+25:829:47705:20:21:89:525:317:12:g_d0_f3:12:g_d0_f3:From the Örst order condition the marginal utility of wealth-tis no longer equal to
+25:830:47788:21:31:72:258:296:12:g_d0_f3:12:g_d0_f3:the marginal utility of consumption:
+25:831:47824:31:31:235:525:265:12:g_d0_f5:12:g_d0_f3:-t=Uec;t-h\fEtfUec;t+1g(43)
+25:832:47851:31:21:72:526:234:12:g_d0_f3:12:g_d0_f3:whereUec;t-Uec(eCt; Nt). The marginal rate of substitution between consumption and
+25:833:47933:21:25:72:500:213:12:g_d0_f3:12:g_d0_f3:leisure on the l.h.s. of the intratemporal condition under GHH preferences becomes
+25:834:48015:25:17:254:298:188:12:g_d0_f5:8:g_d0_f6:Uec;t -N--1t
+25:835:48027:17:0:233:333:171:12:g_d0_f5:12:g_d0_f11:Uec;t-h\fEtfUec;t+1g
+25:836:48047:0:32:338:525:180:12:g_d0_f7:12:g_d0_f3:=Wt(44)
+25:837:48054:32:20:72:526:148:12:g_d0_f3:12:g_d0_f3:Therefore, due to external habits the marginal rate of substitution is no longer independent
+25:838:48146:20:18:72:526:128:12:g_d0_f3:12:g_d0_f3:of consumption. As a consequence, the Hicksian wealth e§ect of a change in the real wage
+25:839:48234:18:0:81:525:110:7:g_d0_f3:10:g_d0_f3:15See, among many others, Smets and Wouters (2007) and Christiano, Eichenbaum and Evans (2005).
+26:840:48331:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:on labor supply is now di§erent from zero; in other words, habit persistence reintroduces
+26:841:48420:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:the wealth e§ect on labor supply under GHH preferences. This has a surprising implication
+26:842:48509:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:for the equilibrium e§ects of government spending on consumption, even under áexible
+26:843:48593:20:20:72:105:617:12:g_d0_f3:12:g_d0_f3:prices.
+26:844:48600:20:20:89:525:597:12:g_d0_f3:12:g_d0_f3:We have seen above that, when prices are áexible, under GHH preferences private
+26:845:48679:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:consumption falls in response to a rise in government spending, just like under KPR
+26:846:48762:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:preferences. This is no longer the case with habit persistence. Intuitively, when govern-
+26:847:48851:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:ment spending rises temporarily, the consumer is not willing to decrease consumption
+26:848:48935:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:by as much as before, because she knows that consumption will have to go back to the
+26:849:49019:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:initial steady-state, and changes in consumption are costly. But then, given that with
+26:850:49105:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:áexible prices the real wage is constant, labor supply must increase; this in turn can in-
+26:851:49195:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:duce an increase in private consumption through the complementarity between hours and
+26:852:49280:20:20:72:474:435:12:g_d0_f3:8:g_d0_f3:consumption: in fact, we show below that this e§ect is stronger the higher-.16
+26:853:49358:20:20:89:525:415:12:g_d0_f3:12:g_d0_f3:Figures 2 and 3 display impulse responses to a government spending shock from the
+26:854:49439:20:20:71:525:395:12:g_d0_f3:12:g_d0_f3:model with habit persistence, with áexible and sticky prices respectively, assuming a
+26:855:49524:20:21:71:526:375:12:g_d0_f3:12:g_d0_f3:AR(1) process for government spending (32) with autoregressive parameter-=:8. The
+26:856:49605:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:shock to government spending is normalized to 1 percentage point of steady state GDP;
+26:857:49690:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:the response of consumption is expressed as share of steady state GDP by multiplying
+26:858:49774:20:20:72:526:314:12:g_d0_f3:12:g_d0_f3:the log response by the steady state share of consumption in GDP; the responses of hours,
+26:859:49863:20:21:72:526:294:12:g_d0_f3:12:g_d0_f3:the real wage and the markup are expressed in percentage terms. We assume a value of
+26:860:49947:21:20:72:525:273:12:g_d0_f3:12:g_d0_f3:the habit parameter,h;equal to:7.17The other baseline values of the parameters used
+26:861:50030:20:30:72:270:253:12:g_d0_f3:12:g_d0_f3:for calibration are reported in Table 1:
+26:862:50070:30:15:81:525:223:7:g_d0_f3:10:g_d0_f3:16Also intuitively, this e§ect is stronger the less persistent the shock is: with a very persistent shock
+26:863:50175:15:12:72:526:208:10:g_d0_f3:10:g_d0_f3:the consumer is willing to adjust consumption downward even with habit persistence, hence we are close
+26:864:50277:12:8:72:224:196:10:g_d0_f3:10:g_d0_f3:to the case of no habit persistence.
+26:865:50313:8:0:81:502:188:7:g_d0_f3:10:g_d0_f3:17This is the same as the posterior mode estimate ofhfor the US in Smets and Wouters (2007).
+27:866:50407:0:17:154:410:679:12:g_d0_f2:12:g_d0_f2:Table 1. Calibration in Simulation Exercise
+27:867:50450:17:14:87:401:662:12:g_d0_f2:12:g_d0_f2:ParameterDescriptionValue
+27:868:50475:14:15:87:444:648:12:g_d0_f5:8:g_d0_f3:-autoregressive parameter of g process0.8
+27:869:50516:15:15:87:446:633:12:g_d0_f5:8:g_d0_f3:\fdiscount factor0.99
+27:870:50537:15:15:87:441:618:12:g_d0_f5:8:g_d0_f3:"price elasticity of demand6
+27:871:50565:15:15:87:444:603:12:g_d0_f5:8:g_d0_f3:--coe¢ cient on ináation in monetary policy rule1.5
+27:872:50616:15:15:87:509:588:12:g_d0_f5:8:g_d0_f3:-slope of NK Phillips curveconsistent with 3.5 qrt price stickiness
+27:873:50683:15:14:87:444:573:12:g_d0_f5:8:g_d0_f3:gsteady state share of govt. spending in output0.2
+27:874:50733:14:15:87:444:559:12:g_d0_f5:8:g_d0_f3:-inverse of elasticity of substitution in consumption1.5
+27:875:50789:15:15:87:444:544:12:g_d0_f5:8:g_d0_f3:-parameter governing Frisch elasticity of labor supply1.8
+27:876:50846:15:39:87:444:529:12:g_d0_f5:8:g_d0_f3:hparameter of habit persistence0.7
+27:877:50880:39:20:89:525:490:12:g_d0_f3:12:g_d0_f3:These parameter values are typical of the macro business-cycle literature, hence we
+27:878:50963:20:20:72:525:470:12:g_d0_f3:12:g_d0_f3:limit a discussion to-, the parameter governing the elasticity of labor supply, which
+27:879:51048:20:21:72:526:450:12:g_d0_f3:12:g_d0_f3:as it is frequently the case in these models bears important consequences. The Frisch
+27:880:51133:21:20:72:526:429:12:g_d0_f3:12:g_d0_f3:elasticity of labor supply is deÖned as the elasticity of labor supply to the real wage
+27:881:51220:20:20:72:526:409:12:g_d0_f3:12:g_d0_f3:holding constant the marginal utility of wealth. In our model with non-separable utility
+27:882:51308:20:20:72:525:389:12:g_d0_f3:12:g_d0_f3:such elasticity is well deÖned only in the case of GHH preferences, and equals1=(--1).
+27:883:51394:20:21:72:525:369:12:g_d0_f3:12:g_d0_f3:In the KPR case with-6= 1this elasticity is a more complicated function of-, and it also
+27:884:51482:21:20:72:526:348:12:g_d0_f3:12:g_d0_f3:depends on consumption. Existing empirical estimates of the Frisch elasticity in the macro
+27:885:51572:20:20:72:526:328:12:g_d0_f3:12:g_d0_f3:literature are usually based on KPR-type preferences that are separable in consumption
+27:886:51658:20:20:72:526:308:12:g_d0_f3:12:g_d0_f3:and leisure. The typical estimates in this literature vary between1=3and1.18In the by
+27:887:51743:20:20:72:526:288:12:g_d0_f3:12:g_d0_f3:now classic DSGE studies of Smets and Wouters (2007) and Christiano et al. (2005) the
+27:888:51828:20:21:72:525:268:12:g_d0_f3:12:g_d0_f3:implied estimated values of the Frisch elasticities are respectively0:54and1, although
+27:889:51914:21:20:72:526:247:12:g_d0_f3:12:g_d0_f3:again derived within the context of a model with separable utility. When mapped into
+27:890:51998:20:20:72:525:227:12:g_d0_f3:12:g_d0_f3:our GHH-based deÖnition of Frisch elasticity such estimates imply a value for-equal to
+27:891:52084:20:20:72:525:207:12:g_d0_f7:12:g_d0_f3:2:85and2;respectively. These values for-are substantially higher than those employed
+27:892:52168:20:21:72:525:187:12:g_d0_f3:12:g_d0_f3:in Jaimovich and Rebelo (2008), who calibrate-= 1:4, and Schmitt-GrohÈ and Uribe
+27:893:52248:21:20:72:525:166:12:g_d0_f3:12:g_d0_f3:(2008), who report a posterior mode estimate for-= 1:16. In our exercise we strike a
+27:894:52332:20:18:72:526:146:12:g_d0_f3:12:g_d0_f3:balance between these estimates and set-= 1:8, implying a value for the GHH-based
+27:895:52413:18:15:81:525:128:7:g_d0_f3:10:g_d0_f3:18As it is well known, the typical estimate in the micro literature is lower: see e.g. Domeij and Floden
+27:896:52517:15:0:72:102:113:10:g_d0_f3:10:g_d0_f3:(2006).
+28:897:52526:0:20:72:525:678:12:g_d0_f3:12:g_d0_f3:Frisch elasticity of1:25. We illustrate further insights by means of numerical simulations.
+28:898:52617:20:21:89:525:658:12:g_d0_f3:12:g_d0_f3:As discussed above, Figure 2 shows that with áexible prices private consumption and
+28:899:52700:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:hours now rise in the GHH case. Thus, if one takes an otherwise fully neoclassical model
+28:900:52788:20:20:72:525:617:12:g_d0_f3:12:g_d0_f3:and only eliminates the wealth e§ect on labor supply, habit persistenceper secan generate
+28:901:52877:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:a positive response of private consumption to a government spending shock, even when
+28:902:52961:20:20:72:213:577:12:g_d0_f3:12:g_d0_f3:prices are perfectly áexible.
+28:903:52990:20:21:89:525:557:12:g_d0_f3:12:g_d0_f3:Interestingly, Figure 3 shows that under sticky prices the opposite happens: habit per-
+28:904:53077:21:20:72:525:536:12:g_d0_f3:12:g_d0_f3:sistencedampensthe positive response of private consumption and of the real wage under
+28:905:53163:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:GHH preferences. Intuitively, when there are no habits, private consumption increases a
+28:906:53250:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:lot on impact, and then goes down monotonically to the steady state: to satisfy the initial
+28:907:53341:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:demand producers reduce the markup. But with habits, consumption increases slowly;
+28:908:53423:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:hence, producers do not need to reduce the markup by as much as under no habits to
+28:909:53505:20:20:72:526:435:12:g_d0_f3:12:g_d0_f3:meet the extra demand. The real wage then increases less; this produces a smaller sub-
+28:910:53591:20:20:72:526:415:12:g_d0_f3:12:g_d0_f3:stitution e§ect, hence it dampens the responses of consumption relative to the no habits
+28:911:53679:20:20:72:96:395:12:g_d0_f3:12:g_d0_f3:case.
+28:912:53684:20:21:89:525:375:12:g_d0_f3:12:g_d0_f3:The next three Ögures study the sensitivity of the responses of the main variables to
+28:913:53769:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:the key parameters of the model. We know already that the consumption response is
+28:914:53850:20:20:72:525:334:12:g_d0_f3:12:g_d0_f3:increasing in the intertemporal elasticity of substitution (decreasing in-;Figure 4) and
+28:915:53938:20:20:72:525:314:12:g_d0_f3:12:g_d0_f3:increasing in the elasticity of labor supply (decreasing in-;Figure 5); the same holds for
+28:916:54028:20:21:72:270:294:12:g_d0_f3:12:g_d0_f3:the response of hours and the markup.
+28:917:54065:21:20:89:525:273:12:g_d0_f3:12:g_d0_f3:So far, we have illustrated the polar cases of\r= 0and\r= 1:As we discussed, the
+28:918:54145:20:20:71:525:253:12:g_d0_f3:12:g_d0_f3:former case, while displaying no wealth e§ect on labor supply, is inconsistent with the
+28:919:54232:20:20:71:525:233:12:g_d0_f3:12:g_d0_f3:secular growth of the real wage and consumption at almost constant labor supply. In
+28:920:54315:20:20:71:525:213:12:g_d0_f3:12:g_d0_f3:Figure 6 we display impulse responses of the main variables to a government spending
+28:921:54399:20:21:71:525:193:12:g_d0_f3:12:g_d0_f3:shock, for alternative values of\runder GHH preferences. SpeciÖcally, along with the
+28:922:54483:21:20:71:526:172:12:g_d0_f3:12:g_d0_f3:two polar cases of\r= 0and\r= 1;we display the cases of\r= 0:01;as estimated by
+28:923:54562:20:20:72:526:152:12:g_d0_f3:12:g_d0_f3:Schmitt-GrohÈ and Uribe (2008) and implying almost no wealth e§ect on labor supply,
+28:924:54645:20:20:72:525:132:12:g_d0_f3:12:g_d0_f3:and of\r=:25;the value used by Jaimovich and Rebelo (2008). As one can see, the
+28:925:54724:20:0:72:525:112:12:g_d0_f3:12:g_d0_f3:response of consumption and hours declines monotonically as\rincreases. It is essentially
+29:926:54815:0:39:72:285:678:12:g_d0_f3:12:g_d0_f5:0 for\r=:25;and it is negative for\r= 1:
+29:927:54855:39:32:71:280:639:17:g_d0_f2:17:g_d0_f2:8  Capital accumulation
+29:928:54878:32:21:71:525:607:12:g_d0_f3:12:g_d0_f3:So far we have abstracted from the presence of capital accumulation. In this section we
+29:929:54965:21:20:71:525:586:12:g_d0_f3:12:g_d0_f3:show that this feature too has important consequences for the e§ects of Öscal policy on
+29:930:55052:20:20:71:252:566:12:g_d0_f3:12:g_d0_f3:consumption and the labor market.
+29:931:55085:20:20:89:525:546:12:g_d0_f3:12:g_d0_f3:We assume that physical capital is accumulated by the households. The Önal invest-
+29:932:55167:20:20:71:525:526:12:g_d0_f3:12:g_d0_f3:ment good has the same composition as the consumption good. The householdsís budget
+29:933:55250:20:27:71:182:506:12:g_d0_f3:12:g_d0_f3:constraint modiÖes to
+29:934:55271:27:0:130:421:479:12:g_d0_f7:12:g_d0_f7:(Ct+It) +EtfQt;t+1Bt+1g-WtNt+ZtKt+Tt+Bt+
+29:935:55311:0:27:424:440:495:12:g_d0_f9:8:g_d0_f8:Z1
+29:936:55313:27:0:431:435:468:8:g_d0_f8:8:g_d0_f8:0
+29:937:55314:0:27:443:525:479:12:g_d0_f7:12:g_d0_f3:-t(i)(45)
+29:938:55323:27:20:72:525:452:12:g_d0_f3:12:g_d0_f3:whereKtis the capital stock at the beginning of time t, andZtis the real rental rate of
+29:939:55410:20:20:72:110:432:12:g_d0_f3:12:g_d0_f3:capital.
+29:940:55418:20:27:89:400:412:12:g_d0_f3:12:g_d0_f3:Capital accumulation evolves according to the law of motion
+29:941:55477:27:27:222:525:385:12:g_d0_f5:12:g_d0_f3:Kt+1= (1--)Kt+It(1-\bt)(46)
+29:942:55504:27:20:71:525:358:12:g_d0_f3:12:g_d0_f3:where-is the rate of physical depreciation, and\btis a function that captures the existence
+29:943:55595:20:21:71:228:338:12:g_d0_f3:12:g_d0_f3:of adjustment costs on capital.
+29:944:55626:21:20:89:525:317:12:g_d0_f3:12:g_d0_f3:We will compare two alternative types of adjustment cost on capital, that have Ögured
+29:945:55711:20:20:71:525:297:12:g_d0_f3:12:g_d0_f3:prominently in the recent literature.  As we will see, the type of adjustment cost has
+29:946:55797:20:20:71:328:277:12:g_d0_f3:12:g_d0_f3:important consequences, and for intuitive reasons.
+29:947:55847:20:20:89:525:257:12:g_d0_f3:12:g_d0_f3:In the Örst speciÖcation, adjustment costs are proportional to the rate of change in
+29:948:55931:20:28:71:283:237:12:g_d0_f3:12:g_d0_f3:investment (as in Christiano et al. 2005):
+29:949:55973:28:0:249:285:209:12:g_d0_f7:12:g_d0_f7:\bt-\b
+29:950:55979:0:9:288:297:226:12:g_d0_f9:12:g_d0_f9:-
+29:951:55980:9:17:303:311:217:12:g_d0_f5:8:g_d0_f6:It
+29:952:55982:17:0:297:316:200:12:g_d0_f5:8:g_d0_f8:It-1
+29:953:55986:0:0:321:339:209:12:g_d0_f11:12:g_d0_f7:-1
+29:954:55988:0:17:339:348:226:12:g_d0_f9:12:g_d0_f9:-
+29:955:55989:17:30:504:525:209:12:g_d0_f3:12:g_d0_f3:(47)
+29:956:55993:30:0:72:272:179:12:g_d0_f3:12:g_d0_f7:with the function\b(-)satisfying\b = \b
+29:957:56032:0:7:271:273:186:6:g_d0_f13:6:g_d0_f13:0
+29:958:56033:7:0:278:330:179:12:g_d0_f7:12:g_d0_f7:= 0and\b
+29:959:56041:0:7:330:334:186:6:g_d0_f13:6:g_d0_f13:00
+29:960:56043:7:20:336:526:179:12:g_d0_f7:12:g_d0_f3:(1)>0in steady-state. We label this
+29:961:56078:20:20:72:525:159:12:g_d0_f3:12:g_d0_f3:case-Iadjustment costs.In the second speciÖcation, the costs of adjusting capital are
+29:962:56163:20:27:72:352:139:12:g_d0_f3:12:g_d0_f3:proportional to the investment-capital ratio as follows:
+29:963:56219:27:0:254:289:112:12:g_d0_f7:12:g_d0_f5:\bt--
+29:964:56224:0:9:291:300:129:12:g_d0_f9:12:g_d0_f9:-
+29:965:56225:9:16:303:312:120:12:g_d0_f5:8:g_d0_f6:It
+29:966:56227:16:0:301:314:104:12:g_d0_f5:8:g_d0_f6:Kt
+29:967:56229:0:9:316:325:129:12:g_d0_f9:12:g_d0_f9:-
+29:968:56230:9:16:328:341:120:12:g_d0_f5:8:g_d0_f6:Kt
+29:969:56232:16:0:330:338:104:12:g_d0_f5:8:g_d0_f6:It
+29:970:56234:0:0:504:525:112:12:g_d0_f3:12:g_d0_f3:(48)
+30:971:56240:0:20:72:482:678:12:g_d0_f3:12:g_d0_f3:where-(-)is increasing and convex. We label this caseconvex adjustment costs.
+30:972:56317:20:21:89:525:658:12:g_d0_f3:12:g_d0_f3:The key di§erence between the two types of frictions is well known: while under con-
+30:973:56401:21:20:71:525:637:12:g_d0_f3:12:g_d0_f3:vex adjustment costs it is costly to change thestockof capital, under-Iadjustment
+30:974:56482:20:20:71:526:617:12:g_d0_f3:12:g_d0_f3:costs it is costly to change theáowof investment. This di§erence bears key implications
+30:975:56569:20:20:71:525:597:12:g_d0_f3:12:g_d0_f3:for the dynamic behavior of investment. Under convex adjustment costs, the dynamic
+30:976:56651:20:20:71:525:577:12:g_d0_f3:12:g_d0_f3:of investment resembles that under frictionless capital accumulation, with its response
+30:977:56738:20:21:71:525:557:12:g_d0_f3:12:g_d0_f3:being simply more muted. Conversely, under-Iadjustment costs, the evolution of in-
+30:978:56820:21:20:71:525:536:12:g_d0_f3:12:g_d0_f3:vestment resembles the one under planning costs: investment is inertial, namely, it is
+30:979:56906:20:20:71:525:516:12:g_d0_f3:12:g_d0_f3:largely unresponsive in the short run, and then starts to build up its response gradually
+30:980:56995:20:20:71:122:496:12:g_d0_f3:12:g_d0_f3:over time.
+30:981:57005:20:33:89:485:476:12:g_d0_f3:12:g_d0_f3:On the Örmís side, we assume a standard Cobb-Douglas production function:
+30:982:57078:33:32:241:525:443:12:g_d0_f5:12:g_d0_f3:Yt(i) =Nt(i)-Kt(i)1--(49)
+30:983:57103:32:40:89:331:411:12:g_d0_f3:12:g_d0_f3:The optimal choice of labor and capital implies
+30:984:57150:40:0:232:298:371:12:g_d0_f5:12:g_d0_f5:Wt=MCt-
+30:985:57157:0:9:301:310:388:12:g_d0_f9:12:g_d0_f9:-
+30:986:57158:9:16:311:338:379:12:g_d0_f5:12:g_d0_f7:Kt(i)
+30:987:57163:16:0:311:338:363:12:g_d0_f5:12:g_d0_f7:Nt(i)
+30:988:57168:0:17:339:363:388:12:g_d0_f9:8:g_d0_f6:-1--
+30:989:57172:17:47:504:525:371:12:g_d0_f3:12:g_d0_f3:(50)
+30:990:57176:47:0:225:318:324:12:g_d0_f5:12:g_d0_f7:Zt=MCt(1--)
+30:991:57187:0:9:319:328:341:12:g_d0_f9:12:g_d0_f9:-
+30:992:57188:9:16:330:356:332:12:g_d0_f5:12:g_d0_f7:Nt(i)
+30:993:57193:16:0:329:356:316:12:g_d0_f5:12:g_d0_f7:Kt(i)
+30:994:57198:0:17:357:371:341:12:g_d0_f9:8:g_d0_f6:--
+30:995:57200:17:27:504:525:324:12:g_d0_f3:12:g_d0_f3:(51)
+30:996:57204:27:20:89:525:297:12:g_d0_f3:12:g_d0_f3:Notice that the real marginal cost continues to be common across Örms as we implicitly
+30:997:57290:20:20:71:525:277:12:g_d0_f3:12:g_d0_f3:assume a rental market for capital.19In a symmetric equilibrium, combining (50) and (51)
+30:998:57378:20:34:71:340:257:12:g_d0_f3:12:g_d0_f3:the expression for the real marginal costMCtreads:
+30:999:57428:34:0:243:280:223:12:g_d0_f5:12:g_d0_f7:MCt=
+30:1000:57432:0:16:296:326:231:12:g_d0_f5:8:g_d0_f6:W-tZ1--t
+30:1001:57440:16:0:285:351:215:12:g_d0_f5:8:g_d0_f6:--(1--)1--
+30:1002:57450:0:32:504:525:223:12:g_d0_f3:12:g_d0_f3:(52)
+30:1003:57454:32:20:72:526:191:12:g_d0_f3:12:g_d0_f3:For expositional purposes, it is useful to interpret movements in investment as additional
+30:1004:57544:20:20:72:526:171:12:g_d0_f3:12:g_d0_f3:shifters of the labor demand schedule. To see this, notice that log-linearizing (46), (50),
+30:1005:57635:20:19:72:526:151:12:g_d0_f3:12:g_d0_f3:and (52), and combining, yields (under both types of adjustment costs) the following
+30:1006:57719:19:15:81:525:132:7:g_d0_f3:10:g_d0_f3:19We do not explore here the e§ects of the opposite extreme hypothesis, namely capital being Örm
+30:1007:57815:15:0:72:106:117:10:g_d0_f3:10:g_d0_f3:speciÖc.
+31:1008:57825:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:linear labor demand schedule (as usual, lower case letters denote percentage deviations
+31:1009:57912:20:21:72:169:658:12:g_d0_f3:12:g_d0_f3:from steady state):
+31:1010:57931:21:26:197:525:637:12:g_d0_f5:12:g_d0_f3:ndt=-(wt-zt) + (1--)-1(kt+1--it)(53)
+31:1011:57967:26:20:72:525:611:12:g_d0_f3:12:g_d0_f3:Hence, on impact, a fall in investment causes,ceteris paribus(and in particular, holding
+31:1012:58055:20:21:72:526:591:12:g_d0_f3:12:g_d0_f3:constant the future capital stock), a leftward shift in the labor demand schedule.  As
+31:1013:58141:21:20:72:396:570:12:g_d0_f3:12:g_d0_f3:capital builds up over time, though, this e§ect will be reversed.
+31:1014:58206:20:20:89:525:550:12:g_d0_f3:12:g_d0_f3:The implications of capital accumulation for the transmission of government spending
+31:1015:58290:20:20:72:526:530:12:g_d0_f3:12:g_d0_f3:shocks in models with KPR preferences are well known. Consider Örst the case of áexible
+31:1016:58377:20:21:72:526:510:12:g_d0_f3:12:g_d0_f3:prices, as in Baxter and King (1993).  The expansion in labor supply implied by the
+31:1017:58460:21:20:72:526:489:12:g_d0_f3:12:g_d0_f3:negative wealth e§ect induces a rise in the marginal product of capital. In equilibrium,
+31:1018:58548:20:20:72:525:469:12:g_d0_f3:12:g_d0_f3:this induces a rise in the rental cost of capital, and therefore afallin investment. The
+31:1019:58636:20:20:72:526:449:12:g_d0_f3:12:g_d0_f3:strength of this negative e§ect on investment depends on the persistence of the shock.
+31:1020:58722:20:21:72:526:429:12:g_d0_f3:12:g_d0_f3:If the government spending shock is very short-lived, wealth is barely a§ected: hence
+31:1021:58807:21:20:72:526:408:12:g_d0_f3:12:g_d0_f3:consumption and leisure, and therefore hours, barely respond.  Given that capital is
+31:1022:58891:20:20:72:526:388:12:g_d0_f3:12:g_d0_f3:predetermined, output is also barely a§ected on impact, hence even if the e§ect on the
+31:1023:58977:20:20:72:526:368:12:g_d0_f3:12:g_d0_f3:rental cost is muted (due to the muted e§ect on hours) a temporary rise in government
+31:1024:59062:20:20:72:526:348:12:g_d0_f3:12:g_d0_f3:spending crowds out private investment almost one-to-one on impact.  In general, the
+31:1025:59146:20:21:72:526:328:12:g_d0_f3:12:g_d0_f3:higher the persistence of the shock, the larger the negative wealth e§ect on consumption,
+31:1026:59235:21:20:72:384:307:12:g_d0_f3:12:g_d0_f3:and hence the smaller the crowding-out e§ect on investment.
+31:1027:59294:20:20:89:525:287:12:g_d0_f3:12:g_d0_f3:As shown in Linnemann and Schabert (2003) the crowding-out e§ect on investment
+31:1028:59372:20:20:72:526:267:12:g_d0_f3:12:g_d0_f3:survives with nominal price stickiness, in fact it is even stronger. The reason is that the
+31:1029:59463:20:21:72:526:247:12:g_d0_f3:12:g_d0_f3:outward shift in labor demand (due to the fall in the markup) causes a stronger response
+31:1030:59551:21:20:72:434:226:12:g_d0_f3:12:g_d0_f3:of hours, and therefore a stronger increase in the rental cost of capital.
+31:1031:59625:20:20:89:525:206:12:g_d0_f3:12:g_d0_f3:With KPR preferences (not shown) frictions in capital accumulation do not a§ect the
+31:1032:59708:20:20:72:526:186:12:g_d0_f3:12:g_d0_f3:response of consumption signiÖcantly. But things are di§erent under GHH preferences.
+31:1033:59792:20:20:72:526:166:12:g_d0_f3:12:g_d0_f3:Figure 7 displays impulse responses for the two types of adjustment costs, with habit
+31:1034:59877:20:0:72:525:146:12:g_d0_f3:12:g_d0_f3:persistence and in the case of sticky prices. In the case of-Iadjustment costs we specify
+32:1035:59968:0:35:72:216:678:12:g_d0_f3:12:g_d0_f3:the function\b (-)as follows:
+32:1036:59997:35:0:226:292:643:12:g_d0_f7:12:g_d0_f11:\b (It;It-1)-
+32:1037:60010:0:17:297:302:651:12:g_d0_f5:12:g_d0_f5:-
+32:1038:60011:17:0:297:303:634:12:g_d0_f7:12:g_d0_f7:2
+32:1039:60012:0:8:306:315:659:12:g_d0_f9:12:g_d0_f9:-
+32:1040:60013:8:17:321:329:651:12:g_d0_f5:8:g_d0_f6:It
+32:1041:60015:17:0:316:334:634:12:g_d0_f5:8:g_d0_f8:It-1
+32:1042:60019:0:0:339:357:643:12:g_d0_f11:12:g_d0_f7:-1
+32:1043:60021:0:16:357:370:659:12:g_d0_f9:8:g_d0_f8:-2
+32:1044:60023:16:34:504:525:643:12:g_d0_f3:12:g_d0_f3:(54)
+32:1045:60027:34:35:72:442:609:12:g_d0_f3:12:g_d0_f3:In the case of convex adjustment costs we calibrate the function\b (-)as
+32:1046:60099:35:0:224:283:574:12:g_d0_f7:12:g_d0_f11:\b (It;Kt)-
+32:1047:60110:0:16:288:293:582:12:g_d0_f5:12:g_d0_f5:-
+32:1048:60111:16:0:288:294:566:12:g_d0_f7:12:g_d0_f7:2
+32:1049:60112:0:9:297:306:591:12:g_d0_f9:12:g_d0_f9:-
+32:1050:60113:9:16:309:317:582:12:g_d0_f5:8:g_d0_f6:It
+32:1051:60115:16:0:307:320:566:12:g_d0_f5:8:g_d0_f6:Kt
+32:1052:60117:0:0:324:341:574:12:g_d0_f11:12:g_d0_f5:--
+32:1053:60119:0:9:342:354:591:12:g_d0_f9:8:g_d0_f8:-2
+32:1054:60121:9:16:358:371:582:12:g_d0_f5:8:g_d0_f6:Kt
+32:1055:60123:16:0:361:369:566:12:g_d0_f5:8:g_d0_f6:It
+32:1056:60125:0:32:504:525:574:12:g_d0_f3:12:g_d0_f3:(55)
+32:1057:60129:32:20:72:524:542:12:g_d0_f3:12:g_d0_f5:In this exercise we set-= 2in the case of convex costs and-= 3in the case of-I
+32:1058:60207:20:21:71:525:522:12:g_d0_f3:12:g_d0_f3:adjustment costs (as estimated in Christiano et al. 2005 and more recently by Schmitt-
+32:1059:60293:21:20:71:525:501:12:g_d0_f3:12:g_d0_f3:GrohÈ and Uribe 2008).  Like in the previous section we assume a value of the habit
+32:1060:60376:20:20:71:525:481:12:g_d0_f3:12:g_d0_f3:persistence parameter,h;of0:7. The share of labor in output,-, is set to .66. The other
+32:1061:60463:20:20:71:220:461:12:g_d0_f3:12:g_d0_f3:parameters are as in Table 1.
+32:1062:60492:20:20:89:525:441:12:g_d0_f3:12:g_d0_f3:Investment falls below baseline in response to the shock, as in the standard model with
+32:1063:60579:20:21:71:525:421:12:g_d0_f3:12:g_d0_f3:KPR. But consumption increases (by about .3 percentage points of GDP at peak) only
+32:1064:60661:21:20:71:526:400:12:g_d0_f3:12:g_d0_f3:under-Iadjustment costs, which generates a weaker decline in investment. The intuition
+32:1065:60747:20:20:71:525:380:12:g_d0_f3:12:g_d0_f3:is as follows. As illustrated above, a decline in investment generates a leftward movement
+32:1066:60837:20:20:71:525:360:12:g_d0_f3:12:g_d0_f3:in the labor demand schedule. In the case of áexible prices, and under GHH preferences,
+32:1067:60924:20:21:71:525:340:12:g_d0_f3:12:g_d0_f3:this invariably generates a fall in the real wage and therefore a negative substitution e§ect
+32:1068:61017:21:20:71:525:319:12:g_d0_f3:12:g_d0_f3:on consumption. In the case of sticky prices, the leftward movement in the labor demand
+32:1069:61104:20:20:71:524:299:12:g_d0_f3:12:g_d0_f5:schedule competes with the rightward movement due to the fall in the markup. Under-I
+32:1070:61188:20:20:71:525:279:12:g_d0_f3:12:g_d0_f3:adjustment costs the initial decline in investment is smaller, hence the rightward shift in
+32:1071:61279:20:20:71:525:259:12:g_d0_f3:12:g_d0_f3:labor demand prevails, leading to higher real wage and private consumption; the opposite
+32:1072:61367:20:21:71:281:239:12:g_d0_f3:12:g_d0_f3:occurs under convex costs of adjustment.
+32:1073:61407:21:20:89:525:218:12:g_d0_f3:12:g_d0_f3:Basu and Kimball (2003) show that in a standard model with KPR preferences the
+32:1074:61485:20:20:71:525:198:12:g_d0_f3:12:g_d0_f3:type of friction in capital accumulation has implications for theoutputresponse to gov-
+32:1075:61572:20:20:72:525:178:12:g_d0_f3:12:g_d0_f3:ernment spending shocks.20It is interesting to notice that in the same model, with
+32:1076:61654:20:18:72:526:158:12:g_d0_f3:12:g_d0_f3:GHH preferences, capital accumulation frictions have powerful implications not only for
+32:1077:61741:18:16:81:525:140:7:g_d0_f3:10:g_d0_f3:20In fact,-Iadjustments costs, by generating investment inertia, limit the crowding-out e§ect on
+32:1078:61837:16:12:71:525:124:10:g_d0_f3:10:g_d0_f3:investment of a government spending shock, allowing employment and output to expand relatively more
+32:1079:61936:12:0:71:242:112:10:g_d0_f3:10:g_d0_f3:than under convex costs of adjustment.
+33:1080:61976:0:20:72:525:678:12:g_d0_f3:12:g_d0_f4:the output multiplier but also for both the sign and the magnitude of theconsumption
+33:1081:62060:20:40:72:125:658:12:g_d0_f3:12:g_d0_f3:multiplier.
+33:1082:62071:40:32:72:431:618:17:g_d0_f2:17:g_d0_f2:9  Matching the SVAR impulse responses
+33:1083:62109:32:21:72:526:586:12:g_d0_f3:12:g_d0_f3:In this section we evaluate the ability of the more quantitative version of our model, fea-
+33:1084:62200:21:20:72:525:565:12:g_d0_f3:12:g_d0_f3:turing adjustment costs on capital of the-Itype and habit persistence in consumption,
+33:1085:62285:20:20:72:526:545:12:g_d0_f3:12:g_d0_f3:to Öt the estimated impulse responses in our VAR exercise. We proceed as follows. Start-
+33:1086:62373:20:20:72:526:525:12:g_d0_f3:12:g_d0_f3:ing from the initial deterministic steady state, we feed through the model the estimated
+33:1087:62461:20:20:72:526:505:12:g_d0_f3:12:g_d0_f3:impulse response process for government spending obtained from the SVAR estimate.
+33:1088:62542:20:21:72:526:485:12:g_d0_f3:12:g_d0_f3:The parameter values are the same we assumed for the simulation exercise in the previous
+33:1089:62630:21:20:72:526:464:12:g_d0_f3:12:g_d0_f3:section:We set the parameter governing the wealth e§ect in the GHH preferences,\r;to
+33:1090:62714:20:20:72:384:444:12:g_d0_f3:12:g_d0_f3:.01, the value estimated by Schmitt-GrohÈ and Uribe (2008).
+33:1091:62773:20:20:89:525:424:12:g_d0_f3:12:g_d0_f3:Figures 8 and 9 display the results of our simulation exercise over an horizon of ten
+33:1092:62858:20:21:72:526:404:12:g_d0_f3:12:g_d0_f3:quarters. Each panel features the response of a selected variable obtained from the model
+33:1093:62947:21:20:72:526:383:12:g_d0_f3:12:g_d0_f3:(solid line) compared to the point estimates from the SVAR exercise based on the non-
+33:1094:63032:20:20:72:526:363:12:g_d0_f3:12:g_d0_f3:farm business sector data (dashed line). Each panel also reports one standard error bands
+33:1095:63121:20:20:72:198:343:12:g_d0_f3:12:g_d0_f3:from the SVAR exercise.
+33:1096:63144:20:20:89:525:323:12:g_d0_f3:12:g_d0_f3:For illustrative purposes, we start in Figure 8 with the model without capital. This
+33:1097:63228:20:21:72:526:303:12:g_d0_f3:12:g_d0_f3:model clearly matches well the response of consumption, the real consumption wage and
+33:1098:63313:21:20:72:526:282:12:g_d0_f3:12:g_d0_f3:the markup. In particular, it matches well the gradual and persistent build-up of con-
+33:1099:63399:20:20:72:225:262:12:g_d0_f3:12:g_d0_f3:sumption following the shock.
+33:1100:63428:20:20:89:525:242:12:g_d0_f3:12:g_d0_f3:Figure 9 displays the responses from the model with capital. As argued above, the
+33:1101:63509:20:21:72:526:222:12:g_d0_f3:12:g_d0_f3:SVAR impulse response features a very prolonged response of consumption (which reaches
+33:1102:63595:21:20:72:526:201:12:g_d0_f3:12:g_d0_f3:the peak at about Öfteen quarters), whereas in the model consumption starts to revert
+33:1103:63680:20:20:72:526:181:12:g_d0_f3:12:g_d0_f3:back to baseline after about seven quarters. A similar problem applies to the comparison
+33:1104:63768:20:20:72:526:161:12:g_d0_f3:12:g_d0_f3:between estimated and simulated paths for the real consumption wage and the markup.
+33:1105:63851:20:20:72:526:141:12:g_d0_f3:12:g_d0_f3:The latter in particular responds too strongly on impact relative to the data, although it
+33:1106:63941:20:0:72:526:121:12:g_d0_f3:12:g_d0_f3:falls within the estimated bands between three and ten quarters. This general problem
+34:1107:64028:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:has to do with the role of investment in the model. In a nutshell, whereas in the data
+34:1108:64114:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:the response of investment is relatively quick and short-lived, in the model it is inertial
+34:1109:64205:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:in the short-run and subsequently very persistent. After a few quarters, the prolonged
+34:1110:64291:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:fall in investment (which reáects the very persistent nature of the estimated process
+34:1111:64376:20:20:72:526:597:12:g_d0_f3:12:g_d0_f3:for government spending) tends to dampen the positive labor demand e§ect induced by
+34:1112:64459:20:20:72:526:577:12:g_d0_f3:12:g_d0_f3:counter-cyclical markups, therefore also dampening the response of the real wage and
+34:1113:64543:20:40:72:140:557:12:g_d0_f3:12:g_d0_f3:consumption.
+34:1114:64555:40:32:72:426:517:17:g_d0_f2:17:g_d0_f2:10  Conclusions: alternative explanations
+34:1115:64596:32:21:72:526:485:12:g_d0_f3:12:g_d0_f3:Rather than going once more through the main features and results of our model, we now
+34:1116:64682:21:20:72:526:464:12:g_d0_f3:12:g_d0_f3:discuss two alternative models that deliver a positive response of private consumption
+34:1117:64768:20:20:72:526:444:12:g_d0_f3:12:g_d0_f3:to a government spending shock. They di§er from ours either in the way they generate
+34:1118:64852:20:20:72:526:424:12:g_d0_f3:12:g_d0_f3:a positive eal wage response, or in the way they translate a higher real wage in higher
+34:1119:64939:20:21:72:449:404:12:g_d0_f3:8:g_d0_f3:private consumption. Both of them use standard KPR-type preferences.21
+34:1120:65009:21:20:89:525:383:12:g_d0_f3:12:g_d0_f3:Like us, GalÌ, Lopez-Salido and VallÈs (2007) assume nominal rigidities to generate
+34:1121:65092:20:20:72:526:363:12:g_d0_f3:12:g_d0_f3:a rise in the real wage, but they rely on an extreme form of market incompleteness to
+34:1122:65177:20:20:72:526:343:12:g_d0_f3:12:g_d0_f3:generate the increase in private consumption. A fraction of the population cannot borrow
+34:1123:65265:20:20:72:526:323:12:g_d0_f3:12:g_d0_f3:nor lend and must consume all their labor income each period.  Thus, when the real
+34:1124:65347:20:21:72:526:303:12:g_d0_f3:12:g_d0_f3:consumption wage increases, their labor income also increases, and so does their private
+34:1125:65435:21:20:72:526:282:12:g_d0_f3:12:g_d0_f3:consumption; if the share of hand-to-mouth consumers is large enough, aggregate private
+34:1126:65522:20:20:72:206:262:12:g_d0_f3:12:g_d0_f3:consumption can increase.
+34:1127:65547:20:20:89:525:242:12:g_d0_f3:12:g_d0_f3:Like us, Ravn, Schmitt-GrohÈ and UrÌbe (2006) assume complete asset markets, but
+34:1128:65627:20:21:72:526:222:12:g_d0_f3:12:g_d0_f3:they di§er from us in the mechanism they use to generate a countercyclical markup. They
+34:1129:65714:21:20:72:526:201:12:g_d0_f3:12:g_d0_f3:assume the existence of customer markets with good-speciÖc habit persistence, part of a
+34:1130:65801:20:20:72:526:181:12:g_d0_f3:12:g_d0_f3:wide class of models with the common feature that the elasticity of demand perceived
+34:1131:65885:20:18:72:526:161:12:g_d0_f3:12:g_d0_f3:by the producers falls when aggregate demand increases.22In their model, the demand
+34:1132:65968:18:15:81:525:143:7:g_d0_f3:10:g_d0_f3:21Schmitt-GrohÈ and UrÌbe (2008) experiment with GHH preferences but do not investigate the e§ects
+34:1133:66066:15:9:72:396:128:10:g_d0_f3:10:g_d0_f3:of government spending shocks on private consumption and the real wage.
+34:1134:66137:9:0:81:525:119:7:g_d0_f3:10:g_d0_f3:22An earlier example of this class is Rotemberg and Woodford (1992), that relies instead on strategic
+35:1135:66240:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:function facing each producer has a price-elastic component that is a function of aggregate
+35:1136:66331:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:demand, and a price-inelastic component that is a function of the good-speciÖc habit. An
+35:1137:66419:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:increase in aggregate demand, caused for instance by a shock to government spending,
+35:1138:66503:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:increases the share of the price-elastic component and thus the elasticity of demand, which
+35:1139:66594:20:20:72:289:597:12:g_d0_f3:12:g_d0_f3:in turn makes the markup countercyclical.
+35:1140:66635:20:20:89:525:577:12:g_d0_f3:12:g_d0_f3:However, for plausible parameter values, this model generates a very small positive
+35:1141:66718:20:21:72:526:557:12:g_d0_f3:12:g_d0_f3:response of private consumption: in the benchmark solutions, when government spending
+35:1142:66803:21:20:72:526:536:12:g_d0_f3:12:g_d0_f3:increases by 1 percentage point of GDP, the peak response of private consumption is
+35:1143:66886:20:20:72:526:516:12:g_d0_f3:12:g_d0_f3:about .1 percentage point of GDP, and still requires a decline in the markup of about
+35:1144:66971:20:20:72:526:496:12:g_d0_f3:12:g_d0_f3:5 percentage points. Thus, the private consumption and the markup responses appear
+35:1145:67053:20:21:72:526:476:12:g_d0_f3:12:g_d0_f3:counterfactually small and large, respectively. The private consumption response in GalÌ,
+35:1146:67142:21:20:72:526:455:12:g_d0_f3:12:g_d0_f3:Lopez-Salido and VallÈs (2007) is larger, but only if the share of hand-to-mouth consumers
+35:1147:67232:20:20:72:493:435:12:g_d0_f3:12:g_d0_f3:is large enough (in their benchmark solutions, 50 percent of the total population).
+35:1148:67315:20:20:89:525:415:12:g_d0_f3:12:g_d0_f3:The underlying reason of these features is the same in both  models: the positive
+35:1149:67396:20:20:72:526:395:12:g_d0_f3:12:g_d0_f3:wealth e§ect on labor supply and the negative wealth e§ect on private consumption of
+35:1150:67480:20:21:72:526:375:12:g_d0_f3:12:g_d0_f3:a government spending shock. In Ravn, Schmitt-GrohÈ and UrÌbe (2006), this negative
+35:1151:67563:21:20:72:526:354:12:g_d0_f3:12:g_d0_f3:wealth e§ect operates on all individuals; in order to overcome it, the real wage must
+35:1152:67648:20:20:72:526:334:12:g_d0_f3:12:g_d0_f3:increase a lot, to induce enough substitution from leisure into consumption.This requires
+35:1153:67737:20:20:72:526:314:12:g_d0_f3:12:g_d0_f3:a very countercyclical markup. In the end, and despite an implausibly large response of
+35:1154:67824:20:21:72:526:294:12:g_d0_f3:12:g_d0_f3:the markup, private consumption still increases imperceptibly. In GalÌ, Lopez-Salido and
+35:1155:67912:21:20:72:526:273:12:g_d0_f3:12:g_d0_f3:VallÈs (2007), the negative wealth e§ect operates fully on the fraction of individuals who
+35:1156:68002:20:20:72:526:253:12:g_d0_f3:12:g_d0_f3:are not credit constrained: to overcome this, one needs enough hand-to-mouth consumers,
+35:1157:68089:20:20:72:421:233:12:g_d0_f3:12:g_d0_f3:whose private consumption depends only on the real after-tax wage.
+35:1158:68155:20:20:89:525:213:12:g_d0_f3:12:g_d0_f3:By emphasizing a di§erent mechanism, we do not mean to imply that the mechanisms
+35:1159:68235:20:21:72:526:193:12:g_d0_f3:12:g_d0_f3:described in these two papers are implausible or empirically irrelevant. The goal of this
+35:1160:68324:21:20:72:526:172:12:g_d0_f3:12:g_d0_f3:paper is to better understand the transmission mechanism of government spending shocks
+35:1161:68410:20:20:72:526:152:12:g_d0_f3:12:g_d0_f3:in a neoclassical model with price rigidity, and to highlight the role of the wealth e§ect
+35:1162:68500:20:22:72:526:132:12:g_d0_f3:12:g_d0_f3:on labor supply. A low wealth e§ect has been used recently to show that anticipated
+35:1163:68583:22:0:72:210:110:10:g_d0_f3:10:g_d0_f3:interactions between producers.
+36:1164:68616:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:productivity shocks can have positive e§ects on current economic activity (see Jaimovich
+36:1165:68704:20:21:72:526:658:12:g_d0_f3:12:g_d0_f3:and Rebelo (2008) and Schmitt-GrohÈ and UrÌbe (2008)). We show that it also has rather
+36:1166:68790:21:20:72:526:637:12:g_d0_f3:12:g_d0_f3:surprising implications for the e§ects of government spending in an otherwise standard
+36:1167:68876:20:0:72:237:617:12:g_d0_f3:12:g_d0_f3:real model of the business cycle.
+37:1168:68911:0:32:72:264:678:17:g_d0_f2:17:g_d0_f2:Appendix A: The data
+37:1169:68931:32:20:77:576:646:12:g_d0_f2:12:g_d0_f3:Government spending: constructed as log[(A955RA3*GC1_2000+B873RA3*GC2_2000)/pop],
+37:1170:69012:20:21:101:134:626:12:g_d0_f3:12:g_d0_f3:where:
+37:1171:69018:21:20:101:525:605:12:g_d0_f3:12:g_d0_f3:A955RA3: Government consumption expenditure, quantity index of chained 2000
+37:1172:69093:20:20:101:135:585:12:g_d0_f3:12:g_d0_f3:dollars
+37:1173:69100:20:20:101:525:565:12:g_d0_f3:12:g_d0_f3:B873RA3: Federal gross investment in equipment and software, national defense,
+37:1174:69178:20:21:101:297:545:12:g_d0_f3:12:g_d0_f3:quantity index of chained 2000 dollars
+37:1175:69216:21:20:101:525:524:12:g_d0_f3:12:g_d0_f3:GC1_2000: value in 2000 of A955RC1 (Government consumption expenditure, nom-
+37:1176:69292:20:20:101:125:504:12:g_d0_f3:12:g_d0_f3:inal)
+37:1177:69297:20:20:101:525:484:12:g_d0_f3:12:g_d0_f3:GC2_2000: value in 2000 of B873RC1 (Federal gross investment in equipment and
+37:1178:69374:20:30:101:285:464:12:g_d0_f3:12:g_d0_f3:software, national defense, nominal)
+37:1179:69410:30:21:77:324:434:12:g_d0_f2:12:g_d0_f3:GDP: constricted as log(B191RA3/pop), where
+37:1180:69453:21:30:101:435:413:12:g_d0_f3:12:g_d0_f3:B191RA3: Gross domestic product, index of chained 2000 dollars
+37:1181:69515:30:20:77:270:383:12:g_d0_f2:12:g_d0_f3:Private consumption: log(a794rx0)
+37:1182:69548:20:30:101:491:363:12:g_d0_f3:12:g_d0_f3:a794rx0: personal consumption expenditure, chained 2000 dollars per capita
+37:1183:69622:30:20:77:293:333:12:g_d0_f2:12:g_d0_f3:Private investment: log(B007RA3/pop)
+37:1184:69658:20:21:101:525:313:12:g_d0_f3:12:g_d0_f3:B007RA3: Gross private Öxed domestic investment, quantity index of chained 2000
+37:1185:69737:21:30:101:135:292:12:g_d0_f3:12:g_d0_f3:dollars
+37:1186:69744:30:20:77:533:262:12:g_d0_f2:12:g_d0_f3:Tax rate: Barro-Sahasakul Average marginal labor income tax rate, from Barro-Sahasakul
+37:1187:69830:20:20:101:525:242:12:g_d0_f3:12:g_d0_f3:(1983), (1986), updated by Stephenson (1998) up to 1996 and by Perotti (2007)
+37:1188:69907:20:30:101:151:222:12:g_d0_f3:12:g_d0_f3:thereafter
+37:1189:69917:30:21:77:591:192:12:g_d0_f2:12:g_d0_f3:Markup, Non-Önancial corporate business: constructed as log[(A455RC1-A325RC1)/A460RC1],
+37:1190:70004:21:20:101:131:171:12:g_d0_f3:12:g_d0_f3:where
+37:1191:70009:20:20:101:521:151:12:g_d0_f3:12:g_d0_f3:A455RC1: Gross value added of non-Önancial corporate business, BEA Table 1.14
+37:1192:70086:20:20:101:525:131:12:g_d0_f3:12:g_d0_f3:A325RC1: Taxes on production and imports less subsidies paid by non-Önancial
+37:1193:70162:20:0:101:284:111:12:g_d0_f3:12:g_d0_f3:corporate business, BEA Table 1.14
+38:1194:70198:0:20:101:526:678:12:g_d0_f3:12:g_d0_f3:A460RC1: Compensation of employees in non-Önancial corporate business, BEA
+38:1195:70272:20:30:101:154:658:12:g_d0_f3:12:g_d0_f3:Table 1.14
+38:1196:70282:30:20:77:467:628:12:g_d0_f2:12:g_d0_f3:Markup, Manufacturing: constructed as log(J426RC1/A552RC1), where
+38:1197:70347:20:21:101:525:608:12:g_d0_f3:12:g_d0_f3:J426RC1: National income without capital consumption adjustment, Manufactur-
+38:1198:70423:21:20:101:208:587:12:g_d0_f3:12:g_d0_f3:ing, BEA Table 6.1B
+38:1199:70442:20:30:101:492:567:12:g_d0_f3:12:g_d0_f3:A552RC1: Wage and salary disbursements, Manufactruing, BEA Table 2.2A
+38:1200:70511:30:29:77:514:537:12:g_d0_f2:12:g_d0_f3:Wage, Business sector: PRS84006103: Hourly compensation, Business sector, BLS
+38:1201:70588:29:20:77:526:508:12:g_d0_f2:12:g_d0_f3:Wage,Manufacturing: CES3000000006: Average hourly earnings of production work-
+38:1202:70666:20:30:101:236:488:12:g_d0_f3:12:g_d0_f3:ers in manufacturing, BLS
+38:1203:70691:30:30:77:525:458:12:g_d0_f2:12:g_d0_f3:Deáator, Business sector: PRS84006143: Implicit price deáator, Business sector, BLS
+38:1204:70774:30:20:77:530:428:12:g_d0_f2:12:g_d0_f3:Deáator,Manufacturing: WPUDUR0200: Producer price index, manufacturing goods,
+38:1205:70851:20:30:101:123:408:12:g_d0_f3:12:g_d0_f3:BLS
+38:1206:70854:30:40:77:500:378:12:g_d0_f2:12:g_d0_f3:CPI deáator: CPIULFSL: CPI for all urban consumers: All items less food, BLS
+38:1207:70930:40:32:71:433:338:17:g_d0_f2:17:g_d0_f2:Appendix B: Markups and the labor share
+38:1208:70969:32:34:71:362:306:12:g_d0_f3:12:g_d0_f3:Consider a Leontief production function for gross output
+38:1209:71025:34:0:244:288:272:12:g_d0_f5:12:g_d0_f7:Q= min
+38:1210:71031:0:9:290:297:292:12:g_d0_f9:12:g_d0_f9:"
+38:1211:71032:9:20:309:316:283:12:g_d0_f9:12:g_d0_f5:eQ
+38:1212:71034:20:0:298:325:263:12:g_d0_f7:12:g_d0_f5:1-s
+38:1213:71037:0:0:326:329:272:12:g_d0_f5:12:g_d0_f5:;
+38:1214:71038:0:17:332:343:280:12:g_d0_f5:12:g_d0_f5:M
+38:1215:71039:17:0:336:342:263:12:g_d0_f5:12:g_d0_f5:s
+38:1216:71040:0:20:346:353:292:12:g_d0_f9:12:g_d0_f9:#
+38:1217:71041:20:38:504:525:272:12:g_d0_f3:12:g_d0_f3:(56)
+38:1218:71045:38:21:72:525:234:12:g_d0_f3:12:g_d0_f3:whereeQis valued added,Mis intermediate inputs, andsis the share of intermediate
+38:1219:71125:21:20:72:508:213:12:g_d0_f3:12:g_d0_f3:inputs in gross output (in what follows, a tildaewill indicate a value added variable).
+38:1220:71212:20:27:89:475:193:12:g_d0_f3:12:g_d0_f3:The value added production function is Cobb-Douglas in labor and capital:
+38:1221:71285:27:34:266:525:166:12:g_d0_f9:12:g_d0_f3:eQ=N-K1--(57)
+38:1222:71298:34:23:72:241:132:12:g_d0_f3:12:g_d0_f3:The value added price markup is
+38:1223:71329:23:0:273:292:109:12:g_d0_f9:12:g_d0_f7:e-=
+38:1224:71332:0:19:299:322:120:12:g_d0_f9:8:g_d0_f6:ePeQN
+38:1225:71337:19:0:303:314:101:12:g_d0_f5:12:g_d0_f5:W
+38:1226:71338:0:0:504:525:109:12:g_d0_f3:12:g_d0_f3:(58)
+39:1227:71344:0:25:72:385:678:12:g_d0_f3:12:g_d0_f3:which, with a Cobb-Douglas production function, reduces to:
+39:1228:71403:25:26:275:525:653:12:g_d0_f9:12:g_d0_f3:e-=-es-1N(59)
+39:1229:71416:26:20:72:526:627:12:g_d0_f3:12:g_d0_f3:Thus, there is a linear relation between the logs of the value added markup and of the
+39:1230:71502:20:20:72:526:607:12:g_d0_f3:12:g_d0_f3:labor share in value added. We now show that this is no longer the case for the gross
+39:1231:71587:20:20:72:237:587:12:g_d0_f3:12:g_d0_f3:output markup and labor share.
+39:1232:71617:20:26:89:459:567:12:g_d0_f3:12:g_d0_f3:The nominal marginal cost of producing an extra unit of gross output is
+39:1233:71688:26:0:234:307:541:12:g_d0_f5:12:g_d0_f7:MC= (1-s)
+39:1234:71697:0:15:310:321:549:12:g_d0_f5:12:g_d0_f5:W
+39:1235:71698:15:0:310:324:534:12:g_d0_f9:8:g_d0_f6:eQN
+39:1236:71701:0:30:329:525:541:12:g_d0_f7:12:g_d0_f3:+sPM(60)
+39:1237:71709:30:20:72:525:511:12:g_d0_f3:12:g_d0_f3:wherePMis the price of intermediates andW=eQNis the nominal marginal cost of pro-
+39:1238:71790:20:18:72:504:491:12:g_d0_f3:12:g_d0_f3:ducing an extra unit of value added. The inverse of the gross output markup is thus
+39:1239:71873:18:16:222:228:473:12:g_d0_f7:12:g_d0_f7:1
+39:1240:71874:16:0:221:228:457:12:g_d0_f5:12:g_d0_f5:-
+39:1241:71875:0:0:239:294:465:12:g_d0_f7:12:g_d0_f7:=  (1-s)
+39:1242:71883:0:18:302:313:473:12:g_d0_f5:12:g_d0_f5:W
+39:1243:71884:18:0:295:320:455:12:g_d0_f5:8:g_d0_f6:PeQN
+39:1244:71888:0:0:325:334:465:12:g_d0_f7:12:g_d0_f7:+
+39:1245:71889:0:16:338:353:473:12:g_d0_f5:8:g_d0_f6:PM
+39:1246:71891:16:0:342:350:457:12:g_d0_f5:12:g_d0_f5:P
+39:1247:71892:0:36:356:525:465:12:g_d0_f5:12:g_d0_f3:s(61)
+39:1248:71897:36:0:239:325:429:12:g_d0_f7:8:g_d0_f6:=  (1-s)--1esN
+39:1249:71911:0:19:329:335:440:12:g_d0_f9:12:g_d0_f5:eP
+39:1250:71913:19:0:327:335:421:12:g_d0_f5:12:g_d0_f5:P
+39:1251:71914:0:0:340:349:429:12:g_d0_f7:12:g_d0_f7:+
+39:1252:71915:0:16:353:369:437:12:g_d0_f5:8:g_d0_f6:PM
+39:1253:71917:16:0:357:365:421:12:g_d0_f5:12:g_d0_f5:P
+39:1254:71918:0:25:371:525:429:12:g_d0_f5:12:g_d0_f3:s(62)
+39:1255:71923:25:29:72:98:404:12:g_d0_f3:12:g_d0_f3:Now,
+39:1256:71927:29:0:227:260:375:12:g_d0_f5:12:g_d0_f7:sN=
+39:1257:71930:0:17:271:293:384:12:g_d0_f5:12:g_d0_f5:WN
+39:1258:71932:17:0:274:292:367:12:g_d0_f5:12:g_d0_f5:PQ
+39:1259:71934:0:0:299:308:375:12:g_d0_f7:12:g_d0_f7:=
+39:1260:71935:0:16:313:335:384:12:g_d0_f5:12:g_d0_f5:WN
+39:1261:71937:16:0:317:333:368:12:g_d0_f9:12:g_d0_f5:ePeQ
+39:1262:71941:0:20:340:356:387:12:g_d0_f9:12:g_d0_f5:ePeQ
+39:1263:71945:20:0:338:356:367:12:g_d0_f5:12:g_d0_f5:PQ
+39:1264:71947:0:36:504:525:375:12:g_d0_f3:12:g_d0_f3:(63)
+39:1265:71951:36:0:251:282:339:12:g_d0_f7:8:g_d0_f6:=esN
+39:1266:71955:0:15:285:346:347:12:g_d0_f5:12:g_d0_f5:PQ-PMM
+39:1267:71961:15:0:314:320:332:12:g_d0_f9:12:g_d0_f5:eQ
+39:1268:71963:0:19:357:363:350:12:g_d0_f9:12:g_d0_f5:eQ
+39:1269:71965:19:0:350:368:331:12:g_d0_f5:12:g_d0_f5:PQ
+39:1270:71967:0:33:504:525:339:12:g_d0_f3:12:g_d0_f3:(64)
+39:1271:71971:33:0:251:282:306:12:g_d0_f7:8:g_d0_f6:=esN
+39:1272:71975:0:16:285:346:314:12:g_d0_f5:12:g_d0_f5:PQ-PMM
+39:1273:71981:16:0:307:325:298:12:g_d0_f5:12:g_d0_f5:PQ
+39:1274:71983:0:31:504:525:306:12:g_d0_f3:12:g_d0_f3:(65)
+39:1275:71987:31:0:251:306:275:12:g_d0_f7:12:g_d0_f11:=esN(1-
+39:1276:71994:0:16:310:325:283:12:g_d0_f5:8:g_d0_f6:PM
+39:1277:71996:16:0:314:322:267:12:g_d0_f5:12:g_d0_f5:P
+39:1278:71997:0:25:328:525:275:12:g_d0_f5:12:g_d0_f3:s)(66)
+39:1279:72003:25:20:72:525:250:12:g_d0_f3:12:g_d0_f3:whereP Q-PMMeQis the value added deáator.23Hence, the inverse of the gross output
+39:1280:72084:20:12:72:158:230:12:g_d0_f3:12:g_d0_f3:markup becomes
+39:1281:72098:12:17:230:236:218:12:g_d0_f7:12:g_d0_f7:1
+39:1282:72099:17:0:229:236:201:12:g_d0_f5:12:g_d0_f5:-
+39:1283:72100:0:0:240:249:210:12:g_d0_f7:12:g_d0_f7:=
+39:1284:72101:0:18:262:288:218:12:g_d0_f7:12:g_d0_f5:1-s
+39:1285:72104:18:0:254:296:200:12:g_d0_f7:12:g_d0_f5:1-PMPs
+39:1286:72110:0:0:297:341:210:12:g_d0_f5:12:g_d0_f7:--1sN+
+39:1287:72116:0:17:345:361:218:12:g_d0_f5:8:g_d0_f6:PM
+39:1288:72118:17:0:349:357:201:12:g_d0_f5:12:g_d0_f5:P
+39:1289:72119:0:27:363:525:210:12:g_d0_f5:12:g_d0_f3:s(67)
+39:1290:72124:27:16:81:525:183:7:g_d0_f3:10:g_d0_f3:23With imperfect competition and substitutability between intermediates and primary inputs, the
+39:1291:72219:16:8:72:204:167:10:g_d0_f3:10:g_d0_f3:correct value added deáator is
+39:1292:72249:8:12:268:327:159:10:g_d0_f16:10:g_d0_f16:P Q--PMM
+39:1293:72257:12:16:296:302:147:10:g_d0_f9:10:g_d0_f16:eQ
+39:1294:72259:16:12:72:526:131:10:g_d0_f3:10:g_d0_f3:since Örms also mark up intermediate costs (see Rotemberg and Woodford (1999, p. 1090). The formulla
+39:1295:72359:12:12:72:526:119:10:g_d0_f3:10:g_d0_f3:used in the text is the Divisia value  added deáator as calculated for instance by BEA, and would be
+39:1296:72459:12:0:72:221:107:10:g_d0_f3:10:g_d0_f3:correct under perfect competition.
+40:1297:72495:0:20:72:525:678:12:g_d0_f3:12:g_d0_f3:which shows that the relationship between the labor share in gross outputsNand the
+40:1298:72577:20:21:72:525:658:12:g_d0_f3:12:g_d0_f3:gross output markup-is not linear, and it is ináuenced by movements insandPM:P:In
+40:1299:72658:21:20:72:525:637:12:g_d0_f3:12:g_d0_f3:particular, by replacing (66) into (67), it is easy to see that, ifPM=Pfalls after a Öscal
+40:1300:72748:20:20:72:526:617:12:g_d0_f3:12:g_d0_f3:policy shocks that raises demand, the gross output markup could increase while the value
+40:1301:72836:20:40:72:177:597:12:g_d0_f3:12:g_d0_f3:added markup falls.
+40:1302:72855:40:21:72:526:557:17:g_d0_f2:17:g_d0_f2:Appendix C: An interpretation of the index of com-
+40:1303:72905:21:33:72:460:536:17:g_d0_f2:17:g_d0_f2:plementarity between consumption and hours
+40:1304:72947:33:20:72:525:503:12:g_d0_f3:12:g_d0_f3:Suppose we represent the indi§erence curve and the budget constraint in theC; Nspace,
+40:1305:73032:20:20:72:525:483:12:g_d0_f3:12:g_d0_f3:withCon the vertical axis. Importantly,\ris directly related to the wealth e§ect on hours.
+40:1306:73122:20:20:72:526:463:12:g_d0_f3:12:g_d0_f3:Under GHH preferences, there is no wealth e§ect on hours: graphically, this means that
+40:1307:73208:20:22:72:406:443:12:g_d0_f3:12:g_d0_f3:the slope of the indi§erence curve is constant on any vertical line
+40:1308:73275:22:16:267:273:421:12:g_d0_f5:12:g_d0_f5:d
+40:1309:73276:16:0:262:276:405:12:g_d0_f5:12:g_d0_f5:dC
+40:1310:73278:0:9:281:290:430:12:g_d0_f9:12:g_d0_f9:-
+40:1311:73279:9:16:291:304:421:12:g_d0_f5:8:g_d0_f6:Un
+40:1312:73281:16:0:291:303:405:12:g_d0_f5:8:g_d0_f6:Uc
+40:1313:73283:0:17:305:314:430:12:g_d0_f9:12:g_d0_f9:-
+40:1314:73284:17:29:317:525:413:12:g_d0_f7:12:g_d0_f3:= 0(68)
+40:1315:73291:29:12:72:141:384:12:g_d0_f3:12:g_d0_f3:which implies
+40:1316:73304:12:16:233:250:372:12:g_d0_f5:8:g_d0_f6:Unc
+40:1317:73307:16:0:234:249:356:12:g_d0_f5:8:g_d0_f6:Ucc
+40:1318:73310:0:0:255:264:364:12:g_d0_f7:12:g_d0_f7:=
+40:1319:73311:0:16:269:282:372:12:g_d0_f5:8:g_d0_f6:Un
+40:1320:73313:16:0:269:281:356:12:g_d0_f5:8:g_d0_f6:Uc
+40:1321:73315:0:26:287:525:364:12:g_d0_f7:12:g_d0_f3:=)-GHH=W(69)
+40:1322:73327:26:20:72:525:338:12:g_d0_f3:12:g_d0_f3:If instead there is a positive wealth e§ect ofWon hours (i.e., leisure is a normal good)
+40:1323:73415:20:21:71:252:318:12:g_d0_f3:12:g_d0_f3:as under KPR preferences, we have
+40:1324:73448:21:17:267:273:297:12:g_d0_f5:12:g_d0_f5:d
+40:1325:73449:17:0:262:276:280:12:g_d0_f5:12:g_d0_f5:dC
+40:1326:73451:0:8:281:290:305:12:g_d0_f9:12:g_d0_f9:-
+40:1327:73452:8:17:291:304:297:12:g_d0_f5:8:g_d0_f6:Un
+40:1328:73454:17:0:291:303:280:12:g_d0_f5:8:g_d0_f6:Uc
+40:1329:73456:0:16:305:314:305:12:g_d0_f9:12:g_d0_f9:-
+40:1330:73457:16:30:317:525:289:12:g_d0_f5:12:g_d0_f3:>0(70)
+40:1331:73463:30:20:72:526:259:12:g_d0_f3:12:g_d0_f3:so that the tangency point of the new equilibrium indi§erence curve with a budget con-
+40:1332:73549:20:20:72:526:239:12:g_d0_f3:12:g_d0_f3:straint that has the same slope of the old budget constraint is to the right of the old
+40:1333:73636:20:12:72:196:219:12:g_d0_f3:12:g_d0_f3:equilibrium; this implies
+40:1334:73661:12:17:234:251:207:12:g_d0_f5:8:g_d0_f6:Unc
+40:1335:73664:17:0:234:249:190:12:g_d0_f5:8:g_d0_f6:Ucc
+40:1336:73667:0:0:255:264:198:12:g_d0_f5:12:g_d0_f5:<
+40:1337:73668:0:17:269:282:207:12:g_d0_f5:8:g_d0_f6:Un
+40:1338:73670:17:0:270:282:190:12:g_d0_f5:8:g_d0_f6:Uc
+40:1339:73672:0:39:287:525:198:12:g_d0_f7:12:g_d0_f3:=)-KPR<W(71)
+40:1340:73684:39:32:72:526:159:17:g_d0_f2:17:g_d0_f2:Appendix D. Sticky price model: closed form solution
+40:1341:73736:32:20:72:526:127:12:g_d0_f3:12:g_d0_f3:We illustrate in this section the closed-form solution of the inÖnite horizon model with
+40:1342:73824:20:0:72:157:107:12:g_d0_f3:12:g_d0_f3:staggered prices.
+41:1343:73843:0:20:89:525:678:12:g_d0_f2:12:g_d0_f3:GHH preferencesLog linearizing the consumption Euler under GHH yields ini-
+41:1344:73917:20:53:72:98:658:12:g_d0_f3:12:g_d0_f3:tially
+41:1345:73923:53:0:97:129:605:12:g_d0_f5:12:g_d0_f5:ct- 
+41:1346:73926:0:16:130:144:613:12:g_d0_f5:8:g_d0_f6:N-
+41:1347:73928:16:0:133:141:597:12:g_d0_f5:12:g_d0_f5:C
+41:1348:73929:0:0:146:247:605:12:g_d0_f5:12:g_d0_f5:-nt=Etfct+1g- 
+41:1349:73942:0:16:248:263:613:12:g_d0_f5:8:g_d0_f6:N-
+41:1350:73944:16:0:251:259:597:12:g_d0_f5:12:g_d0_f5:C
+41:1351:73945:0:0:265:351:605:12:g_d0_f5:8:g_d0_f8:-Etfnt+1g---1
+41:1352:73958:0:17:353:362:622:12:g_d0_f9:12:g_d0_f9:-
+41:1353:73959:17:0:362:390:605:12:g_d0_f7:12:g_d0_f5:1- 
+41:1354:73961:0:16:392:406:613:12:g_d0_f5:8:g_d0_f6:N-
+41:1355:73963:16:0:395:403:597:12:g_d0_f5:12:g_d0_f5:C
+41:1356:73964:0:17:408:417:622:12:g_d0_f9:12:g_d0_f9:-
+41:1357:73965:17:33:419:500:605:12:g_d0_f7:12:g_d0_f7:(rt-Etf-t+1g)
+41:1358:73978:33:40:89:273:572:12:g_d0_f3:12:g_d0_f3:In the steady state (without habits)
+41:1359:74014:40:0:280:289:532:12:g_d0_f5:12:g_d0_f7: =
+41:1360:74015:0:17:301:319:540:12:g_d0_f5:8:g_d0_f8:--1
+41:1361:74018:17:22:294:326:523:12:g_d0_f5:8:g_d0_f8:-N--1
+41:1362:74023:22:0:71:139:501:12:g_d0_f3:12:g_d0_f5:where-=W
+41:1363:74031:0:7:141:151:508:8:g_d0_f10:8:g_d0_f8:-1
+41:1364:74033:7:34:156:360:501:12:g_d0_f3:12:g_d0_f3:is the steady state markup. Letís deÖne
+41:1365:74072:34:0:221:277:467:12:g_d0_f5:12:g_d0_f5:-r-1- 
+41:1366:74077:0:16:279:293:475:12:g_d0_f5:8:g_d0_f6:N-
+41:1367:74079:16:0:282:290:459:12:g_d0_f5:12:g_d0_f5:C
+41:1368:74080:0:0:298:328:467:12:g_d0_f7:12:g_d0_f11:= 1-
+41:1369:74084:0:16:347:358:475:12:g_d0_f5:12:g_d0_f5:W
+41:1370:74085:16:24:333:375:459:12:g_d0_f5:12:g_d0_f7:-(1-g)
+41:1371:74091:24:20:72:525:435:12:g_d0_f3:12:g_d0_f3:wheregis the share of government spending in output. Notice that-r<1. We also
+41:1372:74168:20:21:72:525:415:12:g_d0_f3:12:g_d0_f3:assume-r>0, so that the intertemporal elasticity of substitution in consumption is
+41:1373:74250:21:40:72:236:394:12:g_d0_f3:12:g_d0_f3:positive. Hence we can re-write:
+41:1374:74282:40:0:118:382:354:12:g_d0_f5:12:g_d0_f11:ct-(1--r)-nt=Etfct+1g-(1--r)-Etfnt+1g-
+41:1375:74320:0:16:386:397:362:12:g_d0_f5:8:g_d0_f6:-r
+41:1376:74322:16:0:388:395:346:12:g_d0_f5:12:g_d0_f5:-
+41:1377:74323:0:27:398:479:354:12:g_d0_f7:12:g_d0_f7:(rt-Etf-t+1g)
+41:1378:74336:27:20:72:442:327:12:g_d0_f3:12:g_d0_f3:Notice that since-r<1the GHH preferences are always non separable.
+41:1379:74402:20:20:89:525:307:12:g_d0_f3:12:g_d0_f3:Log linearizing the consumption-leisure condition, and using the log-linearized aggre-
+41:1380:74488:20:53:71:196:287:12:g_d0_f3:12:g_d0_f3:gate resource constraint:
+41:1381:74513:53:23:218:314:234:12:g_d0_f5:8:g_d0_f6:mct=  (--1)nt
+41:1382:74526:23:32:247:378:211:12:g_d0_f7:12:g_d0_f7:=  (--1) [(1-g)ct+gt]
+41:1383:74547:32:20:72:526:179:12:g_d0_f3:12:g_d0_f3:Using the aggregate resource constraint to eliminate employment, we can express the
+41:1384:74630:20:41:72:249:159:12:g_d0_f3:12:g_d0_f3:equilibrium in terms of the system
+41:1385:74664:41:0:191:405:118:12:g_d0_f5:12:g_d0_f7:-t=\fEtf-t+1g+-(--1) [(1-g)ct+gt]
+42:1386:74699:0:0:92:100:649:12:g_d0_f5:8:g_d0_f6:ct
+42:1387:74701:0:10:102:107:659:12:g_d0_f9:12:g_d0_f9:-
+42:1388:74702:10:0:108:154:649:12:g_d0_f7:6:g_d0_f12:1--GHH
+42:1389:74708:0:10:155:160:659:12:g_d0_f9:12:g_d0_f9:-
+42:1390:74709:10:0:164:173:649:12:g_d0_f7:12:g_d0_f7:=
+42:1391:74710:0:10:176:181:659:12:g_d0_f9:12:g_d0_f9:-
+42:1392:74711:10:0:182:228:649:12:g_d0_f7:6:g_d0_f12:1--GHH
+42:1393:74717:0:10:229:234:659:12:g_d0_f9:12:g_d0_f9:-
+42:1394:74718:10:0:237:294:649:12:g_d0_f5:12:g_d0_f11:Etfct+1g-
+42:1395:74727:0:17:298:323:658:12:g_d0_f5:6:g_d0_f12:-GHH
+42:1396:74731:17:0:298:325:641:12:g_d0_f7:12:g_d0_f5:1-g
+42:1397:74734:0:0:326:408:649:12:g_d0_f5:12:g_d0_f11:Etfgt+1-gtg-
+42:1398:74746:0:16:412:423:657:12:g_d0_f5:8:g_d0_f6:-r
+42:1399:74748:16:0:414:421:641:12:g_d0_f5:12:g_d0_f5:-
+42:1400:74749:0:29:425:505:649:12:g_d0_f7:12:g_d0_f7:(rt-Etf-t+1g)
+42:1401:74762:29:40:89:267:620:12:g_d0_f3:12:g_d0_f3:We can guess the pair of solutions:
+42:1402:74797:40:26:220:376:580:12:g_d0_f5:8:g_d0_f6:ct=AGHHcgt;-t=AGHH-gt
+42:1403:74818:26:40:89:390:554:12:g_d0_f3:12:g_d0_f3:Using the method of undetermined coe¢ cients one obtains
+42:1404:74874:40:0:119:163:514:12:g_d0_f5:12:g_d0_f11:AGHHc-
+42:1405:74880:0:17:182:433:523:12:g_d0_f5:12:g_d0_f7:-GHH(1--) (1-\f-)---r-(---)(--1)(1-g)
+42:1406:74917:17:0:168:447:506:12:g_d0_f7:12:g_d0_f7:(1--GHH) (1--) (1-\f-) +--r-(---)(--1)(1-g)
+42:1407:74960:0:16:460:466:522:12:g_d0_f7:12:g_d0_f7:1
+42:1408:74961:16:0:449:476:506:12:g_d0_f7:12:g_d0_f5:1-g
+42:1409:74964:0:28:504:525:514:12:g_d0_f3:12:g_d0_f3:(72)
+42:1410:74968:28:40:89:375:486:12:g_d0_f3:12:g_d0_f3:In the case of purely áexible prices (-!1) we obtain:
+42:1411:75021:40:0:244:303:446:12:g_d0_f5:12:g_d0_f11:AGHHc!-
+42:1412:75028:0:16:314:320:454:12:g_d0_f7:12:g_d0_f7:1
+42:1413:75029:16:0:304:330:438:12:g_d0_f7:12:g_d0_f5:1-g
+42:1414:75032:0:25:335:525:446:12:g_d0_f5:12:g_d0_f3:<0(73)
+42:1415:75038:25:21:72:526:421:12:g_d0_f3:12:g_d0_f3:which coincides with (23)) in the two-period version of the model. Conversely, in the case
+42:1416:75128:21:28:72:339:400:12:g_d0_f3:12:g_d0_f3:of permanently Öxed prices (-!0) (72) reduces to:
+42:1417:75177:28:0:223:270:372:12:g_d0_f5:12:g_d0_f11:AGHHc!
+42:1418:75183:0:17:284:310:380:12:g_d0_f5:6:g_d0_f12:-GHH
+42:1419:75187:17:0:274:320:363:12:g_d0_f7:6:g_d0_f12:1--GHH
+42:1420:75193:0:17:334:340:380:12:g_d0_f7:12:g_d0_f7:1
+42:1421:75194:17:0:324:350:363:12:g_d0_f7:12:g_d0_f5:1-g
+42:1422:75197:0:31:355:525:372:12:g_d0_f5:12:g_d0_f3:>0(74)
+42:1423:75203:31:21:72:526:341:12:g_d0_f3:12:g_d0_f3:which once again coincides with its counterpart in the two-period model (see equation
+42:1424:75288:21:36:72:101:320:12:g_d0_f3:12:g_d0_f3:(28)).
+42:1425:75294:36:41:89:448:284:12:g_d0_f2:12:g_d0_f3:KPR caseLog-linearizing the consumption-leisure condition yields:
+42:1426:75359:41:0:220:251:243:12:g_d0_f5:12:g_d0_f7:mct=
+42:1427:75363:0:17:254:263:260:12:g_d0_f9:12:g_d0_f9:-
+42:1428:75364:17:0:263:302:243:12:g_d0_f5:12:g_d0_f7:--1 +
+42:1429:75369:0:17:312:323:252:12:g_d0_f5:12:g_d0_f5:W
+42:1430:75370:17:0:305:331:235:12:g_d0_f7:12:g_d0_f5:1-g
+42:1431:75373:0:17:333:342:260:12:g_d0_f9:12:g_d0_f9:-
+42:1432:75374:17:25:344:525:243:12:g_d0_f5:12:g_d0_f3:nt+ct(75)
+42:1433:75383:25:49:72:349:218:12:g_d0_f3:12:g_d0_f3:Log-linearizing the consumption Euler equation yields
+42:1434:75436:49:0:72:90:169:12:g_d0_f5:12:g_d0_f11:ct-
+42:1435:75439:0:9:91:97:186:12:g_d0_f9:12:g_d0_f9:-
+42:1436:75440:9:16:99:184:177:12:g_d0_f7:12:g_d0_f5:(--1) (1--r)-
+42:1437:75453:16:0:138:145:161:12:g_d0_f5:12:g_d0_f5:-
+42:1438:75454:0:17:186:192:186:12:g_d0_f9:12:g_d0_f9:-
+42:1439:75455:17:0:194:276:169:12:g_d0_f5:12:g_d0_f11:nt=Etfct+1g-
+42:1440:75467:0:9:277:283:186:12:g_d0_f9:12:g_d0_f9:-
+42:1441:75468:9:16:285:370:177:12:g_d0_f7:12:g_d0_f5:(--1) (1--r)-
+42:1442:75481:16:0:324:331:161:12:g_d0_f5:12:g_d0_f5:-
+42:1443:75482:0:17:372:378:186:12:g_d0_f9:12:g_d0_f9:-
+42:1444:75483:17:0:380:438:169:12:g_d0_f5:12:g_d0_f11:Etfnt+1g-
+42:1445:75492:0:16:441:447:177:12:g_d0_f7:12:g_d0_f7:1
+42:1446:75493:16:0:440:447:161:12:g_d0_f5:12:g_d0_f5:-
+42:1447:75494:0:29:448:526:169:12:g_d0_f7:12:g_d0_f7:(rt-Etf-t+1g)
+42:1448:75507:29:29:72:382:140:12:g_d0_f3:12:g_d0_f3:Using the resource constraint the above equation reduces to:
+42:1449:75567:29:0:88:96:111:12:g_d0_f5:8:g_d0_f6:ct
+42:1450:75569:0:10:99:104:121:12:g_d0_f9:12:g_d0_f9:-
+42:1451:75570:10:0:104:149:111:12:g_d0_f7:6:g_d0_f12:1--KPR
+42:1452:75576:0:10:150:155:121:12:g_d0_f9:12:g_d0_f9:-
+42:1453:75577:10:0:158:216:111:12:g_d0_f7:12:g_d0_f11:=Etfct+1g
+42:1454:75586:0:10:218:223:121:12:g_d0_f9:12:g_d0_f9:-
+42:1455:75587:10:0:223:269:111:12:g_d0_f7:6:g_d0_f12:1--KPR
+42:1456:75593:0:10:270:275:121:12:g_d0_f9:12:g_d0_f9:-
+42:1457:75594:10:0:278:287:111:12:g_d0_f11:12:g_d0_f11:-
+42:1458:75595:0:17:291:316:120:12:g_d0_f5:6:g_d0_f12:-KPR
+42:1459:75599:17:0:291:317:103:12:g_d0_f7:12:g_d0_f5:1-g
+42:1460:75602:0:0:318:395:111:12:g_d0_f5:12:g_d0_f11:Et(gt+1-gt)-
+42:1461:75614:0:16:400:406:119:12:g_d0_f7:12:g_d0_f7:1
+42:1462:75615:16:0:399:406:103:12:g_d0_f5:12:g_d0_f5:-
+42:1463:75616:0:0:408:525:111:12:g_d0_f7:12:g_d0_f3:(rt-Etf-t+1g)(76)
+43:1464:75635:0:20:72:526:678:12:g_d0_f3:12:g_d0_f3:which is isomorphic to the Euler equation in the GHH case, except that the elasticity of
+43:1465:75723:20:21:72:350:658:12:g_d0_f3:12:g_d0_f3:intertemporal substitution is now1=-instead of-r=-.
+43:1466:75774:21:35:89:523:637:12:g_d0_f3:12:g_d0_f3:Like in the GHH case, applying the method of undetermined coe¢ cients one obtains
+43:1467:75855:35:0:78:120:602:12:g_d0_f5:12:g_d0_f11:AKP Rc-
+43:1468:75862:0:0:150:316:612:12:g_d0_f5:8:g_d0_f6:-KPR(1--) (1-\f-)-(---)--
+43:1469:75887:0:10:319:324:622:12:g_d0_f9:12:g_d0_f9:-
+43:1470:75888:10:0:324:459:612:12:g_d0_f7:12:g_d0_f7:(--1)(1-g) +---1-KPR)
+43:1471:75909:0:28:459:464:622:12:g_d0_f9:12:g_d0_f9:-
+43:1472:75910:28:0:125:321:594:12:g_d0_f7:8:g_d0_f6:(1--KPR) (1--) (1-\f-) + (---)--
+43:1473:75942:0:9:324:329:603:12:g_d0_f9:12:g_d0_f9:-
+43:1474:75943:9:0:329:484:594:12:g_d0_f7:12:g_d0_f7:1 + (--1)(1-g) +---1-KPR)
+43:1475:75968:0:0:483:488:603:12:g_d0_f9:12:g_d0_f9:-
+43:1476:75969:0:16:501:507:610:12:g_d0_f7:12:g_d0_f7:1
+43:1477:75970:16:15:491:517:594:12:g_d0_f7:12:g_d0_f5:1-g
+43:1478:75973:15:21:504:525:579:12:g_d0_f3:12:g_d0_f3:(77)
+43:1479:75977:21:40:89:384:558:12:g_d0_f3:12:g_d0_f3:In the case of purely áexible prices (-!1)one obtains:
+43:1480:76031:40:0:185:240:518:12:g_d0_f5:12:g_d0_f11:AKP Rc--
+43:1481:76039:0:17:252:350:526:12:g_d0_f5:12:g_d0_f7:W+ (--1)(1-g)
+43:1482:76052:17:0:241:360:509:12:g_d0_f7:12:g_d0_f7:1 +W+ (--1)(1-g)
+43:1483:76068:0:16:373:379:526:12:g_d0_f7:12:g_d0_f7:1
+43:1484:76069:16:0:362:389:510:12:g_d0_f7:12:g_d0_f5:1-g
+43:1485:76072:0:29:393:412:518:12:g_d0_f5:12:g_d0_f7:<0
+43:1486:76074:29:20:72:526:489:12:g_d0_f3:12:g_d0_f3:which again is the same formula as in the two-period model, equation (24). Similarly,
+43:1487:76159:20:40:72:344:469:12:g_d0_f3:12:g_d0_f3:under permanently Öxed prices (-!0)one obtains :
+43:1488:76207:40:0:226:268:429:12:g_d0_f5:12:g_d0_f7:AKP Rc=
+43:1489:76214:0:17:283:308:437:12:g_d0_f5:6:g_d0_f12:-KPR
+43:1490:76218:17:0:273:318:420:12:g_d0_f7:6:g_d0_f12:1--KPR
+43:1491:76224:0:17:332:338:437:12:g_d0_f7:12:g_d0_f7:1
+43:1492:76225:17:0:322:348:420:12:g_d0_f7:12:g_d0_f5:1-g
+43:1493:76228:0:29:353:525:429:12:g_d0_f5:12:g_d0_f3:>0(78)
+43:1494:76234:29:0:72:386:400:12:g_d0_f3:12:g_d0_f3:exactly as in the two-period Öxed-price model, equation (28).
+44:1495:76297:0:32:72:163:678:17:g_d0_f2:17:g_d0_f2:References
+44:1496:76307:32:20:77:525:646:12:g_d0_f3:12:g_d0_f3:Barro, Robert and Robert King (1984): ìTime Separable Preferences and Intertemporal
+44:1497:76390:20:21:101:525:626:12:g_d0_f3:12:g_d0_f3:Substitution Models of the Business Cycleî,Quarterly Journal of Economics, 99,
+44:1498:76468:21:30:101:137:605:12:g_d0_f3:12:g_d0_f3:817-40.
+44:1499:76475:30:20:77:525:575:12:g_d0_f3:12:g_d0_f3:Barro, Robert J. and Chaipat Sahasakul (1983): ìMeasuring the Average Marginal Tax
+44:1500:76557:20:20:101:525:555:12:g_d0_f3:12:g_d0_f3:Rate from the Individual Income Taxî,Journal of Business, Vol. 56, No. 4, pp.
+44:1501:76634:20:30:101:143:535:12:g_d0_f3:12:g_d0_f3:419-452.
+44:1502:76642:30:21:77:525:505:12:g_d0_f3:12:g_d0_f3:Barro, Robert J. and Chaipat Sahasakul (1986): ìAverage Marginal Tax Rates from
+44:1503:76721:21:20:101:525:484:12:g_d0_f3:12:g_d0_f3:Social Security and the Individual Income Taxî,Journal of Business, Vol. 59, No.
+44:1504:76801:20:30:101:178:464:12:g_d0_f3:12:g_d0_f3:4, pp. 555-566.
+44:1505:76816:30:20:77:525:434:12:g_d0_f3:12:g_d0_f3:Baxter, Marianne and Robert King (1993): îFiscal Policy in General Equilibriumî,
+44:1506:76896:20:30:101:278:414:12:g_d0_f4:12:g_d0_f3:American Economic Review, June.
+44:1507:76927:30:21:77:525:384:12:g_d0_f3:12:g_d0_f3:Basu S. and M. Kimball (2002): Long-Run Labor Supply and the Elasticity of Intertem-
+44:1508:77011:21:30:101:455:363:12:g_d0_f3:12:g_d0_f3:poral Substitution for Consumption", mimeo University of Michigan.
+44:1509:77077:30:20:77:525:333:12:g_d0_f3:12:g_d0_f3:Basu S. and M. Kimball (2003): "Investment Planning Costs and the E§ects of Fiscal
+44:1510:77159:20:30:101:379:313:12:g_d0_f3:12:g_d0_f3:and Monetary Policy", mimeo University of Michigan.
+44:1511:77210:30:21:77:525:283:12:g_d0_f3:12:g_d0_f3:Bilbiie, Florin O. (2006): ìNon-Separable Preferences, Fiscal Policy íPuzzlesíand Inferior
+44:1512:77300:21:30:101:296:262:12:g_d0_f3:12:g_d0_f3:Goodsî, mimeo, University of Oxford.
+44:1513:77336:30:20:77:525:232:12:g_d0_f3:12:g_d0_f3:Bilbiie, Florin O., Fabio Ghironi, and Marc J. Melitz (2005): ìBusiness Cycles and Firm
+44:1514:77423:20:30:101:306:212:12:g_d0_f3:12:g_d0_f3:Dynamicsî, mimeo, Harvard University.
+44:1515:77460:30:20:77:525:182:12:g_d0_f3:12:g_d0_f3:Blanchard, Olivier and Roberto Perotti (2002): îAn Empirical Characterization of the
+44:1516:77544:20:21:101:525:162:12:g_d0_f3:12:g_d0_f4:Dynamic E§ects of Changes in Government Spending and Taxes on Outputî,Quar-
+44:1517:77619:21:0:101:243:141:12:g_d0_f4:12:g_d0_f4:terly Journal of Economics.
+45:1518:77648:0:20:77:525:678:12:g_d0_f3:12:g_d0_f3:Burnside, Craig, Martin Eichenbaum, and Jonas D.M. Fisher (2004): ìFiscal Shocks
+45:1519:77728:20:30:101:475:658:12:g_d0_f3:12:g_d0_f3:and Their Consequencesî,Journal of Economic Theory115, pp. 89ñ117.
+45:1520:77794:30:20:77:525:628:12:g_d0_f3:12:g_d0_f3:Christiano L., M. Eichenbaum and C. Evans (2005): "Nominal Rigidities and the Dy-
+45:1521:77875:20:21:101:525:608:12:g_d0_f3:12:g_d0_f3:namic E§ects of a Shock to Monetary Policy,Journal of Political Economy, Vol.
+45:1522:77952:21:29:101:203:587:12:g_d0_f3:12:g_d0_f3:113, February, 1-45.
+45:1523:77972:29:21:77:525:558:12:g_d0_f3:12:g_d0_f3:Clarida, R, J. GalÌ, and M. Gertler (1999): "The Science of Monetary Policy: A New
+45:1524:78054:21:29:101:488:537:12:g_d0_f3:12:g_d0_f3:Keynesian Perspective.Journal of Economic Literature, vol. 37, 1661-1707.
+45:1525:78127:29:21:77:525:508:12:g_d0_f3:12:g_d0_f3:Cooley, Thomas F. and Lee E. Ohanian (1997): ìPostwar British Economic Growth and
+45:1526:78208:21:29:101:499:487:12:g_d0_f3:12:g_d0_f3:the Legacy of Keynesî,Journal of Political Economy, 105, No. 3, pp. 439-72.
+45:1527:78283:29:21:77:525:458:12:g_d0_f3:12:g_d0_f3:Devereux, Michael B., Allen C. Head, and Beverly J. Lapham (1996): ìMonopolistic
+45:1528:78363:21:20:101:525:437:12:g_d0_f3:12:g_d0_f4:Competition, Increasing Returns, and the E§ects of Government Spendingî,Journal
+45:1529:78442:20:30:101:384:417:12:g_d0_f4:12:g_d0_f3:of Money, Credit and Banking, 28(2), May, pp. 233-54.
+45:1530:78495:30:20:77:525:387:12:g_d0_f3:12:g_d0_f3:Domeij D. and Martin FlodÈn (2006):" The Labor Supply Elasticity and Borrowing
+45:1531:78573:20:20:101:525:367:12:g_d0_f3:12:g_d0_f3:Constraints: Why Estimates are Biased",Review of Economic Dynamics9, 242-
+45:1532:78646:20:30:101:122:347:12:g_d0_f3:12:g_d0_f3:262.
+45:1533:78650:30:20:77:525:317:12:g_d0_f3:12:g_d0_f3:Eichenbaum, Martin and Jonas D.M. Fisher (2004): ìFiscal Policy in the Aftermath of
+45:1534:78733:20:30:101:306:297:12:g_d0_f3:12:g_d0_f3:9/11î, mimeo, Northwestern University.
+45:1535:78771:30:20:77:525:267:12:g_d0_f3:12:g_d0_f3:Edelberg, Wendy, Martin Eichenbaum, and Jonas D.M. Fisher (1999): îUnderstanding
+45:1536:78851:20:20:101:525:247:12:g_d0_f3:12:g_d0_f3:the E§ects of a Shock to Government Purchasesî,Review of Economics Dynamics,
+45:1537:78927:20:30:101:165:227:12:g_d0_f3:12:g_d0_f3:pp. 166-206.
+45:1538:78939:30:20:77:525:197:12:g_d0_f3:12:g_d0_f3:Fat·s, Antonio and Ilian Mihov (2001): îThe E§ects of Fiscal Policy on Consumption
+45:1539:79021:20:30:101:409:177:12:g_d0_f3:12:g_d0_f3:and Employment: Theory and Evidenceî, mimeo, INSEAD.
+45:1540:79073:30:20:77:525:147:12:g_d0_f3:12:g_d0_f3:GalÌ, Jordi, J. David LÛpez-Salido and Javier VallÈs (2007): ìUnderstanding the E§ects
+45:1541:79159:20:20:101:525:127:12:g_d0_f3:12:g_d0_f4:of Government Spending on Consumptionî,Journal of the European Economic As-
+45:1542:79234:20:0:101:290:107:12:g_d0_f4:12:g_d0_f3:sociation,March, vol. 5 (1), 227-270.
+46:1543:79273:0:20:77:525:678:12:g_d0_f3:12:g_d0_f3:Greenwood, J., Z. Hercowitz, and G. Hu§man (1988), "Investment, Capacity Utilization,
+46:1544:79358:20:29:101:472:658:12:g_d0_f3:12:g_d0_f3:and the Real Business Cycles",American Economic Review, 78 402-417.
+46:1545:79425:29:20:77:525:629:12:g_d0_f3:12:g_d0_f3:Jaimovich and Rebelo (2008):"Can News about the Future Drive the Business Cycle?",
+46:1546:79507:20:29:101:314:609:12:g_d0_f4:12:g_d0_f3:American Economic Reviewforthcoming.
+46:1547:79543:29:20:77:525:580:12:g_d0_f3:12:g_d0_f3:Linnemann, Ludger and Andreas Schabert (2003): ìFiscal Policy in the New Neoclassical
+46:1548:79628:20:29:101:508:560:12:g_d0_f3:12:g_d0_f3:Synthesisî,Journal of Money, Credit and Banking, Vol. 35, No. 6, pp. 911-929
+46:1549:79704:29:20:77:525:531:12:g_d0_f3:12:g_d0_f3:Linnemann, Ludger (2005): ìThe E§ects of Government Spending on Private Consump-
+46:1550:79784:20:29:101:340:511:12:g_d0_f3:12:g_d0_f3:tion: A Puzzle? î, mimeo, University of Bonn.
+46:1551:79829:29:20:77:525:482:12:g_d0_f3:12:g_d0_f3:Ludvigson, Sidney (1996): "The Macroeconomic E§ects of Government Debt in a Sto-
+46:1552:79909:20:29:101:449:462:12:g_d0_f3:12:g_d0_f3:chastic Growth Model."Journal of Monetary Economics, 38: 25-45.
+46:1553:79972:29:21:77:525:433:12:g_d0_f3:12:g_d0_f3:Ohanian, Lee E. (1997): ìThe Macroeconomic E§ects of War Finance in the United
+46:1554:80050:21:28:101:518:412:12:g_d0_f3:12:g_d0_f3:States: World War II and the Korean Warî,American Economic Review, March.
+46:1555:80123:28:21:77:526:384:12:g_d0_f3:12:g_d0_f4:Perotti (2007): "In Search of the Transmission Mechanism of Fiscal Policy",NBER
+46:1556:80202:21:28:101:228:363:12:g_d0_f4:12:g_d0_f3:Macroeconomics Annual.
+46:1557:80224:28:21:77:525:335:12:g_d0_f3:12:g_d0_f3:Ramey, Valerie A. and Matthew D. Shapiro (1998): îCostly Capital Reallocation and the
+46:1558:80309:21:20:101:525:314:12:g_d0_f3:12:g_d0_f4:E§ects of Government Spendingî,Carnegie Rochester Conference on Public Policy,
+46:1559:80387:20:29:101:165:294:12:g_d0_f3:12:g_d0_f3:pp. 145-194.
+46:1560:80399:29:20:77:525:265:12:g_d0_f3:12:g_d0_f3:Ramey, Valerie A. (2008): ìIdentifying Government Spending Shocks: Itís All in the
+46:1561:80481:20:29:101:228:245:12:g_d0_f3:12:g_d0_f3:Timingî, mimeo, UCSD.
+46:1562:80502:29:20:77:526:216:12:g_d0_f3:12:g_d0_f4:Ravn, Morten, Stephanie Schmitt-GrohÈ, and MartÌn Uribe (2006): ìDeep Habitsî,Re-
+46:1563:80583:20:29:101:282:196:12:g_d0_f4:12:g_d0_f3:view of Economic Studies, January.
+46:1564:80617:29:20:77:525:167:12:g_d0_f3:12:g_d0_f3:Romer, Christina D. and David H. Romer (1989): îDoes Monetary Policy Matter? A
+46:1565:80695:20:20:101:525:147:12:g_d0_f3:12:g_d0_f3:New Test in the Spirit of Friedman and Schwartzî,in Olivier J. Blanchard and
+46:1566:80771:20:20:101:525:127:12:g_d0_f3:12:g_d0_f3:Stanley Fischer, eds.:NBER Macroeconomics Annual: 1989.  Cambridge, Mass.
+46:1567:80844:20:0:101:269:107:12:g_d0_f3:12:g_d0_f3:and London: MIT Press, 121 70.
+47:1568:80876:0:20:77:525:678:12:g_d0_f3:12:g_d0_f3:Romer, Christina and David H. Romer (2006): ìThe Macroeconomic E§ects of Tax
+47:1569:80952:20:21:101:525:658:12:g_d0_f3:12:g_d0_f3:Changes: Estimates Based on a New Measure of Fiscal Shocksî, mimeo, University
+47:1570:81030:21:30:101:218:637:12:g_d0_f3:12:g_d0_f3:of California, Berkeley.
+47:1571:81054:30:20:77:525:607:12:g_d0_f3:12:g_d0_f3:Rotemberg, Julio and Michael Woodford (1999): "The Cyclical Behavior of Prices and
+47:1572:81136:20:20:101:525:587:12:g_d0_f3:12:g_d0_f3:Costs",Handbook of Macroeconomics, John B. Taylor and Michael Woodford eds,
+47:1573:81211:20:30:101:226:567:12:g_d0_f3:12:g_d0_f3:Ellsevier North Holland.
+47:1574:81235:30:21:77:525:537:12:g_d0_f3:12:g_d0_f3:Rotemberg, Julio and Michael Woodford (1992): ìOligopolistic Pricing and the E§ects
+47:1575:81318:21:20:101:525:516:12:g_d0_f3:12:g_d0_f3:of Aggregate Demand on Economic Activityî,Journal of Political Economy, 100,
+47:1576:81394:20:30:101:155:496:12:g_d0_f3:12:g_d0_f3:1153-1297.
+47:1577:81404:30:20:77:525:466:12:g_d0_f3:12:g_d0_f3:Schmitt-GrohÈ, Stephanie and MartÌn Uribe (2008): "Whatís íNewsíin Business Cycle",
+47:1578:81487:20:30:101:272:446:12:g_d0_f3:12:g_d0_f3:NBER Working Paper No. 14215
+47:1579:81515:30:21:77:525:416:12:g_d0_f3:12:g_d0_f3:Smets Frank and R. Wouters (2007): "Shocks and Frictions in US Business Cycles: a
+47:1580:81596:21:30:101:526:395:12:g_d0_f3:12:g_d0_f3:Bayesian DSGE Approach,"American Economic Review, vol. 97(3), 586-606, June.
+47:1581:81672:30:20:77:525:365:12:g_d0_f3:12:g_d0_f4:Stephenson, Frank E. (1998): ìAverage Marginal Tax Rates Revisitedî,Journal of Mon-
+47:1582:81755:20:30:101:265:345:12:g_d0_f4:12:g_d0_f3:etary Economics, 41(2), 389-409
+47:1583:81786:30:20:77:525:315:12:g_d0_f3:12:g_d0_f3:Woodford, Michael (2003): "Interest & Prices: Foundations of a Theory of Monetary
+47:1584:81867:20:31:101:285:295:12:g_d0_f3:12:g_d0_f3:Policy", Princeton University Press.
+47:1585:81903:31:20:77:525:264:12:g_d0_f3:12:g_d0_f3:Yun, Tack (1996), ìMonetary Policy, Nominal Price Rigidity, and Business Cyclesî,
+47:1586:81984:20:0:101:324:244:12:g_d0_f4:12:g_d0_f3:Journal of Monetary Economics, 37:345-70.
+48:1587:82027:0:8:121:470:657:39:Helvetica:39:Helvetica:N F C B , S V A RM A N ,  S V A RNFCB, RSM A N ,  R S
+48:1588:82080:8:58:120:172:649:34:Helvetica:34:Helvetica:gov t. spending
+48:1589:82095:58:0:111:186:591:22:Helvetica:22:Helvetica:05101520
+48:1590:82103:0:0:96:103:598:22:Helvetica:22:Helvetica:-0.8
+48:1591:82107:0:0:97:103:609:22:Helvetica:22:Helvetica:0.0
+48:1592:82110:0:0:97:103:619:22:Helvetica:22:Helvetica:0.8
+48:1593:82113:0:0:97:103:630:22:Helvetica:22:Helvetica:1.6
+48:1594:82116:0:0:97:103:640:22:Helvetica:22:Helvetica:2.4
+48:1595:82119:0:58:223:275:649:34:Helvetica:34:Helvetica:gov t. spending
+48:1596:82134:58:0:214:289:591:22:Helvetica:22:Helvetica:05101520
+48:1597:82142:0:0:199:206:598:22:Helvetica:22:Helvetica:-0.8
+48:1598:82146:0:0:200:206:609:22:Helvetica:22:Helvetica:0.0
+48:1599:82149:0:0:200:206:619:22:Helvetica:22:Helvetica:0.8
+48:1600:82152:0:0:200:206:630:22:Helvetica:22:Helvetica:1.6
+48:1601:82155:0:0:200:206:640:22:Helvetica:22:Helvetica:2.4
+48:1602:82158:0:58:326:378:649:34:Helvetica:34:Helvetica:gov t. spending
+48:1603:82173:58:0:317:392:591:22:Helvetica:22:Helvetica:05101520
+48:1604:82181:0:0:301:308:598:22:Helvetica:22:Helvetica:-0.8
+48:1605:82185:0:0:303:309:609:22:Helvetica:22:Helvetica:0.0
+48:1606:82188:0:0:303:309:619:22:Helvetica:22:Helvetica:0.8
+48:1607:82191:0:0:303:309:630:22:Helvetica:22:Helvetica:1.6
+48:1608:82194:0:0:303:309:640:22:Helvetica:22:Helvetica:2.4
+48:1609:82197:0:58:429:481:649:34:Helvetica:34:Helvetica:gov t. spending
+48:1610:82212:58:0:420:494:591:22:Helvetica:22:Helvetica:05101520
+48:1611:82220:0:0:404:411:598:22:Helvetica:22:Helvetica:-0.8
+48:1612:82224:0:0:406:412:609:22:Helvetica:22:Helvetica:0.0
+48:1613:82227:0:0:406:412:619:22:Helvetica:22:Helvetica:0.8
+48:1614:82230:0:0:406:412:630:22:Helvetica:22:Helvetica:1.6
+48:1615:82233:0:61:406:412:640:22:Helvetica:22:Helvetica:2.4
+48:1616:82236:61:58:137:152:579:34:Helvetica:34:Helvetica:GDP
+48:1617:82239:58:0:111:186:521:22:Helvetica:22:Helvetica:05101520
+48:1618:82247:0:0:96:103:528:22:Helvetica:22:Helvetica:-1.8
+48:1619:82251:0:0:97:103:542:22:Helvetica:22:Helvetica:0.0
+48:1620:82254:0:0:97:103:557:22:Helvetica:22:Helvetica:1.8
+48:1621:82257:0:0:97:103:571:22:Helvetica:22:Helvetica:3.6
+48:1622:82260:0:58:240:255:579:34:Helvetica:34:Helvetica:GDP
+48:1623:82263:58:0:214:289:521:22:Helvetica:22:Helvetica:05101520
+48:1624:82271:0:0:199:206:528:22:Helvetica:22:Helvetica:-1.8
+48:1625:82275:0:0:200:206:542:22:Helvetica:22:Helvetica:0.0
+48:1626:82278:0:0:200:206:557:22:Helvetica:22:Helvetica:1.8
+48:1627:82281:0:0:200:206:571:22:Helvetica:22:Helvetica:3.6
+48:1628:82284:0:58:343:358:579:34:Helvetica:34:Helvetica:GDP
+48:1629:82287:58:0:317:392:521:22:Helvetica:22:Helvetica:05101520
+48:1630:82295:0:0:301:308:528:22:Helvetica:22:Helvetica:-1.8
+48:1631:82299:0:0:303:309:542:22:Helvetica:22:Helvetica:0.0
+48:1632:82302:0:0:303:309:557:22:Helvetica:22:Helvetica:1.8
+48:1633:82305:0:0:303:309:571:22:Helvetica:22:Helvetica:3.6
+48:1634:82308:0:58:445:460:579:34:Helvetica:34:Helvetica:GDP
+48:1635:82311:58:0:420:494:521:22:Helvetica:22:Helvetica:05101520
+48:1636:82319:0:0:404:411:528:22:Helvetica:22:Helvetica:-1.8
+48:1637:82323:0:0:406:412:542:22:Helvetica:22:Helvetica:0.0
+48:1638:82326:0:0:406:412:557:22:Helvetica:22:Helvetica:1.8
+48:1639:82329:0:62:406:412:571:22:Helvetica:22:Helvetica:3.6
+48:1640:82332:62:58:127:165:509:34:Helvetica:34:Helvetica:priv . cons.
+48:1641:82344:58:0:111:186:451:22:Helvetica:22:Helvetica:05101520
+48:1642:82352:0:0:96:103:459:22:Helvetica:22:Helvetica:-0.8
+48:1643:82356:0:0:97:103:473:22:Helvetica:22:Helvetica:0.0
+48:1644:82359:0:0:97:103:487:22:Helvetica:22:Helvetica:0.8
+48:1645:82362:0:0:97:103:501:22:Helvetica:22:Helvetica:1.6
+48:1646:82365:0:58:230:268:509:34:Helvetica:34:Helvetica:priv . cons.
+48:1647:82377:58:0:214:289:451:22:Helvetica:22:Helvetica:05101520
+48:1648:82385:0:0:199:206:459:22:Helvetica:22:Helvetica:-0.8
+48:1649:82389:0:0:200:206:473:22:Helvetica:22:Helvetica:0.0
+48:1650:82392:0:0:200:206:487:22:Helvetica:22:Helvetica:0.8
+48:1651:82395:0:0:200:206:501:22:Helvetica:22:Helvetica:1.6
+48:1652:82398:0:58:333:371:509:34:Helvetica:34:Helvetica:priv . cons.
+48:1653:82410:58:0:317:392:451:22:Helvetica:22:Helvetica:05101520
+48:1654:82418:0:0:301:308:459:22:Helvetica:22:Helvetica:-0.8
+48:1655:82422:0:0:303:309:473:22:Helvetica:22:Helvetica:0.0
+48:1656:82425:0:0:303:309:487:22:Helvetica:22:Helvetica:0.8
+48:1657:82428:0:0:303:309:501:22:Helvetica:22:Helvetica:1.6
+48:1658:82431:0:58:436:474:509:34:Helvetica:34:Helvetica:priv . cons.
+48:1659:82443:58:0:420:494:451:22:Helvetica:22:Helvetica:05101520
+48:1660:82451:0:0:404:411:459:22:Helvetica:22:Helvetica:-0.8
+48:1661:82455:0:0:406:412:473:22:Helvetica:22:Helvetica:0.0
+48:1662:82458:0:0:406:412:487:22:Helvetica:22:Helvetica:0.8
+48:1663:82461:0:62:406:412:501:22:Helvetica:22:Helvetica:1.6
+48:1664:82464:62:58:136:154:439:34:Helvetica:34:Helvetica:prinv
+48:1665:82469:58:0:111:186:381:22:Helvetica:22:Helvetica:05101520
+48:1666:82477:0:0:96:103:389:22:Helvetica:22:Helvetica:-1.0
+48:1667:82481:0:0:96:103:400:22:Helvetica:22:Helvetica:-0.5
+48:1668:82485:0:0:97:103:410:22:Helvetica:22:Helvetica:0.0
+48:1669:82488:0:0:97:103:421:22:Helvetica:22:Helvetica:0.5
+48:1670:82491:0:0:97:103:431:22:Helvetica:22:Helvetica:1.0
+48:1671:82494:0:58:239:257:439:34:Helvetica:34:Helvetica:prinv
+48:1672:82499:58:0:214:289:381:22:Helvetica:22:Helvetica:05101520
+48:1673:82507:0:0:199:206:389:22:Helvetica:22:Helvetica:-1.0
+48:1674:82511:0:0:199:206:400:22:Helvetica:22:Helvetica:-0.5
+48:1675:82515:0:0:200:206:410:22:Helvetica:22:Helvetica:0.0
+48:1676:82518:0:0:200:206:421:22:Helvetica:22:Helvetica:0.5
+48:1677:82521:0:0:200:206:431:22:Helvetica:22:Helvetica:1.0
+48:1678:82524:0:58:342:360:439:34:Helvetica:34:Helvetica:prinv
+48:1679:82529:58:0:317:392:381:22:Helvetica:22:Helvetica:05101520
+48:1680:82537:0:0:301:308:389:22:Helvetica:22:Helvetica:-1.0
+48:1681:82541:0:0:301:308:400:22:Helvetica:22:Helvetica:-0.5
+48:1682:82545:0:0:303:309:410:22:Helvetica:22:Helvetica:0.0
+48:1683:82548:0:0:303:309:421:22:Helvetica:22:Helvetica:0.5
+48:1684:82551:0:0:303:309:431:22:Helvetica:22:Helvetica:1.0
+48:1685:82554:0:58:444:462:439:34:Helvetica:34:Helvetica:prinv
+48:1686:82559:58:0:420:494:381:22:Helvetica:22:Helvetica:05101520
+48:1687:82567:0:0:404:411:389:22:Helvetica:22:Helvetica:-1.0
+48:1688:82571:0:0:404:411:400:22:Helvetica:22:Helvetica:-0.5
+48:1689:82575:0:0:406:412:410:22:Helvetica:22:Helvetica:0.0
+48:1690:82578:0:0:406:412:421:22:Helvetica:22:Helvetica:0.5
+48:1691:82581:0:61:406:412:431:22:Helvetica:22:Helvetica:1.0
+48:1692:82584:61:58:132:158:370:34:Helvetica:34:Helvetica:markup
+48:1693:82590:58:0:111:186:312:22:Helvetica:22:Helvetica:05101520
+48:1694:82598:0:0:96:103:319:22:Helvetica:22:Helvetica:-3.6
+48:1695:82602:0:0:96:103:330:22:Helvetica:22:Helvetica:-2.4
+48:1696:82606:0:0:96:103:340:22:Helvetica:22:Helvetica:-1.2
+48:1697:82610:0:0:97:103:351:22:Helvetica:22:Helvetica:0.0
+48:1698:82613:0:0:97:103:362:22:Helvetica:22:Helvetica:1.2
+48:1699:82616:0:58:235:261:370:34:Helvetica:34:Helvetica:markup
+48:1700:82622:58:0:214:289:312:22:Helvetica:22:Helvetica:05101520
+48:1701:82630:0:0:199:206:319:22:Helvetica:22:Helvetica:-3.6
+48:1702:82634:0:0:199:206:330:22:Helvetica:22:Helvetica:-2.4
+48:1703:82638:0:0:199:206:340:22:Helvetica:22:Helvetica:-1.2
+48:1704:82642:0:0:200:206:351:22:Helvetica:22:Helvetica:0.0
+48:1705:82645:0:0:200:206:362:22:Helvetica:22:Helvetica:1.2
+48:1706:82648:0:58:338:364:370:34:Helvetica:34:Helvetica:markup
+48:1707:82654:58:0:317:392:312:22:Helvetica:22:Helvetica:05101520
+48:1708:82662:0:0:301:308:319:22:Helvetica:22:Helvetica:-3.6
+48:1709:82666:0:0:301:308:330:22:Helvetica:22:Helvetica:-2.4
+48:1710:82670:0:0:301:308:340:22:Helvetica:22:Helvetica:-1.2
+48:1711:82674:0:0:303:309:351:22:Helvetica:22:Helvetica:0.0
+48:1712:82677:0:0:303:309:362:22:Helvetica:22:Helvetica:1.2
+48:1713:82680:0:58:441:467:370:34:Helvetica:34:Helvetica:markup
+48:1714:82686:58:0:420:494:312:22:Helvetica:22:Helvetica:05101520
+48:1715:82694:0:0:404:411:319:22:Helvetica:22:Helvetica:-3.6
+48:1716:82698:0:0:404:411:330:22:Helvetica:22:Helvetica:-2.4
+48:1717:82702:0:0:404:411:340:22:Helvetica:22:Helvetica:-1.2
+48:1718:82706:0:0:406:412:351:22:Helvetica:22:Helvetica:0.0
+48:1719:82709:0:62:406:412:362:22:Helvetica:22:Helvetica:1.2
+48:1720:82712:62:58:114:180:300:34:Helvetica:34:Helvetica:consum ption w age
+48:1721:82730:58:0:111:186:242:22:Helvetica:22:Helvetica:05101520
+48:1722:82738:0:0:96:103:249:22:Helvetica:22:Helvetica:-1.2
+48:1723:82742:0:0:97:103:260:22:Helvetica:22:Helvetica:0.0
+48:1724:82745:0:0:97:103:271:22:Helvetica:22:Helvetica:1.2
+48:1725:82748:0:0:97:103:281:22:Helvetica:22:Helvetica:2.4
+48:1726:82751:0:0:97:103:292:22:Helvetica:22:Helvetica:3.6
+48:1727:82754:0:58:217:283:300:34:Helvetica:34:Helvetica:consum ption w age
+48:1728:82772:58:0:214:289:242:22:Helvetica:22:Helvetica:05101520
+48:1729:82780:0:0:199:206:249:22:Helvetica:22:Helvetica:-1.2
+48:1730:82784:0:0:200:206:260:22:Helvetica:22:Helvetica:0.0
+48:1731:82787:0:0:200:206:271:22:Helvetica:22:Helvetica:1.2
+48:1732:82790:0:0:200:206:281:22:Helvetica:22:Helvetica:2.4
+48:1733:82793:0:0:200:206:292:22:Helvetica:22:Helvetica:3.6
+48:1734:82796:0:58:319:385:300:34:Helvetica:34:Helvetica:consum ption w age
+48:1735:82814:58:0:317:392:242:22:Helvetica:22:Helvetica:05101520
+48:1736:82822:0:0:301:308:249:22:Helvetica:22:Helvetica:-1.2
+48:1737:82826:0:0:303:309:260:22:Helvetica:22:Helvetica:0.0
+48:1738:82829:0:0:303:309:271:22:Helvetica:22:Helvetica:1.2
+48:1739:82832:0:0:303:309:281:22:Helvetica:22:Helvetica:2.4
+48:1740:82835:0:0:303:309:292:22:Helvetica:22:Helvetica:3.6
+48:1741:82838:0:58:422:488:300:34:Helvetica:34:Helvetica:consum ption w age
+48:1742:82856:58:0:420:494:242:22:Helvetica:22:Helvetica:05101520
+48:1743:82864:0:0:404:411:249:22:Helvetica:22:Helvetica:-1.2
+48:1744:82868:0:0:406:412:260:22:Helvetica:22:Helvetica:0.0
+48:1745:82871:0:0:406:412:271:22:Helvetica:22:Helvetica:1.2
+48:1746:82874:0:0:406:412:281:22:Helvetica:22:Helvetica:2.4
+48:1747:82877:0:62:406:412:292:22:Helvetica:22:Helvetica:3.6
+48:1748:82880:62:58:122:169:230:34:Helvetica:34:Helvetica:product w age
+48:1749:82893:58:0:111:186:172:22:Helvetica:22:Helvetica:05101520
+48:1750:82901:0:0:96:103:180:22:Helvetica:22:Helvetica:-2.5
+48:1751:82905:0:0:97:103:190:22:Helvetica:22:Helvetica:0.0
+48:1752:82908:0:0:97:103:201:22:Helvetica:22:Helvetica:2.5
+48:1753:82911:0:0:97:103:211:22:Helvetica:22:Helvetica:5.0
+48:1754:82914:0:0:97:103:222:22:Helvetica:22:Helvetica:7.5
+48:1755:82917:0:58:225:272:230:34:Helvetica:34:Helvetica:product w age
+48:1756:82930:58:0:214:289:172:22:Helvetica:22:Helvetica:05101520
+48:1757:82938:0:0:199:206:180:22:Helvetica:22:Helvetica:-2.5
+48:1758:82942:0:0:200:206:190:22:Helvetica:22:Helvetica:0.0
+48:1759:82945:0:0:200:206:201:22:Helvetica:22:Helvetica:2.5
+48:1760:82948:0:0:200:206:211:22:Helvetica:22:Helvetica:5.0
+48:1761:82951:0:0:200:206:222:22:Helvetica:22:Helvetica:7.5
+48:1762:82954:0:58:328:375:230:34:Helvetica:34:Helvetica:product w age
+48:1763:82967:58:0:317:392:172:22:Helvetica:22:Helvetica:05101520
+48:1764:82975:0:0:301:308:180:22:Helvetica:22:Helvetica:-2.5
+48:1765:82979:0:0:303:309:190:22:Helvetica:22:Helvetica:0.0
+48:1766:82982:0:0:303:309:201:22:Helvetica:22:Helvetica:2.5
+48:1767:82985:0:0:303:309:211:22:Helvetica:22:Helvetica:5.0
+48:1768:82988:0:0:303:309:222:22:Helvetica:22:Helvetica:7.5
+48:1769:82991:0:58:431:478:230:34:Helvetica:34:Helvetica:product w age
+48:1770:83004:58:0:420:494:172:22:Helvetica:22:Helvetica:05101520
+48:1771:83012:0:0:404:411:180:22:Helvetica:22:Helvetica:-2.5
+48:1772:83016:0:0:406:412:190:22:Helvetica:22:Helvetica:0.0
+48:1773:83019:0:0:406:412:201:22:Helvetica:22:Helvetica:2.5
+48:1774:83022:0:0:406:412:211:22:Helvetica:22:Helvetica:5.0
+48:1775:83025:0:92:406:412:222:22:Helvetica:22:Helvetica:7.5
+48:1776:83028:92:0:210:386:130:12:g_d0_f3:12:g_d0_f3:Figure 1: SVAR and RS responses
+49:1777:83061:0:0:169:298:430:34:Helvetica:34:Helvetica:02468
+49:1778:83066:0:0:161:167:437:34:Helvetica:34:Helvetica:-1
+49:1779:83068:0:0:156:168:474:34:Helvetica:34:Helvetica:-0.5
+49:1780:83072:0:0:164:168:510:34:Helvetica:34:Helvetica:0
+49:1781:83073:0:0:158:168:546:34:Helvetica:34:Helvetica:0.5
+49:1782:83076:0:118:178:287:554:34:Helvetica:34:Helvetica:Consumption  - GHH preferences
+49:1783:83106:118:0:321:320:436:34:Helvetica:34:Helvetica:02468-0.8
+49:1784:83115:0:0:308:320:468:34:Helvetica:34:Helvetica:-0.6
+49:1785:83119:0:0:308:320:495:34:Helvetica:34:Helvetica:-0.4
+49:1786:83123:0:0:308:320:521:34:Helvetica:34:Helvetica:-0.2
+49:1787:83127:0:0:316:320:546:34:Helvetica:34:Helvetica:0
+49:1788:83128:0:264:332:440:554:34:Helvetica:34:Helvetica:Consumption  - KPR preferences
+49:1789:83158:264:0:169:288:290:34:Helvetica:34:Helvetica:02468
+49:1790:83163:0:0:156:168:297:34:Helvetica:34:Helvetica:-0.5
+49:1791:83167:0:0:164:168:323:34:Helvetica:34:Helvetica:0
+49:1792:83168:0:0:158:168:349:34:Helvetica:34:Helvetica:0.5
+49:1793:83171:0:0:164:168:376:34:Helvetica:34:Helvetica:1
+49:1794:83172:0:0:158:168:401:34:Helvetica:34:Helvetica:1.5
+49:1795:83175:0:120:186:269:409:34:Helvetica:34:Helvetica:Hours - GHH preferences
+49:1796:83198:120:0:325:455:289:34:Helvetica:34:Helvetica:02468
+49:1797:83203:0:0:320:324:296:34:Helvetica:34:Helvetica:0
+49:1798:83204:0:0:314:324:317:34:Helvetica:34:Helvetica:0.2
+49:1799:83207:0:0:314:324:339:34:Helvetica:34:Helvetica:0.4
+49:1800:83210:0:0:314:324:360:34:Helvetica:34:Helvetica:0.6
+49:1801:83213:0:0:314:324:381:34:Helvetica:34:Helvetica:0.8
+49:1802:83216:0:0:320:324:402:34:Helvetica:34:Helvetica:1
+49:1803:83217:0:135:348:430:410:34:Helvetica:34:Helvetica:Hours - KPR preferences
+49:1804:83240:135:35:289:382:275:34:Helvetica:34:Helvetica:NO habithabit
+49:1805:83253:35:0:208:389:240:12:g_d0_f3:12:g_d0_f3:Figure 2: No capital, áexible prices
+50:1806:83291:0:0:153:286:507:43:Helvetica:43:Helvetica:02468
+50:1807:83296:0:0:147:151:515:43:Helvetica:43:Helvetica:0
+50:1808:83297:0:0:141:152:541:43:Helvetica:43:Helvetica:0.5
+50:1809:83300:0:0:147:151:568:43:Helvetica:43:Helvetica:1
+50:1810:83301:0:69:158:278:576:43:Helvetica:43:Helvetica:Consumption - GHH preferences
+50:1811:83330:69:0:324:458:507:43:Helvetica:43:Helvetica:02468
+50:1812:83335:0:0:309:323:525:43:Helvetica:43:Helvetica:-0.4
+50:1813:83339:0:0:309:323:547:43:Helvetica:43:Helvetica:-0.2
+50:1814:83343:0:0:318:322:568:43:Helvetica:43:Helvetica:0
+50:1815:83344:0:149:330:449:576:43:Helvetica:43:Helvetica:Consumption - KPR preferences
+50:1816:83373:149:0:153:286:427:43:Helvetica:43:Helvetica:02468
+50:1817:83378:0:0:147:151:434:43:Helvetica:43:Helvetica:0
+50:1818:83379:0:0:147:151:461:43:Helvetica:43:Helvetica:1
+50:1819:83380:0:0:147:151:487:43:Helvetica:43:Helvetica:2
+50:1820:83381:0:68:172:265:495:43:Helvetica:43:Helvetica:Hours - GHH preferences
+50:1821:83404:68:0:324:458:427:43:Helvetica:43:Helvetica:02468
+50:1822:83409:0:0:318:322:434:43:Helvetica:43:Helvetica:0
+50:1823:83410:0:0:312:323:461:43:Helvetica:43:Helvetica:0.5
+50:1824:83413:0:0:318:322:487:43:Helvetica:43:Helvetica:1
+50:1825:83414:0:149:344:436:495:43:Helvetica:43:Helvetica:Hours - KPR preferences
+50:1826:83437:149:0:153:286:346:43:Helvetica:43:Helvetica:02468
+50:1827:83442:0:0:147:151:353:43:Helvetica:43:Helvetica:0
+50:1828:83443:0:0:147:151:380:43:Helvetica:43:Helvetica:1
+50:1829:83444:0:0:147:151:406:43:Helvetica:43:Helvetica:2
+50:1830:83445:0:68:163:274:414:43:Helvetica:43:Helvetica:Real Wage - GHH preferences
+50:1831:83472:68:0:324:458:346:43:Helvetica:43:Helvetica:02468
+50:1832:83477:0:0:318:322:353:43:Helvetica:43:Helvetica:0
+50:1833:83478:0:0:312:323:380:43:Helvetica:43:Helvetica:0.5
+50:1834:83481:0:0:318:322:406:43:Helvetica:43:Helvetica:1
+50:1835:83482:0:149:335:445:414:43:Helvetica:43:Helvetica:Real Wage - KPR preferences
+50:1836:83509:149:0:153:286:265:43:Helvetica:43:Helvetica:02468
+50:1837:83514:0:0:145:152:272:43:Helvetica:43:Helvetica:-2
+50:1838:83516:0:0:145:152:298:43:Helvetica:43:Helvetica:-1
+50:1839:83518:0:0:147:151:324:43:Helvetica:43:Helvetica:0
+50:1840:83519:0:68:170:267:333:43:Helvetica:43:Helvetica:Markup - GHH preferences
+50:1841:83543:68:0:324:458:265:43:Helvetica:43:Helvetica:02468
+50:1842:83548:0:0:316:323:272:43:Helvetica:43:Helvetica:-1
+50:1843:83550:0:0:309:323:298:43:Helvetica:43:Helvetica:-0.5
+50:1844:83554:0:0:318:322:324:43:Helvetica:43:Helvetica:0
+50:1845:83555:0:88:342:437:333:43:Helvetica:43:Helvetica:Markup - KPR preferences
+50:1846:83579:88:36:282:368:245:43:Helvetica:43:Helvetica:NO habithabit
+50:1847:83592:36:0:211:385:209:12:g_d0_f3:12:g_d0_f3:Figure 3: No capital, sticky prices
+51:1848:83629:0:0:155:287:482:45:Helvetica:45:Helvetica:02468
+51:1849:83634:0:0:150:154:490:45:Helvetica:45:Helvetica:0
+51:1850:83635:0:0:143:154:526:45:Helvetica:45:Helvetica:0.5
+51:1851:83638:0:0:150:154:562:45:Helvetica:45:Helvetica:1
+51:1852:83639:0:89:160:279:571:45:Helvetica:45:Helvetica:Consumption - GHH Preferences
+51:1853:83668:89:0:323:455:482:45:Helvetica:45:Helvetica:02468
+51:1854:83673:0:0:309:322:490:45:Helvetica:45:Helvetica:-0.2
+51:1855:83677:0:0:318:322:526:45:Helvetica:45:Helvetica:0
+51:1856:83678:0:0:311:322:562:45:Helvetica:45:Helvetica:0.2
+51:1857:83681:0:195:330:448:571:45:Helvetica:45:Helvetica:Consumption - KPR Preferences
+51:1858:83710:195:0:155:287:376:45:Helvetica:45:Helvetica:02468
+51:1859:83715:0:0:143:154:384:45:Helvetica:45:Helvetica:0.5
+51:1860:83718:0:0:150:154:421:45:Helvetica:45:Helvetica:1
+51:1861:83719:0:0:143:154:456:45:Helvetica:45:Helvetica:1.5
+51:1862:83722:0:90:173:265:466:45:Helvetica:45:Helvetica:Hours - GHH Preferences
+51:1863:83745:90:0:323:455:376:45:Helvetica:45:Helvetica:02468
+51:1864:83750:0:0:318:322:384:45:Helvetica:45:Helvetica:0
+51:1865:83751:0:0:311:322:409:45:Helvetica:45:Helvetica:0.5
+51:1866:83754:0:0:318:322:433:45:Helvetica:45:Helvetica:1
+51:1867:83755:0:0:311:322:456:45:Helvetica:45:Helvetica:1.5
+51:1868:83758:0:196:342:435:466:45:Helvetica:45:Helvetica:Hours  - KPR Preferences
+51:1869:83782:196:0:155:287:270:45:Helvetica:45:Helvetica:02468
+51:1870:83787:0:0:141:154:278:45:Helvetica:45:Helvetica:-0.6
+51:1871:83791:0:0:141:154:303:45:Helvetica:45:Helvetica:-0.4
+51:1872:83795:0:0:141:154:327:45:Helvetica:45:Helvetica:-0.2
+51:1873:83799:0:0:150:154:350:45:Helvetica:45:Helvetica:0
+51:1874:83800:0:90:171:267:360:45:Helvetica:45:Helvetica:Markup - GHH Preferences
+51:1875:83824:90:0:323:455:270:45:Helvetica:45:Helvetica:02468
+51:1876:83829:0:0:309:322:278:45:Helvetica:45:Helvetica:-1.5
+51:1877:83833:0:0:315:322:303:45:Helvetica:45:Helvetica:-1
+51:1878:83835:0:0:309:322:327:45:Helvetica:45:Helvetica:-0.5
+51:1879:83839:0:0:318:322:350:45:Helvetica:45:Helvetica:0
+51:1880:83840:0:107:341:435:360:45:Helvetica:45:Helvetica:Markup - KPR Preferences
+51:1881:83864:107:36:269:396:253:45:Symbol:45:Helvetica:σ = 1.5σ = 2σ = 3
+51:1882:83881:36:0:122:474:217:12:g_d0_f3:12:g_d0_f5:Figure 4: No capital, sticky prices, habit persistence: sensitivity to-
+52:1883:83954:0:0:149:287:486:45:Helvetica:45:Helvetica:02468
+52:1884:83959:0:0:144:149:493:45:Helvetica:45:Helvetica:0
+52:1885:83960:0:0:137:148:512:45:Helvetica:45:Helvetica:0.2
+52:1886:83963:0:0:137:148:532:45:Helvetica:45:Helvetica:0.4
+52:1887:83966:0:0:137:148:551:45:Helvetica:45:Helvetica:0.6
+52:1888:83969:0:0:137:148:570:45:Helvetica:45:Helvetica:0.8
+52:1889:83972:0:93:155:279:579:45:Helvetica:45:Helvetica:Consumption - GHH Preferences
+52:1890:84001:93:0:324:463:486:45:Helvetica:45:Helvetica:02468
+52:1891:84006:0:0:309:323:493:45:Helvetica:45:Helvetica:-0.2
+52:1892:84010:0:0:304:323:512:45:Helvetica:45:Helvetica:-0.15
+52:1893:84015:0:0:309:323:532:45:Helvetica:45:Helvetica:-0.1
+52:1894:84019:0:0:304:323:551:45:Helvetica:45:Helvetica:-0.05
+52:1895:84024:0:0:319:324:570:45:Helvetica:45:Helvetica:0
+52:1896:84025:0:204:331:453:579:45:Helvetica:45:Helvetica:Consumption - KPR Preferences
+52:1897:84054:204:0:149:287:375:45:Helvetica:45:Helvetica:02468
+52:1898:84059:0:0:144:149:383:45:Helvetica:45:Helvetica:0
+52:1899:84060:0:0:137:148:409:45:Helvetica:45:Helvetica:0.5
+52:1900:84063:0:0:144:149:434:45:Helvetica:45:Helvetica:1
+52:1901:84064:0:0:137:148:459:45:Helvetica:45:Helvetica:1.5
+52:1902:84067:0:93:168:264:468:45:Helvetica:45:Helvetica:Hours - GHH Preferences
+52:1903:84090:93:0:324:463:375:45:Helvetica:45:Helvetica:02468
+52:1904:84095:0:0:319:324:383:45:Helvetica:45:Helvetica:0
+52:1905:84096:0:0:312:323:421:45:Helvetica:45:Helvetica:0.5
+52:1906:84099:0:0:319:324:459:45:Helvetica:45:Helvetica:1
+52:1907:84100:0:204:344:440:468:45:Helvetica:45:Helvetica:Hours  - KPR Preferences
+52:1908:84124:204:0:149:287:264:45:Helvetica:45:Helvetica:02468
+52:1909:84129:0:0:134:148:272:45:Helvetica:45:Helvetica:-0.8
+52:1910:84133:0:0:134:148:291:45:Helvetica:45:Helvetica:-0.6
+52:1911:84137:0:0:134:148:310:45:Helvetica:45:Helvetica:-0.4
+52:1912:84141:0:0:134:148:329:45:Helvetica:45:Helvetica:-0.2
+52:1913:84145:0:0:144:149:348:45:Helvetica:45:Helvetica:0
+52:1914:84146:0:93:166:266:357:45:Helvetica:45:Helvetica:Markup - GHH Preferences
+52:1915:84170:93:0:324:463:264:45:Helvetica:45:Helvetica:02468
+52:1916:84175:0:0:309:323:272:45:Helvetica:45:Helvetica:-1.5
+52:1917:84179:0:0:316:323:298:45:Helvetica:45:Helvetica:-1
+52:1918:84181:0:0:309:323:323:45:Helvetica:45:Helvetica:-0.5
+52:1919:84185:0:0:319:324:348:45:Helvetica:45:Helvetica:0
+52:1920:84186:0:112:343:441:357:45:Helvetica:45:Helvetica:Markup - KPR Preferences
+52:1921:84210:112:36:257:400:245:45:Symbol:45:Helvetica:ζ = 1.4ζ = 1.8ζ = 2.2
+52:1922:84231:36:0:123:473:209:12:g_d0_f3:12:g_d0_f5:Figure 5: No capital, sticky prices, habit persistence: sensitivity to-
+53:1923:84304:0:0:163:446:437:37:Helvetica:37:Helvetica:012345678
+53:1924:84313:0:0:150:163:444:37:Helvetica:37:Helvetica:-0.2
+53:1925:84317:0:0:158:162:473:37:Helvetica:37:Helvetica:0
+53:1926:84318:0:0:152:162:501:37:Helvetica:37:Helvetica:0.2
+53:1927:84321:0:0:152:162:530:37:Helvetica:37:Helvetica:0.4
+53:1928:84324:0:0:152:162:558:37:Helvetica:37:Helvetica:0.6
+53:1929:84327:0:287:281:327:566:37:Helvetica:37:Helvetica:Consumption
+53:1930:84338:287:0:163:446:279:37:Helvetica:37:Helvetica:012345678
+53:1931:84347:0:0:158:162:286:37:Helvetica:37:Helvetica:0
+53:1932:84348:0:0:152:162:324:37:Helvetica:37:Helvetica:0.5
+53:1933:84351:0:0:158:162:362:37:Helvetica:37:Helvetica:1
+53:1934:84352:0:0:152:162:400:37:Helvetica:37:Helvetica:1.5
+53:1935:84355:0:147:294:315:408:37:Helvetica:37:Helvetica:Hours
+53:1936:84360:147:35:241:422:261:37:Symbol:37:Helvetica:γ = 0γ = 0.01γ = 0.25γ = 1
+53:1937:84386:35:0:123:473:226:12:g_d0_f3:12:g_d0_f5:Figure 6: No capital, sticky prices, habit persistence: sensitivity to\r
+54:1938:84460:0:0:144:286:489:45:Helvetica:45:Helvetica:02468
+54:1939:84465:0:0:129:143:496:45:Helvetica:45:Helvetica:-0.2
+54:1940:84469:0:0:139:144:516:45:Helvetica:45:Helvetica:0
+54:1941:84470:0:0:132:144:536:45:Helvetica:45:Helvetica:0.2
+54:1942:84473:0:0:132:144:556:45:Helvetica:45:Helvetica:0.4
+54:1943:84476:0:0:132:144:576:45:Helvetica:45:Helvetica:0.6
+54:1944:84479:0:96:188:241:585:45:Helvetica:45:Helvetica:Consumption
+54:1945:84490:96:0:325:468:489:45:Helvetica:45:Helvetica:02468
+54:1946:84495:0:0:310:324:496:45:Helvetica:45:Helvetica:-0.5
+54:1947:84499:0:0:319:324:516:45:Helvetica:45:Helvetica:0
+54:1948:84500:0:0:312:324:536:45:Helvetica:45:Helvetica:0.5
+54:1949:84503:0:0:319:324:556:45:Helvetica:45:Helvetica:1
+54:1950:84504:0:0:312:324:576:45:Helvetica:45:Helvetica:1.5
+54:1951:84507:0:211:371:420:585:45:Helvetica:45:Helvetica:Employment
+54:1952:84517:211:0:144:286:374:45:Helvetica:45:Helvetica:02468
+54:1953:84522:0:0:129:143:381:45:Helvetica:45:Helvetica:-1.5
+54:1954:84526:0:0:136:144:408:45:Helvetica:45:Helvetica:-1
+54:1955:84528:0:0:129:143:435:45:Helvetica:45:Helvetica:-0.5
+54:1956:84532:0:0:139:144:461:45:Helvetica:45:Helvetica:0
+54:1957:84533:0:96:200:228:470:45:Helvetica:45:Helvetica:Markup
+54:1958:84539:96:0:325:468:374:45:Helvetica:45:Helvetica:02468
+54:1959:84544:0:0:310:324:381:45:Helvetica:45:Helvetica:-0.5
+54:1960:84548:0:0:319:324:408:45:Helvetica:45:Helvetica:0
+54:1961:84549:0:0:312:324:435:45:Helvetica:45:Helvetica:0.5
+54:1962:84552:0:0:319:324:461:45:Helvetica:45:Helvetica:1
+54:1963:84553:0:210:374:417:470:45:Helvetica:45:Helvetica:Real Wage
+54:1964:84562:210:0:144:286:260:45:Helvetica:45:Helvetica:02468
+54:1965:84567:0:0:139:144:267:45:Helvetica:45:Helvetica:0
+54:1966:84568:0:0:134:144:288:45:Helvetica:45:Helvetica:10
+54:1967:84570:0:0:134:144:307:45:Helvetica:45:Helvetica:20
+54:1968:84572:0:0:134:144:328:45:Helvetica:45:Helvetica:30
+54:1969:84574:0:0:134:144:347:45:Helvetica:45:Helvetica:40
+54:1970:84576:0:96:152:278:356:45:Helvetica:45:Helvetica:Real Interest Rate (basis points)
+54:1971:84609:96:0:325:468:260:45:Helvetica:45:Helvetica:02468
+54:1972:84614:0:0:317:325:267:45:Helvetica:45:Helvetica:-1
+54:1973:84616:0:0:310:324:307:45:Helvetica:45:Helvetica:-0.5
+54:1974:84620:0:0:319:324:347:45:Helvetica:45:Helvetica:0
+54:1975:84621:0:116:374:417:356:45:Helvetica:45:Helvetica:Investment
+54:1976:84631:116:37:267:379:240:45:Symbol:45:Helvetica:∆ I  costconvex cost
+54:1977:84651:37:0:170:422:203:12:g_d0_f3:12:g_d0_f3:Figure 7: Capital, sticky prices, habit persistence
+55:1978:84704:0:0:138:289:443:61:Helvetica:61:Helvetica:0510
+55:1979:84708:0:0:121:137:452:61:Helvetica:61:Helvetica:-0.2
+55:1980:84712:0:0:132:137:475:61:Helvetica:61:Helvetica:0
+55:1981:84713:0:0:124:136:498:61:Helvetica:61:Helvetica:0.2
+55:1982:84716:0:0:124:136:522:61:Helvetica:61:Helvetica:0.4
+55:1983:84719:0:0:124:136:545:61:Helvetica:61:Helvetica:0.6
+55:1984:84722:0:0:124:136:568:61:Helvetica:61:Helvetica:0.8
+55:1985:84725:0:135:182:239:578:61:Helvetica:61:Helvetica:Consumption
+55:1986:84736:135:0:326:477:443:61:Helvetica:61:Helvetica:0510
+55:1987:84740:0:0:309:325:452:61:Helvetica:61:Helvetica:-0.5
+55:1988:84744:0:0:320:325:481:61:Helvetica:61:Helvetica:0
+55:1989:84745:0:0:312:324:510:61:Helvetica:61:Helvetica:0.5
+55:1990:84748:0:0:320:325:539:61:Helvetica:61:Helvetica:1
+55:1991:84749:0:0:312:324:568:61:Helvetica:61:Helvetica:1.5
+55:1992:84752:0:298:375:422:578:61:Helvetica:61:Helvetica:Real Wage
+55:1993:84761:298:0:138:289:280:61:Helvetica:61:Helvetica:0510
+55:1994:84765:0:0:121:137:289:61:Helvetica:61:Helvetica:-1.5
+55:1995:84769:0:0:129:137:318:61:Helvetica:61:Helvetica:-1
+55:1996:84771:0:0:121:137:347:61:Helvetica:61:Helvetica:-0.5
+55:1997:84775:0:0:132:137:376:61:Helvetica:61:Helvetica:0
+55:1998:84776:0:0:124:136:405:61:Helvetica:61:Helvetica:0.5
+55:1999:84779:0:51:196:226:416:61:Helvetica:61:Helvetica:Markup
+55:2000:84785:51:15:404:431:365:61:Helvetica:61:Helvetica:model
+55:2001:84790:15:15:404:427:350:61:Helvetica:61:Helvetica:SVAR
+55:2002:84794:15:14:404:429:335:61:Helvetica:61:Helvetica:upper
+55:2003:84799:14:92:404:427:321:61:Helvetica:61:Helvetica:lower
+55:2004:84804:92:14:72:525:229:12:g_d0_f3:12:g_d0_f3:Figure 8: No capital, sticky prices, habit persistence:matching SVAR and model-based
+55:2005:84888:14:0:72:163:215:12:g_d0_f3:12:g_d0_f3:impulse responses
+56:2006:84907:0:0:135:288:450:40:Helvetica:40:Helvetica:0246810
+56:2007:84914:0:0:120:133:457:40:Helvetica:40:Helvetica:-0.2
+56:2008:84918:0:0:130:134:483:40:Helvetica:40:Helvetica:0
+56:2009:84919:0:0:123:134:509:40:Helvetica:40:Helvetica:0.2
+56:2010:84922:0:0:123:134:535:40:Helvetica:40:Helvetica:0.4
+56:2011:84925:0:0:123:134:561:40:Helvetica:40:Helvetica:0.6
+56:2012:84928:0:0:123:134:587:40:Helvetica:40:Helvetica:0.8
+56:2013:84931:0:145:185:234:595:40:Helvetica:40:Helvetica:Consumption
+56:2014:84942:145:0:327:479:450:40:Helvetica:40:Helvetica:0246810
+56:2015:84949:0:0:313:326:457:40:Helvetica:40:Helvetica:-0.5
+56:2016:84953:0:0:322:326:490:40:Helvetica:40:Helvetica:0
+56:2017:84954:0:0:315:326:524:40:Helvetica:40:Helvetica:0.5
+56:2018:84957:0:0:322:326:557:40:Helvetica:40:Helvetica:1
+56:2019:84958:0:0:315:326:590:40:Helvetica:40:Helvetica:1.5
+56:2020:84961:0:336:381:421:599:40:Helvetica:40:Helvetica:Real Wage
+56:2021:84970:336:0:135:288:263:40:Helvetica:40:Helvetica:0246810
+56:2022:84977:0:0:120:133:270:40:Helvetica:40:Helvetica:-1.5
+56:2023:84981:0:0:127:134:304:40:Helvetica:40:Helvetica:-1
+56:2024:84983:0:0:120:133:338:40:Helvetica:40:Helvetica:-0.5
+56:2025:84987:0:0:130:134:371:40:Helvetica:40:Helvetica:0
+56:2026:84988:0:0:123:134:404:40:Helvetica:40:Helvetica:0.5
+56:2027:84991:0:170:197:223:412:40:Helvetica:40:Helvetica:Markup
+56:2028:84997:170:0:232:421:242:40:Helvetica:40:Helvetica:modelSVARupperlower
+56:2029:85016:0:0:327:479:263:43:Helvetica:43:Helvetica:0246810
+56:2030:85023:0:0:312:327:270:43:Helvetica:43:Helvetica:-1.5
+56:2031:85027:0:0:319:326:303:43:Helvetica:43:Helvetica:-1
+56:2032:85029:0:0:312:327:337:43:Helvetica:43:Helvetica:-0.5
+56:2033:85033:0:0:322:327:371:43:Helvetica:43:Helvetica:0
+56:2034:85034:0:0:315:327:404:43:Helvetica:43:Helvetica:0.5
+56:2035:85037:0:208:381:421:413:43:Helvetica:43:Helvetica:Investment
+56:2036:85047:208:15:72:525:205:12:g_d0_f3:12:g_d0_f3:Figure 9: Capital, sticky prices, habit persistence:matching SVAR and model-based
+56:2037:85128:15:0:72:163:190:12:g_d0_f3:12:g_d0_f3:impulse responses

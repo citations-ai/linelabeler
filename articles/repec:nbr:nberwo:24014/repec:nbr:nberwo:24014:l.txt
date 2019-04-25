@@ -1,0 +1,857 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:?:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:481:610:12:Times:12:Times:?:DAILY PRICE LIMITS AND DESTRUCTIVE MARKET BEHAVIOR
+1:2:75:28:14:306:332:582:12:Times:12:Times:?:Ting Chen
+1:3:84:14:14:306:336:568:12:Times:12:Times:?:Zhenyu Gao
+1:4:94:14:14:306:327:554:12:Times:12:Times:?:Jibao He
+1:5:102:14:14:306:336:540:12:Times:12:Times:?:Wenxi Jiang
+1:6:113:14:28:306:332:526:12:Times:12:Times:?:Wei Xiong
+1:7:122:28:14:306:359:498:12:Times:12:Times:?:Working Paper 24014
+1:8:141:14:42:306:393:484:12:Times:12:Times:?:http://www.nber.org/papers/w24014
+1:9:174:42:14:306:439:442:12:Times:12:Times:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:10:210:14:14:306:374:428:12:Times:12:Times:?:1050 Massachusetts Avenue
+1:11:235:14:14:306:362:414:12:Times:12:Times:?:Cambridge, MA 02138
+1:12:254:14:158:306:345:400:12:Times:12:Times:?:November 2017
+1:13:267:158:14:72:540:242:12:Times:12:Times:?:We are grateful to seminar participants at the Chinese University of Hong Kong, Columbia University,
+1:14:367:14:14:72:540:228:12:Times:12:Times:?:the Shenzhen Stock Exchange, Tsinghua University, the University of Hong Kong, and the University
+1:15:464:14:14:72:540:214:12:Times:12:Times:?:of Maryland for helpful comments and suggestions. We especially thank Zhengjun Zhang and two
+1:16:556:14:14:72:540:200:12:Times:12:Times:?:anonymous referees for constructive comments. The views expressed herein are those of the authors
+1:17:653:14:28:72:489:186:12:Times:12:Times:?:and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:18:738:28:14:72:540:158:12:Times:12:Times:?:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:19:834:14:14:72:540:144:12:Times:12:Times:?:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:20:929:14:28:72:169:130:12:Times:12:Times:?:NBER publications.
+1:21:947:28:14:72:540:102:12:Times:12:Times:?:© 2017 by Ting Chen, Zhenyu Gao, Jibao He, Wenxi Jiang, and Wei Xiong. All rights reserved. Short
+1:22:1044:14:14:72:540:88:12:Times:12:Times:?:sections of text, not to exceed two paragraphs, may be quoted without explicit permission provided
+1:23:1142:14:0:72:347:74:12:Times:12:Times:?:that full credit, including © notice, is given to the source.
+2:24:1203:0:14:72:324:700:12:Times:12:Times:?:Daily Price Limits and Destructive Market Behavior
+2:25:1253:14:14:72:383:686:12:Times:12:Times:?:Ting Chen, Zhenyu Gao, Jibao He, Wenxi Jiang, and Wei Xiong
+2:26:1312:14:14:72:234:672:12:Times:12:Times:?:NBER Working Paper No. 24014
+2:27:1340:14:14:72:150:658:12:Times:12:Times:?:November 2017
+2:28:1353:14:28:72:159:644:12:Times:12:Times:?:JEL No. G12,G28
+2:29:1368:28:28:273:338:616:12:Times:12:Times:?:ABSTRACT
+2:30:1376:28:14:72:546:588:12:Times:12:Times:?:We use account-level data from the Shenzhen Stock Exchange to show that daily price limits, a 
+2:31:1470:14:14:72:545:574:12:Times:12:Times:?:widely adopted  market  stabilization  mechanism,  may  lead  to  unintended,  destructive  market 
+2:32:1568:14:14:72:546:560:12:Times:12:Times:?:behavior: large investors tend to buy on the day when a stock hits the 10% upper price limit and 
+2:33:1664:14:14:71:545:546:12:Times:12:Times:?:then sell on the next day; and their net buying on the limit-hitting day predicts stronger long-run 
+2:34:1763:14:14:71:546:532:12:Times:12:Times:?:price reversal. We also analyze a sample of special treatment (ST) stocks, which face tighter 5% 
+2:35:1859:14:14:71:545:518:12:Times:12:Times:?:daily  price  limits,  and  provide a  causal  validation  from  comparing  market  dynamics  before  and 
+2:36:1964:14:28:71:247:504:12:Times:12:Times:?:after they are assigned the ST status.
+2:37:2002:28:14:72:123:476:12:Times:12:Times:?:Ting Chen
+2:38:2011:14:14:72:192:462:12:Times:12:Times:?:Princeton University and
+2:39:2035:14:14:72:257:448:12:Times:12:Times:?:The Hong Kong University of Science
+2:40:2070:14:14:72:150:434:12:Times:12:Times:?:and Technology
+2:41:2084:14:28:72:169:420:12:Times:12:Times:?:colonct@gmail.com
+2:42:2101:28:14:72:132:392:12:Times:12:Times:?:Zhenyu Gao
+2:43:2111:14:14:72:237:378:12:Times:12:Times:?:Chinese University of Hong Kong
+2:44:2142:14:14:72:128:364:12:Times:12:Times:?:Hong Kong
+2:45:2151:14:28:72:212:350:12:Times:12:Times:?:gaozhenyu@baf.cuhk.edu.hk
+2:46:2176:28:14:72:114:322:12:Times:12:Times:?:Jibao He
+2:47:2184:14:14:72:199:308:12:Times:12:Times:?:Shenzhen Stock Exchange
+2:48:2207:14:14:72:153:294:12:Times:12:Times:?:Shenzhen, China
+2:49:2222:14:0:72:138:280:12:Times:12:Times:?:jbhe@szse.cn
+2:50:2234:0:14:306:366:476:12:Times:12:Times:?:Wenxi Jiang
+2:51:2245:14:14:306:471:462:12:g_d0_f1:12:g_d0_f1:?:Chinese University of Hong Kong
+2:52:2276:14:14:306:399:448:12:Times:12:Times:?:Room 1250, 12/F., 
+2:53:2294:14:14:306:431:434:12:Times:12:g_d0_f1:?:Cheng Yu Tung Building 
+2:54:2316:14:14:306:418:420:12:Times:12:Times:?:12 Chak Cheung Street
+2:55:2337:14:14:306:365:406:12:Times:12:Times:?:Shatin, N.T.
+2:56:2349:14:14:306:362:392:12:Times:12:Times:?:Hong Kong
+2:57:2358:14:28:306:421:378:12:Times:12:Times:?:jiangwenxi@gmail.com
+2:58:2378:28:14:306:359:350:12:Times:12:Times:?:Wei Xiong
+2:59:2387:14:14:306:406:336:12:Times:12:Times:?:Princeton University
+2:60:2407:14:14:306:432:322:12:Times:12:Times:?:Department of Economics
+2:61:2430:14:14:306:448:308:12:Times:12:Times:?:Bendheim Center for Finance
+2:62:2457:14:14:306:407:294:12:Times:12:Times:?:Princeton, NJ  08450
+2:63:2477:14:14:306:358:280:12:Times:12:Times:?:and NBER
+2:64:2485:14:0:306:419:266:12:Times:12:Times:?:wxiong@princeton.edu
+3:65:2507:0:27:114:525:708:144:g_d0_f3:144:g_d0_f3:A:Daily price limit rules are widely used by stock markets across the globe.1 These rules 
+3:66:2595:27:28:89:525:681:144:g_d0_f3:144:g_d0_f3:B:are  particularly  popular  in  emerging  markets  with  a  large  fraction  of  inexperienced 
+3:67:2690:28:27:89:525:653:144:g_d0_f3:144:g_d0_f3:B:investors, as they give a time-out period during large price fluctuations and thus serve as a 
+3:68:2784:27:28:89:525:626:144:g_d0_f3:144:g_d0_f3:B:market stabilization mechanism.  China’s equity market (the second largest in the world by 
+3:69:2875:28:28:89:525:598:144:g_d0_f3:144:g_d0_f3:B:capitalization) imposes daily price limits of 10% on regular stocks and 5% on special 
+3:70:2961:28:27:89:525:570:144:g_d0_f3:144:g_d0_f3:B:treatment (ST) stocks. However, there is a growing concern that this rule might induce 
+3:71:3048:27:28:89:508:543:144:g_d0_f3:144:g_d0_f3:B:destructive trading behavior by some speculators to take advantage of other investors.  
+3:72:3136:28:27:113:525:515:144:g_d0_f3:144:g_d0_f3:A:Of particular concern is a popular strategy, which is often discussed in the news media 
+3:73:3224:27:28:89:524:488:144:g_d0_f3:144:g_d0_f3:B:and also observed in some market enforcement cases, of certain speculators pushing up 
+3:74:3310:28:28:89:525:460:144:g_d0_f3:144:g_d0_f3:B:stock prices to the upper price limit and then taking profits by selling on the next day. This 
+3:75:3405:28:27:89:524:432:144:g_d0_f3:144:g_d0_f3:B:upper-price-limit strategy is reminiscent of the classic pump-and-dump strategy of market 
+3:76:3495:27:28:89:525:405:144:g_d0_f3:144:g_d0_f3:B:manipulation (e.g., De Long et al., 1990), yet with several important differences. First, after 
+3:77:3591:28:27:89:525:377:144:g_d0_f3:144:g_d0_f3:B:observing a stock hitting the daily upper price limit, it is natural for otherwise uninformed 
+3:78:3685:27:28:89:524:350:144:g_d0_f3:144:g_d0_f3:B:investors  to  infer  that  the  stock’s  price  has  not  fully  incorporated  all  fundamental 
+3:79:3782:28:28:89:524:322:144:g_d0_f3:144:g_d0_f3:B:information and thus be willing to offer a higher price on the following day. This inference 
+3:80:3875:28:27:89:525:294:144:g_d0_f3:144:g_d0_f3:B:does  not  require  any  particular  behavioral  bias  such  as  positive  feedback  trading  and 
+3:81:3973:27:28:89:525:267:144:g_d0_f3:144:g_d0_f3:B:extrapolation; it requires only the naivety of failing to recognize the speculators’ incentives 
+3:82:4069:28:27:89:524:239:144:g_d0_f3:144:g_d0_f3:B:to profit by pushing up the prices to the upper price limit. Second, the events of stock prices 
+3:83:4165:27:28:89:524:212:144:g_d0_f3:144:g_d0_f3:B:hitting the upper daily price limit often attracts the attention of new investors (e.g., Barber 
+3:84:4261:28:28:90:525:184:144:g_d0_f3:144:g_d0_f3:B:and Odean, 2008; Seasholes and Wu, 2007), which further exacerbates the price increase 
+3:85:4348:28:27:90:525:156:144:g_d0_f3:144:g_d0_f3:B:after the upper price limit is hit. Third, the publicly observed large price increase during a 
+3:86:4443:27:32:90:524:129:144:g_d0_f3:144:g_d0_f3:B:trading day also serves as a convenient device for unrelated speculators to coordinate to 
+3:87:4533:32:8:90:236:97:144:g_d0_f2:144:g_d0_f2:C:																																																								
+3:88:4589:8:15:90:524:89:42:g_d0_f3:100:g_d0_f3:F:1 According to Deb, Kaley, and Marisetty (2010), out of 58 major countries, 41 countries have applied certain 
+3:89:4699:15:0:90:295:74:100:g_d0_f3:100:g_d0_f3:F:types of price limit rules in their equity exchanges. 
+4:90:4755:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:push  up  the  price  together.  In  other  words,  the  speculators  do not  need  to  plan  a 
+4:91:4851:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:manipulation  scheme  as  they  can  simply  follow  large  price  increases  induced  by 
+4:92:4941:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:fundamental news. The possibility of the daily price limit rule inducing these unintended 
+4:93:5031:27:28:90:472:626:144:g_d0_f3:144:g_d0_f3:B:effects motivates a systematic study of the impact of the daily price limit rule.   
+4:94:5115:28:28:114:524:598:144:g_d0_f3:144:g_d0_f3:A:In  this  paper,  we  take  advantage  of  account-level  data  from  the  Shenzhen  Stock 
+4:95:5206:28:27:90:525:570:144:g_d0_f3:144:g_d0_f3:B:Exchange to analyze how daily price limit rules affect market dynamics and in particular 
+4:96:5295:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:whether  the  daily  price  limits  may  induce  destructive  trading  behavior  by  a  group  of 
+4:97:5393:28:27:90:524:515:144:g_d0_f3:144:g_d0_f3:B:speculators against  other  investors.  Specifically,  we  examine  accounts  pooled  into  six 
+4:98:5489:27:28:90:524:488:144:g_d0_f3:144:g_d0_f3:B:groups—one institution group, which includes all institutions, and five individual investor 
+4:99:5581:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:groups classified by the average stock balance in the previous year. We are particularly 
+4:100:5670:28:27:90:525:432:144:g_d0_f3:144:g_d0_f3:B:interested in the group of large investors, who have an average stock balance of over 10 
+4:101:5759:27:28:90:524:405:144:g_d0_f3:144:g_d0_f3:B:million RMB. This group is particularly interesting because large investors tend to be more 
+4:102:5851:28:27:90:525:377:144:g_d0_f3:144:g_d0_f3:B:sophisticated and because the speculators involved in the news media coverage of the 
+4:103:5936:27:28:90:354:350:144:g_d0_f3:144:g_d0_f3:B:upper-price-limit strategy tend to be large investors.     
+4:104:5995:28:28:114:524:322:144:g_d0_f3:144:g_d0_f3:A:We divide our study into two parts, one based on the sample of regular stocks and the 
+4:105:6081:28:27:90:525:294:144:g_d0_f3:144:g_d0_f3:B:other on ST stocks. In the first part, we analyze price dynamics and the trading of different 
+4:106:6175:27:28:90:524:267:144:g_d0_f3:144:g_d0_f3:B:investor groups subsequent to days when regular stocks hit the daily 10% upper price limit 
+4:107:6266:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:and when they experience large daily returns less than the 10% limit. We organize our 
+4:108:6352:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:analysis to test a central hypothesis that large investors push stocks that experience large 
+4:109:6445:28:28:90:525:184:144:g_d0_f3:144:g_d0_f3:B:price increases during a trading day to close at the upper price limit and then profit from 
+4:110:6537:28:27:90:525:156:144:g_d0_f3:144:g_d0_f3:B:selling at higher prices on the next day and, furthermore, their destructive trading behavior 
+4:111:6631:27:0:90:373:129:144:g_d0_f3:144:g_d0_f3:B:causes stock prices to overreact to the initial price shocks.  
+5:112:6696:0:27:114:525:708:144:g_d0_f3:144:g_d0_f3:A:We find several results supporting this hypothesis. First, after a stock hits the 10% 
+5:113:6782:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:upper price limit, its price continues to rise on the next day and the price increase eventually 
+5:114:6879:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:reverses in the long run. Interestingly, the price increase occurs only after hitting the 10% 
+5:115:6973:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:price limit, mostly at the open price of the next day, but not after having a large daily return 
+5:116:7070:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:just below 10%. This pattern of continued price increase followed by long-run reversal 
+5:117:7157:28:27:90:525:570:144:g_d0_f3:144:g_d0_f3:B:indicates price overreactions around the events of hitting the upper price limit. Second, 
+5:118:7247:27:28:90:525:543:144:g_d0_f3:144:g_d0_f3:B:large investors tend to buy on the days when the upper price limit is hit and then sell on the 
+5:119:7342:28:27:90:524:515:144:g_d0_f3:144:g_d0_f3:B:next  day.  This  finding  suggests  that  large  investors  as  a  group  indeed  follow  the 
+5:120:7437:27:28:90:524:488:144:g_d0_f3:144:g_d0_f3:B:hypothesized trading strategy. Interestingly, we also find that small and medium investors 
+5:121:7528:28:28:90:525:460:144:g_d0_f3:144:g_d0_f3:B:tend to trade on the opposite side by selling on the day of hitting the upper price limit and 
+5:122:7622:28:27:90:524:432:144:g_d0_f3:144:g_d0_f3:B:buying on the next day. Third, the net buying of large investors on the limit-hitting day 
+5:123:7712:27:28:90:525:405:144:g_d0_f3:144:g_d0_f3:B:predicts stronger long-run price reversal. Overall, these findings paint a clear picture that 
+5:124:7806:28:27:90:524:377:144:g_d0_f3:144:g_d0_f3:B:large investors as a group pursue a destructive strategy around the upper-price-limit-hitting 
+5:125:7900:27:28:90:352:350:144:g_d0_f3:144:g_d0_f3:B:days and their trading has significant market impacts.  
+5:126:7956:28:28:114:525:322:144:g_d0_f3:144:g_d0_f3:A:To  further  separate  the  effect  of  the  daily  price  limit  rule  from  an  alternative 
+5:127:8050:28:27:90:524:294:144:g_d0_f3:144:g_d0_f3:B:mechanism of the large investors simply front-running feedback traders on days of large 
+5:128:8138:27:28:90:525:267:144:g_d0_f3:144:g_d0_f3:B:price fluctuations, we also explore a sample of 119 ST stocks, which face tighter 5% daily 
+5:129:8229:28:27:90:524:239:144:g_d0_f3:144:g_d0_f3:B:price limits. In general, the ST status is given to a publicly listed firm if it reports negative 
+5:130:8327:27:28:90:526:212:144:g_d0_f3:144:g_d0_f3:B:profits for two consecutive years or a net asset value below the par value. While the ST 
+5:131:8416:28:28:90:525:184:144:g_d0_f3:144:g_d0_f3:B:status is announced by the exchange only after a firm formally releases its annual financial 
+5:132:8509:28:27:90:525:156:144:g_d0_f3:144:g_d0_f3:B:report, the market can well anticipate the ST assignment immediately after the firm reports 
+5:133:8601:27:28:90:524:129:144:g_d0_f3:144:g_d0_f3:B:its eighth consecutive negative quarterly earnings or a low net asset value, which is usually 
+5:134:8695:28:0:90:524:101:144:g_d0_f3:144:g_d0_f3:B:two or three months ahead of its annual report. During this interim period, the market 
+6:135:8784:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:anticipate that the firm will be eventually labeled as ST but its stock is still trading under 
+6:136:8879:27:28:90:233:681:144:g_d0_f3:144:g_d0_f3:B:the regular 10% price limits.  
+6:137:8910:28:27:114:524:653:144:g_d0_f3:144:g_d0_f3:A:By  taking  advantage  of  this  period,  we  find  several  results  induced  by  the  more 
+6:138:9003:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:restrictive 5% price limits after the ST status is officially assigned: First, after the ST 
+6:139:9095:28:28:90:524:598:144:g_d0_f3:144:g_d0_f3:B:assignment, the long-run price reversal subsequent to days of hitting the 5% price limit 
+6:140:9184:28:27:90:525:570:144:g_d0_f3:144:g_d0_f3:B:becomes more pronounced relative to that subsequent to having large daily returns above 
+6:141:9272:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:5% in the pre-ST period. Second, the trading of large investors displays the pattern of 
+6:142:9360:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:buying on the day of hitting the upper price limit and selling on the next after the ST 
+6:143:9448:27:28:90:524:488:144:g_d0_f3:144:g_d0_f3:B:assignment, but not before. Third, after the ST assignment, the net buying of large investors 
+6:144:9542:28:28:90:522:460:144:g_d0_f3:144:g_d0_f3:B:on the days of hitting the price limit has a stronger predictive power of the subsequent long-
+6:145:9636:28:27:90:525:432:144:g_d0_f3:144:g_d0_f3:B:run price reversal. These findings thus specifically demonstrate that the tighter price limits 
+6:146:9731:27:28:90:525:405:144:g_d0_f3:144:g_d0_f3:B:of ST stocks exacerbate the destructive trading behavior of large investors around days 
+6:147:9819:28:27:90:524:377:144:g_d0_f3:144:g_d0_f3:B:with returns above 5%, and their trading is associated with price overreactions on these 
+6:148:9908:27:28:90:525:350:144:g_d0_f3:144:g_d0_f3:B:days. Finally, we also find that after the ST assignment, trading days with large positive 
+6:149:9999:28:28:90:524:322:144:g_d0_f3:144:g_d0_f3:B:returns above 4% become substantially more frequent, again confirming that by inducing 
+6:150:10086:28:27:90:525:294:144:g_d0_f3:144:g_d0_f3:B:the destructive behavior of large investors, the tighter price limits might amplify rather than 
+6:151:10182:27:28:90:276:267:144:g_d0_f3:144:g_d0_f3:B:mitigate extreme price fluctuations.     
+6:152:10223:28:27:114:525:239:144:g_d0_f3:144:g_d0_f3:A:Overall, our analysis provides a set of empirical findings to show that the widely 
+6:153:10306:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:adopted daily price limit rules may induce large investors as a group to pursue a destructive 
+6:154:10400:28:28:90:524:184:144:g_d0_f3:144:g_d0_f3:B:trading strategy of pushing prices to the upper price limit and then profiting from selling 
+6:155:10492:28:27:89:525:156:144:g_d0_f3:144:g_d0_f3:B:on the next day. This unintended effect highlights the challenge in designing a trading 
+6:156:10580:27:0:89:524:129:144:g_d0_f3:144:g_d0_f3:B:system  for  emerging  equity  markets,  which  tend  to  have  a  mix  of  experienced  and 
+7:157:10675:0:27:90:530:708:144:g_d0_f3:144:g_d0_f3:B:inexperienced  investors.  Their  different  trading  behaviors  may render a market 
+7:158:10760:27:28:90:435:681:144:g_d0_f3:144:g_d0_f3:B:stabilization scheme, such as the daily price limits, counterproductive.   
+7:159:10835:28:27:114:524:653:144:g_d0_f3:144:g_d0_f3:A:Some critics have pointed out that the price limit rules may impede the price discovery 
+7:160:10923:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:process, interfere with trading, and induce order imbalance and volatility spillover (e.g., 
+7:161:11015:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:Kim and Rhee, 1997; Chan, Kim, and Rhee, 2005). The prior studies have also documented 
+7:162:11102:28:27:90:524:570:144:g_d0_f3:144:g_d0_f3:B:the so-called "magnet effect"—a curious tendency for stock prices to accelerate toward the 
+7:163:11193:27:28:90:526:543:144:g_d0_f3:144:g_d0_f3:B:upper price limit and a similar, albeit weaker tendency, toward the lower limit as prices 
+7:164:11283:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:approach  these  limits  (e.g.,  Cho  et  al.,  2003;  Hsieh  et  al.,  2009).  By  identifying  the 
+7:165:11384:27:28:90:524:488:144:g_d0_f3:144:g_d0_f3:B:destructive  behavior  of  large  investors,  our  analysis  offers  a sharp  mechanism  to 
+7:166:11476:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:understand these adverse effects. In particular, the active trading of large investors with the 
+7:167:11572:28:27:90:476:432:144:g_d0_f3:144:g_d0_f3:B:intent to push prices to the upper price limit explains the curious magnet effect.  
+7:168:11656:27:28:114:525:405:144:g_d0_f3:144:g_d0_f3:A:Our study is closely related to Seasholes and Wu (2007), who examine the effect of 
+7:169:11739:28:27:90:525:377:144:g_d0_f3:144:g_d0_f3:B:daily price limits in the Chinese stock market and emphasize that by attracting the attention 
+7:170:11833:27:28:90:525:350:144:g_d0_f3:144:g_d0_f3:B:of inexperienced new investors, the price-limit hitting events induce some smart traders to 
+7:171:11925:28:28:90:524:322:144:g_d0_f3:144:g_d0_f3:B:accumulate shares on the limit-hitting days and sell on the next. Our analysis provides 
+7:172:12013:28:27:90:525:294:144:g_d0_f3:144:g_d0_f3:B:stronger evidence to specifically relate the net buying of a group of large investors, which 
+7:173:12106:27:28:90:522:267:144:g_d0_f3:144:g_d0_f3:B:are classified by account size rather than any trading information, on the upper-price-limit-
+7:174:12199:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:hitting days to the subsequent price reversal. More important, by comparing the price 
+7:175:12285:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:dynamics and the trading of large investors before and after the assignment of ST stocks, 
+7:176:12375:28:28:90:524:184:144:g_d0_f3:144:g_d0_f3:B:our analysis is able to isolate the effect of the price limits from effects induced simply by 
+7:177:12469:28:27:90:198:156:144:g_d0_f3:144:g_d0_f3:B:large daily returns.      
+7:178:12495:27:28:114:525:129:144:g_d0_f3:144:g_d0_f3:A:The paper is organized as follows. Section I describes the institutional background 
+7:179:12579:28:0:90:524:101:144:g_d0_f3:144:g_d0_f3:B:and data, and Section II introduces empirical hypotheses. We then report the empirical 
+8:180:12668:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:results from studying the sample of regular stocks in Section III, and report further evidence 
+8:181:12763:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:from analyzing the sample of ST stocks in Section IV. Finally, Section V concludes the 
+8:182:12850:28:34:90:490:653:144:g_d0_f3:144:g_d0_f4:B:paper. An online appendix also reports results from additional robustness analyses. 
+8:183:12933:34:27:198:417:619:144:g_d0_f4:144:g_d0_f4:C:I. Institutional Background and Data 
+8:184:12969:27:28:114:525:592:144:g_d0_f3:144:g_d0_f3:A:Daily price limit rules have been imposed on the two Chinese stock exchanges, the 
+8:185:13051:28:27:90:525:564:144:g_d0_f3:144:g_d0_f3:B:Shanghai  Stock  Exchange  and  the  Shenzhen  Stock  Exchange  (SZSE  hereafter),  since 
+8:186:13141:27:28:90:524:537:144:g_d0_f3:144:g_d0_f3:B:December 16, 1996. Within a single trading day, the price of an individual stock can only 
+8:187:13231:28:27:90:524:509:144:g_d0_f3:144:g_d0_f3:B:increase or decrease by a maximum percentage relative to the closing price on the previous 
+8:188:13322:27:28:90:524:482:144:g_d0_f3:144:g_d0_f3:B:trading day. This limit is set as 10% for regular stocks and 5% for ST stocks. After a stock 
+8:189:13415:28:28:90:524:454:144:g_d0_f3:144:g_d0_f3:B:hits the daily price limit, trading is still allowed as long as the transaction prices are within 
+8:190:13513:28:27:90:525:426:144:g_d0_f3:144:g_d0_f3:B:the upper and lower limits. As a result, it is possible for a stock to hit the upper or lower 
+8:191:13607:27:28:90:451:399:144:g_d0_f3:144:g_d0_f3:B:price limit during a trading day and then to close the day within the limits.  
+8:192:13686:28:27:114:524:371:144:g_d0_f3:144:g_d0_f3:A:Our analysis cover all A-share stocks (shares issued to domestic investors) traded in 
+8:193:13772:27:28:90:524:344:144:g_d0_f3:144:g_d0_f3:B:the SZSE during the sample period of 2012 to 2015. As of January 31, 2015, the exchange 
+8:194:13860:28:28:90:524:316:144:g_d0_f3:144:g_d0_f3:B:lists 1,628 firms with a total market capitalization of 2,285 billion U.S. dollars, which ranks 
+8:195:13956:28:27:90:343:288:144:g_d0_f3:144:g_d0_f3:B:it as the eighth-largest stock exchange in the world.  
+8:196:14011:27:28:114:524:261:144:g_d0_f3:144:g_d0_f3:A:We  collect  daily  stock  price  data  from  the  China  Stock  Market  and  Accounting 
+8:197:14100:28:27:90:525:233:144:g_d0_f3:144:g_d0_f3:B:Research (CSMAR) database. We consider capital distribution, such as dividends and stock 
+8:198:14188:27:28:90:522:206:144:g_d0_f3:144:g_d0_f3:B:splits, to adjust stock prices and use closing prices of each stock to identify price-limit-
+8:199:14280:28:28:90:525:178:144:g_d0_f3:144:g_d0_f3:B:hitting events (as done by the exchange). We calculate returns of all stocks in our sample 
+8:200:14371:28:27:90:524:150:144:g_d0_f3:144:g_d0_f3:B:on  the  limit-hitting  dates  and  their  subsequent  returns  over  different  horizons  from 
+8:201:14467:27:0:90:525:123:144:g_d0_f3:144:g_d0_f3:B:overnight up to 120 days. Other stock-level data include number of shares outstanding, 
+9:202:14556:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:trading  volume,  and  floating  capitalization.  We  also  collect  firm-level  accounting 
+9:203:14648:27:28:90:388:681:144:g_d0_f3:144:g_d0_f3:B:information such as the book equity, earnings, and ST status.  
+9:204:14711:28:27:114:525:653:144:g_d0_f3:144:g_d0_f3:A:Price-limit-hitting  events  frequently  occur  in  the  Chinese  stock  markets.  Table  1 
+9:205:14803:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:shows that in 2012-2015, there were 21,005 (13,569) cases of regular stocks in the SZSE 
+9:206:14891:28:28:90:524:598:144:g_d0_f3:144:g_d0_f3:B:closing at the upper (lower) 10% price limits. On average, 2.05% (1.33%) of regular stocks 
+9:207:14982:28:27:90:524:570:144:g_d0_f3:144:g_d0_f3:B:close at the upper (lower) price limit per trading day. The fraction of ST stocks closing at 
+9:208:15075:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:the limits is higher due to their lower price limits: 7.9% (5.7%) for the upper (lower) limit. 
+9:209:15170:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:In addition, this ratio varies substantially over this period. The standard deviation of this 
+9:210:15264:27:28:90:440:488:144:g_d0_f3:144:g_d0_f3:B:fraction for regular (ST) stocks hitting the upper limit is 14.2% (27.0%). 
+9:211:15339:28:28:114:525:460:144:g_d0_f3:144:g_d0_f3:A:We  obtain  account-level  transaction  data  from  the  SZSE,  which  classifies  all 
+9:212:15426:28:27:90:524:432:144:g_d0_f3:144:g_d0_f3:B:individual accounts into five categories every year based on the average stock balance 
+9:213:15513:27:28:90:524:405:144:g_d0_f3:144:g_d0_f3:B:during the previous year: 1) less than 100 thousand RMB; 2) between 100 thousand and 
+9:214:15598:28:27:90:525:377:144:g_d0_f3:144:g_d0_f3:B:500 thousand RMB; 3) between 500 thousand and 5 million RMB; 4) between 5 million 
+9:215:15680:27:28:90:524:350:144:g_d0_f3:144:g_d0_f3:B:and 10 million RMB; and 5) larger than 10 million RMB. We are especially interested in 
+9:216:15767:28:28:90:524:322:144:g_d0_f3:144:g_d0_f3:B:the behavior of the last group. We also include institution accounts as a separate group in 
+9:217:15859:28:27:90:524:294:144:g_d0_f3:144:g_d0_f3:B:our study. This group includes mutual funds, insurance companies, security firms, and 
+9:218:15945:27:28:90:525:267:144:g_d0_f3:144:g_d0_f3:B:pension funds. We track the transactions by each group at the stock level. The key variable 
+9:219:16037:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:of interest is NetBuy, defined as the net purchase of shares of a stock by a specific group 
+9:220:16129:27:28:90:464:212:144:g_d0_f3:144:g_d0_f3:B:within a trading day scaled by the number of the stock’s total tradable shares. 
+9:221:16209:28:28:114:524:184:144:g_d0_f3:144:g_d0_f3:A:Table 2 reports the contributions of these groups to daily turnover of regular and ST 
+9:222:16295:28:27:90:525:156:144:g_d0_f3:144:g_d0_f3:B:stocks listed in the SZSE. For regular stocks, the average daily turnover (measured by the 
+9:223:16386:27:28:90:524:129:144:g_d0_f3:144:g_d0_f3:B:amount of purchases and sales divided by twice the floating capitalization of a stock during 
+9:224:16479:28:0:90:525:101:144:g_d0_f3:144:g_d0_f3:B:a day) is 3.1%, among which the five investor groups from small to large contribute to 
+10:225:16568:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:7.7%, 23.5%, 38.0%, 7.5%, and 14.0%, respectively, and the institution group 9.4%. The 
+10:226:16655:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:number of accounts involved in trading a regular stock on a given day across the five 
+10:227:16741:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:investor groups is 1592, 1516, 767, 52, 44, respectively, and 40 for the institution group. 
+10:228:16833:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:For ST stocks, the average daily turnover is lower at 2.2%, with a small contribution of the 
+10:229:16926:28:34:90:521:598:144:g_d0_f3:144:g_d0_f3:B:institution group while the contributions of the five investor groups remain similar.           
+10:230:17022:34:27:231:383:564:144:g_d0_f4:144:g_d0_f4:C:II. Empirical Hypotheses 
+10:231:17046:27:28:114:525:537:144:g_d0_f3:144:g_d0_f3:A:Suppose that a piece of positive news hits a stock on one day and causes its price to 
+10:232:17132:28:27:90:524:509:144:g_d0_f3:144:g_d0_f3:B:hit the upper price limit. In the absence of other reasons, this event simply implies that the 
+10:233:17227:27:28:90:525:482:144:g_d0_f3:144:g_d0_f3:B:price impact of the news is larger than 10% and the stock price could have gone even higher 
+10:234:17319:28:28:90:525:454:144:g_d0_f3:144:g_d0_f3:B:without the price limit. Consequently, the price would continue to rise on the next day. 
+10:235:17408:28:27:90:525:426:144:g_d0_f3:144:g_d0_f3:B:However, this otherwise natural price pattern gives an incentive for speculators to push up 
+10:236:17500:27:28:90:525:399:144:g_d0_f3:144:g_d0_f3:B:the price to the upper limit even when the initial news does not necessarily justify a price 
+10:237:17593:28:27:90:525:371:144:g_d0_f3:144:g_d0_f3:B:increase of 10%.  Suppose that the news justifies only an 8% price increase and its exact 
+10:238:17683:27:28:90:525:344:144:g_d0_f3:144:g_d0_f3:B:effect is not known by the market participants. Some speculators, who may or may not be 
+10:239:17771:28:28:90:524:316:144:g_d0_f3:144:g_d0_f3:B:informed of the exact news effect, may figure that as long as they can push up the stock 
+10:240:17860:28:27:90:525:288:144:g_d0_f3:144:g_d0_f3:B:price to close at the 10% price limit, then other uninformed investors would be willing to 
+10:241:17951:27:28:90:525:261:144:g_d0_f3:144:g_d0_f3:B:buy the stock at an even higher price on the next day and thus provide an exit for the 
+10:242:18038:28:27:90:525:233:144:g_d0_f3:144:g_d0_f3:B:speculators to sell at a profit. For this strategy to be profitable, it is necessary for the stock 
+10:243:18137:27:28:90:524:206:144:g_d0_f3:144:g_d0_f3:B:to close at the upper price limit. For this reason, we focus on studying the events of hitting 
+10:244:18232:28:28:90:482:178:144:g_d0_f3:144:g_d0_f3:B:the upper price limit at the close rather than at any time during the trading day.     
+10:245:18319:28:27:114:524:150:144:g_d0_f3:144:g_d0_f3:A:This strategy can be profitable as long as some investors do not fully recognize that 
+10:246:18405:27:28:90:525:123:144:g_d0_f3:144:g_d0_f3:B:the stock price hitting the upper price limit might be partially caused by the speculators’ 
+10:247:18497:28:0:90:524:95:144:g_d0_f3:144:g_d0_f3:B:destructive behavior rather than fully driven by the fundamental news. The literature has 
+11:248:18589:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:pointed out the wide presence of this sort of naivety by some agents in failing to fully 
+11:249:18678:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:appreciate the incentives and strategic behavior of other agents.2 This sort of naivety is 
+11:250:18769:28:27:89:506:653:144:g_d0_f3:144:g_d0_f3:B:different from the positive feedback bias that motivates the pump-and-dump strategy.  
+11:251:18855:27:28:113:524:626:144:g_d0_f3:144:g_d0_f3:A:The price limit may also affect the market dynamics through several other channels. 
+11:252:18939:28:28:89:525:598:144:g_d0_f3:144:g_d0_f3:B:Seasholes and Wu (2007) show that as the price-limit-hitting events are widely covered by 
+11:253:19029:28:27:89:525:570:144:g_d0_f3:144:g_d0_f3:B:financial news media, they tend to attract the attention of new buyers on subsequent days. 
+11:254:19120:27:28:89:463:543:144:g_d0_f3:144:g_d0_f3:B:This attention effect further exacerbates the price increase on the next day.     
+11:255:19202:28:27:113:525:515:144:g_d0_f3:144:g_d0_f3:A:Different  from  an  outright  price manipulation  scheme,  pursuing this  strategy  of 
+11:256:19290:27:28:89:525:488:144:g_d0_f3:144:g_d0_f3:B:pushing up stock prices to close at the upper price limit does not require a plot among a 
+11:257:19380:28:28:89:524:460:144:g_d0_f3:144:g_d0_f3:B:group of speculators. Instead, a large price movement during a day could already serve as 
+11:258:19470:28:27:89:524:432:144:g_d0_f3:144:g_d0_f3:B:a publicly observed signal sufficient to coordinate potential speculators to gather forces 
+11:259:19561:27:28:89:525:405:144:g_d0_f3:144:g_d0_f3:B:and further push up the price. Thus, another unintended effect of the price limit is that it 
+11:260:19654:28:27:90:332:377:144:g_d0_f3:144:g_d0_f3:B:serves as a coordination device for speculators.3    
+11:261:19707:27:28:113:524:350:144:g_d0_f3:144:g_d0_f3:A:The objective of this study is not to identify manipulators, but rather to study the 
+11:262:19792:28:28:89:524:322:144:g_d0_f3:144:g_d0_f3:B:trading behavior of different investor groups around the upper-price-limit-hitting events. 
+11:263:19883:28:27:89:525:294:144:g_d0_f3:144:g_d0_f3:B:We classify the investor groups based on ex ante information—the average stock balance 
+11:264:19970:27:28:90:524:267:144:g_d0_f3:144:g_d0_f3:B:in the previous year. As large investors tend to be more sophisticated and the speculators 
+11:265:20061:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:involved in the news media coverage of the upper-price-limit strategy tend to be large 
+11:266:20148:27:54:90:325:212:144:g_d0_f3:144:g_d0_f3:B:investors, we examine the following hypothesis: 
+11:267:20196:54:9:90:236:158:144:g_d0_f2:144:g_d0_f2:C:																																																								
+11:268:20252:9:15:90:524:149:42:g_d0_f3:100:g_d0_f3:F:2 For example, Malmendier and Shantikumar (2007) provide evidence to show that investors do not recognize 
+11:269:20358:15:11:89:524:134:100:g_d0_f3:100:g_d0_f3:F:the incentives of financial analysts to provide overly optimistic stock recommendations due to their incentives 
+11:270:20470:11:12:89:524:123:100:g_d0_f3:100:g_d0_f3:F:related to selling stocks. Hong, Scheinkman and Xiong (2008) develop a theoretical model to argue that this 
+11:271:20578:12:12:89:442:111:100:g_d0_f3:100:g_d0_f3:F:behavior can play an important role leading to price bubbles in new technology stocks.  
+11:272:20666:12:14:90:524:99:36:g_d0_f2:100:g_d0_f3:F:3	Constrained by data availability, we do not aim to separately identify the different channels, such as investor 
+11:273:20780:14:11:89:524:85:100:g_d0_f3:100:g_d0_f3:F:naivety, the attention effect of limit-hitting events, and the coordination effect of large price increases, for 
+11:274:20893:11:0:89:524:74:100:g_d0_f3:100:g_d0_f2:F:the daily price limit rule to affect market dynamics. Instead, we design the analysis to study the overall effect.	
+12:275:21011:0:27:114:524:708:144:g_d0_f4:144:g_d0_f3:A:Hypothesis 1: Large investors tend to buy on the day when a stock hits the upper 
+12:276:21092:27:28:89:524:681:144:g_d0_f3:144:g_d0_f3:B:price limit and sell on the next day. Furthermore, while the stock price continues to rise on 
+12:277:21186:28:27:89:524:653:144:g_d0_f3:144:g_d0_f3:B:the next day after hitting the upper price limit, the price increase eventually reverses over 
+12:278:21280:27:28:89:524:626:144:g_d0_f3:144:g_d0_f3:B:the longer run, and the long-run price reversal is more pronounced when the net buying by 
+12:279:21370:28:28:89:339:598:144:g_d0_f3:144:g_d0_f3:B:large investors on the limit-hitting day is greater.     
+12:280:21427:28:27:113:524:570:144:g_d0_f3:144:g_d0_f3:A:If the stock prices are efficiently determined, we do not expect any reversal relative 
+12:281:21514:27:28:89:524:543:144:g_d0_f3:144:g_d0_f3:B:to either the price level after trading resumes on the next day or the price level when the 
+12:282:21606:28:27:89:525:515:144:g_d0_f3:144:g_d0_f3:B:upper price limit is initially hit. Thus, any evidence of price reversal subsequent to the 
+12:283:21697:27:28:89:525:488:144:g_d0_f3:144:g_d0_f3:B:price-limit-hitting days would indicate price overreactions when the price limit is hit. Thus, 
+12:284:21792:28:28:89:524:460:144:g_d0_f3:144:g_d0_f3:B:by linking the subsequent price reversal to the trading of large investors on limit-hitting 
+12:285:21884:28:27:89:530:432:144:g_d0_f3:144:g_d0_f3:B:days, we can associate the price overreactions to the destructive behavior of large investors.   
+12:286:21981:27:28:113:525:405:144:g_d0_f3:144:g_d0_f3:A:Large investors face uncertainty regarding whether they can successfully push the 
+12:287:22063:28:27:89:524:377:144:g_d0_f3:144:g_d0_f3:B:price to the upper limit, such as uncertainty in the market’s interpretation of the initial 
+12:288:22155:27:28:89:525:350:144:g_d0_f3:144:g_d0_f3:B:news, aggregate strength of the large investors involved in pushing up the price, and the 
+12:289:22245:28:28:89:524:322:144:g_d0_f3:144:g_d0_f3:B:number of other investors in the market who are eager to sell their shares. In other words, 
+12:290:22337:28:27:89:524:294:144:g_d0_f3:144:g_d0_f3:B:an initial price increase during the day may motivate some large investors to buy the shares, 
+12:291:22431:27:28:89:524:267:144:g_d0_f3:144:g_d0_f3:B:but they may not always succeed in pushing the price to close at the upper price limit. Thus, 
+12:292:22525:28:27:89:524:239:144:g_d0_f3:144:g_d0_f3:B:we also expect large investors to buy shares on days with large price increases even without 
+12:293:22618:27:28:89:486:212:144:g_d0_f3:144:g_d0_f3:B:closing at the upper price limit, albeit less than on upper-price-limit-hitting days.   
+12:294:22706:28:28:113:524:184:144:g_d0_f3:144:g_d0_f3:A:While  short  sales  of  stocks  are  legally  permitted  after  2010  for  a  list  of  stocks 
+12:295:22802:28:27:89:525:156:144:g_d0_f3:144:g_d0_f3:B:designated by the China Securities Regulatory Commission (CSRC), short-selling is still 
+12:296:22890:27:32:89:525:129:144:g_d0_f3:144:g_d0_f3:B:difficult and costly.4 As a result, we do not expect large investors to pursue a similar 
+12:297:22979:32:8:90:236:97:144:g_d0_f2:144:g_d0_f2:C:																																																								
+12:298:23035:8:15:90:524:89:42:g_d0_f3:100:g_d0_f3:F:4 Short-selling was not allowed in the Chinese stock market until February 23, 2010, when the CSRC allowed 
+12:299:23142:15:0:89:524:74:100:g_d0_f3:100:g_d0_f3:F:40 stocks on the SZSE and 50 stocks on the Shanghai Stock Exchange (SHSE) to be eligible for shorting. The 
+13:300:23252:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:strategy around the days of hitting the lower price limit by short-selling stocks and then 
+13:301:23343:27:28:90:262:681:144:g_d0_f3:144:g_d0_f3:B:buying them back on the next day.  
+13:302:23378:28:27:114:525:653:144:g_d0_f3:144:g_d0_f3:A:Examining Hypothesis 1 does not provide a forceful identification of the role served 
+13:303:23463:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:by the daily price limit in inducing the destructive behavior of large investors, as this 
+13:304:23553:28:28:90:524:598:144:g_d0_f3:144:g_d0_f3:B:hypothesis is also consistent with large investors trading to take advantage of feedback 
+13:305:23642:28:27:90:524:570:144:g_d0_f3:144:g_d0_f3:B:traders on days with large positive returns. To further isolate the effect of the daily price 
+13:306:23736:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:limit, we develop an additional identification strategy building on the fact that ST stocks 
+13:307:23828:28:27:90:531:515:144:g_d0_f3:144:g_d0_f3:B:face tighter daily price limits (5%) relative to the daily price limits of regular stocks (10%).   
+13:308:23927:27:28:114:524:488:144:g_d0_f3:144:g_d0_f3:A:In general, the ST status is given to a publicly listed firm if it reports negative profits 
+13:309:24019:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:for two consecutive years or a net asset value below the par value (usually one yuan per 
+13:310:24108:28:27:90:524:432:144:g_d0_f3:144:g_d0_f3:B:share). This status is formally assigned by the stock exchange after firms release their 
+13:311:24197:27:28:90:524:405:144:g_d0_f3:144:g_d0_f3:B:annual financial reports, which is usually in March or April.  As a result, the market can 
+13:312:24288:28:27:90:524:377:144:g_d0_f3:144:g_d0_f3:B:precisely anticipate whether a firm will obtain the ST status at the end of January after its 
+13:313:24382:27:28:90:527:350:144:g_d0_f3:144:g_d0_f3:B:fourth  quarter  earnings  are  announced.  That  is,  if  in  January  a firm reports negative 
+13:314:24478:28:28:90:525:322:144:g_d0_f3:144:g_d0_f3:B:earnings for the eighth consecutive quarter or a low net asset value, it will almost surely be 
+13:315:24573:28:27:90:525:294:144:g_d0_f3:144:g_d0_f3:B:assigned the ST status in March or April, and then be subject to the more restrictive 5% 
+13:316:24662:27:28:90:525:267:144:g_d0_f3:144:g_d0_f3:B:daily price limits. Thus, there is a period of 2 to 3 months during which market participants 
+13:317:24756:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:anticipate a stock to be labeled as ST, but the stock is still trading under the regular 10% 
+13:318:24849:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:price limits. This period allows us to identify the effects induced by the more restrictive 
+13:319:24941:28:38:90:374:184:144:g_d0_f3:144:g_d0_f3:B:5% price limits after the ST status is officially assigned.5    
+13:320:25005:38:12:90:236:146:144:g_d0_f2:144:g_d0_f2:C:																																																								
+13:321:25061:12:11:90:524:134:100:g_d0_f3:100:g_d0_f3:F:list has been expanded several times and now includes 400 stocks on the SZSE and 500 stocks on the 
+13:322:25160:11:12:90:524:123:100:g_d0_f3:100:g_d0_f3:F:SHSE.  The total short interest, however, has stayed at a very low level.  For example, at the end of 2015, the 
+13:323:25272:12:11:90:368:111:100:g_d0_f3:100:g_d0_f3:F:short interest on the SZSE was less than 0.005% of tradable shares.    
+13:324:25343:11:15:90:524:100:42:g_d0_f3:100:g_d0_f3:F:5 We illustrate the timeline using the example of Leshan Power (600644), which was assigned the ST status 
+13:325:25449:15:11:90:524:85:100:g_d0_f3:100:g_d0_f3:F:in 2014:  1) In December 2013, market news warned investors that Leshan Power might become a ST stock 
+13:326:25551:11:0:90:524:74:100:g_d0_f3:100:g_d0_f3:F:since it had reported negative profits for seven consecutive quarters. 2) On January 27, 2014, Leshan Power 
+14:327:25662:0:27:114:524:708:144:g_d0_f3:144:g_d0_f3:A:Specifically, we examine the following hypothesis by comparing the price dynamics 
+14:328:25744:27:28:90:527:681:144:g_d0_f3:144:g_d0_f3:B:and  large  investors’  trading  behavior  during  the  post-ST  period right after a stock is 
+14:329:25839:28:27:90:527:653:144:g_d0_f3:144:g_d0_f3:B:officially  assigned  the  ST  status  and  during  the  pre-ST  period when its ST status is 
+14:330:25933:27:28:90:297:626:144:g_d0_f3:144:g_d0_f3:B:anticipated but not yet officially assigned:  
+14:331:25979:28:28:114:524:598:144:g_d0_f4:144:g_d0_f3:A:Hypothesis 2: Large investors pursue the destructive strategy of buying on the days 
+14:332:26063:28:27:90:525:570:144:g_d0_f3:144:g_d0_f3:B:of hitting the 5% upper price limit and selling on the next day in the post-ST period, 
+14:333:26150:27:28:89:524:543:144:g_d0_f3:144:g_d0_f3:B:although not around days with large daily returns above 5% in the pre-ST period; their 
+14:334:26237:28:27:89:524:515:144:g_d0_f3:144:g_d0_f3:B:aggressive  buying  on  the  days  of hitting  the  5%  upper  price  limit  predicts  a  more 
+14:335:26332:27:28:89:525:488:144:g_d0_f3:144:g_d0_f3:B:pronounced price reversal in the post-ST period; and as a result, the stock price reversal 
+14:336:26423:28:28:89:524:460:144:g_d0_f3:144:g_d0_f3:B:subsequent to hitting the 5% upper price limit in the post-ST period is more pronounced 
+14:337:26511:28:33:89:512:432:144:g_d0_f3:144:g_d0_f3:B:than its reversal subsequent to days with large returns above 5% in the pre-ST period.    
+14:338:26601:33:28:219:395:399:144:g_d0_f4:144:g_d0_f4:C:III. Analysis of Regular Stocks 
+14:339:26632:28:27:113:524:371:144:g_d0_f3:144:g_d0_f3:A:In this section, we report empirical results from using the sample of all regular stocks 
+14:340:26721:27:28:90:526:344:144:g_d0_f3:144:g_d0_f3:B:in the SZSE from 2012 to 2015 to analyze Hypothesis 1. We first examine stock price 
+14:341:26805:28:28:90:528:316:144:g_d0_f3:144:g_d0_f3:B:dynamics after hitting the upper price limit and having large daily returns below 10%. Then, 
+14:342:26898:28:27:90:525:288:144:g_d0_f3:144:g_d0_f3:B:we conduct a descriptive analysis of the trading behavior of different types of investors 
+14:343:26988:27:28:90:525:261:144:g_d0_f3:144:g_d0_f3:B:around these events. Finally, we verify whether the trading of large investors on the days 
+14:344:27079:28:33:90:514:233:144:g_d0_f3:144:g_d0_f3:B:when the upper price limit is hit has predictive power for the subsequent price reversal.  
+14:345:27170:33:57:90:365:200:144:g_d0_f4:144:g_d0_f4:C:A. Continued Price Increase and Long-run Reversal  
+14:346:27220:57:12:90:236:143:144:g_d0_f2:144:g_d0_f2:C:																																																								
+14:347:27276:12:11:90:524:131:100:g_d0_f3:100:g_d0_f3:F:released its earnings for the fourth quarter of 2013, which were negative. 3) On March 6, 2014, after Leshan 
+14:348:27385:11:12:89:524:120:100:g_d0_f3:100:g_d0_f3:F:Power released its annual financial report, market news warned investors again of the firm’s upcoming ST 
+14:349:27490:12:11:89:524:108:100:g_d0_f3:100:g_d0_f3:F:status. 4) On March 31, 2014, Leshan Power was officially assigned the ST status, and its daily price limits 
+14:350:27599:11:12:89:524:97:100:g_d0_f3:100:g_d0_f3:F:were reduced to 5%. In this example, market participants could anticipate Leshan Power’s ST assignment 
+14:351:27702:12:11:89:524:85:100:g_d0_f3:100:g_d0_f3:F:well in advance of the official assignment, the ST assignment reduces the daily price limits but does not 
+14:352:27808:11:0:89:291:74:100:g_d0_f3:81:g_d0_f2:F:provide any additional information to the market. 	
+15:353:27862:0:27:114:525:708:144:g_d0_f3:144:g_d0_f3:A:We first document the price pattern subsequent to hitting the 10% upper and lower 
+15:354:27944:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:price limits. We compare the days when the closing price hits the upper or lower 10% limit 
+15:355:28035:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:with the days when the closing return falls into different inner ranges, such as 9% to 10%, 
+15:356:28127:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:8% to 9%, ..., -10% to -9%. To make it comparable with our account-level analyses, we 
+15:357:28213:28:28:90:303:598:144:g_d0_f3:144:g_d0_f3:B:restrict the sample period to 2012 to 2015.6  
+15:358:28259:28:27:114:525:570:144:g_d0_f3:144:g_d0_f3:A:Upon a stock’s closing price hitting one of the limits, we track the stock’s post-hit 
+15:359:28345:27:28:90:525:543:144:g_d0_f3:144:g_d0_f3:B:returns up to six months. To control risk characteristics that may drive a stock’s returns, 
+15:360:28437:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:we use the characteristic-based adjustment method developed by Daniel, Grinblatt, Titman, 
+15:361:28527:27:28:90:525:488:144:g_d0_f3:144:g_d0_f3:B:and Wermers (DGTW, 1997). Specifically, we sort all stocks independently based on their 
+15:362:28615:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:float capitalization and market-to-book ratio at the end of each year into 5x5 groups. Then, 
+15:363:28708:28:27:90:525:432:144:g_d0_f3:144:g_d0_f3:B:in the following year, a stock’s (daily) risk-adjusted return equals its raw return minus the 
+15:364:28802:27:28:90:525:405:144:g_d0_f3:144:g_d0_f3:B:average return of stocks in the stock’s benchmark group. Through this adjustment, we 
+15:365:28887:28:27:90:524:377:144:g_d0_f3:144:g_d0_f3:B:obtain the abnormal returns of each individual stock, which have already removed market 
+15:366:28975:27:28:90:525:350:144:g_d0_f3:144:g_d0_f3:B:returns  and  other  common  return  components  related  to  size  and market-to-book 
+15:367:29062:28:28:89:524:322:144:g_d0_f3:144:g_d0_f3:B:characteristics. We also calculate cumulative abnormal returns over longer windows. We 
+15:368:29149:28:27:89:524:294:144:g_d0_f3:144:g_d0_f3:B:use log returns in our main analysis, while the results from using percentage returns are 
+15:369:29239:27:28:89:315:267:144:g_d0_f3:144:g_d0_f3:B:similar and reported in the Online Appendix.7  
+15:370:29286:28:27:114:525:239:144:g_d0_f3:144:g_d0_f3:A:Table 3 reports the abnormal returns subsequent to hitting the daily upper and lower 
+15:371:29371:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:price limits and other inner price ranges. We group all stock-day observations into 13 
+15:372:29458:28:38:90:525:184:144:g_d0_f3:144:g_d0_f3:B:categories  based  on  the  magnitude  of  day-0  returns.  For  post-event  returns,  we  adopt 
+15:373:29555:38:8:90:236:146:144:g_d0_f2:144:g_d0_f2:C:																																																								
+15:374:29611:8:15:90:497:138:42:g_d0_f3:100:g_d0_f3:F:6 The result using a longer sample from 1997 to 2015 is similar and reported in the Online Appendix. 
+15:375:29712:15:15:90:524:123:42:g_d0_f3:100:g_d0_f3:F:7 We use stocks from both the Shenzhen and Shanghai Stock Exchanges to compute abnormal returns. The 
+15:376:29813:15:11:90:524:108:100:g_d0_f3:100:g_d0_f3:F:Shenzhen Stock Exchange lists mostly innovative private firms, which tend to be small, as opposed to the 
+15:377:29918:11:12:90:525:97:100:g_d0_f3:100:g_d0_f3:F:large state-owned enterprises listed in the Shanghai Stock Exchange. To ensure a balanced representation of 
+15:378:30026:12:11:90:525:85:100:g_d0_f3:100:g_d0_f3:F:stocks in the characteristics benchmark portfolios, we pool all stocks listed in both exchanges. The abnormal 
+15:379:30136:11:0:90:534:74:100:g_d0_f3:100:g_d0_f3:F:returns computed from this exercise are also used as the dependent variables in our later regression analysis.     
+16:380:30254:0:27:90:526:708:144:g_d0_f3:144:g_d0_f3:B:different time windows up to 120 trading days. We decompose the first day return into 
+16:381:30340:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:close-to-open (i.e., overnight) and open-to-close returns, and report returns of day 2 to day 
+16:382:30434:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:5 separately. We also report the cumulative returns over days 6 to 10, 11 to 20, 21 to 60, 
+16:383:30525:27:28:90:522:626:144:g_d0_f3:144:g_d0_f3:B:and 61 to 120. Standard errors are clustered by calendar date and the corresponding t-
+16:384:30611:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:statistics are reported in parentheses with *, **, *** representing statistical significance at 
+16:385:30707:28:27:90:298:570:144:g_d0_f3:144:g_d0_f3:B:the 5%, 1%, and 0.1% levels, respectively. 
+16:386:30750:27:28:114:524:543:144:g_d0_f3:144:g_d0_f3:A:The first row documents the abnormal returns subsequent to hitting the upper 10% 
+16:387:30831:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:price limit. On the first day, the close-to-open return on average is 2.44% (t-statistic of 
+16:388:30923:27:28:90:524:488:144:g_d0_f3:144:g_d0_f3:B:20.3), and the price is reversed by a small amount during the trading hours with an average 
+16:389:31015:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:return of -0.30% and a t-statistic of 4.0. The price continues to rise on day 2 with an average 
+16:390:31111:28:27:90:525:432:144:g_d0_f3:144:g_d0_f3:B:return of 0.45% and a t-statistic of 4.1, but does not show any significant pattern on day 3 
+16:391:31204:27:28:90:524:405:144:g_d0_f3:144:g_d0_f3:B:and day 4. The price pattern is significantly reversed starting from day 5, on which the 
+16:392:31293:28:27:90:525:377:144:g_d0_f3:144:g_d0_f3:B:average return equals -0.15% with a t-statistic of 3.6. Then, the price keeps decreasing: the 
+16:393:31387:27:28:90:525:350:144:g_d0_f3:144:g_d0_f3:B:average return from day 6 to 10 is -0.59% with a t-statistic of 6.4, -0.87% from day 11 to 
+16:394:31478:28:28:90:521:322:144:g_d0_f3:144:g_d0_f3:B:20 with a t-statistic of 5.3, -1.31% from day 21 to 60 with a t-statistic of 4.7, and finally -
+16:395:31573:28:27:90:335:294:144:g_d0_f3:144:g_d0_f3:B:0.97% from day 61 to 120 with a t-statistic of 7.1.  
+16:396:31626:27:28:114:525:267:144:g_d0_f3:144:g_d0_f3:A:In other words, after hitting the 10% upper price limit at the close, the stock price 
+16:397:31712:28:27:90:525:239:144:g_d0_f3:144:g_d0_f3:B:continues to increase for another two days and eventually reverses afterward. It reaches the 
+16:398:31805:27:28:90:524:212:144:g_d0_f3:144:g_d0_f3:B:highest point on day 2 with a cumulative return of 2.59%. Summing up all the returns in 
+16:399:31893:28:28:90:524:184:144:g_d0_f3:144:g_d0_f3:B:the row provides the post-event accumulative abnormal return up to 120 days, which is 
+16:400:31979:28:27:90:524:156:144:g_d0_f3:144:g_d0_f3:B:negative and equals -1.21%. This number shows a long-term reversal pattern subsequent 
+16:401:32065:27:0:90:244:129:144:g_d0_f3:144:g_d0_f3:B:to hitting the 10% upper limit.   
+17:402:32102:0:27:114:524:708:144:g_d0_f3:144:g_d0_f3:A:The middle row in the table shows that subsequent to days with modest closing returns 
+17:403:32188:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:in (-5%, 5%), the average abnormal returns across all time windows up to 120 days are 
+17:404:32274:28:27:90:524:653:144:g_d0_f3:144:g_d0_f3:B:almost zero. This row thus provides a benchmark for the returns subsequent to other days 
+17:405:32363:27:28:90:227:626:144:g_d0_f3:144:g_d0_f3:B:with large closing returns.    
+17:406:32394:28:28:114:524:598:144:g_d0_f3:144:g_d0_f3:A:We do not find a similar pattern of continued price increases subsequent to days with 
+17:407:32480:28:27:90:524:570:144:g_d0_f3:144:g_d0_f3:B:large returns but without hitting the price limit. Looking at the days with closing returns in 
+17:408:32575:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:(9%, 10%), for example, the price drops by -0.51% at the open price of day 1, and then 
+17:409:32662:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:continues to drop on day 2. The long-term returns are also negative. Furthermore, the 
+17:410:32748:27:28:90:525:488:144:g_d0_f3:144:g_d0_f3:B:patterns subsequent to days with large returns in (8%, 9%) and (7%, 8%) appear to be 
+17:411:32833:28:28:90:525:460:144:g_d0_f3:144:g_d0_f3:B:similar—there is long-run price reversal but not any continued price increase right after the 
+17:412:32927:28:27:90:191:432:144:g_d0_f3:144:g_d0_f3:B:initial large return.    
+17:413:32952:27:28:114:525:405:144:g_d0_f3:144:g_d0_f3:A:The  bottom  row  of  Table  3  presents  the  price  pattern  following lower-limit  hits. 
+17:414:33044:28:27:90:524:377:144:g_d0_f3:144:g_d0_f3:B:Similar to upper-limit hits, the price significantly drops at the open of day 1 with an average 
+17:415:33140:27:28:90:525:350:144:g_d0_f3:144:g_d0_f3:B:return of -1.13% and a t-statistic of 8.7. The open-to-close return is moderately negative, 
+17:416:33232:28:28:90:524:322:144:g_d0_f3:144:g_d0_f3:B:and  the  price  continues  to  drop  significantly  on  day  2  and  day 3.  Nevertheless,  the 
+17:417:33329:28:27:90:524:294:144:g_d0_f3:144:g_d0_f3:B:cumulative returns over days 6 to 10, days 11 to 20, and days 21 to 60 indicate a reversal 
+17:418:33420:27:28:90:524:267:144:g_d0_f3:144:g_d0_f3:B:pattern, with average returns of 0.34% (t-statistic of 2.2), 1.33% (t-statistic of 6.0), and 
+17:419:33513:28:27:90:521:239:144:g_d0_f3:144:g_d0_f3:B:1.68%  (t-statistic  of  7.1),  respectively.  By  comparison,  this  continuation-followed-by-
+17:420:33608:27:28:90:525:212:144:g_d0_f3:144:g_d0_f3:B:reversal pattern does not appear subsequent to days with other large, interior negative 
+17:421:33696:28:28:90:359:184:144:g_d0_f3:144:g_d0_f3:B:returns, such as returns of (-10%, -9%) and (-9%, -8%). 
+17:422:33752:28:27:114:524:156:144:g_d0_f3:144:g_d0_f3:A:In sum, Table 3 shows a pattern of stock prices continuing to increase for a couple of 
+17:423:33839:27:28:90:525:129:144:g_d0_f3:144:g_d0_f3:B:days subsequent to hitting the upper 10% price limit, but eventually  reversing over a longer 
+17:424:33933:28:0:90:524:101:144:g_d0_f3:144:g_d0_f3:B:period. While this pattern is consistent with Hypothesis 1, it may be also consistent with 
+18:425:34027:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:some  traders  pursuing  positive  feedback  strategies  and  their  price  impact  leading  to 
+18:426:34123:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:subsequent price reversal. To sort out this possibility, we specifically examine the trading 
+18:427:34216:28:34:90:320:653:144:g_d0_f3:144:g_d0_f3:B:of large investors in the following subsections.  
+18:428:34266:34:27:89:316:619:144:g_d0_f4:144:g_d0_f4:C:B. Trading around Upper-Price-Limit Hits 
+18:429:34306:27:28:113:521:592:144:g_d0_f3:144:g_d0_f3:A:We now examine the behavior of different types of investors on the upper-price-limit-
+18:430:34391:28:27:90:525:564:144:g_d0_f3:144:g_d0_f3:B:hitting day (day 0) and the following day (day 1). The first part of Hypothesis 1 posits that 
+18:431:34485:27:28:90:525:537:144:g_d0_f3:144:g_d0_f3:B:large investors tend to buy stocks on day 0 and then sell on day 1. To test this hypothesis, 
+18:432:34578:28:27:90:525:509:144:g_d0_f3:144:g_d0_f3:B:we compare the daily NetBuy by the six groups of investors on day 0 and day 1 in Panel A 
+18:433:34667:27:28:90:524:482:144:g_d0_f3:144:g_d0_f3:B:of Figure 1. For comparison, we also plot NetBuy by different investor groups on trading 
+18:434:34756:28:28:90:525:454:144:g_d0_f3:144:g_d0_f3:B:days with large closing returns in (8%, 9%) and (9%, 10%), which we hereafter refer simply 
+18:435:34847:28:27:90:316:426:144:g_d0_f3:144:g_d0_f3:B:to as having 8% and 9% returns, respectively.  
+18:436:34894:27:28:114:524:399:144:g_d0_f3:144:g_d0_f3:A:Figure 1 shows a clear and distinctive strategy used by large investors (with stock 
+18:437:34978:28:27:90:525:371:144:g_d0_f3:144:g_d0_f3:B:balances above 10 million).  Consistent with Hypothesis 1, large investors purchase these 
+18:438:35068:27:28:90:525:344:144:g_d0_f3:144:g_d0_f3:B:upper-price-limit-hitting stocks on day 0 and sell them on day 1—as a group they acquire 
+18:439:35157:28:28:90:525:316:144:g_d0_f3:144:g_d0_f3:B:0.69% of the stock’s floating shares on day 0 and sell 0.51% on day 1. These quantities are 
+18:440:35249:28:27:90:524:288:144:g_d0_f3:144:g_d0_f3:B:comparable to the average daily turnover rate of 3.1%, as reported in Table 2, and are 
+18:441:35336:27:28:90:525:261:144:g_d0_f3:144:g_d0_f3:B:particularly large relative to the group’s average turnover of 0.44%. While the group trades 
+18:442:35429:28:27:90:524:233:144:g_d0_f3:144:g_d0_f3:B:in the same manner on days with large, interior closing returns of 8% or 9%, their NetBuy 
+18:443:35518:27:28:90:524:206:144:g_d0_f3:144:g_d0_f3:B:on day 0 and day 1 is substantially lower than around the upper-price-limit hits. The pattern 
+18:444:35612:28:28:90:525:178:144:g_d0_f3:144:g_d0_f3:B:of large traders quickly reversing their buying positions on the next day also shows that 
+18:445:35702:28:27:90:378:150:144:g_d0_f3:144:g_d0_f3:B:they are not simply following a positive-feedback strategy.  
+18:446:35763:27:28:114:524:123:144:g_d0_f3:144:g_d0_f3:A:In  contrast,  small  and  median  investors  in  the  three  groups  with  average  stock 
+18:447:35854:28:0:90:524:95:144:g_d0_f3:144:g_d0_f3:B:balances lower than 5 million RMB all exhibit the opposite trading pattern—their NetBuy 
+19:448:35944:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:is negative on day 0 while positive on day 1 of the upper-price-limit hits.8 The intermediate 
+19:449:36038:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:investor group with stock balances between 5 and 10 million RMB does not buy or sell any 
+19:450:36127:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:notable  amount  around  the  upper-price-limit-hitting  days  and  large  return  days.9 The 
+19:451:36221:27:28:89:470:626:144:g_d0_f3:144:g_d0_f3:B:institution group acquires stocks on both day 0 and day 1 around these events.  
+19:452:36301:28:28:113:524:598:144:g_d0_f3:144:g_d0_f3:A:Panel B of Figure 1 depicts the NetBuy of different investor groups on day 0 and day 
+19:453:36386:28:27:89:521:570:144:g_d0_f3:144:g_d0_f3:B:1 of hitting the lower price limit and having large negative returns in (-9.99%, -9%) and (-
+19:454:36478:27:28:89:525:543:144:g_d0_f3:144:g_d0_f3:B:8.99%, -8%). This plot clearly indicates that the large-investor group does not pursue any 
+19:455:36569:28:27:90:524:515:144:g_d0_f3:144:g_d0_f3:B:destructive strategy around either the lower-price-limit hitting events or the large negative 
+19:456:36663:27:28:90:525:488:144:g_d0_f3:144:g_d0_f3:B:return days—they tend to sell a large quantity on day 0 and then continue to sell another 
+19:457:36753:28:28:90:524:460:144:g_d0_f3:144:g_d0_f3:B:smaller quantity on day 1. This observation is consistent with our earlier argument that the 
+19:458:36846:28:27:90:522:432:144:g_d0_f3:144:g_d0_f3:B:difficulty of short-selling stocks makes pursuing a destructive strategy around the lower-
+19:459:36936:27:28:90:525:405:144:g_d0_f3:144:g_d0_f3:B:price-limit-hitting events undesirable. For this reason, we focus our analysis on the upper 
+19:460:37028:28:27:89:525:377:144:g_d0_f3:144:g_d0_f3:B:price limit. The institution group has the same pattern with even stronger selling on these 
+19:461:37120:27:28:89:524:350:144:g_d0_f3:144:g_d0_f3:B:days. The three investor groups with stock balances less than 5 million RMB trade again 
+19:462:37208:28:28:89:427:322:144:g_d0_f3:144:g_d0_f3:B:in the exact opposite direction, buying large quantities on these days.  
+19:463:37281:28:27:114:524:294:144:g_d0_f3:144:g_d0_f3:A:Finally, to further verify whether all accounts in one group trade similarly around the 
+19:464:37369:27:28:89:525:267:144:g_d0_f3:144:g_d0_f3:B:upper price limit hits, Panel C of Figure 1 plots the percentage of accounts in each group 
+19:465:37460:28:27:89:524:239:144:g_d0_f3:144:g_d0_f3:B:which  bought  shares  on  day  0  and  then  sold  on  day  1.  Interestingly,  83.6%  of  large 
+19:466:37558:27:28:89:525:212:144:g_d0_f3:144:g_d0_f3:B:investors bought shares on day 0 and then sold on the next day, indicating homogeneous 
+19:467:37645:28:38:89:524:184:144:g_d0_f3:144:g_d0_f3:B:behavior among this group. In contrast, only a small fraction of small and median investors 
+19:468:37737:38:10:89:235:146:144:g_d0_f2:144:g_d0_f2:C:																																																								
+19:469:37793:10:13:90:524:136:36:g_d0_f2:100:g_d0_f3:F:8	This pattern is consistent with the disposition effect, i.e., current shareholders realize their gains on days 
+19:470:37906:13:12:89:522:123:100:g_d0_f3:100:g_d0_f3:F:when prices hit the upper limit, and the attention effect, i.e., new investors are attracted by the upper-price-
+19:471:38018:12:11:89:326:111:100:g_d0_f3:81:g_d0_f2:F:limit-hitting events to buy the stocks on the following day.	
+19:472:38079:11:15:90:524:100:42:g_d0_f3:100:g_d0_f3:F:9 The lack of notable buying and selling by this group might be caused by heterogeneity of investor behavior 
+19:473:38188:15:11:90:524:85:100:g_d0_f3:100:g_d0_f3:F:within this group, i.e., some behaving like the large investors in the group with stock balances larger than 10 
+19:474:38300:11:0:90:467:74:100:g_d0_f3:100:g_d0_f3:F:million while some others behaving like those in the groups with balances less than 5 million. 
+20:475:38398:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:adopted this type of strategy as the large investors. The pertinent percentage for investors 
+20:476:38491:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:with stock balances between 5 and 10 million RMB is larger than that of the small and 
+20:477:38577:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:median investors but it is still less than 20%. The institution group shows a more mixed 
+20:478:38666:27:34:90:435:626:144:g_d0_f3:144:g_d0_f3:B:picture, with 52.3% of them buying on day 0 and selling one day after.  
+20:479:38738:34:28:89:340:592:144:g_d0_f4:144:g_d0_f4:C:C. Large Investors’ Trading and Price Reversal 
+20:480:38784:28:27:113:524:564:144:g_d0_f3:144:g_d0_f3:A:In this subsection, we proceed to examine whether the net buy of large investors on 
+20:481:38868:27:28:89:524:537:144:g_d0_f3:144:g_d0_f3:B:the upper-price-limit-hitting day has predictive power for the subsequent price reversal 
+20:482:38957:28:27:90:525:509:144:g_d0_f3:144:g_d0_f3:B:(i.e., the second part of Hypothesis 1). We pool all stock-day observations in our sample 
+20:483:39047:27:28:90:303:482:144:g_d0_f3:144:g_d0_f3:B:and run the following predictive regression: 
+20:484:39092:28:31:90:489:454:144:g_d0_f2:144:g_d0_f3:B:Ret࢏,୲ା୬→୲ା୫ൌα൅βଵݐ݅ܪݏݐ݅݉݅ܮ୧,୲൅βଶNetBuy୧,୨,୲൅βଷݐ݅ܪݏݐ݅݉݅ܮ୧,୲∗NetBuy୧,୨,୲ 
+20:485:39162:31:30:90:467:423:144:g_d0_f3:144:g_d0_f3:B:                        + ∑ߜ௞݁ܿ݅ݎܲ݁݃ݎܽܮ௜,௧௞൅ଷ௞ୀଵ∑ߩ௞݁ܿ݅ݎܲ݁݃ݎܽܮ௜,௧௞∗NetBuy୧,୨,୲ଷ௞ୀଵ 
+20:486:39243:30:29:90:523:393:144:g_d0_f2:144:g_d0_f3:B:																											൅	ψܺ௜,௧ߝ൅௜,௝,௧,													݊,݉∈ሼ1,2,3,4,5,10,20,60,120ሽ,																												(1) 
+20:487:39359:29:29:89:525:364:144:g_d0_f3:144:g_d0_f3:B:where the dependent variable Ret࢏,୲ା୬→୲ା୫ denotes the characteristics-adjusted abnormal 
+20:488:39445:29:28:90:525:335:144:g_d0_f3:144:g_d0_f3:B:returns on day 1, 2, 3, 4, 5, and cumulative abnormal returns over days 10 to 20, 21 to 60, 
+20:489:39537:28:29:90:525:307:144:g_d0_f3:144:g_d0_f3:B:and 61 to 120 for stock i after the upper-price-limit-hitting day t. ݐ݅ܪݏݐ݅݉݅ܮ୧,୲ is a dummy 
+20:490:39630:29:29:90:525:278:144:g_d0_f3:144:g_d0_f3:B:variable that equals 1 if stock i hits the upper price limit on day t. NetBuy୧,୨,୲ denotes 
+20:491:39721:29:28:90:525:249:144:Times:144:g_d0_f3:B:NetBuy of stock i on day t by investor group j. The variable of interest is the interaction 
+20:492:39813:28:28:90:525:221:144:g_d0_f3:144:g_d0_f3:B:term of LimitHit and NetBuy. Hypothesis 1 posits that this interaction term has a negative 
+20:493:39903:28:27:90:525:193:144:g_d0_f3:144:g_d0_f3:B:coefficient, indicating stronger price reversal after upper-price-limit hits with greater net 
+20:494:39997:27:28:90:226:166:144:g_d0_f3:144:g_d0_f3:B:buy by the large investors.   
+20:495:40027:28:28:114:524:138:144:g_d0_f3:144:g_d0_f3:A:To compare market dynamics after the upper-price-limit hits and after days with large 
+20:496:40113:28:28:90:525:110:144:g_d0_f3:144:g_d0_f3:B:daily price movements, we include a series of dummies ݇ ൌ1,2,3, denoting the three 2% 
+20:497:40199:28:0:90:525:82:144:g_d0_f3:144:g_d0_f3:B:intervals from 4% to 10% of daily closing returns. We also include the interaction terms of 
+21:498:40294:0:29:90:521:708:144:g_d0_f3:144:g_d0_f3:B:these dummies with NetBuy. We further control several covariates ܺ௜,௧, such as market-to-
+21:499:40383:29:27:90:525:679:144:g_d0_f3:144:g_d0_f3:B:book  ratio,  float  capitalization,  and  past  30-trading-day  return.  Finally,  we  use  robust 
+21:500:40483:27:28:90:525:652:144:g_d0_f3:144:g_d0_f3:B:standard errors throughout and cluster by calendar date, which controls for the clustering 
+21:501:40574:28:27:90:266:624:144:g_d0_f3:144:g_d0_f3:B:of price-limit hits on certain dates.10 
+21:502:40613:27:28:113:525:597:144:g_d0_f3:144:g_d0_f3:A:Table 4 reports the regression results. Panel A reports the results using the NetBuy for 
+21:503:40702:28:28:89:524:569:144:g_d0_f3:144:g_d0_f3:B:large investors with stock balances above 10 million. Consistent with Hypothesis 1, the 
+21:504:40790:28:27:89:524:541:144:g_d0_f3:144:Times:B:coefficients of the key interaction term of LimitHit and NetBuy indicate that the net buying 
+21:505:40883:27:28:89:525:514:144:g_d0_f3:144:g_d0_f3:B:of large investors on day 0 of upper-price-limit hits consistently predicts significantly 
+21:506:40973:28:27:89:522:486:144:g_d0_f3:144:g_d0_f3:B:negative returns throughout different time windows subsequent to the upper-price-limit-
+21:507:41060:27:28:89:524:459:144:g_d0_f3:144:g_d0_f3:B:hitting events, except that the coefficient of the day-1 return is insignificant. In other words, 
+21:508:41158:28:28:89:524:431:144:g_d0_f3:144:g_d0_f3:B:when large investors acquire more shares on the day of hitting the upper price limits, the 
+21:509:41249:28:27:89:525:403:144:g_d0_f3:144:g_d0_f3:B:subsequent stock returns are lower throughout the period from day 1 up to day 120.11 These 
+21:510:41340:27:28:90:525:376:144:g_d0_f3:144:g_d0_f3:B:lower returns indicate stronger reversal of the price increase immediately after hitting the 
+21:511:41433:28:27:90:525:348:144:g_d0_f3:144:g_d0_f3:B:upper price limit. Summing up the coefficient of the interaction term LimitHit*NetBuy 
+21:512:41518:27:28:90:525:321:144:g_d0_f3:144:g_d0_f3:B:across the return intervals gives a total of -3.296, which, after multiplying by the average 
+21:513:41611:28:28:90:524:293:144:Times:144:g_d0_f3:B:NetBuy of 0.69% by large investors on day 0 of hitting the upper price limit, further implies 
+21:514:41705:28:27:90:524:265:144:g_d0_f3:144:g_d0_f3:B:a total price reversal of -2.27% from day 1 to day 120. This magnitude is comparable to 
+21:515:41793:27:28:90:499:238:144:g_d0_f3:144:g_d0_f3:B:the total price increase of 2.59% during the first two days after the price limit is hit.   
+21:516:41885:28:27:114:525:210:144:g_d0_f3:144:g_d0_f3:A:Also note several other observations from Panel A. First, the coefficient of NetBuy of 
+21:517:41972:27:37:90:524:183:144:g_d0_f3:144:g_d0_f3:B:large investors is significantly positive across all return intervals, suggesting that on a 
+21:518:42064:37:8:90:236:146:144:g_d0_f2:144:g_d0_f2:C:																																																								
+21:519:42120:8:15:90:524:138:42:g_d0_f3:100:g_d0_f3:F:10 In Table A6 of the Online Appendix, we also report results from including calendar-day fixed effects to 
+21:520:42227:15:13:89:445:123:100:g_d0_f3:100:g_d0_f3:F:further control for the clustering of price-limit hitting events. The results remain robust.  
+21:521:42321:13:13:90:524:110:36:g_d0_f2:100:g_d0_f3:F:11	We also estimate the same regressions replacing net buying of large investors on day 0 with either the net 
+21:522:42431:13:12:90:524:97:100:g_d0_f3:100:g_d0_f3:F:selling of large investors or the net buying of small investors on day 1 after the event. This estimation yields 
+21:523:42544:12:11:90:524:85:100:g_d0_f3:100:g_d0_f3:F:a  similarly  significant  effect  on  long-term  stock  returns  up  to  day  120,  which  gives  further  support  to 
+21:524:42664:11:0:90:396:74:100:g_d0_f3:81:g_d0_f2:F:Hypothesis 1. The results are reported in Table A7 of the Online Appendix. 	
+22:525:42743:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:normal day with daily returns below 4%, the trading of large investors consistently and 
+22:526:42831:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:positively predicts subsequent returns. This finding strongly supports a key premise of our 
+22:527:42923:28:27:90:524:653:144:g_d0_f3:144:g_d0_f3:B:hypotheses that large investors are the "smart money" in the market. The sharp contrast of 
+22:528:43014:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:their trading negatively predicting returns subsequent to hitting the upper price limit makes 
+22:529:43108:28:28:89:423:598:144:g_d0_f3:144:g_d0_f3:B:their destructive behavior around these events even more striking.      
+22:530:43180:28:27:113:524:570:144:g_d0_f3:144:g_d0_f3:A:Second, NetBuy  of  large  investors  also  has  a  similar  effect  on  the  price  reversal 
+22:531:43274:27:28:89:525:543:144:g_d0_f3:144:g_d0_f3:B:subsequent to large daily returns within the price limit, albeit with smaller significance and 
+22:532:43369:28:27:89:525:515:144:g_d0_f3:144:g_d0_f3:B:magnitude. The coefficients of the interaction term of NetBuy with the dummy of daily 
+22:533:43455:27:28:90:525:488:144:g_d0_f3:144:g_d0_f3:B:returns in (8%, 9.99%) are all negative, especially for the short-term returns within 10 days. 
+22:534:43550:28:28:90:525:460:144:g_d0_f3:144:g_d0_f3:B:The interaction terms with the dummies of daily returns in (6%, 7.99%) and (4%, 5.99%) 
+22:535:43637:28:27:90:524:432:144:g_d0_f3:144:g_d0_f3:B:are mostly insignificant. The negative predictive power of the trading of large investors 
+22:536:43727:27:28:90:525:405:144:g_d0_f3:144:g_d0_f3:B:subsequent to the days of large positive returns is consistent with their possibly failed 
+22:537:43817:28:27:90:381:377:144:g_d0_f3:144:g_d0_f3:B:attempt to push up prices to the upper limit on these days.12  
+22:538:43880:27:28:114:524:350:144:g_d0_f3:144:g_d0_f3:A:Panel B of Table 4 also reports the results from using the NetBuy by each of the five 
+22:539:43966:28:28:90:525:322:144:g_d0_f3:144:g_d0_f3:B:other groups to predict the subsequent returns. This panel reports only the coefficients of 
+22:540:44058:28:27:90:524:294:144:g_d0_f3:144:g_d0_f3:B:the  key  interaction  term  of NetBuy  with  the  dummy  of  hitting  the  upper  price  limit. 
+22:541:44155:27:28:89:524:267:144:g_d0_f3:144:g_d0_f3:B:Consistent  with  our  earlier  observation  of  the  institution  group  and  the  group  with 
+22:542:44251:28:27:89:525:239:144:g_d0_f3:144:g_d0_f3:B:intermediate stock balances between 5 and 10 million RMB behaving differently from the 
+22:543:44338:27:28:89:524:212:144:g_d0_f3:144:g_d0_f3:B:large-investor group, the trading of these two groups on the days of hitting the upper price 
+22:544:44431:28:52:89:366:184:144:g_d0_f3:144:g_d0_f3:B:limit has no predictive power for the subsequent returns.  
+22:545:44490:52:9:89:235:132:144:g_d0_f2:144:g_d0_f2:C:																																																								
+22:546:44546:9:15:90:522:123:42:g_d0_f3:100:g_d0_f3:F:12 As our dependent variable in these regressions is abnormal return that already has been adjusted for market-
+22:547:44657:15:11:89:524:108:100:g_d0_f3:100:g_d0_f3:F:to-book and stock float characteristics, the coefficients of the control variables, market-to-book ratio, and 
+22:548:44767:11:12:89:524:97:100:g_d0_f3:100:g_d0_f3:F:float capitalization are insignificant. The coefficient of return in the past 30 days is negative and is significant 
+22:549:44884:12:11:89:524:85:100:g_d0_f3:100:g_d0_f3:F:except for returns in two intervals AR Day 5 and CAR[6,10]. The R-squared from these predictive regressions 
+22:550:44992:11:0:89:521:74:100:g_d0_f3:100:g_d0_f3:F:of (un-grouped) individual stock returns is low, as is well known from the empirical asset pricing literature. 
+23:551:45106:0:27:114:524:708:144:g_d0_f3:144:g_d0_f3:A:In contrast to large investors, trading of the three small and medium investor groups 
+23:552:45192:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:with stock balances below 5 million on the days of hitting the upper price limit has a 
+23:553:45279:28:27:90:524:653:144:g_d0_f3:144:g_d0_f3:B:positive predictive power for the subsequent returns throughout the various return intervals 
+23:554:45372:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:between day 2 and 120. This finding again confirms our earlier discussion that small and 
+23:555:45461:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:medium investors tend to trade exactly on the opposite side of large investors around the 
+23:556:45551:28:27:90:269:570:144:g_d0_f3:144:g_d0_f3:B:days of hitting the upper price limit.  
+23:557:45591:27:28:114:525:543:144:g_d0_f3:144:g_d0_f3:A:In sum, consistent with Hypothesis 1, Table 4 provides strong and robust evidence 
+23:558:45673:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:confirming that the net buy of large investors on the days of hitting the upper price limit is 
+23:559:45768:27:34:90:469:488:144:g_d0_f3:144:g_d0_f3:B:associated with more pronounced price reversal over the subsequent periods.13 
+23:560:45845:34:28:232:381:454:144:g_d0_f4:144:g_d0_f4:C:IV. Analysis of ST Stocks 
+23:561:45870:28:27:114:524:426:144:g_d0_f3:144:g_d0_f3:A:The results reported in the previous section show a significant relationship between 
+23:562:45955:27:28:90:525:399:144:g_d0_f3:144:g_d0_f3:B:the net buying of large investors on days of hitting the upper price limit and the subsequent 
+23:563:46049:28:27:90:524:371:144:g_d0_f3:144:g_d0_f3:B:price reversal. To further identify the role played by the daily price limit, as opposed to 
+23:564:46141:27:28:90:524:344:144:g_d0_f3:144:g_d0_f3:B:simply large daily returns, in inducing the destructive behavior of large investors, we now 
+23:565:46233:28:28:90:524:316:144:g_d0_f3:144:g_d0_f3:B:turn to testing Hypothesis 2 by exploiting ST assignments in an event study of a sample of 
+23:566:46324:28:27:90:524:288:144:g_d0_f3:144:g_d0_f3:B:ST stocks as these stocks face tighter 5% daily price limits than the 10% limits imposed on 
+23:567:46416:27:28:90:525:261:144:g_d0_f3:144:g_d0_f3:B:regular stocks. There are 119 stocks, which were assigned the ST status on the Shenzhen 
+23:568:46504:28:27:90:363:233:144:g_d0_f3:144:g_d0_f3:B:Stock Exchange in our sample period of 2012 to 2015.14 
+23:569:46558:27:28:114:525:206:144:g_d0_f3:144:g_d0_f3:A:As discussed in Section II, market participants can anticipate the ST assignment two 
+23:570:46643:28:40:90:525:178:144:g_d0_f3:144:g_d0_f3:B:or three months in advance. Thus, the official assignment offers no new information about 
+23:571:46733:40:10:90:236:138:144:g_d0_f2:144:g_d0_f2:C:																																																								
+23:572:46789:10:14:90:523:128:36:g_d0_f2:100:g_d0_f3:F:13	As a robustness check, we also examine whether the net buy by large investors on the days of hitting the 
+23:573:46897:14:11:89:524:114:100:g_d0_f3:100:g_d0_f3:F:lower price limit has the same negative effect on subsequent stock returns. The results reported in Table A8 
+23:574:47006:11:11:89:450:103:100:g_d0_f3:81:g_d0_f2:F:of the Online Appendix confirm that there is no such effect for the lower price limit hits.  	
+23:575:47100:11:15:90:525:92:42:g_d0_f3:100:g_d0_f3:F:14 There is only a very small sample of firms whose ST status was removed during this period, which prevents 
+23:576:47209:15:0:90:267:77:100:g_d0_f3:100:g_d0_f3:F:us from studying the effects of ST removal. 
+24:577:47256:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:the firm’s fundamental. The key change around the ST assignment is the tightened daily 
+24:578:47343:27:28:90:526:681:144:g_d0_f3:144:g_d0_f3:B:price limit from 10% to 5%, which offers a suitable setting to identify the effect of the 
+24:579:47433:28:34:90:489:653:144:g_d0_f3:144:g_d0_f3:B:tighter 5% price limits on large investors’ trading behavior and market dynamics.   
+24:580:47517:34:27:90:356:619:144:g_d0_f4:144:g_d0_f4:C:A. Price Reversal Before and After ST Assignment 
+24:581:47565:27:28:114:524:592:144:g_d0_f3:144:g_d0_f3:A:We first compare the stock returns subsequent to hitting the 5% upper price limit in 
+24:582:47650:28:27:90:524:564:144:g_d0_f3:144:g_d0_f3:B:the post-ST period relative to having large daily returns above 5% in the pre-ST period in 
+24:583:47741:27:28:90:459:537:144:g_d0_f3:144:g_d0_f7:B:the sample of 119 ST stocks. Specifically, we run the following regression:  
+24:584:47817:28:30:117:500:509:144:g_d0_f2:144:g_d0_f7:A:Ret࢏,୲ା୬→୲ା୫ൌα൅ߚଵST୧,୲ߚ൅ଶFive୧,୲ߚ൅ଷST୧,୲∗Five୧,୲ܺ൅ψ௜,௧ߙ൅௧ߝ൅௜,௝,௧, 
+24:585:47882:30:28:115:478:479:144:g_d0_f2:144:g_d0_f3:A:																																																		݊,݉∈ሼ1,2,3,4,5,10,20,60,120ሽ,																	ሺ2ሻ  
+24:586:47983:28:28:89:525:451:144:g_d0_f3:144:g_d0_f3:B:where ݐ∈ሾെ60,60ሿ is a date before or after the ST assignment of a stock, measured by 
+24:587:48068:28:27:89:524:423:144:g_d0_f3:144:g_d0_f3:B:the number of days to the ST assignment, and the dependent variable is the abnormal return 
+24:588:48159:27:28:89:524:396:144:g_d0_f3:144:g_d0_f3:B:subsequent to each stock-day in the sample.15 Like before, the abnormal return is adjusted 
+24:589:48250:28:29:90:525:368:144:g_d0_f3:144:g_d0_f3:B:for the stock’s float capitalization and market-to-book ratio.16 ܶܵ௜,௧ is a dummy variable 
+24:590:48340:29:29:90:524:339:144:g_d0_f3:144:g_d0_f3:B:that equals one if stock i has the ST status on date t and zero otherwise. ݁ݒ݅ܨ௜,௧ is also a 
+24:591:48433:29:28:90:525:310:144:g_d0_f3:144:g_d0_f3:B:dummy variable that equals one if stock i hits the 5% limit on date t in the post-ST period 
+24:592:48525:28:28:90:525:282:144:g_d0_f3:144:g_d0_f3:B:or has daily return larger than 5% in the pre-ST period. The key variable of interest is the 
+24:593:48618:28:28:90:525:254:144:g_d0_f3:144:g_d0_f3:B:interaction term of ܶܵ௜,௧ and ݁ݒ݅ܨ௜,௧, which gives an estimate of the effect of the reduced 
+24:594:48709:28:28:90:525:226:144:g_d0_f3:144:g_d0_f3:B:price limit after the ST assignment on the stock return. As posited by Hypothesis 2, we 
+24:595:48797:28:29:90:525:198:144:g_d0_f3:144:g_d0_f3:B:expect a stronger price increase right after hitting the 5% upper price limit in the post-ST 
+24:596:48890:29:8:90:236:169:144:g_d0_f2:144:g_d0_f2:C:																																																								
+24:597:48946:8:15:90:524:161:42:g_d0_f3:100:g_d0_f3:F:15 As a robustness check reported in the Online Appendix, instead of using the time window of [-60, 60], we 
+24:598:49054:15:12:90:524:146:100:g_d0_f3:100:g_d0_f3:F:define the pre-ST period as the exact period between the announcement of a stock’s fourth quarter earnings 
+24:599:49161:12:11:90:524:134:100:g_d0_f3:100:g_d0_f3:F:and the official assignment of its ST status and the post-ST period as an equally long period after the ST 
+24:600:49268:11:11:90:247:123:100:g_d0_f3:100:g_d0_f3:F:assignment. The results are similar.      
+24:601:49310:11:15:90:524:112:42:g_d0_f3:100:g_d0_f3:F:16 Again, we follow DGTW (1997) to control risk characteristics: abnormal returns are calculated using a 
+24:602:49415:15:12:89:524:97:100:g_d0_f3:100:g_d0_f3:F:stock’s daily return minus the average return of the stock’s ST benchmark group, which is formed at every 
+24:603:49521:12:11:89:524:85:100:g_d0_f3:100:g_d0_f3:F:year’s end based on stocks’ float capitalization and market-to-book ratio using the sample of all ST stocks. 
+24:604:49630:11:0:89:470:74:100:g_d0_f3:100:g_d0_f3:F:Due to the small sample size of 119 ST stocks, we sort them into 2x2 ST benchmark groups.    
+25:605:49726:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:period than after having daily returns above 5% in the pre-ST period, as well as a more 
+25:606:49814:27:28:90:525:681:144:g_d0_f3:144:g_d0_f3:B:pronounced price reversal afterward. In other words, we expect the coefficient of this 
+25:607:49901:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:interaction term to be positive for return periods right after the upper-price-limit hits and 
+25:608:49995:27:28:90:313:626:144:g_d0_f3:144:g_d0_f3:B:negative for return periods long after the hits.  
+25:609:50045:28:29:114:525:598:144:g_d0_f3:144:g_d0_f3:A:We  further  control  several  covariates ܺ௜,௧,  such  as  market-to-book  ratio,  float 
+25:610:50134:29:28:90:524:569:144:g_d0_f3:144:g_d0_f3:B:capitalization, and past 30-trading-day return. We also incorporate a set of fixed effects ߙ௧ 
+25:611:50227:28:28:89:524:541:144:g_d0_f3:144:g_d0_f3:B:for  each  date  around  the  ST  assignment  to  capture  any  potential  deterministic  effect 
+25:612:50324:28:27:89:524:513:144:g_d0_f3:144:g_d0_f3:B:associated with the ST assignments. For example, certain institutions may not hold ST 
+25:613:50410:27:28:89:525:486:144:g_d0_f3:144:g_d0_f3:B:stocks and need to unload their holdings around the ST assignment events, while some 
+25:614:50495:28:28:89:525:458:144:g_d0_f3:144:g_d0_f3:B:investors might prefer to invest in ST stocks and may gradually enter the market. As the 
+25:615:50584:28:27:89:524:430:144:g_d0_f3:144:g_d0_f3:B:ST assignments are well anticipated, these effects can be captured by including a set of 
+25:616:50673:27:28:89:525:403:144:g_d0_f3:144:g_d0_f3:B:fixed effects based on the number of days to the ST assignments. Finally, we use robust 
+25:617:50761:28:27:89:524:375:144:g_d0_f3:144:g_d0_f3:B:standard  errors  throughout  and  cluster  them  by  calendar  date,  which  controls  for  the 
+25:618:50858:27:28:89:308:348:144:g_d0_f3:144:g_d0_f3:B:clustering of price-limit hits on certain dates. 
+25:619:50907:28:29:113:524:320:144:g_d0_f3:144:g_d0_f3:A:Table 5 reports the coefficient estimate of the key interaction term of ܶܵ௜,௧ and ݁ݒ݅ܨ௜,௧ 
+25:620:50995:29:28:89:525:291:144:g_d0_f3:144:g_d0_f3:B:in regression (2). Panel A does not include the fixed effects associated with the number of 
+25:621:51087:28:28:89:525:263:144:g_d0_f3:144:g_d0_f3:B:days to the ST assignment, while Panel B includes these fixed effects. In column (1) of 
+25:622:51175:28:28:89:522:235:144:g_d0_f3:144:g_d0_f3:B:Panel A, the coefficient of the interaction term of ܶܵ௜,௧ and ݁ݒ݅ܨ௜,௧ indicates that in the post-
+25:623:51271:28:28:89:525:207:144:g_d0_f3:144:g_d0_f3:B:ST period, the stock open price on the next day of hitting the 5% upper price limit tends to 
+25:624:51364:28:28:89:525:179:144:g_d0_f3:144:g_d0_f3:B:rise 1.6% more relative to the open price after having a large daily return above 5% in the 
+25:625:51456:28:27:89:524:151:144:g_d0_f3:144:g_d0_f3:B:pre-ST period. In addition, column (2) shows that the open to close return on the next day 
+25:626:51547:27:28:89:524:124:144:g_d0_f3:144:g_d0_f3:B:is lower by 0.4% in the post-ST period than in the pre-ST period, while column (3) shows 
+25:627:51636:28:0:89:525:96:144:g_d0_f3:144:g_d0_f3:B:that the return on day 2 is significantly higher by 1.1%. Overall, the returns in the two days 
+26:628:51734:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:right after hitting the 5% upper price limit in the post-ST period are significantly higher 
+26:629:51826:27:28:90:450:681:144:g_d0_f3:144:g_d0_f3:B:than right after having large daily returns above 5% in the pre-ST period.   
+26:630:51903:28:27:114:525:653:144:g_d0_f3:144:g_d0_f3:A:More important, there is also more pronounced price reversal in the post-ST period. 
+26:631:51987:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:Columns (8), (9), and (10) show that the price reversal in days [11, 20], [21, 60], and [61, 
+26:632:52080:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:120] subsequent to hitting the 5% upper price limit in the post-ST period is significantly 
+26:633:52171:28:27:90:524:570:144:g_d0_f3:144:g_d0_f3:B:stronger by 4.5%, 7.7%, and 5.2%, respectively, than subsequent to having large returns 
+26:634:52259:27:28:90:524:543:144:g_d0_f3:144:g_d0_f3:B:above  5%  in  the  pre-ST  period.  Adding  these  numbers  gives  a  total  of  17.4%  in  the 
+26:635:52356:28:27:90:525:515:144:g_d0_f3:144:g_d0_f3:B:strengthened price reversal from day 11 to day 120. Panel B reports very similar results 
+26:636:52445:27:28:90:525:488:144:g_d0_f3:144:g_d0_f3:B:after including the fixed effects associated with the number of days to the ST assignment 
+26:637:52535:28:28:90:525:460:144:g_d0_f3:144:g_d0_f3:B:as Panel A. Overall, Table 5 shows a more pronounced price pattern of continued price 
+26:638:52621:28:27:90:525:432:144:g_d0_f3:144:g_d0_f3:B:increases and subsequent reversal after having large daily returns above 5% in the post-ST 
+26:639:52712:27:34:90:403:405:144:g_d0_f3:144:g_d0_f3:B:period than in the pre-ST period, consistent with Hypothesis 2.    
+26:640:52779:34:27:90:308:371:144:g_d0_f4:144:g_d0_f4:C:B. Large Investors’ Trading of ST Stocks 
+26:641:52819:27:28:114:526:344:144:g_d0_f3:144:g_d0_f3:A:We now compare the large investors’ trading behavior around the days with large 
+26:642:52899:28:28:89:525:316:144:g_d0_f3:144:g_d0_f3:B:returns in the pre-ST and post-ST periods. Figure 2 depicts the net buy of the 119 ST stocks 
+26:643:52992:28:27:90:525:288:144:g_d0_f3:144:g_d0_f3:B:in our sample by different investor groups around the days with large positive returns in 
+26:644:53082:27:28:90:525:261:144:g_d0_f3:144:g_d0_f3:B:(3%, 3.99%), (4%, 4.99%), and above 5% with Panel A representing the pre-ST period and 
+26:645:53169:28:27:90:524:233:144:g_d0_f3:144:g_d0_f3:B:Panel B representing the post-ST period. Panel A shows that in the pre-ST period, large 
+26:646:53257:27:28:90:524:206:144:g_d0_f3:144:g_d0_f3:B:investors (with stock balance above 10 million RMB) tend to buy on both day 0 and day 1 
+26:647:53345:28:28:90:525:178:144:g_d0_f3:144:g_d0_f3:B:of having these large daily returns, just like institutions. Specifically, on average, large 
+26:648:53438:28:27:90:525:150:144:g_d0_f3:144:g_d0_f3:B:investors buy 0.11% of the tradable shares on day 0 of having returns above 5% and buy 
+26:649:53525:27:28:90:524:123:144:g_d0_f3:144:g_d0_f3:B:another small amount on day 1. The three groups of small and medium investors with stock 
+26:650:53614:28:0:90:387:95:144:g_d0_f3:144:g_d0_f3:B:balances less than 5 million RMB tend to sell on these days.   
+27:651:53680:0:27:114:525:708:144:g_d0_f3:144:g_d0_f3:A:Interestingly, Panel B presents a sharp change in the net buy of large investors in the 
+27:652:53768:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:post-ST period around hitting the 5% upper price limit—instead of buying on both day 0 
+27:653:53855:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:and day 1, large investors buy on day 0 and then sell on day 1, the same way they trade 
+27:654:53943:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:regular stocks upon hitting the 10% upper price limit. Specifically, on average, they buy 
+27:655:54033:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:0.15% of the tradable shares on day 0 and then sell 0.05% on day 1. Not only do they buy 
+27:656:54122:28:27:89:525:570:144:g_d0_f3:144:g_d0_f3:B:more aggressively on day 0, but also, more curiously, they switch the direction of their 
+27:657:54211:27:28:89:259:543:144:g_d0_f3:144:g_d0_f3:B:trading from buy to sell on day 1.   
+27:658:54248:28:27:113:524:515:144:g_d0_f3:144:g_d0_f3:A:Around days that have returns in (4%, 4.99%), the net buy of large investors also 
+27:659:54330:27:28:89:524:488:144:g_d0_f3:144:g_d0_f3:B:displays a similar pattern of buying on day 0 and then selling on day 1, again in contrast to 
+27:660:54424:28:28:89:525:460:144:g_d0_f3:144:g_d0_f3:B:the pattern in the pre-ST period. As we discussed in the previous section, large investors 
+27:661:54515:28:27:89:524:432:144:g_d0_f3:144:g_d0_f3:B:face uncertainty in pushing the stock prices to the upper price limit. Thus, this pattern might 
+27:662:54611:27:28:89:360:405:144:g_d0_f3:144:g_d0_f3:B:reflect their failed attempt to push up the stock prices.    
+27:663:54672:28:27:113:524:377:144:g_d0_f3:144:g_d0_f3:A:Institutions tend to sell a small quantity on both day 0 and day 1 after hitting the 5% 
+27:664:54760:27:28:89:525:350:144:g_d0_f3:144:g_d0_f3:B:upper price limit and having large returns in (4%, 4.99%), which help highlight the stark 
+27:665:54850:28:28:89:525:322:144:g_d0_f3:144:g_d0_f3:B:behavior of large investors. The net buy of the three groups of small and medium investors 
+27:666:54941:28:27:89:526:294:144:g_d0_f3:144:g_d0_f3:B:with stock balances below 5 million RMB is exactly the opposite to that of the large 
+27:667:55026:27:28:89:524:267:144:g_d0_f3:144:g_d0_f3:B:investors. Overall, Figure 2 shows that after the ST assignment, there is a sharp change in 
+27:668:55118:28:27:89:524:239:144:g_d0_f3:144:g_d0_f3:B:the trading behavior of large investors around the days of hitting the upper price limit or 
+27:669:55210:27:34:89:244:212:144:g_d0_f3:144:g_d0_f3:B:having large positive returns.     
+27:670:55245:34:28:89:407:178:144:g_d0_f4:144:g_d0_f4:C:C. Large Investors’ Trading and Price Reversal of ST Stocks 
+27:671:55304:28:27:113:525:150:144:g_d0_f3:144:g_d0_f3:A:After showing the strengthened price reversal subsequent to hitting the 5% upper price 
+27:672:55391:27:28:89:525:123:144:g_d0_f3:144:g_d0_f3:B:limit and the sharp change in the trading behavior of large investors around the days of 
+27:673:55480:28:0:89:527:95:144:g_d0_f3:144:g_d0_f3:B:hitting the upper price limit after the ST assignment, we now connect these two phenomena. 
+28:674:55574:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:We again pool the sample of the 119 ST stocks for the period 60 days before and after their 
+28:675:55666:27:28:90:385:681:144:g_d0_f3:144:g_d0_f3:B:ST assignments and run the following predictive regression:  
+28:676:55727:28:29:116:496:653:144:g_d0_f2:144:g_d0_f2:A:Ret࢏,୲ା୬→୲ା୫ൌα൅ߚଵNetBuy୧,୲ߚ൅ଶST୧,୲ߚ൅ଷFive୧,୲ߚ൅ସNetBuy୧,୲∗ST୧,୲	൅
+28:677:55791:29:29:123:491:624:144:g_d0_f2:144:g_d0_f3:?:									ߚହNetBuy୧,୲∗ST୧,୲ߚ൅଺NetBuy୧,୲∗Five୧,୲+ߚ଻NetBuy୍,୲∗ST୍,୲∗Five୧,୲ 
+28:678:55863:29:29:112:525:595:144:g_d0_f2:144:g_d0_f3:A:														൅ψܺ௜,௧ߙ൅௧ߝ൅	௜,௧,							݊,݉∈ሼ1,2,3,4,5,10,20,60,120ሽ,	                           (3) 
+28:679:55961:29:28:90:524:566:144:g_d0_f3:144:g_d0_f3:B:where the dependent variable is the abnormal return for various time windows subsequent 
+28:680:56049:28:29:90:524:538:144:g_d0_f3:144:g_d0_f3:B:to a given date ݐ∈ሾെ60,60ሿ.17  NetBuy୧,୲	is the net buying of stock ݅ by large investors 
+28:681:56138:29:29:89:524:509:144:g_d0_f3:144:g_d0_f3:B:with stock balances above 10 million RMB on date t, ST୧,୲ is a dummy indicating whether 
+28:682:56226:29:29:89:525:480:144:g_d0_f3:144:g_d0_f3:B:date ݐ is in the post-ST period, and Five୧,୲ is a dummy indicating whether the stock return 
+28:683:56318:29:28:90:524:451:144:g_d0_f3:144:g_d0_f3:B:on date ݐ is above 5% in the pre-ST period or whether the stock has hit the upper price limit 
+28:684:56412:28:30:90:522:423:144:g_d0_f3:144:g_d0_f2:B:in the post-ST period. The key variable of interest is the triple interaction term NetBuy୧,୨,୲∗
+28:685:56507:30:29:89:524:393:144:g_d0_f2:144:g_d0_f3:B:ST୧,୲∗Five୧,୲. Hypothesis 2 posits that a stronger price reversal is associated with more 
+28:686:56597:29:28:90:525:364:144:g_d0_f3:144:g_d0_f3:B:buying by large investors on the day of hitting the upper price limit in the post-ST period. 
+28:687:56690:28:28:90:522:336:144:g_d0_f3:144:g_d0_f3:B:That is, we expect the coefficient of the triple interaction term ߚ଻	to be negative for long-
+28:688:56783:28:29:90:525:308:144:g_d0_f3:144:g_d0_f3:B:term returns. We control for the same list of covariates ܺ௜,௧ as before. We also incorporate 
+28:689:56876:29:28:90:524:279:144:g_d0_f3:144:g_d0_f3:B:a set of fixed effects ߙ௧ for each date around the ST assignment to capture any potential 
+28:690:56966:28:27:90:524:251:144:g_d0_f3:144:g_d0_f3:B:deterministic  effect  associated  with  the  ST  assignment  and  use robust  standard  errors 
+28:691:57062:27:28:90:286:224:144:g_d0_f3:144:g_d0_f3:B:throughout and cluster by calendar date. 
+28:692:57103:28:27:114:525:196:144:g_d0_f3:144:g_d0_f3:A:Table 6 reports the results from estimating regression (3) with Panel A not including 
+28:693:57189:27:28:89:524:169:144:g_d0_f3:144:g_d0_f3:B:the fixed effects associated with the number of days to the ST assignment and Panel B 
+28:694:57275:28:32:89:524:141:144:g_d0_f3:144:g_d0_f3:B:including these fixed effects. The coefficient of the triple interaction term is significantly 
+28:695:57370:32:9:89:235:109:144:g_d0_f2:144:g_d0_f2:C:																																																								
+28:696:57426:9:15:90:524:100:42:g_d0_f3:100:g_d0_f3:F:17 We again provide a robust check in the Online Appendix by defining the pre-ST period as the exact period 
+28:697:57534:15:11:89:524:85:100:g_d0_f3:100:g_d0_f3:F:between the announcement of a stock’s fourth quarter earnings and the official assignment of its ST status 
+28:698:57641:11:0:89:493:74:100:g_d0_f3:100:g_d0_f3:F:and the post-ST period as an equally long period after the ST assignment. The results are similar.      
+29:699:57748:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:negative for all return periods from day 6 to day 120 subsequent to hitting the 5% upper 
+29:700:57837:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:price limit, indicating that in the post-ST period the trading of large investors on the days 
+29:701:57931:28:27:90:525:653:144:g_d0_f3:144:g_d0_f3:B:of these hits makes the subsequent price reversal more pronounced.18 Panel B reports very 
+29:702:58021:27:28:90:525:626:144:g_d0_f3:144:g_d0_f3:B:similar results. Overall, Table 6 indeed shows that the destructive trading behavior of large 
+29:703:58115:28:28:90:525:598:144:g_d0_f3:144:g_d0_f3:B:investors on the day of hitting the 5% upper price limit in the post-ST period is associated 
+29:704:58208:28:33:90:435:570:144:g_d0_f3:144:g_d0_f3:B:with the strengthened price reversal, strongly supporting Hypothesis 2.  
+29:705:58281:33:28:90:257:537:144:g_d0_f4:144:g_d0_f4:C:D. Frequency of Large Returns 
+29:706:58310:28:27:114:524:509:144:g_d0_f3:144:g_d0_f3:A:Finally, we give a visual illustration of the change in the frequency of large returns 
+29:707:58397:27:28:90:525:482:144:g_d0_f3:144:g_d0_f3:B:before and after the ST assignment. Specifically, Figure 3 depicts the fraction of the 119 
+29:708:58488:28:28:90:525:454:144:g_d0_f3:144:g_d0_f3:B:ST stocks in our sample on a given day with large daily returns above 4%. The figure shows 
+29:709:58579:28:27:90:524:426:144:g_d0_f3:144:g_d0_f3:B:a visible increase in this fraction in the post-ST period. This increase highlights the effect 
+29:710:58674:27:28:90:525:399:144:g_d0_f3:144:g_d0_f3:B:of the tighter daily price limit—the destructive trading behavior of large investors induced 
+29:711:58767:28:27:90:525:371:144:g_d0_f3:144:g_d0_f3:B:by the tighter daily price limit makes the occurrence of large daily returns above 4% more 
+29:712:58858:27:28:90:525:344:144:g_d0_f3:144:g_d0_f3:B:frequent rather than less frequent. Admittedly, the cutoff choice of 4% is ad hoc. We choose 
+29:713:58951:28:28:90:524:316:144:g_d0_f3:144:g_d0_f3:B:a cutoff lower than 5% because large investors pursue the destructive trading strategy not 
+29:714:59042:28:27:90:525:288:144:g_d0_f3:144:g_d0_f3:B:only on days hitting the 5% price limit but also on days with large returns close to the price 
+29:715:59137:27:40:90:230:261:144:g_d0_f3:144:g_d0_f3:B:limit, as shown by Figure 2.  
+29:716:59167:40:27:259:355:221:144:g_d0_f4:144:g_d0_f4:C:V. Conclusion 
+29:717:59180:27:28:114:524:194:144:g_d0_f3:144:g_d0_f3:A:In this paper, we study the effects of the widely used daily price limit rule on the 
+29:718:59265:28:28:90:524:166:144:g_d0_f3:144:g_d0_f3:B:dynamics of stock prices and the trading behavior of different investor groups. We find a 
+29:719:59355:28:29:90:524:138:144:g_d0_f3:144:g_d0_f3:B:set of results indicating that the daily price limits may have an unintended effect of inducing 
+29:720:59451:29:10:90:236:109:144:g_d0_f2:144:g_d0_f2:C:																																																								
+29:721:59507:10:14:90:523:99:36:g_d0_f2:100:g_d0_f2:F:18	Note	that	the	coefficient	of	this	triple	interaction	term	may	appear	larger	than	that	in	Table	4.	This	
+29:722:59613:14:11:90:523:85:100:g_d0_f2:100:g_d0_f2:F:is	due	to	the	smaller	quantity	of	the	net	buy	of	ST	stocks	by	large	investors	on	the	days	of	hitting	the	
+29:723:59718:11:0:90:511:74:100:g_d0_f2:81:g_d0_f2:F:price	limit		(Panel	B	of	Figure	2)	relative	to	that	of	regular	stocks	on	average	(Panel	A	of	Figure	1).			
+30:724:59827:0:27:90:525:708:144:g_d0_f3:144:g_d0_f3:B:large investors to pursue a destructive strategy of pushing up stock prices to the upper price 
+30:725:59922:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:limit and then selling on the next day. This unintended effect highlights the challenge in 
+30:726:60013:28:27:90:524:653:144:g_d0_f3:144:g_d0_f3:B:designing the trading system for emerging equity markets, which tend to have a mix of 
+30:727:60099:27:28:90:524:626:144:g_d0_f3:144:g_d0_f3:B:experienced and inexperienced investors. The interactions between them may render a 
+30:728:60183:28:28:90:478:598:144:g_d0_f3:144:g_d0_f3:B:market stabilization scheme, such as the daily price limits, counterproductive.     
+30:729:60267:28:27:114:117:570:144:g_d0_f3:144:g_d0_f3:A: 
+30:730:60267:27:14:90:93:543:144:g_d0_f4:144:g_d0_f4:C: 
+30:731:60267:14:14:90:93:529:144:g_d0_f4:144:g_d0_f4:C: 
+30:732:60267:14:14:90:93:515:144:g_d0_f4:144:g_d0_f4:C: 
+30:733:60267:14:14:90:93:501:144:g_d0_f4:144:g_d0_f4:C: 
+30:734:60267:14:25:90:93:487:144:g_d0_f4:144:g_d0_f4:C: 
+30:735:60267:25:30:90:144:462:144:g_d0_f4:144:g_d0_f4:C:Reference 
+30:736:60277:30:28:90:524:432:144:g_d0_f3:144:g_d0_f3:B:Barber, Brad M., and Terrance Odean, 2008. All that glitters: The effect of attention and 
+30:737:60367:28:27:90:524:404:144:g_d0_f3:144:Times:B:news on the buying behavior of individual and institutional investors. Review of Financial 
+30:738:60458:27:30:90:208:377:144:Times:144:g_d0_f3:B:Studies, 21(2): 785-818. 
+30:739:60483:30:28:90:525:347:144:g_d0_f3:144:g_d0_f3:B:Chan, Soon Huat, Kenneth A. Kim, and S. Ghon Rhee, 2005. Price limit performance: 
+30:740:60565:28:28:90:524:319:144:g_d0_f3:144:g_d0_f3:B:evidence from transactions data and the limit order book. Journal of Empirical Finance, 
+30:741:60653:28:30:90:168:291:144:g_d0_f3:144:g_d0_f3:B:12(2): 269-290. 
+30:742:60669:30:27:90:525:261:144:g_d0_f3:144:g_d0_f3:B:Cho, David D., Jeffrey Russell, George C. Tiao, and Ruey Tsay, 2003. The magnet effect 
+30:743:60756:27:28:90:525:234:144:g_d0_f3:144:Times:B:of price limits: evidence from high-frequency data on Taiwan Stock Exchange. Journal of 
+30:744:60844:28:30:90:264:206:144:Times:144:g_d0_f3:B:Empirical Finance, 10(1): 133-168. 
+30:745:60879:30:27:90:525:176:144:g_d0_f3:144:g_d0_f3:B:Daniel,  Kent,  Mark  Grinblatt,  Sheridan  Titman,  and  Russ  Wermers,  1997.  Measuring 
+30:746:60970:27:28:90:525:149:144:g_d0_f3:144:g_d0_f3:B:mutual fund performance with characteristic-based benchmarks. The Journal of Finance, 
+30:747:61056:28:0:90:183:121:144:g_d0_f3:144:g_d0_f3:B:52(3): 1035-1058.  
+31:748:61078:0:27:90:524:708:144:g_d0_f3:144:g_d0_f3:B:De Long, J. Bradford, Andrei Shleifer, Lawrence H. Summers, and Robert J. Waldmann, 
+31:749:61162:27:28:90:524:681:144:g_d0_f3:144:g_d0_f3:B:1990.  Positive  feedback  investment  strategies  and  destabilizing  rational  speculation. 
+31:750:61256:28:30:90:266:653:144:Times:144:g_d0_f3:B:Journal of Finance, 45(2): 379-395. 
+31:751:61292:30:27:90:524:623:144:g_d0_f3:144:g_d0_f3:B:Deb, Saikat Sovan, Petko S. Kalev, and Vijaya B. Marisetty, 2010. Are price limits really 
+31:752:61382:27:30:90:464:596:144:g_d0_f3:144:g_d0_f3:B:bad for equity markets? Journal of Banking and Finance, 34(10), 2462-2471. 
+31:753:61457:30:28:90:525:566:144:g_d0_f3:144:g_d0_f3:B:Hong, Harrison, Jose Scheinkman, and Wei Xiong, 2008. Advisors and asset prices: a 
+31:754:61540:28:30:90:468:538:144:g_d0_f3:144:g_d0_f3:B:model of the origins of bubbles. Journal of Financial Economics 89: 268-287. 
+31:755:61617:30:28:89:525:508:144:g_d0_f3:144:g_d0_f3:B:Hsieh, Ping-Hung, Yong H. Kim, and J. Jimmy Yang, 2009. The magnet effect of price 
+31:756:61700:28:30:89:437:480:144:g_d0_f3:144:g_d0_f3:B:limits: A logit approach. Journal of Empirical Finance, 16(5): 830-837. 
+31:757:61772:30:27:89:524:450:144:g_d0_f3:144:g_d0_f3:B:Kim, Kenneth.A. and S. Ghon Rhee, 1997. Price Limit Performance: Evidence from the 
+31:758:61855:27:30:89:386:423:144:g_d0_f3:144:g_d0_f3:B:Tokyo Stock Exchange. Journal of Finance, 52(2): 885-901.  
+31:759:61914:30:28:89:524:393:144:g_d0_f3:144:g_d0_f3:B:Malmendier,  Ulrike  and  Devin  Shanthikumar,  2007.  Are  small  investors  naive  about 
+31:760:62005:28:30:89:385:365:144:g_d0_f3:144:g_d0_f3:B:incentives? Journal of Financial Economics, 85(2): 457-489. 
+31:761:62065:30:27:89:525:335:144:g_d0_f3:144:g_d0_f3:B:Seasholes, Mark S. and Guojun Wu, 2007. Predictable behavior, profits, and attention. 
+31:762:62151:27:29:89:316:308:144:Times:144:g_d0_f3:B:Journal of Empirical Finance, 14(5): 590-610. 
+31:763:62197:29:0:90:378:279:121:g_d0_f3:121:g_d0_f3:F:  
+32:764:62202:0:20:108:506:707:144:g_d0_f3:144:g_d0_f3:?:Figure 1．Trading around Days with Large Price Fluctuations by Investor Groups 
+32:765:62280:20:14:90:524:687:144:g_d0_f3:144:g_d0_f3:B:This  figure  plots  the NetBuy  of  different  investor  groups  on  the  day  (Day  0)  and  the 
+32:766:62379:14:20:90:333:673:144:g_d0_f3:144:g_d0_f3:B:following day (Day 1) of large price fluctuations.  
+32:767:62431:20:266:163:453:653:144:g_d0_f3:121:g_d0_f3:?:Panel A: Trading around Days with Large Positive Returns  
+32:768:62488:266:11:502:505:387:121:g_d0_f3:121:g_d0_f3:?: 
+32:769:62488:11:13:306:309:376:121:g_d0_f3:121:g_d0_f3:?: 
+32:770:62488:13:273:162:453:363:144:g_d0_f3:144:g_d0_f3:?:Panel B: Trading around Days with Large Negative Returns 
+32:771:62545:273:11:502:505:90:144:g_d0_f3:144:g_d0_f3:?: 
+32:772:62545:11:0:90:93:79:144:g_d0_f3:144:g_d0_f3:B: 
+32:773:62545:0:0:129:145:550:51:g_d0_f8:51:g_d0_f8:?:-.005
+32:774:62550:0:0:141:145:572:51:g_d0_f8:51:g_d0_f8:?:0
+32:775:62551:0:0:131:145:594:51:g_d0_f8:51:g_d0_f8:?:.005
+32:776:62555:0:175:135:145:616:51:g_d0_f8:51:g_d0_f8:?:.01
+32:777:62558:175:0:129:145:441:51:g_d0_f8:51:g_d0_f8:?:-.005
+32:778:62563:0:0:141:145:463:51:g_d0_f8:51:g_d0_f8:?:0
+32:779:62564:0:0:131:145:485:51:g_d0_f8:51:g_d0_f8:?:.005
+32:780:62568:0:0:135:145:507:51:g_d0_f8:51:g_d0_f8:?:.01
+32:781:62571:0:109:166:481:536:51:g_d0_f8:51:g_d0_f8:?:8%9%Upper Hit8%9%Upper Hit8%9%Upper Hit
+32:782:62610:109:0:166:481:427:51:g_d0_f8:51:g_d0_f8:?:8%9%Upper Hit8%9%Upper Hit8%9%Upper Hit
+32:783:62649:0:108:192:448:628:63:g_d0_f8:63:g_d0_f8:?:<100k100-500k500k-5m
+32:784:62669:108:113:192:450:520:63:g_d0_f8:63:g_d0_f8:?:5-10m>10mInstitution
+32:785:62689:113:161:275:375:407:82:g_d0_f8:82:g_d0_f8:?:Day 0Day 1
+32:786:62699:161:0:129:145:246:51:g_d0_f8:51:g_d0_f8:?:-.004
+32:787:62704:0:0:129:145:264:51:g_d0_f8:51:g_d0_f8:?:-.002
+32:788:62709:0:0:141:145:283:51:g_d0_f8:51:g_d0_f8:?:0
+32:789:62710:0:0:131:145:301:51:g_d0_f8:51:g_d0_f8:?:.002
+32:790:62714:0:182:131:145:319:51:g_d0_f8:51:g_d0_f8:?:.004
+32:791:62718:182:0:129:145:137:51:g_d0_f8:51:g_d0_f8:?:-.004
+32:792:62723:0:0:129:145:156:51:g_d0_f8:51:g_d0_f8:?:-.002
+32:793:62728:0:0:141:145:174:51:g_d0_f8:51:g_d0_f8:?:0
+32:794:62729:0:0:131:145:192:51:g_d0_f8:51:g_d0_f8:?:.002
+32:795:62733:0:0:131:145:211:51:g_d0_f8:51:g_d0_f8:?:.004
+32:796:62737:0:108:165:481:239:51:g_d0_f8:51:g_d0_f8:?:-8%-9%Lower Hit-8%-9%Lower Hit-8%-9%Lower Hit
+32:797:62782:108:0:165:481:131:51:g_d0_f8:51:g_d0_f8:?:-8%-9%Lower Hit-8%-9%Lower Hit-8%-9%Lower Hit
+32:798:62827:0:109:192:448:332:63:g_d0_f8:63:g_d0_f8:?:<100k100-500k500k-5m
+32:799:62847:109:113:192:450:223:63:g_d0_f8:63:g_d0_f8:?:5-10m>10mInstitution
+32:800:62867:113:0:275:375:110:82:g_d0_f8:82:g_d0_f8:?:Day 0Day 1
+33:801:62880:0:13:94:520:708:144:g_d0_f3:144:g_d0_f3:B:Panel C: Percentage of Accounts Buying on Day 0 and Selling on Day 1 of Upper Limit 
+33:802:62964:13:239:295:318:695:144:g_d0_f3:144:g_d0_f3:?:Hits 
+33:803:62969:239:11:467:470:456:144:g_d0_f3:144:g_d0_f3:?: 
+33:804:62969:11:13:90:93:445:144:g_d0_f3:144:g_d0_f3:B: 
+33:805:62969:13:0:90:378:432:144:g_d0_f3:144:g_d0_f3:B:  
+33:806:62994:0:0:194:445:469:65:g_d0_f8:65:g_d0_f8:?:<100k100-500k500k-5m5-10m>10mInstitution
+34:807:63037:0:13:99:515:708:144:g_d0_f3:144:g_d0_f3:?:Figure 2. Trading of ST Stocks around Days with Large Positive Returns by Different 
+34:808:63121:13:20:267:348:695:144:g_d0_f3:144:g_d0_f3:?:Investor Groups 
+34:809:63137:20:14:90:524:675:144:g_d0_f3:144:g_d0_f3:B:This figure plots the NetBuy by different investor groups of ST stocks around days with 
+34:810:63225:14:14:90:525:661:144:g_d0_f3:144:g_d0_f3:B:large positive returns: (3%, 3.99%), (4%, 4.99%), and hitting the 5% upper price limit (or 
+34:811:63316:14:13:90:250:647:144:g_d0_f3:121:g_d0_f3:B:above 5% in the pre-ST period).  
+34:812:63348:13:14:89:92:634:121:g_d0_f3:121:g_d0_f3:F: 
+34:813:63348:14:253:216:399:620:144:g_d0_f2:144:g_d0_f2:C:Panel	A:	ST	Stocks	in	Pre‐ST	Period	
+34:814:63384:253:11:476:479:367:144:g_d0_f3:144:g_d0_f3:?: 
+34:815:63384:11:14:306:309:356:144:g_d0_f3:144:g_d0_f3:?: 
+34:816:63384:14:253:213:400:342:144:g_d0_f3:144:g_d0_f2:?:Panel B: ST	Stocks	in	Post‐ST	Period	
+34:817:63421:253:11:477:480:89:144:g_d0_f3:144:g_d0_f3:?: 
+34:818:63421:11:0:90:378:78:144:g_d0_f3:144:g_d0_f3:B:  
+34:819:63423:0:0:153:168:522:45:g_d0_f8:45:g_d0_f8:?:-.002
+34:820:63428:0:0:153:168:538:45:g_d0_f8:45:g_d0_f8:?:-.001
+34:821:63433:0:0:165:169:553:45:g_d0_f8:45:g_d0_f8:?:0
+34:822:63434:0:0:156:169:569:45:g_d0_f8:45:g_d0_f8:?:.001
+34:823:63438:0:166:156:169:585:45:g_d0_f8:45:g_d0_f8:?:.002
+34:824:63442:166:0:153:168:419:45:g_d0_f8:45:g_d0_f8:?:-.002
+34:825:63447:0:0:153:168:435:45:g_d0_f8:45:g_d0_f8:?:-.001
+34:826:63452:0:0:165:169:450:45:g_d0_f8:45:g_d0_f8:?:0
+34:827:63453:0:0:156:169:466:45:g_d0_f8:45:g_d0_f8:?:.001
+34:828:63457:0:0:156:169:482:45:g_d0_f8:45:g_d0_f8:?:.002
+34:829:63461:0:103:187:459:509:45:g_d0_f8:45:g_d0_f8:?:3%4%Above 5%3%4%Above 5%3%4%Above 5%
+34:830:63497:103:0:187:459:406:45:g_d0_f8:45:g_d0_f8:?:3%4%Above 5%3%4%Above 5%3%4%Above 5%
+34:831:63533:0:103:208:430:597:57:g_d0_f8:57:g_d0_f8:?:<100k100-500k500k-5m
+34:832:63553:103:107:208:433:494:57:g_d0_f8:57:g_d0_f8:?:5-10m>10mInsititution
+34:833:63574:107:143:276:370:387:73:g_d0_f8:73:g_d0_f8:?:Day 0Day 1
+34:834:63584:143:0:157:172:244:45:g_d0_f8:45:g_d0_f8:?:-.001
+34:835:63589:0:0:153:172:256:45:g_d0_f8:45:g_d0_f8:?:-.0005
+34:836:63595:0:0:169:173:268:45:g_d0_f8:45:g_d0_f8:?:0
+34:837:63596:0:0:156:173:281:45:g_d0_f8:45:g_d0_f8:?:.0005
+34:838:63601:0:0:159:172:293:45:g_d0_f8:45:g_d0_f8:?:.001
+34:839:63605:0:165:156:173:306:45:g_d0_f8:45:g_d0_f8:?:.0015
+34:840:63610:165:0:157:172:141:45:g_d0_f8:45:g_d0_f8:?:-.001
+34:841:63615:0:0:153:172:153:45:g_d0_f8:45:g_d0_f8:?:-.0005
+34:842:63621:0:0:169:173:166:45:g_d0_f8:45:g_d0_f8:?:0
+34:843:63622:0:0:156:173:178:45:g_d0_f8:45:g_d0_f8:?:.0005
+34:844:63627:0:0:159:172:190:45:g_d0_f8:45:g_d0_f8:?:.001
+34:845:63631:0:0:156:173:203:45:g_d0_f8:45:g_d0_f8:?:.0015
+34:846:63636:0:102:190:458:230:45:g_d0_f8:45:g_d0_f8:?:3%4%Upper Hit3%4%Upper Hit3%4%Upper Hit
+34:847:63675:102:0:190:458:128:45:g_d0_f8:45:g_d0_f8:?:3%4%Upper Hit3%4%Upper Hit3%4%Upper Hit
+34:848:63714:0:102:211:432:318:57:g_d0_f8:57:g_d0_f8:?:<100k100-500k500k-5m
+34:849:63734:102:108:211:433:216:57:g_d0_f8:57:g_d0_f8:?:5-10m>10mInstitution
+34:850:63754:108:0:276:370:108:74:g_d0_f8:74:g_d0_f8:?:Day 0Day 1
+35:851:63767:0:19:116:498:708:144:g_d0_f3:144:g_d0_f3:A:Figure 3. Distribution of Large Daily Returns Before and After ST Assignment 
+35:852:63844:19:14:90:524:689:144:g_d0_f3:144:g_d0_f3:B:This figure shows the fraction of stocks with daily returns larger than 4% 60 days before 
+35:853:63934:14:268:90:381:675:144:g_d0_f3:144:g_d0_f3:B:and after the assignment of the ST status for 119 ST stocks.  
+35:854:63996:268:0:123:853:407:144:g_d0_f3:144:g_d0_f3:?:  
+35:855:64057:0:9:164:474:432:83:g_d0_f8:83:g_d0_f8:?:-60-50-40-30-20-100102030405060
+35:856:64088:9:0:256:385:423:83:g_d0_f8:83:g_d0_f8:?:Day to Assignment of ST Status

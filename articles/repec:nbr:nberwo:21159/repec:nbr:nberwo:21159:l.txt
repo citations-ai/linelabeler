@@ -1,0 +1,1127 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:515:610:12:Times:12:Times:C:UNCOVERED INTEREST PARITY AND MONETARY POLICY NEAR AND FAR
+1:2:83:14:28:306:399:596:12:Times:12:Times:C:FROM THE ZERO LOWER BOUND
+1:3:108:28:14:306:347:568:12:Times:12:Times:C:Menzie D. Chinn
+1:4:123:14:28:306:329:554:12:Times:12:Times:C:Yi Zhang
+1:5:131:28:14:306:359:526:12:Times:12:Times:C:Working Paper 21159
+1:6:150:14:42:306:393:512:12:Times:12:Times:C:http://www.nber.org/papers/w21159
+1:7:183:42:14:306:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:219:14:14:306:374:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:244:14:14:306:362:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:263:14:214:306:330:428:12:Times:12:Times:C:May 2015
+1:11:271:214:14:72:540:214:12:Times:12:Times:F:We thank Charles Engel, Kenneth D. West, Kurt G. Lunsford, and Chenxin Liu for helpful comments,
+1:12:367:14:14:72:540:200:12:Times:12:Times:F:and faculty research funds of the University of Wisconsin-Madison for financial support. All remaining
+1:13:469:14:14:72:540:186:12:Times:12:Times:F:errors are solely our responsibility. The views expressed herein are those of the authors and do not
+1:14:569:14:28:72:435:172:12:Times:12:Times:C:necessarily reflect the views of the National Bureau of Economic Research.
+1:15:643:28:14:72:540:144:12:Times:12:Times:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:16:739:14:14:72:540:130:12:Times:12:Times:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:17:834:14:28:72:169:116:12:Times:12:Times:C:NBER publications.
+1:18:852:28:14:72:540:88:12:Times:12:Times:F:© 2015 by Menzie D. Chinn and Yi Zhang. All rights reserved. Short sections of text, not to exceed
+1:19:950:14:14:72:540:74:12:Times:12:Times:F:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:20:1054:14:0:72:177:60:12:Times:12:Times:C:is given to the source.
+2:21:1077:0:14:72:504:700:12:Times:12:Times:C:Uncovered Interest Parity and Monetary Policy Near and Far from the Zero Lower Bound
+2:22:1161:14:14:72:224:686:12:Times:12:Times:C:Menzie D. Chinn and Yi Zhang
+2:23:1189:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 21159
+2:24:1217:14:14:72:121:658:12:Times:12:Times:C:May 2015
+2:25:1225:14:28:72:221:644:12:Times:12:Times:C:JEL No. E12,F21,F31,F41,F47
+2:26:1252:28:28:306:339:616:12:Times:12:Times:C:ABSTRACT
+2:27:1260:28:14:72:540:588:12:Times:12:Times:F:Relying upon a standard New Keynesian DSGE, we propose an explanation for two empirical findings
+2:28:1356:14:14:72:540:574:12:Times:12:Times:F:in the international finance literature. First, the unbiasedness hypothesis – the proposition that expost
+2:29:1461:14:14:72:540:560:12:Times:12:Times:F:exchange rate depreciation matches interest differentials – is rejected much more strongly at short
+2:30:1560:14:14:72:540:546:12:Times:12:Times:F:horizons than at long. Second, even at long horizons, the unbiasedness hypothesis tends to be rejected
+2:31:1662:14:14:72:540:532:12:Times:12:Times:F:when one of the currencies has experienced a long period of low interest rates, such as in Japan and
+2:32:1762:14:14:72:540:518:12:Times:12:Times:F:Switzerland. Using a calibrated New Keynesian dynamic stochastic general equilibrium model, we
+2:33:1856:14:14:72:540:504:12:Times:12:Times:F:show how a monetary policy rule can induce the negative (positive) correlation between depreciation
+2:34:1955:14:14:72:540:490:12:Times:12:Times:F:and interest differentials at short (long) horizons. The tendency to reject unbiasedness for Japan and
+2:35:2057:14:14:72:540:476:12:Times:12:Times:F:Switzerland even at long horizons we attribute to the interaction of the monetary reaction function
+2:36:2156:14:42:72:197:462:12:Times:12:Times:C:and the zero lower bound.
+2:37:2181:42:14:72:155:420:12:Times:12:Times:C:Menzie D. Chinn
+2:38:2196:14:14:72:198:406:12:Times:12:Times:C:Department of Economics
+2:39:2219:14:14:72:189:392:12:Times:12:Times:C:University of Wisconsin
+2:40:2242:14:14:72:189:378:12:Times:12:Times:C:1180 Observatory Drive
+2:41:2264:14:14:72:168:364:12:Times:12:Times:C:Madison, WI 53706
+2:42:2281:14:14:72:124:350:12:Times:12:Times:C:and NBER
+2:43:2289:14:28:72:207:336:12:Times:12:Times:C:mchinn@lafollette.wisc.edu
+2:44:2315:28:14:72:118:308:12:Times:12:Times:C:Yi Zhang
+2:45:2323:14:14:72:235:294:12:Times:12:Times:C:University of Wisconsin-Madison
+2:46:2354:14:14:72:198:280:12:Times:12:Times:C:Department of Economics
+2:47:2377:14:14:72:189:266:12:Times:12:Times:C:1180 Observatory Drive
+2:48:2399:14:14:72:168:252:12:Times:12:Times:C:Madison, WI 53706
+2:49:2416:14:0:72:178:238:12:Times:12:Times:C:yzhang237@wisc.edu
+3:50:2434:0:22:78:527:650:17:g_d0_f1:17:g_d0_f1:?:Uncovered Interest Parity and Monetary Policy Near and Far from
+3:51:2497:22:36:232:393:628:17:g_d0_f1:12:g_d0_f2:?:the Zero Lower Bound∗
+3:52:2518:36:30:228:394:592:12:g_d0_f3:8:g_d0_f4:?:Menzie D. Chinn†Yi Zhang‡
+3:53:2543:30:58:275:338:562:12:g_d0_f3:12:g_d0_f3:?:May 14, 2015
+3:54:2555:58:22:287:326:504:10:g_d0_f5:10:g_d0_f5:?:Abstract
+3:55:2563:22:14:114:517:482:10:g_d0_f6:10:g_d0_f6:?:Relying upon a standard New Keynesian DSGE, we propose an explanation for two empirical
+3:56:2650:14:13:99:516:468:10:g_d0_f6:10:g_d0_f6:A:findings in the international finance literature. First, the unbiasedness hypothesis — the propo-
+3:57:2747:13:13:99:514:455:10:g_d0_f6:10:g_d0_f6:A:sition that expost exchange rate depreciation matches interest differentials — is rejected much
+3:58:2842:13:13:99:516:442:10:g_d0_f6:10:g_d0_f6:A:more strongly at short horizons than at long. Second, even at long horizons, theunbiasedness
+3:59:2934:13:13:99:513:429:10:g_d0_f6:10:g_d0_f6:A:hypothesis tends to be rejected when one of the currencies has experienced a long period of low
+3:60:3029:13:13:99:515:416:10:g_d0_f6:10:g_d0_f6:A:interest rates, such as in Japan and Switzerland. Using a calibrated NewKeynesian dynamic
+3:61:3118:13:13:99:516:403:10:g_d0_f6:10:g_d0_f6:A:stochastic general equilibrium model, we show how a monetary policy rule can induce the nega-
+3:62:3211:13:14:99:517:390:10:g_d0_f6:10:g_d0_f6:A:tive (positive) correlation between depreciation and interest differentials at short (long) horizons.
+3:63:3312:14:13:99:515:376:10:g_d0_f6:10:g_d0_f6:A:The tendency to reject unbiasedness for Japan and Switzerland evenat long horizons we attribute
+3:64:3407:13:28:99:439:363:10:g_d0_f6:10:g_d0_f6:A:to the interaction of the monetary reaction function and the zero lowerbound.
+3:65:3484:28:19:88:304:335:11:g_d0_f5:11:g_d0_f6:A:JEL classification:E12, F21, F31, F41, F47
+3:66:3526:19:14:88:542:316:11:g_d0_f5:11:g_d0_f6:A:Keywords:uncovered interest parity, unbiasedness hypothesis, rational expectations, exchange
+3:67:3618:14:52:71:292:302:11:g_d0_f6:11:g_d0_f6:B:rates, zero lower bound, New Keynesian model
+3:68:3662:52:30:71:175:250:14:g_d0_f7:14:g_d0_f7:C:1  Introduction
+3:69:3677:30:13:71:541:220:11:g_d0_f6:11:g_d0_f6:B:One of the most enduring empirical regularities in the internationalfinance literature is the rejection
+3:70:3780:13:14:71:542:207:11:g_d0_f6:11:g_d0_f6:B:of the joint hypothesis of uncovered interest rate parity (UIP) and rational expectations. According
+3:71:3880:14:13:71:541:193:11:g_d0_f6:11:g_d0_f6:B:to the unbiasedness hypothesis, the interest rate differential between two countries should be an
+3:72:3977:13:14:71:543:180:11:g_d0_f6:11:g_d0_f6:B:unbiased predictor of the change in the exchange rate between them. Chinn and Meredith (2004)
+3:73:4070:14:16:71:544:166:11:g_d0_f6:11:g_d0_f6:B:document the continued failure of the unbiasedness hypothesis tohold for horizons of up to a year.
+3:74:4168:16:15:84:541:150:6:g_d0_f8:9:g_d0_f9:F:∗We thank Charles Engel, Kenneth D. West, Kurt G. Lunsford, and Chenxin Liu for helpful comments, and faculty
+3:75:4277:15:7:72:540:135:9:g_d0_f9:9:g_d0_f9:F:research funds of the University of Wisconsin for financial support. All remaining errors are solely our responsibility.
+3:76:4397:7:15:84:544:128:6:g_d0_f8:9:g_d0_f9:F:†Robert M. La Follette School of Public Affairs; and Department of Economics, University of Wisconsin-Madison,
+3:77:4507:15:7:72:493:113:9:g_d0_f9:9:g_d0_f9:F:1180 Observatory Drive, Madison, WI 53706, USA; and NBER, USA. E-mail: mchinn@lafollette.wisc.edu
+3:78:4604:7:15:84:544:106:6:g_d0_f8:9:g_d0_f9:F:‡Department of Economics, University of Wisconsin-Madison, 1180 Observatory Drive, Madison, WI 53706, USA.
+3:79:4710:15:0:72:184:91:9:g_d0_f9:9:g_d0_f9:F:E-mail: yzhang237@wisc.edu
+4:80:4737:0:13:71:542:693:11:g_d0_f6:11:g_d0_f6:B:But they also document that at horizons of greater than a year, the unbiasedness hypothesis holds
+4:81:4834:13:19:71:421:680:11:g_d0_f6:11:g_d0_f6:B:better, so that at the ten year horizon, the hypothesis cannot be rejected.
+4:82:4909:19:14:88:541:661:11:g_d0_f6:11:g_d0_f6:A:Chinn and Quayyum (2013) update the results in Chinn and Meredith, using data ranging up to
+4:83:5000:14:19:71:525:647:11:g_d0_f6:11:g_d0_f6:B:2012. They confirm the finding that unbiasedness holds better at longer horizons than at short.
+4:84:5095:19:14:88:544:628:11:g_d0_f6:11:g_d0_f6:A:Chinn and Meredith attribute their finding to the greater endogeneity of the short term rate,
+4:85:5188:14:13:72:544:614:11:g_d0_f6:11:g_d0_f6:B:given a Taylor-rule type central bank reaction function. They demonstrate that a Keynesian model
+4:86:5284:13:14:72:541:601:11:g_d0_f6:11:g_d0_f6:B:incorporating sticky prices and model consistent expectations and importantly a random shock in
+4:87:5379:14:19:72:501:587:11:g_d0_f6:11:g_d0_f6:B:the uncovered interest parity relation can replicate the pattern ofunbiasedness rejections.
+4:88:5470:19:14:88:542:568:11:g_d0_f6:11:g_d0_f6:A:One key difference between the findings using the shorter and longersample periods is that in the
+4:89:5567:14:13:72:542:554:11:g_d0_f6:11:g_d0_f6:B:sample encompassing the Great Recession, and the encounter with thezero lower bound (ZLB), the
+4:90:5661:13:14:72:542:541:11:g_d0_f6:11:g_d0_f6:B:tendency to reject the unbiasedness, even at the long horizon, increases. Even before the onset of the
+4:91:5763:14:13:72:543:527:11:g_d0_f6:11:g_d0_f6:B:financial crisis, several countries had short term interest rates near the zero interest bound. Perhaps
+4:92:5866:13:14:72:540:514:11:g_d0_f6:11:g_d0_f6:B:more importantly for our results, long term interest rates were particularly quite low in Japan and
+4:93:5965:14:19:72:405:500:11:g_d0_f6:11:g_d0_f6:B:Switzerland, two currencies for which the estimated is noticeably low.
+4:94:6035:19:14:88:541:481:11:g_d0_f6:11:g_d0_f6:A:At first glance, there is no particular reason why the unbiasedness hypothesis should not hold
+4:95:6129:14:13:72:542:467:11:g_d0_f6:11:g_d0_f6:B:when short and/or long term rates strike the zero interest bound, as expected exchange rate changes
+4:96:6228:13:14:72:541:454:11:g_d0_f6:11:g_d0_f6:B:could adjust to make the parity condition hold. However, it seems worthwhile to investigate the
+4:97:6323:14:13:72:541:440:11:g_d0_f6:11:g_d0_f6:B:sensitivity of the estimates to inclusion of the low-interest rate period. We arbitrarily define 1996Q1
+4:98:6426:13:14:72:540:427:11:g_d0_f6:11:g_d0_f6:B:as the low interest rate period for these two countries. Estimating the Fama regression on long horizon
+4:99:6529:14:13:72:540:413:11:g_d0_f6:11:g_d0_f6:B:data, allowing for a slope break at 1996Q1, indicates that post-1996 the unbiasedness relationship
+4:100:6627:13:20:72:526:400:11:g_d0_f6:11:g_d0_f6:B:breaks down, with the slope coefficient significantly different and negative in the latter period.
+4:101:6725:20:13:88:542:380:11:g_d0_f6:11:g_d0_f6:A:The advent of low long term interest rates in Japan and Switzerland is associated with the
+4:102:6815:13:14:72:543:367:11:g_d0_f6:11:g_d0_f6:B:attenuation of evidence for the unbiasedness hypothesis at the long horizon  for currency pairs
+4:103:6910:14:13:72:541:353:11:g_d0_f6:11:g_d0_f6:B:involving these countries.  However, it is not an explanation, as uncovered interest parity is an
+4:104:7007:13:19:72:163:340:11:g_d0_f6:11:g_d0_f6:B:arbitrage condition.
+4:105:7027:19:14:88:538:321:11:g_d0_f6:11:g_d0_f6:A:There are two key motivations for this paper.  The first is to show that aconventional New
+4:106:7117:14:14:72:543:307:11:g_d0_f6:11:g_d0_f6:B:Keynesian dynamic stochastic general equilibrium (DSGE) model can yield the implication that
+4:107:7209:14:13:72:542:293:11:g_d0_f6:11:g_d0_f6:B:under normal conditions, the long horizon Fama coefficient is positive,and greater than the short
+4:108:7306:13:14:72:542:280:11:g_d0_f6:11:g_d0_f6:B:horizon coefficient (which is typically negative) with only a minor modification. The second is to
+4:109:7404:14:13:72:544:266:11:g_d0_f6:11:g_d0_f6:B:demonstrate that when there is a substantial likelihood of encountering the zero lower bound (ZLB),
+4:110:7503:13:19:72:294:253:11:g_d0_f6:11:g_d0_f6:B:the long horizon Fama coefficient will be lower.
+4:111:7551:19:14:88:541:234:11:g_d0_f6:11:g_d0_f6:A:In the next section we briefly review unbiasedness hypothesis andnew empirical results.  In
+4:112:7642:14:14:72:542:220:11:g_d0_f6:11:g_d0_f6:B:Section 3, the model derivation is presented, and summarized in Section 3.11.  In Section 4, the
+4:113:7738:14:13:72:542:206:11:g_d0_f6:11:g_d0_f6:B:model calibration is shown. Sections 5 and 6 present, respectively, the calibration results without
+4:114:7837:13:40:72:319:193:11:g_d0_f6:11:g_d0_f6:B:and with the zero lower bound. Section 7 concludes.
+4:115:7888:40:30:71:247:153:14:g_d0_f7:14:g_d0_f7:C:2  Theory and Literature
+4:116:7912:30:14:71:542:123:11:g_d0_f6:11:g_d0_f6:B:The UIP hypothesis states, if investors are risk neutral, and there are no barriers to cross-border
+4:117:8011:14:13:71:541:109:11:g_d0_f6:11:g_d0_f6:B:capital flows, then the return from investing a unit amount in a riskfree bond in the home currency
+4:118:8110:13:0:71:540:96:11:g_d0_f6:11:g_d0_f6:B:for period k,it,k, should equal the expected return from converting the unit amount into foreign
+5:119:8207:0:13:71:540:693:11:g_d0_f6:11:g_d0_f6:B:currency and investing in risk free bond in foreign currency for period k, and converting the foreign
+5:120:8308:13:25:71:336:680:11:g_d0_f6:11:g_d0_f6:B:currency return back into home currency after period k.
+5:121:8363:25:30:250:543:655:11:g_d0_f10:11:g_d0_f6:A:Etst+k−st= (it,k−i∗t,k)(1)
+5:122:8389:30:14:88:542:625:11:g_d0_f6:11:g_d0_f6:A:Obviously, this hypothesis is difficult to test since the market’s subjective expectation of the
+5:123:8485:14:13:71:543:611:11:g_d0_f6:11:g_d0_f6:B:exchange rate is unobservable. The typical recourse adopted by researchers is to adopt the rational
+5:124:8584:13:14:71:543:598:11:g_d0_f6:11:g_d0_f6:B:expectations hypothesis, so that the subjective market expectation equals the mathematical (condi-
+5:125:8682:14:13:71:543:584:11:g_d0_f6:11:g_d0_f6:B:tional) expectation. Under the rational expectations hypothesis, the actual value of the future spot
+5:126:8782:13:25:71:398:571:11:g_d0_f6:11:g_d0_f6:B:rate equals the expected value of future spot rate plus an error term,
+5:127:8852:25:24:260:543:546:11:g_d0_f10:11:g_d0_f6:A:st+k=Etst+k+εt+k(2)
+5:128:8871:24:14:72:542:522:11:g_d0_f6:11:g_d0_f6:B:whereεt+kis an expectation error that is orthogonal to everything that is known at time t. This
+5:129:8966:14:13:71:98:508:11:g_d0_f6:11:g_d0_f6:B:yields:
+5:130:8973:13:20:239:543:495:11:g_d0_f10:11:g_d0_f6:A:st+k−st= (it,k−i∗t,k) +εt+k(3)
+5:131:9003:20:14:72:541:475:11:g_d0_f6:11:g_d0_f6:B:The resulting unbiasedness hypothesis is usually tested usingthe following specification, often referred
+5:132:9107:14:24:72:261:461:11:g_d0_f6:11:g_d0_f6:B:to as the Fama regression (Fama, 1984):
+5:133:9146:24:25:226:543:437:11:g_d0_f10:11:g_d0_f6:A:st+k−st=α+β(it,k−i∗t,k) +ζt+k(4)
+5:134:9178:25:13:72:542:412:11:g_d0_f6:11:g_d0_f6:B:where the expected value ofβaccording to the hypothesis is 1. The maintained hypothesis is the
+5:135:9272:13:14:72:541:399:11:g_d0_f6:11:g_d0_f6:B:null hypothesis, and under the unbiasedness null, the errorζt+kis merely the expectations error, and
+5:136:9372:14:14:72:542:385:11:g_d0_f6:11:g_d0_f6:B:is orthogonal to the interest rate differential,it,k−i∗t,k. (Under the alternative,ζt+kcould be an error
+5:137:9476:14:13:72:544:371:11:g_d0_f6:11:g_d0_f6:B:term that does not fulfill the rational expectations criteria, and/or a time varying risk premium,
+5:138:9574:13:14:72:543:358:11:g_d0_f6:11:g_d0_f6:B:possibly correlated with the interest differential.) In the regressions reported in this paper, the exact
+5:139:9679:14:19:72:319:344:11:g_d0_f6:11:g_d0_f6:B:formulas are used instead of the log approximations.
+5:140:9731:19:13:88:540:325:11:g_d0_f6:11:g_d0_f6:A:Note that the interceptαmay be non zero while testing for UIP using equation (4).  A non
+5:141:9819:13:14:72:541:312:11:g_d0_f6:11:g_d0_f6:B:zero  may reflect a constant risk premium (hence, we are really testing for a time-varying risk
+5:142:9914:14:13:72:542:298:11:g_d0_f6:11:g_d0_f6:B:premium, rather than risk neutrality per se) and/or approximation errors stemming from Jensens
+5:143:10008:13:14:72:543:285:11:g_d0_f6:11:g_d0_f6:B:Inequality from the fact that expectation of a ratio (the exchange rate) is not equal to the ratio of
+5:144:10109:14:19:72:146:271:11:g_d0_f6:11:g_d0_f6:B:the expectation.
+5:145:10125:19:14:88:542:252:11:g_d0_f6:11:g_d0_f6:A:Most of the studies fall into the category employing the rational expectations hypothesis; in our
+5:146:10222:14:13:72:542:238:11:g_d0_f6:11:g_d0_f6:B:lexicon, that means they are tests of the unbiasedness hypothesis. Estimates of equation (4) using
+5:147:10320:13:14:72:542:225:11:g_d0_f6:11:g_d0_f6:B:values for k that range up to one year typically reject the unbiasednessrestriction on the slope
+5:148:10416:14:13:72:543:211:11:g_d0_f6:11:g_d0_f6:B:parameter. The widely cited 1990 survey by Froot and Thaler finds an average estimate forβof
+5:149:10508:13:14:72:543:198:11:g_d0_f6:11:g_d0_f6:B:-0.881. Bansal and Dahlquist (2000) provide more mixed results, when examining a broader set of
+5:150:10603:14:14:72:542:184:11:g_d0_f6:11:g_d0_f6:B:advanced and emerging market currencies. They also note that the failure of unbiasedness appears
+5:151:10699:14:15:72:541:170:11:g_d0_f6:11:g_d0_f6:B:to depend upon whether the US interest rate is above or below the foreign2. Frankel and Poonawala
+5:152:10796:15:15:84:543:155:6:g_d0_f13:9:g_d0_f9:F:1Similar results are cited in surveys by MacDonald and Taylor (1992) and Isard (1995). Meese and Rogoff (1983)
+5:153:10906:15:11:72:543:140:9:g_d0_f9:9:g_d0_f9:F:show that the forward rate is outpredicted by a random walk, which isconsistent with the failure of the unbiasedness
+5:154:11022:11:7:72:114:129:9:g_d0_f9:9:g_d0_f9:F:hypothesis.
+5:155:11033:7:15:84:542:122:6:g_d0_f13:9:g_d0_f9:F:2Flood and Rose (1996, 2002) note that including currency crisesand devaluations, one finds more evidence for the
+5:156:11146:15:0:72:169:107:9:g_d0_f9:9:g_d0_f9:F:unbiasedness hypothesis.
+6:157:11171:0:13:71:543:693:11:g_d0_f6:11:g_d0_f6:B:(2010) show that for emerging markets more generally, the unbiasedness hypothesis coefficient is
+6:158:11267:13:19:71:188:680:11:g_d0_f6:11:g_d0_f6:B:typically more positive3.
+6:159:11292:19:14:88:541:661:11:g_d0_f6:11:g_d0_f6:A:The earliest studies that explored the UIP hypothesis over long horizons include Flood and
+6:160:11382:14:14:71:541:647:11:g_d0_f6:11:g_d0_f6:B:Taylor (1997) and Alexius (2001). Flood and Taylor (1997) explores the UIP relationship at three
+6:161:11478:14:13:71:542:633:11:g_d0_f6:11:g_d0_f6:B:year horizon pooling 21 currencies of mostly developed countries, with the U.S. Dollar as the base
+6:162:11576:13:14:71:543:620:11:g_d0_f6:11:g_d0_f6:B:currency. They estimateβto be 0.596 with a standard error of 0.195. However, the bond yields
+6:163:11668:14:13:71:543:606:11:g_d0_f6:11:g_d0_f6:B:used are heterogeneous, with varying maturities, so are difficult to interpret. Alexius (2001) finds
+6:164:11768:13:14:71:541:593:11:g_d0_f6:11:g_d0_f6:B:evidence of UIP holding at long horizon using 14 long term bonds of varying maturities, using a
+6:165:11863:14:13:71:544:579:11:g_d0_f6:11:g_d0_f6:B:sample from 1957-97. As the sample encompasses the Bretton Woods era and the associated capital
+6:166:11958:13:20:71:422:566:11:g_d0_f6:11:g_d0_f6:B:control regime, those findings are perhaps not applicable in current times.
+6:167:12033:20:13:88:541:546:11:g_d0_f6:11:g_d0_f6:A:Chinn and Meredith (2004) tested the UIP hypothesis at five year and ten year horizons for the
+6:168:12127:13:14:71:541:533:11:g_d0_f6:11:g_d0_f6:B:Group of Seven (G7) countries, and found greater support for the unbiasedness hypothesis holding
+6:169:12223:14:13:71:542:519:11:g_d0_f6:11:g_d0_f6:B:at these long horizons than in shorter horizons of three to twelve months. The estimated coefficient
+6:170:12323:13:14:71:541:506:11:g_d0_f6:11:g_d0_f6:B:on the interest rate differentials were positive and were closer to the value of unity than to zero in
+6:171:12425:14:13:71:540:492:11:g_d0_f6:11:g_d0_f6:B:general. The sample used in that paper extended up to 2000. Figure 1 depicts the indicated pattern
+6:172:12523:13:14:71:542:479:11:g_d0_f6:11:g_d0_f6:B:— negative coefficients at short horizons, and positive coefficients at longer horizons, updated to
+6:173:12622:14:13:71:542:465:11:g_d0_f6:11:g_d0_f6:B:2007Q4, so as to exclude the effects of the global financial crisis and ensuingperiod of near zero
+6:174:12720:13:31:71:133:452:11:g_d0_f6:11:g_d0_f6:B:interest rates.
+6:175:12735:31:30:257:358:421:11:g_d0_f6:11:g_d0_f6:A:[Figure 1 about here.]
+6:176:12757:30:14:88:540:391:11:g_d0_f6:11:g_d0_f6:A:In a sample extending up to 2011, Chinn and Quayyum (2013) find that the relationship between
+6:177:12850:14:13:71:544:377:11:g_d0_f6:11:g_d0_f6:B:exchange rate changes and interest differentials has altered noticeablyboth at short and long horizons;
+6:178:12953:13:14:71:542:364:11:g_d0_f6:11:g_d0_f6:B:the coefficients of different maturities for major currencies havedeclined in the wake of the Great
+6:179:13052:14:31:71:298:350:11:g_d0_f6:11:g_d0_f6:B:Recession. This point is highlighted in Figure 2.
+6:180:13101:31:39:257:358:319:11:g_d0_f6:11:g_d0_f6:A:[Figure 2 about here.]
+6:181:13123:39:30:71:166:280:14:g_d0_f7:14:g_d0_f7:C:3  The model
+6:182:13135:30:14:71:544:250:11:g_d0_f6:11:g_d0_f6:B:In this section, we develop a standard small open-economy New Keynesianmodel following Gal ́ı
+6:183:13228:14:19:71:189:236:11:g_d0_f6:11:g_d0_f6:B:(2008) and Walsh (2010).
+6:184:13252:19:14:88:543:217:11:g_d0_f6:11:g_d0_f6:A:The world economy constitutes of a continuum of small open economies represented by the unit
+6:185:13344:14:16:71:542:203:11:g_d0_f6:11:g_d0_f6:B:interval4. Since each economy is of measure zero, its performance does not have anyimpact on the
+6:186:13440:16:14:84:544:187:6:g_d0_f13:9:g_d0_f9:F:3There is an alternative approach that involves using survey-based data to measure exchange rate expectations.
+6:187:13550:14:11:72:542:173:9:g_d0_f9:9:g_d0_f9:F:Chinn and Frankel (1994) document that it is difficult to reject UIPfor a broad set of currencies when using survey
+6:188:13665:11:11:72:542:162:9:g_d0_f9:9:g_d0_f9:F:based forecasts. Similar results are obtained by Chinn (2014), when extending the data up to 2009. These results echo
+6:189:13782:11:11:72:543:151:9:g_d0_f9:9:g_d0_f9:F:early findings by Froot and Frankel (1989). While we do not pursue this avenue in this paper (long horizon expectations
+6:190:13901:11:11:72:540:140:9:g_d0_f9:9:g_d0_f9:F:being difficult to obtain), it is useful to recall these findings when interpreting rejections of the joint hypothesis of UIP
+6:191:14026:11:7:72:174:129:9:g_d0_f9:9:g_d0_f9:F:and rational expectations.
+6:192:14052:7:15:84:542:122:6:g_d0_f13:9:g_d0_f9:F:4In order to simplify the notation, variables without ak-index are used to refer to the small open economy being
+6:193:14164:15:11:72:544:107:9:g_d0_f9:9:g_d0_f9:F:modeled. i.e., the Home country. Variables with ak∈[0,1] subscript refer to economykother than the Home country,
+6:194:14276:11:11:72:543:96:9:g_d0_f9:9:g_d0_f9:F:one among the continuum of economies making up the world economy. Finally, variables with an asterisk superscript
+6:195:14389:11:0:72:259:85:9:g_d0_f9:9:g_d0_f9:F:* correspond to the world economy as a whole.
+7:196:14435:0:13:71:542:693:11:g_d0_f6:11:g_d0_f6:B:rest of the world. In addition, we assume symmetry, that is, all countries share the same preference
+7:197:14535:13:35:71:151:680:11:g_d0_f6:11:g_d0_f6:B:and technology5.
+7:198:14551:35:26:71:163:645:12:g_d0_f7:12:g_d0_f7:C:3.1  Households
+7:199:14566:26:14:71:543:619:11:g_d0_f6:11:g_d0_f6:B:Consumption preferences in the Home economy are described by the following composite index of
+7:200:14659:14:26:71:265:605:11:g_d0_f6:11:g_d0_f6:B:domestic and imported bundles of goods:
+7:201:14698:26:0:213:275:579:11:g_d0_f10:11:g_d0_f6:A:Ct≡[(1−γ)
+7:202:14707:0:8:277:280:587:6:g_d0_f13:6:g_d0_f16:?:1a
+7:203:14709:8:0:282:304:579:11:g_d0_f6:11:g_d0_f6:A:(Cht)
+7:204:14714:0:8:306:314:587:6:g_d0_f16:6:g_d0_f16:?:a−1a
+7:205:14718:8:0:323:340:579:11:g_d0_f6:11:g_d0_f10:?:+γ
+7:206:14720:0:8:342:346:587:6:g_d0_f13:6:g_d0_f16:A:1a
+7:207:14722:8:0:347:370:579:11:g_d0_f6:11:g_d0_f6:A:(Cft)
+7:208:14727:0:8:371:380:587:6:g_d0_f16:6:g_d0_f16:A:a−1a
+7:209:14731:8:0:386:389:579:11:g_d0_f6:11:g_d0_f6:A:]
+7:210:14732:0:7:395:399:588:6:g_d0_f16:6:g_d0_f16:?:a
+7:211:14733:7:26:390:543:581:6:g_d0_f16:11:g_d0_f6:A:a−1(5)
+7:212:14739:26:14:71:544:555:11:g_d0_f6:8:g_d0_f11:B:wherea >1 is the elasticity of substitution between domestically produced and imported goods.Cht
+7:213:14835:14:36:72:474:541:11:g_d0_f6:11:g_d0_f6:B:(andCft) are Dixit-Stiglitz aggregates of domestically produced and imported goods.
+7:214:14918:36:0:246:271:505:11:g_d0_f10:11:g_d0_f2:A:Cht≡
+7:215:14922:0:26:274:295:521:11:g_d0_f17:8:g_d0_f12:?:[∫1
+7:216:14925:26:0:286:290:495:8:g_d0_f12:8:g_d0_f12:?:0
+7:217:14926:0:0:297:325:505:11:g_d0_f10:11:g_d0_f6:A:Cht(j)
+7:218:14932:0:8:326:335:513:6:g_d0_f16:6:g_d0_f16:?:θ−1θ
+7:219:14936:8:0:341:345:505:11:g_d0_f10:11:g_d0_f10:A:dj
+7:220:14938:0:16:351:371:521:11:g_d0_f17:6:g_d0_f13:A:]θθ−1
+7:221:14943:16:33:533:543:505:11:g_d0_f6:11:g_d0_f6:A:(6)
+7:222:14946:33:36:71:469:472:11:g_d0_f6:11:g_d0_f6:B:wherej∈[0,1] denotes the good variety.Cftis an index of imported goods given by
+7:223:15025:36:0:244:269:436:11:g_d0_f10:11:g_d0_f2:?:Cft≡
+7:224:15029:0:25:273:294:451:11:g_d0_f17:8:g_d0_f12:?:[∫1
+7:225:15032:25:0:285:289:426:8:g_d0_f12:8:g_d0_f12:?:0
+7:226:15033:0:0:296:323:436:11:g_d0_f6:11:g_d0_f6:A:(Ck,t)
+7:227:15039:0:7:324:337:445:6:g_d0_f16:6:g_d0_f13:?:ξ−1
+7:228:15042:7:0:329:347:438:6:g_d0_f16:11:g_d0_f10:?:ξdk
+7:229:15045:0:15:352:373:451:11:g_d0_f17:6:g_d0_f13:A:]ξξ−1
+7:230:15050:15:30:533:543:436:11:g_d0_f6:11:g_d0_f6:A:(7)
+7:231:15053:30:14:71:541:406:11:g_d0_f6:11:g_d0_f6:B:whereCk,tis, in turn, an index of the quantity of goods imported from countrykand consumed by
+7:232:15146:14:35:71:366:392:11:g_d0_f6:11:g_d0_f6:B:domestic households. It is given by an analogous CES function
+7:233:15207:35:0:241:271:357:11:g_d0_f10:11:g_d0_f2:?:Ck,t≡
+7:234:15212:0:26:274:295:373:11:g_d0_f17:8:g_d0_f12:?:[∫1
+7:235:15215:26:0:286:290:347:8:g_d0_f12:8:g_d0_f12:?:0
+7:236:15216:0:0:297:329:357:11:g_d0_f10:11:g_d0_f6:A:Ck,t(j)
+7:237:15223:0:8:331:339:365:6:g_d0_f16:6:g_d0_f16:A:θ−1θ
+7:238:15227:8:0:345:349:357:11:g_d0_f10:11:g_d0_f10:A:dj
+7:239:15229:0:16:355:375:373:11:g_d0_f17:6:g_d0_f13:A:]θθ−1
+7:240:15234:16:30:533:543:357:11:g_d0_f6:11:g_d0_f6:A:(8)
+7:241:15237:30:13:71:541:327:11:g_d0_f6:11:g_d0_f6:B:The optimal allocation of any given expenditure within each category of goods yields the demand
+7:242:15332:13:21:71:110:314:11:g_d0_f6:11:g_d0_f6:B:functions
+7:243:15341:21:0:254:284:293:11:g_d0_f10:11:g_d0_f6:A:Cht(j) =
+7:244:15349:0:8:296:302:309:11:g_d0_f17:11:g_d0_f17:A:[
+7:245:15350:8:16:303:330:301:11:g_d0_f10:11:g_d0_f6:?:Pht(j)
+7:246:15356:16:0:310:320:285:11:g_d0_f10:8:g_d0_f11:?:Pht
+7:247:15359:0:16:332:348:309:11:g_d0_f17:8:g_d0_f11:A:]−θ
+7:248:15362:16:36:350:543:293:11:g_d0_f10:11:g_d0_f6:A:Cht(9)
+7:249:15368:36:0:248:282:257:11:g_d0_f10:11:g_d0_f6:A:Ck,t(j) =
+7:250:15377:0:8:294:300:272:11:g_d0_f17:11:g_d0_f17:A:[
+7:251:15378:8:15:301:332:264:11:g_d0_f10:11:g_d0_f6:?:Pk,t(j)
+7:252:15385:15:0:308:322:249:11:g_d0_f10:8:g_d0_f11:?:Pk,t
+7:253:15389:0:15:333:350:272:11:g_d0_f17:8:g_d0_f11:A:]−θ
+7:254:15392:15:28:352:542:257:11:g_d0_f10:11:g_d0_f6:A:Ck,t(10)
+7:255:15400:28:14:71:541:229:11:g_d0_f6:11:g_d0_f6:B:for allj, k∈[0,1], wherePhtis the Home price index (i.e., the index of prices of domestically produced
+7:256:15502:14:24:71:149:215:11:g_d0_f6:11:g_d0_f6:B:goods) defined as
+7:257:15519:24:0:246:271:191:11:g_d0_f10:11:g_d0_f2:A:Pht≡
+7:258:15523:0:25:275:295:206:11:g_d0_f17:8:g_d0_f12:?:[∫1
+7:259:15526:25:0:286:290:181:8:g_d0_f12:8:g_d0_f12:?:0
+7:260:15527:0:0:298:345:191:11:g_d0_f10:11:g_d0_f10:?:Pht(j)1−θdj
+7:261:15538:0:15:350:371:206:11:g_d0_f17:6:g_d0_f16:A:]11−θ
+7:262:15543:15:26:527:542:191:11:g_d0_f6:11:g_d0_f6:A:(11)
+7:263:15547:26:14:72:544:165:11:g_d0_f6:11:g_d0_f6:B:andPk,tis a price index for goods imported from countryk(expressed in Home currency) for all
+7:264:15639:14:24:72:109:151:11:g_d0_f10:11:g_d0_f6:B:k∈[0,1]
+7:265:15646:24:0:242:271:127:11:g_d0_f10:11:g_d0_f2:?:Pk,t≡
+7:266:15651:0:25:275:295:142:11:g_d0_f17:8:g_d0_f12:?:[∫1
+7:267:15654:25:0:286:290:117:8:g_d0_f12:8:g_d0_f12:?:0
+7:268:15655:0:0:298:348:127:11:g_d0_f10:11:g_d0_f10:?:Pk,t(j)1−θdj
+7:269:15667:0:15:354:374:142:11:g_d0_f17:6:g_d0_f16:A:]11−θ
+7:270:15672:15:24:527:542:127:11:g_d0_f6:11:g_d0_f6:A:(12)
+7:271:15676:24:0:84:407:103:6:g_d0_f13:9:g_d0_f9:A:5For conciseness, in this paper we only specify technology for the Home country.
+8:272:15757:0:34:71:452:693:11:g_d0_f6:11:g_d0_f6:B:We derive the price index for imported goods (also expressed in Homecurrency)
+8:273:15834:34:0:255:280:659:11:g_d0_f10:11:g_d0_f2:?:Pft≡
+8:274:15838:0:26:283:304:675:11:g_d0_f17:8:g_d0_f12:?:[∫1
+8:275:15841:26:0:295:299:649:8:g_d0_f12:8:g_d0_f12:A:0
+8:276:15842:0:0:306:336:659:11:g_d0_f10:11:g_d0_f10:?:P1−ξk,tdk
+8:277:15851:0:16:342:361:675:11:g_d0_f17:6:g_d0_f16:A:]11−ξ
+8:278:15856:16:37:527:542:659:11:g_d0_f6:11:g_d0_f6:A:(13)
+8:279:15860:37:15:88:541:622:11:g_d0_f6:11:g_d0_f6:A:The Home households’s relative demand forChtandCftdepends on their relative pricesPhtand
+8:280:15948:15:30:72:182:607:11:g_d0_f10:11:g_d0_f6:B:Pft. It is easy to derive:
+8:281:15974:30:0:247:323:577:11:g_d0_f10:11:g_d0_f6:A:Cht=  (1−γ)(
+8:282:15986:0:14:329:339:584:11:g_d0_f10:8:g_d0_f11:?:Pht
+8:283:15989:14:0:329:339:570:11:g_d0_f10:8:g_d0_f11:?:Pct
+8:284:15992:0:32:344:542:577:11:g_d0_f6:11:g_d0_f6:A:)−aCt(14)
+8:285:16001:32:0:247:300:545:11:g_d0_f10:11:g_d0_f6:A:Cft=γ(
+8:286:16007:0:15:301:311:552:11:g_d0_f10:8:g_d0_f11:?:Pft
+8:287:16010:15:0:302:312:537:11:g_d0_f10:8:g_d0_f11:?:Pct
+8:288:16013:0:29:317:542:545:11:g_d0_f6:11:g_d0_f6:A:)−aCt(15)
+8:289:16022:29:25:71:348:516:11:g_d0_f6:11:g_d0_f6:B:wherePctis the composite consumer price index defined as
+8:290:16078:25:0:219:382:491:11:g_d0_f10:11:g_d0_f6:A:Pct≡[(1−γ)(Pht)1−a+γ(Pft)1−a]
+8:291:16107:0:8:388:397:499:6:g_d0_f13:6:g_d0_f16:A:11−a
+8:292:16111:8:23:527:542:491:11:g_d0_f6:11:g_d0_f6:A:(16)
+8:293:16115:23:14:72:540:468:11:g_d0_f6:11:g_d0_f6:B:Agent maximize the following expected discounted sum of utilitiesover possible paths of consumption
+8:294:16214:14:19:72:118:454:11:g_d0_f6:11:g_d0_f6:B:and labor:
+8:295:16224:19:0:260:278:435:11:g_d0_f10:11:g_d0_f2:A:E0{
+8:296:16227:0:27:282:295:449:8:g_d0_f4:11:g_d0_f17:A:∞∑
+8:297:16229:27:0:280:290:422:8:g_d0_f11:8:g_d0_f12:A:t=0
+8:298:16232:0:28:296:542:435:11:g_d0_f10:11:g_d0_f6:A:βtU(Ct, Nt)}(17)
+8:299:16248:28:31:72:243:407:11:g_d0_f6:11:g_d0_f6:B:where the period utility is defined as
+8:300:16286:31:0:244:293:376:11:g_d0_f10:11:g_d0_f6:?:U(Ct, Nt) =
+8:301:16297:0:15:306:317:384:11:g_d0_f10:8:g_d0_f11:?:C1−σt
+8:302:16302:15:0:306:331:369:11:g_d0_f6:11:g_d0_f10:?:1−σ
+8:303:16305:0:0:335:343:376:11:g_d0_f2:11:g_d0_f2:A:−
+8:304:16306:0:15:347:359:384:11:g_d0_f10:8:g_d0_f11:A:N1+ηt
+8:305:16311:15:0:347:371:369:11:g_d0_f6:11:g_d0_f10:A:1 +η
+8:306:16315:0:28:527:542:376:11:g_d0_f6:11:g_d0_f6:A:(18)
+8:307:16319:28:13:71:542:348:11:g_d0_f6:11:g_d0_f6:B:By considering the optimal expenditure conditions (14) and (15), the sequence of budget constraints
+8:308:16418:13:30:71:200:335:11:g_d0_f6:11:g_d0_f6:B:assumes the following form:
+8:309:16445:30:0:221:269:305:11:g_d0_f10:11:g_d0_f6:?:Ct+Bt=
+8:310:16451:0:15:273:283:313:11:g_d0_f10:8:g_d0_f11:?:Pht
+8:311:16454:15:0:274:284:298:11:g_d0_f10:8:g_d0_f11:?:Pct
+8:312:16457:0:0:289:334:305:11:g_d0_f10:8:g_d0_f12:?:Yt+Bt−1
+8:313:16464:0:15:336:372:313:11:g_d0_f6:8:g_d0_f12:A:1 +it−1
+8:314:16471:15:0:339:367:298:11:g_d0_f6:8:g_d0_f11:?:1 +πct
+8:315:16477:0:30:376:542:305:11:g_d0_f6:11:g_d0_f6:A:+Tt(19)
+8:316:16484:30:13:71:543:275:11:g_d0_f6:11:g_d0_f6:B:whereBtis the bond holdings of representative home household6, andTtis the lump-sum profit
+8:317:16574:13:19:71:180:262:11:g_d0_f6:11:g_d0_f6:B:transfer from the firms.
+8:318:16598:19:14:88:542:243:11:g_d0_f6:11:g_d0_f6:A:The representative household chooses processes{Ct, Nt}∞t=0and asset portfolio to maximize (17)
+8:319:16692:14:28:71:544:229:11:g_d0_f6:11:g_d0_f6:B:subject to (19). For any given state of the world, the following set of efficiency conditions must hold:
+8:320:16796:28:0:229:334:201:11:g_d0_f10:11:g_d0_f6:?:C−σt=βEt[(1 +it)(
+8:321:16813:0:14:344:354:208:11:g_d0_f10:8:g_d0_f11:A:Pct
+8:322:16816:14:0:340:357:194:11:g_d0_f10:8:g_d0_f12:A:Pct+1
+8:323:16821:0:24:362:542:201:11:g_d0_f6:11:g_d0_f6:A:)C−σt+1](20)
+8:324:16833:24:16:231:242:177:11:g_d0_f10:8:g_d0_f11:?:Nηt
+8:325:16836:16:0:228:239:161:11:g_d0_f10:8:g_d0_f11:?:C−σt
+8:326:16840:0:0:260:268:169:11:g_d0_f6:11:g_d0_f6:A:=
+8:327:16841:0:15:279:293:177:11:g_d0_f10:8:g_d0_f11:A:Wt
+8:328:16843:15:0:280:290:162:11:g_d0_f10:8:g_d0_f11:A:Pct
+8:329:16846:0:29:527:542:169:11:g_d0_f6:11:g_d0_f6:A:(21)
+8:330:16850:29:14:71:542:140:11:g_d0_f6:11:g_d0_f6:B:Equation (20) takes the form of a familiar consumption Euler equation. Noticethat following large
+8:331:16947:14:15:71:387:126:11:g_d0_f6:11:g_d0_f6:B:part of the recent literature, we do not introduce money explicitly.
+8:332:17015:15:15:84:544:111:6:g_d0_f13:9:g_d0_f9:F:6Since our model has a complete asset market (see Section 3.5),this budget constraint is an abbreviated version.
+8:333:17127:15:11:72:543:96:9:g_d0_f9:9:g_d0_f9:F:We only use (19) to derive the IS curve. In fact, the household is subject to a complete set of assets against all sorts
+8:334:17247:11:0:72:101:85:9:g_d0_f9:9:g_d0_f9:F:of risks.
+9:335:17257:0:26:71:268:693:12:g_d0_f7:12:g_d0_f7:C:3.2  Production and Price Setting
+9:336:17290:26:14:71:541:667:11:g_d0_f6:11:g_d0_f6:B:A typical firmjin the Home economy produces a differentiated good with a linear technology
+9:337:17380:14:22:71:251:653:11:g_d0_f6:11:g_d0_f6:B:represented by the production function
+9:338:17418:22:30:271:347:631:11:g_d0_f10:11:g_d0_f6:?:Yt(j) =eǫtNt(j)
+9:339:17433:30:0:71:115:601:11:g_d0_f6:11:g_d0_f2:B:LetYt≡
+9:340:17439:0:7:121:131:613:11:g_d0_f17:11:g_d0_f17:?:[∫
+9:341:17441:7:9:133:137:606:8:g_d0_f12:8:g_d0_f12:?:1
+9:342:17442:9:0:131:163:597:8:g_d0_f12:11:g_d0_f6:?:0Yt(j)
+9:343:17448:0:7:164:173:608:6:g_d0_f16:6:g_d0_f16:?:θ−1θ
+9:344:17452:7:0:179:183:601:11:g_d0_f10:11:g_d0_f10:?:dj
+9:345:17454:0:12:189:209:613:11:g_d0_f17:6:g_d0_f13:?:]θθ−1
+9:346:17459:12:16:215:542:601:11:g_d0_f6:11:g_d0_f6:A:represent an index for aggregate domestic output, analogous to the
+9:347:17525:16:29:71:294:585:11:g_d0_f6:11:g_d0_f6:B:introduced for consumption. Hence, notice that
+9:348:17571:29:0:250:274:556:11:g_d0_f10:11:g_d0_f2:A:Nt≡
+9:349:17574:0:24:277:292:570:11:g_d0_f17:8:g_d0_f12:?:∫1
+9:350:17576:24:0:283:287:546:8:g_d0_f12:8:g_d0_f12:?:0
+9:351:17577:0:0:295:341:556:11:g_d0_f10:11:g_d0_f6:A:Nt(j)dj=
+9:352:17585:0:15:346:366:563:11:g_d0_f10:8:g_d0_f11:A:YtZt
+9:353:17589:15:24:350:362:548:11:g_d0_f10:6:g_d0_f16:A:eǫt
+9:354:17592:24:0:71:127:524:11:g_d0_f6:11:g_d0_f2:B:whereZt≡
+9:355:17600:0:13:132:143:533:11:g_d0_f17:8:g_d0_f12:?:∫1
+9:356:17602:13:0:137:141:520:8:g_d0_f12:8:g_d0_f12:?:0
+9:357:17603:0:9:147:165:529:8:g_d0_f11:8:g_d0_f12:?:Yt(j)
+9:358:17608:9:10:152:546:520:8:g_d0_f11:8:g_d0_f11:F:Ytdj. Gal ́ı and Monacelli (2005) proved that equilibrium variations inzt≡lnZt
+9:359:17686:10:13:71:544:510:11:g_d0_f6:11:g_d0_f6:B:around the perfect foresight steady state are of second order. Thus, up to a first order approximation,
+9:360:17789:13:14:71:226:497:11:g_d0_f6:11:g_d0_f6:B:we have an aggregate relationship
+9:361:17822:14:25:282:542:483:11:g_d0_f10:11:g_d0_f6:A:yt=nt+ǫt(22)
+9:362:17834:25:13:88:542:458:11:g_d0_f6:11:g_d0_f6:A:Each firm faces a constant elasticity demand curve for its output, The firm’s real marginal cost
+9:363:17930:13:20:71:115:445:11:g_d0_f6:11:g_d0_f6:B:is equal to
+9:364:17941:20:0:272:307:425:11:g_d0_f10:11:g_d0_f6:?:M Ct=
+9:365:17946:0:15:311:341:432:11:g_d0_f10:8:g_d0_f11:?:Wt/Pht
+9:366:17952:15:16:322:333:417:11:g_d0_f10:6:g_d0_f16:?:eǫt
+9:367:17955:16:7:71:115:401:11:g_d0_f6:6:g_d0_f16:B:whereWtPh
+9:368:17964:7:0:110:113:394:6:g_d0_f16:6:g_d0_f16:?:t
+9:369:17965:0:16:121:542:401:11:g_d0_f6:11:g_d0_f6:A:is the real product wage andeǫtis the marginal product of labor. In terms of percentage
+9:370:18052:16:23:71:352:385:11:g_d0_f6:11:g_d0_f6:B:deviations around the steady state, this expression becomes
+9:371:18111:23:28:264:542:362:11:g_d0_f10:11:g_d0_f6:A:mct=wt−pht−ǫt(23)
+9:372:18128:28:14:88:542:334:11:g_d0_f6:11:g_d0_f6:A:We assume that firms set prices in a staggered fashion, as in Calvo (1983). Hence, a measure
+9:373:18220:14:14:71:541:320:11:g_d0_f6:11:g_d0_f6:B:1−ωof (randomly selected) firms sets new prices each period, with an individual firm’s probability
+9:374:18318:14:34:71:544:306:11:g_d0_f6:11:g_d0_f6:B:of re-optimizing in any given period being independent of the timeelapsed since it last reset its price.
+9:375:18422:34:26:71:500:272:12:g_d0_f7:12:g_d0_f7:C:3.3  The Law of One Price, Terms of Trade, and the Real Exchange Rate
+9:376:18491:26:14:71:542:246:11:g_d0_f6:11:g_d0_f6:B:For the rest of the world, the distinction between the CPI and the price of domestic production is
+9:377:18589:14:14:71:547:232:11:g_d0_f6:11:g_d0_f6:B:ignored, both denoted asP∗t. That is, the rest of the world is large relative to the home country7,
+9:378:18688:14:13:71:542:218:11:g_d0_f6:11:g_d0_f6:B:so changes in the price of home-produced goods have little impact on the consumer price index for
+9:379:18785:13:15:71:542:205:11:g_d0_f6:11:g_d0_f6:B:the rest of the world. Because of asymmetry, all imported goods sell forthe same pricePftat home
+9:380:18881:15:13:71:543:190:11:g_d0_f6:11:g_d0_f6:B:country. That is,Pk,t(j) =Pk,t=Pftfor anyj, k∈[0,1]. Assume that the law of one price holds.
+9:381:18973:13:14:71:125:177:11:g_d0_f6:11:g_d0_f6:B:This implies
+9:382:18985:14:19:283:542:163:11:g_d0_f10:11:g_d0_f6:A:Pft=StP∗t(24)
+9:383:18998:19:31:71:347:144:11:g_d0_f6:11:g_d0_f6:B:The terms of trade is the relative price of imported goods:
+9:384:19057:31:0:267:291:113:11:g_d0_f6:11:g_d0_f2:?:∆t≡
+9:385:19060:0:16:295:306:121:11:g_d0_f10:8:g_d0_f11:A:Pft
+9:386:19063:16:0:296:306:105:11:g_d0_f10:8:g_d0_f11:A:Pht
+9:387:19066:0:0:314:322:113:11:g_d0_f6:11:g_d0_f6:A:=
+9:388:19067:0:16:326:347:121:11:g_d0_f10:8:g_d0_f11:?:StP∗t
+9:389:19072:16:0:331:341:105:11:g_d0_f10:8:g_d0_f11:A:Pht
+9:390:19075:0:24:527:542:113:11:g_d0_f6:11:g_d0_f6:A:(25)
+9:391:19079:24:0:84:237:89:6:g_d0_f13:9:g_d0_f9:A:7The home country is of measure zero.
+10:392:19117:0:31:71:263:693:11:g_d0_f6:11:g_d0_f6:B:while the real exchange rate is defined as
+10:393:19159:31:0:257:280:662:11:g_d0_f10:11:g_d0_f6:A:Qt=
+10:394:19162:0:15:285:305:670:11:g_d0_f10:8:g_d0_f11:?:StP∗t
+10:395:19167:15:0:290:300:655:11:g_d0_f10:8:g_d0_f11:?:Pct
+10:396:19170:0:0:312:324:662:11:g_d0_f6:11:g_d0_f6:?:= (
+10:397:19173:0:15:329:339:670:11:g_d0_f10:8:g_d0_f11:?:Pht
+10:398:19176:15:0:330:340:655:11:g_d0_f10:8:g_d0_f11:A:Pct
+10:399:19179:0:30:344:542:662:11:g_d0_f6:11:g_d0_f6:A:)∆t(26)
+10:400:19186:30:14:71:542:632:11:g_d0_f6:11:g_d0_f6:B:With these new definitions, we can log-linearize (14), (15), (16), (20), and (21), and get (lowercase
+10:401:19287:14:25:71:542:618:11:g_d0_f6:11:g_d0_f6:B:letters denote percentage deviation around the steady states of the corresponding uppercase letters)
+10:402:19387:25:18:243:542:593:11:g_d0_f10:11:g_d0_f6:A:cft=−aδt+cht(27)
+10:403:19403:18:21:243:542:575:11:g_d0_f10:11:g_d0_f6:A:pct=  (1−γ)pht+γpft=pht+γδt(28)
+10:404:19434:21:0:245:322:554:11:g_d0_f10:11:g_d0_f2:?:ct=Etct+1−
+10:405:19444:0:15:327:332:561:11:g_d0_f6:11:g_d0_f6:?:1
+10:406:19445:15:0:326:332:546:11:g_d0_f10:11:g_d0_f10:?:σ
+10:407:19446:0:22:334:542:554:11:g_d0_f6:11:g_d0_f6:A:(it−Etπct+1)(29)
+10:408:19462:22:24:209:542:532:11:g_d0_f10:11:g_d0_f6:A:ηnt+σct=wt−pht−γδt(30)
+10:409:19484:24:14:72:547:508:11:g_d0_f6:11:g_d0_f6:B:whereπct=pct−pct−1. Defining inflation in the prices of domestically produced goods asπht=pht−pht−1,
+10:410:19584:14:24:71:275:494:11:g_d0_f6:11:g_d0_f6:B:inflation in the consumer price index equals
+10:411:19628:24:18:226:307:470:11:g_d0_f10:8:g_d0_f12:A:πct=pct−pct−1
+10:412:19641:18:17:246:392:452:11:g_d0_f6:11:g_d0_f6:A:=  (pht+γδt)−(pht−1+γδt−1)
+10:413:19667:17:35:246:542:435:11:g_d0_f6:11:g_d0_f6:A:=πht+γ(δt−δt−1)(31)
+10:414:19686:35:27:72:229:400:12:g_d0_f7:12:g_d0_f7:C:3.4  The Rest of the World
+10:415:19712:27:13:72:542:373:11:g_d0_f6:11:g_d0_f6:B:Since the home country is of zero measure, variables of the rest of the world is actually equivalent
+10:416:19812:13:14:72:541:360:11:g_d0_f6:11:g_d0_f6:B:to the whole world. This means that it is unnecessary to distinguishbetween domestic output and
+10:417:19907:14:24:72:486:346:11:g_d0_f6:11:g_d0_f6:B:consumption for the rest of the world. i.e.C∗t=Y∗t. Similar to (15), it is easy to derive
+10:418:19996:24:25:276:338:322:11:g_d0_f10:8:g_d0_f11:?:Ch∗t=γ∆atY∗t
+10:419:20008:25:13:72:77:297:11:g_d0_f6:11:g_d0_f6:B:or
+10:420:20010:13:35:276:542:284:11:g_d0_f10:11:g_d0_f6:A:ch∗t=aδt+y∗t(32)
+10:421:20026:35:26:72:428:249:12:g_d0_f7:12:g_d0_f7:C:3.5  Complete Asset Markets and International Risk Sharing
+10:422:20084:26:14:72:543:223:11:g_d0_f6:11:g_d0_f6:B:We assume complete asset markets in this model. As we mentioned in Section 3.1, the household is
+10:423:20180:14:13:72:541:209:11:g_d0_f6:11:g_d0_f6:B:subject to a complete set of assets against all sorts of risks. For any statesof the economy at Period
+10:424:20282:13:14:71:541:196:11:g_d0_f6:11:g_d0_f6:B:t+1, there exists a corresponding Arrow security with pricevtthat pays one unit of Home currency
+10:425:20378:14:19:72:278:182:11:g_d0_f6:11:g_d0_f6:B:in period t+1 if and only if statesoccurs8.
+10:426:20421:19:14:88:543:163:11:g_d0_f6:11:g_d0_f6:A:Assume statesoccurs with probabilityτ(s).  Then for the Home households, intertemporal
+10:427:20507:14:11:72:160:149:11:g_d0_f6:11:g_d0_f6:B:substitution yields:
+10:428:20527:11:15:240:279:138:11:g_d0_f10:11:g_d0_f6:?:vtU′(Ct)
+10:429:20535:15:0:253:263:123:11:g_d0_f10:8:g_d0_f11:?:Pct
+10:430:20538:0:0:284:292:130:11:g_d0_f6:11:g_d0_f6:?:=
+10:431:20539:0:15:297:378:138:11:g_d0_f10:11:g_d0_f6:?:βU′(Ct+1(s))τ(s)
+10:432:20555:15:0:320:355:123:11:g_d0_f10:11:g_d0_f6:?:Pct+1(s)
+10:433:20563:0:25:527:542:130:11:g_d0_f6:11:g_d0_f6:A:(33)
+10:434:20567:25:15:84:543:105:6:g_d0_f13:9:g_d0_f9:F:8If such an Arrow security does not exist, we can always construct an identical portfolio from existing assets. This
+10:435:20683:15:0:72:302:90:9:g_d0_f9:9:g_d0_f9:F:is guaranteed by the definition of complete asset markets.
+11:436:20742:0:19:71:333:693:11:g_d0_f6:11:g_d0_f6:B:wheresin the parentheses means it is state dependent.
+11:437:20795:19:28:88:471:674:11:g_d0_f6:11:g_d0_f6:A:SubstitutingU(·) with its functional form, and a little tranformation, we can get
+11:438:20876:28:0:233:239:646:11:g_d0_f10:11:g_d0_f10:?:β
+11:439:20877:0:8:242:248:661:11:g_d0_f17:11:g_d0_f17:?:[
+11:440:20878:8:16:248:296:653:11:g_d0_f10:8:g_d0_f11:A:Ct+1(s)−σ
+11:441:20887:16:0:262:273:637:11:g_d0_f10:8:g_d0_f11:A:C−σt
+11:442:20891:0:0:300:303:646:11:g_d0_f2:11:g_d0_f2:?:·
+11:443:20892:0:15:318:328:653:11:g_d0_f10:8:g_d0_f11:A:Pct
+11:444:20895:15:0:307:341:638:11:g_d0_f10:11:g_d0_f6:?:Pct+1(s)
+11:445:20903:0:15:343:349:661:11:g_d0_f17:11:g_d0_f17:A:]
+11:446:20904:15:0:352:360:646:11:g_d0_f6:11:g_d0_f6:A:=
+11:447:20905:0:15:370:378:653:11:g_d0_f10:8:g_d0_f11:A:vt
+11:448:20907:15:0:364:384:638:11:g_d0_f10:11:g_d0_f6:A:τ(s)
+11:449:20911:0:35:527:542:646:11:g_d0_f6:11:g_d0_f6:A:(34)
+11:450:20915:35:13:88:543:611:11:g_d0_f6:11:g_d0_f6:A:The foreign households also have access to this Arrow security, and their intertemporal substitu-
+11:451:21012:13:12:71:120:598:11:g_d0_f6:11:g_d0_f6:B:tion yields:
+11:452:21024:12:15:239:280:586:11:g_d0_f10:11:g_d0_f6:A:vtU′(C∗t)
+11:453:21033:15:0:248:268:571:11:g_d0_f10:8:g_d0_f11:A:StP∗t
+11:454:21038:0:0:285:293:578:11:g_d0_f6:11:g_d0_f6:?:=
+11:455:21039:0:15:298:379:586:11:g_d0_f10:11:g_d0_f6:?:βU′(C∗t+1(s))τ(s)
+11:456:21056:15:0:304:373:571:11:g_d0_f10:11:g_d0_f6:?:St+1(s)P∗t+1(s)
+11:457:21071:0:25:527:542:578:11:g_d0_f6:11:g_d0_f6:A:(35)
+11:458:21075:25:20:72:107:553:11:g_d0_f6:11:g_d0_f6:B:That is,
+11:459:21083:20:0:216:222:533:11:g_d0_f10:11:g_d0_f10:A:β
+11:460:21084:0:8:224:230:549:11:g_d0_f17:11:g_d0_f17:A:[
+11:461:21085:8:16:231:279:541:11:g_d0_f10:8:g_d0_f11:?:C∗t+1(s)−σ
+11:462:21095:16:0:243:253:525:11:g_d0_f10:8:g_d0_f11:?:C∗−σt
+11:463:21100:0:0:283:286:533:11:g_d0_f2:11:g_d0_f2:?:·
+11:464:21101:0:15:312:333:541:11:g_d0_f10:8:g_d0_f11:?:StP∗t
+11:465:21106:15:0:289:359:526:11:g_d0_f10:11:g_d0_f6:?:St+1(s)P∗t+1(s)
+11:466:21121:0:16:360:366:549:11:g_d0_f17:11:g_d0_f17:A:]
+11:467:21122:16:0:369:377:533:11:g_d0_f6:11:g_d0_f6:A:=
+11:468:21123:0:15:387:395:541:11:g_d0_f10:8:g_d0_f11:A:vt
+11:469:21125:15:0:382:401:526:11:g_d0_f10:11:g_d0_f6:?:τ(s)
+11:470:21129:0:25:527:542:533:11:g_d0_f6:11:g_d0_f6:A:(36)
+11:471:21133:25:20:71:85:508:11:g_d0_f6:11:g_d0_f6:B:i.e.,
+11:472:21138:20:0:210:216:488:11:g_d0_f10:11:g_d0_f10:A:β
+11:473:21139:0:8:218:224:504:11:g_d0_f17:11:g_d0_f17:?:[
+11:474:21140:8:16:225:272:496:11:g_d0_f10:8:g_d0_f11:A:C∗t+1(s)−σ
+11:475:21150:16:0:237:247:480:11:g_d0_f10:8:g_d0_f11:A:C∗−σt
+11:476:21155:0:0:277:280:488:11:g_d0_f2:11:g_d0_f2:?:·
+11:477:21156:0:15:296:307:496:11:g_d0_f10:8:g_d0_f11:A:Qt
+11:478:21158:15:0:283:320:481:11:g_d0_f10:11:g_d0_f6:?:Qt+1(s)
+11:479:21165:0:0:324:327:488:11:g_d0_f2:11:g_d0_f2:?:·
+11:480:21166:0:15:341:351:496:11:g_d0_f10:8:g_d0_f11:A:Pct
+11:481:21169:15:0:330:365:481:11:g_d0_f10:11:g_d0_f6:A:Pct+1(s)
+11:482:21177:0:16:366:372:504:11:g_d0_f17:11:g_d0_f17:A:]
+11:483:21178:16:0:375:383:488:11:g_d0_f6:11:g_d0_f6:?:=
+11:484:21179:0:15:393:402:496:11:g_d0_f10:8:g_d0_f11:A:vt
+11:485:21181:15:0:388:407:481:11:g_d0_f10:11:g_d0_f6:A:τ(s)
+11:486:21185:0:26:527:542:488:11:g_d0_f6:11:g_d0_f6:A:(37)
+11:487:21189:26:21:71:244:462:11:g_d0_f6:11:g_d0_f6:B:Comparing (34) and (37), we can get
+11:488:21224:21:16:229:277:441:11:g_d0_f10:8:g_d0_f11:?:Ct+1(s)−σ
+11:489:21233:16:0:243:254:425:11:g_d0_f10:8:g_d0_f11:?:C−σt
+11:490:21237:0:0:281:289:433:11:g_d0_f6:11:g_d0_f6:A:=
+11:491:21238:0:16:294:341:441:11:g_d0_f10:8:g_d0_f11:A:C∗t+1(s)−σ
+11:492:21248:16:0:306:316:425:11:g_d0_f10:8:g_d0_f11:?:C∗−σt
+11:493:21253:0:0:346:349:433:11:g_d0_f2:11:g_d0_f2:A:·
+11:494:21254:0:15:365:376:441:11:g_d0_f10:8:g_d0_f11:A:Qt
+11:495:21256:15:0:352:389:426:11:g_d0_f10:11:g_d0_f6:A:Qt+1(s)
+11:496:21263:0:27:527:542:433:11:g_d0_f6:11:g_d0_f6:A:(38)
+11:497:21267:27:13:71:85:406:11:g_d0_f6:11:g_d0_f6:B:i.e.,
+11:498:21272:13:15:240:287:393:11:g_d0_f10:8:g_d0_f11:?:Ct+1(s)−σ
+11:499:21281:15:0:240:287:378:11:g_d0_f10:8:g_d0_f11:?:C∗t+1(s)−σ
+11:500:21291:0:0:289:328:386:11:g_d0_f10:11:g_d0_f6:?:Qt+1(s) =
+11:501:21300:0:16:343:354:393:11:g_d0_f10:8:g_d0_f11:A:C−σt
+11:502:21304:16:0:341:352:377:11:g_d0_f10:8:g_d0_f11:A:C∗−σt
+11:503:21309:0:26:367:542:386:11:g_d0_f10:11:g_d0_f6:A:Qt(39)
+11:504:21315:26:13:71:542:360:11:g_d0_f6:11:g_d0_f6:B:The right hand side of the above equation is independent of states, hence for any states, we must
+11:505:21412:13:11:71:88:347:11:g_d0_f6:11:g_d0_f6:B:have
+11:506:21416:11:16:259:277:336:11:g_d0_f10:8:g_d0_f12:A:C−σt+1
+11:507:21422:16:0:258:276:320:11:g_d0_f10:8:g_d0_f12:A:C∗−σt+1
+11:508:21429:0:0:284:318:328:11:g_d0_f10:11:g_d0_f6:?:Qt+1=
+11:509:21434:0:16:325:336:336:11:g_d0_f10:8:g_d0_f11:?:C−σt
+11:510:21438:16:0:323:334:320:11:g_d0_f10:8:g_d0_f11:?:C∗−σt
+11:511:21443:0:31:349:542:328:11:g_d0_f10:11:g_d0_f6:A:Qt(40)
+11:512:21449:31:0:71:196:297:11:g_d0_f6:8:g_d0_f11:B:This equation indicatesC
+11:513:21473:0:15:196:199:306:6:g_d0_f8:6:g_d0_f16:?:−σt
+11:514:21476:15:11:188:541:291:8:g_d0_f11:11:g_d0_f6:A:C∗−σtQtis a constant for anyt. For convenience, normalize this constant to
+11:515:21550:11:13:71:544:280:11:g_d0_f6:11:g_d0_f6:B:be unity. This is consistent with a symmetric initial condition with zero net foreign asset holdings.
+11:516:21651:13:17:71:130:267:11:g_d0_f6:11:g_d0_f6:B:Hence we get
+11:517:21663:17:0:281:316:250:11:g_d0_f10:11:g_d0_f10:A:Ct=Q
+11:518:21667:0:7:318:322:260:6:g_d0_f13:6:g_d0_f13:A:1
+11:519:21668:7:22:317:542:253:6:g_d0_f16:11:g_d0_f6:A:σtC∗t(41)
+11:520:21677:22:28:71:201:231:11:g_d0_f6:11:g_d0_f6:B:and its log-linearized version
+11:521:21707:28:0:223:266:203:11:g_d0_f10:11:g_d0_f6:A:ct=c∗t+
+11:522:21714:0:8:269:277:219:11:g_d0_f17:11:g_d0_f17:?:(
+11:523:21715:8:15:279:284:211:11:g_d0_f6:11:g_d0_f6:A:1
+11:524:21716:15:0:278:284:196:11:g_d0_f10:11:g_d0_f10:A:σ
+11:525:21717:0:16:286:294:219:11:g_d0_f17:11:g_d0_f17:?:)
+11:526:21718:16:0:296:338:203:11:g_d0_f10:11:g_d0_f6:A:qt=c∗t+
+11:527:21725:0:8:341:349:219:11:g_d0_f17:11:g_d0_f17:A:(
+11:528:21726:8:15:351:375:211:11:g_d0_f6:11:g_d0_f10:A:1−γ
+11:529:21729:15:0:360:366:196:11:g_d0_f10:11:g_d0_f10:A:σ
+11:530:21730:0:16:377:385:219:11:g_d0_f17:11:g_d0_f17:?:)
+11:531:21731:16:27:387:542:203:11:g_d0_f10:11:g_d0_f6:A:δt(42)
+11:532:21737:27:22:71:257:176:11:g_d0_f6:11:g_d0_f6:B:The last equation employs the fact that
+11:533:21776:22:17:230:321:154:11:g_d0_f10:8:g_d0_f11:?:qt=st+p∗t−pct
+11:534:21789:17:16:249:388:137:11:g_d0_f6:11:g_d0_f6:A:=  (st+p∗t−pht) + (pht−pct)
+11:535:21816:16:17:249:331:121:11:g_d0_f6:11:g_d0_f6:A:=δt+ (pht−pct)
+11:536:21830:17:16:249:303:104:11:g_d0_f6:8:g_d0_f11:A:=δt−γδt
+11:537:21837:16:0:249:542:88:11:g_d0_f6:11:g_d0_f6:A:=  (1−γ)δt(43)
+12:538:21852:0:26:71:248:693:12:g_d0_f7:12:g_d0_f7:C:3.6  Uncovered Interest Parity
+12:539:21882:26:14:71:543:667:11:g_d0_f6:11:g_d0_f6:B:We model the uncovered interest parity equation following McCallum (1994) and Engel (2015), that
+12:540:21978:14:13:71:541:653:11:g_d0_f6:11:g_d0_f6:B:the market’s expectation of the currency depreciation differs from the rational expectation by a
+12:541:22074:13:20:71:246:640:11:g_d0_f6:11:g_d0_f6:B:mean-zero, i.i.d. random variableui:
+12:542:22110:20:19:248:542:620:11:g_d0_f10:11:g_d0_f6:A:it−i∗t=Etst+1−st+uit(44)
+12:543:22134:19:13:71:542:601:11:g_d0_f6:11:g_d0_f6:B:The presence of this error term is crucial, and yet at the same time intuitively plausible. Perhaps
+12:544:22233:13:14:71:543:588:11:g_d0_f6:11:g_d0_f6:B:agents in the market do not make the effort to calculate the fully rational expectations (such as
+12:545:22330:14:14:71:542:574:11:g_d0_f6:11:g_d0_f6:B:in bounded rationality), so that each period they make an error in expectations formation that
+12:546:22424:14:13:71:544:560:11:g_d0_f6:11:g_d0_f6:B:has a mean of zero and is completely transitory.  Hence, the consequent deviation from rational
+12:547:22519:13:14:71:541:547:11:g_d0_f6:11:g_d0_f6:B:expectations is not systematic. Evidence that market expectations are not unbiased comes from a
+12:548:22614:14:19:71:482:533:11:g_d0_f6:11:g_d0_f6:B:variety of sources, including Chinn and Frankel (1994) and Chinn (2006), for instance.
+12:549:22700:19:19:88:474:514:11:g_d0_f6:11:g_d0_f6:A:Using the definition of real exchange rate, we re-write the interest parity equation
+12:550:22784:19:34:202:542:495:11:g_d0_f10:11:g_d0_f6:A:it−i∗t=Etqt+1−qt+Etπct+1−Etπ∗t+1+uit(45)
+12:551:22824:34:27:72:255:461:12:g_d0_f7:12:g_d0_f7:C:3.7  Market Clearing Condition
+12:552:22854:27:13:72:544:434:11:g_d0_f6:11:g_d0_f6:B:Market clear requires that Home production equal the consumption of theHome produced good.
+12:553:22944:13:14:72:543:421:11:g_d0_f6:11:g_d0_f6:B:Since the Home produced good is consumed by both Home residents and by residents of the rest of
+12:554:23039:14:27:72:215:407:11:g_d0_f6:11:g_d0_f6:B:the world, equilibrium requires
+12:555:23070:27:0:206:263:380:11:g_d0_f10:11:g_d0_f6:A:Yt= (1−γ)
+12:556:23079:0:8:265:273:395:11:g_d0_f17:11:g_d0_f17:?:(
+12:557:23080:8:15:275:285:387:11:g_d0_f10:8:g_d0_f11:?:Pht
+12:558:23083:15:0:275:285:372:11:g_d0_f10:8:g_d0_f11:?:Pct
+12:559:23086:0:15:290:308:395:11:g_d0_f17:8:g_d0_f11:?:)−a
+12:560:23089:15:0:311:342:380:11:g_d0_f10:11:g_d0_f10:?:Ct+γ
+12:561:23093:0:8:344:352:395:11:g_d0_f17:11:g_d0_f17:A:(
+12:562:23094:8:15:358:368:387:11:g_d0_f10:8:g_d0_f11:A:Pht
+12:563:23097:15:0:353:373:372:11:g_d0_f10:8:g_d0_f11:A:StP∗t
+12:564:23102:0:15:378:396:395:11:g_d0_f17:8:g_d0_f11:?:)−a
+12:565:23105:15:32:399:542:380:11:g_d0_f10:11:g_d0_f6:A:Y∗t(46)
+12:566:23112:32:0:71:161:348:11:g_d0_f6:11:g_d0_f10:B:Using (41)Ct=Q
+12:567:23126:0:7:162:166:359:6:g_d0_f13:6:g_d0_f13:?:1
+12:568:23127:7:0:161:205:352:6:g_d0_f16:11:g_d0_f10:?:σtC∗t=Q
+12:569:23134:0:7:206:210:359:6:g_d0_f13:6:g_d0_f13:A:1
+12:570:23135:7:17:206:542:352:6:g_d0_f16:11:g_d0_f6:A:σtY∗tto eliminateY∗t, and employing the definition of the real exchange
+12:571:23206:17:28:72:364:335:11:g_d0_f6:11:g_d0_f6:B:rate, the good market equilibrium condition can be written as
+12:572:23267:28:0:222:243:307:11:g_d0_f10:11:g_d0_f6:A:Yt=
+12:573:23270:0:8:246:254:323:11:g_d0_f17:11:g_d0_f17:A:(
+12:574:23271:8:15:256:266:315:11:g_d0_f10:8:g_d0_f11:A:Pht
+12:575:23274:15:0:256:266:300:11:g_d0_f10:8:g_d0_f11:A:Pct
+12:576:23277:0:16:271:289:323:11:g_d0_f17:8:g_d0_f11:?:)−a
+12:577:23280:16:0:292:348:307:11:g_d0_f6:11:g_d0_f10:A:[(1−γ) +γQ
+12:578:23290:0:10:357:381:314:8:g_d0_f12:8:g_d0_f12:A:(a−1σ)
+12:579:23296:10:27:357:542:304:8:g_d0_f11:11:g_d0_f6:A:t]Ct(47)
+12:580:23304:27:24:88:245:277:11:g_d0_f6:11:g_d0_f6:A:Log-linearize this equation yields:
+12:581:23339:24:0:185:319:253:11:g_d0_f10:11:g_d0_f2:?:yt=−a(pht−pct) +γ(a−
+12:582:23359:0:15:324:329:261:11:g_d0_f6:11:g_d0_f6:?:1
+12:583:23360:15:0:323:329:246:11:g_d0_f10:11:g_d0_f10:?:σ
+12:584:23361:0:25:331:365:253:11:g_d0_f6:8:g_d0_f11:A:)qt+ct
+12:585:23367:25:0:204:283:228:11:g_d0_f6:11:g_d0_f2:A:=γaδt+γ(a−
+12:586:23377:0:15:288:293:235:11:g_d0_f6:11:g_d0_f6:?:1
+12:587:23378:15:0:287:293:220:11:g_d0_f10:11:g_d0_f10:?:σ
+12:588:23379:0:26:295:329:228:11:g_d0_f6:8:g_d0_f11:A:)qt+ct
+12:589:23385:26:0:204:212:202:11:g_d0_f6:11:g_d0_f6:A:=
+12:590:23386:0:15:230:236:209:11:g_d0_f10:11:g_d0_f10:?:γa
+12:591:23388:15:0:224:248:194:11:g_d0_f6:11:g_d0_f10:A:1−γ
+12:592:23391:0:0:250:298:202:11:g_d0_f10:11:g_d0_f2:A:qt+γ(a−
+12:593:23398:0:15:303:308:209:11:g_d0_f6:11:g_d0_f6:?:1
+12:594:23399:15:0:302:308:194:11:g_d0_f10:11:g_d0_f10:?:σ
+12:595:23400:0:26:310:344:202:11:g_d0_f6:8:g_d0_f11:?:)qt+ct
+12:596:23406:26:0:204:241:176:11:g_d0_f6:11:g_d0_f6:A:=ct+
+12:597:23410:0:14:262:268:183:11:g_d0_f10:11:g_d0_f10:?:γ
+12:598:23411:14:0:245:285:169:11:g_d0_f10:11:g_d0_f6:?:σ(1−γ)
+12:599:23417:0:29:287:542:176:11:g_d0_f6:11:g_d0_f6:A:[aσ+ (aσ−1)(1−γ)]qt(48)
+12:600:23440:29:0:204:242:147:11:g_d0_f6:11:g_d0_f6:A:=c∗t+
+12:601:23445:0:15:247:252:155:11:g_d0_f6:11:g_d0_f6:A:1
+12:602:23446:15:0:246:252:140:11:g_d0_f10:11:g_d0_f10:A:σ
+12:603:23447:0:0:254:273:147:11:g_d0_f10:11:g_d0_f6:?:qt+
+12:604:23450:0:15:294:300:155:11:g_d0_f10:11:g_d0_f10:A:γ
+12:605:23451:15:0:277:317:140:11:g_d0_f10:11:g_d0_f6:?:σ(1−γ)
+12:606:23457:0:28:319:431:147:11:g_d0_f6:8:g_d0_f11:?:[aσ+ (aσ−1)(1−γ)]qt
+12:607:23476:28:0:204:243:119:11:g_d0_f6:11:g_d0_f6:A:=y∗t+
+12:608:23481:0:15:248:253:126:11:g_d0_f6:11:g_d0_f6:A:1
+12:609:23482:15:0:247:253:111:11:g_d0_f10:11:g_d0_f10:A:σ
+12:610:23483:0:0:255:274:119:11:g_d0_f10:11:g_d0_f6:?:qt+
+12:611:23486:0:15:295:301:126:11:g_d0_f10:11:g_d0_f10:A:γ
+12:612:23487:15:0:278:318:111:11:g_d0_f10:11:g_d0_f6:A:σ(1−γ)
+12:613:23493:0:29:320:432:119:11:g_d0_f6:8:g_d0_f11:?:[aσ+ (aσ−1)(1−γ)]qt
+12:614:23512:29:0:204:243:90:11:g_d0_f6:11:g_d0_f6:A:=y∗t+
+12:615:23517:0:15:267:272:98:11:g_d0_f6:11:g_d0_f6:?:1
+12:616:23518:15:0:247:292:83:11:g_d0_f10:11:g_d0_f6:A:σγ(1−γ)
+12:617:23525:0:0:294:542:90:11:g_d0_f10:11:g_d0_f6:A:qt(49)
+13:618:23533:0:36:71:195:693:11:g_d0_f6:8:g_d0_f12:B:whereσγ≡σ1−γ(1−aσ)(2−γ)
+13:619:23556:36:26:71:357:657:12:g_d0_f7:12:g_d0_f7:C:3.8  Inflation Adjustment and the Phillips Curve
+13:620:23604:26:14:71:542:631:11:g_d0_f6:11:g_d0_f6:B:In the small open economy, the dynamics of domestic inflation in terms of real marginal cost are
+13:621:23700:14:24:71:498:617:11:g_d0_f6:11:g_d0_f6:B:described by an equation analogous to the one associated with a closed economy9. Hence,
+13:622:23787:24:27:254:542:593:11:g_d0_f10:11:g_d0_f6:A:πht=βEtπht+1+k·mct(50)
+13:623:23809:27:26:72:372:566:11:g_d0_f6:11:g_d0_f6:B:wherek≡(1−ω)(1−βω)ω. From (23), (30), (48), and (49), we have
+13:624:23870:26:16:119:221:540:11:g_d0_f10:8:g_d0_f11:?:mct=wt−pht−ǫt
+13:625:23883:16:17:146:258:524:11:g_d0_f6:8:g_d0_f11:?:=ηnt+σct+γδt−ǫt
+13:626:23898:17:19:146:286:507:11:g_d0_f6:8:g_d0_f11:?:=η(yt−ǫt) +σct+γδt−ǫt
+13:627:23919:19:0:146:218:488:11:g_d0_f6:11:g_d0_f6:?:=ηyt+σct+
+13:628:23928:0:15:232:238:496:11:g_d0_f10:11:g_d0_f10:?:γ
+13:629:23929:15:0:222:247:481:11:g_d0_f6:11:g_d0_f10:A:1−γ
+13:630:23932:0:29:249:311:488:11:g_d0_f10:8:g_d0_f11:A:qt−(1 +η)ǫt
+13:631:23943:29:0:146:199:459:11:g_d0_f6:11:g_d0_f10:?:=ηyt+σ
+13:632:23949:0:15:201:209:474:11:g_d0_f17:11:g_d0_f17:A:{
+13:633:23950:15:0:210:229:459:11:g_d0_f10:11:g_d0_f2:A:yt−
+13:634:23953:0:15:250:256:466:11:g_d0_f10:11:g_d0_f10:A:γ
+13:635:23954:15:0:233:273:451:11:g_d0_f10:11:g_d0_f6:?:σ(1−γ)
+13:636:23960:0:0:274:387:459:11:g_d0_f6:8:g_d0_f11:?:[aσ+ (aσ−1)(1−γ)]qt
+13:637:23979:0:15:388:396:474:11:g_d0_f17:11:g_d0_f17:A:}
+13:638:23980:15:0:398:406:459:11:g_d0_f6:11:g_d0_f6:?:+
+13:639:23981:0:15:420:426:466:11:g_d0_f10:11:g_d0_f10:?:γ
+13:640:23982:15:0:410:435:451:11:g_d0_f6:11:g_d0_f10:?:1−γ
+13:641:23985:0:28:437:499:459:11:g_d0_f10:8:g_d0_f11:?:qt−(1 +η)ǫt
+13:642:23996:28:0:146:218:431:11:g_d0_f6:11:g_d0_f6:?:=  (η+σ)yt+
+13:643:24007:0:15:229:260:438:11:g_d0_f10:11:g_d0_f10:?:σγ−σ
+13:644:24011:15:0:223:267:423:11:g_d0_f10:11:g_d0_f6:A:σγ(1−γ)
+13:645:24018:0:23:269:331:431:11:g_d0_f10:8:g_d0_f11:?:qt−(1 +η)ǫt
+13:646:24029:23:17:146:356:408:11:g_d0_f6:8:g_d0_f11:?:=  (η+σ)yt+ (σγ−σ)(yt−y∗t)−(1 +η)ǫt
+13:647:24064:17:24:146:542:391:11:g_d0_f6:11:g_d0_f6:A:=  (η+σγ)yt+ (σ−σγ)y∗t−(1 +η)ǫt(51)
+13:648:24099:24:25:72:218:367:11:g_d0_f6:11:g_d0_f6:B:Thus (50) can be re-written as:
+13:649:24130:25:24:194:542:342:11:g_d0_f10:11:g_d0_f6:A:πht=βEtπht+1+k[(η+σγ)yt+ (σ−σγ)y∗t] +uct(52)
+13:650:24174:24:14:72:542:318:11:g_d0_f6:11:g_d0_f6:B:whereuct≡ −k(1+η)ǫtis defined as the cost/productivity shock. A positiveuctindicates a decrease
+13:651:24269:14:35:72:174:304:11:g_d0_f6:11:g_d0_f6:B:in Home productivity.
+13:652:24290:35:26:72:401:269:12:g_d0_f7:12:g_d0_f7:C:3.9  Monetary Policy Rule for the Small Open Economy
+13:653:24342:26:13:72:542:243:11:g_d0_f6:11:g_d0_f6:B:Assume Home monetary authority adopts a stylized Taylor-type rule, where the domestic interest
+13:654:24436:13:14:72:541:230:11:g_d0_f6:11:g_d0_f6:B:rate respond systematically to (expected) domestic inflation, output, and expected real exchange
+13:655:24532:14:24:72:153:216:11:g_d0_f6:11:g_d0_f6:B:rate depreciation:
+13:656:24550:24:23:198:335:192:11:g_d0_f10:8:g_d0_f11:A:it=δπEtπct+1+δyyt+umt
+13:657:24571:23:0:215:319:169:11:g_d0_f6:11:g_d0_f6:A:=δπEtπht+1+δyyt+
+13:658:24587:0:14:327:344:176:11:g_d0_f10:11:g_d0_f10:?:δπγ
+13:659:24590:14:0:323:348:162:11:g_d0_f6:11:g_d0_f10:?:1−γ
+13:660:24593:0:30:349:542:169:11:g_d0_f10:11:g_d0_f6:A:Et∆qt+1+umt(53)
+13:661:24608:30:16:71:531:139:11:g_d0_f6:11:g_d0_f6:B:whereumtis an exogenous shock to the monetary policy. The second equation followsfrom (31).
+13:662:24699:16:0:84:267:123:6:g_d0_f13:9:g_d0_f9:A:9See Gal ́ı and Monacelli (2005) for derivation.
+14:663:24749:0:26:71:298:693:12:g_d0_f7:12:g_d0_f7:C:3.10  Term Structure of Interest Rates
+14:664:24787:26:14:71:542:667:11:g_d0_f6:11:g_d0_f6:B:Intertemporal substitution between an N-period maturity bond (with interest rate denoted byilt(N))
+14:665:24885:14:23:71:261:653:11:g_d0_f6:11:g_d0_f6:B:and a one-period maturity bond requires
+14:666:24924:23:15:197:228:630:11:g_d0_f10:11:g_d0_f6:?:U′(Ct)
+14:667:24930:15:0:207:217:615:11:g_d0_f10:8:g_d0_f11:A:Pt
+14:668:24932:0:0:239:269:623:11:g_d0_f6:8:g_d0_f11:A:=Et
+14:669:24935:0:8:271:277:638:11:g_d0_f17:11:g_d0_f17:?:[
+14:670:24936:8:15:278:398:630:11:g_d0_f10:8:g_d0_f11:A:βNU′(Ct+N)(1 +ilt(N))N
+14:671:24958:15:0:326:350:615:11:g_d0_f10:8:g_d0_f11:?:Pt+N
+14:672:24962:0:15:401:407:638:11:g_d0_f17:11:g_d0_f17:?:]
+14:673:24963:15:27:527:542:623:11:g_d0_f6:11:g_d0_f6:A:(54)
+14:674:24967:27:15:197:228:596:11:g_d0_f10:11:g_d0_f6:?:U′(Ct)
+14:675:24973:15:0:207:217:581:11:g_d0_f10:8:g_d0_f11:A:Pt
+14:676:24975:0:0:239:269:589:11:g_d0_f6:8:g_d0_f11:A:=Et
+14:677:24978:0:9:271:277:607:11:g_d0_f17:11:g_d0_f17:?:[
+14:678:24979:9:0:279:339:598:11:g_d0_f10:11:g_d0_f6:A:βNU′(Ct+N)
+14:679:24989:0:12:341:369:606:11:g_d0_f17:8:g_d0_f12:A:∏N−1
+14:680:24993:12:13:351:415:594:8:g_d0_f11:11:g_d0_f6:A:j=0(1 +it+j)
+14:681:25005:13:0:334:358:581:11:g_d0_f10:8:g_d0_f11:A:Pt+N
+14:682:25009:0:18:416:422:607:11:g_d0_f17:11:g_d0_f17:?:]
+14:683:25010:18:34:527:542:589:11:g_d0_f6:11:g_d0_f6:A:(55)
+14:684:25014:34:33:71:173:555:11:g_d0_f6:11:g_d0_f6:B:Consequently, we have
+14:685:25035:33:0:179:190:522:11:g_d0_f10:8:g_d0_f11:?:Et
+14:686:25037:0:11:193:199:541:11:g_d0_f17:11:g_d0_f17:?:[
+14:687:25038:11:16:200:286:530:11:g_d0_f10:8:g_d0_f11:A:C−σt+N(1 +ilt(N))N
+14:688:25056:16:0:231:255:514:11:g_d0_f10:8:g_d0_f11:?:Pt+N
+14:689:25060:0:19:288:294:541:11:g_d0_f17:11:g_d0_f17:?:]
+14:690:25061:19:0:297:320:522:11:g_d0_f6:8:g_d0_f11:?:=Et
+14:691:25064:0:10:322:328:541:11:g_d0_f17:11:g_d0_f17:?:[
+14:692:25065:10:0:330:354:531:11:g_d0_f10:8:g_d0_f11:A:C−σt+N
+14:693:25071:0:11:357:386:539:11:g_d0_f17:8:g_d0_f12:A:∏N−1
+14:694:25075:11:14:368:431:528:8:g_d0_f11:11:g_d0_f6:A:j=0(1 +it+j)
+14:695:25087:14:0:368:392:514:11:g_d0_f10:8:g_d0_f11:A:Pt+N
+14:696:25091:0:19:433:439:541:11:g_d0_f17:11:g_d0_f17:?:]
+14:697:25092:19:33:527:542:522:11:g_d0_f6:11:g_d0_f6:A:(56)
+14:698:25096:33:14:72:542:489:11:g_d0_f6:11:g_d0_f6:B:Log-linearization of the above equation leads to the expectation hypothesis of the term structure
+14:699:25193:14:23:72:106:475:11:g_d0_f6:11:g_d0_f6:B:(EHTS)
+14:700:25199:23:0:257:285:452:11:g_d0_f10:11:g_d0_f6:A:ilt(N) =
+14:701:25207:0:11:298:328:469:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+14:702:25211:11:14:310:359:458:8:g_d0_f11:8:g_d0_f11:?:j=0Etit+j
+14:703:25220:14:0:324:333:444:11:g_d0_f10:11:g_d0_f10:?:N
+14:704:25221:0:23:527:542:452:11:g_d0_f6:11:g_d0_f6:A:(57)
+14:705:25225:23:13:71:543:429:11:g_d0_f6:11:g_d0_f6:B:That is, the long-term interest rate is determined as the average of the current short-term interest
+14:706:25325:13:19:71:336:416:11:g_d0_f6:11:g_d0_f6:B:rate and its expected value over the subsequent periods.
+14:707:25381:19:14:88:538:397:11:g_d0_f6:11:g_d0_f6:A:There is an important asymmetry in our treatment of the households maximization problem
+14:708:25468:14:13:72:542:383:11:g_d0_f6:11:g_d0_f6:B:with respect to the intertemporal dimension versus the cross-country dimension; in the latter we
+14:709:25564:13:14:72:543:370:11:g_d0_f6:11:g_d0_f6:B:have appended a disturbance term, while none such exists in the EHTS just described. This implicit
+14:710:25662:14:14:72:543:356:11:g_d0_f6:11:g_d0_f6:B:segmentation is consistent with the evidence provided by Alexiusand Sellin (2006), showing that
+14:711:25757:14:13:72:540:342:11:g_d0_f6:11:g_d0_f6:B:parity between yields on short term instruments fails to hold while parity cannot be rejected on
+14:712:25853:13:35:72:304:329:11:g_d0_f6:11:g_d0_f6:B:holding period returns on long term instruments.
+14:713:25901:35:26:72:200:294:12:g_d0_f7:12:g_d0_f7:C:3.11  Model Summary
+14:714:25920:26:28:72:355:268:11:g_d0_f6:11:g_d0_f6:B:The model is summarized by the following dynamic system:
+14:715:25976:28:25:88:225:240:11:g_d0_f2:11:g_d0_f6:A:•Interest Parity (From (45))
+14:716:26004:25:29:216:542:215:11:g_d0_f10:11:g_d0_f6:A:it−i∗t=Etqt+1−qt+Etπct+1−Etπ∗t+1+uit(58)
+14:717:26044:29:24:88:223:186:11:g_d0_f2:11:g_d0_f6:A:•Phillips Curve (From (52))
+14:718:26071:24:29:208:542:162:11:g_d0_f10:11:g_d0_f6:A:πht=βEtπht+1+k[(η+σγ)yt+ (σ−σγ)y∗t] +uct(59)
+14:719:26115:29:19:88:218:133:11:g_d0_f2:11:g_d0_f6:A:•Market Clear (From (49))
+14:720:26140:19:0:271:316:114:11:g_d0_f10:11:g_d0_f6:?:yt=y∗t+
+14:721:26147:0:15:339:344:122:11:g_d0_f6:11:g_d0_f6:?:1
+14:722:26148:15:0:320:364:107:11:g_d0_f10:11:g_d0_f6:?:σγ(1−γ)
+14:723:26155:0:0:366:542:114:11:g_d0_f10:11:g_d0_f6:A:qt(60)
+15:724:26163:0:29:88:211:693:11:g_d0_f2:11:g_d0_f6:A:•Taylor Rule (From (53))
+15:725:26187:29:0:219:326:664:11:g_d0_f10:11:g_d0_f6:?:it=δπEtπht+1+δyyt+
+15:726:26205:0:15:334:351:671:11:g_d0_f10:11:g_d0_f10:A:δπγ
+15:727:26208:15:0:330:355:656:11:g_d0_f6:11:g_d0_f10:A:1−γ
+15:728:26211:0:36:356:542:664:11:g_d0_f10:11:g_d0_f6:A:Et∆qt+1+umt(61)
+15:729:26226:36:27:88:352:628:11:g_d0_f2:11:g_d0_f6:A:•Relationship betweenπctandπht(From (31) and (43))
+15:730:26276:27:0:259:307:601:11:g_d0_f10:11:g_d0_f6:A:πct=πht+
+15:731:26284:0:15:320:326:609:11:g_d0_f10:11:g_d0_f10:?:γ
+15:732:26285:15:0:311:336:594:11:g_d0_f6:11:g_d0_f10:?:1−γ
+15:733:26288:0:34:337:542:601:11:g_d0_f6:11:g_d0_f6:A:(qt−qt−1)(62)
+15:734:26301:34:34:88:312:567:11:g_d0_f2:11:g_d0_f6:A:•Term Structure of Interest Rates (From (57))
+15:735:26346:34:0:271:299:533:11:g_d0_f10:11:g_d0_f6:?:ilt(N) =
+15:736:26354:0:11:312:342:550:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+15:737:26358:11:14:324:372:539:8:g_d0_f11:8:g_d0_f11:?:j=0Etit+j
+15:738:26367:14:0:338:347:525:11:g_d0_f10:11:g_d0_f10:?:N
+15:739:26368:0:32:527:542:533:11:g_d0_f6:11:g_d0_f6:A:(63)
+15:740:26372:32:25:88:335:501:11:g_d0_f2:11:g_d0_f6:A:•Nominal Exchange Rate Depreciation (From (44))
+15:741:26419:25:29:261:542:476:11:g_d0_f10:11:g_d0_f6:A:Etst+1−st=it−i∗t−uit(64)
+15:742:26443:29:13:88:542:447:11:g_d0_f6:11:g_d0_f6:A:The intertemporal substitution equation (20) is implied by international risk sharing (42), market
+15:743:26541:13:40:71:500:434:11:g_d0_f6:11:g_d0_f6:B:clear condition (60) and term structure of interest rates (63), so we do not include it here.
+15:744:26634:40:30:72:217:394:14:g_d0_f7:14:g_d0_f7:C:4  Model Calibration
+15:745:26654:30:14:72:543:364:11:g_d0_f6:11:g_d0_f6:B:In this section, we calibrate the model and show that the calibrated New Keynesian model captures
+15:746:26751:14:13:72:544:350:11:g_d0_f6:11:g_d0_f6:B:the pre-ZLB (1975Q1-1995Q4) volatility of Japanese 3-month T-bill rate and depreciation of nominal
+15:747:26849:13:14:72:541:337:11:g_d0_f6:11:g_d0_f6:B:exchange rate (with U.S. dollar as the base currency). We focus on interest rate and depreciation
+15:748:26946:14:13:72:542:323:11:g_d0_f6:11:g_d0_f6:B:of nominal exchange rate because this paper is about whether interest rate ZLB would affect the
+15:749:27041:13:35:72:223:310:11:g_d0_f6:11:g_d0_f6:B:coefficient of Fama regression10.
+15:750:27074:35:27:72:213:275:12:g_d0_f7:12:g_d0_f7:C:4.1  Empirical Moments
+15:751:27096:27:13:72:542:248:11:g_d0_f6:11:g_d0_f6:B:The Japanese data come from the IMF’s International Financial Statistics (IFS) database. We use
+15:752:27191:13:14:72:542:235:11:g_d0_f6:11:g_d0_f6:B:quarterly observations on Japanese 3-month T-bill rate and depreciation of(log) nominal exchange
+15:753:27287:14:13:72:542:221:11:g_d0_f6:11:g_d0_f6:B:rate, starting from 1975Q1 to 1995Q4. The motivation for choosing such sample period is that it
+15:754:27382:13:14:72:542:208:11:g_d0_f6:11:g_d0_f6:B:starts from the flexible exchange rate regime, and ends before the advent of the ZLB interest rate
+15:755:27480:14:13:72:541:194:11:g_d0_f6:11:g_d0_f6:B:regime11. We also use U.S. 3-month T-bill rate from Federal Reserve Board’s H.15 release as the
+15:756:27575:13:32:71:510:181:11:g_d0_f6:11:g_d0_f6:B:world interest rate. The variance and 90% confidence intervals are summarized as follows12:
+15:757:27666:32:16:259:355:149:11:g_d0_f6:11:g_d0_f6:A:[Table 1 about here.]
+15:758:27687:16:15:80:543:133:6:g_d0_f13:9:g_d0_f9:F:10We can also match the moments for other macroeconomic variables, e.g., output by imposing habit persistence
+15:759:27796:15:11:72:542:118:9:g_d0_f9:9:g_d0_f9:F:structure. We do not impose such structure because it brings unnecessary complication without helping us understand
+15:760:27911:11:7:72:145:107:9:g_d0_f9:9:g_d0_f9:F:the nature of ZLB.
+15:761:27929:7:11:80:360:100:6:g_d0_f13:9:g_d0_f9:A:11Following Chinn and Meredith (2004), Chinn and Quayyum (2013).
+15:762:27993:11:0:80:497:89:6:g_d0_f13:9:g_d0_f9:A:12Both the depreciation rate and the interest rate are expressed at annual rate, i.e., percent per annum.
+16:763:28100:0:26:71:234:693:12:g_d0_f7:12:g_d0_f7:C:4.2  Theoretical Predictions
+16:764:28128:26:31:71:301:667:11:g_d0_f6:11:g_d0_f6:B:We impose the following additional assumptions:
+16:765:28175:31:22:85:508:636:11:g_d0_f6:11:g_d0_f6:A:1. There is no structure change during the period under consideration (1975Q1-1995Q4).
+16:766:28261:22:13:85:542:614:11:g_d0_f6:11:g_d0_f6:A:2. Without loss of generality, foreign/world economic variables (output, interest rate, etc.) are
+16:767:28358:13:23:99:211:601:11:g_d0_f6:11:g_d0_f6:A:assumed to be constant.
+16:768:28381:23:24:85:462:578:11:g_d0_f6:11:g_d0_f6:A:3. All shocks are assumed to be either white noise or stationary AR(1) process:
+16:769:28460:24:16:269:364:554:11:g_d0_f10:8:g_d0_f11:?:uit=ρiuit−1+eit
+16:770:28475:16:17:268:366:538:11:g_d0_f10:8:g_d0_f11:?:uct=ρcuct−1+ect
+16:771:28490:17:24:264:377:521:11:g_d0_f10:8:g_d0_f11:?:umt=ρmumt−1+emt
+16:772:28505:24:13:99:543:497:11:g_d0_f6:11:g_d0_f6:A:whereρi= 0. That is, the interest parity shockuitis an i.i.d white noise, which is consistent
+16:773:28598:13:31:99:266:484:11:g_d0_f6:11:g_d0_f6:A:with our assumption in Section 3.6.
+16:774:28633:31:13:88:542:453:11:g_d0_f6:11:g_d0_f6:A:In our open-economy New Keynesian model, one period is defined as one quarter. We calibrate
+16:775:28724:13:14:71:541:440:11:g_d0_f6:11:g_d0_f6:B:and summarize the parameter values in Table 213. The parameter values are standard and mostly
+16:776:28817:14:13:71:543:426:11:g_d0_f6:11:g_d0_f6:B:follow Sanchez (2005), and Braun and K ̈orber (2011). For instance, we set Calvo-pricing parameter
+16:777:28915:13:14:71:540:413:11:g_d0_f10:11:g_d0_f6:B:ω= 0.89, indicating that Japanese firms reset prices every 9 quarters, which is consistent with
+16:778:29010:14:30:71:394:399:11:g_d0_f6:11:g_d0_f6:B:Sanchez (2005)’s estimation that Japan’sωvaries from 0.58 to 0.92.
+16:779:29076:30:31:259:355:369:11:g_d0_f6:11:g_d0_f6:A:[Table 2 about here.]
+16:780:29097:31:14:88:544:338:11:g_d0_f6:11:g_d0_f6:A:The variances of the exchange rate depreciation and interest differential implied by the theoretical
+16:781:29197:14:13:71:541:324:11:g_d0_f6:11:g_d0_f6:B:model are 0.004544 and 0.000688 respectively, which lie within the 90% confidence interval derived
+16:782:29295:13:40:71:540:311:11:g_d0_f6:11:g_d0_f6:B:from the actual data (Table 1), and are quite close to the variance estimated from the actual data.
+16:783:29394:40:30:71:395:271:14:g_d0_f7:14:g_d0_f7:C:5  Uncovered Interest Parity far from the ZLB
+16:784:29439:30:27:71:222:241:12:g_d0_f7:12:g_d0_f7:C:5.1  Closed-Form Solution
+16:785:29464:27:13:71:540:214:11:g_d0_f6:11:g_d0_f6:B:Given the VAR system summarized in Section 3.11 and 4.2, our model has a closed-form solution
+16:786:29557:13:14:71:547:201:11:g_d0_f6:11:g_d0_f6:B:thatit−i∗t,Etst+1−st,qt,πht, etc, are linear combinations of the AR(1) shocksuit,uct, andumt.
+16:787:29650:14:24:71:340:187:11:g_d0_f6:11:g_d0_f6:B:Without loss of generality, we shall write the solution as:
+16:788:29709:24:16:225:542:163:11:g_d0_f10:11:g_d0_f6:A:it−i∗t=c1uit+c2uct+c3umt(65)
+16:789:29737:16:31:201:542:147:11:g_d0_f10:11:g_d0_f6:A:Etst+1−st=−(1−c1)uit+c2uct+c3umt(66)
+16:790:29773:31:16:257:358:116:11:g_d0_f6:11:g_d0_f6:A:[Figure 3 about here.]
+16:791:29795:16:15:80:543:100:6:g_d0_f13:9:g_d0_f9:F:13Because of symmetry,θandξdo not enter the VAR system in Section 3.11. Hence we do not specify their values
+16:792:29903:15:0:71:382:85:9:g_d0_f9:9:g_d0_f9:F:in Table 2. We will discuss ̄iin Section 6, when the interest rate is near ZLB.
+17:793:29984:0:31:257:358:693:11:g_d0_f6:11:g_d0_f6:A:[Figure 4 about here.]
+17:794:30006:31:31:257:358:662:11:g_d0_f6:11:g_d0_f6:A:[Figure 5 about here.]
+17:795:30028:31:14:88:540:631:11:g_d0_f6:11:g_d0_f6:A:To illustrate the model’s properties, Figure 3 - 5 shows impulseresponses for one standard
+17:796:30118:14:13:71:542:617:11:g_d0_f6:11:g_d0_f6:B:deviation innovations inuit(eit) for the nominal exchange rate depreciation, and interest rates over
+17:797:30218:13:31:71:351:604:11:g_d0_f6:11:g_d0_f6:B:different horizons1415. Our simulation indicatesc1= 0.216.
+17:798:30276:31:32:257:358:573:11:g_d0_f6:11:g_d0_f6:A:[Figure 6 about here.]
+17:799:30298:32:31:257:358:541:11:g_d0_f6:11:g_d0_f6:A:[Figure 7 about here.]
+17:800:30320:31:31:257:358:510:11:g_d0_f6:11:g_d0_f6:A:[Figure 8 about here.]
+17:801:30342:31:31:257:358:479:11:g_d0_f6:11:g_d0_f6:A:[Figure 9 about here.]
+17:802:30364:31:31:254:360:448:11:g_d0_f6:11:g_d0_f6:?:[Figure 10 about here.]
+17:803:30387:31:31:254:360:417:11:g_d0_f6:11:g_d0_f6:?:[Figure 11 about here.]
+17:804:30410:31:14:88:546:386:11:g_d0_f6:11:g_d0_f6:A:Figure 6 - 11 shows impulse responses for standardized innovations inuct(ect) andumt(emt)
+17:805:30499:14:13:72:543:372:11:g_d0_f6:11:g_d0_f6:B:for the nominal exchange rate depreciation over different horizons, and interest rates with different
+17:806:30600:13:14:72:541:359:11:g_d0_f6:11:g_d0_f6:B:maturities. All the impulse response functions are intuitive. A positive cost shockectindicates a
+17:807:30697:14:14:72:543:345:11:g_d0_f6:11:g_d0_f6:B:decrease in Home productivity. Home output decreases and inflation increases - this is the well-
+17:808:30793:14:13:72:544:331:11:g_d0_f6:11:g_d0_f6:B:known phenomenon of stagflation. After trade-off between inflation and unemployment, the central
+17:809:30889:13:14:72:541:318:11:g_d0_f6:11:g_d0_f6:B:bank will set a higher interest rate to eliminate inflation. This alsobrings an expected depreciation
+17:810:30990:14:13:72:541:304:11:g_d0_f6:11:g_d0_f6:B:of Home currency. A positive monetary shockemthas a similar effect. It implies the central bank
+17:811:31085:13:14:72:541:291:11:g_d0_f6:11:g_d0_f6:B:increases interest rate unexpectedly. Obviously it increases interest rate and expected depreciation
+17:812:31185:14:13:72:541:277:11:g_d0_f6:11:g_d0_f6:B:instantly. Our simulation indicatesc2= 1.95 andc3=−0.065517. The closed-form solution also
+17:813:31275:13:16:72:386:264:11:g_d0_f6:11:g_d0_f6:B:provides a convenient way to calculate the theoretical moments18.
+17:814:31340:16:15:80:543:248:6:g_d0_f13:9:g_d0_f9:F:14In those graphs, i2 refers to interest rate with 6-month (2-quarter) maturity. ds2 refers to depreciation rate over
+17:815:31457:15:7:71:303:233:9:g_d0_f9:9:g_d0_f9:F:two quarters. Similar definitions apply for other variables.
+17:816:31517:7:13:80:312:226:6:g_d0_f13:9:g_d0_f9:A:15For conciseness, we do not include IRFs for all horizons.
+17:817:31576:13:7:80:293:213:6:g_d0_f13:6:g_d0_f13:A:16From Figure 3, it is straightforward to see∂(it−i∗t)
+17:818:31630:7:12:272:542:206:6:g_d0_f16:9:g_d0_f9:F:∂eitstd(eit) = 0.004. Sincestd(eit) = 0.02, it is straightforward to
+17:819:31698:12:0:71:130:194:9:g_d0_f9:6:g_d0_f16:F:seec1=∂(it−i
+17:820:31710:0:10:130:137:201:5:g_d0_f19:6:g_d0_f13:?:∗t)
+17:821:31713:10:7:115:162:191:6:g_d0_f16:9:g_d0_f9:?:∂eit= 0.2.
+17:822:31723:7:7:80:238:184:6:g_d0_f13:6:g_d0_f13:A:17Figure 6 and Figure 9 show∂(it−i∗t)
+17:823:31760:7:0:217:325:177:6:g_d0_f16:9:g_d0_f9:?:∂ectstd(ect) = 0.0039 and
+17:824:31785:0:8:335:364:185:6:g_d0_f16:6:g_d0_f13:?:∂(it−i∗t)
+17:825:31794:8:11:341:540:177:6:g_d0_f16:9:g_d0_f9:F:∂emtstd(emt) =−0.000131826.  Sincestd(ect) =
+17:826:31838:11:0:72:223:166:9:g_d0_f14:6:g_d0_f16:F:std(emt) = 0.002, we havec2=∂(it−i
+17:827:31872:0:10:222:229:173:5:g_d0_f19:6:g_d0_f13:A:∗t)
+17:828:31875:10:0:208:298:163:6:g_d0_f16:9:g_d0_f9:A:∂ect= 1.95 andc3=
+17:829:31892:0:7:302:330:170:6:g_d0_f16:6:g_d0_f13:?:∂(it−i∗t)
+17:830:31901:7:9:307:84:163:6:g_d0_f16:6:g_d0_f13:?:∂emt=−0.0655.18
+17:831:31916:9:11:88:545:154:9:g_d0_f9:9:g_d0_f9:F:Note in our simulation, the depreciation rate and interest rate are quarterly rate, i.e., percent per quarter. Hence,
+17:832:32033:11:11:72:542:143:9:g_d0_f9:9:g_d0_f9:F:variances derived from equations (65) and (66) should be multiplied by 16 to compare with the empirical moments in
+17:833:32147:11:0:72:102:132:9:g_d0_f9:9:g_d0_f9:F:Table 1.
+18:834:32157:0:26:71:348:693:12:g_d0_f7:12:g_d0_f7:C:5.2  The Fama Coefficient at the Short Horizon
+18:835:32203:26:14:71:543:667:11:g_d0_f6:11:g_d0_f6:B:Recall thatuit(eit) is a deviation from rational expectation, econometric theory suggests the coeffi-
+18:836:32304:14:27:71:221:653:11:g_d0_f6:11:g_d0_f6:B:cient of Fama regression satisfy:
+18:837:32337:27:0:183:230:626:11:g_d0_f10:11:g_d0_f6:?:plimˆβ=
+18:838:32344:0:14:241:341:633:11:g_d0_f10:11:g_d0_f6:?:cov(st+1−st, it−i∗t)
+18:839:32364:14:23:264:318:619:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:840:32375:23:0:222:230:596:11:g_d0_f6:11:g_d0_f6:A:=
+18:841:32376:0:15:241:352:604:11:g_d0_f10:11:g_d0_f6:?:cov(Etst+1−st, it−i∗t)
+18:842:32398:15:23:270:324:589:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:843:32409:23:0:222:230:566:11:g_d0_f6:11:g_d0_f6:A:=
+18:844:32410:0:15:241:355:574:11:g_d0_f10:11:g_d0_f6:?:cov(it−i∗t−uit, it−i∗t)
+18:845:32433:15:23:271:325:559:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:846:32444:23:0:222:230:536:11:g_d0_f6:11:g_d0_f6:A:=
+18:847:32445:0:15:241:380:544:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)−cov(uit, it−i∗t)
+18:848:32473:15:23:284:338:529:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:849:32484:23:0:222:256:506:11:g_d0_f6:11:g_d0_f2:A:=  1−
+18:850:32489:0:15:260:331:514:11:g_d0_f10:11:g_d0_f6:A:cov(uit, it−i∗t)
+18:851:32505:15:22:269:323:499:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:852:32516:22:0:222:256:477:11:g_d0_f6:11:g_d0_f2:A:=  1−
+18:853:32521:0:15:260:400:484:11:g_d0_f10:11:g_d0_f6:A:cov(uit, c1uit+c2uct+c3umt)
+18:854:32548:15:22:303:357:469:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:855:32559:22:0:222:256:447:11:g_d0_f6:11:g_d0_f2:A:=  1−
+18:856:32564:0:15:260:324:454:11:g_d0_f10:11:g_d0_f6:A:cov(uit, c1uit)
+18:857:32579:15:22:265:319:439:11:g_d0_f10:11:g_d0_f6:?:var(it−i∗t)
+18:858:32590:22:0:222:256:417:11:g_d0_f6:11:g_d0_f2:A:=  1−
+18:859:32595:0:15:264:311:424:11:g_d0_f10:11:g_d0_f6:?:c1var(uit)
+18:860:32605:15:22:260:314:409:11:g_d0_f10:11:g_d0_f6:A:var(it−i∗t)
+18:861:32616:22:0:222:256:387:11:g_d0_f6:11:g_d0_f2:A:=  1−
+18:862:32621:0:15:324:371:394:11:g_d0_f10:11:g_d0_f6:?:c1var(uit)
+18:863:32631:15:0:260:434:379:11:g_d0_f10:11:g_d0_f6:A:c21var(uit) +c22var(uct) +c23var(umt)
+18:864:32668:0:29:527:542:387:11:g_d0_f6:11:g_d0_f6:A:(67)
+18:865:32672:29:13:72:544:358:11:g_d0_f6:11:g_d0_f6:B:According to our calibration,uit(eit) is more volatile thanuct(ect) andumt(emt). At short horizon,
+18:866:32770:13:14:72:544:345:11:g_d0_f10:11:g_d0_f6:B:uit(eit) dominates. Hence at short horizon Fama regression generally yields a negative coefficient.
+18:867:32869:14:14:71:543:331:11:g_d0_f6:11:g_d0_f6:B:From our derivation (67), it is straightforward to see the endogeneity caused byuitmakes this
+18:868:32962:14:34:72:358:317:11:g_d0_f6:11:g_d0_f6:B:estimator deviate from unity, and sometimes being negative.
+18:869:33021:34:26:72:203:283:12:g_d0_f7:12:g_d0_f7:C:5.3  The Long Horizon
+18:870:33042:26:32:72:246:257:11:g_d0_f6:11:g_d0_f6:B:In the long run,plimˆβ(N)19becomes
+18:871:33076:32:0:119:177:225:11:g_d0_f10:11:g_d0_f6:?:plimˆβ(N)  =
+18:872:33088:0:0:196:216:234:11:g_d0_f10:11:g_d0_f6:?:cov(
+18:873:33092:0:11:216:246:242:11:g_d0_f17:8:g_d0_f12:A:∑N−1
+18:874:33096:11:0:228:321:231:8:g_d0_f11:11:g_d0_f10:?:j=0(st+j+1−st+j),
+18:875:33113:0:11:322:352:242:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:876:33117:11:0:334:406:231:8:g_d0_f11:11:g_d0_f10:A:j=0Et(it+j−i
+18:877:33129:0:7:405:409:238:8:g_d0_f4:8:g_d0_f4:?:∗
+18:878:33130:7:16:405:423:231:8:g_d0_f11:11:g_d0_f6:?:t+j))
+18:879:33135:16:0:249:270:215:11:g_d0_f10:11:g_d0_f6:A:var(
+18:880:33139:0:12:270:300:224:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:881:33143:12:0:281:353:212:8:g_d0_f11:11:g_d0_f10:A:j=0Et(it+j−i
+18:882:33155:0:7:353:357:219:8:g_d0_f4:8:g_d0_f4:A:∗
+18:883:33156:7:25:353:371:212:8:g_d0_f11:11:g_d0_f6:A:t+j))
+18:884:33161:25:0:177:185:187:11:g_d0_f6:11:g_d0_f6:?:=
+18:885:33162:0:0:196:216:196:11:g_d0_f10:11:g_d0_f6:?:cov(
+18:886:33166:0:11:216:246:204:11:g_d0_f17:8:g_d0_f12:A:∑N−1
+18:887:33170:11:0:228:334:193:8:g_d0_f11:11:g_d0_f10:?:j=0Et(st+j+1−st+j),
+18:888:33189:0:11:336:366:204:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:889:33193:11:0:347:419:193:8:g_d0_f11:11:g_d0_f10:A:j=0Et(it+j−i
+18:890:33205:0:7:419:423:200:8:g_d0_f4:8:g_d0_f4:?:∗
+18:891:33206:7:15:419:437:193:8:g_d0_f11:11:g_d0_f6:?:t+j))
+18:892:33211:15:0:256:276:178:11:g_d0_f10:11:g_d0_f6:A:var(
+18:893:33215:0:11:277:306:186:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:894:33219:11:0:288:360:175:8:g_d0_f11:11:g_d0_f10:?:j=0Et(it+j−i
+18:895:33231:0:7:360:364:182:8:g_d0_f4:8:g_d0_f4:A:∗
+18:896:33232:7:25:360:378:175:8:g_d0_f11:11:g_d0_f6:A:t+j))
+18:897:33237:25:0:177:211:150:11:g_d0_f6:11:g_d0_f2:?:=  1−
+18:898:33242:0:0:215:235:159:11:g_d0_f10:11:g_d0_f6:A:cov(
+18:899:33246:0:12:235:265:167:11:g_d0_f17:8:g_d0_f12:A:∑N−1
+18:900:33250:12:0:247:305:155:8:g_d0_f11:11:g_d0_f10:A:j=0Etuit+j,
+18:901:33261:0:12:307:337:167:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:902:33265:12:0:318:390:155:8:g_d0_f11:11:g_d0_f10:A:j=0Et(it+j−i
+18:903:33277:0:7:390:394:163:8:g_d0_f4:8:g_d0_f4:A:∗
+18:904:33278:7:16:390:408:156:8:g_d0_f11:11:g_d0_f6:A:t+j))
+18:905:33283:16:0:251:271:140:11:g_d0_f10:11:g_d0_f6:?:var(
+18:906:33287:0:11:272:301:148:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:907:33291:11:0:283:355:137:8:g_d0_f11:11:g_d0_f10:?:j=0Et(it+j−i
+18:908:33303:0:7:354:358:144:8:g_d0_f4:8:g_d0_f4:A:∗
+18:909:33304:7:21:354:372:137:8:g_d0_f11:11:g_d0_f6:A:t+j))
+18:910:33309:21:0:177:211:116:11:g_d0_f6:11:g_d0_f2:?:=  1−
+18:911:33314:0:16:333:380:123:11:g_d0_f10:11:g_d0_f6:A:c1var(uit)
+18:912:33324:16:0:215:306:107:11:g_d0_f10:11:g_d0_f6:A:c21var(uit) +c22var(
+18:913:33344:0:12:306:336:115:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+18:914:33348:12:0:318:397:103:8:g_d0_f11:11:g_d0_f10:A:j=0Etuct+j) +c
+18:915:33362:0:7:396:452:110:8:g_d0_f12:8:g_d0_f12:?:23var(∑N−1
+18:916:33372:7:0:433:497:103:8:g_d0_f11:11:g_d0_f6:?:j=0Etumt+j)
+18:917:33383:0:27:527:542:116:11:g_d0_f6:11:g_d0_f6:A:(68)
+18:918:33387:27:0:80:285:89:6:g_d0_f13:9:g_d0_f9:A:19Nis the horizon/maturity of the long term bond.
+19:919:33438:0:13:88:541:693:11:g_d0_f6:11:g_d0_f6:A:At long horizon, since the cost shockuctand monetary shockumtare more persistent than
+19:920:33523:13:14:71:541:680:11:g_d0_f10:11:g_d0_f6:B:uit(AR(1) v.s.  white noise), as horizon increases, they tend to make greater contribution to
+19:921:33616:14:0:72:91:666:11:g_d0_f10:11:g_d0_f6:B:cov(
+19:922:33620:0:11:91:121:674:11:g_d0_f17:8:g_d0_f12:A:∑N−1
+19:923:33624:11:0:103:191:663:8:g_d0_f11:11:g_d0_f10:A:j=0(st+j+1−st+j),
+19:924:33641:0:11:193:222:674:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+19:925:33645:11:0:204:271:663:8:g_d0_f11:11:g_d0_f10:A:j=0Et(it+j−i
+19:926:33657:0:7:271:275:670:8:g_d0_f4:8:g_d0_f4:?:∗
+19:927:33658:7:0:271:397:663:8:g_d0_f11:11:g_d0_f6:?:t+j)). That is, in (68),var(
+19:928:33686:0:11:397:427:674:11:g_d0_f17:8:g_d0_f12:?:∑N−1
+19:929:33690:11:0:409:513:663:8:g_d0_f11:11:g_d0_f6:?:j=0Etuct+j) andvar(
+19:930:33709:0:11:513:542:674:11:g_d0_f17:8:g_d0_f12:F:∑N−1
+19:931:33713:11:10:524:581:663:8:g_d0_f11:11:g_d0_f6:A:j=0Etut+j)
+19:932:33723:10:14:72:543:653:11:g_d0_f6:11:g_d0_f6:B:increases asNgrows, so we would get a larger Fama regression coefficient estimate at longer horizon.
+19:933:33823:14:13:72:543:639:11:g_d0_f6:11:g_d0_f6:B:Hence, we expect to find unbiasedness hypothesis holds better at long horizons than at short in our
+19:934:33922:13:29:72:352:626:11:g_d0_f6:11:g_d0_f6:B:simulated data. Strictly, we have the following proposition:
+19:935:33982:29:28:72:362:597:11:g_d0_f5:11:g_d0_f20:C:Proposition 1plimˆβ(N)is monotonically increasing inN.
+19:936:34036:28:35:88:202:569:11:g_d0_f5:11:g_d0_f6:A:Proof.Straightforward.
+19:937:34058:35:26:71:207:534:12:g_d0_f7:12:g_d0_f7:C:5.4  Simulation Results
+19:938:34081:26:14:71:543:508:11:g_d0_f6:11:g_d0_f6:B:In this sub-section, stochastic simulations were performed on themodel. Each simulation was per-
+19:939:34177:14:13:71:543:494:11:g_d0_f6:11:g_d0_f6:B:formed over a 100 periods. This process was repeated 1000 times to generate a hypothetical popu-
+19:940:34273:13:14:71:541:481:11:g_d0_f6:11:g_d0_f6:B:lation of 1000 such draws. For each draw, standard UIP regression were run, using horizons varying
+19:941:34371:14:13:71:541:467:11:g_d0_f6:11:g_d0_f6:B:from 1 to 40 quarters. The average parameters as well as their confidence intervals are shown in
+19:942:34467:13:31:71:116:454:11:g_d0_f6:11:g_d0_f6:B:Figure 12.
+19:943:34477:31:32:254:360:423:11:g_d0_f6:11:g_d0_f6:?:[Figure 12 about here.]
+19:944:34500:32:13:88:541:391:11:g_d0_f6:11:g_d0_f6:A:The simulated results are consistent with our analysis in Section 5.2and 5.3, as well as Chinn
+19:945:34594:13:40:71:170:378:11:g_d0_f6:11:g_d0_f6:B:and Meredith (2004).
+19:946:34614:40:30:71:368:338:14:g_d0_f7:14:g_d0_f7:C:6  Uncovered Interest Parity near the ZLB
+19:947:34655:30:30:71:449:308:11:g_d0_f6:11:g_d0_f6:B:When the interest rate is near the ZLB, Taylor rule (61) has to be re-written as
+19:948:34735:30:0:184:328:278:11:g_d0_f10:11:g_d0_f6:?:it=max{0, δπEtπht+1+δyyt+
+19:949:34760:0:15:336:353:286:11:g_d0_f10:11:g_d0_f10:?:δπγ
+19:950:34763:15:0:332:357:271:11:g_d0_f6:11:g_d0_f10:A:1−γ
+19:951:34766:0:29:358:542:278:11:g_d0_f10:11:g_d0_f6:A:Et∆qt+1+umt}(69)
+19:952:34782:29:28:72:347:249:11:g_d0_f6:11:g_d0_f6:B:This brings about two important changes to the economy:
+19:953:34837:28:18:82:252:221:11:g_d0_f6:11:g_d0_f5:A:(i)The Transmission Mechanism
+19:954:34866:18:14:99:543:203:11:g_d0_f6:11:g_d0_f6:A:When the interest rate is positive,uitanductaffect central bank’s monetary policy decisions
+19:955:34957:14:13:99:543:189:11:g_d0_f6:11:g_d0_f6:A:and enteritviaEtπht+1,ytandEt∆qt+1, andumtaffectsitdirectly. Then the interest rate affects
+19:956:35048:13:14:99:542:176:11:g_d0_f6:11:g_d0_f6:A:household intertemporal substitution decisions, and determines demand, which in turn, affects
+19:957:35141:14:13:99:541:162:11:g_d0_f6:11:g_d0_f6:A:inflation, output and the exchange rate. However, if the ZLB is binding, such a transmission
+19:958:35233:13:14:99:547:149:11:g_d0_f6:11:g_d0_f6:A:mechanism is shut down. When the shocksuit,uct, andumtenter in the determination ofit,
+19:959:35319:14:22:99:373:135:11:g_d0_f10:11:g_d0_f6:A:itwill remain at zero, and these disturbances are blocked.
+19:960:35377:22:0:79:402:113:11:g_d0_f6:11:g_d0_f5:A:(ii)Household Expectations and Intertemporal Substitution
+20:961:35436:0:13:99:547:693:11:g_d0_f6:11:g_d0_f6:A:When the ZLB is binding,itwill remain at zero despite the realization ofuit,uct, andumt.
+20:962:35524:13:14:99:543:680:11:g_d0_f6:11:g_d0_f6:A:The households are able to anticipate this situation ahead of time, so they will adjust their
+20:963:35617:14:28:99:340:666:11:g_d0_f6:11:g_d0_f6:A:intertemporal substitution decisions accordingly20.
+20:964:35668:28:14:88:541:638:11:g_d0_f6:11:g_d0_f6:A:With these changes, a closed-form solution no longer exists, and we cannot deriveplimˆβas in
+20:965:35760:14:13:71:540:624:11:g_d0_f6:11:g_d0_f6:B:Section 5.2 and 5.3. Nonetheless, in our model, bothst+1−standit−i∗t(as well asit) are driven
+20:966:35853:13:14:71:542:611:11:g_d0_f6:11:g_d0_f6:B:by three shocksuit(eit),uct(ect), andumt(emt), whereuitis volatile but transitory, and the other
+20:967:35949:14:16:72:326:597:11:g_d0_f6:11:g_d0_f6:B:two disturbances are less volatile but more persistent.
+20:968:36004:16:16:88:547:581:11:g_d0_f6:11:g_d0_f10:A: ̄i— the steady state level ofit21plays an important role with occasionally binding ZLB. If ̄i
+20:969:36098:16:14:71:542:565:11:g_d0_f6:11:g_d0_f6:B:is large, then ZLB does not bind very often. When it does bind, it is most likely triggered by a
+20:970:36194:14:14:71:540:551:11:g_d0_f6:11:g_d0_f6:B:negativeuit(eit), and the possibility of binding ZLB is generally random. This approach is denoted
+20:971:36292:14:13:71:542:537:11:g_d0_f6:11:g_d0_f6:B:by “Random ZLB”. However, if ̄iis small, then ZLB binds more frequently. When it binds, it is
+20:972:36385:13:14:71:543:524:11:g_d0_f6:11:g_d0_f6:B:often triggered by a negativeuct(ect) orumt(emt), and the interest rate series are segmented. i.e.,
+20:973:36484:14:13:71:541:510:11:g_d0_f6:11:g_d0_f6:B:ifit= 0, then it is very likely that its adjacent leads and lags are also zero. Ifit>0, then it is very
+20:974:36587:13:14:71:543:497:11:g_d0_f6:11:g_d0_f6:B:likely that its adjacent leads and lags are also positive. This is determined by the different degree of
+20:975:36691:14:19:71:512:483:11:g_d0_f6:11:g_d0_f6:B:persistence and volatility of different shocks. This approach is denoted by “Persistent ZLB”.
+20:976:36784:19:13:88:540:464:11:g_d0_f6:11:g_d0_f6:A:Again, we perform stochastic simulations for our model with ZLB constraint. Our simulation
+20:977:36874:13:14:71:541:451:11:g_d0_f6:11:g_d0_f6:B:(with ZLB) method follows Holden and Paetz (2012), as well as Erceg and Lind ́e(2014).  Each
+20:978:36966:14:14:71:541:437:11:g_d0_f6:11:g_d0_f6:B:simulation was performed over a 100 periods. This process was repeated 1000 times to generate a
+20:979:37061:14:13:71:542:423:11:g_d0_f6:11:g_d0_f6:B:hypothetical population of 1000 such draws. In our simulation, about half thetime (49.99%) the
+20:980:37155:13:14:71:542:410:11:g_d0_f6:11:g_d0_f6:B:interest hits ZLB. Figure 13 is one such random draw of 100-period simulation, where the interest
+20:981:37252:14:13:71:541:396:11:g_d0_f6:11:g_d0_f6:B:ZLB constraint follows “Persistent ZLB” approach. This indicates our simulation is consistent with
+20:982:37350:13:14:71:544:383:11:g_d0_f6:11:g_d0_f6:B:the fact that Japan (starting from 1996) set their short term interest rate(close to) zero for several
+20:983:37452:14:31:71:153:369:11:g_d0_f6:11:g_d0_f6:B:consecutive years.
+20:984:37470:31:31:254:360:338:11:g_d0_f6:11:g_d0_f6:?:[Figure 13 about here.]
+20:985:37493:31:14:88:543:307:11:g_d0_f6:8:g_d0_f11:A:With “Persistent ZLB”, most binding ZLB periods are triggered by a negativeuct(ect) orumt
+20:986:37582:14:13:71:543:293:11:g_d0_f6:11:g_d0_f6:B:(emt). That is, the shocksuct(ect) andumt(emt) are suppressed under ZLB constraints. Recall
+20:987:37673:13:14:71:541:280:11:g_d0_f6:11:g_d0_f6:B:in Section 5.2, we showed volatility ofuct(ect) andumt(emt) are critical to offset the endogeneity
+20:988:37771:14:13:71:541:266:11:g_d0_f6:11:g_d0_f6:B:caused byuit(eit). Onceuct(ect) andumt(emt) are suppressed by ZLB constraints, the endogeneity
+20:989:37865:13:14:71:542:253:11:g_d0_f6:11:g_d0_f6:B:problem deteriorates, hence we would expect the constrained Fama regression coefficient to be less
+20:990:37963:14:13:71:541:239:11:g_d0_f6:11:g_d0_f6:B:positive. That is, unbiasedness hypothesis holds worse when interest rate is near ZLB. Such property
+20:991:38063:13:32:71:529:226:11:g_d0_f6:11:g_d0_f6:B:is summarized in Figure 14, and it is consistent with Figure 2, and Chinnand Quayyum (2013).
+20:992:38155:32:16:254:360:194:11:g_d0_f6:11:g_d0_f6:?:[Figure 14 about here.]
+20:993:38178:16:15:80:547:178:6:g_d0_f13:9:g_d0_f9:A:20A common mistake is to write the solution asit−i∗t=max{0, c1uit+c2uct+c3umt}andEtst+1−st=it−i∗t−uit.
+20:994:38280:15:11:71:544:163:9:g_d0_f9:9:g_d0_f9:F:This is wrong because it does not take into account the fact thatthe households are able to anticipate ZLB ahead of
+20:995:38395:11:7:71:426:152:9:g_d0_f9:9:g_d0_f9:F:time. Actually, a closed-form solution does not exist when theinterest rate is near ZLB.
+20:996:38483:7:11:80:544:145:6:g_d0_f13:9:g_d0_f9:F:21The so-defined ̄ialso includes other constants omitted by log-linearization. Hence it does not necessarily equal
+20:997:38597:11:7:73:77:134:6:g_d0_f13:6:g_d0_f13:F:1
+20:998:38598:7:0:73:376:127:6:g_d0_f16:9:g_d0_f9:F:β−1. For conciseness, it is still referred to as “the steady state level ofit”.
+21:999:38679:0:30:71:163:693:14:g_d0_f7:14:g_d0_f7:C:7  Conclusion
+21:1000:38692:30:13:71:543:663:11:g_d0_f6:11:g_d0_f6:B:Two empirical findings underpin the exercises conducted in thispaper. First, interest differentials
+21:1001:38791:13:14:71:542:650:11:g_d0_f6:11:g_d0_f6:B:at longer horizons tend to correlate positively with exchange rate depreciation, while those at short
+21:1002:38892:14:13:71:542:636:11:g_d0_f6:11:g_d0_f6:B:horizons tend to correlate negatively. Second, long horizon interest differentials tend to reject the
+21:1003:38993:13:14:71:543:623:11:g_d0_f6:11:g_d0_f6:B:unbiasedness hypothesis more strongly for exchange rates that involve acurrency that has experi-
+21:1004:39089:14:13:71:541:609:11:g_d0_f6:11:g_d0_f6:B:enced low interest rates for an extended period. To the extent that low interest rates are likely to
+21:1005:39189:13:14:71:541:596:11:g_d0_f6:11:g_d0_f6:B:be a part of the global economic landscape for some time, it is of interest toknow why this finding
+21:1006:39288:14:19:71:106:582:11:g_d0_f6:11:g_d0_f6:B:obtains.
+21:1007:39296:19:14:88:544:563:11:g_d0_f6:11:g_d0_f6:A:Using a standard New Keynesian DSGE, incorporating sticky prices, weshow how these empirical
+21:1008:39388:14:13:71:541:549:11:g_d0_f6:11:g_d0_f6:B:findings can be rationalized. The long horizon/short horizon dichotomy stylized fact is shown using
+21:1009:39487:13:14:71:540:536:11:g_d0_f6:11:g_d0_f6:B:a random (non-persistent) shock to the UIP relationship, along with persistent aggregate supply and
+21:1010:39586:14:13:71:543:522:11:g_d0_f6:11:g_d0_f6:B:monetary policy shocks. The attenuation in the long horizon unbiasedness in the era of low interest
+21:1011:39685:13:52:71:479:509:11:g_d0_f6:11:g_d0_f6:B:rates is replicated by simulating the NK DSGE in the presence of a zero lower bound.
+21:1012:39769:52:29:71:140:457:14:g_d0_f7:14:g_d0_f7:C:References
+21:1013:39779:29:14:71:547:428:11:g_d0_f6:11:g_d0_f6:B:[1] Alexius, A. (2001). “Uncovered Interest Parity Revisited,”Review of International Economics,
+21:1014:39875:14:22:83:141:414:11:g_d0_f6:11:g_d0_f6:A:9(3): 505-17.
+21:1015:39888:22:23:71:525:392:11:g_d0_f6:11:g_d0_f6:B:[2] Alexius, A. and P. Sellin (2006). “Exchange Rates and Long Term Bonds,” mimeo (March).
+21:1016:39978:23:13:71:543:369:11:g_d0_f6:11:g_d0_f6:B:[3] Bansal, R. and M. Dahlquist (2000). “The Forward Premium Puzzle: Different Tales from De-
+21:1017:40071:13:23:83:488:356:11:g_d0_f6:11:g_d0_f6:A:veloped and Emerging Economies,”Journal of International Economics, 51: 115-144.
+21:1018:40151:23:13:71:541:333:11:g_d0_f6:11:g_d0_f6:B:[4] Braun, R. A. and L. M. K ̈orber (2011). “New Keynesian Dynamics in a Low Interest Rate
+21:1019:40241:13:23:83:432:320:11:g_d0_f6:11:g_d0_f6:A:Environment,”Journal of Economic Dynamics & Control, 35: 2213-2227.
+21:1020:40308:23:14:71:541:297:11:g_d0_f6:11:g_d0_f20:B:[5] Calvo, G.A. (1983). “Staggered Prices in a Utility-Maximizing Framework,”Journal of Monetary
+21:1021:40404:14:22:83:196:283:11:g_d0_f20:11:g_d0_f6:A:Economics, 12: 383-398.
+21:1022:40427:22:14:72:544:261:11:g_d0_f6:11:g_d0_f6:B:[6] Chinn, M.D. (2006). “The (Partial) Rehabilitation of Interest Rate Parity: Longer Horizons,
+21:1023:40522:14:13:83:547:247:11:g_d0_f6:11:g_d0_f6:A:Alternative Expectations and Emerging Markets,”Journal of International Money and Finance,
+21:1024:40612:13:23:83:191:234:11:g_d0_f6:11:g_d0_f6:A:25(1) (February): 7-21.
+21:1025:40635:23:13:72:542:211:11:g_d0_f6:11:g_d0_f6:B:[7] Chinn, M.D. (2014). “(Almost) A Quarter Century of Currency Expectations Data: Interest Rate
+21:1026:40731:13:23:83:315:198:11:g_d0_f6:11:g_d0_f6:A:Parity and the Risk Premium,” mimeo (August).
+21:1027:40776:23:13:72:541:175:11:g_d0_f6:11:g_d0_f6:B:[8] Chinn, M.D. and J.A. Frankel (1994). “Patterns in Exchange Rate Forecastsfor 25 Currencies,”
+21:1028:40872:13:23:83:407:162:11:g_d0_f20:11:g_d0_f6:A:Journal of Money, Credit and Banking, 26 (4) (November): 759-770.
+21:1029:40937:23:13:72:543:139:11:g_d0_f6:11:g_d0_f6:B:[9] Chinn, M.D. and G. Meredith (2004). “Monetary Policy and Long-Horizon Uncovered Interest
+21:1030:41029:13:23:83:283:126:11:g_d0_f6:11:g_d0_f6:A:Parity,”IMF Staff Papers, 51(3): 409-430.
+21:1031:41070:23:13:72:541:103:11:g_d0_f6:11:g_d0_f6:B:[10] Chinn, M.D. and S. Quayyum (2013). “Long Horizon Uncovered Interest Parity Re-Assessed,”
+21:1032:41163:13:0:83:115:90:11:g_d0_f6:11:g_d0_f6:A:mimeo.
+22:1033:41171:0:13:71:543:693:11:g_d0_f6:11:g_d0_f20:B:[11] Engel, C. (2015). “Exchange Rates and Interest Parity,” inHandbook  of  International  Eco-
+22:1034:41267:13:22:83:294:680:11:g_d0_f20:11:g_d0_f6:A:nomics, 4: 453-522, North Holland: Elsevier.
+22:1035:41311:22:13:71:544:658:11:g_d0_f6:11:g_d0_f20:B:[12] Erceg, C. and J. Lind ́e (2014). “Is There a Fiscal Free Lunch in a Liquidity Trap?,”Journal of
+22:1036:41411:13:22:83:324:645:11:g_d0_f20:11:g_d0_f6:A:the European Economic Association, 12(1): 73-107.
+22:1037:41460:22:13:72:544:623:11:g_d0_f6:11:g_d0_f6:B:[13] Fama, E. (1984). “Forward and Spot Exchange Rate,”Journal  of  Monetary  Economics, 14:
+22:1038:41552:13:22:83:117:610:11:g_d0_f6:11:g_d0_f6:A:319-38.
+22:1039:41559:22:14:72:543:588:11:g_d0_f6:11:g_d0_f20:B:[14] Flood, R.P. and A.K. Rose (1996). “Fixes: Of the Forward Discount Puzzle,”Review of Eco-
+22:1040:41652:14:21:83:228:574:11:g_d0_f20:11:g_d0_f6:A:nomics and Statistics, 748-752.
+22:1041:41683:21:14:72:543:553:11:g_d0_f6:11:g_d0_f6:B:[15] Flood, R.P. and A.K. Rose (2002). “Uncovered Interest Parity in Crisis,”IMF Staff Papers, 49:
+22:1042:41781:14:21:83:117:539:11:g_d0_f6:11:g_d0_f6:A:252-66.
+22:1043:41788:21:14:72:542:518:11:g_d0_f6:11:g_d0_f6:B:[16] Flood, R.P. and M.P. Taylor (1997). “Exchange Rate Economics:  Whats Wrongwith the
+22:1044:41875:14:13:83:544:504:11:g_d0_f6:11:g_d0_f6:A:Conventional Macro Approach?” inThe Microstructure of Foreign Exchange Markets, 262-301,
+22:1045:41963:13:22:83:230:491:11:g_d0_f6:11:g_d0_f6:A:Chicago: U.Chicago for NBER.
+22:1046:41991:22:13:72:542:469:11:g_d0_f6:11:g_d0_f6:B:[17] Frankel, J.A. and J. Poonawala (2010). “The Forward Market in Emerging Currencies: Less
+22:1047:42083:13:22:83:541:456:11:g_d0_f6:11:g_d0_f6:A:Biased than in Major Currencies,”Journal of International Money and Finance, 29(3): 585-598.
+22:1048:42175:22:13:72:543:434:11:g_d0_f6:11:g_d0_f6:B:[18] Froot, K.A. and J.A. Frankel (1989). “Forward Discount Bias: Is It an ExchangeRisk Pre-
+22:1049:42267:13:22:83:412:421:11:g_d0_f6:11:g_d0_f6:A:mium?”Quarterly Journal of Economics,104(1) (February): 139-161.
+22:1050:42331:22:14:72:547:399:11:g_d0_f6:11:g_d0_f6:B:[19] Froot, K.A. and R.H. Thaler (1990). “Foreign Exchange,”Journal of Economic Perspectives,
+22:1051:42424:14:21:83:198:385:11:g_d0_f6:11:g_d0_f6:A:4(3) (Summer): 179-192.
+22:1052:42447:21:14:72:542:364:11:g_d0_f6:11:g_d0_f6:B:[20] Gal ́ı, J. (2008). “Monetary Policy, Inflation and the Business Cycle: An Introduction to the
+22:1053:42545:14:21:83:426:350:11:g_d0_f6:11:g_d0_f6:A:New Keynesian Framework,” Princeton, NJ: Princeton University Press.
+22:1054:42613:21:14:72:544:329:11:g_d0_f6:11:g_d0_f6:B:[21] Gal ́ı, J. and T. Monacelli (2005). “Monetary Policy and Exchange Rate Volatility in a Small
+22:1055:42710:14:21:83:364:315:11:g_d0_f6:11:g_d0_f6:A:Open Economy,”Review of Economic Studies, 72: 707-734.
+22:1056:42764:21:14:72:543:294:11:g_d0_f6:11:g_d0_f6:B:[22] Holden, T. and M. Paetz (2012). “Efficient Simulation of DSGE Models with Inequality Con-
+22:1057:42858:14:21:83:199:280:11:g_d0_f6:11:g_d0_f6:A:straints,” working paper.
+22:1058:42883:21:22:72:512:259:11:g_d0_f6:11:g_d0_f6:B:[23] Isard, P. (1995). “Exchange Rate Economics,” Cambridge: Cambridge University Press.
+22:1059:42971:22:13:72:540:237:11:g_d0_f6:11:g_d0_f20:B:[24] Macdonald, R. and M.P. Taylor (1992). “Exchange Rate Economics: A Survey,”IMF  Staff
+22:1060:43060:13:22:83:174:224:11:g_d0_f20:11:g_d0_f6:A:Papers, 39(1): 1-57.
+22:1061:43080:22:13:72:541:202:11:g_d0_f6:11:g_d0_f6:B:[25] McCallum, B.T. (1994). “A Reconsideration of the Uncovered Interest Parity Relationship,”
+22:1062:43174:13:22:83:292:189:11:g_d0_f20:11:g_d0_f6:A:Journal of Monetary Economics, 33: 105-32.
+22:1063:43216:22:14:72:541:167:11:g_d0_f6:11:g_d0_f6:B:[26] Meese, R. and K. Rogoff (1983). “Empirical Exchange Rate Models of the Seventies: Do They
+22:1064:43310:14:21:83:401:153:11:g_d0_f6:11:g_d0_f6:A:Fit Out of Sample?”Journal of International Economics, 14: 3-24.
+22:1065:43374:21:14:72:541:132:11:g_d0_f6:11:g_d0_f6:B:[27] Sanchez, D. A. (2005). “Inflation Dynamics in Japan: The Calvo Model and Wage Rigidity,”
+22:1066:43467:14:21:83:151:118:11:g_d0_f6:11:g_d0_f6:A:working paper.
+22:1067:43481:21:0:72:485:97:11:g_d0_f6:11:g_d0_f6:B:[28] Walsh, C. E. (2010). “Monetary Theory and Policy,” Cambridge: MA: MIT Press.
+23:1068:43564:0:30:71:167:693:14:g_d0_f7:14:g_d0_f7:C:List of Figures
+23:1069:43579:30:19:88:541:663:11:g_d0_f6:11:g_d0_f6:A:1    Panel Fama coefficients 1980Q1-2007Q4, unbalanced, with fixed effects . . . . . .. . .  22
+23:1070:43674:19:19:88:541:644:11:g_d0_f6:11:g_d0_f6:A:2    Panel Fama coefficients  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. .  23
+23:1071:43776:19:19:88:541:625:11:g_d0_f6:11:g_d0_f6:A:3    The impulse response function ofeiton macroeconomic variables . . . . . . . . . . . .  24
+23:1072:43870:19:20:88:541:606:11:g_d0_f6:11:g_d0_f6:A:4    The impulse response function ofeiton macroeconomic variables . . . . . . . . . . . .  25
+23:1073:43964:20:19:88:541:586:11:g_d0_f6:11:g_d0_f6:A:5    The impulse response function ofeiton macroeconomic variables . . . . . . . . . . . .  26
+23:1074:44058:19:19:88:542:567:11:g_d0_f6:11:g_d0_f6:A:6    The impulse response function ofecton macroeconomic variables . . . . . . . . . . . .  27
+23:1075:44152:19:19:88:542:548:11:g_d0_f6:11:g_d0_f6:A:7    The impulse response function ofecton macroeconomic variables . . . . . . . . . . . .  28
+23:1076:44246:19:19:88:542:529:11:g_d0_f6:11:g_d0_f6:A:8    The impulse response function ofecton macroeconomic variables . . . . . . . . . . . .  29
+23:1077:44340:19:20:88:541:510:11:g_d0_f6:11:g_d0_f6:A:9    The impulse response function ofemton macroeconomic variables  . . . . . . . . . . .  30
+23:1078:44433:20:19:88:541:490:11:g_d0_f6:11:g_d0_f6:A:10   The impulse response function ofemton macroeconomic variables  . . . . . . . . . . .  31
+23:1079:44526:19:19:88:541:471:11:g_d0_f6:11:g_d0_f6:A:11   The impulse response function ofemton macroeconomic variables  . . . . . . . . . . .  32
+23:1080:44619:19:19:88:541:452:11:g_d0_f6:11:g_d0_f6:A:12   UIP slope parameter from model simulations  . . . . . . . . . . . . . . . . . . . .. . .  33
+23:1081:44716:19:20:88:541:433:11:g_d0_f6:11:g_d0_f6:A:13   A sample simulation of 100 periods with ZLB . . . . . . . . . . . . . . . . . . . . .. .  34
+23:1082:44813:20:16:88:541:413:11:g_d0_f6:11:g_d0_f6:A:14   Unconstrained v.s. constrained UIP slope parameters from model simulations . . . . .  35
+24:1083:44908:16:25:116:497:397:11:g_d0_f6:11:g_d0_f6:?:Figure 1: Panel Fama coefficients 1980Q1-2007Q4, unbalanced, with fixed effects
+24:1084:44987:25:14:71:542:372:11:g_d0_f6:11:g_d0_f6:B:Includes Canada, Germany, Euro, Japan, Switzerland, and UK; excludes Euro for 5 and 10 year
+24:1085:45078:14:76:71:110:358:11:g_d0_f6:11:g_d0_f6:B:horizons.
+25:1086:45089:76:25:229:384:282:11:g_d0_f6:11:g_d0_f6:?:Figure 2: Panel Fama coefficients
+25:1087:45122:25:14:71:544:257:11:g_d0_f6:11:g_d0_f6:B:Up to 12 months, panel estimates using eurodeposit rates against US$. For 5 and 10 year, panel
+25:1088:45216:14:14:71:542:243:11:g_d0_f6:11:g_d0_f6:B:estimates using constant yields to maturity.  Early sample extendsup to 2000Q4, full sample to
+25:1089:45310:14:13:71:543:229:11:g_d0_f6:11:g_d0_f6:B:2011Q4. Early sample includes mark, yen, pound, franc, lira, and Canadian dollar against dollar
+25:1090:45405:13:14:71:542:216:11:g_d0_f6:11:g_d0_f6:B:for up to 12 months, and excludes lira and franc for 10 year, and also yen for 5year. Full sample
+25:1091:45502:14:0:71:382:202:11:g_d0_f6:11:g_d0_f6:B:replaces euro legacy currencies with euro and adds in Swiss franc.
+26:1092:45570:0:155:130:484:397:11:g_d0_f6:11:g_d0_f6:?:Figure 3: The impulse response function ofeiton macroeconomic variables
+27:1093:45643:155:0:130:484:242:11:g_d0_f6:11:g_d0_f6:?:Figure 4: The impulse response function ofeiton macroeconomic variables
+28:1094:45716:0:0:130:484:242:11:g_d0_f6:11:g_d0_f6:?:Figure 5: The impulse response function ofeiton macroeconomic variables
+29:1095:45789:0:0:130:484:242:11:g_d0_f6:11:g_d0_f6:?:Figure 6: The impulse response function ofecton macroeconomic variables
+30:1096:45862:0:0:130:484:242:11:g_d0_f6:11:g_d0_f6:?:Figure 7: The impulse response function ofecton macroeconomic variables
+31:1097:45935:0:0:130:484:242:11:g_d0_f6:11:g_d0_f6:?:Figure 8: The impulse response function ofecton macroeconomic variables
+32:1098:46008:0:0:128:486:242:11:g_d0_f6:11:g_d0_f6:?:Figure 9: The impulse response function ofemton macroeconomic variables
+33:1099:46081:0:0:125:489:242:11:g_d0_f6:11:g_d0_f6:?:Figure 10: The impulse response function ofemton macroeconomic variables
+34:1100:46155:0:0:125:489:242:11:g_d0_f6:11:g_d0_f6:?:Figure 11: The impulse response function ofemton macroeconomic variables
+35:1101:46229:0:0:175:439:242:11:g_d0_f6:11:g_d0_f6:?:Figure 12: UIP slope parameter from model simulations
+36:1102:46284:0:0:173:437:242:11:g_d0_f6:11:g_d0_f6:?:Figure 13: A sample simulation of 100 periods with ZLB
+37:1103:46340:0:0:97:516:242:11:g_d0_f6:11:g_d0_f6:A:Figure 14: Unconstrained v.s. constrained UIP slope parameters from modelsimulations
+38:1104:46426:0:30:71:160:693:14:g_d0_f7:14:g_d0_f7:C:List of Tables
+38:1105:46440:30:19:88:541:663:11:g_d0_f6:11:g_d0_f6:A:1    Variance and C.I. of Japanese interest rates and nominal exchange rate depreciation  .  37
+38:1106:46535:19:0:88:541:644:11:g_d0_f6:11:g_d0_f6:A:2    Calibration of pre-ZLB economy  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .37
+39:1107:46635:0:13:86:526:687:11:g_d0_f6:11:g_d0_f6:A:Table 1: Variance and C.I. of Japanese interest rates and nominal exchange rate depreciation
+39:1108:46727:13:14:262:399:674:11:g_d0_f10:8:g_d0_f11:?:st+1−stit−i∗t
+39:1109:46740:14:14:186:402:660:11:g_d0_f6:11:g_d0_f6:?:variance0.0038600.000690
+39:1110:46764:14:60:188:429:646:11:g_d0_f6:11:g_d0_f6:?:90% CI[0.002928,0.004793][0.000523,0.000857]
+39:1111:46808:60:13:210:402:586:11:g_d0_f6:11:g_d0_f6:A:Table 2: Calibration of pre-ZLB economy
+39:1112:46847:13:14:110:489:573:11:g_d0_f10:11:g_d0_f6:?:ω= 0.89probability of not being able to reset price in each period
+39:1113:46913:14:15:110:333:559:11:g_d0_f10:11:g_d0_f6:?:β= 0.98domestic discount factor
+39:1114:46944:15:14:110:270:544:11:g_d0_f10:8:g_d0_f11:?:k= 0.0158k≡(1−ω)(1−βω)ω
+39:1115:46967:14:14:110:272:530:11:g_d0_f10:11:g_d0_f6:?:γ= 0.5foreign bias
+39:1116:46985:14:14:110:502:516:11:g_d0_f10:11:g_d0_f6:?:a= 1.5elasticity of substitution between domestic and foreign good
+39:1117:47051:14:14:110:344:502:11:g_d0_f10:11:g_d0_f6:?:η= 3,σ= 2CRRA coefficient in utility
+39:1118:47087:14:16:110:205:488:11:g_d0_f10:8:g_d0_f12:?:σγ≡σ[1−γ(1−aσ)(2−γ)]
+39:1119:47107:16:14:110:332:472:11:g_d0_f10:11:g_d0_f6:?:δπ= 1.5,δy= 0.8coefficient of Taylor rule
+39:1120:47148:14:14:110:327:458:11:g_d0_f10:8:g_d0_f11:?:ρi= 0AR(1) coefficient ofui
+39:1121:47175:14:14:110:328:444:11:g_d0_f10:8:g_d0_f11:?:ρc= 0.65AR(1) coefficient ofuc
+39:1122:47205:14:14:110:331:430:11:g_d0_f10:8:g_d0_f11:?:ρm= 0.8AR(1) coefficient ofum
+39:1123:47234:14:14:110:270:416:11:g_d0_f10:11:g_d0_f6:?:eit∼N(0,0.022)white noise
+39:1124:47259:14:14:110:270:402:11:g_d0_f10:11:g_d0_f6:?:ect∼N(0,0.0022)white noise
+39:1125:47285:14:11:110:270:388:11:g_d0_f10:11:g_d0_f6:?:emt∼N(0,0.0022)white noise
+39:1126:47311:11:0:110:393:377:11:g_d0_f6:11:g_d0_f6:?: ̄i= 6.7∗10−5steady state of domestic interest rate

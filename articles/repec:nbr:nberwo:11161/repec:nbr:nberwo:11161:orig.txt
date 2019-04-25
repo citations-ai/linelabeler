@@ -1,0 +1,901 @@
+1:0:0:0:99:218:394:708:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:99:28:176:434:609:12:g_d0_f1:12:g_d0_f1:WHAT’S REAL ABOUT THE BUSINESS CYCLE?
+1:2:62:28:29:259:351:581:12:g_d0_f1:12:g_d0_f1:James D. Hamilton
+1:3:79:29:14:253:358:552:12:g_d0_f1:12:g_d0_f1:Working Paper 11161
+1:4:97:14:42:218:392:538:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w11161
+1:5:130:42:15:173:437:496:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:6:166:15:14:237:373:481:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:7:191:14:14:250:361:467:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:8:210:14:296:271:341:453:12:g_d0_f1:12:g_d0_f1:February 2005
+1:9:223:296:13:71:539:157:11:g_d0_f1:11:g_d0_f1:This research is supported by the NSF under Grant No. NSF-0215754.  The views expressed herein are those
+1:10:327:13:26:71:526:144:11:g_d0_f1:11:g_d0_f1:of the author(s) and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:11:429:26:13:71:539:118:11:g_d0_f1:11:g_d0_f1: © 2005 by James D. Hamilton.  All rights reserved. Short sections of text, not to exceed two paragraphs,
+1:12:534:13:13:71:539:105:11:g_d0_f1:11:g_d0_f1:may  be  quoted  without  explicit  permission  provided  that  full  credit,  including  ©  notice,  is  given  to  the
+1:13:654:13:0:71:108:92:11:g_d0_f1:11:g_d0_f1:source.  
+2:14:663:0:14:71:263:708:12:g_d0_f1:12:g_d0_f1:What’s Real About the Business Cycle?
+2:15:700:14:14:71:163:694:12:g_d0_f1:12:g_d0_f1:James D. Hamilton
+2:16:717:14:14:71:232:680:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 11161
+2:17:745:14:14:71:141:666:12:g_d0_f1:12:g_d0_f1:February 2005
+2:18:758:14:29:71:127:652:12:g_d0_f1:12:g_d0_f1:JEL No. E3
+2:19:768:29:31:273:338:623:12:g_d0_f2:12:g_d0_f2:ABSTRACT
+2:20:776:31:24:71:539:592:12:g_d0_f1:12:g_d0_f1:This  paper  argues  that  a  linear  statistical  model  with  homoskedastic  errors  cannot  capture  the
+2:21:883:24:24:71:539:568:12:g_d0_f1:12:g_d0_f1:nineteenth-century  notion  of  a  recurring  cyclical  pattern  in  key  economic  aggregates.  A  simple
+2:22:989:24:24:71:539:544:12:g_d0_f1:12:g_d0_f1:nonlinear alternative is proposed and used to illustrate that the dynamic behavior of unemployment
+2:23:1087:24:24:71:539:520:12:g_d0_f1:12:g_d0_f1:seems to change over the business cycle, with the unemployment rate rising more quickly than it
+2:24:1182:24:24:71:539:496:12:g_d0_f1:12:g_d0_f1:falls. Furthermore, many but not all economic downturns are also accompanied by a dramatic change
+2:25:1279:24:24:71:539:472:12:g_d0_f1:12:g_d0_f1:in the dynamic behavior of short-term interest rates. It is suggested that these nonlinearities are most
+2:26:1383:24:24:71:539:448:12:g_d0_f1:12:g_d0_f1:naturally interpreted as resulting from short-run failures in the employment and credit markets, and
+2:27:1483:24:24:71:539:424:12:g_d0_f1:12:g_d0_f1:that understanding these short-run failures is the key to understanding the nature of the business
+2:28:1581:24:31:71:99:400:12:g_d0_f1:12:g_d0_f1:cycle.
+2:29:1587:31:14:71:163:369:12:g_d0_f1:12:g_d0_f1:James D. Hamilton
+2:30:1604:14:14:71:227:355:12:g_d0_f1:12:g_d0_f1:Department of Economics, 0508
+2:31:1633:14:15:71:242:341:12:g_d0_f1:12:g_d0_f1:University of California, San Diego
+2:32:1668:15:14:71:164:326:12:g_d0_f1:12:g_d0_f1:9500 Gilman Drive
+2:33:1685:14:14:71:193:312:12:g_d0_f1:12:g_d0_f1:La Jolla, CA 92093-0508
+2:34:1708:14:14:71:123:298:12:g_d0_f1:12:g_d0_f1:and NBER
+2:35:1716:14:0:71:170:284:12:g_d0_f1:12:g_d0_f1:jhamilton@ucsd.edu
+3:36:1734:0:41:71:334:671:303:dcbx10:303:dcbx10:1  What is the business cycle?
+3:37:1764:41:29:71:538:630:144:g_d0_f4:144:g_d0_f4:The term ìcycleî is used to describe a process that moves sequentially between a series of
+3:38:1854:29:29:71:538:601:144:g_d0_f4:144:g_d0_f4:clearly identifiable phases in a recurrent or periodic fashion.  Economists of the nineteenth
+3:39:1947:29:29:71:538:572:144:g_d0_f4:144:g_d0_f4:and early twentieth centuries were persuaded that they saw such a pattern exhibited in the
+3:40:2037:29:29:71:538:543:144:g_d0_f4:144:g_d0_f4:overall level of economic activity, and enthusiastically sought to characterize the observed
+3:41:2129:29:29:71:538:514:144:g_d0_f4:144:g_d0_f4:regularities of what came to be known as the ìbusiness cycle.î The most systematic and still
+3:42:2221:29:28:71:538:485:144:g_d0_f4:144:g_d0_f4:enduring summaries of what seems to happen during the respective phases were provided
+3:43:2306:28:29:71:361:457:144:g_d0_f4:144:g_d0_f4:by Mitchell (1927, 1951) and Burns and Mitchell (1946).
+3:44:2361:29:29:89:539:428:144:g_d0_f4:144:g_d0_f4:The expression ìbusiness cycle theoryî remains in common usage today, even though,
+3:45:2443:29:29:71:538:399:144:g_d0_f4:144:g_d0_f4:in most of the modern models that wear the label, there in fact is no business cycle in the
+3:46:2534:29:29:71:539:370:144:g_d0_f4:144:g_d0_f4:sense just described.  These are models of economicfluctuations, to be sure, but they do
+3:47:2622:29:29:71:538:341:144:g_d0_f4:144:g_d0_f4:not exhibit clearly articulated phases through which the economy could be said to pass in a
+3:48:2713:29:29:71:162:312:144:g_d0_f4:144:g_d0_f4:recurrent pattern.
+3:49:2731:29:29:89:539:283:144:g_d0_f4:144:g_d0_f4:In part this shift in the professionís conception of what needs to be explained about
+3:50:2816:29:29:71:539:254:144:g_d0_f4:144:g_d0_f4:businessfluctuations reflects a desire to integrate the determinants of long-run economic
+3:51:2905:29:28:71:539:225:144:g_d0_f4:144:g_d0_f4:growth and the causes of short-run economic downturns within a single unified theory of
+3:52:2992:28:29:71:538:197:144:g_d0_f4:144:g_d0_f4:aggregate economic performance.  Since improvements in overall productivity are widely
+3:53:3078:29:29:71:538:168:144:g_d0_f4:144:g_d0_f4:acknowledged to be one of the key factors driving long-run growth, and since such improve-
+3:54:3168:29:29:71:538:139:144:g_d0_f4:144:g_d0_f4:ments cannot reasonably be expected to occur at a constant rate over time, it is natural to
+3:55:3259:29:29:71:538:110:144:g_d0_f4:144:g_d0_f4:explore the possibility that variation over time in the rate of technological progress could be
+3:56:3354:29:0:71:538:81:144:g_d0_f4:144:g_d0_f4:a primary cause of variation over time in the level of economic activity. Brock and Mirman
+4:57:3445:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:(1972) were thefirst to incorporate stochastic variation in the rate of technical progress
+4:58:3535:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:into a neoclassical growth model, though they clearly intended this as a model of long-run
+4:59:3625:29:29:71:539:613:144:g_d0_f4:144:g_d0_f4:growth rather than a realistic description of short-runfluctuations.  Kydland and Prescott
+4:60:3715:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:(1982) later took the much bolder step of proposing that this class of models might explain
+4:61:3806:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:variations in economic activity at all frequencies, in what has come to be known as ìreal
+4:62:3895:29:29:71:190:526:144:g_d0_f4:144:g_d0_f4:business cycle models.î
+4:63:3918:29:29:89:539:497:144:g_d0_f4:144:g_d0_f4:Although unifying growth and business cycle theory holds tremendous aesthetic appeal,
+4:64:4003:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:this particular solution is not without its detractors. Indeed, the reasons that Irving Fisher
+4:65:4097:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:gave in 1932 for rejecting such an approach have in the opinion of many yet to receive a
+4:66:4185:29:40:71:385:411:144:g_d0_f4:144:g_d0_f4:satisfying response from modern real business cycle theorists:
+4:67:4247:40:28:101:510:371:144:g_d0_f4:144:g_d0_f4:ì... in times of depression, is the soil less fertile? Not at all.  Does it lack rain?
+4:68:4333:28:29:101:510:343:144:g_d0_f4:144:g_d0_f4:Not at all. Are the mines exhausted? No, they can perhaps pour out even more
+4:69:4409:29:29:101:510:314:144:g_d0_f4:144:g_d0_f4:than the old volume of ore, if anyone will buy. Are the factories, then, lamed in
+4:70:4490:29:29:101:510:285:144:g_d0_f4:144:g_d0_f4:some wayó down at the heel?  No; machinery and invention may be at the very
+4:71:4565:29:39:101:239:256:144:g_d0_f4:144:g_d0_f4:peak.î (Fisher, 1932, p. 5)
+4:72:4592:39:29:89:539:217:144:g_d0_f4:144:g_d0_f4:Continuing along the lines of Fisherís reasoning, the size of the population places an
+4:73:4678:29:29:71:538:188:144:g_d0_f4:144:g_d0_f4:obvious physical limit on how much a given nation can produce, and is certainly a key factor
+4:74:4770:29:29:71:538:159:144:g_d0_f4:144:g_d0_f4:responsible for an increase in aggregate output over time.  But just as surely, a decrease in
+4:75:4863:29:29:71:538:130:144:g_d0_f4:144:g_d0_f4:population is not the cause of the decrease in employment that we observe in times when
+4:76:4950:29:29:71:538:101:144:g_d0_f4:144:g_d0_f4:the unemployment rate is shooting up dramatically.  There is in this respect an obvious
+4:77:5037:29:0:71:539:72:144:g_d0_f4:144:g_d0_f4:inherent asymmetry influctuations in the number of workers employedó the measure must
+5:78:5123:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:go up for different reasons than it goes down. A parallel argument can be made in terms
+5:79:5210:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:of the capital stock, another key factor determining long-run growth which again places an
+5:80:5300:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:upper limit on how much a country can produce. Yet in times when we see all measures of
+5:81:5387:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:capacity utilization falling, the natural inference is that some forces other than the quantity
+5:82:5482:29:29:71:523:555:144:g_d0_f4:144:g_d0_f4:or quality of available manufacturing facilities account for the drop in aggregate output.
+5:83:5572:29:29:89:539:526:144:g_d0_f4:144:g_d0_f4:If we agree that these three factorsó technology, labor force, and the capital stockó are
+5:84:5661:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:the three main determinants of long-run economic growth, we might greet with considerable
+5:85:5750:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:skepticism the suggestion that the same three factors are in a parallel way responsible for
+5:86:5841:28:29:71:468:440:144:g_d0_f4:144:g_d0_f4:producing the drop in real GDP that we observe during a business downturn.
+5:87:5915:29:29:89:539:411:144:g_d0_f4:144:g_d0_f4:The purpose of this paper is to explore whether the nineteenth-century economists were
+5:88:6001:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:on to something that their modern descendants may have forgotten. Is there really a business
+5:89:6093:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:cycle, or is the expression an unfortunate linguistic vestige of a less-informed era?  I will
+5:90:6186:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:argue that indeed there is a recurring pattern in the level of economic activity that needs
+5:91:6277:29:29:71:538:295:144:g_d0_f4:144:g_d0_f4:to be explained, but that a statistical characterization of this pattern requires a nonlinear
+5:92:6370:29:29:71:538:266:144:g_d0_f4:144:g_d0_f4:dynamic representation and calls for an asymmetric interpretation of the forces that cause
+5:93:6460:29:29:71:538:237:144:g_d0_f4:144:g_d0_f4:employment to rise and fall.  I further observe that one element of this pattern has often
+5:94:6550:29:29:71:320:208:144:g_d0_f4:144:g_d0_f4:been a related cyclical behavior of interest rates.
+5:95:6601:29:28:89:539:179:144:g_d0_f4:144:g_d0_f4:To the question, ìIs the business cycle real?î, thesefindings suggest that yes, the busi-
+5:96:6690:28:29:71:538:151:144:g_d0_f4:144:g_d0_f4:ness cycle is real in the sense that it is a feature of the data that needs to be explained.
+5:97:6782:29:29:71:538:122:144:g_d0_f4:144:g_d0_f4:In the other meaning of the term ìreal,î howeveró the sense from which springs the label
+5:98:6870:29:0:71:538:93:144:g_d0_f4:144:g_d0_f4:ìreal business cycle,î namely, a cycle unrelated to monetary developmentsó the evidence ad-
+6:99:6962:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:duced here for the importance of comovements betweenfinancial and real variables suggests
+6:100:7051:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:that the cycle is not ìrealî at all, or at the least, not completely divorced from monetary
+6:101:7142:29:62:71:143:613:144:g_d0_f4:144:g_d0_f4:developments.
+6:102:7155:62:41:71:371:551:303:dcbx10:303:dcbx10:2  The behavior of unemployment.
+6:103:7187:41:29:71:542:510:144:g_d0_f4:144:g_d0_f4:Figure 1 plots the monthly unemployment rate in the U.S. from 1948:1 to 2004:3.1Iwould
+6:104:7273:29:29:71:539:481:144:g_d0_f4:144:g_d0_f4:suggest that someone looking at such a graph for thefirst time would indeed be inclined
+6:105:7360:29:28:71:538:452:144:g_d0_f4:144:g_d0_f4:to identify a repeated sequence of ups and downs, with each of the obvious sharp upswings
+6:106:7449:28:29:71:538:424:144:g_d0_f4:144:g_d0_f4:in the unemployment rate occurring during periods that the National Bureau of Economic
+6:107:7535:29:29:71:533:395:144:g_d0_f4:144:g_d0_f4:Research has classified as economic recessions (indicated by shaded regions on the graph).
+6:108:7625:29:29:89:539:366:144:g_d0_f4:144:g_d0_f4:Although oneís eye is sympathetic to the claim that these data display a recurrent pattern,
+6:109:7716:29:29:71:538:337:144:g_d0_f4:144:g_d0_f4:it does not appear to be cyclical in the sense of exhibiting strict periodicity. For example, the
+6:110:7813:29:29:71:538:308:144:g_d0_f4:144:g_d0_f4:two consecutive unemployment peaks in 1958:7 and 1961:5 are separated by less than three
+6:111:7901:29:29:71:538:279:144:g_d0_f4:144:g_d0_f4:years, whereas those of 1982:11 and 1992:6 are separated by a decade.  More formally, one
+6:112:7990:29:29:71:538:250:144:g_d0_f4:144:g_d0_f4:can look for any sort of periodic pattern by examining the spectrum of the unemployment
+6:113:8077:29:29:71:539:221:144:g_d0_f4:144:g_d0_f4:rate,anestimateofwhichisplottedinFigure2asafunctionoftheperiodofthecycle.2If
+6:114:8153:29:23:71:538:192:144:g_d0_f4:144:g_d0_f4:one tries to decompose the unemployment series in Figure 1 into a series of strictly periodic
+6:115:8246:23:16:85:539:169:50:g_d0_f4:102:g_d0_f4:1This is the seasonally adjusted civilian unemployment rate from the Bureau of Labor Statistics
+6:116:8341:16:16:71:166:153:102:g_d0_f4:102:g_d0_f4:(http://stats.bls.gov).
+6:117:8364:16:15:85:539:137:50:g_d0_f4:102:g_d0_f4:2This was calculated by smoothing the sample periodogram with a Bartlett window (e.g., Hamilton,
+6:118:8460:15:12:71:539:122:102:g_d0_f4:102:g_d0_f4:1994, eq. [6.3.15]) with lagq=13, as calculated using the RATSfft procedure with window(type=tent,
+6:119:8558:12:12:71:538:110:102:g_d0_f4:102:g_d0_f4:width=25). See the procedure hamp167.prg available at http://www.estima.com/procs_hamilton.shtml for
+6:120:8658:12:12:71:539:98:102:g_d0_f4:102:g_d0_f4:details.  The resulting estimateˆsY(ωj)forωj=2πj/Tis plotted in Figure 2 for givenjas a function of
+6:121:8757:12:0:71:329:86:102:g_d0_f7:102:g_d0_f4:T/j, which is the variable measured on the horizontal axis.
+7:122:8817:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:cycles, by far the most important of these are those with the longest period, as opposed to
+7:123:8908:29:29:71:326:642:144:g_d0_f4:144:g_d0_f4:somethingregularlyrepeatingevery3to5years.
+7:124:8950:29:29:89:538:613:144:g_d0_f4:144:g_d0_f4:Letytdenote the unemployment rate.  Consider an AR(2) representation of these data
+7:125:9032:29:35:71:477:584:144:g_d0_f4:144:g_d0_f4:with Student t innovations, obtained by maximizing the log likelihood function
+7:126:9110:35:0:264:304:549:144:eufm10:144:g_d0_f14:L(θ)=
+7:127:9115:0:29:309:321:564:65:g_d0_f12:144:g_d0_f16:TX
+7:128:9117:29:0:306:320:535:65:g_d0_f12:65:cmr8:t=3
+7:129:9120:0:39:323:347:549:144:eufm10:144:g_d0_f14:lt(θ)
+7:130:9125:39:0:212:343:510:144:eufm10:144:g_d0_f14:lt(θ)=k−[(ν+1)/2] log
+7:131:9146:0:16:345:351:526:144:g_d0_f16:144:g_d0_f16:∑
+7:132:9147:16:0:351:371:510:144:g_d0_f14:144:g_d0_f14:1+
+7:133:9149:0:17:376:386:518:144:g_d0_f11:65:g_d0_f12:u2t
+7:134:9152:17:0:373:390:501:144:g_d0_f19:65:cmr8:νσ2
+7:135:9155:0:16:392:398:526:144:g_d0_f16:144:g_d0_f16:∏
+7:136:9156:16:33:524:539:510:144:g_d0_f4:144:g_d0_f4:(1)
+7:137:9159:33:33:231:539:477:144:g_d0_f11:144:g_d0_f4:ut=yt−c−φ1yt−1−φ2yt−2(2)
+7:138:9183:33:33:162:539:444:144:g_d0_f11:144:g_d0_f4:k=log{Γ[(ν+1)/2]}−log{Γ[ν/2]}−(1/2) log(σ2νπ)(3)
+7:139:9231:33:29:71:539:411:144:g_d0_f4:144:g_d0_f11:with respect toθ=(c,φ1,φ2,σ2,ν)0subject to the constraints3thatσ2>0andν>0.
+7:140:9305:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:These maximum likelihood estimates (with asymptotic standard errors in parentheses) imply
+7:141:9394:29:35:71:438:353:144:g_d0_f4:144:g_d0_f4:that the unemployment rateytfor monthtcould be modeled as follows
+7:142:9459:35:8:189:243:318:144:g_d0_f11:144:g_d0_f14:yt=0.060
+7:143:9467:8:0:216:242:310:65:cmr8:65:cmr8:(0.028)
+7:144:9474:0:8:245:286:318:144:g_d0_f14:144:g_d0_f14:+1.117
+7:145:9480:8:0:259:285:310:65:cmr8:65:cmr8:(0.037)
+7:146:9487:0:8:286:349:318:144:g_d0_f11:144:g_d0_f14:yt−1−0.128
+7:147:9497:8:0:323:349:310:65:cmr8:65:cmr8:(0.037)
+7:148:9504:0:8:349:413:318:144:g_d0_f11:144:g_d0_f14:yt−2+0.158
+7:149:9514:8:0:386:412:310:65:cmr8:65:cmr8:(0.007)
+7:150:9521:0:34:412:539:318:144:g_d0_f11:144:g_d0_f4:vt(4)
+7:151:9526:34:29:71:539:284:144:g_d0_f4:144:g_d0_f4:wherevtis distributed Studenttwith4.42degrees of freedom, with the standard error for
+7:152:9611:29:29:71:539:255:144:g_d0_f4:144:g_d0_f4:the degrees-of-freedom parameterνbeing estimated at 0.74.  Using Studenttinnovations
+7:153:9695:29:29:71:538:226:144:g_d0_f4:144:g_d0_f4:instead of Normal increases the log likelihood by 52.04, a huge gain from estimating the
+7:154:9783:29:29:71:243:197:144:g_d0_f4:144:g_d0_f4:single parameterν; (see Table 1).
+7:155:9816:29:29:89:539:168:144:g_d0_f4:144:g_d0_f4:As further evidence against a cycle with regular periodicity, it is interesting to note that
+7:156:9908:29:29:71:539:139:144:g_d0_f4:144:g_d0_f4:the roots of the second-order difference equation in (4) are both positive and real, meaning
+7:157:10000:29:22:71:515:110:144:g_d0_f4:144:g_d0_f11:that this system does not exhibit any oscillatory behavior in response to a shock tovt.
+7:158:10087:22:16:85:539:88:50:g_d0_f4:102:g_d0_f4:3See for example Hamilton (1994, Section 5.9) on numerical maximization subject to inequality con-
+7:159:10185:16:0:71:106:72:102:g_d0_f4:102:g_d0_f4:straints.
+8:160:10195:0:29:89:539:671:144:g_d0_f4:144:g_d0_f4:Is the appearance of a repeated cycle in Figure 1 just afigment of our imagination,
+8:161:10278:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:then?  Another interesting exercise is to simulate a time series realization from (4), which
+8:162:10370:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:is displayed in Figure 3.  These simulated data have the same mean, variance, and serial
+8:163:10458:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:correlation as the real data in Figure 1, as of course they should.  Even so, one has little of
+8:164:10553:29:29:71:542:555:144:g_d0_f4:144:g_d0_f4:thesenseofarecurrentcycleinthesesimulateddatathatseemedcompellingintheactual
+8:165:10629:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:data.  If one were to label some of the episodes in this simulated data set as ìrecessions,î
+8:166:10721:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:where would they be?  Indeed, expression (4) characterizes the true process from which
+8:167:10807:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:these artificial data were simulated.  What in terms of the qualities of this data-generating
+8:168:10900:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:process would one characterize as a ìbusiness cycle?î  There are good and bad values of
+8:169:10987:29:29:71:539:411:144:g_d0_f4:144:g_d0_f4:the innovationsvt, and perhaps we could make up some rule for categorizing a relatively
+8:170:11074:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:unlikely string of mostly negative innovations as a ìrecession.î  But any such rule would
+8:171:11163:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:be completely arbitrary, and tell us more about our imagination or quest for patterns and
+8:172:11252:29:29:71:539:324:144:g_d0_f4:144:g_d0_f4:labels than about anything in the objective reality.  There is nothing qualitatively different
+8:173:11346:29:29:71:538:295:144:g_d0_f4:144:g_d0_f4:about a value ofvtthat puts us within the arbitrary recession category and one that leaves
+8:174:11436:29:29:71:164:266:144:g_d0_f4:144:g_d0_f4:us just short of it.
+8:175:11456:29:29:89:538:237:144:g_d0_f4:144:g_d0_f4:I would argue that this inability to define a business cycle as a fundamental attribute of
+8:176:11546:29:29:71:538:208:144:g_d0_f4:65:g_d0_f12:the data-generating process (4) is in fact inherent in any time series model that describesyt
+8:177:11639:29:28:71:539:179:144:g_d0_f4:144:g_d0_f4:as a linear function of its lagged values plus an i.i.d. innovation. Even if the linear difference
+8:178:11737:28:29:71:538:151:144:g_d0_f4:144:g_d0_f4:equation did exhibit an oscillatory impulse-response function or imply more power in the
+8:179:11825:29:29:71:542:122:144:g_d0_f4:144:g_d0_f4:spectrumatperiodsof3-5years,itseemstobesomeotherfeatureofthedatainFigure1
+8:180:11898:29:0:71:262:93:144:g_d0_f4:144:g_d0_f4:that constitutes the ìbusiness cycle.î
+9:181:11937:0:29:89:539:671:144:g_d0_f4:144:g_d0_f4:I would suggest instead that what we have in mind is that there is something in common
+9:182:12023:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:between the rapid run-ups in unemployment that occurred in each of the postwar recessions,
+9:183:12113:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:even though the length of time it takes for unemployment to spike up varies from episode
+9:184:12201:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:to episode, and the timing separating such events is irregular.  Indeed, the idea of look-
+9:185:12291:29:29:71:539:555:144:g_d0_f4:144:g_d0_f4:ing for commonality across recessions whose elapsed calendar time is different for different
+9:186:12383:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:episodes was precisely the methodology that Burns and Mitchell used to create their graphs
+9:187:12473:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:summarizing typical business cycle patterns.  Stock (1987, 1988) showed that such a way
+9:188:12560:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:of thinking about data necessarily implies a nonlinear data-generating process.  Friedman
+9:189:12649:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:(1969, p. 274) and DeLong and Summers (1986), among others, have forcefully advanced
+9:190:12733:29:29:71:539:411:144:g_d0_f4:144:g_d0_f4:the related proposition that asymmetry is the defining characteristic of business cycles.  In
+9:191:12826:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:particular, the asymmetry commented on in Figure 1ó that recessions are characterized by
+9:192:12914:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:an unusually rapid but nonetheless transient increase in the unemployment rateó has been
+9:193:13002:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:confirmed to be a statistically significant feature of these data in a number of recent quantita-
+9:194:13099:29:29:71:538:295:144:g_d0_f4:144:g_d0_f4:tive studies, including Montgomery, et. al. (1998), Rothman (1998), and van Dijk, Franses,
+9:195:13189:29:29:71:159:266:144:g_d0_f4:144:g_d0_f4:and Paap (2002).
+9:196:13205:29:29:89:539:237:144:g_d0_f4:144:g_d0_f4:Suppose we try in a simple way to represent the asymmetry that the eye perceives in
+9:197:13288:29:29:71:539:208:144:g_d0_f4:144:g_d0_f4:Figure 1. One idea is that the intercept in equation (2) assumes different values in different
+9:198:13382:29:39:71:449:179:144:g_d0_f4:144:g_d0_f4:phases of the business cycle.  Consider the following generalization of (2),
+9:199:13458:39:39:226:539:140:144:g_d0_f11:144:g_d0_f4:yt=cst+φ1yt−1+φ2yt−2+ut,(5)
+9:200:13485:39:29:71:538:101:144:g_d0_f4:144:g_d0_f4:wherest=1if the economy is in the normal growth state at datet,st=2if it is in a mild
+9:201:13570:29:0:71:538:72:144:g_d0_f4:144:g_d0_f4:recession, andst=3for a severe recession. Suppose that the transition between these three
+10:202:13660:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:regimes follows a Markov chain, withpij=Pr(st=j|st−1=i)another set of 9 parameters
+10:203:13742:29:0:71:379:642:144:g_d0_f4:144:g_d0_f4:to be estimated subject to the constraints0≤pij≤1and
+10:204:13794:0:13:383:400:651:144:g_d0_f16:65:cmr8:P3
+10:205:13796:13:25:396:539:638:65:g_d0_f12:144:g_d0_f4:j=1pij=1.Conditional on
+10:206:13819:25:29:71:539:613:144:g_d0_f4:144:g_d0_f4:the economy being in regimejat datet, the unemployment rate thus has conditional log
+10:207:13903:29:40:71:154:584:144:g_d0_f4:144:g_d0_f4:density given by
+10:208:13919:40:0:145:410:544:144:g_d0_f14:144:g_d0_f14:logf(yt|st=j, yt−1,yt−2, ..., y1)=k−[(ν+1)/2] log
+10:209:13968:0:17:412:418:561:144:g_d0_f16:144:g_d0_f16:∑
+10:210:13969:17:0:418:438:544:144:g_d0_f14:144:g_d0_f14:1+
+10:211:13971:0:17:442:456:553:144:g_d0_f11:65:g_d0_f12:u2jt
+10:212:13975:17:0:440:457:536:144:g_d0_f19:65:cmr8:νσ2
+10:213:13978:0:56:459:465:561:144:g_d0_f16:144:g_d0_f16:∏
+10:214:13979:56:35:227:382:505:144:g_d0_f11:65:cmr8:ujt=yt−cj−φ1yt−1−φ2yt−2
+10:215:14002:35:29:71:146:470:144:g_d0_f4:144:g_d0_f4:forkas in (3).
+10:216:14016:29:40:89:297:441:144:g_d0_f4:144:g_d0_f4:The log likelihood for the observed data,
+10:217:14057:40:0:208:248:401:144:eufm10:144:g_d0_f14:L(θ)=
+10:218:14062:0:29:254:265:416:65:g_d0_f12:144:g_d0_f16:TX
+10:219:14064:29:0:250:264:387:65:g_d0_f12:65:cmr8:t=3
+10:220:14067:0:40:268:402:401:144:g_d0_f14:144:g_d0_f14:logf(yt|yt−1,yt−2, ..., y1;θ)
+10:221:14096:40:29:71:538:361:144:g_d0_f4:144:g_d0_f4:can then be calculated as in Hamilton (1994, equation [22.4.7]) and maximized numerically
+10:222:14185:29:28:71:539:332:144:g_d0_f4:144:g_d0_f11:with respect to the population parametersθ=(c1,c2,c3,φ1,φ2,σ,ν,p11,p12,p13,p21,p22,p23,
+10:223:14272:28:29:71:539:304:144:g_d0_f11:144:g_d0_f4:p31,p32,p33)0.  The maximum likelihood estimates turn out to be at the boundaries such
+10:224:14358:29:29:71:539:275:144:g_d0_f4:144:g_d0_f4:thatp13=0andp31=0, that is, states 1 and 3 never follow each other.  These maximum
+10:225:14440:29:29:71:538:246:144:g_d0_f4:144:g_d0_f4:likelihood estimates are reported in Table 2, where in order to calculate standard errors
+10:226:14529:29:29:71:538:217:144:g_d0_f4:144:g_d0_f4:from the second derivative matrix of the log likelihood, we went ahead and imposed the
+10:227:14615:29:29:71:539:188:144:g_d0_f4:144:g_d0_f11:constraintp13=p31=0so that there are just 4 free transition probabilities(p11,p21,p22,
+10:228:14701:29:29:71:539:159:144:g_d0_f4:144:g_d0_f14:andp32). The smoothed probabilities implied by the maximum likelihood estimates,Pr(st=
+10:229:14787:29:29:71:286:130:144:g_d0_f11:144:g_d0_f4:j|y1,y2, ..., yT;ˆθ),areplottedinFigure4.
+10:230:14828:29:29:89:539:101:144:g_d0_f4:144:g_d0_f4:Note that allowing this nonlinearity produces a further huge improvement in the log
+10:231:14911:29:0:71:538:72:144:g_d0_f4:144:g_d0_f4:likelihood and would easily be selected on the basis of the Schwarz criterion (again see Table
+11:232:15006:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:1).  Formal tests of the null hypothesis of no Markov-switching have been proposed by
+11:233:15091:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:Hansen (1992), Hamilton (1996), Garcia (1998), and Carrasco, Hu, and Ploberger (2004).
+11:234:15177:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:The latter have found the optimal test against the alternative of Markov-switching, which
+11:235:15266:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:we implement here for the special case where the alternative to (4) is a model with Markov-
+11:236:15357:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:switching in the intercept only as in (5); for details of the Carrasco, Hu, and Ploberger test
+11:237:15451:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:see the appendix.  The test statistic on the U.S. employment data turns out to be 26.02,
+11:238:15539:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:whereas the 5% critical value is only 4.01, providing overwhelming evidence for representing
+11:239:15631:29:28:71:387:468:144:g_d0_f4:144:g_d0_f4:the data with the model described in Table 2 rather than (4).
+11:240:15692:28:29:89:539:440:144:g_d0_f4:144:g_d0_f4:Consider some of the properties of the estimated Markov-switching model. The process
+11:241:15776:29:37:71:477:411:144:g_d0_f4:144:g_d0_f4:is stationary, allowing us to take the unconditional expectation of equation (5),
+11:242:15857:37:0:188:231:374:144:g_d0_f11:144:g_d0_f14:E(yt)=
+11:243:15863:0:28:238:249:388:65:cmr8:144:g_d0_f16:3X
+11:244:15865:28:0:233:248:360:65:g_d0_f12:65:cmr8:j=1
+11:245:15868:0:38:251:422:374:144:g_d0_f11:144:g_d0_f14:cjPr(st=j)+φ1E(yt)+φ2E(yt)
+11:246:15894:38:28:71:116:336:144:g_d0_f4:144:g_d0_f4:implying
+11:247:15902:28:0:200:322:308:144:g_d0_f11:65:cmr8:E(yt)=(1−φ1−φ2)−1
+11:248:15919:0:28:331:341:322:65:cmr8:144:g_d0_f16:3X
+11:249:15921:28:0:326:340:294:65:g_d0_f12:65:cmr8:j=1
+11:250:15924:0:34:344:539:308:144:g_d0_f11:144:g_d0_f4:cjPr(st=j).(6)
+11:251:15938:34:13:71:508:274:144:g_d0_f4:144:g_d0_f4:The ergodic probabilities can be calculated as in Hamilton (1994, equation [22.2.26]):
+11:252:16024:13:21:229:237:261:144:g_d0_f26:144:g_d0_f26:
+11:253:16025:21:7:229:237:240:144:g_d0_f26:144:g_d0_f26:
+11:254:16026:7:8:229:237:233:144:g_d0_f26:144:g_d0_f26:
+11:255:16027:8:7:229:237:225:144:g_d0_f26:144:g_d0_f26:
+11:256:16028:7:7:229:237:218:144:g_d0_f26:144:g_d0_f26:
+11:257:16029:7:7:229:237:211:144:g_d0_f26:144:g_d0_f26:
+11:258:16030:7:8:229:237:204:144:g_d0_f26:144:g_d0_f26:
+11:259:16031:8:0:229:237:196:144:g_d0_f26:144:g_d0_f26:
+11:260:16032:0:29:242:298:241:144:g_d0_f14:144:g_d0_f14:Pr(st=1)
+11:261:16040:29:29:242:298:212:144:g_d0_f14:144:g_d0_f14:Pr(st=2)
+11:262:16048:29:0:242:298:183:144:g_d0_f14:144:g_d0_f14:Pr(st=3)
+11:263:16056:0:21:299:307:261:144:g_d0_f26:144:g_d0_f26:
+11:264:16057:21:7:299:307:240:144:g_d0_f26:144:g_d0_f26:
+11:265:16058:7:8:299:307:233:144:g_d0_f26:144:g_d0_f26:
+11:266:16059:8:7:299:307:225:144:g_d0_f26:144:g_d0_f26:
+11:267:16060:7:7:299:307:218:144:g_d0_f26:144:g_d0_f26:
+11:268:16061:7:7:299:307:211:144:g_d0_f26:144:g_d0_f26:
+11:269:16062:7:8:299:307:204:144:g_d0_f26:144:g_d0_f26:
+11:270:16063:8:0:299:307:196:144:g_d0_f26:144:g_d0_f26:
+11:271:16064:0:0:311:320:215:144:g_d0_f14:144:g_d0_f14:=
+11:272:16065:0:21:323:331:261:144:g_d0_f26:144:g_d0_f26:
+11:273:16066:21:7:323:331:240:144:g_d0_f26:144:g_d0_f26:
+11:274:16067:7:8:323:331:233:144:g_d0_f26:144:g_d0_f26:
+11:275:16068:8:7:323:331:225:144:g_d0_f26:144:g_d0_f26:
+11:276:16069:7:7:323:331:218:144:g_d0_f26:144:g_d0_f26:
+11:277:16070:7:7:323:331:211:144:g_d0_f26:144:g_d0_f26:
+11:278:16071:7:8:323:331:204:144:g_d0_f26:144:g_d0_f26:
+11:279:16072:8:0:323:331:196:144:g_d0_f26:144:g_d0_f26:
+11:280:16073:0:29:336:363:241:144:g_d0_f14:144:g_d0_f14:0.810
+11:281:16078:29:29:336:363:212:144:g_d0_f14:144:g_d0_f14:0.165
+11:282:16083:29:0:336:363:183:144:g_d0_f14:144:g_d0_f14:0.025
+11:283:16088:0:21:368:376:261:144:g_d0_f26:144:g_d0_f26:
+11:284:16089:21:7:368:376:240:144:g_d0_f26:144:g_d0_f26:
+11:285:16090:7:8:368:376:233:144:g_d0_f26:144:g_d0_f26:
+11:286:16091:8:7:368:376:225:144:g_d0_f26:144:g_d0_f26:
+11:287:16092:7:7:368:376:218:144:g_d0_f26:144:g_d0_f26:
+11:288:16093:7:7:368:376:211:144:g_d0_f26:144:g_d0_f26:
+11:289:16094:7:8:368:376:204:144:g_d0_f26:144:g_d0_f26:
+11:290:16095:8:0:368:376:196:144:g_d0_f26:144:g_d0_f26:
+11:291:16096:0:58:378:381:215:144:g_d0_f11:144:g_d0_f11:.
+11:292:16097:58:29:71:538:157:144:g_d0_f4:144:g_d0_f4:In other words, the economy spends about 80% of the time in the normal phase of the
+11:293:16180:29:29:71:538:128:144:g_d0_f4:144:g_d0_f4:business cycle. Substituting these unconditional probabilities into (6), the model implies an
+11:294:16273:29:23:71:539:99:144:g_d0_f4:144:g_d0_f4:expected unemployment rate of 5.9%, close to the postwar average.4If the economy is in
+11:295:16359:23:0:85:539:76:50:g_d0_f4:102:g_d0_f4:4Unlike ordinary least squares, the maximum likelihood estimates in this case do not imply an estimate
+12:296:16463:0:0:71:322:671:144:g_d0_f4:144:g_d0_f4:stateiat datet, on average it will stay there for
+12:297:16512:0:13:326:347:680:144:g_d0_f16:65:g_d0_f20:P∞
+12:298:16514:13:0:338:409:667:65:g_d0_f12:144:g_d0_f11:k=1(1−pii)kp
+12:299:16526:0:8:409:424:676:65:g_d0_f12:65:cmr8:k−1
+12:300:16529:8:0:409:483:668:65:g_d0_f12:144:g_d0_f14:ii=(1−pii)
+12:301:16539:0:33:483:538:675:65:g_d0_f20:144:g_d0_f4:−1months.
+12:302:16548:33:16:71:503:642:144:g_d0_f4:144:g_d0_f4:From the transition probabilities in Table 2, the expected duration of each regime is
+12:303:16633:16:21:230:238:626:144:g_d0_f26:144:g_d0_f26:
+12:304:16634:21:7:230:238:605:144:g_d0_f26:144:g_d0_f26:
+12:305:16635:7:8:230:238:598:144:g_d0_f26:144:g_d0_f26:
+12:306:16636:8:7:230:238:590:144:g_d0_f26:144:g_d0_f26:
+12:307:16637:7:7:230:238:583:144:g_d0_f26:144:g_d0_f26:
+12:308:16638:7:7:230:238:576:144:g_d0_f26:144:g_d0_f26:
+12:309:16639:7:8:230:238:569:144:g_d0_f26:144:g_d0_f26:
+12:310:16640:8:0:230:238:561:144:g_d0_f26:144:g_d0_f26:
+12:311:16641:0:29:243:298:606:144:g_d0_f14:65:cmr8:(1−p11)−1
+12:312:16650:29:29:243:298:577:144:g_d0_f14:65:cmr8:(1−p22)−1
+12:313:16659:29:0:243:298:548:144:g_d0_f14:65:cmr8:(1−p33)−1
+12:314:16668:0:21:304:312:626:144:g_d0_f26:144:g_d0_f26:
+12:315:16669:21:7:304:312:605:144:g_d0_f26:144:g_d0_f26:
+12:316:16670:7:8:304:312:598:144:g_d0_f26:144:g_d0_f26:
+12:317:16671:8:7:304:312:590:144:g_d0_f26:144:g_d0_f26:
+12:318:16672:7:7:304:312:583:144:g_d0_f26:144:g_d0_f26:
+12:319:16673:7:7:304:312:576:144:g_d0_f26:144:g_d0_f26:
+12:320:16674:7:8:304:312:569:144:g_d0_f26:144:g_d0_f26:
+12:321:16675:8:0:304:312:561:144:g_d0_f26:144:g_d0_f26:
+12:322:16676:0:0:315:324:580:144:g_d0_f14:144:g_d0_f14:=
+12:323:16677:0:21:328:336:626:144:g_d0_f26:144:g_d0_f26:
+12:324:16678:21:7:328:336:605:144:g_d0_f26:144:g_d0_f26:
+12:325:16679:7:8:328:336:598:144:g_d0_f26:144:g_d0_f26:
+12:326:16680:8:7:328:336:590:144:g_d0_f26:144:g_d0_f26:
+12:327:16681:7:7:328:336:583:144:g_d0_f26:144:g_d0_f26:
+12:328:16682:7:7:328:336:576:144:g_d0_f26:144:g_d0_f26:
+12:329:16683:7:8:328:336:569:144:g_d0_f26:144:g_d0_f26:
+12:330:16684:8:0:328:336:561:144:g_d0_f26:144:g_d0_f26:
+12:331:16685:0:29:341:362:606:144:g_d0_f14:144:g_d0_f14:34.0
+12:332:16689:29:29:341:356:577:144:g_d0_f14:144:g_d0_f14:4.5
+12:333:16692:29:0:341:356:548:144:g_d0_f14:144:g_d0_f14:2.0
+12:334:16695:0:21:367:375:626:144:g_d0_f26:144:g_d0_f26:
+12:335:16696:21:7:367:375:605:144:g_d0_f26:144:g_d0_f26:
+12:336:16697:7:8:367:375:598:144:g_d0_f26:144:g_d0_f26:
+12:337:16698:8:7:367:375:590:144:g_d0_f26:144:g_d0_f26:
+12:338:16699:7:7:367:375:583:144:g_d0_f26:144:g_d0_f26:
+12:339:16700:7:7:367:375:576:144:g_d0_f26:144:g_d0_f26:
+12:340:16701:7:8:367:375:569:144:g_d0_f26:144:g_d0_f26:
+12:341:16702:8:0:367:375:561:144:g_d0_f26:144:g_d0_f26:
+12:342:16703:0:61:377:380:580:144:g_d0_f11:144:g_d0_f11:.
+12:343:16704:61:29:71:538:519:144:g_d0_f4:144:g_d0_f4:A typical expansion thus might last about 3 years.  A mild recession often lasts less than
+12:344:16794:29:29:71:538:490:144:g_d0_f4:144:g_d0_f4:half a year, at which point it might enter the more severe phase for a few months, and then
+12:345:16885:29:29:71:538:461:144:g_d0_f4:144:g_d0_f4:spend another half year again at moderately high unemployment rates before coming back
+12:346:16971:29:29:71:101:432:144:g_d0_f4:144:g_d0_f4:down.
+12:347:16976:29:29:89:539:403:144:g_d0_f4:144:g_d0_f4:Figure 5 displays the way in which this representation captures the asymmetry of the
+12:348:17060:29:29:71:538:374:144:g_d0_f4:144:g_d0_f4:business cycle discussed above.  Suppose the economy is currently experiencing an unem-
+12:349:17147:29:29:71:539:345:144:g_d0_f4:144:g_d0_f4:ployment rate of 6% but is in the recovery phase of the cycle (st=1).  In the absence of
+12:350:17235:29:29:71:539:316:144:g_d0_f4:144:g_d0_f4:any new shocks(ut+j=0for allj), the dynamic behavior of the unemployment rate over
+12:351:17317:29:40:71:191:287:144:g_d0_f4:144:g_d0_f4:time would be given by
+12:352:17339:40:41:194:416:247:144:g_d0_f11:65:cmr8:yt+j=0.0605 + 0.8584yt+j−1+0.1217yt+j−2
+12:353:17378:41:29:71:539:206:144:g_d0_f4:144:g_d0_f4:forj=1,2, ...starting fromyt=yt−1=6.0.  The top panel of Figure 5 plots this path for
+12:354:17463:29:29:71:539:177:144:g_d0_f11:144:g_d0_f4:yt+jas a function ofj.  The unemployment rate falls quite gradually in this phase.  If the
+12:355:17553:29:41:71:539:148:144:g_d0_f4:144:g_d0_f4:phase persisted indefinitely, the unemployment rate would eventually stabilize at a value of
+12:356:17645:41:19:211:399:107:144:g_d0_f14:144:g_d0_f11:0.0605/(1−0.8584−0.1217) = 3.04,
+12:357:17677:19:0:71:393:88:102:g_d0_f4:102:g_d0_f4:of the population mean that is equal by construction to the sample mean.
+13:358:17751:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:though it would take 30 years of expansion to get there; in thefirst year of the expansion,
+13:359:17842:29:29:71:309:642:144:g_d0_f4:144:g_d0_f4:the unemployment rate would only drop 0.6%.
+13:360:17885:29:29:89:543:613:144:g_d0_f4:144:g_d0_f4:By contrast, if the economy started withyt=3.0andenteredthemildrecessionphase,
+13:361:17963:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:the unemployment rate would rise much more quickly than it fell, reaching 5.4% within a
+13:362:18050:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:year (see Panel B of Figure 5).  And if the economy starts with unemployment at 6% and
+13:363:18136:29:29:71:530:526:144:g_d0_f4:144:g_d0_f4:enters the severe recession phase (Panel C), the rate would reach nearly 12% after a year.
+13:364:18226:29:29:89:539:497:144:g_d0_f4:144:g_d0_f4:This asymmetry in unemployment dynamics is subtle in the statistical sense that the
+13:365:18309:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:baseline model (4) adequately captures most of the gross features of the data. But it seems
+13:366:18400:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:extremely important from an economic perspective. For once we agree that up and down
+13:367:18484:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:movements in the unemployment rate occur at different speeds, the notion that they may
+13:368:18570:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:be caused by different economic forces becomes much more appealing. Finding this kind of
+13:369:18658:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:nonlinearity using modern statistical methods could thereby be interpreted as exonerating
+13:370:18747:29:29:71:539:324:144:g_d0_f4:144:g_d0_f4:to some degree the assumptions of early students of the business cycle.   Specifically, it
+13:371:18837:29:29:71:538:295:144:g_d0_f4:144:g_d0_f4:suggests that there is a real event associated with the label of an ìeconomic recession,î
+13:372:18926:29:29:71:538:266:144:g_d0_f4:144:g_d0_f4:which is measurable by objective statistical methods as a change in the dynamic behavior
+13:373:19014:29:29:71:538:237:144:g_d0_f4:144:g_d0_f4:of the unemployment rate. It further suggests that the key task for business cycle theorists
+13:374:19106:29:29:71:538:208:144:g_d0_f4:144:g_d0_f4:should not be to look for a unification between the explanation of short-run dynamics and
+13:375:19195:29:28:71:538:179:144:g_d0_f4:144:g_d0_f4:long-run growth, but rather to identify the factors that can result in a temporary failure of
+13:376:19288:28:0:71:465:151:144:g_d0_f4:144:g_d0_f4:the economy to utilize efficiently the available labor, capital, and technology.
+14:377:19370:0:41:71:358:671:303:dcbx10:303:dcbx10:3  The behavior of interest rates.
+14:378:19404:41:29:71:539:630:144:g_d0_f4:144:g_d0_f4:I argued above that the business cycle is not an artificial categorization existing only in the
+14:379:19499:29:29:71:538:601:144:g_d0_f4:144:g_d0_f4:imagination of economists but rather is an integral part of the real data-generating process.
+14:380:19592:29:29:71:538:572:144:g_d0_f4:144:g_d0_f4:In addition to believing that such patterns exist, early students of the business cycle also
+14:381:19684:29:29:71:539:543:144:g_d0_f4:144:g_d0_f4:differed from their modern counterparts in the degree to whichfinancial factors were viewed
+14:382:19775:29:29:71:538:514:144:g_d0_f4:144:g_d0_f4:as a key part of the business cycle.   For example, Burton (1902) described the typical
+14:383:19862:29:36:71:284:485:144:g_d0_f4:144:g_d0_f4:business downturn in the following terms:
+14:384:19903:36:29:101:510:449:144:g_d0_f4:144:g_d0_f4:ìThe usual signal for the beginning of a crisis is a conspicuous banking or mer-
+14:385:19983:29:29:101:510:420:144:g_d0_f4:144:g_d0_f4:cantile failure, or the exposure of some fraudulent enterprise which attracts wide-
+14:386:20066:29:37:101:475:391:144:g_d0_f4:144:g_d0_f4:spread attention.  Money is hoarded.  Credit is refused.î (Burton, 1902)
+14:387:20138:37:29:89:538:354:144:g_d0_f4:144:g_d0_f4:As afirst look at some of the evidence that may have inspired such an opinion, consider
+14:388:20225:29:29:71:538:325:144:g_d0_f4:144:g_d0_f4:Figure 6, which plots the series on commercial paper rates in New York city compiled by
+14:389:20312:29:29:71:538:296:144:g_d0_f4:144:g_d0_f4:Macaulay (1938).5These data behave very differently before and after the founding of
+14:390:20396:29:29:71:538:267:144:g_d0_f4:144:g_d0_f4:the U.S. Federal Reserve in 1913, a point to which we will want to return shortly.  But
+14:391:20483:29:29:71:539:238:144:g_d0_f5:144:g_d0_f4:first consider the behavior of this series prior to 1913.  There is at least one asymmetry
+14:392:20573:29:29:71:538:209:144:g_d0_f4:144:g_d0_f4:that Figure 1 and Figure 6 have in common, induced per force by the fact that neither the
+14:393:20662:29:28:71:538:180:144:g_d0_f4:144:g_d0_f4:unemployment rate nor the nominal interest rate can ever go negative, but both can go and
+14:394:20751:28:29:71:538:152:144:g_d0_f4:144:g_d0_f4:occasionally have gone quite far above their usual levels. Notwithstanding, interest rates do
+14:395:20844:29:23:71:538:123:144:g_d0_f4:144:g_d0_f4:not display the same obvious pattern of ups and downs as the unemployment data in Figure
+14:396:20932:23:16:85:539:100:50:g_d0_f4:102:g_d0_f4:5Taken from Macaulay (1938, Column 3, Table 10, pp. A142-161.  Macaulay describes these as îchoice
+14:397:21030:16:12:71:538:84:102:g_d0_f4:102:g_d0_f4:60-90 day two name paperî up to 1923 and îfour to six month prime double and single name paperî from
+14:398:21130:12:0:71:108:72:102:g_d0_f4:102:g_d0_f4:1924 on.
+15:399:21140:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:1. Indeed, apart from seasonalfluctuations stemming from the predominance of agriculture
+15:400:21228:29:29:71:539:642:144:g_d0_f4:144:g_d0_f4:in the economy over this period, such predictable swings might be difficult to reconcile with
+15:401:21321:29:29:71:539:613:144:g_d0_f4:144:g_d0_f4:the view that asset markets function efficiently given investorsí ability to arbitrage between
+15:402:21415:29:29:71:539:584:144:g_d0_f4:144:g_d0_f4:securities of different maturities.  Nevertheless, there are a number of interest-rate spikes
+15:403:21508:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:prior to 1913 that are quite dramatic visually and that have been delegated particular names
+15:404:21600:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:as important points of reference for economic historians, names such as the Crisis of 1857,
+15:405:21691:29:29:71:254:497:144:g_d0_f4:144:g_d0_f4:Crisis of 1873, or the Panic of 1893.
+15:406:21728:29:28:89:539:468:144:g_d0_f4:144:g_d0_f4:As in the case of postwar unemployment rates, there is no obvious periodicity to the
+15:407:21812:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:occurrence of these interest rate spikes.  Figure 7 plots the spectrum of interest rates over
+15:408:21905:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:the 1857:1 to 1913:12 period, which again is dominated by the lowest frequencies.  There is
+15:409:21996:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:a noticeable local peak associated with cycles of a 12-month period, reflecting the tendency
+15:410:22088:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:of interest rates to be highest in the winter months when agricultural borrowing needs were
+15:411:22179:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:greatest.  But again there is no mass whatever for what are often described as ìbusiness
+15:412:22267:29:29:71:387:295:144:g_d0_f4:144:g_d0_f4:cycle frequencies,î namely cycles with periods of 3 to 5 years.
+15:413:22330:29:29:89:539:266:144:g_d0_f4:144:g_d0_f4:For a baseline model, we estimated a slight generalization of the model in equations
+15:414:22414:29:36:71:538:237:144:g_d0_f4:144:g_d0_f4:(1)-(3) to allow for a possible seasonal pattern in interest rates, replacing equation (2) with
+15:415:22509:36:37:242:539:201:144:g_d0_f11:144:g_d0_f4:ut=zt−φ1zt−1−φ2zt−2(7)
+15:416:22531:37:34:243:367:164:144:g_d0_f11:144:g_d0_f14:zt=yt−c−γcos(πt/6)
+15:417:22549:34:29:71:539:130:144:g_d0_f4:144:g_d0_f4:forytnow the interest rate andt=1corresponding to the January 1857 observation.  A
+15:418:22631:29:29:71:539:101:144:g_d0_f4:144:g_d0_f4:positive value ofγwould reflect the tendency for interest rates to peak around December.
+15:419:22719:29:0:71:538:72:144:g_d0_f4:144:g_d0_f4:The likelihood was then maximized numerically over 1857:3 to 1913:12, resulting in the
+16:420:22807:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:estimates reported in Table 3.  Once again allowing Student t innovations implies a huge
+16:421:22895:29:29:71:469:642:144:g_d0_f4:144:g_d0_f4:improvement in the log likelihood over a Gaussian specification (see Table 4).
+16:422:22973:29:29:89:539:613:144:g_d0_f4:144:g_d0_f4:Apart from the seasonal cycle in agriculture, economic theory would lead us to expect
+16:423:23058:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:that changes in interest rates are much harder to forecast than the unemployment rate.  A
+16:424:23147:29:29:71:539:555:144:g_d0_f4:144:g_d0_f4:Markov-switching specification related to that in (5) is to allow the variance rather than the
+16:425:23241:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:intercept to change with the regime, so that the conditional log density of thetth observation
+16:426:23335:29:29:71:79:497:144:g_d0_f4:144:g_d0_f4:is
+16:427:23337:29:0:143:412:468:144:g_d0_f14:144:g_d0_f14:logf(yt|st=j, yt−1,yt−2, ..., y1)=kj−[(ν+1)/2] log
+16:428:23387:0:17:414:420:485:144:g_d0_f16:144:g_d0_f16:∑
+16:429:23388:17:0:420:440:468:144:g_d0_f14:144:g_d0_f14:1+
+16:430:23390:0:16:445:455:476:144:g_d0_f11:65:g_d0_f12:u2t
+16:431:23393:16:0:442:458:460:144:g_d0_f19:65:g_d0_f12:νσ2j
+16:432:23397:0:52:461:467:485:144:g_d0_f16:144:g_d0_f16:∏
+16:433:23398:52:35:160:450:433:144:g_d0_f11:144:g_d0_f14:kj=log{Γ[(ν+1)/2]}−log{Γ[ν/2]}−(1/2) log(σ2jνπ)
+16:434:23445:35:29:71:539:398:144:g_d0_f4:144:g_d0_f4:whereutis again given by (7).  Here we allow only two regimes, with the scale parameter
+16:435:23532:29:29:71:494:369:144:g_d0_f4:144:g_d0_f4:taking the valueσ1in the low-variance regime andσ2in the high-variance regime.
+16:436:23610:29:29:89:539:340:144:g_d0_f4:144:g_d0_f4:As seen in Table 4, allowing the possibility of changes in the variance parameter over
+16:437:23696:29:29:71:539:311:144:g_d0_f4:144:g_d0_f4:time again leads to a very big improvement in thefit to the data.  We can also again use
+16:438:23784:29:29:71:538:282:144:g_d0_f4:144:g_d0_f4:the Carasco, Hu, and Ploberger test, this time constructed for the alternative of a Markov-
+16:439:23875:29:29:71:538:253:144:g_d0_f4:144:g_d0_f4:switching variance, as described in the appendix.  The test statistic is 63.34, which vastly
+16:440:23967:29:29:71:538:224:144:g_d0_f4:144:g_d0_f4:exceeds the 5% critical value of 3.68, and indeed exceeds the largest value (19.28) among
+16:441:24056:29:28:71:284:195:144:g_d0_f4:144:g_d0_f4:any of our 1000 Monte Carlo simulations.
+16:442:24096:28:29:89:539:167:144:g_d0_f4:144:g_d0_f4:The maximum likelihood estimates are reported in Table 5.  Regime 2 is characterized
+16:443:24180:29:29:71:538:138:144:g_d0_f4:144:g_d0_f4:by a variance of interest rate innovations that is thrice that for regime 1, with the ergodic
+16:444:24273:29:29:71:538:109:144:g_d0_f4:144:g_d0_f4:probabilities implying that the economy would spend about 80% of the time in the low-
+16:445:24358:29:0:71:538:80:144:g_d0_f4:144:g_d0_f4:variance regime.  Smoothed probabilistic inferences about when U.S. interest rates were
+17:446:24447:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:unusually volatile are graphed in the middle panel of Figure 8, and repeated in the bottom
+17:447:24537:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:graph for comparison with NBER-dated recessions (shown as shaded regions) over this pe-
+17:448:24624:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:riod. Those dates for which the smoothed probability of being in the high-variance regime,
+17:449:24714:29:29:71:538:584:144:g_d0_f14:144:g_d0_f4:Pr(st=2|y1,y2, ..., yT;ˆθ),exceeds one-half are categorized in Table 6 as episodes of unusually
+17:450:24809:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:volatile interest rates for further comparison with the dates NBER has ascribed to economic
+17:451:24900:29:29:71:539:526:144:g_d0_f4:144:g_d0_f4:recessions.6The correspondence between these two sets of dates is strong, but not perfect.
+17:452:24990:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:There are a half-dozen recessions in the 1880ís and early 1900ís when nothing much was
+17:453:25076:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:happening to interest rates, and one interest rate spike (in 1898) which comes in the middle
+17:454:25168:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:of an economic expansion.  A long episode of interest rate volatility in the late 1860ís and
+17:455:25260:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:early 1870ís also correlates rather weakly with the recessions at those times.  On the other
+17:456:25352:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:hand, there are a number of other recessions, notably those of 1857-58, 1860-61, 1893, and
+17:457:25442:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:1896, which match up perfectly with very dramatic shifts in the interest rate regime.  The
+17:458:25532:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:suggestion thus seems strong that an important shift in the interest rate process is indeed
+17:459:25623:29:29:71:469:295:144:g_d0_f4:144:g_d0_f4:related to some but by no means all of the 19th-century economic downturns.
+17:460:25698:29:29:89:539:266:144:g_d0_f4:144:g_d0_f4:The asymmetry found in unemployment dynamicsó that unemployment rises above its
+17:461:25777:29:29:71:538:237:144:g_d0_f4:144:g_d0_f4:average rate more quickly than it falls below its average rateó seemed to suggest rather
+17:462:25865:29:29:71:539:208:144:g_d0_f4:144:g_d0_f4:directly that macroeconomic theorists should be looking for different explanations as to why
+17:463:25957:29:28:71:538:179:144:g_d0_f4:144:g_d0_f4:employment rises and falls.  By contrast, the deficiency of a homoskedastic linear model
+17:464:26045:28:29:71:538:151:144:g_d0_f4:144:g_d0_f4:as a description of 19th-century interest rate dynamicsó that interest rates are much more
+17:465:26135:29:24:71:538:122:144:g_d0_f4:144:g_d0_f4:volatile at some times than othersó would be consistent with any model that implies GARCH
+17:466:26224:24:0:85:393:98:50:g_d0_f4:102:g_d0_f4:6These can be found at http://www.nber.org/cycles/cyclesmain.html.
+18:467:26292:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:effects on interest rates.7However, it does seem fair to describe thisfinding as implying
+18:468:26381:29:29:71:539:642:144:g_d0_f4:144:g_d0_f4:that, at least during some of the 19th-century recessions, interest rates were being influenced
+18:469:26476:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:by some forces that are not operating in usual times, or, perhaps more strongly, that the
+18:470:26565:29:29:71:539:584:144:g_d0_f5:144:g_d0_f4:financial crises emphasized by early students of the business cycle are in some important
+18:471:26654:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:respects qualitatively different from the factors governing normal interest ratefluctuations.
+18:472:26747:29:29:89:539:526:144:g_d0_f4:144:g_d0_f4:It is quite apparent from Figure 6 that the behavior of short-term interest rates changed
+18:473:26836:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:dramatically after the Federal Reserve Act in 1913, as both the seasonality and the sharp
+18:474:26925:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:spikes in interest rates were successfully eliminated.8However, a few broad surges in
+18:475:27010:28:29:71:539:440:144:g_d0_f4:144:g_d0_f4:interest rates after the founding of the Fed are certainly identifiable in the post-Fed data.
+18:476:27103:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:These precede the economic downturn of 1920-21 and the Great Depression beginning in
+18:477:27187:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:1929, in addition to a minor spike coinciding with the worsening economic situation in
+18:478:27273:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:1931.9This post-Fed correlation led many economists to conclude that the contribution
+18:479:27358:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:of liquidity crunches to economic downturns did not end with the founding of the Federal
+18:480:27446:29:29:71:113:295:144:g_d0_f4:144:g_d0_f4:Reserve.
+18:481:27454:29:29:89:539:266:144:g_d0_f4:144:g_d0_f4:Indeed, there is some indication that this pattern is a characteristic of postwar business
+18:482:27544:29:29:71:539:237:144:g_d0_f4:144:g_d0_f4:cycles as well.  The top panel of Figure 9 displays U.S. 6-month Treasury bill rates10from
+18:483:27634:29:29:71:538:208:144:g_d0_f4:144:g_d0_f4:1958:12 to 2004:4 along with U.S. recessions as shaded areas.  Again oneís eye is tempted
+18:484:27723:29:23:71:538:179:144:g_d0_f4:144:g_d0_f4:to see a recurrent tendency for the interest rate to surge upward prior to every postwar
+18:485:27811:23:21:85:294:156:50:g_d0_f4:102:g_d0_f4:7See for example Granger and Machina (2004).
+18:486:27855:21:20:85:482:135:50:g_d0_f4:102:g_d0_f4:8See Mironís (1986) interesting discussion of the possible relation between these two facts.
+18:487:27947:20:20:85:539:115:50:g_d0_f4:102:g_d0_f4:9Among the many discussing these events are Friedman and Schwartz (1963) and Hamilton (1987, 1988).
+18:488:28046:20:16:81:539:95:50:g_d0_f4:102:g_d0_f4:10These are averages over business days during the month from the secondary market.  Data are from
+18:489:28144:16:0:71:345:79:102:g_d0_f4:102:g_d0_f4:the FRED data base of the Federal Reserve Bank of St. Louis.
+19:490:28206:0:29:71:504:671:144:g_d0_f4:144:g_d0_f4:recession, though the pattern is more convincing for some recessions than for others.
+19:491:28291:29:29:89:539:642:144:g_d0_f4:144:g_d0_f4:Bansal and Zhou (2002), Ang and Bekaert (2002) and Dai, Singleton, and Yang (2003)
+19:492:28373:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:have used a Markov-switching framework to suggest that a connection between interest rate
+19:493:28462:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:volatility and economic recessions also characterizes postwar data.  We applied the method
+19:494:28552:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:used to analyze 19th-century interest rates to postwar data, with two changes.  First, the
+19:495:28642:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:term representing the agricultural seasonal was dropped.  Second, we estimated the model
+19:496:28730:29:29:71:539:497:144:g_d0_f4:144:g_d0_f4:in differences rather than levels. The reason is that levels estimation results in one root that
+19:497:28826:29:28:71:538:468:144:g_d0_f4:144:g_d0_f4:is virtually unity, which would very rarely introduce numerical problems with maximizing
+19:498:28914:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:the log likelihood for simulated samples in the Monte Carlo calculation of the Carasco, Hu,
+19:499:29005:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:and Ploberger statistic (though results reported below are otherwise identical for estimation
+19:500:29098:29:29:71:224:382:144:g_d0_f4:144:g_d0_f4:in either levels or differences).
+19:501:29131:29:29:89:539:353:144:g_d0_f4:144:g_d0_f4:Table 7 replicates thefindings on our other two data sets: the data are far better described
+19:502:29223:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:with Student t as opposed to Normal innovations, and further allowing for Markov-switching
+19:503:29313:29:29:71:539:295:144:g_d0_f4:144:g_d0_f4:in the variance yields a further huge improvement infit.  Again the Carrasco, Hu, and
+19:504:29398:29:29:71:538:266:144:g_d0_f4:144:g_d0_f4:Ploberger statistic of 137.38 far exceeds the 95% critical value of 4.03 and indeed any value
+19:505:29491:29:29:71:297:237:144:g_d0_f4:144:g_d0_f4:in our 1000 Monte Carlo simulated samples.
+19:506:29533:29:29:89:539:208:144:g_d0_f4:144:g_d0_f4:Maximum likelihood estimates are reported in Table 8.  The standard deviation of the
+19:507:29617:29:28:71:538:179:144:g_d0_f4:144:g_d0_f4:innovation is four times as big in regime 2 compared to regime 1. The bottom panel of Figure
+19:508:29709:28:29:71:538:151:144:g_d0_f4:144:g_d0_f4:9 plots the smoothed probability that the economy was in the high-volatility regime for each
+19:509:29801:29:29:71:538:122:144:g_d0_f4:144:g_d0_f4:month. As in the 19th-century data, there appears to be a clear connection between interest
+19:510:29892:29:0:71:538:93:144:g_d0_f4:144:g_d0_f4:rate volatility and economic recessions, at least for the recessions of 1973-75, 1980, and 1981-
+20:511:29990:0:29:71:539:671:144:g_d0_f4:144:g_d0_f4:82, confirming Bansal and Zhouís (2002), Ang and Bekaertís (2002) and Dai, Singleton, and
+20:512:30079:29:29:71:415:642:144:g_d0_f4:144:g_d0_f4:Yangís (2003) conclusions from the volatility of the term structure.
+20:513:30147:29:29:89:539:613:144:g_d0_f4:144:g_d0_f4:Nor is this pattern unique to the United States.  For example, Neumeyer and Perri
+20:514:30228:29:29:71:538:584:144:g_d0_f4:144:g_d0_f4:(2004) noted that domestic interest rate spikes preceded the strong economic downturns in
+20:515:30317:29:29:71:538:555:144:g_d0_f4:144:g_d0_f4:Mexico in 1994, Brazil and Argentina in 1995, and Korea and the Philippines in 1997, each
+20:516:30406:29:29:71:539:526:144:g_d0_f4:144:g_d0_f4:of which had important similarities with thefinancial crises seen repeatedly in the United
+20:517:30496:29:40:71:238:497:144:g_d0_f4:144:g_d0_f4:States in the nineteenth century.
+20:518:30529:40:40:71:198:457:303:dcbx10:303:dcbx10:4  Conclusion.
+20:519:30543:40:29:71:538:417:144:g_d0_f4:144:g_d0_f4:We now return to the question posed in the title of this paper, ìWhatís real about the
+20:520:30629:29:29:71:538:388:144:g_d0_f4:144:g_d0_f4:business cycle?î   If an accurate statistical description of the dynamic behavior of key
+20:521:30717:29:29:71:538:359:144:g_d0_f4:144:g_d0_f4:economic magnitudes is a time-invariant linear model such as equation (4), then the correct
+20:522:30808:29:29:71:538:330:144:g_d0_f4:144:g_d0_f4:answer is, there is no such thing as a business cycle.  In this case, we might as well stop
+20:523:30899:29:29:71:538:301:144:g_d0_f4:144:g_d0_f4:using the phrase ìthe business cycle,î inherited from a less-informed century, and continue
+20:524:30990:29:29:71:538:272:144:g_d0_f4:144:g_d0_f4:with our efforts at trying to describe short-run economicfluctuations as being governed by
+20:525:31080:29:29:71:375:243:144:g_d0_f4:144:g_d0_f4:the same factors that determine long-run economic growth.
+20:526:31137:29:29:89:539:214:144:g_d0_f4:144:g_d0_f4:However, weíve encountered substantial statistical evidence that there are some features
+20:527:31225:29:28:71:538:185:144:g_d0_f4:144:g_d0_f4:of both unemployment and interest-rate dynamics that are inconsistent with a time-invariant
+20:528:31316:28:29:71:539:157:144:g_d0_f4:144:g_d0_f4:linear specification.  Each of these series seems to exhibit different dynamic behavior in
+20:529:31406:29:29:71:538:128:144:g_d0_f4:144:g_d0_f4:recessions and expansions.  The unemployment rate rises more quickly than it falls, and
+20:530:31493:29:0:71:538:99:144:g_d0_f4:144:g_d0_f4:this often occurs at the same time as rapid spikes up and then back down in short-term
+21:531:31581:0:29:71:538:671:144:g_d0_f4:144:g_d0_f4:interest rates.  If moving between such episodes is indeed what we mean by ìthe business
+21:532:31669:29:29:71:538:642:144:g_d0_f4:144:g_d0_f4:cycle,î then the correct answer to our question is, the business cycle is very much a real,
+21:533:31760:29:29:71:538:613:144:g_d0_f4:144:g_d0_f4:objectively measurable phenomenon, in which case keeping both the phrase as well as the
+21:534:31847:29:29:71:422:584:144:g_d0_f4:144:g_d0_f4:research program that the expression invites seems well worth while.
+21:535:31915:29:29:89:542:555:144:g_d0_f4:144:g_d0_f4:Thepaperístitleisofcoursealsoaplayonwords,insofarasìrealbusinesscycletheoryî
+21:536:31991:29:29:71:538:526:144:g_d0_f4:144:g_d0_f4:is derived from a class of models in which short-run economicfluctuations are driven by
+21:537:32078:29:29:71:538:497:144:g_d0_f4:144:g_d0_f4:the same real (i.e., nonmonetary) factors that are responsible for long-run growth.  Our
+21:538:32166:29:28:71:539:468:144:g_d0_f5:144:g_d0_f4:findings cast some doubt on the claim that the business cycle is ìrealî in this sense.  The
+21:539:32257:28:29:71:538:440:144:g_d0_f4:144:g_d0_f4:observation that the dynamics change over the course of the business cycle suggests instead
+21:540:32348:29:29:71:538:411:144:g_d0_f4:144:g_d0_f4:that the forces that cause employment to rise may be quite different from those that cause it
+21:541:32441:29:29:71:538:382:144:g_d0_f4:144:g_d0_f4:to fall.  Furthermore, the coincidence of this phenomena with large rapid moves in interest
+21:542:32532:29:29:71:538:353:144:g_d0_f4:144:g_d0_f4:rates suggests that something is disrupting the normal functioning of both labor andfinancial
+21:543:32625:29:29:71:538:324:144:g_d0_f4:144:g_d0_f4:markets.  It is difficult to reconcile these facts with a world view in whichfinancial markets
+21:544:32719:29:0:71:264:295:144:g_d0_f4:144:g_d0_f4:play no role in economicfluctuations.
+22:545:32758:0:29:87:522:671:303:g_d0_f4:303:g_d0_f4:Appendix: The Carrasco, Hu, and Ploberger Test for Markov
+22:546:32815:29:45:271:340:642:303:g_d0_f4:303:g_d0_f4:Switching
+22:547:32824:45:28:89:538:597:144:g_d0_f4:144:g_d0_f4:As in equation (1), letlt(θ)denote the conditional log likelihood of thetth observation
+22:548:32911:28:29:71:539:569:144:g_d0_f4:144:g_d0_f4:under the null hypothesis of no Markov-switching, and letl(1)t(θ)andl(2)t(θ)denote itsfirst
+22:549:33002:29:36:71:349:540:144:g_d0_f4:144:g_d0_f4:and second derivatives with respect to the interceptc:
+22:550:33056:36:35:272:539:504:144:eufm10:144:g_d0_f4:l(1)t(θ)=ztut(8)
+22:551:33072:35:0:250:327:469:144:eufm10:144:g_d0_f14:l(2)t(θ)=−zt+
+22:552:33085:0:16:331:357:477:144:g_d0_f14:65:g_d0_f12:2z2tu2t
+22:553:33092:16:0:331:361:461:144:g_d0_f19:144:g_d0_f14:ν+1
+22:554:33095:0:33:524:539:469:144:g_d0_f4:144:g_d0_f4:(9)
+22:555:33098:33:29:71:101:436:144:g_d0_f4:144:g_d0_f4:where
+22:556:33103:29:0:268:289:407:144:g_d0_f11:144:g_d0_f14:zt=
+22:557:33106:0:16:302:332:415:144:g_d0_f19:144:g_d0_f14:ν+1
+22:558:33109:16:0:294:336:399:144:g_d0_f19:65:g_d0_f12:νσ2+u2t
+22:559:33116:0:33:339:342:407:144:g_d0_f11:144:g_d0_f11:.
+22:560:33117:33:29:71:104:374:144:g_d0_f4:144:g_d0_f4:Define
+22:561:33123:29:0:172:266:345:144:g_d0_f19:144:g_d0_f14:γt(ρ;ˆθ)=l(2)t(ˆθ)+
+22:562:33142:0:13:268:274:358:144:g_d0_f16:144:g_d0_f16:h
+22:563:33143:13:0:273:305:345:144:eufm10:144:g_d0_f14:l(1)t(ˆθ)
+22:564:33152:0:13:304:314:358:144:g_d0_f16:65:cmr8:i2
+22:565:33154:13:0:317:337:345:144:g_d0_f14:144:g_d0_f14:+2
+22:566:33156:0:25:337:354:356:144:g_d0_f16:144:g_d0_f16:X
+22:567:33157:25:0:339:353:331:65:g_d0_f12:65:g_d0_f12:s<t
+22:568:33160:0:33:356:438:345:144:g_d0_f19:144:g_d0_f14:ρt−sl(1)t(ˆθ)l(1)s(ˆθ)
+22:569:33182:33:29:71:539:312:144:g_d0_f4:144:g_d0_f4:whereρis a nuisance parameter characterizing the serial correlation of the Markov chain
+22:570:33269:29:29:71:538:283:144:g_d0_f4:144:g_d0_f4:forstunder the alternative hypothesis of Markov switching.  Finally, letht(ˆθ)denote the
+22:571:33357:29:42:71:511:254:144:g_d0_f4:144:g_d0_f4:entire vector of derivatives evaluated at the MLE, of whichl(1)t(ˆθ)is thefirst element,
+22:572:33445:42:0:204:246:212:144:cmbx12:144:g_d0_f14:ht(ˆθ)=
+22:573:33452:0:16:249:279:220:144:g_d0_f19:144:g_d0_f14:∂lt(θ)
+22:574:33458:16:0:257:271:204:144:g_d0_f19:144:g_d0_f15:∂θ
+22:575:33460:0:7:280:284:229:144:g_d0_f16:144:g_d0_f16:Ø
+22:576:33461:7:7:280:284:222:144:g_d0_f16:144:g_d0_f16:Ø
+22:577:33462:7:7:280:284:215:144:g_d0_f16:144:g_d0_f16:Ø
+22:578:33463:7:8:280:284:208:144:g_d0_f16:144:g_d0_f16:Ø
+22:579:33464:8:0:284:301:200:65:g_d0_f15:65:g_d0_f15:θ=ˆθ
+22:580:33468:0:0:305:314:212:144:g_d0_f14:144:g_d0_f14:=
+22:581:33469:0:21:317:325:243:144:g_d0_f26:144:g_d0_f26:
+22:582:33470:21:7:317:325:222:144:g_d0_f26:144:g_d0_f26:
+22:583:33471:7:8:317:325:215:144:g_d0_f26:144:g_d0_f26:
+22:584:33472:8:0:317:325:207:144:g_d0_f26:144:g_d0_f26:
+22:585:33473:0:29:330:359:224:144:g_d0_f11:65:g_d0_f12:ztàutxt
+22:586:33480:29:0:330:383:195:144:g_d0_f18:65:g_d0_f12:−12ˆσ2+ztˆu
+22:587:33491:0:13:383:386:203:36:cmr6:36:cmmi6:2t
+22:588:33493:13:0:372:386:190:65:cmr8:36:cmr6:2ˆσ2
+22:589:33497:0:21:393:401:243:144:g_d0_f26:144:g_d0_f26:
+22:590:33498:21:7:393:401:222:144:g_d0_f26:144:g_d0_f26:
+22:591:33499:7:8:393:401:215:144:g_d0_f26:144:g_d0_f26:
+22:592:33500:8:40:393:406:207:144:g_d0_f26:144:g_d0_f11:,
+22:593:33502:40:29:71:539:167:144:g_d0_f4:144:g_d0_f4:forxt=(1,yt−1,yt−2)0and letàεt(ρ;ˆθ)denote the residual from an OLS regression of
+22:594:33583:29:44:71:449:138:144:g_d0_f14:144:g_d0_f4:(1/2)γt(ρ;ˆθ)onht(ˆθ).Carrasco, Hu, and Ploberger proposed calculating
+22:595:33653:44:0:190:242:94:144:g_d0_f11:144:g_d0_f14:C(ρ;ˆθ)=
+22:596:33661:0:21:242:250:125:144:g_d0_f26:144:g_d0_f26:
+22:597:33662:21:7:242:250:104:144:g_d0_f26:144:g_d0_f26:
+22:598:33663:7:7:242:250:97:144:g_d0_f26:144:g_d0_f26:
+22:599:33664:7:0:242:272:90:144:g_d0_f26:144:g_d0_f14:max
+22:600:33668:0:11:274:285:126:144:g_d0_f26:144:g_d0_f26:
+22:601:33669:11:7:274:285:115:144:g_d0_f26:144:g_d0_f26:
+22:602:33671:7:22:274:285:108:144:g_d0_f26:144:g_d0_f26:
+22:603:33672:22:7:274:285:86:144:g_d0_f26:144:g_d0_f26:
+22:604:33674:7:0:274:285:79:144:g_d0_f26:144:g_d0_f26:
+22:605:33675:0:0:284:293:94:144:g_d0_f14:144:g_d0_f11:0,
+22:606:33677:0:12:319:337:111:144:g_d0_f16:65:g_d0_f12:PT
+22:607:33679:12:23:332:374:99:65:g_d0_f12:144:g_d0_f14:t=1γt(ρ)
+22:608:33687:23:0:297:303:76:144:g_d0_f14:144:g_d0_f14:2
+22:609:33688:0:10:303:315:95:144:g_d0_f16:144:g_d0_f16:r
+22:610:33689:10:12:315:332:85:144:g_d0_f16:65:g_d0_f12:PT
+22:611:33691:12:0:327:341:73:65:g_d0_f12:65:cmr8:t=1
+22:612:33694:0:13:344:350:89:144:g_d0_f16:144:g_d0_f16:h
+22:613:33695:13:0:349:386:76:144:g_d0_f14:144:g_d0_f14:àεt(ρ;ˆθ)
+22:614:33704:0:0:386:395:89:144:g_d0_f16:65:cmr8:i2
+22:615:33706:0:11:397:408:126:144:g_d0_f26:144:g_d0_f26:
+22:616:33707:11:7:397:408:115:144:g_d0_f26:144:g_d0_f26:
+22:617:33709:7:22:397:408:108:144:g_d0_f26:144:g_d0_f26:
+22:618:33710:22:7:397:408:86:144:g_d0_f26:144:g_d0_f26:
+22:619:33712:7:0:397:408:79:144:g_d0_f26:144:g_d0_f26:
+22:620:33713:0:21:408:416:125:144:g_d0_f26:144:g_d0_f26:
+22:621:33714:21:7:408:416:104:144:g_d0_f26:144:g_d0_f26:
+22:622:33715:7:7:408:416:97:144:g_d0_f26:144:g_d0_f26:
+22:623:33716:7:0:408:416:90:144:g_d0_f26:144:g_d0_f26:
+22:624:33717:0:29:416:420:123:65:cmr8:65:cmr8:2
+22:625:33718:29:0:518:539:94:144:g_d0_f4:144:g_d0_f4:(10)
+23:626:33724:0:29:71:539:671:144:g_d0_f4:144:g_d0_f11:andfinding the maximum value ofC(ρ;ˆθ)over afixed range of alternatives, sayρ∈[0.2,0.8].
+23:627:33812:29:41:71:398:642:144:g_d0_f4:144:g_d0_f4:In my applications this was achieved by calculating the value of
+23:628:33876:41:0:221:271:601:144:g_d0_f11:144:g_d0_f14:v(λ;ˆθ)=
+23:629:33884:0:12:289:306:618:144:g_d0_f16:65:g_d0_f12:PT
+23:630:33886:12:23:301:372:606:65:g_d0_f12:144:g_d0_f14:t=1γt(ρ(λ);ˆθ)
+23:631:33900:23:0:272:278:583:144:g_d0_f14:144:g_d0_f14:2
+23:632:33901:0:9:278:290:601:144:g_d0_f16:144:g_d0_f16:r
+23:633:33902:9:13:290:308:592:144:g_d0_f16:65:g_d0_f12:PT
+23:634:33904:13:0:303:317:579:65:g_d0_f12:65:cmr8:t=1
+23:635:33907:0:13:319:325:596:144:g_d0_f16:144:g_d0_f16:h
+23:636:33908:13:0:325:377:583:144:g_d0_f14:144:g_d0_f15:àεt(ρ(λ));ˆθ
+23:637:33920:0:44:377:387:596:144:g_d0_f16:65:cmr8:i2
+23:638:33922:44:29:71:85:552:144:g_d0_f4:144:g_d0_f4:for
+23:639:33925:29:0:236:319:523:144:g_d0_f19:144:g_d0_f14:ρ(λ)=0.2+0.6
+23:640:33937:0:8:339:353:531:144:g_d0_f21:144:g_d0_f21:|λ|
+23:641:33940:8:14:320:332:523:144:g_d0_f16:144:g_d0_f16:q
+23:642:33941:14:25:332:373:509:144:g_d0_f14:144:g_d0_f14:(1 +λ2)
+23:643:33948:25:29:71:349:484:144:g_d0_f4:144:g_d0_f4:and maximizingv(λ;ˆθ)numerically with respect toλ.
+23:644:33998:29:29:89:538:455:144:g_d0_f4:144:g_d0_f4:Critical values for the test statisticνwere obtained by parametric bootstrap as follows.
+23:645:34086:29:29:71:539:426:144:g_d0_f4:144:g_d0_f4:A total ofM= 1000samples each of sizeT= 673were generated from (4).  For themth
+23:646:34165:29:0:71:344:397:144:g_d0_f4:144:g_d0_f15:artificial sample, the maximum likelihood estimateˆθ
+23:647:34217:0:8:344:358:405:65:cmr8:65:cmr8:(m)
+23:648:34220:8:29:363:539:397:144:g_d0_f4:144:g_d0_f4:was found by numerical search for
+23:649:34253:29:0:71:288:368:144:g_d0_f4:144:g_d0_f15:that sample and then the functionν(λ;ˆθ
+23:650:34292:0:8:288:302:376:65:cmr8:65:cmr8:(m)
+23:651:34295:8:29:302:539:368:144:g_d0_f14:144:g_d0_f4:)was maximized numerically with respect to
+23:652:34337:29:29:71:538:339:144:g_d0_f19:144:g_d0_f4:λ.Thep-value of the observed statistic for the original sampleν(λ∗,ˆθ)was then estimated
+23:653:34425:29:0:71:354:310:144:g_d0_f4:144:g_d0_f15:from the fraction of themsamples for whichν(λ∗(m),ˆθ
+23:654:34477:0:8:354:368:318:65:cmr8:65:cmr8:(m)
+23:655:34480:8:29:369:469:310:144:g_d0_f14:144:g_d0_f4:)exceededν(λ∗,ˆθ).
+23:656:34498:29:29:89:539:281:144:g_d0_f4:144:g_d0_f4:To test the null of constant regimes against the alternative of Markov-switching in the
+23:657:34585:29:40:71:260:252:144:g_d0_f4:144:g_d0_f4:variance, we replace (8) and (9) with
+23:658:34622:40:0:248:304:212:144:eufm10:144:g_d0_f18:l(1)t(θ)=−
+23:659:34632:0:17:311:317:220:144:g_d0_f14:144:g_d0_f14:1
+23:660:34633:17:0:306:323:203:144:g_d0_f14:65:cmr8:2σ2
+23:661:34636:0:0:327:336:212:144:g_d0_f14:144:g_d0_f14:+
+23:662:34637:0:17:340:359:220:144:g_d0_f11:65:g_d0_f12:ztu2t
+23:663:34642:17:32:341:358:203:144:g_d0_f14:65:cmr8:2σ2
+23:664:34645:32:0:216:262:171:144:eufm10:144:g_d0_f14:l(2)t(θ)=
+23:665:34654:0:16:270:276:179:144:g_d0_f14:144:g_d0_f14:1
+23:666:34655:16:0:264:281:163:144:g_d0_f14:65:cmr8:2σ4
+23:667:34658:0:0:285:294:171:144:g_d0_f18:144:g_d0_f18:−
+23:668:34659:0:16:299:317:179:144:g_d0_f11:65:g_d0_f12:ztu2t
+23:669:34664:16:0:300:317:163:144:g_d0_f14:65:cmr8:2σ4
+23:670:34667:0:0:323:332:171:144:g_d0_f18:144:g_d0_f18:−
+23:671:34668:0:16:348:377:179:144:g_d0_f11:144:g_d0_f19:z2tu2tν
+23:672:34675:16:0:336:392:163:144:g_d0_f14:144:g_d0_f14:2σ2(ν+1)
+23:673:34683:0:0:391:394:171:144:g_d0_f11:144:g_d0_f11:.
+24:674:34686:0:50:268:342:671:303:g_d0_f4:303:g_d0_f4:References
+24:675:34696:50:29:89:538:621:144:g_d0_f4:144:dcti10:Ang, Andrew, and Geert Bekaert. 2002.ìRegime Switches in Interest Rates,îJournal of
+24:676:34779:29:28:71:322:592:144:dcti10:144:g_d0_f4:Business and Economic Statistics20, 2, 163-182.
+24:677:34826:28:29:89:539:564:144:g_d0_f4:144:g_d0_f4:Bansal, Ravi, and Hao Zhou.  2002.  ìTerm Structure of Interest Rates with Regime
+24:678:34907:29:29:71:291:535:144:g_d0_f4:144:g_d0_f4:Shifts,îJournal of Finance,57, 1997-2043.
+24:679:34948:29:29:89:539:506:144:g_d0_f4:144:g_d0_f4:Brock, William A., and Leonard J. Mirman. 1972.  ìOptimal Economic Growth and
+24:680:35025:29:29:71:472:477:144:g_d0_f4:144:g_d0_f4:Uncertainty: The Discounted Case,îJournal of Economic Theory,4: 479-513.
+24:681:35097:29:29:89:538:448:144:g_d0_f4:144:g_d0_f4:Burns, Arthur F., and Wesley C. Mitchell. 1946.Measuring Business Cycles.New
+24:682:35173:29:29:71:308:419:144:g_d0_f4:144:g_d0_f4:York: National Bureau of Economic Research.
+24:683:35216:29:29:89:539:390:144:g_d0_f4:144:dcti10:Burton, Theodore E. 1902.Financial Crises and Periods of Industrial and Commercial
+24:684:35298:29:29:71:319:361:144:dcti10:144:g_d0_f4:Depression.New York: D. Appleton & Co., Inc.
+24:685:35342:29:28:89:539:332:144:g_d0_f4:144:g_d0_f4:Carrasco, Marine, Liang Hu, and Werner Ploberger. 2004. ìOptimal Test for Markov
+24:686:35422:28:29:71:345:304:144:g_d0_f4:144:g_d0_f4:Switching.î  Working paper, University of Rochester.
+24:687:35474:29:29:89:539:275:144:g_d0_f4:144:g_d0_f4:Dai, Qiang, Kenneth J. Singleton, and Wei Yang. 2003. ìRegime Shifts in a Dynamic
+24:688:35555:29:29:71:538:246:144:g_d0_f4:144:g_d0_f4:Term Structure Model of U.S. Treasury Bond Yields,î Working paper, Stern School of
+24:689:35637:29:29:71:231:217:144:g_d0_f4:144:g_d0_f4:Business, New York University.
+24:690:35667:29:29:89:539:188:144:g_d0_f4:144:g_d0_f4:DeLong, J. Bradford, and Lawrence Summers. 1986. ìAre Business Cycles Symmetri-
+24:691:35746:29:29:71:539:159:144:g_d0_f4:144:g_d0_f4:cal?,î in Robert J. Gordon, ed.,The American Business Cycle.Chicago: National Bureau
+24:692:35830:29:29:71:354:130:144:g_d0_f4:144:g_d0_f4:of Economic Research and University of Chicago Press.
+24:693:35883:29:29:89:539:101:144:g_d0_f4:144:g_d0_f4:Fisher, Irving. 1932.Booms and Depressions: Some First Principles.New York: Adel-
+24:694:35964:29:0:71:142:72:144:g_d0_f4:144:g_d0_f4:phi Company.
+25:695:35978:0:29:89:539:671:144:g_d0_f4:144:g_d0_f4:Friedman, Milton. 1969.The Optimum Quantity of Money and Other Essays. Chicago:
+25:696:36057:29:29:71:108:642:144:g_d0_f4:144:g_d0_f4:Aldine.
+25:697:36064:29:29:89:539:613:144:g_d0_f4:144:dcti10:_____, and Anna J. Schwartz. 1963.A Monetary History of the United States, 1867-
+25:698:36144:29:29:71:291:584:144:dcti10:144:g_d0_f4:1960.Princeton: Princton University Press.
+25:699:36186:29:29:89:539:555:144:g_d0_f4:144:g_d0_f4:Garcia, Rene (1998).  ìAsymptotic Null Distribution of the Likelihood Ratio Test in
+25:700:36269:29:29:71:444:526:144:g_d0_f4:144:g_d0_f4:Markov Switching Models,îInternational Economic Review39, 763-788.
+25:701:36335:29:29:89:539:497:144:g_d0_f4:144:g_d0_f4:Granger, Clive W.J., and Mark J. Machina. 2004. ìStructural Attribution of Observed
+25:702:36418:29:28:71:304:468:144:g_d0_f4:144:g_d0_f4:Volatility Clustering,î working paper, UCSD.
+25:703:36462:28:29:89:539:440:144:g_d0_f4:144:dcti10:Hamilton, James D. 1987.  ìMonetary Factors in the Great Depression,îJournal of
+25:704:36541:29:29:71:245:411:144:dcti10:144:g_d0_f4:Monetary Economics19, 145-169.
+25:705:36571:29:29:89:539:382:144:g_d0_f4:144:g_d0_f4:_____. 1988. ìRole of the International Gold Standard in Propagating the Great
+25:706:36649:29:29:71:335:353:144:g_d0_f4:144:g_d0_f4:Depression.îContemporary Policy Issues,6, 67-89.
+25:707:36697:29:29:89:491:324:144:g_d0_f4:144:g_d0_f4:_____. 1994.Time Series Analysis.Princeton: Princeton University Press.
+25:708:36768:29:29:89:538:295:144:g_d0_f4:144:dcti10:_____. 1996. ìSpecification Testing in Markov-Switching Time-Series Models,îJour-
+25:709:36849:29:29:71:242:266:144:dcti10:144:g_d0_f4:nal of Econometrics70, 127-157.
+25:710:36880:29:29:89:539:237:144:g_d0_f4:144:g_d0_f4:Hansen, Bruce E. (1992). ìThe Likelihood Ratio Test under Non-Standard Conditions,î
+25:711:36963:29:29:71:448:208:144:dcti10:144:g_d0_f4:Journal of Applied Econometrics 7, S61-82.Erratum, 1996, 11, 195-198.
+25:712:37032:29:28:89:539:179:144:g_d0_f4:144:g_d0_f4:Kydland, Finn E., and Edward C. Prescott.  1982.  ìTime to Build and Aggregate
+25:713:37110:28:29:71:295:151:144:g_d0_f4:144:g_d0_f4:Fluctuations,îEconometrica,50:1345-1370.
+25:714:37150:29:29:89:539:122:144:g_d0_f4:144:dcti10:Macaulay, Frederick R. 1938.The Movements of Interest Rates, Bond Yields and Stock
+25:715:37232:29:0:71:538:93:144:dcti10:144:g_d0_f4:Prices in the United States since 1856.New York: National Bureau of Economic Research.
+26:716:37320:0:29:89:539:671:144:g_d0_f4:144:g_d0_f4:Miron, Jeffrey A. 1986. ìFinancial Panics, the Seasonality of the Nominal Interest Rate,
+26:717:37408:29:29:71:446:642:144:g_d0_f4:144:dcti10:and the Founding of the Fed.îAmerican Economic Review, 76, 125-140.
+26:718:37475:29:29:89:539:613:144:g_d0_f4:144:g_d0_f4:Mitchell, Wesley C. 1927.Business Cycles: The Problem and Its Setting.New York:
+26:719:37554:29:29:71:275:584:144:g_d0_f4:144:g_d0_f4:National Bureau of Economic Research.
+26:720:37591:29:29:89:538:555:144:g_d0_f4:144:g_d0_f4:_____.1951.What Happens During Business Cycles.New York: National Bureau of
+26:721:37666:29:29:71:173:526:144:g_d0_f4:144:g_d0_f4:Economic Research.
+26:722:37684:29:29:89:539:497:144:g_d0_f4:144:g_d0_f4:Montgomery, Alan L., Victor Zarnowitz, Ruey S. Tsay, and George C. Tiao.  1998.
+26:723:37763:29:28:71:539:468:144:g_d0_f4:144:dcti10:ìForecasting the U.S. Unemployment Rate,îJournal of the American Statistical Association,
+26:724:37852:28:29:71:132:440:144:g_d0_f4:144:g_d0_f4:93, 478-493.
+26:725:37864:29:29:89:539:411:144:g_d0_f4:144:g_d0_f4:Neumeyer, Pablo A., and Fabrizio Perri. 2004. ìBusiness Cycles in Emerging Economies:
+26:726:37949:29:29:71:394:382:144:g_d0_f4:144:g_d0_f4:The Role of Interest Rates,î NBER Working Paper No. 10387.
+26:727:38007:29:29:89:538:353:144:g_d0_f4:144:dcti10:Rothman, Philip.  1998.  ìForecasting Asymmetric Unemployment Rates,îReview of
+26:728:38085:29:29:71:268:324:144:dcti10:144:g_d0_f4:Economics and Statistics,80, 164-168.
+26:729:38122:29:29:89:539:295:144:g_d0_f4:144:dcti10:Stock, James H. 1987. ìMeasuring Business Cycle Time,îJournal of Political Economy,
+26:730:38205:29:29:71:140:266:144:g_d0_f4:144:g_d0_f4:95:1240-1261.
+26:731:38218:29:29:89:539:237:144:g_d0_f4:144:g_d0_f4:_____. 1988. ìEstimating Continuous Time Processes Subject to Time Deformation:
+26:732:38297:29:29:71:539:208:144:g_d0_f4:144:g_d0_f4:An Application to Postwar U.S. GNP,îJournal of the American Statistical Association,83,
+26:733:38384:29:28:71:102:179:144:g_d0_f4:144:g_d0_f4:77-85.
+26:734:38390:28:29:89:539:151:144:g_d0_f4:144:g_d0_f4:van Dijk, Dick, Philip Hans Franses, and Richard Paap.  2002.  ìA Nonlinear Long
+26:735:38470:29:29:71:539:122:144:g_d0_f4:144:g_d0_f4:Memory Model, with an Application to U.S. Unemployment,îJournal of Econometrics,
+26:736:38550:29:0:71:138:93:144:g_d0_f4:144:g_d0_f4:110, 135-165.
+27:737:38565:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 1
+27:738:38572:42:29:89:412:629:144:g_d0_f4:144:g_d0_f4:Comparison of selected models of postwar unemployment rates
+27:739:38631:29:33:89:534:600:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+27:740:38669:33:29:170:557:567:144:g_d0_f4:144:g_d0_f4:Model# of parameters  Log likelihood  Schwarz criterion
+27:741:38724:29:29:144:526:538:144:g_d0_f4:144:g_d0_f4:Gaussian AR(2)475.5962.57
+27:742:38749:29:29:143:529:509:144:g_d0_f4:144:g_d0_f4:Student t AR(2)5127.63111.35
+27:743:38777:29:88:95:528:480:144:g_d0_f4:144:g_d0_f4:Student t AR(2) with MS intercept11174.58138.77
+27:744:38824:88:29:89:534:392:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+27:745:38862:29:29:89:538:363:144:g_d0_f4:144:g_d0_f4:Note: Schwarz criterion calcualted asL−(k/2) log(T)forLthe log likelihood,kthe
+27:746:38940:29:0:71:341:334:144:g_d0_f4:144:g_d0_f4:number of parameters, andT= 673the sample size.
+28:747:38989:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 2
+28:748:38996:42:29:89:539:629:144:g_d0_f4:144:g_d0_f4:Maximum likelihood estimates of 3-state Markov-switching model for postwar unemploy-
+28:749:39080:29:41:71:121:600:144:g_d0_f4:144:g_d0_f4:ment rate
+28:750:39089:41:21:89:534:559:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+28:751:39127:21:29:95:513:538:144:g_d0_f4:144:g_d0_f4:symbolexplanationMLEstd error
+28:752:39156:29:29:108:508:509:144:g_d0_f11:144:g_d0_f4:c1normal intercept0.06050.0294
+28:753:39186:29:29:108:505:480:144:g_d0_f11:144:g_d0_f4:c2mild recession intercept0.3070.038
+28:754:39222:29:29:108:505:451:144:g_d0_f11:144:g_d0_f4:c3severe recession intercept0.7150.075
+28:755:39260:29:29:107:508:422:144:g_d0_f19:144:g_d0_f4:φ1first AR coefficient0.85840.0371
+28:756:39294:29:28:107:508:393:144:g_d0_f19:144:g_d0_f4:φ2second AR coefficient0.12170.0366
+28:757:39329:28:29:110:505:365:144:g_d0_f19:144:g_d0_f4:σstandard dev/scale0.1340.007
+28:758:39358:29:55:110:502:336:144:g_d0_f19:144:g_d0_f4:νdegrees of freedom5.091.01
+28:759:39385:55:0:103:262:281:144:g_d0_f14:144:g_d0_f4:[pij]state transition probs
+28:760:39412:0:21:284:292:326:144:g_d0_f26:144:g_d0_f26:
+28:761:39413:21:7:284:292:305:144:g_d0_f26:144:g_d0_f26:
+28:762:39414:7:7:284:292:298:144:g_d0_f26:144:g_d0_f26:
+28:763:39415:7:7:284:292:291:144:g_d0_f26:144:g_d0_f26:
+28:764:39416:7:8:284:292:284:144:g_d0_f26:144:g_d0_f26:
+28:765:39417:8:7:284:292:276:144:g_d0_f26:144:g_d0_f26:
+28:766:39418:7:7:284:292:269:144:g_d0_f26:144:g_d0_f26:
+28:767:39419:7:0:284:292:262:144:g_d0_f26:144:g_d0_f26:
+28:768:39420:0:29:297:386:307:144:g_d0_f14:144:g_d0_f14:0.971  0.145   0
+28:769:39436:29:29:297:396:278:144:g_d0_f14:144:g_d0_f14:0.029  0.778  0.508
+28:770:39455:29:0:307:396:249:144:g_d0_f14:144:g_d0_f14:00.077  0.492
+28:771:39468:0:21:401:409:326:144:g_d0_f26:144:g_d0_f26:
+28:772:39469:21:7:401:409:305:144:g_d0_f26:144:g_d0_f26:
+28:773:39470:7:7:401:409:298:144:g_d0_f26:144:g_d0_f26:
+28:774:39471:7:7:401:409:291:144:g_d0_f26:144:g_d0_f26:
+28:775:39472:7:8:401:409:284:144:g_d0_f26:144:g_d0_f26:
+28:776:39473:8:7:401:409:276:144:g_d0_f26:144:g_d0_f26:
+28:777:39474:7:7:401:409:269:144:g_d0_f26:144:g_d0_f26:
+28:778:39475:7:0:401:409:262:144:g_d0_f26:144:g_d0_f26:
+28:779:39476:0:21:421:429:326:144:g_d0_f26:144:g_d0_f26:
+28:780:39477:21:7:421:429:305:144:g_d0_f26:144:g_d0_f26:
+28:781:39478:7:7:421:429:298:144:g_d0_f26:144:g_d0_f26:
+28:782:39479:7:7:421:429:291:144:g_d0_f26:144:g_d0_f26:
+28:783:39480:7:8:421:429:284:144:g_d0_f26:144:g_d0_f26:
+28:784:39481:8:7:421:429:276:144:g_d0_f26:144:g_d0_f26:
+28:785:39482:7:7:421:429:269:144:g_d0_f26:144:g_d0_f26:
+28:786:39483:7:0:421:429:262:144:g_d0_f26:144:g_d0_f26:
+28:787:39484:0:29:434:550:307:144:g_d0_f14:144:g_d0_f18:0.010   0.046−−−
+28:788:39500:29:29:434:541:278:144:g_d0_f14:144:g_d0_f14:0.010   0.065  0.193
+28:789:39520:29:0:434:541:249:144:g_d0_f18:144:g_d0_f14:−−−0.041  0.193
+28:790:39535:0:21:552:560:326:144:g_d0_f26:144:g_d0_f26:
+28:791:39536:21:7:552:560:305:144:g_d0_f26:144:g_d0_f26:
+28:792:39537:7:7:552:560:298:144:g_d0_f26:144:g_d0_f26:
+28:793:39538:7:7:552:560:291:144:g_d0_f26:144:g_d0_f26:
+28:794:39539:7:8:552:560:284:144:g_d0_f26:144:g_d0_f26:
+28:795:39540:8:7:552:560:276:144:g_d0_f26:144:g_d0_f26:
+28:796:39541:7:7:552:560:269:144:g_d0_f26:144:g_d0_f26:
+28:797:39542:7:0:552:560:262:144:g_d0_f26:144:g_d0_f26:
+29:798:39545:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 3
+29:799:39552:42:41:89:495:629:144:g_d0_f4:144:g_d0_f4:Maximum likelihood estimates of baseline model for 19th-century interest rates
+29:800:39630:41:21:89:510:588:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññ
+29:801:39666:21:29:95:351:567:144:g_d0_f4:144:g_d0_f4:symbolexplanationMLE  std error
+29:802:39697:29:29:111:340:538:144:g_d0_f11:144:g_d0_f4:ctypical interest rate    5.110.18
+29:803:39731:29:29:107:343:509:144:g_d0_f19:144:g_d0_f4:φ1first AR coefficient   1.104    0.031
+29:804:39770:29:29:107:343:480:144:g_d0_f19:144:g_d0_f4:φ2second AR coefficient  -0.212   0.026
+29:805:39809:29:29:110:343:451:144:g_d0_f19:144:g_d0_f4:γeffect of seasonal0.444    0.070
+29:806:39842:29:29:110:343:422:144:g_d0_f19:144:g_d0_f4:σscale factor0.407    0.021
+29:807:39869:29:0:110:340:393:144:g_d0_f19:144:g_d0_f4:νdegrees of freedom2.280.24
+30:808:39898:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 4
+30:809:39905:42:41:89:400:629:144:g_d0_f4:144:g_d0_f4:Comparison of selected models of 19th-century interest rates
+30:810:39965:41:21:89:534:588:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+30:811:40003:21:29:168:553:567:144:g_d0_f4:144:g_d0_f4:Model# of parameters  Log likelihood  Schwarz criterion
+30:812:40058:29:29:143:527:538:144:g_d0_f4:144:g_d0_f4:Gaussian AR(2)5-932.67-948.99
+30:813:40087:29:29:142:527:509:144:g_d0_f4:144:g_d0_f4:Student t AR(2)6-677.05-696.63
+30:814:40117:29:76:95:527:480:144:g_d0_f4:144:g_d0_f4:Student t AR(2) with MS variance9-633.58-662.95
+30:815:40164:76:29:89:534:404:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+30:816:40202:29:29:89:538:375:144:g_d0_f4:144:g_d0_f18:Note: All models also include cosine seasonal.   Schwarz criterion calcualted asL−
+30:817:40284:29:29:71:538:346:144:g_d0_f14:144:g_d0_f4:(k/2) log(T)forLthe log likelihood,kthe number of parameters, andT= 682the sample
+30:818:40365:29:0:71:92:317:144:g_d0_f4:144:g_d0_f4:size.
+31:819:40372:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 5
+31:820:40379:42:41:89:539:629:144:g_d0_f4:144:g_d0_f4:Maximum likelihood estimates of Markov-switching model for 19th century interest rates
+31:821:40465:41:21:89:534:588:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+31:822:40503:21:29:95:413:567:144:g_d0_f4:144:g_d0_f4:symbolexplanationMLE   std error
+31:823:40535:29:29:111:402:538:144:g_d0_f11:144:g_d0_f4:ctypical interest rate5.110.19
+31:824:40565:29:29:107:405:509:144:g_d0_f19:144:g_d0_f4:φ1first AR coefficient1.079    0.040
+31:825:40601:29:29:107:405:480:144:g_d0_f19:144:g_d0_f4:φ2second AR coefficient-0.178    0.039
+31:826:40639:29:29:110:405:451:144:g_d0_f19:144:g_d0_f4:γeffect of seasonal0.441    0.064
+31:827:40672:29:29:107:405:422:144:g_d0_f19:144:g_d0_f4:σ1scale factor in regime 10.612    0.019
+31:828:40712:29:28:107:405:393:144:g_d0_f19:144:g_d0_f4:σ2scale factor in regime 21.093    0.092
+31:829:40752:28:29:106:408:365:144:g_d0_f11:144:g_d0_f4:p11probability regime 1 follows itself  0.9867   0.0068
+31:830:40807:29:29:106:405:336:144:g_d0_f11:144:g_d0_f4:p22probability regime 2 follows itself  0.941    0.033
+31:831:40861:29:0:110:402:307:144:g_d0_f19:144:g_d0_f4:νdegrees of freedom4.400.90
+32:832:40890:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 6
+32:833:40897:42:41:89:403:629:144:g_d0_f4:144:g_d0_f4:Dates of volatile interest rates and U.S. recessions, 1857-1913
+32:834:40960:41:21:89:534:588:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+32:835:40998:21:29:95:320:567:144:g_d0_f4:144:g_d0_f4:Volatile interest rates  Economic recessions
+32:836:41042:29:29:95:292:538:144:g_d0_f4:144:g_d0_f4:1857:3-1858:61857:6-1858:12
+32:837:41069:29:29:95:292:509:144:g_d0_f4:144:g_d0_f4:1860:9-1861:111860:10-1861:6
+32:838:41097:29:40:95:292:480:144:g_d0_f4:144:g_d0_f4:ññ1865:4-1867:12
+32:839:41113:40:0:95:164:440:144:g_d0_f4:144:g_d0_f4:1868:3-1874:2
+32:840:41126:0:29:222:291:451:144:g_d0_f4:144:g_d0_f4:1869:6-1870:2
+32:841:41139:29:29:222:297:422:144:g_d0_f4:144:g_d0_f4:1873:10-1879:3
+32:842:41153:29:28:95:286:393:144:g_d0_f4:144:g_d0_f4:ññ1882:3-1885:5
+32:843:41168:28:29:95:286:365:144:g_d0_f4:144:g_d0_f4:ññ1887:3-1888:4
+32:844:41183:29:29:95:286:336:144:g_d0_f4:144:g_d0_f4:ññ1890:7-1891:5
+32:845:41198:29:29:95:286:307:144:g_d0_f4:144:g_d0_f4:1893:3-1893:121893:1-1894:6
+32:846:41225:29:29:95:292:278:144:g_d0_f4:144:g_d0_f4:1896:7-1896:121895:12-1897:6
+32:847:41253:29:29:95:241:249:144:g_d0_f4:144:g_d0_f4:1898:3-1898:6ññ
+32:848:41268:29:29:95:292:220:144:g_d0_f4:144:g_d0_f4:ññ1899:6-1900:12
+32:849:41284:29:29:95:286:191:144:g_d0_f4:144:g_d0_f4:ññ1902:9-1904:8
+32:850:41299:29:29:95:286:162:144:g_d0_f4:144:g_d0_f4:ññ1907:5-1908:6
+32:851:41314:29:29:95:286:133:144:g_d0_f4:144:g_d0_f4:ññ1910:1-1912:1
+32:852:41329:29:0:95:292:104:144:g_d0_f4:144:g_d0_f4:ññ1913:1-1914:12
+33:853:41347:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 7
+33:854:41354:42:41:89:432:629:144:g_d0_f4:144:g_d0_f4:Comparison of selected models of changes in postwar interest rates
+33:855:41420:41:21:89:534:588:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+33:856:41458:21:29:168:553:567:144:g_d0_f4:144:g_d0_f4:Model# of parameters  Log likelihood  Schwarz criterion
+33:857:41513:29:29:143:527:538:144:g_d0_f4:144:g_d0_f4:Gaussian AR(2)4-292.30-304.88
+33:858:41542:29:29:142:527:509:144:g_d0_f4:144:g_d0_f4:Student t AR(2)5-150.66-166.38
+33:859:41572:29:76:95:527:480:144:g_d0_f4:144:g_d0_f4:Student t AR(2) with MS variance8-87.96-113.13
+33:860:41618:76:29:89:534:404:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+33:861:41656:29:29:89:538:375:144:g_d0_f4:144:g_d0_f4:Note: Schwarz criterion calcualted asL−(k/2) log(T)forLthe log likelihood,kthe
+33:862:41734:29:0:71:341:346:144:g_d0_f4:144:g_d0_f4:number of parameters, andT= 540the sample size.
+34:863:41783:0:42:286:323:671:144:g_d0_f4:144:g_d0_f4:Table 8
+34:864:41790:42:29:89:539:629:144:g_d0_f4:144:g_d0_f4:Maximum likelihood estimates of Markov-switching model for changes in postwar interest
+34:865:41876:29:41:71:96:600:144:g_d0_f4:144:g_d0_f4:rates
+34:866:41881:41:21:89:534:559:144:g_d0_f4:144:g_d0_f4:ññññññññññññññññññññññññññññññññññññññ
+34:867:41919:21:29:95:414:538:144:g_d0_f4:144:g_d0_f4:symbol  explanationMLE   std error
+34:868:41953:29:29:95:402:509:144:g_d0_f11:144:g_d0_f4:cintercept0.0016  0.0096
+34:869:41977:29:29:95:396:480:144:g_d0_f19:144:g_d0_f4:φ1first AR coefficient0.409   0.049
+34:870:42012:29:29:95:396:451:144:g_d0_f19:144:g_d0_f4:φ2second AR coefficient-0.046  0.042
+34:871:42048:29:29:95:396:422:144:g_d0_f19:144:g_d0_f4:σ1scale factor in regime 10.174   0.013
+34:872:42087:29:28:95:396:393:144:g_d0_f19:144:g_d0_f4:σ2scale factor in regime 20.740   0.107
+34:873:42126:28:29:95:402:365:144:g_d0_f11:144:g_d0_f4:p11probability regime 1 follows itself  0.9941  0.0049
+34:874:42180:29:29:95:402:336:144:g_d0_f11:144:g_d0_f4:p22probability regime 2 follows itself  0.9635  0.0247
+34:875:42234:29:0:95:390:307:144:g_d0_f19:144:g_d0_f4:νdegrees of freedom4.27    0.94
+35:876:42267:0:50:264:346:671:144:g_d0_f4:144:g_d0_f4:Figure Captions
+35:877:42282:50:29:89:533:621:144:g_d0_f4:144:g_d0_f4:Figure 1. U.S. monthly civilian unemployment rate and U.S. recessions, 1948:1-2004:3.
+35:878:42367:29:28:89:539:592:144:g_d0_f4:144:g_d0_f4:Figure 2.  Estimated spectrum of U.S. monthly civilian unemployment rate, 1948:1-
+35:879:42448:28:29:71:376:564:144:g_d0_f4:144:g_d0_f4:2004:3, plotted as a function of period of the cycle in years.
+35:880:42510:29:29:89:392:535:144:g_d0_f4:144:g_d0_f4:Figure 3. A simulated sample generated from equation (4).
+35:881:42567:29:29:89:541:506:144:g_d0_f4:144:g_d0_f14:Figure 4. Smoothed probabilities for moderate recession regime (Pr(st=2|y1,y2, ..., yT;ˆθ)
+35:882:42657:29:29:71:539:477:144:g_d0_f4:144:g_d0_f15:in second panel) and severe recession regime (Pr(st=3|y1,y2, ..., yT;ˆθ)in third panel) forˆθ
+35:883:42750:29:29:71:538:448:144:g_d0_f4:144:g_d0_f4:the maximum likelihood estimates reported in Table 2.  First panel reproduces the unem-
+35:884:42837:29:29:71:222:419:144:g_d0_f4:144:g_d0_f4:ployment data from Figure 1.
+35:885:42865:29:29:89:539:390:144:g_d0_f4:144:g_d0_f4:Figure 5. Simulated time path for unemployment under three scenarios.  First panel:
+35:886:42948:29:29:71:538:361:144:g_d0_f4:144:g_d0_f4:unemployment is initially at 6% and the economy remains in regime 1 with no further shocks.
+35:887:43039:29:28:71:538:332:144:g_d0_f4:144:g_d0_f4:Second panel: unemployment is initially at 3% and the economy remains in regime 2 with
+35:888:43125:28:29:71:538:304:144:g_d0_f4:144:g_d0_f4:no further shocks.  Third panel: unemployment is initially at 6% and the economy remains
+35:889:43213:29:29:71:538:275:144:g_d0_f4:144:g_d0_f4:in regime 3 with no further shocks.  Horizontal axis in each panel measures months from
+35:890:43300:29:29:71:176:246:144:g_d0_f4:144:g_d0_f4:the initial condition.
+35:891:43322:29:29:89:537:217:144:g_d0_f4:144:g_d0_f4:Figure 6. Monthly short-term commercial paper rates in New York City, 1857:1-1937:1.
+35:892:43406:29:29:89:539:188:144:g_d0_f4:144:g_d0_f4:Figure 7. Estimated spectrum of U.S. monthly short-term commercial paper rate, 1857:1-
+35:893:43492:29:29:71:402:159:144:g_d0_f4:144:g_d0_f4:1913:12, plotted as a function of the period of the cycle in years.
+35:894:43559:29:29:89:539:130:144:g_d0_f4:144:g_d0_f4:Figure 8. First panel reproduces the interest rate data from Figure 6 for 1857:1-1913:12.
+35:895:43648:29:29:71:576:101:144:g_d0_f4:144:g_d0_f14:Second panel: smoothed probability for high-volatility interest rate regime,Pr(st=2|y1,y2,...,yT;ˆθ)
+35:896:43748:29:0:71:539:72:144:g_d0_f4:144:g_d0_f4:forˆθthe maximum likelihood estimates reported in Table 5.  Third panel: same series as
+36:897:43837:0:29:71:405:671:144:g_d0_f4:144:g_d0_f4:in second panel with NBER recessions indicated as shaded areas.
+36:898:43900:29:29:89:539:642:144:g_d0_f4:144:g_d0_f4:Figure 9.  Top panel: U.S. 6-month Treasury bill ratesand U.S. recessions, 1958:12-
+36:899:43983:29:29:71:539:613:144:g_d0_f4:144:g_d0_f14:2004:4 .Bottom panel: smoothed probability for high-volatility interest rate regime,Pr(st=
+36:900:44073:29:0:71:468:584:144:g_d0_f14:144:g_d0_f4:2|y1,y2, ..., yT;ˆθ)forˆθthe maximum likelihood estimates reported in Table 8

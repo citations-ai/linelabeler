@@ -1,0 +1,1552 @@
+1:0:0:0:100:219:395:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:14:86:530:610:12:Times:12:g_d0_f1:THE WELFARE EFFECTS OF PEER ENTRY IN THE ACCOMMODATION MARKET: 
+1:2:87:14:28:245:369:596:12:Times:12:Times:THE CASE OF AIRBNB
+1:3:105:28:14:266:348:568:12:Times:12:Times:Chiara Farronato
+1:4:121:14:28:269:345:554:12:Times:12:Times:Andrey Fradkin
+1:5:135:28:14:254:360:526:12:Times:12:Times:Working Paper 24361
+1:6:154:14:42:220:395:512:12:Times:12:Times:http://www.nber.org/papers/w24361
+1:7:187:42:14:174:439:470:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:223:14:14:239:376:456:12:Times:12:Times:1050 Massachusetts Avenue
+1:9:248:14:14:251:363:442:12:Times:12:Times:Cambridge, MA 02138
+1:10:267:14:88:272:342:428:12:Times:12:Times:February 2018
+1:11:280:88:14:72:546:340:12:Times:12:Times:Katie  Marlowe  and  Max  Yixuan  provided  outstanding  research  assistance.  We  thank  Nikhil 
+1:12:378:14:14:72:545:326:12:Times:12:Times:Agarwal, Susan  Athey,  Matt  Backus,  Liran  Einav,  Christopher  Knittel,  Jonathan  Levin,  Greg 
+1:13:477:14:14:72:546:312:12:Times:12:Times:Lewis,   Chris   Nosko, Debi   Mohapatra,   Ariel   Pakes,   Paulo   Somaini,   Sonny   Tambe,   Dan 
+1:14:577:14:14:71:545:298:12:Times:12:Times:Waldinger,  Ken  Wilbur,  Kevin  Williams, Georgios  Zervas,  and  numerous  seminar  participants 
+1:15:675:14:14:72:546:284:12:Times:12:Times:for  feedback.  We  are  indebted  to  Airbnb’s  employees, in  particular  Peter  Coles,  Mike  Egesdal, 
+1:16:780:14:14:72:545:270:12:Times:12:Times:Riley  Newman,  and  Igor  Popov,  for  sharing  data  and  insights. We  also  thank  Duane  Vinson  at 
+1:17:884:14:14:72:546:256:12:Times:12:Times:STR and Sergey Shebalov at Sabre for sharing valuable data insights. Airbnb reviewed the paper 
+1:18:978:14:14:72:545:242:12:Times:12:Times:to  make  sure  that  required  confidential  information  was  reported  accurately. STR  reviewed  the 
+1:19:1082:14:14:72:546:228:12:Times:12:Times:paper to verify that all data and information provided by STR and the STR SHARE Center were 
+1:20:1173:14:14:72:545:214:12:Times:12:Times:correctly  cited.  Farronato  has  no  material  financial  relationship  with  entities  related  to this 
+1:21:1279:14:14:72:545:200:12:Times:12:g_d0_f1:research. Fradkin was previously an employee of Airbnb, Inc. and holds stock that may constitute 
+1:22:1375:14:14:72:546:186:12:Times:12:Times:a material financial position. The views expressed are those of the authors and do not necessarily 
+1:23:1474:14:28:72:378:172:12:Times:12:Times:reflect the views of the National Bureau of Economic Research.
+1:24:1535:28:14:72:546:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been 
+1:25:1626:14:14:72:546:130:12:Times:12:Times:peer-reviewed  or  been  subject  to  the  review  by  the  NBER  Board  of  Directors  that  accompanies 
+1:26:1732:14:28:72:206:116:12:Times:12:Times:official NBER publications.
+1:27:1758:28:14:72:546:88:12:Times:12:Times:© 2018 by Chiara Farronato and Andrey Fradkin. All rights reserved. Short sections of text, not 
+1:28:1854:14:14:72:545:74:12:Times:12:Times:to exceed  two  paragraphs,  may  be  quoted  without  explicit  permission  provided  that  full  credit, 
+1:29:1960:14:0:72:272:60:12:Times:12:Times:including © notice, is given to the source.
+2:30:2002:0:14:72:488:700:12:Times:12:Times:The Welfare Effects of Peer Entry in the Accommodation Market: The Case of Airbnb
+2:31:2083:14:14:72:253:686:12:Times:12:Times:Chiara Farronato and Andrey Fradkin
+2:32:2118:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 24361
+2:33:2146:14:14:72:142:658:12:Times:12:Times:February 2018
+2:34:2159:14:28:72:253:644:12:Times:12:Times:JEL No. D4,D6,L1,L22,L23,L85,L86
+2:35:2191:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:36:2199:28:14:72:546:588:12:Times:12:Times:We study the effects of enabling peer supply through Airbnb in the accommodation industry. We 
+2:37:2293:14:14:72:545:574:12:Times:12:Times:present a  model  of  competition  between  flexible  and  dedicated  sellers  -  peer  hosts  and  hotels  - 
+2:38:2402:14:14:72:545:560:12:Times:12:Times:who provide differentiated products. We estimate this model using data from major US cities and 
+2:39:2497:14:14:72:546:546:12:Times:12:Times:quantify  the  welfare effects  of  Airbnb  on  travelers,  hosts,  and  hotels.  The  welfare  gains  are 
+2:40:2603:14:14:72:545:532:12:Times:12:Times:concentrated  in  locations  (New York)  and  times  (New  Years  Eve)  when  hotels  are  capacity 
+2:41:2702:14:14:72:545:518:12:Times:12:Times:constrained.  This  occurs  because  peer hosts  are  responsive  to  market  conditions,  expand  supply 
+2:42:2807:14:42:71:336:504:12:Times:12:Times:as hotels fill up, and keep hotel prices down as a result.
+2:43:2864:42:14:72:154:462:12:Times:12:Times:Chiara Farronato
+2:44:2880:14:14:72:193:448:12:Times:12:Times:Harvard Business School
+2:45:2903:14:14:72:155:434:12:Times:12:Times:Morgan Hall 427
+2:46:2918:14:14:72:139:420:12:Times:12:Times:Soldiers Field
+2:47:2932:14:14:72:164:406:12:Times:12:Times:Boston, MA 02163
+2:48:2948:14:14:72:124:392:12:Times:12:Times:and NBER
+2:49:2956:14:28:72:169:378:12:Times:12:Times:cfarronato@hbs.edu
+2:50:2974:28:14:72:148:350:12:Times:12:Times:Andrey Fradkin
+2:51:2988:14:14:72:239:336:12:Times:12:Times:MIT Sloan School of Management
+2:52:3018:14:14:72:145:322:12:Times:12:Times:E62 Room 412
+2:53:3030:14:14:72:153:308:12:Times:12:Times:30 Memorial Dr.
+2:54:3045:14:14:72:184:294:12:Times:12:Times:Cambridge, MA 02142
+2:55:3064:14:180:72:174:280:12:Times:12:Times:afradkin@gmail.com
+2:56:3082:180:0:72:434:100:12:Times:12:Times:A data appendix is available at http://www.nber.org/data-appendix/w24361
+3:57:3154:0:30:72:208:708:296:g_d0_f2:296:g_d0_f2:1  Introduction
+3:58:3169:30:18:72:540:678:143:g_d0_f3:143:g_d0_f3:The Internet has greatly reduced entry and advertising costs across a variety of industries.
+3:59:3261:18:18:72:540:660:143:g_d0_f3:143:g_d0_f3:As an example, peer-to-peer marketplaces such as Airbnb, Uber, and Etsy currently provide
+3:60:3350:18:18:72:540:642:143:g_d0_f3:143:g_d0_f3:aplatformforsmallandpart-timepeerproviders to sell their goods and services. Several
+3:61:3434:18:18:72:540:624:143:g_d0_f3:143:g_d0_f3:of these marketplaces have grown quickly and become widely known brands. In this pa-
+3:62:3518:18:18:72:540:606:143:g_d0_f3:143:g_d0_f3:per, we study the determinants and e↵ects of peer production in the market for short-term
+3:63:3607:18:18:72:540:588:143:g_d0_f3:143:g_d0_f3:accommodation, where Airbnb is the main peer-to-peer platform and hotels are incumbent
+3:64:3693:18:18:72:120:570:143:g_d0_f3:143:g_d0_f3:suppliers.
+3:65:3703:18:18:89:538:552:143:g_d0_f3:143:g_d0_f3:We present a theoretical model of competition between incumbent hotels and peer hosts.
+3:66:3789:18:18:72:540:534:143:g_d0_f3:143:g_d0_f3:We then use data from top US cities to test the model hypotheses about the entry of peer
+3:67:3877:18:17:72:540:516:143:g_d0_f3:143:g_d0_f3:supply, and to quantify the e↵ects of this entry on travelers, incumbent hotels, and peer
+3:68:3966:17:18:72:540:499:143:g_d0_f3:143:g_d0_f3:hosts. We find that Airbnb generated$41 of consumer surplus per room-night and$26 of
+3:69:4050:18:18:72:540:481:143:g_d0_f3:143:g_d0_f3:host surplus while reducing variable hotel profits from accommodations by up to 3.7%. This
+3:70:4140:18:18:72:539:463:143:g_d0_f3:143:g_d0_f3:resulted in a total welfare gain of$137 million in 2014 from Airbnb in these cities and this
+3:71:4232:18:18:72:540:445:143:g_d0_f3:143:g_d0_f3:e↵ect was concentrated in locations (New York) and times (New Years Eve) where hotel
+3:72:4316:18:18:72:203:427:143:g_d0_f3:143:g_d0_f3:capacity was constrained.
+3:73:4341:18:18:89:539:409:143:g_d0_f3:143:g_d0_f3:Since its founding in 2008, Airbnb has grown to list more rooms than any hotel group in
+3:74:4428:18:18:72:540:391:143:g_d0_f3:143:g_d0_f3:the world. Yet Airbnb’s growth across cities and over time has been highly heterogeneous,
+3:75:4517:18:18:72:540:373:143:g_d0_f3:143:g_d0_f3:with supply shares ranging from over 15% to less than 1% across major US cities at the end
+3:76:4607:18:18:72:540:355:143:g_d0_f3:143:g_d0_f3:of 2014. Airbnb’s entry has also prompted policy discussion and varied regulation in many
+3:77:4696:18:18:72:540:337:143:g_d0_f3:143:g_d0_f3:cities across the world. In order to understand Airbnb’s growth and its e↵ects, we propose
+3:78:4786:18:18:72:544:319:143:g_d0_f3:143:g_d0_f3:asimpledemandandsupplyframeworkwhereaccommodationscanbeprovidedbyeither
+3:79:4857:18:18:72:330:301:143:g_d0_f3:143:g_d0_f3:dedicated or flexible supply – hotels vs peer hosts.
+3:80:4909:18:18:89:539:283:143:g_d0_f3:143:g_d0_f3:The role of Airbnb in our framework is to lower entry costs for peer hosts. This reduction
+3:81:4999:18:17:72:540:265:143:g_d0_f3:143:g_d0_f3:in entry costs is similar across cities but the benefits of hosting travelers vary. Prices and
+3:82:5093:17:18:72:540:248:143:g_d0_f3:143:g_d0_f3:occupancy rates, as well as marginal costs a↵ect the benefits of hosting travelers. In the
+3:83:5183:18:18:72:540:230:143:g_d0_f3:143:g_d0_f3:long run, our model predicts higher entry of peer supply in cities with higher prices and
+3:84:5272:18:18:72:540:212:143:g_d0_f3:143:g_d0_f3:occupancy rates, and lower peers’ marginal costs. Prices and occupancy rates are in turn
+3:85:5360:18:18:72:540:194:143:g_d0_f3:143:g_d0_f3:determined by the trend and variability in the number of travelers, as well as geographic and
+3:86:5453:18:18:72:540:176:143:g_d0_f3:143:g_d0_f3:bureaucratic constraints to the expansion of hotel capacity. Marginal costs are determined
+3:87:5543:18:18:72:540:158:143:g_d0_f3:143:g_d0_f3:by the perceived risk of hosting strangers, which is higher for families with children than for
+3:88:5638:18:18:72:540:140:143:g_d0_f3:143:g_d0_f3:unmarried and childless adults. We confirm that these predictions hold in the 50 largest US
+3:89:5729:18:18:72:540:122:143:g_d0_f3:143:g_d0_f3:cities in terms of hotel rooms. The entry of flexible supply is higher in cities like New York,
+3:90:5824:18:18:72:540:104:143:g_d0_f3:143:g_d0_f3:where demand is growing and highly variable, where hotels are constrained from expanding
+3:91:5912:18:0:72:532:86:143:g_d0_f3:143:g_d0_f3:room capacity, and where peer hosts have lower marginal costs than in cities like Atlanta.
+4:92:6003:0:18:89:539:708:143:g_d0_f3:143:g_d0_f3:In the short-run, peer producers decide whether to host on a particular day. Because
+4:93:6087:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:of the flexible nature of their supply, we hypothesize that these producers will be highly
+4:94:6177:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:responsive to market conditions, hosting travelers when prices are high, and using accommo-
+4:95:6268:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:dation for private use when prices are low. In contrast, because hotels have a fixed number
+4:96:6359:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:of rooms dedicated to travelers’ accommodation, they will typically choose to transact even
+4:97:6450:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:when demand is relatively low, while they won’t be able to expand capacity during peaks
+4:98:6537:18:18:72:539:600:143:g_d0_f3:143:g_d0_f3:in demand. These di↵erences imply that peer supply elasticity should be higher than ho-
+4:99:6624:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:tels’ supply elasticity on average. We validate this prediction by estimating a peer supply
+4:100:6715:18:18:72:329:564:143:g_d0_f3:143:g_d0_f3:elasticity that is twice as high as hotels’ elasticity.
+4:101:6770:18:18:89:539:546:143:g_d0_f3:143:g_d0_f3:The heterogeneous entry of peer hosts across cities and over time has surplus implications.
+4:102:6861:18:18:72:539:528:143:g_d0_f3:143:g_d0_f3:We estimate our short-run equilibrium model to quantify the e↵ect of Airbnb on total welfare
+4:103:6953:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:and its distribution across travelers, peer hosts, and hotels. Travelers benefit from Airbnb
+4:104:7045:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:for two reasons. First, flexible sellers o↵er a di↵erentiated product relative to hotels. Second,
+4:105:7142:18:17:72:539:474:143:g_d0_f3:143:g_d0_f3:they also compete with hotels by expanding the number of rooms available. This second e↵ect
+4:106:7233:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:is particularly important in periods of high demand when hotels are capacity constrained
+4:107:7321:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:and can thus charge higher prices.  Consequently, we find that the increase in consumer
+4:108:7408:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:surplus from Airbnb is concentrated in city-days of peak demand, which the accommodation
+4:109:7496:18:18:72:544:403:143:g_d0_f3:143:g_d0_f3:industry defines ascompression nights.Inthosecitiesandperiods,flexiblesellersallowmore
+4:110:7582:18:18:72:539:385:143:g_d0_f3:143:g_d0_f3:travelers to stay in a city without greatly a↵ecting the number of travelers staying at hotels.
+4:111:7677:18:18:89:539:367:143:g_d0_f3:143:g_d0_f3:Our data mainly come from two sources: proprietary data from Airbnb, and data from
+4:112:7759:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:STR, which tracks supply and demand data for the hotel industry.  We obtain data on
+4:113:7842:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:average prices and rooms sold at a city, day, and accommodation type level between 2011
+4:114:7929:18:18:72:538:313:143:g_d0_f3:143:g_d0_f3:and 2014 for the 50 largest US cities.1We first document heterogeneity in the number of
+4:115:8016:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:Airbnb listings across cities and over time. Cities like New York and Los Angeles have grown
+4:116:8108:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:more quickly, reaching supply shares exceeding 15% and 5% respectively in 2014, while cities
+4:117:8200:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:like Oklahoma City and Memphis have grown more slowly, with less than 1% supply shares
+4:118:8286:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:at the of 2014. Within each city over time, the number of available rooms is higher during
+4:119:8376:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:peak travel times such as Christmas and the summer. The geographic and time heterogeneity
+4:120:8465:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:suggests that hosts flexibly choose when to list their rooms for rent on Airbnb, and are more
+4:121:8558:18:18:72:451:188:143:g_d0_f3:143:g_d0_f3:likely to do so in cities and times when the returns to hosting are highest.
+4:122:8634:18:18:89:545:170:143:g_d0_f3:143:g_d0_f3:In Section2,weincorporatethisintuitionintoamodelofthemarketforaccommoda-
+4:123:8706:18:18:72:540:152:143:g_d0_f3:143:g_d0_f3:tions. In this model, rooms for accommodations can be provided by dedicated or flexible
+4:124:8793:18:18:72:539:134:143:g_d0_f3:143:g_d0_f3:sellers, and products are di↵erentiated. We include two time-horizons. The long-run hori-
+4:125:8882:18:18:72:540:116:143:g_d0_f3:143:g_d0_f3:zon is characterized by the entry decision of flexible sellers given the new Airbnb platform.
+4:126:8975:18:18:72:540:98:143:g_d0_f3:143:g_d0_f3:We model the decision of flexible sellers to join the platform as dependent on the expected
+4:127:9066:18:0:85:473:80:49:g_d0_f8:99:g_d0_f9:1The 50 largest US cities were selected on the basis of their total number of hotel rooms.
+5:128:9157:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:returns from hosting, which in turn depend on competition from hotels and expected de-
+5:129:9243:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:mand levels. The short-run horizon focuses on daily prices and quantities of rooms sold.
+5:130:9331:18:18:72:539:672:143:g_d0_f3:143:g_d0_f3:We define the short-run horizon as one day in one city.  In the short-run, the capacity of
+5:131:9421:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:flexible and dedicated sellers is fixed, and overall demand level is realized. Travelers choose
+5:132:9516:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:an accommodation option among di↵erentiated hotel and Airbnb rooms. Hotels maximize
+5:133:9599:18:18:72:490:618:143:g_d0_f3:143:g_d0_f3:profits subject to their capacity constraints, while peer hosts take prices as given.
+5:134:9684:18:18:89:540:600:143:g_d0_f3:143:g_d0_f3:The model o↵ers testable predictions. The long-run share of flexible sellers should di↵er
+5:135:9773:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:across cities. Entry should be largest in cities where hotel investment costs are high, flexible
+5:136:9869:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:sellers’ marginal costs are low, and demand variability is high so that there are periods of
+5:137:9961:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:high prices. In the short-run, flexible sellers should increase competition: they will reduce
+5:138:10054:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:prices and occupancy rates of hotels, and the e↵ects will be largest in cities where hotel
+5:139:10144:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:capacity is low relative to demand.  We describe those cities as having constrained hotel
+5:140:10233:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:capacity. In capacity-constrained cities, the model predicts that Airbnb reduces prices more
+5:141:10325:18:17:72:402:474:143:g_d0_f3:143:g_d0_f3:than occupancy rates relative to non-capacity-constrained cities.
+5:142:10390:17:18:89:544:457:143:g_d0_f3:143:g_d0_f3:In Section3,weconfirmthatthesemodelpredictionsholdinthedata. Wefirstlook
+5:143:10462:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:at the long-run patterns. We show that peer supply as a share of total supply is larger in
+5:144:10552:18:18:72:539:421:143:g_d0_f3:143:g_d0_f3:cities where hotel prices are higher. These high prices are associated with the di-culty of
+5:145:10643:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:building hotels due to regulatory or geographic constraints. Peer supply is also larger in
+5:146:10733:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:cities where residents tend to be single and have no children. These residents likely have
+5:147:10823:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:lower costs of hosting strangers in their homes. Another factor influencing peer supply is
+5:148:10913:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:the volatility of demand.  A city can experience periods of high and low demand due to
+5:149:10999:18:18:72:539:331:143:g_d0_f3:143:g_d0_f3:seasonality, festivals, or sporting events. When the di↵erence in peaks and troughs is large,
+5:150:11092:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:the provision of accommodation exclusively by hotels can be ine-ciently low. We show that
+5:151:11181:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:Airbnb’s supply share is larger precisely in cities with high demand volatility, and, perhaps
+5:152:11274:18:18:72:358:277:143:g_d0_f3:143:g_d0_f3:more intuitively, in cities where demand growth is high.
+5:153:11330:18:18:89:538:259:143:g_d0_f3:143:g_d0_f3:We then test the predictions of the model on short-run hotel outcomes. We do this by
+5:154:11414:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:estimating regressions of hotel performance on Airbnb supply using two types of instruments
+5:155:11505:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:as well as controls for aggregate demand shocks. We find that the negative e↵ect of Airbnb
+5:156:11595:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:on hotel revenues is larger in cities with constrained hotel capacity, and that compared to
+5:157:11686:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:other cities, hotels here experience a bigger reduction in prices than occupancy rates. The
+5:158:11777:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:heterogeneity in estimates is due to di↵erences in both the size of Airbnb and the e↵ects of
+5:159:11869:18:18:72:314:152:143:g_d0_f3:143:g_d0_f3:Airbnb across markets conditional on that size.
+5:160:11916:18:18:89:545:134:143:g_d0_f3:143:g_d0_f3:In Section4,wedescribeourestimationstrategyforrecoveringtheprimitivesofour
+5:161:11990:18:18:72:539:116:143:g_d0_f3:143:g_d0_f3:model.  We proceed in three steps.  First, we estimate a random coe-cient multinomial
+5:162:12075:18:18:72:539:98:143:g_d0_f3:143:g_d0_f3:logit demand model (Berry et al.(1995)). We augment our estimation with survey data
+5:163:12158:18:0:72:540:80:143:g_d0_f3:143:g_d0_f3:regarding the preferred second choices of Airbnb travelers, which helps us identify substitu-
+6:164:12252:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:tion between Airbnb and hotel options. Second, we estimate hotels’ cost functions assuming
+6:165:12342:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:Cournot competition between hotels of the same scale. In order to take into account the
+6:166:12429:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:fact that prices steeply increase when occupancy approaches 100%, we followRyan(2012)
+6:167:12514:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:and rationalize these price changes with marginal costs that start increasing when hotels
+6:168:12603:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:are close to their capacity constraint. Third, we estimate the cost distribution of peer hosts
+6:169:12697:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:assuming that they are price takers. Together, these estimates allow us to measure consumer
+6:170:12788:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:and peer producer surplus, as well as to quantify how surplus would change in the absence
+6:171:12877:18:18:72:147:582:143:g_d0_f3:143:g_d0_f3:of peer supply.
+6:172:12892:18:18:89:540:564:143:g_d0_f3:143:g_d0_f3:Section5presents our results for the top 10 US cities. We find that consumers’ utility for
+6:173:12982:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:Airbnb is lower than for hotels, but that preferences for Airbnb increase between 2013 and
+6:174:13072:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:2014. By the end of the sample period, the mean utility from top quality Airbnb listings is
+6:175:13163:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:close to the mean utility of economy and midscale hotels. We find that peer hosts have higher
+6:176:13256:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:marginal costs than hotels on average, and that consistent with our model, the distribution
+6:177:13347:18:17:72:309:474:143:g_d0_f3:143:g_d0_f3:of peer costs makes peer supply highly elastic.
+6:178:13394:17:18:89:539:457:143:g_d0_f3:143:g_d0_f3:In the absence of Airbnb, total welfare would be lower, travelers and peer producers
+6:179:13478:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:would be worse o↵, while hotels would benefit from less competition. In the top 10 US cities,
+6:180:13571:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:total welfare would decrease by$137 million and consumer surplus would decrease by$276
+6:181:13657:18:18:72:270:403:143:g_d0_f3:143:g_d0_f3:million if Airbnb did not exist in 2014.
+6:182:13697:18:18:89:540:385:143:g_d0_f3:143:g_d0_f3:This corresponds to a consumer surplus of$41 per night for every Airbnb booking. The
+6:183:13781:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:reduction in consumer surplus if Airbnb did not exist occurs because fewer travelers would
+6:184:13871:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:book rooms, and travelers who end up booking hotel rooms would pay higher prices. As
+6:185:13955:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:it turns out, because of the elastic peer supply, actual Airbnb bookings and thus surplus
+6:186:14044:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:gains disproportionately occur in cities (New York) and times (New Year’s Eve) when hotel
+6:187:14133:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:capacity constraints bind. This implies that in the absence of peer supply, travelers could
+6:188:14224:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:not easily find a substitute hotel room because hotels would be fully booked. Indeed, we
+6:189:14312:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:find that around half of Airbnb bookings would not have been hotel stays had Airbnb not
+6:190:14399:18:17:72:111:241:143:g_d0_f3:143:g_d0_f3:existed.
+6:191:14407:17:18:89:539:224:143:g_d0_f3:143:g_d0_f3:The concentration of Airbnb bookings in cities and periods of peak demand suggests that
+6:192:14494:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:in the absence of Airbnb, hotels would be limited in their ability to increase the number of
+6:193:14586:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:booked rooms – they were already operating at or close to full capacity – but instead would
+6:194:14677:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:be able to increase prices. Revenues for hotels would increase by 1.54% if Airbnb did not
+6:195:14766:18:18:72:540:152:143:g_d0_f3:143:g_d0_f3:exist, and profits would likely increase by a larger percent. In fact, our estimates suggest
+6:196:14858:18:18:72:540:134:143:g_d0_f3:143:g_d0_f3:that the variable profits of hotels could increase by up to 3.69% across the 10 cities in our
+6:197:14951:18:18:72:110:116:143:g_d0_f3:143:g_d0_f3:sample.
+6:198:14958:18:18:89:539:98:143:g_d0_f3:143:g_d0_f3:We contribute to the growing empirical literature on online peer-to-peer platforms. A
+6:199:15043:18:0:72:540:80:143:g_d0_f3:143:g_d0_f3:limited number of papers have looked at the e↵ect of online platforms on incumbents, in
+7:200:15131:0:18:72:539:708:143:g_d0_f3:143:g_d0_f3:particularZervas et al.(2015)forAirbnb,Seamans and Zhu(2014)andKroft and Pope
+7:201:15208:18:18:72:544:690:143:g_d0_f3:143:g_d0_f3:(2014)forCraigslist,andAguiar and Waldfogel(2015)forSpotify. Inthispaperwenot
+7:202:15285:18:18:72:539:672:143:g_d0_f3:143:g_d0_f3:only estimate the e↵ects on incumbent firms, but also on consumers and new producers. In
+7:203:15373:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:addition, we highlight important dimensions of heterogeneity of the e↵ects of Airbnb across
+7:204:15464:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:cities and over time. A complementary paper to ours isCohen et al.(2016), which uses
+7:205:15548:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:discontinuities in Uber’s surge pricing policy to estimate the consumer surplus from ride
+7:206:15637:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:sharing. Both of our papers find that successful peer-to-peer platforms generate substantial
+7:207:15729:18:18:72:542:582:143:g_d0_f3:143:g_d0_f3:consumer surplus. However, whileCohen et al.(2016)assumethatincumbentsdonotchange
+7:208:15810:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:their behavior, we incorporate capacity constraints and allow for hotel prices to adjust in
+7:209:15901:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:the absence of Airbnb. This is important for our setting because even travelers who book
+7:210:15989:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:hotel rooms benefit from Airbnb through lower prices. Similarly to us,Lam and Liu(2017)
+7:211:16076:18:18:72:538:510:143:g_d0_f3:143:g_d0_f3:estimate a model of competition between Uber, Lyft, and taxis using data from New York.
+7:212:16163:18:18:89:539:492:143:g_d0_f3:143:g_d0_f3:Another related stream of research studies the role of peer-to-peer markets in enabling
+7:213:16250:18:17:72:543:474:143:g_d0_f3:143:g_d0_f3:rental markets for durable goods.Horton and Zeckhauser(2016)deriveatheoreticalequilib-
+7:214:16336:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:rium model for ownership and rental of durable goods, and make predictions on the existence
+7:215:16427:18:18:72:539:439:143:g_d0_f3:143:g_d0_f3:and size of rental markets across di↵erent product categories.Fraiberger and Sundararajan
+7:216:16516:18:18:72:543:421:143:g_d0_f3:143:g_d0_f3:(2015)calibrateamodelofcarusageandquantifytheexpectedreductionincarownership
+7:217:16592:18:18:72:285:403:143:g_d0_f3:143:g_d0_f3:as a result of peer-to-peer rental markets.
+7:218:16635:18:18:89:539:385:143:g_d0_f3:143:g_d0_f3:Our paper is also complementary to existing studies of labor supply and market design
+7:219:16720:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:on peer-to-peer platforms. We find that host supply is highly elastic on the margin. This is
+7:220:16812:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:consistent with analysis of suppliers on Taskrabbit (Cullen and Farronato(2017)) and Uber
+7:221:16901:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:(Hall et al.(2016),Chen and Sheldon(2015)).  Other work on peer-to-peer markets has
+7:222:16984:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:focused on the market design aspects of reputation systems (Fradkin et al.(2017),Nosko
+7:223:17070:18:18:72:539:295:143:g_d0_f3:143:g_d0_f3:and Tadelis(2015),Bolton et al.(2012)), search (Fradkin(2017),Horton(2016)), and pricing
+7:224:17158:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:(Einav et al.(Forthcoming),Hall et al.(2016)). Specifically focused on the hotel industry,
+7:225:17248:18:18:72:539:259:143:g_d0_f3:143:g_d0_f3:Lewis and Zervas(2016) study the welfare e↵ects of online reviews. Finally, in our analysis of
+7:226:17342:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:growth heterogeneity across cities, we contribute to the predominantly theoretical literature
+7:227:17435:17:18:72:467:224:143:g_d0_f3:143:g_d0_f3:on technology adoption and di↵usion (e.g.Bass(1969)andGriliches(1957)).
+7:228:17506:18:18:89:540:206:143:g_d0_f3:143:g_d0_f3:The paper is structured as follows. In the next section, we present the data and document
+7:229:17595:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:geographic and time heterogeneity in the size of Airbnb, which motivates our theoretical
+7:230:17683:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:framework of competition between dedicated and flexible sellers (Section2.1). In Section3
+7:231:17772:18:18:72:540:152:143:g_d0_f3:143:g_d0_f3:we test the predictions of our model on the long- and short-run elasticities of flexible supply,
+7:232:17868:18:18:72:540:134:143:g_d0_f3:143:g_d0_f3:and on the competitive e↵ects of Airbnb on hotels. Section4presents our empirical strategy
+7:233:17958:18:18:72:540:116:143:g_d0_f3:143:g_d0_f3:for structurally estimating the short-run equilibrium of our model. We discuss the estimation
+7:234:18051:18:0:72:307:98:143:g_d0_f3:143:g_d0_f3:results in Section5and conclude in Section6.
+8:235:18096:0:30:72:434:708:296:g_d0_f2:296:g_d0_f2:2  Motivation and Theoretical Framework
+8:236:18135:30:18:72:540:678:143:g_d0_f3:143:g_d0_f3:Airbnb describes itself as a trusted community marketplace for people to list, discover,
+8:237:18223:18:18:72:540:660:143:g_d0_f3:143:g_d0_f3:and book unique accommodations around the world — online or from a mobile phone.
+8:238:18303:18:18:72:540:642:143:g_d0_f3:143:g_d0_f3:The marketplace was founded in 2008 and has at least doubled in total transaction volume
+8:239:18391:18:18:72:540:624:143:g_d0_f3:143:g_d0_f3:during every subsequent year in our sample. Airbnb has created a market for a previously
+8:240:18479:18:18:72:540:606:143:g_d0_f3:143:g_d0_f3:rare transaction: the short-term rental of an apartment or room to strangers. In the past,
+8:241:18569:18:18:72:540:588:143:g_d0_f3:143:g_d0_f3:these transactions were not commonly handled by single individuals because there were large
+8:242:18660:18:18:72:540:570:143:g_d0_f3:143:g_d0_f3:costs to finding a match, securely exchanging money, and ensuring safety. While Airbnb is
+8:243:18749:18:18:72:539:552:143:g_d0_f3:64:g_d0_f7:not the only company serving this market, it is the dominant platform in most US cities.2
+8:244:18838:18:18:72:540:534:143:g_d0_f3:143:g_d0_f3:Therefore, we use Airbnb data to study the drivers and the e↵ects of facilitating peer entry
+8:245:18930:18:17:72:229:516:143:g_d0_f3:143:g_d0_f3:in the accommodation market.
+8:246:18958:17:18:89:539:499:143:g_d0_f3:143:g_d0_f3:Airbnb room supply has grown quickly in the aggregate, but the growth has been highly
+8:247:19043:18:18:72:540:481:143:g_d0_f3:143:g_d0_f3:heterogeneous across geographies. Figure1plots the size of Airbnb measured as the daily
+8:248:19130:18:18:72:539:463:143:g_d0_f3:64:g_d0_f7:share of available Airbnb listings out of all rooms available for short-term accommodation.3
+8:249:19222:18:18:72:540:445:143:g_d0_f3:143:g_d0_f3:Even among the top 10 cities in terms of listings, there are high growth markets like San
+8:250:19311:18:18:72:540:427:143:g_d0_f3:143:g_d0_f3:Francisco and New York, as well as slow growth markets like Chicago and DC. This increase
+8:251:19400:18:18:72:540:409:143:g_d0_f3:143:g_d0_f3:in available rooms is specific to the peer-to-peer sector and does not represent a broader
+8:252:19490:18:18:72:420:391:143:g_d0_f3:143:g_d0_f3:growth of the supply of short-term accommodation (see FigureA1).
+8:253:19554:18:18:89:539:373:143:g_d0_f3:143:g_d0_f3:Within a city over time, there is also heterogeneity in the size of Airbnb relative to the
+8:254:19644:18:18:72:540:355:143:g_d0_f3:143:g_d0_f3:size of the hotel sector. The fluctuations are especially prominent in New York in Figure
+8:255:19733:18:18:72:539:337:143:g_d0_f3:143:g_d0_f3:1, which experiences large spikes in available rooms during New Year’s Eve, and in Austin
+8:256:19822:18:18:72:540:319:143:g_d0_f3:143:g_d0_f3:during the South by Southwest festival. The figure suggests that market conditions during
+8:257:19911:18:18:72:540:301:143:g_d0_f3:143:g_d0_f3:these spikes are especially suited to peer-to-peer transactions.  These facts motivate our
+8:258:20001:18:18:72:540:283:143:g_d0_f3:143:g_d0_f3:theoretical model, in which we distinguish between dedicated sellers (hotels) and flexible
+8:259:20091:18:39:72:171:265:143:g_d0_f3:143:g_d0_f3:sellers (peer hosts).
+8:260:20112:39:25:72:272:226:206:g_d0_f2:206:g_d0_f2:2.1  Theoretical Framework
+8:261:20138:25:18:72:540:201:143:g_d0_f3:143:g_d0_f3:In this section, we introduce a theoretical model for understanding market structure with
+8:262:20227:18:18:72:540:183:143:g_d0_f3:143:g_d0_f3:dedicated supply (hotels) and flexible supply (peer hosts) in the accommodation industry.
+8:263:20316:18:18:72:543:165:143:g_d0_f3:143:g_d0_f3:We will test the predictions of this model in Section3,andstructurallyestimatetheshort-run
+8:264:20406:18:15:85:539:147:49:g_d0_f8:99:g_d0_f9:2The most prominent competitor is Homeaway/VRBO, a subsidiary of Expedia. Its business has his-
+8:265:20501:15:12:72:540:132:99:g_d0_f9:99:g_d0_f9:torically been concentrated in rentals of entire homes in vacation destinations, such as beach and skiing
+8:266:20606:12:9:72:104:120:99:g_d0_f9:99:g_d0_f9:resorts.
+8:267:20614:9:15:85:539:111:49:g_d0_f8:99:g_d0_f9:3The total number of available rooms is the sum of available hotel rooms and listings available on Airbnb.
+8:268:20720:15:12:72:540:96:99:g_d0_f9:99:g_d0_f9:The same heterogeneity is apparent if we adjust for capacity, or if we divide the number of Airbnb listings
+8:269:20827:12:0:72:306:84:99:g_d0_f9:99:g_d0_f9:by the number of total housing units within an MSA.
+9:270:20879:0:18:72:195:708:143:g_d0_f3:143:g_d0_f3:component in Section4.
+9:271:20901:18:18:89:539:690:143:g_d0_f3:143:g_d0_f3:In our model, hosting services can be provided by dedicated and flexible sellers, who
+9:272:20986:18:18:72:539:672:143:g_d0_f3:143:g_d0_f3:o↵er di↵erentiated products. The model has a short and long-run component. The short-
+9:273:21071:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:run equilibrium consists of daily prices and rooms sold of each accommodation type as a
+9:274:21158:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:function of the overall demand level and the respective capacities of dedicated and flexible
+9:275:21250:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:suppliers. We assume hotels are competing against a fringe of flexible sellers. The long-
+9:276:21339:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:run component determines the entry condition of flexible sellers as a function of fixed hotel
+9:277:21432:18:18:72:315:582:143:g_d0_f3:143:g_d0_f3:capacity and the distribution of demand states.
+9:278:21479:18:18:89:538:564:143:g_d0_f3:143:g_d0_f3:We start with the short-run equilibrium representing daily market outcomes. We simplify
+9:279:21566:18:18:72:539:546:143:g_d0_f3:143:g_d0_f3:the exposition by assuming that there is one single hotel and one undi↵erentiated type
+9:280:21652:18:18:72:539:528:143:g_d0_f3:143:g_d0_f3:of Airbnb listings.  In the empirical counterpart of this model in Section4we relax this
+9:281:21740:18:18:72:539:510:143:g_d0_f3:143:g_d0_f3:assumption. LetKhdenote the mass of existing dedicated capacity (number of hotel rooms),
+9:282:21828:18:18:72:545:492:143:g_d0_f3:143:g_d0_f3:andKathe existing flexible capacity (Airbnb rooms). Demand state,d,isdrawnfroma
+9:283:21907:18:17:72:543:474:143:g_d0_f3:143:g_d0_f3:distributionF,whichcanbeinterpretedasthedistributionofdemandstatesoverthecourse
+9:284:21986:17:18:72:542:457:143:g_d0_f3:143:g_d0_f3:of a year. Hotel rooms and Airbnb rooms are di↵erentiated products.Qdi(pi,pj)istheresidual
+9:285:22076:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:demand for productias a function of its price and the price of the other product.Qdi(pi,pj)
+9:286:22167:18:18:72:454:421:143:g_d0_f3:143:g_d0_f3:is assumed to be increasing indandpj,anddecreasinginitsownpricepi.
+9:287:22233:18:18:89:539:403:143:g_d0_f3:143:g_d0_f3:The short-run sequence of events is as follows. CapacityKhandKaare given, demand
+9:288:22313:18:18:72:539:385:143:g_d0_f3:143:g_d0_f3:statedis realized, the hotel sets prices and at the same time Airbnb sellers choose whether
+9:289:22404:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:to host at the prevailing prices. We assume that the hotel faces marginal costchto book one
+9:290:22495:18:31:72:540:349:143:g_d0_f3:143:g_d0_f3:room for one night, and it sets its price to maximize profits subject to its capacity constraint:
+9:291:22592:31:7:240:265:318:143:g_d0_f10:143:g_d0_f10:M ax
+9:292:22596:7:0:248:256:311:64:g_d0_f11:36:g_d0_f12:ph
+9:293:22598:0:22:275:372:318:143:g_d0_f10:143:g_d0_f3:Qdh(ph,pa)(ph-ch)
+9:294:22615:22:0:244:364:296:143:g_d0_f10:64:g_d0_f11:s.t.Qdh(ph,pa)Kh
+9:295:22632:0:42:525:540:308:143:g_d0_f3:143:g_d0_f3:(1)
+9:296:22635:42:18:72:540:266:143:g_d0_f3:143:g_d0_f3:Flexible sellers have unit capacity and variable marginal costs of renting their room. We
+9:297:22724:18:18:72:504:248:143:g_d0_f3:143:g_d0_f3:assume that marginal costs of peers are randomly drawn from a known distribution.
+9:298:22805:18:17:89:539:230:143:g_d0_f3:143:g_d0_f3:When choosing whether to rent out their room for a night, flexible producers take prices
+9:299:22893:17:18:72:540:213:143:g_d0_f3:143:g_d0_f3:as given, and sell their unit if and only if the market clearing price is greater than their cost.
+9:300:22991:18:18:72:540:195:143:g_d0_f3:143:g_d0_f3:The choices of individual hosts are aggregated to determine the total number of flexible
+9:301:23079:18:18:72:142:177:143:g_d0_f3:143:g_d0_f3:rooms rented:
+9:302:23092:18:26:235:540:159:143:g_d0_f10:143:g_d0_f3:Qda(pa,ph)=KaPr(cpa),(2)
+9:303:23117:26:18:72:544:133:143:g_d0_f3:143:g_d0_f3:whereKais the mass of peer hosts, andPr(cpa)istheshareofhostswithcostslower
+9:304:23193:18:18:72:113:115:143:g_d0_f3:143:g_d0_f3:thanpa.
+9:305:23200:18:18:89:540:97:143:g_d0_f3:143:g_d0_f3:The market equilibrium consists of prices and quantities for hotel rooms and peer rooms
+9:306:23287:18:0:72:540:79:143:g_d0_f3:143:g_d0_f3:(ph,pa,qh,qa) that equate flexible and dedicated room demand with flexible and dedicated
+10:307:23376:0:18:72:108:708:143:g_d0_f3:143:g_d0_f3:supply.
+10:308:23383:18:18:89:540:690:143:g_d0_f3:143:g_d0_f3:The short-run model already o↵ers some comparative statics predictions, listed below
+10:309:23467:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:and proven in AppendixA. Under standard conditions, hotel profits per available room,
+10:310:23552:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:as well as both prices and occupancy rates, are lower ifKais higher. The separate e↵ect
+10:311:23639:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:of an increase inKaon hotel prices is higher if hotel capacity constraints are more often
+10:312:23728:18:18:72:539:618:143:g_d0_f3:143:g_d0_f3:binding, but the opposite is true for the e↵ect on occupancy. Intuitively, this occurs because
+10:313:23822:18:18:72:539:600:143:g_d0_f3:143:g_d0_f3:the increase in flexible capacity a↵ects hotels through a reduction in their residual demand
+10:314:23914:18:18:72:539:582:143:g_d0_f3:143:g_d0_f3:(Figure2), and when hotels are capacity constrained, their supply curve is vertical (Figure
+10:315:24005:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:2b). A marginal downward shift in residual demand will have no e↵ect on quantity and a
+10:316:24091:18:18:72:329:546:143:g_d0_f3:143:g_d0_f3:large e↵ect on price if supply is perfectly inelastic.
+10:317:24145:18:18:89:539:528:143:g_d0_f3:143:g_d0_f3:In the long-run, entry of flexible suppliers is endogenous. We assume thatKhwas opti-
+10:318:24230:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:mally set knowing the distribution of demand states and not expecting that Airbnb would
+10:319:24317:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:lower entry costs of flexible sellers. Holding demand fixed, if investing in hotel capacity is
+10:320:24411:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:more costly, optimal dedicated capacity is lower and expected profits per unit of capacity
+10:321:24501:17:18:72:127:457:143:g_d0_f3:143:g_d0_f3:are higher.
+10:322:24512:18:18:89:539:439:143:g_d0_f3:143:g_d0_f3:A peer-to-peer platform enables the entry of flexible sellers.  Flexible sellers decide
+10:323:24599:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:whether to join the peer-to-peer platform and start producing as a function of expected
+10:324:24686:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:demand and expected marginal costs. We assume that flexible sellers face a one-time cost
+10:325:24774:18:18:72:539:385:143:g_d0_f10:143:g_d0_f3:Cof joining the platform, which is randomly drawn from a given distribution.  We let
+10:326:24858:18:0:72:97:367:143:g_d0_f10:143:g_d0_f3:va=
+10:327:24861:0:14:103:109:377:143:g_d0_f14:143:g_d0_f14:R
+10:328:24862:14:0:109:128:363:64:g_d0_f11:64:g_d0_f11:dEc
+10:329:24865:0:10:130:135:377:143:g_d0_f14:143:g_d0_f14:-
+10:330:24866:10:0:136:212:367:143:g_d0_f10:143:g_d0_f15:max{0,pda-c}
+10:331:24878:0:10:212:217:377:143:g_d0_f14:143:g_d0_f14:-
+10:332:24879:10:18:220:545:367:143:g_d0_f10:143:g_d0_f3:dF(d)betheexpecteddailybenefitofjoiningtheplatform.
+10:333:24930:18:0:72:168:349:143:g_d0_f3:64:g_d0_f11:The expressionEc
+10:334:24946:0:10:170:175:359:143:g_d0_f14:143:g_d0_f14:-
+10:335:24947:10:0:176:252:349:143:g_d0_f10:143:g_d0_f15:max{0,pda-c}
+10:336:24959:0:10:252:257:359:143:g_d0_f14:143:g_d0_f14:-
+10:337:24960:10:18:263:539:349:143:g_d0_f3:143:g_d0_f3:denotes the expected profit of a flexible seller given
+10:338:25014:18:18:72:521:331:143:g_d0_f3:143:g_d0_f3:demand stated,wheretheexpectationistakenoverthedistributionofmarginalcosts.
+10:339:25089:18:18:89:542:313:143:g_d0_f3:143:g_d0_f3:Aflexiblesellerjoinsthepeer-to-peerplatformiftheexpectedbenefitsarehigherthanthe
+10:340:25169:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:entry cost. If expected daily profitsvaare higher, more flexible sellers will join the platform
+10:341:25264:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:and start producing, and the share of flexible supply out of total supply will be higher. What
+10:342:25358:18:18:72:539:259:143:g_d0_f3:143:g_d0_f3:a↵ectsva?Thefirstelementisthedistributionofmarginalcostsc. Holding everything else
+10:343:25440:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:constant, if the distribution of costs decreases in the sense of first order stochastic dominance,
+10:344:25538:17:18:72:539:224:143:g_d0_f3:64:g_d0_f11:more peers will enter and start hosting. The second element ispda,itselfafunctionofKh
+10:345:25623:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:and the distribution of demandF(d). All else equal, a lowerKhwill increase equilibrium
+10:346:25709:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:prices whenever capacity constraints bind, so it will increase the distribution ofpdain the first
+10:347:25806:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:order stochastic dominance sense. Clearly, a higher level of demand in every state is more
+10:348:25896:18:18:72:540:152:143:g_d0_f3:143:g_d0_f3:attractive, but, perhaps less obviously, also an increase in demand variability is attractive for
+10:349:25993:18:18:72:540:134:143:g_d0_f3:143:g_d0_f3:flexible suppliers. To explain why, we can think of a simple mean-preserving spread of two
+10:350:26083:18:18:72:540:116:143:g_d0_f3:143:g_d0_f3:demand states. In the low demand state, flexible suppliers host very few travelers in either
+10:351:26175:18:18:72:540:98:143:g_d0_f3:143:g_d0_f3:case because hotels are not capacity constrained, leading to low equilibrium prices.  The
+10:352:26264:18:0:72:539:80:143:g_d0_f3:143:g_d0_f3:di↵erence occurs in high demand states. If the high demand state doubles, prices increase
+11:353:26354:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:steeply, especially if hotel capacity constraints are hit, making it very attractive for flexible
+11:354:26451:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:suppliers to host in periods of high demand. AppendixAformally states the assumptions
+11:355:26536:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:and proofs for these results. Section3.2confirms that these comparative statics predictions
+11:356:26627:18:18:72:158:654:143:g_d0_f3:143:g_d0_f3:hold in the data.
+11:357:26644:18:18:89:540:636:143:g_d0_f3:143:g_d0_f3:Before presenting our data, we should note that our model does not allow hotels to adjust
+11:358:26733:18:18:72:539:618:143:g_d0_f3:143:g_d0_f3:dedicated capacityKhin response to peer entry. In the long-run, peer entry could partially
+11:359:26823:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:crowd out dedicated sellers. Since our data only spans the first few years of Airbnb di↵usion
+11:360:26916:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:and hotel construction projects take between 3 and 5 years to complete, we are unable to
+11:361:27004:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:empirically capture hotels’ capacity adjustments. Exploring the entry and exit decisions of
+11:362:27095:18:45:72:398:546:143:g_d0_f3:143:g_d0_f3:dedicated producers would be a valuable extension of our work.
+11:363:27157:45:30:72:345:501:296:g_d0_f2:296:g_d0_f2:3  Data and Tests of the Model
+11:364:27187:30:18:72:540:471:143:g_d0_f3:143:g_d0_f3:In this section, we describe our data on Airbnb and hotels and document how it confirms the
+11:365:27278:18:18:72:540:453:143:g_d0_f3:143:g_d0_f3:predictions of the theoretical framework. Our proprietary Airbnb data consists of information
+11:366:27371:18:18:72:540:435:143:g_d0_f3:143:g_d0_f3:aggregated at the level of listing types.  The variables we observe include the number of
+11:367:27460:18:17:72:540:417:143:g_d0_f3:143:g_d0_f3:bookings, active and available listings, as well as average listed and transacted prices. An
+11:368:27552:17:18:72:540:400:143:g_d0_f3:143:g_d0_f3:available listing is defined as one that is either booked through Airbnb or is open to being
+11:369:27644:18:18:72:540:382:143:g_d0_f3:143:g_d0_f3:booked on the date of stay according to a host’s calendar. An active room is defined as a
+11:370:27733:18:18:72:540:364:143:g_d0_f3:143:g_d0_f3:listing that is available to be booked or is already booked for at least one date in the future.
+11:371:27829:18:18:72:540:346:143:g_d0_f3:143:g_d0_f3:Average transacted prices are calculated among all booked rooms on a given date, regardless
+11:372:27920:18:18:72:540:328:143:g_d0_f3:143:g_d0_f3:of the time of booking. Analogously, average listed prices are calculated among all available
+11:373:28013:18:18:72:373:310:143:g_d0_f3:143:g_d0_f3:rooms on the day of stay, regardless of prior price changes.
+11:374:28073:18:18:89:539:292:143:g_d0_f3:143:g_d0_f3:We categorize Airbnb listings into four types: ‘Airbnb Luxury’, ‘Airbnb Upscale’, ‘Airbnb
+11:375:28162:18:18:72:539:274:143:g_d0_f3:143:g_d0_f3:Midscale’, and ‘Airbnb Economy’.4Listing types are defined using the following algorithm.
+11:376:28251:18:18:72:539:256:143:g_d0_f3:143:g_d0_f3:We first run a city level hedonic regression of nightly price on listing fixed e↵ects, date
+11:377:28342:18:18:72:540:238:143:g_d0_f3:143:g_d0_f3:fixed e↵ects, and bins for the number of five-star reviews.5Second, we extract the listing
+11:378:28432:18:18:72:539:220:143:g_d0_f3:143:g_d0_f3:fixed e↵ects and use Bayesian shrinkage to shrink fixed e↵ects towards the mean. Third, we
+11:379:28522:18:18:72:540:202:143:g_d0_f3:143:g_d0_f3:compute quartiles of listing quality and categorize a listing in a given quartile if its fixed e↵ect
+11:380:28622:18:18:72:539:184:143:g_d0_f3:143:g_d0_f3:plus review coe-cient falls into the appropriate range. This procedure allows us to account
+11:381:28713:18:17:72:540:166:143:g_d0_f3:143:g_d0_f3:for heterogeneity in Airbnb listing types without specifically modeling detailed geographic
+11:382:28804:17:18:72:301:149:143:g_d0_f3:143:g_d0_f3:and room type characteristics at a city level.
+11:383:28850:18:18:89:539:131:143:g_d0_f3:143:g_d0_f3:The hotel data come from STR, an accommodation industry data provider that tracks
+11:384:28931:18:16:85:539:113:49:g_d0_f8:99:g_d0_f9:4These categories are defined solely for the purpose of this paper and do not correspond to any metric
+11:385:29033:16:8:72:166:97:99:g_d0_f9:99:g_d0_f9:used by Airbnb itself.
+11:386:29055:8:0:85:477:89:49:g_d0_f8:99:g_d0_f9:5The bins for the number of reviews are: 0, 1, 2-3, 4-5, 6-10, 11-25, 26-50, 51-100,-101 .
+12:387:29147:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:over 161,000 hotels. Our sample contains daily prices and occupancy rates for the 50 largest
+12:388:29239:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:US cities for the period between January 2011 and December 2014.6STR obtains its infor-
+12:389:29326:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:mation by running a periodic survey of hotels, to which they ask daily revenue attributable
+12:390:29417:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:to the sale of hotel rooms, total rooms sold, and total rooms available. For the 50 largest
+12:391:29508:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:markets, 68% of properties are surveyed, covering 81% of available rooms. STR uses sup-
+12:392:29595:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:plementary data on similar hotels to impute outcomes for the remaining hotels which are
+12:393:29682:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:in their census but do not participate in the survey. The data is then aggregated to six
+12:394:29770:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:hotel scales, from luxury to economy, which indicate the quality and amenities of the hotels.
+12:395:29863:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:So the data tell us, for example, the average price and the total number of rooms sold on
+12:396:29952:18:18:72:361:546:143:g_d0_f3:143:g_d0_f3:January 10th,2013,ofmidscalehotelsinSanFrancisco.
+12:397:30001:18:18:89:540:528:143:g_d0_f3:143:g_d0_f3:Table1shows city-level descriptive statistics regarding hotels and Airbnb. In the average
+12:398:30090:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:city, hotels charge$108 per room and their occupancy rate is 66%. Perhaps surprisingly,
+12:399:30177:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:Airbnb has very similar transacted prices ($109) and much lower occupancy rates (15%). The
+12:400:30267:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:within-city standard deviation of these outcomes varies greatly across cities. For example,
+12:401:30358:17:18:72:539:457:143:g_d0_f3:143:g_d0_f3:the city at the 25th percentile has a standard deviation of hotel prices of$10 ($22 for Airbnb
+12:402:30452:18:18:72:539:439:143:g_d0_f3:143:g_d0_f3:prices), while the city at the 75th percentile has a standard deviation of$21 ($34 for Airbnb
+12:403:30545:18:18:72:539:421:143:g_d0_f3:143:g_d0_f3:prices).  This indicates that markets di↵er not only in levels but in the extent to which
+12:404:30634:18:18:72:322:403:143:g_d0_f3:143:g_d0_f3:conditions fluctuate within a year and over time.
+12:405:30683:18:18:89:539:385:143:g_d0_f3:143:g_d0_f3:During our sample period, Airbnb comprises a small share of the overall market as a
+12:406:30766:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:percentage of total rooms available for short-term accommodation.  The average Airbnb
+12:407:30851:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:share of available rooms in the last quarter of 2014 is 2%, and in most cities it is between
+12:408:30943:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:1% and 3% (25th and 75th percentiles).  Two other normalizations confirm that Airbnb
+12:409:31027:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:was still small in most US cities by the end of our sample period. Across all cities, Airbnb
+12:410:31119:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:rooms represent 4% of all guests and represent less than 1% of total housing units for all
+12:411:31209:18:39:72:342:277:143:g_d0_f3:143:g_d0_f3:metropolitan statistical areas (MSAs) in our sample.
+12:412:31261:39:25:72:421:238:206:g_d0_f2:206:g_d0_f2:3.1  The Long-Run: Determinants of Peer Entry
+12:413:31306:25:18:72:540:213:143:g_d0_f3:143:g_d0_f3:In this section, we verify the theoretical predictions regarding the long-run growth of peer
+12:414:31398:18:18:72:539:195:143:g_d0_f3:143:g_d0_f3:supply from Section2.1. Although the theoretical model assumes that entry decisions are
+12:415:31485:18:18:72:540:177:143:g_d0_f3:143:g_d0_f3:made instantaneously and jointly for all flexible sellers, in practice awareness about the
+12:416:31575:18:18:72:540:159:143:g_d0_f3:143:g_d0_f3:Airbnb platform has grown between 2011 and 2014. We assume that the last quarter in
+12:417:31658:18:18:72:540:141:143:g_d0_f3:143:g_d0_f3:2014, the end of our sample, provides a valid proxy for the long-run share of peer supply
+12:418:31747:18:15:72:182:123:143:g_d0_f3:143:g_d0_f3:derived in our model.
+12:419:31768:15:16:85:539:108:49:g_d0_f8:99:g_d0_f16:6The cities are ranked based on the absolute number of hotel rooms in 2014. See Census Database:http:
+12:420:31869:16:12:72:539:92:99:g_d0_f16:99:g_d0_f16://www.str.com/products/census-databaseand STR Trend Reports:http://www.str.com/products/
+12:421:31957:12:0:72:140:80:99:g_d0_f16:99:g_d0_f16:trend-reports
+13:422:31972:0:18:89:539:708:143:g_d0_f3:143:g_d0_f3:Figure3shows the relationship between Airbnb share of room capacity and hotel daily
+13:423:32055:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:revenues per available room. Not surprisingly, the size of Airbnb is positively correlated with
+13:424:32150:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:the average revenue per available room in a city, with New York being both the city with
+13:425:32238:18:18:72:492:654:143:g_d0_f3:143:g_d0_f3:the highest hotel revenues and the one with the highest penetration of peer hosts.
+13:426:32320:18:18:89:539:636:143:g_d0_f3:143:g_d0_f3:Our theory predicts that if hotels have high investment costs or peer hosts have low
+13:427:32404:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:marginal costs, profitability for peer hosts will be high.  So we should expect more peer
+13:428:32493:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:entry in cities with high hotels’ fixed costs and low peers’ marginal costs.  We use two
+13:429:32581:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:proxies for hotel fixed costs. The first is the share of undevelopable area constructed bySaiz
+13:430:32675:18:18:72:539:564:143:g_d0_f3:143:g_d0_f3:(2010). The index measures the share of a metropolitan area that is undevelopable due to
+13:431:32763:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:geographic constraints, e.g. bodies of water or steep mountains. The second index is the
+13:432:32851:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:Wharton Residential Land Use Regulatory Index (WRLURI), which measures regulation
+13:433:32932:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:related to land use in each metropolitan area and is based on a nationwide survey described
+13:434:33023:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:inGyourko et al.(2008).7Figures4aandA2confirm that constraints to hotel capacity are
+13:435:33107:18:17:72:282:474:143:g_d0_f3:64:g_d0_f7:correlated with the share of peer supply.8
+13:436:33149:17:18:89:539:457:143:g_d0_f3:143:g_d0_f3:The second cost factor influencing the viability of peer production is the marginal cost
+13:437:33237:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:of peers. Although many factors a↵ect the costs of hosting, we focus on those related to
+13:438:33325:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:demographics.9Households vary in their propensities to host strangers in their homes. For
+13:439:33414:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:example, an unmarried 30-year-old professional will likely be more open to hosting strangers
+13:440:33506:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:than a family with children. This occurs for at least two reasons. First, children increase
+13:441:33597:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:a host’s perceived risk of the transaction. Second, unmarried professionals are more likely
+13:442:33688:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:to travel, creating vacant space to be rented on Airbnb. Figure4bplots the share of peer
+13:443:33776:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:supply at the end of 2014 against the percentage of unmarried adults, while FigureA2uses
+13:444:33864:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:the percentage of children. The figures confirm that cities with more unmarried adults and
+13:445:33954:18:18:72:534:295:143:g_d0_f3:143:g_d0_f3:fewer children are those where Airbnb represents a higher share of accommodation rooms.
+13:446:34041:18:18:89:540:277:143:g_d0_f3:143:g_d0_f3:In addition to cost factors, our model predicts that travelers’ demand a↵ects peer entry.
+13:447:34130:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:This is due to two related reasons.  First, hotels typically do not have enough dedicated
+13:448:34219:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:capacity to absorb all potential travelers in times of peak demand. In contrast, flexible sellers
+13:449:34316:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:are able to provide additional supply during peak times, when their rooms are especially
+13:450:34404:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:valuable to travelers. Second, since hotels must pre-commit to capacity and any adjustment
+13:451:34494:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:in the form of new hotel buildings takes 3 to 5 years, unforeseen growth in demand will
+13:452:34581:18:16:85:540:170:49:g_d0_f8:99:g_d0_f9:7Saiz(2010) uses these two measures to calculate the housing supply elasticity at the level of a metropoli-
+13:453:34688:16:8:72:111:154:99:g_d0_f9:99:g_d0_f9:tan area.
+13:454:34697:8:16:85:540:146:49:g_d0_f8:99:g_d0_f9:8Building restrictions also a↵ect Airbnb supply through another channel, the cost of residential housing.
+13:455:34802:16:12:72:540:130:99:g_d0_f9:99:g_d0_f9:There are greater incentives to monetize a spare bedroom when the costs of housing are higher, especially
+13:456:34907:12:12:72:539:118:99:g_d0_f9:99:g_d0_f9:for liquidity constrained households. FigureA2in the Appendix confirms a positive relationship between
+13:457:35009:12:8:72:451:106:99:g_d0_f9:99:g_d0_f9:the share of household income used to pay rent in 2010 and the size of Airbnb in 2014.
+13:458:35095:8:15:85:539:98:49:g_d0_f8:99:g_d0_f9:9Other potential shifters of the returns to hosting include household liquidity constraints, building regu-
+13:459:35202:15:0:72:540:83:99:g_d0_f9:99:g_d0_f9:lation and enforcement of short-term rentals, and the ease of vacating an apartment in high demand periods.
+14:460:35311:0:18:72:499:708:143:g_d0_f3:143:g_d0_f3:create an ine-ciently low dedicated supply and will induce entry by flexible sellers.
+14:461:35396:18:18:89:539:690:143:g_d0_f3:143:g_d0_f3:We use data from air travelers to proxy for accommodation demand trends and fluctua-
+14:462:35480:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:tions at the city-month level. We measure these demand characteristics in 2011, the earliest
+14:463:35572:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:year in our sample, in order to reduce the risk that peer entry influences demand rather
+14:464:35660:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:than vice versa. Our data come from Sabre Travel Solutions, the largest Global Distribution
+14:465:35751:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:Systems provider for air bookings in the US. We isolate trips entering a city as part of a
+14:466:35841:18:18:72:539:600:143:g_d0_f3:143:g_d0_f3:round trip from a di↵erent city in order to measure the potential demand for short-term
+14:467:35928:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:stays.10Figure5aconfirms the intuition that year-on-year demand growth results in greater
+14:468:36017:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:peer entry by showing that the 2012-2011 growth rate in travelers to a city is positively
+14:469:36106:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:related to Airbnb penetration in 2014. Figure5bplots the standard deviation of demand in
+14:470:36194:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:2011 and confirms that by the end of 2014 Airbnb is bigger in cities where the fluctuations
+14:471:36285:18:18:72:305:510:143:g_d0_f3:143:g_d0_f3:in the number of arriving travelers are larger.
+14:472:36332:18:18:89:539:492:143:g_d0_f3:143:g_d0_f3:To conclude this section, we combine all the descriptive results into a regression. Table
+14:473:36421:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:2displays the summary statistics for the cost and demand factors described above. Table3
+14:474:36509:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:displays results from a regression where the dependent variable is the size of Airbnb in the last
+14:475:36606:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:quarter of 2014 and the explanatory variables are combinations of the measures of relative
+14:476:36696:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:costs, demand growth, and demand variability described above. We also control for market
+14:477:36784:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:size in order to isolate the component of the standard deviation of demand which is due to
+14:478:36874:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:demand variability. Despite the small sample size, column (1) shows that all factors a↵ect
+14:479:36964:18:18:72:539:367:143:g_d0_f3:143:g_d0_f3:the size of Airbnb in the expected direction, and two coe-cients are statistically significant
+14:480:37058:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:- peers’ marginal costs, and demand volatility. Column (2) adds additional and potentially
+14:481:37148:18:18:72:539:331:143:g_d0_f3:143:g_d0_f3:redundant proxies for costs and demand. The coe-cients are in the expected direction for
+14:482:37236:18:18:72:127:313:143:g_d0_f3:143:g_d0_f3:all proxies.
+14:483:37248:18:18:89:539:295:143:g_d0_f3:143:g_d0_f3:In the last column of Table3we add the 2011 average revenue per hotel room as an
+14:484:37328:18:18:72:539:277:143:g_d0_f3:143:g_d0_f3:additional control. The coe-cient on revenue per available room is positive and statistically
+14:485:37421:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:significant, while the coe-cients on the demand and hotel investment cost proxies decrease
+14:486:37511:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:in magnitude and become insignificant. This result suggests that demand proxies and hotel
+14:487:37600:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:investment costs a↵ect peer entry mostly through price and occupancy as expected. Taken
+14:488:37687:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:altogether, our proxies for the determinants of long-run peer supply explain between 60%
+14:489:37775:18:39:72:388:188:143:g_d0_f3:143:g_d0_f3:and 75% of the variation across our cross-section of US cities.
+14:490:37838:39:26:72:449:149:206:g_d0_f2:206:g_d0_f2:3.2  The Short-Run: E↵ects of Peer Entry on Hotels
+14:491:37888:26:18:72:540:123:143:g_d0_f3:143:g_d0_f3:In the previous section we have tested the long-run predictions of our theoretical model,
+14:492:37977:18:18:72:540:105:143:g_d0_f3:143:g_d0_f3:those related to the entry of peer producers. Here, we take entry as given, and focus on the
+14:493:38069:18:15:81:539:87:49:g_d0_f8:99:g_d0_f9:10Data from Sabre include monthly number of passengers by origin and destination airport. We aggregate
+14:494:38171:15:0:72:342:72:99:g_d0_f9:99:g_d0_f9:these observations to an MSA-month measure of air travelers.
+15:495:38233:0:18:72:539:708:143:g_d0_f3:143:g_d0_f3:short-run drivers of peer supply to test our model hypotheses on the e↵ects of peer supply
+15:496:38323:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:on hotels. The awareness and di↵usion process of Airbnb and its variation across cities help
+15:497:38415:18:18:72:199:672:143:g_d0_f3:143:g_d0_f3:us test these hypotheses.
+15:498:38440:18:18:89:539:654:143:g_d0_f3:143:g_d0_f3:First, we show how to properly measure the size of Airbnb, and how the short-run
+15:499:38520:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:elasticity of Airbnb supply is twice as large as that of hotels. Then, we use an instrumental
+15:500:38613:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:variable approach to study the reduction in hotel revenues after the entry of Airbnb, and its
+15:501:38706:18:35:72:293:600:143:g_d0_f3:143:g_d0_f3:heterogeneity across cities and hotel scales.
+15:502:38751:35:25:72:225:565:143:g_d0_f2:143:g_d0_f2:Measuring Airbnb Supply
+15:503:38774:25:18:72:540:540:143:g_d0_f3:143:g_d0_f3:We start by demonstrating how to properly measure Airbnb supply and studying how hosts
+15:504:38860:18:18:72:540:522:143:g_d0_f3:143:g_d0_f3:flexibly respond to fluctuations in market-level demand over time. Figure6displays four
+15:505:38947:18:18:72:540:504:143:g_d0_f3:143:g_d0_f3:measures of the size of Airbnb plotted over time: active listings, two measures of available
+15:506:39039:18:18:72:540:486:143:g_d0_f3:143:g_d0_f3:listings, and booked listings. This figure displays three important facts. First, the share
+15:507:39130:18:18:72:540:468:143:g_d0_f3:143:g_d0_f3:of active or available listings that are booked varies greatly over time. The booking rate is
+15:508:39223:18:18:72:540:450:143:g_d0_f3:143:g_d0_f3:especially high during periods of high demand such as New Year’s Eve and the summer. What
+15:509:39312:18:18:72:540:432:143:g_d0_f3:143:g_d0_f3:we will show just below is that this is the result of a highly elastic peer supply. Second, the
+15:510:39407:18:18:72:540:414:143:g_d0_f3:143:g_d0_f3:gap between active listings and available listings is increasing over time, suggesting attrition
+15:511:39503:18:18:72:540:396:143:g_d0_f3:143:g_d0_f3:in active listings. Therefore, the meaning of an active listing does not stay constant over the
+15:512:39598:18:18:72:185:378:143:g_d0_f3:143:g_d0_f3:entire period of study.
+15:513:39621:18:18:89:539:360:143:g_d0_f3:143:g_d0_f3:The third and most relevant fact from Figure6is that the number of unadjusted available
+15:514:39708:18:17:72:540:342:143:g_d0_f3:143:g_d0_f3:listings (blue line) actually decreases during periods of high demand, most notably on New
+15:515:39798:17:18:72:540:325:143:g_d0_f3:143:g_d0_f3:Year’s Eve. The main reason for this is that calendar updating behavior responds to room
+15:516:39886:18:18:72:539:307:143:g_d0_f3:143:g_d0_f3:demand. Many hosts do not pro-actively take the e↵ort to block a date on their calendar
+15:517:39973:18:18:72:539:289:143:g_d0_f3:143:g_d0_f3:when they are unavailable (seeFradkin(2017) for evidence). However, when they receive a
+15:518:40060:18:18:72:540:271:143:g_d0_f3:143:g_d0_f3:request to book a room, they often reject the guest and update their calendar accordingly.
+15:519:40150:18:18:72:540:253:143:g_d0_f3:143:g_d0_f3:Since a larger share of listings receives inquiries during high demand periods, the calendar is
+15:520:40245:18:18:72:540:235:143:g_d0_f3:143:g_d0_f3:also more accurate during those times. Therefore, the naively calculated availability measure
+15:521:40338:18:18:72:539:217:143:g_d0_f3:143:g_d0_f3:su↵ers from endogeneity and is even counter-cyclical – high when demand is low, and low
+15:522:40425:18:18:72:123:199:143:g_d0_f3:143:g_d0_f3:otherwise.
+15:523:40435:18:18:89:539:181:143:g_d0_f3:143:g_d0_f3:Since we need a measure of the size of Airbnb that stays stable over time, we create an
+15:524:40522:18:18:72:540:163:143:g_d0_f3:143:g_d0_f3:adjusted measure of available listings. This measure includes any rooms which were listed
+15:525:40611:18:18:72:540:145:143:g_d0_f3:143:g_d0_f3:as available for a given date or were sent an inquiry for a given date and later became
+15:526:40698:18:18:72:539:127:143:g_d0_f3:143:g_d0_f3:unavailable.  Therefore, it does not su↵er from the problem of demand-induced calendar
+15:527:40784:18:18:72:540:109:143:g_d0_f3:143:g_d0_f3:updating.  It does overstate the “true” number of available rooms in the market, but as
+15:528:40871:18:17:72:540:91:143:g_d0_f3:143:g_d0_f3:long as it overestimates true availability consistently over time we consider it to be the
+15:529:40961:17:0:72:540:74:143:g_d0_f3:143:g_d0_f3:best measure of Airbnb size. Figure6displays our proposed measure (red line) against the
+16:530:41051:0:18:72:539:708:143:g_d0_f3:143:g_d0_f3:naive measure of available listings (blue line). The new measure does not su↵er from drops
+16:531:41141:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:in availability during high demand periods. Throughout the rest of the paper we use the
+16:532:41228:18:35:72:529:672:143:g_d0_f3:143:g_d0_f3:adjusted number of available listings as the size of Airbnb supply unless otherwise noted.
+16:533:41318:35:26:72:320:637:143:g_d0_f2:143:g_d0_f2:Peers’ Responses to Demand Fluctuations
+16:534:41357:26:18:72:540:611:143:g_d0_f3:143:g_d0_f3:From Figure6it is clear that Airbnb bookings fluctuate over time: more rooms are booked
+16:535:41444:18:17:72:540:593:143:g_d0_f3:143:g_d0_f3:during the peak season than in other periods. In this section, we use 2SLS to document that
+16:536:41535:17:18:72:414:576:143:g_d0_f3:143:g_d0_f3:flexible suppliers are almost twice as elastic as dedicated suppliers.
+16:537:41605:18:18:89:539:558:143:g_d0_f3:143:g_d0_f3:We estimate the average supply elasticity of hotel and Airbnb rooms with respect to their
+16:538:41694:18:33:72:253:540:143:g_d0_f3:143:g_d0_f3:prices using the following equation:
+16:539:41730:33:33:185:540:507:143:g_d0_f10:143:g_d0_f3:log(Qmt)=-log(Kmt)+log(pmt)+μmt+✏mt,(3)
+16:540:41770:33:18:72:539:474:143:g_d0_f3:143:g_d0_f3:whereQmtis the number of (hotel or Airbnb) bookings in citymand dayt,Kdenotes
+16:541:41847:18:18:72:540:456:143:g_d0_f3:143:g_d0_f3:capacity, andpis the average transacted price. The equation is estimated separately for
+16:542:41934:18:18:72:540:438:143:g_d0_f3:143:g_d0_f3:hotels and Airbnb.is the elasticity of supply with respect to prices, and will be di↵erent
+16:543:42025:18:18:72:540:420:143:g_d0_f3:143:g_d0_f3:between flexible and dedicated supply.μmtincludes city, seasonality (month-year), and day
+16:544:42114:18:17:72:539:402:143:g_d0_f3:143:g_d0_f3:of week fixed e↵ects to control for the fact that costs might change by city or over time (e.g.,
+16:545:42210:17:18:72:539:385:143:g_d0_f3:143:g_d0_f3:due to average di↵erences in costs over cities or due to particular periods where hosts are
+16:546:42301:18:18:72:265:367:143:g_d0_f3:143:g_d0_f3:less likely to occupy their residences).
+16:547:42341:18:18:89:540:349:143:g_d0_f3:143:g_d0_f3:Equation3su↵ers from standard simultaneity bias because the price of accommodations
+16:548:42424:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:is correlated with demand, and with unobserved fluctuations in marginal costs. Furthermore,
+16:549:42515:18:18:72:539:313:143:g_d0_f3:143:g_d0_f3:in the case of Airbnb, the number of available roomsKmtis itself endogenous because hosts
+16:550:42604:18:18:72:441:295:143:g_d0_f3:64:g_d0_f7:may list their room as available precisely during high demand periods.11
+16:551:42676:18:18:89:538:277:143:g_d0_f3:143:g_d0_f3:We discuss each concern in order.  We instrument for price with plausibly exogenous
+16:552:42759:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:demand fluctuations which are typically caused by holidays or special events in a city. We
+16:553:42849:18:18:72:540:241:143:g_d0_f3:143:g_d0_f3:use two instruments.  The first is the number of arriving (not returning) flight travelers
+16:554:42939:18:18:72:549:223:143:g_d0_f3:143:g_d0_f3:in a city-month, which we used in Section3.1.ThesecondcomesfromGoogleTrends,
+16:555:43015:18:18:72:540:205:143:g_d0_f3:143:g_d0_f3:which provides a normalized measure of weekly search volume for a given query on Google.
+16:556:43103:18:18:72:540:187:143:g_d0_f3:143:g_d0_f3:Our query of interest is “hotel(s)c”, wherecis the name of a US city in our sample. We
+16:557:43189:18:18:72:540:169:143:g_d0_f3:143:g_d0_f3:de-trend each city’s Google Trends series using a common linear trend to remove long-run
+16:558:43277:18:17:72:540:151:143:g_d0_f3:143:g_d0_f3:changes in overall search behavior on Google. We use the one-week lagged search volume
+16:559:43363:17:18:72:540:134:143:g_d0_f3:143:g_d0_f3:as an instrument. Using other lags or the contemporaneous search volume yields similar
+16:560:43449:18:16:72:123:116:143:g_d0_f3:143:g_d0_f3:estimates.
+16:561:43459:16:15:81:539:100:49:g_d0_f8:99:g_d0_f9:11The same endogeneity issue is not important for hotels because hotel capacity is typically fixed in a
+16:562:43562:15:12:72:540:85:99:g_d0_f9:99:g_d0_f9:4-year interval, our sample period. However, instrumenting for hotel capacity with a quadratic time trend,
+16:563:43668:12:0:72:287:73:99:g_d0_f9:99:g_d0_f9:as we do for Airbnb, does not change our results.
+17:564:43719:0:18:89:539:708:143:g_d0_f3:143:g_d0_f3:To control for the fact that room availability on Airbnb is endogenous to demand, we
+17:565:43803:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:instrument for the number of available listings with a city-specific quadratic time trend. It is
+17:566:43899:18:18:72:539:672:143:g_d0_f3:143:g_d0_f3:reasonable to believe that this instrument captures the long-run di↵usion process of Airbnb
+17:567:43990:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:while being uncorrelated with contemporaneous idiosyncratic shocks to supply. We use this
+17:568:44079:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:same instrumentation strategy below to test for the e↵ect of Airbnb supply on hotel revenues
+17:569:44171:18:18:72:195:618:143:g_d0_f3:143:g_d0_f3:predicted by our model.
+17:570:44194:18:18:89:539:600:143:g_d0_f3:143:g_d0_f3:Table4contains our estimates of Equation3for Airbnb and hotels separately. Turning
+17:571:44276:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:first to column 1, a 1% increase in the average hotel daily rate increases hotel bookings by
+17:572:44368:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:1.1%. This elasticity is half as large as that of Airbnb (column 2), whose estimated elasticity
+17:573:44463:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:is 2.2. An important implication of this result is that smaller fluctuations in prices are needed
+17:574:44560:18:18:72:328:528:143:g_d0_f3:143:g_d0_f3:for Airbnb supply to adjust upward or downward.
+17:575:44607:18:18:89:539:510:143:g_d0_f3:143:g_d0_f3:We have shown that the Airbnb supply is highly responsive to price, more so than hotels:
+17:576:44695:18:18:72:544:492:143:g_d0_f3:143:g_d0_f3:asmallpriceincreaseduetohighdemandgreatlyincreasesthenumberofbookedroomson
+17:577:44769:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:Airbnb, and this increase is twice as large as for hotels. The lower elasticity of hotel supply
+17:578:44864:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:has a simple explanation. To the extent that hotels have a constant marginal cost and a fixed
+17:579:44957:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:supply, hotel bookings cannot increase in response to increases in demand when demand is
+17:580:45045:18:18:72:539:421:143:g_d0_f3:143:g_d0_f3:su-ciently high. The higher elasticity of flexible supply implies that there are many hosts
+17:581:45136:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:willing to rent their rooms when prices are high, but prefer not to host when prices are just
+17:582:45229:18:18:72:539:385:143:g_d0_f3:143:g_d0_f3:alittlelower. OurstructuralmodelinSection4rationalizes this result by estimating that
+17:583:45314:18:35:72:458:367:143:g_d0_f3:143:g_d0_f3:there is a large mass of peers with costs close to the market clearing prices.
+17:584:45392:35:25:72:305:332:143:g_d0_f2:143:g_d0_f2:E↵ects of Peer Entry on Hotel Revenue
+17:585:45429:25:18:72:540:307:143:g_d0_f3:143:g_d0_f3:In this section, we test our model hypotheses on the e↵ects of peer entry on hotels’ revenue,
+17:586:45522:18:18:72:540:289:143:g_d0_f3:143:g_d0_f3:occupancy rates, and prices using linear specifications. Before describing our empirical strat-
+17:587:45617:18:18:72:539:271:143:g_d0_f3:143:g_d0_f3:egy, we discuss the two most important challenges to identifying the e↵ect of Airbnb. To do
+17:588:45708:18:18:72:540:253:143:g_d0_f3:143:g_d0_f3:this, we consider the hypothetical scenario where Airbnb supply grows randomly across cities
+17:589:45800:18:18:72:540:235:143:g_d0_f3:143:g_d0_f3:and over time. In this scenario, regressing the outcomes of hotels on the Airbnb supply would
+17:590:45893:18:18:72:539:217:143:g_d0_f3:143:g_d0_f3:yield an unbiased estimate of the causal e↵ect of Airbnb supply. However, as highlighted
+17:591:45981:18:18:72:540:199:143:g_d0_f3:143:g_d0_f3:above, Airbnb supply does not grow randomly. In fact, Airbnb supply is larger in cities with
+17:592:46073:18:18:72:540:181:143:g_d0_f3:143:g_d0_f3:high hotel revenues, and during periods of high demand within each city. Observables like
+17:593:46162:18:18:72:540:163:143:g_d0_f3:143:g_d0_f3:the number of arriving flight travelers, city fixed e↵ects, and seasonality fixed e↵ects, help
+17:594:46256:18:18:72:214:145:143:g_d0_f3:143:g_d0_f3:us control for this selection.
+17:595:46286:18:18:89:539:127:143:g_d0_f3:143:g_d0_f3:We instrument for the currently available Airbnb supply with a city-specific quadratic
+17:596:46372:18:18:72:539:109:143:g_d0_f3:143:g_d0_f3:time trend, which isolates the predictable di↵usion of Airbnb over-time from the endogenous
+17:597:46463:18:17:72:540:91:143:g_d0_f3:143:g_d0_f3:short-run Airbnb supply responses to demand shocks during peak days such as holidays.
+17:598:46548:17:0:72:540:74:143:g_d0_f3:143:g_d0_f3:The key assumption behind this identification strategy is that there are no other city-specific
+18:599:46645:0:18:72:539:708:143:g_d0_f3:143:g_d0_f3:trends conditional on observables.12We remove this assumption in our structural estimation
+18:600:46735:18:18:72:543:690:143:g_d0_f3:143:g_d0_f3:in Section5,whichreliesonplausiblyexogenouscomponentsofpricevariationandmarket
+18:601:46813:18:18:72:289:672:143:g_d0_f3:143:g_d0_f3:structure to identify the e↵ects of interest.
+18:602:46858:18:33:89:289:654:143:g_d0_f3:143:g_d0_f3:Our baseline regression specification is:
+18:603:46899:33:33:120:540:621:143:g_d0_f10:143:g_d0_f3:ymt=↵log(airbnbmt)+-log(gtrendmt)+-log(travelersmt)+✓mt+⌫mt.(4)
+18:604:46962:33:18:72:539:588:143:g_d0_f3:143:g_d0_f3:Hereymtis one of three hotel outcomes (log revenue per available room, log price, occupancy
+18:605:47053:18:18:72:539:570:143:g_d0_f3:143:g_d0_f3:rate) in a citymon dayt,airbnbmtis the number of available Airbnb listings,gtrendmtis the
+18:606:47142:18:18:72:540:552:143:g_d0_f3:143:g_d0_f3:one-week lag of Google searches for hotels in the city,travelersmtis the number of arriving
+18:607:47233:18:17:72:539:534:143:g_d0_f3:143:g_d0_f3:air passengers, and✓mtincludes city, quarter-year, and day of week fixed e↵ects. Impor-
+18:608:47320:17:18:72:540:517:143:g_d0_f3:143:g_d0_f3:tantly, the Google metric captures demand shocks at the week level, while the number of
+18:609:47407:18:18:72:540:499:143:g_d0_f3:143:g_d0_f3:incoming air passengers captures monthly fluctuations in demand. The fixed e↵ects capture
+18:610:47496:18:18:72:540:481:143:g_d0_f3:143:g_d0_f3:seasonality, di↵erences across the days of the week, and time-invariant city characteristics
+18:611:47588:18:18:72:346:463:143:g_d0_f3:143:g_d0_f3:that a↵ect both the size of Airbnb and hotel revenue.
+18:612:47641:18:18:89:544:445:143:g_d0_f3:143:g_d0_f3:The e↵ect of interest is↵,whichistheaverageshort-runelasticityofhoteloutcomesto
+18:613:47720:18:18:72:540:427:143:g_d0_f3:143:g_d0_f3:peers’ supply over our sample period. The coe-cient is identified o↵of two types of variation.
+18:614:47814:18:18:72:540:409:143:g_d0_f3:143:g_d0_f3:First, there is variation across cities and over time in the number of available listings due
+18:615:47907:18:18:72:540:391:143:g_d0_f3:143:g_d0_f3:to increasing awareness of Airbnb. Second, there is variation in the availability of listings
+18:616:48000:18:18:72:540:373:143:g_d0_f3:143:g_d0_f3:due to hosts’ daily costs of hosting, which we assume are uncorrelated with residual daily
+18:617:48090:18:18:72:296:355:143:g_d0_f3:143:g_d0_f3:demand for accommodation within the city.
+18:618:48131:18:18:89:539:337:143:g_d0_f3:143:g_d0_f3:Table5displays the results of the baseline specification. The coe-cient on Airbnb size in
+18:619:48220:18:18:72:540:319:143:g_d0_f3:143:g_d0_f3:column (1) is statistically significant and the estimated elasticity for hotel revenue is -.033.
+18:620:48316:18:18:72:539:301:143:g_d0_f3:143:g_d0_f3:This coe-cient implies that a 10% increase in available listings decreases the revenue per
+18:621:48406:18:17:72:539:283:143:g_d0_f3:143:g_d0_f3:hotel room by 0.33%. The coe-cient estimates for our demand proxies, Google trends and
+18:622:48492:17:18:72:540:266:143:g_d0_f3:143:g_d0_f3:arriving air travelers, are of the correct sign and statistically significant.  Once we break
+18:623:48585:18:18:72:539:248:143:g_d0_f3:143:g_d0_f3:down the e↵ect into a reduction in occupancy rates (column 2) and a reduction in prices
+18:624:48672:18:18:72:540:230:143:g_d0_f3:143:g_d0_f3:(column 3), we see that on average Airbnb has a larger e↵ect on prices than on occupancy
+18:625:48760:18:18:72:100:212:143:g_d0_f3:143:g_d0_f3:rates.
+18:626:48766:18:18:89:539:194:143:g_d0_f3:143:g_d0_f3:Recall that our model predicts that, holding fixed Airbnb supply, in days and cities
+18:627:48850:18:18:72:540:176:143:g_d0_f3:143:g_d0_f3:when hotels are not capacity-constrained, Airbnb should have a relatively bigger e↵ect on
+18:628:48939:18:18:72:540:158:143:g_d0_f3:143:g_d0_f3:occupancy than on price. The opposite is true when hotels are capacity-constrained: on
+18:629:49025:18:18:72:540:140:143:g_d0_f3:143:g_d0_f3:those days, Airbnb should have a relatively bigger e↵ect on price than on occupancy. We
+18:630:49112:18:18:72:540:122:143:g_d0_f3:143:g_d0_f3:also predicted and confirmed empirically that there will be more Airbnb rooms available in
+18:631:49202:18:17:72:540:104:143:g_d0_f3:143:g_d0_f3:cities where hotels are often capacity constrained. Consequently, our theory predicts that
+18:632:49292:17:15:81:540:87:49:g_d0_f8:99:g_d0_f9:12In AppendixBwe conduct robustness checks to demonstrate that these controls and instruments likely
+18:633:49392:15:0:72:249:72:99:g_d0_f9:99:g_d0_f9:capture potential sources of endogeneity.
+19:634:49435:0:18:72:539:708:143:g_d0_f3:143:g_d0_f3:we will find larger e↵ects of Airbnb in constrained cities and that the price rather than
+19:635:49524:18:18:72:524:690:143:g_d0_f3:143:g_d0_f3:occupancy channel will be more important in these cities than in non-constrained cities.
+19:636:49612:18:18:89:539:672:143:g_d0_f3:143:g_d0_f3:To test this prediction, we divide our cities into two groups and explore the heterogeneity
+19:637:49703:18:18:72:539:654:143:g_d0_f3:143:g_d0_f3:of the e↵ect of Airbnb across cities.Saiz(2010) uses the WRLURI and the share of unde-
+19:638:49789:18:18:72:539:636:143:g_d0_f3:143:g_d0_f3:velopable area described in Section3.1to estimate the housing supply elasticity at the city
+19:639:49880:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:level. We take that supply elasticity as a proxy for the elasticity of hotel construction, and
+19:640:49974:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:split our sample of cities at the median level of Saiz’s estimates for the cities in our sample.
+19:641:50070:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:Table6displays the estimates of Equation4separately for the two groups of cities. Columns
+19:642:50159:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:(1) and (4) display the estimates of the e↵ect on revenue per available hotel room. Both
+19:643:50247:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:coe-cients on Airbnb are statistically insignificant. When we break the outcomes into prices
+19:644:50339:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:and occupancy rates, we see that the statistically significant e↵ect of Airbnb is a reduction in
+19:645:50435:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:hotel prices in the cities where hotels are capacity constrained (column 3). This is consistent
+19:646:50530:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:with the fact that binding capacity constraints lead to spikes in hotel prices, which in turn
+19:647:50623:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:attract more competition from Airbnb. When Airbnb enters, hotels are often fully booked,
+19:648:50711:17:18:72:539:457:143:g_d0_f3:143:g_d0_f3:so they face more pressure on prices than on occupancy. TableA4separates the e↵ect in
+19:649:50796:18:18:72:527:439:143:g_d0_f3:143:g_d0_f3:constrained cities by hotel scale and detects e↵ects on all hotel scales other than Luxury.
+19:650:50887:18:18:89:540:421:143:g_d0_f3:143:g_d0_f3:Di↵erences in the e↵ect of Airbnb on hotels across constrained and unconstrained cities
+19:651:50974:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:occur for two reasons. First, for the same level of Airbnb and hotel capacity, the e↵ect of
+19:652:51065:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:Airbnb is relatively larger on prices if hotel capacity constraints are more often binding (due
+19:653:51160:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:to higher levels of demand). Second, for the same level of demand and hotel capacity, the
+19:654:51249:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:e↵ect on hotel revenues is larger if there are more Airbnb listings. Intuitively, the elasticity of
+19:655:51348:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:hotel revenues with respect to the size of Airbnb should be higher, the higher the Airbnb share
+19:656:51443:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:of supply because a 1 percent increase in Airbnb size is a much bigger share of market supply
+19:657:51536:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:when Airbnb penetration is 3% then when it is 1%. Both conditions are true when we split
+19:658:51624:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:our cities. Indeed, in December 2014 the average Airbnb supply share in hotel-constrained
+19:659:51713:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:cities was 4.3% while it was only in 1.4% in unconstrained cities. At the same time, the
+19:660:51801:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:average hotel occupancy rate was 61% in constrained cities and only 53% in unconstrained
+19:661:51889:17:18:72:101:224:143:g_d0_f3:143:g_d0_f3:cities.
+19:662:51896:18:18:89:540:206:143:g_d0_f3:143:g_d0_f3:Before concluding this section, one caveat is in order. In these specifications we cannot
+19:663:51985:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:take advantage of exogenous changes in price that would allow for a valid causal estimate of
+19:664:52077:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:the e↵ect of Airbnb on hotel performance. For that analysis we refer the reader to Section
+19:665:52167:18:18:72:539:152:143:g_d0_f3:143:g_d0_f3:5. However, this exercise helped us confirm that the main predictions of our model from
+19:666:52254:18:18:72:539:134:143:g_d0_f3:143:g_d0_f3:Section2hold in the data. We documented that the entry of peer hosts is responsive to
+19:667:52339:18:18:72:540:116:143:g_d0_f3:143:g_d0_f3:long-run supply and demand characteristics. Peer supply is more likely to enter in cities
+19:668:52428:18:18:72:540:98:143:g_d0_f3:143:g_d0_f3:where hotels’ fixed costs are high, where peers marginal costs are low, and where demand
+19:669:52516:18:0:72:540:80:143:g_d0_f3:143:g_d0_f3:is increasing and highly variable. We have also shown that flexible supply is highly elastic,
+20:670:52611:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:and twice as elastic as dedicated supply. Finally, we have shown that the entry of flexible
+20:671:52702:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:supply has negative spillovers on the revenue of dedicated suppliers. This negative e↵ect is
+20:672:52794:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:higher in cities with binding hotel capacity constraints and has a relatively larger impact on
+20:673:52888:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:prices in those cities. In the rest of the paper, we structurally estimate our short-run model
+20:674:52982:18:45:72:515:636:143:g_d0_f3:143:g_d0_f3:in order to measure the welfare e↵ects of Airbnb on consumers, peer hosts, and hotels.
+20:675:53068:45:30:72:369:591:296:g_d0_f2:296:g_d0_f2:4  Model and Estimation Strategy
+20:676:53100:30:18:72:540:561:143:g_d0_f3:143:g_d0_f3:In this section, we describe the fully specified short-run model that we estimate. This extends
+20:677:53195:18:18:72:540:543:143:g_d0_f3:143:g_d0_f3:the theoretical model from Section2to multiple hotel and Airbnb listing types. A market
+20:678:53282:18:18:72:546:525:143:g_d0_f10:143:g_d0_f3:nis defined by daytand citym.Onthedemandside,ourmodelisarandomcoe-cients
+20:679:53354:18:18:72:539:507:143:g_d0_f3:143:g_d0_f3:logit model (Petrin(2002)andBerry et al.(1995)), where rooms are di↵erentiated across
+20:680:53439:18:18:72:540:489:143:g_d0_f3:143:g_d0_f3:hotel scales and Airbnb listing types. On the supply side, we assume that hotels engage in
+20:681:53529:18:18:72:540:471:143:g_d0_f3:143:g_d0_f3:Cournot competition with di↵erentiated products across scales. Within a scale, each hotel
+20:682:53618:18:34:72:516:453:143:g_d0_f3:143:g_d0_f3:is undi↵erentiated. Airbnb hosts are price takers with randomly drawn marginal costs.
+20:683:53703:34:26:72:185:419:143:g_d0_f2:143:g_d0_f2:Consumer Demand
+20:684:53718:26:18:72:540:393:143:g_d0_f3:143:g_d0_f3:Consumers make a discrete choice between hotel scales, Airbnb listing types, and an outside
+20:685:53809:18:18:72:540:375:143:g_d0_f3:143:g_d0_f3:option for a given night. Consumerihas the following utility for room optionjin market
+20:686:53895:18:18:72:81:357:143:g_d0_f10:143:g_d0_f3:n:
+20:687:53897:18:26:219:540:339:143:g_d0_f10:143:g_d0_f3:uijn=μijn-↵i(1 +⌧jn)pjn+✏ijn.(5)
+20:688:53929:26:18:72:547:313:143:g_d0_f3:143:g_d0_f3:For consumeri,μijnrepresents a market-specific mean utility for accommodationj.The
+20:689:54011:18:18:72:539:295:143:g_d0_f3:143:g_d0_f3:price of an accommodation is denotedpjn,whilethelodgingtaxrateis⌧jn. Finally,✏ijnis an
+20:690:54097:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:idiosyncratic component with a type I extreme value distribution. We normalize the value
+20:691:54185:18:17:72:540:259:143:g_d0_f3:143:g_d0_f3:of the outside option to 0 for all markets. This demand specification yields the following
+20:692:54275:17:37:72:280:242:143:g_d0_f3:143:g_d0_f3:quantities for each accommodation type:
+20:693:54314:37:0:150:251:205:143:g_d0_f10:64:g_d0_f11:Qjn(pjn,p-jn)=Dn
+20:694:54330:0:8:253:260:221:143:g_d0_f14:143:g_d0_f14:Z
+20:695:54331:8:17:292:371:213:143:g_d0_f10:36:g_d0_f12:eμijn-↵i(1+⌧jn)pjn
+20:696:54349:17:0:268:288:196:143:g_d0_f3:143:g_d0_f3:1+
+20:697:54351:0:13:289:302:205:143:g_d0_f14:143:g_d0_f14:P
+20:698:54352:13:0:301:315:192:64:g_d0_f11:143:g_d0_f10:j0e
+20:699:54355:0:34:316:540:200:64:g_d0_f11:143:g_d0_f3:μij0n-↵i(1+⌧jn)pj0ndH(μijn,↵i),(6)
+20:700:54389:34:18:72:539:166:143:g_d0_f3:64:g_d0_f11:whereDnis the market size, andHis the joint distribution of consumer heterogeneity inμijn
+20:701:54478:18:17:72:544:148:143:g_d0_f3:143:g_d0_f3:and↵i.Weallowforconsumerheterogeneityinhowtravelersvaluetheinsideoptions(hotels
+20:702:54557:17:18:72:540:131:143:g_d0_f3:143:g_d0_f3:and Airbnb), the high-end hotel scales (luxury and upper upscale), and accommodation
+20:703:54641:18:18:72:540:113:143:g_d0_f3:143:g_d0_f3:prices. We assume that the distribution of consumer heterogeneity is multivariate normal
+20:704:54729:18:18:72:540:95:143:g_d0_f3:143:g_d0_f3:with a mean and variance matrix to be estimated. We do not allow for correlation across
+20:705:54816:18:0:72:315:77:143:g_d0_f3:143:g_d0_f3:distinct components of consumer heterogeneity.
+21:706:54864:0:26:72:150:708:143:g_d0_f2:143:g_d0_f2:Hotel Supply
+21:707:54876:26:18:72:540:682:143:g_d0_f3:143:g_d0_f3:Each hotel competes with other hotels of the same scale, hotels of di↵erent scales, and peer
+21:708:54968:18:18:72:540:664:143:g_d0_f3:143:g_d0_f3:supply. We assume that this competition takes the form of a Cournot equilibrium. Hotels
+21:709:55055:18:18:72:539:646:143:g_d0_f3:143:g_d0_f3:of typeh,whereh2{luxury, upper-upscale, upscale, upper-midscale, midscale, economy},
+21:710:55139:18:18:72:548:628:143:g_d0_f3:143:g_d0_f3:have aggregate room capacityKhn.Sincetherearemultiplehotelswithineachscale,we
+21:711:55216:18:18:72:539:610:143:g_d0_f3:143:g_d0_f3:need to distinguish between scale-level and hotel-level quantities. We letQhndenote the
+21:712:55303:18:18:72:540:592:143:g_d0_f3:143:g_d0_f3:scale-level number of rooms sold. We assume no di↵erentiation in room quality within scale,
+21:713:55394:18:18:72:544:574:143:g_d0_f3:143:g_d0_f3:so the number of rooms sold by each hotel, denotedqhn,istheratioofaggregatequantity
+21:714:55477:18:18:72:544:556:143:g_d0_f3:143:g_d0_f3:divided by the number of hotels. Analogously, scale-level capacity is denotedKhn,while
+21:715:55563:18:17:72:205:538:143:g_d0_f3:143:g_d0_f3:hotel-level capacity iskhn.
+21:716:55590:17:18:89:539:521:143:g_d0_f3:143:g_d0_f3:We must also match the fact that prices increase sharply as the number of rooms sold
+21:717:55674:18:18:72:540:503:143:g_d0_f3:143:g_d0_f3:approaches the number of available rooms. In practice, occupancy rates never reach 100% at
+21:718:55764:18:18:72:539:485:143:g_d0_f3:143:g_d0_f3:the scale level, but prices start increasing before then (Figure7). This is because, although
+21:719:55857:18:18:72:540:467:143:g_d0_f3:143:g_d0_f3:we model hotels as homogeneous within each scale, some individual hotels may sell out before
+21:720:55949:18:18:72:540:449:143:g_d0_f3:143:g_d0_f3:others and this may result in sharply increasing scale-level prices. In addition, if hotels face
+21:721:56045:18:18:72:540:431:143:g_d0_f3:143:g_d0_f3:uncertainty about the actual level of demand when setting prices, increases in expected
+21:722:56132:18:18:72:540:413:143:g_d0_f3:143:g_d0_f3:demand will increase the probability of hitting capacity constraints, thus increasing prices
+21:723:56224:18:18:72:540:395:143:g_d0_f3:143:g_d0_f3:before realized demand reaches 100%. We allow our model to fit this increasing price profile
+21:724:56316:18:18:72:540:377:143:g_d0_f3:143:g_d0_f3:by estimating an increasing cost function for hotels that kicks in as soon as hotel occupancy
+21:725:56409:18:18:72:540:359:143:g_d0_f3:143:g_d0_f3:is at least 85% within a scale. The estimation of increasing marginal costs as production
+21:726:56498:18:18:72:545:341:143:g_d0_f3:143:g_d0_f3:approaches capacity constraints was previously used byRyan(2012)toestimatethecost
+21:727:56579:18:18:72:241:323:143:g_d0_f3:143:g_d0_f3:structure of the cement industry.
+21:728:56612:18:18:89:539:305:143:g_d0_f3:143:g_d0_f3:We assume that hotels’ variable costs are made of two parts: a constant marginal costchn,
+21:729:56701:18:17:72:539:287:143:g_d0_f3:143:g_d0_f3:and an increasing marginal cost-hn(qhn-⌫khn), which starts binding as quantity approaches
+21:730:56790:17:18:72:539:270:143:g_d0_f3:143:g_d0_f3:the capacity constraint. Given the above discussion, we set⌫=0.85. So, instead of solving
+21:731:56879:18:18:72:543:252:143:g_d0_f3:143:g_d0_f3:amaximizationproblemsubjecttoacapacityconstraintasinEquation1,eachhotelselects
+21:732:56957:18:33:72:348:234:143:g_d0_f3:143:g_d0_f3:its quantity to maximize the following profit function:
+21:733:57012:33:7:122:147:201:143:g_d0_f10:143:g_d0_f10:M ax
+21:734:57016:7:0:128:141:194:64:g_d0_f11:36:g_d0_f12:qhn
+21:735:57019:0:0:151:326:201:143:g_d0_f10:143:g_d0_f13:qhnphn(Qhn,Q-hn,Qan)-qhnchn-
+21:736:57047:0:16:330:346:209:143:g_d0_f19:64:g_d0_f11:-hn
+21:737:57050:16:0:335:341:193:143:g_d0_f3:143:g_d0_f3:2
+21:738:57051:0:34:348:489:201:143:g_d0_f23:143:g_d0_f10:1(qhn>⌫khn)(qhn-⌫khn)2.
+21:739:57074:34:18:89:539:167:143:g_d0_f3:143:g_d0_f3:We assume that hotels observe all components of demand and competitors’ costs, so that
+21:740:57160:18:18:72:540:149:143:g_d0_f3:143:g_d0_f3:there is no uncertainty about whetherqhn>⌫khnor not. LettingNhndenote the number
+21:741:57240:18:0:72:545:131:143:g_d0_f3:143:g_d0_f3:of hotels within scaleh, we have thatqhn=QhnNhn.Takingadvantageoftheimplicitfunction
+22:742:57326:0:34:72:502:708:143:g_d0_f3:64:g_d0_f7:theorem, the optimization problem gives rise to the following first order condition:13
+22:743:57412:34:0:163:203:674:143:g_d0_f10:143:g_d0_f13:phn=-
+22:744:57417:0:16:214:220:682:143:g_d0_f3:143:g_d0_f3:1
+22:745:57418:16:0:207:227:666:143:g_d0_f10:64:g_d0_f11:Nhn
+22:746:57421:0:16:230:249:682:143:g_d0_f10:64:g_d0_f11:Qhn
+22:747:57424:16:0:230:249:666:143:g_d0_f10:64:g_d0_f11:Q0hn
+22:748:57428:0:36:253:540:674:143:g_d0_f3:143:g_d0_f3:+chn+-hn1(qhn>⌫khn)(qhn-⌫khn),(7)
+22:749:57461:36:18:72:539:638:143:g_d0_f3:143:g_d0_f3:whereQhnis scale-level room demand from Equation6,andQ0hnis the derivative with
+22:750:57540:18:35:72:195:620:143:g_d0_f3:143:g_d0_f3:respect to its own price.
+22:751:57565:35:25:72:144:585:143:g_d0_f2:143:g_d0_f2:Peer Supply
+22:752:57576:25:18:72:539:560:143:g_d0_f3:143:g_d0_f4:Peers of each quality typea,wherea2{Airbnb luxury, Airbnb upscale, Airbnb midscale,
+22:753:57659:18:18:72:539:542:143:g_d0_f4:143:g_d0_f3:Airbnb economy},withtotalavailablelistingsKan, take prices as given. Hosts draw marginal
+22:754:57747:18:18:72:545:524:143:g_d0_f3:143:g_d0_f3:costs from a normal distribution with parameters!anand-an.Eachdrawisiidacrosshosts
+22:755:57829:18:18:72:539:506:143:g_d0_f3:143:g_d0_f3:and time. Hosts of typeachoose to host only if the pricepanis greater than their cost.
+22:756:57915:18:36:72:474:488:143:g_d0_f3:143:g_d0_f3:Therefore, the quantity supplied will be determined by the following equation:
+22:757:57993:36:0:150:385:452:143:g_d0_f10:143:g_d0_f5:Qan(pan,p-an,phn)=KanPr(cpan)=Kan-
+22:758:58028:0:9:387:396:469:143:g_d0_f14:143:g_d0_f14:✓
+22:759:58029:9:16:397:445:460:143:g_d0_f10:64:g_d0_f11:pan-!an
+22:760:58036:16:0:413:430:444:143:g_d0_f19:64:g_d0_f11:-an
+22:761:58039:0:17:447:456:469:143:g_d0_f14:143:g_d0_f14:◆
+22:762:58040:17:37:457:540:452:143:g_d0_f10:143:g_d0_f3:.(8)
+22:763:58044:37:26:72:142:415:143:g_d0_f2:143:g_d0_f2:Equilibrium
+22:764:58055:26:18:72:539:389:143:g_d0_f3:143:g_d0_f10:The market equilibrium consists of prices and quantities for hotels and peer hosts (phn,pan,
+22:765:58147:18:18:72:540:371:143:g_d0_f10:143:g_d0_f3:Qhn,Qan) such that consumers, hotels, and peer hosts make decisions to maximize their
+22:766:58232:18:39:72:413:353:143:g_d0_f3:143:g_d0_f3:surplus, and their optimal choices are consistent with one another.
+22:767:58299:39:25:72:251:314:206:g_d0_f2:206:g_d0_f2:4.1  Estimation Strategy
+22:768:58323:25:18:72:539:289:143:g_d0_f3:143:g_d0_f3:We estimate the demand, hotel supply, and peer supply separately. For demand, the high-
+22:769:58410:18:18:72:499:271:143:g_d0_f3:143:g_d0_f3:level choices are the market size, the moments to match, and the instruments used.
+22:770:58492:18:18:89:539:253:143:g_d0_f3:143:g_d0_f3:Starting first with demand, we need to make a normalization. Since Airbnb listings are
+22:771:58578:18:18:72:540:235:143:g_d0_f3:143:g_d0_f3:on average bigger than hotel rooms and can host more guests, we adjust quantities so that
+22:772:58667:18:18:72:540:217:143:g_d0_f3:143:g_d0_f3:room capacity is comparable across Airbnb listings and hotel rooms. To do this, we take
+22:773:58754:18:18:72:540:199:143:g_d0_f3:143:g_d0_f3:advantage of the fact that we have information on the average number of guests for Airbnb
+22:774:58843:18:18:72:540:181:143:g_d0_f3:143:g_d0_f3:transactions.  In addition, lower quality Airbnb listings are typically private rooms with
+22:775:58933:18:18:72:540:163:143:g_d0_f3:143:g_d0_f3:similar capacity as standard hotel rooms. For this reason, we assume that each hotel room
+22:776:59022:18:18:72:540:145:143:g_d0_f3:143:g_d0_f3:is occupied by as many people as the average number of occupants of Airbnb listings in the
+22:777:59112:18:17:72:540:127:143:g_d0_f3:143:g_d0_f3:midscale quality category in the same city. Given this adjustment, our quantities, prices, and
+22:778:59206:17:18:72:538:110:143:g_d0_f3:143:g_d0_f3:estimates should be interpreted as referring to room-nights with standard hotel occupancy.
+22:779:59296:18:16:81:539:92:49:g_d0_f8:99:g_d0_f9:13The objective function is not di↵erentiable atqhn=⌫khn, but otherwise the first order condition holds
+22:780:59399:16:0:72:142:76:99:g_d0_f9:99:g_d0_f9:everywhere else.
+23:781:59417:0:18:89:539:708:143:g_d0_f3:143:g_d0_f3:We use data on the 10 largest cities in terms of the share of Airbnb bookings in our
+23:782:59501:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:sample. Our initial estimation sample includes all days in 2013 and 2014. We restrict the
+23:783:59590:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:sample to 10 cities and 2 years of data for two practical reasons. First, in other cities and time
+23:784:59688:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:periods market shares of Airbnb are often close to zero, which complicates our estimation.
+23:785:59778:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:Second, there will not be much of an e↵ect of Airbnb when market shares are close to 0. For
+23:786:59869:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:the same reason, we also drop Airbnb options if their share of available rooms is less than
+23:787:59960:18:18:72:223:600:143:g_d0_f3:143:g_d0_f3:0.5% on a given day and city.
+23:788:59989:18:18:89:545:582:143:g_d0_f3:143:g_d0_f3:One key choice we must make in the estimation isDn,thetotalnumberofconsumers
+23:789:60065:18:18:72:539:564:143:g_d0_f3:143:g_d0_f3:considering to book accommodations. The choice ofDnwill a↵ect market shares for hotels
+23:790:60151:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:and Airbnb, as well as the share of potential travelers choosing to stay home, to travel to
+23:791:60242:18:18:72:539:528:143:g_d0_f3:64:g_d0_f11:other locations, or to stay in alternative accommodations, e.g. friends and family. We setDn
+23:792:60334:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:equal to three times the average number of rooms booked in the corresponding month in each
+23:793:60424:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:city in 2012. This assumption allows the potential number of travelers to vary seasonally
+23:794:60513:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:across cities, and it allows for both substitution from hotels – hotel travelers switching to
+23:795:60606:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:Airbnb –, and market expansion – travelers switching from the outside option to Airbnb.
+23:796:60693:18:18:72:539:439:143:g_d0_f3:143:g_d0_f3:We rationalize any remaining variation over time in the total number of travelers booking
+23:797:60782:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:accommodations with mean utilities for inside options that vary as a function of observable
+23:798:60873:18:18:72:400:403:143:g_d0_f3:143:g_d0_f3:characteristics such as Google search trends, and unobservables.
+23:799:60937:18:18:89:539:385:143:g_d0_f3:143:g_d0_f3:The second key choice is the set of moments that we match to the data. We construct
+23:800:61020:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:two types of moments for the demand estimation: moments to match predicted and realized
+23:801:61107:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:market shares (market share moments) and one moment to match predicted hotel-Airbnb
+23:802:61190:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:substitution with substitution obtained from survey responses that Airbnb conducted (sub-
+23:803:61279:18:18:72:169:313:143:g_d0_f3:143:g_d0_f3:stitution moment).
+23:804:61297:18:33:89:249:295:143:g_d0_f3:143:g_d0_f3:Our market share moments are
+23:805:61325:33:0:247:283:262:143:g_d0_f10:143:g_d0_f3:m1jn=
+23:806:61330:0:14:286:292:276:143:g_d0_f14:143:g_d0_f14:h
+23:807:61331:14:0:292:335:262:143:g_d0_f19:64:g_d0_f11:-jn-ˆ-jn
+23:808:61339:0:14:336:342:276:143:g_d0_f14:143:g_d0_f14:i
+23:809:61340:14:32:344:540:262:143:g_d0_f10:143:g_d0_f3:Zjn,(9)
+23:810:61347:32:18:72:540:230:143:g_d0_f3:143:g_d0_f3:where-jnis the realized mean utility from accommodationjin marketnthat rationalizes the
+23:811:61434:18:18:72:539:212:143:g_d0_f3:143:g_d0_f3:observed market shares, andˆ-jnis the mean utility predicted from the vector of parameters
+23:812:61524:18:18:72:539:194:143:g_d0_f3:143:g_d0_f3:to be estimated.ˆ-jnis the component of utility from Equation5that does not di↵er across
+23:813:61612:18:18:72:540:176:143:g_d0_f3:143:g_d0_f3:individual travelers, and is a function of observable and unobservable shifters of demand for
+23:814:61705:18:18:72:540:158:143:g_d0_f3:143:g_d0_f3:di↵erent types of accommodations. The observable shifters include city-scale fixed e↵ects,
+23:815:61795:18:18:72:540:140:143:g_d0_f3:143:g_d0_f3:city-month fixed e↵ects (to account for market specific seasonality), city-specific and Airbnb-
+23:816:61890:18:18:72:540:122:143:g_d0_f3:143:g_d0_f3:city-specific time trends, the log of Google searches and its square, and the log of Airline
+23:817:61982:18:18:72:205:104:143:g_d0_f3:143:g_d0_f3:passengers and its square.
+23:818:62008:18:0:89:539:86:143:g_d0_f3:143:g_d0_f3:The substitution moment comes from survey data on alternative accommodation choices
+24:819:62093:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:of travelers booking on Airbnb.  Airbnb has conducted surveys of guests in four of the
+24:820:62179:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:sampled cities during 2013 and 2014.  The surveys asked the question:  “If Airbnb had
+24:821:62264:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:not been available, what would you have done?”. Between 58% and 81% of guests across
+24:822:62348:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:cities said that they would have stayed in a hotel. A simple average across cities yields a
+24:823:62439:18:18:72:291:636:143:g_d0_f3:64:g_d0_f7:substitution share of 68% towards hotels.14
+24:824:62482:18:18:89:539:618:143:g_d0_f3:143:g_d0_f3:We match the survey moment in our model by computing the share of Airbnb travelers
+24:825:62564:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:who would have wanted to book a hotel at the observed prices had Airbnb not been available.
+24:826:62655:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:To predict the share of Airbnb travelers choosing hotels in the absence of Airbnb, we first note
+24:827:62751:18:0:72:374:564:143:g_d0_f3:143:g_d0_f3:that aggregate hotels’ market share in marketnisshotels,n=
+24:828:62809:0:12:378:391:573:143:g_d0_f14:143:g_d0_f14:P
+24:829:62810:12:0:391:418:561:64:g_d0_f11:64:g_d0_f7:j2hotel
+24:830:62817:0:17:421:521:574:143:g_d0_f14:36:g_d0_f12:Reμijn-↵i(1+⌧jn)pjn
+24:831:62836:17:14:432:538:557:64:g_d0_f7:36:g_d0_f12:1+Pj0eμij0n-↵i(1+⌧jn)pj0n
+24:832:62861:14:18:72:540:543:143:g_d0_f10:143:g_d0_f3:dH(μijt,↵i).Airbnb market share, denotedsairbnb,n, is similarly computed. If Airbnb listings
+24:833:62953:18:0:72:371:525:143:g_d0_f3:143:g_d0_f3:were not available, hotels’ market share would beshotels,n⇤=
+24:834:63013:0:12:374:387:534:143:g_d0_f14:143:g_d0_f14:P
+24:835:63014:12:0:387:414:522:64:g_d0_f11:64:g_d0_f7:j2hotel
+24:836:63021:0:17:417:528:535:143:g_d0_f14:36:g_d0_f12:Reμijn-↵i(1+⌧jn)pjn
+24:837:63040:17:13:429:555:518:64:g_d0_f7:36:g_d0_f12:1+Pj02hoteleμij0n-↵i(1+⌧jn)pj0n
+24:838:63071:13:37:72:447:505:143:g_d0_f10:143:g_d0_f3:dH(μijt,↵i).Aggregating over all markets gives us the following moment:
+24:839:63142:37:0:199:232:468:143:g_d0_f10:143:g_d0_f3:m2n=
+24:840:63146:0:25:235:252:479:143:g_d0_f14:143:g_d0_f14:X
+24:841:63147:25:0:241:246:454:64:g_d0_f11:64:g_d0_f11:n
+24:842:63148:0:17:254:260:485:143:g_d0_f14:143:g_d0_f14:
+24:843:63149:17:0:261:275:468:143:g_d0_f10:64:g_d0_f11:Dn
+24:844:63151:0:9:278:287:485:143:g_d0_f14:143:g_d0_f14:✓
+24:845:63152:9:16:288:343:476:143:g_d0_f10:64:g_d0_f11:sh,n⇤-sh,n
+24:846:63162:16:0:307:324:460:143:g_d0_f10:64:g_d0_f11:sa,n
+24:847:63166:0:0:348:390:468:143:g_d0_f13:64:g_d0_f11:-ssurvey
+24:848:63174:0:17:391:406:485:143:g_d0_f14:143:g_d0_f14:◆-
+24:849:63176:17:39:408:540:468:143:g_d0_f10:143:g_d0_f3:.(10)
+24:850:63181:39:18:89:540:429:143:g_d0_f3:143:g_d0_f3:The final key choice is the set of instruments for the market share moments in Equation
+24:851:63268:18:18:72:545:411:143:g_d0_f3:143:g_d0_f3:9.Wefirstgenerateinstrumentstopredictafter-taxprices.Weuseaseriesofcost-shifters
+24:852:63348:18:18:72:540:393:143:g_d0_f3:143:g_d0_f3:that a↵ect prices and are unlikely to be correlated with demand shocks. These cost-shifters
+24:853:63439:18:18:72:539:375:143:g_d0_f3:143:g_d0_f3:include hotel and Airbnb tax rates,15and specifically for Airbnb, the number of residents
+24:854:63528:18:18:72:540:357:143:g_d0_f3:143:g_d0_f3:traveling out of a city. We also construct instruments using the total number of available
+24:855:63618:18:18:72:540:339:143:g_d0_f3:143:g_d0_f3:rooms. Since for Airbnb room availability responds to demand, the number of available rooms
+24:856:63709:18:18:72:540:321:143:g_d0_f3:143:g_d0_f3:is predicted with city-specific quadratic time trends. We interact the predicted number of
+24:857:63799:18:17:72:540:303:143:g_d0_f3:143:g_d0_f3:available Airbnb rooms with an indicator variable for hotel options, and we do the same for
+24:858:63890:17:18:72:540:286:143:g_d0_f3:143:g_d0_f3:hotel rooms and an indicator variable for Airbnb options. This set of instruments proxy for
+24:859:63981:18:18:72:540:268:143:g_d0_f3:143:g_d0_f3:the level of competition within a market. A hotel scale’s own number of available rooms can
+24:860:64072:18:18:72:539:250:143:g_d0_f3:143:g_d0_f3:also be used to construct an instrument because it a↵ects whether hotel capacity constraints
+24:861:64164:18:18:72:540:232:143:g_d0_f3:143:g_d0_f3:are likely to bind. To use it as an instrument, we interact its inverse, and its inverse squared,
+24:862:64261:18:18:72:540:214:143:g_d0_f3:143:g_d0_f3:with the Google search trend, and its square. We use the ratio because capacity constraints
+24:863:64352:18:18:72:539:196:143:g_d0_f3:143:g_d0_f3:a↵ect prices more when demand is higher. Since we have a number of instruments that are
+24:864:64439:18:16:81:539:178:49:g_d0_f8:99:g_d0_f9:14In 2015, Morgan Stanley and AlphaWise conducted a representative survey of 4,116 adults in the US,
+24:865:64539:16:11:72:540:162:99:g_d0_f9:99:g_d0_f9:UK, France, and Germany.  In the survey, they asked respondents about their travel patterns.  12% of
+24:866:64639:11:12:72:540:151:99:g_d0_f9:99:g_d0_f9:respondents had used Airbnb within the past year and when asked which travel alternative Airbnb replaced,
+24:867:64744:12:12:72:540:139:99:g_d0_f9:99:g_d0_f9:42% of respondents answered a hotel. SeeNowak et al.(2015). We think that the major reason for the
+24:868:64842:12:12:72:540:127:99:g_d0_f9:99:g_d0_f9:di↵erences between the Airbnb and Morgan Stanley surveys is that Morgan Stanley sampled guests to
+24:869:64939:12:12:72:540:115:99:g_d0_f9:99:g_d0_f9:all types of destinations including resorts and European cities. There are typically more non-Airbnb and
+24:870:65043:12:9:72:275:103:99:g_d0_f9:99:g_d0_f9:non-hotel options for guests in these locations.
+24:871:65091:9:15:81:539:94:49:g_d0_f8:99:g_d0_f9:15Airbnb started collecting occupancy taxes in Portland, OR on July 1, 2014, and began collecting taxes
+24:872:65194:15:0:72:233:79:99:g_d0_f9:99:g_d0_f9:in San Francisco on October 1, 2014.
+25:873:65232:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:potentially weak and correlated with each other, we take the principal components of all
+25:874:65320:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:the instruments, and keep the components that account for 95% of the variation (Carrasco
+25:875:65408:18:18:72:111:672:143:g_d0_f3:143:g_d0_f3:(2012)).
+25:876:65416:18:18:89:539:654:143:g_d0_f3:143:g_d0_f3:Once we have predicted prices from the set of instruments presented above, we follow
+25:877:65500:18:18:72:543:636:143:g_d0_f3:143:g_d0_f3:Gandhi and Houde(2016)toconstructadditionalinstrumentsthatmeasurethedistancein
+25:878:65578:18:18:72:539:618:143:g_d0_f3:143:g_d0_f3:characteristic space between di↵erent accommodation options. The relevant characteristics
+25:879:65667:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:in our model include the ordering of scales from luxury to economy, and prices. We construct
+25:880:65759:18:18:72:539:582:143:g_d0_f3:143:g_d0_f3:the following instruments: the di↵erence and square of the di↵erence between the predicted
+25:881:65849:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:price of an option and the predicted price of its closest alternatives – for midscale hotels,
+25:882:65942:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:the closest alternatives are upper midscale and economy –, the total number of alternatives
+25:883:66033:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:whose predicted price is within a standard deviation of an option predicted price, and the
+25:884:66123:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:sum and sum of squares of the di↵erence between the predicted price of a hotel option and
+25:885:66212:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:the predicted prices of all other hotel options. Since these instruments are highly correlated,
+25:886:66307:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:we keep the principal components accounting for 75% of the variation for the estimation.
+25:887:66395:17:18:72:539:457:143:g_d0_f3:143:g_d0_f3:AppendixCdescribes these instruments in greater detail.  With this list of instruments,
+25:888:66482:18:18:72:539:439:143:g_d0_f3:143:g_d0_f3:we use the moments in equations9and10to estimate the set of demand parameters by
+25:889:66562:18:18:72:238:421:143:g_d0_f3:143:g_d0_f3:generalized method of moments.
+25:890:66592:18:18:89:540:403:143:g_d0_f3:143:g_d0_f3:It is useful to give an intuition for how the variation in the data allows us to estimate
+25:891:66681:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:our demand parameters. Our descriptive statistics show that the prices of hotels and Airbnb
+25:892:66772:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:options, unadjusted for di↵erent number of occupants, are similar. This fact, together with
+25:893:66863:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:the relatively high substitution rate between hotels and Airbnb rooms derived from survey
+25:894:66952:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:responses, suggests that the mean utilities of hotels and Airbnb options should be fairly
+25:895:67041:18:18:72:539:313:143:g_d0_f3:143:g_d0_f3:similar.  However, in practice we also observe very di↵erent market shares, much higher
+25:896:67128:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:for hotels than for Airbnb options. The market share and substitution moments helps us
+25:897:67214:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:rationalize these two patterns in the data. On one hand, the substitution moment helps
+25:898:67300:18:18:72:540:259:143:g_d0_f3:143:g_d0_f3:us identify the random coe-cient on the inside option, which is common across hotels and
+25:899:67388:18:17:72:539:241:143:g_d0_f3:143:g_d0_f3:Airbnb listings. On the other, di↵erences in market shares rationalize mean utilities that
+25:900:67478:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:will be higher for hotels than for Airbnb options. Finally, di↵erences in market shares when
+25:901:67570:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:the price of competitors change help us identify consumer preference heterogeneity across
+25:902:67659:18:18:72:168:188:143:g_d0_f3:143:g_d0_f3:options and prices.
+25:903:67678:18:18:89:539:170:143:g_d0_f3:143:g_d0_f3:Once we obtain demand estimates that let us computeQhnand its derivative, we estimate
+25:904:67763:18:35:72:400:152:143:g_d0_f3:143:g_d0_f3:the supply function from equation7using a linear IV approach:
+25:905:67824:35:0:148:176:117:143:g_d0_f10:143:g_d0_f3:phn+
+25:906:67828:0:16:187:193:125:143:g_d0_f3:143:g_d0_f3:1
+25:907:67829:16:0:180:200:109:143:g_d0_f10:64:g_d0_f11:Nhn
+25:908:67832:0:16:203:222:125:143:g_d0_f10:64:g_d0_f11:Qhn
+25:909:67835:16:0:203:222:109:143:g_d0_f10:64:g_d0_f11:Q0hn
+25:910:67839:0:35:227:462:117:143:g_d0_f3:143:g_d0_f10:=✓Xhn+-hn1(qhn>⌫khn)(qhn-⌫khn)+✏hn.
+25:911:67874:35:0:72:540:82:143:g_d0_f10:143:g_d0_f3:Xhnincludes city-scale fixed e↵ects and city-specific linear time trends. We allow-hnto vary
+26:912:67968:0:18:72:161:708:143:g_d0_f3:143:g_d0_f3:by city and scale.
+26:913:67986:18:18:89:538:690:143:g_d0_f3:143:g_d0_f3:We instrument for the increasing cost component using interactions of the Google search
+26:914:68073:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:trend with city and hotel fixed e↵ects. We use these instruments because they a↵ect hotel
+26:915:68162:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:prices only by increasing the likelihood that capacity constraints bind.  We estimate the
+26:916:68251:18:18:72:539:636:143:g_d0_f3:143:g_d0_f3:supply equation separately for each day of the week to allow for the possibility that sta-ng
+26:917:68343:18:18:72:518:618:143:g_d0_f3:143:g_d0_f3:requirements and hotels’ response to capacity constraints vary across days of the week.
+26:918:68430:18:18:89:539:600:143:g_d0_f3:143:g_d0_f3:Finally, the supply of Airbnb can be estimated separately using another set of linear IV
+26:919:68518:18:0:72:422:582:143:g_d0_f3:64:g_d0_f7:regressions for the same sample period. Equation8implies that --1
+26:920:68583:0:8:424:431:595:143:g_d0_f14:143:g_d0_f14:⇣
+26:921:68584:8:9:433:448:587:64:g_d0_f11:36:g_d0_f12:Qan
+26:922:68587:9:0:433:449:578:64:g_d0_f11:36:g_d0_f12:Kan
+26:923:68590:0:13:450:457:595:143:g_d0_f14:143:g_d0_f14:⌘
+26:924:68591:13:18:461:539:582:143:g_d0_f3:143:g_d0_f3:=!an-an+1-anpan,
+26:925:68607:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:where the left-hand side is the inverse of a standard normal cumulative distribution function
+26:926:68700:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:calculated at a value equal to the share of booked rooms out of all Airbnb listings.  We
+26:927:68788:18:35:72:465:528:143:g_d0_f3:143:g_d0_f3:estimate this equation separately for each listing type using the specification
+26:928:68867:35:0:214:233:493:143:g_d0_f5:64:g_d0_f7:--1
+26:929:68870:0:9:236:245:510:143:g_d0_f14:143:g_d0_f14:✓
+26:930:68871:9:16:246:265:501:143:g_d0_f10:64:g_d0_f11:Qan
+26:931:68874:16:0:246:266:485:143:g_d0_f10:64:g_d0_f11:Kan
+26:932:68877:0:17:267:276:510:143:g_d0_f14:143:g_d0_f14:◆
+26:933:68878:17:36:279:397:493:143:g_d0_f3:143:g_d0_f10:=-apan+-aXan+✏an,
+26:934:68895:36:18:72:540:457:143:g_d0_f3:143:g_d0_f3:whereKanis the number of active Airbnb listings,panis the average transacted price of
+26:935:68980:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:Airbnb typeain marketn,andXaninclude year-month fixed e↵ects, city fixed e↵ects, and
+26:936:69064:18:17:72:540:421:143:g_d0_f3:143:g_d0_f3:city-specific linear time trends.  Here we chooseKanto be the number of active listings
+26:937:69151:17:18:72:540:404:143:g_d0_f3:143:g_d0_f3:because the decision of being available is a choice of the host that depends on his own
+26:938:69238:18:18:72:540:386:143:g_d0_f3:143:g_d0_f3:marginal cost draw. We instrument for the transacted price with log of (de-trended) Google
+26:939:69328:18:18:72:343:368:143:g_d0_f3:143:g_d0_f3:search trends and the log of incoming air passengers.
+26:940:69381:18:18:89:540:350:143:g_d0_f3:143:g_d0_f3:After estimating the above equation, we can transform the coe-cients into the following
+26:941:69468:18:20:72:182:332:143:g_d0_f3:143:g_d0_f3:peer cost parameters:
+26:942:69489:20:0:229:258:312:143:g_d0_f19:143:g_d0_f3:-an=
+26:943:69493:0:16:266:272:320:143:g_d0_f3:143:g_d0_f3:1
+26:944:69494:16:0:263:273:304:143:g_d0_f19:64:g_d0_f11:-a
+26:945:69496:0:0:276:313:312:143:g_d0_f10:143:g_d0_f3:,!an=
+26:946:69501:0:16:317:377:320:143:g_d0_f19:64:g_d0_f11:-aXan+✏an
+26:947:69510:16:0:342:352:304:143:g_d0_f19:64:g_d0_f11:-a
+26:948:69512:0:45:379:382:312:143:g_d0_f10:143:g_d0_f10:.
+26:949:69513:45:30:72:163:267:296:g_d0_f2:296:g_d0_f2:5  Results
+26:950:69523:30:18:72:540:237:143:g_d0_f3:143:g_d0_f3:In this section, we discuss the results of our estimation.  We first go over our estimated
+26:951:69613:18:18:72:539:219:143:g_d0_f3:143:g_d0_f3:parameters. Then we discuss the e↵ects of Airbnb on consumer surplus. Lastly, we study
+26:952:69699:18:18:72:540:201:143:g_d0_f3:143:g_d0_f3:the e↵ects on hotels’ and hosts’ bookings, revenues, and surplus. For each of these outcomes,
+26:953:69792:18:39:72:355:183:143:g_d0_f3:143:g_d0_f3:we discuss heterogeneity across cities and time periods.
+26:954:69848:39:25:72:257:144:206:g_d0_f2:206:g_d0_f2:5.1  Parameter Estimates
+26:955:69872:25:18:72:540:119:143:g_d0_f3:143:g_d0_f3:Table7displays the estimates of demand parameters that are common across cities and
+26:956:69955:18:18:72:540:101:143:g_d0_f3:143:g_d0_f3:accommodation options. We first discuss the parameters governing the distribution of price
+26:957:70045:18:0:72:539:83:143:g_d0_f3:143:g_d0_f3:sensitivity across travelers. The mean price coe-cient is -.033 and the standard deviation is
+27:958:70140:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:.006. The standard deviation is imprecisely estimated, but our estimates are consistent with
+27:959:70232:18:18:72:539:690:143:g_d0_f3:143:g_d0_f3:existing work on hotel demand (Koulayev(2014)). Google search trends and incoming airline
+27:960:70321:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:travelers are estimated to have a positive e↵ect on demand for the range of values observed
+27:961:70412:18:18:72:540:654:143:g_d0_f3:143:g_d0_f3:in the data. We also estimate large and statistically significant heterogeneity in preferences
+27:962:70506:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:for high-end hotel options – luxury and upper upscale – and a more limited but equally
+27:963:70592:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:significant level of heterogeneity in preferences between traveling or not. This last estimate
+27:964:70686:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:of the random coe-cient on the inside option is especially important because it governs the
+27:965:70777:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:extent to which Airbnb travelers would substitute towards hotels or the outside option if
+27:966:70866:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:Airbnb were not available.  The model achieves a value for the objective function of 170
+27:967:70954:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:with a relatively parsimonious specification. The total number of observations in the data
+27:968:71044:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:is 65,172 while we estimate 375 linear parameters and 3 non-linear parameters determining
+27:969:71133:18:18:72:277:510:143:g_d0_f3:143:g_d0_f3:the variances of the random coe-cients.
+27:970:71172:18:18:89:540:492:143:g_d0_f3:143:g_d0_f3:Next, we consider the mean utilities across accommodation options. Figure8displays the
+27:971:71258:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:mean willingness to pay per night for each option and city at the end of 2014. The fact that
+27:972:71350:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:some values are negative reflects our choice of a market size that’s three times the average
+27:973:71442:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:number of booked rooms in a city-month. When looking at the mean utilities in relative
+27:974:71528:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:terms, our estimates show that willingness to pay tends to be decreasing between upscale and
+27:975:71620:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:economy hotels and between Airbnb luxury and economy listings. The extremely low mean
+27:976:71705:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:utilities for luxury and upper upscale hotels are rationalized by the fact that preferences for
+27:977:71800:18:18:72:406:367:143:g_d0_f3:143:g_d0_f3:these options are highly heterogeneous, as highlighted in Table7.
+27:978:71865:18:18:89:539:349:143:g_d0_f3:143:g_d0_f3:The value of the top Airbnb option is lower than the value of the lowest hotel option across
+27:979:71957:18:18:72:539:331:143:g_d0_f3:143:g_d0_f3:all cities, with some variation in the relative di↵erences.  We cannot distinguish between
+27:980:72047:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:alternative explanations for this di↵erence, but one likely possibility is that not all travelers
+27:981:72144:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:actually consider Airbnb as a viable option for their travel plans, yet. Another possibility
+27:982:72236:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:is that Airbnb listings are typically located farther away from the city tourist and business
+27:983:72329:18:18:72:447:259:143:g_d0_f3:143:g_d0_f3:centers, which might lower travelers’ willingness to pay relative to hotels.
+27:984:72405:18:17:89:540:241:143:g_d0_f3:143:g_d0_f3:TableA5shows the city-specific elasticities of demand for di↵erent accommodations with
+27:985:72491:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:respect to their own price and TableA6shows the average cross-price elasticities. We find
+27:986:72580:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:that demand for accommodations is elastic on average.  For example, in New York, the
+27:987:72664:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:demand elasticities range between -8.54 for luxury hotels and -2.93 for the lowest quality
+27:988:72754:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:of Airbnb listings. There is also substantial variation across cities in demand elasticities,
+27:989:72847:18:18:72:469:152:143:g_d0_f3:143:g_d0_f3:ranging between -2.65 in Portland and -6.24 in New York for midscale hotels.
+27:990:72923:18:18:89:539:134:143:g_d0_f3:143:g_d0_f3:Next, we turn to the estimates of hotel cost parameters. Our parameter estimates are
+27:991:73007:18:18:72:540:116:143:g_d0_f3:143:g_d0_f3:precise and the estimation procedure explains most of the variation with an R-squared of
+27:992:73095:18:18:72:539:98:143:g_d0_f3:143:g_d0_f3:0.83. The interquartile range for the errors is -$9.9 to$12.2.16Figure9plots the marginal
+27:993:73184:18:0:72:539:80:143:g_d0_f3:143:g_d0_f3:cost curves for di↵erent hotel scales and di↵erent cities at the end of 2014. We find that
+28:994:73276:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:the constant components of hotels’ marginal costs have the expected relationship with hotel
+28:995:73367:18:18:72:539:690:143:g_d0_f3:143:g_d0_f3:quality. The marginal cost for luxury hotels in New York city are$324 on average. We
+28:996:73451:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:want to be careful in not interpreting these costs as actual expenditures per night-booked.
+28:997:73542:18:18:72:543:654:143:g_d0_f3:143:g_d0_f3:Research byKalnins(2006)suggeststhatduetoreputationalconcerns,hotelstendtohave
+28:998:73620:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:a price threshold below which they will not go, and this threshold is typically higher than
+28:999:73711:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:the cost of an additional maid- or clerk-hour. We view our estimates as reflecting this price
+28:1000:73804:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:threshold. The figure also plots the increasing component of hotels’ marginal costs. We find
+28:1001:73896:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:that for all but one of the city and hotel combinations, marginal costs increase relatively
+28:1002:73987:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:steeply with quantity when hotel occupancy reaches 85%. This increasing cost reflects the
+28:1003:74076:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:fact that regardless of the level of competition, hotels will increase their prices as they
+28:1004:74167:18:18:72:522:528:143:g_d0_f3:143:g_d0_f3:approach full capacity. TablesA7andA8report the full set of city-scale cost estimates.
+28:1005:74253:18:18:89:540:510:143:g_d0_f3:143:g_d0_f3:Finally, Figure10displays the mean costs over time for listings in New York City. Costs
+28:1006:74340:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:vary over the course of the year, and there is a slightly increasing trend for all room options.
+28:1007:74436:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:In New York but also in other cities, costs increase monotonically in listing quality, and the
+28:1008:74530:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:mean costs exceed the mean transacted prices. These relatively high costs stem from the
+28:1009:74617:18:18:72:540:439:143:g_d0_f3:143:g_d0_f3:fact that fewer than 50% of active listings on Airbnb typically transact (Table1). With
+28:1010:74704:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:R-squared values ranging from .34 to .46, the variation in our data can explain a little
+28:1011:74792:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:less of Airbnb costs than hotels’ costs. However, we estimate economically and statistically
+28:1012:74884:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:significant dispersion in the cost distribution for all listing types, which explains the high
+28:1013:74978:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:supply elasticity of Airbnb accommodations. Interestingly, costs go up during New Year’s
+28:1014:75066:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:Eve and other high seasons. This may reflect the fact that travelers during those times are
+28:1015:75157:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:costlier to host, maybe because of their higher likelihood to be disruptive. Alternatively, it
+28:1016:75251:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:may mean that during those periods hosts prefer to stay in their apartments with friends
+28:1017:75339:18:18:72:539:295:143:g_d0_f3:143:g_d0_f3:and family rather than strangers. TableA9displays the full set of estimates of Airbnb costs
+28:1018:75430:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:by listing type and city. The next section uses the estimates presented above to compare
+28:1019:75518:18:39:72:293:259:143:g_d0_f3:143:g_d0_f3:realized welfare to a world without Airbnb.
+28:1020:75561:39:25:72:278:220:206:g_d0_f2:206:g_d0_f2:5.2  Counterfactual Analysis
+28:1021:75589:25:18:72:539:195:143:g_d0_f3:143:g_d0_f3:We present two counterfactual scenarios without Airbnb, and describe the e↵ect that the
+28:1022:75676:18:18:72:540:177:143:g_d0_f3:143:g_d0_f3:absence of Airbnb would have for consumers, hotels, and peer hosts. The first counterfactual
+28:1023:75768:18:18:72:540:159:143:g_d0_f3:143:g_d0_f3:scenario ignores hotel capacity constraints and how hotel prices would change if Airbnb
+28:1024:75855:18:18:72:540:141:143:g_d0_f3:143:g_d0_f3:were not available. In this scenario, travelers who booked on Airbnb are allowed to book
+28:1025:75943:18:18:72:540:123:143:g_d0_f3:143:g_d0_f3:any hotel option at the prevailing prices, regardless of actual room availability. The second
+28:1026:76036:18:18:72:540:105:143:g_d0_f3:143:g_d0_f3:counterfactual scenario allows hotels to adjust prices in response to the absence of competing
+28:1027:76130:18:15:81:539:87:49:g_d0_f8:99:g_d0_f9:16We also conducted a 10-folds cross-validation and found that the mean absolute error is similar between
+28:1028:76235:15:0:72:413:72:99:g_d0_f9:99:g_d0_f9:estimation sample and hold-out sample, suggesting that we’re not over-fitting.
+29:1029:76315:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:accommodations on Airbnb. This counterfactual requires computing new Cournot equilibria
+29:1030:76402:18:18:72:538:690:143:g_d0_f3:143:g_d0_f3:for each market with demand and hotel cost parameters taken from our estimates.17We
+29:1031:76485:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:refer to the first counterfactual as the ‘unconstrained’ scenario, and to the second as the
+29:1032:76576:18:18:72:239:654:143:g_d0_f3:143:g_d0_f3:scenario with ‘price adjustment’.
+29:1033:76609:18:18:89:540:636:143:g_d0_f3:143:g_d0_f3:We discuss consumer surplus first. Table8presents how consumer surplus would change
+29:1034:76692:18:18:72:539:618:143:g_d0_f3:143:g_d0_f3:in 2014 without Airbnb. The table shows that there would be a$143 million loss in consumer
+29:1035:76782:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:surplus if we could ignore hotels’ capacity constraints and price adjustments.  This loss
+29:1036:76871:18:18:72:539:582:143:g_d0_f3:143:g_d0_f3:corresponds to$21 per room-night, about 15% of the purchase price. The consumer surplus
+29:1037:76958:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:loss in this scenario only measures one channel through which Airbnb benefits consumers,
+29:1038:77046:18:18:72:210:546:143:g_d0_f3:143:g_d0_f3:i.e. product di↵erentiation.
+29:1039:77074:18:18:89:539:528:143:g_d0_f3:143:g_d0_f3:Relative to the ‘unconstrained’ counterfactual, there are two additional mechanisms
+29:1040:77157:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:through which the ‘price adjustment’ counterfactual hurts consumers. First, travelers who
+29:1041:77246:18:18:72:540:492:143:g_d0_f3:143:g_d0_f3:booked on Airbnb now face higher hotel prices. Second, travelers who previously booked
+29:1042:77332:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:hotel accommodations also face higher prices. The consumer surplus loss in this scenario
+29:1043:77420:17:18:72:501:457:143:g_d0_f3:143:g_d0_f3:almost doubles, rising to$276 million. This loss corresponds to$41 per room-night.
+29:1044:77502:18:18:89:538:439:143:g_d0_f3:143:g_d0_f3:We can also look at how consumer surplus losses vary across cities and time periods.
+29:1045:77586:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:The total surplus from Airbnb is primarily determined by the number of Airbnb bookings in
+29:1046:77675:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:that city. This means that the greatest aggregate losses from the removal of Airbnb are in
+29:1047:77765:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:New York, Los Angeles, and San Francisco. On a per room-night basis, the surplus change
+29:1048:77852:18:18:72:297:367:143:g_d0_f3:143:g_d0_f3:is greatest for Seattle and lowest for Miami.
+29:1049:77897:18:18:89:539:349:143:g_d0_f3:143:g_d0_f3:We also split our sample into ‘compression nights’, defined by the lodging industry to
+29:1050:77983:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:be nights when hotels reach 95% occupancy, and non-compression nights. The surplus per
+29:1051:78069:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:night booked is bigger on compression nights ($57) than on non-compression nights ($36).
+29:1052:78157:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:This e↵ect is not due to travelers liking Airbnb more on these nights – the surplus per
+29:1053:78244:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:night in the unconstrained counterfactual is nearly identical between these periods. Instead,
+29:1054:78337:18:18:72:539:259:143:g_d0_f3:143:g_d0_f3:the e↵ect comes from the supply side.  When comparing the surplus per night between
+29:1055:78420:18:17:72:540:241:143:g_d0_f3:143:g_d0_f3:the counterfactual with and without price adjustments, there is a$35 di↵erence during
+29:1056:78505:17:18:72:540:224:143:g_d0_f3:143:g_d0_f3:compression nights versus$14 for non-compression nights. This occurs because hotels can
+29:1057:78592:18:18:72:537:206:143:g_d0_f3:143:g_d0_f3:charge high prices during compression nights and the elastic host supply keep prices down.
+29:1058:78682:18:18:89:540:188:143:g_d0_f3:143:g_d0_f3:We now turn to the e↵ects of Airbnb on hotels. If hotels did not have capacity constraints,
+29:1059:78773:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:Table10shows that hotels would increase the number of sold rooms by 2%. However, when
+29:1060:78858:18:16:81:539:152:49:g_d0_f8:99:g_d0_f9:17Our estimation procedure doesn’t guarantee that, in the absence of Airbnb, the equilibrium quantities
+29:1061:78961:16:12:72:540:136:99:g_d0_f9:99:g_d0_f9:remain below hotel capacity. We add an additional, although rarely binding, constraint in the price ad-
+29:1062:79064:12:12:72:540:124:99:g_d0_f9:99:g_d0_f9:justment equilibrium which ensures that hotel quantities do not exceed an appropriately defined measure
+29:1063:79167:12:12:72:540:112:99:g_d0_f9:99:g_d0_f9:of hotel capacity for each hotel type and period.  We define the threshold to be the maximum between
+29:1064:79267:12:12:72:540:100:99:g_d0_f9:99:g_d0_f9:95% occupancy, the 99th percentile if occupancy for the city-scale and the observed occupancy level for a
+29:1065:79372:12:0:72:249:88:99:g_d0_f9:99:g_d0_f9:particular hotel scale in a given city-day.
+30:1066:79417:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:we account for capacity constraints and the increase in hotel prices, sold rooms would only
+30:1067:79508:18:18:72:539:690:143:g_d0_f3:143:g_d0_f3:increase by 1.3%, for a revenue increase of 1.5%. This corresponds to a gain of$412 million
+30:1068:79599:18:18:72:179:672:143:g_d0_f3:143:g_d0_f3:in revenue for hotels.
+30:1069:79621:18:18:89:539:654:143:g_d0_f3:143:g_d0_f3:The e↵ects of Airbnb on hotel revenues are heterogeneous across cities and over time.
+30:1070:79706:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:For example, in New York, bookings would increase by 2% and revenue would increase by
+30:1071:79791:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:2.24% without Airbnb. In contrast, in San Jose, a city where hotels are less likely to hit
+30:1072:79881:18:18:72:540:600:143:g_d0_f3:143:g_d0_f3:their capacity constraints, bookings would increase by .63% and revenues would increase
+30:1073:79968:18:18:72:539:582:143:g_d0_f3:143:g_d0_f3:by .72%. There is also heterogeneity in e↵ects across high and low demand days. Hotel
+30:1074:80053:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:bookings increase by just .99% on compression nights but revenues increase by 1.7%. On the
+30:1075:80143:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:rest of the nights, bookings and revenues would both increase by about 1.4%. The di↵erence
+30:1076:80233:18:18:72:539:528:143:g_d0_f3:143:g_d0_f3:across nights demonstrates that the e↵ect of Airbnb on hotels is more concentrated on prices
+30:1077:80325:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:than quantities during high-demand days relative to low-demand days. If we take our cost
+30:1078:80413:18:18:72:539:492:143:g_d0_f3:143:g_d0_f3:estimates seriously, we can also look at the e↵ect of Airbnb on hotel profits, which we
+30:1079:80500:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:calculate as hotel revenue minus the non-increasing part of the cost function. We find that
+30:1080:80591:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:profits would increase by 3.69% on average across all of the cities in the sample, with the
+30:1081:80682:18:18:72:279:439:143:g_d0_f3:143:g_d0_f3:largest increase happening in New York.
+30:1082:80721:18:18:89:539:421:143:g_d0_f3:143:g_d0_f3:We should note that our estimates give us a lower bound for hotel variable profit loss – or
+30:1083:80812:18:18:72:540:403:143:g_d0_f3:143:g_d0_f3:an upper bound on the percent change. This is because the profit change does not directly
+30:1084:80901:18:18:72:540:385:143:g_d0_f3:143:g_d0_f3:correspond to hotel surplus for at least three reasons. First, hotels earn additional revenues
+30:1085:80995:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:through complimentary services such as conferences and food sales, but also incur additional
+30:1086:81087:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:costs. Second, there are fixed costs involved in operating a hotel which we do not model in
+30:1087:81178:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:this exercise. If competition from Airbnb is strong enough, then some hotels may close down
+30:1088:81269:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:or new hotels may not be built. Third, our marginal cost estimates correspond in part to
+30:1089:81357:18:18:72:540:295:143:g_d0_f3:143:g_d0_f3:reputation costs rather than ‘true’ marginal costs. These additional costs and revenues do
+30:1090:81447:18:18:72:540:277:143:g_d0_f3:143:g_d0_f3:not allow us to state with certainty whether hotel surplus is larger or smaller than our profit
+30:1091:81542:18:18:72:126:259:143:g_d0_f3:64:g_d0_f7:estimate.18
+30:1092:81553:18:17:89:539:241:143:g_d0_f3:143:g_d0_f3:Before moving to the surplus of peer hosts, we consider the extent to which Airbnb
+30:1093:81635:17:18:72:539:224:143:g_d0_f3:143:g_d0_f3:expands the market versus cannibalizes hotel demand. Table11displays results on the share
+30:1094:81724:18:18:72:540:206:143:g_d0_f3:143:g_d0_f3:of Airbnb travelers who would have booked a hotel room in the absence of Airbnb. In the
+30:1095:81811:18:18:72:540:188:143:g_d0_f3:143:g_d0_f3:‘unconstrained’ scenario, between 27% and 34% of Airbnb bookings would not have resulted
+30:1096:81899:18:18:72:540:170:143:g_d0_f3:143:g_d0_f3:in a hotel booking, which is broadly consistent with the survey moment used to estimate
+30:1097:81986:18:18:72:539:152:143:g_d0_f3:143:g_d0_f3:demand. The market expansion e↵ect becomes much bigger when we account for capacity
+30:1098:82069:18:18:72:540:134:143:g_d0_f3:143:g_d0_f3:constraints and hotels’ price responses. The share of Airbnb travelers who would have not
+30:1099:82158:18:16:81:540:116:49:g_d0_f8:99:g_d0_f9:18In Appendix TableA10we display the results assuming an alternative measure of costs for hotels imputed
+30:1100:82262:16:11:72:540:100:99:g_d0_f9:99:g_d0_f9:from the wage bill of hotels in the STR data and trends in the wages of maids across cities and over time.
+30:1101:82368:11:0:72:350:89:99:g_d0_f9:99:g_d0_f9:This is likely a lower bound on the true marginal cost of hotels.
+31:1102:82435:0:18:72:495:708:143:g_d0_f3:143:g_d0_f3:in fact booked a hotel room ranges between 42% in Portland to 63% in New York.
+31:1103:82513:18:18:89:539:690:143:g_d0_f3:143:g_d0_f3:Not surprisingly, peer hosts would lose without Airbnb.  We use the estimated cost
+31:1104:82595:18:18:72:540:672:143:g_d0_f3:143:g_d0_f3:distributions of hosts to back out the surplus that they receive from hosting on Airbnb. The
+31:1105:82687:18:0:72:475:654:143:g_d0_f3:143:g_d0_f3:surplus for each day can be calculated using the following expressionPSan=
+31:1106:82761:0:13:479:501:663:143:g_d0_f14:36:g_d0_f12:Rpan
+31:1107:82765:13:14:485:539:650:64:g_d0_f20:143:g_d0_f13:-Inf(pan-
+31:1108:82774:14:18:72:540:636:143:g_d0_f10:143:g_d0_f3:max(c,0))dFan(c) , where we censor the cost distribution at 0. Note that this expression
+31:1109:82862:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:ignores the variable costs of being listed for a given day, which are likely to be negligible,
+31:1110:82956:18:18:72:307:600:143:g_d0_f3:143:g_d0_f3:and the fixed costs of entry into the platform.
+31:1111:83003:18:18:89:540:582:143:g_d0_f3:143:g_d0_f3:Table12displays average surplus per room-night and total surplus in 2014. The typical
+31:1112:83088:18:18:72:539:564:143:g_d0_f3:143:g_d0_f3:surplus per night ranges between$23 in Miami and$30 in Austin. Across all bookings in
+31:1113:83173:18:18:72:539:546:143:g_d0_f3:143:g_d0_f3:these cities, the average surplus is around$26 and does not vary much across high and low
+31:1114:83262:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:demand days. In the aggregate, peer hosts enjoy$19 million in producer surplus, with hosts
+31:1115:83352:18:18:72:540:510:143:g_d0_f3:143:g_d0_f3:in New York City, Los Angeles, and San Francisco getting the majority of it. Almost half of
+31:1116:83443:18:45:72:534:492:143:g_d0_f3:143:g_d0_f3:this surplus is concentrated on compression nights, which comprise only 20% of all nights.
+31:1117:83533:45:30:72:194:447:296:g_d0_f2:296:g_d0_f2:6  Conclusion
+31:1118:83546:30:17:72:539:417:143:g_d0_f3:143:g_d0_f3:We have studied the economics of peer production in the lodging industry.  We first doc-
+31:1119:83634:17:18:72:540:400:143:g_d0_f3:143:g_d0_f3:umented the determinants of peer supply and showed how market-specific factors such as
+31:1120:83720:18:18:72:539:382:143:g_d0_f3:143:g_d0_f3:supply constraints and the costs of hosting a↵ect whether peer production is viable in a
+31:1121:83808:18:18:72:540:364:143:g_d0_f3:143:g_d0_f3:given city. We then documented that peer supply is twice as elastic as hotel supply in the
+31:1122:83898:18:18:72:123:346:143:g_d0_f3:143:g_d0_f3:short-run.
+31:1123:83908:18:18:89:539:328:143:g_d0_f3:143:g_d0_f3:The highly elastic host supply implies that the largest e↵ects of Airbnb occur in markets
+31:1124:83997:18:18:72:540:310:143:g_d0_f3:143:g_d0_f3:where hotels are often near full capacity.  We presented a simple model of competition
+31:1125:84083:18:18:72:540:292:143:g_d0_f3:143:g_d0_f3:between peer supply and hotels, and tested its implications using data from 50 major US
+31:1126:84170:18:18:72:540:274:143:g_d0_f3:143:g_d0_f3:cities. We confirm that the entry of Airbnb negatively a↵ects hotel revenues in cities where
+31:1127:84262:18:18:72:540:256:143:g_d0_f3:143:g_d0_f3:hotels are more likely to be capacity-constrained, and that the e↵ect is more concentrated
+31:1128:84352:18:18:72:480:238:143:g_d0_f3:143:g_d0_f3:on price than on quantity, at least compared to non-capacity-constrained cities.
+31:1129:84432:18:18:89:539:220:143:g_d0_f3:143:g_d0_f3:Next, we estimated our short-run equilibrium model to study the surplus and market
+31:1130:84514:18:18:72:540:202:143:g_d0_f3:143:g_d0_f3:expansion e↵ects of Airbnb.  The availability of peer hosts generates$41 of surplus per
+31:1131:84601:18:18:72:540:184:143:g_d0_f3:143:g_d0_f3:room-night in 2014. This surplus comes both from new bookings generated on Airbnb and
+31:1132:84686:18:17:72:540:166:143:g_d0_f3:143:g_d0_f3:from lower prices paid by hotel travelers. In total, Airbnb generates$276 million in consumer
+31:1133:84779:17:18:72:293:149:143:g_d0_f3:143:g_d0_f3:surplus in 2014 for the 10 largest US cities.
+31:1134:84824:18:18:89:539:131:143:g_d0_f3:143:g_d0_f3:We showed that Airbnb has also a↵ected producers.  Without Airbnb, hotel revenues
+31:1135:84905:18:18:72:540:113:143:g_d0_f3:143:g_d0_f3:would be 1.5% higher.  Nonetheless, between 42% and 63% of nights booked on Airbnb
+31:1136:84987:18:18:72:540:95:143:g_d0_f3:143:g_d0_f3:would not have resulted in a hotel booking in the absence of Airbnb. These travelers would
+31:1137:85077:18:0:72:540:77:143:g_d0_f3:143:g_d0_f3:have instead chosen the outside option, which could represent staying with friends or family,
+32:1138:85172:0:18:72:540:708:143:g_d0_f3:143:g_d0_f3:staying at a non-hotel accommodation, booking fewer nights, or not traveling to the city at
+32:1139:85263:18:18:72:540:690:143:g_d0_f3:143:g_d0_f3:all. Lastly, peer hosts also benefit from the introduction of Airbnb. Their average surplus
+32:1140:85354:18:18:72:483:672:143:g_d0_f3:143:g_d0_f3:per night from hosting is$26, which totals$19 million in the estimation sample.
+32:1141:85433:18:18:89:539:654:143:g_d0_f3:143:g_d0_f3:Our data only extend through the end of 2014. Since then, Airbnb has continued its
+32:1142:85515:18:18:72:540:636:143:g_d0_f3:143:g_d0_f3:rapid growth in both active listings and global awareness. While we cannot say how large
+32:1143:85603:18:18:72:540:618:143:g_d0_f3:143:g_d0_f3:its e↵ects have been since then, our paper documents two fundamental reasons why peer
+32:1144:85688:18:18:72:539:600:143:g_d0_f3:143:g_d0_f3:production is valuable in the accommodation industry.  First, peers o↵er a di↵erentiated
+32:1145:85776:18:18:72:540:582:143:g_d0_f3:143:g_d0_f3:product that is not a perfect substitute to hotel rooms and is valued by consumers. Second,
+32:1146:85867:18:18:72:540:564:143:g_d0_f3:143:g_d0_f3:the hotel sector in many cities is frequently constrained by a limited number of available
+32:1147:85957:18:18:72:540:546:143:g_d0_f3:143:g_d0_f3:rooms, which lead to high prices during demand peaks because hotels cannot accommodate
+32:1148:86043:18:18:72:540:528:143:g_d0_f3:143:g_d0_f3:all potential travelers. Peer production expands available supply at exactly these times of
+32:1149:86134:18:18:72:493:510:143:g_d0_f3:143:g_d0_f3:peak demand, thus reducing hotel pricing power and increasing consumer surplus.
+32:1150:86213:18:18:89:539:492:143:g_d0_f3:143:g_d0_f3:Our paper also informs the active policy debate regarding whether and how to regulate
+32:1151:86298:18:17:72:540:474:143:g_d0_f3:143:g_d0_f3:peer-to-peer accommodations. Proposed policies include fees and taxes, mandated registra-
+32:1152:86387:17:18:72:540:457:143:g_d0_f3:143:g_d0_f3:tions, quotas, caps on the number of nights per hosts, and bans.19While we cannot conduct
+32:1153:86476:18:18:72:544:439:143:g_d0_f3:143:g_d0_f3:afullwelfareanalysisofthesepoliciesduetotheothermarketsa↵ected,ouranalysissug-
+32:1154:86554:18:18:72:540:421:143:g_d0_f3:143:g_d0_f3:gests that Airbnb is especially beneficial to consumer and host welfare during peak demand
+32:1155:86644:18:18:72:248:403:143:g_d0_f3:143:g_d0_f3:periods in hotel constrained cities.
+32:1156:86680:18:18:89:539:385:143:g_d0_f3:143:g_d0_f3:We have focused on the short-run e↵ects of a peer-to-peer platform on the agents directly
+32:1157:86769:18:18:72:540:367:143:g_d0_f3:143:g_d0_f3:involved – hotels, peer hosts, and travelers – without highlighting the platform’s own costs
+32:1158:86861:18:18:72:540:349:143:g_d0_f3:143:g_d0_f3:and revenues. In the longer run, the number of hotel rooms may also adjust to peer entry.
+32:1159:86950:18:18:72:540:331:143:g_d0_f3:143:g_d0_f3:Peer production can have externalities and spillovers into other markets, including the labor
+32:1160:87043:18:18:72:540:313:143:g_d0_f3:143:g_d0_f3:and housing markets (Filippas and Horton(2017),Barron et al.(2017)). We leave the study
+32:1161:87130:18:45:72:231:295:143:g_d0_f3:143:g_d0_f3:of these e↵ects for future work.
+32:1162:87162:45:30:72:163:250:296:g_d0_f2:296:g_d0_f2:References
+32:1163:87172:30:18:72:540:220:143:g_d0_f2:143:g_d0_f3:Aguiar, Luis, and Joel Waldfogel.2015. “Streaming Reaches Flood Stage: Does Spotify
+32:1164:87255:18:17:83:539:202:143:g_d0_f3:143:g_d0_f3:Stimulate or Depress Music Sales?”  National Bureau of Economic Research Working
+32:1165:87335:17:28:83:149:185:143:g_d0_f3:143:g_d0_f3:Paper 21653.
+32:1166:87347:28:18:72:539:157:143:g_d0_f2:143:g_d0_f3:Barron, Kyle, Edward Kung, and Davide Proserpio.2017. “The Sharing Economy
+32:1167:87421:18:28:83:347:139:143:g_d0_f3:143:g_d0_f3:and Housing A↵ordability: Evidence from Airbnb.”
+32:1168:87469:28:18:72:539:111:143:g_d0_f2:143:g_d0_f4:Bass, Frank.1969. “A New Product Growth for Model Consumer Durables.”Management
+32:1169:87548:18:18:83:210:93:143:g_d0_f4:143:g_d0_f3:Science,15(5):215–227.
+32:1170:87570:18:0:81:536:75:49:g_d0_f8:99:g_d0_f9:19Seehttps://www.airbnb.com/help/article/1376/responsible-hosting-in-the-united-states.
+33:1171:87659:0:18:72:540:708:143:g_d0_f2:143:g_d0_f3:Berry, Steven, James Levinsohn, and Ariel Pakes.1995. “Automobile Prices in Market
+33:1172:87741:18:28:83:316:690:143:g_d0_f3:143:g_d0_f3:Equilibrium.”Econometrica,63(4):841–890.
+33:1173:87781:28:18:72:539:662:143:g_d0_f2:143:g_d0_f3:Bolton, Gary, Ben Greiner, and Axel Ockenfels.2012. “Engineering Trust: Reci-
+33:1174:87858:18:18:83:544:644:143:g_d0_f3:143:g_d0_f3:procity in the Production of Reputation Information.”Management Science,59(2):265–
+33:1175:87940:18:28:83:104:626:143:g_d0_f3:143:g_d0_f3:285.
+33:1176:87944:28:18:72:539:598:143:g_d0_f2:143:g_d0_f3:Bulow, Jeremy I., John D. Geanakoplos, and Paul D. Klemperer.1985. “Multi-
+33:1177:88018:18:18:83:539:580:143:g_d0_f3:143:g_d0_f3:market Oligopoly: Strategic Substitutes and Complements.”Journal of Political Economy,
+33:1178:88104:18:28:83:161:562:143:g_d0_f3:143:g_d0_f3:93(3): 488–511.
+33:1179:88119:28:18:72:540:534:143:g_d0_f2:143:g_d0_f3:Carrasco, Marine.2012. “A Regularization Approach to the Many Instruments Problem.”
+33:1180:88202:18:28:83:304:516:143:g_d0_f4:143:g_d0_f3:Journal of Econometrics,170(2):383–398.
+33:1181:88241:28:18:72:539:488:143:g_d0_f2:143:g_d0_f3:Chen, K. M., and Michael Sheldon.2015. “Dynamic Pricing in a Labor Market: Surge
+33:1182:88321:18:27:83:425:470:143:g_d0_f3:143:g_d0_f3:Pricing and Flexible Work on the Uber Platform.” Mimeo, UCLA.
+33:1183:88382:27:18:72:540:443:143:g_d0_f2:143:g_d0_f2:Cohen, Peter, Robert Hahn, Jonathan Hall, Steven Levitt, and Robert Metcalfe.
+33:1184:88459:18:18:83:539:425:143:g_d0_f3:143:g_d0_f3:2016. “Using Big Data to Estimate Consumer Surplus: The Case of Uber.” National
+33:1185:88538:18:28:83:354:407:143:g_d0_f3:143:g_d0_f3:Bureau of Economic Research Working Paper 22627.
+33:1186:88586:28:18:72:539:379:143:g_d0_f2:143:g_d0_f3:Cullen, Zo ̈e, and Chiara Farronato.2017. “Outsourcing Tasks Online: Matching Supply
+33:1187:88670:18:28:83:340:361:143:g_d0_f3:143:g_d0_f3:and Demand on Peer-to-Peer Internet Platforms.”
+33:1188:88717:28:18:72:539:333:143:g_d0_f2:143:g_d0_f3:Einav, Liran, Chiara Farronato, Jonathan Levin, and Neel Sundaresan.Forthcom-
+33:1189:88794:18:28:83:527:315:143:g_d0_f3:143:g_d0_f3:ing. “Auctions versus Posted Prices in Online Markets.”Journal of Political Economy.
+33:1190:88878:28:18:72:540:287:143:g_d0_f2:143:g_d0_f3:Filippas, Apostolos, and John J. Horton.2017. “The Tragedy of Your Upstairs Neigh-
+33:1191:88960:18:28:83:540:269:143:g_d0_f3:143:g_d0_f3:bors: Is the Airbnb Negative Externality Internalized?”ArXiv e-prints, arXiv:1611.05688.
+33:1192:89048:28:18:72:539:241:143:g_d0_f2:143:g_d0_f3:Fradkin, Andrey.2017. “Search, Matching, and the Role of Digital Marketplace Design in
+33:1193:89134:18:27:83:293:223:143:g_d0_f3:143:g_d0_f3:Enabling Trade: Evidence from Airbnb.”
+33:1194:89172:27:18:72:540:196:143:g_d0_f2:143:g_d0_f3:Fradkin, Andrey, Elena Grewal, David Holtz, and Matthew Pearson.2017. “The
+33:1195:89246:18:18:83:539:178:143:g_d0_f3:143:g_d0_f3:Determinants of Online Review Informativeness: Evidence from Field Experiments on
+33:1196:89327:18:28:83:128:160:143:g_d0_f3:143:g_d0_f3:Airbnb.”
+33:1197:89335:28:18:72:539:132:143:g_d0_f2:143:g_d0_f3:Fraiberger, Samuel P., and Arun Sundararajan.2015. “Peer-to-Peer Rental Markets
+33:1198:89414:18:18:83:539:114:143:g_d0_f3:143:g_d0_f3:in the Sharing Economy.” Social Science Research Network SSRN Scholarly Paper ID
+33:1199:89494:18:0:83:209:96:143:g_d0_f3:143:g_d0_f3:2574337, Rochester, NY.
+34:1200:89519:0:18:72:540:708:143:g_d0_f2:143:g_d0_f3:Gandhi, Amit, and Jean-Fran ̧cois Houde.2016. “Measuring Substitution Patterns
+34:1201:89597:18:18:83:539:690:143:g_d0_f3:143:g_d0_f4:in Di↵erentiated Products Industries.”University of Wisconsin-Madison and Wharton
+34:1202:89678:18:28:83:118:672:143:g_d0_f4:143:g_d0_f3:School.
+34:1203:89685:28:18:72:540:644:143:g_d0_f2:143:g_d0_f3:Griliches, Zvi.1957. “Hybrid Corn: An Exploration in the Economics of Technological
+34:1204:89768:18:28:83:293:626:143:g_d0_f3:143:g_d0_f3:Change.”Econometrica,25(4):501–522.
+34:1205:89803:28:18:72:540:598:143:g_d0_f2:143:g_d0_f3:Gyourko, J., A. Saiz, and A. Summers.2008. “A New Measure of the Local Regulatory
+34:1206:89884:18:18:83:539:580:143:g_d0_f3:143:g_d0_f3:Environment for Housing Markets: The Wharton Residential Land Use Regulatory Index.”
+34:1207:89968:18:28:83:244:562:143:g_d0_f4:143:g_d0_f3:Urban Studies,45(3):693–729.
+34:1208:89996:28:18:72:539:534:143:g_d0_f2:143:g_d0_f3:Hall, Jonathan, Cory Kendrick, and Chris Nosko.2016. “The E↵ects of Uber’s Surge
+34:1209:90076:18:28:83:208:516:143:g_d0_f3:143:g_d0_f3:Pricing: A Case Study.”
+34:1210:90099:28:18:72:539:488:143:g_d0_f2:143:g_d0_f3:Horton, John J.2016. “Misdirected Search E↵ort in a Matching Market: Causes, Conse-
+34:1211:90182:18:27:83:333:470:143:g_d0_f3:143:g_d0_f3:quences and a Partial Solution.”Working Paper.
+34:1212:90228:27:18:72:540:443:143:g_d0_f2:143:g_d0_f3:Horton, John J., and Richard J. Zeckhauser.2016. “Owning, Using and Renting: Some
+34:1213:90309:18:28:83:532:425:143:g_d0_f3:143:g_d0_f3:Simple Economics of the” Sharing Economy”.” National Bureau of Economic Research.
+34:1214:90390:28:18:72:539:397:143:g_d0_f2:143:g_d0_f4:Kalnins, Arturs.2006. “Markets: The U.S. Lodging Industry.”The Journal of Economic
+34:1215:90472:18:28:83:186:379:143:g_d0_f4:143:g_d0_f3:Perspectives,20(4).
+34:1216:90491:28:18:72:539:351:143:g_d0_f2:143:g_d0_f3:Koulayev, Sergei.2014. “Search for Di↵erentiated Products: Identification and Estima-
+34:1217:90576:18:28:83:380:333:143:g_d0_f3:143:g_d0_f3:tion.”The RAND Journal of Economics,45(3):553–575.
+34:1218:90626:28:18:72:540:305:143:g_d0_f2:143:g_d0_f3:Kroft, Kory, and Devin G. Pope.2014. “Does Online Search Crowd Out Traditional
+34:1219:90704:18:18:83:539:287:143:g_d0_f3:143:g_d0_f4:Search and Improve Matching E-ciency?  Evidence from Craigslist.”Journal of Labor
+34:1220:90785:18:28:83:227:269:143:g_d0_f4:143:g_d0_f3:Economics,32(2):259–303.
+34:1221:90809:28:18:72:540:241:143:g_d0_f2:143:g_d0_f3:Lam, Tom, and Meng Liu.2017. “Demand and Consumer Surplus in the On-Demand
+34:1222:90883:18:27:83:279:223:143:g_d0_f3:143:g_d0_f3:Economy: The Case of Ride Sharing.”
+34:1223:90918:27:18:72:540:196:143:g_d0_f2:143:g_d0_f3:Lewis, Gregory, and Georgios Zervas.2016. “The Welfare Impact of Consumer Reviews:
+34:1224:91000:18:28:83:276:178:143:g_d0_f3:143:g_d0_f3:A Case Study of the Hotel Industry.”
+34:1225:91036:28:18:72:539:150:143:g_d0_f2:143:g_d0_f3:Nosko, Chris, and Steven Tadelis.2015. “The Limits of Reputation in Platform Markets:
+34:1226:91121:18:28:83:324:132:143:g_d0_f3:143:g_d0_f3:An Empirical Analysis and Field Experiment.”
+34:1227:91165:28:18:72:540:104:143:g_d0_f2:143:g_d0_f2:Nowak, Brian, Thomas Allen, Jamie Rollo, Vaughan Lewis, Lin He, Ananda
+34:1228:91235:18:0:83:539:86:143:g_d0_f2:143:g_d0_f2:Chen, Wilson W. Ng, Michael Costantini, Owen Hyde, Kevin Liu, Mark
+35:1229:91303:0:18:83:540:708:143:g_d0_f2:143:g_d0_f3:Savino, Baset A. Chadhry, Anne M. Grube, and Ed Young.2015. “Global Insight:
+35:1230:91379:18:28:83:424:690:143:g_d0_f3:143:g_d0_f3:Who Will Airbnb Hurt More - Hotels or OTAs?” Morgan Stanley.
+35:1231:91439:28:18:72:539:662:143:g_d0_f2:143:g_d0_f3:Petrin, Amil.2002. “Quantifying the benefits of new products: The case of the minivan.”
+35:1232:91526:18:28:83:325:644:143:g_d0_f4:143:g_d0_f3:Journal of political Economy,110(4):705–729.
+35:1233:91570:28:18:72:540:616:143:g_d0_f2:143:g_d0_f3:Ryan, Stephen P.2012. “The Costs of Environmental Regulation in a Concentrated In-
+35:1234:91652:18:28:83:298:598:143:g_d0_f3:143:g_d0_f3:dustry.”Econometrica,80(3):1019–1061.
+35:1235:91689:28:18:72:539:570:143:g_d0_f2:143:g_d0_f4:Saiz, Albert.2010. “The Geographic Determinants of Housing Supply.”The Quarterly
+35:1236:91769:18:28:83:302:552:143:g_d0_f4:143:g_d0_f3:Journal of Economics,125(3):1253–1296.
+35:1237:91807:28:18:72:540:524:143:g_d0_f2:143:g_d0_f3:Seamans, Robert, and Feng Zhu.2014. “Responses to Entry in Multi-Sided Markets:
+35:1238:91886:18:28:83:530:506:143:g_d0_f3:143:g_d0_f3:The Impact of Craigslist on Local Newspapers.”Management Science,60(2):476–493.
+35:1239:91965:28:17:72:540:478:143:g_d0_f2:143:g_d0_f3:Zervas, Georgios, Davide Proserpio, and John Byers.2015. “The Rise of the Shar-
+35:1240:92044:17:18:83:539:461:143:g_d0_f3:143:g_d0_f3:ing Economy: Estimating the Impact of Airbnb on the Hotel Industry.” Social Science
+35:1241:92127:18:0:83:442:443:143:g_d0_f3:143:g_d0_f3:Research Network SSRN Scholarly Paper ID 2366898, Rochester, NY.
+36:1242:92193:0:40:72:134:708:296:g_d0_f2:296:g_d0_f2:Figures
+36:1243:92200:40:280:234:377:668:143:g_d0_f3:143:g_d0_f3:Figure 1: Growth of Airbnb
+36:1244:92226:280:0:464:497:388:81:g_d0_f30:81:g_d0_f30:Chicago
+36:1245:92233:0:0:464:477:395:81:g_d0_f30:81:g_d0_f30:DC
+36:1246:92235:0:0:464:506:416:81:g_d0_f30:81:g_d0_f30:San Diego
+36:1247:92244:0:0:464:492:424:81:g_d0_f30:81:g_d0_f30:Seattle
+36:1248:92251:0:0:464:492:431:81:g_d0_f30:81:g_d0_f30:Boston
+36:1249:92257:0:0:464:489:479:81:g_d0_f30:81:g_d0_f30:Austin
+36:1250:92263:0:0:464:488:488:81:g_d0_f30:81:g_d0_f30:Miami
+36:1251:92268:0:0:464:475:500:81:g_d0_f30:81:g_d0_f30:LA
+36:1252:92270:0:0:464:476:509:81:g_d0_f30:81:g_d0_f30:SF
+36:1253:92272:0:175:464:477:611:81:g_d0_f30:81:g_d0_f30:NY
+36:1254:92274:175:0:90:105:436:60:g_d0_f30:60:g_d0_f30:0.05
+36:1255:92278:0:0:90:105:520:60:g_d0_f30:60:g_d0_f30:0.10
+36:1256:92282:0:259:90:105:605:60:g_d0_f30:60:g_d0_f30:0.15
+36:1257:92286:259:11:188:469:346:60:g_d0_f30:60:g_d0_f30:2012201320142015
+36:1258:92302:11:33:310:332:335:106:g_d0_f30:106:g_d0_f30:Date
+36:1259:92327:33:14:72:540:302:143:g_d0_f4:143:g_d0_f4:The figure plots the size of Airbnb over time in 10 selected cities. The y-axis is the monthly
+36:1260:92421:14:15:72:540:288:143:g_d0_f4:143:g_d0_f4:average of the daily share of Airbnb listings out of all (hotel and Airbnb) rooms available
+36:1261:92512:15:14:72:540:273:143:g_d0_f4:143:g_d0_f4:for short-term accommodation. The 10 selected cities are those with the largest number of
+36:1262:92601:14:0:72:433:259:143:g_d0_f4:143:g_d0_f4:listings on Airbnb as of December 2014 among the 50 US major cities.
+37:1263:92671:0:23:150:461:555:143:g_d0_f3:143:g_d0_f3:Figure 2: Predictions on the E↵ect of Peer Supply on Hotels
+37:1264:92730:23:203:115:490:532:119:g_d0_f9:119:g_d0_f9:(a) Unconstrained Equilibrium(b) Constrained Equilibrium
+37:1265:92786:203:14:72:540:329:143:g_d0_f4:143:g_d0_f4:The figures plot the supply and demand curve for hotel rooms in two scenarios. The hotel
+37:1266:92874:14:15:72:540:315:143:g_d0_f4:143:g_d0_f4:supply curve is drawn holding constant the price of peer roomspa, varying the demand state
+37:1267:92964:15:14:72:540:300:143:g_d0_f10:143:g_d0_f4:d, and letting the hotel set the price to maximize its profits as in equation1. The left panel
+37:1268:93058:14:15:72:540:286:143:g_d0_f4:143:g_d0_f4:displays an unconstrained equilibrium, while the right panel displays an equilibrium where
+37:1269:93148:15:14:72:540:271:143:g_d0_f4:143:g_d0_f4:the hotel capacity constraint is binding. Peer entry represents a downward shift in demand
+37:1270:93238:14:15:72:540:257:143:g_d0_f4:143:g_d0_f4:for hotel rooms. This downward shift will a↵ect hotel quantity relatively more when the hotel
+37:1271:93331:15:14:72:539:242:143:g_d0_f4:143:g_d0_f4:supply curve is more elastic. The opposite is true for the e↵ect on hotel prices, which is
+37:1272:93421:14:0:72:307:228:143:g_d0_f4:143:g_d0_f4:higher in the capacity-constrained equilibrium.
+38:1273:93470:0:366:185:425:582:143:g_d0_f3:143:g_d0_f3:Figure 3: Peer Production and Hotel Revenues
+38:1274:93514:366:15:72:540:216:143:g_d0_f4:143:g_d0_f4:This figure plots the supply share of Airbnb against the average revenue per available room
+38:1275:93605:15:0:72:187:201:143:g_d0_f4:143:g_d0_f4:in each respective city.
+39:1276:93631:0:24:162:448:620:143:g_d0_f3:143:g_d0_f3:Figure 4: Peer Production and Fixed or Marginal Costs
+39:1277:93684:24:317:120:484:596:119:g_d0_f9:119:g_d0_f9:(a) Hotel Supply Constraints(b) Peers’ Marginal Costs
+39:1278:93737:317:14:72:540:279:143:g_d0_f4:143:g_d0_f4:The figures plot the size of Airbnb against a proxy for hotel investment costs (left panel)
+39:1279:93828:14:15:72:540:265:143:g_d0_f4:143:g_d0_f4:and a proxy for peers’ marginal costs (right panel). The proxy for the constraints to the
+39:1280:93917:15:14:72:539:250:143:g_d0_f4:143:g_d0_f4:construction of new hotels is the share of undevelopable area developed bySaiz(2010). This
+39:1281:94007:14:15:72:540:236:143:g_d0_f4:143:g_d0_f4:index measures the share of a city that is undevelopable due to geographic constraints, like
+39:1282:94099:15:14:72:540:221:143:g_d0_f4:143:g_d0_f4:steep mountains or the ocean. The proxy for peers’ marginal costs is the share of unmarried
+39:1283:94190:14:15:72:540:207:143:g_d0_f4:143:g_d0_f4:adults in the MSA. The size of Airbnb is measured as the average share of available listings
+39:1284:94282:15:14:72:539:192:143:g_d0_f4:143:g_d0_f4:in the last quarter of 2014.  FigureA2in the Appendix confirms that other proxies such
+39:1285:94368:14:14:72:540:178:143:g_d0_f4:143:g_d0_f4:as regulatory constraints, the share of children, and the rent to income ratio are also good
+39:1286:94460:14:0:72:194:164:143:g_d0_f4:143:g_d0_f4:predictors of peer entry.
+40:1287:94487:0:24:163:447:612:143:g_d0_f3:143:g_d0_f3:Figure 5: Peer Production and Demand Characteristics
+40:1288:94539:24:316:140:478:588:119:g_d0_f9:119:g_d0_f9:(a) Demand Growth(b) Demand Variability
+40:1289:94578:316:14:72:540:272:143:g_d0_f4:143:g_d0_f4:The figures plot the size of Airbnb against the growth rate in incoming air passengers to
+40:1290:94667:14:15:72:540:258:143:g_d0_f4:143:g_d0_f4:an MSA between June 2011 and June 2012 (left) and against the standard deviation of
+40:1291:94750:15:14:72:540:243:143:g_d0_f4:143:g_d0_f4:incoming air passengers (right). The standard deviation of air travelers is measured using
+40:1292:94840:14:15:72:540:229:143:g_d0_f4:143:g_d0_f4:2011 monthly data on arriving (not returning) passengers at major US airports. We focus
+40:1293:94927:15:14:72:540:214:143:g_d0_f4:143:g_d0_f4:on data from 2011-2012, when Airbnb was very small relative to the accommodation market,
+40:1294:95015:14:14:72:540:200:143:g_d0_f4:143:g_d0_f4:to limit the possibility that the availability of Airbnb hosts could generate such growth or
+40:1295:95107:14:15:72:540:186:143:g_d0_f4:143:g_d0_f4:variability in demand.  The size of Airbnb is measured as the average share of available
+40:1296:95195:15:0:72:250:171:143:g_d0_f4:143:g_d0_f4:listings in the last quarter of 2014.
+41:1297:95234:0:231:115:497:611:143:g_d0_f3:143:g_d0_f3:Figure 6: Measures of Airbnb Supply: Demand-induced Calendar Updates
+41:1298:95302:231:0:464:527:380:81:g_d0_f32:81:g_d0_f32:Booked Listings
+41:1299:95317:0:13:464:533:482:81:g_d0_f32:81:g_d0_f32:Available Listings
+41:1300:95335:13:0:464:516:469:81:g_d0_f32:81:g_d0_f32:(Unadjusted)
+41:1301:95347:0:0:464:533:525:81:g_d0_f32:81:g_d0_f32:Available Listings
+41:1302:95365:0:218:464:521:585:81:g_d0_f32:81:g_d0_f32:Active Listings
+41:1303:95380:218:0:94:103:367:60:g_d0_f32:60:g_d0_f32:25
+41:1304:95382:0:0:94:103:442:60:g_d0_f32:60:g_d0_f32:50
+41:1305:95384:0:0:94:103:516:60:g_d0_f32:60:g_d0_f32:75
+41:1306:95386:0:302:90:103:590:60:g_d0_f32:60:g_d0_f32:100
+41:1307:95389:302:11:186:469:288:60:g_d0_f32:60:g_d0_f32:2012201320142015
+41:1308:95405:11:32:309:331:277:106:g_d0_f32:106:g_d0_f32:Date
+41:1309:95438:32:15:72:540:245:143:g_d0_f4:143:g_d0_f4:This figure plots four measures of the size of Airbnb. An active listing is defined as a listing
+41:1310:95534:15:14:72:540:230:143:g_d0_f4:143:g_d0_f4:available to be booked or booked for any future date. An (unadjusted) available listing is one
+41:1311:95628:14:15:72:540:216:143:g_d0_f4:143:g_d0_f4:that is either booked or has an open calendar slot on the date of stay.  Available listings
+41:1312:95719:15:14:72:540:201:143:g_d0_f4:143:g_d0_f4:augment the unadjusted measure with listings that were contacted for a particular date of
+41:1313:95808:14:15:72:540:187:143:g_d0_f4:143:g_d0_f4:stay and were later updated to be unavailable for that date. A booked listing is one that has
+41:1314:95901:15:0:72:202:172:143:g_d0_f4:143:g_d0_f4:been booked for that date.
+42:1315:95929:0:276:207:405:708:143:g_d0_f3:143:g_d0_f3:Figure 7: Prices and Occupancy Rates
+42:1316:95965:276:26:72:496:432:143:g_d0_f4:143:g_d0_f4:This figure plots prices and occupancy rates of upscale hotels in New York in 2014.
+42:1317:96048:26:287:121:489:406:143:g_d0_f3:143:g_d0_f3:Figure 8: Estimated Utilities for Accommodation Options Across Cities
+42:1318:96117:287:15:72:540:119:143:g_d0_f4:143:g_d0_f4:This figure plots the estimated mean utilities for accommodation options across the 10 cities
+42:1319:96210:15:14:72:540:104:143:g_d0_f4:143:g_d0_f4:used in our estimation. The values are computed as averages over the last month in our
+42:1320:96296:14:14:72:540:90:143:g_d0_f4:143:g_d0_f4:data. The negative values of some of the parameters reflect the fact that our normalization
+42:1321:96387:14:0:72:436:76:143:g_d0_f4:143:g_d0_f4:of the outside option means that most people choose the outside option.
+43:1322:96460:0:24:222:389:707:143:g_d0_f3:143:g_d0_f3:Figure 9: Estimated Hotel Costs
+43:1323:96491:24:187:103:523:683:119:g_d0_f9:119:g_d0_f9:(a) Costs by City – Midscale Hotels(b) Costs by Hotel Scale – New York City
+43:1324:96566:187:14:72:540:496:143:g_d0_f4:143:g_d0_f4:These figures plot the estimated marginal cost curves of hotels across cities (left panel) and
+43:1325:96660:14:14:72:540:482:143:g_d0_f4:143:g_d0_f4:across scales (right panel). The values are computed as averages over the last month in our
+43:1326:96751:14:27:72:500:468:143:g_d0_f4:143:g_d0_f4:data. Appendix TablesA7andA8display the cost estimates by city and hotel scale.
+43:1327:96830:27:351:157:454:441:143:g_d0_f3:143:g_d0_f3:Figure 10: Mean Costs of Airbnb Hosts in New York City
+43:1328:96884:351:14:72:540:90:143:g_d0_f4:143:g_d0_f4:The figures plot the estimated mean costs of Airbnb hosts in New York over time. Appendix
+43:1329:96973:14:0:72:415:76:143:g_d0_f4:143:g_d0_f4:TableA9displays all the estimated means and standard deviations.
+44:1330:97039:0:36:72:126:708:296:g_d0_f2:296:g_d0_f2:Tables
+44:1331:97045:36:44:146:465:672:143:g_d0_f3:143:g_d0_f3:Table 1: Descriptive Statistics on Hotel and Airbnb Outcomes
+44:1332:97105:44:13:89:515:628:64:g_d0_f7:64:g_d0_f7:StatisticNMeanSt. Dev.Pctl(25)MedianPctl(75)
+44:1333:97149:13:9:89:508:615:64:g_d0_f7:64:g_d0_f7:Mean Hotel Occupancy500.660.070.610.650.70
+44:1334:97191:9:10:89:508:606:64:g_d0_f7:64:g_d0_f7:Std Dev Hotel Occupancy500.130.030.120.140.15
+44:1335:97236:10:9:89:513:596:64:g_d0_f7:64:g_d0_f7:Mean Hotel Price in$50107.9435.0486.2998.69121.01
+44:1336:97285:9:10:89:510:587:64:g_d0_f7:64:g_d0_f7:Std Dev Hotel Price5016.349.349.7713.0021.02
+44:1337:97329:10:9:89:566:577:64:g_d0_f7:64:g_d0_f7:Mean Hotel Revenue (Thousand$)503,785.343,588.861,575.122,488.654,856.56
+44:1338:97401:9:10:89:508:568:64:g_d0_f7:64:g_d0_f7:Airbnb Share of Available Rooms (Q4 2014)    500.020.030.0050.010.03
+44:1339:97469:10:9:89:508:558:64:g_d0_f7:64:g_d0_f7:Airbnb Share of Potential Guests (Q4 2014)500.040.040.010.020.05
+44:1340:97533:9:9:89:510:549:64:g_d0_f7:64:g_d0_f7:Airbnb Share of Housing Units (Q4 2014)500.0010.0010.00020.00050.001
+44:1341:97601:9:10:89:508:540:64:g_d0_f7:64:g_d0_f7:Mean Airbnb Occupancy500.150.060.110.130.18
+44:1342:97644:10:9:89:508:530:64:g_d0_f7:64:g_d0_f7:Std Dev Airbnb Occupancy500.090.020.070.080.10
+44:1343:97690:9:10:89:513:521:64:g_d0_f7:64:g_d0_f7:Mean Airbnb Price in$50108.6324.6792.0199.76120.87
+44:1344:97740:10:9:89:510:511:64:g_d0_f7:64:g_d0_f7:Std Dev Airbnb Price5031.2413.1721.7828.5034.29
+44:1345:97787:9:10:89:508:502:64:g_d0_f7:64:g_d0_f7:Mean Airbnb to Hotel Price Ratio501.060.280.911.001.14
+44:1346:97841:10:26:89:508:492:64:g_d0_f7:64:g_d0_f7:Std Dev Price Ratio500.330.180.210.290.39
+44:1347:97882:26:9:72:540:466:64:g_d0_f34:64:g_d0_f34:This table shows hotel and Airbnb descriptive statistics for the 50 cities in our sample. For each city, we compute the mean
+44:1348:98006:9:10:72:540:457:64:g_d0_f34:64:g_d0_f34:and standard deviation of daily occupancy rate and price for hotels and Airbnb listings. The Airbnb share of available rooms
+44:1349:98130:10:9:72:540:447:64:g_d0_f34:64:g_d0_f34:is computed as the average of daily share of rooms in the last quarter, i.e. October - December 2014. The Airbnb share of
+44:1350:98251:9:10:72:540:438:64:g_d0_f34:64:g_d0_f34:potential guests is computed as the quarterly average of rooms adjusted for their realized capacity, assuming that the typical
+44:1351:98377:10:9:72:540:428:64:g_d0_f34:64:g_d0_f34:hotel has the same number of average guests as a ‘Midscale’ Airbnb listing. This number is larger than the Airbnb share of
+44:1352:98499:9:40:72:361:419:64:g_d0_f34:64:g_d0_f34:rooms because Airbnb listings typically have higher capacity than hotel rooms.
+44:1353:98577:40:43:160:451:379:143:g_d0_f3:143:g_d0_f3:Table 2: Descriptive Statistics on Market Characteristics
+44:1354:98634:43:13:88:517:336:64:g_d0_f7:64:g_d0_f7:StatisticNMeanSt. Dev.Pctl(25)MedianPctl(75)
+44:1355:98678:13:10:88:509:323:64:g_d0_f7:64:g_d0_f7:WRLURI500.310.82-0.300.200.84
+44:1356:98707:10:9:88:509:313:64:g_d0_f7:64:g_d0_f7:Share of Undevelopable Area460.300.240.090.230.43
+44:1357:98756:9:9:88:509:304:64:g_d0_f7:64:g_d0_f7:Percent Never Married480.330.030.310.330.36
+44:1358:98799:9:10:88:509:295:64:g_d0_f7:64:g_d0_f7:Share of Children480.310.020.300.310.32
+44:1359:98838:10:9:88:509:285:64:g_d0_f7:64:g_d0_f7:Rent to Income Ratio500.180.030.150.170.20
+44:1360:98880:9:10:88:511:276:64:g_d0_f7:64:g_d0_f7:Std Dev of Google Trend (2011)5012.054.229.6211.5113.70
+44:1361:98935:10:9:88:511:266:64:g_d0_f7:64:g_d0_f7:Std Dev of Incoming Passengers (2011) / 10,000506.956.631.894.1711.30
+44:1362:99004:9:26:88:509:257:64:g_d0_f7:64:g_d0_f7:Passengers’ Growth (2012-2011)500.020.06-0.020.010.04
+44:1363:99057:26:10:72:540:231:64:g_d0_f34:64:g_d0_f34:The table shows descriptive statistics on market characteristics for the 50 cities in our sample. The WRLURI and Saiz’s share
+44:1364:99182:10:9:72:540:221:64:g_d0_f34:64:g_d0_f34:of undevelopable area are proxies for constraints to hotel supply. The share of children and unmarried adults proxy for the
+44:1365:99305:9:10:72:540:212:64:g_d0_f34:64:g_d0_f34:availability of Airbnb hosts. The standard deviation of Google trends and incoming passengers are two measures of demand
+44:1366:99425:10:0:72:107:202:64:g_d0_f34:64:g_d0_f34:volatility.
+45:1367:99438:0:43:181:430:598:143:g_d0_f3:143:g_d0_f3:Table 3: City Characteristics and Size of Airbnb
+45:1368:99486:43:13:335:422:555:64:g_d0_f7:64:g_d0_f7:Airbnb Share of Rooms
+45:1369:99507:13:13:345:460:542:64:g_d0_f7:64:g_d0_f7:(1)(2)(3)
+45:1370:99516:13:10:135:464:529:64:g_d0_f7:64:g_d0_f7:Undevelopable Area0.0250.0210.013
+45:1371:99549:10:19:338:468:519:64:g_d0_f7:64:g_d0_f7:(0.016)(0.015)(0.013)
+45:1372:99570:19:9:135:467:500:64:g_d0_f7:64:g_d0_f7:SD. Incoming Air Passengers (2011)0.002⇤⇤⇤0.002⇤⇤0.0003
+45:1373:99625:9:19:338:468:491:64:g_d0_f7:64:g_d0_f7:(0.001)(0.001)(0.001)
+45:1374:99646:19:9:135:464:472:64:g_d0_f7:64:g_d0_f7:%NeverMarried0.364⇤⇤0.391⇤⇤⇤0.214
+45:1375:99679:9:19:338:468:463:64:g_d0_f7:64:g_d0_f7:(0.140)(0.144)(0.131)
+45:1376:99700:19:10:135:467:444:64:g_d0_f7:64:g_d0_f7:%GrowthinAirPassengers(2012-2011)0.0640.0890.074
+45:1377:99748:10:19:338:468:434:64:g_d0_f7:64:g_d0_f7:(0.058)(0.058)(0.050)
+45:1378:99769:19:9:135:464:415:64:g_d0_f7:64:g_d0_f7:Wharton Residential Land Use Index (WRLURI)0.0060.004
+45:1379:99822:9:19:390:468:406:64:g_d0_f7:64:g_d0_f7:(0.004)(0.003)
+45:1380:99836:19:10:135:468:387:64:g_d0_f7:64:g_d0_f7:%Children-0.323⇤-0.165
+45:1381:99858:10:18:390:468:377:64:g_d0_f7:64:g_d0_f7:(0.177)(0.156)
+45:1382:99872:18:10:135:468:359:64:g_d0_f7:64:g_d0_f7:Log(Market Size)-0.011-0.007-0.010
+45:1383:99906:10:19:338:468:349:64:g_d0_f7:64:g_d0_f7:(0.007)(0.007)(0.006)
+45:1384:99927:19:9:135:470:330:64:g_d0_f7:36:g_d0_f22:Log(Rev. Per Room (2011))0.055⇤⇤⇤
+45:1385:99960:9:19:442:468:321:64:g_d0_f7:64:g_d0_f7:(0.014)
+45:1386:99967:19:10:135:468:302:64:g_d0_f7:64:g_d0_f7:Constant0.0010.051-0.120
+45:1387:99991:10:22:338:468:292:64:g_d0_f7:64:g_d0_f7:(0.080)(0.079)(0.081)
+45:1388:100012:22:10:135:459:270:64:g_d0_f7:64:g_d0_f7:Observations464646
+45:1389:100030:10:15:135:464:260:64:g_d0_f7:64:g_d0_f7:R20.5840.6440.748
+45:1390:100047:15:23:135:470:245:64:g_d0_f34:64:g_d0_f7:Note:⇤p<0.1;⇤⇤p<0.05;⇤⇤⇤p<0.01
+45:1391:100077:23:9:72:540:222:64:g_d0_f34:64:g_d0_f34:This table shows linear regressions of the size of Airbnb on market characteristics linked to supply constraints, demand volatility,
+45:1392:100209:9:10:72:540:213:64:g_d0_f34:64:g_d0_f34:and the costs of hosting. The size of Airbnb is the average of daily share of rooms in the last quarter, i.e. October - December
+45:1393:100337:10:9:72:540:203:64:g_d0_f34:64:g_d0_f34:2014. The standard deviation of incoming passengers is divided by 10,000 to make the coe-cient comparable to the other
+45:1394:100455:9:10:72:540:194:64:g_d0_f34:64:g_d0_f34:variables.  Descriptive statistics are shown in Tables1and2.  Market size is measured as the average number of rooms
+45:1395:100571:10:0:72:208:184:64:g_d0_f34:64:g_d0_f34:available in the last quarter of 2014.
+46:1396:100611:0:43:161:450:565:143:g_d0_f3:143:g_d0_f3:Table 4: The Supply Elasticity of Hotels and Peer Hosts
+46:1397:100666:43:13:217:459:522:64:g_d0_f7:64:g_d0_f7:Log(Hotel Rooms Boooked)Log(Airbnb Rooms Booked)
+46:1398:100714:13:13:264:412:509:64:g_d0_f7:64:g_d0_f7:(1)(2)
+46:1399:100720:13:10:129:284:496:64:g_d0_f7:36:g_d0_f22:log(Hotel Rooms)0.538⇤⇤⇤
+46:1400:100744:10:19:256:282:486:64:g_d0_f7:64:g_d0_f7:(0.188)
+46:1401:100751:19:9:129:284:467:64:g_d0_f7:36:g_d0_f22:log(Hotel Price)1.072⇤⇤⇤
+46:1402:100775:9:19:256:282:458:64:g_d0_f7:64:g_d0_f7:(0.069)
+46:1403:100782:19:10:129:421:439:64:g_d0_f7:36:g_d0_f22:log(Airbnb Rooms)0.622⇤⇤⇤
+46:1404:100807:10:18:394:420:429:64:g_d0_f7:64:g_d0_f7:(0.098)
+46:1405:100814:18:10:129:421:411:64:g_d0_f7:36:g_d0_f22:log(Airbnb Price)2.164⇤⇤⇤
+46:1406:100839:10:23:394:420:401:64:g_d0_f7:64:g_d0_f7:(0.296)
+46:1407:100846:23:9:129:413:378:64:g_d0_f7:64:g_d0_f7:IVYesYes
+46:1408:100854:9:9:129:413:369:64:g_d0_f7:64:g_d0_f7:City FEYesYes
+46:1409:100867:9:10:129:412:360:64:g_d0_f7:64:g_d0_f7:Year-Month FEYesYes
+46:1410:100886:10:9:129:413:350:64:g_d0_f7:64:g_d0_f7:Day of Week FEYesYes
+46:1411:100906:9:10:129:421:341:64:g_d0_f7:64:g_d0_f7:Observations268,489250,923
+46:1412:100932:10:15:129:416:331:64:g_d0_f7:64:g_d0_f7:R20.9630.895
+46:1413:100944:15:10:129:476:316:64:g_d0_f34:64:g_d0_f7:Note:Column 2 includes the log number of residents leaving by air,
+46:1414:101010:10:9:217:476:306:64:g_d0_f7:64:g_d0_f7:and the log number of outgoing travel searches on Google as controls.
+46:1415:101079:9:23:242:476:297:64:g_d0_f7:64:g_d0_f7:Standard Errors are clustered at the city and year-month level.
+46:1416:101142:23:9:72:540:274:64:g_d0_f34:64:g_d0_f34:The table shows results of IV regressions of the log of hotel and Airbnb bookings on the corresponding price and room availability.
+46:1417:101273:9:10:72:540:265:64:g_d0_f34:64:g_d0_f34:Column 2 includes the log of departing (local) air travelers, and the one week lag of the log of local Google Search Trends for
+46:1418:101400:10:9:72:540:255:64:g_d0_f34:64:g_d0_f34:hotels outside of the city as additional controls. The instruments are demand-side shifters – the one week lag of the log of
+46:1419:101524:9:10:72:540:246:64:g_d0_f34:64:g_d0_f34:the Google Search Trends and the log of arriving (not returning) flight travelers – in both columns. In column 2 the number
+46:1420:101647:10:9:72:539:236:64:g_d0_f34:64:g_d0_f34:of Airbnb available listings is instrumented with city-specific quadratic time trends that capture the di↵usion process of the
+46:1421:101773:9:9:72:540:227:64:g_d0_f34:64:g_d0_f34:platform. Adding the city-day observations with no Airbnb bookings (and using hotel prices in column 2) does not change the
+46:1422:101896:9:0:72:434:218:64:g_d0_f34:64:g_d0_f34:results. Instrumenting for hotel capacity like we do for Airbnb does not change the results either.
+47:1423:101997:0:43:185:426:541:143:g_d0_f3:143:g_d0_f3:Table 5: Hotel Revenue and the Size of Airbnb
+47:1424:102042:43:13:272:458:498:64:g_d0_f7:64:g_d0_f7:Log(RevPAR)Occupancy RateLog(Price)
+47:1425:102077:13:13:293:445:485:64:g_d0_f7:64:g_d0_f7:(1)(2)(3)
+47:1426:102086:13:9:146:454:472:64:g_d0_f7:36:g_d0_f22:log(Incoming Air Passengers)1.169⇤⇤⇤0.394⇤⇤⇤0.498⇤⇤⇤
+47:1427:102138:9:19:285:452:463:64:g_d0_f7:64:g_d0_f7:(0.065)(0.041)(0.041)
+47:1428:102159:19:10:146:453:444:64:g_d0_f7:36:g_d0_f22:log(Google Search Trend)0.147⇤⇤⇤0.054⇤⇤⇤0.069⇤⇤
+47:1429:102206:10:19:285:452:434:64:g_d0_f7:64:g_d0_f7:(0.049)(0.012)(0.027)
+47:1430:102227:19:9:146:452:415:64:g_d0_f7:64:g_d0_f7:log(Hotel Rooms)-0.768⇤⇤⇤-0.436⇤⇤⇤-0.078
+47:1431:102267:9:19:285:452:406:64:g_d0_f7:64:g_d0_f7:(0.200)(0.078)(0.148)
+47:1432:102288:19:10:146:454:387:64:g_d0_f7:36:g_d0_f22:log(Available Listings)-0.033⇤⇤-0.006-0.025⇤
+47:1433:102332:10:22:285:452:377:64:g_d0_f7:64:g_d0_f7:(0.014)(0.005)(0.013)
+47:1434:102353:22:10:146:446:355:64:g_d0_f7:64:g_d0_f7:IVYesYesYes
+47:1435:102364:10:9:146:446:345:64:g_d0_f7:64:g_d0_f7:City FEYesYesYes
+47:1436:102380:9:10:146:445:336:64:g_d0_f7:64:g_d0_f7:Year-Quarter FEYesYesYes
+47:1437:102404:10:9:146:446:326:64:g_d0_f7:64:g_d0_f7:Day of Week FEYesYesYes
+47:1438:102427:9:10:146:453:317:64:g_d0_f7:64:g_d0_f7:Observations268,489268,489268,489
+47:1439:102460:10:15:146:448:307:64:g_d0_f7:64:g_d0_f7:R20.7290.5820.853
+47:1440:102477:15:22:146:459:292:64:g_d0_f34:64:g_d0_f7:Note:Standard Errors Clustered at a City Level
+47:1441:102523:22:10:72:540:270:64:g_d0_f34:64:g_d0_f34:This table shows results of IV estimates of equation4, where the size of Airbnb is measured as the number of available listings.
+47:1442:102651:10:9:72:540:260:64:g_d0_f34:64:g_d0_f34:The Google search trend is a one-week lag. The instruments are city-specific quadratic time trends. The dependent variable
+47:1443:102773:9:10:72:539:251:64:g_d0_f34:64:g_d0_f34:is revenue per available room in column 1, occupancy rate in column 2, and price in column 3. AppendixBdiscusses the
+47:1444:102889:10:0:72:349:241:64:g_d0_f34:64:g_d0_f34:instrumental variables strategy and endogeneity concerns in greater detail.
+49:1445:104102:0:38:173:436:709:143:g_d0_f3:143:g_d0_f3:Table 7: Estimates of Selected Demand Parameters
+49:1446:104150:38:15:202:408:671:64:g_d0_f7:64:g_d0_f7:ParameterValue   Std. Error
+49:1447:104177:15:10:202:408:656:64:g_d0_f7:64:g_d0_f7:Price-0.0330.001
+49:1448:104193:10:9:202:408:646:64:g_d0_f7:64:g_d0_f7:Log Google Trend10.5000.026
+49:1449:104220:9:10:202:408:637:64:g_d0_f7:64:g_d0_f7:Log Google Trend Sq.-0.7680.013
+49:1450:104251:10:9:202:408:627:64:g_d0_f7:64:g_d0_f7:Log Travelers To2.3860.065
+49:1451:104277:9:10:202:408:618:64:g_d0_f7:64:g_d0_f7:Log Travelers To Sq.0.0670.000
+49:1452:104307:10:9:202:408:608:64:g_d0_f7:64:g_d0_f7:Std. Deviation on Inside Option    3.7531.106
+49:1453:104352:9:9:202:408:599:64:g_d0_f7:64:g_d0_f7:Std. Deviation on High Scale29.7620.005
+49:1454:104391:9:26:202:408:590:64:g_d0_f7:64:g_d0_f7:Std. Deviation on Price0.0060.023
+49:1455:104424:26:9:72:540:564:64:g_d0_f34:64:g_d0_f34:This table displays the estimates and standard errors for selected parameters in travelers’ utility. High scale includes luxury
+49:1456:104551:9:40:72:165:555:64:g_d0_f34:64:g_d0_f34:and upper upscale hotels.
+49:1457:104576:40:38:202:410:515:143:g_d0_f3:143:g_d0_f3:Table 8: Consumer Surplus from Airbnb
+49:1458:104613:38:15:226:406:477:64:g_d0_f7:64:g_d0_f7:CityChange in CS (MM)
+49:1459:104634:15:16:302:433:462:64:g_d0_f7:64:g_d0_f7:Unconstrained   Price Adjustment
+49:1460:104666:16:9:178:408:446:64:g_d0_f7:64:g_d0_f7:Austin-5.1-9.4
+49:1461:104680:9:10:178:410:437:64:g_d0_f7:64:g_d0_f7:Boston-6.8-13.0
+49:1462:104695:10:9:178:410:427:64:g_d0_f7:64:g_d0_f7:Los Angeles-25.6-41.5
+49:1463:104716:9:9:178:409:418:64:g_d0_f7:64:g_d0_f7:Miami-9.0-14.0
+49:1464:104730:9:10:178:411:409:64:g_d0_f7:64:g_d0_f7:New York-56.8-126.2
+49:1465:104749:10:9:178:408:399:64:g_d0_f7:64:g_d0_f7:Oakland-3.6-6.0
+49:1466:104764:9:10:178:407:390:64:g_d0_f7:64:g_d0_f7:Portland-5.5-8.6
+49:1467:104780:10:9:178:410:380:64:g_d0_f7:64:g_d0_f7:San Francisco-21.3-41.2
+49:1468:104803:9:10:178:408:371:64:g_d0_f7:64:g_d0_f7:San Jose-3.6-6.2
+49:1469:104819:10:9:178:410:361:64:g_d0_f7:64:g_d0_f7:Seattle-5.7-10.0
+49:1470:104835:9:10:178:411:352:64:g_d0_f7:64:g_d0_f7:All-142.9-276.1
+49:1471:104850:10:9:178:409:342:64:g_d0_f7:64:g_d0_f7:All (Compression Nights)-37.4-98.8
+49:1472:104884:9:26:178:411:333:64:g_d0_f7:64:g_d0_f7:All (Non Compression Nights)-105.5-177.3
+49:1473:104924:26:9:72:540:307:64:g_d0_f34:64:g_d0_f34:This table displays the consumer surplus change from two scenarios without Airbnb. “Unconstrained” refers to the counterfac-
+49:1474:105048:9:9:72:540:298:64:g_d0_f34:64:g_d0_f34:tual scenario in which Airbnb options do not exist, hotels do not adjust prices and can accommodate any additional bookings
+49:1475:105171:9:10:72:540:289:64:g_d0_f34:64:g_d0_f34:regardless of their actual capacity. In the “Price Adjustment” counterfactual, we let hotels adjust their prices in response to
+49:1476:105298:10:9:72:540:279:64:g_d0_f34:64:g_d0_f34:the absence of Airbnb and accounting for capacity constraints. “All” refers to the sum of consumer surplus changes across all
+49:1477:105423:9:10:72:540:270:64:g_d0_f34:64:g_d0_f34:cities, and “All (Compression Nights)” refers to the sum across cities for time periods when at least one hotel option in the
+49:1478:105548:10:0:72:347:260:64:g_d0_f34:64:g_d0_f34:city has an occupancy rate of 95% or more. All calculations are for 2014.
+50:1479:105623:0:38:172:439:669:143:g_d0_f3:143:g_d0_f3:Table 9: Consumer Surplus from Airbnb (per night)
+50:1480:105672:38:15:184:475:631:64:g_d0_f7:64:g_d0_f7:CityAvg. Airbnb Price   Consumer Surplus per Person-Night
+50:1481:105729:15:16:341:473:616:64:g_d0_f7:64:g_d0_f7:Unconstrained   Price Adjustment
+50:1482:105761:16:9:136:450:600:64:g_d0_f7:64:g_d0_f7:Austin160.6-24.7-45.3
+50:1483:105782:9:10:136:450:591:64:g_d0_f7:64:g_d0_f7:Boston120.3-23.4-44.8
+50:1484:105803:10:9:136:450:581:64:g_d0_f7:64:g_d0_f7:Los Angeles122.0-23.1-37.4
+50:1485:105829:9:10:136:450:572:64:g_d0_f7:64:g_d0_f7:Miami148.7-23.7-36.7
+50:1486:105849:10:9:136:450:562:64:g_d0_f7:64:g_d0_f7:New York145.3-18.9-42.1
+50:1487:105872:9:10:136:450:553:64:g_d0_f7:64:g_d0_f7:Oakland89.2-25.7-42.9
+50:1488:105893:10:9:136:450:543:64:g_d0_f7:64:g_d0_f7:Portland94.7-23.9-37.2
+50:1489:105915:9:10:136:450:534:64:g_d0_f7:64:g_d0_f7:San Francisco146.0-21.2-41.1
+50:1490:105943:10:9:136:450:524:64:g_d0_f7:64:g_d0_f7:San Jose106.2-26.0-45.2
+50:1491:105966:9:9:136:450:515:64:g_d0_f7:64:g_d0_f7:Seattle108.0-26.0-45.8
+50:1492:105988:9:10:136:450:506:64:g_d0_f7:64:g_d0_f7:All136.2-21.3-41.1
+50:1493:106006:10:9:136:450:496:64:g_d0_f7:64:g_d0_f7:All (Compression Nights)143.6-21.4-56.5
+50:1494:106045:9:26:136:450:487:64:g_d0_f7:64:g_d0_f7:All (Non Compression Nights)133.6-21.3-35.7
+50:1495:106088:26:9:72:540:461:64:g_d0_f34:64:g_d0_f34:This table displays the consumer surplus loss per room-night without Airbnb. The two counterfactual scenarios – third and
+50:1496:106209:9:10:72:539:452:64:g_d0_f34:64:g_d0_f34:fourth columns – are the same as in Table8.ThelastthreerowsarealsodefinedasinTable8. The second column displays
+50:1497:106320:10:102:72:389:442:64:g_d0_f34:64:g_d0_f34:the average transacted price per room-night on Airbnb. All calculations are for 2014.
+50:1498:106405:102:38:203:408:340:143:g_d0_f3:143:g_d0_f3:Table 10: Competitive E↵ects on Hotels
+50:1499:106443:38:15:156:480:302:64:g_d0_f7:64:g_d0_f7:City% Change Quantity% Change Revenue% Change Profit
+50:1500:106495:15:16:219:490:287:64:g_d0_f7:64:g_d0_f7:Unconst.   Price Adj.   Unconst.   Price Adj.   Unconst.   Price Adj.
+50:1501:106564:16:9:121:479:271:64:g_d0_f7:64:g_d0_f7:Austin1.310.961.211.201.341.91
+50:1502:106594:9:10:121:479:262:64:g_d0_f7:64:g_d0_f7:Boston1.020.690.780.750.531.51
+50:1503:106624:10:9:121:479:252:64:g_d0_f7:64:g_d0_f7:Los Angeles1.911.451.401.361.214.72
+50:1504:106659:9:10:121:478:243:64:g_d0_f7:64:g_d0_f7:Miami1.320.970.981.001.592.03
+50:1505:106688:10:9:121:479:233:64:g_d0_f7:64:g_d0_f7:New York3.642.002.942.242.954.99
+50:1506:106720:9:10:121:479:224:64:g_d0_f7:64:g_d0_f7:Oakland1.481.131.371.411.135.45
+50:1507:106751:10:9:121:479:214:64:g_d0_f7:64:g_d0_f7:Portland1.771.431.541.521.344.06
+50:1508:106783:9:9:121:479:205:64:g_d0_f7:64:g_d0_f7:San Francisco2.651.552.001.681.664.31
+50:1509:106820:9:10:121:479:196:64:g_d0_f7:64:g_d0_f7:San Jose0.840.630.730.720.611.99
+50:1510:106852:10:9:121:479:186:64:g_d0_f7:64:g_d0_f7:Seattle1.100.790.930.890.962.48
+50:1511:106883:9:10:121:479:177:64:g_d0_f7:64:g_d0_f7:All2.051.321.811.541.893.69
+50:1512:106910:10:9:121:478:167:64:g_d0_f7:64:g_d0_f7:All (Compression)2.450.992.161.731.953.21
+50:1513:106951:9:26:121:478:158:64:g_d0_f7:64:g_d0_f7:All (Non Compression)1.931.411.691.471.814.36
+50:1514:106996:26:9:72:540:132:64:g_d0_f34:64:g_d0_f34:This table displays changes in hotel bookings, revenues, and profits without Airbnb. The two counterfactual scenarios as well
+50:1515:107121:9:10:72:539:123:64:g_d0_f34:64:g_d0_f34:as the last three rows are defined as in Table8. For the profit calculation, we exclude the cost component from Equation7that
+50:1516:107246:10:0:72:241:113:64:g_d0_f34:64:g_d0_f34:is increasing as quantity approaches capacity.
+51:1517:107294:0:38:121:490:709:143:g_d0_f3:143:g_d0_f3:Table 11: Airbnb Bookings: Market Expansion versus Business Stealing
+51:1518:107362:38:9:315:391:671:64:g_d0_f7:64:g_d0_f7:Share New Bookings
+51:1519:107380:9:16:305:402:662:64:g_d0_f7:64:g_d0_f7:Unconstr.   Price Adjust.
+51:1520:107405:16:9:209:402:646:64:g_d0_f7:64:g_d0_f7:Austin0.270.46
+51:1521:107419:9:10:209:402:637:64:g_d0_f7:64:g_d0_f7:Boston0.320.54
+51:1522:107433:10:9:209:402:627:64:g_d0_f7:64:g_d0_f7:Los Angeles0.300.47
+51:1523:107452:9:10:209:402:618:64:g_d0_f7:64:g_d0_f7:Miami0.310.49
+51:1524:107465:10:9:209:402:608:64:g_d0_f7:64:g_d0_f7:New York0.330.63
+51:1525:107481:9:9:209:402:599:64:g_d0_f7:64:g_d0_f7:Oakland0.280.45
+51:1526:107496:9:10:209:402:590:64:g_d0_f7:64:g_d0_f7:Portland0.280.42
+51:1527:107512:10:9:209:402:580:64:g_d0_f7:64:g_d0_f7:San Francisco0.340.61
+51:1528:107533:9:10:209:402:571:64:g_d0_f7:64:g_d0_f7:San Jose0.290.47
+51:1529:107549:10:9:209:402:561:64:g_d0_f7:64:g_d0_f7:Seattle0.290.49
+51:1530:107564:9:10:209:402:552:64:g_d0_f7:64:g_d0_f7:All0.320.56
+51:1531:107575:10:9:209:402:542:64:g_d0_f7:64:g_d0_f7:All (Constrained)0.310.72
+51:1532:107600:9:26:209:402:533:64:g_d0_f7:64:g_d0_f7:All (Non Constrained)0.320.50
+51:1533:107629:26:9:72:540:507:64:g_d0_f34:64:g_d0_f34:This table shows the share of Airbnb bookings that would not have been hotel bookings in the absence of Airbnb, i.e. the share
+51:1534:107755:9:40:72:483:498:64:g_d0_f34:64:g_d0_f34:of Airbnb bookings constituting market expansion. The two counterfactual scenarios are defined as in Table8.
+51:1535:107863:40:38:222:389:458:143:g_d0_f3:143:g_d0_f3:Table 12: Peer Producer Surplus
+51:1536:107894:38:15:185:474:420:64:g_d0_f7:64:g_d0_f7:CityAvg. Peer Surplus per Night   Total Peer Surplus (MM)
+51:1537:107951:15:10:137:474:405:64:g_d0_f7:64:g_d0_f7:Austin30.221.15
+51:1538:107966:10:9:137:474:395:64:g_d0_f7:64:g_d0_f7:Boston25.290.93
+51:1539:107981:9:10:137:474:386:64:g_d0_f7:64:g_d0_f7:Los Angeles24.713.14
+51:1540:108001:10:9:137:474:376:64:g_d0_f7:64:g_d0_f7:Miami23.451.06
+51:1541:108015:9:10:137:474:367:64:g_d0_f7:64:g_d0_f7:New York25.997.31
+51:1542:108032:10:9:137:474:357:64:g_d0_f7:64:g_d0_f7:Oakland24.350.48
+51:1543:108048:9:9:137:474:348:64:g_d0_f7:64:g_d0_f7:Portland27.330.91
+51:1544:108065:9:10:137:474:339:64:g_d0_f7:64:g_d0_f7:San Francisco26.202.64
+51:1545:108087:10:9:137:474:329:64:g_d0_f7:64:g_d0_f7:San Jose26.100.49
+51:1546:108104:9:10:137:474:320:64:g_d0_f7:64:g_d0_f7:Seattle26.160.86
+51:1547:108120:10:9:137:474:310:64:g_d0_f7:64:g_d0_f7:All25.8518.96
+51:1548:108133:9:10:137:474:301:64:g_d0_f7:64:g_d0_f7:All (Compression Nights)27.008.41
+51:1549:108166:10:25:137:474:291:64:g_d0_f7:64:g_d0_f7:All (Non Compression Nights)25.0110.55
+51:1550:108204:25:10:72:540:266:64:g_d0_f34:64:g_d0_f34:This table displays peer producer surplus, per room-night and in the aggregate, for 2014. The two counterfactual scenarios as
+51:1551:108329:10:0:72:266:256:64:g_d0_f34:64:g_d0_f34:well as the last three rows are defined as in Table8.

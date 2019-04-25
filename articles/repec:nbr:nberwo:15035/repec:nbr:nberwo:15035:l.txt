@@ -1,0 +1,1007 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:540:610:12:Times:12:Times:C:CO-OPTIMIZATION OF ENHANCED OIL RECOVERY AND CARBON SEQUESTRATION
+1:2:90:28:14:306:341:582:12:Times:12:Times:C:Andrew Leach
+1:3:102:14:14:306:348:568:12:Times:12:Times:C:Charles F. Mason
+1:4:118:14:28:306:346:554:12:Times:12:Times:C:Klaas van't Veld
+1:5:134:28:14:306:359:526:12:Times:12:Times:C:Working Paper 15035
+1:6:153:14:42:306:393:512:12:Times:12:Times:C:http://www.nber.org/papers/w15035
+1:7:186:42:14:306:439:470:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:222:14:14:306:374:456:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:9:247:14:14:306:362:442:12:Times:12:Times:C:Cambridge, MA 02138
+1:10:266:14:242:306:330:428:12:Times:12:Times:C:June 2009
+1:11:275:242:14:72:540:186:12:Times:12:Times:F:The views expressed herein are those of the author(s) and do not necessarily reflect the views of the
+1:12:376:14:28:72:266:172:12:Times:12:Times:C:National Bureau of Economic Research.
+1:13:413:28:14:72:540:144:12:Times:12:Times:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:14:509:14:14:72:540:130:12:Times:12:Times:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:15:604:14:28:72:169:116:12:Times:12:Times:C:NBER publications.
+1:16:622:28:14:72:540:88:12:Times:12:Times:F:© 2009 by Andrew Leach, Charles F. Mason, and Klaas van't Veld. All rights reserved. Short sections
+1:17:721:14:14:72:540:74:12:Times:12:Times:F:of text, not to exceed two paragraphs, may be quoted without explicit permission provided that full
+1:18:820:14:0:72:306:60:12:Times:12:Times:C:credit, including © notice, is given to the source.
+2:19:871:0:14:72:408:700:12:Times:12:Times:C:Co-optimization of Enhanced Oil Recovery and Carbon Sequestration
+2:20:936:14:14:72:340:686:12:Times:12:Times:C:Andrew Leach, Charles F. Mason, and Klaas van't Veld
+2:21:988:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 15035
+2:22:1016:14:14:72:121:658:12:Times:12:Times:C:June 2009
+2:23:1025:14:28:72:183:644:12:Times:12:Times:C:JEL No. Q32,Q40,Q54
+2:24:1044:28:28:306:339:616:12:Times:12:Times:C:ABSTRACT
+2:25:1052:28:14:72:540:588:12:Times:12:Times:F:In this paper, we present what is to our knowledge the first theoretical economic analysis of CO2-
+2:26:1150:14:14:72:540:574:12:Times:12:Times:F:enhanced oil recovery (EOR). This technique, which has been used successfully in a number of oil
+2:27:1246:14:14:72:540:560:12:Times:12:Times:F:plays (notably in West Texas, Wyoming, and Saskatchewan), entails injection of CO2 into mature
+2:28:1340:14:14:72:540:546:12:Times:12:Times:F:oil fields in a manner that reduces the oil's viscosity, thereby enhancing the rate of extraction. As part
+2:29:1446:14:14:72:540:532:12:Times:12:Times:F:of this process, significant quantities of CO2 remain sequestered in the reservoir. If CO2 emissions
+2:30:1546:14:14:72:540:518:12:Times:12:Times:F:are regulated, oil producers using EOR should therefore be able to earn sequestration credits in addition
+2:31:1651:14:14:72:540:504:12:Times:12:Times:F:to oil revenues. We develop a theoretical framework that analyzes the dynamic co-optimization of
+2:32:1747:14:14:72:540:490:12:Times:12:Times:F:oil extraction and CO2 sequestration, through the producer's choice at each point in time of an optimal
+2:33:1850:14:14:72:540:476:12:Times:12:Times:F:CO2 fraction in the injection stream (the control variable). We find that the optimal fraction is likely
+2:34:1954:14:14:72:540:462:12:Times:12:Times:F:to decline monotonically over time, and reach zero before the optimal termination time. Numerical
+2:35:2051:14:14:72:540:448:12:Times:12:Times:F:simulations, based on an ongoing EOR project in Wyoming, confirm this result. They show also that
+2:36:2148:14:14:72:540:434:12:Times:12:Times:F:cumulative sequestration is positively related to the oil price, and is in fact much more responsive
+2:37:2248:14:14:72:540:420:12:Times:12:Times:F:to oil-price increases than to increases in the carbon tax. Only at very high taxes does a tradeoff between
+2:38:2355:14:42:72:234:406:12:Times:12:Times:C:oil output and sequestration arise.
+2:39:2390:42:14:72:143:364:12:Times:12:Times:C:Andrew Leach
+2:40:2402:14:14:72:175:350:12:Times:12:Times:C:University of Alberta
+2:41:2423:14:14:72:164:336:12:Times:12:Times:C:School of Business
+2:42:2441:14:14:72:193:322:12:Times:12:Times:C:3-40K Business Building
+2:43:2464:14:14:72:212:308:12:Times:12:Times:C:Edmonton, Alberta T6G 2R6
+2:44:2489:14:14:72:111:294:12:Times:12:Times:C:Canada 
+2:45:2496:14:28:72:199:280:12:Times:12:Times:C:andrew.leach@ualberta.ca
+2:46:2520:28:14:72:157:252:12:Times:12:Times:C:Charles F. Mason
+2:47:2536:14:14:72:259:238:12:Times:12:Times:C:Department of Economics and Finance
+2:48:2571:14:14:72:187:224:12:Times:12:Times:C:University of Wyoming
+2:49:2592:14:14:72:203:210:12:Times:12:Times:C:1000 E. University Avenue
+2:50:2617:14:14:72:202:196:12:Times:12:Times:C:Laramie, WY  82071-3985
+2:51:2640:14:0:72:175:182:12:Times:12:Times:C:bambuzlr@uwyo.edu
+2:52:2657:0:14:306:385:364:12:Times:12:Times:C:Klaas van't Veld
+2:53:2673:14:14:306:493:350:12:Times:12:Times:C:Department of Economics and Finance
+2:54:2708:14:14:306:421:336:12:Times:12:Times:C:University of Wyoming
+2:55:2729:14:14:306:437:322:12:Times:12:Times:C:1000 E. University Avenue
+2:56:2754:14:14:306:436:308:12:Times:12:Times:C:Laramie, WY  82071-3985
+2:57:2777:14:0:306:389:294:12:Times:12:Times:C:klaas@uwyo.edu
+3:58:2792:0:33:258:354:701:12:g_d0_f2:12:g_d0_f3:?:1.Introduction
+3:59:2806:33:23:72:540:668:12:g_d0_f2:12:g_d0_f2:B:There is a growing consensus in both policy circles and in the energy industry that within
+3:60:2896:23:23:72:539:645:12:g_d0_f2:8:g_d0_f4:B:the next few years, the US Federal government will adopt some form of regulation of CO2
+3:61:2983:23:22:72:541:622:12:g_d0_f2:12:g_d0_f2:B:emissions.1At the same time, it is widely believed that much of the nation’s energy supply
+3:62:3073:22:23:72:540:600:12:g_d0_f2:12:g_d0_f2:B:over the coming decades will continue to come from fossil fuels, coal in particular (MIT; 2007).
+3:63:3169:23:22:72:540:577:12:g_d0_f2:12:g_d0_f2:B:Many analysts believe the only way to reconcile the anticipated growth in the use of coal with
+3:64:3263:22:23:72:540:555:12:g_d0_f2:12:g_d0_f2:B:anticipated limits on CO2emissions is through the development and deployment of carbon
+3:65:3349:23:23:72:540:532:12:g_d0_f2:12:g_d0_f2:B:capture and geological sequestration (CCS). There seems to be broad agreement, moreover,
+3:66:3437:23:22:72:540:509:12:g_d0_f2:12:g_d0_f2:B:that large-scale deployment of geological sequestration is likely to start with projects that
+3:67:3530:22:23:72:286:487:12:g_d0_f2:8:g_d0_f4:B:apply CO2-enhanced oil recovery (EOR).2
+3:68:3569:23:22:108:540:464:12:g_d0_f2:12:g_d0_f2:A:This technique, which has been used successfully in a number of oil plays (notably
+3:69:3651:22:23:72:540:442:12:g_d0_f2:12:g_d0_f2:B:in West Texas, Wyoming, and Saskatchewan), entails injection of CO2into mature oil fields
+3:70:3740:23:23:72:540:419:12:g_d0_f2:12:g_d0_f2:B:in  a  manner  that  causes  the  CO2to  mix  with  some  fraction  of  the  oil  that  still  remains
+3:71:3842:23:22:72:540:396:12:g_d0_f2:12:g_d0_f2:B:underground.   Doing  so  reduces  the  oil’s  viscosity,  thereby  improving  its  ability  to  flow
+3:72:3943:22:23:72:540:374:12:g_d0_f2:12:g_d0_f2:B:through  the  reservoir  rock,  and  enhancing  the  rate  of  extraction.3Although  some  of  the
+3:73:4041:23:22:72:540:351:12:g_d0_f2:12:g_d0_f2:B:CO2resurfaces  with  the  oil,  it  can  be  separated  from  the  output  stream,  recompressed,
+3:74:4138:22:23:72:540:329:12:g_d0_f2:12:g_d0_f2:B:and  reinjected.   Eventually,  when  the  EOR  project  is  terminated,  all  the  injected  CO2is
+3:75:4237:23:23:72:134:306:12:g_d0_f2:12:g_d0_f2:B:sequestered.
+3:76:4249:23:22:108:540:283:12:g_d0_f2:12:g_d0_f2:A:EOR is a “game-changing” technology for the recovery of oil from depleted reserves.
+3:77:4332:22:23:72:540:261:12:g_d0_f2:12:g_d0_f2:B:Estimates suggest that recovery rates for existing reserves could be approximately doubled,
+3:78:4423:23:26:72:540:238:12:g_d0_f2:12:g_d0_f2:B:while the application of EOR on a broad scale could raise domestic recoverable oil reserves in
+3:79:4517:26:16:72:540:212:8:g_d0_f4:10:g_d0_f5:F:1For example,  the Vice President of Environmental Policy for Duke Energy stated in a Washington Post
+3:80:4618:16:12:72:540:196:10:g_d0_f5:10:g_d0_f5:F:article, “Our viewpoint is that it’s going to happen.  There’s scientific evidence of climate change.  We’d like
+3:81:4730:12:12:72:540:184:10:g_d0_f5:10:g_d0_f5:F:to know what legislation will be put together so that, when we figure out how to increase our load, we know
+3:82:4837:12:12:72:540:172:10:g_d0_f5:10:g_d0_f5:F:exactly what to expect.”  (Steven Mufson and Juliet Eilperin, “Energy Firms Come to Terms With Climate
+3:83:4939:12:8:72:364:160:10:g_d0_f5:10:g_d0_f5:F:Change,” Washington Post, Saturday, November 25, 2005, p.  A01)
+3:84:5002:8:16:72:540:152:8:g_d0_f4:10:g_d0_f5:F:2This view was expressed in recent Congressional testimony by George Peridas, Science Fellow at the National
+3:85:5110:16:12:72:540:136:10:g_d0_f5:10:g_d0_f5:F:Resources Defense Council, who said that CO2-EOR “has a substantial immediate- to long-term role to play
+3:86:5214:12:12:72:540:124:10:g_d0_f5:10:g_d0_f5:F:in both increasing domestic oil production in a responsible way, and in sequestering CO2” (Peridas; 2008).
+3:87:5320:12:12:72:540:112:10:g_d0_f5:10:g_d0_f5:F:See also the Congressional testimony by William L. Townsend (Townsend; 2007) and the National Petroleum
+3:88:5423:12:9:72:426:100:10:g_d0_f5:10:g_d0_f5:F:Council reportHard Truths: Facing the Hard Truths About Energy(NPC; 2007).
+3:89:5497:9:16:72:540:91:8:g_d0_f4:10:g_d0_f5:F:3Other methods of enhanced oil recovery exist as well, including injection of steam, nitrogen, methane, and
+3:90:5604:16:12:72:540:75:10:g_d0_f5:10:g_d0_f5:F:various  polymers.   Because  these  methods  are  not  the  focus  of  this  paper,  we  use  the  term  enhanced  oil
+3:91:5723:12:0:72:347:63:10:g_d0_f5:10:g_d0_f5:F:recovery, or EOR, as shorthand for CO2-enhanced oil recovery.
+4:92:5785:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:the United States by over 80 billion barrels (ARI; 2006).  Similarly, Shaw and Bachu (2003)
+4:93:5876:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:claim that 4,470 fields, just over half of the known oil reservoirs in Alberta, are amenable to
+4:94:5971:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:CO2injection for enhanced oil recovery.  Babadagli (2006) states that enhanced oil recovery
+4:95:6062:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:applied in these reservoirs could translate in an additional 165 billion barrels of oil recovered
+4:96:6159:23:22:72:540:611:12:g_d0_f2:12:g_d0_f2:B:and over 1 Gt of CO2sequestration.  Snyder et al. (2008) estimate that at current oil and
+4:97:6248:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:carbon prices and with current technology, approximately half of this capacity is economically
+4:98:6342:23:23:72:105:566:12:g_d0_f2:12:g_d0_f2:B:viable.
+4:99:6349:23:22:108:540:543:12:g_d0_f2:12:g_d0_f2:A:In  this  paper,  we  present  what  is  to  our  knowledge  the  first  theoretical  economic
+4:100:6443:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:analysis  of  CO2-enhanced  oil  recovery.   In  the  tradition  of  Hotelling  (1931),  an  oil  field
+4:101:6546:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:contains a physical quantity of oil which the producer seeks to extract at a particular rate
+4:102:6638:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:over  time  so  as  to  maximize  the  economic  rents  from  extraction.   The  ability  to  enhance
+4:103:6739:23:23:72:541:453:12:g_d0_f2:12:g_d0_f2:B:oil extraction rates through injection of CO2alters this extraction problem in a number of
+4:104:6829:23:22:72:157:430:12:g_d0_f2:12:g_d0_f2:B:non-trivial ways.
+4:105:6846:22:23:108:541:408:12:g_d0_f2:12:g_d0_f2:A:First,  CO2is  not  a  costless  input.   Significant  up-front  investments  are  required
+4:106:6937:23:22:72:541:385:12:g_d0_f2:12:g_d0_f2:B:to  make  production  and  injection  wells  suitable  for  CO2use.   In  addition,  maintaining  a
+4:107:7036:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:given injection rate over time requires continuous purchases to make up for the fraction of
+4:108:7127:23:23:72:541:340:12:g_d0_f2:12:g_d0_f2:B:injected CO2that remains sequestered in the reservoir.  Separating the remaining fraction
+4:109:7216:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:that resurfaces with the produced oil, and then dehydrating and recompressing it, is costly
+4:110:7307:22:23:72:109:295:12:g_d0_f2:12:g_d0_f2:B:as well.
+4:111:7315:23:22:108:540:272:12:g_d0_f2:12:g_d0_f2:A:Second, even at a constant injection rate, the amount of oil recovered declines over
+4:112:7399:22:23:72:540:250:12:g_d0_f2:12:g_d0_f2:B:time, as does the fraction of injected CO2that remains sequestered in the reservoir.  Both
+4:113:7489:23:23:72:452:227:12:g_d0_f2:12:g_d0_f2:B:the producer’s revenue stream and cost stream are therefore time varying.
+4:114:7562:23:22:108:540:204:12:g_d0_f2:12:g_d0_f2:A:Third,  while  sequestration  of  CO2currently  yields  no  economic  benefits  in  juris-
+4:115:7652:22:23:72:540:182:12:g_d0_f2:12:g_d0_f2:B:dictions  without  carbon emissions  restrictions,  future  regulations  of  CO2emissions  in  the
+4:116:7750:23:22:72:540:159:12:g_d0_f2:12:g_d0_f2:B:context of climate-change policies may generate such benefits if EOR projects are allowed to
+4:117:7842:22:23:72:540:137:12:g_d0_f2:12:g_d0_f2:B:earn credits for units of CO2sequestered.  The producer’s objective would then be the maxi-
+4:118:7933:23:23:72:540:114:12:g_d0_f2:12:g_d0_f2:B:mization of the combined revenue streams from both oil production and CO2sequestration,
+4:119:8020:23:0:72:280:91:12:g_d0_f2:12:g_d0_f2:B:net of CO2purchase and recycling costs.
+5:120:8060:0:22:108:540:701:12:g_d0_f2:12:g_d0_f2:A:Fourth, carbon taxes affect these revenue and cost streams in multiple ways.  While a
+5:121:8145:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:carbon tax effectively reduces the input cost for EOR and increases the net present value of
+5:122:8237:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:the CO2-storage potential of the oil field, the incidence of the tax on the price of oil reduces
+5:123:8333:22:23:72:296:634:12:g_d0_f2:12:g_d0_f2:B:the value of the traditional use of the asset.
+5:124:8379:23:22:108:540:611:12:g_d0_f2:12:g_d0_f2:A:Fifth,  in  addition  to  these  economic  tradeoffs,  fluid-dynamic  interactions  of  CO2,
+5:125:8471:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:water, and oil inside the reservoir give rise to a further, physical tradeoff faced by the pro-
+5:126:8566:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:ducer.  Whereas injecting pure CO2maximizes oil recovery from the area of the reservoir
+5:127:8653:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:that the CO2sweeps through, that area itself may be small, as pure CO2tends to “finger”
+5:128:8740:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:or “channel” between injection and production wells, bypassing some of the oil.  In compar-
+5:129:8831:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:ison, injecting pure water increases the area that is swept, but reduces recovery from that
+5:130:8922:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:area.  Reservoir-engineering studies4indicate that both oil recovery and CO2sequestration
+5:131:9011:23:23:72:541:453:12:g_d0_f2:12:g_d0_f2:B:are maximized when a mix of CO2and water is injected (whereby the CO2fraction that
+5:132:9093:23:22:72:465:430:12:g_d0_f2:12:g_d0_f2:B:maximizes oil recovery typically differs from that maximizing sequestration).
+5:133:9170:22:23:108:540:408:12:g_d0_f2:12:g_d0_f2:A:Our paper provides an evaluation of the role of all five factors.  We start by developing
+5:134:9259:23:22:72:539:385:12:g_d0_f2:8:g_d0_f4:B:a theoretical framework that analyzes the dynamic co-optimization of oil extraction and CO2
+5:135:9350:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:sequestration, through the producer’s choice at each point in time of an optimal CO2fraction
+5:136:9442:23:23:72:540:340:12:g_d0_f2:12:g_d0_f2:B:in the injection stream (the control variable).  The decision to cease extraction is determined
+5:137:9537:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:by a transversality condition.  Both the injection and termination decisions depend in part
+5:138:9628:22:23:72:540:295:12:g_d0_f2:12:g_d0_f2:B:on the anticipated price of oil and the carbon tax or credit price.  The paper concludes with a
+5:139:9723:23:22:72:540:272:12:g_d0_f2:12:g_d0_f2:B:series of simulations that are based on an ongoing project, namely the Lost Soldier-Tensleep
+5:140:9815:22:23:72:540:250:12:g_d0_f2:12:g_d0_f2:B:field in Wyoming.  These simulations generate time paths of CO2injection and implied time
+5:141:9904:23:23:72:541:227:12:g_d0_f2:12:g_d0_f2:B:paths of oil production and CO2sequestration, for a range of oil prices and carbon taxes.  A
+5:142:9996:23:22:72:540:204:12:g_d0_f2:12:g_d0_f2:B:key finding is that cumulative sequestration is positively related to the oil price, and is in
+5:143:10090:22:103:72:503:182:12:g_d0_f2:12:g_d0_f2:B:fact much more responsive to oil-price increases than to increases in the carbon tax.
+5:144:10175:103:16:72:540:79:8:g_d0_f4:10:g_d0_f5:F:4See, e.g., Al-Shuraiqi et al. (2003), Jessen et al. (2005), Juanes and Blunt (2006), Guo et al. (2006), and
+5:145:10283:16:0:72:203:63:10:g_d0_f5:10:g_d0_f5:F:Trivedi and Babadagli (2007).
+6:146:10313:0:33:265:348:701:12:g_d0_f2:12:g_d0_f3:A:2.The Model
+6:147:10324:33:23:72:540:668:12:g_d0_f2:12:g_d0_f2:B:Our model of oil production is based on the physical reality that input injections (water,
+6:148:10414:23:23:72:540:645:12:g_d0_f2:12:g_d0_f2:B:gas, or some mixture of the two) must balance with fluid output (oil, water, and gas).5In
+6:149:10503:23:22:72:540:622:12:g_d0_f2:12:g_d0_f2:B:addition, the rate of oil production is linked to remaining reserves by the so-called “decline
+6:150:10597:22:23:72:540:600:12:g_d0_f2:12:g_d0_f2:B:curve.”6This relation specifies output as a particular fraction of remaining reserves, where
+6:151:10689:23:22:72:540:577:12:g_d0_f2:12:g_d0_f2:B:that fraction is itself linked to the fraction of CO2in the injection stream.  Upon specifying
+6:152:10783:22:23:72:540:555:12:g_d0_f2:12:g_d0_f2:B:the relation between rate of CO2injection and oil production we may write down the formal
+6:153:10872:23:23:72:540:532:12:g_d0_f2:12:g_d0_f2:B:dynamic optimization model, which we then use to describe the time path of CO2injection.
+6:154:10960:23:22:72:540:509:12:g_d0_f2:12:g_d0_f2:B:Ultimately, this allows us to describe the rate of CO2that is sequestered at every point in
+6:155:11051:22:23:72:388:487:12:g_d0_f2:12:g_d0_f2:B:time, and thereby to determine the total amount sequestered.
+6:156:11111:23:22:108:540:464:12:g_d0_f2:12:g_d0_f2:A:We begin with some notation.  Let the rate of CO2injection at timetbec(t), and
+6:157:11189:22:23:72:540:442:12:g_d0_f2:12:g_d0_f2:B:the rate of water injection behi(t).  We assume the total rate of injection,I≡c(t) +hi(t), is
+6:158:11282:23:23:72:540:419:12:g_d0_f2:12:g_d0_f2:B:constant across time.  This reflects the fact that CO2-EOR projects are usually operated at
+6:159:11373:23:22:72:539:396:12:g_d0_f2:8:g_d0_f4:B:“minimum miscibility pressure,” which is the minimum pressure required to make the CO2
+6:160:11459:22:23:72:540:374:12:g_d0_f2:12:g_d0_f2:B:mix  with  the  oil.   Maintaining  that  pressure  requires  a  roughly  constant  overall  injection
+6:161:11561:23:22:72:95:351:12:g_d0_f2:12:g_d0_f2:B:rate.
+6:162:11566:22:23:108:540:329:12:g_d0_f2:12:g_d0_f2:A:Let  the  rate  of  oil  production  at  timetbeq(t),  the  rate  of  CO2production  (or
+6:163:11654:23:23:72:540:306:12:g_d0_f2:12:g_d0_f2:B:“leakage”) at timetbe`(t), and the rate of water production at timetbehp(t).  Materials
+6:164:11741:23:35:72:206:283:12:g_d0_f2:12:g_d0_f2:B:balance then requires that
+6:165:11767:35:35:225:387:248:12:g_d0_f8:12:g_d0_f2:?:q(t) +l(t) +hp(t) =c(t) +hi(t)
+6:166:11797:35:23:72:540:213:12:g_d0_f2:12:g_d0_f2:B:at each point in time (with both sums equalingI).  In practice,  the leaked CO2could be
+6:167:11884:23:23:72:540:190:12:g_d0_f2:12:g_d0_f2:B:vented or recycled.  Let the price of a unit of newly purchased CO2equalwsand the unit
+6:168:11970:23:52:72:540:167:12:g_d0_f2:12:g_d0_f2:B:cost of recycling CO2equalw`.  We assume thatws> w`, so that it is always cheaper for the
+6:169:12059:52:16:72:540:115:8:g_d0_f4:10:g_d0_f5:F:5Reservoir engineers refer to this as “materials balance.”  It should be noted that this requirement applies
+6:170:12167:16:12:72:540:99:10:g_d0_f5:10:g_d0_f5:F:at the temperature and pressure conditions that obtain inside the reservoir.  At these conditions, CO2exists
+6:171:12275:12:8:72:406:87:10:g_d0_f5:10:g_d0_f5:F:in a highly compressed, “supercritical” state and behaves much like a liquid.
+6:172:12352:8:16:72:540:79:7:g_d0_f6:10:g_d0_f5:F:6Fetkovitch (1980) provides an in-depth discussion of decline curves, and of the justification for their wide-
+6:173:12462:16:0:72:312:63:10:g_d0_f5:10:g_d0_f5:F:spread use in predicting oil production from reservoirs.
+7:174:12519:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:firm to recycle than to vent.7As a result, all leakage is re-injected and total CO2injection
+7:175:12611:22:36:72:296:679:12:g_d0_f2:12:g_d0_f2:B:is the sum of new purchases and leakage, or
+7:176:12654:36:35:262:540:643:12:g_d0_f8:12:g_d0_f2:A:c(t) =s(t) +`(t).(1)
+7:177:12674:35:23:108:539:608:12:g_d0_f2:8:g_d0_f4:A:The rate at which CO2is sequestered depends on the linkage between injected CO2
+7:178:12753:23:22:72:540:585:12:g_d0_f2:12:g_d0_f2:B:and produced oil. We assume that the fraction of oil production displaced by CO2(as opposed
+7:179:12844:22:23:72:541:563:12:g_d0_f2:12:g_d0_f2:B:to that displaced by water) is proportional to the fraction of CO2in the total injection stream.
+7:180:12940:23:22:72:540:540:12:g_d0_f2:12:g_d0_f2:B:We also assume that sequestered CO2takes up the underground space vacated by the oil
+7:181:13024:22:23:72:540:518:12:g_d0_f2:12:g_d0_f2:B:that it displaces.  To simplify the exposition, units of oil are chosen such that in the reservoir,
+7:182:13123:23:22:72:540:495:12:g_d0_f2:12:g_d0_f2:B:vacating the space taken up by one unit of oil creates space for sequestering exactly one unit
+7:183:13217:22:23:72:541:473:12:g_d0_f2:12:g_d0_f2:B:of CO2.  As a result, we haves(t) =c(t)q(t)/I.  As we are focusing on an individual firm and
+7:184:13309:23:35:72:438:450:12:g_d0_f2:12:g_d0_f2:B:a particular oil reservoir, we may normalize so thatI= 1.  Accordingly,
+7:185:13380:35:36:269:540:415:12:g_d0_f8:12:g_d0_f2:A:s(t) =c(t)q(t).(2)
+7:186:13398:36:22:108:540:379:12:g_d0_f2:12:g_d0_f2:A:At any point in time, the amount of recoverable oil isR(t); we write the initial amount
+7:187:13485:22:23:72:540:357:12:g_d0_f2:12:g_d0_f2:B:of oil at the moment the EOR project is undertaken asR0.  As usual, this variable plays the
+7:188:13576:23:32:72:372:334:12:g_d0_f2:12:g_d0_f2:B:role of the state variable in our analysis, and it evolves via
+7:189:13638:32:39:289:540:302:12:g_d0_f2:12:g_d0_f2:A: ̇R=−q.(3)
+7:190:13648:39:22:72:540:263:12:g_d0_f2:12:g_d0_f2:B:In keeping with the physical reality of oil recovery, we assume that the rate of production can
+7:191:13743:22:23:72:540:241:12:g_d0_f2:12:g_d0_f2:B:be described by a decline curve:q(t) =δR(t).  In our setting, however, the ratio of output to
+7:192:13836:23:55:72:540:218:12:g_d0_f2:12:g_d0_f2:B:reserves—which plays the role of the decline rate—is linked to the rate of injection:δ=δ(c).
+7:193:13928:55:16:72:540:163:8:g_d0_f4:10:g_d0_f5:F:7In  practice,  the  purchase  price  of  CO2is  several  times  higher  than  the  cost  of  recycling.   Thus,  firms
+7:194:14047:16:12:72:540:147:10:g_d0_f5:10:g_d0_f5:F:undertaking EOR do generally recycle CO2.  Importantly, the presence of a carbon priceτdoes not change
+7:195:14149:12:12:72:540:135:10:g_d0_f5:10:g_d0_f5:F:the relevant comparison:  the cost of a newly purchased unit becomesws−τ(as the seller of the CO2avoids
+7:196:14252:12:12:72:539:123:10:g_d0_f5:10:g_d0_f11:F:the carbon tax or receives a credit for sequestering), while the opportunity cost of recycling becomesw`−τ
+7:197:14358:12:12:72:540:111:10:g_d0_f5:10:g_d0_f5:F:(as venting would obligate the producer to pay the carbon tax or purchase a credit).  Note,  however,  the
+7:198:14464:12:12:72:540:99:10:g_d0_f5:10:g_d0_f5:F:implicit assumption that competition between CO2sellers will induce them to pass on the full savings on
+7:199:14567:12:12:72:540:87:10:g_d0_f5:10:g_d0_f5:F:the tax or value of the credit to the EOR buyer.  In light of the fact (discussed further in the concluding
+7:200:14674:12:12:72:541:75:10:g_d0_f5:10:g_d0_f5:F:section of the paper) that aggregate CO2emissions currently far outstrip all estimates of aggregate EOR
+7:201:14777:12:0:72:284:63:10:g_d0_f5:10:g_d0_f5:F:sequestration, this assumption seems reasonable.
+8:202:14826:0:22:72:227:701:12:g_d0_f2:12:g_d0_f2:B:We therefore have the relation
+8:203:14856:22:29:266:540:679:12:g_d0_f8:12:g_d0_f2:A:q(t) =δ(c)R(t).(4)
+8:204:14874:29:20:72:245:650:12:g_d0_f2:12:g_d0_f2:B:Combining (3) and (4), we obtain
+8:205:14906:20:32:277:540:630:12:g_d0_f2:12:g_d0_f2:A: ̇R=−δ(c)R.(5)
+8:206:14920:32:22:72:540:598:12:g_d0_f2:12:g_d0_f2:B:Consistent with results from the reservoir-engineering studies cited in the introduction, we
+8:207:15012:22:23:72:540:576:12:g_d0_f2:12:g_d0_f2:B:assume that theδ(c) function relating the rate of injection to the decline rate is concave,
+8:208:15103:23:22:72:540:553:12:g_d0_f2:12:g_d0_f2:B:with an interior maximum.  If only water is used (termed a “waterflood”), the decline rate
+8:209:15193:22:23:72:540:531:12:g_d0_f2:12:g_d0_f2:B:isδw≡δ(0)>0.  If only CO2is used (termed a “pure CO2flood”), the decline rate isδ(1).
+8:210:15278:23:23:72:541:508:12:g_d0_f2:12:g_d0_f2:B:We assume, consistent again with reservoir-engineering studies, thatδ(1)> δw.  In light of
+8:211:15368:23:22:72:272:485:12:g_d0_f2:12:g_d0_f2:B:the concavity ofδ(c),δ′(0)>0> δ′(1).
+8:212:15404:22:23:108:540:463:12:g_d0_f2:12:g_d0_f2:A:The economic environment depends on three ingredients: the price of oil,p; the carbon
+8:213:15489:23:22:72:540:440:12:g_d0_f2:12:g_d0_f2:B:tax,τ; and operating costs.8We assume that all costs other than those of CO2purchases
+8:214:15574:22:23:72:540:418:12:g_d0_f2:12:g_d0_f2:B:and CO2recycling are tied to the overall amount of fluids injected and the amount of fluids
+8:215:15665:23:23:72:540:395:12:g_d0_f2:12:g_d0_f2:B:produced.  As both amounts are constant and equal toI, these other costs are a constantF.
+8:216:15754:23:35:72:340:372:12:g_d0_f2:12:g_d0_f2:B:Accordingly, the firm earns a rate of profits equal to
+8:217:15808:35:35:229:384:337:12:g_d0_f8:12:g_d0_f8:?:π=pq−(ws−τ)s−w``−F.
+8:218:15827:35:36:72:363:302:12:g_d0_f2:12:g_d0_f2:B:Using (1), (2), and (5), we may rewrite the profit rate as
+8:219:15885:36:28:177:434:266:12:g_d0_f8:12:g_d0_f8:?:π=pδ(c)R−[ws−τ]cδ(c)R−w`c[1−δ(c)R]−F
+8:220:15921:28:36:188:540:238:12:g_d0_f2:12:g_d0_f2:A:=pδ(c)R−[ws−τ−w`]cδ(c)R−w`c−F.(6)
+8:221:15954:36:22:72:540:202:12:g_d0_f2:12:g_d0_f2:B:Since the combustion of oil generates CO2as a by-product, it seems reasonable to expect
+8:222:16041:22:23:72:540:180:12:g_d0_f2:12:g_d0_f2:B:that  there  will  be  a  tax  liability  embedded  within  the  market  price.   To  facilitate  further
+8:223:16146:23:22:72:540:157:12:g_d0_f2:12:g_d0_f2:B:discussions of the role played by the carbon tax, it will be convenient to isolate this effect in
+8:224:16243:22:20:72:540:135:12:g_d0_f2:12:g_d0_f2:B:the expression of profits.  To that end, we denote the induced tax liability for a one-dollar
+8:225:16336:20:16:72:540:115:8:g_d0_f4:10:g_d0_f5:F:8Because  our  focus  in  this  paper  is  on  the  optimal  operation  of  a  CO2flood,  we  abstract  from  up-front
+8:226:16454:16:12:72:541:99:10:g_d0_f5:10:g_d0_f5:F:investments required to make an oil field “CO2ready.”  Such investments include changes in well equipment,
+8:227:16560:12:12:72:540:87:10:g_d0_f5:10:g_d0_f5:F:additions of metering equipment and pipelines in the field, and the construction of a CO2recycling plant that
+8:228:16669:12:12:72:540:75:10:g_d0_f5:10:g_d0_f5:F:separates produced CO2from the oil and then dehydrates and recompresses it.  We discuss likely implications
+8:229:16776:12:0:72:418:63:10:g_d0_f5:10:g_d0_f5:F:of introducing up-front investment costs in the concluding section of the paper.
+9:230:16857:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:increase in the carbon tax byβ.  This parameter combines tax incidence effects with unit
+9:231:16945:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:conversions associated with the transformation of a unit of produced oil into carbon units.
+9:232:17036:23:35:72:492:656:12:g_d0_f2:12:g_d0_f2:B:Adjusting (6) to take account of these aspects, we may write the rate of profits as
+9:233:17119:35:36:172:440:621:12:g_d0_f8:12:g_d0_f8:?:π= (p−βτ)δ(c)R−[ws−τ−w`]cδ(c)R−w`c−F.
+9:234:17156:36:22:72:540:585:12:g_d0_f2:12:g_d0_f2:B:To  save  on  notation,  we  will  typically  summarize  the  combinationp−βτasYand  the
+9:235:17244:22:36:72:493:563:12:g_d0_f2:12:g_d0_f2:B:combinationws−τ−w`asZ.  Using this notational convention, the profit rate is
+9:236:17320:36:49:218:394:527:12:g_d0_f8:12:g_d0_f8:?:π=Y δ(c)R−Zcδ(c)R−w`c−F.
+9:237:17344:49:34:273:340:478:12:g_d0_f2:12:g_d0_f3:?:3.Analysis
+9:238:17354:34:23:72:540:444:12:g_d0_f2:12:g_d0_f2:B:The goal of the firm is to choose a time path of the injection ratec(t) so as to maximize
+9:239:17443:23:22:72:540:421:12:g_d0_f2:12:g_d0_f2:B:its present discounted value, subject to the state equation (5), the initial value of the state
+9:240:17538:22:23:72:540:399:12:g_d0_f2:12:g_d0_f2:B:variable,R0,  and  the  constraints  0≤c≤1,R≥0.   Both  the  terminal  timeTand  the
+9:241:17622:23:23:72:540:376:12:g_d0_f2:12:g_d0_f2:B:terminal stockR(T) are free, and so the optimal choices of these values will be governed by
+9:242:17713:23:22:72:540:353:12:g_d0_f2:12:g_d0_f2:B:transversality conditions.  To solve this dynamic optimization problem, we first define the
+9:243:17804:22:36:72:206:331:12:g_d0_f2:12:g_d0_f2:B:current-value Hamiltonian
+9:244:17829:36:35:162:540:295:12:g_d0_f8:12:g_d0_f2:A:H=π−mq=Y δ(c)R−Zcδ(c)R−w`c−F−mδ(c)R,(7)
+9:245:17868:35:23:72:538:260:12:g_d0_f2:12:g_d0_f2:B:wheremis the current-value multiplier (shadow price) associated with a unit of oilin situ.
+9:246:17958:23:22:108:540:237:12:g_d0_f2:12:g_d0_f2:A:The  optimal  path  of  extraction  satisfies  the  maximum  principle,  which  consists  of
+9:247:18050:22:23:72:540:215:12:g_d0_f2:12:g_d0_f2:B:the state equation, an equation for identifying the optimal extraction rate at a given point
+9:248:18142:23:22:72:540:192:12:g_d0_f2:12:g_d0_f2:B:in time, and an equation of motion for the shadow price.  If the optimal extraction rate is
+9:249:18233:22:36:72:285:170:12:g_d0_f2:12:g_d0_f2:B:described by an interior solution, we have
+9:250:18275:36:35:188:540:134:12:g_d0_f8:12:g_d0_f2:A:Hc= (Y−Zc−m)δ′(c)R−Zδ(c)R−w`= 0,(8)
+9:251:18310:35:23:72:540:99:12:g_d0_f2:12:g_d0_f2:B:whereHc=∂H/∂c.  Irrespective of whether the optimal value ofcis described by an interior
+9:252:18398:23:0:72:540:76:12:g_d0_f2:12:g_d0_f2:B:solution, the state equation is given by (5), and the equation of motion for the shadow price
+10:253:18492:0:22:72:80:701:12:g_d0_f2:12:g_d0_f2:B:is
+10:254:18494:22:29:234:540:679:12:g_d0_f2:12:g_d0_f2:A: ̇m=rm−(Y−Zc−m)δ(c).(9)
+10:255:18517:29:23:72:540:650:12:g_d0_f2:12:g_d0_f2:B:The  right-hand  side  of  equation  (9)  differs  from  the  standard  Hotelling  representation  by
+10:256:18618:23:22:72:540:627:12:g_d0_f2:12:g_d0_f2:B:virtue of the second set of terms.  These terms capture the fact that current carbon injec-
+10:257:18709:22:23:72:540:605:12:g_d0_f2:12:g_d0_f2:B:tions reduce the productive capability of future injections.  The value associated with this
+10:258:18801:23:22:72:540:582:12:g_d0_f2:12:g_d0_f2:B:induced diminution of the future production rate is the product of the marginal impact of
+10:259:18890:22:23:72:540:560:12:g_d0_f2:12:g_d0_f2:B:the production rate on the current-value Hamiltonian (Y−Zc−m) and the current decline
+10:260:18975:23:23:72:128:537:12:g_d0_f2:12:g_d0_f2:B:rate (δ(c)).
+10:261:18987:23:22:108:540:514:12:g_d0_f2:12:g_d0_f2:A:Because the end time is free, the value of the current-value Hamiltonian at the ter-
+10:262:19071:22:23:72:540:492:12:g_d0_f2:12:g_d0_f2:B:minal timeTmust be zero.  As the end state is free, the product of the shadow price and
+10:263:19158:23:22:72:540:469:12:g_d0_f2:12:g_d0_f2:B:the state variable at the terminal time must also be zero:m(T)R(T) = 0.  As the extraction
+10:264:19248:22:23:72:540:447:12:g_d0_f2:12:g_d0_f2:B:rate is proportional to the stock, we infer from (7) that the profit rate must be zero at time
+10:265:19342:23:23:72:541:424:12:g_d0_f8:12:g_d0_f2:B:T.  But for that to happen there must be positive revenues, which in turn requires a positive
+10:266:19435:23:22:72:540:401:12:g_d0_f2:12:g_d0_f2:B:production rate.  It follows that the terminal stock is positive, so that the terminal value of
+10:267:19530:22:23:72:231:379:12:g_d0_f2:12:g_d0_f2:B:the shadow price must be zero.
+10:268:19560:23:22:108:540:356:12:g_d0_f2:12:g_d0_f2:A:We  now  turn  to  a  discussion  of  the  time  path  of  injection.   Assuming  an  interior
+10:269:19654:22:36:72:386:334:12:g_d0_f2:12:g_d0_f2:B:solution over an interval, we may time-differentiate (8) to get
+10:270:19717:36:35:238:375:298:12:g_d0_f2:12:g_d0_f8:?: ̇c= [−Hcm ̇m−HcR ̇R]/Hcc,
+10:271:19743:35:23:72:540:263:12:g_d0_f2:12:g_d0_f2:B:whereHcx=∂2H/∂c∂x,x=m,c,  orR.   From  (8),  we  see  thatHcm=−δ′(c)Rand
+10:272:19815:23:22:72:540:240:12:g_d0_f8:12:g_d0_f2:B:HcR= (Y−Zc−m)δ′(c)−Zδ(c) =w`/R(where we use (8) to extract the last relation).
+10:273:19893:22:36:72:388:218:12:g_d0_f2:12:g_d0_f2:B:Combining these observations with the state equation, we get
+10:274:19953:36:35:237:540:182:12:g_d0_f2:12:g_d0_f2:A: ̇c= [δ′(c)R ̇m+w`δ(c)]/Hcc.(10)
+10:275:19985:35:23:72:540:147:12:g_d0_f2:12:g_d0_f2:B:At  an  interior  solution,  the  denominator  is  negative  and  the  second  term  within  square
+10:276:20084:23:22:72:540:124:12:g_d0_f2:12:g_d0_f2:B:brackets  is  positive.   It  follows  that  injection  is  falling  at  any  moment  whereδ′(c)  ̇mis
+10:277:20186:22:0:72:338:102:12:g_d0_f2:12:g_d0_f2:B:positive; if it is negative, the sign of   ̇cis ambiguous.
+11:278:20246:0:35:108:459:701:12:g_d0_f2:12:g_d0_f2:A:To further explore the time path ofc, we combine (8) and (9) to get
+11:279:20313:35:35:202:540:666:12:g_d0_f8:12:g_d0_f2:A:δ′(c)R ̇m+w`δ(c) = [rδ′(c)m−Zδ(c)2]R.(11)
+11:280:20354:35:23:72:540:631:12:g_d0_f2:12:g_d0_f2:B:Comparing  (10)  and  (11),  it  is  apparent  that  a  sufficient  condition  for   ̇cto  be  negative
+11:281:20457:23:23:72:540:608:12:g_d0_f2:12:g_d0_f2:B:is  for  the  right-hand  side  of  (11)  to  be  positive.   This  will  occur,  for  example,  ifδ′>0
+11:282:20560:23:22:72:540:585:12:g_d0_f2:12:g_d0_f2:B:andZis not large and positive, or ifZis negative and large in magnitude.  Heuristically,
+11:283:20648:22:23:72:540:563:12:g_d0_f8:12:g_d0_f2:B:δ′>0 is consistent with the notion of restraining current production so as to allow rents
+11:284:20737:23:22:72:540:540:12:g_d0_f2:12:g_d0_f2:B:to  rise  over  time,  which  seems  plausible.   ForZto  be  small  is  a  bit  less  obvious.   Recall
+11:285:20841:22:23:72:540:518:12:g_d0_f2:12:g_d0_f2:B:thatZ=ws−τ−w`,  and that by assumptionws−w`>0.  Ifws−w`is small,  which
+11:286:20912:23:22:72:540:495:12:g_d0_f2:12:g_d0_f2:B:is the case in our simulations and seems to be the empirically important case, thenZwill
+11:287:21000:22:23:72:540:473:12:g_d0_f2:12:g_d0_f2:B:be small irrespective of the size of the carbon tax.  On the other hand, if the carbon tax is
+11:288:21093:23:23:72:540:450:12:g_d0_f2:12:g_d0_f2:B:particularly large, thenZwill be negative.  On balance, then, the right-hand side of (11) will
+11:289:21187:23:22:72:540:427:12:g_d0_f2:12:g_d0_f2:B:be positive in a range of cases that seem empirically relevant.  As such, the rate of injection
+11:290:21282:22:23:72:215:405:12:g_d0_f2:12:g_d0_f2:B:will commonly be declining.
+11:291:21309:23:22:108:540:382:12:g_d0_f2:12:g_d0_f2:A:The preceding discussion focuses on interior solutions.  While these will be common,
+11:292:21393:22:23:72:540:360:12:g_d0_f2:12:g_d0_f2:B:there are circumstances under which corner solutions obtain.  We now discuss those condi-
+11:293:21482:23:23:72:540:337:12:g_d0_f2:12:g_d0_f2:B:tions.  First, suppose the optimal rate of CO2injection is zero (i.e., it is optimal to undertake
+11:294:21579:23:35:72:521:314:12:g_d0_f2:12:g_d0_f2:B:a waterflood); in that caseHc≤0 when evaluated atc= 0.  The condition of interest is
+11:295:21663:35:35:220:392:279:12:g_d0_f2:12:g_d0_f8:?:(Y−m)δ′(0)R−ZδwR−ws≤0.
+11:296:21685:35:23:72:540:244:12:g_d0_f2:12:g_d0_f2:B:BecausemandRdo not change discontinuously, if this condition holds with strict inequality
+11:297:21774:23:23:72:540:221:12:g_d0_f2:12:g_d0_f2:B:at a particular momentt, it must hold for an interval of time followingt.  Accordingly, during
+11:298:21868:23:32:72:540:198:12:g_d0_f2:12:g_d0_f2:B:this interval the optimal level ofcremains equal to zero.  It follows that during this interval
+11:299:21963:32:44:204:401:166:12:g_d0_f2:12:g_d0_f8:?: ̇Hc=−δ′(0)[R ̇m−(Y−m) ̇R]−Zδw ̇R,
+11:300:21997:44:38:72:168:122:12:g_d0_f2:12:g_d0_f2:B:or, upon using (5),
+11:301:22016:38:0:204:238:84:12:g_d0_f2:12:g_d0_f10:?: ̇Hc=−
+11:302:22022:0:10:240:247:91:12:g_d0_f15:12:g_d0_f15:?:{
+11:303:22023:10:0:247:391:81:12:g_d0_f8:8:g_d0_f9:?:δ′(0)[  ̇m+δw(Y−m)]−Zδ2w
+11:304:22047:0:10:392:399:91:12:g_d0_f15:12:g_d0_f15:?:}
+11:305:22048:10:0:401:540:81:12:g_d0_f8:12:g_d0_f2:A:R.(12)
+12:306:22056:0:32:72:457:701:12:g_d0_f2:12:g_d0_f2:B:Combining (9) and (12), taking note of the fact thatc= 0, we deduce that
+12:307:22128:32:38:245:540:669:12:g_d0_f2:12:g_d0_f2:A: ̇Hc=−[rmδ′(0)−Zδ2w]R.(13)
+12:308:22154:38:23:72:541:631:12:g_d0_f2:12:g_d0_f2:B:The important thing to note here is that for negative values ofZ, or values ofZthat are
+12:309:22241:23:23:72:540:608:12:g_d0_f2:12:g_d0_f2:B:positive but relatively small in magnitude, the right-hand side of (13) will be non-positive; as
+12:310:22337:23:22:72:540:585:12:g_d0_f2:12:g_d0_f2:B:we noted above, this restriction does not seem to be terribly demanding.  In such a scenario,
+12:311:22430:22:23:72:540:563:12:g_d0_f2:12:g_d0_f2:B:onceHcbecomes negative, it tends to stay negative.  We conclude that it will be typical for
+12:312:22521:23:22:72:397:540:12:g_d0_f2:12:g_d0_f2:B:the corner solutionc= 0 to remain in effect once it is initiated.
+12:313:22586:22:23:108:540:518:12:g_d0_f2:12:g_d0_f2:A:Now suppose the optimal rate of CO2injection is one (i.e., it is optimal to undertake
+12:314:22671:23:35:72:541:495:12:g_d0_f2:12:g_d0_f2:B:a pure CO2flood); in that caseHc≥0 when evaluated atc= 1.  The condition of interest is
+12:315:22758:35:36:204:408:460:12:g_d0_f2:12:g_d0_f8:?:(Y−Z−m)δ′(1)R−Zδ(1)R−ws≥0.
+12:316:22784:36:22:72:540:424:12:g_d0_f2:12:g_d0_f2:B:As with thec= 0 corner solution, if this condition holds with strict inequality, it must apply
+12:317:22878:22:33:72:337:402:12:g_d0_f2:12:g_d0_f2:B:for an interval of time; during that interval we have
+12:318:22931:33:38:239:540:369:12:g_d0_f2:12:g_d0_f2:A: ̇Hc=−[rmδ′(1)−Zδ(1)2]R.(14)
+12:319:22959:38:23:72:540:331:12:g_d0_f2:12:g_d0_f2:B:As noted above, the only way this corner solution can obtain is ifZis negative and large
+12:320:23047:23:22:72:540:308:12:g_d0_f2:12:g_d0_f2:B:in magnitude.  On the other hand,δ′(1)<0.  Thus, depending on the relative magnitudes
+12:321:23132:22:23:72:540:286:12:g_d0_f2:12:g_d0_f2:B:ofZandm,Hccan  either  be  rising  or  falling.   Importantly,  asmis  likely  to  fall  over
+12:322:23225:23:22:72:541:263:12:g_d0_f2:12:g_d0_f2:B:time,  eventually ̇Hcwill become negative.  It follows that the pure CO2flood cannot last
+12:323:23314:22:23:72:456:241:12:g_d0_f2:12:g_d0_f2:B:indefinitely:  at some point, it will be optimal to adopt an interior solution.
+12:324:23393:23:23:108:540:218:12:g_d0_f2:12:g_d0_f2:A:Our  model  thus  predicts  that  under  most  conditions,  from  the  point  at  which  a
+12:325:23483:23:22:72:541:195:12:g_d0_f2:12:g_d0_f2:B:CO2flood is initiated, CO2injection will be non-increasing over time until it reaches zero.
+12:326:23574:22:23:72:540:173:12:g_d0_f2:12:g_d0_f2:B:After this, a pure waterflood will continue until the flow profits are equal to the flow fixed
+12:327:23668:23:22:72:540:150:12:g_d0_f2:12:g_d0_f2:B:costs,  at  which  time  extraction  activity  ceases.   This  endogenous  endpoint  occurs  when
+12:328:23765:22:23:72:540:128:12:g_d0_f2:12:g_d0_f2:B:the shadow value reaches zero.  The initial value of carbon injection, the rate of decline of
+12:329:23858:23:23:72:540:105:12:g_d0_f2:12:g_d0_f2:B:injection  over  time,  the  point  at  which  a  pure  waterflood  begins  and  ends,  and  the  total
+12:330:23961:23:0:72:540:82:12:g_d0_f2:12:g_d0_f2:B:amounts  of  oil  production  and  carbon  sequestration  will  be  determined  by  field-specific
+13:331:24061:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:physical characteristics that determine theδfunction and the initial stateR.  Of course, they
+13:332:24154:22:50:72:540:679:12:g_d0_f2:12:g_d0_f2:B:will also be affected by the oil price and carbon tax, which define the economic environment.
+13:333:24247:50:34:228:384:629:12:g_d0_f2:12:g_d0_f3:?:4.Simulation Framework
+13:334:24269:34:22:72:540:595:12:g_d0_f2:12:g_d0_f2:B:In order to add greater context to the results derived above, we have solved and simulated
+13:335:24359:22:23:72:540:573:12:g_d0_f2:12:g_d0_f2:B:the  model  numerically  to  yield  optimal  time  paths  of  carbon  injection  rates  for  various
+13:336:24459:23:22:72:540:550:12:g_d0_f2:12:g_d0_f2:B:combinations of oil price and carbon tax.  Below we first discuss the solution algorithm and
+13:337:24551:22:23:72:176:528:12:g_d0_f2:12:g_d0_f2:B:then present results.
+13:338:24572:23:23:108:540:505:12:g_d0_f2:12:g_d0_f2:A:The optimization problem is reasonably straightforward, in that it involves a single
+13:339:24656:23:22:72:541:482:12:g_d0_f2:12:g_d0_f2:B:control variable, CO2injectionc, which is optimized given a single state variable, remaining
+13:340:24748:22:23:72:540:460:12:g_d0_f2:12:g_d0_f2:B:physical reservesR.  We used two approaches to solving the problem, which (up to rounding
+13:341:24837:23:22:72:540:437:12:g_d0_f2:12:g_d0_f2:B:errors) yielded identical results.  The first approach was a brute-force determination of the
+13:342:24930:22:23:72:540:415:12:g_d0_f2:12:g_d0_f2:B:optimal time path ofc.  In this approach, a discretized version of the control problem was
+13:343:25020:23:23:72:540:392:12:g_d0_f2:12:g_d0_f2:B:programmed.  Time was divided into discrete periodst= 0,...,Tfor a large time horizon
+13:344:25105:23:22:72:541:369:12:g_d0_f8:12:g_d0_f2:B:T, and the functionc(t) was approximated by theT+ 1 valuesctthat maximize the present
+13:345:25190:22:23:72:540:347:12:g_d0_f2:12:g_d0_f2:B:value of profits, subject to the (discretized) state equation and bounds onc.  Simultaneously,
+13:346:25284:23:22:72:344:324:12:g_d0_f2:12:g_d0_f2:B:the optimal terminal periodTwas solved for as well.
+13:347:25335:22:23:108:540:302:12:g_d0_f2:12:g_d0_f2:A:In the second approach, the problem was solved by again first converting it to discrete
+13:348:25422:23:23:72:540:279:12:g_d0_f2:12:g_d0_f2:B:time and then using an algorithm that iterates on an approximation to the solution to the
+13:349:25511:23:22:72:540:256:12:g_d0_f2:12:g_d0_f2:B:Bellman equation.  Here, the solution to the dynamic program is computed using a neural-
+13:350:25599:22:23:72:540:234:12:g_d0_f2:12:g_d0_f2:B:network approximation defined over a finite set of grid points distributed within the state
+13:351:25690:23:22:72:107:211:12:g_d0_f2:8:g_d0_f4:B:space.9
+13:352:25697:22:36:108:337:189:12:g_d0_f2:12:g_d0_f2:A:LetV(R) denote the optimal value function:
+13:353:25739:36:7:153:218:153:12:g_d0_f8:12:g_d0_f2:?:V(R) = max
+13:354:25749:7:0:205:209:146:8:g_d0_f9:8:g_d0_f9:?:c
+13:355:25750:0:62:220:540:153:12:g_d0_f8:12:g_d0_f2:A:Y δ(c)R−Zcδ(c)R−w`c−F+V(R−δ(c)R).(15)
+13:356:25787:62:16:72:540:91:8:g_d0_f4:10:g_d0_f5:F:9A one-hidden-layer feedforward neural network as is used in this algorithm provides a uniform approxima-
+13:357:25892:16:12:72:540:75:10:g_d0_f5:10:g_d0_f5:F:tion to any continuous, multivariate function to any desired degree of accuracy.  For a detailed discussion of
+13:358:26002:12:0:72:270:63:10:g_d0_f5:10:g_d0_f5:F:neural networks see Hassoun (1995), page 46.
+14:359:26048:0:14:129:487:699:12:g_d0_f8:12:g_d0_f2:?:I1overall rate of injection and production (×1 million barrels)
+14:360:26111:14:14:126:437:685:12:g_d0_f8:12:g_d0_f2:?:R01initial stock of oil in reservoir (×1 million barrels)
+14:361:26168:14:14:126:348:671:12:g_d0_f8:8:g_d0_f4:?:ws4per-barrel cost of purchased CO2
+14:362:26203:14:14:126:469:657:12:g_d0_f8:8:g_d0_f4:?:w`1per-barrel cost of separating and recycling “leaked” CO2
+14:363:26262:14:14:128:306:643:12:g_d0_f8:12:g_d0_f2:?:F0.1fixed costs (×$1 million)
+14:364:26291:14:14:129:421:629:12:g_d0_f8:12:g_d0_f2:?:β2.2incidence of the carbon tax on the oil producer
+14:365:26342:14:14:130:246:615:12:g_d0_f8:12:g_d0_f2:?:r0.05   discount rate
+14:366:26363:14:14:127:308:601:12:g_d0_f8:12:g_d0_f2:?:δw0.06   intercept ofδ(c) function
+14:367:26397:14:14:128:337:587:12:g_d0_f8:12:g_d0_f2:?:δ10.20   first coefficient ofδ(c) function
+14:368:26439:14:16:128:351:573:12:g_d0_f8:12:g_d0_f2:?:δ20.16   second coefficient ofδ(c) function
+14:369:26482:16:52:210:402:557:12:g_d0_f3:12:g_d0_f2:?:Table 1.Baseline parameter values.
+14:370:26516:52:22:72:540:505:12:g_d0_f2:12:g_d0_f2:B:Write  Φ(R|φ)  as  a  neural-network  approximation  ofV(R)  with  parameter  valuesφ.   The
+14:371:26608:22:29:72:220:483:12:g_d0_f2:12:g_d0_f2:B:algorithm consists of 5 steps:
+14:372:26638:29:23:96:345:454:12:g_d0_f2:12:g_d0_f2:A:1.  Draw a distribution of grid points inRspace.
+14:373:26686:23:22:96:540:431:12:g_d0_f2:12:g_d0_f2:A:2.  Begin with an initial guess of Φ0(R) = 0,∀Rand solve (15) given this guess at each
+14:374:26772:22:23:110:410:409:12:g_d0_f2:12:g_d0_f2:A:grid point.  Denote the solution to this iteration byV1(R).
+14:375:26831:23:23:96:540:386:12:g_d0_f2:12:g_d0_f10:A:3.  Compute  the  approximation  for  iterationi=  1,2,...by  solving  minφ{Φ(R|φ)−
+14:376:26914:23:22:110:314:363:12:g_d0_f8:12:g_d0_f2:A:Vi(R)}2and denote the solution Φi(R).
+14:377:26951:22:23:96:450:341:12:g_d0_f2:12:g_d0_f2:A:4.  SolveVi+1= maxcY δ(c)R−Zcδ(c)R−w`c−F+ Φi(R−δ(c)R).
+14:378:27005:23:29:96:376:318:12:g_d0_f2:12:g_d0_f2:A:5.  Return to step 3 unless||Vi(R)−Vi−1(R)||<10−6.
+14:379:27055:29:22:72:540:289:12:g_d0_f2:12:g_d0_f2:B:The final approximation, Φ(R,φ), represents an approximate solution to the dynamic pro-
+14:380:27142:22:23:72:101:267:12:g_d0_f2:12:g_d0_f2:B:gram.
+14:381:27147:23:22:108:540:244:12:g_d0_f2:12:g_d0_f2:A:We  compute  the  solution  for  scenarios  with  oil  prices  of  $100,  $200,  and  $300  per
+14:382:27242:22:23:72:540:222:12:g_d0_f2:12:g_d0_f2:B:barrel (bl), taking $100/bl as our baseline price, and for carbon taxes of $0, $40, $80, and
+14:383:27334:23:23:72:541:199:12:g_d0_f2:12:g_d0_f2:B:$120 per tonne of CO2(tCO2), taking the absence of any tax as our baseline.  Table 1 shows
+14:384:27424:23:22:72:540:176:12:g_d0_f2:12:g_d0_f2:B:the  baseline  parameter  values  of  the  numerical  model.   All  quantity  flows  are  in  units  of
+14:385:27527:22:23:72:540:154:12:g_d0_f2:12:g_d0_f2:B:1 million “reservoir” barrels (rb) per year (1 barrel= 42 gallons (US)≈0.16m3), meaning
+14:386:27614:23:22:72:540:131:12:g_d0_f2:12:g_d0_f2:B:barrels at the temperature and pressure conditions that obtain inside the reservoir.  Overall
+14:387:27707:22:23:72:329:109:12:g_d0_f2:12:g_d0_f2:B:injectionIis normalized to 1 million such barrels.
+14:388:27757:23:23:108:540:86:12:g_d0_f2:12:g_d0_f2:A:The  initial  stock  of  oil  in  the  reservoir,R0is  set  at  1  million  barrels  as  well.   For
+14:389:27857:23:0:72:540:63:12:g_d0_f2:12:g_d0_f2:B:comparison, the Lost Soldier–Tensleep (LSTP) EOR project in Wyoming injects about 44
+15:390:27943:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:million  barrels  per  year,  and  extrapolating  the  decline  curve  for  its  oil  production  since
+15:391:28046:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:starting  the  CO2flood  suggests  that  ultimately  about  36  million  barrels  of  oil  would  be
+15:392:28146:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:recovered over the course of that flood were it to be continued forever.  In effect, then, our
+15:393:28240:22:23:72:432:634:12:g_d0_f2:12:g_d0_f2:B:simulation applies a scaling factor of about 1/40 to the LSTP project.
+15:394:28310:23:22:108:540:611:12:g_d0_f2:12:g_d0_f2:A:The various cost parameters of the model are based on a variety of sources, including
+15:395:28395:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:data presented in McCoy (2008) and EIA (2007), as well as personal communication with
+15:396:28480:23:23:72:541:566:12:g_d0_f2:12:g_d0_f2:B:industry experts.10Oil producers commonly measure CO2in units of 1,000 cubic feet (mcf)
+15:397:28567:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:at standard surface temperature and pressure conditions.  In Wyoming, the purchase price
+15:398:28655:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:of CO2is currently about $2 permcf.  To convert this price to reservoir barrels,  we have
+15:399:28744:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:to  take  account  of  the  fact  that  the  CO2is  greatly  compressed  when  it  is  injected  into
+15:400:28845:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:the  reservoir.   At  LSTP,  the  compression  factor  (referred  to  by  reservoir  engineers  as  the
+15:401:28948:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:“formation  volume  factor  for  CO2”)  is  0.471rb/mcf(which,  since  1mcfcorresponds  to
+15:402:29038:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:about 178 barrels, amounts to a compression rate of about 380 times).  Rounding this factor
+15:403:29129:22:23:72:539:408:12:g_d0_f2:8:g_d0_f9:B:up to 0.5, we end up with a gross CO2purchase pricewsof $4/rb.  We take the unit costw`
+15:404:29216:23:22:72:540:385:12:g_d0_f2:12:g_d0_f2:B:of separating and recycling “leaked” CO2that is mixed in with the produced oil to be on
+15:405:29303:22:23:72:240:363:12:g_d0_f2:12:g_d0_f2:B:the order of $0.50/mcf, or $1/rb.
+15:406:29336:23:23:108:540:340:12:g_d0_f2:12:g_d0_f2:A:It is important to note at this point that, although we express carbon taxes throughout
+15:407:29423:23:22:72:541:317:12:g_d0_f2:12:g_d0_f2:B:the paper in terms of dollars per tCO2, for conformity with the other prices in the model
+15:408:29512:22:23:72:540:295:12:g_d0_f2:12:g_d0_f2:B:(P,wsandw`) the parameterτis expressed in dollars perrb.  Since one tCO2corresponds
+15:409:29595:23:22:72:540:272:12:g_d0_f2:12:g_d0_f2:B:to about 19.05mcf, the above-mentioned conversion factor for LSTP of 0.5mcf/rbresults
+15:410:29680:22:23:72:541:250:12:g_d0_f2:12:g_d0_f2:B:in a combined conversion factor of 9.5rb/tCO2, which we round up to 10.  In other words,
+15:411:29768:23:23:72:390:227:12:g_d0_f2:12:g_d0_f2:B:a carbon tax of $40/tCO2translates to a per-barrel tax of $4.
+15:412:29829:23:22:108:540:204:12:g_d0_f2:12:g_d0_f2:A:Operating costs unrelated to injection or recycling of CO2amount to about $24,000
+15:413:29910:22:23:72:540:182:12:g_d0_f2:12:g_d0_f2:B:per  well  per  year  in  non-injection  or  production-related  expenses,  plus  about  $0.0125  per
+15:414:30011:23:22:72:540:159:12:g_d0_f2:12:g_d0_f2:B:barrel of overall injection or production.  Applying our scaling factor of 1/40 to LSTP’s total
+15:415:30106:22:23:72:540:137:12:g_d0_f2:12:g_d0_f2:B:of about 110 active wells, each producing or injecting about 800,000rbper year, this works
+15:416:30196:23:47:72:371:114:12:g_d0_f2:12:g_d0_f2:B:out to fixed costsFof about $0.1 million dollars per year.
+15:417:30254:47:0:72:523:67:8:g_d0_f4:10:g_d0_f5:F:10In particular, Charles Fox of Kinder Morgan, Inc., and Mark Nicholas of Nicholas Consulting Group.
+16:418:30356:0:22:108:540:701:12:g_d0_f2:12:g_d0_f2:A:As noted above, the parameterβ, which describes carbon-tax incidence on oil pro-
+16:419:30436:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:ducers, is actually a combination of tax incidence effects and unit conversions that transform
+16:420:30530:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:a unit of produced oil into carbon units.  Tax incidence effects depend on demand and supply
+16:421:30622:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:elasticities.  Based on estimates by Gately and Huntington (2002) of the long-run elasticity
+16:422:30714:23:22:72:540:611:12:g_d0_f2:12:g_d0_f2:B:of oil demand and by Gately (2004) of the long-run elasticity of non-OPEC oil supply, we
+16:423:30802:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:set the tax incidence on producers of a given tax expressed in dollars per barrel of oil at
+16:424:30893:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:55%.  Based on data reported in EPA (2007), we estimate the quantity of CO2generated by
+16:425:30980:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:combusting one barrel of oil at around 0.4tCO2, or 4rb.  Multiplying this by the incidence of
+16:426:31073:22:23:72:541:521:12:g_d0_f2:12:g_d0_f2:B:55%, and recalling thatτin the numerical model is expressed in dollars perrb, we end up
+16:427:31160:23:22:72:330:498:12:g_d0_f2:8:g_d0_f4:B:with a combined incidence parameter ofβ= 2.2.11
+16:428:31207:22:23:108:540:476:12:g_d0_f2:12:g_d0_f2:A:Lastly,  the  parameters  ofδ(c)  function  are  based  on  a  combination  of  production
+16:429:31297:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:experience  at  LSTP  and  simulation  results  in  the  literature.   The  decline  rate  of  overall
+16:430:31399:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:oil  production  at  LSTP  since  it  started  its  CO2flood  in  1989  is  about  11.5%,  whereby
+16:431:31497:22:23:72:540:408:12:g_d0_f2:12:g_d0_f2:B:the fraction of CO2in overall injection has been held roughly constant over time at 0.35.
+16:432:31586:23:22:72:540:385:12:g_d0_f2:12:g_d0_f2:B:Also, simulation data based on data from an oil field in China indicate that, compared to
+16:433:31675:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:cumulative  oil  recovery  after  six  years  of  injecting  pure  water,  recovery  after  six  years  of
+16:434:31781:23:23:72:540:340:12:g_d0_f2:12:g_d0_f2:B:injecting a mix of half CO2, half water is higher by a factor of two, while recovery after six
+16:435:31875:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:years of injecting pure CO2is higher by a factor of five-thirds (Guo et al.; 2006).  These data
+16:436:31970:22:36:72:300:295:12:g_d0_f2:12:g_d0_f2:B:are consistent with a quadraticδ(c) function
+16:437:32014:36:35:251:361:259:12:g_d0_f8:8:g_d0_f4:?:δ(c) =δw+δ1c−δ2c2
+16:438:32031:35:23:72:335:224:12:g_d0_f2:12:g_d0_f2:B:with parametersδw= 0.06,δ1= 0.2, andδ2= 0.16.
+16:439:32076:23:22:108:540:201:12:g_d0_f2:12:g_d0_f2:A:Figure  1  shows  the  initial  rates  of  oil  production  (δ(c)R0)  and  CO2sequestration
+16:440:32167:22:23:72:540:179:12:g_d0_f2:12:g_d0_f2:B:(cδ(c)R0)  implied  by  this  parameterization.   The  important  thing  to  note  is  that  initial
+16:441:32267:23:22:72:540:156:12:g_d0_f2:12:g_d0_f2:B:injection rates above 0.625 million barrels/year are counter-productive to oil recovery, but
+16:442:32359:22:31:72:210:134:12:g_d0_f2:12:g_d0_f2:B:still increase sequestration.
+16:443:32388:31:16:72:540:103:8:g_d0_f4:10:g_d0_f5:F:11Because estimates of demand and supply elasticities for oil, and thereby of the tax incidence, are subject
+16:444:32496:16:12:72:540:87:10:g_d0_f5:10:g_d0_f5:F:to considerable uncertainty, we have performed some sensitivity analysis on this parameter.  We find that,
+16:445:32602:12:12:72:540:75:10:g_d0_f5:10:g_d0_f5:F:even in the two extreme cases where the incidence is zero, so thatβ= 0 also, and where the incidence is
+16:446:32705:12:0:72:328:63:10:g_d0_f5:10:g_d0_f5:F:100%, so thatβ= 4, our results are essentially unchanged.
+17:447:32764:0:0:214:214:539:2:Helvetica:2:Helvetica:?:00.10.20.30.40.50.6250.70.80.910
+17:448:32796:0:0:205:214:565:2:Helvetica:2:Helvetica:?:0.02
+17:449:32800:0:0:205:214:586:2:Helvetica:2:Helvetica:?:0.04
+17:450:32804:0:0:205:214:608:2:Helvetica:2:Helvetica:?:0.06
+17:451:32808:0:0:205:214:629:2:Helvetica:2:Helvetica:?:0.08
+17:452:32812:0:0:208:214:651:2:Helvetica:2:Helvetica:?:0.1
+17:453:32815:0:0:200:214:675:2:Helvetica:2:Helvetica:?:0.1225
+17:454:32821:0:161:205:214:694:2:Helvetica:2:Helvetica:?:0.14
+17:455:32825:161:0:268:366:533:3:Helvetica:3:Helvetica:A:CO2 injection (million barrels/year)
+17:456:32889:0:0:215:216:543:2:Helvetica:2:Helvetica:?: 
+17:457:32889:0:12:235:262:705:2:Helvetica:2:Helvetica:?: oil production
+17:458:32903:12:184:235:273:693:2:Helvetica:2:Helvetica:?:CO2 sequestration
+17:459:32920:184:14:108:505:509:12:g_d0_f3:12:g_d0_f2:A:Figure 1.Initial oil production and CO2sequestration as a function of the
+17:460:32993:14:29:108:239:495:12:g_d0_f2:12:g_d0_f2:A:initial CO2injection rate.
+17:461:33019:29:23:108:541:466:12:g_d0_f2:12:g_d0_f2:A:It should be emphasized that, although there are good reasons to believe that theδ(c)
+17:462:33104:23:23:72:540:443:12:g_d0_f2:12:g_d0_f2:B:function is concave,12its precise shape for any given reservoir is likely to strongly depend on
+17:463:33199:23:22:72:540:420:12:g_d0_f2:12:g_d0_f2:B:geological properties such as permeability, thickness, and heterogeneity of the reservoir rock.
+17:464:33294:22:50:72:531:398:12:g_d0_f2:12:g_d0_f2:B:The particular parameterization used here should therefore be viewed as only illustrative.
+17:465:33384:50:34:240:372:348:12:g_d0_f2:12:g_d0_f3:?:5.Simulation Results
+17:466:33404:34:22:72:540:314:12:g_d0_f2:12:g_d0_f2:B:The first element of behavior that we wish to define is the optimal extraction and sequestra-
+17:467:33497:22:23:72:540:292:12:g_d0_f2:12:g_d0_f2:B:tion path for our benchmark assumptions.  Here, we use an oil price of $100 with no carbon
+17:468:33587:23:23:72:540:269:12:g_d0_f2:12:g_d0_f2:B:tax.  Panel (a) of Figure 2 shows the optimal paths of CO2injection (c), CO2leakage (`), oil
+17:469:33679:23:22:72:316:246:12:g_d0_f2:12:g_d0_f2:B:production (q), and flow CO2sequestration (s).
+17:470:33725:22:23:108:540:224:12:g_d0_f2:12:g_d0_f2:A:The  optimal  initial  injection  rate  is  0.485  million  barrels/year,  somewhat  smaller
+17:471:33817:23:22:72:540:201:12:g_d0_f2:12:g_d0_f2:B:than either the instantaneous oil-production maximizing rate of 0.625 or the myopic profit-
+17:472:33908:22:23:72:540:179:12:g_d0_f2:12:g_d0_f2:B:maximizing injection rate of 0.582.  This reflects the producer’s tradeoffs of current against
+17:473:34002:23:23:72:540:156:12:g_d0_f2:12:g_d0_f2:B:future extraction,  and of oil revenues against CO2injection costs.  Note also that a large
+17:474:34093:23:22:72:540:133:12:g_d0_f2:12:g_d0_f2:B:fraction (initially about 88%) of the injected CO2resurfaces with the produced oil and must
+17:475:34184:22:23:72:540:111:12:g_d0_f2:12:g_d0_f2:B:be recycled.  As oil production declines over time from its initial rate of 0.119 million bar-
+17:476:34278:23:21:72:540:88:12:g_d0_f2:12:g_d0_f2:B:rels/year,  the producer’s revenues decline as well,  as does CO2sequestration in the space
+17:477:34369:21:0:72:326:67:8:g_d0_f4:10:g_d0_f5:F:12See the reservoir-engineering studies cited in footnote 4.
+18:478:34431:0:0:95:265:545:2:Helvetica:2:Helvetica:A:01020304050
+18:479:34442:0:0:88:90:552:2:Helvetica:2:Helvetica:A:0
+18:480:34443:0:0:85:91:576:2:Helvetica:2:Helvetica:A:0.1
+18:481:34446:0:0:85:91:600:2:Helvetica:2:Helvetica:A:0.2
+18:482:34449:0:0:85:91:624:2:Helvetica:2:Helvetica:A:0.3
+18:483:34452:0:0:85:91:649:2:Helvetica:2:Helvetica:A:0.4
+18:484:34455:0:0:85:91:673:2:Helvetica:2:Helvetica:A:0.5
+18:485:34458:0:158:85:91:697:2:Helvetica:2:Helvetica:A:0.6
+18:486:34461:158:0:171:204:539:2:Helvetica:2:Helvetica:?:Time (years)
+18:487:34496:0:0:93:94:551:2:Helvetica:2:Helvetica:A: 
+18:488:34496:0:10:243:268:699:2:Helvetica:2:Helvetica:?: CO2 injection
+18:489:34509:10:11:243:268:689:2:Helvetica:2:Helvetica:?:CO2 leakageoil production
+18:490:34534:11:150:243:278:678:2:Helvetica:2:Helvetica:?:CO2 sequestration
+18:491:34551:150:0:171:184:528:10:g_d0_f5:10:g_d0_f5:?:(a)
+18:492:34554:0:0:347:530:545:2:Helvetica:2:Helvetica:?:0 10202230405053
+18:493:34570:0:0:342:344:552:2:Helvetica:2:Helvetica:?:0
+18:494:34571:0:0:339:344:573:2:Helvetica:2:Helvetica:?:10
+18:495:34573:0:0:339:344:594:2:Helvetica:2:Helvetica:?:20
+18:496:34575:0:0:339:344:614:2:Helvetica:2:Helvetica:?:30
+18:497:34577:0:0:339:344:635:2:Helvetica:2:Helvetica:?:40
+18:498:34579:0:0:339:344:655:2:Helvetica:2:Helvetica:?:50
+18:499:34581:0:0:339:344:676:2:Helvetica:2:Helvetica:?:60
+18:500:34583:0:158:339:344:697:2:Helvetica:2:Helvetica:?:70
+18:501:34585:158:0:425:458:539:3:Helvetica:3:Helvetica:?:Time (years)
+18:502:34614:0:0:347:348:551:2:Helvetica:2:Helvetica:?: 
+18:503:34614:0:172:507:533:700:2:Helvetica:2:Helvetica:?: Shadow price
+18:504:34626:172:29:425:438:528:10:g_d0_f5:10:g_d0_f5:?:(b)
+18:505:34629:29:14:108:505:499:12:g_d0_f3:12:g_d0_f2:A:Figure 2.CO2injection, leakage, and sequestration, and oil production (a)
+18:506:34702:14:45:108:291:485:12:g_d0_f2:12:g_d0_f2:A:and the shadow price (b) over time.
+18:507:34737:45:23:72:540:440:12:g_d0_f2:12:g_d0_f2:B:vacated by the oil.  As a result,  CO2leakage,  and thereby recycling costs,  would increase
+18:508:34829:23:22:72:540:417:12:g_d0_f2:12:g_d0_f2:B:over  time  even  if  the  producer  chose  to  hold  CO2injection  constant.   This  changing  bal-
+18:509:34929:22:23:72:540:395:12:g_d0_f2:12:g_d0_f2:B:ance between oil revenues and recycling costs makes it optimal for the producer to instead
+18:510:35019:23:23:72:445:372:12:g_d0_f2:12:g_d0_f2:B:gradually reduce the injection rate over time, as predicted by the theory.
+18:511:35093:23:22:108:541:349:12:g_d0_f2:12:g_d0_f2:A:After  22  years,  the  optimal  CO2injection  rate  drops  to  zero,  at  which  point  the
+18:512:35185:22:23:72:540:327:12:g_d0_f2:12:g_d0_f2:B:producer  switches  to  a  pure  waterflood,  thereby  completely  avoiding  CO2injection  costs.
+18:513:35282:23:22:72:540:304:12:g_d0_f2:12:g_d0_f2:B:From  that  point  in  time  forward,  profits  consist  of  the  (declining)  oil  revenues  less  fixed
+18:514:35387:22:23:72:506:282:12:g_d0_f2:12:g_d0_f2:B:costs.  These remain positive for another 31 years, after which the field is shut down.
+18:515:35474:23:22:108:540:259:12:g_d0_f2:12:g_d0_f2:A:Panel (b) of the figure shows the corresponding path of the shadow price.  Consistent
+18:516:35559:22:23:72:540:237:12:g_d0_f2:12:g_d0_f2:B:with our analysis in the previous section, the shadow price declines throughout, reaching its
+18:517:35652:23:32:72:260:214:12:g_d0_f2:12:g_d0_f2:B:terminal value of zero after 53 years.
+18:518:35690:32:28:248:365:182:12:g_d0_f2:12:g_d0_f14:?:5.1.Effects of oil price
+18:519:35714:28:23:72:540:154:12:g_d0_f2:12:g_d0_f2:B:Our investigation of the comparative dynamics of the model starts with the effect of higher
+18:520:35805:23:22:72:540:131:12:g_d0_f2:12:g_d0_f2:B:oil prices.  Panel (a) of Figure 3 shows how the optimal CO2injection path changes as the oil
+18:521:35898:22:23:72:540:109:12:g_d0_f2:12:g_d0_f2:B:price level is raised from $100 to $300/bl.  Panel (c) of Figure 3 shows how the optimal time
+18:522:35991:23:23:72:540:86:12:g_d0_f2:12:g_d0_f2:B:path of oil production changes with price;  for reference, we also plot the time path under
+18:523:36082:23:0:72:540:63:12:g_d0_f2:12:g_d0_f2:B:a pure water flood.  The higher resulting oil revenues make it optimal to initially raise the
+19:524:36177:0:0:98:281:508:3:Helvetica:3:Helvetica:A:051015202530354045
+19:525:36195:0:0:91:94:516:3:Helvetica:3:Helvetica:?:0
+19:526:36196:0:0:87:94:545:3:Helvetica:3:Helvetica:?:0.1
+19:527:36199:0:0:87:94:574:3:Helvetica:3:Helvetica:?:0.2
+19:528:36202:0:0:87:94:602:3:Helvetica:3:Helvetica:?:0.3
+19:529:36205:0:0:87:94:631:3:Helvetica:3:Helvetica:?:0.4
+19:530:36208:0:0:87:94:660:3:Helvetica:3:Helvetica:?:0.5
+19:531:36211:0:189:87:94:689:3:Helvetica:3:Helvetica:?:0.6
+19:532:36214:189:0:169:210:500:4:Helvetica:4:Helvetica:?:Time (years)
+19:533:36248:0:0:97:98:514:3:Helvetica:3:Helvetica:A: 
+19:534:36248:0:7:281:282:699:3:Helvetica:3:Helvetica:?: 
+19:535:36248:7:13:256:278:692:3:Helvetica:3:Helvetica:?:p $100/blp $200/bl
+19:536:36266:13:191:256:278:679:3:Helvetica:3:Helvetica:?:p $300/bl
+19:537:36275:191:0:171:184:488:10:g_d0_f5:10:g_d0_f5:?:(a)
+19:538:36278:0:0:355:536:508:3:Helvetica:3:Helvetica:F:051015202530354045
+19:539:36296:0:0:349:352:516:3:Helvetica:3:Helvetica:?:0
+19:540:36297:0:0:342:352:532:3:Helvetica:3:Helvetica:?:0.05
+19:541:36301:0:0:345:352:549:3:Helvetica:3:Helvetica:?:0.1
+19:542:36304:0:0:342:352:566:3:Helvetica:3:Helvetica:?:0.15
+19:543:36308:0:0:345:352:583:3:Helvetica:3:Helvetica:?:0.2
+19:544:36311:0:0:342:352:599:3:Helvetica:3:Helvetica:?:0.25
+19:545:36315:0:0:345:352:616:3:Helvetica:3:Helvetica:?:0.3
+19:546:36318:0:0:342:352:633:3:Helvetica:3:Helvetica:?:0.35
+19:547:36322:0:0:345:352:650:3:Helvetica:3:Helvetica:?:0.4
+19:548:36325:0:0:342:352:666:3:Helvetica:3:Helvetica:?:0.45
+19:549:36329:0:183:345:352:683:3:Helvetica:3:Helvetica:?:0.5
+19:550:36332:183:0:426:467:500:4:Helvetica:4:Helvetica:?:Time (years)
+19:551:36365:0:0:354:355:514:3:Helvetica:3:Helvetica:?: 
+19:552:36365:0:163:536:537:696:3:Helvetica:3:Helvetica:F: 
+19:553:36365:163:13:511:532:533:3:Helvetica:3:Helvetica:?:p $100/blp $200/bl
+19:554:36383:13:32:511:532:520:3:Helvetica:3:Helvetica:?:p $300/bl
+19:555:36392:32:212:425:438:488:10:g_d0_f5:10:g_d0_f5:?:(b)
+19:556:36395:212:0:101:281:276:3:Helvetica:3:Helvetica:?:051015202530354045
+19:557:36413:0:0:94:97:284:3:Helvetica:3:Helvetica:A:0
+19:558:36414:0:0:87:97:311:3:Helvetica:3:Helvetica:?:0.02
+19:559:36418:0:0:87:97:338:3:Helvetica:3:Helvetica:?:0.04
+19:560:36422:0:0:87:97:365:3:Helvetica:3:Helvetica:?:0.06
+19:561:36426:0:0:87:97:391:3:Helvetica:3:Helvetica:?:0.08
+19:562:36430:0:0:90:97:418:3:Helvetica:3:Helvetica:?:0.1
+19:563:36433:0:176:87:97:445:3:Helvetica:3:Helvetica:?:0.12
+19:564:36437:176:0:171:212:269:4:Helvetica:4:Helvetica:?:Time (years)
+19:565:36471:0:0:100:101:282:3:Helvetica:3:Helvetica:?: 
+19:566:36471:0:13:254:278:464:3:Helvetica:3:Helvetica:?: waterflood
+19:567:36481:13:12:254:275:451:3:Helvetica:3:Helvetica:?:p $100/blp $200/bl
+19:568:36499:12:182:254:275:439:3:Helvetica:3:Helvetica:?:p $300/bl
+19:569:36508:182:0:171:183:257:10:g_d0_f5:10:g_d0_f5:?:(c)
+19:570:36511:0:0:353:536:276:3:Helvetica:3:Helvetica:F:051015202530354045
+19:571:36529:0:0:346:349:284:3:Helvetica:3:Helvetica:?:0
+19:572:36530:0:0:342:349:301:3:Helvetica:3:Helvetica:?:0.1
+19:573:36533:0:0:342:349:318:3:Helvetica:3:Helvetica:?:0.2
+19:574:36536:0:0:342:349:335:3:Helvetica:3:Helvetica:?:0.3
+19:575:36539:0:0:342:349:351:3:Helvetica:3:Helvetica:?:0.4
+19:576:36542:0:0:342:349:368:3:Helvetica:3:Helvetica:?:0.5
+19:577:36545:0:0:342:349:385:3:Helvetica:3:Helvetica:?:0.6
+19:578:36548:0:0:342:349:401:3:Helvetica:3:Helvetica:?:0.7
+19:579:36551:0:0:342:349:418:3:Helvetica:3:Helvetica:?:0.8
+19:580:36554:0:0:342:349:435:3:Helvetica:3:Helvetica:?:0.9
+19:581:36557:0:182:346:349:451:3:Helvetica:3:Helvetica:?:1
+19:582:36558:182:0:424:465:269:4:Helvetica:4:Helvetica:?:Time (years)
+19:583:36591:0:0:351:352:283:3:Helvetica:3:Helvetica:?: 
+19:584:36591:0:158:536:537:467:3:Helvetica:3:Helvetica:F: 
+19:585:36591:158:7:508:532:309:3:Helvetica:3:Helvetica:?:waterflood
+19:586:36601:7:13:508:530:302:3:Helvetica:3:Helvetica:?:p $100/blp $200/bl
+19:587:36619:13:32:508:530:289:3:Helvetica:3:Helvetica:?:p $300/bl
+19:588:36628:32:29:425:438:257:10:g_d0_f5:10:g_d0_f5:?:(d)
+19:589:36631:29:14:108:504:228:12:g_d0_f3:12:g_d0_f2:A:Figure 3.Change in (a) CO2injection, (b) cumulative sequestration, (c) oil
+19:590:36705:14:14:108:504:214:12:g_d0_f2:12:g_d0_f2:A:production,  and  (d)  cumulative  oil  production  paths  as  a  result  of  oil  price
+19:591:36793:14:46:108:151:200:12:g_d0_f2:12:g_d0_f2:A:changes.
+19:592:36801:46:23:72:540:154:12:g_d0_f2:12:g_d0_f2:B:CO2injection rate, bringing it closer to the output-maximizing level.  However, because even
+19:593:36893:23:22:72:540:131:12:g_d0_f2:12:g_d0_f2:B:at the baseline price of $100, initial revenues are already very high relative to CO2-related
+19:594:36986:22:23:72:540:109:12:g_d0_f2:12:g_d0_f2:B:costs,  baseline oil production is already very close to its revenue-maximizing rate at each
+19:595:37078:23:23:72:540:86:12:g_d0_f2:12:g_d0_f2:B:point in time.  Raising the price therefore has a negligible effect on the oil production path,
+19:596:37173:23:0:72:540:63:12:g_d0_f2:12:g_d0_f2:B:as  is  evident from  panel  (c)  of  the  graph;  it  also  has  a  negligible  effect on  cumulative  oil
+20:597:37282:0:0:99:274:509:3:Helvetica:3:Helvetica:?:00.20.40.60.811.21.4
+20:598:37302:0:0:88:95:518:3:Helvetica:3:Helvetica:?:1.712 
+20:599:37308:0:0:88:95:546:3:Helvetica:3:Helvetica:?:50 
+20:600:37311:0:0:87:96:575:3:Helvetica:3:Helvetica:?:100
+20:601:37314:0:0:87:96:604:3:Helvetica:3:Helvetica:?:150
+20:602:37317:0:0:87:96:632:3:Helvetica:3:Helvetica:?:200
+20:603:37320:0:0:87:96:661:3:Helvetica:3:Helvetica:?:250
+20:604:37323:0:188:87:96:690:3:Helvetica:3:Helvetica:?:300
+20:605:37326:188:0:155:227:502:4:Helvetica:4:Helvetica:?:Cumulative (million bl)
+20:606:37365:0:0:98:99:516:3:Helvetica:3:Helvetica:?: 
+20:607:37365:0:7:281:282:699:3:Helvetica:3:Helvetica:?: 
+20:608:37365:7:202:255:271:692:3:Helvetica:3:Helvetica:?:CO2 seq.oil prd.
+20:609:37381:202:0:171:184:490:10:g_d0_f5:10:g_d0_f5:?:(a)
+20:610:37384:0:0:354:535:509:3:Helvetica:3:Helvetica:?:00.0050.010.0150.020.0250.030.0350.040.0450.05
+20:611:37430:0:0:343:350:518:3:Helvetica:3:Helvetica:?:1.712 
+20:612:37436:0:0:343:350:546:3:Helvetica:3:Helvetica:?:50 
+20:613:37439:0:0:342:351:575:3:Helvetica:3:Helvetica:?:100
+20:614:37442:0:0:342:351:604:3:Helvetica:3:Helvetica:?:150
+20:615:37445:0:0:342:351:632:3:Helvetica:3:Helvetica:?:200
+20:616:37448:0:0:342:351:661:3:Helvetica:3:Helvetica:?:250
+20:617:37451:0:188:342:351:690:3:Helvetica:3:Helvetica:?:300
+20:618:37454:188:0:402:489:502:4:Helvetica:4:Helvetica:?:Annualized (million bl/year)
+20:619:37498:0:0:353:354:516:3:Helvetica:3:Helvetica:?: 
+20:620:37498:0:7:536:537:699:3:Helvetica:3:Helvetica:F: 
+20:621:37498:7:202:510:526:692:3:Helvetica:3:Helvetica:?:CO2 seq.oil prd.
+20:622:37514:202:29:425:438:490:10:g_d0_f5:10:g_d0_f5:?:(b)
+20:623:37517:29:14:108:504:461:12:g_d0_f3:12:g_d0_f2:A:Figure 4.CO2sequestration  and  oil  production,  both  cumulative  (a)  and
+20:624:37593:14:35:108:337:447:12:g_d0_f2:12:g_d0_f2:A:annualized (b), as a function of the oil price.
+20:625:37640:35:23:72:540:412:12:g_d0_f2:12:g_d0_f2:B:production, as shown in panel (d).  Nevertheless, the fact that the oil is produced with a more
+20:626:37735:23:23:72:540:389:12:g_d0_f2:12:g_d0_f2:B:CO2-rich injection mix implies that cumulative sequestration over the productive lifetime of
+20:627:37827:23:22:72:283:366:12:g_d0_f2:12:g_d0_f2:B:the field increases, as shown in panel (b).
+20:628:37870:22:23:108:540:344:12:g_d0_f2:12:g_d0_f2:A:Figure  4  shows  oil  supply  and  resulting  CO2sequestration  as  a  function  of  the  oil
+20:629:37964:23:22:72:540:321:12:g_d0_f2:12:g_d0_f2:B:price.  Panel (a) shows cumulative levels of both,  whereas panel (b) shows the annualized
+20:630:38054:22:23:72:540:299:12:g_d0_f2:12:g_d0_f2:B:equivalent.13Note  that  CO2sequestration  supply  drops  to  zero  at  at  a  price  of  $12/bl,
+20:631:38151:23:22:72:540:276:12:g_d0_f2:12:g_d0_f2:B:below which incremental oil revenues from CO2injection no longer justify the higher variable
+20:632:38243:22:23:72:540:254:12:g_d0_f2:12:g_d0_f2:B:costs.14At lower prices, the producer therefore optimally operates the field as a waterflood,
+20:633:38336:23:23:72:540:231:12:g_d0_f2:12:g_d0_f2:B:resulting  in  zero  sequestration  and  in  slower  oil  extraction.   Once  the  price  drops  below
+20:634:38438:23:22:72:540:208:12:g_d0_f2:12:g_d0_f2:B:$1.70/bl, oil revenues no longer cover the operating costs of a waterflood either, making it
+20:635:38530:22:27:72:267:186:12:g_d0_f2:12:g_d0_f2:B:optimal to not operate the field at all.
+20:636:38570:27:16:72:540:159:8:g_d0_f4:10:g_d0_f5:F:13The annualized values are calculated as the constant ratesorqthat,  when multiplied by the relevant
+20:637:38671:16:12:72:541:143:10:g_d0_f5:10:g_d0_f5:F:priceτorp, would over an infinite time horizon yield the same present value as the actual, time-varying
+20:638:38774:12:8:72:292:131:10:g_d0_f5:10:g_d0_f5:F:rates(t) orq(t).  That is,sis implicitly defined by
+20:639:38825:8:23:234:251:123:10:g_d0_f15:7:g_d0_f16:A:∫∞
+20:640:38827:23:0:239:243:100:7:g_d0_f6:7:g_d0_f6:?:0
+20:641:38828:0:0:254:303:109:10:g_d0_f11:10:g_d0_f5:?:e−rtτsdt=
+20:642:38837:0:23:306:324:123:10:g_d0_f15:7:g_d0_f16:?:∫∞
+20:643:38839:23:0:311:315:100:7:g_d0_f6:7:g_d0_f6:?:0
+20:644:38840:0:21:326:379:109:10:g_d0_f11:10:g_d0_f11:?:e−rtτs(t)dt,
+20:645:38852:21:9:72:197:88:10:g_d0_f5:10:g_d0_f5:F:andqis defined analogously.
+20:646:38879:9:16:72:541:79:8:g_d0_f4:10:g_d0_f5:F:14Recall that we abstract from up-front capital costs associated with CO2injection.  Implicitly, we assume
+20:647:38985:16:0:72:370:63:10:g_d0_f5:10:g_d0_f5:F:that at time 0 these costs have already been incurred, and are sunk.
+21:648:39055:0:22:108:540:701:12:g_d0_f2:12:g_d0_f2:A:Note also that at prices of $50/bl and higher, changes in the price of oil have almost
+21:649:39141:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:no effect on oil output:  at the baseline price of $100, the elasticity of cumulative output is
+21:650:39236:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:0.01, while that of annualized output is 0.04.  This point is consistent with the result shown
+21:651:39330:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:in panels (c) and (d) of Figure 3:  at these high oil prices, operating costs become so small
+21:652:39423:23:22:72:540:611:12:g_d0_f2:12:g_d0_f2:B:relative to oil revenues that the optimal oil extraction path is very close to the optimal path
+21:653:39518:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:that would obtain if costs were zero (i.e., the revenue-maximizing path).  Nevertheless, as
+21:654:39609:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:shown  in  panels  (a)  and  (b)  of  Figure  3,  higher  oil  prices  do  induce  substantially  higher
+21:655:39713:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:rates of CO2injection, and thereby sequestration.  As a result, the sequestration curves in
+21:656:39804:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:Figure 4 are substantially more elastic: at the baseline price of $100, the cross-price elasticity
+21:657:39902:23:32:72:491:498:12:g_d0_f2:12:g_d0_f2:B:of cumulative sequestration is 0.52, while that of annualized sequestration is 0.47.
+21:658:39986:32:28:242:370:466:12:g_d0_f2:12:g_d0_f14:?:5.2.Effects of carbon tax
+21:659:40011:28:23:72:540:438:12:g_d0_f2:12:g_d0_f2:B:We continue our investigation of the comparative dynamics of the model with the effect of
+21:660:40100:23:22:72:540:415:12:g_d0_f2:12:g_d0_f2:B:higher carbon taxes.  Such taxes reduce both the net-of-tax oil price received by the producer
+21:661:40194:22:23:72:540:393:12:g_d0_f2:12:g_d0_f2:B:and the net-of-tax input price of CO2.  However, at a given injection ratec(t), the change
+21:662:40284:23:22:72:540:370:12:g_d0_f2:12:g_d0_f2:B:in oil revenues from a marginal tax change is is−q(t)dτ, whereas the change in input costs
+21:663:40374:22:23:72:540:348:12:g_d0_f2:12:g_d0_f2:B:is−c(t)q(t)dτ.  As long asc(t) is below its upper bound of 1, the revenue effect therefore
+21:664:40464:23:23:72:540:325:12:g_d0_f2:12:g_d0_f2:B:dominates,  in which case the firm is motivated to move the injection schedule forward in
+21:665:40553:23:22:72:540:302:12:g_d0_f2:12:g_d0_f2:B:time.  Indeed, panel (a) of Figure 5 shows that the optimal initial injection rate increases in
+21:666:40648:22:23:72:540:280:12:g_d0_f2:12:g_d0_f2:B:the tax rate.  However, it also shows that the optimal time to switch to pure water injection is
+21:667:40744:23:22:72:540:257:12:g_d0_f2:12:g_d0_f2:B:accelerated.  As a result, injection rates decline more rapidly over time the higher is the tax.
+21:668:40840:22:23:72:540:235:12:g_d0_f2:12:g_d0_f2:B:Even so, the overall effect of higher carbon taxes on cumulative sequestration is positive, as
+21:669:40934:23:22:72:540:212:12:g_d0_f2:12:g_d0_f2:B:shown in panel (b).  Panels (c) and (d) show that oil production tends to be insensitive to the
+21:670:41029:22:23:72:540:190:12:g_d0_f2:12:g_d0_f2:B:level of the carbon tax, which coincides with our earlier observation that revenue effects from
+21:671:41124:23:23:72:537:167:12:g_d0_f2:12:g_d0_f2:B:oil sales tend to be more important than input costs in driving the firm’s output decisions.
+21:672:41216:23:22:108:540:144:12:g_d0_f2:12:g_d0_f2:A:Nevertheless,  it is worth noting that at the highest tax level considered in the fig-
+21:673:41302:22:23:72:540:122:12:g_d0_f2:12:g_d0_f2:B:ure, namely $120/tCO2, the initial injection rate in panel (a) slightly exceeds the output-
+21:674:41393:23:22:72:540:99:12:g_d0_f2:12:g_d0_f2:B:maximizing rate of 0.625 million bl/year; further increases in the tax level would raise the
+21:675:41485:22:0:72:539:77:12:g_d0_f2:8:g_d0_f4:B:initial injection rate to even higher levels.  Because such high tax levels make the net CO2
+22:676:41579:0:0:98:281:508:3:Helvetica:3:Helvetica:?:051015202530354045
+22:677:41597:0:0:91:94:516:3:Helvetica:3:Helvetica:?:0
+22:678:41598:0:0:87:94:542:3:Helvetica:3:Helvetica:?:0.1
+22:679:41601:0:0:87:94:568:3:Helvetica:3:Helvetica:?:0.2
+22:680:41604:0:0:87:94:594:3:Helvetica:3:Helvetica:?:0.3
+22:681:41607:0:0:87:94:620:3:Helvetica:3:Helvetica:?:0.4
+22:682:41610:0:0:87:94:646:3:Helvetica:3:Helvetica:?:0.5
+22:683:41613:0:0:87:94:672:3:Helvetica:3:Helvetica:?:0.6
+22:684:41616:0:198:87:94:698:3:Helvetica:3:Helvetica:?:0.7
+22:685:41619:198:0:169:210:500:4:Helvetica:4:Helvetica:?:Time (years)
+22:686:41653:0:0:97:98:514:3:Helvetica:3:Helvetica:?: 
+22:687:41653:0:7:281:282:699:3:Helvetica:3:Helvetica:?: 
+22:688:41653:7:13:243:274:692:3:Helvetica:3:Helvetica:?:tax $0/tCO2tax $40/tCO2
+22:689:41676:13:191:243:277:679:3:Helvetica:3:Helvetica:?:tax $80/tCO2tax $120/tCO2
+22:690:41701:191:0:171:184:488:10:g_d0_f5:10:g_d0_f5:?:(a)
+22:691:41704:0:0:355:536:508:3:Helvetica:3:Helvetica:F:051015202530354045
+22:692:41722:0:0:349:352:516:3:Helvetica:3:Helvetica:?:0
+22:693:41723:0:0:342:352:535:3:Helvetica:3:Helvetica:?:0.05
+22:694:41727:0:0:345:352:554:3:Helvetica:3:Helvetica:?:0.1
+22:695:41730:0:0:342:352:573:3:Helvetica:3:Helvetica:?:0.15
+22:696:41734:0:0:345:352:592:3:Helvetica:3:Helvetica:?:0.2
+22:697:41737:0:0:342:352:611:3:Helvetica:3:Helvetica:?:0.25
+22:698:41741:0:0:345:352:630:3:Helvetica:3:Helvetica:?:0.3
+22:699:41744:0:0:342:352:649:3:Helvetica:3:Helvetica:?:0.35
+22:700:41748:0:0:345:352:668:3:Helvetica:3:Helvetica:?:0.4
+22:701:41751:0:187:342:352:687:3:Helvetica:3:Helvetica:?:0.45
+22:702:41755:187:0:426:467:500:4:Helvetica:4:Helvetica:?:Time (years)
+22:703:41788:0:0:354:355:514:3:Helvetica:3:Helvetica:?: 
+22:704:41788:0:157:536:537:696:3:Helvetica:3:Helvetica:F: 
+22:705:41788:157:12:499:529:539:3:Helvetica:3:Helvetica:?:tax $0/tCO2tax $40/tCO2
+22:706:41811:12:7:499:529:527:3:Helvetica:3:Helvetica:?:tax $80/tCO2
+22:707:41823:7:32:499:532:520:3:Helvetica:3:Helvetica:?:tax $120/tCO2
+22:708:41836:32:212:425:438:488:10:g_d0_f5:10:g_d0_f5:?:(b)
+22:709:41839:212:0:101:281:276:3:Helvetica:3:Helvetica:?:051015202530354045
+22:710:41857:0:0:94:97:284:3:Helvetica:3:Helvetica:A:0
+22:711:41858:0:0:87:97:311:3:Helvetica:3:Helvetica:?:0.02
+22:712:41862:0:0:87:97:338:3:Helvetica:3:Helvetica:?:0.04
+22:713:41866:0:0:87:97:364:3:Helvetica:3:Helvetica:?:0.06
+22:714:41870:0:0:87:97:391:3:Helvetica:3:Helvetica:?:0.08
+22:715:41874:0:0:90:97:418:3:Helvetica:3:Helvetica:?:0.1
+22:716:41877:0:175:87:97:444:3:Helvetica:3:Helvetica:?:0.12
+22:717:41881:175:0:171:212:269:4:Helvetica:4:Helvetica:?:Time (years)
+22:718:41915:0:0:100:101:282:3:Helvetica:3:Helvetica:?: 
+22:719:41915:0:13:244:268:464:3:Helvetica:3:Helvetica:?: waterflood
+22:720:41925:13:12:244:274:451:3:Helvetica:3:Helvetica:?:tax $0/tCO2tax $40/tCO2
+22:721:41948:12:7:244:274:439:3:Helvetica:3:Helvetica:?:tax $80/tCO2
+22:722:41960:7:175:244:277:432:3:Helvetica:3:Helvetica:?:tax $120/tCO2
+22:723:41973:175:0:171:183:257:10:g_d0_f5:10:g_d0_f5:?:(c)
+22:724:41976:0:0:353:536:276:3:Helvetica:3:Helvetica:F:051015202530354045
+22:725:41994:0:0:346:349:284:3:Helvetica:3:Helvetica:?:0
+22:726:41995:0:0:342:349:301:3:Helvetica:3:Helvetica:?:0.1
+22:727:41998:0:0:342:349:318:3:Helvetica:3:Helvetica:?:0.2
+22:728:42001:0:0:342:349:335:3:Helvetica:3:Helvetica:?:0.3
+22:729:42004:0:0:342:349:352:3:Helvetica:3:Helvetica:?:0.4
+22:730:42007:0:0:342:349:369:3:Helvetica:3:Helvetica:?:0.5
+22:731:42010:0:0:342:349:386:3:Helvetica:3:Helvetica:?:0.6
+22:732:42013:0:0:342:349:403:3:Helvetica:3:Helvetica:?:0.7
+22:733:42016:0:0:342:349:420:3:Helvetica:3:Helvetica:?:0.8
+22:734:42019:0:0:342:349:436:3:Helvetica:3:Helvetica:?:0.9
+22:735:42022:0:184:346:349:453:3:Helvetica:3:Helvetica:?:1
+22:736:42023:184:0:424:465:269:4:Helvetica:4:Helvetica:?:Time (years)
+22:737:42056:0:0:351:352:283:3:Helvetica:3:Helvetica:?: 
+22:738:42056:0:152:536:537:467:3:Helvetica:3:Helvetica:F: 
+22:739:42056:152:13:498:526:315:3:Helvetica:3:Helvetica:?:waterfloodtax $0/tCO2
+22:740:42077:13:13:498:529:302:3:Helvetica:3:Helvetica:?:tax $40/tCO2tax $80/tCO2
+22:741:42101:13:32:498:532:289:3:Helvetica:3:Helvetica:?:tax $120/tCO2
+22:742:42114:32:29:425:438:257:10:g_d0_f5:10:g_d0_f5:?:(d)
+22:743:42117:29:14:108:504:228:12:g_d0_f3:12:g_d0_f2:A:Figure 5.Change in (a) CO2injection, (b) cumulative sequestration, (c) oil
+22:744:42191:14:14:108:504:214:12:g_d0_f2:12:g_d0_f2:A:production, and (d) cumulative oil production paths as a result of carbon tax
+22:745:42268:14:46:108:151:200:12:g_d0_f2:12:g_d0_f2:A:changes.
+22:746:42276:46:23:72:540:154:12:g_d0_f2:12:g_d0_f2:B:price strongly negative, CO2injection is optimally pushed to levels where its marginal effect
+22:747:42369:23:22:72:540:131:12:g_d0_f2:12:g_d0_f2:B:on oil production becomes negative as well, thereby reducing initial oil production.  In effect,
+22:748:42465:22:23:72:540:109:12:g_d0_f2:12:g_d0_f2:B:the producer sacrifices oil output and revenues early on in return for higher sequestration
+22:749:42556:23:23:72:540:86:12:g_d0_f2:12:g_d0_f2:B:revenues that result from higher initial CO2injection rates.  Very high tax rates, in other
+22:750:42647:23:0:72:511:63:12:g_d0_f2:12:g_d0_f2:B:words, induce a tradeoff between maximizing oil revenues and sequestration revenues.
+23:751:42733:0:0:99:276:509:3:Helvetica:3:Helvetica:?:00.20.40.60.811.21.4
+23:752:42753:0:0:93:96:517:3:Helvetica:3:Helvetica:A:0
+23:753:42754:0:0:90:96:546:3:Helvetica:3:Helvetica:?:20
+23:754:42756:0:0:90:96:575:3:Helvetica:3:Helvetica:?:40
+23:755:42758:0:0:90:96:604:3:Helvetica:3:Helvetica:?:60
+23:756:42760:0:0:90:96:632:3:Helvetica:3:Helvetica:?:80
+23:757:42762:0:0:87:96:661:3:Helvetica:3:Helvetica:?:100
+23:758:42765:0:188:87:96:690:3:Helvetica:3:Helvetica:?:120
+23:759:42768:188:0:155:227:502:4:Helvetica:4:Helvetica:?:Cumulative (million bl)
+23:760:42810:0:0:98:99:516:3:Helvetica:3:Helvetica:?: 
+23:761:42810:0:7:281:282:699:3:Helvetica:3:Helvetica:?: 
+23:762:42810:7:202:255:271:692:3:Helvetica:3:Helvetica:?:CO2 seq.oil prd.
+23:763:42826:202:0:171:184:490:10:g_d0_f5:10:g_d0_f5:?:(a)
+23:764:42829:0:0:354:538:509:3:Helvetica:3:Helvetica:F:00.0050.010.0150.020.0250.030.0350.040.0450.05
+23:765:42875:0:0:347:350:517:3:Helvetica:3:Helvetica:?:0
+23:766:42876:0:0:344:350:546:3:Helvetica:3:Helvetica:?:20
+23:767:42878:0:0:344:350:575:3:Helvetica:3:Helvetica:?:40
+23:768:42880:0:0:344:350:604:3:Helvetica:3:Helvetica:?:60
+23:769:42882:0:0:344:350:632:3:Helvetica:3:Helvetica:?:80
+23:770:42884:0:0:342:351:661:3:Helvetica:3:Helvetica:?:100
+23:771:42887:0:188:342:351:690:3:Helvetica:3:Helvetica:?:120
+23:772:42890:188:0:402:489:502:4:Helvetica:4:Helvetica:?:Annualized (million bl/year)
+23:773:42937:0:0:353:354:516:3:Helvetica:3:Helvetica:?: 
+23:774:42937:0:7:536:537:699:3:Helvetica:3:Helvetica:F: 
+23:775:42937:7:202:510:526:692:3:Helvetica:3:Helvetica:?:CO2 seq.oil prd.
+23:776:42953:202:29:425:438:490:10:g_d0_f5:10:g_d0_f5:?:(b)
+23:777:42956:29:14:108:504:461:12:g_d0_f3:12:g_d0_f2:A:Figure 6.CO2sequestration  and  oil  production,  both  cumulative  (a)  and
+23:778:43032:14:30:108:351:447:12:g_d0_f2:12:g_d0_f2:A:annualized (b), as a function of the carbon tax.
+23:779:43080:30:22:108:540:417:12:g_d0_f2:12:g_d0_f2:A:Figure 6 shows CO2sequestration supply and associated oil output as a function of
+23:780:43161:22:23:72:540:395:12:g_d0_f2:12:g_d0_f2:B:the carbon tax.  Because the oil extraction paths are very close to their revenue-maximizing
+23:781:43253:23:23:72:540:372:12:g_d0_f2:12:g_d0_f2:B:values regardless of the level of the carbon tax, oil output is almost perfectly inelastic with
+23:782:43348:23:22:72:540:349:12:g_d0_f2:12:g_d0_f2:B:respect to the carbon tax.  More surprising is that the sequestration supply curves are quite
+23:783:43441:22:23:72:540:327:12:g_d0_f2:12:g_d0_f2:B:inelastic  as  well.   At  the  current  European  tax  level  of  about  $40/tCO2,  the  elasticity  of
+23:784:43545:23:22:72:540:304:12:g_d0_f2:12:g_d0_f2:B:cumulative sequestration is only 0.05, and that of annualized sequestration only 0.06.  Even
+23:785:43637:22:32:72:461:282:12:g_d0_f2:12:g_d0_f2:B:at much higher taxes, up to $400/tCO2, these elasticities never exceed 0.55.
+23:786:43713:32:28:182:429:250:12:g_d0_f2:12:g_d0_f14:?:5.3.Effects of oil price and carbon tax combined
+23:787:43761:28:23:72:540:222:12:g_d0_f2:12:g_d0_f2:B:To recap, the results of subsection 5.1 suggest that the rates of CO2injection and seques-
+23:788:43851:23:23:72:540:199:12:g_d0_f2:12:g_d0_f2:B:tration  are  both  relatively  responsive  to  higher  oil  prices.   The  result  is  larger  levels  of
+23:789:43957:23:22:72:540:176:12:g_d0_f2:12:g_d0_f2:B:cumulative sequestration at higher prices.  On the other hand, the results of subsection 5.2
+23:790:44049:22:23:72:540:154:12:g_d0_f2:12:g_d0_f2:B:indicate that higher carbon-tax levels increase the optimal CO2injection rate early on, but
+23:791:44140:23:22:72:540:131:12:g_d0_f2:12:g_d0_f2:B:reduce  it  later,  with  the  same  qualitative  effects  on  the  induced  CO2sequestration  rate.
+23:792:44240:22:23:72:540:109:12:g_d0_f2:12:g_d0_f2:B:The initial increase in sequestration dominates, however, resulting in higher overall levels of
+23:793:44335:23:23:72:540:86:12:g_d0_f2:12:g_d0_f2:B:cumulative  sequestration.   Even  so,  the  net  impact  is  relatively  small,  so  that  cumulative
+23:794:44437:23:0:72:394:63:12:g_d0_f2:12:g_d0_f2:B:sequestration is relatively unresponsive to higher carbon taxes.
+24:795:44503:0:22:108:540:701:12:g_d0_f2:12:g_d0_f2:A:In this subsection, we briefly consider combined changes in oil price and carbon tax,
+24:796:44588:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:to look for possible interaction effects.  Panel (a) of Figure 7 shows optimal CO2injection
+24:797:44679:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:at four oil price/carbon tax combinations,  namely oil prices of $100/bl and $200/bl,  with
+24:798:44770:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:carbon taxes of $40/tCO2and $80/tCO2.  At the time of writing, current oil prices are about
+24:799:44861:23:22:72:540:611:12:g_d0_f2:12:g_d0_f2:B:$100/bl, while the current carbon price in the European market is about $40/tCO2.  Thus,
+24:800:44949:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:one can interpret the variations as corresponding to a doubling of current prices.  The plots
+24:801:45042:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:in panel (a) suggest a negative interaction effect:  at both oil prices, a doubling of the carbon
+24:802:45139:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:tax tilts the injection path forward in time, but the effect is smaller at the higher oil price.
+24:803:45235:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:As a result, the increment in cumulative sequestration, shown in panel (b), is smaller as well.
+24:804:45330:23:22:108:539:498:12:g_d0_f2:8:g_d0_f4:A:The  more  obvious  point  to  take  away  from  this  figure,  however,  is  that  both  CO2
+24:805:45423:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:injection and cumulative sequestration are far less sensitive to the carbon tax than to the
+24:806:45514:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:oil price.  While a doubling of the carbon tax does tilt the CO2injection path forward, and
+24:807:45605:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:does increase the ultimate amount of sequestered carbon, these effects pale by comparison
+24:808:45694:22:23:72:334:408:12:g_d0_f2:12:g_d0_f2:B:with the impacts due to a doubling of the oil price.
+24:809:45746:23:22:108:551:385:12:g_d0_f2:12:g_d0_f2:A:The interesting—and somewhat paradoxical—implication is that for CO2-EOR projects,
+24:810:45828:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:high oil prices are much more potent incentives for sequestration than are high carbon taxes.
+24:811:45921:23:23:72:540:340:12:g_d0_f2:12:g_d0_f2:B:The reason is that higher oil prices induce the firm to significantly increase CO2injection
+24:812:46012:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:throughout  the  lifetime  of  the  CO2flood,  so  as  to  bring  oil  production  even  closer  to  its
+24:813:46116:22:23:72:540:295:12:g_d0_f2:12:g_d0_f2:B:physical maximum rate than it already is.  As a result, a greater fraction of the space in the
+24:814:46210:23:22:72:540:272:12:g_d0_f2:12:g_d0_f2:B:reservoir vacated by the produced oil is taken up by CO2rather than water.  The higher
+24:815:46296:22:23:72:540:250:12:g_d0_f2:12:g_d0_f2:B:sequestration, in other words, arises essentially as an unintended by-product, or side effect,
+24:816:46390:23:23:72:216:227:12:g_d0_f2:12:g_d0_f2:B:of the higher oil production.
+24:817:46419:23:22:108:540:204:12:g_d0_f2:12:g_d0_f2:A:As noted in subsection 5.2, it is only at very high carbon-tax levels that sequestration
+24:818:46507:22:23:72:540:182:12:g_d0_f2:12:g_d0_f2:B:revenues start to compete with oil revenues, driving the firm to increase CO2injection beyond
+24:819:46600:23:0:72:217:159:12:g_d0_f2:12:g_d0_f2:B:the output-maximizing rate.
+25:820:46629:0:0:98:281:508:3:Helvetica:3:Helvetica:?:051015202530354045
+25:821:46647:0:0:91:94:516:3:Helvetica:3:Helvetica:?:0
+25:822:46648:0:0:87:94:543:3:Helvetica:3:Helvetica:?:0.1
+25:823:46651:0:0:87:94:571:3:Helvetica:3:Helvetica:?:0.2
+25:824:46654:0:0:87:94:599:3:Helvetica:3:Helvetica:?:0.3
+25:825:46657:0:0:87:94:626:3:Helvetica:3:Helvetica:?:0.4
+25:826:46660:0:0:87:94:654:3:Helvetica:3:Helvetica:?:0.5
+25:827:46663:0:181:87:94:681:3:Helvetica:3:Helvetica:?:0.6
+25:828:46666:181:0:169:210:500:4:Helvetica:4:Helvetica:?:Time (years)
+25:829:46700:0:0:97:98:514:3:Helvetica:3:Helvetica:?: 
+25:830:46700:0:7:281:282:699:3:Helvetica:3:Helvetica:?: 
+25:831:46700:7:13:222:277:692:3:Helvetica:3:Helvetica:?:p $100/bl, tax $40/tCO2p $100/bl, tax $80/tCO2
+25:832:46746:13:191:222:277:679:3:Helvetica:3:Helvetica:?:p $200/bl, tax $40/tCO2p $200/bl, tax $80/tCO2
+25:833:46792:191:0:171:184:488:10:g_d0_f5:10:g_d0_f5:?:(a)
+25:834:46795:0:0:355:536:508:3:Helvetica:3:Helvetica:F:051015202530354045
+25:835:46813:0:0:349:352:516:3:Helvetica:3:Helvetica:?:0
+25:836:46814:0:0:342:352:533:3:Helvetica:3:Helvetica:?:0.05
+25:837:46818:0:0:345:352:550:3:Helvetica:3:Helvetica:?:0.1
+25:838:46821:0:0:342:352:567:3:Helvetica:3:Helvetica:?:0.15
+25:839:46825:0:0:345:352:584:3:Helvetica:3:Helvetica:?:0.2
+25:840:46828:0:0:342:352:601:3:Helvetica:3:Helvetica:?:0.25
+25:841:46832:0:0:345:352:618:3:Helvetica:3:Helvetica:?:0.3
+25:842:46835:0:0:342:352:635:3:Helvetica:3:Helvetica:?:0.35
+25:843:46839:0:0:345:352:652:3:Helvetica:3:Helvetica:?:0.4
+25:844:46842:0:0:342:352:669:3:Helvetica:3:Helvetica:?:0.45
+25:845:46846:0:186:345:352:686:3:Helvetica:3:Helvetica:?:0.5
+25:846:46849:186:0:426:467:500:4:Helvetica:4:Helvetica:?:Time (years)
+25:847:46882:0:0:354:355:514:3:Helvetica:3:Helvetica:?: 
+25:848:46882:0:157:536:537:696:3:Helvetica:3:Helvetica:F: 
+25:849:46882:157:12:478:533:539:3:Helvetica:3:Helvetica:?:p $100/bl, tax $40/tCO2p $100/bl, tax $80/tCO2
+25:850:46928:12:7:478:533:527:3:Helvetica:3:Helvetica:?:p $200/bl, tax $40/tCO2
+25:851:46951:7:32:478:533:520:3:Helvetica:3:Helvetica:?:p $200/bl, tax $80/tCO2
+25:852:46974:32:29:425:438:488:10:g_d0_f5:10:g_d0_f5:?:(b)
+25:853:46977:29:14:108:504:459:12:g_d0_f3:12:g_d0_f2:A:Figure 7.CO2time paths of injection (a) and cumulative sequestration (b),
+25:854:47050:14:54:108:377:445:12:g_d0_f2:12:g_d0_f2:A:for various combinations of oil price and carbon tax.
+25:855:47103:54:34:264:348:391:12:g_d0_f2:12:g_d0_f3:?:6.Conclusion
+25:856:47115:34:22:72:540:357:12:g_d0_f2:12:g_d0_f2:B:In this paper, we have examined how the standard resource-economics problem of optimizing
+25:857:47204:22:23:72:540:335:12:g_d0_f2:12:g_d0_f2:B:the rate of oil extraction from a field is altered when the producer has the option of increasing
+25:858:47301:23:23:72:540:312:12:g_d0_f2:12:g_d0_f2:B:the rate of oil extraction through continuous injections of a mix of CO2and water into the
+25:859:47391:23:22:72:540:289:12:g_d0_f2:12:g_d0_f2:B:reservoir.  Our focus in the paper is on the producer’s problem of determining the optimal
+25:860:47481:22:23:72:540:267:12:g_d0_f2:12:g_d0_f2:B:CO2injection  rate  over  time  and  thus  the  effects  of  carbon  taxes  and  oil  prices  on  oil
+25:861:47582:23:22:72:264:244:12:g_d0_f2:12:g_d0_f2:B:production and carbon sequestration.
+25:862:47618:22:23:108:540:222:12:g_d0_f2:12:g_d0_f2:A:Our theoretical analysis of this problem indicates that the optimal CO2injection rate
+25:863:47703:23:23:72:540:199:12:g_d0_f2:12:g_d0_f2:B:will typically decline over time, and may eventually drop to zero before it becomes optimal
+25:864:47794:23:22:72:540:176:12:g_d0_f2:12:g_d0_f2:B:to terminate the extraction process.  Numerical simulations confirm these results and allow
+25:865:47885:22:23:72:385:154:12:g_d0_f2:12:g_d0_f2:B:us to further investigate comparative dynamics of the model.
+25:866:47945:23:22:108:540:131:12:g_d0_f2:12:g_d0_f2:A:Our simulation results suggest good news and bad news for potential carbon seques-
+25:867:48027:22:23:72:540:109:12:g_d0_f2:12:g_d0_f2:B:tration  from  EOR.  The  bad  news  is  that  EOR-based  carbon  sequestration  appears  to  be
+25:868:48123:23:23:72:540:86:12:g_d0_f2:12:g_d0_f2:B:highly inelastic to carbon taxes.  As such, there is little hope that policies raising the cost of
+25:869:48221:23:0:72:540:63:12:g_d0_f2:12:g_d0_f2:B:CO2emissions will induce large increases in EOR-based sequestration. The good news is that
+26:870:48313:0:22:72:541:701:12:g_d0_f2:12:g_d0_f2:B:market conditions favoring high oil pricesarelikely to induce such increases in sequestration,
+26:871:48407:22:23:72:445:679:12:g_d0_f2:12:g_d0_f2:B:essentially as a by-product of producers’ attempts to increase oil output.
+26:872:48481:23:22:108:540:656:12:g_d0_f2:12:g_d0_f2:A:Of  course,  the  apparent  inelasticity  of  EOR-based  carbon  sequestration  at  the  in-
+26:873:48573:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:dividual well level need not imply inelastic supply at a more aggregated level.  Moreover,
+26:874:48663:23:22:72:540:611:12:g_d0_f2:12:g_d0_f2:B:because oil reservoirs are generally not spatially homogeneous with respect to relevant physi-
+26:875:48757:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:cal parameters such as thickness, permeability, and integrity of the cap rock, it is conceivable
+26:876:48853:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:that EOR would be attractive in some sections of a reservoir,  but not others,  for a given
+26:877:48944:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:combination of economic parameters.15In such a scenario, the supply of sequestration ser-
+26:878:49033:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:vices for the oil reservoir might be less inelastic to the carbon price than our results indicate.
+26:879:49131:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:Additionally, if one imagines comparing across different reservoirs, it seems likely that EOR
+26:880:49224:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:projects would come on-line at different combinations of oil price and carbon price.  Again,
+26:881:49316:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:this observation suggests that the sequestration supply curve for a broader geographic entity,
+26:882:49410:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:such as a state or country as a whole, would likely be less inelastic than is true for the single
+26:883:49507:22:23:72:170:408:12:g_d0_f2:12:g_d0_f2:B:unit that we study.
+26:884:49526:23:22:108:540:385:12:g_d0_f2:12:g_d0_f2:A:An important caveat to the good news—the significant responsiveness of sequestration
+26:885:49610:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:to oil prices—concerns a counter-balancing effect that applies at the larger geographic level,
+26:886:49704:23:23:72:540:340:12:g_d0_f2:12:g_d0_f2:B:but  is  insignificant  at  the  single-unit  level.   Because  large-scale  deployment  of  EOR  will
+26:887:49806:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:generally  raise  aggregate  oil  production,  it  will  tend  to  reduce  the  market  price  of  oil  for
+26:888:49913:22:23:72:540:295:12:g_d0_f2:12:g_d0_f2:B:any given level of the carbon tax.  This in turn will increase the consumption of petroleum-
+26:889:50005:23:22:72:540:272:12:g_d0_f2:12:g_d0_f2:B:based products, such as motor vehicle fuel, which will generate increased carbon emissions
+26:890:50095:22:23:72:540:250:12:g_d0_f2:12:g_d0_f2:B:in its own right.  It is not clear how these additional emissions compare to the sequestration
+26:891:50189:23:23:72:540:227:12:g_d0_f2:12:g_d0_f14:B:associated with EOR, but it is conceivable that, on balance, EOR could lead to a netincrease
+26:892:50281:23:22:72:325:204:12:g_d0_f2:12:g_d0_f2:B:in carbon emissions at the state or national level.
+26:893:50332:22:23:108:540:182:12:g_d0_f2:12:g_d0_f2:A:In addition, the overall sequestration capacity of EOR projects, while quite large in
+26:894:50417:23:22:72:540:159:12:g_d0_f2:12:g_d0_f2:B:absolute terms, is quite small in comparison to both overall CO2emissions and the capacity
+26:895:50507:22:23:72:540:137:12:g_d0_f2:12:g_d0_f2:B:of  other  geological  sequestration  options.   For  example,  the  12  GtCO2that  Dooley  et  al.
+26:896:50606:23:35:72:540:114:12:g_d0_f2:12:g_d0_f2:B:(2006) estimate as the theoretical sequestration capacity of all depleted U.S. oil reservoirs
+26:897:50699:35:16:72:540:79:8:g_d0_f4:10:g_d0_f5:F:15This is true, for example, of the Salt Creek field in Wyoming, one of the largest EOR projects currently
+26:898:50805:16:0:72:161:63:10:g_d0_f5:10:g_d0_f5:F:operating in the US.
+27:899:50827:0:22:72:539:701:12:g_d0_f2:8:g_d0_f4:B:(including  those  depleted  through  EOR)  amounts  to  just  two  years’  worth  of  U.S.  CO2
+27:900:50923:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:emissions (EPA; 2008).  In contrast, the same study estimates the theoretical sequestration
+27:901:51014:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:capacity of U.S. saline aquifers to be as large as 3,630 GtCO2, making clear that in the long
+27:902:51107:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:run, the main contribution to geological sequestration will have to come from such aquifers.
+27:903:51199:23:22:108:540:611:12:g_d0_f2:12:g_d0_f2:A:Nevertheless, these points do not imply that EOR has no positive social role to play
+27:904:51283:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:in promoting geological carbon sequestration.  The societal importance of EOR lies in the
+27:905:51372:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:widely  held  expectation  that  it  can  provide  a  bridge  to  that  long  run.   That  is,  profits
+27:906:51475:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:from  CO2-enhanced  oil  output  can  be  used  to  “jump-start”  the  building  of  pipelines  and
+27:907:51574:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:other infrastructure required for ultimately much larger-scale sequestration in non-oil-bearing
+27:908:51669:23:22:72:138:498:12:g_d0_f2:8:g_d0_f4:B:formations.16
+27:909:51682:22:23:108:540:476:12:g_d0_f2:12:g_d0_f2:A:A key question we plan to address in future work is how large these EOR profits are
+27:910:51765:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:likely to be.  Clearly, analysis of this question will require expanding our model to account for
+27:911:51862:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:up-front investment costs associated with converting a field to CO2-injection.  Preliminary
+27:912:51953:22:23:72:540:408:12:g_d0_f2:12:g_d0_f2:B:estimates suggest that, for a field of the scale used in our numerical simulations, these costs
+27:913:52048:23:22:72:540:385:12:g_d0_f2:12:g_d0_f2:B:would amount to several million dollars, and that the cutoff oil price (in the absence of a
+27:914:52139:22:23:72:483:363:12:g_d0_f2:12:g_d0_f2:B:carbon tax) at which incurring these costs would be justified lies around $50/bl.
+27:915:52220:23:23:108:540:340:12:g_d0_f2:12:g_d0_f2:A:A further extension concerns the effect of rising (rather than constant) oil prices and
+27:916:52307:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:carbon taxes on both the optimal management of a CO2flood and the decision to initiate such
+27:917:52398:22:23:72:540:295:12:g_d0_f2:12:g_d0_f2:B:a flood.  In a stationary economic environment, there is never an incentive to delay switching
+27:918:52492:23:22:72:540:272:12:g_d0_f2:12:g_d0_f2:B:to EOR—if doing so is not profitable at time 0, it will never be.  Increasing prices may well
+27:919:52585:22:23:72:540:250:12:g_d0_f2:12:g_d0_f2:B:induce  such  delay,  however.   Geologically  heterogeneous  projects  will  make  the  switch  at
+27:920:52684:23:23:72:540:227:12:g_d0_f2:12:g_d0_f2:B:different cutoff prices, thereby shifting out the aggregate supply of sequestration over time.
+27:921:52778:23:53:72:540:204:12:g_d0_f2:12:g_d0_f2:B:Moreover, even projects that could profitably switch immediately at time 0 may optimally
+27:922:52866:53:16:72:541:151:8:g_d0_f4:10:g_d0_f5:F:16As  noted  by  William  L.  Townsend,  CEO  of  a  major  CO2-pipeline  company,  in  recent  Congressional
+27:923:52975:16:12:72:540:135:10:g_d0_f5:7:g_d0_f6:F:testimony:   “It  is  clear  that  the  long-term  geologic  sequestration  answer  to  single-point,  industrial  CO2
+27:924:53093:12:12:72:540:123:10:g_d0_f5:10:g_d0_f5:F:emissions  capture  and  storage  is  in  saline  aquifers,  not  EOR  projects.   That  being  said,  there  is  a  very
+27:925:53214:12:12:72:540:111:10:g_d0_f5:10:g_d0_f5:F:strong, cost-effective interim answer for the next ten years that employs the oil-based revenues in EOR to
+27:926:53320:12:12:72:540:99:10:g_d0_f5:10:g_d0_f5:F:subsidize the infrastructure build-out and prepare the foundation of a carbon highway for the next generation
+27:927:53429:12:12:72:540:87:10:g_d0_f5:10:g_d0_f5:F:of  cost-effective  CCS  in  power  generation.”   (Townsend;  2007)  The  same  view  was  expressed  also  in  the
+27:928:53545:12:12:72:540:75:10:g_d0_f5:10:g_d0_f5:F:testimony by George Peridas (Peridas; 2008) and in the National Petroleum Council report (NPC; 2007)
+27:929:53645:12:0:72:155:63:10:g_d0_f5:10:g_d0_f5:F:cited in footnote 2.
+28:930:53667:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:choose to delay, if doing so increases the net present value of switching.17Interestingly, it
+28:931:53760:22:23:72:540:679:12:g_d0_f2:12:g_d0_f2:B:seems likely that the latter type of delay may have the effect ofreducingsequestration in a
+28:932:53851:23:22:72:540:656:12:g_d0_f2:12:g_d0_f2:B:given reservoir.  This is because the switch would occur at a lower remaining reserve stock,
+28:933:53943:22:23:72:268:634:12:g_d0_f2:12:g_d0_f2:B:leaving less oil to be replaced by CO2.
+28:934:53982:23:22:108:540:611:12:g_d0_f2:12:g_d0_f2:A:A final complication left for future work concerns the likely endogeneity of the reserve
+28:935:54070:22:23:72:540:589:12:g_d0_f2:12:g_d0_f2:B:stock to CO2injections.  By reducing the viscosity of reservoir oil, CO2injections may not
+28:936:54160:23:23:72:540:566:12:g_d0_f2:12:g_d0_f2:B:only enhance the rate at which a given reserve stock can be extracted, but also increase the
+28:937:54252:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:stock itself. That is, oil that is impossible to flush out with a waterflood—referred to by reser-
+28:938:54350:22:23:72:540:521:12:g_d0_f2:12:g_d0_f2:B:voir engineers as “stranded” oil—may become recoverable once it mixes with CO2.  Clearly,
+28:939:54439:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:this reserve-enhancing effect of CO2injections is likely to not be instantaneous, however, but
+28:940:54533:22:23:72:540:476:12:g_d0_f2:12:g_d0_f2:B:rather tied to the cumulative amount of CO2injected.  Modeling it would therefore require
+28:941:54622:23:23:72:540:453:12:g_d0_f2:12:g_d0_f2:B:introducing cumulative injection as second state variable, thereby significantly complicating
+28:942:54715:23:22:72:540:430:12:g_d0_f2:12:g_d0_f2:B:the analysis.  How, if at all, this might alter the qualitative conclusions of the present paper
+28:943:54811:22:329:72:174:408:12:g_d0_f2:12:g_d0_f2:B:is an open question.
+28:944:54831:329:16:72:540:79:8:g_d0_f4:10:g_d0_f5:F:17This  is  conceivable  even  if  oil  prices  rise  at  rates  below  the  discount  rate,  because  the  ability  to  delay
+28:945:54957:16:0:72:331:63:10:g_d0_f5:10:g_d0_f5:F:up-front investments implies that rents may increase faster.
+29:946:55019:0:33:271:341:701:12:g_d0_f3:12:g_d0_f3:A:References
+29:947:55029:33:23:72:540:668:12:g_d0_f2:12:g_d0_f2:B:Al-Shuraiqi, H. S., Muggeridge, A. H. and Grattoni, C. A. (2003). Laboratory investigations
+29:948:55120:23:23:84:541:645:12:g_d0_f2:12:g_d0_f14:A:of first contact miscible wag displacement: The effects of wag ratio and flow rate,Technical
+29:949:55212:23:22:84:354:622:12:g_d0_f14:12:g_d0_f2:A:Paper 84894, Society of Petroleum Engineers (SPE).
+29:950:55262:22:23:72:540:600:12:g_d0_f2:12:g_d0_f14:B:ARI (2006).Evaluating  the  Potential  for  “Game  Changer”  Improvements  in  Oil  Recovery
+29:951:55354:23:22:84:541:577:12:g_d0_f14:12:g_d0_f2:A:Efficiency from CO2Enhanced Oil Recovery. Advanced Resources International, Prepared
+29:952:55438:22:23:84:528:555:12:g_d0_f2:12:g_d0_f2:A:for U.S. Department of Energy Office of Fossil Energy - Office of Oil and Natural Gas.
+29:953:55524:23:23:72:540:532:12:g_d0_f2:12:g_d0_f2:B:Babadagli, T. (2006). Optimization of CO2injection for sequestration/enhanced oil recovery
+29:954:55614:23:22:84:540:509:12:g_d0_f2:12:g_d0_f2:A:and current status in Canada,inS. Lombardi, L. K. Altunina and S. E. Beaubien (eds),
+29:955:55698:22:23:84:540:487:12:g_d0_f14:12:g_d0_f14:A:Advances in the Geological Storage of Carbon Dioxide:  International Approaches to Reduce
+29:956:55787:23:22:84:540:464:12:g_d0_f14:12:g_d0_f2:A:Anthropogenic Greenhouse Gas Emissions, Springer, Dordrecht, The Netherlands, pp. 261–
+29:957:55873:22:23:84:105:442:12:g_d0_f2:12:g_d0_f2:A:270.
+29:958:55877:23:23:72:540:419:12:g_d0_f2:12:g_d0_f2:B:Dooley, J. J., Dahowski, R. T., Davidson, C. L., Wise, M. A., Gupta, N., Kim, S. H. and
+29:959:55964:23:22:84:540:396:12:g_d0_f2:12:g_d0_f2:A:Malone, E. L. (2006).  Carbon dioxide capture and geologic storage.  A technology report
+29:960:56052:22:23:84:470:374:12:g_d0_f2:12:g_d0_f2:A:from the second phase of the Global Energy Technology Strategy Program.
+29:961:56123:23:22:72:540:351:12:g_d0_f2:12:g_d0_f2:B:EIA (2007).  Oil and gas lease equipment and operating costs 1988 through 2006.  Energy
+29:962:56210:22:23:84:424:329:12:g_d0_f2:12:g_d0_f2:A:Information Administration. Available at http://www.eia.doe.gov.
+29:963:56274:23:23:72:540:306:12:g_d0_f2:12:g_d0_f2:B:EPA (2007).  Inventory of U.S. greenhouse gas emissions and sinks:  Fast facts 1990-2005.
+29:964:56363:23:22:84:540:283:12:g_d0_f2:12:g_d0_f2:A:Conversion factors to energy units (heat equivalents) heat contents and carbon content
+29:965:56449:22:23:84:540:261:12:g_d0_f2:12:g_d0_f2:A:coefficients of various fuel types. U.S. Environmental Protection Agency, Washington, DC.
+29:966:56538:23:22:84:182:238:12:g_d0_f2:12:g_d0_f2:A:EPA 430-R-07-002.
+29:967:56555:22:23:72:540:216:12:g_d0_f2:12:g_d0_f2:B:EPA (2008).  Inventory of U.S. greenhouse gas emissions and sinks:  1990-2006.  EPA 430-R-
+29:968:56645:23:23:84:120:193:12:g_d0_f2:12:g_d0_f2:A:08-005.
+29:969:56652:23:22:72:540:170:12:g_d0_f2:12:g_d0_f14:B:Fetkovitch,  M.  J.  (1980).   Decline  curve  analysis  using  type  curves,Journal  of  Petroleum
+29:970:56751:22:23:84:235:148:12:g_d0_f14:12:g_d0_f2:A:Technology32(6): 1065–1077.
+29:971:56778:23:22:72:540:125:12:g_d0_f2:12:g_d0_f2:B:Gately, D. (2004). OPEC’s incentives for faster output growth,Energy Journal25(2): 75–96.
+29:972:56867:22:23:72:540:103:12:g_d0_f2:12:g_d0_f2:B:Gately, D. and Huntington, H. G. (2002).  The asymmetric effects of changes in price and
+29:973:56955:23:0:84:414:80:12:g_d0_f2:12:g_d0_f2:A:income on energy and oil demand,Energy Journal23(1): 19–55.
+30:974:57016:0:22:72:539:701:12:g_d0_f2:8:g_d0_f4:B:Guo, X., Du, Z., Sun, L. and Fu, Y. (2006).  Optimization of tertiary water-alternate-CO2
+30:975:57105:22:23:84:540:679:12:g_d0_f2:12:g_d0_f2:A:flood in Jilin oil field of China: Laboratory and simulation studies,Technical Paper 99616,
+30:976:57196:23:22:84:283:656:12:g_d0_f2:12:g_d0_f2:A:Society of Petroleum Engineers (SPE).
+30:977:57233:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:Hassoun, M. H. (1995).Fundamentals of Artificial Neural Networks, MIT Press, Cambridge,
+30:978:57320:23:22:84:107:611:12:g_d0_f2:12:g_d0_f2:A:MA.
+30:979:57323:22:23:72:540:589:12:g_d0_f2:12:g_d0_f14:B:Hotelling, H. (1931).  The economics of exhaustible resources,Journal of Political Economy
+30:980:57413:23:23:84:163:566:12:g_d0_f17:12:g_d0_f2:A:39(2): 137–175.
+30:981:57428:23:22:72:540:543:12:g_d0_f2:12:g_d0_f2:B:Jessen, K., Kovscek, A. R. and Orr Jr., F. M. (2005). Increasing CO2storage in oil recovery,
+30:982:57520:22:23:84:341:521:12:g_d0_f14:12:g_d0_f2:A:Energy Conversion and Management46: 293–311.
+30:983:57564:23:22:72:540:498:12:g_d0_f2:12:g_d0_f2:B:Juanes, R. and Blunt, M. J. (2006). Analytical solutions to multiphase first-contact miscible
+30:984:57657:22:23:84:448:476:12:g_d0_f2:12:g_d0_f2:A:models with viscous fingering,Transport in Porous Media64: 339–373.
+30:985:57724:23:23:72:541:453:12:g_d0_f2:12:g_d0_f14:B:McCoy, S. T. (2008).The  Economics  of  CO2Transport  by  Pipeline  and  Storage  in  Saline
+30:986:57816:23:22:84:530:430:12:g_d0_f14:12:g_d0_f2:A:Aquifers and Oil Reservoirs, Ph.D. thesis, Carnegie Mellon University, Pittsburgh, PA.
+30:987:57902:22:23:72:540:408:12:g_d0_f2:12:g_d0_f2:B:MIT (2007).The Future of Coal:  An Interdisciplinary MIT Study, Massachusetts Institute
+30:988:57989:23:22:84:247:385:12:g_d0_f2:12:g_d0_f2:A:of Technology, Cambridge, MA.
+30:989:58018:22:23:72:540:363:12:g_d0_f2:12:g_d0_f2:B:NPC  (2007).Hard  Truths:   Facing  the  Hard  Truths  About  Energy,  National  Petroleum
+30:990:58108:23:23:84:219:340:12:g_d0_f2:12:g_d0_f2:A:Council, Washington, DC.
+30:991:58132:23:22:72:540:317:12:g_d0_f2:12:g_d0_f2:B:Peridas,  G.  (2008).   Written  testimony  submitted  to  the  Natural  Resources  Committee,
+30:992:58226:22:23:84:540:295:12:g_d0_f2:12:g_d0_f2:A:Subcommittee on Energy and Mineral Resources, Unites States House of Representatives
+30:993:58310:23:22:84:540:272:12:g_d0_f2:12:g_d0_f2:A:hearing on “Spinning Straw Into Black Gold:  Enhanced Oil Recovery Using Carbon Diox-
+30:994:58395:22:23:84:186:250:12:g_d0_f2:12:g_d0_f2:A:ide,” June 12, 2008.
+30:995:58415:23:23:72:540:227:12:g_d0_f2:12:g_d0_f2:B:Shaw,  J.  C.  and  Bachu,  S.  (2003).   Evaluation  of  the  CO2sequestration  capacity  in  Al-
+30:996:58513:23:22:84:540:204:12:g_d0_f2:12:g_d0_f14:A:berta’s oil and gas reservoirs at depletion and the effect of underlying aquifers,Journal of
+30:997:58605:22:23:84:321:182:12:g_d0_f14:12:g_d0_f2:A:Canadian Petroleum Technology42(9): 51–61.
+30:998:58647:23:22:72:540:159:12:g_d0_f2:12:g_d0_f14:B:Snyder,  S.,  Anderson,  I.,  Keith,  D.,  Sendall,  K.  and  Youzwa,  P.  (2008).Canada’s  Fossil
+30:999:58745:22:23:84:540:137:12:g_d0_f14:12:g_d0_f2:A:Energy Future:  The Way Forward on Carbon Capture and Storage. Report by the ecoEN-
+30:1000:58828:23:23:84:540:114:12:g_d0_f2:12:g_d0_f2:A:ERGY Carbon Capture and Storage Task Force to the Minister of Alberta Energy and
+30:1001:58908:23:0:84:304:91:12:g_d0_f2:12:g_d0_f2:A:the Minister of Natural Resources Canada.
+31:1002:58951:0:22:72:540:701:12:g_d0_f2:12:g_d0_f2:B:Townsend, W. L. (2007).  Testimony before the Energy Subcommittee of the Finance Com-
+31:1003:59036:22:23:84:540:679:12:g_d0_f2:12:g_d0_f2:A:mittee, United States Senate hearing on “Coal:  A Clean Future, Response of the Market
+31:1004:59122:23:22:84:431:656:12:g_d0_f2:12:g_d0_f2:A:to Global Incentives and Mandates for Clean Coal,” April 26, 2007.
+31:1005:59188:22:23:72:540:634:12:g_d0_f2:12:g_d0_f2:B:Trivedi, J. J. and Babadagli, T. (2007).  Optimal injection strategies for CO2and flue gas
+31:1006:59278:23:0:84:517:611:12:g_d0_f2:12:g_d0_f2:A:sequestration during tertiary oil recovery,Oil Gas–European Magazine33(1): 22–26.

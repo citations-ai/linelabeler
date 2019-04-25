@@ -1,0 +1,938 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:NBER WORKING PAPER SERIES
+1:1:25:100:14:200:411:610:12:g_d0_f1:12:g_d0_f1:INTERNATIONAL BUSINESS TRAVEL:
+1:2:55:14:28:222:390:596:12:g_d0_f1:12:g_d0_f1:AN ENGINE OF INNOVATION?
+1:3:79:28:14:256:354:568:12:g_d0_f1:12:g_d0_f1:Nune Hovhannisyan
+1:4:96:14:28:265:346:554:12:g_d0_f1:12:g_d0_f1:Wolfgang Keller
+1:5:111:28:14:253:359:526:12:g_d0_f1:12:g_d0_f1:Working Paper 17100
+1:6:130:14:42:218:393:512:12:g_d0_f1:12:g_d0_f1:http://www.nber.org/papers/w17100
+1:7:163:42:14:173:438:470:12:g_d0_f1:12:g_d0_f1:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:199:14:14:237:374:456:12:g_d0_f1:12:g_d0_f1:1050 Massachusetts Avenue
+1:9:224:14:14:250:362:442:12:g_d0_f1:12:g_d0_f1:Cambridge, MA 02138
+1:10:243:14:186:281:330:428:12:g_d0_f1:12:g_d0_f1:May 2011
+1:11:251:186:14:72:540:242:12:g_d0_f1:12:g_d0_f1:We thank two anonymous referees, Jeff Furman, Ben Jones, Jim Markusen, Keith Maskus, Marc Muendler,
+1:12:350:14:14:72:540:228:12:g_d0_f1:12:g_d0_f1:Jim Rauch, and David Weil, as well as participants at presentations at the University of Colorado,
+1:13:448:14:14:72:540:214:12:g_d0_f1:12:g_d0_f1:the CEPR GIST (Ljubljana 2010), and the American Economic Association (Denver 2011) conferences
+1:14:543:14:14:72:540:200:12:g_d0_f1:12:g_d0_f1:for useful comments. We thank Erik Stuen and especially Jennifer Poole for help with the data.  The
+1:15:642:14:14:72:540:186:12:g_d0_f1:12:g_d0_f1:views expressed herein are those of the authors and do not necessarily represent the views of the National
+1:16:748:14:28:72:214:172:12:g_d0_f1:12:g_d0_f1:Bureau of Economic Research.
+1:17:776:28:14:72:540:144:12:g_d0_f1:12:g_d0_f1:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:18:872:14:14:72:540:130:12:g_d0_f1:12:g_d0_f1:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:19:967:14:28:72:169:116:12:g_d0_f1:12:g_d0_f1:NBER publications.
+1:20:985:28:14:72:540:88:12:g_d0_f1:12:g_d0_f1:© 2011 by Nune Hovhannisyan and Wolfgang Keller. All rights reserved. Short sections of text, not
+1:21:1082:14:14:72:540:74:12:g_d0_f1:12:g_d0_f1:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:22:1186:14:0:72:224:60:12:g_d0_f1:12:g_d0_f1:© notice, is given to the source.
+2:23:1219:0:14:72:345:700:12:g_d0_f1:12:g_d0_f1:International Business Travel: An Engine of Innovation?
+2:24:1274:14:14:72:275:686:12:g_d0_f1:12:g_d0_f1:Nune Hovhannisyan and Wolfgang Keller
+2:25:1311:14:14:72:234:672:12:g_d0_f1:12:g_d0_f1:NBER Working Paper No. 17100
+2:26:1339:14:14:72:249:658:12:g_d0_f1:12:g_d0_f1:May 2011,  Revised September 2012
+2:27:1372:14:28:72:185:644:12:g_d0_f1:12:g_d0_f1:JEL No. F,  20,J61,O33
+2:28:1394:28:28:273:338:616:12:g_d0_f2:12:g_d0_f2:ABSTRACT
+2:29:1402:28:14:72:540:588:12:g_d0_f1:12:g_d0_f1:While it is well known that managers prefer in-person meetings for negotiating deals and selling their
+2:30:1504:14:14:72:540:574:12:g_d0_f1:12:g_d0_f1:products, face-to-face communication may be particularly important for the transfer of technology
+2:31:1601:14:14:72:540:560:12:g_d0_f1:12:g_d0_f1:because technology is best explained and demonstrated in person. This paper studies the role of short-term
+2:32:1707:14:14:72:540:546:12:g_d0_f1:12:g_d0_f1:cross-border labor movements for innovation by estimating the recent impact of U.S. business travel
+2:33:1806:14:14:72:540:532:12:g_d0_f1:12:g_d0_f1:to foreign countries on their patenting rates. Business travel is shown to have a signi...cant e¤ect up
+2:34:1909:14:14:72:540:518:12:g_d0_f1:12:g_d0_f1:and beyond technology transfer through the channels of international trade and foreign direct investment.
+2:35:2014:14:14:72:540:504:12:g_d0_f1:12:g_d0_f1:On average, a 10% increase in business travel leads to an increase in patenting by about 0.2%, and
+2:36:2112:14:14:72:540:490:12:g_d0_f1:12:g_d0_f1:inward business travel is about one fourth as potent for innovation as domestic R&D spending. We
+2:37:2208:14:14:72:540:476:12:g_d0_f1:12:g_d0_f1:show that the technological knowledge of each business traveler matters by estimating a higher impact
+2:38:2309:14:14:72:540:462:12:g_d0_f1:12:g_d0_f1:for travelers that originate in U.S. states with substantial innovation, such as California. This study
+2:39:2412:14:14:72:540:448:12:g_d0_f1:12:g_d0_f1:provides initial evidence that international air travel may be an important channel through which cross-country
+2:40:2523:14:42:72:240:434:12:g_d0_f1:12:g_d0_f1:income di¤erences can be reduced.
+2:41:2556:42:14:72:170:392:12:g_d0_f1:12:g_d0_f1:Nune Hovhannisyan
+2:42:2573:14:14:72:298:378:12:g_d0_f1:12:g_d0_f1:Department of Economics, Boulder, CO 80309
+2:43:2615:14:28:72:244:364:12:g_d0_f1:12:g_d0_f1:Nune.Hovhannisyan@colorado.edu
+2:44:2645:28:14:72:153:336:12:g_d0_f1:12:g_d0_f1:Wolfgang Keller
+2:45:2660:14:14:72:198:322:12:g_d0_f1:12:g_d0_f1:Department of Economics
+2:46:2683:14:14:72:226:308:12:g_d0_f1:12:g_d0_f1:University of Colorado-Boulder
+2:47:2713:14:14:72:194:294:12:g_d0_f1:12:g_d0_f1:Boulder, CO 80309-0256
+2:48:2735:14:14:72:124:280:12:g_d0_f1:12:g_d0_f1:and NBER
+2:49:2743:14:0:72:226:266:12:g_d0_f1:12:g_d0_f1:Wolfgang.Keller@colorado.edu
+3:50:2771:0:38:72:201:673:209:g_d0_f3:209:g_d0_f3:1Introduction
+3:51:2784:38:27:72:525:635:121:g_d0_f4:121:g_d0_f4:Throughout history the internationalflowsofskillsembodiedinpeoplehadmajoreffects on
+3:52:2867:27:27:71:524:608:121:g_d0_f4:121:g_d0_f4:innovation and growth across countries.  A case in point is the year 1789.  Despite the fact
+3:53:2959:27:27:71:525:581:121:g_d0_f4:121:g_d0_f4:that England at the time had banned the international movement of skilled craftsmen to ensure
+3:54:3052:27:28:71:525:554:121:g_d0_f4:121:g_d0_f4:that its technology would not spread elsewhere, a certain Samuel Slater disguised himself and
+3:55:3145:28:27:71:525:526:121:g_d0_f4:121:g_d0_f4:succeeded to slip out on a ship to the United States. There, he built thefirst water-powered
+3:56:3237:27:27:71:525:499:121:g_d0_f4:121:g_d0_f4:textile mill and became known as the father of the American Industrial Revolution.  Today,
+3:57:3327:27:27:71:525:472:121:g_d0_f4:121:g_d0_f4:in contrast, blueprints can be transferred electronically within seconds over the Internet. Does
+3:58:3423:27:27:71:525:445:121:g_d0_f4:121:g_d0_f4:this mean that skills embodied in people play no role anymore for innovation? In this paper
+3:59:3514:27:27:71:525:418:121:g_d0_f4:121:g_d0_f4:we provide evidence on this question by studying the impact of international business travel on
+3:60:3609:27:33:71:124:391:121:g_d0_f4:121:g_d0_f4:innovation.
+3:61:3620:33:27:88:525:358:121:g_d0_f4:121:g_d0_f4:Business trips bring local entrepreneurs into personal contact with foreigners and their tech-
+3:62:3714:27:27:71:526:331:121:g_d0_f4:121:g_d0_f4:nology. This may stimulate innovation locally because technology is incremental in nature, with
+3:63:3809:27:27:71:525:304:121:g_d0_f4:121:g_d0_f4:knowledge of prior art helping to generate new technology. Technological knowledge tends to
+3:64:3900:27:28:71:525:277:121:g_d0_f4:121:g_d0_f4:also be tacit–it is difficult to fully characterize.1The face-to-face communication with foreign
+3:65:3996:28:27:72:525:249:121:g_d0_f4:121:g_d0_f4:business travelers could thus be crucial for transferring technology, ahead of methods such as
+3:66:4090:27:27:72:525:222:121:g_d0_f4:121:g_d0_f4:telephone calls or video-conferencing. Consistent with that, surveys typicallyfind that business
+3:67:4186:27:27:72:526:195:121:g_d0_f4:121:g_d0_f4:executives prefer face-to-face meetings over phone or web-based communication (Forbes 2009,
+3:68:4277:27:27:72:525:168:121:g_d0_f4:121:g_d0_f4:Harvard Business Review 2009). Nevertheless, todate we know quite little on these issue. This
+3:69:4370:27:26:72:214:141:121:g_d0_f4:121:g_d0_f4:paper’s goal is tofill this gap.
+3:70:4402:26:15:84:525:115:36:g_d0_f4:82:g_d0_f4:1Polanyi (1958) discusses the tacitness of technological knowledge. See Koskinen and Vanharanta (2002) on
+3:71:4507:15:0:71:488:100:82:g_d0_f4:82:g_d0_f4:the role of face-to-face communication in overcomingproblems arising from the tacitness of technology.
+4:72:4610:0:27:88:525:675:121:g_d0_f4:121:g_d0_f4:We employ a new dataset to examine the impact of business travelers from the United States
+4:73:4700:27:27:71:524:648:121:g_d0_f4:121:g_d0_f4:on patenting in 34 countries, both rich and poor, over more than a decade (the years 1993 to
+4:74:4792:27:27:71:525:621:121:g_d0_f4:121:g_d0_f4:2003). One challenge we face is that business travelers might arrive in a country for systematic,
+4:75:4889:27:27:71:525:594:121:g_d0_f4:121:g_d0_f4:non-random reasons, which would bias ourfindings. Our analysis addresses endogeneity con-
+4:76:4978:27:27:71:526:567:121:g_d0_f4:121:g_d0_f4:cerns by contrasting the behavior of business travelers with that of friends and family travel.
+4:77:5073:27:28:71:525:540:121:g_d0_f4:121:g_d0_f4:Central is the idea that while business travel might be affected by changes in economic return
+4:78:5167:28:27:71:525:512:121:g_d0_f4:121:g_d0_f4:to traveling (e.g., changes in the business climate), family travel is not. In our analysis, wefind
+4:79:5266:27:27:71:525:485:121:g_d0_f4:121:g_d0_f4:that business travel has a positive impact on that country’s rate of innovation. Quantitatively,
+4:80:5362:27:27:71:525:458:121:g_d0_f4:121:g_d0_f4:a 10% increase in business travelers raises patenting on average by about 0.2%, and in a typical
+4:81:5458:27:27:71:525:431:121:g_d0_f4:121:g_d0_f4:case business travel from the United States accounts for about 10% of the total difference in
+4:82:5551:27:27:71:525:404:121:g_d0_f4:121:g_d0_f4:patenting across countries. Moreover, wefind evidence that the impact of business travel on
+4:83:5642:27:33:71:497:377:121:g_d0_f4:121:g_d0_f4:patenting is increasing in the technological knowledge carried by each particular traveler.
+4:84:5733:33:27:88:525:344:121:g_d0_f4:121:g_d0_f4:Trade in services today is very important for many countries, and still we know very little
+4:85:5824:27:27:71:525:317:121:g_d0_f4:121:g_d0_f4:about service trade.2With our study of air travel we broaden existing perspectives that tend to
+4:86:5919:27:27:71:525:290:121:g_d0_f4:121:g_d0_f4:focus on trade in goods to shed light on the role played by service trade. Moreover, in contrast
+4:87:6015:27:27:71:525:263:121:g_d0_f4:121:g_d0_f4:to the small but growing literature on the role of business travel in facilitating international
+4:88:6111:27:28:71:524:236:121:g_d0_f4:121:g_d0_f4:goods trade (Poole 2010, Cristea 2011), our analysis links business travel to innovation while
+4:89:6205:28:27:71:525:208:121:g_d0_f4:121:g_d0_f4:accounting not only for changes in goods trade butalso in foreign direct investment (FDI). From
+4:90:6300:27:27:71:525:181:121:g_d0_f4:121:g_d0_f4:a policy perspective, this paper highlights the potential gains from services liberalization, such
+4:91:6398:27:26:71:389:154:121:g_d0_f4:65:g_d0_f4:as the Open Skies Agreement, in terms of innovation and growth.3
+4:92:6462:26:14:84:526:128:36:g_d0_f4:82:g_d0_f4:2For example, services exports are close to 40% of goods exports in the United States. News release of the
+4:93:6568:14:8:71:272:114:82:g_d0_f4:82:g_d0_f4:U.S. Bureau of Economic Analysis, May 11, 2011.
+4:94:6615:8:14:84:525:106:36:g_d0_f4:82:g_d0_f4:3The  Open  Skies  Agreement  seeks  to  liberalize  air  travel  to  and  from  the  United  States,  see
+4:95:6721:14:0:71:525:92:82:g_d0_f4:82:g_d0_f4:http://www.state.gov/e/eeb/tra/ata/.  This paper is also relevant for multilateral service liberalizations; see
+5:96:6833:0:27:88:526:675:121:g_d0_f4:121:g_d0_f4:The diffusion of knowledge is central to macroeconomics because of its implications for the
+5:97:6924:27:27:71:524:648:121:g_d0_f4:121:g_d0_f4:long-run convergence of incomes (Lucas 1993, Aghion and Howitt 1998, Howitt 2000, Jones
+5:98:7011:27:27:71:525:621:121:g_d0_f4:121:g_d0_f4:2002). Specifically, some recent research assumes that knowledge is entirely embodied in people
+5:99:7106:27:27:72:525:594:121:g_d0_f4:121:g_d0_f4:(Burstein and Monge-Naranjo 2009) so that international travel is crucial for knowledge diffusion.
+5:100:7204:27:27:72:525:567:121:g_d0_f4:121:g_d0_f4:Empirically, it is an open question whether effective knowledge transfer is possible by simply
+5:101:7298:27:28:72:525:540:121:g_d0_f4:121:g_d0_f4:providing (non-rival) blueprints or whether knowledge embodied in people is needed, and if the
+5:102:7392:28:27:72:526:512:121:g_d0_f4:121:g_d0_f4:latter, whether people need to meet in person or not. Our contribution to this literature is to
+5:103:7487:27:32:72:212:485:121:g_d0_f4:121:g_d0_f4:provide initial evidence on it.
+5:104:7518:32:27:88:525:453:121:g_d0_f4:121:g_d0_f4:The importance of personal contacts for international technology transfer has been analyzed
+5:105:7609:27:27:72:525:426:121:g_d0_f4:121:g_d0_f4:inempiricalworkinanumberofpapers. Common ethnicity may lower the cost of transfer-
+5:106:7691:27:27:72:526:399:121:g_d0_f4:121:g_d0_f4:ring knowledge from one country to another (Kerr 2008).4Moreover, movements of scientists
+5:107:7780:27:28:72:525:372:121:g_d0_f4:121:g_d0_f4:themselves can be a conduit of international knowledgeflows (Oettl and Agrawal 2008, Kim,
+5:108:7869:28:27:72:526:344:121:g_d0_f4:121:g_d0_f4:Lee, and Marschke 2006). Our research is complementary to this body of work. In contrast to
+5:109:7960:27:27:72:525:317:121:g_d0_f4:121:g_d0_f4:the usually fairly small samples of previous work, this paper studies knowledge transfer through
+5:110:8056:27:27:72:526:290:121:g_d0_f4:121:g_d0_f4:face-to-face meetings in more than 100,000 of business trips, as well as providing causal evidence
+5:111:8154:27:32:72:351:263:121:g_d0_f4:121:g_d0_f4:by addressing the potential endogeneity of business travel.
+5:112:8213:32:27:88:525:231:121:g_d0_f4:121:g_d0_f4:A number of authors have considered air travel as a conduit for technology transfer, with
+5:113:8302:27:28:72:525:204:121:g_d0_f4:121:g_d0_f4:mixed results. Gambardella, Mariani, and Torrisi (2009)find that, controlling for other factors,
+5:114:8398:28:27:72:525:176:121:g_d0_f4:121:g_d0_f4:air passengers are not significantly related to productivity differences across European regions. In
+5:115:8498:27:29:72:526:149:121:g_d0_f4:121:g_d0_f4:contrast, Andersen and Dalgaard (2011) employ information from the World Tourism Organiza-
+5:116:8588:29:7:72:284:120:82:g_d0_f4:82:g_d0_f4:WTO (2006) which discusses key multilateral issues.
+5:117:8639:7:15:84:525:113:36:g_d0_f4:82:g_d0_f4:4Network membership often lowers the costs of interaction (Rauch 2001), and to verify membership face-to-
+5:118:8744:15:11:71:525:98:82:g_d0_f4:82:g_d0_f4:face meetings will often be useful. See also Singh (2005), Agrawal, Cockburn, and McHale (2006), and Agrawal,
+5:119:8853:11:0:71:182:87:82:g_d0_f4:82:g_d0_f4:Kapur, and McHale (2008).
+6:120:8879:0:28:72:524:674:121:g_d0_f4:65:g_d0_f4:tion to show that the number of air travelers can explain cross-country productivity differences.5
+6:121:8977:28:27:72:526:646:121:g_d0_f4:121:g_d0_f4:We improve on this literature by employing better data on air travel. Even if it were the case
+6:122:9071:27:27:72:525:619:121:g_d0_f4:121:g_d0_f4:that tourists—which are the bulk of the air travelers in the typical existing study— are important
+6:123:9169:27:27:71:525:592:121:g_d0_f4:121:g_d0_f4:for international knowledge diffusion, since data on tourism to date are not comparable across
+6:124:9263:27:27:71:526:565:121:g_d0_f4:121:g_d0_f4:countries empirical work based on them is unlikely to yield robust results. In contrast, our air
+6:125:9359:27:27:71:525:538:121:g_d0_f4:121:g_d0_f4:traveler measure is consistent because it comes from one survey. Moreover, we can separate
+6:126:9449:27:27:71:525:511:121:g_d0_f4:121:g_d0_f4:business travelers from tourists and other travelers. This is useful because one would expect
+6:127:9542:27:33:71:512:484:121:g_d0_f4:65:g_d0_f4:business travelers to matter more for technology diffusion than tourists and other travelers.6
+6:128:9636:33:27:88:525:451:121:g_d0_f4:121:g_d0_f4:Our research also employs an unusually detailed measure of innovation. In particular, we
+6:129:9724:27:27:71:525:424:121:g_d0_f4:121:g_d0_f4:know the identity and countries of residence of all patentees in the sample. Thus we can ask
+6:130:9816:27:27:71:524:397:121:g_d0_f4:121:g_d0_f4:whether business travel from a country that is the home country of one of the patent owners
+6:131:9907:27:28:71:525:370:121:g_d0_f4:121:g_d0_f4:is more potent in its effect on innovation than business travel in general (we do not know
+6:132:9997:28:27:71:525:342:121:g_d0_f4:121:g_d0_f4:whether the business traveler was in fact the patentee). In contrast, most existing studies focus
+6:133:10094:27:27:71:524:315:121:g_d0_f4:121:g_d0_f4:on productivity as the measure of innovation. That has certain advantages, chief perhaps that
+6:134:10187:27:27:71:525:288:121:g_d0_f4:121:g_d0_f4:economic effects are easily quantified. At the same time, productivity measures tend to confound
+6:135:10283:27:27:71:525:261:121:g_d0_f4:121:g_d0_f4:several factors that have different implications, something we avoid in this study by working with
+6:136:10381:27:33:71:134:234:121:g_d0_f4:65:g_d0_f4:patent data.7
+6:137:10394:33:27:88:525:201:121:g_d0_f4:121:g_d0_f4:The remainder of the paper is as follows. The next section motivates the analysis in terms of
+6:138:10487:27:26:71:525:174:121:g_d0_f4:121:g_d0_f4:theory and also it discusses the key empirical issues. The following section 3 introduces the main
+6:139:10585:26:11:84:343:148:36:g_d0_f4:82:g_d0_f4:5Related work includes Le (2008) and Dowrick and Tani (2011).
+6:140:10646:11:11:84:253:137:36:g_d0_f4:82:g_d0_f4:6The data is described in section 3 below.
+6:141:10688:11:15:84:525:126:36:g_d0_f4:82:g_d0_f4:7Productivity often captures not only technical efficiency but also demand shocks and market power, factor
+6:142:10794:15:11:72:525:111:82:g_d0_f4:82:g_d0_f4:market distortions, and product mix changes (Foster, Haltiwanger, and Syverson 2008, Hsieh and Klenow 2009,
+6:143:10901:11:0:72:466:100:82:g_d0_f4:82:g_d0_f4:and Bernard, Redding, and Schott 2010, respectively). See also Keller (2004) for more discussion.
+7:144:10999:0:27:72:526:675:121:g_d0_f4:121:g_d0_f4:features of the data as well as their sources, with more details on the construction of the data
+7:145:11095:27:27:72:525:648:121:g_d0_f4:121:g_d0_f4:set given in the Appendix. Section 4 presents the estimation results and quantifies the implied
+7:146:11190:27:27:72:525:621:121:g_d0_f4:121:g_d0_f4:effect of business travel on innovation. A numberof concluding observations are collected in
+7:147:11282:27:53:72:117:594:121:g_d0_f4:121:g_d0_f4:section 5.
+7:148:11292:53:35:72:526:541:209:g_d0_f3:209:g_d0_f3:2  International business travel and innovation: a framework for
+7:149:11356:35:38:96:151:506:209:g_d0_f3:209:g_d0_f3:analysis
+7:150:11364:38:27:72:526:468:121:g_d0_f4:121:g_d0_f4:Our goal is to assess the impact of international business travel on the rate of innovation across
+7:151:11462:27:28:72:525:441:121:g_d0_f4:121:g_d0_f4:countries. To do so, this section provides a theoretical motivation and also discusses a number
+7:152:11557:28:33:72:460:413:121:g_d0_f4:121:g_d0_f4:of key choices we make in terms of data, identification, and estimation technique.
+7:153:11639:33:27:88:525:380:121:g_d0_f4:121:g_d0_f4:As a point of departure in terms of theory, it is useful to think of a model in which techno-
+7:154:11732:27:27:72:525:353:121:g_d0_f4:121:g_d0_f4:logical knowledge diffuses abroad through business travel and other channels. Keller and Yeaple
+7:155:11827:27:27:72:526:326:121:g_d0_f4:121:g_d0_f4:(2012) analyzefirms that decide whether to produce intermediate goods for theirfinal good
+7:156:11916:27:27:72:526:299:121:g_d0_f4:121:g_d0_f4:either at home or abroad. Since home managers have the necessary know-how for production,
+7:157:12005:27:27:72:525:272:121:g_d0_f4:121:g_d0_f4:the manufacturing of any intermediate at home entails only the trade cost as the intermediate
+7:158:12098:27:27:72:526:245:121:g_d0_f4:121:g_d0_f4:is shipped for assembly abroad.  If, however, the intermediate is to be produced abroad the
+7:159:12189:27:27:72:526:218:121:g_d0_f4:121:g_d0_f4:know-how has to be transferred between home and foreign country managers, which is subject
+7:160:12279:27:33:72:398:191:121:g_d0_f4:121:g_d0_f4:to communication frictions because technological knowledge is tacit.
+7:161:12347:33:27:88:525:158:121:g_d0_f4:121:g_d0_f4:This model posits a trade-offof technology transfer in embodied form through trade and
+7:162:12433:27:28:71:525:131:121:g_d0_f4:121:g_d0_f4:through direct communication associated with FDI production. A role for business travel in
+7:163:12523:28:0:71:525:103:121:g_d0_f4:121:g_d0_f4:enhancing technology transfer naturally arises when home country managers can travel to the
+8:164:12615:0:27:72:526:675:121:g_d0_f4:121:g_d0_f4:host country. Face-to-face time enhances technology transfer at the same time that it might lead
+8:165:12711:27:27:72:524:648:121:g_d0_f4:65:g_d0_f4:to learning on the part of unaffiliated host country agents (perhaps through labor turnover).8
+8:166:12805:27:33:72:399:621:121:g_d0_f4:121:g_d0_f4:This learning is what may raise the host country’s rate of patenting.
+8:167:12874:33:27:88:525:588:121:g_d0_f4:121:g_d0_f4:In terms of empirics the goal is to estimate the relationship between the rate of innovation and
+8:168:12970:27:27:72:525:561:121:g_d0_f4:121:g_d0_f4:inward business travelers from abroad. We measure innovation using data on patenting at the
+8:169:13061:27:28:72:525:534:121:g_d0_f4:121:g_d0_f4:level of 37 industries in 34 countries.9Our business travel information is on outward business
+8:170:13155:28:27:72:526:506:121:g_d0_f4:121:g_d0_f4:travel from the United States and covers mostly U.S. citizens.  We do not know whether a
+8:171:13243:27:27:72:525:479:121:g_d0_f4:121:g_d0_f4:particular traveler is involved with innovation in the country he or she isflying to, but we do
+8:172:13338:27:27:72:525:452:121:g_d0_f4:121:g_d0_f4:know the U.S. state (and county) of where the traveler is originating from. This will allow us to
+8:173:13435:27:27:72:525:425:121:g_d0_f4:121:g_d0_f4:contrast the impact of business travelers from states such as California, where knowledge levels
+8:174:13531:27:27:72:526:398:121:g_d0_f4:121:g_d0_f4:and patenting rates are relatively high, with states such as Nebraska, where they are generally
+8:175:13626:27:33:72:100:371:121:g_d0_f4:121:g_d0_f4:lower.
+8:176:13632:33:27:88:525:338:121:g_d0_f4:121:g_d0_f4:Next we turn to identification. Letdenote the number of patents of countryand ̃its
+8:177:13720:27:27:72:526:311:121:g_d0_f4:121:g_d0_f4:number of inward business travelers. In estimating the impact of business travelers on patenting
+8:178:13816:27:27:72:526:284:121:g_d0_f4:121:g_d0_f4:several issues will have to be addressed. First, to account for the fact that the number of patents
+8:179:13915:27:27:72:525:257:121:g_d0_f4:121:g_d0_f4:is affected by many factors, such as the size of country c, we include a set of variablesthat
+8:180:14010:27:28:72:525:230:121:g_d0_f4:121:g_d0_f4:reduces concerns arising from omitted variables. Second, our approach eliminates the influence
+8:181:14104:28:27:71:525:202:121:g_d0_f4:121:g_d0_f4:of unobserved factors at the country-, industry-, and year-level by including the corresponding
+8:182:14199:27:23:71:130:175:121:g_d0_f5:121:g_d0_f4:fixed effects.
+8:183:14213:23:15:84:525:152:36:g_d0_f4:82:g_d0_f4:8The incentive of knowledge owners will typically be to prevent leakage of the knowledge to others. This by
+8:184:14320:15:11:71:525:137:82:g_d0_f4:82:g_d0_f4:itself may be a reason for reducing the number of face-to-face meetings, except in cases where the technology
+8:185:14429:11:7:71:278:126:82:g_d0_f4:82:g_d0_f4:transfer is intended as in the case of joint ventures.
+8:186:14483:7:15:84:526:119:36:g_d0_f4:82:g_d0_f4:9The industry dimension is important because industries vary greatly in terms of patenting activity. A list of
+8:187:14593:15:0:71:255:104:82:g_d0_f4:82:g_d0_f4:the industries is given in Appendix Table A1.
+9:188:14639:0:27:88:525:673:121:g_d0_f4:121:g_d0_f4:This leaves the possibility that ̃is endogenous due to time-varying factors (for example,
+9:189:14730:27:28:71:524:646:121:g_d0_f4:121:g_d0_f4:changes in a country’s tax code boost patenting and also trigger more inward business travel).
+9:190:14824:28:27:71:525:618:121:g_d0_f4:121:g_d0_f4:This would leave ̃correlated with the error of the regression and yield inconsistent estimates.
+9:191:14921:27:27:71:525:591:121:g_d0_f4:121:g_d0_f4:In this paper two methods are employed to address such concerns. Thefirst method adds on
+9:192:15009:27:27:71:525:564:121:g_d0_f4:121:g_d0_f4:the right-hand side of the equation a control function (CF) such that ̃may be endogenous
+9:193:15099:27:27:71:525:537:121:g_d0_f4:65:g_d0_f8:without the CF but it is exogenous once the CF is included, and hence, the coefficient on ̃
+9:194:15192:27:27:72:525:510:121:g_d0_f4:121:g_d0_f4:with CF is consistent. Control function approaches have been widely used in empirical work
+9:195:15282:27:27:72:526:483:121:g_d0_f4:121:g_d0_f4:recently, for example in the estimation of production functions (see Olley and Pakes 1996 and
+9:196:15375:27:27:72:526:456:121:g_d0_f4:121:g_d0_f4:related extensions). The second method we employ is instrumental variable (IV) estimation,
+9:197:15465:27:27:72:525:429:121:g_d0_f4:121:g_d0_f4:specifically the approach developed in Mullahy (1997). Both the control function and the IV
+9:198:15556:27:28:72:526:402:121:g_d0_f4:121:g_d0_f4:strategies employed here are well-established methods and covered in standard econometrics
+9:199:15646:28:31:72:252:374:121:g_d0_f4:121:g_d0_f4:textbooks such as Wooldridge (2002).
+9:200:15682:31:28:88:525:343:121:g_d0_f4:121:g_d0_f4:While the two estimation strategies differ in general, they are related in that for either
+9:201:15772:28:27:72:525:315:121:g_d0_f4:121:g_d0_f4:to work certain exclusion restrictions must be satisfied.  For the IV strategy this means the
+9:202:15865:27:27:72:526:288:121:g_d0_f4:121:g_d0_f4:instrument must be valid. In our case, we will mainly rely on friends & family travel as an
+9:203:15956:27:27:72:525:261:121:g_d0_f4:121:g_d0_f4:instrument for business travel. The exclusion restriction is that friends & family travel does not
+9:204:16054:27:27:72:525:234:121:g_d0_f4:121:g_d0_f4:affect patenting in a country.10Analogous to the requirement that the instrument is valid in the
+9:205:16150:27:27:71:525:207:121:g_d0_f4:121:g_d0_f4:IV strategy, the CF approach requires that the CF itself is appropriate. In our case the control
+9:206:16246:27:27:71:525:180:121:g_d0_f4:121:g_d0_f4:function will typically be the residual from a regression of business travel on friends & family
+9:207:16342:27:27:71:525:153:121:g_d0_f4:121:g_d0_f4:travel. Then, the exclusion restriction is, similar to the IV case, that friends & family travel is
+9:208:16441:27:24:71:525:126:121:g_d0_f4:121:g_d0_f4:not a determinant of patenting, conditional on all covariates. Because friends & family travel is
+9:209:16538:24:15:80:525:102:36:g_d0_f4:82:g_d0_f4:10The full condition is that friends & family travel does not affect patentingandthat it is not correlated with
+9:210:16649:15:0:71:338:87:82:g_d0_f4:82:g_d0_f4:any determinants of patenting; see Wooldridge (2002, Ch. 19.5.1).
+10:211:16715:0:27:72:525:675:121:g_d0_f4:121:g_d0_f4:determined by factors that are quite different from business travel, and moreover, these factors
+10:212:16811:27:27:72:526:648:121:g_d0_f4:121:g_d0_f4:typically do not change from year to year, we consider it to be very likely that our approach
+10:213:16904:27:33:72:442:621:121:g_d0_f4:121:g_d0_f4:towards possible endogeneity is successful. We will return to this issue below.
+10:214:16983:33:27:88:525:588:121:g_d0_f4:121:g_d0_f4:This section is concluded by discussing the regression techniques employed below. The fact
+10:215:17073:27:27:72:525:561:121:g_d0_f4:121:g_d0_f4:that our dependent variablethe number of patents, is non-negative and has no upper bound
+10:216:17163:27:28:72:525:534:121:g_d0_f4:121:g_d0_f7:suggests to use count data models which rely on the exponential function,(|)=exp(xβ)
+10:217:17251:28:27:72:526:506:121:g_d0_f4:121:g_d0_f4:Within this class the assumption thatgivenhas a Poisson distribution has been most common
+10:218:17342:27:27:72:525:479:121:g_d0_f4:121:g_d0_f4:given the efficiency properties of its maximum likelihood estimators.11At the same time, making
+10:219:17437:27:27:71:525:452:121:g_d0_f4:121:g_d0_f4:the Poisson distributional assumption has been criticized because it implies restrictions on the
+10:220:17533:27:27:71:525:425:121:g_d0_f4:121:g_d0_f4:conditional moments ofin particular(|)=(|)that are typically rejected in the
+10:221:17620:27:27:72:526:398:121:g_d0_f4:121:g_d0_f4:data (also here). However, it is well-known that a Poisson quasi-maximum likelihood estimator
+10:222:17713:27:27:72:525:371:121:g_d0_f4:121:g_d0_f4:(QMLE) is fully robust to distributional misspecification in the sense that it obtains consistent
+10:223:17810:27:27:72:525:344:121:g_d0_f4:121:g_d0_f4:coefficient estimates ofβfor the conditional mean,(|)=exp(xβ), irrespective of whether
+10:224:17899:27:27:71:525:317:121:g_d0_f4:121:g_d0_f4:the Poisson distributional assumption was correct or not. In this paper a QMLE approach is
+10:225:17989:27:27:71:525:290:121:g_d0_f4:121:g_d0_f4:employed throughout. We present results for two alternative distributional assumptions, (1) that
+10:226:18085:27:27:71:525:263:121:g_d0_f7:121:g_d0_f4:is distributed Poisson givenxand (2) thatis distributed Negative Binomial givenxWhile
+10:227:18174:27:28:72:525:236:121:g_d0_f4:121:g_d0_f4:both estimators yield consistent estimates, the specific distributional assumption determines
+10:228:18267:28:27:72:525:208:121:g_d0_f4:121:g_d0_f4:how the variance-covariance matrix is calculated.  As we will show below, the results using
+10:229:18358:27:33:72:284:181:121:g_d0_f4:121:g_d0_f4:either assumption are generally very similar.
+10:230:18403:33:26:88:442:148:121:g_d0_f4:121:g_d0_f4:The following section gives an overview of the data that will be employed.
+10:231:18477:26:0:80:215:122:36:g_d0_f4:82:g_d0_f4:11See Wooldridge (2002, Ch. 19).
+11:232:18510:0:38:72:147:673:209:g_d0_f3:209:g_d0_f3:3Data
+11:233:18515:38:27:88:525:635:121:g_d0_f3:121:g_d0_f4:InnovationThe dependent variable in our analysis is the number of U.S. patents to foreign
+11:234:18604:27:27:72:525:608:121:g_d0_f4:121:g_d0_f4:country inventors in the years 1993 to 2003 in 37 industries as recorded by the United States
+11:235:18697:27:27:72:525:581:121:g_d0_f4:121:g_d0_f4:Patent and Trademark Office (USPTO). As noted above, focusing on foreign patents in the U.S.
+11:236:18789:27:28:72:526:554:121:g_d0_f4:121:g_d0_f4:ensures that all inventions surpass the same quality standard, and moreover, patent protection
+11:237:18883:28:27:72:526:526:121:g_d0_f4:121:g_d0_f4:in the United States will typically be important for major inventions given the importance of
+11:238:18976:27:27:72:526:499:121:g_d0_f4:121:g_d0_f4:the U.S. market.  This data comes from the custom data extracts of the USPTO database,
+11:239:19062:27:27:72:526:472:121:g_d0_f4:121:g_d0_f4:which has information on country of residence for each of possibly several inventors per patent,
+11:240:19158:27:27:72:525:445:121:g_d0_f4:121:g_d0_f9:original USPTO patent classification, as well as the application year.12Inthecaseof1
+11:241:19244:27:27:71:525:418:121:g_d0_f4:121:g_d0_f4:inventors, we assign a fraction of1to each inventors country of residence. Based on USPTO
+11:242:19335:27:27:71:524:391:121:g_d0_f4:65:g_d0_f4:classification, patents are assigned to NBER 37 technological subcategories (or, industries).13
+11:243:19430:27:27:72:525:364:121:g_d0_f4:121:g_d0_f4:A list of industries is provided in Table A1 of the Appendix. The main dependent variable in
+11:244:19522:27:27:72:526:337:121:g_d0_f4:121:g_d0_f4:the empirical analysis is the sum of these fractional patent counts aggregated by foreign country
+11:245:19619:27:33:72:273:310:121:g_d0_f4:65:g_d0_f4:and industry for each year 1993 to 2003.14
+11:246:19661:33:28:88:525:277:121:g_d0_f4:121:g_d0_f4:In addition, we employ the USPTO individual inventor database to separate out foreign
+11:247:19746:28:27:71:525:249:121:g_d0_f4:121:g_d0_f4:patents that have a U.S. coinventor. These patents are of particular interest because the traveler
+11:248:19844:27:27:71:524:222:121:g_d0_f4:121:g_d0_f4:might in fact be the U.S. coinventor on that patent. For this reason, the relationship between
+11:249:19938:27:27:71:525:195:121:g_d0_f4:121:g_d0_f4:business travel and domestic innovation might be particularly strong for these patents. How
+11:250:20029:27:26:71:525:168:121:g_d0_f4:121:g_d0_f4:frequent are patent applications that have a U.S. coinventor? Wefind that on average about
+11:251:20119:26:14:80:525:142:36:g_d0_f4:82:g_d0_f4:12We focus on the date of application as opposed to the date of when the patent is granted; this ensures that
+11:252:20228:14:8:71:326:128:82:g_d0_f4:82:g_d0_f4:differences in the processing time of patents do not play a role.
+11:253:20293:8:11:80:245:120:36:g_d0_f4:82:g_d0_f4:13See Hall, Jaffe and Trajtenberg (2001).
+11:254:20334:11:14:80:525:109:36:g_d0_f4:82:g_d0_f4:14The use of fractions means that our data is not strictlyspeaking count data; despite this we prefer to employ
+11:255:20445:14:0:71:501:95:82:g_d0_f4:82:g_d0_f4:count data regression models. More information on the patent data construction is given in the Appendix.
+12:256:20550:0:27:72:526:675:121:g_d0_f4:121:g_d0_f4:one in 50 of all foreign patent applications in the United States during the sample period had
+12:257:20644:27:32:72:209:648:121:g_d0_f4:121:g_d0_f4:foreign and U.S. coinventors.
+12:258:20673:32:27:88:526:616:121:g_d0_f4:121:g_d0_f4:It is well-known that a principal determinant of a country’s innovation its R&D expenditures.
+12:259:20766:27:27:72:525:589:121:g_d0_f4:121:g_d0_f4:We have obtained this data from OECD Statistics.15We also include another measure of inno-
+12:260:20856:27:27:71:525:562:121:g_d0_f4:121:g_d0_f4:vation, namely the patent applications by residents of each country (source: World Intellectual
+12:261:20951:27:27:71:525:535:121:g_d0_f4:121:g_d0_f4:Property Organization).16These variables control for innovative cycles in each country that
+12:262:21042:27:27:71:525:508:121:g_d0_f4:121:g_d0_f4:are general in the sense that they are not specifically related to inward business travel from the
+12:263:21140:27:27:71:525:481:121:g_d0_f4:121:g_d0_f4:United States. In addition, including domestic resident patents on the right hand side controls
+12:264:21235:27:27:71:525:454:121:g_d0_f4:121:g_d0_f4:for the patent family effect, namely that a patent application in the U.S. reflects only the fact
+12:265:21332:27:42:72:478:427:121:g_d0_f4:121:g_d0_f4:that a given technology has been invented and patented at home in the same period.
+12:266:21414:42:27:88:525:385:121:g_d0_f3:121:g_d0_f4:TravelThe information on international air travel in this paper comes from the Survey
+12:267:21499:27:27:72:525:358:121:g_d0_f4:121:g_d0_f4:of International Air Travelers (SIAT) which is conducted by the International Trade Adminis-
+12:268:21591:27:27:72:526:331:121:g_d0_f4:121:g_d0_f4:tration, a branch of the U.S. Department of Commerce. This survey provides information on
+12:269:21680:27:28:72:525:304:121:g_d0_f4:121:g_d0_f4:travel from the United States to foreign countries for U.S. residents during the years 1993 to
+12:270:21774:28:27:72:526:276:121:g_d0_f4:121:g_d0_f4:2003. The data has information on the travelers’ U.S. county of residence, the foreign city of
+12:271:21868:27:27:72:526:249:121:g_d0_f4:121:g_d0_f4:destination, the purpose of the travel, and the traveler’s occupation. Matching this information
+12:272:21964:27:27:72:525:222:121:g_d0_f4:121:g_d0_f4:on travel with other parts of our data set required aggregation, and the basic unit of observation
+12:273:22062:27:32:72:509:195:121:g_d0_f4:121:g_d0_f4:is resident travelers from a U.S. state to a given foreign country for each year 1993 to 2003.
+12:274:22156:32:27:88:525:163:121:g_d0_f4:121:g_d0_f4:Whilewedonothavespecific information on the technological knowledge carried by each
+12:275:22239:27:23:72:525:136:121:g_d0_f4:121:g_d0_f4:traveler, we account for differences in this respect by incorporating information on patent stocks
+12:276:22337:23:15:80:525:113:36:g_d0_f4:82:g_d0_f4:15OECD statistics provide Gross Domestic Expenditure on R&D for OECD and also some non-member
+12:277:22430:15:7:71:110:98:82:g_d0_f4:82:g_d0_f4:countries.
+12:278:22440:7:0:80:410:91:36:g_d0_f4:82:g_d0_f4:16The assignment of these patents to countries is based only on thefirst inventor.
+13:279:22524:0:27:72:525:674:121:g_d0_f4:121:g_d0_f4:(a measure of technological prowess) at the levelof the U.S. states and industries. Our business
+13:280:22620:27:49:72:277:647:121:g_d0_f4:121:g_d0_f4:traveler variable,,isdefined as follows:
+13:281:22664:49:0:212:270:598:121:g_d0_f7:121:g_d0_f11:=×
+13:282:22673:0:24:272:288:609:121:g_d0_f14:121:g_d0_f14:X
+13:283:22674:24:0:273:286:585:65:g_d0_f8:65:g_d0_f8:
+13:284:22677:0:15:297:314:606:121:g_d0_f7:65:g_d0_f8:
+13:285:22681:15:0:291:320:591:121:g_d0_f7:65:g_d0_f8:
+13:286:22686:0:49:325:525:598:121:g_d0_f11:121:g_d0_f4:× ̃∀(1)
+13:287:22702:49:27:72:525:549:121:g_d0_f4:121:g_d0_f4:where the variableis the patent stock of U.S. statein industryof year is
+13:288:22787:27:27:72:525:522:121:g_d0_f4:121:g_d0_f4:the state’s gross product,is the patent stock of U.S. industryin yearand ̃is the
+13:289:22877:27:27:71:530:495:121:g_d0_f4:121:g_d0_f4:raw (unweighted) number of business travelers from stateto foreign countryin year.The
+13:290:22965:27:27:71:525:468:121:g_d0_f4:121:g_d0_f4:weight on the unweighted business travelers in equation (1),incorporates two ideas. First,
+13:291:23065:27:27:71:525:441:121:g_d0_f4:121:g_d0_f4:travelers who originate from a statethat has more patents relative to the size of the state’s
+13:292:23159:27:27:71:526:414:121:g_d0_f4:121:g_d0_f4:economy receive greater weight than travelers that come from a state0with fewer patents.
+13:293:23248:27:27:71:525:387:121:g_d0_f4:121:g_d0_f4:We choose this formulation because if the patent stock of stateis higher than of state0it
+13:294:23340:27:27:72:526:360:121:g_d0_f4:121:g_d0_f4:is plausible that business travelers fromcarry on average more knowledge than those from
+13:295:23429:27:28:72:525:333:121:g_d0_f7:121:g_d0_f4:0. Second, the weightis also increasing in the patent stock of statein a particular
+13:296:23523:28:27:71:525:305:121:g_d0_f4:121:g_d0_f4:industryThis picks up any particular strength of statein a certain industrycompared to
+13:297:23613:27:27:71:525:278:121:g_d0_f4:121:g_d0_f4:the strength of statein the average industry.17The patentfigures by state and industry come
+13:298:23705:27:27:72:525:251:121:g_d0_f4:121:g_d0_f4:from thefiles of the U.S. Patent and Trademark Office (USPTO), and the gross product levels
+13:299:23796:27:27:72:526:224:121:g_d0_f4:121:g_d0_f4:by state come from the U.S. Department of Commerce’s Bureau of Economic Analysis. U.S.
+13:300:23882:27:26:72:488:197:121:g_d0_f4:121:g_d0_f4:state and industry-level patent statistics are summarized in Table A2 of the Appendix.
+13:301:23968:26:7:80:303:171:36:g_d0_f4:25:g_d0_f18:17There are alternative approaches to the weights
+13:302:24021:7:8:285:525:164:36:g_d0_f16:82:g_d0_f4:proposed here. To pick up the differential knowledge
+13:303:24078:8:11:72:525:156:82:g_d0_f4:82:g_d0_f4:across travelers, for example, one could introduce variables for different states, such as California versus Nebraska,
+13:304:24196:11:11:72:525:145:82:g_d0_f4:82:g_d0_f4:separately. While this approach can be useful (see Keller 2002, Acharya and Keller 2009), it can also be difficult
+13:305:24310:11:11:72:526:134:82:g_d0_f4:82:g_d0_f4:to estimate multiple additional parameters, which is one reason for why we adopt the weighted sum in equation
+13:306:24419:11:11:72:525:123:82:g_d0_f4:82:g_d0_f4:(1). Note that equation (1) also scales by the total U.S. patent stock by industry,, proxying for the U.S.
+13:307:24528:11:0:71:525:112:82:g_d0_f4:82:g_d0_f4:knowledge in that industryandyear (up and beyond general effects picked up by industry and timefixed effects).
+14:308:24640:0:27:88:525:675:121:g_d0_f4:121:g_d0_f4:Analogously to the weighted number of business travelers from the United States according
+14:309:24729:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:to equation (1), we also compute the numbers of travelers who visit friends & family, are traveling
+14:310:24828:27:27:71:525:621:121:g_d0_f4:121:g_d0_f4:for religious reasons, are retired, or are homemakers. These variables will be employed below in
+14:311:24924:27:43:71:284:594:121:g_d0_f4:121:g_d0_f4:form of control functions as discussed below.
+14:312:24969:43:27:88:525:551:121:g_d0_f3:121:g_d0_f4:Other variablesThe size and level of development of a country affects its patenting in
+14:313:25055:27:27:71:525:524:121:g_d0_f4:121:g_d0_f4:the United States, and for this reason we include information on population size and GDP per
+14:314:25147:27:27:71:524:497:121:g_d0_f4:121:g_d0_f4:capita (source: Penn World Tables, version 6.2).  We want to control for other channels of
+14:315:25237:27:27:71:525:470:121:g_d0_f4:121:g_d0_f4:international technology transfer, such as international trade and FDI (see the review in Keller
+14:316:25333:27:27:71:525:443:121:g_d0_f4:121:g_d0_f4:2010). The regressions include U.S. exports to each of the sample countries and U.S. imports
+14:317:25425:27:27:71:524:416:121:g_d0_f4:121:g_d0_f4:from each of the sample countries. Both outward FDI from the U.S. and inward FDI to the U.S.
+14:318:25517:27:27:71:524:389:121:g_d0_f4:121:g_d0_f4:are included as controls as well. Outward FDI from the U.S. is captured by the total sales of
+14:319:25610:27:27:71:525:362:121:g_d0_f4:121:g_d0_f4:U.S. majority-owned multinational affiliates in each of the sample countries, while inward FDI
+14:320:25704:27:27:72:525:335:121:g_d0_f4:121:g_d0_f4:to the U.S. by the total sales of nonbank U.S. affiliates of foreign multinationalfirms. These
+14:321:25798:27:34:72:337:308:121:g_d0_f4:121:g_d0_f4:data come from the U.S. Bureau of Economic Analysis.
+14:322:25850:34:27:88:525:274:121:g_d0_f4:121:g_d0_f4:Summary statistics of the data are presented in Table 1.  Thefirst two rows show some
+14:323:25935:27:27:72:525:247:121:g_d0_f4:121:g_d0_f4:descriptive statistics on fractional patent counts by foreign inventors and joint U.S./foreign
+14:324:26029:27:27:72:525:220:121:g_d0_f4:121:g_d0_f4:patent counts. There is a lot of variation in U.S. patenting by foreign countries and industries
+14:325:26125:27:27:72:529:193:121:g_d0_f4:121:g_d0_f4:asevidencedbythestandarddeviationinbothforeignU.S.patentcountsaswellasjointU.S.
+14:326:26204:27:27:72:526:166:121:g_d0_f4:121:g_d0_f4:patent counts. A list of the 34 countries that are included in this analysis is given in Table
+14:327:26298:27:27:72:525:139:121:g_d0_f4:121:g_d0_f4:A3 of the Appendix. The followingfive rows in Table 1 present (in natural logarithms) U.S.
+14:328:26388:27:0:72:525:112:121:g_d0_f4:121:g_d0_f4:resident travel data for business, visiting friends and family, and religious purposes, along with
+15:329:26488:0:28:72:525:674:121:g_d0_f4:121:g_d0_f4:data on travelers that are retired and homemakers.18As can be seen from the table, the number
+15:330:26581:28:27:72:525:646:121:g_d0_f4:121:g_d0_f4:of travelers for the purpose of business and visiting friends and family are close in magnitude,
+15:331:26677:27:27:72:524:619:121:g_d0_f4:121:g_d0_f4:while the number of observations for religious travel, retired, and homemaker travel is smaller.
+15:332:26773:27:52:88:274:592:121:g_d0_f4:121:g_d0_f4:We now turn to the empirical analysis.
+15:333:26811:52:38:72:229:540:209:g_d0_f3:209:g_d0_f3:4  Empirical Analysis
+15:334:26832:38:27:72:526:502:121:g_d0_f4:121:g_d0_f4:In this section we present the empirical approach in detail, and we also show the results. The
+15:335:26926:27:49:72:285:475:121:g_d0_f4:121:g_d0_f4:estimation equation that will be employed is
+15:336:26970:49:49:154:525:426:121:g_d0_f7:121:g_d0_f4:[|]=exp[ln+ln++++](2)
+15:337:27021:49:27:72:525:377:121:g_d0_f4:121:g_d0_f7:where, the expected patent counts of a countryin industryand yearis a function of
+15:338:27115:27:27:71:525:350:121:g_d0_f4:121:g_d0_f4:the number of business travelers at that time between countryand the U.S., other determinants
+15:339:27209:27:27:71:524:323:121:g_d0_f7:121:g_d0_f4:of country’s patenting in the U.S. (such as R&D expenditures), country-, industry- and
+15:340:27300:27:27:71:525:296:121:g_d0_f4:121:g_d0_f4:yearfixed effects (the’s), and an error term,. As noted above, we will use quasi- maximum
+15:341:27394:27:27:71:525:269:121:g_d0_f4:121:g_d0_f4:likelihood estimation (QMLE) in form of both Poisson and Negative Binomial in our empirical
+15:342:27485:27:27:71:524:242:121:g_d0_f4:121:g_d0_f4:analysis. We begin with simple Poisson QMLE and Negative Binomial regressions before moving
+15:343:27576:27:33:71:417:215:121:g_d0_f4:121:g_d0_f4:to control function and IV approaches to deal with possible endogeneity.
+15:344:27648:33:27:88:525:182:121:g_d0_f4:121:g_d0_f4:The results of estimating equation (2) are shown in Table 2. In columns 1 to 7, the dependent
+15:345:27741:27:28:71:525:155:121:g_d0_f4:121:g_d0_f4:variable is the foreign country’s patent counts taken out at the U.S. patent office, while in
+15:346:27834:28:25:72:526:127:121:g_d0_f4:121:g_d0_f4:columns 8 to 9 the dependent variable is the subset of foreign patents that have U.S. coinventors.
+15:347:27932:25:15:80:525:102:36:g_d0_f4:82:g_d0_f4:18In this analysis we focus on positive numbers of business travelers; our analysis does not necessary apply to
+15:348:28043:15:0:71:292:87:82:g_d0_f4:82:g_d0_f4:patentinginthecasewhenthereisnobusinesstravel.
+16:349:28091:0:27:72:526:675:121:g_d0_f4:121:g_d0_f4:Columns 1-6 and 8 report estimates from the Poisson model, while columns 7 and 9 from
+16:350:28176:27:27:72:525:648:121:g_d0_f4:121:g_d0_f4:the Negative Binomial model. Bootstrapped standard errors which allow for clustering at the
+16:351:28267:27:27:72:525:621:121:g_d0_f4:121:g_d0_f4:country-year level are reported in parentheses,and for the business travel variable we also show
+16:352:28363:27:27:72:525:594:121:g_d0_f4:121:g_d0_f4:the (bias-corrected) bootstrapped 95% confidence intervals.19Column 1 shows that there is a
+16:353:28454:27:27:72:525:567:121:g_d0_f4:121:g_d0_f4:strong correlation between patenting and travel from the United States, which is not reduced
+16:354:28546:27:28:72:526:540:121:g_d0_f4:121:g_d0_f4:with the inclusion of controls for size and level of development (column 2). Next we include
+16:355:28638:28:27:72:525:512:121:g_d0_f4:121:g_d0_f4:controls for domestic technology investments as well as international technology transfer. U.S.
+16:356:28733:27:27:72:525:485:121:g_d0_f4:121:g_d0_f4:FDI and U.S. exports have a positive coefficient, although only FDI is significant. Importantly,
+16:357:28829:27:27:72:525:458:121:g_d0_f4:121:g_d0_f4:the inclusion of these variables does not change the business travel coefficient by much.  In
+16:358:28922:27:33:72:449:431:121:g_d0_f4:121:g_d0_f4:column 4, we include R&D expenditures, which has the expected positive sign.
+16:359:28998:33:27:88:525:398:121:g_d0_f4:121:g_d0_f4:Recall that the left-hand side variable is a country’s industry-level patenting in the United
+16:360:29091:27:27:72:525:371:121:g_d0_f4:121:g_d0_f4:States. In column 5 the domestic patenting of the country’s residents is added. This controls
+16:361:29184:27:27:72:526:344:121:g_d0_f4:121:g_d0_f4:for technology and other shocks that lead to changes in a country’s overall patenting. We see
+16:362:29277:27:27:72:525:317:121:g_d0_f4:121:g_d0_f4:that resident patenting is strongly correlated with the country’s patenting in the United States,
+16:363:29374:27:27:72:526:290:121:g_d0_f4:121:g_d0_f4:a plausible result that holds throughout our analysis. In column 6, U.S. imports and inward
+16:364:29465:27:27:72:525:263:121:g_d0_f4:121:g_d0_f4:FDI are added, which does not change the estimated effect of business travel on U.S. patenting.
+16:365:29560:27:28:72:525:236:121:g_d0_f4:121:g_d0_f4:With the inclusion of all control variables, the business travel coefficient is estimated at around
+16:366:29659:28:27:72:526:208:121:g_d0_f4:121:g_d0_f4:2%. Domestic R&D expenditures and resident patent applications are associated with higher
+16:367:29748:27:27:72:526:181:121:g_d0_f4:121:g_d0_f4:patenting in the United States. In column 7 the estimates from the Negative Binomial model are
+16:368:29842:27:26:72:517:154:121:g_d0_f4:65:g_d0_f4:employed. The coefficient of business travel is estimated slightly higher now, at around 3%.20
+16:369:29936:26:14:80:525:128:36:g_d0_f4:82:g_d0_f4:19We cluster by country-year because some of the variables do not vary by industry; for example, GDP per
+16:370:30040:14:11:71:525:114:82:g_d0_f4:82:g_d0_f4:capita for a given year is employed for all industries. In contrast, patents on the left and the business variable on
+16:371:30157:11:8:71:222:103:82:g_d0_f4:82:g_d0_f4:theright-handsidevarybyindustry.
+16:372:30189:8:0:80:526:95:36:g_d0_f4:82:g_d0_f4:20From the confidence intervals given in Table 2 we know that the business variable is significanct at a 5% level
+17:373:30304:0:27:88:525:675:121:g_d0_f4:121:g_d0_f4:We now turn to a preliminary analysis of the economic magnitude implied by these estimates.
+17:374:30395:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:The size of the business travel coefficient suggests that a 10% increase in business travelers from
+17:375:30494:27:27:71:524:621:121:g_d0_f4:121:g_d0_f4:the U.S. is associated with an about 0.2% higher number of patent applications in the United
+17:376:30586:27:27:71:525:594:121:g_d0_f4:121:g_d0_f4:States. If we focus on foreign patents with U.S. coinventors, the coefficient estimate for business
+17:377:30685:27:27:71:525:567:121:g_d0_f4:121:g_d0_f4:traveler is about 0.03-0.04, see columns 8 and 9, compared to 0.02 for all U.S. patents in column
+17:378:30782:27:28:71:525:540:121:g_d0_f4:121:g_d0_f4:6. Thefinding of a larger coefficient for U.S. business travelers when U.S. persons are coinventors
+17:379:30881:28:33:71:525:512:121:g_d0_f4:121:g_d0_f4:is consistent with stronger international transferthrough business travel for these technologies.
+17:380:30978:33:27:88:525:479:121:g_d0_f4:121:g_d0_f4:In the previous regressions the relationship between patenting and business travel may be
+17:381:31067:27:27:71:525:452:121:g_d0_f4:121:g_d0_f7:affected by unobserved shocks which would lead to biased estimates because[]6=0
+17:382:31157:27:27:71:525:425:121:g_d0_f4:121:g_d0_f4:In particular, we are concerned that[]0because this would lead to an upward bias
+17:383:31248:27:27:72:525:398:121:g_d0_f4:121:g_d0_f4:in the business travel coefficient. We use both control function (CF) and instrumental variable
+17:384:31343:27:33:72:400:371:121:g_d0_f4:121:g_d0_f4:(IV) approaches to deal with possible endogeneity of business travel.
+17:385:31412:33:27:88:525:338:121:g_d0_f4:121:g_d0_f4:Consider the CF approachfirst. The main idea is to construct a control function such that
+17:386:31501:27:27:72:525:311:121:g_d0_f4:121:g_d0_f4:when it is included in the regression the correlation of business travel and the new regression error
+17:387:31602:27:27:72:525:284:121:g_d0_f4:121:g_d0_f4:is zero.21The control function that we propose is theresidual of a regression of business travel
+17:388:31698:27:49:71:509:257:121:g_d0_f4:121:g_d0_f4:on visiting friends & family travel. Consider the following ordinary least-squares regression:
+17:389:31792:49:49:183:525:208:121:g_d0_f9:121:g_d0_f4:ln=+++1ln+2+(3)
+17:390:31832:49:30:72:525:159:121:g_d0_f4:121:g_d0_f4:whereis the number of travelers that visit friends & family between the U.S. and country
+17:391:31924:30:7:72:222:129:82:g_d0_f4:82:g_d0_f4:or less in all specifications of Table 2.
+17:392:31965:7:15:80:525:122:36:g_d0_f4:82:g_d0_f4:21See Blundell and Powell (2003) for an overview and general results of the CF approach, and Wooldridge (2002,
+17:393:32075:15:0:71:208:107:82:g_d0_f4:82:g_d0_f4:Ch. 19) for a textbook treatment.
+18:394:32110:0:27:72:525:675:121:g_d0_f7:121:g_d0_f4:in yearand industry. Note that the estimated residualˆof this regression will tend to
+18:395:32202:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:be high whenever business travel is high relative to friends & family travel, conditional on all
+18:396:32298:27:27:71:525:621:121:g_d0_f4:121:g_d0_f4:covariates.22This would be the case if the travel destination has received tax breaks or other
+18:397:32392:27:27:72:525:594:121:g_d0_f4:121:g_d0_f4:positive shocks that make it a more attractive place to do business. Because these are the kinds
+18:398:32488:27:27:72:525:567:121:g_d0_f4:121:g_d0_f4:of circumstances that are primary concerns to us, this residualˆwill serve as our control
+18:399:32581:27:34:72:114:540:121:g_d0_f4:121:g_d0_f4:function.
+18:400:32590:34:27:88:524:506:121:g_d0_f4:121:g_d0_f4:Another issue is that the CF needs to be based on something that is related to business
+18:401:32677:27:27:72:525:479:121:g_d0_f4:121:g_d0_f4:travel.23For example, a new direct air connection from the United States to a specific foreign
+18:402:32771:27:27:72:525:452:121:g_d0_f4:121:g_d0_f4:country will typically increase both business travel and family & friends travel. In Figure 1, we
+18:403:32868:27:27:72:525:425:121:g_d0_f4:121:g_d0_f4:show the 10-year differences for friends & family versusbusiness travel in our data. There is
+18:404:32961:27:33:71:429:398:121:g_d0_f4:121:g_d0_f4:clearly a strong correlation, and this also exists for shorter periods of time.
+18:405:33040:33:27:88:225:365:121:g_d0_f4:121:g_d0_f4:[FIGURE 1 ABOUT HERE]
+18:406:33061:27:27:88:525:338:121:g_d0_f4:121:g_d0_f4:The thus constructed CFˆis added to equation (2) to yield our estimating equation for
+18:407:33150:27:49:71:155:311:121:g_d0_f4:121:g_d0_f4:the CF approach:
+18:408:33166:49:49:125:525:262:121:g_d0_f7:121:g_d0_f4:[|ˆ]=exp[ln+ln++++ˆ+](4)
+18:409:33230:49:27:72:526:213:121:g_d0_f4:121:g_d0_f4:This allows to consistently estimate the impact of business travel on patenting because the CF
+18:410:33324:27:27:72:525:186:121:g_d0_f4:121:g_d0_f4:essentiallyfilters out the factors that might cause[]6=0in equation (2). Identification
+18:411:33421:27:26:72:525:159:121:g_d0_f4:121:g_d0_f4:in this approach comes from changes in business travel conditional on changes in profitability,
+18:412:33516:26:11:80:444:133:36:g_d0_f4:82:g_d0_f4:22The definition of this traveler category in the SIAT survey is: "Visit Friends/Relatives".
+18:413:33608:11:15:80:525:122:36:g_d0_f4:82:g_d0_f4:23This requirement is analogous to a strongfirst stage correlation in the typical two-state least squares IV
+18:414:33716:15:0:71:116:107:82:g_d0_f4:82:g_d0_f4:estimation.
+19:415:33729:0:27:72:525:675:121:g_d0_f4:121:g_d0_f4:technological capability, and all other factorsthat are captured by shifts in the business versus
+19:416:33826:27:27:72:525:648:121:g_d0_f4:121:g_d0_f4:friends & family traveler relationship. In addition, the endogeneity ofcan be formally tested
+19:417:33923:27:27:72:525:621:121:g_d0_f4:121:g_d0_f4:by looking at the parameter estimate ofˆon the control function (see Wooldridge 2002, Ch.
+19:418:34013:27:27:72:525:594:121:g_d0_f4:121:g_d0_f4:19). In our case, if the control function enters equation (4) significantly, the test implies that
+19:419:34111:27:27:72:525:567:121:g_d0_f4:121:g_d0_f4:business travel is endogenous, whereas if the control function does not enter significantly the
+19:420:34206:27:34:72:302:540:121:g_d0_f4:121:g_d0_f4:exogeneity of business travel cannot be rejected.
+19:421:34255:34:27:88:525:506:121:g_d0_f4:121:g_d0_f4:As noted above, the main identification assumption is that visiting friends & family travel
+19:422:34346:27:27:72:525:479:121:g_d0_f4:121:g_d0_f4:does not transfer technology. Of course, friends & family travel to foreign countries conveys
+19:423:34439:27:27:72:525:452:121:g_d0_f4:121:g_d0_f4:information about the U.S. and its economy, but this general effect will be covered largely
+19:424:34530:27:27:72:525:425:121:g_d0_f4:121:g_d0_f4:by thefixed effects. Beyond that there is little reason to believe that friends & family travel
+19:425:34625:27:27:72:525:398:121:g_d0_f4:121:g_d0_f4:responds to short-term, time-varying shocks in the business climate and the like, as the primary
+19:426:34721:27:33:72:405:371:121:g_d0_f4:121:g_d0_f4:motive of visiting friends and family is to maintain personal relations.
+19:427:34793:33:27:88:525:338:121:g_d0_f4:121:g_d0_f4:Table 3 shows the results from a number of control function regressions (equation 3 above).
+19:428:34884:27:27:72:525:311:121:g_d0_f4:121:g_d0_f4:Column 1 corresponds to visiting friends & family travel as the only control variable, while
+19:429:34976:27:27:72:526:284:121:g_d0_f4:121:g_d0_f4:columns 2, 3, 4 and 5 successively include additional control variables. They are the number
+19:430:35068:27:27:72:525:257:121:g_d0_f4:121:g_d0_f4:of persons traveling who are retired (column 2), the number of persons who travel for religious
+19:431:35163:27:28:72:526:230:121:g_d0_f4:121:g_d0_f4:reasons (columns 3 and 5), and the number of travelers that are homemakers (4 and 5). These
+19:432:35254:28:27:72:525:202:121:g_d0_f4:121:g_d0_f4:additional travelers, whether classified by purpose, as in the case of religion, or by occupation,
+19:433:35352:27:27:72:525:175:121:g_d0_f4:121:g_d0_f4:as in the case of homemakers and retirees, share with visitors of family & friends that it is
+19:434:35445:27:27:72:526:148:121:g_d0_f4:121:g_d0_f4:reasonable to assume that they are not importantly involved in the transfer of technological
+19:435:35537:27:27:72:526:121:121:g_d0_f4:121:g_d0_f4:knowledge. As seen from Table 3, the number of each type of traveler is positively correlated
+19:436:35630:27:0:72:525:94:121:g_d0_f4:121:g_d0_f4:with business travel. The most important predictor is visiting friends & family travel, probably
+20:437:35728:0:27:72:525:675:121:g_d0_f4:121:g_d0_f4:because it is relatively common, see the summary statistics in Table 1. The coefficient on friends
+20:438:35826:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:&familytravelishighlysignificant at around 0.8, and the regressions have an R-squared upwards
+20:439:35919:27:33:71:431:621:121:g_d0_f4:121:g_d0_f4:of 0.92. These results suggest that the control function will not lack power.
+20:440:35996:33:27:88:525:588:121:g_d0_f4:121:g_d0_f4:The second approach to deal with the potential endogeneity in the business travel variable
+20:441:36086:27:27:71:525:561:121:g_d0_f4:121:g_d0_f4:is the Poisson GMM IV approach due to Mullahy (1997). The instrument that we use for the
+20:442:36174:27:28:71:525:534:121:g_d0_f4:121:g_d0_f4:business travel variable is visiting friends & family travel. The IV approach requires that the
+20:443:36269:28:27:71:525:506:121:g_d0_f4:121:g_d0_f4:friends & family travel instrument is both (1)powerful and (2) valid. Regarding the former,
+20:444:36360:27:27:71:524:479:121:g_d0_f4:121:g_d0_f4:it is evident from Figure 1 as well as from Table 3 that the instrument is strongly correlated
+20:445:36454:27:27:71:525:452:121:g_d0_f4:121:g_d0_f4:with business trave. The validity of a single instrument cannot be directly tested. At the same
+20:446:36549:27:27:71:525:425:121:g_d0_f4:121:g_d0_f4:time, consistent with the validity of the exclusion assumption, friends & family travel is not
+20:447:36643:27:27:71:525:398:121:g_d0_f4:121:g_d0_f4:significantly correlated with patenting when it is added to equation (2). However, this cannot
+20:448:36737:27:33:71:193:371:121:g_d0_f4:121:g_d0_f4:be taken as a formal test.
+20:449:36763:33:27:88:525:338:121:g_d0_f4:121:g_d0_f4:Table 4 shows the results of the control function and IV approaches. The control functions
+20:450:36853:27:27:72:525:311:121:g_d0_f9:121:g_d0_f4:ˆconstructed from the residuals of thefirst andfifth column of Table 3 are included in the
+20:451:36944:27:27:72:525:284:121:g_d0_f4:121:g_d0_f4:Poisson and Negative Binomial regressions.24Thefirst column repeats the results from Table 2,
+20:452:37037:27:27:71:525:257:121:g_d0_f4:121:g_d0_f4:column 6 with a coefficient of 2.2% for the business traveler variable. If endogeneity generates
+20:453:37133:27:28:71:525:230:121:g_d0_f4:121:g_d0_f4:an upward bias in this coefficient, upon inclusion of the control function one expects that the
+20:454:37228:28:27:72:525:202:121:g_d0_f4:121:g_d0_f4:coefficient on business travel will decrease, and that the coefficient onˆitself is positive. We
+20:455:37325:27:27:72:525:175:121:g_d0_f5:121:g_d0_f4:find that the coefficient on the business travel variable falls little, from 2.2% in column 1 to
+20:456:37421:27:27:72:525:148:121:g_d0_f4:121:g_d0_f4:2.1%. The control function point estimates are positive, around 0.55%, but not significant. In
+20:457:37515:27:26:72:525:121:121:g_d0_f4:121:g_d0_f4:column 4, we report results from the Poisson IV estimation. The coefficient on business travel
+20:458:37609:26:0:80:351:95:36:g_d0_f4:82:g_d0_f4:24The other control functions based on Table 3 give similar results.
+21:459:37679:0:33:72:375:674:121:g_d0_f4:121:g_d0_f4:is similar, at 2.4%, although somewhat less precisely estimated.
+21:460:37743:33:27:88:525:641:121:g_d0_f4:121:g_d0_f4:We also present results from the QMLE estimator with CF and the negative binomial distri-
+21:461:37832:27:27:72:525:614:121:g_d0_f4:121:g_d0_f4:butional assumption, see column 5. As in the caseof the IV Poisson estimation (column 4), this
+21:462:37926:27:27:71:525:587:121:g_d0_f4:121:g_d0_f4:yields coefficients on Population and GDP per capita which are larger than with the Poisson
+21:463:38017:27:27:72:525:560:121:g_d0_f4:121:g_d0_f4:CF approach, see columns 2 and 3. However, all estimation methods agree that the coefficient
+21:464:38109:27:27:72:526:533:121:g_d0_f4:121:g_d0_f4:on business travel is, with a range of 2.1% to 2.5%, not far from the estimate on business travel
+21:465:38206:27:33:72:343:506:121:g_d0_f4:121:g_d0_f4:under the assumption of exogeneity, at 2.1% (column 1).
+21:466:38261:33:27:88:525:473:121:g_d0_f4:121:g_d0_f4:Taken together, these results imply that the evidence for endogeneity of business travel is
+21:467:38352:27:27:72:525:446:121:g_d0_f4:121:g_d0_f4:limited. Yes, the control function is positive in columns 2, 3, and 5, but it is never significant at
+21:468:38453:27:27:72:526:419:121:g_d0_f4:121:g_d0_f4:standard levels, and based on this test we cannot reject exogeneity of business travel. Further,
+21:469:38549:27:28:72:525:392:121:g_d0_f4:121:g_d0_f4:a Hausman-type test for endogeneity based on column 1 (under the assumption of exogeneity)
+21:470:38639:28:27:72:525:364:121:g_d0_f4:121:g_d0_f4:and column 5 (IV, under the assumption of endogeneity) doesfind some evidence for differences
+21:471:38732:27:27:72:525:337:121:g_d0_f4:121:g_d0_f4:of estimated coefficients, and hence endogeneity—at the same time, the coefficient of primary
+21:472:38825:27:27:71:525:310:121:g_d0_f4:121:g_d0_f4:interest—on business travel—is almost the same under either the exogeneity or the endogeneity
+21:473:38918:27:27:71:524:283:121:g_d0_f4:121:g_d0_f4:assumption. In the end, given that our primary concern is consistency of the estimation we might
+21:474:39014:27:27:71:525:256:121:g_d0_f4:121:g_d0_f4:prefer the CF/IV estimates which are consistent whether or not business travel is endogenous.
+21:475:39107:27:33:71:504:229:121:g_d0_f4:121:g_d0_f4:However, based on our formal tests there is no reason to reject the exogeneity assumption.
+21:476:39197:33:27:88:525:196:121:g_d0_f4:121:g_d0_f4:Turning to the results for the subset of foreign patent applications in the United States with
+21:477:39291:27:27:71:524:169:121:g_d0_f4:121:g_d0_f4:U.S. coinventors on the right side of Table 4, we see that the control function correction has
+21:478:39385:27:27:71:525:142:121:g_d0_f4:121:g_d0_f4:qualitatively the same effect on the business travel coefficient, which comes down from 3.8% to
+21:479:39480:27:28:72:525:115:121:g_d0_f4:121:g_d0_f4:3.3% and the control function itself is positive but not significant (columns 6 and 7). In column
+21:480:39577:28:0:72:525:87:121:g_d0_f4:121:g_d0_f4:8, the Poisson IV procedure estimates the impact of business travel on patenting to be higher,
+22:481:39673:0:27:72:526:674:121:g_d0_f4:121:g_d0_f4:at 8.2%. The relatively large number of zeros in the dependent variable for U.S. joint patents
+22:482:39767:27:27:72:525:647:121:g_d0_f4:121:g_d0_f4:appears to make it computationally difficult to exploit the moment conditions that this estimator
+22:483:39864:27:27:72:525:620:121:g_d0_f4:121:g_d0_f4:relies on, and we are inclined to discount this higher coefficient estimate. Overall, the results
+22:484:39961:27:27:72:525:593:121:g_d0_f4:121:g_d0_f4:of Table 4 show that inward business travel from the U.S. gives a significant boost to foreign
+22:485:40055:27:33:72:508:566:121:g_d0_f4:121:g_d0_f4:countries’ patenting, and this effect is stronger in the case of patents with U.S. coinventors.
+22:486:40150:33:27:88:525:533:121:g_d0_f4:121:g_d0_f4:What are the economic magnitudes that our estimates yield? Take Poland and Romania, two
+22:487:40237:27:27:72:525:506:121:g_d0_f4:121:g_d0_f4:Eastern European countries of roughly similar size. It turns out that during the sample period
+22:488:40331:27:27:72:526:479:121:g_d0_f4:121:g_d0_f4:covered by the survey there were on average almost 6 business travelers per industry and year
+22:489:40424:27:27:72:525:452:121:g_d0_f4:121:g_d0_f4:going to Romania, and about 16 going to Poland. At the same time, the mean patenting rate in
+22:490:40516:27:28:72:525:425:121:g_d0_f4:121:g_d0_f4:Romania was 1.12 while it was 1.31 in Poland. We can use our estimates from Table 4 to gauge
+22:491:40608:28:27:72:525:397:121:g_d0_f4:121:g_d0_f4:the importance of international business travel from the U.S. in accounting for this difference
+22:492:40703:27:27:72:525:370:121:g_d0_f4:121:g_d0_f4:of 0.19 in mean patenting. The coefficient on business travel is 0.021 (column 2, Table 4). This
+22:493:40799:27:27:72:526:343:121:g_d0_f4:121:g_d0_f4:brings the predicted patenting premium for Poland over Romania attributable to the higher
+22:494:40888:27:27:72:526:316:121:g_d0_f4:121:g_d0_f11:number of U.S. business travelers to about 0.02 (equal toexp[0021×ln(131)]−exp[0021×
+22:495:40975:27:27:72:525:289:121:g_d0_f9:121:g_d0_f4:ln(112)]), or about 11% (0.02/0.19) of the total difference in patenting between Poland and
+22:496:41067:27:27:72:525:262:121:g_d0_f4:121:g_d0_f4:Romania. The contribution of travel fromallcountries, as opposed to just from the U.S., in
+22:497:41157:27:60:72:526:235:121:g_d0_f4:121:g_d0_f4:explaining variation in the patenting rates across countries is probably a small multiple of that.
+22:498:41255:60:27:88:525:175:121:g_d0_f4:121:g_d0_f4:Another way to assess the economic importance of business travel for patenting is to compare
+22:499:41347:27:28:72:525:148:121:g_d0_f4:121:g_d0_f4:it with the impact of domestic R&D expenditures. Using the marginal effects based on our Table
+22:500:41441:28:27:72:525:120:121:g_d0_f4:121:g_d0_f4:4 regression estimates, wefind that business travel has about one quarter of the size of the impact
+22:501:41540:27:0:71:526:93:121:g_d0_f4:121:g_d0_f4:of domestic R&D on patenting. Overall, these results indicate that international business travel
+23:502:41638:0:33:72:504:675:121:g_d0_f4:121:g_d0_f4:explains a moderately large portion of differences in the rate of patenting across countries.
+23:503:41731:33:27:88:525:642:121:g_d0_f4:121:g_d0_f4:These results come from a large sample of industries which exhibit a lot of variation in
+23:504:41819:27:27:72:525:615:121:g_d0_f4:121:g_d0_f4:terms of patenting activity. In the context of international technology diffusion, the question
+23:505:41914:27:27:72:526:588:121:g_d0_f4:121:g_d0_f4:is whether learning effects are predominantly associated with the sectors in which there is a
+23:506:42007:27:27:72:526:561:121:g_d0_f4:121:g_d0_f4:lot of technology creation, as opposed to with all sectors. To see this we examine whether the
+23:507:42101:27:28:72:526:534:121:g_d0_f4:121:g_d0_f4:estimated relationship between business travel and innovation holds equally for high versus low
+23:508:42196:28:27:72:525:506:121:g_d0_f4:121:g_d0_f4:patenting industries.25The results are shown in Table 5, columns 1 to 6. Column 1 repeats
+23:509:42285:27:27:71:525:479:121:g_d0_f4:121:g_d0_f4:for convenience the estimates from Table 2, column 6, while in columns 2 and 3 in addition to
+23:510:42378:27:27:71:524:452:121:g_d0_f4:121:g_d0_f4:business travel an interaction of business travel with a high patenting dummy (based on either
+23:511:42472:27:27:71:525:425:121:g_d0_f4:121:g_d0_f4:median or mean) is included. It is apparent that the coefficient on business travel is greater in
+23:512:42569:27:27:71:525:398:121:g_d0_f4:121:g_d0_f4:high patenting industries than in the average industry (coefficient of 0.029 to 0.049, compared to
+23:513:42667:27:27:71:525:371:121:g_d0_f4:121:g_d0_f4:0.022 in column 1). At the same time, for low-patenting industries the business travel estimate
+23:514:42762:27:39:71:144:344:121:g_d0_f4:121:g_d0_f4:is close to zero.
+23:515:42779:39:27:88:525:305:121:g_d0_f4:121:g_d0_f4:In columns 3 to 6 of Table 5 we show analogous results using the control function approach
+23:516:42869:27:27:71:525:278:121:g_d0_f4:121:g_d0_f4:with the Poisson assumption, where column 4 repeats the earlier results assuming that the
+23:517:42958:27:27:71:525:251:121:g_d0_f4:121:g_d0_f4:impact of business travelers on international knowledge diffusion is constant across industries
+23:518:43053:27:28:71:524:224:121:g_d0_f4:121:g_d0_f4:(from Table 4, column 2). Given the interaction of business travelers with the high-patenting
+23:519:43146:28:27:71:525:196:121:g_d0_f4:121:g_d0_f4:dummy, there are now two control functions, one from the regression on business travel on friends
+23:520:43243:27:27:71:525:169:121:g_d0_f4:121:g_d0_f4:& family travel, as before, and one from the regression of the business travel-high patenting
+23:521:43336:27:26:71:525:142:121:g_d0_f4:121:g_d0_f4:interaction on the friends & family travel-high patenting interaction. The interaction CF results
+23:522:43433:26:14:80:525:116:36:g_d0_f4:82:g_d0_f4:25In order to form high versus low patenting industries, we take into account changes in the composition across
+23:523:43544:14:11:71:524:102:82:g_d0_f4:82:g_d0_f4:countries when creating median and mean patent counts by industry. The high patenting dummy is equal to 1 if
+23:524:43652:11:0:71:437:91:82:g_d0_f4:82:g_d0_f4:patent counts for a given countryin yearand industryis higher than median/mean.
+24:525:43736:0:27:72:525:675:121:g_d0_f4:121:g_d0_f4:of columns 5 and 6 confirms the results without CF in columns 2 and 3 in that business travel
+24:526:43829:27:27:72:525:648:121:g_d0_f4:121:g_d0_f4:affects patenting mainly in high-patenting industries. This result is along earlierfindings that
+24:527:43925:27:27:72:525:621:121:g_d0_f4:121:g_d0_f4:foreign direct investment triggers technology spillovers for domesticfirms primarily in high-
+24:528:44018:27:33:72:298:594:121:g_d0_f4:121:g_d0_f4:technology industries (Keller and Yeaple 2009).
+24:529:44065:33:27:88:530:561:121:g_d0_f4:121:g_d0_f4:Finally, we show results from another specificationcheckinTable5onthefarright. So
+24:530:44146:27:28:72:525:534:121:g_d0_f4:121:g_d0_f4:far our business traveler variable was adjusted for differences in the knowledge carried by each
+24:531:44242:28:27:71:525:506:121:g_d0_f4:121:g_d0_f4:traveler by using information on whether their U.S. state of departure is a high- or low-patenting
+24:532:44340:27:27:71:525:479:121:g_d0_f4:121:g_d0_f4:origin (see equation 1 above). Another approach would simply sum over all business travelers
+24:533:44432:27:27:71:525:452:121:g_d0_f4:121:g_d0_f4:irrespective of from which U.S. state they come. Results for this unweighted business traveler
+24:534:44526:27:27:71:524:425:121:g_d0_f4:121:g_d0_f4:variable are shown in columns 7 (without CF) and 8 (with CF) of Table 5. We see that the
+24:535:44614:27:27:71:525:398:121:g_d0_f4:121:g_d0_f4:point estimates for business traveler are about one half of what they were before (see columns 1
+24:536:44710:27:27:71:525:371:121:g_d0_f4:121:g_d0_f4:and 4 of Table 5), and moreover the unweighted business traveler coefficients are not significant
+24:537:44807:27:27:71:525:344:121:g_d0_f4:121:g_d0_f4:at standard levels. We conclude that accounting for technological knowledge heterogeneity is
+24:538:44899:27:33:71:367:317:121:g_d0_f4:121:g_d0_f4:very important in studying international technology diffusion.
+24:539:44961:33:27:88:525:284:121:g_d0_f4:121:g_d0_f4:We have also conducted a number of other robustness checks, including lagging the patent
+24:540:45049:27:27:71:525:257:121:g_d0_f4:121:g_d0_f4:variable so as to further reduce the possibility that patent applications in the U.S. simply mirror
+24:541:45148:27:28:71:526:230:121:g_d0_f4:121:g_d0_f4:domestic patent applications, as well as laggingthe business traveler variable to allow for the
+24:542:45243:28:27:71:525:202:121:g_d0_f4:121:g_d0_f4:possibility that it might take some time until business travel from the U.S. translates into
+24:543:45335:27:27:71:525:175:121:g_d0_f4:121:g_d0_f4:domestic innovation.  Overall these analyses have shown that the impact from U.S. business
+24:544:45425:27:33:71:399:148:121:g_d0_f4:121:g_d0_f4:travel on foreign countries’ rates of innovation we estimate is robust.
+24:545:45496:33:0:88:281:115:121:g_d0_f4:121:g_d0_f4:We now turn to a concluding discussion.
+25:546:45537:0:38:72:196:673:209:g_d0_f3:209:g_d0_f3:5Conclusions
+25:547:45549:38:27:72:525:635:121:g_d0_f4:121:g_d0_f4:The basic premise of the paper is that face-to-face meetings might be particularly important
+25:548:45641:27:27:72:526:608:121:g_d0_f4:121:g_d0_f4:for the transfer of technology because the latter is tacit, and therefore best explained and
+25:549:45733:27:27:72:525:581:121:g_d0_f4:121:g_d0_f4:demonstrated in person. Along these lines this paper has examined the impact of inward business
+25:550:45828:27:28:71:525:554:121:g_d0_f4:121:g_d0_f4:travelers in raising a country’s rate of innovation by looking at business travel from the United
+25:551:45925:28:27:71:524:526:121:g_d0_f4:121:g_d0_f4:States to thirty-four other countries during the years 1993-2003.  The results indicate that
+25:552:46017:27:27:71:525:499:121:g_d0_f4:121:g_d0_f4:international business travel has a significant effect. Quantitatively, the impact of business travel
+25:553:46118:27:27:72:525:472:121:g_d0_f4:121:g_d0_f4:on innovation is sizable. It accounts in the typical case for about 10% of the total difference
+25:554:46213:27:27:72:525:445:121:g_d0_f4:121:g_d0_f4:in patenting rates, and its contribution is about one quarter of the impact of domestic R&D
+25:555:46304:27:27:72:526:418:121:g_d0_f4:121:g_d0_f4:spending. Moreover, there is strong evidence that the impact on innovation depends on the
+25:556:46393:27:33:72:416:391:121:g_d0_f4:121:g_d0_f4:quality of the technological knowledge carried by each business traveler.
+25:557:46466:33:27:88:525:358:121:g_d0_f4:121:g_d0_f4:While international migration has long been a hot topic in debates on labor market policies,
+25:558:46558:27:27:72:525:331:121:g_d0_f4:121:g_d0_f4:some recent work has started to address anotherset of policy questions by linking long-term
+25:559:46649:27:27:72:526:304:121:g_d0_f4:121:g_d0_f4:immigration to innovation in an economy (Peri 2007, Hunt and Gauthier-Loiselle 2010, Stuen,
+25:560:46740:27:27:72:526:277:121:g_d0_f4:121:g_d0_f4:Mobarak, and Maskus 2012). In contrast, our research informs policymakers by examining how
+25:561:46830:27:27:72:525:250:121:g_d0_f4:121:g_d0_f4:strongly short-term cross-border movements might affect innovation. In particular, given that
+25:562:46923:27:27:72:526:223:121:g_d0_f4:121:g_d0_f4:entry requirements often reduce the number of business travelers that come to a country, our
+25:563:47015:27:27:72:525:196:121:g_d0_f4:121:g_d0_f4:results provide some initial guidance on the cost of visa or other entry requirements in terms
+25:564:47109:27:27:72:525:169:121:g_d0_f4:121:g_d0_f4:of innovation that can be compared to the benefits entry barriers might have.  Our analysis
+25:565:47200:27:28:72:525:142:121:g_d0_f4:121:g_d0_f4:also provides a new perspective on other key policy questions, for example the liberalization of
+25:566:47296:28:27:72:525:114:121:g_d0_f4:121:g_d0_f4:international trade in services. Specifically, thefinding that business air travel raises innovation
+25:567:47396:27:0:72:525:87:121:g_d0_f4:121:g_d0_f4:suggests that the liberalization of international passenger air travel, by lowering fares, might
+26:568:47494:0:33:72:399:675:121:g_d0_f4:121:g_d0_f4:yield substantial gains in terms of economic growth across countries.
+26:569:47563:33:27:88:524:642:121:g_d0_f4:121:g_d0_f4:While our results suggest that short-term international labor movements could be an impor-
+26:570:47653:27:27:72:525:615:121:g_d0_f4:121:g_d0_f4:tant way through which cross-country income differences can be reduced, more work needs to be
+26:571:47746:27:27:71:525:588:121:g_d0_f4:121:g_d0_f4:done. A particularly promising direction of future work may be to include more geographic de-
+26:572:47839:27:27:71:524:561:121:g_d0_f4:121:g_d0_f4:tail, perhaps isolating key states, such as California. It would also be interesting to see whether a
+26:573:47940:27:28:71:525:534:121:g_d0_f4:121:g_d0_f4:country’sownoutwardbusinesstravelisaffecting innovation as strongly, or even more strongly,
+26:574:48031:28:27:71:525:506:121:g_d0_f4:121:g_d0_f4:as the inward business travel from the United States. Finally, there are important questions
+26:575:48123:27:27:71:525:479:121:g_d0_f4:121:g_d0_f4:regarding the degree of complementarity or substitutability between cross-border travel, trade,
+26:576:48218:27:0:71:320:452:121:g_d0_f4:121:g_d0_f4:and FDI that needs to be addressed by future work.
+27:577:48270:0:38:72:147:673:209:g_d0_f3:209:g_d0_f3:References
+27:578:48280:38:27:77:525:635:121:g_d0_f4:121:g_d0_f4:[1] Acharya, Ram, and Wolfgang Keller (2009), "Technology Transfer Through Imports",
+27:579:48364:27:36:94:250:608:121:g_d0_f10:121:g_d0_f4:Canadian Journal of Economics.
+27:580:48394:36:27:77:525:572:121:g_d0_f4:121:g_d0_f4:[2] Aghion, P., and Howitt, P. (1998),Endogenous Growth Theory, MIT Press, Cambridge,
+27:581:48479:27:36:94:115:545:121:g_d0_f4:121:g_d0_f4:MA.
+27:582:48482:36:28:77:525:509:121:g_d0_f4:121:g_d0_f4:[3] Agrawal, A., Cockburn, I. and McHale, J. (2006), "Gone but not forgotten: knowledge
+27:583:48569:28:27:94:525:481:121:g_d0_f5:121:g_d0_f4:flows, labor mobility, and enduring social relationships",Journal of Economic Geography,
+27:584:48657:27:36:94:215:454:121:g_d0_f4:121:g_d0_f4:vol. 6, no. 5, pp. 571-591.
+27:585:48684:36:27:77:525:418:121:g_d0_f4:121:g_d0_f4:[4] Agrawal, A., Kapur, D. and McHale, J. (2008), "How do spatial and social proximity
+27:586:48770:27:27:94:528:391:121:g_d0_f4:121:g_d0_f4:influence knowledgeflows? Evidence from patent data",Journal of Urban Economics,vol.
+27:587:48854:27:36:94:200:364:121:g_d0_f4:121:g_d0_f4:64, no. 2, pp. 258-269.
+27:588:48877:36:27:77:525:328:121:g_d0_f4:121:g_d0_f4:[5] Andersen, T.B. and Dalgaard, C.J. (2011), "Flows of people,flows of ideas, and the in-
+27:589:48967:27:36:94:449:301:121:g_d0_f4:121:g_d0_f4:equality of nations",Journal of Economic Growth, vol. 16, no. 2, pp. 1-31.
+27:590:49041:36:27:77:525:265:121:g_d0_f4:121:g_d0_f4:[6] Bernard, A., S. Redding, and P. Schott, (2010), “Multiple-Product Firms and Product
+27:591:49128:27:36:94:416:238:121:g_d0_f4:121:g_d0_f4:Switching.”American Economic Review, vol. 100, no. 1, pp. 70—97.
+27:592:49192:36:27:77:525:202:121:g_d0_f4:121:g_d0_f4:[7] Blundell, R. , and Powell, J.L. (2003), "Endogeneity in nonparametric and semiparametric
+27:593:49284:27:28:94:525:175:121:g_d0_f4:121:g_d0_f4:regression models",Advances in Economics and Econometrics:  Theory and Applications,
+27:594:49368:28:0:94:271:147:121:g_d0_f4:121:g_d0_f4:Eighth World Congress, pp. 655—679.
+28:595:49405:0:27:77:525:674:121:g_d0_f4:121:g_d0_f4:[8] Burstein, A., and Monge-Naranjo, A. (2009), "Foreign Know-How, Firm Control, and the
+28:596:49493:27:27:94:525:647:121:g_d0_f4:121:g_d0_f4:Income of Developing Countries",Quarterly  Journal  of  Economics, vol. 124, no. 1, pp.
+28:597:49580:27:36:94:133:620:121:g_d0_f4:121:g_d0_f4:149-195.
+28:598:49588:36:27:77:525:584:121:g_d0_f4:121:g_d0_f4:[9] Cristea, A.D.( 2011), "Buyer-Seller Relationships in International Trade: Evidence from
+28:599:49679:27:27:94:530:557:121:g_d0_f4:121:g_d0_f4:US States’ Exports and Business-Class Travel",Journal of International Economics,vol.
+28:600:49764:27:36:94:197:530:121:g_d0_f4:121:g_d0_f4:84, no. 2, pp. 207-220
+28:601:49786:36:27:71:525:494:121:g_d0_f4:121:g_d0_f4:[10] Dowrick, S. and Tani, M. (2011), "International Business Visits and the Technology Fron-
+28:602:49879:27:36:94:349:467:121:g_d0_f4:121:g_d0_f4:tier",Economics Letters, vol. 110, no. 3, pp. 209-212.
+28:603:49933:36:36:72:525:431:121:g_d0_f4:121:g_d0_f4:[11] Forbes (2009), "Business Meeting: The Case for Face-to-Face”, Forbes Insights Study, 2009.
+28:604:50028:36:27:72:525:395:121:g_d0_f4:121:g_d0_f4:[12] Foster, L., Haltiwanger, J., and Syverson, C., (2008), “Reallocation, Firm Turnover, and
+28:605:50121:27:27:94:530:368:121:g_d0_f4:121:g_d0_f4:Efficiency: Selection on Productivity or Profitability?”American Economic Review,vol.
+28:606:50206:27:37:94:202:341:121:g_d0_f4:121:g_d0_f4:98, no. 1, pp. 394—425.
+28:607:50229:37:27:71:525:304:121:g_d0_f4:121:g_d0_f4:[13] Gambardella, A., Mariani, M. and Torrisi, S. (2009), "How provincial is your region? Effects
+28:608:50326:27:27:94:525:277:121:g_d0_f4:121:g_d0_f4:on labour productivity and employment in Europe",Regional Studies, vol. 43, no. 7, pp.
+28:609:50412:27:36:94:133:250:121:g_d0_f4:121:g_d0_f4:935-947.
+28:610:50420:36:27:71:525:214:121:g_d0_f4:121:g_d0_f4:[14] Hall, B., Jaffe, A., and Trajtenberg, M. (2001), "The NBER Patent Citation Data File:
+28:611:50510:27:36:94:448:187:121:g_d0_f4:121:g_d0_f4:Lessons, Insights and Methodological Tools." NBER Working Paper 8498.
+28:612:50579:36:27:71:525:151:121:g_d0_f4:121:g_d0_f10:[15] Howitt, P. (2000), "Endogenous Growth and Cross-Country Income Differences",American
+28:613:50668:27:0:94:307:124:121:g_d0_f10:121:g_d0_f4:Economic Review, vol. 90, no 4, pp. 829-846.
+29:614:50714:0:27:72:525:674:121:g_d0_f4:121:g_d0_f4:[16] Hsieh, C. and Klenow, P. (2009), “Misallocation and Manufacturing TFP in China and
+29:615:50801:27:36:94:434:647:121:g_d0_f4:121:g_d0_f4:India.”Quarterly Journal of Economics, vol. 124, no. 4, pp. 1403-1448.
+29:616:50871:36:27:72:525:611:121:g_d0_f4:121:g_d0_f4:[17] Hunt, J., and Gauthier-Loiselle M. (2010), "How much does immigration boost innova-
+29:617:50959:27:36:94:469:584:121:g_d0_f4:121:g_d0_f4:tion?",American Economic Journal: Macroeconomics, vol. 2, no. 2, pp. 31-56.
+29:618:51034:36:27:72:526:548:121:g_d0_f4:121:g_d0_f4:[18] HBR (2009), "Managing Across Distance in Today’s Economic Climate:  The Value of
+29:619:51119:27:36:94:397:521:121:g_d0_f4:121:g_d0_f4:Face-to-Face Communication”, Harvard Business Review, 2009.
+29:620:51178:36:27:72:525:485:121:g_d0_f4:121:g_d0_f10:[19] Jones, C. (2002), "Sources of U.S. Economic Growth in a World of Ideas",American Eco-
+29:621:51268:27:36:94:293:458:121:g_d0_f10:121:g_d0_f4:nomic Review, vol. 92, no. 1, pp. 220-239.
+29:622:51310:36:27:72:526:422:121:g_d0_f4:121:g_d0_f4:[20] Keller, W. (2010), "International Trade, Foreign Direct Investment, and Technology
+29:623:51397:27:27:94:529:395:121:g_d0_f4:121:g_d0_f4:Spillovers", Chapter 19 inHandbook of the Economics of Innovation,Vol.2,B.Halland
+29:624:51478:27:36:94:312:368:121:g_d0_f4:121:g_d0_f4:N. Rosenberg (eds.), Elsevier, North-Holland.
+29:625:51523:36:28:72:525:332:121:g_d0_f4:121:g_d0_f4:[21] Keller, W. (2004), "International Technology Diffusion",Journal of Economic Literature,
+29:626:51615:28:36:94:218:304:121:g_d0_f4:121:g_d0_f4:vol. 42, no. 3, pp. 752-782
+29:627:51642:36:27:72:525:268:121:g_d0_f4:121:g_d0_f10:[22] Keller, W. (2002), "Geographic Localization of International Technology Diffusion",Amer-
+29:628:51735:27:36:94:245:241:121:g_d0_f10:121:g_d0_f4:ican Economic Review,March.
+29:629:51762:36:27:72:525:205:121:g_d0_f4:121:g_d0_f10:[23] Keller, W., and S. Yeaple (2012), "The Gravity of Knowledge", forthcoming,American
+29:630:51849:27:36:94:180:178:121:g_d0_f10:121:g_d0_f4:Economic Review.
+29:631:51865:36:27:72:525:142:121:g_d0_f4:121:g_d0_f4:[24] Keller, W. and Yeaple, S. (2009), "Multinational enterprises, international trade, and pro-
+29:632:51961:27:27:94:525:115:121:g_d0_f4:121:g_d0_f10:ductivity growth:firm-level evidence from the United States",The Review of Economics
+29:633:52045:27:0:94:291:88:121:g_d0_f10:121:g_d0_f4:and Statistics, vol. 91, no. 4, pp. 821-831.
+30:634:52091:0:27:72:525:674:121:g_d0_f4:121:g_d0_f4:[25] Kerr, W.R. (2008), "Ethnic scientific communities and international technology diffusion",
+30:635:52186:27:36:94:418:647:121:g_d0_f10:121:g_d0_f4:The Review of Economics and Statistics, vol. 90, no. 3, pp. 518-537.
+30:636:52254:36:27:72:525:611:121:g_d0_f4:121:g_d0_f4:[26] Kim, J., Lee, S. and Marschke, G. (2006), "International Knowledge Flows: Evidence from
+30:637:52346:27:36:94:420:584:121:g_d0_f4:121:g_d0_f4:an Inventor-Firm Matched Data Set", NBER Working Paper 12692.
+30:638:52407:36:27:72:526:548:121:g_d0_f4:121:g_d0_f4:[27] Koskinen, K., and Vanharanta, H. (2002), "The role of tacit knowledge in innovation
+30:639:52495:27:27:94:525:521:121:g_d0_f4:121:g_d0_f4:processes of small technology companies",International Journal of Production Economics,
+30:640:52582:27:36:94:207:494:121:g_d0_f4:121:g_d0_f4:vol. 80, no. 1, pp. 57-64
+30:641:52607:36:27:72:526:458:121:g_d0_f4:121:g_d0_f4:[28] Le, T. (2008), "Brain Drain or Brain Circulation: Evidence from OECD’s International
+30:642:52696:27:27:94:525:431:121:g_d0_f4:121:g_d0_f4:Migration and R&D Spillovers",Scottish Journal of Political Economy, vol. 55, no. 5, pp.
+30:643:52784:27:36:94:133:404:121:g_d0_f4:121:g_d0_f4:618-636.
+30:644:52792:36:36:72:483:368:121:g_d0_f4:121:g_d0_f4:[29] Lucas, R. (1993), "Making a Miracle",Econometrica, vol. 61, no. 2 , pp. 251-272.
+30:645:52877:36:28:72:525:332:121:g_d0_f4:121:g_d0_f4:[30] Mullahy J., (1997), "Instrumental variable estimation of Poisson regression models: appli-
+30:646:52972:28:27:94:529:304:121:g_d0_f4:121:g_d0_f4:cation to models of cigarette smoking behavior",Review of Economics and Statistics,vol.
+30:647:53059:27:36:94:170:277:121:g_d0_f4:121:g_d0_f4:79, pp. 586-593.
+30:648:53075:36:27:72:525:241:121:g_d0_f4:121:g_d0_f4:[31] Oettl, A. and Agrawal, A. (2008), "International labor mobility and knowledgeflow exter-
+30:649:53168:27:36:94:483:214:121:g_d0_f4:121:g_d0_f4:nalities",Journal of International Business Studies, vol. 39, no. 8, pp. 1242-1260.
+30:650:53251:36:27:72:525:178:121:g_d0_f4:121:g_d0_f4:[32] Olley, G.S. and Pakes, A. (1996), "The dynamics of productivity in the telecommunications
+30:651:53345:27:0:94:408:151:121:g_d0_f4:121:g_d0_f4:equipment industry",Econometrica, vol. 64, no. 6, pp. 1263-1297.
+31:652:53411:0:27:72:525:674:121:g_d0_f4:121:g_d0_f4:[33] Peri, G. (2007), "Higher Education, Innovation and Growth". In Giorgio Brunello, Pietro
+31:653:53503:27:27:94:528:647:121:g_d0_f4:121:g_d0_f4:Garibaldi and Etienne Wasmer (eds.),Education and Training in Europe,Oxford:Oxford
+31:654:53585:27:35:94:175:620:121:g_d0_f4:121:g_d0_f4:University Press.
+31:655:53602:35:27:71:530:585:121:g_d0_f4:121:g_d0_f4:[34] Polanyi, M. (1958),Personal knowledge;  towards a post-critical philosophy,Universityof
+31:656:53694:27:34:94:226:558:121:g_d0_f4:121:g_d0_f4:Chicago Press, Chicago, IL.
+31:657:53721:34:27:72:526:524:121:g_d0_f4:121:g_d0_f4:[35] Poole, J. (2010), "Business Travel as an Input to International Trade", mimeo, University
+31:658:53815:27:35:94:258:497:121:g_d0_f4:121:g_d0_f4:of California-Santa Cruz, January.
+31:659:53849:35:27:72:525:462:121:g_d0_f4:121:g_d0_f10:[36] Rauch, J.E. (2001), "Business and social networks in international trade",Journal of Eco-
+31:660:53943:27:35:94:318:435:121:g_d0_f10:121:g_d0_f4:nomic Literature, vol. 39, no. 4, pp. 1177-1203.
+31:661:53991:35:27:72:525:400:121:g_d0_f4:121:g_d0_f10:[37] Santos Silva, J., and Tenreyro S. (2006), "The Log of Gravity",Review of Economics and
+31:662:54082:27:35:94:271:373:121:g_d0_f10:121:g_d0_f4:Statistics, vol. 88, no. 4, pp. 641-658.
+31:663:54122:35:27:72:525:338:121:g_d0_f4:121:g_d0_f4:[38] Singh, J. (2005), "Collaborative Networks as Determinants of Knowledge Diffusion Pat-
+31:664:54212:27:35:94:364:311:121:g_d0_f4:121:g_d0_f4:terns",Management Science,vol. 51, no. 5, pp. 756-770.
+31:665:54266:35:27:71:525:276:121:g_d0_f4:121:g_d0_f4:[39] Stuen, E., Mobarak, M., and Maskus, K. (2012), "Skilled immigration and innovation:
+31:666:54354:27:27:94:525:249:121:g_d0_f4:121:g_d0_f10:evidence from enrollmentfluctuations in U.S. doctoral programs", forthcoming,Economic
+31:667:54439:27:35:94:130:222:121:g_d0_f10:121:g_d0_f10:Journal
+31:668:54446:35:27:71:525:187:121:g_d0_f4:121:g_d0_f4:[40] Wooldridge, J. (2002),Econometric Analysis of Cross Section and Panel Data,MIT Press,
+31:669:54536:27:35:94:174:160:121:g_d0_f4:121:g_d0_f4:Cambridge, MA.
+31:670:54550:35:27:71:525:125:121:g_d0_f4:121:g_d0_f4:[41] WTO (2006), "Second Review of the Air Transport Annex", Volumes I and II, Note by the
+31:671:54640:27:0:94:298:98:121:g_d0_f4:121:g_d0_f4:Secretariat, document S/C/W/270/Add.1.
+32:672:54680:0:38:72:181:673:209:g_d0_f3:209:g_d0_f3:6Appendix
+32:673:54689:38:43:72:464:635:121:g_d0_f4:121:g_d0_f4:This section gives the details on the sources and construction of our the variables.
+32:674:54773:43:27:88:525:592:121:g_d0_f3:121:g_d0_f4:InnovationU.S. patent counts: The data on U.S. patents issued from 1993-2003 comes
+32:675:54855:27:27:72:525:565:121:g_d0_f4:121:g_d0_f4:from the United States Patent and Trademark Office (USPTO), Custom Data Extracts. The
+32:676:54940:27:27:72:525:538:121:g_d0_f4:121:g_d0_f4:individual inventor database, which has address information (street, city, state, country of res-
+32:677:55037:27:27:72:526:511:121:g_d0_f4:121:g_d0_f4:idence, etc.)  for each of multiple inventors per patent, is combined with the bibliographical
+32:678:55131:27:27:72:525:484:121:g_d0_f4:121:g_d0_f4:patent database, which has application month and year, as well as original USPTO technolog-
+32:679:55222:27:27:72:525:457:121:g_d0_f4:121:g_d0_f7:ical category for each patent. If a patent has multiple inventors, we assign a fraction of1
+32:680:55315:27:27:72:525:430:121:g_d0_f4:121:g_d0_f4:to each inventors country of residence, whereis the number of inventors.  Using the origi-
+32:681:55406:27:27:72:526:403:121:g_d0_f4:121:g_d0_f4:nal USPTO technological categories, each patent is assigned to one of 37 subcategories based
+32:682:55498:27:27:72:525:376:121:g_d0_f4:121:g_d0_f4:on NBER patent classification (Hall et al. 2001). Then using application year for each patent,
+32:683:55592:27:28:72:526:349:121:g_d0_f4:121:g_d0_f4:patents are aggregated by foreign country and technological subcategory for each year 1993-2003
+32:684:55687:28:27:72:472:321:121:g_d0_f4:121:g_d0_f4:to obtain patent counts by foreign countries and industries for each year 1993-2003.
+32:685:55771:27:27:88:525:294:121:g_d0_f4:121:g_d0_f4:Joint U.S. patent counts: To identify patents which have a combination of foreign and U.S.
+32:686:55861:27:27:72:525:267:121:g_d0_f4:121:g_d0_f4:coinventors we also calculated foreign patent counts of only patents for which there is at least one
+32:687:55961:27:27:72:526:240:121:g_d0_f4:121:g_d0_f4:U.S. coinventor. Using the same methodology as above, foreign patents with at least one U.S.
+32:688:56053:27:27:72:525:213:121:g_d0_f4:121:g_d0_f4:coinventor are obtained by aggregating by foreign country and industry for each year 1993-2003.
+32:689:56148:27:27:88:525:186:121:g_d0_f4:121:g_d0_f4:U.S. patent stock by states and by industries: For the sample period 1993-2003, each patent
+32:690:56239:27:27:72:524:159:121:g_d0_f4:121:g_d0_f4:with multiple inventors is assigned a fraction of1,whereis the number of inventors. Then
+32:691:56330:27:27:72:525:132:121:g_d0_f4:121:g_d0_f4:keeping only U.S. inventors, patent counts are aggregated to a given state for each year during
+32:692:56425:27:0:72:526:105:121:g_d0_f4:121:g_d0_f4:1993-2003. Similarly, patent counts are aggregated to a given industry for each year 1993-2003.
+33:693:56522:0:27:88:525:675:121:g_d0_f3:121:g_d0_f4:TravelThe data on international air travel comes from the Survey of International Air
+33:694:56607:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:Travelers (SIAT), which is conducted by the United States Office of Travel and Tourism In-
+33:695:56697:27:27:71:525:621:121:g_d0_f4:121:g_d0_f4:dustries, a branch of the International Trade Administration, U.S. Department of Commerce.
+33:696:56787:27:27:71:525:594:121:g_d0_f4:121:g_d0_f4:SIAT collects data on non-U.S. residents traveling to the U.S. and U.S. residents traveling from
+33:697:56883:27:27:71:524:567:121:g_d0_f4:121:g_d0_f4:the U.S (excluding Canada). This survey has been carried out monthly starting from 1983 on
+33:698:56973:27:28:71:525:540:121:g_d0_f4:121:g_d0_f4:randomly selectedflights from the major U.S. international gateway airports for over 70 partic-
+33:699:57068:28:27:71:525:512:121:g_d0_f4:121:g_d0_f4:ipating domestic and foreign airlines. Questionnaires in 12 languages are distributed onboard
+33:700:57161:27:27:71:311:485:121:g_d0_f4:121:g_d0_f4:U.S. outboundflight to international destinations.
+33:701:57211:27:27:88:525:458:121:g_d0_f4:121:g_d0_f4:In this paper we use data on U.S. residents traveling from the United States to foreign
+33:702:57298:27:27:71:525:431:121:g_d0_f4:121:g_d0_f4:countries in the period of 1993-2003. Outbound U.S. resident travel data is an individual level
+33:703:57393:27:27:71:525:404:121:g_d0_f4:121:g_d0_f4:database which has information on travelers’ U.S. county of residence, country of citizenship,
+33:704:57487:27:27:71:524:377:121:g_d0_f4:121:g_d0_f4:main purpose of the trip, secondary purposes of the trip, main destination foreign cities, sec-
+33:705:57582:27:27:71:525:350:121:g_d0_f4:121:g_d0_f4:ondary destination foreign cities, occupation, quarter and year of travel. Trips can be made
+33:706:57674:27:27:71:525:323:121:g_d0_f4:121:g_d0_f4:for the purpose of business, visiting friends and relatives, and religious, among others. Possible
+33:707:57772:27:27:71:525:296:121:g_d0_f4:121:g_d0_f4:occupations include homemaker and retired, among others. Main destination and secondary
+33:708:57859:27:28:71:525:269:121:g_d0_f4:121:g_d0_f4:destination cities are both coded.  Individual observations are expanded if a particular indi-
+33:709:57953:28:27:71:525:241:121:g_d0_f4:121:g_d0_f4:vidual traveled to distinct destination countries, treating each destination as a separate trip.
+33:710:58049:27:27:71:525:214:121:g_d0_f4:121:g_d0_f4:If a particular traveler mentioned multiple purposes of the trip, each purpose is given equal
+33:711:58142:27:27:71:525:187:121:g_d0_f4:121:g_d0_f4:weight. Further, expanded individual travel observations are aggregated by purpose of the trip
+33:712:58236:27:27:71:430:160:121:g_d0_f4:121:g_d0_f4:and occupations by U.S. state and foreign country for each year 1993-2003.
+33:713:58310:27:27:88:525:133:121:g_d0_f4:121:g_d0_f4:Our main variable of interest isthe number of business travelers from stateto foreign
+33:714:58401:27:0:72:525:106:121:g_d0_f4:121:g_d0_f4:countryin year. We calculated the number of travelers who are visiting friends and family, are
+34:715:58499:0:27:72:525:675:121:g_d0_f4:121:g_d0_f4:traveling for religious reasons, or are retired or homemakers in the same way. These aggregated
+34:716:58594:27:27:71:525:648:121:g_d0_f4:121:g_d0_f4:travel variables are weighted by the ratio of U.S. state-industry patent stock to real state GDP
+34:717:58690:27:27:72:526:621:121:g_d0_f4:121:g_d0_f4:and a given industry’s strength in the U.S. (source: U.S. department of Commerce, Bureau of
+34:718:58781:27:27:72:525:594:121:g_d0_f4:121:g_d0_f4:Economic Analysis, BEA), see equation (1). Thefinal travel variables are in natural logarithms,
+34:719:58876:27:27:72:525:567:121:g_d0_f4:121:g_d0_f4:with one added to each value. Furthermore, in this analysis we only consider positive numbers
+34:720:58969:27:43:72:170:540:121:g_d0_f4:121:g_d0_f4:of business travelers.
+34:721:58991:43:27:88:525:497:121:g_d0_f3:121:g_d0_f4:Other variablesPopulation size, real GDP per capita for each year 1993-2003 and country
+34:722:59078:27:27:72:525:470:121:g_d0_f4:121:g_d0_f4:are obtained from Penn World Tables, version6.2. U.S. exports and imports by country and
+34:723:59166:27:27:72:526:443:121:g_d0_f4:121:g_d0_f4:year 1993-2003 are collected from U.S. Census Bureau (www.usatradeonline.gov).  U.S. FDI
+34:724:59254:27:27:72:526:416:121:g_d0_f4:121:g_d0_f4:by destination countries and years 1993-2003 is proxied by the total sales of U.S. majority-
+34:725:59346:27:27:72:525:389:121:g_d0_f4:121:g_d0_f4:owned multinational affiliates and comes from U.S. Bureau of Economic Analysis (BEA). FDI
+34:726:59435:27:27:72:525:362:121:g_d0_f4:121:g_d0_f4:to U.S. by countries and years is captured by the total sales of nonbank U.S. affiliates of foreign
+34:727:59534:27:27:72:525:335:121:g_d0_f4:121:g_d0_f4:multinationalfirmsandcomesfromBEA.Grossdomestic expenditures on R&D expenditures
+34:728:59614:27:28:72:526:308:121:g_d0_f4:121:g_d0_f4:(GERD) for each country in year 1993-2003 are obtained from OECD Statistics, which has data
+34:729:59705:28:27:72:526:280:121:g_d0_f4:121:g_d0_f4:on OECD countries as well as some non-OECD member economies. Each country’s domestic
+34:730:59789:27:27:72:525:253:121:g_d0_f4:121:g_d0_f4:patent applications (byfirst named inventor) by residents of that country in 1993-2003 are from
+34:731:59884:27:27:72:526:226:121:g_d0_f4:121:g_d0_f4:World Intellectual Property Organization (WIPO). All control variables employed in the analysis
+34:732:59979:27:27:72:525:199:121:g_d0_f4:121:g_d0_f4:are in natural logarithms. Thefinal dataset is an unbalanced sample for 34 countries and 37
+34:733:60070:27:0:72:236:172:121:g_d0_f4:121:g_d0_f4:industries for the years 1993-2003.
+35:734:60107:0:29:52:400:697:122:g_d0_f21:122:g_d0_f21:Variable        Mean   Std. Dev.    MinMax
+35:735:60149:29:14:52:111:668:122:g_d0_f21:122:g_d0_f21:US Patenting
+35:736:60161:14:15:60:401:654:122:g_d0_f23:122:g_d0_f23:US patent counts101.319   322.75003748
+35:737:60199:15:29:60:396:639:122:g_d0_f23:122:g_d0_f23:Joint US patent counts2.0705.761077
+35:738:60234:29:15:52:138:610:122:g_d0_f21:122:g_d0_f21:US Resident Travel
+35:739:60252:15:14:60:402:595:122:g_d0_f23:122:g_d0_f23:Business travel1.5061.48008.923
+35:740:60283:14:15:60:402:581:122:g_d0_f23:122:g_d0_f23:Visit friends & family travel1.4211.48908.792
+35:741:60328:15:14:60:402:566:122:g_d0_f23:122:g_d0_f23:Religious travel0.0770.33504.217
+35:742:60360:14:15:60:402:552:122:g_d0_f23:122:g_d0_f23:Retired travel0.9801.23707.115
+35:743:60390:15:29:60:402:537:122:g_d0_f23:122:g_d0_f23:Homemaker travel0.5710.96807.241
+35:744:60422:29:14:52:124:508:122:g_d0_f21:122:g_d0_f21:Other Variables
+35:745:60437:14:15:60:406:494:122:g_d0_f23:122:g_d0_f23:Population10.1331.5195.61914.062
+35:746:60469:15:14:60:406:479:122:g_d0_f23:122:g_d0_f23:Real GDP per capita9.7450.5667.59910.783
+35:747:60509:14:15:60:405:465:122:g_d0_f23:122:g_d0_f23:US exports22.8091.29718.544    25.436
+35:748:60546:15:14:60:405:450:122:g_d0_f23:122:g_d0_f23:US FDI24.0711.56116.300    26.734
+35:749:60579:14:15:60:405:436:122:g_d0_f23:122:g_d0_f23:R&D expenditures22.6541.34218.821    25.385
+35:750:60622:15:14:60:406:421:122:g_d0_f23:122:g_d0_f23:Resident patent applications8.2951.9323.71412.859
+35:751:60671:14:15:60:405:407:122:g_d0_f23:122:g_d0_f23:US imports23.0311.43018.947    25.710
+35:752:60708:15:0:60:405:392:122:g_d0_f23:122:g_d0_f23:FDI to US20.8902.48911.513    24.594
+35:753:60744:0:350:166:300:726:122:g_d0_f21:122:g_d0_f21:Table 1: Descriptive Statistics
+35:754:60775:350:13:52:404:376:99:g_d0_f23:99:g_d0_f24:Note: Number of observations for all variables is 5,202.  All variables, except US patent 
+35:755:60865:13:13:52:397:363:99:g_d0_f23:99:g_d0_f24:counts and Joint US patent counts, are in natural logarithms. Real GDP per capita, US 
+35:756:60951:13:13:52:395:350:99:g_d0_f23:99:g_d0_f24:exports, US FDI, R&D expenditures, US imports and FDI to US are in dollars. US FDI is 
+35:757:61037:13:13:52:407:337:99:g_d0_f23:99:g_d0_f24:total sales of majority owned multinational firms. FDI to US is total sales of nonbank US 
+35:758:61127:13:0:52:210:324:99:g_d0_f23:99:g_d0_f24:affilities of foreign multinational firms. 
+37:759:62798:0:14:241:460:697:122:g_d0_f23:122:g_d0_f23:(1)(2)(3)(4)(5)
+37:760:62813:14:29:52:143:683:122:g_d0_f21:122:g_d0_f21:Dependent variable
+37:761:62831:29:15:52:472:654:122:g_d0_f21:122:g_d0_f23:Visit friends & family travel0.871**   0.811**   0.808**   0.772**   0.771**
+37:762:62907:15:15:231:469:639:122:g_d0_f23:122:g_d0_f23:(0.008)    (0.014)    (0.014)    (0.016)    (0.016)
+37:763:62958:15:14:52:472:624:122:g_d0_f21:122:g_d0_f23:Retired travel0.082**   0.077**   0.065**   0.062**
+37:764:63009:14:15:283:470:610:122:g_d0_f23:122:g_d0_f23:(0.015)    (0.015)    (0.015)    (0.015)
+37:765:63049:15:14:52:472:595:122:g_d0_f21:122:g_d0_f23:Religious travel0.070**0.050**
+37:766:63079:14:15:335:470:581:122:g_d0_f23:122:g_d0_f23:(0.019)(0.019)
+37:767:63093:15:14:52:472:566:122:g_d0_f21:122:g_d0_f23:Homemaker travel0.093**   0.090**
+37:768:63126:14:15:386:469:552:122:g_d0_f23:122:g_d0_f23:(0.015)    (0.015)
+37:769:63144:15:14:52:471:537:122:g_d0_f21:122:g_d0_f23:Population‐0.661+‐0.646+‐0.649+‐0.680+‐0.681+
+37:770:63189:14:15:231:469:523:122:g_d0_f23:122:g_d0_f23:(0.387)    (0.387)    (0.386)    (0.388)    (0.387)
+37:771:63240:15:14:52:468:508:122:g_d0_f21:122:g_d0_f23:GDP per capita‐0.176‐0.169‐0.176‐0.172‐0.177
+37:772:63284:14:15:231:469:494:122:g_d0_f23:122:g_d0_f23:(0.190)    (0.189)    (0.189)    (0.188)    (0.188)
+37:773:63335:15:14:52:466:479:122:g_d0_f21:122:g_d0_f23:US exports0.0100.0170.0170.0070.008
+37:774:63370:14:15:231:469:465:122:g_d0_f23:122:g_d0_f23:(0.059)    (0.059)    (0.059)    (0.059)    (0.059)
+37:775:63421:15:14:52:466:450:122:g_d0_f21:122:g_d0_f23:US FDI0.004‐0.0010.003‐0.0010.002
+37:776:63454:14:15:231:469:436:122:g_d0_f23:122:g_d0_f23:(0.037)    (0.037)    (0.037)    (0.036)    (0.036)
+37:777:63505:15:14:52:468:421:122:g_d0_f21:122:g_d0_f23:R&D expenditures‐0.0070.0030.009‐0.005‐0.001
+37:778:63549:14:15:231:469:407:122:g_d0_f23:122:g_d0_f23:(0.078)    (0.077)    (0.077)    (0.076)    (0.076)
+37:779:63600:15:14:52:472:392:122:g_d0_f21:122:g_d0_f23:Resident patent applications0.158**   0.159**   0.157**   0.161**   0.159**
+37:780:63675:14:15:231:469:378:122:g_d0_f23:122:g_d0_f23:(0.043)    (0.043)    (0.043)    (0.043)    (0.043)
+37:781:63726:15:14:52:469:363:122:g_d0_f21:122:g_d0_f23:US imports0.0920.0880.0890.092+    0.093+
+37:782:63767:14:15:231:469:349:122:g_d0_f23:122:g_d0_f23:(0.056)    (0.056)    (0.056)    (0.055)    (0.055)
+37:783:63818:15:14:52:468:334:122:g_d0_f21:122:g_d0_f23:FDI to US‐0.032‐0.032‐0.030‐0.031‐0.030
+37:784:63857:14:29:231:469:320:122:g_d0_f23:122:g_d0_f23:(0.027)(0.027)(0.027)(0.027)    (0.027)
+37:785:63896:29:15:52:466:291:122:g_d0_f21:122:g_d0_f23:Observations5,2025,2025,2025,2025,202
+37:786:63933:15:0:52:466:276:122:g_d0_f21:122:g_d0_f23:R‐squared0.9220.9230.9230.9240.924
+37:787:63967:0:0:317:384:683:122:g_d0_f23:122:g_d0_f23:Business travel
+37:788:63982:0:467:179:351:726:122:g_d0_f21:122:g_d0_f21:Table 3: Control Function Regressions
+37:789:64019:467:15:52:453:259:122:g_d0_f23:122:g_d0_f24:Notes: All specifications include country, year and industry fixed effects. Robust standard 
+37:790:64111:15:0:52:286:244:122:g_d0_f23:122:g_d0_f23:errors in parenthesis; + p<0.10, * p<0.05, ** p< 0.01
+41:791:69901:0:14:52:221:682:122:g_d0_f21:122:g_d0_f24:StateSum of patents by 
+41:792:69924:14:0:140:216:668:122:g_d0_f23:122:g_d0_f23:state, 1993‐2003
+41:793:69940:0:14:263:439:682:122:g_d0_f21:122:g_d0_f24:StateSum of patents by 
+41:794:69963:14:32:358:433:668:122:g_d0_f23:122:g_d0_f23:state, 1993‐2003
+41:795:69979:32:15:52:410:636:122:g_d0_f21:122:g_d0_f23:Alabama4277N. Carolina20142
+41:796:70006:15:14:52:407:621:122:g_d0_f21:122:g_d0_f23:Alaska521Nebraska2290
+41:797:70027:14:15:52:407:607:122:g_d0_f21:122:g_d0_f23:Arizona17271Nevada3692
+41:798:70049:15:14:52:407:592:122:g_d0_f21:122:g_d0_f23:Arkansas1829New Hampshire6846
+41:799:70078:14:15:52:410:578:122:g_d0_f21:122:g_d0_f23:California202830New Jersey41686
+41:800:70109:15:14:52:407:563:122:g_d0_f21:122:g_d0_f23:Colorado21337New Mexico3833
+41:801:70136:14:15:52:410:549:122:g_d0_f21:122:g_d0_f23:Connecticut20141New York68699
+41:802:70165:15:14:52:405:534:122:g_d0_f21:122:g_d0_f23:Delaware4668North Dakota801
+41:803:70192:14:15:52:410:520:122:g_d0_f21:122:g_d0_f23:Florida28949Ohio35574
+41:804:70213:15:14:52:407:505:122:g_d0_f21:122:g_d0_f23:Georgia15294Oklahoma5893
+41:805:70237:14:15:52:410:491:122:g_d0_f21:122:g_d0_f23:Hawaii905Oregon16015
+41:806:70257:15:14:52:410:476:122:g_d0_f21:122:g_d0_f23:Idaho14952Pennsylvania37766
+41:807:70284:14:15:52:405:462:122:g_d0_f21:122:g_d0_f23:Illinois40205Puerto Rico258
+41:808:70311:15:14:52:407:447:122:g_d0_f21:122:g_d0_f23:Indiana15905Rhode Island3251
+41:809:70339:14:15:52:407:433:122:g_d0_f21:122:g_d0_f23:Iowa7054S. Carolina6257
+41:810:70362:15:14:52:405:418:122:g_d0_f21:122:g_d0_f23:Kansas4489S. Dakota801
+41:811:70384:14:15:52:407:404:122:g_d0_f21:122:g_d0_f23:Kentucky4794Tennessee8860
+41:812:70409:15:14:52:410:389:122:g_d0_f21:122:g_d0_f23:Louisiana5083Texas67284
+41:813:70432:14:15:52:407:375:122:g_d0_f21:122:g_d0_f23:Maine1585Utah7876
+41:814:70449:15:14:52:407:360:122:g_d0_f21:122:g_d0_f23:Maryland16128Vermont4209
+41:815:70473:14:15:52:411:346:122:g_d0_f21:122:g_d0_f23:Massachusetts40813Virginia12678
+41:816:70504:15:14:52:407:331:122:g_d0_f21:122:g_d0_f23:Michigan41655W. Virginia1608
+41:817:70532:14:15:52:411:317:122:g_d0_f21:122:g_d0_f23:Minnesota30280Washington24422
+41:818:70561:15:14:52:405:302:122:g_d0_f21:122:g_d0_f23:Mississippi1821Washington, DC733
+41:819:70593:14:15:52:411:288:122:g_d0_f21:122:g_d0_f23:Missouri9600Wisconsin19188
+41:820:70619:15:0:52:405:273:122:g_d0_f21:122:g_d0_f23:Montana1474Wyoming614
+41:821:70640:0:44:143:351:712:122:g_d0_f21:122:g_d0_f21:Table A2A: US patenting by states, 1993‐2003
+42:822:70684:44:0:54:306:668:122:g_d0_f21:122:g_d0_f23:SubcategoryDescription
+42:823:70706:0:14:462:545:675:122:g_d0_f23:122:g_d0_f24:Sum of patents by 
+42:824:70724:14:37:454:551:661:122:g_d0_f23:122:g_d0_f23:industries, 1993‐2003
+42:825:70745:37:14:77:513:624:122:g_d0_f21:122:g_d0_f23:11Chemical: Agriculture, Food &Textiles2404
+42:826:70788:14:15:77:517:610:122:g_d0_f21:122:g_d0_f23:12Chemical: Coating11814
+42:827:70812:15:14:77:513:595:122:g_d0_f21:122:g_d0_f23:13Chemical: Gas3597
+42:828:70831:14:15:77:517:581:122:g_d0_f21:122:g_d0_f23:14Chemical: Organic Compounds15801
+42:829:70865:15:14:77:517:566:122:g_d0_f21:122:g_d0_f23:15Chemical: Resins22499
+42:830:70888:14:15:77:517:552:122:g_d0_f21:122:g_d0_f23:19Chemical: Miscellaneous68308
+42:831:70918:15:14:77:517:537:122:g_d0_f21:122:g_d0_f23:21Computers & Communications: Communications80433
+42:832:70967:14:15:77:517:523:122:g_d0_f21:122:g_d0_f23:22Computers & Communications : Computer Hardware & Software74403
+42:833:71031:15:14:77:517:508:122:g_d0_f21:122:g_d0_f23:23Computers & Communications : Computer Peripherals22983
+42:834:71087:14:15:77:517:494:122:g_d0_f21:122:g_d0_f23:24Computers & Communications: Information Storage34557
+42:835:71141:15:14:77:410:479:122:g_d0_f21:122:g_d0_f24:25Computers & Communications : Electronic business methods and 
+42:836:71204:14:15:115:517:465:122:g_d0_f23:122:g_d0_f23:software16475
+42:837:71217:15:14:77:517:450:122:g_d0_f21:122:g_d0_f23:31Drugs & Medicine: Drugs67206
+42:838:71247:14:15:77:517:436:122:g_d0_f21:122:g_d0_f23:32Drugs & Medicine: Surgery & Med Inst.48587
+42:839:71291:15:14:77:513:421:122:g_d0_f21:122:g_d0_f23:33Drugs & Medicine: Genetics3927
+42:840:71323:14:15:77:513:407:122:g_d0_f21:122:g_d0_f23:39Drugs & Medicine: Miscellaneous9298
+42:841:71360:15:14:77:517:392:122:g_d0_f21:122:g_d0_f23:41Electrical & Electronics: Electrical Devices26673
+42:842:71411:14:15:77:517:378:122:g_d0_f21:122:g_d0_f23:42Electrical & Electronics: Electrical Lighting13495
+42:843:71463:15:14:77:517:363:122:g_d0_f21:122:g_d0_f23:43Electrical & Electronics: Measuring & Testing25291
+42:844:71515:14:15:77:517:349:122:g_d0_f21:122:g_d0_f23:44Electrical & Electronics: Nuclear & X‐rays11057
+42:845:71564:15:15:77:517:334:122:g_d0_f21:122:g_d0_f23:45Electrical & Electronics: Power Systems29589
+42:846:71610:15:14:77:517:319:122:g_d0_f21:122:g_d0_f23:46Electrical & Electronics: Semiconductor Devices40253
+42:847:71664:14:15:77:517:305:122:g_d0_f21:122:g_d0_f23:49Electrical & Electronics: Miscellaneous18266
+42:848:71710:15:14:77:517:290:122:g_d0_f21:122:g_d0_f23:51Mechanical: Mat. Proc & Handling30835
+42:849:71749:14:15:77:517:276:122:g_d0_f21:122:g_d0_f23:52Mechanical: Metal Working16823
+42:850:71781:15:14:77:517:261:122:g_d0_f21:122:g_d0_f23:53Mechanical: Motors & Engines, Parts19412
+42:851:71823:14:15:77:517:247:122:g_d0_f21:122:g_d0_f23:54Mechanical: Optics11005
+42:852:71848:15:14:77:517:232:122:g_d0_f21:122:g_d0_f23:55Mechanical: Transportation24565
+42:853:71881:14:15:77:517:218:122:g_d0_f21:122:g_d0_f23:59Mechanical: Miscellaneous34426
+42:854:71913:15:14:77:517:203:122:g_d0_f21:122:g_d0_f23:61Others: Agriculture, Husbandry &Food16882
+42:855:71956:14:15:77:517:189:122:g_d0_f21:122:g_d0_f23:62Others: Amusement Devices12920
+42:856:71988:15:14:77:517:174:122:g_d0_f21:122:g_d0_f23:63Others: Apparel & Textile10156
+42:857:72020:14:15:77:517:160:122:g_d0_f21:122:g_d0_f23:64Others: Earth Working & Wells11417
+42:858:72056:15:14:77:517:145:122:g_d0_f21:122:g_d0_f23:65Others: Furniture & House Fixtures19629
+42:859:72097:14:15:77:513:131:122:g_d0_f21:122:g_d0_f23:66Others: Heating6220
+42:860:72118:15:14:77:513:116:122:g_d0_f21:122:g_d0_f23:67Others: Pipes & Joints5620
+42:861:72146:14:15:77:517:102:122:g_d0_f21:122:g_d0_f23:68Others: Receptacles15996
+42:862:72172:15:0:77:517:87:122:g_d0_f21:122:g_d0_f23:69Others: Miscellaneous72355
+42:863:72200:0:30:190:418:712:122:g_d0_f21:122:g_d0_f21:Table A2B:  US patenting by industries, 1993‐2003
+43:864:72249:30:14:52:176:682:122:g_d0_f23:122:g_d0_f23:ArgentinaMexico
+43:865:72264:14:15:52:198:668:122:g_d0_f23:122:g_d0_f23:AustraliaNetherlands
+43:866:72284:15:14:52:201:653:122:g_d0_f23:122:g_d0_f23:AustriaNew Zealand
+43:867:72302:14:15:52:178:639:122:g_d0_f23:122:g_d0_f23:BelgiumNorway
+43:868:72315:15:14:52:174:624:122:g_d0_f23:122:g_d0_f23:ChinaPoland
+43:869:72326:14:15:52:181:610:122:g_d0_f23:122:g_d0_f23:DenmarkPortugal
+43:870:72341:15:14:52:183:595:122:g_d0_f23:122:g_d0_f23:FinlandRomania
+43:871:72355:14:15:52:171:581:122:g_d0_f23:122:g_d0_f23:FranceRussia
+43:872:72367:15:14:52:188:566:122:g_d0_f23:122:g_d0_f23:GermanySingapore
+43:873:72383:14:15:52:180:552:122:g_d0_f23:122:g_d0_f23:GreeceSlovakia
+43:874:72397:15:14:52:181:537:122:g_d0_f23:122:g_d0_f23:IcelandSlovenia
+43:875:72412:14:15:52:198:523:122:g_d0_f23:122:g_d0_f23:IrelandSouth Africa
+43:876:72431:15:14:52:167:508:122:g_d0_f23:122:g_d0_f23:IsraelSpain
+43:877:72442:14:15:52:179:494:122:g_d0_f23:122:g_d0_f23:ItalySweden
+43:878:72453:15:14:52:195:479:122:g_d0_f23:122:g_d0_f23:JapanSwitzerland
+43:879:72469:14:15:52:174:465:122:g_d0_f23:122:g_d0_f23:Korea, SouthTurkey
+43:880:72487:15:87:52:216:450:122:g_d0_f23:122:g_d0_f23:LuxembourgUnited Kingdom
+43:881:72511:87:14:247:341:363:122:g_d0_f21:122:g_d0_f21:Non‐OECD countries
+43:882:72529:14:15:52:291:349:122:g_d0_f23:122:g_d0_f23:AustraliaMexicoArgentina
+43:883:72553:15:15:52:272:334:122:g_d0_f23:122:g_d0_f23:AustriaNetherlandsChina
+43:884:72576:15:14:52:271:319:122:g_d0_f23:122:g_d0_f23:BelgiumNew ZealandIsrael
+43:885:72600:14:15:52:287:305:122:g_d0_f23:122:g_d0_f23:DenmarkNorwayRomania
+43:886:72620:15:14:52:275:290:122:g_d0_f23:122:g_d0_f23:FinlandPolandRussia
+43:887:72639:14:15:52:292:276:122:g_d0_f23:122:g_d0_f23:FrancePortugalSingapore
+43:888:72662:15:14:52:285:261:122:g_d0_f23:122:g_d0_f23:GermanySlovakiaSlovenia
+43:889:72685:14:15:52:302:247:122:g_d0_f23:122:g_d0_f23:GreeceSpainSouth Africa
+43:890:72708:15:14:52:179:232:122:g_d0_f23:122:g_d0_f23:IcelandSweden
+43:891:72721:14:15:52:195:218:122:g_d0_f23:122:g_d0_f23:IrelandSwitzerland
+43:892:72739:15:14:52:174:203:122:g_d0_f23:122:g_d0_f23:ItalyTurkey
+43:893:72750:14:15:52:216:189:122:g_d0_f23:122:g_d0_f23:JapanUnited Kingdom
+43:894:72769:15:14:52:110:174:122:g_d0_f23:122:g_d0_f23:Korea, South
+43:895:72781:14:0:52:108:160:122:g_d0_f23:122:g_d0_f23:Luxembourg
+43:896:72791:0:320:77:220:712:122:g_d0_f21:122:g_d0_f21:Table A3A: Countries in Sample
+43:897:72821:320:29:131:275:392:122:g_d0_f21:122:g_d0_f21:Table A3B: Countries in Sample
+43:898:72851:29:0:52:159:363:122:g_d0_f22:122:g_d0_f21:              OECD Countries
+44:899:72879:0:13:72:74:745:121:g_d0_f25:121:g_d0_f25: 
+44:900:72880:13:307:72:74:732:121:g_d0_f25:121:g_d0_f25: 
+44:901:72881:307:0:474:476:425:121:g_d0_f25:121:g_d0_f25: 
+44:902:72882:0:0:266:283:598:63:Helvetica:63:Helvetica:MEX
+44:903:72885:0:64:372:389:629:63:Helvetica:63:Helvetica:ARG
+44:904:72888:64:13:204:265:565:63:Helvetica:63:Helvetica:AUTBEL
+44:905:72894:13:0:194:211:552:63:Helvetica:63:Helvetica:DNK
+44:906:72897:0:0:240:253:565:63:Helvetica:63:Helvetica:FIN
+44:907:72900:0:0:284:300:599:63:Helvetica:63:Helvetica:FRA
+44:908:72903:0:0:312:329:610:63:Helvetica:63:Helvetica:GRC
+44:909:72906:0:0:317:329:622:63:Helvetica:63:Helvetica:ISL
+44:910:72909:0:61:357:369:642:63:Helvetica:63:Helvetica:IRL
+44:911:72912:61:57:255:267:581:63:Helvetica:63:Helvetica:ITA
+44:912:72915:57:0:177:192:524:63:Helvetica:63:Helvetica:LUX
+44:913:72918:0:53:283:299:605:63:Helvetica:63:Helvetica:NLD
+44:914:72921:53:0:218:236:552:63:Helvetica:63:Helvetica:NOR
+44:915:72924:0:10:226:242:571:63:Helvetica:63:Helvetica:POL
+44:916:72927:10:0:169:185:561:63:Helvetica:63:Helvetica:PRT
+44:917:72930:0:51:405:310:609:63:Helvetica:63:Helvetica:ROMESP
+44:918:72936:51:0:236:254:558:63:Helvetica:63:Helvetica:SWE
+44:919:72939:0:0:228:245:579:63:Helvetica:63:Helvetica:CHE
+44:920:72942:0:7:301:318:615:63:Helvetica:63:Helvetica:GBR
+44:921:72945:7:0:320:337:608:63:Helvetica:63:Helvetica:RUS
+44:922:72948:0:63:270:286:630:63:Helvetica:63:Helvetica:SVN
+44:923:72951:63:0:245:261:567:63:Helvetica:63:Helvetica:SVK
+44:924:72954:0:43:261:278:597:63:Helvetica:63:Helvetica:DEU
+44:925:72957:43:49:231:246:554:63:Helvetica:63:Helvetica:ZAF
+44:926:72960:49:0:123:136:505:63:Helvetica:63:Helvetica:ISR
+44:927:72963:0:0:228:244:567:63:Helvetica:63:Helvetica:TUR
+44:928:72966:0:11:295:312:625:63:Helvetica:63:Helvetica:CHN
+44:929:72969:11:24:331:346:614:63:Helvetica:63:Helvetica:JPN
+44:930:72972:24:0:222:239:590:63:Helvetica:63:Helvetica:KOR
+44:931:72975:0:0:294:311:598:63:Helvetica:63:Helvetica:SGP
+44:932:72978:0:23:351:367:635:63:Helvetica:63:Helvetica:AUS
+44:933:72981:23:160:306:321:612:63:Helvetica:63:Helvetica:NZL
+44:934:73018:160:10:123:458:452:102:Helvetica:102:Helvetica:-2-1012
+44:935:73025:10:0:207:365:442:102:Helvetica:102:Helvetica:Change in Friends & Family Travel 
+44:936:73059:0:0:109:464:678:122:Helvetica:122:Helvetica:10-year Differences of Business and Friends & Family travel , 1993-2003
+44:937:73130:0:0:261:312:693:194:Helvetica:194:Helvetica:Figure 1

@@ -1,0 +1,890 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:C:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:447:610:12:Times:12:Times:C:SEARCHING FOR PHYSICAL AND DIGITAL MEDIA:
+1:2:66:14:28:306:461:596:12:Times:12:Times:C:THE EVOLUTION OF PLATFORMS FOR FINDING BOOKS
+1:3:110:28:14:306:346:568:12:Times:12:Times:C:Michael R. Baye
+1:4:125:14:14:306:355:554:12:Times:12:Times:C:Babur De los Santos
+1:5:144:14:28:306:365:540:12:Times:12:Times:C:Matthijs R. Wildenbeest
+1:6:167:28:14:306:359:512:12:Times:12:Times:C:Working Paper 19519
+1:7:186:14:42:306:393:498:12:Times:12:Times:C:http://www.nber.org/papers/w19519
+1:8:219:42:14:306:439:456:12:Times:12:Times:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:9:255:14:14:306:374:442:12:Times:12:Times:C:1050 Massachusetts Avenue
+1:10:280:14:14:306:362:428:12:Times:12:Times:C:Cambridge, MA 02138
+1:11:299:14:158:306:339:414:12:Times:12:Times:C:October 2013
+1:12:311:158:14:72:540:256:12:Times:12:Times:F:We thank Avi Goldfarb, Shane Greenstein, Marc Rysman, Catherine Tucker, Hal Varian, and seminar
+1:13:406:14:14:72:540:242:12:Times:12:Times:F:participants at the NBER Economics of Digitization conference for valuable comments. We thank
+1:14:499:14:14:72:540:228:12:Times:12:Times:F:Susan Kayser, I. K. Kim, Joowon Kim, and Yoojin Lee for research assistance. Funding for the data
+1:15:596:14:14:72:540:214:12:Times:12:Times:F:and research assistance related to this research was made possible by a grant from Google to Indiana
+1:16:696:14:14:72:540:200:12:Times:12:Times:F:University. The views expressed in this paper are those of the authors and do not necessarily reflect
+1:17:797:14:28:72:495:186:12:Times:12:Times:C:the views of Indiana University, Google, or the National Bureau of Economic Research.
+1:18:882:28:14:72:540:158:12:Times:12:Times:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:19:978:14:14:72:540:144:12:Times:12:Times:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:20:1073:14:28:72:169:130:12:Times:12:Times:C:NBER publications.
+1:21:1091:28:14:72:540:102:12:Times:12:Times:F:© 2013 by Michael R. Baye, Babur De los Santos, and Matthijs R. Wildenbeest. All rights reserved.
+1:22:1188:14:14:72:540:88:12:Times:12:Times:F:Short sections of text, not to exceed two paragraphs, may be quoted without explicit permission provided
+1:23:1292:14:0:72:347:74:12:Times:12:Times:C:that full credit, including © notice, is given to the source.
+2:24:1353:0:14:72:500:700:12:Times:12:Times:C:Searching for Physical and Digital Media: The Evolution of Platforms for Finding Books
+2:25:1439:14:14:72:401:686:12:Times:12:Times:C:Michael R. Baye, Babur De los Santos, and Matthijs R. Wildenbeest
+2:26:1504:14:14:72:234:672:12:Times:12:Times:C:NBER Working Paper No. 19519
+2:27:1532:14:14:72:138:658:12:Times:12:Times:C:October 2013
+2:28:1544:14:28:72:158:644:12:Times:12:Times:C:JEL No. D83,L86
+2:29:1559:28:28:306:339:616:12:Times:12:Times:C:ABSTRACT
+2:30:1567:28:14:72:540:588:12:Times:12:Times:F:This paper provides a data-driven overview of the different online platforms that consumers use to
+2:31:1665:14:14:72:540:574:12:Times:12:Times:F:search for books and booksellers, and documents how the use of these platforms is shifting over time.
+2:32:1766:14:14:72:540:560:12:Times:12:Times:F:Our data suggest that, as a result of digitization, consumers are increasingly conducting searches for
+2:33:1868:14:14:72:540:546:12:Times:12:Times:F:books at retailer sites and closed systems (e.g., the Kindle and Nook) rather than at general search
+2:34:1968:14:14:72:540:532:12:Times:12:Times:F:engines (e.g., Google or Bing). We also highlight a number of challenges that will make it difficult
+2:35:2068:14:14:72:540:518:12:Times:12:Times:F:for researchers to accurately measure internet-based search behavior in the years to come. Finally,
+2:36:2167:14:14:72:540:504:12:Times:12:Times:F:we highlight a number of open agenda items related to the pricing of books and other digital media,
+2:37:2266:14:42:72:250:490:12:Times:12:Times:C:as well as consumer search behavior.
+2:38:2302:42:14:72:153:448:12:Times:12:Times:C:Michael R. Baye
+2:39:2317:14:14:72:162:434:12:Times:12:Times:C:Indiana University
+2:40:2335:14:28:72:171:420:12:Times:12:Times:C:mbaye@indiana.edu
+2:41:2352:28:14:72:170:392:12:Times:12:Times:C:Babur De los Santos
+2:42:2371:14:14:72:162:378:12:Times:12:Times:C:Indiana University
+2:43:2389:14:0:72:166:364:12:Times:12:Times:C:babur@indiana.edu
+2:44:2406:0:14:306:423:448:12:Times:12:Times:C:Matthijs R. Wildenbeest
+2:45:2429:14:14:306:396:434:12:Times:12:Times:C:Indiana University
+2:46:2447:14:0:306:421:420:12:Times:12:Times:C:mwildenb@indiana.edu
+3:47:2467:0:34:72:185:709:14:g_d0_f1:14:g_d0_f1:C:1    Introduction
+3:48:2484:34:23:72:540:675:11:g_d0_f2:11:g_d0_f2:B:The internet has had a profound impact on the way people shop; online sales in the U.S. were $213
+3:49:2581:23:23:72:539:652:11:g_d0_f2:11:g_d0_f2:B:billion in 2012, accounting for 8 percent of all retail sales.1The internet and digitization have had
+3:50:2682:23:23:72:540:629:11:g_d0_f2:11:g_d0_f2:B:an even greater impact on sales of media products, thanks in part to changes in the way people
+3:51:2776:23:23:72:540:606:11:g_d0_f2:11:g_d0_f2:B:search  for,  acquire,  and  consume  these  products.   Online  sales  of  books  accounted  for  about  44
+3:52:2884:23:23:72:539:583:11:g_d0_f2:8:g_d0_f3:B:percent of all U.S. book sales in 2012, with e-books accounting for 11 percent of total book sales.2
+3:53:2984:23:23:72:452:560:11:g_d0_f2:8:g_d0_f3:B:Digital sales of music accounted for over half of the industry’s 2012 total sales.3
+3:54:3067:23:24:88:539:537:11:g_d0_f2:11:g_d0_f2:A:This  chapter  focuses  on  how  the  internet  and  digitization  are  changing  the  way  consumers
+3:55:3168:24:23:72:540:513:11:g_d0_f2:11:g_d0_f2:B:obtain information about media products such as books, music, and movies.  Less than two decades
+3:56:3264:23:23:72:540:490:11:g_d0_f2:11:g_d0_f2:B:ago, a consumer looking for a book, CD, or DVD had to spend considerable time searching among
+3:57:3357:23:23:72:540:467:11:g_d0_f2:11:g_d0_f2:B:sellers of these physical products.  Given search technologies at the time (e.g., using a telephone to
+3:58:3459:23:23:72:540:444:11:g_d0_f2:11:g_d0_f2:B:call different sellers or traveling from one physical store to another), the typical consumer limited
+3:59:3560:23:23:72:540:421:11:g_d0_f2:11:g_d0_f2:B:purchase decisions to retailers proximate to his or her domicile.  The internet and digitization have
+3:60:3661:23:23:72:540:398:11:g_d0_f2:11:g_d0_f2:B:reduced consumers’ costs of obtaining information, thus making it easier for consumers to identify
+3:61:3759:23:23:72:332:375:11:g_d0_f2:11:g_d0_f2:B:and purchase media that best match their preferences.
+3:62:3812:23:23:88:539:352:11:g_d0_f2:11:g_d0_f2:A:Leading media platforms (e.g.,  Netflix,  Amazon,  and iTunes) now provide users with recom-
+3:63:3904:23:23:72:540:329:11:g_d0_f2:11:g_d0_f2:B:mendations  for  specific  media  titles  based  on  sophisticated  algorithms  that  account  for  a  given
+3:64:4012:23:23:72:540:306:11:g_d0_f2:11:g_d0_f2:B:user’s preferences as well as the ratings provided by other users.  Consumers also receive recom-
+3:65:4109:23:23:72:540:283:11:g_d0_f2:11:g_d0_f2:B:mendations through social networks such as Facebook; “friends” can indicate whether they “liked”
+3:66:4205:23:23:72:540:260:11:g_d0_f2:11:g_d0_f2:B:a particular song,  movie,  or book.  Many of these recommendation systems operate in real-time
+3:67:4300:23:23:72:540:237:11:g_d0_f2:11:g_d0_f2:B:and use purchase patterns of consumers with similar profiles to identify products consumers would
+3:68:4397:23:23:72:190:214:11:g_d0_f2:11:g_d0_f2:B:be otherwise unaware of.
+3:69:4421:23:23:88:539:191:11:g_d0_f2:11:g_d0_f2:A:Additionally,  advances  in  search  technologies  have  made  it  easier  for  consumers  to  directly
+3:70:4524:23:23:72:540:168:11:g_d0_f2:11:g_d0_f2:B:access information that is relevant for their purchase decisions.  Consumers can easily search for
+3:71:4622:23:23:72:540:145:11:g_d0_f2:11:g_d0_f2:B:product information by using a general search engine (e.g., Google), a price comparison site (e.g.,
+3:72:4721:23:25:72:540:122:11:g_d0_f2:11:g_d0_f2:B:Bookfinder),  as  well  as  by  navigating  to  a  specific  retailer’s  site  and  conducting  a  search  on  its
+3:73:4835:25:11:87:276:97:6:g_d0_f4:9:g_d0_f5:A:1Figures from Forrester Research, March 2013.
+3:74:4880:11:11:87:266:86:6:g_d0_f4:9:g_d0_f5:A:2Figures from Publishers Weekly, May 2013.
+3:75:4922:11:0:87:237:75:6:g_d0_f4:9:g_d0_f5:A:3Figures from Nielsen, January 2013.
+4:76:4959:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:platform  (e.g.,  Amazon  and  iTunes).   These  changes  in  search  technologies  allow  consumers  to
+4:77:5063:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:find a greater breadth of products and make the long tail more accessible; it is now easier to find
+4:78:5162:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:rare and obscure books, music, and movies.  And thanks to digitization, consumers can now view
+4:79:5256:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:samples  of  book  pages,  listen  to  sample  music  tracks,  and  watch  scenes  from  movies  through  a
+4:80:5363:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:plethora of devices connected to the internet.  In short, finding the “right” product now takes less
+4:81:5463:23:23:72:474:593:11:g_d0_f2:11:g_d0_f2:B:effort, and it is easier to compare the prices different sellers charge for that product.
+4:82:5552:23:23:88:539:570:11:g_d0_f2:11:g_d0_f2:A:This paper is motivated by more recent changes in the way consumers search for media prod-
+4:83:5642:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:ucts.  Until recently, most online product searches for media were conducted using browser-based
+4:84:5738:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:platforms.   Increasingly,  however,  searches  for  digital  media  take  place  on  closed  platforms  that
+4:85:5847:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:sell music and video content (e.g., iTunes) or books (e.g., the Amazon Kindle and Barnes & Noble
+4:86:5943:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:Nook).  This shift is more mature in the music industry; digital content accounted for 37 percent
+4:87:6040:23:23:72:534:455:11:g_d0_f2:11:g_d0_f2:B:of music sales in 2012—more than three times the share of digital books among total book sales.
+4:88:6135:23:23:88:539:432:11:g_d0_f2:11:g_d0_f2:A:Because  digital  books  are  still  in  their  infancy,  the  remainder  of  this  chapter  focuses  on  the
+4:89:6244:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:impact of the internet and digitization on the book industry.  Our goal is to provide readers with a
+4:90:6344:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:glimpse of how searches for books are likely to evolve over the next decade and to highlight some
+4:91:6441:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:of the challenges and questions that researchers working in this area are likely to encounter in the
+4:92:6541:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:years to come.  Nonetheless, many of the issues that we discuss are relevant for media such as music
+4:93:6641:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:and videos, as well as non-media products that consumers may search for and purchase online.  We
+4:94:6737:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:highlight a number of data limitations and technical challenges associated with identifying product
+4:95:6836:23:23:72:540:271:11:g_d0_f2:11:g_d0_f2:B:and  product-related  searches  on  browser-based  platforms  (e.g.,  search  engines,  price  comparison
+4:96:6941:23:23:72:540:248:11:g_d0_f2:11:g_d0_f2:B:sites, and retail websites), as well as closed systems (e.g., applications, or apps, on smartphones
+4:97:7040:23:23:72:540:225:11:g_d0_f2:11:g_d0_f2:B:and  tablets  such  as  the  iPad,  and  platforms  such  as  the  Kindle  and  Nook).   Finally  we  provide
+4:98:7149:23:23:72:540:202:11:g_d0_f2:11:g_d0_f2:B:some preliminary evidence that searchers are shifting toward new and evolving search platforms
+4:99:7243:23:23:72:450:179:11:g_d0_f2:11:g_d0_f2:B:and away from browser-based platforms (such as search engines) to find books.
+4:100:7320:23:23:88:539:156:11:g_d0_f2:11:g_d0_f2:A:As  alluded  to  above,  the  book  industry  is  a  useful  one  to  examine  because  it  has  already
+4:101:7424:23:23:72:540:133:11:g_d0_f2:11:g_d0_f2:B:felt  significant  changes  as  a  result  of  the  internet  and  is  likely  to  experience  additional  changes
+4:102:7538:23:23:72:540:110:11:g_d0_f2:11:g_d0_f2:B:over the next decade as a result of digitization.  Even though e-books are still in their infancy, this
+4:103:7641:23:0:72:540:87:11:g_d0_f2:11:g_d0_f2:B:technology allows consumers to locate, purchase, and read books virtually anywhere.  The challenge
+5:104:7740:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:for researchers over the next decade is that this activity increasingly occurs on closed systems where
+5:105:7842:23:24:72:432:686:11:g_d0_f2:11:g_d0_f2:B:search activity is not readily observable by those “outside” of the platform.
+5:106:7919:24:23:88:539:662:11:g_d0_f2:11:g_d0_f2:A:Our chapter is related to a vast literature on consumer search behavior that began with Stigler’s
+5:107:8016:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:(1961)  seminal  article  on  the  economics  of  information.   Subsequent  literature  has  focused  on
+5:108:8121:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:explaining price dispersion as an equilibrium phenomenon—particularly in online markets where
+5:109:8214:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:informational  frictions  are  very  modest.4The  more  recent  literature  is  decidedly  empirical  and
+5:110:8319:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:examines how industry characteristics, such as search costs, impact levels of price dispersion.  For
+5:111:8419:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:instance,  at the beginning of the millennium a large number of studies examined the effects the
+5:112:8515:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:internet on prices and price dispersion.5Several of these studies focused specifically on the online
+5:113:8615:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:book industry.  Clay, Krishnan, and Wolff (2001) examined prices at online bookstores and found
+5:114:8710:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:that heightened competition among sellers led to lower prices and less price dispersion.  Moreover,
+5:115:8809:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:they established heterogeneity in firm-level behavior.  Brynjolfsson, Hu, and Smith (2003) quantify
+5:116:8908:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:the  economic  impact  of  increased  variety  at  online  bookstores  (and  the  ability  of  consumers  to
+5:117:9016:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:identify books in the long tail).  Their   estimates indicate that online markets for books increased
+5:118:9117:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:consumer welfare by as much as $1 billion for the year 2000.  Chevalier and Goolsbee (2003) show
+5:119:9213:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:how to use sales rank data to obtain elasticity estimates for Amazon and Barnes & Noble, and find
+5:120:9310:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:that demand is much more price elastic for Barnes & Noble than Amazon.  Chevalier and Mayzlin
+5:121:9403:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:(2006)  study  the  effect  of  consumer  reviews  on  sales  at  Amazon.com  and  Barnesandnoble.com.
+5:122:9505:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:Hong and Shum (2006) develop techniques to estimate search costs using only price data and apply
+5:123:9601:23:23:72:540:271:11:g_d0_f2:11:g_d0_f2:B:their methods to books sold online.  Forman, Ghose, and Goldfarb (2009) provide powerful evidence
+5:124:9698:23:23:72:540:248:11:g_d0_f2:11:g_d0_f2:B:that online and offline markets for books are linked:  When a physical book store opens, consumers
+5:125:9796:23:23:72:540:225:11:g_d0_f2:11:g_d0_f2:B:near the area purchase fewer books online.  De los Santos (2012) and De los Santos, Horta ̧csu, and
+5:126:9895:23:23:72:531:202:11:g_d0_f2:11:g_d0_f2:B:Wildenbeest (2012) use data on browsing behavior and book purchases to estimate search costs.
+5:127:9988:23:23:88:539:179:11:g_d0_f2:11:g_d0_f2:A:The remainder of this chapter is organized as follows.  The next section provides a brief overview
+5:128:10086:23:23:72:540:156:11:g_d0_f2:11:g_d0_f2:B:of the book industry and highlights some of the more important changes that have occurred over
+5:129:10180:23:36:72:540:133:11:g_d0_f2:11:g_d0_f2:B:the past 20 years.  Section 3 provides a data-driven look at how consumers use different browser-
+5:130:10277:36:11:87:302:97:6:g_d0_f4:9:g_d0_f5:A:4See Baye, Morgan, and Scholten (2006) for a survey.
+5:131:10329:11:14:87:539:86:6:g_d0_f4:9:g_d0_f5:F:5See Baye,  De los Santos,  and Wildenbeest (2013) for an overview of the evolution of product search in both
+5:132:10438:14:0:72:179:72:9:g_d0_f5:9:g_d0_f5:F:offline and online markets.
+6:133:10466:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:based  platforms  (such  as  websites  of  booksellers,  price  comparison  sites,  and  search  engines)  to
+6:134:10575:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:locate books and booksellers.  Section 4 investigates how search intensity changes throughout the
+6:135:10672:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:life cycle of a book and provides preliminary evidence that searches for book titles on general search
+6:136:10774:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:engines are beginning to decline.  Specifically, consumers appear to be shifting away from general
+6:137:10872:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:search engines and are increasingly using retailer sites and closed systems to find books.  Section
+6:138:10971:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:5 provides a look at differences in the prices of digital and physical books.  It also examines how
+6:139:11070:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:these prices evolved before, during, and after the Antitrust Division of the Department of Justice
+6:140:11168:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:filed suit against Apple and book publishers regarding their use of agency contracts.  We conclude
+6:141:11266:23:34:72:492:524:11:g_d0_f2:11:g_d0_f2:B:in Section 6 by briefly describing several additional agenda items for research programs.
+6:142:11355:34:34:72:317:490:14:g_d0_f1:14:g_d0_f1:C:2    Overview of the Book Industry
+6:143:11389:34:23:72:540:456:11:g_d0_f2:11:g_d0_f2:B:The  book  industry  has  seen  many  changes  throughout  the  past  20  years.   The  most  significant
+6:144:11494:23:23:72:540:433:11:g_d0_f2:11:g_d0_f2:B:change,  to  date,  has  been  the  move  from  selling  physical  books  in  traditional  brick-and-mortar
+6:145:11601:23:23:72:540:410:11:g_d0_f2:11:g_d0_f2:B:bookstores to selling physical books online.  Books were one of the first products that were success-
+6:146:11702:23:23:72:540:387:11:g_d0_f2:11:g_d0_f2:B:fully sold online.  One of the earliest and largest online retailers, Amazon.com, started as an online
+6:147:11804:23:23:72:540:364:11:g_d0_f2:11:g_d0_f2:B:bookstore in July 1995.  Barnesandnoble.com was launched in May 1997.  Many startups followed,
+6:148:11898:23:23:72:540:341:11:g_d0_f2:11:g_d0_f2:B:and existing brick-and-mortar bookstores began creating an online presence.  Most of these online
+6:149:11995:23:23:72:540:318:11:g_d0_f2:11:g_d0_f2:B:bookstores (retailers such as 1bookstreet.com, A1books, and Fatbrain.com) no longer exist; many
+6:150:12090:23:23:72:540:295:11:g_d0_f2:11:g_d0_f2:B:went bankrupt during the collapse of the internet bubble shortly after the new millennium began.
+6:151:12186:23:23:72:540:272:11:g_d0_f2:11:g_d0_f2:B:Borders, which was one of the largest brick-and-mortar bookstores in the U.S., went bankrupt in
+6:152:12281:23:23:72:540:249:11:g_d0_f2:11:g_d0_f2:B:2011.  Today, the retail book industry consists of Amazon, Barnes & Noble, and smaller bookstores
+6:153:12378:23:23:72:514:226:11:g_d0_f2:11:g_d0_f2:B:as well as mass-merchants (such as Walmart) which typically have thinner offerings of titles.
+6:154:12471:23:23:88:539:203:11:g_d0_f2:11:g_d0_f2:A:A  more  recent  change  in  the  book  industry  is  the  shift  toward  electronic  books,  or  e-books.
+6:155:12577:23:23:72:540:180:11:g_d0_f2:11:g_d0_f2:B:Although e-books have been around since at least 1971, when Michael Hart made the Declaration
+6:156:12670:23:23:72:540:157:11:g_d0_f2:11:g_d0_f2:B:of Independence electronically available as part of Project Gutenberg, the release of the Sony LIBRI ́e
+6:157:12773:23:23:72:540:134:11:g_d0_f2:11:g_d0_f2:B:e-Book reader in 2004 in Japan (the U.S. followed in 2006 with the release of the Sony PRS-500)
+6:158:12868:23:36:72:540:111:11:g_d0_f2:11:g_d0_f2:B:marked the beginning of the recent surge in popularity of e-books.6The Sony LIBRI ́e was the first
+6:159:12966:36:0:87:381:75:6:g_d0_f4:9:g_d0_f5:A:6See Manley and Holley (2012) for an overview of the history of e-books.
+7:160:13039:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:commercially available device to use E Ink technology, which dramatically improved the reading
+7:161:13133:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:experience and required less battery power than existing e-readers at the time.  Amazon released
+7:162:13229:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:its E Ink technology-based Kindle in November 2007.  Barnes & Noble followed in November 2009
+7:163:13322:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:with the release of the Nook.  At the end of June 2012, Amazon led the market for devices used
+7:164:13416:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:for reading e-books, with an overall market share of 55 percent (with its Kindle and Kindle Fire),
+7:165:13514:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:followed by Nook (14 percent).  Today, Sony’s e-book readers have 1 percent of the market.7The
+7:166:13608:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:definition of an e-reader is increasingly blurred by the presence of devices such as tablets, smart
+7:167:13707:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:phones, desktops, and laptops with apps for reading e-books.  Indeed, after having seen dramatic
+7:168:13803:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:growth since 2006, the sales of traditional e-readers are expected to decline in 2012, with consumers
+7:169:13904:23:23:72:186:501:11:g_d0_f2:8:g_d0_f3:B:shifting toward tablets.8
+7:170:13929:23:23:88:539:478:11:g_d0_f2:11:g_d0_f2:A:The sales of e-books have grown alongside the increasing popularity of e-readers.  By July 2010,
+7:171:14025:23:23:71:539:455:11:g_d0_f2:11:g_d0_f2:B:Amazon was selling more Kindle books than hardcover books, and since April 2011 it is selling more
+7:172:14123:23:23:71:539:432:11:g_d0_f2:11:g_d0_f2:B:Kindle books than hardcover and paperback books combined (excluding free e-books).9However,
+7:173:14214:23:23:71:539:409:11:g_d0_f2:11:g_d0_f2:B:as shown in Table 1, the overall increase in e-book sales revenue was very modest between 2006
+7:174:14308:23:23:71:539:386:11:g_d0_f2:11:g_d0_f2:B:and 2009.  Between 2009 and 2012, however, sales of e-books grew from 2.8 percent to 11 percent
+7:175:14403:23:23:71:178:363:11:g_d0_f2:11:g_d0_f2:B:of total industry sales.
+7:176:14427:23:23:88:539:340:11:g_d0_f2:11:g_d0_f2:A:Most e-readers support the open ePub format (Amazon’s Kindle, which supports the proprietary
+7:177:14519:23:23:71:539:317:11:g_d0_f2:11:g_d0_f2:B:AZW format, is a notable exception).  In theory, this means consumers can buy an e-book at one
+7:178:14613:23:23:71:539:294:11:g_d0_f2:11:g_d0_f2:B:of  the  bookstores  that  supports  the  ePub  format  and  read  it  on  a  different  e-reader.   However,
+7:179:14722:23:23:71:539:271:11:g_d0_f2:11:g_d0_f2:B:bookstores  use  Digital  Rights  Management  (DRM)  to  protect  the  content  of  the  e-books,  and
+7:180:14824:23:23:71:539:248:11:g_d0_f2:11:g_d0_f2:B:different bookstores do not necessarily use the same DRM standard.  Even though there are ways
+7:181:14918:23:23:71:539:225:11:g_d0_f2:11:g_d0_f2:B:to get around this (for instance, by stripping the DRM), for most consumers this is difficult to do.
+7:182:15018:23:23:71:539:202:11:g_d0_f2:11:g_d0_f2:B:This  means  that  in  practice  the  e-book  market  has  many  characteristics  of  a  two-sided  market,
+7:183:15125:23:23:71:539:179:11:g_d0_f2:11:g_d0_f2:B:with publishers on one side of the market, readers on the other side, and bookstores and e-readers
+7:184:15223:23:23:71:163:156:11:g_d0_f2:8:g_d0_f3:B:as intermediaries.10
+7:185:15243:23:25:88:539:133:11:g_d0_f2:11:g_d0_f2:A:The rise of e-books is likely to significantly impact the way consumers search for books. Buyers of
+7:186:15342:25:11:87:259:108:6:g_d0_f4:9:g_d0_f5:A:7Estimates from Bowker Market Research.
+7:187:15381:11:11:87:522:97:6:g_d0_f4:9:g_d0_f5:A:8See http://news.cnet.com/8301-10353-57558710-94/rip-e-book-readers-rise-of-tablets-drives-e-reader-drop/
+7:188:15486:11:11:87:464:86:6:g_d0_f4:9:g_d0_f5:A:9See http://phx.corporate-ir.net/phoenix.zhtml?c=176060&p=irol-newsArticle&ID=1565581.
+7:189:15572:11:0:83:393:75:6:g_d0_f4:9:g_d0_f5:?:10See Rysman (2009) for a discussion of the economics of two-sided markets.
+8:190:15648:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:e-books are less likely to use web browsers to find and purchase books, as it is often more convenient
+8:191:15750:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:to search within the device that is used to read e-books.  Moreover, the lack of interchangeability
+8:192:15849:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:due to DRM makes it less beneficial for consumers to compare prices across bookstores or platforms,
+8:193:15948:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:resulting in fewer retailers being visited. Unfortunately, we do not observe consumer search patterns
+8:194:16049:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:within most of the (closed) platforms, and future researchers are likely to increasingly experience
+8:195:16148:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:this problem not only for searches for books, but searches for any product that take place through
+8:196:16246:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:a closed device or mobile device app.  Our challenge here is to attempt to tease out—from available
+8:197:16345:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:data on brower-based searches—evidence of shifts toward searches on platforms or devices for which
+8:198:16443:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:search data are unavailable.  Thus, the remainder of this chapter focuses exclusively on browser-
+8:199:16540:23:23:72:144:501:11:g_d0_f2:11:g_d0_f2:B:based searches.
+8:200:16555:23:23:88:539:478:11:g_d0_f2:11:g_d0_f2:A:These developments—the move toward selling books online as well the transition to e-books—
+8:201:16645:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:have  significantly  impacted  the  sales  of  books  at  traditional  brick-and-mortar  stores.   Figure  1
+8:202:16753:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:shows that average monthly sales at brick-and-mortar bookstores roughly doubled between 1992
+8:203:16845:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:and 2007.  Since 2007, however, sales at traditional bookstores have been in decline.  This decline
+8:204:16944:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:in the sales of physical books coincides with two events, making it difficult to separately identify
+8:205:17044:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:the  impact  of  the  decline.   One  event  was  a  recession,  which  according  to  the  NBER  started  in
+8:206:17153:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:December 2007 and ended in June 2009.  The other event was Amazon’s introduction of the Kindle
+8:207:17247:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:e-book reader in November 2007.  While we view the cause of this decline as an interesting and open
+8:208:17346:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:question, the data in Table 2 suggest that the post-2007 decline in sales at traditional bookstores
+8:209:17445:23:23:72:540:271:11:g_d0_f2:11:g_d0_f2:B:may,  in part,  be due to a shift toward e-books and the online channel more generally.  Between
+8:210:17541:23:23:72:540:248:11:g_d0_f2:11:g_d0_f2:B:2007 and 2009, the sales of the leading online bookstores in Table 2 all increased in absolute terms.
+8:211:17642:23:35:88:333:225:11:g_d0_f2:11:g_d0_f2:A:With this brief background, we now turn to search.
+8:212:17692:35:33:72:354:190:14:g_d0_f1:14:g_d0_f1:C:3    Searching for Books and Booksellers
+8:213:17732:33:23:72:540:157:11:g_d0_f2:11:g_d0_f2:B:There  are  numerous  ways  consumers  can  use  the  internet  to  search  for  books  or  a  bookseller.
+8:214:17838:23:23:72:540:134:11:g_d0_f2:11:g_d0_f2:B:Consumers can use a general search engine such as Google, Yahoo, or Bing to search for a specific
+8:215:17935:23:23:72:540:111:11:g_d0_f2:11:g_d0_f2:B:book title, author name, or other book-related search term.  When using a search engine, search
+8:216:18030:23:0:72:540:88:11:g_d0_f2:11:g_d0_f2:B:results  typically appear  as links  that can  be clicked,  which  redirect the  user  to  a  specific  (often
+9:217:18141:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:external)  website.   Most  of  the  general  search  engines  display  both  paid  and  non-paid  (organic)
+9:218:18249:23:24:72:512:686:11:g_d0_f2:11:g_d0_f2:B:results; paid results typically appear on top of the search results page as well as on the side.
+9:219:18345:24:23:88:539:662:11:g_d0_f2:11:g_d0_f2:A:An alternative way to search is by using a price comparison site to identify sellers of a particular
+9:220:18445:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:book.  Price comparison sites are intermediaries that provide consumers with price information as
+9:221:18542:23:23:72:539:616:11:g_d0_f2:11:g_d0_f2:B:well  as  other  product  information.11Most  price  comparison  sites  are  free  for  consumers  to  use
+9:222:18648:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:while retailers pay fees.  Typically, these fees are paid each time a searcher clicks a link at the price
+9:223:18753:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:comparison site that directs the user to the retailer’s site.  Most comparison sites allow users to
+9:224:18852:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:either  browse  or  use  a  search  box  to  search.   Consumers  searching  for  books  can  choose  among
+9:225:18959:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:many different comparison sites, ranging from general price comparison sites such as Nextag and
+9:226:19054:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:Bing Shopper, to book-specific comparison sites such as Booksprice.com or Bookfinder.com.  The
+9:227:19148:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:more book-oriented price comparison sites typically allow users to search by ISBN as well as title
+9:228:19246:23:23:72:149:455:11:g_d0_f2:11:g_d0_f2:B:or author name.
+9:229:19261:23:23:88:539:432:11:g_d0_f2:11:g_d0_f2:A:A third option is to go directly to a bookseller’s (or other retailer’s) website and conduct a search
+9:230:19362:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:within its site.  Most online bookstores allow consumers to search by title, author name, or ISBN.
+9:231:19460:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:Online bookstores such as Amazon and Barnes & Noble also list links to best-sellers prominently on
+9:232:19558:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:their webpages, allowing consumers to explore product offerings without having to use the search
+9:233:19654:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:box.  Suggestions based on previous purchases or items previously viewed are typically displayed as
+9:234:19753:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:well, which is meant to help the consumer find the right book.  Some online booksellers also allow
+9:235:19851:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:third-party sellers to sell books on their websites (e.g., Amazon Marketplace and Barnes & Noble
+9:236:19947:23:23:72:534:271:11:g_d0_f2:11:g_d0_f2:B:Marketplace), which allows consumers to do a price comparison without having to leave the site.
+9:237:20042:23:23:88:539:248:11:g_d0_f2:11:g_d0_f2:A:As we noted earlier, an increasingly attractive fourth option—especially for those searching for
+9:238:20138:23:23:72:540:225:11:g_d0_f2:11:g_d0_f2:B:e-books—is to conduct a search on a closed device such as Amazon’s Kindle or the Barnes & Noble
+9:239:20233:23:23:72:434:202:11:g_d0_f2:11:g_d0_f2:B:Nook.  Recall that these search data are not readily available to researchers.
+9:240:20311:23:23:88:539:179:11:g_d0_f2:11:g_d0_f2:A:The remainder of this section examines the relative importance of the first three types of book
+9:241:20406:23:23:72:540:156:11:g_d0_f2:11:g_d0_f2:B:searches and highlights a number of obstacles that make it difficult to precisely measure the share
+9:242:20505:23:23:72:540:133:11:g_d0_f2:11:g_d0_f2:B:of book searches that are conducted on different search platforms.  Later, we will attempt to use
+9:243:20602:23:24:72:540:110:11:g_d0_f2:11:g_d0_f2:B:the data that are available to examine whether recent trends in general search engine use suggest
+9:244:20699:24:14:83:539:86:6:g_d0_f4:9:g_d0_f5:F:11See Moraga-Gonz ́alez and Wildenbeest (2012) for a discussion on comparison sites and their implications for
+9:245:20809:14:0:72:145:72:9:g_d0_f5:9:g_d0_f5:F:price competition.
+10:246:20828:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:that consumers are indeed shifting to closed search platforms, for which detailed search data are
+10:247:20925:23:30:72:175:686:11:g_d0_f2:11:g_d0_f2:B:presently unavailable.
+10:248:20947:30:30:72:400:656:12:g_d0_f1:12:g_d0_f1:C:3.1    Book-Related Searches on General Search Engines
+10:249:21001:30:23:72:540:626:11:g_d0_f2:11:g_d0_f2:B:We first turn to the issue of measuring the number of book-related searches on the main general
+10:250:21096:23:23:72:540:603:11:g_d0_f2:11:g_d0_f2:B:search engines (Google, Bing, Yahoo, and Ask).  For this we make use comScore’s Search Planner
+10:251:21190:23:23:72:540:580:11:g_d0_f2:11:g_d0_f2:B:data, which is based on the browsing activity of two million U.S. users that are part of the comScore
+10:252:21291:23:23:72:540:557:11:g_d0_f2:11:g_d0_f2:B:panel.  As part of this data we observe the most popular search terms used at the main general
+10:253:21385:23:23:72:540:534:11:g_d0_f2:11:g_d0_f2:B:search  engines  to  reach  a  specific  site.   To  illustrate  the  nature  of  the  data,  Table  3  shows  the
+10:254:21499:23:23:72:540:511:11:g_d0_f2:11:g_d0_f2:B:top 25 search terms on Google that resulted in organic traffic to Barnes & Noble.12The number
+10:255:21592:23:23:72:540:488:11:g_d0_f2:11:g_d0_f2:B:one search phrase is “barnes and noble,” which generated 376,670 clicks to this site.  Notice that
+10:256:21690:23:23:72:540:465:11:g_d0_f2:11:g_d0_f2:B:several other top 25 search terms in Table 3 are variations or misspellings of the site name or URL
+10:257:21789:23:23:72:540:442:11:g_d0_f2:11:g_d0_f2:B:(e.g., “barnes and nobles,” “barnes,” “bn,” and “www.bn.com”). This suggests that searchers may
+10:258:21884:23:23:72:540:419:11:g_d0_f2:11:g_d0_f2:B:frequently use general search engines as a shortcut for typing in the URL of the site they wish to
+10:259:21982:23:23:72:540:396:11:g_d0_f2:11:g_d0_f2:B:visit, and then conduct actual searches for books at the site.  Also notice that the list of top 25
+10:260:22081:23:23:72:540:373:11:g_d0_f2:11:g_d0_f2:B:search terms includes competitors (e.g., “amazon”).  Farther down the list we begin seeing terms
+10:261:22177:23:23:72:450:350:11:g_d0_f2:11:g_d0_f2:B:related to specific books (e.g., the 20th ranked search term is “the vow book”).
+10:262:22257:23:23:88:539:327:11:g_d0_f2:11:g_d0_f2:A:Table 3 also illustrates a weakness of the Search Planner data:  For privacy and other reasons,
+10:263:22352:23:23:72:540:304:11:g_d0_f2:11:g_d0_f2:B:comScore sometimes reports “***” and “name name” rather than the actual search phrase.  This
+10:264:22444:23:23:72:540:281:11:g_d0_f2:11:g_d0_f2:B:is the case for the 4th and 6th ranked search terms in Table 3, and as a consequence, one cannot
+10:265:22540:23:23:72:540:258:11:g_d0_f2:11:g_d0_f2:B:precisely determine the nature of these searches.  For purposes of the analysis that follows, these
+10:266:22639:23:23:72:540:235:11:g_d0_f2:11:g_d0_f2:B:terms are ignored.  This is not ideal, since these unknown (and hence excluded) searches may refer
+10:267:22737:23:23:72:218:212:11:g_d0_f2:11:g_d0_f2:B:to an author or ISBN number.
+10:268:22765:23:23:88:539:189:11:g_d0_f2:11:g_d0_f2:A:In order to get a better picture of the nature of search terms leading users from search engines
+10:269:22861:23:23:72:540:166:11:g_d0_f2:11:g_d0_f2:B:to  bookstores,  we  examined  the  entire  list  of  search  terms  resulting  in  traffic  to  Amazon  and
+10:270:22969:23:24:72:540:143:11:g_d0_f2:11:g_d0_f2:B:Barnes & Noble (2,053 and 180 search terms, respectively), and grouped them into 5 categories:
+10:271:23063:24:22:72:539:119:11:g_d0_f2:11:g_d0_f2:B:(1)Site Name, which includes the name or URL (including misspellings) of the site, (2)Non-Book,
+10:272:23158:22:15:83:539:97:6:g_d0_f4:9:g_d0_f5:F:12In September 2011, Barnes & Noble acquired Borders’ intellectual property, including Borders’ domain name.
+10:273:23266:15:10:72:540:82:9:g_d0_f5:9:g_d0_f5:F:Borders.com now redirects to barnesandnoble.com, explaining the relatively large number of Borders’ related search
+10:274:23380:10:0:72:141:72:9:g_d0_f5:9:g_d0_f5:F:terms in Table 3.
+11:275:23398:0:23:72:539:709:11:g_d0_f2:11:g_d0_f2:B:which includes products other than books,  (3)Book,  which includes physical as well as e-books,
+11:276:23494:23:24:71:539:686:11:g_d0_f2:11:g_d0_f6:B:(4)E-reader,  which  includes  searches  for  e-reader  related  hardware  or  software,  and  (5)Other
+11:277:23597:24:23:72:540:662:11:g_d0_f6:11:g_d0_f2:B:Bookstore,  which  includes  names  and  URLs  of  other  bookstores  (including  misspellings).   The
+11:278:23699:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:results  are  displayed  in  Figures  2(a)  and  2(b),  and  provide  a  breakdown  of  the  observed  search
+11:279:23808:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:terms consumers entered at the main search engines that resulted in clicks to Amazon and Barnes
+11:280:23903:23:23:72:176:593:11:g_d0_f2:11:g_d0_f2:B:& Noble, respectively.
+11:281:23925:23:23:88:539:570:11:g_d0_f2:11:g_d0_f2:A:Several features of Figure 2 are worth noting.  First, the overwhelming majority of searches at
+11:282:24020:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:the main search engines leading users to Amazon or Barnes & Noble were navigational searches,
+11:283:24113:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:i.e., search terms that only include the name or URL of the retailer.  This means that most of the
+11:284:24211:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:traffic Amazon and Barnes & Noble receive from the main search engines is from consumers using
+11:285:24305:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:search engines instead of the address bar to navigate.  Presumably, users conduct specific searches
+11:286:24404:23:23:72:319:455:11:g_d0_f2:11:g_d0_f2:B:for books once they land on these booksellers’ sites.
+11:287:24457:23:23:88:539:432:11:g_d0_f2:11:g_d0_f2:A:Second, notice in Figure 2(a) that non-book related searches generate more traffic to Amazon
+11:288:24549:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:than book related searches.  This is consistent with the fact that Amazon is now a mass-merchant
+11:289:24645:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:that  sells  many  products  other  than  books.   Figure  2(b)  shows  that  book-related  search  terms
+11:290:24750:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:generate far more traffic to Barnes & Noble than non-book related search terms.  This is consistent
+11:291:24849:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:with the fact that Barnes & Noble specializes in books.  Finally, Figure 2 reveals that searches for
+11:292:24949:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:e-readers and other bookstores are more important for Barnes & Noble than Amazon in generating
+11:293:25043:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:traffic to its site.  The key takeaway from Figure 2 is that navigational searches account for much
+11:294:25142:23:23:72:470:271:11:g_d0_f2:11:g_d0_f2:B:of the traffic that Amazon and Barnes & Noble obtain from general search engines.
+11:295:25223:23:23:88:539:248:11:g_d0_f2:11:g_d0_f2:A:We conclude this section with a caveat that is related to another drawback of the Search Planner
+11:296:25319:23:23:72:540:225:11:g_d0_f2:11:g_d0_f2:B:data used in our analysis:  comScore reports search terms leading users to a particular site only
+11:297:25416:23:23:72:540:202:11:g_d0_f2:11:g_d0_f2:B:if the number of clicks exceeds a certain threshold.  Thus, while we do observe the most popular
+11:298:25512:23:23:72:540:179:11:g_d0_f2:11:g_d0_f2:B:search terms generating traffic to a specific bookstore, we do not observe the more obscure searches
+11:299:25612:23:23:72:540:156:11:g_d0_f2:11:g_d0_f2:B:taking place on general search engines.  For instance, for Amazon we only observe the search terms
+11:300:25710:23:23:72:540:133:11:g_d0_f2:11:g_d0_f2:B:corresponding  to  24  percent  of  total  click  volume.   Brynjolfsson,  Hu,  and  Simester  (2011)  have
+11:301:25817:23:23:72:540:110:11:g_d0_f2:11:g_d0_f2:B:shown that internet markets have increased the importance of niche markets in terms of sales.  This
+11:302:25916:23:0:72:540:87:11:g_d0_f2:11:g_d0_f2:B:long tail phenomenon suggests that a portion of the unobserved searches may include searches for
+12:303:26014:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:book titles and other more obscure book-related search terms.  If this is the case,  Figure 2 may
+12:304:26111:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:understate the relative importance of book-related searches on search engines.  The importance of
+12:305:26208:24:29:72:392:662:11:g_d0_f2:11:g_d0_f2:B:the long tail for book sales and searches remains an open question.
+12:306:26275:29:30:72:284:633:12:g_d0_f1:12:g_d0_f1:C:3.2    Incoming and Outgoing Traffic
+12:307:26311:30:23:72:540:603:11:g_d0_f2:11:g_d0_f2:B:Search engines are not the only way consumers reach a bookseller’s site.  Consumers may directly
+12:308:26407:23:23:72:540:580:11:g_d0_f2:11:g_d0_f2:B:visit the site, be referred from another site (such as a price comparison site), and so on.  Likewise,
+12:309:26509:23:23:72:540:557:11:g_d0_f2:11:g_d0_f2:B:consumers that visit a bookseller’s site may simply be gathering information before visiting another
+12:310:26609:23:23:72:540:534:11:g_d0_f2:11:g_d0_f2:B:site to compare prices or make a purchase.  This section examines these patterns of incoming and
+12:311:26705:23:29:72:148:511:11:g_d0_f2:11:g_d0_f2:B:outgoing traffic.
+12:312:26722:29:30:72:295:482:11:g_d0_f7:11:g_d0_f7:C:3.2.1  How Searchers Reach Booksellers
+12:313:26760:30:23:72:540:452:11:g_d0_f2:11:g_d0_f2:B:To better understand how searchers actually reach the websites of different online booksellers, we
+12:314:26858:23:23:72:540:429:11:g_d0_f2:11:g_d0_f2:B:analyze incoming traffic to five of the leading online bookstores in the U.S. (Amazon,  Barnes &
+12:315:26954:23:23:72:540:406:11:g_d0_f2:11:g_d0_f2:B:Noble, Books-a-Million, Ecampus, and Powells).  In addition to observing the most popular search
+12:316:27050:23:23:72:540:383:11:g_d0_f2:11:g_d0_f2:B:terms for these retailers, comScore’s Search Planner data allows us to observe which sites get clicks
+12:317:27151:23:23:72:540:360:11:g_d0_f2:11:g_d0_f2:B:for specific searches conducted at the main search engines as well as the source of incoming and
+12:318:27247:23:23:72:297:337:11:g_d0_f2:11:g_d0_f2:B:the destination of outgoing traffic for each site.
+12:319:27297:23:23:88:539:314:11:g_d0_f2:11:g_d0_f2:A:The results summarized in Table 4 show the percentages of visitors to these online bookstores
+12:320:27390:23:23:72:540:291:11:g_d0_f2:11:g_d0_f2:B:in August 2012, categorized by the most important referring sites or platforms.  For example, 27.8
+12:321:27488:23:23:72:540:268:11:g_d0_f2:11:g_d0_f2:B:percent of Amazon’s traffic is due to direct logins, i.e., consumers directly navigating to its site.
+12:322:27589:23:23:72:540:245:11:g_d0_f2:11:g_d0_f2:B:Amazon received 40.2 percent of its traffic through Google, 5.9 percent through Yahoo, and 15.1
+12:323:27684:23:23:72:540:222:11:g_d0_f2:11:g_d0_f2:B:percent through Bing.  As shown in Figure 2(a),  most of this traffic stemmed from navigational
+12:324:27779:23:23:72:540:199:11:g_d0_f2:11:g_d0_f2:B:searches, which are effectively a shortcut for direct logins.  Finally, 3.9 percent of Amazon’s traffic
+12:325:27882:23:23:72:478:176:11:g_d0_f2:11:g_d0_f2:B:originated at another bookstore while 4.1 percent came from a price comparison site.
+12:326:27966:23:23:88:539:153:11:g_d0_f2:11:g_d0_f2:A:More broadly, Table 4 shows that there is considerable heterogeneity in the sources of traffic for
+12:327:28064:23:23:72:540:130:11:g_d0_f2:11:g_d0_f2:B:different booksellers.  Amazon and Barnes & Noble receive much more traffic through direct logins
+12:328:28161:23:23:72:540:107:11:g_d0_f2:11:g_d0_f2:B:than  Ecampus.com,  Powell’s,  and  Books-a-Million.   This  may  stem  from  the  fact  that  Amazon
+12:329:28262:23:0:72:540:84:11:g_d0_f2:11:g_d0_f2:B:and Barnes & Noble are better known brands; see Baye, De los Santos, and Wildenbeest (2012).
+13:330:28356:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:Powell’s and Books-a-Million rely more heavily on general search engines to receive traffic, while
+13:331:28454:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:referrals from other bookstores are relatively important for Barnes & Noble, Ecampus, and Books-
+13:332:28550:24:23:72:539:662:11:g_d0_f2:11:g_d0_f2:B:A-Million.13Finally, Amazon receives a far greater share of its traffic from price comparison sites
+13:333:28649:23:28:72:215:639:11:g_d0_f2:11:g_d0_f2:B:than do the other booksellers.
+13:334:28679:28:30:72:370:611:11:g_d0_f7:11:g_d0_f7:C:3.2.2  What Searchers Do After Visiting a Bookseller
+13:335:28731:30:23:72:540:581:11:g_d0_f2:11:g_d0_f2:B:To identify what happens after having visited an online bookseller, we analyze the outgoing traffic
+13:336:28830:23:24:72:540:558:11:g_d0_f2:11:g_d0_f2:B:from the bookstores using comScore’s Search Planner data.  The results are summarized in Table
+13:337:28924:24:23:72:540:534:11:g_d0_f2:11:g_d0_f2:B:5, using data from August 2012 for Amazon, Barnes & Noble, Ecampus.com, Powell’s, and Books-
+13:338:29016:23:23:72:120:511:11:g_d0_f2:11:g_d0_f2:B:A-Million.
+13:339:29026:23:23:88:539:488:11:g_d0_f2:11:g_d0_f2:A:First, note that a searcher that terminates his or her search activity after visiting a bookseller
+13:340:29124:23:23:72:540:465:11:g_d0_f2:11:g_d0_f2:B:is  more  likely  to  have  consummated  a  purchase  than  is  a  searcher  that  does  not  terminate  but
+13:341:29232:23:23:72:540:442:11:g_d0_f2:11:g_d0_f2:B:instead visits another bookseller or a price comparison site.  Table 5 shows that 43 percent of users
+13:342:29333:23:23:72:540:419:11:g_d0_f2:11:g_d0_f2:B:that visited Amazon terminated their search by logging off; this share is much lower for the other
+13:343:29431:23:23:72:376:396:11:g_d0_f2:11:g_d0_f2:B:bookstores, especially for Ecampus.com, which was 5.7 percent.
+13:344:29493:23:23:88:539:373:11:g_d0_f2:11:g_d0_f2:A:Second, note that consumers that choose to leave one bookstore and visit another bookstore may
+13:345:29587:23:23:72:540:350:11:g_d0_f2:11:g_d0_f2:B:be doing so because the book was not in stock or was priced above their reservation price.  Table 5
+13:346:29686:23:23:72:540:327:11:g_d0_f2:11:g_d0_f2:B:shows that only 4.2 percent of visitors to Amazon chose to visit another bookstore after searching
+13:347:29784:23:23:72:540:304:11:g_d0_f2:11:g_d0_f2:B:there.  This is significantly lower than for the other bookstores in our sample;  for example,  38.7
+13:348:29884:23:23:72:540:281:11:g_d0_f2:11:g_d0_f2:B:percent of Barnes & Noble visitors and 79.5 percent of Ecampus visitors chose to search another
+13:349:29979:23:23:72:287:258:11:g_d0_f2:11:g_d0_f2:B:bookstore immediately after visiting the site.
+13:350:30025:23:23:88:539:235:11:g_d0_f2:11:g_d0_f2:A:Finally,  consumers may visit a bookseller with the intent of free riding on the general infor-
+13:351:30120:23:23:72:540:212:11:g_d0_f2:11:g_d0_f2:B:mation,  reviews,  or  recommendations  it  provides,  and  then  leave  the  bookseller’s  site  to  search
+13:352:30228:23:23:72:540:189:11:g_d0_f2:11:g_d0_f2:B:for the best available price.  As shown in Table 5, 2.9 percent of Amazon visitors directly visit a
+13:353:30327:23:23:72:540:166:11:g_d0_f2:11:g_d0_f2:B:price comparison site after viewing pages at Amazon.  Visits to price comparison sites comprise a
+13:354:30424:23:46:72:425:143:11:g_d0_f2:11:g_d0_f2:B:negligible share of outgoing traffic for the other booksellers in our sample.
+13:355:30501:46:15:83:539:97:6:g_d0_f4:9:g_d0_f5:F:13The other bookstores category includes Abe-books.com, Alibris.com, Amazon.com, Audible.com, Barnesandno-
+13:356:30607:15:10:72:540:82:9:g_d0_f5:9:g_d0_f5:F:ble.com, Biggerbooks.com, Bkstr.com, Bncollege.com, Bookbyte.com, Booksamillion.com, Campusbookrentals.com,
+13:357:30714:10:0:72:516:72:9:g_d0_f5:9:g_d0_f5:F:Christianbook.com, e-books.com, Ecampus.com, Half.com, Kobobooks.com, Powells.com, and Textbooks.com.
+14:358:30817:0:31:72:365:709:12:g_d0_f1:12:g_d0_f1:C:3.3    Search Activity on Book-Oriented Platforms
+14:359:30866:31:23:72:540:678:11:g_d0_f2:11:g_d0_f2:B:As discussed earlier, general search engines are not the only way consumers can search for books.
+14:360:30963:23:23:72:540:655:11:g_d0_f2:11:g_d0_f2:B:Consumers can search the websites of booksellers and other retailers, as well price comparison sites.
+14:361:31064:23:23:72:540:632:11:g_d0_f2:11:g_d0_f2:B:In light of the fact that major booksellers receive a considerable share of their traffic from direct
+14:362:31165:23:23:72:540:609:11:g_d0_f2:11:g_d0_f2:B:logins  and  navigational  searches,  one  would  expect  the  number  of  searches  on  these  sites  to  be
+14:363:31274:23:23:72:540:586:11:g_d0_f2:11:g_d0_f2:B:substantial.  Unfortunately,  comScore does not provide information about the keywords used for
+14:364:31369:23:23:72:540:563:11:g_d0_f2:11:g_d0_f2:B:searches “inside” these retailers.  Nonetheless, limited information is available through the qSearch
+14:365:31470:23:23:72:117:540:11:g_d0_f2:11:g_d0_f2:B:database.
+14:366:31479:23:23:88:539:517:11:g_d0_f2:11:g_d0_f2:A:The qSearch data are based on the comScore panel, which contains all of the browsing activity of
+14:367:31575:23:23:72:540:494:11:g_d0_f2:11:g_d0_f2:B:about two million users in the U.S. It contains monthly data on searches conducted by consumers
+14:368:31670:23:23:72:539:471:11:g_d0_f2:11:g_d0_f2:B:on  the  internet.14These  searches  include  searches  through  traditional  search  boxes  as  well  as
+14:369:31775:23:23:71:539:448:11:g_d0_f2:11:g_d0_f2:B:toolbars and widgets.  The qSearch database includes the actual search volume and search intensity
+14:370:31873:23:23:71:539:425:11:g_d0_f2:11:g_d0_f2:B:at over 200 online properties, including Amazon, Barnes & Noble, and several other book-oriented
+14:371:31969:23:23:71:539:402:11:g_d0_f2:11:g_d0_f2:B:platforms.  Unlike Search Planner, the data indicate the total number of searches on each site rather
+14:372:32070:23:23:71:539:379:11:g_d0_f2:11:g_d0_f2:B:than a breakdown of searches by keyword.  Thus, one cannot distinguish between searches for books
+14:373:32167:23:23:71:286:356:11:g_d0_f2:11:g_d0_f2:B:versus other products with the qSearch data.
+14:374:32211:23:23:88:539:333:11:g_d0_f2:11:g_d0_f2:A:Table  6  provides  a  snapshot  (February,  2012)  of  the  total  number  of  searches  conducted  on
+14:375:32314:23:23:71:539:310:11:g_d0_f2:11:g_d0_f2:B:the five largest book-oriented sites that are tracked by the qSearch database.  Amazon processed
+14:376:32410:23:23:71:539:287:11:g_d0_f2:11:g_d0_f2:B:the majority of searches among the bookstores, having almost ten times as many searches as the
+14:377:32504:23:23:71:539:264:11:g_d0_f2:11:g_d0_f2:B:number two bookstore, Barnes & Noble.  In terms of total searches, a smaller number of searches
+14:378:32599:23:23:71:539:241:11:g_d0_f2:11:g_d0_f2:B:were conducted on the price comparison site (Bookfinder).  The level of search activity is even more
+14:379:32699:23:23:71:422:218:11:g_d0_f2:8:g_d0_f3:B:skewed toward Amazon when one measures searches using search visits.15
+14:380:32769:23:23:88:539:195:11:g_d0_f2:11:g_d0_f2:A:Figure 3 shows the evolution of searches between January 2011 and February 2013 for these
+14:381:32858:23:31:72:540:172:11:g_d0_f2:11:g_d0_f2:B:book-oriented  qSearch  properties.   The  graph  shows  that,  especially  for  Amazon  and  Barnes  &
+14:382:32961:31:15:83:539:141:6:g_d0_f4:9:g_d0_f5:F:14According to comScore’s qSearch documentation, a search is defined as:  (1) a user interaction where the user
+14:383:33072:15:11:72:540:126:9:g_d0_f5:9:g_d0_f5:F:is presented with a search result page that contains results that match the consumer’s search intent; (2) the search
+14:384:33188:11:11:72:540:115:9:g_d0_f5:9:g_d0_f5:F:result page allows the user to refine or change their search parameters; and (3) the search can be initiated from a
+14:385:33303:11:7:72:380:104:9:g_d0_f5:9:g_d0_f5:F:drop down menu or by clicking a link, as long as first two rules are satisfied.
+14:386:33382:7:15:83:539:97:6:g_d0_f4:9:g_d0_f5:F:15According to comScore’s qSearch documentation, a search visit is a session in which a user conducted one or
+14:387:33491:15:10:72:540:82:9:g_d0_f5:9:g_d0_f5:F:more searches.  If searches are conducted at different points during the day,  with more than 30 minutes of search
+14:388:33605:10:0:72:305:72:9:g_d0_f5:9:g_d0_f5:F:inactivity at the site, they count as multiple search visits.
+15:389:33668:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:Noble, there is seasonality in searches during the holiday shopping season, with searches increasing
+15:390:33768:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:sharply near the end of the calendar year.  Searches at Barnes & Noble appear to have peaked near
+15:391:33865:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:the end of 2011, while searches at Amazon have generally increased, with the exception of the most
+15:392:33963:23:23:72:162:639:11:g_d0_f2:11:g_d0_f2:B:recent few months.
+15:393:33981:23:23:88:539:616:11:g_d0_f2:11:g_d0_f2:A:We emphasize that the qSearch data displayed in Figure 3 does not indicate how many of the
+15:394:34071:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:searches  at  these  book-oriented  platforms  are,  in  fact,  book  related.   While  this  is  not  so  much
+15:395:34182:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:an issue for sites that specialize in books (such as Barnes & Noble, Bookfinder, and Google Book
+15:396:34278:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:Search), it is clearly an issue for Amazon.  While Amazon began its life as an online bookstore, it
+15:397:34377:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:has evolved into a mass merchant where over 53 percent of its 2009 revenues derived from products
+15:398:34474:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:outside  the  book  category.   And  today,  Amazon  is  itself  a  platform  that  services  thousands  of
+15:399:34581:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:Amazon  Marketplace  sellers.   Similarly,  these  data  do  not  permit  us  to  measure  book-related
+15:400:34684:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:searches  at  retailers  such  as  Walmart  or  on  platforms  such  as  eBay  (which  received  more  than
+15:401:34791:23:34:72:330:432:11:g_d0_f2:11:g_d0_f2:B:twice as many searches as Amazon in February 2012).
+15:402:34842:34:34:72:384:398:14:g_d0_f1:14:g_d0_f1:C:4    The Dynamics of Book-Related Searches
+15:403:34884:34:23:72:540:364:11:g_d0_f2:11:g_d0_f2:B:This section provides a look at how searches for books on search engines evolve during a window
+15:404:34979:23:23:72:540:341:11:g_d0_f2:11:g_d0_f2:B:around the release date of the book and also explores how the shifts toward other platforms have
+15:405:35075:23:29:72:355:318:11:g_d0_f2:11:g_d0_f2:B:impacted book-related searches at the main search engines.
+15:406:35133:29:30:72:408:289:12:g_d0_f1:12:g_d0_f1:C:4.1    Combining Data from comScore and Google Trends
+15:407:35186:30:23:72:540:259:11:g_d0_f2:11:g_d0_f2:B:Since  our  comScore  database  only  contains  information  about  searches  for  specific  book-related
+15:408:35291:23:23:72:540:236:11:g_d0_f2:11:g_d0_f2:B:keywords on a monthly basis for the 2010-2012 period, our strategy is to combine these data with
+15:409:35387:23:24:72:461:213:11:g_d0_f2:8:g_d0_f3:B:data from Google Trends to create a dataset that runs from 2004 through 2013.16
+15:410:35466:24:23:88:539:189:11:g_d0_f2:11:g_d0_f2:A:For a given search term, Google Trends provides a measure of the number of searches for that
+15:411:35558:23:23:71:539:166:11:g_d0_f2:11:g_d0_f2:B:term between 2004 and 2013.  The measure is relative:  the maximum number of searches within
+15:412:35650:23:46:71:539:143:11:g_d0_f2:11:g_d0_f2:B:the period is normalized to 100.  To illustrate, Figure 4 displays search volume reported by Google
+15:413:35749:46:15:83:539:97:6:g_d0_f4:9:g_d0_f5:F:16Choi and Varian (2012) described how Google Trends data can help to predict economic time series of interest.
+15:414:35860:15:10:72:540:82:9:g_d0_f5:9:g_d0_f5:F:Google  Trend  data  has  been  used  in  epidemiology  to  detect  influenza  epidemics  (Ginsberg  et  al.,  2009)  and  in
+15:415:35985:10:0:72:504:72:9:g_d0_f5:9:g_d0_f5:F:economics to predict the unemployment rate (D’Amuri and Marcucci, 2010) and inflation (Guzman, 2011).
+16:416:36088:0:23:72:539:709:11:g_d0_f2:11:g_d0_f2:B:Trends for the term “Amazon.”17The bars represent monthly search “volume,” whereas the curve
+16:417:36180:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:gives the seasonally adjusted trend.  The figure shows search volume has been rising for the term
+16:418:36277:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:“Amazon,” with the growth in search volume accelerating after July 2010.  Figure 5 displays the
+16:419:36372:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:relative search volume over time for “Amazon” and “Barnes and Noble” in a single graph.  The
+16:420:36464:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:number of search queries for Barnes & Noble was relatively stable up to 2010, after which searches
+16:421:36562:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:went up quickly.  However, searches at Barnes & Noble peaked near the end of 2011, whereas the
+16:422:36656:23:23:72:267:570:11:g_d0_f2:11:g_d0_f2:B:search volume for Amazon kept growing.
+16:423:36694:23:23:88:539:547:11:g_d0_f2:11:g_d0_f2:A:Since the Google Trends measure of search is relative, the relative position of the two lines in
+16:424:36790:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:Figure 5 is uninformative: It would be erroneous to infer that Barnes & Noble had more navigational
+16:425:36889:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:searches than Amazon for the 2004-2012 period.  Our strategy for overcoming this limitation is to
+16:426:36986:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:use information about the actual number of searches for a given search term in comScore to convert
+16:427:37084:23:23:72:527:455:11:g_d0_f2:8:g_d0_f3:B:the Google Trends index into historical data on the numbers of searches for that search term.18
+16:428:37179:23:23:88:539:432:11:g_d0_f2:11:g_d0_f2:A:Figure 6 provides one example of the utility of combining Google Trends and comScore data.
+16:429:37269:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:This graph shows the evolution of searches for six terms related to e-readers:  “kindle,”  “nook,”
+16:430:37367:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:“e-book,” “ereader,” and “sony ebook reader.”  By combining the data, we not only obtain a time
+16:431:37462:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:series dating back to 2004, but the resulting numbers of searches are cardinal so the different graphs
+16:432:37564:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:may be compared.  Figure 6 illustrates that searches for “kindle” took off in January 2008, and the
+16:433:37663:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:number of searches for the Kindle has exceeded that for the Nook every year since.  Notice that the
+16:434:37762:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:recent decline in searches for these two e-readers is consistent with our earlier remarks regarding
+16:435:37861:23:29:72:540:271:11:g_d0_f2:11:g_d0_f2:B:the projected decline in post-2012 e-reader sales as consumers switch to tablets and other devices.
+16:436:37960:29:30:72:261:242:12:g_d0_f1:12:g_d0_f1:C:4.2    Searches for Specific Titles
+16:437:37995:30:23:72:540:212:11:g_d0_f2:11:g_d0_f2:B:We are now in a position to take a deeper dive into searches for books on search engines and to
+16:438:38090:23:23:72:540:189:11:g_d0_f2:11:g_d0_f2:B:examine how search patterns are evolving over time.  We use the Search Planner data for a sample
+16:439:38186:23:36:72:540:166:11:g_d0_f2:11:g_d0_f2:B:of 735 books to study how the number of clicks on Google changes throughout a book’s life cycle.
+16:440:38282:36:11:83:293:130:6:g_d0_f4:9:g_d0_f5:?:17We limit search volume to the United States only.
+16:441:38333:11:15:83:539:119:6:g_d0_f4:9:g_d0_f5:F:18Google Trends allows a comparison of up to 5 search terms.  Nevertheless, the relative search volume of more
+16:442:38443:15:11:72:540:104:9:g_d0_f5:9:g_d0_f5:F:than 5 search terms can be obtained by running multiple Google Trends comparisons, with each comparison having
+16:443:38553:11:11:72:540:93:9:g_d0_f5:9:g_d0_f5:F:at least one search term that is common across all comparisons.  The comScore (or similar) data is nonetheless still
+16:444:38669:11:10:72:540:82:9:g_d0_f5:9:g_d0_f5:F:needed to pin down the level of searches.  Also notice that searches according to the comScore data by definition lead
+16:445:38787:10:0:72:462:72:9:g_d0_f5:9:g_d0_f5:F:to a click to a bookstore, whereas a search according to Google Trends may not result in a click.
+17:446:38886:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:Our  sample  includes  titles  released  in  every  year  since  2003,  but  roughly  half  of  the  sample  is
+17:447:38997:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:composed of books released in 2012.  The search queries we use to obtain the clicks on Google are
+17:448:39094:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:the exact titles of the book in our sample.  In addition to clicks, we observe book characteristics
+17:449:39193:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:such as ISBN, list price, publisher, date of publication, format (hardcover or paperback), number
+17:450:39290:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:of pages, edition (e.g., first or reprint), dimension, and weight.  Moreover, for 2012 we have daily
+17:451:39390:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:observations of a book’s price as well as availability at each of the leading online bookstores.19For
+17:452:39491:23:23:71:539:570:11:g_d0_f2:11:g_d0_f2:B:Amazon we also observe a book’s customer rating,  number of customer reviews,  and sales rank.
+17:453:39585:23:23:71:539:547:11:g_d0_f2:11:g_d0_f2:B:Most books in our sample are first editions; the vast majority are New York Times Bestsellers that
+17:454:39683:23:23:71:224:524:11:g_d0_f2:11:g_d0_f2:B:came out during 2011 and 2012.
+17:455:39713:23:23:88:539:501:11:g_d0_f2:11:g_d0_f2:A:The Search Planner data has two limitations.  A first limitation is that we only observe clicks
+17:456:39808:23:23:71:539:478:11:g_d0_f2:11:g_d0_f2:B:for the period between February 2010 and February 2013.  Secondly, we only observe clicks if they
+17:457:39905:23:23:71:539:455:11:g_d0_f2:11:g_d0_f2:B:exceed  a  certain  threshold.   To  deal  with  these  two  matters,  we  supplement  the  Search  Planner
+17:458:40012:23:23:71:539:432:11:g_d0_f2:11:g_d0_f2:B:data with Google Trends data,  as discussed above.  For each book in our sample we use Google
+17:459:40105:23:23:71:539:409:11:g_d0_f2:11:g_d0_f2:B:Trends to capture the volume of search queries that users enter into Google when searching for the
+17:460:40203:23:23:71:539:386:11:g_d0_f2:11:g_d0_f2:B:title of a book.20Since Google Trends only gives a relative measure of search volume, we convert
+17:461:40299:23:23:71:539:363:11:g_d0_f2:11:g_d0_f2:B:the index to actual levels of search volume by setting the maximum value of the index during the
+17:462:40395:23:23:71:539:340:11:g_d0_f2:11:g_d0_f2:B:period between February 2010 and February 2013 equal to the corresponding clicks according to
+17:463:40488:23:23:71:146:317:11:g_d0_f2:11:g_d0_f2:B:Search Planner.
+17:464:40503:23:23:88:539:294:11:g_d0_f2:11:g_d0_f2:A:Figure  7  gives  an  example  for  the  book  “The  End  of  Illness”  by  David  B.  Agus,  which  was
+17:465:40607:23:23:71:539:271:11:g_d0_f2:11:g_d0_f2:B:released on January 17,  2012.  Searches on Google for this title start relatively high,  but within
+17:466:40707:23:23:71:539:248:11:g_d0_f2:11:g_d0_f2:B:a  few  months  after  the  release  date  decay  to  relatively  low  levels.   Also  shown  in  this  graph  is
+17:467:40820:23:23:71:539:225:11:g_d0_f2:11:g_d0_f2:B:Amazon’s sales rank for this title, which shows a reverse pattern.  This illustrates that sales rank is
+17:468:40923:23:23:71:539:202:11:g_d0_f2:11:g_d0_f2:B:actually inversely related to the number of searches.  It is an open question whether this is a result
+17:469:41025:23:23:71:539:179:11:g_d0_f2:11:g_d0_f2:B:of lags in Amazon’s construction of sales rank or whether this means that, during the life cycle of
+17:470:41124:23:23:71:539:156:11:g_d0_f2:11:g_d0_f2:B:a book, consumers increasingly visit Amazon’s site directly to purchase the book rather than using
+17:471:41222:23:25:71:184:133:11:g_d0_f2:11:g_d0_f2:B:a general search engine.
+17:472:41246:25:15:83:539:108:6:g_d0_f4:9:g_d0_f5:F:19These  are  Amazon.com,  Barnesandnoble.com,  Booksamillion.com,  Walmart.com,  Powells.com,  and  Ecam-
+17:473:41352:15:7:72:364:93:9:g_d0_f5:9:g_d0_f5:F:pus.com.  See Section 5 for a more detailed description of the price data.
+17:474:41426:7:14:83:540:86:6:g_d0_f4:9:g_d0_f5:F:20We use exact phrases (exact words in quotes), e.g.,“Gone girl”instead ofGone girl.  We limit search volume to
+17:475:41537:14:0:72:165:72:9:g_d0_f5:9:g_d0_f5:F:the United States only.
+18:476:41562:0:23:88:539:709:11:g_d0_f2:11:g_d0_f2:A:The  pattern  for  this  particular  title  is  fairly  representative  of  the  other  titles  in  our  sample.
+18:477:41674:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:In particular, we ran a linear regression of the total number of searches for each book title in our
+18:478:41774:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:sample on a constant and a set of dummies that represent months since release.  The underlying
+18:479:41868:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:regression results for various specifications are shown in Table 7.  For the specification in column
+18:480:41968:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:(1), which includes book fixed effects to control for heterogeneity among books, most of the month-
+18:481:42067:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:since-release coefficients are significantly different from zero at conventional levels.  Figure 8 plots
+18:482:42171:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:the predicted values of each of the dummies using the parameter estimates for specification (1).
+18:483:42267:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:This figure shows that the patterns of search observed around the release window for “The End of
+18:484:42363:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:Illness” (see Figure 7) is typical of newly released books:  Search activity tends to be high in the
+18:485:42463:23:23:72:399:501:11:g_d0_f2:11:g_d0_f2:B:first few months, but then quickly drops to significantly lower levels.
+18:486:42534:23:23:88:539:478:11:g_d0_f2:11:g_d0_f2:A:Column (2) of Table 7 is a specification that includes book characteristics rather than book fixed
+18:487:42632:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:effects.  Although this reduces the fit of the model and the significance of some of the months-since-
+18:488:42734:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:release dummies, the magnitude of the coefficients is similar to that in the first specification.  Most
+18:489:42837:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:book characteristic variables have parameter estimates that are significantly different from zero.
+18:490:42935:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:There is less search for first edition books than for books in later editions.  This may stem from
+18:491:43033:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:the fact that later editions are only published if the book is popular.  There are more searches for
+18:492:43133:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:paperbacks than hardcover books in our sample, and again this may reflect the fact that paperbacks
+18:493:43231:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:are targeted to the masses and therefore result in more searches.  The final column of Table 7 adds
+18:494:43330:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:a linear and quadratic time trend to control for possible changes in search behavior between 2004
+18:495:43427:23:23:72:540:271:11:g_d0_f2:11:g_d0_f2:B:and 2013.  Both coefficients are highly significant, suggesting that (controlling for changes in search
+18:496:43530:23:23:72:540:248:11:g_d0_f2:11:g_d0_f2:B:behavior around release windows, edition, format, and so on) the number of book searches at search
+18:497:43628:23:23:72:163:225:11:g_d0_f2:11:g_d0_f2:B:engines is evolving.
+18:498:43648:23:23:88:539:202:11:g_d0_f2:11:g_d0_f2:A:To more clearly see the implied evolution of searches for books over time, Figure 9 plots the
+18:499:43741:23:23:72:540:179:11:g_d0_f2:11:g_d0_f2:B:number  of  searches  predicted  by  the  model  for  each  year  in  our  sample.   This  plot  shows  that
+18:500:43849:23:23:72:540:156:11:g_d0_f2:11:g_d0_f2:B:searches per book on Google increased between 2003 and 2007, but since then have declined.  This
+18:501:43945:23:23:72:540:133:11:g_d0_f2:11:g_d0_f2:B:predicted pattern is consistent with our view that searchers are shifting away from using general
+18:502:44042:23:23:72:540:110:11:g_d0_f2:11:g_d0_f2:B:search engines to find books, and are increasingly (1) visiting online bookstores (such as Amazon
+18:503:44139:23:0:72:540:87:11:g_d0_f2:11:g_d0_f2:B:and Barnes & Noble) to conduct searches, and (2) searching within closed systems (e.g., Kindle or
+19:504:44238:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:Nook) to purchase books.  Thus,  while we cannot directly measure book related searches within
+19:505:44332:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:these alternative search platforms, the observable data from search engines is consistent with this
+19:506:44431:24:23:72:125:662:11:g_d0_f2:11:g_d0_f2:B:hypothesis.
+19:507:44442:23:23:88:539:639:11:g_d0_f2:11:g_d0_f2:A:We conclude by noting that the pattern in Figure 9 is also consistent with the trend in average
+19:508:44537:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:monthly retail sales for bricks-and-mortar bookstores, as shown in Figure 1, and may reflect the
+19:509:44633:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:same structural changes in the book industry that have led to a decline in the sales of physical
+19:510:44729:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:books at traditional bookstores.  For instance, the decline coincides with the increasing popularity
+19:511:44829:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:of e-readers shown earlier in Figure 6, the general shift toward e-books, and the rising prominence
+19:512:44928:23:34:72:401:524:11:g_d0_f2:11:g_d0_f2:B:of Amazon as a platform for searching for books and other products.
+19:513:44995:34:34:72:181:490:14:g_d0_f1:14:g_d0_f1:C:5    Book Prices
+19:514:45011:34:23:72:540:456:11:g_d0_f2:11:g_d0_f2:B:Another open question is how changes in search technologies and behavior have impacted the prices
+19:515:45108:23:23:72:539:433:11:g_d0_f2:11:g_d0_f2:B:of physical and digital books.A priori, it is not clear how these prices should evolve over time.  In
+19:516:45209:23:23:72:540:410:11:g_d0_f2:11:g_d0_f2:B:the short run, intermediaries may use penetration pricing in an attempt to induce consumers to
+19:517:45303:23:23:72:540:387:11:g_d0_f2:11:g_d0_f2:B:switch from buying printed books to e-books.  Once the market is more mature, and a sufficient
+19:518:45397:23:23:72:540:364:11:g_d0_f2:11:g_d0_f2:B:number of consumers is locked into a specific platform, firms may find it optimal to increase prices.
+19:519:45498:23:23:72:540:341:11:g_d0_f2:11:g_d0_f2:B:Sales of physical and digital books are also likely to be related.  Hu and Smith (2013) use a natural
+19:520:45599:23:23:72:540:318:11:g_d0_f2:11:g_d0_f2:B:experiment  to  analyze  the  effect  of  e-book  availability  on  sales  of  physical  books  and  find  that
+19:521:45710:23:23:72:428:295:11:g_d0_f2:11:g_d0_f2:B:delayed e-book availability results in a large decrease in total e-book sales.
+19:522:45788:23:23:88:539:272:11:g_d0_f2:11:g_d0_f2:A:We analyze book prices using a large dataset of daily prices collected using a scraper written in
+19:523:45885:23:23:72:540:249:11:g_d0_f2:11:g_d0_f2:B:Java.  The dataset contains daily price information throughout 2012 for physical books as well as e-
+19:524:45985:23:23:72:540:226:11:g_d0_f2:11:g_d0_f2:B:books sold at Amazon, Barnes & Noble, and Books-A-Million, physical books sold at Ecampus.com,
+19:525:46079:23:23:72:540:203:11:g_d0_f2:11:g_d0_f2:B:Powell’s  Books,  and  Walmart,  and  e-books  sold  at  Kobo  and  Google.   In  addition  to  prices  we
+19:526:46185:23:23:72:540:180:11:g_d0_f2:11:g_d0_f2:B:observe  availability  and  several  book  characteristics  such  as  the  publisher,  format  (hardcover  or
+19:527:46294:23:23:72:366:157:11:g_d0_f2:11:g_d0_f2:B:paperback), edition, number of pages, weight, and dimension.
+19:528:46354:23:23:88:539:134:11:g_d0_f2:11:g_d0_f2:A:Figure  10  shows  the  kernel  estimates  of  the  price  densities  for  hardcover  books,  paperbacks,
+19:529:46459:23:23:72:540:111:11:g_d0_f2:11:g_d0_f2:B:and e-books.  The prices used are average prices across books within format and across bookstores,
+19:530:46557:23:0:72:540:88:11:g_d0_f2:11:g_d0_f2:B:so the variation reflects changes over time.  E-books are on average less expensive than hardcover
+20:531:46657:0:23:72:323:709:11:g_d0_f2:11:g_d0_f2:B:books, but slightly more expensive than paperbacks.
+20:532:46708:23:24:88:539:686:11:g_d0_f2:11:g_d0_f2:A:The relationship between publishers and retailers complicates the analysis of prices for e-books.
+20:533:46805:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:Traditionally,  books were sold using a wholesale model:  a publisher sells a book to a retailer at
+20:534:46904:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:a wholesale price,  which is typically half the list price for the book.  The retailer is then free to
+20:535:47006:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:sell the book at whatever price it wants.  Initially this model was used by all players for selling
+20:536:47105:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:e-books  as  well.   However,  to  foster  e-book  sales,  Amazon  began  heavily  discounting  popular  e-
+20:537:47212:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:books, selling them for $9.99—a price that is below the wholesale price of many physical books.
+20:538:47307:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:Publishers, fearing that e-books would cannibalize sales of printed books and that consumers would
+20:539:47405:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:grow accustomed to low e-book prices, were concerned about the low e-book prices.  When Apple
+20:540:47498:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:launched its iBookstore in April 2010,  five of the “big six” publishers (HarperCollins,  Hachette,
+20:541:47597:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:Macmillan,  Penguin,  and  Simon  &  Schuster)  adopted  Apple’s  newly  developed  agency  model.
+20:542:47695:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:Under the agency model the retailer receives a fixed percentage of the book’s sales price (typically
+20:543:47795:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:30 percent).  Moreover, under the agency model, the retail price is no longer set by the retailer but
+20:544:47896:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:set by the publisher.  Other online bookstores reached similar agreements with the publishers.  As
+20:545:47994:23:23:72:540:386:11:g_d0_f2:11:g_d0_f2:B:a reaction to these developments, the Department of Justice sued Apple and the five publishers on
+20:546:48091:23:23:72:413:363:11:g_d0_f2:11:g_d0_f2:B:April 12, 2012, alleging that they conspired to fix the prices of e-books.
+20:547:48165:23:23:88:539:340:11:g_d0_f2:11:g_d0_f2:A:Table 8 provides descriptive statistics for the prices of books in our sample.  The table makes
+20:548:48260:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:a distinction between e-books that are sold under the agency model and those that are sold under
+20:549:48356:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:the wholesale model.  Average prices are generally higher for the agency model e-books and show
+20:550:48451:23:23:72:137:271:11:g_d0_f2:11:g_d0_f2:B:less variation.
+20:551:48466:23:23:88:539:248:11:g_d0_f2:11:g_d0_f2:A:Figure  11 plots  the  average  prices  of paperbacks,  e-books  sold  under the  agency  model,  and
+20:552:48567:23:23:72:539:225:11:g_d0_f2:11:g_d0_f2:B:e-books  sold  under  the  wholesale  model  across  bookstores.21Even  though  the  DOJ  reached  a
+20:553:48667:23:23:72:540:202:11:g_d0_f2:11:g_d0_f2:B:settlement with three of the publishers in April 2012 (HarperCollins, Hachette, and Macmillan),
+20:554:48762:23:23:72:540:179:11:g_d0_f2:11:g_d0_f2:B:and as part of the settlement e-book retailers are allowed to discount e-book titles,  prices for e-
+20:555:48862:23:23:72:540:156:11:g_d0_f2:11:g_d0_f2:B:books sold under the wholesale model increased shortly after the lawsuit was announced.  The steep
+20:556:48960:23:23:72:540:133:11:g_d0_f2:11:g_d0_f2:B:decline in e-book prices sold under the wholesale model a few months later coincides with the final
+20:557:49059:23:35:72:540:110:11:g_d0_f2:11:g_d0_f2:B:approval of the settlement between the DOJ and the three publishers, with HarperCollins books
+20:558:49152:35:0:83:388:75:6:g_d0_f4:9:g_d0_f5:?:21Since we do not have sales data, average prices are not weighted by sales.
+21:559:49230:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:starting to be discounted on Amazon soon after (Hachette and Simon & Schuster discounting began
+21:560:49325:23:24:72:165:686:11:g_d0_f2:11:g_d0_f2:B:in December 2012).
+21:561:49343:24:23:88:539:662:11:g_d0_f2:11:g_d0_f2:A:One might wonder whether the evolution of search has impacted the degree of price dispersion
+21:562:49435:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:for  books.   One  standard  measure  of  disperson  is  the  coefficient  of  variation—the  ratio  of  the
+21:563:49543:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:standard deviation  in the  prices different  sellers charge for a  given  book  divided  by  the average
+21:564:49648:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:price sellers charge for that book.  Since this measure is homogeneous of degree zero in the level
+21:565:49746:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:of prices, one can average these coefficients of variation across all books in our sample to obtain
+21:566:49845:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:a useful summary statistic for the level of price dispersion.  Figure 12 plots the average coefficient
+21:567:49947:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:of  variation  over  time  for  the  three  book  formats  in  our  sample.   Notice  that  the  coefficient  of
+21:568:50059:23:23:72:540:501:11:g_d0_f2:11:g_d0_f2:B:variation is highest for e-books sold under the wholesale model,  lower for paperback books,  and
+21:569:50156:23:23:72:540:478:11:g_d0_f2:11:g_d0_f2:B:lowest for e-books sold under the agency model.  Additionally, note that the coefficient of variation
+21:570:50257:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:for e-books sold under the wholesale model declined significantly after the e-book settlement, while
+21:571:50357:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:the coefficient of variation for e-books sold under the agency model increased slightly.  In contrast,
+21:572:50459:23:23:72:513:409:11:g_d0_f2:11:g_d0_f2:B:the coefficient of variation for paperbacks was relatively stable throughout the entire period.
+21:573:50554:23:23:88:539:386:11:g_d0_f2:11:g_d0_f2:A:The  underlying  reasons  for  these  changes  in  prices  and  levels  of  price  dispersion  remains  an
+21:574:50660:23:23:72:540:363:11:g_d0_f2:11:g_d0_f2:B:open  question.   We  note  that  the  two  remaining  publishers  (Macmillan  and  Penguin)  settled  in
+21:575:50765:23:34:72:540:340:11:g_d0_f2:11:g_d0_f2:B:early 2013, so this event is unlikely to be the driver of the patterns observed in Figures 11 and 12.
+21:576:50866:34:34:72:244:306:14:g_d0_f1:14:g_d0_f1:C:6    Concluding Remarks
+21:577:50889:34:23:72:540:272:11:g_d0_f2:11:g_d0_f2:B:Our initial look at the evolution of platforms through which consumers search for, purchase, and
+21:578:50985:23:23:72:540:249:11:g_d0_f2:11:g_d0_f2:B:read books highlights a number of issues that should be on the agenda of those interested in digital
+21:579:51085:23:23:72:540:226:11:g_d0_f2:11:g_d0_f2:B:media and other products sold online.  There are a variety of different platforms where consumers
+21:580:51182:23:23:72:540:203:11:g_d0_f2:11:g_d0_f2:B:can search for books, including online bookstores (such as Barnes & Noble), mass merchants (Ama-
+21:581:51278:23:23:72:540:180:11:g_d0_f2:11:g_d0_f2:B:zon), and price comparison sites (Bookfinder).  While data suggest that consumers are increasingly
+21:582:51376:23:23:72:540:157:11:g_d0_f2:11:g_d0_f2:B:conducting  searches  on  closed  systems  (such  as  e-readers)  and  retailer  platforms  (such  as  Ama-
+21:583:51483:23:23:72:540:134:11:g_d0_f2:11:g_d0_f2:B:zon), measurement of these trends is difficult.  In contrast to these platforms, data on the types of
+21:584:51584:23:23:72:344:111:11:g_d0_f2:11:g_d0_f2:B:searches conducted on search engines is readily available.
+21:585:51642:23:0:88:539:88:11:g_d0_f2:11:g_d0_f2:A:While  Amazon  and  Barnes  &  Noble  get  significant  numbers  of  visits  from  those  conducting
+22:586:51744:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:searches  on  Google  and  Bing,  most  of  the  observed  searches  are  navigational  ones—situations
+22:587:51847:23:24:72:540:686:11:g_d0_f2:11:g_d0_f2:B:in  which  users  query  a  search  engine  as  a  shortcut  for  navigating  to  the  site  of  the  bookseller
+22:588:51959:24:23:72:540:662:11:g_d0_f2:11:g_d0_f2:B:where actual product searches are performed.  Navigational searches to these top booksellers have
+22:589:52056:23:23:72:540:639:11:g_d0_f2:11:g_d0_f2:B:steadily  increased  going  back  to  2004.   The  number  of  browser-based  searches  on  book-related
+22:590:52160:23:23:72:540:616:11:g_d0_f2:11:g_d0_f2:B:platforms such as Amazon, Barnes & Noble, Bookfinder, and Google Books is sizable, but it is an
+22:591:52255:23:23:72:540:593:11:g_d0_f2:11:g_d0_f2:B:open question whether browser-based searches on these platforms will continue to grow.  Indeed,
+22:592:52350:23:23:72:540:570:11:g_d0_f2:11:g_d0_f2:B:our preliminary analysis of searches for book titles on Google suggests a declining trend in book
+22:593:52447:23:23:72:540:547:11:g_d0_f2:11:g_d0_f2:B:searches since 2007.  While these patterns are consistent with shifts toward non-browser searches
+22:594:52544:23:23:72:540:524:11:g_d0_f2:11:g_d0_f2:B:on closed platforms, including smartphone and tablet apps, additional research is required to reach
+22:595:52643:23:23:72:196:501:11:g_d0_f2:11:g_d0_f2:B:any definitive conclusions.
+22:596:52670:23:23:88:539:478:11:g_d0_f2:11:g_d0_f2:A:Another open agenda item is the importance of the long tail for product searches in general
+22:597:52761:23:23:72:540:455:11:g_d0_f2:11:g_d0_f2:B:and more specifically for book searches.  The search terms corresponding to long-tail searches at
+22:598:52858:23:23:72:540:432:11:g_d0_f2:11:g_d0_f2:B:the major search engines are not observed in comScore data because of low search volume; we do
+22:599:52952:23:23:72:540:409:11:g_d0_f2:11:g_d0_f2:B:not observe niche searches, which presumably take place in the long tail.  Additional research will
+22:600:53051:23:23:72:237:386:11:g_d0_f2:11:g_d0_f2:B:be needed to analyze the long tail.
+22:601:53086:23:23:88:539:363:11:g_d0_f2:11:g_d0_f2:A:An interesting new area of research has emerged relating to e-books.  We have identified several
+22:602:53182:23:23:72:540:340:11:g_d0_f2:11:g_d0_f2:B:new developments with respect to pricing strategies of publishers and booksellers and have provided
+22:603:53281:23:23:72:540:317:11:g_d0_f2:11:g_d0_f2:B:some preliminary findings on how some of these developments have influenced book prices.  More
+22:604:53375:23:23:72:540:294:11:g_d0_f2:11:g_d0_f2:B:research will be needed on how different selling formats (e.g.,  the agency and wholesale models)
+22:605:53472:23:23:72:470:271:11:g_d0_f2:8:g_d0_f3:B:affect pricing more generally, from both a theoretical and empirical point of view.22
+22:606:53557:23:23:88:539:248:11:g_d0_f2:11:g_d0_f2:A:Finally, note that we have completely side-stepped the first-order question of what consumers
+22:607:53650:23:23:72:540:225:11:g_d0_f2:11:g_d0_f2:B:are seeking when they conduct searches for books, digital media, or (more broadly) other products.
+22:608:53748:23:23:72:540:202:11:g_d0_f2:11:g_d0_f2:B:More  bluntly,  this  chapter  says  nothing  about  whether  consumers  are  searching  for  information
+22:609:53853:23:23:72:540:179:11:g_d0_f2:11:g_d0_f2:B:about the best book to read or information about the best prices available.  Future research that
+22:610:53950:23:70:72:502:156:11:g_d0_f2:11:g_d0_f2:B:unpacks these and other motives for search would be a valuable addition to the literature.
+22:611:54040:70:14:83:539:86:6:g_d0_f4:9:g_d0_f5:F:22Johnson (2013) and Abhishek, Jerath, and Zhang (2013) develop theoretical models that are geared toward a
+22:612:54147:14:0:72:330:72:9:g_d0_f5:9:g_d0_f5:F:comparison of the different selling formats in the book industry.
+23:613:54214:0:34:72:148:709:14:g_d0_f1:14:g_d0_f1:C:References
+23:614:54224:34:23:77:540:675:11:g_d0_f2:11:g_d0_f2:A:[1]  Abhishek,  Vibhanshu,  Kinshuk  Jerath,  and  Z.  John  Zhang  (2013).  “Agency  Selling  or  Re-
+23:615:54326:23:32:94:424:652:11:g_d0_f2:11:g_d0_f2:A:selling?  Channel Structures in Electronic Retailing.” Working Paper.
+23:616:54395:32:23:77:540:620:11:g_d0_f2:11:g_d0_f2:A:[2]  Baye, Michael R., Babur De los Santos, and Matthijs R. Wildenbeest (2013). “The Evolution
+23:617:54489:23:32:94:483:597:11:g_d0_f2:11:g_d0_f2:A:of Product Search.”The Journal of Law, Economics & Policy9 (2), pp. 201-221.
+23:618:54565:32:23:77:540:565:11:g_d0_f2:11:g_d0_f2:A:[3]  Baye,  Michael  R.,  Babur  De  los  Santos,  and  Matthijs  R.  Wildenbeest  (2012).  “What’s
+23:619:54664:23:23:94:539:542:11:g_d0_f2:11:g_d0_f2:A:in  a  Name?Measuring  Prominence,   and  Its  Impact  on  Organic  Traffic  from  Search
+23:620:54753:23:23:94:540:519:11:g_d0_f2:11:g_d0_f2:A:Engines.”   Working   Paper.   Available   at   SSRN:   http://ssrn.com/abstract=2191051   or
+23:621:54846:23:32:94:286:496:11:g_d0_f2:11:g_d0_f2:A:http://dx.doi.org/10.2139/ssrn.2191051.
+23:622:54885:32:23:77:540:464:11:g_d0_f2:11:g_d0_f2:A:[4]  Baye, Michael R., John Morgan, and Patrick Scholten (2006). “Information, Search, and Price
+23:623:54981:23:24:94:540:441:11:g_d0_f2:11:g_d0_f2:A:Dispersion.” In T. Hendershott (editor),  Handbook in Economics and Information Systems,
+23:624:55069:24:32:94:135:417:11:g_d0_f2:11:g_d0_f2:A:Elsevier.
+23:625:55078:32:23:77:540:385:11:g_d0_f2:11:g_d0_f2:A:[5]  Brynjolfsson,  Erik,  Yu (Jeffrey) Hu,  and Duncan Simester (2011). “Goodbye Pareto Princi-
+23:626:55174:23:23:94:540:362:11:g_d0_f2:11:g_d0_f2:A:ple,  Hello  Long  Tail:  The  Effect  of  Search  Costs  on  the  Concentration  of  Product  Sales.”
+23:627:55276:23:32:94:302:339:11:g_d0_f6:11:g_d0_f2:A:Management Science57 (8), pp. 1373-1386.
+23:628:55316:32:23:77:540:307:11:g_d0_f2:11:g_d0_f2:A:[6]  Brynjolfsson, Erik, Yu (Jeffrey) Hu, and Michael D. Smith (2003). “Consumer Surplus in the
+23:629:55411:23:23:94:540:284:11:g_d0_f2:11:g_d0_f2:A:Digital Economy:  Estimating the Value of Increased Product Variety at Online Booksellers.”
+23:630:55502:23:32:94:308:261:11:g_d0_f6:11:g_d0_f2:A:Management Science49 (11), pp. 1580-1596.
+23:631:55543:32:23:77:540:229:11:g_d0_f2:11:g_d0_f2:A:[7]  Chevalier,  Judith  and  Austan  Goolsbee  (2003).  “Measuring  Prices  and  Price  Competition
+23:632:55643:23:23:94:539:206:11:g_d0_f2:11:g_d0_f2:A:Online:  Amazon.com  and  BarnesandNoble.com.”Quantitative Marketing and Economics1
+23:633:55726:23:32:94:173:183:11:g_d0_f2:11:g_d0_f2:A:(2), pp. 203-222.
+23:634:55743:32:23:77:540:151:11:g_d0_f2:11:g_d0_f2:A:[8]  Chevalier, Judith A. and Dina Mayzlin (2006). “The Effect of Word of Mouth on Sales: Online
+23:635:55839:23:32:94:417:128:11:g_d0_f2:11:g_d0_f2:A:Book Reviews.”Journal of Marketing Research43 (3), pp. 345-354.
+23:636:55902:32:23:77:539:96:11:g_d0_f2:11:g_d0_f6:A:[9]  Choi, Hyunyoung and Hal Varian (2012). “Predicting the Present with Google Trends.”The
+23:637:55993:23:0:94:258:73:11:g_d0_f6:11:g_d0_f2:A:Economic Record, 88 (s1), pp. 2-9.
+24:638:56029:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:[10]  Clay, Karen, Ramayya Krishnan, and Eric Wolff (2001). “Prices and Price Dispersion on the
+24:639:56124:23:24:94:539:686:11:g_d0_f2:11:g_d0_f2:A:Web:  Evidence from the Online Book Industry.”The Journal of Industrial Economics49 (4),
+24:640:56212:24:31:94:152:662:11:g_d0_f2:11:g_d0_f2:A:pp. 521-539.
+24:641:56224:31:23:71:539:631:11:g_d0_f2:11:g_d0_f2:B:[11]  D’Amuri, Francesco and Juri Marcucci (2010). “Google it!  Forecasting the US Unemployment
+24:642:56319:23:31:94:351:608:11:g_d0_f2:11:g_d0_f2:A:Rate with Google Job Search Index.” Working Paper.
+24:643:56369:31:32:71:450:577:11:g_d0_f2:11:g_d0_f2:B:[12]  De los Santos (2012). “Consumer Search on the Internet.” Working Paper.
+24:644:56446:32:23:71:539:545:11:g_d0_f2:11:g_d0_f2:B:[13]  De los Santos, Babur, Ali Horta ̧csu, and Matthijs R. Wildenbeest (2012). “Testing Model of
+24:645:56543:23:23:94:539:522:11:g_d0_f2:11:g_d0_f6:A:Consumer  Search  Using  Data  on  Web  Browsing  and  Purchasing  Behavior.”American Eco-
+24:646:56633:23:31:94:275:499:11:g_d0_f6:11:g_d0_f2:A:nomic Review102 (6), pp. 2955-2980.
+24:647:56668:31:23:71:539:468:11:g_d0_f2:11:g_d0_f2:B:[14]  Forman,  Chris,  Anindya  Ghose,  and  Avi  Goldfarb  (2009).  “Competition  between  local  and
+24:648:56770:23:24:94:540:445:11:g_d0_f2:11:g_d0_f6:A:electronic markets: How the benefit of buying online depends on where you live.”Management
+24:649:56860:24:31:94:216:421:11:g_d0_f6:11:g_d0_f2:A:Science55 (1), pp. 47-57.
+24:650:56885:31:23:71:539:390:11:g_d0_f2:11:g_d0_f2:B:[15]  Ginsberg, Jeremy, Matthew H. Mohebbi, Rajan S. Patel, Lynnette Brammer, Mark S. Smolin-
+24:651:56978:23:23:94:540:367:11:g_d0_f2:11:g_d0_f2:A:ski,  and Larry Brilliant (2009). “Detecting Influenza Epidemics Using Search Engine Query
+24:652:57068:23:32:94:292:344:11:g_d0_f2:11:g_d0_f2:A:Data,”Nature457 (7232), pp. 1012-1014.
+24:653:57106:32:23:71:539:312:11:g_d0_f2:11:g_d0_f2:B:[16]  Guzm ́an, Giselle (2011). “Internet Search Behavior as an Economic Forecasting Tool: The Case
+24:654:57205:23:31:94:532:289:11:g_d0_f2:11:g_d0_f2:A:of Inflation Expectations,”Journal of Economic & Social Measurement36 (3), pp. 119-167.
+24:655:57292:31:23:72:540:258:11:g_d0_f2:11:g_d0_f2:B:[17]  Hong, Han and Matthew Shum (2006). “Using Price Distributions to Estimate Search Costs,”
+24:656:57386:23:31:94:332:235:11:g_d0_f6:11:g_d0_f2:A:RAND Journal of Economics37 (2), pp. 257-275.
+24:657:57431:31:24:72:540:204:11:g_d0_f2:11:g_d0_f2:B:[18]  Hu, Yu (Jeffrey) and Michael D. Smith (2013). “The Impact of e-book Distribution on Print
+24:658:57526:24:31:94:374:180:11:g_d0_f2:11:g_d0_f2:A:Sales:  Analysis of a Natural Experiment.” Working Paper.
+24:659:57583:31:23:72:540:149:11:g_d0_f2:11:g_d0_f2:B:[19]  Johnson, Justin (2013). “The Agency and Wholesale Models in Electronic Content Markets.”
+24:660:57677:23:31:94:169:126:11:g_d0_f2:11:g_d0_f2:A:Working Paper.
+24:661:57691:31:23:72:540:95:11:g_d0_f2:11:g_d0_f2:B:[20]  Manley, Laura and Robert P. Holley (2012). “History of the e-book:  The Changing Face of
+24:662:57785:23:0:94:369:72:11:g_d0_f2:11:g_d0_f2:A:Books.”Technical Services Quarterly29 (4), pp. 292-311.
+25:663:57842:0:23:72:540:709:11:g_d0_f2:11:g_d0_f2:B:[21]  Moraga-Gonz ́alez, Jos ́e Luis and Matthijs R. Wildenbeest (2012). “Comparison Sites.” In Mar-
+25:664:57942:23:24:94:540:686:11:g_d0_f2:11:g_d0_f2:A:tin Peitz and Joel Waldfogel (editors), Handbook of the Digital Economy, Oxford University
+25:665:58032:24:32:94:184:662:11:g_d0_f2:11:g_d0_f2:A:Press, pp. 224-253.
+25:666:58051:32:23:72:539:630:11:g_d0_f2:11:g_d0_f6:B:[22]  Rysman,  Marc  (2009).  “The  Economics  of  Two-Sided  Markets.”Journal of Economic Per-
+25:667:58146:23:32:94:232:607:11:g_d0_f6:11:g_d0_f2:A:spectives23 (3), pp. 125-143.
+25:668:58175:32:23:72:539:575:11:g_d0_f2:11:g_d0_f2:B:[23]  Stigler, George (1961). “The Economics of Information,”Journal of Political Economy69 (3),
+25:669:58271:23:0:94:152:552:11:g_d0_f2:11:g_d0_f2:A:pp. 213-225.
+26:670:58285:0:395:153:457:587:119:g_d0_f9:119:g_d0_f9:?:Figure 1: Monthly Retail Sales at Brick-and-Mortar Bookstores
+26:671:58494:395:148:72:412:192:64:g_d0_f11:64:g_d0_f11:C:Source: Monthly Retail Trade Survey for NAICS 451211 (bookstores), U.S. Census Bureau.
+26:672:58580:148:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:25
+27:673:58582:0:188:77:534:510:119:g_d0_f9:119:g_d0_f9:A:Figure 2: Search Terms in Main Search Engines Leading Users to Amazon and Barnes & Noble
+27:674:58698:188:0:113:291:322:11:Helvetica:11:Helvetica:?:Site NameNon-bookBookE-readerOther Bookstore's Name
+27:675:58749:0:170:267:284:464:11:Helvetica:11:Helvetica:?:Organic ClicksPaid Clicks
+27:676:58774:170:0:164:212:294:80:g_d0_f14:80:g_d0_f14:?:(a)Amazon
+27:677:58810:0:0:347:525:322:11:Helvetica:11:Helvetica:?:Site NameNon-bookBookE-readerOther Bookstore's Name
+27:678:58861:0:170:501:518:464:11:Helvetica:11:Helvetica:?:Organic ClicksPaid Clicks
+27:679:58886:170:26:383:463:294:80:g_d0_f14:80:g_d0_f14:?:(b)Barnes&Noble
+27:680:58901:26:224:72:257:268:64:g_d0_f11:64:g_d0_f11:C:Source: comScore Search Planner, February 2012.
+27:681:58948:224:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:26
+28:682:58950:0:58:191:421:594:119:g_d0_f9:119:g_d0_f9:?:Figure 3: Total Searches at Book-Oriented Sites
+28:683:59148:58:17:178:204:536:50:Helvetica:50:Helvetica:?:Amazon
+28:684:59154:17:16:178:219:519:50:Helvetica:50:Helvetica:?:Google Book
+28:685:59165:16:17:178:209:503:50:Helvetica:50:Helvetica:?:Abebooks
+28:686:59173:17:16:178:228:486:50:Helvetica:50:Helvetica:?:Barnes & Noble
+28:687:59187:16:271:178:216:470:50:Helvetica:50:Helvetica:?:Book Finder
+28:688:59198:271:14:72:248:199:64:g_d0_f11:64:g_d0_f11:C:Note: Amazon scaled on left, all other on right.
+28:689:59246:14:141:72:282:185:64:g_d0_f11:64:g_d0_f11:C:Source: comScore qSearch, January 2011-February 2013.
+28:690:59299:141:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:27
+29:691:59301:0:55:188:423:586:119:g_d0_f9:119:g_d0_f9:?:Figure 4: Google Trends for the Term “Amazon”
+29:692:59522:55:12:147:193:531:50:Helvetica:50:Helvetica:?:Google Trends
+29:693:59535:12:327:147:262:519:50:Helvetica:50:Helvetica:?:Google Trends (seasonally adjusted)
+29:694:59570:327:148:72:260:192:64:g_d0_f11:64:g_d0_f11:C:Source: Google Trends, January 2004-March 2013.
+29:695:59617:148:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:28
+30:696:59619:0:68:125:485:586:119:g_d0_f9:119:g_d0_f9:?:Figure 5: Google Trends for the Terms “Amazon” and “Barnes and Noble”
+30:697:59883:68:12:147:173:518:50:Helvetica:50:Helvetica:?:Amazon
+30:698:59889:12:0:147:204:506:50:Helvetica:50:Helvetica:?:Barnes and Noble
+30:699:59905:0:337:155:179:529:89:Helvetica:89:Helvetica:?:Term:
+30:700:59910:337:148:72:260:192:64:g_d0_f11:64:g_d0_f11:C:Source: Google Trends, January 2004-March 2013.
+30:701:59957:148:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:29
+31:702:59959:0:71:193:418:586:119:g_d0_f9:119:g_d0_f9:?:Figure 6: E-reader Related Searches on Google
+31:703:60204:71:16:178:196:515:50:Helvetica:50:Helvetica:?:kindle
+31:704:60210:16:17:178:193:499:50:Helvetica:50:Helvetica:?:nook
+31:705:60214:17:17:178:197:482:50:Helvetica:50:Helvetica:?:ebook
+31:706:60219:17:16:178:194:465:50:Helvetica:50:Helvetica:?:epub
+31:707:60223:16:17:178:202:449:50:Helvetica:50:Helvetica:?:ereader
+31:708:60230:17:0:178:237:432:50:Helvetica:50:Helvetica:?:sony ebook reader
+31:709:60247:0:337:172:196:529:89:Helvetica:89:Helvetica:?:Term:
+31:710:60252:337:148:72:272:192:64:g_d0_f11:64:g_d0_f11:C:Source: Google Trends and comScore Search Planner.
+31:711:60302:148:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:30
+32:712:60304:0:56:184:428:586:119:g_d0_f9:119:g_d0_f9:?:Figure 7: Google Searches for “The End of Illness”
+32:713:60547:56:12:297:327:530:50:Helvetica:50:Helvetica:?:Searches
+32:714:60555:12:327:297:333:518:50:Helvetica:50:Helvetica:?:Sales Rank
+32:715:60565:327:147:72:198:191:64:g_d0_f11:64:g_d0_f11:C:Source: comScore Search Planner.
+32:716:60597:147:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:31
+33:717:60599:0:352:173:438:579:119:g_d0_f9:119:g_d0_f9:?:Figure 8: Predicted Searches for Book Titles on Google
+33:718:60705:352:183:264:382:227:140:Helvetica:140:Helvetica:?:Months Since Release
+33:719:60725:183:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:32
+34:720:60727:0:535:147:464:579:119:g_d0_f9:119:g_d0_f9:?:Figure 9: Predicted Searches per Book Title on Google, 2004-2013
+34:721:60973:535:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:33
+35:722:60975:0:308:124:486:586:119:g_d0_f9:119:g_d0_f9:?:Figure 10: Price Distributions for Hardcover, Paperback, and Digital Books
+35:723:61074:308:13:122:527:278:140:Helvetica:140:Helvetica:?:01020304050
+35:724:61085:13:23:300:345:265:140:Helvetica:140:Helvetica:?:Price ($)
+35:725:61094:23:51:232:463:242:50:Helvetica:50:Helvetica:?:HardcoverPaperbackE-books
+35:726:61119:51:147:72:181:191:64:g_d0_f11:64:g_d0_f11:C:Note: Data truncated at $50.
+35:727:61147:147:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:34
+36:728:61149:0:54:187:424:579:119:g_d0_f9:119:g_d0_f9:?:Figure 11: Average Book Prices, by Book Format
+36:729:61195:54:7:152:456:525:50:Helvetica:50:Helvetica:?:DOJ sues Apple and  publishers -> <- E-book settlement
+36:730:61249:7:284:399:446:518:50:Helvetica:50:Helvetica:?:with publishers
+36:731:61384:284:190:180:512:234:50:Helvetica:50:Helvetica:?:PaperbackE-book (Agency Model)E-book (Wholesale Model)
+36:732:61438:190:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:35
+37:733:61440:0:60:160:451:579:119:g_d0_f9:119:g_d0_f9:?:Figure 12: Average Coe-cient of Variation, by Book Format
+37:734:61497:60:7:388:454:519:50:Helvetica:50:Helvetica:?:<- E-book settlement
+37:735:61517:7:0:397:444:512:50:Helvetica:50:Helvetica:?:with publishers
+37:736:61532:0:287:152:263:519:50:Helvetica:50:Helvetica:?:DOJ sues Apple and  publishers -> 
+37:737:61703:287:188:195:466:232:50:Helvetica:50:Helvetica:?:PaperbackE-book (Agency Model)E-book (Wholesale Model)
+37:738:61757:188:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:36
+38:739:61759:0:12:451:472:440:102:Times:102:Times:C:Total
+38:740:61764:12:24:140:492:428:102:Times:102:Times:C:Ye a r($ in Millions)(%)($ in Millions)(%)($ in Millions)
+38:741:61821:24:12:139:492:404:102:Times:102:Times:C:200611,12399.5540.511,177
+38:742:61846:12:12:139:492:392:102:Times:102:Times:C:200711,38499.4670.611,451
+38:743:61871:12:12:139:492:380:102:Times:102:Times:C:200810,83199.01131.010,944
+38:744:61897:12:0:139:492:368:102:Times:102:Times:C:200910,71197.23132.811,024
+38:745:61923:0:0:215:378:440:102:Times:102:Times:C:Trade printE-books
+38:746:61941:0:111:206:405:454:102:Times:102:Times:C:Table 1: U.S. Print and E-Book Sales, 2006-2009
+38:747:61988:111:12:118:485:343:102:Times:102:Times:C:Source: Mintel/American Association of Publishers. E-book sales exclude educational and 
+38:748:62076:12:287:117:198:331:102:Times:102:Times:C:professional books. 
+38:749:62096:287:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:37
+39:750:62098:0:12:424:455:483:102:Times:102:Times:C:Change
+39:751:62104:12:24:275:447:471:102:Times:102:Times:C:20052006200720082009(%)
+39:752:62127:24:12:153:225:447:102:Times:102:Times:C:Bookstore Chains
+39:753:62143:12:12:153:457:435:102:Times:102:Times:C:   Barnes & Noble5,1035,2615,4115,1225,5969.7
+39:754:62188:12:12:153:457:423:102:Times:102:Times:C:   Borders4,0314,0633,7753,2422,791-30.8
+39:755:62228:12:24:153:457:411:102:Times:102:Times:C:   Books-A-Million5045215365155091.0
+39:756:62264:24:12:153:227:387:102:Times:102:Times:C:Online Bookstores
+39:757:62281:12:12:153:457:375:102:Times:102:Times:C:   Amazon.com3,0463,5824,6305,3505,96495.8
+39:758:62323:12:12:153:457:363:102:Times:102:Times:C:   Barnesandnoble.com44043347746652519.4
+39:759:62363:12:12:153:456:351:102:Times:102:Times:C:   Borders.com---4660-
+39:760:62385:12:0:153:457:339:102:Times:102:Times:C:   Booksamillion.com2826272524-13.8
+39:761:62420:0:170:294:391:483:102:Times:102:Times:C:Revenue ($ in Millions)
+39:762:62443:170:12:153:409:313:102:Times:102:Times:C:Source: Simba information, from company reports. Figures for 
+39:763:62504:12:12:153:457:301:102:Times:102:Times:C:Amazon.com are for U.S. books, music, and video/DVD segment only. Up 
+39:764:62573:12:0:153:364:289:102:Times:102:Times:C:to 2008 Borders.com was powered by Amazon.com.
+39:765:62619:0:452:199:412:496:102:Times:102:Times:C:Table 2: Revenue of Leading Bookstores, 2005-2009
+39:766:62668:452:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:38
+40:767:62670:0:24:149:461:561:102:Times:102:Times:C:RankSearch Phrase# Organic Clicks
+40:768:62703:24:12:171:461:537:102:Times:102:Times:C:1barnes and noble376,678
+40:769:62727:12:12:171:461:525:102:Times:102:Times:C:2borders bookstore82,689
+40:770:62751:12:12:171:461:513:102:Times:102:Times:C:3borders book store52,006
+40:771:62776:12:12:171:461:501:102:Times:102:Times:C:4***27,699
+40:772:62786:12:12:171:461:489:102:Times:102:Times:C:5barnes and noble locations21,666
+40:773:62819:12:12:171:461:477:102:Times:102:Times:C:6name name20,675
+40:774:62835:12:12:171:461:465:102:Times:102:Times:C:7barnes and nobles19,800
+40:775:62859:12:12:171:461:453:102:Times:102:Times:C:8amazon19,748
+40:776:62872:12:12:171:461:441:102:Times:102:Times:C:9barnesandnoble17,785
+40:777:62893:12:12:166:461:429:102:Times:102:Times:C:10nook13,483
+40:778:62905:12:12:167:461:417:102:Times:102:Times:C:11facebook10,680
+40:779:62921:12:12:166:461:405:102:Times:102:Times:C:12barnes & noble9,900
+40:780:62942:12:12:166:461:393:102:Times:102:Times:C:13nook tablet9,775
+40:781:62960:12:12:166:461:381:102:Times:102:Times:C:14barnes8,623
+40:782:62973:12:12:166:461:369:102:Times:102:Times:C:15borders.com7,465
+40:783:62991:12:12:166:461:357:102:Times:102:Times:C:16google7,163
+40:784:63004:12:12:166:461:345:102:Times:102:Times:C:17bn.com7,118
+40:785:63017:12:12:166:461:333:102:Times:102:Times:C:18books6,923
+40:786:63029:12:12:166:461:321:102:Times:102:Times:C:19borders6,382
+40:787:63043:12:12:166:461:309:102:Times:102:Times:C:20the vow book6,199
+40:788:63062:12:12:166:461:297:102:Times:102:Times:C:21name fire5,143
+40:789:63078:12:12:166:461:285:102:Times:102:Times:C:22bn4,819
+40:790:63087:12:12:166:461:273:102:Times:102:Times:C:23nook color update4,564
+40:791:63111:12:12:166:461:261:102:Times:102:Times:C:24gmail4,383
+40:792:63123:12:26:166:461:249:102:Times:102:Times:C:25www.bn.com4,179
+40:793:63140:26:12:149:456:223:102:Times:102:Times:C:Source: comScore Search Planner data from February 2012. Search phrases 
+40:794:63212:12:0:148:388:211:102:Times:102:Times:C:are ranked by the total number of organic clicks on Google.
+40:795:63271:0:530:153:458:574:102:Times:102:Times:C:Table 3: Top 25 Search Terms on Google Leading Users to Barnes & Noble
+40:796:63341:530:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:39
+41:797:63343:0:12:164:521:453:102:Times:102:Times:C:AmazonBarnes & NobleEcampus.comPowell'sBooks-a-MillionTotal
+41:798:63402:12:24:174:517:441:102:Times:102:Times:C:(%)(%)(%)(%)(%)(%)
+41:799:63420:24:12:73:525:417:102:Times:102:Times:C:Direct Logins27.816.01.93.010.027.1
+41:800:63455:12:12:73:525:405:102:Times:102:Times:C:Google40.231.717.920.845.939.7
+41:801:63485:12:12:73:525:393:102:Times:102:Times:C:Yahoo5.94.96.33.51.95.9
+41:802:63508:12:12:73:525:381:102:Times:102:Times:C:Bing15.15.81.32.90.014.6
+41:803:63532:12:12:73:525:369:102:Times:102:Times:C:Other Search2.93.30.00.01.92.9
+41:804:63562:12:12:73:525:357:102:Times:102:Times:C:Other Bookstores3.938.372.669.940.45.8
+41:805:63600:12:26:73:525:345:102:Times:102:Times:C:Price Comparison4.10.10.00.00.03.9
+41:806:63634:26:0:73:308:319:102:Times:102:Times:C:Source: comScore Search Planner data from August 2012.
+41:807:63688:0:422:112:498:466:102:Times:102:Times:C:Table 4: Percentage of Incoming Visits to Bookstores from Search Engines and Other Platforms
+41:808:63780:422:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:40
+42:809:63782:0:12:155:527:451:102:Times:102:Times:C:AmazonBarnes & NobleEcampus.comPowell'sBooks-a-MillionTotal
+42:810:63841:12:24:165:524:439:102:Times:102:Times:C:(%)(%)(%)(%)(%)(%)
+42:811:63859:24:12:63:532:415:102:Times:102:Times:C:Logoff43.031.45.729.827.942.3
+42:812:63888:12:12:63:532:403:102:Times:102:Times:C:Google28.421.511.144.821.128.1
+42:813:63918:12:12:63:532:391:102:Times:102:Times:C:Yahoo3.72.81.62.00.03.6
+42:814:63941:12:12:63:532:379:102:Times:102:Times:C:Bing13.73.42.18.57.513.2
+42:815:63965:12:12:63:532:367:102:Times:102:Times:C:Other Search4.21.90.00.00.04.1
+42:816:63995:12:12:63:532:355:102:Times:102:Times:C:Other Bookstores4.238.779.514.843.56.0
+42:817:64033:12:26:63:532:343:102:Times:102:Times:C:Price Comparison2.90.30.00.00.02.7
+42:818:64067:26:0:63:298:317:102:Times:102:Times:C:Source: comScore Search Planner data from August 2012.
+42:819:64121:0:421:113:499:465:102:Times:102:Times:C:Table 5: Percentage of Outgoing Visits from Bookstores to Search Engines and Other Platforms
+42:820:64213:421:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:41
+43:821:64215:0:12:233:512:471:102:Times:102:Times:C:SearchesSearchesSearch VisitsSearch VisitsSearches per
+43:822:64269:12:24:233:512:459:102:Times:102:Times:C:(×1,000)(%)(×1,000)(%)Search Visit
+43:823:64303:24:12:96:140:435:102:Times:102:Times:A:Bookstores
+43:824:64313:12:12:96:515:423:102:Times:102:Times:A:   Amazon326,65826.22150,64326.222.17
+43:825:64350:12:12:96:515:411:102:Times:102:Times:A:   Barnes & Noble37,2052.9910,6202.993.50
+43:826:64391:12:24:96:515:399:102:Times:102:Times:A:   Abebooks.com1,6590.135610.132.96
+43:827:64426:24:12:96:162:375:102:Times:102:Times:A:Other book sites
+43:828:64442:12:24:96:515:363:102:Times:102:Times:A:   Google Book Search10,1240.814,7190.812.15
+43:829:64486:24:12:96:188:339:102:Times:102:Times:A:Price comparison sites
+43:830:64508:12:26:96:515:327:102:Times:102:Times:A:   Bookfinder.com6920.062200.063.15
+43:831:64543:26:0:96:270:301:102:Times:102:Times:A:Source: comScore qSearch, February 2012.
+43:832:64583:0:440:188:423:484:102:Times:102:Times:C:Table 6: Number of Searches on Book-Oriented Platforms
+43:833:64637:440:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:42
+44:834:64639:0:12:108:197:578:102:Times:102:Times:C:Months before release
+44:835:64660:12:12:108:498:566:102:Times:102:Times:C:   2 months-0.696(0.188)***-0.688(0.281)**-0.765(0.282)***
+44:836:64718:12:12:108:498:554:102:Times:102:Times:C:   1 month-0.734(0.188)***-0.732(0.281)***-0.771(0.281)***
+44:837:64776:12:12:108:191:542:102:Times:102:Times:C:Months after release
+44:838:64796:12:12:108:482:530:102:Times:102:Times:C:   1 month-0.299(0.188)-0.297(0.281)-0.257(0.281)
+44:839:64845:12:12:108:482:518:102:Times:102:Times:C:   2 months-0.426(0.188)**-0.424(0.281)-0.342(0.282)
+44:840:64897:12:12:108:482:506:102:Times:102:Times:C:   3 months-0.540(0.188)***-0.537(0.281)*-0.413(0.282)
+44:841:64951:12:12:108:482:494:102:Times:102:Times:C:   4 months-0.503(0.188)***-0.499(0.281)*-0.329(0.284)
+44:842:65005:12:12:108:482:482:102:Times:102:Times:C:   5 months-0.540(0.191)***-0.515(0.285)*-0.311(0.288)
+44:843:65059:12:12:108:482:470:102:Times:102:Times:C:   6 months-0.654(0.195)***-0.628(0.291)**-0.391(0.296)
+44:844:65114:12:12:108:482:458:102:Times:102:Times:C:   7 months-0.681(0.199)***-0.581(0.297)*-0.318(0.303)
+44:845:65168:12:12:108:482:446:102:Times:102:Times:C:   8 months-0.692(0.202)***-0.580(0.301)*-0.280(0.308)
+44:846:65222:12:12:108:482:434:102:Times:102:Times:C:   9 months-0.725(0.205)***-0.612(0.306)**-0.277(0.315)
+44:847:65277:12:12:108:482:422:102:Times:102:Times:C:   10 months-0.747(0.209)***-0.613(0.312)**-0.248(0.323)
+44:848:65333:12:12:108:482:410:102:Times:102:Times:C:   11 months-0.798(0.216)***-0.600(0.321)*-0.212(0.333)
+44:849:65388:12:12:108:482:398:102:Times:102:Times:C:   12 months-0.719(0.221)***-0.510(0.328)-0.095(0.342)
+44:850:65442:12:12:108:498:386:102:Times:102:Times:C:First Edition Indicator-0.813(0.200)***-0.820(0.202)***
+44:851:65497:12:12:108:138:374:102:Times:102:Times:C:Format
+44:852:65503:12:12:108:498:362:102:Times:102:Times:C:   Mass Market Paperback1.228(0.249)***1.467(0.255)***
+44:853:65557:12:12:108:498:350:102:Times:102:Times:C:   Paperback0.757(0.208)***0.736(0.208)***
+44:854:65599:12:12:108:487:338:102:Times:102:Times:C:   Other0.256(0.365)0.660(0.377)*
+44:855:65632:12:12:108:498:326:102:Times:102:Times:C:Pages-0.005(0.000)***-0.005(0.001)***
+44:856:65669:12:12:108:498:314:102:Times:102:Times:C:Weight0.097(0.007)***0.099(0.007)***
+44:857:65705:12:12:108:498:302:102:Times:102:Times:C:Time Index0.094(0.024)***
+44:858:65730:12:24:108:498:290:102:Times:102:Times:C:Time Index squared-0.001(0.000)***
+44:859:65764:24:36:108:482:266:102:Times:102:Times:C:Constant1.398(0.133)***1.049(0.297)***-1.344(0.913)
+44:860:65815:36:12:108:173:230:102:Times:102:Times:C:Book Indicators
+44:861:65830:12:12:108:189:218:102:Times:102:Times:C:Publisher Indicators
+44:862:65850:12:12:108:161:206:102:Times:102:Times:C:Observations
+44:863:65862:12:0:108:149:194:102:Times:102:Times:C:R-squared
+44:864:65871:0:432:371:468:602:102:Times:102:Times:C:(2)(3)
+44:865:65877:432:12:108:475:170:102:Times:102:Times:C:Notes: * significant at 10%; ** significant at 5%; *** significant at 1%. Standard errors in 
+44:866:65970:12:0:108:158:158:102:Times:102:Times:C:parentheses.
+44:867:65982:0:422:249:361:628:102:Times:102:Times:C:Table 7: Regression Results
+44:868:66009:422:12:278:475:206:102:Times:102:Times:C:10,61510,58510,585
+44:869:66027:12:0:280:473:194:102:Times:102:Times:C:0.6640.2130.214
+44:870:66042:0:12:284:467:230:102:Times:102:Times:C:Ye sNoNo
+44:871:66050:12:0:285:468:218:102:Times:102:Times:C:NoNoYe s
+44:872:66058:0:0:286:298:602:102:Times:102:Times:C:(1)
+44:873:66061:0:572:171:440:616:102:Times:102:Times:C:Dependent Variable: Number of Searches for a Specific Book Title
+44:874:66125:572:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:43
+45:875:66127:0:24:59:550:458:102:Times:102:Times:C:BookstoreMean ($)Std. Dev. Mean ($)Std. Dev. Mean ($)Std. Dev. Mean ($)Std. Dev. 
+45:876:66208:24:12:59:115:434:102:Times:102:Times:C:Both Formats
+45:877:66220:12:12:59:551:422:102:Times:102:Times:C:   Amazon16.35.79.96.311.22.78.67.5
+45:878:66255:12:12:59:551:410:102:Times:102:Times:C:   Barnes and Noble16.86.010.57.111.32.610.25.0
+45:879:66302:12:12:59:551:398:102:Times:102:Times:C:   Books-a-Million16.76.610.29.711.42.59.94.2
+45:880:66347:12:12:59:143:386:102:Times:102:Times:C:Physical Books Only
+45:881:66366:12:12:59:341:374:102:Times:102:Times:C:   Ecampus.com21.94.910.59.0
+45:882:66394:12:12:59:341:362:102:Times:102:Times:C:   Powell's27.07.112.94.2
+45:883:66419:12:12:59:341:350:102:Times:102:Times:C:   Walmart16.23.69.07.3
+45:884:66442:12:12:59:115:338:102:Times:102:Times:C:E-Books Only
+45:885:66454:12:12:59:551:326:102:Times:102:Times:C:   Kobo11.12.611.06.6
+45:886:66475:12:0:59:551:314:102:Times:102:Times:C:   Google11.13.49.88.1
+45:887:66497:0:0:168:550:470:102:Times:102:Times:C:HardcoversPaperbacksE-books (Agency)E-Books (Wholesale)
+45:888:66552:0:440:212:398:484:102:Times:102:Times:C:Table 8: Descriptive Statistics for Book Prices
+45:889:66599:440:0:300:310:44:11:g_d0_f12:11:g_d0_f12:?:44

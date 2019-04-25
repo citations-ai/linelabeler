@@ -1,0 +1,1627 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:?:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:530:610:12:Times:12:Times:?:A TRACTABLE MODEL OF PRECAUTIONARY RESERVES, NET FOREIGN ASSETS,
+1:2:89:14:28:306:398:596:12:Times:12:Times:?:OR SOVEREIGN WEALTH FUNDS
+1:3:114:28:14:306:360:568:12:Times:12:Times:?:Christopher D. Carroll
+1:4:136:14:28:306:341:554:12:Times:12:Times:?:Olivier Jeanne
+1:5:150:28:14:306:359:526:12:Times:12:Times:?:Working Paper 15228
+1:6:169:14:42:306:393:512:12:Times:12:Times:?:http://www.nber.org/papers/w15228
+1:7:202:42:14:306:439:470:12:Times:12:Times:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:238:14:14:306:374:456:12:Times:12:Times:?:1050 Massachusetts Avenue
+1:9:263:14:14:306:362:442:12:Times:12:Times:?:Cambridge, MA 02138
+1:10:282:14:186:306:337:428:12:Times:12:Times:?:August 2009
+1:11:293:186:14:72:540:242:12:Times:12:Times:?:We thank Romain Ranciere for an insightful discussion of the paper at the 2009 ASSA meetings, and
+1:12:390:14:14:72:540:228:12:Times:12:Times:?:seminar participants at George Washington University, the Federal Reserve Bank of San Francisco,
+1:13:486:14:14:72:540:214:12:Times:12:Times:?:and the Bank of Canada for their comments, Patrick Toche for comments on an earlier draft, and Matthew
+1:14:588:14:14:72:540:200:12:Times:12:Times:?:White for excellent research assistance. The views expressed herein are those of the author(s) and
+1:15:686:14:28:72:468:186:12:Times:12:Times:?:do not necessarily reflect the views of the National Bureau of Economic Research.
+1:16:767:28:14:72:540:158:12:Times:12:Times:?:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:17:863:14:14:72:540:144:12:Times:12:Times:?:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:18:958:14:28:72:169:130:12:Times:12:Times:?:NBER publications.
+1:19:976:28:14:72:540:102:12:Times:12:Times:?:© 2009 by Christopher D. Carroll and Olivier Jeanne. All rights reserved. Short sections of text, not
+1:20:1077:14:14:72:540:88:12:Times:12:Times:?:to exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:21:1181:14:0:72:224:74:12:Times:12:Times:?:© notice, is given to the source.
+2:22:1214:0:14:72:528:700:12:Times:12:Times:?:A Tractable Model of Precautionary Reserves, Net Foreign Assets, or Sovereign Wealth Funds
+2:23:1304:14:14:72:273:686:12:Times:12:Times:?:Christopher D. Carroll and Olivier Jeanne
+2:24:1345:14:14:72:234:672:12:Times:12:Times:?:NBER Working Paper No. 15228
+2:25:1373:14:14:72:134:658:12:Times:12:Times:?:August 2009
+2:26:1384:14:28:72:135:644:12:Times:12:Times:?:JEL No. C61
+2:27:1395:28:28:273:338:616:12:Times:12:Times:?:ABSTRACT
+2:28:1403:28:14:72:540:588:12:Times:12:Times:?:We model the motives for residents of a country to hold foreign assets, including the precautionary
+2:29:1502:14:14:72:540:574:12:Times:12:Times:?:motive that has been omitted from much previous literature as intractable.  Our model captures many
+2:30:1601:14:14:72:540:560:12:Times:12:Times:?:of the principal insights from the existing specialized literature on the precautionary motive, deriving
+2:31:1705:14:14:72:540:546:12:Times:12:Times:?:a convenient formula for the economy's target value of assets.  The target is the level of assets that
+2:32:1807:14:14:72:540:532:12:Times:12:Times:?:balances impatience, prudence, risk, intertemporal substitution, and the rate of return.  We use the
+2:33:1907:14:16:72:539:518:12:Times:12:Times:?:model to shed light on two topical questions: The "upstream'' flows of capital from developing countries
+2:34:2011:16:15:72:469:502:12:Times:12:Times:?:to advanced countries, and the long-run impact of resorbing global financial imbalances.
+2:35:2099:15:14:72:78:487:12:Times:12:Times:?:  
+2:36:2101:14:14:72:464:473:12:Times:12:Times:?:Archive version may be found at http://econ.jhu.edu/people/ccarroll/papers/cjSOE.zip
+2:37:2185:14:42:72:446:459:12:Times:12:Times:?:HTML version may be found at http://econ.jhu.edu/people/ccarroll/papers/cjSOE/
+2:38:2263:42:14:72:180:417:12:Times:12:Times:?:Christopher D. Carroll
+2:39:2285:14:14:72:198:403:12:Times:12:Times:?:Department of Economics
+2:40:2308:14:14:72:158:389:12:Times:12:Times:?:Mergenthaler 440
+2:41:2324:14:14:72:197:375:12:Times:12:Times:?:Johns Hopkins University
+2:42:2348:14:14:72:178:361:12:Times:12:Times:?:Baltimore, MD 21218
+2:43:2367:14:14:72:124:347:12:Times:12:Times:?:and NBER
+2:44:2375:14:28:72:155:333:12:Times:12:Times:?:ccarroll@jhu.edu
+2:45:2391:28:14:72:142:305:12:Times:12:Times:?:Olivier Jeanne
+2:46:2405:14:14:72:198:291:12:Times:12:Times:?:Department of Economics
+2:47:2428:14:14:72:197:277:12:Times:12:Times:?:Johns Hopkins University
+2:48:2452:14:14:72:181:263:12:Times:12:Times:?:454 Mergenthaler Hall
+2:49:2473:14:14:72:181:249:12:Times:12:Times:?:3400 N. Charles Street
+2:50:2495:14:14:72:178:235:12:Times:12:Times:?:Baltimore, MD 21218
+2:51:2514:14:14:72:124:221:12:Times:12:Times:?:and NBER
+2:52:2522:14:0:72:156:207:12:Times:12:Times:?:ojeanne@jhu.edu
+3:53:2537:0:27:100:221:679:17:g_d0_f2:17:g_d0_f2:C:1 Introduction
+3:54:2551:27:14:100:510:652:12:g_d0_f3:12:g_d0_f3:B:The remarkable recent accumulation of foreign reserves in emerging economies has
+3:55:2631:14:14:100:510:638:12:g_d0_f3:12:g_d0_f3:B:captured attention from academics, policymakers, and financial markets, partly
+3:56:2709:14:15:100:510:624:12:g_d0_f3:12:g_d0_f3:B:because reserve accumulation seems to have played a role in the development
+3:57:2784:15:14:100:510:609:12:g_d0_f3:12:g_d0_f3:B:of global financial imbalances. A distinct (but probably related) puzzle is that
+3:58:2864:14:15:100:510:595:12:g_d0_f3:12:g_d0_f3:B:national saving rates of fast-growing emerging economies have been rising over
+3:59:2942:15:14:100:510:580:12:g_d0_f3:12:g_d0_f3:B:time,1leading to surprising “upstream” flows of capital from developing to rich
+3:60:3021:14:15:100:510:566:12:g_d0_f3:12:g_d0_f3:B:countries. The corresponding accumulation of foreign assets in “sovereign wealth
+3:61:3101:15:14:100:510:551:12:g_d0_f3:12:g_d0_f3:B:funds” has begun to attract scrutiny as those funds have emerged as prominent
+3:62:3178:14:15:100:265:537:12:g_d0_f3:12:g_d0_f3:B:actors in global capital markets.
+3:63:3211:15:14:112:511:522:12:g_d0_f3:12:g_d0_f3:A:A popular interpretation of all these trends is that they reflect precautionary
+3:64:3290:14:14:100:429:508:12:g_d0_f3:6:g_d0_f4:B:saving against the risks associated with economic globalization.2
+3:65:3355:14:15:112:511:494:12:g_d0_f3:12:g_d0_f3:A:Such an interpretation raises several questions.  What are the main deter-
+3:66:3429:15:14:100:510:479:12:g_d0_f3:12:g_d0_f3:B:minants of the demand for external assets?  What are the welfare benefits of
+3:67:3505:14:15:100:510:465:12:g_d0_f3:12:g_d0_f3:B:international integration, if it leads developing countries to export rather than
+3:68:3586:15:14:100:510:450:12:g_d0_f3:12:g_d0_f3:B:import capital? How persistent will the recent increase in developing countries’
+3:69:3666:14:15:100:510:436:12:g_d0_f3:12:g_d0_f3:B:demand for foreign assets prove to be? How does the precautionary motive for
+3:70:3742:15:14:100:377:421:12:g_d0_f3:12:g_d0_f3:B:accumulating such assets interact with other motives?
+3:71:3795:14:15:112:511:407:12:g_d0_f3:12:g_d0_f3:A:This paper introduces a tractable model that can be used to analyze these
+3:72:3868:15:14:100:510:392:12:g_d0_f3:12:g_d0_f3:B:questions and others. The model is a small-open-macroeconomy version of the
+3:73:3943:14:14:100:510:378:12:g_d0_f3:12:g_d0_f3:B:model of individual precautionary saving developed by Carroll (2009a), based
+3:74:4019:14:15:100:510:364:12:g_d0_f3:12:g_d0_f3:B:on Toche (2005) (see also Sargent and Ljunqvist (2000)). The model permits us
+3:75:4096:15:14:100:510:349:12:g_d0_f3:12:g_d0_f3:B:to characterize the dynamics of foreign asset accumulation with phase diagrams
+3:76:4174:14:15:100:510:335:12:g_d0_f3:12:g_d0_f3:B:that should be readily understandable to anyone familiar with the benchmark
+3:77:4249:15:14:100:510:320:12:g_d0_f3:12:g_d0_f3:B:Ramsey model of economic growth, and to derive closed-form expressions that
+3:78:4324:14:15:100:510:306:12:g_d0_f3:12:g_d0_f3:B:relate the target level of net foreign assets to fundamental determinants like
+3:79:4402:15:14:100:510:291:12:g_d0_f3:12:g_d0_f3:B:the degree of risk, the time preference rate, and expected productivity growth.
+3:80:4481:14:15:100:510:277:12:g_d0_f3:12:g_d0_f3:B:The model’s structure is simple enough to permit straightforward calculations
+3:81:4558:15:14:100:510:262:12:g_d0_f3:12:g_d0_f3:B:of welfare-equivalent tradeoffs between growth, social insurance generosity, and
+3:82:4638:14:36:100:122:248:12:g_d0_f3:12:g_d0_f3:B:risk.
+3:83:4643:36:12:117:510:212:6:g_d0_f4:8:g_d0_f5:F:1For evidence of causality from growth to saving, see Carroll and Weil (1994); Loayza, Schmidt-Hebbel,
+3:84:4745:12:10:100:510:200:8:g_d0_f5:8:g_d0_f5:F:and Servén (2000); Attanasio, Picci, and Scorcu (2000); Hausmann and Rodrik (2005); Gourinchas and Jeanne
+3:85:4850:10:8:100:126:190:8:g_d0_f5:8:g_d0_f5:F:(2007).
+3:86:4857:8:12:117:510:182:6:g_d0_f4:8:g_d0_f5:F:2“The East Asian countries that constitute the class of ’97—the countries that learned the lessons of
+3:87:4958:12:10:100:510:170:8:g_d0_f5:8:g_d0_f5:F:instability the hard way in the crises that began that year—have boosted their reserves in part because they
+3:88:5066:10:9:100:510:160:8:g_d0_f5:8:g_d0_f5:F:want to make sure that they won’t need to borrow from the IMF again. Others, who saw their neighbors suffer,
+3:89:5174:9:10:100:510:151:8:g_d0_f5:8:g_d0_f5:F:came to the same conclusion—it is imperative to have enough reserves to withstand the worst of the world’s
+3:90:5280:10:22:100:272:141:8:g_d0_f5:8:g_d0_f5:F:economic vicissitudes.” (Stiglitz, 2006, p. 248)
+3:91:5328:22:9:100:510:119:8:g_d0_f5:8:g_d0_f5:F:seminar participants at George Washington University, the Federal Reserve Bank of San Francisco, and the
+3:92:5432:9:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:Bank of Canada for their comments, Patrick Toche for comments on an earlier draft, and Matthew White for
+3:93:5536:10:0:100:206:100:8:g_d0_f5:8:g_d0_f5:F:excellent research assistance.
+4:94:5567:0:15:112:511:679:12:g_d0_f3:12:g_d0_f3:A:We then present two applications of our framework. First, we look at what the
+4:95:5644:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:model says about the puzzling relation between economic growth and interna-
+4:96:5719:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:tional capital flows (especially the fact that fast-growing developing countries
+4:97:5799:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:tend to export capital).  We show that this puzzle can be explained in our
+4:98:5873:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:framework if the bargain that countries make when they embark on a path
+4:99:5944:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:of rapid development involves not only a pickup in productivity growth but
+4:100:6018:15:14:100:510:592:12:g_d0_f3:12:g_d0_f3:B:also an increase in the degree of idiosyncratic risk borne by individuals (like
+4:101:6097:14:15:100:510:578:12:g_d0_f3:12:g_d0_f3:B:unemployment spells that result in substantial lost wages). Second, we use a two-
+4:102:6178:15:14:100:510:563:12:g_d0_f3:12:g_d0_f3:B:country version of the model to investigate the long-term impact on the United
+4:103:6256:14:15:100:510:549:12:g_d0_f3:12:g_d0_f3:B:States and the rest of the world if the recent global financial imbalances were
+4:104:6335:15:14:100:510:534:12:g_d0_f3:12:g_d0_f3:B:to be resorbed by a fall in non-U.S. savings (as some analysts have advocated).
+4:105:6414:14:15:100:510:520:12:g_d0_f3:12:g_d0_f3:B:Our model implies that a decrease in the desired level of wealth in the rest of the
+4:106:6497:15:14:100:510:505:12:g_d0_f3:12:g_d0_f3:B:world has a substantial negative impact on the global capital stock as well as the
+4:107:6579:14:14:100:243:491:12:g_d0_f3:12:g_d0_f3:B:U.S. (and global) real wage.
+4:108:6607:14:15:112:511:477:12:g_d0_f3:12:g_d0_f3:A:A central purpose of the paper is to distill the main insights of the complex
+4:109:6684:15:14:100:510:462:12:g_d0_f3:12:g_d0_f3:B:literature that interprets capital flows through the lens of the precautionary
+4:110:6762:14:15:100:511:448:12:g_d0_f3:12:g_d0_f3:B:motive.3The older literature on the intertemporal approach to the current
+4:111:6835:15:14:100:510:433:12:g_d0_f3:12:g_d0_f3:B:account simply ignores precautionary behavior by considering a linear-quadratic
+4:112:6914:14:15:100:510:419:12:g_d0_f3:12:g_d0_f3:B:formulation of the consumption-saving problem (see Obstfeld and Rogoff (1995)
+4:113:6991:15:14:100:510:404:12:g_d0_f3:12:g_d0_f3:B:for a review).  An exception is Ghosh and Ostry (1997), who look at the im-
+4:114:7066:14:15:100:510:390:12:g_d0_f3:12:g_d0_f3:B:plications of precautionary motives for the current account balance of advanced
+4:115:7145:15:14:100:510:375:12:g_d0_f3:12:g_d0_f3:B:economies. They use a model with aggregate income shocks in which the domestic
+4:116:7223:14:15:100:510:361:12:g_d0_f3:12:g_d0_f3:B:consumer has constant absolute risk aversion utility (an assumption that makes
+4:117:7301:15:14:100:510:346:12:g_d0_f3:12:g_d0_f3:B:the model solvable in closed form but also implies rather special properties for
+4:118:7381:14:14:100:261:332:12:g_d0_f3:12:g_d0_f3:B:the dynamics of foreign assets).
+4:119:7413:14:15:112:511:318:12:g_d0_f3:12:g_d0_f3:A:More recently, one strand of the intertemporal literature looks at the effects of
+4:120:7494:15:14:100:510:303:12:g_d0_f3:12:g_d0_f3:B:aggregate risk on domestic precautionary wealth. For example, Durdu, Mendoza,
+4:121:7571:14:15:100:510:289:12:g_d0_f3:12:g_d0_f3:B:and Terrones (2007) present some estimates of the optimal level of precautionary
+4:122:7651:15:14:100:510:274:12:g_d0_f3:12:g_d0_f3:B:wealth accumulated by a small open economy in response to business cycle
+4:123:7723:14:15:100:510:260:12:g_d0_f3:12:g_d0_f3:B:volatility, financial globalization, and the risk of a sudden stop. They conclude
+4:124:7804:15:14:100:510:245:12:g_d0_f3:12:g_d0_f3:B:that these risks are plausible explanations of the observed surge in reserves in
+4:125:7884:14:15:100:510:231:12:g_d0_f3:12:g_d0_f3:B:emerging market countries.4Arbatli (2008) argues that precautionary motives
+4:126:7959:15:14:100:510:216:12:g_d0_f3:12:g_d0_f3:B:associated with the possibility of sudden stops in credit can explain the dynamics
+4:127:8041:14:14:100:510:202:12:g_d0_f3:12:g_d0_f3:B:of the current account in emerging economy business cycles.  Fogli and Perri
+4:128:8117:14:15:100:510:188:12:g_d0_f3:12:g_d0_f3:B:(2006) instead take the perspective of the U.S. and argue that the decrease in
+4:129:8195:15:30:100:510:173:12:g_d0_f3:12:g_d0_f3:B:its saving rate can be explained partly by the moderation in the volatility of its
+4:130:8277:30:13:117:510:143:6:g_d0_f4:8:g_d0_f5:F:3Precautionary accumulation is not the only interpretation of recent developments in international capital
+4:131:8383:13:9:100:510:130:8:g_d0_f5:8:g_d0_f5:F:flows.  For example, Caballero, Farhi, and Gourinchas (2008) suggest that those flows have been driven by
+4:132:8488:9:8:100:295:121:8:g_d0_f5:8:g_d0_f5:F:countries’ supply of (rather than demand for) assets.
+4:133:8541:8:13:117:510:113:6:g_d0_f4:8:g_d0_f5:F:4In contrast, Jeanne (2007) and Jeanne and Rancière (2008) find that it is difficult to explain the build-up
+4:134:8649:13:0:100:374:100:8:g_d0_f5:8:g_d0_f5:F:in emerging markets reserves as insurance against the risk of sudden stop.
+5:135:8724:0:15:100:174:679:12:g_d0_f3:12:g_d0_f3:B:business cycle.
+5:136:8739:15:14:112:511:664:12:g_d0_f3:12:g_d0_f3:A:Closer to our paper are the contributions that examine the impact of idiosyn-
+5:137:8816:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:cratic risk on saving behavior. Mendoza, Quadrini, and Rios-Rull (2007) model
+5:138:8893:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:the determination of capital flows in a closed world in which economies differ
+5:139:8971:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:by their level of financial development (market completeness). They find that
+5:140:9048:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:international financial integration can lead to the accumulation of a large level of
+5:141:9132:15:14:100:510:592:12:g_d0_f3:12:g_d0_f3:B:net and gross liabilities by the more financially advanced region. Sandri (2008)
+5:142:9212:14:15:100:510:578:12:g_d0_f3:12:g_d0_f3:B:presents a model in which growth acceleration in a developing country causes a
+5:143:9290:15:14:100:510:563:12:g_d0_f3:12:g_d0_f3:B:larger increase in saving than in investment because capital market imperfections
+5:144:9371:14:15:100:510:549:12:g_d0_f3:12:g_d0_f3:B:induce entrepreneurs not only to self-finance investment but also to accumulate
+5:145:9450:15:14:100:379:534:12:g_d0_f3:12:g_d0_f3:B:precautionary wealth outside their business enterprise.
+5:146:9505:14:15:112:511:520:12:g_d0_f3:12:g_d0_f3:A:Several of our analytical results resonate with themes developed, or touched
+5:147:9581:15:14:100:510:505:12:g_d0_f3:12:g_d0_f3:B:upon, in those papers (in particular, the importance of domestic financial de-
+5:148:9659:14:14:100:510:491:12:g_d0_f3:12:g_d0_f3:B:velopment or social insurance for international capital flows). The main com-
+5:149:9736:14:15:100:510:477:12:g_d0_f3:12:g_d0_f3:B:parative advantages of our analysis are two.  First, the insights are reflected
+5:150:9815:15:14:100:510:462:12:g_d0_f3:12:g_d0_f3:B:in tractable analytical formulas. The impact of key variables can be analyzed
+5:151:9892:14:15:100:510:448:12:g_d0_f3:12:g_d0_f3:B:using a simple diagram or closed-form expressions—although (as usual) analysis
+5:152:9970:15:14:100:510:433:12:g_d0_f3:12:g_d0_f3:B:of transitional dynamics requires numerical solution tools (which we provide).
+5:153:10048:14:15:100:510:419:12:g_d0_f3:12:g_d0_f3:B:Second, our model of prudent (Kimball (1990)) intertemporal choice is integrated
+5:154:10128:15:14:100:510:404:12:g_d0_f3:12:g_d0_f3:B:with a standard neoclassical treatment of production (Cobb Douglas with labor
+5:155:10205:14:15:100:510:390:12:g_d0_f3:12:g_d0_f3:B:augmenting productivity growth), so that the familiar Ramsey-Cass-Koopmans
+5:156:10279:15:14:100:510:375:12:g_d0_f3:12:g_d0_f3:B:framework can be viewed as the perfect-insurance special case of our model. This
+5:157:10359:14:15:100:510:361:12:g_d0_f3:12:g_d0_f3:B:allows us analyze the link between economic development and capital flows in a
+5:158:10437:15:14:100:510:346:12:g_d0_f3:12:g_d0_f3:B:way that is directly comparable to the corresponding analysis in the standard
+5:159:10514:14:40:100:138:332:12:g_d0_f3:6:g_d0_f4:B:model.5
+5:160:10521:40:26:100:170:292:17:g_d0_f2:17:g_d0_f2:C:2 Model
+5:161:10528:26:15:100:510:266:12:g_d0_f3:12:g_d0_f3:B:We consider a small open economy whose population and productivity grow at
+5:162:10602:15:14:100:510:251:12:g_d0_f3:12:g_d0_f3:B:constant rates. A resident of this economy accumulates precautionary wealth in
+5:163:10680:14:15:100:510:237:12:g_d0_f3:12:g_d0_f3:B:order to insure against the risk of unemployment, which results in complete and
+5:164:10759:15:14:100:510:222:12:g_d0_f3:12:g_d0_f3:B:permanent destruction of the individual’s human capital.6,7The saving decisions
+5:165:10838:14:26:100:510:208:12:g_d0_f3:12:g_d0_f3:B:of our individuals aggregate to produce “net foreign assets” for the economy as a
+5:166:10919:26:12:117:510:182:6:g_d0_f4:8:g_d0_f5:F:5The models of Fogli and Perri (2006) and Mendoza, Quadrini, and Rios-Rull (2007) do not incorporate
+5:167:11019:12:9:100:510:170:8:g_d0_f5:8:g_d0_f5:F:growth. The model of Sandri (2008) has economic growth in the transition dynamics toward a long-run steady
+5:168:11125:9:10:100:510:161:8:g_d0_f5:8:g_d0_f5:F:state with no growth. By contrast, our model allows one to look at the impact of different long-run productivity
+5:169:11237:10:8:100:149:151:8:g_d0_f5:8:g_d0_f5:F:growth rates.
+5:170:11250:8:13:117:510:143:6:g_d0_f4:8:g_d0_f5:F:6Below, we explore the consequenses of introducing partial or complete insurance against unemployment
+5:171:11351:13:8:100:116:130:8:g_d0_f5:8:g_d0_f5:F:risk.
+5:172:11356:8:12:117:510:122:6:g_d0_f4:8:g_d0_f5:F:7For the sovereign wealth fund interpretation of our model, this risk should be interpreted as reflecting
+5:173:11461:12:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:a radical reduction in the purchasing power of the country’s exports, e.g. a commodity price collapse for a
+5:174:11568:10:0:100:201:100:8:g_d0_f5:8:g_d0_f5:F:commodity-based exporter.
+6:175:11594:0:35:100:137:679:12:g_d0_f3:6:g_d0_f4:B:whole.8
+6:176:11601:35:22:100:298:644:14:g_d0_f7:14:g_d0_f7:C:2.1 Macroeconomic Assumptions
+6:177:11630:22:21:100:491:622:12:g_d0_f3:12:g_d0_f3:B:Domestic output is produced according to the usual Cobb-Douglas function:
+6:178:11703:21:20:258:511:601:12:g_d0_f8:12:g_d0_f3:A:PPPt=KKKαt(ztLLLt)1−α,(1)
+6:179:11728:20:14:100:511:581:12:g_d0_f3:12:g_d0_f3:B:whereKKKtis domestic capital andLLLtis the supply of domestic labor.  The
+6:180:11801:14:21:100:458:567:12:g_d0_f3:12:g_d0_f3:B:productivity of labor increases by a constant factorGin every period,
+6:181:11870:21:20:278:333:546:12:g_d0_f8:12:g_d0_f8:A:zt+1=Gzt.
+6:182:11879:20:15:112:511:526:12:g_d0_f3:12:g_d0_f3:A:Capital and labor are supplied in perfectly competitive markets.  Capital is
+6:183:11955:15:14:100:510:511:12:g_d0_f3:12:g_d0_f3:B:perfectly mobile internationally, so that the marginal return to capital is the
+6:184:12034:14:26:100:265:497:12:g_d0_f3:12:g_d0_f3:B:same as in the rest of the world,
+6:185:12067:26:0:269:298:471:12:g_d0_f13:12:g_d0_f8:?:k+α
+6:186:12070:0:16:300:313:479:12:g_d0_f8:8:g_d0_f6:?:PPPt
+6:187:12074:16:0:299:314:463:12:g_d0_f8:8:g_d0_f6:A:KKKt
+6:188:12078:0:26:319:511:471:12:g_d0_f9:12:g_d0_f3:A:=R,(2)
+6:189:12084:26:14:100:511:445:12:g_d0_f3:12:g_d0_f3:B:where the Hebrew letter dalethk≡(1−δ)is the proportion of capital that
+6:190:12154:14:15:100:511:431:12:g_d0_f3:12:g_d0_f3:B:remains undepreciated after production, andRis the worldwide constant risk-
+6:191:12229:15:18:100:498:416:12:g_d0_f3:12:g_d0_f3:B:free interest factor. Thus, the capital-to-output ratio is constant and equal to
+6:192:12309:18:16:274:284:398:12:g_d0_f8:12:g_d0_f8:?:KKK
+6:193:12312:16:0:275:283:382:12:g_d0_f8:12:g_d0_f8:?:PPP
+6:194:12315:0:0:290:299:390:12:g_d0_f9:12:g_d0_f9:?:=
+6:195:12316:0:16:315:322:398:12:g_d0_f8:12:g_d0_f8:?:α
+6:196:12317:16:0:303:333:382:12:g_d0_f12:12:g_d0_f13:?:R−k
+6:197:12320:0:24:335:511:390:12:g_d0_f8:12:g_d0_f3:A:.(3)
+6:198:12324:24:15:112:511:366:12:g_d0_f3:12:g_d0_f3:A:Labor is supplied by domestic workers. Each worker is part of a ‘generation’
+6:199:12400:15:14:100:510:351:12:g_d0_f3:12:g_d0_f3:B:born at the same date, and every new generation is larger by the factorΞthan
+6:200:12476:14:14:100:510:337:12:g_d0_f3:12:g_d0_f3:B:the newborn generation in the previous period. If we normalize to 1 the size of
+6:201:12555:14:15:100:468:323:12:g_d0_f3:12:g_d0_f3:B:the generation born att= 0, the generation born attwill be of sizeΞt.
+6:202:12624:15:14:112:511:308:12:g_d0_f3:12:g_d0_f3:A:An individual’s life has three phases: Employment, followed by unemployment,
+6:203:12700:14:15:100:510:294:12:g_d0_f3:12:g_d0_f3:B:which terminates in death.  Transitions to unemployment and to death follow
+6:204:12775:15:14:100:510:279:12:g_d0_f3:12:g_d0_f3:B:Poisson processes with constant arrival rates. The probability that an employed
+6:205:12854:14:15:100:511:265:12:g_d0_f3:12:g_d0_f3:B:worker will become unemployed is0(while the probability of remaining employed
+6:206:12931:15:14:100:510:250:12:g_d0_f3:12:g_d0_f3:B:is denoted as the cancellation of unemployment,--0≡1−0). The probability
+6:207:13003:14:15:100:511:236:12:g_d0_f3:12:g_d0_f3:B:that an unemployed individual dies before the next period isD; the probability
+6:208:13081:15:14:100:511:221:12:g_d0_f3:12:g_d0_f3:B:of survival is denoted by the cancellation of death,--D≡1−D.  (Individuals
+6:209:13155:14:14:100:510:207:12:g_d0_f3:12:g_d0_f3:B:are permitted to die only after they have become unemployed.) The employed
+6:210:13229:14:15:100:511:193:12:g_d0_f3:12:g_d0_f3:B:population,E, and the unemployed population,Uthus satisfy the dynamic
+6:211:13298:15:20:100:152:178:12:g_d0_f3:12:g_d0_f3:B:equations,
+6:212:13308:20:18:231:360:158:12:g_d0_f14:8:g_d0_f10:A:Et−Et−1=   Ξt−0Et−1
+6:213:13327:18:27:228:382:140:12:g_d0_f14:12:g_d0_f8:A:Ut−Ut−1=0Et−1−DUt−1.
+6:214:13347:27:13:117:510:113:6:g_d0_f4:8:g_d0_f5:F:8Our first appendix contains a list of our model’s parameters and variables and their definitions, to aid the
+6:215:13456:13:0:100:188:100:8:g_d0_f5:8:g_d0_f5:F:reader in keeping track.
+7:216:13481:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:The first equation says that the net increase in the employed population is equal
+7:217:13562:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:to the size of the newborn generation minus the flow of previously employed
+7:218:13637:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:workers going to unemployment. The second says that the net increase in the
+7:219:13712:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:unemployed population is equal to the number of newly unemployed workers
+7:220:13784:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:minus the previously unemployed workers who exit life.  It follows that the
+7:221:13859:14:27:100:429:607:12:g_d0_f3:12:g_d0_f3:B:employed and unemployed populations are respectively given by
+7:222:13920:27:0:244:273:580:12:g_d0_f14:12:g_d0_f9:?:Et=
+7:223:13923:0:17:288:310:588:12:g_d0_f9:8:g_d0_f10:?:Ξt+1
+7:224:13927:17:22:284:315:571:12:g_d0_f9:12:g_d0_f15:A:Ξ−--0
+7:225:13932:22:0:243:273:549:12:g_d0_f14:12:g_d0_f9:?:Ut=
+7:226:13935:0:16:309:339:557:12:g_d0_f15:8:g_d0_f10:?:0Ξt+1
+7:227:13940:16:0:284:364:541:12:g_d0_f9:12:g_d0_f9:A:(Ξ−--D)(Ξ−--0)
+7:228:13954:0:26:365:368:549:12:g_d0_f8:12:g_d0_f8:A:.
+7:229:13955:26:15:112:511:523:12:g_d0_f3:12:g_d0_f3:A:Total labor supply is the number of workers times the average labor supply per
+7:230:14033:15:20:100:137:508:12:g_d0_f3:12:g_d0_f3:B:worker,
+7:231:14040:20:21:282:511:488:12:g_d0_f8:12:g_d0_f3:A:LLLt=Et`.(4)
+7:232:14052:21:14:100:510:467:12:g_d0_f3:12:g_d0_f3:B:It then follows from (1) and (3) that in the balanced growth equilibrium capital
+7:233:14132:14:15:100:511:453:12:g_d0_f3:12:g_d0_f3:B:and output grow by the same factorΞGin every period. Finally, the real wage
+7:234:14207:15:26:100:313:438:12:g_d0_f3:12:g_d0_f3:B:is equal to the marginal product of labor,
+7:235:14249:26:0:263:330:412:12:g_d0_f12:12:g_d0_f9:?:Wt= (1−α)
+7:236:14258:0:17:331:343:421:12:g_d0_f8:8:g_d0_f6:?:PPPt
+7:237:14262:17:0:331:343:404:12:g_d0_f8:8:g_d0_f6:?:LLLt
+7:238:14266:0:25:345:348:412:12:g_d0_f8:12:g_d0_f8:A:,
+7:239:14267:25:14:100:328:387:12:g_d0_f3:12:g_d0_f3:B:which grows by the factorGin every period.
+7:240:14309:14:15:112:511:373:12:g_d0_f3:12:g_d0_f3:A:Perfect capital mobility means that residents and non-residents can hold do-
+7:241:14385:15:14:100:510:358:12:g_d0_f3:12:g_d0_f3:B:mestic capital, and can hold foreign assets or issue foreign liabilities. The main
+7:242:14467:14:15:100:511:344:12:g_d0_f3:12:g_d0_f3:B:variable of interest isNNNt, the aggregate net foreign assets of the economy at
+7:243:14546:15:14:100:511:329:12:g_d0_f3:12:g_d0_f3:B:the end of periodt. As a matter of accounting, the country’s net foreign asset
+7:244:14624:14:15:100:510:315:12:g_d0_f3:12:g_d0_f3:B:position is equal to the difference between the value of its total wealth and the
+7:245:14705:15:25:100:275:300:12:g_d0_f3:12:g_d0_f3:B:value of domestic physical capital,
+7:246:14740:25:0:256:283:275:12:g_d0_f8:12:g_d0_f9:A:NNNt=
+7:247:14745:0:17:287:310:283:12:g_d0_f8:8:g_d0_f10:?:SSSt+1
+7:248:14751:17:0:295:303:266:12:g_d0_f12:12:g_d0_f12:A:R
+7:249:14752:0:25:314:511:275:12:g_d0_f14:12:g_d0_f3:A:−KKKt+1,(5)
+7:250:14763:25:14:100:511:250:12:g_d0_f3:12:g_d0_f3:B:whereSSSt+1/Ris the present discounted value at the end of periodtof next period’s
+7:251:14845:14:14:100:510:236:12:g_d0_f3:12:g_d0_f3:B:total wealth (see Appendix A.2 for the basic national accounting relationships in
+7:252:14926:14:15:100:511:222:12:g_d0_f3:12:g_d0_f3:B:this economy). The dynamics ofSSStare determined by the consumption/saving
+7:253:15000:15:0:100:330:207:12:g_d0_f3:12:g_d0_f3:B:choices of individuals, to which we now turn.
+8:254:15046:0:22:100:370:679:14:g_d0_f7:14:g_d0_f7:C:2.2 The Microeconomic Consumer’s Problem
+8:255:15086:22:15:100:510:657:12:g_d0_f3:12:g_d0_f3:B:Using lower-case variables for individuals, the period-tbudget constraint relates
+8:256:15167:15:26:100:511:642:12:g_d0_f3:6:g_d0_f4:B:current consumptioncccto current labor income and current and future wealthsss,9
+8:257:15247:26:16:238:259:616:12:g_d0_f8:8:g_d0_f10:A:ssst+1
+8:258:15253:16:0:245:253:600:12:g_d0_f12:12:g_d0_f12:?:R
+8:259:15254:0:0:263:320:608:12:g_d0_f9:12:g_d0_f9:?:+ccct=ssst+
+8:260:15265:0:7:322:370:626:8:g_d0_f5:8:g_d0_f5:?:labor income
+8:261:15277:7:11:330:362:619:12:g_d0_f17:12:g_d0_f17:A:︷︸︸︷
+8:262:15281:11:23:330:511:608:12:g_d0_f8:12:g_d0_f3:A:ξt`tWt,(6)
+8:263:15291:23:15:100:511:585:12:g_d0_f3:12:g_d0_f3:B:whereξis a dummy variable indicating the consumer’s employment state. Ev-
+8:264:15364:15:14:100:511:570:12:g_d0_f3:12:g_d0_f3:B:eryone in this economy is either employed (state ‘e’), in which caseξ=  1, or
+8:265:15441:14:15:100:510:556:12:g_d0_f3:12:g_d0_f3:B:unemployed (state ‘u’), in which caseξ= 0, so that for unemployed individuals
+8:266:15518:15:14:100:206:541:12:g_d0_f3:12:g_d0_f3:B:labor income is zero.
+8:267:15539:14:15:112:511:527:12:g_d0_f3:12:g_d0_f3:A:We assume that the labor productivity`of each individual worker who remains
+8:268:15614:15:20:100:494:512:12:g_d0_f3:12:g_d0_f3:B:employed grows by a factorXevery period because of increasing eXperience,
+8:269:15687:20:21:281:511:492:12:g_d0_f8:12:g_d0_f3:A:`t=Xt`0,(7)
+8:270:15698:21:14:100:510:471:12:g_d0_f3:12:g_d0_f3:B:where`0is the labor supply of a newborn individual.Xcan be interpreted as the
+8:271:15775:14:14:100:510:457:12:g_d0_f3:12:g_d0_f3:B:factor that governs the rate at which an individual’s work skills improve, perhaps
+8:272:15857:14:15:100:511:443:12:g_d0_f3:12:g_d0_f3:B:as a result of human capital accumulation, whereasGis the factor by which
+8:273:15930:15:14:100:510:428:12:g_d0_f3:12:g_d0_f3:B:productivity grows in the economy as a whole, perhaps due to societal knowledge
+8:274:16009:14:15:100:510:414:12:g_d0_f3:12:g_d0_f3:B:accumulation and technological advance (Mankiw (1995)). This means that for
+8:275:16084:15:20:100:451:399:12:g_d0_f3:12:g_d0_f3:B:a consumer who remains employed, labor income will grow by factor
+8:276:16149:20:21:278:333:379:12:g_d0_f9:12:g_d0_f8:A:Γ≡GX.
+8:277:16154:21:14:112:511:358:12:g_d0_f3:12:g_d0_f3:A:Following Toche (2005), unemployment means a complete and permanent de-
+8:278:16225:14:14:100:510:344:12:g_d0_f3:12:g_d0_f3:B:struction of the individual’s human wealth: Once a person becomes unemployed,
+8:279:16302:14:15:100:510:330:12:g_d0_f3:12:g_d0_f3:B:that person can never become employed again. Thus, unemployment could also
+8:280:16376:15:14:100:510:315:12:g_d0_f3:12:g_d0_f3:B:be interpreted as retirement (we calibrate the model so that the average length
+8:281:16455:14:15:100:510:301:12:g_d0_f3:12:g_d0_f3:B:of the working life is forty years). Employed consumers face a constant risk0of
+8:282:16534:15:14:100:333:286:12:g_d0_f3:12:g_d0_f3:B:becoming unemployed regardless of their age.
+8:283:16578:14:15:112:511:272:12:g_d0_f3:12:g_d0_f3:A:Consumers have a CRRA felicity functionu(•) =•1−ρ/(1−ρ)and discount
+8:284:16645:15:14:100:511:257:12:g_d0_f3:12:g_d0_f3:B:future utility geometrically byβper period. We assume that unemployed workers
+8:285:16722:14:15:100:511:243:12:g_d0_f3:12:g_d0_f3:B:have access to life insuranceà laBlanchard (1985) and can convert their wealth
+8:286:16800:15:14:100:510:228:12:g_d0_f3:12:g_d0_f3:B:into annuities.  As shown in the appendix, the solution to the unemployed
+8:287:16873:14:20:100:282:214:12:g_d0_f3:12:g_d0_f3:B:consumer’s optimization problem is
+8:288:16907:20:21:279:511:194:12:g_d0_f8:12:g_d0_f3:A:cccut=κusssut,(8)
+8:289:16924:21:14:100:511:173:12:g_d0_f3:12:g_d0_f3:B:where theusuperscript now signifies the consumer’s (un)employment status,
+8:290:16997:14:18:100:511:159:12:g_d0_f3:12:g_d0_f3:B:andκu, the marginal propensity to consume for the perfect foresight unemployed
+8:291:17075:18:12:117:511:141:6:g_d0_f4:8:g_d0_f5:F:9A brief terminological rant: We generally callsss‘wealth’ rather than ‘savings’ because of the confusion
+8:292:17180:12:10:100:510:129:8:g_d0_f5:8:g_d0_f5:F:induced by the words ‘saving’ and ‘savings’; saving is a behavior (a flow; a choice not to spend some portion of
+8:293:17292:10:9:100:510:119:8:g_d0_f5:8:g_d0_f5:F:current income) while savings is a stock of resources that result from past saving flows. Authors in this literature
+8:294:17408:9:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:frequently misapply the stock word savings for the flow word saving or vice versa, so we prefer to use the word
+8:295:17519:10:0:100:273:100:8:g_d0_f5:8:g_d0_f5:F:‘wealth’ which unambiguously denotes a stock.
+9:296:17565:0:28:100:210:679:12:g_d0_f3:12:g_d0_f3:B:consumer, is given by
+9:297:17586:28:0:249:308:651:12:g_d0_f8:12:g_d0_f14:?:κu=   1−
+9:298:17594:0:16:312:357:659:12:g_d0_f9:12:g_d0_f12:?:(βR)1/ρ--D
+9:299:17604:16:0:331:339:643:12:g_d0_f12:12:g_d0_f12:?:R
+9:300:17605:0:23:359:511:651:12:g_d0_f8:12:g_d0_f3:A:.(9)
+9:301:17609:23:15:100:511:628:12:g_d0_f3:12:g_d0_f3:B:We assumeκu>0, which is necessary for the unemployed consumer’s problem
+9:302:17680:15:14:100:259:613:12:g_d0_f3:12:g_d0_f3:B:to have a well-defined solution.
+9:303:17712:14:29:112:511:599:12:g_d0_f3:12:g_d0_f3:A:Following Carroll (2009b), it will be useful to define a ‘growth patience factor’:
+9:304:17794:29:0:262:295:570:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞΓ=
+9:305:17799:0:16:307:344:578:12:g_d0_f9:8:g_d0_f6:?:(βR)1/ρ
+9:306:17806:16:0:322:329:562:12:g_d0_f9:12:g_d0_f9:?:Γ
+9:307:17807:0:23:345:511:570:12:g_d0_f8:12:g_d0_f3:A:,(10)
+9:308:17812:23:14:100:511:547:12:g_d0_f3:12:g_d0_f3:B:which is the factor by whichcewould grow in the perfect foresight version of
+9:309:17888:14:15:100:511:533:12:g_d0_f3:12:g_d0_f3:B:the model with labor income growth factorΓ. We will assume that the growth
+9:310:17962:15:20:100:276:518:12:g_d0_f3:12:g_d0_f3:B:patience factorÞÞÞΓis less than one
+9:311:17997:20:21:279:511:498:12:g_d0_f15:12:g_d0_f3:A:ÞÞÞΓ<1.(11)
+9:312:18008:21:14:100:510:477:12:g_d0_f3:12:g_d0_f3:B:This condition—which Carroll (2009b) dubs the ‘perfect foresight growth im-
+9:313:18083:14:15:100:510:463:12:g_d0_f3:12:g_d0_f3:B:patience condition’ (PF-GIC)—ensures that a consumer facing no uncertainty
+9:314:18157:15:14:100:510:448:12:g_d0_f3:12:g_d0_f3:B:is sufficiently impatient that his wealth-to-permanent-income ratio will fall over
+9:315:18239:14:15:100:126:434:12:g_d0_f3:12:g_d0_f3:B:time.
+9:316:18244:15:20:112:350:419:12:g_d0_f3:12:g_d0_f3:A:The Euler equation for an employed worker is,
+9:317:18289:20:0:211:272:399:12:g_d0_f9:12:g_d0_f12:?:(cccet)−ρ=βR
+9:318:18301:0:11:273:278:409:12:g_d0_f17:12:g_d0_f17:?:[
+9:319:18302:11:0:277:389:398:10:g_d0_f16:8:g_d0_f6:?:--0(cccet+1)−ρ+0(cccut+1)−ρ
+9:320:18329:0:10:390:395:409:12:g_d0_f17:12:g_d0_f17:?:]
+9:321:18330:10:20:397:400:399:12:g_d0_f8:12:g_d0_f8:?:.
+9:322:18331:20:15:100:510:379:12:g_d0_f3:12:g_d0_f3:B:Now define nonbold variables as the boldface equivalent divided by the level of
+9:323:18410:15:14:100:511:364:12:g_d0_f3:12:g_d0_f3:B:permanent labor income for an employed consumer, e.g.cet=cccet/(Wt`t), and
+9:324:18484:14:21:100:318:350:12:g_d0_f3:12:g_d0_f3:B:rewrite the consumption Euler equation as
+9:325:18525:21:20:219:511:329:12:g_d0_f9:12:g_d0_f3:A:(ÞÞÞΓcet)−ρ=--0(cet+1)−ρ+0(cut+1)−ρ.(12)
+9:326:18565:20:15:112:511:309:12:g_d0_f3:12:g_d0_f3:A:The budget constraint of an employed worker can be written, in normalized
+9:327:18638:15:20:100:141:294:12:g_d0_f3:12:g_d0_f3:B:form, as
+9:328:18646:20:20:237:511:274:12:g_d0_f8:12:g_d0_f3:A:set+1= (R/Γ) (set−cet+ 1).(13)
+9:329:18676:20:15:112:511:254:12:g_d0_f3:12:g_d0_f3:A:Using this equation andcut+1=κuset+1to substitute outcut+1from (12) (since
+9:330:18750:15:14:100:511:239:12:g_d0_f3:12:g_d0_f3:B:a worker who becomes unemployed in periodt+ 1starts with wealthset+1), we
+9:331:18823:14:28:100:123:225:12:g_d0_f3:12:g_d0_f3:B:have
+9:332:18827:28:0:167:246:197:12:g_d0_f8:8:g_d0_f6:?:cet+1=ÞÞÞΓ--01/ρcet
+9:333:18846:0:17:250:256:214:12:g_d0_f17:12:g_d0_f17:?:[
+9:334:18847:17:0:256:285:197:12:g_d0_f9:12:g_d0_f15:A:1−0
+9:335:18850:0:9:287:296:214:12:g_d0_f17:12:g_d0_f17:?:(
+9:336:18851:9:16:297:310:205:12:g_d0_f15:8:g_d0_f10:A:ÞÞÞΓ
+9:337:18855:16:0:298:310:189:12:g_d0_f8:8:g_d0_f6:A:κu
+9:338:18857:0:16:351:359:205:12:g_d0_f8:8:g_d0_f6:?:cet
+9:339:18860:16:0:313:397:189:12:g_d0_f12:12:g_d0_f9:?:R/Γ(set−cet+ 1)
+9:340:18875:0:17:399:438:214:12:g_d0_f17:8:g_d0_f6:?:)ρ]−1/ρ
+9:341:18882:17:27:441:511:197:12:g_d0_f8:12:g_d0_f3:A:.(14)
+9:342:18887:27:14:112:511:170:12:g_d0_f3:12:g_d0_f3:A:Equations (13) and (14) characterize the dynamics for the pair of variables
+9:343:18962:14:15:100:511:156:12:g_d0_f9:12:g_d0_f3:B:(set,cet). It is possible to show (see the appendix) that those dynamics are saddle-
+9:344:19046:15:14:100:511:141:12:g_d0_f3:12:g_d0_f3:B:point stable, and that the ratio of wealth to income,set, converges toward a
+9:345:19122:14:15:100:511:127:12:g_d0_f3:12:g_d0_f3:B:positive limit, the target wealth-to-income ratio, denoted byˇs. Figure 1 presents
+9:346:19204:15:0:100:198:112:12:g_d0_f3:12:g_d0_f3:B:the phase diagram.
+10:347:19223:0:15:112:511:679:12:g_d0_f3:12:g_d0_f9:A:We now determine the long-run target wealth-to-income ratio. Settingcet+1=
+10:348:19297:15:32:100:320:664:12:g_d0_f8:12:g_d0_f3:B:cet= ˇcandcut+1=κˇsin equation (12) gives
+10:349:19338:32:0:236:268:632:12:g_d0_f9:8:g_d0_f6:A:ˇc=κu
+10:350:19343:0:17:271:280:649:12:g_d0_f17:12:g_d0_f17:?:(
+10:351:19344:17:0:280:298:632:12:g_d0_f9:12:g_d0_f9:A:1 +
+10:352:19347:0:16:300:341:640:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+10:353:19355:16:0:317:326:624:12:g_d0_f15:12:g_d0_f15:?:0
+10:354:19356:0:17:342:364:649:12:g_d0_f17:8:g_d0_f6:A:)1/ρ
+10:355:19360:17:27:367:511:632:12:g_d0_f9:12:g_d0_f3:A:ˇs,(15)
+10:356:19367:27:21:100:403:605:12:g_d0_f3:12:g_d0_f3:B:and settingset+1=set= ˇsandcet= ˇcin equation (13) gives,
+10:357:19424:21:20:255:511:584:12:g_d0_f9:12:g_d0_f3:A:(Γ/R−1) ˇs= 1−ˇc.(16)
+10:358:19445:20:14:100:510:564:12:g_d0_f3:12:g_d0_f3:B:Eliminatingˇcbetween (15) and (16) then gives an explicit formula for the target
+10:359:19525:14:33:100:219:550:12:g_d0_f3:12:g_d0_f3:B:wealth-to-income ratio,
+10:360:19548:33:0:204:221:517:12:g_d0_f9:12:g_d0_f9:?:ˇs=
+10:361:19551:0:12:225:232:537:12:g_d0_f17:12:g_d0_f17:?:[
+10:362:19552:12:16:233:240:525:12:g_d0_f9:12:g_d0_f9:A:Γ
+10:363:19553:16:0:233:241:509:12:g_d0_f12:12:g_d0_f12:A:R
+10:364:19554:0:0:244:288:517:12:g_d0_f14:8:g_d0_f6:?:−1 +κu
+10:365:19560:0:17:291:300:534:12:g_d0_f17:12:g_d0_f17:?:(
+10:366:19561:17:0:299:317:517:12:g_d0_f9:12:g_d0_f9:A:1 +
+10:367:19564:0:16:320:361:525:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+10:368:19572:16:0:336:345:509:12:g_d0_f15:12:g_d0_f15:?:0
+10:369:19573:0:17:362:402:534:12:g_d0_f17:8:g_d0_f10:?:)1/ρ]−1
+10:370:19580:17:30:404:511:517:12:g_d0_f8:12:g_d0_f3:A:.(17)
+10:371:19585:30:15:100:510:487:12:g_d0_f3:12:g_d0_f3:B:Here is the intuition behind the target wealth ratio: On the one hand, consumers
+10:372:19665:15:14:100:510:472:12:g_d0_f3:12:g_d0_f3:B:are growth-impatient. This prevents their wealth-to-income ratio from heading
+10:373:19742:14:15:100:510:458:12:g_d0_f3:12:g_d0_f3:B:off to infinity.  On the other hand, consumers have a precautionary motive
+10:374:19816:15:14:100:510:443:12:g_d0_f3:12:g_d0_f3:B:that intensifies more and more as the level of wealth gets lower and lower.
+10:375:19891:14:14:100:510:429:12:g_d0_f3:12:g_d0_f3:B:At some point the precautionary motive gets strong enough to counterbalance
+10:376:19966:14:15:100:510:415:12:g_d0_f3:12:g_d0_f3:B:impatience.  The point where impatience matches prudence defines the target
+10:377:20041:15:14:100:219:400:12:g_d0_f3:12:g_d0_f3:B:wealth-to-income ratio.
+10:378:20064:14:15:112:511:386:12:g_d0_f3:12:g_d0_f3:A:Expression (17) encapsulates several of the key economic effects captured by
+10:379:20140:15:14:100:511:371:12:g_d0_f3:12:g_d0_f3:B:the model. The human wealth effect of growth is captured by theΓandÞÞÞΓterms.
+10:380:20217:14:15:100:510:357:12:g_d0_f3:12:g_d0_f3:B:IncreasingΓwill decrease the growth patience factorÞÞÞΓand therefore reduce the
+10:381:20296:15:14:100:511:342:12:g_d0_f3:12:g_d0_f3:B:target level of wealth. An increase in the worker’s patience (an increase inβand
+10:382:20376:14:15:100:511:328:12:g_d0_f3:12:g_d0_f3:B:in the growth patience factorÞÞÞΓ) boosts the target level of wealth. Finally, an
+10:383:20457:15:14:100:510:313:12:g_d0_f3:6:g_d0_f4:B:increase in unemployment risk increases the target level of precautionary wealth.10
+10:384:20540:14:18:100:388:299:12:g_d0_f3:12:g_d0_f3:B:Those comparative statics results can be summarized as
+10:385:20594:18:16:279:292:281:12:g_d0_f8:12:g_d0_f8:A:∂ˇs
+10:386:20597:16:0:278:294:265:12:g_d0_f8:12:g_d0_f15:A:∂0
+10:387:20599:0:20:304:511:273:12:g_d0_f8:12:g_d0_f3:A:>0,(18)
+10:388:20606:20:17:280:293:253:12:g_d0_f8:12:g_d0_f8:A:∂ˇs
+10:389:20609:17:0:279:292:236:12:g_d0_f8:12:g_d0_f8:A:∂β
+10:390:20611:0:23:304:332:245:12:g_d0_f8:12:g_d0_f8:?:>0,
+10:391:20614:23:16:280:293:222:12:g_d0_f8:12:g_d0_f8:A:∂ˇs
+10:392:20617:16:0:279:293:206:12:g_d0_f8:12:g_d0_f9:A:∂Γ
+10:393:20619:0:24:304:332:214:12:g_d0_f8:12:g_d0_f8:?:<0.
+10:394:20622:24:14:112:511:190:12:g_d0_f3:12:g_d0_f3:A:The response of the target asset ratio to the risk aversion parameterρis less
+10:395:20699:14:15:100:510:176:12:g_d0_f3:12:g_d0_f3:B:straightforward.  On the one hand, higher risk aversion enhances the demand
+10:396:20774:15:14:100:510:161:12:g_d0_f3:12:g_d0_f3:B:for precautionary reserves. On the other hand, it also implies that consumption
+10:397:20853:14:25:100:511:147:12:g_d0_f3:12:g_d0_f3:B:is less elastic intertemporally. The response ofˇstoRis also ambiguous, which
+10:398:20930:25:12:114:511:122:6:g_d0_f4:8:g_d0_f5:F:10An increase in0also decreases the worker’s human wealth, because a greater probability of becoming
+10:399:21030:12:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:unemployed means a greater risk of having zero income. See Carroll and Toche (2009) for a careful analysis of
+10:400:21139:10:0:100:298:100:8:g_d0_f5:8:g_d0_f5:F:the case of a human-wealth-preserving spread in risk.
+11:401:21193:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:is unsurprising given that even in the deterministic model the relation between
+11:402:21272:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:interest rates and spending can be either positive or negative depending on the
+11:403:21351:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:relative sizes of the income and subsititution effects. In our model it is possible
+11:404:21434:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:to show that ifρ≤1, then the target level the wealth-to-income ratio increases
+11:405:21512:14:14:100:511:621:12:g_d0_f3:12:g_d0_f3:B:with the interest rate. For the usual case whereρ >1, however, the sign of the
+11:406:21590:14:35:100:347:607:12:g_d0_f3:12:g_d0_f3:B:response ofˇstoRcould be positive or negative.
+11:407:21636:35:22:100:211:572:14:g_d0_f7:14:g_d0_f7:C:2.3 Foreign Assets
+11:408:21654:22:15:100:510:550:12:g_d0_f3:12:g_d0_f3:B:We now add up the individuals’ balance sheets to find the country’s aggregate net
+11:409:21735:15:14:100:510:535:12:g_d0_f3:12:g_d0_f3:B:foreign assets. We first present a general formula that aggregates the resources
+11:410:21815:14:15:100:510:521:12:g_d0_f3:12:g_d0_f3:B:of all generations of employed and unemployed workers.  We then specialize
+11:411:21889:15:14:100:510:506:12:g_d0_f3:12:g_d0_f3:B:this formula under two assumptions about the initial ‘stake’ of newborns in the
+11:412:21968:14:15:100:510:492:12:g_d0_f3:12:g_d0_f3:B:economy. (We use ‘stake’ to designate a transfer received by newborns). In the
+11:413:22046:15:14:100:510:477:12:g_d0_f3:12:g_d0_f3:B:model without stakes, newborns do not receive any transfer and must accumulate
+11:414:22124:14:14:100:510:463:12:g_d0_f3:12:g_d0_f3:B:wealth through their own frugality.  The microeconomic consumer’s problem,
+11:415:22198:14:15:100:510:449:12:g_d0_f3:12:g_d0_f3:B:therefore, is the one we have described in the previous section. In the model with
+11:416:22280:15:14:100:510:434:12:g_d0_f3:12:g_d0_f3:B:stakes, newborns receive a transfer that puts their wealth-to-income ratio at par
+11:417:22361:14:15:100:510:420:12:g_d0_f3:12:g_d0_f3:B:with the rest of the population. The main advantage of the model with stakes is
+11:418:22440:15:14:100:510:405:12:g_d0_f3:12:g_d0_f3:B:that it is more tractable and yields a closed-form expression for the ratio of net
+11:419:22522:14:31:100:215:391:12:g_d0_f3:12:g_d0_f3:B:foreign assets to GDP.
+11:420:22544:31:23:100:288:360:12:g_d0_f18:12:g_d0_f18:C:2.3.1 Aggregating Individual Wealths
+11:421:22580:23:14:100:510:337:12:g_d0_f3:12:g_d0_f3:B:First, let us focus on the wealth of the employed households. Simple computations
+11:422:22661:14:14:100:510:323:12:g_d0_f3:12:g_d0_f3:B:(reported in the appendix) show that the ratio of employed workers’ wealth to
+11:423:22738:14:38:100:193:309:12:g_d0_f3:12:g_d0_f3:B:output is given by
+11:424:22756:38:0:186:211:271:12:g_d0_f8:12:g_d0_f9:?:Set=
+11:425:22760:0:16:215:227:279:12:g_d0_f8:8:g_d0_f6:?:SSSet
+11:426:22765:16:0:215:228:263:12:g_d0_f8:8:g_d0_f6:?:PPPt
+11:427:22769:0:0:239:296:271:12:g_d0_f9:12:g_d0_f9:A:=   (1−α)
+11:428:22778:0:21:297:307:299:12:g_d0_f17:12:g_d0_f17:A:
+11:429:22779:21:8:297:307:278:12:g_d0_f17:12:g_d0_f17:A:
+11:430:22780:8:0:297:325:270:12:g_d0_f17:12:g_d0_f14:A:1−
+11:431:22783:0:15:330:348:278:10:g_d0_f16:12:g_d0_f12:A:--0X
+11:432:22787:15:15:335:350:263:12:g_d0_f9:12:g_d0_f17:?:Ξ︸︷︷︸
+11:433:22792:15:0:333:346:248:8:g_d0_f11:8:g_d0_f10:?:≡Λ
+11:434:22794:0:21:350:360:299:12:g_d0_f17:12:g_d0_f17:?:
+11:435:22795:21:8:350:360:278:12:g_d0_f17:12:g_d0_f17:?:
+11:436:22796:8:0:350:360:270:12:g_d0_f17:12:g_d0_f17:?:
+11:437:22797:0:29:363:379:286:8:g_d0_f10:12:g_d0_f17:A:+∞∑
+11:438:22800:29:0:363:379:257:8:g_d0_f6:8:g_d0_f10:A:n=0
+11:439:22803:0:39:382:511:271:12:g_d0_f9:12:g_d0_f3:A:Λnset,t−n,(19)
+11:440:22817:39:15:100:511:232:12:g_d0_f3:12:g_d0_f9:B:whereset,t−nis the wealth-to-income ratio attof the workers born att−n, andΛ
+11:441:22893:15:14:100:510:217:12:g_d0_f3:12:g_d0_f3:B:is the factor by which the share of a generation in total labor supply shrinks every
+11:442:22977:14:15:100:510:203:12:g_d0_f3:12:g_d0_f3:B:period. Equation (19), thus, says that the ratio of workers’ wealth to output is the
+11:443:23061:15:14:100:510:188:12:g_d0_f3:12:g_d0_f3:B:average of the individual wealth-to-labor-income ratios over the past generations,
+11:444:23143:14:15:100:510:174:12:g_d0_f3:12:g_d0_f3:B:weighted by the share of each generation in total labor supply and by the share
+11:445:23222:15:14:100:304:159:12:g_d0_f3:12:g_d0_f3:B:of labor income in total output(1−α).
+11:446:23259:14:14:112:511:145:12:g_d0_f3:12:g_d0_f3:A:Second, let us consider the wealth of the unemployed households (managed by
+11:447:23334:14:0:100:510:131:12:g_d0_f3:12:g_d0_f3:B:the Blanchardian life insurance company). The aggregate wealth of unemployed
+12:448:23412:0:21:100:317:679:12:g_d0_f3:12:g_d0_f3:B:households satisfies the dynamic equation,
+12:449:23454:21:20:232:378:658:12:g_d0_f8:12:g_d0_f8:A:SSSut+1=R(SSSut−CCCut) +0SSSet+1,
+12:450:23487:20:15:100:510:638:12:g_d0_f3:12:g_d0_f3:B:where the first term on the right-hand side reflects the accumulation of wealth
+12:451:23566:15:14:100:510:623:12:g_d0_f3:12:g_d0_f3:B:by the unemployed households, and the second term is the wealth of the newly-
+12:452:23643:14:14:100:510:609:12:g_d0_f3:12:g_d0_f3:B:unemployed households. The unemployed households consume a constant frac-
+12:453:23716:14:21:100:497:595:12:g_d0_f3:12:g_d0_f3:B:tion of their wealth,CCCut=κuSSSut, so that the equation above can be rewritten,
+12:454:23796:21:20:230:511:574:12:g_d0_f8:12:g_d0_f3:A:SSSut+1=R(1−κu)SSSut+0SSSet+1.(20)
+12:455:23830:20:15:100:510:554:12:g_d0_f3:12:g_d0_f3:B:This equation fully characterizes the dynamics of the unemployed households’
+12:456:23906:15:14:100:451:539:12:g_d0_f3:12:g_d0_f3:B:wealth ratio for a given path for the employed workers’ wealth ratio.
+12:457:23975:14:15:112:511:525:12:g_d0_f3:12:g_d0_f3:A:Now we consider a steady state in which the wealth of the employed is a
+12:458:24046:15:14:100:511:510:12:g_d0_f3:12:g_d0_f9:B:constant fraction of GDP,Se=SSSe/PPP.  Then equation (20) andPPPt+1/PPPt=
+12:459:24119:14:15:100:511:496:12:g_d0_f9:12:g_d0_f3:B:ΞGimply that the ratio of wealth to GDP is also constant for unemployed
+12:460:24190:15:17:100:166:481:12:g_d0_f3:6:g_d0_f4:B:households,11
+12:461:24203:17:17:242:256:464:12:g_d0_f8:8:g_d0_f6:?:SSSu
+12:462:24207:17:0:244:253:447:12:g_d0_f8:12:g_d0_f8:?:PPP
+12:463:24210:0:0:261:270:456:12:g_d0_f9:12:g_d0_f9:?:=
+12:464:24211:0:17:300:325:464:12:g_d0_f15:12:g_d0_f12:?:0ΞG
+12:465:24214:17:0:274:350:447:12:g_d0_f9:8:g_d0_f6:?:ΞG−--D(βR)1/ρ
+12:466:24227:0:17:352:364:464:12:g_d0_f8:8:g_d0_f6:?:SSSe
+12:467:24231:17:0:354:362:447:12:g_d0_f8:12:g_d0_f8:?:PPP
+12:468:24234:0:27:366:511:456:12:g_d0_f8:12:g_d0_f3:A:.(21)
+12:469:24239:27:14:112:511:429:12:g_d0_f3:12:g_d0_f3:A:The ratio of net foreign assets to GDP is obtained by subtracting domestic
+12:470:24313:14:15:100:511:415:12:g_d0_f3:12:g_d0_f9:B:capital from domestic wealth. Using (3), (5), (21),PPPt+1/PPPt=  ΞG, andSSSt=
+12:471:24390:15:19:100:402:400:12:g_d0_f8:12:g_d0_f3:B:SSSet+SSSut, the ratio of net foreign assets to GDP is given by,
+12:472:24454:19:16:172:181:381:12:g_d0_f8:12:g_d0_f8:?:NNN
+12:473:24457:16:0:172:181:365:12:g_d0_f8:12:g_d0_f8:?:PPP
+12:474:24460:0:0:187:196:373:12:g_d0_f9:12:g_d0_f9:?:=
+12:475:24461:0:16:201:217:381:12:g_d0_f9:12:g_d0_f12:?:ΞG
+12:476:24463:16:0:205:213:365:12:g_d0_f12:12:g_d0_f12:?:R
+12:477:24464:0:17:220:229:390:12:g_d0_f17:12:g_d0_f17:?:(
+12:478:24465:17:0:228:246:373:12:g_d0_f9:12:g_d0_f9:A:1 +
+12:479:24468:0:16:276:300:381:12:g_d0_f15:12:g_d0_f12:?:0ΞG
+12:480:24471:16:0:250:326:365:12:g_d0_f9:8:g_d0_f6:?:ΞG−--D(βR)1/ρ
+12:481:24484:0:9:327:336:390:12:g_d0_f17:12:g_d0_f17:A:)
+12:482:24485:9:16:338:351:381:12:g_d0_f8:8:g_d0_f6:?:SSSe
+12:483:24489:16:0:340:349:365:12:g_d0_f8:12:g_d0_f8:?:PPP
+12:484:24492:0:0:355:383:373:12:g_d0_f14:12:g_d0_f12:?:−ΞG
+12:485:24495:0:9:385:394:390:12:g_d0_f17:12:g_d0_f17:?:(
+12:486:24496:9:16:406:413:381:12:g_d0_f8:12:g_d0_f8:A:α
+12:487:24497:16:0:395:425:365:12:g_d0_f12:12:g_d0_f13:?:R−k
+12:488:24500:0:17:426:435:390:12:g_d0_f17:12:g_d0_f17:?:)
+12:489:24501:17:27:437:511:373:12:g_d0_f8:12:g_d0_f3:A:.(22)
+12:490:24506:27:14:100:510:346:12:g_d0_f3:12:g_d0_f3:B:This expression gives the country’s ratio of net foreign assets to GDP in terms
+12:491:24585:14:14:100:510:332:12:g_d0_f3:12:g_d0_f3:B:of the exogenous parameters and one endogenous variable, the ratio of employed
+12:492:24663:14:15:100:511:318:12:g_d0_f3:12:g_d0_f3:B:workers’ wealth to GDP,SSSe/PPP. We now present two ways of endogenizing this
+12:493:24740:15:31:100:143:303:12:g_d0_f3:12:g_d0_f3:B:variable.
+12:494:24749:31:22:100:177:272:12:g_d0_f18:12:g_d0_f18:C:2.3.2 No Stake
+12:495:24763:22:15:100:510:250:12:g_d0_f3:12:g_d0_f3:B:The most natural assumption is that newborns enter the economy with zero
+12:496:24835:15:14:100:510:235:12:g_d0_f3:12:g_d0_f3:B:wealth, and must save some of their income to ensure that they do not starve
+12:497:24911:14:15:100:510:221:12:g_d0_f3:12:g_d0_f3:B:if they become unemployed.  In this case, analysis must be performed using
+12:498:24985:15:14:100:510:206:12:g_d0_f3:12:g_d0_f3:B:simulation methods, because households of different ages will have different ratios
+12:499:25068:14:14:100:510:192:12:g_d0_f3:12:g_d0_f3:B:of wealth to income. (With a concave and nonanalytical consumption function,
+12:500:25144:14:15:100:331:178:12:g_d0_f3:12:g_d0_f3:B:analytical aggregation cannot be performed.)
+12:501:25188:15:14:112:511:163:12:g_d0_f3:12:g_d0_f3:A:In this version of the model, each individual is faced with exactly the same
+12:502:25264:14:15:100:511:149:12:g_d0_f3:12:g_d0_f3:B:problem as in section 2.2. Let us denote byse(n)the level of normalized wealth
+12:503:25342:15:31:100:511:134:12:g_d0_f3:12:g_d0_f3:B:held at the beginning of periodnof the individual’s life in the problem of section
+12:504:25424:31:0:114:426:103:6:g_d0_f4:8:g_d0_f5:A:11This expression assumesΞG>-D(βR)1/ρ. OtherwiseSSSut/PPPtgrows without bound.
+13:505:25504:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:2.2. We assume that the individual starts his life with zero wealth,se(0) = 0.
+13:506:25582:15:14:100:511:664:12:g_d0_f3:12:g_d0_f3:B:In other words,se(n)n=0,1,2,..is the optimal time path of the individual’s wealth.
+13:507:25664:14:33:100:371:650:12:g_d0_f3:12:g_d0_f3:B:Then we can replaceset,t−nbyse(n)in equation (19),
+13:508:25714:33:0:200:225:617:12:g_d0_f8:12:g_d0_f9:?:Se=
+13:509:25717:0:17:229:241:626:12:g_d0_f8:8:g_d0_f6:A:SSSe
+13:510:25721:17:0:230:239:609:12:g_d0_f8:12:g_d0_f8:A:PPP
+13:511:25724:0:0:253:347:617:12:g_d0_f9:12:g_d0_f9:?:=   (1−α)(1−Λ)
+13:512:25738:0:28:350:366:632:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+13:513:25741:28:0:349:365:604:8:g_d0_f6:8:g_d0_f10:?:n=0
+13:514:25744:0:30:368:511:617:12:g_d0_f9:12:g_d0_f3:A:Λnse(n).(23)
+13:515:25756:30:14:100:510:587:12:g_d0_f3:12:g_d0_f3:B:The ratio of workers’ wealth to GDP is constant, and can be computed numeri-
+13:516:25832:14:15:100:510:573:12:g_d0_f3:12:g_d0_f3:B:cally based on the pathse(n)n=0,1,.... Note that this ratio is lower than(1−α)ˇs,
+13:517:25913:15:14:100:511:558:12:g_d0_f3:12:g_d0_f8:B:since it is a weighted average of(1−α)se(n), which converge toward(1−α)ˇs
+13:518:25986:14:31:100:160:544:12:g_d0_f3:12:g_d0_f3:B:from below.
+13:519:25997:31:22:100:364:513:12:g_d0_f18:12:g_d0_f18:C:2.3.3 A ‘Stake’ That Yields a Representative Agent
+13:520:26047:22:15:100:510:491:12:g_d0_f3:12:g_d0_f3:B:We now consider a version of the model in which an exogenous redistribution
+13:521:26122:15:14:100:510:476:12:g_d0_f3:12:g_d0_f3:B:program guarantees that the behavior of employed households can be understood
+13:522:26199:14:15:100:510:462:12:g_d0_f3:12:g_d0_f3:B:by analyzing the actions of a “representative employed agent.”  This will be
+13:523:26275:15:14:100:510:447:12:g_d0_f3:12:g_d0_f3:B:achieved by the introduction of lump-sum transfers that ensure that the newborn
+13:524:26354:14:15:100:510:433:12:g_d0_f3:12:g_d0_f3:B:individuals are endowed with the same wealth-to-income ratio that older gener-
+13:525:26432:15:14:100:510:418:12:g_d0_f3:12:g_d0_f3:B:ations already hold. This is explicitlynotan inheritance, as we have assumed
+13:526:26508:14:15:100:510:404:12:g_d0_f3:12:g_d0_f3:B:that individuals have no bequest motive and newborns are unrelated to anyone
+13:527:26584:15:14:100:510:389:12:g_d0_f3:12:g_d0_f3:B:in the existing population. Our motivation is largely to make the model more
+13:528:26660:14:14:100:510:375:12:g_d0_f3:12:g_d0_f3:B:tractable, rather than to represent an important feature of the real world; hence,
+13:529:26742:14:15:100:510:361:12:g_d0_f3:12:g_d0_f3:B:we perform simulations designed to show that the characteristics of the model
+13:530:26819:15:14:100:510:346:12:g_d0_f3:12:g_d0_f3:B:with no ‘stake’ are qualitatively and quantitatively similar to those of the more
+13:531:26900:14:15:100:341:332:12:g_d0_f3:12:g_d0_f3:B:tractable model with a carefully chosen ‘stake.’
+13:532:26948:15:14:112:511:317:12:g_d0_f3:12:g_d0_f3:A:The details of the model with stakes are given in the appendix. The transfer
+13:533:27024:14:15:100:510:303:12:g_d0_f3:12:g_d0_f3:B:ensures that the workers have the same wealth-to-income ratio at all times. Thus
+13:534:27104:15:28:100:394:288:12:g_d0_f3:12:g_d0_f3:B:one can replaceset,t−nbysetin equation (19), which gives,
+13:535:27161:28:0:251:276:260:12:g_d0_f8:12:g_d0_f9:?:Set=
+13:536:27165:0:16:280:291:268:12:g_d0_f8:8:g_d0_f6:A:SSSet
+13:537:27170:16:0:280:292:252:12:g_d0_f8:8:g_d0_f6:A:PPPt
+13:538:27174:0:26:297:511:260:12:g_d0_f9:12:g_d0_f3:A:= (1−α)set,(24)
+13:539:27189:26:14:100:510:234:12:g_d0_f3:12:g_d0_f3:B:whereSetfollows the same saddle-point dynamics as for a single agent (adjusted
+13:540:27267:14:15:100:185:220:12:g_d0_f3:12:g_d0_f3:B:for the transfer).
+13:541:27285:15:31:112:472:205:12:g_d0_f3:12:g_d0_f3:A:One can show (see the appendix) that in the long run,setconverges to
+13:542:27353:31:0:194:211:174:12:g_d0_f9:12:g_d0_f9:?:ˇˇs=
+13:543:27357:0:13:215:222:193:12:g_d0_f17:12:g_d0_f17:?:[
+13:544:27358:13:16:223:230:180:12:g_d0_f9:12:g_d0_f9:?:Γ
+13:545:27359:16:0:223:231:164:12:g_d0_f12:12:g_d0_f12:?:R
+13:546:27360:0:0:234:243:172:12:g_d0_f14:12:g_d0_f14:A:−
+13:547:27361:0:16:259:265:180:12:g_d0_f9:12:g_d0_f9:?:1
+13:548:27362:16:0:247:276:164:12:g_d0_f9:12:g_d0_f9:?:2−Λ
+13:549:27365:0:0:280:303:172:12:g_d0_f9:8:g_d0_f6:A:+κu
+13:550:27368:0:17:306:315:189:12:g_d0_f17:12:g_d0_f17:?:(
+13:551:27369:17:0:315:333:172:12:g_d0_f9:12:g_d0_f9:?:1 +
+13:552:27372:0:16:335:376:180:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+13:553:27380:16:0:352:361:164:12:g_d0_f15:12:g_d0_f15:?:0
+13:554:27381:0:17:377:417:189:12:g_d0_f17:8:g_d0_f10:A:)1/ρ]−1
+13:555:27388:17:31:490:511:172:12:g_d0_f3:12:g_d0_f3:A:(25)
+13:556:27392:31:0:100:510:141:12:g_d0_f3:12:g_d0_f3:B:so that (25) implies a closed-form expression for the ratio of workers’ wealth to
+14:557:27475:0:21:100:128:679:12:g_d0_f3:12:g_d0_f3:B:GDP,
+14:558:27479:21:0:251:281:658:12:g_d0_f9:12:g_d0_f8:?:ˇˇS=SSS
+14:559:27486:0:20:282:286:665:8:g_d0_f6:8:g_d0_f6:A:e
+14:560:27487:20:0:275:283:645:12:g_d0_f8:12:g_d0_f8:?:PPP
+14:561:27490:0:24:297:511:653:12:g_d0_f9:12:g_d0_f3:A:=   (1−α)ˇˇs.(26)
+14:562:27507:24:15:100:510:629:12:g_d0_f3:12:g_d0_f3:B:This expression can be plugged into equation (22) to find the ratio of net foreign
+14:563:27589:15:14:100:176:614:12:g_d0_f3:12:g_d0_f3:B:assets to GDP.
+14:564:27603:14:15:112:511:600:12:g_d0_f3:12:g_d0_f3:A:It is interesting to compare formula (25) with the one that we obtained for
+14:565:27678:15:12:100:511:585:12:g_d0_f3:12:g_d0_f3:B:an individual in the model without stakes—equation (17). SinceΛ<1we have
+14:566:27750:12:17:101:511:573:12:g_d0_f9:12:g_d0_f3:B:ˇˇs <ˇs. Thus equations (17) and (25) both predict that the ratio of wealth to
+14:567:27828:17:14:100:511:556:12:g_d0_f3:12:g_d0_f3:B:GDP is lower than(1−α)ˇs, but in the new formula this comes from the fact that
+14:568:27906:14:14:100:510:542:12:g_d0_f3:12:g_d0_f3:B:the target wealth-to-income ratio is lowered by the tax, rather than from the fact
+14:569:27988:14:15:100:411:528:12:g_d0_f3:12:g_d0_f3:B:that the wealth-to-income ratio is lower for younger workers.
+14:570:28049:15:14:112:511:513:12:g_d0_f3:12:g_d0_f3:A:We will show below that the model with stakes provides a good approximation
+14:571:28124:14:15:100:510:499:12:g_d0_f3:12:g_d0_f3:B:to the model with no stake. But the model with stakes has several advantages.
+14:572:28201:15:14:100:510:484:12:g_d0_f3:12:g_d0_f3:B:First, the transition dynamics can be characterized using equation (26). In the
+14:573:28280:14:15:100:510:470:12:g_d0_f3:12:g_d0_f3:B:model without stakes the transition dynamics involve an infinite state space as the
+14:574:28363:15:14:100:510:455:12:g_d0_f3:12:g_d0_f3:B:wealth-to-income ratio must be tracked separately for each generation. Second,
+14:575:28441:14:15:100:510:441:12:g_d0_f3:12:g_d0_f3:B:the model with stakes gives a closed-form expression for the steady state ratio of
+14:576:28523:15:14:100:510:426:12:g_d0_f3:12:g_d0_f3:B:foreign assets to GDP. This makes it possible to study analytically how the ratio
+14:577:28604:14:14:100:510:412:12:g_d0_f3:12:g_d0_f3:B:of foreign assets to GDP depends on the exogenous parameters of the model.
+14:578:28678:14:40:100:510:398:12:g_d0_f3:12:g_d0_f3:B:With formula (23), by contrast, such a study must rely on numerical simulations.
+14:579:28758:40:30:100:340:358:17:g_d0_f2:17:g_d0_f2:C:3 Calibration and Simulation
+14:580:28786:30:22:100:412:328:14:g_d0_f7:14:g_d0_f7:C:3.1 Benchmark Calibration and Sensitivity Analysis
+14:581:28836:22:14:100:510:306:12:g_d0_f3:12:g_d0_f3:B:Our benchmark calibration is reported in Table 1. The value for the unemploy-
+14:582:28913:14:15:100:510:292:12:g_d0_f3:12:g_d0_f3:B:ment probability,0, implies that a newborn worker expects to be employed for
+14:583:28989:15:14:100:511:277:12:g_d0_f3:12:g_d0_f3:B:40 years. The value for the probability of death,D, implies that the expected
+14:584:29066:14:19:100:358:263:12:g_d0_f3:12:g_d0_f3:B:lifetime of a newly unemployed worker is 20 years.
+14:585:29116:19:20:284:327:244:12:g_d0_f23:12:g_d0_f23:A:Table 1
+14:586:29123:20:15:156:451:224:12:g_d0_f8:12:g_d0_f12:?:αkΞGRβ−1X0ρD
+14:587:29135:15:15:152:458:209:12:g_d0_f3:12:g_d0_f3:?:0.30.941.011.041.041.041.010.02520.05
+14:588:29172:15:21:151:459:194:11:g_d0_f24:11:g_d0_f24:?:Note: For a reminder of parameter definitions, see Appendix A.1
+14:589:29235:21:15:112:510:173:12:g_d0_f3:12:g_d0_f3:A:The long-run levels ofseandceare given byˇs=  4.85andˇc=  0.95.  The
+14:590:29303:15:14:100:511:158:12:g_d0_f3:12:g_d0_f3:B:time paths forSetandCetare shown in Figure 2. The convergence to the targets
+14:591:29379:14:15:100:510:144:12:g_d0_f3:12:g_d0_f3:B:is relatively rapid. The individual saves more than one third of his income on
+14:592:29457:15:14:100:510:129:12:g_d0_f3:12:g_d0_f3:B:average in the first ten years of his life, after which his wealth-to-income ratio
+14:593:29539:14:15:100:510:115:12:g_d0_f3:12:g_d0_f3:B:already exceeds two thirds of the target level. The wealth-to-income ratio reaches
+14:594:29621:15:0:100:510:100:12:g_d0_f3:12:g_d0_f3:B:99 percent of the target level after 40 years (the average duration of employment).
+15:595:29706:0:15:112:511:679:12:g_d0_f3:12:g_d0_f3:A:For the benchmark calibration we find:KKK/PPP= 3,NNN/PPP= 0.420in the model
+15:596:29781:15:14:100:511:664:12:g_d0_f3:12:g_d0_f3:B:with no stakes, andNNN/PPP= 0.719in the model with stakes. These levels have
+15:597:29857:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:the right order of magnitude (in view of the fact that most countries have a ratio
+15:598:29939:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:of foreign assets to GDP between minus and plus 100 percent of GDP, based on
+15:599:30015:14:14:100:351:621:12:g_d0_f3:12:g_d0_f3:B:the database of Lane and Milesi-Ferretti (2007)).
+15:600:30064:14:15:112:511:607:12:g_d0_f3:12:g_d0_f3:A:Figure 3 shows the sensitivity ofNNN/PPPto changes inρ,0,GandR.  The
+15:601:30132:15:14:100:510:592:12:g_d0_f3:12:g_d0_f3:B:death probabilityDwas adjusted so as to keep the total expected lifetime of an
+15:602:30210:14:21:100:280:578:12:g_d0_f3:12:g_d0_f3:B:individual equal to sixty years, i.e.,
+15:603:30248:21:20:253:338:557:12:g_d0_f15:12:g_d0_f8:?:0−1+D−1= 60.
+15:604:30260:20:15:112:511:537:12:g_d0_f3:12:g_d0_f3:A:First, we observe that the model with stakes gives results that are higher than
+15:605:30339:15:14:100:510:522:12:g_d0_f3:12:g_d0_f3:B:the model without stakes, but generally provides a good approximation for the
+15:606:30416:14:15:100:465:508:12:g_d0_f3:12:g_d0_f3:B:variation of the net foreign assets with respect to the main parameters.
+15:607:30488:15:14:112:511:493:12:g_d0_f3:12:g_d0_f3:A:The variation with respect to the growth rate and the unemployment prob-
+15:608:30560:14:14:100:510:479:12:g_d0_f3:12:g_d0_f3:B:ability confirm theoretical properties derived earlier.  The foreign assets ratio
+15:609:30641:14:15:100:510:465:12:g_d0_f3:12:g_d0_f3:B:decreases withG, as predicted by (18). The ratio of foreign assets to GDP also
+15:610:30719:15:14:100:510:450:12:g_d0_f3:12:g_d0_f3:B:increases with the unemployment probability. The ratio of foreign assets to GDP
+15:611:30798:14:15:100:510:436:12:g_d0_f3:12:g_d0_f3:B:is increasing with risk aversionρ. Finally, the foreign asset ratio is increasing
+15:612:30879:15:14:100:511:421:12:g_d0_f3:12:g_d0_f3:B:withR, mainly because of the impact of higher interest rates in reducing the
+15:613:30955:14:15:100:510:407:12:g_d0_f3:12:g_d0_f3:B:ratio of physical capital to output. The wealth-to-GDP ratio (not reported in
+15:614:31032:15:14:100:511:392:12:g_d0_f3:12:g_d0_f3:B:Figure 3) is not very sensitive toR, which is consistent with the ambiguity of the
+15:615:31114:14:53:100:232:378:12:g_d0_f3:12:g_d0_f3:B:model prediction ifρ >1.
+15:616:31138:53:22:100:343:325:14:g_d0_f7:14:g_d0_f7:C:3.2 Comparison with the Ramsey Model
+15:617:31174:22:14:100:510:303:12:g_d0_f3:12:g_d0_f3:B:The Ramsey model corresponds to the particular case where the economy is
+15:618:31246:14:15:100:511:289:12:g_d0_f3:12:g_d0_f3:B:populated by one representative infinitely-lived worker (Ξ = 1and0= 0). Thus,
+15:619:31323:15:14:100:510:274:12:g_d0_f3:12:g_d0_f3:B:one might expect our model to yield the same results as the Ramsey model in
+15:620:31398:14:15:100:511:260:12:g_d0_f3:12:g_d0_f3:B:the limiting case as population growth and unemployment risk go to zero (Ξand
+15:621:31475:15:14:100:141:245:12:g_d0_f15:12:g_d0_f3:B:0→0).
+15:622:31480:14:15:112:511:231:12:g_d0_f3:12:g_d0_f3:A:In fact this is not the case. The predictions of our model for net foreign assets
+15:623:31561:15:14:100:510:216:12:g_d0_f3:12:g_d0_f3:B:and capital flows exhibit a discontinuity at0= 0. To see this, note that taking
+15:624:31640:14:20:100:259:202:12:g_d0_f3:12:g_d0_f3:B:the limit of equation (17) gives
+15:625:31672:20:8:281:297:182:12:g_d0_f9:12:g_d0_f9:A:lim
+15:626:31675:8:0:280:298:174:8:g_d0_f19:8:g_d0_f10:A:0→0
+15:627:31678:0:24:301:331:182:12:g_d0_f9:12:g_d0_f8:?:ˇs= 0,
+15:628:31684:24:0:100:510:158:12:g_d0_f3:12:g_d0_f3:B:so that the ratio of total domestic wealth to GDP goes to zero as the risk of
+16:629:31763:0:26:100:324:679:12:g_d0_f3:6:g_d0_f4:B:unemployment becomes vanishingly small,12
+16:630:31804:26:8:277:293:653:12:g_d0_f9:12:g_d0_f9:?:lim
+16:631:31807:8:0:275:294:645:8:g_d0_f19:8:g_d0_f10:?:0→0
+16:632:31810:0:16:297:309:661:12:g_d0_f8:8:g_d0_f6:A:SSSe
+16:633:31814:16:0:298:307:645:12:g_d0_f8:12:g_d0_f8:A:PPP
+16:634:31817:0:24:314:335:653:12:g_d0_f9:12:g_d0_f8:?:= 0,
+16:635:31821:24:15:100:510:629:12:g_d0_f3:12:g_d0_f3:B:implying that the ratio of foreign assets to GDP is equal to minus the ratio of
+16:636:31900:15:25:100:190:614:12:g_d0_f3:12:g_d0_f3:B:capital to output,
+16:637:31918:25:8:270:286:589:12:g_d0_f9:12:g_d0_f9:?:lim
+16:638:31921:8:0:269:287:581:8:g_d0_f19:8:g_d0_f10:?:0→0
+16:639:31924:0:17:290:300:597:12:g_d0_f8:12:g_d0_f8:?:NNN
+16:640:31927:17:0:291:300:580:12:g_d0_f8:12:g_d0_f8:?:PPP
+16:641:31930:0:0:306:327:589:12:g_d0_f9:12:g_d0_f14:?:=−
+16:642:31932:0:17:328:339:597:12:g_d0_f8:12:g_d0_f8:A:KKK
+16:643:31935:17:0:329:338:580:12:g_d0_f8:12:g_d0_f8:A:PPP
+16:644:31938:0:24:341:511:589:12:g_d0_f8:12:g_d0_f3:A:.(27)
+16:645:31943:24:15:112:511:565:12:g_d0_f3:12:g_d0_f3:A:The Ramsey model does not yield the same formula. If the unemployment risk
+16:646:32017:15:14:100:511:550:12:g_d0_f3:12:g_d0_f3:B:is strictly equal to zero (0= 0), we must assumeΓ<Rfor the intertemporal
+16:647:32089:14:15:100:511:536:12:g_d0_f3:12:g_d0_f3:B:income of the worker to be well-defined and finite.13In this case income growth is
+16:648:32171:15:14:100:510:521:12:g_d0_f3:12:g_d0_f3:B:the same at the individual level and at the aggregate level. We can also assume,
+16:649:32251:14:15:100:511:507:12:g_d0_f3:12:g_d0_f3:B:without loss of generality, thatX= 1, so thatΓ =G. Then it is possible to show
+16:650:32329:15:25:100:468:492:12:g_d0_f3:12:g_d0_f3:B:that the asymptotic ratio of total net foreign assets to GDP is given by,
+16:651:32402:25:8:239:255:467:12:g_d0_f9:12:g_d0_f9:A:lim
+16:652:32405:8:0:234:260:459:8:g_d0_f6:8:g_d0_f11:A:t→+∞
+16:653:32409:0:17:263:277:475:12:g_d0_f8:8:g_d0_f6:?:NNNt
+16:654:32413:17:0:264:277:458:12:g_d0_f8:8:g_d0_f6:?:PPPt
+16:655:32417:0:0:282:304:467:12:g_d0_f9:12:g_d0_f14:A:=−
+16:656:32419:0:17:305:315:475:12:g_d0_f8:12:g_d0_f8:?:KKK
+16:657:32422:17:0:306:314:458:12:g_d0_f8:12:g_d0_f8:?:PPP
+16:658:32425:0:0:320:329:467:12:g_d0_f14:12:g_d0_f14:?:−
+16:659:32426:0:17:340:367:475:12:g_d0_f9:12:g_d0_f8:?:1−α
+16:660:32429:17:0:333:375:458:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+16:661:32434:0:28:376:511:467:12:g_d0_f8:12:g_d0_f3:A:.(28)
+16:662:32439:28:14:100:198:439:12:g_d0_f3:12:g_d0_f3:B:(see the appendix).
+16:663:32458:14:14:112:511:425:12:g_d0_f3:12:g_d0_f3:A:Comparing (27) with (28) shows that the ratio of foreign assets to GDP is
+16:664:32531:14:15:100:510:411:12:g_d0_f3:12:g_d0_f3:B:smaller in the Ramsey model. In fact, it is much smaller for plausible calibrations
+16:665:32614:15:14:100:510:396:12:g_d0_f3:12:g_d0_f3:B:of the model. The ratio of gross foreign liabilities to GDP implied by the Ramsey
+16:666:32695:14:15:100:510:382:12:g_d0_f3:12:g_d0_f3:B:model is close to 70 ifR= 1.04andG= 1.03, and goes to infinity asGconverges
+16:667:32770:15:14:100:511:367:12:g_d0_f3:12:g_d0_f3:B:toRfrom below. The growth impatience condition, which is necessary for the
+16:668:32844:14:15:100:510:353:12:g_d0_f3:12:g_d0_f3:B:workers to have a finite target for their wealth to income ratio when they are
+16:669:32922:15:14:100:510:338:12:g_d0_f3:12:g_d0_f3:B:vulnerable to unemployment, makes the infinitely-lived Ramsey consumer willing
+16:670:33000:14:15:100:314:324:12:g_d0_f3:12:g_d0_f3:B:to borrow a lot against his future income.
+16:671:33042:15:14:112:511:309:12:g_d0_f3:12:g_d0_f3:A:The intuition for the discontinuity is that a consumer with CRRA utility will
+16:672:33119:14:14:100:510:295:12:g_d0_f3:12:g_d0_f3:B:never allow wealth to fall to zero if there is a possibility of becoming permanently
+16:673:33203:14:15:100:510:281:12:g_d0_f3:12:g_d0_f3:B:unemployed, because unemployment with zero wealth yields an infinitely negative
+16:674:33282:15:14:100:510:266:12:g_d0_f3:12:g_d0_f3:B:level of utility (ifρ >1). This is the reflection, in the international macroeco-
+16:675:33363:14:15:100:510:252:12:g_d0_f3:12:g_d0_f3:B:nomic context, of a result long understood in the precautionary saving literature:
+16:676:33445:15:14:100:510:237:12:g_d0_f3:12:g_d0_f3:B:Perfect foresight solutions are not robust to the introduction of uninsurable
+16:677:33522:14:69:100:487:223:12:g_d0_f3:6:g_d0_f4:B:noncapital income shocks, even if those shocks occur with low probability.14
+16:678:33598:69:12:114:511:154:6:g_d0_f4:8:g_d0_f5:F:12This results from the fact thatse(n)≤ˇsconverges to zero for alln. In the model with stakes this results
+16:679:33704:12:9:100:172:142:8:g_d0_f5:8:g_d0_f5:F:from equation (25).
+16:680:33723:9:11:114:422:133:6:g_d0_f4:8:g_d0_f5:A:13Note that this condition is not satisfied by the benchmark calibration in Table 1.
+16:681:33807:11:12:114:510:122:6:g_d0_f4:8:g_d0_f5:F:14Another interpretation is that the precautionary motive acts as a form of self-imposed liquidity constraint;
+16:682:33917:12:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:see Carroll (2009b) for a formal proof of the equivalency, in the limit, of precautionary saving and liquidity
+16:683:34027:10:0:100:143:100:8:g_d0_f5:8:g_d0_f5:F:constraints.
+17:684:34041:0:22:100:221:679:14:g_d0_f7:14:g_d0_f7:C:3.3 Social Insurance
+17:685:34061:22:15:100:510:657:12:g_d0_f3:12:g_d0_f3:B:The model assumes that the income of an unemployed worker falls to zero. This
+17:686:34138:15:14:100:510:642:12:g_d0_f3:12:g_d0_f3:B:is a reasonable assumption for a country in which unemployed and retired workers
+17:687:34218:14:15:100:510:628:12:g_d0_f3:12:g_d0_f3:B:receive no social transfer (i.e., in which there are no unemployment benefits
+17:688:34295:15:14:100:510:613:12:g_d0_f3:12:g_d0_f3:B:and the retirement system is entirely based on capitalization). However, many
+17:689:34372:14:15:100:510:599:12:g_d0_f3:12:g_d0_f3:B:countries have such transfers, and it is interesting to see their impact on foreign
+17:690:34455:15:14:100:510:584:12:g_d0_f3:12:g_d0_f3:B:asset accumulation in our model.  We consider now the consequences if the
+17:691:34528:14:15:100:510:570:12:g_d0_f3:12:g_d0_f3:B:government creates a balanced-budget partial ‘unemployment insurance’ system.
+17:692:34605:15:14:112:511:555:12:g_d0_f3:12:g_d0_f3:A:Our definition of partial insurance starts by assuming that the ‘true’ labor
+17:693:34681:14:14:100:510:541:12:g_d0_f3:12:g_d0_f3:B:income process is the one specified above, but the government interferes with
+17:694:34758:14:15:100:510:527:12:g_d0_f3:12:g_d0_f3:B:this process by transferring to the workers who become unemployed in period
+17:695:34833:15:14:100:511:512:12:g_d0_f8:12:g_d0_f3:B:ta multipleςof the labor income that they would have received if they had
+17:696:34906:14:15:100:510:498:12:g_d0_f3:12:g_d0_f3:B:remained employed. The social insurance of our model could be interpreted as
+17:697:34982:15:14:100:441:483:12:g_d0_f3:12:g_d0_f3:B:an unemployment benefit or as a pay-as-you-go retirement benefit.
+17:698:35047:14:15:112:511:469:12:g_d0_f3:12:g_d0_f3:A:The wealth of a newly-unemployed worker now includes the payment from the
+17:699:35120:15:20:100:348:454:12:g_d0_f3:12:g_d0_f3:B:insurance scheme, so that equation (8) becomes:
+17:700:35167:20:21:208:403:434:12:g_d0_f8:12:g_d0_f8:?:cccut=κu(sssut+ςWt`t) =κu(sut+ς)Wt`t.
+17:701:35204:21:14:100:511:413:12:g_d0_f3:12:g_d0_f3:B:We introduce social insurance in the model with stakes.15As shown in the
+17:702:35276:14:28:100:419:399:12:g_d0_f3:12:g_d0_f3:B:appendix, one can compute the target wealth-to-GDP ratio as
+17:703:35335:28:0:175:214:371:12:g_d0_f9:12:g_d0_f9:?:`ˇs(ς)   =
+17:704:35345:0:21:224:234:389:12:g_d0_f17:12:g_d0_f17:?:{
+17:705:35346:21:0:233:258:368:12:g_d0_f9:12:g_d0_f8:A:1−ς
+17:706:35349:0:13:261:268:389:12:g_d0_f17:12:g_d0_f17:?:[
+17:707:35350:13:16:269:286:376:12:g_d0_f15:12:g_d0_f12:?:0X
+17:708:35352:16:0:273:281:360:12:g_d0_f9:12:g_d0_f9:?:Ξ
+17:709:35353:0:0:289:313:368:12:g_d0_f9:8:g_d0_f6:?:+κu
+17:710:35356:0:17:315:324:385:12:g_d0_f17:12:g_d0_f17:?:(
+17:711:35357:17:0:324:342:368:12:g_d0_f9:12:g_d0_f9:?:1 +
+17:712:35360:0:16:345:386:376:12:g_d0_f15:12:g_d0_f9:A:ÞÞÞ−ρΓ−1
+17:713:35368:16:0:361:370:360:12:g_d0_f15:12:g_d0_f15:?:0
+17:714:35369:0:14:387:426:385:12:g_d0_f17:12:g_d0_f17:?:)1/ρ]}
+17:715:35375:14:34:428:511:371:12:g_d0_f9:12:g_d0_f3:A:ˇˇs,(29)
+17:716:35383:34:15:100:511:337:12:g_d0_f3:12:g_d0_f3:B:whereˇˇsis the asset ratio without insurance, given by (25). The target wealth-
+17:717:35462:15:14:100:511:322:12:g_d0_f3:12:g_d0_f3:B:to-income ratio is (linearly) decreasing withς, as insurance provides a substitute
+17:718:35544:14:15:100:510:308:12:g_d0_f3:12:g_d0_f3:B:to precautionary wealth. The formula forNNN/PPPremains (22), with the ratio of
+17:719:35622:15:18:100:273:293:12:g_d0_f3:12:g_d0_f3:B:workers’ wealth to GDP given by,
+17:720:35654:18:16:261:273:275:12:g_d0_f8:8:g_d0_f6:?:SSSe
+17:721:35658:16:0:262:271:259:12:g_d0_f8:12:g_d0_f8:?:PPP
+17:722:35661:0:24:278:511:267:12:g_d0_f9:12:g_d0_f3:A:= (1−α)`ˇs(ς).(30)
+17:723:35679:24:14:100:511:243:12:g_d0_f3:12:g_d0_f3:B:Figure 4 shows how the ratio of foreign assets to GDP,NNN/PPP, varies withς. The
+17:724:35759:14:15:100:510:229:12:g_d0_f3:12:g_d0_f8:B:ratio decreases from 0.72 when there is no insurance to negative values whenς
+17:725:35836:15:14:100:510:214:12:g_d0_f3:12:g_d0_f3:B:exceeds 1 year of the worker’s wage. The desired level of foreign assets is thus
+17:726:35916:14:87:100:335:200:12:g_d0_f3:12:g_d0_f3:B:quite sensitive to the level of social insurance.
+17:727:35965:87:13:114:510:113:6:g_d0_f4:8:g_d0_f5:F:15Introducing social insurance in the model without stakes raises no conceptual problems, but does not yield
+17:728:36073:13:0:100:184:100:8:g_d0_f5:8:g_d0_f5:F:a closed-form solution.
+18:729:36098:0:27:100:220:679:17:g_d0_f2:17:g_d0_f2:C:4 Applications
+18:730:36112:27:14:100:510:652:12:g_d0_f3:12:g_d0_f3:B:Although the model is very stylized, plausible calibrations can predict ratios of
+18:731:36193:14:14:100:511:638:12:g_d0_f3:12:g_d0_f3:B:foreign assets to GDP that are close to the levels observed in the real world.16This
+18:732:36277:14:15:100:510:624:12:g_d0_f3:12:g_d0_f3:B:section illustrates how our framework can be applied by looking at two questions
+18:733:36357:15:14:100:510:609:12:g_d0_f3:12:g_d0_f3:B:that have been discussed in recent policy debates and academic research: The
+18:734:36433:14:15:100:510:595:12:g_d0_f3:12:g_d0_f3:B:relationship between economic development and capital flows, and the long-run
+18:735:36510:15:34:100:328:580:12:g_d0_f3:12:g_d0_f3:B:consequences of resorbing global imbalances.
+18:736:36554:34:23:100:378:546:14:g_d0_f7:14:g_d0_f7:C:4.1 Economic Development and Capital Flows
+18:737:36596:23:14:100:510:523:12:g_d0_f3:12:g_d0_f3:B:Many observers have noted the paradox that international flows of capital have
+18:738:36674:14:14:100:510:509:12:g_d0_f3:12:g_d0_f3:B:recently been going “upstream” from developing countries (especially in Asia and
+18:739:36754:14:15:100:510:495:12:g_d0_f3:12:g_d0_f3:B:most notably China) to the United States. The case of China, which has caused
+18:740:36831:15:14:100:510:480:12:g_d0_f3:12:g_d0_f3:B:so much consternation recently, is merely the latest and largest example of a long-
+18:741:36914:14:15:100:510:466:12:g_d0_f3:12:g_d0_f3:B:established pattern: Over long time periods and in large samples of developing
+18:742:36992:15:14:100:510:451:12:g_d0_f3:12:g_d0_f3:B:countries, the countries that grow at a higher rate tend to export more capital
+18:743:37071:14:15:100:510:437:12:g_d0_f3:12:g_d0_f3:B:(see the evidence cited in footnote 1), a fact that is difficult to reconcile with
+18:744:37153:15:14:100:510:422:12:g_d0_f3:12:g_d0_f3:B:the standard neoclassical model of growth (Carroll, Overland, and Weil (2000);
+18:745:37231:14:15:100:510:408:12:g_d0_f3:12:g_d0_f3:B:Gourinchas and Jeanne (2007); Prasad, Rajan, and Subramanian (2007); Sandri
+18:746:37306:15:31:100:356:393:12:g_d0_f3:12:g_d0_f3:B:(2008)). Can our model shed light on this puzzle?
+18:747:37355:31:22:100:189:362:12:g_d0_f18:12:g_d0_f18:C:4.1.1 Transitions
+18:748:37372:22:14:100:510:340:12:g_d0_f3:12:g_d0_f3:B:In this section we look at the correlation between economic growth and capital
+18:749:37450:14:15:100:510:326:12:g_d0_f3:12:g_d0_f3:B:flows in a given country over time.  We assume that the small open economy
+18:750:37524:15:14:100:510:311:12:g_d0_f3:12:g_d0_f3:B:enjoys an economic “take-off,” defined as a permanent increase in the growth rate
+18:751:37605:14:15:100:510:297:12:g_d0_f3:12:g_d0_f3:B:of productivity. However, the rate of growth is not the only thing that increases
+18:752:37686:15:14:100:510:282:12:g_d0_f3:12:g_d0_f3:B:at the time of the transition: Idiosyncratic unemployment risk rises too.  An
+18:753:37763:14:15:100:510:268:12:g_d0_f3:12:g_d0_f3:B:increase in idiosyncratic risk has been observed in many transition countries as
+18:754:37843:15:14:100:510:253:12:g_d0_f3:12:g_d0_f3:B:they adopt market systems, a development that has not been associated, in most
+18:755:37921:14:15:100:510:239:12:g_d0_f3:12:g_d0_f3:B:countries, with a corresponding increase in social insurance. In particular, the
+18:756:38001:15:14:100:510:224:12:g_d0_f3:12:g_d0_f3:B:rise in idiosyncratic risk has been fingered as a reason for the very high saving
+18:757:38082:14:14:100:509:210:12:g_d0_f3:12:g_d0_f3:B:rate in China (see, e.g., Chamon and Prasad (2008) and the references therein).
+18:758:38161:14:15:112:511:196:12:g_d0_f3:12:g_d0_f3:A:More formally, we assume that the economy starts from a steady state with
+18:759:38234:15:14:100:510:181:12:g_d0_f3:12:g_d0_f3:B:constant levels for the productivity growth rate and the unemployment proba-
+18:760:38310:14:15:100:510:167:12:g_d0_f3:12:g_d0_f3:B:bility,Gband0b. At time0, those variables unexpectedly jump to higher levels,
+18:761:38387:15:39:100:509:152:12:g_d0_f12:12:g_d0_f3:B:Ga>Gband0a>0b. The subscriptsbandarespectively stand for “before”
+18:762:38452:39:13:114:510:113:6:g_d0_f4:8:g_d0_f5:F:16This fact obviously does not constitute a test of the model (which would go beyond the scope of this paper),
+18:763:38562:13:0:100:505:100:8:g_d0_f5:8:g_d0_f5:F:but it suggests that the quantitative implications of the model cannot be dismissedprima facieas irrelevant.
+19:764:38672:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:and “after” the transition. The death probability is adjusted so as to keep the
+19:765:38751:15:14:100:365:664:12:g_d0_f3:12:g_d0_f3:B:expected lifetime of an individual equal to 60 years.
+19:766:38804:14:15:112:511:650:12:g_d0_f3:12:g_d0_f3:A:Note that in order to benefit the domestic population, the transition must
+19:767:38878:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:strictly increase the expected present value of an individual’s labor income, given
+19:768:38961:14:15:100:112:621:12:g_d0_f3:12:g_d0_f3:B:by
+19:769:38963:15:29:211:227:606:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+19:770:38966:29:0:211:227:577:8:g_d0_f6:8:g_d0_f10:?:n=0
+19:771:38969:0:0:230:322:591:12:g_d0_f12:12:g_d0_f9:A:R−n--0n`t+nWt+n=
+19:772:38985:0:16:346:354:599:12:g_d0_f12:12:g_d0_f12:A:R
+19:773:38986:16:0:327:374:583:12:g_d0_f12:12:g_d0_f15:A:R−GX--0
+19:774:38993:0:30:374:400:591:12:g_d0_f8:12:g_d0_f8:A:`tWt.
+19:775:38998:30:21:100:206:561:12:g_d0_f3:12:g_d0_f3:B:Thus one must have,
+19:776:39017:21:20:270:511:540:12:g_d0_f12:12:g_d0_f3:A:Ga--0a>Gb--0b.(31)
+19:777:39035:20:15:100:510:520:12:g_d0_f3:12:g_d0_f3:B:The increase in the idiosyncratic risk, in other words, should not be so large
+19:778:39113:15:14:100:510:505:12:g_d0_f3:12:g_d0_f3:B:relative to the increase in the growth rate as to decrease workers’ expected present
+19:779:39197:14:15:100:213:491:12:g_d0_f3:12:g_d0_f3:B:value of labor income.
+19:780:39219:15:14:112:511:476:12:g_d0_f3:12:g_d0_f3:A:We consider the model with stakes, so that the transition dynamics for ag-
+19:781:39293:14:15:100:510:462:12:g_d0_f3:12:g_d0_f3:B:gregate wealth can be derived from those for the representative agent. There is
+19:782:39372:15:14:100:510:447:12:g_d0_f3:12:g_d0_f3:B:no social insurance. The appendix explains how the path of the main relevant
+19:783:39448:14:14:100:510:433:12:g_d0_f3:12:g_d0_f3:B:variable can be computed. We are interested in whether capital tends to flow in
+19:784:39527:14:15:100:351:419:12:g_d0_f3:12:g_d0_f3:B:or out of the country when the transition occurs.
+19:785:39576:15:14:112:511:404:12:g_d0_f3:12:g_d0_f3:A:For the sake of the simulation, we assume that the growth rate increases from
+19:786:39653:14:15:100:510:390:12:g_d0_f3:12:g_d0_f3:B:2 percent to 6 percent in the transition, whereas the unemployment probability
+19:787:39731:15:14:100:510:375:12:g_d0_f3:12:g_d0_f3:B:increases from 2 percent to 3 percent (Gb=  1.02,0b=  0.02, andGa=  1.06,
+19:788:39804:14:15:100:510:361:12:g_d0_f15:12:g_d0_f3:B:0a=  0.03).  The other parameters remain calibrated as in Table 1.17Note
+19:789:39876:15:14:100:510:346:12:g_d0_f3:12:g_d0_f3:B:that condition (31) is satisfied: indeed, the economic transition multiplies the
+19:790:39956:14:15:100:510:332:12:g_d0_f3:12:g_d0_f3:B:expected present value of individual labor income by a factor 20.  If the risk
+19:791:40034:15:14:100:510:317:12:g_d0_f3:12:g_d0_f3:B:of unemployment did not increase with the transition, the expected net present
+19:792:40112:14:14:100:329:303:12:g_d0_f3:12:g_d0_f3:B:value of labor income would become infinite.
+19:793:40156:14:15:112:511:289:12:g_d0_f3:12:g_d0_f3:A:Figure 5 shows the time paths for the growth rate, the ratio of net foreign assets
+19:794:40238:15:14:100:510:274:12:g_d0_f3:12:g_d0_f3:B:to GDP and the ratio of capital outflows to GDP, with and without the increase
+19:795:40316:14:15:100:510:260:12:g_d0_f3:12:g_d0_f3:B:in unemployment risk.  Note that if unemployment risk increases, the growth
+19:796:40391:15:14:100:510:245:12:g_d0_f3:12:g_d0_f3:B:rate takes time to converge to its new higher level because the rate of labor
+19:797:40468:14:15:100:510:231:12:g_d0_f3:12:g_d0_f3:B:participation decreases over time, which dampens the acceleration of growth.
+19:798:40544:15:14:100:510:216:12:g_d0_f3:12:g_d0_f3:B:The figure also shows that the increase in idiosyncratic risk has a large impact on
+19:799:40627:14:15:100:510:202:12:g_d0_f3:12:g_d0_f3:B:the desired level of net foreign assets in the long run—and thus on the direction
+19:800:40708:15:14:100:510:187:12:g_d0_f3:12:g_d0_f3:B:of capital flows during the transition. If the level of idiosyncratic risk remains the
+19:801:40794:14:14:100:510:173:12:g_d0_f3:12:g_d0_f3:B:same, the pickup in growth lowers the long-run level of foreign assets from -23.9
+19:802:40875:14:15:100:510:159:12:g_d0_f3:12:g_d0_f3:B:percent to -135.6 percent of GDP, so that the higher growth rate is associated
+19:803:40953:15:31:100:510:144:12:g_d0_f3:12:g_d0_f3:B:with a larger volume of capital inflows, both in the transition and in the long
+19:804:41032:31:13:114:511:113:6:g_d0_f4:8:g_d0_f5:F:17WithG= 1.04and0= 0.025, our benchmark calibration is the average of the pre-transition and post-
+19:805:41130:13:0:100:169:100:8:g_d0_f5:8:g_d0_f5:F:transition regimes.
+20:806:41151:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:run.  By contrast, if the level of idiosyncratic risk increases with growth, the
+20:807:41231:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:long-run level of foreign assets increases to 69.7 percent of GDP, implying that
+20:808:41311:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:higher growth is associated with capital outflows.18Thus, small changes in the
+20:809:41389:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:level of idiosyncratic risk have a first-order impact on the volume and direction
+20:810:41470:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:of capital flows and may help explain the puzzling correlation between economic
+20:811:41549:14:44:100:367:607:12:g_d0_f3:6:g_d0_f4:B:growth and capital flows that is found in the data.19
+20:812:41602:44:22:100:199:563:12:g_d0_f18:12:g_d0_f18:C:4.1.2 Steady States
+20:813:41621:22:14:100:510:541:12:g_d0_f3:12:g_d0_f3:B:We now look at what the model says about the steady-state correlation between
+20:814:41698:14:15:100:510:527:12:g_d0_f3:12:g_d0_f3:B:growth and capital flows, rather than the correlation for a given country over
+20:815:41776:15:14:100:510:512:12:g_d0_f3:12:g_d0_f3:B:time.  The country exports capital if its net foreign asset position is positive
+20:816:41856:14:15:100:511:498:12:g_d0_f3:12:g_d0_f3:B:(NNN >0), since the level of its net foreign assets increases over time with output.
+20:817:41940:15:18:100:359:483:12:g_d0_f3:12:g_d0_f3:B:The ratio of capital outflows to output is given by,
+20:818:41992:18:16:232:286:465:12:g_d0_f8:8:g_d0_f10:A:NNNt−NNNt−1
+20:819:42003:16:0:253:265:449:12:g_d0_f8:8:g_d0_f6:?:PPPt
+20:820:42007:0:0:291:300:457:12:g_d0_f9:12:g_d0_f9:?:=
+20:821:42008:0:16:304:314:465:12:g_d0_f8:12:g_d0_f8:?:NNN
+20:822:42011:16:0:305:313:449:12:g_d0_f8:12:g_d0_f8:?:PPP
+20:823:42014:0:17:318:327:474:12:g_d0_f17:12:g_d0_f17:?:(
+20:824:42015:17:0:327:345:457:12:g_d0_f9:12:g_d0_f14:A:1−
+20:825:42017:0:16:354:360:465:12:g_d0_f9:12:g_d0_f9:?:1
+20:826:42018:16:0:349:365:449:12:g_d0_f9:12:g_d0_f12:?:ΞG
+20:827:42020:0:17:366:375:474:12:g_d0_f17:12:g_d0_f17:A:)
+20:828:42021:17:27:376:511:457:12:g_d0_f8:12:g_d0_f3:A:.(32)
+20:829:42026:27:15:112:511:430:12:g_d0_f3:12:g_d0_f3:A:On the one hand, with faster growth the target value of(NNN/PPP)will be smaller.
+20:830:42106:15:14:100:510:415:12:g_d0_f3:12:g_d0_f3:B:On the other hand, a country that grows faster must export more capital to
+20:831:42180:14:15:100:510:401:12:g_d0_f3:12:g_d0_f3:B:maintain a constant ratio of foreign assets to GDP (so the term in parentheses in
+20:832:42261:15:14:100:510:386:12:g_d0_f3:12:g_d0_f3:B:(32) becomes larger).20Even if both initial and final values of(NNN/PPP)are positive,
+20:833:42346:14:15:100:510:372:12:g_d0_f3:12:g_d0_f3:B:the sign of the relation between growth and net capital flows is theoretically
+20:834:42424:15:14:100:158:357:12:g_d0_f3:12:g_d0_f3:B:ambiguous.
+20:835:42434:14:15:112:511:343:12:g_d0_f3:12:g_d0_f3:A:We calibrate the model with the pre-transition regime parameter values (i.e.
+20:836:42510:15:14:100:511:328:12:g_d0_f3:12:g_d0_f3:B:withG= 1.02and0= 0.02). Figure 6 shows how the right-hand side of (32)
+20:837:42580:14:15:100:510:314:12:g_d0_f3:12:g_d0_f3:B:varies withGunder two different assumptions. The line “constant risk” shows the
+20:838:42659:15:14:100:510:299:12:g_d0_f3:12:g_d0_f3:B:ratio of capital outflows to GDP if the only variable that changes is the growth
+20:839:42739:14:14:100:510:285:12:g_d0_f3:12:g_d0_f3:B:rate. The line “increasing risk” is based on the assumption that the idiosyncratic
+20:840:42821:14:15:100:510:271:12:g_d0_f3:12:g_d0_f3:B:risk increases linearly by 0.25 percent for every additional percent of growth.
+20:841:42900:15:14:100:510:256:12:g_d0_f3:12:g_d0_f3:B:Points A, B, and C respectively correspond to the benchmark calibration, the
+20:842:42976:14:15:100:489:242:12:g_d0_f3:12:g_d0_f3:B:pre-transition regime and the post-transition regime of the previous section.
+20:843:43053:15:14:112:511:227:12:g_d0_f3:12:g_d0_f3:A:Two findings stand out.  First, if idiosyncratic risk does not increase with
+20:844:43129:14:21:100:510:213:12:g_d0_f3:12:g_d0_f3:B:growth, the ratio of capital outflows to GDP is decreasing with growth. Second,
+20:845:43208:21:12:114:510:192:6:g_d0_f4:8:g_d0_f5:F:18The pattern shown in figure 5 is robust to plausible changes in the values of the parameters. For example,
+20:846:43316:12:10:100:510:180:8:g_d0_f5:8:g_d0_f5:F:higher growth remains associated with capital outflows if the post-transition growth rate is 8 percent instead of
+20:847:43429:10:9:100:511:170:8:g_d0_f5:8:g_d0_f5:F:6 percent (keeping0aequal to 3 percent) or if the unemployment probability increases to 2.5 percent instead
+20:848:43536:9:9:100:371:161:8:g_d0_f5:8:g_d0_f5:F:of 3 percent (keeping the post-transition growth rate equal to 6 percent).
+20:849:43610:9:12:114:510:152:6:g_d0_f4:8:g_d0_f5:F:19A similar point is made by Sandri (2008). In Sandri’s model, the increase in the growth rate and in the
+20:850:43715:12:10:100:510:140:8:g_d0_f5:8:g_d0_f5:F:level of idiosyncratic risk are jointly determined by the emergence of a class of entrepreneurs who invest in a
+20:851:43826:10:9:100:510:130:8:g_d0_f5:8:g_d0_f5:F:risky technology, but must provide for the possibility of bankruptcy by putting aside riskless assets outside of
+20:852:43938:9:8:100:208:121:8:g_d0_f5:8:g_d0_f5:F:their entrepreneurial activity.
+20:853:43969:8:13:114:510:113:6:g_d0_f4:8:g_d0_f5:F:20See Carroll (2000) for further discussion of the possibility for precautionary models to generate a positive
+20:854:44079:13:0:100:220:100:8:g_d0_f5:8:g_d0_f5:F:causality from growth to saving.
+21:855:44113:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:if idiosyncratic risk increases with growth as we have specified, the ratio of
+21:856:44191:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:capital outflows to output is positive, i.e., an increase in growth always causes
+21:857:44272:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:the economy to export more capital (even if it grows at 10 percent per year). The
+21:858:44353:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:relationship between the ratio of capital outflows to GDP and the growth rate is
+21:859:44433:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:non-monotonic. Capital outflows increase (as a share of GDP) with the growth
+21:860:44509:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:rate if the latter is lower than 6 percent. For higher levels of the growth rate the
+21:861:44593:15:45:100:278:592:12:g_d0_f3:12:g_d0_f3:B:sign of the relationship is reversed.
+21:862:44630:45:23:100:234:547:14:g_d0_f7:14:g_d0_f7:C:4.2 Global Imbalances
+21:863:44651:23:14:100:510:524:12:g_d0_f3:12:g_d0_f3:B:The main counterpart for the accumulation of net foreign assets by developing
+21:864:44728:14:15:100:510:510:12:g_d0_f3:12:g_d0_f3:B:countries has been the accumulation of net foreign liabilities by the United States.
+21:865:44812:15:14:100:510:495:12:g_d0_f3:12:g_d0_f3:B:In a famous 2005 speech, Ben Bernanke hypothesized that the then-prevailing low
+21:866:44891:14:14:100:510:481:12:g_d0_f3:12:g_d0_f3:B:level of world interest rates and high level of U.S. current account deficits could be
+21:867:44977:14:15:100:510:467:12:g_d0_f3:12:g_d0_f3:B:due in part to this global “savings glut” (Bernanke (2005)). The U.S. authorities
+21:868:45058:15:14:100:510:452:12:g_d0_f3:12:g_d0_f3:B:subsequently argued that an orderly resolution of global financial imbalances
+21:869:45135:14:15:100:510:438:12:g_d0_f3:12:g_d0_f3:B:required the saving rate of Asian emerging market countries, most notably China,
+21:870:45215:15:14:100:282:423:12:g_d0_f3:6:g_d0_f4:B:to decrease to more normal levels.21
+21:871:45251:14:15:112:511:409:12:g_d0_f3:12:g_d0_f3:A:The small economy assumption is not appropriate for studying such large
+21:872:45322:15:14:100:510:394:12:g_d0_f3:12:g_d0_f3:B:events. We therefore present in this section a two-country general equilibrium
+21:873:45400:14:15:100:510:380:12:g_d0_f3:12:g_d0_f3:B:version of the model that can be used instead. The model is solved only for the
+21:874:45479:15:14:100:510:365:12:g_d0_f3:12:g_d0_f3:B:steady state equilibria, which means that we will be interested in the long-term
+21:875:45559:14:14:100:510:351:12:g_d0_f3:12:g_d0_f3:B:consequences of particular policy experiments. We first look at a closed-economy
+21:876:45639:14:31:100:207:337:12:g_d0_f3:12:g_d0_f3:B:version of the model.
+21:877:45660:31:23:100:215:306:12:g_d0_f18:12:g_d0_f18:C:4.2.1 Closed Economy
+21:878:45680:23:14:100:510:283:12:g_d0_f3:12:g_d0_f3:B:We assume that the global economy that has the same structure as the small
+21:879:45754:14:14:100:510:269:12:g_d0_f3:12:g_d0_f3:B:open economy that we have considered so far.Global net foreign assets are equal
+21:880:45833:14:20:100:267:255:12:g_d0_f3:12:g_d0_f3:B:to zero, which using (22) implies
+21:881:45866:20:16:209:215:235:12:g_d0_f9:12:g_d0_f9:?:1
+21:882:45867:16:0:209:217:219:12:g_d0_f12:12:g_d0_f12:?:R
+21:883:45868:0:17:219:228:244:12:g_d0_f17:12:g_d0_f17:?:(
+21:884:45869:17:0:228:246:227:12:g_d0_f9:12:g_d0_f9:A:1 +
+21:885:45872:0:16:275:300:235:12:g_d0_f15:12:g_d0_f12:?:0ΞG
+21:886:45875:16:0:250:325:219:12:g_d0_f9:8:g_d0_f6:?:ΞG−--D(βR)1/ρ
+21:887:45888:0:9:327:336:244:12:g_d0_f17:12:g_d0_f17:A:)
+21:888:45889:9:16:338:350:235:12:g_d0_f8:8:g_d0_f6:?:SSSe
+21:889:45893:16:0:340:348:219:12:g_d0_f8:12:g_d0_f8:?:PPP
+21:890:45896:0:0:355:364:227:12:g_d0_f9:12:g_d0_f9:?:=
+21:891:45897:0:16:380:387:235:12:g_d0_f8:12:g_d0_f8:?:α
+21:892:45898:16:0:369:399:219:12:g_d0_f12:12:g_d0_f13:A:R−k
+21:893:45901:0:26:400:511:227:12:g_d0_f8:12:g_d0_f3:A:.(33)
+21:894:45906:26:15:100:510:201:12:g_d0_f3:12:g_d0_f3:B:The left-hand side is the desired global stock of wealth whereas the right-hand side
+21:895:45990:15:14:100:510:186:12:g_d0_f3:12:g_d0_f3:B:is the desired global stock of capital. The equality between the two endogenizes
+21:896:46070:14:15:100:510:172:12:g_d0_f3:12:g_d0_f3:B:the steady-state interest rate. We assume that the desired stock of wealth comes
+21:897:46150:15:14:100:471:157:12:g_d0_f3:12:g_d0_f3:B:from the model with stakes and social insurance, i.e., it is given by (30).
+21:898:46225:14:15:112:511:143:12:g_d0_f3:12:g_d0_f3:A:Figure 7 shows how the desired stocks of saving and of capital vary with the
+21:899:46301:15:15:100:510:128:12:g_d0_f3:12:g_d0_f3:B:interest rate for the benchmark calibration and three different levels of social
+21:900:46381:15:13:114:510:113:6:g_d0_f4:8:g_d0_f5:F:21The 2008-09 global financial crisis added a further motivation for the same policy prescription:  The
+21:901:46484:13:0:100:253:100:8:g_d0_f5:8:g_d0_f5:F:maintenance of global aggregate demand.
+22:902:46525:0:15:100:511:679:12:g_d0_f3:12:g_d0_f3:B:insuranceς=  0,1and2.22The desired level of capital is decreasing with the
+22:903:46599:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:interest rate whereas the desired level of wealth is increasing with the interest
+22:904:46680:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:rate. Note that the desired level of capital is much more sensitive to the interest
+22:905:46763:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:rate than the desired level of wealth. This implies that the decrease in desired
+22:906:46843:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:wealth generated by higher social insurance is reflected almost one for one in a
+22:907:46923:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:lower level of capital – an interesting point because it illustrates the importance
+22:908:47006:15:43:100:387:592:12:g_d0_f3:12:g_d0_f3:B:of incorporating the precautionary motive in the model.
+22:909:47061:43:22:100:382:549:12:g_d0_f18:12:g_d0_f18:C:4.2.2 Long-term Impact of Reducing Global Imbalances
+22:910:47113:22:15:100:510:527:12:g_d0_f3:12:g_d0_f3:B:This section uses a two-country version of our model to investigate the long-run
+22:911:47193:15:14:100:510:512:12:g_d0_f3:12:g_d0_f3:B:impact of a decrease in the desired stock of wealth outside of the United States.
+22:912:47274:14:15:100:510:498:12:g_d0_f3:12:g_d0_f3:B:We consider a two-country world, where each country has the same structure
+22:913:47348:15:14:100:511:483:12:g_d0_f3:12:g_d0_f3:B:as before. The two countries (denoted byhandf, respectively for “home” and
+22:914:47422:14:14:100:510:469:12:g_d0_f3:12:g_d0_f3:B:“foreign”) are identical, except for their sizes and their levels of social insurance
+22:915:47507:14:15:100:511:455:12:g_d0_f3:12:g_d0_f3:B:(ςhandςf). The shares of countrieshandfin world output are respectively
+22:916:47578:15:14:100:510:440:12:g_d0_f3:12:g_d0_f3:B:denoted byωhandωf. The two countries have the same growth rate, so that
+22:917:47649:14:15:100:510:426:12:g_d0_f3:12:g_d0_f3:B:there is a well-defined balanced growth path in which each country maintains a
+22:918:47727:15:14:100:263:411:12:g_d0_f3:12:g_d0_f3:B:constant share of global output.
+22:919:47759:14:21:112:433:397:12:g_d0_f3:12:g_d0_f3:A:The condition that global foreign assets must be equal to zero,
+22:920:47822:21:20:269:341:376:12:g_d0_f8:12:g_d0_f8:?:NNNh+NNNf= 0,
+22:921:47835:20:15:100:511:356:12:g_d0_f3:12:g_d0_f3:B:endogenizes the global interest rateR. Normalizing by the countries’ GDP, this
+22:922:47913:15:25:100:235:341:12:g_d0_f3:12:g_d0_f3:B:equation can be rewritten,
+22:923:47939:25:0:255:267:316:12:g_d0_f8:8:g_d0_f6:A:ωh
+22:924:47941:0:17:268:284:324:12:g_d0_f8:8:g_d0_f6:?:NNNh
+22:925:47945:17:0:269:283:307:12:g_d0_f8:8:g_d0_f6:?:PPPh
+22:926:47949:0:0:288:312:316:12:g_d0_f9:8:g_d0_f6:?:+ωf
+22:927:47952:0:17:314:329:324:12:g_d0_f8:8:g_d0_f6:?:NNNf
+22:928:47956:17:0:314:328:307:12:g_d0_f8:8:g_d0_f6:?:PPPf
+22:929:47960:0:30:335:356:316:12:g_d0_f9:12:g_d0_f8:?:= 0,
+22:930:47964:30:14:100:469:286:12:g_d0_f3:12:g_d0_f3:B:where for each country,NNN/PPPis given by (22), withSSSe/PPP= (1−α)`ˇs(ς).
+22:931:48038:14:14:112:511:272:12:g_d0_f3:12:g_d0_f3:A:We consider the following experiment.  Assume that the share of the home
+22:932:48110:14:15:100:511:258:12:g_d0_f3:12:g_d0_f3:B:country in total GDP is 20 percent (ωh= 0.2andωf= 0.8), which is the right
+22:933:48184:15:14:100:511:243:12:g_d0_f3:12:g_d0_f3:B:order of magnitude for the United States. Assume thatςh> ςf, implying that
+22:934:48258:14:15:100:510:229:12:g_d0_f3:12:g_d0_f3:B:the home country has net liabilities because the desired ratio of wealth to GDP
+22:935:48337:15:14:100:511:214:12:g_d0_f3:12:g_d0_f9:B:is lower at home than in the rest of the world. We assume the valuesςh= 1.5
+22:936:48412:14:15:100:511:200:12:g_d0_f3:12:g_d0_f9:B:andςf= 0.75, which impliesR= 1.042,NNNh/PPPh=−0.512andNNNf/PPPf= 0.128
+22:937:48482:15:14:100:510:185:12:g_d0_f3:12:g_d0_f3:B:(the values of the other parameters remaining as in Table 1). The ratio of U.S.
+22:938:48561:14:15:100:510:171:12:g_d0_f3:12:g_d0_f3:B:liabilities to GDP is higher than the current level (which is closer to 25 percent),
+22:939:48645:15:14:100:510:156:12:g_d0_f3:12:g_d0_f3:B:but not implausible looking forward if the U.S. were to continue to maintain large
+22:940:48727:14:20:100:223:142:12:g_d0_f3:12:g_d0_f3:B:current account deficits.
+22:941:48752:20:12:114:510:122:6:g_d0_f4:8:g_d0_f5:F:22We would obtain similar results by varying parameters other than the level of social insurance. We choose
+22:942:48859:12:10:100:510:110:8:g_d0_f5:8:g_d0_f5:F:social insurance (as opposed to, say, taste parameters such as the level of risk aversion) because it is a policy
+22:943:48972:10:0:100:209:100:8:g_d0_f5:8:g_d0_f5:F:variable that can be changed.
+23:944:49003:0:15:112:511:679:12:g_d0_f3:12:g_d0_f3:A:We then consider what would happen if global imbalances were resorbed as a
+23:945:49077:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:consequence of a reduction in the desired wealth-to-income ratio in the rest of
+23:946:49156:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:the world; this is achieved by increasingςfto the home level (from 0.75 to 1.5).
+23:947:49236:15:14:100:510:635:12:g_d0_f3:12:g_d0_f3:B:Figure 8 shows the long-run response of the foreign assets and liabilities, as well
+23:948:49319:14:14:100:510:621:12:g_d0_f3:12:g_d0_f3:B:as the global real interest rate and real wage (normalized by productivity). As
+23:949:49398:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:expected, the net foreign assets of the home and foreign countries go to zero as
+23:950:49478:15:14:100:510:592:12:g_d0_f3:12:g_d0_f3:B:the two countries converge to the same ratio of wealth to GDP. However, this
+23:951:49554:14:15:100:510:578:12:g_d0_f3:12:g_d0_f3:B:convergence is achieved mainly by a decrease in global capital, which is reflected
+23:952:49636:15:14:100:510:563:12:g_d0_f3:12:g_d0_f3:B:in an increase in the real interest rate (from 4.2 to 5.6 percent), and a decrease
+23:953:49718:14:15:100:330:549:12:g_d0_f3:12:g_d0_f3:B:in the normalized real wage (by 5.4 percent).
+23:954:49763:15:14:112:511:534:12:g_d0_f3:12:g_d0_f3:A:The decrease in the desired foreign level of wealth thus has a large negative
+23:955:49840:14:15:100:510:520:12:g_d0_f3:12:g_d0_f3:B:impact on the real wage.  The welfare effect is unambiguously negative for
+23:956:49914:15:14:100:510:505:12:g_d0_f3:12:g_d0_f3:B:the home country. The long-run welfare impact is also negative in the foreign
+23:957:49991:14:14:100:510:491:12:g_d0_f3:12:g_d0_f3:B:country, although not necessarily during the transition, as the generations that
+23:958:50071:14:15:100:510:477:12:g_d0_f3:12:g_d0_f3:B:are alive at the time of the increase in social insurance benefit from consuming
+23:959:50151:15:14:100:510:462:12:g_d0_f3:12:g_d0_f3:B:the accumulated net foreign assets. The home country enjoys an export boom
+23:960:50225:14:15:100:510:448:12:g_d0_f3:12:g_d0_f3:B:during the transition, but this is associated with lower investment rather than
+23:961:50304:15:14:100:173:433:12:g_d0_f3:12:g_d0_f3:B:higher output.
+23:962:50318:14:15:112:511:419:12:g_d0_f3:12:g_d0_f3:A:The intuition should be clear from the analysis of the closed economy in the
+23:963:50394:15:14:100:510:404:12:g_d0_f3:12:g_d0_f3:B:previous section. The decrease in the desired level of foreign wealth raises the
+23:964:50474:14:15:100:510:390:12:g_d0_f3:12:g_d0_f3:B:world interest rate, with little impact on the level of home wealth. Thus, it is
+23:965:50554:15:14:100:510:375:12:g_d0_f3:12:g_d0_f3:B:reflected mainly in a decrease in the ratio of capital to output, which depresses
+23:966:50635:14:52:100:171:361:12:g_d0_f3:12:g_d0_f3:B:the real wage.
+23:967:50649:52:26:100:207:309:17:g_d0_f2:17:g_d0_f2:C:5 Conclusion
+23:968:50661:26:15:100:510:283:12:g_d0_f3:12:g_d0_f3:B:This paper has presented a tractable model of the net foreign assets of a small
+23:969:50740:15:14:100:510:268:12:g_d0_f3:12:g_d0_f3:B:open economy.  The desired level of domestic wealth was endogenized as the
+23:970:50814:14:15:100:510:254:12:g_d0_f3:12:g_d0_f3:B:optimal level of precautionary wealth against an idiosyncratic risk. We presented
+23:971:50895:15:14:100:510:239:12:g_d0_f3:12:g_d0_f3:B:two applications of the model.  The first concerned the relationship between
+23:972:50971:14:14:100:510:225:12:g_d0_f3:12:g_d0_f3:B:economic development and capital flows.  The second concerned the long-run
+23:973:51045:14:15:100:510:211:12:g_d0_f3:12:g_d0_f3:B:global implications of reducing global imbalances by reducing the desired stock
+23:974:51124:15:14:100:296:196:12:g_d0_f3:12:g_d0_f3:B:of saving outside of the United States.
+23:975:51163:14:15:112:511:182:12:g_d0_f3:12:g_d0_f3:A:Although very stylized, the model is able to predict plausible orders of mag-
+23:976:51240:15:14:100:510:167:12:g_d0_f3:12:g_d0_f3:B:nitude for the ratio of net foreign assets to GDP. This being said, there are
+23:977:51317:14:15:100:510:153:12:g_d0_f3:12:g_d0_f3:B:several dimensions in which the model could be made more realistic, probably
+23:978:51393:15:14:100:510:138:12:g_d0_f3:12:g_d0_f3:B:at the expense of tractability.  In particular, it would be interesting to know
+23:979:51472:14:15:100:510:124:12:g_d0_f3:12:g_d0_f3:B:the exchange rate implications of a multi-goods extension of the model.  (We
+23:980:51548:15:0:100:510:109:12:g_d0_f3:12:g_d0_f3:B:anticipate that such an extension would show that a developing country that
+24:981:51625:0:15:100:510:679:12:g_d0_f3:12:g_d0_f3:B:increases its desired level of foreign assets following economic liberalization will
+24:982:51709:15:14:100:510:664:12:g_d0_f3:12:g_d0_f3:B:see a depreciation of its real exchange rate.) It would be also interesting to look
+24:983:51792:14:15:100:510:650:12:g_d0_f3:12:g_d0_f3:B:at the impact of changes in the desired level of wealth on the price of assets other
+24:984:51876:15:14:100:181:635:12:g_d0_f3:12:g_d0_f3:B:than currencies.
+24:985:51892:14:14:112:511:621:12:g_d0_f3:12:g_d0_f3:A:Our paper also has potential implications for future empirical work. To the
+24:986:51967:14:15:100:510:607:12:g_d0_f3:12:g_d0_f3:B:best of our knowledge, the empirical literature has not looked at the impact of
+24:987:52046:15:14:100:510:592:12:g_d0_f3:12:g_d0_f3:B:idiosyncratic risk and social insurance on net foreign assets in the context of a
+24:988:52127:14:15:100:510:578:12:g_d0_f3:12:g_d0_f3:B:large sample of countries. The available evidence is anecdotal or focused on one
+24:989:52207:15:14:100:510:563:12:g_d0_f3:12:g_d0_f3:B:country (e.g., Chamon and Prasad (2008)), or it is about financial development
+24:990:52285:14:15:100:510:549:12:g_d0_f3:12:g_d0_f3:B:rather than social insurance (Mendoza, Quadrini, and Rios-Rull (2007)). It would
+24:991:52365:15:14:100:510:534:12:g_d0_f3:12:g_d0_f3:B:be interesting to see if the predictions of our framework for net foreign assets can
+24:992:52449:14:15:100:510:520:12:g_d0_f3:12:g_d0_f3:B:be tested with the available data (although we have not been able to find a cross-
+24:993:52531:15:14:100:510:505:12:g_d0_f3:12:g_d0_f3:B:country database on social insurance that could be used for such an empirical
+24:994:52608:14:0:100:136:491:12:g_d0_f3:12:g_d0_f3:B:study).
+25:995:52617:0:30:100:202:679:17:g_d0_f2:17:g_d0_f2:C:A Appendix
+25:996:52627:30:22:100:351:649:14:g_d0_f7:14:g_d0_f7:C:A.1 Key Model Parameters and Variables
+25:997:52665:22:36:100:510:627:12:g_d0_f3:12:g_d0_f3:B:We provide the following tables to aid the reader in keeping track of our notation.
+25:998:52748:36:15:107:367:591:12:g_d0_f3:12:g_d0_f3:?:ParameterDefinition
+25:999:52767:15:14:129:468:576:12:g_d0_f8:12:g_d0_f3:?:αCapital’s share in the Cobb-Douglas Production Function
+25:1000:52823:14:15:129:500:562:12:g_d0_f13:12:g_d0_f3:?:kDepreciation Factor (Proportion Remaining After Depreciation)
+25:1001:52885:15:14:129:307:547:12:g_d0_f9:12:g_d0_f3:?:ΞPopulation Growth Factor
+25:1002:52910:14:15:129:371:533:12:g_d0_f12:12:g_d0_f3:?:GAggregate Productivity Growth Factor
+25:1003:52947:15:14:129:293:518:12:g_d0_f12:12:g_d0_f3:?:RRiskfree Interest Factor
+25:1004:52972:14:15:130:292:504:12:g_d0_f8:12:g_d0_f3:?:βTime Preference Factor
+25:1005:52995:15:14:130:359:489:12:g_d0_f8:12:g_d0_f3:?:ρCoefficient of Relative Risk Aversion
+25:1006:53033:14:15:131:509:475:12:g_d0_f8:12:g_d0_f3:A:ςSeverance Payment (In Years Of Income) Paid At Unemployment
+25:1007:53093:15:14:129:437:460:12:g_d0_f12:12:g_d0_f3:?:XIndividual (eXperience-based) Productivity Growth
+25:1008:53143:14:14:128:409:446:12:g_d0_f8:12:g_d0_f3:?:ωiWeight (Share) Of Countryiin World Income
+25:1009:53186:14:15:129:462:432:12:g_d0_f15:12:g_d0_f3:?:0Probability Of Employed Worker Becoming Unemployed
+25:1010:53237:15:14:129:278:417:12:g_d0_f12:12:g_d0_f3:?:DProbability of Death
+25:1011:53258:14:15:130:220:403:12:g_d0_f8:12:g_d0_f3:?:τTax Rate
+25:1012:53267:15:14:130:382:388:12:g_d0_f8:12:g_d0_f3:?:χ‘Stake’ In Version Of Model With Stakes
+25:1013:53307:14:24:130:468:374:12:g_d0_f8:12:g_d0_f3:?:ξIndividual’s Employment Status (1 if Employed; 0 if Not)
+25:1014:53364:24:36:112:511:350:12:g_d0_f3:12:g_d0_f3:A:Some combinations of the parameters above are used as convenient shorthand:
+25:1015:53439:36:16:133:402:314:12:g_d0_f3:12:g_d0_f3:?:ConstantDefinition
+25:1016:53457:16:14:111:534:298:10:g_d0_f16:12:g_d0_f3:A:--0≡1−0Period Probability of Employed Worker Remaining Employed
+25:1017:53520:14:15:111:401:284:10:g_d0_f16:12:g_d0_f3:A:--D≡1−DProbability of Survival (Not Dying)
+25:1018:53562:15:14:112:432:269:10:g_d0_f16:12:g_d0_f3:A:-τ≡1−τProportion of Income Left After Taxation
+25:1019:53608:14:18:112:471:255:12:g_d0_f9:12:g_d0_f8:A:Λ≡-0XΞAnnual Shrinkage of Old Generations’ Share inLLL
+25:1020:53662:18:0:108:192:237:12:g_d0_f8:8:g_d0_f10:A:κu≡1−(βR)
+25:1021:53671:0:13:193:204:246:6:g_d0_f21:6:g_d0_f22:?:1/ρ
+25:1022:53674:13:12:182:528:233:8:g_d0_f20:12:g_d0_f3:?:R/-DMarginal Propensity to Consume for Unemployed Consumer
+25:1023:53732:12:17:113:523:221:12:g_d0_f9:12:g_d0_f3:A:Γ≡GXLabor Income Growth For Continuing-Employed Individual
+25:1024:53790:17:0:106:172:204:12:g_d0_f15:8:g_d0_f10:?:ÞÞÞΓ≡(βR)
+25:1025:53799:0:12:172:184:212:6:g_d0_f21:6:g_d0_f22:?:1/ρ
+25:1026:53802:12:0:167:341:200:8:g_d0_f10:12:g_d0_f3:?:ΓGrowth Patience Factor
+26:1027:53827:0:15:148:359:680:12:g_d0_f3:12:g_d0_f3:?:VariableDefinition
+26:1028:53845:15:14:165:271:665:12:g_d0_f8:12:g_d0_f3:?:CConsumption
+26:1029:53857:14:15:166:313:651:12:g_d0_f14:12:g_d0_f3:?:EEmployed Population
+26:1030:53877:15:14:167:259:636:12:g_d0_f8:12:g_d0_f3:?:IInvestment
+26:1031:53888:14:14:164:319:622:12:g_d0_f8:12:g_d0_f3:?:KPhysical Capital Stock
+26:1032:53911:14:15:166:273:608:12:g_d0_f8:12:g_d0_f3:?:LLabor Supply
+26:1033:53924:15:14:167:462:593:12:g_d0_f8:12:g_d0_f3:?:`Individual labor productivity per employed worker
+26:1034:53974:14:15:164:300:579:12:g_d0_f8:12:g_d0_f3:?:NNet Foreign Assets
+26:1035:53993:15:14:165:306:564:12:g_d0_f8:12:g_d0_f3:?:PGDP (‘Production’)
+26:1036:54012:14:15:166:395:550:12:g_d0_f8:12:g_d0_f3:?:STotal Wealth (Foreign and Domestic)
+26:1037:54048:15:29:165:326:535:12:g_d0_f14:12:g_d0_f3:?:UUnemployed Population
+26:1038:54070:29:15:152:360:506:12:g_d0_f3:12:g_d0_f3:?:TypefaceMeaning
+26:1039:54085:15:14:163:310:491:12:g_d0_f3:12:g_d0_f3:?:BoldLevel of a Variable
+26:1040:54108:14:15:162:462:477:12:g_d0_f3:12:g_d0_f3:?:PlainRatio of The Variable To GDP or Labor Income
+26:1041:54157:15:14:149:312:462:12:g_d0_f3:12:g_d0_f3:?:UppercaseAggregate Variable
+26:1042:54184:14:32:149:423:448:12:g_d0_f3:12:g_d0_f3:?:LowercaseHousehold-Level (Idiosyncratic) Variable
+26:1043:54233:32:23:100:251:416:14:g_d0_f7:14:g_d0_f7:C:A.2 National Accounting
+26:1044:54256:23:17:100:410:393:12:g_d0_f3:12:g_d0_f3:B:The aggregate budget constraint of residents can be written,
+26:1045:54316:17:17:233:255:376:12:g_d0_f8:8:g_d0_f10:A:SSSt+1
+26:1046:54322:17:0:241:249:359:12:g_d0_f12:12:g_d0_f12:?:R
+26:1047:54323:0:25:260:379:368:12:g_d0_f9:12:g_d0_f8:?:+CCCt=SSSt+ (1−α)PPPt.
+26:1048:54345:25:20:100:324:343:12:g_d0_f3:12:g_d0_f3:B:Using (2) this equation can be rewritten as,
+26:1049:54389:20:20:228:382:323:12:g_d0_f8:12:g_d0_f8:A:CCCt+IIIt+ (NNNt−RNNNt−1) =PPPt,
+26:1050:54421:20:15:100:510:303:12:g_d0_f3:12:g_d0_f3:B:whereIIIt=KKKt+1−kKKKtis domestic investment, andNNNtis given by (5). Using the
+26:1051:54500:15:14:100:510:288:12:g_d0_f3:12:g_d0_f3:B:GDP identity (domestic output is either consumed, invested or exported), and
+26:1052:54576:14:21:100:279:274:12:g_d0_f3:12:g_d0_f3:B:definingXXXas net exports, we have
+26:1053:54610:21:20:256:354:253:12:g_d0_f8:12:g_d0_f8:A:CCCt+IIIt+XXXt=PPPt,
+26:1054:54630:20:15:100:511:233:12:g_d0_f3:12:g_d0_f3:B:it follows that net exports are equal toXXXt=NNNt−RNNNt−1. By definition, the
+26:1055:54707:15:14:100:510:218:12:g_d0_f3:12:g_d0_f3:B:current account balance is equal to net exports plus the income on net foreign
+26:1056:54785:14:20:100:133:204:12:g_d0_f3:12:g_d0_f3:B:assets,
+26:1057:54792:20:21:205:406:184:12:g_d0_f3:12:g_d0_f8:?:Current Accountt≡XXXt+ (R−1)NNNt−1,
+26:1058:54827:21:20:100:410:163:12:g_d0_f3:12:g_d0_f3:B:from which we can derive the balance-of-payments equation,
+26:1059:54885:20:21:224:386:143:12:g_d0_f3:12:g_d0_f8:?:Current Accountt=NNNt−NNNt−1.
+26:1060:54914:21:14:100:510:122:12:g_d0_f3:12:g_d0_f3:B:The current account balance is equal to the increase in the country’s net foreign
+26:1061:54995:14:0:100:414:108:12:g_d0_f3:12:g_d0_f3:B:asset position, i.e., the volume of capital outflows in periodt.
+27:1062:55061:0:22:100:452:679:14:g_d0_f7:14:g_d0_f7:C:A.3 The Consumption-Saving Problem of the Unemployed
+27:1063:55113:22:15:100:511:657:12:g_d0_f3:12:g_d0_f3:B:An insurance companya laBlanchard (1985) provides each newly unemployed
+27:1064:55184:15:14:100:510:642:12:g_d0_f3:12:g_d0_f3:B:worker with an annuity, i.e., a consumption path that is conditional on the
+27:1065:55259:14:15:100:510:628:12:g_d0_f3:12:g_d0_f3:B:individual staying alive.  The annuity contract maximizes the welfare of the
+27:1066:55335:15:14:100:510:613:12:g_d0_f3:12:g_d0_f3:B:individual conditional on the expected present value of his consumption being
+27:1067:55412:14:30:100:511:599:12:g_d0_f3:12:g_d0_f3:B:equal to his wealth. For a worker becoming unemployed attit solves the problem,
+27:1068:55491:30:0:253:275:569:12:g_d0_f9:12:g_d0_f9:?:max
+27:1069:55494:0:28:277:293:583:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+27:1070:55497:28:0:277:293:555:8:g_d0_f6:8:g_d0_f10:?:n=0
+27:1071:55500:0:31:296:359:569:12:g_d0_f8:12:g_d0_f9:A:βn--Dnu(cccut+n)
+27:1072:55516:31:15:100:151:538:12:g_d0_f3:12:g_d0_f3:B:subject to
+27:1073:55526:15:29:248:264:523:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+27:1074:55529:29:0:248:264:494:8:g_d0_f6:8:g_d0_f10:?:n=0
+27:1075:55532:0:30:266:364:508:12:g_d0_f12:12:g_d0_f8:?:R−n--Dncccut+n=sssut.
+27:1076:55553:30:20:112:226:478:12:g_d0_f3:12:g_d0_f3:A:The Euler equation is,
+27:1077:55575:20:21:261:349:458:12:g_d0_f8:12:g_d0_f8:?:cccut+n= (βR)n/ρcccut.
+27:1078:55597:21:14:100:511:437:12:g_d0_f3:12:g_d0_f3:B:Using this expression to substitute outcccut+nfrom the expected present value
+27:1079:55674:14:43:100:210:423:12:g_d0_f3:12:g_d0_f3:B:constraint then gives,
+27:1080:55696:43:0:238:262:380:12:g_d0_f8:12:g_d0_f9:A:sssut=
+27:1081:55702:0:28:266:282:395:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+27:1082:55705:28:0:266:282:367:8:g_d0_f6:8:g_d0_f10:?:n=0
+27:1083:55708:0:0:285:351:380:12:g_d0_f12:12:g_d0_f9:A:R−n--Dncccut+n=
+27:1084:55723:0:16:356:365:388:12:g_d0_f8:8:g_d0_f6:?:cccut
+27:1085:55728:16:0:356:367:372:12:g_d0_f8:8:g_d0_f6:?:κu
+27:1086:55730:0:42:369:372:380:12:g_d0_f8:12:g_d0_f8:A:.
+27:1087:55731:42:22:100:259:338:14:g_d0_f7:14:g_d0_f7:C:A.4 Saddle-Point Stability
+27:1088:55757:22:15:100:510:316:12:g_d0_f3:12:g_d0_f3:B:We first characterize the iso-seand iso-celoci in the space(se,ce). Equation (13)
+27:1089:55838:15:26:100:345:301:12:g_d0_f3:12:g_d0_f3:B:implies that the iso-selocus is a line defined by,
+27:1090:55888:26:0:251:294:275:12:g_d0_f8:12:g_d0_f9:?:ce= 1 +
+27:1091:55895:0:16:297:306:291:12:g_d0_f17:12:g_d0_f17:A:(
+27:1092:55896:16:0:305:323:275:12:g_d0_f9:12:g_d0_f14:?:1−
+27:1093:55898:0:17:327:334:283:12:g_d0_f9:12:g_d0_f9:A:Γ
+27:1094:55899:17:0:327:335:266:12:g_d0_f12:12:g_d0_f12:A:R
+27:1095:55900:0:16:336:345:291:12:g_d0_f17:12:g_d0_f17:?:)
+27:1096:55901:16:28:347:360:275:12:g_d0_f8:12:g_d0_f8:?:se.
+27:1097:55904:28:14:112:510:247:12:g_d0_f3:12:g_d0_f3:A:Similarly, settingcet+1=cetin equation (14) gives the following equation for the
+27:1098:55984:14:33:100:160:233:12:g_d0_f3:12:g_d0_f3:B:iso-celocus,
+27:1099:55996:33:0:185:207:200:12:g_d0_f8:12:g_d0_f9:?:ce=
+27:1100:55999:0:21:210:217:221:12:g_d0_f17:12:g_d0_f17:?:[
+27:1101:56000:21:0:217:235:200:12:g_d0_f9:12:g_d0_f9:?:1 +
+27:1102:56003:0:16:245:252:208:12:g_d0_f9:12:g_d0_f9:?:Γ
+27:1103:56004:16:0:238:259:192:12:g_d0_f8:12:g_d0_f12:A:κuR
+27:1104:56007:0:17:261:270:217:12:g_d0_f17:12:g_d0_f17:?:(
+27:1105:56008:17:0:270:288:200:12:g_d0_f9:12:g_d0_f9:?:1 +
+27:1106:56011:0:16:291:332:208:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+27:1107:56019:16:0:307:316:192:12:g_d0_f15:12:g_d0_f15:?:0
+27:1108:56020:0:17:333:379:217:12:g_d0_f17:8:g_d0_f10:?:)−1/ρ]−1
+27:1109:56028:17:30:382:426:200:12:g_d0_f9:12:g_d0_f8:?:(1 +se).
+27:1110:56036:30:14:112:511:170:12:g_d0_f3:12:g_d0_f3:A:The iso-celocus is an upward-sloping line which intersects thece-axis below the
+27:1111:56115:14:15:100:510:156:12:g_d0_f3:12:g_d0_f3:B:iso-seline. The iso-celine and the iso-selines intersect in the positive quadrant
+27:1112:56196:15:0:100:448:141:12:g_d0_f3:12:g_d0_f3:B:(as indicated on Figure 1) if and only ifˇs >0. This is true because,
+28:1113:56267:0:16:133:140:658:12:g_d0_f9:12:g_d0_f9:?:Γ
+28:1114:56268:16:0:133:141:642:12:g_d0_f12:12:g_d0_f12:?:R
+28:1115:56269:0:0:144:188:650:12:g_d0_f14:8:g_d0_f6:?:−1 +κu
+28:1116:56275:0:17:191:200:667:12:g_d0_f17:12:g_d0_f17:?:(
+28:1117:56276:17:0:199:217:650:12:g_d0_f9:12:g_d0_f9:?:1 +
+28:1118:56279:0:16:220:261:658:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+28:1119:56287:16:0:236:245:642:12:g_d0_f15:12:g_d0_f15:A:0
+28:1120:56288:0:17:262:284:667:12:g_d0_f17:8:g_d0_f6:?:)1/ρ
+28:1121:56292:17:0:287:296:650:12:g_d0_f8:12:g_d0_f8:?:>
+28:1122:56293:0:16:301:308:658:12:g_d0_f9:12:g_d0_f9:?:Γ
+28:1123:56294:16:0:301:309:642:12:g_d0_f12:12:g_d0_f12:?:R
+28:1124:56295:0:0:312:369:650:12:g_d0_f14:12:g_d0_f9:?:−1 +κu=
+28:1125:56302:0:16:375:381:658:12:g_d0_f9:12:g_d0_f9:A:1
+28:1126:56303:16:0:374:382:642:12:g_d0_f12:12:g_d0_f12:A:R
+28:1127:56304:0:10:384:389:660:12:g_d0_f17:12:g_d0_f17:?:(
+28:1128:56305:10:0:390:449:650:12:g_d0_f9:8:g_d0_f6:?:Γ−(Rβ)1/ρ
+28:1129:56314:0:10:449:454:660:12:g_d0_f17:12:g_d0_f17:?:)
+28:1130:56315:10:27:458:479:650:12:g_d0_f8:12:g_d0_f8:?:>0,
+28:1131:56318:27:14:100:491:623:12:g_d0_f3:12:g_d0_f3:B:where the last inequality follows from the growth impatience condition (11).
+28:1132:56394:14:15:112:511:609:12:g_d0_f3:12:g_d0_f3:A:Using equation (13), it is straightforward to see thatseincreases (decreases)
+28:1133:56471:15:14:100:510:594:12:g_d0_f3:12:g_d0_f3:B:if and only if(se,ce)is below (above) the iso-seline. Equation (14) implies that
+28:1134:56551:14:15:100:511:580:12:g_d0_f8:12:g_d0_f3:B:cet+1is decreasing withset. Therefore,cedecreases if and only if(se,ce)is in the
+28:1135:56631:15:14:100:511:565:12:g_d0_f3:12:g_d0_f3:B:region to the right of the iso-celocus. This is also the region below the locus,
+28:1136:56711:14:15:100:510:551:12:g_d0_f3:12:g_d0_f3:B:because this locus is upward-sloping. Thus, the phase diagram is as it is shown
+28:1137:56790:15:34:100:480:536:12:g_d0_f3:12:g_d0_f3:B:on Figure 1, and the dynamics for the pair(set,cet)are saddle-point stable.
+28:1138:56865:34:22:100:318:502:14:g_d0_f7:14:g_d0_f7:C:A.5 Aggregating Individual Wealths
+28:1139:56899:22:15:100:510:480:12:g_d0_f3:12:g_d0_f3:B:Here we derive equation (19). The aggregate wealth of employed workers is given
+28:1140:56978:15:30:100:115:465:12:g_d0_f3:12:g_d0_f3:B:by,
+28:1141:56981:30:0:255:280:435:12:g_d0_f8:12:g_d0_f9:A:SSSet=
+28:1142:56987:0:29:285:301:450:8:g_d0_f10:12:g_d0_f17:A:+∞∑
+28:1143:56990:29:0:284:301:421:8:g_d0_f6:8:g_d0_f10:A:n=0
+28:1144:56993:0:30:303:355:435:12:g_d0_f8:8:g_d0_f6:?:et,t−nssset,t−n
+28:1145:57008:30:15:100:511:405:12:g_d0_f3:12:g_d0_f9:B:whereet,t−nis the number of employed workers born in periodt−n, andssset,t−n=
+28:1146:57085:15:14:100:510:390:12:g_d0_f8:12:g_d0_f3:B:set,t−nWt`nis the level of wealth held by the representative worker in the generation
+28:1147:57170:14:31:100:408:376:12:g_d0_f3:12:g_d0_f3:B:born att−n. Usinget,t−n= Ξt−n--0nand`n=Xn`0we have
+28:1148:57220:31:0:241:305:345:12:g_d0_f8:8:g_d0_f6:?:SSSet= Ξt`0Wt
+28:1149:57233:0:29:308:324:360:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+28:1150:57236:29:0:308:324:331:8:g_d0_f6:8:g_d0_f10:?:n=0
+28:1151:57239:0:32:326:369:345:12:g_d0_f9:12:g_d0_f8:A:Λnset,t−n,
+28:1152:57249:32:14:100:511:313:12:g_d0_f3:12:g_d0_f3:B:withΛ =--0X/Ξ. UsingPPPt=WtLLLt/(1−α)the ratio of foreign assets to output
+28:1153:57323:14:20:100:174:299:12:g_d0_f3:12:g_d0_f3:B:can be written
+28:1154:57337:20:16:228:240:279:12:g_d0_f8:8:g_d0_f6:A:SSSet
+28:1155:57342:16:0:228:241:263:12:g_d0_f8:8:g_d0_f6:A:PPPt
+28:1156:57346:0:0:246:296:271:12:g_d0_f9:12:g_d0_f9:?:= (1−α)
+28:1157:57353:0:16:297:317:279:12:g_d0_f9:8:g_d0_f10:A:Ξt`0
+28:1158:57357:16:0:301:312:263:12:g_d0_f8:8:g_d0_f6:?:LLLt
+28:1159:57361:0:29:322:338:286:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+28:1160:57364:29:0:322:338:257:8:g_d0_f6:8:g_d0_f10:?:n=0
+28:1161:57367:0:30:340:511:271:12:g_d0_f9:12:g_d0_f3:A:Λnset,t−n.(34)
+28:1162:57381:30:15:100:511:241:12:g_d0_f3:12:g_d0_f3:B:Each individual has a labor endowment that increases at rateXuntil he becomes
+28:1163:57458:15:14:100:511:226:12:g_d0_f3:12:g_d0_f3:B:unemployed. Thus, in periodtthe generation born att−nsupplies a quantity of
+28:1164:57533:14:15:100:510:212:12:g_d0_f3:12:g_d0_f3:B:labor equal to the number of workers from this generation who are still employed
+28:1165:57613:15:20:100:303:197:12:g_d0_f3:12:g_d0_f3:B:att, times the labor supply per worker,
+28:1166:57652:20:21:219:391:177:12:g_d0_f8:12:g_d0_f8:?:LLLt,t−n=   Ξt−n--0n`0Xn= ΞtΛn`0.
+28:1167:57685:21:30:100:287:156:12:g_d0_f3:12:g_d0_f3:B:Total labor supply, thus, is given by,
+28:1168:57723:30:0:201:225:126:12:g_d0_f8:12:g_d0_f9:?:LLLt=
+28:1169:57728:0:29:230:246:141:8:g_d0_f10:12:g_d0_f17:A:+∞∑
+28:1170:57731:29:0:229:245:112:8:g_d0_f6:8:g_d0_f10:A:n=0
+28:1171:57734:0:0:247:303:126:12:g_d0_f8:8:g_d0_f6:?:LLLt,t−n= Ξt
+28:1172:57746:0:29:307:323:141:8:g_d0_f10:12:g_d0_f17:?:+∞∑
+28:1173:57749:29:0:306:322:112:8:g_d0_f6:8:g_d0_f10:?:n=0
+28:1174:57752:0:0:325:375:126:12:g_d0_f9:8:g_d0_f6:?:Λn`0= Ξt
+28:1175:57760:0:16:386:395:134:12:g_d0_f8:8:g_d0_f10:?:`0
+28:1176:57762:16:0:377:405:118:12:g_d0_f9:12:g_d0_f9:A:1−Λ
+28:1177:57765:0:0:406:511:126:12:g_d0_f8:12:g_d0_f3:A:.(35)
+29:1178:57772:0:15:100:511:679:12:g_d0_f3:12:g_d0_f3:B:Using this expression to substitute outLLLtfrom equation (34) then gives equation
+29:1179:57853:15:34:100:124:664:12:g_d0_f3:12:g_d0_f3:B:(19).
+29:1180:57858:34:23:100:239:630:14:g_d0_f7:14:g_d0_f7:C:A.6 Model with Stakes
+29:1181:57879:23:14:100:510:607:12:g_d0_f3:12:g_d0_f3:B:We add to the model a transfer that ensures that the workers have the same
+29:1182:57953:14:14:100:510:593:12:g_d0_f3:12:g_d0_f3:B:wealth-to-income ratio at all times. More precisely, the transfer ensures that if
+29:1183:58034:14:15:100:511:579:12:g_d0_f3:12:g_d0_f3:B:all workers have the same ratiosein periodt, then this is also true in period
+29:1184:58111:15:14:100:510:564:12:g_d0_f8:12:g_d0_f3:B:t+ 1. So one simply needs to assume that all workers had the same ratioseat
+29:1185:58186:14:15:100:510:550:12:g_d0_f3:12:g_d0_f3:B:some point in the past for this to be true in all periods. This would be the case,
+29:1186:58268:15:14:100:510:535:12:g_d0_f3:12:g_d0_f3:B:for example, if the country started with a first generation at some distant period
+29:1187:58350:14:15:100:159:521:12:g_d0_f3:12:g_d0_f3:B:in the past.
+29:1188:58362:15:14:112:367:506:12:g_d0_f3:12:g_d0_f3:A:The period-tbudget constraint of an individual is
+29:1189:58411:14:17:234:254:492:12:g_d0_f8:8:g_d0_f10:A:ssst+1
+29:1190:58417:17:0:240:248:475:12:g_d0_f12:12:g_d0_f12:?:R
+29:1191:58418:0:23:258:378:483:12:g_d0_f9:12:g_d0_f8:A:+ccct+χt=ssst+ξt`tWt,
+29:1192:58439:23:14:100:511:460:12:g_d0_f3:12:g_d0_f3:B:whereχtis a lump-sum transfer. The transfer puts newborn individuals at the
+29:1193:58514:14:15:100:510:446:12:g_d0_f3:12:g_d0_f3:B:same net wealth-to-income ratio as the rest of the population.  For the other
+29:1194:58591:15:14:100:510:431:12:g_d0_f3:12:g_d0_f3:B:workers the transfer is a lump-sum tax that is proportional to their generation’s
+29:1195:58672:14:21:100:393:417:12:g_d0_f3:12:g_d0_f3:B:wealth. For an employed worker born att−nthe tax is,
+29:1196:58724:21:20:264:347:396:12:g_d0_f8:12:g_d0_f8:?:χt=τset`0XnWt,
+29:1197:58738:20:32:100:382:376:12:g_d0_f3:12:g_d0_f3:B:whereas for a new-born worker the transfer is given by,
+29:1198:58793:32:0:256:291:344:12:g_d0_f8:12:g_d0_f14:A:χt=−
+29:1199:58797:0:7:294:315:360:8:g_d0_f11:8:g_d0_f6:A:≡1−τ
+29:1200:58801:7:10:294:316:353:12:g_d0_f17:12:g_d0_f17:A:︷︸︸︷
+29:1201:58805:10:19:300:355:343:10:g_d0_f16:12:g_d0_f8:?:-τ set`0Wt.
+29:1202:58816:19:15:112:511:324:12:g_d0_f3:12:g_d0_f3:A:In all periods of a worker’s life, thus, the normalized budget constraint is given
+29:1203:58898:15:20:100:115:309:12:g_d0_f3:12:g_d0_f3:B:by,
+29:1204:58901:20:21:239:511:289:12:g_d0_f8:12:g_d0_f3:A:set+1=R/Γ (-τset−cet+ 1),(36)
+29:1205:58930:21:29:100:368:268:12:g_d0_f3:12:g_d0_f3:B:which generalizes (13). Equation (15) remains valid,
+29:1206:58982:29:0:236:268:239:12:g_d0_f9:8:g_d0_f6:A:ˇˇc=κu
+29:1207:58988:0:17:271:280:254:12:g_d0_f17:12:g_d0_f17:?:(
+29:1208:58989:17:0:280:298:237:12:g_d0_f9:12:g_d0_f9:A:1 +
+29:1209:58992:0:16:300:341:245:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+29:1210:59000:16:0:317:326:229:12:g_d0_f15:12:g_d0_f15:?:0
+29:1211:59001:0:15:342:364:254:12:g_d0_f17:8:g_d0_f6:A:)1/ρ
+29:1212:59005:15:29:367:375:239:12:g_d0_f9:12:g_d0_f8:A:ˇˇs,
+29:1213:59009:29:21:100:239:210:12:g_d0_f3:12:g_d0_f3:B:whereas (16) is replaced by
+29:1214:59036:21:20:254:357:189:12:g_d0_f9:12:g_d0_f8:A:(Γ/R−-τ)ˇˇs= 1−ˇˇc.
+29:1215:59055:20:15:100:511:169:12:g_d0_f3:12:g_d0_f3:B:Eliminatingˇˇcbetween these two equations then gives the following expression for
+29:1216:59136:15:30:100:273:154:12:g_d0_f3:12:g_d0_f3:B:the target wealth-to-income ratio,
+29:1217:59170:30:0:204:221:124:12:g_d0_f9:12:g_d0_f9:?:ˇˇs=
+29:1218:59174:0:12:224:231:142:12:g_d0_f17:12:g_d0_f17:?:[
+29:1219:59175:12:16:233:240:130:12:g_d0_f9:12:g_d0_f9:A:Γ
+29:1220:59176:16:0:232:240:114:12:g_d0_f12:12:g_d0_f12:A:R
+29:1221:59177:0:0:244:288:122:12:g_d0_f14:8:g_d0_f6:?:−-τ+κu
+29:1222:59183:0:17:291:300:139:12:g_d0_f17:12:g_d0_f17:?:(
+29:1223:59184:17:0:300:318:122:12:g_d0_f9:12:g_d0_f9:?:1 +
+29:1224:59187:0:16:321:361:130:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+29:1225:59195:16:0:337:346:114:12:g_d0_f15:12:g_d0_f15:?:0
+29:1226:59196:0:17:362:402:139:12:g_d0_f17:8:g_d0_f10:?:)1/ρ]−1
+29:1227:59203:17:0:405:511:122:12:g_d0_f8:12:g_d0_f3:A:.(37)
+30:1228:59210:0:21:100:414:679:12:g_d0_f3:12:g_d0_f3:B:The equilibrium level ofτresults from the following equality,
+30:1229:59271:21:20:249:362:658:12:g_d0_f9:12:g_d0_f8:?:Ξt-τset`0Wt=τsetWtLLLt.
+30:1230:59294:20:15:100:510:638:12:g_d0_f3:12:g_d0_f3:B:The left-hand side is the flow of payment that is required to endow each newborn
+30:1231:59374:15:14:100:510:623:12:g_d0_f3:12:g_d0_f3:B:individual with the same ratio of after-tax net wealth to income as the rest of
+30:1232:59453:14:14:100:510:609:12:g_d0_f3:12:g_d0_f3:B:the population. The right-hand side is the proceeds of the tax on the employed
+30:1233:59531:14:15:100:510:595:12:g_d0_f3:12:g_d0_f3:B:workers. Using (35) to substitute outLLLt, this equation simplifies to-τ=τ/(1−Λ),
+30:1234:59612:15:25:100:169:580:12:g_d0_f3:12:g_d0_f3:B:which implies
+30:1235:59625:25:0:277:296:555:12:g_d0_f8:12:g_d0_f9:?:τ=
+30:1236:59627:0:17:301:329:563:12:g_d0_f9:12:g_d0_f9:?:1−Λ
+30:1237:59630:17:0:301:329:546:12:g_d0_f9:12:g_d0_f9:?:2−Λ
+30:1238:59633:0:26:330:511:555:12:g_d0_f8:12:g_d0_f3:A:.(38)
+30:1239:59638:26:34:100:418:529:12:g_d0_f3:12:g_d0_f3:B:Using this expression to substitute outτfrom (37) gives (25).
+30:1240:59699:34:22:100:244:495:14:g_d0_f7:14:g_d0_f7:C:A.7 The Ramsey Model
+30:1241:59719:22:15:100:510:473:12:g_d0_f3:12:g_d0_f3:B:The Ramsey model corresponds to the particular case where there is one repre-
+30:1242:59796:15:14:100:511:458:12:g_d0_f3:12:g_d0_f3:B:sentative infinitely-lived worker (Ξ = 1and0= 0). In this case income growth
+30:1243:59872:14:15:100:510:444:12:g_d0_f3:12:g_d0_f3:B:is the same at the individual level and at the aggregate level. We can assume,
+30:1244:59950:15:14:100:371:429:12:g_d0_f3:12:g_d0_f3:B:without loss of generality, thatX= 1, so thatΓ =G.
+30:1245:60000:14:15:112:373:415:12:g_d0_f3:12:g_d0_f3:A:The individual’s problem at time0is to maximize,
+30:1246:60048:15:29:278:294:400:8:g_d0_f10:12:g_d0_f17:A:+∞∑
+30:1247:60051:29:0:278:292:371:8:g_d0_f6:8:g_d0_f10:A:t=0
+30:1248:60054:0:31:296:334:385:12:g_d0_f8:12:g_d0_f8:A:βtu(ccct),
+30:1249:60064:31:14:100:269:354:12:g_d0_f3:12:g_d0_f3:B:subject to the budget constraint,
+30:1250:60097:14:17:239:259:340:12:g_d0_f8:8:g_d0_f10:A:ssst+1
+30:1251:60103:17:0:246:254:323:12:g_d0_f12:12:g_d0_f12:?:R
+30:1252:60104:0:25:263:372:332:12:g_d0_f9:12:g_d0_f8:?:+ccct=ssst+ (1−α)pppt,
+30:1253:60126:25:14:100:511:307:12:g_d0_f3:12:g_d0_f3:B:wherepppt=Gtppp0is the country’s output. For the worker’s discounted intertem-
+30:1254:60204:14:15:100:351:293:12:g_d0_f3:12:g_d0_f3:B:poral income to be finite we must assumeG<R.
+30:1255:60248:15:14:112:511:278:12:g_d0_f3:12:g_d0_f3:A:Iterating on the budget constraint and usingccct=  (βR)t/ρccc0(from the Euler
+30:1256:60325:14:31:100:490:264:12:g_d0_f3:12:g_d0_f3:B:equation) andpppt=Gtppp0to substitute out consumption and output, we have
+30:1257:60398:31:0:172:200:233:12:g_d0_f8:12:g_d0_f9:?:ssst=
+30:1258:60403:0:29:212:227:248:8:g_d0_f6:12:g_d0_f17:?:t−1∑
+30:1259:60407:29:0:211:227:219:8:g_d0_f6:8:g_d0_f10:?:n=0
+30:1260:60410:0:0:230:313:233:12:g_d0_f12:12:g_d0_f14:A:Rt−n(1−α)pppn−
+30:1261:60424:0:29:317:333:248:8:g_d0_f6:12:g_d0_f17:?:t−1∑
+30:1262:60428:29:0:316:332:219:8:g_d0_f6:8:g_d0_f10:?:n=0
+30:1263:60431:0:38:335:407:233:12:g_d0_f12:12:g_d0_f8:?:Rt−ncccn+Rtsss0,
+30:1264:60447:38:0:191:257:195:12:g_d0_f9:8:g_d0_f10:?:=   (1−α)ppp0
+30:1265:60460:0:16:261:298:203:12:g_d0_f12:8:g_d0_f6:?:Rt−Gt
+30:1266:60465:16:0:259:301:187:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+30:1267:60470:0:0:305:326:195:12:g_d0_f14:8:g_d0_f10:?:−ccc0
+30:1268:60475:0:16:332:394:203:12:g_d0_f12:8:g_d0_f6:?:Rt−(βR)t/ρ
+30:1269:60485:16:0:328:399:187:12:g_d0_f9:12:g_d0_f12:A:1−(βR)1/ρ/R
+30:1270:60496:0:26:402:439:195:12:g_d0_f9:12:g_d0_f8:A:+Rtsss0.
+30:1271:60504:26:15:100:510:169:12:g_d0_f3:12:g_d0_f3:B:For the transversality condition to be satisfied,ccc0must be such that the terms
+30:1272:60584:15:14:100:511:154:12:g_d0_f3:12:g_d0_f3:B:inRtcancel out in the expression above. Using this property to substitute out
+30:1273:60661:14:28:100:289:140:12:g_d0_f8:12:g_d0_f3:B:ccc0, the expression forssstsimplifies to,
+30:1274:60703:28:0:205:277:112:12:g_d0_f8:8:g_d0_f10:?:ssst= (1−α)ppp0
+30:1275:60718:0:16:279:340:120:12:g_d0_f9:8:g_d0_f6:A:(βR)t/ρ−Gt
+30:1276:60728:16:0:289:331:104:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+30:1277:60733:0:0:345:406:112:12:g_d0_f9:12:g_d0_f8:A:+sss0(βR)t/ρ.
+31:1278:60748:0:28:100:343:679:12:g_d0_f3:12:g_d0_f3:B:The limiting wealth-to-output ratio is given by,
+31:1279:60796:28:7:179:195:651:12:g_d0_f9:12:g_d0_f9:?:lim
+31:1280:60799:7:0:174:200:644:8:g_d0_f6:8:g_d0_f11:?:t→+∞
+31:1281:60803:0:16:203:212:659:12:g_d0_f8:8:g_d0_f6:?:ssst
+31:1282:60807:16:0:203:212:643:12:g_d0_f8:8:g_d0_f6:?:pppt
+31:1283:60811:0:7:224:264:651:12:g_d0_f9:12:g_d0_f9:?:=lim
+31:1284:60815:7:0:243:269:644:8:g_d0_f6:8:g_d0_f11:?:t→+∞
+31:1285:60819:0:16:273:300:659:12:g_d0_f9:12:g_d0_f8:?:1−α
+31:1286:60822:16:0:281:292:643:12:g_d0_f12:8:g_d0_f6:A:Gt
+31:1287:60824:0:16:303:365:659:12:g_d0_f9:8:g_d0_f6:?:(βR)t/ρ−Gt
+31:1288:60834:16:0:313:355:643:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+31:1289:60839:0:0:369:378:651:12:g_d0_f9:12:g_d0_f9:A:+
+31:1290:60840:0:16:382:392:659:12:g_d0_f8:8:g_d0_f10:?:sss0
+31:1291:60844:16:0:381:392:643:12:g_d0_f8:8:g_d0_f10:?:ppp0
+31:1292:60848:0:16:395:431:659:12:g_d0_f9:8:g_d0_f6:?:(βR)t/ρ
+31:1293:60855:16:0:407:418:643:12:g_d0_f12:8:g_d0_f6:A:Gt
+31:1294:60857:0:34:432:435:651:12:g_d0_f8:12:g_d0_f8:?:,
+31:1295:60858:34:7:224:264:617:12:g_d0_f9:12:g_d0_f9:?:=lim
+31:1296:60862:7:0:243:269:610:8:g_d0_f6:8:g_d0_f11:?:t→+∞
+31:1297:60866:0:0:270:307:617:12:g_d0_f9:12:g_d0_f9:?:(1−α)
+31:1298:60871:0:16:311:346:625:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞtΓ−1
+31:1299:60878:16:0:308:350:609:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+31:1300:60883:0:0:353:362:617:12:g_d0_f9:12:g_d0_f9:?:+
+31:1301:60884:0:16:366:376:625:12:g_d0_f8:8:g_d0_f10:A:sss0
+31:1302:60888:16:0:366:376:609:12:g_d0_f8:8:g_d0_f10:A:ppp0
+31:1303:60892:0:31:378:391:617:12:g_d0_f15:8:g_d0_f10:?:ÞÞÞtΓ
+31:1304:60897:31:0:224:252:586:12:g_d0_f9:12:g_d0_f14:?:=−
+31:1305:60899:0:16:260:288:594:12:g_d0_f9:12:g_d0_f8:?:1−α
+31:1306:60902:16:0:253:296:578:12:g_d0_f9:12:g_d0_f12:?:1−G/R
+31:1307:60907:0:38:296:299:586:12:g_d0_f8:12:g_d0_f8:A:.
+31:1308:60908:38:23:100:225:548:14:g_d0_f7:14:g_d0_f7:C:A.8 Social Insurance
+31:1309:60928:23:14:100:510:525:12:g_d0_f3:12:g_d0_f3:B:Here we derive equation (29). The worker’s normalized budget constraint is still
+31:1310:61008:14:14:100:511:511:12:g_d0_f3:12:g_d0_f3:B:given by (36), taking into account that the wage is taxed at rateτwto pay for
+31:1311:61085:14:21:100:242:497:12:g_d0_f3:12:g_d0_f3:B:the unemployment benefits,
+31:1312:61111:21:21:231:511:476:12:g_d0_f8:12:g_d0_f3:A:set+1= (R/Γ) (-τset−cet+-τw).(39)
+31:1313:61144:21:16:100:511:455:12:g_d0_f3:12:g_d0_f3:B:Equation (12) still applies, withcut+1=κu(set+1+ς). Settingset+1=set=`ˇsand
+31:1314:61219:16:32:100:358:439:12:g_d0_f8:12:g_d0_f3:B:cet+1=cet=`ˇcin equations (12) and (39) we obtain
+31:1315:61268:32:0:207:239:407:12:g_d0_f9:8:g_d0_f6:?:`ˇc=κu
+31:1316:61274:0:20:242:251:425:12:g_d0_f17:12:g_d0_f17:?:(
+31:1317:61275:20:0:251:269:405:12:g_d0_f9:12:g_d0_f9:?:1 +
+31:1318:61278:0:16:272:321:413:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−1/ρΓ−1
+31:1319:61288:16:0:292:301:397:12:g_d0_f15:12:g_d0_f15:?:0
+31:1320:61289:0:20:322:345:425:12:g_d0_f17:8:g_d0_f6:?:)1/ρ
+31:1321:61293:20:36:347:384:405:12:g_d0_f9:12:g_d0_f8:?:(`ˇs+ς),
+31:1322:61301:36:23:241:350:369:12:g_d0_f9:12:g_d0_f8:?:`ˇs(Γ/R−-τ) =-τw−`ˇc.
+31:1323:61322:23:29:100:329:346:12:g_d0_f3:12:g_d0_f3:B:Eliminating`ˇcbetween these equations gives,
+31:1324:61366:29:0:212:229:317:12:g_d0_f9:12:g_d0_f9:?:`ˇs=
+31:1325:61370:0:22:232:239:336:12:g_d0_f17:12:g_d0_f17:A:[
+31:1326:61371:22:0:238:279:314:10:g_d0_f16:8:g_d0_f6:A:-τw−κu
+31:1327:61377:0:17:281:290:332:12:g_d0_f17:12:g_d0_f17:A:(
+31:1328:61378:17:0:290:308:315:12:g_d0_f9:12:g_d0_f9:?:1 +
+31:1329:61381:0:16:311:352:323:12:g_d0_f15:12:g_d0_f9:?:ÞÞÞ−ρΓ−1
+31:1330:61389:16:0:327:336:307:12:g_d0_f15:12:g_d0_f15:A:0
+31:1331:61390:0:17:353:375:332:12:g_d0_f17:8:g_d0_f6:?:)1/ρ
+31:1332:61394:17:0:377:381:315:12:g_d0_f8:12:g_d0_f8:A:ς
+31:1333:61395:0:19:382:389:336:12:g_d0_f17:12:g_d0_f17:?:]
+31:1334:61396:19:34:392:511:317:12:g_d0_f9:12:g_d0_f3:A:ˇˇs,(40)
+31:1335:61404:34:20:100:428:283:12:g_d0_f3:12:g_d0_f3:B:whereˇˇsis given by equation (25). The tax rateτwmust satisfy,
+31:1336:61466:20:21:246:365:263:12:g_d0_f8:12:g_d0_f8:?:τwLLLtWt=0Et−1X`ςWt.
+31:1337:61486:21:14:100:511:242:12:g_d0_f3:12:g_d0_f3:B:The left-hand-side is the flow of tax receipts at timet. The right-hand-side is the
+31:1338:61569:14:14:100:510:228:12:g_d0_f3:12:g_d0_f3:B:amount needed to finance the transfer to the newly unemployed workers. Using
+31:1339:61645:14:27:100:281:214:12:g_d0_f8:12:g_d0_f3:B:`=LLLt/EtandEt/Et−1= Ξone has,
+31:1340:61675:27:0:278:302:187:12:g_d0_f8:12:g_d0_f9:A:τw=
+31:1341:61678:0:16:307:324:195:12:g_d0_f15:12:g_d0_f12:?:0X
+31:1342:61680:16:0:311:319:179:12:g_d0_f9:12:g_d0_f9:?:Ξ
+31:1343:61681:0:24:324:332:187:12:g_d0_f8:12:g_d0_f8:?:ς.
+31:1344:61683:24:14:100:511:163:12:g_d0_f3:12:g_d0_f3:B:Using this expression and (38) to substitute outτwfrom equation (40) gives
+31:1345:61757:14:0:100:172:149:12:g_d0_f3:12:g_d0_f3:B:equation (29).
+32:1346:61773:0:22:100:252:679:14:g_d0_f7:14:g_d0_f7:C:A.9 Transition Dynamics
+32:1347:61796:22:21:100:510:657:12:g_d0_f3:12:g_d0_f3:B:Normalizing`0to 1, the equation for the dynamics of aggregate labor supply is,
+32:1348:61874:21:20:257:353:636:12:g_d0_f8:12:g_d0_f8:A:LLLt=--0XLLLt−1+ Ξt,
+32:1349:61894:20:27:100:252:616:12:g_d0_f3:12:g_d0_f3:B:implying that in steady state,
+32:1350:61924:27:0:269:293:589:12:g_d0_f8:12:g_d0_f9:?:LLLt=
+32:1351:61929:0:16:306:328:597:12:g_d0_f9:8:g_d0_f10:?:Ξt+1
+32:1352:61933:16:0:298:337:581:12:g_d0_f9:12:g_d0_f12:A:Ξ−--0X
+32:1353:61939:0:25:338:341:589:12:g_d0_f8:12:g_d0_f8:?:.
+32:1354:61940:25:15:100:511:564:12:g_d0_f3:8:g_d0_f6:B:Up until period0(inclusive), the economy is in a steady growth path withG=Gb
+32:1355:62016:15:25:100:203:549:12:g_d0_f3:12:g_d0_f3:B:and0=0b, so that
+32:1356:62032:25:0:266:292:524:12:g_d0_f8:12:g_d0_f9:?:LLL0=
+32:1357:62037:0:16:314:322:532:12:g_d0_f9:12:g_d0_f9:?:Ξ
+32:1358:62038:16:0:297:340:516:12:g_d0_f9:12:g_d0_f12:A:Ξ−--0bX
+32:1359:62045:0:25:341:344:524:12:g_d0_f8:12:g_d0_f8:A:.
+32:1360:62046:25:15:100:510:499:12:g_d0_f3:12:g_d0_f3:B:In period0it is announced that from period1onwards the productivity growth
+32:1361:62120:15:14:100:510:484:12:g_d0_f3:12:g_d0_f3:B:rate and the flow probability of unemployment jump to higher levels,Gaand0a.
+32:1362:62196:14:21:100:411:470:12:g_d0_f3:12:g_d0_f3:B:Starting fromLLL0, the dynamics of labor supply are given by,
+32:1363:62257:21:20:255:355:449:12:g_d0_f8:12:g_d0_f8:A:LLLt=--0aXLLLt−1+ Ξt,
+32:1364:62278:20:15:100:511:429:12:g_d0_f3:12:g_d0_f3:B:from which it is possible to compute the whole path(LLLt)t≤0, as well as the gross
+32:1365:62360:15:14:100:510:414:12:g_d0_f3:12:g_d0_f3:B:rate of growth in labor supply,LLLt/LLLt−1. It follows from (1) and (2) that output
+32:1366:62443:14:15:100:510:400:12:g_d0_f3:12:g_d0_f14:B:grows at the same rate asztLLLt.  Hence the gross rate of output growth,גt≡
+32:1367:62518:15:20:100:204:385:12:g_d0_f8:12:g_d0_f3:B:PPPt/PPPt−1, is given by
+32:1368:62542:20:20:267:343:365:12:g_d0_f13:8:g_d0_f10:?:גt=GaLLLt/LLLt−1
+32:1369:62558:20:15:100:467:345:12:g_d0_f3:12:g_d0_f3:B:fort≥1. Using this expression we can compute the whole path(גt)t≥1.
+32:1370:62625:15:14:112:511:330:12:g_d0_f3:12:g_d0_f3:A:We now come to the ratios of net foreign assets and capital outflows to GDP,
+32:1371:62701:14:19:100:493:316:12:g_d0_f8:12:g_d0_f3:B:NNNt/PPPtand(NNNt−NNNt−1)/PPPt. Using the definition ofNNNequation (5), we have
+32:1372:62780:19:17:227:241:297:12:g_d0_f8:8:g_d0_f6:A:NNNt
+32:1373:62784:17:0:227:240:280:12:g_d0_f8:8:g_d0_f6:A:PPPt
+32:1374:62788:0:0:246:278:288:12:g_d0_f9:8:g_d0_f10:?:=גt+1
+32:1375:62793:0:8:280:286:305:12:g_d0_f17:12:g_d0_f17:A:[
+32:1376:62794:8:17:287:344:297:12:g_d0_f9:8:g_d0_f10:?:(1−α)st+1
+32:1377:62803:17:0:312:320:280:12:g_d0_f12:12:g_d0_f12:?:R
+32:1378:62804:0:0:348:357:288:12:g_d0_f14:12:g_d0_f14:?:−
+32:1379:62805:0:17:361:371:297:12:g_d0_f8:12:g_d0_f8:?:KKK
+32:1380:62808:17:0:362:370:280:12:g_d0_f8:12:g_d0_f8:?:PPP
+32:1381:62811:0:17:373:379:305:12:g_d0_f17:12:g_d0_f17:A:]
+32:1382:62812:17:32:382:385:288:12:g_d0_f8:12:g_d0_f8:?:,
+32:1383:62813:32:17:178:231:256:12:g_d0_f8:8:g_d0_f10:?:NNNt−NNNt−1
+32:1384:62824:17:0:198:211:239:12:g_d0_f8:8:g_d0_f6:?:PPPt
+32:1385:62828:0:0:237:246:248:12:g_d0_f9:12:g_d0_f9:A:=
+32:1386:62829:0:17:250:278:256:12:g_d0_f9:12:g_d0_f8:?:1−α
+32:1387:62832:17:0:260:268:239:12:g_d0_f12:12:g_d0_f12:?:R
+32:1388:62833:0:0:281:417:248:12:g_d0_f9:12:g_d0_f9:A:(גt+1st+1−st)−(גt+1−1)
+32:1389:62855:0:17:418:429:256:12:g_d0_f8:12:g_d0_f8:?:KKK
+32:1390:62858:17:0:419:428:239:12:g_d0_f8:12:g_d0_f8:?:PPP
+32:1391:62861:0:26:431:434:248:12:g_d0_f8:12:g_d0_f8:?:,
+32:1392:62862:26:14:100:511:222:12:g_d0_f3:12:g_d0_f3:B:wherest=set+sutis the ratio of aggregate wealth to aggregate labor income.
+32:1393:62936:14:15:100:511:208:12:g_d0_f3:12:g_d0_f3:B:The path forsetis the individual convergence path for the model with stakes,
+32:1394:63012:15:14:100:511:193:12:g_d0_f3:12:g_d0_f3:B:where the initial conditionse0is given by (25) withG=Gband0=0b. This
+32:1395:63080:14:14:100:510:179:12:g_d0_f3:12:g_d0_f3:B:gives us the whole path(set)t≤0. As forsut, the initial condition can be derived
+32:1396:63160:14:27:100:199:165:12:g_d0_f3:12:g_d0_f3:B:from equation (21),
+32:1397:63179:27:0:242:265:138:12:g_d0_f8:12:g_d0_f9:?:su0=
+32:1398:63183:0:16:296:328:146:12:g_d0_f15:8:g_d0_f6:A:0bΞGb
+32:1399:63188:16:0:270:354:130:12:g_d0_f9:8:g_d0_f6:?:ΞGb−--Db(βR)1/ρ
+32:1400:63203:0:27:355:369:138:12:g_d0_f8:12:g_d0_f8:?:se0.
+32:1401:63207:27:0:100:510:111:12:g_d0_f3:12:g_d0_f3:B:The path forsutcan then be derived from equation (20), which can be rewritten
+33:1402:63286:0:28:100:200:679:12:g_d0_f3:12:g_d0_f3:B:in normalized form,
+33:1403:63305:28:0:230:262:651:12:g_d0_f8:12:g_d0_f9:A:sut+1=
+33:1404:63311:0:15:266:318:658:10:g_d0_f16:8:g_d0_f6:?:--Da(βR)1/ρ
+33:1405:63322:15:0:282:302:643:12:g_d0_f13:8:g_d0_f10:A:גt+1
+33:1406:63326:0:0:319:381:651:12:g_d0_f8:12:g_d0_f8:?:sut+0aset+1.
+35:1407:63342:0:27:100:187:679:17:g_d0_f2:17:g_d0_f2:C:References
+35:1408:63352:27:14:100:511:652:12:g_d0_f26:12:g_d0_f3:B:Arbatli, Elif C.(2008): “Persistence Of Income Shocks And The Intertemporal
+35:1409:63427:14:23:112:490:638:12:g_d0_f3:12:g_d0_f3:A:Model Of The Current Account,” Ph.D. thesis, Johns Hopkins University.
+35:1410:63497:23:15:100:511:615:12:g_d0_f26:12:g_d0_f3:B:Attanasio,  Orazio,  Lucio Picci,  and Antonello Scorcu(2000):
+35:1411:63559:15:14:112:511:600:12:g_d0_f3:12:g_d0_f3:A:“Saving, Growth, and Investment: A Macroeconomic Analysis Using a Panel
+35:1412:63630:14:24:112:405:586:12:g_d0_f3:12:g_d0_f3:A:of Countries,”Review of Economics and Statistics, 82(1).
+35:1413:63686:24:14:100:511:562:12:g_d0_f26:12:g_d0_f3:B:Bernanke, Ben(2005): “The Global Saving Glut and the U.S. Current Account
+35:1414:63759:14:15:112:511:548:12:g_d0_f3:12:g_d0_f18:A:Deficit,”Remarks at the Sandridge Lecture, Virginia Association of Economics,
+35:1415:63836:15:23:112:302:533:12:g_d0_f18:12:g_d0_f3:A:Richmond, Virginia, March 10, 2005.
+35:1416:63871:23:15:100:511:510:12:g_d0_f26:12:g_d0_f18:F:Blanchard, Olivier J.(1985): “Debt, Deficits, and Finite Horizons,”Journal
+35:1417:63945:15:23:112:303:495:12:g_d0_f18:12:g_d0_f3:A:of Political Economy, 93(2), 223–247.
+35:1418:63982:23:14:100:510:472:12:g_d0_f26:12:g_d0_f26:F:Caballero,  Ricardo  J.,  Emmanuel  Farhi,  and  Pierre-Olivier
+35:1419:64045:14:15:112:511:458:12:g_d0_f26:12:g_d0_f3:A:Gourinchas(2008):  “An Equilibrium Model of "Global Imbalances" and
+35:1420:64112:15:23:112:449:443:12:g_d0_f3:12:g_d0_f3:A:Low Interest Rates,”American Economic Review, 98(1), 358–388.
+35:1421:64173:23:15:100:511:420:12:g_d0_f26:12:g_d0_f3:B:Carroll,   Christopher  D.(2000):“‘Risky   Habits’   and   the
+35:1422:64235:15:14:112:510:405:12:g_d0_f3:12:g_d0_f3:A:Marginal   Propsensity   to   Consume   Out   of   Permanent   Income,”
+35:1423:64306:14:15:112:511:391:12:g_d0_f18:12:g_d0_f3:A:International   Economic   Journal,14(4),1–41,Available   at
+35:1424:64366:15:23:112:429:376:12:g_d0_f27:12:g_d0_f3:A:http://econ.jhu.edu/people/ccarroll/riskyhabits.pdf.
+35:1425:64418:23:14:156:510:353:12:g_d0_f3:12:g_d0_f3:A:(2009a):  “Lecture Notes:  A Tractable Model of Buffer Stock
+35:1426:64478:14:15:112:511:339:12:g_d0_f3:12:g_d0_f27:A:Saving,” Discussion paper, Johns Hopkins University, Available athttp:
+35:1427:64548:15:23:112:496:324:12:g_d0_f27:12:g_d0_f3:A://econ.jhu.edu/people/ccarroll/public/lecturenotes/consumption.
+35:1428:64611:23:15:146:510:301:12:g_d0_f3:12:g_d0_f18:A:(2009b): “Theoretical Foundations of Buffer Stock Saving,”Manuscript,
+35:1429:64680:15:14:112:510:286:12:g_d0_f18:12:g_d0_f3:A:Department of Economics, Johns Hopkins University, Latest version available
+35:1430:64755:14:24:112:480:272:12:g_d0_f3:12:g_d0_f3:A:athttp://econ.jhu.edu/people/ccarroll/BufferStockTheory.pdf.
+35:1431:64815:24:14:100:510:248:12:g_d0_f26:12:g_d0_f26:F:Carroll,  Christopher  D.,  Jody  R.  Overland,  and  David  N.
+35:1432:64878:14:15:112:510:234:12:g_d0_f26:12:g_d0_f3:A:Weil(2000):“Saving   and   Growth   with   Habit   Formation,”
+35:1433:64940:15:14:112:511:219:12:g_d0_f18:12:g_d0_f3:A:American   Economic   Review,90(3),341–355,Available   at
+35:1434:64997:14:23:112:416:205:12:g_d0_f27:12:g_d0_f3:A:http://econ.jhu.edu/people/ccarroll/AERHabits.pdf.
+35:1435:65047:23:15:100:510:182:12:g_d0_f26:12:g_d0_f3:B:Carroll, Christopher D., and Patrick Toche(2009):  “A Tractable
+35:1436:65110:15:23:112:474:167:12:g_d0_f3:12:g_d0_f3:A:Model of Buffer Stock Saving,”Manuscript, Johns Hopkins University.
+35:1437:65177:23:15:100:511:144:12:g_d0_f26:12:g_d0_f3:B:Carroll,   Christopher   D.,   and   David   N.   Weil(1994):
+35:1438:65238:15:14:112:511:129:12:g_d0_f3:12:g_d0_f18:A:“Saving   and   Growth:A   Reinterpretation,”Carnegie-Rochester
+35:1439:65301:14:15:112:511:115:12:g_d0_f18:12:g_d0_f27:A:Conference  Series  on  Public  Policy,  40,  133–192,  Available  athttp:
+35:1440:65375:15:0:112:490:100:12:g_d0_f27:12:g_d0_f3:A://econ.jhu.edu/people/ccarroll/CarrollWeilSavingAndGrowth.pdf.
+36:1441:65439:0:15:100:511:679:12:g_d0_f26:12:g_d0_f3:B:Chamon, Marcos, and Eswar Prasad(2008): “Why Are Saving Rates of
+36:1442:65503:15:24:112:454:664:12:g_d0_f3:12:g_d0_f3:A:Urban Households in China Rising?,”IMF Working Paper 08/145.
+36:1443:65563:24:15:100:510:640:12:g_d0_f26:12:g_d0_f26:F:Durdu, Ceyhun Bora, Enrique G. Mendoza, and Marco E. Terrones
+36:1444:65624:15:14:112:511:625:12:g_d0_f3:12:g_d0_f3:A:(2007): “Precautionary Demand for Foreign Assets in Sudden Stop Economies:
+36:1445:65698:14:14:112:511:611:12:g_d0_f3:12:g_d0_f18:A:An Assessment of the New Mercantilism,”FRB International Finance
+36:1446:65762:14:25:112:248:597:12:g_d0_f18:12:g_d0_f3:A:Discussion Paper No. 911.
+36:1447:65787:25:14:100:511:572:12:g_d0_f26:12:g_d0_f3:B:Fogli, Alessandra, and Fabrizio Perri(2006): “The ‘Great Moderation’
+36:1448:65855:14:25:112:495:558:12:g_d0_f3:12:g_d0_f3:A:and the U.S. External Imbalance,”NBER Working Paper Number w12708.
+36:1449:65921:25:14:100:511:533:12:g_d0_f26:12:g_d0_f3:B:Ghosh, Atish R., and Jonathan D. Ostry(1997):  “Macroeconomic
+36:1450:65982:14:15:112:511:519:12:g_d0_f3:12:g_d0_f18:A:Uncertainty, Precautionary Saving, and the Current Account,”Journal of
+36:1451:66052:15:24:112:290:504:12:g_d0_f18:12:g_d0_f3:A:Monetary Economics, 40, 121–139.
+36:1452:66084:24:14:100:511:480:12:g_d0_f26:12:g_d0_f3:B:Gourinchas, Pierre-Olivier, and Olivier Jeanne(2007): “Capital Flows
+36:1453:66152:14:15:112:510:466:12:g_d0_f3:12:g_d0_f18:A:to Developing Countries:  The Allocation Puzzle,”NBER Working Paper
+36:1454:66219:15:24:112:153:451:12:g_d0_f18:12:g_d0_f3:A:w13602.
+36:1455:66226:24:15:100:511:427:12:g_d0_f26:12:g_d0_f3:B:Hausmann,  Ricardo,  Lant Pritchett,  and Dani Rodrik(2005):
+36:1456:66286:15:24:112:471:412:12:g_d0_f3:12:g_d0_f3:A:“Growth Accelerations,”Journal of Economic Growth, 10(4), 303–329.
+36:1457:66352:24:15:100:511:388:12:g_d0_f26:12:g_d0_f3:B:Jeanne,  Olivier(2007):   “International  Reserves  in  Emerging  Market
+36:1458:66424:15:14:112:511:373:12:g_d0_f3:12:g_d0_f18:A:Countries:  Too Much of a Good Thing?,”Brookings Papers on Economic
+36:1459:66491:14:24:112:215:359:12:g_d0_f18:12:g_d0_f3:A:Activity, 2007, 1–55.
+36:1460:66512:24:15:100:511:335:12:g_d0_f26:12:g_d0_f3:B:Jeanne, Olivier, and Romain Rancière(2008):  “The Optimal Level
+36:1461:66575:15:14:112:511:320:12:g_d0_f3:12:g_d0_f3:A:of Reserves for Emerging Market Countries:  a New Formula and Some
+36:1462:66641:14:25:112:356:306:12:g_d0_f3:12:g_d0_f3:A:Applications,”CEPR Discussion Paper, (6723).
+36:1463:66685:25:14:100:510:281:12:g_d0_f26:12:g_d0_f3:B:Kimball, Miles S.(1990):  “Precautionary Saving in the Small and in the
+36:1464:66756:14:25:112:281:267:12:g_d0_f3:12:g_d0_f3:A:Large,”Econometrica, 58, 53–73.
+36:1465:66787:25:14:100:511:242:12:g_d0_f26:12:g_d0_f3:B:Lane, Philip R., and Gian Maria Milesi-Ferretti(2007): “The External
+36:1466:66855:14:15:112:511:228:12:g_d0_f3:12:g_d0_f3:A:Wealth of Nations Mark II: Revised and Extended Estimates of Foreign Assets
+36:1467:66930:15:24:112:464:213:12:g_d0_f3:12:g_d0_f3:A:and Liabilities,”Journal of International Economics, 73(2), 223–250.
+36:1468:66998:24:14:100:511:189:12:g_d0_f26:12:g_d0_f3:B:Loayza, Norman, Klaus Schmidt-Hebbel, and Luis Servén(2000):
+36:1469:67058:14:15:112:510:175:12:g_d0_f3:12:g_d0_f3:A:“What Drives Saving Across the World?,”Review of Economics and Statistics,
+36:1470:67132:15:24:112:142:160:12:g_d0_f3:12:g_d0_f3:A:82(1).
+36:1471:67138:24:15:100:511:136:12:g_d0_f26:12:g_d0_f18:F:Mankiw, N. Gregory(1995): “The Growth of Nations,”Brookings Papers on
+36:1472:67207:15:0:112:302:121:12:g_d0_f18:12:g_d0_f3:A:Economic Activity, 1995(1), 275–326.
+37:1473:67245:0:15:100:510:679:12:g_d0_f26:12:g_d0_f26:F:Mendoza, Enrique G., Vincenzo Quadrini, and Jose-Victor Rios-
+37:1474:67306:15:14:112:510:664:12:g_d0_f26:12:g_d0_f3:A:Rull(2007):   “Financial  Integration,  Financial  Deepness  and  Global
+37:1475:67378:14:25:112:383:650:12:g_d0_f3:12:g_d0_f3:A:Imbalances,”NBER Working Paper Number w12909.
+37:1476:67423:25:14:100:511:625:12:g_d0_f26:12:g_d0_f3:B:Obstfeld, Maurice, and Kenneth Rogoff(1995): “The Intertemporal
+37:1477:67486:14:14:112:510:611:12:g_d0_f3:12:g_d0_f3:A:Approach to the Current Account,” inHandbook of international Economics,
+37:1478:67558:14:15:112:511:597:12:g_d0_f3:12:g_d0_f3:A:ed. by Gene M. Grossman, and Kenneth Rogoff, vol. 3. North Holland,
+37:1479:67625:15:24:112:175:582:12:g_d0_f3:12:g_d0_f3:A:Amsterdam.
+37:1480:67635:24:15:100:511:558:12:g_d0_f26:12:g_d0_f3:B:Prasad, Eswar, Raghuram Rajan, and Arvind Subramanian(2007):
+37:1481:67695:15:14:112:511:543:12:g_d0_f3:12:g_d0_f18:A:“Foreign Capital and Economic Growth,”Brookings Papers on Economic
+37:1482:67761:14:25:112:223:529:12:g_d0_f18:12:g_d0_f3:A:Activity, pp. 153–230.
+37:1483:67783:25:14:100:511:504:12:g_d0_f26:12:g_d0_f3:B:Sandri,  Damiano(2008):   “Growth  and  Capital  Flows  with  Risky
+37:1484:67850:14:24:112:412:490:12:g_d0_f3:12:g_d0_f3:A:Entrepreneurship,”Manuscript, Johns Hopkins University.
+37:1485:67905:24:15:100:510:466:12:g_d0_f26:12:g_d0_f18:F:Sargent, Thomas J., and Lars Ljunqvist(2000):Recursive Macroeco-
+37:1486:67969:15:24:112:361:451:12:g_d0_f18:12:g_d0_f3:A:nomic Theory. The MIT Press, Cambridge, MA.
+37:1487:68012:24:15:100:510:427:12:g_d0_f26:12:g_d0_f3:B:Toche,  Patrick(2005):   “A Tractable Model of Precautionary Saving
+37:1488:68079:15:14:112:511:412:12:g_d0_f3:12:g_d0_f3:A:in Continuous Time,”Economics Letters,  87(2),  267–272,  Available at
+37:1489:68149:14:29:112:478:398:12:g_d0_f27:12:g_d0_f3:A:http://ideas.repec.org/a/eee/ecolet/v87y2005i2p267-272.html.
+38:1490:68211:29:0:208:236:369:12:g_d0_f28:12:Times:?:Dc=0
+38:1491:68215:0:113:419:447:419:12:g_d0_f28:12:Times:?:Ds=0
+38:1492:68219:113:0:317:322:306:12:g_d0_f29:12:g_d0_f29:?:s
+38:1493:68220:0:0:317:323:313:8:g_d0_f30:8:g_d0_f30:?:Ó
+38:1494:68221:0:0:142:147:433:12:g_d0_f29:12:g_d0_f29:?:c
+38:1495:68222:0:153:141:147:440:8:g_d0_f30:8:g_d0_f30:?:Ó
+38:1496:68223:153:23:283:356:287:12:Times:12:g_d0_f29:A:Wealthratios
+38:1497:68252:23:0:237:374:264:12:g_d0_f23:12:g_d0_f3:A:Figure 1Phase Diagram
+39:1498:68275:0:0:248:318:366:12:Times:12:Times:?:Consumption
+39:1499:68286:0:200:332:369:508:12:Times:12:Times:?:Wealth
+39:1500:68292:200:0:207:490:308:12:Times:12:Times:?:20406080100
+39:1501:68303:0:0:141:147:358:12:Times:12:Times:?:1
+39:1502:68304:0:0:141:147:399:12:Times:12:Times:?:2
+39:1503:68305:0:0:141:147:440:12:Times:12:Times:?:3
+39:1504:68306:0:0:141:147:481:12:Times:12:Times:?:4
+39:1505:68307:0:232:141:147:522:12:Times:12:Times:?:5
+39:1506:68308:232:23:302:329:290:12:Times:12:Times:?:Time
+39:1507:68344:23:0:234:377:267:12:g_d0_f23:12:g_d0_f3:A:Figure 2Transition Paths
+40:1508:68370:0:0:138:152:427:10:g_d0_f31:10:Times:?:-3
+40:1509:68372:0:0:138:152:443:10:g_d0_f31:10:Times:?:-2
+40:1510:68374:0:0:138:152:459:10:g_d0_f31:10:Times:?:-1
+40:1511:68376:0:0:146:152:475:10:Times:10:Times:?:0
+40:1512:68377:0:0:146:152:491:10:Times:10:Times:?:1
+40:1513:68378:0:0:146:152:507:10:Times:10:Times:?:2
+40:1514:68379:0:107:146:152:523:10:Times:10:Times:?:3
+40:1515:68380:107:0:188:266:416:10:Times:10:g_d0_f31:?:Riskaversion,Ρ
+40:1516:68397:0:0:338:488:434:10:Times:10:Times:?:0.020.030.040.05
+40:1517:68413:0:0:331:345:443:10:g_d0_f31:10:Times:?:-2
+40:1518:68415:0:0:339:345:467:10:Times:10:Times:?:0
+40:1519:68416:0:0:339:345:492:10:Times:10:Times:?:2
+40:1520:68417:0:99:339:345:517:10:Times:10:Times:?:4
+40:1521:68418:99:60:341:484:418:10:Times:10:g_d0_f33:A:Unemploymentprobability,∞
+40:1522:68446:60:14:223:278:358:10:Times:10:Times:?:Withstakes
+40:1523:68456:14:37:176:222:344:10:Times:10:Times:?:Nostakes
+40:1524:68464:37:0:173:297:307:10:Times:10:Times:?:1.041.061.081.10
+40:1525:68480:0:0:140:164:316:10:g_d0_f31:10:Times:?:-1.5
+40:1526:68484:0:0:149:164:329:10:Times:10:Times:?:1.0
+40:1527:68487:0:0:140:164:343:10:g_d0_f31:10:Times:?:-0.5
+40:1528:68491:0:0:149:164:356:10:Times:10:Times:?:0.0
+40:1529:68494:0:0:149:164:369:10:Times:10:Times:?:0.5
+40:1530:68497:0:0:149:164:383:10:Times:10:Times:?:1.0
+40:1531:68500:0:106:149:164:396:10:Times:10:Times:?:1.5
+40:1532:68503:106:0:172:281:290:10:Times:10:Times:?:Productivitygrowth,G
+40:1533:68526:0:0:341:485:306:10:Times:10:Times:A:1.001.011.021.031.041.05
+40:1534:68550:0:0:334:349:314:10:g_d0_f31:10:Times:?:-3
+40:1535:68552:0:0:334:349:330:10:g_d0_f31:10:Times:?:-2
+40:1536:68554:0:0:334:349:347:10:g_d0_f31:10:Times:?:-1
+40:1537:68556:0:0:343:349:363:10:Times:10:Times:A:0
+40:1538:68557:0:0:343:349:380:10:Times:10:Times:A:1
+40:1539:68558:0:107:343:349:396:10:Times:10:Times:A:2
+40:1540:68559:107:25:373:452:289:10:Times:10:Times:A:Interestfactor,R
+40:1541:68578:25:0:210:401:264:12:g_d0_f23:12:g_d0_f3:?:Figure 3Sensitivity To Parameters
+41:1542:68613:0:0:156:490:310:12:Times:12:Times:?:012345
+41:1543:68619:0:0:141:156:319:12:g_d0_f34:12:Times:?:-4
+41:1544:68621:0:0:141:156:360:12:g_d0_f34:12:Times:?:-3
+41:1545:68623:0:0:141:156:400:12:g_d0_f34:12:Times:?:-2
+41:1546:68625:0:0:141:156:441:12:g_d0_f34:12:Times:?:-1
+41:1547:68627:0:0:150:156:481:12:Times:12:Times:?:0
+41:1548:68628:0:230:150:156:522:12:Times:12:Times:?:1
+41:1549:68629:230:25:210:437:292:12:Times:12:g_d0_f35:?:Socialinsurancebenefitinyearsofwage,π
+41:1550:68687:25:0:144:467:267:12:g_d0_f23:12:g_d0_f3:?:Figure 4Social Insurance Generosity and Net Foreign Assets
+42:1551:68747:0:0:225:444:495:10:g_d0_f36:10:Times:?:-5051015202530
+42:1552:68761:0:0:185:206:503:10:Times:10:Times:?:1.02
+42:1553:68765:0:0:185:206:522:10:Times:10:Times:?:1.04
+42:1554:68769:0:0:185:206:541:10:Times:10:Times:?:1.06
+42:1555:68773:0:0:185:206:560:10:Times:10:Times:?:1.08
+42:1556:68777:0:169:185:206:580:10:Times:10:Times:?:1.10
+42:1557:68788:169:0:302:379:411:10:Times:10:Times:?:Noriskincrease
+42:1558:68802:0:67:338:425:439:10:Times:10:Times:?:Withriskincrease
+42:1559:68818:67:0:222:441:372:10:g_d0_f36:10:Times:?:-5051015202530
+42:1560:68832:0:0:188:203:381:10:g_d0_f36:10:Times:?:-2
+42:1561:68834:0:0:188:203:406:10:g_d0_f36:10:Times:?:-1
+42:1562:68836:0:0:197:203:432:10:Times:10:Times:?:0
+42:1563:68837:0:208:197:203:457:10:Times:10:Times:?:1
+42:1564:68843:208:0:226:445:249:10:g_d0_f36:10:Times:A:-5051015202530
+42:1565:68857:0:0:184:208:258:10:g_d0_f36:10:Times:?:-0.2
+42:1566:68861:0:0:184:208:277:10:g_d0_f36:10:Times:?:-0.1
+42:1567:68865:0:0:193:208:296:10:Times:10:Times:?:0.0
+42:1568:68868:0:0:193:208:315:10:Times:10:Times:?:0.1
+42:1569:68871:0:134:193:208:334:10:Times:10:Times:?:0.2
+42:1570:68886:134:0:223:388:200:12:g_d0_f23:12:g_d0_f3:?:Figure 5Transition Dynamics
+43:1571:68915:0:127:311:387:488:12:Times:12:Times:?:Increasingrisk
+43:1572:68929:127:0:371:439:361:12:Times:12:Times:A:Constantrisk
+43:1573:68941:0:27:258:267:496:12:Times:12:Times:A:A
+43:1574:68942:27:0:178:187:469:12:Times:12:Times:?:B
+43:1575:68943:0:186:345:354:503:12:Times:12:Times:A:C
+43:1576:68944:186:0:164:491:317:12:Times:12:Times:?:1.021.031.041.051.061.071.081.09
+43:1577:68976:0:0:142:173:327:12:g_d0_f34:12:Times:?:-0.20
+43:1578:68981:0:0:141:173:361:12:g_d0_f34:12:Times:?:-0.15
+43:1579:68986:0:0:142:173:396:12:g_d0_f34:12:Times:?:-0.10
+43:1580:68991:0:0:141:173:431:12:g_d0_f34:12:Times:?:-0.05
+43:1581:68996:0:0:150:173:465:12:Times:12:Times:?:0.00
+43:1582:69000:0:201:150:173:500:12:Times:12:Times:?:0.05
+43:1583:69004:201:25:251:404:299:12:Times:12:Times:?:Productivitygrowthfactor,G
+43:1584:69063:25:0:233:378:274:12:g_d0_f23:12:g_d0_f3:A:Figure 6Capital Outflows
+44:1585:69089:0:41:164:256:419:12:Times:12:Times:?:Wealthratio,π=0
+44:1586:69104:41:40:164:256:378:12:Times:12:Times:?:Wealthratio,π=1
+44:1587:69119:40:0:164:256:338:12:Times:12:Times:?:Wealthratio,π=2
+44:1588:69134:0:163:209:291:475:12:g_d0_f38:12:Times:?:òCapitalratio
+44:1589:69147:163:0:149:491:312:12:Times:12:Times:?:1.001.011.021.031.041.051.061.071.08
+44:1590:69183:0:0:141:157:321:12:Times:12:Times:?:1.5
+44:1591:69186:0:0:141:157:349:12:Times:12:Times:?:2.0
+44:1592:69189:0:0:141:157:377:12:Times:12:Times:?:2.5
+44:1593:69192:0:0:141:157:405:12:Times:12:Times:?:3.0
+44:1594:69195:0:0:141:157:434:12:Times:12:Times:?:3.5
+44:1595:69198:0:0:141:157:462:12:Times:12:Times:?:4.0
+44:1596:69201:0:0:141:157:490:12:Times:12:Times:?:4.5
+44:1597:69204:0:225:141:157:518:12:Times:12:Times:?:5.0
+44:1598:69207:225:23:276:364:293:12:Times:12:Times:?:Interestfactor,R
+44:1599:69245:23:0:224:387:270:12:g_d0_f23:12:g_d0_f3:?:Figure 7General Equilibrium
+45:1600:69274:0:0:215:261:357:10:g_d0_f39:10:Times:?:òHome
+45:1601:69279:0:231:215:269:516:10:g_d0_f39:10:Times:?:òForeign
+45:1602:69287:231:0:174:291:285:10:Times:10:Times:?:0.81.01.21.4
+45:1603:69299:0:0:148:171:294:10:g_d0_f39:10:Times:?:-0.6
+45:1604:69303:0:0:148:171:325:10:g_d0_f39:10:Times:?:-0.5
+45:1605:69307:0:0:148:171:357:10:g_d0_f39:10:Times:?:-0.4
+45:1606:69311:0:0:148:171:389:10:g_d0_f39:10:Times:?:-0.3
+45:1607:69315:0:0:148:171:420:10:g_d0_f39:10:Times:?:-0.2
+45:1608:69319:0:0:148:171:452:10:g_d0_f39:10:Times:?:-0.1
+45:1609:69323:0:0:156:171:484:10:Times:10:Times:?:0.0
+45:1610:69326:0:0:156:171:515:10:Times:10:Times:?:0.1
+45:1611:69329:0:279:156:171:547:10:Times:10:Times:?:0.2
+45:1612:69332:279:0:179:294:268:10:Times:10:Times:?:Foreignsocialinsurance
+45:1613:69370:0:160:395:453:485:10:g_d0_f39:10:Times:?:òWageW
+45:1614:69376:160:41:370:429:325:10:Times:10:g_d0_f39:A:ReturnRô
+45:1615:69384:41:0:354:471:284:10:Times:10:Times:?:0.81.01.21.4
+45:1616:69396:0:0:330:351:293:10:Times:10:Times:A:1.04
+45:1617:69400:0:0:330:351:325:10:Times:10:Times:A:1.05
+45:1618:69404:0:0:330:351:357:10:Times:10:Times:A:1.06
+45:1619:69408:0:0:330:351:388:10:Times:10:Times:A:1.07
+45:1620:69412:0:0:330:351:420:10:Times:10:Times:A:1.08
+45:1621:69416:0:0:330:351:452:10:Times:10:Times:A:1.09
+45:1622:69420:0:0:330:351:484:10:Times:10:Times:A:1.10
+45:1623:69424:0:0:330:351:516:10:Times:10:Times:A:1.11
+45:1624:69428:0:280:330:351:548:10:Times:10:Times:A:1.12
+45:1625:69432:280:62:359:474:268:10:Times:10:Times:?:Foreignsocialinsurance
+45:1626:69480:62:0:229:381:206:12:g_d0_f23:12:g_d0_f3:A:Figure 8Global Imbalances

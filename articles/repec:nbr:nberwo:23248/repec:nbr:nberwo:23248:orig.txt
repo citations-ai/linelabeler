@@ -1,0 +1,500 @@
+1:0:0:0:100:219:395:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:186:428:610:12:Times:12:Times:CEO BEHAVIOR AND FIRM PERFORMANCE
+1:2:58:28:14:268:347:582:12:Times:12:Times:Oriana Bandiera
+1:3:73:14:14:268:346:568:12:Times:12:Times:Stephen Hansen
+1:4:87:14:14:278:336:554:12:Times:12:Times:Andrea Prat
+1:5:98:14:28:269:346:540:12:Times:12:Times:Raffaella Sadun
+1:6:113:28:14:254:360:512:12:Times:12:Times:Working Paper 23248
+1:7:132:14:42:220:395:498:12:Times:12:Times:http://www.nber.org/papers/w23248
+1:8:165:42:14:174:439:456:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:9:201:14:14:239:376:442:12:Times:12:Times:1050 Massachusetts Avenue
+1:10:226:14:14:251:363:428:12:Times:12:Times:Cambridge, MA 02138
+1:11:245:14:116:215:399:414:12:Times:12:g_d0_f1:March 2017, Revised September 2017
+1:12:279:116:14:72:546:298:12:Times:12:Times:This  project  was  funded  by  Columbia  Business  School,  Harvard  Business  School  and  the  Kau 
+1:13:381:14:14:72:546:284:12:Times:12:Times:man Foundation.  We  are  grateful  to  Morten  Bennedsen,  Robin  Burgess,  Wouter  Dessein,  Bob 
+1:14:479:14:14:72:545:270:12:Times:12:Times:Gibbons, Rebecca  Henderson,  Ben  Hermalin,  Paul  Ingram,  Amit  Khandelwal,  Nicola  Limodio, 
+1:15:575:14:14:72:545:256:12:Times:12:Times:Michael  McMahon, Antoinette  Schoar,  Daniela  Scur,  Steve  Tadelis  and  seminar  participants  at 
+1:16:676:14:14:72:545:242:12:Times:12:Times:ABD  Institute,  Bocconi, Cattolica,  Chicago,  Columbia,  Copenhagen  Business  School,  Cornell, 
+1:17:774:14:14:72:546:228:12:Times:12:Times:the CEPR Economics of Organization Workshop, the CEPR/IZA Labour Economics Symposium, 
+1:18:859:14:14:72:546:214:12:Times:12:Times:Edinburgh, Harvard Business School, INSEAD, LSE, MIT, Munich, NBER, Oxford, Politecnico 
+1:19:946:14:14:72:545:200:12:Times:12:Times:di  Milano,  Princeton,  Science  Po,  SIOE, Sydney,  Stanford  Management  Conference,  Tel  Aviv, 
+1:20:1045:14:14:72:545:186:12:Times:12:Times:Tokyo,  Toronto,  Uppsala,  and  Warwick  for useful  suggestions.  The  views  expressed  herein  are 
+1:21:1147:14:14:72:545:172:12:Times:12:Times:those of the authors and do not necessarily reflect the views of the National Bureau of Economic 
+1:22:1243:14:28:72:119:158:12:Times:12:Times:Research.
+1:23:1252:28:14:72:546:130:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been 
+1:24:1343:14:14:72:546:116:12:Times:12:Times:peer-reviewed  or  been  subject  to  the  review  by  the  NBER  Board  of  Directors  that  accompanies 
+1:25:1449:14:28:72:206:102:12:Times:12:Times:official NBER publications.
+1:26:1475:28:14:72:546:74:12:Times:12:Times:©  2017  by  Oriana  Bandiera,  Stephen  Hansen,  Andrea  Prat,  and  Raffaella  Sadun.  All  rights 
+1:27:1576:14:14:72:546:60:12:Times:12:Times:reserved. Short  sections  of  text,  not  to  exceed  two  paragraphs,  may  be  quoted  without  explicit 
+1:28:1683:14:0:72:448:46:12:Times:12:Times:permission provided that full credit, including © notice, is given to the source.
+2:29:1763:0:14:72:254:700:12:Times:12:Times:CEO Behavior and Firm Performance
+2:30:1796:14:14:72:404:686:12:Times:12:g_d0_f1:Oriana Bandiera, Stephen Hansen, Andrea Prat, and Raffaella Sadun 
+2:31:1861:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 23248
+2:32:1889:14:14:72:256:658:12:g_d0_f2:12:g_d0_f2:March 2017, Revised September 2017
+2:33:1923:14:28:72:195:644:12:Times:12:Times:JEL No. J22,J24,M12,O4
+2:34:1945:28:28:273:338:616:12:Times:12:Times:ABSTRACT
+2:35:1953:28:14:72:546:588:12:Times:12:Times:We  measure  the  behavior  of  1,114  CEOs  in  six  countries  parsing  granular  CEO  diary  data 
+2:36:2054:14:14:72:546:574:12:Times:12:Times:through an  unsupervised  machine  learning  algorithm.  The  algorithm  uncovers  two  distinct 
+2:37:2150:14:14:72:545:560:12:Times:12:Times:behavioral   types: “leaders”   and   “managers”.   Leaders   focus   on   multi-function,   high-level 
+2:38:2253:14:14:72:545:546:12:Times:12:Times:meetings,  while  managers  focus on  one-to-one  meetings  with  core  functions.  Firms  with  leader 
+2:39:2356:14:14:72:546:532:12:Times:12:Times:CEOs are on average more productive, and this difference arises only after the CEO is hired. The 
+2:40:2452:14:14:71:545:518:12:Times:12:Times:data  is  consistent  with  horizontal  differentiation of  CEO  behavioral  types,  and  firm-CEO 
+2:41:2550:14:14:71:546:504:12:Times:12:Times:matching frictions. We estimate that 17% of sample CEOs are mismatched, and that mismatches 
+2:42:2641:14:28:71:312:490:12:Times:12:Times:are associated with significant productivity losses.
+2:43:2693:28:14:72:151:462:12:Times:12:Times:Oriana Bandiera
+2:44:2708:14:14:72:215:448:12:Times:12:Times:London School of Economics
+2:45:2734:14:28:72:175:434:12:Times:12:Times:o.bandiera@lse.ac.uk
+2:46:2754:28:14:72:150:406:12:Times:12:Times:Stephen Hansen
+2:47:2768:14:14:72:173:392:12:Times:12:Times:University of Oxford
+2:48:2788:14:14:72:201:378:12:Times:12:Times:Department of Economics 
+2:49:2812:14:14:72:180:364:12:Times:12:Times:Manor Road Building 
+2:50:2832:14:14:72:135:350:12:Times:12:Times:Manor Road 
+2:51:2843:14:14:72:159:336:12:Times:12:Times:Oxford OX1 3UQ
+2:52:2857:14:14:72:153:322:12:Times:12:Times:United Kingdom
+2:53:2871:14:0:72:251:308:12:Times:12:Times:stephen.hansen@economics.ox.ac.uk
+2:54:2904:0:14:306:364:462:12:Times:12:Times:Andrea Prat
+2:55:2915:14:14:306:435:448:12:Times:12:Times:Columbia Business School
+2:56:2939:14:14:306:430:434:12:Times:12:Times:3022 Broadway, Uris 624
+2:57:2962:14:14:306:441:420:12:Times:12:Times:New York, NY 10027-6902
+2:58:2985:14:28:306:436:406:12:Times:12:Times:andrea.prat@columbia.edu
+2:59:3009:28:14:306:383:378:12:Times:12:Times:Raffaella Sadun
+2:60:3024:14:14:306:427:364:12:Times:12:Times:Harvard Business School
+2:61:3047:14:14:306:389:350:12:Times:12:Times:Morgan Hall 233
+2:62:3062:14:14:306:373:336:12:Times:12:Times:Soldiers Field
+2:63:3076:14:14:306:398:322:12:Times:12:Times:Boston, MA 02163
+2:64:3092:14:14:306:358:308:12:Times:12:Times:and NBER
+2:65:3100:14:0:306:386:294:12:Times:12:Times:rsadun@hbs.edu
+3:66:3114:0:28:72:185:709:206:g_d0_f3:206:g_d0_f3:1  Introduction
+3:67:3129:28:16:72:540:681:119:g_d0_f4:119:g_d0_f4:CEOs are at the core of many academic and policy debates. The conventional wisdom, backed by
+3:68:3221:16:17:72:540:665:119:g_d0_f4:119:g_d0_f4:a growing body of empirical evidence (Bertrand and Schoar 2003, Bennedsen et al. 2007, Kaplan
+3:69:3314:17:16:72:540:648:119:g_d0_f4:119:g_d0_f4:et al. 2012), is that the identity of the CEO matters for firm performance. What is less known
+3:70:3408:16:16:72:539:632:119:g_d0_f4:119:g_d0_f4:is what di↵erent CEOs do di↵erently, and whether and how di↵erences in CEO behavior have
+3:71:3496:16:17:72:232:616:119:g_d0_f4:119:g_d0_f4:significant economic implications.
+3:72:3530:17:16:88:539:599:119:g_d0_f4:119:g_d0_f4:Scholars have approached this question in two ways. At one end of the spectrum, an influential
+3:73:3624:16:17:72:540:583:119:g_d0_f4:119:g_d0_f4:cluster of studies starting with Mintzberg (1973) have focused on the measurement of the actual
+3:74:3719:17:16:72:540:566:119:g_d0_f4:119:g_d0_f4:behavior of executives. They do so by “shadowing” CEOs in real time through personal observation.
+3:75:3816:16:17:72:540:550:119:g_d0_f4:119:g_d0_f4:While shadowing exercises have revealed a wealth of information on the nature of the managerial
+3:76:3911:17:16:72:539:533:119:g_d0_f4:119:g_d0_f4:job, they are based on small and selected samples and, as such, are di-cult to generalize. At the
+3:77:4008:16:17:72:540:517:119:g_d0_f4:119:g_d0_f4:other end of the spectrum, organizational economists have developed abstract categorizations of
+3:78:4103:17:16:72:539:500:119:g_d0_f4:119:g_d0_f4:leadership styles that, however, are di-cult to map into empirical proxies of behavior (Dessein and
+3:79:4202:16:16:72:261:484:119:g_d0_f4:64:g_d0_f6:Santos (2016); Hermalin (1998, 2007)).1
+3:80:4241:16:17:88:539:468:119:g_d0_f4:119:g_d0_f4:This paper develops a new methodology to bring back quantitative measurements of CEO
+3:81:4325:17:16:72:540:451:119:g_d0_f4:119:g_d0_f4:behavior by scaling up the shadowing methods to large samples. Our aim is to advance knowledge on
+3:82:4422:16:17:72:540:435:119:g_d0_f4:119:g_d0_f4:questions that have managerial behavior at their core, through new, large-scale and internationally
+3:83:4521:17:16:72:304:418:119:g_d0_f4:119:g_d0_f4:comparable evidence on what CEOs actually do.
+3:84:4566:16:17:88:539:402:119:g_d0_f4:119:g_d0_f4:This approach involves two primary challenges: a) how to shadow a large number of CEOs, and
+3:85:4657:17:16:72:540:385:119:g_d0_f4:119:g_d0_f4:b) how to aggregate granular information on their activities into a summary measure that has a
+3:86:4751:16:16:72:540:369:119:g_d0_f4:119:g_d0_f4:consistent meaning across subjects. We address the first challenge by shadowing the CEOs’ diaries,
+3:87:4849:16:17:72:540:353:119:g_d0_f4:119:g_d0_f4:rather than the individuals themselves, via daily phone calls with the CEOs or their Personal
+3:88:4942:17:16:72:540:336:119:g_d0_f4:119:g_d0_f4:Assistants. This approach allows us to collect comparable data on the behavior of 1,114 CEOs
+3:89:5034:16:17:72:540:320:119:g_d0_f4:119:g_d0_f4:of manufacturing firms in six countries: Brazil, France, Germany, India, UK and the US. Overall,
+3:90:5130:17:16:72:540:303:119:g_d0_f4:119:g_d0_f4:we collect data on 42,233 activities covering an average of 50 working hours per CEO. We record
+3:91:5225:16:17:72:540:287:119:g_d0_f4:119:g_d0_f4:the same five features for each activity: its type (e.g. meeting, plant/shop-floor visits, business
+3:92:5324:17:16:72:539:270:119:g_d0_f4:119:g_d0_f4:lunches etc.), planning horizon, number of participants involved, number of di↵erent functions,
+3:93:5419:16:17:72:540:254:119:g_d0_f4:119:g_d0_f4:and the participants’ function (e.g. finance, marketing, clients, suppliers, etc.).2We find that CEO
+3:94:5519:17:14:84:539:237:36:g_d0_f7:80:g_d0_f8:1Hermalin (1998) and Hermalin (2007) propose a rational theory of leadership, whereby the leader possesses private
+3:95:5633:14:11:72:540:223:80:g_d0_f8:80:g_d0_f8:non-verifiable information on the productivity of the venture that she leads. Van den Steen (2010) highlights the
+3:96:5746:11:11:72:540:212:80:g_d0_f8:80:g_d0_f8:importance of shared beliefs in organizations, as these lead to more delegation, less monitoring, higher utility, higher
+3:97:5866:11:11:72:539:201:80:g_d0_f8:80:g_d0_f8:execution e↵ort, faster coordination, less influence activities, and more communication. Bolton et al. (2013) highlights
+3:98:5986:11:11:72:540:190:80:g_d0_f8:80:g_d0_f8:the role of resoluteness, A resolute leader has a strong, stable vision that makes her credible among her followers.
+3:99:6102:11:11:72:540:179:80:g_d0_f8:80:g_d0_f8:This helps align the followers’ incentives and generates higher e↵ort and performance. Dessein and Santos (2016)
+3:100:6214:11:11:72:540:168:80:g_d0_f8:80:g_d0_f8:explore the interaction between CEO characteristics, CEO attention allocation, and firm behavior: small di↵erences
+3:101:6328:11:11:72:539:157:80:g_d0_f8:80:g_d0_f8:in managerial expertise may be amplified by optimal attention allocation and result in dramatically di↵erent firm
+3:102:6441:11:7:72:109:146:80:g_d0_f8:80:g_d0_f8:behavior.
+3:103:6450:7:15:84:539:139:36:g_d0_f7:80:g_d0_f8:2In earlier work (Bandiera et al. 2017) we used the same data to measure the CEOs’ labor supply and assess
+3:104:6556:15:11:72:540:124:80:g_d0_f8:80:g_d0_f8:whether and how it correlates with di↵erences in corporate governance (and in particular whether the firm is led by
+3:105:6671:11:0:72:134:113:80:g_d0_f8:80:g_d0_f8:a family CEO).
+4:106:6686:0:17:72:540:709:119:g_d0_f4:119:g_d0_f4:behavior di↵ers considerably along all five features. In particular, while the majority of CEOs spend
+4:107:6787:17:16:72:539:692:119:g_d0_f4:119:g_d0_f4:most of their time in meetings, they di↵er in the extent to which their focus is on firms’ employees
+4:108:6887:16:17:72:540:676:119:g_d0_f4:119:g_d0_f4:vs. outsiders, and within the former, whether they mostly interact with high-level executives vs.
+4:109:6984:17:16:72:539:659:119:g_d0_f4:119:g_d0_f4:production employees. CEOs also di↵er in how they organize these interactions in terms of duration,
+4:110:7083:16:17:72:540:643:119:g_d0_f4:119:g_d0_f4:number of people involved, number of functions these people represent and planning horizon. We
+4:111:7177:17:16:72:540:626:119:g_d0_f4:119:g_d0_f4:also show that these dimensions of time use are correlated so that, for instance, CEOs who focus
+4:112:7273:16:17:72:357:610:119:g_d0_f4:119:g_d0_f4:on production also tend to have short, one-to-one meetings.
+4:113:7332:17:16:88:539:593:119:g_d0_f4:119:g_d0_f4:CEO diaries yield a wealth of information that is too high-dimensional to be easily compared
+4:114:7424:16:16:72:540:577:119:g_d0_f4:119:g_d0_f4:across CEOs or correlated with other outcomes of interest, such as CEO and firm characteristics.
+4:115:7520:16:17:72:540:561:119:g_d0_f4:119:g_d0_f4:To address this second challenge, we use a machine learning algorithm that projects the many
+4:116:7612:17:16:72:540:544:119:g_d0_f4:119:g_d0_f4:dimensions of observed CEO behavior onto two pure behaviors, and generates a one-dimensional
+4:117:7704:16:17:72:540:528:119:g_d0_f4:119:g_d0_f4:behavior index that represents a CEO as a convex combination of the two pure behaviors. The
+4:118:7795:17:16:72:539:511:119:g_d0_f4:119:g_d0_f4:algorithm finds the combination of features that best di↵erentiates between the sample CEOs. The
+4:119:7891:16:17:72:540:495:119:g_d0_f4:119:g_d0_f4:first of the two pure behaviors is associated with more time spent with employees involved with
+4:120:7986:17:16:72:540:478:119:g_d0_f4:119:g_d0_f4:production activities, and one-on-one meetings with firm employees or suppliers. The second pure
+4:121:8082:16:16:72:540:462:119:g_d0_f4:119:g_d0_f4:behavior is associated with more time spent with C-suite executives, and in interactions involving
+4:122:8180:16:17:72:540:446:119:g_d0_f4:119:g_d0_f4:several participants and multiple functions from both inside and outside the firm together.  To
+4:123:8275:17:16:72:540:429:119:g_d0_f4:119:g_d0_f4:fix ideas, we label the first type of pure behavior “manager” and the second “leader”, following
+4:124:8371:16:17:72:540:413:119:g_d0_f4:119:g_d0_f4:the behavioral distinctions described in Kotter (1999). In Kotter’s work, management comprises
+4:125:8465:17:16:72:540:396:119:g_d0_f4:119:g_d0_f4:primarily of monitoring and implementation tasks. In contrast, leadership aims primarily at the
+4:126:8560:16:17:72:540:380:119:g_d0_f4:119:g_d0_f4:creation of organizational alignment, and involves significant investments in interpersonal commu-
+4:127:8658:17:16:72:304:363:119:g_d0_f4:119:g_d0_f4:nication across a broad variety of constituencies.
+4:128:8708:16:17:88:539:347:119:g_d0_f4:119:g_d0_f4:The scalar behavior index can be used to investigate a range of questions about the causes and
+4:129:8802:17:16:72:540:330:119:g_d0_f4:119:g_d0_f4:consequences of CEO behavior. A natural starting point is to study the correlation between CEO
+4:130:8896:16:16:72:540:314:119:g_d0_f4:119:g_d0_f4:behavior and firm performance, which we do by merging the behavior index with firm balance sheet
+4:131:8992:16:17:72:540:298:119:g_d0_f4:119:g_d0_f4:data. We find that leader CEOs are more likely to be found in larger and more productive firms.
+4:132:9087:17:16:72:540:281:119:g_d0_f4:119:g_d0_f4:The correlation is economically and statistically significant: increasing the CEO behavior index by
+4:133:9186:16:17:72:540:265:119:g_d0_f4:119:g_d0_f4:one standard deviation is associated with an increase of 7% in sales controlling for labor, capital,
+4:134:9286:17:16:72:260:248:119:g_d0_f4:119:g_d0_f4:and other standard firm-level variables.
+4:135:9326:16:17:88:539:232:119:g_d0_f4:119:g_d0_f4:The correlation between CEO behavior and firm performance can be interpreted in three ways:
+4:136:9417:17:16:72:540:215:119:g_d0_f4:119:g_d0_f4:(i) CEO behavior simply reflects firm heterogeneity correlated with performance; (ii) CEO behavior
+4:137:9515:16:17:72:539:199:119:g_d0_f4:119:g_d0_f4:a↵ects performance and CEOs are vertically di↵erentiated, i.e. leader CEOs improve performance
+4:138:9609:17:16:72:539:182:119:g_d0_f4:119:g_d0_f4:regardless of the type of firms they work for, but they are scarce; (iii) CEO behavior a↵ects
+4:139:9702:16:16:72:540:166:119:g_d0_f4:119:g_d0_f4:performance and CEOs are horizontally di↵erentiated, i.e. firm performance is a function of the
+4:140:9797:16:17:72:540:150:119:g_d0_f4:119:g_d0_f4:correct firm-CEO match, but there are CEO-firm matching frictions and some firms are run by
+4:141:9888:17:16:72:431:133:119:g_d0_f4:119:g_d0_f4:CEOs with a firm-inappropriate behavior, thus causing a performance loss.
+4:142:9961:16:46:88:539:117:119:g_d0_f4:119:g_d0_f4:We use the subset of firms for which we have productivity data before and after the appointment
+4:143:10056:46:0:303:308:71:119:g_d0_f4:119:g_d0_f4:3
+5:144:10057:0:17:72:539:709:119:g_d0_f4:119:g_d0_f4:of the current CEO to investigate the first alternative, i.e. performance di↵erentials across CEOs
+5:145:10155:17:16:72:540:692:119:g_d0_f4:119:g_d0_f4:simply being driven by firm heterogeneity. This exercise reveals two results. First, firm performance
+5:146:10256:16:17:72:540:676:119:g_d0_f4:119:g_d0_f4:pre-appointment is not correlated with CEO type: firms that hire leader CEOs have the same
+5:147:10346:17:16:72:540:659:119:g_d0_f4:119:g_d0_f4:productivity growth as firms that hire manager CEOs before the CEO appointment. Second, the
+5:148:10437:16:17:72:540:643:119:g_d0_f4:119:g_d0_f4:hire of a leader CEO is associated with a significant change in firm productivity relative to the pre-
+5:149:10539:17:16:72:540:626:119:g_d0_f4:119:g_d0_f4:appointment period, which emerges gradually and increases over time. Overall, these results are
+5:150:10634:16:17:72:539:610:119:g_d0_f4:119:g_d0_f4:in contrast with the idea that CEO behavior is merely a reflection of di↵erential pre-appointment
+5:151:10731:17:16:72:367:593:119:g_d0_f4:119:g_d0_f4:trends or firm-level, time-invariant di↵erences in performance.
+5:152:10794:16:16:88:539:577:119:g_d0_f4:119:g_d0_f4:We then turn to the second class of alternatives–that is, that CEO behavior a↵ects firm perfor-
+5:153:10889:16:17:72:539:561:119:g_d0_f4:119:g_d0_f4:mance, either via vertical or horizontal di↵erentiation in CEO behavior. In the absence of exogenous
+5:154:10989:17:16:72:540:544:119:g_d0_f4:119:g_d0_f4:variation that would allow us to tell these alternatives apart, we develop a simple model of CEO-
+5:155:11086:16:17:72:540:528:119:g_d0_f4:119:g_d0_f4:firm assignment that encompasses both possibilities, and estimate it to test which is a better fit
+5:156:11184:17:16:72:540:511:119:g_d0_f4:119:g_d0_f4:for the data. In the model, CEOs and firms have heterogeneous types and a correct firm-CEO
+5:157:11274:16:17:72:539:495:119:g_d0_f4:119:g_d0_f4:assignment results in better firm performance. The model incorporates pure vertical di↵erentia-
+5:158:11369:17:16:72:540:478:119:g_d0_f4:119:g_d0_f4:tion–where all firms need leaders but leaders are scarce, and hence firms that end up with leaders
+5:159:11467:16:16:72:539:462:119:g_d0_f4:119:g_d0_f4:perform better–and horizontal di↵erentiation–where some firms need managers and others lead-
+5:160:11559:16:17:72:540:446:119:g_d0_f4:119:g_d0_f4:ers, but matching frictions imply that some of the firms that need leaders end up with managers.
+5:161:11655:17:16:72:539:429:119:g_d0_f4:119:g_d0_f4:The model estimation is consistent with horizontal di↵erentiation of CEOs with matching frictions.
+5:162:11753:16:17:72:540:413:119:g_d0_f4:119:g_d0_f4:More specifically, while most firms with managers are as productive as those with leaders, overall
+5:163:11851:17:16:72:540:396:119:g_d0_f4:119:g_d0_f4:the supply of managers outstrips demand, such that 17% of the firms end up with the “wrong”
+5:164:11942:16:17:72:540:380:119:g_d0_f4:119:g_d0_f4:type of CEO. These ine-cient assignments are more frequent in lower income countries (36% vs
+5:165:12034:17:16:72:540:363:119:g_d0_f4:119:g_d0_f4:5%). The productivity loss generated by the misallocation of CEOs to firms equals 13% of the
+5:166:12126:16:17:72:373:347:119:g_d0_f4:119:g_d0_f4:labor productivity gap between high and low income countries.
+5:167:12187:17:16:88:539:330:119:g_d0_f4:119:g_d0_f4:The main contribution of this study is a new method to measure CEO behavior in large samples,
+5:168:12280:16:16:72:540:314:119:g_d0_f4:119:g_d0_f4:with an approach can be easily replicated in a variety of contexts. To the best of our knowledge, the
+5:169:12381:16:17:72:539:298:119:g_d0_f4:64:g_d0_f6:largest CEO shadowing exercise besides ours is still Mintzberg (1973) and it comprised five CEOs.3
+5:170:12479:17:16:72:540:281:119:g_d0_f4:119:g_d0_f4:Our approach to the measurement of managerial behavior can be used to address questions that
+5:171:12571:16:17:72:540:265:119:g_d0_f4:119:g_d0_f4:have been core to the field of organizational economics, but has so far been subjected to limited,
+5:172:12669:17:16:72:540:248:119:g_d0_f4:119:g_d0_f4:if none, empirical investigation. For example, the coordinating role of entrepreneurs has been of
+5:173:12766:16:17:72:540:232:119:g_d0_f4:119:g_d0_f4:interest to economics since Coase (1937), and Roberts (2006) emphasizes the critical role played by
+5:174:12865:17:16:72:509:215:119:g_d0_f4:64:g_d0_f6:leadership behavior in complementing the organizational design tasks of general managers.4
+5:175:12955:16:16:88:539:199:119:g_d0_f4:119:g_d0_f4:The paper is also related to a growing literature documenting the role of management pro-
+5:176:13044:16:17:72:540:183:119:g_d0_f4:119:g_d0_f4:cesses on firm performance (Bloom and Van Reenen 2007 and Bloom et al. 2016). The correlation
+5:177:13137:17:15:84:539:166:36:g_d0_f7:80:g_d0_f8:3Other authors have performed shadowing exercises of executives below the CEO level (For instance, Kotter (1999)
+5:178:13249:15:11:72:540:151:80:g_d0_f8:80:g_d0_f8:studied 15 general managers). Some consulting companies, such as McKinsey, run surveys where they ask CEOs to
+5:179:13358:11:11:72:540:140:80:g_d0_f8:80:g_d0_f8:report their overall time use, but this is done on the basis of their subjective aggregate long-term recall rather than
+5:180:13477:11:7:72:208:129:80:g_d0_f8:80:g_d0_f8:on a detailed observational study.
+5:181:13511:7:15:84:539:122:36:g_d0_f7:80:g_d0_f8:4More recently, Cai and Szeidl (2016)) have shown that exogenous shifts in the interactions between an en-
+5:182:13617:15:0:72:540:107:80:g_d0_f8:80:g_d0_f8:trepreneur and his/her peers is associated with large increases in firm revenues, productivity and managerial quality.
+6:183:13736:0:17:72:540:709:119:g_d0_f4:119:g_d0_f4:between CEO behavior and firm performance that we uncover is of the same order of magnitude
+6:184:13827:17:16:72:540:692:119:g_d0_f4:119:g_d0_f4:as the correlation with management practices but, as we show in using a subsample of firms for
+6:185:13921:16:17:72:540:676:119:g_d0_f4:119:g_d0_f4:which we have both CEO time use and management practices data, management practices and
+6:186:14008:17:16:72:540:659:119:g_d0_f4:119:g_d0_f4:CEO behavior are independently correlated with firm performance. More recently, the availability
+6:187:14104:16:17:72:540:643:119:g_d0_f4:119:g_d0_f4:of rich longitudinal data on managerial transitions within firms has led to the quantification of het-
+6:188:14206:17:16:72:540:626:119:g_d0_f4:119:g_d0_f4:erogeneity in managerial quality, and its e↵ect on performance. Lazear et al. (2015) and Ho↵man
+6:189:14301:16:17:72:539:610:119:g_d0_f4:119:g_d0_f4:and Tadelis (2017), for example, report evidence of significant manager fixed e↵ects within firms,
+6:190:14399:17:16:72:539:593:119:g_d0_f4:119:g_d0_f4:with magnitudes similar to the ones reported in this paper. Di↵erently from these studies, we focus
+6:191:14498:16:16:72:540:577:119:g_d0_f4:119:g_d0_f4:on CEOs rather than middle managers. We share the objective of Lippi and Schivardi (2014) to
+6:192:14590:16:17:72:503:561:119:g_d0_f4:119:g_d0_f4:quantify the output reduction caused by distortions in the allocation of managerial talent.
+6:193:14681:17:16:88:539:544:119:g_d0_f4:119:g_d0_f4:Finally, the paper is related to the literature that studies CEO traits such as skills and personal-
+6:194:14781:16:17:72:540:528:119:g_d0_f4:119:g_d0_f4:ity (Kaplan et al. (2012), Kaplan and Sorensen (2016) Malmendier and Tate (2005) and Malmendier
+6:195:14876:17:16:72:540:511:119:g_d0_f4:119:g_d0_f4:and Tate (2009)) or self-reported management styles Mullins and Schoar (2013). We di↵er from
+6:196:14968:16:17:71:539:495:119:g_d0_f4:119:g_d0_f4:this literature in the object of measure (behavior vs. traits) and in terms of methodology: behavior
+6:197:15068:17:16:71:539:478:119:g_d0_f4:119:g_d0_f4:can be measured using actual diary data, while typically the assessment of personality measures
+6:198:15163:16:16:71:537:462:119:g_d0_f4:119:g_d0_f4:needs to rely on third party evaluations, self reports or indirect proxies for individual preferences.
+6:199:15265:16:17:88:539:446:119:g_d0_f4:119:g_d0_f4:The paper is organized as follows.  Section 2 describes the data and the machine learning
+6:200:15354:17:16:71:539:429:119:g_d0_f4:119:g_d0_f4:algorithm.  Section 3 presents the analysis of the relationship between CEO behavior and firm
+6:201:15447:16:17:71:540:413:119:g_d0_f4:119:g_d0_f4:performance looking, among other things, at whether firm past productivity leads to di↵erent
+6:202:15539:17:16:71:539:396:119:g_d0_f4:119:g_d0_f4:types of CEOs being appointed. Section 4 interprets the correlation between CEO behavior and
+6:203:15631:16:38:71:507:380:119:g_d0_f4:119:g_d0_f4:firm performance by estimating a simple CEO-firm assignment model. Section 5 concludes.
+6:204:15718:38:28:72:278:342:206:g_d0_f3:206:g_d0_f3:2  Measuring CEO Behavior
+6:205:15743:28:24:72:173:314:143:g_d0_f3:143:g_d0_f3:2.1  The Sample
+6:206:15758:24:16:72:540:290:119:g_d0_f4:119:g_d0_f4:We drew the sampling frame randomly from the set of firms classified in the manufacturing sector
+6:207:15854:16:16:72:540:274:119:g_d0_f4:119:g_d0_f4:in the accounting database ORBIS, an extensive commercial data set produced by the company
+6:208:15944:16:17:72:540:258:119:g_d0_f4:119:g_d0_f4:Bureau Van Dijk that contains company accounts for more than 200 million companies around the
+6:209:16037:17:16:72:101:241:119:g_d0_f4:119:g_d0_f4:world.
+6:210:16043:16:17:88:539:225:119:g_d0_f4:119:g_d0_f4:The sample covers CEOs in six of the world’s ten largest economies: Brazil, France, Germany,
+6:211:16135:17:16:72:540:208:119:g_d0_f4:119:g_d0_f4:India, the United Kingdom and the United States. For comparability, we chose to focus on estab-
+6:212:16230:16:17:72:540:192:119:g_d0_f4:119:g_d0_f4:lished market economies and opted for a balance between high- and middle-to-low-income countries.
+6:213:16327:17:16:72:540:175:119:g_d0_f4:119:g_d0_f4:We interview the highest-ranking authority in charge of the organization who has executive powers
+6:214:16424:16:17:72:539:159:119:g_d0_f4:119:g_d0_f4:and reports to the board of directors.  While titles may di↵er across countries (e.g.  Managing
+6:215:16519:17:16:72:377:142:119:g_d0_f4:119:g_d0_f4:Director in the UK), we refer to them as CEOs in what follows.
+6:216:16581:16:16:88:539:126:119:g_d0_f4:119:g_d0_f4:To maintain comparability of performance data, we restricted the sample to manufacturing
+6:217:16669:16:39:72:540:110:119:g_d0_f4:119:g_d0_f4:firms. We then selected firms with available sales and employment data in the latest accounting
+6:218:16764:39:0:303:308:71:119:g_d0_f4:119:g_d0_f4:5
+7:219:16765:0:17:72:540:709:119:g_d0_f4:119:g_d0_f4:year prior to the survey.5This yielded a sample of 6,527 firms in 32 two-digits SIC industries that
+7:220:16864:17:16:71:539:692:119:g_d0_f4:119:g_d0_f4:we randomly assigned to di↵erent analysts. Each analyst would then call the companies on the list
+7:221:16961:16:17:71:539:676:119:g_d0_f4:119:g_d0_f4:and seek the CEO’s participation. The survey was presented to the CEOs as an opportunity to
+7:222:17052:17:16:71:539:659:119:g_d0_f4:119:g_d0_f4:contribute to a research project on CEO behavior. To improve the quality of the data collected,
+7:223:17147:16:17:71:539:643:119:g_d0_f4:119:g_d0_f4:we also o↵ered CEOs with the opportunity to learn about their own time use with a personalized
+7:224:17241:17:16:71:398:626:119:g_d0_f4:64:g_d0_f6:time use analysis, to be delivered after the data had been collected.6
+7:225:17311:16:17:88:539:610:119:g_d0_f4:119:g_d0_f4:Of the 6,527 firms included in the screened ORBIS sample, 1,114 (17%) participated in the
+7:226:17400:17:16:72:540:593:119:g_d0_f4:119:g_d0_f4:survey,7of which 282 are in Brazil, 115 in France, 125 in Germany, 356 in India, 87 in the UK and
+7:227:17497:16:16:72:141:577:119:g_d0_f4:119:g_d0_f4:149 in the US.
+7:228:17511:16:17:88:539:561:119:g_d0_f4:119:g_d0_f4:Table A.1 shows that sample firms have on average lower log sales (coe-cient 0.071, standard
+7:229:17603:17:16:72:539:544:119:g_d0_f4:119:g_d0_f4:error 0.011) but we do not find any significant selection e↵ect on performance variables, such as labor
+7:230:17706:16:17:72:540:528:119:g_d0_f4:119:g_d0_f4:productivity (sales over employees) and return on capital employed (ROCE) (see the Appendix for
+7:231:17801:17:16:72:540:511:119:g_d0_f4:119:g_d0_f4:details). Table A.2 shows descriptive statistics on the sample CEOs and their firms. Sample CEOs
+7:232:17897:16:17:72:540:495:119:g_d0_f4:119:g_d0_f4:are 51 years old on average, nearly all (96%) are male and have a college degree (92%). About half
+7:233:17995:17:16:72:539:478:119:g_d0_f4:64:g_d0_f6:of them have an MBA. The average tenure is 10 years, with a standard deviation of 9.55 years.8
+7:234:18089:16:16:72:540:462:119:g_d0_f4:119:g_d0_f4:Finally, sample firms are very heterogeneous in size and sales values. Firms have on average 1,275
+7:235:18187:16:33:72:482:446:119:g_d0_f4:119:g_d0_f4:employees and $222 million in sales (respectively, 300 and $35 million at the median).
+7:236:18273:33:23:72:170:413:143:g_d0_f3:143:g_d0_f3:2.2  The Survey
+7:237:18288:23:17:72:540:390:119:g_d0_f4:119:g_d0_f4:To measure CEO behavior we develop a new survey tool that allows a large team of enumerators
+7:238:18380:17:16:72:540:373:119:g_d0_f4:119:g_d0_f4:to record in a consistent and comparable way all the activities the CEO undertakes in a given day.
+7:239:18478:16:16:72:540:357:119:g_d0_f4:119:g_d0_f4:Data are collected through daily phone calls with their personal assistant (PA), or with the CEO
+7:240:18574:16:17:72:540:341:119:g_d0_f4:119:g_d0_f4:himself (43% of the cases). We record diaries over a week that we chose based on an arbitrary
+7:241:18667:17:16:72:540:324:119:g_d0_f4:119:g_d0_f4:ordering of firms. Enumerators collected daily information on all the activities the CEO planned
+7:242:18763:16:15:84:539:308:36:g_d0_f7:80:g_d0_f8:5We went from a random sample of 11,500 firms with available employment and sales data to 6,527 eligible ones
+7:243:18872:15:10:72:540:293:80:g_d0_f8:80:g_d0_f8:after screening for firms for which we were able to find CEO contact details and were still active. We could find CEO
+7:244:18989:10:11:72:540:283:80:g_d0_f8:80:g_d0_f8:contact details for 7,744 firms and, of these, 1,217 later resulted not to be eligible. 310 of the 1,217 could not be
+7:245:19106:11:11:72:540:272:80:g_d0_f8:80:g_d0_f8:contacted to verify eligibility before the project ended.Among this set 1,009 were located in Brazil; 896 in Germany;
+7:246:19223:11:11:72:540:261:80:g_d0_f8:80:g_d0_f8:762 in France; 1,429 in India; 1,058 in the UK; 1,372 in the U.S. The lower number of firms screened in France and
+7:247:19337:11:11:72:540:250:80:g_d0_f8:80:g_d0_f8:Germany is due to the fact that the screening had to be done by native language research assistants based in Boston,
+7:248:19453:11:7:72:531:239:80:g_d0_f8:80:g_d0_f8:of which we could only hire one for each country. The sample construction is described in detail in the Appendix.
+7:249:19566:7:15:84:539:232:36:g_d0_f7:80:g_d0_f8:6The report was delivered two years after the data collection and included simple summary statistics on time use,
+7:250:19679:15:7:72:492:217:80:g_d0_f8:80:g_d0_f8:but no reference to the behavioral classification across “leaders” and “managers” that we discuss below.
+7:251:19783:7:15:84:539:210:36:g_d0_f7:80:g_d0_f8:7This figure is at the higher end of response rates for CEO surveys, which range between 9% and 16% (Graham
+7:252:19890:15:11:72:540:195:80:g_d0_f8:80:g_d0_f8:et al. (2013)). 1,131 CEOs agreed to participate but 17 dropped out before the end of the data collection week for
+7:253:20004:11:7:72:421:184:80:g_d0_f8:80:g_d0_f8:personal or professional contingencies that limited our ability to reach them by phone.
+7:254:20091:7:15:84:539:177:36:g_d0_f7:80:g_d0_f8:8The heterogeneity is mostly due to the distinction between family and professional CEOs, as the former have
+7:255:20199:15:11:72:540:162:80:g_d0_f8:80:g_d0_f8:much longer tenures. In our sample 57% of the firms are owned by a family, 23% by disperse shareholders, 9% by
+7:256:20309:11:11:72:540:151:80:g_d0_f8:80:g_d0_f8:private individuals, and 7% by private equity. Ownership data is collected in interviews with the CEOs at the end
+7:257:20422:11:11:72:540:140:80:g_d0_f8:80:g_d0_f8:of the survey week and independently checked using several Internet sources, information provided on the company
+7:258:20534:11:11:72:540:129:80:g_d0_f8:80:g_d0_f8:website and supplemental phone interviews. We define a firm to be owned by an entity if this controls at least 25.01%
+7:259:20651:11:0:72:527:118:80:g_d0_f8:80:g_d0_f8:of the shares; if no single entity owns at least 25.01% of the share the firm is labeled as “Dispersed shareholder”.
+8:260:20768:0:17:72:540:709:119:g_d0_f4:119:g_d0_f4:to undertake that day as well as those actually done.9On the last day of the data collection,
+8:261:20861:17:16:72:540:692:119:g_d0_f4:119:g_d0_f4:the enumerator interviewed the CEO to validate the activity data (if collected through his PA)
+8:262:20955:16:17:72:540:676:119:g_d0_f4:119:g_d0_f4:and to collect information on the characteristics of the CEO and of the firm. Figure A.1 shows a
+8:263:21051:17:16:72:539:659:119:g_d0_f4:119:g_d0_f4:screenshot of the survey tool.10The survey collects information on all the activities lasting longer
+8:264:21151:16:17:72:540:643:119:g_d0_f4:119:g_d0_f4:than 15 minutes in the order they occurred during the day. To avoid under (over) weighting long
+8:265:21246:17:16:72:518:626:119:g_d0_f4:119:g_d0_f4:(short) activities we structure the data so that the unit of analysis is a 15-minute time block.
+8:266:21342:16:17:88:539:610:119:g_d0_f4:119:g_d0_f4:Overall we collect data on 42,233 activities of di↵erent duration, equivalent to 225,721 15-minute
+8:267:21440:17:16:72:540:593:119:g_d0_f4:119:g_d0_f4:blocks, 90% of which cover work activities.11The average CEO has 202 15-minute time blocks,
+8:268:21531:16:32:71:280:577:119:g_d0_f4:119:g_d0_f4:adding up to 50 hours per week on average.
+8:269:21573:32:24:72:159:545:143:g_d0_f3:143:g_d0_f3:2.3  The Data
+8:270:21586:24:16:72:540:521:119:g_d0_f4:119:g_d0_f4:Figure 1, Panel A shows that the average CEO spends 70% of his time interacting with others
+8:271:21677:16:16:72:540:505:119:g_d0_f4:119:g_d0_f4:(either face to face via meetings or plant visits, or “virtually” via phone, videoconferences or
+8:272:21773:16:17:72:540:489:119:g_d0_f4:119:g_d0_f4:emails).  The remaining 30% is allocated to activities that support these interactions, such as
+8:273:21868:17:16:72:540:472:119:g_d0_f4:119:g_d0_f4:travel between meetings and time devoted to preparing for meetings. The fact that CEOs spend
+8:274:21960:16:17:72:540:456:119:g_d0_f4:119:g_d0_f4:such a large fraction of their time interacting with others is consistent with the prior literature.
+8:275:22060:17:16:72:540:439:119:g_d0_f4:119:g_d0_f4:Coase (1937), for example, sees as the main task of the entrepreneur precisely the coordination of
+8:276:22158:16:17:72:540:423:119:g_d0_f4:119:g_d0_f4:internal activities that cannot be otherwise be e↵ectively regulated through the price mechanism.
+8:277:22255:17:16:72:540:406:119:g_d0_f4:119:g_d0_f4:The highly interactive role of managers is also prominent in classic studies in management and
+8:278:22349:16:17:72:508:390:119:g_d0_f4:64:g_d0_f6:organizational behavior, such as Drucker (1967), Mintzberg (1973) and Mintzberg (1979).12
+8:279:22438:17:16:88:539:373:119:g_d0_f4:119:g_d0_f4:The richness and comparability of the time use data allows for a much more detailed description
+8:280:22533:16:16:72:540:357:119:g_d0_f4:119:g_d0_f4:of these interactions relative to prior studies. We use as primary features of the activities their: (1)
+8:281:22637:16:17:72:540:341:119:g_d0_f4:119:g_d0_f4:type (e.g. meeting, lunch, etc.); (2) duration (30m, 1h, etc.); (3) whether planned or unplanned;
+8:282:22734:17:16:72:540:324:119:g_d0_f4:119:g_d0_f4:(4) number of participants; (5) functions of participants, divided between employees of the firms,
+8:283:22832:16:17:72:540:308:119:g_d0_f4:119:g_d0_f4:which we define as “insiders” (finance, marketing, etc.), and non-employees, or “outsiders” (clients,
+8:284:22933:17:16:72:540:291:119:g_d0_f4:119:g_d0_f4:banks, etc.). Panel B shows most of this interactive time is spent with insiders. This suggests that
+8:285:23033:16:17:72:540:275:119:g_d0_f4:119:g_d0_f4:most CEOs chose to direct their attention primarily towards internal constituencies, rather than
+8:286:23129:17:16:72:540:258:119:g_d0_f4:119:g_d0_f4:serving as “ambassadors” for their firms (i.e. connecting with constituencies outside the firm). Few
+8:287:23229:16:16:72:540:242:119:g_d0_f4:119:g_d0_f4:CEOs spend time with insiders and outsiders together, suggesting that, if they do build a bridge
+8:288:23325:16:17:72:540:226:119:g_d0_f4:119:g_d0_f4:between the inside and the outside of the firm, CEOs typically do so alone. Panel C shows the
+8:289:23418:17:16:72:540:209:119:g_d0_f4:119:g_d0_f4:distribution of time spent with the three most frequent insiders—production, marketing, and C-
+8:290:23512:16:17:72:540:193:119:g_d0_f4:119:g_d0_f4:suite executives—and the three most frequent outsiders—clients, suppliers, and consultants. Panel
+8:291:23609:17:16:72:540:176:119:g_d0_f4:119:g_d0_f4:D shows most CEOs engage in planned activities with a duration of longer than one hour with
+8:292:23700:16:14:84:539:160:36:g_d0_f7:80:g_d0_f8:970% of the CEOs worked 5 days, 21% worked 6 days and 9% 7 days. Analysts called the CEO after the weekend
+8:293:23806:14:8:72:247:146:80:g_d0_f8:80:g_d0_f8:to retrieve data on Saturdays and Sundays.
+8:294:23848:8:11:80:384:138:36:g_d0_f7:80:g_d0_f8:10The survey tool can also be found online onwww.executivetimeuse.org.
+8:295:23918:11:11:80:404:127:36:g_d0_f7:80:g_d0_f8:11The non-work activities cover personal and family time during business hours.
+8:296:23997:11:14:80:539:116:36:g_d0_f7:80:g_d0_f8:12Mintzberg (1973), for example, documents that in a sample of five managers 70-80% of managerial time is spent
+8:297:24108:14:0:72:136:102:80:g_d0_f8:80:g_d0_f8:communicating.
+9:298:24123:0:17:72:540:709:119:g_d0_f4:119:g_d0_f4:a single function. There is no marked average tendency towards meeting with one or more than
+9:299:24215:17:16:72:540:692:119:g_d0_f4:119:g_d0_f4:one person. Another striking aspect of the data shown in Figure 1 is the marked heterogeneity
+9:300:24308:16:17:72:540:676:119:g_d0_f4:119:g_d0_f4:underlying these average tendencies. For example, CEOs at the bottom quartile devote just over
+9:301:24402:17:16:72:540:659:119:g_d0_f4:119:g_d0_f4:40% of the time to meetings whereas those at the top quartile reach 65%; CEOs at the 3rd quartile
+9:302:24499:16:17:72:540:643:119:g_d0_f4:119:g_d0_f4:devote over three times more time to production than their counterparts at the first quartile; and
+9:303:24597:17:16:72:540:626:119:g_d0_f4:119:g_d0_f4:the interdecile ranges for time with two people or more and two functions or more are well over
+9:304:24692:16:17:72:540:610:119:g_d0_f4:119:g_d0_f4:50%. The evidence of such marked di↵erences in behavior across managers is, to our knowledge, a
+9:305:24787:17:16:72:289:593:119:g_d0_f4:119:g_d0_f4:novel and so far under explored phenomenon.
+9:306:24830:16:16:88:539:577:119:g_d0_f4:119:g_d0_f4:The data also shows that systematic patterns of correlation across these distributions, as we
+9:307:24923:16:17:72:540:561:119:g_d0_f4:119:g_d0_f4:show in the heat map of Figure 2. This exercise reveals significant and intuitive patterns of co-
+9:308:25020:17:16:72:540:544:119:g_d0_f4:119:g_d0_f4:occurrence. For example, CEOs who do more plant visits spend more time with employees working
+9:309:25113:16:17:72:540:528:119:g_d0_f4:119:g_d0_f4:on production and suppliers. The data also shows that they tend to meet these functions one at the
+9:310:25211:17:16:72:540:511:119:g_d0_f4:119:g_d0_f4:time, rather than in multi-functional meetings. In contrast, CEOs who do more “virtual” commu-
+9:311:25305:16:17:72:540:495:119:g_d0_f4:119:g_d0_f4:nications engage in fewer plant visits, spend more time with C-suite executives, and interact with
+9:312:25403:17:16:72:540:478:119:g_d0_f4:119:g_d0_f4:large and more diverse groups of individuals. They are also less likely to include purely operational
+9:313:25504:16:16:72:540:462:119:g_d0_f4:119:g_d0_f4:functions (production, marketing—among inside functions—and clients and suppliers—among out-
+9:314:25596:16:17:72:540:446:119:g_d0_f4:119:g_d0_f4:siders) in their interactions. These correlations are consistent with the idea that CEO time use
+9:315:25692:17:16:72:540:429:119:g_d0_f4:119:g_d0_f4:reflects latent styles of managerial behavior, which we investigate in more detail in the next section.
+9:316:25795:16:17:88:539:413:119:g_d0_f4:119:g_d0_f4:The activities also appear to largely reflect conscious planning vs. mere reactions to external
+9:317:25890:17:16:72:540:396:119:g_d0_f4:119:g_d0_f4:contingencies. To assess this point, we asked whether each activity was undertaken in response to
+9:318:25987:16:17:72:540:380:119:g_d0_f4:119:g_d0_f4:an emergency: only 4% of CEOs’ time was devoted to activities that were defined as emergencies.
+9:319:26082:17:16:72:540:363:119:g_d0_f4:119:g_d0_f4:Furthermore, we compared the planned schedule of the manager (elicited in the morning conver-
+9:320:26175:16:17:72:540:347:119:g_d0_f4:119:g_d0_f4:sation) with the actual agenda (elicited in the evening conversation). This comparison shows that
+9:321:26272:17:16:72:540:330:119:g_d0_f4:119:g_d0_f4:CEOs typically undertake all the activities scheduled for a given day—overall just under 10% of
+9:322:26367:16:32:72:231:314:119:g_d0_f4:119:g_d0_f4:planned activities were cancelled.
+9:323:26401:32:24:72:253:282:143:g_d0_f3:143:g_d0_f3:2.4  The CEO Behavior Index
+9:324:26428:24:16:72:540:258:119:g_d0_f4:119:g_d0_f4:While the richness of the diary data allows us to describe CEO behavior in great detail, it makes
+9:325:26525:16:16:72:540:242:119:g_d0_f4:119:g_d0_f4:standard econometric analysis unfeasible because we have 4,253 unique activities (defined as a
+9:326:26619:16:17:72:524:226:119:g_d0_f4:119:g_d0_f4:combination of the five distinct features measured in the data) and 1,114 CEOs in our sample.
+9:327:26712:17:16:88:539:209:119:g_d0_f4:119:g_d0_f4:To address this, we exploit the idea–based on the patterns of co-occurrence in time use shown
+9:328:26805:16:17:72:540:193:119:g_d0_f4:119:g_d0_f4:in Figure 2–that the high-dimensional raw activity data is generated by a low-dimensional set of
+9:329:26901:17:16:72:540:176:119:g_d0_f4:119:g_d0_f4:latent managerial behaviors. The next section discusses how we construct a scalar CEO behavior
+9:330:26995:16:89:72:355:160:119:g_d0_f4:119:g_d0_f4:index employing a widely-used machine learning algorithm.
+9:331:27052:89:0:303:308:71:119:g_d0_f4:119:g_d0_f4:8
+10:332:27053:0:16:206:223:609:119:g_d0_f11:63:g_d0_f12:Figure 1: CEO Behavior: Raw DataFigure 2 - CEO Behavior: Raw Data
+10:333:27118:16:203:92:434:593:47:g_d0_f12:47:g_d0_f12:A. Activity TypeB. Activity Participants, by Affiliation
+10:334:27174:203:0:92:382:390:47:g_d0_f12:47:g_d0_f12:C. Activity Participants, by FunctionD. Activity Structure
+10:335:27232:0:0:105:108:462:25:Helvetica:25:Helvetica:0
+10:336:27233:0:0:103:107:492:25:Helvetica:25:Helvetica:.2
+10:337:27235:0:0:103:107:522:25:Helvetica:25:Helvetica:.4
+10:338:27237:0:0:103:107:551:25:Helvetica:25:Helvetica:.6
+10:339:27239:0:125:103:107:581:25:Helvetica:25:Helvetica:.8
+10:340:27254:125:238:111:206:456:25:Helvetica:25:Helvetica:MeetingWorking AloneTravelCommunicationsPlant visit
+10:341:27305:238:14:72:539:218:80:g_d0_f14:80:g_d0_f8:Notes:For each activity feature, the figure plots the median (the line in the box), the interquartile range (the
+10:342:27417:14:13:72:540:204:80:g_d0_f8:80:g_d0_f8:height of the box) and the interdecile range (the vertical line). The summary statistics refer to average shares of time
+10:343:27537:13:0:72:189:191:80:g_d0_f8:80:g_d0_f8:computed at the CEOs level.
+12:344:29088:0:24:72:144:709:119:g_d0_f11:119:g_d0_f11:Methodology
+12:345:29099:24:16:72:540:685:119:g_d0_f4:119:g_d0_f4:To reduce the dimensionality of the data we use latent Dirichlet allocation (LDA) (Blei et al.,
+12:346:29194:16:17:72:540:669:119:g_d0_f4:119:g_d0_f4:2003), a hierarchical Bayesian factor model for discrete data.13Simpler techniques like principal
+12:347:29291:17:16:71:539:652:119:g_d0_f4:119:g_d0_f4:components analysis (PCA, an eigenvalue decomposition of the variance-covariance matrix) or
+12:348:29382:16:17:71:539:636:119:g_d0_f4:119:g_d0_f4:k-means clustering (which computes cluster centroids with the smallest squared distance from
+12:349:29474:17:16:71:539:619:119:g_d0_f4:119:g_d0_f4:the observations) are also possible, and indeed produce similar results as we discuss below. The
+12:350:29570:16:17:71:539:603:119:g_d0_f4:119:g_d0_f4:advantage of LDA relative to these other methods is that it is a generative model which provides a
+12:351:29668:17:16:71:539:586:119:g_d0_f4:119:g_d0_f4:complete probabilistic description of time-use patterns.14LDA posits that the actual behavior of
+12:352:29764:16:16:71:539:570:119:g_d0_f4:119:g_d0_f4:each CEO is a mixture of a small number of “pure” CEO behaviors, and that the creation of each
+12:353:29858:16:17:71:539:554:119:g_d0_f4:119:g_d0_f4:activity is attributable to one of these pure behaviors. Another advantage of LDA is that it naturally
+12:354:29960:17:16:71:539:537:119:g_d0_f4:119:g_d0_f4:handles high-dimensional feature spaces, so we can admit correlations among all combinations of
+12:355:30055:16:17:71:539:521:119:g_d0_f4:119:g_d0_f4:the five distinct features, which are potentially significantly more complex than the correlations
+12:356:30153:17:16:71:539:504:119:g_d0_f4:119:g_d0_f4:between individual feature categories described in figure 2. While LDA and its extensions are most
+12:357:30251:16:17:71:539:488:119:g_d0_f4:119:g_d0_f4:widely applied to text data, where it forms the basis of much of probabilistic topic modeling, close
+12:358:30351:17:16:71:539:471:119:g_d0_f4:119:g_d0_f4:variants have been applied to survey data in various contexts (Erosheva et al., 2007; Gross and
+12:359:30446:16:17:71:539:455:119:g_d0_f4:119:g_d0_f4:Manrique-Vallier, 2014). Ours is the first application to survey data in the economics literature
+12:360:30543:17:16:71:172:438:119:g_d0_f4:119:g_d0_f4:that we are aware of.
+12:361:30564:16:16:88:539:422:119:g_d0_f4:119:g_d0_f4:To be more concrete, suppose all CEOs haveApossible ways of organizing each unit of their
+12:362:30653:16:17:71:539:406:119:g_d0_f4:119:g_d0_f21:time, which we define for shortactivities, and letxabe a particular activity. LetX⌘{x1,...,xA}
+12:363:30747:17:16:71:540:389:119:g_d0_f4:119:g_d0_f4:be the set of activities. Apure behaviorkis a probability distribution-koverXthat is common
+12:364:30838:16:17:71:139:373:119:g_d0_f4:64:g_d0_f6:to all CEOs.15
+12:365:30852:17:16:88:539:356:119:g_d0_f4:119:g_d0_f4:In our baseline specification, we focus on the simplest possible case in which there exist only
+12:366:30947:16:17:72:539:340:119:g_d0_f4:119:g_d0_f4:two possible pure behaviors:-0and-1, and discuss alternative approaches and sensitivity of the
+12:367:31041:17:16:71:539:323:119:g_d0_f4:119:g_d0_f4:main results using models with more than two pure behaviors in Section 4. In this simple case, the
+12:368:31139:16:16:71:539:307:119:g_d0_f18:119:g_d0_f4:behaviorof CEOiis given by a mixture of the two pure behaviors according to weight✓i2[0,1],
+12:369:31230:16:17:72:538:291:119:g_d0_f4:119:g_d0_f4:thus the probability that CEOigenerates activityacan lie anywhere between-0aand-1a.16We
+12:370:31317:17:16:72:328:274:119:g_d0_f4:119:g_d0_f4:refer to the weight✓ias thebehavior indexof CEOi.
+12:371:31366:16:15:80:539:258:36:g_d0_f7:80:g_d0_f8:13LDA is an unsupervised learning algorithm, and uncovers hidden structure in time use without necessarily linking
+12:372:31480:15:10:72:540:243:80:g_d0_f8:80:g_d0_f8:it to performance. This allows us to first describe the most prominent distinctions among CEOs while staying agnostic
+12:373:31597:10:11:72:540:233:80:g_d0_f8:80:g_d0_f8:on whether time use is related to performance in a systematic way. A supervised algorithm would instead “force” the
+12:374:31712:11:11:72:540:222:80:g_d0_f8:80:g_d0_f8:time use data to explain performance. Moreover, popular penalized regression models such as LASSO can be fragile
+12:375:31824:11:11:72:540:211:80:g_d0_f8:80:g_d0_f8:in the presence of highly correlated covariates, which makes projecting them onto a latent space prior to regression
+12:376:31940:11:8:72:148:200:80:g_d0_f8:80:g_d0_f8:analysis attractive.
+12:377:31960:8:14:80:539:192:36:g_d0_f7:80:g_d0_f8:14Tipping and Bishop (1999) have shown that one can provide probabilistic foundations for PCA via a Gaussian
+12:378:32068:14:11:72:540:178:80:g_d0_f8:80:g_d0_f8:factor model with a spherical covariance matrix in the limit case where the variance approaches zero. Clearly, though,
+12:379:32186:11:7:72:469:167:80:g_d0_f8:80:g_d0_f8:our survey data is not Gaussian, so PCA lacks an obvious statistical interpretation in our context.
+12:380:32285:7:15:80:540:160:36:g_d0_f7:80:g_d0_f8:15Importantly, the model allows for arbitrary covariance patterns among features of di↵erent activities. For example,
+12:381:32402:15:11:72:540:145:80:g_d0_f8:80:g_d0_f8:one behavior may be characterized by large meetings whenever the finance function is involved but small meetings
+12:382:32514:11:7:72:201:134:80:g_d0_f8:80:g_d0_f8:whenever marketing is involved.
+12:383:32545:7:15:80:539:127:36:g_d0_f7:80:g_d0_f8:16In contrast, in a traditional clustering model, each CEO would be associated with one of the two pure behaviors,
+12:384:32659:15:0:72:248:112:80:g_d0_f8:80:g_d0_f8:which corresponds to restricting✓i2{0,1}.
+13:385:32702:0:216:98:512:696:119:g_d0_f11:119:g_d0_f11:Figure 3: Data Generating Process for Activities with Two Pure Behaviors
+13:386:32774:216:0:148:189:480:91:g_d0_f29:91:g_d0_f29:Activity 1
+13:387:32784:0:17:225:251:497:393:g_d0_f30:393:g_d0_f30:...
+13:388:32787:17:0:284:325:480:91:g_d0_f29:91:g_d0_f30:Activitya
+13:389:32796:0:17:361:387:497:393:g_d0_f30:393:g_d0_f30:...
+13:390:32799:17:0:419:462:480:91:g_d0_f29:91:g_d0_f30:ActivityA
+13:391:32808:0:68:226:293:593:91:g_d0_f29:91:g_d0_f29:Pure Behavior 0
+13:392:32823:68:0:179:365:525:132:g_d0_f31:64:g_d0_f33:-01-0a-0A
+13:393:32832:0:68:316:383:593:91:g_d0_f29:91:g_d0_f29:Pure Behavior 1
+13:394:32847:68:0:243:431:525:132:g_d0_f31:64:g_d0_f33:-11-1a-1A
+13:395:32856:0:25:222:250:684:91:g_d0_f29:91:g_d0_f29:CEO 1
+13:396:32861:25:0:208:280:659:132:g_d0_f29:64:g_d0_f32:1--1-1
+13:397:32867:0:20:293:387:679:393:g_d0_f30:91:g_d0_f30:...CEON
+13:398:32874:20:372:305:383:659:132:g_d0_f29:64:g_d0_f33:1--N-N
+13:399:32880:372:0:303:308:287:91:g_d0_f29:91:g_d0_f29:1
+13:400:32881:0:14:72:540:463:80:g_d0_f14:80:g_d0_f8:Notes:This figure provides a graphical representation of the data-generating process for the time-use data. First,
+13:401:32995:14:13:72:540:449:80:g_d0_f8:80:g_d0_f8:CEOichooses – independently for each individual unit of his time – one of the two pure behaviors according to a
+13:402:33106:13:14:72:539:436:80:g_d0_f8:80:g_d0_f8:Bernoulli distribution with parameter✓i. The observed activity for a unit of time is then drawn from the distribution
+13:403:33223:14:32:71:254:422:80:g_d0_f8:80:g_d0_f8:over activities that the pure behavior defines.
+13:404:33270:32:17:88:539:390:119:g_d0_f4:119:g_d0_f4:Figure 3 illustrates the LDA procedure.  For each activity of CEOi, one of the two pure
+13:405:33357:17:16:71:540:373:119:g_d0_f4:119:g_d0_f4:behaviors is drawn independently given✓i. Then, given the pure behavior, an activity is drawn
+13:406:33450:16:17:72:540:357:119:g_d0_f4:119:g_d0_f4:according to its associated distribution (either-0or-1). So, the probability that CEOiassigns
+13:407:33543:17:16:71:260:340:119:g_d0_f4:119:g_d0_f4:to activityxais-ia⌘(1-✓i)-0a+✓i-1a.
+13:408:33578:16:16:88:544:324:119:g_d0_f4:119:g_d0_f4:If we letni,abe the number of times activityaappears in the time use of CEOi,thenby
+13:409:33661:16:0:72:360:308:119:g_d0_f4:119:g_d0_f4:independence the likelihood function for the model is simply
+13:410:33721:0:12:363:373:316:119:g_d0_f35:119:g_d0_f35:Q
+13:411:33722:12:0:373:376:304:64:g_d0_f19:64:g_d0_f19:i
+13:412:33723:0:12:378:388:316:119:g_d0_f35:119:g_d0_f35:Q
+13:413:33724:12:0:389:402:304:64:g_d0_f19:119:g_d0_f23:a-
+13:414:33726:0:10:402:416:314:64:g_d0_f19:36:g_d0_f25:ni,a
+13:415:33730:10:0:402:420:304:64:g_d0_f19:119:g_d0_f4:i.
+13:416:33732:0:21:420:539:312:64:g_d0_f6:119:g_d0_f4:17While in principle one
+13:417:33756:21:16:71:539:291:119:g_d0_f4:119:g_d0_f4:can attempt to estimate-and✓via direct maximum likelihood or the EM algorithm, in practice
+13:418:33846:16:17:71:539:275:119:g_d0_f4:119:g_d0_f4:the model is intractable due to the large number of parameters that need to be estimated (and
+13:419:33939:17:16:71:539:258:119:g_d0_f4:119:g_d0_f4:which grow linearly in the number of observations). LDA overcomes this challenge by adopting a
+13:420:34033:16:17:71:540:242:119:g_d0_f4:119:g_d0_f4:Bayesian approach, and placing Dirichlet priors on the-and✓iterms. For estimating posteriors
+13:421:34125:17:16:71:539:225:119:g_d0_f4:64:g_d0_f6:we follow the Markov Chain Monte Carlo (MCMC) approach of Gri-ths and Steyvers (2004).18
+13:422:34213:16:0:72:534:209:119:g_d0_f4:119:g_d0_f22:Here we discuss the estimated object of interest, which are the two estimated pure behaviorsb-
+13:423:34307:0:24:535:539:217:64:g_d0_f6:64:g_d0_f6:0
+13:424:34308:24:15:80:540:193:36:g_d0_f7:80:g_d0_f8:17While a behavior defines a distribution over activities with correlations among individualfeatures(planning,
+13:425:34418:15:11:72:545:178:80:g_d0_f8:80:g_d0_f8:duration, etc.), each separateactivityin a CEO’s diary is drawn independently given pure behaviors and✓i.The
+13:426:34526:11:11:72:540:167:80:g_d0_f8:80:g_d0_f8:independence assumption of time blocks within a CEO is appropriate for our purpose to understand overall patterns
+13:427:34639:11:11:72:540:156:80:g_d0_f8:80:g_d0_f8:of CEO behavior rather than issues such as the evolution of behavior over time, or other more complex dependencies.
+13:428:34754:11:7:72:342:145:80:g_d0_f8:80:g_d0_f8:These are of course interesting, but outside the scope of the paper.
+13:429:34822:7:15:80:539:138:36:g_d0_f7:80:g_d0_f8:18We set a uniform prior on✓i–i.e. a symmetric Dirichlet with hyperparameter 1–and a symmetric Dirichlet with
+13:430:34931:15:11:72:539:123:80:g_d0_f8:80:g_d0_f8:hyperparameter 0.1 on-k. This choice of hyperparameter promotes sparsity in the pure behaviors. Source code for
+13:431:35042:11:0:72:331:112:80:g_d0_f8:80:g_d0_f8:implementation is available from https://github.com/sekhansen.
+14:432:35106:0:0:72:100:707:119:g_d0_f4:119:g_d0_f22:andb-
+14:433:35111:0:7:100:104:714:64:g_d0_f6:64:g_d0_f6:1
+14:434:35112:7:17:105:464:707:119:g_d0_f4:119:g_d0_f4:, as well as the estimated behavioral indicesb✓ifor every CEOi=1,...,N.
+14:435:35183:17:16:88:539:690:119:g_d0_f4:119:g_d0_f4:Intuitively, LDA identifies pure behaviors by finding patterns of co-occurrence among activities
+14:436:35279:16:17:71:539:674:119:g_d0_f4:119:g_d0_f4:across CEOs, so infrequently occurring activities are not informative. For this reason we drop activ-
+14:437:35380:17:16:71:539:657:119:g_d0_f4:119:g_d0_f4:ities in fewer than 30 CEOs’ diaries, which leaves 654 unique activities and 98,347 time blocks—or
+14:438:35478:16:16:71:539:641:119:g_d0_f4:119:g_d0_f4:78% of interactive time—in our baseline empirical exercise. In the appendix we alternatively drop
+14:439:35575:16:32:71:495:625:119:g_d0_f4:119:g_d0_f4:activities in fewer than 15 and 45 CEOs’ diaries and find little e↵ect in the main results.
+14:440:35666:32:24:71:125:593:119:g_d0_f11:119:g_d0_f11:Estimates
+14:441:35675:24:16:71:539:569:119:g_d0_f4:119:g_d0_f17:To illustrate di↵erences in estimated pure behaviors, in Figure 4 we order the elements ofX
+14:442:35766:16:0:71:291:553:119:g_d0_f4:119:g_d0_f22:according to their estimated probability inb-
+14:443:35811:0:8:291:295:561:64:g_d0_f6:64:g_d0_f6:0
+14:444:35812:8:16:300:539:553:119:g_d0_f4:119:g_d0_f4:and then plot the estimated probabilities of each
+14:445:35861:16:17:71:540:537:119:g_d0_f4:119:g_d0_f4:element ofXin both behaviors. The figure shows that the combinations that are most likely in
+14:446:35953:17:16:71:539:520:119:g_d0_f4:119:g_d0_f4:pure behavior 0 have low probability in pure behavior 1 and vice versa. Tables B.1 and B.2 list the
+14:447:36052:16:17:71:540:504:119:g_d0_f4:119:g_d0_f4:five most common activities in each of the two behaviors.19To construct a formal test of whether
+14:448:36148:17:16:71:539:487:119:g_d0_f4:119:g_d0_f4:the observed di↵erences between pure behaviors are consistent with a model in which there is only
+14:449:36245:16:17:71:539:471:119:g_d0_f4:119:g_d0_f4:one pure behavior (i.e. a model with no systematic heterogeneity), we simulate data by drawing an
+14:450:36342:17:16:71:539:454:119:g_d0_f4:119:g_d0_f4:activity for each time block in the data from a probability vector that matches the raw empirical
+14:451:36439:16:17:71:539:438:119:g_d0_f4:119:g_d0_f4:frequency of activities. We then use this simulated data to estimate the LDA model with two pure
+14:452:36535:17:16:71:540:421:119:g_d0_f4:119:g_d0_f4:behaviors as in our baseline analysis, and find systematically less di↵erence between pure behaviors
+14:453:36635:16:16:71:385:405:119:g_d0_f4:119:g_d0_f4:than in our actual data (for further discussion see the Appendix).
+14:454:36701:16:17:88:539:389:119:g_d0_f4:119:g_d0_f4:The two pure behaviors we estimate represent extremes. As discussed above, individual CEOs
+14:455:36791:17:16:71:540:372:119:g_d0_f4:119:g_d0_f4:generate activities according to the behavioral index✓ithat gives the probability that any specific
+14:456:36890:16:17:71:539:356:119:g_d0_f4:119:g_d0_f4:activity is drawn from pure behavior 1. Figure 5 plots both the frequency and cumulative distribu-
+14:457:36988:17:16:71:539:339:119:g_d0_f4:119:g_d0_f4:tions of theb✓iestimates across CEOs. Many CEOs are estimated to be mainly associated with one
+14:458:37082:16:17:72:540:323:119:g_d0_f4:119:g_d0_f4:pure behavior: 316 have a behavioral index less than 0.05 and 94 have an index greater than 0.95.
+14:459:37179:17:16:72:540:306:119:g_d0_f4:119:g_d0_f4:As Figure 5 shows, though, the bulk of CEOs lies away from these extremes, where the distribution
+14:460:37276:16:32:72:236:290:119:g_d0_f4:119:g_d0_f4:of the index is essentially uniform.
+14:461:37312:32:23:72:410:258:119:g_d0_f11:119:g_d0_f11:Results using alternative dimensionality reduction techniques
+14:462:37373:23:17:72:540:235:119:g_d0_f4:119:g_d0_f4:A question of interest is whether the CEO behavior index built using LDA could be reproduced
+14:463:37465:17:16:72:540:218:119:g_d0_f4:119:g_d0_f4:using more familiar dimensionality reduction techniques. To investigate this point, we examined
+14:464:37560:16:17:72:540:202:119:g_d0_f4:119:g_d0_f4:the sensitivity of the classification to PCA and k-means analysis. For this anaysis, we do not use the
+14:465:37662:17:16:72:540:185:119:g_d0_f4:119:g_d0_f4:same 654-dimensional feature vector as for LDA, but rather six marginal distributions computed on
+14:466:37759:16:16:72:540:169:119:g_d0_f4:119:g_d0_f4:the raw time use data that capture the same distinctions that LDA reveals as important. For each
+14:467:37855:16:17:72:540:153:119:g_d0_f4:119:g_d0_f4:CEO, we counted the number of engagements that: (1) last longer than one hour; (2) are planned;
+14:468:37950:17:15:80:539:136:36:g_d0_f7:80:g_d0_f8:19Table B.3 displays the estimated average time that CEOs spend with the di↵erent categories in figure 1 derived
+14:469:38062:15:11:72:540:121:80:g_d0_f8:80:g_d0_f8:from the estimated pure behaviors and CEO behavioral indices. Reassuringly, there is a tight relationship between
+14:470:38175:11:0:72:284:110:80:g_d0_f8:80:g_d0_f8:the shares in the raw data and the estimated shares.
+15:471:38229:0:232:126:485:679:119:g_d0_f11:119:g_d0_f11:Figure 4: Probabilities of Activities in Estimated Pure Behaviors
+15:472:38294:232:14:72:539:447:80:g_d0_f8:80:g_d0_f8:Notes: The dotted line plots the estimated probabilities of di↵erent activities in pure behavior 0, the solid line plots
+15:473:38414:14:14:72:539:433:80:g_d0_f8:80:g_d0_f8:the estimated probabilities of di↵erent activities in pure behavior 1. The 654 di↵erent activities are ordered left to
+15:474:38532:14:66:72:374:419:80:g_d0_f8:80:g_d0_f8:right in descending order of their estimated probability in pure behavior 0.
+15:475:38608:66:0:173:439:353:119:g_d0_f11:119:g_d0_f11:Figure 5: CEO Behavior and Index Distribution
+15:476:38653:0:18:83:534:685:143:g_d0_f38:143:g_d0_f38:behavior 0 is twice as likely to spend time with only outside functions.  Very stark
+15:477:38737:18:18:83:535:667:143:g_d0_f38:143:g_d0_f38:di↵erences emerge in time spent with specific inside functions. Behavior 1 is over ten times
+15:478:38829:18:18:83:534:649:143:g_d0_f38:143:g_d0_f38:as likely to spend time in activities with commercial-group and business-unit functions,
+15:479:38917:18:18:83:534:631:143:g_d0_f38:143:g_d0_f38:and nearly four times as likely to spend time with the human-resource function. On the
+15:480:39003:18:18:83:534:613:143:g_d0_f38:143:g_d0_f38:other hand, behavior 0 is over twice as likely to engage in activities with production.
+15:481:39090:18:18:83:535:595:143:g_d0_f38:143:g_d0_f38:Smaller di↵erences exist for finance (50% more likely in behavior 0) and marketing (10%
+15:482:39177:18:18:83:534:577:143:g_d0_f38:143:g_d0_f38:more likely in behavior 1) functions. In terms of outside functions, behavior 0 is over
+15:483:39264:18:18:83:534:559:143:g_d0_f38:143:g_d0_f38:three times as likely to spend time with suppliers and 25% more likely to spend time with
+15:484:39353:18:18:83:526:541:143:g_d0_f38:143:g_d0_f38:clients, while behavior 1 is almost eight times more likely to attend trade associations.
+15:485:39442:18:18:101:535:523:143:g_d0_f38:143:g_d0_f38:In summary, an overall pattern arises in which behavior 0 engages in short, small,
+15:486:39524:18:18:83:534:505:143:g_d0_f38:143:g_d0_f38:production-oriented activities and behavior 1 engages in long, planned activities that
+15:487:39610:18:34:83:383:487:143:g_d0_f38:143:g_d0_f38:combine numerous functions, especially high-level insiders.
+15:488:39669:34:26:83:275:453:143:g_d0_f40:143:g_d0_f40:2.4.2    The CEO Behavior Index
+15:489:39700:26:18:83:534:427:143:g_d0_f38:143:g_d0_f38:The two behaviors we estimate represent extremes. As discussed above, individual CEOs
+15:490:39785:18:18:83:535:409:143:g_d0_f38:143:g_d0_f38:generate time use according to the behavioral index-ithat gives the probability that any
+15:491:39873:18:18:83:534:391:143:g_d0_f38:143:g_d0_f38:specific time block’s feature combination is drawn from behavior 1. Figure 4 plots both
+15:492:39960:18:200:83:406:373:143:g_d0_f38:143:g_d0_f38:the frequency and cumulative distributions of-iin our sample.
+15:493:40021:200:24:132:489:173:143:g_d0_f40:143:g_d0_f38:(a)Frequency Distribution(b)Cumulative Distribution
+15:494:40072:24:27:190:427:149:143:g_d0_f40:143:g_d0_f38:Figure 4:CEO Behavior Index Distributions
+15:495:40113:27:13:112:506:122:119:g_d0_f43:119:g_d0_f43:Notes: The left-hand side plot displays the number of CEOs with behavioral indices
+15:496:40195:13:14:112:506:109:119:g_d0_f43:119:g_d0_f43:in each of 50 bins that divide the space [0,1] evenly.  The right-hand side plot
+15:497:40275:14:13:112:505:95:119:g_d0_f43:119:g_d0_f43:displays the cumulative percentage of CEOs with behavioral indices lying in these
+15:498:40356:13:43:112:134:82:119:g_d0_f43:119:g_d0_f43:bins.
+15:499:40361:43:18:101:535:39:143:g_d0_f38:143:g_d0_f38:Many CEOs are estimated to be mainly associated with one behavior: 316 have a be-

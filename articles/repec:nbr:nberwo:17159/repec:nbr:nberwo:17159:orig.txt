@@ -1,0 +1,1842 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:14:306:516:610:12:Times:12:Times:ESTIMATING THE RETURN TO COLLEGE SELECTIVITY OVER THE CAREER
+1:2:85:14:28:306:427:596:12:Times:12:Times:USING ADMINISTRATIVE EARNINGS DATA
+1:3:119:28:14:306:332:568:12:Times:12:Times:Stacy Dale
+1:4:129:14:28:306:346:554:12:Times:12:Times:Alan B. Krueger
+1:5:144:28:14:306:359:526:12:Times:12:Times:Working Paper 17159
+1:6:163:14:42:306:393:512:12:Times:12:Times:http://www.nber.org/papers/w17159
+1:7:196:42:14:306:439:470:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:232:14:14:306:374:456:12:Times:12:Times:1050 Massachusetts Avenue
+1:9:257:14:14:306:362:442:12:Times:12:Times:Cambridge, MA 02138
+1:10:276:14:172:306:330:428:12:Times:12:Times:June 2011
+1:11:285:172:14:72:540:256:12:Times:12:Times:We thank the Mellon Foundation for financial support, Ed Freeland for obtaining permission of the
+1:12:382:14:14:72:540:242:12:Times:12:Times:colleges that are included in our study, Matthew Jacobus and Licia Gaber Baylis for skilled computer
+1:13:482:14:14:72:540:228:12:Times:12:Times:programming support, Mike Risha of SSA for tirelessly running our computer programs and for merging
+1:14:581:14:14:72:540:214:12:Times:12:Times:the C&B data with administrative earnings records, Lawrence Katz, Sarah Turner, and Mark Dynarski
+1:15:678:14:14:72:540:200:12:Times:12:Times:for helpful comments on an earlier draft, and Mark Long for providing data on college SAT scores.
+1:16:775:14:14:72:540:186:12:Times:12:Times:The views expressed herein are those of the authors and do not necessarily reflect the views of the
+1:17:874:14:28:72:266:172:12:Times:12:Times:National Bureau of Economic Research.
+1:18:911:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:19:1007:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:20:1102:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:21:1120:28:14:72:540:88:12:Times:12:Times:© 2011 by Stacy Dale and Alan B. Krueger. All rights reserved. Short sections of text, not to exceed
+1:22:1220:14:14:72:540:74:12:Times:12:Times:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:23:1324:14:0:72:177:60:12:Times:12:Times:is given to the source.
+2:24:1347:0:14:72:514:700:12:Times:12:Times:Estimating the Return to College Selectivity over the Career Using Administrative Earnings
+2:25:1437:14:14:72:95:686:12:Times:12:Times:Data
+2:26:1441:14:14:72:227:672:12:Times:12:Times:Stacy Dale and Alan B. Krueger
+2:27:1471:14:14:72:234:658:12:Times:12:Times:NBER Working Paper No. 17159
+2:28:1499:14:14:72:121:644:12:Times:12:Times:June 2011
+2:29:1508:14:28:72:151:630:12:Times:12:Times:JEL No. I21,J31
+2:30:1523:28:28:273:338:602:12:Times:12:Times:ABSTRACT
+2:31:1531:28:14:72:540:574:12:Times:12:Times:We estimate the monetary return to attending a highly selective college using the College and Beyond
+2:32:1631:14:14:72:540:560:12:Times:12:Times:(C&B) Survey linked to Detailed Earnings Records from the Social Security Administration (SSA).
+2:33:1726:14:14:72:540:546:12:Times:12:Times:This paper extends earlier work by Dale and Krueger (2002) that examined the relationship between
+2:34:1823:14:14:72:540:532:12:Times:12:Times:the college that students attended in 1976 and the earnings they self-reported reported in 1995 on the
+2:35:1925:14:14:72:540:518:12:Times:12:Times:C&B follow-up survey. In this analysis, we use administrative earnings data to estimate the return
+2:36:2023:14:14:72:540:504:12:Times:12:Times:to various measures of college selectivity for a more recent cohort of students: those who entered college
+2:37:2129:14:14:72:540:490:12:Times:12:Times:in 1989. We also estimate the return to college selectivity for the 1976 cohort of students, but over
+2:38:2230:14:28:72:430:476:12:Times:12:Times:a longer time horizon (from 1983 through 2007) using administrative data.
+2:39:2303:28:14:72:540:448:12:Times:12:Times:We find that the return to college selectivity is sizeable for both cohorts in regression models that control
+2:40:2412:14:14:72:540:434:12:Times:12:Times:for variables commonly observed by researchers, such as student high school GPA and SAT scores.
+2:41:2507:14:14:72:540:420:12:Times:12:Times:However, when we adjust for unobserved student ability by controlling for the average SAT score
+2:42:2602:14:14:72:540:406:12:Times:12:Times:of the colleges that students applied to, our estimates of the return to college selectivity fall substantially
+2:43:2713:14:14:72:540:392:12:Times:12:Times:and are generally indistinguishable from zero. There were notable exceptions for certain subgroups.
+2:44:2812:14:14:72:540:378:12:Times:12:Times:For black and Hispanic students and for students who come from less-educated families (in terms of
+2:45:2910:14:14:72:540:364:12:Times:12:Times:their parents’ education), the estimates of the return to college selectivity remain large, even in models
+2:46:3016:14:42:72:309:350:12:Times:12:Times:that adjust for unobserved student characteristics.
+2:47:3067:42:14:72:124:308:12:Times:12:Times:Stacy Dale
+2:48:3077:14:14:72:215:294:12:Times:12:Times:Mathematica Policy Research
+2:49:3104:14:14:72:143:280:12:Times:12:Times:P.O. Box 2393
+2:50:3117:14:14:72:198:266:12:Times:12:Times:Princeton, NJ 08543-2393
+2:51:3141:14:28:72:216:252:12:Times:12:Times:sdale@mathematica-mpr.com
+2:52:3166:28:14:72:152:224:12:Times:12:Times:Alan B. Krueger
+2:53:3181:14:14:72:205:210:12:Times:12:Times:Industrial Relations Section
+2:54:3209:14:14:72:156:196:12:Times:12:Times:Firestone Library
+2:55:3226:14:14:72:172:182:12:Times:12:Times:Princeton University
+2:56:3246:14:14:72:170:168:12:Times:12:Times:Princeton, NJ 08544
+2:57:3265:14:14:72:124:154:12:Times:12:Times:and NBER
+2:58:3273:14:0:72:191:140:12:Times:12:Times:akrueger@princeton.edu
+3:59:3297:0:13:72:188:708:144:Times:144:Times:I.     INTRODUCTION 
+3:60:3316:13:28:72:75:695:144:Times:144:Times: 
+3:61:3316:28:27:108:526:667:144:Times:144:Times:Understanding the labor market return to college quality is crucial for parents deciding 
+3:62:3405:27:28:72:517:640:144:Times:144:Times:where to send their children to college, for colleges selecting students, and for policymakers 
+3:63:3500:28:27:71:540:612:144:Times:144:Times:deciding whether to invest additional resources in higher quality institutions. However, obtaining 
+3:64:3599:27:28:71:542:585:144:Times:144:Times:unbiased estimates of the return to college quality is difficult due to unobserved characteristics that 
+3:65:3703:28:28:71:501:557:144:Times:144:Times:affect both a student’s attendance at a highly selective college and their later earnings. In 
+3:66:3797:28:27:71:507:529:144:Times:144:Times:particular, the same characteristics (such as ambition) that lead students to apply to highly 
+3:67:3891:27:28:71:500:502:144:Times:144:Times:selective colleges may also be rewarded in the labor market. Likewise, the attributes that 
+3:68:3982:28:28:71:517:474:144:Times:144:Times:admissions officers are looking for when selecting students for college may be similar to the 
+3:69:4076:28:27:71:439:446:144:Times:144:Times:attributes that employers are seeking when hiring and promoting workers.     
+3:70:4152:27:28:107:505:419:144:Times:144:Times:Early research attempted to overcome this omitted-variable bias by controlling for 
+3:71:4235:28:27:71:542:391:144:Times:144:Times:observed student characteristics, such as high school grades, standardized test scores, and parental 
+3:72:4336:27:28:71:511:364:144:Times:144:Times:background (see, for example, Monks 2000 and Brewer and Ehrenberg 1996). More recent 
+3:73:4421:28:28:71:516:336:144:Times:144:Times:research has tried to overcome the bias created by unobserved variables through a variety of 
+3:74:4514:28:27:71:538:308:144:Times:144:Times:techniques. Hoekstra (2009) uses a regression discontinuity design that compares the earnings of 
+3:75:4611:27:28:71:530:281:144:Times:144:Times:students who were just above the admissions cutoff for a state university to those that were just 
+3:76:4709:28:27:71:541:253:144:Times:144:Times:below it. He finds that attending the flagship state university results in 20 percent higher earnings 
+3:77:4811:27:28:71:542:226:144:Times:144:Times:five to ten years after graduation for white men, but he does not find an effect on earnings for white 
+3:78:4914:28:28:71:542:198:144:Times:144:Times:women. Lindahl and Regner (2005) use sibling data to illustrate that the returns to college quality 
+3:79:5014:28:27:71:542:170:144:Times:144:Times:might be overstated if family characteristics are not fully adjusted for, as cross-sectional estimates 
+3:80:5117:27:28:71:535:143:144:Times:144:Times:of the return-to-schooling are twice as large as within-family estimates. Black and Smith (2004) 
+3:81:5214:28:27:71:528:115:144:Times:144:Times:use propensity score methods to estimates to estimate the return to college quality for the 1979 
+3:82:5311:27:0:71:517:88:144:Times:144:Times:cohort of the National Longitudinal Survey of Youth. The magnitude of the effect of college 
+4:83:5405:0:28:72:526:709:144:Times:144:Times:quality is similar whether they use OLS or propensity score methods, however, when they use 
+4:84:5497:28:27:72:515:681:144:Times:144:Times:propensity score methods, the standard errors are large so the effect of college quality is not 
+4:85:5593:27:28:72:524:654:144:Times:144:Times:statistically significant. Dale and Krueger (2002) hold unobserved student quality constant by 
+4:86:5688:28:28:72:542:626:144:Times:144:Times:controlling for the selectivity of colleges that students apply to and are accepted or rejected by, and 
+4:87:5792:28:27:72:541:598:144:Times:144:Times:find that the return to a variety of college characteristics falls substantially after implementing their 
+4:88:5898:27:28:71:173:571:144:Times:144:Times:selection-correction. 
+4:89:5920:28:28:107:536:543:144:Times:144:Times:To reconcile the findings across methods and data sources, Long (2008) re-estimated the 
+4:90:6008:28:27:71:514:515:144:Times:144:Times:models used by Dale and Krueger (2002) and Black and Smith (2004); he also estimated an 
+4:91:6096:27:28:71:539:488:144:Times:144:Times:ordinary least squared (OLS) model that controlled for student attributes, family background and 
+4:92:6193:28:27:71:535:460:144:Times:144:Times:neighborhood characteristics, as well as an instrumental variables model that used the quality of 
+4:93:6291:27:28:71:542:433:144:Times:144:Times:colleges located within a certain radius of the student’s home as an instrument for the quality of the 
+4:94:6394:28:28:71:539:405:144:Times:144:Times:college that the student attends. In general, he found that a variety of college characteristics have 
+4:95:6496:28:27:71:542:377:144:Times:144:Times:positive effects on educational attainment, even within specifications t hat adjust for selection bias; 
+4:96:6600:27:28:71:482:350:144:Times:144:Times:however, there is  not consistent evidence for a positive relationship between college 
+4:97:6687:28:27:71:392:322:144:Times:144:Times:characteristics and earnings across the selection adjusted models.   
+4:98:6756:27:28:107:542:295:144:Times:144:Times:Because the percentage of students enrolling in college has increased over time, one might 
+4:99:6847:28:28:71:529:267:144:Times:144:Times:expect that it would be more important for students who entered college recently to distinguish 
+4:100:6943:28:139:71:310:239:144:Times:65:Times:themselves by attending more selective colleges.1
+4:101:6992:139:8:216:218:100:122:g_d0_f2:122:g_d0_f2:                                                           
+4:102:7050:8:18:72:524:92:65:Times:99:Times:1  For example, the percentage of 18 to 24-year olds enrolling in college increased from 26 percent in 1975 to 32 
+4:103:7164:18:0:71:236:74:99:Times:99:Times:percent in 1990 (Fox and Snyder, 2005). 
+4:104:7204:0:28:310:534:240:144:Times:144:Times:  However, little research has examined recent 
+4:105:7251:28:28:72:529:212:144:Times:144:Times:cohorts, and those studies that do use recent cohorts tend to model earnings early in the career. 
+4:106:7349:28:27:72:543:184:144:Times:144:Times:Long (2008 and 2009), for example, used the 1992 cohort of the National Education Longitudinal 
+4:107:7444:27:28:72:543:157:144:Times:144:Times:Study (NELS) to examine the earnings of students relatively early in their careers, when they were 
+4:108:7543:28:0:71:160:129:144:Times:144:Times:only 26 years old. 
+5:109:7564:0:28:108:540:709:144:Times:144:Times:This paper replicates and extends earlier work that examined the relationship between the 
+5:110:7654:28:27:72:543:681:144:Times:144:Times:college that students attended in 1976 and the earnings they reported in 1995 in the C&B follow-up 
+5:111:7753:27:28:72:543:654:144:Times:144:Times:survey (Dale and Krueger 2002) in important respects. First, we estimate the return several college 
+5:112:7853:28:28:71:542:626:144:Times:144:Times:characteristics that are commonly used as proxies for college quality (college average SAT score, 
+5:113:7951:28:27:71:539:598:144:Times:144:Times:the Barron’s index, and net tuition) for a recent cohort of students—those who entered college in 
+5:114:8049:27:28:71:542:571:144:Times:144:Times:1989. By linking the C&B data to administrative records from the Social Security Administration 
+5:115:8145:28:28:71:542:543:144:Times:144:Times:(SSA), we are able to follow this cohort for 18 years after the students entered (and 14 years after 
+5:116:8246:28:27:71:506:515:144:Times:144:Times:they likely would have graduated from) college. Second, we estimate the return to college 
+5:117:8336:27:28:71:537:488:144:Times:144:Times:characteristics for the 1976 cohort over a long time horizon, from 1983 to 2007. Because we use 
+5:118:8432:28:27:71:537:460:144:Times:144:Times:administrative earnings records from tax data, our earnings measure is presumably more reliable 
+5:119:8528:27:28:71:532:433:144:Times:144:Times:than much of the prior literature, which is generally based on self-reported earnings. The use of 
+5:120:8626:28:28:72:542:405:144:Times:144:Times:administrative earnings data allows us to follow a recent cohort of students over a longer period of 
+5:121:8727:28:27:72:523:377:144:Times:144:Times:time than is possible in many of the longitudinal databases that are typically used to study the 
+5:122:8824:27:28:72:517:350:144:Times:144:Times:returns to college characteristics. For example, the NELS, High School and Beyond, and the 
+5:123:8915:28:27:72:530:322:144:Times:144:Times:National Longitudinal Study of the High School Class of 1972 only follow students for 6 to 10 
+5:124:9009:27:28:72:531:295:144:Times:144:Times:years after students would have likely graduated from college; while the National Longitudinal 
+5:125:9104:28:28:72:531:267:144:Times:144:Times:Study of Youth (NLSY) follows students for a long period of time, students from the relatively 
+5:126:9199:28:27:72:543:239:144:Times:144:Times:recent cohort (who were age 12 to 16 in 1997) are now too early in their post-collegiate careers to 
+5:127:9299:27:28:72:398:212:144:Times:144:Times:generate accurate estimates of the return to college characteristics.   
+5:128:9371:28:27:108:522:184:144:Times:144:Times:  As in the rest of the literature, we find that the return to each college characteristic is 
+5:129:9465:27:28:72:508:157:144:Times:144:Times:sizeable for both cohorts in cross-sectional least squares regression models that control for 
+5:130:9559:28:28:72:528:129:144:Times:144:Times:variables commonly observed by researchers (such as student characteristics and SAT scores). 
+5:131:9652:28:0:72:505:101:144:Times:144:Times:However, when we adjust for a proxy for unobserved student characteristics – namely, by 
+6:132:9742:0:28:72:535:709:144:Times:144:Times:controlling for the average SAT score of the colleges that students applied to – our estimates for 
+6:133:9841:28:27:71:543:681:144:Times:144:Times:the return to college characteristics fall substantially and are generally indistinguishable from zero 
+6:134:9943:27:28:72:509:654:144:Times:144:Times:for both the 1976 and 1989 cohort of students. Notable exceptions are for racial and ethnic 
+6:135:10035:28:28:71:518:626:144:Times:144:Times:minorities (black and Hispanic students) and for students whose parents have relatively little 
+6:136:10130:28:27:71:502:598:144:Times:144:Times:education; for these subgroups, our estimates remain large, even in models that adjust for 
+6:137:10221:27:28:71:519:571:144:Times:144:Times:unobserved student characteristics. One possible explanation for this pattern of results is that 
+6:138:10318:28:28:71:534:543:144:Times:144:Times:highly selective colleges provide access to networks for minority students and for students from 
+6:139:10415:28:27:71:447:515:144:Times:144:Times:disadvantaged family backgrounds that are otherwise not available to them.    
+6:140:10492:27:28:71:74:488:144:Times:144:Times: 
+6:141:10492:28:14:71:151:460:144:Times:144:Times:II. METHODS 
+6:142:10503:14:27:107:110:446:144:Times:144:Times:  
+6:143:10503:27:28:107:537:419:144:Times:144:Times: The college application process involves a series of choices. First, students choose where to 
+6:144:10597:28:27:71:518:391:144:Times:144:Times:apply to college. Then, colleges decide which students to admit. Finally, students  choose which 
+6:145:10694:27:28:71:523:364:144:Times:144:Times:college to attend from among the set of schools to which they were admitted. The difficulty with 
+6:146:10791:28:28:71:521:336:144:Times:144:Times:estimating the labor market return to college quality is that not all of the characteristics that lead 
+6:147:10894:28:27:71:542:308:144:Times:144:Times:students to apply to and attend selective colleges are observed by researchers, and unobserved student 
+6:148:10997:27:28:71:492:281:144:Times:144:Times:characteristics are likely to be positively correlated with both school quality and earnings. 
+6:149:11091:28:29:107:441:253:144:Times:144:Times:     We assume the equation relating earnings to the students' attributes is:  
+6:150:11169:29:38:71:279:224:144:g_d0_f2:144:g_d0_f2:(1)          ln  Wi = β0 + β1Qi + β2X1i + β3X2i + εi, 
+6:151:11223:38:29:72:544:186:144:Times:144:Times:where Q is a measure of the selectivity of the college student i attended, X1 and X2 are two sets of 
+6:152:11324:29:29:72:543:157:144:Times:144:Times:characteristics that affect earnings, and εi is an idiosyncratic error term that is uncorrelated with the 
+6:153:11430:29:27:72:544:128:144:Times:144:Times:other explanatory  variables  (1).    X1 includes  variables  that  are  observable  to  researchers,  such  as  
+6:154:11543:27:0:72:543:101:144:Times:144:Times:grades  and  SAT  scores,  while  X2 includes  variables  that  are  not  observable  to  researchers,  such  as  
+7:155:11659:0:28:72:544:709:144:Times:144:Times:student  motivation  and  creativity  (that  are  at  least  partly  revealed  to  admissions  officers  through  
+7:156:11773:28:27:72:543:681:144:Times:144:Times:detailed  transcript  information,  essays,  interviews,  and  recommendations).    Both X1  and  X2 affect 
+7:157:11881:27:29:72:543:654:144:Times:144:Times:the set of colleges that students apply to, whether they are admitted, and possibly which school they 
+7:158:11983:29:39:72:522:625:144:Times:144:Times:attend. The parameter β1 represents the monetary payoff to attending a more selective college.    
+7:159:12080:39:28:108:548:586:144:Times:144:Times: In the early literature on the returns to school quality, researchers estimated   a wage equation 
+7:160:12178:28:38:72:149:558:144:Times:144:Times:that omitted X2: 
+7:161:12195:38:30:72:239:520:144:g_d0_f2:144:g_d0_f2:(2)    ln Wi = β'0 + β'1 Qi + β'2X1i + ui. 
+7:162:12238:30:14:72:75:490:144:g_d0_f2:144:g_d0_f2: 
+7:163:12238:14:27:72:539:476:144:Times:144:Times:Qi is typically measured by the average SAT score of the school where the student attended college. 
+7:164:12338:27:29:72:539:449:144:Times:144:Times:Even if students randomly select the college they attend from the set of colleges that admitted them, 
+7:165:12440:29:29:71:518:420:144:Times:144:Times:estimation of (2) will yield biased and inconsistent parameter estimates of β1 and β2. If students 
+7:166:12538:29:28:72:543:391:144:Times:144:Times:choose their school randomly from their set of options, the payoff to attending a selective school will 
+7:167:12642:28:27:72:545:363:144:Times:144:Times:be biased upward because students with higher values of the omitted variable, X2, are more likely to  
+7:168:12743:27:28:72:539:336:144:Times:144:Times:be admitted to and therefore attend highly selective schools. Since the labor market rewards X2, and 
+7:169:12844:28:38:72:506:308:144:Times:144:Times:Q and X2 are positively correlated, the coefficient on school quality will be biased upward.    
+7:170:12939:38:27:108:542:270:144:Times:144:Times: To address the selection problem, we use one of the selection-adjusted models—referred to as 
+7:171:13032:27:28:72:533:243:144:Times:144:Times:the “self-revelation model”--    in Dale and Krueger (2002). This model assumes  that students signal 
+7:172:13133:28:27:72:542:215:144:Times:144:Times:their potential ability, motivation and ambition by the choice of schools they apply to. If students with 
+7:173:13239:27:28:72:532:188:144:Times:144:Times:greater unobserved earnings potential are more likely to apply to more selective colleges, the error 
+7:174:13340:28:27:72:541:160:144:Times:144:Times:term in equation (2) could be modeled as a function of the average SAT score (denoted AVG) of the 
+7:175:13438:27:28:71:543:133:144:Times:144:Times:schools to which the student applied:   ui = t0 + t1AVGi + vi.      If vi is uncorrelated with the SAT score 
+7:176:13547:28:28:71:542:105:144:Times:144:Times:of the school the student attended, one can solve the selection problem by including AVG in the wage 
+7:177:13648:28:0:71:506:77:144:Times:144:Times:equation. This approach is called the "self-revelation" model because individuals reveal their 
+8:178:13745:0:28:72:544:709:144:Times:144:Times:unobserved ability by their college application behavior. This model also includes  dummy variables 
+8:179:13845:28:27:71:540:681:144:Times:144:Times:indicating the number of schools the students applied to (in addition to the average SAT score of the 
+8:180:13947:27:28:71:535:654:144:Times:144:Times:schools), because the number of applications a student submits may also reveal unobserved student 
+8:181:14045:28:38:71:283:626:144:Times:144:Times:traits, such as their ambition and persistence. 
+8:182:14092:38:27:107:501:588:144:Times:144:Times: Dale and Krueger (2002) also estimated a matched applicant model that included an 
+8:183:14174:27:28:71:542:561:144:Times:144:Times:unrestricted set of dummy variables indicating groups of students who received the same admissions 
+8:184:14273:28:27:71:531:533:144:Times:144:Times:decisions (i.e., the same combination of acceptances and rejections) from the same set of colleges. 
+8:185:14372:27:28:71:533:506:144:Times:144:Times:The self-revelation model is a special case of the matched applicant model. The matched applicant 
+8:186:14470:28:28:71:541:478:144:Times:144:Times:model and self-revelation model yielded coefficients that were similar in size, but the self-revelation 
+8:187:14574:28:27:71:534:450:144:Times:144:Times:model yielded smaller standard errors.   Because of the smaller sample size in the present analysis, 
+8:188:14675:27:38:71:302:423:144:Times:144:Times:we therefore focus on the self-revelation model.  
+8:189:14724:38:27:112:495:385:144:Times:144:Times:  As discussed in more detail Dale and Krueger (2002), a critical assumption of the 
+8:190:14806:27:29:71:528:358:144:Times:144:Times:self-revelation model is that students' enrollment decisions are uncorrelated with the error term of 
+8:191:14907:29:29:71:539:329:144:Times:144:Times:equation (2) and X2. Our selection correction provides an unbiased estimate of β1 if students' school 
+8:192:15008:29:28:72:536:300:144:Times:144:Times:enrollment decisions are a function of X1 or any variable outside the model. However, it is possible 
+8:193:15109:28:27:72:547:272:144:Times:144:Times:that student matriculation decisions are correlated with X2. For example, p  ast studies have found that 
+8:194:15214:27:28:71:542:245:144:Times:144:Times:students are more likely to matriculate to schools that provide them with more generous financial aid 
+8:195:15316:28:27:71:534:217:144:Times:144:Times:packages (see, e.g., van der Klaauw [1997]). If more selective colleges provide more merit aid, the 
+8:196:15416:27:28:71:539:190:144:Times:144:Times:estimated effect of attending an elite college will be biased upward because relatively more students 
+8:197:15518:28:28:71:530:162:144:Times:144:Times:with higher values of X2 will matriculate at elite colleges, even conditional on the outcomes of the 
+8:198:15619:28:27:72:519:134:144:Times:144:Times:applications to other colleges. If this is the case, our selection-adjusted estimates of the effect of 
+8:199:15722:27:28:71:525:107:144:Times:144:Times:college quality will be biased upward. However, if less selective colleges provide more generous 
+8:200:15819:28:0:71:525:79:144:Times:144:Times:merit aid (leading students with higher values of X2 to attend less selective schools), the estimate 
+9:201:15922:0:28:72:502:709:144:Times:144:Times:could be biased downward. More generally, our adjusted estimate would be biased upwards 
+9:202:16010:28:27:72:539:681:144:Times:144:Times:(downwards) if students with high unobserved earnings potential are more (less) likely to attend the 
+9:203:16111:27:28:72:391:654:144:Times:144:Times:more selective schools from the set of schools that admitted them.    
+9:204:16180:28:29:108:526:626:144:Times:144:Times:Finally, it is possible that the effect of attending a highly selective school varies across 
+9:205:16273:29:29:72:535:597:144:Times:144:Times:individuals (that is, β1 could have an “i” subscript), and students might sort among selective and 
+9:206:16372:29:27:71:542:568:144:Times:144:Times:less selective colleges based on their potential returns at that college. In such a model, our estimate 
+9:207:16476:27:29:72:539:541:144:Times:144:Times:of the return to attending a selective school can be biased upward or downward, and it would not 
+9:208:16573:29:29:72:542:512:144:Times:144:Times:be appropriate to interpret an estimate of β1 as a causal effect for the average student. We explore 
+9:209:16674:29:28:72:278:483:144:Times:144:Times:these potential threats to the model below. 
+9:210:16718:28:27:108:111:455:144:Times:144:Times: 
+9:211:16718:27:38:72:129:428:144:Times:144:Times:III. DATA 
+9:212:16728:38:27:72:227:390:144:Times:144:Times:A.    College and Beyond Data 
+9:213:16758:27:28:108:526:363:144:Times:144:Times:Our study is based on data from the 1976 and 1989 cohorts of the College and Beyond 
+9:214:16842:28:27:72:539:335:144:Times:144:Times:Survey. The C&B dataset includes information drawn from the applications and transcripts of 34 
+9:215:16937:27:28:72:506:308:144:Times:144:Times:colleges and universities (including 4 public universities, 4 historically black colleges and 
+9:216:17031:28:28:72:519:280:144:Times:144:Times:universities (HBCUs), 11 liberal arts college, and 15 private universities).2  Much of the past 
+9:217:17127:28:27:72:508:252:144:Times:144:Times:research using the C&B data (such as Bowen and Bok (1998) and Dale and Krueger (2002)) 
+9:218:17214:27:54:72:187:225:144:Times:65:Times:excluded the 4 HBCUs.3
+9:219:17236:54:8:216:218:171:122:g_d0_f2:122:g_d0_f2:                                                           
+9:220:17294:8:18:72:507:163:65:Times:99:Times:2  The C&B schools that participated in this study included Barnard College, Bryn Mawr College, Columbia 
+9:221:17399:18:11:72:542:145:99:Times:99:Times:University, Duke University, Emory University, Georgetown University, Kenyon College, Miami University of Ohio, 
+9:222:17511:11:12:72:536:134:99:Times:99:Times:Morehouse College, Northwestern University, Oberlin College, Penn State University, Princeton University, Smith 
+9:223:17623:12:11:72:534:122:99:Times:99:Times:College, Stanford University, Swarthmore College, Tufts University, Tulane University, University of Michigan,     
+9:224:17738:11:12:72:542:111:99:Times:99:Times:University of Pennsylvania, Vanderbilt University, Washington University, Wellesley College, Wesleyan University, 
+9:225:17852:12:0:72:317:99:99:Times:99:Times:Williams College, Xavier University, and Yale University.    
+9:226:17912:0:28:187:539:225:144:Times:144:Times:  In this analysis, we include the 27 schools that agreed to participate in this 
+9:227:17993:28:105:71:543:197:144:Times:144:Times:follow-up study, which included 3 public universities, 10 liberal arts colleges, 12 private universities, 
+9:228:18098:105:18:72:537:92:65:Times:99:Times:3  At the time that Dale and Krueger (2002) was written, the HBCUs were not part of the standard C&B dataset that 
+9:229:18212:18:0:72:187:74:99:Times:99:Times:was provided to researchers. 
+10:230:18242:0:28:72:542:709:144:Times:144:Times:and 2 HBCUs. The students from these 27 schools represent 81 percent of the students included in the 
+10:231:18343:28:27:72:176:681:144:Times:144:Times:original C&B dataset. 
+10:232:18365:27:28:108:505:654:144:Times:144:Times:  The original C&B Survey, conducted by Mathematica Policy Research (MPR) in 
+10:233:18442:28:28:72:515:626:144:Times:144:Times:1994-1996, contained questions about earnings, occupation, demographics, education, civic 
+10:234:18532:28:27:72:542:598:144:Times:144:Times:activities and life satisfaction.4  MPR attempted to survey all students in the 1976 cohort from each 
+10:235:18634:27:28:72:542:571:144:Times:144:Times:of the 34 C&B schools, with the exception of the four public universities, where a sample (of 2000 
+10:236:18733:28:28:72:532:543:144:Times:144:Times:individuals) was drawn that included all racial and ethnic minorities and athletes, and a random 
+10:237:18830:28:110:72:505:515:144:Times:65:Times:sample of other students.    For the 1989 cohort, students from 21 colleges were surveyed.5
+10:238:18921:110:27:108:542:405:144:Times:144:Times:Early in the C&B questionnaire respondents were asked, "In rough order of preference, please 
+10:239:19014:27:0:72:293:378:144:Times:144:Times:list the other schools you seriously considered."
+10:240:19063:0:28:505:531:516:144:Times:144:Times:  The 
+10:241:19069:28:28:71:526:488:144:Times:144:Times:original 1989 C&B sample included all racial and ethnic minorities and athletes and a random 
+10:242:19162:28:27:71:523:460:144:Times:144:Times:sample of other students. Our regressions are weighted by the inverse of the probability that a 
+10:243:19258:27:50:71:254:433:144:Times:144:Times:student was included in the sample.    
+10:244:19297:50:33:293:542:383:65:Times:144:Times:6  Respondents were then asked whether they applied 
+10:245:19349:33:28:71:540:350:144:Times:144:Times:to, and were accepted by, each of the schools they listed. Because our analysis relies on individuals’ 
+10:246:19452:28:27:72:512:322:144:Times:144:Times:responses to these survey questions, the sample for our primary analysis is restricted to survey 
+10:247:19549:27:62:71:135:295:144:Times:65:Times:respondents.7
+10:248:19562:62:8:216:218:233:122:g_d0_f2:122:g_d0_f2:                                                           
+10:249:19620:8:0:72:511:225:65:Times:99:Times:4 See Bowen and Bok (1998) for a full description of the schools and variables available in the C&B dataset. 
+10:250:19727:0:28:135:543:295:144:Times:144:Times:  Survey response rates were 80 percent for the 1976 cohort and 84 percent for the 1989 
+10:251:19815:28:56:72:112:267:144:Times:144:Times:cohort.   
+10:252:19825:56:17:72:502:211:65:Times:99:Times:5  The participating C&B schools included in the 1989 survey were: Bryn Mawr College, Duke University, 
+10:253:19928:17:12:71:528:194:99:Times:99:Times:Georgetown University,    Miami University of Ohio, Morehouse College, Oberlin College Penn State University, 
+10:254:20038:12:11:71:501:182:99:Times:99:Times:Princeton University, Stanford University, University of Michigan, University of Pennsylvania, Vanderbilt 
+10:255:20144:11:12:71:536:171:99:Times:99:Times:University, Washington University, Wellesley College, Wesleyan University, Williams College, Xavier University, 
+10:256:20256:12:8:71:157:159:99:Times:99:Times:and Yale University. 
+10:257:20276:8:17:72:543:151:65:Times:99:Times:6  Students who responded to the C&B pilot survey were not asked this question and are therefore excluded from our 
+10:258:20391:17:8:72:113:134:99:Times:99:Times:analysis.   
+10:259:20403:8:18:72:542:126:65:Times:99:Times:7  We were able to estimate our basic wage equation for the full sample of C&B students (including nonrespondents), 
+10:260:20519:18:11:72:542:108:99:Times:99:Times:and obtained results that were similar to those restricted to survey respondents. For example, if we include all students 
+10:261:20641:11:11:72:540:97:99:Times:99:Times:in the 1976 cohort with non-zero earnings, the coefficient on school SAT score in the 1995 earnings basic regression 
+10:262:20758:11:12:71:518:86:99:Times:99:Times:model was .059 with a standard error of .021; for the sample of survey respondents with non-zero earnings, the 
+10:263:20869:12:0:71:410:74:99:Times:99:Times:coefficient on school SAT score was .061 with a standard error of .019 (not shown). 
+11:264:20955:0:28:108:522:709:144:Times:144:Times:The C&B Survey data are linked data drawn from individuals’ applications to college 
+11:265:21039:28:27:72:543:681:144:Times:144:Times:(such as their SAT scores) as well as data drawn from their transcripts (such as grades in college). 
+11:266:21139:27:28:72:538:654:144:Times:144:Times:The C&B data were also merged to the Higher Education Research Institute’s (HERI) Freshman 
+11:267:21230:28:28:72:112:626:144:Times:144:Times:Survey. 
+11:268:21238:28:27:72:246:598:144:Times:65:Times:B.   Regression Control Variables 
+11:269:21271:27:28:108:543:571:144:Times:144:Times: Our basic regression model controls for race, sex, high school grade point average, student 
+11:270:21363:28:27:72:547:543:144:Times:144:Times:SAT  score,  predicted  parental  income  and  whether  the  student  was  a  college  athlete;  our  
+11:271:21465:27:28:72:542:516:144:Times:144:Times:self-revelation model includes these same variables, and also includes the average SAT score of the 
+11:272:21565:28:28:72:543:488:144:Times:144:Times:schools  to  which  a  student  applied  and  the  number  of  applications  they  submitted.  Race,  gender, 
+11:273:21675:28:27:72:542:460:144:Times:144:Times:parental education and occupation (used to predict parental income), information on the schools the 
+11:274:21775:27:28:72:543:433:144:Times:144:Times:student applied to, whether the student was an athlete, and student SAT score were drawn from the 
+11:275:21873:28:28:72:544:405:144:Times:144:Times:C&B  data.  To  construct  other  variables  about  students’  performance  in  high  school  and  their  
+11:276:21979:28:27:72:544:377:144:Times:144:Times:parents’  income,  we  used  data  from  the  HERI  freshman  survey.  Because  parental  income  was  
+11:277:22082:27:28:72:542:350:144:Times:144:Times:missing for many individuals in the sample, but information for other family background information 
+11:278:22182:28:27:72:542:322:144:Times:144:Times:(such as parental education)  was generally available, we predicted parental income by first regressing 
+11:279:22286:27:28:72:543:295:144:Times:144:Times:log parental income on mother's and father's education and occupation for the subset of students with 
+11:280:22388:28:28:72:543:267:144:Times:144:Times:available family income data, and then multiplied the coefficients from this regression by the values 
+11:281:22490:28:27:72:543:239:144:Times:144:Times:of the explanatory variables for every student in the sample. When regression control variables for 
+11:282:22590:27:28:72:543:212:144:Times:144:Times:SAT score or high school GPA were missing, we set the variable equal to the mean value for the 
+11:283:22685:28:38:72:449:184:144:Times:144:Times:sample, and also included a dummy variable indicating the data were missing. 
+11:284:22761:38:27:72:215:146:144:Times:144:Times:C.   College Characteristics 
+11:285:22789:27:27:108:543:119:144:Times:144:Times:Each college’s average SAT score and Barron’s index of college selectivity (as reported in 
+11:286:22880:27:0:72:543:92:144:Times:144:Times:the 1978 and 1992 Barron’s guides) was linked to student’s responses to the questions concerning 
+12:287:22980:0:111:72:205:709:144:Times:65:Times:the schools they applied to.8
+12:288:23009:111:27:108:542:598:144:Times:144:Times: Net tuition for 1970, 1980, and 1990 was calculated by subtracting the average aid awarded 
+12:289:23100:27:28:72:542:571:144:Times:144:Times:to undergraduates from the sticker price tuition, as reported in the 11th and 12th and 14th editions of 
+12:290:23204:28:27:71:544:543:144:Times:144:Times:American  Universities  and  Colleges.  The  1976  net  tuition  was  interpolated  from  the  1970  and  
+12:291:23310:27:0:71:353:516:144:Times:144:Times:1980 net tuition, assuming an exponential rate of growth.   
+12:292:23370:0:28:205:542:709:144:Times:144:Times:  Because there were only one or two colleges in some categories of the 
+12:293:23442:28:27:71:511:681:144:Times:144:Times:Barron’s index (particularly for the 1989 cohort), we represent the index with a continuous 
+12:294:23534:27:28:72:523:654:144:Times:144:Times:variable. The schools in our sample ranged from “Competitive” (coded a 2 on our continuous 
+12:295:23625:28:150:72:425:626:144:Times:144:Times:measure) to “Most Competitive” (coded a 5 on our continuous measure). 
+12:296:23695:150:38:72:218:476:144:Times:144:Times:D.    Earnings Measures  
+12:297:23718:38:27:107:527:438:144:Times:144:Times:The Social Security Administration linked College and Beyond data to SSA’s Detailed 
+12:298:23802:27:28:71:525:411:144:Times:144:Times:Earnings Records for the period of 1981 through 2007. The earnings measure for this analysis 
+12:299:23895:28:27:71:516:383:144:Times:144:Times:included the total earnings an individual reported to the Internal Revenue Service, including 
+12:300:23989:27:194:72:478:356:144:Times:65:Times:earnings from self-employment and earnings that were deferred to retirement plans.9
+12:301:24072:194:27:108:533:162:144:Times:144:Times: In addition to creating outcome measures that captured annual earnings, we also created 
+12:302:24160:27:0:72:543:135:144:Times:144:Times:outcome measures that were the median of an individual’s log annual earnings in 2007 dollars over 
+12:303:24258:0:28:478:536:356:144:Times:144:Times:      SSA ran 
+12:304:24272:28:28:71:522:328:144:Times:144:Times:computer programs written by MPR on our behalf so that individual-level earnings data were 
+12:305:24363:28:27:71:536:300:144:Times:144:Times:never viewed by researchers outside SSA. SSA was able to match over 95 percent of the student 
+12:306:24457:27:28:71:511:273:144:Times:144:Times:records we provided. We converted annual earnings for each year to 2007 dollars using the 
+12:307:24547:28:27:71:529:245:144:Times:144:Times:Consumer Price Index (CPI-U). The SSA earnings measure used in our primary analysis is not 
+12:308:24638:27:28:71:539:218:144:Times:144:Times:topcoded; however, to compare to the C&B survey, for one analysis, we deliberately topcode the 
+12:309:24733:28:88:71:460:190:144:Times:144:Times:SSA data to be consistent with the C&B data, as described in more detail below. 
+12:310:24812:88:8:216:218:102:122:g_d0_f2:122:g_d0_f2:                                                           
+12:311:24870:8:14:72:486:94:65:Times:99:Times:8  HERI provided the file with average SAT scores for 1978 and Mark Long provided the file for 1992. 
+12:312:24971:14:0:72:311:80:65:Times:99:Times:9 Income received from capital gains is excluded. 
+13:313:25022:0:28:72:525:709:144:Times:144:Times:five year intervals (1983 through 1987, 1998 through 1992, 1993 through 1997, 1998 through 
+13:314:25113:28:27:72:542:681:144:Times:144:Times:2002, and 2003 through 2007). For example, the dependent variable for the period of 1993 to 1997 
+13:315:25210:27:28:71:542:654:144:Times:144:Times:was the median (for each individual) of his or her log earnings in the five years from 1993 to 1997. 
+13:316:25311:28:28:71:530:626:144:Times:144:Times:By using medians over five-year intervals, we reduce noise in the earnings measure that would 
+13:317:25405:28:27:71:526:598:144:Times:144:Times:result from brief periods of time that the students may have spent out of the labor market or in 
+13:318:25502:27:38:71:200:571:144:Times:144:Times:non-covered employment. 
+13:319:25525:38:27:107:542:533:144:Times:144:Times: Finally, the focus of this study is on the productivity of individuals who are employed (and 
+13:320:25618:27:28:71:532:506:144:Times:144:Times:not on whether individuals choose to or are able to work). Because we cannot identify full-time 
+13:321:25714:28:28:72:542:478:144:Times:144:Times:workers or hourly wages in the SSA administrative data, we generally restrict the sample to those 
+13:322:25812:28:27:72:528:450:144:Times:144:Times:earning over $13,822 (in 2007 dollars) during the year, the equivalent of earning the minimum 
+13:323:25906:27:28:72:510:423:144:Times:144:Times:wage for 2,000 hours at the 1982 federal minimum wage value (in 2007 dollars). For those 
+13:324:25995:28:27:72:499:395:144:Times:144:Times:regressions in which the dependent variable is median earnings over a five year interval, 
+13:325:26085:27:28:72:510:368:144:Times:144:Times:individuals were included in the sample if their median earnings over the five year interval 
+13:326:26178:28:28:72:542:340:144:Times:144:Times:exceeded $13,822; individuals were still included in the sample they earned less than $13,822 in a 
+13:327:26277:28:27:72:534:312:144:Times:144:Times:particular year as long as their median earnings exceeded $13,822. Estimates based on a sample 
+13:328:26372:27:28:72:531:285:144:Times:144:Times:that use this restriction are more precise than those based on a sample of all non-zero earners.10 
+13:329:26470:28:27:72:538:257:144:Times:144:Times:Also, as shown in Table 3, estimates based on the sample defined by this restriction are closer to 
+13:330:26569:27:28:72:509:230:144:Times:144:Times:estimates drawn from the sample of full-time workers (according to the C&B survey) than 
+13:331:26657:28:38:72:344:202:144:Times:65:Times:estimates drawn from a sample of all non-zero earners.11
+13:332:26713:38:0:72:439:164:144:Times:144:Times:IV. DESCRIPTIVE STATISTICS FOR SCHOOLS AND STUDENTS  
+13:333:26765:0:54:344:352:202:144:Times:144:Times:   
+13:334:26768:54:8:216:218:148:122:g_d0_f2:122:g_d0_f2:                                                           
+13:335:26826:8:18:72:527:140:65:Times:99:Times:10  Approximately 10 percent of workers in our sample (that is, those with any earnings) in the 1976 cohort and 8 
+13:336:26940:18:8:72:533:122:99:Times:99:Times:percent those in the 1989 cohort had earnings that were between zero and this minimum wage threshold ($13,822). 
+13:337:27051:8:17:72:526:114:65:Times:99:Times:11  Most studies on the return to college quality either restrict the sample to full-time workers (for example, Long 
+13:338:27168:17:11:72:542:97:99:Times:99:Times:2008) or to non-zero earners (for example, Hoekstra 2009). If we estimate our model using levels instead of logs, and 
+13:339:27286:11:12:72:542:86:99:Times:99:Times:include those with no earnings, we obtain qualitatively similar results. For example, for the 1976 cohort, the return to 
+13:340:27407:12:0:72:496:74:99:Times:99:Times:selectivity was $26,575(7,566) in the basic model and fell to $2,154 (9,884) in the self-revelation model.  
+14:341:27517:0:37:72:342:708:144:Times:144:Times:A. Characteristics of Colleges and Students in Sample 
+14:342:27570:37:27:108:540:671:144:Times:144:Times: While the average SAT score for colleges in the C&B dataset ranged from approximately 
+14:343:27656:27:28:72:541:644:144:Times:144:Times:800 to over 1300, most of the C&B schools were highly selective. The majority of C&B colleges 
+14:344:27750:28:28:72:531:616:144:Times:144:Times:fell into one of the top two Barron’s categories (Most Competitive or Highly Competitive; see  
+14:345:27844:28:27:72:542:588:144:Times:144:Times:Appendix Table 1), and had an average SAT score of greater than 1175. The high selectivity of the 
+14:346:27942:27:28:72:531:561:144:Times:144:Times:colleges within the C&B database make it particularly well-suited for this analysis, because the 
+14:347:28039:28:27:72:543:533:144:Times:144:Times:majority of students that attend selective colleges submit multiple applications, which is necessary 
+14:348:28140:27:28:72:542:506:144:Times:144:Times:for our identification strategy. In contrast, many students who attend less selective colleges submit 
+14:349:28242:28:28:72:522:478:144:Times:144:Times:only one application, because many less selective colleges accept all students who apply. For 
+14:350:28336:28:27:72:524:450:144:Times:144:Times:example, according to data from the National Longitudinal Study of the High School Class of 
+14:351:28428:27:38:72:500:423:144:Times:144:Times:1972, only 46 percent of students who attended college applied to more than one school. 
+14:352:28516:38:27:108:553:385:144:Times:144:Times: The regression sample includes students who entered (but did not necessarily graduate from)      
+14:353:28613:27:28:72:503:358:144:Times:144:Times:one of the C&B schools. The student and school characteristics among those included in the 
+14:354:28704:28:28:72:539:330:144:Times:144:Times:regression sample are shown in Table 1. Because the schools included in the database were highly 
+14:355:28801:28:27:72:528:302:144:Times:144:Times:selective, the students were in the sample had high academic qualifications. The students in the 
+14:356:28898:27:28:72:538:275:144:Times:144:Times:1976 cohort had an average SAT scores of 1160, and an average high school grade point average of 
+14:357:28995:28:27:71:542:247:144:Times:144:Times:3.6. (Note that for ease of interpretation, in our tables and regression analysis, we divide our measures 
+14:358:29101:27:28:71:520:220:144:Times:144:Times:of school SAT score and student SAT score by 100). Similarly, for the 1989 cohort, the average 
+14:359:29196:28:28:71:526:192:144:Times:144:Times:student SAT score was over 1200, and the average GPA was 3.6. The percentage of students that 
+14:360:29290:28:27:71:542:164:144:Times:144:Times:were racial and ethnic minorities was higher for the 1989 cohort than for the 1976 cohort. Of the 1976 
+14:361:29393:27:28:71:541:137:144:Times:144:Times:cohort, 6 percent of students were black and 1 percent were Hispanic, whereas 8 percent in the 1989 
+14:362:29493:28:27:71:535:109:144:Times:144:Times:cohort were black and 3 percent were Hispanic. Finally, earnings for the sample were high, as the 
+14:363:29591:27:0:71:539:82:144:Times:144:Times:average of each individual’s median earnings over the 2003 to 2007 period was $164,009 for the 
+15:364:29689:0:28:72:535:709:144:Times:144:Times:1976 cohort. Average annual earnings in 2007 were $183,411 for the 1979 cohort and $139,698 
+15:365:29781:28:38:72:170:681:144:Times:144:Times:for the 1989 cohort. 
+15:366:29802:38:37:72:290:643:144:Times:144:Times:B. Application and Matriculation Patterns    
+15:367:29847:37:28:108:523:606:144:Times:144:Times: Table 2 provides descriptive statistics about the application behavior of the students who 
+15:368:29938:28:27:72:536:578:144:Times:144:Times:entered one of the C&B schools in our study in 1976 or 1989. Nearly two-thirds of the 1976 cohort 
+15:369:30036:27:28:72:525:551:144:Times:144:Times:and 71 percent of the 1989 cohort submitted at least one additional application (in addition to the 
+15:370:30136:28:28:72:498:523:144:Times:144:Times:school they attended). For both cohorts, of those students submitting at least one additional 
+15:371:30230:28:27:72:528:495:144:Times:144:Times:application, over half applied to a school with a higher average SAT score than that of the college 
+15:372:30330:27:28:72:533:468:144:Times:144:Times:they attended, and nearly 90 percent of students were accepted to at least one additional school. Of 
+15:373:30431:28:27:72:534:440:144:Times:144:Times:those accepted to more than one school, about 35 percent were accepted to a more selective school 
+15:374:30529:27:28:72:541:413:144:Times:144:Times:than the one they ended up attending. The data for black and Hispanic students (shown in columns 2 
+15:375:30628:28:27:72:539:385:144:Times:144:Times:and 4) are similar, though blacks and Hispanics were somewhat more likely than students in the full 
+15:376:30728:27:28:72:543:358:144:Times:144:Times:sample to be accepted to at least one additional school, and to be accepted to a more selective school 
+15:377:30831:28:38:72:200:330:144:Times:144:Times:than the one they attended. 
+15:378:30859:38:27:108:535:292:144:Times:144:Times: While we could not explore whether students’ unobserved ability is related to the school 
+15:379:30948:27:28:72:531:265:144:Times:144:Times:they attend, we were able to examine how students’ observed characteristics are related to their 
+15:380:31045:28:28:72:542:237:144:Times:144:Times:choice of school, among those who were admitted to similar schools. Appendix Table 2 shows the 
+15:381:31140:28:27:72:543:209:144:Times:144:Times:relationship between student characteristics and the average SAT score of a school they choose to 
+15:382:31238:27:28:72:523:182:144:Times:144:Times:attend (conditional on the average SAT score of the most selective school to which they were 
+15:383:31331:28:27:72:535:154:144:Times:144:Times:accepted). For 1976, the coefficient on student SAT score is positive and statistically significant 
+15:384:31431:27:28:72:531:127:144:Times:144:Times:(for both the full sample and the black and Hispanic subgroup). While the relationship between 
+15:385:31526:28:0:71:543:99:144:Times:144:Times:high school GPA and the selectivity of the college attended is close to zero for the full sample, it is 
+16:386:31632:0:28:72:529:709:144:Times:144:Times:positive for black and Hispanic students. These results suggest that students in the 1976 cohort 
+16:387:31729:28:28:72:534:681:144:Times:144:Times:with better academic credentials tended to matriculate to more selective schools, controlling for 
+16:388:31827:28:37:71:434:653:144:Times:144:Times:the average SAT score of the most selective school they were accepted at.   
+16:389:31903:37:28:107:542:616:144:Times:144:Times: For the 1989 cohort, there was not a consistent pattern between student characteristics and 
+16:390:31995:28:27:71:543:588:144:Times:144:Times:students’ choice of schools. While the relationship between SAT score and school selectivity was 
+16:391:32092:27:28:71:513:561:144:Times:144:Times:positive and statistically significant (within both the full sample and the black and Hispanic 
+16:392:32187:28:28:71:534:533:144:Times:144:Times:subgroup), the relationship between high school GPA and the selectivity of the college attended 
+16:393:32282:28:37:71:281:505:144:Times:144:Times:was negative and statistically significant.     
+16:394:32330:37:28:107:542:468:144:Times:144:Times: Taken as a whole, these results do not suggest that students with greater potential chose to 
+16:395:32423:28:27:71:542:440:144:Times:144:Times:attend less selective schools; in fact, if anything, results from the 1976 cohort suggest that students 
+16:396:32527:27:28:71:523:413:144:Times:144:Times:with greater potential attend more selective schools. If, among students who were admitted to 
+16:397:32621:28:28:71:533:385:144:Times:144:Times:similar schools, more ambitious students choose to attend more selective schools, then even our 
+16:398:32717:28:34:71:489:357:144:Times:65:Tahoma:selection-adjusted estimates of the effect of college selectivity will be biased upwards. 
+16:399:32806:34:10:72:77:323:65:Tahoma:65:Tahoma:  
+16:400:32808:10:13:72:77:313:65:Tahoma:65:Tahoma:  
+16:401:32810:13:37:72:144:300:144:Times:144:Times:V. RESULTS 
+16:402:32820:37:38:72:476:263:144:Times:144:Times:A. Comparison of Earnings Using C&B Survey and SSA Administrative Data   
+16:403:32893:38:27:108:536:225:144:Times:144:Times:We begin by comparing earnings drawn from the C&B survey to those drawn from SSA 
+16:404:32974:27:28:72:538:198:144:Times:144:Times:administrative data. The C&B survey asked individuals to report their earnings in categories; we 
+16:405:33071:28:27:72:539:170:144:Times:144:Times:assigned those individuals with earnings over 200,000 a topcode of $245,662. (This topcode was 
+16:406:33166:27:28:72:542:143:144:Times:144:Times:set to be equal to the mean log earnings for graduates age 36 to 38 who earned more than $200,000 
+16:407:33264:28:28:71:540:115:144:Times:144:Times:per year, according to data from the 1990 census (in 1995 dollars)). If we recode the SSA data so 
+16:408:33362:28:0:72:512:87:144:Times:144:Times:that those earning over 200,000 have this same topcode, the correlation for the 1976 cohort 
+17:409:33457:0:55:72:467:709:144:Times:65:Times:between SSA earnings (in 1995) and C&B earnings during the same year is 0.90.12
+17:410:33536:55:28:108:537:654:144:g_d0_f2:144:Times: To compare results from this analysis to the results reported in Dale and Krueger (2002), 
+17:411:33626:28:28:72:511:626:144:Times:144:Times:we first estimated a regression where the log of C&B earnings is the outcome measure, but 
+17:412:33716:28:27:72:542:598:144:Times:144:Times:restricted the sample to students in the merged C&B and SSA sample (that is, they matriculated at 
+17:413:33814:27:28:72:520:571:144:Times:144:Times:one of the C&B schools participating in this study, reported that they were working full-time 
+17:414:33908:28:28:72:534:543:144:Times:144:Times:during all of 1995 on the C&B survey, and matched to the SSA data). The coefficient on school 
+17:415:34002:28:27:72:549:515:144:Times:144:Times:SAT score/100 in the basic model using this sample restriction is .068 (.014) (see Table 3,   column 
+17:416:34103:27:28:71:507:488:144:Times:144:Times:3), indicating that attending a school with a 100-point higher SAT score is associated with 
+17:417:34194:28:27:71:543:460:144:Times:144:Times:approximately 7 percent higher earnings later in a student’s career. This estimate is similar (though 
+17:418:34296:27:28:72:520:433:144:Times:144:Times:slightly less than) the .076 (.016) estimate for the C&B sample reported in Dale and Krueger 
+17:419:34389:28:0:71:232:405:144:Times:144:Times:(2002) (shown here in column 1).
+17:420:34421:0:28:467:542:709:144:Times:144:Times:  This is similar 
+17:421:34439:28:270:71:512:681:144:Times:144:Times:to estimates of the reliability of self-reported earnings data in Angrist and Krueger (1999).  
+17:422:34533:270:71:233:241:411:65:Times:65:Times:13
+17:423:34535:71:28:108:540:340:144:Times:144:Times: Next, we use earnings drawn from the SSA data. In column 5, we use the same sample of 
+17:424:34621:28:27:72:537:312:144:Times:144:Times:full-time workers, but use SSA earnings that were topcoded in the same way that earnings in the 
+17:425:34717:27:28:72:515:285:144:Times:144:Times:C&B survey were topcoded. In column 7, we use SSA earnings and use the same sample of 
+17:426:34803:28:27:72:517:257:144:Times:144:Times:full-time workers, but do not topcode the data. In column 9, we use the median of [log(1993 
+17:427:34895:27:28:71:540:230:144:Times:144:Times:earnings) through log (1997 earnings)] (in 2007 dollars) as our outcome measure, and restrict the 
+17:428:34993:28:28:71:542:202:144:Times:144:Times:sample to those with non-zero earnings. In column 11, we restrict the sample to those with annual 
+17:429:35091:28:27:71:543:174:144:Times:144:Times:earnings that were greater than a minimum wage threshold (defined as $13,822 in 2007 dollars). In 
+17:430:35189:27:0:71:529:147:144:Times:144:Times:each model, the estimates for the coefficient on school SAT score drawn from our basic model 
+17:431:35282:0:28:241:533:405:144:Times:144:Times:  In both samples, the return becomes indistinguishable from 
+17:432:35343:28:263:71:370:377:144:Times:144:Times:zero in the self-revelation model (shown in columns 2 and 4). 
+17:433:35405:263:9:216:218:114:122:g_d0_f2:122:g_d0_f2:                                                           
+17:434:35463:9:13:72:521:105:65:Times:99:Times:12  When SSA earnings are not topcoded, the correlation between SSA earnings and C&B earnings falls to 0.67. 
+17:435:35571:13:18:72:542:92:65:Times:99:Times:13  Note that the Dale and Krueger (2002) estimate is based on students from 30 C&B schools (all of the C&B schools 
+17:436:35687:18:0:72:531:74:99:Times:99:Times:except for the HBCUs), whereas the estimate in column 3 includes the 27 C&B schools participating in this study. 
+18:437:35802:0:28:72:533:709:144:Times:144:Times:range from .048 to .061, and are similar to (but somewhat less than) the estimate using earnings 
+18:438:35899:28:37:72:305:681:144:Times:144:Times:from the C&B survey as the outcome measure.   
+18:439:35945:37:28:108:526:644:144:Times:144:Times: Columns 6, 8, 10, and 12 show results from the self-revelation model for each of these 
+18:440:36032:28:28:72:542:616:144:Times:144:Times:samples. The return to school SAT score in each of these selection-adjusted models is negative and 
+18:441:36131:28:37:71:214:588:144:Times:144:Times:indistinguishable from zero.   
+18:442:36162:37:28:107:530:551:144:Times:144:Times: In summary, for the 1976 cohort, across a variety of sample restrictions and across both 
+18:443:36251:28:28:71:542:523:144:Times:144:Times:sources of earnings data (C&B survey data and SSA administrative data), the return to school SAT 
+18:444:36348:28:27:71:528:495:144:Times:144:Times:score has a large and positive effect on earnings when we do not adjust for unobserved student 
+18:445:36443:27:28:71:488:468:144:Times:144:Times:characteristics. However, when we adjust for unobserved student characteristics in the 
+18:446:36530:28:38:71:508:440:144:Times:144:Times:self-revelation model, the return falls substantially, becoming indistinguishable from zero. 
+18:447:36623:38:37:71:243:402:144:Times:144:Times:B. Alternative Selection Controls 
+18:448:36656:37:27:107:542:365:144:Times:144:Times: We also re-estimated the series of models from Dale and Krueger (2002) that use a variety 
+18:449:36746:27:28:71:542:338:144:Times:144:Times:of selection controls in place of the average SAT score that the student applied to. For example, in 
+18:450:36847:28:28:71:538:310:144:Times:144:Times:one model, we controlled for the highest SAT score of the schools a student was accepted by but 
+18:451:36943:28:27:71:529:282:144:Times:144:Times:did not attend.    In another model, we controlled for the average SAT score of the colleges that 
+18:452:37041:27:28:71:542:255:144:Times:144:Times:rejected the student. Consistent with Dale and Krueger (2002), in each of these models, the return 
+18:453:37140:28:27:71:542:227:144:Times:144:Times:to the school SAT score of the school that the student actually attended was less than the return to 
+18:454:37241:27:28:72:541:200:144:Times:144:Times:the colleges they applied to but (did not attend). For example, for the 1976 cohort, the coefficient 
+18:455:37342:28:28:72:532:172:144:Times:144:Times:on average school SAT score among the schools a student was rejected by was .079 (.022), and 
+18:456:37435:28:27:72:542:144:144:Times:144:Times:from this same model the coefficient on the average SAT score for the school the student attended 
+18:457:37533:27:0:72:416:117:144:Times:144:Times:was .035 (.028).    A  full set of these results is available upon request.     
+19:458:37615:0:28:108:543:709:144:Times:144:Times: The finding that the average SAT score of schools that rejected a student is more than twice 
+19:459:37708:28:27:72:539:681:144:Times:144:Times:as strong a predictor of the student’s subsequent earnings as the average SAT score of the school 
+19:460:37806:27:28:72:518:654:144:Times:144:Times:the student attended provides powerful evidence that conventional estimates of the payoff to 
+19:461:37899:28:38:72:450:626:144:Times:144:Times:attending highly selective colleges is biased upward, at least for this sample.     
+19:462:37982:38:37:72:508:588:144:Times:144:Times:C. Estimated Effect of College Characteristics over the Lifecycle for the 1976 Cohort 
+19:463:38068:37:28:108:527:551:144:Times:144:Times: To assess the return to school characteristics over the course of student’s career for the 
+19:464:38159:28:28:72:534:523:144:Times:144:Times:1976 cohort, we estimate regressions where the outcome measure was the median of log(annual 
+19:465:38251:28:27:72:541:495:144:Times:144:Times:earnings) for each individual (in 2007 dollars) over a five year interval (1983 through 1987, 1998 
+19:466:38350:27:28:72:521:468:144:Times:144:Times:through 1992, 1993 through 1997, 1998 through 2002, and 2003 through 2007).   Results are 
+19:467:38440:28:37:72:161:440:144:Times:144:Times:shown in Table 4. 
+19:468:38458:37:28:108:528:403:144:Times:144:Times: In our basic model with a standard set of regression controls, the return to college SAT 
+19:469:38547:28:28:72:522:375:144:Times:144:Times:score increases over the course of a student’s career, from indistinguishable from zero for the 
+19:470:38643:28:27:72:530:347:144:Times:144:Times:earliest period (1983 to 1987, about 3 to 7 years after students likely would have graduated), to 
+19:471:38741:27:28:72:523:320:144:Times:144:Times:over seven percent in for the period of 2003 to 2007 (23 to 27 years after college graduation). 
+19:472:38837:28:27:72:541:292:144:Times:144:Times:However, in our self-revelation models, the estimates are not significantly different from zero for 
+19:473:38937:27:28:72:537:265:144:Times:144:Times:any time period. (To save space, we only report parameter estimates for school characteristics in 
+19:474:39035:28:37:72:542:237:144:Times:144:Times:these tables. In Appendix Table 3, we report a full set of parameter estimates for selected models). 
+19:475:39136:37:28:108:517:200:144:Times:144:Times: We also estimated regressions separately by gender. In the basic model, the return to 
+19:476:39222:28:28:72:543:172:144:Times:144:Times:college SAT score for men was about 5 percent in 1988 to 1992, and increased over time, reaching 
+19:477:39318:28:27:72:509:144:144:Times:144:Times:a high of nearly 9 percent for the period of 1998 through 2002. For women, the return was 
+19:478:39408:27:28:72:533:117:144:Times:144:Times:consistently lower than the return for men, ranging from 3 percent (in 1988 to 1992) to nearly 6 
+19:479:39505:28:0:72:542:89:144:Times:144:Times:percent (in 2003 to 2007). The lower return for women does not appear to be due solely to the fact 
+20:480:39607:0:28:72:543:709:144:Times:144:Times:that we cannot identify which women were working full time in SSA’s administrative data, as the 
+20:481:39703:28:27:72:536:681:144:Times:144:Times:return for women (5 percent) was smaller than the return for men (7 percent) in the C&B survey 
+20:482:39798:27:28:71:536:654:144:Times:144:Times:when we limited the sample to those who reported working full-time. For both men and women, 
+20:483:39890:28:93:71:479:626:144:Times:65:Times:the coefficient was zero (and sometimes even negative) in the self-revelation model.14
+20:484:39976:93:27:108:529:533:144:Times:144:Times: We estimated these same regressions for two other college characteristics, the Barron’s 
+20:485:40064:27:28:72:529:506:144:Times:144:Times:Index and the log of net tuition. The results are summarized in Table 5. In our basic model, the 
+20:486:40161:28:28:72:536:478:144:Times:144:Times:estimated impact of these school characteristics increased over the course of the career, with the 
+20:487:40260:28:27:72:542:450:144:Times:144:Times:coefficient on log tuition reaching a high of 0.14 and the Barron’s Index reaching 0.08 at in the last 
+20:488:40363:27:28:72:535:423:144:Times:144:Times:five year interval (last set of rows, Table 5). However, in the self-revelation model the estimates 
+20:489:40463:28:0:72:392:395:144:Times:144:Times:fall substantially and are statistically insignificant at the 0.10 level.
+20:490:40536:0:28:480:543:626:144:Times:144:Times:  To increase 
+20:491:40550:28:27:72:534:598:144:Times:144:Times:sample size and improve the precision of our estimates, we focus on results based on the pooled 
+20:492:40646:27:170:72:403:571:144:Times:144:Times:sample of men and women together throughout the rest of the paper. 
+20:493:40713:170:43:393:401:401:65:Times:65:Times:15
+20:494:40715:43:28:108:542:358:144:Times:144:Times: These results are partly a contrast to Dale and Krueger (2002), in that the earlier analysis of 
+20:495:40811:28:28:72:543:330:144:Times:144:Times:self-reported earnings data showed a statistically significant relationship between earnings and the 
+20:496:40912:28:0:72:543:302:144:Times:144:Times:log of net tuition in the self-revelation model, as the coefficient on net tuition was of .058 (.018). 
+20:497:41014:0:129:401:409:395:144:Times:144:Times:   
+20:498:41017:129:9:216:218:266:122:g_d0_f2:122:g_d0_f2:                                                           
+20:499:41075:9:19:72:542:257:65:Times:99:Times:14 This lower return to college selectivity for women is consistent with other literature. Results from Hoekstra (2009), 
+20:500:41195:19:13:72:526:238:99:Times:99:Times:Black and Smith (2004) and Long (2008) all suggest that the effect of college selectivity on earnings is lower for 
+20:501:41310:13:13:72:521:225:99:Times:99:Times:women than for men. Also, while the coefficients for school SAT in the self-revelation model was negative and 
+20:502:41420:13:14:71:541:212:99:Times:99:Times:significant for women in some years (1993 to 1997 and 1998 to 2002), the pattern of results across all of the models we 
+20:503:41540:14:13:71:542:198:99:Times:99:Times:estimated (which included, for example, different measures of college quality measures and different minimum wage 
+20:504:41654:13:13:72:541:185:99:Times:99:Times:thresholds)  did not suggest that the return for women was significantly less than zero. For example, the coefficients for 
+20:505:41777:13:13:71:528:172:99:Times:99:Times:the Barron's index for women for women was .051 (.011) in the basic model and .010 (.022) in the self-revelation 
+20:506:41890:13:14:71:534:159:99:Times:99:Times:model in 1993 to 1997; similarly in 1998 through 1992 the coefficient was .050 (.008) in the basic model and -.004 
+20:507:42005:14:23:71:213:145:99:Times:99:Times:(.027) in the self-revelation model. 
+20:508:42041:23:8:71:73:122:99:Times:99:Times: 
+20:509:42041:8:17:72:498:114:65:Times:99:Times:15  We probed the sensitivity of the estimates by including dummy variables for categories (such as “Most 
+20:510:42147:17:11:72:542:97:99:Times:99:Times:Competitive”) for the gradations of the Barron’s Index.    The estimates for the most selective categories were sizeable 
+20:511:42268:11:12:72:526:86:99:Times:99:Times:and significant compared with the base group of the least selective schools in the basic model but were small and 
+20:512:42382:12:0:72:287:74:99:Times:99:Times:statistically insignificant in the self-revelation model. 
+21:513:42442:0:28:72:543:709:144:Times:144:Times:To attempt to reconcile these results with Dale and Krueger (2002), we re-estimated the effect of 
+21:514:42540:28:27:72:543:681:144:Times:144:Times:net tuition on self-reported earnings for full-time workers from the C&B survey in 1995 using the 
+21:515:42638:27:28:72:544:654:144:Times:144:Times:subset  of  students  from  the  schools  participating  in this  study,  and  found  that  the  coefficient  
+21:516:42748:28:28:72:542:626:144:Times:144:Times:(adjusted for clustering) on log (net tuition)  from the self-revelation model was somewhat smaller: 
+21:517:42849:28:27:72:543:598:144:Times:144:Times:.041 (.038), and not statistically significant. When we estimated the same regression for the same 
+21:518:42948:27:28:72:544:571:144:Times:144:Times:sample,  but  used  SSA’s  administrative  earnings data in  1995  (instead  of  self-reported  earnings  
+21:519:43054:28:28:72:542:543:144:Times:144:Times:data from the C&B survey), the coefficient (and standard error) on net tuition was even smaller: 
+21:520:43151:28:27:72:542:515:144:Times:144:Times:.033 (.046). Moreover, over the full study period (1983 to 2007) the coefficient on net tuition was 
+21:521:43251:27:28:72:543:488:144:Times:144:Times:generally between 0 and .02 (and never greater than .033) in the self-revelation model based on 
+21:522:43346:28:27:72:544:460:144:Times:144:Times:earnings  drawn  from  SSA  administrative  data  as  the  outcome  measure.  Thus,  the  effect  of  net  
+21:523:43453:27:28:72:544:433:144:Times:144:Times:tuition  based  on  the  single  year  of  self-reported  earnings  reported  in  Dale  and  Krueger  (2002)  
+21:524:43563:28:28:72:543:405:144:Times:144:Times:appears to been atypically high relative to the series of estimates we were able to generate using 
+21:525:43662:28:37:72:538:377:144:Times:144:Times:SSA’s administrative data, though the large standard errors make it difficult to draw inferences.   
+21:526:43762:37:38:72:418:340:144:Times:144:Times:C. Estimated Effects of College Characteristics for the 1989 Cohort 
+21:527:43830:38:27:108:543:302:144:Times:144:Times: Unlike the 1976 cohort where we have data for most of the student’s career, we only have a 
+21:528:43921:27:28:72:543:275:144:Times:144:Times:limited number of post-college years for the 1989 cohort. As shown for the 1976 cohort, there is no 
+21:529:44021:28:27:72:520:247:144:Times:144:Times:return to college characteristics in the early part of a student’s career, possibly because many 
+21:530:44118:27:28:72:542:220:144:Times:144:Times:graduates from highly selective colleges attend graduate school, and thus forego work experience 
+21:531:44215:28:28:72:513:192:144:Times:144:Times:early in their careers. Therefore, for the 1989 cohort, we focus on the most recent year with 
+21:532:44308:28:27:72:527:164:144:Times:144:Times:earnings data available, 2007, when the students, were, on average, 35 years old. Although the 
+21:533:44403:27:28:72:530:137:144:Times:144:Times:1989 cohort is too young to assess changes in the return to school selectivity over the student’s 
+21:534:44501:28:28:72:538:109:144:Times:144:Times:career, it does allow us to assess whether estimates for the return to school selectivity are similar 
+21:535:44603:28:0:72:290:81:144:Times:144:Times:across cohorts at one point in the lifecycle.     
+22:536:44656:0:28:108:539:709:144:Times:144:Times:   In 2007, the coefficient for school SAT score/100 was .056 with a standard error of .014 
+22:537:44747:28:27:72:531:681:144:Times:144:Times:(or .031 if we adjust for clustering among students who attended the same schools) in the basic 
+22:538:44843:27:28:72:477:654:144:Times:144:Times:model (Table 6). Consistent with the results for the 1976 cohort, the coefficient was 
+22:539:44929:28:28:71:520:626:144:Times:144:Times:indistinguishable from zero (-.008 with a standard error of .019) in the self-revelation model. 
+22:540:45025:28:27:71:542:598:144:Times:144:Times:When we estimated these models by gender, the results are also similar to those of the 1976 cohort: 
+22:541:45125:27:28:71:542:571:144:Times:144:Times:the coefficient for women (.032) was lower than the coefficient for men (.067) in the basic model, 
+22:542:45224:28:28:71:530:543:144:Times:144:Times:and in the self-revelation model, estimates for both men and women are indistinguishable from 
+22:543:45318:28:37:71:159:515:144:Times:144:Times:zero (not shown). 
+22:544:45336:37:28:107:534:478:144:Times:144:Times: The results for the Barron’s index were consistent with the results for school SAT score. 
+22:545:45426:28:27:71:541:450:144:Times:144:Times:Specifically, the return to the Barron’s index was nearly 7 percent in the basic model, but was close 
+22:546:45528:27:28:71:542:423:144:Times:144:Times:to zero in the self-revelation model. For net tuition, our estimates from both models were negative 
+22:547:45628:28:38:71:217:395:144:Times:144:Times:and had large standard errors. 
+22:548:45659:38:37:71:479:357:144:Times:144:Times:D. Estimated Effect of College Characteristics for Racial and Ethnic Minorities 
+22:549:45738:37:28:107:536:320:144:Times:144:Times: Because some past studies have found that the return to college selectivity varies by race 
+22:550:45829:28:27:71:509:292:144:Times:144:Times:(Behrman et al. 1996, Long 2009, and Loury and Garman 1995), we also examined results 
+22:551:45915:27:28:72:521:265:144:Times:144:Times:separately for racial and ethnic minorities. To increase the sample size, we pooled blacks and 
+22:552:46010:28:28:72:532:237:144:Times:144:Times:Hispanics together, both of which often receive preferential treatment in the college admissions 
+22:553:46107:28:27:72:537:209:144:Times:144:Times:process (Bowen and Bok, 1998). For the 1976 cohort, the return to each proxy for school quality 
+22:554:46203:27:28:72:542:182:144:Times:144:Times:increased over the course of the students’ career, and the magnitude of the coefficients did not fall 
+22:555:46305:28:27:72:541:154:144:Times:144:Times:substantially in the self-revelation model. The coefficient was most pronounced for the Barron’s   
+22:556:46404:27:28:71:517:127:144:Times:144:Times:index, where going to a school in a higher Barron’s category translated to 6.7 percent higher 
+22:557:46498:28:0:71:543:99:144:Times:144:Times:earnings (for the period of 2003 to 2007) in the basic model and 6.2 percent higher earnings in the 
+23:558:46601:0:28:72:542:709:144:Times:144:Times:self-revelation model (not shown). However, the standard errors were large, so the estimate for the 
+23:559:46701:28:37:72:515:681:144:Times:65:Times:Barron’s index in the self-revelation model was not statistically significant at the .10 level.16
+23:560:46798:37:28:108:542:644:144:Times:144:Times: Estimates for the 1989 cohort are shown in Table 7. Parameter estimates for each proxy for 
+23:561:46889:28:28:71:542:616:144:Times:144:Times:school quality a re large in the basic model, ranging from 6.3 for the Barron’s Index to 17.3 percent 
+23:562:46991:28:27:71:532:588:144:Times:144:Times:for the log of net tuition (Table 7). In the self-revelation model, these estimates remained large, 
+23:563:47091:27:28:71:542:561:144:Times:144:Times:ranging from 4.9 for the Barrons Index to 13.8 for the log of net tuition. While the standard errors 
+23:564:47192:28:27:71:499:533:144:Times:144:Times:are also large, some of the estimates are significantly greater than zero. For example, the 
+23:565:47284:27:28:71:501:506:144:Times:144:Times:coefficient on school SAT score/100 was .076 with a standard error of .032 (or .042 after 
+23:566:47374:28:0:71:330:478:144:Times:144:Times:accounting for clustering of students within schools). 
+23:567:47429:0:241:515:523:681:144:Times:144:Times:   
+23:568:47432:241:27:108:535:440:144:Times:144:Times: Because the historically black colleges and universities in this sample had lower average 
+23:569:47522:27:28:72:542:413:144:Times:144:Times:SAT scores (and lower Barron’s indices and net tuition) than the rest of the institutions in the C&B 
+23:570:47623:28:27:72:516:385:144:Times:144:Times:database, we investigated whether the reason that there was a return to school selectivity for 
+23:571:47718:27:28:72:514:358:144:Times:144:Times:minority students (but not for all students) was due to the greater range in school selectivity 
+23:572:47813:28:204:72:230:330:144:Times:65:Times:observed for minority students.17
+23:573:47846:204:0:72:447:126:144:Times:144:Times:E. Estimated Effect of School Average SAT Score by Parental Education 
+23:574:47916:0:28:230:535:330:144:Times:144:Times:  Specifically, we re-estimated the regressions but excluded the 
+23:575:47981:28:27:72:515:302:144:Times:144:Times:HBCUs from the sample. For the 1976 cohort, the return to the Barron’s Index fell from 6.2 
+23:576:48072:27:28:72:543:275:144:Times:144:Times:percent to 1.6 percent (and indistinguishable from zero) when we imposed this sample restriction. 
+23:577:48170:28:27:72:509:247:144:Times:144:Times:However, for the 1989 cohort, the estimates for minority students remained large when we 
+23:578:48259:27:28:72:543:220:144:Times:144:Times:excluded the HBCUs, implying returns of 12 percent for attending a school with 100 point higher 
+23:579:48355:28:28:72:509:192:144:Times:144:Times:SAT score and 14 percent for attending a school in a higher Barron’s category, even in the 
+23:580:48446:28:62:72:182:164:144:Times:65:Times:self-revelation model.   
+23:581:48471:62:8:216:218:102:122:g_d0_f2:122:g_d0_f2:                                                           
+23:582:48529:8:14:72:294:94:65:Times:99:Times:16  Results for the 1976 cohort are available on request. 
+23:583:48586:14:0:72:528:80:65:Times:99:Times:17  See Fryer and Greenstone (2007) for estimates of effect of HBCUs on earnings (and other outcome measures). 
+24:584:48699:0:28:108:531:709:144:Times:144:Times: Finally, we explored whether the effect of college selectivity varied by average years of 
+24:585:48789:28:314:72:171:681:144:Times:65:Times:parental education.18
+24:586:48810:314:0:72:176:367:144:Times:144:Times:VI. CONCLUSION 
+24:587:48825:0:27:171:542:681:144:Times:144:Times:  The interaction term for school-average SAT and years of parental education 
+24:588:48903:27:28:71:535:654:144:Times:144:Times:was negative for both cohorts, implying a higher payoff to attending a more selective school for 
+24:589:49000:28:28:72:484:626:144:Times:144:Times:students from more disadvantaged family backgrounds (Table 8). For example, in the 
+24:590:49083:28:27:72:515:598:144:Times:144:Times:self-revelation model for the 1989 cohort, our results suggest that attending a college with a 
+24:591:49178:27:28:72:520:571:144:Times:144:Times:200-point higher SAT score would lead to 5.2 percent higher earnings in 2007 for those with 
+24:592:49270:28:28:72:540:543:144:Times:144:Times:average parental education of 12 years (equivalent to graduating from high school); however, for 
+24:593:49367:28:27:72:503:515:144:Times:144:Times:those whose parents averaged 16 years of education (approximately equivalent to college 
+24:594:49455:27:28:72:542:488:144:Times:144:Times:graduates), there was virtually no return to attending a more selective college. Similar to Dale and 
+24:595:49556:28:27:72:520:460:144:Times:144:Times:Krueger (2002), we also found a negative interaction between predicted parental income and 
+24:596:49647:27:28:72:509:433:144:Times:144:Times:school average SAT score, though for most years, the interaction term was not statistically 
+24:597:49739:28:75:72:143:405:144:Times:144:Times:significant.      
+24:598:49757:75:28:107:543:330:144:Times:144:Times: Consistent with the past literature, we find a positive and significant effect of the return to 
+24:599:49853:28:27:72:541:302:144:Times:144:Times:college selectivity during a student’s prime working years in regression models that do not adjust 
+24:600:49952:27:28:72:489:275:144:Times:144:Times:for unobserved student quality for cohorts that entered college in 1976 and 1989 using 
+24:601:50039:28:27:72:525:247:144:Times:144:Times:administrative earnings data from the SSA’s Detailed Earnings Records. Based on these same 
+24:602:50130:27:28:72:537:220:144:Times:144:Times:regression specifications, we also find that the return to selectivity increases over the course of a 
+24:603:50232:28:28:72:527:192:144:Times:144:Times:student’s career. However, after we adjust for unobserved student characteristics, the return to 
+24:604:50329:28:30:72:538:164:144:Times:144:Times:college selectivity falls dramatically. For the 1976 cohort, the return to school-SAT score for the 
+24:605:50429:30:8:216:218:134:122:g_d0_f2:122:g_d0_f2:                                                           
+24:606:50487:8:18:72:539:126:65:Times:99:Times:18  Average years of parental education was equal to the average of the mother’s and father’s education; if data were 
+24:607:50605:18:11:72:542:108:99:Times:99:Times:missing for one parent, the average was set equal to the years of education for the parent for whom data were available. 
+24:608:50726:11:11:72:522:97:99:Times:99:Times:The 13 students in the 1989 cohort and 22 students in the 1976 cohort that were missing education data for both 
+24:609:50838:11:12:72:258:86:99:Times:99:Times:parents were excluded from these regressions. 
+24:610:50883:12:0:72:74:74:99:Times:99:Times: 
+25:611:50886:0:28:72:535:709:144:Times:144:Times:full sample is always indistinguishable from zero when we control for the average SAT score of 
+25:612:50981:28:27:72:543:681:144:Times:144:Times:the colleges that students applied to in order to control for omitted student variables. Similarly, the 
+25:613:51085:27:28:72:532:654:144:Times:144:Times:returns to other college characteristics (the Barron’s Index and net tuition) are substantial in the 
+25:614:51186:28:28:72:519:626:144:Times:144:Times:basic model that controls for commonly observed student characteristics but small and never 
+25:615:51278:28:27:72:535:598:144:Times:144:Times:statistically distinguishable from zero in the self-revelation model, which (partially) controls for 
+25:616:51379:27:38:71:221:571:144:Times:144:Times:unobserved student variables.   
+25:617:51411:38:27:107:541:533:144:Times:144:Times: There were noteworthy exceptions for subgroups. First, for the 1989 cohort, the estimates 
+25:618:51501:27:28:71:526:506:144:Times:144:Times:indicate a positive return to attending a more selective school for black and Hispanic students, 
+25:619:51598:28:28:71:533:478:144:Times:144:Times:which is robust in the selection-adjusted model.    Second, our results suggest that students from 
+25:620:51697:28:27:71:542:450:144:Times:144:Times:disadvantaged family backgrounds (in terms of educational attainment) experience a higher return 
+25:621:51794:27:28:71:507:423:144:Times:144:Times:to attending a selective college than those from more advantaged family backgrounds. For 
+25:622:51883:28:27:71:530:395:144:Times:144:Times:example, for the 1989 cohort, our estimates from the selection-adjusted model imply a positive 
+25:623:51978:27:28:71:536:368:144:Times:144:Times:return to attending a more selective college for students who had parents with an average of less 
+25:624:52076:28:28:71:542:340:144:Times:144:Times:than 16 years of schooling; however, the return to attending a more selective college was zero (or 
+25:625:52175:28:27:71:536:312:144:Times:144:Times:even negative) for students whose parents averaged 16 or more years of education. One possible 
+25:626:52270:27:28:72:543:285:144:Times:144:Times:explanation for this pattern is that while most students who apply to selective colleges may be able 
+25:627:52371:28:27:72:500:257:144:Times:144:Times:to rely on their families and friends to provide job-networking opportunities, networking 
+25:628:52461:27:28:72:506:230:144:Times:144:Times:opportunities that become available from attending a selective college may be particularly 
+25:629:52552:28:38:72:495:202:144:Times:144:Times:valuable for black and Hispanic students, and for students from less educated families.   
+25:630:52642:38:27:108:543:164:144:Times:144:Times: Contrary to expectations, our estimates do not suggest that the return to college selectivity 
+25:631:52735:27:28:72:520:137:144:Times:144:Times:(within the set of C&B schools) increased for students who entered college more recently, as 
+25:632:52827:28:27:72:543:109:144:Times:144:Times:estimates for the 1976 and 1989 cohort are similar when we compare the returns for each cohort at 
+25:633:52925:27:0:72:531:82:144:Times:144:Times:a similar stage relative to college-entry (approximately 18 to 19 years after the students entered 
+26:634:53027:0:28:72:539:709:144:Times:144:Times:college). Specifically, for the 1976 and 1989 cohorts, attending a college with a 100-point higher 
+26:635:53126:28:27:72:542:681:144:Times:144:Times:SAT score lead to students receive about 6 percent higher earnings (in 1995 and 2007 respectively) 
+26:636:53225:27:28:72:527:654:144:Times:144:Times:according to results from the basic model; for both cohorts, this return was close to zero in our 
+26:637:53323:28:38:72:197:626:144:Times:144:Times:selection-adjusted model. 
+26:638:53349:38:27:108:527:588:144:Times:144:Times: Several caveats should be borne in mind in interpreting our findings. First, the analysis 
+26:639:53439:27:28:72:542:561:144:Times:144:Times:does not pertain to a nationally representative sample of schools, as the sample is derived from the 
+26:640:53540:28:27:71:502:533:144:Times:144:Times:27 colleges and universities in the C&B dataset, the majority of which are very selective. 
+26:641:53631:27:28:71:542:506:144:Times:144:Times:However, estimates of the return to school selectivity based on the C&B dataset were similar to -- 
+26:642:53729:28:28:71:521:478:144:Times:144:Times:indeed, slightly higher than -- those based on a nationally representative dataset, the National 
+26:643:53826:28:27:71:525:450:144:Times:144:Times:Longitudinal Study (NLS) of the High School Class of 1972 (see Dale and Krueger, 2002). In 
+26:644:53917:27:28:71:516:423:144:Times:144:Times:addition, Dale and Krueger (2002) found an insignificant payoff to attending more selective 
+26:645:54009:28:37:71:422:395:144:Times:144:Times:schools when they used the NLS to estimate the self-revelation model.     
+26:646:54083:37:28:107:541:358:144:Times:144:Times: Second, the estimates from the selection-adjusted models are imprecise, especially for the 
+26:647:54174:28:28:71:528:330:144:Times:144:Times:1989 cohort. Thus, even though the point-estimates for the return to school quality are close to 
+26:648:54271:28:27:71:528:302:144:Times:144:Times:zero, the upper-bound of the 95 percent confidence intervals for these estimates are sometimes 
+26:649:54366:27:28:71:542:275:144:Times:144:Times:sizeable. Nonetheless, our results do imply that estimates that do not adjust for unobserved student 
+26:650:54467:28:27:71:532:247:144:Times:144:Times:characteristics are biased upward. Indeed, the finding that the average SAT score of the highest 
+26:651:54564:27:28:71:524:220:144:Times:144:Times:ranked school that rejected a student is a much stronger predictor of that student’s subsequent 
+26:652:54660:28:28:71:543:192:144:Times:144:Times:earnings than the average SAT score of the school the student actually attended should give pause 
+26:653:54758:28:27:71:487:164:144:Times:144:Times:to those who interpret conventional regression-based estimates of the effect of college 
+26:654:54846:27:0:71:361:137:144:Times:144:Times:characteristics as causal effects of the colleges themselves.  
+27:655:54911:0:28:108:533:709:144:Times:144:Times: Finally, it is possible that our estimates are affected by students sorting into the colleges 
+27:656:55005:28:27:72:526:681:144:Times:144:Times:they attended from their set of options based on their unobserved earnings potential. About 35 
+27:657:55100:27:28:72:527:654:144:Times:144:Times:percent of the students in each cohort in our sample did not attend the most selective school to 
+27:658:55196:28:397:72:207:626:144:Times:65:Times:which they were admitted.19
+27:659:55223:397:0:216:219:229:144:Times:144:Times:  
+27:660:55223:0:28:207:537:626:144:Times:144:Times:  Our analysis indicates that students who were more likely to attend 
+27:661:55293:28:27:72:520:598:144:Times:144:Times:the most selective school to which they were admitted had observable characteristics that are 
+27:662:55387:27:28:72:543:571:144:Times:144:Times:associated with higher earnings potential. If unobserved characteristics bear a similar relationship 
+27:663:55488:28:28:72:542:543:144:Times:144:Times:to college choice, then our already-small estimates of the payoff from attending a selective college 
+27:664:55589:28:27:72:512:515:144:Times:144:Times:would be biased upward. It is also possible that the benefit in terms of future earnings from 
+27:665:55683:27:28:72:530:488:144:Times:144:Times:attending a selective college varies across students, and that students sort into college based on 
+27:666:55782:28:27:72:542:460:144:Times:144:Times:their perceived benefit. For example, students who expect a lucrative career because they intend to 
+27:667:55882:27:28:72:542:433:144:Times:144:Times:earn an M.B.A. after college may sort into less selective undergraduate colleges. If students sort on 
+27:668:55984:28:28:71:538:405:144:Times:144:Times:the basis of their idiosyncratic return from attending a selective college, then equation (1) cannot 
+27:669:56085:28:27:71:518:377:144:Times:144:Times:be given a causal interpretation. However, if this is the case, then our results suggest that the 
+27:670:56183:27:28:71:542:350:144:Times:144:Times:typical student does not unambiguously benefit from attending the most selective college to which 
+27:671:56281:28:27:71:525:322:144:Times:144:Times:he or she was admitted. Rather, our results would suggest that students need to think carefully 
+27:672:56377:27:28:71:542:295:144:Times:144:Times:about the fit between their abilities and interests, the attributes of the school they attend, and their 
+27:673:56482:28:144:71:166:267:144:Times:144:Times:career aspirations.   
+27:674:56504:144:9:216:218:123:122:g_d0_f2:122:g_d0_f2:                                                           
+27:675:56562:9:17:72:531:114:65:Times:99:Times:19  Hoxby (2009) mistakenly reports that only 10 percent of students in the C&B sample used in Dale and Krueger 
+27:676:56674:17:11:72:542:97:99:Times:99:Times:(2002) did not attend the most selective college to which they were admitted. However, in actuality, 38 percent of the 
+27:677:56793:11:12:72:541:86:99:Times:99:Times:students in the C&B sample used in Dale and Krueger (2002) did not attend the most selective college to which they 
+27:678:56908:12:0:72:364:74:99:Times:99:Times:were admitted (similar to the results for the sample used in this paper).    
+28:679:56987:0:37:72:155:708:144:Times:144:Times:REFERENCES 
+28:680:56997:37:14:71:530:671:144:Times:144:Times:American Council on Education, American Universities and Colleges, 11th edition (Hawthorn, 
+28:681:57088:14:13:71:222:657:144:Times:144:Times:NY: Walter de Gruyter, 1973). 
+28:682:57117:13:14:71:74:644:144:Times:144:Times: 
+28:683:57117:14:14:71:530:630:144:Times:144:Times:American Council on Education, American Universities and Colleges, 12th edition (Hawthorn, 
+28:684:57208:14:14:71:222:616:144:Times:144:Times:NY: Walter de Gruyter, 1983). 
+28:685:57238:14:14:71:74:602:144:Times:144:Times: 
+28:686:57238:14:14:71:542:588:144:Times:144:Times:American Colleges and Universities. American Council on Education, American Universities and 
+28:687:57330:14:23:71:383:574:144:Times:144:Times:Colleges, 14th edition. Walter de Gruyter, Hawthorn, NY, 1992. 
+28:688:57393:23:14:71:543:551:144:Times:144:Times:Angrist, Joshua and Alan Krueger. (1999). "Empirical Strategies in Labor Economics," Handbook 
+28:689:57487:14:14:71:544:537:144:Times:144:Times:of  Labor  Economics,  vol.  3A,  edited  by  Orley  Ashenfelter  and  David  Card,  Amsterdam:  North  
+28:690:57591:14:24:71:192:523:144:Times:144:Times:Holland, pp. 1277-1366. 
+28:691:57615:24:13:71:494:499:144:Times:144:Times:Barron's Profiles of American Colleges, 19th Edition. Barron's Educational Series, Inc., 
+28:692:57704:13:14:71:182:486:144:Times:144:Times:Hauppauge, NY,1992. 
+28:693:57723:14:14:71:74:472:144:Times:144:Times: 
+28:694:57723:14:14:71:542:458:144:Times:144:Times:Behrman, J. R., Rosenzweig, M. R., & Taubman, P. (1996).College choice and wages: estimates 
+28:695:57815:14:14:71:462:444:144:Times:144:Times:using data on female twins. Review of Economics and Statistics, 78(4), 672–685. 
+28:696:57895:14:13:71:74:430:144:Times:144:Times: 
+28:697:57895:13:14:71:516:417:144:Times:144:Times:Black, Dan A. and Jeffrey A. Smith, “How Robust is the Evidence on the Effects of College 
+28:698:57985:14:14:71:494:403:144:Times:144:Times:Quality? Evidence From Matching.” Journal of Econometrics, 121, pp. 99 – 124, 2004. 
+28:699:58069:14:14:72:75:389:144:Times:144:Times: 
+28:700:58069:14:14:72:504:375:144:Times:144:Times:Bowen, William G. and Derek Bok. The Shape of the River: Long-Term Consequences of 
+28:701:58152:14:13:72:534:361:144:Times:144:Times:Considering Race in College and University Admissions. Princeton University Press, Princeton, 
+28:702:58246:13:14:72:121:348:144:Times:144:Times:NJ, 1998. 
+28:703:58256:14:14:72:75:334:144:Times:144:Times: 
+28:704:58256:14:14:72:519:320:144:Times:144:Times:Brewer, D., & Ehrenberg, R. (1996). Does it pay to attend an elite private college? Evidence 
+28:705:58349:14:14:72:432:306:144:Times:144:Times:from the senior class of 1980. Research in Labor Economics, 15, 239-272. 
+28:706:58422:14:13:72:75:292:144:Times:144:Times: 
+28:707:58422:13:14:72:523:279:144:Times:144:Times:Dale, Stacy Berg and Alan B. Krueger, “Estimating the Payoff to Attending a More Selective 
+28:708:58513:14:14:72:528:265:144:Times:144:Times:College: an Application of Selection on Observables and Unobservables. Quarterly Journal of 
+28:709:58605:14:14:72:330:251:144:Times:144:Times:Economics, 117(4), pp. 1491–1528, November 2002. 
+28:710:58654:14:14:72:75:237:144:Times:144:Times: 
+28:711:58654:14:13:72:508:223:144:Times:144:Times:Fox, M.A., Connolly, B.A., and Snyder, T.D. (2005).Youth Indicators 2005: Trends in the 
+28:712:58742:13:14:72:516:210:144:Times:144:Times:Well-Being of American Youth, (NCES 2005–050). U.S. Department of Education, National 
+28:713:58828:14:14:72:482:196:144:Times:144:Times:Center for Education Statistics. Washington, DC: U.S. Government Printing Office.   
+28:714:58912:14:14:72:75:182:144:Times:144:Times: 
+28:715:58912:14:14:72:524:168:144:Times:144:Times:Fryer, Roland G., and Michael Greenstone. 2010. "The Changing Consequences of Attending 
+28:716:59000:14:13:72:540:154:144:Times:144:Times:Historically Black Colleges and Universities." American Economic Journal: Applied Economics, 
+28:717:59093:13:28:71:144:141:144:Times:144:Times:2(1): 116–48.   
+28:718:59109:28:14:71:524:113:144:Times:144:Times:Hoekstra, Mark. 2009. “The Effect of Attending the Flagship State University on Earnings: A 
+28:719:59201:14:0:71:506:99:144:Times:144:Times:Discontinuity-Based Approach.” The Review of Economics and Statistics, Volume 91 (4). 
+29:720:59289:0:14:72:498:709:144:Times:144:Times:Hoxby, Caroline. The Changing Selectivity of American Colleges. Journal of Economic 
+29:721:59373:14:14:72:388:695:144:Times:144:Times:Perspectives—Volume 23, Number 4—Fall 2009—Pages 95–118 
+29:722:59429:14:14:72:75:681:144:Times:144:Times: 
+29:723:59429:14:16:72:543:667:144:Times:144:Times:Katz, Lawrence F. and Kevin M. Murphy. 1992. “Changes in Relative Wages, 1963-87: Supply 
+29:724:59518:16:25:72:454:651:144:Times:144:Times:and Demand Factors.” Quarterly Journal of Economics 107 (February): 35-78. 
+29:725:59593:25:14:72:526:626:144:Times:144:Times:Lena Lindahl, Hakan Regner. (2005) College Choice and Subsequent Earnings: Results Using 
+29:726:59682:14:14:72:533:612:144:Times:144:Times:Swedish Sibling Data*. Scandinavian Journal of Economics 107:3, 437-457 Online publication 
+29:727:59773:14:14:72:159:598:144:Times:144:Times:date: 1-Oct-2005. 
+29:728:59791:14:14:72:75:584:144:Times:144:Times: 
+29:729:59791:14:13:72:519:570:144:Times:144:Times:Long, Mark. "College Quality and Early Adult Outcomes." Economics of Education Review, 
+29:730:59878:13:14:72:237:557:144:Times:144:Times:27(5),pp. 588-602, October 2008. 
+29:731:59911:14:14:72:75:543:144:Times:144:Times: 
+29:732:59911:14:14:72:541:529:144:Times:144:Times:Long, Mark. “Changes in the Returns to Education and College Quality. Economics of Education 
+29:733:60004:14:14:72:191:515:144:Times:144:Times:Review (2009). In press. 
+29:734:60029:14:13:72:75:501:144:Times:144:Times: 
+29:735:60029:13:14:72:543:488:144:Times:144:Times:Loury, L. D., & Garman, D. (1995). College selectivity and earnings. Journal of Labor Economics, 
+29:736:60126:14:14:72:152:474:144:Times:144:Times:13(2), 289–308. 
+29:737:60142:14:14:72:75:460:144:Times:144:Times: 
+29:738:60142:14:14:72:535:446:144:Times:144:Times:Monks, James. 2000. “The Returns to Individual and College Characteristics Evidence from the 
+29:739:60235:14:27:72:507:432:144:Times:144:Times:National Longitudinal Survey of Youth.” Economics of Education Review, 19(3): 279–89. 
+29:740:60321:27:14:71:531:405:144:Times:144:Times:Saavedra, Juan. 2008. “The Returns to College Quality: A Regression Discontinuity Analysis.” 
+29:741:60414:14:28:71:272:391:144:Times:144:Times:Unpublished paper, Harvard University.   
+29:742:60455:28:332:71:74:363:144:Times:144:Times: 
+30:743:60455:332:0:72:115:31:144:Times:73:Times:DRAFT 
+30:744:60460:0:19:290:323:720:65:Times:65:Times:TABLE 1 
+30:745:60467:19:43:257:356:701:65:Times:65:Times:DESCRIPTIVE STATISTICS 
+30:746:60489:43:0:72:74:658:65:Times:65:Times: 
+30:747:60489:0:18:235:277:676:65:Times:65:Times:1976 Cohort 
+30:748:60500:18:0:349:351:658:65:Times:65:Times: 
+30:749:60500:0:37:430:472:676:65:Times:65:Times:1989 Cohort 
+30:750:60511:37:0:72:74:639:65:Times:65:Times: 
+30:751:60511:0:18:187:228:657:65:Times:65:Times:Full Sample 
+30:752:60522:18:0:252:254:639:65:Times:65:Times: 
+30:753:60522:0:18:269:334:657:65:Times:65:Times:Black and Hispanic 
+30:754:60540:18:0:349:351:639:65:Times:65:Times: 
+30:755:60540:0:18:376:417:657:65:Times:65:Times:Full Sample 
+30:756:60551:18:0:442:444:639:65:Times:65:Times: 
+30:757:60551:0:46:473:538:657:65:Times:65:Times:Black and Hispanic 
+30:758:60569:46:0:72:74:611:65:Times:65:Times: 
+30:759:60569:0:0:176:196:630:65:Times:65:Times:Mean 
+30:760:60573:0:9:211:242:639:65:Times:65:Times:Standard 
+30:761:60582:9:19:210:243:630:65:Times:65:Times:Deviation 
+30:762:60591:19:0:252:254:611:65:Times:65:Times: 
+30:763:60591:0:0:268:289:630:65:Times:65:Times:Mean 
+30:764:60595:0:9:306:337:639:65:Times:65:Times:Standard 
+30:765:60604:9:19:304:338:630:65:Times:65:Times:Deviation 
+30:766:60613:19:0:349:351:611:65:Times:65:Times: 
+30:767:60613:0:0:365:385:630:65:Times:65:Times:Mean 
+30:768:60617:0:9:400:431:639:65:Times:65:Times:Standard 
+30:769:60626:9:19:399:433:630:65:Times:65:Times:Deviation 
+30:770:60635:19:0:442:444:611:65:Times:65:Times: 
+30:771:60635:0:0:474:495:630:65:Times:65:Times:Mean 
+30:772:60639:0:9:509:540:639:65:Times:65:Times:Standard 
+30:773:60648:9:19:508:542:630:65:Times:65:Times:Deviation 
+30:774:60657:19:16:210:403:611:65:Times:65:Times:Dependent Variables:  Earnings Measures, 2007 Dollars 
+30:775:60710:16:15:72:238:595:65:Times:65:Times:Log (2007 Earnings) 11.53 1.07 
+30:776:60739:15:0:258:260:580:65:Times:65:Times: 
+30:777:60739:0:15:272:331:595:65:Times:65:Times:11.29 0.81 
+30:778:60749:15:0:354:356:580:65:Times:65:Times: 
+30:779:60749:0:15:369:537:595:65:Times:65:Times:11.41 1.21   11.21 0.73 
+30:780:60771:15:15:72:238:580:65:Times:65:Times:2007 Annual Earnings 183,411 711,803 
+30:781:60805:15:0:258:260:565:65:Times:65:Times: 
+30:782:60805:0:15:263:331:580:65:Times:65:Times:119,861 242,161 
+30:783:60819:15:0:354:356:565:65:Times:65:Times: 
+30:784:60819:0:15:360:426:580:65:Times:65:Times:139,698 359,255 
+30:785:60833:15:0:459:461:565:65:Times:65:Times: 
+30:786:60833:0:15:470:536:580:65:Times:65:Times:98,472 107,852 
+30:787:60847:15:9:72:143:565:65:Times:65:Times:Median of [Log(1993 
+30:788:60867:9:10:72:132:556:65:Times:65:Times:Earnings) through 
+30:789:60885:10:15:72:242:546:65:Times:65:Times:Log(1997 Earnings)] 11.30 0.847 
+30:790:60914:15:0:258:260:531:65:Times:65:Times: 
+30:791:60914:0:15:272:331:546:65:Times:65:Times:10.78 1.02 
+30:792:60924:15:9:72:143:531:65:Times:65:Times:      Median of [Log(2003 
+30:793:60944:9:9:72:132:522:65:Times:65:Times:Earnings) through 
+30:794:60962:9:15:72:242:513:65:Times:65:Times:Log(2007 Earnings)] 11.48 1.022 
+30:795:60992:15:0:258:260:498:65:Times:65:Times: 
+30:796:60992:0:15:272:331:513:65:Times:65:Times:11.00 1.19 
+30:797:61002:15:10:72:154:498:65:Times:65:Times:      Median of (1993 to 1997 
+30:798:61026:10:15:72:238:488:65:Times:65:Times:Earnings)  106,638 148,615 
+30:799:61050:15:0:258:260:473:65:Times:65:Times: 
+30:800:61050:0:15:268:332:488:65:Times:65:Times:70,760 77,178 
+30:801:61064:15:9:72:154:473:65:Times:65:Times:      Median of (2003 to 2007 
+30:802:61088:9:15:72:238:464:65:Times:65:Times:Earnings)  164,009 489,647 
+30:803:61112:15:0:258:260:449:65:Times:65:Times: 
+30:804:61112:0:15:263:331:464:65:Times:65:Times:102,714 211,876 
+30:805:61126:15:19:255:358:449:65:Times:65:Times:      Regression Control Variables 
+30:806:61154:19:10:72:142:430:65:Times:65:Times:Average School SAT 
+30:807:61173:10:15:72:238:420:65:Times:65:Times:Score/100 11.58 1.22 
+30:808:61193:15:0:258:260:405:65:Times:65:Times: 
+30:809:61193:0:15:272:331:420:65:Times:65:Times:10.95 2.00 
+30:810:61203:15:0:354:356:405:65:Times:65:Times: 
+30:811:61203:0:15:373:428:420:65:Times:65:Times:12.0 1.4 
+30:812:61211:15:0:459:461:405:65:Times:65:Times: 
+30:813:61211:0:15:479:537:420:65:Times:65:Times:11.54 1.45 
+30:814:61221:15:9:72:147:405:65:Times:65:Times:Average SAT Score of 
+30:815:61242:9:15:72:238:396:65:Times:65:Times:Schools Applied to/100 11.40 1.20 
+30:816:61274:15:0:258:260:381:65:Times:65:Times: 
+30:817:61274:0:15:272:331:396:65:Times:65:Times:10.73 1.83 
+30:818:61284:15:0:354:356:381:65:Times:65:Times: 
+30:819:61284:0:15:373:428:396:65:Times:65:Times:11.9 1.4 
+30:820:61292:15:0:459:461:381:65:Times:65:Times: 
+30:821:61292:0:15:479:537:396:65:Times:65:Times:11.33 1.33 
+30:822:61302:15:15:71:238:381:65:Times:65:Times:Average Student SAT/100 11.61 1.89 
+30:823:61334:15:0:258:260:366:65:Times:65:Times: 
+30:824:61334:0:15:276:331:381:65:Times:65:Times:9.46 2.15 
+30:825:61342:15:0:354:356:366:65:Times:65:Times: 
+30:826:61342:0:15:373:428:381:65:Times:65:Times:12.1 2.6 
+30:827:61350:15:0:459:461:366:65:Times:65:Times: 
+30:828:61350:0:15:479:537:381:65:Times:65:Times:10.24 2.20 
+30:829:61360:15:16:71:238:366:65:Times:65:Times:Student SAT is missing 0.05 0.24 
+30:830:61390:16:0:258:260:350:65:Times:65:Times: 
+30:831:61390:0:16:276:331:366:65:Times:65:Times:0.07 0.26 
+30:832:61398:16:0:354:356:350:65:Times:65:Times: 
+30:833:61398:0:16:373:427:366:65:Times:65:Times:0.00 0.09 
+30:834:61406:16:0:459:461:350:65:Times:65:Times: 
+30:835:61406:0:16:483:537:366:65:Times:65:Times:0.02 0.16 
+30:836:61414:16:15:71:238:350:65:Times:65:Times:Log(Net Tuition) 7.66 0.55 
+30:837:61438:15:0:258:260:335:65:Times:65:Times: 
+30:838:61438:0:15:276:331:350:65:Times:65:Times:7.69 0.47 
+30:839:61446:15:0:354:356:335:65:Times:65:Times: 
+30:840:61446:0:15:373:427:350:65:Times:65:Times:8.95 0.73 
+30:841:61454:15:0:459:461:335:65:Times:65:Times: 
+30:842:61454:0:15:483:537:350:65:Times:65:Times:8.97 0.41 
+30:843:61462:15:15:71:238:335:65:Times:65:Times:Barrons Index 3.34 1.20 
+30:844:61483:15:0:258:260:320:65:Times:65:Times: 
+30:845:61483:0:15:276:331:335:65:Times:65:Times:3.32 1.19 
+30:846:61491:15:0:354:356:320:65:Times:65:Times: 
+30:847:61491:0:15:373:427:335:65:Times:65:Times:4.19 1.13 
+30:848:61499:15:0:459:461:320:65:Times:65:Times: 
+30:849:61499:0:15:483:537:335:65:Times:65:Times:3.74 1.21 
+30:850:61507:15:15:71:238:320:65:Times:65:Times:Female 0.43 0.56 
+30:851:61521:15:0:258:260:305:65:Times:65:Times: 
+30:852:61521:0:15:276:331:320:65:Times:65:Times:0.53 0.51 
+30:853:61529:15:0:354:356:305:65:Times:65:Times: 
+30:854:61529:0:15:373:427:320:65:Times:65:Times:0.45 0.72 
+30:855:61537:15:0:459:461:305:65:Times:65:Times: 
+30:856:61537:0:15:483:537:320:65:Times:65:Times:0.51 0.50 
+30:857:61545:15:15:71:238:305:65:Times:65:Times:Black 0.06 0.27 
+30:858:61558:15:0:258:260:290:65:Times:65:Times: 
+30:859:61558:0:15:276:331:305:65:Times:65:Times:0.88 0.33 
+30:860:61566:15:0:354:356:290:65:Times:65:Times: 
+30:861:61566:0:15:373:427:305:65:Times:65:Times:0.08 0.40 
+30:862:61574:15:0:459:461:290:65:Times:65:Times: 
+30:863:61574:0:15:483:537:305:65:Times:65:Times:0.74 0.44 
+30:864:61582:15:16:71:238:290:65:Times:65:Times:Hispanic 0.01 0.10 
+30:865:61598:16:0:258:260:274:65:Times:65:Times: 
+30:866:61598:0:16:276:331:290:65:Times:65:Times:0.12 0.33 
+30:867:61606:16:0:354:356:274:65:Times:65:Times: 
+30:868:61606:0:16:373:427:290:65:Times:65:Times:0.03 0.24 
+30:869:61614:16:0:459:461:274:65:Times:65:Times: 
+30:870:61614:0:16:483:537:290:65:Times:65:Times:0.26 0.44 
+30:871:61622:16:15:71:238:274:65:Times:65:Times:Asian 0.02 0.16 
+30:872:61635:15:0:258:260:259:65:Times:65:Times: 
+30:873:61635:0:15:276:331:274:65:Times:65:Times:0.00 0.00 
+30:874:61643:15:0:354:356:259:65:Times:65:Times: 
+30:875:61643:0:15:373:427:274:65:Times:65:Times:0.08 0.40 
+30:876:61651:15:0:459:461:259:65:Times:65:Times: 
+30:877:61651:0:15:483:537:274:65:Times:65:Times:0.00 0.00 
+30:878:61659:15:15:71:238:259:65:Times:65:Times:Other Race 0.04 0.22 
+30:879:61678:15:0:258:260:244:65:Times:65:Times: 
+30:880:61678:0:15:276:331:259:65:Times:65:Times:0.00 0.00 
+30:881:61686:15:0:354:356:244:65:Times:65:Times: 
+30:882:61686:0:15:373:427:259:65:Times:65:Times:0.00 0.10 
+30:883:61694:15:0:459:461:244:65:Times:65:Times: 
+30:884:61694:0:15:483:537:259:65:Times:65:Times:0.00 0.00 
+30:885:61702:15:9:71:162:244:65:Times:65:Times:High School GPA, 4-P oint 
+30:886:61728:9:15:71:238:235:65:Times:65:Times:Scale 3.57 0.36 
+30:887:61741:15:0:258:260:220:65:Times:65:Times: 
+30:888:61741:0:15:276:331:235:65:Times:65:Times:3.37 0.44 
+30:889:61749:15:0:354:356:220:65:Times:65:Times: 
+30:890:61749:0:15:373:427:235:65:Times:65:Times:3.62 0.36 
+30:891:61757:15:0:459:461:220:65:Times:65:Times: 
+30:892:61757:0:15:483:537:235:65:Times:65:Times:3.49 0.36 
+30:893:61765:15:16:71:238:220:65:Times:65:Times:High School GPA Missing 0.37 0.54 
+30:894:61796:16:0:258:260:204:65:Times:65:Times: 
+30:895:61796:0:16:276:331:220:65:Times:65:Times:0.40 0.50 
+30:896:61804:16:0:354:356:204:65:Times:65:Times: 
+30:897:61804:0:16:373:427:220:65:Times:65:Times:0.61 0.71 
+30:898:61812:16:0:459:461:204:65:Times:65:Times: 
+30:899:61812:0:16:483:537:220:65:Times:65:Times:0.59 0.49 
+30:900:61820:16:15:71:238:204:65:Times:65:Times:Predicted Parental Income 9.98 0.39 
+30:901:61853:15:0:258:260:189:65:Times:65:Times: 
+30:902:61853:0:15:276:331:204:65:Times:65:Times:9.70 0.42 
+30:903:61861:15:0:354:356:189:65:Times:65:Times: 
+30:904:61861:0:15:369:427:204:65:Times:65:Times:11.05 0.54 
+30:905:61871:15:0:459:461:189:65:Times:65:Times: 
+30:906:61871:0:15:479:537:204:65:Times:65:Times:10.82 0.45 
+30:907:61881:15:15:71:238:189:65:Times:65:Times:Student Athlete 0.07 0.29 
+30:908:61904:15:0:258:260:174:65:Times:65:Times: 
+30:909:61904:0:15:276:331:189:65:Times:65:Times:0.06 0.23 
+30:910:61912:15:0:354:356:174:65:Times:65:Times: 
+30:911:61912:0:15:373:427:189:65:Times:65:Times:0.08 0.39 
+30:912:61920:15:0:459:461:174:65:Times:65:Times: 
+30:913:61920:0:15:483:537:189:65:Times:65:Times:0.06 0.23 
+30:914:61928:15:9:71:133:174:65:Times:65:Times:Student Submitted 
+30:915:61945:9:9:81:238:165:65:Times:65:Times:           0 additional applications 0.37 0.48 
+30:916:61977:9:0:258:260:156:65:Times:65:Times: 
+30:917:61977:0:9:276:331:165:65:Times:65:Times:0.38 0.49 
+30:918:61985:9:0:354:356:156:65:Times:65:Times: 
+30:919:61985:0:9:373:427:165:65:Times:65:Times:0.29 0.45 
+30:920:61993:9:0:459:461:156:65:Times:65:Times: 
+30:921:61993:0:9:483:537:165:65:Times:65:Times:0.31 0.46 
+30:922:62001:9:10:81:238:156:65:Times:65:Times:1 additional application 0.22 0.42 
+30:923:62032:10:0:258:260:146:65:Times:65:Times: 
+30:924:62032:0:10:276:331:156:65:Times:65:Times:0.24 0.44 
+30:925:62040:10:0:354:356:146:65:Times:65:Times: 
+30:926:62040:0:10:373:427:156:65:Times:65:Times:0.20 0.58 
+30:927:62048:10:0:459:461:146:65:Times:65:Times: 
+30:928:62048:0:10:483:537:156:65:Times:65:Times:0.21 0.41 
+30:929:62056:10:9:81:238:146:65:Times:65:Times:2 additional applications 0.21 0.41 
+30:930:62089:9:0:258:260:137:65:Times:65:Times: 
+30:931:62089:0:9:276:331:146:65:Times:65:Times:0.21 0.41 
+30:932:62097:9:0:354:356:137:65:Times:65:Times: 
+30:933:62097:0:9:373:427:146:65:Times:65:Times:0.22 0.60 
+30:934:62105:9:0:459:461:137:65:Times:65:Times: 
+30:935:62105:0:9:483:537:146:65:Times:65:Times:0.22 0.42 
+30:936:62113:9:9:81:238:137:65:Times:65:Times:3 additional applications 0.15 0.36 
+30:937:62145:9:0:258:260:128:65:Times:65:Times: 
+30:938:62145:0:9:276:331:137:65:Times:65:Times:0.14 0.35 
+30:939:62153:9:0:354:356:128:65:Times:65:Times: 
+30:940:62153:0:9:373:427:137:65:Times:65:Times:0.23 0.61 
+30:941:62161:9:0:459:461:128:65:Times:65:Times: 
+30:942:62161:0:9:483:537:137:65:Times:65:Times:0.21 0.41 
+30:943:62169:9:9:81:238:128:65:Times:65:Times:4 additional applications 0.04 0.22 
+30:944:62201:9:0:258:260:119:65:Times:65:Times: 
+30:945:62201:0:9:276:331:128:65:Times:65:Times:0.03 0.17 
+30:946:62209:9:0:354:356:119:65:Times:65:Times: 
+30:947:62209:0:9:373:427:128:65:Times:65:Times:0.07 0.38 
+30:948:62217:9:0:459:461:119:65:Times:65:Times: 
+30:949:62217:0:16:483:537:128:65:Times:65:Times:0.05 0.21 
+30:950:62225:16:18:72:200:112:65:Times:65:Times:Sample Size (Unweighted) 12,075 
+30:951:62256:18:0:258:260:94:65:Times:65:Times:  
+30:952:62256:0:18:272:292:112:65:Times:65:Times:1,167 
+30:953:62261:18:0:354:356:94:65:Times:65:Times:  
+30:954:62261:0:18:369:389:112:65:Times:65:Times:6,479 
+30:955:62266:18:0:459:461:94:65:Times:65:Times:  
+30:956:62266:0:18:479:499:112:65:Times:65:Times:1,508 
+30:957:62271:18:10:72:506:94:65:Times:65:Times: Source: Data from the  College and Beyond Survey and Detailed Earnings Records from the Social Security Administration.    
+30:958:62393:10:9:72:541:84:65:Times:65:Times:Notes: Means are weighted to make the sample representative of all students in the C&B institutions. Means for the regression control 
+30:959:62526:9:9:125:542:75:65:Times:65:Times:variables for the 1976 cohort reflect the sample used in the 1993 - 1997 earnings regression (reported in Table 3). Means for the 
+30:960:62656:9:9:125:541:66:65:Times:65:Times:1989 cohort reflect the sample used in the 2007 earnings regression (as reported in Table 6). Earnings means exclude those with 
+30:961:62784:9:0:125:425:57:65:Times:81:LucidaSans:annual earnings below the minimum wage threshold (equivalent to $13,822 in 2007 dollars). 
+31:962:62873:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+31:963:62873:715:0:72:115:31:144:Times:73:Times:DRAFT 
+31:964:62878:0:13:288:325:711:81:Times:81:Times:TABLE 2 
+31:965:62885:13:11:93:96:698:144:Times:144:Times: 
+31:966:62885:11:13:87:526:687:81:Times:81:Times:COLLEGE APPLICATION PATTERNS AMONG STUDENTS ATTENDING COLLEGE AND BEYOND SCHOOLS 
+31:967:62965:13:37:93:96:674:144:Times:144:Times: 
+31:968:62965:37:0:72:74:637:81:Times:81:Times: 
+31:969:62965:0:20:326:373:657:81:Times:81:Times:1976 Cohort 
+31:970:62976:20:0:413:415:637:81:Times:81:Times: 
+31:971:62976:0:60:458:505:657:81:Times:81:Times:1989 Cohort 
+31:972:62987:60:0:72:74:597:81:Times:81:Times: 
+31:973:62987:0:10:298:343:626:81:Times:81:Times:Full Sample 
+31:974:62998:10:0:303:338:616:81:Times:81:Times:(Percent) 
+31:975:63007:0:11:356:398:637:81:Times:81:Times:Blacks and 
+31:976:63018:11:10:358:396:626:81:Times:81:Times:Hispanics 
+31:977:63027:10:19:359:394:616:81:Times:81:Times:(Percent) 
+31:978:63036:19:0:413:415:597:81:Times:81:Times: 
+31:979:63036:0:11:441:458:637:81:Times:81:Times:Full 
+31:980:63041:11:10:435:464:626:81:Times:81:Times:Sample 
+31:981:63047:10:0:432:467:616:81:Times:81:Times:(Percent) 
+31:982:63056:0:11:488:530:637:81:Times:81:Times:Blacks and 
+31:983:63067:11:10:490:527:626:81:Times:81:Times:Hispanics 
+31:984:63076:10:14:491:526:616:81:Times:81:Times:(Percent) 
+31:985:63085:14:10:72:74:602:81:Times:81:Times: 
+31:986:63085:10:0:72:188:592:81:Times:81:Times:Percent of Students Submitting: 
+31:987:63116:0:20:484:486:602:81:Times:81:Times:          
+31:988:63116:20:12:81:516:582:81:Times:81:Times:      At least one additional application 64.3 64.1  71.3 70.1 
+31:989:63167:12:10:72:74:570:81:Times:81:Times: 
+31:990:63167:10:11:72:256:560:81:Times:81:Times:Among Those Submitting at Least One Additional 
+31:991:63214:11:0:72:119:549:81:Times:81:Times:Application: 
+31:992:63226:0:31:508:510:570:81:Times:81:Times:     
+31:993:63226:31:10:81:83:539:81:Times:81:Times: 
+31:994:63226:10:11:81:275:529:81:Times:81:Times:Applied to a school with a higher average SAT Score 
+31:995:63278:11:10:90:387:518:81:Times:81:Times:than the school attended 53.7 49.0 
+31:996:63310:10:0:422:424:508:81:Times:81:Times: 
+31:997:63310:0:10:444:516:518:81:Times:81:Times:55.0 48.4 
+31:998:63318:10:7:81:83:508:81:Times:81:Times: 
+31:999:63318:7:14:81:387:501:81:Times:81:Times:                       Percent accepted to at least one additional school 87.9 94.0 
+31:1000:63376:14:0:422:424:487:81:Times:81:Times: 
+31:1001:63376:0:11:444:516:498:81:Times:81:Times:88.3 92.5 
+31:1002:63384:11:12:72:74:487:81:Times:81:Times:             
+31:1003:63384:12:10:72:288:475:81:Times:81:Times:Among Those Accepted to at Least One Additional School: 
+31:1004:63439:10:12:81:284:465:81:Times:81:Times:           Percent accepted to a school with a higher average SAT 
+31:1005:63494:12:10:90:387:453:81:Times:81:Times:score than the one they attended 35.0 40.2 
+31:1006:63534:10:0:422:424:443:81:Times:81:Times: 
+31:1007:63534:0:17:444:516:453:81:Times:81:Times:36.1 40.3 
+31:1008:63542:17:13:72:520:436:81:Times:81:Times:Sample Size (Unweighted) 17,223 1,411    8,830  2,016  
+31:1009:63590:13:17:72:232:423:81:Times:81:Times:Source: College and Beyond Survey. 
+31:1010:63624:17:10:72:544:406:81:Times:81:Times:Notes:  Sample  includes  all  survey  respondents  from  C&B  schools  participating  in  this  study.    Means  are  weighted  to  
+31:1011:63756:10:0:126:489:396:81:Times:81:Times:make the sample representative of all students attending the C&B schools participating in this study. 
+32:1012:63857:0:549:72:75:566:122:g_d0_f9:122:g_d0_f9: 
+32:1013:63857:549:0:93:96:17:144:g_d0_f10:144:g_d0_f10: 
+32:1014:63857:0:32:31:34:572:144:Times:144:Times: 
+32:1015:63857:32:41:31:72:540:144:Times:144:Times:DRAFT
+32:1016:63862:41:197:31:33:499:65:Times:65:Times: 
+32:1017:63862:197:234:31:34:302:144:Times:144:Times: 
+32:1018:63862:234:0:31:34:68:144:Times:144:Times: 
+32:1019:63862:0:41:5:8:572:144:Times:144:Times: 
+32:1020:63862:41:20:388:426:531:81:Times:81:Times:TABLE 3 
+32:1021:63869:20:11:105:709:511:81:Times:81:Times:COMPARISON OF PARAMETER ESTIMATES FOR THE RETURN TO COLLEGE QUALITY ON EARNINGS USING C&B AND SSA DATA, 1976 COHORT 
+32:1022:63984:11:36:406:408:500:81:Times:81:Times: 
+32:1023:63984:36:0:72:74:464:81:Times:81:Times: 
+32:1024:63984:0:19:141:194:483:81:Times:81:Times:C&B Samplea 
+32:1025:63995:19:0:218:220:464:81:Times:81:Times: 
+32:1026:63995:0:90:414:531:483:81:Times:81:Times:Merged C&B and SSA Sampleb 
+32:1027:64021:90:0:72:74:393:81:Times:81:Times: 
+32:1028:64021:0:10:138:197:422:81:Times:81:Times:Log(1995 C&B 
+32:1029:64034:10:19:149:186:412:81:Times:81:Times:Earnings) 
+32:1030:64043:19:0:218:220:393:81:Times:81:Times: 
+32:1031:64043:0:10:239:298:422:81:Times:81:Times:Log(1995 C&B 
+32:1032:64056:10:19:250:287:412:81:Times:81:Times:Earnings) 
+32:1033:64065:19:0:317:319:393:81:Times:81:Times: 
+32:1034:64065:0:10:341:397:422:81:Times:81:Times:Log(1995 SSA 
+32:1035:64078:10:19:330:408:412:81:Times:81:Times:Earnings (topcoded)) 
+32:1036:64098:19:0:419:421:393:81:Times:81:Times: 
+32:1037:64098:0:11:444:500:433:81:Times:81:Times:Log(1995 SSA 
+32:1038:64110:11:10:447:498:422:81:Times:81:Times:Earnings (not 
+32:1039:64124:10:19:451:492:412:81:Times:81:Times:topcoded)) 
+32:1040:64134:19:0:523:525:393:81:Times:81:Times: 
+32:1041:64134:0:11:554:593:464:81:Times:81:Times:Median of 
+32:1042:64144:11:10:553:594:453:81:Times:81:Times:[Log(1993 
+32:1043:64154:10:10:540:608:443:81:Times:81:Times:Earnings) through 
+32:1044:64172:10:11:554:592:433:81:Times:81:Times:Log(1997 
+32:1045:64181:11:10:543:604:422:81:Times:81:Times:Earnings)], SSA 
+32:1046:64197:10:19:564:583:412:81:Times:81:Times:Data 
+32:1047:64201:19:0:622:624:393:81:Times:81:Times: 
+32:1048:64201:0:10:635:715:443:81:Times:81:Times:Median of [Log(1993 
+32:1049:64221:10:11:641:709:433:81:Times:81:Times:Earnings) through 
+32:1050:64239:11:10:635:715:422:81:Times:81:Times:Log(1997 Earnings)], 
+32:1051:64260:10:20:656:693:412:81:Times:81:Times:SSA Data 
+32:1052:64268:20:19:137:189:392:81:Times:81:Times:  1 2 
+32:1053:64274:19:0:218:220:373:81:Times:81:Times: 
+32:1054:64274:0:19:240:290:392:81:Times:81:Times:3 4 
+32:1055:64278:19:0:317:319:373:81:Times:81:Times: 
+32:1056:64278:0:19:339:391:392:81:Times:81:Times:5 6 
+32:1057:64282:19:0:419:421:373:81:Times:81:Times: 
+32:1058:64282:0:19:444:496:392:81:Times:81:Times:7 8 
+32:1059:64286:19:0:523:525:373:81:Times:81:Times: 
+32:1060:64286:0:19:545:597:392:81:Times:81:Times:9 10 
+32:1061:64291:19:0:622:624:373:81:Times:81:Times: 
+32:1062:64291:0:50:642:698:392:81:Times:81:Times:11 12 
+32:1063:64297:50:0:72:74:342:81:Times:81:Times: 
+32:1064:64297:0:0:129:151:362:81:Times:81:Times:Basic 
+32:1065:64302:0:10:174:195:372:81:Times:81:Times:Self –
+32:1066:64308:10:20:165:206:362:81:Times:81:Times:Revelation 
+32:1067:64318:20:0:216:218:342:81:Times:81:Times: 
+32:1068:64318:0:0:232:254:362:81:Times:81:Times:Basic 
+32:1069:64323:0:10:275:295:372:81:Times:81:Times:Self -
+32:1070:64329:10:20:266:307:362:81:Times:81:Times:Revelation 
+32:1071:64339:20:0:315:317:342:81:Times:81:Times: 
+32:1072:64339:0:0:331:353:362:81:Times:81:Times:Basic 
+32:1073:64344:0:10:375:397:372:81:Times:81:Times:Self –
+32:1074:64350:10:20:366:407:362:81:Times:81:Times:Revelation 
+32:1075:64360:20:0:418:420:342:81:Times:81:Times: 
+32:1076:64360:0:0:436:458:362:81:Times:81:Times:Basic 
+32:1077:64365:0:10:481:501:372:81:Times:81:Times:Self -
+32:1078:64371:10:20:471:512:362:81:Times:81:Times:Revelation 
+32:1079:64381:20:0:523:525:342:81:Times:81:Times: 
+32:1080:64381:0:0:537:559:362:81:Times:81:Times:Basic 
+32:1081:64386:0:10:580:600:372:81:Times:81:Times:Self -
+32:1082:64392:10:20:571:612:362:81:Times:81:Times:Revelation 
+32:1083:64402:20:0:621:623:342:81:Times:81:Times: 
+32:1084:64402:0:0:636:658:362:81:Times:81:Times:Basic 
+32:1085:64407:0:10:682:701:372:81:Times:81:Times:Self -
+32:1086:64413:10:17:672:713:362:81:Times:81:Times:Revelation 
+32:1087:64423:17:10:72:111:345:81:Times:81:Times:Parameter 
+32:1088:64433:10:11:72:106:335:81:Times:81:Times:Estimate 
+32:1089:64442:11:10:72:112:324:81:Times:81:Times:for School 
+32:1090:64453:10:0:72:107:314:81:Times:81:Times:SAT/100 
+32:1091:64460:0:10:132:197:344:81:Times:81:Times:0.076 -0.001 
+32:1092:64471:10:0:216:218:334:81:Times:81:Times: 
+32:1093:64471:0:10:234:299:344:81:Times:81:Times:0.068 -0.007 
+32:1094:64482:10:0:315:317:334:81:Times:81:Times: 
+32:1095:64482:0:10:333:400:344:81:Times:81:Times:0.048 -0.021 
+32:1096:64493:10:0:418:420:334:81:Times:81:Times: 
+32:1097:64493:0:10:440:503:344:81:Times:81:Times:0.058 -0.015 
+32:1098:64504:10:0:522:524:334:81:Times:81:Times: 
+32:1099:64504:0:10:540:605:344:81:Times:81:Times:0.059 -0.025 
+32:1100:64515:10:0:621:623:334:81:Times:81:Times: 
+32:1101:64515:0:15:639:709:344:81:Times:81:Times:0.061   -0.023 
+32:1102:64528:15:10:130:200:329:81:Times:81:Times:(.008) (.012) 
+32:1103:64540:10:0:216:218:319:81:Times:81:Times: 
+32:1104:64540:0:10:233:302:329:81:Times:81:Times:(.007) (.012) 
+32:1105:64552:10:0:315:317:319:81:Times:81:Times: 
+32:1106:64552:0:10:332:403:329:81:Times:81:Times:(.009) (.014) 
+32:1107:64564:10:0:418:420:319:81:Times:81:Times: 
+32:1108:64564:0:10:439:506:329:81:Times:81:Times:(.009) (.015) 
+32:1109:64576:10:0:522:524:319:81:Times:81:Times: 
+32:1110:64576:0:10:538:608:329:81:Times:81:Times:(.008) (.012) 
+32:1111:64588:10:0:621:623:319:81:Times:81:Times: 
+32:1112:64588:0:15:637:712:329:81:Times:81:Times:(.007) (.012) 
+32:1113:64600:15:10:128:202:314:81:Times:81:Times:{.016} {.018} 
+32:1114:64612:10:0:216:218:304:81:Times:81:Times: 
+32:1115:64612:0:10:230:304:314:81:Times:81:Times:{.014} {.018} 
+32:1116:64624:10:0:315:317:304:81:Times:81:Times: 
+32:1117:64624:0:10:329:404:314:81:Times:81:Times:{.016} {.018} 
+32:1118:64636:10:0:418:420:304:81:Times:81:Times: 
+32:1119:64636:0:10:436:508:314:81:Times:81:Times:{.017} {.016} 
+32:1120:64648:10:0:522:524:304:81:Times:81:Times: 
+32:1121:64648:0:10:535:610:314:81:Times:81:Times:{.012} {.013} 
+32:1122:64660:10:0:621:623:304:81:Times:81:Times: 
+32:1123:64660:0:11:634:713:314:81:Times:81:Times:{.013} {.014} 
+32:1124:64672:11:10:72:101:303:81:Times:81:Times:Sample 
+32:1125:64679:10:34:72:688:293:81:Times:81:Times:Size 14,238   10,886   10,886   10,886   11,932   12,075 
+32:1126:64719:34:10:72:101:259:81:Times:81:Times:Sample 
+32:1127:64726:10:0:72:113:249:81:Times:81:Times:Restriction 
+32:1128:64737:0:10:132:203:280:81:Times:81:Times:Full Time Workers 
+32:1129:64755:10:11:142:192:270:81:Times:81:Times:(according to 
+32:1130:64769:11:10:132:202:259:81:Times:81:Times:responses on C&B 
+32:1131:64786:10:10:153:182:249:81:Times:81:Times:survey) 
+32:1132:64793:10:0:218:220:239:81:Times:81:Times: 
+32:1133:64793:0:10:233:304:280:81:Times:81:Times:Full Time Workers 
+32:1134:64811:10:11:243:293:270:81:Times:81:Times:(according to 
+32:1135:64825:11:10:233:303:259:81:Times:81:Times:responses on C&B 
+32:1136:64842:10:10:254:283:249:81:Times:81:Times:survey) 
+32:1137:64849:10:0:317:319:239:81:Times:81:Times: 
+32:1138:64849:0:10:333:404:280:81:Times:81:Times:Full Time Workers 
+32:1139:64867:10:11:344:394:270:81:Times:81:Times:(according to 
+32:1140:64881:11:10:334:404:259:81:Times:81:Times:responses on C&B 
+32:1141:64898:10:10:354:383:249:81:Times:81:Times:survey) 
+32:1142:64905:10:0:419:421:239:81:Times:81:Times: 
+32:1143:64905:0:10:437:508:280:81:Times:81:Times:Full Time Workers 
+32:1144:64923:10:11:447:497:270:81:Times:81:Times:(according to 
+32:1145:64937:11:10:437:507:259:81:Times:81:Times:responses on C&B 
+32:1146:64954:10:10:457:486:249:81:Times:81:Times:survey) 
+32:1147:64961:10:0:523:525:239:81:Times:81:Times: 
+32:1148:64961:0:10:538:606:280:81:Times:81:Times:Workers with non-
+32:1149:64978:10:11:550:596:270:81:Times:81:Times:zero median 
+32:1150:64990:11:10:537:611:259:81:Times:81:Times:earnings (according 
+32:1151:65010:10:10:549:597:249:81:Times:81:Times:to SSA data) 
+32:1152:65022:10:0:622:624:239:81:Times:81:Times: 
+32:1153:65022:0:10:636:713:280:81:Times:81:Times:Workers who earned 
+32:1154:65041:10:11:636:713:270:81:Times:81:Times:over minimum wage 
+32:1155:65059:11:10:636:713:259:81:Times:81:Times:threshold (according 
+32:1156:65080:10:11:651:699:249:81:Times:81:Times:to SSA data) 
+32:1157:65092:11:16:72:369:238:81:Times:81:Times:Source: College and Beyond Survey and SSA's Detailed Earnings Records. 
+32:1158:65161:16:11:72:722:222:81:Times:81:Times:Notes: Estimates are drawn from weighted least squares regressions that control for age, race, student SAT score, a dummy for whether student SAT score was missing, 
+32:1159:65325:11:10:126:722:211:81:Times:81:Times:high school grade point average, a dummy for whether high school grade point average is missing, predicted parental income and student athlete. Weights were used 
+32:1160:65487:10:10:126:722:201:81:Times:81:Times:to make the sample representative of the population of students at the C&B schools.  Each cell corresponds to a different regression.  Standard errors are in brackets 
+32:1161:65654:10:11:126:724:191:81:Times:81:Times:and  are  robust  to  correlated  errors  among  students  who  attended  the  same  institutions.  Minimum  wage  threshold  is  equal  to  $13,822  in  2007  dollars.  The  top  
+32:1162:65834:11:10:126:722:180:81:Times:81:Times:earnings category for the C&B data (greater than $200,000) was assigned a value of $242,662 (see text for details).  For comparison purposes, we topcoded the SSA 
+32:1163:65995:10:12:126:392:170:81:Times:81:Times:data in the same way as the C&B data were topcoded in columns 5 and 6. 
+32:1164:66065:12:15:72:722:158:36:Times:81:Times:aSample  includes  survey  respondents  from  the  30  C&B  institutions  analyzed  in  Dale  and  Krueger  (2002),  and  only  includes  those  with  non-zero  earnings;  shaded  box  on  table  
+32:1165:66261:15:12:75:635:143:81:Times:81:Times:shows other sample restriction.                      
+32:1166:66292:12:14:72:722:131:36:Times:81:Times:bSample includes survey respondents from the 27 C&B institutions participating in this study that were matched to SSA data.   Sample only includes those with non-zero earnings; 
+32:1167:66469:14:17:75:374:117:81:Times:81:Times:shaded boxes on table show additional sample restrictions for specific regressions. 
+32:1168:66553:17:16:72:207:100:81:Times:81:Times:SSA=Social Security Administration 
+32:1169:66587:16:0:72:172:84:81:Times:144:Times:C&B=College and Beyond 
+33:1170:66609:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+33:1171:66609:715:0:72:542:31:144:Times:73:Times:DRAFT   
+33:1172:66614:0:20:298:336:711:81:Times:81:Times:TABLE 4 
+33:1173:66621:20:11:119:516:691:81:Times:81:Times:EFFECT OF SCHOOL SAT SCORE/100 ON LOG(EARNINGS), 1976 COHORT OF MEN AND WOMEN 
+33:1174:66698:11:36:316:318:680:81:Times:81:Times: 
+33:1175:66698:36:0:72:74:644:81:Times:81:Times: 
+33:1176:66698:0:19:246:264:663:81:Times:81:Times:Men 
+33:1177:66701:19:0:315:317:644:81:Times:81:Times: 
+33:1178:66701:0:19:361:392:663:81:Times:81:Times:Women 
+33:1179:66706:19:0:434:436:644:81:Times:81:Times: 
+33:1180:66706:0:54:449:540:663:81:Times:81:Times:Men and Women Pooled 
+33:1181:66726:54:0:72:74:609:81:Times:81:Times: 
+33:1182:66726:0:0:213:235:628:81:Times:81:Times:Basic 
+33:1183:66731:0:11:269:288:639:81:Times:81:Times:Self- 
+33:1184:66737:11:19:258:299:628:81:Times:81:Times:Revelation 
+33:1185:66747:19:0:315:317:609:81:Times:81:Times: 
+33:1186:66747:0:0:336:358:628:81:Times:81:Times:Basic 
+33:1187:66752:0:11:390:407:639:81:Times:81:Times:Self-
+33:1188:66757:11:19:379:420:628:81:Times:81:Times:Revelation 
+33:1189:66767:19:0:434:436:609:81:Times:81:Times: 
+33:1190:66767:0:0:455:477:628:81:Times:81:Times:Basic 
+33:1191:66772:0:11:508:525:639:81:Times:81:Times:Self-
+33:1192:66777:11:20:497:538:628:81:Times:81:Times:Revelation 
+33:1193:66787:20:13:177:437:608:81:Times:81:Times:Effect on Median of [Log(1983 Earnings) through (1987 Earnings)] 
+33:1194:66852:13:11:72:185:595:81:Times:81:Times:Parameter Estimate for School 
+33:1195:66882:11:9:72:519:584:81:Times:81:Times:SAT/100 0.011 -0.004  -0.007     -0.037  0.004 -0.017 
+33:1196:66927:9:10:209:276:575:81:Times:81:Times:(.007) (.011) 
+33:1197:66939:10:0:315:317:565:81:Times:81:Times: 
+33:1198:66939:0:10:333:417:575:81:Times:81:Times:(.007)      (.012) 
+33:1199:66956:10:0:434:436:565:81:Times:81:Times: 
+33:1200:66956:0:15:453:517:575:81:Times:81:Times:(.005) (.008) 
+33:1201:66968:15:10:208:278:560:81:Times:81:Times:{.012} {.019} 
+33:1202:66980:10:0:315:317:550:81:Times:81:Times: 
+33:1203:66980:0:10:332:418:560:81:Times:81:Times:{.012}      {.023} 
+33:1204:66997:10:0:434:436:550:81:Times:81:Times: 
+33:1205:66997:0:15:451:520:560:81:Times:81:Times:{.011} {.014} 
+33:1206:67009:15:10:72:274:545:81:Times:81:Times:N 6,294 6,294 
+33:1207:67020:10:0:315:317:535:81:Times:81:Times: 
+33:1208:67020:0:10:332:415:545:81:Times:81:Times:5,690     5,690 
+33:1209:67034:10:0:434:436:535:81:Times:81:Times: 
+33:1210:67034:0:17:448:520:545:81:Times:81:Times:11,984 11,984 
+33:1211:67046:17:14:177:437:528:81:Times:81:Times:Effect on Median of [Log(1988 Earnings) through (1992 Earnings)] 
+33:1212:67111:14:10:72:185:514:81:Times:81:Times:Parameter Estimate for School 
+33:1213:67141:10:9:72:533:504:81:Times:81:Times:SAT/100 0.054 -0.001  0.031 -0.034  0.045 -0.014 
+33:1214:67181:9:11:209:295:495:81:Times:81:Times:(.009) (.013) 
+33:1215:67193:11:0:315:317:484:81:Times:81:Times: 
+33:1216:67193:0:11:333:417:495:81:Times:81:Times:(.009) (.015) 
+33:1217:67205:11:0:434:436:484:81:Times:81:Times: 
+33:1218:67205:0:15:453:536:495:81:Times:81:Times:(.006) (.010) 
+33:1219:67217:15:11:208:296:480:81:Times:81:Times:{.014} {.016} 
+33:1220:67229:11:0:315:317:469:81:Times:81:Times: 
+33:1221:67229:0:11:332:418:480:81:Times:81:Times:{.014} {.019} 
+33:1222:67241:11:0:434:436:469:81:Times:81:Times: 
+33:1223:67241:0:15:451:538:480:81:Times:81:Times:{.012} {.013} 
+33:1224:67253:15:11:72:294:465:81:Times:81:Times:N 6,911 6,911 
+33:1225:67264:11:0:315:317:454:81:Times:81:Times: 
+33:1226:67264:0:11:332:416:465:81:Times:81:Times:6,294 6,294 
+33:1227:67274:11:0:434:436:454:81:Times:81:Times: 
+33:1228:67274:0:17:448:535:465:81:Times:81:Times:12,407 12,407 
+33:1229:67286:17:14:169:444:448:81:Times:81:Times:Effect on Median of [Log(1993 Earnings) through Log(1997 Earnings)] 
+33:1230:67354:14:10:72:184:434:81:Times:81:Times:Parameter Estimate for School 
+33:1231:67384:10:10:72:533:424:81:Times:81:Times:SAT/100 0.080 0.001  0.034 -0.059  0.061 -0.023 
+33:1232:67423:10:10:209:295:414:81:Times:81:Times:(.010) (.016) 
+33:1233:67435:10:0:315:317:404:81:Times:81:Times: 
+33:1234:67435:0:10:333:417:414:81:Times:81:Times:(.010) (.018) 
+33:1235:67447:10:0:434:436:404:81:Times:81:Times: 
+33:1236:67447:0:15:453:536:414:81:Times:81:Times:(.007) (.012) 
+33:1237:67459:15:10:208:296:399:81:Times:81:Times:{.013} {.015} 
+33:1238:67471:10:0:315:317:389:81:Times:81:Times: 
+33:1239:67471:0:10:332:418:399:81:Times:81:Times:{.012} {.016} 
+33:1240:67483:10:0:434:436:389:81:Times:81:Times: 
+33:1241:67483:0:15:451:538:399:81:Times:81:Times:{.013} {.014} 
+33:1242:67495:15:10:72:298:384:81:Times:81:Times:N 6,  896 6,  896 
+33:1243:67513:10:0:315:317:374:81:Times:81:Times: 
+33:1244:67513:0:10:332:420:384:81:Times:81:Times:5,  179 5,  179 
+33:1245:67529:10:0:434:436:374:81:Times:81:Times: 
+33:1246:67529:0:17:448:535:384:81:Times:81:Times:12,075 12,075 
+33:1247:67543:17:13:169:444:367:81:Times:81:Times:Effect on Median of [Log(1998 Earnings) through Log(2002 Earnings)] 
+33:1248:67610:13:11:72:185:354:81:Times:81:Times:Parameter Estimate for School 
+33:1249:67640:11:9:72:533:343:81:Times:81:Times:SAT/100 0.087 0.002  0.042 -0.069  0.070 -0.024 
+33:1250:67679:9:10:209:295:334:81:Times:81:Times:(.012) (.018) 
+33:1251:67691:10:0:315:317:324:81:Times:81:Times: 
+33:1252:67691:0:10:333:417:334:81:Times:81:Times:(.012) (.020) 
+33:1253:67703:10:0:434:436:324:81:Times:81:Times: 
+33:1254:67703:0:15:453:536:334:81:Times:81:Times:(.008) (.013) 
+33:1255:67715:15:10:208:296:319:81:Times:81:Times:{.015} {.022} 
+33:1256:67727:10:0:315:317:309:81:Times:81:Times: 
+33:1257:67727:0:10:332:418:319:81:Times:81:Times:{.010} {.016} 
+33:1258:67739:10:0:434:436:309:81:Times:81:Times: 
+33:1259:67739:0:15:451:538:319:81:Times:81:Times:{.012} {.019} 
+33:1260:67751:15:10:72:294:304:81:Times:81:Times:N 6,869 6,869 
+33:1261:67762:10:0:315:317:294:81:Times:81:Times: 
+33:1262:67762:0:10:332:416:304:81:Times:81:Times:5,195 5,195 
+33:1263:67772:10:0:434:436:294:81:Times:81:Times: 
+33:1264:67772:0:17:448:535:304:81:Times:81:Times:12,064 12,064 
+33:1265:67784:17:14:169:444:287:81:Times:81:Times:Effect on Median of [Log(2003 Earnings) through Log(2007 Earnings)] 
+33:1266:67851:14:10:72:185:273:81:Times:81:Times:Parameter Estimate for School 
+33:1267:67881:10:9:72:533:263:81:Times:81:Times:SAT/100 0.083 0.006  0.057 -0.035  0.074 -0.008 
+33:1268:67920:9:11:209:295:254:81:Times:81:Times:(.013) (.020) 
+33:1269:67932:11:0:315:317:243:81:Times:81:Times: 
+33:1270:67932:0:11:333:417:254:81:Times:81:Times:(.012) (.021) 
+33:1271:67944:11:0:434:436:243:81:Times:81:Times: 
+33:1272:67944:0:15:453:536:254:81:Times:81:Times:(.009) (.014) 
+33:1273:67956:15:11:208:296:239:81:Times:81:Times:{.015} {.027} 
+33:1274:67968:11:0:315:317:228:81:Times:81:Times: 
+33:1275:67968:0:11:332:418:239:81:Times:81:Times:{.013} {.018} 
+33:1276:67980:11:0:434:436:228:81:Times:81:Times: 
+33:1277:67980:0:17:451:538:239:81:Times:81:Times:{.014} {.018} 
+33:1278:67992:17:13:72:535:222:81:Times:81:Times:N 6,  650 6,  650   5,  244 5,  244   11,894 11,894 
+33:1279:68044:13:17:72:492:209:81:Times:81:Times:Source: College and Beyond Survey and Detailed Earnings Records from the Social Security Administration. 
+33:1280:68147:17:10:71:545:192:81:Times:81:Times:Notes: Parameter  estimates  drawn  from  a  weighted  least  squares  regression.  Each  cell  represents  a  separate  regression.    
+33:1281:68282:10:11:125:542:182:81:Times:81:Times:Both the basic and self-revelation models control for race, gender, predicted parental income, student's SAT score, 
+33:1282:68398:11:10:125:543:171:81:Times:81:Times:a  dummy  indicating  if  student  SAT  score  was  missing,  student's  high  school  grade  point  average,    a  dummy  
+33:1283:68521:10:10:125:539:161:81:Times:81:Times:indicating if high school grade point average was missing, and whether the student was a college athlete; the self-
+33:1284:68636:10:11:125:542:151:81:Times:81:Times:revelation model also controls for the average SAT score of the schools to which the student applied and dummies 
+33:1285:68749:11:10:125:542:140:81:Times:81:Times:for the number of applications the student submitted. Two sets of standard errors are reported, one in parentheses 
+33:1286:68864:10:10:125:542:130:81:Times:81:Times:and  one  in  brackets.  Standard  errors  in  brackets  are  robust  to  correlated  errors  among  students  who  attended  the  
+33:1287:68995:10:11:125:541:120:81:Times:81:Times:same  institution.      Individuals  are  excluded  if  the  median  of  annual  earnings  over  the  five  year  interval  was  less 
+33:1288:69129:11:19:125:234:109:81:Times:81:LucidaSans:than $13,822 in 2007 dollars. 
+33:1289:69158:19:0:93:96:90:144:Times:144:Times: 
+34:1290:69158:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+34:1291:69158:715:0:72:312:31:144:Times:73:Times:DRAFT  
+34:1292:69163:0:20:298:336:711:81:Times:81:Times:TABLE 5 
+34:1293:69170:20:47:120:515:691:81:Times:81:Times:EFFECT OF COLLEGE CHARACTERISTICS ON EARNINGS, 1976 COHORT OF MEN AND WOMEN 
+34:1294:69245:47:0:72:74:644:81:Times:81:Times: 
+34:1295:69245:0:10:259:360:665:81:Times:81:Times:College Characteristic: Log 
+34:1296:69272:10:11:284:336:655:81:Times:81:Times:(Net Tuition)  
+34:1297:69286:11:0:388:390:644:81:Times:81:Times: 
+34:1298:69286:0:10:429:514:665:81:Times:81:Times:College Characteristic: 
+34:1299:69309:10:26:444:499:655:81:Times:81:Times:Barron's Index 
+34:1300:69323:26:0:72:74:629:81:Times:81:Times: 
+34:1301:69323:0:11:261:376:640:81:Times:81:Times:Basic Self -Revelation 
+34:1302:69344:11:0:390:392:629:81:Times:81:Times: 
+34:1303:69344:0:17:422:538:640:81:Times:81:Times:Basic Self -Revelation 
+34:1304:69365:17:17:195:417:623:81:Times:81:Times:Effect on Log (Median of  1983 to 1987 Annual Earnings) 
+34:1305:69420:17:10:72:361:606:81:Times:81:Times:Parameter Estimate for  0.014 -0.007 
+34:1306:69455:10:0:396:398:596:81:Times:81:Times: 
+34:1307:69455:0:15:428:522:606:81:Times:81:Times:0.010 0.001 
+34:1308:69465:15:10:72:364:591:81:Times:81:Times:School Quality Measure (.010) (.013) 
+34:1309:69500:10:0:396:398:581:81:Times:81:Times: 
+34:1310:69500:0:15:429:525:591:81:Times:81:Times:(.005) (.013) 
+34:1311:69512:15:10:71:365:576:81:Times:81:Times:N=11,984 {.024} {.027} 
+34:1312:69532:10:0:396:398:566:81:Times:81:Times: 
+34:1313:69532:0:17:428:526:576:81:Times:81:Times:{.012} {.015} 
+34:1314:69544:17:16:195:417:559:81:Times:81:Times:Effect on Log (Median of  1988 to 1992 Annual Earnings) 
+34:1315:69599:16:10:72:361:543:81:Times:81:Times:Parameter Estimate for 0.092 0.012 
+34:1316:69631:10:0:396:398:533:81:Times:81:Times: 
+34:1317:69631:0:13:427:522:543:81:Times:81:Times:0.055 0.020 
+34:1318:69641:13:10:72:364:530:81:Times:81:Times:School Quality Measure (.012) (.016) 
+34:1319:69675:10:0:396:398:520:81:Times:81:Times: 
+34:1320:69675:0:13:429:525:530:81:Times:81:Times:(.006) (.017) 
+34:1321:69687:13:10:72:365:517:81:Times:81:Times:N=12,407 {.028} {.028} 
+34:1322:69707:10:0:396:398:507:81:Times:81:Times: 
+34:1323:69707:0:17:428:526:517:81:Times:81:Times:{.011} {.015} 
+34:1324:69719:17:18:195:417:500:81:Times:81:Times:Effect on Log (Median of  1993 to 1997 Annual Earnings) 
+34:1325:69774:18:11:72:360:482:81:Times:81:Times:Parameter Estimate for  0.124 0.013 
+34:1326:69807:11:0:396:398:471:81:Times:81:Times: 
+34:1327:69807:0:15:427:521:482:81:Times:81:Times:0.071 0.017 
+34:1328:69817:15:11:72:363:467:81:Times:81:Times:School Quality Measure (.015) (.019) 
+34:1329:69851:11:0:396:398:456:81:Times:81:Times: 
+34:1330:69851:0:15:428:524:467:81:Times:81:Times:(.007) (.010) 
+34:1331:69863:15:11:72:365:452:81:Times:81:Times:N=12,075 {.030} {.038} 
+34:1332:69883:11:0:396:398:441:81:Times:81:Times: 
+34:1333:69883:0:17:427:526:452:81:Times:81:Times:{.009} {.015} 
+34:1334:69895:17:18:195:417:435:81:Times:81:Times:Effect on Log (Median of  1998 to 2002 Annual Earnings) 
+34:1335:69950:18:11:72:362:417:81:Times:81:Times:Parameter Estimate for  0.140 0.017 
+34:1336:69984:11:0:396:398:406:81:Times:81:Times: 
+34:1337:69984:0:15:428:523:417:81:Times:81:Times:0.077 0.014 
+34:1338:69994:15:11:72:365:402:81:Times:81:Times:School Quality Measure (.012) (.017) 
+34:1339:70029:11:0:396:398:391:81:Times:81:Times: 
+34:1340:70029:0:16:430:526:402:81:Times:81:Times:(.008) (.012) 
+34:1341:70041:16:10:71:366:386:81:Times:81:Times:N=12,064 {.026} {.034} 
+34:1342:70061:10:0:396:398:376:81:Times:81:Times: 
+34:1343:70061:0:18:429:527:387:81:Times:81:Times:{.008} {.019} 
+34:1344:70073:18:18:195:417:369:81:Times:81:Times:Effect on Log (Median of  2003 to 2007 Annual Earnings) 
+34:1345:70128:18:10:72:361:351:81:Times:81:Times:Parameter Estimate for  0.143 0.026 
+34:1346:70161:10:0:396:398:341:81:Times:81:Times: 
+34:1347:70161:0:15:428:522:351:81:Times:81:Times:0.080 0.023 
+34:1348:70171:15:10:72:364:336:81:Times:81:Times:School Quality Measure (.018) (.023) 
+34:1349:70205:10:0:396:398:326:81:Times:81:Times: 
+34:1350:70205:0:15:429:525:336:81:Times:81:Times:(.009) (.012) 
+34:1351:70217:15:10:72:365:321:81:Times:81:Times:N=11,894 {.032} {.039} 
+34:1352:70237:10:0:396:398:311:81:Times:81:Times: 
+34:1353:70237:0:11:428:526:321:81:Times:81:Times:{.010} {.017} 
+34:1354:70249:11:16:72:74:310:81:Times:81:Times: 
+34:1355:70249:16:16:72:441:294:81:Times:81:Times:Source: C&B Survey and Detailed Earnings Records from the Social Security Administration.   
+34:1356:70340:16:11:72:543:278:81:Times:81:Times:Notes: Parameter  estimates  drawn  from  a  weighted  least  squares  regression.  Each  cell  represents  a  different  regression.  
+34:1357:70474:11:10:126:542:267:81:Times:81:Times:Both the basic and self-revelation models control for race, sex, predicted parental income, student's SAT score, a 
+34:1358:70589:10:10:126:544:257:81:Times:81:Times:dummy  indicating  if  student  SAT  score  was  missing,  student's  high  school  grade  point  average,    a  dummy  
+34:1359:70709:10:11:126:540:247:81:Times:81:Times:indicating if high school grade point average was missing, and whether the student was a college athlete; the self-
+34:1360:70824:11:10:126:543:236:81:Times:81:Times:revelation model also controls for the average SAT score of the schools to which the student applied and dummies 
+34:1361:70937:10:11:126:543:226:81:Times:81:Times:for  the  number  of  applications  the  student  submitted.  Weights  were  used  to  make  the  sample  representative  of  
+34:1362:71063:11:10:126:543:215:81:Times:81:Times:students  at  C&B  schools.  Two  sets  of  standard  errors  are  reported,  one  in  parentheses  and  in  brackets.  Standard  
+34:1363:71193:10:10:126:543:205:81:Times:81:Times:errors in brackets are robust to correlated errors among students who attended the same institution.  The Barron's 
+34:1364:71308:10:11:126:544:195:81:Times:81:Times:measure  is  coded  as  a  continuous  measure.  Within  our  sample,  this  measure  ranged  from  2  to  5,  where  "2"  
+34:1365:71431:11:10:126:542:184:81:Times:81:Times:represented "Competitive Colleges" and "5" represented "Most Competitive Colleges." Individuals are excluded if 
+34:1366:71543:10:0:126:472:174:81:Times:81:LucidaSans:the median of annual earnings over the five year interval was less than $13,822 in 2007 dollars. 
+35:1367:71639:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+35:1368:71639:715:0:72:312:31:144:Times:73:Times:DRAFT  
+35:1369:71644:0:10:288:325:711:81:Times:81:Times:TABLE 6 
+35:1370:71651:10:10:305:307:701:81:Times:81:Times: 
+35:1371:71651:10:11:99:514:691:81:Times:81:Times:EFFECT OF COLLEGE CHARACTERISTICS ON 2007 EARNINGS, 1989 COHORT OF MEN AND WOMEN 
+35:1372:71731:11:36:316:318:680:81:Times:81:Times: 
+35:1373:71731:36:0:72:74:644:81:Times:81:Times: 
+35:1374:71731:0:39:329:411:663:81:Times:81:Times:College Characteristic 
+35:1375:71753:39:0:72:74:624:81:Times:81:Times: 
+35:1376:71753:0:20:204:289:644:81:Times:81:Times:School SAT Score/100 
+35:1377:71773:20:0:302:304:624:81:Times:81:Times: 
+35:1378:71773:0:20:335:404:644:81:Times:81:Times:Log (Net Tuition)  
+35:1379:71791:20:0:429:431:624:81:Times:81:Times: 
+35:1380:71791:0:31:465:520:644:81:Times:81:Times:Barron's Index 
+35:1381:71805:31:0:209:231:613:81:Times:81:Times:  Basic 
+35:1382:71812:0:11:261:281:624:81:Times:81:Times:Self -
+35:1383:71818:11:19:251:292:613:81:Times:81:Times:Revelation 
+35:1384:71828:19:0:302:304:594:81:Times:81:Times: 
+35:1385:71828:0:0:330:352:613:81:Times:81:Times:Basic 
+35:1386:71833:0:11:386:406:624:81:Times:81:Times:Self -
+35:1387:71839:11:19:376:417:613:81:Times:81:Times:Revelation 
+35:1388:71849:19:0:429:431:594:81:Times:81:Times: 
+35:1389:71849:0:0:452:474:613:81:Times:81:Times:Basic 
+35:1390:71854:0:11:506:526:624:81:Times:81:Times:Self -
+35:1391:71860:11:19:496:537:613:81:Times:81:Times:Revelation 
+35:1392:71870:19:20:72:285:594:81:Times:81:Times:Parameter Estimate for 0.056 -0.008 
+35:1393:71903:20:0:312:314:574:81:Times:81:Times: 
+35:1394:71903:0:20:324:409:594:81:Times:81:Times: -0.011   -0.108 
+35:1395:71918:20:0:438:440:574:81:Times:81:Times: 
+35:1396:71918:0:20:456:527:594:81:Times:81:Times:0.069 -0.002 
+35:1397:71929:20:19:72:288:574:81:Times:81:Times:Effect of Quality Measure  (.014) (.019) 
+35:1398:71967:19:0:312:314:555:81:Times:81:Times: 
+35:1399:71967:0:19:331:412:574:81:Times:81:Times:(.025) (.028) 
+35:1400:71979:19:0:438:440:555:81:Times:81:Times: 
+35:1401:71979:0:19:457:530:574:81:Times:81:Times:(.017) (.022) 
+35:1402:71991:19:19:72:290:555:81:Times:81:Times:on Log(2007 Earnings) {.031} {.034} 
+35:1403:72024:19:0:312:314:536:81:Times:81:Times: 
+35:1404:72024:0:19:330:413:555:81:Times:81:Times:{.062} {.070} 
+35:1405:72036:19:0:438:440:536:81:Times:81:Times: 
+35:1406:72036:0:20:456:531:555:81:Times:81:Times:{.038} {.042} 
+35:1407:72048:20:14:72:532:535:81:Times:81:Times:Sample Size 6,  479 6,  479   6,  479 6,  479   6,  479 6,  479 
+35:1408:72112:14:16:72:74:521:81:Times:81:Times: 
+35:1409:72112:16:16:72:427:505:81:Times:81:Times:Source: C&B data and Detailed Earnings Records from the Social Security Administration. 
+35:1410:72198:16:11:72:543:489:81:Times:81:Times:Notes: Parameter  estimates  drawn  from  a  weighted  least  squares  regression.  Each  cell  represents  a  different  regression.  
+35:1411:72332:11:10:126:542:478:81:Times:81:Times:Both the basic and self-revelation models control for race, sex, predicted parental income, student's SAT score, a 
+35:1412:72447:10:11:126:545:468:81:Times:81:Times:dummy  indicating  if  student  SAT  score  was  missing,  student's  high  school  grade  point  average,  a  dummy  
+35:1413:72565:11:10:126:540:457:81:Times:81:Times:indicating if high school grade point average was missing, and whether the student was a college athlete; the self-
+35:1414:72680:10:10:126:542:447:81:Times:81:Times:revelation model also controls for the average SAT score of the schools to which the student applied and dummies 
+35:1415:72793:10:11:125:543:437:81:Times:81:Times:for  the  number  of  applications  the  student  submitted.  Weights  were  used  to  make  the  sample  representative  of  
+35:1416:72919:11:10:126:542:426:81:Times:81:Times:students  at  C&B  schools.  Two  sets  of  standard  errors  are  reported,  one  in  parentheses  and  in  brackets.  Standard  
+35:1417:73049:10:10:125:542:416:81:Times:81:Times:errors in brackets are robust to correlated errors among students who attended the same institution. The Barron's 
+35:1418:73163:10:11:125:543:406:81:Times:81:Times:measure  is  coded  as  a  continuous  measure.  Within  our  sample,  this  measure  ranged  from  2  to  5,  where  "2"  
+35:1419:73286:11:10:125:542:395:81:Times:81:Times:represented "Competitive Colleges" and "5" represented "Most Competitive Colleges." Individuals were excluded 
+35:1420:73396:10:19:125:350:385:81:Times:81:Times:if their annual earnings was less than $13,822 in 2007 dollars. 
+35:1421:73460:19:0:93:96:366:144:Times:144:Times: 
+36:1422:73460:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+36:1423:73460:715:0:72:312:31:144:Times:73:Times:DRAFT  
+36:1424:73465:0:20:298:336:711:81:Times:81:Times:TABLE 7 
+36:1425:73472:20:11:177:458:691:81:Times:81:Times:EFFECT OF SCHOOL CHARACTERISTICS ON LOG (2007 EARNINGS) 
+36:1426:73528:11:10:226:408:680:81:Times:81:Times:(Black and Hispanic Students Only, 1989 Cohort) 
+36:1427:73575:10:17:316:318:670:81:Times:81:Times: 
+36:1428:73575:17:30:210:521:653:81:Times:81:Times:  School SAT Score/100   Log(Net Tuition)   Barron's Index 
+36:1429:73631:30:0:72:236:623:81:Times:81:Times:Dependent Variable Basic 
+36:1430:73654:0:10:269:288:633:81:Times:81:Times:Self -
+36:1431:73660:10:0:259:359:623:81:Times:81:Times:Revelation   Basic 
+36:1432:73677:0:10:390:410:633:81:Times:81:Times:Self -
+36:1433:73683:10:0:380:475:623:81:Times:81:Times:Revelation   Basic 
+36:1434:73700:0:10:506:526:633:81:Times:81:Times:Self -
+36:1435:73706:10:20:496:537:623:81:Times:81:Times:Revelation 
+36:1436:73716:20:18:243:370:603:81:Times:81:Times:All Black and Hispanic Students 
+36:1437:73747:18:11:72:291:585:81:Times:81:Times:Parameter Estimate for 0.067 0.076 
+36:1438:73779:11:0:311:313:574:81:Times:81:Times: 
+36:1439:73779:0:11:339:416:585:81:Times:81:Times:0.173 0.138 
+36:1440:73789:11:0:431:433:574:81:Times:81:Times: 
+36:1441:73789:0:15:452:522:585:81:Times:81:Times:0.063 0.049 
+36:1442:73799:15:11:72:294:570:81:Times:81:Times:Effect of Quality Measure  (.019) (.032) 
+36:1443:73837:11:0:311:313:559:81:Times:81:Times: 
+36:1444:73837:0:11:334:419:570:81:Times:81:Times:   (.056)  (.071) 
+36:1445:73853:11:0:431:433:559:81:Times:81:Times: 
+36:1446:73853:0:16:454:525:570:81:Times:81:Times:(.022)  (.036) 
+36:1447:73866:16:10:71:296:554:81:Times:81:Times:on Log(2007 Earnings) {.028} {.042} 
+36:1448:73899:10:0:311:313:544:81:Times:81:Times: 
+36:1449:73899:0:11:335:421:555:81:Times:81:Times:  {.076} { .092} 
+36:1450:73914:11:0:431:433:544:81:Times:81:Times: 
+36:1451:73914:0:18:453:526:555:81:Times:81:Times:{.033}  {.046} 
+36:1452:73927:18:19:72:507:537:81:Times:81:Times:Sample Size 1,508     1,508     1,508   
+36:1453:73964:19:19:206:407:518:81:Times:81:Times:All Black and Hispanic Students, Excluding HBCUs 
+36:1454:74012:19:10:72:292:499:81:Times:81:Times:Parameter Estimate for 0.122 0.120 
+36:1455:74044:10:0:311:313:489:81:Times:81:Times: 
+36:1456:74044:0:10:339:411:499:81:Times:81:Times:0.187 0.116 
+36:1457:74054:10:0:431:433:489:81:Times:81:Times: 
+36:1458:74054:0:15:454:524:499:81:Times:81:Times:0.158 0.143 
+36:1459:74064:15:10:72:295:484:81:Times:81:Times:Effect of Quality Measure  (.030) (.042) 
+36:1460:74102:10:0:311:313:474:81:Times:81:Times: 
+36:1461:74102:0:10:342:414:484:81:Times:81:Times:(.064) (.079) 
+36:1462:74114:10:0:431:433:474:81:Times:81:Times: 
+36:1463:74114:0:15:458:527:484:81:Times:81:Times:(.040) (.053) 
+36:1464:74126:15:17:71:528:469:81:Times:81:Times:on Log(2007 Earnings) {.035} {.056}   {.081} {.101}   {.038} {.051} 
+36:1465:74187:17:19:72:497:452:81:Times:81:Times:Sample Size 995     995     995   
+36:1466:74218:19:17:72:492:433:81:Times:81:Times:Source: College and Beyond Survey and Detailed Earnings Records from the Social Security Administration. 
+36:1467:74321:17:10:72:544:416:81:Times:81:Times:Notes: Parameter  estimates  drawn  from  weighted  least  squares  regression  models.    Weights  were  used  to  make  the  
+36:1468:74447:10:10:126:543:406:81:Times:81:Times:sample  representative  of  the  population  of  students  at  C&B  schools.  Both  the  basic  and  self-revelation  models  
+36:1469:74573:10:11:126:543:396:81:Times:81:Times:control for race, sex, predicted parental income, student SAT score, a dummy variable indicating if student SAT 
+36:1470:74685:11:10:126:544:385:81:Times:81:Times:score  was  missing,  student  high  school  grade  point  average,  a  dummy  variable  indicating  if  high  school  grade  
+36:1471:74811:10:10:126:542:375:81:Times:81:Times:point average was missing, and whether the student was a college athlete; the self-revelation model also controls 
+36:1472:74925:10:11:125:542:365:81:Times:81:Times:for the average SAT score of the schools to which the student applied and dummies for the number of applications 
+36:1473:75038:11:10:125:541:354:81:Times:81:Times:the student submitted. Two sets of standard errors are reported, one in parentheses and one in brackets. Standard 
+36:1474:75152:10:11:125:542:344:81:Times:81:Times:errors in brackets are robust to correlated errors among students who attended the same institution.  The Barron's 
+36:1475:75267:11:10:125:543:333:81:Times:81:Times:measure  is  coded  as  a  continuous  measure.  Within  our  sample,  this  measure  ranged  from  2  to  5,  where  "2"  
+36:1476:75390:10:10:125:542:323:81:Times:81:Times:represented "Competitive Colleges" and "5" represented "Most Competitive Colleges." Individuals are excluded if 
+36:1477:75502:10:17:125:266:313:81:Times:81:Times:they earned less than $13,822 in 2007. 
+36:1478:75540:17:19:71:249:296:81:Times:81:Times:HBCU = historically black college or university. 
+36:1479:75589:19:0:93:96:277:144:Times:144:Times: 
+37:1480:75589:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+37:1481:75589:715:0:72:312:31:144:Times:73:Times:DRAFT  
+37:1482:75594:0:20:298:336:711:81:Times:81:Times:TABLE 8 
+37:1483:75601:20:11:98:536:691:81:Times:81:Times:PARAMETER ESTIMATES FROM LOG(EARNINGS) REGRESSIONS, ALLOWING THE EFFECT OF AVERAGE 
+37:1484:75684:11:10:197:415:680:81:Times:81:Times:SCHOOL SAT TO VARY BY PARENTAL EDUCATION 
+37:1485:75724:10:36:316:318:670:81:Times:81:Times: 
+37:1486:75724:36:0:72:74:634:81:Times:81:Times: 
+37:1487:75724:0:39:356:518:653:81:Times:81:Times:1976 Cohort  1989 Cohort 
+37:1488:75746:39:0:72:74:614:81:Times:81:Times: 
+37:1489:75746:0:30:400:476:633:81:Times:81:Times:Parameter Estimates 
+37:1490:75765:30:0:72:363:603:81:Times:81:Times:Variable Basic 
+37:1491:75778:0:10:391:411:613:81:Times:81:Times:Self -
+37:1492:75784:10:0:382:423:603:81:Times:81:Times:Revelation 
+37:1493:75794:0:10:436:438:613:81:Times:81:Times: 
+37:1494:75794:10:0:454:476:603:81:Times:81:Times:Basic 
+37:1495:75799:0:10:505:525:613:81:Times:81:Times:Self -
+37:1496:75805:10:17:496:537:603:81:Times:81:Times:Revelation 
+37:1497:75815:17:32:72:541:586:81:Times:81:Times:School SAT Score/100 0.126 0.041  0.206 0.117 
+37:1498:75855:32:0:72:74:554:81:Times:81:Times: 
+37:1499:75855:0:33:346:541:570:81:Times:81:Times:(.035) (.036)  (.073) (.075) 
+37:1500:75879:33:0:72:74:537:81:Times:81:Times: 
+37:1501:75879:0:17:344:542:554:81:Times:81:Times:{.058} {.055}  {.110} {.112} 
+37:1502:75903:17:33:72:541:537:81:Times:81:Times:Average Years of Parental Education 0.066 0.063  0.128 0.106 
+37:1503:75958:33:0:72:74:504:81:Times:81:Times: 
+37:1504:75958:0:33:346:541:521:81:Times:81:Times:(.027) (.027)  (.053) (.053) 
+37:1505:75982:33:0:72:74:488:81:Times:81:Times: 
+37:1506:75982:0:16:344:542:504:81:Times:81:Times:{.041} {.038}  {.097} {.097} 
+37:1507:76006:16:33:72:542:488:81:Times:81:Times:Years of Parental Education*School SAT Score/100 -0.004 -0.004  -0.009 -0.008 
+37:1508:76078:33:0:72:74:455:81:Times:81:Times: 
+37:1509:76078:0:33:346:541:472:81:Times:81:Times:(.002) (.002)  (.004) (.004) 
+37:1510:76102:33:0:72:74:439:81:Times:81:Times: 
+37:1511:76102:0:16:339:542:455:81:Times:81:Times:{.0037} {.003}  {.008} {.008} 
+37:1512:76127:16:19:72:496:439:81:Times:81:Times:Effect of a 200 Point Increase in School SAT Score If:        
+37:1513:76187:19:10:72:322:420:81:Times:81:Times:Average Years of Parental Education=12 (equivalent to High School 
+37:1514:76253:10:0:72:426:410:81:Times:81:Times:Graduate) 0.148 -0.025 
+37:1515:76273:0:12:437:439:422:81:Times:81:Times: 
+37:1516:76273:12:16:460:541:410:81:Times:81:Times:0.193 0.052 
+37:1517:76283:16:11:71:319:394:81:Times:81:Times:Average Years of Parental Education=16 (approximately equivalent 
+37:1518:76348:11:0:71:426:383:81:Times:81:Times:to College Graduate) 0.113 -0.060 
+37:1519:76379:0:11:437:439:394:81:Times:81:Times: 
+37:1520:76379:11:16:460:541:383:81:Times:81:Times:0.120 -0.009 
+37:1521:76390:16:10:71:318:367:81:Times:81:Times:Average Years of Parental Education=19 (approximately equivalent 
+37:1522:76455:10:0:71:426:357:81:Times:81:Times:to Graduate Degree) 0.087 -0.087 
+37:1523:76485:0:10:437:439:367:81:Times:81:Times: 
+37:1524:76485:10:20:460:541:357:81:Times:81:Times:0.065 -0.055 
+37:1525:76496:20:20:71:546:337:81:Times:81:Times:Sample Size (Unweighted) 12,053 12,053  6,  466 6,  466 
+37:1526:76550:20:10:72:543:317:81:Times:81:Times:Notes: Parameter estimates drawn from a weighted least squares regression.  In addition to the variables listed in the first 
+37:1527:76674:10:11:126:543:307:81:Times:81:Times:column  of  the  table,  both  the  basic  and  self-revelation  models  control  for  race,  gender,  student's  SAT  score,  a  
+37:1528:76804:11:10:126:544:296:81:Times:81:Times:dummy  indicating  if  student  SAT  score  was  missing,  student's  high  school  grade  point  average,    a  dummy  
+37:1529:76924:10:10:126:540:286:81:Times:81:Times:indicating if high school grade point average was missing, and whether the student was a college athlete; the self-
+37:1530:77039:10:11:126:543:276:81:Times:81:Times:revelation model also controls for the average SAT score of the schools to which the student applied and dummies 
+37:1531:77152:11:10:126:543:265:81:Times:81:Times:for the number of applications the student submitted. Two sets of standard errors are reported, one in parentheses 
+37:1532:77267:10:10:126:543:255:81:Times:81:Times:and  one  in  brackets.  Standard  errors  in  brackets  are  robust  to  correlated  errors  among  students  who  attended  the  
+37:1533:77398:10:11:126:543:245:81:Times:81:Times:same institution. The dependent variable for the 1989 cohort is the log(2007 earnings), and for the 1976 cohort is 
+37:1534:77513:11:10:126:544:234:81:Times:81:Times:the  median  [log  (1993  annual  earnings)  through  log  (1997  annual  earnings)].  Individuals  are  excluded  if  their  
+37:1535:77639:10:11:126:546:224:81:Times:81:Times:annual  earnings  (for  the  1989  cohort  ( or  median  annual  earnings  for  the  1976  cohort)  was  less  than  $13,822  in  
+37:1536:77769:11:10:125:543:213:81:Times:81:Times:2007  dollars.  The  parental  education  measure is  the  average  of  the  mother's  and  father's  education;  if  data  was  
+37:1537:77898:10:10:125:543:203:81:Times:81:Times:missing  for  one  parent,  the  average  was  set  equal  to  the  years  of  education  of  the  parent  with  data.    Individuals  
+37:1538:78033:10:11:125:543:193:81:Times:81:Times:with  no  parental  education  data  for  either  parent  are  excluded  from  the  regression.  The  average  (and  standard  
+37:1539:78160:11:10:125:543:182:81:Times:81:Times:deviation)  of  years  of  parental  education  was  15.23  (2.70)  for  the  1976  cohort  and  16.18  (3.24)  for  the  1989  
+37:1540:78288:10:19:125:153:172:81:Times:81:Times:cohort. 
+37:1541:78295:19:0:93:96:153:144:Times:144:Times: 
+38:1542:78295:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+38:1543:78295:715:0:72:312:31:144:Times:73:Times:DRAFT  
+38:1544:78300:0:10:275:360:711:81:Times:81:Times:APPENDIX TABLE 1 
+38:1545:78316:10:10:316:318:701:81:Times:81:Times: 
+38:1546:78316:10:42:110:524:691:81:Times:81:Times:DISTRIBUTION OF SCHOOL CHARACTERISTICS FOR COLLEGE AND BEYOND SCHOOL IN SAMPLE 
+38:1547:78394:42:0:71:343:649:81:Times:81:Times:College Characteristic Number of Schools 
+38:1548:78433:0:10:365:440:659:81:Times:81:Times:Number of Students 
+38:1549:78452:10:0:377:429:649:81:Times:81:Times:(Unweighted) 
+38:1550:78464:0:10:461:536:659:81:Times:81:Times:Number of Students 
+38:1551:78483:10:20:477:520:649:81:Times:81:Times:(Weighted) 
+38:1552:78493:20:17:282:331:629:81:Times:81:Times:1976 Cohort 
+38:1553:78504:17:10:72:146:612:81:Times:81:Times:Average SAT Score 
+38:1554:78521:10:13:455:457:602:81:Times:81:Times:   
+38:1555:78521:13:0:72:74:589:81:Times:81:Times: 
+38:1556:78521:0:23:88:506:599:81:Times:81:Times:1250 plus 6 2,962  2,962  
+38:1557:78544:23:0:72:74:576:81:Times:81:Times: 
+38:1558:78544:0:23:88:506:586:81:Times:81:Times:1175-1250 13 7,999  7,999  
+38:1559:78568:23:0:72:74:563:81:Times:81:Times: 
+38:1560:78568:0:25:88:506:573:81:Times:81:Times:<1175 8 6,262  10,219  
+38:1561:78588:25:13:72:136:548:81:Times:81:Times:     1976 Net Tuition 
+38:1562:78604:13:13:501:503:535:81:Times:81:Times:   
+38:1563:78604:13:0:72:74:522:81:Times:81:Times: 
+38:1564:78604:0:24:88:506:533:81:Times:81:Times:>$3,500 10 5,497  5,497  
+38:1565:78626:24:0:72:74:509:81:Times:81:Times: 
+38:1566:78626:0:24:88:506:520:81:Times:81:Times:$2,000-$3,500 12 7,164  7,164  
+38:1567:78655:24:0:72:74:496:81:Times:81:Times: 
+38:1568:78655:0:26:88:506:507:81:Times:81:Times:<$2,000 5 4,562  8,519  
+38:1569:78676:26:15:72:147:481:81:Times:81:Times:     1978 Barron's Index 
+38:1570:78695:15:13:501:503:466:81:Times:81:Times:   
+38:1571:78695:13:0:72:74:453:81:Times:81:Times: 
+38:1572:78695:0:23:88:506:464:81:Times:81:Times:Most Competitive 11 5,503  5,503  
+38:1573:78726:23:0:72:74:441:81:Times:81:Times: 
+38:1574:78726:0:23:88:506:451:81:Times:81:Times:Highly Competitive 7 4,833  4,833  
+38:1575:78757:23:0:72:74:428:81:Times:81:Times: 
+38:1576:78757:0:17:88:506:438:81:Times:81:Times:Very Competitive or Competitive 9 6,887  10,844  
+38:1577:78802:17:16:282:331:421:81:Times:81:Times:1989 Cohort 
+38:1578:78813:16:11:72:146:405:81:Times:81:Times:Average SAT Score 
+38:1579:78830:11:13:501:503:394:81:Times:81:Times:   
+38:1580:78830:13:0:72:74:381:81:Times:81:Times: 
+38:1581:78830:0:24:88:506:392:81:Times:81:Times:1250 plus 7 3,604  5,944  
+38:1582:78853:24:0:72:74:368:81:Times:81:Times: 
+38:1583:78853:0:24:88:506:379:81:Times:81:Times:1175-1250 6 2,857  4,220  
+38:1584:78876:24:0:72:74:355:81:Times:81:Times: 
+38:1585:78876:0:24:88:506:366:81:Times:81:Times:<1175 5 2,369  8,488  
+38:1586:78895:24:12:72:136:342:81:Times:81:Times:     1990 Net Tuition 
+38:1587:78911:12:13:501:503:330:81:Times:81:Times:   
+38:1588:78911:13:0:72:74:317:81:Times:81:Times: 
+38:1589:78911:0:23:88:506:327:81:Times:81:Times:>$12,000 6 2,971  4,116  
+38:1590:78932:23:0:72:74:304:81:Times:81:Times: 
+38:1591:78932:0:23:88:506:314:81:Times:81:Times:$10,000-$12,000 7 3,490  6,048  
+38:1592:78960:23:0:72:74:291:81:Times:81:Times: 
+38:1593:78960:0:23:88:506:301:81:Times:81:Times:<$10,000 5 2,369  8,488  
+38:1594:78981:23:13:72:147:278:81:Times:81:Times:     1992 Barron's Index 
+38:1595:79000:13:13:501:503:265:81:Times:81:Times:   
+38:1596:79000:13:0:72:74:252:81:Times:81:Times: 
+38:1597:79000:0:23:88:506:262:81:Times:81:Times:Most Competitive 10 4,931  7,743  
+38:1598:79030:23:0:72:74:239:81:Times:81:Times: 
+38:1599:79030:0:13:88:506:249:81:Times:81:Times:Highly Competitive 5 2,651  7,909  
+38:1600:79061:13:11:88:506:236:81:Times:81:Times:  Very Competitive or Competitive 3 1,248  3,001  
+38:1601:79105:11:16:72:474:225:81:Times:81:Times:Source: C&B Survey, American Universities and Colleges, 11th, 12th and 14th editions; Barrons Guide. 
+38:1602:79205:16:10:72:543:209:81:Times:81:Times:Notes: The  C&B  Survey  in  1989  included  only  a  subset  of  schools  included  in  the  1976  Survey.  For  both  cohorts,  the  
+38:1603:79339:10:11:125:541:199:81:Times:81:Times:sample is weighted to make the sample representative of the population of students attending the C&B institutions. 
+38:1604:79454:11:10:125:543:188:81:Times:81:Times:Net tuition for 1970 and 1980 was calculated by subtracting the average aid awarded to undergraduates from the 
+38:1605:79565:10:10:125:542:178:81:Times:81:Times:sticker price tuition, as reported in the eleventh and twelfth editions of American Universities and Colleges. Then, 
+38:1606:79682:10:11:125:542:168:81:Times:81:Times:the 1976 net tuition was interpolated from the 1970 and 1980 net tuition, assuming an exponential rate of growth. 
+38:1607:79796:11:19:125:504:157:81:Times:81:LucidaSans:Net tuition for the 1989 cohort was drawn from the 14th Edition of American Universities and Colleges. 
+38:1608:79898:19:27:93:96:138:144:Times:144:Times: 
+38:1609:79898:27:0:93:96:111:144:Times:144:Times: 
+39:1610:79898:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+39:1611:79898:715:0:72:312:31:144:Times:73:Times:DRAFT  
+39:1612:79903:0:10:275:360:711:81:Times:81:Times:APPENDIX TABLE 2 
+39:1613:79919:10:10:316:318:701:81:Times:81:Times: 
+39:1614:79919:10:11:110:524:691:81:Times:81:Times:AVERAGE SAT SCORE OF SCHOOL ATTENDED CONDITIONAL ON AVERAGE SAT SCORE OF MOST 
+39:1615:79997:11:10:188:428:680:81:Times:81:Times:SELECTIVE SCHOOL ACCEPTED AT, AMONG STUDENTS  
+39:1616:80043:10:10:229:406:670:81:Times:81:Times:ACCEPTED TO MORE THAN ONE SCHOOL 
+39:1617:80075:10:41:316:318:660:81:Times:81:Times: 
+39:1618:80075:41:0:293:295:619:81:Times:81:Times:  
+39:1619:80075:0:11:336:384:630:81:Times:81:Times:1976 Cohort 
+39:1620:80086:11:0:421:423:619:81:Times:81:Times: 
+39:1621:80086:0:31:464:512:630:81:Times:81:Times:1989 Cohort 
+39:1622:80097:31:0:72:354:599:81:Times:81:Times:Variable   Full Sample 
+39:1623:80116:0:11:367:409:610:81:Times:81:Times:Blacks and 
+39:1624:80127:11:10:369:406:599:81:Times:81:Times:Hispanics 
+39:1625:80136:10:0:421:423:589:81:Times:81:Times: 
+39:1626:80136:0:11:448:465:610:81:Times:81:Times:Full 
+39:1627:80141:11:0:442:471:599:81:Times:81:Times:Sample 
+39:1628:80147:0:11:494:536:610:81:Times:81:Times:Blacks and 
+39:1629:80158:11:17:496:533:599:81:Times:81:Times:Hispanics 
+39:1630:80167:17:16:72:397:582:81:Times:81:Times:Student SAT Score/100 0.0648 0.122 
+39:1631:80200:16:0:421:423:566:81:Times:81:Times: 
+39:1632:80200:0:20:445:520:582:81:Times:81:Times:0.028 0.115 
+39:1633:80210:20:0:293:295:562:81:Times:81:Times:  
+39:1634:80210:0:10:321:400:572:81:Times:81:Times:(.004) (.021) 
+39:1635:80222:10:0:421:423:562:81:Times:81:Times: 
+39:1636:80222:0:10:447:523:572:81:Times:81:Times:(.005) (.013) 
+39:1637:80234:10:23:72:397:562:81:Times:81:Times:      Student SAT missing -0.074 -0.915 
+39:1638:80265:23:0:421:423:539:81:Times:81:Times: 
+39:1639:80265:0:21:442:520:556:81:Times:81:Times:-0.155 -0.592 
+39:1640:80277:21:0:293:295:535:81:Times:81:Times:  
+39:1641:80277:0:10:321:400:545:81:Times:81:Times:(.029) (.160) 
+39:1642:80289:10:0:421:423:535:81:Times:81:Times: 
+39:1643:80289:0:16:447:523:545:81:Times:81:Times:(.103) (.130) 
+39:1644:80301:16:16:72:397:529:81:Times:81:Times:High School GPA -0.005 0.229 
+39:1645:80327:16:0:421:423:513:81:Times:81:Times: 
+39:1646:80327:0:21:442:520:529:81:Times:81:Times:-0.146 -0.197 
+39:1647:80339:21:0:293:295:508:81:Times:81:Times:  
+39:1648:80339:0:11:321:400:519:81:Times:81:Times:(.020) (.095) 
+39:1649:80351:11:0:421:423:508:81:Times:81:Times: 
+39:1650:80351:0:17:447:523:519:81:Times:81:Times:(.028) (.062) 
+39:1651:80363:17:16:72:397:502:81:Times:81:Times:High School GPA Missing   0.197 0.173 
+39:1652:80398:16:0:421:423:486:81:Times:81:Times: 
+39:1653:80398:0:20:445:520:502:81:Times:81:Times:0.125 0.299 
+39:1654:80408:20:0:293:295:482:81:Times:81:Times:  
+39:1655:80408:0:10:321:400:492:81:Times:81:Times:(.012) (.070) 
+39:1656:80420:10:0:421:423:482:81:Times:81:Times: 
+39:1657:80420:0:16:447:523:492:81:Times:81:Times:(.013) (.041) 
+39:1658:80432:16:17:72:397:476:81:Times:81:Times:Predicted Parental Income  0.007 -0.132 
+39:1659:80468:17:0:421:423:459:81:Times:81:Times: 
+39:1660:80468:0:21:442:520:476:81:Times:81:Times:-0.002 -0.162 
+39:1661:80480:21:0:293:295:455:81:Times:81:Times:  
+39:1662:80480:0:10:324:400:465:81:Times:81:Times:.017) (.079) 
+39:1663:80491:10:0:421:423:455:81:Times:81:Times: 
+39:1664:80491:0:16:447:523:465:81:Times:81:Times:(.018) (.041) 
+39:1665:80503:16:16:72:100:449:81:Times:81:Times:Female 
+39:1666:80509:16:0:293:295:433:81:Times:81:Times: 
+39:1667:80509:0:16:320:397:449:81:Times:81:Times:  0.123 0.262 
+39:1668:80521:16:0:421:423:433:81:Times:81:Times: 
+39:1669:80521:0:21:445:520:449:81:Times:81:Times:0.070 0.232 
+39:1670:80531:21:0:293:295:428:81:Times:81:Times:  
+39:1671:80531:0:11:321:400:439:81:Times:81:Times:(.011) (.066) 
+39:1672:80543:11:0:421:423:428:81:Times:81:Times: 
+39:1673:80543:0:17:447:523:439:81:Times:81:Times:(.013) (.036) 
+39:1674:80555:17:16:72:95:422:81:Times:81:Times:Black 
+39:1675:80560:16:0:293:295:406:81:Times:81:Times: 
+39:1676:80560:0:16:317:397:422:81:Times:81:Times:-0.193 -0.228 
+39:1677:80572:16:0:421:423:406:81:Times:81:Times: 
+39:1678:80572:0:20:442:520:422:81:Times:81:Times:-0.207 -0.172 
+39:1679:80584:20:0:293:295:402:81:Times:81:Times:  
+39:1680:80584:0:10:321:400:412:81:Times:81:Times:(.026) (.089) 
+39:1681:80596:10:0:421:423:402:81:Times:81:Times: 
+39:1682:80596:0:16:447:523:412:81:Times:81:Times:(.025) (.041) 
+39:1683:80608:16:17:72:106:396:81:Times:81:Times:Hispanic 
+39:1684:80616:17:0:293:295:379:81:Times:81:Times: 
+39:1685:80616:0:17:320:400:396:81:Times:81:Times:0.205 (omitted)  
+39:1686:80631:17:0:421:423:379:81:Times:81:Times: 
+39:1687:80631:0:21:445:523:396:81:Times:81:Times:0.048 (omitted) 
+39:1688:80645:21:0:293:295:375:81:Times:81:Times:  
+39:1689:80645:0:10:321:345:385:81:Times:81:Times:(.050) 
+39:1690:80651:10:0:421:423:375:81:Times:81:Times:  
+39:1691:80651:0:10:447:470:385:81:Times:81:Times:(.035) 
+39:1692:80657:10:22:72:95:375:81:Times:81:Times: Asian 
+39:1693:80662:22:0:293:295:353:81:Times:81:Times: 
+39:1694:80662:0:16:320:342:369:81:Times:81:Times:0.067 
+39:1695:80667:16:0:421:423:353:81:Times:81:Times:  
+39:1696:80667:0:16:445:467:369:81:Times:81:Times:0.046 
+39:1697:80672:16:11:321:505:353:81:Times:81:Times:   (.036)   (.021)  
+39:1698:80684:11:16:72:342:342:81:Times:81:Times:Other Race -0.177 
+39:1699:80700:16:0:421:423:326:81:Times:81:Times:  
+39:1700:80700:0:16:445:467:342:81:Times:81:Times:0.152 
+39:1701:80705:16:11:321:505:326:81:Times:81:Times:   (.032)   (.080)  
+39:1702:80717:11:16:72:397:315:81:Times:81:Times:College Athlete 0.168 0.300 
+39:1703:80742:16:0:421:423:299:81:Times:81:Times: 
+39:1704:80742:0:20:445:520:315:81:Times:81:Times:0.108 0.323 
+39:1705:80752:20:0:293:295:295:81:Times:81:Times:  
+39:1706:80752:0:10:321:400:305:81:Times:81:Times:(.021) (.132) 
+39:1707:80764:10:0:421:423:295:81:Times:81:Times: 
+39:1708:80764:0:16:447:523:305:81:Times:81:Times:(.022) (.069) 
+39:1709:80776:16:17:72:397:289:81:Times:81:Times:Average SAT Score/100 of Most 0.778 0.869 
+39:1710:80815:17:0:421:423:272:81:Times:81:Times: 
+39:1711:80815:0:11:445:520:289:81:Times:81:Times:0.838 0.769 
+39:1712:80825:11:17:72:523:278:81:Times:81:Times:Selective School Accepted At (.007) (.029)   (.009) (.020) 
+39:1713:80879:17:19:71:401:261:81:Times:81:Times:Sample Size 10,068 8,  335 
+39:1714:80906:19:0:421:423:242:81:Times:81:Times: 
+39:1715:80906:0:19:446:526:261:81:Times:81:Times:5,  642 1,  275 
+39:1716:80922:19:20:72:521:242:81:Times:81:Times:R-squared   0.714 0.726    0.762 0.801 
+39:1717:80956:20:16:72:231:222:81:Times:81:Times:Source: College and Beyond Survey. 
+39:1718:80989:16:10:72:544:206:81:Times:81:Times:Notes: Parameter  estimates  drawn  from  weighted  least  squares  regression  models  where  the  dependent  variable  is  the  
+39:1719:81118:10:11:126:542:196:81:Times:81:Times:average SAT score of the college attended. Regressions only include students who were accepted to more than one 
+39:1720:81230:11:10:126:542:185:81:Times:81:Times:college. Standard errors are in parentheses. Weights were used to make the sample representative of the population 
+39:1721:81345:10:16:126:228:175:81:Times:81:Times:of students at C&B schools. 
+39:1722:81372:16:0:72:74:159:81:Times:81:Times: 
+40:1723:81372:0:715:72:75:746:122:g_d0_f9:122:g_d0_f9: 
+40:1724:81372:715:0:72:115:31:144:Times:73:Times:DRAFT 
+40:1725:81377:0:10:275:360:711:81:Times:81:Times:APPENDIX TABLE 3 
+40:1726:81393:10:10:316:318:701:81:Times:81:Times: 
+40:1727:81393:10:11:133:505:691:81:Times:81:Times:FULL SET OF PARAMETER ESTIMATES FOR SELECTED LOG (EARNINGS) REGRESSIONS  
+40:1728:81466:11:10:254:380:680:81:Times:81:Times:FOR 1976 AND 1989 COHORTS 
+40:1729:81491:10:17:316:318:670:81:Times:81:Times: 
+40:1730:81491:17:30:366:522:653:81:Times:81:Times:    1976 Cohort  1989 Cohort 
+40:1731:81517:30:19:72:104:623:81:Times:81:Times:Variable 
+40:1732:81525:19:0:330:332:604:81:Times:81:Times: 
+40:1733:81525:0:0:353:375:623:81:Times:81:Times:Basic 
+40:1734:81530:0:10:404:422:633:81:Times:81:Times:Self-
+40:1735:81535:10:0:394:435:623:81:Times:81:Times:Revelation 
+40:1736:81545:0:10:444:446:633:81:Times:81:Times: 
+40:1737:81545:10:0:460:482:623:81:Times:81:Times:Basic 
+40:1738:81550:0:10:509:527:633:81:Times:81:Times:Self-
+40:1739:81555:10:16:498:539:623:81:Times:81:Times:Revelation 
+40:1740:81565:16:23:72:541:607:81:Times:81:Times:School SAT Score/100 0.061 -0.023  0.056 -0.008 
+40:1741:81607:23:0:330:332:584:81:Times:81:Times:  
+40:1742:81607:0:13:361:541:594:81:Times:81:Times:(.013) (.014)  (.031) (.034) 
+40:1743:81631:13:23:72:541:581:81:Times:81:Times:Student SAT Score/100 0.022 0.014  0.047 0.033 
+40:1744:81672:23:0:330:332:558:81:Times:81:Times:  
+40:1745:81672:0:12:361:541:568:81:Times:81:Times:(.005) (.005)  (.008) (.008) 
+40:1746:81696:12:23:71:541:556:81:Times:81:Times:Student SAT missing -0.141 -0.122  -0.262 -0.217 
+40:1747:81739:23:0:330:332:533:81:Times:81:Times:  
+40:1748:81739:0:13:361:541:543:81:Times:81:Times:(.030) (.030)  (.160) (.160) 
+40:1749:81763:13:10:72:100:530:81:Times:81:Times:Female 
+40:1750:81769:10:0:330:332:520:81:Times:81:Times: 
+40:1751:81769:0:23:359:541:530:81:Times:81:Times:-0.479 -0.469  -0.410 -0.412 
+40:1752:81793:23:0:330:332:507:81:Times:81:Times:  
+40:1753:81793:0:12:361:541:517:81:Times:81:Times:(.013) (.013)  (.020) (.020) 
+40:1754:81817:12:11:71:94:505:81:Times:81:Times:Black 
+40:1755:81822:11:0:330:332:494:81:Times:81:Times: 
+40:1756:81822:0:23:359:541:505:81:Times:81:Times:-0.028 -0.037  0.036 0.022 
+40:1757:81844:23:0:330:332:482:81:Times:81:Times:  
+40:1758:81844:0:13:361:541:492:81:Times:81:Times:(.029) (.029)  (.040) (.040) 
+40:1759:81868:13:10:72:106:479:81:Times:81:Times:Hispanic 
+40:1760:81876:10:0:330:332:469:81:Times:81:Times: 
+40:1761:81876:0:23:359:541:479:81:Times:81:Times:-0.063 -0.077  -0.060 -0.074 
+40:1762:81900:23:0:330:332:456:81:Times:81:Times:  
+40:1763:81900:0:12:361:541:466:81:Times:81:Times:(.069) (.069)  (.059) (.040) 
+40:1764:81924:12:11:71:94:454:81:Times:81:Times:Asian 
+40:1765:81929:11:0:330:332:443:81:Times:81:Times: 
+40:1766:81929:0:23:362:541:454:81:Times:81:Times:0.171 0.151  0.154 0.139 
+40:1767:81949:23:0:330:332:431:81:Times:81:Times:  
+40:1768:81949:0:13:361:541:441:81:Times:81:Times:(.046) (.046)  (.036) (.036) 
+40:1769:81973:13:10:72:114:428:81:Times:81:Times:Other Race 
+40:1770:81983:10:0:330:332:418:81:Times:81:Times: 
+40:1771:81983:0:23:359:541:428:81:Times:81:Times:-0.088 -0.101  -0.363 -0.344 
+40:1772:82007:23:0:330:332:405:81:Times:81:Times:  
+40:1773:82007:0:12:361:541:415:81:Times:81:Times:(.034) (.034)  (.143) (.143) 
+40:1774:82031:12:23:71:541:403:81:Times:81:Times:High School GPA 0.218 0.216  0.194 0.188 
+40:1775:82066:23:0:330:332:380:81:Times:81:Times:  
+40:1776:82066:0:13:361:541:390:81:Times:81:Times:(.021) (.021)  (.042) (.042) 
+40:1777:82090:13:23:72:541:377:81:Times:81:Times:High School GPA missing 0.015 0.013  0.094 0.092 
+40:1778:82133:23:0:330:332:354:81:Times:81:Times:  
+40:1779:82133:0:12:361:541:364:81:Times:81:Times:(.014) (.014)  (.021) (.021) 
+40:1780:82157:12:23:71:541:352:81:Times:81:Times:Predicted Parental Income 0.161 0.140  0.137 0.117 
+40:1781:82203:23:0:330:332:329:81:Times:81:Times:  
+40:1782:82203:0:13:361:541:339:81:Times:81:Times:(.019) (.017)  (.029) (.029) 
+40:1783:82227:13:10:72:100:326:81:Times:81:Times:Athlete 
+40:1784:82234:10:0:330:332:316:81:Times:81:Times: 
+40:1785:82234:0:23:362:541:326:81:Times:81:Times:0.124 0.123  0.135 0.092 
+40:1786:82254:23:0:330:332:303:81:Times:81:Times:  
+40:1787:82254:0:12:361:541:313:81:Times:81:Times:(.025) (.037)  (.037) (.020) 
+40:1788:82278:12:11:71:243:301:81:Times:81:Times:Average SAT Score/100 of Schools Applied to 
+40:1789:82321:11:0:344:346:290:81:Times:81:Times:  
+40:1790:82321:0:11:413:446:301:81:Times:81:Times:0.100  
+40:1791:82326:11:0:455:457:290:81:Times:81:Times: 
+40:1792:82326:0:23:519:541:301:81:Times:81:Times:0.099 
+40:1793:82331:23:0:344:346:278:81:Times:81:Times:   
+40:1794:82331:0:10:411:446:288:81:Times:81:Times:(.012)  
+40:1795:82337:10:0:455:457:278:81:Times:81:Times: 
+40:1796:82337:0:13:518:541:288:81:Times:81:Times:(.014) 
+40:1797:82343:13:10:72:174:275:81:Times:81:Times:One Additional Application 
+40:1798:82369:10:0:344:346:265:81:Times:81:Times: 
+40:1799:82369:0:10:413:446:275:81:Times:81:Times:0.062  
+40:1800:82374:10:0:455:457:265:81:Times:81:Times: 
+40:1801:82374:0:23:519:541:275:81:Times:81:Times:0.029 
+40:1802:82379:23:0:344:346:252:81:Times:81:Times:   
+40:1803:82379:0:10:411:446:262:81:Times:81:Times:(.017)  
+40:1804:82385:10:0:455:457:252:81:Times:81:Times: 
+40:1805:82385:0:12:518:541:262:81:Times:81:Times:(.029) 
+40:1806:82391:12:11:71:179:250:81:Times:81:Times:Two Additional Applications 
+40:1807:82418:11:0:344:346:239:81:Times:81:Times: 
+40:1808:82418:0:11:413:446:250:81:Times:81:Times:0.057  
+40:1809:82423:11:0:455:457:239:81:Times:81:Times: 
+40:1810:82423:0:23:519:541:250:81:Times:81:Times:0.053 
+40:1811:82428:23:0:344:346:227:81:Times:81:Times:   
+40:1812:82428:0:10:411:446:237:81:Times:81:Times:(.018)  
+40:1813:82434:10:0:455:457:227:81:Times:81:Times: 
+40:1814:82434:0:13:518:541:237:81:Times:81:Times:(.028) 
+40:1815:82440:13:10:72:186:224:81:Times:81:Times:Three Additional Applications  
+40:1816:82470:10:0:344:346:214:81:Times:81:Times: 
+40:1817:82470:0:10:413:446:224:81:Times:81:Times:0.073  
+40:1818:82475:10:0:455:457:214:81:Times:81:Times: 
+40:1819:82475:0:23:519:541:224:81:Times:81:Times:0.084 
+40:1820:82480:23:0:344:346:201:81:Times:81:Times:   
+40:1821:82480:0:10:411:446:211:81:Times:81:Times:(.020)  
+40:1822:82486:10:0:455:457:201:81:Times:81:Times: 
+40:1823:82486:0:12:518:541:211:81:Times:81:Times:(.028) 
+40:1824:82492:12:11:71:179:199:81:Times:81:Times:Four Additional Applications 
+40:1825:82520:11:0:344:346:188:81:Times:81:Times: 
+40:1826:82520:0:11:413:446:199:81:Times:81:Times:0.085  
+40:1827:82525:11:0:455:457:188:81:Times:81:Times: 
+40:1828:82525:0:23:519:541:199:81:Times:81:Times:0.098 
+40:1829:82530:23:0:344:346:176:81:Times:81:Times:   
+40:1830:82530:0:10:411:446:186:81:Times:81:Times:(.034)  
+40:1831:82536:10:0:455:457:176:81:Times:81:Times: 
+40:1832:82536:0:13:518:541:186:81:Times:81:Times:(.041) 
+40:1833:82542:13:17:72:544:173:81:Times:81:Times:R-Squared   0.147 0.153   0.122 0.126  
+40:1834:82573:17:20:72:502:156:81:Times:81:Times:Sample Size (Unweighted) 12,075    6,479   
+40:1835:82612:20:16:72:492:136:81:Times:81:Times:Source: College and Beyond Survey and Detailed Earnings Records from the Social Security Administration. 
+40:1836:82716:16:11:72:545:120:81:Times:81:Times:Notes:  Parameter  estimates  drawn  from  weighted  least  squares  regression  models  where  the  dependent  variable  is  
+40:1837:82841:11:10:126:543:109:81:Times:81:Times:log(2007 earnings) for the 1989 cohort and the median of [log(2003 earnings) through log(2007 earnings)] for the 
+40:1838:82954:10:10:126:543:99:81:Times:81:Times:1976 cohort. Standard errors are in parentheses, and are robust to correlated errors among students who attended 
+40:1839:83067:10:11:126:543:89:81:Times:81:Times:the  same  institution.    Individuals  are  excluded  if  annual  earnings  (for  the  1989  cohort)  or  the  median  of  annual  
+40:1840:83199:11:10:126:543:78:81:Times:81:Times:earnings  (for  the  1976  cohort)  was  less  than  $13,822  in  2007  dollars.    Weights  were  used  to  make  the  sample  
+40:1841:83327:10:0:126:345:68:81:Times:81:Times:representative of the population of students at C&B schools. 

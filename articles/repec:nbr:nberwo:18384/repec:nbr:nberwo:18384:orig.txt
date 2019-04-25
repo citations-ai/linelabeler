@@ -1,0 +1,595 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:531:610:12:Times:12:Times:A CAUTIONARY NOTE ON USING INDUSTRY AFFILIATION TO PREDICT INCOME
+1:2:90:28:14:306:356:582:12:Times:12:Times:Jörn-Steffen Pischke
+1:3:110:14:28:306:349:568:12:Times:12:Times:Hannes Schwandt
+1:4:125:28:14:306:359:540:12:Times:12:Times:Working Paper 18384
+1:5:144:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w18384
+1:6:177:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:213:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:238:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:257:14:242:306:345:442:12:Times:12:Times:September 2012
+1:10:271:242:14:72:540:200:12:Times:12:Times:We thank Georg Graetz for excellent research assistance and the Centre for Economic Performance
+1:11:366:14:14:72:540:186:12:Times:12:Times:at the LSE for supporting this research. The views expressed herein are those of the authors and do
+1:12:465:14:28:72:453:172:12:Times:12:Times:not necessarily reflect the views of the National Bureau of Economic Research.
+1:13:543:28:14:72:540:144:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:14:639:14:14:72:540:130:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:15:734:14:28:72:169:116:12:Times:12:Times:NBER publications.
+1:16:752:28:14:72:540:88:12:Times:12:Times:© 2012 by Jörn-Steffen Pischke and Hannes Schwandt. All rights reserved. Short sections of text,
+1:17:848:14:14:72:540:74:12:Times:12:Times:not to exceed two paragraphs, may be quoted without explicit permission provided that full credit,
+1:18:946:14:0:72:273:60:12:Times:12:Times:including © notice, is given to the source.
+2:19:989:0:14:72:395:700:12:Times:12:Times:A Cautionary Note on Using Industry Affiliation to Predict Income
+2:20:1054:14:14:72:281:686:12:Times:12:Times:Jörn-Steffen Pischke and Hannes Schwandt
+2:21:1094:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 18384
+2:22:1122:14:14:72:150:658:12:Times:12:Times:September 2012
+2:23:1136:14:28:72:187:644:12:Times:12:Times:JEL No. D31,I14,I3,J31
+2:24:1158:28:28:306:339:616:12:Times:12:Times:ABSTRACT
+2:25:1166:28:14:72:540:588:12:Times:12:Times:Many literatures investigate the causal impact of income on economic outcomes, for example in the
+2:26:1263:14:14:72:540:574:12:Times:12:Times:context of intergenerational transmission or well-being and health. Some studies have proposed to
+2:27:1360:14:14:72:540:560:12:Times:12:Times:use employer wage differentials and in particular industry affiliation as an instrument for income. We
+2:28:1462:14:14:72:540:546:12:Times:12:Times:demonstrate that industry affiliation is correlated with fixed individual characteristics, specifically
+2:29:1565:14:14:72:540:532:12:Times:12:Times:parents' education and own height, conditional on the covariates typically controlled for in these studies.
+2:30:1672:14:14:72:540:518:12:Times:12:Times:These results suggest that there is selection into industries based on unobservables. As a result the
+2:31:1773:14:42:72:407:504:12:Times:12:Times:exclusion restriction in many IV studies of this type is likely violated.
+2:32:1846:42:14:72:172:462:12:Times:12:Times:Jörn-Steffen Pischke
+2:33:1866:14:14:72:94:448:12:Times:12:Times:CEP
+2:34:1869:14:14:72:215:434:12:Times:12:Times:London School of Economics
+2:35:1895:14:14:72:151:420:12:Times:12:Times:Houghton Street
+2:36:1910:14:14:72:171:406:12:Times:12:Times:London WC2A 2AE
+2:37:1925:14:14:72:178:392:12:Times:12:Times:UNITED KINGDOM
+2:38:1939:14:14:72:124:378:12:Times:12:Times:and NBER
+2:39:1947:14:28:72:169:364:12:Times:12:Times:s.pischke@lse.ac.uk
+2:40:1966:28:14:72:158:336:12:Times:12:Times:Hannes Schwandt
+2:41:1981:14:14:72:172:322:12:Times:12:Times:Princeton University
+2:42:2001:14:14:72:229:308:12:Times:12:Times:Center for Health and Wellbeing
+2:43:2032:14:14:72:156:294:12:Times:12:Times:315 Wallace Hall
+2:44:2048:14:14:72:170:280:12:Times:12:Times:Princeton, NJ 08544
+2:45:2067:14:0:72:194:266:12:Times:12:Times:schwandt@princeton.edu
+3:46:2089:0:30:110:246:654:301:g_d0_f1:301:g_d0_f1:1  Introduction
+3:47:2104:30:19:110:498:624:145:g_d0_f2:145:g_d0_f2:Many literatures ask about the causal impact of income on a variety of eco-
+3:48:2179:19:18:110:499:605:145:g_d0_f2:145:g_d0_f2:nomic outcomes. One example is intergenerational transmission; the question
+3:49:2254:18:19:110:502:587:145:g_d0_f2:145:g_d0_f2:whetherchildrenofricherparentsfarebetterintermsoftheirowneconomic
+3:50:2319:19:18:110:498:568:145:g_d0_f2:145:g_d0_f2:performance (Solon, 1999). Another example is the health-income gradient:
+3:51:2392:18:19:110:499:550:145:g_d0_f2:145:g_d0_f2:higher income individuals tend to be healthier. Is this association causal, do
+3:52:2470:19:18:110:499:531:145:g_d0_f2:145:g_d0_f2:richer individuals differ in other dimensions, or does the causality run the
+3:53:2546:18:18:110:498:513:145:g_d0_f2:145:g_d0_f2:opposite way (Cutler, Lleras-Muney, Vogl, 2011)? Furthermore, income is
+3:54:2617:18:19:110:498:495:145:g_d0_f2:145:g_d0_f2:an important correlate in happiness regressions relating individual life satis-
+3:55:2696:19:18:110:499:476:145:g_d0_f2:145:g_d0_f2:faction to various economic determinants (Blanchflower and Oswald, 2004).
+3:56:2769:18:19:110:301:458:145:g_d0_f2:145:g_d0_f2:Does higher income cause happiness?
+3:57:2804:19:18:128:499:439:145:g_d0_f2:145:g_d0_f2:Sorting out causality in these and other applications is difficult. A num-
+3:58:2878:18:19:110:499:421:145:g_d0_f2:145:g_d0_f2:ber of studies in the literature have used employer wage differentials and
+3:59:2952:19:18:110:499:402:145:g_d0_f2:145:g_d0_f2:particularly industry affiliation as an instrumental variable for individual or
+3:60:3031:18:18:110:499:384:145:g_d0_f2:145:g_d0_f2:family income. Examples of such studies are Shea (2000) who uses industry
+3:61:3104:18:19:110:499:366:145:g_d0_f2:145:g_d0_f2:affiliation, union membership, and job loss as instruments for parents’ income
+3:62:3182:19:18:110:498:347:145:g_d0_f2:145:g_d0_f2:in order to learn about intergenerational transmission. Luttmer (2005) uses
+3:63:3257:18:19:110:498:329:145:g_d0_f2:145:g_d0_f2:interactions of industry and occupation as instruments for income in happi-
+3:64:3332:19:18:110:498:310:145:g_d0_f2:145:g_d0_f2:ness regressions, an avenue also followed by Luechinger (2009). This idea has
+3:65:3409:18:19:110:498:292:145:g_d0_f2:145:g_d0_f2:been extended by Pischke (2011), who focuses on industry differentials only,
+3:66:3485:19:18:110:329:273:145:g_d0_f2:145:g_d0_f2:and has also been used by Li et al. (2011).
+3:67:3528:18:18:128:499:255:145:g_d0_f2:145:g_d0_f2:Industry wage differentials in particular are large and remain after con-
+3:68:3601:18:19:110:499:237:145:g_d0_f2:145:g_d0_f2:trolling for many covariates including individualfixed effects (Krueger and
+3:69:3676:19:18:110:499:218:145:g_d0_f2:145:g_d0_f2:Summers, 1988; Gibbons and Katz, 1992) and ability test scores (Blackburn
+3:70:3749:18:19:110:499:200:145:g_d0_f2:145:g_d0_f2:and Neumark, 1992). As a result, researchers using these wage differentials
+3:71:3824:19:18:110:498:181:145:g_d0_f2:145:g_d0_f2:as instruments for income may have a reasonable claim of identifying causal
+3:72:3899:18:18:110:499:163:145:g_d0_f2:145:g_d0_f2:effects of income not contaminated by unobserved personal attributes and
+3:73:3971:18:19:110:499:145:145:g_d0_f2:145:g_d0_f2:selection.  In this note we provide some evidence to caution against this
+3:74:4044:19:37:110:504:126:145:g_d0_f2:145:g_d0_f2:optimism. Following the same specificationsasinPischke(2011)weshow
+3:75:4110:37:0:302:308:89:145:g_d0_f2:145:g_d0_f2:1
+4:76:4111:0:19:110:499:654:145:g_d0_f2:145:g_d0_f2:that industry differentials correlate with mother’s education and own height.
+4:77:4188:19:18:110:499:635:145:g_d0_f2:145:g_d0_f2:Both of these variables are pre-determined by the time industry affiliation is
+4:78:4266:18:19:110:451:617:145:g_d0_f2:145:g_d0_f2:measured, and should therefore not be affected by industry choice.
+4:79:4332:19:18:128:499:598:145:g_d0_f2:145:g_d0_f2:The statistical association with industry wage effects which wefind there-
+4:80:4406:18:18:110:498:580:145:g_d0_f2:145:g_d0_f2:fore suggests selection in industry choice which correlates with personal char-
+4:81:4485:18:19:110:498:562:145:g_d0_f2:145:g_d0_f2:acteristics related to parental background and height. These characteristics
+4:82:4561:19:18:110:498:543:145:g_d0_f2:145:g_d0_f2:might, for example, be unmeasured cognitive or non-cognitive skills or per-
+4:83:4636:18:19:110:498:525:145:g_d0_f2:145:g_d0_f2:sonality traits. We conclude by discussing why we think the types of variables
+4:84:4714:19:18:110:499:506:145:g_d0_f2:145:g_d0_f2:we use, mother’s education and height, might be useful as specification checks
+4:85:4792:18:18:110:499:488:145:g_d0_f2:145:g_d0_f2:but offer little hope in improving inference in regression or IV frameworks.
+4:86:4868:18:19:110:499:470:145:g_d0_f2:145:g_d0_f2:We conjecture that this remains true for even for better measures of the
+4:87:4940:19:40:110:404:451:145:g_d0_f2:145:g_d0_f2:underlying omitted skills or traits, like ability test scores.
+4:88:5002:40:30:110:200:411:301:g_d0_f1:301:g_d0_f1:2Data
+4:89:5007:30:19:110:499:381:145:g_d0_f2:145:g_d0_f2:In order to study the effect of parental education we use data from the 1972
+4:90:5083:19:18:110:498:362:145:g_d0_f2:145:g_d0_f2:to 2006 waves of the US General Social Survey (GSS). The GSS is a repeated
+4:91:5157:18:18:110:499:344:145:g_d0_f2:145:g_d0_f2:cross-sectional survey, carried out every one to two years. The GSS is also
+4:92:5232:18:19:110:499:326:145:g_d0_f2:145:g_d0_f2:the main dataset analyzed in Pischke (2011) and we use the same sample
+4:93:5302:19:18:110:498:307:145:g_d0_f2:145:g_d0_f2:restrictions.  The primary sample consists of employed men aged 20 — 64
+4:94:5373:18:19:110:462:289:145:g_d0_f2:145:g_d0_f2:without missing values for any of the covariates used in the analysis.
+4:95:5443:19:18:128:499:270:145:g_d0_f2:145:g_d0_f2:Our outcome measures of primary interest are happiness and parental
+4:96:5510:18:18:110:498:252:145:g_d0_f2:145:g_d0_f2:education. Happiness is transformed as explained in Pischke (2011), so that
+4:97:5585:18:19:110:498:234:145:g_d0_f2:145:g_d0_f2:all results can be interpreted in terms of standard deviation units. As main
+4:98:5661:19:18:110:499:215:145:g_d0_f2:145:g_d0_f2:parental education variable we use the highest year of completed schooling
+4:99:5735:18:19:110:498:197:145:g_d0_f2:145:g_d0_f2:of the respondent’s mother. We exclude missing values and those individuals
+4:100:5810:19:18:110:499:178:145:g_d0_f2:145:g_d0_f2:reporting zero years of education.  We focus on mother’s education because
+4:101:5884:18:19:110:498:160:145:g_d0_f2:145:g_d0_f2:there are fewer missing values in mother’s education than in father’s educa-
+4:102:5960:19:18:110:498:141:145:g_d0_f2:145:g_d0_f2:tion. Using father’s education or combining the education of both parents
+4:103:6033:18:34:110:242:123:145:g_d0_f2:145:g_d0_f2:yields comparable results.
+4:104:6059:34:0:302:308:89:145:g_d0_f2:145:g_d0_f2:2
+5:105:6060:0:19:128:499:654:145:g_d0_f2:145:g_d0_f2:Family income, our main regressor, is a bracketed variable and we assign
+5:106:6132:19:18:110:499:635:145:g_d0_f2:145:g_d0_f2:midpointsasdescribedinPischke(2011). Industry and occupation affiliation
+5:107:6204:18:19:110:498:617:145:g_d0_f2:145:g_d0_f2:of the respondent are aggregated into 32 and 22 categories, respectively.
+5:108:6277:19:18:110:283:598:145:g_d0_f2:145:g_d0_f2:Details are given in the appendix.
+5:109:6311:18:18:128:499:580:145:g_d0_f2:145:g_d0_f2:The wives sample consists of married females aged 20 to 64 with employed
+5:110:6383:18:19:110:498:562:145:g_d0_f2:145:g_d0_f2:husbands. The industry and occupation variables used in this sample refer
+5:111:6456:19:18:110:425:543:145:g_d0_f2:145:g_d0_f2:to the husbands, while other controls refer to the respondent.
+5:112:6518:18:19:128:499:525:145:g_d0_f2:145:g_d0_f2:In order to corroborate our results on parental education from the GSS we
+5:113:6591:19:18:110:498:506:145:g_d0_f2:145:g_d0_f2:also present results on body height using the US National Health Interview
+5:114:6665:18:18:110:498:488:145:g_d0_f2:145:g_d0_f2:Survey (NHIS). The NHIS is also a repeated cross-section carried out every
+5:115:6739:18:19:110:499:470:145:g_d0_f2:145:g_d0_f2:year with about 30,000 to 50,000 respondents per wave. We use waves from
+5:116:6811:19:18:110:450:451:145:g_d0_f2:145:g_d0_f2:1974 to 2009 and restrict the sample to employed men aged 20-64.
+5:117:6875:18:19:128:499:433:145:g_d0_f2:145:g_d0_f2:Our outcome measures of primary interest in the NHIS are self-reported
+5:118:6945:19:18:110:499:414:145:g_d0_f2:145:g_d0_f2:health and self-reported body height.  Self-reported health is the answer
+5:119:7018:18:19:110:499:396:145:g_d0_f2:145:g_d0_f2:to the question “Would you say your health in general is excellent, very
+5:120:7090:19:18:110:498:377:145:g_d0_f2:145:g_d0_f2:good, fair, or poor?” We transform this health measure the same way as
+5:121:7160:18:18:110:499:359:145:g_d0_f2:145:g_d0_f2:happiness in the GSS such that results can be interpreted in terms of standard
+5:122:7238:18:19:110:376:341:145:g_d0_f2:145:g_d0_f2:deviations. Body height is measured in centimeters.
+5:123:7289:19:18:128:499:322:145:g_d0_f2:145:g_d0_f2:We group industry and occupation affiliations of the respondent into 28
+5:124:7360:18:19:110:498:304:145:g_d0_f2:145:g_d0_f2:and 18 categories, respectively, These groups are relatively commensurate
+5:125:7433:19:18:110:498:285:145:g_d0_f2:145:g_d0_f2:with the GSS classifications, although a precise correspondence is not possi-
+5:126:7510:18:40:110:276:267:145:g_d0_f2:145:g_d0_f2:ble. Details are in the appendix.
+5:127:7543:40:30:110:201:227:301:g_d0_f1:301:g_d0_f1:3  Results
+5:128:7553:30:19:110:499:197:145:g_d0_f2:145:g_d0_f2:Table 1 displays regressions of happiness on the logarithm of family income
+5:129:7628:19:18:110:499:178:145:g_d0_f2:145:g_d0_f2:for the sample of men from the GSS. Each column shows results for a different
+5:130:7705:18:19:110:499:160:145:g_d0_f2:145:g_d0_f2:set of included controls. The specifications in each column are estimated by
+5:131:7781:19:18:110:499:141:145:g_d0_f2:145:g_d0_f2:OLS, 2SLS and using Ackerberg and Devereux’s (2009) Improved Jackknifed
+5:132:7852:18:34:110:499:123:145:g_d0_f2:145:g_d0_f2:IV estimator (IJIVE). In thefirst four columns we reestimate the baseline
+5:133:7925:34:0:302:308:89:145:g_d0_f2:145:g_d0_f2:3
+6:134:7926:0:19:110:499:654:145:g_d0_f2:145:g_d0_f2:specifications from Pischke (2011) in the sample without missing values for
+6:135:8001:19:18:110:499:635:145:g_d0_f2:145:g_d0_f2:mother’s education. In columns (5) to (8) we repeat these regressions includ-
+6:136:8078:18:19:110:355:617:145:g_d0_f2:145:g_d0_f2:ing mother’s education as an additional control.
+6:137:8126:19:18:128:499:598:145:g_d0_f2:145:g_d0_f2:The OLS specifications in thefirst row indicate a positive and significant
+6:138:8200:18:18:110:499:580:145:g_d0_f2:145:g_d0_f2:association of family income with happiness that is robust to the inclusion
+6:139:8275:18:19:110:498:562:145:g_d0_f2:145:g_d0_f2:of a broad set of control variables. Using industry affiliation as instrument
+6:140:8352:19:18:110:499:543:145:g_d0_f2:145:g_d0_f2:for family income results in somewhat higher and less precisely estimated
+6:141:8425:18:19:110:499:525:145:g_d0_f2:145:g_d0_f2:coefficients. The coefficients in thefirst four columns are very similar to the
+6:142:8504:19:18:110:472:506:145:g_d0_f2:145:g_d0_f2:estimates in Pischke (2011) although the IV results are slightly higher.
+6:143:8576:18:18:128:499:488:145:g_d0_f2:145:g_d0_f2:In columns (5) to (8) we repeat the baseline regressions including the
+6:144:8646:18:19:110:498:470:145:g_d0_f2:145:g_d0_f2:years of education of the respondent’s mother as additional control vari-
+6:145:8719:19:18:110:499:451:145:g_d0_f2:145:g_d0_f2:able. Maternal education is an important component of a respondent’s family
+6:146:8794:18:19:110:498:433:145:g_d0_f2:145:g_d0_f2:background. If there is strong selection into industries due to unobservables
+6:147:8871:19:18:110:499:414:145:g_d0_f2:145:g_d0_f2:related to a respondent’s family background then the inclusion of mother’s
+6:148:8945:18:19:110:498:396:145:g_d0_f2:145:g_d0_f2:education should substantially change our IV estimates. This is not the case:
+6:149:9022:19:18:110:499:377:145:g_d0_f2:145:g_d0_f2:coefficient estimates are virtually identical to those in the earlier columns.
+6:150:9100:18:18:110:499:359:145:g_d0_f2:145:g_d0_f2:These results might suggest that omitted variable bias due to unobserved
+6:151:9172:18:19:110:498:341:145:g_d0_f2:145:g_d0_f2:heterogeneity in family background is not particularly important. In other
+6:152:9246:19:18:110:499:322:145:g_d0_f2:145:g_d0_f2:words, selection into industries based on family background does not seem
+6:153:9319:18:19:110:211:304:145:g_d0_f2:145:g_d0_f2:to be a major issue.
+6:154:9339:19:18:128:503:285:145:g_d0_f2:145:g_d0_f2:Butthisisnottheendofthestory.InTable2welookatthispotential
+6:155:9397:18:19:110:499:267:145:g_d0_f2:145:g_d0_f2:selection issue from a different angle. Instead of including mother’s education
+6:156:9476:19:18:110:498:248:145:g_d0_f2:145:g_d0_f2:as a control we use this proxy for family background as dependent variable.
+6:157:9551:18:18:110:498:230:145:g_d0_f2:145:g_d0_f2:Thefirst four columns display the baseline results from the previous table.
+6:158:9626:18:19:110:498:212:145:g_d0_f2:145:g_d0_f2:In columns (5) to (8) we repeat these regressions using as dependent variable
+6:159:9703:19:18:110:499:193:145:g_d0_f2:145:g_d0_f2:mother’s education instead of the respondent’s happiness. In columns (5) and
+6:160:9779:18:19:110:499:175:145:g_d0_f2:145:g_d0_f2:(6) the pattern of results is remarkably similar to those for happiness. There
+6:161:9857:19:18:110:499:156:145:g_d0_f2:145:g_d0_f2:is a strong correlation between income and mother’s education. IV estimates
+6:162:9932:18:18:110:498:138:145:g_d0_f2:145:g_d0_f2:are larger than OLS estimates.  It is difficult to think of these results as
+6:163:10008:18:30:110:499:120:145:g_d0_f2:145:g_d0_f2:causal effects: income differences due to industry affiliation should not affect
+6:164:10088:30:0:302:308:90:145:g_d0_f2:145:g_d0_f2:4
+7:165:10089:0:19:110:498:654:145:g_d0_f2:145:g_d0_f2:predetermined parental education. So the obvious conclusion to draw is that
+7:166:10164:19:18:110:499:635:145:g_d0_f2:145:g_d0_f2:these estimates reflect selection bias. Estimates are lower in columns (7) and
+7:167:10242:18:19:110:499:617:145:g_d0_f2:145:g_d0_f2:(8) where we include occupation dummies as controls.  But standard errors
+7:168:10315:19:18:110:499:598:145:g_d0_f2:145:g_d0_f2:are large so that this is probably just due to sampling variation as we don’t
+7:169:10392:18:18:110:401:580:145:g_d0_f4:145:g_d0_f2:find a similar pattern in the NHIS data described below.
+7:170:10448:18:19:128:499:562:145:g_d0_f2:145:g_d0_f2:In Table 3 we turn to results for married women. Pischke (2011) uses
+7:171:10516:19:18:110:499:543:145:g_d0_f2:145:g_d0_f2:this group as a specification check.  If the correlations between industry
+7:172:10590:18:19:110:499:525:145:g_d0_f2:145:g_d0_f2:income differentials and happiness are due to selection we should see less of
+7:173:10667:19:18:110:499:506:145:g_d0_f2:145:g_d0_f2:an association between husbands industry affiliation and wife’s happiness. In
+7:174:10744:18:18:110:498:488:145:g_d0_f2:145:g_d0_f2:particular, for working wives we can control for the woman’s own industry,
+7:175:10818:18:19:110:499:470:145:g_d0_f2:145:g_d0_f2:which should be a reasonable guard against selection effects. In the sample we
+7:176:10896:19:18:110:499:451:145:g_d0_f2:145:g_d0_f2:analyze here the IV estimates for income in the regressions using happiness
+7:177:10971:18:19:110:503:433:145:g_d0_f2:145:g_d0_f2:forworkingwivesarealotlowerthanthoseformen. Thisisnotthecase
+7:178:11031:19:18:110:498:414:145:g_d0_f2:145:g_d0_f2:in the original sample used in Pischke (2011) where the results for working
+7:179:11106:18:19:110:499:396:145:g_d0_f2:145:g_d0_f2:wives differed little from those for the husbands. In any case, there is no
+7:180:11181:19:18:110:499:377:145:g_d0_f2:145:g_d0_f2:evidence in either sample that controlling for wives’ own industry affiliation
+7:181:11259:18:18:110:489:359:145:g_d0_f2:145:g_d0_f2:(which should take care of any selection) lowers the coefficient on income.
+7:182:11334:18:19:128:499:341:145:g_d0_f2:145:g_d0_f2:Turning to the results using mother’s education as dependent variable
+7:183:11403:19:18:110:499:322:145:g_d0_f2:145:g_d0_f2:wefind much more consistent results across specifications. The IV results
+7:184:11476:18:19:110:499:304:145:g_d0_f2:145:g_d0_f2:are generally large and well above the OLS results. Controlling for wives’
+7:185:11550:19:18:110:498:285:145:g_d0_f2:145:g_d0_f2:own industry does nothing to the results. Pischke (2011) took this type of
+7:186:11624:18:19:110:498:267:145:g_d0_f2:145:g_d0_f2:evidence as support for the causal interpretation of the results on happiness.
+7:187:11702:19:18:110:498:248:145:g_d0_f2:145:g_d0_f2:Our results for mother’s education cast doubt on the usefulness of the wives
+7:188:11778:18:18:110:499:230:145:g_d0_f2:145:g_d0_f2:sample as a specification check since a causal interpretation does not make
+7:189:11853:18:19:110:280:212:145:g_d0_f2:145:g_d0_f2:sense for this dependent variable.
+7:190:11887:19:18:128:499:193:145:g_d0_f2:145:g_d0_f2:Using the same sample, in Table 4 we turn to the type of instrument set
+7:191:11958:18:19:110:499:175:145:g_d0_f2:145:g_d0_f2:used in Luttmer (2005) combining both industry affiliation and occupation.
+7:192:12032:19:18:110:499:156:145:g_d0_f2:145:g_d0_f2:Wefind that mother’s education is even more strongly related to occupation
+7:193:12106:18:18:110:499:138:145:g_d0_f2:145:g_d0_f2:than industry wage differentials. This suggests that neither variable is useful
+7:194:12185:18:30:110:373:120:145:g_d0_f2:145:g_d0_f2:in order to generate exogenous variation in income.
+7:195:12236:30:0:302:308:90:145:g_d0_f2:145:g_d0_f2:5
+8:196:12237:0:19:128:499:654:145:g_d0_f2:145:g_d0_f2:In Table 5 we explore other employer characteristics as instruments, in-
+8:197:12309:19:18:110:498:635:145:g_d0_f2:145:g_d0_f2:cluding union status used in Shea (2001).  Our inference here is hindered
+8:198:12382:18:19:110:499:617:145:g_d0_f2:145:g_d0_f2:by the fact that the IV results for mother’s education are very imprecisely
+8:199:12457:19:18:110:499:598:145:g_d0_f2:145:g_d0_f2:estimated. The point estimates using union status andfirm size are negative
+8:200:12532:18:18:110:499:580:145:g_d0_f2:145:g_d0_f2:and numerically large but not statistically significant. As a result, we can say
+8:201:12612:18:19:110:498:562:145:g_d0_f2:145:g_d0_f2:relatively little about these employer attributes from the small GSS samples.
+8:202:12689:19:18:128:498:543:145:g_d0_f2:145:g_d0_f2:In order to corroborate ourfindings further we turn to data from the
+8:203:12757:18:19:110:499:525:145:g_d0_f2:145:g_d0_f2:NHIS to look at health as an outcome. While health is an important outcome
+8:204:12831:19:18:110:499:506:145:g_d0_f2:145:g_d0_f2:in its own right another advantage of the NHIS is the much larger sample
+8:205:12903:18:18:110:499:488:145:g_d0_f2:145:g_d0_f2:sizes compared to the GSS. Unfortunately, the NHIS offers less employment
+8:206:12976:18:19:110:499:470:145:g_d0_f2:145:g_d0_f2:related information. So we return to industry affiliation as the instrument
+8:207:13051:19:18:110:499:451:145:g_d0_f2:145:g_d0_f2:here. We check the health results using height as an alternative outcome
+8:208:13123:18:19:110:499:433:145:g_d0_f2:145:g_d0_f2:which should not be affected by industry affiliation. Body height is largely
+8:209:13199:19:18:110:268:414:145:g_d0_f4:145:g_d0_f2:fixed by age 20 (Hamill, 1977).
+8:210:13230:18:19:128:499:396:145:g_d0_f2:145:g_d0_f2:Columns (1) to (3) of Table 6 reveal IV coefficients slightly below the
+8:211:13301:19:18:110:498:377:145:g_d0_f2:145:g_d0_f2:OLS results. Taken at face value, these results suggest that a sizeable por-
+8:212:13377:18:18:110:499:359:145:g_d0_f2:145:g_d0_f2:tion of the association between health and income is due to a causal effect
+8:213:13452:18:19:110:498:341:145:g_d0_f2:145:g_d0_f2:running from income to health with something of an upward bias to the OLS
+8:214:13525:19:18:110:498:322:145:g_d0_f2:145:g_d0_f2:results. However, as with ourfindings for mother’s education, the results
+8:215:13598:18:19:110:498:304:145:g_d0_f2:145:g_d0_f2:for height shed doubt on this interpretation. The association between in-
+8:216:13671:19:18:110:498:285:145:g_d0_f2:145:g_d0_f2:come and height becomes stronger in the IV estimates cautioning against
+8:217:13742:18:19:110:499:267:145:g_d0_f2:145:g_d0_f2:interpreting these results causally.   The results in this larger sample are
+8:218:13818:19:18:110:499:248:145:g_d0_f2:145:g_d0_f2:more precisely estimated that those from the GSS, and they are very stable
+8:219:13892:18:18:110:338:230:145:g_d0_f2:145:g_d0_f2:independently of what controls are included.
+8:220:13936:18:19:128:499:212:145:g_d0_f2:145:g_d0_f2:In Table 6 we use a sample of men aged 20 — 64, similar to the sample
+8:221:14005:19:18:110:499:193:145:g_d0_f2:145:g_d0_f2:from the GSS used for tables 1 and 2. One caveat with this age group is that
+8:222:14081:18:19:110:499:175:145:g_d0_f2:145:g_d0_f2:older men tend to shrink slightly, and this may be related to income. To
+8:223:14153:19:18:110:499:156:145:g_d0_f2:145:g_d0_f2:guard against this we also present results for men aged 20 — 29 in Table 7, an
+8:224:14231:18:18:110:499:138:145:g_d0_f2:145:g_d0_f2:age group for whom this should not be a concern. The large sample sizes in
+8:225:14305:18:30:110:499:120:145:g_d0_f2:145:g_d0_f2:the NHIS easily facilitate such cuts of the data. The results are qualitatively
+8:226:14384:30:0:302:308:90:145:g_d0_f2:145:g_d0_f2:6
+9:227:14385:0:19:110:499:654:145:g_d0_f2:145:g_d0_f2:very similar to those in Table 6, so differential shrinkage does not seem to be
+9:228:14464:19:40:110:231:635:145:g_d0_f2:145:g_d0_f2:afactorinourfindings.
+9:229:14485:40:30:110:258:595:301:g_d0_f1:301:g_d0_f1:4  Interpretation
+9:230:14502:30:18:110:499:565:145:g_d0_f2:145:g_d0_f2:Our results mirror earlierfindings by Blackburn and Neumark (1992) regard-
+9:231:14576:18:19:110:499:547:145:g_d0_f2:145:g_d0_f2:ing the association of industry wage differentials and ability measures. These
+9:232:14654:19:18:110:499:528:145:g_d0_f2:145:g_d0_f2:authors found that ability measures like IQ type test scores are strongly cor-
+9:233:14732:18:19:110:499:510:145:g_d0_f2:145:g_d0_f2:related with industry wage differentials. On the other hand, controlling for
+9:234:14808:19:18:110:499:491:145:g_d0_f2:145:g_d0_f2:the test scores hardly alters estimated industry effects in a wage regression.
+9:235:14886:18:18:110:499:473:145:g_d0_f2:145:g_d0_f2:Wefind the same pattern of results for mother’s education and height. How
+9:236:14959:18:19:110:498:455:145:g_d0_f2:145:g_d0_f2:do these results make sense, and what do they tell us about various empir-
+9:237:15033:19:18:110:499:436:145:g_d0_f2:145:g_d0_f2:ical strategies to uncover causal effects in the type of applications we have
+9:238:15110:18:19:110:463:418:145:g_d0_f2:145:g_d0_f2:discussed, which use income as a (potentially endogenous) regressor?
+9:239:15178:19:18:128:499:399:145:g_d0_f2:145:g_d0_f2:We discuss these issues in the following statistical framework.  Consider
+9:240:15251:18:19:110:228:381:145:g_d0_f2:145:g_d0_f2:the regression equation
+9:241:15274:19:24:256:499:362:145:g_d0_f5:145:g_d0_f2:=++(1)
+9:242:15290:24:19:110:499:338:145:g_d0_f2:145:g_d0_f2:whereis an outcome like health, happiness, or children’s income,is own
+9:243:15364:19:18:110:499:319:145:g_d0_f2:145:g_d0_f2:income,is a confounder, andis a regression residual, orthogonal toand
+9:244:15439:18:19:110:499:301:145:g_d0_f5:145:g_d0_f2:. Conditional on the confounderthe regression coefficientis the causal
+9:245:15514:19:18:110:499:282:145:g_d0_f2:145:g_d0_f2:effectofincomeon.may correspond to difficult to observe attributes
+9:246:15584:18:19:110:499:264:145:g_d0_f2:145:g_d0_f2:like ability, personal traits, etc. We will also assume that conditional on the
+9:247:15663:19:18:110:499:245:145:g_d0_f2:145:g_d0_f2:confounderindustry affiliation is random. Hence, we can interpret our IV
+9:248:15737:18:18:110:499:227:145:g_d0_f2:145:g_d0_f2:results as replacing incomein (1) by its prediction using industry wage
+9:249:15810:18:19:110:145:209:145:g_d0_f2:145:g_d0_f2:effects.
+9:250:15818:19:30:128:448:190:145:g_d0_f2:145:g_d0_f2:Income is related to the confounder by the regression equation
+9:251:15880:30:31:271:499:160:145:g_d0_f5:145:g_d0_f2:=+(2)
+9:252:15893:31:40:110:499:129:145:g_d0_f2:145:g_d0_f2:The confounderis not directly observed.  Instead, we observe a proxy
+9:253:15963:40:0:302:308:89:145:g_d0_f2:145:g_d0_f2:7
+10:254:15964:0:28:110:364:654:145:g_d0_f2:145:g_d0_f2:correlated withcharacterized by the regression
+10:255:16012:28:28:267:499:626:145:g_d0_f5:145:g_d0_f2:=+(3)
+10:256:16024:28:18:110:504:598:145:g_d0_f2:145:g_d0_f7:wheremight be mother’s education or own height. We assume()=
+10:257:16094:18:19:110:360:580:145:g_d0_f7:145:g_d0_f2:0,i.e.onlylinks income with the measure.
+10:258:16138:19:18:128:499:561:145:g_d0_f2:145:g_d0_f2:Here,wegivesomeintuitionforourresults within this framework.  We
+10:259:16202:18:18:110:498:543:145:g_d0_f2:145:g_d0_f2:derive the relevant implications formally in the appendix.  Our regression
+10:260:16276:18:19:110:498:525:145:g_d0_f2:145:g_d0_f2:results indicate that income matters for mother’s education (or height) both
+10:261:16352:19:18:110:499:506:145:g_d0_f2:145:g_d0_f5:in the OLS and IV regressions (Table 2, cols. (5) to (8)). This implies both
+10:262:16429:18:19:110:499:488:145:g_d0_f2:145:g_d0_f2:andhave to be positive, sinceis the only link between these two variables.
+10:263:16506:19:18:128:499:469:145:g_d0_f2:65:g_d0_f6:Our nextfinding is that the estimated effect of income on the outcome
+10:264:16577:18:19:110:499:451:145:g_d0_f2:145:g_d0_f2:is basically the same whether we control forin the regression or not (Table
+10:265:16654:19:18:110:503:432:145:g_d0_f2:145:g_d0_f2:1,cols(1)to(4)versus(5)to(8)). Oneexplanationfortheresultsisthat
+10:266:16718:18:18:110:499:414:145:g_d0_f2:145:g_d0_f2:the noise in the measureis large (i.e.2À0).  This noise is a classical
+10:267:16792:18:19:110:499:396:145:g_d0_f2:145:g_d0_f2:measurement error and does not matter whenis on the left hand side, so
+10:268:16864:19:18:110:499:377:145:g_d0_f2:145:g_d0_f2:the measureis still useful to glean information on whether there is any bias
+10:269:16942:18:19:110:499:359:145:g_d0_f2:145:g_d0_f2:in the OLS or IV regressions (from theonregression).  But the noise
+10:270:17013:19:18:110:499:340:145:g_d0_f2:145:g_d0_f2:leads to attenuation when usingon the right hand side of the regression, so
+10:271:17090:18:18:110:499:322:145:g_d0_f2:145:g_d0_f2:it becomes essentially useless as a control in this case.  This seems to make
+10:272:17167:18:19:110:498:304:145:g_d0_f2:145:g_d0_f2:sense for measures like mother’s education and particularly height, which
+10:273:17240:19:18:110:499:285:145:g_d0_f2:145:g_d0_f2:clearly must be very crude variables to get at the true underlying confounder
+10:274:17317:18:19:110:499:267:145:g_d0_f5:145:g_d0_f2:.   Variables like ability test scores should be better proxies forin
+10:275:17391:19:18:110:499:248:145:g_d0_f2:145:g_d0_f2:the sense thatis larger and/or2smaller.  However, the Blackburn and
+10:276:17461:18:19:110:499:230:145:g_d0_f2:145:g_d0_f2:Neumark (1992) results indicate that even ability test scores exhibit pretty
+10:277:17537:19:18:110:499:211:145:g_d0_f2:145:g_d0_f2:much the same features. As a result the available variables of this type seem
+10:278:17614:18:18:110:498:193:145:g_d0_f2:145:g_d0_f2:to offer little mileage as controls in regression studies. Our insights here are
+10:279:17694:18:19:110:499:175:145:g_d0_f2:145:g_d0_f2:not new; they are very much reminiscent of Griliches (1977) in his discussion
+10:280:17771:19:18:110:305:156:145:g_d0_f2:145:g_d0_f2:of estimating the returns to schooling.
+10:281:17810:18:19:128:499:138:145:g_d0_f2:145:g_d0_f2:In order to interpret the IV results in this context think of replacing
+10:282:17881:19:30:110:499:119:145:g_d0_f2:145:g_d0_f2:income with the part of income predicted by industry wage effects. For this
+10:283:17956:30:0:302:308:89:145:g_d0_f2:145:g_d0_f2:8
+11:284:17957:0:19:110:499:654:145:g_d0_f2:145:g_d0_f2:predictedincome,therelativesizeofand2may be different compared
+11:285:18022:19:18:110:498:635:145:g_d0_f2:145:g_d0_f2:to raw income (which is relevant for the OLS results).  The IV results for
+11:286:18096:18:19:110:498:617:145:g_d0_f2:145:g_d0_f2:happiness are above the OLS estimates, and this is true for the regression
+11:287:18170:19:18:110:498:598:145:g_d0_f2:145:g_d0_f2:of mothers education as well. Within this particular framework this has to
+11:288:18244:18:18:110:499:580:145:g_d0_f2:145:g_d0_f2:imply thatbecomes more important relative to2for predicted income.
+11:289:18313:18:19:110:498:562:145:g_d0_f2:145:g_d0_f2:This implies that both the OLS and IV results are biased upwards but the
+11:290:18385:19:18:110:275:543:145:g_d0_f2:145:g_d0_f2:IV results are biased even more.
+11:291:18417:18:19:128:499:525:145:g_d0_f2:145:g_d0_f2:Let us make this slightly more precise.  In terms of our framework in
+11:292:18486:19:18:110:499:506:145:g_d0_f2:145:g_d0_f2:eqs. (1) and (2) the variableis a valid instrument for income.  In other
+11:293:18560:18:19:110:499:488:145:g_d0_f2:145:g_d0_f2:words, the variation in income due to a valid instrument needs to satisfy the
+11:294:18637:19:18:110:499:469:145:g_d0_f2:145:g_d0_f2:condition=0. This motivates using the IV regression ofonas a
+11:295:18702:18:18:110:499:451:145:g_d0_f2:145:g_d0_f2:specification check. In practice, few instruments might satisfy the condition
+11:296:18779:18:19:110:499:433:145:g_d0_f5:145:g_d0_f2:=0literally. Moreover, most instruments use little of the variation in the
+11:297:18854:19:18:110:499:414:145:g_d0_f2:145:g_d0_f2:endogenous regressor.  As a result, bothand2will be lower in the IV
+11:298:18924:18:19:110:498:396:145:g_d0_f2:145:g_d0_f2:case.  We show in the appendix that IV is less biased than OLS whenever
+11:299:18995:19:0:110:122:377:145:g_d0_f5:145:g_d0_f5:
+11:300:18997:0:10:124:130:387:145:g_d0_f10:145:g_d0_f10:¡
+11:301:18998:10:0:129:165:377:145:g_d0_f5:65:g_d0_f6:2+2
+11:302:19004:0:10:166:172:387:145:g_d0_f10:145:g_d0_f10:¢
+11:303:19005:10:18:176:499:377:145:g_d0_f2:145:g_d0_f2:is smaller for the income predicted by the instrument than for
+11:304:19067:18:18:110:498:359:145:g_d0_f2:145:g_d0_f2:raw income.may be very small for predicted income but this is of little
+11:305:19139:18:19:110:499:341:145:g_d0_f2:145:g_d0_f2:comfort with relatively weak instruments, an insight which goes back to
+11:306:19210:19:18:110:499:322:145:g_d0_f2:145:g_d0_f2:Bound, Jaeger and Baker (1995). Theseauthors show that the relative bias
+11:307:19282:18:19:110:499:304:145:g_d0_f2:145:g_d0_f2:of IV is related to the size of the partial2or-statistic on the excluded
+11:308:19356:19:18:110:499:285:145:g_d0_f2:145:g_d0_f2:instruments in thefirst stage. These metrics are not just important to assess
+11:309:19433:18:19:110:498:267:145:g_d0_f2:145:g_d0_f2:small sample bias in two stage least squares regressions but also asymptotic
+11:310:19509:19:40:110:499:248:145:g_d0_f2:145:g_d0_f2:bias due to small violations of the exclusion restrictions in the form of6=0.
+11:311:19587:40:30:110:251:208:301:g_d0_f1:301:g_d0_f1:5Conclusion
+11:312:19598:30:18:110:499:178:145:g_d0_f2:145:g_d0_f2:In this note we have assessed the usefulness of industry wage differentials as
+11:313:19676:18:19:110:499:160:145:g_d0_f2:145:g_d0_f2:instruments in regression models for happiness or health with income as an
+11:314:19750:19:18:110:499:141:145:g_d0_f2:145:g_d0_f2:endogenous regressor. Our conclusion is broadly negative: we do not believe
+11:315:19825:18:34:110:499:123:145:g_d0_f2:145:g_d0_f2:that industry wage differentials offer a useful source of variation in income
+11:316:19902:34:0:302:308:89:145:g_d0_f2:145:g_d0_f2:9
+12:317:19903:0:19:110:499:654:145:g_d0_f2:145:g_d0_f2:to establish causal effects.  This is based on OLS and IV regressions using
+12:318:19978:19:18:110:499:635:145:g_d0_f4:145:g_d0_f2:fixed personal characteristics as left hand side variables in the respective
+12:319:20054:18:19:110:499:617:145:g_d0_f2:145:g_d0_f2:regressions, which show large effects.   One obvious, though hardly novel
+12:320:20127:19:18:110:498:598:145:g_d0_f2:145:g_d0_f2:conclusion from our work is that a healthy degree of doubt about the use of
+12:321:20202:18:18:110:498:580:145:g_d0_f2:145:g_d0_f2:instrumental variables is often warranted, even when the IV regressions pass
+12:322:20278:18:19:110:499:562:145:g_d0_f2:145:g_d0_f2:some purported specification tests.  Usingfixed personal characteristics as
+12:323:20353:19:18:110:499:543:145:g_d0_f2:145:g_d0_f2:dependent variable offers a useful specification check.  We argue that this is
+12:324:20431:18:19:110:498:525:145:g_d0_f2:145:g_d0_f2:the case even for variables which might be poorly measured and are of little
+12:325:20507:19:18:110:499:506:145:g_d0_f2:145:g_d0_f2:value as control variables.  Such variables should be available in many data
+12:326:20583:18:40:110:132:488:145:g_d0_f2:145:g_d0_f2:sets.
+12:327:20588:40:30:110:200:448:301:g_d0_f1:301:g_d0_f1:References
+12:328:20598:30:19:116:499:418:145:g_d0_f2:145:g_d0_f2:[1] Ackerberg, Daniel A., and Paul J. Devereux (2009) “Improved JIVE
+12:329:20666:19:18:134:499:399:145:g_d0_f2:145:g_d0_f2:Estimators for Overidentified Linear Models with and without Het-
+12:330:20731:18:19:134:504:381:145:g_d0_f2:145:g_d0_f2:eroskedasticity,”Review of Economics and Statistics,91,No.2(May),
+12:331:20796:19:28:134:176:362:145:g_d0_f2:145:g_d0_f2:351-362.
+12:332:20804:28:18:116:499:334:145:g_d0_f2:145:g_d0_f2:[2] Blackburn, McKinley, and David Neumark (1992) “Unobserved Abil-
+12:333:20871:18:19:134:499:316:145:g_d0_f2:145:g_d0_f11:ity, Efficiency Wages, and Interindustry Wage Differentials,”Quarterly
+12:334:20941:19:28:134:427:297:145:g_d0_f11:145:g_d0_f2:Journal of Economics, Vol. 107, No. 4 (Nov.), 1421-1436.
+12:335:20997:28:19:116:499:269:145:g_d0_f2:145:g_d0_f2:[3] Blanchflower, David G. and Andrew J. Oswald (2004) “Well-being over
+12:336:21068:19:18:134:502:250:145:g_d0_f2:145:g_d0_f2:time in Britain and the USA,”Journal of Public Economics,Volume88,
+12:337:21134:18:28:134:281:232:145:g_d0_f2:145:g_d0_f2:Issues 7—8, July , 1359—1386.
+12:338:21163:28:19:116:499:204:145:g_d0_f2:145:g_d0_f2:[4] Bound, John, David A. Jaeger, and Regina M. Baker (1995) “Problems
+12:339:21233:19:18:134:498:185:145:g_d0_f2:145:g_d0_f2:with Instrumental Variables Estimation When the Correlation Between
+12:340:21300:18:19:134:498:167:145:g_d0_f2:145:g_d0_f2:the Instruments and the Endogeneous Explanatory Variable is Weak,”
+12:341:21366:19:18:134:503:148:145:g_d0_f11:145:g_d0_f2:Journal of the American Statistical Association,Vol.90,No.430,June,
+12:342:21433:18:41:134:176:130:145:g_d0_f2:145:g_d0_f2:443-450.
+12:343:21441:41:0:299:311:89:145:g_d0_f2:145:g_d0_f2:10
+13:344:21443:0:19:116:499:654:145:g_d0_f2:145:g_d0_f2:[5] Cutler, David M., Adriana Lleras-Muney, and Tom Vogl (2011). “Socioe-
+13:345:21516:19:18:134:499:635:145:g_d0_f2:145:g_d0_f2:conomic Status and Health: Dimensions and Mechanisms”, in Sherry
+13:346:21580:18:19:134:499:617:145:g_d0_f2:145:g_d0_f2:Glied and Peter Smith (eds.)Oxford Handbook of  Health Economics,
+13:347:21645:19:28:134:303:598:145:g_d0_f2:145:g_d0_f2:Oxford: Oxford University Press.
+13:348:21677:28:18:116:499:570:145:g_d0_f2:145:g_d0_f2:[6] Gibbons, Robert and Lawrence F. Katz (1992) “Does Unmeasured Abil-
+13:349:21747:18:19:134:499:552:145:g_d0_f2:145:g_d0_f11:ity Explain Inter-Industry Wage Differentials?”Review  of  Economic
+13:350:21814:19:28:134:313:533:145:g_d0_f11:145:g_d0_f2:Studies,59,No.3(July),515-535.
+13:351:21844:28:19:116:499:505:145:g_d0_f2:145:g_d0_f2:[7] Griliches, Zvi (1977) “Estimating the Returns to Schooling - Some
+13:352:21913:19:28:134:449:486:145:g_d0_f2:145:g_d0_f2:Econometric Problems,”Econometrica, vol. 45, January, 1-22
+13:353:21971:28:18:116:499:458:145:g_d0_f2:145:g_d0_f2:[8] Hamill, Peter V. V. (1977) "NCHS growth curves for children," Vital
+13:354:22042:18:19:134:499:440:145:g_d0_f2:145:g_d0_f2:and health statistics: Series 11, Data from the National Health Survey;
+13:355:22113:19:28:134:457:421:145:g_d0_f2:145:g_d0_f2:no. 165, Hyattsville, Md: National Center for Health Statistics.
+13:356:22177:28:19:116:499:393:145:g_d0_f2:145:g_d0_f2:[9] Krueger, Alan B., and Lawrence H. Summers (1988) “Efficiency Wages
+13:357:22247:19:18:134:499:374:145:g_d0_f2:145:g_d0_f2:and the Inter-Industry Wage Structure,”Econometrica, Vol. 56, No. 2
+13:358:22314:18:28:134:225:356:145:g_d0_f2:145:g_d0_f2:(March), 259-293.
+13:359:22331:28:19:110:498:328:145:g_d0_f2:145:g_d0_f2:[10] Li, Hongbin, Pak Wai Liu, Maoliang Ye, and Junsen Zhang (2011) “Does
+13:360:22404:19:18:134:498:309:145:g_d0_f2:145:g_d0_f2:Money Buy Happiness? Evidence from Twins in Urban China,” Working
+13:361:22469:18:29:134:317:291:145:g_d0_f2:145:g_d0_f2:Paper, Tsinghua University (April).
+13:362:22504:29:18:110:498:262:145:g_d0_f2:145:g_d0_f2:[11] Luechinger, Simon (2009) “Valuing Air Quality Using the Life Satisfac-
+13:363:22579:18:28:134:480:244:145:g_d0_f2:145:g_d0_f2:tion Approach,”Economic Journal, 119, No. 536 (March), 482-515.
+13:364:22642:28:19:110:498:216:145:g_d0_f2:145:g_d0_f2:[12] Luttmer, Erzo F. P. (2005) “Neighbors as Negatives: Relative Earnings
+13:365:22716:19:18:134:502:197:145:g_d0_f2:145:g_d0_f2:and Well-Being,”Quarterly Journal of Economics,120,No.3(August),
+13:366:22780:18:29:134:182:179:145:g_d0_f2:145:g_d0_f2:963-1002.
+13:367:22789:29:18:110:499:150:145:g_d0_f2:145:g_d0_f2:[13] Pischke, Jörn-Steffen (2011) “Money and Happiness: Evidence from the
+13:368:22862:18:43:134:461:132:145:g_d0_f2:145:g_d0_f2:Industry Wage Structure,” NBER Working Paper 17056 (May).
+13:369:22919:43:0:299:311:89:145:g_d0_f2:145:g_d0_f2:11
+14:370:22921:0:19:110:498:654:145:g_d0_f2:145:g_d0_f2:[14] Segal, Carmit (forthcoming) “Working When No One is Watching: Mo-
+14:371:22991:19:28:134:483:635:145:g_d0_f2:145:g_d0_f2:tivation, Test Scores, and Economic Success,”Management Science.
+14:372:23055:28:18:110:499:607:145:g_d0_f2:145:g_d0_f11:[15] Shea, John (2000) “Does parents’ money matter?”Journal  of  Public
+14:373:23126:18:29:134:345:589:145:g_d0_f11:145:g_d0_f2:Economics, 77, No. 2, (August), 155-184.
+14:374:23166:29:18:110:499:560:145:g_d0_f2:145:g_d0_f2:[16] Solon, Gary (1999) “Intergenerational mobility in the labor market,”
+14:375:23239:18:19:134:499:542:145:g_d0_f2:145:g_d0_f11:chapter 29 in: Orley Ashenfelter and David Card (eds.)Handbook of
+14:376:23304:19:434:134:387:523:145:g_d0_f11:145:g_d0_f2:Labor Economics,vol.3A,Amsterdam:Elsevier.
+14:377:23346:434:0:299:311:89:145:g_d0_f2:145:g_d0_f2:12
+15:378:23348:0:30:110:222:654:301:g_d0_f1:301:g_d0_f1:6  Appendix
+15:379:23359:30:31:110:473:624:145:g_d0_f2:145:g_d0_f2:The variables,,,andare defined by the regression equations
+15:380:23425:31:21:251:361:593:145:g_d0_f5:65:g_d0_f6:=++
+15:381:23438:21:22:252:329:572:145:g_d0_f5:65:g_d0_f6:=+
+15:382:23447:22:30:248:339:550:145:g_d0_f5:145:g_d0_f5:=+
+15:383:23457:30:19:110:281:520:145:g_d0_f2:145:g_d0_f2:Normalizeso that()=1.
+15:384:23485:19:30:128:307:501:145:g_d0_f2:65:g_d0_f6:Consider the regression ofon
+15:385:23517:30:23:189:271:471:145:g_d0_f5:65:g_d0_f6:=+e
+15:386:23527:23:0:191:217:448:145:g_d0_f5:145:g_d0_f7:=
+15:387:23529:0:16:228:284:456:145:g_d0_f5:145:g_d0_f7:()
+15:388:23539:16:0:236:277:440:145:g_d0_f5:145:g_d0_f7:()
+15:389:23546:0:0:288:297:448:145:g_d0_f7:145:g_d0_f7:=
+15:390:23547:0:17:302:420:456:145:g_d0_f5:145:g_d0_f7:(++)
+15:391:23565:17:24:341:380:439:145:g_d0_f5:65:g_d0_f6:2+2
+15:392:23571:24:0:208:217:415:145:g_d0_f7:145:g_d0_f7:=
+15:393:23572:0:18:241:253:424:145:g_d0_f5:145:g_d0_f5:
+15:394:23574:18:24:228:266:406:145:g_d0_f5:65:g_d0_f6:2+2
+15:395:23580:24:31:110:405:382:145:g_d0_f2:145:g_d0_f2:so that the residual ofafterfiltering outis given by
+15:396:23636:31:0:222:327:351:145:g_d0_f10:145:g_d0_f12:e=−=−
+15:397:23650:0:17:344:356:359:145:g_d0_f5:145:g_d0_f5:
+15:398:23652:17:0:331:369:342:145:g_d0_f5:65:g_d0_f6:2+2
+15:399:23658:0:33:371:388:351:145:g_d0_f5:145:g_d0_f5:
+15:400:23661:33:33:110:200:318:145:g_d0_f2:145:g_d0_f2:The variances are
+15:401:23678:33:0:163:277:285:145:g_d0_f5:145:g_d0_f7:()=2+2=
+15:402:23693:0:9:281:290:302:145:g_d0_f10:145:g_d0_f10:μ
+15:403:23694:9:17:304:316:293:145:g_d0_f5:145:g_d0_f5:
+15:404:23696:17:0:291:329:276:145:g_d0_f5:65:g_d0_f6:2+2
+15:405:23702:0:7:331:343:302:145:g_d0_f10:65:g_d0_f8:¶2
+15:406:23704:7:10:346:352:295:145:g_d0_f10:145:g_d0_f10:¡
+15:407:23705:10:0:352:390:285:145:g_d0_f5:65:g_d0_f6:2+2
+15:408:23711:0:10:390:396:295:145:g_d0_f10:145:g_d0_f10:¢
+15:409:23712:10:34:398:446:285:145:g_d0_f7:145:g_d0_f7:+(e)
+15:410:23721:34:0:163:277:251:145:g_d0_f5:145:g_d0_f12:(e)=2+2−
+15:411:23737:0:17:289:310:259:145:g_d0_f5:65:g_d0_f8:22
+15:412:23741:17:26:281:319:242:145:g_d0_f5:65:g_d0_f6:2+2
+15:413:23747:26:0:209:218:216:145:g_d0_f7:145:g_d0_f7:=
+15:414:23748:0:9:230:236:234:145:g_d0_f10:145:g_d0_f10:¡
+15:415:23749:9:0:235:273:225:145:g_d0_f5:65:g_d0_f6:2+2
+15:416:23755:0:9:274:289:234:145:g_d0_f10:145:g_d0_f10:¢¡
+15:417:23757:9:0:286:322:225:145:g_d0_f5:65:g_d0_f6:2+2
+15:418:23763:0:9:323:329:234:145:g_d0_f10:145:g_d0_f10:¢
+15:419:23764:9:18:331:365:225:145:g_d0_f12:65:g_d0_f8:−22
+15:420:23769:18:26:278:316:207:145:g_d0_f5:65:g_d0_f6:2+2
+15:421:23775:26:0:209:218:181:145:g_d0_f7:145:g_d0_f7:=
+15:422:23776:0:0:230:280:190:145:g_d0_f5:65:g_d0_f6:22+2
+15:423:23785:0:9:282:288:199:145:g_d0_f10:145:g_d0_f10:¡
+15:424:23786:9:0:288:323:190:145:g_d0_f5:65:g_d0_f6:2+2
+15:425:23792:0:27:324:330:199:145:g_d0_f10:145:g_d0_f10:¢
+15:426:23793:27:83:260:299:172:145:g_d0_f5:65:g_d0_f6:2+2
+15:427:23799:83:0:299:311:89:145:g_d0_f2:145:g_d0_f2:13
+16:428:23801:0:37:110:395:654:145:g_d0_f2:145:g_d0_f2:Finally note that the regression coefficient ofoneis
+16:429:23857:37:0:187:221:617:145:g_d0_f5:145:g_d0_f7:=
+16:430:23862:0:16:232:285:625:145:g_d0_f5:145:g_d0_f7:(e)
+16:431:23873:16:0:240:277:609:145:g_d0_f5:145:g_d0_f7:(e)
+16:432:23881:0:0:289:298:617:145:g_d0_f7:145:g_d0_f7:=
+16:433:23882:0:0:303:319:629:145:g_d0_f5:145:g_d0_f5:
+16:434:23885:0:14:321:328:643:145:g_d0_f10:145:g_d0_f10:³
+16:435:23886:14:0:329:411:629:145:g_d0_f5:65:g_d0_f6:−2+2
+16:436:23902:0:34:411:418:643:145:g_d0_f10:145:g_d0_f10: ́
+16:437:23904:34:33:342:379:609:145:g_d0_f5:145:g_d0_f7:(e)
+16:438:23912:33:0:212:221:576:145:g_d0_f7:145:g_d0_f7:=
+16:439:23913:0:0:232:248:588:145:g_d0_f5:145:g_d0_f5:
+16:440:23916:0:13:251:258:601:145:g_d0_f10:145:g_d0_f10:³
+16:441:23917:13:7:258:355:588:145:g_d0_f5:36:g_d0_f14:+−2+2
+16:442:23934:7:0:351:355:581:36:g_d0_f15:36:g_d0_f15:
+16:443:23935:0:0:359:414:588:145:g_d0_f7:145:g_d0_f7:(+)
+16:444:23943:0:34:414:421:601:145:g_d0_f10:145:g_d0_f10: ́
+16:445:23945:34:30:309:345:567:145:g_d0_f5:145:g_d0_f7:(e)
+16:446:23953:30:0:212:221:537:145:g_d0_f7:145:g_d0_f7:=
+16:447:23954:0:0:232:265:549:145:g_d0_f5:65:g_d0_f6:−
+16:448:23957:0:12:265:273:556:36:g_d0_f14:65:g_d0_f6:2
+16:449:23959:12:15:254:279:544:65:g_d0_f6:36:g_d0_f15:2+2
+16:450:23965:15:0:238:275:529:145:g_d0_f5:145:g_d0_f7:(e)
+16:451:23973:0:0:285:294:537:145:g_d0_f7:145:g_d0_f7:=
+16:452:23974:0:0:304:309:546:145:g_d0_f5:145:g_d0_f5:
+16:453:23975:0:10:312:318:556:145:g_d0_f10:145:g_d0_f10:¡
+16:454:23976:10:0:318:356:546:145:g_d0_f5:65:g_d0_f6:2+2
+16:455:23982:0:10:356:362:556:145:g_d0_f10:145:g_d0_f10:¢
+16:456:23983:10:18:364:393:546:145:g_d0_f12:145:g_d0_f5:−2
+16:457:23987:18:0:299:349:528:145:g_d0_f5:65:g_d0_f6:22+2
+16:458:23996:0:10:351:357:538:145:g_d0_f10:145:g_d0_f10:¡
+16:459:23997:10:0:357:393:528:145:g_d0_f5:65:g_d0_f6:2+2
+16:460:24003:0:35:393:399:538:145:g_d0_f10:145:g_d0_f10:¢
+16:461:24004:35:0:212:221:503:145:g_d0_f7:145:g_d0_f7:=
+16:462:24005:0:17:273:291:511:145:g_d0_f5:65:g_d0_f6:2
+16:463:24009:17:0:232:282:494:145:g_d0_f5:65:g_d0_f6:22+2
+16:464:24018:0:9:285:291:503:145:g_d0_f10:145:g_d0_f10:¡
+16:465:24019:9:0:290:326:494:145:g_d0_f5:65:g_d0_f6:2+2
+16:466:24025:0:30:327:337:503:145:g_d0_f10:145:g_d0_f5:¢
+16:467:24027:30:26:128:321:473:145:g_d0_f2:145:g_d0_f2:Our primary interest is the regression
+16:468:24065:26:26:256:352:447:145:g_d0_f5:65:g_d0_f6:=++
+16:469:24078:26:27:110:165:421:145:g_d0_f2:145:g_d0_f2:and we get
+16:470:24088:27:0:191:215:394:145:g_d0_f5:145:g_d0_f7:=
+16:471:24090:0:17:226:279:402:145:g_d0_f5:145:g_d0_f7:(e)
+16:472:24101:17:0:234:271:385:145:g_d0_f5:145:g_d0_f7:(e)
+16:473:24109:0:0:283:292:394:145:g_d0_f7:145:g_d0_f7:=
+16:474:24110:0:17:297:410:402:145:g_d0_f5:145:g_d0_f7:(++e)
+16:475:24129:17:24:335:372:385:145:g_d0_f5:145:g_d0_f7:(e)
+16:476:24137:24:0:206:215:361:145:g_d0_f7:145:g_d0_f7:=
+16:477:24138:0:17:226:343:370:145:g_d0_f5:145:g_d0_f7:(e)+(e)
+16:478:24160:17:24:267:303:353:145:g_d0_f5:145:g_d0_f7:(e)
+16:479:24168:24:0:206:312:329:145:g_d0_f7:145:g_d0_f5:=+=+
+16:480:24180:0:17:355:372:337:145:g_d0_f5:65:g_d0_f6:2
+16:481:24184:17:0:314:364:320:145:g_d0_f5:65:g_d0_f6:22+2
+16:482:24193:0:9:366:372:329:145:g_d0_f10:145:g_d0_f10:¡
+16:483:24194:9:0:372:407:320:145:g_d0_f5:65:g_d0_f6:2+2
+16:484:24200:0:30:408:418:329:145:g_d0_f10:145:g_d0_f5:¢
+16:485:24202:30:26:110:172:299:145:g_d0_f2:145:g_d0_f2:and running
+16:486:24213:26:24:214:295:273:145:g_d0_f5:65:g_d0_f6:=∗+∗
+16:487:24224:24:0:215:340:249:145:g_d0_f5:145:g_d0_f5:∗=+=+
+16:488:24237:0:16:342:394:257:145:g_d0_f5:145:g_d0_f7:()
+16:489:24247:16:24:350:386:241:145:g_d0_f5:145:g_d0_f7:()
+16:490:24254:24:0:234:281:217:145:g_d0_f7:145:g_d0_f5:=+
+16:491:24258:0:17:283:368:225:145:g_d0_f5:145:g_d0_f7:(+)
+16:492:24272:17:23:307:342:208:145:g_d0_f5:65:g_d0_f6:2+2
+16:493:24278:23:0:234:281:185:145:g_d0_f7:145:g_d0_f5:=+
+16:494:24282:0:17:298:303:193:145:g_d0_f5:145:g_d0_f5:
+16:495:24283:17:20:283:319:176:145:g_d0_f5:65:g_d0_f6:2+2
+16:496:24289:20:18:110:499:156:145:g_d0_f2:65:g_d0_f6:This corresponds to the regression coefficient we get from regressingon
+16:497:24364:18:19:110:499:138:145:g_d0_f2:145:g_d0_f2:without controlling for, i.e. the regressions in Tables 1 and 2, cols. (1) to
+16:498:24443:19:30:110:128:119:145:g_d0_f2:145:g_d0_f2:(4).
+16:499:24447:30:0:299:311:89:145:g_d0_f2:145:g_d0_f2:14
+17:500:24449:0:19:128:498:654:145:g_d0_f2:145:g_d0_f2:Finally, consider the regression ofon, corresponding to the regres-
+17:501:24520:19:30:110:304:635:145:g_d0_f2:145:g_d0_f2:sions in columns (5) to (8) of Table 2:
+17:502:24559:30:24:225:310:605:145:g_d0_f5:65:g_d0_f6:=+
+17:503:24569:24:0:233:258:581:145:g_d0_f5:145:g_d0_f7:=
+17:504:24571:0:16:269:325:589:145:g_d0_f5:145:g_d0_f7:()
+17:505:24581:16:0:279:315:573:145:g_d0_f5:145:g_d0_f7:()
+17:506:24588:0:0:329:338:581:145:g_d0_f7:145:g_d0_f7:=
+17:507:24589:0:17:355:367:589:145:g_d0_f5:145:g_d0_f5:
+17:508:24591:17:0:343:379:572:145:g_d0_f5:65:g_d0_f6:2+2
+17:509:24597:0:33:381:384:581:145:g_d0_f5:145:g_d0_f5:
+17:510:24598:33:19:110:442:548:145:g_d0_f2:145:g_d0_f2:This demonstrates the claim that0implies0and0.
+17:511:24650:19:18:128:499:529:145:g_d0_f2:145:g_d0_f2:In the OLS results we basicallyfind=∗i.e. controlling forhardly
+17:512:24717:18:18:110:499:511:145:g_d0_f2:145:g_d0_f2:matters in the regression ofon(Table 1, cols (1) to (4) versus (5) to
+17:513:24790:18:33:110:283:493:145:g_d0_f2:145:g_d0_f2:(8)).  If we make2largeweget
+17:514:24820:33:8:244:260:460:145:g_d0_f7:145:g_d0_f7:lim
+17:515:24823:8:0:238:266:452:65:g_d0_f6:65:g_d0_f16:2→∞
+17:516:24828:0:0:267:294:460:145:g_d0_f5:145:g_d0_f7:=
+17:517:24833:0:17:315:320:468:145:g_d0_f5:145:g_d0_f5:
+17:518:24834:17:0:299:335:451:145:g_d0_f5:65:g_d0_f6:2+2
+17:519:24840:0:34:340:371:460:145:g_d0_f7:145:g_d0_f5:=
+17:520:24845:34:19:110:503:426:145:g_d0_f2:145:g_d0_f2:On the other hand,2does notfigure in the expression for,sopoormea-
+17:521:24914:19:318:110:373:407:145:g_d0_f2:145:g_d0_f2:surement does not affect the regression ofon.
+17:522:24963:318:0:299:311:89:145:g_d0_f2:145:g_d0_f2:15
+18:523:24965:0:702:306:309:749:107:Times:107:Times: 
+18:524:24965:702:12:300:314:47:127:Times:127:Times:16 
+18:525:24968:12:0:306:309:35:107:Times:107:Times: 
+18:526:24968:0:13:93:248:714:127:Times:127:Times:Coding of industries in the GSS 
+18:527:25000:13:13:265:268:701:127:Times:127:Times:   
+18:528:25000:13:12:265:268:688:127:Times:127:Times: 
+18:529:25000:12:12:122:341:676:107:Times:107:Times: Sector GSS 1972 – 1988 
+18:530:25023:12:0:265:347:664:107:Times:107:Times:1970 Census codes 
+18:531:25041:0:12:395:471:676:107:Times:107:Times:GSS 1989 – 2006 
+18:532:25057:12:12:395:477:664:107:Times:107:Times:1980 Census codes 
+18:533:25075:12:14:93:422:652:107:Times:107:Times:1 Agriculture, forestry, fishery 17-28 10-31 
+18:534:25120:14:13:93:532:638:107:Times:107:Times:2 Mining                                            47-57                                            40-50                                            
+18:535:25270:13:13:93:495:625:107:Times:107:Times:3 Construction                                   67-77                                   60                                   
+18:536:25396:13:14:93:432:612:107:Times:107:Times:4 Lumber, wood, furniture 107-118 230-242 
+18:537:25438:14:13:93:432:598:107:Times:107:Times:5 Stone, clay, glass 119-138 250-262 
+18:538:25475:13:13:93:548:585:107:Times:107:Times:6 Metal                                              139-169                                              270-301                                              
+18:539:25634:13:14:93:432:572:107:Times:107:Times:7 Machinery, exc. electrical 177-198, 258 310-332 
+18:540:25684:14:13:93:432:558:107:Times:107:Times:8 Electrical machinery 199-209 340-350 
+18:541:25723:13:14:93:432:545:107:Times:107:Times:9 Transportation equipment 219-238 351-370 
+18:542:25766:14:13:93:432:531:107:Times:107:Times:10 Professional equipment 239-259 371-382 
+18:543:25808:13:13:93:432:518:107:Times:107:Times:11 Food and tobacco 268-299 100-130 
+18:544:25844:13:14:93:472:505:107:Times:107:Times:12 Textile, apparel, leather 307-327, 388-397 132-152, 220-222 
+18:545:25907:14:13:93:549:491:107:Times:107:Times:13 Paper                                              328-337                                              160-162                                              
+18:546:26067:13:13:93:539:478:107:Times:107:Times:14 Printing                                           338-339                                           171-172                                           
+18:547:26221:13:14:93:529:465:107:Times:107:Times:15 Chemicals                                       347-369                                       180-192                                       
+18:548:26364:14:13:93:432:451:107:Times:107:Times:16 Petroleum and rubber 377-387 200-212 
+18:549:26404:13:13:93:432:438:107:Times:107:Times:17 Other manufacturing 259, 398 390-392 
+18:550:26444:13:14:93:512:425:107:Times:107:Times:18 Transportation                                407-429                                400-432                                
+18:551:26571:14:13:93:506:411:107:Times:107:Times:19 Communication                              447-449                              440-442                              
+18:552:26691:13:13:93:539:398:107:Times:107:Times:20 Utilities                                           467-479                                           460-472                                           
+18:553:26846:13:14:93:432:385:107:Times:107:Times:21 Wholesale trade 507-588 500-571 
+18:554:26881:14:13:93:432:371:107:Times:107:Times:22 Retail trade 607-698 580-691 
+18:555:26913:13:13:93:432:358:107:Times:107:Times:23 Finance, insurance, real estate 707-718 700-712 
+18:556:26964:13:14:93:432:345:107:Times:107:Times:24 Business services 727-748 721-742 
+18:557:27001:14:13:93:432:331:107:Times:107:Times:25 Repair services 749-759 750-760 
+18:558:27036:13:14:93:432:318:107:Times:107:Times:26 Personal services 769-798 761-791 
+18:559:27073:14:13:93:432:304:107:Times:107:Times:27 Recreation services 807-809 800-802 
+18:560:27112:13:13:93:545:291:107:Times:107:Times:28 Health                                             828-848                                             812-840                                             
+18:561:27270:13:14:93:413:278:107:Times:107:Times:29 Legal services 849 841 
+18:562:27296:14:13:93:530:264:107:Times:107:Times:30 Education                                       857-868                                       842-860                                       
+18:563:27439:13:13:93:453:251:107:Times:107:Times:31 Religious and welfare services 877-879 861-871, 880 
+18:564:27494:13:14:93:453:238:107:Times:107:Times:32 Other services 869, 887-897 872, 881-892 
+18:565:27538:14:0:93:432:224:107:Times:107:Times:33 Public administration 907-937 907-937 
+19:566:27579:0:702:306:309:749:107:Times:107:Times: 
+19:567:27579:702:12:300:314:47:127:Times:127:Times:17 
+19:568:27582:12:0:306:309:35:107:Times:107:Times: 
+19:569:27582:0:13:93:260:714:127:Times:127:Times: Coding of occupations in the GSS 
+19:570:27616:13:13:93:96:701:127:Times:127:Times: 
+19:571:27616:13:18:93:96:688:127:Times:127:Times: 
+19:572:27616:18:19:93:497:670:107:Times:107:Times:         Occupation         GSS 1972 – 1988 1970 Census codes GSS 1989 – 2006 1980 Census codes 
+19:573:27712:19:13:93:437:651:107:Times:107:Times:1 Administrative and managerial 1, 56, 201-246 3-37 
+19:574:27764:13:14:93:458:638:107:Times:107:Times:2       Engineers       2,       6-26       43-63       
+19:575:27820:14:13:93:442:624:107:Times:107:Times:3 Math and computer scientists 2-5, 34-36, 55 64-68 
+19:576:27872:13:13:93:458:611:107:Times:107:Times:4       Natural       scientists       42-54       69-83       
+19:577:27935:13:14:93:458:598:107:Times:107:Times:5       Health       professionals       61-73       84-89       
+19:578:28000:14:13:93:447:584:107:Times:107:Times:6 Health treatment occupations 74-76 95-106 
+19:579:28044:13:13:93:469:571:107:Times:107:Times:7       Post-secondary       teachers       102-140       113-154       
+19:580:28116:13:14:93:452:558:107:Times:107:Times:8 Teachers, exc. post-secondary 141-145 155-159 
+19:581:28164:14:13:93:452:544:107:Times:107:Times:9 Counsellors, librarians, archivists 32-33, 174 163-165 
+19:582:28221:13:14:93:452:531:107:Times:107:Times:10 Social scientists, urban planners 91-96 166-173 
+19:583:28272:14:13:93:452:517:107:Times:107:Times:11 Social and religious workers 86-90, 100, 101 174-177 
+19:584:28328:13:13:93:464:504:107:Times:107:Times:12     Lawyers     and     judges     30-31     178-179     
+19:585:28388:13:14:93:464:491:107:Times:107:Times:13     Writers,     artists,     athletes     175-194     183-199     
+19:586:28458:14:13:93:452:477:107:Times:107:Times:14 Technicians and support occupations 80-85, 150-173 203-235 
+19:587:28520:13:13:93:464:464:107:Times:107:Times:15     Sales     occupations     260-296     243-285     
+19:588:28577:13:14:93:452:451:107:Times:107:Times:16 Clerical and admin. support occupations 301-396 303-389 
+19:589:28636:14:13:93:452:437:107:Times:107:Times:17 Private household workers 980-986 403-407 
+19:590:28681:13:13:93:452:424:107:Times:107:Times:18 Protective services workers 960-976 413-427 
+19:591:28728:13:14:93:452:411:107:Times:107:Times:19 Service workers, exc. 17 and 18 901-954 433-469 
+19:592:28779:14:13:93:464:397:107:Times:107:Times:20     Farming     occupations     801-846     473-499     
+19:593:28838:13:14:93:452:384:107:Times:107:Times:21 Crafts and repair workers 401-586 503-699 
+19:594:28883:14:0:93:464:370:107:Times:107:Times:22     Operators     and     laborers     601-796     703-889     

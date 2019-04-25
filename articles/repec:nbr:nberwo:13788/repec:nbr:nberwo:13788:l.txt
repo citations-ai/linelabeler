@@ -1,0 +1,784 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:?:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:442:610:12:Times:12:Times:?:ON BEST-RESPONSE BIDDING IN GSP AUCTIONS
+1:2:65:28:14:306:340:582:12:Times:12:Times:?:Matthew Cary
+1:3:77:14:14:306:334:568:12:Times:12:Times:?:Aparna Das
+1:4:87:14:14:306:352:554:12:Times:12:Times:?:Benjamin Edelman
+1:5:103:14:14:306:340:540:12:Times:12:Times:?:Ioannis Giotis
+1:6:117:14:14:306:342:526:12:Times:12:Times:?:Kurtis Heimerl
+1:7:131:14:14:306:343:512:12:Times:12:Times:?:Anna R. Karlin
+1:8:145:14:14:306:342:498:12:Times:12:Times:?:Claire Mathieu
+1:9:159:14:28:306:348:484:12:Times:12:Times:?:Michael Schwarz
+1:10:174:28:14:306:359:456:12:Times:12:Times:?:Working Paper 13788
+1:11:193:14:42:306:393:442:12:Times:12:Times:?:http://www.nber.org/papers/w13788
+1:12:226:42:14:306:439:400:12:Times:12:Times:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:13:262:14:14:306:374:386:12:Times:12:Times:?:1050 Massachusetts Avenue
+1:14:287:14:14:306:362:372:12:Times:12:Times:?:Cambridge, MA 02138
+1:15:306:14:158:306:341:358:12:Times:12:Times:?:February 2008
+1:16:319:158:14:72:540:200:12:Times:12:Times:?:We thank Michael Ostrovsky, David Parkes, Al Roth, and Sergei Severinov. The views expressed
+1:17:411:14:14:72:540:186:12:Times:12:Times:?:herein are those of the author(s) and do not necessarily reflect the views of the National Bureau of
+1:18:511:14:28:72:171:172:12:Times:12:Times:?:Economic Research.
+1:19:529:28:14:72:540:144:12:Times:12:Times:?:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:20:625:14:14:72:540:130:12:Times:12:Times:?:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:21:720:14:28:72:169:116:12:Times:12:Times:?:NBER publications.
+1:22:738:28:14:72:540:88:12:Times:12:Times:?:© 2008 by Matthew Cary, Aparna Das, Benjamin Edelman, Ioannis Giotis, Kurtis Heimerl, Anna
+1:23:828:14:14:72:540:74:12:Times:12:Times:?:R. Karlin, Claire Mathieu, and Michael Schwarz. All rights reserved. Short sections of text, not to
+1:24:927:14:14:72:540:60:12:Times:12:Times:?:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:25:1028:14:0:72:224:46:12:Times:12:Times:?:© notice, is given to the source.
+2:26:1061:0:14:72:286:700:12:Times:12:Times:?:On Best-Response Bidding in GSP Auctions
+2:27:1101:14:14:72:512:686:12:Times:12:Times:?:Matthew Cary , Aparna Das, Benjamin Edelman , Ioannis Giotis , Kurtis Heimerl , Anna R.
+2:28:1188:14:14:72:297:672:12:Times:12:Times:?:Karlin , Claire Mathieu , and Michael Schwarz
+2:29:1233:14:14:72:234:658:12:Times:12:Times:?:NBER Working Paper No. 13788
+2:30:1261:14:14:72:142:644:12:Times:12:Times:?:February 2008
+2:31:1274:14:28:72:207:630:12:Times:12:Times:?:JEL No. C15,D44,L86,M37
+2:32:1297:28:28:273:338:602:12:Times:12:Times:?:ABSTRACT
+2:33:1305:28:14:72:540:574:12:Times:12:Times:?:How should players bid in keyword auctions such as those used by Google, Yahoo! and MSN? We
+2:34:1396:14:14:72:540:560:12:Times:12:Times:?:model ad auctions as a dynamic game of incomplete information, so we can study the convergence
+2:35:1490:14:14:72:540:546:12:Times:12:Times:?:and robustness properties of various strategies. In particular, we consider best-response bidding strategies
+2:36:1598:14:14:72:540:532:12:Times:12:Times:?:for a repeated auction on a single keyword, where in each round, each player chooses some optimal
+2:37:1695:14:14:72:540:518:12:Times:12:Times:?:bid for the next round, assuming that the other players merely repeat their previous bids. We focus
+2:38:1794:14:14:72:540:504:12:Times:12:Times:?:on a strategy we call Balanced Bidding (bb). If all players use the bb strategy, we show that bids converge
+2:39:1901:14:14:72:540:490:12:Times:12:Times:?:to a bid vector that obtains in a complete information static model proposed by Edelman, Ostrovsky
+2:40:1999:14:14:72:540:476:12:Times:12:Times:?:and Schwarz (2007). We prove that convergence occurs with probability 1, and we compute the expected
+2:41:2099:14:42:72:185:462:12:Times:12:Times:?:time until convergence.
+2:42:2122:42:14:72:144:420:12:Times:12:Times:?:Matthew Cary 
+2:43:2135:14:14:72:197:406:12:Times:12:Times:?:University of Washington
+2:44:2159:14:14:72:164:392:12:Times:12:Times:?:Seattle, WA 98195
+2:45:2176:14:28:72:192:378:12:Times:12:Times:?:cary@cs.washington.edu
+2:46:2198:28:14:72:129:350:12:Times:12:Times:?:Aparna Das
+2:47:2208:14:14:72:158:336:12:Times:12:Times:?:Brown University
+2:48:2224:14:14:72:220:322:12:Times:12:Times:?:Computer Science Department
+2:49:2251:14:14:72:119:308:12:Times:12:Times:?:Box 1910
+2:50:2259:14:14:72:177:294:12:Times:12:Times:?:Providence, RI 02912
+2:51:2279:14:28:72:179:280:12:Times:12:Times:?:aparna@cs.brown.edu
+2:52:2298:28:14:72:167:252:12:Times:12:Times:?:Benjamin Edelman 
+2:53:2315:14:14:72:193:238:12:Times:12:Times:?:Harvard Business School
+2:54:2338:14:14:72:161:224:12:Times:12:Times:?:Baker Library 445
+2:55:2355:14:14:72:139:210:12:Times:12:Times:?:Soldiers Field
+2:56:2369:14:14:72:217:196:12:Times:12:Times:?: Boston, Massachusetts 02163
+2:57:2397:14:28:72:204:182:12:Times:12:Times:?:bedelman@fas.harvard.edu
+2:58:2421:28:14:72:143:154:12:Times:12:Times:?:Ioannis Giotis 
+2:59:2436:14:14:72:197:140:12:Times:12:Times:?:University of Washington
+2:60:2460:14:14:72:233:126:12:Times:12:Times:?:Department of Computer Science
+2:61:2490:14:14:72:160:112:12:Times:12:Times:?:   and Engineering
+2:62:2508:14:14:72:164:98:12:Times:12:Times:?:Seattle, WA 98195
+2:63:2525:14:0:72:198:84:12:Times:12:Times:?:giotis@cs.washington.edu
+2:64:2549:0:14:306:381:420:12:Times:12:Times:?:Kurtis Heimerl 
+2:65:2564:14:14:306:431:406:12:Times:12:Times:?:University of Washington
+2:66:2588:14:14:306:467:392:12:Times:12:Times:?:Department of Computer Science
+2:67:2618:14:14:306:391:378:12:Times:12:Times:?:  and Engineering
+2:68:2635:14:14:306:398:364:12:Times:12:Times:?:Seattle, WA 98195
+2:69:2652:14:28:306:442:350:12:Times:12:Times:?:heimerl@cs.washington.edu
+2:70:2677:28:14:306:383:322:12:Times:12:Times:?:Anna R. Karlin 
+2:71:2692:14:14:306:431:308:12:Times:12:Times:?:University of Washington
+2:72:2716:14:14:306:467:294:12:Times:12:Times:?:Department of Computer Science
+2:73:2746:14:14:306:391:280:12:Times:12:Times:?:  and Engineering
+2:74:2763:14:14:306:365:266:12:Times:12:Times:?:Box 352350
+2:75:2773:14:14:306:398:252:12:Times:12:Times:?:Seattle, WA 98195
+2:76:2790:14:28:306:434:238:12:Times:12:Times:?:karlin@cs.washington.edu
+2:77:2814:28:14:306:381:210:12:Times:12:Times:?:Claire Mathieu 
+2:78:2829:14:14:306:392:196:12:Times:12:Times:?:Brown University
+2:79:2845:14:14:306:454:182:12:Times:12:Times:?:Computer Science Department
+2:80:2872:14:14:306:353:168:12:Times:12:Times:?:Box 1910
+2:81:2880:14:14:306:411:154:12:Times:12:Times:?:Providence, RI 02912
+2:82:2900:14:28:306:408:140:12:Times:12:Times:?:claire@cs.brown.edu
+2:83:2919:28:14:306:390:112:12:Times:12:Times:?:Michael Schwarz
+2:84:2934:14:14:306:385:98:12:Times:12:Times:?:Yahoo Research
+2:85:2948:14:14:306:424:84:12:Times:12:Times:?:1950 University Avenue
+2:86:2970:14:14:306:358:70:12:Times:12:Times:?:and NBER
+2:87:2978:14:0:306:437:56:12:Times:12:Times:?:mschwarz@yahoo-inc.com
+3:88:3000:0:29:151:458:615:17:g_d0_f1:17:g_d0_f1:A:On Best-Response Bidding in GSP Auctions
+3:89:3040:29:14:172:438:586:12:g_d0_f2:12:g_d0_f2:A:Matthew Cary1, Aparna Das2, Benjamin Edelman3,
+3:90:3086:14:14:175:435:572:12:g_d0_f2:12:g_d0_f2:?:Ioannis Giotis1, Kurtis Heimerl1, Anna R. Karlin1,
+3:91:3136:14:23:203:412:558:12:g_d0_f2:8:g_d0_f4:?:Claire Mathieu2, and Michael Schwarz4∗
+3:92:3174:23:46:261:348:535:12:g_d0_f2:12:g_d0_f2:?:January 25, 2008
+3:93:3190:46:16:285:326:489:9:g_d0_f5:9:g_d0_f5:?:Abstract
+3:94:3198:16:11:172:452:473:9:g_d0_f6:9:g_d0_f6:?:How should players bid in keyword auctions such as those used by
+3:95:3262:11:11:158:452:462:9:g_d0_f6:9:g_d0_f6:A:Google, Yahoo! and MSN? We model ad auctions as a dynamic game of
+3:96:3327:11:11:158:452:451:9:g_d0_f6:9:g_d0_f6:A:incomplete information, so we can study the convergence and robustness
+3:97:3397:11:10:158:452:440:9:g_d0_f6:9:g_d0_f6:A:properties of various strategies. In particular, we consider best-response
+3:98:3471:10:11:158:452:430:9:g_d0_f6:9:g_d0_f6:A:bidding strategies for a repeated auction on a single keyword, where in
+3:99:3542:11:11:158:452:419:9:g_d0_f6:9:g_d0_f6:A:each round, each player chooses some optimal bid for the next round,
+3:100:3610:11:11:158:452:408:9:g_d0_f6:9:g_d0_f6:A:assuming that the other players merely repeat their previous bids. We
+3:101:3679:11:11:158:452:397:9:g_d0_f6:9:g_d0_f6:A:focus on a strategy we callBalanced Bidding(bb). If all players use the
+3:102:3750:11:11:158:452:386:9:g_d0_f8:9:g_d0_f6:A:bbstrategy, we show that bids converge to a bid vector that obtains in
+3:103:3820:11:11:158:452:375:9:g_d0_f6:9:g_d0_f6:A:a complete information static model proposed by Edelman et al. [4]. We
+3:104:3890:11:11:158:452:364:9:g_d0_f6:9:g_d0_f6:A:prove that convergence occurs with probability 1, and we compute the
+3:105:3958:11:18:158:290:353:9:g_d0_f6:9:g_d0_f6:A:expected time until convergence.
+3:106:3990:18:12:148:417:335:10:g_d0_f9:10:g_d0_f9:A:Keywords:  Keyword auctions, bidding strategies, convergence
+3:107:4050:12:33:148:272:323:10:g_d0_f9:10:g_d0_f9:A:JEL classification:  C72, D44
+3:108:4079:33:22:133:246:290:14:g_d0_f10:14:g_d0_f10:C:1    Introduction
+3:109:4096:22:12:133:477:268:10:g_d0_f9:10:g_d0_f9:B:Pay-per-click search engine advertising is an appealing approach to matching
+3:110:4172:12:12:133:477:256:10:g_d0_f9:10:g_d0_f9:B:ads  to  users,  and  it  is  a  major  source  of  revenue  for  leading  search  engines
+3:111:4262:12:12:133:477:244:10:g_d0_f9:10:g_d0_f9:B:such as Google and Yahoo!.  Search engines typically show two sets of results
+3:112:4339:12:12:133:477:232:10:g_d0_f9:10:g_d0_f9:B:in response to a user’s search:  the links the search engine has deemed relevant
+3:113:4419:12:12:133:477:220:10:g_d0_f9:10:g_d0_f9:B:to  the  search  (“organic  results”),  along  with  paid  advertisements  known  as
+3:114:4503:12:12:133:477:208:10:g_d0_f11:10:g_d0_f9:B:sponsored links.  From the advertiser’s perspective, this approach offers a great
+3:115:4584:12:12:133:477:196:10:g_d0_f9:10:g_d0_f9:B:benefit:  each advertiser can precisely target its ads based on each user’s search
+3:116:4666:12:11:133:477:184:10:g_d0_f9:10:g_d0_f9:B:terms.  For example, if a travel agent “buys” the search term “Tahiti”, then a
+3:117:4744:11:15:133:477:173:10:g_d0_f9:10:g_d0_f9:B:user searching for the word “Tahiti” might be shown a link to that travel agent’s
+3:118:4825:15:15:144:430:158:6:g_d0_f12:8:g_d0_f3:A:∗We thank Michael Ostrovsky, David Parkes, Al Roth, and Sergei Severinov.
+3:119:4898:15:10:133:477:143:8:g_d0_f3:8:g_d0_f3:F:Author Affiliations:  1 - University of Washington, 2 - Brown University, 3 - Harvard Business
+3:120:4992:10:0:133:237:133:8:g_d0_f3:8:g_d0_f3:F:School, 4 - Yahoo!  Research
+4:121:5021:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:web site, featuring plane tickets to Tahiti.  The advertiser pays the search engine
+4:122:5104:12:12:133:290:645:10:g_d0_f9:10:g_d0_f9:B:for each click on the advertiser’s ad.
+4:123:5142:12:12:148:477:633:10:g_d0_f11:10:g_d0_f9:A:Keyword auctionsdetermine which ads get assigned to which keywords and
+4:124:5212:12:12:133:477:621:10:g_d0_f9:10:g_d0_f9:B:how much each advertiser pays.  Advertisers choose which keywords to target
+4:125:5287:12:12:133:477:609:10:g_d0_f9:10:g_d0_f9:B:and how much to bid.  For each keyword of interest,  an advertiser submits a
+4:126:5363:12:12:133:477:597:10:g_d0_f9:10:g_d0_f9:B:bid  stating  the  maximum  amount  the  advertiser  is  willing  to  pay  for  a  click.
+4:127:5452:12:12:133:477:585:10:g_d0_f9:10:g_d0_f9:B:When a user searches for that keyword,  an instantaneous auction determines
+4:128:5527:12:12:133:477:573:10:g_d0_f9:10:g_d0_f9:B:which advertisers (among those currently bidding on that keyword) will receive
+4:129:5605:12:12:133:425:561:10:g_d0_f9:10:g_d0_f9:B:advertising slots and how much each advertiser will pay for a click.
+4:130:5673:12:12:148:477:549:10:g_d0_f9:10:g_d0_f9:A:In principle, keyword engines could allocate ad slots using a multi-unit auc-
+4:131:5750:12:12:133:477:537:10:g_d0_f9:10:g_d0_f9:B:tion that causestruthfulbidding, i.e. the Vickrey-Clarke-Groves (“VCG”) mech-
+4:132:5827:12:12:133:477:525:10:g_d0_f9:10:g_d0_f9:B:anism [14, 2, 6].  Under VCG, it would be in the best interest of each participat-
+4:133:5909:12:12:133:477:513:10:g_d0_f9:10:g_d0_f9:B:ing advertiser to bid its true valuation.  But in practice, no search engine uses
+4:134:5990:12:12:133:477:501:10:g_d0_f9:10:g_d0_f9:B:the VCG mechanism.  Rather,  the most widely used keyword auction mecha-
+4:135:6062:12:12:133:476:489:10:g_d0_f9:10:g_d0_f9:B:nism is the non-truthfulGeneralized  Second  Price(“GSP”) auction described
+4:136:6137:12:12:133:187:477:10:g_d0_f9:10:g_d0_f9:B:in Section 2.
+4:137:6150:12:12:148:477:465:10:g_d0_f9:10:g_d0_f9:A:Because  the  GSP  mechanism  is  not  truthful,  participating  advertisers  are
+4:138:6231:12:11:133:477:453:10:g_d0_f9:10:g_d0_f9:B:forced to undertake the complicated task of choosing a bidding strategy.  As-
+4:139:6308:11:12:133:477:442:10:g_d0_f9:10:g_d0_f9:B:demir [1] and Edelman et al. [3] observe that standard sponsored search mech-
+4:140:6385:12:12:133:477:430:10:g_d0_f9:10:g_d0_f9:B:anisms can produce instability and bidding wars.  Bidding strategies are partic-
+4:141:6465:12:12:133:477:418:10:g_d0_f9:10:g_d0_f9:B:ularly complex because typical search pages have room for multiple sponsored
+4:142:6541:12:12:133:477:406:10:g_d0_f9:10:g_d0_f9:B:links.  The position of a given sponsored link affects the chance that the link will
+4:143:6625:12:12:133:477:394:10:g_d0_f9:10:g_d0_f9:B:be clicked, so the various advertising slots differ in their desirability to adver-
+4:144:6708:12:12:133:477:382:10:g_d0_f9:10:g_d0_f9:B:tisers.  Advertisers’ utilities are therefore a discontinuous function of their bids.
+4:145:6793:12:12:133:477:370:10:g_d0_f9:10:g_d0_f9:B:The  complex  bidding  environment  causes  many  advertisers  to  hire  campaign
+4:146:6874:12:12:133:454:358:10:g_d0_f9:10:g_d0_f9:B:optimization specialists to manage their bidding, often at significant cost.
+4:147:6950:12:12:148:477:346:10:g_d0_f9:10:g_d0_f9:A:Advertisers may submit updated bids whenever they like.  Although these
+4:148:7021:12:12:133:477:334:10:g_d0_f9:10:g_d0_f9:B:updates are often made using software robots [8], there are practical limits to
+4:149:7100:12:12:133:477:322:10:g_d0_f9:10:g_d0_f9:B:how frequently an advertiser can update his bid.  For example, there is a random
+4:150:7180:12:12:133:477:310:10:g_d0_f9:10:g_d0_f9:B:delay between an advertiser’s submission of an updated bid and the time that
+4:151:7256:12:12:133:477:298:10:g_d0_f9:10:g_d0_f9:B:the updated bid is accepted by the system for use in subsequent auctions for a
+4:152:7334:12:12:133:477:286:10:g_d0_f9:10:g_d0_f9:B:given keyword.  For modeling purposes, we assume that exactly one randomly
+4:153:7408:12:12:133:477:274:10:g_d0_f9:10:g_d0_f9:B:chosen advertiser gets to update his bid in each period, and that he knows the
+4:154:7486:12:28:133:399:262:10:g_d0_f9:10:g_d0_f9:B:current bids of all other advertisers when he updates his bid.
+4:155:7548:28:18:133:267:234:12:g_d0_f10:12:g_d0_f10:C:1.1    Our Contribution
+4:156:7571:18:12:133:477:216:10:g_d0_f9:10:g_d0_f9:B:In this paper, we explore a natural class of best-response bidding strategies an
+4:157:7651:12:12:133:477:204:10:g_d0_f9:10:g_d0_f9:B:advertiser (or his software robot) might use in a repeated keyword auction for
+4:158:7729:12:12:133:477:192:10:g_d0_f9:10:g_d0_f9:B:a given search term.  When an advertiser gets an opportunity to revise his bid,
+4:159:7808:12:12:133:477:180:10:g_d0_f9:10:g_d0_f9:B:a natural myopic strategy is to play a best response to the current bids of other
+4:160:7889:12:12:133:166:168:10:g_d0_f9:10:g_d0_f9:B:players.
+4:161:7897:12:12:148:477:156:10:g_d0_f9:10:g_d0_f9:A:The  myopic  best-response  strategy  masks  substantial  flexibility.   Suppose
+4:162:7977:12:12:133:477:144:10:g_d0_f9:10:g_d0_f9:B:that, given the last-period bids of the other bidders, some advertiserAprefers
+4:163:8055:12:12:133:477:132:10:g_d0_f9:10:g_d0_f9:B:advertisement slotsat pricepsbecausesoffers the advertiser higher profit than
+4:164:8132:12:0:133:477:120:10:g_d0_f9:10:g_d0_f9:B:other slots.  (Other slots would either provide fewer clicks or require a higher
+5:165:8213:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:payment  per  click.)   Suppose  further  that  the  price  of  the  (next-higher  click-
+5:166:8302:12:12:133:477:645:10:g_d0_f9:10:g_d0_f9:B:through rate) slots−1 isps−1. The GSP mechanism allows arangeof bid values
+5:167:8376:12:12:133:477:633:10:g_d0_f9:10:g_d0_f9:B:that will result in the same outcome fromA’s perspective.  (Namely,  any bid
+5:168:8452:12:12:133:477:621:10:g_d0_f9:10:g_d0_f9:B:betweenpsandps−1will still getAthe same slots.)  What specific bid should
+5:169:8525:12:12:133:477:609:10:g_d0_f13:10:g_d0_f9:B:Achoose?  We focus on a particular choice in this range,Balanced Bidding(bb).
+5:170:8602:12:12:133:477:597:10:g_d0_f9:10:g_d0_f9:B:Underbb, the advertiser chooses his next bidbso as to be indifferent between
+5:171:8678:12:12:133:477:585:10:g_d0_f9:10:g_d0_f9:B:successfully winning the targeted slotsat priceps, or winning the slightly more
+5:172:8757:12:12:133:477:573:10:g_d0_f9:10:g_d0_f9:B:desirable  slots−1  at  priceb.   The  dynamic  system  in  which  all  players  bid
+5:173:8841:12:12:133:477:561:10:g_d0_f9:10:g_d0_f9:B:according tobbhas a unique fixed point at a Nash equilibrium strategy profile
+5:174:8918:12:12:133:477:549:10:g_d0_f9:10:g_d0_f9:B:B* of the static game.  At this point, advertisers’ payments to the search engine
+5:175:8999:12:12:133:459:537:10:g_d0_f9:10:g_d0_f9:B:are identical to payments under the VCG mechanism.  (See Proposition 1.)
+5:176:9071:12:12:148:477:525:10:g_d0_f9:10:g_d0_f9:A:Our  main  result  is  that  if  a  randomly  chosen  player  updates  his  bid  each
+5:177:9156:12:12:133:477:513:10:g_d0_f9:10:g_d0_f9:B:round (according to thebbstrategy), thenbbbidding converges to the Nash
+5:178:9227:12:12:133:477:501:10:g_d0_f9:10:g_d0_f9:B:bid vector B* with probability 1. (See Theorem 2.) We also estimate the average
+5:179:9306:12:12:133:265:489:10:g_d0_f9:10:g_d0_f9:B:time required for convergence.
+5:180:9336:12:12:148:477:477:10:g_d0_f9:10:g_d0_f9:A:The Nash equilibria of the sponsored searchstaticgame have been under-
+5:181:9406:12:12:133:477:465:10:g_d0_f9:10:g_d0_f9:B:stood for some time  [4, 13, 9].  But it was not previously known whether there
+5:182:9485:12:11:133:477:453:10:g_d0_f9:10:g_d0_f9:B:existed a natural bidding strategy in adynamicgame that would lead to these
+5:183:9560:11:12:133:477:442:10:g_d0_f9:10:g_d0_f9:B:Nash  equilibria.   Our  results  show  how  players  in  a  dynamic  Bayesian  game
+5:184:9644:12:12:133:477:430:10:g_d0_f9:10:g_d0_f9:B:can use a best-response strategy to get to the equilibria of the static game of
+5:185:9723:12:12:133:229:418:10:g_d0_f9:10:g_d0_f9:B:complete information.
+5:186:9744:12:12:148:477:406:10:g_d0_f9:10:g_d0_f9:A:By estimating convergence time ofbbwe combine the economics literature’s
+5:187:9816:12:12:133:477:394:10:g_d0_f9:10:g_d0_f9:B:analysis of bidding strategies with the attention to convergence time more com-
+5:188:9895:12:28:133:244:382:10:g_d0_f9:10:g_d0_f9:B:mon in computer science.
+5:189:9919:28:19:133:317:354:12:g_d0_f10:12:g_d0_f10:C:1.2    Relation to the Literature
+5:190:9952:19:11:133:477:335:10:g_d0_f9:10:g_d0_f9:B:Sponsored  search  is  an  intrinsically  dynamic  game  where  bidders  can  change
+5:191:10036:11:12:133:477:324:10:g_d0_f9:10:g_d0_f9:B:their bids and learn about others’ values from the history of bid changes.  How-
+5:192:10116:12:12:133:477:312:10:g_d0_f9:10:g_d0_f9:B:ever,  the  literature  has  largely  modeled  this  game  as  a  static  game.   In  this
+5:193:10206:12:12:133:477:300:10:g_d0_f9:10:g_d0_f9:B:context, [4] and [13] independently arrived at the same equilibrium characteri-
+5:194:10285:12:12:133:477:288:10:g_d0_f9:10:g_d0_f9:B:zation of the ad auction.  According to their characterization, equilibrium bids
+5:195:10365:12:12:133:477:276:10:g_d0_f9:10:g_d0_f9:B:are  given  by  the  recursive  formula  in  Equation  (1).   Recent  papers  [4,  13,  9]
+5:196:10455:12:12:133:477:264:10:g_d0_f9:10:g_d0_f9:B:assume that a static model of complete information captures the essence of the
+5:197:10533:12:12:133:477:252:10:g_d0_f9:10:g_d0_f9:B:dynamic environment of ad auctions.  But [13] does not offer a mechanism by
+5:198:10608:12:12:133:477:240:10:g_d0_f9:10:g_d0_f9:B:which  the  dynamic  game  converges  to  the  proposed  equilibrium  of  the  static
+5:199:10693:12:12:133:477:228:10:g_d0_f9:10:g_d0_f9:B:game,  and [4] offers a generalized English auction that captures the dynamic
+5:200:10770:12:12:133:477:216:10:g_d0_f9:10:g_d0_f9:B:nature of the game with a highly stylized ascending clock design.  These papers
+5:201:10849:12:12:133:477:204:10:g_d0_f9:10:g_d0_f9:B:do not not explain how the equilibria of the complete information static game
+5:202:10926:12:12:133:433:192:10:g_d0_f9:10:g_d0_f9:B:might be reached in a truly dynamic incomplete information setting.
+5:203:10993:12:12:148:477:180:10:g_d0_f9:10:g_d0_f9:A:In general, characterizing equilibria of dynamic games of incomplete infor-
+5:204:11068:12:12:133:477:168:10:g_d0_f9:10:g_d0_f9:B:mation  is  difficult  or  intractable.   Dynamic  games  of  incomplete  information
+5:205:11153:12:12:133:477:156:10:g_d0_f9:10:g_d0_f9:B:are therefore routinely modeled as simple static games.  For instance,  studies
+5:206:11232:12:12:133:477:144:10:g_d0_f9:10:g_d0_f9:B:of price competition in airlines [10] and gasoline pricing [7] are often based on
+5:207:11313:12:12:133:477:132:10:g_d0_f9:10:g_d0_f9:B:static models even though these environments are clearly not static.  Little is
+5:208:11392:12:0:133:477:120:10:g_d0_f9:10:g_d0_f9:B:known about when the equilibria of static models are useful approximations of
+6:209:11470:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:the equilibria of a dynamic game of incomplete information.  This paper shows
+6:210:11547:12:12:133:477:645:10:g_d0_f9:10:g_d0_f9:B:that  in  the  case  of  ad  auctions,  there  is  a  myopic  best-response  strategy  for
+6:211:11637:12:12:133:477:633:10:g_d0_f9:10:g_d0_f9:B:players of the dynamic game that converges to an equilibrium B* of the static
+6:212:11714:12:12:133:162:621:10:g_d0_f9:10:g_d0_f9:B:model.
+6:213:11720:12:12:148:477:609:10:g_d0_f9:10:g_d0_f11:A:The  literature  most  closely  related  to  this  paper  is  that  onbest  response
+6:214:11804:12:12:133:477:597:10:g_d0_f11:10:g_d0_f9:B:dynamics.  Best response dynamics studies the type of strategies that we con-
+6:215:11881:12:12:133:477:585:10:g_d0_f9:10:g_d0_f9:B:sider, in which each agent plays a best response to what it encountered in the
+6:216:11959:12:12:133:477:573:10:g_d0_f9:10:g_d0_f9:B:previous round (or rounds).  It is well know that in wide classes of games, best
+6:217:12039:12:12:133:477:561:10:g_d0_f9:10:g_d0_f9:B:response  dynamics  converge  to  a  Nash  Equilibrium  of  a  one-shot  game.   For
+6:218:12123:12:12:133:477:549:10:g_d0_f9:10:g_d0_f9:B:example, [12] shows that in “potential games,” if agents play best responses to
+6:219:12202:12:12:133:477:537:10:g_d0_f9:10:g_d0_f9:B:actions observed in the previous round, then the process converges to a Nash
+6:220:12278:12:12:133:415:525:10:g_d0_f9:10:g_d0_f9:B:Equilibrium.  However, the GSP auction is not a potential game.
+6:221:12341:12:12:148:477:513:10:g_d0_f9:10:g_d0_f9:A:Our  work  builds  on  the  “weakly  acyclic”  notion  introduced  by  [15]  in  a
+6:222:12423:12:12:133:477:501:10:g_d0_f9:10:g_d0_f9:B:study of the evolution of conventions.  We show that GSP is “weakly acyclic”,
+6:223:12500:12:12:133:477:489:10:g_d0_f9:10:g_d0_f9:B:as  defined  by  [15],  i.e.,  that  for  any  starting  set  of  player  bids,  there  is  an
+6:224:12594:12:12:133:477:477:10:g_d0_f9:10:g_d0_f9:B:ordering of the players, such that letting those players in that order play a best
+6:225:12676:12:12:133:477:465:10:g_d0_f9:10:g_d0_f9:B:response leads to the desired Nash equilibrium.  This result is a key component
+6:226:12755:12:32:133:254:453:10:g_d0_f9:10:g_d0_f9:B:of our proof of convergence.
+6:227:12783:32:22:133:315:421:14:g_d0_f10:14:g_d0_f10:C:2    Model and Definitions
+6:228:12809:22:12:133:477:399:10:g_d0_f9:10:g_d0_f9:B:The following model captures the essential features of sponsored search auctions.
+6:229:12890:12:22:133:276:387:10:g_d0_f9:10:g_d0_f9:B:Akeyword auctionis defined by:
+6:230:12920:22:12:148:477:365:10:g_d0_f90R:10:g_d0_f9:A:A set ofkslots with click-through ratesθ1> ... > θk,  whereθiis the
+6:231:12988:12:20:158:428:353:10:g_d0_f9:10:g_d0_f9:A:probability that the user clicks on the advertisement in sloti.
+6:232:13051:20:12:148:477:333:10:g_d0_f90R:10:g_d0_f9:A:A set ofnplayers (advertisers) participating in the auction, each with a
+6:233:13124:12:20:158:356:321:10:g_d0_f9:10:g_d0_f9:A:private valuationvifor a click,v1> ... > vn.
+6:234:13168:20:12:148:477:301:10:g_d0_f90R:10:g_d0_f9:A:With  knowledge  of  the  mechanism  and  of  their  own  private  valuations,
+6:235:13247:12:19:158:475:289:10:g_d0_f9:10:g_d0_f9:A:each player submits a bid to the auction.  We denote playeri’s bid bybi.
+6:236:13319:19:22:148:229:270:10:g_d0_f90R:10:g_d0_f9:A:The mechanism:
+6:237:13334:22:12:169:477:248:10:g_d0_f18:10:g_d0_f9:A:–computes an allocationπof thekslots tokdifferent players:πsis
+6:238:13396:12:16:180:393:236:10:g_d0_f9:10:g_d0_f9:?:the identity of the player that is allocated slots.
+6:239:13447:16:22:169:477:220:10:g_d0_f18:10:g_d0_f9:A:–charges a pricepsto the playerπsfor each click on his advertisement.
+6:240:13516:22:12:148:477:198:10:g_d0_f90R:10:g_d0_f9:A:If  playeriis  allocated  slotsat  priceps,  playeri’s  expected  utility  is
+6:241:13594:12:22:158:214:186:10:g_d0_f13:10:g_d0_f9:A:θs(vi−ps).
+6:242:13604:22:12:148:477:164:10:g_d0_f9:10:g_d0_f9:A:Thegeneralized second priceauction is the most common mechanism in use,
+6:243:13675:12:21:133:298:152:10:g_d0_f9:10:g_d0_f9:B:including at both Google and Yahoo!.
+6:244:13711:21:12:133:477:131:10:g_d0_f18:10:g_d0_f11:F:Definition 1Thegeneralized second pricemechanism (GSP) for keyword auc-
+6:245:13782:12:0:133:366:119:10:g_d0_f11:10:g_d0_f11:C:tions uses the following allocation and payment rules:
+7:246:13837:0:20:148:395:657:10:g_d0_f118R:7:g_d0_f17:A:Players are allocated slots in decreasing order of bids.1
+7:247:13895:20:22:148:389:637:10:g_d0_f118R:10:g_d0_f11:A:For each slots, the paymentpsof playerπsisbπs+1.
+7:248:13944:22:22:148:445:615:10:g_d0_f11:10:g_d0_f11:A:Players who do not win a slot make no payment and gain no utility.
+7:249:14010:22:12:148:477:593:10:g_d0_f9:10:g_d0_f9:A:When modeled as static game of complete information, GSP has a contin-
+7:250:14080:12:12:133:477:581:10:g_d0_f9:10:g_d0_f9:B:uum of Nash equilibria that are well understood.  See [4, 13, 9].  One of these
+7:251:14159:12:12:133:477:569:10:g_d0_f9:10:g_d0_f9:B:equilibria results in player payments identical to those that would be made if
+7:252:14237:12:12:133:477:557:10:g_d0_f9:10:g_d0_f9:B:the mechanism being employed was VCG. This equilibrium is also attractive as
+7:253:14313:12:12:133:477:545:10:g_d0_f9:10:g_d0_f9:B:it is the cheapest envy-free equilibrium from the advertisers’ point of view.  In
+7:254:14394:12:34:133:346:533:10:g_d0_f9:10:g_d0_f9:B:that equilibrium, bids follow a recursive formula:
+7:255:14444:34:0:206:224:499:10:g_d0_f13:10:g_d0_f9:?:bi=
+7:256:14447:0:9:227:236:519:10:g_d0_f21:10:g_d0_f21:?:
+7:257:14448:9:18:227:236:510:10:g_d0_f21:10:g_d0_f21:?:
+7:258:14449:18:0:227:236:492:10:g_d0_f21:10:g_d0_f21:?:
+7:259:14450:0:13:242:377:512:10:g_d0_f13:10:g_d0_f9:?:> b2fori= 1,
+7:260:14462:13:13:242:396:499:10:g_d0_f13:10:g_d0_f9:?:vi−θiθi−1(vi−bi+1)for 2≤i≤k,
+7:261:14490:13:0:242:397:486:10:g_d0_f13:10:g_d0_f13:C:vifork < i≤n.
+7:262:14503:0:35:464:477:499:10:g_d0_f9:10:g_d0_f9:A:(1)
+7:263:14506:35:12:133:476:464:10:g_d0_f9:10:g_d0_f9:B:The highest-value bidder’s bid,b1, is unidentified because any bidb1> b2will
+7:264:14582:12:12:133:295:452:10:g_d0_f9:10:g_d0_f9:B:suffice to obtain the highest position.
+7:265:14621:12:12:148:477:440:10:g_d0_f9:10:g_d0_f9:A:We call this Nash equilibrium of GSP theVCG equilibriumof GSP, and we
+7:266:14690:12:11:133:433:428:10:g_d0_f9:7:g_d0_f17:B:refer to this vector of bids as the equilibrium of the static game B*.2
+7:267:14761:11:12:148:476:417:10:g_d0_f9:10:g_d0_f13:A:We consider arepeated keyword auctionwith a fixed set ofnplayers andk
+7:268:14830:12:12:133:477:405:10:g_d0_f9:10:g_d0_f9:B:slots.  The participants in the repeated auction have the opportunity to update
+7:269:14909:12:12:133:477:393:10:g_d0_f9:10:g_d0_f9:B:their  bids  between  successive  rounds.   How  should  players  bid?   Naturally,  a
+7:270:14995:12:12:133:477:381:10:g_d0_f9:10:g_d0_f9:B:player’s ultimate objective is to maximize his own expected utility over multiple
+7:271:15076:12:12:133:477:369:10:g_d0_f9:10:g_d0_f9:B:rounds of the auction.  However, it is difficult for one player to make predictions
+7:272:15159:12:12:133:477:357:10:g_d0_f9:10:g_d0_f9:B:about  the  future  bids  –  information  necessary  to  choose  an  optimal  bidding
+7:273:15244:12:12:133:477:345:10:g_d0_f9:10:g_d0_f9:B:strategy.  With limited information, a natural approach is to assume that the
+7:274:15321:12:12:133:477:333:10:g_d0_f9:10:g_d0_f9:B:immediate  past  is  the  best  predictor  of  the  future.   This  leads  to  a  bidding
+7:275:15410:12:12:133:477:321:10:g_d0_f9:10:g_d0_f9:B:scheme where a player assumes that others’ bids will remain fixed in the next
+7:276:15487:12:12:133:477:309:10:g_d0_f9:10:g_d0_f9:B:round.  Under this assumption, the rational choice for a playerjis to bid so as
+7:277:15566:12:12:133:477:297:10:g_d0_f9:10:g_d0_f9:B:to win a slotsthat maximizes his utilityuj=θs(vj−ps).  This approach offers
+7:278:15641:12:22:133:236:285:10:g_d0_f9:10:g_d0_f9:B:the following definition.
+7:279:15666:22:12:133:364:263:10:g_d0_f18:10:g_d0_f23:C:Definition 2Best-Response Bidding Strategies
+7:280:15710:12:12:148:477:251:10:g_d0_f11:10:g_d0_f11:A:Abest-response bidding strategyfor  a  playerjis  to  choose  a  bid  for  the
+7:281:15788:12:12:133:477:239:10:g_d0_f11:10:g_d0_f11:F:next round of a repeated keyword auction round so as to maximize his utilityuj,
+7:282:15867:12:12:133:477:227:10:g_d0_f11:10:g_d0_f11:F:assuming the next-round bids of all other playersb−jwill remain fixed at their
+7:283:15945:12:14:133:259:215:10:g_d0_f11:10:g_d0_f11:C:values in the previous round.
+7:284:15974:14:13:144:477:201:6:g_d0_f24:8:g_d0_f3:F:1At  modern  search  engines,  there  is  also  a  “relevance”  or  per-advertiser  click-through
+7:285:16071:13:9:133:477:188:8:g_d0_f3:8:g_d0_f3:F:rateriassociated with each advertiseri, and bidders are actually ranked (assigned slots) in
+7:286:16162:9:10:133:477:179:8:g_d0_f3:8:g_d0_f3:F:decreasing order of ranking score, where the ranking score of bidderiisbiri.  For notational
+7:287:16254:10:9:133:477:169:8:g_d0_f3:8:g_d0_f3:F:simplicity, we assumeri= 1 for alli.  [4] shows that our results extend to the case of arbitrary
+7:288:16350:9:7:133:168:160:8:g_d0_f25:8:g_d0_f3:F:rivalues.
+7:289:16359:7:12:144:477:153:6:g_d0_f24:8:g_d0_f3:F:2There are multiple Nash equilibria in the static game.  However,  [13] suggests that the
+7:290:16448:12:10:133:477:141:8:g_d0_f3:8:g_d0_f3:F:equilibrium given by this formula is the most plausible, and [4] proposes a model where this
+7:291:16540:10:0:133:254:131:8:g_d0_f3:8:g_d0_f3:F:equilibrium is a unique outcome.
+8:292:16573:0:12:148:477:657:10:g_d0_f9:10:g_d0_f9:A:Givenb−j, denote byps(j) the payment playerjwould make if he bids so
+8:293:16641:12:12:133:476:645:10:g_d0_f9:10:g_d0_f9:B:as to win slots.  Lets∗be the slot the best-response bidderjwill target.  Then
+8:294:16719:12:12:133:477:633:10:g_d0_f9:10:g_d0_f9:B:if playerjis a best-responder, he will bidb′∈(ps∗(j),ps∗−1(j)).  Notice that
+8:295:16795:12:12:133:477:621:10:g_d0_f13:10:g_d0_f9:B:b′is not fully specified:b′is a range rather than a single point.  Definition 2
+8:296:16874:12:12:133:476:609:10:g_d0_f9:7:g_d0_f16:B:therefore defines a class of strategies that are distinguished by the choice ofb′
+8:297:16955:12:12:133:243:597:10:g_d0_f9:10:g_d0_f9:B:within the allowed range.
+8:298:16980:12:12:148:477:585:10:g_d0_f9:10:g_d0_f9:A:What bid should playerjchoose within theb′range?  Supposejchooses a
+8:299:17047:12:12:133:477:573:10:g_d0_f9:10:g_d0_f9:B:bid towards the high end of the range, thus forcing a higher price for slots∗−1.
+8:300:17127:12:12:133:477:561:10:g_d0_f9:10:g_d0_f9:B:Then  the  player  above  may  retaliate  by  slightly  underbiddingj–  effectively
+8:301:17210:12:12:133:477:549:10:g_d0_f9:10:g_d0_f9:B:swapping places withj.  Ifjis better off after such a retaliation,jwill want
+8:302:17286:12:12:133:477:537:10:g_d0_f9:10:g_d0_f9:B:to force the higher player out,  and the bid cannot have been an equilibrium.
+8:303:17363:12:12:133:477:525:10:g_d0_f9:10:g_d0_f9:B:Thus, if bids converge to a rest point, an advertiser in a given position should
+8:304:17443:12:12:133:476:513:10:g_d0_f9:10:g_d0_f13:B:not want to exchange positions with the next-higher advertiser.  Conversely, ifj
+8:305:17523:12:12:133:477:501:10:g_d0_f9:10:g_d0_f9:B:chooses a bid towards the low end of the range, the player below may respond
+8:306:17599:12:12:133:477:489:10:g_d0_f9:10:g_d0_f9:B:by outbiddingj,  pushingjlower.  Balancing these two concerns leads to the
+8:307:17673:12:19:133:248:477:10:g_d0_f9:10:g_d0_f9:B:following bidding strategy.
+8:308:17700:19:12:133:285:458:10:g_d0_f18:10:g_d0_f23:C:Definition 3Balanced Bidding
+8:309:17728:12:12:148:477:446:10:g_d0_f11:10:g_d0_f11:A:TheBalancedbidding strategy (bb) is the strategy for a playerjthat, given
+8:310:17801:12:19:133:151:434:10:g_d0_f13:10:g_d0_f11:C:b−j,
+8:311:17805:19:19:148:393:415:10:g_d0_f118R:10:g_d0_f11:A:targets the slots∗jwhich maximizes his utility, that is,
+8:312:17862:19:22:252:384:396:10:g_d0_f13:10:g_d0_f13:C:s∗j= argmaxs{θs(vj−ps(j))}.
+8:313:17889:22:19:148:477:374:10:g_d0_f118R:10:g_d0_f11:A:chooses his bidb′for the next round so as to satisfy the following equation:
+8:314:17966:19:0:245:256:355:10:g_d0_f13:5:g_d0_f19:?:θs∗j
+8:315:17970:0:8:258:263:363:10:g_d0_f21:10:g_d0_f21:?:(
+8:316:17971:8:0:262:309:355:10:g_d0_f13:10:g_d0_f9:?:vj−ps∗j(j)
+8:317:17981:0:8:309:314:363:10:g_d0_f21:10:g_d0_f21:?:)
+8:318:17982:8:0:317:350:355:10:g_d0_f9:7:g_d0_f17:?:=θs∗j−1
+8:319:17989:0:8:350:355:363:10:g_d0_f21:10:g_d0_f21:?:(
+8:320:17990:8:0:355:382:355:10:g_d0_f13:7:g_d0_f16:?:vj−b′
+8:321:17995:0:8:383:388:363:10:g_d0_f21:10:g_d0_f21:?:)
+8:322:17996:8:24:388:391:355:10:g_d0_f13:10:g_d0_f13:C:.
+8:323:17997:24:12:148:477:331:10:g_d0_f11:10:g_d0_f11:A:Ifs∗jis the top slot, we (arbitrarily) chooseb′= (vj+p1(j))/2.  We can thus
+8:324:18072:12:19:133:348:319:10:g_d0_f11:10:g_d0_f11:C:deal with all slots uniformly by definingθ0= 2θ1.
+8:325:18121:19:12:148:477:300:10:g_d0_f9:10:g_d0_f9:A:The intuition behind thebbstrategy is that the player bids high enough to
+8:326:18194:12:12:133:477:288:10:g_d0_f9:10:g_d0_f9:B:force the prices paid by his competitors to rise.  But the player does not want
+8:327:18273:12:12:133:477:276:10:g_d0_f9:10:g_d0_f9:B:prices to rise so high that if one of his competitors were to just undercut him,
+8:328:18353:12:12:133:472:264:10:g_d0_f9:10:g_d0_f9:B:he would regret receiving a higher slot at a price just below his own bid ofb′.
+8:329:18432:12:12:148:477:252:10:g_d0_f9:10:g_d0_f9:A:The following Proposition summarizes the results derived in [4].  This Propo-
+8:330:18509:12:19:133:329:240:10:g_d0_f9:10:g_d0_f9:B:sition shows the interesting properties ofbb.
+8:331:18554:19:12:133:477:221:10:g_d0_f18:10:g_d0_f11:F:Proposition 1If all players follow thebbstrategy in an auction with all dis-
+8:332:18630:12:12:133:477:209:10:g_d0_f11:10:g_d0_f11:F:tinctθ’s, then the system has a unique fixed point.  At this fixed point, the rev-
+8:333:18712:12:12:133:477:197:10:g_d0_f11:10:g_d0_f11:F:enue of the auctioneer (and the payment of each player) is equal to that of the
+8:334:18791:12:12:133:477:185:10:g_d0_f11:10:g_d0_f11:F:VCG equilibrium.  The equilibrium bidsb∗jat the fixed point satisfy the following
+8:335:18872:12:23:133:176:173:10:g_d0_f11:10:g_d0_f11:C:equations:
+8:336:18882:23:0:205:224:150:10:g_d0_f13:10:g_d0_f9:?:b∗j=
+8:337:18886:0:9:227:236:170:10:g_d0_f21:10:g_d0_f21:?:
+8:338:18887:9:18:227:236:161:10:g_d0_f21:10:g_d0_f21:?:
+8:339:18888:18:0:227:236:143:10:g_d0_f21:10:g_d0_f21:?:
+8:340:18889:0:12:242:379:162:10:g_d0_f9:10:g_d0_f11:?:2b2forj= 1,
+8:341:18900:12:12:242:397:150:10:g_d0_f13:10:g_d0_f11:C:γjb∗j+1+ (1−γj)vjfor2≤j≤k,
+8:342:18926:12:0:242:398:138:10:g_d0_f13:10:g_d0_f11:C:vjfork < j≤n,
+8:343:18939:0:28:464:477:150:10:g_d0_f9:10:g_d0_f9:A:(2)
+8:344:18942:28:0:133:220:122:10:g_d0_f11:10:g_d0_f11:C:whereγj=θj/θj−1.
+9:345:18959:0:22:133:465:657:14:g_d0_f10:14:g_d0_f10:C:3    Convergence Properties of the BB Strategy
+9:346:19005:22:12:133:477:635:10:g_d0_f9:10:g_d0_f9:B:Our main result shows that when all players use thebbstrategy, their payoffs
+9:347:19081:12:12:133:477:623:10:g_d0_f9:10:g_d0_f9:B:converge to the payoffs they would receive in a dominant strategy equilibrium
+9:348:19158:12:12:133:238:611:10:g_d0_f9:10:g_d0_f9:B:of the VCG mechanism.
+9:349:19179:12:12:148:477:599:10:g_d0_f9:10:g_d0_f9:A:Consider the update model in which, in each round, exactly one randomly
+9:350:19250:12:12:133:477:587:10:g_d0_f9:10:g_d0_f9:B:chosen player updates his bid according to thebbstrategy.  We call this update
+9:351:19328:12:12:133:477:575:10:g_d0_f9:10:g_d0_f9:B:modelasynchronous  bidding.  Under asynchronous bidding,  we show that the
+9:352:19402:12:12:133:359:563:10:g_d0_f9:10:g_d0_f9:B:system converges to its fixed point.  See Section 3.2.
+9:353:19456:12:12:148:477:551:10:g_d0_f9:10:g_d0_f9:A:In order to prove convergence in the asynchronous case, we must first prove
+9:354:19531:12:12:133:477:539:10:g_d0_f9:10:g_d0_f9:B:convergence in the synchronous case.  This building block is established in the
+9:355:19610:12:28:133:208:527:10:g_d0_f9:10:g_d0_f9:B:following section.
+9:356:19628:28:14:133:441:499:12:g_d0_f10:12:g_d0_f10:C:3.1    The Restricted Balanced Bidding Strategy and
+9:357:19679:14:18:164:388:485:12:g_d0_f10:12:g_d0_f10:C:Convergence in the Synchronous Case
+9:358:19714:18:12:133:477:467:10:g_d0_f11:10:g_d0_f9:B:Synchronous biddingis the update model in which all players see all prior-period
+9:359:19794:12:12:133:477:455:10:g_d0_f9:10:g_d0_f9:B:bids,  and all bidders simultaneously submit new bids for the next round.  To
+9:360:19871:12:12:133:477:443:10:g_d0_f9:10:g_d0_f8:B:prove  convergence  in  this  synchronous  case,  we  examine  a  variant  of  thebb
+9:361:19955:12:12:133:477:431:10:g_d0_f9:10:g_d0_f9:B:strategy  that  limits  players’  selection  of  slots.   In  particular,  the  Restricted
+9:362:20045:12:22:133:341:419:10:g_d0_f9:10:g_d0_f9:B:Balanced Bidding strategy is defined as follows:
+9:363:20093:22:12:133:477:397:10:g_d0_f18:10:g_d0_f11:F:Definition 4TheRestricted Balanced Bidding(rbb)  bidding  strategy  is  the
+9:364:20168:12:22:133:295:385:10:g_d0_f11:7:g_d0_f14:C:strategy for a playerjthat, givenb−j
+9:365:20204:22:11:148:477:363:10:g_d0_f118R:10:g_d0_f11:A:targets  the  slots∗jwhich  maximizes  his  utility  among  the  slots  with  no
+9:366:20285:11:22:158:405:352:10:g_d0_f11:10:g_d0_f11:A:higher click-through rate than his current slotsj, that is,
+9:367:20344:22:26:233:403:330:10:g_d0_f13:10:g_d0_f13:C:s∗j= argmax{θs(vj−ps(j))  :s≥sj}.
+9:368:20377:26:22:148:477:304:10:g_d0_f118R:10:g_d0_f11:A:chooses his bidb′for the next round so as to satisfy the following equation:
+9:369:20454:22:0:245:256:282:10:g_d0_f13:5:g_d0_f19:?:θs∗j
+9:370:20458:0:8:258:263:290:10:g_d0_f21:10:g_d0_f21:?:(
+9:371:20459:8:0:262:309:282:10:g_d0_f13:10:g_d0_f9:?:vj−ps∗j(j)
+9:372:20469:0:8:309:314:290:10:g_d0_f21:10:g_d0_f21:?:)
+9:373:20470:8:0:317:350:282:10:g_d0_f9:7:g_d0_f17:?:=θs∗j−1
+9:374:20477:0:8:350:355:290:10:g_d0_f21:10:g_d0_f21:?:(
+9:375:20478:8:0:355:382:282:10:g_d0_f13:7:g_d0_f16:?:vj−b′
+9:376:20483:0:8:383:388:290:10:g_d0_f21:10:g_d0_f21:?:)
+9:377:20484:8:26:388:391:282:10:g_d0_f13:10:g_d0_f13:C:.
+9:378:20485:26:12:148:477:256:10:g_d0_f11:10:g_d0_f11:A:As  inbb,  we  defineθ0= 2θ1to  make  sure  the  strategy  is  well-defined  for
+9:379:20565:12:22:133:188:244:10:g_d0_f11:10:g_d0_f11:C:the first slot.
+9:380:20580:22:12:148:477:222:10:g_d0_f9:10:g_d0_f9:A:Important features of therbbstrategy are that (a) it has the same unique
+9:381:20652:12:12:133:477:210:10:g_d0_f9:10:g_d0_f9:B:fixed point asbb, and (b) it provides a bidding strategy that provably converges
+9:382:20732:12:12:133:432:198:10:g_d0_f9:10:g_d0_f9:B:in both the synchronous and asynchronous settings, as shown below.
+9:383:20798:12:12:148:477:186:10:g_d0_f9:10:g_d0_f9:A:Therbbrestriction is crucial to the guarantee of convergence in the syn-
+9:384:20870:12:12:133:477:174:10:g_d0_f9:10:g_d0_f9:B:chronous model.  In the Appendix, we show that with three or more slots and
+9:385:20945:12:12:133:456:162:10:g_d0_f9:10:g_d0_f9:B:with updates occurring synchronously, thebbstrategy need not converge.
+9:386:21015:12:0:148:477:150:10:g_d0_f9:10:g_d0_f9:A:Our mainrbbresult is a guarantee of convergence in the synchronous case.
+10:387:21088:0:12:133:477:657:10:g_d0_f18:10:g_d0_f11:F:Theorem 1In the synchronous model therbbstrategy always converges to its
+10:388:21160:12:24:133:414:645:10:g_d0_f11:10:g_d0_f11:C:fixed point.  The number of steps until convergence is bounded by
+10:389:21225:24:0:152:160:621:10:g_d0_f13:10:g_d0_f13:A:O
+10:390:21226:0:14:161:168:635:10:g_d0_f21:10:g_d0_f21:?:(
+10:391:21227:14:0:168:177:621:10:g_d0_f9:7:g_d0_f14:A:2k
+10:392:21229:0:7:180:187:635:10:g_d0_f21:10:g_d0_f21:?:(
+10:393:21230:7:14:188:237:628:10:g_d0_f9:10:g_d0_f9:?:log(1−γ∗)
+10:394:21239:14:0:200:224:614:10:g_d0_f9:7:g_d0_f16:?:logγ∗
+10:395:21244:0:0:240:286:621:10:g_d0_f9:7:g_d0_f17:?:+ log(1/γ∗)
+10:396:21255:0:14:328:337:628:10:g_d0_f13:7:g_d0_f17:?:v1
+10:397:21257:14:0:289:376:614:10:g_d0_f9:10:g_d0_f9:?:min1≤i≤k(vi−vi+1)
+10:398:21274:0:0:380:425:621:10:g_d0_f9:7:g_d0_f17:?:+ log(1/γ∗)
+10:399:21285:0:14:429:438:628:10:g_d0_f13:7:g_d0_f17:?:θ1
+10:400:21287:14:0:429:438:614:10:g_d0_f13:7:g_d0_f14:?:θk
+10:401:21289:0:14:440:455:635:10:g_d0_f21:10:g_d0_f21:?:))
+10:402:21291:14:26:456:459:621:10:g_d0_f13:10:g_d0_f13:C:,
+10:403:21292:26:28:133:463:595:10:g_d0_f11:10:g_d0_f11:C:whereγ∗= maxiθiθi−1.  Holding click-through ratesθifixed, this simplifies to
+10:404:21368:28:0:246:254:567:10:g_d0_f13:10:g_d0_f13:C:O
+10:405:21369:0:7:256:263:581:10:g_d0_f21:10:g_d0_f21:?:(
+10:406:21370:7:14:294:320:574:10:g_d0_f9:7:g_d0_f17:?:2k·v1
+10:407:21375:14:0:264:351:560:10:g_d0_f9:10:g_d0_f9:?:min1≤i≤k(vi−vi+1)
+10:408:21392:0:14:352:359:581:10:g_d0_f21:10:g_d0_f21:?:)
+10:409:21393:14:24:361:364:567:10:g_d0_f13:10:g_d0_f13:C:.
+10:410:21394:24:12:148:477:543:10:g_d0_f18:10:g_d0_f9:A:Proof.We first bound the number of steps until convergence of the price
+10:411:21465:12:12:133:477:531:10:g_d0_f9:10:g_d0_f9:B:of slotkand the set of players who will not be allocated slots.  As above, we
+10:412:21542:12:18:133:218:519:10:g_d0_f9:10:g_d0_f9:B:defineγi=θi/θi−1.
+10:413:21559:18:19:133:477:501:10:g_d0_f18:10:g_d0_f11:F:Lemma 1Playerpprefers to target slotjrather than slotj−1if and only if
+10:414:21629:19:18:250:360:482:10:g_d0_f9:10:g_d0_f13:?:(1−γj)vp+γjpj< pj−1.
+10:415:21649:18:12:148:477:464:10:g_d0_f18:10:g_d0_f9:A:Proof.From the definitions in the preceding sections, playerpprefers slot
+10:416:21722:12:18:133:265:452:10:g_d0_f13:10:g_d0_f9:B:jover slotj−1 if and only if:
+10:417:21751:18:15:249:377:434:10:g_d0_f13:10:g_d0_f9:?:θj(vp−pj)> θj−1(vp−pj−1)
+10:418:21775:15:15:248:388:419:10:g_d0_f13:7:g_d0_f17:?:θjvp−θjpj> θj−1vp−θj−1pj−1
+10:419:21801:15:15:225:328:404:10:g_d0_f13:7:g_d0_f17:?:vp−γjvp+γjpj< pj−1
+10:420:21819:15:37:222:328:389:10:g_d0_f9:7:g_d0_f17:?:(1−γj)vp+γjpj< pj−1
+10:421:21838:37:12:133:482:352:10:g_d0_f18:10:g_d0_f11:C:Lemma 2At every roundtsuch thatt > t1= 2+logγ∗((1−γ∗)(vk−vk+1)/vk+1),
+10:422:21907:12:18:133:294:340:10:g_d0_f11:10:g_d0_f11:C:whereγ∗= maxi>0θi/θi−1, we have:
+10:423:21939:18:12:252:341:322:10:g_d0_f13:10:g_d0_f13:C:bi> vk+1ifi≤k,
+10:424:21953:12:31:252:358:310:10:g_d0_f13:10:g_d0_f13:C:bi=viifi≥k+ 1.
+10:425:21967:31:12:148:477:279:10:g_d0_f18:10:g_d0_f9:A:Proof.Letbdenote the (k+ 1)st highest bid.  By definition,bcan never
+10:426:22035:12:12:133:477:267:10:g_d0_f9:10:g_d0_f9:B:be more thanvk+1.  Suppose for some round thatbis less thanvk+1.  Take any
+10:427:22109:12:12:133:477:255:10:g_d0_f9:10:g_d0_f9:B:playeriin{1,2,...,k+1}.  In the next round,iwill either bid his value or target
+10:428:22188:12:12:133:477:243:10:g_d0_f9:10:g_d0_f15:B:some slotj∈ {1,...k}and bidb′i= (1−γj)vi+γjpj≥(1−γ∗)vk+1+γ∗b≥
+10:429:22249:12:18:133:297:231:10:g_d0_f13:10:g_d0_f9:B:b+ (1−γ∗)(vk+1−b).  In either case,
+10:430:22284:18:18:246:364:213:10:g_d0_f9:10:g_d0_f13:?:(vk+1−b′i)≤γ∗(vk+1−b).
+10:431:22306:18:12:133:477:195:10:g_d0_f9:10:g_d0_f13:B:Initiallyvk+1−b≤vk+1.   How  many  rounds  does  it  take  beforevk+1−b <
+10:432:22379:12:12:133:477:183:10:g_d0_f9:10:g_d0_f9:B:(1−γ∗)(vk−vk+1)?  At mostr≤logγ∗((1−γ∗)(vk−vk+1)/vk+1).  In round
+10:433:22444:12:19:133:447:171:10:g_d0_f13:10:g_d0_f9:B:r+ 1, biddersi∈{1,...k}will each bid eithervi> vk+1or bid at least
+10:434:22510:19:15:195:373:152:10:g_d0_f13:10:g_d0_f13:C:b′i= (1−γj)vi+γjpj≥(1−γ∗)vk+γ∗b
+10:435:22541:15:15:205:416:137:10:g_d0_f15:10:g_d0_f9:?:≥b+ (1−γ∗)(vk−b)> b+ (1−γ∗)(vk−vk+1)
+10:436:22577:15:0:205:238:122:10:g_d0_f13:10:g_d0_f13:C:> vk+1.
+11:437:22585:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:In either case, their bids are abovevk+1.  In roundr+ 2, playerk+ 1 will then
+11:438:22662:12:12:133:477:645:10:g_d0_f9:10:g_d0_f9:B:bidvk+1while players 1,2,...,kcontinue to bid abovevk+1; the other players
+11:439:22736:12:18:133:436:633:10:g_d0_f9:10:g_d0_f9:B:don’t get a slot, so they bid their value, and this concludes the proof.
+11:440:22808:18:12:148:477:615:10:g_d0_f9:10:g_d0_f9:A:We now need to prove that the allocation of thekslots to the topkplayers
+11:441:22880:12:12:133:477:603:10:g_d0_f9:10:g_d0_f9:B:converges to a fixed point.  At any time, for anyi∈[1,k], consider the players
+11:442:22958:12:12:133:477:591:10:g_d0_f9:10:g_d0_f9:B:allocated slots [i+ 1,k].  They are calledstableif their bids and prices satisfy
+11:443:23038:12:12:133:477:579:10:g_d0_f9:10:g_d0_f9:B:Equation (2), that is, the allocation is in order of decreasing values, and ifπ(j)
+11:444:23120:12:20:133:477:567:10:g_d0_f9:10:g_d0_f9:B:is the player currently allocated slotj, then the last bids of those players satisfy
+11:445:23204:20:21:234:376:547:10:g_d0_f13:10:g_d0_f13:C:bπ(j)=γjbπ(j+1)+ (1−γj)vπ(j),
+11:446:23233:21:12:133:477:526:10:g_d0_f9:10:g_d0_f9:B:for everyj∈[i+ 1,k].  If the players allocated all slots [1,k] form a stable set,
+11:447:23314:12:12:133:384:514:10:g_d0_f9:10:g_d0_f9:B:then we have reached the fixed point of therbbstrategy.
+11:448:23369:12:12:148:477:502:10:g_d0_f9:10:g_d0_f9:A:Assume that the current setting is not (yet) a fixed point of therbbstrategy.
+11:449:23446:12:12:133:477:490:10:g_d0_f9:10:g_d0_f9:B:LetAbe the maximum stable set, with associatedi≥2, and letBbe the set of
+11:450:23518:12:12:133:477:478:10:g_d0_f9:10:g_d0_f9:B:players in slots [1,i].  Letbmindenote the minimum bid from players ofB.  We
+11:451:23594:12:12:133:476:466:10:g_d0_f9:7:g_d0_f16:B:define a partial order over sets of players.  We say thatA′-Aif eitherA⊂A′
+11:452:23668:12:12:133:477:454:10:g_d0_f9:10:g_d0_f13:B:andA6=A′, or if the player of minimum value in the symmetric difference ofA
+11:453:23743:12:12:133:477:442:10:g_d0_f9:10:g_d0_f9:B:andA′belongs toA′.3This will be our measure of progress.  In the next round,
+11:454:23819:12:12:133:477:430:10:g_d0_f9:10:g_d0_f9:B:observe that, following therbbstrategy, players inAstill bid in the same way
+11:455:23895:12:12:133:477:418:10:g_d0_f9:10:g_d0_f9:B:as before.  Letb′minbe the new minimum bid from players ofB, andpbe the
+11:456:23966:12:21:133:414:406:10:g_d0_f9:10:g_d0_f9:B:player ofBwhose bid isb′min.  There are three cases to consider.
+11:457:24030:21:12:145:477:385:10:g_d0_f9:10:g_d0_f9:A:1.pbids  belowpi.   Letj∈[i+ 1,k]  be  the  slot  which  was  targeted  by
+11:458:24104:12:12:158:477:373:10:g_d0_f13:10:g_d0_f9:A:p.   Becauseptargeted  slotj,pprefers  slotjto  slotj−1,  and  so,  by
+11:459:24174:12:12:158:477:361:10:g_d0_f9:10:g_d0_f9:A:Lemma 1, the bid ofpis less thanpj−1.  By the definition ofrbbthe bid
+11:460:24243:12:12:158:476:349:10:g_d0_f9:10:g_d0_f9:A:is (1−γj)vp+γjpj> pj, which falls in the interval (pj−1,pj), sopwill
+11:461:24311:12:15:158:272:337:10:g_d0_f9:10:g_d0_f9:A:indeed be allocated slotj.
+11:462:24337:15:12:158:477:322:10:g_d0_f9:10:g_d0_f9:A:Recall thatπ(j)∈Adenotes the player who was in slotjin the previous
+11:463:24404:12:12:158:477:310:10:g_d0_f9:10:g_d0_f9:A:round.Since   setAis   stable,    the   definition   ofrbbrequires
+11:464:24470:12:12:158:477:298:10:g_d0_f13:10:g_d0_f9:A:pj−1= (1−γj)vπ(j)+γjpj.  This is greater than the bid ofp, so it follows
+11:465:24542:12:12:158:477:286:10:g_d0_f9:10:g_d0_f9:A:thatvπ(j)> vp.  Moreover, sincepprefers slotjto slotj+ 1, again by
+11:466:24608:12:12:158:477:274:10:g_d0_f9:10:g_d0_f9:A:Lemma 1, we must have (1−γj+1)vp+γj+1pj+1> pj= (1−γj+1)vπ(j+1)+
+11:467:24671:12:12:158:477:262:10:g_d0_f13:10:g_d0_f9:A:γj+1pj+1, and sovp> vπ(j+1).  ThusA′={p′∈A:vp′< vp}∪{p}is a
+11:468:24730:12:20:158:259:250:10:g_d0_f9:10:g_d0_f9:A:stable set, andA′-A.
+11:469:24750:20:12:145:477:230:10:g_d0_f9:10:g_d0_f9:A:2.ptargeted sloti.  Thenpis allocated sloti,A′=A∪{p}is a stable set,
+11:470:24818:12:19:158:212:218:10:g_d0_f9:10:g_d0_f9:A:andA′-A.
+11:471:24826:19:12:145:477:199:10:g_d0_f9:7:g_d0_f17:A:3.ptargeted some slotj≤i−1.  ThenAis still a stable set, andbmin=pi−1
+11:472:24895:12:27:158:458:187:10:g_d0_f9:10:g_d0_f9:A:has increased:b′min= (1−γj)vp+γjpj≥bmin+ (1−γ∗)(vp−bmin).
+11:473:24952:27:12:148:477:160:10:g_d0_f9:10:g_d0_f9:A:We now define a new variablex.  We will prove that Case 3 can only happen
+11:474:25025:12:12:133:477:148:10:g_d0_f9:10:g_d0_f9:B:a bounded numberxof times (wherexdepends on theθj’s and thevj’s but not
+11:475:25096:12:14:133:323:136:10:g_d0_f9:10:g_d0_f9:B:on the bids) before Case 1 or 2 must occur.
+11:476:25139:14:0:144:381:122:6:g_d0_f24:8:g_d0_f3:A:3This corresponds to a lexicographic ordering of the stable sets.
+12:477:25205:0:20:133:466:657:10:g_d0_f18:10:g_d0_f11:C:Definition 5Letx= log1/γ∗((v1−vk+1)/ε)withεas defined in Lemma 3.
+12:478:25270:20:12:133:477:637:10:g_d0_f9:10:g_d0_f9:B:Thus, the maximum stable set must change at least once everyxrounds.  When
+12:479:25344:12:12:133:477:625:10:g_d0_f9:10:g_d0_f9:B:the maximum stable set changes, it is replaced by a set which is larger in the
+12:480:25422:12:12:133:477:613:10:g_d0_f15:10:g_d0_f9:B:-ordering.  This implies that the system converges to a fixed point and that
+12:481:25498:12:12:133:477:601:10:g_d0_f9:10:g_d0_f9:B:the  number  of  rounds  until  convergence  is  bounded  by  2k(x+ 1),  hence  the
+12:482:25581:12:22:133:316:589:10:g_d0_f9:10:g_d0_f9:B:Theorem.  First, a useful technical lemma.
+12:483:25623:22:12:133:477:567:10:g_d0_f18:10:g_d0_f11:F:Lemma 3Letε= (1/2)θk(1−γ∗) minq6=q′|vq−vq′|/θ1.  Ifpi−1> vp−εand
+12:484:25687:12:22:133:364:555:10:g_d0_f13:10:g_d0_f11:C:vp> pi, then playerpprefers slotito any slotj < i.
+12:485:25737:22:12:148:477:533:10:g_d0_f18:10:g_d0_f9:A:Proof.From  playerp’s  viewpoint,  the  utility  of  slotiisθi(vp−pi),  the
+12:486:25812:12:21:133:419:521:10:g_d0_f9:10:g_d0_f9:B:utility of slotj < iisθj(vp−pj)< θj(vp−pi−1), and the ratio is
+12:487:25874:21:14:209:265:500:10:g_d0_f13:10:g_d0_f9:?:θj(vp−pi−1)
+12:488:25885:14:0:214:260:486:10:g_d0_f13:10:g_d0_f9:?:θi(vp−pi)
+12:489:25894:0:0:269:285:493:10:g_d0_f15:10:g_d0_f13:?:≤ε
+12:490:25896:0:14:304:312:500:10:g_d0_f13:7:g_d0_f14:?:θj
+12:491:25898:14:0:286:331:486:10:g_d0_f13:10:g_d0_f9:?:θi(vp−pi)
+12:492:25907:0:0:335:351:493:10:g_d0_f15:10:g_d0_f13:?:≤ε
+12:493:25909:0:14:371:379:500:10:g_d0_f13:7:g_d0_f17:?:θ1
+12:494:25911:14:0:352:399:486:10:g_d0_f13:10:g_d0_f9:?:θk(vp−pi)
+12:495:25920:0:27:400:403:493:10:g_d0_f13:10:g_d0_f13:C:.
+12:496:25921:27:22:133:155:466:10:g_d0_f9:10:g_d0_f9:B:Now,
+12:497:25925:22:15:192:386:444:10:g_d0_f13:10:g_d0_f9:?:vp−pi=vp−((1−γi+1)vπ(i+1)+γi+1pi+1)
+12:498:25960:15:22:224:419:429:10:g_d0_f9:10:g_d0_f13:?:= (1−γi+1)(vp−vπ(i+1)) +γi+1(vp−pi+1),
+12:499:25998:22:12:133:477:407:10:g_d0_f9:10:g_d0_f9:B:which  is  at  least  (1−γ∗) minq6=q′|vq−vq′|.Plugging  this  into  the  previous
+12:500:26079:12:12:133:264:395:10:g_d0_f9:10:g_d0_f9:B:expression proves the Lemma.
+12:501:26107:12:12:148:477:383:10:g_d0_f9:10:g_d0_f9:A:We now return to proving that Case 3 happens for at mostxconsecutive
+12:502:26175:12:13:133:477:371:10:g_d0_f9:10:g_d0_f9:B:rounds.  Assume that Case 3 happens forxconsecutive rounds.  Letpminbe the
+12:503:26249:13:12:133:477:358:10:g_d0_f9:10:g_d0_f9:B:player inBwhose value is minimum, and letvminbe its value.  Letb(t)minbe the
+12:504:26325:12:12:133:477:346:10:g_d0_f9:10:g_d0_f9:B:minimum bid of players inBaftertrounds, 0≤t≤x.  Ifp∈Bis the player
+12:505:26391:12:23:133:354:334:10:g_d0_f9:10:g_d0_f9:B:defining the minimum bid in roundt+ 1, we have:
+12:506:26438:23:25:189:422:311:10:g_d0_f13:10:g_d0_f13:C:b(t+1)min≥(1−γ∗)vp+γ∗b(t)min≥(1−γ∗)vmin+γ∗b(t)min.
+12:507:26488:25:14:133:477:286:10:g_d0_f9:10:g_d0_f15:B:Afterxrounds, we getb(x)min≥vmin−(γ∗)x(vmin−b(0)min), henceb(x)min≥vmin−
+12:508:26560:14:12:133:477:272:10:g_d0_f9:10:g_d0_f9:B:(γ∗)x(vi−vk+1).   Plugging  in  the  value  ofxyieldsb(x)min≥vmin−ε.   From
+12:509:26635:12:12:133:477:260:10:g_d0_f9:10:g_d0_f9:B:Lemma 3, we know thatpminprefers slotito any slotj < i.  In the next round
+12:510:26709:12:12:133:477:248:10:g_d0_f13:10:g_d0_f9:B:pmintargets slotiand has to be the minimum bidder fromB, so we leave Case
+12:511:26782:12:12:133:477:236:10:g_d0_f9:10:g_d0_f9:B:3 and enter Case 2.  Thus there are at mostxoccurrences of Case 3 between
+12:512:26855:12:28:133:435:224:10:g_d0_f9:10:g_d0_f9:B:any two occurrences of Case 1 or Case 2, and the Theorem is proved.
+12:513:26922:28:14:133:477:196:12:g_d0_f10:12:g_d0_f10:F:3.2    Convergence of the BB Strategy in the Asynchronous
+12:514:26979:14:18:164:192:182:12:g_d0_f10:12:g_d0_f10:C:Case
+12:515:26983:18:12:133:477:164:10:g_d0_f9:10:g_d0_f9:B:We now turn to our main result, convergence of thebbstrategy in the asyn-
+12:516:27056:12:12:133:477:152:10:g_d0_f9:10:g_d0_f9:B:chronous case – where each round gives a single random bidder the opportunity
+12:517:27133:12:0:133:283:140:10:g_d0_f9:10:g_d0_f9:B:to update his bid according tobb.
+13:518:27168:0:12:133:477:657:10:g_d0_f18:10:g_d0_f11:F:Theorem 2In the asynchronous model where players bid in random order, the
+13:519:27241:12:12:133:463:645:10:g_d0_f11:10:g_d0_f11:C:system converges to its fixed point with probability 1.  Convergence occurs in
+13:520:27319:12:12:133:477:633:10:g_d0_f13:10:g_d0_f11:F:O(t1(nlogk) +nlogn+kt2)steps on average.  Heret1is defined as in Lemma
+13:521:27389:12:22:133:366:621:10:g_d0_f11:10:g_d0_f11:C:2,t2= 2k(1 +x), andxis as defined in Definition 5.
+13:522:27439:22:12:148:477:599:10:g_d0_f18:10:g_d0_f9:A:Proof.At  timet,  a  playerpisactivatedifpis  the  player  who  updates
+13:523:27510:12:12:133:477:587:10:g_d0_f9:10:g_d0_f9:B:his bid (while others repeat their previous bids).  To prove convergence in the
+13:524:27589:12:12:133:477:575:10:g_d0_f9:10:g_d0_f9:B:asynchronous  case,  we  revisit  each  step  of  the  proof  of  Theorem  1  (showing
+13:525:27675:12:12:133:477:563:10:g_d0_f9:10:g_d0_f9:B:convergence in the synchronous case).  To bound convergence time, we analyze
+13:526:27751:12:12:133:477:551:10:g_d0_f9:10:g_d0_f9:B:the expected number of asynchronous activations required to achieve each step
+13:527:27828:12:12:133:477:539:10:g_d0_f9:10:g_d0_f9:B:of the synchronous proof, given that the active player is selected uniformly in
+13:528:27907:12:12:133:245:527:10:g_d0_f9:10:g_d0_f9:B:each asynchronous round.
+13:529:27931:12:12:148:476:515:10:g_d0_f18:7:g_d0_f17:F:Stage  one.Following  Theorem  1,  we  must  first  assure  thatbi> vk+1
+13:530:28003:12:12:133:477:503:10:g_d0_f9:10:g_d0_f9:B:fori≤k,  andbi=vifori≥k+ 1.   Lemma  2  showed  this  step  could  be
+13:531:28072:12:12:133:477:491:10:g_d0_f9:10:g_d0_f9:B:obtained  int1rounds  in  the  synchronous  setting.   To  use  Lemma  2  in  the
+13:532:28153:12:12:133:477:479:10:g_d0_f9:10:g_d0_f9:B:asynchronous  case,  we  must  activate  each  of  the  topk+ 1  players  once  per
+13:533:28236:12:12:133:477:467:10:g_d0_f13:10:g_d0_f9:B:t1rounds.   Because  the  active  player  is  picked  uniformly  out  ofnplayers,  in
+13:534:28321:12:11:133:477:455:10:g_d0_f9:10:g_d0_f9:B:expectationO(nlog(k)) activations are required per round to ensure that all top
+13:535:28400:11:12:133:477:444:10:g_d0_f13:10:g_d0_f9:B:kplayers update their bids.  Thus, after an average ofO(t1nlog(k)) activations,
+13:536:28479:12:12:133:477:432:10:g_d0_f9:10:g_d0_f9:B:the  topk+ 1  players  will  all  be  bidding  as  required  to  complete  stage  one.
+13:537:28565:12:12:133:477:420:10:g_d0_f9:10:g_d0_f9:B:Now each losing player must be activated once so that each losing player bids
+13:538:28642:12:12:133:477:408:10:g_d0_f9:10:g_d0_f9:B:its  value.   To  ensure  that  all  then−(k+ 1)  losing  players  are  activated  at
+13:539:28727:12:12:133:477:396:10:g_d0_f9:10:g_d0_f9:B:least once will require an additionalO(nlog(n−k)) activations.  Thus in total
+13:540:28804:12:12:133:477:384:10:g_d0_f9:10:g_d0_f9:B:the expected number of activations to complete stage one in the asynchronous
+13:541:28880:12:12:133:283:372:10:g_d0_f9:10:g_d0_f9:B:setting isO(t1nlog(k) +nlog(n)).
+13:542:28912:12:12:148:477:360:10:g_d0_f18:10:g_d0_f9:A:Stage two.Continuing in the structure of Theorem 1, we must assure that
+13:543:28983:12:12:133:477:348:10:g_d0_f9:10:g_d0_f9:B:the topkplayers are sorted correctly.  Progress entails increasingly better stable
+13:544:29065:12:12:133:465:336:10:g_d0_f9:10:g_d0_f9:B:sets (where “better” is defined by the lexicographic ordering of Theorem 1).
+13:545:29141:12:12:148:477:324:10:g_d0_f9:10:g_d0_f9:A:After stage one, no losing player can afford a slot, so we can ignore all losing
+13:546:29221:12:12:133:477:312:10:g_d0_f9:10:g_d0_f9:B:players.  If a losing player is activated, he bids his value which must be less than
+13:547:29305:12:12:133:477:300:10:g_d0_f13:10:g_d0_f9:B:bk(because he is a losing player).  Thus the bids from losing players will not
+13:548:29383:12:12:133:477:288:10:g_d0_f9:10:g_d0_f9:B:interfere with the convergence of the topkplayers.  However, losing players can
+13:549:29462:12:12:133:477:276:10:g_d0_f9:10:g_d0_f9:B:still consume activations.  We therefore later add a budget of steps to cover the
+13:550:29543:12:12:133:418:264:10:g_d0_f9:10:g_d0_f9:B:expected number of player activations required for losing players.
+13:551:29609:12:12:148:477:252:10:g_d0_f9:10:g_d0_f9:A:We now define a sequenceTof activations of the topkbidders to complete
+13:552:29679:12:12:133:477:240:10:g_d0_f9:10:g_d0_f9:B:stage  two.   The  sequenceTwill  be  partitioned  into  phases,  corresponding  to
+13:553:29762:12:12:133:477:228:10:g_d0_f9:10:g_d0_f9:B:stable sets (defined in the proof of Theorem 1).  LetAbe the current stable set,
+13:554:29842:12:12:133:477:216:10:g_d0_f9:10:g_d0_f9:B:[i+ 1,k] be the slots occupied by the players ofA, andBbe the set of players
+13:555:29918:12:12:133:477:204:10:g_d0_f9:10:g_d0_f9:B:occupying  slots  [1,i].   Letpminbe  the  player  inBwhose  value  is  minimum.
+13:556:29998:12:11:133:477:192:10:g_d0_f9:10:g_d0_f9:B:Consider the three cases enumerated in the proof of Theorem 1.  The occurrence
+13:557:30076:11:12:133:477:181:10:g_d0_f9:10:g_d0_f9:B:of Case 1 or Case 2 always results in a new stable set.  For each stable set, Case
+13:558:30158:12:12:133:477:169:10:g_d0_f9:10:g_d0_f9:B:3 can occur at mostxtimes, after which a bid frompminis guaranteed to result
+13:559:30234:12:12:133:217:157:10:g_d0_f9:10:g_d0_f9:B:in a new stable set.
+13:560:30254:12:12:148:477:145:10:g_d0_f9:10:g_d0_f9:A:To achieve these results in the asynchronous case, we repeatedly activate the
+13:561:30331:12:12:133:477:133:10:g_d0_f9:10:g_d0_f9:B:player in slotiuntil either Case 1 or Case 2 occurs.  If neither case occurs after
+13:562:30413:12:0:133:477:121:10:g_d0_f13:10:g_d0_f9:B:xactivations,  then we activate playerpmin.  At this point a new stable set is
+14:563:30493:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:formed, the current phase ends, and we move on to the sequence of activations
+14:564:30570:12:12:133:477:645:10:g_d0_f9:10:g_d0_f9:B:required by the next stable set.  This completes the definition of sequenceT.  As
+14:565:30651:12:12:133:477:633:10:g_d0_f9:10:g_d0_f9:B:there are 2kstable sets and each stable set requires at mostx+ 1 activations,
+14:566:30728:12:12:133:321:621:10:g_d0_f9:10:g_d0_f9:B:the lengthTis bounded byt2= 2k(x+ 1).
+14:567:30765:12:12:148:477:609:10:g_d0_f9:10:g_d0_f9:A:How long will it take to activate players in the order given by sequenceT?
+14:568:30839:12:12:133:477:597:10:g_d0_f9:10:g_d0_f9:B:Withkplayers, the probability of activating the correct player is at least 1/kper
+14:569:30920:12:12:133:477:585:10:g_d0_f9:10:g_d0_f9:B:step.  (Recall that we excluded losers.)  Thus the correct sequence of activations
+14:570:31002:12:12:133:271:573:10:g_d0_f9:10:g_d0_f9:B:will occur after aboutkt2steps.
+14:571:31033:12:12:148:477:561:10:g_d0_f9:10:g_d0_f9:A:Finally, we add a set of steps for losing players. We expect (1−k/n)kt2losing
+14:572:31110:12:12:133:477:549:10:g_d0_f9:10:g_d0_f9:B:player  activations  to  occur  prior  to  convergence.   The  second  stage  therefore
+14:573:31197:12:12:133:422:537:10:g_d0_f9:10:g_d0_f9:B:requires expected total activations ofkt2+ (1−k/n)kt2=O(kt2).
+14:574:31258:12:12:148:477:525:10:g_d0_f18:10:g_d0_f9:A:Summation.Adding the expected steps required in stage one to those from
+14:575:31329:12:12:133:477:513:10:g_d0_f9:10:g_d0_f9:B:stage  two,  convergence  is  reached  on  average  inO(t1(nlogk) +nlogn+kt2)
+14:576:31406:12:12:133:477:501:10:g_d0_f9:10:g_d0_f9:B:steps.  In any event, convergence occurs with probability 1 after a finite time.
+14:577:31486:12:16:133:423:489:10:g_d0_f9:10:g_d0_f9:B:(See [11].)  This proves convergence, and the Theorem is complete.
+14:578:31552:16:12:148:477:473:10:g_d0_f9:10:g_d0_f9:A:Our bound on the convergence time ofbbappears to be quite loose and is
+14:579:31622:12:12:133:477:461:10:g_d0_f9:10:g_d0_f9:B:a worse case bound.  Consider convergence speed if the number of positions,k,
+14:580:31699:12:12:133:477:449:10:g_d0_f9:10:g_d0_f9:B:and the click-through rates,θi, are held constant as the number of bidders,n,
+14:581:31776:12:12:133:477:437:10:g_d0_f9:10:g_d0_f9:B:increases.  Substitutingt1andxinto Theorem 2 and simplifying, the expected
+14:582:31850:12:28:133:365:425:10:g_d0_f9:10:g_d0_f9:B:number of rounds until convergence is in the order of
+14:583:31903:28:7:133:242:397:10:g_d0_f13:7:g_d0_f14:C:nlogklog1/γ∗vk
+14:584:31917:7:0:196:280:390:10:g_d0_f9:10:g_d0_f9:?:(vk−vk+1)(1−γ∗)
+14:585:31932:0:0:282:290:397:10:g_d0_f9:10:g_d0_f9:?:+
+14:586:31933:0:8:289:296:411:10:g_d0_f21:10:g_d0_f21:?:(
+14:587:31934:8:13:354:372:403:10:g_d0_f13:7:g_d0_f17:?:v1θ1
+14:588:31938:13:0:298:429:390:10:g_d0_f9:7:g_d0_f14:?:min1≤i≤k(vi−vi+1)(1−γ∗)θk
+14:589:31963:0:41:431:485:411:10:g_d0_f21:7:g_d0_f17:?:)2k/log(1/γ∗)
+14:590:31976:41:13:133:477:370:10:g_d0_f9:10:g_d0_f9:B:whereγ∗= maxiθiθi−1.  Notice thatnappears only at the start of the expression.
+14:591:32054:13:17:133:403:357:10:g_d0_f9:10:g_d0_f9:B:So the convergence time is linear in the number of bidders,n.
+14:592:32115:17:12:148:477:340:10:g_d0_f9:10:g_d0_f9:A:We have run simulations to study the speed of convergence in practice.  We
+14:593:32189:12:12:133:477:328:10:g_d0_f9:10:g_d0_f9:B:have observed that convergence is significantly faster than Theorem 2 indicates
+14:594:32268:12:12:133:386:316:10:g_d0_f9:10:g_d0_f9:B:– no more than a polynomial inn, the number of bidders.
+14:595:32323:12:11:148:477:304:10:g_d0_f9:10:g_d0_f9:A:Figure 1 shows convergence speed as more bidders join the auction and as
+14:596:32395:11:12:133:477:293:10:g_d0_f9:10:g_d0_f9:B:more slots are added (both occurring at the same rate).  The speed of conver-
+14:597:32472:12:12:133:477:281:10:g_d0_f9:10:g_d0_f9:B:gence, measured in number of bids per bidder, appears to increase slowly in the
+14:598:32551:12:12:133:215:269:10:g_d0_f9:10:g_d0_f9:B:number of bidders.
+14:599:32569:12:12:148:477:257:10:g_d0_f9:10:g_d0_f9:A:Figure 2 shows convergence behavior in one set of simulations.  In this simu-
+14:600:32646:12:12:133:477:245:10:g_d0_f9:10:g_d0_f9:B:lation, ten bidders asynchronously updated their bids in random order, all using
+14:601:32726:12:12:133:477:233:10:g_d0_f9:10:g_d0_f9:B:thebbstrategy.  After 329 updates,  all bids had reached the B* equilibrium.
+14:602:32802:12:33:133:392:221:10:g_d0_f9:10:g_d0_f9:B:This outcome is typical of our simulated bidding outcomes.
+14:603:32860:33:21:133:241:188:14:g_d0_f10:14:g_d0_f10:C:4    Conclusions
+14:604:32876:21:12:133:477:167:10:g_d0_f9:10:g_d0_f9:B:Keyword auctions have become a critical source of revenue for companies such
+14:605:32952:12:12:133:477:155:10:g_d0_f9:10:g_d0_f9:B:as Google and Yahoo!,  among others.  This new form of advertising has pro-
+14:606:33027:12:12:133:477:143:10:g_d0_f9:10:g_d0_f9:B:vided a new way for advertisers to reach customers.  But advertisers also face
+14:607:33105:12:12:133:477:131:10:g_d0_f9:10:g_d0_f9:B:the complex task of optimizing bids to increase their exposure while avoiding
+14:608:33182:12:0:133:212:119:10:g_d0_f9:10:g_d0_f9:B:unnecessary costs.
+15:609:33202:0:22:182:191:656:67:g_d0_f27:67:g_d0_f27:?:75
+15:610:33204:22:22:182:191:634:67:g_d0_f27:67:g_d0_f27:?:55
+15:611:33206:22:22:182:191:612:67:g_d0_f27:67:g_d0_f27:?:35
+15:612:33208:22:0:182:191:590:67:g_d0_f27:67:g_d0_f27:?:15
+15:613:33210:0:11:161:177:635:67:g_d0_f27:67:g_d0_f27:?:Bids
+15:614:33214:11:11:164:179:624:67:g_d0_f27:67:g_d0_f27:?:Per 
+15:615:33217:11:45:153:177:613:67:g_d0_f27:67:g_d0_f27:?:Bidder
+15:616:33223:45:15:219:449:568:67:g_d0_f27:67:g_d0_f27:?:  5                     10                    15                     20                   25
+15:617:33315:15:19:279:347:553:67:g_d0_f27:67:g_d0_f27:?:Number of Bidders
+15:618:33332:19:211:162:449:534:10:g_d0_f9:10:g_d0_f9:?:Figure 1:  Convergence Speed as a Function of Number of Bidders
+15:619:33395:211:31:202:407:323:10:g_d0_f9:10:g_d0_f9:?:Figure 2:  Simulated Convergence Profile of BB
+15:620:33441:31:12:148:477:292:10:g_d0_f9:10:g_d0_f9:A:Our analysis considers a natural class of bidding strategies inspired by equi-
+15:621:33519:12:12:133:477:280:10:g_d0_f9:10:g_d0_f9:B:librium analysis and the notion of envy-freeness introduced in [4].  These bid-
+15:622:33598:12:12:133:477:268:10:g_d0_f9:10:g_d0_f9:B:ding strategies attempt to increase advertiser utility under limited assumptions
+15:623:33678:12:12:133:477:256:10:g_d0_f9:10:g_d0_f8:B:about other players’ behavior.  We have shown that if all players follow thebb
+15:624:33756:12:12:133:477:244:10:g_d0_f9:10:g_d0_f9:B:strategy, bids are certain to converge to a Nash equilibrium of the static game.
+15:625:33836:12:12:133:477:232:10:g_d0_f9:10:g_d0_f9:B:We have further determined the expected time until convergence.  Finally, we
+15:626:33912:12:12:133:477:220:10:g_d0_f9:10:g_d0_f9:B:have noted the desirable properties this equilibrium offers to advertisers – in-
+15:627:33992:12:12:133:477:208:10:g_d0_f9:10:g_d0_f9:B:cluding envy-freeness, lowest cost to advertisers (among all Nash equilibria of
+15:628:34071:12:12:133:477:196:10:g_d0_f9:10:g_d0_f9:B:the static game of complete information), and feasible implementation based on
+15:629:34149:12:0:133:290:184:10:g_d0_f9:10:g_d0_f9:B:information available to advertisers.
+16:630:34188:0:22:133:267:657:14:g_d0_f10:14:g_d0_f10:C:Acknowledgements
+16:631:34204:22:12:133:477:635:10:g_d0_f9:10:g_d0_f9:B:This research was supported in part by NSF grant CCF-0635147, a Yahoo Re-
+16:632:34277:12:12:133:477:623:10:g_d0_f9:10:g_d0_f9:B:search Alliance gift to Anna Karlin, and the Division of Research and Faculty
+16:633:34354:12:0:133:315:611:10:g_d0_f9:10:g_d0_f9:B:Development at Harvard Business School.
+17:634:34395:0:22:133:209:657:14:g_d0_f10:14:g_d0_f10:C:References
+17:635:34405:22:12:138:477:635:10:g_d0_f9:10:g_d0_f9:A:[1]  K. Asdemir, Bidding patterns in search engine auctions, in:  Second Work-
+17:636:34483:12:20:154:464:623:10:g_d0_f9:10:g_d0_f9:A:shop on Sponsored Search Auctions, ACM Electronic Commerce, 2006.
+17:637:34548:20:12:138:477:603:10:g_d0_f9:10:g_d0_f9:A:[2]  E. H. Clarke, Multipart pricing of public goods, Public Choice 11 (1971)
+17:638:34625:12:20:154:182:591:10:g_d0_f9:10:g_d0_f9:A:17–33.
+17:639:34631:20:12:138:477:571:10:g_d0_f9:10:g_d0_f9:A:[3]  B. Edelman, M. Ostrovsky, Strategic bidder behavior in sponsored search
+17:640:34707:12:20:154:382:559:10:g_d0_f9:10:g_d0_f9:A:auctions, Decision Support Systems (2007) 192–198.
+17:641:34757:20:12:138:477:539:10:g_d0_f9:10:g_d0_f9:A:[4]  B. Edelman, M. Ostrovsky, M. Schwarz, Internet advertising and the gen-
+17:642:34833:12:12:154:477:527:10:g_d0_f9:10:g_d0_f9:A:eralized second price auction:  Selling billions of dollars worth of keywords,
+17:643:34911:12:20:154:348:515:10:g_d0_f9:10:g_d0_f9:A:American Economic Review (2007) 242–259.
+17:644:34951:20:12:138:477:495:10:g_d0_f9:10:g_d0_f9:A:[5]  J. Feng, H. K. Bhargava, P. D.M., Implementing sponsored search in web
+17:645:35026:12:11:154:477:483:10:g_d0_f9:10:g_d0_f9:A:search engines:  Computational evaluation of alternative mechanisms., IN-
+17:646:35099:11:20:154:350:472:10:g_d0_f9:10:g_d0_f9:A:FORMS Journal on ComputingForthcoming.
+17:647:35137:20:20:138:437:452:10:g_d0_f9:10:g_d0_f9:A:[6]  T. Groves, Incentives in teams, Econometrica 41 (1973) 617–631.
+17:648:35205:20:12:138:477:432:10:g_d0_f9:10:g_d0_f9:A:[7]  J. Houde, Entry and exit in a price regulated industry:  Gasoline retailing
+17:649:35285:12:20:154:298:420:10:g_d0_f9:10:g_d0_f9:A:in quebec, working paper (2007).
+17:650:35317:20:12:138:477:400:10:g_d0_f9:10:g_d0_f9:A:[8]  B.  Kitts,  B.  Leblanc,  Optimal  bidding  on  keyword  auctions,  Electronic
+17:651:35400:12:20:154:261:388:10:g_d0_f9:10:g_d0_f9:A:Markets (2004) 186–201.
+17:652:35423:20:12:138:477:368:10:g_d0_f9:10:g_d0_f9:A:[9]  S.  Lahaie,  An  analysis  of  alternative  slot  auction  designs  for  sponsored
+17:653:35510:12:12:154:477:356:10:g_d0_f9:10:g_d0_f9:A:search, in:  EC ’06:  Proceedings of the 7th ACM conference on Electronic
+17:654:35583:12:20:154:379:344:10:g_d0_f9:10:g_d0_f9:A:commerce, ACM Press, New York, NY, USA, 2006.
+17:655:35628:20:12:133:477:324:10:g_d0_f9:10:g_d0_f9:B:[10]  R.  McAfee,  V.  te  Velde,  Dynamic  pricing  in  the  airline  industry,  to  ap-
+17:656:35717:12:12:154:477:312:10:g_d0_f9:10:g_d0_f11:A:pear inProduction and Operations Management, Special Issue on Revenue
+17:657:35786:12:20:154:340:300:10:g_d0_f11:10:g_d0_f9:A:Management and Dynamic Pricing(2007).
+17:658:35823:20:12:133:477:280:10:g_d0_f9:10:g_d0_f9:B:[11]  M. Mitzenmacher, E. Upfal, Probability and Computing:  Randomized Al-
+17:659:35898:12:20:154:466:268:10:g_d0_f9:10:g_d0_f9:A:gorithms and Probabilistic Analysis, Cambridge University Press, 2005.
+17:660:35968:20:12:133:477:248:10:g_d0_f9:10:g_d0_f9:B:[12]  D. Monderer, L. Shapley, Potential games, Games and Economic Behavior
+17:661:36043:12:20:154:249:236:10:g_d0_f9:10:g_d0_f9:A:14(1) (1996) 124–143.
+17:662:36064:20:11:133:477:216:10:g_d0_f9:10:g_d0_f9:B:[13]  H. Varian, Position auctions, International Journal of Industrial Organiza-
+17:663:36145:11:20:154:174:205:10:g_d0_f9:10:g_d0_f9:A:tion.
+17:664:36150:20:12:133:477:185:10:g_d0_f9:10:g_d0_f9:B:[14]  W. Vickrey, Counterspeculation, auctions and competitive sealed tenders,
+17:665:36228:12:20:154:293:173:10:g_d0_f9:10:g_d0_f9:A:Journal of Finance (1961) 8–37.
+17:666:36259:20:0:133:477:153:10:g_d0_f9:10:g_d0_f9:B:[15]  H. Young, The evolution of conventions, Econometrica 61(1) (1993) 57–84.
+18:667:36339:0:18:133:428:657:14:g_d0_f10:14:g_d0_f10:C:Appendix:  Convergence Properties of the
+18:668:36379:18:22:133:316:639:14:g_d0_f10:14:g_d0_f10:C:Synchronous BB Strategy
+18:669:36402:22:12:133:477:617:10:g_d0_f9:10:g_d0_f9:B:The  body  of  the  paper  analyzes  bidding  sequences  that  are  restricted  syn-
+18:670:36486:12:12:133:477:605:10:g_d0_f9:10:g_d0_f9:B:chronously, or asynchronously in random order.  But what if bidders bid syn-
+18:671:36562:12:12:133:477:593:10:g_d0_f9:10:g_d0_f9:B:chronously without restriction, or bid asynchronously in apredeterminedorder?
+18:672:36639:12:12:133:477:581:10:g_d0_f9:10:g_d0_f9:B:In general, synchronous bidding and predetermined bid order can produce cy-
+18:673:36714:12:12:133:161:569:10:g_d0_f9:7:g_d0_f17:B:cling.4
+18:674:36721:12:12:148:477:557:10:g_d0_f9:10:g_d0_f9:A:The following theorem characterizes outcomes in synchronous environments
+18:675:36793:12:22:133:391:545:10:g_d0_f9:10:g_d0_f9:B:and in environments where bidding order is predetermined.
+18:676:36850:22:12:133:477:523:10:g_d0_f18:10:g_d0_f11:F:Theorem 3Consider  a  repeated  keyword  auction  where  all  players  are  using
+18:677:36931:12:22:133:397:511:10:g_d0_f11:10:g_d0_f11:C:thebbstrategy starting with arbitrary initial bids.  We have:
+18:678:36992:22:11:145:477:489:10:g_d0_f11:10:g_d0_f11:A:1.  A 2-slot auction system always converges to its fixed point in both the syn-
+18:679:37072:11:12:158:477:478:10:g_d0_f11:10:g_d0_f11:A:chronous  and  asynchronous  models.  The  number  of  rounds  until  conver-
+18:680:37149:12:12:158:477:466:10:g_d0_f11:10:g_d0_f11:A:gence in the synchronous model isO(log((v2−v3)/v3)), where the constant
+18:681:37220:12:20:158:353:454:10:g_d0_f11:10:g_d0_f11:A:depends on the click-through ratesθ1andθ2.
+18:682:37262:20:12:145:477:434:10:g_d0_f11:10:g_d0_f11:A:2.  There exists a 3-slot auction system and set of initial bids which does not
+18:683:37341:12:20:158:312:422:10:g_d0_f11:10:g_d0_f11:A:converge in the synchronous model.
+18:684:37375:20:12:145:477:402:10:g_d0_f11:10:g_d0_f11:A:3.  There  exists  a  3-slot  auction  system,  a  set  of  initial  bids,  and  an  order
+18:685:37465:12:12:158:477:390:10:g_d0_f11:10:g_d0_f11:A:in which the players update which does not converge in the asynchronous
+18:686:37536:12:28:158:354:378:10:g_d0_f11:10:g_d0_f11:A:model with a predetermined order of updates.
+18:687:37580:28:22:148:228:350:10:g_d0_f18:10:g_d0_f18:A:Proof of Part 1:
+18:688:37596:22:12:133:477:328:10:g_d0_f18:10:g_d0_f11:F:Lemma 4At every roundtsuch thatt > t1= 2 + logγ∗((1−γ∗)(v2−v3)/v3),
+18:689:37663:12:22:133:308:316:10:g_d0_f11:10:g_d0_f11:C:whereγ∗= max{θ1/θ0,θ2/θ1}, we have:
+18:690:37698:22:12:274:336:294:10:g_d0_f13:10:g_d0_f13:C:b1,b2>  v3,
+18:691:37709:12:21:287:336:282:10:g_d0_f13:10:g_d0_f13:C:b3=v3.
+18:692:37715:21:12:148:477:261:10:g_d0_f18:10:g_d0_f9:A:Proof.Letbdenote the third highest bid.  By the second round,bcan never
+18:693:37786:12:12:133:477:249:10:g_d0_f9:10:g_d0_f13:B:be more thanv3.  Suppose for some round thatbis less thanv3.  Take a playeri
+18:694:37862:12:12:133:477:237:10:g_d0_f9:10:g_d0_f15:B:in{1,2,3}.  In the next round,iwill bid his value or target some slotj∈{1,2}
+18:695:37938:12:12:133:477:225:10:g_d0_f9:10:g_d0_f9:B:and bidb′i= (1−γj)vi+γjpj≥(1−γ∗)v3+γ∗b=b+ (1−γ∗)(v3−b).  In
+18:696:37997:12:12:133:182:213:10:g_d0_f9:10:g_d0_f9:B:either case,
+18:697:38009:12:18:257:354:201:10:g_d0_f9:10:g_d0_f13:?:(v3−b′i)≤γ∗(v3−b).
+18:698:38027:18:12:133:477:183:10:g_d0_f9:10:g_d0_f9:B:Initiallyv3−b≤v3.  It takes at at mostr= logγ∗((1−γ∗)(v2−v3)/v3) before
+18:699:38098:12:15:133:477:171:10:g_d0_f13:10:g_d0_f9:B:v3−b <(1−γ∗)(v2−v3).   (Recall  thatγ∗<1  as  theθi’s  are  decreasing.)
+18:700:38170:15:0:144:364:156:6:g_d0_f24:8:g_d0_f3:A:4Consider a simultaneous-move “battle of the sexes” game.
+19:701:38229:0:12:133:477:657:10:g_d0_f9:10:g_d0_f9:B:In roundr+ 1, biddersi∈ {1,2}will each bid eithervi> v3or target a slot
+19:702:38300:12:22:133:211:645:10:g_d0_f13:10:g_d0_f9:B:j∈{1,2}and bid
+19:703:38314:22:15:200:379:623:10:g_d0_f13:10:g_d0_f13:C:b′i= (1−γj)vi+γjpj≥(1−γ∗)v2+γ∗b
+19:704:38345:15:15:211:410:608:10:g_d0_f9:10:g_d0_f9:?:=b+ (1−γ∗)(v2−b)> b+ (1−γ∗)(v2−v3)
+19:705:38379:15:21:211:234:593:10:g_d0_f13:10:g_d0_f13:C:> v3,
+19:706:38384:21:12:133:477:572:10:g_d0_f9:10:g_d0_f9:B:hence in either case their bids are both abovev3.  In roundr+ 2, player 3 will
+19:707:38462:12:12:133:477:560:10:g_d0_f9:10:g_d0_f9:B:then bidv3while players 1 and 2 keep on bidding abovev3; this concludes the
+19:708:38537:12:18:133:219:548:10:g_d0_f9:10:g_d0_f9:B:proof of the lemma.
+19:709:38556:18:12:148:477:530:10:g_d0_f9:10:g_d0_f9:A:Once the conditions of Lemma 4 hold, the price of slot 2 is fixed atp2=v3.
+19:710:38630:12:12:133:477:518:10:g_d0_f9:10:g_d0_f9:B:LetT2=b∗2= (1−θ2/θ1)v2+ (θ2/θ1)p2andT1= (1−θ2/θ1)v1+ (θ2/θ1)p2.
+19:711:38693:12:12:133:477:506:10:g_d0_f9:10:g_d0_f9:B:If the last bids of players 1 and 2 wereb1andb2then, in the next round, their
+19:712:38770:12:25:133:170:494:10:g_d0_f9:10:g_d0_f9:B:bids are:
+19:713:38779:25:0:232:252:469:10:g_d0_f13:10:g_d0_f9:?:b′1=
+19:714:38783:0:8:254:261:483:10:g_d0_f21:10:g_d0_f21:?:{
+19:715:38784:8:12:267:372:475:10:g_d0_f13:10:g_d0_f13:C:T1ifb2> T1,
+19:716:38795:12:22:267:372:463:10:g_d0_f9:10:g_d0_f9:?:(v1+b2)/2otherwise.
+19:717:38814:22:0:232:252:441:10:g_d0_f13:10:g_d0_f9:?:b′2=
+19:718:38818:0:8:254:261:455:10:g_d0_f21:10:g_d0_f21:?:{
+19:719:38819:8:12:267:372:447:10:g_d0_f13:10:g_d0_f13:C:T2ifb1> T2,
+19:720:38830:12:22:267:372:435:10:g_d0_f9:10:g_d0_f9:?:(v2+b1)/2otherwise.
+19:721:38849:22:21:133:375:413:10:g_d0_f9:10:g_d0_f9:B:Letbmin= min(b1,b2) be the minimum of the two bids.
+19:722:38900:21:27:133:404:392:10:g_d0_f18:10:g_d0_f11:C:Lemma 5After at mostt2rounds, we havebmin≥T2, where
+19:723:38951:27:0:264:311:365:10:g_d0_f13:10:g_d0_f9:?:t2≤t1+ 2
+19:724:38959:0:13:312:342:372:10:g_d0_f13:7:g_d0_f17:?:θ1−θ2
+19:725:38964:13:20:322:346:359:10:g_d0_f13:10:g_d0_f13:C:θ2.
+19:726:38967:20:12:148:477:339:10:g_d0_f18:10:g_d0_f9:A:Proof.Assume that at timet > t1, we havebmin< T2.  Then it is easy to
+19:727:39036:12:27:133:448:327:10:g_d0_f9:10:g_d0_f9:B:check that at the next round we haveb′min≥(v2+bmin)/2.  This implies
+19:728:39104:27:0:191:249:300:10:g_d0_f13:10:g_d0_f15:?:b′min−bmin≥
+19:729:39115:0:13:253:292:307:10:g_d0_f13:7:g_d0_f17:?:v2−bmin
+19:730:39122:13:0:270:305:294:10:g_d0_f9:10:g_d0_f15:?:2≥
+19:731:39124:0:13:308:340:307:10:g_d0_f13:7:g_d0_f17:?:v2−T2
+19:732:39129:13:0:322:352:294:10:g_d0_f9:10:g_d0_f9:?:2=
+19:733:39131:0:13:356:364:307:10:g_d0_f13:7:g_d0_f17:?:θ2
+19:734:39133:13:0:356:364:294:10:g_d0_f13:7:g_d0_f17:?:θ1
+19:735:39135:0:13:367:398:307:10:g_d0_f13:7:g_d0_f17:?:v2−p2
+19:736:39140:13:20:380:420:294:10:g_d0_f9:10:g_d0_f13:?:2=δ.
+19:737:39144:20:12:133:477:274:10:g_d0_f9:10:g_d0_f9:B:Since at timet1we havebmin≥v3, we will reachb′min≥T2after an additional
+19:738:39215:12:18:133:320:262:10:g_d0_f9:10:g_d0_f9:B:number of rounds bounded by (T2−v3)/δ.
+19:739:39253:18:12:148:477:244:10:g_d0_f9:10:g_d0_f9:A:Finally,  since at roundt2we havebmin≥T2,  at timet2+ 1 we will have
+19:740:39321:12:12:133:477:232:10:g_d0_f13:10:g_d0_f9:B:b′2=T2< T1,  and  therefore  at  timet2+ 2  we  will  haveb′′2=T2=b∗2and
+19:741:39393:12:12:133:477:220:10:g_d0_f13:10:g_d0_f9:B:b′′1= (v1+T2)/2 =b∗1; we have reached equilibrium.  This proves Part 1 of the
+19:742:39470:12:18:133:290:208:10:g_d0_f9:10:g_d0_f9:B:Theorem in the synchronous model.
+19:743:39503:18:11:148:477:190:10:g_d0_f18:10:g_d0_f9:A:Proof  of  Part  2:If  there  are  more  than  two  slots,  convergence  is  not
+19:744:39583:11:12:133:477:179:10:g_d0_f9:10:g_d0_f9:B:guaranteed even when all players follow thebbstrategy.  Consider the following
+19:745:39661:12:12:133:204:167:10:g_d0_f9:10:g_d0_f9:B:counterexample.
+19:746:39676:12:12:148:476:155:10:g_d0_f9:10:g_d0_f9:A:Let there be three slots withθ1= 1,θ2= 2/3,θ3= 1/3 and four players
+19:747:39743:12:12:133:477:143:10:g_d0_f9:10:g_d0_f9:B:with values 161, 160, 159 and 100.  Let the initial bids of 130.5, 130, 129.5 and
+19:748:39824:12:12:133:477:131:10:g_d0_f9:10:g_d0_f9:B:100,  respectively.  Then the bidding evolves as shown below.  Notice that the
+19:749:39902:12:0:133:269:119:10:g_d0_f9:10:g_d0_f9:B:bids cycle but do not converge.
+20:750:39935:0:12:236:349:658:10:g_d0_f9:10:g_d0_f9:?:BidderRound
+20:751:39946:12:12:227:375:646:10:g_d0_f9:10:g_d0_f9:?:IDValue123
+20:752:39956:12:12:229:384:634:10:g_d0_f9:10:g_d0_f9:?:A161130.5145.5130.5
+20:753:39975:12:12:229:380:622:10:g_d0_f9:10:g_d0_f9:?:B160130145.25130
+20:754:39991:12:12:229:384:610:10:g_d0_f9:10:g_d0_f9:?:C159129.5144.75129.5
+20:755:40011:12:22:229:380:598:10:g_d0_f9:10:g_d0_f9:?:D100100100100
+20:756:40024:22:12:148:477:576:10:g_d0_f9:10:g_d0_f9:A:Consider  the  dynamics  of  this  counterexample.   Bidder  D  has  the  lowest
+20:757:40104:12:12:133:477:564:10:g_d0_f9:10:g_d0_f9:B:value and is inactive; at any of the prices listed, he cannot receive a slot because
+20:758:40188:12:12:133:477:552:10:g_d0_f9:10:g_d0_f9:B:the prices are all above his utility.  Meanwhile, bidders A, B, and C cyclically
+20:759:40268:12:12:133:477:540:10:g_d0_f9:10:g_d0_f9:B:compete for the available slots.  It the first round, A, B, and C all target the
+20:760:40348:12:12:133:477:528:10:g_d0_f9:10:g_d0_f9:B:lowest slot.  Bidder A bids low enough that, in the next round, all three choose
+20:761:40428:12:12:133:477:516:10:g_d0_f9:10:g_d0_f9:B:to  target  the  first  slot.   Seeing  these  high  bids,  the  anticipated  price  for  the
+20:762:40521:12:12:133:477:504:10:g_d0_f9:10:g_d0_f9:B:top slot is too high when compared with the low price anticipated for the last
+20:763:40599:12:12:133:477:492:10:g_d0_f9:10:g_d0_f9:B:slot.  Thus for the third round, bidders A, B, and C again target the last slot –
+20:764:40680:12:12:133:477:480:10:g_d0_f9:10:g_d0_f9:B:yielding the same bids as in the first round.  Round four will match round two,
+20:765:40759:12:12:133:285:468:10:g_d0_f9:10:g_d0_f9:B:and the cycle will continue forever.
+20:766:40795:12:12:148:477:456:10:g_d0_f9:10:g_d0_f9:A:In this example the click-through rates follow a simple geometric sequence,
+20:767:40870:12:12:133:477:444:10:g_d0_f9:10:g_d0_f9:B:similar to those observed in practice [5].  Note that in this example the bids are
+20:768:40952:12:12:133:477:432:10:g_d0_f9:10:g_d0_f9:B:well-behaved, in the sense that the bids are in the same order as the players’
+20:769:41030:12:11:133:477:420:10:g_d0_f9:10:g_d0_f9:B:values.   Hence  such  regularity  is  not  sufficient  for  convergence.   Finally,  even
+20:770:41120:11:12:133:477:409:10:g_d0_f9:10:g_d0_f9:B:though we used our convention ofθ0= 2, a similar example can be constructed
+20:771:41195:12:12:133:477:397:10:g_d0_f9:10:g_d0_f9:B:where the players are cycling while targeting intermediate slots.  This concludes
+20:772:41276:12:18:133:217:385:10:g_d0_f9:10:g_d0_f9:B:the proof of part 2.
+20:773:41296:18:12:148:477:367:10:g_d0_f18:10:g_d0_f9:A:Proof of Part 3:Consider the following three slot example withθ1= 1,
+20:774:41364:12:12:133:477:355:10:g_d0_f13:10:g_d0_f9:B:θ2= 0.1 andθ3= 0.09.  Let the top three bidders place bids in predetermined
+20:775:41439:12:12:133:477:343:10:g_d0_f9:10:g_d0_f9:B:order given by their lexicographic ordering (left-most column).  Notice the cy-
+20:776:41518:12:12:133:477:331:10:g_d0_f9:10:g_d0_f9:B:cling that results:  bids in round 7 exactly match those from round 1, and the
+20:777:41596:12:22:133:249:319:10:g_d0_f9:10:g_d0_f9:B:cycle will continue forever.
+20:778:41624:22:12:179:349:297:10:g_d0_f9:10:g_d0_f9:?:BidderRound
+20:779:41635:12:12:170:434:285:10:g_d0_f9:10:g_d0_f9:A:IDValue1234567
+20:780:41649:12:12:172:440:273:10:g_d0_f9:10:g_d0_f9:?:A10219.280.880.880.819.219.219.2
+20:781:41681:12:12:172:440:261:10:g_d0_f9:10:g_d0_f9:?:B10119.119.190.990.990.919.119.1
+20:782:41713:12:12:172:440:249:10:g_d0_f9:10:g_d0_f9:?:C10059.659.659.695.4595.4595.4559.6
+20:783:41748:12:0:172:436:237:10:g_d0_f9:10:g_d0_f9:?:D1010101010101010

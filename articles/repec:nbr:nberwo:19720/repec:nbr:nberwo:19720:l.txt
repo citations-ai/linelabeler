@@ -1,0 +1,891 @@
+1:0:0:0:100:217:393:710:12:g_d0_f1:12:g_d0_f1:?:NBER WORKING PAPER SERIES
+1:1:25:100:14:5:606:610:12:g_d0_f1:12:g_d0_f1:?:CALCULATING DISEASE-BASED MEDICAL CARE EXPENDITURE INDEXES FOR MEDICARE BENEFICIARIES:
+1:2:111:14:28:164:447:596:12:g_d0_f1:12:g_d0_f1:?:A COMPARISON OF METHOD AND DATA CHOICES
+1:3:150:28:14:274:337:568:12:g_d0_f1:12:g_d0_f1:?:Anne E. Hall
+1:4:162:14:28:274:337:554:12:g_d0_f1:12:g_d0_f1:?:Tina Highfill
+1:5:175:28:14:253:359:526:12:g_d0_f1:12:g_d0_f1:?:Working Paper 19720
+1:6:194:14:42:218:393:512:12:g_d0_f1:12:g_d0_f1:?:http://www.nber.org/papers/w19720
+1:7:227:42:14:173:438:470:12:g_d0_f1:12:g_d0_f1:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:263:14:14:237:374:456:12:g_d0_f1:12:g_d0_f1:?:1050 Massachusetts Avenue
+1:9:288:14:14:250:362:442:12:g_d0_f1:12:g_d0_f1:?:Cambridge, MA 02138
+1:10:307:14:172:267:343:428:12:g_d0_f1:12:g_d0_f1:?:December 2013
+1:11:320:172:14:72:540:256:12:g_d0_f1:12:g_d0_f1:F:We would like to thank Ana Aizcorbe, Abe Dunn, Richard Frank, Virginia Henriksen, participants
+1:12:414:14:14:72:540:242:12:g_d0_f1:12:g_d0_f1:F:in the NBER/CRIW conference on modeling health care costs, Tom Selden and other staff at the Agency
+1:13:513:14:14:72:540:228:12:g_d0_f1:12:g_d0_f1:F:for Healthcare Research and Quality, and an anonymous reviewer for helpful comments and advice.
+1:14:608:14:14:72:540:214:12:g_d0_f1:12:g_d0_f1:F:The views expressed in this paper are solely those of the authors and do not necessarily reflect the
+1:15:708:14:14:72:540:200:12:g_d0_f1:12:g_d0_f1:F:views of the Bureau of Economic Analysis. The views expressed herein are those of the authors and
+1:16:805:14:28:72:468:186:12:g_d0_f1:12:g_d0_f1:F:do not necessarily reflect the views of the National Bureau of Economic Research.
+1:17:886:28:14:72:540:158:12:g_d0_f1:12:g_d0_f1:F:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:18:982:14:14:72:540:144:12:g_d0_f1:12:g_d0_f1:F:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:19:1077:14:28:72:169:130:12:g_d0_f1:12:g_d0_f1:F:NBER publications.
+1:20:1095:28:14:72:540:102:12:g_d0_f1:12:g_d0_f1:F:© 2013 by Anne E. Hall and Tina Highfill. All rights reserved. Short sections of text, not to exceed
+1:21:1195:14:14:72:540:88:12:g_d0_f1:12:g_d0_f1:F:two paragraphs, may be quoted without explicit permission provided that full credit, including © notice,
+1:22:1299:14:0:72:177:74:12:g_d0_f1:12:g_d0_f1:F:is given to the source.
+2:23:1322:0:14:72:506:700:12:g_d0_f1:12:g_d0_f1:F:Calculating Disease-Based Medical Care Expenditure Indexes for Medicare Beneficiaries:
+2:24:1408:14:14:72:283:686:12:g_d0_f1:12:g_d0_f1:F:A Comparison of Method and Data Choices
+2:25:1447:14:14:72:221:672:12:g_d0_f1:12:g_d0_f1:F:Anne E. Hall and Tina Highfill
+2:26:1477:14:14:72:234:658:12:g_d0_f1:12:g_d0_f1:F:NBER Working Paper No. 19720
+2:27:1505:14:14:72:257:644:12:g_d0_f1:12:g_d0_f1:F:December 2013, Revised August 2014
+2:28:1539:14:28:71:124:630:12:g_d0_f1:12:g_d0_f1:F:JEL No. I1
+2:29:1549:28:28:273:338:602:12:Times:12:Times:?:ABSTRACT
+2:30:1557:28:14:71:536:574:12:Times:12:Times:F:Disease-based medical care expenditure indexes are currently of interest to measurement economists
+2:31:1655:14:14:71:539:560:12:g_d0_f1:12:g_d0_f1:F:and have been the subject of several recent papers. These papers, however, produced widely different
+2:32:1755:14:14:71:539:546:12:g_d0_f1:12:g_d0_f1:F:results for medical care inflation and also varied in the datasets and methods used, making comparison
+2:33:1857:14:14:71:539:532:12:g_d0_f1:12:g_d0_f1:F:difficult. In this paper, using two data sources and two different methods for calculating expenditure
+2:34:1959:14:14:71:539:518:12:g_d0_f1:12:g_d0_f1:F:indexes for the Medicare population, we compare the indexes produced and establish some results
+2:35:2054:14:14:71:539:504:12:g_d0_f1:12:g_d0_f1:F:that will help guide policymakers in choosing indexes for this population. We compare two methods:
+2:36:2152:14:14:71:536:490:12:Times:12:Times:F:the primary diagnosis method and a regression-based method. The former is preferable because of
+2:37:2247:14:14:71:539:476:12:g_d0_f1:12:g_d0_f1:F:its transparency but makes stringent demands of the data. We find that when the methods are applied
+2:38:2346:14:14:71:539:462:12:g_d0_f1:12:g_d0_f1:F:to the same datasets, the primary diagnosis method produces higher average annual aggregate growth
+2:39:2444:14:14:71:536:448:12:Times:12:Times:F:rates. The difference implies that the regression-based method should therefore be employed with caution
+2:40:2548:14:14:71:539:434:12:g_d0_f1:12:g_d0_f1:F:and only when necessary. We also compare medical care expenditure indexes produced from the Medicare
+2:41:2648:14:14:71:539:420:12:g_d0_f1:12:g_d0_f1:F:Current Beneficiary Survey and the Medical Expenditure Panel Survey. The MEPS is the only dataset
+2:42:2745:14:14:71:539:406:12:g_d0_f1:12:g_d0_f1:F:with diagnoses attached to drug events, which significantly affects the resulting indexes. On balance,
+2:43:2847:14:14:71:539:392:12:g_d0_f1:12:g_d0_f1:F:however, the MCBS is probably the preferable dataset for Medicare beneficiaries because of its greater
+2:44:2949:14:14:71:539:378:12:g_d0_f1:12:g_d0_f1:F:sample size and its inclusion of nursing home residents. The optimal index may be a hybrid of the
+2:45:3046:14:14:71:536:364:12:Times:12:Times:F:primary diagnosis method applied to Medicare claims and a regression-based index for pharmaceutical
+2:46:3145:14:14:71:539:350:12:g_d0_f1:12:g_d0_f1:F:spending. We discuss further avenues for research, such as comparing our results with indexes created
+2:47:3246:14:42:71:476:336:12:g_d0_f1:12:g_d0_f1:F:with commercial groupers, and what data to use for Medicare private plan enrollees.
+2:48:3329:42:14:71:134:294:12:g_d0_f1:12:g_d0_f1:F:Anne E. Hall
+2:49:3341:14:14:71:215:280:12:g_d0_f1:12:g_d0_f1:F:Bureau of Economic Analysis
+2:50:3368:14:28:71:163:266:12:g_d0_f1:12:g_d0_f1:F:anne.hall@bea.gov
+2:51:3385:28:14:71:134:238:12:g_d0_f1:12:g_d0_f1:F:Tina Highfill
+2:52:3398:14:14:71:215:224:12:g_d0_f1:12:g_d0_f1:F:Bureau of Economic Analysis
+2:53:3425:14:0:71:176:210:12:g_d0_f1:12:g_d0_f1:F:tina.highfill@bea.gov
+3:54:3448:0:28:72:161:706:195:g_d0_f5:195:g_d0_f6:C:1 Introduction  
+3:55:3464:28:21:72:542:678:144:g_d0_f4:144:g_d0_f3:B:Inflation in the health‐care sector is usually measured by tracking the costs of patient goods and 
+3:56:3563:21:23:71:542:657:144:g_d0_f4:144:g_d0_f3:B:services and how these costs change over time. Indexes to measure the cost of services are the 
+3:57:3658:23:21:71:542:634:144:g_d0_f4:144:g_d0_f3:B:indexes used by the Bureau of Labor Statistics in the Consumer and Producer Price Indexes for 
+3:58:3752:21:22:71:542:613:144:g_d0_f4:144:g_d0_f3:B:services such as doctor visits and goods such as prescription drugs. The Committee on National 
+3:59:3847:22:22:71:543:591:144:g_d0_f4:144:g_d0_f3:B:Statistics of the National Research Council, however, has recommended that government 
+3:60:3933:22:22:72:542:569:144:g_d0_f4:144:g_d0_f3:B:statistical agencies investigate methods and data for measuring inflation in health care by 
+3:61:4025:22:22:71:542:547:144:g_d0_f4:144:g_d0_f3:B:measuring the costs of treating medical conditions on the grounds that measurement in this 
+3:62:4116:22:22:71:543:525:144:g_d0_f4:144:g_d0_f3:B:way will better capture changes in productivity in the health‐care sector. Papers such as 
+3:63:4206:22:22:72:543:503:144:g_d0_f4:144:g_d0_f3:B:Aizcorbe and Nestoriak (2011), Dunn et al. (2012), and our previous work (Hall and Highfill 
+3:64:4298:22:22:72:543:481:144:g_d0_f4:144:g_d0_f3:B:2013) followed these recommendations and found average annual growth rates for health‐care 
+3:65:4389:22:22:72:543:459:144:g_d0_f4:144:g_d0_f3:B:inflation that ranged from 2.9 percent to 6.9 percent. However, the papers used different 
+3:66:4479:22:22:72:543:437:144:g_d0_f4:144:g_d0_f3:B:datasets on different populations and employed different methods for splitting up health‐care 
+3:67:4573:22:32:72:499:415:144:g_d0_f4:144:g_d0_f3:B:expenditure by condition, making it difficult to analyze why the results varied so much.  
+3:68:4663:32:22:71:543:383:144:g_d0_f4:144:g_d0_f3:B:In this paper, we are following up on our previous work by comparing medical expenditure 
+3:69:4752:22:22:72:543:361:144:g_d0_f4:144:g_d0_f3:B:indexes for the Medicare population calculated from different datasets and using different 
+3:70:4843:22:22:72:543:339:144:g_d0_f4:144:g_d0_f3:B:methods. The Medicare program plays a very large role in the US healthcare system, in the 
+3:71:4933:22:22:72:543:317:144:g_d0_f4:144:g_d0_f3:B:federal budget, and in the US economy. In calendar year 2012, the program covered 50.8 
+3:72:5020:22:22:72:543:295:144:g_d0_f4:144:g_d0_f3:B:million people (42.2 million aged and 8.6 million disabled). Medicare spending comprised about 
+3:73:5115:22:22:72:543:273:144:g_d0_f4:144:g_d0_f3:B:one‐fifth of national health care spending in the 2012 National Health Expenditure Accounts 
+3:74:5207:22:22:72:543:251:144:g_d0_f4:144:g_d0_f3:B:(Center for Medicare and Medicaid Services). According to the Congressional Budget Office 
+3:75:5297:22:22:72:543:229:144:g_d0_f4:144:g_d0_f3:B:(CBO), outlays on Medicare were 17% of total federal outlays in 2013 and the CBO expects the 
+3:76:5390:22:22:72:542:207:144:g_d0_f4:144:g_d0_f3:B:aging of the population and rising health‐care costs, through their effect on Medicare spending, 
+3:77:5487:22:22:71:542:185:144:g_d0_f4:144:g_d0_f3:B:to be major factors in the projected increase in the deficit later this decade (CBO 2014, CBO 
+3:78:5581:22:22:71:543:163:144:g_d0_f4:144:g_d0_f3:B:2013). Finally, outlays on Medicare were 3.5% of US gross domestic product in 2013 (CBO 
+3:79:5669:22:22:72:543:141:144:g_d0_f4:144:g_d0_f3:B:2014). Accurately measuring inflation in the spending of Medicare beneficiaries is therefore 
+3:80:5762:22:22:72:543:119:144:g_d0_f4:144:g_d0_f3:B:important both for more precise measurement of the economy and for better understanding of 
+3:81:5853:22:0:72:307:97:144:g_d0_f4:144:g_d0_f3:B:the value of a large fraction of public spending.  
+4:82:5906:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:Several Medicare program datasets are available, each with unique characteristics that present 
+4:83:6001:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:measurement challenges.  In this paper, we compare two major data sources on Medicare 
+4:84:6087:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:beneficiaries: the Medicare Current Beneficiary Survey (MCBS) and the Household Component 
+4:85:6177:22:22:72:542:642:144:g_d0_f4:144:g_d0_f3:B:of the Medical Expenditure Panel Survey (MEPS). Both surveys are conducted by the 
+4:86:6259:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:Department of Health and Human Services. The MCBS surveys Medicare beneficiaries 
+4:87:6340:22:22:72:542:598:144:g_d0_f4:144:g_d0_f3:B:exclusively while the MEPS Household Component surveys US residents living in the community 
+4:88:6432:22:32:71:503:576:144:g_d0_f4:144:g_d0_f3:B:(that is, not in institutions such as nursing homes) about their health care and spending. 
+4:89:6523:32:22:71:542:544:144:g_d0_f4:144:g_d0_f3:B:By necessity, our comparison focuses on the potential indexes for Medicare beneficiaries 
+4:90:6612:22:22:71:543:522:144:g_d0_f4:144:g_d0_f3:B:enrolled in fee‐for‐service (FFS) Medicare, for whom the most complete data exists. Medicare 
+4:91:6705:22:22:72:543:500:144:g_d0_f4:144:g_d0_f3:B:private‐plan enrollees are, however, making up an increasing share of Medicare enrollment but 
+4:92:6799:22:22:72:543:478:144:g_d0_f4:144:g_d0_f3:B:the data for them is much less comprehensive. In the MCBS, the only source for their spending, 
+4:93:6894:22:22:72:543:456:144:g_d0_f4:144:g_d0_f3:B:diagnoses and medical events is the in‐person survey but as we shall see, the survey asks about 
+4:94:6990:22:22:72:543:434:144:g_d0_f4:144:g_d0_f3:B:a limited set of diagnoses and some important ones would be omitted if we based their 
+4:95:7076:22:21:72:543:412:144:g_d0_f4:144:g_d0_f3:B:expenditure index on the MCBS survey. However, the Medicare private plan sample in the 
+4:96:7163:21:32:72:393:391:144:g_d0_f4:144:g_d0_f3:B:MEPS is quite small, only about 300 to 400 beneficiaries per year. 
+4:97:7230:32:22:72:543:359:144:g_d0_f4:144:g_d0_f3:B:Using the MCBS and MEPS, we compare two methods for calculating medical expenditure 
+4:98:7314:22:22:72:542:337:144:g_d0_f4:144:g_d0_f3:B:indexes: the primary diagnosis method and a regression‐based approach. The primary diagnosis 
+4:99:7407:22:22:71:542:315:144:g_d0_f4:144:g_d0_f3:B:method simply assigns spending to the illness associated with the diagnosis code (or first 
+4:100:7498:22:22:71:542:293:144:g_d0_f4:144:g_d0_f3:B:diagnosis code in the case of multiple diagnosis codes) of each claim or survey‐collected 
+4:101:7588:22:22:71:542:271:144:g_d0_f4:144:g_d0_f3:B:medical event. The regression‐based approach regresses individual annual health‐care spending 
+4:102:7682:22:22:71:543:249:144:g_d0_f4:144:g_d0_f3:B:on dummy variables for a beneficiary’s diagnosed medical conditions, and divides up each 
+4:103:7771:22:32:72:310:227:144:g_d0_f4:144:g_d0_f3:B:beneficiary’s health‐care spending on that basis. 
+4:104:7821:32:22:72:540:195:144:g_d0_f4:144:g_d0_f3:B:The paper is organized as follows. Section 2 gives background on the concept of a disease‐
+4:105:7911:22:22:72:543:173:144:g_d0_f4:144:g_d0_f3:B:based medical care expenditure index. Section 3 introduces the various methods available for 
+4:106:8004:22:22:72:543:151:144:g_d0_f4:144:g_d0_f3:B:producing medical care expenditure indexes. Section 4 introduces the datasets available for 
+4:107:8096:22:22:72:543:129:144:g_d0_f4:144:g_d0_f3:B:Medicare beneficiaries. Section 5 introduces our full matrix of comparisons, compares the 
+4:108:8186:22:22:72:543:107:144:g_d0_f4:144:g_d0_f3:B:methods, and draws some conclusions about the methods. Section 6 compares the datasets 
+4:109:8273:22:0:72:413:85:144:g_d0_f4:144:g_d0_f3:B:and draws some conclusions about the datasets. Section 7 concludes. 
+5:110:8343:0:34:72:75:708:144:g_d0_f3:144:g_d0_f3:B: 
+5:111:8344:34:34:72:283:674:195:g_d0_f5:195:g_d0_f6:C:2 Medical Care Expenditure Indexes 
+5:112:8379:34:21:72:543:640:144:g_d0_f4:144:g_d0_f3:B:Medical care expenditure indexes (MCE indexes) measure inflation in health‐care spending by 
+5:113:8471:21:22:72:543:619:144:g_d0_f4:144:g_d0_f3:B:measuring the changes in the costs of treating individual illnesses. This approach contrasts with 
+5:114:8569:22:22:72:543:597:144:g_d0_f4:144:g_d0_f3:B:that of the official health‐care price indexes, such as the Consumer Price Index (CPI) and the 
+5:115:8664:22:22:72:543:575:144:g_d0_f4:144:g_d0_f3:B:Producer Price Index (PPI), which measure the change in price over time of specific health‐care 
+5:116:8760:22:22:72:542:553:144:g_d0_f4:144:g_d0_f3:B:services, such as doctor’s visits. Early papers that used MCE indexes such as Cutler et al. (1998), 
+5:117:8860:22:22:71:542:531:144:g_d0_f4:144:g_d0_f3:B:Shapiro et al. (2001), and Berndt et al. (2002) argued that measuring health‐care inflation with 
+5:118:8957:22:22:71:543:509:144:g_d0_f4:144:g_d0_f3:B:MCE indexes was more meaningful since it took into account shifts in utilization from one 
+5:119:9047:22:22:72:542:487:144:g_d0_f4:144:g_d0_f3:B:service category to another as the technology of treating a particular disease improves and 
+5:120:9139:22:22:72:543:465:144:g_d0_f4:144:g_d0_f3:B:becomes more efficient. Examples include shifting from psychotherapy to prescription drugs in 
+5:121:9233:22:22:72:543:443:144:g_d0_f4:144:g_d0_f3:B:the treatment of psychiatric illnesses and shifting surgeries from inpatient to outpatient 
+5:122:9324:22:22:72:543:421:144:g_d0_f4:144:g_d0_f3:B:procedures. Health‐care inflation, when measured in this way, often turns out to be lower than 
+5:123:9419:22:22:72:543:399:144:g_d0_f4:144:g_d0_f3:B:inflation as measured by service price indexes (SPI) such as the CPI or PPI. For example, Cutler 
+5:124:9516:22:22:72:543:377:144:g_d0_f4:144:g_d0_f3:B:et al. found that the measured price change of treating a heart attack was lower than an SPI by 
+5:125:9612:22:22:72:542:355:144:g_d0_f4:144:g_d0_f3:B:three percentage points annually. For more on these issues, see Berndt et al. (2000) and 
+5:126:9701:22:32:71:239:333:144:g_d0_f4:144:g_d0_f3:B:National Research Council (2002). 
+5:127:9735:32:22:71:542:301:144:g_d0_f4:144:g_d0_f3:B:Cutler et al. and Berndt et al. constructed quality‐adjusted expenditure indexes for individual 
+5:128:9831:22:22:71:542:279:144:g_d0_f4:144:g_d0_f3:B:conditions (heart attacks and major depression respectively). Quality adjustment of 
+5:129:9915:22:22:71:542:257:144:g_d0_f4:144:g_d0_f3:B:expenditure indexes in the health‐care context entails connecting shifts in treatments with 
+5:130:10007:22:22:71:543:235:144:g_d0_f4:144:g_d0_f3:B:changes in health outcomes. This adjustment requires high‐quality data on individual 
+5:131:10092:22:22:72:543:213:144:g_d0_f4:144:g_d0_f3:B:treatments and outcomes and papers such as Aizcorbe and Nestoriak (2010) and Dunn et al. 
+5:132:10181:22:22:72:543:191:144:g_d0_f4:144:g_d0_f3:B:(2012) that constructed expenditure indexes for a broad set of illnesses did not adjust for 
+5:133:10273:22:22:72:543:169:144:g_d0_f4:144:g_d0_f3:B:changes in health outcomes when comparing MCE indexes to SPIs like the CPI. Both papers 
+5:134:10361:22:22:72:543:147:144:g_d0_f4:144:g_d0_f3:B:found that health‐care inflation was lower when measured by MCE indexes than by SPIs even 
+5:135:10451:22:22:72:543:125:144:g_d0_f4:144:g_d0_f3:B:though the MCE indexes were not quality‐adjusted. In this paper, we will only present MCE 
+5:136:10541:22:0:72:257:103:144:g_d0_f4:144:g_d0_f3:B:indexes that are not quality‐adjusted. 
+6:137:10582:0:34:72:137:706:195:g_d0_f5:195:g_d0_f6:C:3 Methods 
+6:138:10592:34:21:72:543:672:144:g_d0_f4:144:g_d0_f3:B:Individuals seeking medical care are often diagnosed with more than one disease; a central 
+6:139:10683:21:22:72:542:651:144:g_d0_f4:121:Tahoma:F:problem in the creation of MCEs is how to divide expenditures among multiple diagnoses. 
+6:140:10770:22:22:72:542:629:144:g_d0_f4:144:g_d0_f3:B:Several different methods have been proposed and used in prior papers. It should be noted 
+6:141:10860:22:22:71:543:607:144:g_d0_f4:144:g_d0_f3:B:that economic theory is no guide on methodology in this area and there is no true way of 
+6:142:10949:22:22:72:542:585:144:g_d0_f4:144:g_d0_f3:B:validating any of the methods. Brief descriptions of the methods available to us follow here and 
+6:143:11046:22:32:72:373:563:144:g_d0_f4:144:g_d0_f3:B:the results of the previous papers are summarized in Table 1. 
+6:144:11108:32:22:72:543:531:144:g_d0_f5:144:g_d0_f3:B:3.1 Regression‐based method: This method models total individual annual health‐care 
+6:145:11192:22:22:72:543:509:144:g_d0_f4:144:g_d0_f3:B:spending as a function of each individual’s diagnoses during that year and uses the parameter 
+6:146:11286:22:22:72:543:487:144:g_d0_f4:144:g_d0_f3:B:values to divide the individual’s health‐care spending among his or her diagnoses. Then 
+6:147:11374:22:22:72:543:465:144:g_d0_f4:144:g_d0_f3:B:individual spending on conditions is averaged to give mean expenditures which are the inputs 
+6:148:11467:22:22:72:543:443:144:g_d0_f4:144:g_d0_f3:B:to an MCE index.  Health‐care spending has certain characteristics that make it challenging to 
+6:149:11562:22:22:72:543:421:144:g_d0_f4:144:g_d0_f3:B:model econometrically: spending is non‐negative, there are a large number of observations 
+6:150:11652:22:22:72:543:399:144:g_d0_f4:144:g_d0_f3:B:with zero spending, and the distribution of spending is typically skewed with a long right‐hand 
+6:151:11748:22:22:72:542:377:144:g_d0_f4:144:g_d0_f3:B:tail. Modeling health‐care spending is the subject of an extensive literature (Duan 1983, 
+6:152:11838:22:22:71:542:355:144:g_d0_f4:144:g_d0_f3:B:Manning 1998, Jones 2000, Manning and Mullahy 2001, Buntin and Zaslavsky 2004). The 
+6:153:11922:22:22:71:542:333:144:g_d0_f4:144:g_d0_f3:B:consensus is that health‐care spending should be transformed (with a log or square root 
+6:154:12010:22:22:71:543:311:144:g_d0_f4:144:g_d0_f3:B:transformation) to accommodate its skewness. Either a one‐part or two‐part model, where the 
+6:155:12102:22:22:72:543:289:144:g_d0_f4:144:g_d0_f3:B:probability of having spending at all is modeled in a separate step, may be used. The 
+6:156:12188:22:22:72:543:267:144:g_d0_f4:144:g_d0_f3:B:parameters may be estimated with either ordinary least squares (OLS) or a generalized linear 
+6:157:12281:22:22:72:543:245:144:g_d0_f4:144:g_d0_f3:B:model (GLM). Buntin and Zaslavsky (2004) investigate the modelling of the spending of 
+6:158:12367:22:22:72:543:223:144:g_d0_f4:144:g_d0_f3:B:Medicare beneficiaries in particular. Their recommendation is to estimate with GLM with the 
+6:159:12459:22:22:72:543:201:144:g_d0_f4:144:g_d0_f3:B:mean‐variance relationship established with a Park test (Park 1966). Following the results of a 
+6:160:12555:22:22:72:543:179:144:g_d0_f4:144:g_d0_f3:B:Park test, we estimate the following equation with a one‐step GLM, with a log link and the 
+6:161:12646:22:47:72:410:157:144:g_d0_f4:144:g_d0_f3:B:standard deviation proportional to the mean (a gamma distribution): 
+6:162:12714:47:0:236:351:110:144:g_d0_f8:73:g_d0_f8:?:lnሺݕ௜ሻߚൌ଴ߚ൅෍௝ܦ௜௝
+6:163:12730:0:34:314:318:129:73:g_d0_f8:73:g_d0_f8:?:௃
+6:164:12731:34:0:308:324:95:73:g_d0_f8:73:g_d0_f8:?:௝ୀଵ
+6:165:12734:0:0:355:378:110:144:g_d0_f8:144:g_d0_f3:?:ߝ൅௜ 
+7:166:12740:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:In this equation, i indexes the individual beneficiary, j indexes the conditions, yi is each 
+7:167:12833:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:beneficiary’s annual health‐care spending, and Dij is an indicator variable for whether individual 
+7:168:12932:22:32:72:154:664:144:g_d0_f9:144:g_d0_f3:B:i has condition j. 
+7:169:12951:32:22:72:542:632:144:g_d0_f4:144:g_d0_f3:B:Since we are fitting log spending, we cannot use the resulting coefficients to directly find the 
+7:170:13048:22:22:71:543:610:144:g_d0_f4:144:g_d0_f3:B:average spending on each condition. Instead, we use a method for using parameter estimates 
+7:171:13139:22:22:72:543:588:144:g_d0_f4:144:g_d0_f3:B:from a model of the log of health‐care spending to assign spending to conditions originally 
+7:172:13231:22:22:72:543:566:144:g_d0_f4:144:g_d0_f3:B:proposed by Trogdon et al. (2008). In this method, each individual’s spending is divided up into 
+7:173:13328:22:22:72:542:544:144:g_d0_f4:144:g_d0_f3:B:their diagnosed conditions in proportion to the regression coefficients. A share of spending is 
+7:174:13424:22:40:71:376:522:144:g_d0_f4:144:g_d0_f3:B:calculated for each beneficiary‐illness combination as follows: 
+7:175:13488:40:0:232:256:482:121:g_d0_f8:121:g_d0_f8:?:ܵ௜௝ൌ
+7:176:13492:0:17:275:363:490:121:g_d0_f8:64:g_d0_f8:?:ൣexp൫ߚመ௝൯െ1൧∗ܦ௜௝
+7:177:13508:17:0:259:282:473:121:g_d0_f8:64:g_d0_f8:?:∑൛ൣexp൫ߚመ௝൯െ1൧∗ܦ௜௝ൟ௃௝ୀଵ
+7:178:13531:0:49:378:380:482:121:g_d0_f3:121:g_d0_f3:?: 
+7:179:13532:49:22:72:543:433:144:g_d0_f4:144:g_d0_f3:B:The shares are then applied to each individual’s spending to give that individual’s spending on 
+7:180:13628:22:22:72:543:411:144:g_d0_f4:144:g_d0_f3:B:each condition with which he or she is diagnosed. Then the average expenditure for each 
+7:181:13716:22:22:72:543:389:144:g_d0_f4:144:g_d0_f3:B:condition is calculated across individuals. These average expenditures are analogous to prices in 
+7:182:13814:22:22:72:542:367:144:g_d0_f4:144:g_d0_f3:B:a price index and are the inputs to the MCE indexes. We combine them with the diagnosed 
+7:183:13902:22:22:71:542:345:144:g_d0_f4:144:g_d0_f3:B:prevalences for each condition (which are analogous to quantities in a price index) and 
+7:184:13990:22:32:72:390:323:144:g_d0_f4:144:g_d0_f3:B:calculate the MCE indexes as Fisher indexes in the usual manner. 
+7:185:14055:32:22:72:542:291:144:g_d0_f4:144:g_d0_f3:B:The regression‐based method has the advantage that it does not make huge demands of the 
+7:186:14143:22:22:71:543:269:144:g_d0_f4:144:g_d0_f3:B:data, compared to the other methods discussed here: it only requires individual annual medical 
+7:187:14238:22:22:72:543:247:144:g_d0_f4:144:g_d0_f3:B:spending and dummy variables for whether or not the individual was diagnosed with a certain 
+7:188:14330:22:22:72:543:225:144:g_d0_f4:144:g_d0_f3:B:condition that year. The primary disadvantage is that the method of assignment of spending to 
+7:189:14424:22:22:72:543:203:144:g_d0_f4:144:g_d0_f3:B:particular diagnoses is not based on any theory or model that relates health‐care spending to 
+7:190:14518:22:32:72:181:181:144:g_d0_f4:144:g_d0_f3:B:conditions diagnosed. 
+7:191:14540:32:22:72:543:149:144:g_d0_f5:144:g_d0_f3:B:3.2 Primary diagnosis: This method is used in Aizcorbe et al. (2011). With this method, the 
+7:192:14632:22:22:72:542:127:144:g_d0_f4:144:g_d0_f3:B:spending attached to a claim or medical event is assigned to the diagnosis or the first diagnosis, 
+7:193:14731:22:22:71:542:105:144:g_d0_f4:144:g_d0_f3:B:if there are multiple diagnoses, attached to that claim or event. In some sense, the primary 
+7:194:14824:22:0:71:542:83:144:g_d0_f4:144:g_d0_f3:B:diagnosis method is preferable to all others because the connection between spending and 
+8:195:14915:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:diagnosis is transparent and not dependent on an econometric model of health‐care spending. 
+8:196:15007:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:This method requires, however, that every claim or event have a diagnosis attached to it. Other 
+8:197:15103:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:than the MEPS, the datasets being considered for the Medicare population do not have a 
+8:198:15190:22:22:72:542:642:144:g_d0_f4:144:g_d0_f3:B:diagnosis attached to every claim or event; the survey events collected by the Medicare Current 
+8:199:15286:22:22:71:542:620:144:g_d0_f4:144:g_d0_f3:B:Beneficiary Survey that are not in the Medicare claims (such as drug events and all medical 
+8:200:15378:22:22:71:542:598:144:g_d0_f4:144:g_d0_f3:B:events for Medicare private plan enrollees) do not have diagnoses attached to them and the 
+8:201:15469:22:32:71:422:576:144:g_d0_f4:144:g_d0_f3:B:Medicare Part D claims do not have diagnoses attached to them either. 
+8:202:15539:32:22:71:542:544:144:g_d0_f4:144:g_d0_f3:B:A further difference between the two methods to keep in mind is that they measure slightly 
+8:203:15630:22:22:71:542:522:144:g_d0_f4:144:g_d0_f3:B:different costs. The regression‐based method measures the net cost of a condition; that is, the 
+8:204:15726:22:22:71:543:500:144:g_d0_f4:144:g_d0_f3:B:average difference in spending between a beneficiary with the condition and one without. The 
+8:205:15819:22:22:72:543:478:144:g_d0_f4:144:g_d0_f3:B:net cost of a condition can be negative and we found in Hall and Highfill (2013) that several 
+8:206:15913:22:22:72:542:456:144:g_d0_f4:144:g_d0_f3:B:conditions from the MCBS in‐person survey, such as Alzheimer’s disease, had negative 
+8:207:15998:22:22:71:543:434:144:g_d0_f4:144:g_d0_f3:B:coefficients in the regression and were therefore assigned negative costs. With the primary 
+8:208:16090:22:22:72:542:412:144:g_d0_f4:144:g_d0_f3:B:diagnosis method, all conditions have positive costs. If there are more beneficiaries with, for 
+8:209:16186:22:21:71:542:390:144:g_d0_f4:144:g_d0_f3:B:example, Alzheimer’s disease, the per‐patient expenditures of other conditions that are 
+8:210:16274:21:22:71:543:369:144:g_d0_f4:144:g_d0_f3:B:comorbid with Alzheimer’s disease will be lower in the primary diagnosis while they would, in 
+8:211:16368:22:22:72:543:347:144:g_d0_f4:144:g_d0_f3:B:theory, be unaffected in the regression‐based method. This is another reason for preferring the 
+8:212:16464:22:22:72:543:325:144:g_d0_f4:144:g_d0_f3:B:primary diagnosis method since price indexes in other sectors generally do not allow goods or 
+8:213:16558:22:32:72:217:303:144:g_d0_f4:144:g_d0_f3:B:services with negative prices. 
+8:214:16589:32:22:71:543:271:144:g_d0_f5:144:g_d0_f3:B:3.3 Commercial grouper: Several private companies have developed commercial software for 
+8:215:16678:22:22:72:543:249:144:g_d0_f4:144:g_d0_f3:B:grouping medical spending by episode of illness based on clinical knowledge. These packages 
+8:216:16770:22:22:72:543:227:144:g_d0_f4:144:g_d0_f3:B:are used in Aizcorbe and Nestoriak (2011), Dunn et al. (2012), and Aizcorbe et al. (2011) to 
+8:217:16863:22:22:72:542:205:144:g_d0_f4:144:g_d0_f3:B:create expenditure indexes for medical care. Aizcorbe and Nestoriak (2011) use one on medical 
+8:218:16957:22:22:72:542:183:144:g_d0_f4:144:g_d0_f3:B:claims data from private employer‐sponsored health insurance plans collected by Pharmetrics, 
+8:219:17050:22:22:72:543:161:144:g_d0_f4:144:g_d0_f3:B:Inc., and Dunn et al. (2012) use one on the MarketScan database, a similar dataset of medical 
+8:220:17144:22:22:72:543:139:144:g_d0_f4:144:g_d0_f3:B:claims collected by Truven Health Analytics. Aizcorbe et al. (2011) use a commercial grouper on 
+8:221:17240:22:22:72:542:117:144:g_d0_f4:144:g_d0_f3:B:the MEPS data. The main advantage of these packages over the primary diagnosis method is 
+8:222:17329:22:0:71:542:95:144:g_d0_f4:144:g_d0_f3:B:that they are able to assign spending associated with claims, such as drug claims, that do not 
+9:223:17426:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:have a diagnosis attached directly to them. In addition, unlike the annual regression‐based 
+9:224:17518:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:method, they are able to separate out multiple episodes of the same illness occurring in one 
+9:225:17611:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:year. Depending on the package, they are also able to assign a severity level to the illness. 
+9:226:17705:22:22:72:543:642:144:g_d0_f4:144:g_d0_f3:B:However, their methods are proprietary and therefore completely opaque to the economist 
+9:227:17793:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:using them. We will not be considering groupers in our comparisons in this paper but may study 
+9:228:17888:22:0:72:176:598:144:g_d0_f4:144:g_d0_f3:B:them in future work. 
+10:229:17911:0:16:72:423:708:144:g_d0_f5:144:g_d0_f6:C:Table 1: Previous papers calculating medical care expenditure indexes 
+10:230:17981:16:14:72:516:692:144:g_d0_f5:144:g_d0_f6:C:Paper Dataset Population Years Method Results 
+10:231:18027:14:15:477:543:678:144:g_d0_f5:144:g_d0_f6:C:(AAGR of 
+10:232:18036:15:14:477:543:663:144:g_d0_f5:144:g_d0_f6:C:price index 
+10:233:18048:14:15:477:490:649:144:g_d0_f5:144:g_d0_f6:C:in 
+10:234:18051:15:15:477:536:634:144:g_d0_f5:144:g_d0_f6:C:percentage 
+10:235:18062:15:15:477:515:619:144:g_d0_f5:144:g_d0_f6:C:points) 
+10:236:18070:15:15:72:143:604:144:g_d0_f4:144:g_d0_f3:B:Aizcorbe and 
+10:237:18083:15:14:72:121:589:144:g_d0_f4:144:g_d0_f3:B:Nestoriak 
+10:238:18093:14:0:72:99:575:144:g_d0_f4:144:g_d0_f3:B:2011 
+10:239:18098:0:15:150:215:604:144:g_d0_f4:144:g_d0_f3:C:Pharmetrics, 
+10:240:18111:15:14:150:230:589:144:g_d0_f4:144:g_d0_f3:C:Inc. (medical 
+10:241:18125:14:15:150:230:575:144:g_d0_f4:144:g_d0_f3:C:claims from 
+10:242:18137:15:15:150:188:560:144:g_d0_f4:144:g_d0_f3:C:private 
+10:243:18145:15:14:150:201:545:144:g_d0_f4:144:g_d0_f3:C:employer‐
+10:244:18154:14:15:150:205:531:144:g_d0_f4:144:g_d0_f3:C:sponsored 
+10:245:18164:15:14:150:185:516:144:g_d0_f4:144:g_d0_f3:C:health 
+10:246:18171:14:15:150:201:502:144:g_d0_f4:144:g_d0_f3:C:insurance 
+10:247:18181:15:0:150:183:487:144:g_d0_f4:144:g_d0_f3:C:plans) 
+10:248:18188:0:15:238:319:604:144:g_d0_f4:144:g_d0_f3:C:Beneficiaries of 
+10:249:18205:15:14:238:275:589:144:g_d0_f4:144:g_d0_f3:C:private 
+10:250:18213:14:15:238:288:575:144:g_d0_f4:144:g_d0_f3:C:employer‐
+10:251:18222:15:15:238:292:560:144:g_d0_f4:144:g_d0_f3:C:sponsored 
+10:252:18232:15:0:238:288:545:144:g_d0_f4:144:g_d0_f3:C:insurance 
+10:253:18242:0:15:327:453:604:144:g_d0_f4:144:g_d0_f3:C:2003‐2005 Commercial 
+10:254:18263:15:14:392:433:589:144:g_d0_f4:144:g_d0_f3:C:grouper 
+10:255:18271:14:0:392:452:575:144:g_d0_f4:144:g_d0_f3:C:(Symmetry) 
+10:256:18282:0:132:477:495:604:144:g_d0_f4:144:g_d0_f3:C:3.7 
+10:257:18286:132:15:72:143:472:144:g_d0_f4:144:g_d0_f3:B:Dunn et al. 
+10:258:18298:15:0:72:99:457:144:g_d0_f4:144:g_d0_f3:B:2012 
+10:259:18303:0:15:150:212:472:144:g_d0_f4:144:g_d0_f3:C:MarketScan 
+10:260:18314:15:15:150:230:457:144:g_d0_f4:144:g_d0_f3:C:(medical claims 
+10:261:18330:15:14:150:230:442:144:g_d0_f4:144:g_d0_f3:C:from private 
+10:262:18343:14:15:150:201:428:144:g_d0_f4:144:g_d0_f3:C:employer‐
+10:263:18352:15:14:150:205:413:144:g_d0_f4:144:g_d0_f3:C:sponsored 
+10:264:18362:14:15:150:185:399:144:g_d0_f4:144:g_d0_f3:C:health 
+10:265:18369:15:15:150:201:384:144:g_d0_f4:144:g_d0_f3:C:insurance 
+10:266:18379:15:0:150:183:369:144:g_d0_f4:144:g_d0_f3:C:plans) 
+10:267:18386:0:15:238:319:472:144:g_d0_f4:144:g_d0_f3:C:Beneficiaries of 
+10:268:18403:15:15:238:275:457:144:g_d0_f4:144:g_d0_f3:C:private 
+10:269:18411:15:14:238:288:442:144:g_d0_f4:144:g_d0_f3:C:employer‐
+10:270:18420:14:15:238:292:428:144:g_d0_f4:144:g_d0_f3:C:sponsored 
+10:271:18430:15:0:238:288:413:144:g_d0_f4:144:g_d0_f3:C:insurance 
+10:272:18440:0:15:327:453:472:144:g_d0_f4:144:g_d0_f3:C:2003‐2007 Commercial 
+10:273:18461:15:15:392:433:457:144:g_d0_f4:144:g_d0_f3:C:grouper 
+10:274:18469:15:0:392:452:442:144:g_d0_f4:144:g_d0_f3:C:(Symmetry) 
+10:275:18480:0:118:477:495:472:144:g_d0_f4:144:g_d0_f3:C:3.6 
+10:276:18484:118:15:72:143:354:144:g_d0_f4:144:g_d0_f3:B:Aizcorbe et 
+10:277:18496:15:0:72:113:339:144:g_d0_f4:144:g_d0_f3:B:al. 2011 
+10:278:18505:0:15:150:192:354:144:g_d0_f4:144:g_d0_f3:C:Medical 
+10:279:18513:15:14:150:213:339:144:g_d0_f4:144:g_d0_f3:C:Expenditure 
+10:280:18525:14:15:150:230:325:144:g_d0_f4:144:g_d0_f3:C:Panel Survey 
+10:281:18538:15:0:150:189:310:144:g_d0_f4:144:g_d0_f3:C:(MEPS) 
+10:282:18545:0:15:238:317:354:144:g_d0_f4:144:g_d0_f3:C:US non‐
+10:283:18552:15:14:238:319:339:144:g_d0_f4:144:g_d0_f3:C:institutionalized 
+10:284:18570:14:15:238:274:325:144:g_d0_f4:144:g_d0_f3:C:civilian 
+10:285:18579:15:0:238:288:310:144:g_d0_f4:144:g_d0_f3:C:residents  
+10:286:18590:0:15:327:433:354:144:g_d0_f4:144:g_d0_f3:C:2001‐2005 Primary 
+10:287:18608:15:14:392:443:339:144:g_d0_f4:144:g_d0_f3:C:diagnosis, 
+10:288:18619:14:15:392:456:325:144:g_d0_f4:144:g_d0_f3:C:proportional 
+10:289:18632:15:15:392:443:310:144:g_d0_f4:144:g_d0_f3:C:diagnosis, 
+10:290:18643:15:14:392:452:295:144:g_d0_f4:144:g_d0_f3:C:commercial 
+10:291:18654:14:15:392:433:281:144:g_d0_f4:144:g_d0_f3:C:grouper 
+10:292:18662:15:14:392:469:266:144:g_d0_f4:144:g_d0_f3:C:(Truven Health 
+10:293:18677:14:0:392:442:252:144:g_d0_f4:144:g_d0_f3:C:Analytics) 
+10:294:18688:0:118:477:537:354:144:g_d0_f4:144:g_d0_f3:C:6.9, 6.6, 6.8 
+10:295:18702:118:14:72:143:236:144:g_d0_f4:144:g_d0_f3:B:Hall and 
+10:296:18711:14:0:72:136:222:144:g_d0_f4:144:g_d0_f3:B:Highfill 2013 
+10:297:18725:0:14:150:200:236:144:g_d0_f4:144:g_d0_f3:C:Medicare 
+10:298:18734:14:15:150:191:222:144:g_d0_f4:144:g_d0_f3:C:Current 
+10:299:18742:15:15:150:208:207:144:g_d0_f4:144:g_d0_f3:C:Beneficiary 
+10:300:18754:15:0:150:186:192:144:g_d0_f4:144:g_d0_f3:C:Survey 
+10:301:18761:0:14:238:287:236:144:g_d0_f4:144:g_d0_f3:C:Medicare 
+10:302:18770:14:0:238:303:222:144:g_d0_f4:144:g_d0_f3:C:beneficiaries 
+10:303:18784:0:14:327:449:236:144:g_d0_f4:144:g_d0_f3:C:2001‐2005 Regression‐
+10:304:18805:14:0:392:424:222:144:g_d0_f4:144:g_d0_f3:C:based 
+10:305:18811:0:59:477:495:236:144:g_d0_f4:144:g_d0_f3:C:5.8 
+10:306:18815:59:0:72:75:177:144:g_d0_f3:144:g_d0_f3:B: 
+11:307:18819:0:34:72:135:706:195:g_d0_f5:195:g_d0_f6:C:4 Datasets 
+11:308:18830:34:21:72:543:672:144:g_d0_f4:144:g_d0_f3:B:Table 2 summarizes the features of datasets available for calculating medical care expenditure 
+11:309:18925:21:22:72:543:651:144:g_d0_f4:144:g_d0_f3:B:indexes for Medicare beneficiaries. In general, to create a medical care expenditure index, we 
+11:310:19020:22:33:72:454:629:144:g_d0_f4:144:g_d0_f3:B:need variables for total spending and for diagnoses at at least an annual level. 
+11:311:19101:33:15:72:383:596:144:g_d0_f5:144:g_d0_f6:C:Table 2: Summary of datasets covering Medicare beneficiaries 
+11:312:19162:15:15:72:351:581:144:g_d0_f5:144:g_d0_f6:C:Dataset Coverage Annual sample 
+11:313:19193:15:14:263:351:566:144:g_d0_f5:144:g_d0_f6:C:size of Medicare 
+11:314:19210:14:0:263:330:552:144:g_d0_f5:144:g_d0_f6:C:beneficiaries 
+11:315:19224:0:15:359:447:581:144:g_d0_f5:144:g_d0_f6:C:Data available 
+11:316:19239:15:14:359:447:566:144:g_d0_f5:144:g_d0_f6:C:for FFS 
+11:317:19247:14:0:359:425:552:144:g_d0_f5:144:g_d0_f6:C:beneficiaries 
+11:318:19261:0:15:454:543:581:144:g_d0_f5:144:g_d0_f6:A:Data available 
+11:319:19276:15:14:454:542:566:144:g_d0_f5:144:g_d0_f6:A:for private plan 
+11:320:19293:14:16:454:503:552:144:g_d0_f5:144:g_d0_f6:A:enrollees 
+11:321:19303:16:14:72:121:536:144:g_d0_f4:144:g_d0_f3:B:Medicare 
+11:322:19312:14:15:72:112:522:144:g_d0_f4:144:g_d0_f3:B:Current 
+11:323:19320:15:14:72:129:507:144:g_d0_f4:144:g_d0_f3:B:Beneficiary 
+11:324:19332:14:0:72:146:493:144:g_d0_f4:144:g_d0_f3:B:Survey (MCBS) 
+11:325:19346:0:14:167:255:536:144:g_d0_f4:144:g_d0_f3:C:All Medicare 
+11:326:19359:14:0:167:232:522:144:g_d0_f4:144:g_d0_f3:C:beneficiaries 
+11:327:19373:0:14:263:396:536:144:g_d0_f4:144:g_d0_f3:C:12,000 Annual 
+11:328:19387:14:15:359:426:522:144:g_d0_f4:144:g_d0_f3:C:demographic 
+11:329:19399:15:14:359:447:507:144:g_d0_f4:144:g_d0_f3:C:and conditions 
+11:330:19414:14:15:359:447:493:144:g_d0_f4:144:g_d0_f3:C:survey, all 
+11:331:19426:15:15:359:447:478:144:g_d0_f4:144:g_d0_f3:C:medical events 
+11:332:19441:15:14:359:447:463:144:g_d0_f4:144:g_d0_f3:C:and spending, 
+11:333:19455:14:15:359:447:449:144:g_d0_f4:144:g_d0_f3:C:Medicare Part A 
+11:334:19471:15:15:359:447:434:144:g_d0_f4:144:g_d0_f3:C:(hospital) and 
+11:335:19486:15:14:359:447:419:144:g_d0_f4:144:g_d0_f3:C:Part B (physician) 
+11:336:19505:14:0:359:392:405:144:g_d0_f4:144:g_d0_f3:C:claims 
+11:337:19512:0:14:454:492:536:144:g_d0_f4:144:g_d0_f3:A:Annual 
+11:338:19519:14:15:454:522:522:144:g_d0_f4:144:g_d0_f3:A:demographic 
+11:339:19531:15:14:454:545:507:144:g_d0_f4:144:g_d0_f3:A:and conditions  
+11:340:19547:14:15:454:543:493:144:g_d0_f4:144:g_d0_f3:A:survey, all 
+11:341:19559:15:15:454:543:478:144:g_d0_f4:144:g_d0_f3:A:medical events 
+11:342:19574:15:74:454:523:463:144:g_d0_f4:144:g_d0_f3:A:and spending 
+11:343:19587:74:14:72:255:389:144:g_d0_f4:144:g_d0_f3:B:Medicare claims FFS Medicare 
+11:344:19616:14:0:167:232:375:144:g_d0_f4:144:g_d0_f3:C:beneficiaries 
+11:345:19630:0:14:263:447:389:144:g_d0_f4:144:g_d0_f3:C:~2 million Part A and Part B 
+11:346:19659:14:15:359:447:375:144:g_d0_f4:144:g_d0_f3:C:claims; Part D 
+11:347:19674:15:14:359:445:360:144:g_d0_f4:144:g_d0_f3:C:(pharmaceutical) 
+11:348:19691:14:15:359:447:346:144:g_d0_f4:144:g_d0_f3:C:claims for about 
+11:349:19708:15:15:359:447:331:144:g_d0_f4:144:g_d0_f3:C:50‐60% of 5% 
+11:350:19721:15:0:359:397:316:144:g_d0_f4:144:g_d0_f3:C:sample 
+11:351:19728:0:88:454:474:389:144:g_d0_f4:144:g_d0_f3:A:n/a 
+11:352:19732:88:15:72:113:301:144:g_d0_f4:144:g_d0_f3:B:Medical 
+11:353:19740:15:14:72:134:286:144:g_d0_f4:144:g_d0_f3:B:Expenditure 
+11:354:19752:14:15:72:159:272:144:g_d0_f4:144:g_d0_f3:B:Panel Survey 
+11:355:19765:15:0:72:110:257:144:g_d0_f4:144:g_d0_f3:B:(MEPS) 
+11:356:19772:0:15:167:192:301:144:g_d0_f4:144:g_d0_f3:C:Non‐
+11:357:19776:15:14:167:249:286:144:g_d0_f4:144:g_d0_f3:C:institutionalized 
+11:358:19794:14:15:167:217:272:144:g_d0_f4:144:g_d0_f3:C:Medicare 
+11:359:19803:15:0:167:234:257:144:g_d0_f4:144:g_d0_f3:C:beneficiaries  
+11:360:19818:0:15:263:447:301:144:g_d0_f4:144:g_d0_f3:C:4,600 All medical 
+11:361:19836:15:14:359:447:286:144:g_d0_f4:144:g_d0_f3:C:events and 
+11:362:19847:14:15:359:447:272:144:g_d0_f4:144:g_d0_f3:C:spending, with 
+11:363:19862:15:14:359:410:257:144:g_d0_f4:144:g_d0_f3:C:diagnoses 
+11:364:19872:14:15:359:405:243:144:g_d0_f4:144:g_d0_f3:C:attached 
+11:365:19881:15:15:359:447:228:144:g_d0_f4:144:g_d0_f3:C:(collected by 
+11:366:19895:15:0:359:397:213:144:g_d0_f4:144:g_d0_f3:C:survey) 
+11:367:19903:0:15:454:542:301:144:g_d0_f4:144:g_d0_f3:A:All medical 
+11:368:19915:15:14:454:542:286:144:g_d0_f4:144:g_d0_f3:A:events and 
+11:369:19926:14:15:454:542:272:144:g_d0_f4:144:g_d0_f3:A:spending, with 
+11:370:19941:15:14:454:506:257:144:g_d0_f4:144:g_d0_f3:A:diagnoses 
+11:371:19951:14:15:454:501:243:144:g_d0_f4:144:g_d0_f3:A:attached 
+11:372:19960:15:15:454:542:228:144:g_d0_f4:144:g_d0_f3:A:(collected by 
+11:373:19974:15:15:454:493:213:144:g_d0_f4:144:g_d0_f3:A:survey) 
+11:374:19982:15:32:72:75:198:144:g_d0_f3:144:g_d0_f3:B: 
+11:375:19983:32:22:72:543:166:144:g_d0_f5:144:g_d0_f3:B:4.1.1 Medicare Current Beneficiary Survey (MCBS): The MCBS is a survey of the demographics, 
+11:376:20075:22:22:72:543:144:144:g_d0_f4:144:g_d0_f3:B:diagnosed conditions, health status, and total medical spending of a representative sample of 
+11:377:20169:22:22:72:543:122:144:g_d0_f4:144:g_d0_f3:B:Medicare beneficiaries. It is conducted by the Center for Medicare and Medicaid Services, the 
+11:378:20263:22:22:72:543:100:144:g_d0_f4:144:g_d0_f3:B:agency that operates Medicare. As it samples from the universe of Medicare beneficiaries, it 
+11:379:20356:22:0:72:543:78:144:g_d0_f4:144:g_d0_f3:B:includes both FFS Medicare beneficiaries and those enrolled in Medicare private plans, and 
+12:380:20450:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:both beneficiaries residing in the community and in institutions such as nursing homes. The 
+12:381:20542:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:medical conditions portion of the survey takes place once a year, towards the end of the year, 
+12:382:20637:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:and in it, the respondent is asked whether they have been told by a doctor if they have each of 
+12:383:20733:22:22:72:543:642:144:g_d0_f4:144:g_d0_f3:B:about 30 conditions. Health‐care spending and medical events are also collected directly from 
+12:384:20827:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:the respondent on a regular basis. For FFS beneficiaries, the Part A and Part B claims with dollar 
+12:385:20926:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:amounts and diagnosis codes are also attached to the survey so there are two sources of 
+12:386:21014:22:22:72:543:576:144:g_d0_f4:144:g_d0_f3:B:diagnoses and spending for these beneficiaries. The MCBS reconciles the orally reported events 
+12:387:21109:22:22:72:543:554:144:g_d0_f4:144:g_d0_f3:B:and the claims so that spending and events are not duplicated in the final version of the 
+12:388:21199:22:22:72:543:532:144:g_d0_f4:144:g_d0_f3:B:dataset. For private plan enrollees, the only source of information is the spending, events, and 
+12:389:21296:22:32:72:287:510:144:g_d0_f4:144:g_d0_f3:B:diagnoses reported in the in‐person survey. 
+12:390:21340:32:22:72:542:478:144:g_d0_f5:144:g_d0_f3:B:4.1.2 Medicare claims: Part A (hospital) and Part B (doctor) claims are available for a 5% 
+12:391:21431:22:22:71:542:456:144:g_d0_f4:144:g_d0_f3:B:random sample of Medicare beneficiaries from CMS for research purposes. In addition, starting 
+12:392:21525:22:22:71:543:434:144:g_d0_f4:144:g_d0_f3:B:in 2006, a sample of Part D claims are available for those 50‐60% of FFS beneficiaries in the 5% 
+12:393:21622:22:21:72:543:412:144:g_d0_f4:144:g_d0_f3:B:who are on Part D. In this paper, rather than showing calculations from the full 5% sample, we 
+12:394:21717:21:32:72:500:391:144:g_d0_f4:144:g_d0_f3:B:will evaluate Medicare claims data by using the Medicare claims data tied to the MCBS. 
+12:395:21804:32:22:71:542:359:144:g_d0_f5:144:g_d0_f3:B:4.1.3 Medical Expenditure Panel Survey (MEPS): The MEPS is a nationally representative 
+12:396:21891:22:22:71:542:337:144:g_d0_f4:144:g_d0_f3:B:survey of healthcare coverage, utilization, and expenditures for the civilian non‐institutionalized 
+12:397:21991:22:22:71:542:315:144:g_d0_f4:144:g_d0_f3:B:U.S. population.  It is conducted by the Department of Health and Human Services’ Agency for 
+12:398:22084:22:22:71:542:293:144:g_d0_f4:144:g_d0_f3:B:Healthcare Research and Quality (AHRQ).  The survey sample is drawn from the respondents of 
+12:399:22176:22:22:71:542:271:144:g_d0_f4:144:g_d0_f3:B:the prior year’s National Health Interview Survey (NHIS) and includes both fee‐for‐service and 
+12:400:22271:22:22:72:542:249:144:g_d0_f4:144:g_d0_f3:B:private plan Medicare beneficiaries living in the community (that is, not in a nursing home or 
+12:401:22366:22:22:71:543:227:144:g_d0_f4:144:g_d0_f3:B:other institution).  Using an overlapping panel design, each household is surveyed over the 
+12:402:22458:22:22:72:543:205:144:g_d0_f4:144:g_d0_f3:B:course of two years in five rounds of interviews.  The family member most knowledgeable 
+12:403:22546:22:22:72:543:183:144:g_d0_f4:144:g_d0_f3:B:about the entire household’s health and health care use is interviewed.  Observations are 
+12:404:22636:22:22:72:543:161:144:g_d0_f4:144:g_d0_f3:B:collected and reported for every medical event and may contain up to four diagnoses 
+12:405:22720:22:22:72:542:139:144:g_d0_f4:144:g_d0_f3:B:each.  The MEPS also collects data from a sample of respondents' providers to verify use of 
+12:406:22812:22:0:71:362:117:144:g_d0_f4:144:g_d0_f6:C:services, charges and sources of payments, and diagnoses.  
+13:407:22874:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:Table 3 compares the spending of all Medicare FFS beneficiaries in the MCBS, Medicare FFS 
+13:408:22964:22:22:71:542:686:144:g_d0_f4:144:g_d0_f3:B:beneficiaries in the MCBS who are living in the community, and Medicare FFS beneficiaries in 
+13:409:23057:22:22:71:542:664:144:g_d0_f4:144:g_d0_f3:B:the MEPS (who all reside in the community). As it shows, mean spending by Medicare 
+13:410:23140:22:22:71:543:642:144:g_d0_f4:144:g_d0_f3:B:beneficiaries in the MEPS is quite a bit lower than that of similar Medicare beneficiaries in the 
+13:411:23238:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:MCBS. Zuvekas and Olin (2009) conduct a detailed comparison of full‐year Medicare 
+13:412:23320:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:beneficiaries residing in the community in the MEPS, those same beneficiaries’ Medicare 
+13:413:23408:22:22:72:543:576:144:g_d0_f4:144:g_d0_f3:B:claims, and similar beneficiaries in the MCBS in the years 2002‐2003. They find that the ratio of 
+13:414:23506:22:22:72:543:554:144:g_d0_f4:144:g_d0_f3:B:mean spending of beneficiaries in the MEPS to that of similar beneficiaries in the MCBS to be 
+13:415:23600:22:22:72:543:532:144:g_d0_f4:144:g_d0_f3:B:0.81. We find a similar result; as table 3 shows, the ratio of the spending of full‐year Medicare 
+13:416:23698:22:22:72:543:510:144:g_d0_f4:144:g_d0_f3:B:beneficiaries living in the community in our analytic sample from the MEPS to that of similar 
+13:417:23792:22:22:72:543:488:144:g_d0_f4:144:g_d0_f3:B:beneficiaries in our sample from the MCBS ranges between 0.69 and 0.80 over the period 
+13:418:23879:22:22:72:542:466:144:g_d0_f4:144:g_d0_f3:B:studied. Our MCBS sample includes claims by separately billing labs, which that of Zuvekas and 
+13:419:23974:22:22:72:543:444:144:g_d0_f4:144:g_d0_f3:B:Olin does not, which may explain the slightly lower ratio. Zuvekas and Olin find that about half 
+13:420:24071:22:22:72:543:422:144:g_d0_f4:144:g_d0_f3:B:of the gap is due to underreporting of spending by respondents to the MEPS, and about half is 
+13:421:24165:22:21:72:540:400:144:g_d0_f4:144:g_d0_f3:B:due to the absence of higher‐expenditure cases in the MEPS. We also find an absence of higher‐
+13:422:24259:21:22:71:543:379:144:g_d0_f4:144:g_d0_f3:B:expenditure cases in the MEPS as compared to the MCBS; as table 3 shows, both the skewness 
+13:423:24350:22:22:72:542:357:144:g_d0_f4:144:g_d0_f3:B:coefficient for the distribution of spending and the value of the maximum observation are 
+13:424:24440:22:22:71:542:335:144:g_d0_f4:144:g_d0_f3:B:generally much higher in the MCBS, implying a longer tail in that distribution. Unfortunately, we 
+13:425:24538:22:22:71:542:313:144:g_d0_f4:144:g_d0_f3:B:have no way of adjusting for underreporting and the absence of more expensive cases in the 
+13:426:24629:22:22:71:543:291:144:g_d0_f4:144:g_d0_f3:B:MEPS but simply note that they may be factors in any differences we observe between the 
+13:427:24717:22:32:72:177:269:144:g_d0_f4:144:g_d0_f3:B:MEPS and the MCBS. 
+13:428:24736:32:32:72:147:237:144:g_d0_f5:144:g_d0_f6:C:4.2 Prevalence 
+13:429:24751:32:22:72:542:205:144:g_d0_f4:144:g_d0_f3:B:In this section, we discuss issues relating to how treated prevalence of medical conditions is 
+13:430:24846:22:22:71:543:183:144:g_d0_f4:144:g_d0_f3:B:measured in the datasets we are using since it has important implications for the resulting 
+13:431:24938:22:22:72:543:161:144:g_d0_f4:144:g_d0_f3:B:expenditure index. To see this, consider that total health‐care spending in a population can be 
+13:432:25034:22:47:72:250:139:144:g_d0_f4:144:g_d0_f3:B:expressed as a sum over conditions: 
+13:433:25070:47:0:198:412:92:144:g_d0_f8:73:g_d0_f8:?:ܲ෍	ൌ݃݊݅݀݊݁݌ݏ	݁ݎܽܿെ݄ݐ݈݄ܽ݁	݈ܽݐ݋ܶത௝ܰ௝
+13:434:25104:0:34:380:384:111:73:g_d0_f8:73:g_d0_f8:?:௃
+13:435:25105:34:0:374:390:77:73:g_d0_f8:73:g_d0_f8:?:௝ୀଵ
+13:436:25108:0:0:413:416:92:144:g_d0_f3:144:g_d0_f3:C: 
+15:437:26050:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:where j indexes conditions, Pj is the average amount spent to treat condition j and Nj is the 
+15:438:26144:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:number of people treated for condition j. Nj divided by the total population is the treated 
+15:439:26236:22:32:72:223:664:144:g_d0_f4:144:g_d0_f3:B:prevalence for that condition.  
+15:440:26268:32:22:71:543:632:144:g_d0_f9:144:g_d0_f3:B:Pj is the object of concern when we are calculating an expenditure index; however, the data we 
+15:441:26363:22:22:72:543:610:144:g_d0_f4:144:g_d0_f3:B:use have total spending and Nj as given and we must infer Pj with one of the various methods 
+15:442:26456:22:22:72:542:588:144:g_d0_f4:144:g_d0_f3:B:that will be discussed further down. In addition, as is standard in a Fisher index formula, treated 
+15:443:26556:22:22:71:543:566:144:g_d0_f4:144:g_d0_f3:B:prevalences are used to weight the indexes for the individual conditions when they are 
+15:444:26643:22:22:72:543:544:144:g_d0_f4:144:g_d0_f3:B:aggregated into an expenditure index for medical care as a whole. Differences in methods for 
+15:445:26736:22:22:72:542:522:144:g_d0_f4:144:g_d0_f3:B:collecting conditions from respondents will therefore lead to different results in the resulting 
+15:446:26833:22:32:71:179:500:144:g_d0_f4:144:g_d0_f3:B:expenditure indexes.  
+15:447:26855:32:32:71:415:468:144:g_d0_f5:144:g_d0_f6:C:4.2.1 Treated prevalence in the Medicare Current Beneficiary Survey 
+15:448:26923:32:22:71:542:436:144:g_d0_f4:144:g_d0_f3:B:The first issue we note is the differences in the MCBS between survey‐based prevalences and 
+15:449:27015:22:22:71:542:414:144:g_d0_f4:144:g_d0_f3:B:claims‐based prevalences. The survey‐based prevalences in the MCBS are based on the annual 
+15:450:27106:22:22:71:543:392:144:g_d0_f4:144:g_d0_f3:B:survey administered to all respondents. In this survey, respondents who live in the community 
+15:451:27200:22:21:72:543:370:144:g_d0_f4:144:g_d0_f3:B:are asked if they have been told by a doctor in the past year if they have each of about 30 
+15:452:27292:21:22:72:543:349:144:g_d0_f4:144:g_d0_f3:B:conditions. For respondents who are residing in nursing homes, the MCBS has a nursing home 
+15:453:27383:22:22:72:542:327:144:g_d0_f4:144:g_d0_f3:B:staff member fill out a questionnaire about conditions based on the respondent’s nursing home 
+15:454:27477:22:22:71:542:305:144:g_d0_f4:144:g_d0_f3:B:and medical records. The claims‐based prevalences are based on the respondent’s Part A 
+15:455:27564:22:22:71:543:283:144:g_d0_f4:144:g_d0_f3:B:(hospital) and Part B (physician) Medicare claims. The claims are only available for respondents 
+15:456:27661:22:22:71:543:261:144:g_d0_f4:144:g_d0_f3:B:who are enrolled in fee‐for‐service (FFS) Medicare and not for respondents enrolled in 
+15:457:27748:22:32:72:191:239:144:g_d0_f4:144:g_d0_f3:B:Medicare private plans.  
+15:458:27773:32:22:72:543:207:144:g_d0_f4:144:g_d0_f3:B:For the FFS beneficiaries in the MCBS therefore, we have both sets of diagnoses for the same 
+15:459:27866:22:22:72:543:185:144:g_d0_f4:144:g_d0_f3:B:beneficiaries and can examine the degree of agreement between them. Table 4 reports 
+15:460:27950:22:22:72:543:163:144:g_d0_f4:144:g_d0_f3:B:prevalences in 2001 from the MCBS survey and from the MCBS claims, as well as the percent of 
+15:461:28043:22:22:72:542:141:144:g_d0_f4:144:g_d0_f3:B:beneficiaries who are indicated as having an illness in both the survey and the claims.2 First, 
+15:462:28139:22:15:71:542:119:144:g_d0_f4:144:g_d0_f3:B:note that in general claims‐based prevalence is higher than survey‐based prevalence. There is 
+15:463:28233:15:9:72:218:104:121:g_d0_f3:121:g_d0_f3:F:                                                            
+15:464:28293:9:20:72:525:95:64:g_d0_f4:144:g_d0_f3:B:2 For how the survey diagnoses were translated into ICD‐9 codes for purposes of comparison 
+15:465:28384:20:0:71:379:75:144:g_d0_f4:144:g_d0_f3:B:with the claims, see Appendix Table 1 in Hall and Highfill 2013. 
+17:466:29694:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:also quite a bit of disagreement between the two sources of diagnoses and the agreement rate 
+17:467:29787:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:is often less than half of either the survey‐based prevalence or the claims‐based prevalence. 
+17:468:29881:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:When weighted by prevalence, the overlap rate divided by the claims‐based prevalence 
+17:469:29966:22:22:72:543:642:144:g_d0_f4:144:g_d0_f3:B:averages about 40 percent and the overlap rate divided by the survey‐based prevalence 
+17:470:30052:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:averages about 62 percent. One possible cause of disagreement in prevalence between the 
+17:471:30140:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:survey and the claims may come from the lack of drug‐related diagnoses in the claims data. As 
+17:472:30234:22:22:72:543:576:144:g_d0_f4:144:g_d0_f3:B:mentioned above, the claims data attached to the MCBS only include doctor and hospital 
+17:473:30321:22:22:72:543:554:144:g_d0_f4:144:g_d0_f3:B:claims. There are no prescription drug claims, even for beneficiaries enrolled in Medicare Part D 
+17:474:30419:22:22:72:543:532:144:g_d0_f4:144:g_d0_f3:B:after 2006 and, in any case, prescription drug claims generally do not include diagnoses. 
+17:475:30509:22:22:72:543:510:144:g_d0_f4:144:g_d0_f3:B:Beneficiaries may therefore have chronic illnesses for which they are taking prescription drugs 
+17:476:30605:22:22:72:543:488:144:g_d0_f4:144:g_d0_f3:B:regularly and which they report on the survey but either they did not have a non‐drug event 
+17:477:30697:22:22:72:542:466:144:g_d0_f4:144:g_d0_f3:B:related to the condition during the survey year or these conditions are not recorded by their 
+17:478:30791:22:22:71:542:444:144:g_d0_f4:144:g_d0_f3:B:health‐care providers. However, some of the highest rates of agreement between survey and 
+17:479:30881:22:22:71:542:422:144:g_d0_f4:144:g_d0_f3:B:claims are in illnesses for which this issue would most be of concern. There are five chronic 
+17:480:30975:22:21:71:542:400:144:g_d0_f4:144:g_d0_f3:B:illnesses for whom the share of spending on pharmaceuticals is over 50 percent of total 
+17:481:31063:21:22:71:543:379:144:g_d0_f4:144:g_d0_f3:B:spending on the illness: diabetes, mental/psychiatric disorder, Alzheimers/dementia, 
+17:482:31148:22:22:72:543:357:144:g_d0_f4:144:g_d0_f3:B:osteoporosis, and hypertension. Agreement rates between survey‐based and claims‐based 
+17:483:31234:22:22:72:540:335:144:g_d0_f4:144:g_d0_f3:B:prevalence are in fact noticeably higher for this group: the overlap rate divided by the claims‐
+17:484:31330:22:22:72:543:313:144:g_d0_f4:144:g_d0_f3:B:based prevalence has a weighted average of 63 percent and the overlap rate divided by the 
+17:485:31420:22:22:72:542:291:144:g_d0_f4:144:g_d0_f3:B:survey‐based prevalence has a weighted average of 72 percent. It seems possible therefore that 
+17:486:31515:22:22:71:542:269:144:g_d0_f4:144:g_d0_f3:B:the act of taking a daily drug for an illness may actually improve survey respondents’ knowledge 
+17:487:31612:22:32:71:281:247:144:g_d0_f4:144:g_d0_f3:B:and memory of what diagnoses they have. 
+17:488:31652:32:22:71:542:215:144:g_d0_f4:144:g_d0_f3:B:There are multiple other potential causes of the discrepancies between survey‐based and 
+17:489:31740:22:22:72:543:193:144:g_d0_f4:144:g_d0_f3:B:claims‐based prevalence. The reasons that a condition might be reported in the survey but not 
+17:490:31834:22:22:72:543:171:144:g_d0_f4:144:g_d0_f3:B:in the claims include beneficiary errors in the existence of illnesses, beneficiary errors in the 
+17:491:31932:22:22:72:543:149:144:g_d0_f4:144:g_d0_f3:B:timing of illnesses, providers omitting to code a condition, and that the condition was treated 
+17:492:32028:22:22:72:543:127:144:g_d0_f4:144:g_d0_f3:B:but the treatment was not paid for by Medicare. The reasons that a condition might be 
+17:493:32114:22:22:72:543:105:144:g_d0_f4:144:g_d0_f3:B:reported in the claims but not in the survey include again beneficiary or provider error and the 
+17:494:32211:22:0:72:543:83:144:g_d0_f4:144:g_d0_f3:B:provider upcoding a diagnosis. Given that claims‐based prevalence is generally higher than 
+18:495:32305:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:survey‐based prevalence and that the disagreement is noticeably lower for conditions for which 
+18:496:32400:22:22:71:542:686:144:g_d0_f4:144:g_d0_f3:B:beneficiaries are taking a prescription drug on a regular basis, it seems likely that beneficiary 
+18:497:32498:22:22:71:542:664:144:g_d0_f4:144:g_d0_f3:B:error is the largest source of disagreement. Claims‐based prevalence may therefore be a more 
+18:498:32591:22:22:71:543:642:144:g_d0_f4:144:g_d0_f3:B:reliable measure of treated prevalence in the MCBS. However, as noted above, there is a 
+18:499:32679:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:notable disadvantage to relying solely on claims data as the source data for Medicare 
+18:500:32765:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:beneficiaries when constructing an MCE index, namely that we do not have claims for the 
+18:501:32853:22:32:72:249:576:144:g_d0_f4:144:g_d0_f3:B:enrollees in Medicare private plans. 
+18:502:32890:32:32:72:402:544:144:g_d0_f5:144:g_d0_f6:C:4.2.2 Treated prevalence in the Medical Expenditure Panel Survey 
+18:503:32955:32:22:72:542:512:144:g_d0_f4:144:g_d0_f3:B:The second problem with measuring treated prevalence in the datasets we are examining 
+18:504:33041:22:22:71:542:490:144:g_d0_f4:144:g_d0_f3:B:relates to a change in the Household Component of the MEPS in 2007 in its method for relating 
+18:505:33135:22:22:71:542:468:144:g_d0_f4:144:g_d0_f3:B:health care events and spending to medical conditions. In the MEPS, medical conditions are 
+18:506:33226:22:22:71:543:446:144:g_d0_f4:144:g_d0_f3:B:collected up front from respondents in their initial survey. Before 2007, in the initial interview, 
+18:507:33326:22:22:72:542:424:144:g_d0_f4:144:g_d0_f3:B:conditions were only reported if the respondent volunteered them in response to a general 
+18:508:33416:22:21:71:543:402:144:g_d0_f4:144:g_d0_f3:B:question about medical conditions. In 2007, MEPS introduced the Priority Conditions 
+18:509:33500:21:22:72:543:381:144:g_d0_f4:144:g_d0_f3:B:Enumeration section of the survey, in which respondents were asked whether they had certain 
+18:510:33592:22:22:72:542:359:144:g_d0_f4:144:g_d0_f3:B:priority conditions. (This method is similar to how conditions are collected in the MCBS 
+18:511:33681:22:22:72:543:337:144:g_d0_f4:144:g_d0_f3:B:throughout the entire period.) When medical events are later collected, the respondent is 
+18:512:33771:22:32:72:517:315:144:g_d0_f4:144:g_d0_f3:B:prompted to relate these events to conditions that had been reported in the initial survey.  
+18:513:33864:32:22:72:543:283:144:g_d0_f4:144:g_d0_f3:B:The treated prevalences from the MEPS that we use to calculate an MCE are calculated from 
+18:514:33954:22:22:72:542:261:144:g_d0_f4:144:g_d0_f3:B:the medical events files and not from the conditions survey because we are primarily interested 
+18:515:34050:22:22:71:543:239:144:g_d0_f4:144:g_d0_f3:B:in conditions as they relate directly to health care expenditure. However, the methodology 
+18:516:34141:22:22:72:543:217:144:g_d0_f4:144:g_d0_f3:B:change in 2007 resulted in a dramatic increase in the event‐based treated prevalences of 
+18:517:34230:22:22:72:543:195:144:g_d0_f4:144:g_d0_f3:B:certain conditions. Table 5 shows the treated prevalences of the priority conditions in the 
+18:518:34322:22:22:72:543:173:144:g_d0_f4:144:g_d0_f3:B:Priority Conditions Enumeration file from the MEPS by year from 2001‐2009. The total 
+18:519:34407:22:22:72:543:151:144:g_d0_f4:144:g_d0_f3:B:prevalence in 2007 is the top number of the three reported for each condition for that year. As 
+18:520:34503:22:22:72:543:129:144:g_d0_f4:144:g_d0_f3:B:it shows, there are increases in nearly all the conditions between 2006 and 2008. There are 
+18:521:34595:22:22:72:542:107:144:g_d0_f4:144:g_d0_f3:B:particularly dramatic rises in the prevalences of heart disease, arthritis, heart attacks, and 
+18:522:34690:22:0:71:476:85:144:g_d0_f4:144:g_d0_f3:B:stroke, which are clearly unrelated to any pre‐existing trend in treated prevalence. 
+19:523:34778:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:The Priority Conditions Enumeration section was phased in with the introduction of Panel 12 of 
+19:524:34873:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:the MEPS.3 Table 5 also shows treated prevalence by condition in 2007 split out by panel. 
+19:525:34963:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:Treated prevalence in Panel 11 in 2007 for most conditions is comparable to treated prevalence 
+19:526:35058:22:22:72:543:642:144:g_d0_f4:144:g_d0_f3:B:in 2006, while treated prevalence of most conditions in Panel 12 in 2007 is more similar to 
+19:527:35150:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:treated prevalence as measured in 2008, reflecting the methodology change that affected 
+19:528:35238:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:Panel 12 but not Panel 11. The differences between Panels 11 and 12 in treated prevalence are 
+19:529:35332:22:22:72:542:576:144:g_d0_f4:144:g_d0_f3:B:especially noticeable for the conditions mentioned above that have the greatest increases in 
+19:530:35425:22:22:71:543:554:144:g_d0_f4:144:g_d0_f3:B:treated prevalence. For example, the treated prevalence of heart disease is more than four 
+19:531:35516:22:22:72:543:532:144:g_d0_f4:144:g_d0_f3:B:times higher in Panel 12 than in Panel 11, and that of arthritis is more than five times higher. 
+19:532:35613:22:22:72:543:510:144:g_d0_f4:144:g_d0_f3:B:Similarly, the treated prevalence of myocardial infarction is more than four times higher in 
+19:533:35706:22:22:72:543:488:144:g_d0_f4:144:g_d0_f3:B:Panel 12 than Panel 11. The methodology change also helps explain part of the increases in 
+19:534:35797:22:22:72:543:466:144:g_d0_f4:144:g_d0_f3:B:treated prevalence of hypertension and hypercholesterolemia, two conditions with treated 
+19:535:35886:22:22:72:543:444:144:g_d0_f4:144:g_d0_f3:B:prevalence that are both high and trending up over this period. Panel 12 has a treated 
+19:536:35973:22:21:72:543:422:144:g_d0_f4:144:g_d0_f3:B:prevalence of hypertension in 2007 that is over five percentage points higher than that of Panel 
+19:537:36070:21:32:72:477:401:144:g_d0_f4:144:g_d0_f3:B:11, and for hypercholesterolemia the difference is just over ten percentage points. 
+19:538:36154:32:22:71:543:369:144:g_d0_f4:144:g_d0_f3:B:In our MEPS‐based MCE indexes, in order to have growth rates that are at least measured over 
+19:539:36247:22:22:72:543:347:144:g_d0_f4:144:g_d0_f3:B:consistent samples, we use the growth rate calculated from Panel 11 alone for the change from 
+19:540:36341:22:22:72:543:325:144:g_d0_f4:144:g_d0_f3:B:2006 to 2007, and the growth rate calculated from Panel 12 alone for the change from 2007 to 
+19:541:36434:22:22:72:542:303:144:g_d0_f4:144:g_d0_f3:B:2008. The expenditure indexes based on the MEPS are therefore not strictly comparable before 
+19:542:36527:22:22:71:542:281:144:g_d0_f4:144:g_d0_f3:B:and after 2007, but this solution is the best we can do with the data available. The effect of 
+19:543:36622:22:22:71:542:259:144:g_d0_f4:144:g_d0_f3:B:implementing this change on one of the MCE indexes we calculate is shown in Figure 1. This 
+19:544:36713:22:22:71:542:237:144:g_d0_f4:144:g_d0_f3:B:MCE index is calculated from the MEPS on all Medicare beneficiaries using the primary 
+19:545:36799:22:22:71:543:215:144:g_d0_f4:144:g_d0_f3:B:diagnosis method. (See below for a discussion of this method for calculating MCE indexes.) As 
+19:546:36893:22:22:72:542:193:144:g_d0_f4:144:g_d0_f3:B:the figure shows, using the growth rate from Panel 11 for the change from 2006 to 2007 and 
+19:547:36984:22:22:72:543:171:144:g_d0_f4:144:g_d0_f3:B:the growth rate from Panel 12 for the change from 2007 to 2008 removes an unusual drop in 
+19:548:37074:22:45:72:400:149:144:g_d0_f4:144:g_d0_f3:B:the MCE index in 2007 that is out of line with the underlying trend. 
+19:549:37143:45:9:72:218:104:121:g_d0_f3:121:g_d0_f3:F:                                                            
+19:550:37203:9:20:72:524:95:64:g_d0_f4:144:g_d0_f3:B:3 We are grateful to Tom Selden of AHRQ for this information and for proposing the solution 
+19:551:37295:20:0:71:137:75:144:g_d0_f4:144:g_d0_f3:B:that follows.  
+22:552:38254:0:25:72:543:706:195:g_d0_f5:195:g_d0_f6:F:5 Comparisons of Different Methods for Calculating Medical Care Expenditure 
+22:553:38330:25:34:72:122:681:195:g_d0_f5:195:g_d0_f6:C:Indexes  
+22:554:38339:34:22:72:542:647:144:g_d0_f4:144:g_d0_f3:B:As was shown in the previous two sections, we have a choice of methods and datasets available 
+22:555:38433:22:22:71:542:625:144:g_d0_f4:144:g_d0_f3:B:to us to calculate medical expenditure indexes for the Medicare population, although not every 
+22:556:38528:22:22:71:542:603:144:g_d0_f4:144:g_d0_f3:B:method will work with every dataset. Table 6 lays out the possible combinations of methods 
+22:557:38619:22:22:71:542:581:144:g_d0_f4:144:g_d0_f3:B:and datasets and shows the average annual growth rates of Fisher medical care expenditure 
+22:558:38709:22:22:71:543:559:144:g_d0_f4:144:g_d0_f3:B:indexes calculated from those methods and datasets for the years 2001‐2009. The columns 
+22:559:38797:22:22:72:543:537:144:g_d0_f4:144:g_d0_f3:B:represent different combinations of samples (FFS and private plan, FFS only), datasets (MCBS or 
+22:560:38893:22:22:72:540:515:144:g_d0_f4:144:g_d0_f3:B:MEPS) and sets of illnesses, and the rows of the table represent different methods (regression‐
+22:561:38988:22:22:72:543:493:144:g_d0_f4:144:g_d0_f3:B:based or primary diagnosis, with or without drug spending). The illnesses used are either the 27 
+22:562:39085:22:22:72:543:471:144:g_d0_f4:144:g_d0_f3:B:illnesses from the MCBS survey (see Hall and Highfill 2013 for a list and detailed discussion) or 
+22:563:39183:22:22:72:543:449:144:g_d0_f4:144:g_d0_f3:B:the 260 categories from the Clinical Classifications System (CCS), a system devised by the AHRQ 
+22:564:39279:22:22:72:543:427:144:g_d0_f4:144:g_d0_f3:B:for classifying the 10,000 or so ICD‐9 diagnosis codes used in claims datasets into medical 
+22:565:39371:22:22:72:543:405:144:g_d0_f4:144:g_d0_f3:B:conditions. In one column we use 27 CCS diagnoses that correspond to the MCBS survey 
+22:566:39456:22:22:72:542:383:144:g_d0_f4:144:g_d0_f3:B:diagnoses; see Appendix Table 1 in Hall and Highfill (2013) for a crosswalk that translates survey 
+22:567:39555:22:22:71:540:361:144:g_d0_f4:144:g_d0_f3:B:diagnoses into claims diagnoses. For ease of comparison across years, when creating the FFS‐
+22:568:39647:22:22:71:542:339:144:g_d0_f4:144:g_d0_f3:B:only sample, we restricted the sample to beneficiaries enrolled in Medicare for the full calendar 
+22:569:39745:22:22:71:542:317:144:g_d0_f4:144:g_d0_f3:B:year. The downside of this approach is that we lose beneficiaries who pass away during the 
+22:570:39836:22:32:71:431:295:144:g_d0_f4:144:g_d0_f3:B:year and who are responsible for a good part of total Medicare spending. 
+22:571:39909:32:22:71:543:263:144:g_d0_f4:144:g_d0_f3:B:The cells in the table are labeled with letters for ease of reference. As described above in 
+22:572:40002:22:22:72:543:241:144:g_d0_f4:144:g_d0_f3:B:section 3, the regression‐based indexes are based on a GLM model of the log of health‐care 
+22:573:40093:22:22:71:543:219:144:g_d0_f4:144:g_d0_f3:B:spending as a function of diagnoses. For most of the regression‐based indexes, a beneficiary is 
+22:574:40189:22:22:72:543:197:144:g_d0_f4:144:g_d0_f3:B:coded as having a condition if the associated diagnosis code appears in any diagnosis variable 
+22:575:40284:22:22:72:543:175:144:g_d0_f4:144:g_d0_f3:B:but for the indexes whose references end in 2 (H2, I2, and M2), the diagnosis codes were only 
+22:576:40378:22:22:72:543:153:144:g_d0_f4:144:g_d0_f3:B:counted if they appeared as a primary diagnosis in order to make those indexes more 
+22:577:40462:22:22:72:543:131:144:g_d0_f4:144:g_d0_f3:B:comparable to the primary diagnosis analyses. As described in section 4, the growth rates of the 
+22:578:40559:22:0:72:542:109:144:g_d0_f4:144:g_d0_f3:B:MEPS indexes from 2006 to 2007 are only calculated from Panel 11 while those of the MEPS 
+23:579:40651:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:indexes from 2007 to 2008 are only calculated from Panel 12, in order to adjust for the 
+23:580:40739:22:32:71:485:686:144:g_d0_f4:144:g_d0_f3:B:methodology change in collecting conditions from respondents in the MEPS in 2007. 
+23:581:40821:32:22:71:542:654:144:g_d0_f4:144:g_d0_f3:B:As Table 6 shows, the MCE indexes show a range of average annual growth rates, from 1.4 
+23:582:40909:22:22:71:543:632:144:g_d0_f4:144:g_d0_f3:B:percent to 6.4 percent per year. In general, average annual growth rates are higher in the 
+23:583:41000:22:22:72:543:610:144:g_d0_f4:144:g_d0_f3:B:indexes based on the MEPS than in those based on the MCBS, and are higher when calculated 
+23:584:41090:22:22:72:543:588:144:g_d0_f4:144:g_d0_f3:B:with the primary diagnosis method than with a regression‐based method. The growth rates in 
+23:585:41181:22:22:72:543:566:144:g_d0_f4:144:g_d0_f3:B:the indexes based on the MCBS are lower when drug spending is omitted, but those in indexes 
+23:586:41273:22:22:72:543:544:144:g_d0_f4:144:g_d0_f3:B:based on the MEPS are higher when drug spending is omitted; we will discuss this result further 
+23:587:41369:22:32:72:107:522:144:g_d0_f4:144:g_d0_f3:B:below. 
+23:588:41376:32:22:72:543:490:144:g_d0_f4:144:g_d0_f3:B:Table 7 shows the growth rates of some selected indexes by year. There is a significant amount 
+23:589:41471:22:22:72:543:468:144:g_d0_f4:144:g_d0_f3:B:of volatility in the growth rates from year to year. In addition, there is surprisingly little 
+23:590:41566:22:22:72:543:446:144:g_d0_f4:144:g_d0_f3:B:correlation in yearly movements between the datasets with the exception that all indexes have 
+23:591:41660:22:22:72:542:424:144:g_d0_f4:144:g_d0_f3:B:strongly positive growth rates in 2003. There is some correlation in yearly movements between 
+23:592:41754:22:21:71:542:402:144:g_d0_f4:144:g_d0_f3:B:the two indexes constructed from the MCBS claims as the two indexes always move in the same 
+23:593:41846:21:32:71:457:381:144:g_d0_f4:144:g_d0_f6:C:direction but little correlation among the indexes constructed from the MEPS.  
+23:594:41925:32:22:71:540:349:144:g_d0_f4:144:g_d0_f3:B:The first step in our comparisons is to compare the price indexes obtained using the regression‐
+23:595:42021:22:22:71:542:327:144:g_d0_f4:144:g_d0_f3:B:based method with the primary diagnosis method when we use them on the same samples and 
+23:596:42109:22:22:71:542:305:144:g_d0_f4:144:g_d0_f3:B:the same illnesses. As noted above, the primary diagnosis method is probably preferable but 
+23:597:42201:22:22:71:542:283:144:g_d0_f4:144:g_d0_f3:B:can only be used when the data meet its stringent requirements. The main purpose of this 
+23:598:42290:22:22:71:542:261:144:g_d0_f4:144:g_d0_f3:B:comparison therefore is to see if the regression‐based method gives similar or very different 
+23:599:42384:22:22:71:542:239:144:g_d0_f4:144:g_d0_f3:B:results from the primary diagnosis method and if it is an adequate substitute for the primary 
+23:600:42478:22:32:71:512:217:144:g_d0_f4:144:g_d0_f3:B:diagnosis method when the data do not have a diagnosis attached to each event or claim. 
+23:601:42566:32:22:71:542:185:144:g_d0_f4:144:g_d0_f3:B:There are three pairs of analyses to compare, as summarized in Table 8 which shows their 
+23:602:42655:22:0:71:408:163:144:g_d0_f4:144:g_d0_f3:B:average annual growth rates from 2001‐2009 as reported in Table 6: 
+26:603:45012:0:32:72:75:708:144:g_d0_f3:144:g_d0_f3:B: 
+26:604:45013:32:16:72:524:676:144:g_d0_f5:144:g_d0_f6:C:Table 8: Average annual growth rates for selected medical expenditure indexes 2001‐2009 
+26:605:45101:16:15:72:482:660:144:g_d0_f5:144:g_d0_f6:C:Data Regression‐based Primary diagnosis 
+26:606:45141:15:15:72:425:645:144:g_d0_f4:144:g_d0_f3:B:MEPS FFS beneficiaries 3.6 (H2) 5.0 (P) 
+26:607:45181:15:14:72:223:630:144:g_d0_f4:144:g_d0_f3:B:MEPS FFS and private plan 
+26:608:45207:14:0:72:137:616:144:g_d0_f4:144:g_d0_f3:B:beneficiaries 
+26:609:45221:0:30:231:427:630:144:g_d0_f4:144:g_d0_f3:C:3.8 (I2) 5.0 (Q) 
+26:610:45238:30:14:72:223:600:144:g_d0_f4:144:g_d0_f3:B:Medicare claims (omits drug 
+26:611:45266:14:0:72:122:586:144:g_d0_f4:144:g_d0_f3:B:spending) 
+26:612:45276:0:29:231:424:600:144:g_d0_f4:144:g_d0_f3:C:2.0 (M2) 2.8 (S) 
+26:613:45293:29:32:72:75:571:144:g_d0_f3:144:g_d0_f3:B: 
+26:614:45294:32:22:72:542:539:144:g_d0_f4:144:g_d0_f3:B:As the table shows, the primary diagnosis method produces higher growth rates for the MCE 
+26:615:45384:22:22:71:542:517:144:g_d0_f4:144:g_d0_f3:B:indexes. The difference is over a percentage point for the indexes based on the MEPS and 
+26:616:45473:22:32:72:370:495:144:g_d0_f4:144:g_d0_f3:B:almost a percentage point for the index based on the MCBS.  
+26:617:45533:32:22:72:543:463:144:g_d0_f4:144:g_d0_f3:B:Table 9 examines the similarity of the two methods in measuring the per‐patient expenditures 
+26:618:45626:22:22:72:543:441:144:g_d0_f4:144:g_d0_f3:B:of individual conditions. It shows the correlations in per‐patient expenditure assigned to 
+26:619:45717:22:22:72:543:419:144:g_d0_f4:144:g_d0_f3:B:conditions by the two methods, both in their level (averaged over 2001 and 2009) and in their 
+26:620:45811:22:22:72:543:397:144:g_d0_f4:144:g_d0_f3:B:annualized growth rates from 2001 to 2009. As the table shows, the correlations between the 
+26:621:45903:22:22:72:543:375:144:g_d0_f4:144:g_d0_f3:B:levels of per‐patient expenditures are strongly positive. They are especially high in the two 
+26:622:45997:22:22:72:543:353:144:g_d0_f4:144:g_d0_f3:B:MEPS comparisons, at over 80%, but slightly lower for the MCBS comparison where the 
+26:623:46081:22:22:72:542:331:144:g_d0_f4:144:g_d0_f3:B:correlation is about 68%. The correlations between the growth rates in per‐patient 
+26:624:46164:22:22:72:542:309:144:g_d0_f4:144:g_d0_f3:B:expenditures are much lower. They are still positive in the two MEPS comparisons but are 
+26:625:46253:22:32:71:283:287:144:g_d0_f4:144:g_d0_f3:B:essentially zero for the MCBS comparison.  
+26:626:46296:32:22:71:542:255:144:g_d0_f4:144:g_d0_f3:B:Table 10 shows the annualized net growth rates of per‐patient expenditures from 2001 to 2009 
+26:627:46389:22:22:71:543:233:144:g_d0_f4:144:g_d0_f3:B:for a selection of individual conditions. The conditions shown are the union of the sets of the 
+26:628:46485:22:22:72:543:211:144:g_d0_f4:144:g_d0_f3:B:top ten conditions by per capita spending in 2001 and 2009 for each dataset and method 
+26:629:46572:22:22:72:542:189:144:g_d0_f4:144:g_d0_f3:B:combination shown. As suggested by the results in Table 9, there is little similarity in growth 
+26:630:46668:22:22:71:542:167:144:g_d0_f4:144:g_d0_f3:B:rates across methods applied to the same data. The table shows that, in general, the 
+26:631:46753:22:22:71:543:145:144:g_d0_f4:144:g_d0_f3:B:regression‐based method produces more extreme growth rates, both positive and negative, 
+26:632:46841:22:22:72:543:123:144:g_d0_f4:144:g_d0_f3:B:than the primary diagnosis method. The regression‐based method can produce particularly 
+26:633:46929:22:22:72:543:101:144:g_d0_f4:144:g_d0_f3:B:extreme growth rates when combined with the MCBS claims data, as in the case of “deficiency 
+26:634:47021:22:0:72:543:79:144:g_d0_f4:144:g_d0_f3:B:and other anemia”, ”aortic and peripheral arterial embolism or thrombosis”, and “other 
+28:635:47520:0:17:52:538:683:77:g_d0_f28:77:g_d0_f28:?:Conditions* Regression‐based (M2)Primary diagnosis (S)Regression‐based (H2)Primary diagnosis (P)Regression‐based (I2)Primary diagnosis (Q)
+28:636:47658:17:12:52:542:666:77:g_d0_f29:77:g_d0_f29:F:Medical examination/evaluation9.0%4.2%‐14.6%‐2.1%‐15.8%‐2.1%
+28:637:47718:12:11:52:542:654:77:g_d0_f29:77:g_d0_f29:F:Other lower respiratory disease1.6%4.1%‐11.8%‐0.9%‐9.7%‐1.1%
+28:638:47778:11:11:52:542:643:77:g_d0_f29:77:g_d0_f29:F:Other connective tissue disease18.3%5.7%‐0.4%1.3%4.1%1.8%
+28:639:47835:11:12:52:543:632:77:g_d0_f29:77:g_d0_f29:F:Nonspecific chest pain5.1%6.2%36.5%9.9%52.9%10.2%
+28:640:47884:12:11:52:542:620:77:g_d0_f29:77:g_d0_f29:F:Other aftercare7.1%7.3%12.8%7.1%5.9%7.2%
+28:641:47924:11:12:52:542:609:77:g_d0_f29:77:g_d0_f29:F:Chronic renal failure‐9.7%‐4.6%1.4%‐1.5%‐0.7%‐1.3%
+28:642:47974:12:22:52:543:597:77:g_d0_f29:77:g_d0_f29:F:Complication of device, implant or graft5.2%‐1.4%‐14.0%24.3%‐13.8%25.8%
+28:643:48045:22:12:52:542:575:77:g_d0_f29:77:g_d0_f29:F:Deficiency and other anemia102.9%8.9%7.9%‐4.0%9.5%‐3.6%
+28:644:48100:12:11:52:179:563:77:g_d0_f29:77:g_d0_f3:?:Coronary atherosclerosis and other 
+28:645:48135:11:0:52:99:552:77:g_d0_f29:77:g_d0_f29:?:heart disease
+28:646:48148:0:23:235:542:563:77:g_d0_f3:77:g_d0_f29:F:‐0.3%0.1%5.4%4.1%6.1%3.5%
+28:647:48173:23:11:52:165:540:77:g_d0_f29:77:g_d0_f3:?:Spondylosis, intervertebral disc 
+28:648:48206:11:0:52:163:529:77:g_d0_f29:77:g_d0_f29:?:disorders, other back problems
+28:649:48236:0:22:237:542:540:77:g_d0_f29:77:g_d0_f29:F:9.4%9.4%2.4%7.9%1.2%7.2%
+28:650:48260:22:12:52:542:518:77:g_d0_f29:77:g_d0_f29:F:Residual codes, unclassified20.1%9.1%6.9%11.8%6.3%9.6%
+28:651:48314:12:11:52:542:506:77:g_d0_f29:77:g_d0_f29:F:Diabetes mellitus without complication4.5%1.9%2.8%0.7%2.3%0.9%
+28:652:48376:11:12:52:177:495:77:g_d0_f29:77:g_d0_f3:?:Pneumonia (except that caused by 
+28:653:48409:12:11:52:181:483:77:g_d0_f29:77:g_d0_f3:?:tuberculosis or sexually transmitted 
+28:654:48446:11:0:52:81:472:77:g_d0_f29:77:g_d0_f29:?:disease)
+28:655:48454:0:34:237:542:495:77:g_d0_f29:77:g_d0_f29:F:3.9%6.6%6.7%6.4%5.2%6.3%
+28:656:48478:34:12:52:542:461:77:g_d0_f29:77:g_d0_f29:F:Cardiac dysrhythmias‐4.2%2.8%7.0%‐6.2%7.2%‐5.3%
+28:657:48525:12:11:52:192:449:77:g_d0_f29:77:g_d0_f3:?:Chronic obstructive pulmonary disease 
+28:658:48563:11:0:52:118:438:77:g_d0_f29:77:g_d0_f29:?:and bronchiectasis
+28:659:48581:0:23:235:542:449:77:g_d0_f3:77:g_d0_f29:F:‐3.5%2.6%‐5.1%5.1%‐4.8%5.3%
+28:660:48608:23:11:52:542:426:77:g_d0_f29:77:g_d0_f29:F:Acute myocardial infarction3.1%3.5%‐8.0%‐6.8%‐8.5%‐7.4%
+28:661:48663:11:11:52:141:415:77:g_d0_f29:77:g_d0_f3:?:Congestive heart failure, 
+28:662:48689:11:0:52:112:404:77:g_d0_f29:77:g_d0_f29:?:nonhypertensive
+28:663:48704:0:23:233:542:415:77:g_d0_f29:77:g_d0_f29:F:14.3%9.0%‐2.4%2.4%‐3.8%3.0%
+28:664:48731:23:11:52:542:392:77:g_d0_f29:77:g_d0_f29:F:Osteoarthritis3.0%4.0%‐7.9%‐7.1%‐8.6%‐6.8%
+28:665:48773:11:12:52:542:381:77:g_d0_f29:77:g_d0_f29:F:Cataract‐0.5%3.7%‐1.6%5.1%‐2.0%4.5%
+28:666:48808:12:11:52:199:369:77:g_d0_f29:77:g_d0_f3:?:Rehabilitation care, fitting of prostheses, 
+28:667:48852:11:0:52:145:358:77:g_d0_f29:77:g_d0_f29:?:and adjustment of devices
+28:668:48877:0:22:235:542:369:77:g_d0_f3:77:g_d0_f29:F:‐2.4%3.2%‐6.5%‐1.1%106.1%‐1.3%
+28:669:48907:22:12:52:543:347:77:g_d0_f29:77:g_d0_f29:F:Other non‐traumatic joint disorders‐7.2%8.0%17.4%14.2%14.7%12.3%
+28:670:48971:12:11:52:542:335:77:g_d0_f29:77:g_d0_f29:F:Mood disorders‐7.6%‐1.0%‐9.6%‐8.5%‐9.4%‐8.3%
+28:671:49015:11:12:52:542:324:77:g_d0_f29:77:g_d0_f29:F:Acute cerebrovascular disease‐4.8%‐3.6%‐2.9%0.6%‐2.6%1.1%
+28:672:49072:12:11:52:542:312:77:g_d0_f29:77:g_d0_f29:F:Other and ill‐defined heart disease‐7.6%1.2%9.3%2.5%9.9%2.9%
+28:673:49132:11:11:52:542:301:77:g_d0_f29:77:g_d0_f29:F:Essential hypertension‐10.3%4.0%6.2%2.9%4.6%3.2%
+28:674:49180:11:12:52:542:290:77:g_d0_f29:77:g_d0_f29:F:Anxiety and personality disorders28.7%7.5%47.3%‐3.0%31.1%‐3.8%
+28:675:49242:12:11:52:194:278:77:g_d0_f29:77:g_d0_f3:?:Aortic and peripheral arterial embolism 
+28:676:49282:11:0:52:101:267:77:g_d0_f29:77:g_d0_f29:?:or thrombosis
+28:677:49295:0:23:228:542:278:77:g_d0_f29:77:g_d0_f29:F:915.7%37.8%11.0%‐4.8%12.0%‐3.9%
+28:678:49326:23:11:52:542:255:77:g_d0_f29:77:g_d0_f29:F:Acute and unspecified renal failure12.7%3.7%1.6%5.5%‐0.5%4.3%
+28:679:49387:11:11:52:167:244:77:g_d0_f29:77:g_d0_f3:?:Other disorders of stomach and 
+28:680:49418:11:0:52:91:233:77:g_d0_f29:77:g_d0_f29:?:duodenum
+28:681:49426:0:23:226:542:244:77:g_d0_f3:77:g_d0_f29:F:‐129.0%2.0%‐9.0%2.3%‐6.6%3.6%
+28:682:49455:23:0:52:542:221:77:g_d0_f29:77:g_d0_f29:F:Disorders of lipid metabolism3.4%6.8%‐2.3%1.2%0.3%1.4%
+28:683:49509:0:517:278:317:727:125:g_d0_f28:125:g_d0_f28:?:Table 10
+28:684:49517:517:0:52:207:210:77:g_d0_f29:77:g_d0_f29:?:*Ranked by 2009 per capita spending in M2
+28:685:49558:0:12:112:483:712:125:g_d0_f28:125:g_d0_f28:?:Annualized growth rates of indexes for selected individual conditions 2001‐2009
+28:686:49637:12:0:233:537:700:77:g_d0_f28:77:g_d0_f28:?:MCBS claimsMEPS (FFS only)MEPS (FFS and private plan)
+29:687:49693:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:disorders of stomach and duodenum.” In addition, as we noted above, table 9 shows that the 
+29:688:49784:22:22:72:543:686:144:g_d0_f4:144:g_d0_f3:B:correlation in results between the two methods is noticeably smaller for the MCBS claims data 
+29:689:49878:22:22:72:543:664:144:g_d0_f4:144:g_d0_f3:B:than for the MEPS data. These results are probably due to the greater sensitivity of the 
+29:690:49967:22:22:72:543:642:144:g_d0_f4:144:g_d0_f3:B:regression‐based method to outliers combined with the greater presence of outliers in the 
+29:691:50057:22:22:72:542:620:144:g_d0_f4:144:g_d0_f3:B:MCBS claims data as shown above in table 3. As we discussed in the introduction to the 
+29:692:50144:22:22:71:542:598:144:g_d0_f4:144:g_d0_f3:B:methods section, there is no reason to use the regression‐based method with data where it is 
+29:693:50237:22:22:71:543:576:144:g_d0_f4:144:g_d0_f3:B:possible to use the primary diagnosis method, and the evidence in this table supports that 
+29:694:50328:22:22:72:542:554:144:g_d0_f4:144:g_d0_f3:B:claim. In situations where it is necessary to use the regression‐based method, the individual and 
+29:695:50426:22:32:72:464:532:144:g_d0_f4:144:g_d0_f3:B:aggregate growth rates of the MCE indexes should be interpreted with caution.  
+29:696:50505:32:22:71:543:500:144:g_d0_f4:144:g_d0_f3:B:It is unclear why the primary diagnosis method consistently produces higher growth rates than 
+29:697:50599:22:22:72:542:478:144:g_d0_f4:144:g_d0_f3:B:the regression‐based method. There is no reason to expect it a priori to do so. The difference is 
+29:698:50697:22:22:71:542:456:144:g_d0_f4:144:g_d0_f3:B:widespread across conditions; as Table 10 shows, the primary diagnosis method produces 
+29:699:50784:22:22:71:542:434:144:g_d0_f4:144:g_d0_f3:B:higher growth rates for just over half of the thirty conditions, and the relationship holds for 
+29:700:50880:22:21:71:542:412:144:g_d0_f4:144:g_d0_f3:B:both chronic and acute conditions. Of the full set of conditions, about half have a higher growth 
+29:701:50978:21:32:71:420:391:144:g_d0_f4:144:g_d0_f3:B:rate in their MCEs when estimated with the primary diagnosis method. 
+29:702:51047:32:22:71:543:359:144:g_d0_f4:144:g_d0_f3:B:In conclusion, it seems that the regression‐based method should be employed with caution, 
+29:703:51137:22:22:72:543:337:144:g_d0_f4:144:g_d0_f3:B:given its sensitivity to outliers and propensity for producing volatile indexes. In addition, as we 
+29:704:51237:22:22:72:543:315:144:g_d0_f4:144:g_d0_f3:B:discussed above, the regression‐based method has the undesirable feature that it can assign 
+29:705:51329:22:22:72:543:293:144:g_d0_f4:144:g_d0_f3:B:negative costs to some conditions. However, it may be necessary to use it with data where 
+29:706:51419:22:22:72:543:271:144:g_d0_f4:144:g_d0_f3:B:events are not assigned diagnoses individually. It should be noted that, while we presented one 
+29:707:51515:22:22:72:543:249:144:g_d0_f4:144:g_d0_f3:B:regression‐based approach, there is a considerable amount of discretion in how this approach 
+29:708:51608:22:22:72:542:227:144:g_d0_f4:144:g_d0_f3:B:can be applied, both in the modeling of spending as a function of diagnoses and in how the 
+29:709:51699:22:22:71:543:205:144:g_d0_f4:144:g_d0_f3:B:coefficients are used to divide up individuals’ health‐care spending. One potential approach 
+29:710:51792:22:22:72:542:183:144:g_d0_f4:144:g_d0_f3:B:going forward therefore may be to adjust the regression‐based approach until the results 
+29:711:51881:22:22:71:543:161:144:g_d0_f4:144:g_d0_f3:B:match the primary diagnosis method within a certain level of tolerance in the MEPS data, and 
+29:712:51974:22:22:72:543:139:144:g_d0_f4:144:g_d0_f3:B:then apply that adjusted approach to the larger sample and larger targeted population of the 
+29:713:52067:22:0:72:543:117:144:g_d0_f4:144:g_d0_f3:B:MCBS. Another approach may be to combine the two methods: use the primary diagnosis 
+30:714:52154:0:22:72:543:708:144:g_d0_f4:144:g_d0_f3:B:method on the Medicare Part A and B claims in the MCBS but use a regression‐based method 
+30:715:52243:22:32:72:364:686:144:g_d0_f4:144:g_d0_f3:B:on the drug spending from the survey portion of the MCBS. 
+30:716:52301:32:34:72:75:654:144:g_d0_f6:144:g_d0_f6:C: 
+30:717:52302:34:25:72:543:620:195:g_d0_f5:195:g_d0_f6:F:6 Comparison of Medical Care Expenditure Indexes Calculated from Different 
+30:718:52377:25:34:72:125:595:195:g_d0_f5:195:g_d0_f3:C:Datasets 
+30:719:52386:34:22:72:543:561:144:g_d0_f4:144:g_d0_f3:B:As Table 6 shows, we also calculated price indexes with the same methods and on comparable 
+30:720:52477:22:22:72:543:539:144:g_d0_f4:144:g_d0_f3:B:populations from the MCBS and the MEPS, for the purposes of comparing the results. In 
+30:721:52563:22:22:72:542:517:144:g_d0_f4:144:g_d0_f3:B:general, the MCBS or the Medicare claims are preferable datasets for analyzing the Medicare 
+30:722:52655:22:22:71:542:495:144:g_d0_f4:144:g_d0_f3:B:population to the MEPS since they have larger samples, also include the nursing home 
+30:723:52740:22:22:71:542:473:144:g_d0_f4:144:g_d0_f3:B:population, and do not seem to have the same underreporting issues as the MEPS. However, 
+30:724:52829:22:22:71:543:451:144:g_d0_f4:144:g_d0_f3:B:comparing the datasets offers a useful check on the MEPS which has been used on other 
+30:725:52915:22:32:72:374:429:144:g_d0_f4:144:g_d0_f3:B:populations in the medical‐care expenditure index literature.  
+30:726:52978:32:32:72:75:397:144:g_d0_f3:144:g_d0_f3:B: 
+30:727:52979:32:16:74:452:365:144:g_d0_f5:144:g_d0_f6:C:Table 11: Average annual growth rates for selected MCE indexes 2001‐2009 
+30:728:53052:16:15:74:419:349:144:g_d0_f5:144:g_d0_f6:C:Method MCBS MEPS 
+30:729:53069:15:14:74:221:334:144:g_d0_f4:144:g_d0_f3:B:Regression‐based including 
+30:730:53096:14:0:74:147:320:144:g_d0_f4:144:g_d0_f3:B:drug spending 
+30:731:53110:0:29:228:422:334:144:g_d0_f4:144:g_d0_f3:C:2.1 (D) 2.8 (F) 
+30:732:53126:29:15:74:221:305:144:g_d0_f4:144:g_d0_f3:B:Regression‐based omitting 
+30:733:53152:15:0:74:147:290:144:g_d0_f4:144:g_d0_f3:B:drug spending 
+30:734:53166:0:30:228:424:305:144:g_d0_f4:144:g_d0_f3:C:1.4 (M) 4.8 (N) 
+30:735:53182:30:15:74:221:275:144:g_d0_f4:144:g_d0_f3:B:Primary diagnosis omitting 
+30:736:53209:15:0:74:147:260:144:g_d0_f4:144:g_d0_f3:B:drug spending 
+30:737:53223:0:30:228:422:275:144:g_d0_f4:144:g_d0_f3:C:2.8 (S) 6.4 (T) 
+30:738:53239:30:32:72:75:245:144:g_d0_f3:144:g_d0_f3:B: 
+30:739:53240:32:22:72:542:213:144:g_d0_f4:144:g_d0_f3:B:Table 11 shows the pairs of cells from Table 6 that directly compare datasets with the same 
+30:740:53332:22:22:71:542:191:144:g_d0_f4:144:g_d0_f3:B:method and comparable populations. The population in both cases is FFS Medicare 
+30:741:53412:22:22:71:542:169:144:g_d0_f4:144:g_d0_f3:B:beneficiaries who are enrolled in Medicare for the full calendar year. In the MCBS sample, we 
+30:742:53506:22:22:71:542:147:144:g_d0_f4:144:g_d0_f3:B:use claims for diagnoses so as to be able to compare on a condition‐by‐condition basis with the 
+30:743:53602:22:22:71:542:125:144:g_d0_f4:144:g_d0_f3:B:MEPS, in which conditions are coded in ICD‐9 diagnosis codes. As the table shows, when drug 
+30:744:53694:22:22:71:543:103:144:g_d0_f4:144:g_d0_f3:B:spending is included and we use a regression‐based method, the MCE index based on the MEPS 
+30:745:53785:22:0:72:543:81:144:g_d0_f4:144:g_d0_f3:B:is slightly higher, by about 0.8 percentage point, than that based on the MCBS. When drug 
+31:746:53878:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:spending is omitted, however, the difference is over three percentage points, whether a 
+31:747:53966:22:32:71:401:686:144:g_d0_f4:144:g_d0_f3:B:regression‐based method or the primary diagnosis method is used. 
+31:748:54031:32:22:71:542:654:144:g_d0_f4:144:g_d0_f3:B:Table 12 shows the correlations in per‐patient expenditures across conditions between the 
+31:749:54121:22:22:71:542:632:144:g_d0_f4:144:g_d0_f3:B:expenditure indexes calculated from the MCBS and the MEPS with the same methods. The first 
+31:750:54212:22:22:71:542:610:144:g_d0_f4:144:g_d0_f3:B:column shows the correlations in the level of per‐patient expenditure averaged across 2001 
+31:751:54303:22:22:71:542:588:144:g_d0_f4:144:g_d0_f3:B:and 2009; as they show, the correlations are positive but not overwhelmingly strong. The 
+31:752:54392:22:22:71:542:566:144:g_d0_f4:144:g_d0_f3:B:correlations are strongest for the two indexes calculated using a primary diagnosis method 
+31:753:54483:22:22:71:542:544:144:g_d0_f4:144:g_d0_f3:B:without drug spending, which is the pair with the largest difference between their annual 
+31:754:54573:22:22:71:543:522:144:g_d0_f4:144:g_d0_f3:B:average growth rates. It is important to keep in mind therefore that the same method, similar 
+31:755:54667:22:22:72:543:500:144:g_d0_f4:144:g_d0_f3:B:data, and similar results can still produce substantively different average annual growth rates 
+31:756:54763:22:22:72:543:478:144:g_d0_f4:144:g_d0_f3:B:for an MCE index. The next column shows the correlations in the growth rates of the 
+31:757:54847:22:21:72:543:456:144:g_d0_f4:144:g_d0_f3:B:expenditure indexes for individual conditions from 2001 and 2009 across the two datasets; 
+31:758:54937:21:33:72:298:435:144:g_d0_f4:144:g_d0_f3:B:these are much lower and often close to zero. 
+31:759:54983:33:21:72:543:402:144:g_d0_f4:144:g_d0_f3:B:Returning to table 11, we see that omitting spending and events related to pharmaceuticals 
+31:760:55074:21:22:72:543:381:144:g_d0_f4:144:g_d0_f3:B:from the MCE indexes has the opposite effect on the indexes from the two datasets. The 
+31:761:55161:22:22:72:542:359:144:g_d0_f4:144:g_d0_f3:B:growth rates of MCE indexes without pharmaceuticals are lower than those with 
+31:762:55239:22:22:71:542:337:144:g_d0_f4:144:g_d0_f3:B:pharmaceuticals when they are calculated from the MCBS but omitting pharmaceuticals raises 
+31:763:55330:22:22:71:542:315:144:g_d0_f4:144:g_d0_f3:B:the growth rates of MCE indexes based on the MEPS considerably. The difference arises from 
+31:764:55421:22:22:71:542:293:144:g_d0_f4:144:g_d0_f3:B:the way pharmaceutical events are recorded in the two surveys. Pharmaceutical events are 
+31:765:55510:22:22:71:542:271:144:g_d0_f4:144:g_d0_f3:B:recorded together with a diagnosis in the MEPS while in the MCBS, pharmaceutical events are 
+31:766:55602:22:22:71:543:249:144:g_d0_f4:144:g_d0_f3:B:collected in the oral survey portion and are not associated with a diagnosis. In the MEPS, 
+31:767:55693:22:22:72:542:227:144:g_d0_f4:144:g_d0_f3:B:dropping the pharmaceutical events can therefore change the treated prevalence of conditions, 
+31:768:55787:22:22:71:542:205:144:g_d0_f4:144:g_d0_f3:B:since some conditions are only reported in pharmaceutical events. As discussed above in the 
+31:769:55879:22:22:71:543:183:144:g_d0_f4:144:g_d0_f3:B:section on prevalence, a change in the growth rate of treated prevalence can affect the growth 
+31:770:55974:22:22:72:543:161:144:g_d0_f4:144:g_d0_f3:B:rate of an MCE index, all other things equal, both because the per‐patient expenditure will 
+31:771:56066:22:32:72:448:139:144:g_d0_f4:144:g_d0_f3:B:change and because the aggregation weights in the Fisher index will change.  
+31:772:56143:32:22:71:543:107:144:g_d0_f4:144:g_d0_f3:B:When we compare an unweighted average of treated prevalences across conditions based on 
+31:773:56231:22:0:72:543:85:144:g_d0_f4:144:g_d0_f3:B:drug events and the same average based on non‐drug events in the MEPS, we find that the 
+33:774:56702:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:former grows considerably faster over the period studied. Treated prevalence based on drug 
+33:775:56793:22:22:71:542:686:144:g_d0_f4:144:g_d0_f3:B:events has an average annual growth rate between 2001 and 2009 of 4.8% while that based on 
+33:776:56884:22:22:71:542:664:144:g_d0_f4:144:g_d0_f3:B:non‐drug events has an average annual growth rate of 2.8%. Omitting drug events would 
+33:777:56970:22:22:71:542:642:144:g_d0_f4:144:g_d0_f3:B:therefore tend to lower the growth rate of prevalence and raise the growth rate of the MCE 
+33:778:57061:22:22:71:543:620:144:g_d0_f4:144:g_d0_f3:B:index, all other things equal. The other main factor affecting the difference between MCE 
+33:779:57151:22:22:72:542:598:144:g_d0_f4:144:g_d0_f3:B:indexes with and without pharmaceutical spending and events is pharmaceutical spending 
+33:780:57238:22:22:71:542:576:144:g_d0_f4:144:g_d0_f3:B:itself. Omitting pharmaceutical spending but not the associated diagnoses would tend to lower 
+33:781:57332:22:22:71:543:554:144:g_d0_f4:144:g_d0_f3:B:the growth rate of the MCE index since pharmaceutical spending generally grows more quickly 
+33:782:57424:22:22:72:542:532:144:g_d0_f4:144:g_d0_f3:B:than other categories of medical spending. In the case of these indexes based on the MEPS, 
+33:783:57515:22:22:71:542:510:144:g_d0_f4:144:g_d0_f3:B:however, it appears that the changes in prevalence resulting from removing the pharmaceutical 
+33:784:57609:22:22:71:542:488:144:g_d0_f4:144:g_d0_f3:B:events more than offset the change to the index resulting from removing pharmaceutical 
+33:785:57696:22:32:71:122:466:144:g_d0_f4:144:g_d0_f3:B:spending. 
+33:786:57706:32:22:71:543:434:144:g_d0_f4:144:g_d0_f3:B:From these comparisons we may conclude that the inclusion of pharmaceutical events in the 
+33:787:57796:22:22:72:543:412:144:g_d0_f4:144:g_d0_f3:B:treated prevalence in the data can have a substantive effect on an MCE index based upon that 
+33:788:57889:22:21:72:543:390:144:g_d0_f4:144:g_d0_f3:B:data; this has repercussions for the use of the MCBS as a data source for Medicare 
+33:789:57972:21:22:72:543:369:144:g_d0_f4:144:g_d0_f3:B:beneficiaries. As the MCBS lacks diagnoses related to pharmaceutical events, it will omit some 
+33:790:58067:22:22:72:543:347:144:g_d0_f4:144:g_d0_f3:B:conditions that beneficiaries are diagnosed with entirely and a regression‐based index will 
+33:791:58159:22:24:72:385:325:144:g_d0_f4:144:g_d0_f3:B:misattribute their pharmaceutical spending to other conditions. 
+33:792:58223:24:36:72:75:301:195:g_d0_f6:195:g_d0_f6:C: 
+33:793:58224:36:34:72:148:265:195:g_d0_f5:195:g_d0_f3:C:7 Conclusion 
+33:794:58237:34:22:72:542:231:144:g_d0_f4:144:g_d0_f3:B:We have compared medical care expenditure indexes calculated from different datasets and 
+33:795:58326:22:22:71:543:209:144:g_d0_f4:144:g_d0_f3:B:using different methods. Our belief going into this research was that the primary diagnosis 
+33:796:58418:22:22:72:542:187:144:g_d0_f4:144:g_d0_f3:B:method was the best method for dividing up health‐care expenditure by disease but that the 
+33:797:58509:22:22:71:543:165:144:g_d0_f4:144:g_d0_f3:B:Medicare Current Beneficiary Survey was the best dataset for analyzing Medicare beneficiaries, 
+33:798:58604:22:22:72:543:143:144:g_d0_f4:144:g_d0_f3:B:as it has the widest coverage and the most information on them. However, the primary 
+33:799:58689:22:22:72:543:121:144:g_d0_f4:144:g_d0_f3:B:diagnosis method cannot be used with the drug spending and events in the MCBS. We 
+33:800:58771:22:21:72:542:99:144:g_d0_f4:144:g_d0_f3:B:therefore compared the primary diagnosis method with a regression‐based method for 
+33:801:58854:21:0:71:543:78:144:g_d0_f4:144:g_d0_f3:B:estimating expenditures by disease and found that, when they are used to calculate MCE 
+34:802:58944:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:indexes on the same datasets, the primary diagnosis method produces higher average annual 
+34:803:59034:22:22:71:542:686:144:g_d0_f4:144:g_d0_f3:B:aggregate growth rates. The difference is relatively small for the analyses with the MCBS claims 
+34:804:59131:22:22:71:542:664:144:g_d0_f4:144:g_d0_f3:B:and much larger with the analyses using the MEPS. The annual indexes show some correlation 
+34:805:59222:22:22:71:543:642:144:g_d0_f4:144:g_d0_f3:B:between methods in yearly movements with the MCBS data but little correlation across the 
+34:806:59311:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:MEPS analyses, possibly because of the smaller sample size of the MEPS. There is strongly 
+34:807:59401:22:22:72:542:598:144:g_d0_f4:144:g_d0_f3:B:positive correlation in the levels of per‐patient expenditures across conditions and between the 
+34:808:59498:22:22:71:542:576:144:g_d0_f4:144:g_d0_f3:B:two methods but almost no correlations in the growth rates of the individual condition indexes. 
+34:809:59594:22:22:71:543:554:144:g_d0_f4:144:g_d0_f3:B:The regression‐based method produces much more volatile individual indexes when applied to 
+34:810:59685:22:22:72:543:532:144:g_d0_f4:144:g_d0_f3:B:the MCBS claims data, probably because its results are more sensitive to outliers and there are 
+34:811:59781:22:22:72:543:510:144:g_d0_f4:144:g_d0_f3:B:more outliers in the MCBS claims data. The regression‐based method should be employed with 
+34:812:59872:22:32:72:291:488:144:g_d0_f4:144:g_d0_f3:B:caution and only when necessary therefore.  
+34:813:59916:32:22:72:542:456:144:g_d0_f4:144:g_d0_f3:B:We also compared medical care expenditure indexes for Medicare beneficiaries produced from 
+34:814:60007:22:22:71:542:434:144:g_d0_f4:144:g_d0_f3:B:the MCBS and the MEPS. As noted above, the MCBS has greater coverage and a larger sample 
+34:815:60096:22:22:71:542:412:144:g_d0_f4:144:g_d0_f3:B:size and the MEPS appears to have some problems with underreporting and underwent a 
+34:816:60180:22:21:71:542:390:144:g_d0_f4:144:g_d0_f3:B:methodology change in collecting diagnoses during the time period we are studying. When 
+34:817:60268:21:22:71:542:369:144:g_d0_f4:144:g_d0_f3:B:drug spending is included, however, the two datasets produce MCE indexes with very similar 
+34:818:60359:22:22:71:543:347:144:g_d0_f4:144:g_d0_f3:B:average annual growth rates, the one from the MEPS being a bit higher. When drug spending is 
+34:819:60452:22:22:72:542:325:144:g_d0_f4:144:g_d0_f3:B:omitted, however, the indexes from the MEPS have much higher growth rates, by more than 
+34:820:60540:22:22:71:543:303:144:g_d0_f4:144:g_d0_f3:B:three percentage points. As we discuss, the difference probably comes from the fact that when 
+34:821:60634:22:22:72:543:281:144:g_d0_f4:144:g_d0_f3:B:drug events are dropped from the analyses, the measurement of prevalence is affected in the 
+34:822:60726:22:22:72:543:259:144:g_d0_f4:144:g_d0_f3:B:MEPS but not in the MCBS, since the MCBS lacks diagnoses for its drug events. That the 
+34:823:60813:22:22:72:543:237:144:g_d0_f4:144:g_d0_f3:B:omission of drug‐related diagnoses affects the MCE indexes for Medicare beneficiaries to such 
+34:824:60907:22:22:72:542:215:144:g_d0_f4:144:g_d0_f3:B:a degree is an argument in favor of using the MEPS, which attaches diagnoses to individual drug 
+34:825:61003:22:22:71:542:193:144:g_d0_f4:144:g_d0_f3:B:events. On balance, however, the MCBS is probably the preferable dataset for Medicare 
+34:826:61089:22:0:71:518:171:144:g_d0_f4:144:g_d0_f3:B:beneficiaries because of its greater sample size and its inclusion of nursing home residents. 
+35:827:61186:0:22:72:542:708:144:g_d0_f4:144:g_d0_f3:B:The best solution for FFS Medicare beneficiaries, in the end, may be a hybrid index: one that 
+35:828:61280:22:22:71:542:686:144:g_d0_f4:144:g_d0_f3:B:combines the primary diagnosis method applied to the Part A and Part B claims in the MCBS 
+35:829:61370:22:22:71:542:664:144:g_d0_f4:144:g_d0_f3:B:with a regression‐based index for pharmaceutical spending. For private‐plan beneficiaries, 
+35:830:61461:22:22:71:540:642:144:g_d0_f4:144:g_d0_f3:B:however, the solution is not as clear. For this population, our choices are between a regression‐
+35:831:61558:22:22:72:543:620:144:g_d0_f4:144:g_d0_f3:B:based method run on the MCBS with only the 27 diagnoses included in the MCBS survey, or the 
+35:832:61650:22:22:72:543:598:144:g_d0_f4:144:g_d0_f3:B:primary diagnosis or regression‐based method run on the small group (about 300‐400 a year) of 
+35:833:61744:22:22:72:542:576:144:g_d0_f4:144:g_d0_f3:B:Medicare private‐plan enrollees in the MEPS. Exploring these options will probably be the 
+35:834:61834:22:32:71:247:554:144:g_d0_f4:144:g_d0_f3:B:subject of some of our future work. 
+35:835:61870:32:22:71:543:522:144:g_d0_f4:144:g_d0_f3:B:While we believe this comparison has covered the most important methods and datasets, it is 
+35:836:61962:22:22:72:543:500:144:g_d0_f4:144:g_d0_f3:B:not comprehensive. In particular, we did not cover the use of commercial groupers and we did 
+35:837:62055:22:22:72:543:478:144:g_d0_f4:144:g_d0_f3:B:not explore the larger sample of Medicare claims that are available for research (including the 
+35:838:62151:22:31:72:454:456:144:g_d0_f4:144:g_d0_f3:B:Part D pharmaceutical claims). We hope to address these gaps in future work. 
+35:839:62228:31:0:72:360:425:121:g_d0_f6:121:g_d0_f6:F:  
+36:840:62233:0:30:72:124:709:121:g_d0_f5:121:g_d0_f3:F:References 
+36:841:62244:30:13:72:537:679:121:g_d0_f4:121:g_d0_f3:F:Aizcorbe, A., R. Bradley, R. Greenaway‐McGrevy, B. Herauf, R. Kane, E. Liebman, S. Pack, and L. Rozental 
+36:842:62349:13:14:72:513:666:121:g_d0_f4:121:g_d0_f3:F:(2011), “Alternative Price Indexes for Medical Care: Evidence from the MEPS Survey”, BEA working 
+36:843:62446:14:23:72:102:652:121:g_d0_f4:121:g_d0_f3:F:paper. 
+36:844:62453:23:14:72:497:629:121:g_d0_f4:121:g_d0_f3:F:Aizcorbe, A. and N. Nestoriak (2011), “Changing mix of medical care services: Stylized facts and 
+36:845:62550:14:23:72:398:615:121:g_d0_f4:121:g_d0_f3:F:implications for price indexes”, Journal of Health Economics 30: 568‐574. 
+36:846:62624:23:14:72:516:592:121:g_d0_f4:121:g_d0_f3:F:Berndt, E. R., A. Bir, S. H. Busch, R. G. Frank, and S. T. Normande (2002), “The Medical Treatment of 
+36:847:62726:14:13:72:469:578:121:g_d0_f4:121:g_d0_f3:F:Depression, 1991‐1996: Productive Inefficiency, Expected Outcome Variations, and Price 
+36:848:62813:13:24:72:305:565:121:g_d0_f4:121:g_d0_f3:F:Indexes”, Journal of Health Economics, 21: 373‐396. 
+36:849:62865:24:13:72:473:541:121:g_d0_f4:121:g_d0_f3:F:Berndt, E. R., D. Cutler, R. Frank, Z. Griliches, J. Newhouse, and J. Triplett (2000), “Medical 
+36:850:62961:13:13:72:539:528:121:g_d0_f4:121:g_d0_f3:F:Care Prices and Output”, in Handbook of Health Economics, vol 1. (A. J. Cuyler and J. P. Newhouse, eds.), 
+36:851:63067:13:24:72:111:515:121:g_d0_f4:121:g_d0_f3:F:Elsevier. 
+36:852:63077:24:13:72:527:491:121:g_d0_f4:121:g_d0_f3:F:Buntin, M. B. and A. M. Zaslavsky (2004), “Too much ado about two‐part models and transformation? 
+36:853:63175:13:24:72:520:478:121:g_d0_f4:121:g_d0_f3:F:Comparing methods of modeling Medicare expenditures”, Journal of Health Economics 23: 525‐542. 
+36:854:63270:24:15:72:424:454:121:g_d0_f4:121:g_d0_f3:F:Center for Medicare and Medicaid Services, National Health Expenditure Data, 
+36:855:63347:15:16:72:438:439:121:g_d0_f4:121:g_d0_f3:F:http://www.cms.gov/Research‐Statistics‐Data‐and‐Systems/Statistics‐Trends‐and‐
+36:856:63425:16:25:72:415:423:121:g_d0_f4:121:g_d0_f3:F:Reports/NationalHealthExpendData/NationalHealthAccountsHistorical.html. 
+36:857:63497:25:13:72:521:398:121:g_d0_f4:121:g_d0_f3:F:Congressional Budget Office (2013), “The Budget and Economic Outlook: Fiscal Years 2013 to 2023”, 
+36:858:63595:13:24:72:299:385:121:g_d0_f4:121:g_d0_f3:F:Feb. 13  (http://www.cbo.gov/publication/43861). 
+36:859:63644:24:15:72:462:361:121:g_d0_f4:121:g_d0_f3:F:Congressional Budget Office (2014), “Updated Budget Projections: 2014 to 2024”, April 
+36:860:63730:15:26:72:261:346:121:g_d0_f4:121:g_d0_f3:F:(http://www.cbo.gov/publication/45229). 
+36:861:63770:26:13:72:531:320:121:g_d0_f4:121:g_d0_f3:F:Cutler, D. M., M. McClellan, J. P. Newhouse, D. Remler (1998), “Are Medical Prices Declining? Evidence 
+36:862:63873:13:24:71:426:307:121:g_d0_f4:121:g_d0_f3:F:from Heart Attack Treatments”, Quarterly Journal of Economics 113: 991‐1024. 
+36:863:63950:24:13:72:516:283:121:g_d0_f4:121:g_d0_f12:F:Duan, N. “Smearing estimate: a nonparametric retransformation method”, Journal of the American 
+36:864:64045:13:23:72:261:270:121:g_d0_f9:121:g_d0_f3:F:Statistical Association 78 (1983): 605‐610. 
+36:865:64089:23:14:72:510:247:121:g_d0_f4:121:g_d0_f3:F:Dunn, A., E. Liebman, S. Pack, and A. Shapiro (2012), “Medical Care Price Indexes for Patients with 
+36:866:64189:14:13:71:516:233:121:g_d0_f4:121:g_d0_f3:F:Employer‐Provided Insurance: Nationally‐Representative Estimates from MarketScan Data”, Health 
+36:867:64284:13:24:72:198:220:121:g_d0_f4:121:g_d0_f3:F:Services Research, October. 
+36:868:64312:24:13:72:503:196:121:g_d0_f4:121:g_d0_f3:F:Hall, A. and T. Highfill (2013), “A Regression‐Based Medical Care Expenditure Index for Medicare 
+36:869:64409:13:14:72:225:183:121:g_d0_f4:121:g_d0_f3:F:Beneficiaries”, BEA working paper 
+36:870:64443:14:13:72:537:169:121:g_d0_f4:121:g_d0_f4:F:(http://www.bea.gov/papers/pdf/a_regression_base_medical_care_expenditure_index_for_medicare.p
+36:871:64537:13:23:72:89:156:121:g_d0_f4:121:g_d0_f3:F:df). 
+36:872:64542:23:14:72:527:133:121:g_d0_f4:121:g_d0_f3:F:Jones, A. M. (2000), “Chapter Six: Health Econometrics” in Handbook of Health Economics, vol 1. (A. J. 
+36:873:64645:14:23:72:260:119:121:g_d0_f4:121:g_d0_f3:F:Cuyler and J. P. Newhouse, eds.), Elsevier. 
+36:874:64689:23:14:72:529:96:121:g_d0_f4:121:g_d0_f3:F:Manning, W. G. (1998), “The logged dependent variable, heteroscedasticity, and the retransformation 
+36:875:64789:14:0:72:305:82:121:g_d0_f4:121:g_d0_f3:F:problem”, Journal of Health Economics 17: 283‐295. 
+37:876:64843:0:699:72:364:709:121:g_d0_f4:121:g_d0_f3:F:Manning, W. G. and J. Mullahy (2001), “Estimating log models: to 
+37:877:0:699:0:0:121:10:365:709:365:709:?:0
+37:878:64908:0:13:410:513:709:121:g_d0_f3:121:g_d0_f3:?: or not to transform?”, 
+37:879:64932:13:24:72:258:696:121:g_d0_f9:121:g_d0_f3:F:Journal of Health Economics 20: 461‐494. 
+37:880:64973:24:13:72:522:672:121:g_d0_f4:121:g_d0_f12:F:National Research Council. (2002). At What Price? Conceptualizing and Measuring Cost‐of‐Living and 
+37:881:65072:13:14:72:522:659:121:g_d0_f9:121:g_d0_f3:F:Price Indexes. Panel on Conceptual, Measurement, and Other Statistical Issues in Developing Cost‐of‐
+37:882:65172:14:13:72:540:645:121:g_d0_f4:121:g_d0_f3:F:Living Indexes, C. L. Schultze and C. Mackie, eds. Committee on National Statistics, Division of Behavioral 
+37:883:65280:13:23:72:419:632:121:g_d0_f4:121:g_d0_f3:F:and Social Sciences and Education. Washington, DC: National Academy Press. 
+37:884:65355:23:24:72:428:609:121:g_d0_f4:121:g_d0_f3:F:Park, R. (1966), “Estimation with heteroscedastic errors”, Econometrica 34:888. 
+37:885:65435:24:13:72:506:585:121:g_d0_f4:121:g_d0_f3:F:Shapiro, I., M. D. Shapiro, and D. W. Wilcox (2001), “Measuring the Value of Cataract Surgery”, in 
+37:886:65534:13:24:71:530:572:121:g_d0_f9:121:g_d0_f3:F:Medical Care Output and Productivity (D. M. Cutler and E. R. Berndt, eds.), University of Chicago Press. 
+37:887:65639:24:13:71:496:548:121:g_d0_f4:121:g_d0_f3:F:Trogdon, J., E. A. Finkelstein, and T. J. Hoerger (2008), “Use of Econometric Models to Estimate 
+37:888:65736:13:24:71:391:535:121:g_d0_f4:121:g_d0_f3:F:Expenditure Shares”, Health Services Research 43:4 (August): 1442‐145 
+37:889:65806:24:13:71:521:511:121:g_d0_f4:121:g_d0_f3:F:Zuvekas, S. H., and G. L. Olin (2009), “Accuracy of Medicare Expenditures in the Medical Expenditure 
+37:890:65907:13:0:72:262:498:121:g_d0_f4:121:g_d0_f3:F:Panel Survey”, Inquiry 46 (Spring): 92‐108. 

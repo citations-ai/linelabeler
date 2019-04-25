@@ -1,0 +1,1468 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:487:610:12:Times:12:Times:INTERNATIONAL TRADE AND INTERTEMPORAL SUBSTITUTION
+1:2:75:28:14:306:353:582:12:Times:12:Times:Fernando Leibovici
+1:3:93:14:28:306:351:568:12:Times:12:Times:Michael E. Waugh
+1:4:109:28:14:306:359:540:12:Times:12:Times:Working Paper 20498
+1:5:128:14:42:306:393:526:12:Times:12:Times:http://www.nber.org/papers/w20498
+1:6:161:42:14:306:439:484:12:Times:12:Times:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:197:14:14:306:374:470:12:Times:12:Times:1050 Massachusetts Avenue
+1:8:222:14:14:306:362:456:12:Times:12:Times:Cambridge, MA 02138
+1:9:241:14:228:306:345:442:12:Times:12:Times:September 2014
+1:10:255:228:14:72:540:214:12:Times:12:Times:Fernando Leibovici gratefully acknowledges the financial assistance provided by the Social Sciences
+1:11:354:14:14:72:540:200:12:Times:12:Times:and Humanities Research Council of Canada (SSHRC). The views expressed herein are those of the
+1:12:448:14:28:72:527:186:12:Times:12:Times:authors and do not necessarily reflect the views of the National Bureau of Economic Research.
+1:13:541:28:14:72:540:158:12:Times:12:Times:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:14:637:14:14:72:540:144:12:Times:12:Times:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:15:732:14:28:72:169:130:12:Times:12:Times:NBER publications.
+1:16:750:28:14:72:540:102:12:Times:12:Times:© 2014 by Fernando Leibovici and Michael E. Waugh. All rights reserved. Short sections of text,
+1:17:845:14:14:72:540:88:12:Times:12:Times:not to exceed two paragraphs, may be quoted without explicit permission provided that full credit,
+1:18:943:14:0:72:273:74:12:Times:12:Times:including © notice, is given to the source.
+2:19:986:0:14:72:314:700:12:Times:12:Times:International Trade and Intertemporal Substitution
+2:20:1036:14:14:72:280:686:12:Times:12:Times:Fernando Leibovici and Michael E. Waugh
+2:21:1075:14:14:72:234:672:12:Times:12:Times:NBER Working Paper No. 20498
+2:22:1103:14:14:72:150:658:12:Times:12:Times:September 2014
+2:23:1117:14:28:72:175:644:12:Times:12:Times:JEL No. E0,F0,F1,F4
+2:24:1136:28:28:306:339:616:12:Times:12:Times:ABSTRACT
+2:25:1144:28:14:72:540:588:12:Times:12:Times:This paper studies the dynamics of international trade flows at business cycle frequencies. We show
+2:26:1243:14:14:72:540:574:12:Times:12:Times:that introducing dynamic considerations into an otherwise standard model of trade can account for
+2:27:1340:14:14:72:540:560:12:Times:12:Times:several puzzling features of trade flows at business cycle frequencies. Our insight is that because international
+2:28:1453:14:14:72:540:546:12:Times:12:Times:trade is time-intensive, variation in the rate at which agents are willing to substitute across time affects
+2:29:1561:14:14:72:540:532:12:Times:12:Times:how trade volumes respond to changes in output and prices. We formalize this idea and calibrate our
+2:30:1660:14:14:72:540:518:12:Times:12:Times:model to match key features of U.S. data. We find that, in contrast to standard static models of international
+2:31:1770:14:14:72:540:504:12:Times:12:Times:trade, our model is quantitatively consistent with salient features of U.S. cyclical import fluctuations.
+2:32:1875:14:14:72:540:490:12:Times:12:Times:We also find that our model accounts for two-thirds of the peak-to-trough decline in imports during
+2:33:1974:14:42:72:192:476:12:Times:12:Times:the 2008-2009 recession.
+2:34:1998:42:14:72:166:434:12:Times:12:Times:Fernando Leibovici
+2:35:2016:14:14:72:198:420:12:Times:12:Times:Department of Economics
+2:36:2039:14:14:72:150:406:12:Times:12:Times:York University
+2:37:2054:14:14:72:221:392:12:Times:12:Times:1034 Vari Hall, 4700 Keele St.
+2:38:2084:14:14:72:222:378:12:Times:12:Times:Toronto, ON, M3J1P3, Canada
+2:39:2111:14:14:72:221:364:12:Times:12:Times:http://dept.econ.yorku.ca/~flei/
+2:40:2143:14:28:72:141:350:12:Times:12:Times:flei@yorku.ca
+2:41:2156:28:14:72:162:322:12:Times:12:Times:Michael E. Waugh
+2:42:2172:14:14:72:192:308:12:Times:12:Times:Stern School of Business
+2:43:2196:14:14:72:176:294:12:Times:12:Times:New York University
+2:44:2215:14:14:72:239:280:12:Times:12:Times:44 West Fourth Street, Suite 7-160
+2:45:2249:14:14:72:179:266:12:Times:12:Times:New York, NY 10012
+2:46:2267:14:14:72:124:252:12:Times:12:Times:and NBER
+2:47:2275:14:0:72:189:238:12:Times:12:Times:mwaugh@stern.nyu.edu
+3:48:2295:0:28:56:157:719:14:g_d0_f1:14:g_d0_f1:1. Introduction
+3:49:2310:28:18:57:555:691:12:g_d0_f2:12:g_d0_f2:The collapse of international trade during the recent financial crisis exposed the failure of stan-
+3:50:2409:18:18:56:554:673:12:g_d0_f2:12:g_d0_f2:dard trade models to explain the response of trade volumes to changes in economic activity
+3:51:2499:18:18:56:554:655:12:g_d0_f2:12:g_d0_f2:during both normal and crisis episodes.1For instance, the empirical elasticity of imports to
+3:52:2591:18:18:56:555:637:12:g_d0_f2:12:g_d0_f2:measures of economic output are well above one, yet standard models have a unitary income
+3:53:2680:18:18:56:555:619:12:g_d0_f2:12:g_d0_f2:elasticity. Similarly, while the empirical elasticity of import volumes to measures of relative
+3:54:2775:18:18:56:555:601:12:g_d0_f2:12:g_d0_f2:prices is well below one, typical calibrations of standard models use values that are well above
+3:55:2871:18:18:56:555:583:12:g_d0_f2:12:g_d0_f2:one. Moreover, accounting exercises that use static trade models to measure deviations between
+3:56:2965:18:24:56:518:565:12:g_d0_f2:8:g_d0_f2:predicted and observed fluctuations in imports find these deviations to be pro-cyclical.2
+3:57:3054:24:18:57:555:541:12:g_d0_f2:12:g_d0_f2:In this paper, we show that introducing dynamic considerations into a standard model of trade
+3:58:3147:18:18:56:554:523:12:g_d0_f2:12:g_d0_f2:can account for these puzzling features. The dynamic consideration we focus on is a time-to-
+3:59:3239:18:18:56:554:505:12:g_d0_f2:12:g_d0_f2:ship friction to import goods and its interaction with a finite intertemporal elasticity of substitu-
+3:60:3340:18:18:56:554:487:12:g_d0_f2:12:g_d0_f2:tion.3The time-to-ship friction makes the importing decision dynamic because resources today
+3:61:3432:18:18:56:554:469:12:g_d0_f2:12:g_d0_f2:must be sacrificed for the delivery of goods tomorrow. With a finite intertemporal elasticity
+3:62:3525:18:17:56:554:451:12:g_d0_f2:12:g_d0_f2:of substitution, the rate at which agents are willing to substitute across time—the intertempo-
+3:63:3620:17:18:56:555:434:12:g_d0_f2:12:g_d0_f2:ral marginal rate of substitution—depends on the trade-off between consumption today ver-
+3:64:3709:18:18:56:554:416:12:g_d0_f2:12:g_d0_f2:sus expectations of consumption tomorrow. Our insight is that variation in the intertemporal
+3:65:3801:18:18:56:555:398:12:g_d0_f2:12:g_d0_f2:marginal rate of substitution with changes in income and relative prices breaks the unitary in-
+3:66:3896:18:18:56:555:380:12:g_d0_f2:12:g_d0_f2:come elasticity, biases the estimated price elasticity relative to static trade models, and shows
+3:67:3993:18:18:56:554:362:12:g_d0_f2:12:g_d0_f2:up as a time-varying trade friction. Quantitatively, we show that this insight is able to account
+3:68:4090:18:25:56:382:344:12:g_d0_f2:12:g_d0_f2:well for these key features of U.S. cyclical import fluctuations.
+3:69:4155:25:17:57:554:319:12:g_d0_f2:12:g_d0_f2:We formalize these ideas by building a pure exchange, Armington model of trade. An agent
+3:70:4243:17:18:56:555:302:12:g_d0_f2:12:g_d0_f2:within a country receives a stochastic endowment of its own nationally differentiated good.
+3:71:4334:18:18:56:555:284:12:g_d0_f2:12:g_d0_f2:Agents have time-separable preferences of the constant relative risk aversion class over an ag-
+3:72:4429:18:18:56:555:266:12:g_d0_f2:12:g_d0_f2:gregate consumption good. The aggregate consumption good is a composite of the nationally
+3:73:4518:18:18:56:554:248:12:g_d0_f2:12:g_d0_f2:differentiated goods, and the aggregator of the goods is of the constant elasticity of substitution
+3:74:4617:18:18:56:554:230:12:g_d0_f2:12:g_d0_f2:class. Agents take prices as given, and we model the evolution of relative prices as follow-
+3:75:4709:18:18:56:555:212:12:g_d0_f2:12:g_d0_f2:ing a stochastic process. International purchases are subject to an ad-valorem trade cost. The
+3:76:4803:18:18:56:555:194:12:g_d0_f2:12:g_d0_f2:only other friction that agents face is that they must commit resources today for the delivery of
+3:77:4900:18:19:56:263:176:12:g_d0_f2:12:g_d0_f2:imported goods in subsequent periods.
+3:78:4937:19:16:70:558:157:7:g_d0_f2:10:g_d0_f2:1Examples of models of this type are those ofKrugman(1980), Eaton and Kortum(2002), Anderson and van
+3:79:5037:16:12:56:555:141:10:g_d0_f2:10:g_d0_f2:Wincoop(2003), andMelitz(2003). This also includes international real business-cycle models as summarized in
+3:80:5145:12:8:56:215:129:10:g_d0_f2:10:g_d0_f2:Backus, Kehoe, and Kydland(1995).
+3:81:5178:8:15:70:555:121:7:g_d0_f2:10:g_d0_f2:2Houthakker and Magee(1969) is the seminal reference that documents the high income elasticity for the U.S.
+3:82:5285:15:12:56:555:106:10:g_d0_f2:10:g_d0_f2:and other countries at low frequencies.Jacks, Meissner, and Novy(2009) andLevchenko, Lewis, and Tesar(2010a),
+3:83:5394:12:12:56:555:94:10:g_d0_f2:10:g_d0_f2:building on the insights ofChari, Kehoe, and McGrattan(2007) emphasize the third fact’s role in accounting for
+3:84:5504:12:9:56:280:82:10:g_d0_f2:10:g_d0_f2:the decline in trade during the 2008-2010 recession.
+3:85:5556:9:15:70:555:73:7:g_d0_f2:10:g_d0_f2:3Hummels and Schaur(2013) document the time intensive nature of international trade and, thus, introducing
+3:86:5662:15:0:56:439:58:10:g_d0_f2:10:g_d0_f2:a time-to-ship friction is a natural way to introduce dynamics to the decision to import.
+4:87:5752:0:18:57:555:723:12:g_d0_f2:12:g_d0_f2:We use the model to answer the following quantitative question: Given a stochastic process
+4:88:5842:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:describing income and prices as in U.S. data, how do the time-to-ship friction and finite in-
+4:89:5935:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:tertemporal elasticity of substitution shape the decision to import? To answer this question, we
+4:90:6031:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:estimate the stochastic process for endowments and prices from U.S. data. We then feed this
+4:91:6122:18:18:56:555:651:12:g_d0_f2:12:g_d0_f2:stochastic process into our model and walk through several exercises to study the quantitative
+4:92:6216:18:24:56:271:633:12:g_d0_f2:12:g_d0_f2:importance of our proposed mechanism.
+4:93:6253:24:18:57:554:609:12:g_d0_f2:12:g_d0_f2:The first exercise studies the model implied income and price elasticities. To compute these
+4:94:6345:18:18:56:555:591:12:g_d0_f2:12:g_d0_f2:measures, we simulate the model and estimate the model implied income and price elasticities
+4:95:6437:18:18:56:554:573:12:g_d0_f2:12:g_d0_f2:using simulated data under different assumptions about the intertemporal elasticity of substi-
+4:96:6531:18:18:56:555:555:12:g_d0_f2:12:g_d0_f2:tution, the elasticity of substitution across goods, and the shipping technology. We find that
+4:97:6625:18:18:56:555:537:12:g_d0_f2:12:g_d0_f2:the model can quantitatively account for the high income elasticity and low price elasticity ob-
+4:98:6721:18:18:56:555:519:12:g_d0_f2:12:g_d0_f2:served in U.S. time series data. For instance, with an intertemporal elasticity of substitution of
+4:99:6819:18:18:56:555:501:12:g_d0_f2:12:g_d0_f2:0.20 and an elasticity of substitution of 1.5, the income and price elasticities are 1.70 and -0.34;
+4:100:6919:18:18:56:554:483:12:g_d0_f2:12:g_d0_f2:in the data, they are 1.99 and -0.26. Performing the same exercise, but removing the time-to-
+4:101:7012:18:18:56:555:465:12:g_d0_f2:12:g_d0_f2:ship friction or shutting down variation in the intertemporal marginal rate of substitution, we
+4:102:7107:18:17:56:555:447:12:g_d0_f2:12:g_d0_f2:find the estimated income elasticity is effectively one and the price elasticity is the same as our
+4:103:7206:17:25:56:241:430:12:g_d0_f2:12:g_d0_f2:calibrated elasticity of substitution.
+4:104:7244:25:18:57:554:405:12:g_d0_f2:12:g_d0_f2:The second exercise focuses on the ability of our model to account for the observed dynamics
+4:105:7336:18:18:56:555:387:12:g_d0_f2:12:g_d0_f2:of U.S. imports. To discipline this exercise, we calibrate the preference parameters of our model
+4:106:7433:18:18:56:555:369:12:g_d0_f2:12:g_d0_f2:to match features of the data over the first half of our sample. We then compute our model’s
+4:107:7525:18:18:56:555:351:12:g_d0_f2:12:g_d0_f2:predicted import series for the the un-targeted second half of our sample and compare it with
+4:108:7618:18:18:56:555:333:12:g_d0_f2:12:g_d0_f2:data. We find that our model accounts well for the dynamics in U.S. imports by correctly cap-
+4:109:7711:18:17:56:571:315:12:g_d0_f2:12:g_d0_f2:turing the overall magnitude and timing of cyclical fluctuations (see Figure5(a)   .) And that the
+4:110:7809:17:25:56:554:298:12:g_d0_f2:12:g_d0_f2:active intertemporal marginal rate of substitution is critical to accounting for these fluctuations.
+4:111:7909:25:18:57:554:273:12:g_d0_f2:12:g_d0_f2:Finally, we provide supporting evidence of the mechanism by examining some cross-sectional
+4:112:7999:18:18:56:554:255:12:g_d0_f2:12:g_d0_f2:implications of our model. In particular, our model predicts that a country’s bilateral imports
+4:113:8094:18:18:56:555:237:12:g_d0_f2:12:g_d0_f2:should be more volatile when sourced from a partner with longer shipping times. This impli-
+4:114:8185:18:18:56:555:219:12:g_d0_f2:12:g_d0_f2:cation is a test of our model because static trade models (or our dynamic model with no active
+4:115:8279:18:17:56:555:201:12:g_d0_f2:12:g_d0_f2:intertemporal marginal rate of substitution) predict that the volatility of imports is independent
+4:116:8377:17:18:56:555:184:12:g_d0_f2:12:g_d0_f2:of to the time-to-ship/distance. Using data constructed byHummels and Schaur(2013) and the
+4:117:8467:18:18:56:555:166:12:g_d0_f2:12:g_d0_f2:World Bank on shipping times, we find that US imports from countries with higher than aver-
+4:118:8558:18:18:56:555:148:12:g_d0_f2:12:g_d0_f2:age shipping times are considerably more volatile than imports from countries with lower than
+4:119:8651:18:18:56:555:130:12:g_d0_f2:12:g_d0_f2:average shipping times. We find these results to be supportive of the underlying mechanism at
+4:120:8744:18:25:56:87:112:12:g_d0_f2:12:g_d0_f2:work.
+4:121:8749:25:19:57:555:87:12:g_d0_f2:12:g_d0_f2:Our results have much to say about the large drop in trade during the 2008-2009 crisis.4Our
+4:122:8840:19:0:70:559:68:7:g_d0_f2:10:g_d0_f2:4Much attention has focused on this episode. See, for example, the papers inBaldwin(2010); Alessandria,
+5:123:8944:0:18:56:555:723:12:g_d0_f2:12:g_d0_f2:explanation is simple: a very large shock unexpectedly reduced output, and agents became
+5:124:9032:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:unwilling to substitute (on the margin) across time periods. Because international trade is time-
+5:125:9129:18:18:56:554:687:12:g_d0_f2:12:g_d0_f2:intensive, imports declined more than absorption resulting in a trade collapse. Quantitatively,
+5:126:9224:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:we find that our model accounts two-thirds of the peak-to-trough decline in imports in U.S.
+5:127:9315:18:24:56:539:651:12:g_d0_f2:12:g_d0_f2:imports (see Figure6), when the parameters of the model are calibrated to pre-crisis events.
+5:128:9407:24:18:57:554:627:12:g_d0_f2:12:g_d0_f2:Our results complement alternative mechanisms proposed to explain the trade collapse. In
+5:129:9495:18:18:56:554:609:12:g_d0_f2:12:g_d0_f2:particular, an active intertemporal marginal rate of substitution would surely amplify the role
+5:130:9590:18:18:56:555:591:12:g_d0_f2:12:g_d0_f2:of financial fictions discussed inAmiti and Weinstein(2011) andChor and Manova(2012),
+5:131:9675:18:18:56:555:573:12:g_d0_f2:12:g_d0_f2:inventory considerations inAlessandria, Kaboski, and Midrigan(2010b), or the future value of
+5:132:9767:18:18:56:555:555:12:g_d0_f2:12:g_d0_f2:manufactures as inEaton, Kortum, Neiman, and Romalis(2013). The distinguishing feature of
+5:133:9856:18:18:56:555:537:12:g_d0_f2:12:g_d0_f2:our story, however, is that it does not rely on specifics about the 2008-2009 crisis but applies
+5:134:9952:18:18:56:555:519:12:g_d0_f2:12:g_d0_f2:broadly across time periods. This is a key implication of our second exercise which calibrated
+5:135:10046:18:18:56:555:501:12:g_d0_f2:12:g_d0_f2:the model parameters to pre-crisis events. Moreover, the lack of reliance on specifics of 2008-
+5:136:10141:18:18:56:555:483:12:g_d0_f2:12:g_d0_f2:2009 crisis is consistent with the evidence fromStock and Watson(2012) who find that the same
+5:137:10234:18:24:56:526:465:12:g_d0_f2:12:g_d0_f2:factors that explained previous postwar recessions also explain the most recent recession.
+5:138:10324:24:18:57:554:441:12:g_d0_f2:12:g_d0_f2:Trade elasticities play critical roles in formulating predictions and recommendations for policy
+5:139:10420:18:18:56:555:423:12:g_d0_f2:12:g_d0_f2:makers with regard to issues such as the effects of exchange rate fluctuations and policy (see,
+5:140:10515:18:18:56:555:405:12:g_d0_f2:12:g_d0_f2:e.g.,Houthakker and Magee(1969) andMarquez(2002) for a discussion of this research). The
+5:141:10603:18:18:56:555:387:12:g_d0_f2:12:g_d0_f2:key questions surrounding the empirical estimates of trade elasticities concern their stability
+5:142:10698:18:18:56:554:369:12:g_d0_f2:12:g_d0_f2:(and, hence, their usefulness in making predictions) and the disconnect with the predictions
+5:143:10790:18:18:56:555:351:12:g_d0_f2:12:g_d0_f2:of standard trade models. We contribute to this literature by providing answers to these open
+5:144:10883:18:18:56:555:333:12:g_d0_f2:12:g_d0_f2:questions. First, we rationalize the disconnect between empirical trade elasticities and standard
+5:145:10980:18:17:56:555:315:12:g_d0_f2:12:g_d0_f2:trade models by introducing dynamics into the import decision. Moreover, while our model
+5:146:11068:17:18:56:555:298:12:g_d0_f2:12:g_d0_f2:does not have constant price and income elasticities, it retains the parsimony and performance
+5:147:11162:18:18:56:555:280:12:g_d0_f2:12:g_d0_f2:of statistical models. These two features—theoretical consistency and statistical performance—
+5:148:11256:18:42:56:555:262:12:g_d0_f2:12:g_d0_f2:suggest that our model can contribute to answering important forecasting and policy questions.
+5:149:11350:42:28:56:393:220:14:g_d0_f1:14:g_d0_f1:2. Cyclical Features of International Trade Volumes
+5:150:11401:28:18:57:555:192:12:g_d0_f2:12:g_d0_f2:In this section, we document some key features of the cyclicalfluctuations of imports, income,
+5:151:11495:18:18:56:555:174:12:g_d0_f2:12:g_d0_f2:prices and their co-movement in U.S. time series data. The data features we describe are not
+5:152:11587:18:18:56:554:156:12:g_d0_f2:12:g_d0_f2:new; for example seeHouthakker and Magee(1969) on the income elasticity of trade at long-
+5:153:11676:18:18:56:555:138:12:g_d0_f2:12:g_d0_f2:run frequencies;Ruhl(2008) on the low price elasticity; andJacks, Meissner, and Novy(2009)
+5:154:11766:18:18:56:555:120:12:g_d0_f2:12:g_d0_f2:and Levchenko, Lewis, and Tesar(2010a) on the wedge analysis. However, summarizing these
+5:155:11854:18:22:56:555:102:12:g_d0_f2:12:g_d0_f2:three features of the data is important since we will later show that they can be simultaneously
+5:156:11950:22:12:56:559:80:10:g_d0_f2:10:g_d0_f2:Kaboski, and Midrigan (2010b); Amiti and Weinstein(2011); Bems, Johnson, and Yi(2010); Chor and Manova
+5:157:12052:12:12:56:558:68:10:g_d0_f2:10:g_d0_f2:(2012); Eaton, Kortum, Neiman, and Romalis(2013); Jacks, Meissner, and Novy(2009); Levchenko, Lewis, and
+5:158:12156:12:0:56:116:56:10:g_d0_f2:10:g_d0_f2:Tesar(2010a).
+6:159:12170:0:24:56:308:723:12:g_d0_f2:12:g_d0_f2:rationalized by a single underlying mechanism.
+6:160:12216:24:18:57:555:699:12:g_d0_f2:12:g_d0_f2:Before proceeding, it is worthwhile to outline our language conventions. First, while we use
+6:161:12308:18:18:56:555:681:12:g_d0_f2:12:g_d0_f2:the term “elasticity,” the estimates we discuss are best thought of as simply summarizing the
+6:162:12401:18:18:56:555:663:12:g_d0_f2:12:g_d0_f2:statistical properties of how imports, income, and prices behave in the time series. Second,
+6:163:12493:18:18:56:555:645:12:g_d0_f2:12:g_d0_f2:although the measure of economic activity that we focus on is absorption, we use the terms
+6:164:12583:18:25:56:374:627:12:g_d0_f2:8:g_d0_f2:income, output, and absorption synonymously throughout.5
+6:165:12639:25:18:57:555:602:12:g_d0_f2:12:g_d0_f2:To summarize the statistical properties of imports, income,and prices in U.S. time series data,
+6:166:12734:18:17:56:555:584:12:g_d0_f2:12:g_d0_f2:we use a log-linear relationship relating imports to prices and income. The rationale for using
+6:167:12829:17:18:56:555:567:12:g_d0_f2:12:g_d0_f2:this relationship comes from standard models of international trade based on CES preferences
+6:168:12921:18:37:56:519:549:12:g_d0_f2:12:g_d0_f2:or production functions.6In these models, the demand function for imports is given by:
+6:169:13007:37:0:203:283:512:12:g_d0_f3:12:g_d0_f3:logMt=−θlog
+6:170:13018:0:9:285:294:529:12:g_d0_f7:12:g_d0_f7:-
+6:171:13019:9:16:295:314:520:12:g_d0_f4:8:g_d0_f5:pm,t
+6:172:13023:16:0:300:310:504:12:g_d0_f4:8:g_d0_f5:Pt
+6:173:13025:0:17:316:325:529:12:g_d0_f7:12:g_d0_f7:-
+6:174:13026:17:36:327:555:512:12:g_d0_f3:12:g_d0_f2:+logAbst+ωt.(1)
+6:175:13041:36:18:56:554:476:12:g_d0_f2:12:g_d0_f2:This equation relates real importsM, real absorptionAbs, the price of importspm, and the
+6:176:13129:18:18:56:555:458:12:g_d0_f2:12:g_d0_f2:absorption price indexP, in a log-linear way. The parameterθis the price elasticity of imports,
+6:177:13224:18:24:56:379:440:12:g_d0_f2:12:g_d0_f2:andωtis a “wedge,” which we describe in more detail below.
+6:178:13282:24:18:57:555:416:12:g_d0_f2:12:g_d0_f2:We use the structure of equation (1) to summarize key features of the data. We do so in two
+6:179:13373:18:37:56:284:398:12:g_d0_f2:12:g_d0_f2:ways. Our first exercise runs the regression
+6:180:13417:37:0:204:276:361:12:g_d0_f3:12:g_d0_f3:logMt=αlog
+6:181:13427:0:9:278:287:378:12:g_d0_f7:12:g_d0_f7:-
+6:182:13428:9:16:288:307:369:12:g_d0_f4:8:g_d0_f5:pm,t
+6:183:13432:16:0:292:303:353:12:g_d0_f4:8:g_d0_f5:Pt
+6:184:13434:0:17:309:318:378:12:g_d0_f7:12:g_d0_f7:-
+6:185:13435:17:35:320:555:361:12:g_d0_f3:12:g_d0_f2:+βlogAbst+ǫt.(2)
+6:186:13451:35:18:56:555:326:12:g_d0_f2:12:g_d0_f2:Relative to equation (1), the coefficientαmeasures the empirical price elasticity, andβmeasures
+6:187:13546:18:18:56:555:308:12:g_d0_f2:12:g_d0_f2:the empirical income elasticity. These empirical elasticities inform us about the response of real
+6:188:13644:18:18:56:555:290:12:g_d0_f2:12:g_d0_f2:imports to changes in income and import prices, and allow us to examine the extent to which
+6:189:13735:18:25:56:414:272:12:g_d0_f2:12:g_d0_f2:standard models deviate from the relationship observed in the data.
+6:190:13802:25:18:57:554:247:12:g_d0_f2:12:g_d0_f2:The second exercise imposes the theoretical restrictions implied by equation (1), a unit income
+6:191:13897:18:18:56:555:229:12:g_d0_f2:12:g_d0_f2:elasticity and an assumed value for the price elasticity, and uses the data on income and import
+6:192:13993:18:18:56:554:211:12:g_d0_f2:12:g_d0_f2:prices to obtain a measure of predicted imports. Finally, we infer the wedgeωby comparing
+6:193:14082:18:16:70:555:193:7:g_d0_f2:10:g_d0_f2:5Absorption is gross domestic product plus imports minus exports. Because static trade models typically im-
+6:194:14189:16:12:56:555:177:10:g_d0_f2:10:g_d0_f2:pose balanced trade, in these models absorption corresponds with income. Hence, we use absorption and income
+6:195:14297:12:8:56:122:165:10:g_d0_f2:10:g_d0_f2:synonymously.
+6:196:14310:8:16:70:555:157:7:g_d0_f2:10:g_d0_f2:6We think of standard models as those that generate log-linear import demand functions, also known as gravity
+6:197:14419:16:12:56:558:141:10:g_d0_f2:10:g_d0_f2:equations. Examples of standard models are those ofKrugman(1980), Anderson and van Wincoop(2003), Eaton
+6:198:14522:12:12:56:555:129:10:g_d0_f2:10:g_d0_f2:and Kortum(2002), andMelitz(2003) or international business-cycle models such asBackus, Kehoe, and Kydland
+6:199:14628:12:0:56:86:117:10:g_d0_f2:10:g_d0_f2:(1995).
+7:200:14636:0:37:56:477:723:12:g_d0_f2:12:g_d0_f2:predicted imports versus actual imports. Specifically, the wedge is computed as
+7:201:14715:37:0:194:264:686:12:g_d0_f4:12:g_d0_f6:ωt= logMt−
+7:202:14725:0:17:267:276:703:12:g_d0_f7:12:g_d0_f7:-
+7:203:14726:17:0:276:308:686:12:g_d0_f6:12:g_d0_f3:−θlog
+7:204:14731:0:9:310:319:703:12:g_d0_f7:12:g_d0_f7:-
+7:205:14732:9:16:320:339:694:12:g_d0_f4:8:g_d0_f5:pm,t
+7:206:14736:16:0:324:334:678:12:g_d0_f4:8:g_d0_f5:Pt
+7:207:14738:0:17:340:349:703:12:g_d0_f7:12:g_d0_f7:-
+7:208:14739:17:0:352:403:686:12:g_d0_f3:8:g_d0_f5:+logAbst
+7:209:14747:0:17:403:412:703:12:g_d0_f7:12:g_d0_f7:-
+7:210:14748:17:36:414:555:686:12:g_d0_f4:12:g_d0_f2:.(3)
+7:211:14752:36:17:56:555:650:12:g_d0_f2:12:g_d0_f2:This exercise is similar to that ofJacks, Meissner, and Novy(2009), andLevchenko, Lewis, and
+7:212:14844:17:18:56:555:633:12:g_d0_f2:12:g_d0_f2:Tesar(2010a). Following the arguments ofChari, Kehoe, and McGrattan(2007), this exercise is
+7:213:14935:18:18:56:555:615:12:g_d0_f2:12:g_d0_f2:meaningful becausesystematicdeviations between theory and data shed light on mechanisms
+7:214:15022:18:18:56:555:597:12:g_d0_f2:12:g_d0_f2:through which underlying primitives operate. Specifically, ifωtvaries systematically with the
+7:215:15115:18:18:56:555:579:12:g_d0_f2:12:g_d0_f2:business cycle, then this suggests that: (i) that there are economic forces that are not reflected in
+7:216:15216:18:18:56:555:561:12:g_d0_f2:12:g_d0_f2:equation (1); and (ii) that any new mechanism posited to explain these deviations should oper-
+7:217:15310:18:18:56:555:543:12:g_d0_f2:12:g_d0_f2:ate through the wedge. We setθ= 1.5, which is a standard calibration of this parameter in the
+7:218:15403:18:18:56:555:525:12:g_d0_f2:12:g_d0_f2:international business-cycle literature. Using largerθs, as in typical calibrations of international
+7:219:15503:18:32:56:260:507:12:g_d0_f2:12:g_d0_f2:trade models, results in larger wedges.
+7:220:15542:32:28:56:192:475:12:g_d0_f1:12:g_d0_f1:2.1. Measurement Issues
+7:221:15565:28:18:57:555:447:12:g_d0_f2:12:g_d0_f2:There are several issues in constructing data for use in the regression in (2) and wedge analysis
+7:222:15662:18:18:56:555:429:12:g_d0_f2:12:g_d0_f2:in (  3). They are: (i) the appropriate definitions of imports and absorption; and (ii) how to
+7:223:15756:18:18:56:555:411:12:g_d0_f2:12:g_d0_f2:construct the appropriate real measures and their associated price indices. Because these are
+7:224:15849:18:18:56:555:393:12:g_d0_f2:12:g_d0_f2:important issues, we spend several paragraphs here describing the construction of our data
+7:225:15939:18:24:56:89:375:12:g_d0_f2:12:g_d0_f2:series.
+7:226:15946:24:18:57:554:351:12:g_d0_f2:12:g_d0_f2:We focus our analysis on imports and absorption of goods, excluding oil. The National In-
+7:227:16035:18:18:56:555:333:12:g_d0_f2:12:g_d0_f2:come and Product Accounts (NIPA) report measures of imports and exports of goods and GDP
+7:228:16123:18:25:56:554:315:12:g_d0_f2:12:g_d0_f2:coming from goods sales. AppendixA provides the details of the exact data series that we use.
+7:229:16216:25:18:57:555:290:12:g_d0_f2:12:g_d0_f2:The focus on goods GDP helps address compositional issues of the sort emphasized byEaton,
+7:230:16305:18:18:56:554:272:12:g_d0_f2:12:g_d0_f2:Kortum, Neiman, and Romalis(2013). To address these compositional issues, we focus on an
+7:231:16393:18:17:56:555:254:12:g_d0_f2:12:g_d0_f2:absorption measure where most trade occurs (goods-only component of GDP). To address com-
+7:232:16482:17:18:56:555:237:12:g_d0_f2:12:g_d0_f2:positional issues within goods (i.e., durable vs. non-durable) emphasized byBoileau(1999) and
+7:233:16575:18:18:56:555:219:12:g_d0_f2:12:g_d0_f2:Engel and Wang(2011), we perform the same analysis later in this section using only durable
+7:234:16666:18:25:56:174:201:12:g_d0_f2:12:g_d0_f2:or non-durable goods.
+7:235:16687:25:18:57:557:176:12:g_d0_f2:12:g_d0_f2:Constructing real measures of these activities and their associated price indices is not as straight-
+7:236:16788:18:18:56:555:158:12:g_d0_f2:12:g_d0_f2:forward as it might seem. Real values in the U.S. NIPA accounts are chain-type indexes con-
+7:237:16879:18:18:56:555:140:12:g_d0_f2:12:g_d0_f2:structed using an “ideal” chain index advocated byFisher(1922). While these indexes have
+7:238:16967:18:17:56:555:122:12:g_d0_f2:12:g_d0_f2:desirable properties, they are not additive across categories (seeEhemann, Katz, and Moulton
+7:239:17059:17:18:56:555:105:12:g_d0_f2:12:g_d0_f2:(2002) andWhelan(2002) for detailed discussions). For our purposes, the implication is that
+7:240:17150:18:18:56:555:87:12:g_d0_f2:12:g_d0_f2:one cannot compute real absorption simply by adding real goods GDP to real imports and sub-
+7:241:17241:18:0:56:555:69:12:g_d0_f2:12:g_d0_f2:tracting real exports. An (approximate) solution to this problem is to use a “Fisher of Fishers”
+8:242:17338:0:35:177:434:712:12:g_d0_f1:12:g_d0_f1:Table1: Empirical Price and Income Elasticities
+8:243:17385:35:36:100:510:677:12:g_d0_f2:12:g_d0_f2:DataPrice Elasticity,ˆαIncome Elasticity,ˆβR2# Obsv.
+8:244:17437:36:11:100:243:641:12:g_d0_f2:12:g_d0_f3:Goods GDP−0.26
+8:245:17451:11:0:220:242:630:8:g_d0_f9:8:g_d0_f9:(0.13)
+8:246:17457:0:14:333:355:644:12:g_d0_f3:12:g_d0_f3:1.99
+8:247:17461:14:0:333:355:630:8:g_d0_f9:8:g_d0_f9:(0.14)
+8:248:17467:0:36:423:501:644:12:g_d0_f3:12:g_d0_f3:0.65187
+8:249:17474:36:12:92:517:608:10:g_d0_f1:10:g_d0_f2:Note:Data are in logs and HP filtered over the time period from Q2 1967 to Q4 2013. Het-
+8:250:17562:12:48:92:330:596:10:g_d0_f2:10:g_d0_f2:eroskedastic robust standard errors are in parenthesis.
+8:251:17617:48:18:56:554:548:12:g_d0_f2:12:g_d0_f2:approach suggested byDiewert(1978). The basic idea is to take the real values and their as-
+8:252:17708:18:18:56:555:530:12:g_d0_f2:12:g_d0_f2:sociated price indexes for the categories of interest and then compute Fisher indexes of these
+8:253:17802:18:24:56:305:512:12:g_d0_f2:12:g_d0_f2:measures—hence the “Fisher of Fishers” name.
+8:254:17846:24:18:57:554:488:12:g_d0_f2:12:g_d0_f2:Using this approach, we construct data series for real absorption of goods, real imports of
+8:255:17937:18:18:56:555:470:12:g_d0_f2:12:g_d0_f2:goods, and their associated price indexes starting in the second quarter of 1967 and ending in
+8:256:18031:18:18:56:555:452:12:g_d0_f2:12:g_d0_f2:the fourth quarter of 2013. To deal with trends, we HP-filter the logarithm of these data with
+8:257:18125:18:32:56:548:434:12:g_d0_f2:12:g_d0_f2:smoothing parameter 1600. Results using log-first-differences yield no significant differences.
+8:258:18220:32:28:56:434:402:12:g_d0_f1:12:g_d0_f1:2.2. High Income Elasticity, Low Price Elasticity, Pro-Cyclical Wedges
+8:259:18290:28:18:57:555:374:12:g_d0_f2:12:g_d0_f2:Table1 presents the estimated income and price elasticities of imports, using ordinary least
+8:260:18382:18:18:56:571:356:12:g_d0_f2:12:g_d0_f2:squares to estimate equation (2). Figure2(a)   plots the result from the wedge accounting exer-
+8:261:18477:18:31:56:386:338:12:g_d0_f2:12:g_d0_f2:cise. Below we outline three observations from these exercises.
+8:262:18540:31:18:57:555:307:12:g_d0_f1:12:g_d0_f2:O.1. Income elasticity>1.The estimated income elasticity of imports is nearly two—i.e., a
+8:263:18629:18:18:56:554:289:12:g_d0_f2:12:g_d0_f2:one-percent increase in absorption is associated with a two-percent increase in imports. Figure
+8:264:18724:18:17:56:555:271:12:g_d0_f2:12:g_d0_f2:1(a)   illustrates this finding by plotting the percent deviations from trend of real absorption and
+8:265:18824:17:18:56:554:254:12:g_d0_f2:12:g_d0_f2:imports. Consistent with the findings in Table1, absorption correlates strongly with imports,
+8:266:18917:18:25:56:226:236:12:g_d0_f2:12:g_d0_f2:yet it is less than half as volatile.
+8:267:18954:25:18:57:554:211:12:g_d0_f2:12:g_d0_f2:This feature of the data is interesting because it contrasts with the implication of standard mod-
+8:268:19052:18:18:56:554:193:12:g_d0_f2:12:g_d0_f2:els of international trade. These models imply that a one-percent increase in absorption results
+8:269:19148:18:18:56:555:175:12:g_d0_f2:12:g_d0_f2:in a one-percent increase in imports—i.e., these models feature a unit income elasticity. Thus,
+8:270:19243:18:18:56:555:157:12:g_d0_f2:12:g_d0_f2:attempts at modeling trade volumes at business-cycle frequencies must confront this discrep-
+8:271:19335:18:24:56:323:139:12:g_d0_f2:12:g_d0_f2:ancy between standard trade models and the data.
+8:272:19383:24:18:57:554:115:12:g_d0_f2:12:g_d0_f2:As mentioned above, the fact that the estimated income elasticity of demand for U.S. imports
+8:273:19475:18:19:56:555:97:12:g_d0_f2:12:g_d0_f2:exceeds unity is not new, and dates back toHouthakker and Magee(1969).7Marquez(2002)
+8:274:19559:19:15:70:555:78:7:g_d0_f2:10:g_d0_f2:7Prominent explanations of the high income elasticity of import demand are largely based on expanding prod-
+8:275:19666:15:0:56:555:63:10:g_d0_f2:10:g_d0_f2:uct variety (see, e.g.,Krugman(1989) andFeenstra(1994)) and are best thought of as medium-/long-run explana-
+9:276:19775:0:0:115:552:450:7:Helvetica:7:Helvetica:1970197519801985199019952000200520102015
+9:277:19815:0:0:72:84:465:7:Helvetica:7:Helvetica:−25
+9:278:19818:0:0:72:84:489:7:Helvetica:7:Helvetica:−20
+9:279:19821:0:0:72:84:513:7:Helvetica:7:Helvetica:−15
+9:280:19824:0:0:72:84:537:7:Helvetica:7:Helvetica:−10
+9:281:19827:0:0:76:84:561:7:Helvetica:7:Helvetica:−5
+9:282:19829:0:0:80:84:585:7:Helvetica:7:Helvetica:0
+9:283:19830:0:0:80:84:609:7:Helvetica:7:Helvetica:5
+9:284:19831:0:0:76:84:633:7:Helvetica:7:Helvetica:10
+9:285:19833:0:0:76:84:657:7:Helvetica:7:Helvetica:15
+9:286:19835:0:0:76:84:681:7:Helvetica:7:Helvetica:20
+9:287:19837:0:192:76:84:705:7:Helvetica:7:Helvetica:25
+9:288:19868:192:0:298:341:513:7:Helvetica:7:Helvetica: Real Imports
+9:289:19881:0:199:342:396:634:7:Helvetica:7:Helvetica: Real Absorption
+9:290:19897:199:298:219:390:435:10:g_d0_f2:10:g_d0_f1:(a)Real Absorption and Real Imports
+9:291:19932:298:0:113:550:137:7:Helvetica:7:Helvetica:1970197519801985199019952000200520102015
+9:292:19972:0:0:71:83:151:7:Helvetica:7:Helvetica:−25
+9:293:19975:0:0:71:83:175:7:Helvetica:7:Helvetica:−20
+9:294:19978:0:0:71:83:199:7:Helvetica:7:Helvetica:−15
+9:295:19981:0:0:71:83:223:7:Helvetica:7:Helvetica:−10
+9:296:19984:0:0:74:82:247:7:Helvetica:7:Helvetica:−5
+9:297:19986:0:0:78:82:272:7:Helvetica:7:Helvetica:0
+9:298:19987:0:0:78:82:296:7:Helvetica:7:Helvetica:5
+9:299:19988:0:0:75:83:320:7:Helvetica:7:Helvetica:10
+9:300:19990:0:0:75:83:344:7:Helvetica:7:Helvetica:15
+9:301:19992:0:0:75:83:368:7:Helvetica:7:Helvetica:20
+9:302:19994:0:73:75:83:392:7:Helvetica:7:Helvetica:25
+9:303:20025:73:119:330:358:319:7:Helvetica:7:Helvetica: (Pm / P )
+9:304:20035:119:78:295:338:200:7:Helvetica:7:Helvetica: Real Imports
+9:305:20048:78:45:221:385:122:10:g_d0_f2:10:g_d0_f1:(b)Relative Prices and Real Imports
+9:306:20083:45:0:157:453:77:12:g_d0_f1:12:g_d0_f1:Figure 1: Absorption, Relative Prices, and Import Data
+10:307:20138:0:18:56:555:723:12:g_d0_f2:12:g_d0_f2:examines this feature of the data from a modern perspective and finds that it is robust to alter-
+10:308:20235:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:native econometric specifications, different frequencies, and commodity disaggregation. At a
+10:309:20327:18:18:56:554:687:12:g_d0_f2:12:g_d0_f2:disaggregated level,Fitzgerald and Haller(2012) find a high income elasticity (and low price
+10:310:20419:18:24:56:349:669:12:g_d0_f2:12:g_d0_f2:elasticity) at the plant level in census data from Ireland.
+10:311:20478:24:18:57:554:645:12:g_d0_f1:12:g_d0_f2:O.2. Low price elasticity.Our second observation is that the estimated import price elasticity
+10:312:20572:18:18:56:555:627:12:g_d0_f2:12:g_d0_f2:is−0.26. Figure1(b)illustrates this finding. It plots the percent deviations from trend of rel-
+10:313:20667:18:18:56:555:609:12:g_d0_f2:12:g_d0_f2:ative pricespm,tPtand import data. Notice that prices and imports weakly correlate with each
+10:314:20759:18:18:56:555:591:12:g_d0_f2:12:g_d0_f2:other negatively and, in some instances, even move in the same direction. Thus, the low price
+10:315:20852:18:24:56:247:573:12:g_d0_f2:12:g_d0_f2:elasticity in Table1 is not a surprise.
+10:316:20891:24:18:57:554:549:12:g_d0_f2:12:g_d0_f2:While modelers have a choice over this parameter, typical calibrations/estimations of static
+10:317:20983:18:18:56:555:531:12:g_d0_f2:12:g_d0_f2:trade models or international business-cycle models generally use values of it that are consid-
+10:318:21078:18:18:56:555:513:12:g_d0_f2:12:g_d0_f2:erably larger. Moreover, estimates of this parameter based on static trade models and changes
+10:319:21171:18:18:56:555:495:12:g_d0_f2:12:g_d0_f2:in trade flows during trade liberalizations typically suggest substantially higher values of it.
+10:320:21267:18:18:56:555:477:12:g_d0_f2:12:g_d0_f2:Lower values, but still higher than we estimate, typically come from imposing a unitary in-
+10:321:21358:18:18:56:554:459:12:g_d0_f2:12:g_d0_f2:come elasticity and using time series variation in prices and trade flows relative to absorption.
+10:322:21455:18:24:56:524:441:12:g_d0_f2:12:g_d0_f2:Ruhl(2008) provides an extensive discussion of the conflicting estimates of this elasticity.
+10:323:21547:24:18:57:555:417:12:g_d0_f1:12:g_d0_f2:O.3. Pro-cyclical wedges.Our last observation is that the wedges inferred using equation (3)
+10:324:21639:18:25:56:379:399:12:g_d0_f2:12:g_d0_f2:are pro-cyclical and explain much of the variation in imports.
+10:325:21701:25:18:57:554:374:12:g_d0_f2:12:g_d0_f2:Figure2(a)simply plots the wedge and the imports data. For most of the time period, the
+10:326:21788:18:18:56:555:356:12:g_d0_f2:12:g_d0_f2:wedge tracks imports very closely.  Confirming this, a regression of imports on the wedge
+10:327:21877:18:17:56:555:338:12:g_d0_f2:12:g_d0_f2:yields a slope coefficient of0.70and anR2of0.42. This suggests that systematic variation in the
+10:328:21972:17:18:56:554:321:12:g_d0_f2:12:g_d0_f2:wedge is quantitatively important to understanding variation in imports. Given the discussion
+10:329:22065:18:18:56:555:303:12:g_d0_f2:12:g_d0_f2:above, this observation suggests that there are economic forces that are operative in the data
+10:330:22159:18:25:56:302:285:12:g_d0_f2:12:g_d0_f2:but not in models consistent with equation (1).
+10:331:22206:25:18:57:555:260:12:g_d0_f2:12:g_d0_f2:Systematic variation in the trade wedge is not distinct from observationsO.1andO.2. Standard
+10:332:22298:18:18:56:554:242:12:g_d0_f2:12:g_d0_f2:trade models basically have stronger substitution effects relative to income effects—i.e., imports
+10:333:22396:18:18:56:555:224:12:g_d0_f2:12:g_d0_f2:should be more responsive to a one-percent change in prices relative to a one-percent change
+10:334:22488:18:17:56:555:206:12:g_d0_f2:12:g_d0_f2:in income. The data observationsO.1andO.2suggest the complete opposite pattern—imports
+10:335:22574:17:18:56:555:189:12:g_d0_f2:12:g_d0_f2:are less responsive to prices relative to income. Thus, the wedge analysis based on a model
+10:336:22665:18:18:56:555:171:12:g_d0_f2:12:g_d0_f2:that puts more weight on relative price changes versus changes in income is bound to find
+10:337:22754:18:25:56:267:153:12:g_d0_f2:12:g_d0_f2:systematic variation in the trade wedge.
+10:338:22794:25:22:57:554:128:12:g_d0_f2:12:g_d0_f2:The 2008-2009 crisis illustrates this point well. During this period, absorption decreased and
+10:339:22888:22:12:56:555:106:10:g_d0_f2:10:g_d0_f2:tions. Quantitatively,Feenstra(1994) shows that the expanding product variety explanation can account for only
+10:340:22998:12:12:56:554:94:10:g_d0_f2:10:g_d0_f2:a part of the high income elasticity.Ruhl(2008) shows that this margin is not quantitatively important at business-
+10:341:23113:12:12:56:555:82:10:g_d0_f2:10:g_d0_f2:cycle frequencies.Kehoe and Ruhl(2013) measure changes in the extensive margin and find that it playslittle role
+10:342:23225:12:0:56:367:70:10:g_d0_f2:10:g_d0_f2:outside of significant structural transformations or trade liberalization.
+11:343:23300:0:0:115:552:450:7:Helvetica:7:Helvetica:1970197519801985199019952000200520102015
+11:344:23340:0:0:72:84:465:7:Helvetica:7:Helvetica:−25
+11:345:23343:0:0:72:84:489:7:Helvetica:7:Helvetica:−20
+11:346:23346:0:0:72:84:514:7:Helvetica:7:Helvetica:−15
+11:347:23349:0:0:72:84:538:7:Helvetica:7:Helvetica:−10
+11:348:23352:0:0:76:84:563:7:Helvetica:7:Helvetica:−5
+11:349:23354:0:0:80:84:587:7:Helvetica:7:Helvetica:0
+11:350:23355:0:0:80:84:612:7:Helvetica:7:Helvetica:5
+11:351:23356:0:0:76:84:636:7:Helvetica:7:Helvetica:10
+11:352:23358:0:0:76:84:661:7:Helvetica:7:Helvetica:15
+11:353:23360:0:0:76:84:686:7:Helvetica:7:Helvetica:20
+11:354:23362:0:61:76:84:710:7:Helvetica:7:Helvetica:25
+11:355:23393:61:134:340:385:649:7:Helvetica:7:Helvetica: Trade Wedge
+11:356:23405:134:80:304:347:515:7:Helvetica:7:Helvetica: Real Imports
+11:357:23418:80:304:238:370:435:10:g_d0_f2:10:g_d0_f1:(a)Wedges and Real Imports
+11:358:23444:304:0:113:550:131:7:Helvetica:7:Helvetica:1970197519801985199019952000200520102015
+11:359:23484:0:0:71:83:146:7:Helvetica:7:Helvetica:−25
+11:360:23487:0:0:71:83:170:7:Helvetica:7:Helvetica:−20
+11:361:23490:0:0:71:83:195:7:Helvetica:7:Helvetica:−15
+11:362:23493:0:0:71:83:219:7:Helvetica:7:Helvetica:−10
+11:363:23496:0:0:74:82:244:7:Helvetica:7:Helvetica:−5
+11:364:23498:0:0:78:82:269:7:Helvetica:7:Helvetica:0
+11:365:23499:0:0:78:82:293:7:Helvetica:7:Helvetica:5
+11:366:23500:0:0:75:83:318:7:Helvetica:7:Helvetica:10
+11:367:23502:0:0:75:83:342:7:Helvetica:7:Helvetica:15
+11:368:23504:0:0:75:83:367:7:Helvetica:7:Helvetica:20
+11:369:23506:0:62:75:83:391:7:Helvetica:7:Helvetica:25
+11:370:23537:62:153:341:418:329:7:Helvetica:7:Helvetica: Trade Wedge, Durables
+11:371:23559:153:59:305:381:176:7:Helvetica:7:Helvetica: Real Imports, Durables
+11:372:23582:59:45:201:407:117:10:g_d0_f2:10:g_d0_f1:(b)Wedges and Real Imports, Durables Only
+11:373:23623:45:0:212:398:72:12:g_d0_f1:12:g_d0_f1:Figure 2: Wedges and Import Data
+12:374:23657:0:18:56:554:723:12:g_d0_f2:12:g_d0_f2:imports decreased even more—this reflects the high income elasticity. When the income elastic-
+12:375:23751:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:ity is constrained to be one in the wedge analysis, the wedge must then decrease to rationalize
+12:376:23846:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:the drop in imports. Furthermore, relative prices decreased and imports did not increase as pre-
+12:377:23942:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:dicted by the standard model—this reflects the low price elasticity. When the price elasticity is
+12:378:24039:18:18:56:555:651:12:g_d0_f2:12:g_d0_f2:constrained to take on a standard value, this implies that the wedge must decrease even more.
+12:379:24132:18:18:56:555:633:12:g_d0_f2:12:g_d0_f2:Thus, the fact that imports over-respond to income and under-respond to prices manifests itself
+12:380:24227:18:18:56:555:615:12:g_d0_f2:12:g_d0_f2:as a pro-cyclical wedge when events like the 2008-2009 recession are analyzed in the context of
+12:381:24322:18:32:56:182:597:12:g_d0_f2:12:g_d0_f2:a standard trade model.
+12:382:24345:32:28:56:294:565:12:g_d0_f1:12:g_d0_f1:2.3. Robustness—Durables and Inventories
+12:383:24385:28:18:57:554:537:12:g_d0_f2:12:g_d0_f2:Recent papers on the collapse in trade during the 2008-2009 crisis have raised two issues: the
+12:384:24479:18:18:56:555:519:12:g_d0_f2:12:g_d0_f2:distinction between durables and non-durables, and the role of inventories. Here, we show
+12:385:24568:18:18:56:554:501:12:g_d0_f2:12:g_d0_f2:that observationsO.1-3are robust to restricting attention to durables or non-durable goods,
+12:386:24659:18:24:56:304:483:12:g_d0_f2:12:g_d0_f2:and accounting for the behavior of inventories.
+12:387:24706:24:18:57:555:459:12:g_d0_f1:12:g_d0_f2:Durables vs. Non-Durables.One concern is that observationsO.1-3are just picking up com-
+12:388:24793:18:18:56:555:441:12:g_d0_f2:12:g_d0_f2:positional effects of the sort described byBoileau(1999) andEngel and Wang(2011). The ar-
+12:389:24882:18:18:56:555:423:12:g_d0_f2:12:g_d0_f2:gument is based on the fact that a larger fraction of imports is classified as durable than in,
+12:390:24977:18:18:56:555:405:12:g_d0_f2:12:g_d0_f2:say, absorption of total goods. This observation, combined with the fact that consumption of
+12:391:25069:18:18:56:555:387:12:g_d0_f2:12:g_d0_f2:durables is more volatile than that of non-durables, suggests that an income elasticity larger
+12:392:25163:18:18:56:555:369:12:g_d0_f2:12:g_d0_f2:than unity or pro-cyclical trade wedges may arise because of the compositional difference.
+12:393:25253:18:18:56:555:351:12:g_d0_f2:12:g_d0_f2:Therefore, the durables composition explanation suggests that if we focused on only durables
+12:394:25345:18:24:56:368:333:12:g_d0_f2:12:g_d0_f2:or non-durables, then observationsO.1-3would disappear.
+12:395:25400:24:18:57:555:309:12:g_d0_f2:12:g_d0_f2:We address this argument by re-estimating equation (2) restricting the import, absorption, and
+12:396:25494:18:18:56:555:291:12:g_d0_f2:12:g_d0_f2:price data to include only durable goods or only non-durables. AppendixA provides the details
+12:397:25587:18:24:56:242:273:12:g_d0_f2:12:g_d0_f2:of the exact data series that we use.
+12:398:25624:24:18:57:555:249:12:g_d0_f2:12:g_d0_f2:Table2 presents our results. It shows that the income elasticity of imports of durables is well
+12:399:25719:18:18:56:555:231:12:g_d0_f2:12:g_d0_f2:above one (albeit mitigated), and the import price elasticity is similar to that found in Table1.
+12:400:25816:18:18:56:555:213:12:g_d0_f2:12:g_d0_f2:When the data are restricted to only non-durables, one finds a very high income elasticity and
+12:401:25910:18:25:56:161:195:12:g_d0_f2:8:g_d0_f2:low price elasticity.8
+12:402:25932:25:17:57:555:170:12:g_d0_f2:12:g_d0_f2:The durable trade wedge still accounts for a lot of the variation in imports. Figure2(b)illus-
+12:403:26026:17:18:56:555:153:12:g_d0_f2:12:g_d0_f2:trates this by plotting the trade wedge for durable goods only. Similar to the results discussed in
+12:404:26125:18:18:56:554:135:12:g_d0_f1:12:g_d0_f2:O.3, a regression of imports on the wedge yields a slope coefficient of0.80and anR2of0.42. The
+12:405:26219:18:18:56:555:117:12:g_d0_f2:12:g_d0_f2:reasoning is the same as discussed above: though the data suggests that imports of durables
+12:406:26310:18:19:56:555:99:12:g_d0_f2:12:g_d0_f2:are more responsive to income than to changes in relative prices, standard models predict the
+12:407:26403:19:16:70:554:80:7:g_d0_f2:10:g_d0_f2:8Some care must be taken with this observation because available measures of non-durable imports include
+12:408:26507:16:0:56:270:64:10:g_d0_f2:10:g_d0_f2:petroleum products, unlike the other data series.
+13:409:26558:0:34:98:513:715:12:g_d0_f1:12:g_d0_f1:Table2: Empirical Price and Income Elasticities — Durables and Inventories
+13:410:26632:34:8:77:249:681:12:g_d0_f2:12:g_d0_f2:Data Series / ApproachPrice
+13:411:26659:8:0:223:272:673:12:g_d0_f2:12:g_d0_f2:Elasticity
+13:412:26669:0:10:300:339:683:12:g_d0_f2:12:g_d0_f2:Income
+13:413:26675:10:0:300:348:673:12:g_d0_f2:12:g_d0_f2:Elasticity
+13:414:26685:0:10:378:430:683:12:g_d0_f2:12:g_d0_f2:Inventory
+13:415:26694:10:0:378:426:673:12:g_d0_f2:12:g_d0_f2:Elasticity
+13:416:26704:0:40:465:533:681:12:g_d0_f4:12:g_d0_f2:R2# Obsv.
+13:417:26713:40:8:77:269:641:12:g_d0_f2:12:g_d0_f3:Durable Goods−0.27
+13:418:26731:8:0:246:268:633:8:g_d0_f9:8:g_d0_f9:(0.13)
+13:419:26737:0:11:317:338:644:12:g_d0_f3:12:g_d0_f3:1.52
+13:420:26741:11:0:317:339:633:8:g_d0_f9:8:g_d0_f9:(0.11)
+13:421:26747:0:39:373:523:641:12:g_d0_f2:12:g_d0_f3:—0.69    187
+13:422:26759:39:8:77:269:602:12:g_d0_f2:12:g_d0_f3:Non-Durable Goods−0.11
+13:423:26781:8:0:246:268:594:8:g_d0_f9:8:g_d0_f9:(0.05)
+13:424:26787:0:10:317:338:604:12:g_d0_f3:12:g_d0_f3:2.72
+13:425:26791:10:0:317:339:594:8:g_d0_f9:8:g_d0_f9:(0.31)
+13:426:26797:0:40:373:523:602:12:g_d0_f2:12:g_d0_f3:—0.45    187
+13:427:26809:40:8:77:266:562:12:g_d0_f2:12:g_d0_f3:Goods &∆Inventories−0.27
+13:428:26833:8:0:243:265:554:8:g_d0_f9:8:g_d0_f9:(0.12)
+13:429:26839:0:11:317:338:565:12:g_d0_f3:12:g_d0_f3:1.65
+13:430:26843:11:0:317:339:554:8:g_d0_f9:8:g_d0_f9:(0.11)
+13:431:26849:0:11:378:399:565:12:g_d0_f3:12:g_d0_f3:0.20
+13:432:26853:11:0:378:399:554:8:g_d0_f9:8:g_d0_f9:(0.02)
+13:433:26859:0:29:462:523:562:12:g_d0_f3:12:g_d0_f3:0.73    187
+13:434:26870:29:12:72:536:533:10:g_d0_f1:10:g_d0_f2:Note:Data are in logs and HP filtered over the time period from Q2 1967 to Q4 2013. Heteroskedastic
+13:435:26969:12:48:72:255:521:10:g_d0_f2:10:g_d0_f2:robust standard errors are in parentheses.
+13:436:27011:48:18:56:554:473:12:g_d0_f2:12:g_d0_f2:opposite pattern. Thus, while the income elasticity is mitigated, the relative weighting of the
+13:437:27106:18:24:56:434:455:12:g_d0_f2:12:g_d0_f2:income and substitution effects still conflict with what the data suggest.
+13:438:27180:24:18:57:554:431:12:g_d0_f2:12:g_d0_f2:Another implication of the durable goods explanation is the following: we should observe that
+13:439:27273:18:18:56:554:413:12:g_d0_f2:12:g_d0_f2:the income elasticity of imports is higher when the share of durables in imports is large relative
+13:440:27371:18:18:56:555:395:12:g_d0_f2:12:g_d0_f2:to the share of durables in total absorption—i.e., when there is a large compositional difference
+13:441:27468:18:18:56:555:377:12:g_d0_f2:12:g_d0_f2:between imports and absorption. Thus, we should observe a positive correlation between the
+13:442:27558:18:18:56:554:359:12:g_d0_f2:12:g_d0_f2:income elasticity and the share of durables in imports relative to the share of durables in total
+13:443:27655:18:24:56:116:341:12:g_d0_f2:12:g_d0_f2:absorption.
+13:444:27666:24:18:57:555:317:12:g_d0_f2:12:g_d0_f2:To explore this implication, we ran the regression in (2) for all goods on a 40-quarter moving
+13:445:27760:18:18:56:554:299:12:g_d0_f2:12:g_d0_f2:window—i.e., for 1967q2-1977q1, 1967q3-1977q2, etc. We found a strong negative correlation
+13:446:27850:18:18:56:555:281:12:g_d0_f2:12:g_d0_f2:(−0.63and statistically different from zero) between the income elasticity and the relative share
+13:447:27947:18:18:56:555:263:12:g_d0_f2:12:g_d0_f2:of durables in imports. This result goes against the positive correlation that the durables expla-
+13:448:28045:18:24:56:135:245:12:g_d0_f2:12:g_d0_f2:nation implies.
+13:449:28060:24:18:57:555:221:12:g_d0_f1:12:g_d0_f2:Inventories.Another concern is thatO.1-3arises because we abstract from changes in inven-
+13:450:28149:18:18:56:554:203:12:g_d0_f2:12:g_d0_f2:tories.9Alessandria, Kaboski, and Midrigan(2010b) make this argument while studying the
+13:451:28236:18:18:56:555:185:12:g_d0_f2:12:g_d0_f2:decline in trade flows during the 2008-2009 crisis;Alessandria, Kaboski, and Midrigan(2010a)
+13:452:28328:18:18:56:555:167:12:g_d0_f2:12:g_d0_f2:argue that inventory considerations are important for understanding the dynamics of devalua-
+13:453:28420:18:18:56:555:149:12:g_d0_f2:12:g_d0_f2:tions. An implication ofAlessandria, Kaboski, and Midrigan’s (2010b) model is that the regres-
+13:454:28514:18:18:56:555:131:12:g_d0_f2:12:g_d0_f2:sion equation in (2) should be augmented with the change in imported inventories(Alessan-
+13:455:28603:18:19:56:372:113:12:g_d0_f2:12:g_d0_f2:dria, Kaboski, and Midrigan(2011) provide this derivation).
+13:456:28662:19:15:70:555:94:7:g_d0_f2:10:g_d0_f2:9Feenstra(1994) suggests this, as well, and uses real personal consumption to instrument for the fact that
+13:457:28768:15:12:56:555:79:10:g_d0_f2:10:g_d0_f2:changes in inventories are not controlled for. We did this and found that the estimated price and income elasticities
+13:458:28885:12:0:56:139:67:10:g_d0_f2:10:g_d0_f2:are−0.52and2.34.
+14:459:28903:0:18:57:554:723:12:g_d0_f2:12:g_d0_f2:We followed this argument by augmenting the regression in (2) by including data on the real
+14:460:28994:18:18:56:554:705:12:g_d0_f2:12:g_d0_f2:change in private inventories as an additional explanatory variable. Separate information on
+14:461:29086:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:changes in inventories of imported goods is unavailable. The third row in Table2 reports the
+14:462:29178:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:results. After controlling for changes in inventories, the income elasticity is1.65, relative to
+14:463:29274:18:18:56:555:651:12:g_d0_f3:12:g_d0_f2:1.99without controlling for inventories. Including inventories also improves the fit of the re-
+14:464:29369:18:18:56:554:633:12:g_d0_f2:12:g_d0_f2:gression from anR2of0.65without inventories to0.73with inventories. These results suggest
+14:465:29458:18:18:56:554:615:12:g_d0_f2:12:g_d0_f2:that inventory adjustments are a partial, but not a complete explanation, of the high income
+14:466:29550:18:30:56:283:597:12:g_d0_f2:12:g_d0_f2:elasticities observed at cyclical frequencies.
+14:467:29596:30:18:57:554:567:12:g_d0_f2:12:g_d0_f2:In the next sections, we argue that systematic variation in intertemporal substitution can ra-
+14:468:29690:18:18:56:554:549:12:g_d0_f2:12:g_d0_f2:tionalize the features,O.1-3, of the data described above. Intertemporal substitution matters
+14:469:29783:18:18:56:554:531:12:g_d0_f2:12:g_d0_f2:because we model the decision to import as a dynamic decision. With a finite intertempo-
+14:470:29871:18:18:56:555:513:12:g_d0_f2:12:g_d0_f2:ral elasticity of substitution, intertemporal substitution depends on the trade-off between con-
+14:471:29967:18:18:56:555:495:12:g_d0_f2:12:g_d0_f2:sumption today versus expectations of consumption tomorrow. Changes in endowments and
+14:472:30052:18:18:56:555:477:12:g_d0_f2:12:g_d0_f2:prices affect the trade-off between consumption today and consumption tomorrow, and, thus,
+14:473:30142:18:18:56:555:459:12:g_d0_f2:12:g_d0_f2:this breaks the unitary income elasticity, biases the estimated price elasticity, and show up as a
+14:474:30240:18:41:56:438:441:12:g_d0_f2:12:g_d0_f2:time-varying trade friction consistent the featuresO.1-3seen in the data.
+14:475:30313:41:28:56:117:400:14:g_d0_f1:14:g_d0_f1:3. Model
+14:476:30321:28:18:57:555:372:12:g_d0_f2:12:g_d0_f2:The world economy consists of a large number of infinitesimal countries of two types, home
+14:477:30411:18:18:56:555:354:12:g_d0_f2:12:g_d0_f2:and foreign. In each country, there is an infinitely-lived representative consumer who has time-
+14:478:30507:18:18:56:555:336:12:g_d0_f2:12:g_d0_f2:separable preferences over a period utility function. Period utility is of the constant relative risk
+14:479:30608:18:18:56:555:318:12:g_d0_f2:12:g_d0_f2:aversion class and defined over a composite consumption goodQtdefined below. Expected
+14:480:30693:18:40:56:249:300:12:g_d0_f2:12:g_d0_f2:discounted future utility is given by:
+14:481:30731:40:0:246:258:260:12:g_d0_f3:8:g_d0_f9:E0
+14:482:30733:0:9:261:283:280:12:g_d0_f7:8:g_d0_f13:(∞
+14:483:30735:9:25:270:287:271:12:g_d0_f7:12:g_d0_f7:X
+14:484:30736:25:0:272:286:246:8:g_d0_f5:8:g_d0_f9:t=0
+14:485:30739:0:0:290:300:260:12:g_d0_f4:8:g_d0_f5:βt
+14:486:30741:0:16:303:315:268:12:g_d0_f4:8:g_d0_f5:Q1−γt
+14:487:30746:16:0:302:328:252:12:g_d0_f3:12:g_d0_f4:1−γ
+14:488:30749:0:20:330:340:280:12:g_d0_f7:12:g_d0_f7:)
+14:489:30750:20:41:342:555:260:12:g_d0_f4:12:g_d0_f2:,(4)
+14:490:30754:41:18:56:555:219:12:g_d0_f2:12:g_d0_f2:whereγ >0andβ∈(0,1). The parameterγis the coefficient of risk aversion, and1γis the in-
+14:491:30841:18:18:56:555:201:12:g_d0_f2:12:g_d0_f2:tertemporal elasticity of substitution over the composite consumption goodQt. The parameter
+14:492:30932:18:18:56:555:183:12:g_d0_f4:12:g_d0_f2:βis the subjective discount factor.E0is the mathematical expectation operator conditional on
+14:493:31024:18:24:56:187:165:12:g_d0_f2:12:g_d0_f2:information at date zero.
+14:494:31049:24:33:57:487:141:12:g_d0_f2:12:g_d0_f2:The composite consumption goodQtis a CES aggregate over two goods,xandy:
+14:495:31121:33:33:249:555:108:12:g_d0_f4:12:g_d0_f2:Qt= (xρt+yρt)1/ρ,(5)
+14:496:31141:33:18:56:555:75:12:g_d0_f2:12:g_d0_f2:whereρ∈(0,1). The parameterρcontrols the elasticity of substitution across goods, with this
+14:497:31232:18:0:56:197:57:12:g_d0_f2:12:g_d0_f2:elasticity given byθ=11−ρ.
+15:498:31260:0:18:57:555:723:12:g_d0_f2:12:g_d0_f2:Every period, the consumer in a typical home country receivesa stochastic endowment of good
+15:499:31351:18:18:56:555:705:12:g_d0_f4:12:g_d0_f2:x, while the consumer in a typical foreign country receives a stochastic endowment of goody.
+15:500:31443:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:These endowments are idiosyncratic to each particular country, and can be either consumed
+15:501:31532:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:domestically or used to acquire foreign goods through a centralized goods market.  Goods
+15:502:31620:18:24:56:154:651:12:g_d0_f2:8:g_d0_f2:cannot be stored.10
+15:503:31639:24:18:57:555:627:12:g_d0_f2:12:g_d0_f2:International trade consists of the exchange of one type of good for another type of good. In-
+15:504:31733:18:18:56:555:609:12:g_d0_f2:12:g_d0_f2:ternational trade is subject to two technological constraints. First, agents in each country face
+15:505:31830:18:18:56:555:591:12:g_d0_f2:12:g_d0_f2:iceberg trade costs,τ >1, to move goods across borders. This implies that for everyτunits of a
+15:506:31924:18:18:56:555:573:12:g_d0_f2:12:g_d0_f2:good that are shipped, only one unit arrives at a destination. We assume that goods cannot be
+15:507:32017:18:24:56:120:555:12:g_d0_f2:12:g_d0_f2:re-exported.
+15:508:32029:24:18:57:555:531:12:g_d0_f2:12:g_d0_f2:Second, international purchases take time.11We model this as a time-to-ship friction, such
+15:509:32119:18:18:56:554:513:12:g_d0_f2:12:g_d0_f2:that if the home country purchases one unit of goodyat datet, the good arrives (and is only
+15:510:32210:18:18:56:555:495:12:g_d0_f2:12:g_d0_f2:available for consumption) at datet+ 1. Along with this assumption, we assume that goods
+15:511:32298:18:18:56:555:477:12:g_d0_f2:12:g_d0_f2:must be paid for before they are delivered.12Underlying this international trading structure is
+15:512:32393:18:18:56:555:459:12:g_d0_f2:12:g_d0_f2:an assumed enforcement technology that allows countries to coordinate the dynamic exchange
+15:513:32483:18:24:56:254:441:12:g_d0_f2:12:g_d0_f2:of goods across international borders.
+15:514:32521:24:18:57:554:417:12:g_d0_f2:12:g_d0_f2:We abstract from trade in international financial assets.13This does not imply that the typical
+15:515:32616:18:18:56:555:399:12:g_d0_f2:12:g_d0_f2:agent is in financial autarky. Because of the timing assumption on international trade, trade in
+15:516:32712:18:18:56:555:381:12:g_d0_f2:12:g_d0_f2:goods is equivalent to purchasing a one-period non-state-contingent bond that pays out in units
+15:517:32807:18:18:56:555:363:12:g_d0_f2:12:g_d0_f2:of the foreign good in the next period. Thus, international trade acts implicitly as a financial
+15:518:32903:18:18:56:555:345:12:g_d0_f2:12:g_d0_f2:asset in this model. With this insight, and noting that each country faces idiosyncratic risk
+15:519:32996:18:18:56:555:327:12:g_d0_f2:12:g_d0_f2:in endowments, this model is closely related to the one-good incomplete market models of
+15:520:33084:18:18:56:555:309:12:g_d0_f2:12:g_d0_f2:Huggett(1993) andAiyagari(1994), and specifically toCastro’s (  2005) reinterpretation of these
+15:521:33179:18:24:56:302:291:12:g_d0_f2:12:g_d0_f2:models to countries rather than to individuals.
+15:522:33226:24:18:57:554:267:12:g_d0_f2:12:g_d0_f2:With these assumptions, the consumer in a typical home country faces the following budget
+15:523:33315:18:33:56:112:249:12:g_d0_f2:12:g_d0_f2:constraint:
+15:524:33326:33:19:232:555:216:12:g_d0_f4:12:g_d0_f2:pxtxt+τ pytyt+1≤pxtzt,(6)
+15:525:33351:19:16:67:555:197:7:g_d0_f2:10:g_d0_f2:10The shipping technology to trade goods internationally does actually provide a method to store goods, where
+15:526:33460:16:11:56:555:181:10:g_d0_f2:10:g_d0_f2:the consumer could send part of his endowment away for delivery next period. However, given the size ofτ, we
+15:527:33568:11:9:56:311:170:10:g_d0_f2:10:g_d0_f2:conjecture that this would not be an equilibrium outcome.
+15:528:33625:9:16:67:555:161:7:g_d0_f2:10:g_d0_f2:11Empirically,Hummels(2007), Djankov, Freund, and Pham(2010), Alessandria, Kaboski, and Midrigan(2010a)
+15:529:33728:16:8:56:511:145:10:g_d0_f2:10:g_d0_f2:and  Hummels and Schaur(2013) document the time-intensive nature of shipping goods across borders.
+15:530:33826:8:16:67:555:137:7:g_d0_f2:10:g_d0_f2:12In reality, a variety of payment arrangements are used. The payment structure in the model is known as “cash
+15:531:33936:16:11:56:555:121:10:g_d0_f2:10:g_d0_f2:in advance.” SeeCapela(2011) for a description of how international transactions take place. At the aggregate
+15:532:34045:11:12:56:555:110:10:g_d0_f2:10:g_d0_f2:level, it is hard to find evidence about the composition of payment structures of international trade.Antras and
+15:533:34157:12:12:56:555:98:10:g_d0_f2:10:g_d0_f2:Foley(2011) provide evidence from a large U.S.-based exporter that cashin advance accounts for a large share of
+15:534:34268:12:9:56:171:86:10:g_d0_f2:10:g_d0_f2:international transactions.
+15:535:34295:9:15:67:555:77:7:g_d0_f2:10:g_d0_f2:13Evidence on the international asset structure that agents have access to is limited, and what is available points
+15:536:34410:15:0:56:371:62:10:g_d0_f2:10:g_d0_f2:towards financial autarky; see, for example,Heathcote and Perri(2002).
+16:537:34482:0:18:56:555:723:12:g_d0_f2:12:g_d0_f2:wherepytandpxtare the international prices that the typical consumer faces. The termztis
+16:538:34570:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:the idiosyncratic endowment of thexgood that the consumer in the typical the home country
+16:539:34659:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:receives. The termxtis the amount of the home good purchased for consumption today;yt+1is
+16:540:34748:18:24:56:503:669:12:g_d0_f2:12:g_d0_f2:the amount of the foreign good purchased today for consumption in the next period.
+16:541:34830:24:18:57:555:645:12:g_d0_f2:12:g_d0_f4:Inspecting the budget constraint (6), one realizes that the value of imports ordered at datet
+16:542:34923:18:18:56:555:627:12:g_d0_f2:12:g_d0_f2:(i.e., imports delivered att+ 1) must equal the value of exports shipped at datet. Thus, our
+16:543:35015:18:18:56:554:609:12:g_d0_f2:12:g_d0_f2:model features a “dynamic trade balance” condition that holds for every pair of contiguous
+16:544:35105:18:33:56:126:591:12:g_d0_f2:12:g_d0_f2:time periods:
+16:545:35118:33:8:246:286:558:12:g_d0_f4:8:g_d0_f9:τ pytyt+1
+16:546:35127:8:10:246:286:550:12:g_d0_f7:12:g_d0_f7:|{z}
+16:547:35131:10:0:246:286:540:8:g_d0_f2:6:g_d0_f14:Importst+1
+16:548:35141:0:7:290:360:558:12:g_d0_f3:12:g_d0_f3:=pxt(zt−xt)
+16:549:35152:7:11:303:359:551:12:g_d0_f7:12:g_d0_f7:|{z}
+16:550:35156:11:0:316:346:540:8:g_d0_f2:6:g_d0_f10:Exportst
+16:551:35164:0:48:362:555:558:12:g_d0_f4:12:g_d0_f2:.(7)
+16:552:35168:48:17:56:554:510:12:g_d0_f2:12:g_d0_f2:where we denote imports and exports with the index of the time period at which they arrive
+16:553:35258:17:18:56:555:493:12:g_d0_f2:12:g_d0_f2:to, or depart from, the home country, as it is done by statistical agencies in the U.S. Then, we
+16:554:35354:18:18:56:555:475:12:g_d0_f2:12:g_d0_f2:have that trade is not balanced period by period as in static trade models, and, thus, our model
+16:555:35450:18:18:56:555:457:12:g_d0_f2:12:g_d0_f2:features a non-zero current account. In the model, the current account equals the difference in
+16:556:35545:18:18:56:555:439:12:g_d0_f2:12:g_d0_f2:orders of imports and arrivals of imports. Consistent with the idea of international trade being
+16:557:35641:18:18:56:555:421:12:g_d0_f2:12:g_d0_f2:similar to asset trade, a positive current account acts as an increase in savings since consump-
+16:558:35737:18:24:56:514:403:12:g_d0_f2:12:g_d0_f2:tion of the home good is forgone today for consumption of the foreign good tomorrow.
+16:559:35821:24:18:57:554:379:12:g_d0_f2:12:g_d0_f2:Given the description of the model, we now focus on the problem of a consumer located in a
+16:560:35911:18:56:56:545:361:12:g_d0_f2:12:g_d0_f2:particular home country. The consumer faces the following dynamic programming problem:
+16:561:35997:56:7:128:215:305:12:g_d0_f4:12:g_d0_f3:V(S, y)  =  max
+16:562:36012:7:0:198:211:298:8:g_d0_f5:6:g_d0_f15:x,y′
+16:563:36016:0:8:217:226:322:12:g_d0_f7:12:g_d0_f7:-
+16:564:36017:8:17:228:305:314:12:g_d0_f3:8:g_d0_f5:(xρ+yρ)(1−γ)/ρ
+16:565:36031:17:0:253:279:297:12:g_d0_f3:12:g_d0_f4:1−γ
+16:566:36034:0:0:312:418:306:12:g_d0_f3:12:g_d0_f3:+βE[V(S′, y′)|S]
+16:567:36050:0:16:418:427:322:12:g_d0_f7:12:g_d0_f7:-
+16:568:36051:16:42:429:555:306:12:g_d0_f4:12:g_d0_f2:,(8)
+16:569:36055:42:33:194:483:264:12:g_d0_f2:12:g_d0_f4:subject topxx+τ pyy′≤pxz,whereS={z, py, px}.
+16:570:36099:33:18:56:554:231:12:g_d0_f2:12:g_d0_f2:There are four state variables in the problem. The first three state variables are the consumer’s
+16:571:36196:18:18:56:555:213:12:g_d0_f2:12:g_d0_f2:idiosyncratic endowment realizationzand aggregate pricespyandpxwhich are summarized in
+16:572:36282:18:18:56:555:195:12:g_d0_f2:12:g_d0_f2:the vectorS. These evolve according to a law of motion which we discuss in more detail below.
+16:573:36375:18:18:56:555:177:12:g_d0_f2:12:g_d0_f2:The consumer takes the aggregate pricespytandpxtas given and forms expectations of future
+16:574:36464:18:18:56:554:159:12:g_d0_f2:12:g_d0_f2:prices based upon knowledge of the law of motion ofS. The other state variable is last-period’s
+16:575:36559:18:18:56:555:141:12:g_d0_f2:12:g_d0_f2:orders of imports arriving for consumption this period. Given the state variables, the consumer
+16:576:36654:18:18:56:554:123:12:g_d0_f2:8:g_d0_f13:chooses the quantity of goodxto be consumed this period and chooses the quantity of goody′
+16:577:36744:18:24:56:398:105:12:g_d0_f2:12:g_d0_f2:to order internationally for consumption in the following period.
+16:578:36809:24:0:57:555:81:12:g_d0_f2:12:g_d0_f4:We model the law of motion forS, a country’s idiosyncratic endowmentztin units of goodx
+17:579:36898:0:33:56:411:723:12:g_d0_f2:12:g_d0_f2:and the pricespytandpxt, as following a stationary VAR(1) process:
+17:580:36964:33:33:245:555:690:12:g_d0_f3:12:g_d0_f2:logSt=AlogSt−1+νt,(9)
+17:581:36985:33:18:56:554:657:12:g_d0_f2:12:g_d0_f2:whereSt={zt, pyt, pxt,}and the innovationsνtare jointly normally distributed with mean zero
+17:582:37076:18:24:56:521:639:12:g_d0_f2:12:g_d0_f2:and variance covariance matrixΣ. This parameterizes the law of motiong(S, ν)in (  8).
+17:583:37161:24:18:57:555:615:12:g_d0_f2:12:g_d0_f2:The idea here is to model endowments and prices as following a stochastic process and esti-
+17:584:37252:18:18:56:555:597:12:g_d0_f2:12:g_d0_f2:mate it from data rather than solving for the recursive competitive (general) equilibrium as in
+17:585:37347:18:18:56:555:579:12:g_d0_f2:12:g_d0_f2:Huggett(1993), Aiyagari(1994), orCastro(2005). The motivation for this assumption is our
+17:586:37435:18:18:56:554:561:12:g_d0_f2:12:g_d0_f2:desire to answer the following quantitative question in a simple and straightforward way: If a
+17:587:37529:18:18:56:555:543:12:g_d0_f2:12:g_d0_f2:typical agent faces an endowment and price process like the one we observe in the data, then
+17:588:37621:18:18:56:555:525:12:g_d0_f2:12:g_d0_f2:what are the implications for imports? Directly specifying a stochastic process over prices and
+17:589:37716:18:18:56:554:507:12:g_d0_f2:12:g_d0_f2:estimating it from data allows us to answer this question in a straightforward manner, without
+17:590:37810:18:17:56:554:489:12:g_d0_f2:12:g_d0_f2:having to set up a general equilibrium model that generates an equilibrium process of output
+17:591:37902:17:18:56:554:472:12:g_d0_f2:12:g_d0_f2:and prices as observed in the data. Because we are not interested in world-economy outcomes
+17:592:37993:18:18:56:555:454:12:g_d0_f2:12:g_d0_f2:or in performing counterfactuals, this approach allows us to sidestep this more involved alter-
+17:593:38088:18:32:56:92:436:12:g_d0_f2:12:g_d0_f2:native.
+17:594:38095:32:29:56:191:404:12:g_d0_f1:12:g_d0_f1:3.1. Qualitative Features
+17:595:38120:29:18:57:555:375:12:g_d0_f2:12:g_d0_f2:In this section, we study some qualitative features of the model to develop the intuition behind
+17:596:38216:18:24:56:406:357:12:g_d0_f2:12:g_d0_f2:the mechanism that underlies our quantitative results in Section4.
+17:597:38282:24:18:57:555:333:12:g_d0_f2:12:g_d0_f2:Below we derive a dynamic import demand equation and then use this equation to walk
+17:598:38365:18:18:56:555:315:12:g_d0_f2:12:g_d0_f2:through examples as to how and why imports respond to orthogonal endowment or price
+17:599:38448:18:18:56:555:297:12:g_d0_f2:12:g_d0_f2:shocks. To ease the exposition, we restrict attention to the special case in which the shocks are
+17:600:38545:18:18:56:555:279:12:g_d0_f2:12:g_d0_f2:orthogonal and the non-diagonal terms of the VAR are set to zero. In the quantitative analysis
+17:601:38639:18:18:56:554:261:12:g_d0_f2:12:g_d0_f2:we relax these assumptions and estimate the unconstrained VAR and the covariance structure
+17:602:38729:18:18:56:555:243:12:g_d0_f2:12:g_d0_f2:of the shocks directly from US data. The key result is this section is that the our model is able to
+17:603:38829:18:18:56:555:225:12:g_d0_f2:12:g_d0_f2:deliver an income elasticity of imports greater than one and a price elasticity of imports below
+17:604:38925:18:24:56:260:207:12:g_d0_f2:12:g_d0_f2:the calibrated elasticity of substitution.
+17:605:38967:24:18:57:554:183:12:g_d0_f2:12:g_d0_f2:There is one caveat we must mention up front. The ability of or model to deliver these results
+17:606:39061:18:18:56:555:165:12:g_d0_f2:12:g_d0_f2:does not ensure that it will empirically. The ability of the model to replicate the patterns seen
+17:607:39158:18:18:56:555:147:12:g_d0_f2:12:g_d0_f2:in U.S. data very much depends on the covariance structure of the shocks to endowments and
+17:608:39248:18:24:56:276:129:12:g_d0_f2:12:g_d0_f2:prices and hence is an empirical question.
+17:609:39290:24:18:57:554:105:12:g_d0_f1:12:g_d0_f2:Dynamic Import Demand.The key relationship in our model is the dynamic demand function
+17:610:39376:18:0:56:555:87:12:g_d0_f2:12:g_d0_f2:for imports. After solving the representative consumer’s problem, the demand for imports in
+18:611:39469:0:33:56:245:723:12:g_d0_f2:12:g_d0_f2:the home country can be written as:
+18:612:39504:33:16:151:174:690:12:g_d0_f4:8:g_d0_f5:pxtzt
+18:613:39509:16:0:157:168:674:12:g_d0_f4:8:g_d0_f5:Pt
+18:614:39511:0:9:178:184:699:12:g_d0_f7:12:g_d0_f7:-
+18:615:39512:9:16:205:210:690:12:g_d0_f4:12:g_d0_f4:τ
+18:616:39513:16:0:185:232:674:12:g_d0_f4:12:g_d0_f3:Et(    ̃mt+1)
+18:617:39526:0:16:233:247:690:12:g_d0_f4:8:g_d0_f5:pyt
+18:618:39529:16:0:235:245:674:12:g_d0_f4:8:g_d0_f5:Pt
+18:619:39531:0:17:249:265:699:12:g_d0_f7:8:g_d0_f5:-−θ
+18:620:39534:17:0:269:408:682:12:g_d0_f3:12:g_d0_f4:=yt+1and ̃mt+1=β
+18:621:39550:0:9:411:420:699:12:g_d0_f7:12:g_d0_f7:-
+18:622:39551:9:16:421:444:690:12:g_d0_f4:8:g_d0_f9:Qt+1
+18:623:39555:16:0:426:438:674:12:g_d0_f4:8:g_d0_f5:Qt
+18:624:39557:0:17:446:478:699:12:g_d0_f7:6:g_d0_f10:-−γ+1θ
+18:625:39563:17:49:535:555:682:12:g_d0_f2:12:g_d0_f2:(10)
+18:626:39567:49:0:150:173:633:12:g_d0_f4:12:g_d0_f3:Pt=
+18:627:39570:0:20:177:184:653:12:g_d0_f7:12:g_d0_f7:"
+18:628:39571:20:0:184:217:633:12:g_d0_f4:12:g_d0_f3:p1−θxt+
+18:629:39578:0:8:220:229:649:12:g_d0_f7:12:g_d0_f7:-
+18:630:39579:8:17:242:262:641:12:g_d0_f4:8:g_d0_f5:τ pyt
+18:631:39584:17:0:230:276:624:12:g_d0_f4:12:g_d0_f3:Et(    ̃mt+1)
+18:632:39597:0:16:277:323:649:12:g_d0_f7:6:g_d0_f10:-1−θ#11−θ
+18:633:39606:16:54:326:329:633:12:g_d0_f4:12:g_d0_f4:.
+18:634:39607:54:18:56:561:579:12:g_d0_f2:12:g_d0_f2:There are several points to note about equation (10 ). First, the timing: endowments and prices
+18:635:39702:18:18:56:555:561:12:g_d0_f2:12:g_d0_f2:at datetaffect imports consumed/delivered at datet+ 1. This is in contrast to the contempora-
+18:636:39795:18:18:56:555:543:12:g_d0_f2:12:g_d0_f2:neous effects of endowments and prices on the import decision in equation (1) that comes from
+18:637:39888:18:24:56:494:525:12:g_d0_f2:12:g_d0_f2:astandard static trade model. This is a direct result of the time-to-ship assumption.
+18:638:39973:24:18:57:555:501:12:g_d0_f2:12:g_d0_f2:Second, the termEt(  ̃mt+1)enters equation (10 ). The term ̃mt+1is an implicit function of the
+18:639:40067:18:18:56:555:483:12:g_d0_f2:12:g_d0_f2:standard intertemporal marginal rate of substitution (IMRS) in theories of asset prices and con-
+18:640:40163:18:18:56:555:465:12:g_d0_f2:12:g_d0_f2:sumption with CRRA preferences.14This term induces the demand for imports to depend on
+18:641:40249:18:18:56:555:447:12:g_d0_f2:12:g_d0_f2:the agent’s willingness to substitute consumption today (i.e. spending less on home goods to-
+18:642:40342:18:18:56:555:429:12:g_d0_f2:12:g_d0_f2:day) for consumption tomorrow (i.e. imports arrive tomorrow); the termEt(  ̃mt+1)reflects this
+18:643:40436:18:24:56:109:411:12:g_d0_f2:12:g_d0_f2:valuation.
+18:644:40446:24:18:57:555:387:12:g_d0_f2:12:g_d0_f2:An important difference between ̃mt+1and the IMRS is that1θshows up along with the param-
+18:645:40535:18:18:56:555:369:12:g_d0_f2:12:g_d0_f2:eterγ.15The reason is that goodxis not a perfect substitute for goody. Thus, the elasticity
+18:646:40626:18:18:56:555:351:12:g_d0_f2:12:g_d0_f2:of substitution across goods shows up with the intertemporal elasticity. The special case when
+18:647:40720:18:18:56:554:333:12:g_d0_f4:12:g_d0_f2:xandyare perfect substitutes (implyingθ=∞) illustrates this point, as only the parameter
+18:648:40808:18:18:56:555:315:12:g_d0_f4:12:g_d0_f2:γshows up in ̃mt+1. In contrast, when the elasticity of substitution equals the intertemporal
+18:649:40901:18:18:56:555:297:12:g_d0_f2:12:g_d0_f2:elasticity,θ=1γ,variation in consumption across time periods plays no role and ̃mt+1=β. The
+18:650:40992:18:18:56:555:279:12:g_d0_f2:12:g_d0_f2:intuition behind this is that whenγ=1θ,the benefits from smoothing consumption are offset
+18:651:41081:18:18:56:555:261:12:g_d0_f2:12:g_d0_f2:by the imperfect substitutability of the good through which this smoothing is done, such that
+18:652:41174:18:24:56:532:243:12:g_d0_f2:12:g_d0_f2:the agent is indifferent between current and next period’s consumption (up to factor beta).
+18:653:41265:24:18:57:554:219:12:g_d0_f2:12:g_d0_f2:Finally, note that the IMRS changes with the endowments and prices. Thus, systematic vari-
+18:654:41355:18:18:56:554:201:12:g_d0_f2:12:g_d0_f2:ation in the IMRS leads to systematic variation inEt(  ̃mt+1), implying that the model’s income
+18:655:41450:18:18:56:555:183:12:g_d0_f2:12:g_d0_f2:elasticity will generally differ from one and the price elasticity will generally differ fromθ; the
+18:656:41549:18:18:56:555:165:12:g_d0_f2:12:g_d0_f2:direction and magnitude of the difference, however, is a quantitative question. Moreover, be-
+18:657:41642:18:18:56:555:147:12:g_d0_f2:12:g_d0_f2:causeEt(  ̃mt+1)shows up in the same places as the trade friction, variation in the IMRS has the
+18:658:41738:18:20:56:304:129:12:g_d0_f2:12:g_d0_f2:ability to look like a time-varying trade wedge.
+18:659:41786:20:15:67:555:109:7:g_d0_f2:10:g_d0_f2:14To keep terminology and notation clear, the IMRS ismt+1=β(Qt+1/Qt)−γ—i.e., the marginal rate of substi-
+18:660:41891:15:9:56:407:94:10:g_d0_f2:10:g_d0_f2:tution of aggregate consumption. The term ̃mt+1is an implicit function ofmt+1.
+18:661:41969:9:15:67:555:85:7:g_d0_f2:10:g_d0_f2:15A more subtle point is that time-to-ship works similarly to habits as decisions yesterday impact utility today
+18:662:42081:15:0:56:555:70:10:g_d0_f2:10:g_d0_f2:(see   Campbell and Cochrane(1999)). A key difference is that these decisions are internalized, unlike external habit.
+19:663:42201:0:0:87:88:531:6:Helvetica:6:Helvetica:0510150.985
+19:664:42212:0:0:76:87:600:6:Helvetica:6:Helvetica:0.99
+19:665:42216:0:0:73:88:664:6:Helvetica:6:Helvetica:0.995
+19:666:42221:0:32:85:88:728:6:Helvetica:6:Helvetica:1
+19:667:42230:32:118:98:133:696:6:Helvetica:6:Helvetica:Steady State
+19:668:42242:118:8:175:245:578:6:Helvetica:6:Helvetica: Response from Negative
+19:669:42265:8:53:183:236:570:6:Helvetica:6:Helvetica: Endowment Shock
+19:670:42281:53:0:84:264:517:10:g_d0_f2:7:g_d0_f16:(a) Response inEt( ̃mt+1)to a shock tozt
+19:671:42321:0:0:341:342:531:6:Helvetica:6:Helvetica:051015−2.5
+19:672:42331:0:0:335:342:575:6:Helvetica:6:Helvetica:−2
+19:673:42333:0:0:331:342:613:6:Helvetica:6:Helvetica:−1.5
+19:674:42337:0:0:335:342:651:6:Helvetica:6:Helvetica:−1
+19:675:42339:0:0:331:342:690:6:Helvetica:6:Helvetica:−0.5
+19:676:42343:0:134:339:342:728:6:Helvetica:6:Helvetica:0
+19:677:42379:134:8:407:486:594:6:Helvetica:6:Helvetica:  Imports respond more than
+19:678:42406:8:0:411:483:586:6:Helvetica:6:Helvetica: the decline in endowment
+19:679:42431:0:0:474:497:657:6:Helvetica:6:Helvetica: Imports
+19:680:42439:0:190:361:399:707:6:Helvetica:6:Helvetica:Endowment Z
+19:681:42450:190:28:347:521:517:10:g_d0_f2:7:g_d0_f16:(b) Response in Imports to a shock tozt
+19:682:42489:28:35:162:449:489:12:g_d0_f1:12:g_d0_f1:Figure 3: Imports Respond More Than Endowments.
+19:683:42536:35:18:57:554:454:12:g_d0_f2:12:g_d0_f2:Below, we describe how this mechanism can deliver an income elasticity greater than unity
+19:684:42625:18:17:56:555:436:12:g_d0_f2:12:g_d0_f2:and an artificially low price elasticity. We focus on the empirically relevant part of the param-
+19:685:42722:17:18:56:554:419:12:g_d0_f2:12:g_d0_f2:eter space (γ−1θ>0). We then restrict the stochastic process (for simplicity) to independent
+19:686:42814:18:18:56:555:401:12:g_d0_f2:12:g_d0_f2:AR(1) processes describing the evolution of endowments and prices. As we discuss below, this
+19:687:42906:18:25:56:554:383:12:g_d0_f2:12:g_d0_f2:simplifying assumption is not innocuous, however, it cleanly illustrates how the model works.
+19:688:42999:25:18:57:555:358:12:g_d0_f1:12:g_d0_f2:Income Elasticity Greater than Unity.Our economy can generate an income elasticity of im-
+19:689:43088:18:18:56:554:340:12:g_d0_f2:12:g_d0_f2:ports that is greater than one. To gain intuition regarding this result, assume that the economy
+19:690:43184:18:24:56:503:322:12:g_d0_f2:12:g_d0_f2:is initially in steady-state and then hit by a negative shock to endowmentztat datet.
+19:691:43269:24:18:57:554:298:12:g_d0_f2:12:g_d0_f2:As a result of the shock, two forces work to affect imports. First, a negative shock toztdirectly
+19:692:43366:18:18:56:555:280:12:g_d0_f2:12:g_d0_f2:lowers imports tomorrow since expenditures decrease. This is the standard force in static trade
+19:693:43461:18:18:56:555:262:12:g_d0_f2:12:g_d0_f2:models. Second, a negative shock decreases the agent’s willingness to substitute across time,
+19:694:43554:18:18:56:554:244:12:g_d0_f2:12:g_d0_f2:pushingEt(  ̃mt+1)down, further lowering imports. This is where dynamics bite. Because of the
+19:695:43647:18:18:56:554:226:12:g_d0_f2:12:g_d0_f2:decline in the endowmentandthe decline inEt(  ̃mt+1), imports drop more than proportionally
+19:696:43738:18:24:56:217:208:12:g_d0_f2:12:g_d0_f2:to the drop in the endowment.
+19:697:43767:24:18:57:555:184:12:g_d0_f2:12:g_d0_f2:The dynamic force deserves more explanation. Because the endowment is scarce at datet,
+19:698:43853:18:18:56:555:166:12:g_d0_f2:12:g_d0_f2:marginal utility in that period is high. Moreover, becauseztis below its steady-state value, the
+19:699:43949:18:18:56:555:148:12:g_d0_f2:12:g_d0_f2:agent rationally expects the endowment to be relatively higher tomorrow—i.e.,Et(zt+1)> zt. A
+19:700:44041:18:18:56:555:130:12:g_d0_f2:12:g_d0_f2:relatively higher level of endowment means more consumption tomorrow, decreasing expected
+19:701:44130:18:18:56:555:112:12:g_d0_f2:12:g_d0_f2:marginal utility tomorrow. Together, these forces imply thatEt(  ̃mt+1)declines with a negative
+19:702:44225:18:18:56:554:94:12:g_d0_f2:12:g_d0_f2:endowment shock. Because of howEt(  ̃mt+1)enters equation (10 ), a decrease inEt( ̃mt+1)lowers
+19:703:44319:18:0:56:333:76:12:g_d0_f2:12:g_d0_f2:imports more than the drop in the endowment does.
+20:704:44370:0:0:91:92:531:6:Helvetica:6:Helvetica:0510150.985
+20:705:44381:0:0:81:92:600:6:Helvetica:6:Helvetica:0.99
+20:706:44385:0:0:78:92:664:6:Helvetica:6:Helvetica:0.995
+20:707:44390:0:133:89:92:728:6:Helvetica:6:Helvetica:1
+20:708:44399:133:10:123:149:595:6:Helvetica:6:Helvetica: Response from Negative P
+20:709:44424:10:0:149:171:585:5:Helvetica:6:Helvetica:y Shock
+20:710:44431:0:176:94:128:693:6:Helvetica:6:Helvetica:Steady State
+20:711:44443:176:0:88:265:517:10:g_d0_f2:7:g_d0_f16:(a) Change inEt( ̃mt+1)to a shock topyt
+20:712:44482:0:0:338:338:531:6:Helvetica:6:Helvetica:0510150
+20:713:44489:0:0:330:338:575:6:Helvetica:6:Helvetica:0.5
+20:714:44492:0:0:335:338:613:6:Helvetica:6:Helvetica:1
+20:715:44493:0:0:330:338:651:6:Helvetica:6:Helvetica:1.5
+20:716:44496:0:0:335:338:690:6:Helvetica:6:Helvetica:2
+20:717:44497:0:29:330:338:728:6:Helvetica:6:Helvetica:2.5
+20:718:44535:29:8:409:483:699:6:Helvetica:6:Helvetica:  Imports respond less than
+20:719:44562:8:119:418:474:691:6:Helvetica:6:Helvetica: the change in prices
+20:720:44583:119:0:388:448:572:6:Helvetica:6:Helvetica:  Price Term: py−θ Pθ−1  
+20:721:44608:0:109:486:508:626:6:Helvetica:6:Helvetica: Imports
+20:722:44616:109:28:346:517:517:10:g_d0_f2:7:g_d0_f16:(b) Change in Imports to a shock topyt
+20:723:44654:28:35:184:426:489:12:g_d0_f1:12:g_d0_f1:Figure 4: Imports Respond Less Than Prices.
+20:724:44697:35:18:57:555:454:12:g_d0_f2:12:g_d0_f2:Figures3(a)   and 3(b)   trace these arguments out. Figure3(a)   plots the decline inEt( ̃mt+1), when
+20:725:44798:18:17:56:555:436:12:g_d0_f4:12:g_d0_f2:ztis perturbed below its non-stochastic steady state and the economy is allowed to transit back.
+20:726:44894:17:18:56:555:419:12:g_d0_f2:12:g_d0_f2:Figure3(b)plots the corresponding response of imports and endowments.The figure shows
+20:727:44979:18:18:56:555:401:12:g_d0_f2:12:g_d0_f2:that imports decline by more than the endowment shock. The difference is purely because of
+20:728:45069:18:18:56:554:383:12:g_d0_f2:12:g_d0_f2:the change in agent’s willingness to substitute across time in response to the endowment shock.
+20:729:45164:18:18:56:555:365:12:g_d0_f2:12:g_d0_f2:In contrast, in a static model, imports would move by the exact same amount as the move in
+20:730:45254:18:25:56:128:347:12:g_d0_f2:12:g_d0_f2:endowments.
+20:731:45265:25:18:57:554:322:12:g_d0_f1:12:g_d0_f2:Low Price Elasticity.Our economy can also generate a price elasticity that is artificially below
+20:732:45361:18:17:56:555:304:12:g_d0_f2:12:g_d0_f3:the elasticity of substitutionθ. To gain intuition regarding this result, again assume thatγ−1θ>0
+20:733:45458:17:18:56:555:287:12:g_d0_f2:12:g_d0_f2:and that the economy is initially in steady state and then hit by a negative price shock topy,tat
+20:734:45555:18:25:56:89:269:12:g_d0_f2:12:g_d0_f2:datet.
+20:735:45561:25:18:57:555:244:12:g_d0_f2:12:g_d0_f2:As a result of the shock, imports increase by less thanθ. The reason is that there are two forces
+20:736:45658:18:18:56:555:226:12:g_d0_f2:12:g_d0_f2:working in opposite directions. First, a lowerpy,tdirectly increases imports tomorrow byθ.
+20:737:45748:18:18:56:555:208:12:g_d0_f2:12:g_d0_f2:This is the standard force from static trade models. Second, a negative price shock decreases
+20:738:45841:18:18:56:554:190:12:g_d0_f4:12:g_d0_f2:Et(  ̃mt+1)pushing imports in theoppositedirection of the first force. Because these two forces
+20:739:45936:18:24:56:376:172:12:g_d0_f2:12:g_d0_f2:work in opposing directions, imports increase by less thanθ.
+20:740:45996:24:18:57:555:148:12:g_d0_f2:12:g_d0_f2:Why does a lower price of imports decreaseEt(  ̃mt+1)? This shock makes agents “wealthier”
+20:741:46086:18:18:56:555:130:12:g_d0_f2:12:g_d0_f2:in the future because imports delivered tomorrow cost less. This leads to an increase in ex-
+20:742:46178:18:18:56:555:112:12:g_d0_f2:12:g_d0_f2:pected aggregate consumption and lower expected marginal utility in the next period, lower-
+20:743:46269:18:18:56:555:94:12:g_d0_f2:12:g_d0_f2:ingEt(  ̃mt+1). Because of howEt(  ̃mt+1)enters equation (10 ), a decrease inE( ̃mt+1)is a force to
+20:744:46368:18:0:56:149:76:12:g_d0_f2:12:g_d0_f2:decrease imports.
+21:745:46387:0:18:57:571:723:12:g_d0_f2:12:g_d0_f2:Figure4(a)   and4(b)illustrate these arguments. Figure4(a)   plots the decline in the stochastic
+21:746:46483:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:discount factor whenpy,tis perturbed below its non-stochastic steady state and the economy
+21:747:46573:18:18:56:572:687:12:g_d0_f2:12:g_d0_f2:is allowed to transit back. Figure4(b)   plots the corresponding response of imports and prices.
+21:748:46669:18:18:56:560:669:12:g_d0_f2:12:g_d0_f2:Here, the response in prices is the response of the term(pytPt)−θ1Ptfrom (10 ). This is the object
+21:749:46767:18:18:56:555:651:12:g_d0_f2:12:g_d0_f2:of interest because in the static model, imports should respond one for one with this term. In
+21:750:46861:18:18:56:555:633:12:g_d0_f2:12:g_d0_f2:contrast, Figure4(b)shows that imports rise less than the response of the price term. Again,
+21:751:46953:18:18:56:555:615:12:g_d0_f2:12:g_d0_f2:the difference between imports and the price term arises because of the change in the agent’s
+21:752:47046:18:24:56:409:597:12:g_d0_f2:12:g_d0_f2:willingness to substitute across time in response to the price shock.
+21:753:47115:24:18:57:554:573:12:g_d0_f2:12:g_d0_f2:The previous discussions considered orthogonal shocks to endowments and prices and their
+21:754:47203:18:18:56:555:555:12:g_d0_f2:12:g_d0_f2:effects. If there is non-zero covariance between endowment and prices shocks, then their dy-
+21:755:47295:18:18:56:555:537:12:g_d0_f2:12:g_d0_f2:namic effects on the intertemporal marginal rate of substitution could offset or reinforce each
+21:756:47390:18:18:56:555:519:12:g_d0_f2:12:g_d0_f2:other. For example, if states of the world with low endowments are also likely to have high
+21:757:47481:18:18:56:554:501:12:g_d0_f2:12:g_d0_f2:relative prices of imports, then both shocks would have offsetting effects on the intertemporal
+21:758:47576:18:24:56:436:483:12:g_d0_f2:12:g_d0_f2:marginal rate of substitution, potentially nullifying its effect on imports.
+21:759:47652:24:18:57:554:459:12:g_d0_f2:12:g_d0_f2:This observation is important for two reasons. First, it influenced our choice to model endow-
+21:760:47746:18:18:56:554:441:12:g_d0_f2:12:g_d0_f2:ments and prices as a stochastic process. This allows us to isolate the role of intertemporal
+21:761:47839:18:18:56:555:423:12:g_d0_f2:12:g_d0_f2:substitution with a stochastic endowment and price process that is estimated directly from the
+21:762:47933:18:18:56:555:405:12:g_d0_f2:12:g_d0_f2:data. Second, our model’s ability to replicate observationsO.1andO.2is not predetermined.
+21:763:48022:18:18:56:555:387:12:g_d0_f2:12:g_d0_f2:Because there exist covariance structures that can influence the results, the data provides im-
+21:764:48117:18:41:56:494:369:12:g_d0_f2:12:g_d0_f2:portant discipline on our model’s ability to capture cyclical features of import data.
+21:765:48203:41:29:56:218:328:14:g_d0_f1:14:g_d0_f1:4. Quantitative Analysis
+21:766:48227:29:17:57:555:299:12:g_d0_f2:12:g_d0_f2:In this section, we study the quantitative properties of our model. The quantitative question
+21:767:48320:17:18:56:555:282:12:g_d0_f2:12:g_d0_f2:that motivates our analysis is: How do the time-to-ship friction and finite intertemporal elas-
+21:768:48415:18:18:56:555:264:12:g_d0_f2:12:g_d0_f2:ticity of substitution shape the decision to import, given a stochastic process describing output
+21:769:48512:18:25:56:264:246:12:g_d0_f2:12:g_d0_f2:and prices as estimated from U.S. data?
+21:770:48551:25:18:57:554:221:12:g_d0_f2:12:g_d0_f2:To answer this question we estimate the endowment and price process from U.S. data and
+21:771:48637:18:18:56:555:203:12:g_d0_f2:12:g_d0_f2:we then simulate time paths of imports, absorption, and prices from our model. We then use
+21:772:48727:18:18:56:555:185:12:g_d0_f2:12:g_d0_f2:equation (2) as a lens through which to examine co-movement in the simulated data. In this
+21:773:48817:18:17:56:555:167:12:g_d0_f2:12:g_d0_f2:section we focus specifically on how the model implied income and price elasticities depend on
+21:774:48911:17:18:56:555:150:12:g_d0_f2:12:g_d0_f2:parameter values. The next section focuses on the ability of the model to account for the actual
+21:775:49007:18:0:56:193:132:12:g_d0_f2:12:g_d0_f2:dynamics of U.S. imports.
+22:776:49034:0:28:56:142:722:12:g_d0_f1:12:g_d0_f1:4.1. Calibration
+22:777:49050:28:18:57:555:694:12:g_d0_f2:12:g_d0_f2:As a benchmark, we take a time period in the model to represent one quarter in the data, which
+22:778:49144:18:18:56:554:676:12:g_d0_f2:12:g_d0_f2:implies that it takes one quarter for international goods to arrive. This assumption is stark,
+22:779:49238:18:18:56:555:658:12:g_d0_f2:12:g_d0_f2:but in line with previous calibrations—see, e.g.,Alessandria, Kaboski, and Midrigan(2010b).
+22:780:49329:18:18:56:555:640:12:g_d0_f2:12:g_d0_f2:They motivate their choice based on evidence fromDjankov, Freund, and Pham(2010), who
+22:781:49414:18:18:56:555:622:12:g_d0_f2:12:g_d0_f2:show that the extra time it takes to ship a good internationally is, on average, between 1.5 to
+22:782:49509:18:18:56:555:604:12:g_d0_f2:12:g_d0_f2:two months.Amiti and Weinstein(2011) provide a nice discussion of this evidence and argue
+22:783:49598:18:17:56:555:586:12:g_d0_f2:12:g_d0_f2:that trade finance leads to further time impediments. We recognize that there is heterogeneity
+22:784:49692:17:18:56:555:569:12:g_d0_f2:12:g_d0_f2:in the speed of the international delivery of goods, (see, e.g.,Hummels(2007) andHummels
+22:785:49780:18:18:56:564:551:12:g_d0_f2:12:g_d0_f2:and Schaur(2013)) and, thus, we loosen this assumption in later in Section4.3  . Moreover, we
+22:786:49873:18:25:56:356:533:12:g_d0_f2:12:g_d0_f2:provide additional evidence on time-to-ship in Section6.
+22:787:49929:25:18:57:555:508:12:g_d0_f2:12:g_d0_f2:We explore different values of the parameterγ={1θ,2,5,10}, which controls the agent’s in-
+22:788:50018:18:18:56:555:490:12:g_d0_f2:12:g_d0_f2:tertemporal elasticity of substitution over aggregate consumption. As discussed earlier, the
+22:789:50110:18:18:56:555:472:12:g_d0_f2:12:g_d0_f2:case whenγ=1θis interesting because ̃mt+1is constant in this case and equals the subjective
+22:790:50201:18:17:56:555:454:12:g_d0_f2:12:g_d0_f2:discount rate. We set the discount factorβequal to0.995. This value implies a steady-state real
+22:791:50296:17:18:56:555:437:12:g_d0_f2:12:g_d0_f2:annual interest rate of two percent which is consistent with the data on ex-post real returns on
+22:792:50392:18:25:56:382:419:12:g_d0_f2:12:g_d0_f2:near-risk-free assets (see, e.g.,Tallarini(2000) or   Barro(2006)).
+22:793:50459:25:18:57:554:394:12:g_d0_f2:12:g_d0_f2:The baseline value we use for the elasticity of substitution is1.5, which is the standard value
+22:794:50554:18:18:56:554:376:12:g_d0_f2:12:g_d0_f2:used in calibrations of international real business-cycle models, (seeBackus, Kehoe, and Kyd-
+22:795:50647:18:18:56:555:358:12:g_d0_f2:12:g_d0_f2:land (1995)). Note that in the dynamic model, the price elasticity estimated from simulated data
+22:796:50743:18:17:56:554:340:12:g_d0_f2:12:g_d0_f2:will differ from this value because of the arguments made in the previous section. Only in the
+22:797:50837:17:18:56:555:323:12:g_d0_f2:12:g_d0_f2:static model without time-to-ship or the dynamic model without the IMRS playing a role will
+22:798:50928:18:18:56:555:305:12:g_d0_f2:12:g_d0_f2:this value correspond with the price elasticity. AppendixC reports the results with an elasticity
+22:799:51025:18:18:56:554:287:12:g_d0_f2:12:g_d0_f2:of substitution equal to4which is at the low end of estimates from cross-sectional data or trade
+22:800:51121:18:25:56:463:269:12:g_d0_f2:12:g_d0_f2:liberalization episodes (see the discussion inSimonovska and Waugh(2014)).
+22:801:51195:25:18:57:555:244:12:g_d0_f2:12:g_d0_f2:The trade friction is calibrated so that imports are 15 percent of absorption. The top panel of
+22:802:51290:18:24:56:414:226:12:g_d0_f2:12:g_d0_f2:Table3 summarizes our calibration of preferences and technologies.
+22:803:51356:24:18:57:555:202:12:g_d0_f2:12:g_d0_f2:We estimate the stochastic process for endowments and prices (equation (9)) using HP filtered
+22:804:51449:18:18:56:555:184:12:g_d0_f2:12:g_d0_f2:quarterly U.S. data on real absorption (zt), absorption price index (pxt), and the import price
+22:805:51544:18:18:56:554:166:12:g_d0_f2:12:g_d0_f2:index (pyt). Again, all data series include only the goods component of GDP and non-petroleum
+22:806:51637:18:18:56:555:148:12:g_d0_f2:12:g_d0_f2:imports of goods. The rationale for choosing these series is that one can show thatzcorresponds
+22:807:51732:18:18:56:555:130:12:g_d0_f2:12:g_d0_f2:to absorption in the data (appropriately modified, as discussed below) andpxto its associated
+22:808:51825:18:18:56:555:112:12:g_d0_f2:12:g_d0_f2:price index.16Finally, import prices (appropriately modified, as discussed below) inform us
+22:809:51916:18:19:56:555:94:12:g_d0_f2:12:g_d0_f2:aboutpy. AppendixA provides the details on the construction of these series, andAppendixB
+22:810:52005:19:15:67:555:75:7:g_d0_f2:10:g_d0_f2:16An alternative approach to measuringpxuses the price index for domestic consumption. We found that the
+22:811:52109:15:0:56:367:60:10:g_d0_f2:10:g_d0_f2:quantitative results were similar across this approach and the baseline.
+23:812:52183:0:30:216:394:715:12:g_d0_f1:12:g_d0_f1:Table3: Summary of Calibration
+23:813:52213:30:29:67:220:685:12:g_d0_f1:12:g_d0_f1:Preferences and Technology
+23:814:52239:29:28:67:271:656:12:g_d0_f2:12:g_d0_f2:Time PeriodA quarter
+23:815:52259:28:28:67:399:628:12:g_d0_f2:12:g_d0_f2:Trade FrictionTarget Imports 15% of Absorption
+23:816:52305:28:29:67:270:600:12:g_d0_f2:12:g_d0_f3:Discount factorβ= 0.995
+23:817:52328:29:28:67:300:571:12:g_d0_f3:12:g_d0_f6:1/IESγ={1θ,2,5,10}
+23:818:52346:28:28:67:262:543:12:g_d0_f2:12:g_d0_f3:Elasticity of Substitutionθ= 1.50
+23:819:52379:28:44:67:426:515:12:g_d0_f1:12:g_d0_f1:Estimated parameters for{z, py, px}process — Time-to-ship model
+23:820:52442:44:0:67:238:471:12:g_d0_f2:10:g_d0_f11:Transition MatrixA=
+23:821:52461:0:17:241:250:505:10:g_d0_f7:10:g_d0_f7:
+23:822:52462:17:12:241:250:488:10:g_d0_f7:10:g_d0_f7:
+23:823:52464:12:12:241:250:476:10:g_d0_f7:10:g_d0_f7:
+23:824:52466:12:0:241:250:464:10:g_d0_f7:10:g_d0_f7:
+23:825:52468:0:21:262:374:489:10:g_d0_f11:10:g_d0_f11:0.79∗∗∗−0.14∗∗∗0.04
+23:826:52487:21:22:262:378:468:10:g_d0_f11:10:g_d0_f11:0.17∗∗∗0.94∗∗∗−0.08
+23:827:52506:22:0:261:388:446:10:g_d0_f6:7:g_d0_f18:−0.020.07∗∗∗0.72∗∗∗
+23:828:52525:0:17:394:403:505:10:g_d0_f7:10:g_d0_f7:
+23:829:52526:17:12:394:403:488:10:g_d0_f7:10:g_d0_f7:
+23:830:52528:12:12:394:403:476:10:g_d0_f7:10:g_d0_f7:
+23:831:52530:12:44:394:403:464:10:g_d0_f7:10:g_d0_f7:
+23:832:52532:44:28:67:409:420:12:g_d0_f2:12:g_d0_f3:Std. dev. of innovationsσz= 0.014σpy= 0.012σpx= 0.004
+23:833:52585:28:28:67:544:392:12:g_d0_f2:12:g_d0_f3:Corr. of innovationscorr(z, py) =−0.09, corr(z, px) =−0.24,  corr(py, px) =−0.15
+23:834:52665:28:45:67:443:364:12:g_d0_f1:12:g_d0_f1:Estimated parameters for{z, py, px}process — No time-to-ship model
+23:835:52731:45:0:67:238:319:12:g_d0_f2:10:g_d0_f11:Transition MatrixA=
+23:836:52750:0:17:241:250:354:10:g_d0_f7:10:g_d0_f7:
+23:837:52751:17:12:241:250:337:10:g_d0_f7:10:g_d0_f7:
+23:838:52753:12:12:241:250:325:10:g_d0_f7:10:g_d0_f7:
+23:839:52755:12:0:241:250:313:10:g_d0_f7:10:g_d0_f7:
+23:840:52757:0:22:262:383:339:10:g_d0_f11:10:g_d0_f11:0.84∗∗∗−0.11∗∗∗−0.07
+23:841:52777:22:22:268:388:317:10:g_d0_f11:7:g_d0_f18:0.041.00∗∗∗−0.69∗∗∗
+23:842:52796:22:0:264:393:295:10:g_d0_f11:7:g_d0_f18:0.000.08∗∗∗0.77∗∗∗
+23:843:52814:0:17:403:412:354:10:g_d0_f7:10:g_d0_f7:
+23:844:52815:17:12:403:412:337:10:g_d0_f7:10:g_d0_f7:
+23:845:52817:12:12:403:412:325:10:g_d0_f7:10:g_d0_f7:
+23:846:52819:12:44:403:412:313:10:g_d0_f7:10:g_d0_f7:
+23:847:52821:44:28:67:409:269:12:g_d0_f2:12:g_d0_f3:Std. dev. of innovationsσz= 0.011σpy= 0.012σpx= 0.003
+23:848:52874:28:21:67:535:241:12:g_d0_f2:12:g_d0_f3:Corr. of innovationscorr(z, py) =−0.09, corr(z, px) =−0.37,  corr(py, px) = 0.07
+23:849:52954:21:48:59:505:220:10:g_d0_f1:10:g_d0_f2:Note:Three stars indicate statistical significance at the 1 percent level; one star at the 10 percent level.
+23:850:53062:48:24:56:434:172:12:g_d0_f2:12:g_d0_f2:details the mapping between these measures in the data and the model.
+23:851:53131:24:18:57:554:148:12:g_d0_f2:12:g_d0_f2:An issue in the estimation of the stochastic process for endowments and prices is that we must
+23:852:53225:18:18:56:555:130:12:g_d0_f2:12:g_d0_f2:modify standard data series to correspond with the timing in the model. Specifically, we need
+23:853:53318:18:18:56:555:112:12:g_d0_f2:12:g_d0_f2:the variables in the data to reflect the timing at which they would be observed by the agent in
+23:854:53413:18:18:56:555:94:12:g_d0_f2:12:g_d0_f2:the model, not the timing at which they are observed by U.S. statistical agencies. These agencies
+23:855:53510:18:18:56:554:76:12:g_d0_f2:12:g_d0_f2:collect import data and the prices on arrival at the border. Yet, in the model, these prices are
+23:856:53606:18:0:56:555:58:12:g_d0_f2:12:g_d0_f2:observed by consumers a quarter before. Thus, we adjust the data variables accordingly to
+24:857:53697:0:24:56:507:723:12:g_d0_f2:12:g_d0_f2:make them consistent with the timing of our model. AppendixB provides the details.
+24:858:53779:24:18:57:555:699:12:g_d0_f2:12:g_d0_f2:The middle panel of Table3 summarizes the estimated relationship betweenzt,pyt, pxtcorre-
+24:859:53868:18:18:56:555:681:12:g_d0_f2:12:g_d0_f2:sponding to the timing in the time-to-ship model. Given that we contrast the outcomes of our
+24:860:53960:18:18:56:555:663:12:g_d0_f2:12:g_d0_f2:model with those of a model without time-to-ship, we re-estimate the relationship between
+24:861:54049:18:18:56:555:645:12:g_d0_f4:12:g_d0_f2:zt, pyt, pxtcorresponding to the timing in this static model, and use these estimates to compute
+24:862:54145:18:18:56:555:627:12:g_d0_f2:12:g_d0_f2:its results. The bottom panel of Table3 summarizes the estimated relationship for the no time-
+24:863:54239:18:25:56:133:609:12:g_d0_f2:12:g_d0_f2:to-ship model.
+24:864:54253:25:17:57:554:584:12:g_d0_f2:12:g_d0_f2:Finally, in the simulations we measure output from our model to conform with National In-
+24:865:54342:17:18:56:555:567:12:g_d0_f2:12:g_d0_f2:come and Product Accounts (NIPA). That is, in all our simulations, we collect data from our
+24:866:54433:18:33:56:498:549:12:g_d0_f2:12:g_d0_f2:model and compute quarterly chain-type quantity and price indexes for absorption.
+24:867:54514:33:28:56:120:516:12:g_d0_f1:12:g_d0_f1:4.2. Results
+24:868:54526:28:18:57:555:488:12:g_d0_f2:12:g_d0_f2:Table4 presents the results from simulate time paths of imports, absorption, and prices from
+24:869:54618:18:18:56:555:470:12:g_d0_f2:12:g_d0_f2:our model and then regressing imports on absorption and relative prices as described in equa-
+24:870:54711:18:18:56:555:452:12:g_d0_f2:12:g_d0_f2:tion (2). The first row replicates the empirical income and price elasticities seen in Table1. The
+24:871:54809:18:17:56:555:434:12:g_d0_f2:12:g_d0_f2:second through fourth rows report the results from our model for different values ofγ. These
+24:872:54901:17:25:56:437:417:12:g_d0_f2:12:g_d0_f2:are the cases when variation in the IMRS impacts the decision to import.
+24:873:54973:25:18:57:555:392:12:g_d0_f2:12:g_d0_f2:Table4 shows that our model can deliver an income elasticity greaterthan unity. As the in-
+24:874:55063:18:18:56:555:374:12:g_d0_f2:12:g_d0_f2:tertemporal elasticity of substitution increases, the income elasticities are1.16,1.70, and2.52.
+24:875:55159:18:18:56:554:356:12:g_d0_f2:12:g_d0_f2:In the case ofγ= 5, the income elasticity is near the magnitude seen in the data. These results
+24:876:55254:18:18:56:555:338:12:g_d0_f2:12:g_d0_f2:show that variation in the IMRS can be quantitatively strong enough to account for the high
+24:877:55345:18:24:56:507:320:12:g_d0_f2:12:g_d0_f2:income elasticity of imports documented in the U.S. data outlined in observationO.1.
+24:878:55429:24:18:57:554:296:12:g_d0_f2:12:g_d0_f2:Table4 also shows that the price elasticity estimated from simulated data lies below the true
+24:879:55522:18:18:56:555:278:12:g_d0_f2:12:g_d0_f2:elasticity of substitutionθ. Depending on the intertemporal elasticity of substitution, our model
+24:880:55619:18:18:56:554:260:12:g_d0_f2:12:g_d0_f2:delivers a price elasticity of−1.07,−0.34,0.64. All are meaningfully below the calibrated elas-
+24:881:55714:18:18:56:555:242:12:g_d0_f2:12:g_d0_f2:ticity of substitution of−1.5. In fact, withγ= 10, changes in the IMRS more than offset changes
+24:882:55809:18:18:56:555:224:12:g_d0_f2:12:g_d0_f2:in prices such that the price elasticity becomes positive at0.64. Again, these results show that
+24:883:55905:18:18:56:554:206:12:g_d0_f2:12:g_d0_f2:variation in the IMRS is strong enough to rationalize the low price elasticity outlined in obser-
+24:884:56002:18:24:56:401:188:12:g_d0_f2:12:g_d0_f2:vationO.2—even though the true elasticity of substitution is -1.5.
+24:885:56068:24:18:57:554:164:12:g_d0_f2:12:g_d0_f2:We want to emphasize that there are several aspects of these results that are surprising and
+24:886:56160:18:18:56:555:146:12:g_d0_f2:12:g_d0_f2:not predetermined. First, as discussed above, there exist covariance structures between en-
+24:887:56251:18:18:56:555:128:12:g_d0_f2:12:g_d0_f2:dowments and prices that would not deliver these results. Thus, our model’s ability to even
+24:888:56342:18:18:56:554:110:12:g_d0_f2:12:g_d0_f2:qualitatively replicate observationsO.1andO.2was not predetermined. It turns out, however,
+24:889:56432:18:18:56:555:92:12:g_d0_f2:12:g_d0_f2:that the estimated empirical relationship between endowments and prices plus the economic
+24:890:56521:18:0:56:439:74:12:g_d0_f2:12:g_d0_f2:environment are able to capture well the cyclical features of import data.
+25:891:56597:0:24:172:440:720:12:g_d0_f1:12:g_d0_f3:Table4: Elasticities from Data and Model,θ=1.5
+25:892:56643:24:22:267:488:696:12:g_d0_f2:12:g_d0_f4:Price Elasticity,ˆαIncome Elasticity,ˆβ
+25:893:56682:22:26:123:446:674:12:g_d0_f2:12:g_d0_f3:Data−0.261.99
+25:894:56695:26:7:123:329:648:12:g_d0_f2:12:g_d0_f3:Model,γ=2−1.07
+25:895:56709:7:0:288:339:641:8:g_d0_f9:8:g_d0_f9:[−1.16,−0.97]
+25:896:56722:0:10:425:446:651:12:g_d0_f3:12:g_d0_f3:1.16
+25:897:56726:10:25:415:456:641:8:g_d0_f9:8:g_d0_f9:[1.08,1.24]
+25:898:56737:25:7:123:329:616:12:g_d0_f2:12:g_d0_f3:Model,γ= 5−0.34
+25:899:56752:7:0:288:339:609:8:g_d0_f9:8:g_d0_f9:[−0.50,−0.17]
+25:900:56765:0:10:425:446:619:12:g_d0_f3:12:g_d0_f3:1.70
+25:901:56769:10:25:415:456:609:8:g_d0_f9:8:g_d0_f9:[1.55,1.85]
+25:902:56780:25:7:123:329:584:12:g_d0_f2:12:g_d0_f3:Model,γ= 100.6   4
+25:903:56798:7:0:288:339:577:8:g_d0_f9:8:g_d0_f9:[  0.37,0.96]
+25:904:56811:0:11:425:446:588:12:g_d0_f3:12:g_d0_f3:2.52
+25:905:56815:11:26:415:456:577:8:g_d0_f9:8:g_d0_f9:[2.28,2.75]
+25:906:56826:26:32:123:456:551:12:g_d0_f2:8:g_d0_f9:Model,γ=1θ−1.47[−1.54,−1.39]0.91[0.85,0.95]
+25:907:56869:32:26:123:456:519:12:g_d0_f2:8:g_d0_f9:Model, no time-to-ship−1.50[−1.54,−1.47]1.00[0.98,1.02]
+25:908:56924:26:12:113:495:493:10:g_d0_f1:10:g_d0_f2:Note:Results are averages from 250 simulations, with each simulation being 187 peri-
+25:909:57008:12:12:113:495:481:10:g_d0_f2:10:g_d0_f2:ods long; values in brackets report 95-percent confidence intervals. Section2 describes
+25:910:57095:12:45:113:152:469:10:g_d0_f2:10:g_d0_f2:the data.
+25:911:57104:45:17:57:555:424:12:g_d0_f2:12:g_d0_f2:A second surprising result is that the same parameterization that generates an income elas-
+25:912:57195:17:18:56:554:407:12:g_d0_f2:12:g_d0_f2:ticity that is close to the data is also the same parameterization generating a price elasticity
+25:913:57291:18:18:56:554:389:12:g_d0_f2:12:g_d0_f2:close to the data. There is no reason to expect this outcome from our model. In other words,
+25:914:57383:18:18:56:555:371:12:g_d0_f2:12:g_d0_f2:one mechanism—-systematic variation in the IMRS—simultaneouslygenerates a high income
+25:915:57468:18:25:56:239:353:12:g_d0_f2:12:g_d0_f2:elasticity and a low price elasticity.
+25:916:57506:25:18:57:555:328:12:g_d0_f2:12:g_d0_f2:The second to last row of Table4 shows the results from the model when the intertemporal
+25:917:57594:18:17:56:555:310:12:g_d0_f2:12:g_d0_f2:elasticity of substitution is set equal the elasticity of substitution across goods. This is the case
+25:918:57695:17:18:56:554:293:12:g_d0_f2:12:g_d0_f2:when variation in the IMRS does not affect the import decision. In this parameterization, the
+25:919:57788:18:18:56:555:275:12:g_d0_f2:12:g_d0_f2:price elasticity effectively corresponds with the elasticity of substitutionθand we find an in-
+25:920:57883:18:18:56:555:257:12:g_d0_f2:12:g_d0_f2:come elasticity close to unity, as in the static no time-to-ship model. This shows that the timing
+25:921:57981:18:25:56:455:239:12:g_d0_f2:12:g_d0_f2:difference between the dynamic and static models is not driving the results.
+25:922:58057:25:18:57:554:214:12:g_d0_f2:12:g_d0_f2:The final row shows the results when time-to-ship is turned off. This is a standard trade model
+25:923:58152:18:18:56:555:196:12:g_d0_f2:12:g_d0_f2:with an import demand equation corresponding with equation (1). Here, the income and price
+25:924:58242:18:17:56:555:178:12:g_d0_f2:12:g_d0_f2:elasticities correspond with what the static model predicts—a price elasticity corresponding
+25:925:58334:17:25:56:416:161:12:g_d0_f2:12:g_d0_f2:with the elasticity of substitutionθand an income elasticity of unity.
+25:926:58404:25:18:57:555:136:12:g_d0_f2:12:g_d0_f2:Table4 reports results for an underlying elasticity of substitution,θ, set equal to 1.5. How do
+25:927:58499:18:18:56:555:118:12:g_d0_f2:12:g_d0_f2:our results depend on this parameter? AppendixC presents the full details, but a summary is
+25:928:58590:18:18:56:555:100:12:g_d0_f2:12:g_d0_f2:that increasingθincreases the income elasticity for all values ofγand results in larger biases
+25:929:58684:18:18:56:555:82:12:g_d0_f2:12:g_d0_f2:in the estimated price elasticity. There are two reasons for this. First, an increase inθchanges
+25:930:58780:18:0:56:555:64:12:g_d0_f2:12:g_d0_f2:the curvature on ̃mt+1for a givenγparameter. Second, the import demand equation becomes
+26:931:58869:0:24:107:504:720:12:g_d0_f1:12:g_d0_f1:Table5: Intermediate Time-to-Ship, Elasticities: Data and Model (γ=10)
+26:932:58939:24:22:180:539:696:12:g_d0_f2:12:g_d0_f3:Price Elasticity,ˆαIncome Elasticity,ˆβImports Volatility(%)
+26:933:58999:22:26:72:492:674:12:g_d0_f2:12:g_d0_f2:Data−0.261.996.09
+26:934:59016:26:7:72:237:648:12:g_d0_f2:12:g_d0_f3:Model,φ=00.6   4
+26:935:59032:7:0:201:252:641:8:g_d0_f9:8:g_d0_f9:[  0.37,0.96]
+26:936:59045:0:10:338:359:651:12:g_d0_f3:12:g_d0_f3:2.52
+26:937:59049:10:0:328:368:641:8:g_d0_f9:8:g_d0_f9:[2.28,2.75]
+26:938:59060:0:32:471:492:648:12:g_d0_f2:12:g_d0_f2:6.92
+26:939:59064:32:7:72:237:616:12:g_d0_f2:12:g_d0_f3:Model,φ= 0.250.1   4
+26:940:59084:7:0:204:248:609:8:g_d0_f9:8:g_d0_f9:[−0.01,0.32]
+26:941:59096:0:10:338:359:619:12:g_d0_f3:12:g_d0_f3:2.21
+26:942:59100:10:0:328:368:609:8:g_d0_f9:8:g_d0_f9:[2.07,2.34]
+26:943:59111:0:32:471:492:616:12:g_d0_f2:12:g_d0_f2:5.53
+26:944:59115:32:7:72:241:584:12:g_d0_f2:12:g_d0_f3:Model,φ= 0.50−0.45
+26:945:59133:7:0:201:252:577:8:g_d0_f9:8:g_d0_f9:[−0.52,−0.37]
+26:946:59146:0:11:338:359:588:12:g_d0_f3:12:g_d0_f3:1.84
+26:947:59150:11:0:328:368:577:8:g_d0_f9:8:g_d0_f9:[1.78,1.90]
+26:948:59161:0:32:471:492:584:12:g_d0_f2:12:g_d0_f2:4.18
+26:949:59165:32:7:72:241:552:12:g_d0_f2:12:g_d0_f3:Model,φ= 0.75−1.04
+26:950:59183:7:0:201:252:545:8:g_d0_f9:8:g_d0_f9:[−1.07,−1.00]
+26:951:59196:0:10:338:359:555:12:g_d0_f3:12:g_d0_f3:1.44
+26:952:59200:10:0:328:368:545:8:g_d0_f9:8:g_d0_f9:[1.41,1.47]
+26:953:59211:0:26:471:492:552:12:g_d0_f2:12:g_d0_f2:3.05
+26:954:59215:26:12:63:545:526:10:g_d0_f1:10:g_d0_f2:Note:Results are averages from 250 simulations, with each simulation being 187 periods long; values in brack-
+26:955:59324:12:48:63:373:514:10:g_d0_f2:10:g_d0_f2:ets report 95-percent confidence intervals. Section2 describes the data.
+26:956:59396:48:18:56:555:466:12:g_d0_f2:12:g_d0_f2:more sensitive to changes inEt(  ̃mt+1). Thus, these two forces result in movements in the IMRS
+26:957:59491:18:32:56:478:448:12:g_d0_f2:12:g_d0_f2:playing a larger role in shaping import demand. AppendixC details the results.
+26:958:59569:32:28:56:226:416:12:g_d0_f1:12:g_d0_f1:4.3. Intermediate Time-to-Ship
+26:959:59599:28:18:57:555:388:12:g_d0_f2:12:g_d0_f2:The one-period shipping technology may be too stark of an assumption, given that our model
+26:960:59689:18:18:56:555:370:12:g_d0_f2:12:g_d0_f2:is calibrated to a quarterly frequency. Clearly, there is heterogeneity in the speed of the inter-
+26:961:59787:18:18:56:555:352:12:g_d0_f2:12:g_d0_f2:national shipping of goods and we would like to understand how accounting for the speed of
+26:962:59877:18:18:56:555:334:12:g_d0_f2:12:g_d0_f2:delivery affects our results. A simple way to loosen our one-period lag assumption is to posit
+26:963:59971:18:33:56:489:316:12:g_d0_f2:12:g_d0_f2:the following law of motion for how the consumption of imports relates to orders:
+26:964:60052:33:32:150:555:283:12:g_d0_f4:12:g_d0_f2:c(y)t=φyt+1+ (1−φ)yt,andQt= [xρt+c(y)ρt]1/ρ,(11)
+26:965:60100:32:18:56:555:251:12:g_d0_f2:12:g_d0_f2:wherec(y)tis consumption of imports. Here, imports consumed at datetequals a fraction
+26:966:60185:18:18:56:554:233:12:g_d0_f4:8:g_d0_f2:φof orders made today plus1−φof last period’s orders that did not arrive immediately.17
+26:967:60272:18:18:56:554:215:12:g_d0_f2:12:g_d0_f2:The law of motion in (11 ) reflects the idea that some orders may arrive immediately—e.g., the
+26:968:60366:18:18:56:555:197:12:g_d0_f2:12:g_d0_f2:shipping of goods by airplane or from nearby trading partners—while other orders arrive with
+26:969:60458:18:24:56:436:179:12:g_d0_f2:12:g_d0_f2:a delay—e.g., goods shipped by sea and from trading partners far away.
+26:970:60528:24:18:57:561:155:12:g_d0_f2:12:g_d0_f2:We solve the problem in (8), with the modifications in (11 ). We then perform the same exercise
+26:971:60623:18:18:56:554:137:12:g_d0_f2:12:g_d0_f2:described above. In the results, we focus on the case withγ= 10, varying the time-to-ship
+26:972:60712:18:25:56:124:119:12:g_d0_f2:12:g_d0_f2:parameterφ.
+26:973:60723:25:19:57:555:94:12:g_d0_f2:12:g_d0_f2:Table5 present the results. The second row reports the results withφ=0, the one-period
+26:974:60809:19:15:67:555:75:7:g_d0_f2:10:g_d0_f2:17An alternative modeling strategy would be to allow for the “option” to pay for immediate delivery after
+26:975:60914:15:0:56:321:60:10:g_d0_f2:10:g_d0_f2:endowments are realized as inHummels and Schaur(2010).
+27:976:60970:0:18:56:554:723:12:g_d0_f2:12:g_d0_f2:time-to-ship model. The third through fifth rows report the results as we increase the fraction
+27:977:61065:18:18:56:554:705:12:g_d0_f2:12:g_d0_f2:of orders that arrive within the same period. Not surprisingly, asφincreases, the importance of
+27:978:61160:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:time-to-ship diminishes, and the price and income elasticities begin to converge towards those
+27:979:61254:18:18:56:555:669:12:g_d0_f2:12:g_d0_f2:implied by the static model. Similar to Table4, the same parameterization that generates an
+27:980:61345:18:18:56:555:651:12:g_d0_f2:12:g_d0_f2:income elasticity that is close to the one in the data is also the same parameterization generating
+27:981:61444:18:41:56:288:633:12:g_d0_f2:12:g_d0_f2:a price elasticity close to the one in the data.
+27:982:61492:41:29:56:305:592:14:g_d0_f1:14:g_d0_f1:5. U.S. Import Fluctuations: 1967-2013
+27:983:61530:29:18:57:555:563:12:g_d0_f2:12:g_d0_f2:The results in Table4 and  5 are encouraging in the sense that our model can easily accountfor
+27:984:61624:18:17:56:555:545:12:g_d0_f2:12:g_d0_f2:cyclical properties of trade volumes in the U.S. with reasonable parameter values. This section
+27:985:61719:17:25:56:509:528:12:g_d0_f2:12:g_d0_f2:focuses on the ability of our model to account for the actual dynamics of U.S. imports.
+27:986:61806:25:18:57:554:503:12:g_d0_f2:12:g_d0_f2:To discipline this exercise, we calibrate the model to match the empirical income and price
+27:987:61897:18:18:56:555:485:12:g_d0_f2:12:g_d0_f2:elasticities observed in the data over the first half of our sample (i.e. the period from Q2 1967 to
+27:988:61997:18:18:56:555:467:12:g_d0_f2:12:g_d0_f2:Q4 1989). We then ask: Can our model account for the dynamics of U.S. imports in the second
+27:989:62088:18:24:56:554:449:12:g_d0_f2:12:g_d0_f2:half of our sample which includes the trade collapse (i.e. the period from Q1 1990 to Q4 2013)?
+27:990:62183:24:18:57:554:425:12:g_d0_f2:12:g_d0_f2:We answer this question by applying the Kalman smoother to the state-space representation
+27:991:62272:18:18:56:555:407:12:g_d0_f2:12:g_d0_f2:of our model using U.S. data on absorption and prices over the entire Q2 1967-Q4 2013 time
+27:992:62362:18:18:56:554:389:12:g_d0_f2:12:g_d0_f2:period. This allows us to generate the time series of imports implied by our model given the
+27:993:62454:18:18:56:555:371:12:g_d0_f2:12:g_d0_f2:absorption and prices observed in the data, which we then contrast with the actual data on U.S.
+27:994:62549:18:18:56:555:353:12:g_d0_f2:12:g_d0_f2:imports. Importantly, note that import data is only used to parameterize the model using data
+27:995:62642:18:18:56:555:335:12:g_d0_f2:12:g_d0_f2:from first half of the sample—it plays no role in generating the implications of our model for
+27:996:62736:18:32:56:213:317:12:g_d0_f2:12:g_d0_f2:the second half of the sample.
+27:997:62766:32:28:56:142:285:12:g_d0_f1:12:g_d0_f1:5.1. Calibration
+27:998:62782:28:18:57:555:257:12:g_d0_f2:12:g_d0_f2:As before, we estimate the the stochastic process for endowments and prices (equation (9))
+27:999:62872:18:18:56:554:239:12:g_d0_f2:12:g_d0_f2:using data on absorption and relative prices for the entire time period. Thus, the point estimates
+27:1000:62970:18:18:56:555:221:12:g_d0_f2:12:g_d0_f2:reported in Table3 are the values used in this exercise. Estimating the stochastic process for only
+27:1001:63069:18:18:56:555:203:12:g_d0_f2:12:g_d0_f2:the second half of our sample yielded nearly identical results (in terms of calibrated parameter
+27:1002:63165:18:24:56:453:185:12:g_d0_f2:12:g_d0_f2:values, overall fit, trade collapse predictions, etc.) to those described below.
+27:1003:63245:24:18:57:554:161:12:g_d0_f2:12:g_d0_f2:We choose the intermediate time-to-ship parameter to match the average number of days that it
+27:1004:63338:18:18:56:555:143:12:g_d0_f2:12:g_d0_f2:takes to ship goods into the U.S. from the time-to-ship data described in Section6. Specifically,
+27:1005:63435:18:18:56:554:125:12:g_d0_f2:12:g_d0_f2:we compute the average time-to-ship across the different countries of origin, with observations
+27:1006:63530:18:18:56:554:107:12:g_d0_f2:12:g_d0_f2:weighted by the average value of imports across the sample. We find that the average time-to-
+27:1007:63623:18:18:56:555:89:12:g_d0_f2:12:g_d0_f2:ship is 33 days. From the lens of our model, we interpret this value as implying that almost two
+27:1008:63719:18:0:56:555:71:12:g_d0_f2:12:g_d0_f2:thirds of U.S. imports arrive contemporaneously, while a third of them arrive with a delay of
+28:1009:63814:0:32:193:417:715:12:g_d0_f1:12:g_d0_f1:Table6: Measures of Fit, Data and Model
+28:1010:63853:32:29:92:519:683:12:g_d0_f2:12:g_d0_f2:StatisticData   Baseline Model  Static Model
+28:1011:63897:29:29:92:505:654:11:g_d0_f2:12:g_d0_f3:Root Mean Square Error, Q1 1990 - Q4 2013—0.0300.051
+28:1012:63949:29:29:92:498:625:11:g_d0_f2:12:g_d0_f3:% Deviation From Trend Q1 2008 (Peak)7.68.94.5
+28:1013:63995:29:21:92:499:596:11:g_d0_f2:12:g_d0_f3:% Deviation From Trend Q2 2009 (Trough)−2   2.1−10.7−0.46
+28:1014:64052:21:12:88:520:575:10:g_d0_f1:10:g_d0_f2:Note:The first row presents the root mean square error between actual data and the model implied
+28:1015:64148:12:12:88:520:563:10:g_d0_f2:10:g_d0_f2:time series. The second row presents the percent deviation from trend for Q1 2008 and Q2 2009, the
+28:1016:64246:12:48:88:334:551:10:g_d0_f2:10:g_d0_f2:peak and the trough in data during the Great Recession.
+28:1017:64301:48:24:56:523:503:12:g_d0_f2:12:g_d0_f2:one quarter, for an average of33days of time-to-ship delay. This leads us to setφto 0.63.
+28:1018:64390:24:18:57:554:479:12:g_d0_f2:12:g_d0_f2:We then calibrateγandθto match the empirical income and price elasticities over the first half
+28:1019:64484:18:18:56:555:461:12:g_d0_f2:12:g_d0_f2:of the sample: from Q2 1967 to Q4 1989. These elasticities are1.93and0.40, respectively, over
+28:1020:64577:18:18:56:555:443:12:g_d0_f2:12:g_d0_f2:this period. We match these moments exactly with a parameterization that setsγto14.71and
+28:1021:64665:18:18:56:555:425:12:g_d0_f4:12:g_d0_f2:θto1.53. This value ofγimplies an intertemporal elasticity of substitution equal to 0.07, which
+28:1022:64760:18:18:56:555:407:12:g_d0_f2:12:g_d0_f2:is consistent with estimates from previous studies such asHall(1988) andVissing-Jorgensen
+28:1023:64849:18:18:56:555:389:12:g_d0_f2:12:g_d0_f2:(2002). Our estimated value ofθis very close to the value commonly used to calibrate interna-
+28:1024:64942:18:32:56:453:371:12:g_d0_f2:12:g_d0_f2:tional real business cycle models, as inBackus, Kehoe, and Kydland(1995).
+28:1025:65015:32:28:56:120:339:12:g_d0_f1:12:g_d0_f1:5.2. Results
+28:1026:65027:28:18:57:555:311:12:g_d0_f2:12:g_d0_f2:Figure5(a)   illustrates the results. It plots import data and predictions from our model for the
+28:1027:65124:18:18:56:555:293:12:g_d0_f2:12:g_d0_f2:entire time period Q2 1967-Q4 2013. Preference parameters were calibrated using data to the
+28:1028:65215:18:18:56:554:275:12:g_d0_f2:12:g_d0_f2:left of the vertical dashed line. The results to the right of the vertical dashed line correspond
+28:1029:65312:18:18:56:555:257:12:g_d0_f2:12:g_d0_f2:with the second half of the sample and, thus, can be viewed as an out of sample prediction of
+28:1030:65405:18:24:56:114:239:12:g_d0_f2:12:g_d0_f2:our model.
+28:1031:65415:24:18:57:554:215:12:g_d0_f2:12:g_d0_f2:Our model performs very well. It tracks the data quite closely by capturing both the overall
+28:1032:65507:18:18:56:554:197:12:g_d0_f2:12:g_d0_f2:magnitude of fluctuations and the timing of peaks and troughs. In contrast to these outcomes,
+28:1033:65600:18:18:56:554:179:12:g_d0_f2:12:g_d0_f2:Figure5(b)   presents the results from the static model. As the figure illustrates, the static model
+28:1034:65700:18:18:56:555:161:12:g_d0_f2:12:g_d0_f2:does not fit the data well and it has severe problems regarding the timing and magnitudes in
+28:1035:65792:18:24:56:149:143:12:g_d0_f2:8:g_d0_f2:many instances.18
+28:1036:65809:24:19:57:555:119:12:g_d0_f2:12:g_d0_f2:The first row in Table6 provides a sense of fit. The first row reports the root mean squared
+28:1037:65901:19:16:67:555:100:7:g_d0_f2:10:g_d0_f2:18There are two drops in imports that are completely unaccounted for by our model—specifically, Q1 1969 and
+28:1038:66008:16:12:56:555:84:10:g_d0_f2:10:g_d0_f2:Q4 1971—but, there is an explanation. In Q1 1969 and parts of Q3 and Q4 1971, the U.S. suffered major shutdowns
+28:1039:66119:12:12:56:555:72:10:g_d0_f2:10:g_d0_f2:of U.S. ports due to dock worker strikes; seeIsard(1975). Thus, these events appear to account for this discrepancy
+28:1040:66234:12:0:56:201:60:10:g_d0_f2:10:g_d0_f2:between the model and the data.
+29:1041:66267:0:0:83:552:435:7:Helvetica:7:Helvetica:19651970197519801985199019952000200520102015
+29:1042:66311:0:0:72:89:449:7:Helvetica:7:Helvetica:−0.25
+29:1043:66316:0:0:76:89:473:7:Helvetica:7:Helvetica:−0.2
+29:1044:66320:0:0:72:89:497:7:Helvetica:7:Helvetica:−0.15
+29:1045:66325:0:0:76:89:521:7:Helvetica:7:Helvetica:−0.1
+29:1046:66329:0:0:72:89:545:7:Helvetica:7:Helvetica:−0.05
+29:1047:66334:0:0:85:89:569:7:Helvetica:7:Helvetica:0
+29:1048:66335:0:0:76:89:593:7:Helvetica:7:Helvetica:0.05
+29:1049:66339:0:0:80:89:617:7:Helvetica:7:Helvetica:0.1
+29:1050:66342:0:0:76:89:642:7:Helvetica:7:Helvetica:0.15
+29:1051:66346:0:0:80:89:666:7:Helvetica:7:Helvetica:0.2
+29:1052:66349:0:250:76:89:690:7:Helvetica:7:Helvetica:0.25
+29:1053:66382:250:0:89:91:440:7:Helvetica:7:Helvetica: 
+29:1054:66382:0:243:543:545:699:7:Helvetica:7:Helvetica: 
+29:1055:66382:243:9:105:129:456:8:Helvetica:8:Helvetica:Model
+29:1056:66387:9:0:105:123:447:8:Helvetica:8:Helvetica:Data
+29:1057:66391:0:233:122:458:653:7:Helvetica:7:Helvetica:Preference parameters calibrated to this dataOut of Sample Prediction
+29:1058:66460:233:280:237:371:420:10:g_d0_f2:10:g_d0_f1:(a)Model Prediction vs. Data
+29:1059:66488:280:0:83:552:140:7:Helvetica:7:Helvetica:19651970197519801985199019952000200520102015
+29:1060:66532:0:0:72:89:155:7:Helvetica:7:Helvetica:−0.25
+29:1061:66537:0:0:76:89:179:7:Helvetica:7:Helvetica:−0.2
+29:1062:66541:0:0:72:89:203:7:Helvetica:7:Helvetica:−0.15
+29:1063:66546:0:0:76:89:227:7:Helvetica:7:Helvetica:−0.1
+29:1064:66550:0:0:72:89:251:7:Helvetica:7:Helvetica:−0.05
+29:1065:66555:0:0:85:89:275:7:Helvetica:7:Helvetica:0
+29:1066:66556:0:0:76:89:299:7:Helvetica:7:Helvetica:0.05
+29:1067:66560:0:0:80:89:323:7:Helvetica:7:Helvetica:0.1
+29:1068:66563:0:0:76:89:347:7:Helvetica:7:Helvetica:0.15
+29:1069:66567:0:0:80:89:371:7:Helvetica:7:Helvetica:0.2
+29:1070:66570:0:250:76:89:395:7:Helvetica:7:Helvetica:0.25
+29:1071:66603:250:0:89:91:145:7:Helvetica:7:Helvetica: 
+29:1072:66603:0:242:543:545:404:7:Helvetica:7:Helvetica: 
+29:1073:66603:242:10:105:123:162:8:Helvetica:8:Helvetica:Data
+29:1074:66607:10:27:105:153:152:8:Helvetica:8:Helvetica:Static Model
+29:1075:66619:27:33:180:429:125:10:g_d0_f2:10:g_d0_f1:(b)Static (No Time-to-Ship) Model Prediction vs. Data
+29:1076:66672:33:0:157:455:92:12:g_d0_f1:12:g_d0_f1:Figure 5: Model Predictions vs. Import Data, 1967-2011
+30:1077:66728:0:18:56:555:723:12:g_d0_f2:12:g_d0_f2:error between the data for the second half of the sample and predictions from the model. The
+30:1078:66820:18:18:56:555:705:12:g_d0_f2:12:g_d0_f2:model’s root mean squared error is 0.030, nearly 40 percent lower then the static model (0.051).
+30:1079:66916:18:18:56:555:687:12:g_d0_f2:12:g_d0_f2:As another point of comparison, the root mean squared error from the regression in (2) is 0.037.
+30:1080:67012:18:18:56:554:669:12:g_d0_f2:12:g_d0_f2:In other words, our calibrated model fits the data better than the best-fitting, linear regression
+30:1081:67110:18:18:56:555:651:12:g_d0_f2:12:g_d0_f2:of imports on absorption and prices. This shows that our model can account well for cyclical
+30:1082:67202:18:24:56:230:633:12:g_d0_f2:12:g_d0_f2:fluctuations in U.S. imports data.
+30:1083:67236:24:18:57:554:609:12:g_d0_f2:12:g_d0_f2:Figure6 zooms in on the last 14 years to illustrate the predictions from our model with respect
+30:1084:67331:18:18:56:555:591:12:g_d0_f2:12:g_d0_f2:to the 2008-2009 trade collapse. Our model picks up the decline in trade from 2000-2002/2003,
+30:1085:67424:18:18:56:555:573:12:g_d0_f2:12:g_d0_f2:the expansion in trade from 2003 to early 2008, the sharp drop from mid-2008 to 2009, and,
+30:1086:67514:18:24:56:270:555:12:g_d0_f2:12:g_d0_f2:finally, the expansion seen most recently.
+30:1087:67556:24:18:57:554:531:12:g_d0_f2:12:g_d0_f2:The key failures of the baseline model regard the magnitude during the collapse and a one
+30:1088:67645:18:18:56:555:513:12:g_d0_f2:12:g_d0_f2:quarter miss in picking up the trough of the collapse. The last row of Table6 reports the results
+30:1089:67742:18:18:56:555:495:12:g_d0_f2:12:g_d0_f2:regarding the percent deviation from trend during Q2 2009, which is the trough of the cycle. In
+30:1090:67837:18:18:56:555:477:12:g_d0_f2:12:g_d0_f2:the data, imports were 22 percent below trend; the model, however, is only 11 percent below
+30:1091:67928:18:18:56:555:459:12:g_d0_f2:12:g_d0_f2:trend. Part of this miss is because the model predicts the trough to be Q1 2009 and 13 percent
+30:1092:68022:18:18:56:554:441:12:g_d0_f2:12:g_d0_f2:below trend. Overall, from peak to trough, our model predicts a 20 percent change in imports
+30:1093:68114:18:24:56:315:423:12:g_d0_f2:12:g_d0_f2:relative to the 30 percent change seen in the data.
+30:1094:68165:24:18:57:554:399:12:g_d0_f2:12:g_d0_f2:There are meaningful ways of thinking about this discrepancy between the model and the data.
+30:1095:68257:18:18:56:555:381:12:g_d0_f2:12:g_d0_f2:Researchers have argued that there are important mechanisms specific to the 2008-2009 crisis
+30:1096:68349:18:18:56:555:363:12:g_d0_f2:12:g_d0_f2:that are not in our model. Explicit mechanisms put forth are shocks in trade finance, as dis-
+30:1097:68442:18:18:56:555:345:12:g_d0_f2:12:g_d0_f2:cussed inAmiti and Weinstein(2011) or   Chor and Manova(2012); inventory considerations
+30:1098:68529:18:18:56:554:327:12:g_d0_f2:12:g_d0_f2:discussed inAlessandria, Kaboski, and Midrigan(2010b); input-output linkages and vertical
+30:1099:68618:18:18:56:555:309:12:g_d0_f2:12:g_d0_f2:specialization discussed inBems, Johnson, and Yi(2010); or shocks to the future value of man-
+30:1100:68711:18:18:56:555:291:12:g_d0_f2:12:g_d0_f2:ufactures as inEaton, Kortum, Neiman, and Romalis(2013). Either (or all) of these mechanisms
+30:1101:68803:18:24:56:551:273:12:g_d0_f2:12:g_d0_f2:would complement our results and, perhaps, provide a complete account of the drop in trade.
+30:1102:68894:24:18:57:554:249:12:g_d0_f2:12:g_d0_f2:The distinguishing feature of our explanation relative to this literature is that our model does
+30:1103:68990:18:18:56:570:231:12:g_d0_f2:12:g_d0_f2:not rely on specifics about the 2008-2009 crisis. As Figure5(a)   shows, our model can account
+30:1104:69084:18:18:56:555:213:12:g_d0_f2:12:g_d0_f2:well for cyclical fluctuations in U.S. imports for 40 years of data. Moreover, our model’s ability
+30:1105:69182:18:18:56:555:195:12:g_d0_f2:12:g_d0_f2:to account for both the past 40 years and the most recent crisis is consistent with evidence
+30:1106:69274:18:18:56:555:177:12:g_d0_f2:12:g_d0_f2:regarding the sources of macroeconomic fluctuations.Stock and Watson(2012) use a dynamic
+30:1107:69362:18:18:56:555:159:12:g_d0_f2:12:g_d0_f2:factor model to analyze the contributions of various shocks to explaining the most recent and
+30:1108:69455:18:18:56:554:141:12:g_d0_f2:12:g_d0_f2:previous recessions. They find that the same factors that explained previous postwar recessions
+30:1109:69550:18:0:56:257:123:12:g_d0_f2:12:g_d0_f2:also explain the most recent recession.
+31:1110:69591:0:0:76:545:468:7:Helvetica:7:Helvetica:2000200520102015
+31:1111:69607:0:0:66:83:482:7:Helvetica:7:Helvetica:−0.25
+31:1112:69612:0:0:70:83:506:7:Helvetica:7:Helvetica:−0.2
+31:1113:69616:0:0:66:83:530:7:Helvetica:7:Helvetica:−0.15
+31:1114:69621:0:0:70:83:554:7:Helvetica:7:Helvetica:−0.1
+31:1115:69625:0:0:66:83:578:7:Helvetica:7:Helvetica:−0.05
+31:1116:69630:0:0:79:83:602:7:Helvetica:7:Helvetica:0
+31:1117:69631:0:0:70:83:626:7:Helvetica:7:Helvetica:0.05
+31:1118:69635:0:0:74:83:650:7:Helvetica:7:Helvetica:0.1
+31:1119:69638:0:0:70:83:675:7:Helvetica:7:Helvetica:0.15
+31:1120:69642:0:0:74:83:699:7:Helvetica:7:Helvetica:0.2
+31:1121:69645:0:250:70:83:723:7:Helvetica:7:Helvetica:0.25
+31:1122:69678:250:0:83:85:473:7:Helvetica:7:Helvetica: 
+31:1123:69678:0:165:537:539:732:7:Helvetica:7:Helvetica: 
+31:1124:69678:165:24:227:280:567:8:Helvetica:8:Helvetica: Static Model 
+31:1125:69692:24:46:434:496:543:8:Helvetica:8:Helvetica: Baseline Model
+31:1126:69707:46:54:285:307:497:8:Helvetica:8:Helvetica: Data 
+31:1127:69713:54:38:111:497:443:12:g_d0_f1:12:g_d0_f1:Figure 6: Trade Collapse: Model Predictions vs. Import Data,2000-2014
+31:1128:69782:38:29:56:430:405:14:g_d0_f1:14:g_d0_f1:6. Evidence: Time-to-Ship and Bilateral Import Volatility
+31:1129:69839:29:18:57:555:376:12:g_d0_f2:12:g_d0_f2:This section examines some cross-sectional implications ofour model. Our model predicts that
+31:1130:69931:18:18:56:555:358:12:g_d0_f2:12:g_d0_f2:a country’s bilateral imports should be more volatile when sourced from a partner with longer
+31:1131:70024:18:18:56:555:340:12:g_d0_f2:12:g_d0_f2:shipping times. This implication is shown in the final column of Table5; the volatility of nomi-
+31:1132:70120:18:17:56:555:322:12:g_d0_f2:12:g_d0_f2:nal imports increases with the share1−φ(the effective length of time to ship) of imports that
+31:1133:70213:17:18:56:555:305:12:g_d0_f2:12:g_d0_f2:arrive in the following period. This implication is a “test” of our model because the static model
+31:1134:70311:18:18:56:555:287:12:g_d0_f2:12:g_d0_f2:(or the dynamic model with no active intertemporal marginal rate of substitution) predicts that
+31:1135:70406:18:25:56:439:269:12:g_d0_f2:8:g_d0_f2:the volatility of imports is independent of to the time-to-ship/distance.19
+31:1136:70481:25:18:57:555:244:12:g_d0_f2:12:g_d0_f2:To explore this implication, we construct a measure of the time it takes to ship goods from a
+31:1137:70574:18:18:56:555:226:12:g_d0_f2:12:g_d0_f2:country of origin into the US by combiningHummels and Schaur’s (  2013) dataset on shipping
+31:1138:70665:18:18:56:555:208:12:g_d0_f2:12:g_d0_f2:times and the World Bank’s Doing Business survey.Hummels and Schaur(2013) constructs a
+31:1139:70751:18:17:56:555:190:12:g_d0_f2:12:g_d0_f2:measure of the average time it takes to ship goods into the US from each country of origin, by
+31:1140:70845:17:18:56:555:173:12:g_d0_f2:12:g_d0_f2:mode of transportation, coast of arrival (east or west coast), and HS6 good categories. World
+31:1141:70938:18:18:56:555:155:12:g_d0_f2:12:g_d0_f2:Bank’s Doing Business survey measures the “time necessary to comply with all procedures re-
+31:1142:71029:18:18:56:555:137:12:g_d0_f2:12:g_d0_f2:quired to export goods” in each country of origin, as well as the “time necessary to comply with
+31:1143:71125:18:19:56:554:119:12:g_d0_f2:12:g_d0_f2:all procedures required to import goods” in the US. We construct our total measure of time-to-
+31:1144:71219:19:16:67:555:100:7:g_d0_f2:10:g_d0_f2:19With ideal data (price indexes of US imports disaggregated by country of origin spanning a significant number
+31:1145:71330:16:12:56:563:84:10:g_d0_f2:10:g_d0_f2:of periods and countries), one could perform similar exercises to those in Sections4 5  and compare and contrast
+31:1146:71442:12:12:56:560:72:10:g_d0_f2:10:g_d0_f2:the cross-sectional implications and/or try and “difference” outEt(  ̃mt+1)across destinations in equation10 . Un-
+31:1147:71556:12:0:56:231:60:10:g_d0_f2:10:g_d0_f2:fortunately, these data are not available.
+32:1148:71600:0:32:181:430:715:12:g_d0_f1:12:g_d0_f1:Table7: Volatility of Imports by Time-to-Ship
+32:1149:71645:32:29:148:463:683:12:g_d0_f2:12:g_d0_f2:Time-to-ShipImports Volatility(%)#of countries
+32:1150:71691:29:29:148:432:654:11:g_d0_f6:12:g_d0_f3:≤2   5days8.2   916
+32:1151:71710:29:29:148:432:625:11:g_d0_f11:12:g_d0_f3:25−50days11.4    448
+32:1152:71730:29:21:148:432:596:11:g_d0_f12:12:g_d0_f3:>50days20.8    118
+32:1153:71748:21:12:135:473:575:10:g_d0_f1:10:g_d0_f2:Note:Imports volatility measured as the standard deviation of the deviations
+32:1154:71824:12:12:135:473:563:10:g_d0_f2:10:g_d0_f2:of imports (log) around an HP-1600 trend. Observations weighted by the
+32:1155:71894:12:48:135:345:551:10:g_d0_f2:10:g_d0_f2:average imports volume across the time period.
+32:1156:71940:48:18:56:554:503:12:g_d0_f2:12:g_d0_f2:ship by adding up these three variables.20We interpret this measure as the total additional time
+32:1157:72036:18:24:56:523:485:12:g_d0_f2:12:g_d0_f2:that it takes to purchase a good from international markets as opposed to domestic ones.
+32:1158:72124:24:18:57:554:461:12:g_d0_f2:12:g_d0_f2:We compare these time-to-ship measures with quarterly data on US nominal imports disaggre-
+32:1159:72214:18:18:56:555:443:12:g_d0_f2:12:g_d0_f2:gated by country of origin. The data is obtained from the US Census, is not seasonally adjusted,
+32:1160:72310:18:18:56:555:425:12:g_d0_f2:12:g_d0_f2:and covers the period Q1 1992 - Q4 2013. For each country, the volatility of imports is computed
+32:1161:72406:18:18:56:554:407:12:g_d0_f2:12:g_d0_f2:as the standard deviation of the percentage deviation of imports around a Hodrick-Prescott
+32:1162:72496:18:24:56:290:389:12:g_d0_f2:12:g_d0_f2:trend with smoothing parameter set to 1600.
+32:1163:72539:24:18:57:554:365:12:g_d0_f2:12:g_d0_f2:Table7 reports the median volatility of imports with countries divided into three time-to-ship
+32:1164:72633:18:18:56:554:347:12:g_d0_f2:12:g_d0_f2:categories:(i)countries with average time-to-ship less than or equal to25days,(ii)between 25
+32:1165:72725:18:18:56:554:329:12:g_d0_f2:12:g_d0_f2:and 50 days, and(iii)greater than50days. Observations are weighted by the average imports
+32:1166:72814:18:18:56:555:311:12:g_d0_f2:12:g_d0_f2:volume across the time period. Consistent with the implications of the model, countries with
+32:1167:72906:18:18:56:555:293:12:g_d0_f2:12:g_d0_f2:higher time-to-ship tend to have more volatile imports. Moreover, the magnitudes are econom-
+32:1168:72998:18:18:56:554:275:12:g_d0_f2:12:g_d0_f2:ically significant: imports from countries with average time-to-ship greater than50days are
+32:1169:73089:18:24:56:555:257:12:g_d0_f2:12:g_d0_f2:more than twice as volatile as imports from countries with average time-to-ship under25days.
+32:1170:73181:24:18:57:555:233:12:g_d0_f2:12:g_d0_f2:The first column of Table8 formalizes this relationship by regressing import volatility on time-
+32:1171:73277:18:18:56:555:215:12:g_d0_f2:12:g_d0_f2:to-ship (in logs), weighting observations by the average imports volume across the time period.
+32:1172:73372:18:18:56:555:197:12:g_d0_f2:12:g_d0_f2:We find that the coefficient on our time-to-ship variable is statistically significant and econom-
+32:1173:73470:18:18:56:555:179:12:g_d0_f2:12:g_d0_f3:ically large: a doubling of time-to-ship is estimated to increase the volatility of imports by8
+32:1174:73565:18:24:56:153:161:12:g_d0_f2:12:g_d0_f2:percentage points.
+32:1175:73583:24:18:57:555:137:12:g_d0_f2:12:g_d0_f2:The second column of Table8 studies the sensitivity of this relationship after controlling for
+32:1176:73677:18:19:56:555:119:12:g_d0_f2:12:g_d0_f2:variables that are used to explain bilateral trade flows:(i)a measure of the distance between
+32:1177:73770:19:16:67:555:100:7:g_d0_f2:10:g_d0_f2:20Note that the average shipping times based on theHummels and Schaur(2013) data are constructed by aggre-
+32:1178:73876:16:12:56:555:84:10:g_d0_f2:10:g_d0_f2:gating observations over the period 1991-2005, while the procedural times to export and imports from the World
+32:1179:73986:12:12:56:555:72:10:g_d0_f2:10:g_d0_f2:Bank’s Doing Business dataset are constructed by aggregating observations over the period 2006-2013. Our results
+32:1180:74098:12:0:56:428:60:10:g_d0_f2:10:g_d0_f2:are robust to restricting attention to 2005 in the former dataset, and 2006 in the latter.
+33:1181:74190:0:32:149:462:715:12:g_d0_f1:12:g_d0_f1:Table8: Regression of Imports Volatility on Time-to-Ship
+33:1182:74246:32:29:275:463:683:12:g_d0_f2:12:g_d0_f2:Without controlsWith controls
+33:1183:74275:29:29:148:448:654:11:g_d0_f2:8:g_d0_f13:Time-to-ship (log)0.0   80∗∗∗0.102∗∗∗
+33:1184:74312:29:29:148:447:625:11:g_d0_f2:8:g_d0_f13:Distance (log)—−0.023∗
+33:1185:74334:29:29:148:441:596:11:g_d0_f2:12:g_d0_f3:Common language—0.011
+33:1186:74355:29:29:148:441:567:11:g_d0_f2:12:g_d0_f3:GDP per capita (log)—0.004
+33:1187:74381:29:29:148:438:538:11:g_d0_f2:12:g_d0_f3:R-squared0.1   80.20
+33:1188:74401:29:21:148:434:509:11:g_d0_f2:12:g_d0_f3:Observations8282
+33:1189:74417:21:12:135:473:488:10:g_d0_f1:10:g_d0_f2:Note:Imports volatility measured as the standard deviation of the deviations
+33:1190:74493:12:12:135:473:476:10:g_d0_f2:10:g_d0_f2:of imports (log) around an HP-1600 trend. Three asterisks denote statisti-
+33:1191:74567:12:12:135:473:464:10:g_d0_f2:10:g_d0_f11:cal significance at1%level, while one asterisk denotes significance at10%
+33:1192:74640:12:12:135:473:452:10:g_d0_f2:10:g_d0_f2:level. Statistical significance based on heteroskedasticity-robust standard er-
+33:1193:74719:12:12:135:473:440:10:g_d0_f2:10:g_d0_f2:rors. Observations weighted by the average imports volume across the time
+33:1194:74792:12:48:135:167:428:10:g_d0_f2:10:g_d0_f2:period.
+33:1195:74799:48:18:56:555:380:12:g_d0_f2:12:g_d0_f2:the different countries and the US,(ii)a dummy variable that is equal to one for countries
+33:1196:74889:18:18:56:555:362:12:g_d0_f2:12:g_d0_f2:with the same language as the US, and(iii)the countries’ average level of GDP per capita over
+33:1197:74982:18:18:56:555:344:12:g_d0_f2:12:g_d0_f2:the sample period. Similar to the first column, the coefficient on our time-to-ship variable is
+33:1198:75077:18:24:56:329:326:12:g_d0_f2:12:g_d0_f2:statistically significant with and economically large.
+33:1199:75131:24:18:57:555:302:12:g_d0_f2:12:g_d0_f2:Related findings have been previously documented in the literature.Levchenko, Lewis, and
+33:1200:75219:18:18:56:554:284:12:g_d0_f2:12:g_d0_f2:Tesar(2010b) find that sectors with longer shipping times or higher sharesof imports shipped
+33:1201:75311:18:18:56:554:266:12:g_d0_f2:12:g_d0_f2:by sea experienced larger falls in trade relative to sectors with shorter shipping times or imports
+33:1202:75410:18:18:56:555:248:12:g_d0_f2:12:g_d0_f2:shipped predominantly by air in the recent crisis.Amiti and Weinstein(2011) find that firms
+33:1203:75501:18:18:56:555:230:12:g_d0_f2:12:g_d0_f2:that export predominantly by air respond less to financial sector shocks than those that export
+33:1204:75596:18:24:56:464:212:12:g_d0_f2:12:g_d0_f2:predominantly by ship. Both of these results are consistent with our findings.
+33:1205:75674:24:18:57:554:188:12:g_d0_f2:12:g_d0_f2:Overall, we interpret these findings as evidence in support of the mechanism that we study
+33:1206:75764:18:18:56:555:170:12:g_d0_f2:12:g_d0_f2:in this paper. Standard models of international trade with static import decisions imply no
+33:1207:75855:18:18:56:555:152:12:g_d0_f2:12:g_d0_f2:systematic relationship between delivery times and import volatility. In the data, however,
+33:1208:75946:18:18:56:555:134:12:g_d0_f2:12:g_d0_f2:imports from countries with higher time-to-ship are systematically more volatile which is con-
+33:1209:76040:18:0:56:354:116:12:g_d0_f2:12:g_d0_f2:sistent with the cross-sectional predictions of our model.
+34:1210:76100:0:28:56:149:719:14:g_d0_f1:14:g_d0_f1:7. Conclusion
+34:1211:76113:28:18:57:554:691:12:g_d0_f2:12:g_d0_f2:Our paper shows how incorporating dynamic, forward-lookingfeatures into static interna-
+34:1212:76200:18:18:56:554:673:12:g_d0_f2:12:g_d0_f2:tional trade models improves their ability to explain the behavior of imports at business-cycle
+34:1213:76295:18:18:56:555:655:12:g_d0_f2:12:g_d0_f2:frequencies. The key premise is that international trade is a time-intensive activity, and, thus,
+34:1214:76392:18:18:56:555:637:12:g_d0_f2:12:g_d0_f2:variation in the rate at which agents are willing to substitute across time affects how trade vol-
+34:1215:76490:18:18:56:555:619:12:g_d0_f2:12:g_d0_f2:umes respond to changes in income and prices. Quantitatively, we showed that our model can
+34:1216:76580:18:18:56:555:601:12:g_d0_f2:12:g_d0_f2:deliver the high income elasticity and low price elasticity of imports in U.S. time series data at
+34:1217:76678:18:18:56:555:583:12:g_d0_f2:12:g_d0_f2:business-cycle frequencies. Furthermore, we showed that our model can account well for both
+34:1218:76769:18:24:56:504:565:12:g_d0_f2:12:g_d0_f2:the collapse in U.S. imports during 2008-2009 and fluctuations over the past 40 years.
+34:1219:76855:24:18:57:554:541:12:g_d0_f2:12:g_d0_f2:Several questions and avenues for future research remain open. While we presented evidence
+34:1220:76945:18:18:56:555:523:12:g_d0_f2:12:g_d0_f2:on the volatility of trade by distance and mode, further analysis of this type may help to pro-
+34:1221:77040:18:18:56:555:505:12:g_d0_f2:12:g_d0_f2:vide discipline regarding the mechanism put forth in this paper. Second, trade elasticities play
+34:1222:77136:18:18:56:555:487:12:g_d0_f2:12:g_d0_f2:critical roles in formulating predictions and recommendations for policy makers. Because our
+34:1223:77228:18:18:56:555:469:12:g_d0_f2:12:g_d0_f2:model has both theoretical consistency and statistical performance, exploring the model’s abil-
+34:1224:77323:18:0:56:429:451:12:g_d0_f2:12:g_d0_f2:ity to provide usable forecasts is an avenue for future research, as well.
+35:1225:77399:0:28:56:128:719:14:g_d0_f1:14:g_d0_f1:References
+35:1226:77409:28:18:56:555:691:12:g_d0_f2:12:g_d0_f8:AI   YAGARI, S. R. (1994): “Uninsured Idiosyncratic Risk and Aggregate Saving,”The Quarterly
+35:1227:77501:18:28:68:253:673:12:g_d0_f8:12:g_d0_f2:Journal of Economics, 109(3), 659–84.
+35:1228:77538:28:18:56:555:645:12:g_d0_f2:12:g_d0_f2:ALESSANDRIA, G., J. KABOSKI,ANDV. MIDRIGAN(2010a): “Inventories, lumpy trade, and
+35:1229:77619:18:28:68:316:627:12:g_d0_f2:12:g_d0_f2:large devaluations,”American Economic Review.
+35:1230:77664:28:18:56:555:599:12:g_d0_f2:12:g_d0_f2:ALESSANDRIA, G., J. P. KABOSKI,ANDV. MIDRIGAN(2010b): “The Great Trade Collapse of
+35:1231:77746:18:27:68:464:581:12:g_d0_f2:12:g_d0_f2:2008–09: An Inventory Adjustment?,”IMF Economic Review, 58(2), 254–294.
+35:1232:77817:27:28:98:555:554:12:g_d0_f2:12:g_d0_f2:(2011): “US Trade and Inventory Dynamics,”American Economic Review, 101(3), 303–07.
+35:1233:77900:28:18:56:554:526:12:g_d0_f2:12:g_d0_f8:AMITI, M.,ANDD. WEINSTEIN(2011): “Exports and Financial Shocks,”The Quarterly Journal of
+35:1234:77988:18:28:68:123:508:12:g_d0_f8:12:g_d0_f2:Economics.
+35:1235:77998:28:18:56:554:480:12:g_d0_f2:12:g_d0_f2:ANDERSON, J.,ANDE.VANWINCOOP(2003): “Gravity with Gravitas: A Solution to the Border
+35:1236:78082:18:28:68:320:462:12:g_d0_f2:12:g_d0_f2:Puzzle,”American Economic Review, 93, 170–192.
+35:1237:78128:28:18:56:555:434:12:g_d0_f2:12:g_d0_f2:ANTRAS, P.,ANDC. F. FOLEY(2011): “Poultry in Motion: A Study of International Trade Fi-
+35:1238:78215:18:28:68:488:416:12:g_d0_f2:12:g_d0_f2:nance Practices,” Working Paper 17091, National Bureau of Economic Research.
+35:1239:78291:28:18:56:555:388:12:g_d0_f2:12:g_d0_f2:BACKUS, D., P. KEHOE,ANDF. KYDLAND(1995): “International business cycles: theory and
+35:1240:78375:18:28:68:555:370:12:g_d0_f2:12:g_d0_f2:evidence,” inFrontiers of Business Cycle Research, ed. by T. Cooley. Princeton University Press.
+35:1241:78471:28:27:56:506:342:12:g_d0_f2:12:g_d0_f2:BALDWIN, R. (2010):The great trade collapse: Causes, Consequences and Prospects. CEPR.
+35:1242:78557:27:18:56:555:315:12:g_d0_f2:12:g_d0_f8:BARRO, R. J. (2006): “Rare disasters and asset markets in the twentieth century,”The Quarterly
+35:1243:78651:18:28:68:241:297:12:g_d0_f8:12:g_d0_f2:Journal of Economics, pp. 823–866.
+35:1244:78685:28:18:56:554:269:12:g_d0_f2:12:g_d0_f2:BEMS, R., R. C. JOHNSON,ANDK.-M. YI(2010): “Demand spillovers and the collapse of trade
+35:1245:78772:18:28:68:390:251:12:g_d0_f2:12:g_d0_f2:in the global recession,”IMF Economic Review, 58(2), 295–326.
+35:1246:78833:28:18:56:555:223:12:g_d0_f2:12:g_d0_f2:BOILEAU, M. (1999): “Trade in capital goods and the volatility of net exports and the terms of
+35:1247:78927:18:28:68:359:205:12:g_d0_f2:12:g_d0_f2:trade,”Journal of International Economics, 48(2), 347–365.
+35:1248:78985:28:18:56:555:177:12:g_d0_f2:12:g_d0_f2:CAMPBELL, J.,ANDJ. COCHRANE(1999): “By Force of Habit: A Consumption-Based Explana-
+35:1249:79068:18:28:68:543:159:12:g_d0_f2:12:g_d0_f2:tion of Aggregate Stock Market Behavior,”The Journal of Political Economy, 107(2), 205–251.
+35:1250:79159:28:28:56:409:131:12:g_d0_f2:12:g_d0_f2:CAPELA, J. J. (2011):Import/export for Dummies. John Wiley & Sons.
+35:1251:79225:28:18:56:555:103:12:g_d0_f2:12:g_d0_f8:CASTRO, R. (2005): “Economic Development and Growth in the World Economy,”Review of
+35:1252:79308:18:0:68:244:85:12:g_d0_f8:12:g_d0_f2:Economic Dynamics, 8(1), 195–230.
+36:1253:79343:0:18:56:554:723:12:g_d0_f2:12:g_d0_f8:CH    ARI, V. V., P. KEHOE,ANDE. R. MCGRATTAN(2007): “Business Cycle Accounting,”Econo-
+36:1254:79430:18:28:68:187:705:12:g_d0_f8:12:g_d0_f2:metrica, 75(3), 781–836.
+36:1255:79454:28:18:56:555:677:12:g_d0_f2:12:g_d0_f2:CHOR, D.,ANDK. MANOVA(2012): “Off the cliff and back? Credit conditions and international
+36:1256:79543:18:27:68:533:659:12:g_d0_f2:12:g_d0_f2:trade during the global financial crisis,”Journal of International Economics, 87(1), 117–133.
+36:1257:79636:27:18:56:554:632:12:g_d0_f2:12:g_d0_f8:DIEWERT, W. E. (1978): “Superlative Index Numbers and Consistency in Aggregation,”Econo-
+36:1258:79724:18:28:68:187:614:12:g_d0_f8:12:g_d0_f2:metrica, 46(4), 883–900.
+36:1259:79748:28:18:56:554:586:12:g_d0_f2:12:g_d0_f8:DJANKOV, S., C. FREUND,ANDC. S. PHAM(2010): “Trading on time,”Review of Economics and
+36:1260:79833:18:28:68:196:568:12:g_d0_f8:12:g_d0_f2:Statistics, 92(1), 166–173.
+36:1261:79860:28:18:56:555:540:12:g_d0_f2:12:g_d0_f2:EATON, J.,ANDS. KORTUM(2002): “Technology, Geography, and Trade,”Econometrica, 70(5),
+36:1262:79945:18:27:68:125:522:12:g_d0_f2:12:g_d0_f2:1741–1779.
+36:1263:79955:27:18:56:555:495:12:g_d0_f2:12:g_d0_f2:EATON, J., S. KORTUM, B. NEIMAN,ANDJ. ROMALIS(2013): “Trade and the global recession,”
+36:1264:80041:18:28:68:150:477:12:g_d0_f2:12:g_d0_f2:Working paper.
+36:1265:80055:28:18:56:554:449:12:g_d0_f2:12:g_d0_f2:EHEMANN, C., A. KATZ,ANDB. MOULTON(2002): “The chain-additivity issue and the US
+36:1266:80135:18:28:68:516:431:12:g_d0_f2:12:g_d0_f2:national economic accounts,”Journal of Economic and Social Measurement, 28(1), 37–49.
+36:1267:80220:28:18:56:554:403:12:g_d0_f2:12:g_d0_f2:ENGEL, C.,ANDJ. WANG(2011): “International trade in durable goods: Understanding volatil-
+36:1268:80309:18:27:68:474:385:12:g_d0_f2:12:g_d0_f2:ity, cyclicality, and elasticities,”Journal of International Economics, 83(1), 37–52.
+36:1269:80394:27:18:56:554:358:12:g_d0_f2:12:g_d0_f2:FEENSTRA, R. (1994): “New product varieties and the measurement of international prices,”
+36:1270:80483:18:28:68:307:340:12:g_d0_f8:12:g_d0_f2:The American Economic Review, 84(1), 157–177.
+36:1271:80528:28:28:56:451:312:12:g_d0_f2:12:g_d0_f2:FISHER, I. (1922):The making of index numbers. Houghton Mifflin Company.
+36:1272:80600:28:27:56:491:284:12:g_d0_f2:12:g_d0_f2:FITZGERALD, D.,ANDS. HALLER(2012): “Exporters and Shocks,” Working paper.
+36:1273:80673:27:18:56:555:257:12:g_d0_f2:12:g_d0_f8:HALL, R. E. (1988): “Intertemporal Substitution in Consumption,”The Journal of Political Econ-
+36:1274:80767:18:28:68:172:239:12:g_d0_f8:12:g_d0_f2:omy, 96(2), 339–357.
+36:1275:80787:28:18:56:554:211:12:g_d0_f2:12:g_d0_f2:HEATHCOTE, J.,ANDF. PERRI(2002): “Financial autarky and international business cycles,”
+36:1276:80874:18:28:68:290:193:12:g_d0_f8:12:g_d0_f2:Journal of Monetary Economics, 49, 289–301.
+36:1277:80917:28:18:56:555:165:12:g_d0_f2:12:g_d0_f8:HOUTHAKKER, H.,ANDS. MAGEE(1969): “Income and price elasticities in world trade,”The
+36:1278:81001:18:27:68:309:147:12:g_d0_f8:12:g_d0_f2:Review of Economics and Statistics, pp. 111–125.
+36:1279:81049:27:18:56:555:120:12:g_d0_f2:12:g_d0_f2:HUGGETT,  M. (1993):  “The risk-free rate in heterogeneous-agent incomplete-insurance
+36:1280:81134:18:28:68:439:102:12:g_d0_f2:12:g_d0_f2:economies,”Journal of Economic Dynamics and Control, 17(5-6), 953–969.
+36:1281:81204:28:18:56:555:74:12:g_d0_f2:12:g_d0_f2:HUMMELS, D. (2007): “Transportation costs and international trade in the second era of glob-
+36:1282:81296:18:0:68:390:56:12:g_d0_f2:12:g_d0_f2:alization,”The Journal of Economic Perspectives, 21(3), 131–154.
+37:1283:81362:0:18:56:555:723:12:g_d0_f2:12:g_d0_f8:HU    MMELS, D.,ANDG. SCHAUR(2010): “Hedging price volatility using fast transport,”Journal
+37:1284:81453:18:28:68:269:705:12:g_d0_f8:12:g_d0_f2:of International Economics, 82(1), 15–25.
+37:1285:81494:28:18:56:555:677:12:g_d0_f2:12:g_d0_f2:HUMMELS, D.,ANDG. SCHAUR(2013): “Time as a Trade Barrier,”American Economic Review,
+37:1286:81577:18:28:68:151:659:12:g_d0_f2:12:g_d0_f2:103(7), 2935–59.
+37:1287:81593:28:18:56:555:631:12:g_d0_f2:12:g_d0_f8:ISARD, P. (1975):Dock strike adjustment factors for major categories of US imports and exports, 1958-
+37:1288:81694:18:28:68:547:613:12:g_d0_f8:12:g_d0_f2:1974. Division of International Finance, Board of Governors of the Federal Reserve System.
+37:1289:81784:28:18:56:555:585:12:g_d0_f2:12:g_d0_f2:JACKS, D., C. MEISSNER,ANDD. NOVY(2010): “Trade costs in the first wave of globalization,”
+37:1290:81874:18:27:68:316:567:12:g_d0_f8:12:g_d0_f2:Explorations in Economic History, 47(2), 127–141.
+37:1291:81923:27:18:56:555:540:12:g_d0_f2:12:g_d0_f2:JACKS, D. S., C. M. MEISSNER,ANDD. NOVY(2009): “The role of trade costs in the great trade
+37:1292:82013:18:18:68:554:522:12:g_d0_f2:12:g_d0_f2:collapse,” inThe great trade collapse: causes, consequences, and prospects, ed. by R. Baldwin.
+37:1293:82107:18:28:68:128:504:12:g_d0_f2:12:g_d0_f2:VoxEU.org.
+37:1294:82117:28:18:56:555:476:12:g_d0_f2:12:g_d0_f2:KEHOE, T. J.,ANDK. J. RUHL(2013): “How important is the new goods margin in international
+37:1295:82206:18:28:68:340:458:12:g_d0_f2:12:g_d0_f2:trade?,”Journal of Political Economy, 121(2), 358–392.
+37:1296:82260:28:18:56:555:430:12:g_d0_f2:12:g_d0_f2:KRUGMAN, P. (1980): “Scale Economies, Product Differentiation, and the Pattern of Trade,”
+37:1297:82349:18:28:68:287:412:12:g_d0_f8:12:g_d0_f2:American Economic Review, 70(5), 950–959.
+37:1298:82390:28:18:99:555:384:12:g_d0_f2:12:g_d0_f8:(1989): “Differences in income elasticities and trends in real exchange rates,”European
+37:1299:82477:18:28:68:248:366:12:g_d0_f8:12:g_d0_f2:Economic Review, 33(5), 1031–1046.
+37:1300:82511:28:17:56:555:338:12:g_d0_f2:12:g_d0_f2:LEVCHENKO, A. A., L. T. LEWIS,ANDL. L. TESAR(2010a): “The collapse of international trade
+37:1301:82600:17:28:68:555:321:12:g_d0_f2:12:g_d0_f2:during the 2008–09 crisis: in search of the smoking gun,”IMF Economic Review, 58(2), 214–253.
+37:1302:82693:28:18:56:555:293:12:g_d0_f2:12:g_d0_f2:LEVCHENKO, A. A., L. T. LEWIS,ANDL. L. TESAR(2010b): “The Role of Financial Factors in
+37:1303:82779:18:18:68:555:275:12:g_d0_f2:12:g_d0_f2:the Trade Collapse: A Skeptic’s View,” Working papers, Research Seminar in International
+37:1304:82867:18:28:68:257:257:12:g_d0_f2:12:g_d0_f2:Economics, University of Michigan.
+37:1305:82901:28:28:56:357:229:12:g_d0_f2:12:g_d0_f2:MARQUEZ, J. (2002):Estimating trade elasticities. Springer.
+37:1306:82960:28:18:56:555:201:12:g_d0_f2:12:g_d0_f2:MELITZ, M. J. (2003): “The Impact of Trade on Intra-Industry Reallocations and Aggregate
+37:1307:83048:18:28:68:354:183:12:g_d0_f2:12:g_d0_f2:Industry Productivity,”Econometrica, 71(6), 1695–1725.
+37:1308:83102:28:28:56:472:155:12:g_d0_f2:12:g_d0_f2:RUHL, K. (2008): “The International Elasticity Puzzle,”unpublished paper, NYU.
+37:1309:83180:28:18:56:555:127:12:g_d0_f2:12:g_d0_f2:SIMONOVSKA, I.,ANDM. E. WAUGH(2014): “The elasticity of trade: Estimates and evidence,”
+37:1310:83267:18:28:68:308:109:12:g_d0_f8:12:g_d0_f2:Journal of International Economics, 92(1), 34–50.
+37:1311:83316:28:18:56:555:81:12:g_d0_f2:12:g_d0_f2:STOCK, J.,ANDM. WATSON(2012): “Disentangling the Channels of the 2007-2009 Recession,”
+37:1312:83402:18:0:68:373:63:12:g_d0_f2:12:g_d0_f2:Discussion paper, National Bureau of Economic Research.
+38:1313:83459:0:18:56:554:723:12:g_d0_f2:12:g_d0_f2:TA   LLARINI, T. (2000): “Risk-sensitive real business cycles,”Journal of Monetary Economics, 45(3),
+38:1314:83559:18:28:68:113:705:12:g_d0_f2:12:g_d0_f2:507–532.
+38:1315:83567:28:18:56:555:677:12:g_d0_f2:12:g_d0_f2:VISSING-JORGENSEN, A. (2002): “Limited Asset Market Participation and the Elasticity of In-
+38:1316:83658:18:28:68:458:659:12:g_d0_f2:12:g_d0_f2:tertemporal Substitution,”The Journal of Political Economy, 110(4), 825–853.
+38:1317:83734:28:18:56:554:631:12:g_d0_f2:12:g_d0_f8:WHELAN, K. (2002): “A Guide to U.S. Chain Aggregated NIPA Data,”Review of Income and
+38:1318:83818:18:0:68:179:613:12:g_d0_f8:12:g_d0_f2:Wealth, 48(2), 217–33.
+39:1319:83842:0:41:171:440:722:17:g_d0_f1:17:g_d0_f1:Appendix: For Online Publication
+39:1320:83874:41:28:56:164:681:14:g_d0_f1:14:g_d0_f1:A. Data Sources
+39:1321:83889:28:18:57:555:653:12:g_d0_f2:12:g_d0_f2:The data that we use for the estimation of the static CES importdemand specification in Section
+39:1322:83984:18:18:56:554:635:12:g_d0_f2:12:g_d0_f2:2 come from the Bureau of Economic Analysis’ (BEA) National Income and Product Accounts
+39:1323:84071:18:18:56:554:617:12:g_d0_f2:12:g_d0_f2:(NIPA). As emphasized in the paper, our analysis focuses on imports and absorption of goods,
+39:1324:84163:18:35:56:247:599:12:g_d0_f2:12:g_d0_f2:excluding oil. The tables we use are:
+39:1325:84200:35:18:74:555:564:12:g_d0_f6:12:g_d0_f2:•Nominal Components:Table 1.2.5 line 5 Nominal Goods GDP, Final Sales; Table 4.2.5 line
+39:1326:84287:18:27:85:548:546:12:g_d0_f2:12:g_d0_f2:2 nominal exports of goods; Table 4.2.5 line 54 nominal imports of nonpetroleum goods.
+39:1327:84373:27:18:74:555:519:12:g_d0_f6:12:g_d0_f2:•Price Indexes:Table 1.2.4 line 5 Fisher price index (100=2009) of goods gdp, final sales;
+39:1328:84463:18:18:85:554:501:12:g_d0_f2:12:g_d0_f2:Table 4.2.4 line 2 Fisher price index (100=2009) exports of goods; Table 4.2.4 line 54, Fisher
+39:1329:84557:18:28:85:392:483:12:g_d0_f2:12:g_d0_f2:price index (100=2009) of imports of nonpetroleum goods.
+39:1330:84613:28:18:74:554:455:12:g_d0_f6:12:g_d0_f2:•Quantity Indexes:Table 1.2.3 line 5 Fisher quantity index (100=2009) of goods gdp, final
+39:1331:84702:18:18:85:554:437:12:g_d0_f2:12:g_d0_f2:sales; Table 4.2.3 line 2 Fisher quantity index (100=2009) exports of goods; Table 4.2.3 line
+39:1332:84795:18:28:85:464:419:12:g_d0_f2:12:g_d0_f2:54, Fisher quantity index (100=2009) of imports of nonpetroleum goods.
+39:1333:84865:28:18:74:555:391:12:g_d0_f6:12:g_d0_f2:•Durable and Non-Durable Goods:The same tables outlined above were used to con-
+39:1334:84944:18:18:85:554:373:12:g_d0_f2:12:g_d0_f2:struct the analogous data series for durable goods and non-durable goods. The only dis-
+39:1335:85031:18:18:85:554:355:12:g_d0_f2:12:g_d0_f2:tinction are the line numbers—specifically lines 7 and 11 for nominal values, quantity and
+39:1336:85121:18:18:85:554:337:12:g_d0_f2:12:g_d0_f2:price indexes. Lines 48 and 49 for exports of durable and non-durable goods, lines 52 and
+39:1337:85210:18:34:85:162:319:12:g_d0_f2:12:g_d0_f2:53 for imports.
+39:1338:85225:34:18:56:554:285:12:g_d0_f2:12:g_d0_f2:As discussed in Section2.1  , the construction of real absorption and the associated price index is
+39:1339:85324:18:18:56:555:267:12:g_d0_f2:12:g_d0_f2:not as straightforward as this might seem. Real values in the U.S. NIPA accounts are chain-type
+39:1340:85419:18:18:56:554:249:12:g_d0_f2:12:g_d0_f2:indexes using an “ideal” chain index advocated byFisher(1922). While these indexes have
+39:1341:85506:18:18:56:555:231:12:g_d0_f2:12:g_d0_f2:desirable properties, they are not additive across categories (seeEhemann, Katz, and Moulton
+39:1342:85598:18:18:56:555:213:12:g_d0_f2:12:g_d0_f2:(2002) andWhelan(2002) for detailed discussions). For our purposes, the implication is that
+39:1343:85689:18:18:56:555:195:12:g_d0_f2:12:g_d0_f2:one cannot compute real absorption simply by adding real goods GDP to real imports and
+39:1344:85775:18:24:56:184:177:12:g_d0_f2:12:g_d0_f2:subtracting real exports.
+39:1345:85800:24:18:57:555:153:12:g_d0_f2:12:g_d0_f2:Our solution to this problem is to use a “Fisher of Fishers” approach suggested byDiewert
+39:1346:85889:18:18:56:555:135:12:g_d0_f2:12:g_d0_f2:(1978). The basic idea is to take the quantities indexes and the associated price indexes for the
+39:1347:85986:18:18:56:555:117:12:g_d0_f2:12:g_d0_f2:categories of interest and then compute Fisher indexes of these measures—hence the “Fisher of
+39:1348:86079:18:18:56:555:99:12:g_d0_f2:12:g_d0_f2:Fishers” name. For example, to construct real absorption and the associated price index, then
+39:1349:86172:18:18:56:554:81:12:g_d0_f2:12:g_d0_f2:the quantity indexes of goods GDP, (minus) goods exports, and goods imports and the price
+39:1350:86261:18:0:56:432:63:12:g_d0_f2:12:g_d0_f2:indexes are combined to create a Fisher quantity index and price index.
+40:1351:86334:0:28:56:302:719:14:g_d0_f1:14:g_d0_f1:B. The Mapping From Model to Data
+40:1352:86367:28:18:57:555:691:12:g_d0_f2:12:g_d0_f2:This section discusses how objects in our model relate to those in the data. The key issue re-
+40:1353:86461:18:18:56:554:673:12:g_d0_f2:12:g_d0_f2:gards adjusting observed time series given the timing friction to estimate the stochastic process
+40:1354:86558:18:18:56:555:655:12:g_d0_f2:12:g_d0_f2:for endowments and prices. Below, we discuss the one-period time-to-ship case and the inter-
+40:1355:86650:18:24:56:194:637:12:g_d0_f2:12:g_d0_f2:mediate time-to-ship case.
+40:1356:86676:24:18:57:554:613:12:g_d0_f1:12:g_d0_f2:One-Period Time-to-Ship.To estimate the stochastic process for endowments and prices, we
+40:1357:86764:18:18:56:555:595:12:g_d0_f2:12:g_d0_f2:need to construct a time series to proxy forzt,pxt, andpyt. Specifically, we need the variables
+40:1358:86859:18:18:56:555:577:12:g_d0_f2:12:g_d0_f2:in the data to reflect the timing at which they would be observed by the agent in the model,
+40:1359:86951:18:18:56:555:559:12:g_d0_f2:12:g_d0_f2:not the timing at which they are observed by U.S. statistical agencies. These agencies collect
+40:1360:87045:18:18:56:555:541:12:g_d0_f2:12:g_d0_f2:import data and the prices on arrival at the border. Yet, in the model, these prices are observed
+40:1361:87142:18:18:56:555:523:12:g_d0_f2:12:g_d0_f2:a quarter before. Thus, we adjust the data variables accordingly to make them consistent with
+40:1362:87235:18:18:56:555:505:12:g_d0_f2:8:g_d0_f5:the timing of our model. Below, we discuss the adjustment and measurement forpy,z, andpx
+40:1363:87323:18:24:56:95:487:12:g_d0_f2:12:g_d0_f2:in turn.
+40:1364:87331:24:18:57:555:463:12:g_d0_f2:12:g_d0_f2:To measurepyt, we used the observed price index of imports, but shifted one period back.
+40:1365:87419:18:18:56:555:445:12:g_d0_f2:12:g_d0_f2:Again, the reason is that is the price measured in Q1 2011 is really the price that the agent
+40:1366:87512:18:18:56:555:427:12:g_d0_f2:12:g_d0_f2:observed and on which he based his choice of imports in Q4 2010 according to our model.
+40:1367:87599:18:18:56:554:409:12:g_d0_f2:12:g_d0_f2:Thus, by shifting back the Q1 2011 price of imports, it will line up in the estimation with Q4
+40:1368:87693:18:24:56:307:391:12:g_d0_f2:12:g_d0_f2:2010 real (adjusted) absorption and price index.
+40:1369:87741:24:18:57:554:367:12:g_d0_f2:12:g_d0_f2:The timing assumption affects absorption, as well. Absorption from NIPA includes consump-
+40:1370:87830:18:18:56:555:349:12:g_d0_f2:12:g_d0_f2:tion of imports decided upon in the previous period. In contrast, we want domestic consump-
+40:1371:87921:18:18:56:555:331:12:g_d0_f2:12:g_d0_f2:tion today plus consumption of imports delivered tomorrow. To adjust for this, adjusted ab-
+40:1372:88012:18:33:56:181:313:12:g_d0_f2:12:g_d0_f2:sorption is measured as
+40:1373:88035:33:7:67:285:280:12:g_d0_f3:8:g_d0_f9:Adjusted Absorption  =pxtxt+pyt−1yt−1
+40:1374:88072:7:11:203:286:273:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1375:88076:11:0:240:249:262:8:g_d0_f5:6:g_d0_f10:Ct
+40:1376:88078:0:7:288:357:280:12:g_d0_f3:12:g_d0_f3:+pxt(zt−xt)
+40:1377:88089:7:11:299:356:273:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1378:88093:11:0:311:345:262:8:g_d0_f5:6:g_d0_f10:Exportst
+40:1379:88101:0:7:358:414:280:12:g_d0_f6:8:g_d0_f9:−pyt−1yt−1
+40:1380:88111:7:11:370:414:273:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1381:88115:11:7:375:409:262:8:g_d0_f5:6:g_d0_f10:Importst
+40:1382:88123:7:11:203:414:255:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1383:88127:11:0:297:319:244:8:g_d0_f5:6:g_d0_f10:GDPt
+40:1384:88131:0:7:417:485:280:12:g_d0_f6:12:g_d0_f3:−pxt(zt−xt)
+40:1385:88142:7:11:428:485:273:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1386:88146:11:0:439:473:262:8:g_d0_f5:6:g_d0_f10:Exportst
+40:1387:88154:0:7:487:531:280:12:g_d0_f3:8:g_d0_f5:+pytyt
+40:1388:88160:7:11:508:531:273:12:g_d0_f7:12:g_d0_f7:|{z}
+40:1389:88164:11:0:498:541:262:8:g_d0_f5:6:g_d0_f14:Importst+1
+40:1390:88174:0:63:535:555:280:12:g_d0_f2:12:g_d0_f2:(12)
+40:1391:88178:63:32:183:306:217:12:g_d0_f3:12:g_d0_f4:=pxtxt+pytyt=pxtzt,
+40:1392:88197:32:18:56:555:185:12:g_d0_f2:12:g_d0_f2:with the last line showing that this process identifies the value of the endowment. Finally, to
+40:1393:88292:18:18:56:554:167:12:g_d0_f2:12:g_d0_f2:arrive at a real measure of the endowment, we can construct a quantity index for absorption,
+40:1394:88384:18:18:56:555:149:12:g_d0_f4:12:g_d0_f2:zt, by using real GDP, minus real exports, plus real imports att+ 1, and the associated price
+40:1395:88477:18:25:56:306:131:12:g_d0_f2:12:g_d0_f2:indexes using the “Fisher of Fishers” approach.
+40:1396:88524:25:18:57:555:106:12:g_d0_f2:12:g_d0_f2:To proxypx, there are two approaches. The baseline approach uses the associated price index
+40:1397:88615:18:17:56:555:88:12:g_d0_f2:12:g_d0_f2:with our measure of absorption. A second approach computes a measure of domestic con-
+40:1398:88700:17:0:56:555:71:12:g_d0_f2:12:g_d0_f2:sumption and the associated price index. Specifically, we define domestic consumption as GDP
+41:1399:88794:0:24:154:457:720:12:g_d0_f1:12:g_d0_f3:Table9: Robustness, Elasticities: Data and Model,θ=4
+41:1400:88846:24:22:267:488:696:12:g_d0_f2:12:g_d0_f4:Price Elasticity,ˆαIncome Elasticity,ˆβ
+41:1401:88885:22:26:123:446:674:12:g_d0_f2:12:g_d0_f3:Data−0.261.99
+41:1402:88898:26:7:123:329:648:12:g_d0_f2:12:g_d0_f3:Model,γ=2−2.49
+41:1403:88912:7:0:288:339:641:8:g_d0_f9:8:g_d0_f9:[−2.70,−2.25]
+41:1404:88925:0:10:425:446:651:12:g_d0_f3:12:g_d0_f3:1.77
+41:1405:88929:10:25:415:456:641:8:g_d0_f9:8:g_d0_f9:[1.61,1.92]
+41:1406:88940:25:7:123:329:616:12:g_d0_f2:12:g_d0_f3:Model,γ= 5−0.74
+41:1407:88955:7:0:288:339:609:8:g_d0_f9:8:g_d0_f9:[−1.06,−0.35]
+41:1408:88968:0:10:425:446:619:12:g_d0_f3:12:g_d0_f3:3.00
+41:1409:88972:10:25:415:456:609:8:g_d0_f9:8:g_d0_f9:[2.68,3.32]
+41:1410:88983:25:7:123:329:584:12:g_d0_f2:12:g_d0_f3:Model,γ= 101.2   4
+41:1411:89001:7:0:288:339:577:8:g_d0_f9:8:g_d0_f9:[  0.66,1.96]
+41:1412:89014:0:11:425:446:588:12:g_d0_f3:12:g_d0_f3:4.73
+41:1413:89018:11:26:415:456:577:8:g_d0_f9:8:g_d0_f9:[4.19,5.30]
+41:1414:89029:26:32:123:456:551:12:g_d0_f2:8:g_d0_f9:Model,γ=1θ−4.06[−4.30,−3.87]0.92[0.83,0.99]
+41:1415:89072:32:28:123:456:519:12:g_d0_f2:8:g_d0_f9:Model, no time-to-ship−4.03[−4.21,−3.88]1.01[0.93,1.10]
+41:1416:89127:28:12:113:495:491:10:g_d0_f1:10:g_d0_f2:Note:Results are averages from 250 simulations, with each simulation being 187 peri-
+41:1417:89211:12:47:113:406:479:10:g_d0_f2:10:g_d0_f2:ods long; values in brackets report 95-percent confidence intervals.
+41:1418:89279:47:33:56:201:432:12:g_d0_f2:12:g_d0_f2:minus exports, which gives
+41:1419:89305:33:8:90:320:399:12:g_d0_f3:8:g_d0_f9:Domestic Consumption  =pxtxt+pyt−1yt−1
+41:1420:89343:8:10:237:321:391:12:g_d0_f7:12:g_d0_f7:|{z}
+41:1421:89347:10:0:274:283:381:8:g_d0_f5:6:g_d0_f10:Ct
+41:1422:89349:0:7:323:392:399:12:g_d0_f3:12:g_d0_f3:+pxt(zt−xt)
+41:1423:89360:7:11:334:391:392:12:g_d0_f7:12:g_d0_f7:|{z}
+41:1424:89364:11:0:345:379:381:8:g_d0_f5:6:g_d0_f10:Exportst
+41:1425:89372:0:8:393:448:399:12:g_d0_f6:8:g_d0_f9:−pyt−1yt−1
+41:1426:89382:8:10:404:449:391:12:g_d0_f7:12:g_d0_f7:|{z}
+41:1427:89386:10:7:409:444:381:8:g_d0_f5:6:g_d0_f10:Importst
+41:1428:89394:7:11:237:449:374:12:g_d0_f7:12:g_d0_f7:|{z}
+41:1429:89398:11:0:332:354:363:8:g_d0_f5:6:g_d0_f10:GDPt
+41:1430:89402:0:7:451:520:399:12:g_d0_f6:12:g_d0_f3:−pxt(zt−xt)
+41:1431:89413:7:11:462:519:392:12:g_d0_f7:12:g_d0_f7:|{z}
+41:1432:89417:11:0:474:508:381:8:g_d0_f5:6:g_d0_f10:Exportst
+41:1433:89425:0:63:535:555:399:12:g_d0_f2:12:g_d0_f2:(13)
+41:1434:89429:63:33:218:265:336:12:g_d0_f3:12:g_d0_f4:=pxtxt,
+41:1435:89436:33:18:56:554:303:12:g_d0_f2:12:g_d0_f2:which is the value of consumption of the domestic good. With real values of GDP and exports
+41:1436:89527:18:18:56:555:285:12:g_d0_f2:12:g_d0_f2:and the price indexes, a price index can be constructed using a “Fisher of Fishers” approach.
+41:1437:89620:18:24:56:393:267:12:g_d0_f2:12:g_d0_f2:Quantitatively, we found little difference in the two approaches.
+41:1438:89685:24:18:57:555:243:12:g_d0_f1:12:g_d0_f2:Intermediate Time-to-Ship.In this case, we followed the same general approach described
+41:1439:89772:18:18:56:555:225:12:g_d0_f2:12:g_d0_f2:above. The only difference is that measured imports are now a combination of imports decided
+41:1440:89864:18:18:56:555:207:12:g_d0_f2:12:g_d0_f2:upon today and yesterday, thus, all import series and the associated price indexes are adjusted
+41:1441:89959:18:32:56:193:189:12:g_d0_f2:12:g_d0_f2:to reflect this. Specifically,
+41:1442:89989:32:33:112:555:157:12:g_d0_f3:12:g_d0_f2:Adjusted Importst=φMeasured Importst+ (1−φ)Measured Importst+1.(14)
+41:1443:90056:33:0:56:245:124:12:g_d0_f2:12:g_d0_f2:Price indexes are adjusted similarly.
+42:1444:90095:0:24:130:486:720:12:g_d0_f1:12:g_d0_f1:Table10 : Robustness, Orthogonal Endowment and Price Process
+42:1445:90155:24:22:228:465:696:12:g_d0_f2:12:g_d0_f4:Price Elasticity,ˆαIncome Elasticity,ˆβ
+42:1446:90194:22:26:130:423:674:12:g_d0_f2:12:g_d0_f3:Data−0.261.99
+42:1447:90207:26:30:130:432:648:12:g_d0_f2:8:g_d0_f9:Model,γ=2−1.43[−1.53,−1.33]1.07[0.98,1.17]
+42:1448:90249:30:31:130:432:618:12:g_d0_f2:8:g_d0_f9:Model,γ= 5−1.32[−1.48,−1.17]1.49[1.33,1.64]
+42:1449:90292:31:27:130:432:587:12:g_d0_f2:8:g_d0_f9:Model,γ= 10−1.20[−1.45,−0.95]2.14[1.88,2.39]
+42:1450:90336:27:12:124:484:560:10:g_d0_f1:10:g_d0_f2:Note:Results are averages from 250 simulations with each simulation being 187
+42:1451:90413:12:51:124:434:548:10:g_d0_f2:10:g_d0_f2:periods long; values in brackets report 95 percent confidence intervals.
+42:1452:90485:51:28:56:357:497:14:g_d0_f1:14:g_d0_f1:C. Robustness: Alternative Parameterizations
+42:1453:90529:28:18:57:555:469:12:g_d0_f2:12:g_d0_f2:In this section, we report two alternative parameterizations. The first one reproduces Table4
+42:1454:90622:18:18:56:555:451:12:g_d0_f2:12:g_d0_f2:but withθ=4. The second alternative parameterization reports results when the stochastic
+42:1455:90710:18:18:56:555:433:12:g_d0_f2:12:g_d0_f2:process for endowments and prices are treated as independent AR(1) processes and estimated
+42:1456:90800:18:25:56:112:415:12:g_d0_f2:12:g_d0_f2:separately.
+42:1457:90811:25:18:57:554:390:12:g_d0_f2:12:g_d0_f2:Table9 presents the results withθ=4. The key observation is that both the income and price
+42:1458:90901:18:18:56:555:372:12:g_d0_f2:12:g_d0_f2:elasticities are significantly higher than in the baseline results. For example, withγ= 2, the in-
+42:1459:90999:18:17:56:554:354:12:g_d0_f2:12:g_d0_f2:come elasticity is two—the same as theγ= 5, θ= 1.5case presented in Table4. Price elasticities
+42:1460:91093:17:25:56:446:337:12:g_d0_f2:12:g_d0_f2:are, higher, but they are significantly biased below the true price elasticity.
+42:1461:91172:25:18:57:555:312:12:g_d0_f2:12:g_d0_f2:Table10  presents the results with a different stochastic process forendowments. We estimated
+42:1462:91265:18:18:56:555:294:12:g_d0_f2:12:g_d0_f2:separate AR(1) processes for each series. Thus, there is no covariance at all between endow-
+42:1463:91357:18:18:56:555:276:12:g_d0_f2:12:g_d0_f2:ments and prices. For the income elasticity, the results are effectively the same. For the price
+42:1464:91453:18:18:56:554:258:12:g_d0_f2:12:g_d0_f2:elasticity, the results appear to be larger than those in Table4. The reason is evident in the dis-
+42:1465:91552:18:18:56:554:240:12:g_d0_f2:12:g_d0_f2:cussion at the end of Section3.1  about how different covariance structures can either reinforce
+42:1466:91648:18:17:56:555:222:12:g_d0_f2:12:g_d0_f2:the results or offset them. Here, it appears that the covariance structure estimated from the data
+42:1467:91746:17:0:56:479:205:12:g_d0_f2:12:g_d0_f2:appears to reinforce the results specifically for the estimate of the price elasticity.
