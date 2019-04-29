@@ -1,0 +1,1526 @@
+1:0:0:0:156:218:394:708:144:g_d0_f1:144:g_d0_f1:C:NBER WORKING PAPER SERIES
+1:1:25:156:14:149:462:552:144:g_d0_f1:144:g_d0_f1:C:REMEDIAL EDUCATION AND STUDENT ACHIEVEMENT:
+1:2:68:14:42:184:428:538:144:g_d0_f1:144:g_d0_f1:C:A REGRESSION-DISCONTINUITY ANALYSIS
+1:3:103:42:14:270:342:496:144:g_d0_f1:144:g_d0_f1:C:Brian A. Jacob
+1:4:117:14:43:275:336:482:144:g_d0_f1:144:g_d0_f1:C:Lars Lefgren
+1:5:129:43:14:256:355:439:144:g_d0_f1:144:g_d0_f1:C:Working Paper 8918
+1:6:146:14:43:221:389:425:144:g_d0_f1:144:g_d0_f1:C:http://www.nber.org/papers/w8918
+1:7:178:43:14:173:437:382:144:g_d0_f1:144:g_d0_f1:C:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:8:214:14:14:237:373:368:144:g_d0_f1:144:g_d0_f1:C:1050 Massachusetts Avenue
+1:9:239:14:14:250:361:354:144:g_d0_f1:144:g_d0_f1:C:Cambridge, MA 02138
+1:10:258:14:104:281:330:340:144:g_d0_f1:144:g_d0_f1:C:May 2002
+1:11:266:104:13:72:540:236:122:g_d0_f3:122:g_d0_f3:F:We would like to thank the Consortium on Chicago School Research and the Chicago Public Schools for
+1:12:365:13:13:72:540:223:122:g_d0_f3:122:g_d0_f3:F:providing the data used in this study. We are grateful to Anthony Bryk, Thomas DeLeire, Mark Duggan,
+1:13:465:13:13:72:540:210:122:g_d0_f3:122:g_d0_f3:F:Michael Greenstone, Steven Levitt, Helen Levy, Brigitte Madrian, Casey Mulligan, Kevin Murphy, Melissa
+1:14:567:13:13:72:540:197:122:g_d0_f3:122:g_d0_f3:F:Roderick, Mark Showalter, and seminar participants at the University of Chicago for helpful suggestions.
+1:15:671:13:13:72:540:184:122:g_d0_f3:122:g_d0_f3:F:All remaining errors are our own.  The views expressed herein are those of the authors and not necessarily
+1:16:777:13:39:72:305:171:122:g_d0_f3:122:g_d0_f3:F:those of the National Bureau of Economic Research.
+1:17:827:39:13:72:540:132:122:g_d0_f3:122:g_d0_f3:F:© 2002 by Brian A. Jacob and Lars Lefgren.  All rights reserved.  Short sections of text, not to exceed two
+1:18:934:13:13:72:540:119:122:g_d0_f3:122:g_d0_f3:F:paragraphs, may be quoted without explicit permission provided that full credit, including © notice, is given
+1:19:1043:13:0:72:131:106:122:g_d0_f3:122:g_d0_f3:F:to the source.
+2:20:1057:0:14:72:481:708:144:g_d0_f1:144:g_d0_f1:C:Remedial Education and Student Achievement: A Regression-Discontinuity Analysis
+2:21:1136:14:14:72:228:694:144:g_d0_f1:144:g_d0_f1:C:Brian A. Jacob and Lars Lefgren
+2:22:1167:14:14:72:227:680:144:g_d0_f1:144:g_d0_f1:C:NBER Working Paper No. 8918
+2:23:1194:14:14:72:121:666:144:g_d0_f1:144:g_d0_f1:C:May 2002
+2:24:1202:14:57:72:175:652:144:g_d0_f1:144:g_d0_f1:C:JEL No. I21, I28, J24
+2:25:1223:57:53:273:338:595:144:g_d0_f2:144:g_d0_f2:?:ABSTRACT
+2:26:1231:53:21:108:539:542:144:g_d0_f1:144:g_d0_f1:A:As  standards  and  accountability  have  become  an  increasingly  prominent  feature  of  the
+2:27:1326:21:21:72:538:521:144:g_d0_f1:144:g_d0_f1:C:educational landscape, educators have relied more on remedial programs such as summer school and
+2:28:1422:21:21:72:538:500:144:g_d0_f1:144:g_d0_f1:C:grade retention to help low-achieving students meet minimum academic standards.  Yet the evidence on
+2:29:1522:21:22:72:538:479:144:g_d0_f1:144:g_d0_f1:C:the effectiveness of such programs is mixed, and prior research suffers from selection bias. However,
+2:30:1623:22:21:72:538:457:144:g_d0_f1:144:g_d0_f1:C:recent school reform efforts in Chicago provide an opportunity to examine the causal impact of these
+2:31:1723:21:21:72:538:436:144:g_d0_f1:144:g_d0_f1:C:remedial education programs.  In 1996, the Chicago Public Schools instituted an accountability policy
+2:32:1824:21:21:72:538:415:144:g_d0_f1:144:g_d0_f1:C:that tied summer school and promotional decisions to performance on standardized tests, which resulted
+2:33:1926:21:22:72:538:394:144:g_d0_f1:144:g_d0_f1:C:in a highly non-linear relationship between current achievement and the probability of attending summer
+2:34:2029:22:21:72:538:372:144:g_d0_f1:144:g_d0_f1:C:school or being retained.  Using a regression discontinuity design, we find that the net effect of these
+2:35:2133:21:21:72:538:351:144:g_d0_f1:144:g_d0_f1:C:programs was to substantially increase academic achievement among third graders, but not sixth graders.
+2:36:2236:21:21:72:538:330:144:g_d0_f1:144:g_d0_f1:C:In  addition,  contrary  to  conventional  wisdom  and  prior  research,  we  find  that  retention  increases
+2:37:2346:21:113:72:538:309:144:g_d0_f1:144:g_d0_f1:C:achievement for third grade students and has little effect on math achievement for sixth grade students.
+2:38:2450:113:15:72:419:196:144:g_d0_f1:144:g_d0_f1:C:Brian A. JacobLars Lefgren
+2:39:2476:15:14:72:480:181:144:g_d0_f1:144:g_d0_f1:C:Kennedy School of GovernmentDepartment of Economics
+2:40:2527:14:14:72:484:167:144:g_d0_f1:144:g_d0_f1:C:Harvard UniversityBrigham Young University
+2:41:2569:14:14:72:489:153:144:g_d0_f1:144:g_d0_f1:C:79 JFK Street130 Faculty Office Building
+2:42:2609:14:14:72:439:139:144:g_d0_f1:144:g_d0_f1:C:Cambridge, MA 02138Provo, UT 84602
+2:43:2643:14:14:72:446:125:144:g_d0_f1:144:g_d0_f1:C:and NBERl-lefgren@byu.edu
+2:44:2668:14:0:72:194:111:144:g_d0_f1:144:g_d0_f1:C:Brian_Jacob@harvard.edu
+3:45:2691:0:14:72:148:708:144:g_d0_f5:144:g_d0_f5:C:I. Introduction
+3:46:2706:14:28:72:75:694:144:g_d0_f4:144:g_d0_f4:B: 
+3:47:2706:28:29:108:535:666:144:g_d0_f4:144:g_d0_f4:A: Education is one of the most important avenues through which governments can address 
+3:48:2791:29:28:72:541:637:144:g_d0_f4:144:g_d0_f4:B:concerns of economic growth and equity.  Human capital plays a substantial role in the economic 
+3:49:2887:28:28:72:525:609:144:g_d0_f4:144:g_d0_f4:B:growth of nations (Topel 1999) and, in the past two decades, skill biased technical change has 
+3:50:2982:28:29:72:514:581:144:g_d0_f4:144:g_d0_f4:B:increased the returns to schooling, exacerbating wage inequality between the most and least 
+3:51:3074:29:28:72:530:552:144:g_d0_f4:144:g_d0_f4:B:educated members of our society (Katz and Murphy 1992).  At the same time, cognitive ability 
+3:52:3167:28:28:72:504:524:144:g_d0_f4:144:g_d0_f4:B:has become an increasingly important determinant of labor market success in this country 
+3:53:3256:28:28:72:188:496:144:g_d0_f4:144:g_d0_f4:B:(Murnane et al. 1995).   
+3:54:3281:28:29:108:500:468:144:g_d0_f4:144:g_d0_f4:A: Aware of the importance of education, economists have spent considerable effort 
+3:55:3361:29:28:72:491:439:144:g_d0_f4:144:g_d0_f4:B:examining what factors affect academic achievement.  There is a large literature on the 
+3:56:3449:28:28:72:531:411:144:g_d0_f4:144:g_d0_f4:B:importance of financial resources in determining educational outcomes.1  However, researchers 
+3:57:3543:28:29:72:538:383:144:g_d0_f4:144:g_d0_f4:B:have paid considerably less attention to remedial programs designed to improve the performance 
+3:58:3638:29:28:72:521:354:144:g_d0_f4:144:g_d0_f4:B:of low achieving students, including summer school and grade retention (Eide and Showalter 
+3:59:3729:28:28:72:140:326:144:g_d0_f7:144:g_d0_f4:B:forthcoming). 
+3:60:3743:28:29:108:539:298:144:g_d0_f4:144:g_d0_f4:A:Such policies, however, have become increasingly popular in recent years.  Sixteen states 
+3:61:3833:29:28:72:532:269:144:g_d0_f4:144:g_d0_f4:B:provide funding for districts that institute summer programs, require summer school attendance 
+3:62:3928:28:28:72:531:241:144:g_d0_f4:144:g_d0_f4:B:for students who do not meet academic expectations or require districts to offer summer school 
+3:63:4023:28:29:72:542:213:144:g_d0_f4:144:g_d0_f4:B:to low achieving students (ECS 2000).  In the summer of 1999, New York City provided summer 
+3:64:4115:29:28:72:516:184:144:g_d0_f4:144:g_d0_f4:B:help for 70,000 students and Chicago required over 30,000 low-achieving students to attend 
+3:65:4206:28:28:72:511:156:144:g_d0_f4:144:g_d0_f4:B:summer classes.  Other urban districts with summer programs include Houston, with 8,000 
+3:66:4294:28:0:72:530:128:144:g_d0_f4:144:g_d0_f4:B:students enrolled; Boston, with 6,500; Denver, with 6,000; Los Angeles, with 139,000; and the 
+4:67:4388:0:28:72:541:708:144:g_d0_f4:144:g_d0_f4:B:District of Columbia, with 30,000 (Pipho 1999).  There is a growing interest in grade retention as 
+4:68:4487:28:28:72:505:680:144:g_d0_f4:144:g_d0_f4:B:well.  Nineteen states explicitly tie student promotion to performance on a state or district 
+4:69:4581:28:29:72:526:652:144:g_d0_f4:144:g_d0_f4:B:assessment (ECS 2000).  The largest school districts in the country, including New York City, 
+4:70:4675:29:28:72:510:623:144:g_d0_f4:144:g_d0_f4:B:Los Angeles, Chicago and Washington D.C., have recently implemented policies requiring 
+4:71:4762:28:28:72:505:595:144:g_d0_f4:144:g_d0_f4:B:students to repeat a grade when they do not demonstrate sufficient mastery of basic skills. 
+4:72:4854:28:29:108:488:567:144:g_d0_f4:144:g_d0_f4:A:Despite their popularity, these practices—particularly grade retention—remain 
+4:73:4932:29:28:72:521:538:144:g_d0_f4:144:g_d0_f4:B:controversial.  Prior research suggests that summer school has a substantial positive effect on 
+4:74:5028:28:28:72:500:510:144:g_d0_f4:144:g_d0_f4:B:student learning in the short-run, but there is less evidence regarding the sustainability of 
+4:75:5122:28:29:72:527:482:144:g_d0_f4:144:g_d0_f4:B:achievement gains made during the summer.  In contrast, the majority of retention studies find 
+4:76:5217:29:28:72:538:453:144:g_d0_f4:144:g_d0_f4:B:that the practice of requiring students to repeat a grade decreases self-esteem, school adjustment, 
+4:77:5317:28:28:72:530:425:144:g_d0_f4:144:g_d0_f4:B:and academic achievement, and increases dropout rates.  However, prior studies fail to account 
+4:78:5412:28:29:72:513:397:144:g_d0_f4:144:g_d0_f4:B:for the selection of students into these programs, thus potentially overstating the benefits of 
+4:79:5508:29:28:72:339:368:144:g_d0_f4:144:g_d0_f5:B:summer school and exaggerating the harm of retention. 
+4:80:5561:28:28:108:519:340:144:g_d0_f4:144:g_d0_f4:A:In this paper, we use a regression discontinuity design to examine the causal effect of 
+4:81:5649:28:29:72:502:312:144:g_d0_f4:144:g_d0_f4:B:summer school and grade retention on student achievement.  In 1996, the Chicago Public 
+4:82:5736:29:28:72:503:283:144:g_d0_f4:144:g_d0_f4:B:Schools (CPS) instituted an accountability policy that tied summer school attendance and 
+4:83:5825:28:28:72:542:255:144:g_d0_f4:144:g_d0_f4:B:promotional decisions to performance on standardized tests, which resulted in a highly non-linear 
+4:84:5923:28:28:72:517:227:144:g_d0_f4:144:g_d0_f4:B:relationship between current achievement and the probability of attending summer school or 
+4:85:6014:28:29:72:525:199:144:g_d0_f4:144:g_d0_f4:B:being retained.2  We use the exogenous variation generated by the decision rule to identify the 
+4:86:6110:29:37:72:244:170:144:g_d0_f4:144:g_d0_f4:B:impact of these remedial programs. 
+4:87:6145:37:7:539:542:133:122:g_d0_f8:122:g_d0_f8:?:                                                                                                                                                                           
+4:88:6315:7:17:72:514:126:42:g_d0_f9:99:g_d0_f10:F:1 Hanushek (1996) and Hedges and Greenwald (1996) present contrasting views regarding the effectiveness of 
+4:89:6422:17:12:72:506:109:99:g_d0_f10:99:g_d0_f10:F:resources on student achievement.  Many researchers have also focused on the effect of class size on student 
+4:90:6531:12:7:72:494:97:99:g_d0_f10:99:g_d0_f10:F:outcomes.  These studies include works by Angrist and Lavy (1999), Krueger (1999), and Hoxby (2000). 
+4:91:6632:7:16:72:536:90:42:g_d0_f9:99:g_d0_f10:F:2 In prior work, we have examined the potential motivational effects of these requirements and found that the policy 
+4:92:6749:16:0:72:530:74:99:g_d0_f10:99:g_d0_f10:F:increased achievement, particularly among older students (Jacob 2001; Roderick et. al. 2000).  In this analysis, we 
+5:93:6865:0:28:108:542:708:144:g_d0_f4:144:g_d0_f4:A:We find that summer school increased academic achievement in reading and mathematics 
+5:94:6950:28:28:72:530:680:144:g_d0_f4:144:g_d0_f4:B:and that these positive effects remain substantial at least two years following the completion of 
+5:95:7048:28:29:72:538:652:144:g_d0_f4:144:g_d0_f4:B:the program.  In contrast to prior studies, we find that retention has no negative consequences on 
+5:96:7147:29:28:72:543:623:144:g_d0_f4:144:g_d0_f4:B:the academic achievement of students retained in the third grade—indeed it appears that retention 
+5:97:7245:28:28:72:535:595:144:g_d0_f4:144:g_d0_f4:B:may actually increase performance in the short run.  The impact of retention on older students is 
+5:98:7343:28:29:72:394:567:144:g_d0_f4:144:g_d0_f4:B:mixed, with no impact on math and a negative effect on reading.3   
+5:99:7410:29:28:108:513:538:144:g_d0_f4:144:g_d0_f4:A:The remainder of this paper is organized as follows.  Section 2 reviews the previous 
+5:100:7495:28:28:72:538:510:144:g_d0_f4:144:g_d0_f4:B:literature on summer school and grade retention.  Section 3 provides background on the Chicago 
+5:101:7590:28:29:72:521:482:144:g_d0_f4:144:g_d0_f4:B:policy.  Section 4 describes our data and Section 5 explains our empirical strategy.  Section 6 
+5:102:7686:29:28:72:530:453:144:g_d0_f4:144:g_d0_f4:B:presents findings on the net effect of summer school and retention.  Section 7 presents findings 
+5:103:7783:28:28:72:531:425:144:g_d0_f4:144:g_d0_f4:B:on the separate effect of grade retention.  Section 8 examines the independent effect of summer 
+5:104:7879:28:29:72:358:397:144:g_d0_f4:144:g_d0_f4:B:school.  Section 9 discusses these findings and concludes.   
+5:105:7940:29:28:108:111:368:144:g_d0_f4:144:g_d0_f4:A: 
+5:106:7940:28:28:72:404:340:144:g_d0_f5:144:g_d0_f5:C:2.  Previous Literature on Summer School and Grade Retention  
+5:107:8002:28:29:108:536:312:144:g_d0_f4:144:g_d0_f4:A:Both summer school and grade retention have a long history within American education, 
+5:108:8088:29:28:72:535:283:144:g_d0_f4:144:g_d0_f4:B:dating back to the introduction of mass public education in the mid-nineteenth century (Shepard 
+5:109:8184:28:28:72:538:255:144:g_d0_f4:144:g_d0_f4:B:and Smith 1989).  Both practices have been widely implemented and have received considerable 
+5:110:8277:28:28:72:540:227:144:g_d0_f4:144:g_d0_f4:B:attention from researchers.  However, prior studies do not adequately address the potential biases 
+5:111:8376:28:29:72:432:199:144:g_d0_f4:144:g_d0_f4:B:introduced by the non-random selection into summer school and retention. 
+5:112:8449:29:28:108:536:170:144:g_d0_f4:144:g_d0_f4:A:In a detailed synthesis of 93 summer school evaluations, Cooper et. al. (2000) concluded 
+5:113:8538:28:27:72:514:142:144:g_d0_f4:144:g_d0_f4:B:that remedial summer programs increased achievement by roughly .25 standard deviations.  
+5:114:8627:27:13:539:542:115:122:g_d0_f8:122:g_d0_f8:?:                                                                                                                                                                           
+5:115:8797:13:12:72:538:102:99:g_d0_f10:99:g_d0_f10:F:set aside the incentives associated with the policy and instead focus on the direct academic consequences of summer 
+5:116:8913:12:0:72:434:90:99:g_d0_f10:99:g_d0_f10:F:school and grade retention for those students who fail to meet the promotional standards.   
+6:117:9005:0:28:72:522:708:144:g_d0_f4:144:g_d0_f4:B:However, even the most careful of these studies relied on comparisons between students who 
+6:118:9096:28:28:72:504:680:144:g_d0_f4:144:g_d0_f4:B:chose to attend summer school with those who chose not to attend.  If the most motivated 
+6:119:9185:28:29:72:530:652:144:g_d0_f4:144:g_d0_f4:B:students (or those with the most motivated, supportive parents) attend summer school, then the 
+6:120:9280:29:28:72:527:623:144:g_d0_f4:144:g_d0_f4:B:estimated summer school treatment effect will be biased upward.  In addition, these studies do 
+6:121:9375:28:28:72:415:595:144:g_d0_f4:144:g_d0_f4:B:not examine whether these benefits are sustained in subsequent years.   
+6:122:9447:28:29:108:529:567:144:g_d0_f4:144:g_d0_f4:A:While less consistent than the summer school literature, studies of grade retention have 
+6:123:9536:29:28:72:542:538:144:g_d0_f4:144:g_d0_f4:B:generally found that repeating a grade has a negative impact on student outcomes.4  In a survey of 
+6:124:9635:28:28:72:542:510:144:g_d0_f4:144:g_d0_f4:B:47 empirical studies with a variety of academic achievement measures, Holmes (1989) found that 
+6:125:9730:28:29:72:542:482:144:g_d0_f4:144:g_d0_f4:B:retained students scored 0.19 to 0.31 standard deviations below comparable students who had not 
+6:126:9826:29:28:72:517:453:144:g_d0_f4:144:g_d0_f4:B:been retained.  Moreover, a variety of studies have found that retention is associated with an 
+6:127:9921:28:28:72:529:425:144:g_d0_f4:144:g_d0_f4:B:increased likelihood of dropping out (Schulz, Toles et al. 1986; Rumberger 1987; Grissom and 
+6:128:10014:28:29:72:505:397:144:g_d0_f4:144:g_d0_f4:B:Shepard 1989; Fine 1991; Roderick 1994).  However, selection issues cast doubt on these 
+6:129:10102:29:28:72:541:368:144:g_d0_f4:144:g_d0_f4:B:findings as well.  In contrast to summer school, students are not generally given a choice whether 
+6:130:10201:28:28:72:532:340:144:g_d0_f4:144:g_d0_f4:B:to repeat a grade, but rather this decision is made by the teacher or school principal on the basis 
+6:131:10301:28:29:72:517:312:144:g_d0_f4:144:g_d0_f4:B:of unobservable characteristics (e.g., motivation, maturity, parental involvement, etc.).  This 
+6:132:10397:29:49:72:424:283:144:g_d0_f4:144:g_d0_f4:B:suggests that OLS estimates of grade retention will be biased downward. 
+6:133:10469:49:28:72:348:234:144:g_d0_f5:144:g_d0_f5:C:3.  Background on Chicago’s Social Promotion Policy 
+6:134:10521:28:29:108:520:206:144:g_d0_f4:144:g_d0_f4:A:An accountability policy recently implemented in Chicago provides an opportunity to 
+6:135:10605:29:28:72:531:177:144:g_d0_f4:144:g_d0_f4:B:more carefully examine the impacts of these programs.  In 1996-97, Chicago instituted a policy 
+6:136:10700:28:27:72:523:149:144:g_d0_f4:144:g_d0_f4:B:to end social promotion – the practice of passing students to the next grade regardless of their 
+6:137:10797:27:8:539:542:122:122:g_d0_f8:122:g_d0_f8:?:                                                                                                                                                                           
+6:138:10967:8:17:72:501:114:42:g_d0_f9:99:g_d0_f10:F:3 However, as we discuss below, the negative effects for sixth grade students may be due to differential test 
+6:139:11077:17:7:72:281:97:99:g_d0_f10:99:g_d0_f10:F:incentives faced by retained and promoted students. 
+6:140:11129:7:16:72:542:90:42:g_d0_f9:99:g_d0_f10:F:4 Several recent studies have found moderate, positive effects of retention  (Karweit 1991; Pierson and Connell 1992; 
+6:141:11247:16:0:72:463:74:99:g_d0_f10:99:g_d0_f10:F:Alexander, Entwisle et al. 1994; Eide and Showalter forthcoming; Dworkin, Lorence et al. 1999). 
+7:142:11343:0:28:72:514:708:144:g_d0_f4:144:g_d0_f4:B:academic skills or school performance.  Under the policy, students in third, sixth and eighth 
+7:143:11437:28:28:72:539:680:144:g_d0_f4:144:g_d0_f4:B:grade are required to perform at predefined levels in both reading and mathematics in order to be 
+7:144:11535:28:29:72:517:652:144:g_d0_f4:144:g_d0_f4:B:promoted to the next grade.  For example, third graders must obtain a minimum score of 2.8 
+7:145:11626:29:28:72:538:623:144:g_d0_f4:144:g_d0_f4:B:grade equivalents in both reading and math achievement on the Iowa Test of Basic Skills (ITBS) 
+7:146:11721:28:28:72:540:595:144:g_d0_f4:144:g_d0_f4:B:in order to advance.5  In 1997, the promotion standards for third, sixth and eighth grade were 2.8, 
+7:147:11821:28:29:72:507:567:144:g_d0_f4:144:g_d0_f4:B:5.3, and 7.0 respectively, which roughly corresponded to the 20th percentile in the national 
+7:148:11914:29:28:72:535:538:144:g_d0_f4:144:g_d0_f4:B:achievement distribution.6  Students who do not meet the standard in June are required to attend 
+7:149:12011:28:28:72:536:510:144:g_d0_f4:144:g_d0_f4:B:a six-week summer school program, after which they can retake the exams.  Those who pass the 
+7:150:12104:28:29:72:515:482:144:g_d0_f4:144:g_d0_f4:B:August exams move on to the next grade.  Students who again fail are required to repeat the 
+7:151:12196:29:28:72:531:453:144:g_d0_f4:144:g_d0_f4:B:grade.7  Figure 1 provides a flowchart illustrating the treatments children receive based on their 
+7:152:12295:28:28:72:503:425:144:g_d0_f4:144:g_d0_f4:B:June and August test performance.  The policy impacted a large proportion of elementary 
+7:153:12383:28:29:72:539:397:144:g_d0_f4:144:g_d0_f4:B:students.  From 1997 to 1999, over 30,000 third graders and over 21,000 sixth graders attended a 
+7:154:12480:29:28:72:524:368:144:g_d0_f4:144:g_d0_f4:B:mandatory summer school program and roughly 10 to 20 percent of the eligible students were 
+7:155:12571:28:28:72:177:340:144:g_d0_f4:144:g_d0_f4:B:eventually held back. 
+7:156:12593:28:29:108:540:312:144:g_d0_f4:144:g_d0_f4:A:There are several reasons to believe that the summer school and grade retention programs 
+7:157:12682:29:28:72:524:283:144:g_d0_f4:144:g_d0_f4:B:in Chicago might influence academic achievement.  Classes in summer school were generally 
+7:158:12772:28:28:72:517:255:144:g_d0_f4:144:g_d0_f4:B:quite small, often with fewer than 15 students per class.  Principals hand-picked teachers for 
+7:159:12867:28:28:72:500:227:144:g_d0_f4:144:g_d0_f4:B:summer school and the CPS provided a highly structured curriculum (including resource 
+7:160:12953:28:66:72:518:199:144:g_d0_f4:144:g_d0_f4:B:materials) that teachers were required to follow.  Retention was intended to provide students 
+7:161:13047:66:7:216:219:133:122:g_d0_f8:122:g_d0_f8:?:                                                      
+7:162:13100:7:17:72:535:126:42:g_d0_f9:99:g_d0_f10:F:5 Grade equivalents are normed so that a student at the 50th percentile in the nation scores at the eighth month of her 
+7:163:13220:17:7:72:313:109:99:g_d0_f10:99:g_d0_f10:F:current grade – i.e., an average third grader will score a 3.8. 
+7:164:13284:7:16:72:535:102:42:g_d0_f9:99:g_d0_f10:F:6 The CPS has raised the promotional cutoffs several times since 1997.  The eighth grade cutoff was raised to 7.2 in 
+7:165:13401:16:7:72:426:86:99:g_d0_f10:99:g_d0_f10:F:1998, 7.4 in 1999 and 7.7 in 2000.  The sixth grade cutoff was raised to 5.5 in 2000.       
+7:166:13493:7:0:72:453:79:42:g_d0_f9:99:g_d0_f10:F:7 Students over the age of fifteen who were retained were placed in special “transition” centers. 
+8:167:13591:0:28:72:529:708:144:g_d0_f4:144:g_d0_f4:B:additional time to master the skills at their current grade level.  The CPS also provided schools 
+8:168:13689:28:29:72:388:680:144:g_d0_f4:144:g_d0_f4:B:with additional resources to meet the needs of retained students.   
+8:169:13757:29:28:72:75:651:144:g_d0_f5:144:g_d0_f5:C: 
+8:170:13757:28:28:72:115:623:144:g_d0_f5:144:g_d0_f5:C:4.  Data 
+8:171:13766:28:28:108:535:595:144:g_d0_f4:144:g_d0_f4:A:This study utilizes administrative data from the Chicago Public School system.   Student 
+8:172:13855:28:29:72:513:567:144:g_d0_f4:144:g_d0_f4:B:records provide individual level information on test scores and student demographics (race, 
+8:173:13947:29:28:72:514:538:144:g_d0_f4:144:g_d0_f4:B:gender, age, guardian, and free lunch eligibility), bilingual and special education status, and 
+8:174:14043:28:28:72:506:510:144:g_d0_f4:144:g_d0_f4:B:residential and school mobility.  Unique student identification numbers allow us to follow 
+8:175:14134:28:29:72:507:482:144:g_d0_f4:144:g_d0_f4:B:individual students throughout their tenure in the public school system.   School level data 
+8:176:14227:29:28:72:537:453:144:g_d0_f4:144:g_d0_f4:B:provides demographic and school resource information, including the racial and socio-economic 
+8:177:14321:28:28:72:510:425:144:g_d0_f4:144:g_d0_f4:B:composition at the school.  The outcome measure we use is student scores on the math and 
+8:178:14410:28:29:72:525:397:144:g_d0_f4:144:g_d0_f4:B:reading sections of the Iowa Test of Basic Skills (ITBS), a standardized multiple-choice exam 
+8:179:14504:29:28:72:361:368:144:g_d0_f4:144:g_d0_f4:B:administered annually to students in grades three to eight.8   
+8:180:14567:28:28:108:523:340:144:g_d0_f4:144:g_d0_f4:A:The base sample for this study consists of the cohort of students who were in the third 
+8:181:14655:28:34:72:542:312:144:g_d0_f4:144:g_d0_f4:B:and sixth grade from the 1993-1994 school year to the 1998-1999 school years, a total of 402,924 
+8:182:14752:34:8:216:219:278:122:g_d0_f8:122:g_d0_f8:?:                                                      
+8:183:14805:8:16:72:521:270:42:g_d0_f9:99:g_d0_f10:F:8 ITBS scores are typically reported in terms of grade equivalents, which are normed so that a student at the 50th 
+8:184:14919:16:12:72:542:254:99:g_d0_f10:99:g_d0_f10:F:percentile in the nation scores at the eighth month of her current grade – i.e., an average third grader will score a 3.8.  
+8:185:15043:12:12:72:522:242:99:g_d0_f10:99:g_d0_f10:F:Grade equivalents, however, present a number of well-know shortcomings for comparisons over time and across 
+8:186:15151:12:12:72:541:230:99:g_d0_f10:99:g_d0_f10:F:grade: (1) different forms of the exam are administered each year and can vary in difficulty; (2) grade equivalents are 
+8:187:15271:12:11:72:534:218:99:g_d0_f10:99:g_d0_f10:F:not a linear metric, so that a score of 5.3 on level 12 of the exam does not represent the same thing as a score of 5.3 
+8:188:15391:11:12:72:542:207:99:g_d0_f10:99:g_d0_f10:F:at level 13; (3) grade equivalents are not linear within test level because the scale spreads out more at the extremes of 
+8:189:15513:12:12:72:527:195:99:g_d0_f10:99:g_d0_f10:F:the score distribution.  To mitigate some of these concerns, we use an alternative outcome metric derived from an 
+8:190:15627:12:12:72:508:183:99:g_d0_f10:99:g_d0_f10:F:item-response model.  This model assume that the probability that student i answers questions j correctly is a 
+8:191:15738:12:12:72:527:171:99:g_d0_f10:99:g_d0_f10:F:function of the student ability and the item difficulty.  In practice, one estimates a simple logit model in which the 
+8:192:15857:12:14:72:532:159:99:g_d0_f10:99:g_d0_f10:F:outcome is whether or not student i correctly answers question j.  The explanatory variables include an indicator 
+8:193:15971:14:12:72:503:145:99:g_d0_f10:99:g_d0_f10:F:variable for each question and each student.  The difficulty of the question is given by the coefficient on the 
+8:194:16083:12:12:72:541:133:99:g_d0_f10:99:g_d0_f10:F:appropriate indicator variable and the student ability is measured by the coefficient on the student indicator variable.  
+8:195:16205:12:12:72:542:121:99:g_d0_f10:99:g_d0_f10:F:The resulting metric is calibrated in terms of logits.  By taking advantage of the common items across different forms 
+8:196:16324:12:12:72:520:109:99:g_d0_f10:99:g_d0_f10:F:and levels of the exam, these measures provide an effective way to compare students in different grade levels or 
+8:197:16437:12:11:72:540:97:99:g_d0_f10:99:g_d0_f10:F:taking different forms of the exam (Wright and Stone 1979).  We thank the Consortium on Chicago School Research 
+8:198:16549:11:12:72:293:86:99:g_d0_f10:99:g_d0_f10:F:for providing the Rasch measures used in this analysis. 
+8:199:16605:12:0:72:75:74:99:g_d0_f10:99:g_d0_f10:F: 
+9:200:16605:0:28:72:538:708:144:g_d0_f4:144:g_d0_f4:B:observations.9  We delete approximately 14 percent of cases that were missing demographic data 
+9:201:16700:28:28:72:538:680:144:g_d0_f4:144:g_d0_f4:B:or third (or sixth) grade test scores, leaving a sample of 346,909 students.  Additionally, we drop 
+9:202:16800:28:29:72:510:652:144:g_d0_f4:144:g_d0_f4:B:45,534 individuals who were not subject to the promotion policy because they were part of 
+9:203:16890:29:28:72:526:623:144:g_d0_f4:144:g_d0_f4:B:bilingual or special education programs.  Finally we exclude an additional 8,080 students who 
+9:204:16984:28:28:72:514:595:144:g_d0_f4:144:g_d0_f4:B:left the system or were placed in self-contained special education classes the following year 
+9:205:17078:28:29:72:533:567:144:g_d0_f4:144:g_d0_f4:B:because these students cannot be categorized as promoted or retained and generally do not have 
+9:206:17173:29:28:72:165:538:144:g_d0_f4:144:g_d0_f4:B:future test scores.   
+9:207:17195:28:28:108:528:510:144:g_d0_f4:144:g_d0_f4:A: Table 1 presents summary statistics for the group of 147,894 students who experienced 
+9:208:17281:28:29:72:465:482:144:g_d0_f4:144:g_d0_f4:B:the accountability policy from 1997 to 1999.   Chicago public school students are 
+9:209:17363:29:28:72:515:453:144:g_d0_f4:144:g_d0_f4:B:disproportionately minority and extremely low achieving compared with a national sample.  
+9:210:17453:28:28:72:543:425:144:g_d0_f4:144:g_d0_f4:B:Roughly 85 percent of Chicago students are black or Hispanic and the same fraction received free 
+9:211:17550:28:29:72:523:397:144:g_d0_f4:144:g_d0_f4:B:or reduced price lunches.  Students who are retained are even more likely to be from minority 
+9:212:17644:29:28:72:273:368:144:g_d0_f4:144:g_d0_f4:B:backgrounds and low-income families.     
+9:213:17685:28:28:108:502:340:144:g_d0_f4:144:g_d0_f4:A: Given the low achievement levels in the CPS, the promotional policy applied to a 
+9:214:17766:28:29:72:485:312:144:g_d0_f4:144:g_d0_f4:B:substantial proportion of students.  Over 40 percent of third graders failed to meet the 
+9:215:17855:29:28:72:533:283:144:g_d0_f4:144:g_d0_f4:B:promotional standards from 1997 to 1999 as did about 30 percent of sixth graders.  The reading 
+9:216:17950:28:28:72:524:255:144:g_d0_f4:144:g_d0_f4:B:exam proved to be a more difficult hurdle than the math exam, with nearly all students failing 
+9:217:18045:28:28:72:510:227:144:g_d0_f4:144:g_d0_f4:B:reading alone or both reading and math.  Even after five to ten percent of students received 
+9:218:18138:28:29:72:526:199:144:g_d0_f4:144:g_d0_f4:B:waivers from the policy, 21 percent of third graders and 13 percent of sixth and eighth graders 
+9:219:18234:29:28:72:229:170:144:g_d0_f4:144:g_d0_f4:B:were required to repeat a grade.  
+9:220:18268:28:56:72:75:142:144:g_d0_f4:144:g_d0_f4:B: 
+9:221:18268:56:7:216:219:86:122:g_d0_f8:122:g_d0_f8:?:                                                      
+9:222:18321:7:0:72:501:79:42:g_d0_f9:99:g_d0_f10:F:9 Note that we include pre-policy cohorts in our sample.  We will discuss later the reason for this inclusion. 
+10:223:18432:0:28:72:187:708:144:g_d0_f5:144:g_d0_f5:C:5.  Empirical Strategy 
+10:224:18455:28:28:72:161:680:144:g_d0_f7:144:g_d0_f7:C:5.1. Identification 
+10:225:18475:28:29:108:509:652:144:g_d0_f4:144:g_d0_f4:A:In order to determine the impact of a remedial education program (or treatment) on 
+10:226:18558:29:29:72:433:623:144:g_d0_f4:144:g_d0_f4:B:student achievement, we would like to estimate the following relationship: 
+10:227:18633:29:31:72:324:594:122:g_d0_f8:122:g_d0_f8:F:(1)          ()1,,,1,+++++Β=tiitititiuTreatXYεβ, 
+10:228:18682:31:29:72:538:563:144:g_d0_f4:144:g_d0_f4:B:where Y is the outcome, X is a vector of demographic and past performance variables, and Treat 
+10:229:18776:29:28:72:532:534:144:g_d0_f4:144:g_d0_f4:B:is a binary variable that takes on a value of one if a student receives some type of treatment and 
+10:230:18875:28:29:72:526:506:144:g_d0_f4:144:g_d0_f4:B:zero otherwise, u represents unobserved (to the researcher) student ability, ε is an error term, 
+10:231:18972:29:28:72:539:477:144:g_d0_f4:144:g_d0_f4:B:and t and i are time and individual subscripts respectively.  The primary concern is that because 
+10:232:19070:28:30:72:535:449:144:g_d0_f4:144:g_d0_f4:B:of selection on the part of students, teachers and parents, 0),cov(≠uTreat which will bias OLS 
+10:233:19165:30:29:72:232:419:144:g_d0_f4:144:g_d0_f4:B:estimates of the treatment effect. 
+10:234:19200:29:28:108:508:390:144:g_d0_f4:144:g_d0_f4:A:However, by tying promotional decisions to performance on standardized tests, the 
+10:235:19282:28:28:72:536:362:144:g_d0_f4:144:g_d0_f4:B:Chicago policy created a highly non-linear relationship between a student’s current achievement 
+10:236:19378:28:29:72:535:334:144:g_d0_f4:144:g_d0_f4:B:and his or her probability of attending summer school or being retained.  Figure 2 illustrates this 
+10:237:19478:29:28:72:534:305:144:g_d0_f4:144:g_d0_f4:B:relationship for third and sixth graders from 1997 to 1999.  Roughly 90 percent of students who 
+10:238:19574:28:28:72:534:277:144:g_d0_f4:144:g_d0_f4:B:passed math but scored just below the cutoff in reading received some remedial treatment while 
+10:239:19669:28:29:72:524:249:144:g_d0_f4:144:g_d0_f4:B:almost no one who passed math and scored at or above the cutoff in reading attended summer 
+10:240:19760:29:28:72:191:220:144:g_d0_f4:144:g_d0_f4:B:school or was retained.   
+10:241:19786:28:28:108:509:192:144:g_d0_f4:144:g_d0_f4:A:Assuming that unobservable characteristics do not vary discontinuously around the 
+10:242:19868:28:29:72:522:164:144:g_d0_f4:144:g_d0_f4:B:cutoff, the promotional decision rule provides exogenous variation in the treatment.  Because 
+10:243:19962:29:28:72:515:135:144:g_d0_f4:144:g_d0_f4:B:treatment is perfectly correlated to observable characteristics, it is orthogonal to unobserved 
+10:244:20058:28:28:72:501:107:144:g_d0_f4:144:g_d0_f4:B:characteristics.  One can thus identify the impact of these programs by simply comparing 
+10:245:20147:28:0:72:533:79:144:g_d0_f4:144:g_d0_f4:B:students who scored just below and just above the promotional cutoff.  For example, if students 
+11:246:20243:0:28:72:541:708:144:g_d0_f4:144:g_d0_f4:B:who missed the cutoff (and were thus required to attend summer school) learned much more than 
+11:247:20337:28:28:72:529:680:144:g_d0_f4:144:g_d0_f4:B:students who just made the cutoff (and thus avoided summer school), then one might conclude 
+11:248:20429:28:29:72:399:652:144:g_d0_f4:144:g_d0_f4:B:that summer school had a positive impact on student achievement.   
+11:249:20496:29:28:108:529:623:144:g_d0_f4:144:g_d0_f4:A:This strategy is often referred to as a regression discontinuity design.  In one of the first 
+11:250:20590:28:28:72:500:595:144:g_d0_f4:144:g_d0_f4:B:papers to introduce this design, Thistlethwaite and Campbell (1960) utilized the fact that 
+11:251:20681:28:29:72:513:567:144:g_d0_f4:144:g_d0_f4:B:National Merit Awards are given on the basis of whether a test score exceeds a threshold to 
+11:252:20773:29:28:72:535:538:144:g_d0_f4:144:g_d0_f4:B:estimate the effect of the award on a student’s other scholarship receipt and college aspirations.  
+11:253:20873:28:28:72:535:510:144:g_d0_f4:144:g_d0_f4:B:Others that have utilized this technique include Berk and Rauma (1983), Trochim (1984), Black 
+11:254:20967:28:29:72:428:482:144:g_d0_f4:144:g_d0_f4:B:(1999), Angrist and Lavy (1999), Hahn et. al. (1999), and Guryon (2000). 
+11:255:21040:29:28:108:490:453:144:g_d0_f4:144:g_d0_f4:A:The fundamental assumption behind regression discontinuity techniques is that 
+11:256:21118:28:28:72:539:425:144:g_d0_f4:144:g_d0_f4:B:unobserved characteristics vary continuously (around the point of the cutoff) with the observable 
+11:257:21216:28:29:72:516:397:144:g_d0_f4:144:g_d0_f4:B:characteristic used to determine treatment.  This assumption may not hold if individuals can 
+11:258:21309:29:28:72:529:368:144:g_d0_f4:144:g_d0_f4:B:influence their position relative to the cutoff.  However, we believe that this type of intentional 
+11:259:21409:28:28:72:534:340:144:g_d0_f4:144:g_d0_f4:B:manipulation is implausible in our case.  While a student may purposely miss many or all of the 
+11:260:21505:28:29:72:519:312:144:g_d0_f4:144:g_d0_f4:B:exam questions, it is unlikely that he or she would have the incentive or ability to marginally 
+11:261:21601:29:28:72:534:283:144:g_d0_f4:144:g_d0_f4:B:change her score near the cutoff (e.g., intentionally scoring a 2.7 instead of a 2.8) because of the 
+11:262:21702:28:28:72:386:255:144:g_d0_f4:144:g_d0_f4:B:uncertainty regarding both performance and the grading metric.10 
+11:263:21766:28:28:108:508:227:144:g_d0_f4:144:g_d0_f4:A:In the case of a sharp discontinuity, where performance exceeding a predetermined 
+11:264:21848:28:29:72:523:199:144:g_d0_f4:144:g_d0_f4:B:threshold perfectly predicts treatment, continuity of unobserved characteristics is sufficient to 
+11:265:21946:29:27:72:510:170:144:g_d0_f4:144:g_d0_f4:B:allow identification.  In some cases, however, treatment may be partly determined by other 
+11:266:22037:27:8:216:219:143:122:g_d0_f8:122:g_d0_f8:?:                                                      
+11:267:22090:8:16:72:523:135:42:g_d0_f24:99:g_d0_f25:F:10 Teacher cheating is a more plausible candidate for such intentional manipulation.  There is some evidence that 
+11:268:22204:16:12:72:507:119:99:g_d0_f25:99:g_d0_f25:F:cheating has increased as a result of the accountability policies instituted in 1996 and is more common in the 
+11:269:22315:12:12:72:536:107:99:g_d0_f25:99:g_d0_f25:F:promotional gate grades (Jacob and Levitt 2001).  As a check on this, we estimated kernel densities of the test score 
+11:270:22433:12:0:72:521:95:99:g_d0_f25:99:g_d0_f25:F:distribution pre- and post-policy.  If students could (and chose to) strategically influence their scores or teachers 
+12:271:22551:0:28:72:513:708:144:g_d0_f4:144:g_d0_f4:B:factors, leading to a “fuzzy” discontinuity.  For example, roughly 3 percent of students who 
+12:272:22644:28:28:72:532:680:144:g_d0_f4:144:g_d0_f4:B:scored below the cutoffs in June received waivers from summer school and about 14 percent of 
+12:273:22737:28:29:72:505:652:144:g_d0_f4:144:g_d0_f4:B:students in summer school received waivers in August.  In addition, a small percentage of 
+12:274:22827:29:28:72:523:623:144:g_d0_f4:144:g_d0_f4:B:students who passed the exams were retained because of course failure or poor attendance.  If 
+12:275:22921:28:28:72:529:595:144:g_d0_f4:144:g_d0_f4:B:waivers were distributed randomly, or on the basis of factors that are not correlated with future 
+12:276:23019:28:29:72:514:567:144:g_d0_f4:144:g_d0_f4:B:outcomes, then this would not present a problem.  However, students who received waivers 
+12:277:23108:29:28:72:505:538:144:g_d0_f4:144:g_d0_f4:B:differ from their peers over several observable characteristics, raising a concern that these 
+12:278:23202:28:28:72:349:510:144:g_d0_f4:144:g_d0_f4:B:students differed along unobservable dimensions as well. 
+12:279:23259:28:29:108:537:482:144:g_d0_f4:144:g_d0_f4:A:Even with waivers, as long as the probability of treatment changes discontinuously at the 
+12:280:23349:29:28:72:489:453:144:g_d0_f4:144:g_d0_f4:B:cutoff, it is possible to determine the treatment effect by comparing mean outcomes of 
+12:281:23436:28:28:72:497:425:144:g_d0_f4:144:g_d0_f4:B:individuals in a narrow range on either side of the cutoff.  One merely needs to scale the 
+12:282:23527:28:29:72:499:397:144:g_d0_f4:144:g_d0_f4:B:difference in outcomes by the difference in the probability of treatment.  If, however, the 
+12:283:23619:29:28:72:530:368:144:g_d0_f4:144:g_d0_f4:B:probability of treatment drops over a range around the cutoff, it may not be possible to identify 
+12:284:23717:28:28:72:529:340:144:g_d0_f4:144:g_d0_f4:B:the treatment effect by simply comparing individuals to the left and the right of the cutoff.  We 
+12:285:23815:28:29:72:515:312:144:g_d0_f4:144:g_d0_f4:B:can, however, use a broader range of data to identify the effect.  In essence, we can examine 
+12:286:23909:29:28:72:542:283:144:g_d0_f4:144:g_d0_f4:B:whether performance drops (rises) in the range of performance where the probability of treatment 
+12:287:24006:28:28:72:533:255:144:g_d0_f4:144:g_d0_f4:B:is rapidly changing.  To do so, we need to use data outside of this range to estimate the baseline 
+12:288:24105:28:28:72:530:227:144:g_d0_f4:144:g_d0_f4:B:relationship between initial performance and subsequent outcomes.  In this case, we can use an 
+12:289:24200:28:29:72:513:199:144:g_d0_f4:144:g_d0_f4:B:instrumental variables strategy in which our instruments are non-linear terms of current test 
+12:290:24294:29:28:72:533:170:144:g_d0_f4:144:g_d0_f4:B:scores.  These terms are highly correlated with the probability of treatment (as seen in Figure 1) 
+12:291:24393:28:44:72:540:142:144:g_d0_f4:144:g_d0_f4:B:but may not be directly correlated with future achievement.  Because we use only the variation in 
+12:292:24491:44:12:539:542:98:122:g_d0_f8:122:g_d0_f8:?:                                                                                                                                                                           
+12:293:24661:12:12:72:544:86:99:g_d0_f25:99:g_d0_f25:F:cheated in order to get their students above the cutoff, we would expect a discontinuity around the cutoff post-policy.  
+12:294:24782:12:0:72:187:74:99:g_d0_f25:99:g_d0_f25:F:We find no evidence of this. 
+13:295:24811:0:28:72:530:708:144:g_d0_f4:144:g_d0_f4:B:treatment associated with observable performance, our point estimates should be unaffected by 
+13:296:24905:28:28:72:388:680:144:g_d0_f4:144:g_d0_f4:B:the correlation between treatment and unobserved characteristics. 
+13:297:24971:28:29:108:502:652:144:g_d0_f4:144:g_d0_f4:A:One drawback of the IV approach described above is that it relies on knowing the 
+13:298:25052:29:28:72:542:623:144:g_d0_f4:144:g_d0_f4:B:functional form of the relationship between the outcome variable and the variable that determines 
+13:299:25150:28:28:72:542:595:144:g_d0_f4:144:g_d0_f4:B:treatment.  In our case, this is the relationship between current test score and future performance.  
+13:300:25252:28:29:72:521:567:144:g_d0_f4:144:g_d0_f4:B:If, for example, the relationship is non-linear around the cutoff but we specify the function as 
+13:301:25349:29:28:72:540:538:144:g_d0_f4:144:g_d0_f4:B:linear, then the estimated treatment effect may simply pick up any underlying non-linearity in the 
+13:302:25448:28:28:72:524:510:144:g_d0_f4:144:g_d0_f4:B:achievement relationship.  If the discontinuity is relatively sharp, then one can use a relatively 
+13:303:25547:28:29:72:536:482:144:g_d0_f4:144:g_d0_f4:B:narrow range of data so that a linear approximation is quite good.  If the probability of treatment 
+13:304:25647:29:28:72:537:453:144:g_d0_f4:144:g_d0_f4:B:declines more slowly with observed test score, then we must rely more heavily on our functional 
+13:305:25743:28:28:72:165:425:144:g_d0_f4:144:g_d0_f4:B:form assumption.   
+13:306:25762:28:29:108:528:397:144:g_d0_f4:144:g_d0_f4:A:We test the validity of this assumption in two ways.  First, we examine the relationship 
+13:307:25851:29:28:72:486:368:144:g_d0_f4:144:g_d0_f4:B:between current test scores and future performance prior to the implementation of the 
+13:308:25937:28:28:72:540:340:144:g_d0_f4:144:g_d0_f4:B:accountability policy.  Figure 3 shows that this relationship is indeed nearly linear, particularly in 
+13:309:26040:28:29:72:535:312:144:g_d0_f4:144:g_d0_f4:B:the range around the promotional cutoff.  Second, we can test the robustness of our estimates by 
+13:310:26137:29:28:72:509:283:144:g_d0_f4:144:g_d0_f4:B:including second and third order polynomials of current test scores, in order to capture any 
+13:311:26230:28:28:72:534:255:144:g_d0_f4:144:g_d0_f4:B:underlying non-linearity in the functional form.  As we see in the next section, our estimates are 
+13:312:26329:28:28:72:292:227:144:g_d0_f4:144:g_d0_f4:B:robust to the inclusion of non-linear terms.     
+13:313:26378:28:29:72:75:199:144:g_d0_f4:144:g_d0_f4:B: 
+13:314:26378:29:28:72:148:170:144:g_d0_f7:144:g_d0_f7:C:5.2. Estimation 
+13:315:26394:28:28:108:518:142:144:g_d0_f4:144:g_d0_f4:A:A simple way to implement a regression discontinuity design is to compare the mean 
+13:316:26477:28:31:72:529:114:144:g_d0_f4:144:g_d0_f4:B:achievement gains of students just below the cutoff to those students at the cutoff.  This can be 
+13:317:26575:31:0:72:538:83:144:g_d0_f4:144:g_d0_f4:B:represented mathematically with the following expression: ()()tCtCtCtCYYYY,11,1,1,−+−+−−−, where 
+14:318:26672:0:29:72:531:707:144:g_d0_f29:144:g_d0_f4:B:Y represents mean achievement, the first subscript denotes performance relative to the reading 
+14:319:26767:29:28:72:529:678:144:g_d0_f4:144:g_d0_f4:B:cutoff (c indicates students at the cutoff and c-1 denotes students just below the cutoff) and the 
+14:320:26866:28:28:72:525:650:144:g_d0_f4:144:g_d0_f4:B:second subscript denotes timing.  Because every individual below the cutoff is not treated and 
+14:321:26961:28:29:72:537:622:144:g_d0_f4:144:g_d0_f4:B:some students above the cutoff are treated, we must scale the expression above by the difference 
+14:322:27058:29:28:72:537:593:144:g_d0_f4:144:g_d0_f4:B:in the probability of treatment associated with meeting the cutoff.  Doing so yields the following 
+14:323:27157:28:39:72:246:565:144:g_d0_f4:144:g_d0_f4:B:difference-in-difference estimator:   
+14:324:27195:39:0:72:131:526:122:g_d0_f8:122:g_d0_f8:F:(2)          
+14:325:27208:0:22:179:314:535:227:g_d0_f14:227:g_d0_f14:?:()()
+14:326:27212:22:0:262:265:513:49:g_d0_f30:49:g_d0_f30:?:1
+14:327:27213:0:19:304:158:532:49:g_d0_f30:49:g_d0_f30:?:,11,1,1,2
+14:328:27222:19:0:259:263:513:49:g_d0_f14:49:g_d0_f14:?:−
+14:329:27223:0:16:297:200:532:49:g_d0_f14:49:g_d0_f14:?:−+−+
+14:330:27227:16:0:241:248:516:143:g_d0_f14:143:g_d0_f14:?:−
+14:331:27228:0:9:279:213:535:143:g_d0_f14:143:g_d0_f14:?:−−−
+14:332:27231:9:13:168:175:526:143:g_d0_f14:143:g_d0_f14:?:=
+14:333:27232:13:0:255:233:513:49:g_d0_f31:49:g_d0_f31:?:cc
+14:334:27234:0:16:306:162:532:49:g_d0_f31:49:g_d0_f31:?:tctctctcd
+14:335:27243:16:0:249:231:516:143:g_d0_f32:143:g_d0_f32:?:TT
+14:336:27245:0:9:287:188:535:143:g_d0_f32:143:g_d0_f32:?:YYYY
+14:337:27249:9:41:146:321:526:151:g_d0_f14:122:g_d0_f8:?:β, 
+14:338:27252:41:29:72:501:485:144:g_d0_f4:144:g_d0_f4:B:where T is the mean probability of treatment.  Notice that this difference-in-difference is 
+14:339:27344:29:28:72:523:456:144:g_d0_f4:144:g_d0_f4:B:equivalent to an IV estimate in which the only instrument is a dummy that takes on a value of 
+14:340:27438:28:28:72:282:428:144:g_d0_f4:144:g_d0_f4:B:one if the student passes the reading cutoff. 
+14:341:27484:28:29:108:539:400:144:g_d0_f4:144:g_d0_f4:A:Though students below the cutoff and at the cutoff are similar, they are not identical.  We 
+14:342:27576:29:28:72:498:371:144:g_d0_f4:144:g_d0_f4:B:might be worried that any difference in achievement gains between these groups reflects 
+14:343:27664:28:28:72:536:343:144:g_d0_f4:144:g_d0_f4:B:differences in initial ability rather than the influence of the treatment.11  To address this concern, 
+14:344:27767:28:29:72:514:315:144:g_d0_f4:144:g_d0_f4:B:we can examine the performance of individuals just above the cutoff.  If we assume that the 
+14:345:27859:29:28:72:514:286:144:g_d0_f4:144:g_d0_f4:B:typical difference in achievement between students at the cutoff and just below the cutoff is 
+14:346:27953:28:28:72:516:258:144:g_d0_f4:144:g_d0_f4:B:similar to the difference in achievement between those just above the cutoff and those at the 
+14:347:28047:28:39:72:486:230:144:g_d0_f4:144:g_d0_f4:B:cutoff, we can identify the treatment effect using the third difference estimator below: 
+14:348:28136:39:0:72:130:191:144:g_d0_f4:144:g_d0_f4:B:(3)        
+14:349:28147:0:19:181:605:200:217:g_d0_f14:225:g_d0_f14:?:()()[]()()[]
+14:350:28159:19:0:272:284:181:217:g_d0_f14:49:g_d0_f35:?:()()cccc
+14:351:28167:0:16:459:162:197:49:g_d0_f35:49:g_d0_f35:?:tctctctctctctctcd
+14:352:28184:16:0:361:282:181:143:g_d0_f36:143:g_d0_f36:?:TTTT
+14:353:28188:0:19:447:190:200:143:g_d0_f36:143:g_d0_f36:?:YYYYYYYY
+14:354:28196:19:0:352:295:181:143:g_d0_f14:143:g_d0_f14:?:−−−
+14:355:28199:0:9:439:215:200:143:g_d0_f14:143:g_d0_f14:?:−−−−−−−
+14:356:28206:9:13:168:175:191:143:g_d0_f14:143:g_d0_f14:?:=
+14:357:28207:13:0:342:311:178:49:g_d0_f14:49:g_d0_f14:?:+−
+14:358:28209:0:19:429:202:197:49:g_d0_f14:49:g_d0_f14:?:++++−+−+
+14:359:28217:19:0:345:313:178:49:g_d0_f37:49:g_d0_f37:?:11
+14:360:28219:0:111:457:476:197:49:g_d0_f37:144:g_d0_f4:?:,1,,11,1,11,1,1,3β 
+14:361:28237:111:7:216:219:86:122:g_d0_f8:122:g_d0_f8:?:                                                      
+14:362:28290:7:0:72:475:79:42:g_d0_f38:99:g_d0_f39:F:11 In other words, high ability students may enjoy larger gains than students with lower initial ability. 
+15:363:28396:0:28:72:514:708:144:g_d0_f4:144:g_d0_f4:B:The third difference is equivalent to an IV estimate in which we control for a linear trend of 
+15:364:28491:28:28:72:511:680:144:g_d0_f4:144:g_d0_f4:B:reading ability and instrument for treatment using a dummy that takes on a value of one for 
+15:365:28583:28:29:72:226:652:144:g_d0_f4:144:g_d0_f4:B:students who exceed the cutoff. 
+15:366:28615:29:28:108:111:623:144:g_d0_f4:144:g_d0_f4:A: 
+15:367:28615:28:28:72:378:595:144:g_d0_f40:144:g_d0_f40:C:5.3. Implementing the Estimation Strategy in an IV Framework 
+15:368:28676:28:29:108:527:567:144:g_d0_f4:144:g_d0_f4:A:As we mentioned previously, the second and third difference approaches are simply IV 
+15:369:28761:29:28:72:532:538:144:g_d0_f4:144:g_d0_f4:B:strategies for estimating the treatment effect.  We will implement the three-difference estimator 
+15:370:28859:28:29:72:511:510:144:g_d0_f4:144:g_d0_f4:B:in the following way.  We will assume that our learning equation takes the following form: 
+15:371:28950:29:32:72:375:481:144:g_d0_f4:144:g_d0_f4:B:(4)        tiititititiuTreatrdgeBXY,,2,1,1,)(εββ++++=+, 
+15:372:29006:32:29:72:534:449:144:g_d0_f4:144:g_d0_f4:B:where Y is the academic outcome of interest, X is a vector of demographic characteristics, rdge 
+15:373:29101:29:28:72:541:420:144:g_d0_f4:144:g_d0_f4:B:is the ITBS reading score, u is unobserved ability, and ε is an error term.  The first stage is given 
+15:374:29203:28:30:72:157:392:144:g_d0_f4:144:g_d0_f4:B:by the following: 
+15:375:29221:30:34:72:375:362:144:g_d0_f4:144:g_d0_f4:B:(5)        tiiptitititiurdgeXTreat,3,2,1,,1ηγγγ++++Γ=, 
+15:376:29276:34:31:72:531:328:144:g_d0_f4:144:g_d0_f4:B:where p1 is a dummy variable that indicates that the reading score is above the cutoff, and η is 
+15:377:29373:31:28:72:533:297:144:g_d0_f4:144:g_d0_f4:B:an error term.  If we included no individual level covariates, this approach would be completely 
+15:378:29470:28:28:72:509:269:144:g_d0_f4:144:g_d0_f4:B:equivalent to the three-difference strategy summarized by equation (3).  Implementing this 
+15:379:29561:28:29:72:525:241:144:g_d0_f4:144:g_d0_f4:B:approach using IV gives us the flexibility to include student level covariates as a check for the 
+15:380:29659:29:28:72:208:212:144:g_d0_f4:144:g_d0_f4:B:robustness of our estimates. 
+15:381:29688:28:28:108:542:184:144:g_d0_f4:144:g_d0_f4:A: For students who passed math and failed reading in June, the probability of being retained 
+15:382:29779:28:29:72:514:156:144:g_d0_f4:144:g_d0_f4:B:does not change discontinuously at the cutoff as a function of August reading performance.  
+15:383:29871:29:28:72:529:127:144:g_d0_f4:144:g_d0_f4:B:Instead it drops off sharply in a range just below the cutoff that we will refer to as the marginal 
+15:384:29971:28:0:72:539:99:144:g_d0_f4:144:g_d0_f4:B:area.  This can be observed in Figures 5 and 6.  The fact that the probability of retention does not 
+16:385:30072:0:28:72:543:708:144:g_d0_f4:144:g_d0_f4:B:change discontinuously prevents us from using the same first stage relationship given by equation 
+16:386:30170:28:28:72:532:680:144:g_d0_f4:144:g_d0_f4:B:(5).  Instead, while examining the retention treatment, we will estimate a first stage relationship 
+16:387:30270:28:31:72:182:652:144:g_d0_f4:144:g_d0_f4:B:of the following form: 
+16:388:30293:31:34:72:523:621:144:g_d0_f4:144:g_d0_f4:B:(6)        tiitiptiptitimitmtitititiurdgerdgerdgeXTreat,5,,5,4,3,2,1,,1111ηγγγγγγ+++++++Γ=, 
+16:389:30385:34:28:72:526:587:144:g_d0_f4:144:g_d0_f4:B:where m1 is a dummy variable that takes on a value of 1 if the student’s reading score is in the 
+16:390:30482:28:28:72:534:559:144:g_d0_f4:144:g_d0_f4:B:marginal area and 0 otherwise.  The other variables are as previously described.  Away from the 
+16:391:30578:28:29:72:497:531:144:g_d0_f4:144:g_d0_f4:B:cutoff, increases in reading performance appear to have little effect on the probability of 
+16:392:30670:29:32:72:541:502:144:g_d0_f4:144:g_d0_f4:B:retention.  This suggests that 1γand5γ are likely to be small.  We interact the dummy variable for 
+16:393:30769:32:28:72:532:470:144:g_d0_f4:144:g_d0_f4:B:the marginal area with reading performance to take into account that for students just below the 
+16:394:30866:28:29:72:544:442:144:g_d0_f4:144:g_d0_f4:B:cutoff, small increases in performance lead to large reduction in the probability of being retained.  
+16:395:30968:29:32:72:532:413:144:g_d0_f4:144:g_d0_f4:B:If this is the case, 3γ should be strongly negative.  The learning equation is equivalent to that in 
+16:396:31069:32:28:72:136:381:144:g_d0_f4:144:g_d0_f4:B:equation (4). 
+16:397:31083:28:28:72:75:353:144:g_d0_f4:144:g_d0_f4:B: 
+16:398:31083:28:28:72:503:325:144:g_d0_f60:144:g_d0_f60:C:6.  The Net Effect of Summer School and Grade Retention on Student Achievement 
+16:399:31162:28:29:108:502:297:144:g_d0_f4:144:g_d0_f4:A:Our analysis proceeds as follows.  We first utilize the discontinuity created by the 
+16:400:31247:29:28:72:529:268:144:g_d0_f4:144:g_d0_f4:B:promotional cutoff associated with the June testing to estimate the net effect of summer school 
+16:401:31343:28:28:72:534:240:144:g_d0_f4:144:g_d0_f4:B:and grade retention.  We next take advantage of the August cutoff to estimate the separate effect 
+16:402:31441:28:29:72:530:212:144:g_d0_f4:144:g_d0_f4:B:of grade retention, using the sample of students who were assigned to summer school solely on 
+16:403:31535:29:28:72:536:183:144:g_d0_f4:144:g_d0_f4:B:the basis of their June reading scores.  For these students, the retention decision depended solely 
+16:404:31635:28:28:72:522:155:144:g_d0_f4:144:g_d0_f4:B:on their August reading scores.  Finally, we derive estimates of the separate effect of summer 
+16:405:31730:28:0:72:458:127:144:g_d0_f4:144:g_d0_f4:B:school, relying on the estimates of the net and retention effects described above. 
+17:406:31813:0:28:108:521:708:144:g_d0_f4:144:g_d0_f4:A:The relatively sharp discontinuity between current achievement and the probability of 
+17:407:31899:28:28:72:499:680:144:g_d0_f4:144:g_d0_f4:B:attending summer school and possibly being retained permits one to visually identify the 
+17:408:31988:28:29:72:498:652:144:g_d0_f4:144:g_d0_f4:B:treatment effect.  If these programs had a substantial net impact on subsequent academic 
+17:409:32077:29:28:72:503:623:144:g_d0_f4:144:g_d0_f4:B:achievement, we would expect to see a discontinuous or non-linear change in the average 
+17:410:32165:28:28:72:538:595:144:g_d0_f4:144:g_d0_f4:B:achievement level around the promotional policy cutoff.  By plotting the probability of receiving 
+17:411:32263:28:29:72:532:567:144:g_d0_f4:144:g_d0_f4:B:some remedial treatment (summer school and retention) and future achievement against current 
+17:412:32356:29:28:72:515:538:144:g_d0_f4:144:g_d0_f4:B:test performance, Figures 4 and 5 allow this visual identification.12  Each figure shows three 
+17:413:32451:28:28:72:528:510:144:g_d0_f4:144:g_d0_f4:B:relationships: (a) the probability of receiving remedial treatment (summer school or retention); 
+17:414:32548:28:29:72:527:482:144:g_d0_f4:144:g_d0_f4:B:(b) the reading performance of students in the following year; and (c) the math performance in 
+17:415:32643:29:28:72:171:453:144:g_d0_f4:144:g_d0_f4:B:the following year.   
+17:416:32665:28:28:108:519:425:144:g_d0_f4:144:g_d0_f4:A: For example, in Figure 4, we see that the probability of attending summer school and 
+17:417:32750:28:29:72:520:397:144:g_d0_f4:144:g_d0_f4:B:being retained drops sharply at the cutoff for promotion in the third grade.  At the same time, 
+17:418:32846:29:28:72:536:368:144:g_d0_f4:144:g_d0_f4:B:next year reading and math achievement drop sharply around the cutoff, suggesting that summer 
+17:419:32940:28:28:72:518:340:144:g_d0_f4:144:g_d0_f4:B:school and retention had a net positive effect for third graders.  In contrast to third grade, the 
+17:420:33039:28:29:72:538:312:144:g_d0_f4:144:g_d0_f4:B:continuous linear trends in future performance among sixth graders (in Figure 5) suggest that the 
+17:421:33137:29:28:72:526:283:144:g_d0_f4:144:g_d0_f4:B:summer school and retention had no substantial effect on the performance of students near the 
+17:422:33231:28:28:72:107:255:144:g_d0_f4:144:g_d0_f4:B:cutoff. 
+17:423:33239:28:28:108:505:227:144:g_d0_f4:144:g_d0_f4:A: Though the graphs lend transparency to the analysis, it is important to quantify the 
+17:424:33324:28:29:72:525:199:144:g_d0_f4:144:g_d0_f4:B:magnitude and the statistical precision of the estimates.  We examine the subset of the student 
+17:425:33420:29:60:72:535:170:144:g_d0_f4:144:g_d0_f4:B:population for which only the reading cutoff is binding (i.e., students who passed math and only 
+17:426:33517:60:8:216:219:110:122:g_d0_f63:122:g_d0_f63:?:                                                      
+17:427:33570:8:16:72:538:102:42:g_d0_f64:99:g_d0_f65:F:12 Note that these graphs reduce the dimensionality of the problem by limiting the sample to students who passed the 
+17:428:33687:16:12:72:521:86:99:g_d0_f65:99:g_d0_f65:F:standards in math.  The thinness of data in some cells makes identification off of three-dimensional graphs quite 
+17:429:33801:12:0:72:109:74:99:g_d0_f65:99:g_d0_f65:F:difficult. 
+18:430:33812:0:28:72:519:708:144:g_d0_f4:144:g_d0_f4:B:need to pass reading to avoid treatment).13  Unless otherwise mentioned, the sample includes 
+18:431:33905:28:28:72:535:680:144:g_d0_f4:144:g_d0_f4:B:students who were in the third or sixth grades in 1997, 1998, or 1999.  For all specifications, we 
+18:432:34004:28:29:72:199:652:144:g_d0_f4:144:g_d0_f4:B:include year fixed effects. 
+18:433:34032:29:28:108:524:623:144:g_d0_f4:144:g_d0_f4:A: The results in Table 2 correspond to the effects displayed in Figures 4 and 5.  The first 
+18:434:34122:28:28:72:521:595:144:g_d0_f4:144:g_d0_f4:B:column presents OLS results and the second column shows the IV results associated with the 
+18:435:34213:28:29:72:531:567:144:g_d0_f4:144:g_d0_f4:B:third difference specification described earlier.  We see that there are no statistically significant 
+18:436:34315:29:28:72:504:538:144:g_d0_f4:144:g_d0_f4:B:differences between the OLS and IV estimates, although the IV point estimates tend to be 
+18:437:34404:28:28:72:533:510:144:g_d0_f4:144:g_d0_f4:B:somewhat larger than the OLS estimates.  This suggests that June waivers were given randomly 
+18:438:34497:28:29:72:525:482:144:g_d0_f4:144:g_d0_f4:B:or on the basis of characteristics that were uncorrelated with future performance (to the extent 
+18:439:34594:29:28:72:529:453:144:g_d0_f4:144:g_d0_f4:B:that the IV estimates are in fact larger, one would conclude that waivers were given to students 
+18:440:34691:28:28:72:516:425:144:g_d0_f4:144:g_d0_f4:B:with positive unobservable characteristics).  Column 3 shows IV estimates that control for a 
+18:441:34784:28:29:72:532:397:144:g_d0_f4:144:g_d0_f4:B:detailed set of student characteristics, including prior math and reading test scores, race gender, 
+18:442:34884:29:28:72:542:368:144:g_d0_f4:144:g_d0_f4:B:special education status, neighborhood poverty and free lunch status.  The estimates in columns 2 
+18:443:34982:28:28:72:543:340:144:g_d0_f4:144:g_d0_f4:B:and 3 are virtually identical, providing additional evidence that our instruments may be valid.        
+18:444:35085:28:29:108:486:312:144:g_d0_f4:144:g_d0_f4:A:  Summer school and grade retention have a positive net impact on third grade 
+18:445:35163:29:28:72:539:283:144:g_d0_f4:144:g_d0_f4:B:achievement in math as well as reading.  In the first year, this effect was roughly 0.11-0.13 logits 
+18:446:35264:28:28:72:511:255:144:g_d0_f4:144:g_d0_f4:B:in the context of average third grade achievement gains of 0.68 and 0.42 logits in math and 
+18:447:35356:28:28:72:513:227:144:g_d0_f4:144:g_d0_f4:B:reading respectively.  This means that summer school and grade retention increased student 
+18:448:35447:28:29:72:510:199:144:g_d0_f4:144:g_d0_f4:B:achievement roughly 20 percent of a year’s worth of learning.  By the second year after the 
+18:449:35539:29:28:72:541:170:144:g_d0_f4:144:g_d0_f4:B:program, the effects had faded by roughly 25 to 40 percent, but were still statistically significant.  
+18:450:35642:28:32:72:538:142:144:g_d0_f4:144:g_d0_f4:B:This is consistent with the fadeout of program effects found in other evaluations (Barnett 1995).  
+18:451:35741:32:8:216:219:110:122:g_d0_f63:122:g_d0_f63:?:                                                      
+18:452:35794:8:16:72:535:102:42:g_d0_f64:99:g_d0_f65:F:13 We focus on students for whom the reading cutoff was binding because many more students failed on the account 
+18:453:35907:16:12:72:529:86:99:g_d0_f65:99:g_d0_f65:F:of reading than mathematics.  In Table 3, we show results for students who passed reading and for whom the math 
+18:454:36019:12:0:72:151:74:99:g_d0_f65:99:g_d0_f65:F:cutoff was binding. 
+19:455:36039:0:28:72:534:708:144:g_d0_f4:144:g_d0_f4:B:In sixth grade, the picture is much different.  It appears that the net effect of summer school and 
+19:456:36139:28:28:72:510:680:144:g_d0_f4:144:g_d0_f4:B:grade retention for these older students was essentially zero in reading, and close to zero in 
+19:457:36234:28:29:72:264:652:144:g_d0_f4:144:g_d0_f4:B:mathematics, particularly by year two.   
+19:458:36275:29:28:108:537:623:144:g_d0_f4:144:g_d0_f4:A: Table 3 examines the robustness of these estimates to specification and sample choices.  
+19:459:36365:28:28:72:542:595:144:g_d0_f4:144:g_d0_f4:B:The first robustness checks are designed to ensure that our findings are not sensitive to functional 
+19:460:36466:28:29:72:480:567:144:g_d0_f4:144:g_d0_f4:B:form assumptions.  In the second row we control for third order polynomials in prior 
+19:461:36551:29:28:72:542:538:144:g_d0_f4:144:g_d0_f4:B:achievement.  In the third row, we take advantage of data from pre-policy years to ensure that our 
+19:462:36650:28:28:72:510:510:144:g_d0_f4:144:g_d0_f4:B:findings are not driven by non-linearity in the relationship between initial performance and 
+19:463:36743:28:29:72:531:482:144:g_d0_f4:144:g_d0_f4:B:subsequent achievement.  Intuitively, we subtract the pre-policy third difference estimate of the 
+19:464:36841:29:28:72:527:453:144:g_d0_f4:144:g_d0_f4:B:effect of surpassing the cutoff from the corresponding post-policy estimate.  If the relationship 
+19:465:36939:28:28:72:539:425:144:g_d0_f4:144:g_d0_f4:B:between initial and subsequent performance is stable over time, this fourth difference will ensure 
+19:466:37038:28:29:72:521:397:144:g_d0_f4:144:g_d0_f4:B:that our findings are not driven by non-linearity.14  The fourth row shows estimates using pre-
+19:467:37133:29:28:72:537:368:144:g_d0_f4:144:g_d0_f4:B:policy data and controlling for polynomials of prior ability.  While these estimates differ slightly 
+19:468:37234:28:28:72:541:340:144:g_d0_f4:144:g_d0_f4:B:from the baseline findings, the differences are not significant.  Furthermore, the overall pattern of 
+19:469:37336:28:29:72:181:312:144:g_d0_f4:144:g_d0_f4:B:results stays the same. 
+19:470:37360:29:28:108:521:283:144:g_d0_f4:144:g_d0_f4:A:The final three rows of Table 3 show net effect estimates when we modify the sample 
+19:471:37444:28:28:72:529:255:144:g_d0_f4:144:g_d0_f4:B:under examination.  First, we include only those students with the same test forms to eliminate 
+19:472:37540:28:28:72:507:227:144:g_d0_f4:144:g_d0_f4:B:problems associated with initial performance measures that may not be comparable across 
+19:473:37628:28:29:72:537:199:144:g_d0_f4:144:g_d0_f4:B:students.15  Next, we examine only those students with consistent grade patterns.  This addresses 
+19:474:37726:29:37:72:530:170:144:g_d0_f4:144:g_d0_f4:B:problems of measurement error that may be attributable to the miscoding of grades.  Neither of 
+19:475:37821:37:7:216:219:133:122:g_d0_f63:122:g_d0_f63:?:                                                      
+19:476:37874:7:17:72:536:126:42:g_d0_f64:99:g_d0_f65:F:14 We implement this strategy by performing IV in which we control for the dummy variable that indicates a student 
+19:477:37989:17:12:72:536:109:99:g_d0_f65:99:g_d0_f65:F:surpassed the cutoff and the interaction of this term with reading performance.  Our instruments become the dummy 
+19:478:38103:12:11:72:522:97:99:g_d0_f65:99:g_d0_f65:F:variable and interaction term multiplied by another variable that indicates whether the cohort was exposed to the 
+19:479:38217:11:7:72:161:86:99:g_d0_f65:99:g_d0_f65:F:accountability policy. 
+19:480:38240:7:0:72:509:79:42:g_d0_f64:99:g_d0_f65:F:15 Different test forms are used for different years.  The inclusion of year fixed effects addresses this concern. 
+20:481:38355:0:28:72:529:708:144:g_d0_f4:144:g_d0_f4:B:these two sample restrictions has any substantive effects on the estimated net effect.  As a final 
+20:482:38454:28:28:72:530:680:144:g_d0_f4:144:g_d0_f4:B:robustness check, we examine those students who passed reading in June and were marginal in 
+20:483:38546:28:29:72:530:652:144:g_d0_f4:144:g_d0_f4:B:math.16  The effect size is slightly larger for third grade reading and somewhat smaller for third 
+20:484:38645:29:28:72:463:623:144:g_d0_f4:144:g_d0_f4:B:and sixth grade math.  Overall, these results are similar to our baseline estimates. 
+20:485:38730:28:28:108:510:595:144:g_d0_f4:144:g_d0_f4:A:Table 4 examines the heterogeneity of two-year net effects across years and student 
+20:486:38814:28:29:72:504:567:144:g_d0_f4:144:g_d0_f4:B:subgroups.  The first row shows the aggregate estimates taken from column 3 of Table 2.  
+20:487:38903:29:28:72:543:538:144:g_d0_f4:144:g_d0_f4:B:Examining the three cohorts of student to experience the policy, it appears that the 1997 cohort of 
+20:488:39003:28:28:72:536:510:144:g_d0_f4:144:g_d0_f4:B:third graders appears to have experienced somewhat larger positive effects than the later groups, 
+20:489:39101:28:29:72:540:482:144:g_d0_f4:144:g_d0_f4:B:although these differences are not statistically significant.  Top achieving students appear to have 
+20:490:39202:29:28:72:534:453:144:g_d0_f4:144:g_d0_f4:B:the experienced the largest gains, although these estimates also have large standard errors.  This 
+20:491:39301:28:28:72:535:425:144:g_d0_f4:144:g_d0_f4:B:may be due to the fact that these students attended summer school, but were not retained.  There 
+20:492:39398:28:29:72:499:397:144:g_d0_f4:144:g_d0_f4:B:are no significant and consistent differences across race, gender or SES.  Overall, the net 
+20:493:39490:29:28:72:465:368:144:g_d0_f4:144:g_d0_f4:B:treatment effect of summer school and grade retention appear fairly homogenous. 
+20:494:39570:28:28:72:75:340:144:g_d0_f4:144:g_d0_f4:B: 
+20:495:39570:28:29:72:254:312:144:g_d0_f60:144:g_d0_f60:C:7.  The Effect of Grade Retention   
+20:496:39606:29:28:108:512:283:144:g_d0_f4:144:g_d0_f4:A:While the June discontinuity allows us to estimate the net treatment effect, the prior 
+20:497:39693:28:28:72:505:255:144:g_d0_f4:144:g_d0_f4:B:literature suggests that the effects of summer school and retention may be quite different.  
+20:498:39786:28:28:72:525:227:144:g_d0_f4:144:g_d0_f4:B:Fortunately, the structure of the accountability program in Chicago provides an opportunity to 
+20:499:39881:28:29:72:537:199:144:g_d0_f4:144:g_d0_f4:B:separately identify the causal effect of grade retention.  In order to advance to the next grade, the 
+20:500:39983:29:60:72:519:170:144:g_d0_f4:144:g_d0_f4:B:maximum of a student’s June and August scores must exceed a predetermined cutoff in both 
+20:501:40072:60:8:216:219:110:122:g_d0_f63:122:g_d0_f63:?:                                                      
+20:502:40125:8:16:72:529:102:42:g_d0_f64:99:g_d0_f65:F:16 We can do this because of the two-dimensional nature of the cutoff.  We do not emphasize these results because 
+20:503:40239:16:12:72:527:86:99:g_d0_f65:99:g_d0_f65:F:few students were treated on the basis of math—this reduces our sample size and the precision with which we can 
+20:504:40351:12:0:72:194:74:99:g_d0_f65:99:g_d0_f65:F:estimate the treatment effects. 
+21:505:40383:0:28:72:523:708:144:g_d0_f4:144:g_d0_f4:B:reading and math.  The discontinuity generated by the August cutoff allows us to estimate the 
+21:506:40477:28:28:72:468:680:144:g_d0_f4:144:g_d0_f4:B:impact of grade retention for the group of students who attended summer school.   
+21:507:40559:28:29:108:510:652:144:g_d0_f4:144:g_d0_f4:A:Just as we did in estimating the net effects, we can reduce the dimensionality of the 
+21:508:40645:29:28:72:532:623:144:g_d0_f4:144:g_d0_f4:B:problem by considering only students who passed one subject in June and thus only had to pass 
+21:509:40739:28:28:72:526:595:144:g_d0_f4:144:g_d0_f4:B:the other subject in August.  This is even more important in the case of the retention estimates 
+21:510:40836:28:29:72:508:567:144:g_d0_f4:144:g_d0_f4:B:because it allows us to focus on a student’s August score alone.  If we instead focus on the 
+21:511:40929:29:28:72:517:538:144:g_d0_f4:144:g_d0_f4:B:maximum of June and August test scores, it is likely that students who scored just above the 
+21:512:41022:28:28:72:508:510:144:g_d0_f4:144:g_d0_f4:B:cutoff will differ from students who scored just below the cutoff, thus violating the central 
+21:513:41116:28:29:72:540:482:144:g_d0_f4:144:g_d0_f4:B:assumption of a regression discontinuity design.  This is true because students whose June scores 
+21:514:41214:29:28:72:526:453:144:g_d0_f4:144:g_d0_f4:B:exceeded the cutoff never attended summer school, which means that summer school students 
+21:515:41304:28:28:72:516:425:144:g_d0_f4:144:g_d0_f4:B:whose maximum (June and August) score exceeded the cutoff must have improved over the 
+21:516:41390:28:29:72:494:397:144:g_d0_f4:144:g_d0_f4:B:summer.  It is likely that these students were more motivated than those students whose 
+21:517:41478:29:28:72:520:368:144:g_d0_f4:144:g_d0_f4:B:maximum score did not exceed the cutoff.  For this reason, the analysis below focuses on the 
+21:518:41571:28:28:72:389:340:144:g_d0_f4:144:g_d0_f4:B:subset of students who passed math and failed reading in June.17   
+21:519:41638:28:29:108:515:312:144:g_d0_f4:144:g_d0_f4:A: Figures 6 and 7 show the probability of retention and future academic outcomes as a 
+21:520:41722:29:28:72:543:283:144:g_d0_f4:144:g_d0_f4:B:function of August reading scores.  While the probability of retention does not drop sharply at the 
+21:521:41822:28:28:72:530:255:144:g_d0_f4:144:g_d0_f4:B:exact point of the cutoff, we can see that it rapidly decreases over a narrow range of values just 
+21:522:41921:28:28:72:536:227:144:g_d0_f4:144:g_d0_f4:B:below the cutoff.  We will refer to this range as the marginal area.  Figure 6 shows that, for third 
+21:523:42022:28:29:72:524:199:144:g_d0_f4:144:g_d0_f4:B:grade students, future performance is flat or decreasing in the marginal area, consistent with a 
+21:524:42119:29:28:72:535:170:144:g_d0_f4:144:g_d0_f4:B:positive effect of grade retention.  In contrast, Figure 7 presents little evidence that retention has 
+21:525:42222:28:44:72:246:142:144:g_d0_f4:144:g_d0_f4:B:any benefit for sixth grade students. 
+21:526:42260:44:8:216:219:98:122:g_d0_f63:122:g_d0_f63:?:                                                      
+21:527:42313:8:16:72:539:90:42:g_d0_f64:99:g_d0_f65:F:17 We could also examine individuals who passed reading and failed math in June.  In practice, however, very few of 
+21:528:42429:16:0:72:263:74:99:g_d0_f65:99:g_d0_f65:F:these students end up near the cutoff in August. 
+22:529:42478:0:28:108:534:708:144:g_d0_f4:144:g_d0_f4:A: Because of the fuzzy discontinuity, we cannot limit our analysis to students immediately 
+22:530:42567:28:28:72:504:680:144:g_d0_f4:144:g_d0_f4:B:above and below the cutoff.  However, if we use too broad a range of data, students at the 
+22:531:42658:28:29:72:532:652:144:g_d0_f4:144:g_d0_f4:B:extreme ends of the distribution are unlikely to be comparable, forcing us to rely heavily on our 
+22:532:42756:29:28:72:514:623:144:g_d0_f4:144:g_d0_f4:B:covariates to control for the differences between students.  As a compromise, we focus on a 
+22:533:42848:28:28:72:506:595:144:g_d0_f4:144:g_d0_f4:B:subset of children who scored relatively close to the cutoff on the August exam, including 
+22:534:42939:28:29:72:514:567:144:g_d0_f4:144:g_d0_f4:B:children who scored from 1 GE below the cutoff to 0.5 GE above the cutoff.18  To ascertain 
+22:535:43030:29:28:72:537:538:144:g_d0_f4:144:g_d0_f4:B:whether students are comparable (conditional on August reading performance), we first estimate 
+22:536:43125:28:28:72:525:510:144:g_d0_f4:144:g_d0_f4:B:the retention treatment effect without using additional covariates.  We then estimate the effect 
+22:537:43222:28:29:72:532:482:144:g_d0_f4:144:g_d0_f4:B:controlling for a rich set of prior achievement measures and demographic characteristics.  If the 
+22:538:43320:29:28:72:531:453:144:g_d0_f4:144:g_d0_f4:B:results are insensitive to the inclusion of these covariates, it is likely that the students to the left 
+22:539:43425:28:28:72:528:425:144:g_d0_f4:144:g_d0_f4:B:and right of the cutoff are comparable.  In addition, we test whether our estimates are robust to 
+22:540:43523:28:29:72:298:397:144:g_d0_f4:144:g_d0_f4:B:changes in the range of students in the sample. 
+22:541:43571:29:28:108:536:368:144:g_d0_f4:144:g_d0_f4:A: Table 5 reports the coefficients from the first stage, which are as expected.  In particular, 
+22:542:43665:28:28:72:521:340:144:g_d0_f4:144:g_d0_f4:B:the coefficient of the marginal reading interaction term is strongly negative for both third and 
+22:543:43762:28:29:72:530:312:144:g_d0_f4:144:g_d0_f4:B:sixth grades.  This confirms that small changes in reading performance in the marginal area are 
+22:544:43858:29:28:72:532:283:144:g_d0_f4:144:g_d0_f4:B:associated with large reductions in the probability of being retained.  The instruments also have 
+22:545:43956:28:28:72:530:255:144:g_d0_f4:144:g_d0_f4:B:strong predictive power; the F-statistic of the instruments is 236 for the third grade cohorts and 
+22:546:44055:28:28:72:224:227:144:g_d0_f4:144:g_d0_f61:B:150 for the sixth grade cohorts. 
+22:547:44087:28:29:108:521:199:144:g_d0_f4:144:g_d0_f4:A: Table 6 contains the estimated retention treatment effects for students in the third and 
+22:548:44176:29:28:72:528:170:144:g_d0_f4:144:g_d0_f4:B:sixth grades respectively.  We see many of the same patterns as we did for the net effects.  The 
+22:549:44273:28:28:72:530:142:144:g_d0_f4:144:g_d0_f4:B:IV point estimates (shown in column 2) are somewhat larger than the OLS estimates (shown in 
+22:550:44365:28:28:72:485:114:144:g_d0_f4:144:g_d0_f4:B:column 1), suggesting that waivers were given to students with positive unobservable 
+22:551:44450:28:8:216:219:86:122:g_d0_f63:122:g_d0_f63:?:                                                      
+22:552:44503:8:0:72:499:78:42:g_d0_f64:99:g_d0_f65:F:18 We include a broader range of data below the cutoff in order to effectively estimate the effect of reading 
+23:553:44613:0:28:72:519:708:144:g_d0_f4:144:g_d0_f4:B:characteristics (note that these differences are not statistically significant.)  The third column 
+23:554:44712:28:28:72:532:680:144:g_d0_f4:144:g_d0_f4:B:shows IV estimates that control for student characteristics.  These estimates are similar to those 
+23:555:44811:28:29:72:516:652:144:g_d0_f4:144:g_d0_f4:B:in column 2, suggesting that the students in our analysis are comparable once we control for 
+23:556:44904:29:28:72:194:623:144:g_d0_f4:144:g_d0_f4:B:August reading ability.    
+23:557:44931:28:28:108:540:595:144:g_d0_f4:144:g_d0_f4:A: The point estimates in Table 6 suggest that retention may not have as powerful a negative 
+23:558:45021:28:29:72:530:567:144:g_d0_f4:144:g_d0_f4:B:effect on academic achievement as commonly cited in the literature.  The IV estimates indicate 
+23:559:45116:29:28:72:529:538:144:g_d0_f4:144:g_d0_f4:B:that being retained in the third grade actually increases performance the following year by 0.17 
+23:560:45213:28:28:72:514:510:144:g_d0_f4:144:g_d0_f4:B:logits in reading and 0.23 logits in math.  These treatment effects correspond to increases in 
+23:561:45308:28:29:72:515:482:144:g_d0_f4:144:g_d0_f4:B:achievement of 41 and 33 percent of the average annual gain.  By the second year following 
+23:562:45399:29:28:72:507:453:144:g_d0_f4:144:g_d0_f4:B:retention, the math effect has decreased substantially, but is still significant.  The two-year 
+23:563:45495:28:28:72:399:425:144:g_d0_f4:144:g_d0_f4:B:reading effect, however, is not statistically different than zero.          
+23:564:45571:28:29:108:540:397:144:g_d0_f4:144:g_d0_f4:A: While it appears that the retention effects have become more negative by the second year, 
+23:565:45661:29:28:72:533:368:144:g_d0_f4:144:g_d0_f4:B:changes in the policy effect over time are confounded by the changes in student incentives from 
+23:566:45757:28:28:72:521:340:144:g_d0_f4:144:g_d0_f4:B:grade to grade.  One year after third grade, retained students (i.e., those who are repeating the 
+23:567:45855:28:29:72:533:312:144:g_d0_f4:144:g_d0_f4:B:third grade) face high stakes testing again while promoted students (now in the fourth grade) do 
+23:568:45952:29:28:72:523:283:144:g_d0_f4:144:g_d0_f4:B:not.  Two years later, the majority of retained students as well as promoted students face little 
+23:569:46050:28:28:72:542:255:144:g_d0_f4:144:g_d0_f4:B:incentive to perform well on the ITBS exams.  For this reason, the two-year estimates provide the 
+23:570:46148:28:28:72:362:227:144:g_d0_f4:144:g_d0_f4:B:most accurate view of the retention effects for third graders. 
+23:571:46211:28:29:108:535:199:144:g_d0_f4:144:g_d0_f4:A:When we compare sixth grade students one year later, we find no statistically significant 
+23:572:46301:29:28:72:538:170:144:g_d0_f4:144:g_d0_f4:B:differences between the performance of retained and promoted students, despite the fact retained 
+23:573:46398:28:28:72:517:142:144:g_d0_f4:144:g_d0_f4:B:students faced high-stakes testing and the promoted students did not.  It may be the case that 
+23:574:46493:28:28:72:534:114:144:g_d0_f4:144:g_d0_f4:B:negative retention effects were offset by the positive incentive effects.  When we compare these 
+23:575:46590:28:12:539:542:86:122:g_d0_f63:122:g_d0_f63:?:                                                                                                                                                                           
+23:576:46760:12:0:72:377:74:99:g_d0_f65:99:g_d0_f65:F:performance on the probability of retention at and below the marginal area.  
+24:577:46837:0:28:72:529:708:144:g_d0_f4:144:g_d0_f4:B:students after two years, the incentives are reversed.  Students who had been promoted in sixth 
+24:578:46933:28:28:72:522:680:144:g_d0_f4:144:g_d0_f4:B:grade are most likely in eighth grade, facing a high-stakes exam once again, whereas retained 
+24:579:47027:28:29:72:543:652:144:g_d0_f4:144:g_d0_f4:B:students are most likely in seventh grade, facing a low-stakes exam.  For this reason, the two-year 
+24:580:47127:29:28:72:523:623:144:g_d0_f4:144:g_d0_f4:B:effects probably reflect an upper bound on any negative retention effects.  And, in fact, we do 
+24:581:47223:28:28:72:540:595:144:g_d0_f4:144:g_d0_f4:B:find that retained students score roughly 0.15 logits (27 percent of an annual learning gain) lower 
+24:582:47323:28:29:72:488:567:144:g_d0_f4:144:g_d0_f4:B:than promoted students.  However, there is no significant difference between the math 
+24:583:47409:29:28:72:305:538:144:g_d0_f4:144:g_d0_f4:B:achievement of retained and promoted students. 
+24:584:47456:28:28:108:536:510:144:g_d0_f4:144:g_d0_f4:A:Table 7 shows the sensitivity of our results to functional form assumptions and choice of 
+24:585:47546:28:29:72:525:482:144:g_d0_f4:144:g_d0_f4:B:samples.  Rows 2 and 3 show how our estimates vary as we control for second and third order 
+24:586:47638:29:28:72:534:453:144:g_d0_f4:144:g_d0_f4:B:polynomials of initial performance.  Our estimates appear robust to these changes.19  Rows 4, 5, 
+24:587:47735:28:28:72:531:425:144:g_d0_f4:144:g_d0_f4:B:and 6 show how our estimates change as we use data from broader and narrower ranges around 
+24:588:47826:28:29:72:525:397:144:g_d0_f4:144:g_d0_f4:B:the cutoff.  The results do vary somewhat depending on our sample but the differences are not 
+24:589:47920:29:28:72:502:368:144:g_d0_f4:144:g_d0_f4:B:significant and do not change the pattern of results.  The final row shows estimates of the 
+24:590:48012:28:28:72:515:340:144:g_d0_f4:144:g_d0_f4:B:retention treatment effect when we examine students who passed reading and failed math in 
+24:591:48102:28:29:72:499:312:144:g_d0_f4:144:g_d0_f4:B:June.  Our findings in some cases are quite different when we examine this sample.  The 
+24:592:48190:29:28:72:528:283:144:g_d0_f4:144:g_d0_f4:B:difference is significant only for third grade math, however.  In all cases, the standard errors of 
+24:593:48290:28:28:72:443:255:144:g_d0_f4:144:g_d0_f4:B:these estimates are quite large making it difficult to draw strong conclusions. 
+24:594:48370:28:28:108:509:227:144:g_d0_f4:144:g_d0_f4:A:  Table 8 reports the two-year retention effects for various cohorts and sub-samples.  
+24:595:48457:28:29:72:520:199:144:g_d0_f4:144:g_d0_f4:B:Several interesting patterns are evident.  First, it appears that the effect of grade retention has 
+24:596:48557:29:28:72:528:170:144:g_d0_f4:144:g_d0_f4:B:improved for later cohorts, although relatively large standard errors make it impossible to state 
+24:597:48655:28:28:72:539:142:144:g_d0_f4:144:g_d0_f4:B:this with a high level of confidence.  This pattern, however, is consistent with the introduction of 
+24:598:48756:28:0:72:530:114:144:g_d0_f4:144:g_d0_f4:B:an after-school tutoring program for retained students starting in 1998.  There are no consistent 
+25:599:48854:0:28:72:528:708:144:g_d0_f4:144:g_d0_f4:B:or statistically significant differences in the magnitude of the treatment effects by race, gender, 
+25:600:48954:28:28:72:210:680:144:g_d0_f4:144:g_d0_f4:B:SES, or prior achievement.   
+25:601:48983:28:29:108:111:652:144:g_d0_f4:144:g_d0_f4:A: 
+25:602:48983:29:29:72:244:623:144:g_d0_f60:144:g_d0_f60:C:8.  The Effect of Summer School  
+25:603:49016:29:31:108:518:594:144:g_d0_f4:144:g_d0_f4:A: In Section 6 we estimated the net effect (Nβ) of summer school and grade retention.  
+25:604:49101:31:29:72:530:563:144:g_d0_f4:144:g_d0_f4:B:Using information on the magnitude of the retention treatment effects, we can now back out an 
+25:605:49195:29:28:72:514:534:144:g_d0_f4:144:g_d0_f4:B:estimate of the summer school treatment effect.  Assuming homogeneous treatment, the net 
+25:606:49284:28:29:72:300:506:144:g_d0_f4:144:g_d0_f4:B:effect can be represented in the following way: 
+25:607:49332:29:32:72:197:477:144:g_d0_f4:144:g_d0_f4:B:(7) RRSNPβββ+=, 
+25:608:49348:32:31:72:533:445:144:g_d0_f4:144:g_d0_f4:B:where Sβ and Rβ are the summer school and retention treatment effects respectively and RP is 
+25:609:49441:31:29:72:530:414:144:g_d0_f4:144:g_d0_f4:B:the probability of being retained conditional on attending summer school.  Hence, to determine 
+25:610:49536:29:29:72:511:385:144:g_d0_f4:144:g_d0_f4:B:the separate effect of summer school, we must obtain estimates of the net effect of summer 
+25:611:49627:29:32:72:524:356:144:g_d0_f4:144:g_d0_f4:B:school and grade retention (Sβ), the probability of retention conditional on attending summer 
+25:612:49721:32:30:72:367:324:144:g_d0_f4:144:g_d0_f4:B:school (RP), and the separate effect of grade retention (Rβ).  
+25:613:49784:30:29:108:539:294:144:g_d0_f4:144:g_d0_f4:A: For the net effects, we will use the third difference estimates presented in Table 2.  While 
+25:614:49877:29:28:72:515:265:144:g_d0_f4:144:g_d0_f4:B:the probability of retention is simple to calculate empirically, it is important to use the same 
+25:615:49974:28:28:72:529:237:144:g_d0_f4:144:g_d0_f4:B:population that was used to estimate the net effect.  Recall that this group consisted of students 
+25:616:50073:28:29:72:508:209:144:g_d0_f4:144:g_d0_f4:B:who in June passed the promotional cutoff in math and scored just below or just above the 
+25:617:50163:29:28:72:534:180:144:g_d0_f4:144:g_d0_f4:B:promotional cutoff in reading (which we therefore refer to as the June sample).  It can be shown 
+25:618:50260:28:28:72:527:152:144:g_d0_f4:144:g_d0_f4:B:that the conditional probability of retention consistent with our third difference estimate of the 
+25:619:50359:28:28:72:201:124:144:g_d0_f4:144:g_d0_f4:B:net effect is the following: 
+25:620:50388:28:8:539:542:96:122:g_d0_f73:122:g_d0_f73:?:                                                                                                                                                                           
+25:621:50558:8:0:72:484:88:42:g_d0_f74:99:g_d0_f75:F:19 Because the ITBS exam was not given in August prior to 1997, there it is not possible to observe the 
+26:622:50662:0:0:72:89:699:144:g_d0_f4:144:g_d0_f4:B:(8) 
+26:623:50666:0:18:136:252:707:227:g_d0_f14:227:g_d0_f14:?:()()
+26:624:50670:18:0:138:150:689:227:g_d0_f14:49:g_d0_f76:?:()()cccc
+26:625:50678:0:7:240:150:703:49:g_d0_f76:49:g_d0_f76:?:cccc
+26:626:50682:7:7:116:120:696:49:g_d0_f76:49:g_d0_f76:?:R
+26:627:50683:7:0:230:148:689:144:g_d0_f77:144:g_d0_f77:?:TTTT
+26:628:50687:0:7:233:146:706:144:g_d0_f77:144:g_d0_f77:?:RRRR
+26:629:50691:7:10:110:117:699:144:g_d0_f77:144:g_d0_f77:A:P
+26:630:50692:10:0:222:165:689:144:g_d0_f14:144:g_d0_f14:?:−−−
+26:631:50695:0:7:224:163:706:144:g_d0_f14:144:g_d0_f14:?:−−−
+26:632:50698:7:13:125:132:699:144:g_d0_f14:144:g_d0_f14:?:=
+26:633:50699:13:0:211:180:686:49:g_d0_f14:49:g_d0_f14:?:+−
+26:634:50701:0:17:213:180:703:49:g_d0_f14:49:g_d0_f14:?:+−
+26:635:50703:17:0:215:183:686:49:g_d0_f78:49:g_d0_f78:?:11
+26:636:50705:0:47:217:260:703:49:g_d0_f78:144:g_d0_f4:?:11ˆ, 
+26:637:50710:47:28:72:505:656:144:g_d0_f4:144:g_d0_f4:B:where R is the fraction retained and the other variables are as previously described.  This 
+26:638:50802:28:28:72:509:628:144:g_d0_f4:144:g_d0_f4:B:estimate is the probability of being retained for those students who went to summer school 
+26:639:50893:28:29:72:225:600:144:g_d0_f4:144:g_d0_f4:B:because they missed the cutoff. 
+26:640:50925:29:28:108:532:571:144:g_d0_f4:144:g_d0_f4:A: Finally, we must obtain an estimate of the retention effect, once again taking care to use 
+26:641:51016:28:28:72:539:543:144:g_d0_f4:144:g_d0_f4:B:the same population that was used to determine the net effect.  Unfortunately, the sample used to 
+26:642:51114:28:29:72:511:515:144:g_d0_f4:144:g_d0_f4:B:estimate the retention effects in Section 7 is somewhat different than the June sample.  The 
+26:643:51207:29:28:72:527:486:144:g_d0_f4:144:g_d0_f4:B:retention effects were estimated using the sample of students who passed the math, but not the 
+26:644:51302:28:28:72:525:458:144:g_d0_f4:144:g_d0_f4:B:reading, cutoff in June, and then scored within a limited range around the reading cutoff (both 
+26:645:51398:28:28:72:540:430:144:g_d0_f4:144:g_d0_f4:B:above and below) in August (which we refer to as the August sample).  In general, this is a lower 
+26:646:51496:28:29:72:536:402:144:g_d0_f4:144:g_d0_f4:B:ability group than the population used to estimate the net effects.  To the extent that the effect of 
+26:647:51598:29:28:72:522:373:144:g_d0_f4:144:g_d0_f4:B:retention is different across the two groups, our estimates of the summer school effect will be 
+26:648:51694:28:28:72:541:345:144:g_d0_f4:144:g_d0_f4:B:biased.  While the nature of our identification strategy prevents us from using the same sample to 
+26:649:51793:28:29:72:536:317:144:g_d0_f4:144:g_d0_f4:B:estimate the net and retention effects, we can attempt to place reasonable bounds on the summer 
+26:650:51889:29:28:72:145:288:144:g_d0_f4:144:g_d0_f4:B:school effect.   
+26:651:51906:28:28:108:528:260:144:g_d0_f4:144:g_d0_f4:A: The middle column in Table 9 presents the summer school effect under the assumption 
+26:652:51990:28:29:72:536:232:144:g_d0_f4:144:g_d0_f4:B:that the retention effect is identical for the June and August samples.  Using the retention effects 
+26:653:52091:29:28:72:529:203:144:g_d0_f4:144:g_d0_f4:B:presented in Table 6, the implied two-year summer school treatment effects range from 0.03 to 
+26:654:52185:28:28:72:524:175:144:g_d0_f4:144:g_d0_f4:B:0.07 logits.  For third grade students, summer school increases reading and math achievement 
+26:655:52278:28:29:72:530:147:144:g_d0_f4:144:g_d0_f4:B:two year later by roughly 12 percent of the average annual learning gain.  For sixth graders, the 
+26:656:52376:29:32:72:228:118:144:g_d0_f4:144:g_d0_f4:B:effects are roughly half as large. 
+26:657:52411:32:12:539:542:86:122:g_d0_f73:122:g_d0_f73:?:                                                                                                                                                                           
+26:658:52581:12:0:72:394:74:99:g_d0_f75:99:g_d0_f75:F:counterfactual relationship between August scores and subsequent performance. 
+27:659:52659:0:28:108:527:708:144:g_d0_f4:144:g_d0_f4:A: As we mentioned previously, it may be that the retention treatment effects are different 
+27:660:52748:28:28:72:498:680:144:g_d0_f4:144:g_d0_f4:B:for students near the cutoff in August than for students near the cutoff in June.  To place 
+27:661:52840:28:29:72:511:652:144:g_d0_f4:144:g_d0_f4:B:reasonable bounds on the potential summer school effects, we subtract 0.25 logits from the 
+27:662:52931:29:28:72:521:623:144:g_d0_f4:144:g_d0_f4:B:retention treatment effect for the upper estimates and add 0.25 logits for the lower estimates.  
+27:663:53028:28:28:72:514:595:144:g_d0_f4:144:g_d0_f4:B:Depending on our assumption regarding the magnitude of the retention treatment effect, the 
+27:664:53119:28:29:72:524:567:144:g_d0_f4:144:g_d0_f4:B:implied summer school effects can vary substantially.  Despite this, it appears that even under 
+27:665:53215:29:28:72:541:538:144:g_d0_f4:144:g_d0_f4:B:very pessimistic assumptions, summer school improves performance in mathematics.  In reading, 
+27:666:53309:28:28:72:494:510:144:g_d0_f4:144:g_d0_f4:B:the lower bound estimates are close to zero.  Conversely, the upper bound estimates are 
+27:667:53397:28:29:72:286:482:144:g_d0_f4:144:g_d0_f4:B:substantial for reading and for mathematics. 
+27:668:53442:29:28:72:75:453:144:g_d0_f4:144:g_d0_f4:B: 
+27:669:53442:28:28:72:211:425:144:g_d0_f81:144:g_d0_f4:B:9.  Conclusions   
+27:670:53460:28:29:108:527:397:144:g_d0_f4:144:g_d0_f4:A: As school districts impose tougher standards on students and increasingly hold schools 
+27:671:53547:29:28:72:504:368:144:g_d0_f4:144:g_d0_f4:B:accountable for their performance, there will be a growing need to find effective remedial 
+27:672:53638:28:28:72:504:340:144:g_d0_f4:144:g_d0_f4:B:education programs to help low-achieving students.  The evidence presented in this paper 
+27:673:53727:28:29:72:507:312:144:g_d0_f4:144:g_d0_f4:B:suggests that summer school and grade retention have a modest but positive net impact on 
+27:674:53816:29:28:72:533:283:144:g_d0_f4:144:g_d0_f4:B:achievement scores for third grade students, but little if any effect on academic achievement for 
+27:675:53914:28:28:72:524:255:144:g_d0_f4:144:g_d0_f4:B:sixth grade students.  These findings are robust to various specifications, and do not appear to 
+27:676:54011:28:28:72:533:227:144:g_d0_f4:144:g_d0_f4:B:vary substantially across different groups.   However, these programs do appear to have a larger 
+27:677:54108:28:29:72:279:199:144:g_d0_f4:144:g_d0_f4:B:effect on math than reading achievement.   
+27:678:54151:29:28:108:522:170:144:g_d0_f4:144:g_d0_f4:A: For third grade students, the net effect is a combination of benefits from both summer 
+27:679:54238:28:28:72:524:142:144:g_d0_f4:144:g_d0_f4:B:school and grade retention.  Contrary to conventional wisdom and prior research, we find that 
+27:680:54332:28:29:72:539:114:144:g_d0_f4:144:g_d0_f4:B:retention may actually increase academic achievement for low-achieving third graders.  For sixth 
+27:681:54429:29:0:72:529:85:144:g_d0_f4:144:g_d0_f4:B:grade students, the zero net effects appear to mask a small positive summer school effect and a 
+28:682:54525:0:28:72:531:708:144:g_d0_f4:144:g_d0_f4:B:negative retention effect.  However, it is also possible that the negative effects for sixth graders 
+28:683:54626:28:28:72:458:680:144:g_d0_f4:144:g_d0_f4:B:are driven by the higher incentives that promoted students face two years later.   
+28:684:54709:28:29:108:524:652:144:g_d0_f4:144:g_d0_f4:A: These finding suggest that school districts that implement policies aimed at increasing 
+28:685:54797:29:28:72:539:623:144:g_d0_f4:144:g_d0_f4:B:standards and accountability can utilize summer school and (to a lesser extent) grade retention to 
+28:686:54896:28:28:72:531:595:144:g_d0_f4:144:g_d0_f4:B:support students who cannot initially meet the new standards.  One limitation of this analysis is 
+28:687:54994:28:29:72:513:567:144:g_d0_f4:144:g_d0_f4:B:that we were only able to follow students for several years following summer school and/or 
+28:688:55085:29:28:72:531:538:144:g_d0_f4:144:g_d0_f4:B:retention.  It is possible that the summer school benefits will fade and that the long term effects 
+28:689:55185:28:28:72:478:510:144:g_d0_f4:144:g_d0_f4:B:of retention will be worse than the short term effects.  As more time passes from the 
+28:690:55271:28:29:72:541:482:144:g_d0_f4:144:g_d0_f4:B:implementation of the program, it will be possible to examine these possibilities in greater detail. 
+28:691:55372:29:28:72:144:453:144:g_d0_f4:144:g_d0_f4:B:  
+28:692:55374:28:0:72:144:425:144:g_d0_f4:144:g_d0_f4:B:  
+29:693:55376:0:28:72:75:708:144:g_d0_f4:144:g_d0_f4:B: 
+29:694:55376:28:27:278:337:680:144:g_d0_f81:144:g_d0_f81:?:References 
+29:695:55387:27:14:72:75:653:99:g_d0_f82:99:g_d0_f82:F: 
+29:696:55387:14:28:72:541:639:144:g_d0_f4:144:g_d0_f4:B:Alexander, K. L., D. R. Entwisle, et al. (1994). On the Success of Failure: A Reassessment of the 
+29:697:55485:28:28:108:533:611:144:g_d0_f4:144:g_d0_f4:A:Effects of Retetenion in the Primary Grades. New York, University of Cambridge Press. 
+29:698:55571:28:29:72:538:583:144:g_d0_f4:144:g_d0_f4:B:Angrist, J. D. and V. Lavy (1999). “Using Maimonides Rule to Estimate the Effect of Class Size 
+29:699:55666:29:28:108:484:554:144:g_d0_f4:144:g_d0_f4:A:on Scholastic Achievement.” Quarterly Journal of Economics 114(2): 535-75. 
+29:700:55740:28:28:72:513:526:144:g_d0_f4:144:g_d0_f4:B:Barnett, W. S. (1995).  "Long-Term Effects of Early Childhood Programs on Cognitive and 
+29:701:55828:28:29:108:380:498:144:g_d0_f4:144:g_d0_f4:A:School Outcomes."  The Future of Children 5(3): 25-51. 
+29:702:55883:29:28:72:526:469:144:g_d0_f4:144:g_d0_f4:B:Berk, R. A. and D. Rauma (1983). “Capitalizing on Nonrandom Assignment to Treatments: A 
+29:703:55971:28:29:108:505:441:144:g_d0_f4:144:g_d0_f4:A:Regression-Discontinuity Evaluation of a Crime-Control Program.” Journal of the 
+29:704:56051:29:28:108:346:412:144:g_d0_f4:144:g_d0_f4:A:American Statistical Association 78(381): 21-28. 
+29:705:56099:28:29:72:548:384:144:g_d0_f4:144:g_d0_f4:B:Black,  S.  (1999)  “Do  Better  Schools  Matter?    Parental  Valuation  of  Elementary  Education.”    
+29:706:56204:29:28:108:334:355:144:g_d0_f4:144:g_d0_f4:A:Quarterly Journal of Economics 114: 577-599. 
+29:707:56248:28:28:72:524:327:144:g_d0_f4:144:g_d0_f4:B:Cooper, H., K. Charlton, et al. (2000). Making the Most of Summer School: A Meta-Analysis 
+29:708:56338:28:28:108:483:299:144:g_d0_f4:144:g_d0_f4:A:and Narrative Review. Monograph series of the Society for Research in Child 
+29:709:56414:28:29:108:246:271:144:g_d0_f4:144:g_d0_f4:A:Development. Malden, MA. 
+29:710:56439:29:28:72:536:242:144:g_d0_f4:144:g_d0_f4:B:Dworkin, A. G., J. Lorence, et al. (1999). Elementary School Retention and Social Promotion in 
+29:711:56534:28:28:108:502:214:144:g_d0_f4:144:g_d0_f4:A:Texas: An Assessment of Students who Failed the Reading Section of the TAAS. 
+29:712:56611:28:29:108:268:186:144:g_d0_f4:144:g_d0_f4:A:Houston, University of Houston. 
+29:713:56643:29:28:72:476:157:144:g_d0_f4:144:g_d0_f4:B:ECS (2000). ECS State Notes, Education Commission of the States (www.ecs.org). 
+29:714:56722:28:28:72:532:129:144:g_d0_f4:144:g_d0_f4:B:Eide, E. R. and M. H. Showalter (forthcoming). "The Effect of Grade Retention on Educational 
+29:715:56815:28:0:108:423:101:144:g_d0_f4:144:g_d0_f4:A:and Labor Market Outcomes."  Economics of Education Review. 
+30:716:56874:0:28:72:511:708:144:g_d0_f4:144:g_d0_f4:B:Fine, M. (1991). Framing Dropouts: Notes on the Politics of an Urban Public High School. 
+30:717:56963:28:28:108:245:680:144:g_d0_f4:144:g_d0_f4:A:Albany, N.Y., SUNY Press. 
+30:718:56989:28:29:72:512:652:144:g_d0_f4:144:g_d0_f4:B:Grissom, J. B. and L. A. Shepard (1989). Repeating and Dropping Out of School. Flunking 
+30:719:57077:29:28:108:535:623:144:g_d0_f4:144:g_d0_f4:A:Grades: Research and Policies on Retention. L. A. Shepard and M. L. Smith. New York, 
+30:720:57162:28:29:108:232:595:144:g_d0_f4:144:g_d0_f4:A:The Falmer Press: 34-63. 
+30:721:57187:29:28:72:523:566:144:g_d0_f4:144:g_d0_f4:B:Guryan, J. (2000) "Does Money Matter?  Regression Discontinuity Estimates from Education 
+30:722:57276:28:28:108:469:538:144:g_d0_f4:144:g_d0_f4:A:Finance Reform in Massachusetts.” University of Chicago Working Paper. 
+30:723:57347:28:29:72:522:510:144:g_d0_f4:144:g_d0_f4:B:Hahn, J., P. Todd, et al. (1999). Evaluating the Effect of an Anti-Discrimination Law Using a 
+30:724:57441:29:28:108:503:481:144:g_d0_f4:144:g_d0_f4:A:Regression-Discontinuity Design. NBER Working Paper #7131. Cambridge, MA. 
+30:725:57515:28:28:72:538:453:144:g_d0_f4:144:g_d0_f4:B:Hanushek, E. A. (1996).  “School Resources and Student Performance.” In Does Money Matter? 
+30:726:57606:28:29:108:542:425:144:g_d0_f4:144:g_d0_f4:A:The Effect of School Resources on Student Achievement and Adult Success, ed. Burtless, 
+30:727:57693:29:28:108:352:396:144:g_d0_f4:144:g_d0_f4:A:G. Washington D.C.: Brookings Institution Press.  
+30:728:57743:28:28:72:534:368:144:g_d0_f4:144:g_d0_f4:B:Hedges, L. V. and R. Greenwald (1996).  “Have Times Changed? The Relation between School 
+30:729:57832:28:28:108:513:340:144:g_d0_f4:144:g_d0_f4:A:Resources and Student Performance.” In Does Money Matter? The Effect of School 
+30:730:57911:28:29:108:514:312:144:g_d0_f4:144:g_d0_f4:A:Resources on Student Achievement and Adult Success, ed. Burtless, G. Washington 
+30:731:57991:29:28:108:273:283:144:g_d0_f4:144:g_d0_f4:A:D.C.: Brookings Institution Press. 
+30:732:58026:28:28:72:519:255:144:g_d0_f4:144:g_d0_f4:B:Holmes, C. T. (1989). Grade Level Retention Effects: A Meta-Analysis of Research Studies. 
+30:733:58116:28:29:108:528:227:144:g_d0_f4:144:g_d0_f4:A:Flunking Grades:  Research and Policies on Retention. L. A. Shepard and M. L. Smith. 
+30:734:58201:29:28:108:288:198:144:g_d0_f4:144:g_d0_f4:A:New York, The Falmer Press: 16-33. 
+30:735:58236:28:29:72:532:170:144:g_d0_f4:144:g_d0_f4:B:Hoxby, C. M. (2000). "The Effects of Class Size on Student Achievement: New Evidence from 
+30:736:58326:29:28:108:477:141:144:g_d0_f4:144:g_d0_f4:A:Population Variation."  Quarterly Journal of Economics 115 (4): 1239-1285. 
+30:737:58400:28:28:72:533:113:144:g_d0_f4:144:g_d0_f4:B:Jacob, B. A. and S. D. Levitt (2001). High-Stakes Testing and Teacher Cheating in the Chicago 
+30:738:58494:28:0:108:377:85:144:g_d0_f4:144:g_d0_f4:A:Public Schools. University of Chicago, Working Paper. 
+31:739:58548:0:28:72:542:708:144:g_d0_f4:144:g_d0_f4:B:Jacob, B.A. (2001).  The Impact of High-Stakes Testing on Student Achievement: Evidence from 
+31:740:58641:28:28:108:533:680:144:g_d0_f4:144:g_d0_f4:A:Chicago.  Working paper, John F. Kennedy School of Government, Harvard University. 
+31:741:58724:28:29:72:527:652:144:g_d0_f4:144:g_d0_f4:B:Karweit, N. L. (1991). Repeating a Grade: Time to Grow or Denial of Opportunity. Baltimore, 
+31:742:58816:29:28:108:511:623:144:g_d0_f4:144:g_d0_f4:A:Maryland, Center for Research on Effective Schooling for Disadvantaged Students. 
+31:743:58897:28:29:72:515:595:144:g_d0_f4:144:g_d0_f4:B:Katz, L. F. and K. M. Murphy (1992).  "Changes in Relative Wages 1963-1987: Supply and 
+31:744:58984:29:28:108:434:566:144:g_d0_f4:144:g_d0_f4:A:Demand Factors."  Quarterly Journal of Economics 107 (1): 35-78.  
+31:745:59049:28:28:72:535:538:144:g_d0_f4:144:g_d0_f4:B:Krueger, A. B. (1999). "Experimental Estimates of Education Production Functions."  Quarterly 
+31:746:59143:28:29:108:282:510:144:g_d0_f4:144:g_d0_f81:A:Journal of Economics 114:497-532. 
+31:747:59175:29:28:72:543:481:144:g_d0_f4:144:g_d0_f4:B:Murnane, R. J., J. B. Willet, and F. Levy (1995). "The Growing Importance of Cognitive Skills in 
+31:748:59272:28:29:108:497:453:144:g_d0_f4:144:g_d0_f4:A:Wage Determination."  The Review of Economics and Statistics 77 (2):251-266. 
+31:749:59348:29:28:72:526:424:144:g_d0_f4:144:g_d0_f4:B:Pierson, L. H. and J. P. Connell (1992). “Effect of Grade Retention on Self-System Processes, 
+31:750:59442:28:29:108:538:396:144:g_d0_f4:144:g_d0_f4:A:School Engagement and Academic Performance.” Journal of Educational Psychology 84: 
+31:751:59524:29:28:108:154:367:144:g_d0_f4:144:g_d0_f4:A:300-307. 
+31:752:59533:28:28:72:466:339:144:g_d0_f4:144:g_d0_f4:B:Pipho, C. (1999). “Summer School: Rx for Low Performance.” Phi Delta Kappan 
+31:753:59608:28:29:108:198:311:144:g_d0_f81:144:g_d0_f4:A:81(September): 7. 
+31:754:59626:29:28:72:520:282:144:g_d0_f4:144:g_d0_f4:B:Roderick, M. (1994). “Grade Retention and School Dropout:  Investigating the Association.” 
+31:755:59717:28:29:108:381:254:144:g_d0_f4:144:g_d0_f4:A:American Educational Research Journal 31(4): 729-759. 
+31:756:59770:29:28:72:496:225:144:g_d0_f4:144:g_d0_f4:B:Roderick, M., J. Nagaoka, et al. (2000). Update: Ending Social Promotion. Chicago, IL, 
+31:757:59857:28:28:108:312:197:144:g_d0_f4:144:g_d0_f4:A:Consortium on Chicago School Research. 
+31:758:59896:28:29:72:532:169:144:g_d0_f4:144:g_d0_f4:B:Rumberger, R. W. (1987). “High School Dropouts: A Review of Issues and Evidence.” Review 
+31:759:59985:29:28:108:292:140:144:g_d0_f4:144:g_d0_f4:A:of Educational Research 57: 101-121. 
+31:760:60021:28:28:72:517:112:144:g_d0_f4:144:g_d0_f4:B:Schulz, E. M., R. Toles, et al. (1986). Association of Dropout Rates with Student Attributes. 
+31:761:60115:28:0:108:424:84:144:g_d0_f4:144:g_d0_f4:A:American Educational Research Association, San Francisco, CA. 
+32:762:60177:0:28:72:526:708:144:g_d0_f4:144:g_d0_f4:B:Shepard, L. A. and M. L. Smith (1989). Flunking Grades: Research and Policies on Retention. 
+32:763:60269:28:28:108:283:680:144:g_d0_f4:144:g_d0_f4:A:New York, N.Y., The Falmer Press. 
+32:764:60303:28:29:72:540:652:144:g_d0_f4:144:g_d0_f4:B:Thistlewaite, D. and D. Campbell (1960). “Regression-Discontinuity Analysis: An Alternative to 
+32:765:60398:29:28:108:497:623:144:g_d0_f4:144:g_d0_f4:A:the Ex-Post Facto Experiment.” Journal of Educational Psychology 51: 309-317. 
+32:766:60475:28:29:72:541:595:144:g_d0_f4:144:g_d0_f4:B:Topel, R. (1999). "Labor Markets and Economic Growth." in Handbook of Labor Economics, ed. 
+32:767:60566:29:28:108:495:566:144:g_d0_f4:144:g_d0_f4:A:Ashenfelter, O. and Card, D. Amsterdam: Elsevier Science B.V. pp. 2943-2984. 
+32:768:60643:28:28:72:524:538:144:g_d0_f4:144:g_d0_f4:B:Trochim, W. (1984). Research Design for Program Evaluation: The Regression-Discontinuity 
+32:769:60732:28:29:108:350:510:144:g_d0_f4:144:g_d0_f4:A:Approach. Beverley Hills, CA, Sage Publications. 
+32:770:60781:29:385:72:463:481:144:g_d0_f4:144:g_d0_f4:B:Wright, B. and M. H. Stone (1979). Best Test Design. Chicago, IL, MESA Press. 
+34:771:61616:385:9:316:385:96:78:g_d0_f93:78:g_d0_f93:?:Fraction Treated
+35:772:61982:9:0:322:414:87:92:g_d0_f96:92:g_d0_f96:?:Future Performance
+36:773:62362:0:0:312:380:97:75:g_d0_f99:75:g_d0_f99:?:Fraction Treated
+36:774:62402:0:557:337:455:654:75:g_d0_f99:75:g_d0_f99:?:Achievement One Year Later
+37:775:62784:557:0:306:375:97:78:g_d0_f93:78:g_d0_f93:?:Fraction Treated
+37:776:62817:0:566:332:452:662:78:g_d0_f93:78:g_d0_f93:?:Achievement One Year Later
+38:777:63223:566:0:291:360:96:66:g_d0_f103:66:g_d0_f103:?:Fraction Retained
+38:778:63271:0:620:312:423:717:66:g_d0_f103:66:g_d0_f103:?:Achievement One Year Later
+39:779:63676:620:0:306:377:97:70:g_d0_f108:70:g_d0_f108:?:Fraction Retained
+39:780:63714:0:26:327:441:734:70:g_d0_f108:70:g_d0_f108:?:Achievement One Year Later
+40:781:63768:26:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 1 
+40:782:63776:14:15:72:174:694:144:g_d0_f111:144:g_d0_f111:C:Summary Statistics 
+40:783:63795:15:37:259:485:679:99:g_d0_f112:99:g_d0_f113:?: Third Grade Sixth Grade 
+40:784:63819:37:0:138:141:642:99:g_d0_f112:99:g_d0_f112:?: 
+40:785:63819:0:0:220:245:654:99:g_d0_f112:99:g_d0_f112:?:Total 
+40:786:63825:0:13:274:304:667:99:g_d0_f112:99:g_d0_f112:?:Failed 
+40:787:63832:13:12:264:313:654:99:g_d0_f112:99:g_d0_f112:?:Promotion 
+40:788:63842:12:0:273:304:642:99:g_d0_f112:99:g_d0_f112:?:Cutoff 
+40:789:63849:0:0:326:413:654:99:g_d0_f114:99:g_d0_f112:?:Retained Total 
+40:790:63864:0:13:442:472:667:99:g_d0_f112:99:g_d0_f112:?:Failed 
+40:791:63871:13:12:432:481:654:99:g_d0_f112:99:g_d0_f112:?:Promotion 
+40:792:63881:12:0:441:472:642:99:g_d0_f112:99:g_d0_f112:?:Cutoff 
+40:793:63888:0:26:492:534:654:99:g_d0_f112:99:g_d0_f112:?:Retained 
+40:794:63897:26:13:72:540:628:99:g_d0_f115:99:g_d0_f112:F:Student Characteristics       
+40:795:63926:13:13:72:555:615:99:g_d0_f112:99:g_d0_f112:F:Black                     0.713       0.822       0.844       0.553       0.645       0.678       
+40:796:64024:13:13:72:555:602:99:g_d0_f112:99:g_d0_f112:F:Hispanic       0.174       0.136       0.123       0.318       0.314       0.288       
+40:797:64111:13:12:72:555:589:99:g_d0_f112:99:g_d0_f112:F:Male              0.489       0.528       0.551       0.480       0.518       0.535       
+40:798:64201:12:13:72:555:577:99:g_d0_f112:99:g_d0_f112:F:Black       Male              0.347       0.435       0.467       0.261       0.334       0.364       
+40:799:64303:13:13:72:555:564:99:g_d0_f112:99:g_d0_f112:F:Hispanic       Male       0.087       0.070       0.066       0.156       0.162       0.152       
+40:800:64401:13:12:72:558:551:99:g_d0_f112:99:g_d0_f112:F:Age       9.379       9.438       9.406       12.353       12.471       12.448       
+40:801:64486:12:13:72:555:539:99:g_d0_f112:99:g_d0_f112:F:Free       Lunch       0.805       0.904       0.927       0.774       0.890       0.905       
+40:802:64581:13:13:72:555:526:99:g_d0_f112:99:g_d0_f112:F:Reduced       Price       Lunch       0.075       0.043       0.031       0.088       0.052       0.041       
+40:803:64691:13:12:72:171:513:99:g_d0_f112:99:g_d0_f112:F:Currently in Bilingual 
+40:804:64714:12:13:72:555:501:99:g_d0_f112:99:g_d0_f112:F:Program       0.023       0.021       0.020       0.112       0.206       0.197       
+40:805:64800:13:12:72:169:488:99:g_d0_f112:99:g_d0_f112:F:Formerly in Bilingual 
+40:806:64822:12:13:72:555:476:99:g_d0_f112:99:g_d0_f112:F:Program       0.135       0.087       0.076       0.228       0.111       0.090       
+40:807:64908:13:13:72:555:463:99:g_d0_f112:99:g_d0_f112:F:Special       Education       0.033       0.038       0.039       0.019       0.023       0.025       
+40:808:65010:13:12:72:555:450:99:g_d0_f112:99:g_d0_f112:F:Living       with       Relatives       0.113       0.084       0.076       0.121       0.105       0.100       
+40:809:65122:12:13:72:525:438:99:g_d0_f112:99:g_d0_f112:F:Living in Foster Care 0.067 0.086 0.088 0.045 0.062 0.067 
+40:810:65180:13:12:72:168:425:99:g_d0_f115:99:g_d0_f115:F:Experience Under the 
+40:811:65201:12:13:72:567:413:99:g_d0_f115:99:g_d0_f112:F:Accountability Policy       
+40:812:65228:13:12:72:555:400:99:g_d0_f112:99:g_d0_f112:F:Passed       in       June       0.573       0.000       0.012       0.690       0.000       0.035       
+40:813:65333:12:13:72:555:388:99:g_d0_f112:99:g_d0_f112:F:Failed       Math       Only       0.044       0.102       0.041       0.060       0.193       0.135       
+40:814:65440:13:13:72:555:375:99:g_d0_f112:99:g_d0_f112:F:Fail       Reading       Only       0.199       0.465       0.366       0.147       0.473       0.352       
+40:815:65548:13:13:72:525:362:99:g_d0_f112:99:g_d0_f112:F:Failed Math and Reading 0.185 0.432 0.581 0.104 0.334 0.478 
+40:816:65608:13:12:72:555:349:99:g_d0_f112:99:g_d0_f112:F:June       Waiver       0.028       0.065       0.000       0.028       0.089       0.000       
+40:817:65704:12:13:72:525:337:99:g_d0_f112:99:g_d0_f112:F:Assigned to Summer School 0.401 0.933 1.000 0.286 0.908 1.000 
+40:818:65766:13:13:72:555:324:99:g_d0_f112:99:g_d0_f112:F:August       Waiver       0.058       0.135       0.000       0.038       0.121       0.000       
+40:819:65864:13:12:72:555:311:99:g_d0_f112:99:g_d0_f112:F:Promoted       0.791       0.517       0.000       0.873       0.606       0.000       
+40:820:65951:12:13:72:555:299:99:g_d0_f112:99:g_d0_f112:F:Retained       0.209       0.483       1.000       0.127       0.394       1.000       
+40:821:66038:13:19:72:567:286:99:g_d0_f115:99:g_d0_f112:F:School Performance        
+40:822:66064:19:25:72:529:267:99:g_d0_f112:99:g_d0_f112:F:Base year math score  -1.121 (1.066) -1.916 (0.726) -2.114 (0.695) 0.772 (0.917) -0.045 (0.589) -0.210 (0.563) 
+40:823:66175:25:25:72:529:242:99:g_d0_f112:99:g_d0_f112:F:Year one math score -0.440 (0.984) -1.039 (0.804) -1.210 (0.843) 1.264 (0.899) 0.566 (0.641) 0.348 (0.665) 
+40:824:66282:25:25:72:529:217:99:g_d0_f112:99:g_d0_f112:F:Year two math score  0.118 (0.982) -0.491 (0.760) -0.668 (0.761) 1.739 (0.856) 1.074 (0.661) 0.785 (0.676) 
+40:825:66389:25:25:72:529:192:99:g_d0_f112:99:g_d0_f112:F:Base year reading score -1.205 (1.060) -2.111 (0.560) -2.280 (0.540) 0.162 (0.951) -0.755 (0.466) -0.836 (0.479) 
+40:826:66502:25:25:72:529:167:99:g_d0_f112:99:g_d0_f112:F:Year one reading score  -0.796 (1.010) -1.440 (0.721) -1.610 (0.752) 0.727 (0.970) -0.059 (0.638) -0.334 (0.640) 
+40:827:66615:25:21:72:529:142:99:g_d0_f112:99:g_d0_f112:F:Year two reading score  -0.350 (1.011) -0.997 (0.704) -1.212 (0.688) 1.291 (0.962) 0.540 (0.695) 0.213 (0.700) 
+40:828:66726:21:14:83:551:121:99:g_d0_f112:99:g_d0_f112:?:Number      of      Observations      74,260      31,738      15,514      73,634      22,861       9,332      
+40:829:66836:14:12:72:534:107:99:g_d0_f112:99:g_d0_f112:F:Notes to Table 1: The sample contains all students who were enrolled in the appropriate grades between 
+40:830:66939:12:0:72:256:95:99:g_d0_f112:99:g_d0_f112:F:the Spring of 1997 and the Spring of 1999.
+41:831:66981:0:13:72:117:709:122:g_d0_f116:122:g_d0_f116:F:Table 2   
+41:832:66991:13:14:72:483:696:122:g_d0_f116:122:g_d0_f116:F:The Net Effect of Summer School and Grade Retention on Student Achievement  
+41:833:67067:14:17:72:693:682:122:g_d0_f116:122:g_d0_f116:F:                                                  Specification                                                  
+41:834:67180:17:15:72:502:665:122:g_d0_f116:122:g_d0_f116:F:Dependent Variables OLS IV IV 
+41:835:67210:15:14:264:597:650:122:g_d0_f117:122:g_d0_f117:?:                  (1)                  (2)                  (3)                  
+41:836:67291:14:14:271:604:636:122:g_d0_f117:122:g_d0_f117:?:    
+41:837:67294:14:14:72:604:622:122:g_d0_f116:144:g_d0_f110:C:Third Grade    
+41:838:67309:14:20:72:604:608:122:g_d0_f117:122:g_d0_f117:F:     Reading     
+41:839:67325:20:0:72:198:588:122:g_d0_f117:122:g_d0_f117:F:         One year (n=13,687) 
+41:840:67354:0:13:259:287:595:122:g_d0_f117:122:g_d0_f117:?:0.082 
+41:841:67360:13:0:255:290:582:122:g_d0_f117:122:g_d0_f117:?:(0.019) 
+41:842:67368:0:13:370:398:595:122:g_d0_f117:122:g_d0_f117:?:0.112 
+41:843:67374:13:0:366:401:582:122:g_d0_f117:122:g_d0_f117:?:(0.026) 
+41:844:67382:0:13:481:509:595:122:g_d0_f117:122:g_d0_f117:?:0.104 
+41:845:67388:13:21:477:512:582:122:g_d0_f117:122:g_d0_f117:?:(0.025) 
+41:846:67396:21:0:72:204:561:122:g_d0_f117:122:g_d0_f117:F:         Two years (n=12,806) 
+41:847:67426:0:13:259:287:568:122:g_d0_f117:122:g_d0_f117:?:0.032 
+41:848:67432:13:0:255:290:555:122:g_d0_f117:122:g_d0_f117:?:(0.020) 
+41:849:67440:0:13:370:398:568:122:g_d0_f117:122:g_d0_f117:?:0.064 
+41:850:67446:13:0:366:401:555:122:g_d0_f117:122:g_d0_f117:?:(0.027) 
+41:851:67454:0:13:481:509:568:122:g_d0_f117:122:g_d0_f117:?:0.062 
+41:852:67460:13:14:477:512:555:122:g_d0_f117:122:g_d0_f117:?:(0.026) 
+41:853:67468:14:20:72:604:541:122:g_d0_f117:122:g_d0_f117:F:     Math     
+41:854:67481:20:7:72:287:521:122:g_d0_f117:122:g_d0_f117:F:         One year (n=13,664) 0.155 
+41:855:67516:7:0:255:290:514:122:g_d0_f117:122:g_d0_f117:?:(0.019) 
+41:856:67524:0:13:370:398:527:122:g_d0_f117:122:g_d0_f117:?:0.132 
+41:857:67530:13:0:366:401:514:122:g_d0_f117:122:g_d0_f117:?:(0.026) 
+41:858:67538:0:13:481:509:527:122:g_d0_f117:122:g_d0_f117:?:0.136 
+41:859:67544:13:20:477:512:514:122:g_d0_f117:122:g_d0_f117:?:(0.024) 
+41:860:67552:20:7:72:287:494:122:g_d0_f117:122:g_d0_f117:F:          Two years (n=12,802) 0.066 
+41:861:67589:7:0:255:290:487:122:g_d0_f117:122:g_d0_f117:?:(0.021) 
+41:862:67597:0:13:370:398:500:122:g_d0_f117:122:g_d0_f117:?:0.087 
+41:863:67603:13:0:366:401:487:122:g_d0_f117:122:g_d0_f117:?:(0.027) 
+41:864:67611:0:13:481:509:500:122:g_d0_f117:122:g_d0_f117:?:0.095 
+41:865:67617:13:14:477:512:487:122:g_d0_f117:122:g_d0_f117:?:(0.026) 
+41:866:67625:14:14:271:604:473:122:g_d0_f117:122:g_d0_f117:?:    
+41:867:67628:14:13:72:604:459:122:g_d0_f116:122:g_d0_f117:F:Sixth Grade    
+41:868:67643:13:20:72:604:446:122:g_d0_f117:122:g_d0_f117:F:     Reading     
+41:869:67659:20:0:72:192:426:122:g_d0_f117:122:g_d0_f117:F:         One year (n=7,920) 
+41:870:67687:0:14:257:288:433:122:g_d0_f117:122:g_d0_f117:?:-0.013 
+41:871:67694:14:0:255:290:419:122:g_d0_f117:122:g_d0_f117:?:(0.022) 
+41:872:67702:0:14:370:398:433:122:g_d0_f117:122:g_d0_f117:?:0.012 
+41:873:67708:14:0:366:401:419:122:g_d0_f117:122:g_d0_f117:?:(0.029) 
+41:874:67716:0:14:481:509:433:122:g_d0_f117:122:g_d0_f117:?:0.024 
+41:875:67722:14:20:477:512:419:122:g_d0_f117:122:g_d0_f117:?:(0.027) 
+41:876:67730:20:0:72:201:399:122:g_d0_f117:122:g_d0_f117:F:          Two years (n=7,262) 
+41:877:67760:0:14:257:288:406:122:g_d0_f117:122:g_d0_f117:?:-0.027 
+41:878:67767:14:0:255:290:392:122:g_d0_f117:122:g_d0_f117:?:(0.024) 
+41:879:67775:0:14:368:399:406:122:g_d0_f117:122:g_d0_f117:?:-0.015 
+41:880:67782:14:0:366:401:392:122:g_d0_f117:122:g_d0_f117:?:(0.032) 
+41:881:67790:0:14:481:509:406:122:g_d0_f117:122:g_d0_f117:?:0.000 
+41:882:67796:14:14:477:512:392:122:g_d0_f117:122:g_d0_f117:?:(0.030) 
+41:883:67804:14:20:72:604:378:122:g_d0_f117:122:g_d0_f117:F:     Math     
+41:884:67817:20:0:72:192:358:122:g_d0_f117:122:g_d0_f117:F:         One year (n=7,904) 
+41:885:67845:0:13:259:287:365:122:g_d0_f117:122:g_d0_f117:?:0.056 
+41:886:67851:13:0:255:290:352:122:g_d0_f117:122:g_d0_f117:?:(0.016) 
+41:887:67859:0:13:370:398:365:122:g_d0_f117:122:g_d0_f117:?:0.077 
+41:888:67865:13:0:366:401:352:122:g_d0_f117:122:g_d0_f117:?:(0.021) 
+41:889:67873:0:13:481:509:365:122:g_d0_f117:122:g_d0_f117:?:0.077 
+41:890:67879:13:21:477:512:352:122:g_d0_f117:122:g_d0_f117:?:(0.021) 
+41:891:67887:21:0:72:198:331:122:g_d0_f117:122:g_d0_f117:F:         Two years (n=7,249) 
+41:892:67916:0:13:259:287:338:122:g_d0_f117:122:g_d0_f117:?:0.007 
+41:893:67922:13:0:255:290:325:122:g_d0_f117:122:g_d0_f117:?:(0.019) 
+41:894:67930:0:13:370:398:338:122:g_d0_f117:122:g_d0_f117:?:0.018 
+41:895:67936:13:0:366:401:325:122:g_d0_f117:122:g_d0_f117:?:(0.025) 
+41:896:67944:0:13:481:509:338:122:g_d0_f117:122:g_d0_f117:?:0.019 
+41:897:67950:13:14:477:512:325:122:g_d0_f117:122:g_d0_f117:?:(0.023) 
+41:898:67958:14:14:271:604:311:122:g_d0_f117:122:g_d0_f117:?:    
+41:899:67961:14:13:72:193:297:122:g_d0_f117:122:g_d0_f117:F:Additional Performance 
+41:900:67984:13:13:72:163:284:122:g_d0_f117:122:g_d0_f117:F:and Demographic 
+41:901:68000:13:0:72:127:271:122:g_d0_f117:122:g_d0_f117:F:Covariates 
+41:902:68011:0:27:263:597:284:122:g_d0_f117:122:g_d0_f117:?:No                  No                  Yes                  
+41:903:68072:27:12:72:526:257:99:g_d0_f112:99:g_d0_f112:F:Notes for Table 2: The sample third and sixth grade students from 1997 to 1999 whose June math score 
+41:904:68173:12:12:72:537:245:99:g_d0_f112:99:g_d0_f112:F:was above the cutoff and whose June reading score was within + or – 0.2 grade equivalents of the cutoff.  
+41:905:68279:12:12:72:531:233:99:g_d0_f112:99:g_d0_f112:F:Year fixed effects are included in each model.  The additional performance and demographic covariates 
+41:906:68381:12:13:72:517:221:99:g_d0_f112:99:g_d0_f112:F:include:  one and two year prior achievement scores in math and reading (with missing values set to 
+41:907:68481:13:12:72:527:208:99:g_d0_f112:99:g_d0_f112:F:zero), along with variables that indicate whether these scores were missing, age, male, black, Hispanic, 
+41:908:68586:12:12:72:514:196:99:g_d0_f112:99:g_d0_f112:F:black*male, Hispanic*male, free lunch, reduced price lunch, special education participation, current 
+41:909:68687:12:12:72:528:184:99:g_d0_f112:99:g_d0_f112:F:bilingual participation, past bilingual participation, lives in foster care, lives with a non-parent relative, 
+41:910:68798:12:12:72:360:172:99:g_d0_f112:99:g_d0_f112:F:census block level social status and census block level poverty.     
+41:911:68867:12:13:72:75:160:99:g_d0_f112:99:g_d0_f112:F: 
+41:912:68867:13:0:72:75:147:99:g_d0_f112:99:g_d0_f112:F: 
+42:913:68867:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 3 
+42:914:68875:14:14:72:533:694:144:g_d0_f111:144:g_d0_f111:F:The Robustness of Two-Year Net Summer School and Retention Estimates to Sample and 
+42:915:68958:14:15:72:179:680:144:g_d0_f111:144:g_d0_f111:C:Specification Choice 
+42:916:68979:15:15:259:497:665:144:g_d0_f111:144:g_d0_f111:C: Third Grade Sixth Grade 
+42:917:69003:15:21:103:570:650:144:g_d0_f111:144:g_d0_f111:C:Specification          Reading         Math         Reading         Math         
+42:918:69084:21:0:72:116:629:144:g_d0_f110:144:g_d0_f110:C:Baseline 
+42:919:69093:0:14:236:266:636:144:g_d0_f110:144:g_d0_f110:C:0.062 
+42:920:69099:14:0:232:270:622:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+42:921:69107:0:14:321:351:636:144:g_d0_f110:144:g_d0_f110:C:0.095 
+42:922:69113:14:0:317:355:622:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+42:923:69121:0:14:407:437:636:144:g_d0_f110:144:g_d0_f110:C:0.000 
+42:924:69127:14:0:403:441:622:144:g_d0_f110:144:g_d0_f110:C:(0.030) 
+42:925:69135:0:14:492:522:636:144:g_d0_f110:144:g_d0_f110:C:0.019 
+42:926:69141:14:15:488:526:622:144:g_d0_f110:144:g_d0_f110:C:(0.023) 
+42:927:69149:15:14:72:195:607:144:g_d0_f110:144:g_d0_f110:C:Including polynomials in 
+42:928:69174:14:0:72:162:593:144:g_d0_f110:144:g_d0_f110:C:prior achievement 
+42:929:69192:0:14:236:266:607:144:g_d0_f110:144:g_d0_f110:C:0.120 
+42:930:69198:14:0:232:270:593:144:g_d0_f110:144:g_d0_f110:C:(0.038) 
+42:931:69206:0:14:321:351:607:144:g_d0_f110:144:g_d0_f110:C:0.089 
+42:932:69212:14:0:317:355:593:144:g_d0_f110:144:g_d0_f110:C:(0.037) 
+42:933:69220:0:14:405:439:607:144:g_d0_f110:144:g_d0_f110:C:-0.021 
+42:934:69227:14:0:403:441:593:144:g_d0_f110:144:g_d0_f110:C:(0.035) 
+42:935:69235:0:14:490:524:607:144:g_d0_f110:144:g_d0_f110:C:-0.007 
+42:936:69242:14:15:488:526:593:144:g_d0_f110:144:g_d0_f110:C:(0.028) 
+42:937:69250:15:14:72:172:578:144:g_d0_f110:144:g_d0_f110:C:Including pre-policy 
+42:938:69271:14:14:72:198:564:144:g_d0_f110:144:g_d0_f110:C:cohorts (fourth difference 
+42:939:69298:14:0:72:124:550:144:g_d0_f110:144:g_d0_f110:C:estimates) 
+42:940:69309:0:14:236:266:571:144:g_d0_f110:144:g_d0_f110:C:0.029 
+42:941:69315:14:0:232:270:557:144:g_d0_f110:144:g_d0_f110:C:(0.018) 
+42:942:69323:0:14:321:351:571:144:g_d0_f110:144:g_d0_f110:C:0.060 
+42:943:69329:14:0:317:355:557:144:g_d0_f110:144:g_d0_f110:C:(0.017) 
+42:944:69337:0:14:407:437:571:144:g_d0_f110:144:g_d0_f110:C:0.003 
+42:945:69343:14:0:403:441:557:144:g_d0_f110:144:g_d0_f110:C:(0.021) 
+42:946:69351:0:14:492:522:571:144:g_d0_f110:144:g_d0_f110:C:0.042 
+42:947:69357:14:22:488:526:557:144:g_d0_f110:144:g_d0_f110:C:(0.017) 
+42:948:69365:22:14:72:172:535:144:g_d0_f110:144:g_d0_f110:C:Including pre-policy 
+42:949:69386:14:14:72:193:521:144:g_d0_f110:144:g_d0_f110:C:cohorts and polynomials 
+42:950:69410:14:0:72:174:507:144:g_d0_f110:144:g_d0_f110:C:in prior achievement 
+42:951:69431:0:14:236:266:528:144:g_d0_f110:144:g_d0_f110:C:0.018 
+42:952:69437:14:0:232:270:514:144:g_d0_f110:144:g_d0_f110:C:(0.018) 
+42:953:69445:0:14:321:351:528:144:g_d0_f110:144:g_d0_f110:C:0.062 
+42:954:69451:14:0:317:355:514:144:g_d0_f110:144:g_d0_f110:C:(0.017) 
+42:955:69459:0:14:405:439:528:144:g_d0_f110:144:g_d0_f110:C:-0.006 
+42:956:69466:14:0:403:441:514:144:g_d0_f110:144:g_d0_f110:C:(0.024) 
+42:957:69474:0:14:492:522:528:144:g_d0_f110:144:g_d0_f110:C:0.025 
+42:958:69480:14:21:488:526:514:144:g_d0_f110:144:g_d0_f110:C:(0.019) 
+42:959:69488:21:13:72:195:493:122:g_d0_f117:122:g_d0_f117:F:Including Only Students 
+42:960:69512:13:13:72:198:480:122:g_d0_f117:122:g_d0_f117:F:with Common Test Form 
+42:961:69534:13:0:72:123:467:122:g_d0_f117:122:g_d0_f117:F:and Level 
+42:962:69544:0:14:236:266:486:144:g_d0_f110:144:g_d0_f110:C:0.060 
+42:963:69550:14:0:232:270:472:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+42:964:69558:0:14:321:351:486:144:g_d0_f110:144:g_d0_f110:C:0.091 
+42:965:69564:14:0:317:355:472:144:g_d0_f110:144:g_d0_f110:C:(0.025) 
+42:966:69572:0:14:407:437:486:144:g_d0_f110:144:g_d0_f110:C:0.003 
+42:967:69578:14:0:403:441:472:144:g_d0_f110:144:g_d0_f110:C:(0.030) 
+42:968:69586:0:14:492:522:486:144:g_d0_f110:144:g_d0_f110:C:0.021 
+42:969:69592:14:19:488:526:472:144:g_d0_f110:144:g_d0_f110:C:(0.023) 
+42:970:69600:19:14:72:195:453:122:g_d0_f117:122:g_d0_f117:F:Including Only Students 
+42:971:69624:14:13:72:185:439:122:g_d0_f117:122:g_d0_f117:F:with Consistent Grade 
+42:972:69646:13:0:72:115:426:122:g_d0_f117:122:g_d0_f117:F:Patterns 
+42:973:69655:0:14:236:266:446:144:g_d0_f110:144:g_d0_f110:C:0.064 
+42:974:69661:14:0:232:270:432:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+42:975:69669:0:14:321:351:446:144:g_d0_f110:144:g_d0_f110:C:0.094 
+42:976:69675:14:0:317:355:432:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+42:977:69683:0:14:405:439:446:144:g_d0_f110:144:g_d0_f110:C:-0.004 
+42:978:69690:14:0:403:441:432:144:g_d0_f110:144:g_d0_f110:C:(0.030) 
+42:979:69698:0:14:492:522:446:144:g_d0_f110:144:g_d0_f110:C:0.018 
+42:980:69704:14:21:488:526:432:144:g_d0_f110:144:g_d0_f110:C:(0.023) 
+42:981:69712:21:14:72:171:411:144:g_d0_f110:144:g_d0_f110:C:Passed Reading and 
+42:982:69731:14:0:72:159:397:144:g_d0_f110:144:g_d0_f110:C:Marginal in Math 
+42:983:69748:0:14:234:268:411:144:g_d0_f110:144:g_d0_f110:C:-0.007 
+42:984:69755:14:0:232:270:397:144:g_d0_f110:144:g_d0_f110:C:(0.041) 
+42:985:69763:0:14:321:351:411:144:g_d0_f110:144:g_d0_f110:C:0.062 
+42:986:69769:14:0:317:355:397:144:g_d0_f110:144:g_d0_f110:C:(0.038) 
+42:987:69777:0:14:407:437:411:144:g_d0_f110:144:g_d0_f110:C:0.058 
+42:988:69783:14:0:403:441:397:144:g_d0_f110:144:g_d0_f110:C:(0.043) 
+42:989:69791:0:14:492:522:411:144:g_d0_f110:144:g_d0_f110:C:0.007 
+42:990:69797:14:13:488:526:397:144:g_d0_f110:144:g_d0_f110:C:(0.033) 
+42:991:69805:13:12:72:527:384:99:g_d0_f114:99:g_d0_f114:F: Notes for Table 3: Each cell contains an estimate from a separate 2SLS regression that controls for all of the past 
+42:992:69922:12:12:72:538:372:99:g_d0_f114:99:g_d0_f112:F:performance and demographic characteristics listed in the notes to Table 2.  For estimates in the last row, we use 
+42:993:70037:12:12:72:509:360:99:g_d0_f112:99:g_d0_f112:F:children who passed reading and were near the cutoff in math.  For the other specifications we use 
+42:994:70136:12:0:72:355:348:99:g_d0_f112:99:g_d0_f112:F:children who passed math and were near the cutoff in reading.  
+43:995:70199:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 4 
+43:996:70207:14:15:72:461:694:144:g_d0_f111:144:g_d0_f111:C:The Heterogeneity of Two-Year Net Summer School and Probation Effects  
+43:997:70278:15:14:286:506:679:144:g_d0_f111:144:g_d0_f111:C: Third Grade Sixth Grade 
+43:998:70302:14:22:259:565:665:144:g_d0_f111:144:g_d0_f111:C:       Reading       Math       Reading       Math       
+43:999:70359:22:0:72:167:643:144:g_d0_f110:144:g_d0_f110:C:Baseline estimates  
+43:1000:70379:0:14:267:297:650:144:g_d0_f110:144:g_d0_f110:C:0.062 
+43:1001:70385:14:0:263:301:636:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+43:1002:70393:0:14:344:374:650:144:g_d0_f110:144:g_d0_f110:C:0.095 
+43:1003:70399:14:0:340:378:636:144:g_d0_f110:144:g_d0_f110:C:(0.026) 
+43:1004:70407:0:14:420:450:650:144:g_d0_f110:144:g_d0_f110:C:0.000 
+43:1005:70413:14:0:416:454:636:144:g_d0_f110:144:g_d0_f110:C:(0.030) 
+43:1006:70421:0:14:497:527:650:144:g_d0_f110:144:g_d0_f110:C:0.019 
+43:1007:70427:14:15:493:531:636:144:g_d0_f110:144:g_d0_f110:C:(0.023) 
+43:1008:70435:15:21:143:587:621:144:g_d0_f118:144:g_d0_f110:?:Year     
+43:1009:70444:21:0:72:135:600:144:g_d0_f110:144:g_d0_f110:C:1997 Cohort 
+43:1010:70456:0:14:267:297:607:144:g_d0_f110:144:g_d0_f110:C:0.093 
+43:1011:70462:14:0:263:301:593:144:g_d0_f110:144:g_d0_f110:C:(0.052) 
+43:1012:70470:0:14:344:374:607:144:g_d0_f110:144:g_d0_f110:C:0.154 
+43:1013:70476:14:0:340:378:593:144:g_d0_f110:144:g_d0_f110:C:(0.050) 
+43:1014:70484:0:14:418:452:607:144:g_d0_f110:144:g_d0_f110:C:-0.001 
+43:1015:70491:14:0:416:454:593:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+43:1016:70499:0:14:497:527:607:144:g_d0_f110:144:g_d0_f110:C:0.022 
+43:1017:70505:14:22:493:531:593:144:g_d0_f110:144:g_d0_f110:C:(0.039) 
+43:1018:70513:22:0:72:135:571:144:g_d0_f110:144:g_d0_f110:C:1998 Cohort 
+43:1019:70525:0:14:267:297:578:144:g_d0_f110:144:g_d0_f110:C:0.032 
+43:1020:70531:14:0:263:301:564:144:g_d0_f110:144:g_d0_f110:C:(0.039) 
+43:1021:70539:0:14:344:374:578:144:g_d0_f110:144:g_d0_f110:C:0.065 
+43:1022:70545:14:0:340:378:564:144:g_d0_f110:144:g_d0_f110:C:(0.038) 
+43:1023:70553:0:14:420:450:578:144:g_d0_f110:144:g_d0_f110:C:0.007 
+43:1024:70559:14:0:416:454:564:144:g_d0_f110:144:g_d0_f110:C:(0.054) 
+43:1025:70567:0:14:497:527:578:144:g_d0_f110:144:g_d0_f110:C:0.025 
+43:1026:70573:14:22:493:531:564:144:g_d0_f110:144:g_d0_f110:C:(0.042) 
+43:1027:70581:22:0:72:135:542:144:g_d0_f110:144:g_d0_f110:C:1999 Cohort 
+43:1028:70593:0:14:267:297:549:144:g_d0_f110:144:g_d0_f110:C:0.058 
+43:1029:70599:14:0:263:301:535:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+43:1030:70607:0:14:344:374:549:144:g_d0_f110:144:g_d0_f110:C:0.085 
+43:1031:70613:14:0:340:378:535:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+43:1032:70621:0:14:418:452:549:144:g_d0_f110:144:g_d0_f110:C:-0.006 
+43:1033:70628:14:0:416:454:535:144:g_d0_f110:144:g_d0_f110:C:(0.054) 
+43:1034:70636:0:14:497:527:549:144:g_d0_f110:144:g_d0_f110:C:0.020 
+43:1035:70642:14:14:493:531:535:144:g_d0_f110:144:g_d0_f110:C:(0.041) 
+43:1036:70650:14:21:111:587:521:122:g_d0_f119:144:g_d0_f110:A:Prior Achievementa     
+43:1037:70672:21:8:72:297:500:122:g_d0_f117:144:g_d0_f110:C:Bottom Quartile  0.074 
+43:1038:70695:8:0:263:301:492:144:g_d0_f110:144:g_d0_f110:C:(0.056) 
+43:1039:70703:0:14:344:374:506:144:g_d0_f110:144:g_d0_f110:C:0.058 
+43:1040:70709:14:0:340:378:492:144:g_d0_f110:144:g_d0_f110:C:(0.055) 
+43:1041:70717:0:14:418:452:506:144:g_d0_f110:144:g_d0_f110:C:-0.003 
+43:1042:70724:14:0:416:454:492:144:g_d0_f110:144:g_d0_f110:C:(0.057) 
+43:1043:70732:0:14:495:529:506:144:g_d0_f110:144:g_d0_f110:C:-0.003 
+43:1044:70739:14:21:493:531:492:144:g_d0_f110:144:g_d0_f110:C:(0.045) 
+43:1045:70747:21:8:72:297:471:122:g_d0_f117:144:g_d0_f110:C:2nd Quartile  0.073 
+43:1046:70767:8:0:263:301:463:144:g_d0_f110:144:g_d0_f110:C:(0.045) 
+43:1047:70775:0:14:344:374:477:144:g_d0_f110:144:g_d0_f110:C:0.128 
+43:1048:70781:14:0:340:378:463:144:g_d0_f110:144:g_d0_f110:C:(0.043) 
+43:1049:70789:0:14:418:452:477:144:g_d0_f110:144:g_d0_f110:C:-0.024 
+43:1050:70796:14:0:416:454:463:144:g_d0_f110:144:g_d0_f110:C:(0.044) 
+43:1051:70804:0:14:497:527:477:144:g_d0_f110:144:g_d0_f110:C:0.011 
+43:1052:70810:14:21:493:531:463:144:g_d0_f110:144:g_d0_f110:C:(0.034) 
+43:1053:70818:21:0:72:133:442:122:g_d0_f117:122:g_d0_f117:F:3rd Quartile  
+43:1054:70832:0:15:267:297:449:144:g_d0_f110:144:g_d0_f110:C:0.011 
+43:1055:70838:15:0:263:301:434:144:g_d0_f110:144:g_d0_f110:C:(0.048) 
+43:1056:70846:0:15:344:374:449:144:g_d0_f110:144:g_d0_f110:C:0.040 
+43:1057:70852:15:0:340:378:434:144:g_d0_f110:144:g_d0_f110:C:(0.048) 
+43:1058:70860:0:15:420:450:449:144:g_d0_f110:144:g_d0_f110:C:0.031 
+43:1059:70866:15:0:416:454:434:144:g_d0_f110:144:g_d0_f110:C:(0.060) 
+43:1060:70874:0:15:497:527:449:144:g_d0_f110:144:g_d0_f110:C:0.031 
+43:1061:70880:15:21:493:531:434:144:g_d0_f110:144:g_d0_f110:C:(0.048) 
+43:1062:70888:21:0:72:140:413:122:g_d0_f117:122:g_d0_f117:F:Top Quartile  
+43:1063:70902:0:14:267:297:420:144:g_d0_f110:144:g_d0_f110:C:0.202 
+43:1064:70908:14:0:263:301:406:144:g_d0_f110:144:g_d0_f110:C:(0.095) 
+43:1065:70916:0:14:344:374:420:144:g_d0_f110:144:g_d0_f110:C:0.189 
+43:1066:70922:14:0:340:378:406:144:g_d0_f110:144:g_d0_f110:C:(0.090) 
+43:1067:70930:0:14:418:452:420:144:g_d0_f110:144:g_d0_f110:C:-0.006 
+43:1068:70937:14:0:416:454:406:144:g_d0_f110:144:g_d0_f110:C:(0.216) 
+43:1069:70945:0:14:497:527:420:144:g_d0_f110:144:g_d0_f110:C:0.127 
+43:1070:70951:14:14:493:531:406:144:g_d0_f110:144:g_d0_f110:C:(0.175) 
+43:1071:70959:14:21:108:586:392:122:g_d0_f119:122:g_d0_f117:A:Race, Gender & SES     
+43:1072:70981:21:0:72:101:371:122:g_d0_f117:122:g_d0_f117:F:Black 
+43:1073:70987:0:14:268:296:378:122:g_d0_f117:122:g_d0_f117:?:0.071 
+43:1074:70993:14:0:265:300:364:122:g_d0_f117:122:g_d0_f117:?:(0.030) 
+43:1075:71001:0:14:345:373:378:122:g_d0_f117:122:g_d0_f117:?:0.090 
+43:1076:71007:14:0:341:376:364:122:g_d0_f117:122:g_d0_f117:?:(0.025) 
+43:1077:71015:0:14:420:451:378:122:g_d0_f117:122:g_d0_f117:?:-0.047 
+43:1078:71022:14:0:418:453:364:122:g_d0_f117:122:g_d0_f117:?:(0.040) 
+43:1079:71030:0:14:496:527:378:122:g_d0_f117:122:g_d0_f117:F:-0.015 
+43:1080:71037:14:20:494:529:364:122:g_d0_f117:122:g_d0_f117:F:(0.031) 
+43:1081:71045:20:7:72:296:344:122:g_d0_f117:122:g_d0_f117:F:Hispanic 0.053 
+43:1082:71060:7:0:265:300:337:122:g_d0_f117:122:g_d0_f117:?:(0.062) 
+43:1083:71068:0:13:345:373:350:122:g_d0_f117:122:g_d0_f117:?:0.117 
+43:1084:71074:13:0:341:376:337:122:g_d0_f117:122:g_d0_f117:?:(0.062) 
+43:1085:71082:0:13:421:449:350:122:g_d0_f117:122:g_d0_f117:?:0.049 
+43:1086:71088:13:0:418:453:337:122:g_d0_f117:122:g_d0_f117:?:(0.048) 
+43:1087:71096:0:13:498:526:350:122:g_d0_f117:122:g_d0_f117:F:0.061 
+43:1088:71102:13:21:494:529:337:122:g_d0_f117:122:g_d0_f117:F:(0.039) 
+43:1089:71110:21:0:72:139:316:122:g_d0_f117:122:g_d0_f117:F:White/Other 
+43:1090:71122:0:13:267:298:323:122:g_d0_f117:122:g_d0_f117:?:-0.018 
+43:1091:71129:13:0:265:300:310:122:g_d0_f117:122:g_d0_f117:?:(0.109) 
+43:1092:71137:0:13:345:373:323:122:g_d0_f117:122:g_d0_f117:?:0.082 
+43:1093:71143:13:0:341:376:310:122:g_d0_f117:122:g_d0_f117:?:(0.104) 
+43:1094:71151:0:13:421:449:323:122:g_d0_f117:122:g_d0_f117:?:0.175 
+43:1095:71157:13:0:418:453:310:122:g_d0_f117:122:g_d0_f117:?:(0.124) 
+43:1096:71165:0:13:498:526:323:122:g_d0_f117:122:g_d0_f117:F:0.092 
+43:1097:71171:13:21:494:529:310:122:g_d0_f117:122:g_d0_f117:F:(0.092) 
+43:1098:71179:21:0:72:99:289:122:g_d0_f117:122:g_d0_f117:F:Male 
+43:1099:71184:0:14:268:296:296:122:g_d0_f117:122:g_d0_f117:?:0.034 
+43:1100:71190:14:0:265:300:282:122:g_d0_f117:122:g_d0_f117:?:(0.037) 
+43:1101:71198:0:14:345:373:296:122:g_d0_f117:122:g_d0_f117:?:0.077 
+43:1102:71204:14:0:341:376:282:122:g_d0_f117:122:g_d0_f117:?:(0.037) 
+43:1103:71212:0:14:421:449:296:122:g_d0_f117:122:g_d0_f117:?:0.002 
+43:1104:71218:14:0:418:453:282:122:g_d0_f117:122:g_d0_f117:?:(0.043) 
+43:1105:71226:0:14:496:527:296:122:g_d0_f117:122:g_d0_f117:F:-0.011 
+43:1106:71233:14:20:494:529:282:122:g_d0_f117:122:g_d0_f117:F:(0.034) 
+43:1107:71241:20:7:72:296:262:122:g_d0_f117:122:g_d0_f117:F:Female 0.086 
+43:1108:71254:7:0:265:300:255:122:g_d0_f117:122:g_d0_f117:?:(0.036) 
+43:1109:71262:0:13:345:373:268:122:g_d0_f117:122:g_d0_f117:?:0.112 
+43:1110:71268:13:0:341:376:255:122:g_d0_f117:122:g_d0_f117:?:(0.035) 
+43:1111:71276:0:13:420:451:268:122:g_d0_f117:122:g_d0_f117:?:-0.008 
+43:1112:71283:13:0:418:453:255:122:g_d0_f117:122:g_d0_f117:?:(0.041) 
+43:1113:71291:0:13:498:526:268:122:g_d0_f117:122:g_d0_f117:F:0.047 
+43:1114:71297:13:21:494:529:255:122:g_d0_f117:122:g_d0_f117:F:(0.032) 
+43:1115:71305:21:0:72:130:234:122:g_d0_f117:122:g_d0_f117:F:Free Lunch 
+43:1116:71316:0:13:268:296:241:122:g_d0_f117:122:g_d0_f117:?:0.061 
+43:1117:71322:13:0:265:300:228:122:g_d0_f117:122:g_d0_f117:?:(0.027) 
+43:1118:71330:0:13:345:373:241:122:g_d0_f117:122:g_d0_f117:?:0.094 
+43:1119:71336:13:0:341:376:228:122:g_d0_f117:122:g_d0_f117:?:(0.026) 
+43:1120:71344:0:13:420:451:241:122:g_d0_f117:122:g_d0_f117:?:-0.005 
+43:1121:71351:13:0:418:453:228:122:g_d0_f117:122:g_d0_f117:?:(0.031) 
+43:1122:71359:0:13:498:526:241:122:g_d0_f117:122:g_d0_f117:F:0.018 
+43:1123:71365:13:21:494:529:228:122:g_d0_f117:122:g_d0_f117:F:(0.024) 
+43:1124:71373:21:0:72:148:207:122:g_d0_f117:122:g_d0_f117:F:No Free Lunch 
+43:1125:71387:0:14:268:296:214:122:g_d0_f117:122:g_d0_f117:?:0.070 
+43:1126:71393:14:0:265:300:200:122:g_d0_f117:122:g_d0_f117:?:(0.094) 
+43:1127:71401:0:14:345:373:214:122:g_d0_f117:122:g_d0_f117:?:0.126 
+43:1128:71407:14:0:341:376:200:122:g_d0_f117:122:g_d0_f117:?:(0.095) 
+43:1129:71415:0:14:421:449:214:122:g_d0_f117:122:g_d0_f117:?:0.089 
+43:1130:71421:14:0:418:453:200:122:g_d0_f117:122:g_d0_f117:?:(0.119) 
+43:1131:71429:0:14:498:526:214:122:g_d0_f117:122:g_d0_f117:F:0.051 
+43:1132:71435:14:13:494:529:200:122:g_d0_f117:122:g_d0_f117:F:(0.091) 
+43:1133:71443:13:12:72:534:187:99:g_d0_f112:99:g_d0_f112:F:Notes for Table 4: Each cell includes an estimate from a separate 2SLS regression (equivalent to the third 
+43:1134:71550:12:12:72:538:175:99:g_d0_f112:99:g_d0_f112:F:difference estimates shown in Table 2 and described in the text) that controls for year fixed effects and all 
+43:1135:71660:12:13:72:490:163:99:g_d0_f112:99:g_d0_f112:F:of the additional performance and demographic variables listed in the notes to Table 2.  a Prior 
+43:1136:71757:13:12:72:528:150:99:g_d0_f112:99:g_d0_f112:F:achievement is measured as the average math and reading score in second or fifth grade.  Quartiles are 
+43:1137:71860:12:12:72:542:138:99:g_d0_f112:99:g_d0_f112:F:determined on the basis of students in this sample.  A small number of students who were missing second 
+43:1138:71964:12:14:72:350:126:99:g_d0_f112:99:g_d0_f112:F:or fifth grade test scores are excluded from this categorization. 
+43:1139:72030:14:0:72:75:112:144:g_d0_f122:144:g_d0_f122:C: 
+44:1140:72030:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 5 
+44:1141:72038:14:26:72:476:694:144:g_d0_f111:144:g_d0_f111:C:The Effect of August Test Performance on the Probability of Grade Retention  
+44:1142:72115:26:34:124:513:668:144:g_d0_f111:144:g_d0_f111:C:Independent variables  Third Grade Sixth Grade 
+44:1143:72162:34:0:72:119:634:144:g_d0_f110:144:g_d0_f110:C:Math GE 
+44:1144:72170:0:14:336:382:641:144:g_d0_f110:144:g_d0_f110:C:-0.027** 
+44:1145:72179:14:0:343:375:627:144:g_d0_f110:144:g_d0_f110:C:(.008) 
+44:1146:72186:0:14:460:500:641:144:g_d0_f110:144:g_d0_f110:C:-0.013* 
+44:1147:72194:14:26:461:499:627:144:g_d0_f110:144:g_d0_f110:C:(0.009) 
+44:1148:72202:26:0:72:134:601:144:g_d0_f110:144:g_d0_f110:C:Reading GE 
+44:1149:72213:0:14:342:376:608:144:g_d0_f110:144:g_d0_f110:C:-0.024 
+44:1150:72220:14:0:340:378:594:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+44:1151:72228:0:14:465:495:608:144:g_d0_f110:144:g_d0_f110:C:0.047 
+44:1152:72234:14:26:461:499:594:144:g_d0_f110:144:g_d0_f110:C:(0.077) 
+44:1153:72242:26:0:72:162:568:144:g_d0_f110:144:g_d0_f110:C:Marginal Reading 
+44:1154:72259:0:15:338:380:576:144:g_d0_f110:144:g_d0_f110:C:2.451** 
+44:1155:72267:15:0:340:378:561:144:g_d0_f110:144:g_d0_f110:C:(0.178) 
+44:1156:72275:0:15:459:501:576:144:g_d0_f110:144:g_d0_f110:C:3.387** 
+44:1157:72283:15:25:461:499:561:144:g_d0_f110:144:g_d0_f110:C:(0.472) 
+44:1158:72291:25:0:72:226:536:144:g_d0_f110:144:g_d0_f110:C:Marginal Reading*Reading GE 
+44:1159:72319:0:14:336:382:543:144:g_d0_f110:144:g_d0_f110:C:-1.031** 
+44:1160:72328:14:0:340:378:529:144:g_d0_f110:144:g_d0_f110:C:(0.074) 
+44:1161:72336:0:14:457:503:543:144:g_d0_f110:144:g_d0_f110:C:-0.733** 
+44:1162:72345:14:26:461:499:529:144:g_d0_f110:144:g_d0_f110:C:(0.102) 
+44:1163:72353:26:0:72:153:503:144:g_d0_f110:144:g_d0_f110:C:Passed Reading  
+44:1164:72369:0:14:336:382:510:144:g_d0_f110:144:g_d0_f110:C:-0.862** 
+44:1165:72378:14:0:340:378:496:144:g_d0_f110:144:g_d0_f110:C:(0.162) 
+44:1166:72386:0:14:463:497:510:144:g_d0_f110:144:g_d0_f110:C:-0.250 
+44:1167:72393:14:25:461:499:496:144:g_d0_f110:144:g_d0_f110:C:(0.410) 
+44:1168:72401:25:0:72:215:471:144:g_d0_f110:144:g_d0_f110:C:Passed Reading*Reading GE 
+44:1169:72427:0:15:344:374:478:144:g_d0_f110:144:g_d0_f110:C:0.058 
+44:1170:72433:15:0:340:378:463:144:g_d0_f110:144:g_d0_f110:C:(0.063) 
+44:1171:72441:0:15:463:497:478:144:g_d0_f110:144:g_d0_f110:C:-0.098 
+44:1172:72448:15:25:461:499:463:144:g_d0_f110:144:g_d0_f110:C:(0.088) 
+44:1173:72456:25:34:72:765:438:144:g_d0_f110:144:g_d0_f110:C:   
+44:1174:72459:34:33:72:495:404:144:g_d0_f110:144:g_d0_f110:C:Number of Observations 7,623 4,552 
+44:1175:72494:33:32:72:714:371:144:g_d0_f110:144:g_d0_f110:C:R-Squared                                     0.477                                     0.504                                     
+44:1176:72624:32:0:72:197:339:144:g_d0_f110:144:g_d0_f110:C:F-Statistic of Instruments 
+44:1177:72651:0:15:344:374:346:144:g_d0_f110:144:g_d0_f110:C:236.0 
+44:1178:72657:15:0:335:383:331:144:g_d0_f110:144:g_d0_f110:C:(Pr>F=0) 
+44:1179:72666:0:15:465:495:346:144:g_d0_f110:144:g_d0_f110:C:149.7 
+44:1180:72672:15:16:456:504:331:144:g_d0_f110:144:g_d0_f110:C:(Pr>F=0) 
+44:1181:72681:16:12:72:531:315:99:g_d0_f114:99:g_d0_f114:F:Notes to Table 5: Sample includes students assigned to summer school who passed math but failed reading in June 
+44:1182:72793:12:12:72:536:303:99:g_d0_f114:99:g_d0_f114:F:and who scored between 1 GEs below and 0.5 GEs above the reading cutoff in August.  These results correspond to 
+44:1183:72905:12:11:72:509:291:99:g_d0_f114:99:g_d0_f114:F:the first-stage estimates when reading scores two years later is the variable of interest.  The exact results vary 
+44:1184:73020:11:12:72:538:280:99:g_d0_f114:99:g_d0_f114:F:depending on subject and timing.  August reading and math measures along with additional ability and demographic 
+44:1185:73133:12:0:72:299:268:99:g_d0_f114:99:g_d0_f114:F:controls are included in both the first and second-stages. 
+45:1186:73192:0:14:72:119:708:144:g_d0_f111:144:g_d0_f111:C:Table 6   
+45:1187:73202:14:15:72:361:694:144:g_d0_f111:144:g_d0_f111:C:The Effect of Grade Retention on Student Achievement  
+45:1188:73256:15:16:72:693:679:144:g_d0_f111:144:g_d0_f111:C:                                              Specification                                              
+45:1189:73361:16:16:72:502:663:144:g_d0_f111:144:g_d0_f111:C:Dependent Variables OLS IV IV 
+45:1190:73391:16:15:264:597:647:144:g_d0_f110:144:g_d0_f110:C:                (1)                (2)                (3)                
+45:1191:73464:15:14:271:604:632:144:g_d0_f110:144:g_d0_f110:C:    
+45:1192:73467:14:14:72:604:618:144:g_d0_f111:144:g_d0_f110:C:Third Grade    
+45:1193:73482:14:21:72:604:604:144:g_d0_f110:144:g_d0_f110:C:     Reading     
+45:1194:73498:21:0:72:196:583:144:g_d0_f110:144:g_d0_f110:C:         One year (n=8,120) 
+45:1195:73526:0:14:258:288:590:144:g_d0_f110:144:g_d0_f110:C:0.085 
+45:1196:73532:14:0:254:292:576:144:g_d0_f110:144:g_d0_f110:C:(0.017) 
+45:1197:73540:0:14:369:399:590:144:g_d0_f110:144:g_d0_f110:C:0.162 
+45:1198:73546:14:0:365:403:576:144:g_d0_f110:144:g_d0_f110:C:(0.052) 
+45:1199:73554:0:14:480:510:590:144:g_d0_f110:144:g_d0_f110:C:0.174 
+45:1200:73560:14:22:476:514:576:144:g_d0_f110:144:g_d0_f110:C:(0.050) 
+45:1201:73568:22:0:72:202:554:144:g_d0_f110:144:g_d0_f110:C:         Two years (n=7,623) 
+45:1202:73597:0:14:258:288:561:144:g_d0_f110:144:g_d0_f110:C:0.012 
+45:1203:73603:14:0:254:292:547:144:g_d0_f110:144:g_d0_f110:C:(0.017) 
+45:1204:73611:0:14:369:399:561:144:g_d0_f110:144:g_d0_f110:C:0.026 
+45:1205:73617:14:0:365:403:547:144:g_d0_f110:144:g_d0_f110:C:(0.053) 
+45:1206:73625:0:14:480:510:561:144:g_d0_f110:144:g_d0_f110:C:0.035 
+45:1207:73631:14:14:476:514:547:144:g_d0_f110:144:g_d0_f110:C:(0.051) 
+45:1208:73639:14:22:72:604:533:144:g_d0_f110:144:g_d0_f110:C:     Math     
+45:1209:73652:22:0:72:196:511:144:g_d0_f110:144:g_d0_f110:C:         One year (n=8,111) 
+45:1210:73680:0:14:258:288:518:144:g_d0_f110:144:g_d0_f110:C:0.096 
+45:1211:73686:14:0:254:292:504:144:g_d0_f110:144:g_d0_f110:C:(0.019) 
+45:1212:73694:0:14:369:399:518:144:g_d0_f110:144:g_d0_f110:C:0.199 
+45:1213:73700:14:0:365:403:504:144:g_d0_f110:144:g_d0_f110:C:(0.058) 
+45:1214:73708:0:14:480:510:518:144:g_d0_f110:144:g_d0_f110:C:0.227 
+45:1215:73714:14:21:476:514:504:144:g_d0_f110:144:g_d0_f110:C:(0.044) 
+45:1216:73722:21:0:72:205:483:144:g_d0_f110:144:g_d0_f110:C:          Two years (n=7,629) 
+45:1217:73752:0:14:258:288:490:144:g_d0_f110:144:g_d0_f110:C:0.022 
+45:1218:73758:14:0:254:292:476:144:g_d0_f110:144:g_d0_f110:C:(0.019) 
+45:1219:73766:0:14:369:399:490:144:g_d0_f110:144:g_d0_f110:C:0.081 
+45:1220:73772:14:0:365:403:476:144:g_d0_f110:144:g_d0_f110:C:(0.059) 
+45:1221:73780:0:14:480:510:490:144:g_d0_f110:144:g_d0_f110:C:0.091 
+45:1222:73786:14:15:476:514:476:144:g_d0_f110:144:g_d0_f110:C:(0.045) 
+45:1223:73794:15:14:271:604:461:144:g_d0_f110:144:g_d0_f110:C:    
+45:1224:73797:14:14:72:604:447:144:g_d0_f111:144:g_d0_f110:C:Sixth Grade    
+45:1225:73812:14:21:72:604:433:144:g_d0_f110:144:g_d0_f110:C:     Reading     
+45:1226:73828:21:0:72:196:412:144:g_d0_f110:144:g_d0_f110:C:         One year (n=5,018) 
+45:1227:73856:0:14:255:289:419:144:g_d0_f110:144:g_d0_f110:C:-0.137 
+45:1228:73863:14:0:254:292:405:144:g_d0_f110:144:g_d0_f110:C:(0.019) 
+45:1229:73871:0:14:366:400:419:144:g_d0_f110:144:g_d0_f110:C:-0.077 
+45:1230:73878:14:0:365:403:405:144:g_d0_f110:144:g_d0_f110:C:(0.058) 
+45:1231:73886:0:14:477:511:419:144:g_d0_f110:144:g_d0_f110:C:-0.064 
+45:1232:73893:14:22:476:514:405:144:g_d0_f110:144:g_d0_f110:C:(0.056) 
+45:1233:73901:22:0:72:205:383:144:g_d0_f110:144:g_d0_f110:C:          Two years (n=4,552) 
+45:1234:73931:0:14:255:289:390:144:g_d0_f110:144:g_d0_f110:C:-0.176 
+45:1235:73938:14:0:254:292:376:144:g_d0_f110:144:g_d0_f110:C:(0.023) 
+45:1236:73946:0:14:366:400:390:144:g_d0_f110:144:g_d0_f110:C:-0.160 
+45:1237:73953:14:0:365:403:376:144:g_d0_f110:144:g_d0_f110:C:(0.067) 
+45:1238:73961:0:14:477:511:390:144:g_d0_f110:144:g_d0_f110:C:-0.154 
+45:1239:73968:14:14:476:514:376:144:g_d0_f110:144:g_d0_f110:C:(0.065) 
+45:1240:73976:14:22:72:604:362:144:g_d0_f110:144:g_d0_f110:C:     Math     
+45:1241:73989:22:0:72:196:340:144:g_d0_f110:144:g_d0_f110:C:         One year (n=5,005) 
+45:1242:74017:0:15:255:289:348:144:g_d0_f110:144:g_d0_f110:C:-0.018 
+45:1243:74024:15:0:254:292:333:144:g_d0_f110:144:g_d0_f110:C:(0.020) 
+45:1244:74032:0:15:366:400:348:144:g_d0_f110:144:g_d0_f110:C:-0.019 
+45:1245:74039:15:0:365:403:333:144:g_d0_f110:144:g_d0_f110:C:(0.060) 
+45:1246:74047:0:15:480:510:348:144:g_d0_f110:144:g_d0_f110:C:0.057 
+45:1247:74053:15:21:476:514:333:144:g_d0_f110:144:g_d0_f110:C:(0.040) 
+45:1248:74061:21:0:72:202:312:144:g_d0_f110:144:g_d0_f110:C:         Two years (n=4,557) 
+45:1249:74090:0:14:255:289:319:144:g_d0_f110:144:g_d0_f110:C:-0.105 
+45:1250:74097:14:0:254:292:305:144:g_d0_f110:144:g_d0_f110:C:(0.021) 
+45:1251:74105:0:14:366:400:319:144:g_d0_f110:144:g_d0_f110:C:-0.097 
+45:1252:74112:14:0:365:403:305:144:g_d0_f110:144:g_d0_f110:C:(0.063) 
+45:1253:74120:0:14:477:511:319:144:g_d0_f110:144:g_d0_f110:C:-0.046 
+45:1254:74127:14:14:476:514:305:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+45:1255:74135:14:15:271:604:291:144:g_d0_f110:144:g_d0_f110:C:    
+45:1256:74138:15:14:72:211:276:144:g_d0_f110:144:g_d0_f110:C:Additional Performance and 
+45:1257:74165:14:0:72:194:262:144:g_d0_f110:144:g_d0_f110:C:Demographic Covariates 
+45:1258:74188:0:20:264:599:269:144:g_d0_f110:144:g_d0_f110:C:No                No                Yes                
+45:1259:74243:20:11:72:541:249:99:g_d0_f114:99:g_d0_f114:F:Notes for Table 6: The sample includes third and sixth grade students from 1997 to 1999 whose June math score was 
+45:1260:74357:11:12:72:533:238:99:g_d0_f114:99:g_d0_f114:F:above the cutoff, whose June reading score was below the cutoff and whose August reading score was between one 
+45:1261:74468:12:12:72:533:226:99:g_d0_f114:99:g_d0_f114:F:grade equivalent below and 0.5 grade equivalents above the cutoff.  Year fixed effects are included in each model.  
+45:1262:74584:12:0:72:505:214:99:g_d0_f114:99:g_d0_f123:F:The additional performance and demographic covariates are the same as those listed in the notes to Table 2. 
+46:1263:74691:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 7 
+46:1264:74699:14:14:72:525:694:144:g_d0_f111:144:g_d0_f111:F:The Sensitivity of the Two-Year Grade Retention Estimates to Sample and Specification 
+46:1265:74785:14:15:72:115:680:144:g_d0_f111:144:g_d0_f111:C:Choices 
+46:1266:74793:15:15:259:497:665:144:g_d0_f111:144:g_d0_f111:C: Third Grade Sixth Grade 
+46:1267:74817:15:21:103:570:650:144:g_d0_f111:144:g_d0_f111:C:Specification          Reading         Math         Reading         Math         
+46:1268:74898:21:0:72:164:629:144:g_d0_f110:144:g_d0_f110:C:Baseline estimates 
+46:1269:74917:0:14:236:266:636:144:g_d0_f110:144:g_d0_f110:C:0.035 
+46:1270:74923:14:0:232:270:622:144:g_d0_f110:144:g_d0_f110:C:(0.051) 
+46:1271:74931:0:14:321:351:636:144:g_d0_f110:144:g_d0_f110:C:0.091 
+46:1272:74937:14:0:317:355:622:144:g_d0_f110:144:g_d0_f110:C:(0.045) 
+46:1273:74945:0:14:405:439:636:144:g_d0_f110:144:g_d0_f110:C:-0.154 
+46:1274:74952:14:0:403:441:622:144:g_d0_f110:144:g_d0_f110:C:(0.065) 
+46:1275:74960:0:14:490:524:636:144:g_d0_f110:144:g_d0_f110:C:-0.046 
+46:1276:74967:14:15:488:526:622:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+46:1277:74975:15:14:72:185:607:144:g_d0_f110:144:g_d0_f110:C:Including second order 
+46:1278:74998:14:14:72:173:593:144:g_d0_f110:144:g_d0_f110:C:polynomials in prior 
+46:1279:75019:14:0:72:135:579:144:g_d0_f110:144:g_d0_f110:C:achievement 
+46:1280:75031:0:14:236:266:600:144:g_d0_f110:144:g_d0_f110:C:0.048 
+46:1281:75037:14:0:232:270:586:144:g_d0_f110:144:g_d0_f110:C:(0.053) 
+46:1282:75045:0:14:321:351:600:144:g_d0_f110:144:g_d0_f110:C:0.109 
+46:1283:75051:14:0:317:355:586:144:g_d0_f110:144:g_d0_f110:C:(0.047) 
+46:1284:75059:0:14:405:439:600:144:g_d0_f110:144:g_d0_f110:C:-0.162 
+46:1285:75066:14:0:403:441:586:144:g_d0_f110:144:g_d0_f110:C:(0.065) 
+46:1286:75074:0:14:490:524:600:144:g_d0_f110:144:g_d0_f110:C:-0.055 
+46:1287:75081:14:22:488:526:586:144:g_d0_f110:144:g_d0_f110:C:(0.048) 
+46:1288:75089:22:14:72:174:564:144:g_d0_f110:144:g_d0_f110:C:Including third order 
+46:1289:75111:14:14:72:173:550:144:g_d0_f110:144:g_d0_f110:C:polynomials in prior 
+46:1290:75132:14:0:72:135:536:144:g_d0_f110:144:g_d0_f110:C:achievement 
+46:1291:75144:0:14:236:266:557:144:g_d0_f110:144:g_d0_f110:C:0.025 
+46:1292:75150:14:0:232:270:543:144:g_d0_f110:144:g_d0_f110:C:(0.079) 
+46:1293:75158:0:14:321:351:557:144:g_d0_f110:144:g_d0_f110:C:0.108 
+46:1294:75164:14:0:317:355:543:144:g_d0_f110:144:g_d0_f110:C:(0.070) 
+46:1295:75172:0:14:405:439:557:144:g_d0_f110:144:g_d0_f110:C:-0.134 
+46:1296:75179:14:0:403:441:543:144:g_d0_f110:144:g_d0_f110:C:(0.123) 
+46:1297:75187:0:14:490:524:557:144:g_d0_f110:144:g_d0_f110:C:-0.059 
+46:1298:75194:14:29:488:526:543:144:g_d0_f110:144:g_d0_f110:C:(0.089) 
+46:1299:75202:29:0:72:198:514:144:g_d0_f110:144:g_d0_f110:C:Broader range of students 
+46:1300:75228:0:14:236:266:521:144:g_d0_f110:144:g_d0_f110:C:0.001 
+46:1301:75234:14:0:232:270:507:144:g_d0_f110:144:g_d0_f110:C:(0.035) 
+46:1302:75242:0:14:321:351:521:144:g_d0_f110:144:g_d0_f110:C:0.099 
+46:1303:75248:14:0:317:355:507:144:g_d0_f110:144:g_d0_f110:C:(0.032) 
+46:1304:75256:0:14:405:439:521:144:g_d0_f110:144:g_d0_f110:C:-0.139 
+46:1305:75263:14:0:403:441:507:144:g_d0_f110:144:g_d0_f110:C:(0.043) 
+46:1306:75271:0:14:490:524:521:144:g_d0_f110:144:g_d0_f110:C:-0.056 
+46:1307:75278:14:15:488:526:507:144:g_d0_f110:144:g_d0_f110:C:(0.032) 
+46:1308:75286:15:14:72:198:492:144:g_d0_f110:144:g_d0_f110:C:Broader range of students 
+46:1309:75312:14:14:72:179:478:144:g_d0_f110:144:g_d0_f110:C:with second and third 
+46:1310:75334:14:14:72:201:464:144:g_d0_f110:144:g_d0_f110:C:order polynomials in prior 
+46:1311:75361:14:0:72:135:450:144:g_d0_f110:144:g_d0_f110:C:achievement 
+46:1312:75373:0:14:236:266:478:144:g_d0_f110:144:g_d0_f110:C:0.073 
+46:1313:75379:14:0:232:270:464:144:g_d0_f110:144:g_d0_f111:C:(0.054) 
+46:1314:75386:0:14:321:351:478:144:g_d0_f110:144:g_d0_f110:C:0.121 
+46:1315:75392:14:0:317:355:464:144:g_d0_f110:144:g_d0_f110:C:(0.049) 
+46:1316:75400:0:14:405:439:478:144:g_d0_f110:144:g_d0_f110:C:-0.188 
+46:1317:75407:14:0:403:441:464:144:g_d0_f110:144:g_d0_f110:C:(0.072) 
+46:1318:75415:0:14:490:524:478:144:g_d0_f110:144:g_d0_f110:C:-0.050 
+46:1319:75422:14:29:488:526:464:144:g_d0_f110:144:g_d0_f110:C:(0.053) 
+46:1320:75430:29:14:72:163:435:144:g_d0_f110:144:g_d0_f110:C:Narrower range of 
+46:1321:75448:14:0:72:114:421:144:g_d0_f110:144:g_d0_f110:C:students 
+46:1322:75457:0:14:236:266:435:144:g_d0_f110:144:g_d0_f110:C:0.015 
+46:1323:75463:14:0:232:270:421:144:g_d0_f110:144:g_d0_f110:C:(0.071) 
+46:1324:75471:0:14:321:351:435:144:g_d0_f110:144:g_d0_f110:C:0.150 
+46:1325:75477:14:0:317:355:421:144:g_d0_f110:144:g_d0_f110:C:(0.063) 
+46:1326:75485:0:14:405:439:435:144:g_d0_f110:144:g_d0_f110:C:-0.183 
+46:1327:75492:14:0:403:441:421:144:g_d0_f110:144:g_d0_f110:C:(0.100) 
+46:1328:75500:0:14:490:524:435:144:g_d0_f110:144:g_d0_f110:C:-0.059 
+46:1329:75507:14:14:488:526:421:144:g_d0_f110:144:g_d0_f110:C:(0.073) 
+46:1330:75515:14:15:72:166:407:144:g_d0_f110:144:g_d0_f110:C:Alternative sample 
+46:1331:75534:15:14:72:195:392:144:g_d0_f110:144:g_d0_f110:C:(students who passed the 
+46:1332:75559:14:14:72:178:378:144:g_d0_f110:144:g_d0_f110:C:promotional cutoff in 
+46:1333:75581:14:14:72:187:364:144:g_d0_f110:144:g_d0_f110:C:reading but not math in 
+46:1334:75605:14:0:72:101:350:144:g_d0_f110:144:g_d0_f110:C:June) 
+46:1335:75611:0:14:234:268:385:144:g_d0_f110:144:g_d0_f110:C:-0.072 
+46:1336:75618:14:0:232:270:371:144:g_d0_f110:144:g_d0_f110:C:(0.105) 
+46:1337:75626:0:14:319:353:385:144:g_d0_f110:144:g_d0_f110:C:-0.145 
+46:1338:75633:14:0:317:355:371:144:g_d0_f110:144:g_d0_f110:C:(0.087) 
+46:1339:75641:0:14:405:439:385:144:g_d0_f110:144:g_d0_f110:C:-0.228 
+46:1340:75648:14:0:403:441:371:144:g_d0_f110:144:g_d0_f110:C:(0.090) 
+46:1341:75656:0:14:490:524:385:144:g_d0_f110:144:g_d0_f110:C:-0.147 
+46:1342:75663:14:34:488:526:371:144:g_d0_f110:144:g_d0_f110:C:(0.068) 
+46:1343:75671:34:12:72:521:337:99:g_d0_f114:99:g_d0_f114:F:Notes to Table 7: Each cell contains an estimate from a separate 2SLS regression that controls for all of the past 
+46:1344:75786:12:11:72:531:325:99:g_d0_f114:99:g_d0_f114:F:performance and demographic characteristics listed in the notes to Table 2.  The baseline sample includes children 
+46:1345:75901:11:12:72:542:314:99:g_d0_f114:99:g_d0_f114:F:who passed the promotional cutoff in reading but not math in June.  The baseline range of data includes students who 
+46:1346:76018:12:12:72:532:302:99:g_d0_f114:99:g_d0_f114:F:scored between 1.0 GEs below and 0.5 GEs above the reading cutoff in August.  The broader range of data used in 
+46:1347:76130:12:12:72:525:290:99:g_d0_f114:99:g_d0_f114:F:rows four and five includes students who scored between 1.5 GEs below and 1.0 GEs above the reading cutoff in 
+46:1348:76240:12:11:72:530:278:99:g_d0_f114:99:g_d0_f114:F:August.  The narrower range of data used in row six includes students who scored between 0.5 GEs below and 0.3 
+46:1349:76351:11:0:72:235:267:99:g_d0_f114:99:g_d0_f112:F:GEs above the reading cutoff in August. 
+47:1350:76390:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 8 
+47:1351:76398:14:15:72:371:694:144:g_d0_f111:144:g_d0_f111:C:The Heterogeneity of Two-Year Grade Retention Effects   
+47:1352:76454:15:14:286:506:679:144:g_d0_f111:144:g_d0_f111:C: Third Grade Sixth Grade 
+47:1353:76478:14:15:129:565:665:144:g_d0_f111:144:g_d0_f111:C:Subgroup       Reading       Math       Reading       Math       
+47:1354:76543:15:21:143:587:650:144:g_d0_f118:144:g_d0_f110:?:Year     
+47:1355:76552:21:0:72:135:629:144:g_d0_f110:144:g_d0_f110:C:1997 Cohort 
+47:1356:76564:0:14:265:299:636:144:g_d0_f110:144:g_d0_f110:C:-0.134 
+47:1357:76571:14:0:263:301:622:144:g_d0_f110:144:g_d0_f110:C:(0.126) 
+47:1358:76579:0:14:344:374:636:144:g_d0_f110:144:g_d0_f110:C:0.053 
+47:1359:76585:14:0:343:375:622:144:g_d0_f110:144:g_d0_f110:C:(.109) 
+47:1360:76592:0:14:418:452:636:144:g_d0_f110:144:g_d0_f110:C:-0.388 
+47:1361:76599:14:0:416:454:622:144:g_d0_f110:144:g_d0_f110:C:(0.140) 
+47:1362:76607:0:14:495:529:636:144:g_d0_f110:144:g_d0_f110:C:-0.234 
+47:1363:76614:14:22:493:531:622:144:g_d0_f110:144:g_d0_f110:C:(0.112) 
+47:1364:76622:22:0:72:135:600:144:g_d0_f110:144:g_d0_f110:C:1998 Cohort 
+47:1365:76634:0:14:267:297:607:144:g_d0_f110:144:g_d0_f110:C:0.085 
+47:1366:76640:14:0:263:301:593:144:g_d0_f110:144:g_d0_f110:C:(0.065) 
+47:1367:76648:0:14:344:374:607:144:g_d0_f110:144:g_d0_f110:C:0.052 
+47:1368:76654:14:0:343:375:593:144:g_d0_f110:144:g_d0_f110:C:(.059) 
+47:1369:76661:0:14:418:452:607:144:g_d0_f110:144:g_d0_f110:C:-0.135 
+47:1370:76668:14:0:416:454:593:144:g_d0_f110:144:g_d0_f110:C:(0.103) 
+47:1371:76676:0:14:495:529:607:144:g_d0_f110:144:g_d0_f110:C:-0.036 
+47:1372:76683:14:22:493:531:593:144:g_d0_f110:144:g_d0_f110:C:(0.075) 
+47:1373:76691:22:0:72:135:571:144:g_d0_f110:144:g_d0_f110:C:1999 Cohort 
+47:1374:76703:0:14:267:297:578:144:g_d0_f110:144:g_d0_f110:C:0.060 
+47:1375:76709:14:0:263:301:564:144:g_d0_f110:144:g_d0_f110:C:(0.081) 
+47:1376:76717:0:14:344:374:578:144:g_d0_f110:144:g_d0_f110:C:0.184 
+47:1377:76723:14:0:340:378:564:144:g_d0_f110:144:g_d0_f110:C:(0.072) 
+47:1378:76731:0:14:420:450:578:144:g_d0_f110:144:g_d0_f110:C:0.001 
+47:1379:76737:14:0:416:454:564:144:g_d0_f110:144:g_d0_f110:C:(0.092) 
+47:1380:76745:0:14:497:527:578:144:g_d0_f110:144:g_d0_f110:C:0.013 
+47:1381:76751:14:14:493:531:564:144:g_d0_f110:144:g_d0_f110:C:(0.064) 
+47:1382:76759:14:22:107:554:550:144:g_d0_f118:144:g_d0_f110:A:Prior Achievementa     
+47:1383:76781:22:0:72:156:528:144:g_d0_f110:144:g_d0_f110:C:Bottom Quartile  
+47:1384:76798:0:14:267:297:535:144:g_d0_f110:144:g_d0_f110:C:0.051 
+47:1385:76804:14:0:263:301:521:144:g_d0_f110:144:g_d0_f110:C:(0.102) 
+47:1386:76812:0:14:342:376:535:144:g_d0_f110:144:g_d0_f110:C:-0.036 
+47:1387:76819:14:0:340:378:521:144:g_d0_f110:144:g_d0_f110:C:(0.087) 
+47:1388:76827:0:14:418:452:535:144:g_d0_f110:144:g_d0_f110:C:-0.366 
+47:1389:76834:14:0:416:454:521:144:g_d0_f110:144:g_d0_f110:C:(0.147) 
+47:1390:76842:0:14:495:529:535:144:g_d0_f110:144:g_d0_f110:C:-0.199 
+47:1391:76849:14:21:493:531:521:144:g_d0_f110:144:g_d0_f110:C:(0.105) 
+47:1392:76857:21:0:72:134:500:144:g_d0_f110:144:g_d0_f110:C:2nd Quartile  
+47:1393:76871:0:15:265:299:507:144:g_d0_f110:144:g_d0_f110:C:-0.053 
+47:1394:76878:15:0:263:301:492:144:g_d0_f110:144:g_d0_f110:C:(0.090) 
+47:1395:76886:0:15:344:374:507:144:g_d0_f110:144:g_d0_f110:C:0.071 
+47:1396:76892:15:0:340:378:492:144:g_d0_f110:144:g_d0_f110:C:(0.079) 
+47:1397:76900:0:15:420:450:507:144:g_d0_f110:144:g_d0_f110:C:0.064 
+47:1398:76906:15:0:416:454:492:144:g_d0_f110:144:g_d0_f110:C:(0.120) 
+47:1399:76914:0:15:497:527:507:144:g_d0_f110:144:g_d0_f110:C:0.110 
+47:1400:76920:15:21:493:531:492:144:g_d0_f110:144:g_d0_f110:C:(0.087) 
+47:1401:76928:21:0:72:132:471:144:g_d0_f110:144:g_d0_f110:C:3rd Quartile  
+47:1402:76942:0:14:267:297:478:144:g_d0_f110:144:g_d0_f110:C:0.110 
+47:1403:76948:14:0:263:301:464:144:g_d0_f110:144:g_d0_f110:C:(0.118) 
+47:1404:76956:0:14:344:374:478:144:g_d0_f110:144:g_d0_f110:C:0.091 
+47:1405:76962:14:0:340:378:464:144:g_d0_f110:144:g_d0_f110:C:(0.109) 
+47:1406:76970:0:14:418:452:478:144:g_d0_f110:144:g_d0_f110:C:-0.082 
+47:1407:76977:14:0:416:454:464:144:g_d0_f110:144:g_d0_f110:C:(0.121) 
+47:1408:76985:0:14:497:527:478:144:g_d0_f110:144:g_d0_f110:C:0.054 
+47:1409:76991:14:22:493:531:464:144:g_d0_f110:144:g_d0_f110:C:(0.091) 
+47:1410:76999:22:0:72:140:442:144:g_d0_f110:144:g_d0_f110:C:Top Quartile  
+47:1411:77013:0:14:267:297:449:144:g_d0_f110:144:g_d0_f110:C:0.021 
+47:1412:77019:14:0:263:301:435:144:g_d0_f110:144:g_d0_f110:C:(0.119) 
+47:1413:77027:0:14:344:374:449:144:g_d0_f110:144:g_d0_f110:C:0.210 
+47:1414:77033:14:0:340:378:435:144:g_d0_f110:144:g_d0_f110:C:(0.109) 
+47:1415:77041:0:14:418:452:449:144:g_d0_f110:144:g_d0_f110:C:-0.303 
+47:1416:77048:14:0:416:454:435:144:g_d0_f110:144:g_d0_f110:C:(0.138) 
+47:1417:77056:0:14:495:529:449:144:g_d0_f110:144:g_d0_f110:C:-0.189 
+47:1418:77063:14:15:493:531:435:144:g_d0_f110:144:g_d0_f110:C:(0.101) 
+47:1419:77071:15:21:102:587:420:144:g_d0_f125:144:g_d0_f110:?:Race, Gender & SES     
+47:1420:77094:21:0:72:103:399:144:g_d0_f110:144:g_d0_f110:C:Black 
+47:1421:77100:0:14:267:297:406:144:g_d0_f110:144:g_d0_f110:C:0.085 
+47:1422:77106:14:0:266:298:392:144:g_d0_f110:144:g_d0_f110:C:(.058) 
+47:1423:77113:0:14:344:374:406:144:g_d0_f110:144:g_d0_f110:C:0.070 
+47:1424:77119:14:0:340:378:392:144:g_d0_f110:144:g_d0_f110:C:(0.052) 
+47:1425:77127:0:14:418:452:406:144:g_d0_f110:144:g_d0_f110:C:-0.158 
+47:1426:77134:14:0:416:454:392:144:g_d0_f110:144:g_d0_f110:C:(0.088) 
+47:1427:77142:0:14:495:529:406:144:g_d0_f110:144:g_d0_f110:C:-0.050 
+47:1428:77149:14:22:493:531:392:144:g_d0_f110:144:g_d0_f110:C:(0.064) 
+47:1429:77157:22:0:72:118:370:144:g_d0_f110:144:g_d0_f110:C:Hispanic 
+47:1430:77166:0:14:265:299:377:144:g_d0_f110:144:g_d0_f110:C:-0.105 
+47:1431:77173:14:0:263:301:363:144:g_d0_f110:144:g_d0_f110:C:(0.110) 
+47:1432:77181:0:14:344:374:377:144:g_d0_f110:144:g_d0_f110:C:0.191 
+47:1433:77187:14:0:340:378:363:144:g_d0_f110:144:g_d0_f110:C:(0.097) 
+47:1434:77195:0:14:418:452:377:144:g_d0_f110:144:g_d0_f110:C:-0.180 
+47:1435:77202:14:0:416:454:363:144:g_d0_f110:144:g_d0_f110:C:(0.097) 
+47:1436:77210:0:14:495:529:377:144:g_d0_f110:144:g_d0_f110:C:-0.027 
+47:1437:77217:14:22:493:531:363:144:g_d0_f110:144:g_d0_f110:C:(0.069) 
+47:1438:77225:22:0:72:135:341:144:g_d0_f110:144:g_d0_f110:C:White/Other 
+47:1439:77237:0:14:265:299:348:144:g_d0_f110:144:g_d0_f110:C:-0.289 
+47:1440:77244:14:0:263:301:334:144:g_d0_f110:144:g_d0_f110:C:(0.203) 
+47:1441:77252:0:14:342:376:348:144:g_d0_f110:144:g_d0_f110:C:-0.060 
+47:1442:77259:14:0:340:378:334:144:g_d0_f110:144:g_d0_f110:C:(0.161) 
+47:1443:77267:0:14:418:452:348:144:g_d0_f110:144:g_d0_f110:C:-0.342 
+47:1444:77274:14:0:416:454:334:144:g_d0_f110:144:g_d0_f110:C:(0.312) 
+47:1445:77282:0:14:495:529:348:144:g_d0_f110:144:g_d0_f110:C:-0.113 
+47:1446:77289:14:21:493:531:334:144:g_d0_f110:144:g_d0_f110:C:(0.219) 
+47:1447:77297:21:0:72:100:313:144:g_d0_f110:144:g_d0_f110:C:Male 
+47:1448:77302:0:14:267:297:320:144:g_d0_f110:144:g_d0_f110:C:0.096 
+47:1449:77308:14:0:263:301:306:144:g_d0_f110:144:g_d0_f110:C:(0.069) 
+47:1450:77316:0:14:344:374:320:144:g_d0_f110:144:g_d0_f110:C:0.060 
+47:1451:77322:14:0:340:378:306:144:g_d0_f110:144:g_d0_f110:C:(0.062) 
+47:1452:77330:0:14:418:452:320:144:g_d0_f110:144:g_d0_f110:C:-0.277 
+47:1453:77337:14:0:416:454:306:144:g_d0_f110:144:g_d0_f110:C:(0.090) 
+47:1454:77345:0:14:495:529:320:144:g_d0_f110:144:g_d0_f110:C:-0.126 
+47:1455:77352:14:22:493:531:306:144:g_d0_f110:144:g_d0_f110:C:(0.064) 
+47:1456:77360:22:0:72:110:284:144:g_d0_f110:144:g_d0_f110:C:Female 
+47:1457:77367:0:14:265:299:291:144:g_d0_f110:144:g_d0_f110:C:-0.055 
+47:1458:77374:14:0:263:301:277:144:g_d0_f110:144:g_d0_f110:C:(0.075) 
+47:1459:77382:0:14:344:374:291:144:g_d0_f110:144:g_d0_f110:C:0.119 
+47:1460:77388:14:0:340:378:277:144:g_d0_f110:144:g_d0_f110:C:(0.066) 
+47:1461:77396:0:14:418:452:291:144:g_d0_f110:144:g_d0_f110:C:-0.004 
+47:1462:77403:14:0:416:454:277:144:g_d0_f110:144:g_d0_f110:C:(0.094) 
+47:1463:77411:0:14:497:527:291:144:g_d0_f110:144:g_d0_f110:C:0.033 
+47:1464:77417:14:22:493:531:277:144:g_d0_f110:144:g_d0_f110:C:(0.070) 
+47:1465:77425:22:0:72:129:255:144:g_d0_f110:144:g_d0_f110:C:Free Lunch 
+47:1466:77436:0:14:267:297:262:144:g_d0_f110:144:g_d0_f110:C:0.030 
+47:1467:77442:14:0:263:301:248:144:g_d0_f110:144:g_d0_f110:C:(0.052) 
+47:1468:77450:0:14:344:374:262:144:g_d0_f110:144:g_d0_f110:C:0.083 
+47:1469:77456:14:0:340:378:248:144:g_d0_f110:144:g_d0_f110:C:(0.046) 
+47:1470:77464:0:14:418:452:262:144:g_d0_f110:144:g_d0_f110:C:-0.161 
+47:1471:77471:14:0:416:454:248:144:g_d0_f110:144:g_d0_f110:C:(0.066) 
+47:1472:77479:0:14:495:529:262:144:g_d0_f110:144:g_d0_f110:C:-0.038 
+47:1473:77486:14:22:493:531:248:144:g_d0_f110:144:g_d0_f110:C:(0.048) 
+47:1474:77494:22:0:72:147:226:144:g_d0_f110:144:g_d0_f110:C:No Free Lunch 
+47:1475:77508:0:14:267:297:233:144:g_d0_f110:144:g_d0_f110:C:0.134 
+47:1476:77514:14:0:263:301:219:144:g_d0_f110:144:g_d0_f110:C:(0.239) 
+47:1477:77522:0:14:344:374:233:144:g_d0_f110:144:g_d0_f110:C:0.213 
+47:1478:77528:14:0:340:378:219:144:g_d0_f110:144:g_d0_f110:C:(0.213) 
+47:1479:77536:0:14:418:452:233:144:g_d0_f110:144:g_d0_f110:C:-0.188 
+47:1480:77543:14:0:416:454:219:144:g_d0_f110:144:g_d0_f110:C:(0.252) 
+47:1481:77551:0:14:495:529:233:144:g_d0_f110:144:g_d0_f110:C:-0.140 
+47:1482:77558:14:13:493:531:219:144:g_d0_f110:144:g_d0_f110:C:(0.180) 
+47:1483:77566:13:11:72:540:206:99:g_d0_f114:99:g_d0_f114:F:Notes for Table 8: Each cell includes an estimate from a separate 2SLS regression that controls for year fixed effects 
+47:1484:77685:11:12:72:541:195:99:g_d0_f114:99:g_d0_f114:F:and all of the additional performance and demographic variables listed in the notes to Table 2.  a Prior achievement is 
+47:1485:77805:12:12:72:529:183:99:g_d0_f114:99:g_d0_f114:F:measured as the average math and reading score in second or fifth grade.  Quartiles are determined on the basis of 
+47:1486:77920:12:12:72:538:171:99:g_d0_f114:99:g_d0_f114:F:students in this sample.  A small number of students who were missing second or fifth grade test scores are excluded 
+47:1487:78037:12:11:72:172:159:99:g_d0_f114:99:g_d0_f114:F:from this categorization. 
+47:1488:78063:11:12:72:75:148:99:g_d0_f114:99:g_d0_f114:F: 
+47:1489:78063:12:13:72:75:136:99:g_d0_f112:99:g_d0_f112:F: 
+47:1490:78063:13:0:72:75:123:122:g_d0_f117:122:g_d0_f117:F: 
+48:1491:78063:0:14:72:113:708:144:g_d0_f111:144:g_d0_f111:C:Table 9 
+48:1492:78071:14:31:72:409:694:144:g_d0_f111:144:g_d0_f111:C:The Two-Year Effect of Summer School on Student Achievement 
+48:1493:78131:31:0:72:75:663:144:g_d0_f111:144:g_d0_f111:C: 
+48:1494:78131:0:14:242:295:670:144:g_d0_f111:144:g_d0_f111:C:Plausible  
+48:1495:78142:14:0:228:305:656:144:g_d0_f111:144:g_d0_f111:C: Lower Bound 
+48:1496:78155:0:14:331:420:677:144:g_d0_f111:144:g_d0_f111:C:Estimated Effect 
+48:1497:78172:14:14:340:411:663:144:g_d0_f111:144:g_d0_f111:C:(% of annual 
+48:1498:78185:14:0:338:413:649:144:g_d0_f111:144:g_d0_f111:C:learning gain) 
+48:1499:78200:0:14:461:514:670:144:g_d0_f111:144:g_d0_f111:C:Plausible  
+48:1500:78211:14:27:450:523:656:144:g_d0_f111:144:g_d0_f111:C:Upper Bound 
+48:1501:78223:27:25:72:594:629:144:g_d0_f111:144:g_d0_f110:C:Third Grade    
+48:1502:78238:25:0:72:284:604:144:g_d0_f110:144:g_d0_f110:C:Reading  -0.009 
+48:1503:78254:0:14:361:394:611:144:g_d0_f110:144:g_d0_f110:C:0.053  
+48:1504:78261:14:0:355:397:597:144:g_d0_f110:144:g_d0_f110:C:(12.5%) 
+48:1505:78269:0:29:470:500:604:144:g_d0_f110:144:g_d0_f110:C:0.116 
+48:1506:78275:29:0:72:282:575:144:g_d0_f110:144:g_d0_f110:C:Math  0.010 
+48:1507:78287:0:14:361:394:582:144:g_d0_f110:144:g_d0_f110:C:0.072  
+48:1508:78294:14:0:355:397:568:144:g_d0_f110:144:g_d0_f110:C:(11.7%) 
+48:1509:78302:0:26:470:500:575:144:g_d0_f110:144:g_d0_f110:C:0.135 
+48:1510:78308:26:25:72:594:549:144:g_d0_f111:144:g_d0_f110:C:Sixth Grade     
+48:1511:78324:25:0:72:284:524:144:g_d0_f110:144:g_d0_f110:C:Reading  -0.019 
+48:1512:78340:0:14:361:391:531:144:g_d0_f110:144:g_d0_f110:C:0.031 
+48:1513:78346:14:0:358:394:517:144:g_d0_f110:144:g_d0_f110:C:(5.5%) 
+48:1514:78353:0:29:470:500:524:144:g_d0_f110:144:g_d0_f110:C:0.081 
+48:1515:78359:29:0:72:284:495:144:g_d0_f110:144:g_d0_f110:C:Math  -0.022 
+48:1516:78372:0:14:361:391:502:144:g_d0_f110:144:g_d0_f110:C:0.028 
+48:1517:78378:14:0:358:394:488:144:g_d0_f110:144:g_d0_f110:C:(5.8%) 
+48:1518:78385:0:21:470:500:495:144:g_d0_f110:144:g_d0_f110:C:0.078 
+48:1519:78391:21:12:72:537:474:99:g_d0_f114:99:g_d0_f114:F:Notes for Table 9:  The estimated summer school treatment effects are computed using the third difference two-year 
+48:1520:78506:12:12:72:537:462:99:g_d0_f114:99:g_d0_f114:F:net effect estimates from Table 3 and the retention treatment effects from Table 6.  We compute the treatment effect 
+48:1521:78623:12:12:72:542:450:99:g_d0_f114:99:g_d0_f114:F:of the summer bridge program by removing that portion of the effect that could be caused by retention.  For third and 
+48:1522:78741:12:12:72:527:438:99:g_d0_f114:99:g_d0_f114:F:sixth grade, we compute lower and upper estimates by adding and subtracting 0.25 logits to point estimates of the 
+48:1523:78855:12:11:72:181:426:99:g_d0_f114:99:g_d0_f114:F:retention treatment effects. 
+48:1524:78884:11:14:72:75:415:99:g_d0_f114:99:g_d0_f114:F: 
+48:1525:78884:14:0:72:75:401:144:g_d0_f110:144:g_d0_f110:C: 

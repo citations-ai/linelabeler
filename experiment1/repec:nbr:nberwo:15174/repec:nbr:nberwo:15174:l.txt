@@ -1,0 +1,1029 @@
+1:0:0:0:100:306:394:710:12:Times:12:Times:?:NBER WORKING PAPER SERIES
+1:1:25:100:28:306:511:610:12:Times:12:Times:F:A QUALITY-ADJUSTED PRICE INDEX FOR COLORECTAL CANCER DRUGS
+1:2:83:28:14:306:348:582:12:Times:12:Times:?:Claudio Lucarelli
+1:3:100:14:28:306:344:568:12:Times:12:Times:?:Sean Nicholson
+1:4:114:28:14:306:359:540:12:Times:12:Times:?:Working Paper 15174
+1:5:133:14:42:306:393:526:12:Times:12:Times:?:http://www.nber.org/papers/w15174
+1:6:166:42:14:306:439:484:12:Times:12:Times:?:NATIONAL BUREAU OF ECONOMIC RESEARCH
+1:7:202:14:14:306:374:470:12:Times:12:Times:?:1050 Massachusetts Avenue
+1:8:227:14:14:306:362:456:12:Times:12:Times:?:Cambridge, MA 02138
+1:9:246:14:158:306:330:442:12:Times:12:Times:?:July 2009
+1:10:255:158:14:72:540:284:12:Times:12:Times:?:Excellent research assistance was provided by Brigid Farrell and Artem Gulish. The Merck Foundation,
+1:11:355:14:14:72:540:270:12:Times:12:Times:?:Pfizer, Inc., Johnson & Johnson, and AstraZeneca provided funding for the study. We thank IntrinsiQ,
+1:12:455:14:14:72:540:256:12:Times:12:Times:?:Jeff Forringer, Robert Ruckman, Andrew Epstein, and Scott Johnson for providing and interpreting
+1:13:551:14:14:72:540:242:12:Times:12:Times:?:the data, and Josh Bilenker and Brad Somer for information about oncology generally. Helpful comments
+1:14:652:14:14:72:540:228:12:Times:12:Times:?:were also provided by Daniel Eisenberg, Will Manning, Alan Garber, Amitabh Chandra, and seminar
+1:15:747:14:14:72:540:214:12:Times:12:Times:?:participants at Academy Health, the Pharmaceutical Economics and Policy Council, the Federal Trade
+1:16:845:14:14:72:540:200:12:Times:12:Times:?:Commission, the University of Chicago, Duke University, the Missoula Tumor Board, and NBER.
+1:17:936:14:14:72:540:186:12:Times:12:Times:?:The views expressed herein are those of the author(s) and do not necessarily reflect the views of the
+1:18:1037:14:28:72:266:172:12:Times:12:Times:?:National Bureau of Economic Research.
+1:19:1074:28:14:72:540:144:12:Times:12:Times:?:NBER working papers are circulated for discussion and comment purposes. They have not been peer-
+1:20:1170:14:14:72:540:130:12:Times:12:Times:?:reviewed or been subject to the review by the NBER Board of Directors that accompanies official
+1:21:1265:14:28:72:169:116:12:Times:12:Times:?:NBER publications.
+1:22:1283:28:14:72:540:88:12:Times:12:Times:?:© 2009 by Claudio Lucarelli and Sean Nicholson. All rights reserved. Short sections of text, not to
+1:23:1382:14:14:72:540:74:12:Times:12:Times:?:exceed two paragraphs, may be quoted without explicit permission provided that full credit, including
+1:24:1483:14:0:72:224:60:12:Times:12:Times:?:© notice, is given to the source.
+2:25:1516:0:14:72:364:700:12:Times:12:Times:?:A Quality-Adjusted Price Index for Colorectal Cancer Drugs
+2:26:1574:14:14:72:255:686:12:Times:12:Times:?:Claudio Lucarelli and Sean Nicholson
+2:27:1610:14:14:72:234:672:12:Times:12:Times:?:NBER Working Paper No. 15174
+2:28:1638:14:14:72:119:658:12:Times:12:Times:?:July 2009
+2:29:1647:14:28:72:147:644:12:Times:12:Times:?:JEL No. I11,L0
+2:30:1661:28:28:273:338:616:12:Times:12:Times:?:ABSTRACT
+2:31:1669:28:14:72:540:588:12:Times:12:Times:?:The average price of treating a colorectal cancer patient with chemotherapy increased from about $100
+2:32:1770:14:14:72:540:574:12:Times:12:Times:?:in 1993 to $36,000 in 2005, due largely to the approval and widespread use of five new drugs between
+2:33:1870:14:14:72:540:560:12:Times:12:Times:?:1996 and 2004. We examine whether the substantial increase in spending has been worth it. Using
+2:34:1965:14:14:72:540:546:12:Times:12:Times:?:discrete choice methods to estimate demand, we construct a price index for colorectal cancer drugs
+2:35:2063:14:14:72:540:532:12:Times:12:Times:?:for each quarter between 1993 and 2005 that takes into consideration the quality (i.e., the efficacy
+2:36:2163:14:14:72:540:518:12:Times:12:Times:?:and side effects in randomized clinical trials) of each drug on the market and the value that oncologists
+2:37:2268:14:14:72:540:504:12:Times:12:Times:?:place on drug quality. A naive price index, which makes no adjustments for the changing attributes
+2:38:2366:14:14:72:540:490:12:Times:12:Times:?:of drugs on the market, greatly overstates the true price increase. By contrast, a hedonic price index
+2:39:2468:14:14:72:540:476:12:Times:12:Times:?:and two quality-adjusted price indices show that prices have actually remained fairly constant over
+2:40:2567:14:14:72:512:462:12:Times:12:Times:F:this 13-year period, with slight increases or decreases depending on a model’s assumptions.
+2:41:2658:14:16:72:75:448:12:Times:12:Times:?: 
+2:42:2658:16:14:72:156:432:12:Times:12:Times:?:Claudio Lucarelli
+2:43:2675:14:14:72:164:418:12:Times:12:Times:?:Assistant Professor
+2:44:2694:14:14:72:220:404:12:Times:12:Times:?:Department of Policy Analysis
+2:45:2723:14:14:72:155:390:12:Times:12:Times:?:and Management
+2:46:2737:14:14:72:162:376:12:Times:12:Times:?:Cornell University
+2:47:2755:14:14:72:123:362:12:Times:12:Times:?:MVR Hall
+2:48:2763:14:14:72:186:348:12:Times:12:Times:?:Ithaca, NY 14853-4401
+2:49:2784:14:28:72:163:334:12:Times:12:Times:?:cl443@cornell.edu
+2:50:2801:28:14:72:148:306:12:Times:12:Times:?:Sean Nicholson
+2:51:2815:14:14:72:167:292:12:Times:12:Times:?:Associate Professor
+2:52:2834:14:14:72:306:278:12:Times:12:Times:?:Department of Policy Analysis and Management
+2:53:2878:14:14:72:162:264:12:Times:12:Times:?:Cornell University
+2:54:2896:14:14:72:229:250:12:Times:12:Times:?:123 Martha Van Rensselaer Hall
+2:55:2926:14:14:72:158:236:12:Times:12:Times:?:Ithaca, NY 14853
+2:56:2942:14:14:72:124:222:12:Times:12:Times:?:and NBER
+2:57:2950:14:0:72:165:208:12:Times:12:Times:?:sn243@cornell.edu
+3:58:2967:0:34:100:236:695:296:g_d0_f2:296:g_d0_f2:C:1  Introduction
+3:59:2982:34:22:100:512:661:143:g_d0_f3:143:g_d0_f3:B:Medical technology, broadly defined as the products and services patients receive
+3:60:3063:22:21:100:512:639:143:g_d0_f3:143:g_d0_f3:B:when treated,  is the engine behind increases in medical spending.   Newhouse
+3:61:3140:21:22:100:512:618:143:g_d0_f3:143:g_d0_f3:B:(1992) concludes that approximately two-thirds of the growth in medical costs in
+3:62:3220:22:22:100:512:596:143:g_d0_f3:143:g_d0_f3:B:the United States between 1950 and 1987 was due to changing medical technolo-
+3:63:3297:22:21:100:511:574:143:g_d0_f3:143:g_d0_f3:B:gies.1There is also evidence that medicalcare in the US has improved substan-
+3:64:3374:21:22:100:512:553:143:g_d0_f3:143:g_d0_f3:B:tially over the past 30 years for certain health conditions such as cardiovascular
+3:65:3456:22:22:100:512:531:143:g_d0_f3:143:g_d0_f3:B:disease. For example, the life expectancy of a 45-year old today is 4.4 years longer
+3:66:3540:22:21:100:512:509:143:g_d0_f3:143:g_d0_f3:B:than it was in 1950 (Cutler (2004)).2Murphy and Topel (2006) estimate that the
+3:67:3618:21:22:100:512:488:143:g_d0_f3:143:g_d0_f3:B:total rise in life expectancy in the US between 1970 and 2000 increased national
+3:68:3698:22:22:100:512:466:143:g_d0_f3:143:g_d0_f3:B:wealth by $3.2 trillion per year, which is approximately equal in value to one-half
+3:69:3781:22:21:100:142:444:143:g_d0_f3:143:g_d0_f3:B:of GDP.
+3:70:3788:21:22:116:511:423:143:g_d0_f3:143:g_d0_f3:A:An important policy issue, therefore, is whether the value of new medical tech-
+3:71:3867:22:22:100:512:401:143:g_d0_f3:143:g_d0_f3:B:nology exceeds its cost. More generally, if new technologies are priced higher than
+3:72:3950:22:21:100:511:379:143:g_d0_f3:143:g_d0_f3:B:the technologies they replace and consumers value the superior health outcomes
+3:73:4028:21:22:100:512:358:143:g_d0_f3:143:g_d0_f3:B:that can now be produced, are medical prices rising or falling once one correctly
+3:74:4109:22:22:100:511:336:143:g_d0_f3:143:g_d0_f3:B:accounts for quality?  If the government and private health insurers believe new
+3:75:4189:22:21:100:512:314:143:g_d0_f3:143:g_d0_f3:B:medical technologies are causing quality-adjusted prices to increase, on average,
+3:76:4270:21:22:100:512:293:143:g_d0_f3:143:g_d0_f3:B:they may make it more difficult for new products to reach the market and/or
+3:77:4345:22:18:100:511:271:143:g_d0_f3:143:g_d0_f3:B:reduce payment for new products, which would dampen the financial incentives
+3:78:4421:18:21:84:541:253:49:g_d0_f5:99:g_d0_f6:?:1Newhouse estimates the proportion of the growth in medical spending accounted for by the aging of the
+3:79:4523:21:18:70:541:232:99:g_d0_f6:99:g_d0_f6:?:population, improved health insurance based upon the RAND health insurance experiment price elasticity,
+3:80:4626:18:18:70:541:214:99:g_d0_f6:99:g_d0_f6:?:and rising income based on the RAND income elasticity. Medical technology is the residual once the factors
+3:81:4732:18:18:70:540:196:99:g_d0_f6:99:g_d0_f6:?:above have been accounted for.  Finkelstein (2007) argues that the aggregate, market-wide effects of health
+3:82:4839:18:18:70:540:178:99:g_d0_f6:99:g_d0_f6:?:insurance on spending are larger than those derived from individual choices in the RAND experiment.  She
+3:83:4943:18:18:70:540:160:99:g_d0_f6:99:g_d0_f6:?:estimates that about one-half of the growth in US hospital spending between 1950 and 1990 was due to the
+3:84:5047:18:18:70:540:142:99:g_d0_f6:99:g_d0_f6:?:spread of health insurance, which may indicate that medical technology accounts for less than one-half of the
+3:85:5156:18:10:70:190:124:99:g_d0_f6:99:g_d0_f6:?:growth in medical spending
+3:86:5182:10:22:84:541:114:49:g_d0_f5:99:g_d0_f6:?:2Cutler (2004) estimates that two-thirds of this increase was due to changing medical technologies, pri-
+3:87:5286:22:0:70:539:92:99:g_d0_f6:99:g_d0_f6:?:marily for the treatment of cardiovascular disease. The remaining one-third was due to behavioral changes.
+4:88:5393:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:to innovate.  Conversely, if public and private payers believe technology is help-
+4:89:5475:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:ing drive down quality-adjusted prices, they are likely to maintain or enhance
+4:90:5553:22:22:100:214:651:143:g_d0_f3:143:g_d0_f3:B:incentives to innovate.
+4:91:5576:22:21:116:511:629:143:g_d0_f3:143:g_d0_f3:A:Berndt et al. (2000) highlight several empirical challenges of measuring a medi-
+4:92:5656:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:cal price index. Due to health insurance, most consumers do not face the full price
+4:93:5739:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:of medical care and will seek to consume beyond the point where the marginal
+4:94:5815:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:value is equal to the full price.  Patients also rely on physicians to provide in-
+4:95:5897:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:formation regarding the value of medical goods and services.  The implication is
+4:96:5977:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:that consumer purchases in the medical market will not necessarily reveal their
+4:97:6056:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:marginal valuation of a good or service. Perhaps the greatest empirical challenge
+4:98:6137:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:for constructing meaningful price indexes in health care is how to account for the
+4:99:6219:22:22:100:358:456:143:g_d0_f3:143:g_d0_f3:B:changing quality of medical products and services.
+4:100:6269:22:21:116:511:434:143:g_d0_f3:143:g_d0_f3:A:Due to these considerable empirical challenges, there have been few studies
+4:101:6344:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:of whether medical prices are rising or falling once one takes into consideration
+4:102:6425:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:the attributes of the new products and consumers’ valuations of those attributes.
+4:103:6506:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:Cutler et al. (1998) show that the life expectancy of heart attack patients increased
+4:104:6591:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:by  eight  months  between  1984 and 1991.   The value of  per-patient  expected
+4:105:6671:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:longevity  ($11,100) increased three times more than treatment  costs ($3,600)
+4:106:6749:22:21:100:511:304:143:g_d0_f3:143:g_d0_f3:B:during this time period in real terms, which implies that the quality-adjusted
+4:107:6827:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:price index fell by about one percent annually. Berndt et al. (2002) conclude that
+4:108:6909:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:the real cost of treating major depression decreased by about two percent per
+4:109:6986:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:year between 1991 and 1996 once one takes into account the probability that a
+4:110:7063:21:22:100:305:218:143:g_d0_f3:143:g_d0_f3:B:patient’s depression goes into remission.
+4:111:7104:22:22:116:511:196:143:g_d0_f3:143:g_d0_f3:A:The pharmaceutical industry is the source of considerable innovation in medi-
+4:112:7181:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:cal care. The pharmaceutical industry invests over $40 billion per year in research
+4:113:7264:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:and development, which represents about 16 percent of the industry’s revenue.
+4:114:7341:22:22:100:512:131:143:g_d0_f3:143:g_d0_f3:B:Most new pharmaceuticals are priced higher than the treatment methods they
+4:115:7415:22:21:100:512:109:143:g_d0_f3:143:g_d0_f3:B:replace, and this has certainly been the case with colorectal cancer drugs.  The
+4:116:7495:21:0:100:512:88:143:g_d0_f3:143:g_d0_f3:B:average price of providing a colorectal cancer patient with a 24-week chemother-
+5:117:7576:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:apy drug regimen increased from $127 in 1993 to $36,300 in 2005. There has been
+5:118:7655:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:substantial innovation in the treatment of colorectal cancer patients over the last
+5:119:7738:22:22:100:511:651:143:g_d0_f3:143:g_d0_f3:B:decade.3Five new drugs were approved by the Food and Drug Administration
+5:120:7810:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:(FDA) for the treatment of colorectal cancer between 1996 and 2004, and these
+5:121:7887:21:22:100:509:608:143:g_d0_f3:64:g_d0_f4:B:drugs collectively had an 86 percent market share by the third quarter of 2005.4
+5:122:7967:22:22:116:512:586:143:g_d0_f3:143:g_d0_f3:A:We examine whether the substantial increase in spending associated with phar-
+5:123:8044:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:maceutical innovation in the treatment of colorectal cancer has been worth it.
+5:124:8122:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:Specifically, we estimate a price index for colorectal cancer drugs for each quarter
+5:125:8206:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:between 1993 and the first half of 2005 that takes into consideration the quality
+5:126:8287:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:(i.e., the efficacy and side effects as reported in clinical trials) of each drug on the
+5:127:8375:22:22:100:413:478:143:g_d0_f3:143:g_d0_f3:B:market and the value that oncologists attach to drug quality.
+5:128:8436:22:22:116:511:456:143:g_d0_f3:143:g_d0_f3:A:We estimate a quality-adjusted price index using methods developed by Berry
+5:129:8511:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:(1994), Berry et al. (1995), Berry and Pakes (2007) and Nevo (2003). These tech-
+5:130:8591:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:niques have been used to estimate the welfare effects of new automobiles (Petrin
+5:131:8671:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:(2002), computers (Pakes (2003), Song (2007), Song (2005)), and breakfast cereal
+5:132:8751:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:(Nevo (2003))), but few contributions apply them to medical markets.  Trajten-
+5:133:8829:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:berg (1990) focused on the value of innovation on medical devices, specifically
+5:134:8908:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:CT scanners, and provided various price indices.  Cleanthous (2004) and Conti
+5:135:8985:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:(2006) study the value of innovation for anti-depressants,  however,  neither of
+5:136:9065:21:22:100:255:283:143:g_d0_f3:143:g_d0_f3:B:them constructs a price index.
+5:137:9095:22:22:116:512:261:143:g_d0_f3:143:g_d0_f3:A:The first step in constructing the price index is to estimate oncologists’ demand
+5:138:9176:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:for colon cancer regimens,  which  we argue is a function of the observed  and
+5:139:9254:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:unobserved quality of each regimen, as well as the price a physician must pay
+5:140:9331:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:to acquire the regimen.  An observation in this estimation is the market share
+5:141:9409:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:of each regimen for each quarter.  The second step is to calculate the equivalent
+5:142:9490:21:19:100:512:153:143:g_d0_f3:143:g_d0_f3:B:variation (EV) between each adjacent pair of quarters.  The EV between period
+5:143:9567:19:21:84:541:134:49:g_d0_f5:99:g_d0_f6:?:313.2 percent of drugs entering Phase 1 trials between 1998 and 2004 were targeting cancer according to
+5:144:9670:21:10:70:205:113:99:g_d0_f6:99:g_d0_f6:?:the PharmaProjects data base.
+5:145:9699:10:0:84:254:103:49:g_d0_f5:99:g_d0_f6:?:4Market share data are from IntrinsiQ.
+6:146:9738:0:22:100:512:695:143:g_d0_f7:143:g_d0_f3:B:t−1 and t is the change in spending required to achieve physicians’ utility in
+6:147:9816:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:periodtrelative tot−1, taking into consideration that both the quality of the
+6:148:9893:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:drug regimens on the market and the prices of those regimens may have changed
+6:149:9970:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:between these two periods.  Positive values imply that the value of the drugs is
+6:150:10050:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:increasing over time by more than their prices, whereas negative values imply the
+6:151:10131:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:opposite. The third step is to translate the EV into a quality-adjusted price index
+6:152:10214:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:by calculating the change in drug prices that is consistent with the welfare effect
+6:153:10297:21:22:100:205:543:143:g_d0_f3:143:g_d0_f3:B:captured by the EV.
+6:154:10316:22:21:116:511:521:143:g_d0_f3:143:g_d0_f3:A:We generate four additional indices for purposes of comparison.   First, we
+6:155:10391:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:estimate a “naive” price index that merely reports the mean price of colon can-
+6:156:10470:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:cer regimens in each quarter, relative to the first quarter of 1993, without any
+6:157:10550:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:adjustments for regimen attributes.  The naive index will be based on the price
+6:158:10629:22:21:100:511:434:143:g_d0_f3:143:g_d0_f3:B:physicians pay to acquire each regimen and the market share of each regimen.
+6:159:10705:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:Comparing the quality-adjusted price index to the naive index illustrates the
+6:160:10782:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:importance of accounting for the changing quality of pharmaceutical products.
+6:161:10859:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:Second,  we report the incremental spending per incremental expected quality
+6:162:10935:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:adjusted life years (QALYs), where the reference regimen is the oldest one on
+6:163:11012:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:the market.  This index does not depend on how much value oncologists place
+6:164:11087:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:on various drug attributes, and can be compared to estimates in the literature
+6:165:11165:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:on the value of a statistical life.  Third, we estimate a hedonic price index by
+6:166:11245:22:22:100:511:261:143:g_d0_f3:143:g_d0_f3:B:regressing prices on product characteristics and quarter indicator variables. This
+6:167:11327:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:regression, which controls for changing product attributes by means of a reduced
+6:168:11407:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:form projection of markups on the characteristic space, is the traditional method
+6:169:11488:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:traditionally used to account for changing attributes and the introduction of new
+6:170:11569:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:goods.  Finally, to assess the implication of the logit assumption, we estimate a
+6:171:11650:21:22:100:348:153:143:g_d0_f3:143:g_d0_f3:B:vertical model in the spirit of Bresnahan (1987).
+6:172:11699:22:22:116:511:131:143:g_d0_f3:143:g_d0_f3:A:The naive price index,  which increased by 2600 percent between 1993 and
+6:173:11771:22:21:100:512:109:143:g_d0_f3:143:g_d0_f3:B:2005, greatly overestimates the price increase.  The hedonic price index and the
+6:174:11851:21:0:100:511:88:143:g_d0_f3:143:g_d0_f3:B:quality-adjusted price indices show thatprices have actually decreased slightly
+7:175:11931:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:over the 13-year period we study. The hedonic and quality-adjusted price indices
+7:176:12011:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:are similar during the period without innovation, and both exhibit a decrease
+7:177:12088:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:when the first branded product is introduced in the market.  For the following
+7:178:12166:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:period of innovation the two indices show opposite trends, with the hedonic price
+7:179:12247:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:increasing and the quality-adjusted index decreasing.  This discrepancy may be
+7:180:12325:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:due to the logit functional form assumption, which increases the dimensionality of
+7:181:12407:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:the problem, and makes all innovation welfare enhancing.In contrast, the vertical
+7:182:12488:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:model shows an increase in the prices due to innovation of about 28% over the
+7:183:12565:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:13-year period.  This model is an extreme case, where there are no unobserved
+7:184:12642:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:shocks to preferences, and the physicians are heterogeneous due to permanent
+7:185:12718:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:components.  The levels of the quality-adjusted logit, vertical and hedonic price
+7:186:12799:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:indices demonstrate that the pricing strategies of pharmaceutical firms allow them
+7:187:12881:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:to appropriate most of the extra welfare they generate from improved product
+7:188:12957:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:attributes.  For all the models the indices remain fairly constant over the period
+7:189:13039:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:studied.  All of the new drugs in our sample period are still under patent pro-
+7:190:13118:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:tection.  Presumably consumers would capture more of the surplus once generic
+7:191:13195:21:51:100:221:348:143:g_d0_f3:143:g_d0_f3:B:drugs enter the market.
+7:192:13218:51:34:100:390:297:296:g_d0_f2:296:g_d0_f2:C:2  Overview of Colorectal Cancer
+7:193:13250:34:21:100:512:263:143:g_d0_f3:143:g_d0_f3:B:Colorectal cancer is a good health condition for studying the welfare effects of
+7:194:13330:21:22:100:512:242:143:g_d0_f3:143:g_d0_f3:B:medical innovation because it is a common health condition, the majority of pa-
+7:195:13409:22:22:100:512:220:143:g_d0_f3:143:g_d0_f3:B:tients today are treated with drugs that did not exist a decade ago, and treatment
+7:196:13491:22:21:100:511:198:143:g_d0_f3:143:g_d0_f3:B:costs are rising rapidly.  According to the National Cancer Institute, approxi-
+7:197:13570:21:22:100:512:177:143:g_d0_f3:143:g_d0_f3:B:mately 112,000 patients will be diagnosed with colorectal cancer in the United
+7:198:13648:22:22:100:512:155:143:g_d0_f3:143:g_d0_f3:B:States in 2007, and 52,000 will die from the disease. This places colorectal cancer
+7:199:13731:22:21:100:512:133:143:g_d0_f3:143:g_d0_f3:B:as the fourth most common cancer based on number of new patients, after breast,
+7:200:13810:21:22:100:512:112:143:g_d0_f3:143:g_d0_f3:B:prostate, and lung. It is estimated that people born today will have a 5.4 percent
+7:201:13892:22:0:100:511:90:143:g_d0_f3:143:g_d0_f3:B:chance of being diagnosed with colorectalcancer over their lifetime. The disease
+8:202:13973:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:is treatable, however; between 1996 and 2003, colorectal cancer patients had a 64
+8:203:14054:22:22:100:511:673:143:g_d0_f3:143:g_d0_f3:B:percent chance of surviving for five years.  The probability a patient will survive
+8:204:14137:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:for five years ranges from 93 percent for those diagnosed with Stage I cancer to
+8:205:14217:22:21:100:432:629:143:g_d0_f3:143:g_d0_f3:B:eight percent for those diagnosed with Stage IV cancer (NCCN).
+8:206:14279:21:22:116:512:608:143:g_d0_f3:143:g_d0_f3:A:Colorectal cancer patients usually begin treatment by having the tumor sur-
+8:207:14354:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:gically removed.  Most stage 3 and about half of stage 4 patients then receive
+8:208:14432:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:chemotherapy treatment.  For male Medicare patients diagnosed with colorectal
+8:209:14509:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:cancer between 1998 and 2002, total treatment costs in the first year following
+8:210:14588:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:diagnosis averaged $29,600 (Yabroff et al. (2008)).  About 70 percent of these
+8:211:14666:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:costs were due to hospital care, primarily from the initial surgery.  In this paper
+8:212:14749:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:we present an index for chemotherapy drug prices only, not for the total cost
+8:213:14826:22:22:100:511:456:143:g_d0_f3:143:g_d0_f3:B:of treating the disease.  We focus on chemotherapy costs because this is where
+8:214:14904:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:the innovation has occurred since 1996, and is the likely driver of the increase in
+8:215:14987:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:treatment costs and improvements in health outcomes.5Although chemotherapy
+8:216:15061:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:costs accounted for about 25 percent of total treatment costs for Medicare col-
+8:217:15140:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:orectal cancer patients in 2001, it may represent the largest cost segment after
+8:218:15220:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:the average chemotherapy cost per patient increased by $28,000 between 2001
+8:219:15295:22:22:100:153:326:143:g_d0_f3:64:g_d0_f4:B:and 2005.6
+8:220:15305:22:21:116:511:304:143:g_d0_f3:143:g_d0_f3:A:There are other important reasons we decided to study colorectal cancer treat-
+8:221:15383:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:ment. For most health conditions, if a physician writes a prescription for a drug,
+8:222:15465:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:the patient takes the prescription to a pharmacy, the patient pays a co-payment or
+8:223:15547:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:co-insurance rate, and the patient’s health insurance company pays the balance of
+8:224:15628:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:the price. By observing the price (co-payment) patients face and their decisions,
+8:225:15709:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:one could estimate patients’ demand for prescription drugs only for a portion of
+8:226:15789:22:17:100:512:174:143:g_d0_f3:143:g_d0_f3:B:the demand curve, which would make it impossible to estimate consumers’ total
+8:227:15866:17:22:84:541:157:49:g_d0_f5:99:g_d0_f6:?:5Total treatment costs for a Medicare colorectal cancer patient only increased by about $2,000 in real
+8:228:15968:22:18:70:541:135:99:g_d0_f6:99:g_d0_f6:?:terms between 1991 and 2001 during a period where mostpatients were receiving generic chemotherapy
+8:229:16066:18:10:70:97:117:99:g_d0_f6:99:g_d0_f6:?:drugs.
+8:230:16072:10:22:84:541:107:49:g_d0_f5:99:g_d0_f6:?:6The 25 percent figure was reported by Joan Warren in a presentation at the International Health Eco-
+8:231:16173:22:0:70:201:85:99:g_d0_f6:99:g_d0_f6:?:nomics meetings in July 2007.
+9:232:16203:0:22:100:266:695:143:g_d0_f3:143:g_d0_f3:B:willingness to pay for a product.
+9:233:16236:22:22:116:511:673:143:g_d0_f3:143:g_d0_f3:A:Most oncology drugs are infused into a patient intravenously in a physician’s
+9:234:16313:22:22:100:510:651:143:g_d0_f3:64:g_d0_f4:B:office or an outpatient hospital clinic by a nurse under a physician’s supervision.7
+9:235:16397:22:21:100:511:629:143:g_d0_f3:143:g_d0_f3:B:Unlike drugs that are distributed throughpharmacies, physicians (and some hos-
+9:236:16475:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:pitals on behalf of their physicians) purchase oncology drugs from wholesalers or
+9:237:16556:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:distributors (who have previously purchased the drugs from the manufacturers),
+9:238:16634:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:store the drugs, and administer them as needed to their patients. Physicians then
+9:239:16715:21:22:100:511:543:143:g_d0_f3:143:g_d0_f3:B:bill the patient’s insurance company for an administration fee and the cost of the
+9:240:16797:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:drug. Although physicians are eventually reimbursed by health insurers, they do
+9:241:16876:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:take temporary ownership of oncology drugs.  As such, physicians face the pos-
+9:242:16954:22:22:100:511:478:143:g_d0_f3:143:g_d0_f3:B:sible risk of not being reimbursed by health insurers and may incur substantial
+9:243:17033:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:carrying costs.  For example, a physician who pays $50,000 for the drugs in a
+9:244:17110:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:patient’s regimen and experiences a three-month delay between when he acquires
+9:245:17188:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:the drugs and when he is reimbursed by a health insurer would incur an inventory
+9:246:17268:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:carrying cost of $1,333 at an interest rate of eight percent.  Because we observe
+9:247:17349:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:the full price that physicians pay for colorectal cancer drugs, we can estimate
+9:248:17428:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:physicians’ demand for those drugs. If physicians act as agents for their patients,
+9:249:17511:22:22:100:433:326:143:g_d0_f3:143:g_d0_f3:B:we indirectly observe patients’ willingness to pay for these drugs.
+9:250:17578:22:21:116:511:304:143:g_d0_f3:143:g_d0_f3:A:Almost all colorectal cancer patients who are treated with pharmaceuticals
+9:251:17652:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:receive multiple drugs in the form of a regimen rather than a single drug, simi-
+9:252:17732:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:lar to anti-retroviral “cocktail” treatments for AIDS patients.  For example, the
+9:253:17813:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:regimen with the greatest market share in 2005 contained four separate drugs:
+9:254:17890:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:bevacizumab, oxaliplatin, fluorororicil, and leucovorin.  The 12 regimens in our
+9:255:17970:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:sample are reported in Table 1.  Most of our analysis, therefore, is conducted at
+9:256:18051:22:17:100:313:174:143:g_d0_f3:143:g_d0_f3:B:the level of a regimen rather than a drug.
+9:257:18093:17:22:84:541:157:49:g_d0_f5:99:g_d0_f6:?:7Based on data from IMS Health,  59% of colorectal cancer drugs in the third quarter of 2005 were
+9:258:18190:22:18:70:541:135:99:g_d0_f6:99:g_d0_f6:?:purchased by physician offices/clinics and 28% by hospitals. The remainder was purchased by retail and mail
+9:259:18297:18:0:70:427:117:99:g_d0_f6:99:g_d0_f6:?:order pharmacies, health maintenance organizations, and long-term care facilities.
+10:260:18380:0:34:100:292:695:296:g_d0_f2:296:g_d0_f2:C:3  Empirical Methods
+10:261:18400:34:22:100:512:661:143:g_d0_f3:143:g_d0_f3:B:To account for changes in quality of new goods we use a hedonic price regression
+10:262:18480:22:21:100:512:639:143:g_d0_f3:143:g_d0_f3:B:and the construction of two quality-adjusted price indices. The quality-adjusted
+10:263:18560:21:22:100:512:618:143:g_d0_f3:143:g_d0_f3:B:price indices are constructed from the estimated benefits of innovation that were
+10:264:18641:22:22:100:512:596:143:g_d0_f3:143:g_d0_f3:B:derived from the estimation of a discrete choice model of demand for colon cancer
+10:265:18722:22:21:100:512:574:143:g_d0_f3:143:g_d0_f3:B:drugs under two extreme assumptions. The technical details of each approach are
+10:266:18801:21:44:100:227:553:143:g_d0_f3:143:g_d0_f3:B:described in this section.
+10:267:18827:44:29:100:318:509:206:g_d0_f2:206:g_d0_f2:C:3.1  Hedonic Price Regression
+10:268:18856:29:22:100:512:480:143:g_d0_f3:143:g_d0_f3:B:Hedonic price regressions were introduced by Court (1939) and formalized by
+10:269:18931:22:22:100:512:458:143:g_d0_f3:143:g_d0_f3:B:Griliches (1961) as a way to account for the new goods problem.  In essence,
+10:270:19007:22:21:100:511:436:143:g_d0_f3:143:g_d0_f3:B:newer goods usually contain more desirablecharacteristics, and therefore, failing
+10:271:19088:21:22:100:512:415:143:g_d0_f3:143:g_d0_f3:B:to account for the value of these characteristics will overestate the true change
+10:272:19169:22:22:100:512:393:143:g_d0_f3:143:g_d0_f3:B:in prices.  The hedonic price regression is motivated by the “hedonic hypothe-
+10:273:19247:22:21:100:512:371:143:g_d0_f3:143:g_d0_f3:B:sis,” which states that goods can be viewed as aggregations or bundles of lower
+10:274:19326:21:22:100:512:350:143:g_d0_f3:143:g_d0_f3:B:order variables that the literature calls characteristics or attributes. These char-
+10:275:19410:22:22:100:512:328:143:g_d0_f3:143:g_d0_f3:B:acteristics are the variables that consumers care about and that are present in
+10:276:19489:22:21:100:512:306:143:g_d0_f3:143:g_d0_f3:B:their utility functions.  The hedonic function provides a dissaggregation of the
+10:277:19569:21:22:100:512:285:143:g_d0_f3:143:g_d0_f3:B:observed transaction prices into the variables that affect the economic agents’
+10:278:19648:22:22:100:512:263:143:g_d0_f3:143:g_d0_f3:B:behavior.  Court and Griliches proposed estimating a surface that relates prices
+10:279:19728:22:21:100:512:241:143:g_d0_f3:143:g_d0_f3:B:to product characteristics and time, and then use the results to obtain estimates
+10:280:19809:21:22:100:391:220:143:g_d0_f3:143:g_d0_f3:B:of the price changes keeping the characteristics constant.
+10:281:19867:22:36:116:477:198:143:g_d0_f3:143:g_d0_f3:A:For our application, we estimate the following hedonic price regression
+10:282:19938:36:0:232:304:162:143:g_d0_f3:143:g_d0_f3:?:lnpit=βxit+
+10:283:19949:0:29:312:327:177:64:g_d0_f4:143:g_d0_f10:?:05:3∑
+10:284:19954:29:0:307:332:148:64:g_d0_f9:64:g_d0_f4:?:t=93:2
+10:285:19960:0:36:333:511:162:143:g_d0_f7:143:g_d0_f3:A:γtdt+εit(1)
+10:286:19971:36:22:116:511:126:143:g_d0_f3:143:g_d0_f3:A:wherepitis the price of regimeniin quartert,xitcontains the attributes
+10:287:20041:22:21:100:512:104:143:g_d0_f3:143:g_d0_f3:B:of each regimen, including effectiveness attributes such as survival rate, time-to-
+10:288:20124:21:0:100:511:83:143:g_d0_f3:143:g_d0_f3:B:progression, and response rate, a second line treatment indicator, the interactions
+11:289:20208:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:between the effectiveness attributes above and the second line indicator, grade 3 or
+11:290:20292:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:4 side effects such as diarrhea, nausea, abdominal pain, vomiting and neutropenia,
+11:291:20374:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:and an indicator of whether the regiment contains a tablet or not.  The time
+11:292:20450:22:21:100:481:629:143:g_d0_f3:143:g_d0_f3:B:dummies denote quarters and the base quarter is the first quarter of 1993.
+11:293:20524:21:26:116:511:608:143:g_d0_f3:143:g_d0_f3:A:The change in prices is obtained from the parameters of the time dummies as
+11:294:20599:26:16:221:281:582:143:g_d0_f7:64:g_d0_f4:?:PIt−PIt−1
+11:295:20608:16:0:237:265:566:143:g_d0_f7:64:g_d0_f4:?:PIt−1
+11:296:20613:0:33:287:391:574:143:g_d0_f3:143:g_d0_f3:?:=exp(γt−γt−1)−1
+11:297:20628:33:22:100:171:541:143:g_d0_f3:143:g_d0_f3:B:and therefore,
+11:298:20642:22:28:239:372:519:143:g_d0_f7:64:g_d0_f4:?:PIt=exp(γt−γt−1)PIt−1
+11:299:20663:28:22:116:511:491:143:g_d0_f3:143:g_d0_f3:A:The parametersβin equation (1) have been referred to as “implicit prices”,
+11:300:20737:22:22:100:512:469:143:g_d0_f3:143:g_d0_f3:B:however, the theoretical foundations of the hedonic surface are not clear.  Pakes
+11:301:20818:22:21:100:512:447:143:g_d0_f3:143:g_d0_f3:B:(2005) argues that in oligopolistic markets, price is a combination of marginal
+11:302:20897:21:22:100:511:426:143:g_d0_f3:143:g_d0_f3:B:costs and markups, and therefore the hedonic price regression constitutes a re-
+11:303:20976:22:22:100:511:404:143:g_d0_f3:143:g_d0_f3:B:duced form or projection of these markupson the characteristic space. In the in-
+11:304:21056:22:21:100:512:382:143:g_d0_f3:143:g_d0_f3:B:dustry we study, given the high costs of R&D relative to marginal cost, markups
+11:305:21135:21:22:100:511:361:143:g_d0_f3:143:g_d0_f3:B:should be large and Pakes’s insights are applicable. The parametersβdo not nec-
+11:306:21214:22:22:100:512:339:143:g_d0_f3:143:g_d0_f3:B:essarily follow any restriction based on economic theory. That is, theβparameters
+11:307:21295:22:21:100:512:317:143:g_d0_f3:143:g_d0_f3:B:may have the “wrong” sign. For example, if there is more entry of products into
+11:308:21374:21:22:100:512:296:143:g_d0_f3:143:g_d0_f3:B:a particular region of the attribute space that has more desirable characteristics
+11:309:21456:22:22:100:512:274:143:g_d0_f3:143:g_d0_f3:B:for the average consumer (e.g., survival), this will reduce the markups of these
+11:310:21536:22:21:100:511:252:143:g_d0_f3:143:g_d0_f3:B:products, and allow the product with less desirable characteristics for the average
+11:311:21619:21:22:100:512:231:143:g_d0_f3:143:g_d0_f3:B:consumer (e.g., worse side effects) to exploit monopoly power among the con-
+11:312:21695:22:22:100:512:209:143:g_d0_f3:143:g_d0_f3:B:sumers who do not experience the strong side effects. The results of the hedonic
+11:313:21775:22:43:100:429:187:143:g_d0_f3:143:g_d0_f3:B:price regression are discussed in the results section of the paper.
+11:314:21842:43:30:100:346:144:206:g_d0_f2:206:g_d0_f2:C:3.2  Quality-Adjusted Price Index
+11:315:21875:30:21:100:512:114:143:g_d0_f3:143:g_d0_f3:B:We compute a second set of price indices that explicitly calculate the changes in
+11:316:21956:21:0:100:512:93:143:g_d0_f3:143:g_d0_f3:B:welfare from the introduction of new products.  These indices are derived from
+12:317:22036:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:the estimation of an equilibrium model of colon cancer drug pricing. Trajtenberg
+12:318:22116:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:(1990), who introduced the idea, proposed a two-stage method to construct a
+12:319:22191:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:quality-adjusted price index.  In the first stage, the welfare gains from product
+12:320:22272:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:innovation are obtained, and in the second stage the price index is built upon
+12:321:22350:21:22:100:200:608:143:g_d0_f3:143:g_d0_f3:B:those welfare gains.
+12:322:22370:22:22:116:511:586:143:g_d0_f3:143:g_d0_f3:A:In this paper the first step is performed by estimating a logit model, where
+12:323:22446:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:the preferences of the physicianiover regimensj∈{0,...,Jt}at timetare
+12:324:22515:21:33:100:368:543:143:g_d0_f3:143:g_d0_f3:B:represented by the following indirect utility function
+12:325:22569:33:33:212:398:510:143:g_d0_f7:64:g_d0_f9:?:uijt=−αpjt+βxjt+ξj+Δξj+εijt
+12:326:22596:33:22:116:512:477:143:g_d0_f3:143:g_d0_f3:A:wherepjtis the price of regimenjat timet,xjtare the observable attributes
+12:327:22669:22:21:100:512:455:143:g_d0_f3:143:g_d0_f3:B:of the regimen,ξjis the mean of the unobserved characteristics, andΔξjtis a
+12:328:22744:21:22:100:512:434:143:g_d0_f3:143:g_d0_f3:B:time-specific deviation from this mean.εijt, which is an idiosyncratic shock to
+12:329:22823:22:22:100:511:412:143:g_d0_f3:143:g_d0_f3:B:preferences for regimenj, is assumed to follow a Type I Extreme Value distri-
+12:330:22900:22:21:100:511:390:143:g_d0_f3:143:g_d0_f3:B:bution.8The outside option (j= 0) in this paper includes off-label colon cancer
+12:331:22979:21:22:100:511:369:143:g_d0_f3:143:g_d0_f3:B:treatments and regimens with very small market shares for which a complete set
+12:332:23057:22:22:100:193:347:143:g_d0_f3:143:g_d0_f3:B:of is not observed.
+12:333:23076:22:21:116:511:325:143:g_d0_f3:143:g_d0_f3:A:Patients are assumed to be administered one regimen at a given time, which
+12:334:23150:21:22:100:512:304:143:g_d0_f3:143:g_d0_f3:B:maximizes their utility.  This implicitly defines a region of the unobserved term
+12:335:23231:22:33:100:477:282:143:g_d0_f3:143:g_d0_f7:B:for which alternativejyields a higher utility than any other alternativek
+12:336:23304:33:33:233:378:249:143:g_d0_f7:143:g_d0_f8:?:Ajt={εit|uijt≥uikt∀k-=j}
+12:337:23328:33:21:116:511:216:143:g_d0_f3:143:g_d0_f3:A:The market shares for each regimenjcan be obtained by aggregating the
+12:338:23397:21:19:100:312:195:143:g_d0_f3:64:g_d0_f9:B:individual preferences over the regionAjt
+12:339:23438:19:21:84:541:176:49:g_d0_f5:99:g_d0_f6:?:8In this model all the individual-specific heterogeneity is contained in the idiosyncratic shock to pref-
+12:340:23543:21:18:70:540:155:99:g_d0_f6:99:g_d0_f6:?:erences, and therefore, it suffers from the well-known independence of irrelevant alternatives criticism (see
+12:341:23652:18:18:70:541:137:99:g_d0_f6:99:g_d0_f6:?:Nevo (2000) for a complete discussion of the limitations of this approach). In addition, Petrin (2002) points
+12:342:23761:18:18:70:541:119:99:g_d0_f6:99:g_d0_f6:?:out that the welfare calculations based on these models depend heavily on the error term.  We are cur-
+12:343:23863:18:18:70:540:101:99:g_d0_f6:99:g_d0_f6:?:rently estimating more flexible specifications such as the ones proposed by Berry et al. (1995), and the pure
+12:344:23972:18:0:70:335:83:99:g_d0_f6:99:g_d0_f6:?:characteristics approach proposed in Berry and Pakes (2007)
+13:345:24033:0:0:265:291:673:143:g_d0_f7:143:g_d0_f3:?:σjt=
+13:346:24037:0:27:294:301:689:143:g_d0_f10:143:g_d0_f10:?:∫
+13:347:24038:27:0:301:314:662:64:g_d0_f9:36:g_d0_f12:?:Ajt
+13:348:24041:0:28:317:347:673:143:g_d0_f7:143:g_d0_f3:?:dP(ε)
+13:349:24046:28:22:116:511:645:143:g_d0_f3:143:g_d0_f3:A:Ifεis assumed to be drawn from the extreme value distribution, the integral
+13:350:24121:22:43:100:254:623:143:g_d0_f3:143:g_d0_f3:B:can be computed analytically:
+13:351:24150:43:0:187:214:580:143:g_d0_f7:143:g_d0_f3:?:σjt=
+13:352:24154:0:18:245:396:588:143:g_d0_f3:143:g_d0_f3:?:exp(−αpjt+βxjt+ξj+Δξj)
+13:353:24176:18:0:218:238:570:143:g_d0_f3:143:g_d0_f3:?:1+
+13:354:24178:0:13:239:259:579:143:g_d0_f10:36:g_d0_f12:?:∑Jt
+13:355:24181:13:15:251:423:566:64:g_d0_f9:143:g_d0_f3:?:k=1exp(−αpkt+βxkt+ξk+Δξk)
+13:356:24206:15:22:116:511:551:143:g_d0_f3:143:g_d0_f3:A:We define the mean utility levelδjt=−αpjt+βxjt+ξj+Δξj, and therefore,
+13:357:24275:22:22:100:511:529:143:g_d0_f3:143:g_d0_f3:B:the market shares can be written as the functionσjt(δt), withδtbeing the vector
+13:358:24354:22:22:100:235:507:143:g_d0_f3:143:g_d0_f3:B:of mean utilities at timet.
+13:359:24381:22:21:116:511:485:143:g_d0_f3:143:g_d0_f3:A:The market shares predicted by the modelσjt(δt) are then matched with the
+13:360:24454:21:22:100:511:464:143:g_d0_f3:143:g_d0_f3:B:observed market sharessjt. Berry (1994) shows thatδjcan be uniquely identified
+13:361:24532:22:22:100:512:442:143:g_d0_f3:143:g_d0_f3:B:by inverting the market share functionσ−1(st)=δt.  For the logit model, the
+13:362:24607:22:43:100:178:420:143:g_d0_f3:143:g_d0_f3:B:inversion yields
+13:363:24623:43:28:204:406:377:143:g_d0_f3:64:g_d0_f9:?:lnsjt−lns0t=−αpjt+βxjt+ξj+Δξj
+13:364:24652:28:22:116:511:349:143:g_d0_f3:143:g_d0_f3:A:Because the unobserved drug regimen characteristics are likely to be correlated
+13:365:24731:22:21:100:511:327:143:g_d0_f3:143:g_d0_f3:B:with price, the estimation of the equation above requires the use of instrumental
+13:366:24812:21:22:100:512:306:143:g_d0_f3:143:g_d0_f3:B:variables. We obtain our instruments by using the supply side market equilibrium
+13:367:24892:22:22:100:512:284:143:g_d0_f3:143:g_d0_f3:B:conditions. Because price is a function of marginal cost and markups, any exoge-
+13:368:24972:22:21:100:512:262:143:g_d0_f3:143:g_d0_f3:B:nous variable that shifts marginal costs or markups should be a valid instrument.
+13:369:25053:21:22:100:512:241:143:g_d0_f3:143:g_d0_f3:B:We follow Bresnahan et al. (1997) and use the number of products in the market
+13:370:25131:22:22:100:512:219:143:g_d0_f3:143:g_d0_f3:B:and the sum of observed characteristics of the competitors (which the literature
+13:371:25211:22:21:100:512:197:143:g_d0_f3:143:g_d0_f3:B:assumes as exogenous and provides a sense of how crowded is the product space)
+13:372:25289:21:22:100:512:176:143:g_d0_f3:143:g_d0_f3:B:as our instruments. Both sets of instruments will shift markups through changes
+13:373:25368:22:22:100:512:154:143:g_d0_f3:143:g_d0_f3:B:in the competitive environment, and therefore, will be correlated with price, but
+13:374:25449:22:21:100:351:132:143:g_d0_f3:143:g_d0_f3:B:uncorrelated with the unobserved characteristics.
+13:375:25498:21:22:116:511:111:143:g_d0_f3:143:g_d0_f3:A:One concern with this model is that if physicians earn profits on chemotherapy
+13:376:25576:22:0:100:512:89:143:g_d0_f3:143:g_d0_f3:B:drugs, profits are correlated with the observed price and/or the attributes, and
+14:377:25658:0:22:100:511:695:143:g_d0_f3:143:g_d0_f3:B:profits influence physicians prescribing decisions, then theαandβcoefficients
+14:378:25735:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:may be biased.  In a 2001 study, the federal government concluded that oncolo-
+14:379:25813:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:gists could earn profits on most chemotherapy drugs by acquiring them for less
+14:380:25891:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:than the Medicare reimbursement amount (GAO (2001)). This occurred because
+14:381:25965:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:Medicare reimbursed oncologists 95 percent of a drugs listed average wholesale
+14:382:26043:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:price (AWP), whereas physicians could usually acquire drugs from wholesalers for
+14:383:26123:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:less than the AWP. For example, physicians were acquiring irinotecan in 2001 for
+14:384:26203:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:23 percent less than AWP, on average, which allowed them to earn an approxi-
+14:385:26279:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:mate 18 percent profit (GAO (2001)).9. Most of these profits were eliminated in
+14:386:26358:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:2005 when Medicare started reimbursing oncologists based on the actual average
+14:387:26436:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:selling price (ASP) of a drug rather than the list price (MedPAC (2006)). In the
+14:388:26516:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:first quarter of 2005, for example, oncologists were acquiring three branded col-
+14:389:26597:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:orectal cancer drugs (bevacizumab, irinotecan, and oxaliplatin) for two or three
+14:390:26677:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:percent less than the new Medicare reimbursement amount, on average.  Jacob-
+14:391:26753:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:son et al. (2006) exploit exogenous variation between oncologists in the generosity
+14:392:26836:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:of Medicare reimbursement for chemotherapy drugs to estimate the influence of
+14:393:26913:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:physician profits on treatment decisions. Although they find that oncologists who
+14:394:26994:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:were reimbursed relatively generously did prescribe more expensive chemotherapy
+14:395:27073:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:drugs, the magnitude of the effect is small: a one-standard deviation increase in
+14:396:27154:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:reimbursement generosity is associated with an increase of about five percent in
+14:397:27234:22:22:100:436:261:143:g_d0_f3:143:g_d0_f3:B:the cost of chemotherapy prescribed to colorectal cancer patients.
+14:398:27300:22:21:116:511:239:143:g_d0_f3:143:g_d0_f3:A:We estimate our models with and without the data from 2005 to see if the
+14:399:27372:21:22:100:511:218:143:g_d0_f3:143:g_d0_f3:B:results are sensitive to a change in thereimbursement regime.  We also present
+14:400:27450:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:results of an index that uses estimates from the literature for the value of a
+14:401:27528:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:year of life, or of a quality adjusted life year (QALY), rather than physicians
+14:402:27607:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:valuations of drug attributes.  The price index is built based on the changes in
+14:403:27687:22:18:100:512:131:143:g_d0_f3:143:g_d0_f3:B:compensating variation derived from the estimation of the model described above.
+14:404:27767:18:21:84:541:113:49:g_d0_f5:99:g_d0_f6:?:9Many oncologists argued that profits on the acquisition of chemotherapy drugs offset Medicares low fees
+14:405:27871:21:0:70:249:92:99:g_d0_f6:99:g_d0_f6:?:to physicians for administering the drugs
+15:406:27914:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:The compensating variation provides a measure of how much income could be
+15:407:27987:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:taken away from (or given to) an individual and leave him indifferent between
+15:408:28064:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:facing the old choice set and the new improved (inferior) choice set.  Given the
+15:409:28144:22:31:100:495:629:143:g_d0_f3:143:g_d0_f3:B:logit functional form assumption, the compensating variation is calculated as
+15:410:28221:31:0:264:296:598:143:g_d0_f7:143:g_d0_f3:?:CVt=
+15:411:28225:0:16:300:345:606:143:g_d0_f7:64:g_d0_f4:?:ut−ut−1
+15:412:28232:16:24:319:326:590:143:g_d0_f7:143:g_d0_f7:?:α
+15:413:28233:24:22:116:511:566:143:g_d0_f3:143:g_d0_f3:A:whereutis  the  unconditional  indirect  utilityut=maxjujtandαis  the
+15:414:28302:22:21:100:511:544:143:g_d0_f3:143:g_d0_f3:B:marginal utility of income. Small and Rosen (1981) show thatutcan be computed
+15:415:28379:21:22:100:111:523:143:g_d0_f3:143:g_d0_f3:B:as
+15:416:28381:22:0:259:298:501:143:g_d0_f7:143:g_d0_f3:?:ut=ln
+15:417:28386:0:25:297:314:512:143:g_d0_f10:143:g_d0_f10:?:∑
+15:418:28387:25:0:303:306:487:64:g_d0_f9:64:g_d0_f9:?:j
+15:419:28388:0:32:316:353:501:143:g_d0_f3:143:g_d0_f3:?:exp(δj)
+15:420:28395:32:22:116:511:469:143:g_d0_f3:143:g_d0_f3:A:Trajtenberg (1990) shows that if the price change takes the form of a shift by
+15:421:28473:22:22:100:512:447:143:g_d0_f3:143:g_d0_f3:B:afactorof(1−μt) in the distribution of prices but the variance remains the same,
+15:422:28553:22:31:100:303:425:143:g_d0_f3:143:g_d0_f3:B:then the price index can be obtained as
+15:423:28592:31:32:254:356:394:143:g_d0_f7:64:g_d0_f4:?:PIt=(1−μt)PIt−1
+15:424:28607:32:22:100:130:362:143:g_d0_f3:143:g_d0_f3:B:where
+15:425:28612:22:0:269:292:340:143:g_d0_f7:143:g_d0_f3:?:μt=
+15:426:28615:0:16:309:328:348:143:g_d0_f7:64:g_d0_f9:?:CVt
+15:427:28618:16:19:297:340:332:143:g_d0_f7:64:g_d0_f9:?:CVt+ ̄pt
+15:428:28626:19:43:100:296:313:143:g_d0_f3:143:g_d0_f3:B:and  ̄ptis the average price in periodt.
+15:429:28666:43:30:100:242:270:206:g_d0_f2:206:g_d0_f2:C:3.3  Vertical Model
+15:430:28685:30:22:100:511:240:143:g_d0_f3:143:g_d0_f3:B:Suppose now that the indirect utility of physician/consumeriwhen he chooses
+15:431:28760:22:43:100:303:218:143:g_d0_f3:143:g_d0_f3:B:productjin markettis represented by:
+15:432:28796:43:27:226:384:175:143:g_d0_f7:64:g_d0_f9:?:uijt=−αipjt+βxjt+ξj+Δξj
+15:433:28819:27:22:100:512:148:143:g_d0_f3:143:g_d0_f3:B:Notice that in this model there is a differentαfor each consumeriand there is no
+15:434:28899:22:22:100:511:126:143:g_d0_f3:143:g_d0_f3:B:unobserved shock to preferences. This model is the opposite case of the previous
+15:435:28979:22:21:100:512:104:143:g_d0_f3:143:g_d0_f3:B:logit model, where all the heterogeneity entered through the error term, while
+15:436:29057:21:0:100:512:83:143:g_d0_f3:143:g_d0_f3:B:in this model the heterogeneity is present in the random coefficient for price,
+16:437:29138:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:which is a permanent component.  This one-random-coefficient model assumes
+16:438:29212:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:that consumers agree on the ranking of product quality, and that they only differ
+16:439:29293:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:on their willingness to pay for it.10In this model there is also an outside option
+16:440:29375:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:whose utility is normalized to zero. This model, as opposed to the logit one, could
+16:441:29458:21:22:100:365:608:143:g_d0_f3:143:g_d0_f3:B:potentially predict zero market share for a product.
+16:442:29510:22:22:116:511:586:143:g_d0_f3:143:g_d0_f7:A:Ordering products by ascending price, a consumer will buy productjiffuij>
+16:443:29583:22:31:100:225:564:143:g_d0_f7:143:g_d0_f3:B:uik∀k-=j, which implies
+16:444:29606:31:0:225:248:533:143:g_d0_f7:143:g_d0_f7:?:αi<
+16:445:29609:0:17:254:287:541:143:g_d0_f7:64:g_d0_f9:?:δj−δk
+16:446:29614:17:0:253:288:524:143:g_d0_f7:64:g_d0_f9:?:pj−pk
+16:447:29619:0:40:290:385:533:143:g_d0_f7:64:g_d0_f9:?:,ifpj>pk
+16:448:29627:40:0:225:248:493:143:g_d0_f7:143:g_d0_f7:?:αi>
+16:449:29630:0:16:254:287:501:143:g_d0_f7:64:g_d0_f9:?:δk−δj
+16:450:29635:16:0:253:287:485:143:g_d0_f7:64:g_d0_f9:?:pk−pj
+16:451:29640:0:27:290:384:493:143:g_d0_f7:64:g_d0_f9:?:,ifpk>pj
+16:452:29648:27:32:100:372:466:143:g_d0_f3:143:g_d0_f3:B:Therefore, consumers of typeαiwil buy productjiff
+16:453:29697:32:8:130:176:434:143:g_d0_f7:143:g_d0_f3:?:αi<min
+16:454:29703:8:0:159:174:426:64:g_d0_f9:64:g_d0_f9:?:k<j
+16:455:29706:0:16:180:213:442:143:g_d0_f7:64:g_d0_f9:?:δj−δk
+16:456:29711:16:0:179:214:426:143:g_d0_f7:64:g_d0_f9:?:pj−pk
+16:457:29716:0:8:220:386:434:143:g_d0_f3:143:g_d0_f3:?:=Δj(δ, p)andαi>max
+16:458:29734:8:0:367:382:426:64:g_d0_f9:64:g_d0_f9:?:k>j
+16:459:29737:0:16:390:423:442:143:g_d0_f7:64:g_d0_f9:?:δk−δj
+16:460:29742:16:0:389:423:426:143:g_d0_f7:64:g_d0_f9:?:pk−pj
+16:461:29747:0:33:429:481:434:143:g_d0_f3:143:g_d0_f3:?:=Δj(δ, p)
+16:462:29756:33:22:116:512:401:143:g_d0_f3:143:g_d0_f3:A:AssumingΔ0(δ, p)=∞andΔJ(δ, p) = 0, we can write the market share for
+16:463:29824:22:32:100:167:379:143:g_d0_f3:143:g_d0_f3:B:productjas:
+16:464:29835:32:32:100:514:347:143:g_d0_f7:143:g_d0_f7:F:sj(δ, p;Ω,F)=(F(Δj(δ, p)|θ)−F(Δj(δ, p)|θ))I{Δj>Δj}forj=0,...,J
+16:465:29897:32:22:100:512:315:143:g_d0_f3:143:g_d0_f3:B:whereI{}is an indicator function, Ω are the parameters, andF(αi|θ) corresponds
+16:466:29975:22:21:100:377:293:143:g_d0_f3:143:g_d0_f3:B:to the c.d.f. ofαi, which is assumed to be log-normal.
+16:467:30029:21:22:116:512:272:143:g_d0_f3:143:g_d0_f3:A:For all products to have positive market share the following condition has to
+16:468:30106:22:13:100:157:250:143:g_d0_f3:143:g_d0_f3:B:be satisfied
+16:469:30118:13:17:214:260:237:143:g_d0_f7:64:g_d0_f4:?:δJ−δJ−1
+16:470:30125:17:0:213:261:220:143:g_d0_f7:64:g_d0_f4:?:pJ−pJ−1
+16:471:30132:0:0:266:305:228:143:g_d0_f7:143:g_d0_f7:?:<···<
+16:472:30137:0:17:310:344:237:143:g_d0_f7:64:g_d0_f4:?:δ2−δ1
+16:473:30142:17:0:310:345:220:143:g_d0_f7:64:g_d0_f4:?:p2−p1
+16:474:30147:0:0:350:359:228:143:g_d0_f7:143:g_d0_f7:?:<
+16:475:30148:0:17:364:397:237:143:g_d0_f7:64:g_d0_f4:?:δ1−δ0
+16:476:30153:17:19:376:385:220:143:g_d0_f7:64:g_d0_f4:?:p1
+16:477:30155:19:32:100:351:201:143:g_d0_f3:143:g_d0_f3:B:and therefore the market shares are computed as
+16:478:30202:32:0:194:287:169:143:g_d0_f7:143:g_d0_f3:?:s1(δ, p;Ω,F)=F(
+16:479:30217:0:16:288:322:177:143:g_d0_f7:64:g_d0_f4:?:δ1−δ0
+16:480:30222:16:0:300:310:161:143:g_d0_f7:64:g_d0_f4:?:p1
+16:481:30224:0:0:324:366:169:143:g_d0_f8:143:g_d0_f3:?:|θ)−F(
+16:482:30230:0:16:368:401:177:143:g_d0_f7:64:g_d0_f4:?:δ2−δ1
+16:483:30235:16:0:367:402:161:143:g_d0_f7:64:g_d0_f4:?:p2−p1
+16:484:30240:0:38:404:418:169:143:g_d0_f8:143:g_d0_f3:?:|θ)
+16:485:30243:38:0:125:218:131:143:g_d0_f7:143:g_d0_f3:?:sj(δ, p;Ω,F)=F(
+16:486:30258:0:16:219:263:139:143:g_d0_f7:64:g_d0_f4:?:δj−δj−1
+16:487:30265:16:0:219:264:123:143:g_d0_f7:64:g_d0_f4:?:pj−pj−1
+16:488:30272:0:0:266:308:131:143:g_d0_f8:143:g_d0_f3:?:|θ)−F(
+16:489:30278:0:16:310:353:139:143:g_d0_f7:64:g_d0_f9:?:δj+1−δj
+16:490:30285:16:0:309:354:123:143:g_d0_f7:64:g_d0_f9:?:pj+1−pj
+16:491:30292:0:27:356:488:131:143:g_d0_f8:143:g_d0_f7:?:|θ),for1<j<J
+16:492:30304:27:21:80:541:104:49:g_d0_f5:99:g_d0_f6:?:10Ongoing work extends this model to include more than one random coefficient, and therefore the product
+16:493:30408:21:0:70:309:83:99:g_d0_f6:99:g_d0_f6:?:ranking is not a matter of consensus across consumers.
+17:494:30464:0:0:226:321:690:143:g_d0_f7:143:g_d0_f3:?:sJ(δ, p;Ω,F)=F(
+17:495:30479:0:16:322:369:698:143:g_d0_f7:64:g_d0_f4:?:δJ−δJ−1
+17:496:30486:16:0:321:370:682:143:g_d0_f7:64:g_d0_f4:?:pJ−pJ−1
+17:497:30493:0:28:372:386:690:143:g_d0_f8:143:g_d0_f3:?:|θ)
+17:498:30496:28:21:116:511:662:143:g_d0_f3:143:g_d0_f3:A:The market share of a product is therefore determined by its price-adjusted
+17:499:30571:21:22:100:341:641:143:g_d0_f3:143:g_d0_f3:B:quality distance from its neighboring products.
+17:500:30618:22:22:116:511:619:143:g_d0_f3:143:g_d0_f3:A:The market share equations are inverted recursively to obtain the estimated
+17:501:30693:22:21:100:209:597:143:g_d0_f3:143:g_d0_f3:B:values ofδas follows:
+17:502:30714:21:0:246:309:576:143:g_d0_f7:143:g_d0_f3:?:s0t=1−F(
+17:503:30722:0:17:310:350:584:143:g_d0_f7:64:g_d0_f9:?:δ1t−δ0t
+17:504:30729:17:0:324:337:567:143:g_d0_f7:64:g_d0_f9:?:p1t
+17:505:30732:0:28:352:366:576:143:g_d0_f8:143:g_d0_f3:?:|θ)
+17:506:30735:28:22:100:512:548:143:g_d0_f3:143:g_d0_f3:B:Ifp0andδ0are assumed to be 0, then with data on prices and market share,
+17:507:30807:22:22:100:512:526:143:g_d0_f3:143:g_d0_f3:B:and the log normal assumption for the distribution ofαi,wecansolvefortheδ’s
+17:508:30882:22:21:100:154:504:143:g_d0_f3:143:g_d0_f3:B:recursively
+17:509:30893:21:28:248:363:483:143:g_d0_f7:143:g_d0_f3:?:δ1t=p1tF−1(1−s0t|θ)
+17:510:30912:28:28:155:457:455:143:g_d0_f7:143:g_d0_f3:?:δjt=δj−1,t+(pjt−pj−1,t)F−1(1−s0t−s1t−···−sj−1,t|θ)
+17:511:30962:28:22:116:505:427:143:g_d0_f3:143:g_d0_f3:A:In the estimation stage of this model we estimate all the parameters Ω=
+17:512:31033:22:21:100:511:405:143:g_d0_f3:143:g_d0_f3:B:(α, β,θ) by means of a GMM procedure where we exploit the moment conditions
+17:513:31108:21:22:100:511:384:143:g_d0_f3:143:g_d0_f3:B:of the kindE(Z-Δξ(Ω)) = 0, where Z contains functions of observable attributes
+17:514:31186:22:22:100:227:362:143:g_d0_f3:143:g_d0_f3:B:uncorrelated withΔξ(Ω)
+17:515:31208:22:21:116:511:340:143:g_d0_f3:143:g_d0_f3:A:The price index is computed in a similar way to the previous quality-adjusted
+17:516:31285:21:22:100:512:319:143:g_d0_f3:143:g_d0_f3:B:price index,  with the difference that the unconditional indirect utility is com-
+17:517:31366:22:22:100:517:297:143:g_d0_f3:143:g_d0_f3:B:puted by simulating 1000 physicians drawing from the distribution ofαi,and
+17:518:31440:22:50:100:500:275:143:g_d0_f3:143:g_d0_f3:B:then obtainingCVtas an average of the individuals’ compensating variations.
+17:519:31515:50:34:100:190:225:296:g_d0_f2:296:g_d0_f2:C:4Data
+17:520:31520:34:21:100:511:191:143:g_d0_f3:143:g_d0_f3:B:We use a number of different data sourcesto collect four types of information:
+17:521:31598:21:22:100:512:170:143:g_d0_f3:143:g_d0_f3:B:drug prices, regimen market shares, typical drug dosage amounts for each regimen,
+17:522:31679:22:22:100:512:148:143:g_d0_f3:143:g_d0_f3:B:and regimen attributes.  IMS Health collects information on the sales in dollars
+17:523:31759:22:22:100:512:126:143:g_d0_f3:143:g_d0_f3:B:and the quantity of drugs purchased by 10 different types of customers (e.g.,
+17:524:31836:22:21:100:512:104:143:g_d0_f3:143:g_d0_f3:B:hospitals, physician offices, retail pharmacies) from wholesalers in each quarter
+17:525:31917:21:0:100:512:83:143:g_d0_f3:143:g_d0_f3:B:from 1993 through the third quarter of 2005. Prices and quantities are reported
+18:526:31998:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:separately by National Drug Classification (NDC) code, which are unique for each
+18:527:32078:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:firm-product-strength/dosage-package size.  We calculate the average price paid
+18:528:32157:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:per milligram of active ingredient of a drug by averaging across the different NDC
+18:529:32239:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:codes for that drug.  IMS Health reports the invoice price a customer actually
+18:530:32317:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:pays to a wholesaler, not the average wholesale price (AWP), which often differs
+18:531:32397:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:substantially from the true transaction price.  We use nominal rather than real
+18:532:32476:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:prices because any deflator would itself be a price index, and we do not want to
+18:533:32556:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:build one index on top of another.  The price we calculate does not include any
+18:534:32635:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:discounts or rebates a customer may receive from a manufacturer after purchasing
+18:535:32715:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:the product from the wholesaler. Based on interviews with a few oncologists, we
+18:536:32794:22:22:100:511:478:143:g_d0_f3:143:g_d0_f3:B:do not believe that manufacturers offered substantial rebates during this period.
+18:537:32875:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:Although we have information on 10 different types of customers, we focus on the
+18:538:32955:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:prices paid by the two largest customers - hospitals and physician offices. Because
+18:539:33038:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:most oncology drugs are infused in a physician’s office or hospital clinic, nursing
+18:540:33121:22:22:100:378:391:143:g_d0_f3:143:g_d0_f3:B:homes and retail pharmacies purchase relatively little.
+18:541:33176:22:21:116:511:369:143:g_d0_f3:143:g_d0_f3:A:Most colon cancer patients are treated with regimens that combine two or
+18:542:33248:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:more drugs. The IMS Health data contain information on market share by drug,
+18:543:33324:22:22:100:511:326:143:g_d0_f3:143:g_d0_f3:B:but not market share for the combinations of drugs (regimens) actually used on
+18:544:33402:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:patients. We rely, therefore, on two different sources for regimen-specific market
+18:545:33484:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:shares. IntrinsiQ is a company that provides information systems to oncologists to
+18:546:33566:22:22:100:511:261:143:g_d0_f3:143:g_d0_f3:B:help them determine the proper chemotherapy dosing for their cancer patients. As
+18:547:33646:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:a result, IntrinsiQ collects monthly data from its oncology clients on the types of
+18:548:33729:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:chemotherapy drugs used for patients. IntrinsiQ provided data on the proportion
+18:549:33808:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:of colorectal cancer patients (of all ages) treated with chemotherapy who are
+18:550:33885:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:treated with each regimen for each month between January 2002 and September
+18:551:33960:21:16:100:134:153:143:g_d0_f3:64:g_d0_f4:B:2005.11
+18:552:33967:16:21:80:540:137:49:g_d0_f5:99:g_d0_f6:?:11Because we observe the market shares of regimens among patients with colorectal cancer, we do not need
+18:553:34071:21:18:70:540:116:99:g_d0_f6:99:g_d0_f6:?:to worry about off-label use.  Off-label use occurs when a physician treats a colorectal cancer patient with
+18:554:34179:18:0:70:540:98:99:g_d0_f6:99:g_d0_f6:?:a drug that has not been approved by the FDA to treat colorectal cancer, or when a physician uses a drug
+19:555:34285:0:22:116:511:695:143:g_d0_f3:143:g_d0_f3:A:We derive market shares for the 1993 to 2001 period from the Surveillance
+19:556:34358:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:Epidemiology and End Results (SEER) data set, which tracks the health and
+19:557:34431:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:treatment of cancer patients over the age of 64 in states and cities covering 26
+19:558:34511:22:21:100:511:629:143:g_d0_f3:143:g_d0_f3:B:percent of the United States population.12We calculate the proportion of colorec-
+19:559:34592:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:tal cancer patients who are treated with each drug regimen in each quarter based
+19:560:34672:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:on Medicare claims data available in SEER. In October 2003, approximately 48
+19:561:34748:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:percent of all colorectal cancer patients treated with chemotherapy were 65 years
+19:562:34829:21:22:100:151:543:143:g_d0_f3:64:g_d0_f4:B:or older.13
+19:563:34840:22:21:116:511:521:143:g_d0_f3:143:g_d0_f3:A:In the 1993 to 2001 period, when there were relatively few treatment options
+19:564:34916:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:for colorectal cancer, we include all regimens that contain drugs that were explic-
+19:565:34999:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:itly approved by the Food and Drug Administration (FDA) for colorectal cancer
+19:566:35076:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:and had a market share greater than two percent.  Market shares of all other
+19:567:35152:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:drugs are combined into an outside option, which in this early period will consist
+19:568:35234:21:22:100:511:413:143:g_d0_f3:143:g_d0_f3:B:primarily of off-label drugs - drugs approved for conditions other than colorectal
+19:569:35316:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:cancer that are used on colorectal cancer patients.14In the 2002 to 2005 period,
+19:570:35396:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:the outside option includes off-label drugs, regimens with less than one percent
+19:571:35476:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:market share in the third quarter of 2005 (the end of the sample period), and
+19:572:35553:22:22:100:293:326:143:g_d0_f3:143:g_d0_f3:B:regimens with missing attribute data.
+19:573:35590:22:21:116:512:304:143:g_d0_f3:143:g_d0_f3:A:Market shares for the 12 regimens in our sample and the outside option are
+19:574:35664:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:plotted in Figure 1.  The regimens are also described more fully in Table 1, ar-
+19:575:35744:22:22:100:511:261:143:g_d0_f3:143:g_d0_f3:B:ranged in order of entry separately for first- and second-line therapies.  Between
+19:576:35826:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:1993 and 1996, about 95 percent of colorectal cancer patients were treated with 5-
+19:577:35908:21:18:70:541:218:99:g_d0_f6:99:g_d0_f6:?:approved for colorectal cancer on a patient with a different type of cancer.  In October 2005, seventy-six
+19:578:36014:18:18:70:541:200:99:g_d0_f6:99:g_d0_f6:?:percent of patients being treated with the four drugs approved solely for the treatment of colorectal cancer
+19:579:36122:18:18:70:541:182:99:g_d0_f6:99:g_d0_f6:?:(irinotecan, oxaliplatin, cetuximab, and bevacizumab) actually had colorectal cancer.  That is, off-label use
+19:580:36231:18:10:70:385:164:99:g_d0_f6:99:g_d0_f6:?:accounted for approximately 24 percent of the quantities of these drugs.
+19:581:36303:10:21:80:541:154:49:g_d0_f5:99:g_d0_f6:?:12SEER contains data on the incidence rate of cancer among the non-elderly, but only has medical claims
+19:582:36406:21:11:70:207:133:99:g_d0_f6:99:g_d0_f6:?:available for Medicare patients.
+19:583:36438:11:13:80:179:122:49:g_d0_f5:99:g_d0_f6:?:13Data from IntrinsiQ.
+19:584:36460:13:0:80:477:109:49:g_d0_f5:99:g_d0_f6:?:14Off-label use is more likely to occur if a patient’s initial treatment has been unsuccessful.
+20:585:36557:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:FU/leucovorin, which at that time was generic, with the remainder treated with
+20:586:36635:22:22:100:511:673:143:g_d0_f3:143:g_d0_f3:B:off-label drugs or regimens with very small market share.15Irinotecan (brand
+20:587:36711:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:name Camptosar) was approved by the FDA for treating colorectal cancer in
+20:588:36784:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:1996, and over the next several years the market share of irinotecan (approved as
+20:589:36865:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:a second-line treatment for metastatic colorectal cancer patients who had already
+20:590:36946:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:been treated with a different chemotherapy regimen) and irinotecan combined
+20:591:37021:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:with 5-FU/LV grew at the expense of 5-FU/LV.16Capecitabine (Xeloda), a tablet
+20:592:37098:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:that produces the same chemical response as 5-FU/LV, was approved for treat-
+20:593:37174:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:ment of colorectal cancer in April of 2001 and was administered as a standalone
+20:594:37253:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:therapy or combined with irinotecan. All other drugs for treating colorectal can-
+20:595:37334:22:22:100:511:478:143:g_d0_f3:143:g_d0_f3:B:cer in our sample are delivered intravenously under the supervision of a physician
+20:596:37416:22:22:100:145:456:143:g_d0_f3:143:g_d0_f3:B:or nurse.
+20:597:37425:22:21:116:511:434:143:g_d0_f3:143:g_d0_f3:A:Oxaliplatin (Eloxatin) was introduced in August of 2002, followed by cetux-
+20:598:37500:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:imab (Erbitux) and bevacizumab (Avastin) in February of 2004.  By the third
+20:599:37575:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:quarter of 2005, two of the regimens created by these three new drugs (oxali-
+20:600:37652:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:platin + 5-FU/LV; and bevacizumab + oxaliplatin + 5-FU/LV) surpassed the
+20:601:37724:21:22:100:461:348:143:g_d0_f3:143:g_d0_f3:B:market share of 5-FU/LV, whose share had fallen to about 14 percent.
+20:602:37792:22:22:116:511:326:143:g_d0_f3:143:g_d0_f3:A:The market shares of several regimens change sharply in the first quarter of
+20:603:37868:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:2002 when we use market share data from IntrinsiQ rather than SEER. One
+20:604:37939:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:explanation  for these  changes is that Medicare patients  may be treated  with
+20:605:38018:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:different regimens than non-Medicare patients.  Another possible explanation is
+20:606:38097:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:that the samples used  by IntrinsiQ  and/or SEER  may not be consistent.17In
+20:607:38173:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:order to smooth market shares between the pre- and post-2002 periods, we apply
+20:608:38251:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:a regimen-specific factor to adjust the pre-2002 market shares based on the ratio
+20:609:38332:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:of total (from IntrinsiQ) to Medicare-only (from SEER) market shares for the
+20:610:38408:21:18:100:377:153:143:g_d0_f3:143:g_d0_f3:B:four quarters of 2002, when the two data sets overlap.
+20:611:38462:18:14:80:249:135:49:g_d0_f5:99:g_d0_f6:?:155-FU contains the drug fluorororacil.
+20:612:38501:14:21:80:540:121:49:g_d0_f5:99:g_d0_f6:?:16Because it takes Medicare a while to code new drugs into their proper NDC code, for several quarters a
+20:613:38605:21:11:70:259:100:99:g_d0_f6:99:g_d0_f6:?:new drug will appear in the outside option.
+20:614:38648:11:0:80:482:89:49:g_d0_f5:99:g_d0_f6:?:17The SEER sample is drawn from locations representing 26 percent of the U.S. population.
+21:615:38739:0:22:116:511:695:143:g_d0_f3:143:g_d0_f3:A:In order to calculate the price per regimen,  we require information on the
+21:616:38814:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:quantity of each drug in a regimen. The National Comprehensive Cancer Network
+21:617:38891:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:(NCCN) reports the typical amount of active ingredient used by physicians for the
+21:618:38972:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:major regimens.  We supplement this where necessary with dosage information
+21:619:39047:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:from drug package inserts,  conference abstracts,  and journal articles.   Dosage
+21:620:39128:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:information is reported in Appendix 1. For example, the standard dosage schedule
+21:621:39208:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:for the regimen with the second largest market share in 2005 is 85 milligrams (mg)
+21:622:39290:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:of oxaliplatin per meter squared of a patient’s surface area infused by IV on the
+21:623:39371:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:first day of treatment, followed by a 1,000 mg infusion of 5-FU per meter squared
+21:624:39452:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:of surface area on the first and second treatment days, and a 200 mg infusion of
+21:625:39532:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:leucovorin per meter squared on the first and second treatment days. This process
+21:626:39613:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:is repeated every two weeks.  We price the regimens for a representative patient
+21:627:39693:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:who has 1.7 meters squared of surface area (Jacobson et al., 2006) weighs 80
+21:628:39769:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:kilograms, and is treated for 24 weeks. Regimen prices are derived by multiplying
+21:629:39850:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:the average price a customer paid per milligram of active ingredient in a quarter
+21:630:39931:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:by the recommended dosage amounts for each drug in the regimen over a 24-week
+21:631:40008:21:22:100:143:348:143:g_d0_f3:64:g_d0_f4:B:period.18
+21:632:40017:22:22:116:511:326:143:g_d0_f3:143:g_d0_f3:A:We obtain most of the attribute information for each regimen from the FDA-
+21:633:40091:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:approved package inserts that accompany each drug.  These inserts describe the
+21:634:40169:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:phase 3 clinical trials that were conducted, including the number and types of
+21:635:40247:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:patients enrolled in the trials, the health outcomes for patients in the treatment
+21:636:40329:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:and control groups, and the side effects experienced by those patients. Often there
+21:637:40412:21:22:100:511:218:143:g_d0_f3:143:g_d0_f3:B:are multiple observations for a regimen, either because a manufacturer conducted
+21:638:40492:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:separate trials of the same regimen, or because a regimen may have been the
+21:639:40567:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:treatment group in one clinical trial and the control group in a subsequent trial
+21:640:40648:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:run by a different firm.  In these cases we calculate the mean attributes across
+21:641:40728:22:22:100:512:131:143:g_d0_f3:143:g_d0_f3:B:the separate observations.  Where necessary, we supplement the package insert
+21:642:40805:22:17:100:512:109:143:g_d0_f3:143:g_d0_f3:B:information with abstracts presented at oncology conferences and journal articles.
+21:643:40887:17:0:80:412:92:49:g_d0_f5:99:g_d0_f6:?:18The regimens are priced using data for the contemporaneous quarter only.
+22:644:40963:0:22:116:511:695:143:g_d0_f3:143:g_d0_f3:A:The attribute information is summarized in Table 1, organized according to
+22:645:41037:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:the year when each regimen was introduced.   We record three measures of a
+22:646:41111:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:regimen’s efficacy: the median number of months patients survive after initiating
+22:647:41192:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:therapy; the percentage of patients who experience a complete or partial reduction
+22:648:41274:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:in  the size of their tumor (i.e.,  the response rate);  and the mean  number  of
+22:649:41355:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:months  (across patients  in  the trial)  before their  cancer  advanced  to a more
+22:650:41438:22:21:100:511:564:143:g_d0_f3:143:g_d0_f3:B:serious  state.19For all three of these  measures,  higher  values are associated
+22:651:41519:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:with superior health outcomes.  We also record whether a regimen contains the
+22:652:41596:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:capecitabine tablet, which should make the administration of the regimen more
+22:653:41673:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:convenient for a patient, and whether the regimen is approved (and was tested) as
+22:654:41754:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:a second-line treatment. Efficacy measures for second-line regimens will generally
+22:655:41836:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:be worse than those for first-line regimens because the patients’ cancer is likely
+22:656:41918:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:to be more advanced at the beginning of the clinical trial and the first treatment
+22:657:42000:21:22:100:255:413:143:g_d0_f3:143:g_d0_f3:B:was not completely successful.
+22:658:42030:22:22:116:511:391:143:g_d0_f3:143:g_d0_f3:A:We also collected data on the percentage of patients in phase 3 trials who
+22:659:42104:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:experienced either a grade 3 or a grade 4 side effect for five separate conditions:
+22:660:42187:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:abdominal pain, diarrhea, nausea, vomiting, and neutropenia.  Although many
+22:661:42262:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:more side effects are recorded for most regimens,  these five  were consistently
+22:662:42342:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:recorded across the 12 regimens in the sample.  Side effects are classified on a
+22:663:42422:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:standard one to four scale, with four being the most severe. Higher values for the
+22:664:42504:22:22:100:511:261:143:g_d0_f3:143:g_d0_f3:B:side effect attributes should be associatedwith worse health outcomes although,
+22:665:42583:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:as we will show later, regimens that are more toxic are likely to be both more
+22:666:42661:21:22:100:317:218:143:g_d0_f3:143:g_d0_f3:B:effective and have more severe side effects.
+22:667:42705:22:22:116:511:196:143:g_d0_f3:143:g_d0_f3:A:New colorectal cancer regimens tend to be more efficacious than the existing
+22:668:42781:22:21:100:511:174:143:g_d0_f3:143:g_d0_f3:B:regimens, with side effect profiles that are sometimes more and sometimes less
+22:669:42859:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:severe than earlier regimens.  Consider the new entrant in 1996, irinotecan +
+22:670:42936:22:18:100:512:131:143:g_d0_f3:143:g_d0_f3:B:5-FU/LV (second row of Table 1).  Relative to patients who received 5-FU/LV
+22:671:43011:18:22:80:541:113:49:g_d0_f5:99:g_d0_f6:?:19Cancers are classified into four stages, with higher numbers indicating that the cancer has metastasized
+22:672:43117:22:0:70:185:91:99:g_d0_f6:99:g_d0_f6:?:beyond its initial location.
+23:673:43147:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:in a clinical trial (first row of Table 1), patients in clinical trials who received
+23:674:43231:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:irinotecan + 5-FU/LV lived 3.1 months longer, on average, had a 14.6 percentage
+23:675:43310:22:22:100:511:651:143:g_d0_f3:143:g_d0_f3:B:point higher probability of experiencing areduction in the size of their tumor, and
+23:676:43393:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:experienced a two month delay in the time it took for the cancer to advance to a
+23:677:43473:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:more severe state. However, patients taking the new regimen were more likely to
+23:678:43552:22:22:100:382:586:143:g_d0_f3:143:g_d0_f3:B:experience four of the five side effects listed in Table 1.
+23:679:43611:22:21:116:512:564:143:g_d0_f3:143:g_d0_f3:A:Oxaliplatin + 5-FU/LV, which was launched in 2002 (fifth row of Table 1),
+23:680:43684:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:is more efficacious and has fewer severe side effects than irinotecan + 5-FU/LV.
+23:681:43764:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:Patients in clinical trials of the former regimen lived an average of 3.8 months
+23:682:43844:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:longer, had a 10.7 percentage point higher probability of experiencing a reduction
+23:683:43926:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:in the size of their tumor, and experienced a 2.4 month delay in the time it took
+23:684:44007:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:for the cancer to advance to a more severe stage relative to the latter regimen.
+23:685:44087:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:Oxaliplatin + 5-FU/LV patients are also less likely to experience a grade 3 or 4
+23:686:44167:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:side effect for four of the five measures relative to irinotecan + 5-FU/LV. Finally,
+23:687:44251:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:the arrival of bevacizumab + oxaliplatin + 5-FU in 2004 increased the median
+23:688:44327:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:survival time by about four months relative to oxaliplatin + 5-FU/LV, with sub-
+23:689:44406:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:stantial improvements with one side effect measure and worse performance on the
+23:690:44485:22:22:100:204:326:143:g_d0_f3:143:g_d0_f3:B:other four measures.
+23:691:44505:22:21:116:512:304:143:g_d0_f3:143:g_d0_f3:A:Two new second-line regimens entered the market in 2004 to compete against
+23:692:44579:21:22:100:511:283:143:g_d0_f3:143:g_d0_f3:B:the first second-line regimen (irinotecan) that was launched in 1996.20Cetuximab
+23:693:44659:22:22:100:511:261:143:g_d0_f3:143:g_d0_f3:B:+ irinotecan has a substantially better response rate than irinotecan administered
+23:694:44741:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:by itself, although median survival is shorter.  The new regimen also is superior
+23:695:44822:21:16:100:373:218:143:g_d0_f3:143:g_d0_f3:B:than irinotecan on all five of the side effect measures.
+23:696:44878:16:21:80:541:202:49:g_d0_f5:99:g_d0_f6:?:20Regimens that include the tablet, capecitabine, are chemically equivalent to regimens that include 5-
+23:697:44981:21:0:70:104:181:99:g_d0_f6:99:g_d0_f6:?:FU/LV.
+24:698:44989:0:34:100:211:695:296:g_d0_f2:296:g_d0_f2:C:5Results
+24:699:44997:34:22:100:512:661:143:g_d0_f3:143:g_d0_f3:B:In Figure 2 we plot the mean regimen price by quarter by multiplying the market
+24:700:45076:22:21:100:512:639:143:g_d0_f3:143:g_d0_f3:B:share of each regimen by the price physicians paid for that regimen.  Since we
+24:701:45154:21:22:100:512:618:143:g_d0_f3:143:g_d0_f3:B:do not observe prices for the outside option, regimen market shares are rescaled
+24:702:45234:22:22:100:512:596:143:g_d0_f3:143:g_d0_f3:B:to equal one once the outside option is omitted.  The price to physicians of a
+24:703:45312:22:21:100:512:574:143:g_d0_f3:143:g_d0_f3:B:24-week 5-FU/LV regimen in the first quarter of 1993 was $127. The mean price
+24:704:45389:21:22:100:512:553:143:g_d0_f3:143:g_d0_f3:B:of colorectal cancer drugs increased to $597 in the first quarter of 1998 when two
+24:705:45471:22:22:100:511:531:143:g_d0_f3:143:g_d0_f3:B:new irinotecan-based regimens first appeared in the SEER data set.21In the first
+24:706:45551:22:21:100:512:509:143:g_d0_f3:143:g_d0_f3:B:quarter of 1998, physicians paid $16,806 for a 24-week regimen of irinotecan and
+24:707:45631:21:22:100:512:488:143:g_d0_f3:143:g_d0_f3:B:$15,944 for a 24-week regimen of irinotecan + 5-FU/LV. Mean prices rose sharply
+24:708:45710:22:22:100:512:466:143:g_d0_f3:143:g_d0_f3:B:between 1998 and 2001 as the market share of the irinotecan-based regimens
+24:709:45784:22:21:100:512:444:143:g_d0_f3:143:g_d0_f3:B:increased and capecitabine was launched (see Figure 1).  Most of the increase
+24:710:45861:21:22:100:512:423:143:g_d0_f3:143:g_d0_f3:B:was due to patients being shifted to the irinotecan-based regimens (see Figure 1)
+24:711:45942:22:22:100:512:401:143:g_d0_f3:143:g_d0_f3:B:rather than increases in the prices of the new regimens once they were launched.
+24:712:46022:22:21:100:512:379:143:g_d0_f3:143:g_d0_f3:B:The mean regimen price increased by 848 percent between the first quarter of
+24:713:46098:21:22:100:512:358:143:g_d0_f3:143:g_d0_f3:B:1998 and the first quarter of 2001, whereas the prices of the two irinotecan-based
+24:714:46180:22:22:100:502:336:143:g_d0_f3:143:g_d0_f3:B:regimens increased by 24 percent and 22 percent during the same time period.
+24:715:46256:22:21:116:511:314:143:g_d0_f3:143:g_d0_f3:A:The mean regimen price increased from $8,503 in the third quarter of 2002
+24:716:46329:21:22:100:512:293:143:g_d0_f3:143:g_d0_f3:B:to $12,664 in the third quarter of 2003 (a 49 percent increase), to $26,811 in the
+24:717:46411:22:22:100:512:271:143:g_d0_f3:143:g_d0_f3:B:third quarter of 2004 (a 112 percent increase from 2003), and finally to $36,291
+24:718:46491:22:21:100:512:249:143:g_d0_f3:143:g_d0_f3:B:in the third quarter of 2005 (a 35 percent increase from 2004). The prices of the
+24:719:46572:21:22:100:512:228:143:g_d0_f3:143:g_d0_f3:B:three regimens with the largest market shares in the third quarter of 2005 were
+24:720:46651:22:22:100:512:206:143:g_d0_f3:143:g_d0_f3:B:bevacizumab + oxaliplatin + 5-FU (price of $76,636 and 18.9 percent market
+24:721:46725:22:21:100:512:184:143:g_d0_f3:143:g_d0_f3:B:share), oxaliplatin + 5-FU/LV (price of $25,400 and 17.8 percent market share),
+24:722:46804:21:22:100:405:163:143:g_d0_f3:143:g_d0_f3:B:and 5-FU/LV (price of $75 and 13.6 percent market share).
+24:723:46861:22:18:116:511:141:143:g_d0_f3:143:g_d0_f3:A:To derive a naive price index that does not account for the changing attributes
+24:724:46940:18:21:80:541:123:49:g_d0_f5:99:g_d0_f6:?:21Irinotecan began generating sales in the IMS Health data set in the second quarter of 1996.  However,
+24:725:47043:21:0:70:463:102:99:g_d0_f6:99:g_d0_f6:?:Medicare claims recorded irinotecan in an ”other” category until the first quarter of 1998.
+25:726:47136:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:of the regimens, one would divide the mean prices in Figure 2 by $127, the mean
+25:727:47215:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:price in the first quarter of 1993. The shape of the naive index is identical to that
+25:728:47300:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:of Figure 2, with the only difference that it is indexed to one in the first quarter
+25:729:47384:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:of 1993 and reaches 286 in the third quarter of 2005. That is, prices increased by
+25:730:47466:21:22:100:503:608:143:g_d0_f3:143:g_d0_f3:B:28,600 percent between the first quarter of 1993 and the third quarter of 2005.
+25:731:47545:22:22:116:511:586:143:g_d0_f3:143:g_d0_f3:A:We next present a price index that does not rely on estimates of how much
+25:732:47618:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:value physicians place on a drugs efficacy and side effects. In the first four columns
+25:733:47704:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:of Table 2 we report the year each first-line metastatic regimen was approved, its
+25:734:47786:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:average price in 2005,  the median  number  of months patients survived  when
+25:735:47863:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:taking the regimen in clinical trials, and a patients expected number of quality
+25:736:47943:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:adjusted life years (QALYs) based on the performance of the drug in clinical
+25:737:48019:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:trials.  The expected QALY of a drug depends on the amount of time a patient
+25:738:48095:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:expects to spend in five different health states (i.e., stable metastatic disease with
+25:739:48181:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:or without side effects; a chemotherapy drug is causing the tumor to shrink with
+25:740:48261:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:or without side effects;  and disease has progressed to a more advanced state)
+25:741:48339:22:21:100:511:369:143:g_d0_f3:143:g_d0_f3:B:and the utility weight associated with each health state.22The utilities weights
+25:742:48419:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:for each health state, which we average across three studies (Brown and Hutton
+25:743:48497:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:(1998); Brown et al. (2001); Lloyd et al. (2006)), are 0.68 for stable metastatic
+25:744:48578:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:disease without a side effect, 0.55 for stable disease with one of six common side
+25:745:48660:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:effects, 0.82 if the tumor is responding to chemotherapy and the patient is not
+25:746:48739:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:experiencing a side effect, 0.69 if the tumor is responding but the patient has a
+25:747:48820:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:side effect, 0.42 if the disease progresses to a more advanced state, and zero for
+25:748:48902:21:22:100:139:218:143:g_d0_f3:64:g_d0_f4:B:death.23
+25:749:48910:22:22:116:511:196:143:g_d0_f3:143:g_d0_f3:A:In the final three columns of Table 2 we report the incremental cost of each
+25:750:48986:22:17:100:512:174:143:g_d0_f3:143:g_d0_f3:B:drug relative to 5-FU, the incremental cost per incremental expected life year
+25:751:49064:17:22:80:541:157:49:g_d0_f5:99:g_d0_f6:?:22We assume that a patients treatment ceases once the disease advances, so patients no longer experience
+25:752:49168:22:10:70:177:135:99:g_d0_f6:99:g_d0_f6:?:side effects in that state.
+25:753:49195:10:22:80:541:125:49:g_d0_f5:99:g_d0_f6:?:23Lloyd et al. (2006) derive utility weights by presenting 100 healthy individuals with a set of standard
+25:754:49300:22:18:70:541:103:99:g_d0_f6:99:g_d0_f6:?:gambles; Brown and Hutton (1998) and Brown et al. (2001) derive the weights by presenting standard gambles
+25:755:49406:18:0:70:427:85:99:g_d0_f6:99:g_d0_f6:?:to oncology nurses. A person in perfect health would have a utility weight of one.
+26:756:49490:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:(relative to 5-FU), and the incremental cost per incremental  expected  QALY
+26:757:49566:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:(relative to 5-FU). Most of the drugs have an incremental cost per incremental
+26:758:49644:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:expected life year between $50,000 and $100,000.  The exception, capecitabine,
+26:759:49722:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:produces the same chemical response as 5-FU but is more convenient because
+26:760:49796:21:22:100:511:608:143:g_d0_f3:143:g_d0_f3:B:capecitabine can be ingested whereas 5-FU must be infused in a physicians office.
+26:761:49877:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:Although there is no consensus among economists, most empirical studies assign
+26:762:49955:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:a value of $75,000 to $150,000 per life year (Cutler (2004)), and a recent paper
+26:763:50035:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:placed the value at $373,000 for a 50-year old male (Murphy and Topel (2006)).
+26:764:50113:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:Most  of the  drugs have  an incremental  cost per incremental  expected  QALY
+26:765:50191:21:22:100:264:500:143:g_d0_f3:143:g_d0_f3:B:between $100,000 and $150,000.
+26:766:50221:22:22:116:511:478:143:g_d0_f3:143:g_d0_f3:A:In Figure 3 we plot the mean incremental (relative to 5-FU) cost per incremen-
+26:767:50299:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:tal (relative to 5-FU) expected life year and expected QALY for patients taking a
+26:768:50380:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:first-line metastatic regimen other than 5-FU between 1998 and 2005. Specifically,
+26:769:50462:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:for all first-line regimens other than 5-FU on the market in a particular quarter,
+26:770:50544:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:we take a weighted average of the cost and expected health outcome, where the
+26:771:50621:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:weights are the regimen market shares in that quarter.24When irinotecan is
+26:772:50695:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:launched the incremental cost per incremental expected life year is $60,000. This
+26:773:50776:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:value rises 43 percent by 2002 due to the increasing price of irinotecan and the
+26:774:50856:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:launch of capecitabine in 2001.  The incremental cost then falls with the intro-
+26:775:50936:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:duction of oxaliplatin- and bevacizumab-based regimens and is 20 percent higher
+26:776:51015:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:in the third quarter of 2005 than the first quarter of 1998.  By comparison, the
+26:777:51095:22:21:100:468:239:143:g_d0_f3:143:g_d0_f3:B:consumer price index increased by 19.8 percent during this time period.
+26:778:51166:21:22:116:511:218:143:g_d0_f3:143:g_d0_f3:A:The mean incremental cost per incremental QALY displays a similar pattern,
+26:779:51240:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:with a slightly higher peak in 2002.   Recall that we use nominal rather than
+26:780:51317:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:real prices when constructing the indices to avoid building one index on top of
+26:781:51396:21:22:100:511:153:143:g_d0_f3:143:g_d0_f3:B:another.  As a point of reference, however, the consumer price index increased
+26:782:51474:22:22:100:512:131:143:g_d0_f3:143:g_d0_f3:B:by 35.2 percent between 1993 and 2005.  Coefficient estimates from the hedonic
+26:783:51552:22:17:100:512:109:143:g_d0_f3:143:g_d0_f3:B:regression are reported in Table 3. The dependent variable is the logarithm of the
+26:784:51634:17:0:80:495:92:49:g_d0_f5:99:g_d0_f6:?:24Because we omit 5-FU and the second-line regimens, the weights sum to one in each quarter.
+27:785:51728:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:price a customer paid for regimen j in quarter t. Regimen attributes are included
+27:786:51809:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:as well as a full set of quarter indicator variables.  We also interact the second
+27:787:51891:22:22:100:381:651:143:g_d0_f3:64:g_d0_f4:B:line therapy indicator with a regimen’s response rate.25
+27:788:51947:22:21:116:511:629:143:g_d0_f3:143:g_d0_f3:A:The coefficients on two of the three efficacy measures are positive and signifi-
+27:789:52027:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:cant. An increase of one month in the median patient survival is associated with
+27:790:52107:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:a 64.2 percent increase in the price of a regimen.26Evaluated at the mean regi-
+27:791:52186:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:men price in the sample ($21,113), this implies an increase of $13,555. Physicians
+27:792:52268:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:are implicitly valuing an expected year of life saved at $162,700. Regimens with
+27:793:52348:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:relatively high response rates are also priced higher, with the effect smaller for
+27:794:52430:21:22:100:209:500:143:g_d0_f3:143:g_d0_f3:B:second-line therapies.
+27:795:52452:22:22:116:511:478:143:g_d0_f3:143:g_d0_f3:A:The coefficient on time to progression is negative, which seems to indicate that
+27:796:52532:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:physicians assign a negative valuation to that attribute. Pakes (2005) shows that
+27:797:52613:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:coefficients in hedonic regressions will not necessarily have their expected signs.
+27:798:52696:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:His insight is that the degree of competition will differ across the attribute space.
+27:799:52781:22:22:100:511:391:143:g_d0_f3:143:g_d0_f3:B:In the situation of colorectal cancer, forexample, there may be greater differenti-
+27:800:52864:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:ation and less competition with the survival and response rate attributes relative
+27:801:52946:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:to time to progression.  Pharmaceutical and biotech firms design their products
+27:802:53025:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:and construct the clinical trials that will define the attributes years before the
+27:803:53107:22:21:100:511:304:143:g_d0_f3:143:g_d0_f3:B:products are approved and marketed. It isquite plausible, therefore, that at any
+27:804:53187:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:given point in time there could more differentiation on certain attributes than
+27:805:53266:22:22:100:134:261:143:g_d0_f3:143:g_d0_f3:B:others.
+27:806:53273:22:21:116:511:239:143:g_d0_f3:143:g_d0_f3:A:Two of the side effect attributes have negative coefficients and three have
+27:807:53348:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:positive coefficients in Table 3. Cancer patients often take drugs that ameliorate
+27:808:53430:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:the impact of certain side effects, such as pain, nausea, and vomiting. In addition
+27:809:53513:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:to the explanation above, this may be another reason why physicians seem to
+27:810:53588:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:assign a positive value to the abdominal pain, nausea, and vomiting side effects.
+27:811:53669:22:18:100:512:131:143:g_d0_f3:143:g_d0_f3:B:If a physician prescribes anti-pain and antiemetic drugs in conjunction with the
+27:812:53749:18:13:80:453:113:49:g_d0_f5:99:g_d0_f6:?:25We did not include other second-line attribute interactions due to multi-colinearity.
+27:813:53836:13:0:80:189:100:49:g_d0_f5:99:g_d0_f6:?:260.642 = exp(0.496) - 1.
+28:814:53863:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:anti-cancer drugs, she may downgrade the importance of these side effects when
+28:815:53941:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:choosing a regimen.  A third possible explanation for the positive coefficients on
+28:816:54023:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:three of the side effect attributes is that physicians may believe that the efficacy
+28:817:54107:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:of the newer drugs are better than the measures reported in phase 3 clinical trials.
+28:818:54191:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:This could occur, for example, if physicians use the drugs differently in practice
+28:819:54273:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:than as they were used in the trials due to learning about patient-drug matching.
+28:820:54354:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:Because the newer drugs are more toxic and generally have greater side effects,
+28:821:54433:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:the physician beliefs would be captured as positive coefficients on the side effect
+28:822:54516:22:21:100:149:521:143:g_d0_f3:143:g_d0_f3:B:measures.
+28:823:54525:21:22:116:511:500:143:g_d0_f3:143:g_d0_f3:A:The very large positive coefficient on the second-line indicator variable con-
+28:824:54603:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:firms that these therapies are priced much higher than first-line therapies, con-
+28:825:54684:22:22:100:512:456:143:g_d0_f3:143:g_d0_f3:B:trolling for the attributes of each. This implies there is a much higher willingness
+28:826:54768:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:to pay for an extra life year for the very sick relative to the less sick. Finally, reg-
+28:827:54856:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:imens containing the capecitabine tablet are priced slightly lower than regimens
+28:828:54936:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:that use 5-FU/LV instead.  This does not necessarily imply that physicians do
+28:829:55013:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:not value the convenience associated with the tablet but also less dosage of other
+28:830:55095:21:22:100:511:348:143:g_d0_f3:143:g_d0_f3:B:drugs.  As indicated in Appendix 1, the dosages of certain branded drugs (e.g.,
+28:831:55174:22:22:100:450:326:143:g_d0_f3:143:g_d0_f3:B:irinotecan) are lower when capecitabine is used instead of 5-FU/LV.
+28:832:55241:22:21:116:511:304:143:g_d0_f3:143:g_d0_f3:A:We exponentiate the coefficients on the quarter indicator variables (the first
+28:833:55319:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:quarter of 1993 is omitted) and plot the hedonic price index in Figure 4.  The
+28:834:55397:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:pattern of prices for the hedonic index (the lower line) in Figure 4 is dramatically
+28:835:55481:22:21:100:512:239:143:g_d0_f3:143:g_d0_f3:B:different from Figure 2, which emphasizes the importance of controlling for prod-
+28:836:55562:21:22:100:512:218:143:g_d0_f3:143:g_d0_f3:B:uct attributes. Prices were stable in nominal terms between 1993 and the second
+28:837:55641:22:22:100:512:196:143:g_d0_f3:143:g_d0_f3:B:quarter of 1996 when the only regimen approved for colorectal cancer treatment
+28:838:55719:22:21:100:512:174:143:g_d0_f3:143:g_d0_f3:B:was 5-FU/LV and the components of this regimen were no longer patent pro-
+28:839:55792:21:22:100:512:153:143:g_d0_f3:143:g_d0_f3:B:tected. The hedonic index drops by about 25 points with the introduction of the
+28:840:55871:22:22:100:512:131:143:g_d0_f3:143:g_d0_f3:B:two irinotecan-based therapies, which were priced at about $16,000. Controlling
+28:841:55950:22:21:100:512:109:143:g_d0_f3:143:g_d0_f3:B:for the attributes of these new regimens and physicians’ valuations of those at-
+28:842:56030:21:0:100:512:88:143:g_d0_f3:143:g_d0_f3:B:tributes, prices fell by about 25 percent.  Over the next six years, including the
+29:843:56114:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:period when capecitabine was introduced, the index increased from 0.71 to 0.85.
+29:844:56193:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:The price index jumped by six points with the introduction of the oxaliplatin-
+29:845:56271:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:based regimens in 2002, and has remained fairly constant since then during the
+29:846:56349:22:21:100:382:629:143:g_d0_f3:143:g_d0_f3:B:time when cetuximab and bevacizumab were launched.
+29:847:56399:21:22:116:511:608:143:g_d0_f3:143:g_d0_f3:A:In the same figure we show the quality-adjusted price index.  The quality-
+29:848:56473:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:adjusted index is very similar to the hedonic price index during the period where
+29:849:56554:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:only 5-FU/LV was present.  There is a decrease of 28 points during 1998, when
+29:850:56631:21:22:100:511:543:143:g_d0_f3:143:g_d0_f3:B:irinotecan started showing positive market shares.27That decrease after the intro-
+29:851:56713:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:duction of irinotecan was also present in the hedonic price index in 1996. During
+29:852:56794:21:22:100:512:500:143:g_d0_f3:143:g_d0_f3:B:the period 1999 to 2001, the quality-adjusted price index slowly increases as does
+29:853:56876:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:the hedonic price index, but in 2002 when oxaliplatin is introduced their pre-
+29:854:56954:22:22:100:511:456:143:g_d0_f3:143:g_d0_f3:B:dictions differ.  The quality-adjusted index exhibits a decrease after oxaliplatin
+29:855:57036:22:21:100:512:434:143:g_d0_f3:143:g_d0_f3:B:is introduced, which may provide evidence that the hedonic price index is not
+29:856:57113:21:22:100:512:413:143:g_d0_f3:143:g_d0_f3:B:able to capture the extending the range or filling the spectrum type of innova-
+29:857:57192:22:22:100:512:391:143:g_d0_f3:143:g_d0_f3:B:tion that occurred during this period.  The 8-percentage point decrease in the
+29:858:57270:22:21:100:512:369:143:g_d0_f3:143:g_d0_f3:B:quality-adjusted price index after the introduction of oxaliplatin contrasts with
+29:859:57351:21:22:100:512:348:143:g_d0_f3:143:g_d0_f3:B:the 6 percentage points increase in the hedonic price index. Finally, the quality-
+29:860:57433:22:22:100:512:326:143:g_d0_f3:143:g_d0_f3:B:adjusted price index remains decreasing towards the end of our period of analysis.
+29:861:57515:22:21:100:512:304:143:g_d0_f3:143:g_d0_f3:B:Contrasting with the previous two models, the vertical model shows that innova-
+29:862:57594:21:22:100:512:283:143:g_d0_f3:143:g_d0_f3:B:tion results in moderate, but positive price increases.  The parameter estimates
+29:863:57674:22:22:100:512:261:143:g_d0_f3:143:g_d0_f3:B:for this model are shown in Table 5, and the distribution of the random coefficient
+29:864:57757:22:50:100:269:239:143:g_d0_f3:143:g_d0_f3:B:on price is presented in Figure 5.
+29:865:57791:50:34:100:222:189:296:g_d0_f2:296:g_d0_f2:C:6  Conclusion
+29:866:57804:34:22:100:512:155:143:g_d0_f3:143:g_d0_f3:B:This paper provides evidence to support the idea that new medical technology,
+29:867:57881:22:17:100:512:133:143:g_d0_f3:143:g_d0_f3:B:in particular colon cancer drugs, provide welfare increases that justify their cost.
+29:868:57965:17:22:80:541:116:49:g_d0_f5:99:g_d0_f6:?:27Although irinotecan was introduced in 1996, the SEER data set only shows positive market shares for
+29:869:58066:22:0:70:147:94:99:g_d0_f6:99:g_d0_f6:?:this drug in 1998.
+30:870:58086:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:We calculate a naive price index that does not adjust for improving attributes
+30:871:58164:22:22:100:512:673:143:g_d0_f3:143:g_d0_f3:B:and compare it with a hedonic price index and two quality-adjusted price indices.
+30:872:58245:22:22:100:512:651:143:g_d0_f3:143:g_d0_f3:B:The conclusions about the evolution of prices of new pharmaceutical developments
+30:873:58325:22:21:100:512:629:143:g_d0_f3:143:g_d0_f3:B:differs substantially between the naive price index and the three methods that
+30:874:58403:21:22:100:512:608:143:g_d0_f3:143:g_d0_f3:B:take into account changing product attributes. While the naive price index shows
+30:875:58483:22:22:100:512:586:143:g_d0_f3:143:g_d0_f3:B:a dramatic increase in prices over the 13-year period we study, the hedonic price
+30:876:58564:22:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:and the quality-adjusted price index show slight decreases, and slight increase in
+30:877:58646:21:22:100:512:543:143:g_d0_f3:143:g_d0_f3:B:the case of the vertical model.  The levels of the hedonic and quality-adjusted
+30:878:58725:22:21:100:512:521:143:g_d0_f3:143:g_d0_f3:B:price indices suggest that pharmaceutical companies are able to capture most
+30:879:58801:21:22:100:510:500:143:g_d0_f3:64:g_d0_f4:B:of the welfare they generate with the launches of new and better products.28
+30:880:58877:22:22:100:512:478:143:g_d0_f3:143:g_d0_f3:B:Ongoing research will refine these estimatesusing frontier discrete choice methods
+30:881:58959:22:15:100:219:456:143:g_d0_f3:143:g_d0_f3:B:for demand estimation.
+30:882:58981:15:22:80:541:441:49:g_d0_f5:99:g_d0_f6:?:28Pharmaceutical and biotech firms may in turn transfer some of the welfare gains to physicians by offering
+30:883:59088:22:0:70:473:419:99:g_d0_f6:99:g_d0_f6:?:rebates when they purchase a sufficiently large quantity of a companys chemotherapy drugs.
+31:884:59180:0:34:100:191:695:296:g_d0_f2:296:g_d0_f2:C:References
+31:885:59190:34:22:100:512:661:143:g_d0_f3:143:g_d0_f3:B:Berndt, E. R., Bir, A., Busch, S. H., Frank, R. G., , and Normand, S.-L. T. (2002).
+31:886:59273:22:21:111:511:639:143:g_d0_f3:143:g_d0_f3:A:The medical treatment of depression, 1991-1996:  Productive inefficiency, ex-
+31:887:59350:21:22:111:511:618:143:g_d0_f3:143:g_d0_f3:A:pected outcome variations, and price indexes.Journal of Health Economics,
+31:888:59423:22:32:111:186:596:143:g_d0_f3:143:g_d0_f3:A:3(21):373–396.
+31:889:59437:32:21:100:512:564:143:g_d0_f3:143:g_d0_f3:B:Berndt, E. R., Cutler, D. M., Frank, R. G., Griliches, Z., Newhouse, J. P., and
+31:890:59516:21:22:111:512:543:143:g_d0_f3:143:g_d0_f3:A:Triplett, J. E. (2000).Handbook of Health Economics, chapter Medical Care
+31:891:59589:22:32:111:299:521:143:g_d0_f3:143:g_d0_f3:A:Prices and Output. Elsevier Science.
+31:892:59625:32:21:100:512:489:143:g_d0_f3:143:g_d0_f3:B:Berry, S. T. (1994). Estimating discrete-choice models of product differentiation.
+31:893:59707:21:32:111:336:468:143:g_d0_f14:143:g_d0_f3:A:Rand Journal of Economics, 25(2):242–262.
+31:894:59748:32:22:100:512:436:143:g_d0_f3:143:g_d0_f3:B:Berry, S. T., Levinsohn, J., and Pakes, A. (1995).  Automobile prices in market
+31:895:59827:22:31:111:329:414:143:g_d0_f3:143:g_d0_f3:A:equilibrium.Econometrica, 63(4):841–890.
+31:896:59867:31:22:100:512:383:143:g_d0_f3:143:g_d0_f3:B:Berry,  S.  T.  and Pakes,  A.  (2007).   The pure  characteristics  demand  model.
+31:897:59950:22:32:111:294:361:143:g_d0_f3:143:g_d0_f3:A:Working paper, Harvard University.
+31:898:59984:32:21:100:512:329:143:g_d0_f3:143:g_d0_f3:B:Bresnahan, T. F., Stern, S., and Trajtenberg, M. (1997).  Market segmentation
+31:899:60061:21:22:111:511:308:143:g_d0_f3:143:g_d0_f3:A:and the sources of rents from innovation: personal computers in the late 1980s.
+31:900:60140:22:32:111:345:286:143:g_d0_f14:143:g_d0_f3:A:RAND Journal of Economics, 28(0):S17–S44.
+31:901:60181:32:21:100:512:254:143:g_d0_f3:143:g_d0_f3:B:Brown, R. E. and Hutton, J. (1998). Cost-utility model comparing docetaxel and
+31:902:60259:21:32:111:508:233:143:g_d0_f3:143:g_d0_f3:A:paclitaxel in advanced breast cancer patients.Anti-Cancer Drugs, 9:899–907.
+31:903:60334:32:22:100:512:201:143:g_d0_f3:143:g_d0_f3:B:Brown, R. E., Hutton, J., and Burrell, A. (2001).  Cost effectiveness of treat-
+31:904:60413:22:21:111:511:179:143:g_d0_f3:143:g_d0_f3:A:ment  options  in  advanced  breast  cancer  in  the  U.K.Pharmacoeconomics,
+31:905:60489:21:32:111:203:158:143:g_d0_f3:143:g_d0_f3:A:19(11):1091–1102.
+31:906:60506:32:21:100:511:126:143:g_d0_f3:143:g_d0_f3:B:Cleanthous,  P. (2004).Evaluating Innovation in the Pharmaceutical Industry.
+31:907:60582:21:0:111:255:105:143:g_d0_f3:143:g_d0_f3:A:PhD thesis, Yale University.
+32:908:60612:0:22:100:511:695:143:g_d0_f3:143:g_d0_f3:B:Conti, R. M. (2006).The Economic Value of New Treatments for Depression.
+32:909:60684:22:32:111:274:673:143:g_d0_f3:143:g_d0_f3:A:PhD thesis, Harvard University.
+32:910:60715:32:21:100:512:641:143:g_d0_f3:143:g_d0_f3:B:Court, A. (1939).The dynamics of automobile demand, chapter Hedonice Price
+32:911:60789:21:22:111:511:620:143:g_d0_f3:143:g_d0_f3:A:Indexes with Automotive examples, pages 99–117.  General Motors Corpora-
+32:912:60861:22:32:111:134:598:143:g_d0_f3:143:g_d0_f3:A:tion.
+32:913:60866:32:21:100:512:566:143:g_d0_f3:143:g_d0_f14:B:Cutler, D. M. (2004).Your Money or Your Life: Strong Medicine for Americans
+32:914:60941:21:32:111:347:545:143:g_d0_f14:143:g_d0_f3:A:Health Care System. Oxford University Press.
+32:915:60985:32:22:100:512:513:143:g_d0_f3:143:g_d0_f3:B:Cutler,  D. M.,  McClellan,  M.,  Newhouse,  J. P.,  and Remler,  D. (1998).  Are
+32:916:61066:22:21:111:511:491:143:g_d0_f3:143:g_d0_f14:A:medical prices declining? evidence from heart attack treatments.The Quarterly
+32:917:61143:21:32:111:311:470:143:g_d0_f14:143:g_d0_f3:A:Journal of Economics, 63(4):991–1024.
+32:918:61180:32:22:100:512:438:143:g_d0_f3:143:g_d0_f3:B:Finkelstein, A. (2007). The aggregate effects of health insurance: Evidence from
+32:919:61260:22:31:111:501:416:143:g_d0_f3:143:g_d0_f3:A:the introduction of medicare.Quarterly Journal of Economics, 122(1):1–37.
+32:920:61333:31:22:100:512:385:143:g_d0_f3:143:g_d0_f3:B:GAO (2001). Payments for covered outpatient drugs exceed providers’ cost. Tech-
+32:921:61412:22:32:111:266:363:143:g_d0_f3:143:g_d0_f3:A:nical report, Washington D.C.
+32:922:61441:32:21:100:511:331:143:g_d0_f3:143:g_d0_f3:B:Griliches, Z. (1961).The price statistics of the Federal Government, chapter He-
+32:923:61521:21:22:111:512:310:143:g_d0_f3:143:g_d0_f3:A:donic price indexes for automobiles: aneconometric analysis of quality change,
+32:924:61599:22:32:111:397:288:143:g_d0_f3:143:g_d0_f3:A:pages 173–196. National Bureau of Economic Research.
+32:925:61651:32:21:100:512:256:143:g_d0_f3:143:g_d0_f3:B:Jacobson, M. A., O’Malley, J., Earle, C. C., Gaccione, P., Pakes, J., and New-
+32:926:61729:21:22:111:511:235:143:g_d0_f3:143:g_d0_f3:A:house, J. P. (2006).  The effect of medicare reimbursement policies on cancer
+32:927:61806:22:32:111:399:213:143:g_d0_f3:143:g_d0_f3:A:chemotherapy treatment.Health Affairs, 2(25):437–443.
+32:928:61859:32:21:100:512:181:143:g_d0_f3:143:g_d0_f3:B:Lloyd, A., Nafees, B., Narewska, J., Dewilde, S., and Watkins, J. (2006). Health
+32:929:61939:21:22:111:512:160:143:g_d0_f3:143:g_d0_f3:A:state utilities for metastatic breast cancer.British Journal of Cancer, 95:683–
+32:930:62018:22:32:111:132:138:143:g_d0_f3:143:g_d0_f3:A:690.
+32:931:62022:32:21:100:512:106:143:g_d0_f3:143:g_d0_f3:B:MedPAC (2006).  Report to congress:  Effects of medicare payment changes on
+32:932:62097:21:0:111:386:85:143:g_d0_f3:143:g_d0_f3:A:oncology services. Technical report, Washington D.C.
+33:933:62151:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:Murphy,  K. M. and Topel,  R. H. (2006).   The value of health and longevity.
+33:934:62228:22:31:111:349:673:143:g_d0_f14:143:g_d0_f3:A:Journal of Political Economy, 114(5):871–904.
+33:935:62273:31:22:100:512:642:143:g_d0_f3:143:g_d0_f3:B:Nevo, A. (2000). A practitioner’s guide to estimation of random coefficient logit
+33:936:62354:22:21:111:512:620:143:g_d0_f3:143:g_d0_f3:A:models of demand.Journal of Economics & Management Strategy, 4(9):513–
+33:937:62424:21:31:111:132:599:143:g_d0_f3:143:g_d0_f3:A:548.
+33:938:62428:31:22:100:512:568:143:g_d0_f3:143:g_d0_f3:B:Nevo, A. (2003). New products, quality changes and welfare measures computed
+33:939:62504:22:22:111:511:546:143:g_d0_f3:143:g_d0_f3:A:from estimated demand systems.The Review of Economics and Statistics,
+33:940:62573:22:30:111:186:524:143:g_d0_f3:143:g_d0_f3:A:85(2):266–275.
+33:941:62587:30:22:100:512:494:143:g_d0_f3:143:g_d0_f14:B:Newhouse, J. (1992).  Medical care costs:  How much welfare loss?Journal of
+33:942:62662:22:31:111:285:472:143:g_d0_f14:143:g_d0_f3:A:Economic Perspectives, 6(3):3–21.
+33:943:62695:31:22:100:512:441:143:g_d0_f3:143:g_d0_f3:B:Pakes, A. (2003). A reconsideration of hedonic price indexes with an application
+33:944:62775:22:30:111:414:419:143:g_d0_f3:143:g_d0_f3:A:to pc’s.The American Economic Review, 93(5):1578–1596.
+33:945:62829:30:22:100:512:389:143:g_d0_f3:143:g_d0_f3:B:Pakes, A. (2005). Hedonics and the consumer price index. Working Paper, Har-
+33:946:62905:22:31:111:192:367:143:g_d0_f3:143:g_d0_f3:A:vard University.
+33:947:62921:31:22:100:512:336:143:g_d0_f3:143:g_d0_f3:B:Petrin, A. (2002).  Quantifying the benefits of new products:  The case of the
+33:948:62999:22:30:111:398:314:143:g_d0_f3:143:g_d0_f3:A:minivan.Journal of Political Economy, 110(4):705–729.
+33:949:63052:30:22:100:512:284:143:g_d0_f3:143:g_d0_f3:B:Small, K. and Rosen, H. (1981). Applied welfare economics with discrete choice
+33:950:63130:22:31:111:307:262:143:g_d0_f3:143:g_d0_f3:A:models.Econometrica, 49(1):105–130.
+33:951:63165:31:22:100:512:231:143:g_d0_f3:143:g_d0_f3:B:Song, M. (2005).  The quality-adjusted price index and consumer heterogeneity.
+33:952:63243:22:30:111:359:209:143:g_d0_f3:143:g_d0_f3:A:Working paper, Georgia Institute of Technology.
+33:953:63290:30:22:100:512:179:143:g_d0_f3:143:g_d0_f3:B:Song, M. (2007).  Measuring consumer welfare in the cpu market:  An applica-
+33:954:63366:22:22:111:511:157:143:g_d0_f3:143:g_d0_f14:A:tion of the pure characteristics demand model. forthcomingRAND Journal of
+33:955:63439:22:31:111:169:135:143:g_d0_f14:143:g_d0_f3:A:Economics.
+33:956:63449:31:21:100:511:104:143:g_d0_f3:143:g_d0_f3:B:Trajtenberg,   M.   (1990).Product   innovations,   price   indices   and   the
+33:957:63528:21:0:111:492:83:143:g_d0_f3:143:g_d0_f3:A:(mis)measurement of economic performance. Working paper, NBER 3261.
+34:958:63597:0:22:100:512:695:143:g_d0_f3:143:g_d0_f3:B:Yabroff, R. K., Lamont, E. B., Mariotto, A., Warren, J. L., Topor, M., Meekins,
+34:959:63676:22:22:111:511:673:143:g_d0_f3:143:g_d0_f3:A:A., and Brown, M. L. (2008).  Cost of care for elderly cancer patients in the
+34:960:63753:22:0:111:481:651:143:g_d0_f3:143:g_d0_f3:A:united states.Journal of the National Cancer Institute, 100(9):630–641.
+39:961:65179:0:418:90:313:708:144:g_d0_f18:144:g_d0_f16:?:Figure  5: Distribution of the price coefficient
+39:962:65227:418:0:299:328:290:144:g_d0_f16:144:g_d0_f16:?:Alpha
+39:963:65232:0:0:38:75:515:144:g_d0_f16:144:g_d0_f16:?:Density
+43:964:68211:0:25:289:322:709:117:g_d0_f16:117:g_d0_f16:?:Table 3
+43:965:68218:25:25:200:411:684:117:g_d0_f16:117:g_d0_f16:?:Coefficient Estimates from Hedonic Regression
+43:966:68263:25:13:306:459:659:117:g_d0_f16:117:g_d0_f16:?:Coefficient      Standard Error
+43:967:68294:13:13:90:179:646:117:g_d0_f18:117:g_d0_f18:?:Efficacy measures:
+43:968:68312:13:25:90:439:633:117:g_d0_f16:117:g_d0_f16:?:   General survival (months) 0.113**0.004
+43:969:68353:25:25:90:439:608:117:g_d0_f16:117:g_d0_f16:?:   General survival * second line indicator-1.478**0.011
+43:970:68409:25:26:90:439:583:117:g_d0_f16:117:g_d0_f16:?:   Response rate (percentage) 0.336**0.002
+43:971:68451:26:25:90:439:557:117:g_d0_f16:117:g_d0_f16:?:   Response rate * second line indicator 0.510**0.003
+43:972:68504:25:25:90:439:532:117:g_d0_f16:117:g_d0_f16:?:   Time to progression (months)-1.013**0.015
+43:973:68548:25:13:90:207:507:117:g_d0_f18:117:g_d0_f18:?:Grade 3 or 4 side effects:
+43:974:68574:13:25:98:439:494:117:g_d0_f16:117:g_d0_f16:F:Diarrhea 0.061**0.001
+43:975:68595:25:26:90:439:469:117:g_d0_f16:117:g_d0_f16:?:   Nausea 0.201**0.001
+43:976:68617:26:25:90:439:443:117:g_d0_f16:117:g_d0_f16:?:   Abdominal pain 0.935**0.005
+43:977:68647:25:25:90:439:418:117:g_d0_f16:117:g_d0_f16:?:   Neutropenia-0.0010.001
+43:978:68672:25:25:90:439:393:117:g_d0_f16:117:g_d0_f16:?:Tablet-0.122**0.009
+43:979:68691:25:13:90:439:368:117:g_d0_f16:117:g_d0_f16:?:Physician clinics  0.0100.009
+43:980:68720:13:25:90:181:355:117:g_d0_f16:117:g_d0_f16:?:   (hospitals omitted)
+43:981:68742:25:26:90:439:330:117:g_d0_f16:117:g_d0_f16:?:Constant-5.546**0.081
+43:982:68763:26:25:90:377:304:117:g_d0_f16:117:g_d0_f16:?:Observations       492
+43:983:68785:25:25:90:380:279:117:g_d0_f16:117:g_d0_f16:?:R2       0.99
+43:984:68798:25:13:90:508:254:117:g_d0_f18:117:g_d0_f16:F:Notes: the unit of observation is the logarithm of the mean price a type of customer (physician 
+43:985:68894:13:13:90:516:241:117:g_d0_f16:117:g_d0_f16:F:clinics or hospitals) pays for a regimen in a quarter.  The regressions include a full set of quarter 
+43:986:68996:13:12:90:485:228:117:g_d0_f16:117:g_d0_f16:?:indicator variables.  The interaction between general survival and the second line therapy 
+43:987:69087:12:13:90:491:216:117:g_d0_f16:117:g_d0_f16:?:indicator, and time to progression and the second line therapy indicator are dropped due to 
+43:988:69179:13:0:90:407:203:117:g_d0_f16:117:g_d0_f16:?:colinearity.  ** = significantly different from zero at the 5-percent level.
+44:989:69255:0:25:289:322:709:117:g_d0_f16:117:g_d0_f16:?:Table 4
+44:990:69262:25:25:306:459:684:117:g_d0_f16:117:g_d0_f16:?:Coefficient      Standard Error
+44:991:69293:25:26:90:439:659:117:g_d0_f16:117:g_d0_f16:?:Price-0.866**0.127
+44:992:69311:26:12:90:179:633:117:g_d0_f18:117:g_d0_f18:?:Efficacy measures:
+44:993:69329:12:26:90:439:621:117:g_d0_f16:117:g_d0_f16:?:   General survival (months) 0.1020.075
+44:994:69368:26:25:90:439:595:117:g_d0_f16:117:g_d0_f16:?:   Response rate (percentage) 0.349**0.073
+44:995:69410:25:25:90:438:570:117:g_d0_f16:117:g_d0_f16:?:   Response rate * second line therapy-0.0250.022
+44:996:69459:25:26:90:439:545:117:g_d0_f16:117:g_d0_f16:?:   Time to progression (months)-1.374**0.216
+44:997:69503:26:12:90:207:519:117:g_d0_f18:117:g_d0_f18:?:Grade 3 or 4 side effects:
+44:998:69529:12:26:98:439:507:117:g_d0_f16:117:g_d0_f16:F:Diarrhea 0.0300.017
+44:999:69548:26:25:90:439:481:117:g_d0_f16:117:g_d0_f16:?:   Nausea 0.0250.019
+44:1000:69568:25:25:90:439:456:117:g_d0_f16:117:g_d0_f16:?:   Abdominal pain 0.240**0.072
+44:1001:69598:25:25:90:439:431:117:g_d0_f16:117:g_d0_f16:?:   Neutropenia-0.066**0.011
+44:1002:69625:25:26:90:439:406:117:g_d0_f16:117:g_d0_f16:?:Tablet-1.955**0.232
+44:1003:69644:26:25:90:439:380:117:g_d0_f16:117:g_d0_f16:?:Constant                                                                                                                                  5.981**0.529
+44:1004:69794:25:25:90:377:355:117:g_d0_f16:117:g_d0_f16:?:Observations       208
+44:1005:69816:25:26:90:380:330:117:g_d0_f16:117:g_d0_f16:?:R2       0.89
+44:1006:69829:26:12:90:524:304:117:g_d0_f18:117:g_d0_f16:?:Notes: the dependent variable is the logarithm of the market share of a regimen in a quarter minus 
+44:1007:69928:12:13:90:524:292:117:g_d0_f16:117:g_d0_f16:?:the logarithm of the market share of the outside option.  The price variable measures the price that 
+44:1008:70029:13:13:90:502:279:117:g_d0_f16:117:g_d0_f16:?:physician clinics paid, on average, to wholesalers for a regimen in a quarter.  The regressions 
+44:1009:70125:13:12:90:503:266:117:g_d0_f16:117:g_d0_f16:?:include a full set of quarter indicator variables.  ** = significantly different from zero at the 5-
+44:1010:70225:12:0:90:409:254:117:g_d0_f16:117:g_d0_f16:?:percent level; * = significantly different from zero at the 1-percent level.
+45:1011:70301:0:25:289:322:709:117:g_d0_f16:117:g_d0_f16:?:Table 5
+45:1012:70308:25:26:306:459:684:117:g_d0_f16:117:g_d0_f16:?:Coefficient      Standard Error
+45:1013:70339:26:26:90:432:658:117:g_d0_f16:117:g_d0_f16:?:log(-) ~ N(0,-)0.3780.13
+45:1014:70363:26:12:89:178:632:117:g_d0_f18:117:g_d0_f18:?:Efficacy measures:
+45:1015:70381:12:26:89:438:620:117:g_d0_f16:117:g_d0_f16:?:   General survival (months) 0.2030.071
+45:1016:70420:26:25:89:438:594:117:g_d0_f16:117:g_d0_f16:?:   Response rate (percentage) 0.3760.017
+45:1017:70460:25:25:89:438:569:117:g_d0_f16:117:g_d0_f16:?:   Response rate * second line therapy 0.0550.036
+45:1018:70509:25:25:89:438:544:117:g_d0_f16:117:g_d0_f16:?:   Time to progression (months)-1.5790.118
+45:1019:70551:25:13:89:206:519:117:g_d0_f18:117:g_d0_f18:?:Grade 3 or 4 side effects:
+45:1020:70577:13:25:98:439:506:117:g_d0_f16:117:g_d0_f16:F:Diarrhea 0.1470.024
+45:1021:70596:25:26:89:438:481:117:g_d0_f16:117:g_d0_f16:?:   Nausea-0.1920.099
+45:1022:70616:26:25:89:438:455:117:g_d0_f16:117:g_d0_f16:?:   Abdominal pain 0.2030.027
+45:1023:70644:25:25:89:438:430:117:g_d0_f16:117:g_d0_f16:?:   Neutropenia-0.0440.005
+45:1024:70669:25:26:89:438:405:117:g_d0_f16:117:g_d0_f16:?:Tablet 0.1560.115
+45:1025:70686:26:25:89:438:379:117:g_d0_f16:117:g_d0_f16:?:Constant                                                                                                                                  5.0720.272
+45:1026:70834:25:25:89:377:354:117:g_d0_f16:117:g_d0_f16:?:Observations       208
+45:1027:70856:25:25:89:420:329:117:g_d0_f16:48:g_d0_f16:?:GMM obj.      2.1499 x 10-21
+45:1028:70884:25:0:90:406:304:117:g_d0_f18:117:g_d0_f16:?:Notes: The regressions include a full set of quarter indicator variables.  
