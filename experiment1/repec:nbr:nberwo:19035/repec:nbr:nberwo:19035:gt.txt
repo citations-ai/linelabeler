@@ -1,0 +1,605 @@
+3:51:2437:0:15:72:542:709:122:g_d0_f3:122:g_d0_f3:A:“There was five exabytes of information created between the dawn of civilization through 2003, but 
+3:52:2536:15:25:72:458:694:122:g_d0_f3:122:g_d0_f3:B:that much information is now created every two days, and the pace is increasing.”  
+3:53:2618:25:41:288:509:669:122:Helvetica:122:g_d0_f3:?:- Eric Schmidt, former CEO of Google, 2010.1 
+3:54:2662:41:30:90:193:628:197:g_d0_f5:197:g_d0_f5:C:1. Introduction 
+3:55:2676:30:26:72:516:598:122:g_d0_f3:122:g_d0_f3:A:The media is full of reports about how big data will transform business, government and other 
+3:56:2770:26:26:72:525:572:122:g_d0_f3:122:g_d0_f3:B:aspects of the economy. The term “data scientist” was hardly heard a few years ago. By fall 2012, 
+3:57:2868:26:26:72:496:546:122:g_d0_f3:122:g_d0_f3:B:reporters were arguing that data scientists had provided Barack Obama’s campaign with a 
+3:58:2956:26:25:72:533:520:122:g_d0_f3:122:g_d0_f3:B:competitive edge in nothing less than the presidential election.2 As economists who happen to live 
+3:59:3055:25:26:72:527:495:122:g_d0_f3:122:g_d0_f3:B:and work in the epicenter of the data revolution, Silicon Valley, we have wondered for some time 
+3:60:3152:26:26:72:523:469:122:g_d0_f3:122:g_d0_f3:B:about how these developments might affect economics, especially economic research and policy 
+3:61:3245:26:36:72:327:443:122:g_d0_f3:122:g_d0_f3:B:analysis. In this article, we try to offer some thoughts.  
+3:62:3304:36:26:72:534:407:122:g_d0_f3:122:g_d0_f3:A:We start by trying to describe what is new about big data from the perspective of economists, who 
+3:63:3401:26:25:72:546:381:122:g_d0_f3:122:g_d0_f3:B:have been sophisticated data users for a long time. We then turn, in Section 3, to the uses   of big data 
+3:64:3507:25:26:72:522:356:122:g_d0_f3:122:g_d0_f3:B:that have received the most attention, namely the identification of novel patterns of behavior or 
+3:65:3605:26:26:72:531:330:122:g_d0_f3:122:g_d0_f3:B:activity, and the development of predictive models, that would have been hard or impossible with 
+3:66:3702:26:26:72:535:304:122:g_d0_f3:122:g_d0_f3:B:smaller samples, fewer variables, or more aggregation. Variations on these types   of data analytics 
+3:67:3803:26:35:72:528:278:122:g_d0_f3:122:g_d0_f3:B:have had a major impact on many industries, including retail, finance, advertising and insurance.  
+3:68:3902:35:26:72:526:243:122:g_d0_f3:122:g_d0_f3:A:Section 4 and Section 5 discuss how new data may affect economic policy and research.  From an 
+3:69:3997:26:36:72:533:217:122:g_d0_f3:122:g_d0_f3:B:economic policy perspective, we highlight the value of large administrative data sets, the ability to 
+3:70:4099:36:10:215:217:181:122:g_d0_f2:122:g_d0_f2:?:                                                           
+3:71:4157:10:14:72:506:171:42:g_d0_f3:99:g_d0_f3:?:1 The first number in this quote seems to be drawn from a study led by Peter Lyman and Hal Varian at 
+3:72:4258:14:12:72:534:157:99:g_d0_f3:99:g_d0_f3:?:Berkeley (http://www2.sims.berkeley.edu/research/projects/how-much-info-2003/) which estimated that 
+3:73:4358:12:12:72:531:145:99:g_d0_f3:99:g_d0_f3:?:the worldwide production of original stored information in 2002 was in the range of 5 exabytes. The second 
+3:74:4464:12:11:71:394:133:99:g_d0_f3:99:g_d0_f3:?:number may have been drawn from a subsequent study conducted at UCSD 
+3:75:4533:11:13:71:530:122:99:g_d0_f3:99:g_d0_f3:?:(http://hmi.ucsd.edu/howmuchinfo_research_report_consum_2010.php). The numbers in the two studies are 
+3:76:4635:13:11:72:530:109:99:g_d0_f3:99:g_d0_f3:?:hard to compare directly. However, the Berkeley study estimated that the production of stored information 
+3:77:4741:11:12:72:540:98:99:g_d0_f3:99:g_d0_f3:?:was increasing by around 30% per year. At that rate of increase, we currently would be creating 5 exabytes of 
+3:78:4851:12:7:72:191:86:99:g_d0_f3:99:g_d0_f2:?:information every 18 days.  
+3:79:4879:7:0:72:538:79:42:g_d0_f2:99:g_d0_f2:?:2 A    Google search for “`Obama campaign’ AND `data mining’” returns over 50,000 results (as of Feb 17. 2013). 
+4:80:4990:0:26:72:500:709:122:g_d0_f3:122:g_d0_f3:B:capture and process data in real time, and the potential for improving both the efficiency of 
+4:81:5084:26:26:72:510:683:122:g_d0_f3:122:g_d0_f3:B:government operations and informing economic policy-making.   From an economic research 
+4:82:5172:26:25:72:520:657:122:g_d0_f3:122:g_d0_f3:B:perspective, we emphasize how large, granular datasets can enable novel research designs, and 
+4:83:5266:25:26:72:534:632:122:g_d0_f3:122:g_d0_f3:B:illustrate with some examples from recent work. We provide examples to how researchers may be 
+4:84:5360:26:26:72:534:606:122:g_d0_f3:122:g_d0_f3:B:able to observe additional consequences of economic events or policies. We also consider whether 
+4:85:5457:26:26:72:523:580:122:g_d0_f3:122:g_d0_f3:B:the big data tools being developed in statistics and computer science, such as statistical learning 
+4:86:5557:26:26:72:529:554:122:g_d0_f3:122:g_d0_f3:B:and data mining techniques, will find much application in economics. So far they have not, but we 
+4:87:5655:26:35:72:221:528:122:g_d0_f3:122:g_d0_f3:B:suggest why that might change. 
+4:88:5685:35:26:72:537:493:122:g_d0_f3:122:g_d0_f3:A:The final section discusses some novel challenges associated with big data. These include obtaining 
+4:89:5784:26:26:72:515:467:122:g_d0_f3:122:g_d0_f3:B:access to government and private sector data, as well as the necessary computing resources. A 
+4:90:5878:26:26:72:529:441:122:g_d0_f3:122:g_d0_f3:B:second but equally important issue arises in training economists to work with large data sets and 
+4:91:5975:26:35:72:449:415:122:g_d0_f3:122:g_d0_f3:B:the various programming and statistical tools that are commonly required for it. 
+4:92:6055:35:26:72:516:380:122:g_d0_f3:122:g_d0_f3:A:Our discussion is naturally speculative, and also limited. In particular, we describe some of the 
+4:93:6153:26:26:72:521:354:122:g_d0_f3:122:g_d0_f3:B:potential uses of big data, without discussing the potential abuses, such as threats to privacy, or 
+4:94:6253:26:26:72:534:328:122:g_d0_f3:122:g_d0_f3:B:malfeasance, of the possibility for the state to use detailed data on its citizens in undesirable ways. 
+4:95:6357:26:26:72:533:302:122:g_d0_f3:122:g_d0_f3:B:These are important issues in thinking about creating and managing large datasets on individuals, 
+4:96:6455:26:52:72:217:276:122:g_d0_f3:122:g_d0_f3:B:but not the topic of this paper.  
+4:97:6488:52:30:90:348:224:197:g_d0_f5:197:g_d0_f5:C:2. What is the Big Deal with “Big Data”?  
+4:98:6529:30:26:72:516:194:122:g_d0_f3:122:g_d0_f3:A:Even twenty or thirty years ago, data on economic activity was relatively scarce. In just a short 
+4:99:6627:26:26:72:531:168:122:g_d0_f3:122:g_d0_f3:B:period of time, this has changed dramatically. One reason is the growth of the internet. Practically 
+4:100:6728:26:26:72:508:142:122:g_d0_f3:122:g_d0_f3:B:everything on the internet is recorded. When you search on Google or Bing, your queries and 
+4:101:6820:26:25:72:529:116:122:g_d0_f3:122:g_d0_f3:B:subsequent clicks are recorded. When you shop on Amazon or eBay, not only every purchase, but 
+4:102:6914:25:0:72:536:91:122:g_d0_f3:122:g_d0_f3:B:every click is captured and logged. When you read a newspaper online, watch videos, or track your 
+5:103:7013:0:26:72:525:709:122:g_d0_f3:122:g_d0_f3:B:personal finances, your behavior is recorded. The recording of individual behavior does not stop 
+5:104:7110:26:26:72:543:683:122:g_d0_f3:122:g_d0_f3:B:with the internet: text messaging, cell phones and geo-locations,  scanner data, employment records, 
+5:105:7211:26:35:72:502:657:122:g_d0_f3:122:g_d0_f3:B:and electronic health records are all part of the data footprint that we now leave behind us.  
+5:106:7306:35:26:72:529:622:122:g_d0_f3:122:g_d0_f3:A:A specific example may be illustrative.  Consider the data collected by retail stores. A few decades 
+5:107:7407:26:26:72:538:596:122:g_d0_f3:122:g_d0_f3:B:ago, stores might have collected data on daily sales, and it would have been considered high quality 
+5:108:7508:26:26:72:540:570:122:g_d0_f3:122:g_d0_f3:B:if the data was split by products or product categories. Nowadays, scanner data makes it possible to 
+5:109:7609:26:25:72:509:544:122:g_d0_f3:122:g_d0_f3:B:track individual purchases and item sales, capture the exact time at which they occur and the 
+5:110:7703:25:26:72:539:519:122:g_d0_f3:122:g_d0_f3:B:purchase histories of the individuals, and use electronic inventory data to link purchases to specific 
+5:111:7806:26:26:72:532:493:122:g_d0_f3:122:g_d0_f3:B:shelf locations   or current inventory levels. Internet retailers observe not just this information, but 
+5:112:7911:26:26:72:530:467:122:g_d0_f3:122:g_d0_f3:B:can trace the consumer’s behavior around the sale, including his or her initial search query, items 
+5:113:8011:26:26:72:488:441:122:g_d0_f3:122:g_d0_f3:B:that were viewed and discarded, recommendations or promotions that were shown, and 
+5:114:8094:26:26:72:537:415:122:g_d0_f3:122:g_d0_f3:B:subsequent product or seller reviews. And in principle these data could be linked to demographics, 
+5:115:8193:26:35:72:439:389:122:g_d0_f3:122:g_d0_f3:B:advertising exposure, social media activity, offline spending, or credit history.  
+5:116:8276:35:26:72:512:354:122:g_d0_f3:122:g_d0_f3:A:There has been a parallel evolution in business activity. As firms have moved their day-to-day 
+5:117:8371:26:26:72:527:328:122:g_d0_f3:122:g_d0_f3:B:operations   to computers and then online, it has become possible to compile rich datasets of sales 
+5:118:8471:26:26:72:529:302:122:g_d0_f3:122:g_d0_f3:B:contacts, hiring practices, and physical shipments of goods. Increasingly, there are also electronic 
+5:119:8572:26:25:72:533:276:122:g_d0_f3:122:g_d0_f3:B:records of collaborative work efforts, personnel evaluations and productivity measures. The same 
+5:120:8669:25:26:72:542:251:122:g_d0_f3:122:g_d0_f3:B:story also can be told about the public sector, in terms of the ability to access and analyze tax filings, 
+5:121:8776:26:36:72:445:225:122:g_d0_f3:122:g_d0_f3:B:social insurance programs, government expenditures and regulatory activities.  
+5:122:8854:36:26:72:519:189:122:g_d0_f3:122:g_d0_f3:A:Obviously, this is a lot of data. But what exactly is new about it? The short answer is that data is 
+5:123:8955:26:26:72:529:163:122:g_d0_f3:122:g_d0_f3:B:now available faster, has greater coverage and scope, and includes new types of observations and 
+5:124:9052:26:25:72:532:137:122:g_d0_f3:122:g_d0_f3:B:measurements that previously were not available. Modern datasets also have much less structure, 
+5:125:9148:25:26:72:527:112:122:g_d0_f3:122:g_d0_f3:B:or more complex structure, than the traditional cross-sectional, time-series or panel data models 
+5:126:9246:26:0:72:270:86:122:g_d0_f3:122:g_d0_f3:B:that we teach in our econometrics classes. 
+6:127:9289:0:26:72:538:709:122:g_d0_f7:122:g_d0_f3:A:Data is available in real time. The ability to capture and process data in real time is crucial for many 
+6:128:9394:26:26:72:524:683:122:g_d0_f3:122:g_d0_f3:B:business applications. But at least for now, it has not been used much for economic research and 
+6:129:9491:26:25:72:539:657:122:g_d0_f3:122:g_d0_f3:B:policy. That is perhaps not surprising. Many economic questions are naturally retrospective, so that 
+6:130:9592:25:26:72:500:632:122:g_d0_f3:122:g_d0_f3:B:it is more important for data to be detailed and accurate rather than available immediately. 
+6:131:9685:26:26:72:514:606:122:g_d0_f3:122:g_d0_f3:B:However, we will discuss below some ways in which real-time data may prove to be useful for 
+6:132:9777:26:36:72:161:580:122:g_d0_f3:122:g_d0_f3:B:research or policy. 
+6:133:9797:36:25:72:516:544:122:g_d0_f7:122:g_d0_f3:A:Data is available at larger scale. A major change for economists is the scale of modern datasets. 
+6:134:9895:25:26:72:531:519:122:g_d0_f3:122:g_d0_f3:B:When we were in graduate school, we worked with data that contained hundreds or thousands of 
+6:135:9988:26:26:72:497:493:122:g_d0_f3:122:g_d0_f3:B:observations. Because datasets often were small, statistical power was an important issue. 
+6:136:10079:26:26:72:534:467:122:g_d0_f3:122:g_d0_f3:B:Nowadays, datasets with tens of millions of distinct observations, and huge numbers of covariates, 
+6:137:10178:26:26:72:518:441:122:g_d0_f3:122:g_d0_f3:B:are quite common. In many cases, the large number of observations can make statistical power 
+6:138:10271:26:25:72:532:415:122:g_d0_f3:122:g_d0_f3:B:much less of a concern. Of course, having a lot of observations is no panacea: even with millions of 
+6:139:10372:25:26:72:541:390:122:g_d0_f3:122:g_d0_f3:B:observations, the relevant variation may be at the state or county level, or it may be desirable to use 
+6:140:10476:26:36:72:515:364:122:g_d0_f3:122:g_d0_f3:B:fixed effects or other methods that control for heterogeneity but also reduce statistical power.  
+6:141:10573:36:26:72:522:328:122:g_d0_f7:122:g_d0_f3:A:Data is available on novel types of variables. Much of the data now being recorded is on activities 
+6:142:10673:26:26:72:534:302:122:g_d0_f3:122:g_d0_f3:B:that previously were very difficult to observe. Think about email, or geo-location data that records 
+6:143:10774:26:25:72:522:276:122:g_d0_f3:122:g_d0_f3:B:where people have been, or social network data that captures personal connections. Eventually, 
+6:144:10869:25:26:72:526:251:122:g_d0_f3:122:g_d0_f3:B:these records may well prove to be an amazing boon for social science researchers. For instance, 
+6:145:10966:26:26:72:508:225:122:g_d0_f3:122:g_d0_f3:B:most economists would agree that social connections play an important role in job search, in 
+6:146:11059:26:36:72:405:199:122:g_d0_f3:122:g_d0_f3:B:shaping consumer preferences and in the transmission of information.  
+6:147:11128:36:26:72:525:163:122:g_d0_f7:122:g_d0_f3:A:Data come with less structure. One implication of the expanding scope of recorded information is 
+6:148:11225:26:25:72:526:137:122:g_d0_f3:122:g_d0_f3:B:that new datasets have less structure and higher dimensionality. In the retail example above, the 
+6:149:11323:25:26:72:507:112:122:g_d0_f3:122:g_d0_f3:B:information available about a consumer might include her entire shopping history. With this 
+6:150:11415:26:0:72:489:86:122:g_d0_f3:122:g_d0_f3:B:information, it is possible to create an almost unlimited set of individual-level behavioral 
+7:151:11509:0:26:72:528:709:122:g_d0_f3:122:g_d0_f3:B:characteristics. While this is very powerful, it is also challenging. In econometrics textbooks, data 
+7:152:11611:26:26:72:540:683:122:g_d0_f3:122:g_d0_f3:B:arrives in “rectangular” form, with N observations and K variables, and with K typically a lot smaller 
+7:153:11714:26:25:72:531:657:122:g_d0_f3:122:g_d0_f3:B:than N. When data simply record a sequence of events, with no further structure, there are a huge 
+7:154:11812:25:26:72:521:632:122:g_d0_f3:122:g_d0_f3:B:number of ways to move from that recording into a standard “rectangular” format. Figuring out 
+7:155:11906:26:26:72:529:606:122:g_d0_f3:122:g_d0_f3:B:how to organize unstructured data and reduce its dimensionality, and assessing whether the way 
+7:156:12001:26:26:72:537:580:122:g_d0_f3:122:g_d0_f3:B:we impose structure matters, is not something that most empirical economists have been taught or 
+7:157:12098:26:35:72:524:554:122:g_d0_f3:122:g_d0_f3:B:have a lot of experience with, but it is becoming a very common challenge in empirical research.  
+7:158:12195:35:26:72:507:519:122:g_d0_f3:122:g_d0_f3:A:A similar point applies when we think about relationships between data records. Traditional 
+7:159:12287:26:26:72:529:493:122:g_d0_f3:122:g_d0_f3:B:econometric methods generally assume that data observations are independent, or grouped as in 
+7:160:12381:26:26:72:473:467:122:g_d0_f3:122:g_d0_f3:B:panel data, or linked by time. But, for instance, individuals in a social network may be 
+7:161:12470:26:26:72:532:441:122:g_d0_f3:122:g_d0_f3:B:interconnected in highly complex ways, and the point of econometric modeling may be to uncover 
+7:162:12565:26:26:72:530:415:122:g_d0_f3:122:g_d0_f3:B:exactly what are the key features of this dependence structure. Developing methods that are well-
+7:163:12662:26:52:72:534:389:122:g_d0_f3:122:g_d0_f3:B:suited to these settings is an interesting challenge for econometrics research (Imbens et al., 2011). 
+7:164:12764:52:30:90:324:337:197:g_d0_f5:197:g_d0_f5:C:3. Big Data and Predictive Modeling 
+7:165:12798:30:26:72:499:307:122:g_d0_f3:122:g_d0_f3:A:The most common uses of “big data” by companies are for tracking business processes and 
+7:166:12886:26:26:72:536:281:122:g_d0_f3:122:g_d0_f3:B:outcomes, and for building a wide array of predictive models. While business analytics is a big deal 
+7:167:12987:26:26:72:514:255:122:g_d0_f3:122:g_d0_f3:B:and surely has improved the efficiency of many organizations, predictive modeling lies behind 
+7:168:13081:26:35:72:431:229:122:g_d0_f3:122:g_d0_f3:B:many striking information products and services introduced in recent years. 
+7:169:13156:35:26:72:515:194:122:g_d0_f3:122:g_d0_f3:A: Certain examples will be familiar to all readers. Amazon and Netflix recommendations rely on 
+7:170:13250:26:26:72:522:168:122:g_d0_f3:122:g_d0_f3:B:predictive models   of what book or movie an individual might want to purchase. Google’s search 
+7:171:13346:26:26:72:513:142:122:g_d0_f3:122:g_d0_f3:B:results and news feed rely on algorithms that predict the relevance of particular web pages or 
+7:172:13441:26:0:72:538:116:122:g_d0_f3:122:g_d0_f3:B:articles. Apple’s auto-complete function tries to predict the rest of one’s text or email based on past 
+8:173:13546:0:26:72:538:709:122:g_d0_f3:122:g_d0_f3:B:usage patterns. Online advertising and marketing rely heavily on automated predictive models that 
+8:174:13644:26:35:72:408:683:122:g_d0_f3:122:g_d0_f3:B:target individuals who might be particularly likely to respond to offers.  
+8:175:13718:35:26:72:532:648:122:g_d0_f3:122:g_d0_f3:A:The application of predictive algorithms extends well beyond the online world. In health care, it is 
+8:176:13819:26:26:72:530:622:122:g_d0_f3:122:g_d0_f3:B:now common for insurers to adjust payments and quality measures based on “risk scores”, which 
+8:177:13913:26:26:72:523:596:122:g_d0_f3:122:g_d0_f3:B:are derived from predictive models of individual health costs and outcomes. An individual’s risk 
+8:178:14010:26:26:72:506:570:122:g_d0_f3:122:g_d0_f3:B:score is typically a weighted sum of health indicators that identify whether an individual has 
+8:179:14105:26:25:72:520:544:122:g_d0_f3:122:g_d0_f3:B:different chronic conditions, with the weights chosen based on a statistical analysis. Credit card 
+8:180:14204:25:26:72:539:519:122:g_d0_f3:122:g_d0_f3:B:companies use predictive models of default and repayment to guide their underwriting, pricing and 
+8:181:14302:26:26:72:539:493:122:g_d0_f3:122:g_d0_f3:B:marketing activities. One Palo Alto company, Palantir, has become a multi-billion dollar business by 
+8:182:14403:26:26:72:515:467:122:g_d0_f3:122:g_d0_f3:B:developing algorithms that can be used to identify terrorist threats using communications and 
+8:183:14497:26:36:72:456:441:122:g_d0_f3:122:g_d0_f3:B:other data, and to detect fraudulent behavior in health care and financial services. 
+8:184:14581:36:25:72:534:405:122:g_d0_f3:122:g_d0_f3:A:As put into practice, these applications rely on converting large amounts of unstructured data into 
+8:185:14681:25:26:72:515:380:122:g_d0_f3:122:g_d0_f3:B:predictive scores, often in a fully automated and scalable way, and sometimes in real time. The 
+8:186:14776:26:26:72:527:354:122:g_d0_f3:122:g_d0_f3:B:scores can then be used in various ways. First, they can speed up or automate existing processes: 
+8:187:14874:26:26:72:531:328:122:g_d0_f3:122:g_d0_f3:B:the Amazon recommendation system recommends items that it predicts to be relevant for a given 
+8:188:14968:26:26:72:537:302:122:g_d0_f3:122:g_d0_f3:B:consumer or situation, thus replacing a recommendation one could have obtained previously from, 
+8:189:15064:26:25:72:538:276:122:g_d0_f3:122:g_d0_f3:B:say, a librarian. Second, they can be used to offer a new set of services:  Apple’s auto-complete takes 
+8:190:15168:25:26:72:536:251:122:g_d0_f3:122:g_d0_f3:B:the word or sentence with the top score, and proposes it as the auto completion. Finally, the scores 
+8:191:15269:26:26:72:511:225:122:g_d0_f3:122:g_d0_f3:B:could be used to support decision making.  For example in the context of credit card fraud, the 
+8:192:15365:26:26:72:512:199:122:g_d0_f3:122:g_d0_f3:B:transaction score is reported to the issuing bank, and most banks implement some policy that 
+8:193:15458:26:26:72:514:173:122:g_d0_f3:122:g_d0_f3:B:dictates which transaction scores are approved, which are rejected, and which require further 
+8:194:15552:26:0:72:140:147:122:g_d0_f3:122:g_d0_f3:B:investigation.  
+9:195:15569:0:26:72:526:709:122:g_d0_f3:122:g_d0_f3:A:There has been a remarkable amount of work on the statistical and machine learning techniques 
+9:196:15663:26:26:72:523:683:122:g_d0_f3:122:g_d0_f3:B:that underlie these applications, such as Lasso and Ridge regressions and classification models.3 
+9:197:15760:26:25:72:504:657:122:g_d0_f3:122:g_d0_f3:B:These methods are now common in statistics and computer science, although rarely used in 
+9:198:15849:25:26:72:527:632:122:g_d0_f3:122:g_d0_f3:B:empirical microeconomics. Although a detailed description of the methods would be way beyond 
+9:199:15942:26:36:72:525:606:122:g_d0_f3:122:g_d0_f3:B:the scope of this paper, a short conceptual overview is useful to fix ideas for our later discussion. 
+9:200:16043:36:26:72:535:570:122:g_d0_f3:122:g_d0_f3:A:The predictive modeling problem can be described by imagining N entries that are associated with 
+9:201:16140:26:25:72:534:544:122:g_d0_f7:122:g_d0_f3:B:N o utcome measurements, as well as a set of K potential predictors. In many cases the information 
+9:202:16239:25:26:72:514:519:122:g_d0_f3:122:g_d0_f3:B:about each entry is rich and unstructured, so there are many possible predictors that could be 
+9:203:16334:26:26:72:494:493:122:g_d0_f3:122:g_d0_f3:B:generated. Indeed, the number of potential predictors K may be larger than the number of 
+9:204:16423:26:26:72:540:467:122:g_d0_f3:122:g_d0_f3:B:observations N. An obvious concern is over-fitting: with K>N it typically will be possible to perfectly 
+9:205:16527:26:36:72:455:441:122:g_d0_f3:122:g_d0_f3:B:explain the observed outcomes, but the out-of-sample performance may be poor.  
+9:206:16605:36:25:72:510:405:122:g_d0_f3:122:g_d0_f3:A:In this setting, the goal is to construct a statistical model that maximizes in-sample predictive 
+9:207:16703:25:26:72:514:380:122:g_d0_f3:122:g_d0_f3:B:power, but at the same time does not “over fit” in a way that would lead to poor out-of-sample 
+9:208:16798:26:26:72:539:354:122:g_d0_f3:122:g_d0_f3:B:performance. Different methods vary in the way that the model is constructed and how the overuse 
+9:209:16894:26:26:72:500:328:122:g_d0_f3:122:g_d0_f3:B:of potential predictors is penalized. For example, a Lasso regression chooses coefficients to 
+9:210:16988:26:26:72:512:302:122:g_d0_f3:122:g_d0_f3:B:minimize the sum of squared deviations, subject to a constraint on the sum of the coefficients’ 
+9:211:17083:26:25:72:524:276:122:g_d0_f3:122:g_d0_f3:B:absolute values. It also is common to evaluate the trade-off between in-sample predictive power 
+9:212:17179:25:26:72:501:251:122:g_d0_f3:122:g_d0_f3:B:and over-fitting, by splitting the sample into a “training sample” used to estimate the model 
+9:213:17273:26:26:72:503:225:122:g_d0_f3:122:g_d0_f3:B:parameters and a “test sample”   used to evaluate performance.4 This type of cross validation 
+9:214:17367:26:65:72:348:199:122:g_d0_f3:122:g_d0_f3:B:approach is rarely employed in empirical microeconomics. 
+9:215:17423:65:7:215:217:134:122:g_d0_f2:122:g_d0_f2:?:                                                           
+9:216:17481:7:13:72:260:127:42:g_d0_f2:99:g_d0_f2:?:3 See Hastie et al. (2008) for a broad review. 
+9:217:17526:13:17:72:542:114:42:g_d0_f2:99:g_d0_f3:?:4 This type of predictive modeling is sometimes referred to as “supervised learning”. There is also a large class 
+9:218:17639:17:12:72:515:97:99:g_d0_f3:99:g_d0_f3:?:of big data techniques that fall under the heading of “unsupervised learning”, in which roughly speaking 
+9:219:17744:12:11:72:537:85:99:g_d0_f3:99:g_d0_f3:?:outcome variables are not available and the goal is to describe how a large set of predictor variables relate to 
+9:220:17857:11:0:72:479:74:99:g_d0_f3:99:g_d0_f2:?:one another. This category would include methods such as clustering or principal components.  
+10:221:17952:0:26:72:534:709:122:g_d0_f3:122:g_d0_f3:A:A crucial, but often implicit, assumption in machine learning is that the environment being studied 
+10:222:18051:26:26:72:511:683:122:g_d0_f3:122:g_d0_f3:B:is relatively stable, in the sense that the estimation sample (both training and test samples) is 
+10:223:18149:26:25:72:535:657:122:g_d0_f3:122:g_d0_f3:B:generated by the same independent draws that later will generate the sample for which prediction 
+10:224:18246:25:26:72:504:632:122:g_d0_f3:122:g_d0_f3:B:is required. Of course, environments evolve over time, so this is not a perfect assumption. In 
+10:225:18341:26:26:72:538:606:122:g_d0_f3:122:g_d0_f3:B:applications where new data becomes   available at high frequency, the algorithm can also “re-train” 
+10:226:18442:26:36:72:500:580:122:g_d0_f3:122:g_d0_f3:B:itself continuously, and adjust the predictive model over time as the environment changes.  
+10:227:18534:36:25:72:532:544:122:g_d0_f3:122:g_d0_f3:A:When economists consider the utility of machine learning methods, what comes to mind is often a 
+10:228:18630:25:26:72:534:519:122:g_d0_f3:122:g_d0_f3:B:version of the Lucas Critique. If the predictive model is used to decide on a policy intervention, the 
+10:229:18733:26:26:72:521:493:122:g_d0_f3:122:g_d0_f3:B:result may not be what the model predicts, because the policy change may affect the underlying 
+10:230:18828:26:26:72:536:467:122:g_d0_f3:122:g_d0_f3:B:behavior that is generating the relationships in the data. That is, the models are “predictive” rather 
+10:231:18931:26:26:72:537:441:122:g_d0_f3:122:g_d0_f3:B:than “structural”. Of course, this does not render a predictive model useless, because the bite of the 
+10:232:19034:26:25:72:539:415:122:g_d0_f3:122:g_d0_f3:B:critique depends a lot on the situation. For example, it is possible that some Amazon shoppers have 
+10:233:19134:25:26:72:527:390:122:g_d0_f3:122:g_d0_f3:B:realized how recommendations are being generated, and changed their shopping behavior to get 
+10:234:19227:26:26:72:522:364:122:g_d0_f3:122:g_d0_f3:B:different recommendations. But probably most haven’t. On the other hand, if Amazon started to 
+10:235:19321:26:53:72:505:338:122:g_d0_f3:122:g_d0_f3:B:offer large targeted discounts using a similar model, they might elicit some behavior change. 
+10:236:19414:53:30:90:331:285:197:g_d0_f5:197:g_d0_f5:C:4. Opportunities for Economic Policy 
+10:237:19449:30:25:72:536:255:122:g_d0_f3:122:g_d0_f3:A:The potential uses of big data for economic policy roughly parallel the uses in the private sector. In 
+10:238:19552:25:26:72:526:230:122:g_d0_f3:122:g_d0_f3:B:this section, we start by describing the data resources available to the government, and also how 
+10:239:19650:26:26:72:532:204:122:g_d0_f3:122:g_d0_f3:B:private sector data might be used to better track and forecast economic activity. We then describe 
+10:240:19749:26:26:72:542:178:122:g_d0_f3:122:g_d0_f3:B:how big data might be used to inform policy decisions or to improve government services, along the 
+10:241:19848:26:0:72:473:152:122:g_d0_f3:122:g_d0_f3:B:lines of some of the information products and services described in the prior section.  
+11:242:19936:0:27:90:391:708:144:g_d0_f5:144:g_d0_f5:C:4.1. Making Use of Government Administrative Data 
+11:243:19984:27:26:72:508:681:122:g_d0_f3:122:g_d0_f3:A:Through its role in administering the tax system, social programs, and regulation, the federal 
+11:244:20079:26:26:72:537:655:122:g_d0_f3:122:g_d0_f3:B:government collects enormous amounts of granular administrative data. Examples include the rich 
+11:245:20175:26:25:72:504:629:122:g_d0_f3:122:g_d0_f3:B:micro-level datasets maintained by the Social Security Administration, the Internal Revenue 
+11:246:20267:25:26:72:521:604:122:g_d0_f3:122:g_d0_f3:B:Service, and the Centers for Medicare and Medicaid. Although there is less uniformity, state and 
+11:247:20364:26:26:72:523:578:122:g_d0_f3:122:g_d0_f3:B:local governments similarly generate large amounts of administrative data, particularly in areas 
+11:248:20461:26:36:72:392:552:122:g_d0_f3:122:g_d0_f3:B:such as education, social insurance and local government spending.  
+11:249:20529:36:26:72:535:516:122:g_d0_f3:122:g_d0_f3:A:Government administrative data are almost certainly under-utilized, both by government agencies 
+11:250:20625:26:25:72:529:490:122:g_d0_f3:122:g_d0_f3:B:and, because of limited and restricted access, by researchers and private data vendors who might 
+11:251:20722:25:26:72:540:465:122:g_d0_f3:122:g_d0_f3:B:use this data to uncover new facts. The major datasets also tend to be maintained separately, unlike 
+11:252:20823:26:26:72:499:439:122:g_d0_f3:122:g_d0_f3:B:in many European countries, which may have datasets that merge individual demographic, 
+11:253:20910:26:36:72:397:413:122:g_d0_f3:122:g_d0_f3:B:employment and in some cases health data, for the entire population. 
+11:254:20978:36:26:72:508:377:122:g_d0_f3:122:g_d0_f3:A: A dministrative data is a powerful resource for a number of reasons. First, it typically covers 
+11:255:21075:26:25:72:519:351:122:g_d0_f3:122:g_d0_f3:B:individuals or entities over time, creating a panel structure, and data quality is high (Card et al., 
+11:256:21177:25:26:72:514:326:122:g_d0_f3:122:g_d0_f3:B:2011). Moreover, because the coverage is “universal”, administrative datasets can be linked to 
+11:257:21272:26:36:72:446:300:122:g_d0_f3:122:g_d0_f3:B:other, potentially more selective, data. We elaborate on this in the next section.  
+11:258:21356:36:26:72:518:264:122:g_d0_f3:122:g_d0_f3:A:In cases where the government has allowed access to administrative datasets, there often have 
+11:259:21450:26:26:72:520:238:122:g_d0_f3:122:g_d0_f3:B:been profound consequences for economic policy discussions. In many cases, this has come not 
+11:260:21543:26:25:72:535:212:122:g_d0_f3:122:g_d0_f3:B:from any clever research design or statistics, but simply from describing basic patterns in the data. 
+11:261:21645:25:26:72:542:187:122:g_d0_f3:122:g_d0_f3:B:For instance, Piketty and Saez (2003) used IRS data to derive a historical series of income shares for 
+11:262:21748:26:26:72:512:161:122:g_d0_f3:122:g_d0_f3:B:the top percentiles of earners among US households. Their paper, and related work, has had a 
+11:263:21841:26:26:72:517:135:122:g_d0_f3:122:g_d0_f3:B:profound influence on recent policy debates, by helping to make the rising income share of top 
+11:264:21936:26:0:72:374:109:122:g_d0_f3:122:g_d0_f3:B:earners a major focus of discussions about economic inequality.  
+12:265:22002:0:26:72:516:709:122:g_d0_f3:122:g_d0_f3:A:An example that differs in the details, but is similar in spirit, is the work of John Wennberg and 
+12:266:22101:26:26:71:504:683:122:g_d0_f3:122:g_d0_f3:B:colleagues at Dartmouth. Over a period of several decades, they have used large samples   of 
+12:267:22194:26:25:71:525:657:122:g_d0_f3:122:g_d0_f3:B:Medicare claims to show that there is a great deal of variation in Medicare spending per enrollee 
+12:268:22292:25:26:71:509:632:122:g_d0_f3:122:g_d0_f3:B:that cannot be attributed to differences in health status or prices, and that does not appear to 
+12:269:22389:26:26:71:512:606:122:g_d0_f3:122:g_d0_f3:B:correlate with measured health outcomes. This research received an extraordinary amount of 
+12:270:22480:26:26:71:515:580:122:g_d0_f3:122:g_d0_f3:B:attention during the debate over the Affordable Care Act in 2009, and has become perhaps the 
+12:271:22573:26:50:71:359:554:122:g_d0_f3:122:g_d0_f3:B:leading evidence for inefficiency in the US healthcare system. 
+12:272:22635:50:28:90:404:504:144:g_d0_f5:144:g_d0_f5:C:4.2. New Measures of Private Sector Economic Activity 
+12:273:22687:28:25:72:500:476:122:g_d0_f3:122:g_d0_f3:A:Government agencies also play an important role in tracking and monitoring private sector 
+12:274:22777:25:26:72:541:451:122:g_d0_f3:122:g_d0_f3:B:economic activity. Traditionally much of this has been done using survey methods. For example, the 
+12:275:22876:26:26:72:533:425:122:g_d0_f3:122:g_d0_f3:B:Bureau of Labor Statistics measures price inflation by sending surveyors out to stores to manually 
+12:276:22975:26:26:72:520:399:122:g_d0_f3:122:g_d0_f3:B:collect information on the posted prices and availability of approximately 80,000 appropriately 
+12:277:23071:26:26:72:536:373:122:g_d0_f3:122:g_d0_f3:B:selected items. These data are aggregated into various inflation indices such as the Consumer Price 
+12:278:23171:26:26:72:537:347:122:g_d0_f3:122:g_d0_f3:B:Index. Measures of employment, housing, consumer expenditure, and wages rely on similar survey-
+12:279:23266:26:35:72:175:321:122:g_d0_f3:122:g_d0_f3:B:based methodologies. 
+12:280:23286:35:26:72:524:286:122:g_d0_f3:122:g_d0_f3:A:Alternative approaches to collecting large-scale, and even real-time, data on prices, employment 
+12:281:23383:26:26:72:499:260:122:g_d0_f3:122:g_d0_f3:B:and spending are rapidly becoming available. For instance, the Billion Prices Project (BPP), 
+12:282:23476:26:26:72:536:234:122:g_d0_f3:122:g_d0_f3:B:developed by Alberto Cavallo and Roberto Rigobon, provides an alternative measure of retail price 
+12:283:23574:26:25:72:532:208:122:g_d0_f3:122:g_d0_f3:B:inflation. It relies on data from hundreds of online retail websites in more than fifty countries. The 
+12:284:23677:25:26:72:525:183:122:g_d0_f3:122:g_d0_f3:B:data are used to construct price indices that can be updated in real time. In countries such as the 
+12:285:23777:26:26:72:516:157:122:g_d0_f3:122:g_d0_f3:B:United States, the BPP index seems to track the CPI relatively closely. In other countries where 
+12:286:23874:26:26:72:513:131:122:g_d0_f3:122:g_d0_f3:B:government survey measures may be less reliable or non-existent, the automatically gathered 
+12:287:23966:26:0:72:524:105:122:g_d0_f3:122:g_d0_f3:B:online data already may be preferable. Cavallo (2012) uses the data underlying the BPP index to 
+13:288:24064:0:26:72:492:709:122:g_d0_f3:122:g_d0_f3:B:document patterns of price changes, in the same way that researchers have used the data 
+13:289:24152:26:35:72:313:683:122:g_d0_f3:122:g_d0_f3:B:underlying the CPI (Klenow and Kryvtsov, 2008).     
+13:290:24204:35:26:72:499:648:122:g_d0_f3:122:g_d0_f3:A:Similar possibilities also exist for augmenting the measurement of consumer spending and 
+13:291:24293:26:26:72:505:622:122:g_d0_f3:122:g_d0_f3:B:employment. MasterCard markets a product called “Spending Pulse”   that provides real-time 
+13:292:24384:26:26:72:515:596:122:g_d0_f3:122:g_d0_f3:B:consumer spending data in different retail categories, and Visa generates periodic reports that 
+13:293:24480:26:26:72:524:570:122:g_d0_f3:122:g_d0_f3:B:successfully predict survey-based outcomes ahead of time. Similarly, Automatic Data Processing 
+13:294:24575:26:26:72:520:544:122:g_d0_f3:122:g_d0_f3:B:(ADP) and Moody’s Analytics release a monthly report on private sector employment, based on 
+13:295:24667:26:35:72:443:518:122:g_d0_f3:122:g_d0_f3:B:data from the roughly 500,000 firms for which ADP provides payroll software.  
+13:296:24745:35:26:72:541:483:122:g_d0_f3:122:g_d0_f3:A:These approaches still have some disadvantages relative to government survey measures. Although 
+13:297:24841:26:26:72:530:457:122:g_d0_f3:122:g_d0_f3:B:the underlying data samples are large, they are essentially “convenience samples” and may not be 
+13:298:24938:26:26:72:531:431:122:g_d0_f3:122:g_d0_f3:B:entirely representative. They depend on who has a Visa or MasterCard and decides to use it, or on 
+13:299:25036:26:25:72:499:405:122:g_d0_f3:122:g_d0_f3:B:which firms are using ADP to manage their payroll records. On the other hand, the data are 
+13:300:25127:25:26:72:501:380:122:g_d0_f3:122:g_d0_f3:B:available at high frequency and granularity, and their representativeness could be assessed 
+13:301:25219:26:26:72:514:354:122:g_d0_f3:122:g_d0_f3:B:empirically. Plus, it is worth pointing out that many representative surveys are not immune to 
+13:302:25314:26:36:72:455:328:122:g_d0_f3:122:g_d0_f3:B:similar concerns due to selective responses and heterogeneous response quality.  
+13:303:25395:36:26:72:532:292:122:g_d0_f3:122:g_d0_f3:A:Another intriguing idea is to use indirect measures such as search queries or social media posts to 
+13:304:25495:26:25:72:534:266:122:g_d0_f3:122:g_d0_f3:B:provide contemporaneous forecasts of economic statistics. Choi  and Varian (2011) have provided 
+13:305:25591:25:26:72:527:241:122:g_d0_f3:122:g_d0_f3:B:one example, by showing that Google search engine data can provide accurate proxy measures of 
+13:306:25685:26:26:72:533:215:122:g_d0_f3:122:g_d0_f3:B:economic time series such as unemployment claims and consumer confidence. As one application, 
+13:307:25779:26:26:72:530:189:122:g_d0_f3:122:g_d0_f3:B:they consider a short-run “now-cast” of monthly automobile sales, where the underlying series to 
+13:308:25876:26:26:72:540:163:122:g_d0_f3:122:g_d0_f3:B:be predicted comes from a survey conducted each month by the US Census Bureau. Choi and Varian 
+13:309:25971:26:0:72:506:137:122:g_d0_f3:122:g_d0_f3:B:show that relative to a basic autoregressive time-series model for automotive sales, they can 
+14:310:26066:0:26:72:473:709:122:g_d0_f3:122:g_d0_f3:B:improve the mean-squared predictive error by adding two Google Trends measure of 
+14:311:26147:26:35:72:474:683:122:g_d0_f3:122:g_d0_f3:B:contemporaneous search interest: for “Trucks & SUVs” and “Automotive Insurance”.5  
+14:312:26230:35:26:72:523:648:122:g_d0_f3:122:g_d0_f3:A:Although Choi and Varian pick a few specific economic time series, the approach is applicable to 
+14:313:26327:26:26:72:525:622:122:g_d0_f3:122:g_d0_f3:B:many data series on consumer spending or sentiments. Of course, one challenge is that there are 
+14:314:26423:26:26:72:499:596:122:g_d0_f3:122:g_d0_f3:B:hundreds or thousands of different search queries that might plausibly predict spending in 
+14:315:26514:26:26:72:500:570:122:g_d0_f3:122:g_d0_f3:B:different categories. Scott and Varian (2013) propose that researchers adopt an automated 
+14:316:26604:26:25:72:524:544:122:g_d0_f3:122:g_d0_f3:B:approach employing the tools of statistical learning described earlier. Their paper describes one 
+14:317:26702:25:26:72:510:519:122:g_d0_f3:122:g_d0_f3:B:such approach using Bayesian methods, which in principle can be used to provide short-term 
+14:318:26793:26:36:72:437:493:122:g_d0_f3:122:g_d0_f3:B:forecasts of many narrow categories of consumer goods, or other time series.  
+14:319:26870:36:26:72:526:457:122:g_d0_f3:122:g_d0_f3:A:We suspect that these types   of real-time indices of economic (or other) activity will become even 
+14:320:26970:26:26:72:535:431:122:g_d0_f3:122:g_d0_f3:B:more popular. In addition to Google Trends, mentioned earlier, which generates an index that uses 
+14:321:27068:26:25:72:529:405:122:g_d0_f3:122:g_d0_f3:B:information from search queries on Google, Twitter now publishes a daily Twitter index, which is 
+14:322:27165:25:26:72:519:380:122:g_d0_f3:122:g_d0_f3:B:based on the context of Twitter messages. We are not aware of daily employment, or consumer 
+14:323:27257:26:26:72:522:354:122:g_d0_f3:122:g_d0_f3:B:lending, or credit card spending or online shopping index, but one can easily imagine how these 
+14:324:27353:26:26:72:495:328:122:g_d0_f3:122:g_d0_f3:B:types of high-frequency data would complement, and perhaps eventually substitute, more 
+14:325:27440:26:51:72:386:302:122:g_d0_f3:122:g_d0_f3:B:traditional (and lower frequency) data series on economic activity. 
+14:326:27507:51:27:90:394:251:144:g_d0_f5:144:g_d0_f5:C:4.3. Improving Government Operations and Services 
+14:327:27555:27:26:72:534:224:122:g_d0_f3:122:g_d0_f3:A:One of the big changes in modern business is that debates and decisions are routinely informed by 
+14:328:27653:26:25:72:514:198:122:g_d0_f3:122:g_d0_f3:B:large amounts of data analytics, and in at least some companies, by extensive experimentation 
+14:329:27746:25:26:72:520:173:122:g_d0_f3:122:g_d0_f3:B:(Varian, 2010). Many government agencies are increasingly smart about using data analytics to 
+14:330:27840:26:26:72:528:147:122:g_d0_f3:122:g_d0_f3:B:improve their operations and services. However, most agencies almost surely lag behind the best 
+14:331:27936:26:34:72:538:121:122:g_d0_f3:122:g_d0_f3:B:private sector firms, and face challenges of both infrastructure and personnel needs. For example, a 
+14:332:28037:34:8:215:217:87:122:g_d0_f2:122:g_d0_f2:?:                                                           
+14:333:28095:8:0:72:521:79:42:g_d0_f2:99:g_d0_f2:?:5 See also Goel et al. (2010) for a further discussion of using search queries to predict consumer behavior. 
+15:334:28204:0:26:72:540:709:122:g_d0_f3:122:g_d0_f3:B:2008 report by the JASON study group described some of these challenges in the context of how the 
+15:335:28302:26:26:72:506:683:122:g_d0_f3:122:g_d0_f3:B:military must try to process and analyze the vast quantities of sensor data that have become 
+15:336:28395:26:35:72:407:657:122:g_d0_f3:122:g_d0_f3:B:available, such as from drone flights and communications monitoring.6  
+15:337:28466:35:26:72:531:622:122:g_d0_f3:122:g_d0_f3:A:In some cases, the government collects a great deal of data that would be useful for guiding policy 
+15:338:28566:26:26:72:509:596:122:g_d0_f3:122:g_d0_f3:B:decisions but has not been utilized very effectively. For example, the Center for Medicare and 
+15:339:28660:26:26:72:508:570:122:g_d0_f3:122:g_d0_f3:B:Medicaid Services has a record of every Medicare health claim over the last few decades, and 
+15:340:28753:26:25:72:541:544:122:g_d0_f3:122:g_d0_f3:B:eventually will have enormous amount of clinical information from electronic health records. It also 
+15:341:28854:25:26:72:533:519:122:g_d0_f3:122:g_d0_f3:B:is routinely criticized for spending money ineffectively. The data it collects almost certainly would 
+15:342:28956:26:26:72:535:493:122:g_d0_f3:122:g_d0_f3:B:allow for detailed cost-benefit analyses of different treatments and procedures, but it is proscribed 
+15:343:29058:26:36:72:325:467:122:g_d0_f3:122:g_d0_f3:B:from using this data-intensive approach by Congress.  
+15:344:29111:36:26:72:495:431:122:g_d0_f3:122:g_d0_f3:A:One opportunity that some government agencies seem to be exploring is to make datasets 
+15:345:29198:26:25:72:523:405:122:g_d0_f3:122:g_d0_f3:B:accessible and hope that researchers or other individuals will utilize these datasets in ways that 
+15:346:29297:25:26:72:500:380:122:g_d0_f3:122:g_d0_f3:B:end up improving agency functions. New York City now provides a huge catalog of datasets 
+15:347:29386:26:26:72:518:354:122:g_d0_f3:122:g_d0_f3:B:available for download at NYC OpenData. The repository includes geo-location data on schools, 
+15:348:29480:26:26:72:520:328:122:g_d0_f3:122:g_d0_f3:B:subways, wifi hotspots, information on metropolitan transit and electricity consumption, crime 
+15:349:29575:26:26:72:540:302:122:g_d0_f3:122:g_d0_f3:B:statistics, and hundreds of other types of data. Ho (2012) has used this source to analyze restaurant 
+15:350:29677:26:25:72:526:276:122:g_d0_f3:122:g_d0_f3:B:health inspections and document that the restaurant hygiene grades in New York have very little 
+15:351:29773:25:26:72:535:251:122:g_d0_f3:122:g_d0_f3:B:consistency across inspection and little year-to-year correlation, suggesting serious problems with 
+15:352:29873:26:36:72:168:225:122:g_d0_f3:122:g_d0_f3:B:the grading process. 
+15:353:29893:36:26:72:540:189:122:g_d0_f3:122:g_d0_f3:A:The federal government has undertaken a similar exercise with the website Data.Gov that has made 
+15:354:29990:26:26:72:516:163:122:g_d0_f3:122:g_d0_f3:B:available several hundreds of thousands of government datasets, and FRED is a similar service 
+15:355:30084:26:38:72:525:137:122:g_d0_f3:122:g_d0_f3:B:made available by the Federal Reserve. One goal appears to be to encourage not just researchers 
+15:356:30180:38:8:215:217:99:122:g_d0_f2:122:g_d0_f2:?:                                                           
+15:357:30238:8:17:72:488:91:42:g_d0_f2:99:g_d0_f2:?: “Data Analysis Challenges” by the JASON study group (JSR-08-142, December 2008), available at 
+15:358:30332:17:0:72:288:74:99:g_d0_f2:99:g_d0_f2:?:http://www.fas.org/irp/agency/dod/jason/data.pdf.  
+16:359:30385:0:26:72:541:709:122:g_d0_f3:122:g_d0_f3:B:but software developers to develop tools or applications that would be built on the underlying data, 
+16:360:30486:26:50:72:358:683:122:g_d0_f3:122:g_d0_f3:B:although it does not appear that many have been built so far. 
+16:361:30547:50:28:90:311:633:144:g_d0_f5:144:g_d0_f5:C:4.4. Information Products or Services 
+16:362:30583:28:25:72:496:605:122:g_d0_f3:122:g_d0_f3:A:The most exciting private sector application of big data that we discussed above was using 
+16:363:30673:25:26:72:520:580:122:g_d0_f3:122:g_d0_f3:B:predictive modeling to automate business processes, or to improve or develop new products or 
+16:364:30766:26:26:72:540:554:122:g_d0_f3:122:g_d0_f3:B:services. While some government agencies probably are engaging in this type of activity, we are not 
+16:365:30866:26:26:72:499:528:122:g_d0_f3:122:g_d0_f3:B:aware of very many salient examples. However, it is easy to think of many examples where 
+16:366:30955:26:26:72:536:502:122:g_d0_f3:122:g_d0_f3:B:government datasets might be used to create the types of information products that are commonly 
+16:367:31051:26:35:72:198:476:122:g_d0_f3:122:g_d0_f3:B:seen in the private sector.  
+16:368:31080:35:26:72:523:441:122:g_d0_f3:122:g_d0_f3:A:One area of government activity where we could imagine such products is consumer protection. 
+16:369:31173:26:26:72:525:415:122:g_d0_f3:122:g_d0_f3:B:The key challenge in consumer protection is to keep individuals from making decisions they will 
+16:370:31269:26:26:72:512:389:122:g_d0_f3:122:g_d0_f3:B:(predictably) come to regret without proscribing individual choice. Behavioral economics has 
+16:371:31362:26:26:72:540:363:122:g_d0_f3:122:g_d0_f3:B:emphasized that one way to strike this balance is through the framing of decisions (e.g. well-chosen 
+16:372:31463:26:25:72:535:337:122:g_d0_f3:122:g_d0_f3:B:defaults), and another way is through the careful presentation of information. For instance, people 
+16:373:31563:25:26:72:519:312:122:g_d0_f3:122:g_d0_f3:B:can end up making major financial decisions --- b uying a house, saving for retirement, planning 
+16:374:31660:26:26:72:528:286:122:g_d0_f3:122:g_d0_f3:B:health care spending --- without good information about the financial consequences. The types of 
+16:375:31757:26:26:72:505:260:122:g_d0_f3:122:g_d0_f3:B:predictive models discussed above are particularly good for creating personalized summary 
+16:376:31847:26:26:72:527:234:122:g_d0_f3:122:g_d0_f3:B:information. How many consumers who take this type of loan with this type of financial situation 
+16:377:31944:26:25:72:524:208:122:g_d0_f3:122:g_d0_f3:B:ultimately default? What is the range of fees paid by a similar consumer for a particular financial 
+16:378:32044:25:26:72:490:183:122:g_d0_f3:122:g_d0_f3:B:product or service? What is the eventual cost for patients who choose this line of medical 
+16:379:32135:26:26:72:484:157:122:g_d0_f3:122:g_d0_f3:B:treatment? While the government might not be the right entity to create these tools, the 
+16:380:32224:26:0:72:325:131:122:g_d0_f3:122:g_d0_f3:B:information it collects surely would be a useful input.  
+17:381:32283:0:26:72:513:709:122:g_d0_f3:122:g_d0_f3:A:A far more controversial idea would be to use predictive modeling to improve the targeting of 
+17:382:32377:26:26:72:522:683:122:g_d0_f3:122:g_d0_f3:B:government services. For instance, it is possible to imagine a utilitarian argument that Medicare 
+17:383:32475:26:25:72:539:657:122:g_d0_f3:122:g_d0_f3:B:should score individuals based on their likely response to a treatment and cover the treatment only 
+17:384:32575:25:26:72:507:632:122:g_d0_f3:122:g_d0_f3:B:if the score exceeded a particular level. Similarly, a tax rebate program that aimed to provide 
+17:385:32671:26:26:72:520:606:122:g_d0_f3:122:g_d0_f3:B:economic “stimulus” might be most effective if it were targeted specifically to those households 
+17:386:32768:26:36:72:452:580:122:g_d0_f3:122:g_d0_f3:B:who were predicted to have a particularly high marginal propensity to consume.  
+17:387:32847:36:25:72:518:544:122:g_d0_f3:122:g_d0_f3:A:These examples are useful because they correspond roughly to the sorts of things   that private 
+17:388:32943:25:26:72:503:519:122:g_d0_f3:122:g_d0_f3:B:sectors companies are now doing all the time --- targeting discounts or rebates to particular 
+17:389:33037:26:26:72:507:493:122:g_d0_f3:122:g_d0_f3:B:consumers, or approving individuals for insurance or credit only if they meet certain scoring 
+17:390:33131:26:26:72:514:467:122:g_d0_f3:122:g_d0_f3:B:criteria. Of course, we tolerate this in the private sector, but many people’s reaction to parallel 
+17:391:33231:26:26:72:526:441:122:g_d0_f3:122:g_d0_f3:B:approaches taken by the government would be horror. In this sense, it seems clear that there are 
+17:392:33328:26:26:72:515:415:122:g_d0_f3:122:g_d0_f3:B:constraints on the way that the government can target services that probably would rule out a 
+17:393:33422:26:52:72:341:389:122:g_d0_f3:122:g_d0_f3:B:range of “private sector like” uses of predictive modeling. 
+17:394:33481:52:30:72:336:337:197:g_d0_f5:197:g_d0_f5:C:5. Opportunities for Economic Research 
+17:395:33518:30:26:72:541:307:122:g_d0_f3:122:g_d0_f3:A:We now take up the question of how the data revolution might affect economic research, in terms of 
+17:396:33617:26:36:72:524:281:122:g_d0_f3:122:g_d0_f7:B:the scope and quality of the results, the methods used, and the training of empirical economists.  
+17:397:33715:36:25:72:521:245:122:g_d0_f3:122:g_d0_f3:A:The first, and most obvious, effect will be to allow better measurements of economic effects and 
+17:398:33812:25:26:72:515:220:122:g_d0_f3:122:g_d0_f3:B:outcomes. More granular and comprehensive data can help to pose new sorts of questions and 
+17:399:33903:26:26:72:520:194:122:g_d0_f3:122:g_d0_f3:B:enable novel research designs that can inform us about the consequences of different economic 
+17:400:33997:26:36:72:484:168:122:g_d0_f3:122:g_d0_f3:B:policies and events. We will provide some examples below that illustrate this potential.  
+17:401:34087:36:26:72:512:132:122:g_d0_f3:122:g_d0_f3:A:A less obvious possibility is that new data may end up changing the way economists approach 
+17:402:34179:26:25:72:534:106:122:g_d0_f3:122:g_d0_f3:B:empirical questions and the tools   they use to answer them. As one example, we consider whether 
+17:403:34276:25:0:72:537:81:122:g_d0_f3:122:g_d0_f3:B:economists might embrace some of the statistical data-mining techniques described earlier. Why is 
+18:404:34376:0:26:72:512:709:122:g_d0_f3:122:g_d0_f3:B:this less obvious? To begin, it would mean something of a shift away from the single covariate 
+18:405:34471:26:26:72:538:683:122:g_d0_f3:122:g_d0_f3:B:causal effects framework that has dominated much of empirical research over the last few decades. 
+18:406:34569:26:25:72:531:657:122:g_d0_f3:122:g_d0_f3:B:More generally, many economists see a sharp distinction between predictive modeling and causal 
+18:407:34664:25:26:72:529:632:122:g_d0_f3:122:g_d0_f3:B:inference, and as a result statistical learning approaches have little to contribute. Our view is that 
+18:408:34767:26:26:72:535:606:122:g_d0_f3:122:g_d0_f3:B:the distinction is not always so sharp, and we think that this type of work will be increasingly used 
+18:409:34869:26:26:72:525:580:122:g_d0_f3:122:g_d0_f3:B:in economics as big data sets become available for researchers and as empirical economists gain 
+18:410:34965:26:50:72:403:554:122:g_d0_f3:122:g_d0_f3:B:greater familiarity and comfort with machine learning statistical tools. 
+18:411:35037:50:28:90:362:504:144:g_d0_f5:144:g_d0_f5:C:5.1. Novel Measurement and Research Designs 
+18:412:35079:28:26:72:536:476:122:g_d0_f3:122:g_d0_f3:A:Both large-scale administrative datasets and new private sector data have the potential to enable a 
+18:413:35179:26:35:72:232:450:122:g_d0_f3:122:g_d0_f3:B:variety of novel research designs.  
+18:414:35214:35:26:72:534:415:122:g_d0_f3:122:g_d0_f3:A:One salient example is the study by Chetty et al. (2012) on the long-term effects of better teachers. 
+18:415:35316:26:26:72:520:389:122:g_d0_f3:122:g_d0_f3:B:The study combines administrative data on 2.5 million New York City schoolchildren with their 
+18:416:35410:26:26:72:528:363:122:g_d0_f3:122:g_d0_f3:B:earnings as adults twenty years later. The main question is whether the students of teachers who 
+18:417:35507:26:25:72:532:337:122:g_d0_f3:122:g_d0_f3:B:have higher “value-added” in the short run subsequently have higher earnings   as adults. Teacher 
+18:418:35605:25:26:71:525:312:122:g_d0_f3:122:g_d0_f3:B:“value-added” is measured by the amount that test scores are improved. The results are striking. 
+18:419:35702:26:26:71:511:286:122:g_d0_f3:122:g_d0_f3:B:The authors find that replacing a teacher in the bottom 5% with an average teacher raises the 
+18:420:35796:26:36:71:467:260:122:g_d0_f3:122:g_d0_f3:B:lifetime earnings of students by a quarter of a million dollars in present value terms. 
+18:421:35884:36:26:71:526:224:122:g_d0_f3:122:g_d0_f3:A:The study demonstrates several benefits of large-scale administrative data. First, the authors are 
+18:422:35983:26:25:71:514:198:122:g_d0_f3:122:g_d0_f3:B:able to link test score data and subsequent tax records for a large number of students. Such an 
+18:423:36079:25:26:71:541:173:122:g_d0_f3:122:g_d0_f3:B:exercise would be difficult or impossible with aggregate data or a small random sample. Second, the 
+18:424:36179:26:26:71:541:147:122:g_d0_f3:122:g_d0_f3:B:long-term nature of the tax data makes it possible to capture both the adult earnings of the students 
+18:425:36281:26:0:71:536:121:122:g_d0_f3:122:g_d0_f3:B:and information about their parents at the time they were dependents. Finally, the granular nature 
+19:426:36382:0:26:72:520:709:122:g_d0_f3:122:g_d0_f3:B:of the test score data allows the authors to examine a key assumption needed for identification, 
+19:427:36479:26:35:72:482:683:122:g_d0_f3:122:g_d0_f3:B:namely that students are not sorted to teachers on the basis of their underlying ability.  
+19:428:36570:35:26:72:514:648:122:g_d0_f3:122:g_d0_f3:A:A second recent example, that uses both large-scale administrative data as well as proprietary 
+19:429:36665:26:26:71:540:622:122:g_d0_f3:122:g_d0_f3:B:private sector data, is the evaluation of Oregon’s Medicaid expansion conducted by Finkelstein et al. 
+19:430:36767:26:26:71:537:596:122:g_d0_f3:122:g_d0_f3:B:(2012). In 2008, Oregon used a lottery to select a set of individuals who would be newly eligible for 
+19:431:36869:26:26:71:535:570:122:g_d0_f3:122:g_d0_f3:B:Medicaid. The lottery created a large natural experiment and an opportunity to study the effects of 
+19:432:36969:26:26:71:532:544:122:g_d0_f3:122:g_d0_f3:B:providing people with relatively generous health insurance. The researchers combined the lottery 
+19:433:37066:26:25:71:536:518:122:g_d0_f3:122:g_d0_f3:B:and subsequent enrollment data with administrative records on hospital discharges and mortality, 
+19:434:37163:25:36:71:437:493:122:g_d0_f3:122:g_d0_f3:B:with credit records obtained from TransUnion, and with detailed survey data. 
+19:435:37239:36:26:71:512:457:122:g_d0_f3:122:g_d0_f3:A:Again, the results are quite striking. After the first year, the population that received Medicaid 
+19:436:37338:26:26:71:533:431:122:g_d0_f3:122:g_d0_f3:B:coverage had substantially higher health care utilization, lower medical debt, fewer delinquencies, 
+19:437:37438:26:25:71:502:405:122:g_d0_f3:122:g_d0_f3:B:and better self-reported health (although a follow-up study by the same authors found little 
+19:438:37531:25:26:71:536:380:122:g_d0_f3:122:g_d0_f3:B:evidence of improvement on a variety of objective biometric measures). The study illustrates some 
+19:439:37629:26:26:71:535:354:122:g_d0_f3:122:g_d0_f3:B:of the same benefits of large-scale universal datasets: the authors are able to take a given subset of 
+19:440:37732:26:26:71:525:328:122:g_d0_f3:122:g_d0_f3:B:the Oregon population and locate not just their subsequent hospital records, but also their credit 
+19:441:37831:26:26:71:531:302:122:g_d0_f3:122:g_d0_f3:B:histories in comprehensive datasets, allowing them to trace out the consequences of the Medicaid 
+19:442:37928:26:35:71:322:276:122:g_d0_f3:122:g_d0_f3:B:experiment for a large number of outcome measures. 
+19:443:37978:35:26:71:528:241:122:g_d0_f3:122:g_d0_f3:A:A third example comes from some of our own recent work on internet commerce, which is rather 
+19:444:38071:26:26:71:530:215:122:g_d0_f3:122:g_d0_f3:B:different in that we have used large-scale proprietary data, obtained through a collaboration with 
+19:445:38170:26:26:71:501:189:122:g_d0_f3:122:g_d0_f3:B:eBay. In one paper (Einav et al., 2013c), we use detailed browsing and purchase data on the 
+19:446:38262:26:26:71:539:163:122:g_d0_f3:122:g_d0_f3:B:universe of eBay customers (more than 100 million in the United States), to study the effect of sales 
+19:447:38364:26:25:71:537:137:122:g_d0_f3:122:g_d0_f3:B:taxes on internet commerce. Currently retailers must collect sales taxes on online purchases only if 
+19:448:38465:25:26:71:528:112:122:g_d0_f3:122:g_d0_f3:B:the buyer is a resident of the same state; retailers do not collect sales tax on interstate purchases, 
+19:449:38568:26:0:71:337:86:122:g_d0_f3:122:g_d0_f3:B:which account for a large fraction of internet commerce. 
+20:450:38626:0:26:72:491:709:122:g_d0_f3:122:g_d0_f3:A:Aggregated data on state-to-state trade flows provide relatively standard estimates of tax 
+20:451:38717:26:26:72:532:683:122:g_d0_f3:122:g_d0_f3:B:elasticities, but we also use the detailed browsing data to obtain more micro-level evidence on tax 
+20:452:38817:26:25:72:539:657:122:g_d0_f3:122:g_d0_f3:B:responsiveness. Specifically, we find groups of individuals who clicked to view the same item, some 
+20:453:38917:25:26:72:539:632:122:g_d0_f3:122:g_d0_f3:B:of whom were located in the same state as the seller, and hence taxed, and some of whom were not, 
+20:454:39015:26:26:72:526:606:122:g_d0_f3:122:g_d0_f3:B:and hence went untaxed. We then compare the purchasing propensities of the two groups, doing 
+20:455:39108:26:26:72:498:580:122:g_d0_f3:122:g_d0_f3:B:this for many thousands of items and millions of browsing sessions. We find significant tax 
+20:456:39200:26:26:72:517:554:122:g_d0_f3:122:g_d0_f3:B:responsiveness, and evidence of substitution to similar (but untaxed) alternative products, but 
+20:457:39296:26:25:72:520:528:122:g_d0_f3:122:g_d0_f3:B:much lower responsiveness than one would expect for retail price changes, suggesting a wedge 
+20:458:39389:25:36:72:365:503:122:g_d0_f3:122:g_d0_f3:B:between internet price elasticities and internet tax elasticities. 
+20:459:39455:36:26:72:502:467:122:g_d0_f3:122:g_d0_f3:A:In two other recent studies (Einav et al., 2013a, 2013d), we studied online pricing and sales 
+20:460:39549:26:26:72:533:441:122:g_d0_f3:122:g_d0_f3:B:strategies using a different research design that takes advantage of the granular nature of internet 
+20:461:39650:26:26:72:504:415:122:g_d0_f3:122:g_d0_f3:B:data. In these studies, we took the full set of listings posted each year on eBay and identified 
+20:462:39747:26:25:72:514:389:122:g_d0_f3:122:g_d0_f3:B:hundreds of thousands of items that had been listed for sale multiple times by the same seller, 
+20:463:39843:25:26:72:532:364:122:g_d0_f3:122:g_d0_f3:B:either simultaneously or sequentially, with different pricing or fees or sales mechanisms. We then 
+20:464:39942:26:26:72:539:338:122:g_d0_f3:122:g_d0_f3:B:used these “seller experiments” to estimate the degree of price dispersion, residual demand curves, 
+20:465:40042:26:36:72:499:312:122:g_d0_f3:122:g_d0_f3:B:and how consumers respond to potentially non-transparent charges such as shipping fees.  
+20:466:40130:36:25:72:541:276:122:g_d0_f3:122:g_d0_f3:A:One lesson we have drawn from our internet commerce research is that highly granular data can be 
+20:467:40227:25:26:72:509:251:122:g_d0_f3:122:g_d0_f3:B:particularly useful for finding natural experiments. For example, moving from weekly data to 
+20:468:40320:26:26:72:511:225:122:g_d0_f3:122:g_d0_f3:B:minute-by-minute data, or to data on individual consumers and units being sold, one can take 
+20:469:40413:26:26:72:520:199:122:g_d0_f3:122:g_d0_f3:B:advantage of very specific institutional details or micro-level variation that would be difficult to 
+20:470:40514:26:26:72:541:173:122:g_d0_f3:122:g_d0_f3:B:isolate and exploit with more aggregated data. As with the studies above that rely on administrative 
+20:471:40615:26:25:72:506:147:122:g_d0_f3:122:g_d0_f3:B:data, there are also opportunities to obtain rich data on the individuals being studied (e.g. to 
+20:472:40712:25:26:72:522:122:122:g_d0_f3:122:g_d0_f3:B:segment consumers by their purchase histories), or to explore a variety of consequences from a 
+20:473:40807:26:0:72:466:96:122:g_d0_f3:122:g_d0_f3:B:given experiment – e.g. substitution to different items in the event of a price change. 
+21:474:40896:0:26:72:528:709:122:g_d0_f3:122:g_d0_f3:A:A second, related feature is that in such types of research, when the estimates are based on many 
+21:475:40994:26:26:72:542:683:122:g_d0_f3:122:g_d0_f3:B:small experiments, it is almost certain that some (hopefully small)   fraction of the experiments could 
+21:476:41098:26:25:71:532:657:122:g_d0_f3:122:g_d0_f3:B:suffer from various problems, or that it would be difficult to establish the credibility of each single 
+21:477:41202:25:26:71:523:632:122:g_d0_f3:122:g_d0_f3:B:little experiment separately. However, one advantage of big data is that the size and scope of the 
+21:478:41301:26:26:71:514:606:122:g_d0_f3:122:g_d0_f3:B:data allow for many strategies by which one could assess the robustness of the results and the 
+21:479:41396:26:26:71:537:580:122:g_d0_f3:122:g_d0_f3:B:validity of the key assumptions. For example, in Einav et al. (2013d) described earlier we use many 
+21:480:41496:26:26:71:528:554:122:g_d0_f3:122:g_d0_f3:B:alternative definitions to group items in order to make sure that our primary definition is not too 
+21:481:41596:26:25:71:536:528:122:g_d0_f3:122:g_d0_f3:B:broad. In our study of taxes described above, we go on and examine subsequent activity of the user 
+21:482:41695:25:26:71:515:503:122:g_d0_f3:122:g_d0_f3:B:within the same browsing session, after he bought or decided not to buy the clicked item. Such 
+21:483:41790:26:26:71:525:477:122:g_d0_f3:122:g_d0_f3:B:additional “detective work”, which cannot be carried out with more traditional data, can provide 
+21:484:41887:26:36:71:383:451:122:g_d0_f3:122:g_d0_f3:B:further reassurance about the causal interpretation of the results.  
+21:485:41955:36:26:71:489:415:122:g_d0_f3:122:g_d0_f3:A:A related observation is that as companies rely more heavily on data for their day-to-day 
+21:486:42045:26:25:71:523:389:122:g_d0_f3:122:g_d0_f3:B:operations, it has become easier and more cost-effective for companies to experiment. First, it is 
+21:487:42144:25:26:71:536:364:122:g_d0_f3:122:g_d0_f3:B:much easier to run an experiment when pricing or other instruments are automated. Furthermore, 
+21:488:42239:26:26:71:538:338:122:g_d0_f3:122:g_d0_f3:B:when firms have more customized and granular pricing strategies, running an experiment is easier, 
+21:489:42337:26:26:71:490:312:122:g_d0_f3:122:g_d0_f3:B:less observable, and not as risky. Indeed, many online platforms – as part of their regular 
+21:490:42429:26:25:71:536:286:122:g_d0_f3:122:g_d0_f3:B:operations – constantly use a small share of their operations as an experimentation platform. Once 
+21:491:42528:25:26:71:518:261:122:g_d0_f3:122:g_d0_f3:B:data is captured quickly, it is easier and cheaper to capture the results of an experiment, and (if 
+21:492:42628:26:26:71:535:235:122:g_d0_f3:122:g_d0_f3:B:successful) implement on it. Finally, with automated strategies, it is viable for firms to use multiple 
+21:493:42732:26:26:71:538:209:122:g_d0_f3:122:g_d0_f3:B:strategies at the same time, and to sometimes even randomize the set of customers that are offered 
+21:494:42831:26:52:71:456:183:122:g_d0_f3:122:g_d0_f3:B:one   option or another, so there is even potential for some explicit randomization.  
+21:495:42916:52:28:90:368:131:197:g_d0_f5:197:g_d0_f5:C:5.2. Statistical Learning and Economic Research 
+21:496:42962:28:25:72:536:103:122:g_d0_f3:122:g_d0_f3:A:The studies described in the prior section make use of big data, but the conceptual approaches and 
+21:497:43061:25:0:72:513:78:122:g_d0_f3:122:g_d0_f3:B:statistical methods are familiar ones. In particular, the object being studied is the relationship 
+22:498:43162:0:26:72:525:709:122:g_d0_f3:122:g_d0_f3:B:between a particular treatment (having a better teacher, getting health insurance, being charged 
+22:499:43259:26:26:72:519:683:122:g_d0_f3:122:g_d0_f3:B:sales tax), and an outcome variable (adult earnings, health utilization, purchasing). Many, if not 
+22:500:43358:26:25:72:498:657:122:g_d0_f3:122:g_d0_f3:B:most, studies in empirical microeconomics have this structure, where the goal is to study a 
+22:501:43450:25:26:72:513:632:122:g_d0_f3:122:g_d0_f3:B:particular bivariate relationship – often, but not always, a causal one – holding “all else equal”, 
+22:502:43550:26:36:72:526:606:122:g_d0_f3:122:g_d0_f3:B:where the “all else equal” part is often implemented by controlling for other predictive variables. 
+22:503:43649:36:26:72:536:570:122:g_d0_f3:122:g_d0_f3:A:In contrast, the predictive modeling approaches described in Section 3 are inherently multivariate. 
+22:504:43749:26:26:72:538:544:122:g_d0_f3:122:g_d0_f3:B:The focus is not on how a single variable affects a given outcome measure, but on how the outcome 
+22:505:43847:26:25:72:538:518:122:g_d0_f3:122:g_d0_f3:B:varies with a large number of potential predictors, and the analyst may or may not use prior theory 
+22:506:43946:25:26:72:532:493:122:g_d0_f3:122:g_d0_f3:B:as to which predictors are relevant. This conceptual difference raises the question of whether “big 
+22:507:44046:26:36:72:476:467:122:g_d0_f3:122:g_d0_f3:B:data” techniques common in statistics will turn out to be useful in economic research.  
+22:508:44133:36:26:72:516:431:122:g_d0_f3:122:g_d0_f3:A:We think the answer is likely to be affirmative. One application that already has been explored 
+22:509:44229:26:25:72:519:405:122:g_d0_f3:122:g_d0_f3:B:(Belloni et al., 2012a, 2012b) is to use machine learning techniques to improve the efficiency of 
+22:510:44327:25:26:72:519:380:122:g_d0_f3:122:g_d0_f3:B:treatment effects studies when a research has either a large number of potentially confounding 
+22:511:44422:26:26:72:537:354:122:g_d0_f3:122:g_d0_f3:B:variables, or alternatively a large number of potential instruments. Here the goal is still to estimate 
+22:512:44526:26:26:72:539:328:122:g_d0_f3:122:g_d0_f3:B:a particular bivariate relationship, but to use penalized regressions either to identify an optimal set 
+22:513:44630:26:36:72:428:302:122:g_d0_f3:122:g_d0_f3:B:of controls, or an optimal set of instruments given a large potential number. 
+22:514:44707:36:25:72:514:266:122:g_d0_f3:122:g_d0_f3:A:Another potential use of predictive modeling is to incorporate heterogeneity into econometric 
+22:515:44801:25:26:71:526:241:122:g_d0_f3:122:g_d0_f3:B:models and analyses. In our own research on credit and insurance markets (Bundorf et al., 2012; 
+22:516:44897:26:26:71:533:215:122:g_d0_f3:122:g_d0_f3:B:Einav et al., 2012; Einav et al., 2013b), we have used “off-the-shelf” credit and health risk scores to 
+22:517:45001:26:26:71:514:189:122:g_d0_f3:122:g_d0_f3:B:account for the default propensities or likely health expenditures of individual consumers. For 
+22:518:45097:26:26:71:538:163:122:g_d0_f3:122:g_d0_f3:B:example, in Einav et al. (2012) we were interested in understanding consumer borrowing behavior 
+22:519:45193:26:25:71:519:137:122:g_d0_f3:122:g_d0_f3:B:and how lenders should set loan prices and credit limits for different segments of borrowers as 
+22:520:45289:25:0:71:491:112:122:g_d0_f3:122:g_d0_f3:B:stratified by their default risk. Predictive modeling provides a natural way to achieve this 
+23:521:45384:0:26:72:529:709:122:g_d0_f3:122:g_d0_f3:B:stratification, although the particular choice of predictive model was made by statisticians whose 
+23:522:45483:26:35:72:434:683:122:g_d0_f3:122:g_d0_f3:B:predictive scores derived from credit bureau records that were used    as data.  
+23:523:45563:35:26:71:529:648:122:g_d0_f3:122:g_d0_f3:A:Similarly, in theoretical models of insurance markets, it is common to associate individuals with a 
+23:524:45663:26:26:71:532:622:122:g_d0_f3:122:g_d0_f3:B:“risk type” that summarizes their probability of accident of loss.  Recent empirical work that looks 
+23:525:45764:26:26:71:535:596:122:g_d0_f3:122:g_d0_f3:B:at consumer choice of insurance or health plans (Bundorf et al., 2012; Einav et al., 2013b) has used 
+23:526:45865:26:26:71:522:570:122:g_d0_f3:122:g_d0_f3:B:predictive health risk scores to summarize individual heterogeneity in a parsimonious way. The 
+23:527:45959:26:26:71:524:544:122:g_d0_f3:122:g_d0_f3:B:scores provide a useful way of assessing, for instance, whether riskier individuals systematically 
+23:528:46058:26:25:71:540:518:122:g_d0_f3:122:g_d0_f3:B:choose more generous insurance coverage, and whether prices in a market accurately adjust for the 
+23:529:46156:25:36:71:390:493:122:g_d0_f3:122:g_d0_f3:B:likely cost of different individuals to insurers that underwrite them. 
+23:530:46226:36:26:71:525:457:122:g_d0_f3:122:g_d0_f3:A:In these examples, economic researchers are consumers of machine learning models, but not the 
+23:531:46320:26:26:71:518:431:122:g_d0_f3:122:g_d0_f3:B:producers of them. However, it is easy to imagine future applications where economists will be 
+23:532:46415:26:25:71:504:405:122:g_d0_f3:122:g_d0_f3:B:interested in characterizing the heterogeneity of individuals or products or firms in order to 
+23:533:46510:25:26:71:523:380:122:g_d0_f3:122:g_d0_f3:B:analyze differences in decisions or treatment effects. In such cases, machine learning techniques 
+23:534:46608:26:26:71:528:354:122:g_d0_f3:122:g_d0_f3:B:can provide a useful way to obtain a one-dimensional statistic that summarizes a large amount of 
+23:535:46705:26:26:72:520:328:122:g_d0_f3:122:g_d0_f3:B:information about the entities being studies, just as a consumer’s credit score summarize a rich 
+23:536:46802:26:36:72:493:302:122:g_d0_f3:122:g_d0_f3:B:unstructured history of borrowing and repayments into a scalar summary of default risk.  
+23:537:46891:36:25:72:540:266:122:g_d0_f3:122:g_d0_f3:A:A related point is that predictive scores can be interesting objects to study in and of themselves. For 
+23:538:46995:25:26:72:533:241:122:g_d0_f3:122:g_d0_f3:B:instance, health r isk scores provide a mapping from an individual’s demographics and past health 
+23:539:47093:26:26:72:526:215:122:g_d0_f3:122:g_d0_f3:B:care utilization into a one-dimensional prediction of future health care utilization. An interesting 
+23:540:47194:26:26:72:476:189:122:g_d0_f3:122:g_d0_f3:B:question may be whether these relationships are stable when there are changes in the 
+23:541:47279:26:26:72:540:163:122:g_d0_f3:122:g_d0_f3:B:environment. For example, if insurers begin to manage utilization or charge higher copayments, the 
+23:542:47378:26:25:72:542:137:122:g_d0_f3:122:g_d0_f3:B:prior relationships between demographics and past utilization and current utilization may not hold. 
+23:543:47478:25:0:72:534:112:122:g_d0_f3:122:g_d0_f3:B:This suggests that one key issue in applying predictive modeling techniques, which will need to be 
+24:544:47579:0:26:72:537:709:122:g_d0_f3:122:g_d0_f3:B:assessed on a case-by-case basis, will be to understand the limits in terms of how far out-of-sample 
+24:545:47680:26:50:71:500:683:122:g_d0_f3:122:g_d0_f3:B:predicted relationships are valid, and when policy changes might upset these relationships. 
+24:546:47771:50:28:108:288:633:144:g_d0_f5:197:g_d0_f5:C:5.3 Embracing Heterogeneity 
+24:547:47797:28:25:72:531:605:122:g_d0_f3:122:g_d0_f3:A:A common practice in empirical economics is to look for research designs that might help identify 
+24:548:47895:25:26:72:538:580:122:g_d0_f3:122:g_d0_f3:B:the “average treatment effect” of particular policies. Often in these studies, the researchers are well 
+24:549:47999:26:26:72:525:554:122:g_d0_f3:122:g_d0_f3:B:aware that the individuals or groups or firms being treated are heterogeneous, so that the policy 
+24:550:48097:26:26:72:512:528:122:g_d0_f3:122:g_d0_f3:B:most likely does not have a uniform effect. However, data limitations often require estimating 
+24:551:48192:26:26:72:522:502:122:g_d0_f3:122:g_d0_f3:B:average effects, and even with detailed micro-level data, focusing on a single average parameter 
+24:552:48289:26:35:72:503:476:122:g_d0_f3:122:g_d0_f3:B:estimate can be easier to present, or to use in formulating out-of-sample policy predictions.  
+24:553:48383:35:26:72:518:441:122:g_d0_f3:122:g_d0_f3:A:At least in principle, however, large-scale data with rich individual characteristics can allow for 
+24:554:48482:26:26:72:538:415:122:g_d0_f3:122:g_d0_f3:B:more complete estimates of the effects of different policies. In such situations, one can imagine that 
+24:555:48585:26:26:72:538:389:122:g_d0_f3:122:g_d0_f3:B:some research might shift from measuring and reporting average estimates, toward “tool building”, 
+24:556:48682:26:26:72:532:363:122:g_d0_f3:122:g_d0_f3:B:where the purpose of an econometric model would be to capture treatment effects or make policy 
+24:557:48777:26:35:72:352:337:122:g_d0_f3:122:g_d0_f3:B:predictions for a large number of different subpopulations.  
+24:558:48837:35:26:72:511:302:122:g_d0_f3:122:g_d0_f3:A:As an example, consider the textbook problem of identifying the profit-maximizing price for a 
+24:559:48931:26:26:72:528:276:122:g_d0_f3:122:g_d0_f3:B:monopolistic firm. A standard approach in industrial organization would be to obtain data on the 
+24:560:49028:26:26:72:538:250:122:g_d0_f3:122:g_d0_f3:B:firm’s sales at different prices, try to isolate variation in prices that can cleanly identify the demand 
+24:561:49134:26:26:72:517:224:122:g_d0_f3:122:g_d0_f3:B:response, and use it to estimate the demand curve facing the firm. The elasticity of the demand 
+24:562:49230:26:35:72:406:198:122:g_d0_f3:122:g_d0_f3:B:curve would then translate into an optimal price given    the firm’s costs.  
+24:563:49306:35:26:72:516:163:122:g_d0_f3:122:g_d0_f3:A:But now suppose the firm has data on its individual customers, and can classify them in a wide 
+24:564:49401:26:26:72:507:137:122:g_d0_f3:122:g_d0_f3:B:range of ways and set discriminatory prices. In such a case, the researcher might not want to 
+24:565:49495:26:26:72:541:111:122:g_d0_f3:122:g_d0_f3:B:estimate a   single elasticity, but rather develop an algorithm that would classify consumers to types 
+24:566:49598:26:0:72:469:85:122:g_d0_f3:122:g_d0_f3:B:and estimate demand elasticity and optimal prices that are customized to each type.  
+25:567:49685:0:26:72:510:709:122:g_d0_f3:122:g_d0_f3:B:Indeed, this type of empirical output has been quite common for a while in more quantitative 
+25:568:49778:26:26:72:525:683:122:g_d0_f3:122:g_d0_f3:B:sectors of the economy, where insurance companies and lenders customized their offer terms to 
+25:569:49872:26:25:72:521:657:122:g_d0_f3:122:g_d0_f3:B:individual customers. The advent of big data makes such analysis feasible and common in other 
+25:570:49966:25:26:72:524:632:122:g_d0_f3:122:g_d0_f3:B:sectors, for example in grocery stores, such as Safeway, which now offers   customized individual-
+25:571:50064:26:36:72:361:606:122:g_d0_f3:122:g_d0_f3:B:specific discounts as a function of individual price elasticities. 
+25:572:50130:36:26:72:532:570:122:g_d0_f3:122:g_d0_f3:A:While these examples all focus on pricing policies, similar points could apply to many other policy 
+25:573:50230:26:25:72:527:544:122:g_d0_f3:122:g_d0_f3:B:instruments. The optimal amount of insurance coverage or physician incentives could depend on 
+25:574:50324:25:26:72:521:519:122:g_d0_f3:122:g_d0_f3:B:the healthcare environment and the physician and patient characteristics, the optimal class size 
+25:575:50421:26:26:72:529:493:122:g_d0_f3:122:g_d0_f3:B:could depend on the grade, the school, the teacher, or the student mix, and the optimal amount of 
+25:576:50519:26:26:72:541:467:122:g_d0_f3:122:g_d0_f3:B:infrastructure could depend on the location. As the combination of big data and improved statistical 
+25:577:50620:26:26:72:514:441:122:g_d0_f3:122:g_d0_f3:B:techniques begins to allow it, it may be interesting for researchers to think not just in terms of 
+25:578:50719:26:26:72:521:415:122:g_d0_f3:122:g_d0_f3:B:estimating average effects, but in terms of estimating mappings from measurable heterogeneity 
+25:579:50813:26:52:72:275:389:122:g_d0_f3:122:g_d0_f3:B:into treatment effects and optimal policies. 
+25:580:50858:52:30:72:180:337:197:g_d0_f5:197:g_d0_f5:C:6.    Challenges 
+25:581:50874:30:26:72:519:307:122:g_d0_f3:122:g_d0_f3:A:Several challenges confront economists wishing to take advantage of large new datasets. These 
+25:582:50968:26:26:72:517:281:122:g_d0_f3:122:g_d0_f3:B:include gaining access to data, developing the data management and programming capabilities 
+25:583:51060:26:26:72:530:255:122:g_d0_f3:122:g_d0_f3:B:needed to work with large-scale datasets, and finally (and most importantly!) thinking of creative 
+25:584:51159:26:35:72:487:229:122:g_d0_f3:122:g_d0_f3:B:approaches to summarize, describe and analyze the information contained in these data. 
+25:585:51245:35:26:72:535:194:122:g_d0_f7:122:g_d0_f3:A:Data Access. Research on topics such as labor economics, productivity and household consumption 
+25:586:51341:26:26:72:518:168:122:g_d0_f3:122:g_d0_f3:B:traditionally have relied on government survey data such as the U.S. Census, the Panel Study of 
+25:587:51437:26:26:72:535:142:122:g_d0_f3:122:g_d0_f3:B:Income Dynamics (PSID) and the National Longitudinal Survey of Youth (NLSY). For many of these 
+25:588:51532:26:25:72:531:116:122:g_d0_f3:122:g_d0_f3:B:data, there are well-established protocols for accessing and making use of the data. In some cases, 
+25:589:51632:25:0:72:513:91:122:g_d0_f3:122:g_d0_f3:B:such as the U.S. Census Data Research Centers, these protocols are cumbersome and probably 
+26:590:51725:0:26:72:513:709:122:g_d0_f3:122:g_d0_f3:B:discourage a fair number of researchers, but at least they reflect a conscious effort to trade off 
+26:591:51824:26:35:72:331:683:122:g_d0_f3:122:g_d0_f3:B:between research access and confidentiality concerns.  
+26:592:51879:35:26:72:527:648:122:g_d0_f3:122:g_d0_f3:A:These systems are still being worked out for the large-scale administrative data that recently has 
+26:593:51978:26:26:72:523:622:122:g_d0_f3:122:g_d0_f3:B:been used for economic research: from the IRS, Medicare, or Social Security Administration. The 
+26:594:52074:26:26:72:532:596:122:g_d0_f3:122:g_d0_f3:B:privacy issues associated with the increased amount of data are important, and have been already 
+26:595:52171:26:26:72:532:570:122:g_d0_f3:122:g_d0_f3:B:discussed in this publication just a year ago (Goldfarb and Tucker, 2012). But as Card et al. (2010) 
+26:596:52272:26:26:72:510:544:122:g_d0_f3:122:g_d0_f3:B:point out, many European countries, such as Norway, Sweden and Denmark, have gone much 
+26:597:52359:26:25:72:515:518:122:g_d0_f3:122:g_d0_f3:B:farther to facilitate research. The experience in these countries suggests that broader access is 
+26:598:52457:25:26:72:517:493:122:g_d0_f3:122:g_d0_f3:B:possible, and that reducing barriers to data access can have a profound effect on the amount of 
+26:599:52553:26:36:72:279:467:122:g_d0_f3:122:g_d0_f3:B:research and the quality of what is learned.  
+26:600:52599:36:26:72:496:431:122:g_d0_f3:122:g_d0_f3:A:Much of the novel data we have discussed belongs to private companies. Accessing private 
+26:601:52688:26:25:72:533:405:122:g_d0_f3:122:g_d0_f3:B:company data creates several issues for researchers. First and most obviously, not every company 
+26:602:52785:25:26:72:527:380:122:g_d0_f3:122:g_d0_f3:B:wants to work with researchers. While many view it as potentially beneficial, and a useful way to 
+26:603:52883:26:26:72:539:354:122:g_d0_f3:122:g_d0_f3:B:learn from outsiders, others may view it as a distraction or focus on the publicity risks. Researchers 
+26:604:52986:26:26:72:519:328:122:g_d0_f3:122:g_d0_f3:B:who collaborate with companies generally need to enter into contracts to prevent disclosure of 
+26:605:53081:26:26:72:539:302:122:g_d0_f3:122:g_d0_f3:B:confidential information, and may face some limits on the questions they can study. Our experience 
+26:606:53180:26:26:72:542:276:122:g_d0_f3:122:g_d0_f3:B:has been that the benefits of working with company data generally far outweigh the costs, but that a 
+26:607:53281:26:35:72:461:250:122:g_d0_f3:122:g_d0_f3:B:fair amount of effort on both sides is required to develop successful collaborations. 
+26:608:53366:35:26:72:545:215:122:g_d0_f3:122:g_d0_f3:A:Private sector data also can be limited in certain ways. It often contains   information only on a firm’s 
+26:609:53472:26:26:72:518:189:122:g_d0_f3:122:g_d0_f3:B:customers, who may not be representative even within a particular industry. In addition, many 
+26:610:53566:26:26:72:514:163:122:g_d0_f3:122:g_d0_f3:B:private sector datasets are collected for transactional purposes. As a result they may contain a 
+26:611:53663:26:25:72:500:137:122:g_d0_f3:122:g_d0_f3:B:specific set of information that is ideal for some purposes but not for others. For example, a 
+26:612:53758:25:26:72:503:112:122:g_d0_f3:122:g_d0_f3:B:computerized record exists for practically every physician visit in the United States, but it is 
+26:613:53855:26:0:72:526:86:122:g_d0_f3:122:g_d0_f3:B:generally an insurance claim record that records the information necessary for payment, but not 
+27:614:53953:0:26:72:533:709:122:g_d0_f3:122:g_d0_f3:B:necessarily any type of actual health information such as the patient’s biometrics or how they feel. 
+27:615:54054:26:26:72:540:683:122:g_d0_f3:122:g_d0_f3:B:It also is not easily linked to employment records (at least in the United States), household financial 
+27:616:54158:26:25:72:515:657:122:g_d0_f3:122:g_d0_f3:B:information, or social network indicators. It is possible that what we can learn from individual 
+27:617:54255:25:26:72:484:632:122:g_d0_f3:122:g_d0_f3:B:private sector datasets will prove to be far less than what might be learned from linking 
+27:618:54345:26:36:72:259:606:122:g_d0_f3:122:g_d0_f3:B:information that is currently separated. 
+27:619:54385:36:26:72:527:570:122:g_d0_f7:122:g_d0_f3:A:Data Management and Computation. One way that some commentators have defined “big data” is 
+27:620:54476:26:25:72:507:544:122:g_d0_f3:122:g_d0_f3:B:that it requires a significant investment of time and resources simply to manage. Virtually all 
+27:621:54572:25:26:72:538:519:122:g_d0_f3:122:g_d0_f3:B:successful internet companies, and more and more data-intensive companies in other sectors, have 
+27:622:54669:26:26:72:502:493:122:g_d0_f3:122:g_d0_f3:B:invested in data storage and distributed data processing.  They also have invested in skilled 
+27:623:54763:26:26:72:535:467:122:g_d0_f3:122:g_d0_f3:B:computer scientists and engineers. Interestingly, even when these companies hire “data scientists” 
+27:624:54862:26:26:72:539:441:122:g_d0_f3:122:g_d0_f3:B:whose job is to analyze data to look for empirical patterns, they generally look for people trained in 
+27:625:54965:26:25:72:540:415:122:g_d0_f3:122:g_d0_f3:B:computer science, rather than econometrics. Our expectation is that future economists who want to 
+27:626:55063:25:26:72:503:390:122:g_d0_f3:122:g_d0_f3:B:work with large datasets will have to acquire at least some of the new tools of the computer 
+27:627:55156:26:26:72:530:364:122:g_d0_f3:122:g_d0_f3:B:scientists – SQL, R, and the standard machine learning algorithms mentioned earlier – so they can 
+27:628:55254:26:26:72:510:338:122:g_d0_f3:122:g_d0_f3:B:combine the conceptual framework of economics with the ability to actually implement ideas 
+27:629:55345:26:36:72:270:312:122:g_d0_f3:122:g_d0_f3:B:quickly and efficiently on large-scale data. 
+27:630:55389:36:25:72:509:276:122:g_d0_f7:122:g_d0_f3:A:Asking the Right Questions. One additional observation is that in working with very large, rich 
+27:631:55485:25:26:72:519:251:122:g_d0_f3:122:g_d0_f3:B:datasets, it can be non-trivial just to figure out what questions the data might be able to answer 
+27:632:55584:26:26:72:508:225:122:g_d0_f3:122:g_d0_f3:B:convincingly. While in the past a researcher could simply open up her data on the screen and 
+27:633:55677:26:26:72:513:199:122:g_d0_f3:122:g_d0_f3:B:visually get a sense of the key features, large data sets require time and effort for conceptually 
+27:634:55776:26:26:72:525:173:122:g_d0_f3:122:g_d0_f3:B:trivial tasks, such as extracting and summarizing different variables, and exploring relationships 
+27:635:55875:26:25:72:523:147:122:g_d0_f3:122:g_d0_f3:B:between them.  Just looking within the last several years of our own program at Stanford, we see 
+27:636:55972:25:26:72:529:122:122:g_d0_f3:122:g_d0_f3:B:dissertations that use data from retail platforms   (eBay), job matching platforms (oDesk.com and 
+27:637:56070:26:0:71:511:96:122:g_d0_f3:122:g_d0_f3:B:freelancer.com), lending platform (prosper.com), accommodation platform (airbnb.com), and 
+28:638:56162:0:26:72:531:709:122:g_d0_f3:122:g_d0_f3:B:several financial management sites.  Many of these projects have turned out very successfully, but 
+28:639:56261:26:26:72:533:683:122:g_d0_f3:122:g_d0_f3:B:almost all of them started with a long and slow process of just figuring out what exactly was in the 
+28:640:56362:26:35:72:205:657:122:g_d0_f3:122:g_d0_f3:B:data, and how to manage it.  
+28:641:56391:35:26:72:533:622:122:g_d0_f3:122:g_d0_f3:A:Of course, the situation may turn out to be a bit different with large administrative datasets, to the 
+28:642:56494:26:26:72:531:596:122:g_d0_f3:122:g_d0_f3:B:extent that they end up being used by many researchers, because over time there will be common 
+28:643:56589:26:26:72:539:570:122:g_d0_f3:122:g_d0_f3:B:learning about what are the advantages and drawbacks of the data, and about various methods and 
+28:644:56685:26:26:72:533:544:122:g_d0_f3:122:g_d0_f3:B:strategies that are useful for organizing the data, and exploring different questions. So this may be 
+28:645:56787:26:25:72:531:518:122:g_d0_f3:122:g_d0_f3:B:one further difference between future research with large government datasets, which if access is 
+28:646:56885:25:26:72:540:493:122:g_d0_f3:122:g_d0_f3:B:increased may occupy many economics scholars, relative to research with proprietary datasets that 
+28:647:56983:26:53:72:286:467:122:g_d0_f3:122:g_d0_f3:B:are likely to allow much more limited access.  
+28:648:57029:53:30:72:207:414:197:g_d0_f5:197:g_d0_f5:C:7.    Final Thoughts 
+28:649:57049:30:25:72:540:384:122:g_d0_f3:122:g_d0_f3:A:There is little doubt, at least in our own minds, that over the next decades “big data” will change the 
+28:650:57153:25:26:72:542:359:122:g_d0_f3:122:g_d0_f3:B:landscape of economic policy and economic research. As we emphasized throughout, we don’t think 
+28:651:57249:26:26:72:526:333:122:g_d0_f3:122:g_d0_f3:B:that big data will substitute for common sense, economic theory, or the need for careful research 
+28:652:57347:26:26:72:538:307:122:g_d0_f3:122:g_d0_f3:B:designs. Rather, it will complement them. How exactly remains to be seen. In this article we tried to 
+28:653:57448:26:26:72:519:281:122:g_d0_f3:122:g_d0_f3:B:lay out what we see as the vast opportunities, as well as challenges, that come with the ongoing 
+28:654:57545:26:52:72:373:255:122:g_d0_f3:122:g_d0_f3:B:data revolution. We look forward to seeing how it  will play out.   
+28:655:57612:52:30:72:146:203:197:g_d0_f5:197:g_d0_f5:C:References
