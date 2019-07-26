@@ -13,11 +13,17 @@ def pipeline(journal_handler):
     page_first, page_last = calc_page_numbers_interval(data, page_start=2)
     data, filtered_inds = filter_data(data, page_first, page_last)
 
+    for i in range(1, len(data)):
+        if data[i - 1].text.strip() == '':
+            data[i].int_from_prev += data[i - 1].int_from_prev
+            data[i].is_after_empty_line = True
+
     # Получаем основные общие характеристики документа
     regular_font_name, regular_font_size = find_regular_font(data, filtered_inds)
     regular_vert_int = find_regular_vert_int(data, filtered_inds)
     base_margins_left = find_base_magrins(data, filtered_inds, left=True)
     base_margins_right = find_base_magrins(data, filtered_inds, left=False)
+
 
     # Делаем первичный препроцессинг
     for line in data:
@@ -42,5 +48,8 @@ def pipeline(journal_handler):
 
 
 if __name__ == "__main__":
-    journal_handler = sys.argv[1]
-    pipeline(journal_handler)
+    #journal_handler = sys.argv[1]
+    prefix = 'repec:nbr:nberwo:'
+    for journal_handler in ['8269', '8918', '9413', '14176', '15174', '19035', '19979', '20867', '21592']:
+        pipeline(prefix + journal_handler)
+        print(journal_handler, 'is done')

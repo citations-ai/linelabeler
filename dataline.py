@@ -1,3 +1,4 @@
+import re
 from enum import Enum
 from typing import List, Tuple, Set, Dict
 import numpy as np
@@ -38,6 +39,26 @@ color_dict = {Label.PAR_STARTS: (1.0, 0.0, 0.0),
 
 
 NUM_LINE_ATTRS = 13
+
+
+def _is_valid_title(s: str) -> bool:
+    """
+    :param s: original string, e.g. "I. Introduction"
+    :return: if s is a valid title
+    """
+    s = s.strip().split()
+    if len(s) < 2:
+        return False
+    s = s[0]
+    for regex in [
+        '^(?=[MDCLXVI])M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})[.]?',
+        '\d*[.\d*]+[.]?',
+        '[A-Za-z][.\)]',
+    ]:
+        result = re.match(regex, s)
+        if result is not None and result.span()[1] == len(s):
+            return True
+    return False
 
 
 class DataLine:
@@ -83,6 +104,7 @@ class DataLine:
         self.vert_int_category = None
         self.font_size_category = None
         self.is_font_regular = None
+        self.is_after_empty_line = False
 
 
     @staticmethod
@@ -135,27 +157,27 @@ class DataLine:
             return Sizes.NOT_EQUAL
         return size0
 
-    def compare_vert_int(self, regular_vert_int: int, eps_size: float = 0.1) -> Sizes:
+    def compare_vert_int(self, regular_vert_int: int, eps_size: float = 0.05) -> Sizes:
         if self.int_from_prev == 0:
             return Sizes.REGULAR
         return self.compare_size_with_reqular(self.int_from_prev, regular_vert_int, eps_size)
 
     def _do_preprocessing_1(self, regular_font_name: str, regular_font_size: int, regular_vert_int: int,
                             base_margins_left: List[int], base_margins_right: List[int],
-                            eps_size: float = 0.05, eps_layout: int = 2):
+                            eps_size: float = 0.05, eps_layout: int = 4):
         self.ind_block = self.find_column_index(base_margins_left, base_margins_right, eps_layout)
 
         self.is_aligned_left = abs(base_margins_left[self.ind_block] - self.h_left) <= eps_layout
         self.is_aligned_right = abs(base_margins_right[self.ind_block] - self.h_right) <= eps_layout
 
-        self.vert_int_category = self.compare_vert_int(regular_vert_int, 2 * eps_size)
+        self.vert_int_category = self.compare_vert_int(regular_vert_int, 1 * eps_size)
 
         self.font_size_category = self.compare_font_sizes(regular_font_size, eps_size)
         self.is_font_regular = (self.font0_name == regular_font_name) or (self.font1_name == regular_font_name)
 
     def do_processing_1(self, regular_font_name: str, regular_font_size: int, regular_vert_int: int,
                         base_margins_left: List[int], base_margins_right: List[int],
-                        eps_size: float = 0.05, eps_layout: int = 2):
+                        eps_size: float = 0.05, eps_layout: int = 4):
         self._do_preprocessing_1(regular_font_name, regular_font_size, regular_vert_int,
                                 base_margins_left, base_margins_right,
                                 eps_size, eps_layout)
@@ -168,6 +190,8 @@ class DataLine:
         # ***L
         elif self.font_size_category == Sizes.LARGE:
             self.label = Label.TITLE
+        elif self.is_after_empty_line:
+            self.label = Label.NOT_SURE
         # ***R
         elif self.font_size_category == Sizes.REGULAR:
             # **SR
@@ -177,13 +201,15 @@ class DataLine:
             elif self.vert_int_category == Sizes.LARGE:
                 if not self.is_font_regular:
                     self.label = Label.TITLE
+                elif _is_valid_title(self.text):
+                    self.label = Label.TITLE
                 else:
                     # 11LR
                     if self.is_aligned_left and self.is_aligned_right:
-                        self.label = Label.PAR_CONTINUES
+                        self.label = Label.PAR_STARTS
                     # 10LR
                     elif self.is_aligned_left:
-                        self.label = Label.PAR_CONTINUES
+                        self.label = Label.NOT_SURE
                     # 01LR
                     elif self.is_aligned_right:
                         self.label = Label.NOT_SURE
@@ -192,21 +218,18 @@ class DataLine:
                         self.label = Label.TITLE
             # **RR
             elif self.vert_int_category == Sizes.REGULAR:
-                if not self.is_font_regular:
-                    self.label = Label.TITLE
+                if False and not self.is_font_regular:
+                    self.label = Label.NOT_SURE
                 else:
                     # 11RR
                     if self.is_aligned_left and self.is_aligned_right:
                         self.label = Label.PAR_CONTINUES
                     # 10RR
                     elif self.is_aligned_left:
-                        self.label = Label.PAR_CONTINUES
+                        self.label = Label.NOT_SURE
                     # 01RR
                     elif self.is_aligned_right:
-                        if not self.is_font_regular:
-                            self.label = Label.TITLE
-                        else:
-                            self.label = Label.NOT_SURE
+                        self.label = Label.NOT_SURE
                     # 00RR
                     else:
                         self.label = Label.NOT_SURE
@@ -227,10 +250,27 @@ class DataLine:
         self._do_preprocessing_2(regular_font_name, regular_font_size, regular_vert_int,
                                 base_margins_left, base_margins_right, par_margins_left,
                                 eps_size, eps_layout)
-        if self.is_aligned_par:
+        if _is_valid_title(self.text):
+            self.label = Label.TITLE
+        elif self.is_aligned_par:
             self.label = Label.PAR_STARTS
+        elif self.vert_int_category == Sizes.LARGE:
+            if self.text[0] == self.text.upper()[0]:
+                if not self.is_font_regular:
+                    self.label = Label.TITLE
+                elif self.is_after_empty_line:
+                    self.label = Label.TITLE
+                else:
+                    self.label = Label.PAR_STARTS
+            else:
+                self.label = Label.PAR_CONTINUES
+        #elif self.text[0] == self.text.upper()[0]:
+        #    self.label = Label.PAR_STARTS
         else:
-            self.label = Label.PAR_CONTINUES  # OTHER
+            if self.is_font_regular:
+                self.label = Label.PAR_CONTINUES  # OTHER
+            else:
+                self.label = Label.TITLE
 
 
 def read_line(string_line: str) -> DataLine:
